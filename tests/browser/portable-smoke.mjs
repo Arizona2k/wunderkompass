@@ -1,3 +1,4 @@
+import {connectedDiscoveries} from './connected-discoveries.mjs';
 import {searchAndHistory, memoryRound} from './portable-flows.mjs';
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import {spawn} from 'node:child_process';import {fileURLToPath} from 'node:url';
 const project=fileURLToPath(new URL('../..',import.meta.url)),shots=path.join(project,'.qa-output'),port=process.env.QA_PORT??'4182',base='http://127.0.0.1:'+port;
@@ -12,11 +13,12 @@ const ready=p=>p.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])')
 const monitor=p=>{p.on('console',m=>{if(m.type()==='error')report.consoleErrors.push(m.text());});p.on('requestfailed',r=>report.failedRequests.push({url:r.url(),error:r.failure()?.errorText}));p.on('pageerror',e=>report.errors.push(e.message));p.on('response',r=>{if(r.url().startsWith(base)&&r.status()>=400)report.ownHttpErrors.push({path:r.url().replace(base,''),status:r.status()});});p.on('request',r=>{if(!r.url().startsWith(base)&&!r.url().startsWith('data:')&&!r.url().startsWith('blob:'))report.externalRequests.push(r.url());});};
 browser=await chromium.launch(options);report.browser=browser.version();
 try{
- for(const [width,height] of [[1440,900],[768,1024],[390,844]]){
+ for(const [width,height] of [[1440,900],[768,1024],[390,844],[360,800]]){
   const c=await browser.newContext({viewport:{width,height},isMobile:width===390,hasTouch:width===390,reducedMotion:'reduce',acceptDownloads:true}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);await p.goto(base);await ready(p);await p.locator('canvas').waitFor();assert.equal(await p.title(),'WunderKompass · Die große Abenteuerwelt des Wissens');
   const inspect=async name=>{assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,name);for(const im of await p.locator('.world-article img').all())await im.evaluate(async im=>{await im.decode();if(!im.naturalWidth)throw Error('Undecoded image');});report.views.push({width,height,name});};await inspect('home');console.log('Browser viewport',width,height);await searchAndHistory(p,report);
   for(const id of ['animal-polar-bear','history-maya','person-grace_hopper','invention-car','building-taj-mahal','science-energy']){await p.evaluate(id=>location.hash='world/topic/'+id,id);await p.locator('.world-mini-question').waitFor();await inspect(id);}
   if(width===1440){await p.evaluate(()=>location.hash='world/topic/animal-polar-bear');await p.locator('.world-mini-question').waitFor();await p.getByRole('button',{name:'Das interessiert mich!',exact:true}).click();await p.waitForFunction(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3'))?.progress.favorites.includes('topic:animal-polar-bear'));await p.reload();await ready(p);assert.ok(await p.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.favorites.includes('topic:animal-polar-bear')));report.checks.push('Favorite survives reload');for(const [name,sel] of [['Lernreisen','.journey-tile'],['Spielplatz','.game-tile'],['Forscherlabor','.research-grid'],['Wissensbuch','.word-card']]){await p.getByRole('tab',{name,exact:true}).click();await p.locator(sel).first().waitFor();}report.checks.push('Four original learning hubs open');await memoryRound(p,ready,report);}
+  await connectedDiscoveries(p,ready,report,width);
   await p.evaluate(()=>location.hash='world/topic/science-energy');await p.locator('.model-energy').waitFor();await p.screenshot({path:path.join(shots,'portable-'+width+'.png')});await c.close();
  }
 }finally{await browser.close();browser=null;}

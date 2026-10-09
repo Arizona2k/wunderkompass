@@ -1962,5 +1962,110 @@
     "aliases": [],
     "locations": [],
     "model": "patterns"
+  },
+  {
+    "id": "science-water-cycle",
+    "category": "science",
+    "title": "Wasser auf Weltreise",
+    "intro": "Ein Tropfen kann im Meer, in einer Wolke und später im Boden unterwegs sein.",
+    "aliases": [
+      "Wasserkreislauf",
+      "Verdunstung",
+      "Regen"
+    ],
+    "locations": [],
+    "model": "water-cycle"
+  },
+  {
+    "id": "science-photosynthesis",
+    "category": "science",
+    "title": "Wie Blätter Sonnenlicht nutzen",
+    "intro": "Pflanzen stellen mit Licht, Wasser und Kohlendioxid Zucker her.",
+    "aliases": [
+      "Fotosynthese",
+      "Photosynthese",
+      "Pflanzen",
+      "Zucker"
+    ],
+    "locations": []
+  },
+  {
+    "id": "science-pollination",
+    "category": "science",
+    "title": "Blüten und ihre Pollenboten",
+    "intro": "Wenn Pollen die passende Stelle einer Blüte erreichen, beginnt ein Weg zu neuen Samen.",
+    "aliases": [
+      "Bestäubung",
+      "Pollen",
+      "Blüten",
+      "Bienen"
+    ],
+    "locations": []
+  },
+  {
+    "id": "science-fungi",
+    "category": "science",
+    "title": "Das verborgene Reich der Pilze",
+    "intro": "Unter einem Pilzhut kann ein weit verzweigtes Geflecht liegen.",
+    "aliases": [
+      "Pilze",
+      "Myzel",
+      "Zersetzer",
+      "Mykorrhiza"
+    ],
+    "locations": []
+  },
+  {
+    "id": "science-coral-reef",
+    "category": "science",
+    "title": "Ein Riff voller Zusammenarbeit",
+    "intro": "Viele tropische Riffe werden von kleinen Tieren und ihren Algenpartnern aufgebaut.",
+    "aliases": [
+      "Korallen",
+      "Korallenriff",
+      "Korallenbleiche",
+      "Algen"
+    ],
+    "locations": []
+  },
+  {
+    "id": "science-moon-phases",
+    "category": "science",
+    "title": "Warum verändert der Mond seine Form?",
+    "intro": "Der Mond bleibt rund. Wir sehen unterschiedlich viel von seiner beleuchteten Hälfte.",
+    "aliases": [
+      "Mondphasen",
+      "Vollmond",
+      "Neumond",
+      "Mond"
+    ],
+    "locations": [],
+    "model": "moon-phases"
+  },
+  {
+    "id": "science-seasons",
+    "category": "science",
+    "title": "Ein Jahr, zwei verschiedene Sommer",
+    "intro": "Die geneigte Erdachse verändert im Jahreslauf Tageslänge und Sonnenstand.",
+    "aliases": [
+      "Jahreszeiten",
+      "Erdachse",
+      "Sommer",
+      "Winter"
+    ],
+    "locations": []
+  },
+  {
+    "id": "science-tides",
+    "category": "science",
+    "title": "Der Mond bewegt das Meer",
+    "intro": "Mond und Sonne beeinflussen das regelmäßige Steigen und Fallen des Meeresspiegels.",
+    "aliases": [
+      "Gezeiten",
+      "Ebbe",
+      "Flut",
+      "Tiden"
+    ],
+    "locations": []
   }
 ]

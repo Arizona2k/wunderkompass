@@ -1651,7 +1651,8 @@
     ],
     "related": [
       "animal-african-savanna-elephant",
-      "animal-honey-bee"
+      "animal-honey-bee",
+      "science-coral-reef"
     ],
     "sources": [
       {
@@ -2262,7 +2263,8 @@
       }
     ],
     "related": [
-      "animal-african-savanna-elephant"
+      "animal-african-savanna-elephant",
+      "science-pollination"
     ],
     "sources": [
       {
@@ -3741,7 +3743,8 @@
     ],
     "related": [
       "person-neil_armstrong",
-      "invention-rocket"
+      "invention-rocket",
+      "science-moon-phases"
     ],
     "sources": [
       {
@@ -8383,7 +8386,8 @@
     "surprise": "Luft wird nach oben immer dünner, aber es gibt keine scharfe Kante zum Weltraum.",
     "related": [
       "science-magnetism",
-      "invention-satellite"
+      "invention-satellite",
+      "science-water-cycle"
     ],
     "sources": [
       {
@@ -8495,7 +8499,9 @@
     "surprise": "Das Meer ist ständig in Bewegung, auch tief unter den sichtbaren Wellen.",
     "related": [
       "science-foodweb",
-      "animal-whale-shark"
+      "animal-whale-shark",
+      "science-coral-reef",
+      "science-tides"
     ],
     "sources": [
       {
@@ -8605,7 +8611,9 @@
     "related": [
       "animal-blue-whale",
       "animal-lion",
-      "animal-honey-bee"
+      "animal-honey-bee",
+      "science-photosynthesis",
+      "science-fungi"
     ],
     "sources": [
       {
@@ -8714,7 +8722,9 @@
     "related": [
       "science-energy",
       "invention-satellite",
-      "history-apollo11"
+      "history-apollo11",
+      "science-moon-phases",
+      "science-seasons"
     ],
     "sources": [
       {
@@ -8769,7 +8779,8 @@
     "related": [
       "science-circuit",
       "science-motor",
-      "invention-light"
+      "invention-light",
+      "science-seasons"
     ],
     "sources": [
       {
@@ -8847,5 +8858,907 @@
     "links": [],
     "model": "patterns",
     "sourceNote": "Fachlich geprüft am 9. Oktober 2026. Die Interaktion vereinfacht den Sachverhalt. Ihre Grenzen stehen direkt am Modell; sie ist keine Messung oder Vorhersage."
+  },
+  {
+    "id": "science-water-cycle",
+    "category": "science",
+    "title": "Wasser auf Weltreise",
+    "intro": "Ein Tropfen kann im Meer, in einer Wolke und später im Boden unterwegs sein.",
+    "aliases": [
+      "Wasserkreislauf",
+      "Verdunstung",
+      "Regen"
+    ],
+    "paragraphs": [
+      "Sonnenwärme lässt Wasser verdunsten. Der unsichtbare Wasserdampf gelangt in die Luft. Beim Abkühlen kann er zu kleinen Tropfen werden: Das heißt Kondensation.",
+      "Wolken bestehen aus winzigen Wassertröpfchen oder Eiskristallen. Werden Niederschlagsteilchen groß genug, fallen sie als Regen oder Schnee. Wasser fließt ab, versickert oder bleibt als Eis gespeichert.",
+      "Auch Pflanzen geben Wasser über ihre Blätter ab. Der Kreislauf hat viele Wege und keinen vorgeschriebenen Startpunkt."
+    ],
+    "facts": [
+      {
+        "label": "Antrieb",
+        "text": "Sonnenenergie und Schwerkraft bewegen Wasser."
+      },
+      {
+        "label": "Unsichtbar",
+        "text": "Wasserdampf ist gasförmig; die sichtbare Wolke besteht aus Tröpfchen oder Eis."
+      }
+    ],
+    "more": [
+      "Grundwasser bewegt sich oft langsam durch Poren und Spalten. Ein Tropfen kann sehr unterschiedlich lange in einem Speicher bleiben.",
+      "Verdunstung verändert den Zustand des Wassers. Das Wasser wird dabei nicht vernichtet."
+    ],
+    "surprise": "Eine Pflanze ist ein Teil des Wasserkreislaufs.",
+    "locations": [],
+    "related": [
+      "science-photosynthesis",
+      "science-atmosphere"
+    ],
+    "sources": [
+      {
+        "label": "USGS: Water cycle",
+        "url": "https://www.usgs.gov/special-topics/water-science-school/water-cycle"
+      },
+      {
+        "label": "USGS: Evapotranspiration",
+        "url": "https://www.usgs.gov/water-science-school/science/evapotranspiration-and-water-cycle?page=0"
+      }
+    ],
+    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "question": {
+      "prompt": "Woraus besteht eine Wolke?",
+      "answers": [
+        "Winzigen Tropfen oder Eiskristallen",
+        "Nur unsichtbarem Wasserdampf",
+        "Rauch"
+      ],
+      "correct": 0,
+      "why": "Wolken sind sichtbar, weil kleine Tropfen oder Eiskristalle Licht streuen."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-09",
+    "challenges": [
+      {
+        "id": "science-water-cycle-1",
+        "difficulty": "medium",
+        "prompt": "Warum verschwinden Pfützen auch ohne Abfluss?",
+        "answers": [
+          "Wasser verdunstet",
+          "Wasser wird zu Stein",
+          "Wasser verliert seine Masse"
+        ],
+        "correct": 0,
+        "why": "Flüssiges Wasser kann als Wasserdampf in die Luft gelangen."
+      },
+      {
+        "id": "science-water-cycle-2",
+        "difficulty": "medium",
+        "prompt": "Was heißt Kondensation?",
+        "answers": [
+          "Gasförmiges Wasser wird flüssig",
+          "Wasser fließt bergab",
+          "Eis wird zu Dampf"
+        ],
+        "correct": 0,
+        "why": "Beim Kondensieren entstehen aus Wasserdampf Tröpfchen."
+      },
+      {
+        "id": "science-water-cycle-3",
+        "difficulty": "hard",
+        "prompt": "Eine Stadt versiegelt viele Böden. Was wird unmittelbar erschwert?",
+        "answers": [
+          "Das Versickern von Regenwasser",
+          "Die Erdrotation",
+          "Die Anziehung des Mondes"
+        ],
+        "correct": 0,
+        "why": "Undurchlässige Oberflächen erschweren den Weg in den Boden; mehr Wasser kann oberflächlich abfließen."
+      },
+      {
+        "id": "science-water-cycle-4",
+        "difficulty": "hard",
+        "prompt": "Warum gibt es keine feste Rundreisezeit für jeden Tropfen?",
+        "answers": [
+          "Wasser bleibt verschieden lange in Speichern",
+          "Jeder Tropfen hat dieselbe Geschwindigkeit",
+          "Der Kreislauf stoppt nachts überall"
+        ],
+        "correct": 0,
+        "why": "Eis, Grundwasser und Atmosphäre speichern Wasser unterschiedlich lange."
+      }
+    ],
+    "model": "water-cycle"
+  },
+  {
+    "id": "science-photosynthesis",
+    "category": "science",
+    "title": "Wie Blätter Sonnenlicht nutzen",
+    "intro": "Pflanzen stellen mit Licht, Wasser und Kohlendioxid Zucker her.",
+    "aliases": [
+      "Fotosynthese",
+      "Photosynthese",
+      "Pflanzen",
+      "Zucker"
+    ],
+    "paragraphs": [
+      "Ein grünes Blatt ist eine kleine Werkstatt. In seinen Zellen fängt der Farbstoff Chlorophyll Licht auf. Mit dieser Energie entstehen aus Wasser und Kohlendioxid energiereiche Stoffe.",
+      "Die Pflanze nutzt Zucker zum Wachsen und als Energiequelle. Bei der Fotosynthese entsteht außerdem Sauerstoff. Wurzeln liefern Wasser; Kohlendioxid gelangt durch kleine Blattöffnungen hinein.",
+      "Viele Nahrungsketten beginnen bei Pflanzen oder Algen. Ein Pflanzenfresser bekommt gespeicherte Energie aus seiner Nahrung."
+    ],
+    "facts": [
+      {
+        "label": "Energie",
+        "text": "Lichtenergie wird in chemische Energie umgewandelt."
+      },
+      {
+        "label": "Baustoff",
+        "text": "Kohlenstoff aus Kohlendioxid wird Teil pflanzlicher Stoffe."
+      }
+    ],
+    "more": [
+      "Pflanzen betreiben auch Zellatmung: Sie nutzen energiereiche Stoffe und verbrauchen dabei Sauerstoff. Fotosynthese und Zellatmung sind verschiedene Vorgänge.",
+      "Algen und bestimmte Bakterien können ebenfalls Fotosynthese betreiben. Nicht jede Nahrungskette beginnt mit Sonnenlicht: Es gibt auch chemisch angetriebene Lebensgemeinschaften."
+    ],
+    "surprise": "Ein Teil der Stoffe in einem Baum stammt ursprünglich aus der Luft.",
+    "locations": [],
+    "related": [
+      "science-water-cycle",
+      "science-foodweb",
+      "science-fungi",
+      "science-pollination",
+      "science-coral-reef"
+    ],
+    "sources": [
+      {
+        "label": "Kew: What is photosynthesis?",
+        "url": "https://endeavour.kew.org/taster-resources/what-is-photosynthesis"
+      },
+      {
+        "label": "OpenStax: Overview of Photosynthesis",
+        "url": "https://openstax.org/books/biology-2e/pages/8-1-overview-of-photosynthesis"
+      }
+    ],
+    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "question": {
+      "prompt": "Welche Energie nutzt die Fotosynthese?",
+      "answers": [
+        "Lichtenergie",
+        "Schallenergie",
+        "Nur Erdwärme"
+      ],
+      "correct": 0,
+      "why": "Licht liefert Energie für den Aufbau energiereicher Stoffe."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-09",
+    "challenges": [
+      {
+        "id": "science-photosynthesis-1",
+        "difficulty": "medium",
+        "prompt": "Welche Stoffe braucht die Pflanze dafür?",
+        "answers": [
+          "Wasser und Kohlendioxid",
+          "Nur Erde und Salz",
+          "Nur Sauerstoff"
+        ],
+        "correct": 0,
+        "why": "Wasser und Kohlendioxid liefern die Ausgangsstoffe; Licht liefert Energie."
+      },
+      {
+        "id": "science-photosynthesis-2",
+        "difficulty": "medium",
+        "prompt": "Was wird bei der Fotosynthese frei?",
+        "answers": [
+          "Sauerstoff",
+          "Eisen",
+          "Plastik"
+        ],
+        "correct": 0,
+        "why": "Bei der Fotosynthese von Pflanzen entsteht Sauerstoff."
+      },
+      {
+        "id": "science-photosynthesis-3",
+        "difficulty": "hard",
+        "prompt": "Warum kann ein Löwe indirekt von Fotosynthese abhängen?",
+        "answers": [
+          "Seine Beute frisst Pflanzen mit gespeicherter Energie",
+          "Er betreibt Fotosynthese im Fell",
+          "Sonnenlicht ersetzt seine Nahrung"
+        ],
+        "correct": 0,
+        "why": "Energie gelangt über Pflanzenfresser zu Fleischfressern."
+      },
+      {
+        "id": "science-photosynthesis-4",
+        "difficulty": "hard",
+        "prompt": "Welche Aussage über Pflanzen ist richtig?",
+        "answers": [
+          "Sie betreiben auch Zellatmung",
+          "Sie brauchen niemals Sauerstoff",
+          "Sie stellen Zucker aus Schall her"
+        ],
+        "correct": 0,
+        "why": "Pflanzen nutzen Zellatmung, um Energie aus energiereichen Stoffen verfügbar zu machen."
+      }
+    ]
+  },
+  {
+    "id": "science-pollination",
+    "category": "science",
+    "title": "Blüten und ihre Pollenboten",
+    "intro": "Wenn Pollen die passende Stelle einer Blüte erreichen, beginnt ein Weg zu neuen Samen.",
+    "aliases": [
+      "Bestäubung",
+      "Pollen",
+      "Blüten",
+      "Bienen"
+    ],
+    "paragraphs": [
+      "Pollen entstehen in den Staubbeuteln einer Blüte. Gelangen sie auf eine passende Narbe, heißt das Bestäubung. Oft helfen Tiere beim Transport.",
+      "Eine Biene sucht Nahrung an Blüten. Dabei können Pollenkörner an ihrem Körper hängen bleiben und bei einem weiteren Besuch auf einer Narbe landen.",
+      "Bestäubung ist noch keine Befruchtung. Erst wenn weitere Schritte gelingen, können Samen entstehen. Auch Wind kann Pollen transportieren."
+    ],
+    "facts": [
+      {
+        "label": "Zwei Schritte",
+        "text": "Bestäubung überträgt Pollen; Befruchtung verbindet Geschlechtszellen."
+      },
+      {
+        "label": "Viele Helfer",
+        "text": "Nicht nur Honigbienen, auch andere Insekten können bestäuben."
+      }
+    ],
+    "more": [
+      "Manche Pflanzen können sich selbst bestäuben, andere sind auf Pollen anderer Pflanzen angewiesen. Die Regeln unterscheiden sich je nach Art.",
+      "Ein Blütenbesuch allein beweist keine erfolgreiche Bestäubung: Pollen müssen tatsächlich die passende Narbe erreichen."
+    ],
+    "surprise": "Gräser und viele Bäume nutzen den Wind als Pollenboten.",
+    "locations": [],
+    "related": [
+      "animal-honey-bee",
+      "science-photosynthesis"
+    ],
+    "sources": [
+      {
+        "label": "Smithsonian Gardens: Pollination",
+        "url": "https://gardens.si.edu/gardens/pollinator-garden/why-what-when-where-who-how-pollination/"
+      },
+      {
+        "label": "Australian Museum: What is pollination?",
+        "url": "https://australian.museum/learn/species-identification/ask-an-expert/what-is-pollination/"
+      }
+    ],
+    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "question": {
+      "prompt": "Was wird bei der Bestäubung übertragen?",
+      "answers": [
+        "Pollen",
+        "Kleine fertige Früchte",
+        "Wurzeln"
+      ],
+      "correct": 0,
+      "why": "Pollen gelangen vom Staubbeutel auf eine passende Narbe."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-09",
+    "challenges": [
+      {
+        "id": "science-pollination-1",
+        "difficulty": "medium",
+        "prompt": "Wie kann eine Biene bei der Bestäubung helfen?",
+        "answers": [
+          "Sie transportiert anhaftenden Pollen",
+          "Sie pflanzt fertige Bäume",
+          "Sie verwandelt Nektar in Samen"
+        ],
+        "correct": 0,
+        "why": "Beim Blütenbesuch kann Pollen am Körper hängen bleiben."
+      },
+      {
+        "id": "science-pollination-2",
+        "difficulty": "medium",
+        "prompt": "Wer kann ohne Insekten Pollen transportieren?",
+        "answers": [
+          "Der Wind",
+          "Ein Schatten",
+          "Die Erdschwere allein zu jeder Blüte"
+        ],
+        "correct": 0,
+        "why": "Windbestäubte Pflanzen nutzen Luftbewegung."
+      },
+      {
+        "id": "science-pollination-3",
+        "difficulty": "hard",
+        "prompt": "Warum beweist ein Blütenbesuch noch keinen Samenerfolg?",
+        "answers": [
+          "Passende Pollenübertragung und weitere Schritte müssen gelingen",
+          "Jeder Besuch erzeugt sofort eine Frucht",
+          "Pollen sind fertige Samen"
+        ],
+        "correct": 0,
+        "why": "Bestäubung und anschließende Befruchtung sind getrennte Vorgänge."
+      },
+      {
+        "id": "science-pollination-4",
+        "difficulty": "hard",
+        "prompt": "Eine Blüte bekommt unpassenden Pollen. Was folgt daraus?",
+        "answers": [
+          "Erfolgreiche Fortpflanzung ist damit nicht gesichert",
+          "Es entstehen sicher Samen",
+          "Alle Arten können beliebig gekreuzt werden"
+        ],
+        "correct": 0,
+        "why": "Für erfolgreiche Fortpflanzung muss Pollen zur Pflanze passen; ein Transport allein genügt nicht."
+      }
+    ]
+  },
+  {
+    "id": "science-fungi",
+    "category": "science",
+    "title": "Das verborgene Reich der Pilze",
+    "intro": "Unter einem Pilzhut kann ein weit verzweigtes Geflecht liegen.",
+    "aliases": [
+      "Pilze",
+      "Myzel",
+      "Zersetzer",
+      "Mykorrhiza"
+    ],
+    "paragraphs": [
+      "Viele Pilze wachsen als feine Fäden. Zusammen heißen diese Fäden Myzel. Der sichtbare Pilzhut ist bei vielen Arten nur ein Fruchtkörper, der Sporen bildet.",
+      "Pilze sind eine eigene Gruppe von Lebewesen. Sie betreiben keine Fotosynthese. Manche zerlegen abgestorbenes Material und machen enthaltene Nährstoffe wieder zugänglich.",
+      "Manche Pilze leben mit Pflanzenwurzeln zusammen. Bei dieser Mykorrhiza bekommt der Pilz Zucker; die Pflanze kann Wasser und Mineralstoffe erhalten."
+    ],
+    "facts": [
+      {
+        "label": "Aufgabe",
+        "text": "Viele Pilze wirken als Zersetzer."
+      },
+      {
+        "label": "Vielfalt",
+        "text": "Nicht alle Pilze bilden Hüte; auch Hefen sind Pilze."
+      }
+    ],
+    "more": [
+      "Andere Pilze leben parasitisch. Die Rolle eines Pilzes hängt von seiner Art und seiner Umgebung ab.",
+      "Pilz-Wurzel-Beziehungen sind keine Beweise dafür, dass Bäume wie Menschen sprechen. Was zwischen Partnern übertragen wird, muss wissenschaftlich untersucht werden."
+    ],
+    "surprise": "Was du über dem Boden siehst, ist oft nur ein kleiner Teil des Pilzes.",
+    "locations": [],
+    "related": [
+      "science-photosynthesis",
+      "science-foodweb"
+    ],
+    "sources": [
+      {
+        "label": "Kew: Mycelium",
+        "url": "https://www.kew.org/read-and-watch/fungi-hidden-dimension"
+      },
+      {
+        "label": "Kew: Why fungi matter",
+        "url": "https://growwild.kew.org/championing-nature/fungi/why-fungi-matter"
+      },
+      {
+        "label": "US Forest Service: Mycorrhizae",
+        "url": "https://research.fs.usda.gov/treesearch/41353"
+      }
+    ],
+    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "question": {
+      "prompt": "Wie heißt das Geflecht vieler Pilze?",
+      "answers": [
+        "Myzel",
+        "Nektar",
+        "Chlorophyll"
+      ],
+      "correct": 0,
+      "why": "Myzel besteht aus vielen feinen Pilzfäden."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-09",
+    "challenges": [
+      {
+        "id": "science-fungi-1",
+        "difficulty": "medium",
+        "prompt": "Welche Rolle haben viele Pilze im Wald?",
+        "answers": [
+          "Sie zersetzen abgestorbenes Material",
+          "Sie erzeugen Sonnenlicht",
+          "Sie bestehen nur aus Blüten"
+        ],
+        "correct": 0,
+        "why": "Zersetzer helfen beim Recycling von Stoffen."
+      },
+      {
+        "id": "science-fungi-2",
+        "difficulty": "medium",
+        "prompt": "Was bekommt ein Mykorrhizapilz von seiner Pflanzenpartnerin?",
+        "answers": [
+          "Zucker",
+          "Pollen als einziges Futter",
+          "Fertige Pilzhüte"
+        ],
+        "correct": 0,
+        "why": "Die Pflanze liefert energiereiche Stoffe aus der Fotosynthese."
+      },
+      {
+        "id": "science-fungi-3",
+        "difficulty": "hard",
+        "prompt": "Warum sind Pilze im Nahrungsnetz wichtig?",
+        "answers": [
+          "Sie machen Stoffe aus totem Material wieder zugänglich",
+          "Sie vernichten alle Stoffe endgültig",
+          "Sie ersetzen alle Pflanzen"
+        ],
+        "correct": 0,
+        "why": "Zersetzung trägt zum Stoffkreislauf bei."
+      },
+      {
+        "id": "science-fungi-4",
+        "difficulty": "hard",
+        "prompt": "Was ist eine vorsichtige Aussage über Pilznetzwerke?",
+        "answers": [
+          "Übertragungen müssen untersucht werden",
+          "Bäume sprechen nachweislich wie Menschen",
+          "Alle Pilze teilen immer alles"
+        ],
+        "correct": 0,
+        "why": "Eine Verbindung allein belegt noch keinen bestimmten Austausch oder menschliche Kommunikation."
+      }
+    ]
+  },
+  {
+    "id": "science-coral-reef",
+    "category": "science",
+    "title": "Ein Riff voller Zusammenarbeit",
+    "intro": "Viele tropische Riffe werden von kleinen Tieren und ihren Algenpartnern aufgebaut.",
+    "aliases": [
+      "Korallen",
+      "Korallenriff",
+      "Korallenbleiche",
+      "Algen"
+    ],
+    "paragraphs": [
+      "Korallenpolypen sind Tiere. Viele riffbildende Korallen leben zusammen mit winzigen Algen im Gewebe. Die Algen nutzen Licht und liefern energiereiche Stoffe.",
+      "Viele Korallen bilden harte Kalkskelette. Zahlreiche Polypen können zusammen eine Kolonie bilden. Über lange Zeit wachsen daraus vielfältige Riffstrukturen.",
+      "Starker Stress, etwa durch zu warmes Wasser, kann zum Verlust der Algenpartner führen. Dann erscheint das helle Skelett durch das Gewebe: Die Koralle bleicht."
+    ],
+    "facts": [
+      {
+        "label": "Lebewesen",
+        "text": "Korallen sind Tiere, keine Steine."
+      },
+      {
+        "label": "Zusammenleben",
+        "text": "Das enge Zusammenleben verschiedener Arten heißt Symbiose."
+      }
+    ],
+    "more": [
+      "Eine gebleichte Koralle ist nicht automatisch tot. Hält der Stress an, steigt aber das Risiko zu sterben; bei besseren Bedingungen kann sie sich erholen.",
+      "Nicht alle Korallen leben in warmem Flachwasser oder mit Algenpartnern. Auch in kalten, tiefen Meeren gibt es Korallen."
+    ],
+    "surprise": "Eine weiße Koralle kann noch leben und braucht bessere Bedingungen.",
+    "locations": [],
+    "related": [
+      "science-photosynthesis",
+      "animal-common-octopus",
+      "science-currents"
+    ],
+    "sources": [
+      {
+        "label": "NOAA: Are corals animals or plants?",
+        "url": "https://oceanservice.noaa.gov/facts/coral.html"
+      },
+      {
+        "label": "NOAA: Coral bleaching",
+        "url": "https://oceanservice.noaa.gov/facts/coral_bleach.html"
+      }
+    ],
+    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "question": {
+      "prompt": "Zu welcher Gruppe gehören Korallenpolypen?",
+      "answers": [
+        "Tieren",
+        "Pilzen",
+        "Gesteinen"
+      ],
+      "correct": 0,
+      "why": "Polypen sind Tiere; viele von ihnen bauen Kalkskelette."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-09",
+    "challenges": [
+      {
+        "id": "science-coral-reef-1",
+        "difficulty": "medium",
+        "prompt": "Was liefern die Algenpartner vieler Riffkorallen?",
+        "answers": [
+          "Energiereiche Stoffe aus Fotosynthese",
+          "Elektrischen Strom",
+          "Fertige Fische"
+        ],
+        "correct": 0,
+        "why": "Die Algen nutzen Licht und versorgen die Koralle mit energiereichen Stoffen."
+      },
+      {
+        "id": "science-coral-reef-2",
+        "difficulty": "medium",
+        "prompt": "Was kann bei starkem Wärmestress passieren?",
+        "answers": [
+          "Korallen verlieren ihre Algenpartner",
+          "Korallen werden automatisch Pflanzen",
+          "Das Meer wird überall zu Eis"
+        ],
+        "correct": 0,
+        "why": "Der Verlust der Algenpartner kann zur Bleiche führen."
+      },
+      {
+        "id": "science-coral-reef-3",
+        "difficulty": "hard",
+        "prompt": "Warum bedeutet Bleiche nicht sofort Tod?",
+        "answers": [
+          "Die Koralle kann noch leben und sich erholen",
+          "Das Skelett ist die ganze lebende Koralle",
+          "Weiße Korallen brauchen keine Nahrung"
+        ],
+        "correct": 0,
+        "why": "Bleiche ist ein Stresszustand; anhaltender Stress kann tödlich sein."
+      },
+      {
+        "id": "science-coral-reef-4",
+        "difficulty": "hard",
+        "prompt": "Weshalb hilft klares Wasser vielen tropischen Riffkorallen?",
+        "answers": [
+          "Licht kann ihre Algenpartner erreichen",
+          "Korallen können nur in Luft atmen",
+          "Klarheit entfernt jede Wärme"
+        ],
+        "correct": 0,
+        "why": "Fotosynthetische Algenpartner sind auf Licht angewiesen; das gilt nicht für alle Korallenarten."
+      }
+    ]
+  },
+  {
+    "id": "science-moon-phases",
+    "category": "science",
+    "title": "Warum verändert der Mond seine Form?",
+    "intro": "Der Mond bleibt rund. Wir sehen unterschiedlich viel von seiner beleuchteten Hälfte.",
+    "aliases": [
+      "Mondphasen",
+      "Vollmond",
+      "Neumond",
+      "Mond"
+    ],
+    "paragraphs": [
+      "Die Sonne beleuchtet ungefähr eine Hälfte des Mondes. Während der Mond die Erde umkreist, verändert sich unser Blick auf diese Hälfte. So entstehen die Mondphasen.",
+      "Beim Vollmond sehen wir fast die ganze beleuchtete Seite. Beim Neumond liegt die beleuchtete Seite überwiegend von uns abgewandt. Der Mond leuchtet nicht selbst wie ein Stern.",
+      "Der Erdschatten erklärt eine Mondfinsternis, aber nicht die gewöhnlichen Mondphasen. Wegen der geneigten Mondbahn gibt es nicht bei jedem Vollmond eine Finsternis."
+    ],
+    "facts": [
+      {
+        "label": "Rhythmus",
+        "text": "Von Neumond zu Neumond vergehen etwa 29,5 Tage."
+      },
+      {
+        "label": "Licht",
+        "text": "Mondlicht ist reflektiertes Sonnenlicht."
+      }
+    ],
+    "more": [
+      "Die Mondbahn ist gegenüber der Erdbahnebene geneigt. Bei den meisten Vollmonden passiert der Mond oberhalb oder unterhalb des Erdschattens.",
+      "Auf der anderen Erdhalbkugel kann dieselbe Mondphase anders gedreht aussehen. Die Phase selbst bleibt dabei gleich."
+    ],
+    "surprise": "Ein Halbmond zeigt eine halbe beleuchtete Mondscheibe, kein halbes Himmelsobjekt.",
+    "locations": [],
+    "related": [
+      "history-apollo11",
+      "science-tides",
+      "science-solar-system"
+    ],
+    "sources": [
+      {
+        "label": "NASA: Moon Phases",
+        "url": "https://science.nasa.gov/moon/moon-phases/"
+      },
+      {
+        "label": "NASA: Top Moon Questions",
+        "url": "https://science.nasa.gov/moon/top-moon-questions/"
+      }
+    ],
+    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "question": {
+      "prompt": "Woher kommt das Licht des Mondes?",
+      "answers": [
+        "Von der Sonne",
+        "Aus einer Lampe im Mond",
+        "Von brennenden Wolken"
+      ],
+      "correct": 0,
+      "why": "Die Mondoberfläche reflektiert Sonnenlicht."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-09",
+    "challenges": [
+      {
+        "id": "science-moon-phases-1",
+        "difficulty": "medium",
+        "prompt": "Was verändert sich bei den Mondphasen?",
+        "answers": [
+          "Unser Blick auf die beleuchtete Hälfte",
+          "Die Kugelform des Mondes",
+          "Die Größe der Sonne"
+        ],
+        "correct": 0,
+        "why": "Der Mond bleibt ungefähr kugelförmig; wir sehen verschieden viel beleuchtete Fläche."
+      },
+      {
+        "id": "science-moon-phases-2",
+        "difficulty": "medium",
+        "prompt": "Wie lange dauert es ungefähr von Neumond zu Neumond?",
+        "answers": [
+          "29,5 Tage",
+          "24 Stunden",
+          "Ein Jahr"
+        ],
+        "correct": 0,
+        "why": "Ein vollständiger Phasenzyklus dauert etwa 29,5 Tage."
+      },
+      {
+        "id": "science-moon-phases-3",
+        "difficulty": "hard",
+        "prompt": "Warum gibt es nicht jeden Vollmond eine Mondfinsternis?",
+        "answers": [
+          "Die Mondbahn ist gegen die Erdbahnebene geneigt",
+          "Der Mond schaltet sein Licht aus",
+          "Die Erde hat keinen Schatten"
+        ],
+        "correct": 0,
+        "why": "Meist verfehlt der Mond den Erdschatten."
+      },
+      {
+        "id": "science-moon-phases-4",
+        "difficulty": "hard",
+        "prompt": "Warum erklärt der Erdschatten den normalen Halbmond nicht?",
+        "answers": [
+          "Mondphasen entstehen durch den Blick auf Sonnenlicht",
+          "Der Mond ist dann wirklich halbiert",
+          "Wolken schneiden ihn immer genau halb ab"
+        ],
+        "correct": 0,
+        "why": "Der Erdschatten ist nur bei einer Mondfinsternis die Ursache der Verdunkelung."
+      }
+    ],
+    "model": "moon-phases"
+  },
+  {
+    "id": "science-seasons",
+    "category": "science",
+    "title": "Ein Jahr, zwei verschiedene Sommer",
+    "intro": "Die geneigte Erdachse verändert im Jahreslauf Tageslänge und Sonnenstand.",
+    "aliases": [
+      "Jahreszeiten",
+      "Erdachse",
+      "Sommer",
+      "Winter"
+    ],
+    "paragraphs": [
+      "Die Erdachse steht schräg zur Erdbahnebene. Während die Erde die Sonne umkreist, ist einmal die Nordhalbkugel stärker zur Sonne geneigt, ein halbes Jahr später die Südhalbkugel.",
+      "Ist eine Halbkugel zur Sonne geneigt, steht die Sonne dort höher und die Tage sind länger. So erhält der Boden mehr Sonnenenergie: Es ist Sommer.",
+      "Wenn in Deutschland Sommer ist, ist in Australien Winter. Der wechselnde Abstand zur Sonne ist nicht die Hauptursache unserer Jahreszeiten."
+    ],
+    "facts": [
+      {
+        "label": "Neigung",
+        "text": "Die Erdachse ist um etwa 23,4 Grad gegen die Senkrechte zur Erdbahnebene geneigt."
+      },
+      {
+        "label": "Unterschied",
+        "text": "Nord- und Südhalbkugel haben entgegengesetzte Jahreszeiten."
+      }
+    ],
+    "more": [
+      "Der Sonnenstand beeinflusst, auf welche Fläche sich ein Lichtbündel verteilt. Flach einfallendes Licht verteilt dieselbe Energie auf eine größere Fläche.",
+      "Wetter und Klima hängen zusätzlich von Luft, Wasser, Landschaft und weiteren Faktoren ab. Das Achsenmodell allein sagt kein Tageswetter voraus."
+    ],
+    "surprise": "Beide Erdhalbkugeln sind gleichzeitig fast gleich weit von der Sonne entfernt und haben trotzdem verschiedene Jahreszeiten.",
+    "locations": [],
+    "related": [
+      "science-solar-system",
+      "science-energy"
+    ],
+    "sources": [
+      {
+        "label": "NASA Space Place: Seasons",
+        "url": "https://spaceplace.nasa.gov/seasons/en/"
+      },
+      {
+        "label": "NASA: Seasons on Earth, Mars, and Beyond",
+        "url": "https://science.nasa.gov/helio-and-you-seasons-on-earth-mars-and-beyond/"
+      }
+    ],
+    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "question": {
+      "prompt": "Was verursacht hauptsächlich die Jahreszeiten auf der Erde?",
+      "answers": [
+        "Die Neigung der Erdachse",
+        "Ein wechselndes Einschalten der Sonne",
+        "Die Mondphasen"
+      ],
+      "correct": 0,
+      "why": "Die Achsneigung verändert Sonnenstand und Tageslänge im Jahreslauf."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-09",
+    "challenges": [
+      {
+        "id": "science-seasons-1",
+        "difficulty": "medium",
+        "prompt": "Welche Jahreszeit hat Australien ungefähr im deutschen Sommer?",
+        "answers": [
+          "Winter",
+          "Auch immer Sommer",
+          "Keine Jahreszeit"
+        ],
+        "correct": 0,
+        "why": "Die Südhalbkugel ist dann von der Sonne weggeneigt."
+      },
+      {
+        "id": "science-seasons-2",
+        "difficulty": "medium",
+        "prompt": "Warum erwärmt hohe Sonne den Boden stärker?",
+        "answers": [
+          "Licht verteilt sich auf eine kleinere Fläche",
+          "Die Sonne besteht dann aus mehr Sternen",
+          "Der Boden zieht Licht magnetisch an"
+        ],
+        "correct": 0,
+        "why": "Bei höherem Sonnenstand trifft mehr Energie auf dieselbe Bodenfläche."
+      },
+      {
+        "id": "science-seasons-3",
+        "difficulty": "hard",
+        "prompt": "Welche Beobachtung widerspricht Abstand als Hauptursache?",
+        "answers": [
+          "Gleichzeitig entgegengesetzte Jahreszeiten beider Halbkugeln",
+          "Beide Halbkugeln sind weit auseinander im Weltall",
+          "Die Erde hört im Winter auf zu rotieren"
+        ],
+        "correct": 0,
+        "why": "Beide Halbkugeln teilen nahezu denselben Sonnenabstand, haben aber entgegengesetzte Jahreszeiten."
+      },
+      {
+        "id": "science-seasons-4",
+        "difficulty": "hard",
+        "prompt": "Was kann das einfache Achsenmodell nicht vorhersagen?",
+        "answers": [
+          "Ob es morgen an deinem Ort regnet",
+          "Welche Halbkugel zur Sonne geneigt ist",
+          "Warum Tageslängen wechseln"
+        ],
+        "correct": 0,
+        "why": "Für Tageswetter braucht man weitere Daten über die Atmosphäre."
+      }
+    ]
+  },
+  {
+    "id": "science-tides",
+    "category": "science",
+    "title": "Der Mond bewegt das Meer",
+    "intro": "Mond und Sonne beeinflussen das regelmäßige Steigen und Fallen des Meeresspiegels.",
+    "aliases": [
+      "Gezeiten",
+      "Ebbe",
+      "Flut",
+      "Tiden"
+    ],
+    "paragraphs": [
+      "Der Wasserstand am Meer verändert sich regelmäßig. Steigendes Wasser heißt Flut, fallendes Wasser Ebbe. Hochwasser und Niedrigwasser sind die höchsten und niedrigsten Wasserstände.",
+      "Die Anziehung des Mondes wirkt auf verschiedene Teile der Erde unterschiedlich stark. Zusammen mit dem Einfluss der Sonne entstehen Gezeitenkräfte.",
+      "Wie die Gezeiten an einer Küste aussehen, hängt auch von der Form der Meeresbecken und Küsten ab. Viele Orte erleben ungefähr zweimal täglich Hochwasser, aber nicht alle."
+    ],
+    "facts": [
+      {
+        "label": "Kräfte",
+        "text": "Sowohl Mond als auch Sonne beeinflussen die Gezeiten."
+      },
+      {
+        "label": "Vor Ort",
+        "text": "Zeiten und Höhen unterscheiden sich je nach Küste."
+      }
+    ],
+    "more": [
+      "Bei Neu- und Vollmond können sich die Gezeiteneinflüsse von Sonne und Mond verstärken: Springtiden haben einen größeren Unterschied zwischen Hoch- und Niedrigwasser.",
+      "Die Gezeiten sind keine einfache Wasserwelle, die überall gleich ankommt. Wind und Luftdruck können Wasserstände zusätzlich verändern. Für Ausflüge gelten örtliche Vorhersagen."
+    ],
+    "surprise": "Springtide bedeutet keine Jahreszeit: Sie kann das ganze Jahr auftreten.",
+    "locations": [],
+    "related": [
+      "science-moon-phases",
+      "science-currents"
+    ],
+    "sources": [
+      {
+        "label": "NOAA: Tides",
+        "url": "https://www.noaa.gov/education/resource-collections/ocean-coasts/tides"
+      },
+      {
+        "label": "NOAA: What are tides?",
+        "url": "https://oceanservice.noaa.gov/facts/tides.html"
+      },
+      {
+        "label": "NOAA: Frequency of Tides",
+        "url": "https://oceanservice.noaa.gov/facts/tidefrequency.html"
+      }
+    ],
+    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "question": {
+      "prompt": "Welche Himmelskörper beeinflussen die Gezeiten?",
+      "answers": [
+        "Mond und Sonne",
+        "Nur der Mars",
+        "Nur Sternschnuppen"
+      ],
+      "correct": 0,
+      "why": "Die Anziehung von Mond und Sonne beeinflusst das Meer."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-09",
+    "challenges": [
+      {
+        "id": "science-tides-1",
+        "difficulty": "medium",
+        "prompt": "Was heißt Ebbe?",
+        "answers": [
+          "Der Wasserstand fällt",
+          "Der Wasserstand steigt",
+          "Das Meer ist immer trocken"
+        ],
+        "correct": 0,
+        "why": "Ebbe bezeichnet den fallenden Wasserstand."
+      },
+      {
+        "id": "science-tides-2",
+        "difficulty": "medium",
+        "prompt": "Ist Hochwasser überall gleichzeitig?",
+        "answers": [
+          "Nein, örtliche Bedingungen unterscheiden sich",
+          "Ja, an allen Küsten gleichzeitig",
+          "Ja, immer um zwölf Uhr"
+        ],
+        "correct": 0,
+        "why": "Form und Tiefe von Meeresbecken sowie Küsten beeinflussen den Verlauf."
+      },
+      {
+        "id": "science-tides-3",
+        "difficulty": "hard",
+        "prompt": "Warum ist eine Mondphasenkarte kein sicherer Ausflugsplan fürs Watt?",
+        "answers": [
+          "Örtliche Zeiten und Wetter müssen berücksichtigt werden",
+          "Der Mond hat keinen Einfluss auf das Meer",
+          "Jeder Vollmond hält Wasser zurück"
+        ],
+        "correct": 0,
+        "why": "Für einen sicheren Ausflug sind örtliche Gezeitenvorhersagen und Wetter wichtig."
+      },
+      {
+        "id": "science-tides-4",
+        "difficulty": "hard",
+        "prompt": "Warum kann Springtide bei Neu- und Vollmond auftreten?",
+        "answers": [
+          "Sonnen- und Mondeinfluss können sich verstärken",
+          "Nur Vollmond erzeugt Schwerkraft",
+          "Springtide gibt es nur im Frühling"
+        ],
+        "correct": 0,
+        "why": "Bei entsprechender Anordnung verstärken sich die Gezeiteneinflüsse."
+      }
+    ]
   }
 ]

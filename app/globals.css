@@ -128,3 +128,16 @@
 .earth-app .map-options [data-slot=switch],.pass-settings [data-slot=switch]{width:46px!important;height:28px!important}.earth-app .map-options [data-slot=switch-thumb],.pass-settings [data-slot=switch-thumb]{width:22px!important;height:22px!important}.earth-app [data-slot=slider-thumb],.passport-dialog [data-slot=slider-thumb]{width:28px!important;height:28px!important;position:relative}.earth-app [data-slot=slider-thumb]::before,.passport-dialog [data-slot=slider-thumb]::before{content:"";position:absolute;width:44px;height:44px;left:50%;top:50%;transform:translate(-50%,-50%)}
 /* The parent guide shares the reader hierarchy, with visible ordered steps. */
 .parent-guide{display:block;padding:24px}.parent-guide>[data-slot="dialog-title"]{padding-right:44px;margin:0 0 12px;font-size:24px;font-weight:800;line-height:1.3;color:var(--foreground)}.parent-guide>p{margin:12px 0;line-height:1.6}.parent-guide h3{display:flex;align-items:flex-start;gap:9px;margin:24px 0 10px;font-size:19px;font-weight:700;line-height:1.35}.parent-guide h3>svg{flex-shrink:0;margin-top:2px}.parent-guide ol{list-style:decimal;padding-left:24px;margin:12px 0}.parent-guide li{margin:8px 0}.parent-guide .result-actions{margin-top:24px}
+
+/* Connected discoveries: bounded lists and calm learning controls. */
+.world-pagination{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;margin:1.5rem 0}
+.connection-card{border-left:3px solid #21755c;padding-left:.75rem;margin-bottom:1rem}
+.connection-card p{font-size:.9rem;line-height:1.65;margin:.3rem 0;color:#36545e}
+.challenge-levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.5rem 0}
+.challenge-levels .secondary-button{display:flex;align-items:flex-start;flex-direction:column;text-align:left;white-space:normal;gap:.7rem;padding:1.25rem}
+.challenge-levels strong{font-size:1.25rem}.challenge-levels span{line-height:1.65}.challenge-levels small{color:#36545e}
+.knowledge-challenge progress{width:100%;accent-color:#21755c;height:.7rem}
+.knowledge-challenge.world-game-finish{display:flex;flex-direction:column;align-items:center;gap:1rem}
+.moon-observation{display:flex;gap:1rem;align-items:center;margin:1rem 0}.moon-disc{display:block;width:64px;height:64px;border-radius:50%;background:#34495e;border:2px solid #587e8c;flex-shrink:0}
+.moon-phase-1{background:linear-gradient(90deg,#34495e 50%,#f4d98a 50%)}.moon-phase-2{background:#f4d98a}.moon-phase-3{background:linear-gradient(90deg,#f4d98a 50%,#34495e 50%)}
+@media(max-width:640px){.challenge-levels{grid-template-columns:1fr}.world-pagination{gap:.65rem}.world-pagination span{width:100%;text-align:center;order:-1}}

@@ -8,6 +8,10 @@ Für Entwicklungsaufgaben zuerst [AGENTS.md](AGENTS.md) und [PROJECT_STATE.md](P
 
 Node 24 und pnpm 11.25.0 verwenden. Die untenstehenden Start-/Prüfbefehle gelten direkt aus der Repository-Wurzel. Neue Änderungen über Entwicklungsbranch und Pull Request sichern. Es ist kein Scheduler aktiviert und keine neue Website veröffentlicht. Aktuelle Prüfungen und Synchronisierung stehen ausschließlich in PROJECT_STATE.md; die folgenden Abschnitte dokumentieren die ursprüngliche Sicherung.
 
+## Produktpaket WK-016 (Entwicklungsbranch)
+
+Das vernetzte Natur-/Weltallpaket ergänzt acht Karten: Wasserkreislauf, Fotosynthese, Bestäubung, Pilze, Korallenriffe, Mondphasen, Jahreszeiten und Gezeiten. Stand dieses Branches: 116 Karten, acht Wissensrouten und 31 Spielangebote. Die Wissens-Challenge bietet drei frei wählbare Stufen mit gespeichertem Fortschritt. Zwei eigene Lernmodelle und erklärte Querverbindungen unterstützen das Entdecken. Kartenlisten zeigen bis zu zwölf Treffer pro Seite; der Inhaltsbestand bleibt ohne feste Obergrenze. Fachabgleich: content/connected-discoveries-review.md. Veröffentlichung und Prüfnachweise ausschließlich in PROJECT_STATE.md.
+
 ## Historischer Sicherungsstand
 
 Stand: 9. Oktober 2026 · Quellstand der bestehenden ChatGPT Site, Version 14.
