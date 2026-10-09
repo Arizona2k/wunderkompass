@@ -1,0 +1,1261 @@
+{
+  "research_date": "2026-10-07",
+  "language": "de",
+  "audience_age": 8,
+  "purpose": "Recherche für Lernkarten; keine Produktionsdatei. Alle Kindertexte sind eigene kurze Paraphrasen.",
+  "editorial_rules": [
+    "Beispielpunkte auf dem Globus sind gerundete redaktionelle Anker innerhalb eines belegten Lebensraums, keine Sichtungsdaten, Neststandorte oder Verbreitungspolygone.",
+    "Größen gelten für erwachsene Tiere, sofern anders nicht ausdrücklich angegeben. Kopf-Rumpf-Länge schließt den Schwanz aus. Körpergewicht ist als Gewicht bezeichnet.",
+    "Lebenserwartungen sind Schätzungen; Durchschnitt, mögliche Höchstalter und Lebensdauer in menschlicher Obhut sind nicht austauschbar.",
+    "Bei undatierten Seiten ist source_date null; checked_at bedeutet Abrufdatum, nicht Datum einer IUCN-Bewertung.",
+    "Weltweite IUCN-Kategorie, regionale IUCN-Bewertung und nationale gesetzliche Schutzkategorie werden getrennt.",
+    "Quellen dürfen verlinkt werden. Texte sind eigene Paraphrasen; keine Bilder, Karten oder Originaltexte aus diesen Quellen übernehmen.",
+    "Pro Quelle bleiben die abgeleiteten Kurztexte unter dem Abruflimit von 200 Wörtern; beim Ausbau zusätzliche Originalquellen verwenden."
+  ],
+  "sources": {
+    "elephant_tokyo": {
+      "title": "African Bush Elephant – Tama Zoological Park / Tokyo Zoological Park Society",
+      "url": "https://www.tokyo-zoo.net/tama/encyclopedia/african-bush-elephant/index.html",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn81view5",
+      "supports": "Loxodonta africana; Schulterhöhe 2,5–4 m; pflanzliche Nahrung; Savannen südlich der Sahara; IUCN EN."
+    },
+    "elephant_wwf_de": {
+      "title": "Afrikanischer Savannenelefant – WWF Deutschland",
+      "url": "https://www.wwf.de/themen-projekte/artenlexikon/afrikanischer-savannenelefant",
+      "source_date": "2022-04-04",
+      "checked_at": "2026-10-07",
+      "web_ref": "turn67view3",
+      "supports": "Lebensraum, Sozialleben, mögliche Lebenserwartung 60–70 Jahre.",
+      "caveat": "Die Einleitung nennt teils alte zusammengefasste afrikanische Elefantenbestände. Keine aktuellen Bestandszahlen daraus verwenden."
+    },
+    "elephant_wwf_us": {
+      "title": "African savanna elephants – WWF US",
+      "url": "https://www.worldwildlife.org/species/elephant/african-elephant/african-savanna-elephant/",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn49view5",
+      "supports": "Artbezogener EN-Status; Vorkommen unter anderem Botswana, Tansania, Kenia; Savannen/Wälder; Weibchen und Kälber als Familie."
+    },
+    "elephant_maryland": {
+      "title": "African Savanna Elephant – Maryland Zoo",
+      "url": "https://www.marylandzoo.org/animal/african-elephant/",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn49view0",
+      "supports": "Zwei fingerartige Fortsätze an der Rüsselspitze; verwandte Weibchen leben in Familiengruppen.",
+      "caveat": "Seite nennt Savannen-/Waldelefanten fälschlich Unterarten und enthält falsche Gehirn-Superlative. Diese Aussagen nicht verwenden."
+    },
+    "lion_smithsonian": {
+      "title": "Lion – Smithsonian National Zoo",
+      "url": "https://www.nationalzoo.si.edu/animals/lion",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn38search2",
+      "supports": "Schulterhöhe 1–1,2 m; Nahrung; Rudel; Wildnis-Weibchen bis 16 Jahre; Männchen selten über 12; Brüllen bis fünf Meilen."
+    },
+    "lion_wwf": {
+      "title": "Löwe – WWF Deutschland",
+      "url": "https://www.wwf.de/themen-projekte/artenlexikon/loewe/",
+      "source_date": "2025-05-06",
+      "checked_at": "2026-10-07",
+      "web_ref": "turn96view6",
+      "supports": "Weltweit IUCN VU; Unterarten getrennt; Tansania und andere Staaten; Grasland/Buschland/Trockenwald."
+    },
+    "cheetah_smithsonian": {
+      "title": "Cheetah – Smithsonian National Zoo",
+      "url": "https://nationalzoo.si.edu/animals/cheetah",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn71view1",
+      "supports": "Kopf-Rumpf-Länge 112–142 cm; Lebensraum, Nahrung; wild 8–10 Jahre; Weibchen mit Jungen, männliche Koalitionen; chirp."
+    },
+    "cheetah_wwf": {
+      "title": "Gepard – WWF Deutschland",
+      "url": "https://www.wwf.de/themen-projekte/artenlexikon/gepard/",
+      "source_date": "2023-04-11",
+      "checked_at": "2026-10-07",
+      "web_ref": "turn96view7",
+      "supports": "IUCN VU; Lebensraumverlust.",
+      "caveat": "Nicht die absolute Formulierung 'können ihre Krallen nicht einziehen' übernehmen: semiretraktile Krallen sind genauer."
+    },
+    "tiger_wwf": {
+      "title": "Bengal-Tiger – WWF Deutschland",
+      "url": "https://www.wwf.de/themen-projekte/artenlexikon/bengal-tiger",
+      "source_date": "2024-01-23",
+      "checked_at": "2026-10-07",
+      "web_ref": "turn49view2",
+      "supports": "Kopf-Rumpf-Länge 146–290 cm; Wildnis etwa 10 Jahre; Indien/Nepal/Bhutan/Bangladesch; Nahrung, Einzelgänger, gute Schwimmer; EN.",
+      "caveat": "Bengal-Tiger ist eine Population der Festlandtiger. Nicht behaupten, eine getrennte aktuelle IUCN-Artenbewertung für Bengal-Tiger gelesen zu haben."
+    },
+    "giraffe_sandiego": {
+      "title": "Giraffe – San Diego Zoo Wildlife Alliance",
+      "url": "https://animals.sandiegozoo.org/animals/giraffe?qt-animals_page_content_tabs=1",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn49view3",
+      "supports": "Giraffa spp.; Blätter, Akazien; 15–20 Jahre; sieben Halswirbel; gemeinsame Wasserstellen.",
+      "caveat": "Ältere Bestandszahlen und einzelne Verbreitungs-Simplifizierungen nicht übernehmen."
+    },
+    "giraffe_columbus": {
+      "title": "Giraffe – Columbus Zoo",
+      "url": "https://www.columbuszoo.org/animals/giraffe",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn91view1",
+      "supports": "Gesamthöhe 14–19 Fuß; eigene Umrechnung etwa 4,3–5,8 m.",
+      "caveat": "Die auf dieser Seite verwendete Ein-Art-Taxonomie und pauschale VU-Kategorie nicht übernehmen."
+    },
+    "giraffe_iucn": {
+      "title": "Four giraffe species officially recognised – IUCN",
+      "url": "https://iucn.org/press-release/202508/four-giraffe-species-officially-recognised-major-conservation-reclassification",
+      "source_date": "2025-08-21",
+      "checked_at": "2026-10-07",
+      "web_ref": "turn67view2",
+      "supports": "Vier Arten: Nord-, Netz-, Massai- und Südgiraffe; unterschiedliche Schutzbedürfnisse; neue Bewertungen angekündigt."
+    },
+    "panda_smithsonian": {
+      "title": "Giant panda – Smithsonian National Zoo",
+      "url": "https://www.nationalzoo.si.edu/animals/giant-panda",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn43view0",
+      "supports": "Körperlänge 1,2–1,8 m; China/Sichuan/Shaanxi/Gansu; geschätzte Wildnis-Lebensspanne 15–20 Jahre; Bambus; Duftkommunikation; falscher Daumen."
+    },
+    "panda_wwf": {
+      "title": "Großer Panda – WWF Deutschland",
+      "url": "https://www.wwf.de/themen-projekte/artenlexikon/grosser-panda/",
+      "source_date": "2024-01-24",
+      "checked_at": "2026-10-07",
+      "web_ref": "turn94view5",
+      "supports": "Kopf-Rumpf-Länge 120–180 cm; VU seit Bewertung 2016; zerstückelte Waldgebiete."
+    },
+    "gorilla_smithsonian": {
+      "title": "Western lowland gorilla – Smithsonian National Zoo",
+      "url": "https://www.nationalzoo.si.edu/animals/western-lowland-gorilla",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn71view0",
+      "supports": "Gorilla gorilla gorilla; Nahrung, Kongobecken; wild 30–40 Jahre; einzigartige Nasenabdrücke; Weibchen 150–200 lb.",
+      "caveat": "Die Klammerumrechnung 113,4 kg für 150–200 lb ist falsch. Richtig sind rund 68–91 kg. Auch einige andere Klammerumrechnungen der Seite sind fehlerhaft."
+    },
+    "gorilla_wwf": {
+      "title": "Westlicher Gorilla – WWF Deutschland",
+      "url": "https://www.wwf.de/themen-projekte/artenlexikon/westlicher-gorilla",
+      "source_date": "2024-02-22",
+      "checked_at": "2026-10-07",
+      "web_ref": "turn94view7",
+      "supports": "CR; zwei Unterarten; Flachlandgorillas und Cross-River-Gorillas getrennt; Waldlebensraum."
+    },
+    "orangutan_wwf": {
+      "title": "Borneo-Orang-Utan – WWF Deutschland",
+      "url": "https://www.wwf.de/themen-projekte/artenlexikon/borneo-orang-utan",
+      "source_date": "2023-11-28",
+      "checked_at": "2026-10-07",
+      "web_ref": "turn71view2",
+      "supports": "Pongo pygmaeus; Borneo; Nahrung; Weibchen 30–45 kg; möglich bis 50 Jahre; CR; Schlafnester."
+    },
+    "polar_sandiego": {
+      "title": "Polar Bear – San Diego Zoo Wildlife Alliance",
+      "url": "https://animals.sandiegozoo.org/animals/polar-bear",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn62view6",
+      "supports": "Kopf-Rumpf-Länge 1,8–2,7 m; durchschnittlich Weibchen 20–25, Männchen 15–18 Jahre."
+    },
+    "polar_wwf": {
+      "title": "Eisbär – WWF Deutschland",
+      "url": "https://www.wwf.de/themen-projekte/artenlexikon/eisbaer/",
+      "source_date": "2021-09-07",
+      "checked_at": "2026-10-07",
+      "web_ref": "turn90view3",
+      "supports": "Arktis, Meereis/Küsten, Robben, Einzelgänger, transparente Haare, VU."
+    },
+    "emperor_antarctica": {
+      "title": "Emperor penguin – Australian Antarctic Program",
+      "url": "https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn71view7",
+      "supports": "Antarktische Küsten/Meereis; Kolonien; wärmespendendes Zusammenrücken; Männchen brüten; Fisch/Krill/Tintenfische; einige über 40 Jahre."
+    },
+    "emperor_size": {
+      "title": "Penguin Record Breakers – Penguins International",
+      "url": "https://www.penguinsinternational.org/penguin-record-breakers/",
+      "source_date": "2025-03-11",
+      "checked_at": "2026-10-07",
+      "web_ref": "turn94view4",
+      "supports": "Körperlänge 100–130 cm und Gewicht 22–40 kg; Artikel ursprünglich 17.12.2019, aktualisiert 11.03.2025."
+    },
+    "emperor_iucn": {
+      "title": "Emperor penguin and Antarctic fur seal now Endangered – IUCN",
+      "url": "https://iucn.org/press-release/202604/emperor-penguin-and-antarctic-fur-seal-now-endangered-due-climate-change-iucn",
+      "source_date": "2026-04-09",
+      "checked_at": "2026-10-07",
+      "web_ref": "turn67view1",
+      "supports": "Aptenodytes forsteri von NT zu EN; Verlust/früher Zerfall des Meereises.",
+      "caveat": "Die Pressemitteilung beschreibt vorveröffentlichte Bewertung; alte Artenprofile können weiter NT zeigen. Der aktuelle Primärtext belegt EN."
+    },
+    "blue_noaa": {
+      "title": "Blue Whale – NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/species/blue-whale",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn58view0",
+      "supports": "Ozeane außer Arktis; Krill; allein/Paare; 80–90 Jahre geschätzt; größte Tierart; Barten; Gefährdungen."
+    },
+    "blue_wwf": {
+      "title": "Blue whales – WWF US",
+      "url": "https://www.worldwildlife.org/species/whale/blue-whale/",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn93view0",
+      "supports": "Länge 80–100 ft, umgerechnet 24,4–30,5 m; EN.",
+      "caveat": "Nicht den Herz-ist-VW-Käfer-Vergleich oder den Luft-/Unterwasser-Dezibelvergleich verwenden."
+    },
+    "dolphin_noaa": {
+      "title": "Common Bottlenose Dolphin – NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn58view1",
+      "supports": "Tursiops truncatus; Länge 6–13 Fuß; 40–60 Jahre; gemäßigte/tropische Küsten und offene Meere; Nahrung, Echolot, wechselnde Gruppen; ganze Fische."
+    },
+    "dolphin_wwf": {
+      "title": "Common bottlenose dolphins – WWF US",
+      "url": "https://www.worldwildlife.org/species/dolphin-and-porpoise/common-bottlenose-dolphin/",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn98view4",
+      "supports": "Global LC; Küstenentwicklung und Beifang.",
+      "caveat": "Die Seite verschreibt das wissenschaftliche Artepitheton als truncates; korrekt ist truncatus."
+    },
+    "dolphin_iucn_csg": {
+      "title": "Red List Updates … Lahille’s Bottlenose Dolphins – IUCN SSC CSG",
+      "url": "https://iucn-csg.org/red-list-updates-published-for-sperm-whales-and-lahilles-bottlenose-dolphins/",
+      "source_date": "2025-11-13",
+      "checked_at": "2026-10-07",
+      "web_ref": "turn99view2",
+      "supports": "Unterart Tursiops truncatus gephyreus seit Oktober 2025 EN. Diese Kategorie nicht auf alle Großen Tümmler übertragen."
+    },
+    "orca_noaa": {
+      "title": "Killer Whale – NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/species/killer-whale",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn58view2",
+      "supports": "Alle Ozeane; kulturell verschiedene Nahrung; Familiengruppen und Rufe; Männchen im Mittel 30, Weibchen 50 Jahre; Southern Residents ESA-Endangered seit 2005."
+    },
+    "orca_wwf": {
+      "title": "Top 10 facts about Orcas – WWF UK",
+      "url": "https://www.wwf.org.uk/learn/fascinating-facts/orcas",
+      "source_date": "2023-08-24",
+      "checked_at": "2026-10-07",
+      "web_ref": "turn91view2",
+      "supports": "Länge 5,5–9,8 m; größte Delfinfamilien-Art; Familienrufe und Bedrohungen."
+    },
+    "octopus_aquarium": {
+      "title": "Common Octopus – Aquarium La Rochelle",
+      "url": "https://www.aquarium-larochelle.com/en/species-encyclopedia/common-octopus/",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn87view0",
+      "supports": "Octopus vulgaris; Küsten wärmerer/gemäßigter Meere; LC; Einzelgänger; Nahrung; Wasserstrahl; chemische Rezeptoren der Arme."
+    },
+    "octopus_ifca": {
+      "title": "Influx of Octopus … – Devon and Severn IFCA",
+      "url": "https://www.devonandsevernifca.gov.uk/wp-content/uploads/2025/06/Agenda-Item-11-Influx-of-Octopus-into-Devon-and-the-South-West.pdf",
+      "source_date": "2025-06",
+      "checked_at": "2026-10-07",
+      "web_ref": "turn94view0",
+      "supports": "S. 1: Mantelgröße 15–25 cm; Gesamtgröße einschließlich Armen bis etwa 1 m; typisch 1–2 Jahre; Küsten Europas/Afrikas/Mittelmeer.",
+      "caveat": "Keine weltweite moderne Verbreitungskarte aus der pauschalen 'around the world'-Angabe ableiten; Artkomplex beachten."
+    },
+    "turtle_noaa": {
+      "title": "Green Turtle – NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/species/green-turtle",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn58view3",
+      "supports": "Chelonia mydas; Algen/Seegras bei Erwachsenen, Jungtiere auch tierische Kost; Hawaii; Wanderungen; Rückkehr zur Herkunftsregion am Niststrand; geschätzt 70+ Jahre."
+    },
+    "turtle_foundation": {
+      "title": "Meeresschildkrötenarten – Turtle Foundation",
+      "url": "https://turtle-foundation.org/de/meeresschildkroeten/arten/",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn94view3",
+      "supports": "Panzerlänge der Grünen Meeresschildkröte 90–120 cm; tropische/subtropische Meere, Mittelmeer; Nahrung."
+    },
+    "turtle_iucn": {
+      "title": "Arctic seals … global green turtle recovery – IUCN",
+      "url": "https://iucn.org/press-release/202510/arctic-seals-threatened-climate-change-birds-decline-globally-iucn-red-list",
+      "source_date": "2025-10-10",
+      "checked_at": "2026-10-07",
+      "web_ref": "turn67view0",
+      "supports": "Global Chelonia mydas von EN zu LC; weiter Beifang, Lebensraumverlust und regionale Probleme."
+    },
+    "kangaroo_taronga": {
+      "title": "Red Kangaroo – Taronga Conservation Society Australia",
+      "url": "https://www.taronga.org.au/wildlife-and-conservation/animals/detail/red-kangaroo",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn81view2",
+      "supports": "Osphranter rufus; Zentral-Australien; Gras; Männchen 65–92 kg, Weibchen 25–35 kg; wild bis 20 Jahre, Obhut bis 23; LC; Weibchen oft blaugrau; Gruppen."
+    },
+    "koala_sandiego": {
+      "title": "Koala – San Diego Zoo Wildlife Alliance",
+      "url": "https://animals.sandiegozoo.org/animals/koala",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn73view1",
+      "supports": "Ost-/Südostaustralien, Eukalyptusbäume, Eukalyptusblätter, meist einzeln, 10–15 Jahre, zwei opponierbare Finger pro Hand; Kopf-Rumpf-Länge 60–80 cm.",
+      "caveat": "Globale 'Endangered across their native range'-Behauptung nicht übernehmen. Metrische Längenwerte der Seite sind 60–80 cm; die parallel angegebenen 2–3 Fuß sind ungenau."
+    },
+    "koala_dcceew": {
+      "title": "Koala listing under national environmental law – Australian DCCEEW",
+      "url": "https://www.dcceew.gov.au/environment/biodiversity/threatened/species/koalas/listing-under-national-environmental-law",
+      "source_date": "2026-04-28",
+      "checked_at": "2026-10-07",
+      "web_ref": "turn78view3",
+      "supports": "Zusammengefasste Populationen Queensland/NSW/ACT seit 12.02.2022 national EPBC Endangered; keine weltweite IUCN-Aussage."
+    },
+    "jaguar_sandiego": {
+      "title": "Jaguar – San Diego Zoo Wildlife Alliance",
+      "url": "https://animals.sandiegozoo.org/animals/jaguar",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn75view0",
+      "supports": "Wildnis 12–15 Jahre; individuelle Fleckenmuster.",
+      "caveat": "Veraltete Zahl von etwa 10.000 wilden Jaguaren nicht übernehmen."
+    },
+    "jaguar_wwf": {
+      "title": "Jaguar – WWF Schweiz",
+      "url": "https://www.wwf.ch/de/tierarten/jaguar-der-im-fliegen-jagt",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn99view3",
+      "supports": "Kopf-Rumpf-Länge 1,1–1,7 m; IUCN NT; Amazonas/Pantanal; Einzelgänger, Schwimmer; verschiedene tierische Nahrung."
+    },
+    "bee_frankfurt": {
+      "title": "Honigbiene, Europäische (Westliche) – Zoo Frankfurt",
+      "url": "https://www.zoo-frankfurt.de/de/tiere-von-a-z-detailansicht/animal/tiere-von-a-z-detailansicht/honigbiene-europaeische-westliche",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn91view3",
+      "supports": "Apis mellifera; Königin 15–18 mm; ursprünglich Europa/Vorderasien/Afrika, eingeführt weltweit; Baumhöhlen; Staaten; Nektar/Pollen."
+    },
+    "bee_nczoo": {
+      "title": "Honey Bee – North Carolina Zoo",
+      "url": "https://www.nczoo.org/wildlife/animals/honey-bee",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn78view1",
+      "supports": "Königin 3–5 Jahre; Arbeiterinnen weiblich; Schwänzeltanz zeigt Entfernung/Richtung.",
+      "caveat": "Nicht die pauschale 1-Jahr-Lebensspanne oder das unplausible Körpergewicht im oberen Schnellsteckbrief übernehmen."
+    },
+    "bee_fmach": {
+      "title": "Wild Honey Bee: a step forward for its protection – Fondazione Edmund Mach",
+      "url": "https://fmach.it/en/Communication/Press-releases/Wild-Honey-Bee-a-step-forward-for-its-protection",
+      "source_date": "2025-10-14",
+      "checked_at": "2026-10-07",
+      "web_ref": "turn99view0",
+      "supports": "FEM war an der Neubewertung beteiligt; wild lebende Honigbienen in der europäischen/EU-Bewertung 2025 EN; vorher DD.",
+      "caveat": "Nur wilde Völker in regionaler Bewertung; gehaltene Imkervölker und weltweite Art nicht mit globalem EN versehen."
+    },
+    "axolotl_toronto": {
+      "title": "Axolotl – Toronto Zoo",
+      "url": "https://www.torontozoo.com/animals/Axolotl",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn78view2",
+      "supports": "Ambystoma mexicanum; Xochimilco; Erwachsene im Mittel 25–30 cm; etwa 10–12 Jahre, Obhut-Ausreißer bis 25; Nahrung; einzelgängerisch; Regeneration; CR."
+    },
+    "axolotl_sandiego": {
+      "title": "Axolotl – San Diego Zoo Wildlife Alliance",
+      "url": "https://animals.sandiegozoo.org/animals/axolotl",
+      "source_date": null,
+      "checked_at": "2026-10-07",
+      "web_ref": "turn96view2",
+      "supports": "Regeneration von Gliedmaßen; Bedrohung durch Lebensraumqualität und eingeschleppte Fische.",
+      "caveat": "Größenbox enthält fehlerhafte Umrechnung: 8–12 Zoll sind nicht 15–45 cm. Dafür Toronto Zoo nutzen."
+    }
+  },
+  "animals": [
+    {
+      "id": "african-savanna-elephant",
+      "name_de": "Afrikanischer Savannenelefant",
+      "taxon": "Loxodonta africana",
+      "habitat_de": "Er lebt in Savannen und offenen Wäldern Afrikas, zum Beispiel in Botswana, Tansania und Kenia.",
+      "food_de": "Er frisst Gras, Blätter, Zweige, Früchte und Rinde.",
+      "size": {
+        "measurement_de": "Schulterhöhe erwachsener Tiere",
+        "min": 2.5,
+        "max": 4,
+        "unit": "m",
+        "text_de": "An der Schulter etwa 2,5–4 Meter hoch.",
+        "source_ids": [
+          "elephant_tokyo"
+        ]
+      },
+      "lifespan_de": "Elefanten können etwa 60–70 Jahre alt werden.",
+      "social_de": "Verwandte Weibchen leben mit ihren Jungen in Familien. Ein erfahrenes Weibchen führt sie.",
+      "skill_de": "Mit dem Rüssel kann er riechen, greifen und Wasser ins Maul bringen.",
+      "surprising_de": "An der Rüsselspitze sitzen zwei kleine Fortsätze wie Finger.",
+      "conservation": {
+        "scope": "global_species",
+        "category": "EN",
+        "text_de": "Der Savannenelefant ist stark gefährdet. Er braucht sichere Lebensräume und Schutz vor Wilderei.",
+        "source_date": null,
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "elephant_wwf_us",
+          "elephant_tokyo"
+        ]
+      },
+      "globe_example": {
+        "lat": -19,
+        "lng": 23.5,
+        "label_de": "Nordbotswana – Beispielregion"
+      },
+      "source_ids": [
+        "elephant_tokyo",
+        "elephant_wwf_de",
+        "elephant_wwf_us",
+        "elephant_maryland"
+      ],
+      "notes": [
+        "60–70 Jahre ist mögliches hohes Alter laut WWF, kein gesicherter Durchschnitt in der Wildnis. Nicht behaupten, er sauge Wasser direkt durch den Rüssel in den Bauch."
+      ]
+    },
+    {
+      "id": "lion",
+      "name_de": "Löwe",
+      "taxon": "Panthera leo",
+      "habitat_de": "Löwen leben vor allem in afrikanischen Savannen und offenen Wäldern. Eine kleine Population lebt in Indien.",
+      "food_de": "Sie fressen zum Beispiel Zebras, Gnus und andere größere Tiere.",
+      "size": {
+        "measurement_de": "Schulterhöhe",
+        "min": 1,
+        "max": 1.2,
+        "unit": "m",
+        "text_de": "An der Schulter etwa 1–1,2 Meter hoch.",
+        "source_ids": [
+          "lion_smithsonian"
+        ]
+      },
+      "lifespan_de": "In der Wildnis können Weibchen etwa 16 Jahre alt werden. Männchen werden meist kürzer alt.",
+      "social_de": "Löwen leben in Rudeln. Weibchen jagen oft zusammen und betreuen gemeinsam die Jungen.",
+      "skill_de": "Beim Jagen können sie ihre Beute von verschiedenen Seiten überraschen.",
+      "surprising_de": "Ein Löwenbrüllen kann man bis zu etwa 8 Kilometer weit hören.",
+      "conservation": {
+        "scope": "global_species",
+        "category": "VU",
+        "text_de": "Löwen gelten weltweit als gefährdet. Sichere Lebensräume und genug Beutetiere helfen ihnen.",
+        "source_date": "2025-05-06",
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "lion_wwf"
+        ]
+      },
+      "globe_example": {
+        "lat": -2.3,
+        "lng": 34.8,
+        "label_de": "Nordtansania – Beispielregion"
+      },
+      "source_ids": [
+        "lion_smithsonian",
+        "lion_wwf"
+      ],
+      "notes": [
+        "Brüllweite ist eine mögliche Höchstreichweite, keine Garantie bei jedem Wetter. Globaler VU-Status nicht mit der Kategorie einer Unterart gleichsetzen."
+      ]
+    },
+    {
+      "id": "cheetah",
+      "name_de": "Gepard",
+      "taxon": "Acinonyx jubatus",
+      "habitat_de": "Geparden brauchen viel Platz. Sie leben zum Beispiel in Savannen und Grasländern Namibias, Botswanas, Kenias und Tansanias.",
+      "food_de": "Sie fressen vor allem kleinere Antilopen, außerdem Hasen und Vögel.",
+      "size": {
+        "measurement_de": "Kopf-Rumpf-Länge ohne Schwanz",
+        "min": 112,
+        "max": 142,
+        "unit": "cm",
+        "text_de": "Ohne Schwanz etwa 112–142 Zentimeter lang.",
+        "source_ids": [
+          "cheetah_smithsonian"
+        ]
+      },
+      "lifespan_de": "In der Wildnis werden Geparden im Durchschnitt etwa 8–10 Jahre alt.",
+      "social_de": "Weibchen ziehen ihre Jungen meist allein auf. Männchen leben häufig in kleinen Gruppen.",
+      "skill_de": "Geparden können für kurze Zeit sehr schnell sprinten.",
+      "surprising_de": "Geparden können zirpen – das klingt ein bisschen wie ein Vogel.",
+      "conservation": {
+        "scope": "global_species",
+        "category": "VU",
+        "text_de": "Geparden sind gefährdet. Immer mehr ihres Lebensraums geht verloren.",
+        "source_date": "2023-04-11",
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "cheetah_wwf"
+        ]
+      },
+      "globe_example": {
+        "lat": -20.5,
+        "lng": 17,
+        "label_de": "Namibia – Beispielregion"
+      },
+      "source_ids": [
+        "cheetah_smithsonian",
+        "cheetah_wwf"
+      ],
+      "notes": [
+        "Die seltene iranische Unterart hat einen strengeren Status. Keine ausgedachte durchgehende Verbreitungsfläche über Afrika oder Asien."
+      ]
+    },
+    {
+      "id": "bengal-tiger",
+      "name_de": "Bengaltiger",
+      "taxon": "Panthera tigris tigris (Bengal-Population der Festlandtiger)",
+      "habitat_de": "Bengaltiger leben in Indien, Nepal, Bhutan und Bangladesch – in Wäldern, Grasland und auch Mangroven.",
+      "food_de": "Sie jagen vor allem mittelgroße und große Tiere, zum Beispiel Hirsche und Wildschweine.",
+      "size": {
+        "measurement_de": "Kopf-Rumpf-Länge ohne Schwanz",
+        "min": 146,
+        "max": 290,
+        "unit": "cm",
+        "text_de": "Ohne Schwanz etwa 146–290 Zentimeter lang.",
+        "source_ids": [
+          "tiger_wwf"
+        ]
+      },
+      "lifespan_de": "In der Wildnis werden sie etwa 10 Jahre alt.",
+      "social_de": "Erwachsene Tiger leben meist allein. Die Mutter bleibt bei ihren Jungen, bis sie selbstständig sind.",
+      "skill_de": "Ein Tiger kann sich leise an seine Beute anschleichen.",
+      "surprising_de": "Bengaltiger sind gute Schwimmer und kommen auch in Feuchtgebieten zurecht.",
+      "conservation": {
+        "scope": "tiger_species_including_bengal_population",
+        "category": "EN",
+        "text_de": "Tiger gelten als stark gefährdet. Auch Bengaltiger brauchen geschützte Lebensräume.",
+        "source_date": "2024-01-23",
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "tiger_wwf"
+        ]
+      },
+      "globe_example": {
+        "lat": 27.5,
+        "lng": 84.4,
+        "label_de": "Chitwan, Nepal – Beispielregion"
+      },
+      "source_ids": [
+        "tiger_wwf"
+      ],
+      "notes": [
+        "Das Taxon ist keine eigene Art. Die Quelle nennt Bengal-Tiger eine Population der Festland-Unterart. Größenunterschiede zwischen Geschlechtern und Regionen sind groß."
+      ]
+    },
+    {
+      "id": "giraffe",
+      "name_de": "Giraffe",
+      "taxon": "Giraffa spp. (vier anerkannte Arten)",
+      "habitat_de": "Giraffen leben in afrikanischen Savannen und offenen Wäldern. Netzgiraffen leben zum Beispiel im Norden Kenias.",
+      "food_de": "Sie fressen Blätter und Triebe, oft von Akazien.",
+      "size": {
+        "measurement_de": "Gesamthöhe bis zum Kopf, nicht Schulterhöhe",
+        "min": 4.3,
+        "max": 5.8,
+        "unit": "m",
+        "text_de": "Vom Boden bis zum Kopf etwa 4,3–5,8 Meter hoch.",
+        "source_ids": [
+          "giraffe_columbus"
+        ]
+      },
+      "lifespan_de": "Giraffen leben etwa 15–20 Jahre.",
+      "social_de": "Giraffen treffen sich in Gruppen. An Wasserstellen können andere auf Gefahr achten, während ein Tier trinkt.",
+      "skill_de": "Mit der langen Zunge erreichen sie Blätter zwischen dornigen Zweigen.",
+      "surprising_de": "Trotz des langen Halses haben Giraffen sieben Halswirbel – genau wie Menschen.",
+      "conservation": {
+        "scope": "genus_multiple_species",
+        "category": null,
+        "text_de": "Es gibt vier Giraffenarten. Sie brauchen je nach Art und Region unterschiedlichen Schutz.",
+        "source_date": "2025-08-21",
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "giraffe_iucn"
+        ]
+      },
+      "globe_example": {
+        "lat": 1.1,
+        "lng": 37.3,
+        "label_de": "Nordkenia – Beispielregion der Netzgiraffe"
+      },
+      "source_ids": [
+        "giraffe_sandiego",
+        "giraffe_columbus",
+        "giraffe_iucn"
+      ],
+      "notes": [
+        "Kein gemeinsames globales Gefährdungsbadge für 'Giraffe'. Die Artengruppe wird seit der IUCN-Taxonomieentscheidung 2025 in vier Arten gegliedert. 14–19 ft wurden korrekt gerundet umgerechnet. Quelle klärt Lebensdauer-Kontext nicht ausdrücklich."
+      ]
+    },
+    {
+      "id": "giant-panda",
+      "name_de": "Großer Panda",
+      "taxon": "Ailuropoda melanoleuca",
+      "habitat_de": "Pandas leben in kühlen Bergwäldern Chinas, zum Beispiel in Sichuan. Dort wächst viel Bambus.",
+      "food_de": "Sie fressen fast nur Bambus.",
+      "size": {
+        "measurement_de": "Kopf-Rumpf-Länge ohne Schwanz",
+        "min": 120,
+        "max": 180,
+        "unit": "cm",
+        "text_de": "Ohne Schwanz etwa 120–180 Zentimeter lang.",
+        "source_ids": [
+          "panda_wwf",
+          "panda_smithsonian"
+        ]
+      },
+      "lifespan_de": "In der Wildnis werden Pandas vermutlich etwa 15–20 Jahre alt.",
+      "social_de": "Erwachsene Pandas sind oft allein unterwegs. Mit Duftmarken geben sie anderen Pandas Nachrichten.",
+      "skill_de": "Starke Zähne und Kiefer helfen ihnen, harten Bambus zu zerbeißen.",
+      "surprising_de": "Ein besonderer Handgelenkknochen funktioniert wie ein extra Daumen und hält den Bambus fest.",
+      "conservation": {
+        "scope": "global_species",
+        "category": "VU",
+        "text_de": "Pandas gelten als gefährdet. Verbundene Bambuswälder helfen ihnen, Nahrung und andere Pandas zu finden.",
+        "source_date": "2024-01-24",
+        "assessment_year": 2016,
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "panda_wwf"
+        ]
+      },
+      "globe_example": {
+        "lat": 31,
+        "lng": 103,
+        "label_de": "Sichuan, China – Beispielregion"
+      },
+      "source_ids": [
+        "panda_smithsonian",
+        "panda_wwf"
+      ],
+      "notes": [
+        "Wildnis-Lebensspanne ist ausdrücklich eine Schätzung. 'Einzelgänger' bedeutet keine völlige soziale Isolation; Smithsonian beschreibt auch lokale Beziehungen."
+      ]
+    },
+    {
+      "id": "western-lowland-gorilla",
+      "name_de": "Westlicher Flachlandgorilla",
+      "taxon": "Gorilla gorilla gorilla",
+      "habitat_de": "Er lebt in Regen- und Sumpfwäldern im Kongobecken, zum Beispiel in Gabun und der Republik Kongo.",
+      "food_de": "Er frisst vor allem Blätter, Stängel und Früchte, gelegentlich auch kleine Wirbellose.",
+      "size": {
+        "measurement_de": "Körpergewicht erwachsener Weibchen",
+        "min": 68,
+        "max": 91,
+        "unit": "kg",
+        "text_de": "Ein erwachsenes Weibchen wiegt etwa 68–91 Kilogramm. Männchen sind deutlich schwerer.",
+        "source_ids": [
+          "gorilla_smithsonian"
+        ]
+      },
+      "lifespan_de": "In der Wildnis können Gorillas etwa 30–40 Jahre leben.",
+      "social_de": "In einer Gruppe leben meist ein erwachsenes Männchen, mehrere Weibchen und ihre Jungen.",
+      "skill_de": "Beim Gehen auf allen vieren stützt er sich auf die Fingerknöchel.",
+      "surprising_de": "Jeder Gorilla hat ein eigenes Nasenmuster – wie einen persönlichen Abdruck.",
+      "conservation": {
+        "scope": "western_gorilla_species_and_western_lowland_subspecies",
+        "category": "CR",
+        "text_de": "Westliche Gorillas sind vom Aussterben bedroht. Waldschutz und Schutz vor Wilderei sind wichtig.",
+        "source_date": "2024-02-22",
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "gorilla_wwf"
+        ]
+      },
+      "globe_example": {
+        "lat": 1,
+        "lng": 16,
+        "label_de": "Nordwesten der Republik Kongo – Beispielregion"
+      },
+      "source_ids": [
+        "gorilla_smithsonian",
+        "gorilla_wwf"
+      ],
+      "notes": [
+        "Gewicht statt einer erfundenen Körperlängen-Spanne. Umrechnung aus 150–200 lb: 68,0–90,7 kg; falsche 113,4-kg-Klammerangabe des Smithsonian ignoriert. CR der Westlichen Gorillas umfasst diese Unterart."
+      ]
+    },
+    {
+      "id": "bornean-orangutan",
+      "name_de": "Borneo-Orang-Utan",
+      "taxon": "Pongo pygmaeus",
+      "habitat_de": "Er lebt nur auf Borneo, besonders in Tieflandregenwäldern und Sumpfwäldern.",
+      "food_de": "Er frisst vor allem Früchte, außerdem Blätter, Rinde und Insekten.",
+      "size": {
+        "measurement_de": "Körpergewicht erwachsener Weibchen",
+        "min": 30,
+        "max": 45,
+        "unit": "kg",
+        "text_de": "Ein erwachsenes Weibchen wiegt etwa 30–45 Kilogramm. Männchen sind schwerer.",
+        "source_ids": [
+          "orangutan_wwf"
+        ]
+      },
+      "lifespan_de": "Borneo-Orang-Utans können bis zu etwa 50 Jahre alt werden.",
+      "social_de": "Sie sind oft allein unterwegs. Junge Orang-Utans lernen viele Jahre von ihrer Mutter.",
+      "skill_de": "Ihre langen Arme und Greifhände helfen beim Klettern in den Bäumen.",
+      "surprising_de": "Zum Schlafen bauen sie sich meist ein neues Nest aus Ästen und Blättern.",
+      "conservation": {
+        "scope": "global_species",
+        "category": "CR",
+        "text_de": "Borneo-Orang-Utans sind vom Aussterben bedroht. Sie brauchen große zusammenhängende Wälder.",
+        "source_date": "2023-11-28",
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "orangutan_wwf"
+        ]
+      },
+      "globe_example": {
+        "lat": -2.4,
+        "lng": 113.8,
+        "label_de": "Sebangau, Borneo – Beispielregion"
+      },
+      "source_ids": [
+        "orangutan_wwf"
+      ],
+      "notes": [
+        "50 Jahre ist mögliches Höchstalter, kein Durchschnitt. WWF-Männchengewicht umfasst Altersunterschiede; deshalb für die geprüfte Spanne Weibchen verwendet. Keine Fakten der Sumatra-Art als Borneo-spezifisch ausgeben."
+      ]
+    },
+    {
+      "id": "polar-bear",
+      "name_de": "Eisbär",
+      "taxon": "Ursus maritimus",
+      "habitat_de": "Eisbären leben in der Arktis auf Meereis und an Küsten rund um den Nordpol.",
+      "food_de": "Sie jagen vor allem Robben.",
+      "size": {
+        "measurement_de": "Kopf-Rumpf-Länge",
+        "min": 1.8,
+        "max": 2.7,
+        "unit": "m",
+        "text_de": "Vom Kopf bis zum Hinterteil etwa 1,8–2,7 Meter lang.",
+        "source_ids": [
+          "polar_sandiego"
+        ]
+      },
+      "lifespan_de": "Weibchen werden im Durchschnitt etwa 20–25 Jahre alt, Männchen etwa 15–18 Jahre.",
+      "social_de": "Erwachsene Eisbären sind oft allein. Mütter bleiben bei ihren Jungen.",
+      "skill_de": "Große Tatzen helfen beim Laufen auf Eis und beim Schwimmen.",
+      "surprising_de": "Sein Fell sieht weiß aus, aber die einzelnen Haare sind durchsichtig.",
+      "conservation": {
+        "scope": "global_species",
+        "category": "VU",
+        "text_de": "Eisbären sind gefährdet. Durch die Erwärmung der Arktis verlieren sie Meereis, auf dem sie jagen.",
+        "source_date": "2021-09-07",
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "polar_wwf"
+        ]
+      },
+      "globe_example": {
+        "lat": 80.5,
+        "lng": 20,
+        "label_de": "Arktis nördlich von Spitzbergen – Beispielregion"
+      },
+      "source_ids": [
+        "polar_sandiego",
+        "polar_wwf"
+      ],
+      "notes": [
+        "Lebensdauer-Kontext der Zoo-Kurzbox ist nicht ausdrücklich Wildnis/Obhut; bei einer streng nur wilden Karte lieber ohne Zahl oder als Quellenschätzung kennzeichnen. Nicht in die Antarktis platzieren."
+      ]
+    },
+    {
+      "id": "emperor-penguin",
+      "name_de": "Kaiserpinguin",
+      "taxon": "Aptenodytes forsteri",
+      "habitat_de": "Er lebt an den Küsten der Antarktis. Viele Kolonien brüten auf festem Meereis.",
+      "food_de": "Er frisst Fische, Krill und Tintenfische.",
+      "size": {
+        "measurement_de": "Körperlänge laut Penguins International; als Körpergröße/Höhe im Artikel verglichen",
+        "min": 100,
+        "max": 130,
+        "unit": "cm",
+        "text_de": "Etwa 100–130 Zentimeter groß.",
+        "source_ids": [
+          "emperor_size"
+        ]
+      },
+      "lifespan_de": "Einige Kaiserpinguine werden über 40 Jahre alt. Viele leben deutlich kürzer.",
+      "social_de": "Bei großer Kälte rücken viele Pinguine eng zusammen und wärmen sich gegenseitig.",
+      "skill_de": "Er kann tief tauchen, um im Meer Nahrung zu finden.",
+      "surprising_de": "Der Vater hält das Ei auf seinen Füßen warm, während er es ausbrütet.",
+      "conservation": {
+        "scope": "global_species",
+        "category": "EN",
+        "text_de": "Kaiserpinguine gelten seit April 2026 als stark gefährdet. Früher zerbrechendes Meereis bedroht ihre Jungen.",
+        "source_date": "2026-04-09",
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "emperor_iucn"
+        ]
+      },
+      "globe_example": {
+        "lat": -67.6,
+        "lng": 62.9,
+        "label_de": "Küste der Ostantarktis – Beispielregion"
+      },
+      "source_ids": [
+        "emperor_antarctica",
+        "emperor_size",
+        "emperor_iucn"
+      ],
+      "notes": [
+        "Aktueller Status EN; ältere NT-Steckbriefe nicht verwenden. Die Quelle nennt 100–130 cm 'long', nicht ausdrücklich eine standardisierte stehende Messhöhe; neutral 'groß' formuliert. 40+ Jahre ist seltenes hohes Alter, kein Durchschnitt."
+      ]
+    },
+    {
+      "id": "blue-whale",
+      "name_de": "Blauwal",
+      "taxon": "Balaenoptera musculus",
+      "habitat_de": "Blauwale leben in allen Ozeanen außer dem Arktischen Ozean, zum Beispiel vor Kalifornien.",
+      "food_de": "Sie fressen fast nur Krill – kleine garnelenähnliche Krebstiere.",
+      "size": {
+        "measurement_de": "Körperlänge; gerundet aus 80–100 Fuß",
+        "min": 24,
+        "max": 30,
+        "unit": "m",
+        "text_de": "Viele Blauwale sind etwa 24–30 Meter lang.",
+        "source_ids": [
+          "blue_wwf"
+        ]
+      },
+      "lifespan_de": "Ihre Lebensspanne wird auf etwa 80–90 Jahre geschätzt.",
+      "social_de": "Oft schwimmen sie allein oder zu zweit, manchmal in kleinen Gruppen.",
+      "skill_de": "Barten im Maul halten Krill zurück, während das Wasser herausgedrückt wird.",
+      "surprising_de": "Der Blauwal ist das größte Tier der Erde.",
+      "conservation": {
+        "scope": "global_species",
+        "category": "EN",
+        "text_de": "Blauwale sind stark gefährdet. Zusammenstöße mit Schiffen und Fischereigeräte können ihnen schaden.",
+        "source_date": null,
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "blue_wwf",
+          "blue_noaa"
+        ]
+      },
+      "globe_example": {
+        "lat": 36.5,
+        "lng": -122.5,
+        "label_de": "Pazifik vor Kalifornien – Beispielregion"
+      },
+      "source_ids": [
+        "blue_noaa",
+        "blue_wwf"
+      ],
+      "notes": [
+        "WWF-Spanne ist nicht die gesamte Variation aller Unterarten. NOAA nennt größere antarktische Tiere bis etwa 34 m; 'alle sind 24–30 m' wäre falsch. NOAA ESA-Status nicht als IUCN-Quelle ausgeben."
+      ]
+    },
+    {
+      "id": "common-bottlenose-dolphin",
+      "name_de": "Großer Tümmler",
+      "taxon": "Tursiops truncatus",
+      "habitat_de": "Er lebt in tropischen und gemäßigten Meeren, an Küsten und auch weiter draußen – zum Beispiel bei Florida.",
+      "food_de": "Er frisst Fische, Tintenfische und Krebstiere.",
+      "size": {
+        "measurement_de": "Körperlänge; aus 6–13 Fuß umgerechnet",
+        "min": 1.8,
+        "max": 4,
+        "unit": "m",
+        "text_de": "Etwa 1,8–4 Meter lang.",
+        "source_ids": [
+          "dolphin_noaa"
+        ]
+      },
+      "lifespan_de": "Große Tümmler können etwa 40–60 Jahre leben.",
+      "social_de": "Sie bilden Gruppen, die sich immer wieder trennen und neu zusammenfinden.",
+      "skill_de": "Mit Klicklauten und deren Echo können sie Nahrung im Wasser orten.",
+      "surprising_de": "Sie kauen ihre Fische meist nicht: Sie greifen sie mit den Zähnen und schlucken sie ganz.",
+      "conservation": {
+        "scope": "global_species_with_regional_caveat",
+        "category": "LC",
+        "text_de": "Weltweit gilt die Art als nicht gefährdet. Einige Gruppen und Unterarten sind trotzdem bedroht.",
+        "source_date": null,
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "dolphin_wwf",
+          "dolphin_iucn_csg"
+        ]
+      },
+      "globe_example": {
+        "lat": 27.2,
+        "lng": -82.7,
+        "label_de": "Küste Floridas – Beispielregion"
+      },
+      "source_ids": [
+        "dolphin_noaa",
+        "dolphin_wwf",
+        "dolphin_iucn_csg"
+      ],
+      "notes": [
+        "Nicht mit Tursiops aduncus verwechseln. Die Lahille-Unterart T. t. gephyreus ist seit Oktober 2025 EN; das ist kein globaler Artstatus. NOAA-Lebensdauer ist eine Spanne möglicher Lebensalter."
+      ]
+    },
+    {
+      "id": "orca",
+      "name_de": "Orca",
+      "taxon": "Orcinus orca",
+      "habitat_de": "Orcas kommen in allen Ozeanen vor, besonders häufig in kühleren Meeren.",
+      "food_de": "Manche Gruppen fressen vor allem Fische. Andere jagen Meeressäuger wie Robben.",
+      "size": {
+        "measurement_de": "Körperlänge",
+        "min": 5.5,
+        "max": 9.8,
+        "unit": "m",
+        "text_de": "Etwa 5,5–9,8 Meter lang.",
+        "source_ids": [
+          "orca_wwf"
+        ]
+      },
+      "lifespan_de": "Männchen leben in der Wildnis im Mittel etwa 30 Jahre, Weibchen etwa 50 Jahre. Manche werden viel älter.",
+      "social_de": "Viele Orcas leben in Familiengruppen und lernen von anderen Gruppenmitgliedern.",
+      "skill_de": "Beim Jagen können sie als Team zusammenarbeiten.",
+      "surprising_de": "Orcas gehören zur Delfinfamilie und haben besondere Rufe für ihre Familiengruppe.",
+      "conservation": {
+        "scope": "population_specific_example",
+        "category": null,
+        "text_de": "Orca-Gruppen brauchen unterschiedlichen Schutz. Die Southern Residents im Nordpazifik sind besonders bedroht.",
+        "source_date": null,
+        "population_listing_year": 2005,
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "orca_noaa"
+        ]
+      },
+      "globe_example": {
+        "lat": 48.6,
+        "lng": -123.2,
+        "label_de": "Salish Sea – Beispielregion"
+      },
+      "source_ids": [
+        "orca_noaa",
+        "orca_wwf"
+      ],
+      "notes": [
+        "Keine globale EN-Kategorie aus der gesetzlichen US-Listung der Southern Residents ableiten. NOAA belegt deren ESA-Endangered-Status seit 2005; weltweiter IUCN-Status wurde hier nicht neu geprüft. Essgewohnheiten nicht auf jede Gruppe übertragen."
+      ]
+    },
+    {
+      "id": "common-octopus",
+      "name_de": "Gewöhnlicher Krake",
+      "taxon": "Octopus vulgaris",
+      "habitat_de": "Er lebt an Küsten wärmerer und gemäßigter Meere, zum Beispiel im Mittelmeer und im östlichen Atlantik.",
+      "food_de": "Er frisst zum Beispiel Krebse, Muscheln, Schnecken und Fische.",
+      "size": {
+        "measurement_de": "Mantellänge: Körperbeutel ohne Kopf und Arme",
+        "min": 15,
+        "max": 25,
+        "unit": "cm",
+        "text_de": "Sein Körperbeutel ist etwa 15–25 Zentimeter lang. Die langen Arme kommen noch dazu.",
+        "source_ids": [
+          "octopus_ifca"
+        ]
+      },
+      "lifespan_de": "Er lebt meist nur etwa 1–2 Jahre.",
+      "social_de": "Meist lebt er allein und versteckt sich in einer Felsspalte oder Höhle.",
+      "skill_de": "Er kann Wasser ausstoßen und sich dadurch schnell fortbewegen.",
+      "surprising_de": "Mit seinen Armen kann er nicht nur fühlen, sondern auch chemische Spuren von Nahrung erkennen.",
+      "conservation": {
+        "scope": "global_species_profile",
+        "category": "LC",
+        "text_de": "Laut Aquarium La Rochelle gilt die Art als nicht gefährdet. Gesunde Küsten und Meere bleiben wichtig.",
+        "source_date": null,
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "octopus_aquarium"
+        ]
+      },
+      "globe_example": {
+        "lat": 42.5,
+        "lng": 8.5,
+        "label_de": "Mittelmeer westlich von Korsika – Beispielregion"
+      },
+      "source_ids": [
+        "octopus_aquarium",
+        "octopus_ifca"
+      ],
+      "notes": [
+        "Octopus vulgaris wurde früher für einen weitreichenden Artkomplex genutzt; keine weltumspannende Karte ableiten. Mantel ist eine definierte Teilmessung, nicht Gesamtlänge oder Armspannweite. IFCA nennt mit Armen bis etwa 1 m, Aquarium 1,2 m; nicht zu einer typischen Ganzkörper-Spanne erfinden."
+      ]
+    },
+    {
+      "id": "green-sea-turtle",
+      "name_de": "Grüne Meeresschildkröte",
+      "taxon": "Chelonia mydas",
+      "habitat_de": "Sie lebt in warmen Meeren, zum Beispiel bei Hawaii. Erwachsene Tiere suchen oft flache Küstengewässer mit Seegras auf.",
+      "food_de": "Erwachsene fressen vor allem Seegras und Algen. Junge Tiere fressen auch kleine Tiere.",
+      "size": {
+        "measurement_de": "Panzerlänge",
+        "min": 90,
+        "max": 120,
+        "unit": "cm",
+        "text_de": "Der Panzer ist etwa 90–120 Zentimeter lang.",
+        "source_ids": [
+          "turtle_foundation"
+        ]
+      },
+      "lifespan_de": "Ihre Lebensspanne ist nicht genau bekannt. Fachleute schätzen 70 Jahre oder mehr.",
+      "social_de": "Sie legt weite Wege zwischen Futterplätzen und Niststränden zurück.",
+      "skill_de": "Weibchen finden zur Eiablage wieder in die Gegend ihres eigenen Geburtsstrands.",
+      "surprising_de": "Auch im Meer muss sie zum Atmen an die Oberfläche kommen.",
+      "conservation": {
+        "scope": "global_species_with_regional_caveat",
+        "category": "LC",
+        "text_de": "Weltweit gilt sie seit Oktober 2025 als nicht gefährdet. Netze, Plastik und zerstörte Niststrände bleiben Gefahren.",
+        "source_date": "2025-10-10",
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "turtle_iucn",
+          "turtle_noaa"
+        ]
+      },
+      "globe_example": {
+        "lat": 21.22,
+        "lng": -158.1,
+        "label_de": "Meer vor Hawaii – Beispielregion"
+      },
+      "source_ids": [
+        "turtle_noaa",
+        "turtle_foundation",
+        "turtle_iucn"
+      ],
+      "notes": [
+        "Globaler IUCN-Status seit 10.10.2025 LC; alte globale EN-Angaben ersetzen. Regionale IUCN- und US-ESA-Listungen können weiterhin stärker sein. Kein exakter Neststandort. NOAA-Lebensdauer ausdrücklich unsicher."
+      ]
+    },
+    {
+      "id": "red-kangaroo",
+      "name_de": "Rotes Riesenkänguru",
+      "taxon": "Osphranter rufus",
+      "habitat_de": "Es lebt im trockenen Inneren Australiens, in Grasland, Buschland und offenen Wäldern.",
+      "food_de": "Es frisst Gräser und andere kleine grüne Pflanzen.",
+      "size": {
+        "measurement_de": "Körpergewicht erwachsener Männchen",
+        "min": 65,
+        "max": 92,
+        "unit": "kg",
+        "text_de": "Ein erwachsenes Männchen wiegt etwa 65–92 Kilogramm. Weibchen sind leichter.",
+        "source_ids": [
+          "kangaroo_taronga"
+        ]
+      },
+      "lifespan_de": "In der Wildnis kann es bis zu 20 Jahre alt werden; in menschlicher Obhut bis zu 23.",
+      "social_de": "Kängurus leben oft in Gruppen.",
+      "skill_de": "Mit den starken Hinterbeinen kann es schnell hüpfen.",
+      "surprising_de": "Die Weibchen sind oft blaugrau, obwohl die Art Rotes Riesenkänguru heißt.",
+      "conservation": {
+        "scope": "global_species",
+        "category": "LC",
+        "text_de": "Das Rote Riesenkänguru gilt als nicht gefährdet.",
+        "source_date": null,
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "kangaroo_taronga"
+        ]
+      },
+      "globe_example": {
+        "lat": -24,
+        "lng": 134,
+        "label_de": "Zentralaustralien – Beispielregion"
+      },
+      "source_ids": [
+        "kangaroo_taronga"
+      ],
+      "notes": [
+        "Osphranter rufus ist aktueller Name; Macropus rufus ist häufiges Synonym. Gewicht als klar belegte Messspanne gewählt. Die Taronga-Länge 1,25–1,8 m klärt nicht, ob der Schwanz mitgemessen wurde; deshalb nicht als Kopf-Rumpf-Länge verwenden."
+      ]
+    },
+    {
+      "id": "koala",
+      "name_de": "Koala",
+      "taxon": "Phascolarctos cinereus",
+      "habitat_de": "Koalas leben in Eukalyptuswäldern im Osten und Südosten Australiens.",
+      "food_de": "Sie fressen hauptsächlich Eukalyptusblätter.",
+      "size": {
+        "measurement_de": "Kopf-Rumpf-Länge",
+        "min": 60,
+        "max": 80,
+        "unit": "cm",
+        "text_de": "Vom Kopf bis zum Hinterteil etwa 60–80 Zentimeter lang.",
+        "source_ids": [
+          "koala_sandiego"
+        ]
+      },
+      "lifespan_de": "Koalas leben gewöhnlich etwa 10–15 Jahre.",
+      "social_de": "Sie sind oft allein und verbringen viel Zeit ruhend in Bäumen.",
+      "skill_de": "Kräftige Arme und Hände halten sie sicher an Ästen fest.",
+      "surprising_de": "An jeder Hand haben Koalas zwei Finger, die den anderen gegenüberstehen – wie zwei Daumen.",
+      "conservation": {
+        "scope": "national_regional_populations",
+        "category": null,
+        "regional_category": "EPBC Endangered",
+        "text_de": "In Queensland, New South Wales und rund um Canberra gelten Koalas als stark bedroht. Ihre Wälder brauchen Schutz.",
+        "source_date": "2026-04-28",
+        "listing_date": "2022-02-12",
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "koala_dcceew"
+        ]
+      },
+      "globe_example": {
+        "lat": -27,
+        "lng": 152.5,
+        "label_de": "Südost-Queensland – Beispielregion"
+      },
+      "source_ids": [
+        "koala_sandiego",
+        "koala_dcceew"
+      ],
+      "notes": [
+        "Nationaler Schutzstatus nur für die zusammengefassten Populationen QLD/NSW/ACT; keine globale IUCN-EN-Behauptung. Zoo-Lebensdauer unterscheidet Wildnis/Obhut nicht. Koalas sind Beuteltiere; kein 'Koalabär'."
+      ]
+    },
+    {
+      "id": "jaguar",
+      "name_de": "Jaguar",
+      "taxon": "Panthera onca",
+      "habitat_de": "Jaguare leben in Mittel- und Südamerika, zum Beispiel im Amazonasgebiet und im brasilianischen Pantanal.",
+      "food_de": "Sie fressen viele verschiedene Tiere, zum Beispiel Hirsche, Tapire und Gürteltiere.",
+      "size": {
+        "measurement_de": "Kopf-Rumpf-Länge ohne Schwanz",
+        "min": 1.1,
+        "max": 1.7,
+        "unit": "m",
+        "text_de": "Ohne Schwanz etwa 1,1–1,7 Meter lang.",
+        "source_ids": [
+          "jaguar_wwf"
+        ]
+      },
+      "lifespan_de": "In der Wildnis leben Jaguare etwa 12–15 Jahre.",
+      "social_de": "Erwachsene Jaguare sind meist allein unterwegs. Die Mutter zieht ihre Jungen auf.",
+      "skill_de": "Sie können gut klettern und schwimmen.",
+      "surprising_de": "Jeder Jaguar hat sein eigenes Fleckenmuster.",
+      "conservation": {
+        "scope": "global_species",
+        "category": "NT",
+        "text_de": "Jaguare gelten als potenziell gefährdet. Zusammenhängende Wälder geben ihnen Platz zum Leben.",
+        "source_date": null,
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "jaguar_wwf"
+        ]
+      },
+      "globe_example": {
+        "lat": -17,
+        "lng": -57,
+        "label_de": "Pantanal, Brasilien – Beispielregion"
+      },
+      "source_ids": [
+        "jaguar_wwf",
+        "jaguar_sandiego"
+      ],
+      "notes": [
+        "NT bedeutet nicht global stark gefährdet. Keine veraltete Bestandszahl des Zoo-Profils verwenden. Amazonas/Pantanal sind Beispiele, nicht das vollständige Vorkommen."
+      ]
+    },
+    {
+      "id": "honey-bee",
+      "name_de": "Westliche Honigbiene",
+      "taxon": "Apis mellifera",
+      "habitat_de": "Sie stammt aus Europa, Afrika und Vorderasien und wird heute in vielen Ländern gehalten. Wilde Völker nisten oft in Baumhöhlen.",
+      "food_de": "Erwachsene Bienen fressen Nektar und Pollen.",
+      "size": {
+        "measurement_de": "Körperlänge einer Königin",
+        "min": 15,
+        "max": 18,
+        "unit": "mm",
+        "text_de": "Eine Königin ist etwa 15–18 Millimeter lang. Arbeiterinnen sind kleiner.",
+        "source_ids": [
+          "bee_frankfurt"
+        ]
+      },
+      "lifespan_de": "Eine Königin kann etwa 3–5 Jahre leben. Arbeiterinnen leben viel kürzer.",
+      "social_de": "Im Bienenvolk gibt es eine Königin, viele Arbeiterinnen und männliche Drohnen.",
+      "skill_de": "Beim Blütenbesuch tragen sie Pollen weiter und bestäuben Pflanzen.",
+      "surprising_de": "Mit dem Schwänzeltanz zeigen Arbeiterinnen anderen Bienen den Weg zu guten Blüten.",
+      "conservation": {
+        "scope": "eu_wild_populations",
+        "category": null,
+        "regional_category": "EN",
+        "text_de": "Wilde Honigbienen in der EU gelten seit 2025 als stark gefährdet. Das betrifft frei lebende Völker, nicht alle gehaltenen Bienen.",
+        "source_date": "2025-10-14",
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "bee_fmach"
+        ]
+      },
+      "globe_example": {
+        "lat": 50.1,
+        "lng": 8.7,
+        "label_de": "Deutschland – Beispielregion, auch gehaltene Völker"
+      },
+      "source_ids": [
+        "bee_frankfurt",
+        "bee_nczoo",
+        "bee_fmach"
+      ],
+      "notes": [
+        "Kein globales EN-Badge. Europäische/EU-Bewertung betrifft wild lebende Apis mellifera; Imkervölker sind nicht dieselbe Bewertungsgrundlage. Nicht 'alle Bienen sind Honigbienen'. Alte DD-Angabe aus IUCN 2014 ist für die EU-Neubewertung überholt."
+      ]
+    },
+    {
+      "id": "axolotl",
+      "name_de": "Axolotl",
+      "taxon": "Ambystoma mexicanum",
+      "habitat_de": "Wilde Axolotl leben in den flachen Gewässern und Kanälen von Xochimilco in Mexiko-Stadt.",
+      "food_de": "Sie fressen Würmer, Insekten, kleine Krebstiere und kleine Fische.",
+      "size": {
+        "measurement_de": "Gesamtlänge erwachsener Tiere einschließlich Schwanz; typische Durchschnittsspanne laut Toronto Zoo",
+        "min": 25,
+        "max": 30,
+        "unit": "cm",
+        "text_de": "Erwachsene Axolotl sind meist etwa 25–30 Zentimeter lang.",
+        "source_ids": [
+          "axolotl_toronto"
+        ]
+      },
+      "lifespan_de": "Sie können etwa 10–12 Jahre leben.",
+      "social_de": "Axolotl leben meist allein.",
+      "skill_de": "Mit ihren federartigen Außenkiemen können sie unter Wasser Sauerstoff aufnehmen.",
+      "surprising_de": "Ein verlorenes Bein kann wieder nachwachsen.",
+      "conservation": {
+        "scope": "global_species_in_the_wild",
+        "category": "CR",
+        "text_de": "In der Wildnis ist der Axolotl vom Aussterben bedroht. Sauberes Wasser und sichere Lebensräume helfen ihm.",
+        "source_date": null,
+        "checked_at": "2026-10-07",
+        "source_ids": [
+          "axolotl_toronto"
+        ]
+      },
+      "globe_example": {
+        "lat": 19.25,
+        "lng": -99.1,
+        "label_de": "Xochimilco, Mexiko – Beispielregion"
+      },
+      "source_ids": [
+        "axolotl_toronto",
+        "axolotl_sandiego"
+      ],
+      "notes": [
+        "Lebensspanne nicht als gesicherter wildlebender Durchschnitt ausgeben; Quelle nennt Durchschnitt und längere Obhut-Ausreißer ohne klare Wildnis-Stichprobe. Häufigkeit in Aquarien hebt die Gefährdung der wilden Art nicht auf. Normale Lebensform behält Kiemen; keine absolute Behauptung, Metamorphose sei biologisch unmöglich."
+      ]
+    }
+  ]
+}

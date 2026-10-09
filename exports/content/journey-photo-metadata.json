@@ -1,0 +1,67 @@
+{
+  "water": {
+    "src": "/journeys/water.webp",
+    "alt": "Der Missouri River fließt zwischen grünen Ufern; dunkle Wolken ziehen darüber.",
+    "credit": "U.S. Geological Survey",
+    "url": "https://www.usgs.gov/media/images/storm-clouds-over-missouri-river",
+    "license": "Public Domain",
+    "licenseUrl": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+    "width": 1440,
+    "height": 1080,
+    "position": "50% 75%",
+    "fit": "cover",
+    "previewSrc": "/journeys/water-preview.webp"
+  },
+  "weather": {
+    "src": "/journeys/weather.webp",
+    "alt": "Unter dunklen Wolken fallen Regenschauer über eine felsige Berglandschaft.",
+    "credit": "USGS / Southwest Biological Science Center",
+    "url": "https://www.usgs.gov/media/images/rain-clouds-over-mountains",
+    "license": "Public Domain",
+    "licenseUrl": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+    "width": 1440,
+    "height": 810,
+    "position": "50% 28%",
+    "fit": "cover",
+    "previewSrc": "/journeys/weather-preview.webp"
+  },
+  "seasons": {
+    "src": "/journeys/seasons.webp",
+    "alt": "Goldgelbe Herbstpflanzen, grüne Nadelbäume und schneebedeckte Gipfel im Rocky-Mountain-Nationalpark.",
+    "credit": "National Park Service",
+    "url": "https://www.nps.gov/romo/learn/nature/learn-about-fall-colors.htm",
+    "license": "Public Domain",
+    "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+    "width": 1440,
+    "height": 960,
+    "position": "50% 58%",
+    "fit": "cover",
+    "previewSrc": "/journeys/seasons-preview.webp"
+  },
+  "moon": {
+    "src": "/journeys/moon.webp",
+    "alt": "Der Mond vor schwarzem Weltraum mit vielen hellen Kratern und dunklen Ebenen.",
+    "credit": "NASA / Apollo 17",
+    "url": "https://commons.wikimedia.org/wiki/File:The_Moon_taken_by_Apollo_17,_AS17-152-23308.jpg",
+    "license": "Public Domain",
+    "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "width": 1365,
+    "height": 1440,
+    "position": "50% 50%",
+    "fit": "contain",
+    "previewSrc": "/journeys/moon-preview.webp"
+  },
+  "landscapes": {
+    "src": "/journeys/landscapes.webp",
+    "alt": "Ein verschneites Bergmassiv leuchtet rötlich über einem See und dunklen Waldhängen in Alaska.",
+    "credit": "Emily Mesner / National Park Service",
+    "url": "https://www.usgs.gov/media/images/alpenglow",
+    "license": "Public Domain",
+    "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+    "width": 1440,
+    "height": 961,
+    "position": "50% 42%",
+    "fit": "cover",
+    "previewSrc": "/journeys/landscapes-preview.webp"
+  }
+}

@@ -1,0 +1,156 @@
+[
+  {
+    "id": "depth",
+    "name": "Zum Mittelpunkt",
+    "icon": "Layers3",
+    "text": "Reise 6.371 Kilometer tief und vergleiche die Schichten.",
+    "q": "Welche Schicht ist flüssig?",
+    "answers": [
+      "Erdkruste",
+      "Äußerer Kern",
+      "Innerer Kern"
+    ],
+    "correct": 1,
+    "why": "Der äußere Kern ist flüssiges Metall. Der innere Kern ist unter dem großen Druck fest."
+  },
+  {
+    "id": "volcano",
+    "name": "Vulkan-Werkstatt",
+    "icon": "Mountain",
+    "text": "Vergleiche fließende Lava mit einem gasreichen Ausbruch.",
+    "q": "Was macht einen Ausbruch oft explosiver?",
+    "answers": [
+      "Nur die Höhe des Berges",
+      "Ein kalter Wind",
+      "Gas, das aus zähem Magma schlecht entweichen kann"
+    ],
+    "correct": 2,
+    "why": "Zähes Magma kann Gase zurückhalten. Das begünstigt explosive Ausbrüche. Echte Vulkane sind viel komplizierter."
+  },
+  {
+    "id": "quake",
+    "name": "Erdbeben-Wellen",
+    "icon": "Activity",
+    "text": "Löse eine Bewegung aus und entdecke Herd und Epizentrum.",
+    "q": "Wo liegt das Epizentrum?",
+    "answers": [
+      "An der Oberfläche über dem Erdbebenherd",
+      "Im Mittelpunkt der Erde",
+      "Immer unter dem Ozean"
+    ],
+    "correct": 0,
+    "why": "Der Erdbebenherd liegt im Gestein. Der Punkt direkt darüber an der Erdoberfläche heißt Epizentrum."
+  },
+  {
+    "id": "weather",
+    "name": "Wetterstation",
+    "icon": "Cloud",
+    "text": "Untersuche Wolken, Regen, Schnee, Wind und Regenbogen.",
+    "q": "Woraus besteht eine sichtbare Wolke?",
+    "answers": [
+      "Nur aus Rauch",
+      "Aus winzigen Tröpfchen oder Eiskristallen",
+      "Aus unsichtbarem Wasserdampf allein"
+    ],
+    "correct": 1,
+    "why": "Wasserdampf ist unsichtbar. In einer sichtbaren Wolke sind winzige Wassertröpfchen oder Eiskristalle."
+  },
+  {
+    "id": "water",
+    "name": "Wasserkreislauf",
+    "icon": "Waves",
+    "text": "Verfolge einen Tropfen und untersuche die Sonnenwärme.",
+    "q": "Was passiert beim Verdunsten?",
+    "answers": [
+      "Wasser verschwindet für immer",
+      "Wasser wird automatisch salzig",
+      "Flüssiges Wasser gelangt als Wasserdampf in die Luft"
+    ],
+    "correct": 2,
+    "why": "Verdunstung ist ein Zustandswechsel. Das Wasser bleibt Teil des Kreislaufs."
+  },
+  {
+    "id": "seasons",
+    "name": "Jahreszeiten-Reise",
+    "icon": "Sun",
+    "text": "Vergleiche Norden und Süden – mit und ohne Achsneigung.",
+    "q": "Warum haben wir Sommer und Winter?",
+    "answers": [
+      "Vor allem wegen der geneigten Erdachse",
+      "Weil die Sonne im Winter ausgeht",
+      "Nur weil wir im Sommer näher an der Sonne sind"
+    ],
+    "correct": 0,
+    "why": "Die Neigung verändert Sonnenstand und Tageslänge. Die Halbkugeln haben entgegengesetzte Jahreszeiten."
+  },
+  {
+    "id": "plates",
+    "name": "Platten bewegen",
+    "icon": "Layers3",
+    "text": "Auseinander, zusammen oder seitlich aneinander vorbei.",
+    "q": "Was gehört zu einer Erdplatte?",
+    "answers": [
+      "Nur ein Land",
+      "Kruste und oberster fester Mantel",
+      "Nur flüssige Lava"
+    ],
+    "correct": 1,
+    "why": "Die Platten gehören zur festen äußeren Hülle. Sie tragen oft Kontinente und Meeresboden gemeinsam."
+  },
+  {
+    "id": "moon",
+    "name": "Mondphasen",
+    "icon": "Moon",
+    "text": "Bewege den Mond. Welche beleuchtete Fläche sehen wir?",
+    "q": "Warum leuchtet der Mond?",
+    "answers": [
+      "Er ist eine Lampe",
+      "Er ist ein kleiner Stern",
+      "Er reflektiert Sonnenlicht"
+    ],
+    "correct": 2,
+    "why": "Die Sonne beleuchtet den Mond. Von der Erde aus sehen wir je nach seiner Stellung unterschiedlich viel von der hellen Hälfte."
+  },
+  {
+    "id": "clocks",
+    "name": "Welt-Uhren",
+    "icon": "Sun",
+    "text": "Stell eine Zeit ein und vergleiche Städte auf der Erde.",
+    "q": "Warum zeigen Uhren in verschiedenen Ländern verschiedene Zeiten?",
+    "answers": [
+      "Weil die Erde sich dreht und Orte zu verschiedenen Zeiten zur Sonne zeigen",
+      "Weil dort die Zeit schneller vergeht",
+      "Weil manche Uhren keine Minuten haben"
+    ],
+    "correct": 0,
+    "why": "Die Erde dreht sich. Menschen haben Zeitzonen festgelegt. Sie folgen oft Ländergrenzen und berücksichtigen teils die Sommerzeit."
+  },
+  {
+    "id": "tides",
+    "name": "Ebbe & Flut",
+    "icon": "Waves",
+    "text": "Vergleiche Mond und Sonne bei Spring- und Nipptide.",
+    "q": "Was verursacht vor allem die Gezeiten?",
+    "answers": [
+      "Nur der Regen",
+      "Die Schwerkraft von Mond und Sonne",
+      "Schwimmende Fische"
+    ],
+    "correct": 1,
+    "why": "Die unterschiedliche Anziehung von Mond und Sonne wirkt auf Ozean und Erde. Küstenform und Wassertiefe verändern die Gezeiten am Ort."
+  },
+  {
+    "id": "solar",
+    "name": "Sonnensystem",
+    "icon": "Atom",
+    "text": "Bewege die Zeit und vergleiche acht Planeten mit unserer Erde.",
+    "q": "Welche Aussage passt zur Sonne?",
+    "answers": [
+      "Sie ist ein Planet",
+      "Sie ist ein Stern, den Planeten umkreisen",
+      "Sie ist der Mond der Erde"
+    ],
+    "correct": 1,
+    "why": "Die Sonne ist ein Stern und erzeugt Licht. Die Erde ist einer der acht Planeten, die sie umkreisen."
+  }
+]

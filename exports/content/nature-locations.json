@@ -1,0 +1,402 @@
+[
+  {
+    "id": "everest",
+    "name": "Mount Everest",
+    "kind": "nature",
+    "category": "mountains",
+    "lat": 27.99,
+    "lon": 86.93,
+    "text": "Der Everest liegt im Himalaya an der Grenze von Nepal und China. Mit rund 8.849 Metern ist er der höchste Berg über dem Meeresspiegel.",
+    "fact": "Misst man vom Fuß am Meeresboden, ist Mauna Kea höher. Ein Rekord braucht also immer eine Messregel."
+  },
+  {
+    "id": "alps",
+    "name": "Alpen",
+    "kind": "nature",
+    "category": "mountains",
+    "lat": 46.6,
+    "lon": 10.4,
+    "text": "Die Alpen liegen in Europa und reichen durch mehrere Länder. Auch der Süden Deutschlands gehört dazu.",
+    "fact": "Gletscher formen Täler. Der Mont Blanc ist der höchste Berg der Alpen."
+  },
+  {
+    "id": "himalaya",
+    "name": "Himalaya",
+    "kind": "nature",
+    "category": "mountains",
+    "lat": 28.2,
+    "lon": 84.4,
+    "text": "Indiens Platte drückt gegen die Eurasische Platte. Über Millionen Jahre entstand das riesige Himalaya-Gebirge.",
+    "fact": "Es wächst an manchen Stellen weiter – und Wind, Wasser und Eis tragen gleichzeitig Gestein ab."
+  },
+  {
+    "id": "andes",
+    "name": "Anden",
+    "kind": "nature",
+    "category": "mountains",
+    "lat": -22,
+    "lon": -68,
+    "text": "Die Anden verlaufen am westlichen Rand Südamerikas. Sie gehören zu den längsten Gebirgsketten an Land.",
+    "fact": "In den Anden gibt es hohe Gipfel, Vulkane und sehr verschiedene Lebensräume."
+  },
+  {
+    "id": "rockies",
+    "name": "Rocky Mountains",
+    "kind": "nature",
+    "category": "mountains",
+    "lat": 44,
+    "lon": -110,
+    "text": "Dieses große Gebirge zieht sich durch den Westen Nordamerikas.",
+    "fact": "Viele Flüsse beginnen als kleine Bäche in Gebirgen."
+  },
+  {
+    "id": "kilimanjaro",
+    "name": "Kilimandscharo",
+    "kind": "nature",
+    "category": "mountains",
+    "lat": -3.07,
+    "lon": 37.35,
+    "text": "Der Kilimandscharo liegt in Tansania. Mit ungefähr 5.895 Metern ist er Afrikas höchster Berg.",
+    "fact": "Er ist ein Vulkanmassiv. Höhe kann das Klima stark verändern, auch nahe am Äquator."
+  },
+  {
+    "id": "amazon",
+    "name": "Amazonas",
+    "kind": "nature",
+    "category": "rivers",
+    "lat": -3.1,
+    "lon": -60,
+    "text": "Der Amazonas fließt durch Südamerika zum Atlantik. Er führt mehr Wasser als jeder andere Fluss.",
+    "fact": "Welcher Fluss der längste ist, hängt auch davon ab, welche Quelle und welchen Verlauf man misst. Nil und Amazonas werden unterschiedlich eingeordnet."
+  },
+  {
+    "id": "nile",
+    "name": "Nil",
+    "kind": "nature",
+    "category": "rivers",
+    "lat": 26,
+    "lon": 31,
+    "text": "Der Nil fließt durch den Nordosten Afrikas ins Mittelmeer. Weißer Nil und Blauer Nil treffen sich im Sudan.",
+    "fact": "Am trockenen Unterlauf des Nils hilft Flusswasser Pflanzen, Tieren und Menschen."
+  },
+  {
+    "id": "rhine",
+    "name": "Rhein",
+    "kind": "nature",
+    "category": "rivers",
+    "lat": 50.3,
+    "lon": 7.6,
+    "text": "Der Rhein beginnt in den Alpen und fließt unter anderem durch Deutschland zur Nordsee.",
+    "fact": "Ein Fluss überquert Ländergrenzen. Sauberes Wasser ist deshalb eine gemeinsame Aufgabe."
+  },
+  {
+    "id": "yangtze",
+    "name": "Jangtse",
+    "kind": "nature",
+    "category": "rivers",
+    "lat": 30.7,
+    "lon": 111.1,
+    "text": "Der Jangtse fließt durch China zum Meer. Er ist der längste Fluss Asiens.",
+    "fact": "Flüsse transportieren Wasser, Sand und gelöste Stoffe."
+  },
+  {
+    "id": "mississippi",
+    "name": "Mississippi",
+    "kind": "nature",
+    "category": "rivers",
+    "lat": 34,
+    "lon": -91,
+    "text": "Der Mississippi fließt durch die USA nach Süden in den Golf von Mexiko.",
+    "fact": "Sein riesiges Einzugsgebiet wird auch von vielen Nebenflüssen mit Wasser versorgt."
+  },
+  {
+    "id": "victoria",
+    "name": "Victoriasee",
+    "kind": "nature",
+    "category": "lakes",
+    "lat": -1,
+    "lon": 33,
+    "text": "Dieser große Süßwassersee liegt in Ostafrika. Uganda, Kenia und Tansania teilen seine Ufer.",
+    "fact": "Ein See kann zu mehreren Ländern gehören."
+  },
+  {
+    "id": "baikal",
+    "name": "Baikalsee",
+    "kind": "nature",
+    "category": "lakes",
+    "lat": 53.6,
+    "lon": 108.1,
+    "text": "Der Baikalsee liegt in Russland in Asien. Er ist der tiefste See der Erde: ungefähr 1.642 Meter.",
+    "fact": "Hier lebt die Baikalrobbe, eine Robbe im Süßwasser."
+  },
+  {
+    "id": "caspian",
+    "name": "Kaspisches Meer",
+    "kind": "nature",
+    "category": "lakes",
+    "lat": 42,
+    "lon": 51,
+    "text": "Trotz seines Namens ist das Kaspische Meer ein riesiger See ohne natürliche Verbindung zum Weltmeer.",
+    "fact": "Es ist das größte eingeschlossene Binnengewässer. Sein Wasser ist salzhaltig."
+  },
+  {
+    "id": "sahara",
+    "name": "Sahara",
+    "kind": "nature",
+    "category": "deserts",
+    "lat": 24,
+    "lon": 12,
+    "text": "Die Sahara liegt in Nordafrika. Sie ist die größte heiße Wüste der Erde.",
+    "fact": "Nicht die ganze Sahara besteht aus Sanddünen. Es gibt auch Fels, Kies und Gebirge."
+  },
+  {
+    "id": "antarctic-desert",
+    "name": "Antarktische Wüste",
+    "kind": "nature",
+    "category": "deserts",
+    "lat": -78,
+    "lon": 30,
+    "text": "In der Antarktis fällt sehr wenig Niederschlag. Deshalb ist sie eine Wüste, obwohl sie von Eis bedeckt ist.",
+    "fact": "Eine Wüste wird durch Trockenheit bestimmt, nicht durch Hitze. Antarktika ist die größte Wüste insgesamt."
+  },
+  {
+    "id": "atacama",
+    "name": "Atacama",
+    "kind": "nature",
+    "category": "deserts",
+    "lat": -24,
+    "lon": -69,
+    "text": "Die Atacama liegt im Westen Südamerikas, vor allem in Chile. Viele Teile sind extrem trocken.",
+    "fact": "Kalte Meeresströmung und Gebirge tragen zur Trockenheit bei."
+  },
+  {
+    "id": "gobi",
+    "name": "Gobi",
+    "kind": "nature",
+    "category": "deserts",
+    "lat": 43,
+    "lon": 105,
+    "text": "Die Gobi liegt in der Mongolei und in China. Im Winter kann es dort sehr kalt werden.",
+    "fact": "Wüsten haben sehr verschiedene Temperaturen."
+  },
+  {
+    "id": "amazon-forest",
+    "name": "Amazonas-Regenwald",
+    "kind": "nature",
+    "category": "forests",
+    "lat": -3,
+    "lon": -63,
+    "text": "In Südamerika liegt der größte tropische Regenwald. Brasilien und mehrere Nachbarländer teilen diese Region.",
+    "fact": "Viele verschiedene Arten leben hier. Der Regenwald ist mehr als eine Ansammlung von Bäumen."
+  },
+  {
+    "id": "congo-forest",
+    "name": "Kongo-Regenwald",
+    "kind": "nature",
+    "category": "forests",
+    "lat": 0,
+    "lon": 23,
+    "text": "Rund um das Kongobecken in Afrika wächst ein riesiger tropischer Regenwald.",
+    "fact": "Wälder speichern Kohlenstoff und bieten Tieren und Pflanzen Lebensräume."
+  },
+  {
+    "id": "borneo",
+    "name": "Regenwald auf Borneo",
+    "kind": "nature",
+    "category": "forests",
+    "lat": 1,
+    "lon": 114,
+    "text": "Borneo ist eine Insel in Südostasien. In ihren Regenwäldern leben unter anderem Orang-Utans.",
+    "fact": "Borneo gehört zu Indonesien, Malaysia und Brunei."
+  },
+  {
+    "id": "etna",
+    "name": "Ätna",
+    "kind": "nature",
+    "category": "volcanoes",
+    "lat": 37.75,
+    "lon": 15,
+    "text": "Der Ätna liegt auf Sizilien in Italien. Er gehört zu Europas aktiven Vulkanen.",
+    "fact": "Bei einem Vulkan können Lava, Gase und Asche an die Oberfläche gelangen."
+  },
+  {
+    "id": "fuji",
+    "name": "Fuji",
+    "kind": "nature",
+    "category": "volcanoes",
+    "lat": 35.36,
+    "lon": 138.73,
+    "text": "Der Fuji ist Japans höchster Berg und ein Vulkan. Sein letzter Ausbruch begann 1707.",
+    "fact": "Ein ruhiger Vulkan kann trotzdem noch aktiv sein. Aktiv bedeutet nicht: Er bricht gerade aus."
+  },
+  {
+    "id": "kilauea",
+    "name": "Kīlauea",
+    "kind": "nature",
+    "category": "volcanoes",
+    "lat": 19.42,
+    "lon": -155.29,
+    "text": "Dieser Vulkan liegt auf Hawaii im Pazifik. Hawaii entstand über einem heißen Bereich des Mantels, einem Hotspot.",
+    "fact": "Nicht jeder Vulkan liegt an einer Plattengrenze."
+  },
+  {
+    "id": "vesuvius",
+    "name": "Vesuv",
+    "kind": "nature",
+    "category": "volcanoes",
+    "lat": 40.82,
+    "lon": 14.43,
+    "text": "Der Vesuv liegt nahe Neapel in Italien. Sein Ausbruch im Jahr 79 verschüttete unter anderem Pompeji.",
+    "fact": "Forschende beobachten aktive Vulkane. Das Lernmodell ist keine Vorhersage."
+  },
+  {
+    "id": "iceland",
+    "name": "Island",
+    "kind": "nature",
+    "category": "volcanoes",
+    "lat": 64.5,
+    "lon": -18.5,
+    "text": "Auf Island treffen der Mittelatlantische Rücken und ein Hotspot zusammen. Dort gibt es viele Vulkane.",
+    "fact": "Am Rücken bewegen sich Platten auseinander. Neues Gestein kann entstehen."
+  },
+  {
+    "id": "polar-bear",
+    "name": "Eisbär",
+    "kind": "nature",
+    "category": "animals",
+    "lat": 75,
+    "lon": -100,
+    "text": "Eisbären leben in der Arktis. Sie jagen vor allem Robben und sind auf Meereis angewiesen.",
+    "fact": "Hier siehst du einen Beispielort im kanadischen Norden. Eisbären leben auch in anderen arktischen Regionen."
+  },
+  {
+    "id": "penguin",
+    "name": "Kaiserpinguin",
+    "kind": "nature",
+    "category": "animals",
+    "lat": -72,
+    "lon": 20,
+    "text": "Kaiserpinguine leben in der Antarktis und brüten auf Meereis.",
+    "fact": "Eisbären und wilde Kaiserpinguine begegnen sich nicht: Ihre Lebensräume liegen an verschiedenen Polen."
+  },
+  {
+    "id": "giraffe",
+    "name": "Giraffe",
+    "kind": "nature",
+    "category": "animals",
+    "lat": -2,
+    "lon": 35,
+    "text": "Giraffen leben in afrikanischen Savannen und offenen Waldlandschaften. Ihr langer Hals hilft beim Erreichen von Blättern.",
+    "fact": "Dieser Beispielort liegt in Ostafrika. Eine Tierart lebt nicht nur auf einem einzelnen Kartenpunkt."
+  },
+  {
+    "id": "sloth",
+    "name": "Faultier",
+    "kind": "nature",
+    "category": "animals",
+    "lat": -3,
+    "lon": -62,
+    "text": "Faultiere leben in Bäumen tropischer Wälder in Mittel- und Südamerika.",
+    "fact": "Langsame Bewegung spart Energie. Manche Arten hängen mit dem Rücken nach unten."
+  },
+  {
+    "id": "panda",
+    "name": "Großer Panda",
+    "kind": "nature",
+    "category": "animals",
+    "lat": 30.8,
+    "lon": 103,
+    "text": "Große Pandas leben ursprünglich in Bergwäldern Chinas. Ihre Hauptnahrung ist Bambus.",
+    "fact": "Eine Landschaft kann gleichzeitig Wald und Gebirge sein."
+  },
+  {
+    "id": "kangaroo",
+    "name": "Känguru",
+    "kind": "nature",
+    "category": "animals",
+    "lat": -26,
+    "lon": 134,
+    "text": "In Australien leben verschiedene Känguruarten. Mit kräftigen Hinterbeinen bewegen sie sich hüpfend fort.",
+    "fact": "Kängurus sind Beuteltiere. Ihre Jungen entwickeln sich anfangs im Beutel."
+  },
+  {
+    "id": "reef",
+    "name": "Great Barrier Reef",
+    "kind": "nature",
+    "category": "records",
+    "lat": -18,
+    "lon": 147,
+    "text": "Vor der Nordostküste Australiens liegt das größte Korallenriffsystem der Welt.",
+    "fact": "Korallen sind Tiere. Viele riffbildende Korallen leben mit winzigen Algen zusammen."
+  },
+  {
+    "id": "mariana",
+    "name": "Marianengraben",
+    "kind": "nature",
+    "category": "records",
+    "lat": 11.35,
+    "lon": 142.2,
+    "text": "Im Pazifik liegt der tiefste bekannte Bereich des Ozeans: Challenger Deep, ungefähr 11 Kilometer tief.",
+    "fact": "Der genaue Tiefenwert hängt von der Messung ab. Hier herrscht viel höherer Druck als an der Oberfläche."
+  },
+  {
+    "id": "tundra",
+    "name": "Tundra",
+    "kind": "nature",
+    "category": "vegetation",
+    "lat": 69,
+    "lon": 25,
+    "text": "Weit im Norden ist der Sommer kurz. In der Tundra wachsen etwa Moose, Flechten und niedrige Sträucher.",
+    "fact": "Nicht jede Landschaft hat genug Wärme für hohe Bäume."
+  },
+  {
+    "id": "temperate-forest",
+    "name": "Wald in Europa",
+    "kind": "nature",
+    "category": "vegetation",
+    "lat": 51,
+    "lon": 10,
+    "text": "In vielen gemäßigten Gebieten wachsen Laub- und Mischwälder. In Deutschland verlieren viele Laubbäume im Herbst ihre Blätter.",
+    "fact": "Der genaue Waldtyp hängt auch von Boden, Wasser und menschlicher Nutzung ab."
+  },
+  {
+    "id": "russia-size",
+    "name": "Russland: größtes Land",
+    "kind": "nature",
+    "category": "records",
+    "lat": 60,
+    "lon": 100,
+    "text": "Russland ist nach Fläche das größte Land der Erde. Es erstreckt sich über Europa und Asien.",
+    "fact": "Die Fläche eines Landes und seine Bevölkerung sind unterschiedliche Vergleiche."
+  },
+  {
+    "id": "vatican-size",
+    "name": "Vatikanstadt: kleinstes Land",
+    "kind": "nature",
+    "category": "records",
+    "lat": 41.902,
+    "lon": 12.453,
+    "text": "Vatikanstadt liegt innerhalb der Stadt Rom. Mit weniger als einem Quadratkilometer ist sie der kleinste unabhängige Staat nach Fläche.",
+    "fact": "Auf der Weltkarte ist dieses Land zu klein für viele Kartenmaßstäbe. Unsere Markierung zeigt seine Lage."
+  },
+  {
+    "id": "vostok",
+    "name": "Kälte-Rekord: Wostok",
+    "kind": "nature",
+    "category": "records",
+    "lat": -77.5,
+    "lon": 106.8,
+    "text": "An der Station Wostok in Antarktika wurden am 21. Juli 1983 −89,2 °C Lufttemperatur gemessen. Das ist der von der WMO anerkannte weltweite Kälterekord.",
+    "fact": "Satelliten können noch niedrigere Oberflächentemperaturen erfassen. Das ist eine andere Messart als Lufttemperatur."
+  },
+  {
+    "id": "furnace-creek",
+    "name": "Hitze-Rekord: Death Valley",
+    "kind": "nature",
+    "category": "records",
+    "lat": 36.46,
+    "lon": -116.86,
+    "text": "Die WMO führt 56,7 °C am 10. Juli 1913 bei Furnace Creek als höchsten anerkannten Lufttemperaturwert der Erde.",
+    "fact": "Ein einzelner Rekord ist kein typischer Sommertag. Messmethode, Ort und Zeitpunkt gehören dazu."
+  }
+]

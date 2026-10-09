@@ -1,0 +1,74 @@
+[
+  {
+    "id": "equator",
+    "name": "Äquator",
+    "kind": "line",
+    "lat": 0,
+    "lon": 15,
+    "text": "Der Äquator ist eine gedachte Linie um die Mitte der Erde. Er teilt sie in die Nordhalbkugel und die Südhalbkugel.",
+    "fact": "Auf dem Äquator ist der Breitengrad 0°. Die orange Linie ist nur im Modell sichtbar, nicht draußen auf der Erde."
+  },
+  {
+    "id": "north-pole",
+    "name": "Nordpol",
+    "kind": "line",
+    "lat": 90,
+    "lon": 0,
+    "text": "Der Nordpol liegt ganz im Norden. Hier verläuft das nördliche Ende der gedachten Erdachse.",
+    "fact": "Am Nordpol treffen alle Längengrade zusammen. Unter dem Eis liegt der Arktische Ozean."
+  },
+  {
+    "id": "south-pole",
+    "name": "Südpol",
+    "kind": "line",
+    "lat": -90,
+    "lon": 0,
+    "text": "Der Südpol liegt ganz im Süden auf dem Kontinent Antarktika. Hier verläuft das südliche Ende der gedachten Erdachse.",
+    "fact": "Am Südpol dauert ein Tag oder eine Nacht ungefähr ein halbes Jahr."
+  },
+  {
+    "id": "prime-meridian",
+    "name": "Nullmeridian",
+    "kind": "line",
+    "lat": 30,
+    "lon": 0,
+    "text": "Der Nullmeridian ist die vereinbarte Linie für 0° Länge. Er läuft durch Greenwich in London.",
+    "fact": "Längengrade helfen beim Finden von Orten. Ihre Linien treffen sich an den Polen."
+  },
+  {
+    "id": "tropic-north",
+    "name": "Nördlicher Wendekreis",
+    "kind": "line",
+    "lat": 23.4,
+    "lon": 30,
+    "text": "Der nördliche Wendekreis liegt etwa 23,4° nördlich des Äquators.",
+    "fact": "Hier kann die Sonne um die Juni-Sonnenwende mittags genau über einem Ort stehen."
+  },
+  {
+    "id": "tropic-south",
+    "name": "Südlicher Wendekreis",
+    "kind": "line",
+    "lat": -23.4,
+    "lon": 30,
+    "text": "Der südliche Wendekreis liegt etwa 23,4° südlich des Äquators.",
+    "fact": "Hier kann die Sonne um die Dezember-Sonnenwende mittags genau über einem Ort stehen."
+  },
+  {
+    "id": "arctic-circle",
+    "name": "Nördlicher Polarkreis",
+    "kind": "line",
+    "lat": 66.6,
+    "lon": 25,
+    "text": "Der nördliche Polarkreis liegt ungefähr 66,6° nördlich des Äquators.",
+    "fact": "Nördlich davon kann die Sonne im Sommer mindestens einen ganzen Tag sichtbar sein. Im Winter gibt es Orte mit Polarnacht."
+  },
+  {
+    "id": "antarctic-circle",
+    "name": "Südlicher Polarkreis",
+    "kind": "line",
+    "lat": -66.6,
+    "lon": 25,
+    "text": "Der südliche Polarkreis liegt ungefähr 66,6° südlich des Äquators.",
+    "fact": "Südlich davon gibt es im Südsommer Tage ohne Sonnenuntergang und im Südwinter Polarnacht. An den Polen dauert es besonders lange."
+  }
+]

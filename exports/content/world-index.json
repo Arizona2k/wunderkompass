@@ -1,0 +1,1966 @@
+[
+  {
+    "id": "animal-african-savanna-elephant",
+    "category": "animals",
+    "title": "Afrikanischer Savannenelefant",
+    "intro": "Er lebt in Savannen und offenen Wäldern Afrikas, zum Beispiel in Botswana, Tansania und Kenia.",
+    "aliases": [
+      "african-savanna-elephant",
+      "Loxodonta africana",
+      "Elefant"
+    ],
+    "locations": [
+      {
+        "label": "Nordbotswana – Beispielregion",
+        "lat": -19,
+        "lon": 23.5
+      }
+    ],
+    "image": "african-elephant",
+    "group": "Säugetiere",
+    "habitat": "Savanne",
+    "continent": "Afrika"
+  },
+  {
+    "id": "animal-lion",
+    "category": "animals",
+    "title": "Löwe",
+    "intro": "Löwen leben vor allem in afrikanischen Savannen und offenen Wäldern. Eine kleine Population lebt in Indien.",
+    "aliases": [
+      "lion",
+      "Panthera leo",
+      "Löwe"
+    ],
+    "locations": [
+      {
+        "label": "Nordtansania – Beispielregion",
+        "lat": -2.3,
+        "lon": 34.8
+      }
+    ],
+    "image": "lion",
+    "group": "Säugetiere",
+    "habitat": "Savanne",
+    "continent": "Afrika"
+  },
+  {
+    "id": "animal-cheetah",
+    "category": "animals",
+    "title": "Gepard",
+    "intro": "Geparden brauchen viel Platz. Sie leben zum Beispiel in Savannen und Grasländern Namibias, Botswanas, Kenias und Tansanias.",
+    "aliases": [
+      "cheetah",
+      "Acinonyx jubatus",
+      "Gepard"
+    ],
+    "locations": [
+      {
+        "label": "Namibia – Beispielregion",
+        "lat": -20.5,
+        "lon": 17
+      }
+    ],
+    "image": "cheetah",
+    "group": "Säugetiere",
+    "habitat": "Savanne",
+    "continent": "Afrika"
+  },
+  {
+    "id": "animal-bengal-tiger",
+    "category": "animals",
+    "title": "Bengaltiger",
+    "intro": "Bengaltiger leben in Indien, Nepal, Bhutan und Bangladesch – in Wäldern, Grasland und auch Mangroven.",
+    "aliases": [
+      "bengal-tiger",
+      "Panthera tigris tigris (Bengal-Population der Festlandtiger)",
+      "Tiger"
+    ],
+    "locations": [
+      {
+        "label": "Chitwan, Nepal – Beispielregion",
+        "lat": 27.5,
+        "lon": 84.4
+      }
+    ],
+    "image": "bengal-tiger",
+    "group": "Säugetiere",
+    "habitat": "Wald",
+    "continent": "Asien"
+  },
+  {
+    "id": "animal-giraffe",
+    "category": "animals",
+    "title": "Giraffe",
+    "intro": "Giraffen leben in afrikanischen Savannen und offenen Wäldern. Netzgiraffen leben zum Beispiel im Norden Kenias.",
+    "aliases": [
+      "giraffe",
+      "Giraffa spp. (vier anerkannte Arten)",
+      "Giraffe"
+    ],
+    "locations": [
+      {
+        "label": "Nordkenia – Beispielregion der Netzgiraffe",
+        "lat": 1.1,
+        "lon": 37.3
+      }
+    ],
+    "image": "giraffe",
+    "group": "Säugetiere",
+    "habitat": "Savanne",
+    "continent": "Afrika"
+  },
+  {
+    "id": "animal-giant-panda",
+    "category": "animals",
+    "title": "Großer Panda",
+    "intro": "Pandas leben in kühlen Bergwäldern Chinas, zum Beispiel in Sichuan. Dort wächst viel Bambus.",
+    "aliases": [
+      "giant-panda",
+      "Ailuropoda melanoleuca",
+      "Panda"
+    ],
+    "locations": [
+      {
+        "label": "Sichuan, China – Beispielregion",
+        "lat": 31,
+        "lon": 103
+      }
+    ],
+    "image": "giant-panda",
+    "group": "Säugetiere",
+    "habitat": "Gebirge",
+    "continent": "Asien"
+  },
+  {
+    "id": "animal-western-lowland-gorilla",
+    "category": "animals",
+    "title": "Westlicher Flachlandgorilla",
+    "intro": "Er lebt in Regen- und Sumpfwäldern im Kongobecken, zum Beispiel in Gabun und der Republik Kongo.",
+    "aliases": [
+      "western-lowland-gorilla",
+      "Gorilla gorilla gorilla",
+      "Gorilla"
+    ],
+    "locations": [
+      {
+        "label": "Nordwesten der Republik Kongo – Beispielregion",
+        "lat": 1,
+        "lon": 16
+      }
+    ],
+    "image": "western-lowland-gorilla",
+    "group": "Säugetiere",
+    "habitat": "Regenwald",
+    "continent": "Afrika"
+  },
+  {
+    "id": "animal-bornean-orangutan",
+    "category": "animals",
+    "title": "Borneo-Orang-Utan",
+    "intro": "Er lebt nur auf Borneo, besonders in Tieflandregenwäldern und Sumpfwäldern.",
+    "aliases": [
+      "bornean-orangutan",
+      "Pongo pygmaeus",
+      "Orang-Utan"
+    ],
+    "locations": [
+      {
+        "label": "Sebangau, Borneo – Beispielregion",
+        "lat": -2.4,
+        "lon": 113.8
+      }
+    ],
+    "image": "bornean-orangutan",
+    "group": "Säugetiere",
+    "habitat": "Regenwald",
+    "continent": "Asien"
+  },
+  {
+    "id": "animal-polar-bear",
+    "category": "animals",
+    "title": "Eisbär",
+    "intro": "Eisbären leben in der Arktis auf Meereis und an Küsten rund um den Nordpol.",
+    "aliases": [
+      "polar-bear",
+      "Ursus maritimus",
+      "Eisbär"
+    ],
+    "locations": [
+      {
+        "label": "Arktis nördlich von Spitzbergen – Beispielregion",
+        "lat": 80.5,
+        "lon": 20
+      }
+    ],
+    "image": "polar-bear",
+    "group": "Säugetiere",
+    "habitat": "Arktis",
+    "continent": "Arktis"
+  },
+  {
+    "id": "animal-emperor-penguin",
+    "category": "animals",
+    "title": "Kaiserpinguin",
+    "intro": "Er lebt an den Küsten der Antarktis. Viele Kolonien brüten auf festem Meereis.",
+    "aliases": [
+      "emperor-penguin",
+      "Aptenodytes forsteri",
+      "Kaiserpinguin"
+    ],
+    "locations": [
+      {
+        "label": "Küste der Ostantarktis – Beispielregion",
+        "lat": -67.6,
+        "lon": 62.9
+      }
+    ],
+    "image": "emperor-penguin",
+    "group": "Vögel",
+    "habitat": "Antarktis",
+    "continent": "Antarktika"
+  },
+  {
+    "id": "animal-blue-whale",
+    "category": "animals",
+    "title": "Blauwal",
+    "intro": "Blauwale leben in allen Ozeanen außer dem Arktischen Ozean, zum Beispiel vor Kalifornien.",
+    "aliases": [
+      "blue-whale",
+      "Balaenoptera musculus",
+      "Blauwal"
+    ],
+    "locations": [
+      {
+        "label": "Pazifik vor Kalifornien – Beispielregion",
+        "lat": 36.5,
+        "lon": -122.5
+      }
+    ],
+    "image": "blue-whale",
+    "group": "Säugetiere",
+    "habitat": "Ozean",
+    "continent": "Ozean"
+  },
+  {
+    "id": "animal-common-bottlenose-dolphin",
+    "category": "animals",
+    "title": "Großer Tümmler",
+    "intro": "Er lebt in tropischen und gemäßigten Meeren, an Küsten und auch weiter draußen – zum Beispiel bei Florida.",
+    "aliases": [
+      "common-bottlenose-dolphin",
+      "Tursiops truncatus",
+      "Delfin"
+    ],
+    "locations": [
+      {
+        "label": "Küste Floridas – Beispielregion",
+        "lat": 27.2,
+        "lon": -82.7
+      }
+    ],
+    "image": "bottlenose-dolphin",
+    "group": "Säugetiere",
+    "habitat": "Ozean",
+    "continent": "Ozean"
+  },
+  {
+    "id": "animal-orca",
+    "category": "animals",
+    "title": "Orca",
+    "intro": "Orcas kommen in allen Ozeanen vor, besonders häufig in kühleren Meeren.",
+    "aliases": [
+      "orca",
+      "Orcinus orca",
+      "Orca"
+    ],
+    "locations": [
+      {
+        "label": "Salish Sea – Beispielregion",
+        "lat": 48.6,
+        "lon": -123.2
+      }
+    ],
+    "image": "orca",
+    "group": "Säugetiere",
+    "habitat": "Ozean",
+    "continent": "Ozean"
+  },
+  {
+    "id": "animal-common-octopus",
+    "category": "animals",
+    "title": "Gewöhnlicher Krake",
+    "intro": "Er lebt an Küsten wärmerer und gemäßigter Meere, zum Beispiel im Mittelmeer und im östlichen Atlantik.",
+    "aliases": [
+      "common-octopus",
+      "Octopus vulgaris",
+      "Oktopus"
+    ],
+    "locations": [
+      {
+        "label": "Mittelmeer westlich von Korsika – Beispielregion",
+        "lat": 42.5,
+        "lon": 8.5
+      }
+    ],
+    "image": "common-octopus",
+    "group": "Weichtiere",
+    "habitat": "Küste",
+    "continent": "Ozean"
+  },
+  {
+    "id": "animal-green-sea-turtle",
+    "category": "animals",
+    "title": "Grüne Meeresschildkröte",
+    "intro": "Sie lebt in warmen Meeren, zum Beispiel bei Hawaii. Erwachsene Tiere suchen oft flache Küstengewässer mit Seegras auf.",
+    "aliases": [
+      "green-sea-turtle",
+      "Chelonia mydas",
+      "Schildkröte"
+    ],
+    "locations": [
+      {
+        "label": "Meer vor Hawaii – Beispielregion",
+        "lat": 21.22,
+        "lon": -158.1
+      }
+    ],
+    "image": "green-sea-turtle",
+    "group": "Reptilien",
+    "habitat": "Küste",
+    "continent": "Ozean"
+  },
+  {
+    "id": "animal-red-kangaroo",
+    "category": "animals",
+    "title": "Rotes Riesenkänguru",
+    "intro": "Es lebt im trockenen Inneren Australiens, in Grasland, Buschland und offenen Wäldern.",
+    "aliases": [
+      "red-kangaroo",
+      "Osphranter rufus",
+      "Känguru"
+    ],
+    "locations": [
+      {
+        "label": "Zentralaustralien – Beispielregion",
+        "lat": -24,
+        "lon": 134
+      }
+    ],
+    "image": "red-kangaroo",
+    "group": "Säugetiere",
+    "habitat": "Grasland",
+    "continent": "Australien / Ozeanien"
+  },
+  {
+    "id": "animal-koala",
+    "category": "animals",
+    "title": "Koala",
+    "intro": "Koalas leben in Eukalyptuswäldern im Osten und Südosten Australiens.",
+    "aliases": [
+      "koala",
+      "Phascolarctos cinereus",
+      "Koala"
+    ],
+    "locations": [
+      {
+        "label": "Südost-Queensland – Beispielregion",
+        "lat": -27,
+        "lon": 152.5
+      }
+    ],
+    "image": "koala",
+    "group": "Säugetiere",
+    "habitat": "Wald",
+    "continent": "Australien / Ozeanien"
+  },
+  {
+    "id": "animal-jaguar",
+    "category": "animals",
+    "title": "Jaguar",
+    "intro": "Jaguare leben in Mittel- und Südamerika, zum Beispiel im Amazonasgebiet und im brasilianischen Pantanal.",
+    "aliases": [
+      "jaguar",
+      "Panthera onca",
+      "Jaguar"
+    ],
+    "locations": [
+      {
+        "label": "Pantanal, Brasilien – Beispielregion",
+        "lat": -17,
+        "lon": -57
+      }
+    ],
+    "image": "jaguar",
+    "group": "Säugetiere",
+    "habitat": "Regenwald",
+    "continent": "Südamerika"
+  },
+  {
+    "id": "animal-honey-bee",
+    "category": "animals",
+    "title": "Westliche Honigbiene",
+    "intro": "Sie stammt aus Europa, Afrika und Vorderasien und wird heute in vielen Ländern gehalten. Wilde Völker nisten oft in Baumhöhlen.",
+    "aliases": [
+      "honey-bee",
+      "Apis mellifera",
+      "Biene"
+    ],
+    "locations": [
+      {
+        "label": "Deutschland – Beispielregion, auch gehaltene Völker",
+        "lat": 50.1,
+        "lon": 8.7
+      }
+    ],
+    "image": "honey-bee",
+    "group": "Insekten",
+    "habitat": "Wiesen & Gärten",
+    "continent": "Mehrere Kontinente"
+  },
+  {
+    "id": "animal-axolotl",
+    "category": "animals",
+    "title": "Axolotl",
+    "intro": "Wilde Axolotl leben in den flachen Gewässern und Kanälen von Xochimilco in Mexiko-Stadt.",
+    "aliases": [
+      "axolotl",
+      "Ambystoma mexicanum",
+      "Axolotl"
+    ],
+    "locations": [
+      {
+        "label": "Xochimilco, Mexiko – Beispielregion",
+        "lat": 19.25,
+        "lon": -99.1
+      }
+    ],
+    "image": "axolotl",
+    "group": "Amphibien",
+    "habitat": "Flüsse & Seen",
+    "continent": "Nordamerika"
+  },
+  {
+    "id": "history-stone_tools",
+    "category": "history",
+    "title": "Werkzeuge aus Stein",
+    "intro": "Bei Lomekwi in Kenia wurden sehr alte Werkzeuge aus Stein gefunden.",
+    "aliases": [
+      "stone_tools"
+    ],
+    "locations": [
+      {
+        "label": "Lomekwi in Kenia – Fundregion",
+        "lat": 3.9,
+        "lon": 35.9,
+        "iso": "KE"
+      }
+    ],
+    "year": -3300000,
+    "era": "Frühe Spuren",
+    "sensitive": false
+  },
+  {
+    "id": "history-fire",
+    "category": "history",
+    "title": "Menschen nutzen Feuer",
+    "intro": "Sehr alte Feuerstellen zeigen, dass frühe Menschen Feuer nutzen konnten.",
+    "aliases": [
+      "fire"
+    ],
+    "locations": [],
+    "year": -790000,
+    "era": "Frühe Spuren",
+    "sensitive": false
+  },
+  {
+    "id": "history-writing",
+    "category": "history",
+    "title": "Zeichen bewahren Nachrichten",
+    "intro": "In Mesopotamien, im heutigen Irak, schrieben Menschen Zeichen auf Tontafeln.",
+    "aliases": [
+      "writing"
+    ],
+    "locations": [
+      {
+        "label": "Uruk – im heutigen Irak",
+        "lat": 31.3,
+        "lon": 45.6,
+        "iso": "IQ"
+      }
+    ],
+    "year": -3200,
+    "era": "Frühe Spuren",
+    "sensitive": false
+  },
+  {
+    "id": "history-pyramids",
+    "category": "history",
+    "title": "Pyramiden im alten Ägypten",
+    "intro": "Im alten Ägypten entstand die große Pyramide für König Cheops.",
+    "aliases": [
+      "pyramids"
+    ],
+    "locations": [
+      {
+        "label": "Gizeh, Ägypten",
+        "lat": 29.979,
+        "lon": 31.134,
+        "iso": "EG"
+      }
+    ],
+    "year": -2550,
+    "era": "Frühe Spuren",
+    "sensitive": false
+  },
+  {
+    "id": "history-paper",
+    "category": "history",
+    "title": "Papier aus China",
+    "intro": "Papier entstand in China schon vor über 2.000 Jahren.",
+    "aliases": [
+      "paper"
+    ],
+    "locations": [
+      {
+        "label": "China – Ursprungsregion",
+        "lat": 34.6,
+        "lon": 112.5,
+        "iso": "CN"
+      }
+    ],
+    "year": 105,
+    "era": "Wissen & Städte",
+    "sensitive": false
+  },
+  {
+    "id": "history-zero",
+    "category": "history",
+    "title": "Rechnen mit der Null",
+    "intro": "Der Mathematiker Brahmagupta schrieb in Indien Regeln zum Rechnen mit der Null auf.",
+    "aliases": [
+      "zero"
+    ],
+    "locations": [
+      {
+        "label": "Bhinmal in Indien",
+        "lat": 25,
+        "lon": 72.3,
+        "iso": "IN"
+      }
+    ],
+    "year": 628,
+    "era": "Wissen & Städte",
+    "sensitive": false
+  },
+  {
+    "id": "history-compass",
+    "category": "history",
+    "title": "Der Kompass hilft auf See",
+    "intro": "In China nutzten Seefahrer vermutlich nach dem Jahr 1000 einen Kompass zur Orientierung.",
+    "aliases": [
+      "compass"
+    ],
+    "locations": [
+      {
+        "label": "China – ein frühes Zentrum der Navigation",
+        "lat": 30,
+        "lon": 120,
+        "iso": "CN"
+      }
+    ],
+    "year": 1050,
+    "era": "Wissen & Städte",
+    "sensitive": false
+  },
+  {
+    "id": "history-medieval_cities",
+    "category": "history",
+    "title": "Märkte und Handwerk in Städten",
+    "intro": "Im Mittelalter wuchsen viele Städte durch Handel und Handwerk.",
+    "aliases": [
+      "medieval_cities"
+    ],
+    "locations": [
+      {
+        "label": "Lübeck, Deutschland",
+        "lat": 53.87,
+        "lon": 10.69,
+        "iso": "DE"
+      }
+    ],
+    "year": 1160,
+    "era": "Wissen & Städte",
+    "sensitive": false
+  },
+  {
+    "id": "history-printing",
+    "category": "history",
+    "title": "Viele Bücher aus einer Druckwerkstatt",
+    "intro": "Johannes Gutenberg entwickelte in Mainz ein Drucksystem mit beweglichen Buchstaben aus Metall.",
+    "aliases": [
+      "printing"
+    ],
+    "locations": [
+      {
+        "label": "Mainz, Deutschland",
+        "lat": 50,
+        "lon": 8.27,
+        "iso": "DE"
+      }
+    ],
+    "year": 1450,
+    "era": "Wissen & Städte",
+    "sensitive": false
+  },
+  {
+    "id": "history-voyages1492",
+    "category": "history",
+    "title": "Europäische Schiffe erreichen die Karibik",
+    "intro": "Kolumbus erreichte mit Schiffen aus Spanien eine Insel in der Karibik.",
+    "aliases": [
+      "voyages1492"
+    ],
+    "locations": [
+      {
+        "label": "Bahamas – Region der Begegnung",
+        "lat": 24,
+        "lon": -74.5,
+        "iso": "BS"
+      }
+    ],
+    "year": 1492,
+    "era": "Wissen & Städte",
+    "sensitive": true
+  },
+  {
+    "id": "history-steam",
+    "category": "history",
+    "title": "Eine Maschine arbeitet mit Dampf",
+    "intro": "Thomas Newcomen entwickelte eine Dampfmaschine, die Wasser aus Bergwerken pumpte.",
+    "aliases": [
+      "steam"
+    ],
+    "locations": [
+      {
+        "label": "England – Beispielregion der frühen Maschinen",
+        "lat": 52.5,
+        "lon": -2,
+        "iso": "GB"
+      }
+    ],
+    "year": 1712,
+    "era": "Maschinen & Entdeckungen",
+    "sensitive": false
+  },
+  {
+    "id": "history-railway",
+    "category": "history",
+    "title": "Ein Zug mit Dampflok fährt",
+    "intro": "In England wurde die öffentliche Bahn zwischen Stockton und Darlington eröffnet.",
+    "aliases": [
+      "railway"
+    ],
+    "locations": [
+      {
+        "label": "Darlington, England",
+        "lat": 54.52,
+        "lon": -1.55,
+        "iso": "GB"
+      }
+    ],
+    "year": 1825,
+    "era": "Maschinen & Entdeckungen",
+    "sensitive": false
+  },
+  {
+    "id": "history-electric_light",
+    "category": "history",
+    "title": "Elektrisches Licht für den Alltag",
+    "intro": "Thomas Edison und sein Team entwickelten Lampen, die lange genug für den Alltag leuchten konnten.",
+    "aliases": [
+      "electric_light"
+    ],
+    "locations": [
+      {
+        "label": "Menlo Park, New Jersey, USA",
+        "lat": 40.56,
+        "lon": -74.34,
+        "iso": "US"
+      }
+    ],
+    "year": 1879,
+    "era": "Maschinen & Entdeckungen",
+    "sensitive": false
+  },
+  {
+    "id": "history-flight",
+    "category": "history",
+    "title": "Ein gesteuertes Flugzeug mit Motor",
+    "intro": "Wilbur und Orville Wright schafften einen gesteuerten Flug mit einem bemannten Motorflugzeug.",
+    "aliases": [
+      "flight"
+    ],
+    "locations": [
+      {
+        "label": "Kill Devil Hills, USA",
+        "lat": 36,
+        "lon": -75.67,
+        "iso": "US"
+      }
+    ],
+    "year": 1903,
+    "era": "Maschinen & Entdeckungen",
+    "sensitive": false
+  },
+  {
+    "id": "history-ww1",
+    "category": "history",
+    "title": "Der Erste Weltkrieg",
+    "intro": "1914 begann ein Krieg, in den immer mehr Länder hineingezogen wurden.",
+    "aliases": [
+      "ww1"
+    ],
+    "locations": [
+      {
+        "label": "Europa – eine von vielen betroffenen Regionen",
+        "lat": 50,
+        "lon": 10
+      }
+    ],
+    "year": 1914,
+    "era": "Unsere jüngere Welt",
+    "sensitive": true
+  },
+  {
+    "id": "history-holocaust",
+    "category": "history",
+    "title": "Der Holocaust",
+    "intro": "Die Nationalsozialisten und ihre Helfer verfolgten und ermordeten etwa sechs Millionen jüdische Menschen.",
+    "aliases": [
+      "holocaust"
+    ],
+    "locations": [
+      {
+        "label": "Berlin – Erinnern und Lernen",
+        "lat": 52.51,
+        "lon": 13.38,
+        "iso": "DE"
+      }
+    ],
+    "year": 1933,
+    "era": "Unsere jüngere Welt",
+    "sensitive": true
+  },
+  {
+    "id": "history-ww2",
+    "category": "history",
+    "title": "Der Zweite Weltkrieg",
+    "intro": "1939 griff das nationalsozialistische Deutschland Polen an; damit begann der Zweite Weltkrieg in Europa.",
+    "aliases": [
+      "ww2"
+    ],
+    "locations": [
+      {
+        "label": "Polen – Angriff im September 1939",
+        "lat": 52,
+        "lon": 20,
+        "iso": "PL"
+      }
+    ],
+    "year": 1939,
+    "era": "Unsere jüngere Welt",
+    "sensitive": true
+  },
+  {
+    "id": "history-un",
+    "category": "history",
+    "title": "Länder gründen die Vereinten Nationen",
+    "intro": "Nach dem Krieg gründeten 51 Länder die Vereinten Nationen, kurz UNO.",
+    "aliases": [
+      "un"
+    ],
+    "locations": [
+      {
+        "label": "San Francisco – Gründungskonferenz",
+        "lat": 37.78,
+        "lon": -122.42,
+        "iso": "US"
+      }
+    ],
+    "year": 1945,
+    "era": "Unsere jüngere Welt",
+    "sensitive": false
+  },
+  {
+    "id": "history-berlin_wall_build",
+    "category": "history",
+    "title": "Die Berliner Mauer trennt Menschen",
+    "intro": "Am 13. August 1961 riegelte die DDR-Regierung die Grenze um West-Berlin ab.",
+    "aliases": [
+      "berlin_wall_build"
+    ],
+    "locations": [
+      {
+        "label": "Berlin, Deutschland",
+        "lat": 52.52,
+        "lon": 13.4,
+        "iso": "DE"
+      }
+    ],
+    "year": 1961,
+    "era": "Unsere jüngere Welt",
+    "sensitive": true
+  },
+  {
+    "id": "history-apollo11",
+    "category": "history",
+    "title": "Menschen landen auf dem Mond",
+    "intro": "Apollo 11 landete am 20. Juli 1969 auf dem Mond.",
+    "aliases": [
+      "apollo11"
+    ],
+    "locations": [
+      {
+        "label": "Florida – Startregion von Apollo 11",
+        "lat": 28.57,
+        "lon": -80.65,
+        "iso": "US"
+      }
+    ],
+    "year": 1969,
+    "era": "Unsere jüngere Welt",
+    "sensitive": false
+  },
+  {
+    "id": "history-web",
+    "category": "history",
+    "title": "Das World Wide Web entsteht",
+    "intro": "1989 schlug Tim Berners-Lee am CERN ein System für verlinkte Seiten vor.",
+    "aliases": [
+      "web"
+    ],
+    "locations": [
+      {
+        "label": "CERN bei Genf – am Rand von Schweiz und Frankreich",
+        "lat": 46.23,
+        "lon": 6.05
+      }
+    ],
+    "year": 1989,
+    "era": "Unsere jüngere Welt",
+    "sensitive": false
+  },
+  {
+    "id": "history-berlin_wall_fall",
+    "category": "history",
+    "title": "Die Berliner Mauer wird geöffnet",
+    "intro": "Viele Menschen in der DDR forderten friedlich mehr Freiheit.",
+    "aliases": [
+      "berlin_wall_fall"
+    ],
+    "locations": [
+      {
+        "label": "Berlin, Deutschland",
+        "lat": 52.52,
+        "lon": 13.4,
+        "iso": "DE"
+      }
+    ],
+    "year": 1989.9,
+    "era": "Unsere jüngere Welt",
+    "sensitive": false
+  },
+  {
+    "id": "history-reunification",
+    "category": "history",
+    "title": "Deutschland wird wiedervereinigt",
+    "intro": "Am 3. Oktober 1990 wurden die beiden deutschen Staaten wieder zu einem Land.",
+    "aliases": [
+      "reunification"
+    ],
+    "locations": [
+      {
+        "label": "Berlin, Deutschland",
+        "lat": 52.52,
+        "lon": 13.4,
+        "iso": "DE"
+      }
+    ],
+    "year": 1990,
+    "era": "Unsere jüngere Welt",
+    "sensitive": false
+  },
+  {
+    "id": "history-iss",
+    "category": "history",
+    "title": "Ein gemeinsames Labor im Weltraum",
+    "intro": "Die erste Langzeitbesatzung zog in die Internationale Raumstation ISS ein.",
+    "aliases": [
+      "iss"
+    ],
+    "locations": [],
+    "year": 2000,
+    "era": "Unsere jüngere Welt",
+    "sensitive": false
+  },
+  {
+    "id": "history-september11",
+    "category": "history",
+    "title": "Die Anschläge vom 11. September",
+    "intro": "Am 11. September 2001 griffen Terroristen der Gruppe al-Qaida die USA an.",
+    "aliases": [
+      "9/11",
+      "11. September",
+      "Terroranschläge"
+    ],
+    "locations": [
+      {
+        "label": "New York – Gedenkstätte",
+        "lat": 40.711,
+        "lon": -74.013,
+        "iso": "US"
+      }
+    ],
+    "year": 2001,
+    "era": "Unsere jüngere Welt",
+    "sensitive": true
+  },
+  {
+    "id": "history-webb",
+    "category": "history",
+    "title": "Neue Bilder vom Universum",
+    "intro": "Teams veröffentlichten die erste große Bildauswahl des James-Webb-Weltraumteleskops.",
+    "aliases": [
+      "webb"
+    ],
+    "locations": [],
+    "year": 2022,
+    "era": "Unsere jüngere Welt",
+    "sensitive": false
+  },
+  {
+    "id": "person-marie_curie",
+    "category": "people",
+    "title": "Marie Curie",
+    "intro": "Marie Curie erforschte die Radioaktivität.",
+    "aliases": [
+      "Marie Curie",
+      "marie_curie"
+    ],
+    "locations": [
+      {
+        "label": "Paris – Forschungsort",
+        "lat": 48.85,
+        "lon": 2.35,
+        "iso": "FR"
+      },
+      {
+        "label": "Warschau – Geburtsort, heute Polen",
+        "lat": 52.23,
+        "lon": 21.01,
+        "iso": "PL"
+      }
+    ],
+    "image": "marie-curie"
+  },
+  {
+    "id": "person-ada_lovelace",
+    "category": "people",
+    "title": "Ada Lovelace",
+    "intro": "Ada Lovelace schrieb 1843 eine Rechenanleitung für Charles Babbages geplante Maschine auf.",
+    "aliases": [
+      "Ada Lovelace",
+      "ada_lovelace"
+    ],
+    "locations": [
+      {
+        "label": "England – Beispielregion ihrer Arbeit",
+        "lat": 51.5,
+        "lon": -0.13,
+        "iso": "GB"
+      }
+    ],
+    "image": "ada-lovelace"
+  },
+  {
+    "id": "person-grace_hopper",
+    "category": "people",
+    "title": "Grace Hopper",
+    "intro": "Grace Hopper half, das Programmieren von Computern einfacher zu machen.",
+    "aliases": [
+      "Grace Hopper",
+      "grace_hopper"
+    ],
+    "locations": [
+      {
+        "label": "USA – Beispielregion ihrer Computerarbeit",
+        "lat": 42.38,
+        "lon": -71.12,
+        "iso": "US"
+      }
+    ],
+    "image": "grace-hopper"
+  },
+  {
+    "id": "person-katherine_johnson",
+    "category": "people",
+    "title": "Katherine Johnson",
+    "intro": "Katherine Johnson berechnete Flugbahnen für die Raumfahrt.",
+    "aliases": [
+      "Katherine Johnson",
+      "katherine_johnson"
+    ],
+    "locations": [
+      {
+        "label": "Langley, Virginia – NASA-Forschungsort",
+        "lat": 37.1,
+        "lon": -76.4,
+        "iso": "US"
+      }
+    ],
+    "image": "katherine-johnson"
+  },
+  {
+    "id": "person-tim_berners_lee",
+    "category": "people",
+    "title": "Tim Berners-Lee",
+    "intro": "Tim Berners-Lee entwickelte am CERN die Idee für das World Wide Web.",
+    "aliases": [
+      "Tim Berners-Lee",
+      "tim_berners_lee"
+    ],
+    "locations": [
+      {
+        "label": "CERN – Schweiz und Frankreich",
+        "lat": 46.23,
+        "lon": 6.05
+      }
+    ],
+    "image": "tim-berners-lee"
+  },
+  {
+    "id": "person-karl_benz",
+    "category": "people",
+    "title": "Karl (Carl) Benz",
+    "intro": "Karl Benz entwickelte einen Wagen mit Benzinmotor.",
+    "aliases": [
+      "Karl (Carl) Benz",
+      "karl_benz"
+    ],
+    "locations": [
+      {
+        "label": "Mannheim – Entwicklung des Motorwagens",
+        "lat": 49.49,
+        "lon": 8.47,
+        "iso": "DE"
+      }
+    ],
+    "image": "karl-benz"
+  },
+  {
+    "id": "person-bertha_benz",
+    "category": "people",
+    "title": "Bertha Benz",
+    "intro": "Bertha Benz unterstützte die Entwicklung des Motorwagens mit Geld, Ideen und praktischer Arbeit.",
+    "aliases": [
+      "Bertha Benz",
+      "bertha_benz"
+    ],
+    "locations": [
+      {
+        "label": "Mannheim – Beginn der bekannten Fahrt",
+        "lat": 49.49,
+        "lon": 8.47,
+        "iso": "DE"
+      },
+      {
+        "label": "Pforzheim – Ziel der Fahrt 1888",
+        "lat": 48.89,
+        "lon": 8.7,
+        "iso": "DE"
+      }
+    ],
+    "image": "bertha-benz"
+  },
+  {
+    "id": "person-jane_goodall",
+    "category": "people",
+    "title": "Jane Goodall",
+    "intro": "Jane Goodall beobachtete wilde Schimpansen in Tansania.",
+    "aliases": [
+      "Jane Goodall",
+      "jane_goodall"
+    ],
+    "locations": [
+      {
+        "label": "Gombe, Tansania – Forschungsregion",
+        "lat": -4.68,
+        "lon": 29.63,
+        "iso": "TZ"
+      }
+    ],
+    "image": "jane-goodall"
+  },
+  {
+    "id": "person-albert_einstein",
+    "category": "people",
+    "title": "Albert Einstein",
+    "intro": "Albert Einstein erforschte Licht, Raum und Zeit.",
+    "aliases": [
+      "Albert Einstein",
+      "albert_einstein"
+    ],
+    "locations": [
+      {
+        "label": "Bern – ein Ort seiner Arbeit",
+        "lat": 46.95,
+        "lon": 7.45,
+        "iso": "CH"
+      },
+      {
+        "label": "Princeton – späterer Forschungsort",
+        "lat": 40.36,
+        "lon": -74.67,
+        "iso": "US"
+      }
+    ],
+    "image": "albert-einstein"
+  },
+  {
+    "id": "person-al_khwarizmi",
+    "category": "people",
+    "title": "al-Chwarizmi (al-Khwarizmi)",
+    "intro": "Al-Chwarizmi schrieb in Bagdad wichtige Bücher über das Rechnen und die Algebra.",
+    "aliases": [
+      "al-Chwarizmi (al-Khwarizmi)",
+      "al_khwarizmi"
+    ],
+    "locations": [
+      {
+        "label": "Bagdad – Wirkungsort im Abbasidenreich",
+        "lat": 33.32,
+        "lon": 44.37,
+        "iso": "IQ"
+      }
+    ],
+    "image": "al-khwarizmi"
+  },
+  {
+    "id": "person-tu_youyou",
+    "category": "people",
+    "title": "Tu Youyou",
+    "intro": "Tu Youyou suchte mit einem Team nach besseren Mitteln gegen Malaria.",
+    "aliases": [
+      "Tu Youyou",
+      "tu_youyou"
+    ],
+    "locations": [
+      {
+        "label": "China – Beispielregion ihrer Forschung",
+        "lat": 39.9,
+        "lon": 116.4,
+        "iso": "CN"
+      }
+    ],
+    "image": "tu-youyou"
+  },
+  {
+    "id": "person-cai_lun",
+    "category": "people",
+    "title": "Cai Lun",
+    "intro": "Cai Lun sammelte Erfahrungen früherer Papiermacher und verbesserte die Herstellung.",
+    "aliases": [
+      "Cai Lun",
+      "cai_lun"
+    ],
+    "locations": [
+      {
+        "label": "China – Region der Han-Hauptstadt Luoyang",
+        "lat": 34.6,
+        "lon": 112.5,
+        "iso": "CN"
+      }
+    ],
+    "image": "cai-lun"
+  },
+  {
+    "id": "person-mae_jemison",
+    "category": "people",
+    "title": "Mae Jemison",
+    "intro": "Mae Jemison ist Ärztin und war NASA-Astronautin.",
+    "aliases": [
+      "Mae Jemison",
+      "mae_jemison"
+    ],
+    "locations": [
+      {
+        "label": "Florida – Startregion ihrer Raumfahrtmission",
+        "lat": 28.57,
+        "lon": -80.65,
+        "iso": "US"
+      }
+    ],
+    "image": "mae-jemison"
+  },
+  {
+    "id": "person-johannes_gutenberg",
+    "category": "people",
+    "title": "Johannes Gutenberg",
+    "intro": "Johannes Gutenberg entwickelte in Mainz ein wirksames System zum Drucken mit beweglichen Metallbuchstaben.",
+    "aliases": [
+      "Johannes Gutenberg",
+      "johannes_gutenberg"
+    ],
+    "locations": [
+      {
+        "label": "Mainz – Druckwerkstatt",
+        "lat": 50,
+        "lon": 8.27,
+        "iso": "DE"
+      }
+    ],
+    "image": "johannes-gutenberg"
+  },
+  {
+    "id": "person-wangari_maathai",
+    "category": "people",
+    "title": "Wangari Maathai",
+    "intro": "Sie setzte sich in Kenia gemeinsam mit vielen Frauen für Bäume und eine gesunde Umwelt ein.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Kenia – Land ihrer Umweltarbeit",
+        "lat": -1.29,
+        "lon": 36.82,
+        "iso": "KE"
+      }
+    ],
+    "image": "wangari-maathai"
+  },
+  {
+    "id": "person-charles_darwin",
+    "category": "people",
+    "title": "Charles Darwin",
+    "intro": "Er beobachtete Tiere, Pflanzen und Gesteine auf einer langen Forschungsreise.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Galápagos – eine Station seiner Reise",
+        "lat": -0.6,
+        "lon": -90.5,
+        "iso": "EC"
+      }
+    ],
+    "image": "charles-darwin"
+  },
+  {
+    "id": "person-alexander_humboldt",
+    "category": "people",
+    "title": "Alexander von Humboldt",
+    "intro": "Er verglich auf Reisen Pflanzen, Berge und Klima miteinander.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Anden – Beispielregion seiner Forschung",
+        "lat": -1.47,
+        "lon": -78.82,
+        "iso": "EC"
+      }
+    ],
+    "image": "alexander-von-humboldt"
+  },
+  {
+    "id": "person-neil_armstrong",
+    "category": "people",
+    "title": "Neil Armstrong",
+    "intro": "Er war der erste Mensch, der die Mondoberfläche betrat.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Florida – Startregion von Apollo 11",
+        "lat": 28.57,
+        "lon": -80.65,
+        "iso": "US"
+      }
+    ],
+    "image": "neil-armstrong"
+  },
+  {
+    "id": "invention-light",
+    "category": "inventions",
+    "title": "Elektrisches Licht",
+    "intro": "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Menlo Park – Edisons Team",
+        "lat": 40.56,
+        "lon": -74.34,
+        "iso": "US"
+      },
+      {
+        "label": "England – Joseph Swans Arbeit",
+        "lat": 54.97,
+        "lon": -1.61,
+        "iso": "GB"
+      }
+    ],
+    "model": "circuit",
+    "year": 1879
+  },
+  {
+    "id": "invention-car",
+    "category": "inventions",
+    "title": "Das Auto",
+    "intro": "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Mannheim – Benz-Motorwagen",
+        "lat": 49.49,
+        "lon": 8.47,
+        "iso": "DE"
+      }
+    ],
+    "model": null,
+    "year": 1886
+  },
+  {
+    "id": "invention-railway",
+    "category": "inventions",
+    "title": "Die Eisenbahn",
+    "intro": "Viele Waren und Reisende mussten über Land transportiert werden.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Darlington – eine frühe Bahnstrecke",
+        "lat": 54.52,
+        "lon": -1.55,
+        "iso": "GB"
+      }
+    ],
+    "model": null,
+    "year": 1825
+  },
+  {
+    "id": "invention-airplane",
+    "category": "inventions",
+    "title": "Das Flugzeug",
+    "intro": "Menschen wollten durch die Luft reisen.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Kill Devil Hills – Flüge der Wright-Brüder",
+        "lat": 36,
+        "lon": -75.67,
+        "iso": "US"
+      }
+    ],
+    "model": "flight",
+    "year": 1903
+  },
+  {
+    "id": "invention-phone",
+    "category": "inventions",
+    "title": "Das Telefon",
+    "intro": "Eine Stimme war normalerweise nur in der Nähe hörbar.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Boston – Beispielort der frühen Telefonentwicklung",
+        "lat": 42.36,
+        "lon": -71.06,
+        "iso": "US"
+      }
+    ],
+    "model": null,
+    "year": 1876
+  },
+  {
+    "id": "invention-computer",
+    "category": "inventions",
+    "title": "Der Computer",
+    "intro": "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "USA – eines von vielen Entwicklungszentren",
+        "lat": 40,
+        "lon": -75,
+        "iso": "US"
+      },
+      {
+        "label": "Deutschland – Zuses Computerarbeit",
+        "lat": 52.52,
+        "lon": 13.4,
+        "iso": "DE"
+      },
+      {
+        "label": "Großbritannien – frühe Computerprojekte",
+        "lat": 51.997,
+        "lon": -0.741,
+        "iso": "GB"
+      }
+    ],
+    "model": "computer",
+    "year": 1940
+  },
+  {
+    "id": "invention-internet",
+    "category": "inventions",
+    "title": "Das Internet",
+    "intro": "Computer an verschiedenen Orten sollten Informationen austauschen.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Kalifornien – frühe ARPANET-Knoten",
+        "lat": 34.07,
+        "lon": -118.44,
+        "iso": "US"
+      },
+      {
+        "label": "Großbritannien – Forschung zur Paketvermittlung",
+        "lat": 51.42,
+        "lon": -0.34,
+        "iso": "GB"
+      }
+    ],
+    "model": "network",
+    "year": 1969
+  },
+  {
+    "id": "invention-compass",
+    "category": "inventions",
+    "title": "Der Kompass",
+    "intro": "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "China – frühe Navigationsgeschichte",
+        "lat": 30,
+        "lon": 120,
+        "iso": "CN"
+      }
+    ],
+    "model": null,
+    "year": 1050
+  },
+  {
+    "id": "invention-printing",
+    "category": "inventions",
+    "title": "Der Buchdruck",
+    "intro": "Ein Buch von Hand abzuschreiben dauerte lange.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Mainz – Gutenbergs Werkstatt",
+        "lat": 50,
+        "lon": 8.27,
+        "iso": "DE"
+      },
+      {
+        "label": "Korea – ältere bewegliche Metallzeichen",
+        "lat": 36.64,
+        "lon": 127.49,
+        "iso": "KR"
+      },
+      {
+        "label": "China – ältere Drucktraditionen",
+        "lat": 34,
+        "lon": 110,
+        "iso": "CN"
+      }
+    ],
+    "model": null,
+    "year": 1450
+  },
+  {
+    "id": "invention-rocket",
+    "category": "inventions",
+    "title": "Die Rakete",
+    "intro": "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Auburn – Goddards Versuch 1926",
+        "lat": 42.19,
+        "lon": -71.83,
+        "iso": "US"
+      }
+    ],
+    "model": null,
+    "year": 1926
+  },
+  {
+    "id": "invention-satellite",
+    "category": "inventions",
+    "title": "Der Satellit",
+    "intro": "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Baikonur – Sputnik-Start, heute Kasachstan",
+        "lat": 45.92,
+        "lon": 63.34,
+        "iso": "KZ"
+      }
+    ],
+    "model": null,
+    "year": 1957
+  },
+  {
+    "id": "invention-smartphone",
+    "category": "inventions",
+    "title": "Das Smartphone",
+    "intro": "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
+    "aliases": [],
+    "locations": [],
+    "model": null,
+    "year": 1993
+  },
+  {
+    "id": "building-giza-pyramids",
+    "category": "buildings",
+    "title": "Pyramiden von Gizeh",
+    "intro": "Grabstätten für Könige und Teil großer religiöser Anlagen.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Gizeh, Ägypten",
+        "lat": 29.979,
+        "lon": 31.134,
+        "iso": "EG"
+      }
+    ],
+    "image": "giza-pyramids",
+    "model": "heights"
+  },
+  {
+    "id": "building-great-wall",
+    "category": "buildings",
+    "title": "Die Chinesische Mauer",
+    "intro": "Grenzen überwachen, verteidigen und Wege kontrollieren.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Mauerregion nördlich von Peking",
+        "lat": 40.43,
+        "lon": 116.57,
+        "iso": "CN"
+      }
+    ],
+    "image": "great-wall",
+    "model": null
+  },
+  {
+    "id": "building-colosseum",
+    "category": "buildings",
+    "title": "Das Kolosseum",
+    "intro": "Öffentliche Veranstaltungen im Römischen Reich. Einige waren gewalttätig und wären heute nicht akzeptabel.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Rom, Italien",
+        "lat": 41.89,
+        "lon": 12.492,
+        "iso": "IT"
+      }
+    ],
+    "image": "colosseum"
+  },
+  {
+    "id": "building-taj-mahal",
+    "category": "buildings",
+    "title": "Das Taj Mahal",
+    "intro": "Erinnerung an Mumtaz Mahal; in Auftrag gegeben von ihrem Ehemann, dem Mogulherrscher Shah Jahan.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Agra, Indien",
+        "lat": 27.175,
+        "lon": 78.042,
+        "iso": "IN"
+      }
+    ],
+    "image": "taj-mahal",
+    "model": null
+  },
+  {
+    "id": "building-eiffel-tower",
+    "category": "buildings",
+    "title": "Der Eiffelturm",
+    "intro": "Ein besonderes Bauwerk für die Weltausstellung 1889.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Paris, Frankreich",
+        "lat": 48.858,
+        "lon": 2.294,
+        "iso": "FR"
+      }
+    ],
+    "image": "eiffel-tower",
+    "model": "heights"
+  },
+  {
+    "id": "building-golden-gate-bridge",
+    "category": "buildings",
+    "title": "Golden Gate Bridge",
+    "intro": "Eine Straßenverbindung über die Meerenge Golden Gate.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "San Francisco, USA",
+        "lat": 37.82,
+        "lon": -122.478,
+        "iso": "US"
+      }
+    ],
+    "image": "golden-gate-bridge",
+    "model": "bridge"
+  },
+  {
+    "id": "building-panama-canal",
+    "category": "buildings",
+    "title": "Der Panamakanal",
+    "intro": "Schiffe müssen für viele Reisen nicht mehr ganz um Südamerika fahren.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Panama – Beispielregion der Schleusen",
+        "lat": 9.27,
+        "lon": -79.92,
+        "iso": "PA"
+      }
+    ],
+    "image": "panama-canal",
+    "model": "lock"
+  },
+  {
+    "id": "building-burj-khalifa",
+    "category": "buildings",
+    "title": "Burj Khalifa",
+    "intro": "Ein Hochhaus mit mehreren Nutzungen, zum Beispiel Wohnungen, Büros und Aussichtsbereichen.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Dubai, Vereinigte Arabische Emirate",
+        "lat": 25.197,
+        "lon": 55.274,
+        "iso": "AE"
+      }
+    ],
+    "model": "heights"
+  },
+  {
+    "id": "science-circuit",
+    "category": "science",
+    "title": "Wie funktioniert Strom?",
+    "intro": "Ein geschlossener Weg verbindet Energiequelle, Leitungen und Lampe.",
+    "aliases": [],
+    "locations": [],
+    "model": "circuit"
+  },
+  {
+    "id": "science-network",
+    "category": "science",
+    "title": "Wie funktioniert das Internet?",
+    "intro": "Eine Nachricht kann als viele kleine Datenpakete durch ein Netz reisen.",
+    "aliases": [],
+    "locations": [],
+    "model": "network"
+  },
+  {
+    "id": "science-flight",
+    "category": "science",
+    "title": "Warum fliegt ein Flugzeug?",
+    "intro": "Vier Kräfte wirken beim Fliegen: Auftrieb, Gewicht, Schub und Luftwiderstand.",
+    "aliases": [],
+    "locations": [],
+    "model": "flight"
+  },
+  {
+    "id": "science-gps",
+    "category": "science",
+    "title": "Wie findet GPS einen Ort?",
+    "intro": "Satelliten senden ihre Position und sehr genaue Zeitsignale.",
+    "aliases": [],
+    "locations": [],
+    "model": "gps"
+  },
+  {
+    "id": "science-computer",
+    "category": "science",
+    "title": "Wie rechnet ein Computer mit Nullen und Einsen?",
+    "intro": "Ein Bit kann zwei Zustände haben: 0 oder 1. Acht Bits bilden ein Byte.",
+    "aliases": [],
+    "locations": [],
+    "model": "computer"
+  },
+  {
+    "id": "science-shadows",
+    "category": "science",
+    "title": "Woher wissen wir, dass die Erde rund ist?",
+    "intro": "An verschiedenen Orten können zur selben Zeit unterschiedlich lange Schatten entstehen.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Alexandria – mit Eratosthenes verbunden",
+        "lat": 31.2,
+        "lon": 29.92,
+        "iso": "EG"
+      }
+    ],
+    "model": "shadows"
+  },
+  {
+    "id": "animal-whale-shark",
+    "category": "animals",
+    "title": "Walhai",
+    "intro": "Der größte lebende Fisch schwimmt in warmen Meeren. Er ist ein Hai und kein Wal.",
+    "aliases": [
+      "Rhincodon typus",
+      "Walhai"
+    ],
+    "locations": [
+      {
+        "label": "Bucht von La Paz, Mexiko – Beispielregion",
+        "lat": 24.2,
+        "lon": -110.3
+      }
+    ],
+    "image": "whale-shark",
+    "group": "Fische",
+    "habitat": "Ozean",
+    "continent": "Mehrere Kontinente"
+  },
+  {
+    "id": "animal-garden-cross-spider",
+    "category": "animals",
+    "title": "Gartenkreuzspinne",
+    "intro": "Du kannst sie auch in unserer Nähe entdecken. Helle Flecken auf dem Rücken bilden oft ein Kreuz.",
+    "aliases": [
+      "Araneus diadematus",
+      "Gartenkreuzspinne"
+    ],
+    "locations": [
+      {
+        "label": "Mitteleuropa – Beispielregion",
+        "lat": 51,
+        "lon": 10
+      }
+    ],
+    "image": "garden-cross-spider",
+    "group": "Spinnentiere",
+    "habitat": "Wiesen und Gärten",
+    "continent": "Europa"
+  },
+  {
+    "id": "animal-dromedary",
+    "category": "animals",
+    "title": "Dromedar",
+    "intro": "Ein Dromedar besitzt einen Höcker. Menschen halten es in trockenen Regionen Afrikas und Asiens.",
+    "aliases": [
+      "Camelus dromedarius",
+      "Dromedar"
+    ],
+    "locations": [
+      {
+        "label": "Südmarokko – Beispiel für Haltung",
+        "lat": 30.9,
+        "lon": -4.3
+      }
+    ],
+    "image": "dromedary",
+    "group": "Säugetiere",
+    "habitat": "Wüste",
+    "continent": "Afrika und Asien"
+  },
+  {
+    "id": "animal-white-tailed-eagle",
+    "category": "animals",
+    "title": "Seeadler",
+    "intro": "Dieser große Greifvogel lebt oft an Gewässern. Erwachsene Tiere haben einen weißen Schwanz.",
+    "aliases": [
+      "Haliaeetus albicilla",
+      "Seeadler"
+    ],
+    "locations": [
+      {
+        "label": "Nordostdeutsche Seen – Beispielregion",
+        "lat": 53.5,
+        "lon": 13.3
+      }
+    ],
+    "image": "white-tailed-eagle",
+    "group": "Vögel",
+    "habitat": "Küsten und Seen",
+    "continent": "Europa und Asien"
+  },
+  {
+    "id": "history-maya",
+    "category": "history",
+    "title": "Die Maya: Wissen gestern und heute",
+    "intro": "Die Geschichte der Maya gehört zu Amerika. Maya-Sprachen und Gemeinschaften gibt es bis heute.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Tikal im heutigen Guatemala",
+        "lat": 17.22,
+        "lon": -89.62
+      }
+    ],
+    "year": 250,
+    "era": "Frühe Kulturen",
+    "sensitive": false
+  },
+  {
+    "id": "history-polynesia",
+    "category": "history",
+    "title": "Über den Pazifik ohne GPS",
+    "intro": "Polynesische Seefahrerinnen und Seefahrer nutzten genaue Naturbeobachtung für weite Reisen.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Samoa – eine Inselgruppe Polynesiens",
+        "lat": -13.8,
+        "lon": -171.75
+      }
+    ],
+    "year": 1000,
+    "era": "Forschungsreisen",
+    "sensitive": false
+  },
+  {
+    "id": "history-timbuktu",
+    "category": "history",
+    "title": "Timbuktu: eine Stadt des Wissens",
+    "intro": "In Westafrika trafen Handel, Bücher und gelehrte Menschen aufeinander.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Timbuktu, Mali",
+        "lat": 16.77,
+        "lon": -3
+      }
+    ],
+    "year": 1500,
+    "era": "Frühe Neuzeit",
+    "sensitive": false
+  },
+  {
+    "id": "history-greece",
+    "category": "history",
+    "title": "Fragen stellen im alten Griechenland",
+    "intro": "Menschen beschäftigten sich mit Mathematik, Theater, Kunst und politischen Regeln.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Athen im heutigen Griechenland",
+        "lat": 37.98,
+        "lon": 23.73
+      }
+    ],
+    "year": -450,
+    "era": "Antike",
+    "sensitive": false
+  },
+  {
+    "id": "history-rome",
+    "category": "history",
+    "title": "Römische Straßen und Wasserwege",
+    "intro": "Ein großes Reich verband Orte durch Straßen, Handel und gemeinsame Verwaltung.",
+    "aliases": [],
+    "locations": [
+      {
+        "label": "Rom im heutigen Italien",
+        "lat": 41.9,
+        "lon": 12.49
+      }
+    ],
+    "year": -27,
+    "era": "Antike",
+    "sensitive": false
+  },
+  {
+    "id": "science-atmosphere",
+    "category": "science",
+    "title": "Die Lufthülle der Erde",
+    "intro": "Unsere Atmosphäre wird nach dem Temperaturverlauf in fünf große Schichten eingeteilt.",
+    "aliases": [],
+    "locations": [],
+    "model": "atmosphere"
+  },
+  {
+    "id": "science-magnetism",
+    "category": "science",
+    "title": "Die Erde und ihr Magnetfeld",
+    "intro": "Ein unsichtbares Feld wirkt auf Kompassnadeln und viele geladene Teilchen.",
+    "aliases": [],
+    "locations": [],
+    "model": "magnetism"
+  },
+  {
+    "id": "science-currents",
+    "category": "science",
+    "title": "Warum bewegt sich Meerwasser?",
+    "intro": "Wind und Dichteunterschiede treiben Meeresströmungen an.",
+    "aliases": [],
+    "locations": [],
+    "model": "currents"
+  },
+  {
+    "id": "science-motor",
+    "category": "science",
+    "title": "Wie wird Strom zu Bewegung?",
+    "intro": "Ein Elektromotor nutzt magnetische Kräfte, um eine Drehung anzutreiben.",
+    "aliases": [],
+    "locations": [],
+    "model": "motor"
+  },
+  {
+    "id": "science-foodweb",
+    "category": "science",
+    "title": "Wer gibt wem Energie?",
+    "intro": "Nahrung verbindet Lebewesen. Die Sonne liefert Energie für die meisten Nahrungsketten.",
+    "aliases": [],
+    "locations": [],
+    "model": "foodweb"
+  },
+  {
+    "id": "science-sound",
+    "category": "science",
+    "title": "Warum klingt ein Ton hoch oder tief?",
+    "intro": "Ein Ton beginnt mit einer Schwingung und breitet sich durch ein Material aus.",
+    "aliases": [],
+    "locations": [],
+    "model": "sound"
+  },
+  {
+    "id": "science-solar-system",
+    "category": "science",
+    "title": "Planeten: groß und weit entfernt",
+    "intro": "Acht Planeten bewegen sich um die Sonne. Größen und Abstände sind sehr verschieden.",
+    "aliases": [],
+    "locations": [],
+    "model": "solar-system"
+  },
+  {
+    "id": "science-energy",
+    "category": "science",
+    "title": "Sonnenstrom auch am Abend?",
+    "intro": "Eine Solarzelle wandelt Licht in elektrische Energie um. Ein Akku kann Energie für später speichern.",
+    "aliases": [],
+    "locations": [],
+    "model": "energy"
+  },
+  {
+    "id": "science-patterns",
+    "category": "science",
+    "title": "Kann ein Computer Muster erkennen?",
+    "intro": "Computer können Beispiele vergleichen. Bei lernenden Systemen beeinflussen die Beispiele, was sie erkennen.",
+    "aliases": [],
+    "locations": [],
+    "model": "patterns"
+  }
+]

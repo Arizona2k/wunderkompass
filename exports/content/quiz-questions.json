@@ -1,0 +1,914 @@
+[
+  {
+    "id": "equator",
+    "category": "Weltkugel",
+    "question": "Wie heißt die gedachte Linie um die Mitte der Erde?",
+    "answers": [
+      "Äquator",
+      "Nordpol",
+      "Erdkern"
+    ],
+    "correct": 0,
+    "why": "Der Äquator teilt die Erde in die Nordhalbkugel und die Südhalbkugel."
+  },
+  {
+    "id": "outer",
+    "category": "Erdschichten",
+    "question": "Welche Schicht besteht vor allem aus flüssigem Metall?",
+    "answers": [
+      "Erdkruste",
+      "Äußerer Erdkern",
+      "Erdmantel"
+    ],
+    "correct": 1,
+    "why": "Im äußeren Erdkern ist das Metall flüssig. Der innere Erdkern ist dagegen fest."
+  },
+  {
+    "id": "germany",
+    "category": "Länder",
+    "question": "Auf welchem Kontinent liegt Deutschland?",
+    "answers": [
+      "Afrika",
+      "Asien",
+      "Europa"
+    ],
+    "correct": 2,
+    "why": "Deutschland liegt in Europa. Seine Hauptstadt ist Berlin."
+  },
+  {
+    "id": "day",
+    "category": "Weltkugel",
+    "question": "Warum gibt es Tag und Nacht?",
+    "answers": [
+      "Die Erde dreht sich",
+      "Die Sonne wird ausgeschaltet",
+      "Der Mond verdeckt jeden Abend die Sonne"
+    ],
+    "correct": 0,
+    "why": "Die Erde dreht sich. Die Seite zur Sonne hat Tag, die andere Seite hat Nacht."
+  },
+  {
+    "id": "crust",
+    "category": "Erdschichten",
+    "question": "Auf welcher Erdschicht stehen unsere Häuser?",
+    "answers": [
+      "Auf dem inneren Kern",
+      "Auf der Erdkruste",
+      "Auf dem äußeren Kern"
+    ],
+    "correct": 1,
+    "why": "Die Erdkruste ist die feste Außenhaut. Auf ihr liegen die Kontinente und die Böden der Ozeane."
+  },
+  {
+    "id": "ocean",
+    "category": "Weltkugel",
+    "question": "Welcher Ozean ist der größte?",
+    "answers": [
+      "Arktischer Ozean",
+      "Atlantik",
+      "Pazifik"
+    ],
+    "correct": 2,
+    "why": "Der Pazifik ist der größte Ozean und liegt zwischen Amerika, Asien und Australien."
+  },
+  {
+    "id": "australia",
+    "category": "Länder",
+    "question": "Welche Tiere stammen aus Australien?",
+    "answers": [
+      "Kängurus und Koalas",
+      "Eisbären",
+      "Große Pandas"
+    ],
+    "correct": 0,
+    "why": "Kängurus und Koalas stammen aus Australien. Große Pandas stammen aus China."
+  },
+  {
+    "id": "mantle",
+    "category": "Erdschichten",
+    "question": "Wie ist das Gestein im Erdmantel meistens?",
+    "answers": [
+      "Kalt und locker",
+      "Fest, aber sehr heiß",
+      "Überall flüssige Lava"
+    ],
+    "correct": 1,
+    "why": "Der Mantel besteht überwiegend aus festem, heißem Gestein. Es kann sich sehr langsam verformen."
+  },
+  {
+    "id": "water",
+    "category": "Weltkugel",
+    "question": "Was bedeckt den größeren Teil der Erdoberfläche?",
+    "answers": [
+      "Land",
+      "Eis",
+      "Wasser"
+    ],
+    "correct": 2,
+    "why": "Etwa 71 von 100 Teilen der Erdoberfläche sind vom Ozean bedeckt. Die Erde ist ein blauer Planet."
+  },
+  {
+    "id": "berlin",
+    "category": "Länder",
+    "question": "Wie heißt die Hauptstadt von Deutschland?",
+    "answers": [
+      "Berlin",
+      "Paris",
+      "Rom"
+    ],
+    "correct": 0,
+    "why": "Berlin ist Deutschlands Hauptstadt. Paris liegt in Frankreich und Rom in Italien."
+  },
+  {
+    "id": "north",
+    "category": "Weltkugel",
+    "question": "Was liegt unter dem Eis am Nordpol?",
+    "answers": [
+      "Ein großer Wald",
+      "Meerwasser",
+      "Eine riesige Stadt"
+    ],
+    "correct": 1,
+    "why": "Der Nordpol liegt im Arktischen Ozean. Unter dem Eis am Südpol liegt dagegen Land."
+  },
+  {
+    "id": "inner",
+    "category": "Erdschichten",
+    "question": "Warum ist der innere Erdkern trotz Hitze fest?",
+    "answers": [
+      "Er besteht aus Eis",
+      "Dort gibt es keine Hitze",
+      "Der Druck ist riesig"
+    ],
+    "correct": 2,
+    "why": "Im Mittelpunkt der Erde ist der Druck so groß, dass das Metall fest bleibt."
+  },
+  {
+    "id": "italy",
+    "category": "Länder",
+    "question": "Welches Land sieht auf der Karte wie ein Stiefel aus?",
+    "answers": [
+      "Italien",
+      "Kanada",
+      "Japan"
+    ],
+    "correct": 0,
+    "why": "Italiens lange Halbinsel sieht aus wie ein Stiefel, der ins Mittelmeer ragt."
+  },
+  {
+    "id": "continents",
+    "category": "Weltkugel",
+    "question": "Wie viele Kontinente zeigt unser Lernmodell?",
+    "answers": [
+      "Drei",
+      "Sieben",
+      "Zwölf"
+    ],
+    "correct": 1,
+    "why": "Unser Modell zeigt Europa, Asien, Afrika, Nordamerika, Südamerika, Australien und Antarktika."
+  },
+  {
+    "id": "japan",
+    "category": "Länder",
+    "question": "Welches Land besteht aus vielen Inseln im Pazifik?",
+    "answers": [
+      "Deutschland",
+      "Ägypten",
+      "Japan"
+    ],
+    "correct": 2,
+    "why": "Japan ist ein Inselstaat in Asien. Auf der Weltkugel liegt es östlich von China."
+  },
+  {
+    "id": "core-order",
+    "category": "Erdschichten",
+    "question": "Welche Schicht liegt ganz in der Mitte?",
+    "answers": [
+      "Innerer Erdkern",
+      "Erdkruste",
+      "Erdmantel"
+    ],
+    "correct": 0,
+    "why": "Von außen nach innen: Erdkruste, Erdmantel, äußerer Kern, innerer Kern."
+  },
+  {
+    "id": "africa",
+    "category": "Länder",
+    "question": "Auf welchem Kontinent liegt Ägypten größtenteils?",
+    "answers": [
+      "Europa",
+      "Afrika",
+      "Südamerika"
+    ],
+    "correct": 1,
+    "why": "Ägypten liegt größtenteils in Afrika. Der Nil fließt dort ins Mittelmeer."
+  },
+  {
+    "id": "five",
+    "category": "Weltkugel",
+    "question": "Wie viele Ozeane unterscheiden wir in diesem Modell?",
+    "answers": [
+      "Zwei",
+      "Sieben",
+      "Fünf"
+    ],
+    "correct": 2,
+    "why": "Pazifik, Atlantik, Indischer, Arktischer und Südlicher Ozean. Sie sind alle miteinander verbunden."
+  },
+  {
+    "id": "evaporation",
+    "question": "Was passiert, wenn eine Pfütze verdunstet?",
+    "answers": [
+      "Das Wasser wird zu unsichtbarem Wasserdampf",
+      "Das Wasser wird zu Stein",
+      "Das Wasser hört auf zu existieren"
+    ],
+    "correct": 0,
+    "why": "Flüssiges Wasser gelangt als unsichtbarer Wasserdampf in die Luft. Es verschwindet nicht aus der Welt.",
+    "category": "Wasser & Wetter"
+  },
+  {
+    "id": "clouds",
+    "question": "Woraus bestehen sichtbare Wolken?",
+    "answers": [
+      "Nur aus Rauch",
+      "Aus Wassertröpfchen oder Eiskristallen",
+      "Aus Watte"
+    ],
+    "correct": 1,
+    "why": "Wasserdampf selbst ist unsichtbar. Sichtbare Wolken bestehen aus winzigen Tröpfchen oder Eiskristallen.",
+    "category": "Wasser & Wetter"
+  },
+  {
+    "id": "groundwater",
+    "question": "Wo findet man Grundwasser?",
+    "answers": [
+      "Nur über den Wolken",
+      "Nur im Ozean",
+      "In Poren und Spalten unter der Erdoberfläche"
+    ],
+    "correct": 2,
+    "why": "Regenwasser kann versickern und sich in Boden und Gestein sammeln.",
+    "category": "Wasser & Wetter"
+  },
+  {
+    "id": "freshwater",
+    "question": "Was bedeutet Süßwasser?",
+    "answers": [
+      "Wasser mit wenig Salz",
+      "Wasser mit Zucker",
+      "Wasser, das immer trinkbar ist"
+    ],
+    "correct": 0,
+    "why": "Süßwasser enthält wenig Salz. Trotzdem muss es sauber und geeignet sein, bevor wir es trinken.",
+    "category": "Wasser & Wetter"
+  },
+  {
+    "id": "fog",
+    "question": "Was ist Nebel?",
+    "answers": [
+      "Sand in der Luft",
+      "Eine Wolke nahe am Boden",
+      "Unsichtbares Licht"
+    ],
+    "correct": 1,
+    "why": "Nebel besteht wie eine Wolke aus vielen winzigen Wassertröpfchen, aber direkt nahe am Boden.",
+    "category": "Wasser & Wetter"
+  },
+  {
+    "id": "wind",
+    "question": "Was ist Wind?",
+    "answers": [
+      "Licht in Bewegung",
+      "Wasser in Bewegung",
+      "Luft in Bewegung"
+    ],
+    "correct": 2,
+    "why": "Luftdruckunterschiede setzen Luft in Bewegung. Diese bewegte Luft spüren wir als Wind.",
+    "category": "Wasser & Wetter"
+  },
+  {
+    "id": "weather-climate",
+    "question": "Welche Aussage beschreibt Wetter?",
+    "answers": [
+      "Heute regnet es",
+      "In dieser Gegend sind die Sommer meist trocken",
+      "Eine Wüste bekommt langfristig wenig Regen"
+    ],
+    "correct": 0,
+    "why": "Heute regnet es beschreibt einen bestimmten Tag. Typische Bedingungen über viele Jahre gehören zum Klima.",
+    "category": "Wasser & Wetter"
+  },
+  {
+    "id": "condensation",
+    "question": "Was passiert beim Abkühlen feuchter Luft?",
+    "answers": [
+      "Wasser wird immer zu Stein",
+      "Wasserdampf kann zu Tröpfchen werden",
+      "Die Luft verschwindet"
+    ],
+    "correct": 1,
+    "why": "Das Entstehen flüssiger Tröpfchen aus Wasserdampf heißt Kondensation.",
+    "category": "Wasser & Wetter"
+  },
+  {
+    "id": "precipitation",
+    "question": "Was zählt zu Niederschlag?",
+    "answers": [
+      "Sonnenlicht",
+      "Wind",
+      "Regen, Schnee und Hagel"
+    ],
+    "correct": 2,
+    "why": "Niederschlag ist Wasser, das aus der Atmosphäre zur Erde fällt, flüssig oder fest.",
+    "category": "Wasser & Wetter"
+  },
+  {
+    "id": "thermometer",
+    "question": "Was misst ein Thermometer?",
+    "answers": [
+      "Temperatur",
+      "Windrichtung",
+      "Die Zahl der Wolken"
+    ],
+    "correct": 0,
+    "why": "Ein Thermometer zeigt, wie warm oder kalt etwas ist. Ein Regenmesser hat eine andere Aufgabe.",
+    "category": "Wasser & Wetter"
+  },
+  {
+    "id": "tilt",
+    "question": "Was ist der Hauptgrund für unsere Jahreszeiten?",
+    "answers": [
+      "Die Sonne wird im Winter ausgeschaltet",
+      "Die geneigte Erdachse",
+      "Die Erde dreht sich im Winter nicht"
+    ],
+    "correct": 1,
+    "why": "Die geneigte Erdachse verändert im Jahreslauf Sonnenstand und Tageslänge.",
+    "category": "Jahreszeiten"
+  },
+  {
+    "id": "opposite",
+    "question": "In Deutschland ist Sommer. Was ist gleichzeitig in Australien?",
+    "answers": [
+      "Sommer",
+      "Frühling",
+      "Winter"
+    ],
+    "correct": 2,
+    "why": "Die Jahreszeiten auf Nord- und Südhalbkugel sind gegensätzlich.",
+    "category": "Jahreszeiten"
+  },
+  {
+    "id": "year",
+    "question": "Wie lange braucht die Erde ungefähr einmal um die Sonne?",
+    "answers": [
+      "Ein Jahr",
+      "Eine Stunde",
+      "Einen Tag"
+    ],
+    "correct": 0,
+    "why": "Eine Reise um die Sonne dauert ungefähr 365¼ Tage. Die Drehung um die Achse dauert etwa einen Tag.",
+    "category": "Jahreszeiten"
+  },
+  {
+    "id": "summer-days",
+    "question": "Wie sind die Tage in Deutschland im Sommer im Vergleich zum Winter?",
+    "answers": [
+      "Kürzer",
+      "Länger",
+      "Immer genau gleich lang"
+    ],
+    "correct": 1,
+    "why": "Im Sommer bleibt die Sonne bei uns länger über dem Horizont und steht höher.",
+    "category": "Jahreszeiten"
+  },
+  {
+    "id": "rotation",
+    "question": "Welche Bewegung macht Tag und Nacht?",
+    "answers": [
+      "Die Bewegung der Wolken",
+      "Nur die Reise des Mondes",
+      "Die Drehung der Erde um ihre Achse"
+    ],
+    "correct": 2,
+    "why": "Während sich die Erde dreht, gelangt ein Ort ins Sonnenlicht und wieder auf die dunkle Seite.",
+    "category": "Jahreszeiten"
+  },
+  {
+    "id": "christmas",
+    "question": "Warum kann man in Australien Weihnachten bei Sommerwetter feiern?",
+    "answers": [
+      "Australien liegt auf der Südhalbkugel",
+      "Australien hat keine Jahreszeiten",
+      "Dort gibt es eine zweite Sonne"
+    ],
+    "correct": 0,
+    "why": "Im Dezember ist die Südhalbkugel zur Sonne geneigt. Dort ist Sommer, während bei uns Winter ist.",
+    "category": "Jahreszeiten"
+  },
+  {
+    "id": "tropics",
+    "question": "Welche Jahreszeiten unterscheidet man in vielen tropischen Gegenden eher?",
+    "answers": [
+      "Immer Schnee und Eis",
+      "Regenzeit und Trockenzeit",
+      "Tag und Nacht"
+    ],
+    "correct": 1,
+    "why": "Nicht überall gibt es vier Jahreszeiten wie bei uns. In vielen Tropengebieten ist Regen entscheidend.",
+    "category": "Jahreszeiten"
+  },
+  {
+    "id": "march",
+    "question": "Wie lang sind Tag und Nacht um die Tagundnachtgleiche ungefähr?",
+    "answers": [
+      "Tag eine Stunde, Nacht ein Jahr",
+      "Tag und Nacht dauern immer drei Tage",
+      "Ungefähr gleich lang"
+    ],
+    "correct": 2,
+    "why": "Um März und September sind Tag und Nacht fast überall ungefähr gleich lang.",
+    "category": "Jahreszeiten"
+  },
+  {
+    "id": "coral",
+    "question": "Was sind Korallen?",
+    "answers": [
+      "Tiere",
+      "Steine",
+      "Blumen"
+    ],
+    "correct": 0,
+    "why": "Korallen bestehen aus kleinen Tieren. Manche bilden feste Skelette und wachsen zu Riffen.",
+    "category": "Natur"
+  },
+  {
+    "id": "desert",
+    "question": "Was zeichnet eine Wüste aus?",
+    "answers": [
+      "Sie ist immer heiß",
+      "Sie bekommt sehr wenig Niederschlag",
+      "Sie liegt immer am Meer"
+    ],
+    "correct": 1,
+    "why": "Wüsten sind trocken. Auch die kalte Antarktis zählt als Wüste.",
+    "category": "Natur"
+  },
+  {
+    "id": "polar-bear",
+    "question": "Wo leben Eisbären in der freien Natur?",
+    "answers": [
+      "Am Südpol",
+      "Im Amazonas",
+      "In der Arktis im Norden"
+    ],
+    "correct": 2,
+    "why": "Eisbären leben im Norden. Pinguine und Eisbären treffen sich in der freien Natur nicht.",
+    "category": "Natur"
+  },
+  {
+    "id": "camel",
+    "question": "Was speichern Kamele in ihren Höckern?",
+    "answers": [
+      "Fett",
+      "Trinkwasser",
+      "Sand"
+    ],
+    "correct": 0,
+    "why": "Die Höcker enthalten Fett als Energiereserve. Sie sind keine Wassertanks.",
+    "category": "Natur"
+  },
+  {
+    "id": "reef-home",
+    "question": "Was bietet ein Korallenriff vielen Meerestieren?",
+    "answers": [
+      "Nur Dunkelheit",
+      "Nahrung und Verstecke",
+      "Trinkwasserflaschen"
+    ],
+    "correct": 1,
+    "why": "Riffe sind wichtige Lebensräume für viele verschiedene Meerestiere.",
+    "category": "Natur"
+  },
+  {
+    "id": "deep-sea",
+    "question": "Was passiert, je tiefer du im Meer hinabgehst?",
+    "answers": [
+      "Es wird überall sonniger",
+      "Der Druck verschwindet",
+      "Es wird dunkler und der Druck steigt"
+    ],
+    "correct": 2,
+    "why": "Sonnenlicht erreicht nur die oberen Bereiche. Der Wasserdruck nimmt mit der Tiefe zu.",
+    "category": "Natur"
+  },
+  {
+    "id": "habitat",
+    "question": "Was ist ein Lebensraum?",
+    "answers": [
+      "Ein Ort mit passenden Bedingungen für Lebewesen",
+      "Nur ein Kinderzimmer",
+      "Nur ein großer Zoo"
+    ],
+    "correct": 0,
+    "why": "Wälder, Teiche, Riffe und sogar der Boden unter einem Stein sind Lebensräume.",
+    "category": "Natur"
+  },
+  {
+    "id": "food-web",
+    "question": "Warum heißt es Nahrungsnetz?",
+    "answers": [
+      "Weil Tiere Netze kaufen",
+      "Weil viele Nahrungsbeziehungen zusammenhängen",
+      "Weil alle Tiere dasselbe fressen"
+    ],
+    "correct": 1,
+    "why": "Ein Lebewesen hat oft mehrere Nahrungsquellen und Fressfeinde. So hängen Nahrungsketten zusammen.",
+    "category": "Natur"
+  },
+  {
+    "id": "penguin",
+    "question": "Welche Aussage über Pinguine stimmt?",
+    "answers": [
+      "Alle leben am Nordpol",
+      "Alle leben ausschließlich im Eis",
+      "Nicht alle Pinguine leben im Eis"
+    ],
+    "correct": 2,
+    "why": "Pinguinarten leben in verschiedenen Gegenden der Südhalbkugel. Einige leben nahe am Äquator.",
+    "category": "Natur"
+  },
+  {
+    "id": "glacier",
+    "question": "Was ist ein Gletscher?",
+    "answers": [
+      "Eine große Eismasse an Land, die sich langsam bewegt",
+      "Ein warmer Sandberg",
+      "Eine Wolke"
+    ],
+    "correct": 0,
+    "why": "Gletscher entstehen aus über lange Zeit angesammeltem Schnee und bewegen sich langsam.",
+    "category": "Natur"
+  },
+  {
+    "id": "salt-sea",
+    "question": "Was bleibt zurück, wenn Meerwasser verdunstet?",
+    "answers": [
+      "Nichts",
+      "Das Salz",
+      "Nur Fische"
+    ],
+    "correct": 1,
+    "why": "Wasser gelangt in die Luft. Das gelöste Salz verdunstet dabei nicht mit.",
+    "category": "Natur"
+  },
+  {
+    "id": "tides",
+    "question": "Was verursacht vor allem Ebbe und Flut?",
+    "answers": [
+      "Schiffe",
+      "Regenwolken",
+      "Die Schwerkraft des Mondes"
+    ],
+    "correct": 2,
+    "why": "Vor allem die Anziehung des Mondes und auch die der Sonne verursachen die Gezeiten.",
+    "category": "Natur"
+  },
+  {
+    "id": "reuse",
+    "question": "Dein Buch ist heil und du brauchst es nicht mehr. Was ist sinnvoll?",
+    "answers": [
+      "Weitergeben oder tauschen",
+      "In den Fluss werfen",
+      "Sofort zerreißen"
+    ],
+    "correct": 0,
+    "why": "Andere können das Buch weiter nutzen. Das spart Material und vermeidet Abfall.",
+    "category": "Erde schützen"
+  },
+  {
+    "id": "light",
+    "question": "Niemand ist mehr im Zimmer. Was kannst du tun?",
+    "answers": [
+      "Alles Licht einschalten",
+      "Unnötiges Licht ausschalten",
+      "Alle Geräte gleichzeitig anschalten"
+    ],
+    "correct": 1,
+    "why": "Licht braucht Energie. Wenn es nicht gebraucht wird, kann es ausgeschaltet werden.",
+    "category": "Erde schützen"
+  },
+  {
+    "id": "wildlife",
+    "question": "Du entdeckst ein Vogelnest. Wie beobachtest du es?",
+    "answers": [
+      "Eier mitnehmen",
+      "Ganz nah hineinlangen",
+      "Mit Abstand und ohne es zu stören"
+    ],
+    "correct": 2,
+    "why": "Wildtiere brauchen Ruhe. Beobachten mit Abstand schützt sie und macht ihre natürlichen Verhaltensweisen sichtbar.",
+    "category": "Erde schützen"
+  },
+  {
+    "id": "greenhouse",
+    "question": "Was macht der natürliche Treibhauseffekt?",
+    "answers": [
+      "Er hält einen Teil der Wärme zurück",
+      "Er schaltet die Sonne aus",
+      "Er macht die Erde luftleer"
+    ],
+    "correct": 0,
+    "why": "Ein natürlicher Treibhauseffekt macht die Erde wärmer. Zusätzliche Treibhausgase verstärken ihn.",
+    "category": "Erde schützen"
+  },
+  {
+    "id": "repair",
+    "question": "Ein Spielzeug ist kaputt. Was könnt ihr zuerst überlegen?",
+    "answers": [
+      "Es in der Natur ablegen",
+      "Ob es sich reparieren lässt",
+      "Es sofort verbrennen"
+    ],
+    "correct": 1,
+    "why": "Reparieren kann die Nutzungsdauer verlängern. Erwachsene helfen bei Werkzeugen und elektrischen Dingen.",
+    "category": "Erde schützen"
+  },
+  {
+    "id": "bottle",
+    "question": "Was ist eine Mehrwegflasche?",
+    "answers": [
+      "Eine Flasche, die man nur einmal nutzt",
+      "Eine Flasche ohne Wasser",
+      "Eine Flasche, die mehrfach benutzt wird"
+    ],
+    "correct": 2,
+    "why": "Mehrweg bedeutet: Ein Behälter wird nach dem Reinigen wieder genutzt.",
+    "category": "Erde schützen"
+  },
+  {
+    "id": "responsibility",
+    "question": "Wer muss beim Schutz von Klima und Natur zusammenarbeiten?",
+    "answers": [
+      "Menschen, Unternehmen und Länder",
+      "Nur Kinder",
+      "Nur eine einzige Person"
+    ],
+    "correct": 0,
+    "why": "Das ist eine gemeinsame Aufgabe. Kinder dürfen Ideen beitragen, tragen aber nicht allein die Verantwortung.",
+    "category": "Erde schützen"
+  },
+  {
+    "id": "litter",
+    "question": "Wo gehört dein Abfall bei einem Ausflug hin?",
+    "answers": [
+      "Unter einen Busch",
+      "In einen passenden Mülleimer oder mit nach Hause",
+      "In den See"
+    ],
+    "correct": 1,
+    "why": "Abfall darf nicht in der Natur liegen bleiben. Nimm ihn mit, wenn es keinen passenden Mülleimer gibt.",
+    "category": "Erde schützen"
+  },
+  {
+    "id": "plants",
+    "question": "Wie kann ein Balkon Insekten helfen?",
+    "answers": [
+      "Alle Pflanzen entfernen",
+      "Alle Blüten abschneiden",
+      "Geeignete blühende Pflanzen anbieten"
+    ],
+    "correct": 2,
+    "why": "Blüten können Nahrung liefern. Erwachsene helfen bei der Auswahl geeigneter Pflanzen.",
+    "category": "Erde schützen"
+  },
+  {
+    "id": "climate-day",
+    "question": "Ein Wintertag ist sehr kalt. Beweist das, dass sich das Klima nicht erwärmt?",
+    "answers": [
+      "Nein, ein einzelner Tag ist Wetter",
+      "Ja, ein Tag beschreibt das ganze Klima",
+      "Klima gibt es nur im Sommer"
+    ],
+    "correct": 0,
+    "why": "Klima betrachtet lange Zeiträume und viele Messungen. Einzelne kalte Tage kommen auch in einem wärmeren Klima vor.",
+    "category": "Erde schützen"
+  },
+  {
+    "id": "resources",
+    "question": "Warum kann Ausleihen statt Neukaufen sinnvoll sein?",
+    "answers": [
+      "Es macht jeden Gegenstand schwerer",
+      "Ein Gegenstand wird von mehreren Menschen genutzt",
+      "Es verhindert, dass jemand etwas lernen kann"
+    ],
+    "correct": 1,
+    "why": "Gemeinsames Nutzen kann Material und Energie sparen, wenn dafür weniger Neues hergestellt wird.",
+    "category": "Erde schützen"
+  },
+  {
+    "id": "food",
+    "question": "Wie vermeidet ihr Lebensmittelabfälle?",
+    "answers": [
+      "Alles ohne Plan kaufen",
+      "Alles sofort wegwerfen",
+      "Gemeinsam planen und Reste sinnvoll nutzen"
+    ],
+    "correct": 2,
+    "why": "Planen und richtiges Aufbewahren helfen. Erwachsene entscheiden, welche Lebensmittel noch sicher verwendbar sind.",
+    "category": "Erde schützen"
+  },
+  {
+    "id": "journey-planet",
+    "category": "Weltkugel",
+    "question": "Wohin zieht die Schwerkraft dich?",
+    "answers": [
+      "Zur Mitte der Erde",
+      "Zum Nordpol",
+      "Immer zur Sonne"
+    ],
+    "correct": 0,
+    "why": "Unten bedeutet auf der Erde: in Richtung Erdmitte. Das gilt auch für Menschen auf der anderen Seite."
+  },
+  {
+    "id": "journey-inside",
+    "category": "Erdschichten",
+    "question": "Wie heißt geschmolzenes Gestein an der Erdoberfläche?",
+    "answers": [
+      "Eis",
+      "Lava",
+      "Erdkern"
+    ],
+    "correct": 1,
+    "why": "Unter der Erde heißt es Magma. Sobald es an die Oberfläche gelangt, heißt es Lava."
+  },
+  {
+    "id": "journey-water",
+    "category": "Wasser & Wetter",
+    "question": "Was passiert bei Kondensation?",
+    "answers": [
+      "Steine werden zu Sand",
+      "Eis wird wärmer",
+      "Wasserdampf wird zu Wassertröpfchen"
+    ],
+    "correct": 2,
+    "why": "Kühlt feuchte Luft ab, können kleine Tröpfchen entstehen. Viele Tröpfchen machen Wolken sichtbar."
+  },
+  {
+    "id": "journey-weather",
+    "category": "Wasser & Wetter",
+    "question": "Was beschreibt Klima?",
+    "answers": [
+      "Typisches Wetter über viele Jahre",
+      "Nur den Regen von heute",
+      "Die Farbe einer Wolke"
+    ],
+    "correct": 0,
+    "why": "Klima beschreibt langfristige Muster. Wetter beschreibt dagegen die Bedingungen zu einer bestimmten Zeit."
+  },
+  {
+    "id": "journey-seasons",
+    "category": "Jahreszeiten",
+    "question": "Welche Jahreszeit ist in Australien, wenn in Deutschland Sommer ist?",
+    "answers": [
+      "Auch Sommer",
+      "Winter",
+      "Immer Frühling"
+    ],
+    "correct": 1,
+    "why": "Deutschland liegt auf der Nordhalbkugel, Australien auf der Südhalbkugel. Ihre Jahreszeiten sind gegensätzlich."
+  },
+  {
+    "id": "journey-ocean",
+    "category": "Natur",
+    "question": "Was sind Korallen?",
+    "answers": [
+      "Bunte Steine",
+      "Unterwasserpflanzen",
+      "Tiere"
+    ],
+    "correct": 2,
+    "why": "Korallen bestehen aus kleinen Tieren, den Polypen. Viele leben mit Algen zusammen."
+  },
+  {
+    "id": "journey-nature",
+    "category": "Natur",
+    "question": "Was macht eine Wüste zur Wüste?",
+    "answers": [
+      "Wenig Niederschlag",
+      "Immer große Hitze",
+      "Dass dort Sand liegt"
+    ],
+    "correct": 0,
+    "why": "Wüsten sind sehr trocken. Es gibt heiße und kalte Wüsten, auch ohne große Sandflächen."
+  },
+  {
+    "id": "journey-protect",
+    "category": "Erde schützen",
+    "question": "Dein Spielzeug ist heil, aber du nutzt es nicht mehr. Was ist eine gute Idee?",
+    "answers": [
+      "Sofort wegwerfen",
+      "Weitergeben oder tauschen",
+      "Im Wald liegen lassen"
+    ],
+    "correct": 1,
+    "why": "Weitergeben und Tauschen helfen, Dinge länger zu nutzen und weniger Neues herstellen zu müssen."
+  },
+  {
+    "id": "journey-continents",
+    "category": "Weltkugel",
+    "question": "Was ist Kenia?",
+    "answers": [
+      "Ein Land in Afrika",
+      "Ein Ozean",
+      "Ein Kontinent"
+    ],
+    "correct": 0,
+    "why": "Kenia ist ein Land. Afrika ist der Kontinent, auf dem es liegt."
+  },
+  {
+    "id": "journey-countries",
+    "category": "Länder",
+    "question": "Welche Stadt ist Australiens Hauptstadt?",
+    "answers": [
+      "Sydney",
+      "Canberra",
+      "Melbourne"
+    ],
+    "correct": 1,
+    "why": "Canberra ist die Hauptstadt Australiens. Sydney und Melbourne sind größere bekannte Städte."
+  },
+  {
+    "id": "journey-volcanoes",
+    "category": "Erdschichten",
+    "question": "Was heißt geschmolzenes Gestein unter der Oberfläche?",
+    "answers": [
+      "Lava",
+      "Eis",
+      "Magma"
+    ],
+    "correct": 2,
+    "why": "Unter der Oberfläche heißt es Magma; an der Oberfläche Lava."
+  },
+  {
+    "id": "journey-quakes",
+    "category": "Erdschichten",
+    "question": "Wo liegt der Erdbebenherd?",
+    "answers": [
+      "Dort, wo das Rutschen im Gestein beginnt",
+      "Immer über den Wolken",
+      "Immer am Südpol"
+    ],
+    "correct": 0,
+    "why": "Der Herd ist der Ausgangspunkt der Bewegung. Das Epizentrum liegt an der Oberfläche direkt darüber."
+  },
+  {
+    "id": "journey-moon",
+    "category": "Weltkugel",
+    "question": "Warum sehen wir Mondphasen?",
+    "answers": [
+      "Der Mond verliert Stücke",
+      "Wir sehen verschieden viel seiner beleuchteten Hälfte",
+      "Die Sonne wird jeden Abend kleiner"
+    ],
+    "correct": 1,
+    "why": "Die Stellung von Sonne, Erde und Mond verändert unseren Blick auf die beleuchtete Hälfte."
+  },
+  {
+    "id": "journey-navigation",
+    "category": "Weltkugel",
+    "question": "Welche Linie hat null Grad Breite?",
+    "answers": [
+      "Der Nordpol",
+      "Der Nullmeridian",
+      "Der Äquator"
+    ],
+    "correct": 2,
+    "why": "Der Äquator ist 0° Breite. Der Nullmeridian ist 0° Länge."
+  },
+  {
+    "id": "journey-landscapes",
+    "category": "Natur",
+    "question": "Warum ist die Antarktis eine Wüste?",
+    "answers": [
+      "Weil dort sehr wenig Niederschlag fällt",
+      "Weil dort nur Sand liegt",
+      "Weil es überall sehr heiß ist"
+    ],
+    "correct": 0,
+    "why": "Wüsten sind trocken. Sie können heiß oder kalt sein."
+  },
+  {
+    "id": "journey-climate",
+    "category": "Natur",
+    "question": "Was beschreibt das Klima?",
+    "answers": [
+      "Nur den Regen heute",
+      "Typische Wetterbedingungen über viele Jahre",
+      "Nur eine einzelne Wolke"
+    ],
+    "correct": 1,
+    "why": "Wetter beschreibt den aktuellen Zustand. Klima beschreibt Muster über lange Zeit."
+  }
+]

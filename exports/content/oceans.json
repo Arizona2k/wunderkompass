@@ -1,0 +1,139 @@
+[
+  {
+    "id": "atlantic",
+    "name": "Atlantischer Ozean",
+    "label": "Atlantik",
+    "kind": "ocean",
+    "lat": 22,
+    "lon": -37,
+    "text": "Der Atlantik liegt zwischen Amerika im Westen und Europa und Afrika im Osten. Alle Ozeane sind miteinander verbunden.",
+    "fact": "Wenn du von Europa nach Amerika über das Meer reist, überquerst du oft den Atlantik."
+  },
+  {
+    "id": "pacific",
+    "name": "Pazifischer Ozean",
+    "label": "Pazifik",
+    "kind": "ocean",
+    "lat": 6,
+    "lon": -145,
+    "text": "Der Pazifik ist der größte Ozean. Er liegt zwischen Amerika, Asien und Australien.",
+    "fact": "Im Pazifik liegt der Marianengraben. Er ist an seiner tiefsten Stelle fast 11 Kilometer tief."
+  },
+  {
+    "id": "indian",
+    "name": "Indischer Ozean",
+    "kind": "ocean",
+    "lat": -17,
+    "lon": 75,
+    "text": "Der Indische Ozean liegt zwischen Afrika, Asien und Australien. Im Norden grenzt er an Indien.",
+    "fact": "In warmem Meerwasser wachsen Korallenriffe. Sie bieten vielen Meerestieren ein Zuhause."
+  },
+  {
+    "id": "arctic",
+    "name": "Arktischer Ozean",
+    "kind": "ocean",
+    "lat": 82,
+    "lon": -20,
+    "text": "Der Arktische Ozean umgibt den Nordpol. Er ist der kleinste der fünf Ozeane und teilweise von Meereis bedeckt.",
+    "fact": "Am Nordpol liegt Meer unter dem Eis. Am Südpol liegt ein Kontinent unter dem Eis."
+  },
+  {
+    "id": "southern",
+    "name": "Südlicher Ozean",
+    "kind": "ocean",
+    "lat": -62,
+    "lon": 85,
+    "text": "Der Südliche Ozean umgibt die Antarktis. In diesem kalten Wasser leben zum Beispiel Wale, Robben und winziger Krill.",
+    "fact": "Wir unterscheiden fünf Ozeane. Zusammen bilden sie ein einziges großes Weltmeer."
+  },
+  {
+    "id": "mediterranean",
+    "name": "Mittelmeer",
+    "kind": "ocean",
+    "lat": 35,
+    "lon": 18,
+    "text": "Das Mittelmeer liegt zwischen Europa, Afrika und Asien. Es ist ein kleineres Meer und gehört zum Atlantik.",
+    "fact": "Die schmale Straße von Gibraltar verbindet das Mittelmeer mit dem Atlantik."
+  },
+  {
+    "id": "north-sea",
+    "name": "Nordsee",
+    "kind": "ocean",
+    "lat": 56,
+    "lon": 3,
+    "text": "Die Nordsee liegt im Norden Europas. Auch Deutschland hat eine Küste an der Nordsee.",
+    "fact": "An vielen Küsten der Nordsee steigt und sinkt das Wasser regelmäßig. Das nennt man Ebbe und Flut."
+  },
+  {
+    "id": "red-sea",
+    "name": "Rotes Meer",
+    "kind": "ocean",
+    "lat": 21,
+    "lon": 38,
+    "text": "Das Rote Meer liegt zwischen Afrika und der Arabischen Halbinsel. Es ist mit dem Indischen Ozean verbunden.",
+    "fact": "Trotz seines Namens sieht sein Wasser meistens blau aus."
+  },
+  {
+    "id": "baltic",
+    "name": "Ostsee",
+    "kind": "ocean",
+    "lat": 57,
+    "lon": 19,
+    "text": "Die Ostsee liegt in Nordeuropa. Sie ist über schmale Wasserstraßen mit der Nordsee verbunden.",
+    "fact": "Ihr Wasser enthält weniger Salz als das offene Weltmeer: Viele Flüsse bringen Süßwasser hinein."
+  },
+  {
+    "id": "caribbean",
+    "name": "Karibisches Meer",
+    "kind": "ocean",
+    "lat": 16,
+    "lon": -75,
+    "text": "Die Karibik liegt zwischen Mittelamerika, Südamerika und vielen Inseln. Sie gehört zum Atlantik.",
+    "fact": "Eine Inselgruppe nennt man auch Archipel."
+  },
+  {
+    "id": "arabian",
+    "name": "Arabisches Meer",
+    "kind": "ocean",
+    "lat": 16,
+    "lon": 64,
+    "text": "Dieses Meer liegt zwischen der Arabischen Halbinsel und Indien. Es ist Teil des Indischen Ozeans.",
+    "fact": "Eine Halbinsel ist mit größerem Land verbunden und auf vielen Seiten von Wasser umgeben."
+  },
+  {
+    "id": "bay-bengal",
+    "name": "Bucht von Bengalen",
+    "kind": "ocean",
+    "lat": 15,
+    "lon": 88,
+    "text": "Diese große Meeresbucht liegt östlich von Indien im Indischen Ozean.",
+    "fact": "Große Flüsse wie Ganges und Brahmaputra bringen Wasser und Sedimente in diese Region."
+  },
+  {
+    "id": "coral-sea",
+    "name": "Korallenmeer",
+    "kind": "ocean",
+    "lat": -19,
+    "lon": 154,
+    "text": "Das Korallenmeer liegt nordöstlich von Australien und gehört zum Pazifik.",
+    "fact": "Das Great Barrier Reef liegt an seiner Westseite vor Australien."
+  },
+  {
+    "id": "bering",
+    "name": "Beringmeer",
+    "kind": "ocean",
+    "lat": 57,
+    "lon": -176,
+    "text": "Das Beringmeer liegt zwischen Alaska und dem Osten Russlands. Es gehört zum Pazifik.",
+    "fact": "Die schmale Beringstraße verbindet die Regionen des Pazifiks und des Arktischen Ozeans."
+  },
+  {
+    "id": "gulf-mexico",
+    "name": "Golf von Mexiko",
+    "kind": "ocean",
+    "lat": 25,
+    "lon": -90,
+    "text": "Diese große Meeresbucht liegt zwischen den USA, Mexiko und Kuba und ist mit dem Atlantik verbunden.",
+    "fact": "Golf ist eine Bezeichnung für eine große Meeresbucht. Die Bezeichnung Golf von Mexiko wird international verwendet."
+  }
+]

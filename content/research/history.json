@@ -1,0 +1,1470 @@
+{
+  "metadata": {
+    "title": "Geprüfte Geschichtsfakten für eine Lern-Zeitleiste",
+    "language": "de",
+    "audienceAge": 8,
+    "checkedAt": "2026-10-07",
+    "purpose": "Begrenzte Recherche-Notizen; kein Produktcode und kein Website-Entwurf.",
+    "sourcePolicy": "Bevorzugt wurden Museen, Archive, wissenschaftliche Institutionen, historische Forschungsquellen und offizielle Biografien. Manche offiziellen Seiten ließen sich nur über indexierten Quellentext prüfen; dies steht bei verification. webRef bezeichnet einen Rechercheverweis dieser Agentensitzung; die URL ist die dauerhafte Quellenangabe.",
+    "whyItMattersNote": "whyItMatters formuliert eine pädagogische Einordnung auf Grundlage der belegten Fakten, keine wörtliche Aussage der Quelle.",
+    "globalNotes": [
+      "Die Datierung eines erhaltenen Fundes oder einer dokumentierten Vorführung bezeichnet nicht automatisch die erste Erfindung.",
+      "Die meisten Techniken entstanden durch Beiträge vieler Menschen. Zuschreibungen werden deshalb ausdrücklich begrenzt.",
+      "Heutige Ländernamen helfen der Orientierung und bezeichnen bei historischen Personen nicht automatisch deren damalige Staatsangehörigkeit.",
+      "Empfindliche Themen enthalten klare, kurze Sachinformationen ohne grafische Gewaltbilder. Die Auswirkungen auf Menschen werden benannt.",
+      "Die Geschichte des Holocaust umfasst etwa sechs Millionen ermordete jüdische Menschen; weitere verfolgte Gruppen dürfen nicht in diese Opferzahl eingerechnet werden.",
+      "Die Auswahl ist keine vollständige Weltgeschichte. Frühe Städte, Schrift, Mathematik, Technik und Gesellschaften existierten in mehreren Weltregionen."
+    ]
+  },
+  "events": [
+    {
+      "id": "stone_tools",
+      "title": "Werkzeuge aus Stein",
+      "date": "vor etwa 3,3 Millionen Jahren",
+      "dateKind": "archaeological_estimate",
+      "location": "Lomekwi, Kenia",
+      "childText": [
+        "Bei Lomekwi in Kenia wurden sehr alte Werkzeuge aus Stein gefunden.",
+        "Frühe Verwandte des Menschen konnten Steine so bearbeiten, dass sie nützliche Kanten bekamen.",
+        "Wer diese Werkzeuge machte, wissen wir noch nicht sicher."
+      ],
+      "whyItMatters": "Werkzeuge halfen unseren Vorfahren, ihre Umgebung zu nutzen und neue Lösungen auszuprobieren.",
+      "sensitive": false,
+      "sources": [
+        "stone_tools"
+      ],
+      "uncertainty": "Fundalter ist eine Schätzung. Kein genauer Erfindungstag und kein sicher bestimmter Hersteller. Nicht Homo sapiens als Hersteller nennen; Oldowan-Werkzeuge sind eine andere, später verbreitete Technik."
+    },
+    {
+      "id": "fire",
+      "title": "Menschen nutzen Feuer",
+      "date": "mindestens vor etwa 790.000 Jahren",
+      "dateKind": "minimum_age_for_known_hearths",
+      "location": "frühe Feuerstellen; Fundorte in mehreren Weltregionen",
+      "childText": [
+        "Sehr alte Feuerstellen zeigen, dass frühe Menschen Feuer nutzen konnten.",
+        "Es wärmte sie und half beim Kochen.",
+        "Wann Menschen zum ersten Mal Feuer beherrschten, ist noch nicht genau geklärt."
+      ],
+      "whyItMatters": "Gekochte Nahrung veränderte das Essen; Menschen konnten an Feuerstellen zusammenkommen.",
+      "sensitive": false,
+      "sources": [
+        "fire"
+      ],
+      "uncertainty": "790.000 Jahre ist hier das Alter sehr früher bekannter Feuerstellen, keine sichere Erfindungsgrenze. Frühere Feuer- und Kochspuren werden untersucht. Umgang mit Feuer, Anzünden und regelmäßiges Kochen nicht gleichsetzen."
+    },
+    {
+      "id": "writing",
+      "title": "Zeichen bewahren Nachrichten",
+      "date": "etwa 3200–3000 v. Chr.",
+      "dateKind": "qualified_range",
+      "location": "Uruk, Mesopotamien, heute Irak",
+      "childText": [
+        "In Mesopotamien, im heutigen Irak, schrieben Menschen Zeichen auf Tontafeln.",
+        "Zuerst hielten sie damit zum Beispiel fest, wie viel Getreide es gab.",
+        "Aus Bildzeichen entwickelte sich nach und nach die Keilschrift."
+      ],
+      "whyItMatters": "Schrift konnte Informationen bewahren, auch wenn die Person, die sie wusste, gerade nicht da war.",
+      "sensitive": false,
+      "sources": [
+        "writing"
+      ],
+      "uncertainty": "Lange Entwicklung statt einzelner Erfindungstag. Mesopotamische Zeichen gehören zu den frühesten bekannten Schriftsystemen; nicht als einzige weltweite Entstehung von Schrift darstellen."
+    },
+    {
+      "id": "pyramids",
+      "title": "Pyramiden im alten Ägypten",
+      "date": "um 2550 v. Chr.",
+      "dateKind": "approximate_year",
+      "location": "Gizeh, Ägypten",
+      "childText": [
+        "Im alten Ägypten entstand die große Pyramide für König Cheops.",
+        "Viele Menschen mussten planen, Steine bearbeiten und zusammen bauen.",
+        "Die Pyramiden waren Grabstätten der königlichen Familien."
+      ],
+      "whyItMatters": "Sie zeigen, wie viel Menschen mit Wissen, Arbeit und guter Organisation gemeinsam schaffen konnten.",
+      "sensitive": false,
+      "sources": [
+        "pyramids"
+      ],
+      "uncertainty": "2550 v. Chr. ist eine ungefähre Datierung der Cheops-Pyramide, keine Datierung aller Pyramiden. Nicht behaupten, die Pyramiden seien nachweislich von versklavten Menschen gebaut worden."
+    },
+    {
+      "id": "paper",
+      "title": "Papier aus China",
+      "date": "105 n. Chr. (überlieferte Verbesserung; Papier ist älter)",
+      "dateKind": "traditional_recorded_milestone",
+      "location": "China, Kaiserhof der Han-Zeit",
+      "childText": [
+        "Papier entstand in China schon vor über 2.000 Jahren.",
+        "Für das Jahr 105 ist überliefert, dass Cai Lun die Herstellung verbesserte und sein Verfahren am Kaiserhof vorstellte.",
+        "Auf Papier ließen sich Texte leichter aufschreiben und weitergeben."
+      ],
+      "whyItMatters": "Papier machte das Aufschreiben und Verbreiten von Wissen praktischer.",
+      "sensitive": false,
+      "sources": [
+        "paper_oxford",
+        "paper_research",
+        "cai_lun"
+      ],
+      "uncertainty": "105 ist keine gesicherte erstmalige Erfindung von Papier. Archäologische Papierfunde sind älter; Cai Lun als wichtiger Verbesserer und Förderer, nicht als sicherer Alleinerfinder."
+    },
+    {
+      "id": "zero",
+      "title": "Rechnen mit der Null",
+      "date": "628 n. Chr.",
+      "dateKind": "dated_work",
+      "location": "Bhinmal, Indien",
+      "childText": [
+        "Der Mathematiker Brahmagupta schrieb in Indien Regeln zum Rechnen mit der Null auf.",
+        "Zum Beispiel verändert sich eine Zahl nicht, wenn man Null dazuzählt.",
+        "Die Null bekam damit eine wichtige Rolle als eigene Zahl."
+      ],
+      "whyItMatters": "Mit der Null und dem Stellenwertsystem lassen sich Zahlen übersichtlich schreiben und berechnen.",
+      "sensitive": false,
+      "sources": [
+        "zero"
+      ],
+      "uncertainty": "628 datiert Brahmaguptas Werk, nicht die alleinige oder erste weltweite Erfindung eines Nullzeichens. Frühere Platzhalter und eigenständige Entwicklungen existieren. Seine Regel zu Null geteilt durch Null war falsch; nicht übernehmen."
+    },
+    {
+      "id": "compass",
+      "title": "Der Kompass hilft auf See",
+      "date": "nach 1000 n. Chr. (ungefähre Zeit)",
+      "dateKind": "qualified_approximate_period",
+      "location": "China; spätere Weitergabe über die islamische Welt nach Europa",
+      "childText": [
+        "In China nutzten Seefahrer vermutlich nach dem Jahr 1000 einen Kompass zur Orientierung.",
+        "Seine magnetische Nadel zeigt eine feste Richtung an.",
+        "Das Wissen verbreitete sich später in andere Teile der Welt."
+      ],
+      "whyItMatters": "Seefahrer konnten Richtungen auch dann bestimmen, wenn sie Sonne und Sterne schlecht sahen.",
+      "sensitive": false,
+      "sources": [
+        "compass"
+      ],
+      "uncertainty": "Die Quelle sagt ausdrücklich „may have begun ... sometime after ... 1000“. Dieses Datum betrifft die Nutzung zur Navigation auf See, nicht den ersten Magneten oder jede Form von Kompass. Keine bestimmte Person als gesicherten Erfinder nennen."
+    },
+    {
+      "id": "medieval_cities",
+      "title": "Märkte und Handwerk in Städten",
+      "date": "1160 (Lübecker Stadtrecht als Beispiel)",
+      "dateKind": "dated_example_of_longer_development",
+      "location": "Lübeck, heute Deutschland",
+      "childText": [
+        "Im Mittelalter wuchsen viele Städte durch Handel und Handwerk.",
+        "Lübeck erhielt 1160 besondere Rechte als Stadt.",
+        "Auf Märkten trafen sich Händler; Handwerker arbeiteten zum Beispiel als Bäcker, Schmiede oder Töpfer."
+      ],
+      "whyItMatters": "Städte wurden wichtige Orte zum Tauschen, Arbeiten und Zusammenleben.",
+      "sensitive": false,
+      "sources": [
+        "medieval_cities"
+      ],
+      "uncertainty": "1160 ist ein anschauliches Stadtrechtsbeispiel, kein Beginn von Städten oder vom Mittelalter. Städte gab es bereits viel früher. Das Schlagwort „Stadtluft macht frei“ nicht als Freiheit für alle ausgeben."
+    },
+    {
+      "id": "printing",
+      "title": "Viele Bücher aus einer Druckwerkstatt",
+      "date": "um 1450 (europäisches Drucksystem)",
+      "dateKind": "approximate_development_milestone",
+      "location": "Mainz, heute Deutschland; ältere Vorbilder in China und Korea",
+      "childText": [
+        "Johannes Gutenberg entwickelte in Mainz ein Drucksystem mit beweglichen Buchstaben aus Metall.",
+        "Damit konnten viele ähnliche Buchseiten schneller hergestellt werden.",
+        "In China und Korea hatte man schon früher mit beweglichen Zeichen gedruckt."
+      ],
+      "whyItMatters": "Mehr Bücher konnten hergestellt werden, und Texte erreichten mehr Menschen.",
+      "sensitive": false,
+      "sources": [
+        "gutenberg_dates",
+        "gutenberg_method",
+        "printing_predecessors",
+        "jikji"
+      ],
+      "uncertainty": "Europa und Systemkombination betonen. Bi Sheng: um 1040 bewegliche Keramiktypen in China. Jikji: 1377 erhaltenes Buch mit beweglichen Metalltypen aus Korea. Gutenberg weder als Erfinder allen Druckens noch als erster Mensch mit beweglichen Typen darstellen."
+    },
+    {
+      "id": "voyages1492",
+      "title": "Europäische Schiffe erreichen die Karibik",
+      "date": "12. Oktober 1492",
+      "dateKind": "exact_date",
+      "location": "Guanahani, Bahamas; Karibik",
+      "childText": [
+        "Kolumbus erreichte mit Schiffen aus Spanien eine Insel in der Karibik.",
+        "Dort lebten bereits indigene Menschen, also die ursprünglichen Bewohner dieser Region.",
+        "Europäische Eroberung und Kolonisierung brachten ihnen später Gewalt, Versklavung und den Verlust von Land."
+      ],
+      "whyItMatters": "Die Begegnungen veränderten viele Weltregionen; dazu gehören auch die Erfahrungen und Rechte der indigenen Völker.",
+      "sensitive": true,
+      "sensitiveTopics": [
+        "Kolonisierung",
+        "Gewalt",
+        "Versklavung"
+      ],
+      "sources": [
+        "voyages_date",
+        "voyages_context"
+      ],
+      "uncertainty": "Nicht „Entdeckung Amerikas“ oder „leeres/unbewohntes Land“. Vor Kolumbus gab es andere transatlantische Kontakte. Indigene Gesellschaften bestehen heute fort; nicht nur als verschwundene Vergangenheit darstellen."
+    },
+    {
+      "id": "steam",
+      "title": "Eine Maschine arbeitet mit Dampf",
+      "date": "1712",
+      "dateKind": "dated_engine_milestone",
+      "location": "England, Beispiel Newcomen-Maschine",
+      "childText": [
+        "Thomas Newcomen entwickelte eine Dampfmaschine, die Wasser aus Bergwerken pumpte.",
+        "Die Kraft von erhitztem Wasser half nun bei schwerer Arbeit.",
+        "Später verbesserten andere Erfinder, darunter James Watt, solche Maschinen."
+      ],
+      "whyItMatters": "Dampfmaschinen wurden wichtige Antriebe für Industrie und später auch Verkehr.",
+      "sensitive": false,
+      "sources": [
+        "steam_date",
+        "steam_use"
+      ],
+      "uncertainty": "1712 betrifft Newcomens praktische atmosphärische Maschine, nicht jede Vorform der Dampfmaschine. Watt nicht als erstmaligen Erfinder von Dampfmaschinen bezeichnen."
+    },
+    {
+      "id": "railway",
+      "title": "Ein Zug mit Dampflok fährt",
+      "date": "27. September 1825",
+      "dateKind": "exact_date",
+      "location": "Stockton–Darlington, England",
+      "childText": [
+        "In England wurde die öffentliche Bahn zwischen Stockton und Darlington eröffnet.",
+        "Bei der Eröffnungsfahrt zog eine Dampflokomotive Wagen mit Waren und Menschen.",
+        "Später verbanden Eisenbahnen immer mehr Orte."
+      ],
+      "whyItMatters": "Eisenbahnen veränderten den Transport von Menschen und Gütern.",
+      "sensitive": false,
+      "sources": [
+        "railway"
+      ],
+      "uncertainty": "Nicht erste Schiene oder erste Dampflok überhaupt. 1825 ist die Eröffnung dieser öffentlichen Bahn mit dampfgezogener Personenbeförderung; früher gab es andere Bahn- und Lokomotivversuche."
+    },
+    {
+      "id": "electric_light",
+      "title": "Elektrisches Licht für den Alltag",
+      "date": "1879 (öffentliche Vorführung am 31. Dezember)",
+      "dateKind": "dated_demonstration",
+      "location": "Menlo Park, New Jersey, USA; weitere Forschung unter anderem in Großbritannien",
+      "childText": [
+        "Thomas Edison und sein Team entwickelten Lampen, die lange genug für den Alltag leuchten konnten.",
+        "Sie arbeiteten auch an Kabeln, Schaltern und Stromerzeugern.",
+        "Andere Erfinder, darunter Joseph Swan, hatten ebenfalls wichtige Beiträge zum elektrischen Licht geleistet."
+      ],
+      "whyItMatters": "Elektrisches Licht veränderte den Alltag zu Hause, auf Straßen und bei der Arbeit.",
+      "sensitive": false,
+      "sources": [
+        "electric_team",
+        "electric_demo",
+        "electric_swan"
+      ],
+      "uncertainty": "Edison erfand nicht die erste Glühlampe. Team und Stromversorgung mitnennen. Das oft genannte Testdatum 21. Oktober 1879 wird von NPS ausdrücklich beanstandet; deshalb nur Jahr oder gesicherte öffentliche Demonstration nennen."
+    },
+    {
+      "id": "flight",
+      "title": "Ein gesteuertes Flugzeug mit Motor",
+      "date": "17. Dezember 1903",
+      "dateKind": "exact_date_with_technical_scope",
+      "location": "bei Kitty Hawk / Kill Devil Hills, North Carolina, USA",
+      "childText": [
+        "Wilbur und Orville Wright schafften einen gesteuerten Flug mit einem bemannten Motorflugzeug.",
+        "Dafür hatten sie lange mit Gleitflugzeugen und Modellen geübt.",
+        "Schon vorher waren Menschen mit Ballons und Gleitflugzeugen geflogen."
+      ],
+      "whyItMatters": "Die Versuche waren ein wichtiger Schritt auf dem Weg zu steuerbaren Motorflugzeugen.",
+      "sensitive": false,
+      "sources": [
+        "flight",
+        "flight_predecessors"
+      ],
+      "uncertainty": "Gesicherte traditionelle Formulierung: first powered, controlled, sustained flight in a piloted heavier-than-air airplane. Keine pauschale Behauptung „Menschen konnten erstmals fliegen“. Vorläufer wie Lilienthal, Ballons und unbemannte Motorflugmodelle berücksichtigen."
+    },
+    {
+      "id": "ww1",
+      "title": "Der Erste Weltkrieg",
+      "date": "1914–1918",
+      "dateKind": "conventional_period",
+      "location": "viele Länder; zunächst Krieg in Europa, auch andere Weltregionen",
+      "childText": [
+        "1914 begann ein Krieg, in den immer mehr Länder hineingezogen wurden.",
+        "Millionen Menschen starben, und viele Familien litten Hunger.",
+        "Ein Waffenstillstand stoppte die Kämpfe im November 1918."
+      ],
+      "whyItMatters": "Der Krieg veränderte das Leben vieler Menschen, und neue Staaten entstanden.",
+      "sensitive": true,
+      "sensitiveTopics": [
+        "Krieg",
+        "Tod",
+        "Hunger"
+      ],
+      "sources": [
+        "ww1",
+        "ww1_start"
+      ],
+      "uncertainty": "28. Juli 1914: Österreich-Ungarn erklärte Serbien den Krieg. 11. November 1918: Waffenstillstand, nicht schon alle Friedensverträge. Einzelne Kämpfe und Kriegsfolgen endeten nicht weltweit im selben Augenblick."
+    },
+    {
+      "id": "holocaust",
+      "title": "Der Holocaust",
+      "date": "1933–1945",
+      "dateKind": "persecution_and_genocide_period",
+      "location": "Deutschland und viele Teile Europas unter NS-Herrschaft oder Einfluss",
+      "childText": [
+        "Die Nationalsozialisten und ihre Helfer verfolgten und ermordeten etwa sechs Millionen jüdische Menschen.",
+        "Ihr Hass auf jüdische Menschen heißt Antisemitismus.",
+        "Der Holocaust war Völkermord: Sie wollten die jüdische Bevölkerung vernichten."
+      ],
+      "whyItMatters": "Erinnern hilft uns, jüdisches Leben zu achten, Menschenrechte zu schützen und Hass zu widersprechen.",
+      "sensitive": true,
+      "sensitiveTopics": [
+        "Antisemitismus",
+        "Völkermord",
+        "Verfolgung",
+        "Tod"
+      ],
+      "sources": [
+        "holocaust",
+        "antisemitism"
+      ],
+      "uncertainty": "1933–1945 umfasst die NS-Verfolgung; die systematische Massenvernichtung erfolgte besonders 1941–1945. Holocaust/Shoah bezeichnet hier den Völkermord an den Juden. Die Nazis verfolgten und ermordeten auch andere Gruppen; deren Opfer nicht in die sechs Millionen hineinrechnen.",
+      "editorialNote": "Sachlich, ohne drastische Bilder oder technische Tötungsdetails. Jüdische Menschen als Menschen mit Familien, Alltag und Leben beschreiben, nicht nur als Opfer."
+    },
+    {
+      "id": "ww2",
+      "title": "Der Zweite Weltkrieg",
+      "date": "1939–1945",
+      "dateKind": "conventional_period_with_regional_precision",
+      "location": "Europa, Asien, Afrika und weitere Regionen",
+      "childText": [
+        "1939 griff das nationalsozialistische Deutschland Polen an; damit begann der Zweite Weltkrieg in Europa.",
+        "Der Krieg breitete sich über viele Teile der Welt aus und brachte sehr vielen Menschen Leid.",
+        "1945 endete der Krieg: in Europa im Mai, weltweit im September."
+      ],
+      "whyItMatters": "Der Krieg und die Verbrechen dieser Zeit machten den Schutz von Frieden und Menschenrechten besonders dringlich.",
+      "sensitive": true,
+      "sensitiveTopics": [
+        "Krieg",
+        "Tod",
+        "Verbrechen"
+      ],
+      "sources": [
+        "ww2",
+        "ww2_europe",
+        "ww2_world_end"
+      ],
+      "uncertainty": "1. September 1939 ist der Kriegsbeginn in Europa, kein Anfang aller vorausgehenden Kriege in Asien. 8. Mai 1945: Kriegsende in Europa; 2. September 1945: formelle japanische Kapitulation."
+    },
+    {
+      "id": "un",
+      "title": "Länder gründen die Vereinten Nationen",
+      "date": "24. Oktober 1945",
+      "dateKind": "exact_date_of_charter_entry_into_force",
+      "location": "Gründungskonferenz in San Francisco, USA; internationale Organisation",
+      "childText": [
+        "Nach dem Krieg gründeten 51 Länder die Vereinten Nationen, kurz UNO.",
+        "Am 24. Oktober 1945 trat ihre Gründungsurkunde in Kraft.",
+        "Dort arbeiten Staaten zusammen, um Frieden zu fördern und Menschenrechte zu schützen."
+      ],
+      "whyItMatters": "Staaten bekamen einen gemeinsamen Ort, um Probleme zu besprechen und zusammenzuarbeiten.",
+      "sensitive": false,
+      "sources": [
+        "un",
+        "un_charter",
+        "un_founders"
+      ],
+      "uncertainty": "Charta wurde am 26. Juni 1945 unterzeichnet; die Organisation entstand offiziell mit Inkrafttreten am 24. Oktober. Kein Versprechen, die UN könne jeden Krieg verhindern."
+    },
+    {
+      "id": "berlin_wall_build",
+      "title": "Die Berliner Mauer trennt Menschen",
+      "date": "13. August 1961",
+      "dateKind": "exact_start_date",
+      "location": "Berlin, Deutschland; damals geteilte Stadt",
+      "childText": [
+        "Am 13. August 1961 riegelte die DDR-Regierung die Grenze um West-Berlin ab.",
+        "Stacheldraht und eine Mauer trennten Familien und Freunde.",
+        "Menschen in der DDR konnten nun nicht einfach in den Westen reisen."
+      ],
+      "whyItMatters": "Die Mauer zeigt, wie sehr fehlende Reisefreiheit das Leben von Menschen veränderte.",
+      "sensitive": true,
+      "sensitiveTopics": [
+        "Diktatur",
+        "Trennung",
+        "Unfreiheit"
+      ],
+      "sources": [
+        "berlin_wall"
+      ],
+      "uncertainty": "Am ersten Tag zunächst Stacheldraht, feste Mauern wurden danach gebaut. Die Mauer umschloss West-Berlin und verlief durch die Stadt; nicht als Mauer durch ganz Deutschland darstellen."
+    },
+    {
+      "id": "apollo11",
+      "title": "Menschen landen auf dem Mond",
+      "date": "20. Juli 1969 (Landung)",
+      "dateKind": "exact_landing_date",
+      "location": "Mond, Meer der Ruhe; NASA-Mission aus den USA",
+      "childText": [
+        "Apollo 11 landete am 20. Juli 1969 auf dem Mond.",
+        "Neil Armstrong und Buzz Aldrin gingen auf der Oberfläche, während Michael Collins den Mond umkreiste.",
+        "Viele Menschen am Boden hatten die Reise gemeinsam vorbereitet."
+      ],
+      "whyItMatters": "Zum ersten Mal konnten Menschen einen anderen Himmelskörper betreten und dort Proben sammeln.",
+      "sensitive": false,
+      "sources": [
+        "apollo11",
+        "apollo_first_step"
+      ],
+      "uncertainty": "Datum 20. Juli bezieht sich auf Landung. Armstrongs erster Schritt erfolgte nach UTC und deutscher Zeit am 21. Juli; NASA nennt oft den US-Ortstag 20. Juli. Collins landete nicht auf dem Mond."
+    },
+    {
+      "id": "web",
+      "title": "Das World Wide Web entsteht",
+      "date": "1989 / 1991",
+      "dateKind": "two_distinct_milestones",
+      "location": "CERN bei Genf, Schweiz/Frankreich",
+      "childText": [
+        "1989 schlug Tim Berners-Lee am CERN ein System für verlinkte Seiten vor.",
+        "1991 machte er die Web-Software auch außerhalb des CERN bekannt.",
+        "Das World Wide Web nutzt das Internet, das es bereits vorher gab."
+      ],
+      "whyItMatters": "Über Links können Menschen Informationen auf vielen Computern einfacher finden und teilen.",
+      "sensitive": false,
+      "sources": [
+        "web",
+        "internet_before_web"
+      ],
+      "uncertainty": "1989 Idee/Vorschlag; Ende 1990 erster Browser und Server; 1991 öffentliche Bekanntgabe und Verbreitung; 30. April 1993 freie Freigabe des Quellcodes. WWW nicht mit Internet gleichsetzen; Beiträge von Cailliau, Pellow und anderen nicht unterschlagen."
+    },
+    {
+      "id": "berlin_wall_fall",
+      "title": "Die Berliner Mauer wird geöffnet",
+      "date": "9. November 1989",
+      "dateKind": "exact_border_opening_date",
+      "location": "Berlin, Deutschland",
+      "childText": [
+        "Viele Menschen in der DDR forderten friedlich mehr Freiheit.",
+        "Am 9. November 1989 öffneten sich die Grenzübergänge in Berlin.",
+        "Familien und Freunde konnten sich wieder leichter besuchen."
+      ],
+      "whyItMatters": "Die Öffnung war ein wichtiger Schritt zur Freiheit und zur späteren deutschen Einheit.",
+      "sensitive": false,
+      "sources": [
+        "berlin_wall",
+        "reunification"
+      ],
+      "uncertainty": "Grenzöffnung und Mauerfall sind nicht dasselbe wie sofortiger vollständiger Abriss oder Wiedervereinigung. Der Abbau der Mauer dauerte; deutsche Einheit erst am 3. Oktober 1990."
+    },
+    {
+      "id": "reunification",
+      "title": "Deutschland wird wiedervereinigt",
+      "date": "3. Oktober 1990",
+      "dateKind": "exact_date",
+      "location": "Deutschland, Beispiel Feier vor dem Berliner Reichstag",
+      "childText": [
+        "Am 3. Oktober 1990 wurden die beiden deutschen Staaten wieder zu einem Land.",
+        "Die DDR trat der Bundesrepublik Deutschland bei.",
+        "Seitdem ist der 3. Oktober der Tag der Deutschen Einheit."
+      ],
+      "whyItMatters": "Menschen in Ost und West lebten nun gemeinsam in einer Bundesrepublik mit derselben staatlichen Ordnung.",
+      "sensitive": false,
+      "sources": [
+        "reunification"
+      ],
+      "uncertainty": "Nicht schon am Mauerfall-Datum 1989. Rechtlicher Vorgang: Beitritt der DDR zur Bundesrepublik, nicht Gründung einer vollkommen neuen dritten Republik."
+    },
+    {
+      "id": "iss",
+      "title": "Ein gemeinsames Labor im Weltraum",
+      "date": "2. November 2000",
+      "dateKind": "exact_first_long_term_crew_arrival",
+      "location": "Internationale Raumstation ISS in der Erdumlaufbahn",
+      "childText": [
+        "Die erste Langzeitbesatzung zog in die Internationale Raumstation ISS ein.",
+        "Ein Astronaut aus den USA und zwei Kosmonauten aus Russland lebten und arbeiteten dort zusammen.",
+        "Die Station wurde zu einem Labor für Experimente im Weltraum."
+      ],
+      "whyItMatters": "Gemeinsame Forschung kann Grenzen überwinden und Wissen für die Erde liefern.",
+      "sensitive": false,
+      "sources": [
+        "iss"
+      ],
+      "uncertainty": "2000 bedeutet Ankunft der ersten Langzeitbesatzung, nicht Beginn des Baus der Station. Andere Raumstationen gab es vorher. Keine veränderliche Zahl heutiger Besatzungsmitglieder an dieses historische Ereignis hängen."
+    },
+    {
+      "id": "september11",
+      "title": "Die Anschläge vom 11. September",
+      "date": "11. September 2001",
+      "dateKind": "exact_date",
+      "location": "New York; Arlington beim Pentagon; nahe Shanksville, Pennsylvania, USA",
+      "childText": [
+        "Am 11. September 2001 verübte die Terrorgruppe al-Qaida Anschläge in den USA.",
+        "Dabei starben fast 3.000 Menschen, und viele Helfer retteten Leben.",
+        "Eine Gedenkstätte erinnert an die Opfer; nach den Anschlägen änderten sich auch die Sicherheitsregeln für Flugreisen."
+      ],
+      "whyItMatters": "Das Ereignis veränderte viele Leben; Erinnern und gegenseitige Hilfe bleiben wichtig.",
+      "sensitive": true,
+      "sensitiveTopics": [
+        "Terroranschläge",
+        "Tod",
+        "Trauer"
+      ],
+      "sources": [
+        "september11",
+        "september11_children",
+        "september11_aftermath",
+        "security_after_september11"
+      ],
+      "uncertainty": "2.977 unmittelbare Opfer der Anschläge 2001; die Memorial-Gesamtzahl 2.983 enthält zusätzlich sechs Opfer des Anschlags 1993. Nicht alle Opfer starben in New York. Keine Religion oder Bevölkerungsgruppe pauschal verantwortlich machen.",
+      "editorialNote": "Kurzer sachlicher Text, ruhige Memorial-Darstellung statt Anschlagsbildern; keine drastischen Details. Ansprechpartner und Helfen können bei Nachfragen erklärt werden."
+    },
+    {
+      "id": "webb",
+      "title": "Neue Bilder vom Universum",
+      "date": "12. Juli 2022 (erste vollständige Bildauswahl)",
+      "dateKind": "exact_public_release_date_with_scope",
+      "location": "James-Webb-Weltraumteleskop; gemeinsames Projekt von NASA, ESA und Kanada",
+      "childText": [
+        "Teams veröffentlichten die erste große Bildauswahl des James-Webb-Weltraumteleskops.",
+        "Das Teleskop sammelt auch Licht, das unsere Augen nicht sehen können.",
+        "So können Forschende Sterne, Galaxien und ferne Planeten genauer untersuchen."
+      ],
+      "whyItMatters": "Die Bilder und Messdaten helfen uns zu verstehen, wie Sterne, Planeten und Galaxien entstehen.",
+      "sensitive": false,
+      "sources": [
+        "webb",
+        "webb_date_precision"
+      ],
+      "uncertainty": "Ein einzelnes erstes Bild wurde am US-Abend des 11. Juli präsentiert; vollständige Auswahl am 12. Juli. Bilder zeigen in Farben umgesetztes Infrarotlicht, nicht zwingend den Anblick für menschliche Augen. Projekt NASA/ESA/CSA, nicht allein NASA."
+    }
+  ],
+  "people": [
+    {
+      "id": "marie_curie",
+      "name": "Marie Curie",
+      "lifespan": "1867–1934",
+      "dates": {
+        "born": "1867-11-07",
+        "died": "1934-07-04"
+      },
+      "identity": "Physikerin und Chemikerin",
+      "countryConnections": [
+        {
+          "country": "Polen",
+          "relation": "geboren in Warschau, damals im Russischen Reich"
+        },
+        {
+          "country": "Frankreich",
+          "relation": "Studium und Forschung"
+        }
+      ],
+      "childText": [
+        "Marie Curie erforschte die Radioaktivität.",
+        "Gemeinsam mit Pierre Curie entdeckte sie 1898 die Elemente Polonium und Radium."
+      ],
+      "contribution": "Radioaktivitätsforschung; Entdeckung von Polonium und Radium im Team; Nobelpreise für Physik 1903 und Chemie 1911.",
+      "sources": [
+        "curie",
+        "curie_discovery"
+      ],
+      "uncertainty": "Nicht Erfinderin oder alleinige Entdeckerin der Radioaktivität nennen: Henri Becquerels Entdeckung von 1896 ging voraus. Historische Staatszugehörigkeit Warschaus von heutigem Polen unterscheiden."
+    },
+    {
+      "id": "ada_lovelace",
+      "name": "Ada Lovelace",
+      "lifespan": "1815–1852",
+      "dates": {
+        "born": "1815-12-10",
+        "died": "1852-11-27"
+      },
+      "identity": "Mathematikerin und Autorin",
+      "countryConnections": [
+        {
+          "country": "Vereinigtes Königreich",
+          "relation": "geboren und tätig in England"
+        }
+      ],
+      "childText": [
+        "Ada Lovelace schrieb 1843 eine Rechenanleitung für Charles Babbages geplante Maschine auf.",
+        "Sie erkannte, dass solche Maschinen eines Tages auch mit Zeichen oder Musik arbeiten könnten."
+      ],
+      "contribution": "Veröffentlichter Algorithmus für die Analytical Engine; Vorstellung allgemein nutzbarer Informationsverarbeitung.",
+      "sources": [
+        "ada_contribution",
+        "ada_dates"
+      ],
+      "uncertainty": "Die Analytical Engine wurde zu ihren Lebzeiten nicht vollständig gebaut. Science Museum: erster veröffentlichter Algorithmus für diese Maschine; Babbage hatte ähnliche Algorithmen bereits skizziert. Pauschale Alleinzuschreibung „erfand Programmieren“ vermeiden."
+    },
+    {
+      "id": "grace_hopper",
+      "name": "Grace Hopper",
+      "lifespan": "1906–1992",
+      "dates": {
+        "born": "1906-12-09",
+        "died": "1992-01-01"
+      },
+      "identity": "Mathematikerin, Informatikpionierin und Marineoffizierin",
+      "countryConnections": [
+        {
+          "country": "USA",
+          "relation": "geboren und tätig"
+        }
+      ],
+      "childText": [
+        "Grace Hopper half, das Programmieren von Computern einfacher zu machen.",
+        "Sie entwickelte frühe Compiler und FLOW-MATIC; ihre Arbeit beeinflusste die Computersprache COBOL."
+      ],
+      "contribution": "Frühe automatische Programmierübersetzung/Compiler, FLOW-MATIC, wichtige Beiträge zur Entstehung und Nutzung von COBOL.",
+      "sources": [
+        "hopper_contribution",
+        "hopper_dates"
+      ],
+      "uncertainty": "COBOL war eine Gemeinschaftsentwicklung. Nicht Hopper als alleinige Erfinderin von COBOL bezeichnen. Der Begriff „erster Compiler“ hängt von der Definition ab; deshalb „frühe Compiler“."
+    },
+    {
+      "id": "katherine_johnson",
+      "name": "Katherine Johnson",
+      "lifespan": "1918–2020",
+      "dates": {
+        "born": "1918-08-26",
+        "died": "2020-02-24"
+      },
+      "identity": "Mathematikerin",
+      "countryConnections": [
+        {
+          "country": "USA",
+          "relation": "geboren in West Virginia; Arbeit bei NACA und NASA"
+        }
+      ],
+      "childText": [
+        "Katherine Johnson berechnete Flugbahnen für die Raumfahrt.",
+        "Vor John Glenns Weltraumflug 1962 überprüfte sie die Ergebnisse der elektronischen Computer."
+      ],
+      "contribution": "Flugbahnberechnungen für Shepard und Glenn, Beiträge zu Apollo und weiteren Raumfahrtprogrammen.",
+      "sources": [
+        "johnson"
+      ],
+      "uncertainty": "Sie war Teil größerer Teams; nicht alleinige Planerin sämtlicher Mondflüge. Schwarze Frau mit dokumentierten Hindernissen durch Rassismus und Benachteiligung; ihre Leistung nicht nur über Hindernisse erzählen."
+    },
+    {
+      "id": "tim_berners_lee",
+      "name": "Tim Berners-Lee",
+      "lifespan": "geboren 1955",
+      "dates": {
+        "born": "1955-06-08"
+      },
+      "identity": "Informatiker",
+      "countryConnections": [
+        {
+          "country": "Vereinigtes Königreich",
+          "relation": "geboren in London, britischer Wissenschaftler"
+        },
+        {
+          "country": "Schweiz",
+          "relation": "entwickelte das WWW am CERN bei Genf"
+        },
+        {
+          "country": "USA",
+          "relation": "spätere Arbeit am MIT"
+        }
+      ],
+      "childText": [
+        "Tim Berners-Lee entwickelte am CERN die Idee für das World Wide Web.",
+        "Er baute den ersten Webbrowser und Webserver; andere Menschen halfen, das Web weiterzuentwickeln."
+      ],
+      "contribution": "WWW-Vorschlag 1989; frühe Websoftware 1990/1991; Förderung offener Standards.",
+      "sources": [
+        "berners_lee",
+        "web"
+      ],
+      "uncertainty": "Nicht als Erfinder des Internets bezeichnen. Robert Cailliau, Nicola Pellow und viele weitere trugen zur Entwicklung und Verbreitung des Webs bei."
+    },
+    {
+      "id": "karl_benz",
+      "name": "Karl (Carl) Benz",
+      "lifespan": "1844–1929",
+      "dates": {
+        "born": "1844-11-25",
+        "died": "1929-04-04"
+      },
+      "identity": "Ingenieur und Automobilpionier",
+      "countryConnections": [
+        {
+          "country": "Deutschland",
+          "relation": "geboren in Karlsruhe; tätig in Mannheim und Ladenburg"
+        }
+      ],
+      "childText": [
+        "Karl Benz entwickelte einen Wagen mit Benzinmotor.",
+        "1886 erhielt er ein Patent für seinen Motorwagen; Bertha Benz half bei der Arbeit und mit Geld."
+      ],
+      "contribution": "Benz Patent-Motorwagen, Patent 1886; frühe Automobilentwicklung und Produktion.",
+      "sources": [
+        "benz_karl",
+        "benz_bertha"
+      ],
+      "uncertainty": "Schreibweisen Karl und Carl begegnen in Quellen. Automobilentwicklung hatte mehrere Pioniere und ältere Dampf-/Elektrofahrzeuge; „erfand jedes Auto“ vermeiden."
+    },
+    {
+      "id": "bertha_benz",
+      "name": "Bertha Benz",
+      "lifespan": "1849–1944",
+      "dates": {
+        "born": "1849-05-03",
+        "died": "1944-05-05"
+      },
+      "identity": "Automobilpionierin",
+      "countryConnections": [
+        {
+          "country": "Deutschland",
+          "relation": "Leben und Tätigkeit in Baden; Fahrt Mannheim–Pforzheim"
+        }
+      ],
+      "childText": [
+        "Bertha Benz unterstützte die Entwicklung des Motorwagens mit Geld, Ideen und praktischer Arbeit.",
+        "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte."
+      ],
+      "contribution": "Finanzielle und technische Mitarbeit; bekannte erste Automobilfernfahrt im August 1888, über 100 km.",
+      "sources": [
+        "benz_bertha",
+        "benz_karl"
+      ],
+      "uncertainty": "Nur August 1888 verwenden, falls kein gesicherter Tagesbeleg ergänzt wird. Nicht auf die Rolle „Ehefrau fuhr Probe“ reduzieren; Quelle dokumentiert eigene finanzielle und technische Beiträge."
+    },
+    {
+      "id": "jane_goodall",
+      "name": "Jane Goodall",
+      "lifespan": "1934–2025",
+      "dates": {
+        "born": "1934-04-03",
+        "died": "2025-10-01"
+      },
+      "identity": "Verhaltensforscherin und Naturschützerin",
+      "countryConnections": [
+        {
+          "country": "Vereinigtes Königreich",
+          "relation": "geboren in London"
+        },
+        {
+          "country": "Tansania",
+          "relation": "Schimpansenforschung in Gombe"
+        }
+      ],
+      "childText": [
+        "Jane Goodall beobachtete wilde Schimpansen in Tansania.",
+        "1960 sah sie, dass diese Tiere Werkzeuge herstellen und benutzen; später setzte sie sich weltweit für Tiere und Natur ein."
+      ],
+      "contribution": "Langjährige Gombe-Forschung, Werkzeugherstellung/-gebrauch von Schimpansen, Naturschutz mit örtlichen Gemeinschaften, Roots & Shoots.",
+      "sources": [
+        "goodall"
+      ],
+      "uncertainty": "Aktualisiert: nicht „geboren 1934 / lebt“ anzeigen. Ihr Institut bestätigt den Tod am 1. Oktober 2025. Nicht behaupten, sie habe erstmals bei irgendeinem Tier Werkzeuggebrauch entdeckt."
+    },
+    {
+      "id": "albert_einstein",
+      "name": "Albert Einstein",
+      "lifespan": "1879–1955",
+      "dates": {
+        "born": "1879-03-14",
+        "died": "1955-04-18"
+      },
+      "identity": "Physiker",
+      "countryConnections": [
+        {
+          "country": "Deutschland",
+          "relation": "geboren in Ulm; spätere Forschung in Berlin"
+        },
+        {
+          "country": "Schweiz",
+          "relation": "Ausbildung und Forschung"
+        },
+        {
+          "country": "USA",
+          "relation": "nach Emigration Arbeit in Princeton"
+        }
+      ],
+      "childText": [
+        "Albert Einstein erforschte Licht, Raum und Zeit.",
+        "Seine Relativitätstheorien veränderten die Physik; seinen Nobelpreis bekam er für seine Erklärung, wie Licht Elektronen aus einem Stoff lösen kann."
+      ],
+      "contribution": "Spezielle und allgemeine Relativitätstheorie; Erklärung des photoelektrischen Effekts, Nobelpreis Physik 1921.",
+      "sources": [
+        "einstein",
+        "einstein_countries"
+      ],
+      "uncertainty": "Nicht behaupten, der Nobelpreis sei ausdrücklich für die Relativitätstheorie verliehen worden. Länder hier sind biografische Verbindungen, keine vollständige Chronik seiner Staatsangehörigkeiten."
+    },
+    {
+      "id": "al_khwarizmi",
+      "name": "al-Chwarizmi (al-Khwarizmi)",
+      "lifespan": "etwa 780–850",
+      "dates": {
+        "bornApproximate": "um 780",
+        "diedApproximate": "um 850"
+      },
+      "identity": "Mathematiker und Astronom",
+      "countryConnections": [
+        {
+          "country": "heutiger Irak",
+          "relation": "wirkte in Bagdad im Abbasidenreich"
+        },
+        {
+          "country": "Region Choresmien",
+          "relation": "mögliche familiäre Herkunft; heute vor allem Usbekistan/Turkmenistan, unsicher"
+        }
+      ],
+      "childText": [
+        "Al-Chwarizmi schrieb in Bagdad wichtige Bücher über das Rechnen und die Algebra.",
+        "Das Wort Algorithmus, also eine genaue Schrittfolge, geht auf seinen Namen zurück."
+      ],
+      "contribution": "Systematische Algebra, Vermittlung des Rechnens mit indischen/hindu-arabischen Zahlen; Wortgeschichte von Algebra und Algorithmus.",
+      "sources": [
+        "khwarizmi"
+      ],
+      "uncertainty": "Lebensdaten sind Schätzungen. Die MacTutor-Seitenüberschrift nennt 790, der eigentliche Quick-Info-Text etwa 780; dessen Textdatierung verwenden. Geburtsort/Herkunft ausdrücklich unsicher, nicht sicher Iran/Usbekistan als Staatsangehörigkeit behaupten. Keine Zuschreibung, er habe alle Schrittfolgen/Algorithmen erfunden."
+    },
+    {
+      "id": "tu_youyou",
+      "name": "Tu Youyou",
+      "lifespan": "geboren 1930",
+      "dates": {
+        "born": "1930-12-30"
+      },
+      "identity": "Pharmawissenschaftlerin",
+      "countryConnections": [
+        {
+          "country": "China",
+          "relation": "geboren in Ningbo; Ausbildung und Forschung in China"
+        }
+      ],
+      "childText": [
+        "Tu Youyou suchte mit einem Team nach besseren Mitteln gegen Malaria.",
+        "In den 1970er-Jahren gewann sie Artemisinin aus einer Pflanze; die Forschung half, wirksame Medikamente zu entwickeln."
+      ],
+      "contribution": "Entdeckung von Artemisinin für die Malariabehandlung; Nobelpreis Medizin 2015.",
+      "sources": [
+        "tu",
+        "tu_biography"
+      ],
+      "uncertainty": "Team und wissenschaftliche Entwicklung nennen; historische Pflanzentexte waren eine Anregung, nicht schon der Nachweis eines sicheren Arzneimittels. Keine Anleitung zur Selbstbehandlung."
+    },
+    {
+      "id": "cai_lun",
+      "name": "Cai Lun",
+      "lifespan": "1. Jahrhundert–121 n. Chr. (Geburtsjahr unsicher)",
+      "dates": {
+        "bornApproximate": "61 oder 63 in der verwendeten Hunan-Quelle; andere Quellen nennen frühere Schätzungen",
+        "died": "121"
+      },
+      "identity": "Hofbeamter und Verbesserer der Papierherstellung",
+      "countryConnections": [
+        {
+          "country": "China",
+          "relation": "Han-Reich; Herkunft Guiyang in der Region des heutigen Hunan"
+        }
+      ],
+      "childText": [
+        "Cai Lun sammelte Erfahrungen früherer Papiermacher und verbesserte die Herstellung.",
+        "Für 105 ist überliefert, dass er sein Verfahren dem Kaiser vorstellte; Papier gab es schon vorher."
+      ],
+      "contribution": "Wichtige Verbesserung und Förderung der chinesischen Papierherstellung.",
+      "sources": [
+        "cai_lun",
+        "paper_oxford",
+        "paper_research"
+      ],
+      "uncertainty": "Nicht sicherer alleiniger Erfinder des Papiers. Geburtsjahr nicht als exakt ausgeben: verwendete amtliche Kulturquelle nennt 61 oder 63; verbreitet sind auch Angaben um 50. Tod 121 überliefert."
+    },
+    {
+      "id": "mae_jemison",
+      "name": "Mae Jemison",
+      "lifespan": "geboren 1956",
+      "dates": {
+        "born": "1956-10-17"
+      },
+      "identity": "Ärztin, Ingenieurin und Astronautin",
+      "countryConnections": [
+        {
+          "country": "USA",
+          "relation": "geboren in Alabama; aufgewachsen in Chicago; NASA-Astronautin"
+        }
+      ],
+      "childText": [
+        "Mae Jemison ist Ärztin und war NASA-Astronautin.",
+        "1992 flog sie mit der Raumfähre Endeavour als erste Schwarze Frau in den Weltraum."
+      ],
+      "contribution": "STS-47, Start 12. September 1992; Wissenschafts-Missionsspezialistin; erste afroamerikanische Frau im Weltraum.",
+      "sources": [
+        "jemison",
+        "jemison_flight"
+      ],
+      "uncertainty": "Nicht erste Frau oder erster Schwarzer Mensch im Weltraum. Historische Astronautenrolle statt aktueller Beschäftigungsbehauptung verwenden."
+    },
+    {
+      "id": "johannes_gutenberg",
+      "name": "Johannes Gutenberg",
+      "lifespan": "um 1400–1468",
+      "dates": {
+        "bornApproximate": "um 1400",
+        "died": "1468-02-03"
+      },
+      "identity": "Handwerker, Erfinder und Druckpionier",
+      "countryConnections": [
+        {
+          "country": "heutiges Deutschland",
+          "relation": "Mainz; damals Heiliges Römisches Reich"
+        },
+        {
+          "country": "heutiges Frankreich",
+          "relation": "Tätigkeit in Straßburg; damals andere staatliche Zuordnung"
+        }
+      ],
+      "childText": [
+        "Johannes Gutenberg entwickelte in Mainz ein wirksames System zum Drucken mit beweglichen Metallbuchstaben.",
+        "So konnte eine Werkstatt viele Buchseiten herstellen; ähnliche Druckideen gab es in Ostasien schon viel früher."
+      ],
+      "contribution": "Europäisches System aus gegossenen Metalltypen, geeignetem Farbauftrag und Presse; Gutenberg-Bibel in den frühen 1450ern.",
+      "sources": [
+        "gutenberg_dates",
+        "gutenberg_method",
+        "printing_predecessors",
+        "jikji"
+      ],
+      "uncertainty": "Geburtsjahr ungefähr. Nicht Erfinder aller Bücher, allen Druckens oder erster beweglicher Metalltypen weltweit. Buchdruck in Ostasien und koreanischer Jikji-Druck 1377 gehen voraus."
+    }
+  ],
+  "sources": {
+    "stone_tools": {
+      "institution": "Natural History Museum, London",
+      "title": "Oldest remains of ancient human relative Paranthropus suggest possible tool use",
+      "url": "https://www.nhm.ac.uk/discover/news/2023/february/oldest-remains-ancient-human-relative-paranthropus-suggest-possible-tool-use.html",
+      "evidence": "Lomekwi-Werkzeuge werden auf etwa 3,3 Millionen Jahre datiert; Hersteller und Dauer dieser Technik sind nicht sicher.",
+      "verification": "page_opened",
+      "webRef": "turn70view1"
+    },
+    "fire": {
+      "institution": "Smithsonian Human Origins Program",
+      "title": "Hearths & Shelters",
+      "url": "https://humanorigins.si.edu/evidence/behavior/hearths-shelters",
+      "evidence": "Feuerstellen mindestens 790.000 Jahre alt; Kochen könnte deutlich älter sein. Nutzung für Nahrung und gemeinsames Leben.",
+      "verification": "page_opened",
+      "webRef": "turn48view1"
+    },
+    "writing": {
+      "institution": "The Metropolitan Museum of Art",
+      "title": "The Origins of Writing",
+      "url": "https://www.metmuseum.org/es/essays/the-origins-of-writing",
+      "evidence": "Uruk-Tontafeln, wirtschaftliche Aufzeichnungen, Bildzeichen und spätere Keilzeichen; frühe Stufen ca. 3200–3000 v. Chr.",
+      "verification": "page_opened",
+      "webRef": "turn48view2"
+    },
+    "pyramids": {
+      "institution": "Harvard University, Digital Giza",
+      "title": "People and Places of Giza",
+      "url": "https://giza.fas.harvard.edu/commontopics/",
+      "evidence": "Cheops-Pyramide etwa 2550 v. Chr.; Pyramiden als Begräbnisstätten ägyptischer Königshäuser.",
+      "verification": "page_opened",
+      "webRef": "turn48view3"
+    },
+    "paper_oxford": {
+      "institution": "University of Oxford, Cabinet",
+      "title": "Origins of paper",
+      "url": "https://www.cabinet.ox.ac.uk/origins-paper",
+      "evidence": "105 n. Chr. als überlieferte Vorstellung des Verfahrens am Hof; archäologische Funde zeigen frühere Ursprünge.",
+      "verification": "indexed_text; direct open failed",
+      "webRef": "turn39search12"
+    },
+    "paper_research": {
+      "institution": "Journal of the Royal Asiatic Society / Cambridge University Press",
+      "title": "The Woman Who Invented Notepaper: Towards a Comparative Historiography of Paper and Print",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29",
+      "evidence": "Formen von Papier vor Cai Lun; 105 n. Chr. bedeutend als überlieferte Präsentation einer verbesserten Form von Schreibpapier.",
+      "verification": "indexed_research_text",
+      "webRef": "turn63search0"
+    },
+    "cai_lun": {
+      "institution": "Hunan Provincial Department of Culture & Tourism",
+      "title": "Cai Lun",
+      "url": "https://whhlyt.hunan.gov.cn/whhlyt/english/Culture/CulturalFigures/202207/t20220729_27570604.html",
+      "evidence": "Geburtsjahr 61 oder 63, Tod 121; Hofbeamter, bündelte frühere Erfahrungen und verbesserte Papierherstellung.",
+      "verification": "page_opened",
+      "webRef": "turn74view1"
+    },
+    "zero": {
+      "institution": "University of St Andrews, MacTutor History of Mathematics",
+      "title": "Brahmagupta",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Brahmagupta/",
+      "evidence": "Brahmasphutasiddhanta 628, geschrieben in Bhillamala/Bhinmal; Rechenregeln für Null und negative Zahlen. Fehler beim Teilen durch Null werden erläutert.",
+      "verification": "page_opened",
+      "webRef": "turn48view5"
+    },
+    "zero_manuscript_update": {
+      "institution": "University of Oxford Research Archive",
+      "title": "Radiocarbon dating of the Bakhshālī manuscript",
+      "url": "https://ora.ox.ac.uk/objects/uuid%3A5a6d1dd7-f20c-4209-adb6-33849f5b08f4/files/snp193c210",
+      "evidence": "Forschung von 2024 gibt neue kalibrierte Datierungen und Produktionsmodelle überwiegend im 9.–11. Jahrhundert, statt einer sicheren Null aus dem 3. Jahrhundert.",
+      "verification": "indexed_research_text",
+      "webRef": "turn66search52"
+    },
+    "compass": {
+      "institution": "Smithsonian National Air and Space Museum, Time and Navigation",
+      "title": "Timeline: 1000",
+      "url": "https://timeandnavigation.si.edu/timeline2/1000",
+      "evidence": "Seefahrt mit Kompass begann möglicherweise in China irgendwann nach 1000 n. Chr. und verbreitete sich über die islamische Welt nach Europa.",
+      "verification": "indexed_text; direct site request rejected",
+      "webRef": "turn66search28"
+    },
+    "medieval_cities": {
+      "institution": "Deutsches Historisches Museum",
+      "title": "Die Stadt im Mittelalter",
+      "url": "https://www.dhm.de/bildung/ida/mittelalter/stadt/",
+      "evidence": "Viele deutsche Stadtgründungen im Hoch- und Spätmittelalter; Markt, Stadtrechte, Zünfte. Lübeck erhielt 1160 Privilegien einschließlich Stadtrecht.",
+      "verification": "page_opened",
+      "webRef": "turn70view3"
+    },
+    "gutenberg_dates": {
+      "institution": "Stadt Mainz / Gutenberg.de",
+      "title": "Gutenberg und seine Zeit in Daten",
+      "url": "https://www.gutenberg.de/zeit/zeitleiste_gutenberg",
+      "evidence": "Geburt um 1400; Druckwerkstatt um 1450; Bibeldruck in den frühen 1450ern; Tod 1468.",
+      "verification": "page_opened",
+      "webRef": "turn59view1"
+    },
+    "gutenberg_method": {
+      "institution": "Stadt Mainz / Gutenberg.de",
+      "title": "Die Erfindung Gutenbergs",
+      "url": "https://www.gutenberg.de/erfindung/",
+      "evidence": "Zusammenwirken gegossener Metalllettern, Handgießinstrument, Druckfarbe und Presse.",
+      "verification": "indexed_text",
+      "webRef": "turn63search27"
+    },
+    "printing_predecessors": {
+      "institution": "Stadt Mainz / Gutenberg.de",
+      "title": "Vor Gutenberg",
+      "url": "https://www.gutenberg.de/erfindung/vor_gutenberg",
+      "evidence": "Bi Sheng experimentierte um 1040 in China mit beweglichen Keramiktypen; Druck hat ältere ostasiatische Geschichte.",
+      "verification": "indexed_text and English page opened",
+      "webRef": "turn63search7"
+    },
+    "jikji": {
+      "institution": "UNESCO, Memory of the World",
+      "title": "Jikji, vol. II",
+      "url": "https://www.unesco.org/en/memory-world/baegun-hwasang-chorok-buljo-jikji-simche-yojeol-volii-second-volume-anthology-great-buddhist-priests?hub=915",
+      "evidence": "Juli 1377, Heungdeok-sa, Cheongju: Druck mit beweglichen Metalltypen; ältestes erhaltenes entsprechendes Buch, nicht Beginn allen Druckens.",
+      "verification": "page_opened",
+      "webRef": "turn68view7"
+    },
+    "voyages_context": {
+      "institution": "Smithsonian National Museum of the American Indian",
+      "title": "Unlearning Columbus Day Myths",
+      "url": "https://americanindian.si.edu/nk360/informational/columbus-day-myths",
+      "evidence": "Indigene Bevölkerung lebte lange vor Kolumbus in Amerika. Europäische Kolonisierung verursachte Gewalt, Versklavung und Landverlust; indigene Gesellschaften bestehen fort.",
+      "verification": "page_opened",
+      "webRef": "turn59view3"
+    },
+    "voyages_date": {
+      "institution": "Smithsonian National Museum of the American Indian",
+      "title": "Infinity of Nations: Mesoamerica/Caribbean",
+      "url": "https://americanindian.si.edu/exhibitions/infinityofnations/mesoamerica-caribbean.html",
+      "evidence": "Spanische Schiffe erreichten Guanahani am 12. Oktober 1492; dicht besiedelte Inselwelt mit unterschiedlichen indigenen Gesellschaften.",
+      "verification": "indexed_text",
+      "webRef": "turn40search2"
+    },
+    "steam_date": {
+      "institution": "Science Museum Group",
+      "title": "Demainbray's Newcomen engine model",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co2000/demainbrays-newcomen-engine-model",
+      "evidence": "Thomas Newcomen entwickelte 1712 eine atmosphärische Dampfmaschine.",
+      "verification": "indexed_collection_text",
+      "webRef": "turn63search13"
+    },
+    "steam_use": {
+      "institution": "Science Museum Group",
+      "title": "Haydock Colliery Steam Engine",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8404624/haydock-colliery-steam-engine",
+      "evidence": "Newcomens Balkenmaschine zum Abpumpen von Grubenwasser; Watt entwickelte später Drehantrieb, 1781.",
+      "verification": "indexed_collection_text",
+      "webRef": "turn63search28"
+    },
+    "railway": {
+      "institution": "National Railway Museum",
+      "title": "Shildon, the Cradle of the Railways and Locomotion No.1",
+      "url": "https://blog.railwaymuseum.org.uk/shildon-the-cradle-of-the-railways-and-locomotion-no-1/",
+      "evidence": "Eröffnung am 27. September 1825; Locomotion zog Wagen mit Menschen auf der öffentlichen Stockton–Darlington-Bahn.",
+      "verification": "indexed_museum_text",
+      "webRef": "turn40search6"
+    },
+    "electric_team": {
+      "institution": "U.S. National Park Service, Thomas Edison National Historical Park",
+      "title": "The Electric Light System",
+      "url": "https://home.nps.gov/edis/learn/kidsyouth/the-electric-light-system-phonograph-motion-pictures.htm",
+      "evidence": "Edison erfand nicht die erste Glühlampe. Sein internationales Team testete 1879 langlebige Lampen und entwickelte ein ganzes Stromsystem; Tag des Fadentests umstritten.",
+      "verification": "page_opened",
+      "webRef": "turn59view4"
+    },
+    "electric_demo": {
+      "institution": "Smithsonian National Museum of American History",
+      "title": "Edison New Year's Eve Demonstration Lamp",
+      "url": "https://americanhistory.si.edu/collections/object/nmah_995925",
+      "evidence": "Diese Lampe wurde bei der öffentlichen Vorstellung des Beleuchtungssystems am 31. Dezember 1879 verwendet.",
+      "verification": "indexed_collection_text",
+      "webRef": "turn41search24"
+    },
+    "electric_swan": {
+      "institution": "Smithsonian National Museum of American History",
+      "title": "Lighting a Revolution: Joseph W. Swan",
+      "url": "https://americanhistory.si.edu/lighting/bios/swan.htm",
+      "evidence": "Joseph Swan entwickelte ebenfalls Glühlampen; eine gemeinsame Edison-Swan-Firma entstand 1883.",
+      "verification": "indexed_museum_text",
+      "webRef": "turn41search9"
+    },
+    "flight": {
+      "institution": "Smithsonian National Air and Space Museum",
+      "title": "1903 Wright Flyer",
+      "url": "https://airandspace.si.edu/collection-objects/1903-wright-flyer/nasm_A19610048000",
+      "evidence": "17. Dezember 1903, Kitty Hawk; gesteuerter bemannter Motorflug mit dem Wright Flyer. Wrights bauten zuvor Gleiter und griffen Lilienthals Arbeit auf.",
+      "verification": "indexed_collection_text",
+      "webRef": "turn72search35"
+    },
+    "flight_predecessors": {
+      "institution": "Smithsonian National Air and Space Museum",
+      "title": "Flight Before the Airplane",
+      "url": "https://airandspace.si.edu/explore/stories/flight-airplane",
+      "evidence": "Ballonfahrt und Gleitflug vor den Wrights; Lilienthal absolvierte viele Gleitflüge. Wrights: powered, controlled, sustained airplane flights.",
+      "verification": "indexed_museum_text; direct open failed",
+      "webRef": "turn72search13"
+    },
+    "ww1": {
+      "institution": "Deutsches Historisches Museum, LeMO",
+      "title": "Erster Weltkrieg",
+      "url": "https://www.dhm.de/lemo/kapitel/erster-weltkrieg",
+      "evidence": "Krieg 1914–1918, globale Ausweitung, Leid und politische Umbrüche; Waffenstillstand am 11. November 1918.",
+      "verification": "page_opened",
+      "webRef": "turn44view1"
+    },
+    "ww1_start": {
+      "institution": "Imperial War Museums",
+      "title": "4 August 1914 Factsheet",
+      "url": "https://www.iwm.org.uk/sites/default/files/press-release/4_August_1914_Factsheet.pdf",
+      "evidence": "Österreich-Ungarns Kriegserklärung an Serbien am 28. Juli 1914.",
+      "verification": "indexed_museum_pdf",
+      "webRef": "turn51search53"
+    },
+    "ww2": {
+      "institution": "Deutsches Historisches Museum, LeMO",
+      "title": "Der Zweite Weltkrieg",
+      "url": "https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg",
+      "evidence": "NS-Kriegsvorbereitung und Überfall auf Polen; Krieg und NS-Verbrechen 1939–1945.",
+      "verification": "page_opened",
+      "webRef": "turn44view2"
+    },
+    "ww2_europe": {
+      "institution": "U.S. National Archives Museum",
+      "title": "80th Anniversary of VE Day: End of WWII in Europe",
+      "url": "https://visit.archives.gov/whats-on/explore-exhibits/80th-anniversary-ve-day-end-wwii-europe",
+      "evidence": "Beginn in Europa durch deutschen Angriff auf Polen am 1. September 1939; Kriegsende in Europa am 8. Mai 1945.",
+      "verification": "indexed_archive_text",
+      "webRef": "turn51search12"
+    },
+    "ww2_world_end": {
+      "institution": "U.S. National Archives",
+      "title": "Surrender of Japan (1945)",
+      "url": "https://www.archives.gov/milestone-documents/surrender-of-japan",
+      "evidence": "Unterzeichnung der japanischen Kapitulation am 2. September 1945.",
+      "verification": "indexed_primary_document",
+      "webRef": "turn51search16"
+    },
+    "holocaust": {
+      "institution": "United States Holocaust Memorial Museum",
+      "title": "Introduction to the Holocaust",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/introduction-to-the-holocaust",
+      "evidence": "1933–1945: systematische staatliche Verfolgung und Ermordung von sechs Millionen europäischen Juden durch NS-Deutschland, Verbündete und Helfer; systematischer Völkermord insbesondere 1941–1945.",
+      "verification": "page_opened",
+      "webRef": "turn44view3"
+    },
+    "antisemitism": {
+      "institution": "United States Holocaust Memorial Museum",
+      "title": "Antisemitism and the Holocaust",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/antisemitism-1",
+      "evidence": "Antisemitismus bedeutet Vorurteile oder Hass gegen jüdische Menschen; falsche NS-Vorstellungen führten zur Verfolgung und zum Völkermord.",
+      "verification": "page_opened",
+      "webRef": "turn44view4"
+    },
+    "un": {
+      "institution": "United Nations",
+      "title": "History of the United Nations",
+      "url": "https://www.un.org/en/about-us/history-of-the-un",
+      "evidence": "Die UN entstand am 24. Oktober 1945 nach Ratifikation ihrer Charta; internationale Friedenszusammenarbeit.",
+      "verification": "indexed_official_text; direct open failed",
+      "webRef": "turn45search0"
+    },
+    "un_charter": {
+      "institution": "United Nations",
+      "title": "UN Charter",
+      "url": "https://www.un.org/en/about-us/un-charter/",
+      "evidence": "Unterzeichnet am 26. Juni 1945; in Kraft am 24. Oktober 1945. Zweck umfasst Frieden, Zusammenarbeit und Menschenrechte.",
+      "verification": "indexed_primary_document; direct open forbidden",
+      "webRef": "turn45search8"
+    },
+    "berlin_wall": {
+      "institution": "Stiftung Berliner Mauer",
+      "title": "Die Berliner Mauer",
+      "url": "https://www.stiftung-berliner-mauer.de/de/themen/die-berliner-mauer",
+      "evidence": "13. August 1961 Abriegelung mit Stacheldraht, dann Mauern; Trennung von Familien. Protestbewegung und Öffnung am 9. November 1989.",
+      "verification": "page_opened",
+      "webRef": "turn59view6"
+    },
+    "reunification": {
+      "institution": "Bundesregierung, Bundesarchiv/Bundesbildstelle-Bilder und Einigungsvertrag",
+      "title": "Die Wiedervereinigung Deutschlands in Bildern",
+      "url": "https://www.bundesregierung.de/breg-de/schwerpunkte/deutsche-einheit/deutsche-wiedervereinigung-fotostory-2338554",
+      "evidence": "3. Oktober 1990: Beitritt der DDR zur Bundesrepublik; seitdem Nationalfeiertag. Friedliche Revolution wird ausdrücklich genannt.",
+      "verification": "page_opened",
+      "webRef": "turn74view7"
+    },
+    "apollo11": {
+      "institution": "NASA",
+      "title": "Apollo 11 Mission Overview",
+      "url": "https://www.nasa.gov/history/apollo-11-mission-overview/",
+      "evidence": "16.–24. Juli 1969; Mondlandung am 20. Juli. Armstrong und Aldrin an der Oberfläche, Collins im Mondorbit.",
+      "verification": "page_opened",
+      "webRef": "turn74view4"
+    },
+    "web": {
+      "institution": "CERN",
+      "title": "A short history of the Web",
+      "url": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/",
+      "evidence": "Vorschlag März 1989; Server/Browser Ende 1990; Bekanntgabe im Internet August 1991; freie Software am 30. April 1993. Beiträge von Cailliau, Pellow und vielen weiteren.",
+      "verification": "page_opened",
+      "webRef": "turn59view7"
+    },
+    "internet_before_web": {
+      "institution": "CERN",
+      "title": "Internet prehistory at CERN",
+      "url": "https://home.cern/internet-prehistory-cern/",
+      "evidence": "CERN hatte bereits Internet-Verbindungen, bevor Berners-Lee das WWW entwickelte.",
+      "verification": "indexed_official_text",
+      "webRef": "turn46search33"
+    },
+    "iss": {
+      "institution": "NASA",
+      "title": "Expedition 1 Kicks Off Science Aboard International Space Station",
+      "url": "https://www.nasa.gov/missions/station/iss-research/expedition-1-kicks-off-science-aboard-international-space-station/",
+      "evidence": "Erste Langzeitbesatzung begann am 2. November 2000 mit Gidzenko, Krikalev und Shepherd; gemeinsames Forschungslabor und Experimente.",
+      "verification": "page_opened",
+      "webRef": "turn74view5"
+    },
+    "webb": {
+      "institution": "NASA, ESA, CSA",
+      "title": "NASA Reveals Webb Telescope’s First Images of Unseen Universe",
+      "url": "https://science.nasa.gov/missions/webb/nasa-reveals-webb-telescopes-first-images-of-unseen-universe/",
+      "evidence": "12. Juli 2022: vollständige erste Bild-/Datenauswahl veröffentlicht; Infrarotbeobachtungen von Sternen, Galaxien und Planeten; internationale Mission.",
+      "verification": "page_opened",
+      "webRef": "turn74view6"
+    },
+    "webb_date_precision": {
+      "institution": "NASA",
+      "title": "Webb Mission Timeline",
+      "url": "https://science.nasa.gov/mission/webb/webb-mission-timeline/",
+      "evidence": "Ein erstes Bild wurde am US-Abend des 11. Juli 2022 vorgestellt; vollständige Serie am 12. Juli.",
+      "verification": "indexed_official_text",
+      "webRef": "turn46search6"
+    },
+    "september11": {
+      "institution": "National September 11 Memorial & Museum",
+      "title": "9/11 FAQs",
+      "url": "https://www.911memorial.org/911-faqs",
+      "evidence": "Vier Anschläge von al-Qaida am 11. September 2001 in den USA; 2.977 Opfer in New York, am Pentagon und auf Flug 93.",
+      "verification": "page_opened",
+      "webRef": "turn70view5"
+    },
+    "september11_children": {
+      "institution": "National September 11 Memorial & Museum",
+      "title": "Talk to Young Learners About 9/11",
+      "url": "https://www.911memorial.org/learn/students-and-teachers/talk-to-young-learners-about-911",
+      "evidence": "Sachliche Erklärung für Kinder; Hilfsbereitschaft und Erinnerung; Eröffnung Memorial 2011, Museum 2014.",
+      "verification": "page_opened",
+      "webRef": "turn70view6"
+    },
+    "september11_aftermath": {
+      "institution": "National September 11 Memorial & Museum",
+      "title": "Memorializing 9/11",
+      "url": "https://www.911memorial.org/learn/resources/911-primer/module-5-memorializing-911",
+      "evidence": "Folgen für Flugsicherheit, Politik und Familien; Erinnern und Helfen als Lernschwerpunkte.",
+      "verification": "page_opened",
+      "webRef": "turn70view7"
+    },
+    "security_after_september11": {
+      "institution": "Transportation Security Administration",
+      "title": "The Inception of the Transportation Security Administration",
+      "url": "https://www.tsa.gov/sites/default/files/9003_layout_mission_hall_exhibit_the_inception.pdf",
+      "evidence": "Nach den Anschlägen wurde die TSA am 19. November 2001 durch den Aviation and Transportation Security Act geschaffen.",
+      "verification": "indexed_official_pdf",
+      "webRef": "turn72search49"
+    },
+    "curie": {
+      "institution": "Nobel Prize",
+      "title": "Marie Curie – Facts",
+      "url": "https://www.nobelprize.org/prizes/physics/1903/marie-curie/facts/",
+      "evidence": "1867 Warschau (damals Russisches Reich, heute Polen)–1934 Frankreich; Erforschung der Radioaktivität und Zusammenarbeit mit Pierre Curie.",
+      "verification": "indexed_official_text; direct open forbidden",
+      "webRef": "turn52search2"
+    },
+    "curie_discovery": {
+      "institution": "Nobel Prize",
+      "title": "Marie Curie – Questions and answers",
+      "url": "https://www.nobelprize.org/prizes/physics/1903/marie-curie/questions-and-answers/?print=1",
+      "evidence": "1898 fanden die Curies Polonium und Radium; Nobelpreise 1903 Physik und 1911 Chemie.",
+      "verification": "indexed_official_text",
+      "webRef": "turn52search8"
+    },
+    "einstein": {
+      "institution": "Nobel Prize",
+      "title": "Albert Einstein – Facts",
+      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/facts/",
+      "evidence": "1879 Ulm–1955 Princeton; Forschung über Licht, Nobelpreis für Erklärung des photoelektrischen Effekts; Emigration in die USA.",
+      "verification": "indexed_official_text; direct open forbidden",
+      "webRef": "turn52search1"
+    },
+    "einstein_countries": {
+      "institution": "Nobel Prize",
+      "title": "Albert Einstein – Biographical",
+      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
+      "evidence": "Deutschland, Ausbildung und Forschung in der Schweiz, später USA; Relativitätstheorien und Lichtforschung.",
+      "verification": "indexed_official_text",
+      "webRef": "turn72search6"
+    },
+    "ada_contribution": {
+      "institution": "Science Museum",
+      "title": "Ada Lovelace: visionary of the computer age",
+      "url": "https://blog.sciencemuseum.org.uk/ada-lovelace-visionary-of-the-computer-age/",
+      "evidence": "Erster veröffentlichter Algorithmus für die Analytical Engine; Babbage hatte schon ähnliche Abläufe notiert. Lovelace erkannte mögliche Verarbeitung von Symbolen und Musik.",
+      "verification": "page_opened",
+      "webRef": "turn64view4"
+    },
+    "ada_dates": {
+      "institution": "University of St Andrews, MacTutor",
+      "title": "Ada Lovelace",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Lovelace/",
+      "evidence": "1815–1852; britische Mathematikerin; 1843 veröffentlichte Notes zur Analytical Engine.",
+      "verification": "page_opened",
+      "webRef": "turn74view0"
+    },
+    "hopper_contribution": {
+      "institution": "Smithsonian National Museum of American History",
+      "title": "Grace under pressure",
+      "url": "https://americanhistory.si.edu/explore/stories/grace-under-pressure",
+      "evidence": "Arbeit an Compilern, FLOW-MATIC und Mitwirkung/Förderung von COBOL.",
+      "verification": "indexed_museum_text; direct open failed",
+      "webRef": "turn63search5"
+    },
+    "hopper_dates": {
+      "institution": "Naval History and Heritage Command",
+      "title": "Hopper, Grace Murray",
+      "url": "https://www.history.navy.mil/research/library/biographical-files/modern-biographical-files-ndl/modern-bios-h/hopper-grace-murray-text.html",
+      "evidence": "9. Dezember 1906–1. Januar 1992; US-Mathematikerin, Programmiererin und Marineoffizierin.",
+      "verification": "indexed_official_text; direct open failed",
+      "webRef": "turn54search30"
+    },
+    "johnson": {
+      "institution": "NASA",
+      "title": "Katherine Johnson Biography",
+      "url": "https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/",
+      "evidence": "26. August 1918–24. Februar 2020; Flugbahnberechnungen, Prüfen von Computerberechnungen für Glenn 1962, Arbeit für Apollo.",
+      "verification": "page_opened",
+      "webRef": "turn68view3"
+    },
+    "berners_lee": {
+      "institution": "Tim Berners-Lee / W3C",
+      "title": "Longer Bio for Tim Berners-Lee",
+      "url": "https://www.w3.org/People/Berners-Lee/Longer.html",
+      "evidence": "Geboren am 8. Juni 1955 in London; eigener Lebenslauf. WWW-Zuschreibung separat bei CERN.",
+      "verification": "page_opened",
+      "webRef": "turn61view3"
+    },
+    "benz_karl": {
+      "institution": "Mercedes-Benz Group, Unternehmensarchiv/Tradition",
+      "title": "Carl Benz",
+      "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/carl-benz.html",
+      "evidence": "25. November 1844 Karlsruhe–4. April 1929 Ladenburg; Motorwagenpatent 1886, Tätigkeit in Mannheim.",
+      "verification": "page_opened",
+      "webRef": "turn64view7"
+    },
+    "benz_bertha": {
+      "institution": "Mercedes-Benz Group, Unternehmensarchiv/Tradition",
+      "title": "Bertha Benz",
+      "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html",
+      "evidence": "3. Mai 1849–5. Mai 1944; technische und finanzielle Mitarbeit; Fernfahrt mit Söhnen Richtung Pforzheim im August 1888.",
+      "verification": "page_opened",
+      "webRef": "turn64view6"
+    },
+    "goodall": {
+      "institution": "Jane Goodall Institute",
+      "title": "Jane Goodall ... Passes Away at Age 91",
+      "url": "https://janegoodall.org/press-room-item/jane-goodall-renowned-ethologist-conservationist-and-animal-behavior-expert-passes-away-at-age-91/",
+      "evidence": "3. April 1934 London–1. Oktober 2025 Los Angeles; Forschungsbeginn Gombe 1960; Beobachtung, dass Schimpansen Werkzeuge machen und nutzen.",
+      "verification": "page_opened",
+      "webRef": "turn61view1"
+    },
+    "khwarizmi": {
+      "institution": "University of St Andrews, MacTutor",
+      "title": "Abu Ja'far Muhammad ibn Musa Al-Khwarizmi",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Khwarizmi/",
+      "evidence": "Quick Info: geboren etwa 780, gestorben etwa 850. Herkunft unklar; Arbeit in Bagdad, Algebra und hindu-arabische Zahlen; Name gab Wort Algorithmus.",
+      "verification": "page_opened",
+      "webRef": "turn64view3"
+    },
+    "tu": {
+      "institution": "Nobel Prize",
+      "title": "Tu Youyou – Facts",
+      "url": "https://www.nobelprize.org/prizes/medicine/2015/tu/facts/",
+      "evidence": "Geboren am 30. Dezember 1930 in Ningbo, China; in den 1970ern Gewinnung von Artemisinin, bedeutend gegen Malaria.",
+      "verification": "indexed_official_text; direct open forbidden",
+      "webRef": "turn56search7"
+    },
+    "tu_biography": {
+      "institution": "Tu Youyou / Nobel Prize",
+      "title": "Tu Youyou – Biographical",
+      "url": "https://www.nobelprize.org/prizes/medicine/2015/tu/biographical/",
+      "evidence": "Eigenbericht zu Leben, Ausbildung und Teamforschung; Forschung stützte sich auch auf historische Pflanzentexte.",
+      "verification": "indexed_first_person_text",
+      "webRef": "turn52search3"
+    },
+    "jemison": {
+      "institution": "NASA StarChild",
+      "title": "Dr. Mae Jemison",
+      "url": "https://starchild.gsfc.nasa.gov/docs/StarChild/whos_who_level1/jemison.html",
+      "evidence": "17. Oktober 1956 Decatur, Alabama; Ärztin und Astronautin; erste afroamerikanische Frau im Weltraum, September 1992.",
+      "verification": "page_opened",
+      "webRef": "turn68view4"
+    },
+    "jemison_flight": {
+      "institution": "NASA",
+      "title": "STS-47",
+      "url": "https://www.nasa.gov/mission/sts-47/",
+      "evidence": "Start am 12. September 1992; Jemison als Missionsspezialistin auf Endeavour.",
+      "verification": "indexed_official_mission_text",
+      "webRef": "turn54search7"
+    },
+    "un_founders": {
+      "institution": "United Nations Visitors Services",
+      "title": "About Us",
+      "url": "https://www.un.org/en/visit/about-us",
+      "evidence": "Die UN wurde 1945 nach dem Zweiten Weltkrieg von 51 Ländern gegründet; Aufgaben sind unter anderem Frieden und Sicherheit, freundschaftliche Beziehungen und Menschenrechte.",
+      "verification": "indexed_official_text",
+      "webRef": "turn95search0"
+    },
+    "apollo_first_step": {
+      "institution": "NASA, Apollo Lunar Surface Journal",
+      "title": "The First Lunar Landing, Neil's First Step",
+      "url": "https://www.nasa.gov/wp-content/uploads/static/history/alsj/a11/a11.step.html",
+      "evidence": "Armstrongs erster Kontakt mit der Mondoberfläche wird im Missionsbericht auf 02:56:15 GMT/UTC am 21. Juli 1969 datiert; verschiedene Bilder und Meldungen unterscheiden sich in Sekunden. Die Mondlandung erfolgte am 20. Juli.",
+      "verification": "indexed_official_text",
+      "webRef": "turn95search3"
+    }
+  }
+}

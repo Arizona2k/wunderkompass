@@ -1,0 +1,74 @@
+[
+  {
+    "id": "mercury",
+    "name": "Merkur",
+    "au": 0.387,
+    "days": 88,
+    "color": "#939aa3",
+    "type": "Gesteinsplanet",
+    "fact": "Merkur ist der kleinste Planet und der Sonne am nächsten."
+  },
+  {
+    "id": "venus",
+    "name": "Venus",
+    "au": 0.723,
+    "days": 225,
+    "color": "#c49a57",
+    "type": "Gesteinsplanet",
+    "fact": "Die Venus hat eine dichte Atmosphäre. Unter ihren Wolken ist es sehr heiß."
+  },
+  {
+    "id": "earth",
+    "name": "Erde",
+    "au": 1,
+    "days": 365.25,
+    "color": "#388ca6",
+    "type": "Gesteinsplanet",
+    "fact": "Unser Zuhause ist der dritte Planet von der Sonne. Ein Umlauf dauert etwa ein Jahr."
+  },
+  {
+    "id": "mars",
+    "name": "Mars",
+    "au": 1.524,
+    "days": 687,
+    "color": "#bb6144",
+    "type": "Gesteinsplanet",
+    "fact": "Mars ist der vierte Planet. Seine Atmosphäre ist viel dünner als die der Erde."
+  },
+  {
+    "id": "jupiter",
+    "name": "Jupiter",
+    "au": 5.2,
+    "days": 4333,
+    "color": "#c39270",
+    "type": "Gasriese",
+    "fact": "Jupiter ist der größte Planet. Er hat keine feste Oberfläche wie die Erde."
+  },
+  {
+    "id": "saturn",
+    "name": "Saturn",
+    "au": 9.58,
+    "days": 10756,
+    "color": "#b49d62",
+    "type": "Gasriese",
+    "fact": "Saturns auffällige Ringe bestehen aus vielen einzelnen Teilchen."
+  },
+  {
+    "id": "uranus",
+    "name": "Uranus",
+    "au": 19.2,
+    "days": 30687,
+    "color": "#5aa5b2",
+    "type": "Eisriese",
+    "fact": "Uranus ist der siebte Planet. Seine Drehachse ist stark zur Seite geneigt."
+  },
+  {
+    "id": "neptune",
+    "name": "Neptun",
+    "au": 30.05,
+    "days": 60190,
+    "color": "#5866b7",
+    "type": "Eisriese",
+    "fact": "Neptun ist der äußerste der acht Planeten. Ein Umlauf dauert etwa 165 Erdjahre."
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "crust",
+    "name": "Erdkruste",
+    "color": "#3fb5a0",
+    "tag": "Fest · ganz außen",
+    "radius": 1,
+    "depth": "Etwa 5–70 km dick",
+    "text": "Die Erdkruste ist die dünne, feste Außenhaut der Erde. Auf ihr stehen wir. Auch unter den Ozeanen gibt es Erdkruste.",
+    "fact": "Wie die Schale eines Apfels ist die Kruste im Vergleich zur ganzen Erde sehr dünn. Im Modell ist sie dicker, damit du sie gut sehen kannst."
+  },
+  {
+    "id": "mantle",
+    "name": "Erdmantel",
+    "color": "#ed8241",
+    "tag": "Überwiegend fest · sehr heiß",
+    "radius": 0.965,
+    "depth": "Bis etwa 2.900 km Tiefe",
+    "text": "Unter der Kruste liegt der Erdmantel. Er besteht überwiegend aus festem Gestein. Wegen der großen Hitze kann es sich über sehr lange Zeit langsam verformen und bewegen.",
+    "fact": "Der Erdmantel ist kein riesiger See aus Lava. Nur an manchen Stellen schmilzt ein kleiner Teil des Gesteins."
+  },
+  {
+    "id": "outer-core",
+    "name": "Äußerer Erdkern",
+    "color": "#f4bc43",
+    "tag": "Flüssig · vor allem Metall",
+    "radius": 0.546,
+    "depth": "Etwa 2.900–5.150 km Tiefe",
+    "text": "Der äußere Erdkern besteht vor allem aus flüssigem Eisen und etwas Nickel. Das heiße Metall bewegt sich.",
+    "fact": "Die Bewegung des flüssigen Metalls hilft, das Magnetfeld der Erde zu erzeugen. Es lenkt viele geladene Teilchen von der Sonne ab."
+  },
+  {
+    "id": "inner-core",
+    "name": "Innerer Erdkern",
+    "color": "#fff1a2",
+    "tag": "Fest · im Mittelpunkt",
+    "radius": 0.191,
+    "depth": "Etwa 5.150–6.371 km Tiefe",
+    "text": "Ganz innen liegt der innere Erdkern. Er besteht vor allem aus Eisen. Obwohl es dort sehr heiß ist, ist er fest.",
+    "fact": "Der riesige Druck im Inneren verhindert, dass das Metall einfach schmilzt."
+  }
+]

@@ -1,0 +1,73 @@
+[
+  {
+    "id": "Europe",
+    "name": "Europa",
+    "kind": "continent",
+    "lat": 51,
+    "lon": 20,
+    "color": "#80d4ae",
+    "text": "Europa ist einer der sieben Kontinente in unserem Modell. Hier liegt Deutschland. Viele Länder sind Nachbarn und haben unterschiedliche Sprachen.",
+    "fact": "Europa und Asien hängen zusammen. Gemeinsam nennt man diese große Landfläche Eurasien."
+  },
+  {
+    "id": "Africa",
+    "name": "Afrika",
+    "kind": "continent",
+    "lat": 4,
+    "lon": 20,
+    "color": "#efc979",
+    "text": "Afrika liegt auf beiden Seiten des Äquators. Hier gibt es Wüsten, Regenwälder und weite Graslandschaften.",
+    "fact": "Die Sahara liegt im Norden Afrikas. Sie ist die größte heiße Wüste der Erde."
+  },
+  {
+    "id": "Asia",
+    "name": "Asien",
+    "kind": "continent",
+    "lat": 42,
+    "lon": 88,
+    "color": "#82bc99",
+    "text": "Asien ist der größte Kontinent. Hier liegen zum Beispiel China, Indien, Japan und Iran.",
+    "fact": "Der Mount Everest liegt in Asien. Er ist der höchste Berg über dem Meeresspiegel."
+  },
+  {
+    "id": "North America",
+    "name": "Nordamerika",
+    "kind": "continent",
+    "lat": 43,
+    "lon": -105,
+    "color": "#80cfae",
+    "text": "Nordamerika liegt größtenteils auf der Nordhalbkugel. Dazu gehören zum Beispiel Kanada, die USA und Mexiko.",
+    "fact": "Auch die große Insel Grönland gehört geografisch zu Nordamerika."
+  },
+  {
+    "id": "South America",
+    "name": "Südamerika",
+    "kind": "continent",
+    "lat": -19,
+    "lon": -59,
+    "color": "#b2d58b",
+    "text": "Südamerika liegt zum größten Teil südlich des Äquators. Hier findest du die Anden, eine lange Gebirgskette.",
+    "fact": "Der Amazonas fließt durch Südamerika. Um ihn wächst ein riesiger Regenwald."
+  },
+  {
+    "id": "Oceania",
+    "name": "Australien / Ozeanien",
+    "label": "Australien",
+    "kind": "continent",
+    "lat": -25,
+    "lon": 135,
+    "color": "#d7c38a",
+    "text": "Australien ist der kleinste Kontinent in unserem Modell. Mit Neuseeland und vielen Inseln im Pazifik gehört es zur Weltregion Ozeanien.",
+    "fact": "Australien ist der Name eines Landes und auch eines Kontinents."
+  },
+  {
+    "id": "Antarctica",
+    "name": "Antarktika",
+    "kind": "continent",
+    "lat": -77,
+    "lon": 0,
+    "color": "#e9f6fa",
+    "text": "Antarktika ist der Kontinent am Südpol. Eine riesige Eisschicht bedeckt fast das ganze Land.",
+    "fact": "Pinguine leben auf der Südhalbkugel. Eisbären leben in der Arktis im Norden. In der Natur treffen sie sich also nicht."
+  }
+]
