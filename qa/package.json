@@ -1,0 +1,9 @@
+{
+  "name": "wunderkompass-browser-qa",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "axe-core": "4.11.0"
+  }
+}

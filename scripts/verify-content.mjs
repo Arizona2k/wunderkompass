@@ -1,0 +1,4 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';
+const dir=path.join(process.cwd(),'exports/content'),index=JSON.parse(fs.readFileSync(path.join(dir,'index.json'),'utf8'));
+for(const f of index.files){const b=fs.readFileSync(path.join(dir,f.file));assert.equal(crypto.createHash('sha256').update(b).digest('hex'),f.sha256,f.file);JSON.parse(b);}
+assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dir,'world-topics.json'),'utf8')),JSON.parse(fs.readFileSync('app/world-catalog.json','utf8')));assert.equal(index.topics,108);assert.equal(index.journeys,16);assert.equal(index.chapters,80);assert.equal(index.personalProgressIncluded,false);console.log('VERIFIED',index.files.length,'content files.');
