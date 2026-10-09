@@ -38,6 +38,8 @@ jobs:
         run: pnpm run typecheck
       - name: ESLint
         run: pnpm run lint
+      - name: Release policy and Git integration tests
+        run: node --test tests/release/*.test.cjs
       - name: Automated tests
         run: pnpm test
       - name: Production build

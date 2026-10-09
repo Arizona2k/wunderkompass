@@ -19,3 +19,7 @@ Tatsächliche Prüfungen, Einschränkungen und Synchronisierungsstand dieser Ein
 - Isolierten Vorschau-Testserver, echte Serverabschaltung vor kaltem Offline-Neustart sowie Fehlerberichte und ausschließlich synthetische Browserartefakte vorbereitet. Vollständige lokale Browserprobe bestanden.
 - Deaktivierte test-live-Ruleset-Vorlage und sichere spätere Freigabereihenfolge dokumentiert. Keine aktive Branch-Regel, kein Auto-Merge, keine Vercel-Änderung oder Veröffentlichung.
 - Erster tatsächlicher Actions-Lauf hat einen Browserfehler korrekt als roten Pflichtcheck gemeldet. Der korrigierte vollständige Actions-Lauf #2 ist grün, einschließlich 20 Unit-Tests, Chromium und fünf gespeicherten Browserartefakten. Getesteter Commit und Lauf stehen in PROJECT_STATE.md; Implementierung wartet in PR #2 auf Review.
+
+## 9. Oktober 2026 – Testfreigabe technisch vorbereitet (WK-013)
+
+Deaktivierte Kette für exakte Commitprüfung und kontrollierte Übernahme ausschließlich nach test-live; separate minimale Schreibrechte, vertrauenswürdiger Publisher, Vorgängersicherung und atomarer Git-Leasevergleich. Gemeinsame Entwicklungsreservierung und Release-/Git-Integrationstests ergänzt. Aktuelle Tarifgrenze und isoliert erforderliche Vercel-/Aktivierungsabnahme dokumentiert. Lokal 27 neue Release-/Git-Tests sowie vorhandene App-/Browserprüfungen bestanden. Separater Entwicklungsbranch; kein main/test-live-Merge, keine Aktivierung und keine bestehende Website verändert. Remote-Nachweis in PROJECT_STATE.md.
