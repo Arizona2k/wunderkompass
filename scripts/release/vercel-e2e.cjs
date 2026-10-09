@@ -4,6 +4,18 @@ const REPOSITORY = 'Arizona2k/wunderkompass';
 const PREFIX = 'wk-vercel-e2e-';
 const EXPIRES = Date.parse('2026-10-16T00:00:00Z');
 
+async function requireVercelBaseline({ github, owner, repo, candidate = CANDIDATE }) {
+  // Combined statuses omit creator. Individual statuses include it and are
+  // returned newest first, across pages. Select the context before validation:
+  // a newer failure or untrusted creator must never expose an older success.
+  const statuses = await github.paginate(github.rest.repos.listCommitStatusesForRef,
+    { owner, repo, ref: candidate, per_page: 100 });
+  const latest = statuses.find(s => s.context === 'Vercel');
+  if (latest?.state !== 'success' || latest.creator?.login !== 'vercel[bot]')
+    throw Error('No existing successful Vercel baseline');
+  return latest;
+}
+
 function branchFor(runId) {
   if (!/^\d+-\d+$/.test(runId)) throw Error('Invalid run identifier');
   return PREFIX + runId;
@@ -64,6 +76,8 @@ async function observe({ github, owner = 'Arizona2k', repo = 'wunderkompass', br
       const { data: statuses } = await github.rest.repos.listDeploymentStatuses({ owner, repo, deployment_id: d.id, per_page: 100 });
       // GitHub returns newest status first; never fall back to an earlier success.
       const status = statuses[0];
+      if (status && status.creator?.login !== 'vercel[bot]')
+        throw Error('Untrusted deployment status creator; manual inspection required');
       if (status && ['error', 'failure', 'inactive'].includes(status.state))
         throw Error(`Preview deployment ${d.id} ended with ${status.state}`);
       if (status?.state === 'success') {
@@ -80,4 +94,4 @@ async function observe({ github, owner = 'Arizona2k', repo = 'wunderkompass', br
   }
   throw Error('No fresh successful Vercel Preview record within deadline; no retry or promotion');
 }
-module.exports = { CANDIDATE, REPOSITORY, EXPIRES, branchFor, transfer, observe };
+module.exports = { CANDIDATE, REPOSITORY, EXPIRES, requireVercelBaseline, branchFor, transfer, observe };

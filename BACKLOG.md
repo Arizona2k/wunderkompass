@@ -4,7 +4,7 @@ Stand: 9. Oktober 2026. Einziger Aufgabenbestand für GO und spätere geplante D
 
 WK-014 – P1 – erledigt laut Nutzer: PR #5 nach main übernommen und isolierter Actions-Tagtest erfolgreich. Der echte Run wurde in WK-015 nicht erneut aus dessen Log gelesen; Nutzerbestätigung ist als solche dokumentiert. Keine Änderung an Standardrechten oder Freigabekette. Der Tagtest beweist weiterhin keinen Branch→Vercel-Trigger; dafür WK-015.
 
-WK-015 – P1 – in Prüfung: Isolierten GITHUB_TOKEN→Vercel-Preview-Test vorbereitet, Kandidat unverändert übertragen, SHA-/Build-/Schutz-/Browserabnahme und Fehlererkennung getrennt belegen. 13 neue lokale E2E-Tests, fünf bestehende Tagtests und vollständige Kandidatenqualität inklusive Produktionsbrowser bestanden. Separater deaktivierter manueller Workflow/PR; Remote-Test, kostenlose Restkontingente und sichere Defaultbranch-Übernahme warten auf gesonderte Freigabe. Details in VERCEL-E2E.md und PROJECT_STATE.md. main/test-live bleiben unverändert.
+WK-015 – P1 – in Prüfung: Isolierter Vercel-E2E-Workflow mit PR #6/#7 nach main übernommen und erster echter Lauf 37967901842 in authorize fehlgeschlagen. Baseline-Schemafehler anhand Joblog und beider API-Antworten bestätigt; Korrektur auf codex/fix-vercel-baseline-2026-10-09: neuester einzelner Vercel-Status, unverändert strenge Bot-/Erfolgsprüfung, Statusquelle im Beobachter abgesichert. 26 lokale Release-Tests, Standardprüfungen, Browser, Actionlint und Syntax grün. Kein erneuter Workflowstart/Merge/Deployment. Reale Deploymentfelder, frisches Preview, Build-/Schutz-/Remote-Browsernachweise bleiben offen; Details in VERCEL-E2E.md und PROJECT_STATE.md.
 
 | ID | Priorität | Status | Aufgabe und Anlass | Akzeptanzkriterien / Nachweis |
 | --- | --- | --- | --- | --- |

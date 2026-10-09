@@ -4,7 +4,70 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const {execFileSync} = require('node:child_process');
-const {transfer, observe, branchFor} = require('../../scripts/release/vercel-e2e.cjs');
+const {transfer, observe, branchFor, requireVercelBaseline, CANDIDATE} = require('../../scripts/release/vercel-e2e.cjs');
+
+const baselineSuccess = {context:'Vercel',state:'success',creator:{login:'vercel[bot]'}};
+function baselineApi(statuses) {
+  const listCommitStatusesForRef = () => {};
+  return {rest:{repos:{listCommitStatusesForRef}},paginate:async(method,params)=> {
+    assert.equal(method,listCommitStatusesForRef);
+    assert.deepEqual(params,{owner:'Arizona2k',repo:'wunderkompass',ref:CANDIDATE,per_page:100});
+    return statuses;
+  }};
+}
+const baselineOptions = {owner:'Arizona2k',repo:'wunderkompass'};
+test('baseline uses paginated individual statuses and accepts genuine Vercel success',async()=> {
+  const statuses = [...Array.from({length:100},()=>({context:'Other',state:'failure'})),baselineSuccess];
+  assert.equal(await requireVercelBaseline({...baselineOptions,github:baselineApi(statuses)}),baselineSuccess);
+});
+test('baseline rejects missing/null creator including combined-status shape',async()=> {
+  for(const creator of [undefined,null,{}])
+    await assert.rejects(requireVercelBaseline({...baselineOptions,github:baselineApi([{...baselineSuccess,creator}])}),/No existing successful/);
+});
+test('baseline rejects wrong bots and unknown or empty contexts',async()=> {
+  for(const statuses of [[],[{...baselineSuccess,context:'Other'}],
+    [{...baselineSuccess,creator:{login:'github-actions[bot]'}}],
+    [{...baselineSuccess,creator:{login:'vercel'}}]])
+    await assert.rejects(requireVercelBaseline({...baselineOptions,github:baselineApi(statuses)}),/No existing successful/);
+});
+test('latest relevant status blocks older success on failure/error/pending or untrusted creator',async()=> {
+  for(const change of [{state:'failure'},{state:'error'},{state:'pending'},
+    {creator:undefined},{creator:{login:'someone'}}])
+    await assert.rejects(requireVercelBaseline({...baselineOptions,github:baselineApi([
+      {context:'Other',state:'success'},{...baselineSuccess,...change},baselineSuccess
+    ])}),/No existing successful/);
+});
+test('latest Vercel success supersedes older failure',async()=> {
+  assert.equal(await requireVercelBaseline({...baselineOptions,github:baselineApi([
+    baselineSuccess,{...baselineSuccess,state:'failure'}
+  ])}),baselineSuccess);
+});
+test('baseline API errors propagate without approval',async()=> {
+  const github=baselineApi([]);
+  github.paginate=async()=>{throw Error('API unavailable');};
+  await assert.rejects(requireVercelBaseline({...baselineOptions,github}),/API unavailable/);
+});
+test('actual authorize workflow script checks baseline before emitting branch snapshots',async()=> {
+  const workflow=fs.readFileSync(path.join(__dirname,'../../.github/workflows/vercel-e2e.yml'),'utf8');
+  const script=workflow.split('          script: |\n')[1].split('\n  checks:')[0];
+  const AsyncFunction=Object.getPrototypeOf(async function(){}).constructor;
+  const authorize=new AsyncFunction('require','github','context','core',script);
+  for(const trusted of [true,false]) {
+    const github=baselineApi([{...baselineSuccess,creator:trusted?{login:'vercel[bot]'}:undefined}]);
+    github.rest.repos.getCommit=async()=>({data:{sha:CANDIDATE,author:{login:'Arizona2k'}}});
+    github.rest.git={getRef:async()=>({data:{object:{sha:'synthetic-snapshot'}}})};
+    const outputs=[];
+    const run=()=>authorize(()=>({...require('../../scripts/release/vercel-e2e.cjs'),EXPIRES:Infinity}),
+      github,{repo:baselineOptions},{setOutput:(...args)=>outputs.push(args)});
+    if(trusted) {
+      await run();
+      assert.deepEqual(outputs,[['main','synthetic-snapshot'],['testlive','synthetic-snapshot']]);
+    } else {
+      await assert.rejects(run(),/No existing successful/);
+      assert.deepEqual(outputs,[]);
+    }
+  }
+});
 
 function fixture(t) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'wk-preview-'));
@@ -74,7 +137,7 @@ test('external main change is detected after push and never blindly restored',t 
 
 const candidate='a'.repeat(40), since='2026-10-09T18:00:00Z', branch='wk-vercel-e2e-123-1';
 const deployment={id:9,sha:candidate,ref:branch,created_at:since,creator:{login:'vercel[bot]'},environment:'Preview',production_environment:false};
-const success={state:'success',environment_url:'https://wunderkompass-unique.vercel.app'};
+const success={state:'success',creator:{login:'vercel[bot]'},environment_url:'https://wunderkompass-unique.vercel.app'};
 function api(deployments,statuses) {
   return {paginate:async()=>deployments,rest:{repos:{listDeployments(){},listDeploymentStatuses:async()=>({data:statuses})}}};
 }
@@ -89,19 +152,23 @@ test('stale, wrong branch/SHA and non-Vercel records never count',async()=> {
 });
 test('failure, error, inactive and production fail without falling back to older success',async()=> {
   for(const state of ['failure','error','inactive'])
-    await assert.rejects(observe({...options,github:api([deployment],[{state},success])}),/ended with/);
+    await assert.rejects(observe({...options,github:api([deployment],[{...success,state},success])}),/ended with/);
   await assert.rejects(observe({...options,github:api([{...deployment,production_environment:true}],[success])}),/production/);
 });
 test('pending and missing deployments time out; no successful outcome fabricated',async()=> {
   for(const deployments of [[],[deployment]])
-    await assert.rejects(observe({...options,github:api(deployments,[{state:'pending'}])}),/deadline/);
+    await assert.rejects(observe({...options,github:api(deployments,[{...success,state:'pending'}])}),/deadline/);
 });
 test('newest matching deployment cannot inherit an older deployment success',async()=> {
   const github=api([{...deployment,id:8},deployment],[]);
-  github.rest.repos.listDeploymentStatuses=async({deployment_id})=>({data:deployment_id===8?[success]:[{state:'pending'}]});
+  github.rest.repos.listDeploymentStatuses=async({deployment_id})=>({data:deployment_id===8?[success]:[{...success,state:'pending'}]});
   await assert.rejects(observe({...options,github}),/deadline/);
 });
 test('URL with bypass secret or wrong host is rejected',async()=> {
   for(const url of ['http://foo.vercel.app','https://evil.example','https://foo.vercel.app?token=synthetic','https://user:synthetic@foo.vercel.app'])
     await assert.rejects(observe({...options,github:api([deployment],[{...success,environment_url:url}])}),/Unexpected preview URL/);
+});
+test('deployment status requires Vercel creator; no fallback to older trusted success',async()=> {
+  for(const creator of [undefined,null,{login:'someone'}])
+    await assert.rejects(observe({...options,github:api([deployment],[{...success,creator},success])}),/Untrusted deployment status/);
 });
