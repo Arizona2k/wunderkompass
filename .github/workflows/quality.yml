@@ -1,0 +1,62 @@
+name: Quality
+
+on:
+  pull_request:
+    branches: [main, test-live]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Required quality checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: pnpm
+          cache-dependency-path: |
+            pnpm-lock.yaml
+            qa/pnpm-lock.yaml
+      - name: Install application with frozen lockfile
+        run: pnpm install --frozen-lockfile
+      - name: TypeScript
+        run: pnpm run typecheck
+      - name: ESLint
+        run: pnpm run lint
+      - name: Automated tests
+        run: pnpm test
+      - name: Production build
+        run: pnpm run build
+      - name: Content integrity
+        run: pnpm run verify
+      - name: Install browser tools with frozen lockfile
+        run: pnpm --dir qa install --frozen-lockfile
+      - name: Install Chromium and system dependencies
+        run: pnpm --dir qa exec playwright install --with-deps chromium
+      - name: Production browser regression
+        run: pnpm run test:browser
+      - name: Upload browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            .qa-output/*.json
+            .qa-output/*.png
+          if-no-files-found: ignore
+          retention-days: 7
