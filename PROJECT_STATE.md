@@ -4,7 +4,7 @@ Stand: 9. Oktober 2026 (Europe/Berlin). Regeln: AGENTS.md; Ziele: VISION.md; Bes
 
 ## Aktueller Durchlauf: WK-020 / master-quality-2026-10-09
 
-Status: in Prüfung – Implementierung und lokale Prüfungen abgeschlossen, PR-Erstellung folgt. Basis aktuell gefetchter test-live `d6e3219368fa1713a4e23336cb7b6a011f2b6292`; main `537622796f7e1f9a886e7400f10b1f727d24f8dc`. Branch `codex/master-quality-2026-10-09`, Bearbeiter Codex, 9. Oktober 2026. Gemeinsame Reservierung `c45400f37f0fb597da5c092a63813aa0d0dd9dbc` erworben. Connector: keine offenen PRs; letzte zehn Actions-Läufe abgeschlossen. PR #9 inzwischen merged nach test-live, letzter Quality-Lauf 37975268024 success. Vorige Übergabe darunter ist historisch. Neuer Auftrag ergänzt Masterregeln und behebt vorzeitige Auflösung in Challenge-Hinweisen; keine neuen Fakten oder Speicheränderung.
+Status: in Prüfung – Implementierung und lokale Prüfungen abgeschlossen; Draft-PR [#10](https://github.com/Arizona2k/wunderkompass/pull/10) gegen test-live erstellt, nicht gemergt. Basis aktuell gefetchter test-live `d6e3219368fa1713a4e23336cb7b6a011f2b6292`; main `537622796f7e1f9a886e7400f10b1f727d24f8dc`. Branch `codex/master-quality-2026-10-09`, Bearbeiter Codex, 9. Oktober 2026. Gemeinsame Reservierung `c45400f37f0fb597da5c092a63813aa0d0dd9dbc` erworben. Connector: keine offenen PRs; letzte zehn Actions-Läufe abgeschlossen. PR #9 inzwischen merged nach test-live, letzter Quality-Lauf 37975268024 success. Vorige Übergabe darunter ist historisch. Neuer Auftrag ergänzt Masterregeln und behebt vorzeitige Auflösung in Challenge-Hinweisen; keine neuen Fakten oder Speicheränderung.
 
 Ergebnis: AGENTS.md, VISION.md, QUALITY.md und BACKLOG.md um fehlende Masterregeln ergänzt; widersprüchliche Freiheit zur grundlegenden Markenänderung eingeschränkt. Verpflichtende Prüfung der gesamten vorhandenen Wissenswelt, Rückverbindungen, Themencheckliste, fünf Entwicklungsfelder, Denkanspruch, geplante Nachrüstung aller Spiele und transparente adaptive Empfehlungen dauerhaft verankert. Abschlussformat und separate WhatsApp-Regel gespeichert. Neue Aufgaben WK-021/WK-022 im vorhandenen Backlog. Keine parallele Planung angelegt.
 
@@ -21,6 +21,8 @@ WhatsApp-Text für die manuelle Prüfung:
 - 💡 Leicht, mittel und schwer bieten jetzt auf Wunsch einen Denkhinweis.
 - 🧠 Die Hinweise helfen beim Überlegen, ohne die Lösung vorwegzunehmen.
 - 🌱 Bei einer falschen Antwort kannst du in Ruhe weiterprobieren. Nach der richtigen Antwort folgt die Erklärung.
+
+Synchronisierung: Implementierungscommit `63100a739d2e02e9ff2b5c0b09c6b3ab59d7806b` normal gepusht; Connector bestätigt Head/Basis, PR #10 offen/draft, mergeable:true/clean. main und test-live nach Push bytegenau unverändert an obigen SHAs. Eigene gemeinsame Reservierung nach gesicherter Implementierung/PR per Eigentümer-SHA aufgelöst; Remote-Tag danach abwesend. Keine aktive Entwicklungsarbeit nach dieser Übergabe. Commit enthält [skip ci], um bei nicht einsehbarem kostenlosen Restkontingent keinen zusätzlichen Remote-Lauf auszulösen; Quality-Konfiguration bleibt unverändert. Remote-CI ist daher offen und vor Übernahme regulär nachzuweisen. Die abschließende Übergabesicherung ändert ausschließlich PROJECT_STATE.md; Anwendungscode bleibt identisch zum lokal geprüften Implementierungscommit.
 
 ## Historischer Durchlauf: WK-016 / connected-discoveries-2026-10-09
 
