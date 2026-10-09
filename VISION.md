@@ -1,6 +1,12 @@
 # Produktvision WunderKompass
 
-Stand: 9. Oktober 2026. Die bestehende Lernwelt wird kontinuierlich verbessert. Sie soll umfangreicher, fachlich verlässlicher, moderner, leicht bedienbar und stärker vernetzt werden. Kinder und Jugendliche von etwa sechs bis vierzehn Jahren, sollen Zusammenhänge verstehen, ausprobieren und später wiederfinden können; Eltern und Lehrkräfte erhalten verständliche Orientierung.
+Stand: 9. Oktober 2026. Die bestehende Lernwelt wird kontinuierlich verbessert. Sie soll umfangreicher, fachlich verlässlicher, moderner, leicht bedienbar und stärker vernetzt werden. Kinder und Jugendliche von etwa sechs bis vierzehn Jahren sollen Zusammenhänge verstehen, ausprobieren und später wiederfinden können; Eltern und Lehrkräfte erhalten verständliche Orientierung.
+
+## Verbindliche Erlebnisidentität
+
+**Hochwertige Wissenschaftswelt + fantasievolle Abenteuerwelt.** WunderKompass verbindet die verständliche, fachlich sorgfältige Vermittlung eines Wissenschaftsmuseums mit der Atmosphäre einer interaktiven Entdeckungswelt. Modern und altersübergreifend, auch auf kleinen Smartphones: klare Hierarchie, lesbare Texte, anschauliche Modelle, freiwillige Vertiefung. Keine beliebige Ansammlung austauschbarer Karten, keine Effekte zulasten von Inhalt oder Bedienung.
+
+Die Startseite entwickelt sich zur Entdeckerzentrale für den tatsächlichen Gesamtbestand: Themenwelten, globale Suche, Spiele, Wissensverbindungen, Entdeckerpass und Wiederaufnahme ohne Pflichtkonto. Der interaktive Globus bleibt ein wichtiges, direkt erreichbares Produktmerkmal; das Gesamtprodukt umfasst weit mehr als die Erde. Einheitliche Bedienung, unterschiedliche atmosphärische Themenidentitäten. Bestehende Welten, Bilder und Inhalte ausdrücklich weiterentwickeln; neue Welten nur als zusammenhängende Pakete nach Lernwert und geprüfter Machbarkeit. Produktname WunderKompass, Domain und grundlegende Markenidentität nur nach ausdrücklicher Nutzerfreigabe ändern.
 
 ## Eigenständige Gestaltung
 
@@ -23,7 +29,7 @@ Neue Dienste, Kosten, Hosting, Domainwechsel und Veröffentlichung brauchen eine
 
 ## Langfristige Vielfalt und Schwierigkeit
 
-Entdecker (etwa 6–8), Forscher (9–11) und Experten (12–14) erhalten verständliche Einstiege und frei wählbare leichte, mittlere und schwere Aufgaben. Altersangaben sind Orientierung, keine Sperre. Gestaltung soll auch Jugendliche ansprechen. Wissensdaten besitzen keine feste Mengenobergrenze; portionierte Ansichten sind Navigationshilfen. Breite über Natur, Geografie, Urzeit, Weltall, Geschichte, Technik, Wissenschaft, Sport, Kultur und Gesellschaft schrittweise entwickeln. Jede Runde liefert fachlich geprüftes Wissen, passende Beziehungen und echte Interaktion; beliebige Themenmengen ersetzen keine Tiefe. Keine manipulativen Serien, Ranglisten, Pflichtkonten, künstlichen Wartezeiten oder neuen Kosten.
+Entdecker (etwa 6–8), Forscher (9–11) und Experten (12–14) erhalten verständliche Einstiege und frei wählbare leichte, mittlere und schwere Aufgaben. Altersangaben sind Orientierung, keine Sperre. Gestaltung soll auch Jugendliche ansprechen. Wissensdaten besitzen keine feste Mengenobergrenze; portionierte Ansichten sind Navigationshilfen. Breite über Natur, Geografie, Urzeit, Weltall, Geschichte, Technik, Wissenschaft, Sport, Kultur und Gesellschaft schrittweise entwickeln. Jede Runde liefert ein überprüfbares Produktpaket; neue oder wesentlich veränderte Fakten werden geprüft, passende Beziehungen und echte Interaktion erhalten oder erweitert. Beliebige Themenmengen ersetzen keine Tiefe. Keine manipulativen Serien, Ranglisten, Pflichtkonten, künstlichen Wartezeiten oder neuen Kosten.
 
 ## Kontinuierliche Produktpflege
 

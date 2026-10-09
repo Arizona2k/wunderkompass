@@ -11,3 +11,4 @@ await preview({
     cors: false,
   },
 });
+console.log('WK_PREVIEW_READY ' + (process.env.QA_PORT ?? '4182'));

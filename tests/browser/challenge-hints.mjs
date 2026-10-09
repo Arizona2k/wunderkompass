@@ -60,6 +60,9 @@ export async function challengeHints(browser,base,ready,monitor,report,shots){
      await room.getByText('Thema: '+q.topicTitle,{exact:true}).waitFor();
      assert.equal(await hint.getAttribute('open'),null,q.id+' reset');
      const before=(await pass()).gameSessions['world:knowledge-challenge'].challenge;
+     // Hash navigation restores page focus on the next frame. Let that finish
+     // before testing the user's deliberate keyboard focus, rather than racing it.
+     await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
      await hint.locator('summary').focus();await page.keyboard.press('Enter');
      await hint.getByText(q.hints[0],{exact:true}).waitFor();
      await hint.getByRole('button',{name:'Hinweise vorlesen',exact:true}).click();
