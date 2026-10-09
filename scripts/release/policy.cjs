@@ -20,14 +20,17 @@ async function inspect(github, context, expected = {}) {
   const number = context.payload.pull_request.number;
   const pr = (await github.rest.pulls.get({...args, pull_number:number})).data;
   const peers = await github.paginate(github.rest.pulls.list, {...args, state:'open', per_page:100});
-  const files = await github.paginate(github.rest.pulls.listFiles, {...args, pull_number:number, per_page:100});
   const base = (await github.rest.git.getRef({...args, ref:'heads/test-live'})).data.object.sha;
   try {
     await github.rest.git.getRef({...args, ref:'tags/wunderkompass-development-lock'});
     throw Error('Development reservation is active');
   } catch (error) { if (error.status !== 404) throw error; }
+  if (!sha(base) || !sha(pr.head.sha)) throw Error('Invalid commit');
+  // Inspect an immutable SHA-to-SHA diff, not a moving PR file listing.
+  // GitHub caps comparison files at 300; the count check fails closed beyond that.
+  const comparison = (await github.rest.repos.compareCommitsWithBasehead({...args, basehead:`${base}...${pr.head.sha}`})).data;
+  const files = comparison.files || [];
   const result = validate({pr, peers, files, base, repository:`${args.owner}/${args.repo}`, expectedBase: context.payload.pull_request.base.sha, ...expected});
-  const comparison = (await github.rest.repos.compareCommitsWithBasehead({...args, basehead:`${base}...${result.head}`})).data;
   if (comparison.status !== 'ahead' || comparison.merge_base_commit.sha !== base) throw Error('Development branch must descend from current test-live');
   const reviews = await github.paginate(github.rest.pulls.listReviews, {...args, pull_number:number, per_page:100});
   const latest = new Map();

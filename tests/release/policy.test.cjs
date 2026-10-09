@@ -23,13 +23,17 @@ for (const [name,change] of [
 ]) test(`blocks ${name}`,()=>{const f=fixture();change(f);assert.throws(()=>validate(f));});
 test('API gate blocks diverged branch and requested changes',async()=>{
  const f=fixture(); let status='diverged', reviews=[];
- const github={rest:{pulls:{get:async()=>({data:f.pr}),list:'peers',listFiles:'files',listReviews:'reviews'},git:{getRef:async ({ref})=>{if(ref.startsWith('tags/')) throw Object.assign(Error('not found'),{status:404});return {data:{object:{sha:A}}};}},repos:{compareCommitsWithBasehead:async()=>({data:{status,merge_base_commit:{sha:A}}})}},paginate:async key=>({peers:f.peers,files:f.files,reviews}[key])};
+ const github={rest:{pulls:{get:async()=>({data:f.pr}),list:'peers',listFiles:'files',listReviews:'reviews'},git:{getRef:async ({ref})=>{if(ref.startsWith('tags/')) throw Object.assign(Error('not found'),{status:404});return {data:{object:{sha:A}}};}},repos:{compareCommitsWithBasehead:async()=>({data:{status,merge_base_commit:{sha:A},files:f.files}})}},paginate:async key=>({peers:f.peers,files:f.files,reviews}[key])};
  const context={repo:{owner:'Arizona2k',repo:'wunderkompass'},payload:{pull_request:{number:3,base:{sha:A}}}};
  await assert.rejects(inspect(github,context));
  status='ahead'; reviews=[{user:{login:'reviewer'},state:'CHANGES_REQUESTED'}];
  await assert.rejects(inspect(github,context));
  reviews.push({user:{login:'reviewer'},state:'APPROVED'});
  assert.deepEqual(await inspect(github,context),{head:B,base:A});
+ // Even if the mutable PR file endpoint reports a harmless path, the exact
+ // SHA-to-SHA comparison must block protected changes at the tested commit.
+ f.files=[{filename:'package.json'}];
+ await assert.rejects(inspect(github,context),/manual review/);
 });
 function repo(t) {
  const root=mkdtempSync(join(tmpdir(),'wk-release-')); t.after(()=>rmSync(root,{recursive:true,force:true}));

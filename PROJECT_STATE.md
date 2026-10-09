@@ -16,7 +16,7 @@ Stand: 9. Oktober 2026 (Europe/Berlin). Regeln: AGENTS.md; Ziele: VISION.md; Bes
 | Feld | Stand |
 | --- | --- |
 | ID / Aufgabe | test-release-2026-10-09 / WK-013 |
-| Status | in Prüfung; Implementierung und lokale Tests abgeschlossen, GitHub-PR-Nachweis folgt unten |
+| Status | in Prüfung; Implementierung und lokale Tests abgeschlossen, Draft-PR #4 gegen test-live |
 | Bearbeiter | Codex, diese Cloud-Aufgabe |
 | Basis | test-live `1f7fe74a0f8e7e14bf8e709aea2135dc1b09172c` |
 | Branch | codex/test-release-2026-10-09 |
@@ -27,7 +27,7 @@ Stand: 9. Oktober 2026 (Europe/Berlin). Regeln: AGENTS.md; Ziele: VISION.md; Bes
 
 Deaktivierter Controlled-test-release-Workflow mit **fester false-Sperre** und zusätzlicher opt-in-Variable. Die feste Sperre schützt auch bei einer zufällig schon gesetzten Repositoryvariable. Gate und exakte Commitprüfung haben nur Leserechte; ausschließlich Publisher contents/write und pull-requests/read. Actions für diese neue Kette auf überprüfte Commit-SHAs gebunden. Kein PR-Kandidatencode im Schreibjob, kein gemeinsamer Cache, kein Secret in den Prüfschritten. Eigenständige vollständige Qualitätsprüfung der unveränderten Head-SHA; Policy blockiert Änderung an Test-/Build-/Workflow-/Releasekonfiguration und Regeln. Automatische Freigabe deshalb nur für normale Anwendungspakete, nicht für diese Einrichtung.
 
-PR-Freshness, vollständige Dateiliste/Renames, Eigentümerquelle, codex-Branch, Nicht-Draft, auto-test-live-Label, keine konkurrierenden codex-PRs, keine aktive Reservierung und keine ungelösten Änderungsanforderungen werden vor und nach den Tests geprüft. Kandidat muss von aktuellem test-live abstammen. Backup-Tag vor Übertragung; Git-Lease vergleicht atomar den erwarteten Zielcommit, nach expliziter Fast-forward-Prüfung. Kein REST-Ref-Update mit Check-then-write-Rennen, kein neuer ungetesteter Mergecommit, kein main-Ziel. Git-Quittung mit SHAs/Rückfalltag.
+PR-Freshness, unveränderlicher SHA-zu-SHA-Dateivergleich/Renames mit Vollständigkeitsprüfung (über 300 Dateien manuell), Eigentümerquelle, codex-Branch, Nicht-Draft, auto-test-live-Label, keine konkurrierenden codex-PRs, keine aktive Reservierung und keine ungelösten Änderungsanforderungen werden vor und nach den Tests geprüft. Kandidat muss von aktuellem test-live abstammen. Backup-Tag vor Übertragung; Git-Lease vergleicht atomar den erwarteten Zielcommit, nach expliziter Fast-forward-Prüfung. Kein REST-Ref-Update mit Check-then-write-Rennen, kein neuer ungetesteter Mergecommit, kein main-Ziel. Git-Quittung mit SHAs/Rückfalltag.
 
 Atomare gemeinsame Entwicklungsreservierung über annotiertes Tagobjekt und Lease auf zuvor nicht vorhandenen festen Ref; nur Eigentümer kann auflösen. Gemeinsame Workflowgruppe wunderkompass-development. Einzelne externe Schreibberechtigte und unabhängige nicht teilnehmende Cloud-Aufträge können dieses freiwillige Protokoll weiterhin umgehen. Keine Scheduler aktiviert. TEST-LIVE.md dokumentiert auch unvermeidbare Rennen zwischen PR-Metadaten/Reservierung und Git-Transaktion; die Kette kann dabei nur die geprüfte SHA pushen, nie einen neu hinzugekommenen ungeprüften Commit.
 
@@ -51,4 +51,12 @@ Rohlogs unter work/, ausschließlich synthetische Browsernachweise unter .qa-out
 
 Kein echtes Publisher-GITHUB_TOKEN-Schreib-/Vercel-End-to-end-Experiment an der bestehenden Website: würde das ausdrückliche Änderungsverbot verletzen. Vor Aktivierung isoliert nachweisen; bei zusätzlichen Kosten oder Credentials anhalten. Konstanten Alias, bestehenden Zugangsschutz, autorisierte/unautorisierte Browser, vorherigen funktionierenden Deploymentstand und Rückfall isoliert bestätigen. Konto-Restkontingent und Ausgabenlimit prüfen. Die Einrichtung kann nach Review nach test-live übernommen werden, löst dabei möglicherweise schon einen Vercel-Build aus und bleibt deshalb eine spätere Aktion. Feste false-Sperre erst nach Abnahme separat reviewt entfernen, danach auf ausdrücklichen Auftrag opt-in aktivieren. main bleibt unverändert.
 
-GitHub-PR, synchronisierter Commit, Remote-CI und Reservierungsendzustand werden nach Erstellung ergänzt.
+## GitHub-Nachweis und Abschluss
+
+Draft-PR #4: https://github.com/Arizona2k/wunderkompass/pull/4 gegen test-live, kein Merge. Implementierungscommit `5e4b81379c0c17e7610faff3ae1e4478e41d1a30` vollständig remote grün: https://github.com/Arizona2k/wunderkompass/actions/runs/37954354567 (Quality, Lauf #5, completed/success). Alle Pflichtschritte einschließlich 27 Release-/Git-Tests, 20 App-Tests und vollständiger Chromium-Produktionsprobe erfolgreich.
+
+Abschließende Härtung nach diesem Lauf: Dateiprüfung stammt aus dem **unveränderlichen SHA-zu-SHA-Commitvergleich**, nicht aus einer zwischenzeitlich veränderlichen PR-Dateiliste. Der exakte Vergleich und changed_files müssen übereinstimmen; GitHubs Vergleichsgrenze von 300 Dateien blockiert größere Pakete sicher zur manuellen Wartungsprüfung. Regression im API-Test ergänzt: eine geschützte Änderung am geprüften Commit wird trotz hypothetisch harmloser beweglicher PR-Dateiliste abgewiesen. Erneuter vollständiger lokaler Release-/Git-Lauf: 27/27 bestanden; actionlint und Diffprüfung bestanden. Anwendung/Lockfiles unverändert, lokale App-/Browserprüfung daher weiterhin derselbe Anwendungsstand.
+
+Diese Härtung und Abschlussdokumentation werden als Folgecommit im selben PR synchronisiert; GitHub prüft auch diesen endgültigen PR-Head erneut vollständig. Den jeweils aktuellen CI-Nachweis am PR prüfen, keine frühere grüne SHA für einen später geänderten Head als Freigabe verwenden. Der endgültige CI-Ausgang wird im Abschlussbericht dieses Auftrags genannt.
+
+Eigene gemeinsame Reservierung nach gesicherter Übergabe mit exakt ihrer Eigentümer-SHA aufgelöst; Remote-Abwesenheit überprüft. Kein aktiver Entwicklungsdurchlauf nach Abschluss, PR bleibt in Prüfung. main/test-live nach Abschluss erneut gegen die oben genannten SHAs geprüft. Keine feste false-Sperre entfernt, kein Release-Label gesetzt, keine Repositoryvariable aktiviert, kein Scheduler und kein kostenpflichtiger Dienst eingerichtet. Vercel-End-to-end-Veröffentlichung weiterhin ausdrücklich nicht ausgeführt.
