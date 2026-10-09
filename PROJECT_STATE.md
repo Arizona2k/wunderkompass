@@ -1,58 +1,68 @@
 # Projektstand und Übergabe
 
-Stand: 9. Oktober 2026 (Europe/Berlin). Diese Datei beschreibt belegten Iststand und aktive Arbeit. Regeln: AGENTS.md; Ziele: VISION.md; Aufgaben: BACKLOG.md; Abnahme: QUALITY.md; abgeschlossene Änderungen: CHANGELOG.md.
+Stand: 9. Oktober 2026 (Europe/Berlin). Regeln: AGENTS.md; Ziele: VISION.md; einziger Aufgabenbestand: BACKLOG.md; Abnahme: QUALITY.md; abgeschlossene Änderungen: CHANGELOG.md.
 
-## Tatsächlicher Repository-Stand
+## Belegter Iststand
 
-- Privates Repository: https://github.com/Arizona2k/wunderkompass, Standardbranch main. GitHub-Connector meldet Schreib-/PR-Rechte.
-- GitHub-main am Beginn dieses Durchlaufs über Connector gelesen: `0d9196741225dc902ef75d0f167ed37f97b4b344` (`Add files via upload`). Lokaler HEAD und origin/main stimmten damit überein. Der GitHub-Import ist erfolgt; die Repository-Wurzel ist direkt die Anwendung, kein zusätzlicher Ordner project/.
-- Checkout dieser Cloud-Aufgabe: /workspace/wunderkompass. Startbranch war der isolierte Branch work, sauber. Neuer Entwicklungsbranch: `codex/agent-system-2026-10-09`. main wurde nicht verändert.
-- Herkunft des Exports: bestehende WunderKompass-Site Version 14, Originalcommit `7b93a5c53fcd42d46b310252b6a4a3cf5622fbe7`. original-site/, ZIP und externe Archiv-Prüfsummen gehören zur getrennten Sicherung, nicht zum aktuellen Checkout. Historische Angaben zur aktiven Original-Site wurden hier nicht erneut remote geprüft.
-- Aktive Anwendung: React/TypeScript, portabler Vite-Einstieg, vorhandene Inhalte/Medien und zentraler Schema-3-Pass. Historische Sites-/Cloudflare-/D1-Dateien sind inaktive Quellen. Kein neuer Dienst oder Lernspeicher.
-- Kein Website-Umbau, kein Deployment, kein main-Merge und keine geplante/unbefristete Automatisierung in dieser Aufgabe. Eine Vercel-Anbindung oder externe Testpersonen-Freigabe wurde nicht geprüft oder eingerichtet.
+- Repository: https://github.com/Arizona2k/wunderkompass, private Anwendung direkt in der Repository-Wurzel.
+- Aktueller main wurde mit git fetch und Connector gelesen: `6a540d2af3c0c0bcfade1a806582ffa5afb6302c` (Merge von PR #1). Das Agentensystem aus WK-001/WK-002 ist übernommen. PR #1 ist abgeschlossen; kein anderer Entwicklungs-PR war beim Start offen, keine aktive Reservierung.
+- test-live beim Start: `88f79649d588b513bdb385d3307321b21f1a5aa7`. Vercel und geschützter Testlink sind laut Nutzer bereits eingerichtet; Zugriffsschutz und Zugangseinstellungen wurden in dieser Aufgabe nicht verändert.
+- Checkout /workspace/wunderkompass war zunächst ein sauberer, veralteter Exportstand auf work. Nach Abgleich neuer Branch vom aktuellen origin/main: `codex/quality-ci-2026-10-09`.
+- Herkunft: Site Version 14, Originalcommit `7b93a5c53fcd42d46b310252b6a4a3cf5622fbe7`; externe Originalsicherung behalten. Historische Auditberichte sind keine neue Produktvollabnahme.
+- IDs, Inhalte, Medien, Hash-Navigation, Schema-3-Pass und Anwendungscode bleiben erhalten. App-Lockfile bytegleich zur Basis. Keine Änderung an main/test-live, keine Zusammenführung oder Veröffentlichung durch diesen Auftrag.
 
 ## Durchlauf und Reservierung
 
-| Feld | Belegter Stand |
+| Feld | Stand |
 | --- | --- |
-| Durchlauf | setup-2026-10-09 |
-| Aufgabe | WK-001 – Agentensystem einrichten |
-| Status | in Prüfung; Einrichtung/Prüfbasis abgeschlossen und auf GitHub gesichert, PR wartet auf Review/Merge. Kein aktiver Entwicklungsdurchlauf mehr. |
+| Durchlauf | quality-ci-2026-10-09 |
+| Aufgaben | WK-012 (Actions), WK-003 (portable Browserprüfung), Such-/Spielanteil aus WK-004 |
+| Status | in Prüfung – Umsetzung und lokale/Actions-Prüfungen vollständig bestanden; PR #2 wartet auf Review, kein aktiver Entwicklungsdurchlauf nach Abschluss |
 | Bearbeiter | Codex, diese Cloud-Aufgabe |
-| Basis | GitHub-main `0d9196741225dc902ef75d0f167ed37f97b4b344` |
-| Branch | `codex/agent-system-2026-10-09` |
-| Start / letztes Lebenszeichen | 9. Oktober 2026 / Abschluss um 16:14 Uhr Europe/Berlin |
-| PR | https://github.com/Arizona2k/wunderkompass/pull/1 – offen, kein Draft, nicht zusammengeführt |
-| Gemeinsame Sperre | Kein Scheduler aktiv; vor neuem Durchlauf GitHub-Branch/PR und aktiven Aufgabenstatus prüfen. Keine parallele Reservierung starten. |
+| Basis | main `6a540d2af3c0c0bcfade1a806582ffa5afb6302c` |
+| Branch | codex/quality-ci-2026-10-09 |
+| Start / Lebenszeichen | 9. Oktober 2026, ca. 16:55 / 17:11 Uhr Europe/Berlin |
+| PR / Synchronisierung | https://github.com/Arizona2k/wunderkompass/pull/2 – gegen main, kein Merge; Implementierungsbranch gepusht, Abschlussdokumentation im selben Branch |
+| Nächster Schritt | PR #2 reviewen; keine automatische Zusammenführung. Spätere test-live-Freigabe erst mit aktiver Branch-Sperre |
 
-## Einrichtung und Prüfung
+## Umsetzung
 
-AGENTS.md erweitert; VISION.md, BACKLOG.md, QUALITY.md, CHANGELOG.md und PR-Vorlage angelegt; README.md/MIGRATION.md um aktuellen GitHub-/GO-Einstieg ergänzt. Bestehende IDs, Hash-Navigation, Lerninhalte, Speicherformat, Medien und Lockfile bleiben unverändert.
+Quality-Workflow unter .github/workflows/quality.yml für PRs gegen main/test-live, nur Leserechte, feste pnpm-Version, Node 24, Frozen-Installationen, typecheck/lint/test/build/verify und Browser als Pflichtschritte. Jobname Required quality checks bleibt stabil. Artefakte enthalten ausschließlich synthetische Screenshots/JSONs, keine Browserprofile. QA-Werkzeuge separat mit eigenem Lockfile/Workspace; vorhandenes App-Lockfile unverändert. package.json ergänzt verify als Alias zur bestehenden Inhaltsprüfung und test:browser.
 
-Historische Nachweise gelesen: PRUEFBERICHT.md (Export), QA.md (letzte Produktprüfung), MASTER-AUDIT.md und WORLD-AUDIT.md (frühere Ausbaustände), INVENTAR.md. Ihre Ergebnisse sind keine neue Vollabnahme dieses Checkouts. Rohprotokolle des externen Archivs sind hier nicht als vorhanden vorausgesetzt.
+Portable Browserprobe ergänzt um Suche/Tippfehler/kein Ergebnis/Escape, Hashlinks und Zurück/Vor sowie echte Memory-Runde mit falschen Paaren, Fortsetzen nach Reload und Abschluss. Bereinigung/Fehlerbericht bei fehlgeschlagener Probe ergänzt. Historische Skripte weiterhin an alte Sites-/Chromium-Pfade gebunden und nicht als portabel behauptet.
 
-Node `v24.19.0`; vorinstalliertes pnpm `11.19.0`. Die anfänglichen Fetch-/Downloadfehler lagen am eingeschränkten Netzwerkzugriff des Shell-Sandboxes. Mit `with_additional_permissions` für Netzwerk funktioniert der Zugriff über den vorhandenen Proxy: `git fetch origin` Exit 0, unveränderter main-Commit wie oben; Corepack liefert pnpm `11.25.0`. `COREPACK_HOME=/workspace/wunderkompass/work/corepack` hält den Paketmanager im ignorierten Arbeitsbereich. Eine frische Aufgabe muss dieses Setup erneut herstellen (work/ ist kein dauerhaftes Projektgedächtnis). Kein Proxy-Bypass und kein Lockfilewechsel.
+Deaktivierte importierbare Ruleset-Vorlage .github/rulesets/test-live.json bereitet PR-/Review-/Pflichtcheck-Schutz bei aktueller Zielbasis ohne Bypass vor. QUALITY.md beschreibt spätere Freigabereihenfolge und Grenzen. Keine Rulesets tatsächlich aktiviert, keine Auto-Merge-/Scheduler-/Deployment-Aktion. Ohne aktive Branch-Regeln ist ungeprüftes Pushen/Mergen technisch noch nicht gesperrt.
 
-Mit pnpm 11.25.0 wurde `pnpm install --frozen-lockfile` erfolgreich ausgeführt (Exit 0, Lockfile aktuell, vorhandene Abhängigkeiten bereits aktuell). Prüfungen werden über `COREPACK_HOME=/workspace/wunderkompass/work/corepack corepack pnpm ...` gestartet. Erster zusätzlicher Prüflauf mit vorinstalliertem pnpm 11.19.0 bestand ebenfalls, ist aber nicht der maßgebliche Paketmanager-Nachweis.
+## Tatsächliche lokale Prüfung
 
-Prüfstand: unveränderter Anwendungscode des Basiscommits plus Dokumentationsdiff dieses Branches; Node 24.19.0, pnpm 11.25.0. Alle fünf Standardprüfungen nach der Frozen-Lockfile-Installation ausgeführt:
+Prüfstand: Basiscommit oben plus Implementierungsdiff dieses Entwicklungsbranches. Node v24.19.0, pnpm 11.25.0 via COREPACK_HOME=/workspace/wunderkompass/work/corepack; Playwright 1.62.1. Netzwerkzugriff innerhalb des Shell-Sandboxes für git/Corepack/Registry/localhost erforderlich; vorhandenen Proxy erhalten.
 
-| Prüfung | Tatsächliches Ergebnis |
+| Prüfung | Ergebnis |
 | --- | --- |
-| `pnpm run typecheck` | Exit 0. |
-| `pnpm run lint` | Exit 0, keine Warnungen. |
-| `pnpm test` | Exit 0; Reporter meldet drei erfolgreiche Testdateien, null Fehler (content/progress/search). Die Quellen enthalten 20 Testdefinitionen; diese werden hier nicht als 20 einzeln ausgegebene Testergebnisse behauptet. |
-| `pnpm run build` | Exit 0; statischer Build erzeugt. Bestehende Warnungen: Chunks >500 kB und ineffektiver dynamischer Import von progress-storage.ts. |
-| `pnpm run verify:export` | Exit 0; 32 Inhaltsdateien und Prüfsummen verifiziert. |
-| Dokumentation | Neun Projekt-/Agentendateien geprüft; lokale Markdown-Links auflösbar, technische Altregeln erhalten; `git diff --check` Exit 0. Keine App-/Medien-/Inhalts-/Lockfileänderung im Diff. |
-| `node tests/browser/portable-smoke.mjs` | Exit 1 vor Browserstart: `ERR_MODULE_NOT_FOUND` für qa/node_modules/playwright/index.mjs. Keine Browserwege als neu bestanden behauptet; Werkzeugbereitstellung und echte Probe sind WK-003. |
+| pnpm install --frozen-lockfile | Exit 0 mit pnpm 11.25.0; App-Lockfile unverändert. |
+| pnpm --dir qa install --frozen-lockfile | Exit 0; eigener QA-Workspace, Lockfile und drei Werkzeugpakete. Lokal Store/Cache explizit unter .sites-runtime, um keine Home-Schreibrechte zu benötigen. |
+| pnpm run typecheck | Exit 0. |
+| pnpm run lint | Exit 0. |
+| pnpm test | Exit 0; drei erfolgreiche Testdateien content/progress/search, null Fehler; 20 Definitionen in den Quellen. |
+| pnpm run build | Exit 0. Bekannte Warnungen: große Chunks und ineffektiver dynamischer Import von progress-storage.ts. |
+| pnpm run verify | Exit 0; 32 Inhaltsdateien und Prüfsummen bestätigt. verify:export bleibt kompatibel erhalten. |
+| actionlint 1.7.7 | Exit 0 für .github/workflows/quality.yml. |
+| Browser | Chromium 151.0.7922.173 über QA_BROWSER_EXECUTABLE=/usr/bin/chromium. Suche, 21 Ansichten ohne Overflow, Bilder, vier Hubs, Favorit nach Reload, Memory mit falschen Paaren/Fortsetzen/Abschluss und vollständige Offline-Vorbereitung (111 Cacheeinträge) tatsächlich durchlaufen. Abschließender Gesamtlauf Exit 0; kalter Offline-Neustart mit beendetem Vorschau-Server, nachgewiesen fehlgeschlagenem HTTP-Zugriff und deaktiviertem Browsernetzwerk, ungeöffnetem Tierbild und bedienbarem Energiemodell erfolgreich. Keine JS-/Konsolen-/Request-/HTTP-Fehler oder externen Requests. Desktop-/Smartphone-Screenshots visuell angesehen. |
+| Browserdownload | Playwright-CDN durch Cloud-Netzwerkregel mit HTTP 403 Domain forbidden blockiert. Kein Bypass; lokal vorhandenes System-Chromium verwendet. GitHub muss seinen passenden Chromium-Download separat nachweisen. |
+| Diff/Syntax | git diff --check und node --check der beiden portablen Testdateien Exit 0. |
 
-Rohlogs lokal unter work/ (nicht versioniert). Die sicheren Resultate stehen dauerhaft hier. Neue Browser-/Geräte-/Audio-Vollabnahme bleibt offen.
+Rohlogs unter work/, synthetische Browsernachweise unter .qa-output/; nicht versionieren. Ein fehlgeschlagener Browserlauf gilt als fehlgeschlagener Pflichtcheck, auch wenn vorherige Teilprüfungen bestanden.
 
-Git-Synchronisierung erfolgreich: Einrichtungscommit `62f2b1e6dcdaf4cccc2c1a71a9716284b65f2283` wurde mit `git push -u origin codex/agent-system-2026-10-09` auf GitHub gesichert (Exit 0). Der GitHub-Connector bestätigte denselben Head in [Pull Request #1](https://github.com/Arizona2k/wunderkompass/pull/1), Ziel main, Basis unverändert `0d9196741225dc902ef75d0f167ed37f97b4b344`. Die vorliegende Ergänzung dokumentiert diesen Nachweis als separaten Übergabecommit auf demselben Branch. Es besteht kein Synchronisierungsblocker mehr. main bleibt unangetastet; es wurde nichts zusammengeführt oder veröffentlicht.
+## GitHub-Nachweis und offene Grenzen
 
-## Nächste Aufgabe und offene Grenzen
+PR #2 wurde als Draft gegen main erstellt, Branchcommit `52d60f7812e95c33d50d79b7944e9b8e68426839` per git push gesichert. Erster tatsächlicher Actions-Lauf: https://github.com/Arizona2k/wunderkompass/actions/runs/37948939464 – **failure**, Pflichtjob Required quality checks rot aufgrund der Browserprobe. Installation, Node 24.21.0/pnpm 11.25.0, typecheck/lint/test/build/verify, QA-Frozen-Installation und Chromium-Download/Systembibliotheken waren bereits erfolgreich. Damit ist auch nachgewiesen, dass ein Browserfehler den Gesamtcheck fehlschlagen lässt.
 
-Erster GO: Versions-/Werkzeugsetup bestätigen, dann WK-003 (portable Browserprobe), danach WK-004 (Suche/Pass-Nutzerweg). WK-002 wurde bei der Einrichtung mitbearbeitet. Bei erneutem Netzwerkblocker diesen festhalten und die nächste machbare Aufgabe wählen. Vor GO die Agentenregeln aus diesem Entwicklungsbranch laden oder den geprüften PR regulär nach main übernehmen; der Merge wird in dieser Einrichtung nicht ausgeführt.
+Diagnose und isolierte Testkorrektur: Vite-Vorschau fügt CORS/Vary: Origin hinzu; lokaler kalter Neustart konnte dadurch Modulvarianten verfehlen. tests/browser/preview-server.mjs schaltet ausschließlich die Vorschau-CORS-Middleware aus. Zusätzlich meldet Playwright/Chromium navigator.onLine in dieser persistenten Offline-Simulation weiterhin true (auch im ersten GitHub-Lauf); diese Browserkennung beweist keine Netzverfügbarkeit. Die korrigierte Probe beendet deshalb den Server tatsächlich und prüft den gescheiterten HTTP-Zugriff vor dem Offline-Neustart. Sie verändert weder Anwendung noch Worker und ignoriert keine Cache-Validierung. Der gesamte lokale Lauf danach ist grün.
 
-Offen: physische Mobilgeräte, Safari/Firefox, gehörte deutsche Stimme, manuelle Screenreader, 200-%-Zoom auf Geräten, Leistungsprofil schwächerer Hardware und pädagogische Beobachtung. BACKLOG.md priorisiert konkrete machbare Maßnahmen. Veröffentlichung/Testpersonen/Scheduler bleiben bis zu einem passenden gesonderten Auftrag blockiert. Persönlichen Entdeckerpass vor Domainwechsel sichern; keine Passdaten ins Repository.
+Der erste Artefakt-Upload fand wegen des versteckten .qa-output-Verzeichnisses keine Dateien. include-hidden-files ist nun für die zwei expliziten JSON-/PNG-Muster aktiviert; Profile bleiben ausgeschlossen. Aktualisierter GitHub-Gesamtlauf **success**: https://github.com/Arizona2k/wunderkompass/actions/runs/37949478487, Lauf #2, Implementierungscommit `ea60c90f3cd3a9bdc47b420b892f8eed5e81ef6c`, PR-Merge-Stand gegen unveränderten main. GitHub-Connector bestätigt completed/success. Logs belegen pnpm 11.25.0, 20 einzelne Unit-Tests bestanden / 0 Fehler, alle Installations-/TypeScript-/Lint-/Build-/Integritätsschritte sowie vollständige Chromium-Probe (151.0.7922.34) erfolgreich. Lokal waren es Node 24.19.0/Chromium 151.0.7922.173; GitHub verwendet Node 24.21.0 und den zu Playwright passenden Browser.
+
+Artefakt `browser-evidence-37949478487-1` (ID 11625801053, 522112 Bytes): laut Upload-Log fünf Dateien (ein JSON-Bericht, vier PNGs), erfolgreich gespeichert; Connector bestätigt nicht abgelaufen, Ablauf 16. Oktober 2026. Kein Profilupload. Die sicheren Resultate bleiben dauerhaft hier, auch nach Artefaktablauf. Erster roter und anschließender grüner Lauf zeigen Fehlersperre des Jobs und erfolgreichen Normalbetrieb. Branch-Protection-Sperrwirkung ist davon getrennt und noch nicht aktiviert.
+
+Remote-Refs nach Implementierung per git ls-remote bestätigt: main weiterhin `6a540d2af3c0c0bcfade1a806582ffa5afb6302c`, test-live weiterhin `88f79649d588b513bdb385d3307321b21f1a5aa7`, Entwicklungsbranch am getesteten Commit ea60c90. Die anschließende Übergabeänderung betrifft ausschließlich BACKLOG.md, PROJECT_STATE.md und CHANGELOG.md; kein neuer Anwendungs-/Test-/Workflowdiff. git diff --check bestanden. PR wartet auf Review; kein Auto-Merge, keine Vercel-Einstellung oder Testwebsite geändert.
+
+Noch offen: Branch-Regeln importieren/prüfen/aktivieren (separate spätere Freigabe), Sperrwirkung durch roten PR und regulären direkten Pushversuch belegen, vollständiger Pass-Export/Reset/Import/Tab-Browserweg (WK-004), physische Geräte, Safari/Firefox, Screenreader, gehörte deutsche Stimme, schwache Hardware und pädagogische Abnahme. Kein Scheduler oder Auto-Merge aktiviert. Nächster Schritt nach grüner QA: PR gegen main prüfen; Übernahme und spätere test-live-Bereitstellung ausdrücklich kontrollieren.

@@ -14,7 +14,9 @@
     "typecheck": "tsc --noEmit --incremental false",
     "lint": "eslint app tests/progress.test.mjs --max-warnings 0",
     "export:data": "node scripts/export-content.mjs",
-    "verify:export": "node scripts/verify-content.mjs"
+    "verify:export": "node scripts/verify-content.mjs",
+    "verify": "node scripts/verify-content.mjs",
+    "test:browser": "node tests/browser/portable-smoke.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
