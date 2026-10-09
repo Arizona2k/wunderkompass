@@ -30,7 +30,7 @@ pnpm --dir qa exec playwright install --with-deps chromium
 pnpm run test:browser
 ```
 
-Die Probe startet ihren eigenen lokalen Preview-Server und speichert isolierte Nachweise unter .qa-output/. QA_PORT und QA_PLAYWRIGHT_MODULE/QA_BROWSER_EXECUTABLE erlauben explizite Umgebungsanpassung. Historische Browser-Skripte zuerst auf alte absolute Pfade prüfen; nicht blind als portable Vollabnahme ausgeben.
+Die Probe startet ihren eigenen lokalen Preview-Server und akzeptiert HTTP-Bereitschaft erst nach dessen explizitem Startsignal. Ein fremder/staler Server auf dem Port darf weder Start noch Offline-Abnahme erfüllen. Sie speichert isolierte Nachweise unter .qa-output/. QA_PORT und QA_PLAYWRIGHT_MODULE/QA_BROWSER_EXECUTABLE erlauben explizite Umgebungsanpassung. Historische Browser-Skripte zuerst auf alte absolute Pfade prüfen; nicht blind als portable Vollabnahme ausgeben.
 
 ## Kritische Nutzung wie ein echter Nutzer
 
@@ -70,3 +70,13 @@ Jedes neue Thema vor Abschluss prüfen: korrekte Belege; altersgerechte interess
 Wissensnetz-Integrität automatisch prüfen: existierende Ziel-IDs, eindeutige Beziehungen, verständliche Begründungen, Rücknavigation, gültige Lernrouten und Direktlinks; verwaiste/ungenügend integrierte Inhalte erkennen oder fachliche Ausnahme begründen. Vorhandene Tests erweitern, statt gleichartige konkurrierende Prüfsysteme anzulegen.
 
 Aufgaben müssen eindeutig und fachlich richtig sein, Fehler lernfördernd erklären, Hinweise dürfen die Lösung nicht vorwegnehmen. Stufenwahl bewahren; adaptive Empfehlungen mit mehreren realistischen Erfolgs-/Fehlerserien prüfen, wenn diese Logik geändert wird. Bestehenden Fortschritt und zentrale Speicherung erhalten. Jede wesentliche visuelle Änderung auch auf kleinen Smartphones, Tastatur/Touch und reduzierter Bewegung prüfen.
+
+## Wissenschaft und Abenteuer: ganzheitliche Abnahme
+
+Visuelle Weiterentwicklung braucht ein erkennbares Vorher-/Nachher-Ergebnis im echten Produktionsbrowser. Zentrale Design-Tokens und wiederverwendbare Komponenten verwenden; Farb-/Themenakzente, Typografie, Abstände, Buttons, Navigation, Dialoge, Wissenskarten, Feedback, Pass-/Fortschrittsdarstellung und Lade-/Leer-/Fehlerzustände konsistent halten. Wissenschaftliche Glaubwürdigkeit, faszinierende Atmosphäre und moderne altersübergreifende Bedienung gemeinsam prüfen. Seiten dürfen unterschiedliche Welten zeigen, aber keine konkurrierenden Bedienkonzepte entwickeln. Vor größerer Neustrukturierung URLs, IDs und Altfortschritt prüfen.
+
+Medien nach tatsächlichem Lernwert auswählen: rechtlich belegte Fotos, eigene SVGs, Modelle, Karten, Zeitachsen, Vergleiche und visualisierte Prozesse. Wissenschaftliche Rekonstruktion, künstlerische Darstellung, vereinfachtes Modell und fehlender Maßstab sichtbar kennzeichnen. Keine erfundenen Medienrechte/Quellen. Aussagekräftige Alternativtexte bei inhaltlichen Bildern; reine Dekoration für assistive Technik ausblenden. Mobile Bildgrößen, Ladeverhalten und reduzierte Bewegung prüfen; ein schönes Bild darf fachliche Zusammenhänge nicht verfälschen.
+
+Auch bestehende Inhalte anhand konkreter Befunde kontinuierlich auf Richtigkeit/Aktualität, Tiefe, verständliche Beispiele, Visualisierung, Aufgaben/Schwierigkeit/Hinweise, Auffindbarkeit, Beziehungen/Routen und Quellen/Prüfstand verbessern. Tatsächlich geprüften Umfang nennen, unprüfbare Änderungen zurückstellen. Bei jeder Inhaltsüberarbeitung gesamten aktuellen Bestand auf neue sinnvolle Nachbarthemen prüfen, Rückverbindungen/Routen kontrollieren und Integritätsprüfungen ausführen. Gute Altinhalte erhalten; Mengenwachstum ist kein Qualitätsnachweis.
+
+Jedes Produktpaket zusammenhängend abnehmen: bestehende Inhalte/Funktionen, neue Inhalte, Design/Medien, Spiele/Lernsystem und Vernetzung berücksichtigen. Nicht jedes Paket verändert alle fünf Felder; längerfristige Lücken mit konkreten IDs im einzigen BACKLOG festhalten. Spiele regelmäßig auf Wiederholung, Poolumfang, Lernzweck, Stufen, individuelle Hinweise und fachliches Feedback prüfen. Keine manipulativ erzwungene Nutzung, Werbung, unnötiges Tracking, starke störende Animationen oder neue kostenpflichtige Infrastruktur.

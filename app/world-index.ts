@@ -8,7 +8,7 @@ export const WORLD_CATEGORIES:{id:WorldCategory;title:string;intro:string;icon:s
  {id:'people',title:'Große Köpfe',intro:'Menschen, Fragen und Ideen, die unsere Welt veränderten.',icon:'Users',seed:'person-marie_curie'},
  {id:'inventions',title:'Erfindungen',intro:'Probleme lösen, Teile untersuchen und Technik ausprobieren.',icon:'Lightbulb',seed:'invention-car'},
  {id:'buildings',title:'Bauwerke',intro:'Was trägt eine Brücke? Wie hebt Wasser ein Schiff?',icon:'Landmark',seed:'building-golden-gate-bridge'},
- {id:'science',title:'Große Fragen',intro:'Strom, Computer, Fliegen und Navigation selbst erforschen.',icon:'FlaskConical',seed:'science-circuit'}
+ {id:'science',title:'Wissenschaft & Weltall',intro:'Mond, Meere, Pflanzen und Technik: beobachten, ausprobieren und verstehen.',icon:'FlaskConical',seed:'science-circuit'}
 ];
 export function worldPlace(entry:WorldEntry,index=0):Place{const p=entry.locations[index];return {id:`world-${entry.id}-${index}`,name:entry.title,kind:'nature',lat:p.lat,lon:p.lon,text:p.label+'. '+entry.intro,fact:entry.category==='animals'?'Dieser Punkt zeigt eine Beispielregion, keine vollständige Tierverbreitung. Mehr dazu auf der Entdeckerkarte.':'Dieser Punkt zeigt einen verbundenen Ort. Entwicklungen hatten oft viele Beteiligte und weitere Orte.',label:entry.title};}
 export const WORLD_PLACES=WORLD_INDEX.flatMap(t=>t.locations.map((_,i)=>worldPlace(t,i)));

@@ -39,3 +39,11 @@ Masterauftrag strukturiert in vorhandenes Projektgedächtnis integriert: Bestand
 - Alle drei Schwierigkeitsgrade, Fragen/Antworten/IDs und gespeicherten Runden erhalten. Der zentrale Schema-3-Pass und seine Speicherfunktionen bleiben unverändert. Neue Hinweisdaten in den vorhandenen Inhalts-Export aufgenommen.
 - Redaktionelle Fach-/Lernprüfung mit Quellen und Abrufgrenzen dokumentiert. Produktionsbrowserprobe um jede einzelne Frage/Hintstufe, alte synthetische Runden und neue Hinweise im kalten Offlinebetrieb ergänzt; vollständig bestanden. Keine unabhängige Kinder-/Fach-/Hörabnahme behauptet.
 - Draft-PR [#11](https://github.com/Arizona2k/wunderkompass/pull/11) gegen test-live erstellt; keine Websiteveröffentlichung oder automatische Übernahme. Testumfang, Warnungen und Übergabe in PROJECT_STATE.md.
+
+## 2026-10-09 – Entdeckerzentrale und Wissenschafts-/Abenteueridentität (WK-024, in Review)
+
+- Produktvision und Qualitätsregeln dauerhaft ergänzt; vorhandenen einzigen Backlog um priorisierte visuelle Bestandsnachrüstung erweitert.
+- Startseite mit atmosphärischem SVG-Einstieg, sichtbarer Suche, sechs wiederverwendbaren visuellen Themenzugängen und direktem Globusanker aufgewertet. Bestehende Fortsetzung/Navigation/IDs/Pass erhalten; gemeinsame Themenkomponente auch in der Weltenübersicht.
+- Drei vorhandene Wissensverbindungen auswählbar mit Karten-/Routenwegen; direkter Challenge-Einstieg respektiert gespeicherte Runde. Wissenschaftsbereich deutlicher benannt und Hilfezahlen aus aktuellem Bestand gespeist.
+- Strömungseinstieg anhand NOAA um Gezeiten ergänzt; Fach-/Medienprüfung mit begrenztem Umfang dokumentiert. Eigene gekennzeichnete künstlerische SVGs und vorhandene lizenzierte Medien, keine neuen Wissenskarten oder Spielmechaniken.
+- 28 App-/27 Release-Tests, Standardprüfungen, vollständiger Produktionsbrowser bei vier Größen, Tastatur/Touch/axe, alle 142 Aufgaben/180 Hinweise und kalter Offline-Neustart bestanden. Mobile Layout-/Klickbefunde korrigiert; Testfokus synchronisiert und eigener Previewstart gegen fremden Portprozess abgesichert. Keine Zusammenführung oder Veröffentlichung.
