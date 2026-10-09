@@ -1,0 +1,141 @@
+name: Isolated Vercel E2E probe
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: 'After separate approval, free quota and protection check: ISOLATED_PREVIEW_NO_COST'
+        type: string
+        required: true
+
+permissions: {}
+concurrency:
+  group: wunderkompass-development
+  cancel-in-progress: false
+
+jobs:
+  authorize:
+    # Preparation latch: a reviewed activation change is required; do not remove casually.
+    if: ${{ false && github.repository == 'Arizona2k/wunderkompass' && github.actor == 'Arizona2k' && github.ref == 'refs/heads/main' && inputs.confirmation == 'ISOLATED_PREVIEW_NO_COST' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    permissions:
+      contents: read
+      statuses: read
+    outputs:
+      main: ${{ steps.scope.outputs.main }}
+      testlive: ${{ steps.scope.outputs.testlive }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - id: scope
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        with:
+          script: |
+            const { CANDIDATE, EXPIRES } = require('./scripts/release/vercel-e2e.cjs');
+            if (Date.now() >= EXPIRES) throw Error('Probe window expired');
+            const {owner, repo} = context.repo;
+            const {data: commit} = await github.rest.repos.getCommit({owner, repo, ref: CANDIDATE});
+            if (commit.sha !== CANDIDATE || commit.author?.login !== owner) throw Error('Candidate is not the existing owner-authored commit');
+            const {data: baseline} = await github.rest.repos.getCombinedStatusForRef({owner, repo, ref: CANDIDATE});
+            if (!baseline.statuses.some(s => s.context === 'Vercel' && s.state === 'success' && s.creator?.login === 'vercel[bot]')) throw Error('No existing successful Vercel baseline');
+            for (const [ref, output] of [['main','main'], ['test-live','testlive']]) {
+              const {data} = await github.rest.git.getRef({owner, repo, ref: 'heads/' + ref});
+              core.setOutput(output, data.object.sha);
+            }
+
+  checks:
+    needs: authorize
+    name: Exact candidate quality checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: '4b73cdb4ab049bcfe227fd43f07c80e8ffe68b0f'
+          persist-credentials: false
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run typecheck
+      - run: pnpm run lint
+      - run: node --test tests/release/*.test.cjs
+      - run: pnpm test
+      - run: pnpm run build
+      - run: pnpm run verify
+      - run: pnpm --dir qa install --frozen-lockfile
+      - run: pnpm --dir qa exec playwright install --with-deps chromium
+      - run: pnpm run test:browser
+
+  push:
+    needs: [authorize, checks]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    permissions:
+      contents: write
+    outputs:
+      branch: ${{ steps.push.outputs.branch }}
+      since: ${{ steps.push.outputs.since }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: true
+      - id: push
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        env:
+          BASE_MAIN: ${{ needs.authorize.outputs.main }}
+          BASE_TESTLIVE: ${{ needs.authorize.outputs.testlive }}
+        with:
+          script: |
+            const {transfer, EXPIRES} = require('./scripts/release/vercel-e2e.cjs');
+            if (Date.now() >= EXPIRES) throw Error('Probe window expired');
+            const expectedBranches = `${process.env.BASE_MAIN}\trefs/heads/main\n${process.env.BASE_TESTLIVE}\trefs/heads/test-live`;
+            core.setOutput('since', new Date(Math.floor(Date.now() / 1000) * 1000).toISOString());
+            let receipt;
+            try {
+              receipt = transfer({cwd: process.env.GITHUB_WORKSPACE, runId: `${context.runId}-${process.env.GITHUB_RUN_ATTEMPT}`, expectedBranches});
+              core.setOutput('branch', receipt.branch);
+            } catch (error) { receipt = error.receipt || {failure: error.message}; core.setFailed(error.message); }
+            await core.summary.addHeading('Create-only Git transfer').addCodeBlock(JSON.stringify(receipt, null, 2)).write();
+
+  observe:
+    needs: [authorize, push]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    permissions:
+      contents: read
+      deployments: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        env:
+          PREVIEW_BRANCH: ${{ needs.push.outputs.branch }}
+          PUSH_SINCE: ${{ needs.push.outputs.since }}
+          BASE_MAIN: ${{ needs.authorize.outputs.main }}
+          BASE_TESTLIVE: ${{ needs.authorize.outputs.testlive }}
+        with:
+          script: |
+            const {observe} = require('./scripts/release/vercel-e2e.cjs');
+            let receipt;
+            try { receipt = await observe({github, branch: process.env.PREVIEW_BRANCH, since: process.env.PUSH_SINCE}); }
+            catch (error) { receipt = {failure: error.message}; core.setFailed(error.message); }
+            for (const [ref, expected] of [['main',process.env.BASE_MAIN], ['test-live',process.env.BASE_TESTLIVE]]) {
+              const {data} = await github.rest.git.getRef({...context.repo, ref: 'heads/' + ref});
+              if (data.object.sha !== expected) core.setFailed('Protected branch changed externally; manual inspection required');
+            }
+            await core.summary.addHeading('Preview observation — browser acceptance remains pending')
+              .addCodeBlock(JSON.stringify(receipt, null, 2))
+              .addRaw('No promotion, retries, rollback or deletion. Complete VERCEL-E2E.md acceptance using the existing authorized browser. A green workflow alone is not E2E acceptance.')
+              .write();

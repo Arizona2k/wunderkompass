@@ -41,7 +41,7 @@ jobs:
       - name: Automated tests
         run: pnpm test
       - name: Isolated permission probe mechanics (local Git only)
-        run: node --test tests/release/write-permission-probe.test.cjs
+        run: node --test tests/release/*.test.cjs
       - name: Production build
         run: pnpm run build
       - name: Content integrity

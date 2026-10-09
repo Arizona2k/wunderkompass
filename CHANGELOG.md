@@ -19,3 +19,9 @@ Tatsächliche Prüfungen, Einschränkungen und Synchronisierungsstand dieser Ein
 - Isolierten Vorschau-Testserver, echte Serverabschaltung vor kaltem Offline-Neustart sowie Fehlerberichte und ausschließlich synthetische Browserartefakte vorbereitet. Vollständige lokale Browserprobe bestanden.
 - Deaktivierte test-live-Ruleset-Vorlage und sichere spätere Freigabereihenfolge dokumentiert. Keine aktive Branch-Regel, kein Auto-Merge, keine Vercel-Änderung oder Veröffentlichung.
 - Erster tatsächlicher Actions-Lauf hat einen Browserfehler korrekt als roten Pflichtcheck gemeldet. Der korrigierte vollständige Actions-Lauf #2 ist grün, einschließlich 20 Unit-Tests, Chromium und fünf gespeicherten Browserartefakten. Getesteter Commit und Lauf stehen in PROJECT_STATE.md; Implementierung wartet in PR #2 auf Review.
+
+## 2026-10-09 – Isolierten Vercel-Test vorbereitet (WK-015, in Review)
+
+- Befristeten, manuell startbaren und fest deaktivierten Workflow mit exakter Kandidatenqualität, create-only Git-Push und frischer branch-/SHA-bezogener Previewbeobachtung vorbereitet. Keine Autoränderung, Promotion oder automatische Freigabe.
+- 13 neue lokale Git-/Beobachtungstests bestanden; fünf vorhandene Tagtests erhalten. Bestehende vollständige Kandidatenprüfung einschließlich 27 Release-/20 App-Tests und Chromium-Produktionsbrowser erfolgreich.
+- VERCEL-E2E.md dokumentiert Abnahme, Kontingent-/Übernahmegrenze, Schutzprüfung, Fehlerbehandlung und Erhaltung des alten Entwicklungsstands. Noch kein Remote-E2E-Nachweis und keine Aktivierung.

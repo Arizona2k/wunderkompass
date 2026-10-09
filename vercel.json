@@ -2,7 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "git": {
     "deploymentEnabled": {
-      "codex/write-permission-probe-2026-10-09": false
+      "codex/write-permission-probe-2026-10-09": false,
+      "codex/vercel-e2e-2026-10-09": false
     }
   },
   "framework": "vite",
