@@ -31,3 +31,11 @@ Auf eigenem Branch von test-live umgesetzt, noch nicht veröffentlicht: acht neu
 ## 9. Oktober 2026 – WK-020: Masterregeln und lernfördernde Challenge-Hinweise
 
 Masterauftrag strukturiert in vorhandenes Projektgedächtnis integriert: Bestandsverbesserung, verpflichtende Gesamtprüfung des Wissensnetzes, Themencheckliste, Denkanspruch/adaptive Empfehlungen, Markenfreigabe und 14-Punkte-Bericht mit WhatsApp-Regel. Wissens-Challenge unterstützt jetzt alle drei Stufen mit optionalen Denkhinweisen; Auflösung erst nach richtiger Antwort, Hinweis bei Aufgabenwechsel geschlossen. Bestehende Fragen, Quellen, IDs, Pass und Umfang erhalten. Produktionsbrowserprüfung mit erweiterten Hinweiskontrollen bei vier Größen und zusätzliche Tastatur-/axe-Probe bestanden; Standardprüfungen und 27 Release-Tests grün. Implementierung im Entwicklungsbranch zur manuellen Prüfung; kein Merge oder Deployment. Vollständige Nachweise/Grenzen in PROJECT_STATE.md.
+
+## 9. Oktober 2026 – Individuelle Challenge-Hinweise (WK-023, in Review)
+
+- Drei ständig wiederholte Standardtexte durch 180 individuell redigierte Hinweise für alle 142 Aufgaben ersetzt; 38 Fragen besitzen einen freiwilligen, konkreteren zweiten Denkschritt. Erste Hilfe orientiert, zweite Hilfe unterstützt einen gezielten Vergleich oder Rechenweg.
+- Themenname bei jeder Frage sichtbar und im Vorlesetext; Hinweise lassen sich vorlesen, ohne noch nicht gewählte Hilfe vorwegzunehmen. Vollständige Erklärung erst nach richtiger Antwort; Hinweise beim Fragenwechsel wieder geschlossen.
+- Alle drei Schwierigkeitsgrade, Fragen/Antworten/IDs und gespeicherten Runden erhalten. Der zentrale Schema-3-Pass und seine Speicherfunktionen bleiben unverändert. Neue Hinweisdaten in den vorhandenen Inhalts-Export aufgenommen.
+- Redaktionelle Fach-/Lernprüfung mit Quellen und Abrufgrenzen dokumentiert. Produktionsbrowserprobe um jede einzelne Frage/Hintstufe, alte synthetische Runden und neue Hinweise im kalten Offlinebetrieb ergänzt; vollständig bestanden. Keine unabhängige Kinder-/Fach-/Hörabnahme behauptet.
+- Gegen test-live zur Prüfung vorbereitet; keine Websiteveröffentlichung oder automatische Übernahme. Testumfang, Warnungen und Übergabe in PROJECT_STATE.md.

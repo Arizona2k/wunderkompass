@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T18:37:28.891Z",
+  "generatedAt": "2026-10-09T19:40:18.950Z",
   "personalProgressIncluded": false,
   "topics": 116,
   "categories": {
@@ -214,6 +214,15 @@
       "entries": 8,
       "bytes": 1801,
       "sha256": "b1445a3e3d48ecc73fa488db69db3d8025e55744625873382dff4288695dcc37"
+    },
+    {
+      "file": "challenge-hints.json",
+      "sources": [
+        "app/challenge-hints.json"
+      ],
+      "entries": 142,
+      "bytes": 33117,
+      "sha256": "d46f879f6c2e58ebd66066e83f7dbb4d2c2a8b8c505aebd8b43c00b648d7dac4"
     },
     {
       "file": "world-connections.json",

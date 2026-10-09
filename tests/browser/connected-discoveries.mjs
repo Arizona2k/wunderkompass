@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 const topics=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
+const hints=JSON.parse(await fs.readFile(new URL('../../app/challenge-hints.json',import.meta.url),'utf8'));
 const questionBank=topics.flatMap(t=>[{...t.question,id:t.id+':mini'},...(t.challenges??[])]);
 export async function connectedDiscoveries(page,ready,report,width){
  const pass=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
@@ -56,7 +57,12 @@ export async function connectedDiscoveries(page,ready,report,width){
    const hint=room.locator('.world-game-hint');
    assert.equal(await hint.getAttribute('open'),null);
    await hint.locator('summary').click();
-   assert.ok((await hint.innerText()).length>60);
+   await hint.getByText(hints[q.id].steps[0],{exact:true}).waitFor();
+   if(hints[q.id].steps.length===2){
+    assert.equal(await hint.getByText(hints[q.id].steps[1],{exact:true}).count(),0);
+    await hint.getByRole('button',{name:'Noch ein Hinweis',exact:true}).click();
+    await hint.getByText(hints[q.id].steps[1],{exact:true}).waitFor();
+   }
    assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
    const answers=room.locator('.quiz-answer');
