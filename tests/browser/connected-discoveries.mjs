@@ -52,17 +52,28 @@ export async function connectedDiscoveries(page,ready,report,width){
   for(let i=0;i<6;i++){
    const state=(await pass()).gameSessions['world:knowledge-challenge'].challenge,q=questionBank.find(q=>q.id===state.ids[i]);
    assert.equal(state.index,i);
+   assert.equal(await room.locator('.lab-feedback').count(),0);
+   const hint=room.locator('.world-game-hint');
+   assert.equal(await hint.getAttribute('open'),null);
+   await hint.locator('summary').click();
+   assert.ok((await hint.innerText()).length>60);
+   assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
+   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
    const answers=room.locator('.quiz-answer');
    if(i===0){
     await answers.filter({has:page.getByText(q.answers.find((_,j)=>j!==q.correct),{exact:true})}).click();
     await room.getByText('Noch einmal nachdenken.',{exact:true}).waitFor();
+    assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
     assert.equal(await room.getByRole('button',{name:'Nächste Aufgabe',exact:true}).count(),0);
     await page.reload();await ready(page);await page.getByRole('button',{name:'Fortsetzen',exact:true}).click();
     await room.getByText('Noch einmal nachdenken.',{exact:true}).waitFor();
+    assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
     assert.deepEqual((await pass()).gameSessions['world:knowledge-challenge'].challenge.ids,previous);
    }
    await answers.filter({has:page.getByText(q.answers[q.correct],{exact:true})}).click();
    await room.getByText('Richtig erklärt!',{exact:true}).waitFor();
+   await room.getByText(q.why,{exact:true}).waitFor();
+   assert.equal(await room.locator('.world-game-hint').count(),0);
    await room.getByRole('button',{name:i===5?'Spielstempel sammeln':'Nächste Aufgabe',exact:true}).click();
   }
   await room.getByRole('heading',{name:'Sechs Zusammenhänge erklärt!',exact:true}).waitFor();
@@ -92,5 +103,5 @@ export async function connectedDiscoveries(page,ready,report,width){
   }
   report.checks.push('Both new five-station routes completed through real mini questions');
  }
- report.checks.push('Connected discoveries '+width+': eight articles, both models, reload, reciprocal link, search, pagination/history, three difficulties with wrong/right/reload/finish and fresh follow-up rounds');
+ report.checks.push('Connected discoveries '+width+': eight articles, both models, reload, reciprocal link, search, pagination/history, three difficulties with non-revealing hints, explanation only after success, wrong/right/reload/finish and fresh follow-up rounds');
 }
