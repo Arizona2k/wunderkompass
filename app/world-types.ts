@@ -1,0 +1,16 @@
+import type {Mode,Place} from './earth-data';
+import type {Activity,LocalProgress} from './progress-storage';
+export type WorldCategory='animals'|'history'|'people'|'inventions'|'buildings'|'science';
+export type WorldLocation={label:string;lat:number;lon:number;iso?:string};
+export type NewWorldModel='atmosphere'|'magnetism'|'currents'|'motor'|'foodweb'|'sound'|'solar-system'|'energy'|'patterns';
+export type WorldModel='circuit'|'network'|'flight'|'gps'|'computer'|'shadows'|'lock'|'bridge'|'heights'|NewWorldModel;
+export type WorldQuestion={prompt:string;answers:string[];correct:number;why:string};
+export type WorldTopic={id:string;category:WorldCategory;title:string;intro:string;aliases:string[];paragraphs:string[];facts:{label:string;text:string}[];more:string[];surprise:string;locations:WorldLocation[];related:string[];sources:{label:string;url:string}[];sourceNote?:string;image?:string;question:WorldQuestion;links:{label:string;mode:Mode;id?:string;iso?:string}[];model?:WorldModel;
+ animal?:{group:string;habitat:string;continent:string;diet:string;skill:string;size:{min:number;max:number;unit:string;measurement_de:string;text_de:string};protection:{text_de:string;scope:string;checked_at:string}};
+ history?:{year:number;date:string;era:string;sensitive:boolean};
+ person?:{lifespan:string;field:string;method:string};
+ invention?:{year:number;date:string;stages:{label:string;text:string}[];parts:{id:string;name:string;description:string}[];blueprint:'car'|'plane'|'lamp'|'computer'|'phone'|'printer'|'compass'|'train'|'rocket'|'satellite'|'network'};
+ building?:{date:string;size:string;height?:number};
+};
+export type WorldEntry=Pick<WorldTopic,'id'|'category'|'title'|'intro'|'aliases'|'locations'|'image'|'model'> & {group?:string;habitat?:string;continent?:string;year?:number;era?:string;sensitive?:boolean};
+export type WorldActions={progress:LocalProgress;onActivity:(activity:Activity)=>void;onVisit:(id:string)=>void;onLearn:(id:string)=>void;onFavorite:(id:string)=>void;onRead:(s:string)=>void;onPlace:(p:Place)=>void;onNavigate:(mode:Mode,id?:string,iso?:string)=>void;onSave:(id:string,key:string,value:unknown,activity:Activity)=>void;onReview:(id:string,correct:boolean)=>void;onGame:(id:string)=>void;onClear:(id:string)=>void};
