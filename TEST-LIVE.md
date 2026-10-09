@@ -2,6 +2,12 @@
 
 Stand: 9. Oktober 2026. Einrichtung auf `codex/test-release-2026-10-09`, Basis `test-live` 1f7fe74a0f8e7e14bf8e709aea2135dc1b09172c. main, test-live, Vercel-Einstellungen und bestehende Testwebsite werden durch diese Einrichtung nicht geändert. Keine Freigabelinks/Zugangsdaten speichern.
 
+## Aktueller PR-Betrieb: manuelle Übernahme
+
+Für sämtliche künftigen WunderKompass-Entwicklungsrunden gilt AGENTS.md: nach fertiger Implementierung und bestandenen lokalen Pflichtprüfungen selbstständig einen PR gegen test-live als Ready for review erstellen; fertige Draft-Zwischenstände selbstständig umstellen. Bestehende Quality-CI am aktuellen PR-Stand nach Möglichkeit prüfen und Fehler beheben. Link, tatsächlichen Prüfstatus und wesentliche Änderungen melden. Ready for review ist keine Freigabe, auch grüne Tests ersetzen nicht die ausdrückliche Nutzerbestätigung zur Übernahme nach test-live.
+
+Kein automatisches Merge/Auto-Merge, keine main-Änderung oder automatische Produktionsveröffentlichung. Keine neuen kostenpflichtigen Dienste/Tarif-/Budgetänderungen und kein paralleles Automatisierungssystem. Die vorbereitete Release-Kette, feste false-Sperren, Variable und Freigabelabel bleiben inaktiv. Der unten beschriebene Ablauf nach späterer Aktivierung ist kein Auftrag zur Aktivierung; dafür bleiben gesonderter ausdrücklicher Auftrag und sämtliche bisherigen Abnahmen erforderlich.
+
 ## Tatsächlich überprüfte Rechte und Grenzen
 
 GitHub-Connector: privates persönliches Repository Arizona2k/wunderkompass, Defaultbranch main, gemeldete admin/maintain/push/pull-Rechte, Auto-Merge deaktiviert. Beide Zielbranches liefern `protected: false`. Rulesets-API antwortet HTTP 403: „Upgrade to GitHub Pro or make this repository public to enable this feature.“ Branch-Protection-API antwortet separat „Resource not accessible by integration“; dies ist eine Connector-Rechtegrenze, kein zusätzlicher Tarifnachweis. Die deaktivierte Ruleset-Vorlage bleibt ausschließlich für einen später passenden Tarif erhalten.

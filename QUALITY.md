@@ -45,11 +45,15 @@ Fehler korrigieren und betroffene Prüfungen wiederholen. Browsergrößen und So
 
 ## Abschluss und Freigabe
 
-Ein Arbeitspaket ist abgeschlossen, wenn Akzeptanzkriterien erfüllt, relevante Prüfungen bestanden, offene Grenzen dokumentiert, Projektgedächtnis aktualisiert und beabsichtigte Änderungen in Git gesichert sind. Ein ungetesteter Zwischenstand darf als solcher in einem Draft-PR gesichert werden, erhält aber keine Qualitätsfreigabe. Pro Durchlauf in PROJECT_STATE.md festhalten: Datum, Basis-/getesteter Commit bzw. eindeutig bezeichneten Diff, Werkzeugversionen, Befehle, Exitcodes, tatsächlicher Umfang, Warnungen, Blocker, Branch/PR und nächster Schritt. Rohlogs lokal unter work/ oder .qa-output/; relevante sichere Ergebnisse dauerhaft dokumentieren.
+Ein Arbeitspaket ist abgeschlossen, wenn Akzeptanzkriterien erfüllt, relevante Prüfungen bestanden, offene Grenzen dokumentiert, Projektgedächtnis aktualisiert und beabsichtigte Änderungen in Git gesichert sind. Ein ungetesteter Zwischenstand darf als solcher in einem Draft-PR gesichert werden, erhält aber keine Qualitätsfreigabe. Nach Fertigstellung und bestandenen lokalen Pflichtprüfungen selbstständig als Ready for review gegen test-live erstellen bzw. einen vorhandenen Draft umstellen. Der PR-Ablauf in AGENTS.md ist verbindlich. Pro Durchlauf in PROJECT_STATE.md festhalten: Datum, Basis-/getesteter Commit bzw. eindeutig bezeichneten Diff, Werkzeugversionen, Befehle, Exitcodes, tatsächlicher Umfang, Warnungen, Blocker, Branch/PR und nächster Schritt. Rohlogs lokal unter work/ oder .qa-output/; relevante sichere Ergebnisse dauerhaft dokumentieren.
 
-main niemals direkt ändern; keine automatische Zusammenführung oder Veröffentlichung beim GO. Unabhängige Websiteänderungen nicht in einen Dokumentations-/Einrichtungsauftrag mischen.
+Ready for review bezeichnet ausschließlich Prüfbereitschaft. Bestehende Quality-CI am aktuellen Head-/Basisstand nach Möglichkeit prüfen, Fehler beheben und nach Korrekturen erneut prüfen. Fehlende, laufende, rote, abgebrochene oder übersprungene Pflichtchecks nicht als bestanden/freigegeben bezeichnen; PR-Link, geprüften Stand/Lauf und tatsächlichen Status melden. Grün bedeutet technisch geprüft, die Übernahme nach test-live wartet weiterhin auf ausdrückliche Nutzerbestätigung. Keine neuen Prüf-/Automatisierungssysteme oder CI-Ausnahmen dafür einführen.
+
+main nicht ändern; kein automatisches Merge/Auto-Merge oder direkte test-live-Übertragung, keine automatische Produktionsveröffentlichung. Deaktivierte Release-Workflows, false-Sperren, Releasevariable und -label bleiben unverändert/inaktiv. Unabhängige Websiteänderungen nicht in einen Dokumentations-/Einrichtungsauftrag mischen.
 
 ## Vorbereitete automatische Testpersonen-Freigabe – ausgeschaltet
+
+Der folgende technische Ablauf beschreibt ausschließlich eine hypothetische spätere, separat beauftragte Aktivierung. Aktuell gilt die manuelle Nutzerbestätigung aus AGENTS.md: Ready for review und grüne Quality-CI aktivieren nichts und ersetzen keine Übernahme-/Veröffentlichungsfreigabe.
 
 TEST-LIVE.md ist die aktuelle technische Betriebs- und Aktivierungsanleitung. Das private Repository besitzt keine aktive Branch Protection; die Rulesets-API fordert einen Tarifwechsel. Die deaktivierte Vorlage ist kein Schutz. Freiwillige CI verhindert weder direkten Push noch manuelles Merge durch Schreibberechtigte. main bleibt in dieser Kette vollständig getrennt.
 
