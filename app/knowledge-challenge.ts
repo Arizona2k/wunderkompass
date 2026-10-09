@@ -3,10 +3,15 @@ import type {WorldTopic, WorldQuestion} from './world-types';
 export type Difficulty='easy'|'medium'|'hard';
 export type ChallengeQuestion=WorldQuestion & {id:string;topic:string;difficulty:Difficulty};
 export const DIFFICULTIES: {id:Difficulty;label:string;description:string}[]=[
- {id:'easy',label:'Leicht',description:'Kurzfragen aus allen Wissenswelten. Hinweise helfen dir.'},
+ {id:'easy',label:'Leicht',description:'Kurzfragen aus allen Wissenswelten. Erkennen und erinnern.'},
  {id:'medium',label:'Mittel',description:'Natur, Erde und Weltall: Beobachtungen erklären.'},
  {id:'hard',label:'Schwer',description:'Zusammenhänge übertragen und Behauptungen prüfen.'}
 ];
+export const CHALLENGE_HINTS:Record<Difficulty,string>={
+ easy:'Lies die Frage noch einmal. Was weißt du schon über das Thema? Vergleiche jede Antwort mit diesem Wissen.',
+ medium:'Was wird beobachtet und wodurch könnte es entstehen? Prüfe, ob jede Antwort die Beobachtung wirklich erklärt.',
+ hard:'Überlege Schritt für Schritt: Welche Bedingungen gelten? Was würde aus jeder Antwort folgen? Prüfe, ob die Schlussfolgerung zur Frage passt.'
+};
 export const CHALLENGE_BANK:ChallengeQuestion[]=(CATALOG as WorldTopic[]).filter(t=>!t.history?.sensitive).flatMap(t=>[
  {...t.question,id:t.id+':mini',topic:t.id,difficulty:'easy' as const},
  ...(t.challenges??[]).map(q=>({...q,topic:t.id}))
