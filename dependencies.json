@@ -1,0 +1,299 @@
+{
+  "nodeUsed": "24.19.0",
+  "pnpmUsed": "11.25.0",
+  "application": [
+    {
+      "name": "@base-ui/react",
+      "group": "dependencies",
+      "declared": "^1.7.0",
+      "installed": "1.7.0"
+    },
+    {
+      "name": "@hookform/resolvers",
+      "group": "dependencies",
+      "declared": "^5.7.1",
+      "installed": "5.7.1"
+    },
+    {
+      "name": "@shadcn/react",
+      "group": "dependencies",
+      "declared": "^0.3.0",
+      "installed": "0.3.0"
+    },
+    {
+      "name": "class-variance-authority",
+      "group": "dependencies",
+      "declared": "0.7.1",
+      "installed": "0.7.1"
+    },
+    {
+      "name": "clsx",
+      "group": "dependencies",
+      "declared": "2.1.1",
+      "installed": "2.1.1"
+    },
+    {
+      "name": "cmdk",
+      "group": "dependencies",
+      "declared": "^1.1.1",
+      "installed": "1.1.1"
+    },
+    {
+      "name": "d3-geo",
+      "group": "dependencies",
+      "declared": "^3.1.1",
+      "installed": "3.1.1"
+    },
+    {
+      "name": "date-fns",
+      "group": "dependencies",
+      "declared": "^4.4.0",
+      "installed": "4.4.0"
+    },
+    {
+      "name": "drizzle-orm",
+      "group": "dependencies",
+      "declared": "0.45.2",
+      "installed": "0.45.2"
+    },
+    {
+      "name": "embla-carousel-react",
+      "group": "dependencies",
+      "declared": "^8.6.0",
+      "installed": "8.6.0"
+    },
+    {
+      "name": "input-otp",
+      "group": "dependencies",
+      "declared": "^1.4.2",
+      "installed": "1.4.2"
+    },
+    {
+      "name": "lucide-react",
+      "group": "dependencies",
+      "declared": "^1.31.0",
+      "installed": "1.31.0"
+    },
+    {
+      "name": "next",
+      "group": "dependencies",
+      "declared": "16.3.4",
+      "installed": "16.3.4"
+    },
+    {
+      "name": "next-themes",
+      "group": "dependencies",
+      "declared": "^0.4.6",
+      "installed": "0.4.6"
+    },
+    {
+      "name": "radix-ui",
+      "group": "dependencies",
+      "declared": "^1.6.7",
+      "installed": "1.6.7"
+    },
+    {
+      "name": "react",
+      "group": "dependencies",
+      "declared": "19.2.6",
+      "installed": "19.2.6"
+    },
+    {
+      "name": "react-day-picker",
+      "group": "dependencies",
+      "declared": "^10.0.1",
+      "installed": "10.0.1"
+    },
+    {
+      "name": "react-dom",
+      "group": "dependencies",
+      "declared": "19.2.6",
+      "installed": "19.2.6"
+    },
+    {
+      "name": "react-hook-form",
+      "group": "dependencies",
+      "declared": "^7.85.0",
+      "installed": "7.85.0"
+    },
+    {
+      "name": "react-resizable-panels",
+      "group": "dependencies",
+      "declared": "^4.12.2",
+      "installed": "4.12.2"
+    },
+    {
+      "name": "recharts",
+      "group": "dependencies",
+      "declared": "^3.8.0",
+      "installed": "3.8.0"
+    },
+    {
+      "name": "sonner",
+      "group": "dependencies",
+      "declared": "^2.0.8",
+      "installed": "2.0.8"
+    },
+    {
+      "name": "tailwind-merge",
+      "group": "dependencies",
+      "declared": "3.6.0",
+      "installed": "3.6.0"
+    },
+    {
+      "name": "three",
+      "group": "dependencies",
+      "declared": "^0.186.1",
+      "installed": "0.186.1"
+    },
+    {
+      "name": "vaul",
+      "group": "dependencies",
+      "declared": "^1.1.2",
+      "installed": "1.1.2"
+    },
+    {
+      "name": "zod",
+      "group": "dependencies",
+      "declared": "^3.25.76",
+      "installed": "3.25.76"
+    },
+    {
+      "name": "@cloudflare/vite-plugin",
+      "group": "devDependencies",
+      "declared": "1.37.1",
+      "installed": "1.37.1"
+    },
+    {
+      "name": "@cloudflare/workers-types",
+      "group": "devDependencies",
+      "declared": "4.20260515.1",
+      "installed": "4.20260515.1"
+    },
+    {
+      "name": "@tailwindcss/postcss",
+      "group": "devDependencies",
+      "declared": "4.2.1",
+      "installed": "4.2.1"
+    },
+    {
+      "name": "@types/d3-geo",
+      "group": "devDependencies",
+      "declared": "^3.1.1",
+      "installed": "3.1.1"
+    },
+    {
+      "name": "@types/node",
+      "group": "devDependencies",
+      "declared": "22.19.19",
+      "installed": "22.19.19"
+    },
+    {
+      "name": "@types/react",
+      "group": "devDependencies",
+      "declared": "19.2.14",
+      "installed": "19.2.14"
+    },
+    {
+      "name": "@types/react-dom",
+      "group": "devDependencies",
+      "declared": "19.2.3",
+      "installed": "19.2.3"
+    },
+    {
+      "name": "@types/three",
+      "group": "devDependencies",
+      "declared": "^0.186.0",
+      "installed": "0.186.0"
+    },
+    {
+      "name": "@vitejs/plugin-react",
+      "group": "devDependencies",
+      "declared": "6.0.2",
+      "installed": "6.0.2"
+    },
+    {
+      "name": "@vitejs/plugin-rsc",
+      "group": "devDependencies",
+      "declared": "0.5.26",
+      "installed": "0.5.26"
+    },
+    {
+      "name": "drizzle-kit",
+      "group": "devDependencies",
+      "declared": "0.31.10",
+      "installed": "0.31.10"
+    },
+    {
+      "name": "eslint",
+      "group": "devDependencies",
+      "declared": "9.39.4",
+      "installed": "9.39.4"
+    },
+    {
+      "name": "eslint-config-next",
+      "group": "devDependencies",
+      "declared": "16.3.4",
+      "installed": "16.3.4"
+    },
+    {
+      "name": "json-rpc-2.0",
+      "group": "devDependencies",
+      "declared": "1.7.1",
+      "installed": "1.7.1"
+    },
+    {
+      "name": "raw-body",
+      "group": "devDependencies",
+      "declared": "3.0.2",
+      "installed": "3.0.2"
+    },
+    {
+      "name": "react-server-dom-webpack",
+      "group": "devDependencies",
+      "declared": "19.2.6",
+      "installed": "19.2.6"
+    },
+    {
+      "name": "tailwindcss",
+      "group": "devDependencies",
+      "declared": "4.2.1",
+      "installed": "4.2.1"
+    },
+    {
+      "name": "tw-animate-css",
+      "group": "devDependencies",
+      "declared": "^1.4.0",
+      "installed": "1.4.0"
+    },
+    {
+      "name": "typescript",
+      "group": "devDependencies",
+      "declared": "5.9.3",
+      "installed": "5.9.3"
+    },
+    {
+      "name": "vinext",
+      "group": "devDependencies",
+      "declared": "1.0.0-beta.5",
+      "installed": "1.0.0-beta.5"
+    },
+    {
+      "name": "vite",
+      "group": "devDependencies",
+      "declared": "8.0.13",
+      "installed": "8.0.13"
+    },
+    {
+      "name": "wrangler",
+      "group": "devDependencies",
+      "declared": "4.92.0",
+      "installed": "4.92.0"
+    }
+  ],
+  "optionalBrowserTools": {
+    "playwright": "1.62.1",
+    "axe-core": "4.11.0"
+  },
+  "transitiveSource": "pnpm-lock.yaml"
+}
