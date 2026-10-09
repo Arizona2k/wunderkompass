@@ -2,6 +2,8 @@
 
 Stand: 9. Oktober 2026. Einziger Aufgabenbestand für GO und spätere geplante Durchläufe. Aufgaben behalten ihre ID; neue IDs fortlaufend vergeben. Prioritäten: P0 Datenverlust/Blockade, P1 Kernfunktion und belastbare Prüfungen, P2 Nutzbarkeit/Fachqualität/Performance, P3 Ausbau. Aktive Reservierung und Übergabe stehen ausschließlich in PROJECT_STATE.md.
 
+WK-014 – P1 – in Prüfung: Isolierten Jobtoken-Schreibtest vorbereiten (WK-013/Freigabekette liegt auf test-live). Manueller, bis 16. Oktober 2026 02:00 Europe/Berlin begrenzter Workflow; nur synthetische Tags, exakte Leases und Bereinigung, contents/write ausschließlich im maximal fünfminütigen Testjob. Lokale Git-Prüfung bestanden; echte GITHUB_TOKEN-Rechte und Token→Vercel weiterhin unbestätigt. Separater PR gegen main für Defaultbranch-Workflowregistrierung, kein Merge/Dispatch in diesem Auftrag. Übernahme braucht gesonderte Prüfung möglicher main-Vercel-Auswirkungen.
+
 | ID | Priorität | Status | Aufgabe und Anlass | Akzeptanzkriterien / Nachweis |
 | --- | --- | --- | --- | --- |
 | WK-001 | P1 | erledigt | Dauerhaftes Agentensystem einrichten; bisherige Übergabe beschreibt noch den Stand vor GitHub-Import. | Bestehende Regeln erhalten; Vision, GO, gemeinsamer Bestand, Qualitätsregeln und Übergabe widerspruchsfrei; Git-Sicherung und PR oder belegtes Synchronisierungshindernis. Kein Website-Umbau/Deployment. |
