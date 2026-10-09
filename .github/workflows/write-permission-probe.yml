@@ -1,0 +1,56 @@
+name: Isolated contents write probe
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: 'After review and budget check, enter TAGS_ONLY to run'
+        required: true
+        type: string
+
+permissions: {}
+
+concurrency:
+  group: wunderkompass-development
+  cancel-in-progress: false
+
+jobs:
+  authorization:
+    if: github.repository == 'Arizona2k/wunderkompass' && github.ref == 'refs/heads/main' && inputs.confirmation == 'TAGS_ONLY'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 1
+    steps:
+      - name: Enforce temporary test window before issuing a write job token
+        shell: bash
+        run: |
+          test "$(date -u +%s)" -lt "$(date -u -d '2026-10-16T00:00:00Z' +%s)"
+
+  probe:
+    needs: authorization
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, same as Publisher
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+          persist-credentials: true
+      - name: Create, advance, verify and remove synthetic tags with job GITHUB_TOKEN
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        with:
+          script: |
+            const { probe } = require('./scripts/release/write-permission-probe.cjs');
+            let receipt;
+            try {
+              receipt = probe({ cwd: process.env.GITHUB_WORKSPACE,
+                runId: `${context.runId}-${process.env.GITHUB_RUN_ATTEMPT}` });
+            } catch (error) {
+              receipt = error.receipt;
+              core.setFailed(error.message);
+            }
+            await core.summary.addHeading('Isolated write probe')
+              .addCodeBlock(JSON.stringify(receipt || { result: 'No remote write receipt' }, null, 2))
+              .addRaw('Only tag refs were targeted. This does not prove test-live branch permission or Vercel delivery. If interrupted, inspect the run-specific tag namespace and remove only owned refs with an exact lease.')
+              .write();

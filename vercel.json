@@ -1,5 +1,10 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "git": {
+    "deploymentEnabled": {
+      "codex/write-permission-probe-2026-10-09": false
+    }
+  },
   "framework": "vite",
   "installCommand": "corepack pnpm install --frozen-lockfile",
   "buildCommand": "pnpm run build",
