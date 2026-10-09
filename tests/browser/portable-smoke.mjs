@@ -1,4 +1,5 @@
 import {connectedDiscoveries} from './connected-discoveries.mjs';
+import {challengeHints,offlineChallengeHints} from './challenge-hints.mjs';
 import {searchAndHistory, memoryRound} from './portable-flows.mjs';
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import {spawn} from 'node:child_process';import {fileURLToPath} from 'node:url';
 const project=fileURLToPath(new URL('../..',import.meta.url)),shots=path.join(project,'.qa-output'),port=process.env.QA_PORT??'4182',base='http://127.0.0.1:'+port;
@@ -21,6 +22,7 @@ try{
   await connectedDiscoveries(p,ready,report,width);
   await p.evaluate(()=>location.hash='world/topic/science-energy');await p.locator('.model-energy').waitFor();await p.screenshot({path:path.join(shots,'portable-'+width+'.png')});await c.close();
  }
+ await challengeHints(browser,base,ready,monitor,report,shots);
 }finally{await browser.close();browser=null;}
 const profile=path.join(shots,'portable-offline-profile');await fs.rm(profile,{recursive:true,force:true});let c=await chromium.launchPersistentContext(profile,{...options,viewport:{width:1280,height:900},reducedMotion:'reduce'}),p=c.pages()[0]??await c.newPage();monitor(p);p.setDefaultTimeout(20000);
 try{await p.goto(base);await ready(p);await p.getByRole('button',{name:'Für offline vorbereiten',exact:true}).click();await p.getByText('Deine Lernwelt ist offline vorbereitet.',{exact:true}).waitFor({timeout:45000});await p.waitForFunction(()=>!!navigator.serviceWorker.controller);report.offlineCache=await p.evaluate(async()=>{const a=[];for(const name of await caches.keys()){const ca=await caches.open(name);a.push({name,assets:(await ca.keys()).length,complete:!!await ca.match('/__learning_offline_ready__')});}return a;});assert.ok(report.offlineCache.some(x=>x.complete&&x.assets>100));report.checks.push('Actual offline preparation completed');}finally{await c.close();}
@@ -28,7 +30,7 @@ server.kill('SIGTERM');
 await new Promise(resolve=>server.exitCode!==null?resolve():server.once('exit',resolve));
 await assert.rejects(fetch(base,{signal:AbortSignal.timeout(2000)}));
 c=await chromium.launchPersistentContext(profile,{...options,viewport:{width:1280,height:900},reducedMotion:'reduce'});await c.setOffline(true);p=c.pages()[0]??await c.newPage();monitor(p);p.setDefaultTimeout(20000);
-try{await p.goto(base);await p.screenshot({path:path.join(shots,'offline-start.png')});await ready(p);report.offlineNavigatorOnline=await p.evaluate(()=>navigator.onLine);await p.evaluate(()=>location.hash='world/topic/animal-whale-shark');await p.locator('.world-photo img').first().waitFor();await p.locator('.world-photo img').first().evaluate(async im=>{await im.decode();if(!im.naturalWidth)throw Error('Offline image missing');});await p.evaluate(()=>location.hash='world/topic/science-energy');await p.locator('.model-energy').waitFor();await p.getByRole('button',{name:'Einen Zeitschritt testen',exact:true}).click();report.checks.push('Closed browser and cold offline restart with preview server stopped; unopened animal photo and energy model work');}finally{await c.close();server.kill('SIGTERM');}
+try{await p.goto(base);await p.screenshot({path:path.join(shots,'offline-start.png')});await ready(p);report.offlineNavigatorOnline=await p.evaluate(()=>navigator.onLine);await p.evaluate(()=>location.hash='world/topic/animal-whale-shark');await p.locator('.world-photo img').first().waitFor();await p.locator('.world-photo img').first().evaluate(async im=>{await im.decode();if(!im.naturalWidth)throw Error('Offline image missing');});await p.evaluate(()=>location.hash='world/topic/science-energy');await p.locator('.model-energy').waitFor();await p.getByRole('button',{name:'Einen Zeitschritt testen',exact:true}).click();report.checks.push('Closed browser and cold offline restart with preview server stopped; unopened animal photo and energy model work');await offlineChallengeHints(p,report);}finally{await c.close();server.kill('SIGTERM');}
 assert.deepEqual(report.errors,[]);assert.deepEqual(report.ownHttpErrors,[]);assert.deepEqual(report.externalRequests,[]);report.externalRequests=[...new Set(report.externalRequests)];await fs.writeFile(path.join(shots,'portable-report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
 
 report.status='passed';

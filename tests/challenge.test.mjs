@@ -42,3 +42,37 @@ test('schema-3 export/import keeps the new round alongside existing progress',()
  assert.deepEqual(imported.gameSessions,progress.gameSessions);assert.deepEqual(imported.lastActivity,progress.lastActivity);
  assert.deepEqual(restoreChallenge(imported.gameSessions['world:knowledge-challenge'].challenge,emptyChallenge()),session);
 });
+
+const hints=JSON.parse(fs.readFileSync('app/challenge-hints.json','utf8'));
+test('every playable question has individually authored hints and no orphan or copied solution',()=>{
+ assert.deepEqual(Object.keys(hints).sort(),CHALLENGE_BANK.map(q=>q.id).sort());
+ const first=new Set();
+ for(const q of CHALLENGE_BANK){
+  assert.deepEqual(q.hints,hints[q.id].steps,q.id);
+  assert.ok(q.topicTitle,q.id);
+  assert.ok(q.hints.length>=1&&q.hints.length<=2,q.id);
+  assert.equal(first.has(q.hints[0]),false,q.id+' repeated standard hint');first.add(q.hints[0]);
+  for(const hint of q.hints){
+   assert.ok(typeof hint==='string'&&hint.length>=45&&hint.length<=350,q.id);
+   assert.notEqual(hint,q.why,q.id+' answer explanation used as hint');
+   const correct=q.answers[q.correct].toLocaleLowerCase('de').replace(/[.!?]$/,'');
+   assert.equal(hint.toLocaleLowerCase('de').includes(correct),false,q.id+' literal answer leak');
+  }
+  if(q.hints.length===2)assert.notEqual(q.hints[0],q.hints[1],q.id);
+ }
+});
+test('pre-hint saved rounds keep their IDs, order, answer and earned finish at all levels',()=>{
+ for(const difficulty of ['easy','medium','hard']){
+  const round=createChallenge(difficulty,[],()=>.31);
+  for(const index of [0,3,5]){
+   const q=CHALLENGE_BANK.find(q=>q.id===round.ids[index]);
+   for(const answer of [null,q.answers[q.correct],q.answers.find((_,i)=>i!==q.correct)]){
+    const old={...round,index,answer};
+    assert.deepEqual(restoreChallenge(JSON.parse(JSON.stringify(old)),emptyChallenge()),old);
+   }
+  }
+  const q=CHALLENGE_BANK.find(q=>q.id===round.ids[5]);
+  const earned={...round,index:5,answer:q.answers[q.correct],done:true};
+  assert.deepEqual(restoreChallenge(JSON.parse(JSON.stringify(earned)),emptyChallenge()),earned);
+ }
+});
