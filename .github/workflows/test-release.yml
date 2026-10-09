@@ -1,0 +1,103 @@
+name: Controlled test release
+
+on:
+  pull_request_target:
+    branches: [test-live]
+    types: [opened, synchronize, reopened, ready_for_review, labeled]
+
+permissions: {}
+
+# All future development schedulers must share this group.
+concurrency:
+  group: wunderkompass-development
+  cancel-in-progress: false
+
+jobs:
+  gate:
+    # Setup safety latch: remove 'false &&' only in a reviewed activation change.
+    if: ${{ false && vars.TEST_LIVE_AUTORELEASE == 'enabled' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      head: ${{ steps.policy.outputs.head }}
+      base: ${{ steps.policy.outputs.base }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          persist-credentials: false
+      - id: policy
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        with:
+          script: |
+            const policy = require('./scripts/release/policy.cjs');
+            const result = await policy.inspect(github, context);
+            core.setOutput('head', result.head);
+            core.setOutput('base', result.base);
+
+  checks:
+    needs: gate
+    name: Exact commit release checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ needs.gate.outputs.head }}
+          persist-credentials: false
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run typecheck
+      - run: pnpm run lint
+      - run: node --test tests/release/*.test.cjs
+      - run: pnpm test
+      - run: pnpm run build
+      - run: pnpm run verify
+      - run: pnpm --dir qa install --frozen-lockfile
+      - run: pnpm --dir qa exec playwright install --with-deps chromium
+      - run: pnpm run test:browser
+
+  publish:
+    needs: [gate, checks]
+    if: vars.TEST_LIVE_AUTORELEASE == 'enabled' && needs.checks.result == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      pull-requests: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          fetch-depth: 1
+          persist-credentials: true
+      - uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        env:
+          EXPECTED_HEAD: ${{ needs.gate.outputs.head }}
+          EXPECTED_BASE: ${{ needs.gate.outputs.base }}
+        with:
+          script: |
+            const policy = require('./scripts/release/policy.cjs');
+            const result = await policy.inspect(github, context, {
+              expectedHead: process.env.EXPECTED_HEAD,
+              expectedBase: process.env.EXPECTED_BASE
+            });
+            const backup = policy.promote({
+              cwd: process.env.GITHUB_WORKSPACE, ...result,
+              runId: `${context.runId}-${process.env.GITHUB_RUN_ATTEMPT}`
+            });
+            await core.summary.addHeading('Test release Git receipt')
+              .addTable([['Tested commit', result.head], ['Previous commit', result.base], ['Backup', backup]])
+              .addRaw('Git transfer completed; Vercel deployment and access protection need separate verification.')
+              .write();

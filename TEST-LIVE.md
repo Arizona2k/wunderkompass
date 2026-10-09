@@ -1,1 +1,54 @@
-Testumgebung für automatisch geprüfte Entwicklungsstände von WunderKompass.
+# Kontrollierte automatische Testfreigabe – vorbereitet, ausgeschaltet
+
+Stand: 9. Oktober 2026. Einrichtung auf `codex/test-release-2026-10-09`, Basis `test-live` 1f7fe74a0f8e7e14bf8e709aea2135dc1b09172c. main, test-live, Vercel-Einstellungen und bestehende Testwebsite werden durch diese Einrichtung nicht geändert. Keine Freigabelinks/Zugangsdaten speichern.
+
+## Tatsächlich überprüfte Rechte und Grenzen
+
+GitHub-Connector: privates persönliches Repository Arizona2k/wunderkompass, Defaultbranch main, gemeldete admin/maintain/push/pull-Rechte, Auto-Merge deaktiviert. Beide Zielbranches liefern `protected: false`. Rulesets-API antwortet HTTP 403: „Upgrade to GitHub Pro or make this repository public to enable this feature.“ Branch-Protection-API antwortet separat „Resource not accessible by integration“; dies ist eine Connector-Rechtegrenze, kein zusätzlicher Tarifnachweis. Die deaktivierte Ruleset-Vorlage bleibt ausschließlich für einen später passenden Tarif erhalten.
+
+Kontoplan, Actions-Verbrauch/Budget, Repository-Actions-Schreibrichtlinie und Vercel-Projekt-/Tarif-/Schutzeinstellungen sind über die vorhandenen Schnittstellen nicht einsehbar. Actions-Permissions-Endpunkte werden vom Connector nicht unterstützt. Daher keine erfundene Bestätigung von Schreibrechten des GITHUB_TOKEN, freiem Restkontingent oder dauerhaft kostenlosem Betrieb. Vor Aktivierung im Konto prüfen; keine kostenpflichtigen Dienste oder neuen Tokens eingerichtet. Bestehende CI hat bereits reale grüne GitHub-Läufe. Für aktuellen test-live-Commit meldet der GitHub-Status Vercel success; das beweist keinen Zugangsschutz.
+
+## Ablauf nach späterer Aktivierung
+
+1. Codex liest aktuellen origin/test-live und offene PRs, reserviert den gemeinsamen Durchlauf und arbeitet auf einem davon abgeleiteten codex/*-Branch. Alle Durchläufe verwenden den einzigen BACKLOG und dieselbe Reservierung. main wird weder aktualisiert noch gemergt.
+2. Ein PR gegen test-live enthält ein begrenztes Paket. Die bestehende Quality-CI prüft den PR-Merge-Stand. Der Autor muss Repository-Eigentümer Arizona2k sein; andere Autoren/Forks brauchen manuelle Prüfung. Ein Nicht-Draft-PR mit Label `auto-test-live` ist die kontrollierte Freigabeabsicht. Änderungen an Prüfungen, Abhängigkeiten, Build-/Release-/Workflowkonfiguration und AGENTS/QUALITY/VISION sind von der automatischen Übernahme ausgeschlossen. Diese Einrichtungsänderung kann sich deshalb nicht selbst freigeben.
+3. `test-release.yml` läuft als pull_request_target aus dem vertrauenswürdigen Zielbranch, standardmäßig ohne Berechtigungen. Eine fest eingebaute `false &&`-Sperre verhindert in dieser Einrichtung den Start selbst bei einer bereits gesetzten Variable. Erst eine separat reviewte Aktivierungsänderung darf diese Sperre entfernen. Danach nur wenn die Repositoryvariable `TEST_LIVE_AUTORELEASE` exakt `enabled` ist, startet die Kette. Gate: contents/read und pull-requests/read. Es lädt niemals PR-Code mit Schreibrechten. Es prüft alle offenen codex/*-PRs (genau einen), fehlende aktive Reservierung, Label, Zustand, Dateiliste aus unveränderlichem SHA-zu-SHA-Vergleich inklusive Rename-Quelle (bei GitHubs 300-Dateien-Grenze manuelle Prüfung) und offene Änderungsanforderungen. Keine menschliche Genehmigung wird erfunden: Das Label ist eine freiwillige Freigabeabsicht, kein GitHub-Reviewzwang.
+4. Der Branch muss vom aktuellen test-live abstammen. Der Read-only-Prüfjob testet exakt dessen 40-stellige Head-SHA, keinen neu erzeugten Merge-/Squashcommit: Frozen-Installation, typecheck, lint, Release-/Git-Tests, Unit-Tests, build, Inhaltsintegrität, Frozen-QA-Installation, Chromium und echte Produktionsbrowserprobe. Keine continue-on-error-Ausnahme. Rote/abgebrochene/übersprungene Pflichtschritte starten keinen Publisher. Die unveränderten Prüfskripte stammen aus der Zielbasis; geprüfter Anwendungscode läuft nur ohne Schreibtoken und ohne Secrets, ohne gemeinsam genutzten Actions-Cache.
+5. Nur der nachgelagerte Publisher erhält contents/write und pull-requests/read. Er checkt ausschließlich die vertrauenswürdige Zielbasis aus und führt keinen Kandidatencode aus. PR, Label, Review, Reservierung, Basis und Head werden nochmals gelesen. Zuerst Rückfalltag `test-live-backup/RUN_ID-ATTEMPT` auf die vorherige SHA. Dann Übertragung genau der geprüften SHA mit serverseitiger Git-Lease auf den erwarteten alten test-live-Commit. Eine lokale Abstammungsprüfung erzwingt Fast-forward. `--force-with-lease` dient hier dem atomaren Vergleich, nicht einem erlaubten History-Rewrite; kein gewöhnliches --force, kein main-Ziel. GitHub-REST updateRef ohne atomaren Vergleich wird bewusst nicht verwendet.
+6. Actions schreibt eine Git-Quittung (getestete SHA, vorherige SHA, Sicherungstag). Die offene PR-Differenz wird dadurch übernommen; es entsteht kein zusätzlicher ungetesteter Mergecommit. GitHub kann den PR danach als übernommen erkennen; die Kette braucht keine pull-requests/write-Rechte.
+7. Die bestehende Vercel-Git-Anbindung soll den test-live-Push auf denselben Branch-Alias veröffentlichen. Domain/Alias/Zugangsschutz werden nicht geändert. Ob dieser Push mit GITHUB_TOKEN tatsächlich Vercel auslöst, muss vor Freigabe isoliert nachgewiesen werden. GitHub startet durch diesen Token normalerweise keine weiteren push-Workflows; deren nachträgliche Checks sind nicht der Release-Nachweis. Kein zusätzlicher PAT, App-Schlüssel oder Deploy-Hook wird vorsorglich angelegt.
+
+Die gemeinsame Actions-Gruppe `wunderkompass-development` mit cancel-in-progress:false serialisiert teilnehmende Workflows. Ein neuer Ereignislauf kann einen älteren wartenden Lauf ersetzen; der jüngste prüft erneut, keine FIFO-Zusage. Die Git-Reservierung schützt teilnehmende separate Cloud-Durchläufe zusätzlich. Allein concurrency verhindert keine unabhängigen Cloud-Aufträge oder manuellen Pushes.
+
+## Gemeinsame Entwicklungsreservierung
+
+Nach Fetch, Lesen der Projektregeln und Prüfung offener PRs, vor Implementierung:
+
+```bash
+node scripts/release/development-lock.cjs claim EINDEUTIGE_DURCHLAUF_ID
+```
+
+Die ausgegebene Eigentümer-SHA und Durchlauf-ID im PROJECT_STATE dokumentieren und lokal unter work/ merken. Das Script erzeugt ein eindeutiges annotiertes Git-Tagobjekt und reserviert `refs/tags/wunderkompass-development-lock` mit einer Lease, die dessen Nichtexistenz verlangt. Ein zweiter teilnehmender Lauf scheitert auch bei gleicher Basis. Der Tag veröffentlicht keine Website. Bestehende Reservierungen niemals nach bloßem Alter übernehmen.
+
+Nach gesicherter Übergabe/PR und Ende der Entwicklung:
+
+```bash
+node scripts/release/development-lock.cjs release EIGENTUEMER_SHA
+```
+
+Fremde oder inzwischen ersetzte Reservierungen werden nicht gelöscht. Bei Abbruch bleibt der Tag bestehen und blockiert sicher; erst nach Prüfung von Task/Branch/PR bewusst mit passender SHA auflösen. Der Freigabeworkflow prüft fehlende Reservierung vor Tests und vor Push. Eine neue Reservierung unmittelbar nach der letzten Prüfung ist ohne Branch Protection weiterhin eine mögliche administrative Konkurrenz; sie kann aber keinen anderen, ungeprüften Commit in diesen Push einschleusen. Auch eine PR-Änderung unmittelbar nach der letzten API-Lesung kann nur dazu führen, dass die zuvor geprüfte SHA übernommen wird, niemals die neue ungeprüfte SHA. Git-Head- und PR-Metadaten haben keine gemeinsame atomare Transaktion.
+
+## Rückfall
+
+Kein automatischer Rollback eines ungeprüften Hostingzustands. Vor erster Aktivierung den heutigen funktionierenden Testcommit zusätzlich dauerhaft als Rückfallstand sichern und dessen Vercel-Deployment/Schutz intern bestätigen. Jeder spätere Git-Release sichert den unmittelbaren Vorgänger, aber ein grüner Build allein beweist keinen funktionierenden geschützten Vercel-Betrieb.
+
+Bei Problemen zuerst TEST_LIVE_AUTORELEASE deaktivieren. Aus dem dokumentierten Rückfalltag einen neuen Entwicklungsbranch von aktuellem test-live erstellen. Dort einen **neuen Commit mit dem Baum des vorherigen funktionierenden Commits** und dem aktuellen test-live als Elterncommit erstellen (z. B. git commit-tree). Dadurch bleibt die Historie erhalten. Über PR alle Prüfungen erneut ausführen; Wartungs-/Workflowänderungen manuell reviewen. Kontrolliert bereitstellen und dieselbe geschützte Adresse prüfen. Keine Rücksetzung per Force-Push, kein Löschen persönlicher Browserdaten. Die Git-Integrationstests prüfen tatsächlich Baumgleichheit und erhaltene Abstammung eines solchen Rückfallcommits. Vercel-eigener Deployment-Rollback wurde mangels Zugang nicht ausgeführt.
+
+## Vor Aktivierung noch erforderlich
+
+- Einrichtung reviewen und kontrolliert nach test-live übernehmen. Das kann bereits einen Vercel-Build auslösen und ist **nicht Bestandteil dieses Auftrags**. main bleibt unverändert. Nach isolierter Abnahme die fest eingebaute false-Sperre durch eine gesondert reviewte Aktivierungsänderung entfernen; erst auf späteren Auftrag die Variable setzen. Jetzt die Variable nicht setzen, das Release-Label nicht an diese Einrichtung hängen.
+- Künftige Codex-Testaufgaben ausdrücklich auf test-live starten bzw. dessen aktuellen Projektstand vor GO laden; die Regeln auf main werden durch diesen Auftrag nicht aktualisiert. Den Repository-Defaultbranch nicht dafür ändern.
+- Isolierter Test der tatsächlichen Actions-Schreibrichtlinie sowie Token→Vercel-Kette mit einem getrennten Testziel/Projekt, ohne den bestehenden Teststand umzuschalten. Falls zusätzliche Zugangsdaten oder Kosten nötig sind: stoppen und Freigabe einholen.
+- Vercel: bisherigen Branch-Alias, konstanten externen Freigabelink, Deployment Protection und Zugriff eines berechtigten/unberechtigten Testbrowsers prüfen, ohne Geheimlinks in Berichte/Logs zu kopieren. Build-Fehler und Rückfall auf vorherigen funktionierenden Stand isoliert proben. Erst dann durch ausdrücklichen späteren Auftrag aktivieren.
+- Actions-Restkontingent, Speicher und Ausgabenlimit prüfen. Die normalen und zusätzlichen exakten Release-Prüfungen brauchen Runnerzeit; Joblimits sind 5/20/5 Minuten. Kein Cron, kein Daueragent und kein kostenpflichtiger Dienst aktiviert.
+- Optional: Pro für technisch verbindliche Branch-Regeln. Ohne Upgrade bleibt Schutz ausschließlich **innerhalb dieser Kette**. Jeder mit Schreibrechten kann direkt pushen, Einstellungen ändern oder einen roten PR manuell mergen. Ein GITHUB_TOKEN mit contents/write ist repositoryweit und technisch nicht allein auf test-live begrenzbar. Diese Grenzen werden durch Skripte nicht zu Branch Protection.
