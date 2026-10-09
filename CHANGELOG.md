@@ -25,3 +25,9 @@ Tatsächliche Prüfungen, Einschränkungen und Synchronisierungsstand dieser Ein
 - Befristeten, manuell startbaren und fest deaktivierten Workflow mit exakter Kandidatenqualität, create-only Git-Push und frischer branch-/SHA-bezogener Previewbeobachtung vorbereitet. Keine Autoränderung, Promotion oder automatische Freigabe.
 - 13 neue lokale Git-/Beobachtungstests bestanden; fünf vorhandene Tagtests erhalten. Bestehende vollständige Kandidatenprüfung einschließlich 27 Release-/20 App-Tests und Chromium-Produktionsbrowser erfolgreich.
 - VERCEL-E2E.md dokumentiert Abnahme, Kontingent-/Übernahmegrenze, Schutzprüfung, Fehlerbehandlung und Erhaltung des alten Entwicklungsstands. Noch kein Remote-E2E-Nachweis und keine Aktivierung.
+
+## 2026-10-09 – Vercel-Baseline korrigiert (WK-015, in Review)
+
+- Bestätigten authorize-Fehler durch paginierte Einzelstatus-API behoben. Der neueste Vercel-Kontext muss erfolgreich sein und vom Vercel-Bot stammen; fehlende Creator oder neuere Fehler verdecken keinen alten Erfolg.
+- Auch die neueste Deployment-Statusmeldung benötigt einen Vercel-Botnachweis. Acht Regressionstests ergänzt, einschließlich tatsächlichem authorize-Skript; insgesamt 26 Release-Tests grün.
+- Standardprüfungen, lokale Chromium-Produktionsprobe, Actionlint und Syntax bestanden. Remote-E2E und Deployment-API-Vertrag bleiben offen. Korrekturbranch gezielt von Vercel ausgeschlossen; kein Rerun, Merge oder automatische Veröffentlichung.

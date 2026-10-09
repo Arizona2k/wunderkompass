@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   authorize:
-    # Preparation latch: a reviewed activation change is required; do not remove casually.
+    # Manual owner/main/confirmation scope; no automatic release trigger.
     if: ${{ github.repository == 'Arizona2k/wunderkompass' && github.actor == 'Arizona2k' && github.ref == 'refs/heads/main' && inputs.confirmation == 'ISOLATED_PREVIEW_NO_COST' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 2
@@ -33,13 +33,12 @@ jobs:
         uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
         with:
           script: |
-            const { CANDIDATE, EXPIRES } = require('./scripts/release/vercel-e2e.cjs');
+            const { CANDIDATE, EXPIRES, requireVercelBaseline } = require('./scripts/release/vercel-e2e.cjs');
             if (Date.now() >= EXPIRES) throw Error('Probe window expired');
             const {owner, repo} = context.repo;
             const {data: commit} = await github.rest.repos.getCommit({owner, repo, ref: CANDIDATE});
             if (commit.sha !== CANDIDATE || commit.author?.login !== owner) throw Error('Candidate is not the existing owner-authored commit');
-            const {data: baseline} = await github.rest.repos.getCombinedStatusForRef({owner, repo, ref: CANDIDATE});
-            if (!baseline.statuses.some(s => s.context === 'Vercel' && s.state === 'success' && s.creator?.login === 'vercel[bot]')) throw Error('No existing successful Vercel baseline');
+            await requireVercelBaseline({github, owner, repo, candidate: CANDIDATE});
             for (const [ref, output] of [['main','main'], ['test-live','testlive']]) {
               const {data} = await github.rest.git.getRef({owner, repo, ref: 'heads/' + ref});
               core.setOutput(output, data.object.sha);
