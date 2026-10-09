@@ -1,5 +1,15 @@
 # Migration von WunderKompass zu GitHub, Codex und Vercel
 
+## Aktueller Stand nach dem GitHub-Import
+
+Stand: 9. Oktober 2026. Das private Repository [Arizona2k/wunderkompass](https://github.com/Arizona2k/wunderkompass) ist angelegt und in dieser Codex-Cloud-Aufgabe ausgecheckt. Seine Wurzel entspricht bereits dem früheren `project/`. Die Schritte 4 und 5 unten sind die historische Ersteinrichtungsanleitung: im bestehenden Checkout **kein erneutes git init und keine Ersetzung von origin** durchführen. Auch das Sicherungsarchiv nicht erneut über den vorhandenen Stand kopieren.
+
+Für die Weiterentwicklung gelten [AGENTS.md](AGENTS.md), [PROJECT_STATE.md](PROJECT_STATE.md), [VISION.md](VISION.md), [BACKLOG.md](BACKLOG.md) und [QUALITY.md](QUALITY.md). Ein GO verwendet den gespeicherten Aufgabenbestand auf einem Entwicklungsbranch. Die Einrichtung wird als separater Pull Request gesichert; main bleibt unverändert. Vor dem ersten GO auf main den Einrichtungs-PR regulär übernehmen oder die Cloud-Aufgabe auf dessen Branch starten. Werkzeuge/Prüfergebnisse und Zugriffshindernisse stehen in PROJECT_STATE.md.
+
+Vercel, externe Testpersonen und geplante Durchläufe sind weiterhin spätere, gesondert beauftragte Schritte. Kein Deployment oder Scheduler ist durch diese Anleitung aktiviert. Persönliche Pässe vor jedem Domainwechsel sichern; Testdaten und echte Notizen nicht veröffentlichen.
+
+## Historische Export- und Umzugsanleitung
+
 Stand: 9. Oktober 2026. Diese Anleitung bereitet den Umzug vor. Die bestehende ChatGPT Site bleibt erhalten. In diesem Auftrag wurden keine neuen Veröffentlichungen oder externen Repositories angelegt.
 
 ## 1. Sicherung herunterladen und entpacken

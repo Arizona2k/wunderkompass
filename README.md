@@ -1,4 +1,14 @@
-# WunderKompass – Projektsicherung und Übergabe
+# WunderKompass – Entwicklung und Projektsicherung
+
+## Aktueller GitHub-/Codex-Einstieg
+
+Die Anwendung ist bereits in das private Repository [Arizona2k/wunderkompass](https://github.com/Arizona2k/wunderkompass) importiert. **Die Repository-Wurzel ist die Anwendung**: im Checkout nicht nochmals in `project/` wechseln. `original-site/`, ZIP und externe Inventur-/Prüfsummen-Dateien gehören zum getrennten Sicherungsarchiv und sind hier nicht vorausgesetzt.
+
+Für Entwicklungsaufgaben zuerst [AGENTS.md](AGENTS.md) und [PROJECT_STATE.md](PROJECT_STATE.md) lesen. [VISION.md](VISION.md) enthält die Produktziele, [BACKLOG.md](BACKLOG.md) den gemeinsamen Aufgabenbestand, [QUALITY.md](QUALITY.md) die verbindlichen Prüfungen und [CHANGELOG.md](CHANGELOG.md) abgeschlossene Änderungen. **GO** startet einen begrenzten Entwicklungsdurchlauf nach AGENTS.md. Regeln müssen im ausgewählten Branch vorhanden sein; vor einem GO auf main den Einrichtungs-PR regulär übernehmen.
+
+Node 24 und pnpm 11.25.0 verwenden. Die untenstehenden Start-/Prüfbefehle gelten direkt aus der Repository-Wurzel. Neue Änderungen über Entwicklungsbranch und Pull Request sichern. Es ist kein Scheduler aktiviert und keine neue Website veröffentlicht. Aktuelle Prüfungen und Synchronisierung stehen ausschließlich in PROJECT_STATE.md; die folgenden Abschnitte dokumentieren die ursprüngliche Sicherung.
+
+## Historischer Sicherungsstand
 
 Stand: 9. Oktober 2026 · Quellstand der bestehenden ChatGPT Site, Version 14.
 
@@ -21,7 +31,7 @@ Für GitHub **den Inhalt von `project/` verwenden**, nicht beide Anwendungskopie
 
 ## Lokaler Start
 
-Node.js 24 und pnpm 11.25.0 verwenden. Zuerst in `project/` wechseln. Falls pnpm noch fehlt:
+Node.js 24 und pnpm 11.25.0 verwenden. Im GitHub-Checkout in der Repository-Wurzel starten; nur im externen Archiv zuvor in `project/` wechseln. Falls pnpm noch fehlt:
 
 ```bash
 npm install --global pnpm@11.25.0
@@ -57,4 +67,4 @@ Alle Unterschiede stehen in `migration-changes.json`. Die bereits vorhandenen Fr
 
 Der Pass liegt in IndexedDB und localStorage des jeweiligen Browsers. Er ist **nicht** Bestandteil dieses Quellcodeexports. Eine neue Domain besitzt einen eigenen Speicher. Vor einem Umzug den Pass auf der alten Adresse sichern und auf der neuen Adresse importieren; Details in `MIGRATION.md`.
 
-Git-Historie, Zugangsdaten, Cookies, persönliche Browserprofile, fremde externe Webseiten und nicht gespeicherte Canva-Entwürfe gehören nicht zum Export. Alle aktuell versionierten Projektdateien sind enthalten. Dieser Auftrag erstellt noch kein GitHub-Repository, keine Codex-Umgebung und keine Vercel-Veröffentlichung.
+Git-Historie, Zugangsdaten, Cookies, persönliche Browserprofile, fremde externe Webseiten und nicht gespeicherte Canva-Entwürfe gehören nicht zum Export. Alle aktuell versionierten Projektdateien sind enthalten. Die ursprüngliche Sicherung erstellte noch kein GitHub-Repository, keine Codex-Umgebung und keine Vercel-Veröffentlichung. Der heutige GitHub-/Codex-Stand steht oben und in PROJECT_STATE.md.
