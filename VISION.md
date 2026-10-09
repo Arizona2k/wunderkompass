@@ -1,6 +1,6 @@
 # Produktvision WunderKompass
 
-Stand: 9. Oktober 2026. Die bestehende Lernwelt wird kontinuierlich verbessert. Sie soll umfangreicher, fachlich verlässlicher, moderner, leicht bedienbar und stärker vernetzt werden. Neugierige Kinder, insbesondere um acht Jahre, sollen Zusammenhänge verstehen, ausprobieren und später wiederfinden können; Eltern und Lehrkräfte erhalten verständliche Orientierung.
+Stand: 9. Oktober 2026. Die bestehende Lernwelt wird kontinuierlich verbessert. Sie soll umfangreicher, fachlich verlässlicher, moderner, leicht bedienbar und stärker vernetzt werden. Kinder und Jugendliche von etwa sechs bis vierzehn Jahren, sollen Zusammenhänge verstehen, ausprobieren und später wiederfinden können; Eltern und Lehrkräfte erhalten verständliche Orientierung.
 
 ## Eigenständige Gestaltung
 
@@ -20,3 +20,7 @@ Jede größere Idee wird zu einem überprüfbaren Arbeitspaket mit Ausgangsprobl
 - Keine manipulative Motivation, Werbung, Ranglisten oder Pflichtkonten; persönliche Pässe und Notizen schützen.
 
 Neue Dienste, Kosten, Hosting, Domainwechsel und Veröffentlichung brauchen einen passenden späteren Auftrag. Dauerhaft gespeichert sind die Projektdateien und Git-Commits; autonome Arbeit geschieht nur während eines tatsächlich gestarteten Durchlaufs. Qualität und Tests regelt QUALITY.md, die aktuelle Reihenfolge BACKLOG.md.
+
+## Langfristige Vielfalt und Schwierigkeit
+
+Entdecker (etwa 6–8), Forscher (9–11) und Experten (12–14) erhalten verständliche Einstiege und frei wählbare leichte, mittlere und schwere Aufgaben. Altersangaben sind Orientierung, keine Sperre. Gestaltung soll auch Jugendliche ansprechen. Wissensdaten besitzen keine feste Mengenobergrenze; portionierte Ansichten sind Navigationshilfen. Breite über Natur, Geografie, Urzeit, Weltall, Geschichte, Technik, Wissenschaft, Sport, Kultur und Gesellschaft schrittweise entwickeln. Jede Runde liefert fachlich geprüftes Wissen, passende Beziehungen und echte Interaktion; beliebige Themenmengen ersetzen keine Tiefe. Keine manipulativen Serien, Ranglisten, Pflichtkonten, künstlichen Wartezeiten oder neuen Kosten.

@@ -14,6 +14,8 @@ export function worldPlace(entry:WorldEntry,index=0):Place{const p=entry.locatio
 export const WORLD_PLACES=WORLD_INDEX.flatMap(t=>t.locations.map((_,i)=>worldPlace(t,i)));
 export function worldEntryForPlace(id:string){return WORLD_INDEX.find(t=>t.locations.some((_,i)=>`world-${t.id}-${i}`===id));}
 export const WORLD_ROUTES=[
+ {id:'living-networks',title:'Vom Sonnenlicht zum lebendigen Wald',intro:'Blätter, Pollenboten, Pilze und das Netz des Lebens.',topics:['science-photosynthesis','science-pollination','animal-honey-bee','science-fungi','science-foodweb']},
+ {id:'moon-to-sea',title:'Vom Mond bis zum Meer',intro:'Licht, Anziehung und Leben unter Wasser verbinden.',topics:['science-moon-phases','science-tides','science-currents','science-coral-reef','science-photosynthesis']},
  {id:'safari',title:'Safari mit Forscheraugen',intro:'Fünf Tiere, fünf erstaunliche Anpassungen.',topics:['animal-african-savanna-elephant','animal-giraffe','animal-lion','animal-cheetah','animal-jaguar']},
  {id:'ideas',title:'Wie Ideen um die Welt reisen',intro:'Schrift, Papier, Druck und vernetzte Computer.',topics:['history-writing','history-paper','person-johannes_gutenberg','invention-computer','invention-internet']},
  {id:'space',title:'Unser Weg ins Weltall',intro:'Rechnen, Raketen und gemeinsame Forschung.',topics:['person-katherine_johnson','invention-rocket','history-apollo11','person-mae_jemison','history-iss']},
