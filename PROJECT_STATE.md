@@ -17,13 +17,13 @@ Stand: 9. Oktober 2026 (Europe/Berlin). Regeln: AGENTS.md; Ziele: VISION.md; ein
 | --- | --- |
 | Durchlauf | quality-ci-2026-10-09 |
 | Aufgaben | WK-012 (Actions), WK-003 (portable Browserprüfung), Such-/Spielanteil aus WK-004 |
-| Status | in Arbeit – Implementierung und lokale Prüfung, Actions-Nachweis noch ausstehend |
+| Status | in Prüfung – lokale Prüfungen vollständig bestanden; PR #2, aktualisierter Actions-Lauf ausstehend |
 | Bearbeiter | Codex, diese Cloud-Aufgabe |
 | Basis | main `6a540d2af3c0c0bcfade1a806582ffa5afb6302c` |
 | Branch | codex/quality-ci-2026-10-09 |
-| Start / Lebenszeichen | 9. Oktober 2026, ca. 16:55 / 17:05 Uhr Europe/Berlin |
-| PR / Synchronisierung | Wird nach lokalem Prüfstand auf GitHub erstellt; kein Merge |
-| Nächster Schritt | Browser-Neustart prüfen, Workflow am tatsächlichen PR ausführen, sichere Ergebnisse hier ergänzen |
+| Start / Lebenszeichen | 9. Oktober 2026, ca. 16:55 / 17:09 Uhr Europe/Berlin |
+| PR / Synchronisierung | https://github.com/Arizona2k/wunderkompass/pull/2 – Draft gegen main, kein Merge; Branch gepusht |
+| Nächster Schritt | Korrigierte Testserver-/Offlineprobe auf GitHub nachweisen; danach PR zur Review freigeben |
 
 ## Umsetzung
 
@@ -47,7 +47,7 @@ Prüfstand: Basiscommit oben plus Implementierungsdiff dieses Entwicklungsbranch
 | pnpm run build | Exit 0. Bekannte Warnungen: große Chunks und ineffektiver dynamischer Import von progress-storage.ts. |
 | pnpm run verify | Exit 0; 32 Inhaltsdateien und Prüfsummen bestätigt. verify:export bleibt kompatibel erhalten. |
 | actionlint 1.7.7 | Exit 0 für .github/workflows/quality.yml. |
-| Browser | Chromium 151.0.7922.173 über QA_BROWSER_EXECUTABLE=/usr/bin/chromium. Suche, 21 Ansichten ohne Overflow, Bilder, vier Hubs, Favorit nach Reload, Memory mit falschen Paaren/Fortsetzen/Abschluss und vollständige Offline-Vorbereitung (111 Cacheeinträge) tatsächlich durchlaufen. Gesamtlauf bisher Exit 1 beim kalten Offline-Neustart; noch keine vollständige Browserfreigabe. |
+| Browser | Chromium 151.0.7922.173 über QA_BROWSER_EXECUTABLE=/usr/bin/chromium. Suche, 21 Ansichten ohne Overflow, Bilder, vier Hubs, Favorit nach Reload, Memory mit falschen Paaren/Fortsetzen/Abschluss und vollständige Offline-Vorbereitung (111 Cacheeinträge) tatsächlich durchlaufen. Abschließender Gesamtlauf Exit 0; kalter Offline-Neustart mit beendetem Vorschau-Server, nachgewiesen fehlgeschlagenem HTTP-Zugriff und deaktiviertem Browsernetzwerk, ungeöffnetem Tierbild und bedienbarem Energiemodell erfolgreich. Keine JS-/Konsolen-/Request-/HTTP-Fehler oder externen Requests. Desktop-/Smartphone-Screenshots visuell angesehen. |
 | Browserdownload | Playwright-CDN durch Cloud-Netzwerkregel mit HTTP 403 Domain forbidden blockiert. Kein Bypass; lokal vorhandenes System-Chromium verwendet. GitHub muss seinen passenden Chromium-Download separat nachweisen. |
 | Diff/Syntax | git diff --check und node --check der beiden portablen Testdateien Exit 0. |
 
@@ -55,6 +55,10 @@ Rohlogs unter work/, synthetische Browsernachweise unter .qa-output/; nicht vers
 
 ## GitHub-Nachweis und offene Grenzen
 
-Actions ist implementiert und statisch geprüft; ein tatsächlicher erfolgreicher GitHub-Lauf ist noch nicht belegt. Nach PR-Erstellung konkreten Lauf, Commit und Abschluss hier dokumentieren. Status der neuen Arbeit bleibt bis zur Review/Übernahme in Prüfung.
+PR #2 wurde als Draft gegen main erstellt, Branchcommit `52d60f7812e95c33d50d79b7944e9b8e68426839` per git push gesichert. Erster tatsächlicher Actions-Lauf: https://github.com/Arizona2k/wunderkompass/actions/runs/37948939464 – **failure**, Pflichtjob Required quality checks rot aufgrund der Browserprobe. Installation, Node 24.21.0/pnpm 11.25.0, typecheck/lint/test/build/verify, QA-Frozen-Installation und Chromium-Download/Systembibliotheken waren bereits erfolgreich. Damit ist auch nachgewiesen, dass ein Browserfehler den Gesamtcheck fehlschlagen lässt.
+
+Diagnose und isolierte Testkorrektur: Vite-Vorschau fügt CORS/Vary: Origin hinzu; lokaler kalter Neustart konnte dadurch Modulvarianten verfehlen. tests/browser/preview-server.mjs schaltet ausschließlich die Vorschau-CORS-Middleware aus. Zusätzlich meldet Playwright/Chromium navigator.onLine in dieser persistenten Offline-Simulation weiterhin true (auch im ersten GitHub-Lauf); diese Browserkennung beweist keine Netzverfügbarkeit. Die korrigierte Probe beendet deshalb den Server tatsächlich und prüft den gescheiterten HTTP-Zugriff vor dem Offline-Neustart. Sie verändert weder Anwendung noch Worker und ignoriert keine Cache-Validierung. Der gesamte lokale Lauf danach ist grün.
+
+Der erste Artefakt-Upload fand wegen des versteckten .qa-output-Verzeichnisses keine Dateien. include-hidden-files ist nun für die zwei expliziten JSON-/PNG-Muster aktiviert; Profile bleiben ausgeschlossen. Aktualisierter GitHub-Gesamtlauf noch ausstehend; Status bis Review/Übernahme in Prüfung.
 
 Noch offen: Branch-Regeln importieren/prüfen/aktivieren (separate spätere Freigabe), Sperrwirkung durch roten PR und regulären direkten Pushversuch belegen, vollständiger Pass-Export/Reset/Import/Tab-Browserweg (WK-004), physische Geräte, Safari/Firefox, Screenreader, gehörte deutsche Stimme, schwache Hardware und pädagogische Abnahme. Kein Scheduler oder Auto-Merge aktiviert. Nächster Schritt nach grüner QA: PR gegen main prüfen; Übernahme und spätere test-live-Bereitstellung ausdrücklich kontrollieren.

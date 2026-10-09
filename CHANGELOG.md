@@ -11,3 +11,11 @@ Nur tatsächlich abgeschlossene Änderungen aufnehmen. Historische Produktänder
 - Keine Anwendungs-, Inhalts-, ID-, Speicherformat- oder Lockfileänderung; keine Website veröffentlicht und keine Automatisierung aktiviert.
 
 Tatsächliche Prüfungen, Einschränkungen und Synchronisierungsstand dieser Einrichtung stehen in PROJECT_STATE.md. Spätere Aufgaben übernehmen diesen Bestand.
+
+## 2026-10-09 – Automatische PR-Prüfbasis umgesetzt (WK-012/WK-003, in Review)
+
+- GitHub-Actions-Pflichtjob für PRs gegen main/test-live mit Node 24, pnpm 11.25.0, Frozen-Installationen, TypeScript, ESLint, Node-Tests, Build, Inhaltsintegrität und Chromium eingerichtet.
+- Browserwerkzeuge mit eigenem QA-Lockfile reproduzierbar installiert; vorhandenes App-Lockfile erhalten. Portable Produktionsprobe um Suche/Tippfehler/kein Ergebnis, Hash-Zurück/Vor und Memory mit falschen Paaren, Reload/Fortsetzen und Abschluss ergänzt.
+- Isolierten Vorschau-Testserver, echte Serverabschaltung vor kaltem Offline-Neustart sowie Fehlerberichte und ausschließlich synthetische Browserartefakte vorbereitet. Vollständige lokale Browserprobe bestanden.
+- Deaktivierte test-live-Ruleset-Vorlage und sichere spätere Freigabereihenfolge dokumentiert. Keine aktive Branch-Regel, kein Auto-Merge, keine Vercel-Änderung oder Veröffentlichung.
+- Erster tatsächlicher Actions-Lauf hat einen Browserfehler korrekt als roten Pflichtcheck gemeldet. Aktueller Actions-Abschluss und geprüfte Commits stehen in PROJECT_STATE.md; Implementierung wartet in PR #2 auf Review.
