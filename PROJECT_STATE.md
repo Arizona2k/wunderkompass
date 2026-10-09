@@ -17,13 +17,13 @@ Stand: 9. Oktober 2026 (Europe/Berlin). Regeln: AGENTS.md; Ziele: VISION.md; ein
 | --- | --- |
 | Durchlauf | quality-ci-2026-10-09 |
 | Aufgaben | WK-012 (Actions), WK-003 (portable Browserprüfung), Such-/Spielanteil aus WK-004 |
-| Status | in Prüfung – lokale Prüfungen vollständig bestanden; PR #2, aktualisierter Actions-Lauf ausstehend |
+| Status | in Prüfung – Umsetzung und lokale/Actions-Prüfungen vollständig bestanden; PR #2 wartet auf Review, kein aktiver Entwicklungsdurchlauf nach Abschluss |
 | Bearbeiter | Codex, diese Cloud-Aufgabe |
 | Basis | main `6a540d2af3c0c0bcfade1a806582ffa5afb6302c` |
 | Branch | codex/quality-ci-2026-10-09 |
-| Start / Lebenszeichen | 9. Oktober 2026, ca. 16:55 / 17:09 Uhr Europe/Berlin |
-| PR / Synchronisierung | https://github.com/Arizona2k/wunderkompass/pull/2 – Draft gegen main, kein Merge; Branch gepusht |
-| Nächster Schritt | Korrigierte Testserver-/Offlineprobe auf GitHub nachweisen; danach PR zur Review freigeben |
+| Start / Lebenszeichen | 9. Oktober 2026, ca. 16:55 / 17:11 Uhr Europe/Berlin |
+| PR / Synchronisierung | https://github.com/Arizona2k/wunderkompass/pull/2 – gegen main, kein Merge; Implementierungsbranch gepusht, Abschlussdokumentation im selben Branch |
+| Nächster Schritt | PR #2 reviewen; keine automatische Zusammenführung. Spätere test-live-Freigabe erst mit aktiver Branch-Sperre |
 
 ## Umsetzung
 
@@ -59,6 +59,10 @@ PR #2 wurde als Draft gegen main erstellt, Branchcommit `52d60f7812e95c33d50d79b
 
 Diagnose und isolierte Testkorrektur: Vite-Vorschau fügt CORS/Vary: Origin hinzu; lokaler kalter Neustart konnte dadurch Modulvarianten verfehlen. tests/browser/preview-server.mjs schaltet ausschließlich die Vorschau-CORS-Middleware aus. Zusätzlich meldet Playwright/Chromium navigator.onLine in dieser persistenten Offline-Simulation weiterhin true (auch im ersten GitHub-Lauf); diese Browserkennung beweist keine Netzverfügbarkeit. Die korrigierte Probe beendet deshalb den Server tatsächlich und prüft den gescheiterten HTTP-Zugriff vor dem Offline-Neustart. Sie verändert weder Anwendung noch Worker und ignoriert keine Cache-Validierung. Der gesamte lokale Lauf danach ist grün.
 
-Der erste Artefakt-Upload fand wegen des versteckten .qa-output-Verzeichnisses keine Dateien. include-hidden-files ist nun für die zwei expliziten JSON-/PNG-Muster aktiviert; Profile bleiben ausgeschlossen. Aktualisierter GitHub-Gesamtlauf noch ausstehend; Status bis Review/Übernahme in Prüfung.
+Der erste Artefakt-Upload fand wegen des versteckten .qa-output-Verzeichnisses keine Dateien. include-hidden-files ist nun für die zwei expliziten JSON-/PNG-Muster aktiviert; Profile bleiben ausgeschlossen. Aktualisierter GitHub-Gesamtlauf **success**: https://github.com/Arizona2k/wunderkompass/actions/runs/37949478487, Lauf #2, Implementierungscommit `ea60c90f3cd3a9bdc47b420b892f8eed5e81ef6c`, PR-Merge-Stand gegen unveränderten main. GitHub-Connector bestätigt completed/success. Logs belegen pnpm 11.25.0, 20 einzelne Unit-Tests bestanden / 0 Fehler, alle Installations-/TypeScript-/Lint-/Build-/Integritätsschritte sowie vollständige Chromium-Probe (151.0.7922.34) erfolgreich. Lokal waren es Node 24.19.0/Chromium 151.0.7922.173; GitHub verwendet Node 24.21.0 und den zu Playwright passenden Browser.
+
+Artefakt `browser-evidence-37949478487-1` (ID 11625801053, 522112 Bytes): laut Upload-Log fünf Dateien (ein JSON-Bericht, vier PNGs), erfolgreich gespeichert; Connector bestätigt nicht abgelaufen, Ablauf 16. Oktober 2026. Kein Profilupload. Die sicheren Resultate bleiben dauerhaft hier, auch nach Artefaktablauf. Erster roter und anschließender grüner Lauf zeigen Fehlersperre des Jobs und erfolgreichen Normalbetrieb. Branch-Protection-Sperrwirkung ist davon getrennt und noch nicht aktiviert.
+
+Remote-Refs nach Implementierung per git ls-remote bestätigt: main weiterhin `6a540d2af3c0c0bcfade1a806582ffa5afb6302c`, test-live weiterhin `88f79649d588b513bdb385d3307321b21f1a5aa7`, Entwicklungsbranch am getesteten Commit ea60c90. Die anschließende Übergabeänderung betrifft ausschließlich BACKLOG.md, PROJECT_STATE.md und CHANGELOG.md; kein neuer Anwendungs-/Test-/Workflowdiff. git diff --check bestanden. PR wartet auf Review; kein Auto-Merge, keine Vercel-Einstellung oder Testwebsite geändert.
 
 Noch offen: Branch-Regeln importieren/prüfen/aktivieren (separate spätere Freigabe), Sperrwirkung durch roten PR und regulären direkten Pushversuch belegen, vollständiger Pass-Export/Reset/Import/Tab-Browserweg (WK-004), physische Geräte, Safari/Firefox, Screenreader, gehörte deutsche Stimme, schwache Hardware und pädagogische Abnahme. Kein Scheduler oder Auto-Merge aktiviert. Nächster Schritt nach grüner QA: PR gegen main prüfen; Übernahme und spätere test-live-Bereitstellung ausdrücklich kontrollieren.
