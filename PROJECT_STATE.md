@@ -17,12 +17,12 @@ Stand: 9. Oktober 2026 (Europe/Berlin). Diese Datei beschreibt belegten Iststand
 | --- | --- |
 | Durchlauf | setup-2026-10-09 |
 | Aufgabe | WK-001 – Agentensystem einrichten |
-| Status | in Prüfung; Einrichtung und Prüfbasis implementiert, GitHub-Sicherung folgt |
+| Status | in Prüfung; Einrichtung/Prüfbasis abgeschlossen und auf GitHub gesichert, PR wartet auf Review/Merge. Kein aktiver Entwicklungsdurchlauf mehr. |
 | Bearbeiter | Codex, diese Cloud-Aufgabe |
 | Basis | GitHub-main `0d9196741225dc902ef75d0f167ed37f97b4b344` |
 | Branch | `codex/agent-system-2026-10-09` |
-| Start / letztes Lebenszeichen | 9. Oktober 2026 / 16:11 Uhr Europe/Berlin |
-| PR | noch nicht erstellt |
+| Start / letztes Lebenszeichen | 9. Oktober 2026 / Abschluss um 16:14 Uhr Europe/Berlin |
+| PR | https://github.com/Arizona2k/wunderkompass/pull/1 – offen, kein Draft, nicht zusammengeführt |
 | Gemeinsame Sperre | Kein Scheduler aktiv; vor neuem Durchlauf GitHub-Branch/PR und aktiven Aufgabenstatus prüfen. Keine parallele Reservierung starten. |
 
 ## Einrichtung und Prüfung
@@ -49,7 +49,7 @@ Prüfstand: unveränderter Anwendungscode des Basiscommits plus Dokumentationsdi
 
 Rohlogs lokal unter work/ (nicht versioniert). Die sicheren Resultate stehen dauerhaft hier. Neue Browser-/Geräte-/Audio-Vollabnahme bleibt offen.
 
-Git-Synchronisierung: geprüftes Dokumentationspaket wird auf dem Entwicklungsbranch gesichert; PR-/Remote-Nachweis folgt im Abschlusscommit. main bleibt unangetastet.
+Git-Synchronisierung erfolgreich: Einrichtungscommit `62f2b1e6dcdaf4cccc2c1a71a9716284b65f2283` wurde mit `git push -u origin codex/agent-system-2026-10-09` auf GitHub gesichert (Exit 0). Der GitHub-Connector bestätigte denselben Head in [Pull Request #1](https://github.com/Arizona2k/wunderkompass/pull/1), Ziel main, Basis unverändert `0d9196741225dc902ef75d0f167ed37f97b4b344`. Die vorliegende Ergänzung dokumentiert diesen Nachweis als separaten Übergabecommit auf demselben Branch. Es besteht kein Synchronisierungsblocker mehr. main bleibt unangetastet; es wurde nichts zusammengeführt oder veröffentlicht.
 
 ## Nächste Aufgabe und offene Grenzen
 
