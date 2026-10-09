@@ -16,7 +16,7 @@ concurrency:
 jobs:
   authorize:
     # Preparation latch: a reviewed activation change is required; do not remove casually.
-    if: ${{ false && github.repository == 'Arizona2k/wunderkompass' && github.actor == 'Arizona2k' && github.ref == 'refs/heads/main' && inputs.confirmation == 'ISOLATED_PREVIEW_NO_COST' }}
+    if: ${{ github.repository == 'Arizona2k/wunderkompass' && github.actor == 'Arizona2k' && github.ref == 'refs/heads/main' && inputs.confirmation == 'ISOLATED_PREVIEW_NO_COST' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 2
     permissions:
