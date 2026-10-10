@@ -134,7 +134,7 @@
 
 /* Connected discoveries: bounded lists and calm learning controls. */
 .world-pagination{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;margin:1.5rem 0}
-.connection-card{border-left:3px solid #21755c;padding-left:.75rem;margin-bottom:1rem}
+.connection-card{padding:0 0 20px;margin:0 0 20px;border-bottom:1px solid #dbe6e9}
 .connection-card p{font-size:.9rem;line-height:1.65;margin:.3rem 0;color:#36545e}
 .challenge-levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.5rem 0}
 .challenge-levels .secondary-button{display:flex;align-items:flex-start;flex-direction:column;text-align:left;white-space:normal;gap:.7rem;padding:1.25rem}
