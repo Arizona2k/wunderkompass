@@ -1,5 +1,11 @@
 # Änderungsverlauf
 
+## 10. Oktober 2026 – WK-029 / WK-004: übersichtlicher Entdeckerpass und sichere Mitnahme
+
+Entdeckerpass in vier direkt erreichbare Abschnitte gegliedert; Schließen und „Weiter entdecken“ bleiben beim Scrollen erreichbar. Übersicht, Lernwege und sämtliche Abzeichen erhalten, Sammlungen übersichtlich aufklappbar. Sicherung/Wiederherstellung und Einstellungen als klare Flächen; große Schrift/reduzierte Bewegung gelten auch im Passdialog. Automatische Stimmenwahl passt auf kleine Bildschirme, lange gewählte Namen zusätzlich vollständig lesbar. JSON-Dateifehler verständlich formuliert und Kontrast der Reset-/Importbestätigung korrigiert.
+
+Bestehende Backup-Browserprobe in vollständige Pflichtregression eingebunden und um tatsächlichen Download, Notiz/Einstellungen/Modell/Memory-Runde, Reset-/Importabbruch und -bestätigung, sichere Ablehnung ungültiger Dateien sowie sichtbar synchronisierten zweiten Tab und Reload/Fortsetzen erweitert. Schema-3-Speicher und Spielverhalten unverändert. Fünf Browserbreiten ab 320, Tastatur/Touch/Fokus/axe/große Schrift und finale Bilder geprüft; tatsächlicher Gesamt-/Remote-Prüfstand und Grenzen in PROJECT_STATE beziehungsweise PR. Auf Entwicklungsbranch implementiert, keine Veröffentlichung oder Übernahme.
+
 ## 10. Oktober 2026 – WK-025: mobile Nachbesserung desselben PR #14
 
 Wissenschaftszeichnungen erhalten feste, zugeordnete HTML-Beschriftungen mit 16 px; vier Mondphasen bei schmalen Grafiken in zwei Reihen und mit vollständigen Phasennamen. Beschriftung des interaktiven Küstenvergleichs ebenfalls lesbar in HTML. Wortgleiche Alternativtexte, Nordhalbkugel-Orientierung, gleiche Küstenform/Markierung und Modellgrenzen erhalten.
