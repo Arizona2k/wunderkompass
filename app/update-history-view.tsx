@@ -1,10 +1,10 @@
-import {useEffect} from 'react';
+import {useLayoutEffect} from 'react';
 import {ArrowLeft,ArrowRight,Sparkles} from 'lucide-react';
 import {navigateHash,restoreRouteView} from './hash-route';
 import {publicUpdates,updateDate,type UpdateEntry} from './update-history';
 export default function UpdateHistoryView(){
  const entries=publicUpdates();
- useEffect(()=>{restoreRouteView('updates');},[]);
+ useLayoutEffect(()=>{restoreRouteView('updates');},[]);
  return <article className="update-history" aria-labelledby="updates-title">
   <a className="discovery-text-link" data-route-focus="updates-home" href="#globe" onClick={e=>{e.preventDefault();navigateHash('globe');}}><ArrowLeft size={18}/> Zur Startseite</a>
   <header className="updates-heading"><p className="eyebrow"><Sparkles size={16}/> WUNDERKOMPASS WÄCHST</p><h1 id="updates-title" tabIndex={-1}>Was ist neu?</h1><p>Vom ersten Globus bis zu sechs Wissenswelten: So ist WunderKompass gewachsen.</p></header>

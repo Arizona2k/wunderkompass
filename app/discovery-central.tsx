@@ -1,4 +1,4 @@
-import {useEffect,useState} from 'react';
+import {useLayoutEffect,useState} from 'react';
 import {ArrowRight,Compass,Gamepad2,Globe2,Lightbulb,Search,FlaskConical,BookOpen} from 'lucide-react';
 import {navigateHash,restoreRouteView} from './hash-route';
 import DiscoveryVisual from './discovery-visual';
@@ -9,7 +9,7 @@ import {DISCOVERY_CONNECTIONS} from './discovery-data';
 import type {WorldCategory} from './world-types';
 
 export function DiscoveryIntro({onSearch,onGlobe,onHelp}:{onSearch:()=>void;onGlobe:()=>void;onHelp:()=>void}){
- useEffect(()=>{const frame=requestAnimationFrame(()=>restoreRouteView('globe',!!history.state?.wunderRoute||!!history.state?.wunderFocus));return()=>cancelAnimationFrame(frame);},[]);
+ useLayoutEffect(()=>{restoreRouteView('globe',!!history.state?.wunderRoute||!!history.state?.wunderFocus);},[]);
  return <section className="discovery-hero" aria-labelledby="discovery-title">
   <div className="discovery-hero-copy"><p className="eyebrow"><Compass size={16}/> WISSEN WIRD EIN ABENTEUER</p><h1 id="discovery-title">Wie funktioniert <span>die Welt?</span></h1><p>Deine Lernwelt für 6–14: Erde erkunden, mit Wissen spielen und im Labor ausprobieren.</p>
    <div className="discovery-start"><button className="discovery-start-button" onClick={onGlobe}><Globe2 size={20}/> Mit der Weltkugel starten <ArrowRight size={18}/></button><button className="discovery-search" onClick={onSearch}><Search size={19}/><span>Was möchtest du entdecken?</span></button></div>
