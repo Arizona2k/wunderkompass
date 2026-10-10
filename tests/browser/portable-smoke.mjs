@@ -1,7 +1,7 @@
 import {passDesign} from './pass-atlas.mjs';
 import {backupFlow} from './backup.mjs';
 import {articleAtlas,offlineArticleAtlas} from './article-atlas.mjs';
-import {discoveryCentral,offlineDiscoveryCentral} from './discovery-central.mjs';
+import {discoveryCentral,offlineDiscoveryCentral,homepageOverview} from './discovery-central.mjs';
 import {connectedDiscoveries} from './connected-discoveries.mjs';
 import {challengeHints,offlineChallengeHints} from './challenge-hints.mjs';
 import {searchAndHistory, memoryRound} from './portable-flows.mjs';
@@ -20,6 +20,7 @@ const ready=p=>p.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])')
 const monitor=p=>{p.on('console',m=>{if(m.type()==='error')report.consoleErrors.push(m.text());});p.on('requestfailed',r=>report.failedRequests.push({url:r.url(),error:r.failure()?.errorText}));p.on('pageerror',e=>report.errors.push(e.message));p.on('response',r=>{if(r.url().startsWith(base)&&r.status()>=400)report.ownHttpErrors.push({path:r.url().replace(base,''),status:r.status()});});p.on('request',r=>{if(!r.url().startsWith(base)&&!r.url().startsWith('data:')&&!r.url().startsWith('blob:'))report.externalRequests.push(r.url());});};
 browser=await chromium.launch(options);report.browser=browser.version();
 try{
+ await homepageOverview(browser,base,ready,monitor,report,shots);
  for(const [width,height] of [[1440,900],[768,1024],[390,844],[360,800]]){
   const c=await browser.newContext({viewport:{width,height},isMobile:width<=390,hasTouch:width<=390,reducedMotion:'reduce',acceptDownloads:true}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);await p.goto(base);await ready(p);await p.locator('canvas').waitFor();assert.equal(await p.title(),'WunderKompass · Die große Abenteuerwelt des Wissens');
   const inspect=async name=>{assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,name);for(const im of await p.locator('.world-article img').all())await im.evaluate(async im=>{await im.decode();if(!im.naturalWidth)throw Error('Undecoded image');});report.views.push({width,height,name});};await inspect('home');console.log('Browser viewport',width,height);await articleAtlas(p,ready,report,width,shots);await passDesign(p,report,width,shots);await discoveryCentral(p,ready,report,width,shots);await searchAndHistory(p,report);
