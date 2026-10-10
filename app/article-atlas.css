@@ -1,0 +1,94 @@
+/* Shared article system: mobile first; category accents inherit the world. */
+.article-atlas {color:var(--wk-ink);overflow-wrap:break-word;--article-space:clamp(20px,3vw,36px)}
+.article-atlas .article-hero {display:grid;grid-template-columns:minmax(0,1fr);background:var(--wk-paper);border:1px solid var(--wk-line);border-radius:var(--wk-radius);overflow:hidden;margin-bottom:18px}
+.article-atlas .article-hero-copy {padding:var(--article-space);min-width:0}
+.article-atlas .world-article-heading {margin:0}
+.article-atlas .world-article-heading h2 {font-size:clamp(28px,3.6vw,46px);line-height:1.13;letter-spacing:-.045em;margin:14px 0 18px;max-width:22ch;text-wrap:balance}
+.article-atlas .world-article-heading .eyebrow {color:var(--world-accent,var(--wk-teal));font-size:11px;line-height:1.7;letter-spacing:.09em}
+.article-atlas .article-context {font-size:14px;margin-top:8px}
+.article-atlas .world-intro {font-size:17px!important;line-height:1.65;max-width:52ch;color:var(--wk-muted)!important}
+.article-atlas .world-actions {gap:10px;margin:22px 0 0;align-items:stretch}
+.article-atlas .world-actions button {min-height:48px;white-space:normal;height:auto;text-align:left;line-height:1.5}
+.article-atlas .world-actions .secondary-button {border:1px solid var(--wk-line);background:#fff;font-size:14px}
+.article-atlas .world-learned {margin-top:16px}
+.article-atlas .article-hero>.world-photo {margin:0;border:0;border-radius:0;background:var(--world-tint)}
+.article-atlas .article-hero>.world-photo img {height:260px;max-height:none;object-fit:cover;width:100%}
+.article-atlas .article-hero>.world-photo.media-contain img {object-fit:contain;padding:18px}
+.article-atlas .article-hero>.world-photo figcaption {padding:14px 20px;background:#fff;font-size:12px;color:var(--wk-muted);line-height:1.6}
+.article-atlas .article-hero>.world-photo .photo-caption {font-size:14px}
+.topic-illustration {margin:0;min-width:0;background:var(--wk-night);color:#f5ead6}
+.topic-illustration svg {width:100%;height:auto;display:block}
+.topic-illustration figcaption {font-size:12px;padding:12px 18px;line-height:1.6;background:#152c46;color:#d4e5e4}
+.topic-illustration.compact svg {height:190px;object-fit:contain}
+.topic-illustration.compact figcaption {font-size:11px;min-height:56px}
+.article-field-note {background:var(--world-tint,#e7f2ed);padding:var(--article-space);display:flex;flex-direction:column;justify-content:center;gap:18px}
+.article-field-note>svg {color:var(--world-accent,var(--wk-teal))}
+.article-field-note>span {font-size:25px;line-height:1.25;font-weight:700;max-width:15ch;letter-spacing:-.03em}
+.article-atlas .article-field-note>p {font-size:15px;max-width:34ch}
+.article-atlas .article-wayfinder {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0 0 24px}
+.article-wayfinder button {display:flex;align-items:center;gap:10px;padding:12px;min-height:50px;line-height:1.5;font-size:14px;text-align:left;border:1px solid var(--wk-line);border-radius:12px;background:#fff;color:var(--wk-ink);min-width:0}
+.article-wayfinder button>span {font-size:11px;color:var(--world-accent,var(--wk-teal));font-weight:800}
+.article-wayfinder button:hover {background:var(--world-tint);border-color:var(--world-accent)}
+.article-atlas .world-article-layout {grid-template-columns:minmax(0,1fr);gap:24px}
+.article-atlas .world-article-main {gap:20px}
+.article-atlas .world-article-main>section,.article-atlas .article-experiment {padding:var(--article-space);border:1px solid var(--wk-line);border-radius:20px;background:var(--wk-paper);min-width:0}
+.article-atlas .world-short {border-top:4px solid var(--world-accent,var(--wk-teal))!important}
+.article-atlas .world-short>p {font-size:17px;line-height:1.8;max-width:65ch;margin:0 0 17px;color:var(--wk-ink)}
+.article-atlas .world-facts {grid-template-columns:minmax(0,1fr);gap:12px;margin-top:26px}
+.article-atlas .world-facts>div {background:var(--world-tint);padding:18px;border-radius:12px}
+.article-atlas .world-facts dd {font-size:16px;line-height:1.75}
+.article-atlas .world-facts dt {color:var(--world-accent);font-size:12px}
+.article-atlas .article-experiment {background:#eaf3f1;border-color:#b6cec9}
+.article-experiment>.eyebrow {margin-bottom:18px;color:var(--wk-teal)}
+.article-experiment h3 {font-size:24px;line-height:1.3;margin:0 0 14px}
+.article-experiment .model-buttons {display:flex;flex-wrap:wrap;gap:9px;margin:18px 0}
+.article-experiment .model-buttons button {flex:1 1 140px;white-space:normal;height:auto;text-align:left;justify-content:center;line-height:1.5;min-height:48px}
+.article-experiment .model-buttons button[aria-pressed=true] {background:var(--wk-teal);border-color:var(--wk-teal);color:#fff}
+.article-experiment .model-result {display:block;padding:18px;border:1px solid #b6cec9;border-radius:14px;background:#fff;margin:18px 0}
+.article-experiment .model-result strong {display:block;width:auto;max-width:none;font-size:18px;color:var(--wk-teal);margin-bottom:8px}
+.article-experiment .model-result p {max-width:none;margin:0;line-height:1.75;font-size:16px}
+.article-experiment .small-note {font-size:13px;line-height:1.75;margin:16px 0;color:var(--wk-muted)}
+.article-experiment .cycle-model svg,.tide-comparison>svg {display:block;width:100%;height:auto;margin:18px 0}
+.article-atlas .world-article-side {position:static;display:flex;min-width:0;gap:20px}
+.article-atlas .world-article-side>section,.article-atlas .world-sources {padding:24px;border-color:var(--wk-line);background:var(--wk-paper)}
+.article-atlas .world-article-side p {font-size:15px;line-height:1.75}
+.article-atlas .knowledge-network {border-top:4px solid var(--wk-teal)}
+.article-atlas .connection-card {padding:0 0 16px;margin-bottom:12px;border-bottom:1px solid var(--wk-line)}
+.article-atlas .connection-card:last-child {border-bottom:0;padding-bottom:0;margin-bottom:0}
+.article-atlas .connection-card p {margin:10px 0 0}
+.article-routes {padding:0 0 18px;margin-bottom:16px;border-bottom:1px solid var(--wk-line)}
+.article-routes .knowledge-link>span>svg {display:inline;vertical-align:middle}
+.article-atlas .world-sources p,.article-atlas .world-sources li {font-size:13px}
+.article-atlas .world-mini-question {border-top:4px solid var(--wk-teal)!important}
+.article-atlas .world-mini-question .eyebrow {color:var(--wk-teal)}
+.article-atlas .world-mini-question h3 {font-size:23px;line-height:1.4}
+.article-atlas .world-mini-question .quiz-answer {min-height:54px;font-size:16px}
+.article-atlas :is(.world-short,.article-experiment,.world-mini-question,.article-network) {scroll-margin-top:24px}
+.article-atlas button:focus-visible,.article-atlas summary:focus-visible,.article-atlas a:focus-visible {outline:3px solid var(--wk-focus);outline-offset:4px}
+.article-atlas [tabindex="-1"]:focus {outline:2px solid var(--wk-teal);outline-offset:4px}
+.world-topic-tile:has(.topic-illustration) {display:flex;flex-direction:column}
+.world-topic-tile:has(.topic-illustration) .world-tile-text {flex:1}
+@media(min-width:700px) {
+ .article-atlas .article-wayfinder {grid-template-columns:repeat(4,minmax(0,1fr))}
+ .article-atlas .article-hero {grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:stretch}
+ .article-atlas .article-hero>.world-photo {display:flex;flex-direction:column;justify-content:center}
+ .article-atlas .article-hero>.world-photo img {height:320px}
+ .article-atlas .article-hero>.topic-illustration {display:flex;flex-direction:column;justify-content:center}
+ .article-atlas .world-facts {grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(min-width:1100px) {
+ .article-atlas .world-article-layout {grid-template-columns:minmax(0,1fr) minmax(260px,320px);gap:28px}
+ .article-atlas .world-intro {font-size:19px!important}
+}
+@media(max-width:370px) {
+ .article-atlas {--article-space:18px}
+ .article-wayfinder button {font-size:13px;gap:6px;padding:11px 9px}
+ .article-atlas .world-article-heading .eyebrow {font-size:10px}
+ .article-atlas .article-hero>.world-photo img {height:220px}
+ .article-atlas .world-article-side>section,.article-atlas .world-sources {padding:18px}
+}
+.article-atlas .world-game-hint {padding:14px 18px;margin:16px 0;border:1px solid #b6cec9;border-radius:12px;background:#eaf3f1}
+.article-atlas .world-game-hint summary {color:var(--wk-teal);font-size:16px;font-weight:700}
+.article-atlas .world-game-hint p {font-size:16px;line-height:1.75;margin:12px 0}
+.article-atlas .world-article-heading h2 {font-weight:750}
+.article-atlas .world-surprise>div {min-width:0}

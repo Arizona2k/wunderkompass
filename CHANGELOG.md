@@ -1,5 +1,11 @@
 # Änderungsverlauf
 
+## 10. Oktober 2026 – WK-025 / WK-028: Wissenskarten als Entdeckungsraum
+
+Lokal fertig und geprüft, PR-Übernahme nach test-live noch ausstehend: gemeinsame Artikelansicht für sechs Welten mit Medien-/Titelbereich, Lesefläche, Forschungsfläche und fokussierbaren Sprungzielen; eigene Mond-/Gezeiten-/Strömungszeichnungen sowie interaktiver Vergleich einer Beispielküste. Vorhandene individuelle Hinweise auch in 110 Mini-Fragen, Auflösung erst nach Erfolg, passende vorhandene Lernrouten direkt erreichbar. IDs, Daten, Bildrechte und zentraler Pass erhalten. Keine neue Wissenskarte oder eigenständige Spielmechanik.
+
+Gesamtauftrag in den vorhandenen Projektregeln vervollständigt; einzige priorisierte Designübersicht im BACKLOG mit 23 Bereichen/Unteransichten/Status/Nachweisen. NASA-/NOAA-Fachstichprobe, Standard-/Releaseprüfungen, 116 Artikelhüllen, fünf Kernbreiten ab 320, zwei Zusatzgrößen, axe/Fokus/Tastatur/Touch, falsch/richtig/Reload, vollständige Challenge-/Altpass-/Offlineprüfung bestanden. WebKit-Download blockiert; echte Geräte/unabhängige Abnahmen und weitere Modernisierung offen. Genauer Umfang und Grenzen in PROJECT_STATE.md.
+
 Nur tatsächlich abgeschlossene Änderungen aufnehmen. Historische Produktänderungen und Prüfungen bleiben in QA.md, WORLD-AUDIT.md, MASTER-AUDIT.md und PRUEFBERICHT.md; sie werden hier nicht als neu ausgeführte Arbeit wiederholt.
 
 ## 2026-10-09 – Agentensystem vorbereitet (WK-001)
