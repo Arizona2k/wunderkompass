@@ -1,5 +1,11 @@
 # Änderungsverlauf
 
+## 10. Oktober 2026 – WK-030: ruhige Wissensverknüpfungen
+
+Dekorativen linken grünen Balken in „Warum hängt das zusammen?“ an der alten gemeinsamen CSS-Quelle entfernt. Einträge mit größeren Abständen, deutlicheren Überschriften und feinen horizontalen Trennlinien gegliedert; Linktitel ohne farbige Kachelhintergründe, Pfeil und bestehender Tastaturfokus erhalten. Auch der starke Abschnittsrand ist durch eine dezente Linie ersetzt. Erklärtexte, Verbindungen, Navigation und Pass unverändert. Nutzerentscheidung für vergleichbare Erklärlisten dauerhaft in VISION dokumentiert; Status-/Warnhinweise bleiben zweckbezogen.
+
+Vorher-/Nachher-Browseransichten persönlich geprüft; 320/360/390/768/1440, große Schrift, axe A/AA, Tastatur/Touch und Rücknavigation gezielt bestanden. Produktionsregression und tatsächlicher abschließender GitHub-Prüfstand in PROJECT_STATE beziehungsweise PR. Nur Entwicklungsbranch, keine Veröffentlichung oder Übernahme.
+
 ## 10. Oktober 2026 – WK-029 / WK-004: übersichtlicher Entdeckerpass und sichere Mitnahme
 
 Entdeckerpass in vier direkt erreichbare Abschnitte gegliedert; Schließen und „Weiter entdecken“ bleiben beim Scrollen erreichbar. Übersicht, Lernwege und sämtliche Abzeichen erhalten, Sammlungen übersichtlich aufklappbar. Sicherung/Wiederherstellung und Einstellungen als klare Flächen; große Schrift/reduzierte Bewegung gelten auch im Passdialog. Automatische Stimmenwahl passt auf kleine Bildschirme, lange gewählte Namen zusätzlich vollständig lesbar. JSON-Dateifehler verständlich formuliert und Kontrast der Reset-/Importbestätigung korrigiert.

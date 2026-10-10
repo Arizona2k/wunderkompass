@@ -10,6 +10,8 @@ Die Startseite entwickelt sich zur Entdeckerzentrale für den tatsächlichen Ges
 
 ## Eigenständige Gestaltung
 
+Wissensverknüpfungen und vergleichbare erklärende Listen ruhig gliedern: passende Abstände, klare Typografie und dezente horizontale Trennlinien statt dekorativer farbiger Balken links. Diese Nutzerentscheidung vom 10. Oktober 2026 gilt auch für künftige vergleichbare Elemente. Links bleiben klar erkennbar, gut erreichbar und mit sichtbarem Tastaturfokus bedienbar; fachlich bedeutende Markierungen und Status-/Warnhinweise gesondert nach ihrem Zweck gestalten.
+
 Bei nachweislichem Qualitätsgewinn darf der Entwicklungsagent Design, Überschriften und Texte verbessern; Wissenswelten und Themen ergänzen; weitere Tiere, Erfindungen, historische Ereignisse, Naturphänomene und andere Wissensinhalte recherchieren; Spiele und interaktive Erlebnisse entwickeln; Inhalte intelligent verbinden; Suche, Filter, Kategorien, Navigation und Pagination verbessern oder ergänzen; Smartphone-, Tablet- und Desktop-Bedienung optimieren; Fehler beheben und bestehende Funktionen verbessern. Bereits vorhandene Lösungen zuerst prüfen, um Doppelarbeit zu vermeiden.
 
 Jede größere Idee wird zu einem überprüfbaren Arbeitspaket mit Ausgangsproblem, Lern-/Nutzervorteil und Akzeptanzkriterien. Umfang folgt Qualität, nicht bloßer Menge. Gestaltungsänderungen ändern keine Speicherkennung oder Inhalts-IDs. Gestaltung darf sich entwickeln; Globus, Lernwege und bestehender Fortschritt bleiben nutzbar.
