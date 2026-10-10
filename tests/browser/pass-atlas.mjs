@@ -35,6 +35,13 @@ async function switchGeometry(control,name){
  const [a,b]=colors.map(luminance);assert.ok((Math.max(a,b)+.05)/(Math.min(a,b)+.05)>=3,name+' control boundary contrast at least 3:1');
 }
 
+async function textContrast(control,name){
+ await control.evaluate(el=>Promise.all(el.getAnimations().map(a=>a.finished.catch(()=>{}))));
+ const colors=await control.evaluate(el=>[getComputedStyle(el).color,getComputedStyle(el).backgroundColor]);
+ const luminance=color=>{const rgb=color.match(/[\d.]+/g).slice(0,3).map(Number).map(n=>{const v=n/255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4});return .2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2]};
+ const [a,b]=colors.map(luminance),contrast=(Math.max(a,b)+.05)/(Math.min(a,b)+.05);assert.ok(contrast>=4.5,name+' text contrast at least 4.5:1 ('+contrast.toFixed(2)+')');
+}
+
 export async function passDesign(page,report,width,shots){
  const opener=page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true});await opener.click();
  const pass=page.getByRole('dialog',{name:'Entdeckerpass',exact:true}),nav=pass.getByRole('navigation',{name:'Im Entdeckerpass'});
@@ -56,7 +63,7 @@ export async function passDesign(page,report,width,shots){
   assert.equal(await section.evaluate(el=>getComputedStyle(el).outlineStyle==='none'),true,'no dominant whole-section outline');
   if(width!==390)await keyboardRing(heading,'section heading '+id);
   assert.equal(new URL(page.url()).hash,hash,'pass jumps preserve current activity');await frame();
-  if(id==='backup')await backupVisible();
+  if(id==='backup'){await backupVisible();const save=pass.locator('.pass-backup-actions .primary-button');await textContrast(save,'backup normal');await save.hover();await textContrast(save,'backup hover');await page.screenshot({path:shots+'/pass-backup-hover-'+width+'.png',animations:'disabled'});await page.mouse.move(0,0)}
   await page.screenshot({path:shots+'/pass-'+id+'-'+width+'.png',animations:'disabled'});
  }
  await activate(nav.getByRole('button',{name:'Überblick',exact:true}));
@@ -86,6 +93,6 @@ export async function passDesign(page,report,width,shots){
  await activate(nav.getByRole('button',{name:'Pass sichern',exact:true}));await pass.getByRole('switch',{name:'Größere Schrift',exact:true}).uncheck();await pass.getByRole('switch',{name:'Weniger Bewegung',exact:true}).uncheck();
  await pass.getByRole('button',{name:'Pass neu beginnen',exact:true}).click();const confirmation=page.getByRole('alertdialog');await confirmation.waitFor();assert.equal(await confirmation.evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight&&el.scrollWidth<=el.clientWidth+1}),true,'reset confirmation fits '+width);await axe('.pass-confirmation');await page.screenshot({path:shots+'/pass-reset-confirmation-'+width+'.png',animations:'disabled'});await confirmation.getByRole('button',{name:'Weiter sammeln',exact:true}).click();await page.locator('.pass-confirmation').waitFor({state:'detached'});await pass.waitFor();
  await page.keyboard.press('Escape');await page.locator('.passport-atlas').waitFor({state:'detached'});assert.equal(await opener.evaluate(el=>el===document.activeElement),true,'Escape returns focus to pass opener');
- await opener.click();await pass.getByRole('button',{name:'Weiter entdecken',exact:true}).click();await page.locator('.passport-atlas').waitFor({state:'detached'});assert.equal(await opener.evaluate(el=>el===document.activeElement),true,'footer returns focus to pass opener');
- report.checks.push('Pass '+width+': heading focus without whole-section frames, keyboard/system-color focus and contrast, touch-sized controls/label activation, all badges and extra stats, no label clipping/overlays, both backup actions immediately reachable with normal/large text, reduced dialog motion, hash and focus return preserved');
+ await opener.click();const footer=pass.getByRole('button',{name:'Weiter entdecken',exact:true});await textContrast(footer,'footer normal');await footer.hover();await textContrast(footer,'footer hover');await footer.click();await page.locator('.passport-atlas').waitFor({state:'detached'});assert.equal(await opener.evaluate(el=>el===document.activeElement),true,'footer returns focus to pass opener');
+ report.checks.push('Pass '+width+': heading focus without whole-section frames, keyboard/system-color focus and contrast, normal/hover action text contrast, touch-sized controls/label activation, all badges and extra stats, no label clipping/overlays, both backup actions immediately reachable with normal/large text, reduced dialog motion, hash and focus return preserved');
 }

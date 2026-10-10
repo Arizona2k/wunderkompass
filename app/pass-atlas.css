@@ -70,6 +70,7 @@
 .pass-footer {display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;border-top:1px solid var(--wk-line);background:var(--wk-paper);flex-shrink:0}
 .pass-footer>span {display:none;font-size:14px;color:var(--wk-muted)}
 .pass-footer .primary-button {color:#fff;width:100%;background:var(--wk-teal);min-height:48px;box-shadow:none;white-space:normal;line-height:1.5}
+.passport-atlas :is(.pass-backup-actions,.pass-footer) .primary-button:hover {background:#1d5143}
 .passport-atlas :is(button,a,summary,[role=switch],[role=slider],select,h3):focus-visible,.pass-confirmation button:focus-visible {outline:2px solid var(--wk-focus);outline-offset:3px;box-shadow:none}
 .passport-atlas .pass-header button:focus-visible {outline-color:#9bd4e1}
 .pass-body .pass-section-title {width:fit-content;max-width:100%;border-radius:4px}
