@@ -8,12 +8,12 @@ export default function PassShell({children}:{children:ReactNode}){
  function jump(id:string){
   const target=body.current?.querySelector<HTMLElement>(`[data-pass-section="${id}"]`);
   if(!target)return;
-  target.focus({preventScroll:true});body.current?.scrollTo({top:target.offsetTop-16,behavior:'auto'});
+  (target.querySelector<HTMLElement>('h3')??target).focus({preventScroll:true});body.current?.scrollTo({top:target.offsetTop-16,behavior:'auto'});
  }
  return <>
-  <header className="pass-header"><div><p className="eyebrow"><Award size={17}/> DEIN ENTDECKERPASS</p><DialogTitle>Deine Entdeckungen.</DialogTitle></div><DialogClose className="icon-button" aria-label="Entdeckerpass schließen"><X size={20}/></DialogClose></header>
+  <header className="pass-header"><div><p className="eyebrow"><Award size={17} aria-hidden="true"/> DEINE ENTDECKUNGEN</p><DialogTitle>Entdeckerpass</DialogTitle></div><DialogClose className="icon-button" aria-label="Entdeckerpass schließen"><X size={20}/></DialogClose></header>
   <div className="pass-body" ref={body}>
-   <DialogDescription>Deine Wege, gelösten Aufgaben und Abzeichen. Du bestimmst das Tempo – ganz ohne Lern-Account.</DialogDescription>
+   <DialogDescription>Deine Wege und Abzeichen. In deinem Tempo.</DialogDescription>
    <nav className="pass-wayfinder" aria-label="Im Entdeckerpass"><button onClick={()=>jump('overview')}><LayoutGrid size={18}/> Überblick</button><button onClick={()=>jump('learning')}><Map size={18}/> Lernwege</button><button onClick={()=>jump('backup')}><Download size={18}/> Pass sichern</button><button onClick={()=>jump('badges')}><Award size={18}/> Abzeichen</button></nav>
    {children}
   </div>
