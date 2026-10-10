@@ -1,5 +1,11 @@
 # Änderungsverlauf
 
+## 10. Oktober 2026 – WK-031: lesbarer Pass und visuelle Regressionen
+
+Entdeckerpass mit kompakterem Kopf, klar gruppierten Hauptwerten und vollständig aufklappbaren Kapitel-/Missions-/Laborzählern entschlackt. Sicherungsaktionen vor den ausführlichen Hinweisen; Einstellungen in Darstellung und Spielen/Vorlesen gruppiert. Größere Beschriftungen und 54×44-px-Schalter, deren Knöpfe innerhalb der Fläche bleiben und deren Rand ausreichend Kontrast bietet. Abschnittswege fokussieren die zugehörige Überschrift mit schmalem kontrastreichem Tastaturrahmen; helle Kopf- und Systemfarbenfoki. Weniger Bewegung gilt auch für den Dialograhmen. Funktionen, Einstellungen, Fortschritte, Sicherungen, Spielstände, alle Abzeichen und bestehende Wissensverknüpfungen erhalten.
+
+Bestehende Browserprobe um Text-Clipping, tatsächliche Aktionserreichbarkeit unter festem Rahmen, Touch-/Knopfgeometrie, Label-Tap, Kontrast und gezielte Fokusprüfung erweitert. Kontrollierte Vorherfehler werden erkannt, korrigierte Oberfläche besteht. Maßstab für kritische persönliche Screenshotprüfung in QUALITY ergänzt; fünf Breiten und große Schrift persönlich geprüft. Vollständiger endgültiger Lokal-/GitHub-Prüfstand und Grenzen in PROJECT_STATE beziehungsweise PR. Nur Entwicklungsbranch, keine Veröffentlichung oder Übernahme.
+
 ## 10. Oktober 2026 – WK-030: ruhige Wissensverknüpfungen
 
 Dekorativen linken grünen Balken in „Warum hängt das zusammen?“ an der alten gemeinsamen CSS-Quelle entfernt. Einträge mit größeren Abständen, deutlicheren Überschriften und feinen horizontalen Trennlinien gegliedert; Linktitel ohne farbige Kachelhintergründe, Pfeil und bestehender Tastaturfokus erhalten. Auch der starke Abschnittsrand ist durch eine dezente Linie ersetzt. Erklärtexte, Verbindungen, Navigation und Pass unverändert. Nutzerentscheidung für vergleichbare Erklärlisten dauerhaft in VISION dokumentiert; Status-/Warnhinweise bleiben zweckbezogen.
