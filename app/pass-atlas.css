@@ -1,0 +1,88 @@
+/* The pass uses the same science/adventure tokens as the discovery world. */
+.passport-dialog.passport-atlas {width:calc(100% - 24px);max-width:900px!important;max-height:calc(100dvh - 24px)!important;padding:0!important;gap:0!important;display:flex;flex-direction:column;overflow:hidden;background:var(--wk-paper)!important;border-radius:var(--wk-radius)!important;color:var(--wk-ink)}
+.pass-header {display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;background:var(--wk-night);color:#fffdf8;flex-shrink:0}
+.pass-header .eyebrow {color:#c0d9d5;font-size:11px;letter-spacing:.08em;line-height:1.6;margin:0 0 7px}
+.passport-atlas .pass-header [data-slot=dialog-title] {color:#fffdf8;font-size:26px;line-height:1.2;letter-spacing:-.03em;font-weight:750}
+.pass-header .icon-button {flex-shrink:0;border-color:#83aaa5;background:#18394c;color:#f5ead6;min-width:44px;min-height:44px}
+.pass-header .icon-button:hover,.pass-header .icon-button:focus-visible {background:#2a5360;color:#fff;border-color:#b5d6cb}
+.pass-body {position:relative;overflow:auto;min-height:0;padding:20px;overscroll-behavior:contain;scroll-padding-block:16px;overflow-wrap:break-word}
+.passport-atlas .pass-body>[data-slot=dialog-description] {font-size:16px;line-height:1.65;color:var(--wk-muted);margin:0 0 18px}
+.pass-wayfinder {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0 0 26px}
+.pass-wayfinder button {display:flex;align-items:center;gap:9px;padding:12px;min-height:48px;font-size:14px;line-height:1.5;text-align:left;background:#fff;border:1px solid var(--wk-line);border-radius:12px;color:var(--wk-ink);min-width:0}
+.pass-wayfinder button svg {color:var(--wk-teal)}
+.pass-wayfinder button:hover {background:#eaf3f1;border-color:var(--wk-teal)}
+.pass-body>[data-pass-section] {margin:0 0 28px;min-width:0;scroll-margin-block:16px}
+.pass-body h3 {font-size:22px;line-height:1.3;letter-spacing:-.02em;font-weight:700;margin:0 0 14px;color:var(--wk-ink)}
+.pass-body p {font-size:16px;line-height:1.7;color:var(--wk-muted)}
+.pass-body .passport-stats,.pass-body .progress-overview {grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0}
+.pass-body :is(.passport-stats,.progress-overview)>div {padding:16px 12px;border:1px solid var(--wk-line);background:#fff;border-radius:14px;text-align:left;min-width:0}
+.pass-body :is(.passport-stats,.progress-overview)>div:last-child {grid-column:1/-1}
+.pass-body :is(.passport-stats,.progress-overview) strong {font-size:26px;line-height:1.2;color:var(--wk-teal)}
+.pass-body :is(.passport-stats,.progress-overview) span {display:block;font-size:14px;line-height:1.5;margin-top:8px;color:var(--wk-muted)}
+.pass-body .level-progress {margin:20px 0;background:#eaf3f1;border:1px solid #b6cec9;border-radius:16px;gap:14px;padding:18px}
+.pass-body .level-progress>div {min-width:0}
+.pass-body .level-progress>svg {color:var(--wk-teal);flex-shrink:0}
+.pass-body .level-progress strong {color:var(--wk-ink);line-height:1.5}
+.pass-body .level-progress p {font-size:14px;margin:6px 0 0}
+.pass-body .storage-status {padding:14px 16px;border-left:3px solid var(--wk-teal);background:#edf4ef;border-radius:0 10px 10px 0;font-size:14px!important;margin:14px 0;line-height:1.7}
+.pass-body :is(.learning-map,.world-progress) {padding:18px;margin:18px 0;border:1px solid var(--wk-line);background:#fff;border-radius:16px;min-width:0}
+.pass-body :is(.learning-map,.world-progress) h3 {font-size:19px}
+.pass-body :is(.learning-map,.world-progress) button {min-height:48px;white-space:normal;text-align:left;height:auto;line-height:1.5}
+.pass-body :is(.learning-map,.world-progress) summary {font-size:16px;line-height:1.6;min-height:48px;color:var(--wk-teal)}
+.passport-atlas .pass-settings {margin:0;padding:0;border:0;background:transparent;min-width:0}
+.pass-backup {padding:18px;background:#eaf3f1;border:1px solid #b6cec9;border-radius:16px}
+.pass-backup .eyebrow {font-size:11px;color:var(--wk-teal);letter-spacing:.08em;line-height:1.6;margin:0 0 10px}
+.pass-backup-actions {display:grid;gap:10px;margin:20px 0}
+.pass-backup-actions button {min-height:48px;white-space:normal;line-height:1.5;justify-content:flex-start;height:auto;text-align:left;padding:12px 14px}
+.pass-backup-actions .primary-button {color:#fff;background:var(--wk-teal);box-shadow:none}
+.pass-preferences {padding:18px;background:#fff;border:1px solid var(--wk-line);border-radius:16px;margin-top:18px}
+.pass-preferences .settings-grid {gap:10px;margin:20px 0}
+.pass-preferences .settings-grid label {padding:12px;gap:14px;border:1px solid var(--wk-line);border-radius:12px;min-width:0;font-size:16px;color:var(--wk-ink)}
+.pass-preferences [data-slot=switch] {flex-shrink:0}
+.pass-preference-field {margin:26px 0}
+.pass-preference-field>label,.pass-preferences .voice-picker>label {display:flex;align-items:center;gap:8px;font-size:16px;line-height:1.5;font-weight:600;margin-bottom:16px;color:var(--wk-ink)}
+.pass-preference-field [data-slot=select-trigger] {width:100%;height:auto!important;min-height:48px;white-space:normal;line-height:1.5;font-size:16px}
+.pass-preference-field [data-slot=select-value] {white-space:normal;text-align:left}
+.pass-preferences .voice-picker select {width:100%;max-width:100%;min-width:0;height:auto;min-height:48px;font-size:16px;white-space:nowrap;text-overflow:ellipsis;line-height:1.5;padding:12px}
+.pass-reset {padding:18px;margin-top:18px;border:1px solid #dbbea0;border-radius:16px;background:#fff7ea}
+.pass-reset h3 {font-size:19px}
+.pass-reset button {margin-top:16px;white-space:normal;min-height:48px}
+.pass-badge-collection {margin:16px 0;border:1px solid var(--wk-line);border-radius:16px;background:#fff;padding:10px 16px}
+.pass-badge-collection>summary {min-height:48px;font-size:16px;font-weight:600;line-height:1.6;cursor:pointer;color:var(--wk-teal)}
+.pass-body .badge-grid {grid-template-columns:minmax(0,1fr);margin:16px 0;gap:12px}
+.pass-body .passport-badge {padding:20px;text-align:left;border-color:var(--wk-line);background:#f2f5f2}
+.pass-body .passport-badge.earned {background:#eaf3f1;border-style:solid;border-color:#88b4a1}
+.pass-body .passport-badge h3 {font-size:18px;margin:12px 0 10px}
+.pass-body .passport-badge p,.pass-body .passport-badge span {font-size:14px;line-height:1.65;color:var(--wk-muted)}
+.pass-footer {display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;border-top:1px solid var(--wk-line);background:var(--wk-paper);flex-shrink:0}
+.pass-footer>span {display:none;font-size:14px;color:var(--wk-muted)}
+.pass-footer .primary-button {color:#fff;width:100%;background:var(--wk-teal);min-height:48px;box-shadow:none;white-space:normal;line-height:1.5}
+.passport-atlas :is(button,a,summary,[role=switch],[role=slider],select):focus-visible {outline:3px solid var(--wk-focus);outline-offset:3px}
+.pass-body [data-pass-section]:focus {outline:2px solid var(--wk-teal);outline-offset:4px;border-radius:4px}
+.pass-confirmation {max-height:calc(100dvh - 32px);overflow:auto;color:var(--wk-ink);background:var(--wk-paper);overflow-wrap:break-word}
+.pass-confirmation [data-slot=alert-dialog-title] {font-size:22px;line-height:1.3;letter-spacing:-.02em}
+.pass-confirmation [data-slot=alert-dialog-description] {font-size:16px;line-height:1.65}
+.pass-confirmation [data-slot=alert-dialog-action] {background:var(--wk-teal);color:#fff}
+.pass-confirmation [data-slot=alert-dialog-action]:hover {background:#1d5143}
+.pass-confirmation button {min-height:48px;height:auto;white-space:normal;line-height:1.5}
+.passport-atlas[data-reduced-motion] * {animation:none!important;transition:none!important;scroll-behavior:auto!important}
+@media(min-width:700px) {
+ .pass-header {padding:22px 28px}
+ .pass-body {padding:24px 28px}
+ .pass-wayfinder {grid-template-columns:repeat(4,minmax(0,1fr))}
+ .pass-body .passport-stats,.pass-body .progress-overview {grid-template-columns:repeat(3,minmax(0,1fr))}
+ .pass-body :is(.passport-stats,.progress-overview)>div:last-child {grid-column:auto}
+ .pass-backup,.pass-preferences,.pass-reset {padding:24px}
+ .pass-backup-actions {grid-template-columns:repeat(2,minmax(0,1fr))}
+ .pass-body .badge-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+ .pass-footer {padding:16px 28px}
+ .pass-footer>span {display:block}
+ .pass-footer .primary-button {width:auto}
+}
+@media(max-width:370px) {
+ .pass-header,.pass-body {padding:16px}
+ .passport-atlas .pass-header [data-slot=dialog-title] {font-size:23px}
+ .pass-backup,.pass-preferences,.pass-reset {padding:14px}
+ .pass-wayfinder button {padding:10px 8px;gap:7px}
+ .pass-preferences .settings-grid label {padding:10px;gap:10px}
+}
