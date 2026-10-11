@@ -4,8 +4,9 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "0afbcdd7ed1d7fd639b7033df869dae32c39c43d",
+    "commit": "5e49aae238f99ec416991a4bf7d35772fd9e6d9f",
     "includedMergeCommits": [
+      "5e49aae238f99ec416991a4bf7d35772fd9e6d9f",
       "0afbcdd7ed1d7fd639b7033df869dae32c39c43d",
       "a68ae6d61a7e4588064da0a68e1d49bab466bb6d",
       "91795d4830edf8ad1dd202c8a07e1dfa734f3324",
@@ -463,10 +464,31 @@
       "title": "Spielplatz 2.0: gemeinsame Auswahl und drei Lernspiele modernisieren",
       "url": "https://github.com/Arizona2k/wunderkompass/pull/21",
       "base": "test-live",
-      "mergedAt": null,
-      "mergeCommit": null,
-      "statusesUrl": null,
-      "deploymentStatuses": []
+      "mergedAt": "2026-10-11T14:47:59Z",
+      "mergeCommit": "5e49aae238f99ec416991a4bf7d35772fd9e6d9f",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/5e49aae238f99ec416991a4bf7d35772fd9e6d9f/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56089225446,
+          "context": "Vercel",
+          "state": "success",
+          "description": "Deployment has completed",
+          "creator": "vercel[bot]",
+          "createdAt": "2026-10-11T14:48:18Z",
+          "updatedAt": "2026-10-11T14:48:18Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/qCzWXe5HXRtZfRGgUJkrapUMsRxt"
+        },
+        {
+          "id": 56089217965,
+          "context": "Vercel",
+          "state": "pending",
+          "description": "Vercel is deploying your app",
+          "creator": "vercel[bot]",
+          "createdAt": "2026-10-11T14:48:03Z",
+          "updatedAt": "2026-10-11T14:48:03Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/qCzWXe5HXRtZfRGgUJkrapUMsRxt"
+        }
+      ]
     }
   ]
 }

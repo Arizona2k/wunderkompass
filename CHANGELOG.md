@@ -1,5 +1,17 @@
 # Änderungsverlauf
 
+## 11. Oktober 2026 – WK-036: 2A, technisches Fundament & Performance
+
+Gemeinsame responsive Raster, freiwillige native Details und verständliche Lade-/Leer-/Fehlerzustände an vorhandenen Spiel-, Labor- und Wissensroutenflächen. Einheitliche Seitenabstände, Mindestbreiten, lesbare Texte und sichtbarer Tastatur-/Systemfarbenfokus; ruhige Trennlinien-Leitlinie bleibt erhalten. Platz für asynchrone Inhalte reduziert Layoutsprünge. Keine neue UI-Architektur, Speicheridentitäten oder Spielmechaniken.
+
+3D-Weltkugel erst bei Sichtbarkeit oder echtem Modellbedarf; Ländergeometrie erst in benötigten Bereichen. Suche, Passinhalte, Elternhinweise und Spielefamilien bedarfsgeladen, nach Erstgebrauch für vorhandene Fokus-/Schließzyklen erhalten. Wissensübersicht nutzt den bestehenden kompakten Index; voller Katalog/Artikel/Modelle erst beim Karten- oder Routenaufruf. Vorhandene Datums-/Personenmetadaten vollständig übernommen und gegen alle 116 Originalkarten geprüft. Unbeabsichtigtes Scrollen beim erstmaligen Laden eines noch inaktiven Spielecontrollers verhindert.
+
+Produktionsmanifest und automatische Größenbudgets im bestehenden Build; drei kalte Browsermessungen für sieben Einstiegsbereiche mit JS-/Layoutsprung-/LCP-/Bereitschaftsbudgets. Komponenten-/Layoutverträge, freiwillige Details, große Schrift, Touch-/Tastatur-/Systemfarben, echte verzögerte/fehlgeschlagene Modulladung und Wiederladen auf sieben Breiten ergänzen die vorhandene Browserprobe. Vier neue Prüffälle für Budgets, transitive Testauswahl, Build-Fingerprint und Indexparität. Kein pixelgenauer Screenshotvergleich behauptet; persönliche Bildprüfung bleibt Pflicht.
+
+Lokale inkrementelle Typprüfung, Lintcache und konservative Auswahl anhand tatsächlicher Änderungen/Abhängigkeiten; vollständige Pflichtabnahme und bestehende CI unverändert. Aktive Tailwind-Quellen begrenzt; Build-Fingerprint berücksichtigt jetzt auch Entry-/Konfigurationsänderungen. Buildprofil mit Dauer und Artefaktgrößen; kein belegter Buildzeit- oder CSS-Größengewinn behauptet. Synthetische Browsermessung zeigt zunächst 65 % weniger Start-JavaScript gegenüber PR21; endgültige Prüfnachweise und Grenzen in PROJECT_STATE/PR.
+
+PR21 unter echter Merge-/Vercel-Quittung als verfügbar bestätigt; historische Einträge bleiben erhalten. Eigener Eintrag wird nur unter der tatsächlich angelegten PR-Nummer undatiert vorbereitet. Export übernimmt vorhandene Indexmetadaten und den schon zuvor in der App vorhandenen neutralen ersten Missionswortlaut. Roadmap ergänzt: nach 2A Forscherlabor 2.0 einschließlich Suche, Navigation und Mehr entdecken; Länder-/Flaggen-Memory bleibt ausdrücklich spätere offene Aufgabe mit echten Stufen, geografischen Erklärungen, freiwilligen Hinweisen, Wissensverknüpfungen und Altspielstanderhalt. Kein Merge, Zielbranchschreiben, Deployment oder neue Kosten.
+
 ## 11. Oktober 2026 – WK-035: Spielplatz 2.0
 
 31 bestehende Angebote erhalten einen gemeinsamen, ruhigen Katalog mit freiwilligen Themen-/Spielartfiltern, konkreten Lernzielen, Altersorientierung und getrennten Rundenständen. Auswahl behält Filter beim Zurückgehen und ersetzt keine vorhandene Runde. Die drei bisherigen Familiencontroller und ihre Speicheridentitäten bleiben erhalten.

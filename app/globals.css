@@ -1,10 +1,14 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
 @import "tw-animate-css";
 @import "../vendor/shadcn-tailwind-4.13.0.css";
 @import "./discovery.css";
 @import "./article-atlas.css";
 @import "./pass-atlas.css";
 @import "./playground.css";
+@import "./foundation.css";
+@source "../app";
+@source "../components";
+@source "../migration";
 
 :root{--background:#f4f8fa;--foreground:#203c47;--card:#fff;--card-foreground:#203c47;--popover:#fff;--popover-foreground:#203c47;--primary:#eb743b;--primary-foreground:#fff;--secondary:#eaf3f4;--secondary-foreground:#203c47;--muted:#ecf2f4;--muted-foreground:#607981;--accent:#e3f4ef;--accent-foreground:#203c47;--destructive:#b44427;--border:#dbe6e9;--input:#c5d5db;--ring:#e97b44;--radius:.85rem;color-scheme:light}
 @theme inline{--color-background:var(--background);--color-foreground:var(--foreground);--color-card:var(--card);--color-card-foreground:var(--card-foreground);--color-popover:var(--popover);--color-popover-foreground:var(--popover-foreground);--color-primary:var(--primary);--color-primary-foreground:var(--primary-foreground);--color-secondary:var(--secondary);--color-secondary-foreground:var(--secondary-foreground);--color-muted:var(--muted);--color-muted-foreground:var(--muted-foreground);--color-accent:var(--accent);--color-accent-foreground:var(--accent-foreground);--color-destructive:var(--destructive);--color-border:var(--border);--color-input:var(--input);--color-ring:var(--ring);--radius-sm:calc(var(--radius) - 4px);--radius-md:calc(var(--radius) - 2px);--radius-lg:var(--radius);--radius-xl:calc(var(--radius) + 4px);--font-sans:"Trebuchet MS",Arial,sans-serif}
@@ -145,3 +149,10 @@
 .moon-observation{display:flex;gap:1rem;align-items:center;margin:1rem 0}.moon-disc{display:block;width:64px;height:64px;border-radius:50%;background:#34495e;border:2px solid #587e8c;flex-shrink:0}
 .moon-phase-1{background:linear-gradient(90deg,#34495e 50%,#f4d98a 50%)}.moon-phase-2{background:#f4d98a}.moon-phase-3{background:linear-gradient(90deg,#f4d98a 50%,#34495e 50%)}
 @media(max-width:640px){.challenge-levels{grid-template-columns:1fr}.world-pagination{gap:.65rem}.world-pagination span{width:100%;text-align:center;order:-1}}
+
+/* Responsive shell shares the same gutter contract across all six areas. */
+.learning-main{padding-inline:var(--wk-gutter)}
+.learning-panel .learning-status[data-tone=loading],.learning-main>.learning-status[data-tone=loading]{min-block-size:max(320px,calc(100svh - 200px))}
+
+/* Reserve the active panel before asynchronous pass hydration/lazy content. */
+.learning-panel{min-block-size:max(400px,calc(100svh - 250px))}

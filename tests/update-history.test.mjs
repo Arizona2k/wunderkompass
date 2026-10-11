@@ -38,11 +38,11 @@ test('publication entries match successful deployments, source provenance and Be
 
 test('test website chronology retains the merged and deployed product rounds, with truthful channel dates',()=>{
  const entries=publicUpdates(),testEntries=entries.filter(e=>e.channel==='vercel-test');
- assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[20,19,18,17,16,15,14,12,11,10,9,3]);
- assert.equal(entries.length,25);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
+ assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[21,20,19,18,17,16,15,14,12,11,10,9,3]);
+ assert.equal(entries.length,26);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
- assert.deepEqual(PREPARED_UPDATES.map(e=>e.id),['playground-2']);
- assert.deepEqual(PREPARED_UPDATES.map(e=>e.evidence.pullRequest),[21],'handoff uses the actually created PR, never a guessed number');
+ assert.deepEqual(PREPARED_UPDATES.map(e=>e.id),[]);
+ assert.deepEqual(PREPARED_UPDATES.map(e=>e.evidence.pullRequest),[],'handoff uses the actually created PR, never a guessed number');
  assert.equal(updateLabel(testEntries[0]),'Testwebsite · verfügbar');assert.equal(updateLabel(entries.find(e=>e.id==='site-v14')),'Sites · Version 14');
  for(const entry of testEntries){
   const record=TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===entry.evidence.pullRequest),deployment=confirmedTestDeployment(record);
@@ -51,9 +51,9 @@ test('test website chronology retains the merged and deployed product rounds, wi
  }
  // Confirmation date differs from observation date and from the merge instant.
  assert.equal(updateDate(testEntries[0]),'11. Oktober 2026');assert.equal(testEntries[0].confirmedOn,'2026-10-11');
- assert.equal(testEntries[0].occurredAt,'2026-10-11T12:47:50Z');
- assert.equal(testEntries[0].id,'clear-main-navigation','receipt promotes the existing PR 20 entry, without replacing its ID');
- assert.equal(testEntries[3].occurredAt,'2026-10-10T11:40:50Z','old availability remains unchanged');
+ assert.equal(testEntries[0].occurredAt,'2026-10-11T14:48:18Z');
+ assert.equal(testEntries[0].id,'playground-2','receipt promotes the existing PR 21 entry, without replacing its ID');
+ assert.equal(testEntries[4].occurredAt,'2026-10-10T11:40:50Z','old availability remains unchanged');
  assert.ok(!testEntries.some(e=>[4,13].includes(e.evidence.pullRequest)),'internal workflow-only PRs excluded');
 });
 

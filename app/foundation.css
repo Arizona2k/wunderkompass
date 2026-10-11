@@ -1,0 +1,20 @@
+/* Shared responsive contracts. Existing world atmospheres keep their tokens. */
+:root{--wk-gutter:clamp(14px,3vw,30px);--wk-layout-gap:clamp(12px,1.5vw,20px);--wk-tile-min:320px;--wk-touch:48px;--wk-focus:#256384}
+.learning-grid{display:grid;min-width:0;gap:var(--wk-layout-gap)}
+.learning-grid:is(.playground-grid,.research-grid,.world-trip-grid){grid-template-columns:repeat(auto-fit,minmax(min(100%,var(--wk-tile-min)),1fr))}
+.learning-grid>*{min-width:0;overflow-wrap:anywhere}
+.learning-details{min-width:0}
+.learning-details summary{cursor:pointer;min-height:var(--wk-touch);overflow-wrap:anywhere}
+.learning-details :is(button,a,summary):focus-visible,.learning-status button:focus-visible{outline:2px solid var(--wk-focus);outline-offset:4px}
+.learning-status{padding:clamp(16px,3vw,24px);margin:16px 0;border:1px solid var(--wk-line,#dbe6e9);border-radius:16px;background:var(--wk-paper,#fff);color:var(--wk-ink,#203c47);line-height:1.7;overflow-wrap:anywhere}
+.learning-status p{max-width:65ch}
+.learning-status button{min-height:var(--wk-touch);margin-top:14px;white-space:normal}
+.learning-status[data-tone=error]{border-color:#b6745e}
+.large-reading .learning-status{font-size:20px}
+.learning-grid,.learning-grid>*{max-width:100%}
+@media(forced-colors:active){.learning-status{border-color:CanvasText}.learning-details :is(button,a,summary):focus-visible,.learning-status button:focus-visible{outline-color:Highlight}}
+@media(prefers-reduced-motion:reduce){.learning-status{animation:none;transition:none}}
+
+.learning-grid :is(.research-tile,.world-trip) :is(h3,h4){font-size:clamp(18px,1.4vw,21px);line-height:1.35}
+.learning-grid :is(.research-tile,.world-trip) p{font-size:16px;line-height:1.65}
+.large-reading .learning-grid :is(.research-tile,.world-trip) p{font-size:20px}

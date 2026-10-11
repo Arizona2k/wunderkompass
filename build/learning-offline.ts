@@ -1,25 +1,14 @@
-import { createHash } from 'node:crypto';
-import { readFileSync, readdirSync, existsSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import type { Plugin } from 'vite';
+import {learningInputs,learningFingerprint} from './learning-fingerprint.mjs';
 
 // A content fingerprint shared by HTML, client code and the offline worker.
 // Only public learning content is cached. Authentication and API routes are excluded.
 export function learningOffline(): Plugin {
   const root = process.cwd();
-  const files: string[] = [];
-  function walk(dir: string) {
-    if (!existsSync(dir)) return;
-    for (const item of readdirSync(dir, { withFileTypes: true })) {
-      const path = join(dir, item.name);
-      if (item.isDirectory()) walk(path);
-      else files.push(path);
-    }
-  }
-  for (const dir of ['app', 'components', 'public', 'build']) walk(join(root, dir));
-  const hash = createHash('sha256');
-  for (const path of files.sort()) hash.update(relative(root, path)).update(readFileSync(path));
-  const version = hash.digest('hex').slice(0, 16);
+  const files=learningInputs(root);
+  const version=learningFingerprint(root,files);
   const publicFiles = files.filter(p => p.startsWith(join(root, 'public') + '/'))
     .filter(p => /\.(json|svg|png|jpe?g|webp|webmanifest)$/.test(p))
     .map(p => '/' + relative(join(root, 'public'), p));

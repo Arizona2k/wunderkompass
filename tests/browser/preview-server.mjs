@@ -4,6 +4,7 @@ import { preview } from 'vite';
 // which caches a different response for preload versus module requests.
 // Do not change the application worker or ignore cache validation in the test.
 await preview({
+  build: {outDir: process.env.QA_DIST ?? 'dist'},
   preview: {
     host: '127.0.0.1',
     port: Number(process.env.QA_PORT ?? '4182'),

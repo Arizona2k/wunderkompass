@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "vite build",
+    "build": "vite build && node scripts/performance-budget.mjs",
     "start": "vite preview --host 127.0.0.1",
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --import ./scripts/test-runtime.mjs --test tests/*.test.mjs",
@@ -16,7 +16,11 @@
     "export:data": "node scripts/export-content.mjs",
     "verify:export": "node scripts/verify-content.mjs",
     "verify": "node scripts/verify-content.mjs",
-    "test:browser": "node tests/browser/portable-smoke.mjs"
+    "test:browser": "node tests/browser/portable-smoke.mjs",
+    "typecheck:fast": "tsc --noEmit --incremental --tsBuildInfoFile work/typecheck.tsbuildinfo",
+    "lint:fast": "eslint app tests/progress.test.mjs --max-warnings 0 --cache --cache-location work/eslint-cache",
+    "test:affected": "node scripts/test-selection.mjs",
+    "build:profile": "node scripts/measure-build.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

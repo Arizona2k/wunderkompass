@@ -1,6 +1,18 @@
 # Projektstand und Übergabe
 
-## Aktueller Durchlauf: WK-035 / spielplatz-2026-10-11
+## Aktueller Durchlauf: WK-036 / foundation-2a-2026-10-11
+
+Status: in Arbeit, Codex, 11. Oktober 2026. Nutzerauftrag Paket 2A – Technisches Fundament & Performance: gemeinsame responsive Komponenten, automatische Komponenten-/visuelle Qualitätsprüfungen, belegte Website-/Buildoptimierungen, Performance-Budgets und sichere lokale Testauswahl. Basis origin/test-live 5e49aae238f99ec416991a4bf7d35772fd9e6d9f, Branch codex/wunderkompass-foundation-2a-2026-10-11. Eigene Reservierung 6890682bd578019ee0bc2432f416f1caf759cedf, Eigentümer unter work/foundation-2a-lock-owner.txt. Vor Beginn kein offener PR, laufender/queued Actions-Job oder fremder Reservierungstag; Checkout sauber. main unverändert 537622796f7e1f9a886e7400f10b1f727d24f8dc.
+
+PR21 extern übernommen am 11.10.2026 14:47:59Z, Merge 5e49aae238f99ec416991a4bf7d35772fd9e6d9f; Vercel-Erfolg am exakt enthaltenen Commit 14:48:18Z, Status 56089225446, Deployment qCzWXe5HXRtZfRGgUJkrapUMsRxt. Vorheriger finaler Quality44 / 38147629717 am 47754f9 bestanden. Keine eigene Veröffentlichung.
+
+Akzeptanz: bestehende Architektur/IDs/Schema-3/Hashwege und Offline erhalten; Engpässe vor/nach unter gleicher Messmethode vergleichen; Budgets automatisch im bestehenden Build-/Browserprüfweg erzwingen. Gemeinsame Komponenten für responsive Raster, Lade-/Leerzustände und freiwillige Details an realen vorhandenen Flächen einsetzen und im Produktionsbrowser prüfen. Lokale risikobasierte Auswahl spart Wiederholungen; vollständige Pflichtabnahme und unveränderte Quality-CI bleiben verpflichtend vor Ready. Aktualisierte Roadmap in bestehende VISION/BACKLOG/QUALITY/AGENTS aufnehmen, kein neues Masterregelwerk. Nach 2A zuerst Forscherlabor 2.0 mit Suche, Navigation und Mehr entdecken; Länder-/Flaggen-Memory ausdrücklich spätere offene Aufgabe mit echten Stufen, geografischen Erklärungen, freiwilligen Hilfen, Wissensverknüpfungen und Altspielstanderhalt.
+
+Prüfstand: Vorbedingungen belegt; Baseline und Umsetzung laufen. Keine Erfolgsmeldung vor tatsächlichen Prüfungen. Kein Merge, main-/test-live-Push, Releaseaktivierung, Deployment oder neue Kosten. Nur eigene Reservierung nach gesicherter Übergabe lösen.
+
+## Vorheriger Durchlauf: WK-035 / spielplatz-2026-10-11
+
+Nachgeführter Abschluss: PR21 extern übernommen und Vercel-Testbereitstellung nachgewiesen (siehe aktueller Durchlauf); damalige Implementierung und vollständige lokale Abnahme 89 Prüfeinträge/35 Ansichten, finaler Quality44 am 47754f9 erfolgreich. Eigene Reservierung nach Ready-Übergabe freigegeben. Die damalige Memory-Empfehlung ist durch den neuen Nutzerauftrag nachrangig; der Umfang bleibt offen im BACKLOG erhalten.
 
 Status: in Prüfung, Codex, 11. Oktober 2026. Nutzerpaket PR21 unter WK-035 bündelt WK-021/WK-026; normale langfristige Entwicklung bleibt unverändert. Tatsächlicher PR [#21](https://github.com/Arizona2k/wunderkompass/pull/21) gegen test-live, am 11.10.2026 14:12:13Z zunächst ausdrücklich unfertiger Draft. Erst nach bestandener lokaler Pflichtabnahme Ready for review; keine Übernahmefreigabe. Aktuelle vollständige Prüfergebnisse, tatsächlicher Head, Quality-Lauf und Reservierungsquittung werden im selben PR nachgeführt.
 
