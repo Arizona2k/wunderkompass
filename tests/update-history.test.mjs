@@ -42,6 +42,7 @@ test('test website chronology retains the merged and deployed product rounds, wi
  assert.equal(entries.length,23);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
  assert.deepEqual(PREPARED_UPDATES.map(e=>e.id),['history-polish']);
+ assert.deepEqual(PREPARED_UPDATES.map(e=>e.evidence.pullRequest),[19],'handoff uses the actually created PR, never a guessed number');
  assert.equal(updateLabel(testEntries[0]),'Testwebsite · verfügbar');assert.equal(updateLabel(entries.find(e=>e.id==='site-v14')),'Sites · Version 14');assert.equal(updateLabel(PREPARED_UPDATES[0]),'Bereitstellung noch unbestätigt');
  for(const entry of testEntries){
   const record=TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===entry.evidence.pullRequest),deployment=confirmedTestDeployment(record);
@@ -71,7 +72,7 @@ test('an update requires the latest trusted Vercel success on a merge included i
 });
 
 test('a prepared package advances only after a separately confirmed merge and deployment, retaining its stable entry ID',()=>{
- const record=structuredClone(TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===18)),copy=PREPARED_UPDATES[0];
+ const record=structuredClone(TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===19)),copy=PREPARED_UPDATES[0];
  record.mergedAt=null;record.mergeCommit=null;record.deploymentStatuses=[];
  assert.equal(testUpdate(record,copy).status,'prepared');
  // Synthetic future proof exercises promotion; it is never stored as real evidence.
