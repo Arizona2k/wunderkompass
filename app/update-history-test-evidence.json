@@ -1,0 +1,376 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-11",
+  "timezone": "Europe/Berlin",
+  "repository": "Arizona2k/wunderkompass",
+  "testLive": {
+    "commit": "cba421cdf6ce040cf63d066aa0df410aeb1f828e",
+    "includedMergeCommits": [
+      "cba421cdf6ce040cf63d066aa0df410aeb1f828e",
+      "031bdaa2840bf30ed42df9b3e8b41e08ff59f41f",
+      "5f7fa87836b898659f83baeff6500df1faff1ed4",
+      "318d0e3f4f40f94f1fde4e35ac4c5253e06237bc",
+      "1c8374647503b37ff7bad3b42abc7989d75113a5",
+      "4c97d672deaa9627f2965ff032b737b04b30a2f7",
+      "ec0bd4bab9aa18f0006e71060478948be90f2dd9",
+      "dc6ba13b0a465da4f544192ca22742a1e4b5eaac",
+      "d6e3219368fa1713a4e23336cb7b6a011f2b6292",
+      "4b73cdb4ab049bcfe227fd43f07c80e8ffe68b0f",
+      "1f7fe74a0f8e7e14bf8e709aea2135dc1b09172c"
+    ]
+  },
+  "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
+  "pullRequests": [
+    {
+      "number": 3,
+      "title": "Qualitätssicherung für Testwebsite übernehmen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/3",
+      "base": "test-live",
+      "mergedAt": "2026-10-09T15:25:44Z",
+      "mergeCommit": "1f7fe74a0f8e7e14bf8e709aea2135dc1b09172c",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/1f7fe74a0f8e7e14bf8e709aea2135dc1b09172c/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 55996019046,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-09T15:26:12Z",
+          "updatedAt": "2026-10-09T15:26:12Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/ExVV4YTUqQSmWAjZf4EXxeotPMT2"
+        },
+        {
+          "id": 55995986987,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-09T15:25:48Z",
+          "updatedAt": "2026-10-09T15:25:48Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/ExVV4YTUqQSmWAjZf4EXxeotPMT2"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Testfreigabe vorbereiten: exakte Commitprüfung, Git-Lease und Rückfallstand",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/4",
+      "base": "test-live",
+      "mergedAt": "2026-10-09T16:01:56Z",
+      "mergeCommit": "4b73cdb4ab049bcfe227fd43f07c80e8ffe68b0f",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/4b73cdb4ab049bcfe227fd43f07c80e8ffe68b0f/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 55998884691,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-09T16:02:21Z",
+          "updatedAt": "2026-10-09T16:02:21Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/293hNKKMksW75pSpr9rAcL6KiHWU"
+        },
+        {
+          "id": 55998855005,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-09T16:02:00Z",
+          "updatedAt": "2026-10-09T16:02:00Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/293hNKKMksW75pSpr9rAcL6KiHWU"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "WunderKompass: vernetzte Natur- und Weltallwelt mit drei Schwierigkeitsstufen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/9",
+      "base": "test-live",
+      "mergedAt": "2026-10-09T18:48:09Z",
+      "mergeCommit": "d6e3219368fa1713a4e23336cb7b6a011f2b6292",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/d6e3219368fa1713a4e23336cb7b6a011f2b6292/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56011038037,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-09T18:48:49Z",
+          "updatedAt": "2026-10-09T18:48:49Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/3j1kAiVN7ZbH9ktcuVpQgVnzaLbk"
+        },
+        {
+          "id": 56010996913,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-09T18:48:12Z",
+          "updatedAt": "2026-10-09T18:48:12Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/3j1kAiVN7ZbH9ktcuVpQgVnzaLbk"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "WunderKompass: Denkhinweise ohne vorzeitige Auflösung und vollständige Masterregeln",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/10",
+      "base": "test-live",
+      "mergedAt": "2026-10-09T19:18:42Z",
+      "mergeCommit": "dc6ba13b0a465da4f544192ca22742a1e4b5eaac",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/dc6ba13b0a465da4f544192ca22742a1e4b5eaac/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56013147022,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-09T19:19:18Z",
+          "updatedAt": "2026-10-09T19:19:18Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/Hsi6d2c4YNw84kJ7hRDk3zJ3y5QQ"
+        },
+        {
+          "id": 56013109592,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-09T19:18:46Z",
+          "updatedAt": "2026-10-09T19:18:46Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/Hsi6d2c4YNw84kJ7hRDk3zJ3y5QQ"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Wissens-Challenge: individuelle Hinweise für alle 142 Aufgaben",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/11",
+      "base": "test-live",
+      "mergedAt": "2026-10-09T19:56:58Z",
+      "mergeCommit": "ec0bd4bab9aa18f0006e71060478948be90f2dd9",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/ec0bd4bab9aa18f0006e71060478948be90f2dd9/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56015739037,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-09T19:57:27Z",
+          "updatedAt": "2026-10-09T19:57:27Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/3cVSG62JvqafN32ck8Xo7pTQpeMy"
+        },
+        {
+          "id": 56015708915,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-09T19:57:01Z",
+          "updatedAt": "2026-10-09T19:57:01Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/3cVSG62JvqafN32ck8Xo7pTQpeMy"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "WunderKompass 2.0: Entdeckerzentrale mit Wissenschaft und Abenteuer",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/12",
+      "base": "test-live",
+      "mergedAt": "2026-10-09T20:34:58Z",
+      "mergeCommit": "4c97d672deaa9627f2965ff032b737b04b30a2f7",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/4c97d672deaa9627f2965ff032b737b04b30a2f7/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56018340042,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-09T20:35:20Z",
+          "updatedAt": "2026-10-09T20:35:20Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/D5CQkQrULC3wp6XmHxQcGJQQB626"
+        },
+        {
+          "id": 56018319481,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-09T20:35:02Z",
+          "updatedAt": "2026-10-09T20:35:02Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/D5CQkQrULC3wp6XmHxQcGJQQB626"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "WunderKompass: fertige PRs automatisch Ready for review bereitstellen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/13",
+      "base": "test-live",
+      "mergedAt": "2026-10-09T20:46:35Z",
+      "mergeCommit": "1c8374647503b37ff7bad3b42abc7989d75113a5",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/1c8374647503b37ff7bad3b42abc7989d75113a5/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56019093347,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-09T20:47:02Z",
+          "updatedAt": "2026-10-09T20:47:02Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/BQJXemPskztf6YTRKSKRBXeLoN3p"
+        },
+        {
+          "id": 56019070317,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-09T20:46:39Z",
+          "updatedAt": "2026-10-09T20:46:39Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/BQJXemPskztf6YTRKSKRBXeLoN3p"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "WunderKompass: Wissenskarten mit Forschungsflächen und Lernwegen modernisieren",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/14",
+      "base": "test-live",
+      "mergedAt": "2026-10-10T07:29:03Z",
+      "mergeCommit": "318d0e3f4f40f94f1fde4e35ac4c5253e06237bc",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/318d0e3f4f40f94f1fde4e35ac4c5253e06237bc/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56042018667,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-10T07:29:33Z",
+          "updatedAt": "2026-10-10T07:29:33Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/7aEvTTnVjy9kyKj2ViBvyc6gt7Vx"
+        },
+        {
+          "id": 56042008086,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-10T07:29:06Z",
+          "updatedAt": "2026-10-10T07:29:06Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/7aEvTTnVjy9kyKj2ViBvyc6gt7Vx"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Entdeckerpass mobil strukturieren und Sicherungsweg vollständig prüfen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/15",
+      "base": "test-live",
+      "mergedAt": "2026-10-10T08:11:22Z",
+      "mergeCommit": "5f7fa87836b898659f83baeff6500df1faff1ed4",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/5f7fa87836b898659f83baeff6500df1faff1ed4/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56043034939,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-10T08:12:00Z",
+          "updatedAt": "2026-10-10T08:12:00Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/8ZbiA6yFop9NyomVV3hDoy7UbhyT"
+        },
+        {
+          "id": 56043021663,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-10T08:11:26Z",
+          "updatedAt": "2026-10-10T08:11:26Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/8ZbiA6yFop9NyomVV3hDoy7UbhyT"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Wissensverknüpfungen ohne grüne Balken ruhig gliedern",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/16",
+      "base": "test-live",
+      "mergedAt": "2026-10-10T08:33:32Z",
+      "mergeCommit": "031bdaa2840bf30ed42df9b3e8b41e08ff59f41f",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/031bdaa2840bf30ed42df9b3e8b41e08ff59f41f/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56043558351,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-10T08:34:07Z",
+          "updatedAt": "2026-10-10T08:34:07Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/J3r7cJK2ehFeUGHb2kWMomXkyXcY"
+        },
+        {
+          "id": 56043545627,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-10T08:33:35Z",
+          "updatedAt": "2026-10-10T08:33:35Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/J3r7cJK2ehFeUGHb2kWMomXkyXcY"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Entdeckerpass: klarere mobile Hierarchie und ruhiger Fokus",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/17",
+      "base": "test-live",
+      "mergedAt": "2026-10-10T11:37:44Z",
+      "mergeCommit": "cba421cdf6ce040cf63d066aa0df410aeb1f828e",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/cba421cdf6ce040cf63d066aa0df410aeb1f828e/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56048030716,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-10T11:40:50Z",
+          "updatedAt": "2026-10-10T11:40:50Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/7iH7QHwtoyVRLGgoUBir6N6MRNoG"
+        },
+        {
+          "id": 56048018531,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-10T11:40:19Z",
+          "updatedAt": "2026-10-10T11:40:19Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/7iH7QHwtoyVRLGgoUBir6N6MRNoG"
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Klarer Erstbesuch und belegte „Was ist neu?“-Chronik",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/18",
+      "base": "test-live",
+      "mergedAt": null,
+      "mergeCommit": null,
+      "statusesUrl": null,
+      "deploymentStatuses": []
+    }
+  ]
+}

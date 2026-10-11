@@ -1,0 +1,558 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-10",
+  "timezone": "Europe/Berlin",
+  "site": {
+    "projectId": "appgprj_6ac43233acdc8191899fd18465fbe0b6",
+    "createdAt": "2026-10-05T23:26:45.724521+00:00",
+    "currentLiveUrl": "https://erde-entdecker.rahmati-nima92.chatgpt.site",
+    "latestVersionNumber": 14
+  },
+  "versions": [
+    {
+      "number": 1,
+      "versionId": "appgprj_6ac43233acdc8191899fd18465fbe0b6~appgver_a345b7d18f3c819191e5eeb5a283315c",
+      "sourceCommit": "bc482e21c3d652100ea5f5a525770a1829137df6",
+      "archiveHash": "sha256:1390c46bdfc2fc223204e36d26cadd5134255b1ceee8d2c9334bed91ad11058b",
+      "publication": {
+        "deploymentId": "appgdep_6ac4392e9bbc8191978149a3288cbc08",
+        "status": "succeeded",
+        "type": "publish",
+        "completedAt": "2026-10-05T23:57:32.505039+00:00"
+      },
+      "sourceReview": {
+        "previousSourceCommit": null,
+        "changedAppFiles": [
+          "app/chatgpt-auth.ts",
+          "app/earth-data.ts",
+          "app/earth-explorer.tsx",
+          "app/globals.css",
+          "app/globe.tsx",
+          "app/layout.tsx",
+          "app/marine.json",
+          "app/page.tsx"
+        ],
+        "topicCount": 0,
+        "addedTopicIds": []
+      }
+    },
+    {
+      "number": 2,
+      "versionId": "appgprj_6ac43233acdc8191899fd18465fbe0b6~appgver_ab6a3ace36f08191b19762fd4e2f50c2",
+      "sourceCommit": "564c48ab25c1375672a8bfb64a82d966019313a7",
+      "archiveHash": "sha256:2678c3ee8449b083ab2b7478626f2b0c10670f319d4bb46a8dc1bed852aaa98e",
+      "publication": {
+        "deploymentId": "appgdep_6ac442b75eb4819183e54ff976764c0f",
+        "status": "succeeded",
+        "type": "publish",
+        "completedAt": "2026-10-06T00:38:15.447785+00:00"
+      },
+      "sourceReview": {
+        "previousSourceCommit": "bc482e21c3d652100ea5f5a525770a1829137df6",
+        "changedAppFiles": [
+          "app/earth-data.ts",
+          "app/earth-explorer.tsx",
+          "app/globals.css",
+          "app/globe.tsx",
+          "app/knowledge-book.tsx",
+          "app/learning-data.ts",
+          "app/learning-games.tsx",
+          "app/learning-journeys.tsx",
+          "app/learning-labs.tsx",
+          "app/marine.ts",
+          "app/quiz-data.ts"
+        ],
+        "topicCount": 0,
+        "addedTopicIds": []
+      }
+    },
+    {
+      "number": 3,
+      "versionId": "appgprj_6ac43233acdc8191899fd18465fbe0b6~appgver_dc6db18fbaec8191bbaed8ec5ec29c44",
+      "sourceCommit": "68a0b7f7edb14384f2b8647925c22759c239596c",
+      "archiveHash": "sha256:342b713d60d099d7ec29186efb96a33340d0eb4af3f4bb001ba6ef2478011e83",
+      "publication": {
+        "deploymentId": "appgdep_6ac6171f498c8191a25f121b1cba530e",
+        "status": "succeeded",
+        "type": "publish",
+        "completedAt": "2026-10-07T09:56:48.777598+00:00"
+      },
+      "sourceReview": {
+        "previousSourceCommit": "564c48ab25c1375672a8bfb64a82d966019313a7",
+        "changedAppFiles": [
+          "app/advanced-games.tsx",
+          "app/capital-points.json",
+          "app/country-metadata.json",
+          "app/country-portrait.tsx",
+          "app/earth-data.ts",
+          "app/earth-explorer.tsx",
+          "app/expanded-learning-data.ts",
+          "app/globals.css",
+          "app/globe.tsx",
+          "app/knowledge-book.tsx",
+          "app/learning-data.ts",
+          "app/learning-games.tsx",
+          "app/learning-journeys.tsx",
+          "app/marine.ts",
+          "app/nature-data.ts",
+          "app/plate-points.json",
+          "app/research-labs.tsx",
+          "app/use-local-progress.ts"
+        ],
+        "topicCount": 0,
+        "addedTopicIds": []
+      }
+    },
+    {
+      "number": 4,
+      "versionId": "appgprj_6ac43233acdc8191899fd18465fbe0b6~appgver_7a2671079a108191a7419fc808ec5a46",
+      "sourceCommit": "0168f1c791bb03aa4eb766a28efce7e34eb07f21",
+      "archiveHash": "sha256:b95a17849bfa5068c455492feb76a0f573b7cbcd173ad4fdcd9d557111d0b33b",
+      "publication": {
+        "deploymentId": "appgdep_6ac64403a9248191b2acbe4d5e15cd51",
+        "status": "succeeded",
+        "type": "publish",
+        "completedAt": "2026-10-07T13:08:25.230921+00:00"
+      },
+      "sourceReview": {
+        "previousSourceCommit": "68a0b7f7edb14384f2b8647925c22759c239596c",
+        "changedAppFiles": [
+          "app/advanced-games.tsx",
+          "app/country-flag.tsx",
+          "app/country-portrait.tsx",
+          "app/earth-data.ts",
+          "app/earth-explorer.tsx",
+          "app/global-search.tsx",
+          "app/globals.css",
+          "app/globe.tsx",
+          "app/knowledge-book.tsx",
+          "app/learning-boundary.tsx",
+          "app/learning-games.tsx",
+          "app/learning-journeys.tsx",
+          "app/progress-panel.tsx",
+          "app/progress-storage.ts",
+          "app/saved-games.tsx",
+          "app/use-local-progress.ts"
+        ],
+        "topicCount": 0,
+        "addedTopicIds": []
+      }
+    },
+    {
+      "number": 5,
+      "versionId": "appgprj_6ac43233acdc8191899fd18465fbe0b6~appgver_bb62e3e85df88191ab84afd96b14e73f",
+      "sourceCommit": "42f85186eedb67c5bd43570c459e6f804e8c2deb",
+      "archiveHash": "sha256:aa159669743e6e31987e16d4d9fca6b176c05ec75f5762ded9d17d08014d8269",
+      "publication": {
+        "deploymentId": "appgdep_6ac67bd44bd48191bcb0fc12863ad101",
+        "status": "succeeded",
+        "type": "publish",
+        "completedAt": "2026-10-07T17:06:58.110807+00:00"
+      },
+      "sourceReview": {
+        "previousSourceCommit": "0168f1c791bb03aa4eb766a28efce7e34eb07f21",
+        "changedAppFiles": [
+          "app/advanced-games.tsx",
+          "app/earth-data.ts",
+          "app/earth-explorer.tsx",
+          "app/globals.css",
+          "app/globe.tsx",
+          "app/learning-games.tsx",
+          "app/learning-hints.tsx",
+          "app/learning-journeys.tsx",
+          "app/learning-labs.tsx",
+          "app/learning-media.ts",
+          "app/learning-progress.tsx",
+          "app/parent-guide.tsx",
+          "app/progress-panel.tsx",
+          "app/progress-storage.ts",
+          "app/research-labs.tsx",
+          "app/saved-games.tsx",
+          "app/solar-lab.tsx",
+          "app/use-local-progress.ts"
+        ],
+        "topicCount": 0,
+        "addedTopicIds": []
+      }
+    },
+    {
+      "number": 6,
+      "versionId": "appgprj_6ac43233acdc8191899fd18465fbe0b6~appgver_959508b6e4f4819183669f8d74be3569",
+      "sourceCommit": "312484fc40b9ac121c1e6025e345d502efba78c9",
+      "archiveHash": "sha256:d450817b06691c02a6612e9f70087633eb8c65a89f9b87d1c2772e6d1e195a08",
+      "publication": null,
+      "sourceReview": {
+        "previousSourceCommit": "42f85186eedb67c5bd43570c459e6f804e8c2deb",
+        "changedAppFiles": [
+          "app/earth-explorer.tsx",
+          "app/local-id.ts",
+          "app/use-local-progress.ts"
+        ],
+        "topicCount": 0,
+        "addedTopicIds": []
+      }
+    },
+    {
+      "number": 7,
+      "versionId": "appgprj_6ac43233acdc8191899fd18465fbe0b6~appgver_1de6f4d220b88191904fe9acd560c6ec",
+      "sourceCommit": "77c36e0b64610176e0099e467c57e63a4c3e4594",
+      "archiveHash": "sha256:f853e778aa0ac8ec4de85b13fed6e32f668eb47df7a5c11b17db41fc90c14193",
+      "publication": {
+        "deploymentId": "appgdep_6ac6bb6813588191bf4d5ec336a27da4",
+        "status": "succeeded",
+        "type": "publish",
+        "completedAt": "2026-10-07T21:37:45.391588+00:00"
+      },
+      "sourceReview": {
+        "previousSourceCommit": "312484fc40b9ac121c1e6025e345d502efba78c9",
+        "changedAppFiles": [
+          "app/advanced-games.tsx",
+          "app/earth-data.ts",
+          "app/earth-explorer.tsx",
+          "app/global-search.tsx",
+          "app/globals.css",
+          "app/globe.tsx",
+          "app/journey-visual.tsx",
+          "app/knowledge-book.tsx",
+          "app/layout.tsx",
+          "app/learning-games.tsx",
+          "app/learning-journeys.tsx",
+          "app/learning-offline.tsx",
+          "app/parent-guide.tsx",
+          "app/progress-storage.ts",
+          "app/research-labs.tsx",
+          "app/saved-games.tsx",
+          "app/use-local-progress.ts",
+          "app/world-catalog.json",
+          "app/world-games.tsx",
+          "app/world-icons.tsx",
+          "app/world-index.json",
+          "app/world-index.ts",
+          "app/world-media.tsx",
+          "app/world-models.tsx",
+          "app/world-photos.json",
+          "app/world-progress.tsx",
+          "app/world-topic.tsx",
+          "app/world-types.ts",
+          "app/world-view.tsx"
+        ],
+        "topicCount": 90,
+        "addedTopicIds": [
+          "animal-african-savanna-elephant",
+          "animal-lion",
+          "animal-cheetah",
+          "animal-bengal-tiger",
+          "animal-giraffe",
+          "animal-giant-panda",
+          "animal-western-lowland-gorilla",
+          "animal-bornean-orangutan",
+          "animal-polar-bear",
+          "animal-emperor-penguin",
+          "animal-blue-whale",
+          "animal-common-bottlenose-dolphin",
+          "animal-orca",
+          "animal-common-octopus",
+          "animal-green-sea-turtle",
+          "animal-red-kangaroo",
+          "animal-koala",
+          "animal-jaguar",
+          "animal-honey-bee",
+          "animal-axolotl",
+          "history-stone_tools",
+          "history-fire",
+          "history-writing",
+          "history-pyramids",
+          "history-paper",
+          "history-zero",
+          "history-compass",
+          "history-medieval_cities",
+          "history-printing",
+          "history-voyages1492",
+          "history-steam",
+          "history-railway",
+          "history-electric_light",
+          "history-flight",
+          "history-ww1",
+          "history-holocaust",
+          "history-ww2",
+          "history-un",
+          "history-berlin_wall_build",
+          "history-apollo11",
+          "history-web",
+          "history-berlin_wall_fall",
+          "history-reunification",
+          "history-iss",
+          "history-september11",
+          "history-webb",
+          "person-marie_curie",
+          "person-ada_lovelace",
+          "person-grace_hopper",
+          "person-katherine_johnson",
+          "person-tim_berners_lee",
+          "person-karl_benz",
+          "person-bertha_benz",
+          "person-jane_goodall",
+          "person-albert_einstein",
+          "person-al_khwarizmi",
+          "person-tu_youyou",
+          "person-cai_lun",
+          "person-mae_jemison",
+          "person-johannes_gutenberg",
+          "person-wangari_maathai",
+          "person-charles_darwin",
+          "person-alexander_humboldt",
+          "person-neil_armstrong",
+          "invention-light",
+          "invention-car",
+          "invention-railway",
+          "invention-airplane",
+          "invention-phone",
+          "invention-computer",
+          "invention-internet",
+          "invention-compass",
+          "invention-printing",
+          "invention-rocket",
+          "invention-satellite",
+          "invention-smartphone",
+          "building-giza-pyramids",
+          "building-great-wall",
+          "building-colosseum",
+          "building-taj-mahal",
+          "building-eiffel-tower",
+          "building-golden-gate-bridge",
+          "building-panama-canal",
+          "building-burj-khalifa",
+          "science-circuit",
+          "science-network",
+          "science-flight",
+          "science-gps",
+          "science-computer",
+          "science-shadows"
+        ]
+      }
+    },
+    {
+      "number": 8,
+      "versionId": "appgprj_6ac43233acdc8191899fd18465fbe0b6~appgver_9ec5e406593c8191b513f9fed68738de",
+      "sourceCommit": "77d7f1af0dfe0c36641a808c288b9d69e8be7232",
+      "archiveHash": "sha256:f853e778aa0ac8ec4de85b13fed6e32f668eb47df7a5c11b17db41fc90c14193",
+      "publication": {
+        "deploymentId": "appgdep_6ac72a91204c8191a55a6e1e333f0861",
+        "status": "succeeded",
+        "type": "publish",
+        "completedAt": "2026-10-08T05:31:56.287793+00:00"
+      },
+      "sourceReview": {
+        "previousSourceCommit": "77c36e0b64610176e0099e467c57e63a4c3e4594",
+        "changedAppFiles": [],
+        "topicCount": 90,
+        "addedTopicIds": []
+      }
+    },
+    {
+      "number": 9,
+      "versionId": "appgprj_6ac43233acdc8191899fd18465fbe0b6~appgver_c8495a09300c81918808fdc97986f756",
+      "sourceCommit": "4405437280301910a94805dcec5e9c61c7d0ff52",
+      "archiveHash": "sha256:cfa0715313cf84eff6d6e12f905a917ce3e8517c37153f82dde409a646e478b4",
+      "publication": {
+        "deploymentId": "appgdep_6ac732d4e8f4819187e518d3d4aa122a",
+        "status": "succeeded",
+        "type": "publish",
+        "completedAt": "2026-10-08T06:07:19.538322+00:00"
+      },
+      "sourceReview": {
+        "previousSourceCommit": "77d7f1af0dfe0c36641a808c288b9d69e8be7232",
+        "changedAppFiles": [
+          "app/globals.css",
+          "app/journey-media.ts",
+          "app/journey-photos.json",
+          "app/journey-visual.tsx",
+          "app/learning-journeys.tsx"
+        ],
+        "topicCount": 90,
+        "addedTopicIds": []
+      }
+    },
+    {
+      "number": 10,
+      "versionId": "appgprj_6ac43233acdc8191899fd18465fbe0b6~appgver_5d0fe7182b5c8191aefeb5138f62bcb4",
+      "sourceCommit": "1431a6f1c288965e718f937bf2a74b17c650939c",
+      "archiveHash": "sha256:2249d915a73b125c9e4e936cd40367b0da649f08d5ba515ca812e27cbfe6a82d",
+      "publication": {
+        "deploymentId": "appgdep_6ac8002928108191b3abc21049197141",
+        "status": "succeeded",
+        "type": "publish",
+        "completedAt": "2026-10-08T20:43:25.348584+00:00"
+      },
+      "sourceReview": {
+        "previousSourceCommit": "4405437280301910a94805dcec5e9c61c7d0ff52",
+        "changedAppFiles": [
+          "app/advanced-games.tsx",
+          "app/country-portrait.tsx",
+          "app/earth-explorer.tsx",
+          "app/game-state.ts",
+          "app/globe.tsx",
+          "app/knowledge-book.tsx",
+          "app/learning-games.tsx",
+          "app/learning-journeys.tsx",
+          "app/learning-offline.tsx",
+          "app/local-progress-store.ts",
+          "app/progress-storage.ts",
+          "app/progress-sync.ts",
+          "app/research-labs.tsx",
+          "app/saved-games.tsx",
+          "app/use-local-progress.ts",
+          "app/world-games.tsx",
+          "app/world-models.tsx",
+          "app/world-topic.tsx",
+          "app/world-view.tsx"
+        ],
+        "topicCount": 90,
+        "addedTopicIds": []
+      }
+    },
+    {
+      "number": 11,
+      "versionId": "appgprj_6ac43233acdc8191899fd18465fbe0b6~appgver_39939117e2548191b2da0d307c278ed4",
+      "sourceCommit": "0859fd76edd32fe1237d05dd86f10aa22ad92234",
+      "archiveHash": "sha256:c25a876638b2e471e1d428e77144f3e18de2273b3f113358ef064b5874066e4a",
+      "publication": {
+        "deploymentId": "appgdep_6ac8986b324c819199249b138ccfe2ca",
+        "status": "succeeded",
+        "type": "publish",
+        "completedAt": "2026-10-09T07:33:00.359550+00:00"
+      },
+      "sourceReview": {
+        "previousSourceCommit": "1431a6f1c288965e718f937bf2a74b17c650939c",
+        "changedAppFiles": [
+          "app/earth-data.ts",
+          "app/earth-explorer.tsx",
+          "app/game-index.json",
+          "app/global-search.tsx",
+          "app/globals.css",
+          "app/globe.tsx",
+          "app/hash-route.ts",
+          "app/knowledge-book.tsx",
+          "app/layout.tsx",
+          "app/parent-guide.tsx",
+          "app/progress-panel.tsx",
+          "app/progress-storage.ts",
+          "app/search-ranking.ts",
+          "app/voice-picker.tsx",
+          "app/world-topic.tsx",
+          "app/world-view.tsx"
+        ],
+        "topicCount": 90,
+        "addedTopicIds": []
+      }
+    },
+    {
+      "number": 12,
+      "versionId": "appgprj_6ac43233acdc8191899fd18465fbe0b6~appgver_75648b35eb30819191a270247f0c355f",
+      "sourceCommit": "1a1483fe9341531a742b8d37deac8fa5eda8a9a5",
+      "archiveHash": "sha256:d4582be0abb84688d5cb8de10ddbcf3b735949010a4e07d2bc23ddecffde6e8a",
+      "publication": {
+        "deploymentId": "appgdep_6ac8a4211ff48191a57c270d0dbafaa8",
+        "status": "succeeded",
+        "type": "publish",
+        "completedAt": "2026-10-09T08:22:58.980240+00:00"
+      },
+      "sourceReview": {
+        "previousSourceCommit": "0859fd76edd32fe1237d05dd86f10aa22ad92234",
+        "changedAppFiles": [
+          "app/building-model.tsx",
+          "app/chapter-visual.tsx",
+          "app/earth-explorer.tsx",
+          "app/globals.css",
+          "app/history-context.tsx",
+          "app/invention-blueprint.tsx",
+          "app/knowledge-book.tsx",
+          "app/learning-journeys.tsx",
+          "app/technology-comparison.tsx",
+          "app/topic-map.tsx",
+          "app/world-catalog.json",
+          "app/world-index.json",
+          "app/world-media.tsx",
+          "app/world-models.tsx",
+          "app/world-photos.json",
+          "app/world-topic.tsx"
+        ],
+        "topicCount": 90,
+        "addedTopicIds": []
+      }
+    },
+    {
+      "number": 13,
+      "versionId": "appgprj_6ac43233acdc8191899fd18465fbe0b6~appgver_2e184f41443c8191adc440a68fbef6b8",
+      "sourceCommit": "7f766fead45d5bba3962e629540d33fddc1abcd6",
+      "archiveHash": "sha256:63f404b3a31b1e6864c04287dd03a4c2f79850dead9d0822738e1c9b99f2709d",
+      "publication": {
+        "deploymentId": "appgdep_6ac8a9d61f4881918ee7b79599794f2f",
+        "status": "succeeded",
+        "type": "publish",
+        "completedAt": "2026-10-09T08:47:19.767871+00:00"
+      },
+      "sourceReview": {
+        "previousSourceCommit": "1a1483fe9341531a742b8d37deac8fa5eda8a9a5",
+        "changedAppFiles": [
+          "app/earth-explorer.tsx",
+          "app/globals.css",
+          "app/new-world-models.tsx",
+          "app/world-catalog.json",
+          "app/world-index.json",
+          "app/world-index.ts",
+          "app/world-models.tsx",
+          "app/world-types.ts"
+        ],
+        "topicCount": 108,
+        "addedTopicIds": [
+          "animal-whale-shark",
+          "animal-garden-cross-spider",
+          "animal-dromedary",
+          "animal-white-tailed-eagle",
+          "history-maya",
+          "history-polynesia",
+          "history-timbuktu",
+          "history-greece",
+          "history-rome",
+          "science-atmosphere",
+          "science-magnetism",
+          "science-currents",
+          "science-motor",
+          "science-foodweb",
+          "science-sound",
+          "science-solar-system",
+          "science-energy",
+          "science-patterns"
+        ]
+      }
+    },
+    {
+      "number": 14,
+      "versionId": "appgprj_6ac43233acdc8191899fd18465fbe0b6~appgver_6f756c5e93d4819187a45afbc015bee9",
+      "sourceCommit": "7b93a5c53fcd42d46b310252b6a4a3cf5622fbe7",
+      "archiveHash": "sha256:46f087c80926c9abd24e4e07a5aedc6f198c1a6cbad3b43918fe2ee008f3b908",
+      "publication": {
+        "deploymentId": "appgdep_6ac8b717d2ac8191875a6be5e0edb89e",
+        "status": "succeeded",
+        "type": "publish",
+        "completedAt": "2026-10-09T09:43:54.263027+00:00"
+      },
+      "sourceReview": {
+        "previousSourceCommit": "7f766fead45d5bba3962e629540d33fddc1abcd6",
+        "changedAppFiles": [
+          "app/earth-explorer.tsx",
+          "app/global-search.tsx",
+          "app/globals.css",
+          "app/parent-guide.tsx",
+          "app/use-local-progress.ts",
+          "app/world-games.tsx",
+          "app/world-types.ts",
+          "app/world-view.tsx"
+        ],
+        "topicCount": 108,
+        "addedTopicIds": []
+      }
+    }
+  ]
+}

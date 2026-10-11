@@ -22,9 +22,10 @@ await runBrowser(async browser=>{
   const brand=p.locator('.brand');const brandBox=await brand.boundingBox(),rightBox=await p.locator('.header-right').boundingBox();assert.ok(brandBox.x+brandBox.width<=rightBox.x+2,suffix+' brand overlap');
   await p.getByRole('button',{name:'Erdschichten',exact:true}).click();await inspect('layers-'+suffix,audit);
   await p.getByRole('button',{name:'Tag & Nacht',exact:true}).click();await inspect('day-'+suffix);
-  for(const [name,selector,key] of [['Lernreisen','.journey-tile','journeys'],['Spielplatz','.game-tile','games'],['Forscherlabor','.research-grid','labs'],['Wissensbuch','.word-card','book'],['Mehr entdecken','.world-choices','world']]){
+  for(const [name,selector,key] of [['Lernreisen','.journey-tile','journeys'],['Spielplatz','.game-tile','games'],['Forscherlabor','.research-grid','labs'],['Wissensbuch','.word-card','book']]){
    await nav(name,selector);await inspect(key+'-'+suffix,audit,screen&&key==='journeys');
   }
+  await p.evaluate(()=>location.hash='world');await p.locator('.world-choices').waitFor();await inspect('world-'+suffix,audit);
   if([360,390,768,1024,1440,1920].includes(width))for(const id of readers){
    await p.evaluate(id=>location.hash='world/topic/'+id,id);await p.locator('.world-mini-question').waitFor();
    for(const im of await p.locator('.world-article-main>.world-photo img').all()){await im.scrollIntoViewIfNeeded();assert.ok(await im.evaluate(async i=>{await i.decode().catch(()=>{});return i.complete&&i.naturalWidth>0;}),id+' image');report.images.push({id,width});}
