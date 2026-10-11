@@ -1,5 +1,5 @@
 import { JOURNEYS } from "./learning-data";
-import COUNTRY_META from "./country-metadata.json";
+import COUNTRY_META from "./country-metadata.json" with {type:"json"};
 import { EXTRA_QUESTIONS } from "./quiz-data";
 export type Mode = "globe" | "layers" | "day" | "quiz" | "journeys" | "games" | "book" | "labs" | "world";
 export type MapProperties = { id: string; name: string; continent: string; iso: string; lat: number; lon: number; type: string };

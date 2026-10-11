@@ -1,0 +1,522 @@
+[
+  {
+    "game": "habitats",
+    "level": "easy",
+    "id": "habitats-easy-bear",
+    "prompt": "Ein Eisbär jagt Robben auf Meereis. In welcher Polarregion lebt er?",
+    "answers": [
+      "Arktis",
+      "Antarktis",
+      "Savanne"
+    ],
+    "correct": "Arktis",
+    "wrongReasons": {
+      "Antarktis": "Die Antarktis liegt am Südpol. Wilde Eisbären leben im Norden.",
+      "Savanne": "In einer Savanne gibt es kein arktisches Meereis als Jagdfläche."
+    },
+    "why": "Eisbären leben in der Arktis. Das Meereis hilft ihnen, Robben zu erreichen.",
+    "hints": [
+      "Achte auf die Polarregion im Norden.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "animal-polar-bear"
+  },
+  {
+    "game": "habitats",
+    "level": "easy",
+    "id": "habitats-easy-penguin",
+    "prompt": "Der Kaiserpinguin brütet auf Meereis am südlichsten Kontinent. Wo passt er hin?",
+    "answers": [
+      "Antarktis",
+      "Arktis",
+      "Savanne"
+    ],
+    "correct": "Antarktis",
+    "wrongReasons": {
+      "Arktis": "Die Arktis liegt im Norden. Kaiserpinguine leben am südlichen Kontinent.",
+      "Savanne": "Eine Savanne bietet nicht das Meereis, auf dem Kaiserpinguine gewöhnlich brüten."
+    },
+    "why": "Kaiserpinguine leben in der Antarktis und brüten gewöhnlich auf Meereis. Andere Pinguinarten leben auch in wärmeren Regionen.",
+    "hints": [
+      "Norden und Süden sind zwei verschiedene Polarregionen.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "animal-emperor-penguin"
+  },
+  {
+    "game": "habitats",
+    "level": "easy",
+    "id": "habitats-easy-coral",
+    "prompt": "Riffbildende Korallen leben mit Algen zusammen, die Sonnenlicht nutzen. Welcher Lebensraum passt?",
+    "answers": [
+      "Flaches, lichtreiches Meer",
+      "Dunkle Tiefsee",
+      "Trockenes Grasland"
+    ],
+    "correct": "Flaches, lichtreiches Meer",
+    "wrongReasons": {
+      "Dunkle Tiefsee": "Die Algen in diesem Rätsel brauchen Licht. In der dunklen Tiefsee fehlt es.",
+      "Trockenes Grasland": "Korallentiere leben im Wasser, nicht in trockenem Grasland."
+    },
+    "why": "Viele riffbildende Korallen leben in flachem, lichtreichem Meer mit Algen zusammen. Es gibt auch andere Korallen in der Tiefsee.",
+    "hints": [
+      "Vergleiche Wasser und Licht in den drei Umgebungen.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "science-coral-reef"
+  },
+  {
+    "game": "habitats",
+    "level": "easy",
+    "id": "habitats-easy-giraffe",
+    "prompt": "Eine Giraffe frisst Blätter von Bäumen. Welche Landschaft passt zu ihr?",
+    "answers": [
+      "Savanne mit Bäumen",
+      "Baumlose Eisfläche",
+      "Offenes Meer"
+    ],
+    "correct": "Savanne mit Bäumen",
+    "wrongReasons": {
+      "Baumlose Eisfläche": "Ohne Bäume fehlen die Blätter, die die Giraffe frisst.",
+      "Offenes Meer": "Eine Giraffe ist ein Landtier; Bäume wachsen nicht im offenen Meer."
+    },
+    "why": "Giraffen leben unter anderem in Savannen und offenen Waldlandschaften. Sie fressen vor allem Blätter und andere Pflanzenteile von Bäumen und Sträuchern.",
+    "hints": [
+      "Suche eine Landschaft, in der die passende Nahrung erreichbar ist.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "animal-giraffe"
+  },
+  {
+    "game": "habitats",
+    "level": "medium",
+    "id": "habitats-medium-bear",
+    "prompt": "Eine Eisfläche und ein Felsen sind beide kalt. Warum ist Meereis für den Eisbären trotzdem besonders wichtig?",
+    "answers": [
+      "Es bietet Zugang zur Robbenjagd",
+      "Vor allem die kalte Farbe des Eises",
+      "Jede kalte Fläche bietet gleich viel Nahrung"
+    ],
+    "correct": "Es bietet Zugang zur Robbenjagd",
+    "wrongReasons": {
+      "Vor allem die kalte Farbe des Eises": "Die Farbe liefert keine Nahrung. Entscheidend ist der Zugang zur Robbenjagd.",
+      "Jede kalte Fläche bietet gleich viel Nahrung": "Ein kalter Felsen bietet nicht automatisch denselben Zugang zu Robben wie Meereis."
+    },
+    "why": "Ein Lebensraum muss mehr bieten als die richtige Temperatur. Meereis ist für Eisbären eine wichtige Jagdfläche.",
+    "hints": [
+      "Vergleiche Temperatur und Nahrung: Was leistet die Eisfläche zusätzlich?",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "animal-polar-bear"
+  },
+  {
+    "game": "habitats",
+    "level": "medium",
+    "id": "habitats-medium-penguin",
+    "prompt": "Eisbär und Kaiserpinguin nutzen Meereis. Was zeigt der Vergleich?",
+    "answers": [
+      "Ähnliche Bedingungen bedeuten nicht dieselbe Heimat",
+      "Meereis zeigt allein, welche Tierart dort lebt",
+      "Kälte ist die einzige wichtige Bedingung"
+    ],
+    "correct": "Ähnliche Bedingungen bedeuten nicht dieselbe Heimat",
+    "wrongReasons": {
+      "Meereis zeigt allein, welche Tierart dort lebt": "Ähnliche Eisflächen gibt es an beiden Polen. Die Lage und Verbreitung der Arten muss man zusätzlich kennen.",
+      "Kälte ist die einzige wichtige Bedingung": "Auch Nahrung, Brutplätze und Verbreitung spielen eine Rolle."
+    },
+    "why": "Eisbären leben im Norden, Kaiserpinguine im Süden. Eine ähnliche Umgebung bedeutet nicht, dass Tiere einander in der Natur begegnen.",
+    "hints": [
+      "Unterscheide eine Eigenschaft des Lebensraums von seiner Lage auf der Erde.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "animal-emperor-penguin"
+  },
+  {
+    "game": "habitats",
+    "level": "medium",
+    "id": "habitats-medium-coral",
+    "prompt": "Warum ist Licht für viele riffbildende Korallen wichtig, obwohl Korallen Tiere sind?",
+    "answers": [
+      "Ihre Partneralgen nutzen Licht",
+      "Tiere können nie Partner haben",
+      "Licht verwandelt Korallen in Pflanzen"
+    ],
+    "correct": "Ihre Partneralgen nutzen Licht",
+    "wrongReasons": {
+      "Tiere können nie Partner haben": "Auch Tiere können mit anderen Lebewesen zusammenleben und davon profitieren.",
+      "Licht verwandelt Korallen in Pflanzen": "Korallen bleiben Tiere. Ihre Partneralgen nutzen Licht für die Fotosynthese."
+    },
+    "why": "Algen im Korallengewebe nutzen Licht und liefern Nahrung. Die Koralle bleibt ein Tier; die Zusammenarbeit heißt Symbiose.",
+    "hints": [
+      "Denke an zwei Partner mit unterschiedlichen Aufgaben.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "science-coral-reef"
+  },
+  {
+    "game": "habitats",
+    "level": "medium",
+    "id": "habitats-medium-giraffe",
+    "prompt": "Eine Wiese und eine Savanne sind beide grün. Warum sind Bäume für eine Giraffe entscheidend?",
+    "answers": [
+      "Sie liefern passende Blätter",
+      "Die grüne Farbe beweist genügend Futter",
+      "Gras ersetzt jede andere Pflanzennahrung"
+    ],
+    "correct": "Sie liefern passende Blätter",
+    "wrongReasons": {
+      "Die grüne Farbe beweist genügend Futter": "Grün allein sagt nicht, ob die passenden Blätter verfügbar sind.",
+      "Gras ersetzt jede andere Pflanzennahrung": "Giraffen fressen vor allem an Bäumen und Sträuchern; eine Grasfläche ist kein gleichwertiger Ersatz."
+    },
+    "why": "Giraffen sind vor allem Blattfresser. Eine grüne Fläche ohne passende Bäume und Sträucher ist nicht automatisch ein geeigneter Lebensraum.",
+    "hints": [
+      "Vergleiche nicht nur die Farbe, sondern die verfügbare Nahrung.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "animal-giraffe"
+  },
+  {
+    "game": "habitats",
+    "level": "hard",
+    "id": "habitats-hard-bear",
+    "prompt": "Eine Eisfläche schmilzt früher. Robben bleiben im Meer. Warum kann die Nahrungssuche für Eisbären trotzdem schwieriger werden?",
+    "answers": [
+      "Eine wichtige Jagdfläche fehlt",
+      "Schwimmen ersetzt jede Jagd vom Eis",
+      "Solange Robben da sind, ist der Zugang unwichtig"
+    ],
+    "correct": "Eine wichtige Jagdfläche fehlt",
+    "wrongReasons": {
+      "Schwimmen ersetzt jede Jagd vom Eis": "Schwimmen allein ersetzt die Jagdmöglichkeiten auf Meereis nicht.",
+      "Solange Robben da sind, ist der Zugang unwichtig": "Vorhandene Beute muss auch erreichbar sein. Die Eisfläche ermöglicht wichtige Jagdsituationen."
+    },
+    "why": "Wenn Meereis fehlt, verlieren Eisbären Zugang zu wichtigen Jagdflächen. Schwimmen allein ersetzt diese Möglichkeit nicht.",
+    "hints": [
+      "Trenne die Frage „Ist Nahrung da?“ von „Kann das Tier sie erreichen?“.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "animal-polar-bear"
+  },
+  {
+    "game": "habitats",
+    "level": "hard",
+    "id": "habitats-hard-penguin",
+    "prompt": "Meereis bricht auf, bevor Kaiserpinguinküken schwimmen können. Was kann dadurch gefährdet werden?",
+    "answers": [
+      "Die Aufzucht der Küken",
+      "Nur die erwachsenen Vögel sind betroffen",
+      "Jede offene Wasserfläche ist sofort ein gleich guter Brutplatz"
+    ],
+    "correct": "Die Aufzucht der Küken",
+    "wrongReasons": {
+      "Nur die erwachsenen Vögel sind betroffen": "Auch Küken sind auf eine geeignete Brutfläche angewiesen; sie können noch nicht einfach ins Wasser wechseln.",
+      "Jede offene Wasserfläche ist sofort ein gleich guter Brutplatz": "Kaiserpinguine brüten gewöhnlich auf Meereis. Offenes Wasser ersetzt diesen Platz nicht."
+    },
+    "why": "Kaiserpinguine brauchen gewöhnlich stabiles Meereis für ihre Brut. Geht es zu früh verloren, können Küken gefährdet sein.",
+    "hints": [
+      "Verbinde Zeitpunkt, Brutfläche und die Fähigkeiten der Küken.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "animal-emperor-penguin"
+  },
+  {
+    "game": "habitats",
+    "level": "hard",
+    "id": "habitats-hard-coral",
+    "prompt": "Ein Riff hat viel Licht. Das Wasser ist aber ungewöhnlich warm. Reicht Licht allein, damit die Korallen gesund bleiben?",
+    "answers": [
+      "Nein, Wärme kann die Zusammenarbeit mit Algen stören",
+      "Ja, ein einziger guter Faktor genügt immer",
+      "Ja, Korallen sind unbelebte Steine"
+    ],
+    "correct": "Nein, Wärme kann die Zusammenarbeit mit Algen stören",
+    "wrongReasons": {
+      "Ja, ein einziger guter Faktor genügt immer": "Ein Lebensraum hat mehrere Bedingungen. Licht schützt nicht vor allen Belastungen.",
+      "Ja, Korallen sind unbelebte Steine": "Korallen sind Tiere. Sie können unter ungünstigen Bedingungen Stress erleiden."
+    },
+    "why": "Bei Stress können Korallen ihre Partneralgen verlieren und bleichen. Licht allein garantiert kein gesundes Riff; Bleiche bedeutet nicht sofort den Tod.",
+    "hints": [
+      "Prüfe zwei Bedingungen zugleich. Kann eine günstige die ungünstige immer ausgleichen?",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "science-coral-reef"
+  },
+  {
+    "game": "habitats",
+    "level": "hard",
+    "id": "habitats-hard-giraffe",
+    "prompt": "In einer Savanne stehen nach einer Veränderung weniger Futterbäume. Gras ist weiter vorhanden. Was sollte man für Giraffen prüfen?",
+    "answers": [
+      "Ob genügend passende Blätter erreichbar bleiben",
+      "Nur ob der Lebensraum weiter Savanne heißt",
+      "Ob die größere Grasfläche jedes verlorene Blatt ersetzt"
+    ],
+    "correct": "Ob genügend passende Blätter erreichbar bleiben",
+    "wrongReasons": {
+      "Nur ob der Lebensraum weiter Savanne heißt": "Ein Landschaftsname garantiert nicht, dass ausreichend passende Nahrung vorhanden ist.",
+      "Ob die größere Grasfläche jedes verlorene Blatt ersetzt": "Für einen Blattfresser sind Gras und Blätter nicht beliebig austauschbar."
+    },
+    "why": "Für Blattfresser zählt die erreichbare Nahrung. Der Name „Savanne“ oder die Farbe der Fläche allein sagt nicht, ob genug Futter vorhanden ist.",
+    "hints": [
+      "Übertrage die Ernährungsweise auf die veränderte Landschaft.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "animal-giraffe"
+  },
+  {
+    "game": "detective",
+    "level": "easy",
+    "id": "detective-easy-mantle",
+    "prompt": "„Der Erdmantel ist überall flüssige Lava.“ Stimmt das?",
+    "answers": [
+      "Stimmt nicht",
+      "Stimmt"
+    ],
+    "correct": "Stimmt nicht",
+    "wrongReasons": {
+      "Stimmt": "Hitze allein bedeutet nicht flüssig. Der Mantel besteht überwiegend aus festem Gestein."
+    },
+    "why": "Der Erdmantel ist überwiegend festes, heißes Gestein. Magma entsteht nur in bestimmten Bereichen; an der Oberfläche nennt man es Lava.",
+    "hints": [
+      "Unterscheide heiß von flüssig und Magma von Lava.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "science-magnetism"
+  },
+  {
+    "game": "detective",
+    "level": "easy",
+    "id": "detective-easy-coral",
+    "prompt": "„Korallen sind Tiere.“ Stimmt das?",
+    "answers": [
+      "Stimmt",
+      "Stimmt nicht"
+    ],
+    "correct": "Stimmt",
+    "wrongReasons": {
+      "Stimmt nicht": "Eine feste Stelle am Meeresboden macht ein Lebewesen nicht automatisch zur Pflanze."
+    },
+    "why": "Korallenpolypen sind Tiere. Viele leben mit Algen zusammen, bleiben aber selbst Tiere.",
+    "hints": [
+      "Beurteile ein Lebewesen nicht nur danach, ob es sich fortbewegt.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "science-coral-reef"
+  },
+  {
+    "game": "detective",
+    "level": "easy",
+    "id": "detective-easy-evaporation",
+    "prompt": "„Wasser kann verdunsten, ohne zu kochen.“ Stimmt das?",
+    "answers": [
+      "Stimmt",
+      "Stimmt nicht"
+    ],
+    "correct": "Stimmt",
+    "wrongReasons": {
+      "Stimmt nicht": "Verdunsten ist nicht dasselbe wie Kochen. Auch eine Pfütze kann ohne Kochen kleiner werden."
+    },
+    "why": "Beim Verdunsten gelangt flüssiges Wasser als Wasserdampf in die Luft. Das geschieht auch unterhalb der Siedetemperatur.",
+    "hints": [
+      "Vergleiche eine trocknende Pfütze mit einem kochenden Topf.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "science-water-cycle"
+  },
+  {
+    "game": "detective",
+    "level": "easy",
+    "id": "detective-easy-cloud",
+    "prompt": "„Eine Wolke besteht aus sichtbarem Wasserdampf.“ Stimmt das?",
+    "answers": [
+      "Stimmt nicht",
+      "Stimmt"
+    ],
+    "correct": "Stimmt nicht",
+    "wrongReasons": {
+      "Stimmt": "Wasserdampf ist unsichtbar. Sichtbar sind kleine Tröpfchen oder Eiskristalle."
+    },
+    "why": "In einer Wolke sehen wir kleine Wassertröpfchen oder Eiskristalle. Wasserdampf als Gas ist unsichtbar.",
+    "hints": [
+      "Unterscheide Wasser als Gas, Flüssigkeit und Eis.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "science-water-cycle"
+  },
+  {
+    "game": "detective",
+    "level": "medium",
+    "id": "detective-medium-mantle",
+    "prompt": "Warum ist die Aussage „Heißes Gestein ist immer flüssig“ kein guter Schluss?",
+    "answers": [
+      "Heiß und flüssig sind verschiedene Eigenschaften",
+      "Die Temperatur allein bestimmt hier den Zustand",
+      "Ein flüssiger Bereich beweist einen ganz flüssigen Mantel"
+    ],
+    "correct": "Heiß und flüssig sind verschiedene Eigenschaften",
+    "wrongReasons": {
+      "Die Temperatur allein bestimmt hier den Zustand": "Auch Material und Druck beeinflussen, ob Gestein schmilzt.",
+      "Ein flüssiger Bereich beweist einen ganz flüssigen Mantel": "Eine Beobachtung in einem Teilbereich reicht nicht für das gesamte Erdinnere."
+    },
+    "why": "Der Erdmantel zeigt: Gestein kann heiß und überwiegend fest sein. Unter hohem Druck gelten andere Bedingungen als an der Oberfläche.",
+    "hints": [
+      "Ein Merkmal beweist nicht automatisch ein anderes. Suche einen Gegenvergleich.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "science-magnetism"
+  },
+  {
+    "game": "detective",
+    "level": "medium",
+    "id": "detective-medium-coral",
+    "prompt": "Algen liefern Nahrung an eine Koralle. Was lässt sich daraus schließen?",
+    "answers": [
+      "Zwei verschiedene Lebewesen arbeiten zusammen",
+      "Gleiche Nahrung macht beide zur selben Art",
+      "Ein Tier muss seine Nahrung immer allein herstellen"
+    ],
+    "correct": "Zwei verschiedene Lebewesen arbeiten zusammen",
+    "wrongReasons": {
+      "Gleiche Nahrung macht beide zur selben Art": "Zusammenarbeit und Nahrungslieferung ändern nicht die Artzugehörigkeit.",
+      "Ein Tier muss seine Nahrung immer allein herstellen": "Tiere stellen ihre Nahrung nicht wie Pflanzen durch Fotosynthese her. Sie können auch von Partnern profitieren."
+    },
+    "why": "Die Zusammenarbeit heißt Symbiose. Algen nutzen Licht; die Koralle bietet ihnen einen geschützten Platz.",
+    "hints": [
+      "Trenne die Aufgabe eines Partners von der Art des anderen Partners.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "science-coral-reef"
+  },
+  {
+    "game": "detective",
+    "level": "medium",
+    "id": "detective-medium-water",
+    "prompt": "Auf einem kalten Glas entstehen außen Tropfen. Welche Erklärung passt?",
+    "answers": [
+      "Wasserdampf aus der Luft wird flüssig",
+      "Das Glas erzeugt neues Wasser",
+      "Unsichtbares Wasser ist unmöglich"
+    ],
+    "correct": "Wasserdampf aus der Luft wird flüssig",
+    "wrongReasons": {
+      "Das Glas erzeugt neues Wasser": "Das Wasser stammt aus der feuchten Luft, nicht aus einer Neuschöpfung im Glas.",
+      "Unsichtbares Wasser ist unmöglich": "Wasser kann als unsichtbares Gas in der Luft vorhanden sein."
+    },
+    "why": "An einer kalten Oberfläche kann Wasserdampf zu flüssigen Tröpfchen kondensieren. Das Glas muss dafür nicht undicht sein.",
+    "hints": [
+      "Überlege, woher das Wasser außen kommen könnte, ohne durch das Glas zu fließen.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "science-water-cycle"
+  },
+  {
+    "game": "detective",
+    "level": "medium",
+    "id": "detective-medium-seasons",
+    "prompt": "Warum reicht „Die Sonne ist im Winter aus“ nicht als Erklärung?",
+    "answers": [
+      "Die Erdachse verändert bei uns Tageslänge und Sonnenstand",
+      "Ein kurzer Tag beweist weniger Leuchtkraft der Sonne",
+      "Der Winter zeigt, dass die Erde dann stillsteht"
+    ],
+    "correct": "Die Erdachse verändert bei uns Tageslänge und Sonnenstand",
+    "wrongReasons": {
+      "Ein kurzer Tag beweist weniger Leuchtkraft der Sonne": "Die Tageslänge hängt von der Erdachse und dem Ort ab. Sie misst nicht die Leuchtkraft der Sonne.",
+      "Der Winter zeigt, dass die Erde dann stillsteht": "Die Erde dreht sich und umläuft die Sonne weiter. Stillstand erklärt unsere Jahreszeiten nicht."
+    },
+    "why": "Bei uns im Winter sind Tage kürzer und die Sonne steht niedriger. Das hängt mit der geneigten Erdachse zusammen, nicht mit einer ausgeschalteten Sonne.",
+    "hints": [
+      "Vergleiche, wie lange und in welchem Winkel Sonnenlicht den Boden erreicht.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "science-seasons"
+  },
+  {
+    "game": "detective",
+    "level": "hard",
+    "id": "detective-hard-water",
+    "prompt": "Eine Pfütze wird kleiner; es hat nicht gekocht. Jemand behauptet: „Also kann es keine Verdunstung sein.“ Wie prüfst du den Schluss?",
+    "answers": [
+      "Verdunstung kann auch ohne Kochen stattfinden",
+      "Der Schluss stimmt, nur Kochen verändert Wasser",
+      "Wasser kann nie seinen Zustand ändern"
+    ],
+    "correct": "Verdunstung kann auch ohne Kochen stattfinden",
+    "wrongReasons": {
+      "Der Schluss stimmt, nur Kochen verändert Wasser": "Verdunstung ist ein eigener Vorgang und braucht kein kochendes Wasser.",
+      "Wasser kann nie seinen Zustand ändern": "Wasser kann zwischen flüssig, fest und gasförmig wechseln."
+    },
+    "why": "Verdunstung ist eine mögliche Erklärung auch ohne Kochen. Das Rätsel beweist nicht, dass kein Wasser zusätzlich versickert ist.",
+    "hints": [
+      "Eine mögliche Erklärung ist nicht automatisch der einzige Weg.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "science-water-cycle"
+  },
+  {
+    "game": "detective",
+    "level": "hard",
+    "id": "detective-hard-seasons",
+    "prompt": "In Deutschland ist Winter. Folgt daraus, dass überall auf der Erde Winter ist?",
+    "answers": [
+      "Nein, die Südhalbkugel hat die entgegengesetzte Jahreszeit",
+      "Ja, ein kalter Ort beweist globale Kälte",
+      "Ja, beide Halbkugeln sind immer gleich zur Sonne geneigt"
+    ],
+    "correct": "Nein, die Südhalbkugel hat die entgegengesetzte Jahreszeit",
+    "wrongReasons": {
+      "Ja, ein kalter Ort beweist globale Kälte": "Von einer Beobachtung in Deutschland kann man nicht auf alle anderen Regionen schließen.",
+      "Ja, beide Halbkugeln sind immer gleich zur Sonne geneigt": "Durch die Erdachse ist im Jahreslauf jeweils eine Halbkugel stärker zur Sonne gewandt."
+    },
+    "why": "Während auf der Nordhalbkugel Winter ist, ist auf der Südhalbkugel Sommer. Ein lokaler Eindruck gilt nicht automatisch für die ganze Erde.",
+    "hints": [
+      "Unterscheide Beobachtung an einem Ort und Schluss über die ganze Erde.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "science-seasons"
+  },
+  {
+    "game": "detective",
+    "level": "hard",
+    "id": "detective-hard-coral",
+    "prompt": "Eine Koralle ist weiß geworden. „Sie ist sicher schon tot“, sagt jemand. Ist dieser Schluss zuverlässig?",
+    "answers": [
+      "Nein, Bleiche zeigt Stress, aber nicht sicher den Tod",
+      "Ja, eine Farbänderung beweist immer den Tod",
+      "Nein, Bleiche hat niemals Folgen für Korallen"
+    ],
+    "correct": "Nein, Bleiche zeigt Stress, aber nicht sicher den Tod",
+    "wrongReasons": {
+      "Ja, eine Farbänderung beweist immer den Tod": "Gebleichte Korallen können noch leben. Ein Warnsignal ist kein sicherer Nachweis des Todes.",
+      "Nein, Bleiche hat niemals Folgen für Korallen": "Bleiche bedeutet Stress und kann das Überleben gefährden; sie ist nicht harmlos."
+    },
+    "why": "Korallenbleiche entsteht beim Verlust von Partneralgen. Sie ist ein Warnsignal; ob die Koralle überlebt, hängt von weiteren Bedingungen ab.",
+    "hints": [
+      "Unterscheide ein Warnsignal von einem endgültigen Ergebnis.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "science-coral-reef"
+  },
+  {
+    "game": "detective",
+    "level": "hard",
+    "id": "detective-hard-mantle",
+    "prompt": "In einem kleinen Bereich entsteht Magma. „Dann muss der ganze Mantel flüssig sein.“ Was ist am Schluss problematisch?",
+    "answers": [
+      "Ein Teilbereich beweist keine Eigenschaft des Ganzen",
+      "Der Schluss stimmt, ein Teil steht immer für das Ganze",
+      "Man darf dann sicher auf einen kalten Mantel schließen"
+    ],
+    "correct": "Ein Teilbereich beweist keine Eigenschaft des Ganzen",
+    "wrongReasons": {
+      "Der Schluss stimmt, ein Teil steht immer für das Ganze": "Ein einzelner geschmolzener Bereich erlaubt keinen Schluss auf den gesamten Mantel.",
+      "Man darf dann sicher auf einen kalten Mantel schließen": "Magma zeigt lokale Schmelze. Es beweist weder einen ganz flüssigen noch einen kalten Mantel."
+    },
+    "why": "Magma kann lokal entstehen, während der Mantel überwiegend fest bleibt. Für das Ganze braucht man mehr als ein einzelnes Beispiel.",
+    "hints": [
+      "Prüfe, ob die Beobachtung nur einen Teil oder wirklich das Ganze betrifft.",
+      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
+    ],
+    "topic": "science-magnetism"
+  }
+]
