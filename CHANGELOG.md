@@ -1,5 +1,15 @@
 # Änderungsverlauf
 
+## 11. Oktober 2026 – WK-033: eine lesbare Entwicklungsgeschichte
+
+Alle 23 belegten Chronikeinträge redaktionell überarbeitet: konkrete Überschriften, ein bis zwei Zusammenfassungssätze, freiwillige Listen mit den tatsächlich belegten Änderungen und eigener Nutzenabsatz für Kinder und Eltern. Die meisten Einträge haben drei bis fünf Details; die gleiche Sites-Wiederbereitstellung, der Foto-Zwischenstand und die erste hier belegte Testwebsite werden bewusst nicht künstlich aufgefüllt. Historische IDs, alle 13 Sites-Veröffentlichungen und ursprüngliche Quittungen erhalten. GitHub-PR-Beschreibungen, CHANGELOG und gespeicherte originale Quellstände abgeglichen.
+
+PR #18 unter bestehender ID nachgeführt: tatsächlicher test-live-Merge 91795d4830edf8ad1dd202c8a07e1dfa734f3324 am 11.10.2026 08:45:31Z; jüngste vertrauenswürdige Vercel-Erfolgsmeldung am selben enthaltenen Commit 08:45:50Z (10:45:50 Europe/Berlin). Nur Testwebsite-Verfügbarkeit, kein erfundenes Hauptwebsite-Datum. Das aktuelle Chronikpaket bleibt getrennt vorbereitet, ohne Verfügbarkeitsdatum oder vorzeitige Funktionslinks.
+
+Bestehende Zeitleiste mit ruhigen Liniensymbolen, deutlichen Datumszeilen, harmonischen Abständen und feinen horizontalen Trennlinien verfeinert. Vier aktuelle Einträge und 19 ältere im aufklappbaren Archiv; kurze Zusammenfassungen sofort sichtbar, konkrete Änderungen und Familiennutzen erst auf Wunsch. Bei der Browserabnahme zu lange kleine Kopfzeile mit großer Schrift und unnötigen Umbruch der Detailanzahl im Archiv korrigiert. Redaktionellen Standard in AGENTS/VISION/QUALITY gezielt für kommende GO-Pakete ergänzt; kein neues Chroniksystem, Masterregelwerk oder Dienst.
+
+Bestehende Tests um redaktionelle Vollständigkeit, ehrlich kurze Wiederbereitstellungen, tatsächliche Ereignisreihenfolge und unveröffentlichte Vorbereitung ergänzt. Browserprobe öffnet alle Einträge, prüft Nutzen/Detailzahl, verwaiste Detailanzahl, lange Historie, Text-/Touchgeometrie, axe auch aufgeklappt, große Schrift und Links/Zurück/Fokus. Tatsächliche finale Prüfungen, persönliche Screenshotabnahme und Ready-PR/Quality im aktuellen PROJECT_STATE und PR. Lernfunktionen, Inhalte, IDs, Pass/Sicherungen/Abzeichen und Spielmechaniken erhalten. Normale langfristige GO-Entwicklung bleibt bestehen. Kein Merge, main-Schreiben, Veröffentlichung oder neue Kosten.
+
 ## 11. Oktober 2026 – WK-032: belegte Testwebsite-Updates in der Chronik
 
 Die 13 ursprünglichen Sites-Veröffentlichungen bleiben erhalten. Neun nachweislich bereitgestellte Testwebsite-Meilensteine ergänzen die Zeitreise: erster belegter test-live-Stand, vernetzte Natur-/Weltallwelt, Hinweiskorrektur und individuelle Challenge-Hinweise, Entdeckerzentrale, Wissenskarten, Entdeckerpass, ruhige Wissensverknüpfungen und mobiler Pass-Feinschliff. Bestehendes Layout mit Icons, vier aktuellen Einträgen, älterem Archiv und freiwilligen Details erhalten; Statusmetadaten auf 14 px angehoben. Testverfügbarkeit und frühere Sites-Veröffentlichung klar gekennzeichnet; noch unbestätigte Änderungen getrennt, ohne Veröffentlichungsdatum oder vorzeitige Funktionslinks.

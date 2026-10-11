@@ -4,8 +4,9 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "cba421cdf6ce040cf63d066aa0df410aeb1f828e",
+    "commit": "91795d4830edf8ad1dd202c8a07e1dfa734f3324",
     "includedMergeCommits": [
+      "91795d4830edf8ad1dd202c8a07e1dfa734f3324",
       "cba421cdf6ce040cf63d066aa0df410aeb1f828e",
       "031bdaa2840bf30ed42df9b3e8b41e08ff59f41f",
       "5f7fa87836b898659f83baeff6500df1faff1ed4",
@@ -364,8 +365,39 @@
     },
     {
       "number": 18,
-      "title": "Klarer Erstbesuch und belegte „Was ist neu?“-Chronik",
+      "title": "Klarer Erstbesuch und Chronik mit Sites- und Testwebsite-Updates",
       "url": "https://github.com/Arizona2k/wunderkompass/pull/18",
+      "base": "test-live",
+      "mergedAt": "2026-10-11T08:45:31Z",
+      "mergeCommit": "91795d4830edf8ad1dd202c8a07e1dfa734f3324",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/91795d4830edf8ad1dd202c8a07e1dfa734f3324/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56079918948,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-11T08:45:50Z",
+          "updatedAt": "2026-10-11T08:45:50Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/48sTvKhHfNwsY3U2v1VxqrRGnuar"
+        },
+        {
+          "id": 56079912800,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-11T08:45:34Z",
+          "updatedAt": "2026-10-11T08:45:34Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/48sTvKhHfNwsY3U2v1VxqrRGnuar"
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "„Was ist neu?“: konkrete Entwicklungsgeschichte und ruhige Zeitleiste",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/19",
       "base": "test-live",
       "mergedAt": null,
       "mergeCommit": null,
