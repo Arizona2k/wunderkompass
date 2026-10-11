@@ -17,7 +17,7 @@ await runBrowser(async browser=>{
    await p.getByRole('heading',{name:topic.title,exact:true}).waitFor();
    if(i===2){await p.reload();await ready();await p.getByRole('button',{name:'Fortsetzen',exact:true}).click();await p.getByRole('heading',{name:topic.title,exact:true}).waitFor();}
    if(!(await p.evaluate(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),topic.id))){await p.locator('.world-mini-question .quiz-answer').filter({has:p.getByText(topic.question.answers[topic.question.correct],{exact:true})}).click();await p.waitForFunction(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),topic.id);}
-   await p.getByRole('button',{name:i===route.topics.length-1?'Lernreise abschließen':'Zur nächsten Station',exact:true}).click();
+   await p.getByRole('button',{name:i===route.topics.length-1?'Route abschließen':'Zur nächsten Station',exact:true}).click();
   }
   await p.getByRole('heading',{name:'Deine Reise ist erklärt!',exact:true}).waitFor();await p.waitForFunction(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('route:'+id),route.id);report.routes.push(route.id);
   await p.getByRole('button',{name:'Eine neue Welt entdecken',exact:true}).click();await p.locator('.world-choices').waitFor();console.log('ROUTE COMPLETE',route.id);

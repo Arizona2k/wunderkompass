@@ -24,7 +24,7 @@ test('publication entries match successful deployments, source provenance and Be
   if(entry.evidence.publicationVersion!==undefined){
    const source=HISTORY_EVIDENCE.versions.find(v=>v.number===entry.evidence.publicationVersion);assert.equal(source.publication.status,'succeeded');assert.equal(source.publication.type,'publish');assert.equal(source.sourceCommit,entry.evidence.revision);assert.equal(entry.publishedOn,berlinDay(source.publication.completedAt));
   }
-  for(const link of entry.links)assert.ok(['globe','world','labs','games','journeys','book','world/topic/science-moon-phases','updates'].includes(link.hash));
+  for(const link of entry.links)assert.ok(['globe','world','labs','games','journeys','book','world/topic/science-moon-phases'].includes(link.hash));
  }
  assert.equal(HISTORY_EVIDENCE.versions.find(v=>v.number===6).publication,null);
  assert.equal(berlinDay(HISTORY_EVIDENCE.site.createdAt),'2026-10-06','project began after Berlin midnight');
@@ -41,8 +41,8 @@ test('test website chronology retains the merged and deployed product rounds, wi
  assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[19,18,17,16,15,14,12,11,10,9,3]);
  assert.equal(entries.length,24);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
- assert.deepEqual(PREPARED_UPDATES.map(e=>e.id),[]);
- assert.deepEqual(PREPARED_UPDATES.map(e=>e.evidence.pullRequest),[],'handoff uses the actually created PR, never a guessed number');
+ assert.deepEqual(PREPARED_UPDATES.map(e=>e.id),['clear-main-navigation']);
+ assert.deepEqual(PREPARED_UPDATES.map(e=>e.evidence.pullRequest),[20],'handoff uses the actually created PR, never a guessed number');
  assert.equal(updateLabel(testEntries[0]),'Testwebsite · verfügbar');assert.equal(updateLabel(entries.find(e=>e.id==='site-v14')),'Sites · Version 14');
  for(const entry of testEntries){
   const record=TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===entry.evidence.pullRequest),deployment=confirmedTestDeployment(record);
@@ -97,8 +97,7 @@ test('reader-facing entries provide concrete optional changes and a family benef
 });
 
 test('unconfirmed navigation work stays unavailable even if an observation date is mistaken for publication',()=>{
- const source=UPDATE_HISTORY.find(e=>e.id==='history-polish');
- const prepared={...source,id:'navigation-fixture',status:'prepared',publishedOn:null,availableOn:null,links:[]};
+ const prepared=PREPARED_UPDATES.find(e=>e.id==='clear-main-navigation');
  assert.equal(prepared.status,'prepared');assert.deepEqual(prepared.links,[]);
  assert.equal(publicUpdates([prepared]).length,0);
  assert.equal(publicUpdates([{...prepared,publishedOn:prepared.confirmedOn,availableOn:prepared.confirmedOn}]).length,0);

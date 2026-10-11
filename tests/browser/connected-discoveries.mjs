@@ -102,12 +102,19 @@ export async function connectedDiscoveries(page,ready,report,width){
     const title=await page.locator('#world-topic-title').innerText(),t=topics.find(t=>t.title===title);
     const answer=page.locator('.world-mini-question .quiz-answer').filter({has:page.getByText(t.question.answers[t.question.correct],{exact:true})});
     if(!await answer.isDisabled())await answer.click();
-    await page.getByRole('button',{name:i===4?'Lernreise abschließen':'Zur nächsten Station',exact:true}).click();
+    await page.getByRole('button',{name:i===4?'Route abschließen':'Zur nächsten Station',exact:true}).click();
    }
    await page.getByRole('heading',{name:'Deine Reise ist erklärt!',exact:true}).waitFor();
    assert.ok((await pass()).discoveries.includes('route:'+id));
   }
   report.checks.push('Both new five-station routes completed through real mini questions');
+ }
+ if(width===1440){
+  await page.evaluate(()=>location.hash='world');await page.locator('.world-choice').first().waitFor();
+  const completed=page.locator('[data-route-focus="world-route-moon-to-sea"]');await completed.focus();await page.keyboard.press('Enter');await page.locator('.world-route-finish').waitFor();await page.waitForFunction(()=>document.activeElement?.id==='learning-main');
+  await page.evaluate(()=>location.hash='globe');await page.locator('.continue-card').waitFor();await page.getByRole('button',{name:'Fortsetzen',exact:true}).click();await page.locator('.world-route-finish').waitFor();await page.waitForFunction(()=>document.activeElement?.id==='learning-main');
+  assert.equal(new URL(page.url()).hash,'#world/route/moon-to-sea','completed route retains its finish state when resumed');
+  report.checks.push('Completed learning route: keyboard entry/resume retains finish state and a focusable main fallback');
  }
  report.checks.push('Connected discoveries '+width+': eight articles, both models, reload, reciprocal link, search, pagination/history, three difficulties with non-revealing hints, explanation only after success, wrong/right/reload/finish and fresh follow-up rounds');
 }

@@ -25,8 +25,11 @@ export function restoreRouteView(path:string,focus=true){
  const opener=Array.from(document.querySelectorAll<HTMLElement>('[data-route-focus]')).find(el=>el.dataset.routeFocus===state?.wunderFocus&&el.getClientRects().length);
  if(opener){opener.focus({preventScroll:true});const r=opener.getBoundingClientRect();if(r.top<0||r.bottom>innerHeight)opener.scrollIntoView({block:'nearest',behavior:'instant'});return;}
  if(path==='updates')document.getElementById('updates-title')?.focus({preventScroll:true});
- else if(path.startsWith('world/topic/')||path.startsWith('world/route/'))document.getElementById('world-topic-title')?.focus({preventScroll:true});
- else if(path==='world'||path.startsWith('world/'))document.getElementById('world-category-title')?.focus({preventScroll:true});
+ else if(path==='world'||path.startsWith('world/')){
+  const heading=document.getElementById('world-topic-title')??document.getElementById('world-category-title');
+  if(heading){heading.focus({preventScroll:true});const r=heading.getBoundingClientRect();if(r.top<0||r.bottom>innerHeight)heading.scrollIntoView({block:'nearest',behavior:'instant'});}
+  else focusLearningMain(); // Completed routes have a finish view rather than an article.
+ }
  else focusLearningMain();
 }
 export function useHashRoute(){const first=useRef(true);const path=useSyncExternalStore(subscribe,read,()=> 'globe');useEffect(()=>{const initial=first.current;first.current=false;if(path==='globe'||path==='updates')return;const frame=requestAnimationFrame(()=>restoreRouteView(path,!initial||!!history.state?.wunderRoute));return()=>cancelAnimationFrame(frame);},[path]);return path;}
