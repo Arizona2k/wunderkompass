@@ -51,6 +51,9 @@ export async function playgroundFlow(browser,base,ready,monitor,report,shots){
    let snapshot=(await state(p)).gameSessions[game].learningRound;assert.equal(snapshot.level,level);assert.equal(snapshot.ids.length,4);
    for(let i=0;i<4;i++){
     const q=CLASSIC_QUESTIONS.find(q=>q.id===snapshot.ids[i]),room=p.locator('.classic-learning'),hint=room.locator('.world-game-hint');await room.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
+    // Starting/advancing a question deliberately moves focus on the next frame.
+    // Finish that real handoff before directing Enter to the native disclosure.
+    await p.waitForFunction(()=>document.activeElement?.id==='reason-question');
     assert.equal(await hint.getAttribute('open'),null);await hint.locator('summary').focus();await p.keyboard.press('Enter');await hint.getByText(q.hints[0],{exact:true}).waitFor();assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
     await hint.getByRole('button',{name:'Noch ein Hinweis',exact:true}).click();await hint.getByText(q.hints[1],{exact:true}).waitFor();assert.deepEqual((await state(p)).gameSessions[game].learningRound,snapshot);
     const wrong=q.answers.find(a=>a!==q.correct);await room.locator('.quiz-answer').filter({has:p.getByText(wrong,{exact:true})}).tap();await room.getByText(q.wrongReasons[wrong],{exact:true}).waitFor();assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
