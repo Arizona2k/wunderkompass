@@ -23,7 +23,7 @@ export function restoreRouteView(path:string,focus=true){
  window.scrollTo({top:typeof state?.wunderScroll==='number'?state.wunderScroll:0,behavior:'instant'});
  if(!focus)return;
  const opener=Array.from(document.querySelectorAll<HTMLElement>('[data-route-focus]')).find(el=>el.dataset.routeFocus===state?.wunderFocus&&el.getClientRects().length);
- if(opener){opener.focus({preventScroll:true});const r=opener.getBoundingClientRect();if(r.top<0||r.bottom>innerHeight)opener.scrollIntoView({block:'nearest',behavior:'instant'});return;}
+ if(opener){opener.focus({preventScroll:true});const r=opener.getBoundingClientRect();if(r.top<8||r.bottom>innerHeight-8)opener.scrollIntoView({block:'center',behavior:'instant'});return;}
  if(path==='updates')document.getElementById('updates-title')?.focus({preventScroll:true});
  else if(path==='world'||path.startsWith('world/')){
   const heading=document.getElementById('world-topic-title')??document.getElementById('world-category-title');

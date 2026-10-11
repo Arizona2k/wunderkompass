@@ -4,7 +4,7 @@ import {navigateHash,restoreRouteView} from './hash-route';
 import {publicUpdates,PREPARED_UPDATES,TEST_HISTORY_EVIDENCE,formatHistoryDay,updateDate,updateLabel,type UpdateEntry} from './update-history';
 export default function UpdateHistoryView(){
  const entries=publicUpdates();
- useLayoutEffect(()=>{restoreRouteView('updates');},[]);
+ useLayoutEffect(()=>{restoreRouteView('updates');const opener=history.state?.wunderFocus;if(!opener)return;let frame=requestAnimationFrame(()=>{frame=requestAnimationFrame(()=>{if((document.activeElement as HTMLElement|null)?.dataset.routeFocus===opener)restoreRouteView('updates');});});return()=>cancelAnimationFrame(frame);},[]);
  return <article className="update-history" aria-labelledby="updates-title">
   <a className="discovery-text-link" data-route-focus="updates-home" href="#globe" onClick={e=>{e.preventDefault();navigateHash('globe');}}><ArrowLeft size={18}/> Zur Startseite</a>
   <header className="updates-heading"><p className="eyebrow"><Compass size={16}/> WUNDERKOMPASS WÄCHST</p><h1 id="updates-title" tabIndex={-1}>Was ist neu?</h1><p>Vom ersten Globus zur vernetzten Wissenswelt. Entdecke, was sich verändert hat und was es euch bringt.</p></header>

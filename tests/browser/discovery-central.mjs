@@ -189,10 +189,10 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    assert.equal(await p.locator('.updates-timeline>li').count(),publicUpdates().length);
    assert.deepEqual(await p.locator('.updates-meta>span:first-child').allTextContents(),publicUpdates().map(updateLabel));
    assert.equal(await p.locator('.updates-timeline>li[data-update-channel=sites]').count(),13,'retain every historical Sites publication');
-   assert.equal(await p.locator('.updates-timeline>li[data-update-channel=vercel-test]').count(),11,'include independently confirmed test website rounds');
-   assert.equal(await p.locator('.updates-timeline>li').first().getAttribute('data-update-id'),'history-polish','confirmed PR 19 keeps its ID and comes first');
+   assert.equal(await p.locator('.updates-timeline>li[data-update-channel=vercel-test]').count(),12,'include independently confirmed test website rounds');
+   assert.equal(await p.locator('.updates-timeline>li').first().getAttribute('data-update-id'),'clear-main-navigation','confirmed PR 20 keeps its ID and comes first');
    assert.equal(await p.locator('.updates-timeline [data-update-id=history-polish]').count(),1,'merged and deployed PR 19 is an available update');
-   assert.equal(await p.locator('.updates-timeline>li').first().locator('time').getAttribute('datetime'),'2026-10-11','actual PR 19 Vercel confirmation date');
+   assert.equal(await p.locator('.updates-timeline>li').first().locator('time').getAttribute('datetime'),'2026-10-11','actual PR 20 Vercel confirmation date');
    assert.equal(await p.locator('.updates-details[open]').count(),0,'optional changes start collapsed');
    assert.equal(await p.locator('#updates-title').evaluate(el=>el===document.activeElement),true,'lazy history title focus');
    assert.deepEqual(await readProgress(),before,'history is read-only for central pass');
@@ -227,10 +227,10 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    const expandedAxe=await p.evaluate(async()=>{const r=await window.axe.run({include:[['.update-history']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));});assert.deepEqual(expandedAxe,[],'all expanded history WCAG axe '+width);
    const olderLink=p.locator('.updates-timeline>li').last().locator('.updates-links a').first();
    await olderLink.scrollIntoViewIfNeeded();await p.keyboard.press('Tab');await olderLink.focus();const olderId=await olderLink.getAttribute('data-route-focus');await p.keyboard.press('Enter');await p.locator('.discovery-hero').waitFor();
-   await p.goBack();await p.locator('.updates-timeline').first().waitFor();await p.waitForFunction(id=>document.activeElement?.getAttribute('data-route-focus')===id,olderId);
+   await p.goBack();await p.locator('.updates-timeline').first().waitFor();await p.waitForFunction(id=>{const el=document.activeElement;if(el?.getAttribute('data-route-focus')!==id)return false;const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight&&el.matches(':focus-visible');},olderId);
    assert.equal(await p.locator('.updates-archive').evaluate(el=>el.open),true,'Back restores expanded history archive');
    assert.equal(await p.locator('.updates-details[open]').count(),publicUpdates().length,'Back also restores every expanded entry');
-   assert.equal(await olderLink.evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight&&el.matches(':focus-visible')&&parseFloat(getComputedStyle(el).outlineWidth)>=2}),true,'Back restores visible older-entry keyboard focus');
+   const olderFocus=await olderLink.evaluate(el=>{const r=el.getBoundingClientRect();return {top:r.top,bottom:r.bottom,height:innerHeight,visible:el.matches(':focus-visible'),outline:parseFloat(getComputedStyle(el).outlineWidth)};});if(!(olderFocus.top>=0&&olderFocus.bottom<=olderFocus.height&&olderFocus.visible&&olderFocus.outline>=2)){await p.screenshot({path:shots+'/updates-back-failure-'+width+'.png'});console.log('Older entry focus geometry',width,JSON.stringify(olderFocus));}assert.equal(olderFocus.top>=0&&olderFocus.bottom<=olderFocus.height&&olderFocus.visible&&olderFocus.outline>=2,true,'Back restores visible older-entry keyboard focus');
    await p.screenshot({path:shots+'/updates-back-focus-'+width+'.png',animations:'disabled'});
    await p.locator('.updates-links a[href="#world"]').first().click();await p.locator('.world-view').waitFor();assert.equal(new URL(p.url()).hash,'#world');
    await p.goBack();await p.locator('.updates-timeline').first().waitFor();await p.getByRole('link',{name:'Zur Startseite',exact:true}).click();await p.locator('.discovery-hero').waitFor();
@@ -263,7 +263,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
     await p.emulateMedia({forcedColors:'active'});await p.keyboard.press('Tab');await start.focus();assert.equal(await start.evaluate(el=>el.matches(':focus-visible')&&getComputedStyle(el).outlineStyle==='solid'),true,'system colors retain focus');await p.screenshot({path:shots+'/home-system-colors-320.png',animations:'disabled'});
    }
    console.log('Homepage/history viewport',width,height,'first/return/large passed');
-   report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, history/back/forward, 13 Sites + 11 confirmed test website updates including PR 19, separate undated prepared work, all concrete-change disclosures and family benefits, expanded long history and large-font details, read-only pass, WCAG axe');
+   report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, history/back/forward, 13 Sites + 12 confirmed test website updates including PR 20, separate undated prepared work, all concrete-change disclosures and family benefits, expanded long history and large-font details, read-only pass, WCAG axe');
   }finally{await c.close();}
  }
 }

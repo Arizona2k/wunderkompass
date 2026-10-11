@@ -4,8 +4,9 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "a68ae6d61a7e4588064da0a68e1d49bab466bb6d",
+    "commit": "0afbcdd7ed1d7fd639b7033df869dae32c39c43d",
     "includedMergeCommits": [
+      "0afbcdd7ed1d7fd639b7033df869dae32c39c43d",
       "a68ae6d61a7e4588064da0a68e1d49bab466bb6d",
       "91795d4830edf8ad1dd202c8a07e1dfa734f3324",
       "cba421cdf6ce040cf63d066aa0df410aeb1f828e",
@@ -430,6 +431,37 @@
       "number": 20,
       "title": "Sechs klare Hauptbereiche: Wissenswelten wieder direkt erreichbar",
       "url": "https://github.com/Arizona2k/wunderkompass/pull/20",
+      "base": "test-live",
+      "mergedAt": "2026-10-11T12:47:32Z",
+      "mergeCommit": "0afbcdd7ed1d7fd639b7033df869dae32c39c43d",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/0afbcdd7ed1d7fd639b7033df869dae32c39c43d/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56085879598,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-11T12:47:50Z",
+          "updatedAt": "2026-10-11T12:47:50Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/DwtfQqPvFuRfGqJiE9AZdiTrD4Km"
+        },
+        {
+          "id": 56085873811,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-11T12:47:35Z",
+          "updatedAt": "2026-10-11T12:47:35Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/DwtfQqPvFuRfGqJiE9AZdiTrD4Km"
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Spielplatz 2.0: gemeinsame Auswahl und drei Lernspiele modernisieren",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/21",
       "base": "test-live",
       "mergedAt": null,
       "mergeCommit": null,

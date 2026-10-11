@@ -9,6 +9,7 @@ export function SavedGame({id,family,sessions,onSave,children}:{id:string;family
  const [recovered]=useState(normalized.recovered);
  return <Context.Provider value={{id,family,snapshot:normalized.snapshot,save:onSave}}>{recovered&&<p className="gentle-note" role="status">Ein Teil dieser Runde war nicht lesbar. Wir haben die Runde sicher repariert. Dein übriger Entdeckerpass bleibt erhalten. Mit „Neue Runde“ kannst du frisch beginnen.</p>}{children}</Context.Provider>;
 }
+export function useGameSnapshot(){return useContext(Context)?.snapshot??{};}
 export function useSavedGame<T>(key:string,initial:T|(()=>T),restore?:(value:unknown,fallback:T)=>T):[T,Dispatch<SetStateAction<T>>]{
  const context=useContext(Context);const current=useRef(context);useEffect(()=>{current.current=context;},[context]);
  const [state,setState]=useState<T>(()=>{const fallback=typeof initial==='function'?(initial as ()=>T)():initial,value=context?.snapshot[key];if(value===undefined)return fallback;if(restore)return restore(value,fallback);if(!compatible(value,fallback))return fallback;
