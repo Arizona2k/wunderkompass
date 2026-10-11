@@ -7,7 +7,7 @@ export function learningInputs(root){
  function walk(dir){if(!existsSync(dir))return;for(const item of readdirSync(dir,{withFileTypes:true})){const p=join(dir,item.name);if(item.isDirectory())walk(p);else files.push(p);}}
  for(const dir of ['app','components','public','migration','hooks','lib'])walk(join(root,dir));
  // Active build inputs, including the entry adapter and config-only changes.
- for(const name of ['vite.config.ts','postcss.config.mjs','package.json','pnpm-lock.yaml','build/learning-offline.ts','build/learning-worker.js','build/learning-fingerprint.mjs']){const p=join(root,name);if(existsSync(p))files.push(p);}
+ for(const name of ['index.html','tsconfig.json','vite.config.ts','postcss.config.mjs','package.json','pnpm-lock.yaml','build/learning-offline.ts','build/learning-worker.js','build/learning-fingerprint.mjs']){const p=join(root,name);if(existsSync(p))files.push(p);}
  return files.sort();
 }
 export function learningFingerprint(root,files=learningInputs(root)){
