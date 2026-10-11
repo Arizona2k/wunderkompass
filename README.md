@@ -1,5 +1,9 @@
 # WunderKompass – Entwicklung und Projektsicherung
 
+Paket 2A ergänzt das bestehende technische Fundament: `pnpm run build` erzwingt performance-budgets.json anhand des Produktionsmanifests; die bisherige vollständige Browserprobe enthält Komponenten-/Layoutverträge und drei Messungen pro Einstiegsbereich. `pnpm run build:profile` schreibt Buildzeit und Größen lokal nach .qa-output/. Messmethode/Grenzen stehen in QUALITY.md.
+
+Für schnelle lokale Iterationen: `pnpm run typecheck:fast`, `pnpm run lint:fast`, `pnpm run test:affected` (nachvollziehbarer Plan aus dem Git-Diff), `pnpm run test:affected -- --run` (ausgewählte tatsächliche Prüfungen). Eine gezielte Vorschau ist mit `--files app/challenge-hints.json` möglich. Vor Ready stets die vollständigen bisherigen Pflichtprüfungen einschließlich `pnpm run test:browser` ohne QA_SUITE ausführen. Neue Dateien werden berücksichtigt; unbekannte Änderungen wählen konservativ vollständig. Kein Cache und keine Auswahl ersetzen CI oder manuelle Freigabe.
+
 ## Aktueller GitHub-/Codex-Einstieg
 
 Die Anwendung ist bereits in das private Repository [Arizona2k/wunderkompass](https://github.com/Arizona2k/wunderkompass) importiert. **Die Repository-Wurzel ist die Anwendung**: im Checkout nicht nochmals in `project/` wechseln. `original-site/`, ZIP und externe Inventur-/Prüfsummen-Dateien gehören zum getrennten Sicherungsarchiv und sind hier nicht vorausgesetzt.

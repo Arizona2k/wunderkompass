@@ -12,5 +12,5 @@ export type WorldTopic={revision?:number;checkedAt?:string;challenges?:(WorldQue
  invention?:{year:number;date:string;stages:{label:string;text:string}[];parts:{id:string;name:string;description:string}[];blueprint:'car'|'plane'|'lamp'|'computer'|'phone'|'printer'|'compass'|'train'|'rocket'|'satellite'|'network'};
  building?:{date:string;size:string;height?:number};
 };
-export type WorldEntry=Pick<WorldTopic,'id'|'category'|'title'|'intro'|'aliases'|'locations'|'image'|'model'> & {group?:string;habitat?:string;continent?:string;year?:number;era?:string;sensitive?:boolean};
+export type WorldEntry=Pick<WorldTopic,'id'|'category'|'title'|'intro'|'aliases'|'locations'|'image'|'model'> & {group?:string;habitat?:string;continent?:string;year?:number;era?:string;date?:string;field?:string;lifespan?:string;sensitive?:boolean};
 export type WorldActions={progress:LocalProgress;onActivity:(activity:Activity)=>void;onVisit:(id:string)=>void;onLearn:(id:string)=>void;onFavorite:(id:string)=>void;onRead:(s:string)=>void;onPlace:(p:Place)=>void;onNavigate:(mode:Mode,id?:string,iso?:string)=>void;onSave:(id:string,key:string,value:unknown,activity:Activity)=>void;onReview:(id:string,correct:boolean)=>void;onGame:(id:string)=>void;onClear:(id:string)=>void};

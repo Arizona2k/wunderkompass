@@ -116,7 +116,7 @@ export async function mainNavigation(page,ready,report,width,shots){
  const selected=async name=>{await page.waitForFunction(name=>document.querySelector('.mode-tabs [data-state=active]')?.textContent===name,name);assert.equal(await nav.locator('[data-state=active]').count(),1);};
  const inspect=async()=>{await homeTextGeometry(page);for(const tab of await nav.getByRole('tab').all()){assert.equal(await tab.evaluate(el=>{const r=el.getBoundingClientRect();return r.width>=44&&r.height>=44&&parseFloat(getComputedStyle(el).fontSize)>=14}),true,'readable 44px navigation: '+await tab.innerText());}};
  assert.deepEqual(await nav.getByRole('tab').allTextContents(),['Entdecken','Wissenswelten','Spielplatz','Forscherlabor','Lernreisen','Wissensbuch']);
- const enter=async(name,hash,selector)=>{const tab=nav.getByRole('tab',{name,exact:true});if(width<=390)await tab.tap();else await tab.click();await page.waitForFunction(hash=>location.hash==='#'+hash,hash);await page.locator(selector).first().waitFor();await selected(name);await inspect();};
+ const enter=async(name,hash,selector)=>{const tab=nav.getByRole('tab',{name,exact:true});if(width<=390)await tab.tap();else await tab.click();await page.waitForFunction(hash=>location.hash==='#'+hash,hash);if(hash==='globe')await page.locator('#globe-observatory').scrollIntoViewIfNeeded();await page.locator(selector).first().waitFor();await selected(name);await inspect();};
  const world=nav.getByRole('tab',{name:'Wissenswelten',exact:true});
  await nav.getByRole('tab',{name:'Entdecken',exact:true}).focus();await page.keyboard.press('ArrowRight');await page.waitForFunction(()=>document.activeElement?.dataset.routeFocus==='home-nav-world');assert.equal(await world.evaluate(el=>el===document.activeElement),true,'arrow keys reach new world tab');assert.equal(new URL(page.url()).hash,'','arrow focus alone does not change the first view');
  await page.keyboard.press('Enter');await page.locator('.world-view').waitFor();await selected('Wissenswelten');assert.equal(new URL(page.url()).hash,'#world','actual existing world hub, not home scroll');await inspect();
@@ -147,7 +147,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
  for(const [width,height] of [[320,720],[360,800],[390,844],[768,1024],[1024,768],[1440,900],[1920,1080]]){
   const c=await browser.newContext({viewport:{width,height},isMobile:width<=390,hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
   try{
-   await p.goto(base);await ready(p);await p.locator('canvas').waitFor();
+   await p.goto(base);await ready(p);
    for(const image of await p.locator('.discovery-worlds img').all())await image.evaluate(im=>im.decode());
    assert.equal(await p.locator('.continue-card').count(),0,'empty visitor has no false resume');
    assert.equal(await p.locator('.mode-tabs [role=tab]').count(),6,'six distinct learning hubs');
@@ -189,10 +189,10 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    assert.equal(await p.locator('.updates-timeline>li').count(),publicUpdates().length);
    assert.deepEqual(await p.locator('.updates-meta>span:first-child').allTextContents(),publicUpdates().map(updateLabel));
    assert.equal(await p.locator('.updates-timeline>li[data-update-channel=sites]').count(),13,'retain every historical Sites publication');
-   assert.equal(await p.locator('.updates-timeline>li[data-update-channel=vercel-test]').count(),12,'include independently confirmed test website rounds');
-   assert.equal(await p.locator('.updates-timeline>li').first().getAttribute('data-update-id'),'clear-main-navigation','confirmed PR 20 keeps its ID and comes first');
+   assert.equal(await p.locator('.updates-timeline>li[data-update-channel=vercel-test]').count(),13,'include independently confirmed test website rounds');
+   assert.equal(await p.locator('.updates-timeline>li').first().getAttribute('data-update-id'),'playground-2','confirmed PR 21 keeps its ID and comes first');
    assert.equal(await p.locator('.updates-timeline [data-update-id=history-polish]').count(),1,'merged and deployed PR 19 is an available update');
-   assert.equal(await p.locator('.updates-timeline>li').first().locator('time').getAttribute('datetime'),'2026-10-11','actual PR 20 Vercel confirmation date');
+   assert.equal(await p.locator('.updates-timeline>li').first().locator('time').getAttribute('datetime'),'2026-10-11','actual PR 21 Vercel confirmation date');
    assert.equal(await p.locator('.updates-details[open]').count(),0,'optional changes start collapsed');
    assert.equal(await p.locator('#updates-title').evaluate(el=>el===document.activeElement),true,'lazy history title focus');
    assert.deepEqual(await readProgress(),before,'history is read-only for central pass');
@@ -263,7 +263,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
     await p.emulateMedia({forcedColors:'active'});await p.keyboard.press('Tab');await start.focus();assert.equal(await start.evaluate(el=>el.matches(':focus-visible')&&getComputedStyle(el).outlineStyle==='solid'),true,'system colors retain focus');await p.screenshot({path:shots+'/home-system-colors-320.png',animations:'disabled'});
    }
    console.log('Homepage/history viewport',width,height,'first/return/large passed');
-   report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, history/back/forward, 13 Sites + 12 confirmed test website updates including PR 20, separate undated prepared work, all concrete-change disclosures and family benefits, expanded long history and large-font details, read-only pass, WCAG axe');
+   report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, history/back/forward, 13 Sites + 13 confirmed test website updates including PR 21, separate undated prepared work, all concrete-change disclosures and family benefits, expanded long history and large-font details, read-only pass, WCAG axe');
   }finally{await c.close();}
  }
 }

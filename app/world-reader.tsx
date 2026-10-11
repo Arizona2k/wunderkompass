@@ -1,0 +1,15 @@
+"use client";
+import {useEffect,useMemo} from 'react';
+import {ArrowRight,Check} from 'lucide-react';
+import CATALOG from './world-catalog.json';
+import {WORLD_ROUTES} from './world-index';
+import WorldArticle from './world-topic';
+import {useSavedGame,useSavedModel} from './saved-games';
+import type {WorldTopic,WorldActions} from './world-types';
+const TOPICS=CATALOG as WorldTopic[];
+export default function WorldReader({topicId,route,actions,onTopic,onExit}:{topicId?:string;route?:typeof WORLD_ROUTES[number];actions:WorldActions;onTopic:(id:string)=>void;onExit:()=>void}){
+ if(route)return <WorldRoute route={route} actions={actions} onTopic={onTopic} onExit={onExit}/>;
+ const topic=TOPICS.find(t=>t.id===topicId);
+ return topic?<WorldArticle key={topic.id} topic={topic} actions={actions} onTopic={onTopic}/>:null;
+}
+function WorldRoute({route:r,actions:a,onTopic,onExit}:{route:typeof WORLD_ROUTES[number];actions:WorldActions;onTopic:(id:string)=>void;onExit:()=>void}){const [items]=useSavedGame('items',r.topics),[index,setIndex]=useSavedModel<number>('routeIndex',0,{min:0,max:r.topics.length-1}),[done,setDone]=useSavedGame('routeDone',false);const ids=items.length===r.topics.length&&items.every(id=>TOPICS.some(t=>t.id===id))?items:r.topics,t=TOPICS.find(t=>t.id===ids[index])!;const ready=a.progress.discoveries.includes('learned:'+t.id);const {onVisit}=a;useEffect(()=>{onVisit('topic:'+t.id);},[t.id,onVisit]);const activity=useMemo(()=>({type:'route' as const,id:r.id}),[r.id]);if(done)return <section className="world-route-finish"><Check size={48}/><h2>Deine Reise ist erklärt!</h2><p>Du hast die fünf Themen verbunden und ihre Mini-Fragen gelöst. Dein Reisestempel bleibt im Entdeckerpass.</p><button className="primary-button" onClick={onExit}>Eine neue Welt entdecken</button></section>;return <><ol className="world-route-stations" aria-label="Stationen der Wissensroute">{ids.map((id,i)=><li key={id}><button aria-current={i===index?'step':undefined} disabled={i>index&&!a.progress.discoveries.includes('learned:'+ids[i-1])} onClick={()=>setIndex(i)}><span>{a.progress.discoveries.includes('learned:'+id)?<Check size={17}/>:i+1}</span>{TOPICS.find(t=>t.id===id)?.title}</button></li>)}</ol><p className="small-note">Station {index+1}/{ids.length} · Löse die Mini-Frage, dann geht die Reise weiter.</p><WorldArticle key={t.id} topic={t} actions={a} onTopic={onTopic} activity={activity} embedded/><div className="route-next"><button className="secondary-button" disabled={index===0} onClick={()=>setIndex(n=>n-1)}>Vorherige Station</button><button className="primary-button" disabled={!ready} onClick={()=>{if(index===ids.length-1){setDone(true);a.onVisit('route:'+r.id);}else{setIndex(n=>n+1);requestAnimationFrame(()=>document.getElementById('world-topic-title')?.focus());}}}>{index===ids.length-1?'Route abschließen':'Zur nächsten Station'}<ArrowRight size={18}/></button></div></>;}
