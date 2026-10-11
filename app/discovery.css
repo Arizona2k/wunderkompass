@@ -97,7 +97,7 @@
 .updates-timeline{list-style:none;margin:0;padding:0}
 .updates-timeline>li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:18px;padding:22px 0;border-top:1px solid var(--wk-line)}
 .updates-icon{font-size:26px;display:grid;place-items:center;width:48px;height:48px;background:var(--wk-paper);border:1px solid var(--wk-line);border-radius:14px}
-.updates-meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;line-height:1.6;color:var(--wk-muted);margin-bottom:8px}
+.updates-meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px;line-height:1.6;color:var(--wk-muted);margin-bottom:8px}
 .updates-meta>span:first-child{font-weight:700}
 .updates-entry h2{font-size:23px;line-height:1.35;font-weight:750;margin:0 0 10px}
 .updates-entry p,.updates-provenance p{font-size:16px;line-height:1.7;max-width:730px;margin:8px 0;color:var(--wk-muted)}
@@ -105,7 +105,11 @@
 .updates-links a{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--wk-teal);font-size:15px;font-weight:650;text-decoration:underline;text-underline-offset:4px}
 .update-history summary{font-size:15px;line-height:1.6;cursor:pointer;min-height:44px;align-content:center;color:var(--wk-ink)}
 .updates-provenance{border-top:1px solid var(--wk-line);padding:20px 0;margin-top:12px}
-.large-reading :is(.discovery-hero-copy>p:not(.eyebrow),.discovery-connection-why,.discovery-play>p:not(.eyebrow),.updates-entry p,.updates-provenance p,.updates-note){font-size:19px}
+.updates-prepared{border-top:1px solid var(--wk-line);padding:18px 0}
+.updates-prepared>p,.updates-prepared-entry>p:not(.updates-meta){font-size:16px;line-height:1.7;color:var(--wk-muted);max-width:730px}
+.updates-prepared-entry{padding:16px 0;border-top:1px solid var(--wk-line);margin-top:14px}
+.updates-prepared-entry h2{font-size:22px;line-height:1.4;margin:8px 0}
+.large-reading :is(.discovery-hero-copy>p:not(.eyebrow),.discovery-connection-why,.discovery-play>p:not(.eyebrow),.updates-entry p,.updates-provenance p,.updates-note,.updates-prepared>p,.updates-prepared-entry>p:not(.updates-meta)){font-size:19px}
 .large-reading :is(.discovery-start-button,.discovery-search,.discovery-text-link,.discovery-quiet-links,.gateway-credits,.updates-meta,.updates-links a,.update-history summary,.discovery-trail-options button,.discovery-source-note,.discovery-play-note){font-size:17px}
 .large-reading .gateway-compact .world-choice h3{font-size:19px}
 @media(max-width:1100px){.world-choices.gateway-compact{grid-template-columns:repeat(3,minmax(0,1fr))}.gateway-compact .world-choice h3{font-size:18px}.discovery-hero{grid-template-columns:2.4fr 1fr}.earth-app .nav-tab{font-size:14px!important;gap:7px!important}}

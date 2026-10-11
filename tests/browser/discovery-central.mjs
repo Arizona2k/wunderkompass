@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {publicUpdates} from '../../app/update-history.ts';
+import {publicUpdates,updateLabel} from '../../app/update-history.ts';
 import {DISCOVERY_CONNECTIONS} from '../../app/discovery-data.ts';
 import {KNOWLEDGE_CONNECTIONS} from '../../app/knowledge-connections.ts';
 const read=async p=>JSON.parse(await fs.readFile(new URL(p,import.meta.url),'utf8'));
@@ -85,7 +85,7 @@ export async function offlineDiscoveryCentral(page,report){
 // First visits must be tested in fresh contexts; accumulated regression state
 // otherwise hides empty/resume mistakes. Uses the same production preview.
 export async function homeTextGeometry(page){
- const bad=await page.locator('.discovery-hero-copy h1,.discovery-hero-copy>p,.discovery-hero-copy button,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds .world-choice,.discovery-text-link,.discovery-pathways h2,.discovery-pair button,.continue-card,.updates-entry,.updates-note,.updates-heading,.updates-provenance').evaluateAll(elements=>elements.flatMap(el=>{
+ const bad=await page.locator('.discovery-hero-copy h1,.discovery-hero-copy>p,.discovery-hero-copy button,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds .world-choice,.discovery-text-link,.discovery-pathways h2,.discovery-pair button,.continue-card,.updates-entry,.updates-note,.updates-heading,.updates-provenance,.updates-prepared>p,.updates-prepared-entry').evaluateAll(elements=>elements.flatMap(el=>{
   if(!el.getClientRects().length)return [];
   const box=el.getBoundingClientRect(),walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),errors=[];
   while(walker.nextNode()){
@@ -153,11 +153,21 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    const readProgress=()=>p.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
    const before=await readProgress();await p.getByRole('link',{name:'✨ Was ist neu?',exact:true}).click();await p.locator('.updates-timeline').first().waitFor();
    assert.equal(await p.locator('.updates-timeline>li').count(),publicUpdates().length);
-   assert.deepEqual(await p.locator('.updates-meta>span:first-child').allTextContents(),publicUpdates().map(e=>'Version '+e.version));
+   assert.deepEqual(await p.locator('.updates-meta>span:first-child').allTextContents(),publicUpdates().map(updateLabel));
+   assert.equal(await p.locator('.updates-timeline>li[data-update-channel=sites]').count(),13,'retain every historical Sites publication');
+   assert.equal(await p.locator('.updates-timeline>li[data-update-channel=vercel-test]').count(),9,'include independently confirmed test website rounds');
+   assert.equal(await p.locator('.updates-timeline>li').first().getAttribute('data-update-id'),'explorer-pass-fine','latest available pass update comes first');
+   assert.equal(await p.locator('.updates-timeline [data-update-id=first-visit-home]').count(),0,'open PR 18 is not an available update');
+   assert.equal(await p.locator('.updates-timeline>li').first().locator('time').getAttribute('datetime'),'2026-10-10','use actual Vercel success date, not observation date');
    assert.equal(await p.locator('#updates-title').evaluate(el=>el===document.activeElement),true,'lazy history title focus');
    assert.deepEqual(await readProgress(),before,'history is read-only for central pass');
    await homeTextGeometry(p);await homeTouchTargets(p);
    await p.screenshot({path:shots+'/updates-'+width+'-full.png',fullPage:true,animations:'disabled'});
+   await p.evaluate(()=>scrollTo(0,0));assert.equal(await p.locator('.updates-timeline>li').first().getByRole('heading').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight}),true,'first actual update heading stays visible beneath compact channel explanation');await p.screenshot({path:shots+'/updates-test-top-'+width+'.png',animations:'disabled'});
+   await p.locator('.updates-prepared>summary').click();await homeTextGeometry(p);await homeTouchTargets(p);
+   assert.equal(await p.locator('.updates-prepared-entry[data-update-status=prepared]').count(),1);assert.equal(await p.locator('.updates-prepared-entry').getAttribute('data-update-id'),'first-visit-home');
+   assert.equal(await p.locator('.updates-prepared-entry time,.updates-prepared-entry a').count(),0,'unavailable work has no invented date or feature launch link');
+   await p.locator('.updates-prepared').screenshot({path:shots+'/updates-prepared-'+width+'.png',animations:'disabled'});await p.locator('.updates-prepared>summary').click();
    await p.locator('.updates-archive>summary').click();await homeTextGeometry(p);await p.locator('.updates-timeline>li').last().getByText('6. Oktober 2026',{exact:true}).waitFor();await p.locator('.updates-timeline>li').last().screenshot({path:shots+'/updates-first-release-'+width+'.png',animations:'disabled'});await p.screenshot({path:shots+'/updates-archive-'+width+'-full.png',fullPage:true,animations:'disabled'});
    await p.locator('.updates-provenance>summary').click();await homeTextGeometry(p);
    await p.locator('.updates-entry details').first().locator('summary').click();await homeTextGeometry(p);
@@ -193,7 +203,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
     await p.emulateMedia({forcedColors:'active'});await p.keyboard.press('Tab');await start.focus();assert.equal(await start.evaluate(el=>el.matches(':focus-visible')&&getComputedStyle(el).outlineStyle==='solid'),true,'system colors retain focus');await p.screenshot({path:shots+'/home-system-colors-320.png',animations:'disabled'});
    }
    console.log('Homepage/history viewport',width,height,'first/return/large passed');
-   report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, history/back/forward, draft exclusion, read-only pass, WCAG axe');
+   report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, history/back/forward, 13 Sites + 9 confirmed test website updates, dated channel labels and separate undated PR 18, read-only pass, WCAG axe');
   }finally{await c.close();}
  }
 }
