@@ -16,6 +16,7 @@ test('all 31 existing game identities retain a theme, mechanic and honest level 
 test('a past order stamp does not mark a wrong current build finished, and quiz/hunt use existing state',()=>{
  const p=emptyProgress();p.games=['order-layers'];p.gameSessions.order={topic:'layers',pool:LAYERS,chosen:[...LAYERS].reverse().map(l=>l.id),checked:true};
  assert.equal(gameStatus(find('classic:order'),p).finished,false);assert.equal(gameStatus(find('classic:order'),p).resume,true);
+ p.gameSessions['ocean-find']={index:4,found:true};assert.equal(gameStatus(find('extra:ocean-find'),p).finished,true);p.gameSessions['ocean-find']={index:3,found:true};assert.equal(gameStatus(find('extra:ocean-find'),p).resume,true);p.gameSessions.habitats={learningRound:emptyReasonRound()};assert.equal(gameStatus(find('classic:habitats'),p).resume,false);
  p.gameSessions.order.chosen=LAYERS.map(l=>l.id);assert.equal(gameStatus(find('classic:order'),p).finished,true);
  p.quizSession={finished:false,index:2,ids:['a','b','c']};assert.equal(gameStatus(find('classic:quiz'),p).resume,true);
  p.missions=[0,1];assert.equal(gameStatus(find('classic:hunt'),p).resume,true);

@@ -1,5 +1,17 @@
 # Änderungsverlauf
 
+## 11. Oktober 2026 – WK-035: Spielplatz 2.0
+
+31 bestehende Angebote erhalten einen gemeinsamen, ruhigen Katalog mit freiwilligen Themen-/Spielartfiltern, konkreten Lernzielen, Altersorientierung und getrennten Rundenständen. Auswahl behält Filter beim Zurückgehen und ersetzt keine vorhandene Runde. Die drei bisherigen Familiencontroller und ihre Speicheridentitäten bleiben erhalten.
+
+Reihenfolge, klassische Lebensräume und klassischer Fakten-Detektiv substanziell modernisiert. Ein Bau lässt sich nach einem Fehler gezielt korrigieren; Erd-/Wasserweg werden erklärt und mit bestehendem Modell beziehungsweise Wissenskarte verbunden. Lebensräume/Detektiv besitzen je leicht, mittel und schwer mit echten unterschiedlichen Denkhandlungen und insgesamt 24 neuen, quellengeprüften Aufgaben. Freiwillige Hinweise, antwortspezifische Erklärungen, Fortschritt, Stempel, manueller Stufenwechsel und freiwillige Wiederholung unsicherer Aufgaben; keine Zeitstrafe/automatische Schwierigkeit. Alte gemischte Objekt-/Tupelfolgen und Sortierpools bleiben verlustfrei fortsetzbar. Neue Werte benutzen ausschließlich die bestehenden Schema-3-APIs.
+
+Gemeinsame Tokens, klare Schrift/Abstände, große Touchziele, Tastatur-/Systemfarbenfokus, große Schrift/reduzierte Bewegung und neutraler Hover unbewerteter Antworten. Native Fortschrittsbalken und Hinweisaktionen beruhigt; tatsächliche Spiel-/Karten-/Routen-Rücknavigation ergänzt. Ein im langen Chronikarchiv reproduzierter Fokus am Bildschirmrand wird nach nativer Scroll-Wiederherstellung vollständig sichtbar gehalten.
+
+Bestehende Produktionsprobe erweitert um alle 31 Zugänge, Filter/Back, alle 24 Fragen/Stufen, falsche/richtige Begründungen, Hinweise, zufällige Speicherung/Reload, Wiederholung, alte Sessions und Routenfokus. Sicherungs-/Zwei-Tab-/Resetprobe schließt neue Rundenzustände ein; kalter Offline-Test erhält Spielauswahl und gemischte neue Runden. Sechs neue App-Fälle sichern Metadaten/IDs, Stufeninhalte, Status, Antwortlogik, ungültige Runden und alte/neue Schema-3-Backups. Tatsächliche Endabnahme/Quality und offene Geräte-/Fachgrenzen im bestehenden PROJECT_STATE und PR #21; keine umfassende Modernisierung sämtlicher 31 Mechaniken behauptet.
+
+PR20-Chronikeintrag unter echter Merge-/Vercel-Quittung bestätigt, PR21 nach tatsächlicher Nummer undatiert vorbereitet. Bestehende historische Nachweise, IDs, Lernstände, Notizen/Favoriten/Einstellungen/Abzeichen und alle anderen Mechaniken erhalten. Kein Merge, main-/test-live-Schreiben, Veröffentlichung, neue Dienste oder Tarifänderung.
+
 ## 11. Oktober 2026 – WK-034: Wissenswelten direkt in der Hauptnavigation
 
 Sechs klar getrennte Hauptbereiche: Entdecken, Wissenswelten, Spielplatz, Forscherlabor, Lernreisen und Wissensbuch. Bestehende Weltenübersicht direkt unter #world; Wissenswelten bleiben auch auf Kategorien/Karten/Routen eigenständig aktiv, Quiz beim Spielplatz und Erdmodelle beim Entdecken. Ein gemeinsames Raster mit zwei Smartphone-, drei Tablet- und sechs Desktopspalten, lesbaren Namen, großen Touchzielen, ruhiger Auswahl und sichtbarem Tastatur-/Systemfarbenfokus. Pfeiltasten erkunden, Enter/Space öffnet. Startstruktur, sechs Weltenkarten und kleiner Chroniklink erhalten; globale Suche findet auch die Übersicht und Kategorien. Wissensrouten im Weltenbereich klar benannt, geführte Lernreisen behalten ihre Kapitel.

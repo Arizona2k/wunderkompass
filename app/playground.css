@@ -23,3 +23,7 @@
 @media(max-width:600px){.classic-learning .order-pool .secondary-button{width:100%;min-width:0;flex-basis:100%}}
 
 .classic-learning :is(button,summary){min-height:48px}
+
+.classic-learning .quiz-answer:not(.is-correct):not(.is-incorrect):hover{background:#f2f7f9;border-color:#799da9}
+
+.classic-learning .world-game-hint :is(.secondary-button,.speech-button){margin-right:12px;margin-bottom:12px;vertical-align:middle}
