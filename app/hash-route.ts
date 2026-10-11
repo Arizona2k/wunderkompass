@@ -27,7 +27,7 @@ export function restoreRouteView(path:string,focus=true){
  if(path==='updates')document.getElementById('updates-title')?.focus({preventScroll:true});
  else if(path==='world'||path.startsWith('world/')){
   const heading=document.getElementById('world-topic-title')??document.getElementById('world-category-title');
-  if(heading){heading.focus({preventScroll:true});const r=heading.getBoundingClientRect();if(r.top<0||r.bottom>innerHeight)heading.scrollIntoView({block:'nearest',behavior:'instant'});}
+  if(heading){heading.focus({preventScroll:true});const r=heading.getBoundingClientRect();if(r.top<8||r.bottom>innerHeight-8)heading.scrollIntoView({block:'center',behavior:'instant'});}
   else focusLearningMain(); // Completed routes have a finish view rather than an article.
  }
  else focusLearningMain();
