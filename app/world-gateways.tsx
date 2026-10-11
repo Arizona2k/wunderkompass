@@ -11,7 +11,7 @@ export default function WorldGateways({compact=false,separateCredits=false,onCat
  return <><div className={'world-choices'+(compact?' gateway-compact':'')}>{WORLD_CATEGORIES.map(c=>{
   const Icon=WORLD_ICONS[c.icon as keyof typeof WORLD_ICONS];
   const pic=GATEWAY_PHOTOS[c.id];
-  return <button className={'world-choice world-'+c.id} key={c.id} data-route-focus={compact?"home-world-"+c.id:undefined} aria-label={c.title} onClick={()=>onCategory(c.id)}>
+  return <button className={'world-choice world-'+c.id} key={c.id} data-route-focus={(compact?"home-world-":"world-category-")+c.id} aria-label={c.title} onClick={()=>onCategory(c.id)}>
    {pic?<WorldPhoto compact credit={!separateCredits} id={pic}/>:<figure className="gateway-art"><DiscoveryVisual variant={c.id==='science'?'space':'invention'}/>{!separateCredits&&<figcaption>Künstlerische Illustration · nicht maßstabsgetreu</figcaption>}</figure>}
    <div><span className="category-pill"><Icon size={16}/> {WORLD_INDEX.filter(t=>t.category===c.id).length} Karten</span><h3>{c.title}</h3>{!compact&&<p>{c.intro}</p>}<span className="world-enter">Entdecken <ArrowRight size={17}/></span></div>
   </button>;

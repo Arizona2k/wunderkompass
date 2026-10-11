@@ -4,8 +4,9 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "91795d4830edf8ad1dd202c8a07e1dfa734f3324",
+    "commit": "a68ae6d61a7e4588064da0a68e1d49bab466bb6d",
     "includedMergeCommits": [
+      "a68ae6d61a7e4588064da0a68e1d49bab466bb6d",
       "91795d4830edf8ad1dd202c8a07e1dfa734f3324",
       "cba421cdf6ce040cf63d066aa0df410aeb1f828e",
       "031bdaa2840bf30ed42df9b3e8b41e08ff59f41f",
@@ -399,10 +400,31 @@
       "title": "„Was ist neu?“: konkrete Entwicklungsgeschichte und ruhige Zeitleiste",
       "url": "https://github.com/Arizona2k/wunderkompass/pull/19",
       "base": "test-live",
-      "mergedAt": null,
-      "mergeCommit": null,
-      "statusesUrl": null,
-      "deploymentStatuses": []
+      "mergedAt": "2026-10-11T09:45:12Z",
+      "mergeCommit": "a68ae6d61a7e4588064da0a68e1d49bab466bb6d",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/a68ae6d61a7e4588064da0a68e1d49bab466bb6d/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56081341903,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-11T09:45:36Z",
+          "updatedAt": "2026-10-11T09:45:36Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/7FNTodcgnBqFf3AH1Yjcim6NL4AR"
+        },
+        {
+          "id": 56081333894,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-11T09:45:16Z",
+          "updatedAt": "2026-10-11T09:45:16Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/7FNTodcgnBqFf3AH1Yjcim6NL4AR"
+        }
+      ]
     }
   ]
 }

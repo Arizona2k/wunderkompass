@@ -24,7 +24,7 @@ test('publication entries match successful deployments, source provenance and Be
   if(entry.evidence.publicationVersion!==undefined){
    const source=HISTORY_EVIDENCE.versions.find(v=>v.number===entry.evidence.publicationVersion);assert.equal(source.publication.status,'succeeded');assert.equal(source.publication.type,'publish');assert.equal(source.sourceCommit,entry.evidence.revision);assert.equal(entry.publishedOn,berlinDay(source.publication.completedAt));
   }
-  for(const link of entry.links)assert.ok(['globe','world','labs','games','journeys','book','world/topic/science-moon-phases'].includes(link.hash));
+  for(const link of entry.links)assert.ok(['globe','world','labs','games','journeys','book','world/topic/science-moon-phases','updates'].includes(link.hash));
  }
  assert.equal(HISTORY_EVIDENCE.versions.find(v=>v.number===6).publication,null);
  assert.equal(berlinDay(HISTORY_EVIDENCE.site.createdAt),'2026-10-06','project began after Berlin midnight');
@@ -38,12 +38,12 @@ test('publication entries match successful deployments, source provenance and Be
 
 test('test website chronology retains the merged and deployed product rounds, with truthful channel dates',()=>{
  const entries=publicUpdates(),testEntries=entries.filter(e=>e.channel==='vercel-test');
- assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[18,17,16,15,14,12,11,10,9,3]);
- assert.equal(entries.length,23);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
+ assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[19,18,17,16,15,14,12,11,10,9,3]);
+ assert.equal(entries.length,24);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
- assert.deepEqual(PREPARED_UPDATES.map(e=>e.id),['history-polish']);
- assert.deepEqual(PREPARED_UPDATES.map(e=>e.evidence.pullRequest),[19],'handoff uses the actually created PR, never a guessed number');
- assert.equal(updateLabel(testEntries[0]),'Testwebsite · verfügbar');assert.equal(updateLabel(entries.find(e=>e.id==='site-v14')),'Sites · Version 14');assert.equal(updateLabel(PREPARED_UPDATES[0]),'Bereitstellung noch unbestätigt');
+ assert.deepEqual(PREPARED_UPDATES.map(e=>e.id),[]);
+ assert.deepEqual(PREPARED_UPDATES.map(e=>e.evidence.pullRequest),[],'handoff uses the actually created PR, never a guessed number');
+ assert.equal(updateLabel(testEntries[0]),'Testwebsite · verfügbar');assert.equal(updateLabel(entries.find(e=>e.id==='site-v14')),'Sites · Version 14');
  for(const entry of testEntries){
   const record=TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===entry.evidence.pullRequest),deployment=confirmedTestDeployment(record);
   assert.ok(deployment);assert.equal(entry.evidence.revision,record.mergeCommit);assert.equal(entry.availableOn,berlinDay(deployment.createdAt));assert.equal(entry.occurredAt,deployment.createdAt);
@@ -51,14 +51,14 @@ test('test website chronology retains the merged and deployed product rounds, wi
  }
  // Confirmation date differs from observation date and from the merge instant.
  assert.equal(updateDate(testEntries[0]),'11. Oktober 2026');assert.equal(testEntries[0].confirmedOn,'2026-10-11');
- assert.equal(testEntries[0].occurredAt,'2026-10-11T08:45:50Z');
- assert.equal(testEntries[0].id,'first-visit-home','receipt promotes the existing PR 18 entry, without replacing its ID');
- assert.equal(testEntries[1].occurredAt,'2026-10-10T11:40:50Z','old availability remains unchanged');
+ assert.equal(testEntries[0].occurredAt,'2026-10-11T09:45:36Z');
+ assert.equal(testEntries[0].id,'history-polish','receipt promotes the existing PR 19 entry, without replacing its ID');
+ assert.equal(testEntries[2].occurredAt,'2026-10-10T11:40:50Z','old availability remains unchanged');
  assert.ok(!testEntries.some(e=>[4,13].includes(e.evidence.pullRequest)),'internal workflow-only PRs excluded');
 });
 
 test('an update requires the latest trusted Vercel success on a merge included in test-live',()=>{
- const source=TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===17),copy=PREPARED_UPDATES[0];
+ const source=TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===17),copy=UPDATE_HISTORY.find(e=>e.id==='history-polish');
  const clone=()=>structuredClone(source);
  for(const mutate of [
   r=>{r.mergedAt=null;},r=>{r.mergeCommit=null;},r=>{r.base='main';},
@@ -72,7 +72,7 @@ test('an update requires the latest trusted Vercel success on a merge included i
 });
 
 test('a prepared package advances only after a separately confirmed merge and deployment, retaining its stable entry ID',()=>{
- const record=structuredClone(TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===19)),copy=PREPARED_UPDATES[0];
+ const record=structuredClone(TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===19)),copy=UPDATE_HISTORY.find(e=>e.id==='history-polish');
  record.mergedAt=null;record.mergeCommit=null;record.deploymentStatuses=[];
  assert.equal(testUpdate(record,copy).status,'prepared');
  // Synthetic future proof exercises promotion; it is never stored as real evidence.
@@ -96,8 +96,9 @@ test('reader-facing entries provide concrete optional changes and a family benef
  assert.ok(UPDATE_HISTORY.filter(e=>!['site-v8','site-v9','test-website'].includes(e.id)).every(e=>e.details.length>=3));
 });
 
-test('the current editorial round remains unavailable even if its observation date is mistaken for publication',()=>{
- const prepared=PREPARED_UPDATES.find(e=>e.id==='history-polish');
+test('unconfirmed navigation work stays unavailable even if an observation date is mistaken for publication',()=>{
+ const source=UPDATE_HISTORY.find(e=>e.id==='history-polish');
+ const prepared={...source,id:'navigation-fixture',status:'prepared',publishedOn:null,availableOn:null,links:[]};
  assert.equal(prepared.status,'prepared');assert.deepEqual(prepared.links,[]);
  assert.equal(publicUpdates([prepared]).length,0);
  assert.equal(publicUpdates([{...prepared,publishedOn:prepared.confirmedOn,availableOn:prepared.confirmedOn}]).length,0);
