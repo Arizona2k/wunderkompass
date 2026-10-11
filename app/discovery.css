@@ -91,25 +91,42 @@
 .earth-app[data-mode=globe] .welcome-info>p{font-size:15px;line-height:1.6}
 .update-history{max-width:920px;margin:0 auto;color:var(--wk-ink)}
 .updates-heading{padding:22px 0 18px}
+.updates-heading .eyebrow{color:var(--wk-teal);letter-spacing:.08em}
 .updates-heading h1{font-size:clamp(30px,3vw,42px);line-height:1.2;margin:10px 0 14px}
 .updates-heading>p:last-child{font-size:18px;line-height:1.6;max-width:630px;color:var(--wk-muted)}
 .updates-note{padding:16px 18px;background:#eaf2f3;border-radius:14px;font-size:15px;line-height:1.7;margin-bottom:24px}
 .updates-timeline{list-style:none;margin:0;padding:0}
-.updates-timeline>li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:18px;padding:22px 0;border-top:1px solid var(--wk-line)}
-.updates-icon{font-size:26px;display:grid;place-items:center;width:48px;height:48px;background:var(--wk-paper);border:1px solid var(--wk-line);border-radius:14px}
+.updates-timeline>li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:20px;padding:28px 0;border-top:1px solid var(--wk-line)}
+.updates-icon{display:grid;place-items:center;width:44px;height:44px;color:var(--wk-teal);background:var(--wk-paper);border:1px solid var(--wk-line);border-radius:50%}
 .updates-meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px;line-height:1.6;color:var(--wk-muted);margin-bottom:8px}
-.updates-meta>span:first-child{font-weight:700}
+.updates-meta>span:first-child{font-weight:650}
+.updates-meta>span:last-child{flex-basis:100%;font-size:13px}
+.updates-meta time{display:block;font-size:16px;font-weight:650;color:var(--wk-ink);letter-spacing:.01em}
 .updates-entry h2{font-size:23px;line-height:1.35;font-weight:750;margin:0 0 10px}
 .updates-entry p,.updates-provenance p{font-size:16px;line-height:1.7;max-width:730px;margin:8px 0;color:var(--wk-muted)}
 .updates-links{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:10px}
 .updates-links a{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--wk-teal);font-size:15px;font-weight:650;text-decoration:underline;text-underline-offset:4px}
 .update-history summary{font-size:15px;line-height:1.6;cursor:pointer;min-height:44px;align-content:center;color:var(--wk-ink)}
+.updates-details{margin-top:14px}
+.updates-details>summary{width:100%;padding:4px 8px 4px 0;border-radius:4px;color:var(--wk-teal);font-weight:650}
+.updates-count{margin-left:8px;font-size:13px;font-weight:500;color:var(--wk-muted);white-space:nowrap}
+.updates-detail-body{margin:8px 0 14px;padding:18px 20px;background:var(--wk-paper);border:1px solid var(--wk-line);border-radius:12px;max-width:730px}
+.updates-detail-body ul{margin:0;padding-left:20px;list-style:disc}
+.updates-detail-body li{padding-left:4px;margin:0 0 12px;font-size:16px;line-height:1.7;color:var(--wk-ink);overflow-wrap:anywhere}
+.updates-detail-body li:last-child{margin-bottom:0}
+.updates-detail-body li::marker{color:var(--wk-muted);font-size:.8em}
+.updates-detail-body .updates-benefit{border-top:1px solid var(--wk-line);padding-top:14px;margin:18px 0 0}
+.updates-benefit strong{display:block;font-weight:650;color:var(--wk-ink);margin-bottom:4px}
+.updates-archive>summary{padding:14px 16px;background:var(--wk-paper);border:1px solid var(--wk-line);border-radius:10px;font-size:17px;font-weight:650}
+.updates-archive-intro{font-size:15px;line-height:1.7;color:var(--wk-muted);margin:18px 0}
 .updates-provenance{border-top:1px solid var(--wk-line);padding:20px 0;margin-top:12px}
 .updates-prepared{border-top:1px solid var(--wk-line);padding:18px 0}
 .updates-prepared>p,.updates-prepared-entry>p:not(.updates-meta){font-size:16px;line-height:1.7;color:var(--wk-muted);max-width:730px}
 .updates-prepared-entry{padding:16px 0;border-top:1px solid var(--wk-line);margin-top:14px}
 .updates-prepared-entry h2{font-size:22px;line-height:1.4;margin:8px 0}
-.large-reading :is(.discovery-hero-copy>p:not(.eyebrow),.discovery-connection-why,.discovery-play>p:not(.eyebrow),.updates-entry p,.updates-provenance p,.updates-note,.updates-prepared>p,.updates-prepared-entry>p:not(.updates-meta)){font-size:19px}
+.large-reading :is(.discovery-hero-copy>p:not(.eyebrow),.discovery-connection-why,.discovery-play>p:not(.eyebrow),.updates-entry p,.updates-detail-body li,.updates-archive-intro,.updates-provenance p,.updates-note,.updates-prepared>p,.updates-prepared-entry>p:not(.updates-meta)){font-size:19px}
+.large-reading .updates-meta time{font-size:19px}
+.large-reading .updates-meta>span:last-child,.large-reading .updates-count{font-size:16px}
 .large-reading :is(.discovery-start-button,.discovery-search,.discovery-text-link,.discovery-quiet-links,.gateway-credits,.updates-meta,.updates-links a,.update-history summary,.discovery-trail-options button,.discovery-source-note,.discovery-play-note){font-size:17px}
 .large-reading .gateway-compact .world-choice h3{font-size:19px}
 @media(max-width:1100px){.world-choices.gateway-compact{grid-template-columns:repeat(3,minmax(0,1fr))}.gateway-compact .world-choice h3{font-size:18px}.discovery-hero{grid-template-columns:2.4fr 1fr}.earth-app .nav-tab{font-size:14px!important;gap:7px!important}}
@@ -130,5 +147,6 @@
 @media(max-width:430px){.discovery-quiet-links .discovery-mobile-help{display:inline-flex;min-height:44px;align-items:center;background:none;color:#f5dfbd;font-size:12px;line-height:1.5;text-decoration:underline;text-underline-offset:4px}.discovery-quiet-links{column-gap:20px;justify-content:flex-start}.discovery-quiet-links>span{flex-basis:100%}.large-reading .discovery-quiet-links .discovery-mobile-help{font-size:17px;margin-left:20px}}
 .large-reading .gateway-compact .category-pill{font-size:14px}
 .updates-archive{margin:18px 0}
+@media(max-width:560px){.updates-heading .eyebrow{font-size:11px;line-height:1.6;letter-spacing:.04em}.updates-timeline>li{position:relative;padding:24px 0;gap:0}.updates-icon{position:absolute;right:0;top:24px;width:36px;height:36px}.updates-icon svg{width:20px;height:20px}.updates-meta{padding-right:44px;margin-bottom:12px;gap:8px}.updates-meta time{font-size:16px}.updates-detail-body{padding:16px 14px}.updates-detail-body ul{padding-left:18px}.updates-links{column-gap:16px}.updates-archive>summary{padding:12px}.updates-archive>summary .updates-count{display:block;margin-left:16px}.large-reading .updates-meta{padding-right:44px}.large-reading .updates-heading .eyebrow{font-size:13px}}
 
 .earth-app[data-mode=globe] .learning-main[data-focus-at-heading=true]:focus-visible{outline:none}

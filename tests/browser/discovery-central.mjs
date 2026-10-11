@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {publicUpdates,updateLabel} from '../../app/update-history.ts';
+import {publicUpdates,PREPARED_UPDATES,updateLabel} from '../../app/update-history.ts';
 import {DISCOVERY_CONNECTIONS} from '../../app/discovery-data.ts';
 import {KNOWLEDGE_CONNECTIONS} from '../../app/knowledge-connections.ts';
 const read=async p=>JSON.parse(await fs.readFile(new URL(p,import.meta.url),'utf8'));
@@ -85,7 +85,7 @@ export async function offlineDiscoveryCentral(page,report){
 // First visits must be tested in fresh contexts; accumulated regression state
 // otherwise hides empty/resume mistakes. Uses the same production preview.
 export async function homeTextGeometry(page){
- const bad=await page.locator('.discovery-hero-copy h1,.discovery-hero-copy>p,.discovery-hero-copy button,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds .world-choice,.discovery-text-link,.discovery-pathways h2,.discovery-pair button,.continue-card,.updates-entry,.updates-note,.updates-heading,.updates-provenance,.updates-prepared>p,.updates-prepared-entry').evaluateAll(elements=>elements.flatMap(el=>{
+ const bad=await page.locator('.discovery-hero-copy h1,.discovery-hero-copy>p,.discovery-hero-copy button,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds .world-choice,.discovery-text-link,.discovery-pathways h2,.discovery-pair button,.continue-card,.updates-entry,.updates-detail-body,.updates-details>summary,.updates-archive>summary,.updates-archive-intro,.updates-note,.updates-heading,.updates-provenance,.updates-prepared>p,.updates-prepared-entry').evaluateAll(elements=>elements.flatMap(el=>{
   if(!el.getClientRects().length)return [];
   const box=el.getBoundingClientRect(),walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),errors=[];
   while(walker.nextNode()){
@@ -155,29 +155,50 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    assert.equal(await p.locator('.updates-timeline>li').count(),publicUpdates().length);
    assert.deepEqual(await p.locator('.updates-meta>span:first-child').allTextContents(),publicUpdates().map(updateLabel));
    assert.equal(await p.locator('.updates-timeline>li[data-update-channel=sites]').count(),13,'retain every historical Sites publication');
-   assert.equal(await p.locator('.updates-timeline>li[data-update-channel=vercel-test]').count(),9,'include independently confirmed test website rounds');
-   assert.equal(await p.locator('.updates-timeline>li').first().getAttribute('data-update-id'),'explorer-pass-fine','latest available pass update comes first');
-   assert.equal(await p.locator('.updates-timeline [data-update-id=first-visit-home]').count(),0,'open PR 18 is not an available update');
-   assert.equal(await p.locator('.updates-timeline>li').first().locator('time').getAttribute('datetime'),'2026-10-10','use actual Vercel success date, not observation date');
+   assert.equal(await p.locator('.updates-timeline>li[data-update-channel=vercel-test]').count(),10,'include independently confirmed test website rounds');
+   assert.equal(await p.locator('.updates-timeline>li').first().getAttribute('data-update-id'),'first-visit-home','confirmed PR 18 keeps its ID and comes first');
+   assert.equal(await p.locator('.updates-timeline [data-update-id=history-polish]').count(),0,'this unmerged round is not an available update');
+   assert.equal(await p.locator('.updates-timeline>li').first().locator('time').getAttribute('datetime'),'2026-10-11','actual PR 18 Vercel confirmation date');
+   assert.equal(await p.locator('.updates-details[open]').count(),0,'optional changes start collapsed');
    assert.equal(await p.locator('#updates-title').evaluate(el=>el===document.activeElement),true,'lazy history title focus');
    assert.deepEqual(await readProgress(),before,'history is read-only for central pass');
    await homeTextGeometry(p);await homeTouchTargets(p);
    await p.screenshot({path:shots+'/updates-'+width+'-full.png',fullPage:true,animations:'disabled'});
    await p.evaluate(()=>scrollTo(0,0));assert.equal(await p.locator('.updates-timeline>li').first().getByRole('heading').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight}),true,'first actual update heading stays visible beneath compact channel explanation');await p.screenshot({path:shots+'/updates-test-top-'+width+'.png',animations:'disabled'});
    await p.locator('.updates-prepared>summary').click();await homeTextGeometry(p);await homeTouchTargets(p);
-   assert.equal(await p.locator('.updates-prepared-entry[data-update-status=prepared]').count(),1);assert.equal(await p.locator('.updates-prepared-entry').getAttribute('data-update-id'),'first-visit-home');
+   assert.equal(await p.locator('.updates-prepared-entry[data-update-status=prepared]').count(),PREPARED_UPDATES.length);assert.equal(await p.locator('.updates-prepared-entry').getAttribute('data-update-id'),'history-polish');
    assert.equal(await p.locator('.updates-prepared-entry time,.updates-prepared-entry a').count(),0,'unavailable work has no invented date or feature launch link');
    await p.locator('.updates-prepared').screenshot({path:shots+'/updates-prepared-'+width+'.png',animations:'disabled'});await p.locator('.updates-prepared>summary').click();
    await p.locator('.updates-archive>summary').click();await homeTextGeometry(p);await p.locator('.updates-timeline>li').last().getByText('6. Oktober 2026',{exact:true}).waitFor();await p.locator('.updates-timeline>li').last().screenshot({path:shots+'/updates-first-release-'+width+'.png',animations:'disabled'});await p.screenshot({path:shots+'/updates-archive-'+width+'-full.png',fullPage:true,animations:'disabled'});
    await p.locator('.updates-provenance>summary').click();await homeTextGeometry(p);
-   await p.locator('.updates-entry details').first().locator('summary').click();await homeTextGeometry(p);
+   // Real disclosure controls expose bounded changes and the family benefit.
+   for(const entry of publicUpdates()){
+    const item=p.locator('.updates-timeline>li[data-update-id="'+entry.id+'"]');
+    const disclosure=item.locator('.updates-details');
+    await disclosure.locator('summary').click();
+    assert.equal(await disclosure.evaluate(el=>el.open),true,'native disclosure opens '+entry.id);
+    assert.equal(await disclosure.locator('ul>li').count(),entry.details.length,'all concrete changes readable');
+    assert.equal(await disclosure.locator('.updates-benefit').innerText(),'Das bringt es euch\n'+entry.benefit);
+    assert.equal(await disclosure.locator('summary').evaluate(el=>{
+     const text=[...el.childNodes].find(n=>n.nodeType===Node.TEXT_NODE&&n.textContent.trim()),range=document.createRange();range.selectNodeContents(text);
+     const line=[...range.getClientRects()].at(-1),count=el.querySelector('.updates-count').getBoundingClientRect();
+     return count.top<line.bottom&&count.bottom>line.top;
+    }),true,'detail count stays with its label, without an orphan line '+entry.id);
+   }
+   await homeTextGeometry(p);await homeTouchTargets(p);
+   for(const id of ['first-visit-home','science-articles','site-v14','site-v12','site-v8','site-v1'])await p.locator('.updates-timeline>li[data-update-id="'+id+'"]').screenshot({path:shots+'/updates-details-'+id+'-'+width+'.png',animations:'disabled'});
+   assert.deepEqual(await readProgress(),before,'reading all historical changes and benefits leaves learning progress untouched');
+   await p.screenshot({path:shots+'/updates-all-details-'+width+'-full.png',fullPage:true,animations:'disabled'});
+   await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
+   const expandedAxe=await p.evaluate(async()=>{const r=await window.axe.run({include:[['.update-history']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));});assert.deepEqual(expandedAxe,[],'all expanded history WCAG axe '+width);
    const olderLink=p.locator('.updates-timeline>li').last().locator('.updates-links a').first();
    await olderLink.scrollIntoViewIfNeeded();await p.keyboard.press('Tab');await olderLink.focus();const olderId=await olderLink.getAttribute('data-route-focus');await p.keyboard.press('Enter');await p.locator('.discovery-hero').waitFor();
    await p.goBack();await p.locator('.updates-timeline').first().waitFor();await p.waitForFunction(id=>document.activeElement?.getAttribute('data-route-focus')===id,olderId);
    assert.equal(await p.locator('.updates-archive').evaluate(el=>el.open),true,'Back restores expanded history archive');
+   assert.equal(await p.locator('.updates-details[open]').count(),publicUpdates().length,'Back also restores every expanded entry');
    assert.equal(await olderLink.evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight&&el.matches(':focus-visible')&&parseFloat(getComputedStyle(el).outlineWidth)>=2}),true,'Back restores visible older-entry keyboard focus');
    await p.screenshot({path:shots+'/updates-back-focus-'+width+'.png',animations:'disabled'});
-   await p.locator('.updates-links a').first().click();await p.locator('.world-view').waitFor();assert.equal(new URL(p.url()).hash,'#world');
+   await p.locator('.updates-links a[href="#world"]').first().click();await p.locator('.world-view').waitFor();assert.equal(new URL(p.url()).hash,'#world');
    await p.goBack();await p.locator('.updates-timeline').first().waitFor();await p.getByRole('link',{name:'Zur Startseite',exact:true}).click();await p.locator('.discovery-hero').waitFor();
    await p.goBack();await p.locator('.updates-timeline').first().waitFor();await p.goForward();await p.locator('.discovery-hero').waitFor();
    await p.getByRole('button',{name:'Alle Welten & Lernrouten',exact:true}).click();await p.locator('.world-view').waitFor();await p.getByRole('tab',{name:'Entdecken',exact:true}).click();await p.locator('.discovery-hero').waitFor();assert.equal(new URL(p.url()).hash,'#globe','active exploration tab still returns from world hub');
@@ -193,7 +214,12 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    await homeTextGeometry(p);await homeTouchTargets(p);await capture('large');
    await p.locator('.discovery-worlds').screenshot({path:shots+'/home-worlds-large-'+width+'.png',animations:'disabled'});
    assert.equal(await p.locator('.gateway-compact .world-choice').first().evaluate(el=>getComputedStyle(el).transitionDuration==='0s'),true,'saved reduced motion applies');
-   await p.getByRole('link',{name:'✨ Was ist neu?',exact:true}).click();await p.locator('.updates-timeline').first().waitFor();await homeTextGeometry(p);await p.screenshot({path:shots+'/updates-large-'+width+'-full.png',fullPage:true,animations:'disabled'});
+   await p.getByRole('link',{name:'✨ Was ist neu?',exact:true}).click();await p.locator('.updates-timeline').first().waitFor();
+   await p.locator('.updates-details').first().locator('summary').click();
+   await homeTextGeometry(p);await homeTouchTargets(p);
+   await p.locator('.updates-timeline>li').first().screenshot({path:shots+'/updates-details-large-'+width+'.png',animations:'disabled'});
+   await p.screenshot({path:shots+'/updates-large-'+width+'-full.png',fullPage:true,animations:'disabled'});
+   // The resumable-journey path above reloads the page and clears the axe script.
    await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
    const axe=await p.evaluate(async()=>{const r=await window.axe.run({include:[['.update-history']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));});assert.deepEqual(axe,[],'history WCAG axe '+width);
    await p.getByRole('link',{name:'Zur Startseite',exact:true}).click();await p.locator('.discovery-hero').waitFor();
@@ -203,7 +229,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
     await p.emulateMedia({forcedColors:'active'});await p.keyboard.press('Tab');await start.focus();assert.equal(await start.evaluate(el=>el.matches(':focus-visible')&&getComputedStyle(el).outlineStyle==='solid'),true,'system colors retain focus');await p.screenshot({path:shots+'/home-system-colors-320.png',animations:'disabled'});
    }
    console.log('Homepage/history viewport',width,height,'first/return/large passed');
-   report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, history/back/forward, 13 Sites + 9 confirmed test website updates, dated channel labels and separate undated PR 18, read-only pass, WCAG axe');
+   report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, history/back/forward, 13 Sites + 10 confirmed test website updates including PR 18, separate undated current round, all concrete-change disclosures and family benefits, expanded long history and large-font details, read-only pass, WCAG axe');
   }finally{await c.close();}
  }
 }
