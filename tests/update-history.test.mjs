@@ -41,8 +41,8 @@ test('test website chronology retains the merged and deployed product rounds, wi
  assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[21,20,19,18,17,16,15,14,12,11,10,9,3]);
  assert.equal(entries.length,26);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
- assert.deepEqual(PREPARED_UPDATES.map(e=>e.id),[]);
- assert.deepEqual(PREPARED_UPDATES.map(e=>e.evidence.pullRequest),[],'handoff uses the actually created PR, never a guessed number');
+ assert.deepEqual(PREPARED_UPDATES.map(e=>e.id),['foundation-2a']);
+ assert.deepEqual(PREPARED_UPDATES.map(e=>e.evidence.pullRequest),[22],'handoff uses the actually created PR, never a guessed number');
  assert.equal(updateLabel(testEntries[0]),'Testwebsite · verfügbar');assert.equal(updateLabel(entries.find(e=>e.id==='site-v14')),'Sites · Version 14');
  for(const entry of testEntries){
   const record=TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===entry.evidence.pullRequest),deployment=confirmedTestDeployment(record);
