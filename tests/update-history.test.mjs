@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {UPDATE_HISTORY,PREPARED_UPDATES,HISTORY_EVIDENCE,TEST_HISTORY_EVIDENCE,confirmedTestDeployment,testUpdate,publicUpdates,updateDate,updateLabel,berlinDay} from '../app/update-history.ts';
+import {UPDATE_HISTORY,PREPARED_UPDATES,HISTORY_EVIDENCE,TEST_HISTORY_EVIDENCE,confirmedTestDeployment,testUpdate,publicUpdates,updateDate,updateLabel,berlinDay,formatHistoryInstant} from '../app/update-history.ts';
 
 test('public chronicle excludes unpublished work and preserves the complete confirmed publication history',()=>{
  const entries=publicUpdates([...PREPARED_UPDATES,...UPDATE_HISTORY]);
@@ -29,8 +29,8 @@ test('publication entries match successful deployments, source provenance and Be
  assert.equal(HISTORY_EVIDENCE.versions.find(v=>v.number===6).publication,null);
  assert.equal(berlinDay(HISTORY_EVIDENCE.site.createdAt),'2026-10-06','project began after Berlin midnight');
  assert.equal(berlinDay('2026-10-05T23:57:32.505039+00:00'),'2026-10-06','publication UTC day differs from German day');
- assert.equal(updateDate(UPDATE_HISTORY.find(e=>e.id==='site-v1')),'6. Oktober 2026');
- assert.equal(updateDate({...UPDATE_HISTORY[0],publishedOn:null,availableOn:null,confirmedOn:'2026-10-10'}),'10. Oktober 2026','unknown publication day remains an observation');
+ assert.match(updateDate(UPDATE_HISTORY.find(e=>e.id==='site-v1')),/^6\. Oktober 2026 um \d{2}:\d{2}:\d{2} MESZ$/);
+ assert.equal(updateDate({...UPDATE_HISTORY[0],publishedOn:null,availableOn:null,occurredAt:null,confirmedOn:'2026-10-10'}),'10. Oktober 2026','unknown publication day remains an observation');
  const v12=HISTORY_EVIDENCE.versions.find(v=>v.number===12),v13=HISTORY_EVIDENCE.versions.find(v=>v.number===13);
  assert.equal(v12.sourceReview.topicCount,90);assert.equal(v13.sourceReview.topicCount,108);assert.equal(v13.sourceReview.addedTopicIds.length,18);
  assert.equal(HISTORY_EVIDENCE.versions.find(v=>v.number===7).archiveHash,HISTORY_EVIDENCE.versions.find(v=>v.number===8).archiveHash,'repeat publication added no learner features');
@@ -38,11 +38,11 @@ test('publication entries match successful deployments, source provenance and Be
 
 test('test website chronology retains the merged and deployed product rounds, with truthful channel dates',()=>{
  const entries=publicUpdates(),testEntries=entries.filter(e=>e.channel==='vercel-test');
- assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[21,20,19,18,17,16,15,14,12,11,10,9,3]);
- assert.equal(entries.length,26);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
+ assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
+ assert.equal(entries.length,27);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
- assert.deepEqual(PREPARED_UPDATES.map(e=>e.id),['foundation-2a']);
- assert.deepEqual(PREPARED_UPDATES.map(e=>e.evidence.pullRequest),[22],'handoff uses the actually created PR, never a guessed number');
+ assert.ok(!PREPARED_UPDATES.some(e=>e.id==='foundation-2a'));
+ assert.ok(UPDATE_HISTORY.some(e=>e.evidence.pullRequest===22));
  assert.equal(updateLabel(testEntries[0]),'Testwebsite · verfügbar');assert.equal(updateLabel(entries.find(e=>e.id==='site-v14')),'Sites · Version 14');
  for(const entry of testEntries){
   const record=TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===entry.evidence.pullRequest),deployment=confirmedTestDeployment(record);
@@ -50,10 +50,10 @@ test('test website chronology retains the merged and deployed product rounds, wi
   assert.ok(Date.parse(deployment.createdAt)>=Date.parse(record.mergedAt));assert.ok(TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.includes(record.mergeCommit));
  }
  // Confirmation date differs from observation date and from the merge instant.
- assert.equal(updateDate(testEntries[0]),'11. Oktober 2026');assert.equal(testEntries[0].confirmedOn,'2026-10-11');
- assert.equal(testEntries[0].occurredAt,'2026-10-11T14:48:18Z');
- assert.equal(testEntries[0].id,'playground-2','receipt promotes the existing PR 21 entry, without replacing its ID');
- assert.equal(testEntries[4].occurredAt,'2026-10-10T11:40:50Z','old availability remains unchanged');
+ assert.equal(updateDate(testEntries[0]),'11. Oktober 2026 um 20:19:13 MESZ');assert.equal(testEntries[0].confirmedOn,'2026-10-11');
+ assert.equal(testEntries[0].occurredAt,'2026-10-11T18:19:13Z');
+ assert.equal(testEntries[0].id,'foundation-2a','receipt promotes the existing PR 22 entry, without replacing its ID');
+ assert.equal(testEntries[5].occurredAt,'2026-10-10T11:40:50Z','old availability remains unchanged');
  assert.ok(!testEntries.some(e=>[4,13].includes(e.evidence.pullRequest)),'internal workflow-only PRs excluded');
 });
 
@@ -104,3 +104,5 @@ test('unconfirmed product work stays unavailable even if an observation date is 
  assert.equal(publicUpdates([{...prepared,publishedOn:prepared.confirmedOn,availableOn:prepared.confirmedOn}]).length,0);
  for(const pending of PREPARED_UPDATES){assert.equal(UPDATE_HISTORY.some(e=>e.id===pending.id),false);assert.deepEqual(pending.links,[]);}
 });
+
+ test('known timestamps use actual Berlin DST; missing times remain date-only',()=>{assert.equal(formatHistoryInstant('2026-10-25T00:30:00Z'),'25. Oktober 2026 um 02:30:00 MESZ');assert.equal(formatHistoryInstant('2026-10-25T01:30:00Z'),'25. Oktober 2026 um 02:30:00 MEZ');assert.equal(updateDate({...UPDATE_HISTORY[0],occurredAt:null,publishedOn:'2026-10-11',availableOn:null}),'11. Oktober 2026');});

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T15:10:41.021Z",
+  "generatedAt": "2026-10-11T19:18:31.026Z",
   "personalProgressIncluded": false,
   "topics": 116,
   "categories": {
@@ -167,8 +167,8 @@
         "app/world-index.ts"
       ],
       "entries": 8,
-      "bytes": 2365,
-      "sha256": "4793afdfa4c362035274d52413b84c072b08b24b0424f49a525bd1a63bd652bc"
+      "bytes": 2504,
+      "sha256": "e1b18b3710a2d7fc363c5c69efee40c0d7afab20d08cb8fda8c14f0e697257da"
     },
     {
       "file": "world-categories.json",
@@ -331,6 +331,42 @@
       "entries": 2,
       "bytes": 34211,
       "sha256": "c44c2881c37e206ecfacbd5a3ce54b65bdc702a625c28926f70e2ddc5da23e4b"
+    },
+    {
+      "file": "research-questions.json",
+      "sources": [
+        "app/research-catalog.ts"
+      ],
+      "entries": 11,
+      "bytes": 14087,
+      "sha256": "cf0afdd7b22e689dbcb03e26d8d167797a31ef24062512244871e0ba1d425592"
+    },
+    {
+      "file": "research-paths.json",
+      "sources": [
+        "app/research-catalog.ts"
+      ],
+      "entries": 11,
+      "bytes": 4593,
+      "sha256": "3888d6a6c81cf47a247504f3e10cbc1b50130ff246d45035bdb389980b59e6aa"
+    },
+    {
+      "file": "children-news.json",
+      "sources": [
+        "app/news-content.json"
+      ],
+      "entries": 4,
+      "bytes": 11354,
+      "sha256": "702cb0dfa89804919454600b5481e574d9b736fefbd5a12269f24af8e6b867b7"
+    },
+    {
+      "file": "news-source-policy.json",
+      "sources": [
+        "content/news-source-policy.json"
+      ],
+      "entries": 15,
+      "bytes": 1121,
+      "sha256": "31d35624d296cb24ff7c1c13827dbbb3351cf736dac593d05dec7fdaa816b660"
     },
     {
       "file": "science-model-index.json",

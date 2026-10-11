@@ -4,8 +4,9 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "5e49aae238f99ec416991a4bf7d35772fd9e6d9f",
+    "commit": "acaad0f49b1edf65219a7092bb9852feb3bdb718",
     "includedMergeCommits": [
+      "acaad0f49b1edf65219a7092bb9852feb3bdb718",
       "5e49aae238f99ec416991a4bf7d35772fd9e6d9f",
       "0afbcdd7ed1d7fd639b7033df869dae32c39c43d",
       "a68ae6d61a7e4588064da0a68e1d49bab466bb6d",
@@ -495,10 +496,31 @@
       "title": "2A: Technisches Fundament, bedarfsgeladene Lernwelt und Performance-Budgets",
       "url": "https://github.com/Arizona2k/wunderkompass/pull/22",
       "base": "test-live",
-      "mergedAt": null,
-      "mergeCommit": null,
-      "statusesUrl": null,
-      "deploymentStatuses": []
+      "mergedAt": "2026-10-11T18:18:48Z",
+      "mergeCommit": "acaad0f49b1edf65219a7092bb9852feb3bdb718",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/acaad0f49b1edf65219a7092bb9852feb3bdb718/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56095459572,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-11T18:19:13Z",
+          "updatedAt": "2026-10-11T18:19:13Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/EGo9NHZQ2a4WkQ7pYkwZntkJosAr"
+        },
+        {
+          "id": 56095448938,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-11T18:18:51Z",
+          "updatedAt": "2026-10-11T18:18:51Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/EGo9NHZQ2a4WkQ7pYkwZntkJosAr"
+        }
+      ]
     }
   ]
 }

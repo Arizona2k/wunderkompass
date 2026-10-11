@@ -19,12 +19,14 @@ export function focusLearningMain(){
 }
 export function restoreRouteView(path:string,focus=true){
  const state=history.state;
- if((path==='globe'||path==='updates')&&Array.isArray(state?.wunderOpen))for(const el of document.querySelectorAll<HTMLDetailsElement>('details[data-history-disclosure]'))el.open=state.wunderOpen.includes(el.dataset.historyDisclosure);
+ if((path==='globe'||path==='updates'||path.startsWith('news'))&&Array.isArray(state?.wunderOpen))for(const el of document.querySelectorAll<HTMLDetailsElement>('details[data-history-disclosure]'))el.open=state.wunderOpen.includes(el.dataset.historyDisclosure);
  window.scrollTo({top:typeof state?.wunderScroll==='number'?state.wunderScroll:0,behavior:'instant'});
  if(!focus)return;
  const opener=Array.from(document.querySelectorAll<HTMLElement>('[data-route-focus]')).find(el=>el.dataset.routeFocus===state?.wunderFocus&&el.getClientRects().length);
  if(opener){opener.focus({preventScroll:true});const r=opener.getBoundingClientRect();if(r.top<8||r.bottom>innerHeight-8)opener.scrollIntoView({block:'center',behavior:'instant'});return;}
- if(path==='updates')document.getElementById('updates-title')?.focus({preventScroll:true});
+ if(path.startsWith('news'))document.getElementById('news-title')?.focus({preventScroll:true});
+ else if(path.startsWith('labs/'))document.getElementById('lab-heading')?.focus({preventScroll:true});
+ else if(path==='updates')document.getElementById('updates-title')?.focus({preventScroll:true});
  else if(path==='world'||path.startsWith('world/')){
   const heading=document.getElementById('world-topic-title')??document.getElementById('world-category-title');
   if(heading){heading.focus({preventScroll:true});const r=heading.getBoundingClientRect();if(r.top<8||r.bottom>innerHeight-8)heading.scrollIntoView({block:'center',behavior:'instant'});}
@@ -32,4 +34,4 @@ export function restoreRouteView(path:string,focus=true){
  }
  else focusLearningMain();
 }
-export function useHashRoute(){const first=useRef(true);const path=useSyncExternalStore(subscribe,read,()=> 'globe');useEffect(()=>{const initial=first.current;first.current=false;if(path==='globe'||path==='updates')return;const frame=requestAnimationFrame(()=>restoreRouteView(path,!initial||!!history.state?.wunderRoute));return()=>cancelAnimationFrame(frame);},[path]);return path;}
+export function useHashRoute(){const first=useRef(true);const path=useSyncExternalStore(subscribe,read,()=> 'globe');useEffect(()=>{const initial=first.current;first.current=false;if(path==='globe'||path==='updates'||path.startsWith('news'))return;const frame=requestAnimationFrame(()=>restoreRouteView(path,!initial||!!history.state?.wunderRoute));return()=>cancelAnimationFrame(frame);},[path]);return path;}

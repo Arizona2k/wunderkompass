@@ -33,7 +33,7 @@ export function selectTests(changed){
   if(!infrastructure&&!unknown&&runtime.every(f=>/^(app\/challenge-hints\.json|tests\/challenge\.test\.mjs|exports\/content\/challenge-hints\.json)$/.test(f)))browser=['challenge','offline'];
   else if(!infrastructure&&!unknown&&runtime.every(f=>/^(app\/update-history|tests\/update-history\.test\.mjs)/.test(f)))browser=['home','offline'];
   else if(runtime.every(f=>/^tests\/.*\.test\.mjs$/.test(f)))browser=[];
-  else browser=['foundation','home','core','playground','backup','challenge','offline'];
+  else browser=['foundation','home','core','playground','backup','challenge','research','offline'];
  }
  return {scope:'local iteration only',fullRequiredBeforeReady:true,changed:files,unitTests,release:infrastructure||unknown||runtime.some(f=>f.startsWith('tests/release/')),browser,reason:infrastructure||unknown?'Unknown/shared infrastructure: conservative full selection':'Transitive unit dependencies and explicit browser-risk mapping; unknown UI changes select the full browser path'};
 }

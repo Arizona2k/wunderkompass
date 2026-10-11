@@ -75,6 +75,8 @@ export function publicUpdates(entries:readonly UpdateEntry[]=UPDATE_HISTORY){
  return entries.filter(e=>e.status==='publication-confirmed'&&e.channel==='sites'||e.status==='test-available'&&e.channel==='vercel-test'&&e.availableOn!==null).toSorted((a,b)=>updateDay(b).localeCompare(updateDay(a))||(Date.parse(b.occurredAt??'')||0)-(Date.parse(a.occurredAt??'')||0)||Number(b.version)-Number(a.version));
 }
 export function updateDate(entry:UpdateEntry){
+ if(entry.occurredAt&&Number.isFinite(Date.parse(entry.occurredAt)))return formatHistoryInstant(entry.occurredAt);
  return formatHistoryDay(updateDay(entry));
 }
+export const formatHistoryInstant=(timestamp:string)=>new Intl.DateTimeFormat('de-DE',{day:'numeric',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit',timeZone:'Europe/Berlin',timeZoneName:'short'}).format(new Date(timestamp));
 export const formatHistoryDay=(date:string)=>new Intl.DateTimeFormat('de-DE',{day:'numeric',month:'long',year:'numeric',timeZone:'Europe/Berlin'}).format(new Date(date+'T12:00:00Z'));
