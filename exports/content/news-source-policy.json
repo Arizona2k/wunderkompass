@@ -30,5 +30,15 @@
       "url": "https://www.nachrichtenleicht.de/",
       "status": "Einzelne Originalartikel manuell geprüft; automatisierter Abruf und Verarbeitung nicht freigegeben."
     }
+  ],
+  "discoverySources": [
+    {
+      "url": "https://www.nachrichtenleicht.de/",
+      "format": "html"
+    },
+    {
+      "url": "https://science.nasa.gov/",
+      "format": "html"
+    }
   ]
 }

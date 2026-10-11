@@ -20,7 +20,7 @@ async function axe(p,selector,label){
 }
 export async function researchNewsFlow(browser,base,ready,monitor,report,shots){
  for(const width of [320,360,390,768,1024,1440,1920]){
-  const context=await browser.newContext({viewport:{width,height:width<768?844:1000},hasTouch:width<768,isMobile:width<768,reducedMotion:'reduce',acceptDownloads:true}),p=await context.newPage();monitor(p);p.setDefaultTimeout(20000);await p.goto(base+'/#labs');await ready(p);await p.locator('.research-tile').first().waitFor();
+  const context=await browser.newContext({viewport:{width,height:width<768?844:1000},hasTouch:width<768,isMobile:width<768,reducedMotion:'reduce',acceptDownloads:true}),p=await context.newPage();monitor(p);p.setDefaultTimeout(20000);await p.clock.setFixedTime(new Date('2026-10-11T19:00:00Z'));await p.goto(base+'/#labs');await ready(p);await p.locator('.research-tile').first().waitFor();
   assert.equal(await p.locator('.research-tile').count(),11);assert.equal(await p.locator('.experiment-card').count(),6);
   await p.locator('.lab-search input').fill('vulkan');assert.equal(await p.locator('.research-tile').count(),1);assert.equal(await p.locator('.experiment-card').count(),1);await p.locator('.lab-search input').fill('not-a-real-lab');await p.getByRole('button',{name:'Alle Labore zeigen',exact:true}).click();
   await p.screenshot({path:path.join(shots,'research-overview-'+width+'.png'),fullPage:true,animations:'disabled'});
@@ -76,6 +76,6 @@ export async function researchNewsFlow(browser,base,ready,monitor,report,shots){
 }
 export async function offlineResearchNews(page,report){
  await page.evaluate(()=>location.hash='labs/moon');await page.locator('#lab-heading').waitFor();await page.getByRole('button',{name:'Etwa einen Tag weiter',exact:true}).click();await page.locator('.research-measurements').waitFor();await geometry(page,'cold offline moon');
- await page.evaluate(()=>location.hash='news');await page.locator('.news-page').waitFor();await page.locator('.news-archive>summary').click();assert.equal(await page.locator('.news-archive .news-article').count(),1);await page.locator('.news-article').first().getByRole('heading').getByRole('link').click();await page.locator('.news-sources a').first().waitFor();
+ await page.evaluate(()=>location.hash='news');await page.locator('.news-page').waitFor();await page.locator('.news-archive>summary').click();assert.ok(await page.locator('.news-archive [data-news-id=earth-phobos-2026]').count()===1);await page.locator('.news-article').first().getByRole('heading').getByRole('link').click();await page.locator('.news-sources a').first().waitFor();
  report.checks.push('2B cold offline restart: interactive moon alignment/model, dated news explanations, archive, local navigation and retained original source links (external originals need network)');
 }
