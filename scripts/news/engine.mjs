@@ -1,10 +1,10 @@
+import {calendarDay,berlinDay,approvedURL,validateNews} from '../../app/news-validation.mjs';
+export {berlinDay,approvedURL,validateNews};
 import {createHash} from 'node:crypto';
 import {mkdir,readFile,writeFile,rename} from 'node:fs/promises';
 import path from 'node:path';
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const fail=message=>{throw new Error(message);};
-const calendarDay=value=>typeof value==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(value)&&Number.isFinite(Date.parse(value+'T12:00:00Z'))&&new Date(value+'T12:00:00Z').toISOString().slice(0,10)===value;
-export function berlinDay(now){return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Berlin',year:'numeric',month:'2-digit',day:'2-digit'}).format(now);}
 /** Convert the local target to UTC with the actual IANA rules, also over DST. */
 export function dailyTarget(day,localTime='12:30'){
  if(!calendarDay(day)||!/^\d{2}:\d{2}$/.test(localTime))fail('Ungültiger Tagesplan');
@@ -13,9 +13,6 @@ export function dailyTarget(day,localTime='12:30'){
  const formatter=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Berlin',hour:'numeric',minute:'numeric',hourCycle:'h23'});
  const parts=formatter.formatToParts(new Date(utc)),value=type=>Number(parts.find(p=>p.type===type).value);
  return new Date(utc-((value('hour')*60+value('minute'))-(hour*60+minute))*60000).toISOString();
-}
-export function approvedURL(value,policy){
- const u=new URL(value);if(u.protocol!=='https:'||u.username||u.password||u.port||!policy.hosts.includes(u.hostname))fail('Quelle außerhalb der freigegebenen HTTPS-Hosts');return u.href;
 }
 const plain=text=>text.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,' ').replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ').replace(/&(?:nbsp|amp|quot|lt|gt);/g,' ').replace(/\s+/g,' ').trim();
 /** Bounded RSS/Atom discovery only; original wording never becomes child copy. */
@@ -28,45 +25,22 @@ export function parseFeed(xml,policy){
   try{return [{url:approvedURL(url,policy),title:plain(field('title')??''),publishedAt:field('pubDate')??field('published')??field('updated')??null}];}catch{return [];}
  });
 }
-export async function fetchSource(url,policy,{fetchImpl=fetch,wait=ms=>new Promise(r=>setTimeout(r,ms))}={}){
+export async function fetchSource(url,policy,{fetchImpl=fetch,wait=ms=>new Promise(r=>setTimeout(r,ms)),json=false,signal}={}){
  const approved=approvedURL(url,policy);if(!policy.automaticRetrievalAuthorized)fail('Regelmäßiger Quellenabruf noch nicht freigegeben');
  let last;
  for(let attempt=0;attempt<Math.min(3,policy.attempts);attempt++){
   try{
-   const response=await fetchImpl(approved,{redirect:'error',signal:AbortSignal.timeout(policy.timeoutMs),headers:{Accept:'text/html, application/rss+xml, application/atom+xml','User-Agent':'WunderKompass-Quellenpruefung/1.0'}});
+   const response=await fetchImpl(approved,{redirect:'error',signal:signal?AbortSignal.any([signal,AbortSignal.timeout(policy.timeoutMs)]):AbortSignal.timeout(policy.timeoutMs),headers:{Accept:json?'application/json':'text/html, application/rss+xml, application/atom+xml','User-Agent':'WunderKompass-Quellenpruefung/1.0'}});
    if(!response.ok){const error=new Error('Quellenstatus '+response.status);error.retry=response.status===429||response.status>=500;throw error;}
    if(response.url&&response.url!==approved)fail('Unerwartete Umleitung');
-   const type=response.headers.get('content-type')??'';if(!/text\/html|application\/(?:rss\+xml|atom\+xml|xml)|text\/xml/.test(type))fail('Unpassender Quellentyp');
+   const type=response.headers.get('content-type')??'';if(!(json?/application\/json/i.test(type):/text\/html|application\/(?:rss\+xml|atom\+xml|xml)|text\/xml/.test(type)))fail('Unpassender Quellentyp');
    if(Number(response.headers.get('content-length'))>policy.maxBytes)fail('Quelle zu groß');
-   let bytes=0;const chunks=[];for await(const chunk of response.body){bytes+=chunk.length;if(bytes>policy.maxBytes)fail('Quelle zu groß');chunks.push(chunk);}
+   let bytes=0;const chunks=[];const reader=response.body.getReader();try{for(;;){const {value,done}=await reader.read();if(done)break;bytes+=value.length;if(bytes>policy.maxBytes)fail('Quelle zu groß');chunks.push(value);}}finally{await reader.cancel().catch(()=>{});reader.releaseLock();}
    const text=Buffer.concat(chunks).toString('utf8');if(!text.trim())fail('Leere Quelle');
-   return {url:approved,sha256:hash(text),document:text,text:plain(text),bytes};
-  }catch(error){last=error;if(error.retry===false||/Umleitung|Quellentyp|zu groß|Leere/.test(error.message))break;if(attempt+1<Math.min(3,policy.attempts))await wait(250*2**attempt);}
+   return {url:approved,sha256:createHash('sha256').update(text).digest('hex'),document:text,text:plain(text),bytes};
+  }catch(error){last=error;if(signal?.aborted||error.retry===false||/Umleitung|Quellentyp|zu groß|Leere/.test(error.message))break;if(attempt+1<Math.min(3,policy.attempts))await wait(250*2**attempt);}
  }
  throw last;
-}
-export function validateNews(entry,{policy,now,topicIds}){
- const required=['id','title','section','summary','explanation','why','background','question','verification','topicId','connectionWhy','checkedAt','sourcePublishedOn'];
- for(const key of required)if(typeof entry[key]!=='string'||!entry[key].trim())fail('Fehlendes Feld '+key);
- if(!/^[a-z0-9-]+$/.test(entry.id)||!topicIds.includes(entry.topicId))fail('Ungültige Nachrichten-/Wissens-ID');
- if(entry.title.length>100||entry.summary.length>350||entry.explanation.length>900)fail('Nachricht zu lang');
- if(required.some(k=>/<[^>]*>|https?:\/\//i.test(entry[k])))fail('HTML oder fremde URL im Redaktionstext');
- const copy=['title','summary','explanation','why','background','question'].map(k=>entry[k]).join(' ');
- if(/schock!|blutbad|kaufe jetzt|jetzt abonnieren|du musst sofort|garantiert ungefährlich/i.test(copy))fail('Ungeeignete Angst-, Werbe- oder Sicherheitsformulierung');
- if(copy.split(/[.!?]/).some(sentence=>sentence.trim().split(/\s+/).length>35))fail('Sätze zu lang für die kurze Kindernachricht');
- const date=entry.sourcePublishedOn;if(!calendarDay(date))fail('Fehlendes oder ungültiges Quelldatum');
- if(entry.eventOn!==null&&entry.eventOn!==undefined&&!calendarDay(entry.eventOn))fail('Ungültiges Ereignisdatum');
- const age=(Date.parse(berlinDay(now)+'T12:00:00Z')-Date.parse(date+'T12:00:00Z'))/86400000;
- if(age<0)fail('Quelldatum liegt in der Zukunft');
- const checked=Date.parse(entry.checkedAt);if(!Number.isFinite(checked)||checked>now.getTime()||berlinDay(new Date(checked))<date)fail('Ungültiger Prüfzeitpunkt');
- if(!Array.isArray(entry.sources)||entry.sources.length<1||entry.sources.length>5)fail('Quellen fehlen');
- for(const source of entry.sources){approvedURL(source.url,policy);if(!source.organization||source.access!=='reviewed')fail('Quelle ungeprüft');const at=Date.parse(source.checkedAt);if(!Number.isFinite(at)||at>now.getTime())fail('Ungültiger Quellenprüfzeitpunkt');if(source.publishedOn!==null&&(!calendarDay(source.publishedOn)||source.publishedOn>berlinDay(now)))fail('Ungültiges Quellenveröffentlichungsdatum');}
- if(new Set(entry.sources.map(s=>s.url)).size!==entry.sources.length)fail('Doppelte Quellen');
- if(entry.editorial?.status!=='approved'||!entry.editorial.reviewer||!entry.editorial.reviewedAt)fail('Redaktionelle Freigabe fehlt');
- const reviewed=Date.parse(entry.editorial.reviewedAt);if(!Number.isFinite(reviewed)||reviewed>now.getTime())fail('Ungültiger redaktioneller Prüfzeitpunkt');
- if(!Array.isArray(entry.claims)||!entry.claims.length)fail('Prüfbare Kernaussagen fehlen');
- for(const claim of entry.claims){if(!claim.key||!claim.value||!Array.isArray(claim.sourceIndexes)||!claim.sourceIndexes.length||claim.sourceIndexes.some(i=>!Number.isInteger(i)||!entry.sources[i]))fail('Kernaussage ohne Nachweis');}
- return {age,archived:age>policy.maxAgeDays};
 }
 /** Safe formulation: only approved original briefs, never copied RSS headlines. */
 export function formulate(brief,observations){

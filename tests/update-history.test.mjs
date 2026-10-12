@@ -24,7 +24,7 @@ test('publication entries match successful deployments, source provenance and Be
   if(entry.evidence.publicationVersion!==undefined){
    const source=HISTORY_EVIDENCE.versions.find(v=>v.number===entry.evidence.publicationVersion);assert.equal(source.publication.status,'succeeded');assert.equal(source.publication.type,'publish');assert.equal(source.sourceCommit,entry.evidence.revision);assert.equal(entry.publishedOn,berlinDay(source.publication.completedAt));
   }
-  for(const link of entry.links)assert.ok(['globe','world','labs','games','journeys','book','world/topic/science-moon-phases'].includes(link.hash));
+  for(const link of entry.links)assert.ok(['globe','world','labs','games','journeys','book','news','world/topic/science-moon-phases'].includes(link.hash));
  }
  assert.equal(HISTORY_EVIDENCE.versions.find(v=>v.number===6).publication,null);
  assert.equal(berlinDay(HISTORY_EVIDENCE.site.createdAt),'2026-10-06','project began after Berlin midnight');
@@ -38,8 +38,8 @@ test('publication entries match successful deployments, source provenance and Be
 
 test('test website chronology retains the merged and deployed product rounds, with truthful channel dates',()=>{
  const entries=publicUpdates(),testEntries=entries.filter(e=>e.channel==='vercel-test');
- assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
- assert.equal(entries.length,27);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
+ assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
+ assert.equal(entries.length,28);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
  assert.ok(!PREPARED_UPDATES.some(e=>e.id==='foundation-2a'));
  assert.ok(UPDATE_HISTORY.some(e=>e.evidence.pullRequest===22));
@@ -50,10 +50,10 @@ test('test website chronology retains the merged and deployed product rounds, wi
   assert.ok(Date.parse(deployment.createdAt)>=Date.parse(record.mergedAt));assert.ok(TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.includes(record.mergeCommit));
  }
  // Confirmation date differs from observation date and from the merge instant.
- assert.equal(updateDate(testEntries[0]),'11. Oktober 2026 um 20:19:13 MESZ');assert.equal(testEntries[0].confirmedOn,'2026-10-11');
- assert.equal(testEntries[0].occurredAt,'2026-10-11T18:19:13Z');
- assert.equal(testEntries[0].id,'foundation-2a','receipt promotes the existing PR 22 entry, without replacing its ID');
- assert.equal(testEntries[5].occurredAt,'2026-10-10T11:40:50Z','old availability remains unchanged');
+ assert.equal(updateDate(testEntries[0]),'12. Oktober 2026 um 10:15:03 MESZ');assert.equal(testEntries[0].confirmedOn,'2026-10-12');
+ assert.equal(testEntries[0].occurredAt,'2026-10-12T08:15:03Z');
+ assert.equal(testEntries[0].id,'research-2b','receipt promotes the existing PR 23 entry, without replacing its ID');
+ assert.equal(testEntries.find(e=>e.evidence.pullRequest===17).occurredAt,'2026-10-10T11:40:50Z','old availability remains unchanged');
  assert.ok(!testEntries.some(e=>[4,13].includes(e.evidence.pullRequest)),'internal workflow-only PRs excluded');
 });
 
@@ -107,4 +107,7 @@ test('unconfirmed product work stays unavailable even if an observation date is 
 
  test('known timestamps use actual Berlin DST; missing times remain date-only',()=>{assert.equal(formatHistoryInstant('2026-10-25T00:30:00Z'),'25. Oktober 2026 um 02:30:00 MESZ');assert.equal(formatHistoryInstant('2026-10-25T01:30:00Z'),'25. Oktober 2026 um 02:30:00 MEZ');assert.equal(updateDate({...UPDATE_HISTORY[0],occurredAt:null,publishedOn:'2026-10-11',availableOn:null}),'11. Oktober 2026');});
 
-test('actual PR 23 keeps complete editorial copy separate until verified merge and deployment',()=>{const prepared=PREPARED_UPDATES.find(e=>e.id==='research-2b');assert.ok(prepared);assert.equal(prepared.evidence.pullRequest,23);assert.equal(prepared.status,'prepared');assert.equal(prepared.occurredAt,null);assert.equal(prepared.availableOn,null);assert.deepEqual(prepared.links,[]);assert.equal(publicUpdates().some(e=>e.id===prepared.id),false);assert.equal(prepared.details.length,5);});
+test('actual PR 23 appears only with its exact merged and deployed receipt; earlier missing proof stays prepared',()=>{
+ const entry=UPDATE_HISTORY.find(e=>e.id==='research-2b');assert.ok(entry);assert.equal(entry.evidence.pullRequest,23);assert.equal(entry.status,'test-available');assert.equal(entry.occurredAt,'2026-10-12T08:15:03Z');assert.equal(entry.evidence.revision,'9f2328ab73c9a142bd023668046310f1661958e9');assert.equal(entry.details.length,5);assert.ok(entry.links.some(l=>l.hash==='news'));
+ const record=structuredClone(TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===23));record.mergedAt=null;record.mergeCommit=null;record.deploymentStatuses=[];const prepared=testUpdate(record,entry);assert.equal(prepared.status,'prepared');assert.deepEqual(prepared.links,[]);assert.equal(publicUpdates([prepared]).length,0);
+});

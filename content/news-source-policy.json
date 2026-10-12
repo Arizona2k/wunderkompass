@@ -5,6 +5,7 @@
   "schedulerEnabled": false,
   "publicationEnabled": false,
   "externalAIEnabled": false,
+  "autonomousGenerationEnabled": false,
   "maxAgeDays": 14,
   "maxItems": 3,
   "maxBytes": 1048576,
@@ -15,9 +16,37 @@
     "www.langenscheidt.com",
     "www.unfpa.org",
     "science.nasa.gov",
-    "www.jpl.nasa.gov"
+    "www.jpl.nasa.gov",
+    "epic.gsfc.nasa.gov",
+    "exoplanetarchive.ipac.caltech.edu"
   ],
   "automaticRetrievalAuthorized": false,
+  "structuredSources": [
+    {
+      "id": "nasa-epic",
+      "url": "https://epic.gsfc.nasa.gov/api/natural",
+      "method": "Public JSON API; one latest-series request and one dated-series comparison per day, no images or captions",
+      "responsible": "NASA EPIC Team; WunderKompass operator reviews rule changes and exceptions",
+      "rights": {
+        "status": "confirmed",
+        "checkedOn": "2026-10-12",
+        "basis": "EPIC Image Use Policy permits reproduction and reuse with credit; EPIC API explicitly documents programmatic daily metadata retrieval",
+        "urls": ["https://epic.gsfc.nasa.gov/about", "https://epic.gsfc.nasa.gov/about/api"]
+      }
+    },
+    {
+      "id": "nasa-exoplanets",
+      "url": "https://exoplanetarchive.ipac.caltech.edu/TAP/sync",
+      "method": "Documented public TAP JSON API, at most ten default non-controversial confirmed-planet records and limited targeted comparisons; no full-table download or copied publications",
+      "responsible": "NASA Exoplanet Archive / Caltech; WunderKompass operator reviews exceptions",
+      "rights": {
+        "status": "confirmed",
+        "checkedOn": "2026-10-12",
+        "basis": "Official TAP documentation authorizes programmatic retrieval; archive requires attribution, retained in every generated explanation. Data release is distinct from discovery year and paper publication.",
+        "urls": ["https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html", "https://exoplanetarchive.ipac.caltech.edu/docs/acknowledge.html", "https://exoplanetarchive.ipac.caltech.edu/docs/API_PS_columns.html"]
+      }
+    }
+  ],
   "rightsStatus": "Automatisierte regelmäßige Beschaffung und Verarbeitung vor Aktivierung pro Anbieter prüfen. Manuell geprüfte eigene kurze Erklärungen; keine Artikel oder Fremdmedien übernehmen.",
   "prospectiveSources": [
     {

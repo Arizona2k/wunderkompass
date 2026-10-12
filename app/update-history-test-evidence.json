@@ -1,11 +1,12 @@
 {
   "schemaVersion": 1,
-  "checkedOn": "2026-10-11",
+  "checkedOn": "2026-10-12",
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "acaad0f49b1edf65219a7092bb9852feb3bdb718",
+    "commit": "9f2328ab73c9a142bd023668046310f1661958e9",
     "includedMergeCommits": [
+      "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
       "5e49aae238f99ec416991a4bf7d35772fd9e6d9f",
       "0afbcdd7ed1d7fd639b7033df869dae32c39c43d",
@@ -527,10 +528,31 @@
       "title": "2B: Forscherlabor 2.0, vernetzte Startseite und geprüfte Kindernachrichten",
       "url": "https://github.com/Arizona2k/wunderkompass/pull/23",
       "base": "test-live",
-      "mergedAt": null,
-      "mergeCommit": null,
-      "statusesUrl": null,
-      "deploymentStatuses": []
+      "mergedAt": "2026-10-12T08:14:36Z",
+      "mergeCommit": "9f2328ab73c9a142bd023668046310f1661958e9",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/9f2328ab73c9a142bd023668046310f1661958e9/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56123347776,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-12T08:15:03Z",
+          "updatedAt": "2026-10-12T08:15:03Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/6UY9x2jgRtHTBFh3Dh5vww2i5TJh"
+        },
+        {
+          "id": 56123323815,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-12T08:14:39Z",
+          "updatedAt": "2026-10-12T08:14:39Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/6UY9x2jgRtHTBFh3Dh5vww2i5TJh"
+        }
+      ]
     }
   ]
 }

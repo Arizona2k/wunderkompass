@@ -189,10 +189,10 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    assert.equal(await p.locator('.updates-timeline>li').count(),publicUpdates().length);
    assert.deepEqual(await p.locator('.updates-meta>span:first-child').allTextContents(),publicUpdates().map(updateLabel));
    assert.equal(await p.locator('.updates-timeline>li[data-update-channel=sites]').count(),13,'retain every historical Sites publication');
-   assert.equal(await p.locator('.updates-timeline>li[data-update-channel=vercel-test]').count(),14,'include independently confirmed test website rounds');
-   assert.equal(await p.locator('.updates-timeline>li').first().getAttribute('data-update-id'),'foundation-2a','confirmed PR 22 keeps its ID and comes first');
+   assert.equal(await p.locator('.updates-timeline>li[data-update-channel=vercel-test]').count(),publicUpdates().filter(e=>e.channel==='vercel-test').length,'include independently confirmed test website rounds');
+   assert.equal(await p.locator('.updates-timeline>li').first().getAttribute('data-update-id'),publicUpdates()[0].id,'latest confirmed package keeps its ID and comes first');
    assert.equal(await p.locator('.updates-timeline [data-update-id=history-polish]').count(),1,'merged and deployed PR 19 is an available update');
-   assert.equal(await p.locator('.updates-timeline>li').first().locator('time').getAttribute('datetime'),'2026-10-11T18:19:13Z','actual PR 22 Vercel confirmation timestamp');
+   assert.equal(await p.locator('.updates-timeline>li').first().locator('time').getAttribute('datetime'),publicUpdates()[0].occurredAt,'actual latest Vercel confirmation timestamp');
    assert.equal(await p.locator('.updates-details[open]').count(),0,'optional changes start collapsed');
    assert.equal(await p.locator('#updates-title').evaluate(el=>el===document.activeElement),true,'lazy history title focus');
    assert.deepEqual(await readProgress(),before,'history is read-only for central pass');
@@ -263,7 +263,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
     await p.emulateMedia({forcedColors:'active'});await p.keyboard.press('Tab');await start.focus();assert.equal(await start.evaluate(el=>el.matches(':focus-visible')&&getComputedStyle(el).outlineStyle==='solid'),true,'system colors retain focus');await p.screenshot({path:shots+'/home-system-colors-320.png',animations:'disabled'});
    }
    console.log('Homepage/history viewport',width,height,'first/return/large passed');
-   report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, history/back/forward, 13 Sites + 14 confirmed test website updates including PR 22, separate undated prepared work, all concrete-change disclosures and family benefits, expanded long history and large-font details, read-only pass, WCAG axe');
+   report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, history/back/forward, 13 Sites + independently confirmed test website updates including PR 23, separate undated prepared work, all concrete-change disclosures and family benefits, expanded long history and large-font details, read-only pass, WCAG axe');
   }finally{await c.close();}
  }
 }

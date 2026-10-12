@@ -1,5 +1,7 @@
 # Produktvision WunderKompass
 
+Paketfolge ab 12.10.2026: 2B/PR23 ist belegt übernommen und testbereitgestellt. Aktuell 2C – messbare Engineering Excellence und getrennte tägliche Kinder-News-Content-Lane. Neue eigene Sachmeldungen aus belegten zulässigen Daten, signierte/rollbackfähige Ausgabe und möglichst 2–3 unterschiedliche Themen mit 7–14-Tage-Rotation; Sicherheit, Wahrheit und Rechte vor Quote. Elf mögliche Nachrichtenbereiche nach tatsächlich verfügbarer Quellenlage, keine künstliche Abwechslung aus alten/erfundenen Fakten. Einmalige nachgewiesene News-Betriebsfreigabe bleibt getrennt von manueller App-Codeveröffentlichung. Danach Paket 3 mit bestehenden Lern-/Spiel-/Inhaltslücken; Länder-/Flaggen-Memory WK-038 bleibt ausdrücklich spätere Nachfolgeaufgabe, kein automatisch nächstes Paket. Bestehende langfristige Vision und Regeln bleiben erhalten.
+
 Stand: 9. Oktober 2026. Die bestehende Lernwelt wird kontinuierlich verbessert. Sie soll umfangreicher, fachlich verlässlicher, moderner, leicht bedienbar und stärker vernetzt werden. Kinder und Jugendliche von etwa sechs bis vierzehn Jahren sollen Zusammenhänge verstehen, ausprobieren und später wiederfinden können; Eltern und Lehrkräfte erhalten verständliche Orientierung.
 
 ## Verbindliche Erlebnisidentität
