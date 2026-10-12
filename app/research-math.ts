@@ -24,14 +24,14 @@ export function summarizeLab(id:string,s:Record<string,unknown>){
  case 'depth':{const d=number('depth',0);return `${d} km: ${d<=35?'Kruste (Richtwert)':d<=2890?'überwiegend fester Mantel':d<=5150?'flüssiger äußerer Kern':'fester innerer Kern'}`;}
  case 'volcano':return `Gas ${number('gas',30)} (Modellskala), ${s.thick?'zähes':'dünnflüssiges'} Magma; ${s.erupt?(s.thick&&number('gas',30)>60?'explosiver':'fließender')+' Modellausbruch':'noch kein Ausbruch ausgelöst'}`;
  case 'quake':return `Herd ${number('depth',15)} km tief; Epizentrum darüber; ${number('run',0)>0?'Wellen ausgelöst':'noch keine Wellen ausgelöst'}`;
- case 'weather':return `${({sun:'Sonne',cloud:'Wolken',rain:'Regen',snow:'Schnee',wind:'Wind',rainbow:'Regenbogen'} as Record<string,string>)[String(s.weather??'cloud')]??'Wolken'}: Abkühlung ${number('cool',0)}, Wind ${number('wind',20)} (beides Modellskalen)`;
+ case 'weather':return `${({sun:'Sonne',cloud:'Wolken',rain:'Regen',snow:'Schnee',wind:'Wind',storm:'Gewitter',tornado:'Tornado',rainbow:'Regenbogen'} as Record<string,string>)[String(s.weather??'cloud')]??'Wolken'}: Abkühlung ${number('cool',0)}, Wind ${number('wind',20)} (beides Modellskalen)`;
  case 'water':return `${['Verdunstung','Kondensation','Niederschlag','Sammeln und Fließen'][number('stage',0)]}; Wärme ${number('warmth',60)} (Modellskala)`;
  case 'seasons':{const m=number('month',1),r=seasonalSun(number('latitude',52),m,s.tilted!==false);return `${['März','Juni','September','Dezember'][m]}, ${number('latitude',52)}° Breite, ${s.tilted===false?'ohne':'mit'} Neigung: ${r.daylight.toFixed(1)} h Tag, Mittagshöhe ${r.noonAltitude.toFixed(1)}° (Geometriemodell)`;}
  case 'plates':return `${({apart:'Auseinander',together:'Zusammen',past:'Seitlich vorbei'} as Record<string,string>)[String(s.type??'apart')]??'Auseinander'}: Bewegung ${number('amount',20)} (beschleunigte Modellskala)`;
- case 'moon':{const r=moonObservation(number('angle',0));return `${number('angle',0)}°: Tag ${r.day.toFixed(1)}, ${Math.round(r.illuminated*100)} % sichtbare Scheibe hell`;}
+ case 'moon':{const r=moonObservation(number('angle',0)),a=moonAlignment(number('angle',0),number('moonNode',90),s.moonInclined!==false);return `${number('angle',0)}°: Tag ${r.day.toFixed(1)}, ${Math.round(r.illuminated*100)} % sichtbare Scheibe hell; ${s.moonInclined===false?'flache':'geneigte'} Vergleichsbahn, Knoten ${number('moonNode',90)}°, ${a.alignment!=='other'&&a.nearNode?'Ausrichtung im Lernmodell möglich':'keine passende Ausrichtung im Lernmodell'}`;}
  case 'clocks':return `${String(s.date??'2026-10-07')}, ${number('hour',10)} h UTC; örtliche Zeiten nach datumsabhängigen Browserregeln`;
- case 'tides':return `${s.phase==='quarter'?'Halbmond / Nipptide':'Linie / Springtide'}, ${number('tideHour',0)} h: ${tideHeight(number('tideHour',0),s.phase==='quarter',number('tideDelay',0)).toFixed(2)} relative Modelleinheiten`;
- case 'solar':return `Planet ${String(s.planet??'earth')}, Zeit ${String(s.days??0)}, Ansicht ${s.compare?'Abstandsbalken':'Bahnenmodell'}; Größen und Entfernungsmaßstab getrennt beachten`;
+ case 'tides':return `${s.phase==='quarter'?'Halbmond / Nipptide':'Linie / Springtide'}, ${number('tideHour',0)} h, Zeitversatz ${number('tideDelay',0)} h: ${tideHeight(number('tideHour',0),s.phase==='quarter',number('tideDelay',0)).toFixed(2)} relative Modelleinheiten`;
+ case 'solar':return `Planet ${({mercury:'Merkur',venus:'Venus',earth:'Erde',mars:'Mars',jupiter:'Jupiter',saturn:'Saturn',uranus:'Uranus',neptune:'Neptun'} as Record<string,string>)[String(s.planet??'earth')]??'Erde'}, Zeit ${String(s.days??0)} Tage, Ansicht ${s.compare?'Abstandsbalken':'Bahnenmodell'}; Größen und Entfernungsmaßstab getrennt beachten`;
  default:return '';
  }
 }

@@ -2,16 +2,17 @@ import test from 'node:test';import assert from 'node:assert/strict';import {mkd
 import POLICY from '../content/news-source-policy.json' with {type:'json'};
 import CONTENT from '../app/news-content.json' with {type:'json'};
 import WORLD_INDEX from '../app/world-index.json' with {type:'json'};
-import {availableNews,newsAge} from '../app/news-data.ts';
+import {availableNews,newsAge,newsCheckDate} from '../app/news-data.ts';
 import {dailyTarget,approvedURL,parseFeed,fetchSource,validateNews,formulate,observeClaims,discoverArticles,runNews,saveDraft,publishReviewed} from '../scripts/news/engine.mjs';
 import {dailyNewsTick} from '../scripts/news/schedule.mjs';
+import {prepareNewsEdition} from '../scripts/news/pipeline.mjs';
 const now=new Date('2026-10-11T19:00:00Z'),topicIds=WORLD_INDEX.map(t=>t.id),policy={...POLICY,automaticRetrievalAuthorized:true,discoverySources:[]},brief=CONTENT.entries[1];
 const observations=b=>b.sources.map((source,index)=>({url:source.url,claims:Object.fromEntries(b.claims.filter(c=>c.sourceIndexes.includes(index)).map(c=>[c.key,c.value]))}));
 test('real own news explanations retain actual dates, original links, archive and primary-source independence labels',()=>{
  for(const b of CONTENT.entries)assert.doesNotThrow(()=>validateNews(b,{policy,now,topicIds}));
  assert.equal(availableNews(now).length,3);assert.equal(availableNews(new Date('2026-12-01T12:00:00Z')).length,0);
  assert.equal(brief.eventOn,null);assert.ok(CONTENT.entries[2].verification.includes('nicht als zwei unabhängige'));
- assert.equal(newsAge(CONTENT.entries[0],now),0);assert.equal(newsAge(CONTENT.entries[2],now),10);
+ assert.equal(newsCheckDate('2026-10-10T23:30:00Z'),'11. Oktober 2026');assert.equal(newsAge(CONTENT.entries[0],now),0);assert.equal(newsAge(CONTENT.entries[2],now),10);
 });
 test('Berlin 12:30 has actual summer/winter UTC instants, including both DST transition dates',()=>{
  assert.equal(dailyTarget('2026-10-11'),'2026-10-11T10:30:00.000Z');assert.equal(dailyTarget('2026-10-25'),'2026-10-25T11:30:00.000Z');
@@ -74,4 +75,15 @@ test('connected selection handles duplicates, future and old candidates and neve
  assert.deepEqual(result.report.candidates.map(c=>c.status),['known-brief','future-source','archive-candidate','awaiting-editorial','invalid-date']);
  assert.ok(result.report.awaitingEditorial.includes('https://science.nasa.gov/unknown'));
  assert.equal(discoverArticles('<a href="/new">Own source title</a><a href="https://evil.example/">Bad</a>',policy,'https://science.nasa.gov/').length,1);
+});
+
+test('daily adapter reaches the entire bounded HTTP-to-draft chain once and preserves the archive',async()=>{
+ const directory=await mkdtemp(path.join(tmpdir(),'wk-news-daily-full-'));try{const enabled={...policy,schedulerEnabled:true,discoverySources:[{url:'https://science.nasa.gov/'}]},requested=[];
+ const fetchImpl=async url=>{requested.push(url);if(url==='https://science.nasa.gov/')return new Response('<a href="/unknown">Original title</a>',{headers:{'content-type':'text/html'}});const words=CONTENT.entries.flatMap(b=>b.sources.flatMap((source,i)=>source.url===url?Object.values(b.sourceChecks[i]).flat():[])).join(' ');return new Response('<html>'+words+'</html>',{headers:{'content-type':'text/html'}});};
+ const run=()=>prepareNewsEdition({policy:enabled,content:CONTENT,topicIds,now,directory,fetchImpl,wait:async()=>{}});
+ const first=await dailyNewsTick({policy:enabled,now,directory,run});assert.equal(first.status,'checked');assert.equal(first.result.report.selected.length,3);assert.equal(first.result.report.retained.length,1);assert.equal(first.result.report.candidates[0].status,'awaiting-editorial');
+ const drafted=JSON.parse(await readFile(path.join(directory,'draft.json'),'utf8'));assert.equal(drafted.entries.length,4);assert.equal(drafted.automation,'inactive');assert.equal(drafted.entries.find(b=>b.id==='earth-phobos-2026').checkedAt,CONTENT.entries[3].checkedAt);
+ const count=requested.length;assert.equal((await dailyNewsTick({policy:enabled,now,directory,run})).status,'already-ran');assert.equal(requested.length,count);
+ await assert.rejects(publishReviewed({policy:POLICY,directory,target:path.join(directory,'not-published.json'),approvalFingerprint:first.result.fingerprint,topicIds,now}),/deaktiviert/);
+ }finally{await rm(directory,{recursive:true,force:true});}
 });

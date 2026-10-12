@@ -58,7 +58,7 @@ export function validateNews(entry,{policy,now,topicIds}){
  if(entry.eventOn!==null&&entry.eventOn!==undefined&&!calendarDay(entry.eventOn))fail('Ungültiges Ereignisdatum');
  const age=(Date.parse(berlinDay(now)+'T12:00:00Z')-Date.parse(date+'T12:00:00Z'))/86400000;
  if(age<0)fail('Quelldatum liegt in der Zukunft');
- const checked=Date.parse(entry.checkedAt);if(!Number.isFinite(checked)||checked>now.getTime()||checked<Date.parse(date+'T00:00:00Z'))fail('Ungültiger Prüfzeitpunkt');
+ const checked=Date.parse(entry.checkedAt);if(!Number.isFinite(checked)||checked>now.getTime()||berlinDay(new Date(checked))<date)fail('Ungültiger Prüfzeitpunkt');
  if(!Array.isArray(entry.sources)||entry.sources.length<1||entry.sources.length>5)fail('Quellen fehlen');
  for(const source of entry.sources){approvedURL(source.url,policy);if(!source.organization||source.access!=='reviewed')fail('Quelle ungeprüft');const at=Date.parse(source.checkedAt);if(!Number.isFinite(at)||at>now.getTime())fail('Ungültiger Quellenprüfzeitpunkt');if(source.publishedOn!==null&&(!calendarDay(source.publishedOn)||source.publishedOn>berlinDay(now)))fail('Ungültiges Quellenveröffentlichungsdatum');}
  if(new Set(entry.sources.map(s=>s.url)).size!==entry.sources.length)fail('Doppelte Quellen');

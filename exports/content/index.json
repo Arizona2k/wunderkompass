@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T19:32:38.241Z",
+  "generatedAt": "2026-10-11T20:01:06.907Z",
   "personalProgressIncluded": false,
   "topics": 116,
   "categories": {
@@ -342,13 +342,22 @@
       "sha256": "cf0afdd7b22e689dbcb03e26d8d167797a31ef24062512244871e0ba1d425592"
     },
     {
+      "file": "home-experiment-research.json",
+      "sources": [
+        "app/research-catalog.ts"
+      ],
+      "entries": 6,
+      "bytes": 3547,
+      "sha256": "5060f6fa99353e960fa165c8b315b977f1c089f5e00b657ba90614c244c8d3dc"
+    },
+    {
       "file": "research-paths.json",
       "sources": [
         "app/research-catalog.ts"
       ],
       "entries": 11,
-      "bytes": 4593,
-      "sha256": "3888d6a6c81cf47a247504f3e10cbc1b50130ff246d45035bdb389980b59e6aa"
+      "bytes": 4626,
+      "sha256": "d83c5882cf0bd99d32ffe5b13174888807c75a2260e70bb2aa28f14c60d59767"
     },
     {
       "file": "children-news.json",

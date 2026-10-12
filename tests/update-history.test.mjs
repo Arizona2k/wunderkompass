@@ -106,3 +106,5 @@ test('unconfirmed product work stays unavailable even if an observation date is 
 });
 
  test('known timestamps use actual Berlin DST; missing times remain date-only',()=>{assert.equal(formatHistoryInstant('2026-10-25T00:30:00Z'),'25. Oktober 2026 um 02:30:00 MESZ');assert.equal(formatHistoryInstant('2026-10-25T01:30:00Z'),'25. Oktober 2026 um 02:30:00 MEZ');assert.equal(updateDate({...UPDATE_HISTORY[0],occurredAt:null,publishedOn:'2026-10-11',availableOn:null}),'11. Oktober 2026');});
+
+test('actual PR 23 keeps complete editorial copy separate until verified merge and deployment',()=>{const prepared=PREPARED_UPDATES.find(e=>e.id==='research-2b');assert.ok(prepared);assert.equal(prepared.evidence.pullRequest,23);assert.equal(prepared.status,'prepared');assert.equal(prepared.occurredAt,null);assert.equal(prepared.availableOn,null);assert.deepEqual(prepared.links,[]);assert.equal(publicUpdates().some(e=>e.id===prepared.id),false);assert.equal(prepared.details.length,5);});

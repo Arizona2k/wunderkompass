@@ -1,6 +1,7 @@
+import {createSave,restoreSave,emptyProgress} from '../app/progress-storage.ts';
 import test from 'node:test';import assert from 'node:assert/strict';
 import {seasonalSun,moonObservation,moonAlignment,tideHeight,summarizeLab} from '../app/research-math.ts';
-import {LAB_SEARCH,EXPERIMENT_SEARCH,RESEARCH_QUESTIONS,RESEARCH_PATHS} from '../app/research-catalog.ts';
+import {LAB_SEARCH,EXPERIMENT_SEARCH,EXPERIMENT_RESEARCH,RESEARCH_QUESTIONS,RESEARCH_PATHS} from '../app/research-catalog.ts';
 import WORLD_INDEX from '../app/world-index.json' with {type:'json'};
 import WORLD_ROUTES from '../exports/content/world-routes.json' with {type:'json'};
 import JOURNEYS from '../exports/content/journeys.json' with {type:'json'};
@@ -37,3 +38,9 @@ test('varied homepage knowledge trails use real bidirectional edges, actual rout
  for(const pick of DISCOVERY_CONNECTIONS){const edge=KNOWLEDGE_CONNECTIONS.find(c=>c.id===pick.id);assert.ok(edge);assert.ok(connectionsFor(edge.fromId).some(c=>c.topic===edge.toId));assert.ok(connectionsFor(edge.toId).some(c=>c.topic===edge.fromId));assert.ok(WORLD_ROUTES.some(r=>r.id===pick.routeId));}
  for(const a of DISCOVERY_ACTIVITIES){const [area,id,experiment]=a.hash.split('/');assert.ok(a.text.length>40&&a.title.length>10);if(area==='labs')assert.ok(id==='experiment'?EXPERIMENT_SEARCH.some(e=>e.id===experiment):LAB_SEARCH.some(l=>l.id===id));if(area==='journeys')assert.ok(JOURNEYS.some(j=>j.id===id));}
 });
+
+test('A/B observations name all weather choices and include the new moon and coast conditions',()=>{assert.match(summarizeLab('weather',{weather:'storm'}),/Gewitter/);assert.match(summarizeLab('weather',{weather:'tornado'}),/Tornado/);assert.notEqual(summarizeLab('moon',{angle:180,moonNode:0}),summarizeLab('moon',{angle:180,moonNode:90}));assert.notEqual(summarizeLab('moon',{moonInclined:true}),summarizeLab('moon',{moonInclined:false}));assert.match(summarizeLab('tides',{tideDelay:2}),/Zeitversatz 2 h/);assert.match(summarizeLab('solar',{planet:'neptune',days:4}),/Neptun, Zeit 4 Tage/);});
+
+test('schema-3 backup roundtrip retains old lab answers and every new research field',()=>{const progress=emptyProgress();progress.labs=['moon'];progress.chapters.water=2;progress.settings.largeText=true;progress.settings.readVoice='';progress.gameSessions['lab:moon']={angle:180,answer:2,researchPrediction:'Synthetische Vermutung',researchCompareA:'Erste Beobachtung',researchCompareB:'Zweite Beobachtung',researchJournal:'Synthetische eigene Erklärung',researchMission:7,researchLevel:'hard','researchAnswer-hard':1,moonNode:90,moonInclined:false};const restored=restoreSave(JSON.parse(JSON.stringify(createSave(progress))),true);assert.equal(restored.schemaVersion,3);assert.deepEqual(restored.progress,progress);});
+
+test('all six practical experiments have distinct safe comparisons and scientific limits',()=>{assert.deepEqual(Object.keys(EXPERIMENT_RESEARCH),EXPERIMENT_SEARCH.map(e=>e.id));for(const field of ['safety','prediction','comparison','limit'])assert.equal(new Set(Object.values(EXPERIMENT_RESEARCH).map(e=>e[field])).size,6);assert.match(EXPERIMENT_RESEARCH['foam-volcano'].safety,/niemals verschließen/);assert.match(EXPERIMENT_RESEARCH.evaporation.limit,/gleichzeitig verschieden/);assert.match(EXPERIMENT_RESEARCH.condensation.comparison,/im selben Raum/);});

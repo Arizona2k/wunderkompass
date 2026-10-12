@@ -10,3 +10,5 @@ export function availableNews(now=new Date()){
  return NEWS_ENTRIES.filter(e=>e.editorial.status==='approved'&&newsAge(e,now)>=0&&newsAge(e,now)<=14).toSorted((a,b)=>b.sourcePublishedOn.localeCompare(a.sourcePublishedOn));
 }
 export function newsDate(day:string){return new Intl.DateTimeFormat('de-DE',{day:'numeric',month:'long',year:'numeric',timeZone:'Europe/Berlin'}).format(new Date(day+'T12:00:00Z'));}
+
+export function newsCheckDate(instant:string){return new Intl.DateTimeFormat('de-DE',{day:'numeric',month:'long',year:'numeric',timeZone:'Europe/Berlin'}).format(new Date(instant));}

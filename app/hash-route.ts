@@ -26,6 +26,7 @@ export function restoreRouteView(path:string,focus=true){
  if(opener){opener.focus({preventScroll:true});const r=opener.getBoundingClientRect();if(r.top<8||r.bottom>innerHeight-8)opener.scrollIntoView({block:'center',behavior:'instant'});return;}
  if(path.startsWith('news'))document.getElementById('news-title')?.focus({preventScroll:true});
  else if(path.startsWith('labs/'))document.getElementById('lab-heading')?.focus({preventScroll:true});
+ else if(path==='journeys'||path.startsWith('journeys/')){const heading=document.getElementById('journey-title')??document.getElementById('journey-hub-title');if(heading){heading.focus({preventScroll:true});const r=heading.getBoundingClientRect();if(r.top<8||r.bottom>innerHeight-8)heading.scrollIntoView({block:'center',behavior:'instant'});}}
  else if(path==='updates')document.getElementById('updates-title')?.focus({preventScroll:true});
  else if(path==='world'||path.startsWith('world/')){
   const heading=document.getElementById('world-topic-title')??document.getElementById('world-category-title');
@@ -34,4 +35,4 @@ export function restoreRouteView(path:string,focus=true){
  }
  else focusLearningMain();
 }
-export function useHashRoute(){const first=useRef(true);const path=useSyncExternalStore(subscribe,read,()=> 'globe');useEffect(()=>{const initial=first.current;first.current=false;if(path==='globe'||path==='updates'||path.startsWith('news'))return;const frame=requestAnimationFrame(()=>restoreRouteView(path,!initial||!!history.state?.wunderRoute));return()=>cancelAnimationFrame(frame);},[path]);return path;}
+export function useHashRoute(restore=true){const first=useRef(true);const path=useSyncExternalStore(subscribe,read,()=> 'globe');useEffect(()=>{const initial=first.current;first.current=false;if(!restore||path==='globe'||path==='updates'||path.startsWith('news'))return;const frame=requestAnimationFrame(()=>restoreRouteView(path,!initial||!!history.state?.wunderRoute));return()=>cancelAnimationFrame(frame);},[path,restore]);return path;}

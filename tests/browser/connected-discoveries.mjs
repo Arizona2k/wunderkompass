@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
+const routes=JSON.parse(await fs.readFile(new URL('../../exports/content/world-routes.json',import.meta.url),'utf8'));
 const topics=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 const hints=JSON.parse(await fs.readFile(new URL('../../app/challenge-hints.json',import.meta.url),'utf8'));
 const questionBank=topics.flatMap(t=>[{...t.question,id:t.id+':mini'},...(t.challenges??[])]);
@@ -97,17 +98,19 @@ export async function connectedDiscoveries(page,ready,report,width){
   report.checks.push('New challenge: axe WCAG A/AA scope has no violations');
   for(const id of ['living-networks','moon-to-sea']){
    await page.evaluate(id=>location.hash='world/route/'+id,id);
-   for(let i=0;i<5;i++){
+   const route=routes.find(r=>r.id===id);
+   for(let i=0;i<route.topics.length;i++){
     await page.locator('.world-mini-question').waitFor();
     const title=await page.locator('#world-topic-title').innerText(),t=topics.find(t=>t.title===title);
+    assert.equal(t.id,route.topics[i],'each retained/appended route station is actually visited in order');
     const answer=page.locator('.world-mini-question .quiz-answer').filter({has:page.getByText(t.question.answers[t.question.correct],{exact:true})});
     if(!await answer.isDisabled())await answer.click();
-    await page.getByRole('button',{name:i===4?'Route abschließen':'Zur nächsten Station',exact:true}).click();
+    await page.getByRole('button',{name:i===route.topics.length-1?'Route abschließen':'Zur nächsten Station',exact:true}).click();
    }
    await page.getByRole('heading',{name:'Deine Reise ist erklärt!',exact:true}).waitFor();
    assert.ok((await pass()).discoveries.includes('route:'+id));
   }
-  report.checks.push('Both new five-station routes completed through real mini questions');
+  report.checks.push('Both knowledge routes completed through every actual retained/appended station and real mini questions');
  }
  if(width===1440){
   await page.evaluate(()=>location.hash='world');await page.locator('.world-choice').first().waitFor();
