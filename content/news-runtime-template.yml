@@ -1,0 +1,58 @@
+# Install only in a separately approved PUBLIC news-only repository.
+# This is a reviewed template, not an active workflow in the app repository.
+name: Signed daily WunderKompass news
+on:
+  workflow_dispatch:
+  schedule:
+    # GitHub schedules use the DEFAULTBRANCH. Both ticks cover MEZ/MESZ;
+    # the executable Berliner due/once-per-day gate chooses the applicable one.
+    - cron: '30 10,11 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: wunderkompass-news-content
+  cancel-in-progress: false
+jobs:
+  produce:
+    if: github.repository != 'Arizona2k/wunderkompass' && vars.NEWS_RUNTIME_ENABLED == 'enabled'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    outputs:
+      publish: ${{ steps.prepare.outputs.publish }}
+    steps:
+      # Pinned action revisions must be rechecked during the one-time rollout.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, verified 2026-10-12
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4, verified 2026-10-12
+        with:
+          node-version: '24'
+      - name: Prepare and verify data-only edition
+        id: prepare
+        env:
+          NEWS_SIGNING_JWK: ${{ secrets.NEWS_SIGNING_JWK }}
+        run: |
+          node scripts/news/runtime.mjs
+          if test -f work/news-runtime/publication/latest.json; then
+            node scripts/news/verify-publication.mjs
+          fi
+          node --input-type=module -e "import fs from 'node:fs'; const s=JSON.parse(fs.readFileSync('work/news-runtime/job-status.json')); fs.appendFileSync(process.env.GITHUB_OUTPUT, 'publish='+String(s.publish===true)+'\n');"
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3, verified 2026-10-12
+        if: steps.prepare.outputs.publish == 'true'
+        with:
+          path: work/news-runtime/publication
+  publish:
+    if: needs.produce.outputs.publish == 'true'
+    needs: produce
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # This job executes no source/model code and sees no signing secret.
+      - uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4, verified 2026-10-12
+        id: deployment

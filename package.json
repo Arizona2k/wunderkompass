@@ -10,15 +10,15 @@
     "build": "vite build && node scripts/performance-budget.mjs",
     "start": "vite preview --host 127.0.0.1",
     "preview": "vite preview --host 127.0.0.1",
-    "test": "node --import ./scripts/test-runtime.mjs --test tests/*.test.mjs",
+    "test": "node scripts/test-command.mjs",
     "typecheck": "tsc --noEmit --incremental false",
-    "lint": "eslint app tests/progress.test.mjs --max-warnings 0",
+    "lint": "eslint app scripts/news scripts/quality-evidence.mjs scripts/handoff.mjs scripts/test-command.mjs tests/progress.test.mjs --max-warnings 0",
     "export:data": "node scripts/export-content.mjs",
     "verify:export": "node scripts/verify-content.mjs",
     "verify": "node scripts/verify-content.mjs",
-    "test:browser": "node tests/browser/portable-smoke.mjs",
+    "test:browser": "node tests/browser/quality-runner.mjs",
     "typecheck:fast": "tsc --noEmit --incremental --tsBuildInfoFile work/typecheck.tsbuildinfo",
-    "lint:fast": "eslint app tests/progress.test.mjs --max-warnings 0 --cache --cache-location work/eslint-cache",
+    "lint:fast": "eslint app scripts/news scripts/quality-evidence.mjs scripts/handoff.mjs scripts/test-command.mjs tests/progress.test.mjs --max-warnings 0 --cache --cache-location work/eslint-cache",
     "test:affected": "node scripts/test-selection.mjs",
     "build:profile": "node scripts/measure-build.mjs"
   },
@@ -35,12 +35,12 @@
     "embla-carousel-react": "^8.6.0",
     "input-otp": "^1.4.2",
     "lucide-react": "^1.31.0",
-    "next": "16.3.4",
+    "next": "16.3.8",
     "next-themes": "^0.4.6",
     "radix-ui": "^1.6.7",
-    "react": "19.2.6",
+    "react": "19.2.8",
     "react-day-picker": "^10.0.1",
-    "react-dom": "19.2.6",
+    "react-dom": "19.2.8",
     "react-hook-form": "^7.85.0",
     "react-resizable-panels": "^4.12.2",
     "recharts": "^3.8.0",
@@ -66,19 +66,14 @@
     "eslint-config-next": "16.3.4",
     "json-rpc-2.0": "1.7.1",
     "raw-body": "3.0.2",
-    "react-server-dom-webpack": "19.2.6",
+    "react-server-dom-webpack": "19.2.8",
     "tailwindcss": "4.2.1",
     "tw-animate-css": "^1.4.0",
     "typescript": "5.9.3",
     "vinext": "1.0.0-beta.5",
-    "vite": "8.0.13",
+    "vite": "8.0.16",
     "wrangler": "4.92.0"
   },
   "type": "module",
-  "overrides": {
-    "miniflare": {
-      "sharp": "0.35.4"
-    }
-  },
   "packageManager": "pnpm@11.25.0"
 }

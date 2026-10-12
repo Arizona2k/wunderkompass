@@ -13,29 +13,38 @@ function resolve(from,specifier){
  for(const suffix of ['', '.ts','.tsx','.mjs','.json','/index.ts','/index.tsx']){const f=specifier+suffix;if(fs.existsSync(f)&&fs.statSync(f).isFile())return f;}
  return null;
 }
-export function dependencies(entry,seen=new Set()){
+export function dependencies(entry,seen=new Set(),graph=new Map()){
  const file=path.resolve(entry);if(seen.has(file))return seen;seen.add(file);
- if(!/\.(mjs|ts|tsx|js)$/.test(file))return seen;
- const source=ts.createSourceFile(file,fs.readFileSync(file,'utf8'),ts.ScriptTarget.Latest,true);
- function walk(node){if(ts.isStringLiteralLike(node)){const next=resolve(file,node.text);if(next)dependencies(next,seen);}ts.forEachChild(node,walk);}
- walk(source);return seen;
+ if(!/\.(mjs|cjs|ts|tsx|js)$/.test(file))return seen;
+ // Share parsed edges during one selection, never stale file data across calls.
+ if(!graph.has(file)){
+  const edges=new Set(),source=ts.createSourceFile(file,fs.readFileSync(file,'utf8'),ts.ScriptTarget.Latest,true);
+  function walk(node){if(ts.isStringLiteralLike(node)){const next=resolve(file,node.text);if(next)edges.add(next);}ts.forEachChild(node,walk);}
+  walk(source);graph.set(file,edges);
+ }
+ for(const next of graph.get(file))dependencies(next,seen,graph);return seen;
 }
 export function selectTests(changed){
  const files=[...new Set(changed.map(f=>f.replaceAll('\\','/')))];
  const runtime=files.filter(f=>!/^work\/|^\.qa-output\//.test(f)&&!/\.md$/.test(f));
- const infrastructure=runtime.some(f=>/^(package\.json|pnpm-lock|qa\/|vite\.|tsconfig|eslint|build\/|scripts\/|\.github\/|performance-budgets)/.test(f));
- const unknown=runtime.some(f=>! /^(app\/|components\/|hooks\/|lib\/|migration\/|public\/|exports\/|tests\/)/.test(f));
+ const newsOnly=runtime.length>0&&runtime.every(f=>/^(scripts\/news\/|tests\/news.*\.test\.mjs$|content\/news-source-policy\.json$)/.test(f));
+ const infrastructure=!newsOnly&&runtime.some(f=>/^(package\.json|pnpm-lock|qa\/|vite\.|tsconfig|eslint|build\/|scripts\/|\.github\/|performance-budgets)/.test(f));
+ const unknown=!newsOnly&&runtime.some(f=>! /^(app\/|components\/|hooks\/|lib\/|migration\/|public\/|exports\/|tests\/)/.test(f));
+ // A deleted dependency cannot be resolved by the current graph: fail broad.
+ const deleted=runtime.some(f=>!fs.existsSync(f));
  const allUnits=fs.readdirSync('tests').filter(f=>f.endsWith('.test.mjs')).map(f=>'tests/'+f);
  const absolute=new Set(runtime.map(f=>path.resolve(f)));
- const unitTests=infrastructure||unknown?allUnits:allUnits.filter(f=>[...dependencies(f)].some(d=>absolute.has(d)));
+ const graph=new Map();
+ const unitTests=infrastructure||unknown||deleted?allUnits:allUnits.filter(f=>[...dependencies(f,new Set(),graph)].some(d=>absolute.has(d))||runtime.includes(f));
  let browser=[];
  if(runtime.length){
-  if(!infrastructure&&!unknown&&runtime.every(f=>/^(app\/challenge-hints\.json|tests\/challenge\.test\.mjs|exports\/content\/challenge-hints\.json)$/.test(f)))browser=['challenge','offline'];
+  if(newsOnly&&!deleted)browser=[];
+  else if(!infrastructure&&!unknown&&runtime.every(f=>/^(app\/challenge-hints\.json|tests\/challenge\.test\.mjs|exports\/content\/challenge-hints\.json)$/.test(f)))browser=['challenge','offline'];
   else if(!infrastructure&&!unknown&&runtime.every(f=>/^(app\/update-history|tests\/update-history\.test\.mjs)/.test(f)))browser=['home','offline'];
   else if(runtime.every(f=>/^tests\/.*\.test\.mjs$/.test(f)))browser=[];
   else browser=['foundation','home','core','playground','backup','challenge','research','offline'];
  }
- return {scope:'local iteration only',fullRequiredBeforeReady:true,changed:files,unitTests,release:infrastructure||unknown||runtime.some(f=>f.startsWith('tests/release/')),browser,reason:infrastructure||unknown?'Unknown/shared infrastructure: conservative full selection':'Transitive unit dependencies and explicit browser-risk mapping; unknown UI changes select the full browser path'};
+ return {scope:'local iteration only',fullRequiredBeforeReady:true,changed:files,unitTests,release:infrastructure||unknown||runtime.some(f=>f.startsWith('tests/release/')),browser,reason:infrastructure||unknown||deleted?'Unknown/shared/deleted input: conservative full selection':newsOnly?'News preparation server code only; no browser content changed':'Transitive unit dependencies and explicit browser-risk mapping; unknown UI changes select the full browser path'};
 }
 function changedFiles(base){
  const git=(...a)=>execFileSync('git',a,{encoding:'utf8'}).trim().split('\n').filter(Boolean);
