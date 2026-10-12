@@ -4,9 +4,11 @@ name: Signed daily WunderKompass news
 on:
   workflow_dispatch:
   schedule:
-    # GitHub schedules use the DEFAULTBRANCH. Both ticks cover MEZ/MESZ;
-    # the executable Berliner due/once-per-day gate chooses the applicable one.
-    - cron: '30 10,11 * * *'
+    # Defaultbranch only. Official GitHub timezone support verified 2026-10-12.
+    # First target 12:30, bounded second attempt 13:30 if the first was degraded.
+    # The signed due/once-per-day gate still prevents duplicate successful days.
+    - cron: '30 12,13 * * *'
+      timezone: 'Europe/Berlin'
 permissions:
   contents: read
 concurrency:

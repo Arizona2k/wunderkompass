@@ -83,6 +83,8 @@ Der Nutzerauftrag vom 11. Oktober ersetzt die frühere verkürzte WK-037-Roadmap
 
 ### 2C-Nachweiskette
 
+Zusätzlicher nachgewiesener Betriebsblocker aus aktueller GitHub-Dokumentation: öffentliche schedule-Workflows deaktivieren nach60 Tagen ohne Repository-Aktivität. Vor Freigabe eine nachweisbar funktionierende, minimal berechtigte Langzeit-Lösung oder einen freigegebenen Alternativscheduler klären. Keine unbewiesenen Keepalive-Tricks/App-Schreibrechte/Kosten einsetzen; öffentliche Pages-Ausgabe allein nicht als Repo-Aktivität behaupten. Berlin-timezone wird offiziell unterstützt und deshalb in der weiterhin ausgeschalteten Vorlage verwendet; zwei Berliner Ticks12:30/13:30 mit Einmaligkeits-/Tagesbudgetgate statt unnötiger UTC-Saisonläufe.
+
 Zusätzliche während 2C reproduzierte Korrektur: schnelle Rücknahme von Pass-Einstellungen/Favoriten durch eigenes altes Journal überschrieben; bestehender Store erhält korrekte geteilte Mergebasis, ohne Schemaänderung. Alte Implementierung in neuer Store-Regression nachweislich rot; Unit-, reale Schalter-/Zwei-Tab-/Backup-/Worker-Abnahme sind Teil des endgültigen WK-045-Nachweises. Vier verbleibende Dev-Auditmeldungen: historischer Drizzle-Loader esbuild 0.18, esbuild 0.27/0.28 (low), Vinext-Satori fflate 0.7.4, braces 3.0.3 (high, noch kein Patch); keine bekannte Produktionsabhängigkeitsmeldung. Nicht blind auf inkompatible Major-Versionen überschreiben; bei vorhandenen kompatiblen Patches gezielt nachführen.
 
 Dateiexistenz und automatische Tests sind technische Nachweise, keine wissenschaftliche oder pädagogische Vollgarantie. Ausführlicher Betriebsstand ausschließlich in content/news-operations.md; aktuelle Messwerte/PR/CI in PROJECT_STATE.md.
