@@ -1,5 +1,5 @@
 import DATA from './news-content.json' with {type:'json'};
-export type NewsEntry=Omit<typeof DATA.entries[number],'sources'>&{generation?:{method:string};sourceDateMeaning?:'observation'|'data-update';sources:Array<{name:string;organization:string;url:string;publishedOn:string|null;checkedAt:string;role:string;access:string;rights:string;acknowledgment?:string}>};
+export type NewsEntry=Omit<typeof DATA.entries[number],'sources'>&{generation?:{method:string};sourceDateMeaning?:'observation'|'data-update'|'release';sources:Array<{name:string;organization:string;url:string;publishedOn:string|null;checkedAt:string;role:string;access:string;rights:string;acknowledgment?:string}>};
 export const NEWS_ENTRIES=DATA.entries;
 export const NEWS_CHECKED_AT=DATA.checkedAt;
 export function newsReviewLabel(entry:NewsEntry){return entry.generation?'Automatisch mit Quelldaten abgeglichen':'Quellenbasierte Erklärung';}

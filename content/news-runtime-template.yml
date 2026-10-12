@@ -16,6 +16,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   produce:
+    permissions:
+      contents: write # Only the separate news-content repository; never the app.
     if: github.repository != 'Arizona2k/wunderkompass' && vars.NEWS_RUNTIME_ENABLED == 'enabled'
     runs-on: ubuntu-24.04
     timeout-minutes: 8
@@ -25,7 +27,7 @@ jobs:
       # Pinned action revisions must be rechecked during the one-time rollout.
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, verified 2026-10-12
         with:
-          persist-credentials: false
+          persist-credentials: true # Repository-scoped GITHUB_TOKEN for signed JSON journal only.
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4, verified 2026-10-12
         with:
           node-version: '24'
@@ -39,6 +41,9 @@ jobs:
             node scripts/news/verify-publication.mjs
           fi
           node --input-type=module -e "import fs from 'node:fs'; const s=JSON.parse(fs.readFileSync('work/news-runtime/job-status.json')); fs.appendFileSync(process.env.GITHUB_OUTPUT, 'publish='+String(s.publish===true)+'\n');"
+      - name: Retain genuine signed JSON activity
+        if: steps.prepare.outputs.publish == 'true'
+        run: node scripts/news/journal.mjs
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3, verified 2026-10-12
         if: steps.prepare.outputs.publish == 'true'
         with:

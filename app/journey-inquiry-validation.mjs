@@ -8,6 +8,7 @@ export function validateJourneyInquiries(data,journeys){
   for(const q of c.tasks)if(!text(q.prompt)||!text(q.hint)||!text(q.why)||!Array.isArray(q.answers)||q.answers.length!==3||new Set(q.answers).size!==3||!q.answers.every(text)||!Number.isInteger(q.correct)||q.correct<0||q.correct>2||!Array.isArray(q.wrong)||q.wrong.length!==3||!q.wrong.every(text))throw Error('Aufgabe oder Rückmeldung ungültig.');
   if(c.sequence&&(!Array.isArray(c.sequence)||c.sequence.length<3||c.sequence.length>4||new Set(c.sequence).size!==c.sequence.length||!c.sequence.every(text)))throw Error('Reihenfolgeaufgabe ungültig.');
  }
+ if(!data.finalHints||Object.keys(data.finalHints).length!==journeys.length||journeys.some(j=>!text(data.finalHints[j.id])))throw Error('Abschlusshinweise fehlen.');
  for(const j of journeys)for(let index=0;index<j.steps.length;index++)if(!ids.has(j.id+':'+index))throw Error('Kapitelprüfung fehlt.');
  return data.chapters;
 }

@@ -2,6 +2,8 @@ import {fetchSource,validateNews,berlinDay,saveDraft} from './engine.mjs';
 import {calendarDay} from '../../app/news-validation.mjs';
 import {fingerprint} from '../../app/news-wire.mjs';
 import {planetURL,planetEvidence,generatePlanet,verifyPlanet} from './exoplanets.mjs';
+import {SOFTWARE_SOURCE,releaseEvidence,generateSoftware,verifySoftware} from './software.mjs';
+import {monitorRights} from './rights-monitor.mjs';
 import {selectTopics} from './topic-selection.mjs';
 
 const assert=(condition,message)=>{if(!condition)throw Error(message);};
@@ -39,7 +41,7 @@ export function generateEpic(evidence,{now,sourceHashes}){
   editorial:{status:'approved',reviewer:'Automatische Sachregel EPIC v1 · keine menschliche Einzelabnahme',reviewedAt:checkedAt},
   sources:[SOURCE,SOURCE+'/date/'+day].map((url,i)=>({name:i?'NASA EPIC · datierte Vergleichsserie':'NASA EPIC Team · aktuelle Metadaten',organization:'NASA EPIC Team',url,publishedOn:null,checkedAt,role:'primary',access:'reviewed',rights:'Öffentliche EPIC-API; Wiederverwendung mit Quellenangabe gemäß EPIC Image Use Policy. Keine fremden Bilder oder Bildunterschriften.',sha256:sourceHashes[i]})),
   claims:[{key:'observation-day',value:day,sourceIndexes:[0,1]},{key:'observation-count',value:String(count),sourceIndexes:[0,1]}],
-  generation:{method:'structured-epic-v1',eventKey:'epic:'+day,ruleVersion:1,evidence,sourceHashes},
+  generation:{method:'bounded-structured-generators-v1',eventKey:'epic:'+day,ruleVersion:1,evidence,sourceHashes},
  };
 }
 export function verifyEpic(entry,observed,comparison,{now,policy,topicIds,sourceHashes}){
@@ -51,14 +53,15 @@ export function verifyEpic(entry,observed,comparison,{now,policy,topicIds,source
  validateNews(entry,{policy,now,topicIds});return entry;
 }
 export async function prepareAutomaticEdition({policy,content,topicIds,directory,now=new Date(),fetchImpl=fetch,wait}){
- const report={schemaVersion:1,runAt:now.toISOString(),day:berlinDay(now),mode:'automatic-preparation',selected:[],retained:[],issues:[],candidates:[],requests:0,method:'structured-epic-v1',externalAIRequests:0};
+ const report={schemaVersion:1,runAt:now.toISOString(),day:berlinDay(now),mode:'automatic-preparation',selected:[],retained:[],issues:[],candidates:[],requests:0,method:'bounded-structured-generators-v1',externalAIRequests:0,rightsRequests:0,rightsMonitoring:[]};
+ const sourceRightsChecks={...(content.sourceRightsChecks??{})};
  const entries=content.entries.map(e=>structuredClone(e)),verifiedCandidates=[];
  const propose=(entry,domain,subjectKey,family,recurring=false)=>{const existing=entries.find(e=>e.id===entry.id);if(existing&&JSON.stringify(existing.claims)===JSON.stringify(entry.claims))report.retained.push(existing.id);else verifiedCandidates.push({entry,domain,subjectKey,eventKey:entry.generation.eventKey,family,recurring,verified:true,rightsConfirmed:true,risk:'routine'});};
  const deadline=AbortSignal.timeout(120000);
  const read=async url=>{assert(!deadline.aborted,'Nachrichtenlaufzeit überschritten');assert(++report.requests<=8,'Quellenabrufbudget überschritten');return fetchSource(url,policy,{fetchImpl,json:true,signal:deadline,...(wait?{wait}:{})});};
- const rights=id=>{assert(policy.autonomousGenerationEnabled,'Autonome Erstellung ist deaktiviert');const source=policy.structuredSources?.find(s=>s.id===id);assert(source?.rights?.status==='confirmed'&&calendarDay(source.rights.checkedOn),'Quellenrechte nicht bestätigt');assert(Date.parse(berlinDay(now))-Date.parse(source.rights.checkedOn)<=180*86400000&&source.rights.checkedOn<=berlinDay(now),'Quellenrechteprüfung ist überaltert oder zukünftig');return source;};
- try{
-  const source=rights('nasa-epic');
+ const rights=async id=>{assert(policy.autonomousGenerationEnabled,'Autonome Erstellung ist deaktiviert');const source=policy.structuredSources?.find(s=>s.id===id);const monitored=await monitorRights(source,{policy,previous:sourceRightsChecks[id],now,readDocument:async url=>{assert(report.rightsRequests<5&&!deadline.aborted,'Rechteabrufbudget überschritten');report.rightsRequests++;return fetchSource(url,policy,{fetchImpl,signal:deadline,rightsDocument:true,...(wait?{wait}:{})});}});report.rightsMonitoring.push({id,status:monitored.status,checkedOn:monitored.effectiveCheckedOn});if(monitored.proof)sourceRightsChecks[id]=monitored.proof;return source;};
+ if(policy.structuredSources?.some(s=>s.id==='nasa-epic'))try{
+  const source=await rights('nasa-epic');
   assert(source.url===SOURCE,'EPIC-API stimmt nicht mit der geprüften Schnittstelle überein');
   const latest=await read(SOURCE),rows=JSON.parse(latest.document),evidence=epicEvidence(rows,{now,policy});
   report.candidates.push({organization:'NASA EPIC Team',location:'Satellit DSCOVR',eventOn:evidence.day,kind:'dated-observation',count:evidence.count});
@@ -67,7 +70,7 @@ export async function prepareAutomaticEdition({policy,content,topicIds,directory
   propose(entry,'geografie','epic-earth-observations','earth-observation-series',true);
  }catch(error){report.issues.push({id:'nasa-epic',reason:error.message});}
  if(policy.structuredSources?.some(s=>s.id==='nasa-exoplanets'))try{
-  rights('nasa-exoplanets');const url=planetURL({day:berlinDay(now)}),fetched=await read(url),rows=JSON.parse(fetched.document);
+  await rights('nasa-exoplanets');const url=planetURL({day:berlinDay(now)}),fetched=await read(url),rows=JSON.parse(fetched.document);
   assert(Array.isArray(rows)&&rows.length<=10,'Unbegrenzte Planetenliste');const seen=new Set();let comparisons=0;
   for(const row of rows){
    if(comparisons>=3)break;
@@ -80,6 +83,12 @@ export async function prepareAutomaticEdition({policy,content,topicIds,directory
    }catch(error){report.issues.push({id:String(row.pl_name??'nasa-exoplanets'),reason:error.message});}
   }
  }catch(error){report.issues.push({id:'nasa-exoplanets',reason:error.message});}
+ if(policy.structuredSources?.some(s=>s.id==='github-godot'))try{
+  const source=await rights('github-godot');assert(source.url===SOFTWARE_SOURCE,'Software-Schnittstelle stimmt nicht mit dem geprüften Originalprojekt überein');
+  const latest=await read(SOFTWARE_SOURCE),row=JSON.parse(latest.document),evidence=releaseEvidence(row,{now,policy});
+  report.candidates.push({organization:'Godot-Projekt / GitHub',kind:'software-release',project:evidence.project,version:evidence.version,publishedOn:evidence.day,eligible:evidence.fresh});
+  if(evidence.fresh){const comparison=await read(row.url),context={now,policy,topicIds,sourceHashes:[latest.sha256,comparison.sha256]};const entry=verifySoftware(generateSoftware(evidence,context),row,JSON.parse(comparison.document),context);propose(entry,'technologie','software:godot:'+evidence.version,'software-releases');}
+ }catch(error){report.issues.push({id:'github-godot',reason:error.message});}
  const choice=selectTopics(verifiedCandidates,{history:content.selectionHistory??[],previous:content.entries,now,maxItems:policy.maxItems});
  report.rotation={windowDays:14,recurringSeriesCooldownDays:7,domainLimits:'soft-preference',availableDomains:choice.availableDomains,held:choice.held};
  for(const candidate of choice.selected){const entry={...candidate.entry,generation:{...candidate.entry.generation,domain:candidate.domain,subjectKey:candidate.subjectKey,meaningKey:candidate.meaningKey,family:candidate.family}};const old=entries.findIndex(e=>e.id===entry.id);if(old>=0)entries.splice(old,1);entries.push(entry);report.selected.push(entry.id);}
@@ -87,7 +96,7 @@ export async function prepareAutomaticEdition({policy,content,topicIds,directory
  entries.sort((a,b)=>b.sourcePublishedOn.localeCompare(a.sourcePublishedOn)||a.id.localeCompare(b.id));
  const retainedManual=entries.filter(e=>!e.generation),recentAutomatic=entries.filter(e=>e.generation).slice(0,Math.max(0,128-retainedManual.length));
  const publishedEntries=[...retainedManual,...recentAutomatic].sort((a,b)=>b.sourcePublishedOn.localeCompare(a.sourcePublishedOn)||a.id.localeCompare(b.id));
- const payload={schemaVersion:1,checkedAt:publishedEntries.reduce((a,e)=>e.checkedAt>a?e.checkedAt:a,'1970-01-01T00:00:00Z'),automation:'automatic',selectionHistory:choice.history,entries:publishedEntries};
+ const payload={...(Object.keys(sourceRightsChecks).length?{sourceRightsChecks}:{}),schemaVersion:1,checkedAt:publishedEntries.reduce((a,e)=>e.checkedAt>a?e.checkedAt:a,'1970-01-01T00:00:00Z'),automation:'automatic',selectionHistory:choice.history,entries:publishedEntries};
  for(const entry of payload.entries)validateNews(entry,{policy,now,topicIds});
  const result={payload,report,fingerprint:await fingerprint(payload)};
  if(directory)await saveDraft(directory,result);return result;

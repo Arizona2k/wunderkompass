@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "9f2328ab73c9a142bd023668046310f1661958e9",
+    "commit": "2de46220f602ce7ac6124afb59db0aed50dfc8e4",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -22,7 +22,8 @@
       "dc6ba13b0a465da4f544192ca22742a1e4b5eaac",
       "d6e3219368fa1713a4e23336cb7b6a011f2b6292",
       "4b73cdb4ab049bcfe227fd43f07c80e8ffe68b0f",
-      "1f7fe74a0f8e7e14bf8e709aea2135dc1b09172c"
+      "1f7fe74a0f8e7e14bf8e709aea2135dc1b09172c",
+      "2de46220f602ce7ac6124afb59db0aed50dfc8e4"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -551,6 +552,37 @@
           "createdAt": "2026-10-12T08:14:39Z",
           "updatedAt": "2026-10-12T08:14:39Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/6UY9x2jgRtHTBFh3Dh5vww2i5TJh"
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Paket 2C: Engineering, signierte Kinder-News und Themenrotation",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/24",
+      "base": "test-live",
+      "mergedAt": "2026-10-12T14:27:37Z",
+      "mergeCommit": "2de46220f602ce7ac6124afb59db0aed50dfc8e4",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/2de46220f602ce7ac6124afb59db0aed50dfc8e4/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56148063672,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-12T14:30:41Z",
+          "updatedAt": "2026-10-12T14:30:41Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/857HqwbPXKkx3x97wNzoeCa4TdpV"
+        },
+        {
+          "id": 56147833283,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-12T14:27:40Z",
+          "updatedAt": "2026-10-12T14:27:40Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/857HqwbPXKkx3x97wNzoeCa4TdpV"
         }
       ]
     }

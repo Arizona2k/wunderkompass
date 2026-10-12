@@ -25,7 +25,7 @@ export function parseFeed(xml,policy){
   try{return [{url:approvedURL(url,policy),title:plain(field('title')??''),publishedAt:field('pubDate')??field('published')??field('updated')??null}];}catch{return [];}
  });
 }
-export async function fetchSource(url,policy,{fetchImpl=fetch,wait=ms=>new Promise(r=>setTimeout(r,ms)),json=false,signal}={}){
+export async function fetchSource(url,policy,{fetchImpl=fetch,wait=ms=>new Promise(r=>setTimeout(r,ms)),json=false,rightsDocument=false,signal}={}){
  const approved=approvedURL(url,policy);if(!policy.automaticRetrievalAuthorized)fail('Regelmäßiger Quellenabruf noch nicht freigegeben');
  let last;
  for(let attempt=0;attempt<Math.min(3,policy.attempts);attempt++){
@@ -33,11 +33,11 @@ export async function fetchSource(url,policy,{fetchImpl=fetch,wait=ms=>new Promi
    const response=await fetchImpl(approved,{redirect:'error',signal:signal?AbortSignal.any([signal,AbortSignal.timeout(policy.timeoutMs)]):AbortSignal.timeout(policy.timeoutMs),headers:{Accept:json?'application/json':'text/html, application/rss+xml, application/atom+xml','User-Agent':'WunderKompass-Quellenpruefung/1.0'}});
    if(!response.ok){const error=new Error('Quellenstatus '+response.status);error.retry=response.status===429||response.status>=500;throw error;}
    if(response.url&&response.url!==approved)fail('Unerwartete Umleitung');
-   const type=response.headers.get('content-type')??'';if(!(json?/application\/json/i.test(type):/text\/html|application\/(?:rss\+xml|atom\+xml|xml)|text\/xml/.test(type)))fail('Unpassender Quellentyp');
+   const type=response.headers.get('content-type')??'';if(!(json?/application\/json/i.test(type):/text\/html|application\/(?:rss\+xml|atom\+xml|xml)|text\/xml/.test(type)||(rightsDocument&&/^text\/plain\b/i.test(type))))fail('Unpassender Quellentyp');
    if(Number(response.headers.get('content-length'))>policy.maxBytes)fail('Quelle zu groß');
    let bytes=0;const chunks=[];const reader=response.body.getReader();try{for(;;){const {value,done}=await reader.read();if(done)break;bytes+=value.length;if(bytes>policy.maxBytes)fail('Quelle zu groß');chunks.push(value);}}finally{await reader.cancel().catch(()=>{});reader.releaseLock();}
    const text=Buffer.concat(chunks).toString('utf8');if(!text.trim())fail('Leere Quelle');
-   return {url:approved,sha256:createHash('sha256').update(text).digest('hex'),document:text,text:plain(text),bytes};
+   return {url:approved,sha256:createHash('sha256').update(text).digest('hex'),document:text,text:json||rightsDocument?text:plain(text),bytes};
   }catch(error){last=error;if(signal?.aborted||error.retry===false||/Umleitung|Quellentyp|zu groß|Leere/.test(error.message))break;if(attempt+1<Math.min(3,policy.attempts))await wait(250*2**attempt);}
  }
  throw last;

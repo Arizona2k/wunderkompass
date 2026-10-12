@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {useHashRoute,navigateHash,focusLearningMain,restoreRouteView} from "./hash-route";
+import {useHashRoute,navigateHash,replaceHash,focusLearningMain,restoreRouteView} from "./hash-route";
 import { localId } from "./local-id";
 
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -137,11 +137,15 @@ export default function EarthExplorer(){
   useEffect(()=>{const value=routePath.split('/')[0];if(MODES.includes(value)){setMode(value as Mode);setVisited(p=>new Set([...p,value]));setSpin(false);setTouchActive(false);}},[routePath]);
   useEffect(()=>{if(routePath!=='games'||mode!=='games'||!/^game-knowledge-|^order-knowledge-|^game-route-/.test(history.state?.wunderFocus??''))return;const frame=requestAnimationFrame(()=>restoreRouteView('games'));return()=>cancelAnimationFrame(frame);},[routePath,mode]);
 
-// eslint-disable-next-line react-hooks/set-state-in-effect -- Synchronize an explicit external navigation, saved pass, or browser-engine event; not derived render state.
-  useEffect(()=>{if(!local.ready||hydratedRevision===local.restoreRevision)return;const q=local.progress.quizSession;if(q){const items=q.ids.map(id=>QUESTIONS.find(q=>q.id===id)).filter((q):q is typeof QUESTIONS[number]=>!!q);if(items.length===q.ids.length){quizId.current=q.id;setQuiz(items);setQuestionIndex(Math.min(q.index,items.length-1));setAnswer(q.answer);setScore(q.score);setQuizFinished(q.finished);setQuizDifficulty(q.difficulty);setQuizCategory(QUIZ_CATEGORIES.includes(q.category)?q.category:"Alle Themen");}}
+  useEffect(()=>{if(!local.ready||hydratedRevision===local.restoreRevision)return;
+    // An imported/reset pass takes precedence over a reader's pre-import URL.
+    // Otherwise remounting the chapter would immediately overwrite its restored resume.
+    if(hydratedRevision>=0&&routePath.startsWith('journeys/')){const restored=local.progress.lastActivity;replaceHash(restored?.type==='journey'?'journeys/'+restored.id:'journeys');}
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Restore external pass state after database/import/reset; not a derived render calculation.
+    const q=local.progress.quizSession;if(q){const items=q.ids.map(id=>QUESTIONS.find(q=>q.id===id)).filter((q):q is typeof QUESTIONS[number]=>!!q);if(items.length===q.ids.length){quizId.current=q.id;setQuiz(items);setQuestionIndex(Math.min(q.index,items.length-1));setAnswer(q.answer);setScore(q.score);setQuizFinished(q.finished);setQuizDifficulty(q.difficulty);setQuizCategory(QUIZ_CATEGORIES.includes(q.category)?q.category:"Alle Themen");}}
     else if(local.restoreRevision){setQuizDifficulty("normal");setQuiz(QUESTIONS.slice(0,8));setQuestionIndex(0);setAnswer(null);setScore(0);setQuizFinished(false);quizId.current=localId();}
     setResumeGame(undefined);setGamePanel(null);const next=MISSIONS.findIndex((_,i)=>!local.progress.missions.includes(i));setMission(next<0?MISSIONS.length-1:next);setMissionDone(next<0);setHydratedRevision(local.restoreRevision);
-  },[local.ready,local.restoreRevision,hydratedRevision,local.progress.quizSession,local.progress.missions]);
+  },[local.ready,local.restoreRevision,hydratedRevision,local.progress.quizSession,local.progress.missions,routePath,local.progress.lastActivity]);
   useEffect(()=>{if(local.ready&&hydrated&&mode==="quiz")saveQuiz({id:quizId.current,ids:quiz.map(q=>q.id),index:questionIndex,answer,score,finished:quizFinished,category:quizCategory,difficulty:quizDifficulty});},[local.ready,hydrated,mode,quiz,questionIndex,answer,score,quizFinished,quizCategory,quizDifficulty,saveQuiz]);
   useEffect(()=>()=>{void audio.current?.close().catch(()=>{});},[]);
   const celebrate=useCallback(()=>{if(!soundEnabled)return;try{const Constructor=window.AudioContext??(window as Window&{webkitAudioContext?:typeof AudioContext}).webkitAudioContext;if(!Constructor)return;const context=audio.current??new Constructor();audio.current=context;void context.resume().catch(()=>{});const tone=context.createOscillator(),volume=context.createGain();tone.type="sine";tone.frequency.setValueAtTime(523.25,context.currentTime);tone.frequency.exponentialRampToValueAtTime(659.25,context.currentTime+.09);volume.gain.setValueAtTime(.035,context.currentTime);volume.gain.exponentialRampToValueAtTime(.0001,context.currentTime+.17);tone.connect(volume);volume.connect(context.destination);tone.start();tone.stop(context.currentTime+.18);tone.onended=()=>{tone.disconnect();volume.disconnect();};}catch{}},[soundEnabled]);

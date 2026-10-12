@@ -13,7 +13,7 @@ export async function runNewsJob({policy,runtime,content,topicIds,directory,priv
  if(now.getTime()<Date.parse(dailyTarget(berlinDay(now),policy.localTime)))return {status:'not-due',publication:'unchanged'};
  if(runtime.maxExternalAICost!==0||policy.externalAIEnabled)throw Error('Kein freigegebenes KI-Kostenbudget');
  if(runtime.mode!=='isolated'){
-  if(runtime.mode!=='pages'||!runtime.allowedRepository||repository!==runtime.allowedRepository||repository==='Arizona2k/wunderkompass')throw Error('Kein freigegebenes separates News-Repository');
+  if(runtime.mode!=='pages'||runtime.allowedBranch!=='news-content'||!runtime.allowedRepository||repository!==runtime.allowedRepository||repository==='Arizona2k/wunderkompass')throw Error('Kein freigegebenes separates News-Repository');
   feedURL(runtime.endpoint);
  }
  if(!privateKey||!runtime.keyId||!runtime.keys[runtime.keyId])throw Error('Signier- oder öffentlicher Prüfschlüssel fehlt');

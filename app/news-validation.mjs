@@ -8,7 +8,7 @@ export function validateNews(entry,{policy,now,topicIds}){
  if(!/^[a-z0-9-]+$/.test(entry.id)||!topicIds.includes(entry.topicId))fail('Ungültige Nachrichten-/Wissens-ID');
  if(entry.title.length>100||entry.summary.length>350||entry.explanation.length>900)fail('Nachricht zu lang');
  if(['section','why','background','question','verification','connectionWhy'].some(k=>entry[k].length>1200))fail('Nachrichtenfeld zu lang');
- if(entry.sourceDateMeaning!==undefined&&!['observation','data-update'].includes(entry.sourceDateMeaning))fail('Unbekannte Bedeutung des Quellenstands');
+ if(entry.sourceDateMeaning!==undefined&&!['observation','data-update','release'].includes(entry.sourceDateMeaning))fail('Unbekannte Bedeutung des Quellenstands');
  if(required.some(k=>/<[^>]*>|https?:\/\//i.test(entry[k])))fail('HTML oder fremde URL im Redaktionstext');
  const copy=['title','summary','explanation','why','background','question'].map(k=>entry[k]).join(' ');
  if(/schock!|blutbad|kaufe jetzt|jetzt abonnieren|du musst sofort|garantiert ungefährlich/i.test(copy))fail('Ungeeignete Angst-, Werbe- oder Sicherheitsformulierung');

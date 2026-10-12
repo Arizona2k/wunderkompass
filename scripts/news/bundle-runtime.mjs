@@ -1,0 +1,18 @@
+import fs from 'node:fs/promises';import path from 'node:path';import {createHash} from 'node:crypto';import {fileURLToPath} from 'node:url';
+export const RUNTIME_FILES=['app/news-validation.mjs','app/news-wire.mjs','app/news-feed-client.mjs',...['engine','automatic','exoplanets','software','topic-selection','schedule','lane','runtime','verify-publication','journal','rights-monitor','readiness'].map(name=>'scripts/news/'+name+'.mjs')];
+/** Reviewable dormant installation package. No provisioning, secret creation,
+ * Git push, workflow activation, application code or private learner data.
+ */
+export async function bundleRuntime(destination,{root=process.cwd()}={}){
+ const out=path.resolve(destination);if(!out.startsWith(path.join(root,'work')+path.sep))throw Error('Runtime-Paket muss im ignorierten work-Ordner bleiben');
+ await fs.mkdir(out,{recursive:true});if((await fs.readdir(out)).length)throw Error('Zielordner ist nicht leer');const manifest=[];
+ const write=async(file,data)=>{await fs.mkdir(path.dirname(path.join(out,file)),{recursive:true});await fs.writeFile(path.join(out,file),data);manifest.push({file,bytes:Buffer.byteLength(data),sha256:createHash('sha256').update(data).digest('hex')});};
+ for(const file of RUNTIME_FILES){const data=await fs.readFile(path.join(root,file),'utf8');for(const match of data.matchAll(/from\s+['"]([^'"]+)['"]/g)){const specifier=match[1];if(specifier.startsWith('node:'))continue;const dependency=path.relative(root,path.resolve(root,path.dirname(file),specifier));if(!RUNTIME_FILES.includes(dependency))throw Error('Nicht freigegebene Runtime-Abhängigkeit '+dependency);}await write(file,data);}
+ for(const file of ['content/news-source-policy.json','content/news-runtime.json','app/news-content.json']){const text=await fs.readFile(path.join(root,file),'utf8');const data=JSON.parse(text);if(file.endsWith('news-runtime.json')&&(data.mode!=='disabled'||Object.keys(data.keys).length||data.keyId||data.endpoint))throw Error('Nur deaktivierte secretfreie Vorlage bündeln');if(file.endsWith('news-source-policy.json')&&[data.schedulerEnabled,data.publicationEnabled,data.externalAIEnabled].some(Boolean))throw Error('Aktive Veröffentlichung darf nicht als inaktives Paket ausgegeben werden');await write(file,text);}
+ const index=JSON.parse(await fs.readFile(path.join(root,'app/world-index.json'),'utf8'));await write('app/world-index.json',JSON.stringify(index.map(t=>({id:t.id})),null,2)+'\n');
+ await write('.github/workflows/news.yml',await fs.readFile(path.join(root,'content/news-runtime-template.yml'),'utf8'));
+ await write('package.json',JSON.stringify({private:true,type:'module',engines:{node:'24.x'}},null,2)+'\n');await write('.gitignore','/work/\n.env*\n*.pem\n');
+ await write('README.md','# Inaktives WunderKompass-News-Paket\n\nNur im separat freigegebenen öffentlichen News-only Repository installieren, Defaultbranch news-content. Noch keine aktive Nachrichtenroutine: Betriebsbedingungen und Source-/Hosting-/Key-/Rechteprüfung aus dem bestehenden content/news-operations.md im privaten App-Projekt erfüllen. Kein App-Code, keine Spielstände und kein Signiersecret enthalten. Node24, keine Paketinstallation nötig. Public Trust-Key/Endpoint anschließend im normalen App-PR konfigurieren; keine automatische App-Übernahme.\n');
+ const proof={schemaVersion:1,status:'dormant-review-package',containsLearnerData:false,containsPrivateKey:false,activatesScheduler:false,files:manifest};await fs.writeFile(path.join(out,'bundle-manifest.json'),JSON.stringify(proof,null,2)+'\n');return proof;
+}
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))console.log(JSON.stringify(await bundleRuntime(process.argv[2]??'work/news-runtime-package')));

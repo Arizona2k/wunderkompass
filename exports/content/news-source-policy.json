@@ -18,7 +18,11 @@
     "science.nasa.gov",
     "www.jpl.nasa.gov",
     "epic.gsfc.nasa.gov",
-    "exoplanetarchive.ipac.caltech.edu"
+    "exoplanetarchive.ipac.caltech.edu",
+    "api.github.com",
+    "docs.github.com",
+    "godotengine.org",
+    "raw.githubusercontent.com"
   ],
   "automaticRetrievalAuthorized": false,
   "structuredSources": [
@@ -50,6 +54,27 @@
           "https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html",
           "https://exoplanetarchive.ipac.caltech.edu/docs/acknowledge.html",
           "https://exoplanetarchive.ipac.caltech.edu/docs/API_PS_columns.html"
+        ]
+      }
+    },
+    {
+      "id": "github-godot",
+      "url": "https://api.github.com/repos/godotengine/godot/releases/latest",
+      "method": "Public documented REST API: one latest stable release, then one ID-specific comparison only for a fresh candidate; no release notes, downloads, images or personal metadata retained",
+      "responsible": "Godot project / GitHub; WunderKompass operator reviews source-rule changes and exceptions",
+      "rights": {
+        "status": "confirmed",
+        "checkedOn": "2026-10-13",
+        "basis": "Official GitHub REST API and API terms permit bounded public metadata access; no spam, token sharing, scraping of people or copied release notes. Original Godot release/latest and release/372486926 were actually read and matched, 4.7.2-stable published 2026-08-18T16:12:28Z; this old release remains ineligible. Godot official licence confirms free MIT software; news copies only metadata facts in original wording.",
+        "urls": [
+          "https://raw.githubusercontent.com/github/site-policy/main/Policies/github-terms/github-terms-of-service.md"
+        ],
+        "checkedAt": "2026-10-12T22:42:19.059Z",
+        "documentFingerprints": [
+          {
+            "url": "https://raw.githubusercontent.com/github/site-policy/main/Policies/github-terms/github-terms-of-service.md",
+            "sha256": "b99f61303568322df9cd36b94e7293c71cc16fb06f8035837d4c44af895874cf"
+          }
         ]
       }
     }
