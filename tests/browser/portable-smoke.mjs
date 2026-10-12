@@ -32,7 +32,7 @@ browser=await chromium.launch(options);report.browser=browser.version();
 try{
  if(runSuite('foundation')){await timed('performance',()=>performanceFlow(browser,base,ready,monitor,report));await timed('components',()=>componentFlow(browser,base,ready,monitor,report,shots));}
 if(runSuite('research'))await timed('research',()=>researchNewsFlow(browser,base,ready,monitor,report,shots));
-if(runSuite('journeys'))await timed('journeys',()=>journeysFlow(browser,base,ready,monitor,report,shots));
+if(runSuite('journeys'))await timed('journeys',()=>journeysFlow(browser,base,ready,monitor,report,shots,{chromium,options}));
 if(runSuite('home'))await timed('home',()=>homepageOverview(browser,base,ready,monitor,report,shots));
  const coreStarted=performance.now();
  if(runSuite('core'))for(const [width,height] of [[1440,900],[768,1024],[390,844],[360,800]]){

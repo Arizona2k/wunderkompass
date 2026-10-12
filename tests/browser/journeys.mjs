@@ -1,3 +1,4 @@
+import {nativeJourneyZoom} from './journey-zoom.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -15,7 +16,7 @@ async function geometry(p,label){
  }));assert.deepEqual(escaped,[],label+' readable controls and text within viewport');
 }
 async function axe(p,selector){await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});const violations=await p.evaluate(async selector=>(await window.axe.run(selector,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']}})).violations.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)})),selector);assert.deepEqual(violations,[],'journey accessibility');}
-export async function journeysFlow(browser,base,ready,monitor,report,shots){
+export async function journeysFlow(browser,base,ready,monitor,report,shots,nativeBrowser){
  const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce',acceptDownloads:true}),p=await context.newPage();monitor(p);p.setDefaultTimeout(20000);
  await p.goto(base+'/#journeys');await ready(p);await p.locator('.journey-tile').first().waitFor();assert.equal(await p.locator('.journey-tile').count(),16);
  await p.locator('.journey-filters input').fill('Wolken');assert.ok(await p.locator('.journey-tile').count()<16);await p.locator('.journey-filters input').fill('');
@@ -50,6 +51,7 @@ export async function journeysFlow(browser,base,ready,monitor,report,shots){
  report.checks.push('Seven journey viewport widths, readable diagram labels, touch targets, keyboard focus, reduced motion and WCAG axe');
  const broken=await browser.newContext({viewport:{width:390,height:844}}),retryPage=await broken.newPage();monitor(retryPage);let requests=0;const malformed=structuredClone(data);malformed.chapters[0].tasks[0].correct=99;await retryPage.route('**/journey-inquiries-*.json',async route=>{requests++;if(requests===1)await route.fulfill({json:malformed});else await route.continue();});
  await retryPage.goto(base+'/#journeys/water/3');await ready(retryPage);await retryPage.getByRole('button',{name:'Aufgaben erneut laden',exact:true}).waitFor();assert.equal(await retryPage.locator('.journey-inquiry').count(),0);assert.ok((await retryPage.locator('.chapter-text').innerText()).includes('Kondensation'));await retryPage.getByRole('button',{name:'Aufgaben erneut laden',exact:true}).click();await retryPage.locator('[data-chapter-inquiry="water:2"]').waitFor();assert.equal(requests,2);await broken.close();report.checks.push('Malformed chapter payload fails closed while the old reading text remains; explicit retry loads valid tasks once');
+ await nativeJourneyZoom(nativeBrowser.chromium,nativeBrowser.options,base,report,shots);
 }
 export async function prepareOfflineJourneys(p){await open(p,'water',2);const inquiry=p.locator('.journey-inquiry');await inquiry.locator('.journey-levels button').nth(2).click();await reveal(inquiry,'Dein Forschermerkzettel · freiwillig');await inquiry.locator('textarea').fill('Offline-Sicherung: Wasser kann seinen Zustand ändern.');await p.waitForFunction(key=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['journey:water']['chapter:2:note']==='Offline-Sicherung: Wasser kann seinen Zustand ändern.',saveKey);}
 export async function offlineJourneys(p,report){await open(p,'water',2);await reveal(p.locator('.journey-inquiry'),'Dein Forschermerkzettel · freiwillig');assert.equal(await p.locator('.journey-inquiry textarea').inputValue(),'Offline-Sicherung: Wasser kann seinen Zustand ändern.');assert.equal(await p.locator('.journey-levels button').nth(2).getAttribute('aria-pressed'),'true');for(const j of JOURNEYS){await open(p,j.id,4);assert.equal(await p.locator('.journey-task .quiz-answer').count(),3);}report.checks.push('Cold restart without server: all 16 journey inquiries and private notebook/level restore from the same schema-3 pass');}

@@ -73,7 +73,7 @@ export async function articleAtlas(page,ready,report,width,shots){
  await page.goBack();await page.locator('.article-hero').waitFor();assert.equal(new URL(page.url()).hash,'#world/topic/science-moon-phases');
  await page.locator('.article-hero').screenshot({path:shots+'/article-moon-'+width+'.png'});
  await page.locator('.topic-illustration').screenshot({path:shots+'/moon-diagram-'+width+'.png'});
- await page.locator('.knowledge-network').screenshot({path:shots+'/knowledge-network-'+width+'.png'});
+ await page.locator('.knowledge-network').filter({has:page.getByRole('heading',{name:'Warum hängt das zusammen?',exact:true})}).screenshot({path:shots+'/knowledge-network-'+width+'.png'});
  if(width===1440){
   for(const t of topics){await page.evaluate(id=>location.hash='world/topic/'+id,t.id);await page.getByRole('heading',{name:t.title,exact:true}).waitFor();if(t.history?.sensitive)await page.getByRole('button',{name:'Die Erklärung anschauen',exact:true}).click();await page.locator('.article-atlas').waitFor();await decode();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'catalog overflow '+t.id)}
   report.checks.push('All 116 article shells opened at 1440px including voluntary sensitive entry; images decoded and no horizontal overflow');

@@ -1,8 +1,9 @@
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import {spawn} from 'node:child_process';
 import JOURNEYS from '../../exports/content/journeys.json' with {type:'json'};
 import DATA from '../../app/journey-inquiries.json' with {type:'json'};
+import {sourceDigest} from '../../scripts/handoff.mjs';
 import {chromium,firefox,webkit} from '../../qa/node_modules/playwright/index.mjs';
-const engines=process.argv.includes('--chromium-only')?['chromium']:['firefox','webkit'],port=4480,base='http://127.0.0.1:'+port,report={status:'running',scope:engines.join('+'),engines:[],errors:[]};
+const engines=process.argv.includes('--chromium-only')?['chromium']:['firefox','webkit'],port=4480,base='http://127.0.0.1:'+port,report={build:(await fs.readFile('dist/index.html','utf8')).match(/name="learning-build" content="([^"]+)"/)?.[1],sourceDigest:await sourceDigest(),status:'running',scope:engines.join('+'),engines:[],errors:[]};
 const server=spawn(process.execPath,['tests/browser/preview-server.mjs'],{env:{...process.env,QA_PORT:String(port)},stdio:['ignore','pipe','pipe']});let log='';server.stdout.on('data',b=>log+=b);server.stderr.on('data',b=>log+=b);let browser;
 try{
  for(let n=0;n<40&&!log.includes('WK_PREVIEW_READY');n++){if(server.exitCode!==null)throw Error(log);await new Promise(r=>setTimeout(r,100));}assert.ok(log.includes('WK_PREVIEW_READY'),log);

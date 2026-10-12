@@ -1,6 +1,6 @@
 # Paket 3: belegbare Reise-, Inhalts- und Angebotsprüfung
 
-Stand: 12. Oktober 2026, Europe/Berlin. Dies ist ein Inhaltsnachweis; Aufgaben und Abnahmestatus stehen ausschließlich in BACKLOG.md, aktueller Arbeitsstand in PROJECT_STATE.md.
+Stand: 13. Oktober 2026, Europe/Berlin. Dies ist ein Inhaltsnachweis; Aufgaben und Abnahmestatus stehen ausschließlich in BACKLOG.md, aktueller Arbeitsstand in PROJECT_STATE.md.
 
 ## Inventur und tatsächlicher Umfang
 
@@ -135,8 +135,28 @@ WunderKompass beansprucht daraus keine allgemeine Überlegenheit oder wissenscha
 
 ## Konkreter Pilot für derzeit nicht erreichbare reale Abnahmen
 
-Vor einer behaupteten vollständigen Geräte-/Assistenz-/Kinderabnahme: aktuelles iPhone/Safari und iPad in beiden Ausrichtungen mit VoiceOver; Android/Chrome mit TalkBack; ein älteres schwächeres Gerät. Je Gerät Kapitelkarte, echte Browser-Zoomstufe 200 %, Schriftvergrößerung, alle drei Denkstufen, Hinweis, Merkzettel, Hintergrund/Rückkehr, Offline-Kaltstart, Backup/abgebrochener Import und Rückkehr-Fokus prüfen. Geräte-/OS-/Browserstand, tatsächliche Sprache, Beobachtung und Freigabe aufzeichnen. Keine Gerätenamen oder bestandenen Tests erfinden.
+Vor einer behaupteten vollständigen Geräte-/Assistenz-/Kinderabnahme: aktuelles iPhone/Safari und iPad in beiden Ausrichtungen mit VoiceOver; Android/Chrome mit TalkBack; ein älteres schwächeres Gerät. Je Gerät Kapitelkarte, echte Browser-Zoomstufe 200 % auf dem jeweiligen Gerät, Schriftvergrößerung, alle drei Denkstufen, Hinweis, Merkzettel, Hintergrund/Rückkehr, Offline-Kaltstart, Backup/abgebrochener Import und Rückkehr-Fokus prüfen. Geräte-/OS-/Browserstand, tatsächliche Sprache, Beobachtung und Freigabe aufzeichnen. Keine Gerätenamen oder bestandenen Tests erfinden.
 
 Fünf tatsächlich anzuhörende deutsche Textproben: Wasser/Kondensation (water:2), heißes festes Mantelgestein (inside:1), Erdachse/Jahreszeiten (seasons:0), Äquator/Nullmeridian (navigation:0), Nahrung/Lebensraumschutz (climate:4). Betonung, Ziffern, Pausen, Verständlichkeit und Stopp/Wechsel prüfen. Ein vorhandener Vorleseknopf ersetzt diesen Hörnachweis nicht.
 
 Unabhängige Fachpersonen für Erd-/Wasser-/Astronomiethemen und reale Kinder verschiedener Lesestufen nur nach Einwilligung einbeziehen. Ohne Testpersonen keine Kinderinterviews, Lernwirkung oder wissenschaftliche Abnahme behaupten. Findings im einzigen BACKLOG ergänzen; es gibt kein zweites Pilot-Backlog.
+
+## Tatsächlicher Security-Befund dieser Runde
+
+Produktionsaudit weiterhin0 Meldungen. Entwicklungsbestand4→3 Advisory-IDs: fflate0.7.4→0.7.5 schließt das ZIP64-Endlosschleifenproblem. Modernes esbuild0.28.0→0.28.1 korrigiert den betroffenen Patchzweig; niedriges Advisory bleibt in älteren Zweigen offen. Das probeweise esbuild0.27.4-Update behebt den gemeldeten Fall nicht und wurde deshalb nicht übernommen. Älteres esbuild0.18.20 aus Drizzle/esbuild-kit hat keinen nachgewiesen kompatiblen kleinen Fix; ein blinder großer Versionssprung wird nicht als sichere Korrektur ausgegeben. braces3.0.3 hat laut tatsächlichem aktuellen Audit keinen veröffentlichten Patch. Diese Entwicklungsabhängigkeiten sind keine neue Runtime-Abhängigkeit des nativen News-Pakets. Kein Advisory versteckt oder Produktionserfolg auf Dev übertragen.
+
+Native200%-Desktopzoom wurde zusätzlich im echten Chromium reproduziert (1280 Bildschirm-/640 CSS-Pixel, DPR2 bei explizitem Grund-DPR1). Die Testprofile nutzen die normale dokumentierte Browser-Zoomeinstellung; eine administrativ gesperrte Extension wurde nicht umgangen. Dies ist ein Desktop-Browsernachweis und ersetzt keine physische Geräte-/VoiceOver-/TalkBack-/Hörprüfung.
+
+Gemessene Paket3-Laborwerte gegenüber dem gespeicherten tatsächlichen PR24-Schlusslauf (je drei frische Chromium-Samples,390×844, kein Throttling; keine Feld-/Gerätegarantie):
+
+| Bereich | PR24 Median bereit (ms) | Paket3 Median bereit (ms) |
+| --- | ---: | ---: |
+| home | 535 | 507 |
+| world | 602 | 522 |
+| games | 451 | 421 |
+| labs | 577 | 557 |
+| journeys | 633 | 603 |
+| book | 423 | 468 |
+| updates | 411 | 434 |
+
+Einzelne Laborsitzungen, keine belastbare allgemeine Beschleunigungsquote. Budgets unverändert; neuer Lernumfang bedarfsgeladen. Vollständige aktuelle lokale Regression577,902s gegenüber historischem PR24-Schlusslauf536,784s bei erweiterter Prüfung aller80 Kapitel/240 Aufgaben. Keine ungemessene CI-/Runnerkostenquote; tatsächlicher GitHub-Nachweis im Paket3-PR/Handoff.
