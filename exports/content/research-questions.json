@@ -1,0 +1,288 @@
+{
+  "depth": {
+    "medium": {
+      "prompt": "Mantel und äußerer Kern sind beide heiß. Was unterscheidet sie?",
+      "answers": [
+        "Beide sind vollständig flüssig",
+        "Der Mantel ist überwiegend fest, der äußere Kern flüssig",
+        "Im Mantel gibt es nur kalte Steine"
+      ],
+      "correct": 1,
+      "why": "Temperatur allein bestimmt den Zustand nicht. Material und Druck spielen ebenfalls mit.",
+      "hint": "Vergleiche die Materialbeschreibungen bei zwei Tiefen.",
+      "wrong": "Heiß bedeutet nicht automatisch flüssig. Schau auf Zustand und Material."
+    },
+    "hard": {
+      "prompt": "Kann die gezeichnete Krustendicke für jeden Ort stimmen?",
+      "answers": [
+        "Nein, sie ist ein vereinfachter Richtwert; die Kruste ist unterschiedlich dick",
+        "Ja, die Kruste ist überall gleich dick",
+        "Die Zeichnung ersetzt eine Bohrung bis zum Kern"
+      ],
+      "correct": 0,
+      "why": "Die Kruste unter Ozeanen und Kontinenten ist unterschiedlich dick. Das Schema erklärt Schichten, keinen genauen Ort.",
+      "hint": "Lies die Modellgrenze und denke an Land und Meeresboden.",
+      "wrong": "Eine einzige Zeichnung kann Unterschiede zwischen Orten nicht vollständig zeigen."
+    }
+  },
+  "volcano": {
+    "medium": {
+      "prompt": "Du änderst Gas und Zähigkeit gleichzeitig. Ist das ein fairer Test für den Einfluss von Gas?",
+      "answers": [
+        "Ja, mehr Änderungen sind immer besser",
+        "Nein, halte die Zähigkeit gleich und ändere nur das Gas",
+        "Die Zähigkeit spielt nie eine Rolle"
+      ],
+      "correct": 1,
+      "why": "Eine einzelne veränderte Bedingung hilft, Ursache und Wirkung zu vergleichen. Zähes Magma kann Gas stärker zurückhalten.",
+      "hint": "Welche Bedingung muss für einen fairen Vergleich gleich bleiben?",
+      "wrong": "Wenn zwei Bedingungen wechseln, bleibt unklar, welche den Unterschied verursacht."
+    },
+    "hard": {
+      "prompt": "Das Modell zeigt Lavafluss. Was darfst du daraus schließen?",
+      "answers": [
+        "Ein echter Vulkan ist deshalb ungefährlich",
+        "Der Ausbruch wird genauso aussehen",
+        "Nur wie die gewählten Bedingungen im vereinfachten Modell wirken"
+      ],
+      "correct": 2,
+      "why": "Temperatur, Zusammensetzung, Kristalle und Wasser beeinflussen echte Vulkane zusätzlich. Das Modell ist keine Gefahrprognose.",
+      "hint": "Welche Einflüsse bildet unser Modell nicht ab?",
+      "wrong": "Die Modellanzeige ist keine Vorhersage und keine Sicherheitsbewertung für einen echten Vulkan."
+    }
+  },
+  "quake": {
+    "medium": {
+      "prompt": "Du verschiebst den Herd tiefer. Wie liegt das Epizentrum dazu?",
+      "answers": [
+        "Direkt darüber an der Oberfläche",
+        "Am gegenüberliegenden Pol",
+        "Immer im Erdkern"
+      ],
+      "correct": 0,
+      "why": "Das Epizentrum bezeichnet den Oberflächenpunkt direkt über dem Herd. Die Wellen beginnen im Herd.",
+      "hint": "Verfolge die gestrichelte Linie nach oben.",
+      "wrong": "Unterscheide den Start im Gestein vom dazugehörigen Punkt an der Oberfläche."
+    },
+    "hard": {
+      "prompt": "Zwei Orte sind gleich weit vom Beben entfernt. Müssen sie gleich stark erschüttert werden?",
+      "answers": [
+        "Ja, Abstand ist die einzige Bedingung",
+        "Nein, auch Untergrund und weitere Bedingungen wirken mit",
+        "Nur die Uhrzeit entscheidet"
+      ],
+      "correct": 1,
+      "why": "Die Wirkung hängt unter anderem von Beben, Tiefe, Abstand und Untergrund ab. Das Schnittmodell berechnet keine örtliche Erschütterung.",
+      "hint": "Welche Einflussgröße fehlt in unserer Zeichnung?",
+      "wrong": "Gleicher Abstand allein beschreibt nicht alle Bedingungen am Ort."
+    }
+  },
+  "weather": {
+    "medium": {
+      "prompt": "Woher kommen die Tröpfchen außen an einem kalten Glas?",
+      "answers": [
+        "Wasser sickert immer durch das Glas",
+        "Wasserdampf aus der Luft kondensiert",
+        "Die Tröpfchen bestehen aus Rauch"
+      ],
+      "correct": 1,
+      "why": "Die kalte Oberfläche kühlt benachbarte feuchte Luft. Wasserdampf kann dort zu flüssigem Wasser werden.",
+      "hint": "Vergleiche das Wolkenmodell mit dem praktischen Versuch.",
+      "wrong": "Überlege, welche Wasserform schon in der Raumluft vorhanden ist."
+    },
+    "hard": {
+      "prompt": "Zeigt eine größere Zahl gezeichneter Tröpfchen, wie viel es morgen regnet?",
+      "answers": [
+        "Ja, jeder Punkt bedeutet einen Liter",
+        "Nein, das Modell zeigt einen Zusammenhang, keine Vorhersage",
+        "Ja, solange es windstill ist"
+      ],
+      "correct": 1,
+      "why": "Temperatur, Feuchte und Luftbewegung wirken zusammen. Punkte im qualitativen Modell sind keine Messmenge.",
+      "hint": "Ist die Tropfenanzeige mit echten Messdaten geeicht?",
+      "wrong": "Eine anschauliche Zeichnung ist noch keine Messung oder Wettervorhersage."
+    }
+  },
+  "water": {
+    "medium": {
+      "prompt": "Warum sollten die zwei Wasserschalen im Versuch gleich groß sein?",
+      "answers": [
+        "Damit außer dem Standort möglichst wenig verschieden ist",
+        "Weil Wasser sonst nicht verdunsten kann",
+        "Damit das Wasser automatisch kocht"
+      ],
+      "correct": 0,
+      "why": "Gleiche Ausgangsbedingungen machen einen Vergleich fairer. Wärme, Wind und Luftfeuchte können die Verdunstung verändern.",
+      "hint": "Was könnte außer Sonne und Schatten den Vergleich beeinflussen?",
+      "wrong": "Verdunstung hängt von mehreren Bedingungen ab. Ein fairer Versuch hält möglichst viele gleich."
+    },
+    "hard": {
+      "prompt": "Muss jedes Wasserteilchen alle vier Modellstationen in derselben Reihenfolge durchlaufen?",
+      "answers": [
+        "Ja, der Kreislauf ist ein Fahrplan",
+        "Nein, Wasser kann auch im Boden, in Eis oder in Pflanzen bleiben",
+        "Ja, ein Umlauf dauert immer einen Tag"
+      ],
+      "correct": 1,
+      "why": "Der Wasserkreislauf ist ein Netzwerk mit vielen Wegen und unterschiedlich langen Speicherzeiten.",
+      "hint": "Welche Wege fehlen im gezeichneten Beispiel?",
+      "wrong": "Das Schema zeigt ausgewählte Übergänge, nicht den einzigen Weg jedes Teilchens."
+    }
+  },
+  "seasons": {
+    "medium": {
+      "prompt": "Welche Kombination erklärt lange Sommertage im Norden?",
+      "answers": [
+        "Die Sonne geht im Winter aus",
+        "Die Nordhalbkugel ist zur Sonne geneigt: höherer Sonnenstand und längere Tage",
+        "Die Erde dreht sich im Sommer nicht"
+      ],
+      "correct": 1,
+      "why": "Achsneigung verändert im Jahreslauf Tageslänge und Sonnenstand. Im Süden ist die Jahreszeit entgegengesetzt.",
+      "hint": "Vergleiche Juni und Dezember am selben Breitengrad.",
+      "wrong": "Betrachte beide Messgrößen und die Ausrichtung zur Sonne."
+    },
+    "hard": {
+      "prompt": "Was bleibt im kreisförmigen Modell ohne Achsneigung?",
+      "answers": [
+        "Der hier gezeigte jährliche Wechsel der Tageslänge entfällt",
+        "Es gibt auf der ganzen Erde keine Temperaturunterschiede mehr",
+        "Tag und Nacht hören auf"
+      ],
+      "correct": 0,
+      "why": "Ohne Achsneigung verschwindet dieser jährliche Effekt. Breitengrad, Wetter und andere Einflüsse bleiben; Rotation erzeugt weiter Tag und Nacht.",
+      "hint": "Unterscheide Jahreslauf, tägliche Rotation und Wetter.",
+      "wrong": "Das Ausschalten einer Ursache beseitigt nicht alle Unterschiede oder die tägliche Erdrotation."
+    }
+  },
+  "plates": {
+    "medium": {
+      "prompt": "Was unterscheidet das Auseinanderdriften vom seitlichen Vorbeigleiten?",
+      "answers": [
+        "Es sind nur andere Namen für dieselbe Bewegung",
+        "Beim Auseinanderdriften kann neue Kruste entstehen; beim Vorbeigleiten bewegen sich Grenzen seitlich",
+        "Beide Bewegungen entstehen nur in Ländern"
+      ],
+      "correct": 1,
+      "why": "An auseinanderweichenden Grenzen kann Magma neue Kruste bilden. Seitliche Grenzen verschieben vorhandene Platten.",
+      "hint": "Vergleiche die beiden Zeichnungen bei größerer Bewegung.",
+      "wrong": "Achte auf die Richtung der Bewegung und darauf, ob im Modell neue Kruste hinzukommt."
+    },
+    "hard": {
+      "prompt": "Zeigen zwei zusammengedrückte Tücher alle Arten von Plattengrenzen?",
+      "answers": [
+        "Ja, auch jede Subduktion und alle Gesteine",
+        "Nein, sie veranschaulichen vor allem Faltung beim Zusammendrücken",
+        "Ja, und die echte Geschwindigkeit"
+      ],
+      "correct": 1,
+      "why": "Tücher sind ein Vergleich für Falten. Material, Zeitmaßstab und das Abtauchen einer Platte bilden sie nicht vollständig ab.",
+      "hint": "Was kann ein Tuch darstellen – und was nicht?",
+      "wrong": "Ein anschaulicher Vergleich erklärt einen Teil des Vorgangs, nicht alle Arten von Grenzen."
+    }
+  },
+  "moon": {
+    "medium": {
+      "prompt": "Wie viel der sichtbaren Mondscheibe ist beim ersten Viertel ungefähr hell?",
+      "answers": [
+        "Ein Viertel",
+        "Die Hälfte",
+        "Die ganze Scheibe"
+      ],
+      "correct": 1,
+      "why": "Viertel bezeichnet den Abschnitt des Mondmonats. Von der Erde aus sehen wir ungefähr eine halbe helle Scheibe.",
+      "hint": "Vergleiche den Tagesabschnitt mit der angezeigten Lichtfläche.",
+      "wrong": "Der Name der Phase und der helle Flächenanteil sind verschiedene Angaben."
+    },
+    "hard": {
+      "prompt": "Warum entsteht nicht bei jedem Vollmond eine Mondfinsternis?",
+      "answers": [
+        "Weil der Mond dann kein Licht reflektiert",
+        "Weil seine Bahn geneigt ist und er meistens am Erdschatten vorbeizieht",
+        "Weil die Sonne jeden Monat ausgeht"
+      ],
+      "correct": 1,
+      "why": "Die geneigte Mondbahn führt meist oberhalb oder unterhalb des Erdschattens vorbei. Eine Finsternis braucht eine passende Ausrichtung.",
+      "hint": "Welche Eigenschaft der echten Bahn fehlt im flachen Modell?",
+      "wrong": "Normaler Phasenwechsel und ein Durchgang durch den Erdschatten sind unterschiedliche Vorgänge."
+    }
+  },
+  "clocks": {
+    "medium": {
+      "prompt": "Was ändert sich beim Wechsel zwischen deutscher Winter- und Sommerzeit?",
+      "answers": [
+        "Die Dauer einer Sekunde",
+        "Der gesetzliche Abstand der Ortszeit zu UTC",
+        "Die Richtung der Erdrotation"
+      ],
+      "correct": 1,
+      "why": "Zeitzonen und Sommerzeit sind vereinbarte Uhrzeitregeln. Die Weltzeit und die Dauer einer Sekunde ändern sich dadurch nicht.",
+      "hint": "Vergleiche zwei Daten bei gleicher UTC-Uhrzeit.",
+      "wrong": "Die Anzeige auf der Uhr und der Ablauf der Zeit sind nicht dasselbe."
+    },
+    "hard": {
+      "prompt": "Kann eine Uhrzeit allein ohne Datum jeden internationalen Vergleich eindeutig machen?",
+      "answers": [
+        "Ja, Datumsgrenzen und Sommerzeit spielen nie mit",
+        "Nein, Datum und Zeitzonenregeln gehören dazu",
+        "Ja, jede Stadt hat dieselbe Zeit"
+      ],
+      "correct": 1,
+      "why": "An verschiedenen Orten kann derselbe Moment zu verschiedenen Kalendertagen gehören. Sommerzeitregeln sind datumsabhängig.",
+      "hint": "Probiere einen Moment nahe Mitternacht und unterschiedliche Monate.",
+      "wrong": "Eine Uhrzeit ohne Datum lässt Datumswechsel und Sommerzeit offen."
+    }
+  },
+  "tides": {
+    "medium": {
+      "prompt": "Wie verändert die Halbmond-Stellung den Unterschied zwischen Hoch- und Niedrigwasser im Modell?",
+      "answers": [
+        "Er ist meist kleiner als bei der Ausrichtung in einer Linie",
+        "Der Mond verliert seine Schwerkraft",
+        "Der Unterschied wird immer null"
+      ],
+      "correct": 0,
+      "why": "Bei ungefähr rechtem Winkel schwächen sich Teile der Sonnen- und Mondwirkung ab. Die Gezeiten verschwinden nicht.",
+      "hint": "Vergleiche die größte und kleinste Kurvenhöhe bei beiden Stellungen.",
+      "wrong": "Schwächere gemeinsame Wirkung bedeutet nicht, dass die einzelnen Kräfte verschwinden."
+    },
+    "hard": {
+      "prompt": "Kann die Modellkurve dir eine sichere Wattwanderzeit nennen?",
+      "answers": [
+        "Ja, alle Küsten haben dieselbe Kurve",
+        "Nein, dafür brauchst du aktuelle örtliche Angaben und Sicherheitsregeln",
+        "Ja, bei Vollmond ist das Meer sicher"
+      ],
+      "correct": 1,
+      "why": "Meerestiefe, Küstenform, Wetter und Verzögerungen verändern örtliche Gezeiten. Das Modell ist keine Navigation oder Sicherheitsprognose.",
+      "hint": "Welche örtlichen und aktuellen Informationen fehlen?",
+      "wrong": "Ein vereinfachtes Modell ersetzt keine örtlichen Gezeitendaten oder Sicherheitsberatung."
+    }
+  },
+  "solar": {
+    "medium": {
+      "prompt": "Was fällt bei weiter außen umlaufenden Planeten im Modell auf?",
+      "answers": [
+        "Sie brauchen meist länger für einen Umlauf",
+        "Alle Umlaufzeiten sind gleich",
+        "Sie sind alle Monde der Erde"
+      ],
+      "correct": 0,
+      "why": "Die äußeren Planeten haben größere Bahnen und längere Umlaufzeiten. Ein gemeinsamer Zeitschritt macht den Unterschied sichtbar.",
+      "hint": "Vergleiche Erdjahr und Umlaufzeit eines äußeren Planeten.",
+      "wrong": "Beobachte denselben Zeitschritt für zwei unterschiedlich große Bahnen."
+    },
+    "hard": {
+      "prompt": "Warum braucht das Sonnensystem verschiedene Darstellungen für Größen und Entfernungen?",
+      "answers": [
+        "Weil es nur vier Planeten gibt",
+        "Weil Planeten gegenüber den Abständen sehr klein sind",
+        "Weil alle Planeten gleich groß sind"
+      ],
+      "correct": 1,
+      "why": "Bei einer gut sichtbaren Planetengröße passen die echten Entfernungen nicht auf einen kleinen Bildschirm. Der Maßstab muss transparent bleiben.",
+      "hint": "Vergleiche die Maßstabsangaben und die äußeren Planeten.",
+      "wrong": "Ein Bildschirm kann die gewaltigen Größen- und Entfernungsunterschiede nicht zugleich gut lesbar zeigen."
+    }
+  }
+}

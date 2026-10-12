@@ -59,7 +59,7 @@ export async function discoveryCentral(page,ready,report,width,shots){
   const result=await window.axe.run({include:[['.discovery-hero'],['.discovery-worlds'],['.discovery-pathways']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}});
   return result.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));
  });assert.deepEqual(axe,[],'discovery axe '+width);
- await page.getByRole('button',{name:'Wissens-Challenge öffnen',exact:true}).click();
+ await page.locator('.discovery-network').getByRole('button',{name:'Biene & Blüte',exact:true}).click();await page.getByRole('link',{name:'Wissens-Challenge öffnen',exact:true}).click();
  await page.locator('.challenge-levels').waitFor();
  assert.equal(await page.locator('.challenge-levels button').count(),3);
  await page.locator('.challenge-levels').getByRole('button').filter({hasText:'Leicht'}).click();
@@ -69,7 +69,7 @@ export async function discoveryCentral(page,ready,report,width,shots){
  await page.locator('.knowledge-challenge .quiz-answer').first().waitFor();
  await page.getByRole('button',{name:'Andere Stufe auswählen',exact:true}).click();
  await page.locator('.challenge-levels').waitFor();
- report.checks.push('Discovery centre '+width+': search/focus/globe, six shared gateways, three reciprocal trails/routes, direct challenge/resume, WCAG axe');
+ report.checks.push('Discovery centre '+width+': search/focus/globe, six shared gateways, eight reciprocal trails/routes, direct challenge/resume, WCAG axe');
 }
 
 export async function offlineDiscoveryCentral(page,report){
@@ -77,7 +77,7 @@ export async function offlineDiscoveryCentral(page,report){
  for(const image of await page.locator('.discovery-worlds img').all())await image.evaluate(async im=>{await im.decode();assertImage(im);function assertImage(im){if(!im.naturalWidth)throw Error('Offline gateway image missing');}});
  await page.locator('.discovery-network').getByRole('button',{name:'Meer in Bewegung',exact:true}).click();
  await page.locator('.discovery-connection-why').getByText(/Gezeiten können Strömungen antreiben/).waitFor();
- await page.getByRole('button',{name:'Wissens-Challenge öffnen',exact:true}).click();await page.locator('.knowledge-challenge .quiz-answer').first().waitFor();
+ await page.locator('.discovery-network').getByRole('button',{name:'Biene & Blüte',exact:true}).click();await page.getByRole('link',{name:'Wissens-Challenge öffnen',exact:true}).click();await page.locator('.knowledge-challenge .quiz-answer').first().waitFor();
  await page.evaluate(()=>location.hash='updates');await page.locator('.updates-timeline').first().waitFor();assert.equal(await page.locator('.updates-timeline>li').count(),publicUpdates().length);await page.getByRole('link',{name:'Zur Startseite',exact:true}).click();await page.locator('.discovery-hero').waitFor();
  await page.getByRole('tab',{name:'Wissenswelten',exact:true}).click();await page.locator('.world-view .world-choice').first().waitFor();assert.equal(await page.locator('.world-view .world-choice').count(),6,'all six worlds remain available in a cold offline browser');assert.equal(await page.locator('.mode-tabs [data-state=active]').innerText(),'Wissenswelten');await page.locator('.world-view').getByRole('button',{name:'Wissenschaft & Weltall',exact:true}).click();await page.locator('.world-topic-tile').first().waitFor();await page.getByRole('tab',{name:'Entdecken',exact:true}).click();await page.locator('.discovery-hero').waitFor();
  report.checks.push('Cold offline discovery: all gateway photos decode, knowledge trail switches, challenge opens, local history, six-world main navigation/category and home work');
@@ -189,10 +189,10 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    assert.equal(await p.locator('.updates-timeline>li').count(),publicUpdates().length);
    assert.deepEqual(await p.locator('.updates-meta>span:first-child').allTextContents(),publicUpdates().map(updateLabel));
    assert.equal(await p.locator('.updates-timeline>li[data-update-channel=sites]').count(),13,'retain every historical Sites publication');
-   assert.equal(await p.locator('.updates-timeline>li[data-update-channel=vercel-test]').count(),13,'include independently confirmed test website rounds');
-   assert.equal(await p.locator('.updates-timeline>li').first().getAttribute('data-update-id'),'playground-2','confirmed PR 21 keeps its ID and comes first');
+   assert.equal(await p.locator('.updates-timeline>li[data-update-channel=vercel-test]').count(),14,'include independently confirmed test website rounds');
+   assert.equal(await p.locator('.updates-timeline>li').first().getAttribute('data-update-id'),'foundation-2a','confirmed PR 22 keeps its ID and comes first');
    assert.equal(await p.locator('.updates-timeline [data-update-id=history-polish]').count(),1,'merged and deployed PR 19 is an available update');
-   assert.equal(await p.locator('.updates-timeline>li').first().locator('time').getAttribute('datetime'),'2026-10-11','actual PR 21 Vercel confirmation date');
+   assert.equal(await p.locator('.updates-timeline>li').first().locator('time').getAttribute('datetime'),'2026-10-11T18:19:13Z','actual PR 22 Vercel confirmation timestamp');
    assert.equal(await p.locator('.updates-details[open]').count(),0,'optional changes start collapsed');
    assert.equal(await p.locator('#updates-title').evaluate(el=>el===document.activeElement),true,'lazy history title focus');
    assert.deepEqual(await readProgress(),before,'history is read-only for central pass');
@@ -203,7 +203,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    assert.equal(await p.locator('.updates-prepared-entry[data-update-status=prepared]').count(),PREPARED_UPDATES.length);assert.equal(await p.locator('.updates-prepared-entry').getAttribute('data-update-id'),PREPARED_UPDATES[0].id);
    assert.equal(await p.locator('.updates-prepared-entry time,.updates-prepared-entry a').count(),0,'unavailable work has no invented date or feature launch link');
    await p.locator('.updates-prepared').screenshot({path:shots+'/updates-prepared-'+width+'.png',animations:'disabled'});await p.locator('.updates-prepared>summary').click();}
-   await p.locator('.updates-archive>summary').click();await homeTextGeometry(p);await p.locator('.updates-timeline>li').last().getByText('6. Oktober 2026',{exact:true}).waitFor();await p.locator('.updates-timeline>li').last().screenshot({path:shots+'/updates-first-release-'+width+'.png',animations:'disabled'});await p.screenshot({path:shots+'/updates-archive-'+width+'-full.png',fullPage:true,animations:'disabled'});
+   await p.locator('.updates-archive>summary').click();await homeTextGeometry(p);await p.locator('.updates-timeline>li').last().getByText(/^6\. Oktober 2026 um/).waitFor();await p.locator('.updates-timeline>li').last().screenshot({path:shots+'/updates-first-release-'+width+'.png',animations:'disabled'});await p.screenshot({path:shots+'/updates-archive-'+width+'-full.png',fullPage:true,animations:'disabled'});
    await p.locator('.updates-provenance>summary').click();await homeTextGeometry(p);
    // Real disclosure controls expose bounded changes and the family benefit.
    for(const entry of publicUpdates()){
@@ -263,7 +263,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
     await p.emulateMedia({forcedColors:'active'});await p.keyboard.press('Tab');await start.focus();assert.equal(await start.evaluate(el=>el.matches(':focus-visible')&&getComputedStyle(el).outlineStyle==='solid'),true,'system colors retain focus');await p.screenshot({path:shots+'/home-system-colors-320.png',animations:'disabled'});
    }
    console.log('Homepage/history viewport',width,height,'first/return/large passed');
-   report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, history/back/forward, 13 Sites + 13 confirmed test website updates including PR 21, separate undated prepared work, all concrete-change disclosures and family benefits, expanded long history and large-font details, read-only pass, WCAG axe');
+   report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, history/back/forward, 13 Sites + 14 confirmed test website updates including PR 22, separate undated prepared work, all concrete-change disclosures and family benefits, expanded long history and large-font details, read-only pass, WCAG axe');
   }finally{await c.close();}
  }
 }

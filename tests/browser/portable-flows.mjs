@@ -18,7 +18,7 @@ export async function searchAndHistory(page, report) {
   }
   await page.getByRole('button', { name: 'Lernwelt durchsuchen', exact: true }).click();
   await page.getByRole('dialog').locator('input').fill('zzzzzz');
-  await page.getByText('Noch kein Treffer. Versuch ein kürzeres Wort.', { exact: true }).waitFor();
+  await page.getByText('Dazu haben wir noch keinen passenden Treffer. Versuch ein kürzeres Wort oder suche etwa nach Mond, Vulkan oder Wasser.', { exact: true }).waitFor();
   assert.equal(await page.getByRole('option').count(), 0);
   await page.keyboard.press('Escape');
   await page.getByRole('dialog').waitFor({ state: 'hidden' });

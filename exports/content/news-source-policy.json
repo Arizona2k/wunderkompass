@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "timezone": "Europe/Berlin",
+  "localTime": "12:30",
+  "schedulerEnabled": false,
+  "publicationEnabled": false,
+  "externalAIEnabled": false,
+  "maxAgeDays": 14,
+  "maxItems": 3,
+  "maxBytes": 1048576,
+  "timeoutMs": 8000,
+  "attempts": 3,
+  "hosts": [
+    "www.nachrichtenleicht.de",
+    "www.langenscheidt.com",
+    "www.unfpa.org",
+    "science.nasa.gov",
+    "www.jpl.nasa.gov"
+  ],
+  "automaticRetrievalAuthorized": false,
+  "rightsStatus": "Automatisierte regelmäßige Beschaffung und Verarbeitung vor Aktivierung pro Anbieter prüfen. Manuell geprüfte eigene kurze Erklärungen; keine Artikel oder Fremdmedien übernehmen.",
+  "prospectiveSources": [
+    {
+      "name": "logo!",
+      "url": "https://www.logo.de/",
+      "status": "Nicht automatisiert angeschlossen; tatsächlicher Artikelzugriff, Schnittstelle und Nutzungsbedingungen noch zu prüfen."
+    },
+    {
+      "name": "nachrichtenleicht",
+      "url": "https://www.nachrichtenleicht.de/",
+      "status": "Einzelne Originalartikel manuell geprüft; automatisierter Abruf und Verarbeitung nicht freigegeben."
+    }
+  ],
+  "discoverySources": [
+    {
+      "url": "https://www.nachrichtenleicht.de/",
+      "format": "html"
+    },
+    {
+      "url": "https://science.nasa.gov/",
+      "format": "html"
+    }
+  ]
+}

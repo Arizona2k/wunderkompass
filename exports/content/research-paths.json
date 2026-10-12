@@ -1,0 +1,142 @@
+{
+  "depth": {
+    "topic": "science-magnetism",
+    "journey": "inside",
+    "next": "quake",
+    "task": "Vergleiche eine Tiefe im Mantel mit einer im äußeren Kern. Bleibt heißes Material immer flüssig?",
+    "hint": "Achte auf Material und Zustand, nicht nur auf die Temperatur.",
+    "legend": [
+      "Erdkruste",
+      "Erdmantel",
+      "Äußerer Kern",
+      "Innerer Kern"
+    ]
+  },
+  "volcano": {
+    "topic": "person-alexander_humboldt",
+    "journey": "volcanoes",
+    "experiment": "foam-volcano",
+    "next": "plates",
+    "task": "Halte die Zähigkeit gleich und ändere nur das Gas. Vergleiche anschließend dieselbe Gasmenge bei anderer Zähigkeit.",
+    "hint": "Notiere jeweils eine veränderte Bedingung.",
+    "legend": [
+      "Magma unter der Erde",
+      "Schlot: Weg nach oben",
+      "Lava an der Oberfläche"
+    ]
+  },
+  "quake": {
+    "topic": "science-sound",
+    "journey": "quakes",
+    "next": "plates",
+    "task": "Löse Wellen bei zwei Herdtiefen aus. Vergleiche die Verbindung zum Epizentrum.",
+    "hint": "Der Oberflächenpunkt liegt über dem Start im Gestein.",
+    "legend": [
+      "Herd im Gestein",
+      "Epizentrum an der Oberfläche",
+      "Wellen vom Herd aus"
+    ]
+  },
+  "weather": {
+    "topic": "science-atmosphere",
+    "journey": "weather",
+    "experiment": "condensation",
+    "next": "water",
+    "task": "Kühle dieselbe gedachte Luftportion erst wenig, dann stärker. Was wird sichtbar? Verändere danach den Wind.",
+    "hint": "Unsichtbarer Wasserdampf und sichtbare Tröpfchen sind nicht dasselbe.",
+    "legend": [
+      "Tröpfchen: flüssiges Wasser",
+      "Wind: bewegte Luft"
+    ]
+  },
+  "water": {
+    "topic": "science-water-cycle",
+    "journey": "water",
+    "experiment": "evaporation",
+    "next": "weather",
+    "task": "Vergleiche zwei Wärmeeinstellungen bei derselben Wasserstation. Erkläre den Zustandswechsel.",
+    "hint": "Ein Teilchen kann auch einen anderen Weg als im Schema nehmen.",
+    "legend": [
+      "Verdunsten",
+      "Kondensieren",
+      "Niederschlag",
+      "Sammeln und Fließen"
+    ]
+  },
+  "seasons": {
+    "topic": "science-seasons",
+    "journey": "seasons",
+    "experiment": "lamp-ball",
+    "next": "clocks",
+    "task": "Vergleiche Juni und Dezember am selben Breitengrad. Schalte dann die Neigung aus: Welche Unterschiede verschwinden?",
+    "hint": "Sonnenstand und Tageslänge gemeinsam betrachten.",
+    "legend": [
+      "Sonne",
+      "Geneigte Erdachse",
+      "Oberes Achsenende: Norden · unteres Achsenende: Süden"
+    ]
+  },
+  "plates": {
+    "topic": "",
+    "book": "Plattentektonik",
+    "journey": "inside",
+    "experiment": "plates-fold",
+    "next": "volcano",
+    "task": "Vergleiche auseinander und vorbei bei großer Bewegung. An welcher Grenze kann neue Kruste entstehen?",
+    "hint": "Betrachte Richtung und Material zwischen den Platten.",
+    "legend": [
+      "Platte A",
+      "Platte B",
+      "Heißes, überwiegend festes Gestein darunter"
+    ]
+  },
+  "moon": {
+    "topic": "science-moon-phases",
+    "journey": "moon",
+    "experiment": "lamp-ball",
+    "next": "tides",
+    "task": "Gehe vom Neumond bis zum Vollmond. Vergleiche vergangene Tage und den hellen Anteil der sichtbaren Scheibe.",
+    "hint": "Die Sonne beleuchtet immer ungefähr eine halbe Kugel.",
+    "legend": [
+      "Sonne beleuchtet den Mond",
+      "Erde: unser Beobachtungsort",
+      "Rechts: Blick von der Erde"
+    ]
+  },
+  "clocks": {
+    "topic": "science-shadows",
+    "journey": "seasons",
+    "next": "seasons",
+    "task": "Halte UTC gleich und vergleiche Januar und Juli. Welche Stadtuhren wechseln ihren Abstand zu UTC?",
+    "hint": "Prüfe Datum und Sommerzeit; nicht jede Stadt stellt um.",
+    "legend": [
+      "Alle Uhren: derselbe Moment",
+      "Sonnenstand: ungefähres Modell"
+    ]
+  },
+  "tides": {
+    "topic": "science-tides",
+    "journey": "ocean",
+    "next": "moon",
+    "task": "Vergleiche die Kurven bei Voll-/Neumond und Halbmond. Verändere danach nur die Modellzeit.",
+    "hint": "Die Sonnenwirkung verschwindet bei Halbmond nicht.",
+    "legend": [
+      "Sonne",
+      "Erde",
+      "Mond",
+      "Kurven: relative Modellwerte"
+    ]
+  },
+  "solar": {
+    "topic": "science-solar-system",
+    "journey": "moon",
+    "next": "moon",
+    "task": "Lass denselben Zeitraum vergehen. Vergleiche Erde und einen äußeren Planeten: Wer kommt weiter um seine Bahn?",
+    "hint": "Entfernung, Größe und Umlaufzeit sind unterschiedliche Angaben.",
+    "legend": [
+      "Sonne: Stern",
+      "Acht Planeten",
+      "Entfernungen/Größen: Maßstab beachten"
+    ]
+  }
+}
