@@ -22,7 +22,11 @@ export function createProgressStore() {
     catch { return null; }
   };
   const receive = (remote: Save) => {
-    if(same(state.save,remote))return;
+    // The synchronous journal already shares this exact snapshot. Advance the
+    // merge baseline before the next local edit, while retaining the dirty DB
+    // write. Otherwise a rapid undo appears unchanged against an older base
+    // and the tab's own previous journal value overwrites the new choice.
+    if(same(state.save,remote)){base=remote;return;}
     if((remote.epochAt??0)<(state.save.epochAt??0))return;
     if((remote.epoch??'legacy-v3')===(base.epoch??'legacy-v3')&&(remote.revision??0)<(base.revision??0))return;
     const replaced=(remote.epoch??'legacy-v3')!==(state.save.epoch??'legacy-v3') && (remote.epochAt??0)>=(state.save.epochAt??0);

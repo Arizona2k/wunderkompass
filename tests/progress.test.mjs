@@ -1,11 +1,30 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { createSave, restoreSave } from '../app/progress-storage.ts';
+import { createSave, restoreSave, SAVE_KEY } from '../app/progress-storage.ts';
+import { createProgressStore } from '../app/local-progress-store.ts';
 import { mergeSaves, mergeDatabaseSave } from '../app/progress-sync.ts';
 import { compatible, restoreQuestions, sanitizeMemorySession } from '../app/game-state.ts';
 
 const base=()=>({...createSave(),epoch:'legacy-v3',epochAt:0,revision:0});
 const edit=(save,patch)=>({...save,progress:{...save.progress,...patch}});
+test('rapid local settings undo and favorite removal survive their own synchronous journal before database flush',async()=>{
+ const keys=['localStorage','window','document','BroadcastChannel','indexedDB'],original=new Map(keys.map(k=>[k,Object.getOwnPropertyDescriptor(globalThis,k)])),data=new Map();let persisted;
+ const db={objectStoreNames:{contains:()=>true},transaction:()=>{const tx={objectStore:()=>({get:()=>{const r={};queueMicrotask(()=>{r.result=persisted;r.onsuccess?.();queueMicrotask(()=>tx.oncomplete?.());});return r;},put:value=>{persisted=structuredClone(value);}})};return tx;},close(){}};
+ const fake={localStorage:{getItem:k=>data.get(k)??null,setItem:(k,v)=>data.set(k,v),removeItem:k=>data.delete(k)},window:{addEventListener(){}},document:{addEventListener(){}},BroadcastChannel:undefined,indexedDB:{open:()=>{const r={result:db};queueMicrotask(()=>r.onsuccess?.());return r;}}};
+ try{
+  for(const [key,value] of Object.entries(fake))Object.defineProperty(globalThis,key,{configurable:true,writable:true,value});
+  const store=createProgressStore();await store.start();
+  for(const reducedMotion of [true,false,true,false]){
+   store.update(p=>({...p,settings:{...p.settings,reducedMotion}}));
+   assert.equal(store.getSnapshot().save.progress.settings.reducedMotion,reducedMotion);
+   assert.equal(JSON.parse(data.get(SAVE_KEY)).progress.settings.reducedMotion,reducedMotion);
+  }
+  store.update(p=>({...p,favorites:['topic:science-energy']}));store.update(p=>({...p,favorites:[]}));
+  assert.deepEqual(store.getSnapshot().save.progress.favorites,[]);assert.deepEqual(JSON.parse(data.get(SAVE_KEY)).progress.favorites,[]);
+  await store.flush();const reloaded=createProgressStore();await reloaded.start();
+  assert.equal(reloaded.getSnapshot().save.progress.settings.reducedMotion,false);assert.deepEqual(reloaded.getSnapshot().save.progress.favorites,[]);await reloaded.flush();
+ }finally{for(const [key,descriptor] of original)if(descriptor)Object.defineProperty(globalThis,key,descriptor);else delete globalThis[key];}
+});
 test('independent tab favorites and completed journeys both survive',()=>{
  const b=base(); const a=edit(b,{favorites:['bear'],journeys:['water']});const c=edit(b,{favorites:['bee'],games:['memory']});
  const result=mergeSaves(b,a,c).progress;assert.deepEqual(new Set(result.favorites),new Set(['bear','bee']));assert.deepEqual(result.journeys,['water']);assert.deepEqual(result.games,['memory']);

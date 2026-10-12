@@ -20,6 +20,8 @@ Fortsetzung: eigene Reservierung weiterhin aktiv; alle Änderungen auf bestehend
 
 ## Vorheriger Durchlauf: WK-039–044 / package-2b-2026-10-11
 
+Zusätzlicher 2C-Befund vor Schlussabnahme: strenge Schalterprobe entdeckte tatsächliches Überschreiben schneller Rücknahmen durch das eigene synchrone Passjournal. Neue Store-Probe am alten Code rot (true statt false), am korrigierten Code 13/13 Fortschrittsfälle grün. Exakten bereits geteilten Journalstand als Mergebasis nachführen, ausstehende DB-Speicherung behalten; kein Schemawechsel oder zweiter Speicher. Frühere Browserversuche an dieser neuen Probe abgebrochen und ausdrücklich keine vollständige Abnahme. Neuer Produktionsbuild und komplette Regression einschließlich Zwei-Tab-/Import-/Updateprüfungen erforderlich.
+
 Nachgeführter externer Abschluss: PR23 am 12.10.2026 08:14:36Z nach test-live übernommen; Vercel am exakten Merge 9f2328a um 08:15:03Z erfolgreich. Chronik in 2C unter unveränderter research-2b-ID tatsächlich verfügbar nachgeführt (13 Sites + 15 bestätigte Testupdates). Folgende Angaben bewahren die damalige Übergabe; sie sind kein aktiver konkurrierender Auftrag.
 
 Status: in Prüfung – Implementierung und vollständige lokale Pflichtabnahme abgeschlossen, Codex, 12. Oktober 2026. Bestehender PR #23 gegen test-live: https://github.com/Arizona2k/wunderkompass/pull/23, Branch codex/wunderkompass-package-2b-2026-10-11. Ready-Übergabe nach Synchronisierung dieses geprüften Diffs; exakter finaler Commit, Ready-Quittung und abschließender GitHub-Quality-Lauf werden im selben PR geführt. Ready/grüne Tests sind keine Übernahmefreigabe.
