@@ -1,5 +1,13 @@
 # Änderungsverlauf
 
+## 13. Oktober 2026 – Paket3 / WK-047–050 (implementiert, noch nicht veröffentlicht)
+
+Alle16 Lernreisen und80 Inhaltskapitel erhalten individuelle Ziele/Szenen sowie240 freiwillige Denkaufgaben mit konkreten Hinweisen und Antwortfeedback. Zehn ausgewählte Prozesse sind aktiv sortierbar, Merkzettel verbleiben im vorhandenen privaten Schema3-Pass. Kapitelkarte, explizite Kapitel-URLs, tatsächlicher Lesefortschritt, stabile Zurück-/Fortsetzungswege und passende beidseitige Wissensverbindungen ergänzen die bisherigen64 Schaubilder und16 Stempelabschlüsse. Mobile Gruppierung, gut lesbare HTML-Grafiklegenden und klare Fokus-/Touchflächen; bestehende IDs, Fragen und Mechaniken erhalten. Import/Reset beim geöffneten Kapitel kann den wiederhergestellten Stand nicht mehr sofort mit der vorherigen URL überschreiben.
+
+News ergänzt einen streng begrenzten Generator für originale stabile Godot-Versionsdaten: Technik als drittes tatsächlich angeschlossenes Gebiet; alte Versionen und reine Datumsänderungen gesperrt. Tagesstatus bleibt auch ohne neue Meldungen ehrlich datiert/idempotent. Automatische Kontrolle vorab freigegebener Rechte-Dokumentfingerprints, signiertes getrenntes News-only-Gitjournal und inaktives reproduzierbares Betriebspaket; tatsächlicher Originalquellen-Befund in bestehender Quality. Kein aktiver Livebetrieb, keine neue Infrastruktur oder Kosten.
+
+Neue Reise-Regression prüft alle80 Kapitel/240 Aufgaben, finale Stempel, sieben Breiten, große Schrift, echten nativen200%-Zoom, Fokus/axe/Offline/Pass. Echte Firefox-/WebKit-Prüfung und deren fail-closed Handoff in bestehende Quality integriert. Kompatible fflate/esbuild-Patches, unveränderte Performance-Budgets plus50kB-gzip-Kapitelbudget. Physische Geräte/Stimmen/ unabhängige Fachabnahme und operative News-Hosting-/Key-/Provider-/Langzeitfreigaben bleiben ausdrücklich offen. Vollständige Einzelmatrix/Quellen-/Betriebsgrenzen in bestehenden Projektdateien.
+
 ## 12. Oktober 2026 – WK-046: gezielter PR24-Nachschliff
 
 Signierte Nachrichten werden in länger geöffneten Sitzungen sparsam erneut geladen: sichtbares15-Minuten-Intervall, Sichtbarkeits-/Online-/Nachrichtenrückkehr mit Mindestabstand und begrenzter Fehlerwiederholung. Eine gemeinsame Abfrage und validierter Arbeitsspeicheranker verhindern doppelte Abrufe beziehungsweise Sequenzrücksetzung bei verweigertem oder altem Cache. Originaldaten, Offline-Archiv und bestehender Pass bleiben erhalten.

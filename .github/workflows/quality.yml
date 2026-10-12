@@ -52,6 +52,14 @@ jobs:
         run: pnpm --dir qa exec playwright install --with-deps chromium
       - name: Production browser regression
         run: pnpm run test:browser
+      - name: Install additional browser engines
+        run: pnpm --dir qa exec playwright install --with-deps firefox webkit
+      - name: Actual Firefox and WebKit journey checks
+        run: node tests/browser/journey-engines.mjs
+      - name: Handoff with actual engine evidence
+        run: node scripts/handoff.mjs --require-engines
+      - name: Read-only original news-source readiness report
+        run: node scripts/news/readiness.mjs --ci-report
       - name: Upload browser evidence
         if: always()
         uses: actions/upload-artifact@v4

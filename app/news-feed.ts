@@ -1,7 +1,8 @@
 import {useEffect,useSyncExternalStore} from 'react';
 import DATA from './news-content.json' with {type:'json'};
 import TRUST from './news-feed-trust.json' with {type:'json'};
-import POLICY from '../content/news-source-policy.json' with {type:'json'};
+import {hosts,maxAgeDays} from '../content/news-source-policy.json' with {type:'json'};
+const POLICY={hosts,maxAgeDays};
 import {WORLD_INDEX} from './world-index';
 import type {NewsEntry} from './news-data';
 import {createNewsRefresh} from './news-refresh.mjs';

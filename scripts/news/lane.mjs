@@ -1,6 +1,7 @@
 import {mkdir,readFile,writeFile,rename,open,unlink,readdir} from 'node:fs/promises';
 import path from 'node:path';
 import {hostname} from 'node:os';import {randomUUID} from 'node:crypto';
+import {berlinDay} from '../../app/news-validation.mjs';
 import {recoverNewsLock} from './schedule.mjs';
 import {signEnvelope,verifyEnvelope,fingerprint,validatePayload} from '../../app/news-wire.mjs';
 
@@ -27,7 +28,7 @@ export async function publishEdition({directory,payload,policy,keys,privateKey,k
   const previous=await readEdition(directory,options({keys,policy,topicIds,now}));
   if(expectedPrevious!==undefined&&expectedPrevious!==(previous?.fingerprint??null))throw Error('Content-Lane wurde inzwischen geändert');
   const digest=await fingerprint(payload);
-  if(previous?.fingerprint===digest&&previous.status.state===state&&previous.status.attempts===attempts)return {envelope:previous,status:'unchanged'};
+  if(previous?.day===berlinDay(now)&&previous.fingerprint===digest&&previous.status.state===state&&previous.status.attempts===attempts)return {envelope:previous,status:'unchanged'};
   const envelope=await signEnvelope({payload,keyId,privateKey,sequence:(previous?.sequence??0)+1,previous:previous?.fingerprint??null,now,state,quarantined,attempts});
   await verifyEnvelope(envelope,options({keys,policy,topicIds,now}));
   const version=`${envelope.sequence}-${envelope.fingerprint}.json`,text=JSON.stringify(envelope,null,2)+'\n';

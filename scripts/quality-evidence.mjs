@@ -1,4 +1,4 @@
-export const REQUIRED_SUITES=['foundation','home','core','playground','backup','challenge','research','offline','news-feed'];
+export const REQUIRED_SUITES=['foundation','home','core','playground','backup','challenge','research','journeys','offline','news-feed'];
 export function aggregateQuality(outcomes){
  const seen=new Set(),result={scope:'complete mandatory regression',status:'passed',selectedSuites:REQUIRED_SUITES,workers:[],checks:[],views:[],timings:[],errors:[],consoleErrors:[],failedRequests:[],ownHttpErrors:[],externalRequests:[]};let build,browser;
  for(const worker of outcomes){
@@ -8,6 +8,7 @@ export function aggregateQuality(outcomes){
   if(!report.build||!report.browser)throw Error('Missing build/browser proof');if(build&&build!==report.build||browser&&browser!==report.browser)throw Error('Mixed build/browser proof');build=report.build;browser=report.browser;
   for(const suite of worker.suites){if(seen.has(suite)||!REQUIRED_SUITES.includes(suite)||!report.selectedSuites.includes(suite))throw Error('Duplicate, unknown or missing suite '+suite);seen.add(suite);for(const phase of suite==='foundation'?['performance','components']:[suite])if(!report.timings.some(t=>t.suite===phase&&Number.isFinite(t.seconds)&&t.seconds>0))throw Error('Missing phase timing '+phase);}
   if(report.selectedSuites.length!==worker.suites.length)throw Error('Worker scope mismatch');
+  if(worker.suites.includes('journeys')){const z=report.nativeZoom;if(z?.percent!==200||z.cssWidth!==640||z.scale!==2||z.largeTextAlsoChecked!==true)throw Error('Missing actual native journey zoom proof');}
   result.workers.push({name:worker.name,suites:worker.suites,seconds:report.seconds,report:worker.name+'/portable-report.json',...(report.fixtureConfiguration?{fixtureConfiguration:true}:{} )});
   for(const [key,value] of Object.entries(report)){
    if(['scope','status','selectedSuites','seconds','build','browser','failure','fixtureConfiguration'].includes(key))continue;

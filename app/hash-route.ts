@@ -2,6 +2,8 @@
 import {useEffect,useRef,useSyncExternalStore} from 'react';
 const EVENT='wunder-route';
 const read=()=>window.location.hash.slice(1)||'globe';
+// Pin a legacy resume alias to its actual chapter without adding a history entry.
+export function replaceHash(path:string){if(read()===path)return;history.replaceState(history.state,'','#'+path);window.dispatchEvent(new Event(EVENT));}
 function subscribe(fn:()=>void){window.addEventListener('hashchange',fn);window.addEventListener('popstate',fn);window.addEventListener(EVENT,fn);return()=>{window.removeEventListener('hashchange',fn);window.removeEventListener('popstate',fn);window.removeEventListener(EVENT,fn);};}
 // Browser-entry UI state only; learning progress stays in the central pass.
 export function navigateHash(path:string){if(read()===path)return;try{

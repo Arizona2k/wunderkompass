@@ -19,6 +19,10 @@ export function validatePayload(payload,{policy,topicIds,now=new Date()}){
   if(!Array.isArray(payload.selectionHistory)||payload.selectionHistory.length>14)throw Error('Ungültiger Themenverlauf');
   const days=new Set();for(const h of payload.selectionHistory){if(!calendarDay(h.day)||h.day>berlinDay(now)||days.has(h.day)||!Array.isArray(h.items)||h.items.length>3)throw Error('Ungültiger Themenverlauf');days.add(h.day);for(const item of h.items)for(const field of ['id','domain','subjectKey','eventKey','meaningKey','family'])if(typeof item[field]!=='string'||!item[field]||item[field].length>160)throw Error('Unvollständiger Themenbeleg');}
  }
+ if(payload.sourceRightsChecks!==undefined){
+  const checks=payload.sourceRightsChecks;if(!checks||typeof checks!=='object'||Array.isArray(checks)||Object.keys(checks).length>16)throw Error('Ungültiger Rechteprüfverlauf');
+  for(const [id,c] of Object.entries(checks)){if(!/^[a-z0-9-]{1,80}$/.test(id)||!c||!calendarDay(c.checkedOn)||c.checkedOn>berlinDay(now)||!/^[a-f0-9]{64}$/.test(c.policyFingerprint)||!Array.isArray(c.documents)||!c.documents.length||c.documents.length>5)throw Error('Ungültiger Rechteprüfbeleg');if(c.checkedAt!==undefined&&(!Number.isFinite(Date.parse(c.checkedAt))||Date.parse(c.checkedAt)>now.getTime()||berlinDay(new Date(c.checkedAt))!==c.checkedOn))throw Error('Ungültiger genauer Rechteprüfzeitpunkt');for(const doc of c.documents)if(!policy.hosts.includes(new URL(doc.url).hostname)||new URL(doc.url).protocol!=='https:'||new URL(doc.url).username||new URL(doc.url).password||new URL(doc.url).port||!/^[a-f0-9]{64}$/.test(doc.sha256))throw Error('Ungültiger Rechtenachweis');}
+ }
  const ids=new Set();let latest='1970-01-01T00:00:00Z';
  for(const entry of payload.entries){validateNews(entry,{policy,topicIds,now});if(ids.has(entry.id))throw Error('Doppelte Nachrichten-ID');ids.add(entry.id);if(entry.checkedAt>latest)latest=entry.checkedAt;}
  if(payload.checkedAt!==latest)throw Error('Prüfstand passt nicht zu den Beiträgen');return payload;

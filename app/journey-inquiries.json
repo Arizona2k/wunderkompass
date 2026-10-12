@@ -1,0 +1,4634 @@
+{
+  "schemaVersion": 1,
+  "chapters": [
+    {
+      "id": "planet:0",
+      "journeyId": "planet",
+      "index": 0,
+      "goal": "Stern und Planet unterscheiden.",
+      "scene": "Du betrachtest unsere Erde aus einem gedachten Raumschiff. Woher kommt ihr Licht?",
+      "tasks": [
+        {
+          "prompt": "Wer ist der Stern in unserem Sonnensystem?",
+          "answers": [
+            "Die Sonne",
+            "Die Erde",
+            "Der Mond"
+          ],
+          "correct": 0,
+          "hint": "Achte darauf, welcher Körper selbst Licht erzeugt.",
+          "why": "Die Sonne erzeugt Licht. Erde und Mond reflektieren Sonnenlicht.",
+          "wrong": [
+            "Die Sonne erzeugt Licht. Erde und Mond reflektieren Sonnenlicht.",
+            "Die Erde ist ein Planet und reflektiert Licht.",
+            "Der Mond reflektiert Licht; er ist kein Stern."
+          ]
+        },
+        {
+          "prompt": "Warum sehen wir die Erde im Sonnenlicht?",
+          "answers": [
+            "Sie ist selbst ein Stern",
+            "Ihre Größe erzeugt Licht",
+            "Ihre Oberfläche reflektiert Licht"
+          ],
+          "correct": 2,
+          "hint": "Unterscheide eine Lichtquelle von einem beleuchteten Körper.",
+          "why": "Ein Teil des Sonnenlichts wird von der Erde zurückgeworfen.",
+          "wrong": [
+            "Ein Planet wird durch reflektiertes Licht sichtbar, nicht durch Sternenlicht aus seinem Inneren.",
+            "Größe allein macht einen Körper nicht zur Lichtquelle.",
+            "Ein Teil des Sonnenlichts wird von der Erde zurückgeworfen."
+          ]
+        },
+        {
+          "prompt": "Eine Zeichnung zeigt Sonne und Erde gleich groß. Was folgerst du?",
+          "answers": [
+            "Die Erde ist deshalb ein Stern",
+            "Die Größen sind im Bild vereinfacht",
+            "Beide sind in Wirklichkeit gleich groß"
+          ],
+          "correct": 1,
+          "hint": "Prüfe den Unterschied zwischen Modell und Wirklichkeit.",
+          "why": "Eine Lernzeichnung kann Größen verändern; die Sonne ist sehr viel größer.",
+          "wrong": [
+            "Ein Zeichnungsmaßstab verändert die Art des Himmelskörpers nicht.",
+            "Eine Lernzeichnung kann Größen verändern; die Sonne ist sehr viel größer.",
+            "Die Zeichnung ist kein Größenbeweis."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "planet:1",
+      "journeyId": "planet",
+      "index": 1,
+      "goal": "Flächenanteile auf der Erde vergleichen.",
+      "scene": "Deine Expeditionskarte bekommt hundert gleich große Felder: Wie viel davon ist Meer?",
+      "tasks": [
+        {
+          "prompt": "Was bedeckt den größeren Teil der Erdoberfläche?",
+          "answers": [
+            "Das Land",
+            "Nur Flüsse",
+            "Der Ozean"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche die genannten Flächenanteile.",
+          "why": "Rund 71 von 100 Teilen der Oberfläche sind Ozean.",
+          "wrong": [
+            "Land bedeckt weniger Fläche als der Ozean.",
+            "Flüsse allein bilden nicht den großen blauen Anteil.",
+            "Rund 71 von 100 Teilen der Oberfläche sind Ozean."
+          ]
+        },
+        {
+          "prompt": "Hundert gleich große Felder: Welche Aufteilung passt ungefähr?",
+          "answers": [
+            "50 Wasser,50 Land",
+            "71 Wasser,29 Land",
+            "29 Wasser,71 Land"
+          ],
+          "correct": 1,
+          "hint": "Suche zuerst den Anteil des Ozeans.",
+          "why": "71 plus 29 ergeben 100; die Darstellung ist gerundet.",
+          "wrong": [
+            "Die Oberfläche ist nicht zur Hälfte Land.",
+            "71 plus 29 ergeben 100; die Darstellung ist gerundet.",
+            "Die beiden Anteile wurden vertauscht."
+          ]
+        },
+        {
+          "prompt": "Eine Nahaufnahme zeigt fast nur Land. Ist die Erde überwiegend Land?",
+          "answers": [
+            "Nein, der Bildausschnitt reicht nicht",
+            "Ja, jedes Foto beweist das",
+            "Ja, Wasser ist durchsichtig"
+          ],
+          "correct": 0,
+          "hint": "Überlege, ob ein Ausschnitt die ganze Oberfläche zeigt.",
+          "why": "Eine Nahaufnahme kann Land überbetonen; der globale Anteil bleibt anders.",
+          "wrong": [
+            "Eine Nahaufnahme kann Land überbetonen; der globale Anteil bleibt anders.",
+            "Ein Ausschnitt ist keine vollständige Messung.",
+            "Durchsichtigkeit erklärt keinen globalen Flächenanteil."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "planet:2",
+      "journeyId": "planet",
+      "index": 2,
+      "goal": "Unsichtbare Luft durch Beobachtungen erkennen.",
+      "scene": "Eine leere Flasche wirkt leer. Deine Expedition sucht etwas, das man nicht sehen kann.",
+      "tasks": [
+        {
+          "prompt": "Was ist in einer offenen leeren Flasche?",
+          "answers": [
+            "Nur Sonnenlicht",
+            "Luft",
+            "Gar nichts"
+          ],
+          "correct": 1,
+          "hint": "Denke an die Gashülle um uns herum.",
+          "why": "Eine offene Flasche enthält gewöhnlich Luft aus der Atmosphäre.",
+          "wrong": [
+            "Licht ersetzt das Gas in der Flasche nicht.",
+            "Eine offene Flasche enthält gewöhnlich Luft aus der Atmosphäre.",
+            "Unsichtbar heißt nicht nicht vorhanden."
+          ]
+        },
+        {
+          "prompt": "Ein Blatt bewegt sich im Wind. Was kannst du daran erkennen?",
+          "answers": [
+            "Luft ist in Bewegung",
+            "Luft wird zu festem Gestein",
+            "Es gibt keine Atmosphäre"
+          ],
+          "correct": 0,
+          "hint": "Suche eine Wirkung, obwohl das verursachende Gas unsichtbar ist.",
+          "why": "Bewegte Luft kann das Blatt bewegen.",
+          "wrong": [
+            "Bewegte Luft kann das Blatt bewegen.",
+            "Das Blatt zeigt keine Verwandlung von Gas zu Gestein.",
+            "Wind ist gerade ein Hinweis auf vorhandene Luft."
+          ]
+        },
+        {
+          "prompt": "Kannst du mit einer Windbeobachtung die ganze Zusammensetzung der Luft bestimmen?",
+          "answers": [
+            "Ja, ein Blatt zeigt alle Gase",
+            "Ja, Wind besteht nur aus Sauerstoff",
+            "Nein, dafür braucht man weitere Messungen"
+          ],
+          "correct": 2,
+          "hint": "Unterscheide eine Beobachtung von allem, was du daraus schließen darfst.",
+          "why": "Die Bewegung belegt keine vollständige Zusammensetzung; Luft ist ein Gasgemisch.",
+          "wrong": [
+            "Das Blatt ist kein chemisches Messgerät.",
+            "Auch andere Gase gehören zur Luft.",
+            "Die Bewegung belegt keine vollständige Zusammensetzung; Luft ist ein Gasgemisch."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "planet:3",
+      "journeyId": "planet",
+      "index": 3,
+      "goal": "Die Richtung zur Erdmitte als unten erklären.",
+      "scene": "Du zeichnest zwei Menschen auf gegenüberliegenden Seiten einer gedachten Erdkugel.",
+      "tasks": [
+        {
+          "prompt": "Wohin zeigt unten für Menschen auf der Erde?",
+          "answers": [
+            "Zur Erdmitte",
+            "Immer nach links",
+            "Immer zum Nordpol"
+          ],
+          "correct": 0,
+          "hint": "Denke an die Wirkung der Schwerkraft.",
+          "why": "Schwerkraft zieht in Richtung Erdmitte.",
+          "wrong": [
+            "Schwerkraft zieht in Richtung Erdmitte.",
+            "Links hängt von deiner Blickrichtung ab.",
+            "Der Nordpol ist keine gemeinsame Fallrichtung."
+          ]
+        },
+        {
+          "prompt": "Zwei Menschen stehen gegenüber auf der Erde. Wie zeigen ihre Unten-Pfeile?",
+          "answers": [
+            "Beide in dieselbe Richtung auf dem Blatt",
+            "Beide vom Boden weg",
+            "Beide zur Erdmitte"
+          ],
+          "correct": 2,
+          "hint": "Zeichne die Mitte ein, bevor du die Pfeile vergleichst.",
+          "why": "Die Richtung ist örtlich verschieden, aber beide Pfeile zeigen zum Mittelpunkt.",
+          "wrong": [
+            "Die Ausrichtung des Blatts ist kein weltweites Unten.",
+            "Vom Mittelpunkt weg wäre hier oben.",
+            "Die Richtung ist örtlich verschieden, aber beide Pfeile zeigen zum Mittelpunkt."
+          ]
+        },
+        {
+          "prompt": "Drehst du die Erdkugel-Zeichnung um: Ändert sich die Schwerkraft?",
+          "answers": [
+            "Ja, der Nordpol zieht plötzlich stärker",
+            "Nein, nur unsere Ansicht ändert sich",
+            "Ja, Menschen fallen dann ins All"
+          ],
+          "correct": 1,
+          "hint": "Unterscheide die Darstellung von der echten Ursache.",
+          "why": "Eine gedrehte Darstellung verändert keine Schwerkraft.",
+          "wrong": [
+            "Die Lage auf dem Blatt legt keine Anziehung fest.",
+            "Eine gedrehte Darstellung verändert keine Schwerkraft.",
+            "Papier drehen ist keine Änderung an der Erde."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "planet:4",
+      "journeyId": "planet",
+      "index": 4,
+      "goal": "Tag und Jahr verschiedenen Bewegungen zuordnen.",
+      "scene": "Dein Reisetagebuch braucht zwei Uhren: eine für einen Tag und eine für ein Jahr.",
+      "tasks": [
+        {
+          "prompt": "Welche Bewegung gehört ungefähr zu einem Tag?",
+          "answers": [
+            "Ein Umlauf um die Sonne",
+            "Ein Umlauf des Mondes",
+            "Drehung um die Erdachse"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche Bewegung und Zeitraum.",
+          "why": "Die Erde dreht sich ungefähr einmal pro Tag um ihre Achse.",
+          "wrong": [
+            "Der Sonnenumlauf dauert ungefähr ein Jahr.",
+            "Der Mondumlauf ist nicht die tägliche Erddrehung.",
+            "Die Erde dreht sich ungefähr einmal pro Tag um ihre Achse."
+          ]
+        },
+        {
+          "prompt": "Welche Zuordnung passt?",
+          "answers": [
+            "Beide Bewegungen dauern einen Tag",
+            "Achsdrehung:Tag; Sonnenumlauf:Jahr",
+            "Achsdrehung:Jahr; Sonnenumlauf:Tag"
+          ],
+          "correct": 1,
+          "hint": "Verfolge die Erde einmal um sich selbst und einmal um die Sonne.",
+          "why": "Zwei verschiedene Bewegungen erklären zwei verschiedene Zeiträume.",
+          "wrong": [
+            "Der große Umlauf dauert viel länger.",
+            "Zwei verschiedene Bewegungen erklären zwei verschiedene Zeiträume.",
+            "Die Zeiträume wurden vertauscht."
+          ]
+        },
+        {
+          "prompt": "Warum ist ein Jahr nicht genau 365 Tage lang?",
+          "answers": [
+            "Ein Sonnenumlauf dauert ungefähr 365¼ Tage",
+            "Die Erde dreht sich an Weihnachten nicht",
+            "Der Mond stoppt unsere Kalender"
+          ],
+          "correct": 0,
+          "hint": "Suche die ungefähre Umlaufzeit, nicht eine Kalendergeschichte.",
+          "why": "Schaltjahre gleichen den Kalender an die nicht ganzzahlige Umlaufzeit an.",
+          "wrong": [
+            "Schaltjahre gleichen den Kalender an die nicht ganzzahlige Umlaufzeit an.",
+            "Die tägliche Drehung hört nicht an einem Feiertag auf.",
+            "Die genannte Erklärung verwechselt Mond und Sonnenumlauf."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inside:0",
+      "journeyId": "inside",
+      "index": 0,
+      "goal": "Erdschichten von außen nach innen ordnen.",
+      "scene": "Eine gedachte Bohrsonde zeigt dir einen Querschnitt. Wirklich bis zum Kern bohren können wir nicht.",
+      "tasks": [
+        {
+          "prompt": "Welche Schicht liegt ganz außen?",
+          "answers": [
+            "Die Erdkruste",
+            "Der innere Kern",
+            "Der äußere Kern"
+          ],
+          "correct": 0,
+          "hint": "Beginne an der Oberfläche.",
+          "why": "Die Kruste ist die äußere dünne Gesteinsschicht.",
+          "wrong": [
+            "Die Kruste ist die äußere dünne Gesteinsschicht.",
+            "Der innere Kern liegt ganz tief in der Mitte.",
+            "Der äußere Kern liegt unter dem Mantel."
+          ]
+        },
+        {
+          "prompt": "Warum zeichnen Lernbilder die Kruste oft dicker?",
+          "answers": [
+            "Weil sie der dickste Teil ist",
+            "Weil die Erde hohl ist",
+            "Damit man sie erkennen kann"
+          ],
+          "correct": 2,
+          "hint": "Prüfe die Erklärung zum Maßstab.",
+          "why": "Der Querschnitt vergrößert die dünne Kruste als Lernhilfe.",
+          "wrong": [
+            "Der Mantel ist viel mächtiger als die Kruste.",
+            "Eine überzeichnete Schicht ist kein Hinweis auf einen Hohlraum.",
+            "Der Querschnitt vergrößert die dünne Kruste als Lernhilfe."
+          ]
+        },
+        {
+          "prompt": "Woher stammen Erkenntnisse über den Kern, obwohl niemand dort bohrt?",
+          "answers": [
+            "Nur aus Fotos der Oberfläche",
+            "Unter anderem aus Erdbebenwellen",
+            "Aus einer Fahrt zum Kern"
+          ],
+          "correct": 1,
+          "hint": "Suche einen indirekten Messweg.",
+          "why": "Wellen verändern sich im Erdinneren; ihre Messung hilft beim Untersuchen der Schichten.",
+          "wrong": [
+            "Oberflächenfotos allein zeigen den tiefen Kern nicht.",
+            "Wellen verändern sich im Erdinneren; ihre Messung hilft beim Untersuchen der Schichten.",
+            "Eine Fahrt bis zum Kern hat nicht stattgefunden."
+          ]
+        }
+      ],
+      "sequence": [
+        "Erdkruste",
+        "Erdmantel",
+        "Äußerer Kern",
+        "Innerer Kern"
+      ]
+    },
+    {
+      "id": "inside:1",
+      "journeyId": "inside",
+      "index": 1,
+      "goal": "Hitze und Materialzustand auseinanderhalten.",
+      "scene": "Auf deiner Querschnittskarte stehen Temperatur und Druck. Reicht heiß allein als Erklärung?",
+      "tasks": [
+        {
+          "prompt": "Welche Kernschicht ist flüssig?",
+          "answers": [
+            "Der innere Kern",
+            "Die gesamte Kruste",
+            "Der äußere Kern"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche die Zustände im Kapitel.",
+          "why": "Der äußere Kern ist flüssig, der innere fest.",
+          "wrong": [
+            "Der hohe Druck trägt zum festen Zustand des inneren Kerns bei.",
+            "Die Kruste ist gewöhnlich festes Gestein.",
+            "Der äußere Kern ist flüssig, der innere fest."
+          ]
+        },
+        {
+          "prompt": "Warum ist heißer Mantel nicht einfach ein Lavameer?",
+          "answers": [
+            "Der Mantel enthält nur Luft",
+            "Gestein bleibt überwiegend fest und verformt sich langsam",
+            "Alles Heiße muss flüssig sein"
+          ],
+          "correct": 1,
+          "hint": "Betrachte Zustand und Verhalten getrennt.",
+          "why": "Heißes festes Gestein kann sich über lange Zeit verformen.",
+          "wrong": [
+            "Der Mantel ist vorwiegend Gestein, kein Luftraum.",
+            "Heißes festes Gestein kann sich über lange Zeit verformen.",
+            "Hitze allein bestimmt den Zustand nicht."
+          ]
+        },
+        {
+          "prompt": "Ein schneller Gummiversuch veranschaulicht Verformung. Was zeigt er nicht?",
+          "answers": [
+            "Die wirkliche Dauer und Zusammensetzung des Mantels",
+            "Dass Modelle immer die echte Erde sind",
+            "Dass jeder Mantelteil Gummi ist"
+          ],
+          "correct": 0,
+          "hint": "Frage, welche Eigenschaften nur vereinfacht gezeigt werden.",
+          "why": "Ein Modell kann Verformung zeigen, ohne Material und geologische Dauer nachzubilden.",
+          "wrong": [
+            "Ein Modell kann Verformung zeigen, ohne Material und geologische Dauer nachzubilden.",
+            "Ein Modell ist eine begrenzte Darstellung.",
+            "Gummi ist hier eine Lernhilfe, kein Erdgestein."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inside:2",
+      "journeyId": "inside",
+      "index": 2,
+      "goal": "Platten nicht mit Ländern verwechseln.",
+      "scene": "Deine Karte hat zwei Liniennetze: Ländergrenzen und Plattengrenzen. Welches passt zur Erdbewegung?",
+      "tasks": [
+        {
+          "prompt": "Woraus besteht eine tektonische Platte?",
+          "answers": [
+            "Nur Wasser",
+            "Kruste und oberster fester Mantelteil",
+            "Nur eine Landesflagge"
+          ],
+          "correct": 1,
+          "hint": "Denke an die feste äußere Hülle.",
+          "why": "Eine Platte ist ein Teil der festen äußeren Erdhülle.",
+          "wrong": [
+            "Auch unter Ozeanen liegt festes Gestein.",
+            "Eine Platte ist ein Teil der festen äußeren Erdhülle.",
+            "Politische Zeichen bilden keine Gesteinsplatten."
+          ]
+        },
+        {
+          "prompt": "Eine Platte trägt Land und Meeresboden. Passt das?",
+          "answers": [
+            "Ja, beide können auf einer Platte liegen",
+            "Nein, Platten enden an jeder Küste",
+            "Nein, sie enden an jeder Grenze"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche natürliche und vereinbarte Grenzen.",
+          "why": "Küste und Staatsgrenze sind keine allgemeinen Plattengrenzen.",
+          "wrong": [
+            "Küste und Staatsgrenze sind keine allgemeinen Plattengrenzen.",
+            "Eine Küste ist kein Ende jeder Platte.",
+            "Ländergrenzen sind keine Plattenaufteilung."
+          ]
+        },
+        {
+          "prompt": "Ein Modell verschiebt eine Platte schnell. Wie ordnest du das ein?",
+          "answers": [
+            "So schnell wandern alle Kontinente wirklich",
+            "Die Bewegung gibt es gar nicht",
+            "Die Bewegung ist zeitlich stark beschleunigt"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche Modellzeit und Zentimeter pro Jahr.",
+          "why": "Die reale Bewegung ist meist sehr langsam; das Modell macht sie sichtbar.",
+          "wrong": [
+            "Die schnelle Vorführung ist kein echtes Bewegungstempo.",
+            "Die beobachtbare langsame Bewegung ist wissenschaftlich belegt.",
+            "Die reale Bewegung ist meist sehr langsam; das Modell macht sie sichtbar."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inside:3",
+      "journeyId": "inside",
+      "index": 3,
+      "goal": "Drei Arten von Plattenbewegung vergleichen.",
+      "scene": "Deine virtuelle Expedition beobachtet auseinander, zusammen und aneinander vorbei.",
+      "tasks": [
+        {
+          "prompt": "Welche Bewegung kann Gebirge durch Kontinentkollision bilden?",
+          "answers": [
+            "Platten stoßen zusammen",
+            "Alle Platten stehen still",
+            "Platten werden zu Wolken"
+          ],
+          "correct": 0,
+          "hint": "Achte auf zusammengedrücktes und gehobenes Gestein.",
+          "why": "Kontinentkollision kann Gestein falten und Gebirge aufbauen.",
+          "wrong": [
+            "Kontinentkollision kann Gestein falten und Gebirge aufbauen.",
+            "Stillstand erklärt diesen Aufbau nicht.",
+            "Gesteinsplatten werden dabei nicht zu Wolken."
+          ]
+        },
+        {
+          "prompt": "Wo können Erdbeben auftreten?",
+          "answers": [
+            "Nur bei auseinanderdriftenden Platten",
+            "Nur unter Städten",
+            "Bei allen drei Bewegungsarten"
+          ],
+          "correct": 2,
+          "hint": "Trenne Art der Grenze vom Ort eines Gebäudes.",
+          "why": "An verschiedenen Plattengrenzen können Spannungen und ruckartige Bewegungen entstehen.",
+          "wrong": [
+            "Auch andere Grenzarten können Beben haben.",
+            "Die Lage einer Stadt ist nicht die geologische Ursache.",
+            "An verschiedenen Plattengrenzen können Spannungen und ruckartige Bewegungen entstehen."
+          ]
+        },
+        {
+          "prompt": "Ein Lernmodell baut in Sekunden einen Berg. Welche Grenze musst du nennen?",
+          "answers": [
+            "Im Modell sind alle Vulkane vorhersagbar",
+            "Echte Gebirgsbildung dauert sehr viel länger",
+            "Echte Berge wachsen immer in Sekunden"
+          ],
+          "correct": 1,
+          "hint": "Prüfe, ob Zeit und Gefahr wirklich gemessen werden.",
+          "why": "Geologische Prozesse laufen über sehr lange Zeit; ein Lernmodell ist keine Vorhersage.",
+          "wrong": [
+            "Gebirgsmodell und Ausbruchsvorhersage sind verschiedene Dinge.",
+            "Geologische Prozesse laufen über sehr lange Zeit; ein Lernmodell ist keine Vorhersage.",
+            "Die Modellgeschwindigkeit ist stark vereinfacht."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inside:4",
+      "journeyId": "inside",
+      "index": 4,
+      "goal": "Magma, Lava und Vulkanasche unterscheiden.",
+      "scene": "Auf einer gedachten Vulkanzeichnung verfolgst du geschmolzenes Gestein bis zur Oberfläche.",
+      "tasks": [
+        {
+          "prompt": "Wie heißt geschmolzenes Gestein an der Oberfläche?",
+          "answers": [
+            "Magma unter der Oberfläche",
+            "Wasserdampf",
+            "Lava"
+          ],
+          "correct": 2,
+          "hint": "Der Name hängt hier vom Ort ab.",
+          "why": "An der Oberfläche nennen wir es Lava.",
+          "wrong": [
+            "Magma bezeichnet geschmolzenes Gestein unter der Oberfläche.",
+            "Wasserdampf ist kein geschmolzenes Gestein.",
+            "An der Oberfläche nennen wir es Lava."
+          ]
+        },
+        {
+          "prompt": "Was unterscheidet Magma und Lava in dieser Erklärung?",
+          "answers": [
+            "Die Uhrzeit des Tages",
+            "Der Ort unter oder an der Oberfläche",
+            "Die Farbe einer Landkarte"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche die Lage im Querschnitt.",
+          "why": "Die Ortsbezeichnungen helfen, den Weg des Materials zu beschreiben.",
+          "wrong": [
+            "Der Begriff wechselt nicht mit der Uhrzeit.",
+            "Die Ortsbezeichnungen helfen, den Weg des Materials zu beschreiben.",
+            "Kartenfarben sind nur Darstellungszeichen."
+          ]
+        },
+        {
+          "prompt": "Liegt jeder Vulkan genau an einer Plattengrenze?",
+          "answers": [
+            "Nein, etwa Hotspots können anders liegen",
+            "Ja, ohne Ausnahme",
+            "Nein, Vulkane bestehen aus Holz"
+          ],
+          "correct": 0,
+          "hint": "Suche das genannte Gegenbeispiel.",
+          "why": "Hawaii veranschaulicht Vulkanismus über einem Hotspot.",
+          "wrong": [
+            "Hawaii veranschaulicht Vulkanismus über einem Hotspot.",
+            "Das Kapitel nennt eine Ausnahme von dieser absoluten Aussage.",
+            "Vulkanasche besteht aus kleinen Gesteins- und Glasstücken, nicht Holz."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "water:0",
+      "journeyId": "water",
+      "index": 0,
+      "goal": "Die drei Wasserformen sicher unterscheiden.",
+      "scene": "Deine Tropfenexpedition entdeckt Eis, einen See und eine unsichtbare Wasserform.",
+      "tasks": [
+        {
+          "prompt": "Welche Wasserform ist unsichtbar?",
+          "answers": [
+            "Die weiße Tröpfchenwolke",
+            "Wasserdampf",
+            "Eis"
+          ],
+          "correct": 1,
+          "hint": "Unterscheide Gas und kleine flüssige Tröpfchen.",
+          "why": "Gasförmiges Wasser ist unsichtbar; weiße Wolken enthalten Tröpfchen oder Eis.",
+          "wrong": [
+            "Die weiße Wolke besteht aus sichtbaren Tröpfchen.",
+            "Gasförmiges Wasser ist unsichtbar; weiße Wolken enthalten Tröpfchen oder Eis.",
+            "Eis ist festes Wasser und sichtbar."
+          ]
+        },
+        {
+          "prompt": "Warum ist die weiße Wolke über einem Getränk nicht einfach Wasserdampf?",
+          "answers": [
+            "Wir sehen viele kleine Tröpfchen",
+            "Alles Weiße ist Gas",
+            "Das Wasser wird zu Salz"
+          ],
+          "correct": 0,
+          "hint": "Suche die Wasserform, die Licht sichtbar streuen kann.",
+          "why": "Unsichtbarer Wasserdampf und sichtbare Tröpfchen sind verschiedene Zustände.",
+          "wrong": [
+            "Unsichtbarer Wasserdampf und sichtbare Tröpfchen sind verschiedene Zustände.",
+            "Farbe allein bestimmt keinen Aggregatzustand.",
+            "Bei diesem Vorgang wird kein Salz erzeugt."
+          ]
+        },
+        {
+          "prompt": "Eine Pfütze verschwindet ohne Kochen. Welche Erklärung passt?",
+          "answers": [
+            "Es muss heimlich gekocht haben",
+            "Wasser kann nur bei 100 Grad verdunsten",
+            "Wasser kann auch ohne Kochen verdunsten"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche Verdunsten mit Kochen.",
+          "why": "Verdunstung ist auch bei niedrigeren Temperaturen möglich.",
+          "wrong": [
+            "Kochen ist keine notwendige Bedingung.",
+            "Die Aussage schränkt Verdunstung fälschlich auf Kochen ein.",
+            "Verdunstung ist auch bei niedrigeren Temperaturen möglich."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "water:1",
+      "journeyId": "water",
+      "index": 1,
+      "goal": "Bedingungen für Verdunstung vergleichen.",
+      "scene": "Zwei nasse Tücher liegen unter verschiedenen Bedingungen. Du planst einen fairen Vergleich.",
+      "tasks": [
+        {
+          "prompt": "Wie nennt man den Übergang von flüssigem Wasser in die Luft?",
+          "answers": [
+            "Verdunstung",
+            "Gefrieren",
+            "Versickern"
+          ],
+          "correct": 0,
+          "hint": "Frage, wohin das Wasser gelangt.",
+          "why": "Bei Verdunstung geht Wasser als Gas in die Luft über.",
+          "wrong": [
+            "Bei Verdunstung geht Wasser als Gas in die Luft über.",
+            "Gefrieren macht Wasser fest.",
+            "Versickern beschreibt Wasser im Boden."
+          ]
+        },
+        {
+          "prompt": "Was ist bei sonst gleichen Bedingungen günstiger zum Trocknen?",
+          "answers": [
+            "Kalte, sehr feuchte, unbewegte Luft",
+            "Eine völlig geschlossene nasse Schachtel",
+            "Warme, bewegte, trockene Luft"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche Wärme, Luftbewegung und Luftfeuchtigkeit.",
+          "why": "Wärme, Wind und trockenere Luft können das Verdunsten beschleunigen.",
+          "wrong": [
+            "Die beschriebenen Bedingungen bremsen das Trocknen eher.",
+            "In einer geschlossenen feuchten Schachtel kann wenig Feuchtigkeit abgeführt werden.",
+            "Wärme, Wind und trockenere Luft können das Verdunsten beschleunigen."
+          ]
+        },
+        {
+          "prompt": "Du änderst Wärme und Wind gleichzeitig. Kannst du den Unterschied eindeutig nur dem Wind zuschreiben?",
+          "answers": [
+            "Ja, jeder Vergleich ist automatisch fair",
+            "Nein, zwei Bedingungen wurden verändert",
+            "Ja, Wärme spielt nie eine Rolle"
+          ],
+          "correct": 1,
+          "hint": "Überlege, welche Ursache du getrennt untersuchen willst.",
+          "why": "Ein fairer Vergleich verändert möglichst nur eine Bedingung.",
+          "wrong": [
+            "Mehrere Änderungen erschweren die eindeutige Erklärung.",
+            "Ein fairer Vergleich verändert möglichst nur eine Bedingung.",
+            "Wärme kann Verdunstung beeinflussen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "water:2",
+      "journeyId": "water",
+      "index": 2,
+      "goal": "Kondensation von Verdunstung unterscheiden.",
+      "scene": "Deine Tropfenreise führt in kühlere Luft. Was kann aus dem unsichtbaren Gas werden?",
+      "tasks": [
+        {
+          "prompt": "Was bedeutet Kondensation?",
+          "answers": [
+            "Eis wird zu Stein",
+            "Regen wird zu Licht",
+            "Wasserdampf wird zu Tröpfchen"
+          ],
+          "correct": 2,
+          "hint": "Achte auf den Übergang vom Gas zur Flüssigkeit.",
+          "why": "Kondensation bildet flüssige Tröpfchen aus gasförmigem Wasser.",
+          "wrong": [
+            "Gestein entsteht hier nicht.",
+            "Der Vorgang ist keine Verwandlung in Licht.",
+            "Kondensation bildet flüssige Tröpfchen aus gasförmigem Wasser."
+          ]
+        },
+        {
+          "prompt": "Welche Beschreibung einer Wolke passt?",
+          "answers": [
+            "Ein großer fester Wasserball",
+            "Viele Tröpfchen oder Eiskristalle",
+            "Nur unsichtbarer Wasserdampf"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche einzelne winzige Teilchen mit dem ganzen sichtbaren Gebilde.",
+          "why": "Viele kleine Tröpfchen oder Eiskristalle machen die Wolke sichtbar.",
+          "wrong": [
+            "Eine Wolke ist kein einzelner starrer Ball.",
+            "Viele kleine Tröpfchen oder Eiskristalle machen die Wolke sichtbar.",
+            "Unsichtbarer Wasserdampf allein erklärt die sichtbare Wolke nicht."
+          ]
+        },
+        {
+          "prompt": "An einer kühlen Fensterscheibe entstehen innen Tröpfchen. Welche Idee prüfst du zuerst?",
+          "answers": [
+            "Wasserdampf der Raumluft kondensiert",
+            "Das Glas stellt neues Wasser her",
+            "Jede Wolke muss sofort regnen"
+          ],
+          "correct": 0,
+          "hint": "Suche vorhandenes Wasser und eine Abkühlung.",
+          "why": "Wasser aus der Luft kann sich an einer kühlen Oberfläche als Tröpfchen absetzen.",
+          "wrong": [
+            "Wasser aus der Luft kann sich an einer kühlen Oberfläche als Tröpfchen absetzen.",
+            "Glas erzeugt dabei kein neues Wasser.",
+            "Sichtbare Tröpfchen führen nicht überall sofort zu Regen."
+          ]
+        }
+      ],
+      "sequence": [
+        "Feuchte Luft kühlt ab",
+        "Wasserdampf kondensiert",
+        "Viele Tröpfchen bilden eine Wolke"
+      ]
+    },
+    {
+      "id": "water:3",
+      "journeyId": "water",
+      "index": 3,
+      "goal": "Verschiedene Wege nach dem Niederschlag erkennen.",
+      "scene": "Ein Regentropfen landet am Boden. Deine Karte zeigt mehrere mögliche Wege.",
+      "tasks": [
+        {
+          "prompt": "Welcher Weg führt Wasser in den Boden?",
+          "answers": [
+            "Sonnenlicht",
+            "Versickern",
+            "Die Erddrehung"
+          ],
+          "correct": 1,
+          "hint": "Überlege, ob Wasser in Zwischenräume des Bodens gelangen kann.",
+          "why": "Versickerndes Wasser kann zum Grundwasser beitragen.",
+          "wrong": [
+            "Sonnenlicht ist Energie und kein Wasserweg.",
+            "Versickerndes Wasser kann zum Grundwasser beitragen.",
+            "Die tägliche Drehung benennt keinen Weg durch den Boden."
+          ]
+        },
+        {
+          "prompt": "Welche zwei Wege sind nach Regen möglich?",
+          "answers": [
+            "Wasser fließt oberirdisch oder versickert",
+            "Alles Wasser springt sofort ins Meer",
+            "Alles Wasser bleibt immer am selben Ort"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche Bach, Boden und Speicher.",
+          "why": "Wasser kann unterschiedlich abfließen und gespeichert werden.",
+          "wrong": [
+            "Wasser kann unterschiedlich abfließen und gespeichert werden.",
+            "Der Weg ins Meer ist nicht immer sofort oder direkt.",
+            "Wasser kann seinen Ort und Zustand verändern."
+          ]
+        },
+        {
+          "prompt": "Beginnt jeder Wasserkreislauf zwingend im Meer?",
+          "answers": [
+            "Ja, nur das Meer enthält Wasser",
+            "Ja, Grundwasser gehört nicht dazu",
+            "Nein, ein Tropfen kann an vielen Stellen starten"
+          ],
+          "correct": 2,
+          "hint": "Suche einen Kreislauf statt einer Strecke mit festem Start.",
+          "why": "Wasser kann lange in Eis, Boden oder anderen Speichern bleiben.",
+          "wrong": [
+            "Auch andere Speicher enthalten Wasser.",
+            "Grundwasser gehört zum Wasserkreislauf.",
+            "Wasser kann lange in Eis, Boden oder anderen Speichern bleiben."
+          ]
+        }
+      ],
+      "sequence": [
+        "Regen landet auf dem Boden",
+        "Ein Teil versickert",
+        "Wasser wird im Untergrund gespeichert"
+      ]
+    },
+    {
+      "id": "water:4",
+      "journeyId": "water",
+      "index": 4,
+      "goal": "Sichtbares Wasser nicht mit Trinkwasser gleichsetzen.",
+      "scene": "Deine Expedition sieht einen klaren Bach. Welche Grenze ist für Menschen wichtig?",
+      "tasks": [
+        {
+          "prompt": "Ist klares Bachwasser automatisch Trinkwasser?",
+          "answers": [
+            "Nein",
+            "Ja, immer",
+            "Nur wenn es blau aussieht"
+          ],
+          "correct": 0,
+          "hint": "Aussehen ist nicht dasselbe wie geprüfte Wasserqualität.",
+          "why": "Unsichtbare Stoffe und Keime können vorhanden sein; nicht einfach daraus trinken.",
+          "wrong": [
+            "Unsichtbare Stoffe und Keime können vorhanden sein; nicht einfach daraus trinken.",
+            "Klarheit ist keine Trinkwasserprüfung.",
+            "Eine Farbe beweist keine sichere Wasserqualität."
+          ]
+        },
+        {
+          "prompt": "Warum ist nutzbares Süßwasser kostbar?",
+          "answers": [
+            "Alles Wasser ist sofort trinkbar",
+            "Meere enthalten kein Wasser",
+            "Viel Wasser ist salzig oder in Eis und Boden gespeichert"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche Wasser insgesamt mit zugänglichem sauberem Trinkwasser.",
+          "why": "Nicht jede Wasserreserve steht als sicheres Trinkwasser zur Verfügung.",
+          "wrong": [
+            "Aufbereitung und Schutz bleiben nötig.",
+            "Ozeane enthalten sehr viel, aber salziges Wasser.",
+            "Nicht jede Wasserreserve steht als sicheres Trinkwasser zur Verfügung."
+          ]
+        },
+        {
+          "prompt": "Jemand schlägt vor, nur den sichtbaren Schmutz zu entfernen. Reicht das als Trinkwasserprüfung?",
+          "answers": [
+            "Ja, jedes Süßwasser ist sicher",
+            "Nein, auch Unsichtbares muss berücksichtigt werden",
+            "Ja, ein Blick ersetzt alle Prüfungen"
+          ],
+          "correct": 1,
+          "hint": "Unterscheide sichtbare Sauberkeit und gesundheitliche Qualität.",
+          "why": "Trinkwasser braucht geeignete Prüfung und Aufbereitung durch zuständige Stellen.",
+          "wrong": [
+            "Süßwasser bedeutet nur weniger Salz, nicht automatisch sichere Trinkqualität.",
+            "Trinkwasser braucht geeignete Prüfung und Aufbereitung durch zuständige Stellen.",
+            "Ein Blick erkennt nicht alle Risiken."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weather:0",
+      "journeyId": "weather",
+      "index": 0,
+      "goal": "Wetterbeobachtungen passenden Messungen zuordnen.",
+      "scene": "Du eröffnest eine gedachte Wetterstation. Deine Messkarte beschreibt heute, nicht alle Jahre.",
+      "tasks": [
+        {
+          "prompt": "Welches Gerät misst Temperatur?",
+          "answers": [
+            "Ein Regenmesser",
+            "Eine Landkarte",
+            "Ein Thermometer"
+          ],
+          "correct": 2,
+          "hint": "Frage, welche Größe das Gerät erfasst.",
+          "why": "Ein Thermometer misst Temperatur.",
+          "wrong": [
+            "Ein Regenmesser misst Niederschlag.",
+            "Eine Karte ist kein Temperaturmessgerät.",
+            "Ein Thermometer misst Temperatur."
+          ]
+        },
+        {
+          "prompt": "Was gehört zu einer Wetterbeobachtung?",
+          "answers": [
+            "Nur die Zahl der Kontinente",
+            "Temperatur, Wind und Niederschlag heute",
+            "Nur die Fläche eines Landes"
+          ],
+          "correct": 1,
+          "hint": "Suche Größen, die den Zustand der Luft beschreiben.",
+          "why": "Wetter kann durch mehrere aktuelle Messgrößen beschrieben werden.",
+          "wrong": [
+            "Eine Kontinentzahl ist keine Wetterbeobachtung.",
+            "Wetter kann durch mehrere aktuelle Messgrößen beschrieben werden.",
+            "Landesfläche beschreibt nicht die aktuelle Luft."
+          ]
+        },
+        {
+          "prompt": "Ein Regenmesser blieb einen Tag trocken. Was darfst du sagen?",
+          "answers": [
+            "An diesem Messort wurde an diesem Tag kein Regen gesammelt",
+            "Im ganzen Land regnet es nie",
+            "Das Klima ist damit vollständig bestimmt"
+          ],
+          "correct": 0,
+          "hint": "Prüfe Ort, Zeitraum und Reichweite deiner Messung.",
+          "why": "Eine einzelne örtliche Messung erlaubt nur eine begrenzte Aussage.",
+          "wrong": [
+            "Eine einzelne örtliche Messung erlaubt nur eine begrenzte Aussage.",
+            "Ein Tag an einem Ort beschreibt nicht alle Orte und Jahre.",
+            "Klima braucht viele Beobachtungen über lange Zeit."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weather:1",
+      "journeyId": "weather",
+      "index": 1,
+      "goal": "Wind als Bewegung der Luft erklären.",
+      "scene": "Dein virtuelles Wetterteam vergleicht unterschiedlich erwärmte Orte.",
+      "tasks": [
+        {
+          "prompt": "Was ist Wind?",
+          "answers": [
+            "Festes Sonnenlicht",
+            "Luft in Bewegung",
+            "Wasser in einer Flasche"
+          ],
+          "correct": 1,
+          "hint": "Suche das Material, das sich bewegt.",
+          "why": "Wind ist bewegte Luft.",
+          "wrong": [
+            "Sonnenlicht ist kein festes Material.",
+            "Wind ist bewegte Luft.",
+            "Eine Wasserflasche beschreibt keinen Wind."
+          ]
+        },
+        {
+          "prompt": "Was hilft, Wind entstehen zu lassen?",
+          "answers": [
+            "Unterschiede in Erwärmung und Luftdruck",
+            "Gleiche Länderfarben auf einer Karte",
+            "Die Form einer Flagge"
+          ],
+          "correct": 0,
+          "hint": "Denke an Unterschiede in der Atmosphäre.",
+          "why": "Unterschiedliche Erwärmung trägt zu Luftdruckunterschieden und Luftbewegung bei.",
+          "wrong": [
+            "Unterschiedliche Erwärmung trägt zu Luftdruckunterschieden und Luftbewegung bei.",
+            "Kartenfarben treiben keine Luft an.",
+            "Eine Flagge kann Wind zeigen, verursacht ihn aber nicht dadurch."
+          ]
+        },
+        {
+          "prompt": "Eine Fahne bewegt sich. Weißt du damit schon den Luftdruck an allen Orten?",
+          "answers": [
+            "Ja, die Fahne misst jeden Luftdruck",
+            "Ja, bewegte Fahnen bedeuten immer Sturm",
+            "Nein, dafür braucht man weitere Messungen"
+          ],
+          "correct": 2,
+          "hint": "Unterscheide sichtbare Bewegung und genaue Messdaten.",
+          "why": "Eine Fahne zeigt Bewegung, aber keinen vollständigen Druckverlauf.",
+          "wrong": [
+            "Eine Fahne ist kein weltweites Druckmessnetz.",
+            "Eine Bewegung allein ist keine sichere Sturmklassifikation.",
+            "Eine Fahne zeigt Bewegung, aber keinen vollständigen Druckverlauf."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weather:2",
+      "journeyId": "weather",
+      "index": 2,
+      "goal": "Wolkenformen beobachten ohne sichere Vorhersage zu behaupten.",
+      "scene": "Du zeichnest eine Wolke, statt gleich einen Wetteralarm auszurufen.",
+      "tasks": [
+        {
+          "prompt": "Was ist Nebel?",
+          "answers": [
+            "Eine Wolke am Boden",
+            "Eine Gesteinsschicht",
+            "Ein Kontinent"
+          ],
+          "correct": 0,
+          "hint": "Achte auf die Höhe und die kleinen Tröpfchen.",
+          "why": "Nebel ist eine Wolke in Bodennähe.",
+          "wrong": [
+            "Nebel ist eine Wolke in Bodennähe.",
+            "Gestein ist nicht die sichtbare Tröpfchenwolke.",
+            "Ein Kontinent ist eine große Landregion."
+          ]
+        },
+        {
+          "prompt": "Warum regnet nicht jede Wolke?",
+          "answers": [
+            "Wolken enthalten nie Wasser",
+            "Nur runde Wolken können Wasser enthalten",
+            "Tröpfchen oder Kristalle sind nicht immer ausreichend gewachsen"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche kleine Wolkenteilchen mit fallendem Niederschlag.",
+          "why": "Für Niederschlag müssen Teilchen unter geeigneten Bedingungen wachsen.",
+          "wrong": [
+            "Wolken bestehen aus Tröpfchen oder Eiskristallen.",
+            "Die Form allein entscheidet nicht, ob Wasser vorhanden ist.",
+            "Für Niederschlag müssen Teilchen unter geeigneten Bedingungen wachsen."
+          ]
+        },
+        {
+          "prompt": "Eine Wolke sieht dunkel aus. Reicht das für eine sichere Unwettervorhersage?",
+          "answers": [
+            "Ja, dann fällt an jedem Ort Hagel",
+            "Nein, weitere Informationen sind nötig",
+            "Ja, die Farbe beweist alles"
+          ],
+          "correct": 1,
+          "hint": "Trenne eine Beobachtung von einer sicheren Gefahrenaussage.",
+          "why": "Wolkeneindruck allein ersetzt keine Wetterdaten und Vorhersage.",
+          "wrong": [
+            "Ein Wolkenfoto belegt keinen Niederschlag überall.",
+            "Wolkeneindruck allein ersetzt keine Wetterdaten und Vorhersage.",
+            "Farbe ist keine vollständige Gefahrenprüfung."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weather:3",
+      "journeyId": "weather",
+      "index": 3,
+      "goal": "Tageswetter und langjährige Muster trennen.",
+      "scene": "Dein Wettertagebuch steht neben einem langen Klimaarchiv. Beide beantworten andere Fragen.",
+      "tasks": [
+        {
+          "prompt": "Welche Aussage beschreibt Wetter?",
+          "answers": [
+            "Die typischen Bedingungen vieler Jahrzehnte",
+            "Die Erdkruste ist dünn",
+            "Heute regnet es an unserem Messort"
+          ],
+          "correct": 2,
+          "hint": "Achte auf den betrachteten Zeitraum.",
+          "why": "Ein Tageszustand ist Wetter.",
+          "wrong": [
+            "Langjährige typische Bedingungen beschreiben Klima.",
+            "Ein geologischer Satz beschreibt kein aktuelles Wetter.",
+            "Ein Tageszustand ist Wetter."
+          ]
+        },
+        {
+          "prompt": "Was ist für einen Klimavergleich hilfreicher?",
+          "answers": [
+            "Die Farbe eines Thermometers",
+            "Viele vergleichbare Messungen über lange Zeit",
+            "Nur ein kalter Vormittag"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche Datenmenge und Zeitraum.",
+          "why": "Klima wird aus langen Messreihen untersucht, oft über mindestens 30 Jahre.",
+          "wrong": [
+            "Die Gehäusefarbe liefert keine Klimamessung.",
+            "Klima wird aus langen Messreihen untersucht, oft über mindestens 30 Jahre.",
+            "Ein Einzelereignis reicht nicht für den typischen Verlauf."
+          ]
+        },
+        {
+          "prompt": "Ein Wintertag ist besonders kalt. Widerlegt das allein eine langfristige Erwärmung?",
+          "answers": [
+            "Nein, Einzelwetter und langfristiger Verlauf sind verschieden",
+            "Ja, ein Tag beschreibt die ganze Erde",
+            "Ja, Temperatur schwankt niemals"
+          ],
+          "correct": 0,
+          "hint": "Prüfe, welche Frage die einzelne Messung beantworten kann.",
+          "why": "Auch bei langfristiger Erwärmung sind einzelne kalte Tage möglich.",
+          "wrong": [
+            "Auch bei langfristiger Erwärmung sind einzelne kalte Tage möglich.",
+            "Ein Tag ist weder räumlich noch zeitlich eine vollständige Klimareihe.",
+            "Wetter kann sich verändern und schwanken."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weather:4",
+      "journeyId": "weather",
+      "index": 4,
+      "goal": "Vorhersagen als begründete, aber begrenzte Aussagen lesen.",
+      "scene": "Dein Wetterteam erhält Messdaten und zwei Vorhersagezeiträume.",
+      "tasks": [
+        {
+          "prompt": "Woraus berechnen Computer Wettervorhersagen?",
+          "answers": [
+            "Nur aus Kalenderfarben",
+            "Aus Messdaten und Modellen",
+            "Nur aus Ländernamen"
+          ],
+          "correct": 1,
+          "hint": "Suche Informationen über den Zustand der Luft.",
+          "why": "Messgeräte liefern Daten, die Modelle verarbeiten.",
+          "wrong": [
+            "Eine Kalenderfarbe ersetzt keine Wetterdaten.",
+            "Messgeräte liefern Daten, die Modelle verarbeiten.",
+            "Ein Ländername enthält keine aktuellen Luftmessungen."
+          ]
+        },
+        {
+          "prompt": "Welche Vorhersage ist meistens unsicherer?",
+          "answers": [
+            "Die weiter entfernte Zukunft",
+            "Immer die nächste Stunde",
+            "Beide sind grundsätzlich fehlerfrei"
+          ],
+          "correct": 0,
+          "hint": "Denke an die ständig wechselnde Atmosphäre.",
+          "why": "Unsicherheit nimmt mit größerem Vorhersageabstand meistens zu.",
+          "wrong": [
+            "Unsicherheit nimmt mit größerem Vorhersageabstand meistens zu.",
+            "Kurze Zeiträume sind nicht grundsätzlich unsicherer.",
+            "Keine Vorhersage ist automatisch fehlerfrei."
+          ]
+        },
+        {
+          "prompt": "Eine Prognose ändert sich nach neuen Messungen. Bedeutet das, Forschung sei wertlos?",
+          "answers": [
+            "Ja, jede Änderung ist ein Betrug",
+            "Ja, Messungen sind unnötig",
+            "Nein, neue Daten können die Einschätzung verbessern"
+          ],
+          "correct": 2,
+          "hint": "Überlege, wie Wissen auf neue Informationen reagiert.",
+          "why": "Überarbeitete Vorhersagen können neue Informationen berücksichtigen.",
+          "wrong": [
+            "Eine sachlich begründete Änderung ist kein Beweis für Täuschung.",
+            "Gerade Messungen ermöglichen begründete Verbesserungen.",
+            "Überarbeitete Vorhersagen können neue Informationen berücksichtigen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seasons:0",
+      "journeyId": "seasons",
+      "index": 0,
+      "goal": "Die Neigung der gedachten Achse erklären.",
+      "scene": "Deine Modell-Erde reist um eine Sonne. Du beobachtest ihre Achse, nicht eine echte Stange.",
+      "tasks": [
+        {
+          "prompt": "Was bezeichnet die Erdachse?",
+          "answers": [
+            "Eine echte Metallstange",
+            "Eine Ländergrenze",
+            "Eine gedachte Linie der Drehung"
+          ],
+          "correct": 2,
+          "hint": "Unterscheide eine Beschreibung von einem eingebauten Bauteil.",
+          "why": "Die Achse hilft, die Drehung der Erde zu beschreiben.",
+          "wrong": [
+            "Die Erde enthält keine solche Modellstange.",
+            "Politische Grenzen bestimmen keine Drehachse.",
+            "Die Achse hilft, die Drehung der Erde zu beschreiben."
+          ]
+        },
+        {
+          "prompt": "Wie bleibt die Achse während eines Jahres ungefähr ausgerichtet?",
+          "answers": [
+            "Sie verschwindet im Winter",
+            "In dieselbe Richtung im Raum",
+            "Immer direkt auf die Sonne"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche die Ausrichtung an mehreren Bahnpunkten.",
+          "why": "Die ungefähr gleichbleibende Ausrichtung führt zu unterschiedlicher Besonnung der Halbkugeln.",
+          "wrong": [
+            "Die Drehung hat auch im Winter eine Achse.",
+            "Die ungefähr gleichbleibende Ausrichtung führt zu unterschiedlicher Besonnung der Halbkugeln.",
+            "Zur Sonne zeigt im Jahresverlauf nicht immer derselbe Pol."
+          ]
+        },
+        {
+          "prompt": "Eine Zeichnung übertreibt die Neigung. Darfst du daraus den echten Winkel messen?",
+          "answers": [
+            "Nein, dafür brauchst du den angegebenen Maßstab",
+            "Ja, jede Zeichnung ist maßstäblich",
+            "Ja, der Winkel ist jeden Tag zufällig"
+          ],
+          "correct": 0,
+          "hint": "Prüfe, ob die Darstellung ausdrücklich ein Lernmodell ist.",
+          "why": "Eine überzeichnete Neigung erklärt den Zusammenhang, aber ersetzt keine Messung.",
+          "wrong": [
+            "Eine überzeichnete Neigung erklärt den Zusammenhang, aber ersetzt keine Messung.",
+            "Lernbilder können Größen und Winkel vereinfachen.",
+            "Der Winkel ändert sich nicht zufällig täglich."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seasons:1",
+      "journeyId": "seasons",
+      "index": 1,
+      "goal": "Sommer durch Sonnenstand und Tageslänge erklären.",
+      "scene": "Du vergleichst auf deiner Expedition Deutschland und Australien im Juni.",
+      "tasks": [
+        {
+          "prompt": "Welche Jahreszeit ist um Juni auf der Nordhalbkugel?",
+          "answers": [
+            "Überall auf der Erde dieselbe",
+            "Sommer",
+            "Winter"
+          ],
+          "correct": 1,
+          "hint": "Achte darauf, welche Halbkugel zur Sonne geneigt ist.",
+          "why": "Die Nordhalbkugel bekommt um Juni längere Tage und einen höheren Sonnenstand.",
+          "wrong": [
+            "Die Halbkugeln haben gegensätzliche Jahreszeiten.",
+            "Die Nordhalbkugel bekommt um Juni längere Tage und einen höheren Sonnenstand.",
+            "Winter passt hier zur anderen Halbkugel."
+          ]
+        },
+        {
+          "prompt": "Warum kommt im nördlichen Sommer pro Tag mehr Sonnenenergie an?",
+          "answers": [
+            "Höherer Sonnenstand und längere Tage",
+            "Nur weil die Erde dann am nächsten zur Sonne ist",
+            "Weil nachts eine zweite Sonne scheint"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche Winkel und Beleuchtungsdauer.",
+          "why": "Steileres Sonnenlicht und mehr Tagesstunden tragen zur größeren Energiemenge bei.",
+          "wrong": [
+            "Steileres Sonnenlicht und mehr Tagesstunden tragen zur größeren Energiemenge bei.",
+            "Die Entfernung ist nicht der Hauptgrund der Jahreszeiten.",
+            "Es gibt keine zweite nächtliche Sonne."
+          ]
+        },
+        {
+          "prompt": "Juni in Australien: Kannst du einfach Deutschlands Sommerkleidung einplanen?",
+          "answers": [
+            "Ja, Juni bedeutet überall Sommer",
+            "Ja, alle Orte sind immer gleich warm",
+            "Nein, dort ist die andere Jahreszeit; Wetter zusätzlich prüfen"
+          ],
+          "correct": 2,
+          "hint": "Prüfe Halbkugel und konkrete Wetterlage getrennt.",
+          "why": "Die Jahreszeit ist entgegengesetzt; die tatsächliche Temperatur hängt auch vom Wetter und Ort ab.",
+          "wrong": [
+            "Kalendernamen erklären allein keine weltweite Jahreszeit.",
+            "Orte und Wetterbedingungen können sich stark unterscheiden.",
+            "Die Jahreszeit ist entgegengesetzt; die tatsächliche Temperatur hängt auch vom Wetter und Ort ab."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seasons:2",
+      "journeyId": "seasons",
+      "index": 2,
+      "goal": "Winter nicht mit größerer Sonnenentfernung verwechseln.",
+      "scene": "Ein Wintertag kann sonnig aussehen. Du vergleichst trotzdem die gesamte Beleuchtungsdauer.",
+      "tasks": [
+        {
+          "prompt": "Wie sind die Tage im nördlichen Winter gegenüber dem Sommer?",
+          "answers": [
+            "Kürzer",
+            "Immer länger",
+            "Ohne jede Sonne"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche die Stunden mit Sonnenlicht.",
+          "why": "Im nördlichen Winter sind die Tage kürzer.",
+          "wrong": [
+            "Im nördlichen Winter sind die Tage kürzer.",
+            "Die längeren Tage gehören zum Sommervergleich.",
+            "Auch im Winter scheint an vielen Orten die Sonne."
+          ]
+        },
+        {
+          "prompt": "Welche Erklärung passt zum nördlichen Winter?",
+          "answers": [
+            "Die Sonne erlischt",
+            "Die Erde hört auf sich zu drehen",
+            "Niedrigerer Sonnenstand und kürzere Tage"
+          ],
+          "correct": 2,
+          "hint": "Untersuche die Besonnung einer geneigten Kugel.",
+          "why": "Weniger steiles Licht und kürzere Tagesdauer vermindern die tägliche Energiezufuhr.",
+          "wrong": [
+            "Die Sonne leuchtet weiterhin.",
+            "Auch im Winter erzeugt die Drehung Tag und Nacht.",
+            "Weniger steiles Licht und kürzere Tagesdauer vermindern die tägliche Energiezufuhr."
+          ]
+        },
+        {
+          "prompt": "Zwei Halbkugeln haben gleichzeitig gegensätzliche Jahreszeiten. Passt die Entfernung als alleinige Erklärung?",
+          "answers": [
+            "Ja, Australien hat eine eigene Sonne",
+            "Nein, beide sind fast gleich weit von der Sonne entfernt",
+            "Ja, nur der Norden bewegt sich im All"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche eine gemeinsame Erdbahn mit der örtlichen Besonnung.",
+          "why": "Die entgegengesetzte Besonnung lässt sich durch die Achsneigung erklären.",
+          "wrong": [
+            "Australien bekommt Licht von derselben Sonne.",
+            "Die entgegengesetzte Besonnung lässt sich durch die Achsneigung erklären.",
+            "Die ganze Erde bewegt sich gemeinsam."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seasons:3",
+      "journeyId": "seasons",
+      "index": 3,
+      "goal": "Tagundnachtgleiche und tropische Jahresverläufe einordnen.",
+      "scene": "Dein Kalender zeigt März und September. Nicht jede Region beschreibt ihr Jahr wie Deutschland.",
+      "tasks": [
+        {
+          "prompt": "Wann sind Tag und Nacht fast überall ungefähr gleich lang?",
+          "answers": [
+            "Jeden Ortstag exakt gleich",
+            "Nur während Vollmond",
+            "Um März und September"
+          ],
+          "correct": 2,
+          "hint": "Suche die Stellung der Sonne über dem Äquator.",
+          "why": "Die Tagundnachtgleichen liegen ungefähr in März und September.",
+          "wrong": [
+            "Tageslängen verändern sich mit Ort und Jahreszeit.",
+            "Mondphasen verursachen die Tagundnachtgleiche nicht.",
+            "Die Tagundnachtgleichen liegen ungefähr in März und September."
+          ]
+        },
+        {
+          "prompt": "März beginnt im Norden der Frühling. Was beginnt gleichzeitig im Süden?",
+          "answers": [
+            "Gar keine Jahreszeit",
+            "Herbst",
+            "Auch überall Frühling"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche die beiden Halbkugeln.",
+          "why": "Frühling und Herbst sind auf den beiden Halbkugeln gegensätzlich.",
+          "wrong": [
+            "Auch im Süden gibt es einen Jahresverlauf.",
+            "Frühling und Herbst sind auf den beiden Halbkugeln gegensätzlich.",
+            "Die Kalenderzeit bedeutet nicht überall dieselbe Jahreszeit."
+          ]
+        },
+        {
+          "prompt": "Eine tropische Region beschreibt Regen- und Trockenzeiten. Ist das automatisch falsch?",
+          "answers": [
+            "Nein, passende örtliche Jahresmuster können anders aussehen",
+            "Ja, überall gelten genau vier deutsche Jahreszeiten",
+            "Ja, in den Tropen regnet es nie"
+          ],
+          "correct": 0,
+          "hint": "Unterscheide unsere Einteilung von örtlichen Bedingungen.",
+          "why": "Viele tropische Regionen unterscheiden vor allem Regen- und Trockenzeiten.",
+          "wrong": [
+            "Viele tropische Regionen unterscheiden vor allem Regen- und Trockenzeiten.",
+            "Eine deutsche Einteilung beschreibt nicht jeden Lebensraum gleich gut.",
+            "Tropische Niederschlagsverläufe sind unterschiedlich, nicht immer trocken."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seasons:4",
+      "journeyId": "seasons",
+      "index": 4,
+      "goal": "Wetter, Tag und Jahr getrennt erklären.",
+      "scene": "Dein Reisetagebuch vergleicht einen sonnigen Wintertag mit der Jahreszeitenkarte.",
+      "tasks": [
+        {
+          "prompt": "Welche Bewegung erklärt Tag und Nacht?",
+          "answers": [
+            "Nur Regenwolken",
+            "Drehung um die eigene Achse",
+            "Nur der Jahresumlauf"
+          ],
+          "correct": 1,
+          "hint": "Suche die Bewegung, die eine Erdseite ins Licht bringt.",
+          "why": "Die Achsdrehung verändert, welche Seite zur Sonne zeigt.",
+          "wrong": [
+            "Wolken erklären nicht den Wechsel der ganzen Tag- und Nachtseite.",
+            "Die Achsdrehung verändert, welche Seite zur Sonne zeigt.",
+            "Ein Jahresumlauf ist eine andere Bewegung."
+          ]
+        },
+        {
+          "prompt": "Was erklärt den jährlichen Jahreszeitenwechsel?",
+          "answers": [
+            "Sonnenumlauf mit geneigter Achse",
+            "Nur ein warmer Nachmittag",
+            "Nur der Mondumlauf"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche einzelne Wetterstunden mit einem Jahresmuster.",
+          "why": "Umlauf und Achsneigung verändern im Jahreslauf die Besonnung.",
+          "wrong": [
+            "Umlauf und Achsneigung verändern im Jahreslauf die Besonnung.",
+            "Ein Nachmittag ist ein Wetterereignis, keine Jahresbewegung.",
+            "Der Mondumlauf ist nicht der Hauptgrund der Jahreszeiten."
+          ]
+        },
+        {
+          "prompt": "Ein Wintertag ist sonnig. Ist deshalb Sommer?",
+          "answers": [
+            "Ja, Sonne bedeutet immer Sommer",
+            "Ja, die Achsneigung springt sofort um",
+            "Nein, Wetter und Jahreszeit sind verschieden"
+          ],
+          "correct": 2,
+          "hint": "Betrachte Zeitraum und Himmelsbewegung.",
+          "why": "Ein sonniger Tag verändert die Jahresstellung der Erde nicht.",
+          "wrong": [
+            "Sonnenschein kommt auch im Winter vor.",
+            "Die Achse springt nicht durch Tageswetter um.",
+            "Ein sonniger Tag verändert die Jahresstellung der Erde nicht."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ocean:0",
+      "journeyId": "ocean",
+      "index": 0,
+      "goal": "Benannte Ozeane als zusammenhängendes Weltmeer sehen.",
+      "scene": "Dein Forschungsschiff folgt einer Wasserroute über mehrere benannte Ozeane.",
+      "tasks": [
+        {
+          "prompt": "Welcher benannte Ozean ist der größte?",
+          "answers": [
+            "Der Bodensee",
+            "Der Pazifik",
+            "Der Arktische Ozean"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche die Ozeanübersicht.",
+          "why": "Der Pazifik ist der größte der fünf hier benannten Ozeane.",
+          "wrong": [
+            "Der Bodensee ist ein See, kein Ozean.",
+            "Der Pazifik ist der größte der fünf hier benannten Ozeane.",
+            "Der Arktische Ozean ist der kleinste."
+          ]
+        },
+        {
+          "prompt": "Was passiert an einer vereinbarten Ozeangrenze?",
+          "answers": [
+            "Das Wasser bleibt verbunden",
+            "Eine feste Mauer trennt das Meer",
+            "Jedes Wasserteilchen stoppt"
+          ],
+          "correct": 0,
+          "hint": "Unterscheide Namen auf der Karte von einer echten Barriere.",
+          "why": "Die benannten Teile sind ein zusammenhängendes Weltmeer.",
+          "wrong": [
+            "Die benannten Teile sind ein zusammenhängendes Weltmeer.",
+            "Die Namensgrenze ist keine feste Mauer.",
+            "Eine Kartenlinie stoppt keine Strömung."
+          ]
+        },
+        {
+          "prompt": "Eine Karte zeigt fünf verschiedene Blautöne. Gibt es dadurch fünf getrennte Wasserwelten?",
+          "answers": [
+            "Ja, die Farbe ist eine echte Trennwand",
+            "Ja, jedes kleinere Meer ist vom Ozean getrennt",
+            "Nein, Farben helfen beim Benennen"
+          ],
+          "correct": 2,
+          "hint": "Prüfe die Bedeutung eines Kartenzeichens.",
+          "why": "Kartenfarben unterscheiden Bezeichnungen, nicht voneinander isoliertes Wasser.",
+          "wrong": [
+            "Eine Farbe baut keine Barriere.",
+            "Auch kleinere Meere können zum verbundenen Weltmeer gehören.",
+            "Kartenfarben unterscheiden Bezeichnungen, nicht voneinander isoliertes Wasser."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ocean:1",
+      "journeyId": "ocean",
+      "index": 1,
+      "goal": "Salztransport und Verdunstung unterscheiden.",
+      "scene": "Auf deiner gedachten Meerreise verdunstet Wasser. Du verfolgst, was mit dem Salz geschieht.",
+      "tasks": [
+        {
+          "prompt": "Was bleibt zurück, wenn salziges Wasser verdunstet?",
+          "answers": [
+            "Das Salz",
+            "Alle Wassermoleküle bleiben unverändert im Gefäß",
+            "Nur Luft wird zu Gestein"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche gelöste Salze mit verdunstendem Wasser.",
+          "why": "Wasser geht als Dampf in die Luft; Salz bleibt bei dieser Verdunstung zurück.",
+          "wrong": [
+            "Wasser geht als Dampf in die Luft; Salz bleibt bei dieser Verdunstung zurück.",
+            "Ein Teil des Wassers verlässt das Gefäß.",
+            "Luft verwandelt sich dabei nicht zu Gestein."
+          ]
+        },
+        {
+          "prompt": "Wie gelangen gelöste Stoffe ins Meer?",
+          "answers": [
+            "Nur durch Flaggen auf Schiffen",
+            "Weil Meere kein Wasser haben",
+            "Unter anderem mit Flüssen aus Gestein"
+          ],
+          "correct": 2,
+          "hint": "Verfolge den Weg von Regen über Gestein zu Flüssen.",
+          "why": "Flüsse bringen gelöste Mineralien; auch Meeresbodenprozesse tragen Stoffe bei.",
+          "wrong": [
+            "Flaggen liefern keine Erklärung für den Salztransport.",
+            "Meere enthalten sehr viel Wasser mit gelösten Stoffen.",
+            "Flüsse bringen gelöste Mineralien; auch Meeresbodenprozesse tragen Stoffe bei."
+          ]
+        },
+        {
+          "prompt": "Ein Fluss schmeckt nicht wie Meerwasser. Heißt das, er enthält keine gelösten Stoffe?",
+          "answers": [
+            "Ja, alle Flüsse sind destilliert",
+            "Nein, die Mengen können viel geringer sein",
+            "Ja, nur Ozeane lösen Stoffe"
+          ],
+          "correct": 1,
+          "hint": "Unterscheide geringe Menge von vollständiger Abwesenheit.",
+          "why": "Auch Flüsse enthalten gelöste Stoffe, meist mit viel geringerem Salzgehalt.",
+          "wrong": [
+            "Flusswasser ist kein automatisch gereinigtes Destillat.",
+            "Auch Flüsse enthalten gelöste Stoffe, meist mit viel geringerem Salzgehalt.",
+            "Stoffe können auch in Flusswasser gelöst sein."
+          ]
+        }
+      ],
+      "sequence": [
+        "Regen und Wasser lösen Stoffe aus Gestein",
+        "Flüsse transportieren gelöste Stoffe",
+        "Wasser gelangt ins Meer"
+      ]
+    },
+    {
+      "id": "ocean:2",
+      "journeyId": "ocean",
+      "index": 2,
+      "goal": "Korallen und ihre Zusammenarbeit mit Algen erklären.",
+      "scene": "Du beobachtest ein Riff im Modell. Die Expedition fasst keine Tiere an.",
+      "tasks": [
+        {
+          "prompt": "Was sind Korallen?",
+          "answers": [
+            "Bunte Steine",
+            "Landpflanzen",
+            "Tiere"
+          ],
+          "correct": 2,
+          "hint": "Denke an die kleinen Korallentiere.",
+          "why": "Ein Riff wird unter anderem von Korallentieren aufgebaut.",
+          "wrong": [
+            "Hartes Material allein macht eine Koralle nicht zum Stein.",
+            "Korallen sind keine Pflanzen, obwohl viele mit Algen zusammenleben.",
+            "Ein Riff wird unter anderem von Korallentieren aufgebaut."
+          ]
+        },
+        {
+          "prompt": "Warum benötigen viele riffbildende Korallen Licht?",
+          "answers": [
+            "Licht macht Meerwasser immer zu Trinkwasser",
+            "Ihre mit ihnen lebenden Algen nutzen Sonnenlicht",
+            "Alle Tiere sind Sterne"
+          ],
+          "correct": 1,
+          "hint": "Betrachte die Zusammenarbeit zweier Lebewesen.",
+          "why": "Viele Korallen leben mit Algen zusammen, die Sonnenlicht nutzen.",
+          "wrong": [
+            "Sonnenlicht garantiert keine Trinkwasserqualität.",
+            "Viele Korallen leben mit Algen zusammen, die Sonnenlicht nutzen.",
+            "Ein Tier erzeugt nicht wie ein Stern eigenes Sonnenlicht."
+          ]
+        },
+        {
+          "prompt": "Gilt flach, warm und hell für jede Koralle ohne Ausnahme?",
+          "answers": [
+            "Nein, die Erklärung spricht über viele riffbildende Korallen",
+            "Ja, jede Koralle braucht dieselbe Tiefe",
+            "Ja, eine Koralle ohne Sonne ist unmöglich"
+          ],
+          "correct": 0,
+          "hint": "Achte auf einschränkende Wörter wie viele und meistens.",
+          "why": "Die Aussage über viele tropische Riffbildner ist keine Regel für jede Korallenart.",
+          "wrong": [
+            "Die Aussage über viele tropische Riffbildner ist keine Regel für jede Korallenart.",
+            "Ein typisches Beispiel beschreibt nicht alle Arten.",
+            "Aus einer begrenzten Aussage folgt kein absolutes Verbot anderer Lebensweisen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ocean:3",
+      "journeyId": "ocean",
+      "index": 3,
+      "goal": "Licht und Druck in verschiedenen Meerestiefen vergleichen.",
+      "scene": "Dein gedachtes Forschungsgerät sinkt tiefer. Es bleibt eine virtuelle Expedition.",
+      "tasks": [
+        {
+          "prompt": "Wie verändert sich der Druck mit zunehmender Meerestiefe?",
+          "answers": [
+            "Er hängt nur von Kartenfarben ab",
+            "Er nimmt zu",
+            "Er verschwindet überall"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche die Wassersäule über dem Messort.",
+          "why": "Mit der Tiefe lastet mehr Wasser über dem Ort und der Druck steigt.",
+          "wrong": [
+            "Kartenfarben bestimmen keine Wasserlast.",
+            "Mit der Tiefe lastet mehr Wasser über dem Ort und der Druck steigt.",
+            "Mehr Tiefe bedeutet keinen allgemeinen Druckverlust."
+          ]
+        },
+        {
+          "prompt": "Welche Kombination passt zur Tiefsee?",
+          "answers": [
+            "Wenig Sonnenlicht und hoher Druck",
+            "Überall helles Sonnenlicht und kein Druck",
+            "Nur trockenes Land"
+          ],
+          "correct": 0,
+          "hint": "Betrachte Licht und Tiefe als zwei Größen.",
+          "why": "Sonnenlicht erreicht die tieferen Bereiche kaum; der Druck ist groß.",
+          "wrong": [
+            "Sonnenlicht erreicht die tieferen Bereiche kaum; der Druck ist groß.",
+            "Die Kombination vertauscht wesentliche Bedingungen.",
+            "Tiefsee liegt unter Wasser, nicht auf trockenem Land."
+          ]
+        },
+        {
+          "prompt": "Ein Tier in der Tiefsee erzeugt Licht. Muss dort Sonnenlicht ankommen?",
+          "answers": [
+            "Ja, jede Helligkeit stammt direkt von der Sonne",
+            "Ja, die Tiefsee ist überall taghell",
+            "Nein, manche Lebewesen erzeugen eigenes Licht"
+          ],
+          "correct": 2,
+          "hint": "Unterscheide eine örtliche Lichtquelle vom Sonnenlicht.",
+          "why": "Biolumineszenz ist eigenes Licht von Lebewesen und kein Beleg für Sonnenlicht dort.",
+          "wrong": [
+            "Verschiedene Lichtquellen können Helligkeit erzeugen.",
+            "Ein leuchtendes Tier macht nicht die ganze Tiefsee hell.",
+            "Biolumineszenz ist eigenes Licht von Lebewesen und kein Beleg für Sonnenlicht dort."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ocean:4",
+      "journeyId": "ocean",
+      "index": 4,
+      "goal": "Strömungen, Wellen und Gezeiten auseinanderhalten.",
+      "scene": "Dein Meereslogbuch beschreibt drei verschiedene Bewegungen.",
+      "tasks": [
+        {
+          "prompt": "Was beeinflusst Ebbe und Flut besonders?",
+          "answers": [
+            "Die Schwerkraft von Mond und Sonne",
+            "Die Flagge eines Schiffes",
+            "Die Anzahl der Kontinente"
+          ],
+          "correct": 0,
+          "hint": "Denke an Anziehung statt an Kartenbezeichnungen.",
+          "why": "Mond und Sonne tragen durch ihre Anziehung zu Gezeiten bei.",
+          "wrong": [
+            "Mond und Sonne tragen durch ihre Anziehung zu Gezeiten bei.",
+            "Eine Flagge verursacht keine Gezeiten.",
+            "Kontinentnamen erklären die Anziehung nicht."
+          ]
+        },
+        {
+          "prompt": "Was transportieren Meeresströmungen unter anderem?",
+          "answers": [
+            "Nur Ländernamen",
+            "Kein Wasser",
+            "Wärme und Nährstoffe"
+          ],
+          "correct": 2,
+          "hint": "Verfolge bewegtes Meerwasser und seine Eigenschaften.",
+          "why": "Strömendes Wasser kann Wärme und Stoffe mitnehmen.",
+          "wrong": [
+            "Namen sind keine transportierten Wasserbestandteile.",
+            "Eine Wasserströmung enthält bewegtes Wasser.",
+            "Strömendes Wasser kann Wärme und Stoffe mitnehmen."
+          ]
+        },
+        {
+          "prompt": "Eine Welle wandert weit. Reist jedes Wasserteilchen deshalb dieselbe Strecke?",
+          "answers": [
+            "Ja, Wasser ist festes Glas",
+            "Nein, Wellenbewegung und Teilchenweg sind verschieden",
+            "Ja, ausnahmslos jedes Teilchen reist mit"
+          ],
+          "correct": 1,
+          "hint": "Unterscheide eine sich ausbreitende Bewegung von einem Gegenstandstransport.",
+          "why": "Eine Welle kann sich ausbreiten, während einzelne Teilchen anders bewegt werden.",
+          "wrong": [
+            "Flüssiges Wasser ist kein festes Glas.",
+            "Eine Welle kann sich ausbreiten, während einzelne Teilchen anders bewegt werden.",
+            "Eine Wellenbahn ist nicht automatisch die Bahn jedes Teilchens."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nature:0",
+      "journeyId": "nature",
+      "index": 0,
+      "goal": "Bedürfnisse und Lebensraum zusammen betrachten.",
+      "scene": "Du planst eine gedachte Tierbeobachtung: Nicht jedes Lebewesen kann an jedem Ort leben.",
+      "tasks": [
+        {
+          "prompt": "Was gehört zu einem passenden Lebensraum?",
+          "answers": [
+            "Nahrung, Wasser und Schutz",
+            "Nur eine schöne Kartenfarbe",
+            "Nur die größte Fläche"
+          ],
+          "correct": 0,
+          "hint": "Denke an die Bedürfnisse des Lebewesens.",
+          "why": "Ein Lebensraum muss zu den Bedürfnissen einer Art passen.",
+          "wrong": [
+            "Ein Lebensraum muss zu den Bedürfnissen einer Art passen.",
+            "Eine Farbe gibt keine Nahrung oder Schutz.",
+            "Fläche allein entscheidet nicht über geeignete Bedingungen."
+          ]
+        },
+        {
+          "prompt": "Warum brauchen Fisch und Kaktus verschiedene Bedingungen?",
+          "answers": [
+            "Jede Art braucht exakt dasselbe",
+            "Ein Kaktus ist ein Fisch",
+            "Sie sind an unterschiedliche Umgebungen angepasst"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche Lebensweise und Wasserbedarf.",
+          "why": "Arten haben unterschiedliche Anpassungen und Bedürfnisse.",
+          "wrong": [
+            "Gleiche Bedingungen passen nicht automatisch zu allen Arten.",
+            "Die beiden Lebewesen gehören zu verschiedenen Gruppen.",
+            "Arten haben unterschiedliche Anpassungen und Bedürfnisse."
+          ]
+        },
+        {
+          "prompt": "Ein kleiner Gartenteich ist kleiner als ein Parkplatz. Kann er trotzdem Lebensraum sein?",
+          "answers": [
+            "Nein, nur Wälder sind Lebensräume",
+            "Ja, geeignete Bedingungen sind entscheidend",
+            "Nein, Lebensräume müssen riesig sein"
+          ],
+          "correct": 1,
+          "hint": "Prüfe, was Lebewesen an diesem Ort finden können.",
+          "why": "Auch kleine Orte können Nahrung, Wasser und Schutz bieten.",
+          "wrong": [
+            "Viele verschiedene Umgebungen können Lebensräume sein.",
+            "Auch kleine Orte können Nahrung, Wasser und Schutz bieten.",
+            "Die Größe allein schließt einen Lebensraum nicht aus."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nature:1",
+      "journeyId": "nature",
+      "index": 1,
+      "goal": "Regenwald und Savanne anhand ihrer Bedingungen vergleichen.",
+      "scene": "Deine Expeditionskarte zeigt zwei warme Regionen mit verschiedenen Regenverläufen.",
+      "tasks": [
+        {
+          "prompt": "Welche Beschreibung passt oft zur Savanne?",
+          "answers": [
+            "Immer nur dichtes Eis",
+            "Kein einziges Lebewesen",
+            "Gräser, einzelne Bäume und Regen- und Trockenzeiten"
+          ],
+          "correct": 2,
+          "hint": "Suche den beschriebenen Wechsel der Niederschläge.",
+          "why": "Viele Savannen haben ausgeprägte Regen- und Trockenzeiten.",
+          "wrong": [
+            "Eis ist nicht die hier beschriebene typische Savannenlandschaft.",
+            "Savannen sind vielfältige Lebensräume.",
+            "Viele Savannen haben ausgeprägte Regen- und Trockenzeiten."
+          ]
+        },
+        {
+          "prompt": "Warum sind tropischer Regenwald und Savanne nicht dasselbe?",
+          "answers": [
+            "Der Ländername allein bestimmt den Lebensraum",
+            "Ihre Niederschlagsbedingungen unterscheiden sich",
+            "Beide enthalten grundsätzlich keine Pflanzen"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche Feuchtigkeit und Jahresverlauf.",
+          "why": "Auch warme Regionen können sich im Regenverlauf und damit in der Vegetation unterscheiden.",
+          "wrong": [
+            "Grenzen und Namen ersetzen keine Umweltbedingungen.",
+            "Auch warme Regionen können sich im Regenverlauf und damit in der Vegetation unterscheiden.",
+            "In beiden können viele Pflanzen wachsen."
+          ]
+        },
+        {
+          "prompt": "Jemand behauptet, jeder Regenwald sei tropisch. Wie prüfst du das?",
+          "answers": [
+            "Auch kühlere Regenwälder als Gegenbeispiele betrachten",
+            "Nur das Wort Wald zählen",
+            "Alle Wälder für identisch erklären"
+          ],
+          "correct": 0,
+          "hint": "Achte auf absolute Wörter und mögliche Ausnahmen.",
+          "why": "Es gibt auch gemäßigte Regenwälder; Regenwald ist nicht gleichbedeutend mit tropisch.",
+          "wrong": [
+            "Es gibt auch gemäßigte Regenwälder; Regenwald ist nicht gleichbedeutend mit tropisch.",
+            "Ein einzelnes Wort ersetzt keinen Vergleich von Bedingungen.",
+            "Wälder haben unterschiedliche Klimabedingungen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nature:2",
+      "journeyId": "nature",
+      "index": 2,
+      "goal": "Trockenheit als Merkmal einer Wüste erkennen.",
+      "scene": "Deine Expedition findet eine eisige und eine heiße Wüste. Was verbindet sie?",
+      "tasks": [
+        {
+          "prompt": "Was ist das entscheidende Wüstenmerkmal?",
+          "answers": [
+            "Immer Sanddünen",
+            "Sehr wenig Niederschlag",
+            "Immer Hitze"
+          ],
+          "correct": 1,
+          "hint": "Suche eine gemeinsame Bedingung trotz anderer Temperaturen.",
+          "why": "Wüsten sind sehr trockene Regionen.",
+          "wrong": [
+            "Nicht alle Wüsten bestehen aus Sand.",
+            "Wüsten sind sehr trockene Regionen.",
+            "Es gibt auch kalte Wüsten."
+          ]
+        },
+        {
+          "prompt": "Warum kann Antarktika als Wüste gelten?",
+          "answers": [
+            "Dort fällt sehr wenig Niederschlag",
+            "Weil dort keine Eisfläche existiert",
+            "Weil es dort überall heiß ist"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche gespeichertes Eis mit neuem Niederschlag.",
+          "why": "Trotz vieler Eisvorräte sind große antarktische Gebiete sehr niederschlagsarm.",
+          "wrong": [
+            "Trotz vieler Eisvorräte sind große antarktische Gebiete sehr niederschlagsarm.",
+            "Eis ist gerade ein wichtiges Merkmal der Antarktis.",
+            "Kälte und Trockenheit können zusammen vorkommen."
+          ]
+        },
+        {
+          "prompt": "Ein Kamelhöcker wird als Wassertank beschrieben. Passt das?",
+          "answers": [
+            "Ja, er enthält nur Trinkwasser",
+            "Ja, alle Wüstentiere haben Höcker",
+            "Nein, im Höcker wird Fett gespeichert"
+          ],
+          "correct": 2,
+          "hint": "Unterscheide Anpassung und falsche Vorstellung.",
+          "why": "Kamele speichern Fett in ihren Höckern.",
+          "wrong": [
+            "Der Höcker ist kein Trinkwassertank.",
+            "Verschiedene Arten haben unterschiedliche Anpassungen.",
+            "Kamele speichern Fett in ihren Höckern."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nature:3",
+      "journeyId": "nature",
+      "index": 3,
+      "goal": "Arktis und Antarktis auseinanderhalten.",
+      "scene": "Du ordnest zwei Bilder auf einer Polarweltkarte ein, ohne Tiere zu versetzen.",
+      "tasks": [
+        {
+          "prompt": "Wo leben Eisbären in freier Natur?",
+          "answers": [
+            "In der Arktis",
+            "Am Südpol",
+            "In jeder Eislandschaft"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche die nördliche und südliche Polarregion.",
+          "why": "Eisbären leben in der Arktis im Norden.",
+          "wrong": [
+            "Eisbären leben in der Arktis im Norden.",
+            "Der Südpol gehört zur Antarktis.",
+            "Ein ähnliches Aussehen einer Landschaft beweist keine Tierverbreitung."
+          ]
+        },
+        {
+          "prompt": "Welcher Vergleich passt zu den Polen?",
+          "answers": [
+            "Unter beiden Polen liegt nur Meer",
+            "Unter beiden Polen liegen Städte",
+            "Nordpol:Meer unter Eis; Südpol:Land unter Eis"
+          ],
+          "correct": 2,
+          "hint": "Suche das Material unter der Eisdecke.",
+          "why": "Die geografische Lage der Pole unterscheidet sich grundlegend.",
+          "wrong": [
+            "Am Südpol liegt ein Kontinent unter dem Eis.",
+            "Die Pole sind keine gewöhnlichen Stadtstandorte.",
+            "Die geografische Lage der Pole unterscheidet sich grundlegend."
+          ]
+        },
+        {
+          "prompt": "Ein Pinguinbild zeigt kein Eis. Muss es falsch sein?",
+          "answers": [
+            "Ja, alle Pinguine leben in der Arktis",
+            "Nein, nicht alle Pinguine leben im Eis",
+            "Ja, jeder Pinguin lebt am Südpol"
+          ],
+          "correct": 1,
+          "hint": "Prüfe Arten und Verbreitung statt nur den Hintergrund.",
+          "why": "Einige Pinguinarten leben in milderen Regionen; ein Eisbild ist nicht erforderlich.",
+          "wrong": [
+            "Pinguine sind nicht typische arktische Tiere.",
+            "Einige Pinguinarten leben in milderen Regionen; ein Eisbild ist nicht erforderlich.",
+            "Pinguinarten haben unterschiedliche Verbreitungsgebiete."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nature:4",
+      "journeyId": "nature",
+      "index": 4,
+      "goal": "Nahrungsnetze als Verbindungen statt Einzelketten verstehen.",
+      "scene": "Deine Naturkarte bekommt Pfeile zwischen Pflanzen, Tieren und zersetzenden Lebewesen.",
+      "tasks": [
+        {
+          "prompt": "Was nutzen Pflanzen zum Aufbau energiereicher Stoffe?",
+          "answers": [
+            "Nur die Farbe einer Flagge",
+            "Nur den Namen eines Waldes",
+            "Sonnenlicht"
+          ],
+          "correct": 2,
+          "hint": "Suche eine Energiequelle.",
+          "why": "Pflanzen nutzen bei der Fotosynthese Sonnenenergie.",
+          "wrong": [
+            "Flaggenfarben liefern diese Energie nicht.",
+            "Ein Name beschreibt keinen Energiefluss.",
+            "Pflanzen nutzen bei der Fotosynthese Sonnenenergie."
+          ]
+        },
+        {
+          "prompt": "Warum gehören Pilze und kleine Zersetzer zum Zusammenhang?",
+          "answers": [
+            "Sie sind in keinem Lebensraum vorhanden",
+            "Sie bauen abgestorbene Reste ab",
+            "Sie entfernen alle Naturgesetze"
+          ],
+          "correct": 1,
+          "hint": "Verfolge, was mit abgestorbenem Material geschieht.",
+          "why": "Zersetzer tragen dazu bei, Stoffe wieder verfügbar zu machen.",
+          "wrong": [
+            "Viele Lebensräume enthalten Pilze und Mikroorganismen.",
+            "Zersetzer tragen dazu bei, Stoffe wieder verfügbar zu machen.",
+            "Zersetzung ist selbst ein natürlicher Prozess."
+          ]
+        },
+        {
+          "prompt": "Eine Art verschwindet. Kann das andere Arten beeinflussen?",
+          "answers": [
+            "Ja, weil Beziehungen im Netz verändert werden",
+            "Nein, alle Arten sind völlig unabhängig",
+            "Nein, nur große Tiere zählen"
+          ],
+          "correct": 0,
+          "hint": "Suche direkte und indirekte Verbindungen.",
+          "why": "Nahrungs- und andere Beziehungen können Folgen im Netz weitergeben.",
+          "wrong": [
+            "Nahrungs- und andere Beziehungen können Folgen im Netz weitergeben.",
+            "Arten teilen viele Beziehungen und Ressourcen.",
+            "Auch unscheinbare Arten können wichtige Rollen haben."
+          ]
+        }
+      ],
+      "sequence": [
+        "Sonnenlicht erreicht Pflanzen",
+        "Pflanzen bilden energiereiche Stoffe",
+        "Pflanzenfresser nehmen davon Nahrung auf"
+      ]
+    },
+    {
+      "id": "protect:0",
+      "journeyId": "protect",
+      "index": 0,
+      "goal": "Natürlichen Treibhauseffekt von einer echten Decke unterscheiden.",
+      "scene": "Du untersuchst ein Wärmemodell der Erde. Die Lufthülle ist keine Stoffdecke.",
+      "tasks": [
+        {
+          "prompt": "Was hält einen Teil abgegebener Wärme zurück?",
+          "answers": [
+            "Eine echte Wolldecke um die Erde",
+            "Nur der Mond",
+            "Bestimmte Gase der Atmosphäre"
+          ],
+          "correct": 2,
+          "hint": "Unterscheide bildliche Erklärung und tatsächlichen Mechanismus.",
+          "why": "Treibhausgase beeinflussen die Wärmestrahlung der Erde.",
+          "wrong": [
+            "Die Erde hat keine echte Stoffdecke.",
+            "Der Mond ist nicht die genannte atmosphärische Ursache.",
+            "Treibhausgase beeinflussen die Wärmestrahlung der Erde."
+          ]
+        },
+        {
+          "prompt": "Wie wäre die Erde ohne natürlichen Treibhauseffekt?",
+          "answers": [
+            "Ohne jede Schwerkraft",
+            "Im Durchschnitt deutlich kälter",
+            "Überall wärmer"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche den Wärmehaushalt mit und ohne diesen Einfluss.",
+          "why": "Der natürliche Effekt trägt zu lebensfreundlicheren Temperaturen bei.",
+          "wrong": [
+            "Wärmehaushalt und Schwerkraft sind unterschiedliche Zusammenhänge.",
+            "Der natürliche Effekt trägt zu lebensfreundlicheren Temperaturen bei.",
+            "Die beschriebene Wärmerückhaltung würde fehlen."
+          ]
+        },
+        {
+          "prompt": "Ein Modell verwendet eine Decke. Was darfst du daraus nicht folgern?",
+          "answers": [
+            "Dass Gase genau wie Stofffasern funktionieren",
+            "Dass Modelle beim Erklären helfen können",
+            "Dass natürliche Prozesse untersucht werden können"
+          ],
+          "correct": 0,
+          "hint": "Frage, welche Grenze eine Analogie hat.",
+          "why": "Die Decke ist eine begrenzte Analogie, nicht der tatsächliche Strahlungsmechanismus.",
+          "wrong": [
+            "Die Decke ist eine begrenzte Analogie, nicht der tatsächliche Strahlungsmechanismus.",
+            "Modelle können trotz Vereinfachung hilfreich sein.",
+            "Der Wärmehaushalt kann wissenschaftlich untersucht werden."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "protect:1",
+      "journeyId": "protect",
+      "index": 1,
+      "goal": "Zusätzliche Erwärmung und gemeinsame Verantwortung erklären.",
+      "scene": "Deine Forschungsgruppe sammelt Ursachen und Lösungen. Kein Kind muss die Welt allein retten.",
+      "tasks": [
+        {
+          "prompt": "Was entsteht beim Verbrennen von Kohle, Erdöl und Erdgas zusätzlich?",
+          "answers": [
+            "Eine neue Erddrehung",
+            "Kohlendioxid",
+            "Nur sauberes Wasser ohne andere Stoffe"
+          ],
+          "correct": 1,
+          "hint": "Suche den Zusammenhang zwischen Verbrennung und Atmosphäre.",
+          "why": "Die Verbrennung fossiler Stoffe setzt zusätzliches Kohlendioxid frei.",
+          "wrong": [
+            "Verbrennung verändert nicht so die tägliche Achsdrehung.",
+            "Die Verbrennung fossiler Stoffe setzt zusätzliches Kohlendioxid frei.",
+            "Die Aussage lässt wesentliche Verbrennungsprodukte weg."
+          ]
+        },
+        {
+          "prompt": "Warum kann zusätzliches Kohlendioxid den Wärmehaushalt verändern?",
+          "answers": [
+            "Es verstärkt den Treibhauseffekt",
+            "Es ist eine Ländergrenze",
+            "Es stoppt das gesamte Sonnenlicht"
+          ],
+          "correct": 0,
+          "hint": "Verbinde den Stoff mit seiner Wirkung auf Wärmestrahlung.",
+          "why": "Mehr Treibhausgas verändert, wie Wärme zurückgehalten wird.",
+          "wrong": [
+            "Mehr Treibhausgas verändert, wie Wärme zurückgehalten wird.",
+            "Eine politische Grenze beschreibt keine Gaswirkung.",
+            "Die Erwärmung wird nicht durch völliges Abschalten des Lichts erklärt."
+          ]
+        },
+        {
+          "prompt": "Reicht es, einem Kind die ganze Verantwortung zu geben?",
+          "answers": [
+            "Ja, nur Kinder können etwas verändern",
+            "Ja, niemand sonst hat Verantwortung",
+            "Nein, Erwachsene, Unternehmen und Länder müssen gemeinsam handeln"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche Größe der Aufgabe und Handlungsmöglichkeiten.",
+          "why": "Die Aufgabe umfasst viele gesellschaftliche Entscheidungen und Beteiligte.",
+          "wrong": [
+            "Kinder dürfen beitragen, sind aber nicht allein verantwortlich.",
+            "Die Verantwortung liegt bei vielen Beteiligten.",
+            "Die Aufgabe umfasst viele gesellschaftliche Entscheidungen und Beteiligte."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "protect:2",
+      "journeyId": "protect",
+      "index": 2,
+      "goal": "Nutzung, Reparatur und Recycling abwägen.",
+      "scene": "Ein Gegenstand ist noch brauchbar. Du prüfst mögliche nächste Wege.",
+      "tasks": [
+        {
+          "prompt": "Was kann Ressourcen sparen?",
+          "answers": [
+            "Dinge länger nutzen oder reparieren",
+            "Brauchbare Dinge sofort wegwerfen",
+            "Alles jeden Tag neu kaufen"
+          ],
+          "correct": 0,
+          "hint": "Denke an Herstellung und Materialbedarf.",
+          "why": "Längere Nutzung kann neue Herstellung und Abfall vermeiden.",
+          "wrong": [
+            "Längere Nutzung kann neue Herstellung und Abfall vermeiden.",
+            "Wegwerfen beendet eine mögliche weitere Nutzung.",
+            "Neukauf braucht erneut Material und Energie."
+          ]
+        },
+        {
+          "prompt": "Warum hilft Reparieren manchmal mehr als sofortiges Recycling?",
+          "answers": [
+            "Recycling macht jedes Problem unsichtbar",
+            "Reparieren braucht grundsätzlich neue Ländergrenzen",
+            "Der Gegenstand kann weiter genutzt werden"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche Weiterbenutzen mit neuer Materialverarbeitung.",
+          "why": "Weiterbenutzen erhält die Funktion; Recycling ist nicht immer die erste oder vollständige Lösung.",
+          "wrong": [
+            "Nicht jeder Abfall ist beliebig oder vollständig wiederverwertbar.",
+            "Ländergrenzen erklären keine Reparaturwirkung.",
+            "Weiterbenutzen erhält die Funktion; Recycling ist nicht immer die erste oder vollständige Lösung."
+          ]
+        },
+        {
+          "prompt": "Ein defektes Elektrogerät soll repariert werden. Was ist eine passende Kinderentscheidung?",
+          "answers": [
+            "Jede Reparatur für immer verbieten",
+            "Eine zuständige erwachsene Person fragen",
+            "Gefährliche Teile selbst öffnen"
+          ],
+          "correct": 1,
+          "hint": "Trenne eine gute Idee von einer sicheren Durchführung.",
+          "why": "Reparaturen an elektrischen Geräten gehören in geeignete erwachsene beziehungsweise fachliche Hände.",
+          "wrong": [
+            "Sichere fachgerechte Reparatur bleibt eine sinnvolle Möglichkeit.",
+            "Reparaturen an elektrischen Geräten gehören in geeignete erwachsene beziehungsweise fachliche Hände.",
+            "Selbst öffnen kann gefährlich sein."
+          ]
+        }
+      ],
+      "sequence": [
+        "Prüfen, ob der Gegenstand noch nutzbar ist",
+        "Mit Erwachsenen Reparatur oder Weitergabe prüfen",
+        "Erst dann passende Entsorgung klären"
+      ]
+    },
+    {
+      "id": "protect:3",
+      "journeyId": "protect",
+      "index": 3,
+      "goal": "Natur beobachten ohne Tiere zu stören.",
+      "scene": "Deine Expedition bleibt auf dem Weg und sucht eine rücksichtsvolle Beobachtung.",
+      "tasks": [
+        {
+          "prompt": "Welche Handlung passt zum Beobachten eines wilden Tieres?",
+          "answers": [
+            "Es verfolgen und anfassen",
+            "Sein Nest mitnehmen",
+            "Abstand halten"
+          ],
+          "correct": 2,
+          "hint": "Denke an Schutz und ungestörtes Verhalten.",
+          "why": "Ruhige Beobachtung mit Abstand schützt Tiere und Menschen.",
+          "wrong": [
+            "Verfolgen und Anfassen kann stören oder gefährlich sein.",
+            "Nester und Lebensräume dürfen nicht für die Beobachtung zerstört werden.",
+            "Ruhige Beobachtung mit Abstand schützt Tiere und Menschen."
+          ]
+        },
+        {
+          "prompt": "Was können passende Blüten beitragen?",
+          "answers": [
+            "Keine Verbindung zu Tieren",
+            "Nahrung für bestimmte Insekten",
+            "Garantiert Schutz für jede Art der Welt"
+          ],
+          "correct": 1,
+          "hint": "Verbinde Pflanzen mit den Bedürfnissen verschiedener Arten.",
+          "why": "Blüten können Insekten Nahrung bieten, aber nicht jede Pflanze passt zu jeder Art.",
+          "wrong": [
+            "Pflanzen und Tiere können eng verbunden sein.",
+            "Blüten können Insekten Nahrung bieten, aber nicht jede Pflanze passt zu jeder Art.",
+            "Ein einzelner Beitrag löst nicht alle Bedürfnisse aller Arten."
+          ]
+        },
+        {
+          "prompt": "Ein Tier bleibt ruhig sitzen. Ist Anfassen automatisch hilfreich?",
+          "answers": [
+            "Nein, in Ruhe lassen ist oft die bessere Hilfe",
+            "Ja, Ruhe bedeutet immer Zustimmung",
+            "Ja, wilde Tiere sind Spielzeug"
+          ],
+          "correct": 0,
+          "hint": "Unterscheide menschlichen Wunsch und Bedürfnisse des Tieres.",
+          "why": "Ruhiges Verhalten ist keine Einladung zum Anfassen.",
+          "wrong": [
+            "Ruhiges Verhalten ist keine Einladung zum Anfassen.",
+            "Aus Ruhe kannst du keine solche Zustimmung ableiten.",
+            "Wilde Tiere sollen als Lebewesen respektiert werden."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "protect:4",
+      "journeyId": "protect",
+      "index": 4,
+      "goal": "Gemeinsame Ideen situationsbezogen prüfen.",
+      "scene": "Deine Gruppe plant ein kleines Vorhaben. Ihr könnt ausprobieren und daraus lernen.",
+      "tasks": [
+        {
+          "prompt": "Was ist ein sinnvoller Anfang für eine gemeinsame Idee?",
+          "answers": [
+            "Sofort eine perfekte Lösung verlangen",
+            "Fragen stellen und Möglichkeiten sammeln",
+            "Andere für jeden Fehler beschämen"
+          ],
+          "correct": 1,
+          "hint": "Denke an Lernen statt an Druck.",
+          "why": "Gemeinsames Prüfen hilft, eine passende und umsetzbare Idee zu finden.",
+          "wrong": [
+            "Perfektion ist keine Voraussetzung zum Ausprobieren.",
+            "Gemeinsames Prüfen hilft, eine passende und umsetzbare Idee zu finden.",
+            "Beschämung hilft nicht beim sachlichen Lernen."
+          ]
+        },
+        {
+          "prompt": "Warum hängt eine gute Lösung von der Situation ab?",
+          "answers": [
+            "Möglichkeiten und Bedürfnisse unterscheiden sich",
+            "Alle Orte haben immer dieselben Bedingungen",
+            "Eine Idee ist ohne Prüfung immer richtig"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche Weg, Sicherheit und vorhandene Ressourcen.",
+          "why": "Eine passende Handlung muss die konkreten Bedingungen berücksichtigen.",
+          "wrong": [
+            "Eine passende Handlung muss die konkreten Bedingungen berücksichtigen.",
+            "Orte und Menschen haben unterschiedliche Voraussetzungen.",
+            "Eine Idee braucht eine nachvollziehbare Prüfung."
+          ]
+        },
+        {
+          "prompt": "Ein Weg kann sicher zu Fuß oder nur mit erwachsener Begleitung gegangen werden. Was zählt bei der Entscheidung?",
+          "answers": [
+            "Nur eine möglichst schnelle Entscheidung",
+            "Sicherheit grundsätzlich ignorieren",
+            "Umweltidee und Sicherheit gemeinsam prüfen"
+          ],
+          "correct": 2,
+          "hint": "Prüfe, ob der Plan praktisch und sicher umsetzbar ist.",
+          "why": "Eine sinnvolle Lösung berücksichtigt mehrere Bedingungen, nicht nur einen Wunsch.",
+          "wrong": [
+            "Tempo ersetzt keine Prüfung.",
+            "Eine Umweltidee rechtfertigt keinen unsicheren Weg.",
+            "Eine sinnvolle Lösung berücksichtigt mehrere Bedingungen, nicht nur einen Wunsch."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "continents:0",
+      "journeyId": "continents",
+      "index": 0,
+      "goal": "Kontinent und Land unterscheiden.",
+      "scene": "Deine Expedition braucht zwei Karten: eine für große Landregionen und eine für Länder.",
+      "tasks": [
+        {
+          "prompt": "Welche Zuordnung passt?",
+          "answers": [
+            "Afrika:Stadt; Kenia:Ozean",
+            "Afrika:Flagge; Kenia:Wolke",
+            "Afrika:Kontinent; Kenia:Land"
+          ],
+          "correct": 2,
+          "hint": "Prüfe, welche Bezeichnung eine große Landregion und welche einen Staat meint.",
+          "why": "Afrika und Kenia beschreiben unterschiedliche geografische Ebenen.",
+          "wrong": [
+            "Stadt und Ozean passen nicht zu diesen beiden Bezeichnungen.",
+            "Flagge und Wolke sind andere Arten von Dingen.",
+            "Afrika und Kenia beschreiben unterschiedliche geografische Ebenen."
+          ]
+        },
+        {
+          "prompt": "Können viele Länder auf einem Kontinent liegen?",
+          "answers": [
+            "Nein, Länder liegen nur im Meer",
+            "Ja",
+            "Nein, jeder Kontinent hat genau ein Land"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche Gebietseinteilung und große Landregion.",
+          "why": "Ein Kontinent kann viele verschiedene Länder umfassen.",
+          "wrong": [
+            "Länder können Landflächen auf Kontinenten enthalten.",
+            "Ein Kontinent kann viele verschiedene Länder umfassen.",
+            "Ein Kontinent ist nicht dasselbe wie ein einzelnes Land."
+          ]
+        },
+        {
+          "prompt": "Ein anderes Buch zählt sechs Kontinente. Ist damit jede seiner Karten falsch?",
+          "answers": [
+            "Nicht automatisch; erst das Einteilungsmodell prüfen",
+            "Ja, jede andere Einteilung ist unmöglich",
+            "Ja, dann existiert kein Land"
+          ],
+          "correct": 0,
+          "hint": "Achte auf die vereinbarte Einteilung.",
+          "why": "Es gibt verschiedene Kontinentmodelle; hier verwenden wir sieben.",
+          "wrong": [
+            "Es gibt verschiedene Kontinentmodelle; hier verwenden wir sieben.",
+            "Eine andere Konvention ist nicht automatisch eine falsche Landschaft.",
+            "Die Modellwahl lässt Länder nicht verschwinden."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "continents:1",
+      "journeyId": "continents",
+      "index": 1,
+      "goal": "Zusammenhängende Landmasse und regionale Einteilung trennen.",
+      "scene": "Auf deiner Karte hängen Europa und Asien zusammen. Die Namen bleiben im gewählten Modell verschieden.",
+      "tasks": [
+        {
+          "prompt": "Wie heißt die gemeinsame Landmasse von Europa und Asien?",
+          "answers": [
+            "Der Pazifik",
+            "Eurasien",
+            "Antarktika"
+          ],
+          "correct": 1,
+          "hint": "Suche die Bezeichnung für beide zusammen.",
+          "why": "Eurasien bezeichnet die zusammenhängende Landmasse.",
+          "wrong": [
+            "Der Pazifik ist ein Ozean.",
+            "Eurasien bezeichnet die zusammenhängende Landmasse.",
+            "Antarktika ist ein anderer Kontinent."
+          ]
+        },
+        {
+          "prompt": "Warum können Europa und Asien trotz Landverbindung getrennt benannt werden?",
+          "answers": [
+            "Die Einteilung folgt auch Vereinbarungen",
+            "Weil eine Kartenfarbe eine echte Mauer baut",
+            "Weil Europa kein Land enthält"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche physische Verbindung und regionale Benennung.",
+          "why": "Kontinente sind im gewählten Modell benannte Regionen, nicht nur vollständig isolierte Inseln.",
+          "wrong": [
+            "Kontinente sind im gewählten Modell benannte Regionen, nicht nur vollständig isolierte Inseln.",
+            "Farben trennen die wirkliche Landfläche nicht.",
+            "Europa enthält viele Länder."
+          ]
+        },
+        {
+          "prompt": "Ein Land reicht nach Europa und Asien. Muss die Karte falsch sein?",
+          "answers": [
+            "Ja, Länder dürfen nur eine Region berühren",
+            "Ja, jeder Staat ist ein eigener Kontinent",
+            "Nein, ein Land kann in beiden Regionen liegen"
+          ],
+          "correct": 2,
+          "hint": "Prüfe, ob Ländergrenzen und Kontinentgrenzen identisch sein müssen.",
+          "why": "Etwa Russland und die Türkei liegen nach der verwendeten Einteilung in beiden Regionen.",
+          "wrong": [
+            "Natürliche und vereinbarte Einteilungen müssen nicht zusammenfallen.",
+            "Ein Staat ist keine eigene Kontinentkategorie.",
+            "Etwa Russland und die Türkei liegen nach der verwendeten Einteilung in beiden Regionen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "continents:2",
+      "journeyId": "continents",
+      "index": 2,
+      "goal": "Landbrücken und Äquatorlage auf Karten erkennen.",
+      "scene": "Deine virtuelle Kartenexpedition vergleicht Afrika mit den beiden amerikanischen Kontinenten.",
+      "tasks": [
+        {
+          "prompt": "Welche Region verbindet Nord- und Südamerika an Land?",
+          "answers": [
+            "Eine schmale Landbrücke",
+            "Ein riesiger Mondkrater",
+            "Der Südpol"
+          ],
+          "correct": 0,
+          "hint": "Suche die Verbindung zwischen den Landflächen.",
+          "why": "Zwischen den amerikanischen Kontinenten liegt eine schmale Landverbindung.",
+          "wrong": [
+            "Zwischen den amerikanischen Kontinenten liegt eine schmale Landverbindung.",
+            "Ein Mondkrater liegt nicht auf dieser Landroute.",
+            "Der Südpol ist keine amerikanische Landbrücke."
+          ]
+        },
+        {
+          "prompt": "Was bedeutet, dass Afrika beiderseits des Äquators liegt?",
+          "answers": [
+            "Ganz Afrika liegt am Nordpol",
+            "Ganz Afrika liegt nur im Ozean",
+            "Ein Teil liegt nördlich, ein Teil südlich"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche die gedachten Halbkugeln.",
+          "why": "Der Äquator verläuft durch Afrika und teilt es nicht in Länder auf.",
+          "wrong": [
+            "Afrika reicht nicht bis zum Nordpol.",
+            "Afrika ist eine große Landregion.",
+            "Der Äquator verläuft durch Afrika und teilt es nicht in Länder auf."
+          ]
+        },
+        {
+          "prompt": "Eine einzige Tieraufnahme soll ganz Amerika beschreiben. Was fehlt?",
+          "answers": [
+            "Der Beweis, dass überall dieselben Tiere leben",
+            "Vergleiche verschiedener Landschaften und Lebensräume",
+            "Nur eine schönere Bildumrandung"
+          ],
+          "correct": 1,
+          "hint": "Frage, ob ein einzelner Ausschnitt die große Vielfalt erfasst.",
+          "why": "Berge, Küsten und Wälder enthalten unterschiedliche Lebensbedingungen.",
+          "wrong": [
+            "Eine Aufnahme beweist keine einheitliche Tierwelt.",
+            "Berge, Küsten und Wälder enthalten unterschiedliche Lebensbedingungen.",
+            "Gestaltung allein erweitert die Aussage nicht."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "continents:3",
+      "journeyId": "continents",
+      "index": 3,
+      "goal": "Australien, Ozeanien und Antarktika einordnen.",
+      "scene": "Deine Karte unterscheidet einen Kontinent, eine größere Weltregion und eine Eislandwelt.",
+      "tasks": [
+        {
+          "prompt": "Wo liegt Antarktika?",
+          "answers": [
+            "Am Nordpol",
+            "Mitten in der Sahara",
+            "Am Südpol"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche Norden und Süden.",
+          "why": "Antarktika ist der Kontinent um den Südpol.",
+          "wrong": [
+            "Am Nordpol liegt Meer unter Eis.",
+            "Die Sahara ist eine andere Region.",
+            "Antarktika ist der Kontinent um den Südpol."
+          ]
+        },
+        {
+          "prompt": "Wie hängen Australien und Ozeanien in dieser Erklärung zusammen?",
+          "answers": [
+            "Ozeanien besteht nur aus Antarktika",
+            "Ozeanien ist die größere Weltregion mit vielen Inseln",
+            "Beide meinen ausschließlich dieselbe Stadt"
+          ],
+          "correct": 1,
+          "hint": "Prüfe die Größe und Art der benannten Region.",
+          "why": "Australien und die größere Region Ozeanien sind nicht identische Begriffe.",
+          "wrong": [
+            "Antarktika ist eine andere Kontinentregion.",
+            "Australien und die größere Region Ozeanien sind nicht identische Begriffe.",
+            "Eine Weltregion ist keine einzelne Stadt."
+          ]
+        },
+        {
+          "prompt": "Du siehst viel Eis auf einem Foto. Reicht das zum Bestimmen des Kontinents?",
+          "answers": [
+            "Nein, Ort und Untergrund mitprüfen",
+            "Ja, Eis liegt nur in Antarktika",
+            "Ja, Eis ist immer ein eigener Kontinent"
+          ],
+          "correct": 0,
+          "hint": "Suche Angaben, die über das Aussehen hinausgehen.",
+          "why": "Eis kommt in verschiedenen Regionen vor; ein Bild allein bestimmt den Ort nicht.",
+          "wrong": [
+            "Eis kommt in verschiedenen Regionen vor; ein Bild allein bestimmt den Ort nicht.",
+            "Auch andere Regionen enthalten Eis.",
+            "Eis ist ein Material, kein Kontinentname."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "continents:4",
+      "journeyId": "continents",
+      "index": 4,
+      "goal": "Kartenverzerrung als Modellgrenze erkennen.",
+      "scene": "Du versuchst, eine gedachte Erdkugel flach auszubreiten. Was kann dabei verändert werden?",
+      "tasks": [
+        {
+          "prompt": "Warum verzerren flache Weltkarten die Erde?",
+          "answers": [
+            "Kartenfarben ändern die Erdgröße",
+            "Eine Kugeloberfläche wird auf eine Fläche übertragen",
+            "Die Erde ist wirklich ein Rechteck"
+          ],
+          "correct": 1,
+          "hint": "Denke an den Unterschied zwischen Kugel und Fläche.",
+          "why": "Eine Projektion kann nicht alle Eigenschaften der runden Oberfläche unverändert zeigen.",
+          "wrong": [
+            "Eine Farbe verändert keine tatsächliche Fläche.",
+            "Eine Projektion kann nicht alle Eigenschaften der runden Oberfläche unverändert zeigen.",
+            "Die Erdform ist nicht die Form des Kartenblatts."
+          ]
+        },
+        {
+          "prompt": "Was kann auf manchen Karten bei polnahen Ländern passieren?",
+          "answers": [
+            "Sie wirken im Verhältnis besonders groß",
+            "Sie werden wirklich größer",
+            "Sie bekommen automatisch mehr Bevölkerung"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche Darstellung und Messwert.",
+          "why": "Bestimmte Projektionen vergrößern die Darstellung polnaher Flächen.",
+          "wrong": [
+            "Bestimmte Projektionen vergrößern die Darstellung polnaher Flächen.",
+            "Eine Karte verändert nicht das Land.",
+            "Bevölkerung wird dadurch nicht gemessen oder erzeugt."
+          ]
+        },
+        {
+          "prompt": "Welche Prüfung hilft bei einem Flächenvergleich zweier Länder?",
+          "answers": [
+            "Nur die Bildschirmfarbe zählen",
+            "Immer das höher auf dem Blatt liegende Land wählen",
+            "Geeignete Projektion oder tatsächliche Flächenwerte nutzen"
+          ],
+          "correct": 2,
+          "hint": "Frage, welche Eigenschaft die Darstellung bewahrt.",
+          "why": "Für Flächenvergleiche muss man Verzerrungen berücksichtigen oder geeignete Messwerte vergleichen.",
+          "wrong": [
+            "Farbe ist keine Flächenmessung.",
+            "Die Lage auf dem Blatt beweist keine größere Fläche.",
+            "Für Flächenvergleiche muss man Verzerrungen berücksichtigen oder geeignete Messwerte vergleichen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "countries:0",
+      "journeyId": "countries",
+      "index": 0,
+      "goal": "Länder ohne stereotype Einzelaussagen erkunden.",
+      "scene": "Du gestaltest eine Länderseite. Ein Foto und ein Gericht zeigen nur einen Ausschnitt.",
+      "tasks": [
+        {
+          "prompt": "Beschreibt ein Beispielgericht alle Menschen eines Landes?",
+          "answers": [
+            "Nein",
+            "Ja, alle leben gleich",
+            "Nur die Flagge entscheidet das"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche ein Beispiel mit vielen Menschen.",
+          "why": "Länder enthalten vielfältige Menschen und Lebensweisen.",
+          "wrong": [
+            "Länder enthalten vielfältige Menschen und Lebensweisen.",
+            "Ein Beispiel ist keine allgemeine Beschreibung aller Menschen.",
+            "Eine Flagge legt keine einheitliche Lebensweise fest."
+          ]
+        },
+        {
+          "prompt": "Was verbessert eine Landesbeschreibung?",
+          "answers": [
+            "Nur ein Klischee wiederholen",
+            "Alle Landschaften gleich nennen",
+            "Verschiedene Orte und Perspektiven vergleichen"
+          ],
+          "correct": 2,
+          "hint": "Suche Unterschiede innerhalb desselben Landes.",
+          "why": "Mehrere Beispiele zeigen Vielfalt besser als ein einziges Klischee.",
+          "wrong": [
+            "Wiederholung macht ein Klischee nicht zuverlässiger.",
+            "Länder können sehr unterschiedliche Landschaften haben.",
+            "Mehrere Beispiele zeigen Vielfalt besser als ein einziges Klischee."
+          ]
+        },
+        {
+          "prompt": "Ein Foto zeigt eine Wüste. Darfst du schreiben, das ganze Land sei Wüste?",
+          "answers": [
+            "Ja, alle Länder bestehen aus einem Lebensraum",
+            "Nur mit weiteren passenden Belegen, nicht aus dem Foto allein",
+            "Ja, ein Foto zeigt automatisch alles"
+          ],
+          "correct": 1,
+          "hint": "Prüfe die Reichweite des Bildausschnitts.",
+          "why": "Ein Bild kann einen Ort zeigen, nicht notwendigerweise das gesamte Land.",
+          "wrong": [
+            "Viele Länder enthalten mehrere Lebensräume.",
+            "Ein Bild kann einen Ort zeigen, nicht notwendigerweise das gesamte Land.",
+            "Ein Ausschnitt ist keine vollständige Landesaufnahme."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "countries:1",
+      "journeyId": "countries",
+      "index": 1,
+      "goal": "Hauptstadt und größte Stadt unterscheiden.",
+      "scene": "Dein Reiseplan sucht einen Regierungssitz, nicht nur eine besonders bekannte Stadt.",
+      "tasks": [
+        {
+          "prompt": "Wie heißt Deutschlands Hauptstadt?",
+          "answers": [
+            "Der Pazifik",
+            "Der Äquator",
+            "Berlin"
+          ],
+          "correct": 2,
+          "hint": "Suche die benannte Stadt.",
+          "why": "Berlin ist Deutschlands Hauptstadt.",
+          "wrong": [
+            "Ein Ozean ist keine Hauptstadt.",
+            "Eine gedachte Linie ist keine Stadt.",
+            "Berlin ist Deutschlands Hauptstadt."
+          ]
+        },
+        {
+          "prompt": "Muss eine Hauptstadt die größte Stadt sein?",
+          "answers": [
+            "Nein, Hauptstädte sind keine Städte",
+            "Nein",
+            "Ja, immer"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche Aufgabe und Einwohnerzahl.",
+          "why": "Die Hauptstadtfunktion und die Größe einer Stadt sind unterschiedliche Eigenschaften.",
+          "wrong": [
+            "Eine Hauptstadt kann eine Stadt mit politischen Aufgaben sein.",
+            "Die Hauptstadtfunktion und die Größe einer Stadt sind unterschiedliche Eigenschaften.",
+            "Es gibt Hauptstädte, die nicht die größte Stadt ihres Landes sind."
+          ]
+        },
+        {
+          "prompt": "Sydney ist bekannt. Reicht Bekanntheit als Beweis, dass es Australiens Hauptstadt ist?",
+          "answers": [
+            "Nein, Australiens Hauptstadt ist Canberra",
+            "Ja, Bekanntheit bestimmt jede Hauptstadt",
+            "Ja, Städte haben keine verschiedenen Aufgaben"
+          ],
+          "correct": 0,
+          "hint": "Suche einen belegten Regierungssitz statt einen Eindruck.",
+          "why": "Bekanntheit allein ist kein Hauptstadtbeleg; in Australien ist es Canberra.",
+          "wrong": [
+            "Bekanntheit allein ist kein Hauptstadtbeleg; in Australien ist es Canberra.",
+            "Ein Eindruck ersetzt keine Ortsinformation.",
+            "Städte können unterschiedliche Funktionen haben."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "countries:2",
+      "journeyId": "countries",
+      "index": 2,
+      "goal": "Flaggen als Zeichen lesen und respektvoll vergleichen.",
+      "scene": "Du untersuchst Farben und Muster. Sie sind keine Rangliste für Menschen.",
+      "tasks": [
+        {
+          "prompt": "Was ist eine Flagge in dieser Reise?",
+          "answers": [
+            "Eine tektonische Platte",
+            "Ein Zeichen für ein Land oder Gebiet",
+            "Eine Messung der Menschenqualität"
+          ],
+          "correct": 1,
+          "hint": "Unterscheide Symbol und persönliche Bewertung.",
+          "why": "Eine Flagge kann ein Land oder Gebiet kennzeichnen.",
+          "wrong": [
+            "Ein Symbol ist keine Gesteinsplatte.",
+            "Eine Flagge kann ein Land oder Gebiet kennzeichnen.",
+            "Flaggen bewerten keine Menschen."
+          ]
+        },
+        {
+          "prompt": "Warum reicht eine einzelne Farbe oft nicht zum Erkennen?",
+          "answers": [
+            "Manche Flaggen verwenden ähnliche Farben",
+            "Alle Flaggen sind völlig verschieden",
+            "Farbe zeigt sicher die Einwohnerzahl"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche Anordnung und weitere Symbole.",
+          "why": "Muster, Reihenfolge und Symbole helfen bei ähnlichen Farben.",
+          "wrong": [
+            "Muster, Reihenfolge und Symbole helfen bei ähnlichen Farben.",
+            "Es gibt ähnliche Flaggen.",
+            "Farben liefern keine verlässliche Bevölkerungszahl."
+          ]
+        },
+        {
+          "prompt": "Zwei Flaggen ähneln sich. Darf daraus folgen, dass die Menschen gleich leben?",
+          "answers": [
+            "Ja, Farben bestimmen alle Gewohnheiten",
+            "Ja, ähnliche Flaggen sind dasselbe Land",
+            "Nein, ein Symbol beweist keine einheitliche Lebensweise"
+          ],
+          "correct": 2,
+          "hint": "Trenne ein Zeichen von der Vielfalt eines Landes.",
+          "why": "Flaggenähnlichkeit erklärt nicht die Lebensweisen der Menschen.",
+          "wrong": [
+            "Farben bestimmen keine individuellen Gewohnheiten.",
+            "Ähnliche Zeichen können zu verschiedenen Ländern gehören.",
+            "Flaggenähnlichkeit erklärt nicht die Lebensweisen der Menschen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "countries:3",
+      "journeyId": "countries",
+      "index": 3,
+      "goal": "Gemeinsame Landgrenzen von anderen Nachbarschaften unterscheiden.",
+      "scene": "Deine Karte zeigt Deutschland, Flüsse und angrenzende Länder.",
+      "tasks": [
+        {
+          "prompt": "Welches Nachbarland Deutschlands beginnt mit P?",
+          "answers": [
+            "Polen",
+            "Portugal",
+            "Peru"
+          ],
+          "correct": 0,
+          "hint": "Prüfe eine gemeinsame Landgrenze, nicht nur den Anfangsbuchstaben.",
+          "why": "Polen hat eine gemeinsame Landgrenze mit Deutschland.",
+          "wrong": [
+            "Polen hat eine gemeinsame Landgrenze mit Deutschland.",
+            "Portugal hat keine gemeinsame Landgrenze mit Deutschland.",
+            "Peru liegt in Südamerika und grenzt nicht an Deutschland."
+          ]
+        },
+        {
+          "prompt": "Muss ein Fluss an einer Ländergrenze aufhören?",
+          "answers": [
+            "Ja, Kartenlinien stoppen Wasser",
+            "Ja, jeder Fluss gehört nur einem Ort",
+            "Nein, Flüsse können Grenzen überqueren"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche natürliche Prozesse mit politischen Linien.",
+          "why": "Wasserläufe können durch mehrere Länder führen.",
+          "wrong": [
+            "Eine Kartenlinie ist kein allgemeines Hindernis für Wasser.",
+            "Ein Fluss kann viele Orte miteinander verbinden.",
+            "Wasserläufe können durch mehrere Länder führen."
+          ]
+        },
+        {
+          "prompt": "Zwei Länder sind durch ein Meer getrennt. Haben sie damit eine gemeinsame Landgrenze?",
+          "answers": [
+            "Ja, Meer ist immer festes Land",
+            "Nein, diese beiden Begriffe sind verschieden",
+            "Ja, jede Nähe ist eine Landgrenze"
+          ],
+          "correct": 1,
+          "hint": "Prüfe, welche Art von Grenze beschrieben wird.",
+          "why": "Nähe über Wasser ist nicht dieselbe Beziehung wie eine gemeinsame Landgrenze.",
+          "wrong": [
+            "Meerwasser ist keine Landfläche.",
+            "Nähe über Wasser ist nicht dieselbe Beziehung wie eine gemeinsame Landgrenze.",
+            "Geografische Nähe hat verschiedene Formen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "countries:4",
+      "journeyId": "countries",
+      "index": 4,
+      "goal": "Fläche, Bevölkerung und Datenjahr gemeinsam prüfen.",
+      "scene": "Dein Atlas vergleicht zwei Länder. Du liest auch die Messregel und das Datenjahr.",
+      "tasks": [
+        {
+          "prompt": "Was beschreibt die Bevölkerung?",
+          "answers": [
+            "Nur die Fläche",
+            "Nur die Flaggenfarbe",
+            "Wie viele Menschen dort leben"
+          ],
+          "correct": 2,
+          "hint": "Unterscheide Menschenzahl und Gebiet.",
+          "why": "Bevölkerung beschreibt eine Zahl von Menschen.",
+          "wrong": [
+            "Fläche beschreibt Platz, nicht Menschenzahl.",
+            "Eine Farbe liefert keine Einwohnerzahl.",
+            "Bevölkerung beschreibt eine Zahl von Menschen."
+          ]
+        },
+        {
+          "prompt": "Bedeutet mehr Fläche immer mehr Bevölkerung?",
+          "answers": [
+            "Ja, jede Fläche hat exakt dieselbe Bevölkerungsdichte",
+            "Nein",
+            "Ja, ohne Ausnahme"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche zwei unterschiedliche Messgrößen.",
+          "why": "Ein großes Land kann relativ wenige Menschen haben.",
+          "wrong": [
+            "Bevölkerungsdichten können sich stark unterscheiden.",
+            "Ein großes Land kann relativ wenige Menschen haben.",
+            "Fläche und Bevölkerung sind nicht identisch."
+          ]
+        },
+        {
+          "prompt": "Zwei Einwohnerzahlen stammen aus verschiedenen Jahren. Was brauchst du für einen fairen Vergleich?",
+          "answers": [
+            "Datenjahr und möglichst passende Messweise prüfen",
+            "Die Jahre ignorieren",
+            "Die kleinere Zahl automatisch für falsch erklären"
+          ],
+          "correct": 0,
+          "hint": "Achte auf Zeitpunkt und Art der Schätzung.",
+          "why": "Bevölkerungszahlen verändern sich; vergleichbare Daten brauchen Kontext.",
+          "wrong": [
+            "Bevölkerungszahlen verändern sich; vergleichbare Daten brauchen Kontext.",
+            "Unterschiedliche Zeitpunkte können Unterschiede erklären.",
+            "Größe einer Zahl allein beweist keinen Fehler."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "volcanoes:0",
+      "journeyId": "volcanoes",
+      "index": 0,
+      "goal": "Magma unter und Lava an der Oberfläche verorten.",
+      "scene": "Deine Vulkanexpedition bleibt im Lernmodell. Ein Material bekommt je nach Ort einen anderen Namen.",
+      "tasks": [
+        {
+          "prompt": "Wie heißt geschmolzenes Gestein unter der Oberfläche?",
+          "answers": [
+            "Magma",
+            "Lava an der Oberfläche",
+            "Wolkenwasser"
+          ],
+          "correct": 0,
+          "hint": "Achte auf den beschriebenen Ort.",
+          "why": "Unter der Oberfläche wird geschmolzenes Gestein Magma genannt.",
+          "wrong": [
+            "Unter der Oberfläche wird geschmolzenes Gestein Magma genannt.",
+            "Lava bezeichnet es an der Oberfläche.",
+            "Wasser in Wolken ist kein geschmolzenes Gestein."
+          ]
+        },
+        {
+          "prompt": "Woraus kann Magma bestehen?",
+          "answers": [
+            "Nur aus einer leeren Höhle",
+            "Nur aus Trinkwasser",
+            "Schmelze mit Kristallen und gelösten Gasen"
+          ],
+          "correct": 2,
+          "hint": "Prüfe, ob das Material mehrere Bestandteile haben kann.",
+          "why": "Magma ist nicht zwingend eine völlig gleichförmige Flüssigkeit.",
+          "wrong": [
+            "Eine Höhle ist kein geschmolzenes Material.",
+            "Magma ist kein Trinkwasser.",
+            "Magma ist nicht zwingend eine völlig gleichförmige Flüssigkeit."
+          ]
+        },
+        {
+          "prompt": "Darf aus einem Vulkanbild folgen, dass der gesamte Mantel flüssig ist?",
+          "answers": [
+            "Ja, jede Hitze bedeutet flüssig",
+            "Nein, der Mantel ist überwiegend fest",
+            "Ja, ein Bild zeigt das gesamte Erdinnere"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche einen örtlichen Vorgang mit einer ganzen Erdschicht.",
+          "why": "Örtliche Schmelzen zeigen kein weltweites Lavameer.",
+          "wrong": [
+            "Der Materialzustand hängt nicht nur von Hitze ab.",
+            "Örtliche Schmelzen zeigen kein weltweites Lavameer.",
+            "Das Bild zeigt nicht den gesamten Mantel."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "volcanoes:1",
+      "journeyId": "volcanoes",
+      "index": 1,
+      "goal": "Gänge und Schmelzbereiche als vereinfachtes Netzwerk verstehen.",
+      "scene": "Du verfolgst im gedachten Querschnitt einen möglichen Weg von Magma nach oben.",
+      "tasks": [
+        {
+          "prompt": "Wo kann Magma aufsteigen?",
+          "answers": [
+            "Durch Länderflaggen",
+            "Durch die Mondphase allein",
+            "Durch passende Risse und Schlote"
+          ],
+          "correct": 2,
+          "hint": "Suche einen Weg im Gestein.",
+          "why": "Risse und Schlote können Aufstiegswege bilden.",
+          "wrong": [
+            "Eine Flagge bildet keinen Gesteinsgang.",
+            "Mondphasen benennen keinen solchen Weg.",
+            "Risse und Schlote können Aufstiegswege bilden."
+          ]
+        },
+        {
+          "prompt": "Warum ist eine Magmakammer nicht immer eine riesige leere Kugel?",
+          "answers": [
+            "Magma ist gar kein Material",
+            "Schmelzbereiche können komplexe Netzwerke sein",
+            "Alle Vulkane enthalten Luftballons"
+          ],
+          "correct": 1,
+          "hint": "Prüfe die Grenzen einer vereinfachten Zeichnung.",
+          "why": "Schmelze kann in unterschiedlich aufgebauten Gesteinsbereichen vorkommen.",
+          "wrong": [
+            "Magma bezeichnet tatsächlich geschmolzenes Gesteinsmaterial.",
+            "Schmelze kann in unterschiedlich aufgebauten Gesteinsbereichen vorkommen.",
+            "Eine gezeichnete Rundform ist kein Luftballon."
+          ]
+        },
+        {
+          "prompt": "Eine Zeichnung zeigt einen einzigen geraden Gang. Haben alle Vulkane exakt diesen Aufbau?",
+          "answers": [
+            "Nein, es ist ein vereinfachter möglicher Aufbau",
+            "Ja, jedes Bild ist für alle Vulkane verbindlich",
+            "Ja, alle Krater sind identische Höhlen"
+          ],
+          "correct": 0,
+          "hint": "Unterscheide typisches Lernbild und vollständige Vermessung.",
+          "why": "Eine Schemazeichnung zeigt nicht jede mögliche Gesteinsstruktur.",
+          "wrong": [
+            "Eine Schemazeichnung zeigt nicht jede mögliche Gesteinsstruktur.",
+            "Ein Einzelfall darf nicht ohne Belege verallgemeinert werden.",
+            "Auch Krater und Aufstiegswege können sich unterscheiden."
+          ]
+        }
+      ],
+      "sequence": [
+        "Magma sammelt sich im Untergrund",
+        "Es steigt durch passende Gesteinswege auf",
+        "Es kann an einer Öffnung austreten"
+      ]
+    },
+    {
+      "id": "volcanoes:2",
+      "journeyId": "volcanoes",
+      "index": 2,
+      "goal": "Zähigkeit und Gase als Einflussgrößen vergleichen.",
+      "scene": "Dein ungefährliches digitales Modell vergleicht dünnflüssiges und zäheres Magma.",
+      "tasks": [
+        {
+          "prompt": "Woraus besteht Vulkanasche?",
+          "answers": [
+            "Nur Zucker",
+            "Kleinen Gesteins- und Glasstücken",
+            "Nur verbranntem Holz"
+          ],
+          "correct": 1,
+          "hint": "Unterscheide Feuerasche und vulkanisches Material.",
+          "why": "Vulkanasche besteht aus kleinen vulkanischen Fragmenten.",
+          "wrong": [
+            "Zucker ist kein typischer Vulkanaschebestandteil.",
+            "Vulkanasche besteht aus kleinen vulkanischen Fragmenten.",
+            "Die Bezeichnung Asche bedeutet hier nicht verbranntes Holz."
+          ]
+        },
+        {
+          "prompt": "Welche Kombination kann explosive Ausbrüche begünstigen?",
+          "answers": [
+            "Zähes, gasreiches Magma",
+            "Nur die Farbe des Vulkans",
+            "Nur sein Ländername"
+          ],
+          "correct": 0,
+          "hint": "Betrachte Gasentweichung und Materialverhalten.",
+          "why": "In zäherem Magma können Gase schlechter entweichen; mehrere Bedingungen beeinflussen einen Ausbruch.",
+          "wrong": [
+            "In zäherem Magma können Gase schlechter entweichen; mehrere Bedingungen beeinflussen einen Ausbruch.",
+            "Eine Farbe erklärt keine Gasentweichung.",
+            "Ein Ländername ist keine physikalische Einflussgröße."
+          ]
+        },
+        {
+          "prompt": "Das Modell zeigt eine starke Reaktion. Ist das eine Vorhersage für einen echten Vulkan?",
+          "answers": [
+            "Ja, jedes echte Ereignis folgt exakt dem Regler",
+            "Ja, ohne weitere Messungen weiß man den Ausbruchstag",
+            "Nein, das Modell erklärt nur begrenzte Zusammenhänge"
+          ],
+          "correct": 2,
+          "hint": "Prüfe, welche Daten und Prozesse das Modell überhaupt enthält.",
+          "why": "Das Lernmodell ist keine vollständige Gefahren- oder Ausbruchsvorhersage.",
+          "wrong": [
+            "Die Wirklichkeit enthält mehr Einflussgrößen.",
+            "Ein Regler bestimmt keinen echten Ereignistag.",
+            "Das Lernmodell ist keine vollständige Gefahren- oder Ausbruchsvorhersage."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "volcanoes:3",
+      "journeyId": "volcanoes",
+      "index": 3,
+      "goal": "Formen als Hinweis statt sicherer Vorhersage lesen.",
+      "scene": "Du vergleichst zwei Vulkanformen auf Bildern und notierst vorsichtige Vermutungen.",
+      "tasks": [
+        {
+          "prompt": "Welche Form ist typisch für einen Schildvulkan?",
+          "answers": [
+            "Breit und eher flach",
+            "Immer eine perfekte Nadel",
+            "Ein Würfel aus Eis"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche wiederholte dünnflüssige Lavaflüsse.",
+          "why": "Viele dünnflüssige Flüsse können einen breiten Vulkan aufbauen.",
+          "wrong": [
+            "Viele dünnflüssige Flüsse können einen breiten Vulkan aufbauen.",
+            "Die Nadelbeschreibung passt nicht zur typischen Schildform.",
+            "Ein Eiswürfel ist keine Vulkanform."
+          ]
+        },
+        {
+          "prompt": "Warum kann ein Schichtvulkan unterschiedliche Ablagerungen besitzen?",
+          "answers": [
+            "Kartenfarben werden zu Gestein",
+            "Jeder Vulkan besteht nur aus einer dünnen Haut",
+            "Mehrere Ausbruchsprozesse hinterlassen verschiedene Materialien"
+          ],
+          "correct": 2,
+          "hint": "Denke an Aufbau über viele Ereignisse.",
+          "why": "Verschiedene Ablagerungen können einen Vulkan schichtweise aufbauen.",
+          "wrong": [
+            "Darstellungsfarben sind keine geologischen Materialien.",
+            "Ein Vulkan kann aus umfangreichen Gesteinsablagerungen bestehen.",
+            "Verschiedene Ablagerungen können einen Vulkan schichtweise aufbauen."
+          ]
+        },
+        {
+          "prompt": "Kannst du aus der Form allein den nächsten Ausbruch genau bestimmen?",
+          "answers": [
+            "Ja, jeder breite Vulkan ist garantiert ungefährlich",
+            "Nein, weitere Informationen und Messungen sind nötig",
+            "Ja, die Form zeigt immer den Zeitpunkt"
+          ],
+          "correct": 1,
+          "hint": "Suche die Grenze zwischen Hinweis und Sicherheitsversprechen.",
+          "why": "Die Form allein liefert keine vollständige Ausbruchsvorhersage.",
+          "wrong": [
+            "Eine Form rechtfertigt keine absolute Sicherheitsbehauptung.",
+            "Die Form allein liefert keine vollständige Ausbruchsvorhersage.",
+            "Eine Form ist kein Kalender für einen Ausbruch."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "volcanoes:4",
+      "journeyId": "volcanoes",
+      "index": 4,
+      "goal": "Ruhezeit und Beobachtungsdaten verantwortbar einordnen.",
+      "scene": "Deine Expedition arbeitet am Bildschirm mit Messideen, nicht direkt an einem Vulkan.",
+      "tasks": [
+        {
+          "prompt": "Bedeutet lange Ruhe automatisch, dass ein Vulkan nie wieder ausbricht?",
+          "answers": [
+            "Ja, Ruhe ist immer endgültig",
+            "Ja, Vulkane schlafen wie Menschen",
+            "Nein"
+          ],
+          "correct": 2,
+          "hint": "Unterscheide eine beobachtete Zeitspanne von einem Versprechen.",
+          "why": "Lange Ruhe kann vorkommen, ohne künftige Aktivität auszuschließen.",
+          "wrong": [
+            "Eine Ruhephase ist kein Nachweis für jede Zukunft.",
+            "Schlafen ist hier keine passende biologische Erklärung.",
+            "Lange Ruhe kann vorkommen, ohne künftige Aktivität auszuschließen."
+          ]
+        },
+        {
+          "prompt": "Welche Beobachtungen können Forschenden helfen?",
+          "answers": [
+            "Nur die Namen von Reisenden",
+            "Bodenbewegung, Gase und kleine Beben",
+            "Nur die Form einer Briefmarke"
+          ],
+          "correct": 1,
+          "hint": "Suche messbare Veränderungen am Vulkan.",
+          "why": "Verschiedene Messreihen helfen, Vorgänge besser einzuschätzen.",
+          "wrong": [
+            "Reisendennamen ersetzen keine physikalischen Messungen.",
+            "Verschiedene Messreihen helfen, Vorgänge besser einzuschätzen.",
+            "Eine Briefmarke liefert keine solche Messreihe."
+          ]
+        },
+        {
+          "prompt": "Ein Lernmodell meldet Ruhe. Welche sichere Entscheidung passt?",
+          "answers": [
+            "Keine echte Gefahrenentscheidung daraus ableiten",
+            "Damit jeden echten Vulkan für sicher erklären",
+            "Kinder direkt zur Öffnung schicken"
+          ],
+          "correct": 0,
+          "hint": "Prüfe Zuständigkeit und Reichweite des Modells.",
+          "why": "Für reale Gefahren gelten Fachinformationen und örtliche zuständige Stellen.",
+          "wrong": [
+            "Für reale Gefahren gelten Fachinformationen und örtliche zuständige Stellen.",
+            "Ein Lernmodell beurteilt keine reale Sicherheit.",
+            "Eine Bildschirmbeobachtung rechtfertigt kein gefährliches Vorhaben."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quakes:0",
+      "journeyId": "quakes",
+      "index": 0,
+      "goal": "Verhaken und plötzliches Rutschen erklären.",
+      "scene": "Du betrachtest einen virtuellen Gesteinsbruch. Die Expedition erzeugt kein echtes Beben.",
+      "tasks": [
+        {
+          "prompt": "Was kann ein Erdbeben auslösen?",
+          "answers": [
+            "Plötzliches Rutschen an einer Gesteinsstörung",
+            "Nur die Farbe eines Hauses",
+            "Nur ein Kalenderblatt"
+          ],
+          "correct": 0,
+          "hint": "Achte auf eine plötzliche Bewegung im Gestein.",
+          "why": "Ruckartige Bewegung kann gespeicherte Spannung freisetzen.",
+          "wrong": [
+            "Ruckartige Bewegung kann gespeicherte Spannung freisetzen.",
+            "Die Farbe ist keine geologische Ursache.",
+            "Ein Datum verursacht keine solche Bewegung."
+          ]
+        },
+        {
+          "prompt": "Warum kann sich trotz langsamer Plattenbewegung Spannung aufbauen?",
+          "answers": [
+            "Weil Gestein überall frei und reibungslos gleitet",
+            "Weil Platten nur aus Luft bestehen",
+            "Gesteinsflächen können sich verhaken"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche langsame Bewegung und einen blockierten Bereich.",
+          "why": "Verhakung kann die unmittelbare Bewegung behindern, während Spannung entsteht.",
+          "wrong": [
+            "Reibungsloses Gleiten beschreibt die Verhakung nicht.",
+            "Tektonische Platten bestehen aus festem Gestein.",
+            "Verhakung kann die unmittelbare Bewegung behindern, während Spannung entsteht."
+          ]
+        },
+        {
+          "prompt": "Liegt jedes Erdbeben exakt an einer Plattengrenze?",
+          "answers": [
+            "Nein, Beben sind nur erfundene Modelle",
+            "Nein, es gibt auch Beben abseits davon",
+            "Ja, ausnahmslos jedes"
+          ],
+          "correct": 1,
+          "hint": "Prüfe die Aussage auf Ausnahmen.",
+          "why": "Viele Beben hängen mit Plattengrenzen zusammen, aber nicht jedes liegt genau dort.",
+          "wrong": [
+            "Erdbeben sind reale messbare Ereignisse.",
+            "Viele Beben hängen mit Plattengrenzen zusammen, aber nicht jedes liegt genau dort.",
+            "Die absolute Aussage ist zu eng."
+          ]
+        }
+      ],
+      "sequence": [
+        "Gesteinsflächen verhaken sich",
+        "Spannung baut sich auf",
+        "Gestein rutscht plötzlich"
+      ]
+    },
+    {
+      "id": "quakes:1",
+      "journeyId": "quakes",
+      "index": 1,
+      "goal": "Herd und Epizentrum räumlich unterscheiden.",
+      "scene": "Deine Querschnittskarte zeigt einen Punkt im Untergrund und einen an der Oberfläche.",
+      "tasks": [
+        {
+          "prompt": "Was ist der Erdbebenherd?",
+          "answers": [
+            "Der Erdmittelpunkt",
+            "Jede beliebige Hauptstadt",
+            "Der Ort, an dem die Bewegung beginnt"
+          ],
+          "correct": 2,
+          "hint": "Suche den Beginn des Rutschens.",
+          "why": "Der Herd bezeichnet den Ausgangsort eines Bebens im Gestein.",
+          "wrong": [
+            "Der Herd ist nicht automatisch der Erdmittelpunkt.",
+            "Eine Stadt ist nicht durch ihren Namen der Ausgangsort.",
+            "Der Herd bezeichnet den Ausgangsort eines Bebens im Gestein."
+          ]
+        },
+        {
+          "prompt": "Wo liegt das Epizentrum zum Herd?",
+          "answers": [
+            "Immer auf dem Mond",
+            "Direkt darüber an der Oberfläche",
+            "Immer unter dem inneren Kern"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche Untergrund und Oberfläche.",
+          "why": "Das Epizentrum ist der Oberflächenpunkt über dem Herd.",
+          "wrong": [
+            "Die Definition bezieht sich auf das betreffende Beben auf der Erde.",
+            "Das Epizentrum ist der Oberflächenpunkt über dem Herd.",
+            "Der Punkt gehört nicht unter den inneren Kern."
+          ]
+        },
+        {
+          "prompt": "Ein Lageplan zeigt nur das Epizentrum. Kennst du damit schon die Herdtiefe?",
+          "answers": [
+            "Nein, dafür fehlt die Tiefeninformation",
+            "Ja, alle Herde liegen gleich tief",
+            "Ja, jeder Herd liegt im Kern"
+          ],
+          "correct": 0,
+          "hint": "Prüfe, welche Dimension die Karte zeigt.",
+          "why": "Ein Oberflächenpunkt allein liefert keine bestimmte Tiefe.",
+          "wrong": [
+            "Ein Oberflächenpunkt allein liefert keine bestimmte Tiefe.",
+            "Herdtiefen können unterschiedlich sein.",
+            "Ein Bebenherd liegt nicht automatisch im Erdkern."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quakes:2",
+      "journeyId": "quakes",
+      "index": 2,
+      "goal": "Wellenmessungen als indirekte Hinweise verstehen.",
+      "scene": "Dein Forschungsteam liest vereinfachte Messkurven statt ins Erdinnere zu reisen.",
+      "tasks": [
+        {
+          "prompt": "Welches Gerät misst Erdbebenbewegungen?",
+          "answers": [
+            "Ein Regenbogen",
+            "Ein Seismometer",
+            "Eine Flagge"
+          ],
+          "correct": 1,
+          "hint": "Suche ein Messgerät für Bodenbewegung.",
+          "why": "Seismometer zeichnen Bewegungen des Untergrunds auf.",
+          "wrong": [
+            "Ein Regenbogen ist eine optische Erscheinung.",
+            "Seismometer zeichnen Bewegungen des Untergrunds auf.",
+            "Eine Flagge ist kein solches Messgerät."
+          ]
+        },
+        {
+          "prompt": "Warum können Wellen an Messorten unterschiedlich ankommen?",
+          "answers": [
+            "Wellenarten und Wege unterscheiden sich",
+            "Alle Wellen sind immer gleich schnell",
+            "Der Ländername legt die Geschwindigkeit fest"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche Art des Signals und durchlaufenes Gestein.",
+          "why": "Verschiedene Wellenarten reisen unterschiedlich durch Materialien.",
+          "wrong": [
+            "Verschiedene Wellenarten reisen unterschiedlich durch Materialien.",
+            "Die Geschwindigkeiten sind nicht für alle Wellen gleich.",
+            "Politische Namen bestimmen keine Materialeigenschaften."
+          ]
+        },
+        {
+          "prompt": "Was können Wellen über das Erdinnere verraten?",
+          "answers": [
+            "Eine direkte Fotografie jedes Kerns",
+            "Gar nichts, weil sie messbar sind",
+            "Hinweise aus Veränderungen und Laufzeiten"
+          ],
+          "correct": 2,
+          "hint": "Denke an indirekte statt direkte Beobachtung.",
+          "why": "Gemessene Wellen liefern Hinweise, die mit Modellen ausgewertet werden.",
+          "wrong": [
+            "Eine Messkurve ist keine direkte Kernfotografie.",
+            "Messbarkeit macht die Hinweise gerade nutzbar.",
+            "Gemessene Wellen liefern Hinweise, die mit Modellen ausgewertet werden."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quakes:3",
+      "journeyId": "quakes",
+      "index": 3,
+      "goal": "Bebengröße und Wirkung an einem Ort unterscheiden.",
+      "scene": "Zwei Messorte erleben dasselbe gedachte Beben unterschiedlich stark.",
+      "tasks": [
+        {
+          "prompt": "Was beschreibt die Magnitude?",
+          "answers": [
+            "Die Größe des Bebens",
+            "Nur die Farbe einer Gebäudewand",
+            "Nur die Entfernung eines Beobachters"
+          ],
+          "correct": 0,
+          "hint": "Unterscheide Ereignisgröße und örtliche Bedingungen.",
+          "why": "Magnitude beschreibt die Größe des Ereignisses.",
+          "wrong": [
+            "Magnitude beschreibt die Größe des Ereignisses.",
+            "Eine Wandfarbe ist kein Bebenmaß.",
+            "Abstand beeinflusst die örtliche Wirkung, ist aber nicht selbst die Magnitude."
+          ]
+        },
+        {
+          "prompt": "Warum kann die Wirkung an zwei Orten verschieden sein?",
+          "answers": [
+            "Dasselbe Beben wirkt zwingend überall gleich",
+            "Nur die Einwohner sprechen unterschiedlich",
+            "Abstand, Tiefe, Untergrund und Gebäude spielen mit"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche Bedingungen an den Messorten.",
+          "why": "Die örtliche Wirkung hängt von mehreren Faktoren ab.",
+          "wrong": [
+            "Eine gemeinsame Magnitude bedeutet keine überall gleiche Wirkung.",
+            "Die Sprache bestimmt keine Bodenbewegung.",
+            "Die örtliche Wirkung hängt von mehreren Faktoren ab."
+          ]
+        },
+        {
+          "prompt": "Darf eine einzige Magnitude jede örtliche Gefährdung vollständig erklären?",
+          "answers": [
+            "Ja, Gebäudeeigenschaften zählen nie",
+            "Nein, örtliche Bedingungen bleiben wichtig",
+            "Ja, weitere Informationen sind unnötig"
+          ],
+          "correct": 1,
+          "hint": "Prüfe, welche zusätzliche Information fehlt.",
+          "why": "Ein Ereignismaß ersetzt keine vollständige örtliche Risikobeurteilung.",
+          "wrong": [
+            "Gebäude können für Folgen wichtig sein.",
+            "Ein Ereignismaß ersetzt keine vollständige örtliche Risikobeurteilung.",
+            "Weitere Bedingungen verändern die Wirkung."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quakes:4",
+      "journeyId": "quakes",
+      "index": 4,
+      "goal": "Tsunamis nicht mit jedem Seebeben gleichsetzen.",
+      "scene": "Deine virtuelle Meereskarte untersucht eine mögliche Wasserverdrängung.",
+      "tasks": [
+        {
+          "prompt": "Welche Veränderung kann bei einem Seebeben einen Tsunami auslösen?",
+          "answers": [
+            "Nur ein neuer Ozeanname",
+            "Nur Vollmond ohne weitere Ursache",
+            "Plötzliche Hebung oder Senkung des Meeresbodens"
+          ],
+          "correct": 2,
+          "hint": "Denke an plötzlich bewegtes Wasser.",
+          "why": "Eine große plötzliche Wasserverdrängung kann lange Wellen erzeugen.",
+          "wrong": [
+            "Eine Bezeichnung bewegt kein Wasser.",
+            "Mondphasen allein erklären diesen Auslöser nicht.",
+            "Eine große plötzliche Wasserverdrängung kann lange Wellen erzeugen."
+          ]
+        },
+        {
+          "prompt": "Warum löst nicht jedes Seebeben einen Tsunami aus?",
+          "answers": [
+            "Meerwasser ist unbeweglich",
+            "Nicht jedes bewegt den Meeresboden dafür ausreichend",
+            "Alle Beben sind identisch"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche Lage und Art der Bewegung.",
+          "why": "Der mögliche Auslöser hängt von konkreten Bedingungen der Wasserverdrängung ab.",
+          "wrong": [
+            "Wasser kann bewegt werden; die Bedingungen sind entscheidend.",
+            "Der mögliche Auslöser hängt von konkreten Bedingungen der Wasserverdrängung ab.",
+            "Beben können sich in Lage, Größe und Bewegung unterscheiden."
+          ]
+        },
+        {
+          "prompt": "Kann unser einfaches Modell eine reale Küstenwarnung ersetzen?",
+          "answers": [
+            "Nein, zuständige Warninformationen bleiben nötig",
+            "Ja, ein Bildschirm regelt jede Gefahr",
+            "Ja, bei ruhigem Bild ist alles garantiert sicher"
+          ],
+          "correct": 0,
+          "hint": "Trenne Lernen vom tatsächlichen Warnsystem.",
+          "why": "Ein Lernmodell ist keine vollständige örtliche Gefahrenvorhersage.",
+          "wrong": [
+            "Ein Lernmodell ist keine vollständige örtliche Gefahrenvorhersage.",
+            "Eine vereinfachte Darstellung ersetzt keine Fachwarnung.",
+            "Ein ruhiges Modellbild ist keine Sicherheitsgarantie."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moon:0",
+      "journeyId": "moon",
+      "index": 0,
+      "goal": "Mondlicht von eigenem Sternenlicht unterscheiden.",
+      "scene": "Deine gedachte Mondexpedition sucht eine Lichtquelle: Wer beleuchtet wen?",
+      "tasks": [
+        {
+          "prompt": "Woher kommt das helle Licht auf dem Mond?",
+          "answers": [
+            "Von einem eigenen Sternenfeuer",
+            "Nur von Länderflaggen",
+            "Von reflektiertem Sonnenlicht"
+          ],
+          "correct": 2,
+          "hint": "Unterscheide Lichtquelle und beleuchtete Oberfläche.",
+          "why": "Der Mond reflektiert Sonnenlicht und ist kein Stern.",
+          "wrong": [
+            "Der Mond erzeugt nicht das Licht eines Sterns.",
+            "Eine Flagge erklärt die Beleuchtung nicht.",
+            "Der Mond reflektiert Sonnenlicht und ist kein Stern."
+          ]
+        },
+        {
+          "prompt": "Wie viel des Mondes wird gewöhnlich von der Sonne beleuchtet?",
+          "answers": [
+            "Nur ein winziger Punkt",
+            "Ungefähr eine Hälfte",
+            "Immer der ganze Mond gleichzeitig"
+          ],
+          "correct": 1,
+          "hint": "Betrachte eine Kugel und eine weit entfernte Lichtquelle.",
+          "why": "Die Sonne beleuchtet ungefähr eine Mondhälfte; davon sehen wir unterschiedlich viel.",
+          "wrong": [
+            "Die beleuchtete Fläche ist gewöhnlich keine einzelne Punktfläche.",
+            "Die Sonne beleuchtet ungefähr eine Mondhälfte; davon sehen wir unterschiedlich viel.",
+            "Beleuchtung und sichtbarer Anteil sind nicht dasselbe."
+          ]
+        },
+        {
+          "prompt": "Du siehst den Mond auch am Tag. Muss er deshalb selbst leuchten?",
+          "answers": [
+            "Nein, reflektiertes Licht kann auch tags sichtbar sein",
+            "Ja, nur Sterne sind tags sichtbar",
+            "Ja, Sonne und Mond sind dasselbe Objekt"
+          ],
+          "correct": 0,
+          "hint": "Prüfe die Lichtquelle unabhängig vom Beobachtungszeitpunkt.",
+          "why": "Die Tagesbeobachtung verändert nicht die Herkunft des Mondlichts.",
+          "wrong": [
+            "Die Tagesbeobachtung verändert nicht die Herkunft des Mondlichts.",
+            "Sichtbarkeit am Tag beweist keine eigene Sternenlichtquelle.",
+            "Sonne und Mond sind verschiedene Himmelskörper."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moon:1",
+      "journeyId": "moon",
+      "index": 1,
+      "goal": "Beleuchtete Ansicht statt wechselnder Mondform erklären.",
+      "scene": "Dein Mondmodell bleibt eine Kugel. Du veränderst den Beobachtungswinkel.",
+      "tasks": [
+        {
+          "prompt": "Verändert der Mond bei seinen gewöhnlichen Phasen seine runde Form?",
+          "answers": [
+            "Ja, er wird zu einer flachen Scheibe",
+            "Nein, wir sehen verschieden viel der beleuchteten Hälfte",
+            "Ja, er wird jeden Monat zerbrochen"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche Körperform und sichtbare Beleuchtung.",
+          "why": "Der Mond bleibt rund; die Ansicht seiner beleuchteten Fläche verändert sich.",
+          "wrong": [
+            "Die sichtbare Scheibe ist eine Ansicht des runden Körpers.",
+            "Der Mond bleibt rund; die Ansicht seiner beleuchteten Fläche verändert sich.",
+            "Die Phasen sind keine regelmäßigen Brüche."
+          ]
+        },
+        {
+          "prompt": "Welche Erklärung passt zu Neumond und Vollmond?",
+          "answers": [
+            "Unsere Ansicht der beleuchteten Hälfte unterscheidet sich",
+            "Die Sonne ist bei Neumond ganz ausgeschaltet",
+            "Der Mond erzeugt bei Vollmond zusätzliches Sternenlicht"
+          ],
+          "correct": 0,
+          "hint": "Verfolge Lichtquelle und Blickrichtung.",
+          "why": "Die Stellung verändert, wie viel beleuchtete Fläche wir sehen.",
+          "wrong": [
+            "Die Stellung verändert, wie viel beleuchtete Fläche wir sehen.",
+            "Die Sonne leuchtet auch bei Neumond.",
+            "Vollmond ist kein neuer Lichtgenerator."
+          ]
+        },
+        {
+          "prompt": "Ein Modell verändert Größen und Abstände. Kannst du daraus echte Reiseentfernungen ablesen?",
+          "answers": [
+            "Ja, jeder Bildabstand ist eine echte Entfernung",
+            "Ja, der Mond ist nur wenige Zentimeter entfernt",
+            "Nein, dafür fehlen passende Maßstäbe"
+          ],
+          "correct": 2,
+          "hint": "Prüfe Größenmaßstab und Abstandsmaßstab getrennt.",
+          "why": "Ein Lernmodell zeigt die Geometrie vereinfacht, nicht reale Zentimeterabstände.",
+          "wrong": [
+            "Bildabstände werden oft stark verkürzt.",
+            "Eine Modellkugel legt keine echte Entfernung fest.",
+            "Ein Lernmodell zeigt die Geometrie vereinfacht, nicht reale Zentimeterabstände."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moon:2",
+      "journeyId": "moon",
+      "index": 2,
+      "goal": "Erstes Viertel und sichtbaren Halbmond unterscheiden.",
+      "scene": "Du untersuchst einen Mondphasenkalender: Ein Viertel des Zyklus ist nicht ein Viertel der sichtbaren Scheibe.",
+      "tasks": [
+        {
+          "prompt": "Was sehen wir beim ersten Viertel als beleuchteten Teil der Scheibe?",
+          "answers": [
+            "Ungefähr eine Hälfte",
+            "Immer nur ein Viertel",
+            "Immer den ganzen Mond"
+          ],
+          "correct": 0,
+          "hint": "Trenne Zyklusname und sichtbare Fläche.",
+          "why": "Erstes Viertel benennt den Stand im Zyklus; die Scheibe erscheint halb beleuchtet.",
+          "wrong": [
+            "Erstes Viertel benennt den Stand im Zyklus; die Scheibe erscheint halb beleuchtet.",
+            "Der Name meint nicht ein Viertel der sichtbaren Scheibe.",
+            "Eine volle Scheibe gehört zur Vollmondansicht."
+          ]
+        },
+        {
+          "prompt": "Warum ist der Name erstes Viertel sinnvoll?",
+          "answers": [
+            "Weil ein Mondstück fehlt",
+            "Weil die Erde nur noch ein Viertel groß ist",
+            "Etwa ein Viertel des Phasenzyklus ist vergangen"
+          ],
+          "correct": 2,
+          "hint": "Betrachte den Weg durch den Zyklus.",
+          "why": "Die Benennung beschreibt einen Anteil des Phasenzyklus.",
+          "wrong": [
+            "Der Mond verliert kein Stück.",
+            "Die Erdgröße erklärt den Namen nicht.",
+            "Die Benennung beschreibt einen Anteil des Phasenzyklus."
+          ]
+        },
+        {
+          "prompt": "Sind gewöhnliche Mondphasen der Erdschatten auf dem Mond?",
+          "answers": [
+            "Ja, der Erdschatten hält immer den Mond halb dunkel",
+            "Nein, sie entstehen durch unsere Ansicht der beleuchteten Hälfte",
+            "Ja, jede Phase ist eine Mondfinsternis"
+          ],
+          "correct": 1,
+          "hint": "Unterscheide Phasen von besonderen Finsternisstellungen.",
+          "why": "Der Erdschatten gehört zur Mondfinsternis, nicht zur gewöhnlichen Phasenerklärung.",
+          "wrong": [
+            "Die Sonne beleuchtet den Mond; unsere Sicht verändert sich.",
+            "Der Erdschatten gehört zur Mondfinsternis, nicht zur gewöhnlichen Phasenerklärung.",
+            "Nicht jede Phase ist eine Finsternis."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moon:3",
+      "journeyId": "moon",
+      "index": 3,
+      "goal": "Masse, Gewichtskraft und Mondbedingungen trennen.",
+      "scene": "In deiner virtuellen Expedition vergleichst du einen gleichen Gegenstand auf Erde und Mond.",
+      "tasks": [
+        {
+          "prompt": "Was hat viele Mondkrater erzeugt?",
+          "answers": [
+            "Nur Regentropfen",
+            "Nur Baumwurzelwachstum",
+            "Einschläge"
+          ],
+          "correct": 2,
+          "hint": "Suche eine Ursache, die zum Mond passt.",
+          "why": "Viele Krater entstanden durch Einschläge anderer Körper.",
+          "wrong": [
+            "Der Mond hat keine solche gewöhnliche Regenverwitterung wie die Erde.",
+            "Baumwurzeln bilden dort keine Krater.",
+            "Viele Krater entstanden durch Einschläge anderer Körper."
+          ]
+        },
+        {
+          "prompt": "Was verändert sich beim gleichen Gegenstand auf dem Mond?",
+          "answers": [
+            "Er besteht sofort aus anderem Material",
+            "Die Gewichtskraft, nicht seine Masse",
+            "Seine Masse wird automatisch zu null"
+          ],
+          "correct": 1,
+          "hint": "Trenne Menge des Materials und Anziehung.",
+          "why": "Die geringere Schwerkraft erzeugt eine kleinere Gewichtskraft bei gleicher Masse.",
+          "wrong": [
+            "Der Ort allein verwandelt den Gegenstand nicht in ein anderes Material.",
+            "Die geringere Schwerkraft erzeugt eine kleinere Gewichtskraft bei gleicher Masse.",
+            "Weniger Anziehung löscht das Material nicht."
+          ]
+        },
+        {
+          "prompt": "Kann ein Mensch ohne Schutz auf dem Mond wie auf der Erde atmen?",
+          "answers": [
+            "Nein, dort fehlt eine dichte atembare Atmosphäre",
+            "Ja, ein heller Mond enthält automatisch Luft",
+            "Ja, Krater speichern überall normale Atemluft"
+          ],
+          "correct": 0,
+          "hint": "Prüfe Lebensbedingungen statt Helligkeit.",
+          "why": "Mondexpeditionen brauchen geeignete Technik; Licht beweist keine atembare Luft.",
+          "wrong": [
+            "Mondexpeditionen brauchen geeignete Technik; Licht beweist keine atembare Luft.",
+            "Beleuchtung bestimmt keine sichere Atmosphäre.",
+            "Ein Krater ist keine Garantie für Atemluft."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moon:4",
+      "journeyId": "moon",
+      "index": 4,
+      "goal": "Historische Rollen und Modellgrenzen nachvollziehen.",
+      "scene": "Dein Geschichtslogbuch betrachtet Apollo 11 als Zusammenarbeit, nicht als Ein-Personen-Reise.",
+      "tasks": [
+        {
+          "prompt": "In welchem Jahr landete Apollo 11 auf dem Mond?",
+          "answers": [
+            "Jeden Monat erneut",
+            "1969",
+            "1492"
+          ],
+          "correct": 1,
+          "hint": "Suche das belegte historische Ereignis.",
+          "why": "Apollo 11 landete 1969 auf dem Mond.",
+          "wrong": [
+            "Mondphasen sind keine wiederholten Apollo-Landungen.",
+            "Apollo 11 landete 1969 auf dem Mond.",
+            "1492 gehört nicht zu dieser Raumfahrtmission."
+          ]
+        },
+        {
+          "prompt": "Welche Rolle hatte Michael Collins bei Apollo 11?",
+          "answers": [
+            "Er blieb im Raumschiff in der Mondumlaufbahn",
+            "Er ging ebenfalls auf die Mondoberfläche",
+            "Er war allein auf dem Mars"
+          ],
+          "correct": 0,
+          "hint": "Unterscheide Oberfläche und Umlaufbahn.",
+          "why": "Collins blieb in der Umlaufbahn; Armstrong und Aldrin gingen auf die Oberfläche.",
+          "wrong": [
+            "Collins blieb in der Umlaufbahn; Armstrong und Aldrin gingen auf die Oberfläche.",
+            "Die Oberflächenrolle gehörte den beiden anderen Astronauten.",
+            "Die Mission führte zum Mond, nicht zum Mars."
+          ]
+        },
+        {
+          "prompt": "Unser Mondphasenmodell zeigt keine Raumfahrzeugtechnik. Was kann es trotzdem erklären?",
+          "answers": [
+            "Alle Landungsrisiken genau vorhersagen",
+            "Alle historischen Rollen ersetzen",
+            "Beleuchtungsansichten, aber keine vollständige Landung"
+          ],
+          "correct": 2,
+          "hint": "Prüfe den tatsächlich dargestellten Zusammenhang.",
+          "why": "Ein Modell kann einen begrenzten Zusammenhang erklären, ohne die ganze Mission abzubilden.",
+          "wrong": [
+            "Das Phasenmodell ist kein vollständiges Raumfahrtsystem.",
+            "Ein Modell ersetzt keine historischen Belege.",
+            "Ein Modell kann einen begrenzten Zusammenhang erklären, ohne die ganze Mission abzubilden."
+          ]
+        }
+      ],
+      "sequence": [
+        "Apollo 11 fliegt zum Mond",
+        "Armstrong und Aldrin gehen auf die Oberfläche",
+        "Die Mission kehrt zur Erde zurück"
+      ]
+    },
+    {
+      "id": "navigation:0",
+      "journeyId": "navigation",
+      "index": 0,
+      "goal": "Äquator und Halbkugeln als Orientierung nutzen.",
+      "scene": "Deine Kartenexpedition beginnt an einer unsichtbaren Linie, nicht an einer gezeichneten Mauer.",
+      "tasks": [
+        {
+          "prompt": "Welchen Breitengrad hat der Äquator?",
+          "answers": [
+            "Neunzig Grad Nord",
+            "Jeder Ort denselben",
+            "Null Grad"
+          ],
+          "correct": 2,
+          "hint": "Suche die Bezugslinie zwischen den Halbkugeln.",
+          "why": "Der Äquator ist die Bezugslinie für null Grad Breite.",
+          "wrong": [
+            "Neunzig Grad Nord bezeichnet die Polrichtung, nicht den Äquator.",
+            "Orte haben unterschiedliche Breitengrade.",
+            "Der Äquator ist die Bezugslinie für null Grad Breite."
+          ]
+        },
+        {
+          "prompt": "Was trennt der Äquator in unserem Modell?",
+          "answers": [
+            "Tag und Nacht für immer",
+            "Nord- und Südhalbkugel",
+            "Alle Länder voneinander"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche gedachte Lageeinordnung und andere Grenzen.",
+          "why": "Der Äquator teilt die Erde in zwei geografische Halbkugeln.",
+          "wrong": [
+            "Tag und Nacht wechseln mit der Erddrehung.",
+            "Der Äquator teilt die Erde in zwei geografische Halbkugeln.",
+            "Ländergrenzen sind eine andere Einteilung."
+          ]
+        },
+        {
+          "prompt": "Liegt am Äquator zwingend überall Regenwald?",
+          "answers": [
+            "Nein, örtliche Bedingungen unterscheiden sich",
+            "Ja, Breitengrad bestimmt jede Einzelpflanze",
+            "Ja, Meere sind dort unmöglich"
+          ],
+          "correct": 0,
+          "hint": "Prüfe, was eine Breitenangabe wirklich festlegt.",
+          "why": "Breite ist ein Lagehinweis; Meer, Boden und andere Bedingungen beeinflussen den Ort.",
+          "wrong": [
+            "Breite ist ein Lagehinweis; Meer, Boden und andere Bedingungen beeinflussen den Ort.",
+            "Eine Koordinate beschreibt nicht jede einzelne Pflanze.",
+            "Auch Meere können am Äquator liegen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "navigation:1",
+      "journeyId": "navigation",
+      "index": 1,
+      "goal": "Breite und Länge als zwei Ortsangaben verstehen.",
+      "scene": "Deine virtuelle Suchkarte braucht zwei Angaben, um einen Ort genauer zu finden.",
+      "tasks": [
+        {
+          "prompt": "Was beschreibt die geografische Breite?",
+          "answers": [
+            "Nur die Höhe eines Hauses",
+            "Wie weit nördlich oder südlich des Äquators ein Ort liegt",
+            "Nur die Einwohnerzahl"
+          ],
+          "correct": 1,
+          "hint": "Suche die Richtung zur Äquator-Bezugslinie.",
+          "why": "Breite beschreibt die Nord-Süd-Lage.",
+          "wrong": [
+            "Gebäudehöhe ist keine geografische Breite.",
+            "Breite beschreibt die Nord-Süd-Lage.",
+            "Menschenzahl ist keine Ortskoordinate."
+          ]
+        },
+        {
+          "prompt": "Warum helfen Breite und Länge zusammen mehr als nur eine davon?",
+          "answers": [
+            "Sie beschreiben zwei verschiedene Lageangaben",
+            "Beide sind einfach derselbe Name",
+            "Keine Angabe bezieht sich auf Orte"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche eine einzelne Linie mit ihrem Treffpunkt zu einer anderen.",
+          "why": "Zwei Koordinaten helfen, eine Lage eindeutiger anzugeben.",
+          "wrong": [
+            "Zwei Koordinaten helfen, eine Lage eindeutiger anzugeben.",
+            "Nord-Süd- und Ost-West-Lage sind unterschiedliche Angaben.",
+            "Koordinaten werden gerade zur Ortsbeschreibung verwendet."
+          ]
+        },
+        {
+          "prompt": "Zwei Orte haben gleiche Breite. Müssen sie derselbe Ort sein?",
+          "answers": [
+            "Ja, gleiche Breite bedeutet immer identisch",
+            "Ja, eine Zahl legt jede Eigenschaft fest",
+            "Nein, ihre Länge kann verschieden sein"
+          ],
+          "correct": 2,
+          "hint": "Frage, welche zweite Lageangabe fehlt.",
+          "why": "Entlang einer Breitenlinie können verschiedene Längengrade liegen.",
+          "wrong": [
+            "Eine einzige Koordinate reicht dafür nicht.",
+            "Eine Ortszahl beschreibt nicht alle Eigenschaften eines Ortes.",
+            "Entlang einer Breitenlinie können verschiedene Längengrade liegen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "navigation:2",
+      "journeyId": "navigation",
+      "index": 2,
+      "goal": "Vereinbarte Bezugslinien von natürlichen Eigenschaften trennen.",
+      "scene": "Dein Kartenteam entscheidet, wo das Zählen der Längengrade beginnt.",
+      "tasks": [
+        {
+          "prompt": "Was bezeichnet der Nullmeridian?",
+          "answers": [
+            "Die vereinbarte Linie für null Grad Länge",
+            "Den heißesten Fluss",
+            "Die größte Insel"
+          ],
+          "correct": 0,
+          "hint": "Suche den Bezug für Längengrade.",
+          "why": "Der Nullmeridian ist eine Bezugslinie der geografischen Länge.",
+          "wrong": [
+            "Der Nullmeridian ist eine Bezugslinie der geografischen Länge.",
+            "Temperatur eines Flusses bestimmt diese Linie nicht.",
+            "Inselgröße legt die Bezugslinie nicht fest."
+          ]
+        },
+        {
+          "prompt": "Warum ist der Nullmeridian anders begründet als der Äquator?",
+          "answers": [
+            "Beide sind sichtbare Mauern",
+            "Der Äquator wechselt jede Minute den Namen",
+            "Sein Anfang wurde vereinbart"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche natürliche Drehgeometrie und menschliche Wahl.",
+          "why": "Für Länge wurde ein gemeinsamer Anfang vereinbart; der Äquator folgt der Erdgeometrie.",
+          "wrong": [
+            "Beide Linien sind gedachte Orientierungslinien.",
+            "Die Bezugslinie wechselt nicht deshalb ständig.",
+            "Für Länge wurde ein gemeinsamer Anfang vereinbart; der Äquator folgt der Erdgeometrie."
+          ]
+        },
+        {
+          "prompt": "Eine Karte benutzt einen anderen historischen Anfang. Wie prüfst du Ortsangaben?",
+          "answers": [
+            "Jede alte Karte ohne Prüfung für wertlos erklären",
+            "Das Bezugssystem mitlesen",
+            "Alle Zahlen ohne Umrechnung direkt vergleichen"
+          ],
+          "correct": 1,
+          "hint": "Achte auf den Ursprung der Zahlen.",
+          "why": "Koordinaten müssen mit ihrem Bezugssystem verstanden werden.",
+          "wrong": [
+            "Historische Karten können mit bekanntem Bezugssystem ausgewertet werden.",
+            "Koordinaten müssen mit ihrem Bezugssystem verstanden werden.",
+            "Verschiedene Ursprünge brauchen eine passende Einordnung oder Umrechnung."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "navigation:3",
+      "journeyId": "navigation",
+      "index": 3,
+      "goal": "Wendekreise mit der Achsneigung verbinden.",
+      "scene": "Auf deiner Sonnenkarte beobachtest du Orte zwischen den beiden Wendekreisen.",
+      "tasks": [
+        {
+          "prompt": "Wo liegen die Wendekreise ungefähr?",
+          "answers": [
+            "Beide direkt am Nordpol",
+            "Nur mitten im Erdkern",
+            "23,4 Grad nördlich und südlich des Äquators"
+          ],
+          "correct": 2,
+          "hint": "Suche die genannten Breiten auf der Oberfläche.",
+          "why": "Die Wendekreise liegen bei ungefähr 23,4 Grad Breite.",
+          "wrong": [
+            "Die Pole sind andere Breitenlagen.",
+            "Breitenlinien beschreiben die Oberfläche, nicht den Kern.",
+            "Die Wendekreise liegen bei ungefähr 23,4 Grad Breite."
+          ]
+        },
+        {
+          "prompt": "Womit hängt diese Breite zusammen?",
+          "answers": [
+            "Mit der Zahl der Einwohner",
+            "Mit der Neigung der Erdachse",
+            "Mit der Flaggenfarbe"
+          ],
+          "correct": 1,
+          "hint": "Verbinde Sonnenstand und Achsneigung.",
+          "why": "Die Achsneigung begrenzt die Breiten, an denen die Sonne im Jahreslauf senkrecht stehen kann.",
+          "wrong": [
+            "Einwohnerzahlen legen keine Achsneigung fest.",
+            "Die Achsneigung begrenzt die Breiten, an denen die Sonne im Jahreslauf senkrecht stehen kann.",
+            "Flaggenfarben verändern keine Sonnengeometrie."
+          ]
+        },
+        {
+          "prompt": "Kann die Sonne in Deutschland gewöhnlich mittags genau senkrecht über uns stehen?",
+          "answers": [
+            "Nein, Deutschland liegt außerhalb der Tropen",
+            "Ja, jeden Sommertag",
+            "Ja, jedes Wetter verschiebt die Wendekreise beliebig"
+          ],
+          "correct": 0,
+          "hint": "Prüfe die Lage gegenüber den Wendekreisen.",
+          "why": "Der senkrechte Sonnenstand ist auf die Breiten zwischen den Wendekreisen begrenzt.",
+          "wrong": [
+            "Der senkrechte Sonnenstand ist auf die Breiten zwischen den Wendekreisen begrenzt.",
+            "Hoch am Himmel ist nicht automatisch senkrecht.",
+            "Tageswetter verändert diese Breitenlage nicht beliebig."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "navigation:4",
+      "journeyId": "navigation",
+      "index": 4,
+      "goal": "Sonnenzeit und vereinbarte Zeitzonen unterscheiden.",
+      "scene": "Deine Reisegruppe vergleicht Stadtuhren und den Sonnenstand.",
+      "tasks": [
+        {
+          "prompt": "Warum ist Sonnenmittag nicht überall gleichzeitig?",
+          "answers": [
+            "Eine Flagge verdunkelt die Sonne",
+            "Die Erde dreht sich",
+            "Alle Städte liegen am selben Ort"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche östliche und westliche Lagen.",
+          "why": "Die Drehung bringt verschiedene Orte zu verschiedenen Zeiten in ihre Sonnenstellung.",
+          "wrong": [
+            "Eine Flagge erklärt keine weltweite Zeitverschiebung.",
+            "Die Drehung bringt verschiedene Orte zu verschiedenen Zeiten in ihre Sonnenstellung.",
+            "Städte haben unterschiedliche geografische Lagen."
+          ]
+        },
+        {
+          "prompt": "Warum sind echte Zeitzonengrenzen nicht nur gleich breite Streifen?",
+          "answers": [
+            "Menschen berücksichtigen vereinbarte Gebiete",
+            "Die Erde ist ein flaches Rechteck",
+            "Alle Uhren funktionieren ohne Regeln"
+          ],
+          "correct": 0,
+          "hint": "Trenne einfaches Sonnenmodell und gesellschaftliche Zeitregel.",
+          "why": "Zeitzonen folgen auch politischen und praktischen Vereinbarungen.",
+          "wrong": [
+            "Zeitzonen folgen auch politischen und praktischen Vereinbarungen.",
+            "Die Erdkugel wird dadurch nicht flach.",
+            "Gemeinsame Uhrzeiten beruhen auf Regeln und Vereinbarungen."
+          ]
+        },
+        {
+          "prompt": "Zwei Stadtuhren hatten im März eine bestimmte Differenz. Muss sie im ganzen Jahr gleich bleiben?",
+          "answers": [
+            "Ja, alle Orte stellen immer gleichzeitig um",
+            "Ja, Daten und Zeitzonen sind bedeutungslos",
+            "Nein, Sommerzeitregeln können sie verändern"
+          ],
+          "correct": 2,
+          "hint": "Prüfe Datum und Regeln beider Orte.",
+          "why": "Zeitunterschiede können sich durch unterschiedliche Sommerzeitregeln ändern.",
+          "wrong": [
+            "Nicht alle Orte haben dieselben Umstellungen.",
+            "Datum und konkrete Zeitzone sind wichtige Angaben.",
+            "Zeitunterschiede können sich durch unterschiedliche Sommerzeitregeln ändern."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "landscapes:0",
+      "journeyId": "landscapes",
+      "index": 0,
+      "goal": "Gebirgsbildung nicht mit Vulkanismus gleichsetzen.",
+      "scene": "Deine Landschaftsexpedition vergleicht einen gedachten Faltenberg und einen Vulkan.",
+      "tasks": [
+        {
+          "prompt": "Was kann beim Zusammenstoß von Platten mit Gestein geschehen?",
+          "answers": [
+            "Es verschwindet grundsätzlich",
+            "Es wird automatisch zu Atemluft",
+            "Es wird gefaltet und gehoben"
+          ],
+          "correct": 2,
+          "hint": "Suche eine langsame Formveränderung.",
+          "why": "Zusammenstoß kann Gestein verformen und Gebirge aufbauen.",
+          "wrong": [
+            "Das Material wird dabei nicht einfach vollständig gelöscht.",
+            "Die Verformung ist keine Verwandlung in Atemluft.",
+            "Zusammenstoß kann Gestein verformen und Gebirge aufbauen."
+          ]
+        },
+        {
+          "prompt": "Sind alle Berge Vulkane?",
+          "answers": [
+            "Nein, Berge bestehen nie aus Gestein",
+            "Nein, Berge entstehen auf verschiedene Weise",
+            "Ja, ausnahmslos"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche Faltung und austretendes Magma.",
+          "why": "Vulkanismus ist nur eine mögliche Art der Bergbildung.",
+          "wrong": [
+            "Gestein ist ein wichtiger Bestandteil vieler Berge.",
+            "Vulkanismus ist nur eine mögliche Art der Bergbildung.",
+            "Eine absolute Gleichsetzung ist falsch."
+          ]
+        },
+        {
+          "prompt": "Zwei Bergrekorde benutzen Meeresspiegel und Fuß bis Gipfel. Sind die Zahlen direkt vergleichbar?",
+          "answers": [
+            "Nicht ohne dieselbe Messregel",
+            "Ja, Rekorde brauchen keine Definition",
+            "Ja, jede andere Regel ist Betrug"
+          ],
+          "correct": 0,
+          "hint": "Frage zuerst, wo die Messung beginnt.",
+          "why": "Eine Messregel gehört zum Rekord und muss beim Vergleich berücksichtigt werden.",
+          "wrong": [
+            "Eine Messregel gehört zum Rekord und muss beim Vergleich berücksichtigt werden.",
+            "Ohne Definition weißt du nicht, was genau gemessen wurde.",
+            "Verschiedene erklärte Messregeln können sinnvoll sein."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "landscapes:1",
+      "journeyId": "landscapes",
+      "index": 1,
+      "goal": "Flussarbeit und verschiedene Rekordgrößen unterscheiden.",
+      "scene": "Du beobachtest im Modell Wasser, das Material aus einer Landschaft transportiert.",
+      "tasks": [
+        {
+          "prompt": "Was können Flüsse transportieren?",
+          "answers": [
+            "Nur Mondlicht",
+            "Sand, Steine und gelöste Stoffe",
+            "Nur Ländernamen"
+          ],
+          "correct": 1,
+          "hint": "Achte auf Material und Wasserbewegung.",
+          "why": "Flüsse transportieren Material in unterschiedlicher Form.",
+          "wrong": [
+            "Licht beschreibt keinen solchen Materialtransport.",
+            "Flüsse transportieren Material in unterschiedlicher Form.",
+            "Ein Name ist kein Gesteinsmaterial."
+          ]
+        },
+        {
+          "prompt": "Warum kann ein Fluss über lange Zeit ein Tal verändern?",
+          "answers": [
+            "Er kann Material abtragen und transportieren",
+            "Weil jede Landkarte eine Schlucht erzeugt",
+            "Weil Wasser nie etwas bewegt"
+          ],
+          "correct": 0,
+          "hint": "Verbinde Transport mit Veränderung des Untergrunds.",
+          "why": "Abtragung und Transport können eine Landschaft langsam formen.",
+          "wrong": [
+            "Abtragung und Transport können eine Landschaft langsam formen.",
+            "Eine Darstellung verändert den Untergrund nicht.",
+            "Fließendes Wasser kann Material bewegen."
+          ]
+        },
+        {
+          "prompt": "Der längste und der wasserreichste Fluss müssen identisch sein. Stimmt das?",
+          "answers": [
+            "Ja, jeder Rekord meint dasselbe",
+            "Ja, Länge misst automatisch Wasser pro Zeit",
+            "Nein, Länge und Wassermenge sind verschiedene Größen"
+          ],
+          "correct": 2,
+          "hint": "Prüfe die Einheit jeder Messung.",
+          "why": "Eine lange Strecke ist kein Beweis für den größten Wassertransport.",
+          "wrong": [
+            "Rekorde beziehen sich auf unterschiedliche Eigenschaften.",
+            "Strecke und Wassertransport haben verschiedene Messgrößen.",
+            "Eine lange Strecke ist kein Beweis für den größten Wassertransport."
+          ]
+        }
+      ],
+      "sequence": [
+        "Wasser trägt Material ab",
+        "Der Fluss transportiert Material",
+        "Die Landschaft verändert sich über lange Zeit"
+      ]
+    },
+    {
+      "id": "landscapes:2",
+      "journeyId": "landscapes",
+      "index": 2,
+      "goal": "Seen anhand ihrer Lage und Wasserwege erklären.",
+      "scene": "Deine Expeditionskarte untersucht ein Gewässer, das trotz seines Namens im Land liegt.",
+      "tasks": [
+        {
+          "prompt": "Wo kann sich ein See bilden?",
+          "answers": [
+            "In einer Vertiefung im Land",
+            "Nur direkt auf dem Mond",
+            "Nur in der Atmosphäre"
+          ],
+          "correct": 0,
+          "hint": "Suche einen Speicher auf der Oberfläche.",
+          "why": "Wasser kann sich in einer Landvertiefung sammeln.",
+          "wrong": [
+            "Wasser kann sich in einer Landvertiefung sammeln.",
+            "Diese Reise beschreibt Gewässer auf der Erde.",
+            "Eine Wolke ist kein See im Land."
+          ]
+        },
+        {
+          "prompt": "Muss jeder See einen Abfluss zum Meer haben?",
+          "answers": [
+            "Ja, ausnahmslos",
+            "Nein, Seen enthalten kein Wasser",
+            "Nein"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche unterschiedliche Zu- und Abflussmöglichkeiten.",
+          "why": "Es gibt Seen mit und ohne Abfluss zum Meer.",
+          "wrong": [
+            "Die absolute Regel schließt vorkommende Binnengewässer aus.",
+            "Ein See ist gerade ein Wasserkörper.",
+            "Es gibt Seen mit und ohne Abfluss zum Meer."
+          ]
+        },
+        {
+          "prompt": "Das Kaspische Meer heißt Meer. Reicht der Name zur Einordnung?",
+          "answers": [
+            "Ja, es ist deshalb ein Ozean",
+            "Nein, Lage und Verbindungen zeigen ein Binnengewässer",
+            "Ja, jeder Name ersetzt die Geografie"
+          ],
+          "correct": 1,
+          "hint": "Prüfe Eigenschaften statt nur ein Wort.",
+          "why": "Ein Name kann historisch sein; die geografischen Eigenschaften müssen mitgelesen werden.",
+          "wrong": [
+            "Der Name allein macht kein Gewässer zum Ozean.",
+            "Ein Name kann historisch sein; die geografischen Eigenschaften müssen mitgelesen werden.",
+            "Namen können ohne weitere Prüfung missverständlich sein."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "landscapes:3",
+      "journeyId": "landscapes",
+      "index": 3,
+      "goal": "Wüsten nach Niederschlag statt Sandbild beurteilen.",
+      "scene": "Deine virtuelle Reise stellt eine heiße Sandlandschaft neben eine eisige trockene Region.",
+      "tasks": [
+        {
+          "prompt": "Welches Merkmal bestimmt eine Wüste besonders?",
+          "answers": [
+            "Immer goldener Sand",
+            "Immer hohe Temperatur",
+            "Geringer Niederschlag"
+          ],
+          "correct": 2,
+          "hint": "Suche die Umweltbedingung statt das typische Foto.",
+          "why": "Wüsten sind sehr trockene Regionen.",
+          "wrong": [
+            "Es gibt Wüsten ohne große Sanddünen.",
+            "Es gibt auch kalte Wüsten.",
+            "Wüsten sind sehr trockene Regionen."
+          ]
+        },
+        {
+          "prompt": "Wie passen Sahara und Antarktika in denselben Vergleich?",
+          "answers": [
+            "Beide sind derselbe Kontinent",
+            "Beide enthalten sehr trockene Regionen",
+            "Beide haben überall dieselbe Temperatur"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche Trockenheit und Temperatur getrennt.",
+          "why": "Ein gemeinsames Trockenheitsmerkmal bedeutet nicht gleiche Wärme.",
+          "wrong": [
+            "Sie liegen nicht in derselben Kontinentregion.",
+            "Ein gemeinsames Trockenheitsmerkmal bedeutet nicht gleiche Wärme.",
+            "Ihre Temperaturen und Landschaften unterscheiden sich."
+          ]
+        },
+        {
+          "prompt": "Eine Fläche hat keine Sanddünen. Ist eine Wüste dort ausgeschlossen?",
+          "answers": [
+            "Nein, erst den Niederschlag untersuchen",
+            "Ja, Sand ist das einzige Wüstenmerkmal",
+            "Ja, ohne Sand muss es Regenwald sein"
+          ],
+          "correct": 0,
+          "hint": "Prüfe die tatsächliche Definition.",
+          "why": "Gesteins-, Kies- und Eislandschaften können ebenfalls sehr trocken sein.",
+          "wrong": [
+            "Gesteins-, Kies- und Eislandschaften können ebenfalls sehr trocken sein.",
+            "Sand allein ist nicht das entscheidende Merkmal.",
+            "Zwischen Sandwüste und Regenwald gibt es viele Möglichkeiten."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "landscapes:4",
+      "journeyId": "landscapes",
+      "index": 4,
+      "goal": "Gletscher und Eisberge als verschiedene Eisformen erkennen.",
+      "scene": "Deine Landschaftskarte folgt Eis an Land und einem abgebrochenen Stück im Wasser.",
+      "tasks": [
+        {
+          "prompt": "Was ist ein Gletscher?",
+          "answers": [
+            "Ein heißer Lavafluss",
+            "Langsam fließendes Eis",
+            "Nur ein schwimmendes Eisstück"
+          ],
+          "correct": 1,
+          "hint": "Suche die Bewegung des Eises an Land.",
+          "why": "Gletscher bestehen aus Eis, das sich langsam bewegt.",
+          "wrong": [
+            "Lava und Eis sind unterschiedliche Materialien.",
+            "Gletscher bestehen aus Eis, das sich langsam bewegt.",
+            "Ein schwimmendes abgebrochenes Stück wird Eisberg genannt."
+          ]
+        },
+        {
+          "prompt": "Wie kann ein Gletscher Landschaft verändern?",
+          "answers": [
+            "Er kann Gestein abschleifen und Täler formen",
+            "Er zeichnet nur Kartenfarben um",
+            "Eis bewegt sich grundsätzlich nie"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche Bewegung, Materialkontakt und lange Zeit.",
+          "why": "Bewegtes Eis kann Gestein bearbeiten und abtragen.",
+          "wrong": [
+            "Bewegtes Eis kann Gestein bearbeiten und abtragen.",
+            "Farben ändern keine Gesteinsform.",
+            "Gletschereis kann langsam fließen."
+          ]
+        },
+        {
+          "prompt": "Kann es Gletscher fern der Pole geben?",
+          "answers": [
+            "Nein, nur genau an den Polen",
+            "Nein, jedes Eisstück ist ein Ozean",
+            "Ja, etwa in hohen Gebirgen"
+          ],
+          "correct": 2,
+          "hint": "Prüfe Höhe und Temperaturbedingungen.",
+          "why": "Auch hohe Gebirge können Bedingungen für Gletscher bieten.",
+          "wrong": [
+            "Polnähe ist nicht die einzige mögliche kalte Lage.",
+            "Ein Material wird nicht zum Ozean durch seine Bezeichnung.",
+            "Auch hohe Gebirge können Bedingungen für Gletscher bieten."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climate:0",
+      "journeyId": "climate",
+      "index": 0,
+      "goal": "Einzelwetter von typischen Langzeitbedingungen trennen.",
+      "scene": "Deine Klimaexpedition vergleicht ein Tagesfoto mit einer langen Messreihe.",
+      "tasks": [
+        {
+          "prompt": "Was beschreibt Klima?",
+          "answers": [
+            "Nur den heutigen Vormittag",
+            "Nur die Farbe einer Wolke",
+            "Typische Bedingungen über viele Jahre"
+          ],
+          "correct": 2,
+          "hint": "Achte auf den Zeitraum der Aussage.",
+          "why": "Klima beschreibt längerfristige typische Bedingungen und ihre Verteilung.",
+          "wrong": [
+            "Ein Vormittag beschreibt Wetter.",
+            "Eine Farbe liefert keine vollständige langjährige Messreihe.",
+            "Klima beschreibt längerfristige typische Bedingungen und ihre Verteilung."
+          ]
+        },
+        {
+          "prompt": "Welche Daten passen besser zum Untersuchen eines Klimatrends?",
+          "answers": [
+            "Nur ein Ländernamenrätsel",
+            "Lange vergleichbare Messreihen",
+            "Nur ein zufälliges Foto"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche Wiederholung, Zeitraum und Messmethode.",
+          "why": "Viele vergleichbare Beobachtungen helfen, langfristige Veränderungen zu erkennen.",
+          "wrong": [
+            "Ein Name ist keine Zeitreihe von Messwerten.",
+            "Viele vergleichbare Beobachtungen helfen, langfristige Veränderungen zu erkennen.",
+            "Ein Bild allein beschreibt keinen Trend."
+          ]
+        },
+        {
+          "prompt": "In einem warmen Klima tritt ein kühler Tag auf. Ist das ein Widerspruch?",
+          "answers": [
+            "Nein, Wetter kann um typische Bedingungen schwanken",
+            "Ja, jeder Tag muss gleich sein",
+            "Ja, Klima ist nur ein einzelner Wert"
+          ],
+          "correct": 0,
+          "hint": "Unterscheide typische Verteilung und einzelnes Ereignis.",
+          "why": "Einzelne Abweichungen sind mit einem typischen langfristigen Muster vereinbar.",
+          "wrong": [
+            "Einzelne Abweichungen sind mit einem typischen langfristigen Muster vereinbar.",
+            "Wetter schwankt innerhalb einer Klimaregion.",
+            "Klima beschreibt mehr als einen einzigen Tag oder Wert."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climate:1",
+      "journeyId": "climate",
+      "index": 1,
+      "goal": "Sonnenwinkel und Energieverteilung erklären.",
+      "scene": "Ein gleiches Lichtbündel trifft im Modell auf zwei Flächen: steil und flach.",
+      "tasks": [
+        {
+          "prompt": "Wie trifft Sonnenlicht in polaren Regionen im Jahresmittel eher auf?",
+          "answers": [
+            "Überhaupt nie",
+            "Flacher",
+            "Immer genau senkrecht"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche Breite und Sonnenwinkel.",
+          "why": "In polaren Breiten ist der Einfallswinkel im Jahresmittel flacher.",
+          "wrong": [
+            "Auch polare Regionen erhalten zu bestimmten Zeiten Sonnenlicht.",
+            "In polaren Breiten ist der Einfallswinkel im Jahresmittel flacher.",
+            "Senkrechter Sonnenstand ist dort nicht die gewöhnliche Situation."
+          ]
+        },
+        {
+          "prompt": "Was passiert beim flacheren Einfall eines gleichen Lichtbündels?",
+          "answers": [
+            "Es verteilt sich auf eine größere Fläche",
+            "Es wird automatisch konzentrierter",
+            "Die Fläche verschwindet"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche gleiche Energie mit unterschiedlicher Verteilung.",
+          "why": "Gleiche einfallende Energie verteilt sich bei flacherem Winkel auf mehr Fläche.",
+          "wrong": [
+            "Gleiche einfallende Energie verteilt sich bei flacherem Winkel auf mehr Fläche.",
+            "Die Energie pro Fläche wird dadurch nicht größer.",
+            "Eine Beleuchtung löscht keine Fläche."
+          ]
+        },
+        {
+          "prompt": "Reicht die geografische Breite, um das Klima jedes Ortes vollständig zu bestimmen?",
+          "answers": [
+            "Ja, alle Orte gleicher Breite sind identisch",
+            "Ja, Gebirge haben keinen Einfluss",
+            "Nein, Höhe, Meer und weitere Einflüsse zählen"
+          ],
+          "correct": 2,
+          "hint": "Prüfe, welche anderen Bedingungen das Kapitel nennt.",
+          "why": "Breite erklärt einen wichtigen Grundzusammenhang, aber nicht alle örtlichen Unterschiede.",
+          "wrong": [
+            "Gleiche Breite schließt andere Bedingungen nicht aus.",
+            "Höhe kann das Klima zusätzlich beeinflussen.",
+            "Breite erklärt einen wichtigen Grundzusammenhang, aber nicht alle örtlichen Unterschiede."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climate:2",
+      "journeyId": "climate",
+      "index": 2,
+      "goal": "Tropische Lebensräume nach Regenverlauf unterscheiden.",
+      "scene": "Zwei Expeditionsstationen liegen in den Tropen. Ihre Jahresregenverläufe sind verschieden.",
+      "tasks": [
+        {
+          "prompt": "Welche Bedingungen passen oft zum tropischen Regenwald?",
+          "answers": [
+            "Warm und sehr feucht",
+            "Immer eisig und trocken",
+            "Überall ohne Pflanzen"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche Temperatur und Wasser.",
+          "why": "Viele tropische Regenwälder brauchen warme und feuchte Bedingungen.",
+          "wrong": [
+            "Viele tropische Regenwälder brauchen warme und feuchte Bedingungen.",
+            "Diese Kombination passt nicht zur beschriebenen Tropenwaldform.",
+            "Tropische Regenwälder enthalten viele Pflanzen."
+          ]
+        },
+        {
+          "prompt": "Was hilft, Savanne und tropischen Regenwald zu unterscheiden?",
+          "answers": [
+            "Nur denselben Breitengrad ablesen",
+            "Nur den Namen eines Tieres wählen",
+            "Den Wechsel von Regen- und Trockenzeiten vergleichen"
+          ],
+          "correct": 2,
+          "hint": "Betrachte den Jahresverlauf des Wassers.",
+          "why": "Auch in den Tropen können Regenbedingungen deutlich verschieden sein.",
+          "wrong": [
+            "Breite allein erfasst nicht den gesamten Niederschlagsverlauf.",
+            "Ein Tiername ersetzt keine Umweltmessungen.",
+            "Auch in den Tropen können Regenbedingungen deutlich verschieden sein."
+          ]
+        },
+        {
+          "prompt": "Eine Karte färbt die Tropen einheitlich. Gibt es dort nur einen Lebensraum?",
+          "answers": [
+            "Ja, alle Savannen liegen außerhalb der Tropen",
+            "Nein, die Farbe zeigt einen groben Gürtel",
+            "Ja, ein Farbton beweist überall dasselbe"
+          ],
+          "correct": 1,
+          "hint": "Prüfe die Auflösung und Bedeutung der Darstellung.",
+          "why": "Eine Klimagürtelkarte vereinfacht unterschiedliche örtliche Lebensräume.",
+          "wrong": [
+            "Savannen können ebenfalls in den Tropen liegen.",
+            "Eine Klimagürtelkarte vereinfacht unterschiedliche örtliche Lebensräume.",
+            "Darstellungsfarbe ist keine vollständige ökologische Beschreibung."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climate:3",
+      "journeyId": "climate",
+      "index": 3,
+      "goal": "Pflanzenformen mit mehreren Umweltbedingungen verbinden.",
+      "scene": "Deine Beobachtungskarte zeigt Wald und niedrige Pflanzen einer kalten Region.",
+      "tasks": [
+        {
+          "prompt": "Welche Pflanzen sind typisch in vielen Tundragebieten?",
+          "answers": [
+            "Immer hohe tropische Palmen",
+            "Nur Korallentiere",
+            "Moose, Flechten und niedrige Sträucher"
+          ],
+          "correct": 2,
+          "hint": "Denke an kurze Sommer und niedrigen Wuchs.",
+          "why": "In vielen Tundragebieten wachsen niedrig bleibende Pflanzen.",
+          "wrong": [
+            "Tropische Palmen passen nicht zu den beschriebenen Bedingungen.",
+            "Korallen sind Meerestiere und keine Tundrapflanzen.",
+            "In vielen Tundragebieten wachsen niedrig bleibende Pflanzen."
+          ]
+        },
+        {
+          "prompt": "Warum kann eine kalte Region mit kurzem Sommer niedrigen Pflanzenwuchs begünstigen?",
+          "answers": [
+            "Weil dort grundsätzlich keine Lebewesen existieren",
+            "Die Wachstumsbedingungen sind begrenzt",
+            "Weil die Kartenfarbe Pflanzen kleiner macht"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche Wärme und verfügbare Wachstumszeit.",
+          "why": "Kurze kalte Wachstumszeiten begrenzen die Möglichkeiten vieler Pflanzen.",
+          "wrong": [
+            "Auch kalte Regionen enthalten Lebewesen.",
+            "Kurze kalte Wachstumszeiten begrenzen die Möglichkeiten vieler Pflanzen.",
+            "Eine Kartenfarbe beeinflusst das Wachstum nicht."
+          ]
+        },
+        {
+          "prompt": "Zwei Orte sind gleich warm. Müssen dort identische Pflanzen wachsen?",
+          "answers": [
+            "Nein, Wasser, Boden und Nutzung können verschieden sein",
+            "Ja, Wärme entscheidet allein alles",
+            "Ja, Menschen haben nirgends Einfluss"
+          ],
+          "correct": 0,
+          "hint": "Prüfe mehrere Bedingungen statt nur einer.",
+          "why": "Pflanzenbedingungen hängen von mehr als Temperatur allein ab.",
+          "wrong": [
+            "Pflanzenbedingungen hängen von mehr als Temperatur allein ab.",
+            "Wasser und Boden bleiben wichtig.",
+            "Menschliche Nutzung kann Lebensräume verändern."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climate:4",
+      "journeyId": "climate",
+      "index": 4,
+      "goal": "Lebensraumveränderungen vorsichtig und vernetzt beurteilen.",
+      "scene": "Deine Expedition untersucht einen Lebensraum: Welche Bedürfnisse und Beziehungen sind betroffen?",
+      "tasks": [
+        {
+          "prompt": "Was brauchen Tiere unter anderem?",
+          "answers": [
+            "Nur einen Namen",
+            "Nahrung, Wasser und Schutz",
+            "Nur eine Landesflagge"
+          ],
+          "correct": 1,
+          "hint": "Suche konkrete Lebensbedingungen.",
+          "why": "Ein Lebensraum muss grundlegende Bedürfnisse einer Art erfüllen.",
+          "wrong": [
+            "Eine Bezeichnung bietet keine Nahrung oder Schutz.",
+            "Ein Lebensraum muss grundlegende Bedürfnisse einer Art erfüllen.",
+            "Eine Flagge erfüllt diese Bedürfnisse nicht."
+          ]
+        },
+        {
+          "prompt": "Warum kann eine starke Lebensraumänderung mehrere Arten beeinflussen?",
+          "answers": [
+            "Bedürfnisse und Beziehungen können betroffen sein",
+            "Alle Arten leben völlig unabhängig",
+            "Nur die größten Tiere brauchen Lebensräume"
+          ],
+          "correct": 0,
+          "hint": "Verfolge Beziehungen und gemeinsame Ressourcen.",
+          "why": "Eine Veränderung kann direkt und über Beziehungen weitere Arten beeinflussen.",
+          "wrong": [
+            "Eine Veränderung kann direkt und über Beziehungen weitere Arten beeinflussen.",
+            "Arten können vielfältig verbunden sein.",
+            "Auch kleine und unscheinbare Arten brauchen passende Bedingungen."
+          ]
+        },
+        {
+          "prompt": "Macht mehr Artenvielfalt jeden Lebensraum garantiert gegen alles widerstandsfähig?",
+          "answers": [
+            "Ja, ohne jede Grenze",
+            "Ja, einzelne Arten und Bedingungen sind bedeutungslos",
+            "Nein, mögliche Vorteile hängen vom Zusammenhang ab"
+          ],
+          "correct": 2,
+          "hint": "Unterscheide einen möglichen Vorteil von einer absoluten Garantie.",
+          "why": "Vielfalt kann helfen, aber Zusammensetzung, Beziehungen und Bedingungen müssen betrachtet werden.",
+          "wrong": [
+            "Eine absolute Garantie wäre zu weitgehend.",
+            "Gerade konkrete Arten und Bedingungen sind für den Zusammenhang wichtig.",
+            "Vielfalt kann helfen, aber Zusammensetzung, Beziehungen und Bedingungen müssen betrachtet werden."
+          ]
+        }
+      ]
+    }
+  ],
+  "finalHints": {
+    "planet": "Vergleiche, was Menschen auf gegenüberliegenden Seiten der Erde als unten bezeichnen.",
+    "inside": "Achte darauf, ob das geschmolzene Gestein noch unter der Oberfläche liegt oder schon herausgeflossen ist.",
+    "water": "Welche Wasserform ist unsichtbar, und welche winzigen Teilchen machen eine Wolke sichtbar?",
+    "weather": "Vergleiche den kurzen Blick auf einen einzelnen Tag mit Beobachtungen über einen langen Zeitraum.",
+    "seasons": "Suche die beiden Länder auf ihren Halbkugeln und denke an die geneigte Erdachse.",
+    "ocean": "Erinnere dich an die kleinen Polypen: Wie leben sie und wie unterscheiden sie sich von einem Stein?",
+    "nature": "Vergleiche eine heiße und eine kalte Wüste. Welche Bedingung haben beide gemeinsam?",
+    "protect": "Welche Möglichkeit hält ein heiles Spielzeug länger in Benutzung, ohne einen Lebensraum zu verschmutzen?",
+    "continents": "Vergleiche die Begriffe Land, Kontinent und Ozean, bevor du Kenia zuordnest.",
+    "countries": "Eine sehr bekannte große Stadt muss nicht die Hauptstadt sein. Schaue noch einmal in das Australien-Kapitel.",
+    "volcanoes": "Achte auf den Unterschied zwischen geschmolzenem Gestein unter und über der Erdoberfläche.",
+    "quakes": "Unterscheide den Ausgangspunkt der Bewegung im Gestein von dem Punkt an der Oberfläche darüber.",
+    "moon": "Der Mond bleibt eine Kugel. Überlege, welche Hälfte Sonnenlicht erhält und wie wir darauf blicken.",
+    "navigation": "Unterscheide geografische Breite von geografischer Länge. Welche Linie trennt die beiden Halbkugeln?",
+    "landscapes": "Vergleiche Trockenheit und Temperatur. Welches Merkmal ist für eine Wüste entscheidend?",
+    "climate": "Vergleiche eine einzelne Wetterbeobachtung mit einem Muster aus vielen Jahren."
+  }
+}

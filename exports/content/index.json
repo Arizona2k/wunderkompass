@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T20:01:06.907Z",
+  "generatedAt": "2026-10-12T22:57:05.721Z",
   "personalProgressIncluded": false,
   "topics": 116,
   "categories": {
@@ -73,14 +73,23 @@
       "sha256": "0d92523ed27720467e08d4c74d3cbe3c0eb69591d70f3fec71bc19aedeb58f7d"
     },
     {
+      "file": "journey-inquiries.json",
+      "sources": [
+        "app/journey-inquiries.json"
+      ],
+      "entries": 3,
+      "bytes": 195306,
+      "sha256": "e01d862a4ebbaec217990db1e540f221e79a6b7c000c125a779f518908aa9280"
+    },
+    {
       "file": "journeys.json",
       "sources": [
         "app/learning-data.ts",
         "app/expanded-learning-data.ts"
       ],
       "entries": 16,
-      "bytes": 44644,
-      "sha256": "5201575b7a6363bd95f7ad0db6754a1a451911d51015591164c167d66a55bad4"
+      "bytes": 44741,
+      "sha256": "d2f5c290c8069f8a4fb0b8403ec78b822fe2c48b16375785bebde455cc8e6ca0"
     },
     {
       "file": "knowledge-words.json",
@@ -373,9 +382,9 @@
       "sources": [
         "content/news-source-policy.json"
       ],
-      "entries": 16,
-      "bytes": 1313,
-      "sha256": "12141e248853740e38510118ae9d04e9deecb341bb6a11c0b7ad6c2a5e154d2b"
+      "entries": 18,
+      "bytes": 4661,
+      "sha256": "07613e7857398c7571147d6eada81608284486290c06567200e3965d77eb66ca"
     },
     {
       "file": "science-model-index.json",

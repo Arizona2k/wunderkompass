@@ -22,7 +22,7 @@ test('one run reuses a shared source read and its failure without extra requests
 });
 const planet=(name='Kepler-22 b')=>({pl_name:name,hostname:'Kepler-22',disc_year:2011,releasedate:'2026-10-11',soltype:'Published Confirmed',pl_controv_flag:0,default_flag:1});
 test('several new science subjects are authored from unseen EPIC/planet data, with released data distinct from discovery',async()=>{
- const enabled={...policy,structuredSources:POLICY.structuredSources},requested=[];
+ const enabled={...policy,structuredSources:POLICY.structuredSources.filter(s=>s.id.startsWith('nasa-'))},requested=[];
  const result=await prepareAutomaticEdition({policy:enabled,content:CONTENT,topicIds,now,fetchImpl:async url=>{
   requested.push(url);if(url.startsWith(source))return response(rows());const query=new URL(url).searchParams.get('query');return response(query.includes('top 10')?[planet('Kepler-22 b'),planet('Kepler-62 f')]:[planet(query.includes('Kepler-62 f')?'Kepler-62 f':'Kepler-22 b')]);
  }});
@@ -79,7 +79,7 @@ test('fresh runners retain the signed daily retry budget and bootstrap never hid
  const config=await signing(),directory=await mkdtemp(path.join(tmpdir(),'wk-news-fresh-'));
  try{
   const prior=await signEnvelope({payload:CONTENT,...config,sequence:2,now,state:'degraded',attempts:2});
-  const runtime={mode:'pages',...config,allowedRepository:'Arizona2k/news-only-test',endpoint:'https://arizona2k.github.io/news-only-test/latest.json',maxDailyAttempts:2,maxExternalAICost:0,bootstrapEmptyLane:true};
+  const runtime={mode:'pages',...config,allowedBranch:'news-content',allowedRepository:'Arizona2k/news-only-test',endpoint:'https://arizona2k.github.io/news-only-test/latest.json',maxDailyAttempts:2,maxExternalAICost:0,bootstrapEmptyLane:true};
   const job={policy,runtime,content:CONTENT,topicIds,directory,privateKey:config.privateKey,repository:runtime.allowedRepository,now,wait:async()=>{}};
   let reads=0;const result=await runNewsJob({...job,fetchImpl:async url=>{reads++;return response(url.endsWith('history.json')?[prior]:prior);}});
   assert.equal(result.status,'retry-budget-exhausted');assert.equal(reads,2,'no new source requests after the signed budget');
@@ -110,7 +110,7 @@ test('daily budget, concurrent workers and evidenced crash recovery fail closed'
 });
 
 test('six real generator days cover independent new, date-only, recurring, scarce and unavailable sources without false fresh dates',async()=>{
- const enabled={...policy,structuredSources:POLICY.structuredSources};let content=structuredClone(CONTENT);
+ const enabled={...policy,structuredSources:POLICY.structuredSources.filter(s=>s.id.startsWith('nasa-'))};let content=structuredClone(CONTENT);
  const run=async(day,{names=[],epicCount=2,unavailable=false}={})=>{
   const current=new Date(day+'T12:00:00Z');
   const result=await prepareAutomaticEdition({policy:enabled,content,topicIds,now:current,wait:async()=>{},fetchImpl:async url=>{
