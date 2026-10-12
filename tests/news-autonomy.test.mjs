@@ -108,3 +108,34 @@ test('daily budget, concurrent workers and evidenced crash recovery fail closed'
   let calls=0;const run=async()=>{calls++;await new Promise(r=>setTimeout(r,10));return {fingerprint:'ok'};};const nextDay=new Date('2026-10-13T12:00:00Z');const results=await Promise.all([dailyNewsTick({policy,now:nextDay,directory,run}),dailyNewsTick({policy,now:nextDay,directory,run})]);assert.equal(calls,1);assert.ok(results.some(r=>r.status==='reserved'));assert.ok(results.some(r=>r.status==='checked'));
  }finally{await rm(directory,{recursive:true,force:true});}
 });
+
+test('six real generator days cover independent new, date-only, recurring, scarce and unavailable sources without false fresh dates',async()=>{
+ const enabled={...policy,structuredSources:POLICY.structuredSources};let content=structuredClone(CONTENT);
+ const run=async(day,{names=[],epicCount=2,unavailable=false}={})=>{
+  const current=new Date(day+'T12:00:00Z');
+  const result=await prepareAutomaticEdition({policy:enabled,content,topicIds,now:current,wait:async()=>{},fetchImpl:async url=>{
+   if(unavailable)throw Error('Unavailable source');
+   if(url.startsWith(source))return response(rows(day,epicCount));
+   const query=new URL(url).searchParams.get('query');const records=names.map(name=>({...planet(name),releasedate:day}));
+   return response(query.includes('top 10')?records:records.filter(r=>query.includes("pl_name='"+r.pl_name+"'")));
+  }});content=result.payload;return result;
+ };
+ const first=await run('2026-10-12',{names:['Kepler-22 b','Kepler-62 f']});assert.equal(first.report.selected.length,3);assert.deepEqual(new Set(first.report.rotation.availableDomains),new Set(['geografie','weltall']));
+ const originalDates=new Map(content.entries.map(e=>[e.id,e.checkedAt]));
+ const second=await run('2026-10-13',{names:['Kepler-22 b','Kepler-62 f'],epicCount:3});assert.equal(second.report.selected.length,0);assert.ok(second.report.rotation.held.some(h=>h.reason.includes('Beobachtungsserie')));assert.ok(second.report.rotation.held.some(h=>h.reason.includes('Doppelmeldung')));
+ for(const [day,names] of [['2026-10-14',['Kepler-90 b']],['2026-10-15',['Kepler-90 c','Kepler-90 d','Kepler-90 e']]]){const result=await run(day,{names});assert.equal(result.report.selected.length,names.length);assert.ok(result.report.selected.every(id=>id.startsWith('exoplanet-')));}
+ const count=content.entries.length,stand=content.checkedAt;
+ assert.equal((await run('2026-10-16')).report.selected.length,0);assert.equal(content.entries.length,count);assert.equal(content.checkedAt,stand);
+ const failed=await run('2026-10-17',{unavailable:true});assert.equal(failed.report.selected.length,0);assert.equal(failed.report.issues.length,2);assert.equal(content.entries.length,count);assert.equal(content.checkedAt,stand);
+ for(const [id,date] of originalDates)assert.equal(content.entries.find(e=>e.id===id).checkedAt,date);
+ assert.equal(content.selectionHistory.length,6);assert.equal(failed.report.externalAIRequests,0);
+});
+test('a validated session keeps its sequence floor when cache storage is denied, older, or corrupt and later recovers',async()=>{
+ const config=await signing(),trust={endpoint:'https://arizona2k.github.io/wunderkompass-news/latest.json',keys:config.keys,maxBytes:1048576,timeoutMs:1000};
+ const one=await signEnvelope({payload:CONTENT,...config,sequence:1,now}),two=await signEnvelope({payload:CONTENT,...config,sequence:2,now});
+ const denied={open:async()=>{throw Error('Storage denied');}},context={trust,policy,topicIds,now,cacheStorage:denied,previousEnvelope:two};
+ for(const fetchImpl of [async()=>{throw Error('Temporary outage');},async()=>response(one),async()=>response({...two,signature:'AAAA'})]){const result=await loadNewsFeed({...context,fetchImpl});assert.equal(result.envelope.sequence,2);assert.equal(result.source,'memory');assert.ok(result.warning);}
+ const olderCache={open:async()=>({match:async()=>response(one)})};assert.equal((await loadNewsFeed({...context,cacheStorage:olderCache,fetchImpl:async()=>response(one)})).envelope.sequence,2);
+ const conflicting=await signEnvelope({payload:{...CONTENT,automation:'automatic'},...config,sequence:2,now});assert.equal((await loadNewsFeed({...context,fetchImpl:async()=>response(conflicting)})).envelope.fingerprint,two.fingerprint);
+ const three=await signEnvelope({payload:CONTENT,...config,sequence:3,now});const recovered=await loadNewsFeed({...context,fetchImpl:async()=>response(three)});assert.equal(recovered.source,'network');assert.equal(recovered.envelope.sequence,3);assert.equal(recovered.warning,null);
+});

@@ -53,7 +53,7 @@ export function verifyEpic(entry,observed,comparison,{now,policy,topicIds,source
 export async function prepareAutomaticEdition({policy,content,topicIds,directory,now=new Date(),fetchImpl=fetch,wait}){
  const report={schemaVersion:1,runAt:now.toISOString(),day:berlinDay(now),mode:'automatic-preparation',selected:[],retained:[],issues:[],candidates:[],requests:0,method:'structured-epic-v1',externalAIRequests:0};
  const entries=content.entries.map(e=>structuredClone(e)),verifiedCandidates=[];
- const propose=(entry,domain,subjectKey,family)=>{const existing=entries.find(e=>e.id===entry.id);if(existing&&JSON.stringify(existing.claims)===JSON.stringify(entry.claims))report.retained.push(existing.id);else verifiedCandidates.push({entry,domain,subjectKey,eventKey:entry.generation.eventKey,family,verified:true,rightsConfirmed:true,risk:'routine'});};
+ const propose=(entry,domain,subjectKey,family,recurring=false)=>{const existing=entries.find(e=>e.id===entry.id);if(existing&&JSON.stringify(existing.claims)===JSON.stringify(entry.claims))report.retained.push(existing.id);else verifiedCandidates.push({entry,domain,subjectKey,eventKey:entry.generation.eventKey,family,recurring,verified:true,rightsConfirmed:true,risk:'routine'});};
  const deadline=AbortSignal.timeout(120000);
  const read=async url=>{assert(!deadline.aborted,'Nachrichtenlaufzeit überschritten');assert(++report.requests<=8,'Quellenabrufbudget überschritten');return fetchSource(url,policy,{fetchImpl,json:true,signal:deadline,...(wait?{wait}:{})});};
  const rights=id=>{assert(policy.autonomousGenerationEnabled,'Autonome Erstellung ist deaktiviert');const source=policy.structuredSources?.find(s=>s.id===id);assert(source?.rights?.status==='confirmed'&&calendarDay(source.rights.checkedOn),'Quellenrechte nicht bestätigt');assert(Date.parse(berlinDay(now))-Date.parse(source.rights.checkedOn)<=180*86400000&&source.rights.checkedOn<=berlinDay(now),'Quellenrechteprüfung ist überaltert oder zukünftig');return source;};
@@ -64,7 +64,7 @@ export async function prepareAutomaticEdition({policy,content,topicIds,directory
   report.candidates.push({organization:'NASA EPIC Team',location:'Satellit DSCOVR',eventOn:evidence.day,kind:'dated-observation',count:evidence.count});
   const fixed=await read(SOURCE+'/date/'+evidence.day),comparison=JSON.parse(fixed.document),sourceHashes=[latest.sha256,fixed.sha256];
   const entry=verifyEpic(generateEpic(evidence,{now,sourceHashes}),rows,comparison,{now,policy,topicIds,sourceHashes});
-  propose(entry,'geografie','epic-earth-observations','earth-observation-series');
+  propose(entry,'geografie','epic-earth-observations','earth-observation-series',true);
  }catch(error){report.issues.push({id:'nasa-epic',reason:error.message});}
  if(policy.structuredSources?.some(s=>s.id==='nasa-exoplanets'))try{
   rights('nasa-exoplanets');const url=planetURL({day:berlinDay(now)}),fetched=await read(url),rows=JSON.parse(fetched.document);
@@ -81,7 +81,7 @@ export async function prepareAutomaticEdition({policy,content,topicIds,directory
   }
  }catch(error){report.issues.push({id:'nasa-exoplanets',reason:error.message});}
  const choice=selectTopics(verifiedCandidates,{history:content.selectionHistory??[],previous:content.entries,now,maxItems:policy.maxItems});
- report.rotation={windowDays:14,subjectCooldownDays:7,availableDomains:choice.availableDomains,held:choice.held};
+ report.rotation={windowDays:14,recurringSeriesCooldownDays:7,domainLimits:'soft-preference',availableDomains:choice.availableDomains,held:choice.held};
  for(const candidate of choice.selected){const entry={...candidate.entry,generation:{...candidate.entry.generation,domain:candidate.domain,subjectKey:candidate.subjectKey,meaningKey:candidate.meaningKey,family:candidate.family}};const old=entries.findIndex(e=>e.id===entry.id);if(old>=0)entries.splice(old,1);entries.push(entry);report.selected.push(entry.id);}
  // Archive bounded by the browser contract; each original date remains intact.
  entries.sort((a,b)=>b.sourcePublishedOn.localeCompare(a.sourcePublishedOn)||a.id.localeCompare(b.id));

@@ -1,5 +1,13 @@
 # Änderungsverlauf
 
+## 12. Oktober 2026 – WK-046: gezielter PR24-Nachschliff
+
+Signierte Nachrichten werden in länger geöffneten Sitzungen sparsam erneut geladen: sichtbares15-Minuten-Intervall, Sichtbarkeits-/Online-/Nachrichtenrückkehr mit Mindestabstand und begrenzter Fehlerwiederholung. Eine gemeinsame Abfrage und validierter Arbeitsspeicheranker verhindern doppelte Abrufe beziehungsweise Sequenzrücksetzung bei verweigertem oder altem Cache. Originaldaten, Offline-Archiv und bestehender Pass bleiben erhalten.
+
+Pauschale Wochen-/Gebiets-/Gegenstandssperren durch faire14-Tage-Auswahlpräferenzen ersetzt: eigenständige neue geprüfte Ereignisse bleiben bei knappen Quellen wählbar. Datumsunabhängige Bedeutungs-/Ereignisduplikate sind weiterhin hart gesperrt; wiederkehrende EPIC-Serien behalten einen gezielten7-Tage-Abstand. Mehrtagesproben prüfen neue, identische, knappe und nicht erreichbare Quellen ohne künstliche Quote oder Neudatierung.
+
+Vorschau, Liste, Einzelansicht und Archiv unterscheiden automatische Datenprüfung ausdrücklich; allgemeiner Stand heißt Quellenabgleich und behauptet keine menschliche Einzelprüfung. Zusätzliche Quellen GBIF, Smithsonian und ZooKeys untersucht, fehlende Zugriffs-/Datensatz-/Ereignis-/Rechtenachweise konkret dokumentiert; keine ungeprüfte Quelle angeschlossen. Tatsächlich weiterhin zwei Bereiche Geografie/Erdbeobachtung und Weltall. Originalquellen-Live-E2E, getrenntes Hosting, Keys/Rechte, Scheduler-Langzeitnachweis und einmalige Betriebsfreigabe bleiben offen. Keine Aktivierung oder Veröffentlichung.
+
 ## 12. Oktober 2026 – WK-045–046: Paket 2C, technische Umsetzung
 
 Bei schneller Rücknahme einer Einstellung oder eines Favoriten konnte der Pass den eigenen vorherigen Journalwert als fremde Änderung behandeln und die neue Auswahl überschreiben. Reproduziert mit der alten Implementierung und korrigiert durch Fortschreiben des bereits synchron geteilten Vergleichsstands; ausstehende Datenbankspeicherung bleibt erhalten. Bestehendes Schema, Zusammenführung mehrerer Tabs, Import/Reset und Spielstände bleiben bestehen. Neue Store-Regression und echte visuelle Ein-/Aus-Schalterprobe sichern den Fehler ab.
