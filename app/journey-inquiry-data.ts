@@ -1,0 +1,15 @@
+import dataURL from './journey-inquiries.json?url';
+import {validateJourneyInquiries} from './journey-inquiry-validation.mjs';
+import {JOURNEYS} from './learning-data';
+export type JourneyTask={prompt:string;answers:string[];correct:number;hint:string;why:string;wrong:string[]};
+export type ChapterInquiry={id:string;journeyId:string;index:number;goal:string;scene:string;tasks:JourneyTask[];sequence?:string[]};
+let saved:ChapterInquiry[]|null=null,pending:Promise<ChapterInquiry[]>|null=null;
+export function currentJourneyInquiries(){return saved;}
+export function loadJourneyInquiries(){
+ if(saved)return Promise.resolve(saved);
+ if(!pending)pending=(async()=>{
+  const response=await fetch(dataURL);if(!response.ok)throw Error('Kapitelaufgaben nicht erreichbar.');
+  const data=await response.json();saved=validateJourneyInquiries(data,JOURNEYS) as ChapterInquiry[];return saved;
+ })().catch(error=>{pending=null;throw error;});
+ return pending;
+}

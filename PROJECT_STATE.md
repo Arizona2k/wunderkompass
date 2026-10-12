@@ -1,4 +1,17 @@
+<!-- Paket 3 checkpoint: 80 individuelle Kapitel / 240 Denkaufgaben implementiert; gezielte vier Unit-Tests, TypeScript, ESLint, Build und 40 Exporte bestanden. Vollständige Browser-/CI-Abnahme und News-Livebetrieb noch nicht bestanden. -->
 # Projektstand und Übergabe
+
+## Aktiver Durchlauf: Paket3 / WK-047–050 / package-3-2026-10-12
+
+In Arbeit, Codex. Finale Masterfassung aus dem Nutzeranhang vom12.10.2026 vollständig übernommen; sie ersetzt die erste kürzere Paket3-Fassung innerhalb desselben Durchlaufs. Bestehender Branch codex/wunderkompass-package-3-2026-10-12 von aktueller Basis2de46220f602ce7ac6124afb59db0aed50dfc8e4, main unverändert537622796f7e1f9a886e7400f10b1f727d24f8dc. Keine offenen PRs/aktiven CI vor Start; PR24 tatsächlich merged12.10.14:27:37Z, Vercel success am exakten Merge14:30:41Z (16:30:41 Europe/Berlin), Deployment857HqwbPXKkx3x97wNzoeCa4TdpV. Keine eigene Übernahme/Veröffentlichung.
+
+Eigene gemeinsame Reservierung5d1a143015437d8a0050e3d2c6bcf9d4b7b3d157, Eigentümer work/package-3-lock-owner.txt; trotz unterbrochenem Werkzeugaufruf anschließend Checkout und Remote-Tag tatsächlich geprüft und erhalten. Lebenszeichen12.10.15:03Z (17:03 Berlin). Noch kein Paket3-PR. Ein Unterbrechungsereignis war kein Neustart; bestehenden Branch fortgesetzt.
+
+Scope:3A Originalquellen-/Rechte-/Quellenvielfalt-/Hosting-/Scheduler-/Monitoring-/Null-Klick-Betrieb so weit belegbar im autorisierten Kontext fertig entwickeln; keine Zugänge/Rechte/Kosten umgehen, getestet/bereit-blockiert/tatsächlich aktiv unterscheiden.3B sämtliche16 Reisen/80 vorhandenen Kapitel einzeln inventarisieren, fachlich und pädagogisch prüfen und funktional/visuell mit echten Denkstufen/Hilfen/Navigation/Verbindungen verbessern; stabile IDs/Schema3 bewahren.3C reale zusätzliche Browser/200%-Zoom/Touch/Security prüfen, echte Hardware/Screenreader/gehörte Stimme/Fach- und Kinderabnahme nur bei tatsächlicher Verfügbarkeit; konkrete Pilotanleitung sonst. Wettbewerbsmaßstab dauerhaft in vorhandenen Regeln, Roadmap4–8 und WK038 bewahren. Keine konkurrierende Aufgabenverwaltung.
+
+Ausgangsbefund: Leser besitzt5 Inhaltskapitel plus separates Experiment/Abschlussrätsel je Reise; Fragen innerhalb der Kapitel bisher überwiegend statisch. Kapitelwahl nicht als eigener Direktlink gespeichert. Alle vorhandenen Medien und Quellen zunächst bewahren. Cloud-Netzstatus tatsächlich gelesen: ausschließlich Paket-/GitHub-Hosts, NASA/Caltech/GBIF noch nicht für native Abrufe erlaubt; keine Runtime-Secrets/externen Identitäten vorhanden. Keine Livebereitschaft daraus ableiten. GitHub-basierte autorisierte Alternativen und Providerrechte prüfen.
+
+Nächster Schritt: vollständige80er-Inventur/Quellen- und Produktvergleich, vorhandene Reisekomponenten gezielt erweitern, individuelle Kapitelaufgaben und vorhandenen zentralen Speicher nutzen, News-Betriebsvoraussetzungen parallel im selben Durchlauf bearbeiten. Alle Pflichtprüfungen und Bilder später am endgültigen Code; technische Zwischenproben sind keine Abnahme. Vor Unterbrechung Git sichern und diesen Checkpoint nachführen; Reservierung erst nach korrekter Übergabe lösen.
 
 ## Gezielte Nachbesserung PR #24 / package-2c-pr24-polish-2026-10-12
 

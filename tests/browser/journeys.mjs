@@ -1,0 +1,52 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import JOURNEYS from '../../exports/content/journeys.json' with {type:'json'};
+import {CHAPTER_LINKS} from '../../app/journey-links.ts';
+import data from '../../app/journey-inquiries.json' with {type:'json'};
+const saveKey='erde-entdecken:save:v3';
+async function open(p,id,index){await p.evaluate(route=>location.hash=route,'journeys/'+id+'/'+(index+1));await p.locator('[data-chapter-inquiry="'+id+':'+index+'"]').waitFor();}
+async function geometry(p,label){
+ assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,label+' horizontal overflow');
+ const escaped=await p.locator('.journey-reader h2,.journey-reader h3,.journey-reader h4,.journey-reader p,.journey-reader button,.journey-reader summary,.journey-reader textarea,.journey-reader a').evaluateAll(elements=>elements.flatMap(el=>{
+  if(!el.getClientRects().length||el.closest('details:not([open])')&&!el.closest('summary'))return [];
+  const r=el.getBoundingClientRect();return r.left< -2||r.right>innerWidth+2?[el.tagName+': '+el.textContent.slice(0,50)]:[];
+ }));assert.deepEqual(escaped,[],label+' readable controls and text within viewport');
+}
+async function axe(p,selector){await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});const violations=await p.evaluate(async selector=>(await window.axe.run(selector,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']}})).violations.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)})),selector);assert.deepEqual(violations,[],'journey accessibility');}
+export async function journeysFlow(browser,base,ready,monitor,report,shots){
+ const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce',acceptDownloads:true}),p=await context.newPage();monitor(p);p.setDefaultTimeout(20000);
+ await p.goto(base+'/#journeys');await ready(p);await p.locator('.journey-tile').first().waitFor();assert.equal(await p.locator('.journey-tile').count(),16);
+ await p.locator('.journey-filters input').fill('Wolken');assert.ok(await p.locator('.journey-tile').count()<16);await p.locator('.journey-filters input').fill('');
+ for(const c of data.chapters){
+  await open(p,c.journeyId,c.index);await geometry(p,c.id);const inquiry=p.locator('[data-chapter-inquiry="'+c.id+'"]');
+  assert.equal(await p.locator('.journey-mission').getByText(c.goal,{exact:true}).count(),1);
+  for(let level=0;level<3;level++){
+   const q=c.tasks[level];await inquiry.locator('.journey-levels button').nth(level).click();await inquiry.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
+   const hint=inquiry.locator('.journey-task summary');if(await hint.evaluate(el=>el.parentElement.open))await hint.click();await hint.click();await inquiry.getByText(q.hint,{exact:true}).waitFor();
+   await inquiry.locator('.quiz-answer').nth((q.correct+1)%3).click();await inquiry.getByText('Lass uns den Gedanken prüfen',{exact:true}).waitFor();assert.equal(await inquiry.getByText(q.why,{exact:true}).count(),0);
+   await inquiry.locator('.quiz-answer').nth(q.correct).click();await inquiry.getByText(q.why,{exact:true}).waitFor();
+  }
+  if(c.index>0){const visual=p.locator('[data-chapter-visual="'+c.id+'"]');await visual.waitFor();for(const choice of await visual.locator('button').all()){await choice.click();assert.equal(await choice.getAttribute('aria-pressed'),'true');}}
+  assert.equal(await p.locator('.journey-chapter-link a').getAttribute('href'),'#'+CHAPTER_LINKS[c.journeyId][c.index]);
+  if(c.index===0){await inquiry.getByText('Dein Forschermerkzettel · freiwillig',{exact:true}).click();await inquiry.locator('textarea').fill('Synthetischer Prüfmerkzettel für '+c.journeyId);await p.screenshot({path:path.join(shots,'journey-'+c.journeyId+'-390.png'),fullPage:true,animations:'disabled'});}
+ }
+ report.checks.push('All 80 chapters: 240 distinct levels, voluntary hints, individual wrong/correct feedback and all 64 existing interactive diagrams');
+ await open(p,'water',3);await p.reload();await ready(p);await p.locator('[data-chapter-inquiry="water:3"]').waitFor();await p.evaluate(()=>location.hash='journeys/water');await p.locator('[data-chapter-inquiry="water:3"]').waitFor();
+ await p.locator('.journey-levels button').nth(2).focus();await p.keyboard.press('Enter');assert.equal(await p.locator('.journey-levels button').nth(2).getAttribute('aria-pressed'),'true');
+ await p.getByRole('button',{name:'Vorheriges Kapitel',exact:true}).click();await p.locator('[data-chapter-inquiry="water:2"]').waitFor();await p.goBack();await p.locator('[data-chapter-inquiry="water:3"]').waitFor();
+ await p.locator('.journey-chapter-link a').click();await p.locator('.world-article').waitFor();await p.locator('.journey-topic-links a[href="#journeys/water/2"]').click();await p.locator('[data-chapter-inquiry="water:1"]').waitFor();
+ for(const j of JOURNEYS){await p.evaluate(id=>location.hash='journeys/'+id+'/6',j.id);await p.getByRole('heading',{name:'Jetzt bist du der Forscher'}).waitFor();await p.locator('.chapter-card .quiz-answer').nth(j.question.correct).click();await p.getByRole('button',{name:'Reisestempel sammeln',exact:true}).click();await p.getByRole('button',{name:'Nächste Reise aussuchen',exact:true}).waitFor();}
+ await p.waitForFunction(key=>JSON.parse(localStorage.getItem(key)).progress.journeys.length===16,saveKey);await p.reload();await ready(p);
+ const saved=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)),saveKey);assert.equal(saved.progress.journeys.length,16);assert.equal(Object.keys(saved.progress.gameSessions).filter(id=>id.startsWith('journey:')).length,16);
+ await context.close();report.checks.push('Legacy resume, deep chapter/back navigation, reciprocal knowledge links, all 16 unchanged final stamp gates and reload');
+ for(const width of [320,360,390,768,1024,1440,1920]){
+  const ctx=await browser.newContext({viewport:{width,height:width<768?844:1000},hasTouch:width<1024,reducedMotion:'reduce'}),page=await ctx.newPage();monitor(page);page.setDefaultTimeout(20000);await page.goto(base+'/#journeys/inside/1');await ready(page);
+  for(const [id,index] of [['inside',0],['navigation',0],['water',2],['climate',4]]){await open(page,id,index);await geometry(page,id+' '+width);const buttons=page.locator('.journey-levels button,.journey-task .quiz-answer,.chapter-actions button');for(const control of await buttons.all()){const box=await control.boundingBox();assert.ok(box.height>=44,'touch height');}await page.screenshot({path:path.join(shots,'journey-'+id+'-'+index+'-'+width+'.png'),fullPage:true,animations:'disabled'});}
+  if([320,390,768,1440].includes(width)){await axe(page,'.journey-reader');await page.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));await geometry(page,'large text '+width);await page.locator('.journey-levels button').nth(1).focus();await page.screenshot({path:path.join(shots,'journey-large-focus-'+width+'.png'),fullPage:true,animations:'disabled'});}
+  report.views.push({width,name:'journeys, open inquiries and large text'});await ctx.close();
+ }
+ report.checks.push('Seven journey viewport widths, readable diagram labels, touch targets, keyboard focus, reduced motion and WCAG axe');
+}
+export async function prepareOfflineJourneys(p){await open(p,'water',2);const inquiry=p.locator('.journey-inquiry');await inquiry.locator('.journey-levels button').nth(2).click();await inquiry.getByText('Dein Forschermerkzettel · freiwillig',{exact:true}).click();await inquiry.locator('textarea').fill('Offline-Sicherung: Wasser kann seinen Zustand ändern.');await p.waitForFunction(key=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['journey:water']['chapter:2:note']==='Offline-Sicherung: Wasser kann seinen Zustand ändern.',saveKey);}
+export async function offlineJourneys(p,report){await open(p,'water',2);await p.locator('.journey-inquiry').getByText('Dein Forschermerkzettel · freiwillig',{exact:true}).click();assert.equal(await p.locator('.journey-inquiry textarea').inputValue(),'Offline-Sicherung: Wasser kann seinen Zustand ändern.');assert.equal(await p.locator('.journey-levels button').nth(2).getAttribute('aria-pressed'),'true');for(const j of JOURNEYS){await open(p,j.id,4);assert.equal(await p.locator('.journey-task .quiz-answer').count(),3);}report.checks.push('Cold restart without server: all 16 journey inquiries and private notebook/level restore from the same schema-3 pass');}

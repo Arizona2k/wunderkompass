@@ -1,4 +1,4 @@
-export const REQUIRED_SUITES=['foundation','home','core','playground','backup','challenge','research','offline','news-feed'];
+export const REQUIRED_SUITES=['foundation','home','core','playground','backup','challenge','research','journeys','offline','news-feed'];
 export function aggregateQuality(outcomes){
  const seen=new Set(),result={scope:'complete mandatory regression',status:'passed',selectedSuites:REQUIRED_SUITES,workers:[],checks:[],views:[],timings:[],errors:[],consoleErrors:[],failedRequests:[],ownHttpErrors:[],externalRequests:[]};let build,browser;
  for(const worker of outcomes){
