@@ -11,7 +11,7 @@ test('failed runs retain every actual image; corrupted image evidence fails clos
   await fs.writeFile(path.join(dir,'quality-navigation-home-first-360-full.png'),png);
   await fs.writeFile(path.join(dir,'portable-report.json'),JSON.stringify({status:'failed',scope:'complete mandatory regression'}));
   const report=await prepareReview(dir);assert.equal(report.status,'diagnostic');assert.equal(report.screenshots[0].retained,true);assert.equal(report.screenshots[0].width,320);
-  await fs.writeFile(path.join(dir,'quality-broken.png'),'not a screenshot');await assert.rejects(prepareReview(dir),/Invalid screenshot/);
+  await fs.writeFile(path.join(dir,'quality-broken.png'),'not a screenshot');await assert.rejects(prepareReview(dir),/Invalid screenshot/);assert.equal(JSON.parse(await fs.readFile(path.join(dir,'review/portable-report.json'),'utf8')).status,'failed','diagnostic report survives damaged image');
  }finally{await fs.rm(dir,{recursive:true,force:true});}
 });
 test('a successful browser report without current handoff or critical images cannot pass upload acceptance',async()=>{

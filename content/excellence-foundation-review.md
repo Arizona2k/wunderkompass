@@ -79,7 +79,7 @@ Ein im echten Browser reproduzierter Fokusfehler beim Wechsel aus einer Reise zu
 
 ## Gemeinsame redaktionelle Grundlage
 
-`editorial-contract.mjs` verlangt pro Akte stabile ID und aktuellen Datenhash, eigenes Lernziel, Erklärung/Beispiel/Nutzen, drei sinnvolle Alterszugänge, freiwilligen Hinweis, Rückmeldung, Modellgrenze, konkrete belegte Claims mit Source-Anker, Rechtebasis/Organisation/echtem Prüftag, Medienentscheidung oder vollständige Medienrechte/Alttext/Lernzweck, sinnvolle Wissensverbindungen oder eine begründete Isolation. UI-/Such-/Back-/Offlinebelege müssen zum aktuellen Build und dem konkreten Einstieg gehören. Unbekannte IDs, Dubletten, kaputte Daten und veraltete Nachweise fallen durch.
+`editorial-contract.mjs` verlangt pro Akte stabile ID und aktuellen Datenhash, eigenes Lernziel, Erklärung/Beispiel/Nutzen, drei sinnvolle Alterszugänge, freiwilligen Hinweis, Rückmeldung, Modellgrenze, konkrete belegte Claims mit Source-Anker, Rechtebasis/Organisation/echtem Prüftag, Medienentscheidung oder vollständige Medienrechte/Alttext/Lernzweck, sinnvolle Wissensverbindungen oder eine begründete Isolation. UI-/Such-/Back-/Offlinefelder müssen den aktuellen Build und konkreten Einstieg nennen. Die Formprüfung ersetzt keine tatsächliche Report-/Screenshot- und Browserabnahme. Unbekannte IDs, Dubletten, kaputte Daten und veraltete Nachweise fallen durch.
 
 Die Akten sind anfangs leer; keine alte Quelle wird dadurch still als geprüft erklärt. Der Report nennt alle fehlenden Einzelakten und mögliche Konzeptdubletten. `structurallyReady` ist ausschließlich Form-/Nachweiskonsistenz, nie automatische Wahrheit, menschliche Redaktion oder Kinderfreigabe. Daher in dieser Welle neue fachlich abgenommene Konzepte 0 und Verdopplung nicht erfüllt. Die tatsächliche Quellen-/Text-/Medien-/Lernarbeit folgt in den koordinierten Inhaltswellen WK-053–057.
 
@@ -102,3 +102,29 @@ Lokale 110 Unit-Tests bestanden; alle Pflichtprüfungen und volle Produktionsbro
 News bleibt tatsächlich disabled. Drei angeschlossene begrenzte Bereiche sind Erdbeobachtung, Exoplaneten und kuratierte Software-/Technik-Releases, nicht elf verfügbaren Quellengebiete. NASA/Caltech-Rechtefingerprints, zulässiges separates Hosting, dauerhafte Schlüssel/Trust/Berechtigungen, tatsächliche Publikation→Browser, Scheduler-Langzeit/DST und einmalige Betriebsfreigabe bleiben offen; keine Aktivierung in dieser Welle. Physische Apple-/Android-/schwache Geräte, VoiceOver/TalkBack, fünf wirklich gehörte deutsche Texte und unabhängige Personen ebenfalls offen. Headless Chromium stellt hier keine deutschen Stimmen bereit.
 
 Nächste abhängige große Welle nach reviewter/übernommener Grundlage: alle vorhandenen sechs Artikelbestände individuell fachlich, pädagogisch und visuell nacharbeiten und je Bestand neue eigenständige vernetzte Themen liefern; insbesondere die kleinen Erfindungs-/Bauwerksbestände substanziell erweitern. Wörter/Warum/Natur, alle Reisen und Spiele/Labore bleiben ausdrücklich im vollständigen 3.5-Programm. Danach Pakete 4–8 unverändert. WK-038 Memory bleibt eine spätere Spezialaufgabe; der vorhandene Memory-Zustand ist trotzdem Teil der 3.5-Qualitätsprüfung. Kein automatisches Merge, main/test-live-Push oder Deployment.
+
+## Tatsächlich ausgeführter Restore und aktuelle Warmbuild-Proben
+
+Lokaler GitHub-Checkpoint `24b26aa211d517ae8d39118aa5e49196c88437d5` wurde aus einem echten Bundle in einen neuen Bare-Checkout zurückgespielt; `git fsck --full` und identische Trees für diesen Head, test-live d0 und unverändertes main bestanden. Ein zweites Original-Sites-Bundle wurde unabhängig zurückgespielt, mit gleichen Trees für den ersten Vorversions-Commit d3 und den letzten v14-Commit. Bundlegrößen 14332369 und 12195563 Bytes. Keine Zugangsdaten aus der Prozessumgebung oder persönlichen Pässe hinzugefügt; vorhandene versionierte Originalquellen erhalten; Dateien bleiben lokal unter dem ignorierten work/. Der spätere finale Dokumentationscommit ist kein erneuter ungeprüfter App-Code.
+
+Drei nacheinander ausgeführte warme Builds je Stand, gleiche Maschine/Node 24.19/pnpm 11.25, exakt gleicher Dependency-Lock und vorhandene Originalinstallation. P3 d0 p50 1.958 s / Stichprobenmaximum 2.06 s; aktuelle Welle p50 1.805 s / Maximum 2.0 s. Drei Proben sind keine belastbare Flake- oder p95-Langzeitstatistik und kein kausaler Beleg einer Buildbeschleunigung.
+
+Komprimiertes Gesamt-JavaScript 1098546 → 1099231 Bytes; Einstieg 277897 → 277921 Bytes. Vorhandene Budgets bestanden unverändert. Der Gesamtbudgetspielraum liegt nur noch bei 769 Bytes: Die nächste große Inhaltswelle muss Datenladewege und ihre tatsächliche Nutzung gezielt messen/optimieren, bevor neuer Umfang hinzukommt; keine bloße Budgetanhebung.
+
+## Erneute isolierte Browser-Performanceprobe
+
+Gleiche aktuelle Maschine, Chromium 151, Produktionsvorschau, frische 390×844-Kontexte, drei Proben je Bereich, keine Drosselung und kein anderer Browser gleichzeitig. Vorher ist exakt P3-Merge d0; nachher derselbe Grundlagen-Code wie die aktuelle vollständige Regression. Laborwerte, keine Feld-Core-Web-Vitals oder Garantie für schwache Geräte. p95 wird bei drei Proben als Stichprobenmaximum geführt; keine belastbare Langzeitstatistik.
+
+| Bereich | Bereit p50 vorher/nachher ms | Stichprobenmaximum vorher/nachher ms | CLS Maximum vorher/nachher |
+| --- | ---: | ---: | ---: |
+| home | 477 / 434 | 533 / 460 | 0.011 / 0.011 |
+| world | 593 / 541 | 605 / 548 | 0.032 / 0.032 |
+| games | 439 / 420 | 448 / 501 | 0.021 / 0.021 |
+| labs | 616 / 575 | 666 / 607 | 0.028 / 0.028 |
+| journeys | 604 / 607 | 683 / 639 | 0.028 / 0.028 |
+| book | 505 / 438 | 574 / 480 | 0.031 / 0.031 |
+| updates | 411 / 420 | 470 / 476 | 0.0 / 0.0 |
+
+## Nachgeschärfter Quellen- und Fehlernachweis
+
+Die alte Integritätsprobe konnte einen alten Export mit passendem altem Hash akzeptieren, auch wenn seine aktuelle Quelldatei inzwischen anders war. `verify` erzeugt deshalb alle 40 Exporte erneut aus den tatsächlich aktuellen Quellen in einem ausschließlich ignorierten Prüfverzeichnis und vergleicht vollständige Dateinamen-/Hash-/Source-Manifeste. Ein Integrationstest führt diese echte Extraktion in einer isolierten temporären Quellenkopie aus, verändert dort Länder-Metadaten bei unverändertem altem Export und weist die Sperre nach. Private Fortschritte werden weder kopiert noch exportiert. Die Fachbaseline bindet zusätzlich ihre vollständigen Identitäts-/Routen-/Quellmetadaten; die 1.955 Ausgangsidentitäten und alle Fachzahlen bleiben exakt gleich. Diagnoseberichte werden auch bei beschädigten Bildern vorab erhalten. Diese tatsächlichen Änderungen an Prüfcode begründen die erneute vollständige Schlussabnahme; kein stilles Weiterverwenden veralteter grüner Quittungen.

@@ -11,6 +11,7 @@ test('frozen individual growth stocks cannot be compensated by other categories 
  assert.ok(report.collections.every(c=>c.acceptedNew===0&&!c.doublingAccepted));
  assert.throws(()=>compareBaseline({...inventory,records:inventory.records.slice(1)},baseline),/Lost legacy/);
  const changed=structuredClone(baseline);changed.families[0].count++;assert.throws(()=>compareBaseline(inventory,changed),/frozen/);
+ const changedRoute=structuredClone(baseline);changedRoute.records[0].route='globe';assert.throws(()=>compareBaseline(inventory,changedRoute),/frozen/);
  assert.equal(freezeBaseline(inventory).commit,baseline.commit);
  assert.equal(normalConcept('  Größere Wälder '),normalConcept('grössere Wälder'));
 });

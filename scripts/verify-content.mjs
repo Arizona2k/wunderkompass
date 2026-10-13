@@ -1,9 +1,13 @@
 import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';
 import {collectInventory,compareBaseline} from './content-inventory.mjs';
 import {editorialReport} from './editorial-contract.mjs';
+import {execFileSync} from 'node:child_process';
+import {verifyFreshExport} from './export-integrity.mjs';
 import {sourceManifest,surfaceStates} from './inventory-provenance.mjs';
 const dir=path.join(process.cwd(),'exports/content'),index=JSON.parse(fs.readFileSync(path.join(dir,'index.json'),'utf8'));
 for(const f of index.files){const b=fs.readFileSync(path.join(dir,f.file));assert.equal(crypto.createHash('sha256').update(b).digest('hex'),f.sha256,f.file);JSON.parse(b);}
+execFileSync(process.execPath,['scripts/export-content.mjs','--check'],{stdio:'pipe'});
+verifyFreshExport(index,JSON.parse(fs.readFileSync('.qa-output/content-check/index.json','utf8')));
 assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dir,'world-topics.json'),'utf8')),JSON.parse(fs.readFileSync('app/world-catalog.json','utf8')));assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dir,'challenge-hints.json'),'utf8')),JSON.parse(fs.readFileSync('app/challenge-hints.json','utf8')));assert.equal(index.topics,JSON.parse(fs.readFileSync('app/world-catalog.json','utf8')).length);assert.equal(index.journeys,16);assert.equal(index.chapters,80);assert.equal(index.personalProgressIncluded,false);console.log('VERIFIED',index.files.length,'content files.');
 
 assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dir,'journey-inquiries.json'),'utf8')),JSON.parse(fs.readFileSync('app/journey-inquiries.json','utf8')));

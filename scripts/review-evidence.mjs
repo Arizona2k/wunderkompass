@@ -20,12 +20,14 @@ export async function prepareReview(directory='.qa-output'){
  try{report=JSON.parse(await fs.readFile(path.join(directory,'portable-report.json'),'utf8'));handoff=JSON.parse(await fs.readFile(path.join(directory,'handoff.json'),'utf8'));}catch{/* Diagnostic artifacts are still required on failed runs. */}
  const complete=report?.status==='passed'&&report.scope==='complete mandatory regression';
  const screenshots=[],copied=[];let generatedBytes=0,retainedBytes=0;
+ // Preserve failure reports even if a damaged PNG aborts curation.
+ for(const name of files.filter(f=>/\.(json|xml)$/.test(f))){await fs.copyFile(path.join(directory,name),path.join(destination,name));copied.push(name);}
  for(const name of files.filter(f=>/^(quality-|journey-engine-).*\.png$/.test(f))){
   const data=await fs.readFile(path.join(directory,name));if(data.length<24||data.subarray(0,8).toString('hex')!=='89504e470d0a1a0a')throw Error('Invalid screenshot '+name);
   const retained=!complete||retainScreenshot(name);screenshots.push({file:name,bytes:data.length,width:data.readUInt32BE(16),height:data.readUInt32BE(20),sha256:createHash('sha256').update(data).digest('hex'),retained});generatedBytes+=data.length;
   if(retained){await fs.writeFile(path.join(destination,name),data);retainedBytes+=data.length;}
  }
- for(const name of files.filter(f=>/\.(json|xml)$/.test(f))){await fs.copyFile(path.join(directory,name),path.join(destination,name));copied.push(name);}
+
  const errors=[];
  if(complete){
   if(!handoff||handoff.sourceDigest!==await sourceDigest()||handoff.build!==report.build)errors.push('Current handoff/code/build proof required');
