@@ -1,0 +1,467 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-13 00:08:21 UTC",
+  "gate": {
+    "pr": 25,
+    "head": "e5a89c561409295cd68294ff79bab3106781b825",
+    "merge": "d0dc9a35857e896d45d35c7474640a58087b0ec5",
+    "mergedAt": "2026-10-12T23:52:06Z",
+    "mergedBy": "Arizona2k",
+    "independentReview": "User supplied WunderKompass_Paket_3_5_Excellence_Masterauftrag.md section 0A; exact head and CI; remaining gates explicitly open",
+    "deployments": [
+      {
+        "id": 56182015032,
+        "state": "success",
+        "description": "Deployment has completed",
+        "context": "Vercel",
+        "createdAt": "2026-10-12T23:52:52Z",
+        "creator": "vercel[bot]",
+        "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/41fwCxz3tAEcWCwmMhcZmrX94pdt"
+      },
+      {
+        "id": 56181983438,
+        "state": "pending",
+        "description": "Vercel is deploying your app",
+        "context": "Vercel",
+        "createdAt": "2026-10-12T23:52:10Z",
+        "creator": "vercel[bot]",
+        "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/41fwCxz3tAEcWCwmMhcZmrX94pdt"
+      }
+    ],
+    "openPRs": [],
+    "reservation": null
+  },
+  "originalSites": {
+    "commits": [
+      {
+        "commit": "d3a1ff703a71ed23f42367abf7e6f97b52b3aa8b",
+        "authorAt": "2026-10-06T00:53:22+01:00",
+        "committerAt": "2026-10-06T00:53:22+01:00",
+        "subject": "Update Site source",
+        "trackedFiles": 120,
+        "meaning": "Source checkpoint, not a publication timestamp."
+      },
+      {
+        "commit": "bc482e21c3d652100ea5f5a525770a1829137df6",
+        "authorAt": "2026-10-06T00:55:35+01:00",
+        "committerAt": "2026-10-06T00:55:35+01:00",
+        "subject": "Update Site source",
+        "trackedFiles": 120,
+        "meaning": "Source checkpoint, not a publication timestamp."
+      },
+      {
+        "commit": "72f5555a89b4b260bb29d626ae2b87a6e4086e3e",
+        "authorAt": "2026-10-06T01:32:49+01:00",
+        "committerAt": "2026-10-06T01:32:49+01:00",
+        "subject": "Update Site source",
+        "trackedFiles": 130,
+        "meaning": "Source checkpoint, not a publication timestamp."
+      },
+      {
+        "commit": "564c48ab25c1375672a8bfb64a82d966019313a7",
+        "authorAt": "2026-10-06T01:36:17+01:00",
+        "committerAt": "2026-10-06T01:36:17+01:00",
+        "subject": "Update Site source",
+        "trackedFiles": 130,
+        "meaning": "Source checkpoint, not a publication timestamp."
+      },
+      {
+        "commit": "8c338eb6215fbe3a15a2d403030acacc791badd5",
+        "authorAt": "2026-10-07T15:16:38+05:30",
+        "committerAt": "2026-10-07T15:16:38+05:30",
+        "subject": "Update Site source",
+        "trackedFiles": 142,
+        "meaning": "Source checkpoint, not a publication timestamp."
+      },
+      {
+        "commit": "68a0b7f7edb14384f2b8647925c22759c239596c",
+        "authorAt": "2026-10-07T15:25:05+05:30",
+        "committerAt": "2026-10-07T15:25:05+05:30",
+        "subject": "Update Site source",
+        "trackedFiles": 142,
+        "meaning": "Source checkpoint, not a publication timestamp."
+      },
+      {
+        "commit": "0168f1c791bb03aa4eb766a28efce7e34eb07f21",
+        "authorAt": "2026-10-07T15:06:24+02:00",
+        "committerAt": "2026-10-07T15:06:24+02:00",
+        "subject": "Update Site source",
+        "trackedFiles": 161,
+        "meaning": "Source checkpoint, not a publication timestamp."
+      },
+      {
+        "commit": "42f85186eedb67c5bd43570c459e6f804e8c2deb",
+        "authorAt": "2026-10-07T17:04:43Z",
+        "committerAt": "2026-10-07T17:04:43Z",
+        "subject": "Update Site source",
+        "trackedFiles": 167,
+        "meaning": "Source checkpoint, not a publication timestamp."
+      },
+      {
+        "commit": "312484fc40b9ac121c1e6025e345d502efba78c9",
+        "authorAt": "2026-10-07T21:23:00+03:00",
+        "committerAt": "2026-10-07T21:23:00+03:00",
+        "subject": "Update Site source",
+        "trackedFiles": 169,
+        "meaning": "Source checkpoint, not a publication timestamp."
+      },
+      {
+        "commit": "77c36e0b64610176e0099e467c57e63a4c3e4594",
+        "authorAt": "2026-10-08T00:35:05+03:00",
+        "committerAt": "2026-10-08T00:35:05+03:00",
+        "subject": "Update Site source",
+        "trackedFiles": 224,
+        "meaning": "Source checkpoint, not a publication timestamp."
+      },
+      {
+        "commit": "77d7f1af0dfe0c36641a808c288b9d69e8be7232",
+        "authorAt": "2026-10-08T12:29:28+07:00",
+        "committerAt": "2026-10-08T12:29:28+07:00",
+        "subject": "Update Site source",
+        "trackedFiles": 224,
+        "meaning": "Source checkpoint, not a publication timestamp."
+      },
+      {
+        "commit": "4405437280301910a94805dcec5e9c61c7d0ff52",
+        "authorAt": "2026-10-08T13:03:02+07:00",
+        "committerAt": "2026-10-08T13:03:02+07:00",
+        "subject": "Update Site source",
+        "trackedFiles": 244,
+        "meaning": "Source checkpoint, not a publication timestamp."
+      },
+      {
+        "commit": "1431a6f1c288965e718f937bf2a74b17c650939c",
+        "authorAt": "2026-10-08T13:41:07-07:00",
+        "committerAt": "2026-10-08T13:41:07-07:00",
+        "subject": "Update Site source",
+        "trackedFiles": 251,
+        "meaning": "Source checkpoint, not a publication timestamp."
+      },
+      {
+        "commit": "0859fd76edd32fe1237d05dd86f10aa22ad92234",
+        "authorAt": "2026-10-09T09:29:55+02:00",
+        "committerAt": "2026-10-09T09:29:55+02:00",
+        "subject": "Update Site source",
+        "trackedFiles": 260,
+        "meaning": "Source checkpoint, not a publication timestamp."
+      },
+      {
+        "commit": "1a1483fe9341531a742b8d37deac8fa5eda8a9a5",
+        "authorAt": "2026-10-09T10:16:57+02:00",
+        "committerAt": "2026-10-09T10:16:57+02:00",
+        "subject": "Update Site source",
+        "trackedFiles": 292,
+        "meaning": "Source checkpoint, not a publication timestamp."
+      },
+      {
+        "commit": "7f766fead45d5bba3962e629540d33fddc1abcd6",
+        "authorAt": "2026-10-09T10:44:28+02:00",
+        "committerAt": "2026-10-09T10:44:28+02:00",
+        "subject": "Update Site source",
+        "trackedFiles": 295,
+        "meaning": "Source checkpoint, not a publication timestamp."
+      },
+      {
+        "commit": "7b93a5c53fcd42d46b310252b6a4a3cf5622fbe7",
+        "authorAt": "2026-10-09T11:40:42+02:00",
+        "committerAt": "2026-10-09T11:40:42+02:00",
+        "subject": "Update Site source",
+        "trackedFiles": 304,
+        "meaning": "Source checkpoint, not a publication timestamp."
+      }
+    ],
+    "versions": [
+      {
+        "version": 14,
+        "commit": "7b93a5c53fcd42d46b310252b6a4a3cf5622fbe7",
+        "archiveSha256": "sha256:46f087c80926c9abd24e4e07a5aedc6f198c1a6cbad3b43918fe2ee008f3b908",
+        "archiveFiles": 267,
+        "archiveBytes": 21084160,
+        "sourceReadable": true,
+        "archiveDownload": "Native download authorization did not resolve; existing original Git object independently readable."
+      },
+      {
+        "version": 13,
+        "commit": "7f766fead45d5bba3962e629540d33fddc1abcd6",
+        "archiveSha256": "sha256:63f404b3a31b1e6864c04287dd03a4c2f79850dead9d0822738e1c9b99f2709d",
+        "archiveFiles": 372,
+        "archiveBytes": 27463680,
+        "sourceReadable": true,
+        "archiveDownload": "Native download authorization did not resolve; existing original Git object independently readable."
+      },
+      {
+        "version": 12,
+        "commit": "1a1483fe9341531a742b8d37deac8fa5eda8a9a5",
+        "archiveSha256": "sha256:d4582be0abb84688d5cb8de10ddbcf3b735949010a4e07d2bc23ddecffde6e8a",
+        "archiveFiles": 265,
+        "archiveBytes": 20930560,
+        "sourceReadable": true,
+        "archiveDownload": "Native download authorization did not resolve; existing original Git object independently readable."
+      },
+      {
+        "version": 11,
+        "commit": "0859fd76edd32fe1237d05dd86f10aa22ad92234",
+        "archiveSha256": "sha256:c25a876638b2e471e1d428e77144f3e18de2273b3f113358ef064b5874066e4a",
+        "archiveFiles": 243,
+        "archiveBytes": 18790400,
+        "sourceReadable": true,
+        "archiveDownload": "Native download authorization did not resolve; existing original Git object independently readable."
+      },
+      {
+        "version": 10,
+        "commit": "1431a6f1c288965e718f937bf2a74b17c650939c",
+        "archiveSha256": "sha256:2249d915a73b125c9e4e936cd40367b0da649f08d5ba515ca812e27cbfe6a82d",
+        "archiveFiles": 242,
+        "archiveBytes": 18749440,
+        "sourceReadable": true,
+        "archiveDownload": "Native download authorization did not resolve; existing original Git object independently readable."
+      },
+      {
+        "version": 9,
+        "commit": "4405437280301910a94805dcec5e9c61c7d0ff52",
+        "archiveSha256": "sha256:cfa0715313cf84eff6d6e12f905a917ce3e8517c37153f82dde409a646e478b4",
+        "archiveFiles": 223,
+        "archiveBytes": 18585600,
+        "sourceReadable": true,
+        "archiveDownload": "Native download authorization did not resolve; existing original Git object independently readable."
+      },
+      {
+        "version": 8,
+        "commit": "77d7f1af0dfe0c36641a808c288b9d69e8be7232",
+        "archiveSha256": "sha256:f853e778aa0ac8ec4de85b13fed6e32f668eb47df7a5c11b17db41fc90c14193",
+        "archiveFiles": 203,
+        "archiveBytes": 15810560,
+        "sourceReadable": true,
+        "archiveDownload": "Native download authorization did not resolve; existing original Git object independently readable."
+      },
+      {
+        "version": 7,
+        "commit": "77c36e0b64610176e0099e467c57e63a4c3e4594",
+        "archiveSha256": "sha256:f853e778aa0ac8ec4de85b13fed6e32f668eb47df7a5c11b17db41fc90c14193",
+        "archiveFiles": 203,
+        "archiveBytes": 15810560,
+        "sourceReadable": true,
+        "archiveDownload": "Native download authorization did not resolve; existing original Git object independently readable."
+      },
+      {
+        "version": 6,
+        "commit": "312484fc40b9ac121c1e6025e345d502efba78c9",
+        "archiveSha256": "sha256:d450817b06691c02a6612e9f70087633eb8c65a89f9b87d1c2772e6d1e195a08",
+        "archiveFiles": 143,
+        "archiveBytes": 10956800,
+        "sourceReadable": true,
+        "archiveDownload": "Native download authorization did not resolve; existing original Git object independently readable."
+      },
+      {
+        "version": 5,
+        "commit": "42f85186eedb67c5bd43570c459e6f804e8c2deb",
+        "archiveSha256": "sha256:aa159669743e6e31987e16d4d9fca6b176c05ec75f5762ded9d17d08014d8269",
+        "archiveFiles": 143,
+        "archiveBytes": 10956800,
+        "sourceReadable": true,
+        "archiveDownload": "Native download authorization did not resolve; existing original Git object independently readable."
+      },
+      {
+        "version": 4,
+        "commit": "0168f1c791bb03aa4eb766a28efce7e34eb07f21",
+        "archiveSha256": "sha256:b95a17849bfa5068c455492feb76a0f573b7cbcd173ad4fdcd9d557111d0b33b",
+        "archiveFiles": 101,
+        "archiveBytes": 10854400,
+        "sourceReadable": true,
+        "archiveDownload": "Native download authorization did not resolve; existing original Git object independently readable."
+      },
+      {
+        "version": 3,
+        "commit": "68a0b7f7edb14384f2b8647925c22759c239596c",
+        "archiveSha256": "sha256:342b713d60d099d7ec29186efb96a33340d0eb4af3f4bb001ba6ef2478011e83",
+        "archiveFiles": 86,
+        "archiveBytes": 10618880,
+        "sourceReadable": true,
+        "archiveDownload": "Native download authorization did not resolve; existing original Git object independently readable."
+      },
+      {
+        "version": 2,
+        "commit": "564c48ab25c1375672a8bfb64a82d966019313a7",
+        "archiveSha256": "sha256:2678c3ee8449b083ab2b7478626f2b0c10670f319d4bb46a8dc1bed852aaa98e",
+        "archiveFiles": 67,
+        "archiveBytes": 9390080,
+        "sourceReadable": true,
+        "archiveDownload": "Native download authorization did not resolve; existing original Git object independently readable."
+      },
+      {
+        "version": 1,
+        "commit": "bc482e21c3d652100ea5f5a525770a1829137df6",
+        "archiveSha256": "sha256:1390c46bdfc2fc223204e36d26cadd5134255b1ceee8d2c9334bed91ad11058b",
+        "archiveFiles": 64,
+        "archiveBytes": 6942720,
+        "sourceReadable": true,
+        "archiveDownload": "Native download authorization did not resolve; existing original Git object independently readable."
+      }
+    ],
+    "firstReachableCommit": "d3a1ff703a71ed23f42367abf7e6f97b52b3aa8b",
+    "firstSavedVersionCommit": "bc482e21c3d652100ea5f5a525770a1829137df6",
+    "unknown": "Unsaved earlier chat/prototype revisions cannot be recovered from reachable Git. Do not infer absent source or publication times."
+  },
+  "github": {
+    "reachableCommitCountAtStart": 97,
+    "basis": "d0dc9a35857e896d45d35c7474640a58087b0ec5",
+    "reviewedPRRange": "1–25; migrations, product rounds and maintenance remain distinct",
+    "main": "537622796f7e1f9a886e7400f10b1f727d24f8dc",
+    "mergedHistory": [
+      {
+        "commit": "d0dc9a35857e896d45d35c7474640a58087b0ec5",
+        "sourceCommitAt": "2026-10-13T01:52:06+02:00",
+        "subject": "Merge pull request #25 from Arizona2k/codex/wunderkompass-package-3-2026-10-12",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "2de46220f602ce7ac6124afb59db0aed50dfc8e4",
+        "sourceCommitAt": "2026-10-12T16:27:36+02:00",
+        "subject": "Merge pull request #24 from Arizona2k/codex/wunderkompass-package-2c-2026-10-12",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "9f2328ab73c9a142bd023668046310f1661958e9",
+        "sourceCommitAt": "2026-10-12T10:14:35+02:00",
+        "subject": "Merge pull request #23 from Arizona2k/codex/wunderkompass-package-2b-2026-10-11",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "acaad0f49b1edf65219a7092bb9852feb3bdb718",
+        "sourceCommitAt": "2026-10-11T20:18:48+02:00",
+        "subject": "Merge pull request #22 from Arizona2k/codex/wunderkompass-foundation-2a-2026-10-11",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "5e49aae238f99ec416991a4bf7d35772fd9e6d9f",
+        "sourceCommitAt": "2026-10-11T16:47:59+02:00",
+        "subject": "Merge pull request #21 from Arizona2k/codex/wunderkompass-spielplatz-2026-10-11",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "0afbcdd7ed1d7fd639b7033df869dae32c39c43d",
+        "sourceCommitAt": "2026-10-11T14:47:31+02:00",
+        "subject": "Merge pull request #20 from Arizona2k/codex/wunderkompass-navigation-2026-10-11",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "a68ae6d61a7e4588064da0a68e1d49bab466bb6d",
+        "sourceCommitAt": "2026-10-11T11:45:12+02:00",
+        "subject": "Merge pull request #19 from Arizona2k/codex/wunderkompass-history-polish-2026-10-11",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "91795d4830edf8ad1dd202c8a07e1dfa734f3324",
+        "sourceCommitAt": "2026-10-11T10:45:30+02:00",
+        "subject": "Merge pull request #18 from Arizona2k/codex/wunderkompass-home-updates-2026-10-10",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "cba421cdf6ce040cf63d066aa0df410aeb1f828e",
+        "sourceCommitAt": "2026-10-10T13:37:43+02:00",
+        "subject": "Merge pull request #17 from Arizona2k/codex/wunderkompass-pass-polish-2026-10-10",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "031bdaa2840bf30ed42df9b3e8b41e08ff59f41f",
+        "sourceCommitAt": "2026-10-10T10:33:31+02:00",
+        "subject": "Merge pull request #16 from Arizona2k/codex/wunderkompass-calm-links-2026-10-10",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "5f7fa87836b898659f83baeff6500df1faff1ed4",
+        "sourceCommitAt": "2026-10-10T10:11:22+02:00",
+        "subject": "Merge pull request #15 from Arizona2k/codex/wunderkompass-pass-2026-10-10",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "318d0e3f4f40f94f1fde4e35ac4c5253e06237bc",
+        "sourceCommitAt": "2026-10-10T09:29:03+02:00",
+        "subject": "Merge pull request #14 from Arizona2k/codex/wunderkompass-card-design-2026-10-09",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "1c8374647503b37ff7bad3b42abc7989d75113a5",
+        "sourceCommitAt": "2026-10-09T22:46:35+02:00",
+        "subject": "Merge pull request #13 from Arizona2k/codex/wunderkompass-pr-review-rules-2026-10-09",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "4c97d672deaa9627f2965ff032b737b04b30a2f7",
+        "sourceCommitAt": "2026-10-09T22:34:58+02:00",
+        "subject": "Merge pull request #12 from Arizona2k/codex/wunderkompass-discovery-2026-10-09",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "ec0bd4bab9aa18f0006e71060478948be90f2dd9",
+        "sourceCommitAt": "2026-10-09T21:56:58+02:00",
+        "subject": "Merge pull request #11 from Arizona2k/codex/individual-challenge-hints-2026-10-09",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "dc6ba13b0a465da4f544192ca22742a1e4b5eaac",
+        "sourceCommitAt": "2026-10-09T21:18:42+02:00",
+        "subject": "Merge pull request #10 from Arizona2k/codex/master-quality-2026-10-09",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "d6e3219368fa1713a4e23336cb7b6a011f2b6292",
+        "sourceCommitAt": "2026-10-09T20:48:08+02:00",
+        "subject": "Merge pull request #9 from Arizona2k/codex/connected-discoveries-2026-10-09",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "537622796f7e1f9a886e7400f10b1f727d24f8dc",
+        "sourceCommitAt": "2026-10-09T19:56:20+02:00",
+        "subject": "Merge pull request #8 from Arizona2k/codex/fix-vercel-baseline-2026-10-09",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "a2dea754daa29a04debb2d20dc1e900b8169b225",
+        "sourceCommitAt": "2026-10-09T19:35:19+02:00",
+        "subject": "Merge pull request #7 from Arizona2k/codex/vercel-e2e-2026-10-09",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "3ffdf83f7e40da87ea5b86d82942768967e3ee6d",
+        "sourceCommitAt": "2026-10-09T19:20:58+02:00",
+        "subject": "Merge pull request #6 from Arizona2k/codex/vercel-e2e-2026-10-09",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "3a11bd9985a0c32f5e5d79d32b1637b12b12c8df",
+        "sourceCommitAt": "2026-10-09T18:18:20+02:00",
+        "subject": "Merge pull request #5 from Arizona2k/codex/write-permission-probe-2026-10-09",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "4b73cdb4ab049bcfe227fd43f07c80e8ffe68b0f",
+        "sourceCommitAt": "2026-10-09T18:01:55+02:00",
+        "subject": "Merge pull request #4 from Arizona2k/codex/test-release-2026-10-09",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "1f7fe74a0f8e7e14bf8e709aea2135dc1b09172c",
+        "sourceCommitAt": "2026-10-09T17:25:44+02:00",
+        "subject": "Merge pull request #3 from Arizona2k/main",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "43aa54aee718c14e18d1ff2c10d527c316fc9402",
+        "sourceCommitAt": "2026-10-09T17:17:22+02:00",
+        "subject": "Merge pull request #2 from Arizona2k/codex/quality-ci-2026-10-09",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      },
+      {
+        "commit": "6a540d2af3c0c0bcfade1a806582ffa5afb6302c",
+        "sourceCommitAt": "2026-10-09T16:18:25+02:00",
+        "subject": "Merge pull request #1 from Arizona2k/codex/agent-system-2026-10-09",
+        "meaning": "Merged history checkpoint; website availability is only established by separate trusted deployment receipts."
+      }
+    ],
+    "firstReachableRootCommits": [
+      "6402f57d563018f0c11a1aa6ed5c6f606b15291a"
+    ]
+  },
+  "publicationReceipts": "content/update-history-evidence.json and app/update-history-test-evidence.json retain exact verified deployment dates separately from source dates."
+}

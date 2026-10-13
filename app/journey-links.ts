@@ -19,7 +19,7 @@ export const CHAPTER_LINKS:Record<string,string[]>={
  landscapes:['labs/plates','world/topic/science-water-cycle','globe','world/topic/animal-dromedary','world/topic/science-water-cycle'],
  climate:['world/topic/science-atmosphere','world/topic/science-seasons','world/topic/animal-giraffe','world/topic/science-photosynthesis','world/topic/science-foodweb']
 };
-export function chapterLinksForTopic(topicId:string){return Object.entries(CHAPTER_LINKS).flatMap(([id,links])=>{const index=links.indexOf('world/topic/'+topicId);return index<0?[]:[{id,index,path:chapterPath(id,index)}];});}
+export function chapterLinksForTopic(topicId:string){return Object.entries(CHAPTER_LINKS).flatMap(([id,links])=>links.flatMap((link,index)=>link==='world/topic/'+topicId?[{id,index,path:chapterPath(id,index)}]:[]));}
 const DESTINATIONS:Record<string,[string,string]>={
  'science-solar-system':['Die Erde im Sonnensystem','Vergleiche die Erde mit anderen Planeten und untersuche ihre Umlaufbahnen.'],
  'science-water-cycle':['Der Wasserkreislauf','Verfolge, wie Wasser seinen Zustand und seinen Aufenthaltsort verändert.'],

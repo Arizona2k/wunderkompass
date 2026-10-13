@@ -32,3 +32,9 @@ test('240 old sessions plus all 16 journey notebooks survive schema-3 backup res
  const a=structuredClone(restored),c=structuredClone(restored);a.progress.gameSessions['journey:water']['chapter:0:note']='Changed in first tab';c.progress.gameSessions['journey:water']['chapter:1:answer:1']=2;
  const merged=mergeSaves(restored,a,c);assert.equal(merged.progress.gameSessions['journey:water']['chapter:0:note'],'Changed in first tab');assert.equal(merged.progress.gameSessions['journey:water']['chapter:1:answer:1'],2);
 });
+
+test('reciprocal links retain every relevant chapter and never repeat a path',()=>{
+ const water=chapterLinksForTopic('science-water-cycle');assert.deepEqual(water.filter(c=>c.id==='water').map(c=>c.index),[1,2,3,4]);assert.deepEqual(water.filter(c=>c.id==='landscapes').map(c=>c.index),[1,4]);
+ assert.equal(new Set(water.map(c=>c.path)).size,water.length);assert.deepEqual(chapterLinksForTopic('unknown-topic'),[]);
+ for(const [id,links] of Object.entries(CHAPTER_LINKS))for(let index=0;index<links.length;index++)if(links[index].startsWith('world/topic/'))assert.ok(chapterLinksForTopic(links[index].slice(12)).some(c=>c.id===id&&c.index===index&&c.path===chapterPath(id,index)));
+});

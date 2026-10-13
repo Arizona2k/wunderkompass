@@ -105,3 +105,8 @@
 .article-atlas .world-surprise>div {min-width:0}
 
 .journey-topic-links a{display:flex;align-items:center;justify-content:space-between;min-height:44px}
+
+.journey-linked-group+ .journey-linked-group {border-top:1px solid var(--wk-line);margin-top:20px;padding-top:20px}
+.journey-linked-group h4 {font-size:16px;line-height:1.5;margin:0 0 8px;color:var(--wk-ink)}
+.journey-linked-group summary {min-height:44px;padding:12px 0;line-height:1.6;cursor:pointer;color:var(--wk-ink)}
+.journey-linked-group summary:focus-visible {outline:2px solid var(--wk-teal);outline-offset:3px;border-radius:4px}
