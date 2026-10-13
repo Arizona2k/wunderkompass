@@ -1,5 +1,13 @@
 # Änderungsverlauf
 
+## Paket3.5 – Lernfragen, Kapitelgrafiken und effizientere Abnahme (unveröffentlicht)
+
+- 32 Reiseaufgaben erhalten plausible fachbezogene Fehlantworten und passende Begründungen; zwei Jahreszeitenfragen ausdrücklich für Deutschland. Alle240 richtigen Antworten, Indizes und Aufgabenidentitäten bleiben erhalten.
+- Wörter in allen64 Kapitelgrafiken als lesbareHTML-Beschriftungen; sinnvolle großeZiffern. Mondscheiben/ersterViertelzyklus und eine bisher leere Nachbarschaftsgrafik gezielt korrigiert. Individuelle fachlicheGesamtabnahme bleibt offen.
+- Weltspiele laden nur die tatsächlich benötigteWissenskategorie, Challenge keineKartentexte. Bei Datenfehler bleiben „Alle Spiele“ und vorhandeneRunde erreichbar; gezielte320/1440-Prüfung bestanden.
+- Forschung als eigener isolierterBrowserarbeiter in bestehenderAbnahme: gleicherBuild/Prüfumfang im Einzelvergleich846,62→654,19s. Kein zusätzlichesCI-Jobbudget und keine Timeout-Erhöhung. Aktuelle vollständige lokale Abnahme nach gefundener/korrigierter Nachbarschafts-Verzweigung bestanden:121 Unitfälle/27 Releasefälle/zehn Browsergruppen702,21s. Neuer exakter GitHub-Lauf erforderlich.
+- Nach tatsächlichemQuality57-Bildlimitfehler redundanteZwischenbreiten/Archivkopien ausUploadauswahl genommen; alleAufnahmen/Hashes/Reports und Pflichtbilder bleiben. Keine Budgeterhöhung oder entferntenTests.
+
 ## Paket 3.5 – vernetzte Wissenschaftswelle (noch unveröffentlicht)
 
 - 23 eigene Wissenschaftskarten ergänzt, von Druck und Diffusion bis zu Prüfsummen und Exoplaneten. Bestehende 23 Karten mit individuell verfassten einfachen Erklärungen, Beobachtungsaufträgen und Lernnutzen erweitert. Freiwillige Vertiefungen, tatsächliche Quellen und Modellgrenzen bleiben sichtbar.

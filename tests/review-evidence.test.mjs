@@ -2,8 +2,9 @@ import test from 'node:test';import assert from 'node:assert/strict';import fs f
 import {retainScreenshot,requiredScreenshots,prepareReview} from '../scripts/review-evidence.mjs';
 test('critical states are always retained while interchangeable intermediate binaries can be reproduced',()=>{
  assert.ok(requiredScreenshots.every(retainScreenshot));
- for(const f of ['journey-engine-webkit-390.png','quality-learning-journey-native-zoom-200.png','quality-navigation-offline-start.png','quality-navigation-updates-archive-320-full.png','quality-learning-journey-water-390.png'])assert.equal(retainScreenshot(f),true,f);
- assert.equal(retainScreenshot('quality-navigation-home-first-360-full.png'),false);
+ for(const f of ['quality-research-science-cell-hero-320.png','quality-research-science-native-200-large.png','quality-research-science-surface-tension-large-320.png','quality-research-science-encryption-large-320.png','journey-engine-webkit-320.png','quality-learning-journey-native-zoom-200.png','quality-navigation-offline-start.png','quality-navigation-updates-all-details-320-full.png','quality-learning-journey-water-390.png'])assert.equal(retainScreenshot(f),true,f);
+ for(const f of ['journey-engine-webkit-390.png','journey-engine-firefox-768.png','quality-learning-journey-large-focus-768.png','quality-navigation-updates-archive-320-full.png','quality-navigation-home-first-360-full.png'])assert.equal(retainScreenshot(f),false,f);
+ for(const engine of ['chromium','firefox','webkit'])for(const width of [320,1440])assert.equal(retainScreenshot('journey-engine-'+engine+'-'+width+'.png'),true);
 });
 test('failed runs retain every actual image; corrupted image evidence fails closed',async()=>{
  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-evidence-'));try{

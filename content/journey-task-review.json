@@ -1,0 +1,1392 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-13",
+  "reviewer": "Codex; KI-Unterstützung",
+  "independentReview": false,
+  "meaning": "Alle 240 vorhandenen Aufgaben mit Antworten/Hinweisen/Rückmeldungen gelesen; 32 konkrete Korrekturen. Übrige Quellen-, Alters- und pädagogische Abnahme weiterhin im bestehenden Backlog offen. Keine wissenschaftliche Garantie aus Strukturtests.",
+  "tasks": [
+    {
+      "id": "planet:2:1",
+      "before": {
+        "prompt": "Ein Blatt bewegt sich im Wind. Was kannst du daran erkennen?",
+        "answers": [
+          "Luft ist in Bewegung",
+          "Luft wird zu festem Gestein",
+          "Es gibt keine Atmosphäre"
+        ],
+        "correct": 0,
+        "hint": "Suche eine Wirkung, obwohl das verursachende Gas unsichtbar ist.",
+        "why": "Bewegte Luft kann das Blatt bewegen.",
+        "wrong": [
+          "Bewegte Luft kann das Blatt bewegen.",
+          "Das Blatt zeigt keine Verwandlung von Gas zu Gestein.",
+          "Wind ist gerade ein Hinweis auf vorhandene Luft."
+        ]
+      },
+      "after": {
+        "prompt": "Ein Blatt bewegt sich im Wind. Was kannst du daran erkennen?",
+        "answers": [
+          "Luft ist in Bewegung",
+          "Die Luft besteht nur aus Sauerstoff",
+          "Das Blatt hat sich von selbst bewegt, Luft kann nichts bewegen"
+        ],
+        "correct": 0,
+        "hint": "Suche eine Wirkung, obwohl das verursachende Gas unsichtbar ist.",
+        "why": "Bewegte Luft kann das Blatt bewegen.",
+        "wrong": [
+          "Bewegte Luft kann das Blatt bewegen.",
+          "Bewegung verrät noch nicht, welche Gase in der Luft vorkommen.",
+          "Eine Bewegung durch Wind ist eine Wirkung der Luft; unsichtbar bedeutet nicht wirkungslos."
+        ]
+      },
+      "beforeHash": "ab174f510abce7a39de921269c6d74a68a819322596057aef389bfdcef9c8389",
+      "afterHash": "7fdca19011c546ad3620d0bbfb0b4b467a516684a97f96571db12776d7dac1da",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "planet-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "planet:4:2",
+      "before": {
+        "prompt": "Warum ist ein Jahr nicht genau 365 Tage lang?",
+        "answers": [
+          "Ein Sonnenumlauf dauert ungefähr 365¼ Tage",
+          "Die Erde dreht sich an Weihnachten nicht",
+          "Der Mond stoppt unsere Kalender"
+        ],
+        "correct": 0,
+        "hint": "Suche die ungefähre Umlaufzeit, nicht eine Kalendergeschichte.",
+        "why": "Schaltjahre gleichen den Kalender an die nicht ganzzahlige Umlaufzeit an.",
+        "wrong": [
+          "Schaltjahre gleichen den Kalender an die nicht ganzzahlige Umlaufzeit an.",
+          "Die tägliche Drehung hört nicht an einem Feiertag auf.",
+          "Die genannte Erklärung verwechselt Mond und Sonnenumlauf."
+        ]
+      },
+      "after": {
+        "prompt": "Warum ist ein Jahr nicht genau 365 Tage lang?",
+        "answers": [
+          "Ein Sonnenumlauf dauert ungefähr 365¼ Tage",
+          "Ein Sonnenumlauf dauert genau 365 ganze Tage",
+          "Ein Schalttag verändert die Umlaufgeschwindigkeit der Erde"
+        ],
+        "correct": 0,
+        "hint": "Suche die ungefähre Umlaufzeit, nicht eine Kalendergeschichte.",
+        "why": "Schaltjahre gleichen den Kalender an die nicht ganzzahlige Umlaufzeit an.",
+        "wrong": [
+          "Schaltjahre gleichen den Kalender an die nicht ganzzahlige Umlaufzeit an.",
+          "Die angegebene Umlaufzeit enthält einen zusätzlichen Tagesbruchteil.",
+          "Der Kalender wird an die Bewegung angepasst; der zusätzliche Kalendertag verändert die Bewegung nicht."
+        ]
+      },
+      "beforeHash": "9168feb3edf91f4ea9426baced244616720055a73e1203ca7a9e9bae3d230cae",
+      "afterHash": "4ea7956a721684fd8f48c08169d1d63d173df50cca0e77f3d21123a466a5b35d",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "planet-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "inside:2:0",
+      "before": {
+        "prompt": "Woraus besteht eine tektonische Platte?",
+        "answers": [
+          "Nur Wasser",
+          "Kruste und oberster fester Mantelteil",
+          "Nur eine Landesflagge"
+        ],
+        "correct": 1,
+        "hint": "Denke an die feste äußere Hülle.",
+        "why": "Eine Platte ist ein Teil der festen äußeren Erdhülle.",
+        "wrong": [
+          "Auch unter Ozeanen liegt festes Gestein.",
+          "Eine Platte ist ein Teil der festen äußeren Erdhülle.",
+          "Politische Zeichen bilden keine Gesteinsplatten."
+        ]
+      },
+      "after": {
+        "prompt": "Woraus besteht eine tektonische Platte?",
+        "answers": [
+          "Nur die Erdkruste, ohne Mantelanteil",
+          "Kruste und oberster fester Mantelteil",
+          "Der gesamte Mantel bis zum äußeren Kern"
+        ],
+        "correct": 1,
+        "hint": "Denke an die feste äußere Hülle.",
+        "why": "Eine Platte ist ein Teil der festen äußeren Erdhülle.",
+        "wrong": [
+          "Zur starren Platte gehört auch ein oberster fester Teil des Mantels.",
+          "Eine Platte ist ein Teil der festen äußeren Erdhülle.",
+          "Nicht der gesamte Mantel gehört zur starren Platte; darunter kann heißes Gestein langsam verformt werden."
+        ]
+      },
+      "beforeHash": "0bcc92dc7a0c4d543658e5f59b7fda505418391572198434e12b8ded3774ee5d",
+      "afterHash": "469d992a827d5c75e67661d9eaf55cababbbc7f5874b2162562cb199a7e7a612",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "inside-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "inside:3:0",
+      "before": {
+        "prompt": "Welche Bewegung kann Gebirge durch Kontinentkollision bilden?",
+        "answers": [
+          "Platten stoßen zusammen",
+          "Alle Platten stehen still",
+          "Platten werden zu Wolken"
+        ],
+        "correct": 0,
+        "hint": "Achte auf zusammengedrücktes und gehobenes Gestein.",
+        "why": "Kontinentkollision kann Gestein falten und Gebirge aufbauen.",
+        "wrong": [
+          "Kontinentkollision kann Gestein falten und Gebirge aufbauen.",
+          "Stillstand erklärt diesen Aufbau nicht.",
+          "Gesteinsplatten werden dabei nicht zu Wolken."
+        ]
+      },
+      "after": {
+        "prompt": "Welche Bewegung kann Gebirge durch Kontinentkollision bilden?",
+        "answers": [
+          "Platten stoßen zusammen",
+          "Die beiden Kontinente gleiten ohne Zusammendrücken aneinander vorbei",
+          "Die beiden Kontinente bewegen sich voneinander weg"
+        ],
+        "correct": 0,
+        "hint": "Achte auf zusammengedrücktes und gehobenes Gestein.",
+        "why": "Kontinentkollision kann Gestein falten und Gebirge aufbauen.",
+        "wrong": [
+          "Kontinentkollision kann Gestein falten und Gebirge aufbauen.",
+          "Diese Bewegung erklärt nicht die hier gefragte Kontinentkollision.",
+          "Auseinanderbewegen ist eine andere Grenzbewegung als die im Kapitel erklärte Kollision."
+        ]
+      },
+      "beforeHash": "49b1481c1e3ac8635b0c363638d63f170a88788e64fca4f1cb2cd943d2ab859b",
+      "afterHash": "487b5fd5f82446991737c412ba216f5e6b4ee0e3b2dc11d37c2939352baf1211",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "inside-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "water:0:1",
+      "before": {
+        "prompt": "Warum ist die weiße Wolke über einem Getränk nicht einfach Wasserdampf?",
+        "answers": [
+          "Wir sehen viele kleine Tröpfchen",
+          "Alles Weiße ist Gas",
+          "Das Wasser wird zu Salz"
+        ],
+        "correct": 0,
+        "hint": "Suche die Wasserform, die Licht sichtbar streuen kann.",
+        "why": "Unsichtbarer Wasserdampf und sichtbare Tröpfchen sind verschiedene Zustände.",
+        "wrong": [
+          "Unsichtbarer Wasserdampf und sichtbare Tröpfchen sind verschiedene Zustände.",
+          "Farbe allein bestimmt keinen Aggregatzustand.",
+          "Bei diesem Vorgang wird kein Salz erzeugt."
+        ]
+      },
+      "after": {
+        "prompt": "Warum ist die weiße Wolke über einem Getränk nicht einfach Wasserdampf?",
+        "answers": [
+          "Wir sehen viele kleine Tröpfchen",
+          "Das ist unsichtbares Gas, das allein durch Wärme weiß wird",
+          "Das gesamte Wasser ist dabei zu einem einzigen großen Tropfen geworden"
+        ],
+        "correct": 0,
+        "hint": "Suche die Wasserform, die Licht sichtbar streuen kann.",
+        "why": "Unsichtbarer Wasserdampf und sichtbare Tröpfchen sind verschiedene Zustände.",
+        "wrong": [
+          "Unsichtbarer Wasserdampf und sichtbare Tröpfchen sind verschiedene Zustände.",
+          "Die Sichtbarkeit entsteht durch kleine flüssige Tröpfchen, nicht durch eine weiße Gasfarbe.",
+          "Die kleine Wolke besteht aus vielen Tröpfchen und nicht aus einem zusammenhängenden großen Tropfen."
+        ]
+      },
+      "beforeHash": "db6a819b424f1c2146f4a7c1108e15df46920c5f86bf68ee90b5f6f363f704d1",
+      "afterHash": "82b612d7c037398fd583ee0074dff5b97a6018c3c2c8783003bb67885f3d224d",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "water-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "water:2:0",
+      "before": {
+        "prompt": "Was bedeutet Kondensation?",
+        "answers": [
+          "Eis wird zu Stein",
+          "Regen wird zu Licht",
+          "Wasserdampf wird zu Tröpfchen"
+        ],
+        "correct": 2,
+        "hint": "Achte auf den Übergang vom Gas zur Flüssigkeit.",
+        "why": "Kondensation bildet flüssige Tröpfchen aus gasförmigem Wasser.",
+        "wrong": [
+          "Gestein entsteht hier nicht.",
+          "Der Vorgang ist keine Verwandlung in Licht.",
+          "Kondensation bildet flüssige Tröpfchen aus gasförmigem Wasser."
+        ]
+      },
+      "after": {
+        "prompt": "Was bedeutet Kondensation?",
+        "answers": [
+          "Flüssiges Wasser wird gasförmig",
+          "Flüssiges Wasser wird fest",
+          "Wasserdampf wird zu Tröpfchen"
+        ],
+        "correct": 2,
+        "hint": "Achte auf den Übergang vom Gas zur Flüssigkeit.",
+        "why": "Kondensation bildet flüssige Tröpfchen aus gasförmigem Wasser.",
+        "wrong": [
+          "Das ist die umgekehrte Zustandsrichtung; Kondensation führt vom Gas zur Flüssigkeit.",
+          "Dieser Übergang heißt Gefrieren; hier sind gasförmiges Wasser und flüssige Tröpfchen gemeint.",
+          "Kondensation bildet flüssige Tröpfchen aus gasförmigem Wasser."
+        ]
+      },
+      "beforeHash": "aa291be92acd537f373c22008400c3e2e65efd59810731f0b433e5720ffd8954",
+      "afterHash": "b5ab4fdf759510efbb2076ce41b182b1d8e3fb5f6be78560c61093c319148a1e",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "water-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "weather:0:0",
+      "before": {
+        "prompt": "Welches Gerät misst Temperatur?",
+        "answers": [
+          "Ein Regenmesser",
+          "Eine Landkarte",
+          "Ein Thermometer"
+        ],
+        "correct": 2,
+        "hint": "Frage, welche Größe das Gerät erfasst.",
+        "why": "Ein Thermometer misst Temperatur.",
+        "wrong": [
+          "Ein Regenmesser misst Niederschlag.",
+          "Eine Karte ist kein Temperaturmessgerät.",
+          "Ein Thermometer misst Temperatur."
+        ]
+      },
+      "after": {
+        "prompt": "Welches Gerät misst Temperatur?",
+        "answers": [
+          "Ein Regenmesser",
+          "Ein Windmesser",
+          "Ein Thermometer"
+        ],
+        "correct": 2,
+        "hint": "Frage, welche Größe das Gerät erfasst.",
+        "why": "Ein Thermometer misst Temperatur.",
+        "wrong": [
+          "Damit wird Niederschlag gesammelt und gemessen, nicht die Temperatur.",
+          "Damit untersucht man Luftbewegung, nicht die Temperatur.",
+          "Ein Thermometer misst Temperatur."
+        ]
+      },
+      "beforeHash": "ddaa8e1b50f8aaecd819b873b93c2b1c5f8e060f8072567182eb2d0181fcb43f",
+      "afterHash": "b69772a7fadb7373bd0dd7668c15cdeabe6b070cb7a85768129bae6a0d36ced6",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "weather-base",
+        "weather-climate"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "weather:1:0",
+      "before": {
+        "prompt": "Was ist Wind?",
+        "answers": [
+          "Festes Sonnenlicht",
+          "Luft in Bewegung",
+          "Wasser in einer Flasche"
+        ],
+        "correct": 1,
+        "hint": "Suche das Material, das sich bewegt.",
+        "why": "Wind ist bewegte Luft.",
+        "wrong": [
+          "Sonnenlicht ist kein festes Material.",
+          "Wind ist bewegte Luft.",
+          "Eine Wasserflasche beschreibt keinen Wind."
+        ]
+      },
+      "after": {
+        "prompt": "Was ist Wind?",
+        "answers": [
+          "Der Luftdruck an genau einem Ort",
+          "Luft in Bewegung",
+          "Die Wärme der Luft"
+        ],
+        "correct": 1,
+        "hint": "Suche das Material, das sich bewegt.",
+        "why": "Wind ist bewegte Luft.",
+        "wrong": [
+          "Luftdruck ist eine Messgröße; Wind bezeichnet die Bewegung der Luft.",
+          "Wind ist bewegte Luft.",
+          "Temperatur beschreibt den Wärmezustand; Wind beschreibt Luftbewegung."
+        ]
+      },
+      "beforeHash": "59608de270f216b3c3cac567c190444381d6fbb726623e46b92c6bfbb2207411",
+      "afterHash": "971bb73a5b46c713df941b0e9cef0538a68f45e139b877e08adf6a2b3372eaa3",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "weather-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "seasons:1:0",
+      "before": {
+        "prompt": "Welche Jahreszeit ist um Juni auf der Nordhalbkugel?",
+        "answers": [
+          "Überall auf der Erde dieselbe",
+          "Sommer",
+          "Winter"
+        ],
+        "correct": 1,
+        "hint": "Achte darauf, welche Halbkugel zur Sonne geneigt ist.",
+        "why": "Die Nordhalbkugel bekommt um Juni längere Tage und einen höheren Sonnenstand.",
+        "wrong": [
+          "Die Halbkugeln haben gegensätzliche Jahreszeiten.",
+          "Die Nordhalbkugel bekommt um Juni längere Tage und einen höheren Sonnenstand.",
+          "Winter passt hier zur anderen Halbkugel."
+        ]
+      },
+      "after": {
+        "prompt": "Welche Jahreszeit beginnt in Deutschland um Juni?",
+        "answers": [
+          "Winter",
+          "Sommer",
+          "Herbst"
+        ],
+        "correct": 1,
+        "hint": "Achte darauf, welche Halbkugel zur Sonne geneigt ist.",
+        "why": "Die Nordhalbkugel bekommt um Juni längere Tage und einen höheren Sonnenstand.",
+        "wrong": [
+          "Deutschland liegt auf der Nordhalbkugel; hier beginnt um Juni der Sommer.",
+          "Die Nordhalbkugel bekommt um Juni längere Tage und einen höheren Sonnenstand.",
+          "Herbst ist nicht die hier gefragte Jahreszeit um Juni in Deutschland."
+        ]
+      },
+      "beforeHash": "6ef77e1d64be161e829a328fed824df4187c33bd3ea7214d7ff654375924d872",
+      "afterHash": "dbba1f92d1ccb3f8bc57d48b27a9c5b79c0544ea675680fdcc95f8412d5134d2",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "seasons-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "seasons:2:0",
+      "before": {
+        "prompt": "Wie sind die Tage im nördlichen Winter gegenüber dem Sommer?",
+        "answers": [
+          "Kürzer",
+          "Immer länger",
+          "Ohne jede Sonne"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche die Stunden mit Sonnenlicht.",
+        "why": "Im nördlichen Winter sind die Tage kürzer.",
+        "wrong": [
+          "Im nördlichen Winter sind die Tage kürzer.",
+          "Die längeren Tage gehören zum Sommervergleich.",
+          "Auch im Winter scheint an vielen Orten die Sonne."
+        ]
+      },
+      "after": {
+        "prompt": "Wie sind in Deutschland die hellen Tagesstunden im Winter gegenüber dem Sommer?",
+        "answers": [
+          "Kürzer",
+          "Länger",
+          "Ungefähr gleich lang"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche die Stunden mit Sonnenlicht.",
+        "why": "Im nördlichen Winter sind die Tage kürzer.",
+        "wrong": [
+          "Im nördlichen Winter sind die Tage kürzer.",
+          "Die längeren hellen Tage gehören in Deutschland zum Sommervergleich.",
+          "Die Tageslänge verändert sich im Jahresverlauf; Winter und Sommer haben hier unterschiedliche helle Tageszeiten."
+        ]
+      },
+      "beforeHash": "7b427b01f14496b372e745efa2b63adcc058ad9be16b4e5b2d26a9ceb534cafa",
+      "afterHash": "1216fd4e8e28e932a5cd454604a58f6e721de845ab9f1184cc736359d3c42bd5",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "seasons-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "ocean:0:0",
+      "before": {
+        "prompt": "Welcher benannte Ozean ist der größte?",
+        "answers": [
+          "Der Bodensee",
+          "Der Pazifik",
+          "Der Arktische Ozean"
+        ],
+        "correct": 1,
+        "hint": "Vergleiche die Ozeanübersicht.",
+        "why": "Der Pazifik ist der größte der fünf hier benannten Ozeane.",
+        "wrong": [
+          "Der Bodensee ist ein See, kein Ozean.",
+          "Der Pazifik ist der größte der fünf hier benannten Ozeane.",
+          "Der Arktische Ozean ist der kleinste."
+        ]
+      },
+      "after": {
+        "prompt": "Welcher benannte Ozean ist der größte?",
+        "answers": [
+          "Der Atlantik",
+          "Der Pazifik",
+          "Der Arktische Ozean"
+        ],
+        "correct": 1,
+        "hint": "Vergleiche die Ozeanübersicht.",
+        "why": "Der Pazifik ist der größte der fünf hier benannten Ozeane.",
+        "wrong": [
+          "Der Atlantik ist ein Ozean, aber der Pazifik ist in dieser Übersicht größer.",
+          "Der Pazifik ist der größte der fünf hier benannten Ozeane.",
+          "Der Arktische Ozean ist in der Übersicht der kleinste, nicht der größte."
+        ]
+      },
+      "beforeHash": "c11380810922d8c3cf92e0197f0efe326783480c28d67efe2b1c1c1af37ff920",
+      "afterHash": "e5ed6feddb654fee500f1d37be721e21206bb1e04befac6856f4f2183d1f4c38",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "ocean-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "ocean:4:0",
+      "before": {
+        "prompt": "Was beeinflusst Ebbe und Flut besonders?",
+        "answers": [
+          "Die Schwerkraft von Mond und Sonne",
+          "Die Flagge eines Schiffes",
+          "Die Anzahl der Kontinente"
+        ],
+        "correct": 0,
+        "hint": "Denke an Anziehung statt an Kartenbezeichnungen.",
+        "why": "Mond und Sonne tragen durch ihre Anziehung zu Gezeiten bei.",
+        "wrong": [
+          "Mond und Sonne tragen durch ihre Anziehung zu Gezeiten bei.",
+          "Eine Flagge verursacht keine Gezeiten.",
+          "Kontinentnamen erklären die Anziehung nicht."
+        ]
+      },
+      "after": {
+        "prompt": "Was beeinflusst Ebbe und Flut besonders?",
+        "answers": [
+          "Die Schwerkraft von Mond und Sonne",
+          "Nur Wind auf der Wasseroberfläche",
+          "Nur warme und kalte Wasserschichten"
+        ],
+        "correct": 0,
+        "hint": "Denke an Anziehung statt an Kartenbezeichnungen.",
+        "why": "Mond und Sonne tragen durch ihre Anziehung zu Gezeiten bei.",
+        "wrong": [
+          "Mond und Sonne tragen durch ihre Anziehung zu Gezeiten bei.",
+          "Wind kann Wasser bewegen; der regelmäßig wiederkehrende Gezeitenzusammenhang wird hier durch Anziehung erklärt.",
+          "Temperaturunterschiede können Strömungen beeinflussen; sie ersetzen nicht die hier erklärte Ursache der Gezeiten."
+        ]
+      },
+      "beforeHash": "51a004fc349f8d854af6bc3aa4182ec298817d7b3151d8b6aa5b0aee0ce03125",
+      "afterHash": "a82c9722222d40fff669fd2b21c8035497d330c746d0458e323b88ae3bae2943",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "ocean-base",
+        "ocean-currents"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "nature:0:1",
+      "before": {
+        "prompt": "Warum brauchen Fisch und Kaktus verschiedene Bedingungen?",
+        "answers": [
+          "Jede Art braucht exakt dasselbe",
+          "Ein Kaktus ist ein Fisch",
+          "Sie sind an unterschiedliche Umgebungen angepasst"
+        ],
+        "correct": 2,
+        "hint": "Vergleiche Lebensweise und Wasserbedarf.",
+        "why": "Arten haben unterschiedliche Anpassungen und Bedürfnisse.",
+        "wrong": [
+          "Gleiche Bedingungen passen nicht automatisch zu allen Arten.",
+          "Die beiden Lebewesen gehören zu verschiedenen Gruppen.",
+          "Arten haben unterschiedliche Anpassungen und Bedürfnisse."
+        ]
+      },
+      "after": {
+        "prompt": "Warum brauchen Fisch und Kaktus verschiedene Bedingungen?",
+        "answers": [
+          "Nur die Größe des Lebewesens legt seine Umgebung fest",
+          "Jeder warme Ort ist für beide gleichermaßen geeignet",
+          "Sie sind an unterschiedliche Umgebungen angepasst"
+        ],
+        "correct": 2,
+        "hint": "Vergleiche Lebensweise und Wasserbedarf.",
+        "why": "Arten haben unterschiedliche Anpassungen und Bedürfnisse.",
+        "wrong": [
+          "Auch Nahrung, Wasser und weitere Bedürfnisse müssen zur Lebensweise passen.",
+          "Eine ähnliche Temperatur allein bedeutet noch nicht passende Wasser- und Lebensbedingungen für beide.",
+          "Arten haben unterschiedliche Anpassungen und Bedürfnisse."
+        ]
+      },
+      "beforeHash": "7b629ae7e91ede8f6c061ec4b7b7e970ce36ac99607ef13ee5e40ac071581647",
+      "afterHash": "22636f0612fe72ff68d4961d5dfa13d77b26832772d59616d215721d54950d69",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "nature-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "nature:4:0",
+      "before": {
+        "prompt": "Was nutzen Pflanzen zum Aufbau energiereicher Stoffe?",
+        "answers": [
+          "Nur die Farbe einer Flagge",
+          "Nur den Namen eines Waldes",
+          "Sonnenlicht"
+        ],
+        "correct": 2,
+        "hint": "Suche eine Energiequelle.",
+        "why": "Pflanzen nutzen bei der Fotosynthese Sonnenenergie.",
+        "wrong": [
+          "Flaggenfarben liefern diese Energie nicht.",
+          "Ein Name beschreibt keinen Energiefluss.",
+          "Pflanzen nutzen bei der Fotosynthese Sonnenenergie."
+        ]
+      },
+      "after": {
+        "prompt": "Was nutzen Pflanzen zum Aufbau energiereicher Stoffe?",
+        "answers": [
+          "Wärme allein, ganz ohne Licht",
+          "Den Boden als alleinige Energiequelle",
+          "Sonnenlicht"
+        ],
+        "correct": 2,
+        "hint": "Suche eine Energiequelle.",
+        "why": "Pflanzen nutzen bei der Fotosynthese Sonnenenergie.",
+        "wrong": [
+          "Die Erklärung nennt Licht als Energiequelle; bloße Wärme ersetzt diesen Vorgang nicht.",
+          "Der Boden liefert nicht das Sonnenlicht für die im Kapitel erklärte Fotosynthese.",
+          "Pflanzen nutzen bei der Fotosynthese Sonnenenergie."
+        ]
+      },
+      "beforeHash": "35542dd229468bf66a7f5c4f9cc6a328ce51207d2452b2cdcbee34ae886614ba",
+      "afterHash": "3ebb1d5f202d31ed835a6daa4aad399b69d3401617f480eebd5ec3f1f113f77d",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "nature-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "protect:0:1",
+      "before": {
+        "prompt": "Wie wäre die Erde ohne natürlichen Treibhauseffekt?",
+        "answers": [
+          "Ohne jede Schwerkraft",
+          "Im Durchschnitt deutlich kälter",
+          "Überall wärmer"
+        ],
+        "correct": 1,
+        "hint": "Vergleiche den Wärmehaushalt mit und ohne diesen Einfluss.",
+        "why": "Der natürliche Effekt trägt zu lebensfreundlicheren Temperaturen bei.",
+        "wrong": [
+          "Wärmehaushalt und Schwerkraft sind unterschiedliche Zusammenhänge.",
+          "Der natürliche Effekt trägt zu lebensfreundlicheren Temperaturen bei.",
+          "Die beschriebene Wärmerückhaltung würde fehlen."
+        ]
+      },
+      "after": {
+        "prompt": "Wie wäre die Erde ohne natürlichen Treibhauseffekt?",
+        "answers": [
+          "Im Durchschnitt wärmer",
+          "Im Durchschnitt deutlich kälter",
+          "Im Durchschnitt gleich warm"
+        ],
+        "correct": 1,
+        "hint": "Vergleiche den Wärmehaushalt mit und ohne diesen Einfluss.",
+        "why": "Der natürliche Effekt trägt zu lebensfreundlicheren Temperaturen bei.",
+        "wrong": [
+          "Der natürliche Treibhauseffekt trägt zur Erwärmung bei; ohne ihn würde diese Wirkung fehlen.",
+          "Der natürliche Effekt trägt zu lebensfreundlicheren Temperaturen bei.",
+          "Der Strahlungszusammenhang wirkt auf den Wärmehaushalt; sein Wegfall wäre kein unveränderter Zustand."
+        ]
+      },
+      "beforeHash": "f3b9ef927a259335da1ce66cc750acc0070f6c0ee4f59ffe534aa11193ef3c2b",
+      "afterHash": "f12a1e73fd49b8c3afc906f625cd8a7e76d27b1ed8a8e4b50b7da46718328649",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "protect-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "protect:2:1",
+      "before": {
+        "prompt": "Warum hilft Reparieren manchmal mehr als sofortiges Recycling?",
+        "answers": [
+          "Recycling macht jedes Problem unsichtbar",
+          "Reparieren braucht grundsätzlich neue Ländergrenzen",
+          "Der Gegenstand kann weiter genutzt werden"
+        ],
+        "correct": 2,
+        "hint": "Vergleiche Weiterbenutzen mit neuer Materialverarbeitung.",
+        "why": "Weiterbenutzen erhält die Funktion; Recycling ist nicht immer die erste oder vollständige Lösung.",
+        "wrong": [
+          "Nicht jeder Abfall ist beliebig oder vollständig wiederverwertbar.",
+          "Ländergrenzen erklären keine Reparaturwirkung.",
+          "Weiterbenutzen erhält die Funktion; Recycling ist nicht immer die erste oder vollständige Lösung."
+        ]
+      },
+      "after": {
+        "prompt": "Warum hilft Reparieren manchmal mehr als sofortiges Recycling?",
+        "answers": [
+          "Recycling erhält immer die ganze Funktion des alten Gegenstands",
+          "Reparieren macht den Gegenstand automatisch ohne Material- und Energiebedarf",
+          "Der Gegenstand kann weiter genutzt werden"
+        ],
+        "correct": 2,
+        "hint": "Vergleiche Weiterbenutzen mit neuer Materialverarbeitung.",
+        "why": "Weiterbenutzen erhält die Funktion; Recycling ist nicht immer die erste oder vollständige Lösung.",
+        "wrong": [
+          "Material wiederverarbeiten und einen funktionierenden Gegenstand weiterbenutzen sind verschiedene Wege.",
+          "Auch Reparatur kann Aufwand brauchen; die Erklärung spricht von einem möglichen Vorteil, nicht von einer Garantie ohne jeden Aufwand.",
+          "Weiterbenutzen erhält die Funktion; Recycling ist nicht immer die erste oder vollständige Lösung."
+        ]
+      },
+      "beforeHash": "2a5f8bc206959646022e8d45832426658bc3d58c222f9ca8f426ad82f55754b8",
+      "afterHash": "0cdd1b1d29e56090a7ea8f251faaa43105fa12720d5508a33bc9c38ed28f6388",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "protect-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "continents:0:0",
+      "before": {
+        "prompt": "Welche Zuordnung passt?",
+        "answers": [
+          "Afrika:Stadt; Kenia:Ozean",
+          "Afrika:Flagge; Kenia:Wolke",
+          "Afrika:Kontinent; Kenia:Land"
+        ],
+        "correct": 2,
+        "hint": "Prüfe, welche Bezeichnung eine große Landregion und welche einen Staat meint.",
+        "why": "Afrika und Kenia beschreiben unterschiedliche geografische Ebenen.",
+        "wrong": [
+          "Stadt und Ozean passen nicht zu diesen beiden Bezeichnungen.",
+          "Flagge und Wolke sind andere Arten von Dingen.",
+          "Afrika und Kenia beschreiben unterschiedliche geografische Ebenen."
+        ]
+      },
+      "after": {
+        "prompt": "Welche Zuordnung passt?",
+        "answers": [
+          "Afrika: Land; Kenia: Kontinent",
+          "Afrika: Kontinent; Kenia: Hauptstadt",
+          "Afrika:Kontinent; Kenia:Land"
+        ],
+        "correct": 2,
+        "hint": "Prüfe, welche Bezeichnung eine große Landregion und welche einen Staat meint.",
+        "why": "Afrika und Kenia beschreiben unterschiedliche geografische Ebenen.",
+        "wrong": [
+          "Die beiden geografischen Ebenen sind vertauscht.",
+          "Kenia wird hier als Land eingeordnet, nicht als Stadt.",
+          "Afrika und Kenia beschreiben unterschiedliche geografische Ebenen."
+        ]
+      },
+      "beforeHash": "1713eacc52ef38e7e6a241f080d9bd355c401a63ed9823d6f1bf4599401661d9",
+      "afterHash": "a923a9266ba4dcc0f5b2b432bd1bf6b7f0e71a509e4405c73ea258bcb63855da",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "continents-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "continents:2:0",
+      "before": {
+        "prompt": "Welche Region verbindet Nord- und Südamerika an Land?",
+        "answers": [
+          "Eine schmale Landbrücke",
+          "Ein riesiger Mondkrater",
+          "Der Südpol"
+        ],
+        "correct": 0,
+        "hint": "Suche die Verbindung zwischen den Landflächen.",
+        "why": "Zwischen den amerikanischen Kontinenten liegt eine schmale Landverbindung.",
+        "wrong": [
+          "Zwischen den amerikanischen Kontinenten liegt eine schmale Landverbindung.",
+          "Ein Mondkrater liegt nicht auf dieser Landroute.",
+          "Der Südpol ist keine amerikanische Landbrücke."
+        ]
+      },
+      "after": {
+        "prompt": "Welche Region verbindet Nord- und Südamerika an Land?",
+        "answers": [
+          "Eine schmale Landbrücke",
+          "Eine breite Meeresstraße ohne Landverbindung",
+          "Eine durchgehende Verbindung über den Nordpol"
+        ],
+        "correct": 0,
+        "hint": "Suche die Verbindung zwischen den Landflächen.",
+        "why": "Zwischen den amerikanischen Kontinenten liegt eine schmale Landverbindung.",
+        "wrong": [
+          "Zwischen den amerikanischen Kontinenten liegt eine schmale Landverbindung.",
+          "Gefragt ist die Verbindung an Land; eine reine Meeresstraße erklärt sie nicht.",
+          "Die gesuchte schmale Verbindung liegt zwischen den beiden amerikanischen Regionen, nicht am Nordpol."
+        ]
+      },
+      "beforeHash": "9cba1ee954a16e9f6a6245d7af56b4a49b4bca391ffc1a2773a7b4fd6c6da255",
+      "afterHash": "8a77d564d0aea958e8df2054e71c8300abb2fd51299042bec39f02b2f99cb23b",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "continents-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "countries:1:0",
+      "before": {
+        "prompt": "Wie heißt Deutschlands Hauptstadt?",
+        "answers": [
+          "Der Pazifik",
+          "Der Äquator",
+          "Berlin"
+        ],
+        "correct": 2,
+        "hint": "Suche die benannte Stadt.",
+        "why": "Berlin ist Deutschlands Hauptstadt.",
+        "wrong": [
+          "Ein Ozean ist keine Hauptstadt.",
+          "Eine gedachte Linie ist keine Stadt.",
+          "Berlin ist Deutschlands Hauptstadt."
+        ]
+      },
+      "after": {
+        "prompt": "Wie heißt Deutschlands Hauptstadt?",
+        "answers": [
+          "Hamburg",
+          "München",
+          "Berlin"
+        ],
+        "correct": 2,
+        "hint": "Suche die benannte Stadt.",
+        "why": "Berlin ist Deutschlands Hauptstadt.",
+        "wrong": [
+          "Hamburg ist eine Stadt in Deutschland; die hier gefragte Hauptstadt ist Berlin.",
+          "München ist eine Stadt in Deutschland; die Hauptstadtfunktion Deutschlands liegt bei Berlin.",
+          "Berlin ist Deutschlands Hauptstadt."
+        ]
+      },
+      "beforeHash": "905ae23a325f07fd8ebb8ce1b4da25e35b655802b7f7a78a34a8844e82080db9",
+      "afterHash": "28d67dd962068a92d2025be250f6003c995944d9fc6f6a2e2faab286058a0bfa",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "countries-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "countries:2:0",
+      "before": {
+        "prompt": "Was ist eine Flagge in dieser Reise?",
+        "answers": [
+          "Eine tektonische Platte",
+          "Ein Zeichen für ein Land oder Gebiet",
+          "Eine Messung der Menschenqualität"
+        ],
+        "correct": 1,
+        "hint": "Unterscheide Symbol und persönliche Bewertung.",
+        "why": "Eine Flagge kann ein Land oder Gebiet kennzeichnen.",
+        "wrong": [
+          "Ein Symbol ist keine Gesteinsplatte.",
+          "Eine Flagge kann ein Land oder Gebiet kennzeichnen.",
+          "Flaggen bewerten keine Menschen."
+        ]
+      },
+      "after": {
+        "prompt": "Was ist eine Flagge in dieser Reise?",
+        "answers": [
+          "Eine vollständige Beschreibung aller Menschen des Landes",
+          "Ein Zeichen für ein Land oder Gebiet",
+          "Eine genaue Karte aller Landesgrenzen"
+        ],
+        "correct": 1,
+        "hint": "Unterscheide Symbol und persönliche Bewertung.",
+        "why": "Eine Flagge kann ein Land oder Gebiet kennzeichnen.",
+        "wrong": [
+          "Ein gemeinsames Symbol zeigt nicht die verschiedenen Lebensweisen aller Menschen.",
+          "Eine Flagge kann ein Land oder Gebiet kennzeichnen.",
+          "Ein Flaggenmuster ist ein Symbol und keine vermessene Landeskarte."
+        ]
+      },
+      "beforeHash": "752abf826d3dcb5133d25de7144cd93eaffbccf137d488cd3b2002e3196ecb1d",
+      "afterHash": "8bee44c62edb94ce5248ea1ab3f792d11463668ff35a5ff89c829339f4441bad",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "countries-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "volcanoes:0:1",
+      "before": {
+        "prompt": "Woraus kann Magma bestehen?",
+        "answers": [
+          "Nur aus einer leeren Höhle",
+          "Nur aus Trinkwasser",
+          "Schmelze mit Kristallen und gelösten Gasen"
+        ],
+        "correct": 2,
+        "hint": "Prüfe, ob das Material mehrere Bestandteile haben kann.",
+        "why": "Magma ist nicht zwingend eine völlig gleichförmige Flüssigkeit.",
+        "wrong": [
+          "Eine Höhle ist kein geschmolzenes Material.",
+          "Magma ist kein Trinkwasser.",
+          "Magma ist nicht zwingend eine völlig gleichförmige Flüssigkeit."
+        ]
+      },
+      "after": {
+        "prompt": "Woraus kann Magma bestehen?",
+        "answers": [
+          "Ausschließlich aus Gas, ohne geschmolzenes Gestein",
+          "Immer aus völlig gleichförmiger Flüssigkeit ohne Kristalle",
+          "Schmelze mit Kristallen und gelösten Gasen"
+        ],
+        "correct": 2,
+        "hint": "Prüfe, ob das Material mehrere Bestandteile haben kann.",
+        "why": "Magma ist nicht zwingend eine völlig gleichförmige Flüssigkeit.",
+        "wrong": [
+          "Magma enthält geschmolzenes Gestein; Gase können darin vorkommen, ersetzen aber nicht die Schmelze.",
+          "Die Erklärung nennt mehrere mögliche Bestandteile; eine ausnahmslos gleichförmige Flüssigkeit wäre zu eng.",
+          "Magma ist nicht zwingend eine völlig gleichförmige Flüssigkeit."
+        ]
+      },
+      "beforeHash": "89adbd3a90dce291cbbb096c1b18fff2336971be7ed725343cd1582918449996",
+      "afterHash": "9ad4257e456e7c472fde503ad793c6f4a84d76c5a310ad5881be5aba6d47f0cb",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "volcanoes-base",
+        "volcano-detail"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "volcanoes:2:1",
+      "before": {
+        "prompt": "Welche Kombination kann explosive Ausbrüche begünstigen?",
+        "answers": [
+          "Zähes, gasreiches Magma",
+          "Nur die Farbe des Vulkans",
+          "Nur sein Ländername"
+        ],
+        "correct": 0,
+        "hint": "Betrachte Gasentweichung und Materialverhalten.",
+        "why": "In zäherem Magma können Gase schlechter entweichen; mehrere Bedingungen beeinflussen einen Ausbruch.",
+        "wrong": [
+          "In zäherem Magma können Gase schlechter entweichen; mehrere Bedingungen beeinflussen einen Ausbruch.",
+          "Eine Farbe erklärt keine Gasentweichung.",
+          "Ein Ländername ist keine physikalische Einflussgröße."
+        ]
+      },
+      "after": {
+        "prompt": "Welche Kombination kann explosive Ausbrüche begünstigen?",
+        "answers": [
+          "Zähes, gasreiches Magma",
+          "Nur ein hoher, steiler Vulkanberg",
+          "Nur dünnflüssige Lava mit gut entweichendem Gas"
+        ],
+        "correct": 0,
+        "hint": "Betrachte Gasentweichung und Materialverhalten.",
+        "why": "In zäherem Magma können Gase schlechter entweichen; mehrere Bedingungen beeinflussen einen Ausbruch.",
+        "wrong": [
+          "In zäherem Magma können Gase schlechter entweichen; mehrere Bedingungen beeinflussen einen Ausbruch.",
+          "Die Form allein beschreibt nicht, wie leicht Gas aus dem Magma entweicht.",
+          "Diese Beschreibung begünstigt nicht den hier verglichenen starken Gasrückhalt; echte Ausbrüche hängen von mehreren Bedingungen ab."
+        ]
+      },
+      "beforeHash": "9e667a6a0fa39bebb60f77eebf066c83228080bd1de7452eb2e53482e8d4f739",
+      "afterHash": "73a0c621fa3615887f9b7d1c73fa9cc6690a2f57dd19089b66feb9d15a8be8ea",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "volcanoes-base",
+        "volcano-detail"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "quakes:1:0",
+      "before": {
+        "prompt": "Was ist der Erdbebenherd?",
+        "answers": [
+          "Der Erdmittelpunkt",
+          "Jede beliebige Hauptstadt",
+          "Der Ort, an dem die Bewegung beginnt"
+        ],
+        "correct": 2,
+        "hint": "Suche den Beginn des Rutschens.",
+        "why": "Der Herd bezeichnet den Ausgangsort eines Bebens im Gestein.",
+        "wrong": [
+          "Der Herd ist nicht automatisch der Erdmittelpunkt.",
+          "Eine Stadt ist nicht durch ihren Namen der Ausgangsort.",
+          "Der Herd bezeichnet den Ausgangsort eines Bebens im Gestein."
+        ]
+      },
+      "after": {
+        "prompt": "Was ist der Erdbebenherd?",
+        "answers": [
+          "Der Punkt an der Oberfläche direkt darüber",
+          "Der Ort mit den stärksten sichtbaren Schäden",
+          "Der Ort, an dem die Bewegung beginnt"
+        ],
+        "correct": 2,
+        "hint": "Suche den Beginn des Rutschens.",
+        "why": "Der Herd bezeichnet den Ausgangsort eines Bebens im Gestein.",
+        "wrong": [
+          "Das ist das Epizentrum; der Herd liegt am Ausgangsort im Gestein.",
+          "Schäden beschreiben die Wirkung an einem Ort und bestimmen nicht den Beginn des Bebens.",
+          "Der Herd bezeichnet den Ausgangsort eines Bebens im Gestein."
+        ]
+      },
+      "beforeHash": "9e1a3bd46e42e21d21a1090221e454d896b266f8d688631fada2ccb1ae28a53a",
+      "afterHash": "c97fbf46c6e17ead962494c415e02cbda08e44f3eb98d821f137be2cec449acf",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "quakes-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "quakes:3:0",
+      "before": {
+        "prompt": "Was beschreibt die Magnitude?",
+        "answers": [
+          "Die Größe des Bebens",
+          "Nur die Farbe einer Gebäudewand",
+          "Nur die Entfernung eines Beobachters"
+        ],
+        "correct": 0,
+        "hint": "Unterscheide Ereignisgröße und örtliche Bedingungen.",
+        "why": "Magnitude beschreibt die Größe des Ereignisses.",
+        "wrong": [
+          "Magnitude beschreibt die Größe des Ereignisses.",
+          "Eine Wandfarbe ist kein Bebenmaß.",
+          "Abstand beeinflusst die örtliche Wirkung, ist aber nicht selbst die Magnitude."
+        ]
+      },
+      "after": {
+        "prompt": "Was beschreibt die Magnitude?",
+        "answers": [
+          "Die Größe des Bebens",
+          "Nur die Stärke der Schäden an einem bestimmten Haus",
+          "Nur die Entfernung vom Erdbebenherd"
+        ],
+        "correct": 0,
+        "hint": "Unterscheide Ereignisgröße und örtliche Bedingungen.",
+        "why": "Magnitude beschreibt die Größe des Ereignisses.",
+        "wrong": [
+          "Magnitude beschreibt die Größe des Ereignisses.",
+          "Örtliche Schäden hängen auch von Gebäude und Untergrund ab; sie sind nicht dieselbe Größe wie die Magnitude.",
+          "Entfernung ist eine Ortsangabe; die Magnitude beschreibt die Größe des Ereignisses."
+        ]
+      },
+      "beforeHash": "e43d5de9257ed7216b28d92993363affd3e042c95ee2c30b64b59af412b6b669",
+      "afterHash": "7acfafa21245756f04d7515602743ab95a5364f65c4e54bf7b134d842e4ad80a",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "quakes-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "moon:0:0",
+      "before": {
+        "prompt": "Woher kommt das helle Licht auf dem Mond?",
+        "answers": [
+          "Von einem eigenen Sternenfeuer",
+          "Nur von Länderflaggen",
+          "Von reflektiertem Sonnenlicht"
+        ],
+        "correct": 2,
+        "hint": "Unterscheide Lichtquelle und beleuchtete Oberfläche.",
+        "why": "Der Mond reflektiert Sonnenlicht und ist kein Stern.",
+        "wrong": [
+          "Der Mond erzeugt nicht das Licht eines Sterns.",
+          "Eine Flagge erklärt die Beleuchtung nicht.",
+          "Der Mond reflektiert Sonnenlicht und ist kein Stern."
+        ]
+      },
+      "after": {
+        "prompt": "Woher kommt das helle Licht auf dem Mond?",
+        "answers": [
+          "Von eigenem Licht wie bei einem Stern",
+          "Von der Helligkeit, die während jeder Mondphase neu im Mond entsteht",
+          "Von reflektiertem Sonnenlicht"
+        ],
+        "correct": 2,
+        "hint": "Unterscheide Lichtquelle und beleuchtete Oberfläche.",
+        "why": "Der Mond reflektiert Sonnenlicht und ist kein Stern.",
+        "wrong": [
+          "Das Kapitel beschreibt zurückgeworfenes Sonnenlicht, keine eigene Sternenlichtquelle des Mondes.",
+          "Die Stellung ändert unsere Ansicht; das Licht stammt weiterhin von der Sonne.",
+          "Der Mond reflektiert Sonnenlicht und ist kein Stern."
+        ]
+      },
+      "beforeHash": "0685792d5eaff80a7d1e331cabeb282114c902bcc12416a3033b167587708264",
+      "afterHash": "fed51ba797bb8408ebe6720da41a1e265c9161e2042915308ff72e9afe14d8ba",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "moon-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "moon:4:0",
+      "before": {
+        "prompt": "In welchem Jahr landete Apollo 11 auf dem Mond?",
+        "answers": [
+          "Jeden Monat erneut",
+          "1969",
+          "1492"
+        ],
+        "correct": 1,
+        "hint": "Suche das belegte historische Ereignis.",
+        "why": "Apollo 11 landete 1969 auf dem Mond.",
+        "wrong": [
+          "Mondphasen sind keine wiederholten Apollo-Landungen.",
+          "Apollo 11 landete 1969 auf dem Mond.",
+          "1492 gehört nicht zu dieser Raumfahrtmission."
+        ]
+      },
+      "after": {
+        "prompt": "In welchem Jahr landete Apollo 11 auf dem Mond?",
+        "answers": [
+          "1961",
+          "1969",
+          "1972"
+        ],
+        "correct": 1,
+        "hint": "Suche das belegte historische Ereignis.",
+        "why": "Apollo 11 landete 1969 auf dem Mond.",
+        "wrong": [
+          "Diese Jahreszahl passt nicht zu der hier belegten Apollo-11-Landung.",
+          "Apollo 11 landete 1969 auf dem Mond.",
+          "Diese Jahreszahl passt nicht zu der hier belegten Apollo-11-Landung."
+        ]
+      },
+      "beforeHash": "13354a3ff83214e90058103ad83ceabd2921a5bc8815130cae75a135d0f6b1ab",
+      "afterHash": "0a089f4f01215114ed2a8f0140d202c9bf07c08d8161d70fdf5a763e374fe57e",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "moon-base",
+        "apollo"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "navigation:1:0",
+      "before": {
+        "prompt": "Was beschreibt die geografische Breite?",
+        "answers": [
+          "Nur die Höhe eines Hauses",
+          "Wie weit nördlich oder südlich des Äquators ein Ort liegt",
+          "Nur die Einwohnerzahl"
+        ],
+        "correct": 1,
+        "hint": "Suche die Richtung zur Äquator-Bezugslinie.",
+        "why": "Breite beschreibt die Nord-Süd-Lage.",
+        "wrong": [
+          "Gebäudehöhe ist keine geografische Breite.",
+          "Breite beschreibt die Nord-Süd-Lage.",
+          "Menschenzahl ist keine Ortskoordinate."
+        ]
+      },
+      "after": {
+        "prompt": "Was beschreibt die geografische Breite?",
+        "answers": [
+          "Wie weit östlich oder westlich vom Nullmeridian der Ort liegt",
+          "Wie weit nördlich oder südlich des Äquators ein Ort liegt",
+          "Die Entfernung des Ortes über dem Meeresspiegel"
+        ],
+        "correct": 1,
+        "hint": "Suche die Richtung zur Äquator-Bezugslinie.",
+        "why": "Breite beschreibt die Nord-Süd-Lage.",
+        "wrong": [
+          "Das beschreibt die geografische Länge, nicht die Breite.",
+          "Breite beschreibt die Nord-Süd-Lage.",
+          "Höhe über dem Meer ist eine weitere Ortsangabe, aber kein Breitengrad."
+        ]
+      },
+      "beforeHash": "235051b645dfc0cfd2926c386a8c8b0e5aaceae38bc8ba557d52a2fcb562676b",
+      "afterHash": "fc12a772d579bae990f2248913b431a5c844ca818e09ab499cb1efe516c74dcd",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "navigation-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "navigation:3:0",
+      "before": {
+        "prompt": "Wo liegen die Wendekreise ungefähr?",
+        "answers": [
+          "Beide direkt am Nordpol",
+          "Nur mitten im Erdkern",
+          "23,4 Grad nördlich und südlich des Äquators"
+        ],
+        "correct": 2,
+        "hint": "Suche die genannten Breiten auf der Oberfläche.",
+        "why": "Die Wendekreise liegen bei ungefähr 23,4 Grad Breite.",
+        "wrong": [
+          "Die Pole sind andere Breitenlagen.",
+          "Breitenlinien beschreiben die Oberfläche, nicht den Kern.",
+          "Die Wendekreise liegen bei ungefähr 23,4 Grad Breite."
+        ]
+      },
+      "after": {
+        "prompt": "Wo liegen die Wendekreise ungefähr?",
+        "answers": [
+          "Beide bei null Grad Breite",
+          "Bei neunzig Grad nördlicher und südlicher Breite",
+          "23,4 Grad nördlich und südlich des Äquators"
+        ],
+        "correct": 2,
+        "hint": "Suche die genannten Breiten auf der Oberfläche.",
+        "why": "Die Wendekreise liegen bei ungefähr 23,4 Grad Breite.",
+        "wrong": [
+          "Null Grad bezeichnet den Äquator; die beiden Wendekreise liegen nördlich und südlich davon.",
+          "Diese Breiten gehören zu den Polen, nicht zu den Wendekreisen.",
+          "Die Wendekreise liegen bei ungefähr 23,4 Grad Breite."
+        ]
+      },
+      "beforeHash": "afa9068c03754b64746425a8b13daff4ce30435d645237129fa4ef4fc37fc853",
+      "afterHash": "ffb174f4b803893d76cd6998a79b29b105e08cd4ce6ca840c3519e024ebad828",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "navigation-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "landscapes:0:0",
+      "before": {
+        "prompt": "Was kann beim Zusammenstoß von Platten mit Gestein geschehen?",
+        "answers": [
+          "Es verschwindet grundsätzlich",
+          "Es wird automatisch zu Atemluft",
+          "Es wird gefaltet und gehoben"
+        ],
+        "correct": 2,
+        "hint": "Suche eine langsame Formveränderung.",
+        "why": "Zusammenstoß kann Gestein verformen und Gebirge aufbauen.",
+        "wrong": [
+          "Das Material wird dabei nicht einfach vollständig gelöscht.",
+          "Die Verformung ist keine Verwandlung in Atemluft.",
+          "Zusammenstoß kann Gestein verformen und Gebirge aufbauen."
+        ]
+      },
+      "after": {
+        "prompt": "Was kann beim Zusammenstoß von Platten mit Gestein geschehen?",
+        "answers": [
+          "Es bleibt bei jeder Kollision vollständig unverformt",
+          "Es wird bei jeder Kollision automatisch vollständig flüssig",
+          "Es wird gefaltet und gehoben"
+        ],
+        "correct": 2,
+        "hint": "Suche eine langsame Formveränderung.",
+        "why": "Zusammenstoß kann Gestein verformen und Gebirge aufbauen.",
+        "wrong": [
+          "Das Kapitel beschreibt gerade eine Verformung und Hebung des Gesteins.",
+          "Faltung und Hebung erfordern keine vollständige Verflüssigung des gesamten Gesteins.",
+          "Zusammenstoß kann Gestein verformen und Gebirge aufbauen."
+        ]
+      },
+      "beforeHash": "3ee9da14041cef5c35c662d63fedd7ae1a4a628ced098922cfa61629d41d1e14",
+      "afterHash": "20cccdfbb3b323281314b7a238d9131a9c8e3388a7898ef6d2114f4f845b5abb",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "landscapes-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "landscapes:1:0",
+      "before": {
+        "prompt": "Was können Flüsse transportieren?",
+        "answers": [
+          "Nur Mondlicht",
+          "Sand, Steine und gelöste Stoffe",
+          "Nur Ländernamen"
+        ],
+        "correct": 1,
+        "hint": "Achte auf Material und Wasserbewegung.",
+        "why": "Flüsse transportieren Material in unterschiedlicher Form.",
+        "wrong": [
+          "Licht beschreibt keinen solchen Materialtransport.",
+          "Flüsse transportieren Material in unterschiedlicher Form.",
+          "Ein Name ist kein Gesteinsmaterial."
+        ]
+      },
+      "after": {
+        "prompt": "Was können Flüsse transportieren?",
+        "answers": [
+          "Nur Wasser, aber niemals Gesteinsmaterial",
+          "Sand, Steine und gelöste Stoffe",
+          "Nur Stoffe, die im Wasser vollständig gelöst sind"
+        ],
+        "correct": 1,
+        "hint": "Achte auf Material und Wasserbewegung.",
+        "why": "Flüsse transportieren Material in unterschiedlicher Form.",
+        "wrong": [
+          "Flüsse können auch feste Teilchen und gelöste Stoffe transportieren.",
+          "Flüsse transportieren Material in unterschiedlicher Form.",
+          "Auch Sand und Steine können mitgeführt werden; gelöste Stoffe sind nicht die einzige Form."
+        ]
+      },
+      "beforeHash": "a93e0cfb306fc0df5bcfaee681a53775b73b08f6dfe8e398f448fa7415990b5e",
+      "afterHash": "75df0d8369b84296561a9fd67f4b24b2752ca6ed2554439d79243626883aebeb",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "landscapes-base"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "climate:0:1",
+      "before": {
+        "prompt": "Welche Daten passen besser zum Untersuchen eines Klimatrends?",
+        "answers": [
+          "Nur ein Ländernamenrätsel",
+          "Lange vergleichbare Messreihen",
+          "Nur ein zufälliges Foto"
+        ],
+        "correct": 1,
+        "hint": "Vergleiche Wiederholung, Zeitraum und Messmethode.",
+        "why": "Viele vergleichbare Beobachtungen helfen, langfristige Veränderungen zu erkennen.",
+        "wrong": [
+          "Ein Name ist keine Zeitreihe von Messwerten.",
+          "Viele vergleichbare Beobachtungen helfen, langfristige Veränderungen zu erkennen.",
+          "Ein Bild allein beschreibt keinen Trend."
+        ]
+      },
+      "after": {
+        "prompt": "Welche Daten passen besser zum Untersuchen eines Klimatrends?",
+        "answers": [
+          "Nur die höchsten gemessenen Temperaturen, alle anderen weglassen",
+          "Lange vergleichbare Messreihen",
+          "Nur den besonders kalten Tag an einem einzelnen Ort"
+        ],
+        "correct": 1,
+        "hint": "Vergleiche Wiederholung, Zeitraum und Messmethode.",
+        "why": "Viele vergleichbare Beobachtungen helfen, langfristige Veränderungen zu erkennen.",
+        "wrong": [
+          "Eine einseitige Auswahl beschreibt keinen vollständigen vergleichbaren Verlauf.",
+          "Viele vergleichbare Beobachtungen helfen, langfristige Veränderungen zu erkennen.",
+          "Ein einzelner Tag ist keine langfristige Messreihe für den Trend."
+        ]
+      },
+      "beforeHash": "dc3c4f2855dc1a2a9e4d6a12cfc47a40f0906b5640ea24e8289e4798662fe0c9",
+      "afterHash": "ba75c0d57da4cd89d1afff390c920e240129b31561bcf8785c4f553dc2e54978",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "climate-base",
+        "weather-climate"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    },
+    {
+      "id": "climate:3:0",
+      "before": {
+        "prompt": "Welche Pflanzen sind typisch in vielen Tundragebieten?",
+        "answers": [
+          "Immer hohe tropische Palmen",
+          "Nur Korallentiere",
+          "Moose, Flechten und niedrige Sträucher"
+        ],
+        "correct": 2,
+        "hint": "Denke an kurze Sommer und niedrigen Wuchs.",
+        "why": "In vielen Tundragebieten wachsen niedrig bleibende Pflanzen.",
+        "wrong": [
+          "Tropische Palmen passen nicht zu den beschriebenen Bedingungen.",
+          "Korallen sind Meerestiere und keine Tundrapflanzen.",
+          "In vielen Tundragebieten wachsen niedrig bleibende Pflanzen."
+        ]
+      },
+      "after": {
+        "prompt": "Welche Pflanzen sind typisch in vielen Tundragebieten?",
+        "answers": [
+          "Viele hohe Bäume wie in einem warmen Regenwald",
+          "Nur nackter Boden, ohne Pflanzen",
+          "Moose, Flechten und niedrige Sträucher"
+        ],
+        "correct": 2,
+        "hint": "Denke an kurze Sommer und niedrigen Wuchs.",
+        "why": "In vielen Tundragebieten wachsen niedrig bleibende Pflanzen.",
+        "wrong": [
+          "Die im Kapitel verglichenen kurzen kalten Wachstumszeiten begünstigen einen anderen Wuchs.",
+          "Die Tundra ist nicht grundsätzlich pflanzenlos; die Erklärung nennt niedrig bleibende Formen.",
+          "In vielen Tundragebieten wachsen niedrig bleibende Pflanzen."
+        ]
+      },
+      "beforeHash": "593a5d9e0d186ea874a32217c066868100e06ac5c1229f121456113634cc9350",
+      "afterHash": "b1dacc8e6d567b1e8eb9abc48f6ba189a1c01f5595c3e09047d11c6ab435acbd",
+      "decision": "Fachlich passende Fehlvorstellungen statt sachfremder Ablenkung; individuelle Begründungen. Richtige Antwort und Index erhalten.",
+      "sourceIds": [
+        "climate-base",
+        "weather-climate"
+      ],
+      "sourceStatus": "Verknüpft mit bestehenden Kapitelbelegen; keine neue vollständige Originalquellen- oder unabhängige Fachabnahme behauptet.",
+      "independentReview": false
+    }
+  ]
+}

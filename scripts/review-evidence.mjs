@@ -6,8 +6,13 @@ import {sourceDigest} from './handoff.mjs';
 export const REVIEW_LIMIT=48*1024*1024;
 export const requiredScreenshots=[...['320','360','390','768','1024','1440','1920'].flatMap(w=>['quality-foundation-foundation-labs-'+w+'.png','quality-learning-journey-links-'+w+'.png']),...['320','1440'].flatMap(w=>['quality-news-feed-signed-news-rejected-'+w+'.png','quality-navigation-updates-all-details-'+w+'-full.png'])];
 export function retainScreenshot(name){
- if(/quality-learning-science-/.test(name))return /science-(pressure|diffusion|fractals|cell|fusion|comet|exoplanet)-(hero|model)-(320|1440)\.png$/.test(name);
- if(name.startsWith('journey-engine-')||name.startsWith('quality-foundation-')||name.startsWith('quality-news-feed-'))return true;
+ if(/quality-(?:learning|research)-science-/.test(name))return /science-(?:native-200-large|(?:surface-tension|encryption)-large-320)\.png$/.test(name)||/science-(pressure|diffusion|fractals|cell|fusion|comet|exoplanet)-(hero|model)-(320|1440)\.png$/.test(name);
+ // Engine tests still capture/measure four widths; upload mobile+desktop originals.
+ if(name.startsWith('journey-engine-'))return /-(320|1440)\.png$/.test(name);
+ if(name.startsWith('quality-foundation-')||name.startsWith('quality-news-feed-'))return true;
+ if(/quality-learning-journey-large-focus-/.test(name))return /-(320|1440)\.png$/.test(name);
+ // Full expanded-history Pflichtbilder already contain these archive-only rows.
+ if(/quality-navigation-updates-archive-/.test(name))return false;
  if(/quality-learning-(journey-links-|journey-large-focus-|journey-native|journey-[a-z]+-390\.png)/.test(name))return true;
  // Full long-history and zoom/failure screenshots are useful, not interchangeable thumbnails.
  if(/(?:200|zoom|offline|error|failure)/.test(name))return true;
@@ -37,7 +42,7 @@ export async function prepareReview(directory='.qa-output'){
  }
  const manifest={schemaVersion:1,status:complete&&!errors.length?'passed':'diagnostic',errors,build:report?.build??null,sourceDigest:handoff?.sourceDigest??null,generatedBytes,retainedBytes,limit:REVIEW_LIMIT,screenshots,reports:copied,meaning:'Every current captured PNG is hashed. Required and representative originals plus all reports are uploaded; omitted originals can be reproduced with the unchanged full browser suite. Failed runs keep every current image. No automatic visual approval.'};
  await fs.writeFile(path.join(destination,'review-manifest.json'),JSON.stringify(manifest,null,2)+'\n');
- console.log(JSON.stringify({status:manifest.status,generatedBytes,retainedBytes,images:screenshots.length,retained:screenshots.filter(s=>s.retained).length,errors}));
+ console.log(JSON.stringify({status:manifest.status,generatedBytes,retainedBytes,images:screenshots.length,retained:screenshots.filter(s=>s.retained).length,largestRetained:screenshots.filter(s=>s.retained).sort((a,b)=>b.bytes-a.bytes).slice(0,8).map(({file,bytes})=>({file,bytes})),errors}));
  if(errors.length)throw Error(errors.join('\n'));return manifest;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))await prepareReview();

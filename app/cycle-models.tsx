@@ -8,7 +8,7 @@ const WATER=[
 ];
 const MOON=[
  {title:'Neumond',text:'Die beleuchtete Hälfte ist von uns abgewandt. Der Mond steht am Himmel ungefähr in Richtung Sonne.',x:440,y:150,fill:'#34495e'},
- {title:'Zunehmender Halbmond',text:'Wir sehen die Hälfte der beleuchteten Mondscheibe. Der Mond selbst bleibt eine Kugel.',x:300,y:40,fill:'#34495e'},
+ {title:'Zunehmender Halbmond',text:'Die sichtbare Mondscheibe ist halb hell. Der Mond selbst bleibt eine Kugel.',x:300,y:40,fill:'#34495e'},
  {title:'Vollmond',text:'Wir sehen fast die ganze beleuchtete Seite. Der Mond steht der Sonne am Himmel ungefähr gegenüber.',x:160,y:150,fill:'#f4d98a'},
  {title:'Abnehmender Halbmond',text:'Wieder ist die halbe Scheibe beleuchtet. Danach nimmt die sichtbare Lichtfläche weiter ab.',x:300,y:260,fill:'#34495e'}
 ];
