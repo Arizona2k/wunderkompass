@@ -12,30 +12,65 @@
     "steps": [
       {
         "title": "Ein Zuhause im Weltall",
-        "text": "Die Erde ist ein Planet. Sie reist um die Sonne, zusammen mit sieben anderen Planeten. Die Sonne ist ein Stern und gibt uns Licht und Wärme. Die Erde ist der dritte Planet von der Sonne aus.",
-        "fact": "Die Sonne ist viel größer als die Erde. Auf unserer Weltkugel sind beide Größen nicht maßstabsgetreu dargestellt."
+        "text": "Die Erde ist ein Planet. Sie reist um die Sonne, zusammen mit sieben anderen Planeten. Die Sonne ist ein Stern und gibt uns Licht und Wärme. Die Erde ist der dritte Planet von der Sonne aus.\n\nEin Planet und ein Stern haben verschiedene Aufgaben: Die Sonne liefert Licht; die Erde empfängt es. So kannst du die beiden im Modell unterscheiden.",
+        "fact": "Die Sonne ist viel größer als die Erde. Auf unserer Weltkugel sind beide Größen nicht maßstabsgetreu dargestellt.",
+        "starter": "Die Erde ist unser Zuhause im Weltall. Sie zieht um die Sonne.",
+        "deeper": "Die gezeichneten Abstände sind stark verkürzt. Eine Bahn zeigt einen Weg, keine Schiene im Weltall.",
+        "whyItMatters": "Du erkennst, weshalb eine leuchtende Sonne und eine beleuchtete Erde verschieden sind.",
+        "observe": "Zeige im Sonnensystemmodell Sonne und Erde. Erkläre einer anderen Person, welches Objekt Licht aussendet.",
+        "sourceIds": [
+          "planet-base"
+        ]
       },
       {
         "title": "Land und Wasser",
-        "text": "Etwa 71 von 100 Teilen der Erdoberfläche sind vom Ozean bedeckt. Darum sieht die Erde aus dem Weltall überwiegend blau aus. Die großen Landflächen heißen Kontinente. Inseln sind kleinere Landflächen, die ringsum von Wasser umgeben sind.",
+        "text": "Etwa 71 von 100 Teilen der Erdoberfläche sind vom Ozean bedeckt. Darum sieht die Erde aus dem Weltall überwiegend blau aus. Die großen Landflächen heißen Kontinente. Inseln sind kleinere Landflächen, die ringsum von Wasser umgeben sind.\n\nStell dir hundert gleich große Felder vor: Etwa 71 wären Meer. Das beschreibt eine Fläche, nicht die Menge des Wassers oder die Zahl der Inseln.",
         "fact": "Die Erde ist keine perfekte Kugel. An den Polen ist sie ein kleines bisschen abgeflacht.",
-        "tryIt": "Finde auf der Weltkugel eine Insel und einen Kontinent."
+        "tryIt": "Finde auf der Weltkugel eine Insel und einen Kontinent.",
+        "starter": "Auf der Erde gibt es viel Meer und auch Land.",
+        "deeper": "Eine Landfläche kann aus der Ferne klein wirken. Maßstab und Blickwinkel entscheiden mit, was du auf der Kugel erkennst.",
+        "whyItMatters": "Du kannst die Zahl 71 Prozent mit einem anschaulichen Flächenvergleich verbinden.",
+        "observe": "Zeichne zehn gleich große Felder und färbe ungefähr sieben blau. Beschreibe, was dein kleines Modell vereinfacht.",
+        "sourceIds": [
+          "planet-base"
+        ]
       },
       {
         "title": "Eine unsichtbare Hülle",
-        "text": "Um die Erde liegt die Atmosphäre. Das ist eine Hülle aus Gasen. Wir nennen das Gasgemisch um uns herum Luft. Luft ist unsichtbar, aber du kannst bewegte Luft als Wind spüren. Sie enthält den Sauerstoff, den wir zum Atmen brauchen.",
-        "fact": "Auch eine leere Flasche ist nicht wirklich leer: In ihr ist Luft."
+        "text": "Um die Erde liegt die Atmosphäre. Das ist eine Hülle aus Gasen. Wir nennen das Gasgemisch um uns herum Luft. Luft ist unsichtbar, aber du kannst bewegte Luft als Wind spüren. Sie enthält den Sauerstoff, den wir zum Atmen brauchen.\n\nEin Luftballon macht die unsichtbare Luft bemerkbar: Beim Aufblasen nimmt sie Platz ein. Luft besteht aus mehreren Gasen, nicht nur aus Sauerstoff.",
+        "fact": "Auch eine leere Flasche ist nicht wirklich leer: In ihr ist Luft.",
+        "starter": "Luft umgibt die Erde. Wind ist bewegte Luft.",
+        "deeper": "Eine Hülle aus Gas hat keine feste Wand. Unsere Zeichnung gibt der Atmosphäre einen sichtbaren Rand, damit du sie erkennen kannst.",
+        "whyItMatters": "Du unterscheidest Luft als Stoffgemisch von Wind als Bewegung.",
+        "observe": "Fächere dir mit einem Blatt Papier sanft Luft zu. Was spürst du, obwohl du den bewegten Stoff nicht siehst?",
+        "sourceIds": [
+          "planet-base"
+        ]
       },
       {
         "title": "Warum fallen wir nicht herunter?",
-        "text": "Die Schwerkraft zieht Dinge zur Mitte der Erde. Deshalb bleiben wir auf dem Boden. Für Menschen auf der anderen Seite der Erde ist unten ebenfalls die Richtung zur Erdmitte. Es gibt im Weltall kein gemeinsames Oben und Unten für alle.",
+        "text": "Die Schwerkraft zieht Dinge zur Mitte der Erde. Deshalb bleiben wir auf dem Boden. Für Menschen auf der anderen Seite der Erde ist unten ebenfalls die Richtung zur Erdmitte. Es gibt im Weltall kein gemeinsames Oben und Unten für alle.\n\nStell dir drei Kinder an verschiedenen Stellen eines Balls vor. Für jedes zeigt der Pfeil nach unten zur Ballmitte; ihre Pfeile zeigen trotzdem nicht alle in dieselbe Richtung.",
         "fact": "Die Schwerkraft hält auch die Atmosphäre an der Erde fest.",
-        "tryIt": "Zeige an drei Stellen der Weltkugel, in welche Richtung dort unten ist."
+        "tryIt": "Zeige an drei Stellen der Weltkugel, in welche Richtung dort unten ist.",
+        "starter": "Unten zeigt zur Mitte der Erde. Das gilt überall auf ihr.",
+        "deeper": "Die Kugelzeichnung betrachtet die Erde von außen. Dein örtliches Oben und Unten richtet sich nach deinem Standort, nicht nach dem oberen Bildrand.",
+        "whyItMatters": "Du kannst erklären, warum auch Menschen auf der anderen Erdseite auf dem Boden bleiben.",
+        "observe": "Male drei Pfeile zur Mitte eines Kreises. Drehe das Blatt und prüfe, ob die Erklärung noch stimmt.",
+        "sourceIds": [
+          "planet-base"
+        ]
       },
       {
         "title": "Zwei Bewegungen, zwei Zeiten",
-        "text": "Die Erde dreht sich um ihre Achse. Eine Umdrehung dauert ungefähr einen Tag. Gleichzeitig reist sie um die Sonne. Für eine ganze Reise braucht sie ungefähr ein Jahr. Tag und Jahr sind also zwei verschiedene Bewegungen.",
-        "fact": "Ein Jahr dauert ungefähr 365¼ Tage. Schaltjahre helfen unserem Kalender, dazu zu passen."
+        "text": "Die Erde dreht sich um ihre Achse. Eine Umdrehung dauert ungefähr einen Tag. Gleichzeitig reist sie um die Sonne. Für eine ganze Reise braucht sie ungefähr ein Jahr. Tag und Jahr sind also zwei verschiedene Bewegungen.\n\nEine Drehung und ein Umlauf lassen sich getrennt beobachten: Drehst du einen Ball am selben Platz, zeigt das den Tag. Sein Weg um eine Lampe steht für das Jahr.",
+        "fact": "Ein Jahr dauert ungefähr 365¼ Tage. Schaltjahre helfen unserem Kalender, dazu zu passen.",
+        "starter": "Die Erde dreht sich und reist um die Sonne. Tag und Jahr sind verschieden.",
+        "deeper": "Ein Sonnentag und eine Drehung gegenüber fernen Sternen werden unterschiedlich gemessen. Unsere Angabe ungefähr ein Tag ist eine bewusste Vereinfachung.",
+        "whyItMatters": "Du verwechselst eine schnelle Drehung nicht mit dem langen jährlichen Umlauf.",
+        "observe": "Bewege einen Ball langsam im Kreis und drehe ihn zugleich. Beschreibe beide Bewegungen getrennt; Zahlen und Geschwindigkeiten sind im Versuch nicht maßstabsgetreu.",
+        "sourceIds": [
+          "planet-base"
+        ]
       }
     ],
     "question": {
@@ -66,28 +101,63 @@
     "steps": [
       {
         "title": "Vier Schichten",
-        "text": "Von außen nach innen finden wir Erdkruste, Erdmantel, äußeren Kern und inneren Kern. Die Kruste ist eine sehr dünne Gesteinshaut. Der Mantel darunter ist viel dicker. Die beiden Kernschichten bestehen vor allem aus Metall.",
-        "fact": "Niemand kann bis zum Erdkern bohren. Forschende untersuchen unter anderem, wie Erdbebenwellen durch die Erde wandern."
+        "text": "Von außen nach innen finden wir Erdkruste, Erdmantel, äußeren Kern und inneren Kern. Die Kruste ist eine sehr dünne Gesteinshaut. Der Mantel darunter ist viel dicker. Die beiden Kernschichten bestehen vor allem aus Metall.\n\nDie vier Namen helfen beim Ordnen, aber die Schichten sind nicht gleich dick. Eine dünne Schale ist ein Vergleich für die Kruste, keine genaue Nachbildung der Erde.",
+        "fact": "Niemand kann bis zum Erdkern bohren. Forschende untersuchen unter anderem, wie Erdbebenwellen durch die Erde wandern.",
+        "starter": "Die Erde hat Schichten. Ihre dünne Kruste liegt ganz außen.",
+        "deeper": "Das Wissen über tiefe Schichten ist indirekt: Messungen an der Oberfläche und das Verhalten von Erdbebenwellen müssen zusammenpassen.",
+        "whyItMatters": "Du erkennst, weshalb ein Erdmodell sowohl Schichtnamen als auch Unterschiede zeigen muss.",
+        "observe": "Vergleiche im Erdschichtenmodell die Kruste mit dem Mantel. Beschreibe, was eine Zeichnung mit vier gleich breiten Ringen falsch nahelegen würde.",
+        "sourceIds": [
+          "inside-base"
+        ]
       },
       {
         "title": "Heiß heißt nicht immer flüssig",
-        "text": "Der Mantel ist sehr heiß, besteht aber überwiegend aus festem Gestein. Über sehr lange Zeit kann es sich langsam verformen. Der äußere Kern ist flüssig. Der innere Kern ist trotz großer Hitze fest, weil dort ein gewaltiger Druck herrscht.",
-        "fact": "Die Erde ist innen kein riesiger Hohlraum voller Lava."
+        "text": "Der Mantel ist sehr heiß, besteht aber überwiegend aus festem Gestein. Über sehr lange Zeit kann es sich langsam verformen. Der äußere Kern ist flüssig. Der innere Kern ist trotz großer Hitze fest, weil dort ein gewaltiger Druck herrscht.\n\nTemperatur allein verrät nicht, ob ein Stoff fest oder flüssig ist. Auch der Druck spielt eine Rolle. Deshalb können zwei heiße Schichten unterschiedliche Zustände haben.",
+        "fact": "Die Erde ist innen kein riesiger Hohlraum voller Lava.",
+        "starter": "Heißes Gestein kann fest sein. Nicht alles im Erdinneren ist flüssig.",
+        "deeper": "Langsame Verformung ist etwas anderes als frei fließende Lava. Im Mantel geht es um geologische Zeiträume, nicht um Sekunden im Labor.",
+        "whyItMatters": "Du vermeidest die Vorstellung von Kontinenten auf einem unterirdischen Lavasee.",
+        "observe": "Ordne Mantel, äußeren Kern und inneren Kern nach überwiegend fest oder flüssig. Begründe, warum die Farbe Rot im Modell keine Flüssigkeit beweist.",
+        "sourceIds": [
+          "inside-base"
+        ]
       },
       {
         "title": "Die Erde hat ein Plattenpuzzle",
-        "text": "Die feste äußere Hülle ist in große Platten geteilt. Sie bestehen aus der Kruste und dem obersten festen Teil des Mantels. Die Platten bewegen sich meistens nur wenige Zentimeter im Jahr. Darauf reisen auch die Kontinente ganz langsam mit.",
-        "fact": "Eine Platte kann Land und Meeresboden tragen. Die Plattengrenzen sind nicht die Ländergrenzen."
+        "text": "Die feste äußere Hülle ist in große Platten geteilt. Sie bestehen aus der Kruste und dem obersten festen Teil des Mantels. Die Platten bewegen sich meistens nur wenige Zentimeter im Jahr. Darauf reisen auch die Kontinente ganz langsam mit.\n\nEin Puzzle ist ein hilfreicher Vergleich für die Aufteilung, doch echte Platten haben keine überall sichtbaren Ränder. Ländergrenzen wurden von Menschen festgelegt und erzählen etwas anderes.",
+        "fact": "Eine Platte kann Land und Meeresboden tragen. Die Plattengrenzen sind nicht die Ländergrenzen.",
+        "starter": "Große feste Platten tragen Land und Meeresboden. Sie bewegen sich langsam.",
+        "deeper": "Kruste und oberster fester Mantel bilden zusammen die Lithosphäre. Die Platten gehören zu dieser festen äußeren Hülle.",
+        "whyItMatters": "Du kannst eine politische Karte und eine Plattenkarte mit verschiedenen Fragen lesen.",
+        "observe": "Wähle auf der Plattenebene eine Platte. Prüfe, ob sie mehrere Länder oder auch einen Teil des Ozeans trägt.",
+        "sourceIds": [
+          "inside-base"
+        ]
       },
       {
         "title": "Zusammen, auseinander, vorbei",
-        "text": "Platten können auseinanderdriften, zusammenstoßen oder aneinander vorbeigleiten. Wo Kontinente zusammenstoßen, können hohe Gebirge entstehen. Wo eine Platte unter eine andere taucht, entstehen oft Vulkane. Bei allen drei Arten von Grenzen können Erdbeben auftreten.",
-        "fact": "Die Entstehung eines Gebirges dauert viele Millionen Jahre. Das passiert nicht in wenigen Sekunden wie im Modell."
+        "text": "Platten können auseinanderdriften, zusammenstoßen oder aneinander vorbeigleiten. Wo Kontinente zusammenstoßen, können hohe Gebirge entstehen. Wo eine Platte unter eine andere taucht, entstehen oft Vulkane. Bei allen drei Arten von Grenzen können Erdbeben auftreten.\n\nDie Bewegungsrichtung ist entscheidend: Zusammenschieben kann Gestein heben, Auseinandergehen schafft Platz, seitliches Gleiten verschiebt Nachbarn. Das Modell zeigt nur typische Möglichkeiten.",
+        "fact": "Die Entstehung eines Gebirges dauert viele Millionen Jahre. Das passiert nicht in wenigen Sekunden wie im Modell.",
+        "starter": "Platten können zusammenstoßen, auseinandergehen oder aneinander vorbeigleiten.",
+        "deeper": "Nicht jede Plattengrenze sieht gleich aus. Eine Skizze beschreibt einen Grundfall; die wirkliche Form und Geschichte einer Grenze können komplizierter sein.",
+        "whyItMatters": "Du verbindest Bewegungen mit ihren möglichen Folgen, statt alle Grenzen gleich zu behandeln.",
+        "observe": "Stelle im Plattenlabor nacheinander drei Bewegungen ein. Sage jeweils zuerst eine mögliche Folge voraus und vergleiche sie mit dem Modell.",
+        "sourceIds": [
+          "inside-base"
+        ]
       },
       {
         "title": "Magma oder Lava?",
-        "text": "Geschmolzenes Gestein unter der Erdoberfläche heißt Magma. Erreicht es die Oberfläche, nennen wir es Lava. Bei einem Ausbruch können auch Asche und Gase austreten. Manche Vulkane liegen an Plattengrenzen; andere, wie auf Hawaii, über heißen Stellen im Erdinneren.",
-        "fact": "Vulkanasche ist kein verbranntes Holz, sondern besteht aus winzigen Gesteins- und Glasstückchen."
+        "text": "Geschmolzenes Gestein unter der Erdoberfläche heißt Magma. Erreicht es die Oberfläche, nennen wir es Lava. Bei einem Ausbruch können auch Asche und Gase austreten. Manche Vulkane liegen an Plattengrenzen; andere, wie auf Hawaii, über heißen Stellen im Erdinneren.\n\nEs ist der Ort, der die Bezeichnung ändert. Zusätzlich können Gas und feste Teilchen austreten. Ein Lavastrom und eine Aschewolke sind deshalb verschiedene Teile eines Ausbruchs.",
+        "fact": "Vulkanasche ist kein verbranntes Holz, sondern besteht aus winzigen Gesteins- und Glasstückchen.",
+        "starter": "Unter der Erde heißt geschmolzenes Gestein Magma, an der Oberfläche Lava.",
+        "deeper": "Vulkane sind nicht nur Berge mit roter Spitze. Lage, Gestein und Gas beeinflussen ihr Verhalten; das Lernmodell ist keine Gefahrenvorhersage.",
+        "whyItMatters": "Du kannst einen Ausbruch genauer beschreiben als mit dem Wort Feuer.",
+        "observe": "Zeige in der Vulkanzeichnung einen Ort unter und einen über der Oberfläche. Beschrifte beide und erkläre, warum der Name wechselt.",
+        "sourceIds": [
+          "inside-base"
+        ]
       }
     ],
     "question": {
@@ -117,29 +187,64 @@
     "steps": [
       {
         "title": "Drei Formen von Wasser",
-        "text": "Wasser kann fest, flüssig oder gasförmig sein. Festes Wasser heißt Eis. Flüssiges Wasser fließt. Gasförmiges Wasser heißt Wasserdampf und ist unsichtbar. Die weiße Wolke über einem heißen Getränk besteht dagegen aus kleinen Wassertröpfchen.",
-        "fact": "Wasser kann auch bei Zimmertemperatur verdunsten. Es muss dafür nicht kochen."
+        "text": "Wasser kann fest, flüssig oder gasförmig sein. Festes Wasser heißt Eis. Flüssiges Wasser fließt. Gasförmiges Wasser heißt Wasserdampf und ist unsichtbar. Die weiße Wolke über einem heißen Getränk besteht dagegen aus kleinen Wassertröpfchen.\n\nEin nasses Tuch muss nicht kochen, um trocken zu werden. Wasser kann an seiner Oberfläche in die Luft gelangen. Dabei verschwinden die Wasserteilchen nicht einfach.",
+        "fact": "Wasser kann auch bei Zimmertemperatur verdunsten. Es muss dafür nicht kochen.",
+        "starter": "Eis, Wasser und unsichtbarer Wasserdampf sind Formen desselben Stoffes.",
+        "deeper": "Verdunsten geschieht an der Oberfläche; Kochen ist ein anderer Vorgang. Eine sichtbare weiße Wolke besteht aus Tröpfchen, nicht aus dem unsichtbaren Gas.",
+        "whyItMatters": "Du unterscheidest Zustandsänderung vom Verschwinden eines Stoffes.",
+        "observe": "Beobachte ein nasses Tuch beim Trocknen. Vermute, wohin das Wasser gelangt. Nutze kein heißes Wasser und keine Herdplatte.",
+        "sourceIds": [
+          "water-base"
+        ]
       },
       {
         "title": "Ab in die Luft",
-        "text": "Die Sonne erwärmt Meere, Seen und den Boden. Ein Teil des Wassers verdunstet und gelangt als Wasserdampf in die Luft. Auch Pflanzen geben Wasser ab. Bei Wärme, Wind und trockener Luft kann Wasser schneller verdunsten.",
+        "text": "Die Sonne erwärmt Meere, Seen und den Boden. Ein Teil des Wassers verdunstet und gelangt als Wasserdampf in die Luft. Auch Pflanzen geben Wasser ab. Bei Wärme, Wind und trockener Luft kann Wasser schneller verdunsten.\n\nBeim Trocknen spielt die Umgebung mit: Bewegt sich die Luft, kann sie feuchte Luft am Tuch ersetzen. Deshalb ist nicht allein die Temperatur wichtig.",
         "fact": "Eine Pfütze wird kleiner, obwohl niemand das Wasser weggeschöpft hat: Ein Teil ist in der Luft.",
-        "tryIt": "Was passiert mit einer nassen Socke, wenn sie zum Trocknen aufgehängt wird?"
+        "tryIt": "Was passiert mit einer nassen Socke, wenn sie zum Trocknen aufgehängt wird?",
+        "starter": "Wasser gelangt aus Pfützen, Meeren und Pflanzen in die Luft.",
+        "deeper": "Mehrere Bedingungen wirken gleichzeitig. Im Wassermodell veränderst du möglichst nur einen Regler, damit du eine Ursache besser vergleichen kannst.",
+        "whyItMatters": "Du lernst, einen fairen Vergleich von mehreren gleichzeitig veränderten Dingen zu unterscheiden.",
+        "observe": "Vergleiche im Wasserkreislauflabor zwei Einstellungen mit nur einem veränderten Regler. Beschreibe eine Beobachtung und eine Vermutung getrennt.",
+        "sourceIds": [
+          "water-base"
+        ]
       },
       {
         "title": "Wie entstehen Wolken?",
-        "text": "Wenn feuchte Luft abkühlt, kann sich Wasserdampf in winzige Tröpfchen verwandeln. Das heißt Kondensation. Viele Tröpfchen oder Eiskristalle zusammen bilden eine Wolke. Erst wenn sie groß genug werden, fällt Niederschlag.",
-        "fact": "Eine Wolke besteht nicht einfach aus unsichtbarem Wasserdampf. Wir sehen ihre Tröpfchen oder Eiskristalle."
+        "text": "Wenn feuchte Luft abkühlt, kann sich Wasserdampf in winzige Tröpfchen verwandeln. Das heißt Kondensation. Viele Tröpfchen oder Eiskristalle zusammen bilden eine Wolke. Erst wenn sie groß genug werden, fällt Niederschlag.\n\nKondensation macht Wasser sichtbar, das vorher als Gas in der Luft war. Die Tropfen außen am kalten Glas kommen deshalb aus der Luft und nicht durch die Glaswand.",
+        "fact": "Eine Wolke besteht nicht einfach aus unsichtbarem Wasserdampf. Wir sehen ihre Tröpfchen oder Eiskristalle.",
+        "starter": "Kühlt feuchte Luft ab, können Tröpfchen entstehen. Viele bilden eine Wolke.",
+        "deeper": "Nicht jede Abkühlung erzeugt sofort eine Wolke. Die vorhandene Feuchtigkeit und die Bedingungen der Luft entscheiden mit.",
+        "whyItMatters": "Du erkennst einen unsichtbaren Stoff an seiner sichtbaren Veränderung.",
+        "observe": "Beobachte mit einem Erwachsenen ein kaltes Wasserglas. Vermute zuerst, woher Tropfen außen kommen, und vergleiche deine Erklärung mit dem Kapitel.",
+        "sourceIds": [
+          "water-base"
+        ]
       },
       {
         "title": "Zurück auf die Erde",
-        "text": "Niederschlag kann Regen, Schnee oder Hagel sein. Wasser sammelt sich in Bächen, Flüssen und Seen. Ein Teil versickert im Boden und wird zu Grundwasser. Flüsse bringen viel Wasser zurück ins Meer. Dort kann seine Reise von Neuem beginnen.",
-        "fact": "Der Wasserkreislauf hat keinen festen Startpunkt. Wasser kann auch lange im Eis oder im Boden bleiben."
+        "text": "Niederschlag kann Regen, Schnee oder Hagel sein. Wasser sammelt sich in Bächen, Flüssen und Seen. Ein Teil versickert im Boden und wird zu Grundwasser. Flüsse bringen viel Wasser zurück ins Meer. Dort kann seine Reise von Neuem beginnen.\n\nZwei Regentropfen müssen nicht denselben Weg nehmen. Einer fließt über den Boden, ein anderer versickert. Manche bleiben lange gespeichert, bevor sie weiterwandern.",
+        "fact": "Der Wasserkreislauf hat keinen festen Startpunkt. Wasser kann auch lange im Eis oder im Boden bleiben.",
+        "starter": "Wasser fällt als Niederschlag und findet viele Wege durch Land und Meer.",
+        "deeper": "Ein Kreislauf bedeutet keine überall gleich schnelle Rundreise. Pfeile zeigen Verbindungen zwischen Speichern, nicht die Reise jedes einzelnen Tropfens.",
+        "whyItMatters": "Du kannst in einer einfachen Grafik mehrere echte Wasserwege erkennen.",
+        "observe": "Zeichne zwei mögliche Wege vom Regen zum Meer. Markiere, wo Wasser auf seinem Weg länger gespeichert sein könnte.",
+        "sourceIds": [
+          "water-base"
+        ]
       },
       {
         "title": "Trinkwasser ist kostbar",
-        "text": "Das meiste Wasser auf der Erde ist salzig. Süßwasser enthält viel weniger Salz. Ein großer Teil des Süßwassers steckt in Eis oder im Boden. Sauberes Trinkwasser muss deshalb gut geschützt und aufbereitet werden.",
-        "fact": "Klares Wasser ist nicht automatisch Trinkwasser. Aus Bächen und Seen trinken wir nicht einfach."
+        "text": "Das meiste Wasser auf der Erde ist salzig. Süßwasser enthält viel weniger Salz. Ein großer Teil des Süßwassers steckt in Eis oder im Boden. Sauberes Trinkwasser muss deshalb gut geschützt und aufbereitet werden.\n\nSalzgehalt und Sauberkeit sind verschiedene Fragen. Auch Süßwasser kann ungeeignet zum Trinken sein. Wasseraufbereitung und Schutz der Wasserquellen gehören deshalb zusammen.",
+        "fact": "Klares Wasser ist nicht automatisch Trinkwasser. Aus Bächen und Seen trinken wir nicht einfach.",
+        "starter": "Sauberes Trinkwasser ist wertvoll. Klares Wasser ist nicht automatisch sicher.",
+        "deeper": "Ein Lernversuch ersetzt keine Prüfung der Trinkwasserqualität. Farbe und Geruch allein sind keine sichere Freigabe.",
+        "whyItMatters": "Du verstehst, warum wir unbekanntes Wasser nicht einfach probieren.",
+        "observe": "Suche mit einem Erwachsenen den Weg eures Trinkwassers heraus. Nutzt Informationen des Wasserversorgers; probiert kein Wasser aus Bächen oder Seen.",
+        "sourceIds": [
+          "water-base"
+        ]
       }
     ],
     "question": {
@@ -168,29 +273,64 @@
     "steps": [
       {
         "title": "Was ist heute draußen los?",
-        "text": "Wetter ist, was gerade in der Luft um uns herum passiert: Ist es warm oder kalt? Regnet es? Weht Wind? Wetter kann sich schon innerhalb eines Tages ändern. Forschende messen Temperatur, Luftdruck, Wind und Niederschlag.",
-        "fact": "Ein Thermometer misst die Temperatur. Ein Regenmesser misst, wie viel Regen gefallen ist."
+        "text": "Wetter ist, was gerade in der Luft um uns herum passiert: Ist es warm oder kalt? Regnet es? Weht Wind? Wetter kann sich schon innerhalb eines Tages ändern. Forschende messen Temperatur, Luftdruck, Wind und Niederschlag.\n\nWarm fühlen und Temperatur messen sind nicht dasselbe. Ein Messgerät hilft, Beobachtungen verschiedener Tage zu vergleichen. Dabei sollte man ähnliche Bedingungen wählen.",
+        "fact": "Ein Thermometer misst die Temperatur. Ein Regenmesser misst, wie viel Regen gefallen ist.",
+        "starter": "Wetter beschreibt, was gerade draußen passiert. Wir können es beobachten und messen.",
+        "deeper": "Eine Einzelmessung gilt für ihren Ort und Zeitpunkt. Sie beschreibt nicht automatisch eine ganze Stadt oder einen langen Zeitraum.",
+        "whyItMatters": "Du trennst einen persönlichen Eindruck von einem vergleichbaren Messwert.",
+        "observe": "Beschreibe das Wetter ohne Zahlen und mit einem vorhandenen Thermometer. Notiere auch Ort und Zeit und vergleiche beide Beschreibungen.",
+        "sourceIds": [
+          "weather-base"
+        ]
       },
       {
         "title": "Wind ist Luft in Bewegung",
-        "text": "Die Sonne erwärmt die Erde nicht überall gleich. Dadurch entstehen Unterschiede in Temperatur und Luftdruck. Luft setzt sich in Bewegung: Es weht Wind. Auch die Drehung der Erde beeinflusst große Windsysteme.",
-        "fact": "Wind kann Samen verteilen, Wolken verschieben und Windräder antreiben."
+        "text": "Die Sonne erwärmt die Erde nicht überall gleich. Dadurch entstehen Unterschiede in Temperatur und Luftdruck. Luft setzt sich in Bewegung: Es weht Wind. Auch die Drehung der Erde beeinflusst große Windsysteme.\n\nUnterschiede im Luftdruck helfen, Luft anzutreiben. Wind bewegt Wolken oder Blätter; sie sind Hinweise auf seine Wirkung, nicht die Luft selbst.",
+        "fact": "Wind kann Samen verteilen, Wolken verschieben und Windräder antreiben.",
+        "starter": "Wind ist Luft, die sich bewegt. Er kann schwach oder stark sein.",
+        "deeper": "Das Wetterstationsmodell vereinfacht viele gleichzeitig wirkende Vorgänge. Ein einzelner Regler bildet keine vollständige Wettervorhersage ab.",
+        "whyItMatters": "Du kannst Bewegung als Hinweis auf einen unsichtbaren Vorgang nutzen.",
+        "observe": "Beobachte Blätter sicher durch ein Fenster. Trenne die Beobachtung Blatt bewegt sich von der Erklärung Luft bewegt das Blatt.",
+        "sourceIds": [
+          "weather-base"
+        ]
       },
       {
         "title": "Wolken beobachten",
-        "text": "Wolken können wie Watte, wie dünne Federn oder wie eine graue Decke aussehen. Ihre Form verrät etwas über die Vorgänge in der Luft. Aus manchen Wolken fällt Regen. Nicht jede Wolke regnet: Ihre Tröpfchen sind oft noch sehr klein.",
+        "text": "Wolken können wie Watte, wie dünne Federn oder wie eine graue Decke aussehen. Ihre Form verrät etwas über die Vorgänge in der Luft. Aus manchen Wolken fällt Regen. Nicht jede Wolke regnet: Ihre Tröpfchen sind oft noch sehr klein.\n\nEine Wolkenzeichnung hält einen Moment fest. Wenn du später erneut schaust, können Form und Lage anders sein. Eine Beobachtungsreihe verrät mehr als ein einzelnes Bild.",
         "fact": "Nebel ist eine Wolke direkt am Boden.",
-        "tryIt": "Sieh aus dem Fenster. Zeichne eine Wolkenform und beschreibe sie mit drei Wörtern."
+        "tryIt": "Sieh aus dem Fenster. Zeichne eine Wolkenform und beschreibe sie mit drei Wörtern.",
+        "starter": "Wolken sehen verschieden aus. Nicht jede Wolke bringt Regen.",
+        "deeper": "Aus der Form allein folgt keine sichere lokale Vorhersage. Wolkenbeobachtung ist ein Hinweis unter mehreren Wetterdaten.",
+        "whyItMatters": "Du bemerkst Veränderungen, statt Wolken nur nach ihrem Aussehen zu benennen.",
+        "observe": "Skizziere vom Fenster aus dieselbe Himmelsstelle zweimal. Notiere die Zeit und beschreibe, was sich verändert hat, ohne direkt in die Sonne zu schauen.",
+        "sourceIds": [
+          "weather-base"
+        ]
       },
       {
         "title": "Wetter ist kurz, Klima ist lang",
-        "text": "Wetter beschreibt einzelne Stunden und Tage. Klima beschreibt, welches Wetter in einer Gegend über viele Jahre typisch ist. Für Klimavergleiche betrachten Forschende oft mindestens 30 Jahre. Ein kalter Tag allein sagt deshalb wenig über die Erwärmung des Klimas aus.",
-        "fact": "Deine Kleidung passt du an das heutige Wetter an. Die typischen Jahreszeiten deiner Gegend gehören zum Klima."
+        "text": "Wetter beschreibt einzelne Stunden und Tage. Klima beschreibt, welches Wetter in einer Gegend über viele Jahre typisch ist. Für Klimavergleiche betrachten Forschende oft mindestens 30 Jahre. Ein kalter Tag allein sagt deshalb wenig über die Erwärmung des Klimas aus.\n\nEine Reihe von drei Tagen ist noch kein Klimabeleg. Für einen langfristigen Vergleich müssen viele Beobachtungen aus vergleichbaren Zeiträumen betrachtet werden.",
+        "fact": "Deine Kleidung passt du an das heutige Wetter an. Die typischen Jahreszeiten deiner Gegend gehören zum Klima.",
+        "starter": "Wetter ist heute. Klima beschreibt typische Bedingungen über viele Jahre.",
+        "deeper": "Ein Mittelwert fasst viele Daten zusammen, verschweigt aber die einzelnen Unterschiede. Klima umfasst auch Muster und Schwankungen, nicht nur eine Zahl.",
+        "whyItMatters": "Du erkennst, warum ein kalter Tag einer langfristigen Erwärmung nicht widerspricht.",
+        "observe": "Erfinde keine Messwerte: Vergleiche dein Wetterblatt mit einer datierten Klimabeschreibung. Erkläre, welche unterschiedliche Frage beide beantworten.",
+        "sourceIds": [
+          "weather-base"
+        ]
       },
       {
         "title": "Wie wissen wir das Wetter von morgen?",
-        "text": "Wetterstationen, Satelliten und andere Messgeräte sammeln Daten. Computer berechnen daraus Vorhersagen. Weil die Luft ständig in Bewegung ist, bleiben Vorhersagen unsicher. Je weiter der Blick in die Zukunft geht, desto größer ist diese Unsicherheit meistens.",
-        "fact": "Eine Vorhersage kann sehr hilfreich sein, auch wenn sie nicht auf die Minute stimmt."
+        "text": "Wetterstationen, Satelliten und andere Messgeräte sammeln Daten. Computer berechnen daraus Vorhersagen. Weil die Luft ständig in Bewegung ist, bleiben Vorhersagen unsicher. Je weiter der Blick in die Zukunft geht, desto größer ist diese Unsicherheit meistens.\n\nEine Vorhersage ist ein begründeter Blick nach vorn, keine bereits gemachte Beobachtung. Werden neue Daten verfügbar, kann sie angepasst werden. Das ist kein Zeichen von willkürlichem Raten.",
+        "fact": "Eine Vorhersage kann sehr hilfreich sein, auch wenn sie nicht auf die Minute stimmt.",
+        "starter": "Messgeräte und Computer helfen beim Wetterbericht. Trotzdem kann er sich ändern.",
+        "deeper": "Unsicherheit wächst häufig mit dem Vorhersageabstand. Auch Ort und Wetterlage beeinflussen, wie genau eine Aussage sein kann.",
+        "whyItMatters": "Du kannst eine veränderte Vorhersage als neue Einschätzung verstehen.",
+        "observe": "Notiere einen Wetterbericht und vergleiche ihn später mit dem beobachteten Wetter. Markiere, was passte und wo die Aussage unsicher war.",
+        "sourceIds": [
+          "weather-base"
+        ]
       }
     ],
     "question": {
@@ -220,28 +360,63 @@
     "steps": [
       {
         "title": "Die Erde steht schief",
-        "text": "Die gedachte Erdachse ist gegenüber einer senkrechten Linie zur Umlaufbahn um etwa 23,4 Grad geneigt. Während die Erde um die Sonne reist, zeigt ihre Achse ungefähr in dieselbe Richtung. Das verändert im Lauf des Jahres den Sonnenstand und die Tageslänge.",
-        "fact": "Die Achse ist keine echte Stange. Sie hilft uns, die Drehung zu beschreiben."
+        "text": "Die gedachte Erdachse ist gegenüber einer senkrechten Linie zur Umlaufbahn um etwa 23,4 Grad geneigt. Während die Erde um die Sonne reist, zeigt ihre Achse ungefähr in dieselbe Richtung. Das verändert im Lauf des Jahres den Sonnenstand und die Tageslänge.\n\nSchräg bedeutet hier: im Vergleich zur Umlaufbahn um die Sonne. Die Achse kippt nicht alle sechs Monate zur anderen Seite; die Erde erreicht einen anderen Ort auf ihrer Bahn.",
+        "fact": "Die Achse ist keine echte Stange. Sie hilft uns, die Drehung zu beschreiben.",
+        "starter": "Die Erde dreht sich um eine gedachte, schräg stehende Achse.",
+        "deeper": "Richtung und Neigungswinkel sind zwei verschiedene Dinge. Im Jahreszeitenmodell bleiben beide während eines vereinfachten Umlaufs ungefähr gleich.",
+        "whyItMatters": "Du kannst den jährlichen Wechsel erklären, ohne die Erdachse ständig neu zu kippen.",
+        "observe": "Lass im Jahreszeitenlabor ein ganzes Jahr ablaufen. Beobachte die Achse und die Lage zur Sonne getrennt.",
+        "sourceIds": [
+          "seasons-base"
+        ]
       },
       {
         "title": "Sommer auf der Nordhalbkugel",
-        "text": "Um den Juni ist die Nordhalbkugel zur Sonne geneigt. Bei uns in Deutschland steht die Sonne dann höher und die Tage sind länger. So erreicht uns pro Tag mehr Sonnenenergie. Auf der Südhalbkugel ist zur gleichen Zeit Winter.",
-        "fact": "Am Nordpol geht die Sonne im Sommer für mehrere Monate nicht unter."
+        "text": "Um den Juni ist die Nordhalbkugel zur Sonne geneigt. Bei uns in Deutschland steht die Sonne dann höher und die Tage sind länger. So erreicht uns pro Tag mehr Sonnenenergie. Auf der Südhalbkugel ist zur gleichen Zeit Winter.\n\nBeide Wirkungen helfen zusammen: Sonnenlicht trifft steiler auf und scheint länger am Tag. Deshalb kann insgesamt mehr Sonnenenergie ankommen, auch wenn ein einzelner Sommertag kühl ist.",
+        "fact": "Am Nordpol geht die Sonne im Sommer für mehrere Monate nicht unter.",
+        "starter": "Im nördlichen Sommer sind unsere Tage länger und die Sonne steht höher.",
+        "deeper": "Sommer bedeutet eine Jahreszeit, nicht eine Temperaturgarantie. Wetter, Standort und Sonnenenergie dürfen nicht zu einer einzigen Aussage vermischt werden.",
+        "whyItMatters": "Du verstehst den Unterschied zwischen einer Jahreszeit und ihrem heutigen Wetter.",
+        "observe": "Vergleiche im Modell einen Ort im Norden und einen im Süden zur selben Jahreszeit. Was ändert sich, was bleibt gleich?",
+        "sourceIds": [
+          "seasons-base"
+        ]
       },
       {
         "title": "Winter auf der Nordhalbkugel",
-        "text": "Um den Dezember ist die Nordhalbkugel von der Sonne weg geneigt. Bei uns steht die Sonne niedriger, und die Tage sind kürzer. In Australien ist gleichzeitig Sommer. Die Jahreszeiten der beiden Halbkugeln sind also gegensätzlich.",
-        "fact": "Die Entfernung zur Sonne ist nicht der Hauptgrund für unsere Jahreszeiten."
+        "text": "Um den Dezember ist die Nordhalbkugel von der Sonne weg geneigt. Bei uns steht die Sonne niedriger, und die Tage sind kürzer. In Australien ist gleichzeitig Sommer. Die Jahreszeiten der beiden Halbkugeln sind also gegensätzlich.\n\nDie zwei Halbkugeln erleben denselben Umlauf gleichzeitig, aber mit entgegengesetzter Neigung zur Sonne. Eine Erklärung nur durch wechselnde Entfernung könnte diesen Gegensatz nicht erklären.",
+        "fact": "Die Entfernung zur Sonne ist nicht der Hauptgrund für unsere Jahreszeiten.",
+        "starter": "Im nördlichen Winter sind die Tage kürzer. In Australien ist dann Sommer.",
+        "deeper": "Die Erdbahn ist nicht genau kreisrund. Das hebt die entscheidende Wirkung der Achsneigung auf Sonnenstand und Tageslänge aber nicht auf.",
+        "whyItMatters": "Du kannst zwei Erklärungen daran prüfen, ob sie dieselbe Beobachtung erklären.",
+        "observe": "Stelle im Modell Dezember ein. Erkläre mit den beiden Halbkugeln, weshalb Entfernung allein nicht für Sommer und Winter ausreicht.",
+        "sourceIds": [
+          "seasons-base"
+        ]
       },
       {
         "title": "Frühling und Herbst",
-        "text": "Um März und September sind Tag und Nacht fast überall ungefähr gleich lang. Die Sonne steht dann über dem Äquator. Welche Jahreszeit beginnt, hängt von der Halbkugel ab: Frühling im Norden bedeutet Herbst im Süden und umgekehrt.",
-        "fact": "In den Tropen unterscheidet man oft eher Regen- und Trockenzeiten als vier Jahreszeiten wie bei uns."
+        "text": "Um März und September sind Tag und Nacht fast überall ungefähr gleich lang. Die Sonne steht dann über dem Äquator. Welche Jahreszeit beginnt, hängt von der Halbkugel ab: Frühling im Norden bedeutet Herbst im Süden und umgekehrt.\n\nUngefähr ist wichtig: Das einfache Modell zeigt einen Grundzusammenhang. Wirkliche Sonnenauf- und Sonnenuntergänge hängen auch davon ab, wie die Sonne am Horizont betrachtet wird.",
+        "fact": "In den Tropen unterscheidet man oft eher Regen- und Trockenzeiten als vier Jahreszeiten wie bei uns.",
+        "starter": "Im März und September sind Tag und Nacht ungefähr gleich lang.",
+        "deeper": "Vier gleich benannte Jahreszeiten beschreiben nicht jeden Lebensraum gut. In tropischen Regionen können Niederschlagszeiten für Pflanzen und Tiere wichtiger sein.",
+        "whyItMatters": "Du lernst, ein nützliches Modell zu verwenden und seine Grenzen mitzusagen.",
+        "observe": "Vergleiche im Modell März und September. Benenne die Jahreszeiten jeweils aus Sicht der Nord- und Südhalbkugel.",
+        "sourceIds": [
+          "seasons-base"
+        ]
       },
       {
         "title": "Ein Tag ist kein Jahr",
-        "text": "Drehen um die eigene Achse macht Tag und Nacht. Reisen um die Sonne mit geneigter Achse macht den jährlichen Wechsel der Jahreszeiten. Ein sonniger Wintertag bleibt trotzdem ein Wintertag. Wetter und Jahreszeit sind nicht dasselbe.",
-        "fact": "Auch im Winter kann die Sonne hell scheinen. Ein kurzer Tag liefert insgesamt trotzdem weniger Sonnenenergie."
+        "text": "Drehen um die eigene Achse macht Tag und Nacht. Reisen um die Sonne mit geneigter Achse macht den jährlichen Wechsel der Jahreszeiten. Ein sonniger Wintertag bleibt trotzdem ein Wintertag. Wetter und Jahreszeit sind nicht dasselbe.\n\nDu kannst dieselbe Landschaft nachts und tagsüber sehen, ohne dass dabei eine andere Jahreszeit beginnt. Die beiden Veränderungen haben verschiedene Zeiträume und Ursachen.",
+        "fact": "Auch im Winter kann die Sonne hell scheinen. Ein kurzer Tag liefert insgesamt trotzdem weniger Sonnenenergie.",
+        "starter": "Die Erddrehung macht Tag und Nacht. Der Umlauf mit geneigter Achse macht Jahreszeiten.",
+        "deeper": "Ein Modell kann Drehung und Umlauf zum Beobachten beschleunigen. Das ist eine Darstellungshilfe, keine Aussage über die wirklichen Geschwindigkeiten.",
+        "whyItMatters": "Du ordnest Beobachtungen der passenden Bewegung zu.",
+        "observe": "Erkläre mit zwei verschiedenen Handbewegungen Tag und Jahr. Sage dazu, welche Bewegung du zeigst und welche du gerade auslässt.",
+        "sourceIds": [
+          "seasons-base"
+        ]
       }
     ],
     "question": {
@@ -271,28 +446,63 @@
     "steps": [
       {
         "title": "Fünf Namen, ein Weltmeer",
-        "text": "Wir unterscheiden Pazifik, Atlantik, Indischen, Arktischen und Südlichen Ozean. Die Grenzen sind Vereinbarungen: Das Wasser bleibt verbunden. Kleinere Meere wie Nordsee und Mittelmeer gehören ebenfalls zum großen Weltmeer.",
-        "fact": "Der Pazifik ist der größte, der Arktische Ozean der kleinste der fünf Ozeane."
+        "text": "Wir unterscheiden Pazifik, Atlantik, Indischen, Arktischen und Südlichen Ozean. Die Grenzen sind Vereinbarungen: Das Wasser bleibt verbunden. Kleinere Meere wie Nordsee und Mittelmeer gehören ebenfalls zum großen Weltmeer.\n\nEin Name setzt keine Wand ins Wasser. Meere und Ozeane werden für die Orientierung gegliedert, während Wasser und Lebewesen über viele dieser gedachten Grenzen hinwegkommen können.",
+        "fact": "Der Pazifik ist der größte, der Arktische Ozean der kleinste der fünf Ozeane.",
+        "starter": "Fünf Ozeane haben eigene Namen. Ihr Wasser ist miteinander verbunden.",
+        "deeper": "Benennungen und Abgrenzungen sind Vereinbarungen. Unser Fünf-Ozeane-Modell ist eine Orientierungshilfe, keine Trennung in fünf geschlossene Behälter.",
+        "whyItMatters": "Du liest Meeresnamen auf einer Karte, ohne das Weltmeer in getrennte Seen zu verwandeln.",
+        "observe": "Verfolge auf der Kugel einen möglichen Wasserweg zwischen Atlantik und Pazifik. Du brauchst dafür keine Ländergrenze zu überqueren.",
+        "sourceIds": [
+          "ocean-base"
+        ]
       },
       {
         "title": "Warum ist das Meer salzig?",
-        "text": "Regen und Flüsse lösen winzige Mengen von Mineralien aus Gestein und bringen sie ins Meer. Auch am Meeresboden gelangen Stoffe ins Wasser. Wenn Wasser verdunstet, bleibt das Salz zurück. Über lange Zeit haben sich so Salze im Meer angesammelt.",
-        "fact": "Die meisten Flüsse enthalten ebenfalls gelöste Stoffe, aber viel weniger Salz als Meerwasser."
+        "text": "Regen und Flüsse lösen winzige Mengen von Mineralien aus Gestein und bringen sie ins Meer. Auch am Meeresboden gelangen Stoffe ins Wasser. Wenn Wasser verdunstet, bleibt das Salz zurück. Über lange Zeit haben sich so Salze im Meer angesammelt.\n\nDer Kreislauf von Wasser und der Transport gelöster Stoffe sind verschiedene Vorgänge. Ein Fluss kann Mineralien mitbringen, obwohl er nicht so salzig schmeckt wie Meerwasser.",
+        "fact": "Die meisten Flüsse enthalten ebenfalls gelöste Stoffe, aber viel weniger Salz als Meerwasser.",
+        "starter": "Meerwasser enthält Salz. Wenn Wasser verdunstet, bleibt das Salz zurück.",
+        "deeper": "Salzgehalt ist nicht überall gleich. Verdunstung, Regen und einströmendes Süßwasser beeinflussen örtliche Unterschiede.",
+        "whyItMatters": "Du kannst Wassertransport und Stofftransport auseinanderhalten.",
+        "observe": "Zeichne zwei Pfeile: Wasser ins Meer und Wasser in die Luft. Beschrifte, bei welchem Pfeil gelöste Salze mitreisen können. Kein Meerwasser probieren.",
+        "sourceIds": [
+          "ocean-base"
+        ]
       },
       {
         "title": "Korallen sind Tiere",
-        "text": "Ein Korallenriff wird von vielen winzigen Korallentieren aufgebaut. Viele riffbildende Korallen leben mit kleinen Algen zusammen. Die Algen brauchen Sonnenlicht. Deshalb wachsen solche Riffe meistens in flachem, warmem, klarem Meerwasser.",
-        "fact": "Ein Riff bietet Fischen, Krebsen und vielen anderen Lebewesen Verstecke und Nahrung."
+        "text": "Ein Korallenriff wird von vielen winzigen Korallentieren aufgebaut. Viele riffbildende Korallen leben mit kleinen Algen zusammen. Die Algen brauchen Sonnenlicht. Deshalb wachsen solche Riffe meistens in flachem, warmem, klarem Meerwasser.\n\nEin Korallentier ist klein; sein gemeinsam gebauter Lebensraum kann groß sein. Kalkskelett und lebendes Tier sind nicht dasselbe. Viele andere Arten nutzen das Riff als Zuhause.",
+        "fact": "Ein Riff bietet Fischen, Krebsen und vielen anderen Lebewesen Verstecke und Nahrung.",
+        "starter": "Korallen sind Tiere. Viele kleine Polypen bauen zusammen ein Riff.",
+        "deeper": "Nicht alle Korallen bauen tropische Flachwasserriffe. Unsere Erklärung beschreibt besonders riffbildende Korallen mit ihren Algenpartnern.",
+        "whyItMatters": "Du erkennst die Zusammenarbeit und den Unterschied zwischen Organismus und Lebensraum.",
+        "observe": "Betrachte die Korallenkarte. Zeige das Tier, sein Skelett und Tiere, die im Riff leben, als drei verschiedene Teile deiner Erklärung.",
+        "sourceIds": [
+          "ocean-base"
+        ]
       },
       {
         "title": "Immer tiefer, immer dunkler",
-        "text": "Sonnenlicht erreicht nur die oberen Bereiche des Meeres. Weiter unten wird es dunkel, kalt und der Druck nimmt zu. Dort leben Tiere mit besonderen Anpassungen. Manche erzeugen eigenes Licht. Auch in der Tiefsee gibt es also Leben.",
-        "fact": "Der tiefste bekannte Bereich liegt im Marianengraben, fast elf Kilometer unter der Meeresoberfläche."
+        "text": "Sonnenlicht erreicht nur die oberen Bereiche des Meeres. Weiter unten wird es dunkel, kalt und der Druck nimmt zu. Dort leben Tiere mit besonderen Anpassungen. Manche erzeugen eigenes Licht. Auch in der Tiefsee gibt es also Leben.\n\nLicht von oben erreicht nicht jede Tiefe. Dunkelheit bedeutet daher nicht automatisch, dass kein Leben möglich ist. Anpassungen müssen zu den Bedingungen des Lebensraums passen.",
+        "fact": "Der tiefste bekannte Bereich liegt im Marianengraben, fast elf Kilometer unter der Meeresoberfläche.",
+        "starter": "In der Tiefsee ist es dunkel. Trotzdem leben dort Tiere.",
+        "deeper": "Das dunkle Bild zeigt einen ausgewählten Lebensraum, nicht alle Tiefseetiere. Auch der Tiefenrekord braucht die Messregel unter der Meeresoberfläche.",
+        "whyItMatters": "Du vermeidest den Schluss dunkel gleich unbewohnt.",
+        "observe": "Vergleiche im Schaubild Oberfläche und Tiefe. Welche Bedingungen ändern sich? Erkläre, warum ein Tier nicht überall dieselben Bedingungen vorfindet.",
+        "sourceIds": [
+          "ocean-base"
+        ]
       },
       {
         "title": "Wasser in Bewegung",
-        "text": "Wind, Temperaturunterschiede und Unterschiede im Salzgehalt helfen, Meeresströmungen anzutreiben. Sie transportieren Wärme und Nährstoffe. Ebbe und Flut entstehen vor allem durch die Schwerkraft des Mondes und auch der Sonne.",
-        "fact": "Eine Welle kann sich fortbewegen, ohne dass jedes Wasserteilchen die ganze Strecke mitreist."
+        "text": "Wind, Temperaturunterschiede und Unterschiede im Salzgehalt helfen, Meeresströmungen anzutreiben. Sie transportieren Wärme und Nährstoffe. Ebbe und Flut entstehen vor allem durch die Schwerkraft des Mondes und auch der Sonne.\n\nEin Wasserstand und ein Wasserstrom sind nicht dasselbe. Gezeiten können zwar Strömungen erzeugen, doch auch Wind und Dichteunterschiede treiben Strömungen an. Eine einzelne Welle ist wieder ein anderer Vorgang.",
+        "fact": "Eine Welle kann sich fortbewegen, ohne dass jedes Wasserteilchen die ganze Strecke mitreist.",
+        "starter": "Strömungen bewegen Wasser. Gezeiten lassen den Meeresspiegel steigen und sinken.",
+        "deeper": "Die Gezeitenhöhe hängt vom Ort ab. Ein einfaches Modell ohne Küstenform kann keinen örtlichen Gezeitenkalender ersetzen.",
+        "whyItMatters": "Du beschreibst Meerwasser genauer als mit alles bewegt sich.",
+        "observe": "Vergleiche Strömungs- und Gezeitenmodell. Beschreibe einmal eine Bewegung entlang einer Strecke und einmal eine Änderung der Wasserhöhe.",
+        "sourceIds": [
+          "ocean-base"
+        ]
       }
     ],
     "question": {
@@ -321,28 +531,63 @@
     "steps": [
       {
         "title": "Ein Zuhause für jedes Lebewesen",
-        "text": "Ein Lebensraum ist ein Ort, an dem ein Lebewesen Nahrung, Wasser und Schutz findet. Ein Wald ist ein Lebensraum, ein Teich ebenfalls. Tiere und Pflanzen sind an ihre Umgebung angepasst. Ein Fisch und ein Kaktus brauchen deshalb ganz unterschiedliche Bedingungen.",
-        "fact": "Auch unter einem Stein und in einer Handvoll Erde gibt es Lebensräume."
+        "text": "Ein Lebensraum ist ein Ort, an dem ein Lebewesen Nahrung, Wasser und Schutz findet. Ein Wald ist ein Lebensraum, ein Teich ebenfalls. Tiere und Pflanzen sind an ihre Umgebung angepasst. Ein Fisch und ein Kaktus brauchen deshalb ganz unterschiedliche Bedingungen.\n\nPassend hängt vom Lebewesen ab: Ein Teich ist für einen Fisch ein Zuhause, für einen Kaktus kein geeigneter Ort. Ein Lebensraum ist also mehr als nur eine Adresse.",
+        "fact": "Auch unter einem Stein und in einer Handvoll Erde gibt es Lebensräume.",
+        "starter": "Lebewesen brauchen einen passenden Lebensraum mit Nahrung, Wasser und Schutz.",
+        "deeper": "Eine Karte mit einem Beispielpunkt zeigt nicht die gesamte Verbreitung einer Art. Auch innerhalb einer Landschaft sind die Bedingungen unterschiedlich.",
+        "whyItMatters": "Du erklärst einen Lebensraum aus Sicht eines Lebewesens.",
+        "observe": "Wähle ein Tier aus der Tierwelt. Nenne Nahrung, Wasser und Schutz und suche, welche dieser Bedürfnisse seine Karte erklärt.",
+        "sourceIds": [
+          "nature-base"
+        ]
       },
       {
         "title": "Regenwald und Savanne",
-        "text": "Tropische Regenwälder sind meist warm und feucht. Dort wachsen viele verschiedene Pflanzen. In Savannen wechseln häufig Regen- und Trockenzeiten. Zwischen Gräsern stehen einzelne Bäume. In afrikanischen Savannen leben zum Beispiel Giraffen und viele Antilopen.",
-        "fact": "Nicht alle Regenwälder liegen in den Tropen. Es gibt auch kühlere Regenwälder."
+        "text": "Tropische Regenwälder sind meist warm und feucht. Dort wachsen viele verschiedene Pflanzen. In Savannen wechseln häufig Regen- und Trockenzeiten. Zwischen Gräsern stehen einzelne Bäume. In afrikanischen Savannen leben zum Beispiel Giraffen und viele Antilopen.\n\nNicht nur die Menge, auch die Verteilung des Regens zählt. Lange trockene Abschnitte stellen andere Anforderungen als häufige Niederschläge. Das hilft, verschiedene Pflanzenwelten zu verstehen.",
+        "fact": "Nicht alle Regenwälder liegen in den Tropen. Es gibt auch kühlere Regenwälder.",
+        "starter": "Regenwald und Savanne können warm sein. Ihr Wasserangebot ist verschieden.",
+        "deeper": "Tropisch bezeichnet eine Weltregion, nicht eine einzige Landschaft. Savannen und Regenwälder sind Beispiele, keine vollständige Liste der Tropen.",
+        "whyItMatters": "Du vergleichst Lebensräume anhand ihrer Bedingungen statt allein an einem Tierbild.",
+        "observe": "Vergleiche zwei Lebensraumkarten. Beschreibe zuerst Wasser und Pflanzen; ordne dann ein Tier mit einer passenden Begründung zu.",
+        "sourceIds": [
+          "nature-base"
+        ]
       },
       {
         "title": "Wüste heißt trocken",
-        "text": "Eine Wüste bekommt sehr wenig Niederschlag. Manche Wüsten sind heiß, andere kalt. Die Antarktis ist trotz ihres Eises sehr trocken und gilt als Kältewüste. Wüstentiere und Pflanzen haben besondere Wege, mit wenig Wasser auszukommen.",
-        "fact": "Kamele lagern Fett in ihren Höckern, kein Trinkwasser."
+        "text": "Eine Wüste bekommt sehr wenig Niederschlag. Manche Wüsten sind heiß, andere kalt. Die Antarktis ist trotz ihres Eises sehr trocken und gilt als Kältewüste. Wüstentiere und Pflanzen haben besondere Wege, mit wenig Wasser auszukommen.\n\nEine Sanddüne ist kein Beweis für alle Wüsten. Entscheidend ist der geringe Niederschlag. Deshalb kann eine eisige Gegend zu derselben Landschaftsgruppe gehören wie eine heiße.",
+        "fact": "Kamele lagern Fett in ihren Höckern, kein Trinkwasser.",
+        "starter": "Eine Wüste ist sehr trocken. Sie kann heiß oder kalt sein.",
+        "deeper": "Trockenheit und Temperatur sind verschiedene Größen. Die Bezeichnung Kältewüste verbindet beide, ohne sie gleichzusetzen.",
+        "whyItMatters": "Du kannst eine Kategorie an ihrem Merkmal erkennen, statt an einem typischen Bild.",
+        "observe": "Vergleiche Sahara und Antarktika auf der Karte. Nenne das gemeinsame Merkmal und einen wichtigen Unterschied.",
+        "sourceIds": [
+          "nature-base"
+        ]
       },
       {
         "title": "Norden und Süden unterscheiden",
-        "text": "Eisbären leben in der Arktis im Norden. Viele Pinguinarten leben im Süden, einige sogar nahe am Äquator. Pinguine und Eisbären treffen sich in der freien Natur nicht. Am Südpol liegt Land unter dem Eis; am Nordpol liegt Meer.",
-        "fact": "Nicht jeder Pinguin lebt in Schnee und Eis."
+        "text": "Eisbären leben in der Arktis im Norden. Viele Pinguinarten leben im Süden, einige sogar nahe am Äquator. Pinguine und Eisbären treffen sich in der freien Natur nicht. Am Südpol liegt Land unter dem Eis; am Nordpol liegt Meer.\n\nNorden und Süden sind keine austauschbaren Eiswelten. Der Nordpol liegt über Meer, der Südpol auf einem Kontinent. Auch Pinguinarten leben in unterschiedlichen Regionen.",
+        "fact": "Nicht jeder Pinguin lebt in Schnee und Eis.",
+        "starter": "Eisbären und Pinguine leben nicht gemeinsam in der freien Natur.",
+        "deeper": "Ein Tier auf einer Illustration muss nicht dort leben, wo die Dekoration Schnee zeigt. Prüfe die Verbreitungsangabe der jeweiligen Art.",
+        "whyItMatters": "Du kannst ein schönes Bild von einer richtigen Verbreitungskarte unterscheiden.",
+        "observe": "Finde Eisbär und Kaiserpinguin in der Tierwelt. Vergleiche ihre Beispielorte und prüfe, ob beide Punkte dieselbe Region zeigen.",
+        "sourceIds": [
+          "nature-base"
+        ]
       },
       {
         "title": "Alle hängen zusammen",
-        "text": "Pflanzen nutzen Sonnenlicht, um Nahrung aufzubauen. Manche Tiere fressen Pflanzen, andere Tiere fressen Tiere. Pilze und kleine Lebewesen bauen abgestorbene Reste ab. Solche Beziehungen bilden Nahrungsnetze. Verschwindet eine Art, kann das andere Arten beeinflussen.",
-        "fact": "Artenvielfalt bedeutet die Vielfalt des Lebens. Dazu gehören auch unscheinbare Käfer, Pilze und Mikroorganismen."
+        "text": "Pflanzen nutzen Sonnenlicht, um Nahrung aufzubauen. Manche Tiere fressen Pflanzen, andere Tiere fressen Tiere. Pilze und kleine Lebewesen bauen abgestorbene Reste ab. Solche Beziehungen bilden Nahrungsnetze. Verschwindet eine Art, kann das andere Arten beeinflussen.\n\nEine Kette zeigt einen Weg; ein Netz zeigt mehrere Beziehungen. Ein Tier kann verschiedene Nahrung nutzen und selbst Nahrung für mehrere andere Arten sein.",
+        "fact": "Artenvielfalt bedeutet die Vielfalt des Lebens. Dazu gehören auch unscheinbare Käfer, Pilze und Mikroorganismen.",
+        "starter": "Pflanzen, Tiere, Pilze und kleine Lebewesen hängen in Nahrungsnetzen zusammen.",
+        "deeper": "Zersetzer bauen Reste ab; das ist kein überflüssiger Abfallweg. Eine vereinfachte Zeichnung enthält trotzdem nicht jedes Lebewesen eines Lebensraums.",
+        "whyItMatters": "Du erkennst, weshalb eine Veränderung mehrere Arten betreffen kann.",
+        "observe": "Zeichne ein kleines Nahrungsnetz aus passenden Arten der Tierwelt. Benenne, ob dein Pfeil Nahrung oder den Esser anzeigen soll, und bleibe dabei.",
+        "sourceIds": [
+          "nature-base"
+        ]
       }
     ],
     "question": {
@@ -371,28 +616,63 @@
     "steps": [
       {
         "title": "Eine hilfreiche Wärmedecke",
-        "text": "Bestimmte Gase in der Atmosphäre halten einen Teil der Wärme zurück, die die Erde ins Weltall abgibt. Das nennt man Treibhauseffekt. Ohne den natürlichen Treibhauseffekt wäre unsere Erde viel kälter. Die Lufthülle ist dabei keine echte Decke.",
-        "fact": "Wasserdampf, Kohlendioxid und Methan gehören zu den Treibhausgasen."
+        "text": "Bestimmte Gase in der Atmosphäre halten einen Teil der Wärme zurück, die die Erde ins Weltall abgibt. Das nennt man Treibhauseffekt. Ohne den natürlichen Treibhauseffekt wäre unsere Erde viel kälter. Die Lufthülle ist dabei keine echte Decke.\n\nSonnenlicht und die von der Erde abgegebene Wärme sind nicht derselbe Vorgang. Das Deckenbild hilft beim ersten Verstehen, erklärt aber nicht alles, was Strahlung und Gase tun.",
+        "fact": "Wasserdampf, Kohlendioxid und Methan gehören zu den Treibhausgasen.",
+        "starter": "Treibhausgase halten einen Teil der abgegebenen Wärme zurück. Die Luft ist keine echte Decke.",
+        "deeper": "Ein Vergleich muss Grenzen haben. Die Atmosphäre hat keine Stoffdecke und hält auch nicht sämtliche Wärme fest.",
+        "whyItMatters": "Du erkennst eine hilfreiche Erklärung, ohne ihren Vergleich wörtlich zu nehmen.",
+        "observe": "Zeichne Licht zur Erde und Wärme von der Erde weg als verschiedene Pfeile. Beschreibe, welchen Teil der zweite Pfeil vereinfacht.",
+        "sourceIds": [
+          "protect-base"
+        ]
       },
       {
         "title": "Die zusätzliche Erwärmung",
-        "text": "Menschen verbrennen Kohle, Erdöl und Erdgas. Dabei kommt zusätzliches Kohlendioxid in die Luft. Auch andere Tätigkeiten verstärken den Treibhauseffekt. Die Erde wird im Durchschnitt wärmer. Das verändert unter anderem Eis, Meere und Lebensräume.",
-        "fact": "Das ist eine Aufgabe für Erwachsene, Unternehmen und Länder gemeinsam. Du musst die Welt nicht allein retten."
+        "text": "Menschen verbrennen Kohle, Erdöl und Erdgas. Dabei kommt zusätzliches Kohlendioxid in die Luft. Auch andere Tätigkeiten verstärken den Treibhauseffekt. Die Erde wird im Durchschnitt wärmer. Das verändert unter anderem Eis, Meere und Lebensräume.\n\nDurchschnittlich wärmer bedeutet nicht an jedem Ort jeden Tag wärmer. Wetter bleibt wechselhaft, während sich langfristige Bedingungen verändern. Erwachsene und Einrichtungen müssen dafür Verantwortung übernehmen.",
+        "fact": "Das ist eine Aufgabe für Erwachsene, Unternehmen und Länder gemeinsam. Du musst die Welt nicht allein retten.",
+        "starter": "Zusätzliche Treibhausgase erwärmen die Erde. Lösungen sind eine gemeinsame Aufgabe.",
+        "deeper": "Eine einzelne Handlung erklärt nicht den gesamten Klimawandel. Energieversorgung, Verkehr und weitere Tätigkeiten hängen in großen Systemen zusammen.",
+        "whyItMatters": "Du verstehst einen globalen Zusammenhang, ohne dir allein die ganze Verantwortung aufzubürden.",
+        "observe": "Vergleiche die Erklärung mit dem Wetter-Kapitel. Formuliere eine Frage, die du Erwachsenen zum Umgang mit Energie stellen möchtest.",
+        "sourceIds": [
+          "protect-base"
+        ]
       },
       {
         "title": "Weniger verschwenden",
-        "text": "Dinge herstellen, transportieren und wegwerfen braucht Material und Energie. Etwas länger benutzen, reparieren, ausleihen oder weitergeben kann Ressourcen sparen. Mehrwegflaschen sind dafür ein Beispiel. Recycling hilft auch, kann aber nicht jede Art von Abfall lösen.",
-        "fact": "Bevor etwas in den Müll kommt, kannst du fragen: Kann es jemand noch gebrauchen?"
+        "text": "Dinge herstellen, transportieren und wegwerfen braucht Material und Energie. Etwas länger benutzen, reparieren, ausleihen oder weitergeben kann Ressourcen sparen. Mehrwegflaschen sind dafür ein Beispiel. Recycling hilft auch, kann aber nicht jede Art von Abfall lösen.\n\nEine Sache länger zu nutzen kann verhindern, dass gleich eine neue hergestellt werden muss. Recycling beginnt erst später und ist nicht für jedes Material gleich gut möglich.",
+        "fact": "Bevor etwas in den Müll kommt, kannst du fragen: Kann es jemand noch gebrauchen?",
+        "starter": "Reparieren, ausleihen und weitergeben können Materialien sparen.",
+        "deeper": "Vergleiche müssen den ganzen Weg betrachten: Herstellung, Nutzung, Transport und Entsorgung. Ein einzelnes grünes Zeichen beantwortet nicht alle Fragen.",
+        "whyItMatters": "Du findest konkrete Möglichkeiten, ohne jede Sache sofort durch etwas Neues zu ersetzen.",
+        "observe": "Wähle gemeinsam eine ungenutzte heile Sache. Vergleicht Weitergeben, Ausleihen und Aufbewahren anhand eurer wirklichen Situation.",
+        "sourceIds": [
+          "protect-base"
+        ]
       },
       {
         "title": "Natur Platz geben",
-        "text": "Pflanzen und Tiere brauchen passende Lebensräume. Müll gehört nicht in die Natur. Blüten können Insekten Nahrung bieten. Wilde Tiere beobachten wir mit Abstand. Schon ein kleiner Garten oder Balkon kann zusammen mit Erwachsenen etwas für die Natur bieten.",
-        "fact": "Ein Tier in Ruhe zu lassen, ist oft die beste Hilfe."
+        "text": "Pflanzen und Tiere brauchen passende Lebensräume. Müll gehört nicht in die Natur. Blüten können Insekten Nahrung bieten. Wilde Tiere beobachten wir mit Abstand. Schon ein kleiner Garten oder Balkon kann zusammen mit Erwachsenen etwas für die Natur bieten.\n\nEine Blüte kann Nahrung bieten; ein ruhiger Platz kann Schutz geben. Hilfe heißt deshalb nicht immer anfassen oder mitnehmen. Manche Tiere brauchen vor allem Abstand.",
+        "fact": "Ein Tier in Ruhe zu lassen, ist oft die beste Hilfe.",
+        "starter": "Pflanzen und Tiere brauchen Platz. Wir können sie beobachten, ohne sie zu stören.",
+        "deeper": "Ein Balkon ersetzt keinen ganzen Lebensraum. Kleine Beiträge können dennoch nützlich sein, wenn sie zu den örtlichen Arten und Bedingungen passen.",
+        "whyItMatters": "Du verbindest Naturschutz mit den Bedürfnissen von Lebewesen.",
+        "observe": "Beobachte mit Abstand eine Blüte oder einen Baum. Welche Nutzung kannst du tatsächlich sehen? Stelle keine unbekannten Pflanzen oder Tiere um.",
+        "sourceIds": [
+          "protect-base"
+        ]
       },
       {
         "title": "Gemeinsam etwas bewegen",
-        "text": "Du kannst Ideen sammeln, Fragen stellen und mit Erwachsenen kleine Vorhaben ausprobieren. Zum Beispiel Wege zu Fuß zurücklegen, unnötiges Licht ausschalten oder Lebensmittel gut nutzen. Welche Lösung sinnvoll ist, hängt von der Situation ab.",
-        "fact": "Niemand macht alles perfekt. Lernen und gemeinsam ausprobieren zählen."
+        "text": "Du kannst Ideen sammeln, Fragen stellen und mit Erwachsenen kleine Vorhaben ausprobieren. Zum Beispiel Wege zu Fuß zurücklegen, unnötiges Licht ausschalten oder Lebensmittel gut nutzen. Welche Lösung sinnvoll ist, hängt von der Situation ab.\n\nEine Lösung passt zu einem konkreten Problem. Zu Fuß gehen kann für einen kurzen sicheren Weg sinnvoll sein; eine andere Strecke braucht eine andere Entscheidung. Fragen helfen mehr als pauschale Vorwürfe.",
+        "fact": "Niemand macht alles perfekt. Lernen und gemeinsam ausprobieren zählen.",
+        "starter": "Gute Ideen entstehen gemeinsam. Niemand muss alles perfekt machen.",
+        "deeper": "Ein persönliches Beispiel ist keine vollständige Lösung für Gesellschaft und Wirtschaft. Es kann zeigen, welche Bedingungen eine gute Entscheidung braucht.",
+        "whyItMatters": "Du kannst Verantwortung gemeinsam und ohne Schuldgefühl besprechen.",
+        "observe": "Überlegt mit einem Erwachsenen eine kleine machbare Änderung. Notiert den Nutzen und eine Bedingung, unter der eure Idee nicht passen würde.",
+        "sourceIds": [
+          "protect-base"
+        ]
       }
     ],
     "question": {
@@ -422,28 +702,63 @@
     "steps": [
       {
         "title": "Kontinent oder Land?",
-        "text": "Ein Kontinent ist eine sehr große Landregion. Ein Land ist ein von Menschen festgelegtes Gebiet. Auf einem Kontinent können viele Länder liegen. Afrika ist ein Kontinent, Kenia ist ein Land in Afrika.",
-        "fact": "Kontinente werden je nach Modell unterschiedlich eingeteilt. Hier nutzen wir sieben."
+        "text": "Ein Kontinent ist eine sehr große Landregion. Ein Land ist ein von Menschen festgelegtes Gebiet. Auf einem Kontinent können viele Länder liegen. Afrika ist ein Kontinent, Kenia ist ein Land in Afrika.\n\nEin Land und ein Kontinent beantworten verschiedene Fragen zur Orientierung. Wenn du Kenia in Afrika findest, ist das kein Widerspruch: Ein kleineres Gebiet gehört zu einer größeren Landregion.",
+        "fact": "Kontinente werden je nach Modell unterschiedlich eingeteilt. Hier nutzen wir sieben.",
+        "starter": "Afrika ist ein Kontinent. Kenia ist ein Land darin.",
+        "deeper": "Kontinentgrenzen sind nicht überall natürlich eindeutig. Unterschiedliche Einteilungen müssen ihren Zweck und ihre Regeln nennen.",
+        "whyItMatters": "Du kannst Länder und größere Weltregionen richtig zuordnen.",
+        "observe": "Finde Kenia auf dem Globus, zoome heraus und nenne den Kontinent. Beschreibe, was bei beiden Blicken derselbe Ort bleibt.",
+        "sourceIds": [
+          "continents-base"
+        ]
       },
       {
         "title": "Europa und Asien",
-        "text": "Europa und Asien hängen als Landfläche zusammen. Wir unterscheiden sie im Sieben-Kontinente-Modell trotzdem. Russland und die Türkei liegen in beiden Regionen.",
-        "fact": "Eurasien heißt die gemeinsame Landmasse von Europa und Asien."
+        "text": "Europa und Asien hängen als Landfläche zusammen. Wir unterscheiden sie im Sieben-Kontinente-Modell trotzdem. Russland und die Türkei liegen in beiden Regionen.\n\nEine politische Grenze und die Einteilung in Kontinente fallen nicht immer zusammen. Deshalb kann ein Land in mehr als einer Weltregion liegen, ohne dass seine Landfläche getrennt sein muss.",
+        "fact": "Eurasien heißt die gemeinsame Landmasse von Europa und Asien.",
+        "starter": "Europa und Asien sind verbunden. Wir unterscheiden sie in unserem Kontinentmodell.",
+        "deeper": "Eurasien benennt die zusammenhängende Landmasse. Europa und Asien sind in unserem Sieben-Kontinente-Modell getrennte Regionen derselben Landmasse.",
+        "whyItMatters": "Du erkennst, weshalb mehrere Beschreibungen derselben Landfläche sinnvoll sein können.",
+        "observe": "Betrachte Europa und Asien ohne Länderfarben. Vergleiche danach die politische Karte und beschreibe, welche Frage jede Ansicht beantwortet.",
+        "sourceIds": [
+          "continents-base"
+        ]
       },
       {
         "title": "Afrika und Amerika",
-        "text": "Afrika liegt beiderseits des Äquators. Nordamerika und Südamerika hängen an einer schmalen Landbrücke zusammen. Zwischen hohen Bergen, Küsten und Regenwäldern leben ganz verschiedene Tiere.",
-        "fact": "Panama ist ein Land auf der Verbindung zwischen den amerikanischen Kontinenten."
+        "text": "Afrika liegt beiderseits des Äquators. Nordamerika und Südamerika hängen an einer schmalen Landbrücke zusammen. Zwischen hohen Bergen, Küsten und Regenwäldern leben ganz verschiedene Tiere.\n\nDer Äquator ist eine Orientierungslinie, keine Grenze zwischen Ländern. Eine Landbrücke verbindet dagegen wirkliche Landflächen. Die beiden Begriffe beschreiben unterschiedliche Dinge auf derselben Erde.",
+        "fact": "Panama ist ein Land auf der Verbindung zwischen den amerikanischen Kontinenten.",
+        "starter": "Afrika liegt an beiden Seiten des Äquators. Amerika hat einen nördlichen und einen südlichen Teil.",
+        "deeper": "Ein Kontinent enthält viele Landschaften und Klimabedingungen. Eine einzelne Tierart oder ein einzelner Beispielort vertritt nicht die gesamte Region.",
+        "whyItMatters": "Du kannst Lage und Landschaft beschreiben, ohne einen ganzen Kontinent auf ein Beispiel zu reduzieren.",
+        "observe": "Verfolge den Äquator durch Afrika und finde die Verbindung zwischen Nord- und Südamerika. Nenne Linie und Landfläche getrennt.",
+        "sourceIds": [
+          "continents-base"
+        ]
       },
       {
         "title": "Australien, Inseln und Eis",
-        "text": "Australien ist ein Land und der kleinste Kontinent in diesem Modell. Ozeanien ist die größere Weltregion mit vielen Inseln. Antarktika ist ein eisbedeckter Kontinent am Südpol.",
-        "fact": "Am Nordpol liegt kein Kontinent, sondern Meer unter dem Eis."
+        "text": "Australien ist ein Land und der kleinste Kontinent in diesem Modell. Ozeanien ist die größere Weltregion mit vielen Inseln. Antarktika ist ein eisbedeckter Kontinent am Südpol.\n\nDas Wort Australien wird hier auf zwei Ebenen benutzt: für ein Land und für einen Kontinent. Ozeanien beschreibt eine größere Region. Achte deshalb bei jeder Karte auf die erklärte Einteilung.",
+        "fact": "Am Nordpol liegt kein Kontinent, sondern Meer unter dem Eis.",
+        "starter": "Australien ist Land und Kontinent. Antarktika liegt am Südpol.",
+        "deeper": "Nicht jeder geografische Begriff hat dieselbe Art von Grenze. Eine Weltregion, ein Land und ein Kontinent sind keine austauschbaren Namen.",
+        "whyItMatters": "Du kannst mit mehrdeutigen Namen sorgfältig umgehen.",
+        "observe": "Vergleiche Australien, Ozeanien und Antarktika. Notiere, welcher Begriff in unserem Modell ein Land und welcher eine größere Region bezeichnet.",
+        "sourceIds": [
+          "continents-base"
+        ]
       },
       {
         "title": "Eine Karte ist ein Modell",
-        "text": "Auf der Kugel sehen wir die Erde von außen. Eine flache Karte muss die runde Oberfläche verzerren. Auch Farben und Grenzen sind Zeichen: Kontinente sind draußen nicht in unseren Kartenfarben bemalt.",
-        "fact": "Große polnahe Länder sehen auf manchen flachen Karten viel größer aus, als sie im Vergleich wirklich sind."
+        "text": "Auf der Kugel sehen wir die Erde von außen. Eine flache Karte muss die runde Oberfläche verzerren. Auch Farben und Grenzen sind Zeichen: Kontinente sind draußen nicht in unseren Kartenfarben bemalt.\n\nUm eine Kugeloberfläche flach zu zeigen, müssen Eigenschaften verändert werden. Deshalb kann eine Karte für eine Frage gut und für eine andere weniger geeignet sein.",
+        "fact": "Große polnahe Länder sehen auf manchen flachen Karten viel größer aus, als sie im Vergleich wirklich sind.",
+        "starter": "Ein Globus ist rund. Eine flache Karte verändert die Darstellung.",
+        "deeper": "Groß dargestellt bedeutet nicht automatisch große wirkliche Fläche. Vergleiche Länderflächen mit einem geeigneten Maßstab und nicht nur nach Bildschirmbreite.",
+        "whyItMatters": "Du kannst Karten lesen, ohne ihre Darstellung mit der Erde selbst zu verwechseln.",
+        "observe": "Vergleiche ein polnahes Land und ein äquatornahes Land auf Kugel und flacher Karte. Beschreibe einen Unterschied der Darstellung.",
+        "sourceIds": [
+          "continents-base"
+        ]
       }
     ],
     "question": {
@@ -472,29 +787,64 @@
     "steps": [
       {
         "title": "Viele Länder, viele Menschen",
-        "text": "In einem Land wohnen Menschen mit unterschiedlichen Sprachen, Gewohnheiten und Ideen. Ein Beispielgericht oder Tier beschreibt nie alle Menschen oder Orte des Landes.",
-        "fact": "Auch große Länder können sehr verschiedene Landschaften haben."
+        "text": "In einem Land wohnen Menschen mit unterschiedlichen Sprachen, Gewohnheiten und Ideen. Ein Beispielgericht oder Tier beschreibt nie alle Menschen oder Orte des Landes.\n\nEin Länderbeispiel ist eine Einladung zum Entdecken, keine Regel über jeden Menschen. Ein Lieblingsgericht oder eine Landschaft sagt nichts über alle Einwohnerinnen und Einwohner aus.",
+        "fact": "Auch große Länder können sehr verschiedene Landschaften haben.",
+        "starter": "Menschen in einem Land können verschieden leben und sprechen.",
+        "deeper": "Länderporträts wählen Informationen aus. Gute Beschreibungen nennen diese Auswahl und vermeiden Eigenschaften, die angeblich für alle Menschen gelten.",
+        "whyItMatters": "Du lernst neue Orte kennen, ohne Menschen in feste Schubladen zu stecken.",
+        "observe": "Lies ein Länderporträt. Finde eine Aussage über einen Ort und überlege, warum sie nicht jeden Menschen im Land beschreibt.",
+        "sourceIds": [
+          "countries-base"
+        ]
       },
       {
         "title": "Die Hauptstadt",
-        "text": "In der Hauptstadt werden wichtige Aufgaben eines Landes erledigt. Berlin ist Deutschlands Hauptstadt. Eine Hauptstadt ist nicht automatisch die größte oder bekannteste Stadt.",
-        "fact": "Australiens Hauptstadt ist Canberra, nicht Sydney."
+        "text": "In der Hauptstadt werden wichtige Aufgaben eines Landes erledigt. Berlin ist Deutschlands Hauptstadt. Eine Hauptstadt ist nicht automatisch die größte oder bekannteste Stadt.\n\nBekanntheit, Einwohnerzahl und Regierungsaufgaben sind verschiedene Merkmale. Canberra und Sydney zeigen, warum die Frage Hauptstadt anders beantwortet wird als größte Stadt.",
+        "fact": "Australiens Hauptstadt ist Canberra, nicht Sydney.",
+        "starter": "Eine Hauptstadt hat wichtige Aufgaben für ein Land. Sie muss nicht die größte Stadt sein.",
+        "deeper": "Die Aufgaben können auf mehrere Städte verteilt sein. Die genaue Länderangabe zählt mehr als eine einfache weltweite Faustregel.",
+        "whyItMatters": "Du beantwortest geografische Fragen nach ihrem tatsächlichen Merkmal.",
+        "observe": "Suche Australien und Deutschland im Atlas. Nenne die Hauptstädte und prüfe, welche Zusatzangaben du für einen Städtevergleich brauchen würdest.",
+        "sourceIds": [
+          "countries-base"
+        ]
       },
       {
         "title": "Zeichen auf einer Flagge",
-        "text": "Eine Flagge ist ein Zeichen für ein Land oder Gebiet. Farben, Streifen und Symbole helfen beim Erkennen. Manche Flaggen sehen sich sehr ähnlich.",
-        "fact": "Flaggen sagen nichts darüber aus, ob ein Mensch besser oder schlechter ist."
+        "text": "Eine Flagge ist ein Zeichen für ein Land oder Gebiet. Farben, Streifen und Symbole helfen beim Erkennen. Manche Flaggen sehen sich sehr ähnlich.\n\nZwei Flaggen können ähnliche Farben haben und trotzdem unterschiedliche Länder bezeichnen. Vergleiche deshalb auch Reihenfolge, Anordnung und Zeichen statt nur die erste Farbe.",
+        "fact": "Flaggen sagen nichts darüber aus, ob ein Mensch besser oder schlechter ist.",
+        "starter": "Flaggen sind Zeichen. Form, Farbe und Symbole helfen beim Erkennen.",
+        "deeper": "Eine Flagge ist ein vereinbartes Symbol. Sie ist kein Beleg für Fähigkeiten oder Eigenschaften der Menschen eines Landes.",
+        "whyItMatters": "Du übst genaues Vergleichen und unterscheidest Symbol von Mensch.",
+        "observe": "Vergleiche zwei ähnliche Flaggen im bestehenden Spiel oder Atlas. Beschreibe einen Unterschied in Worten, ohne nur den Ländernamen zu nennen.",
+        "sourceIds": [
+          "countries-base"
+        ]
       },
       {
         "title": "Nachbarn auf der Landkarte",
-        "text": "Länder können eine gemeinsame Landgrenze haben oder durch ein Meer getrennt sein. Deutschland hat neun Nachbarländer an Land. Flüsse und Gebirge überqueren oft Grenzen.",
+        "text": "Länder können eine gemeinsame Landgrenze haben oder durch ein Meer getrennt sein. Deutschland hat neun Nachbarländer an Land. Flüsse und Gebirge überqueren oft Grenzen.\n\nEine Landesgrenze erklärt Zuständigkeiten, hält aber einen Fluss nicht automatisch an. Die politische und die natürliche Karte zeigen daher zusammen mehr als jede allein.",
         "fact": "Eine Ländergrenze ist meistens keine sichtbare Linie wie auf unserer Karte.",
-        "tryIt": "Welches deutsche Nachbarland beginnt mit P?"
+        "tryIt": "Welches deutsche Nachbarland beginnt mit P?",
+        "starter": "Nachbarländer können eine gemeinsame Landgrenze haben. Wasser kennt solche Linien nicht.",
+        "deeper": "Landnachbarn und Nachbarn über ein Meer sind verschiedene Vergleichsgruppen. Sage bei einer Anzahl dazu, welche Gruppe du meinst.",
+        "whyItMatters": "Du kannst eine Zahl wie neun Nachbarländer mit ihrer Zählregel erklären.",
+        "observe": "Finde Deutschland und einen seiner Landnachbarn. Suche eine natürliche Verbindung wie einen Fluss oder ein Gebirge zwischen ihren Karten.",
+        "sourceIds": [
+          "countries-base"
+        ]
       },
       {
         "title": "Größe und Bevölkerung",
-        "text": "Die Fläche sagt, wie viel Platz ein Land auf der Erde einnimmt. Die Bevölkerung sagt, wie viele Menschen dort leben. Ein großes Land muss nicht sehr viele Menschen haben.",
-        "fact": "Bevölkerungszahlen ändern sich. Im Atlas steht deshalb auch das Jahr zur Schätzung."
+        "text": "Die Fläche sagt, wie viel Platz ein Land auf der Erde einnimmt. Die Bevölkerung sagt, wie viele Menschen dort leben. Ein großes Land muss nicht sehr viele Menschen haben.\n\nZum Vergleichen müssen gleiche Messregeln verwendet werden. Eine ältere Bevölkerungsschätzung und eine jüngere sind nicht ohne Weiteres ein gleichzeitiger Vergleich.",
+        "fact": "Bevölkerungszahlen ändern sich. Im Atlas steht deshalb auch das Jahr zur Schätzung.",
+        "starter": "Fläche misst Platz. Bevölkerung zählt Menschen. Das sind verschiedene Größen.",
+        "deeper": "Bevölkerungsdichte setzt Einwohnerzahl zur Fläche ins Verhältnis. Sie beschreibt einen Durchschnitt und verrät nicht, wie Menschen innerhalb eines Landes verteilt sind.",
+        "whyItMatters": "Du liest Zahlen zusammen mit Einheit und Datenjahr.",
+        "observe": "Vergleiche zwei Länderporträts. Notiere Fläche und Datenjahr; trenne sichere Angaben von Fragen, die mit diesen Daten nicht beantwortet werden.",
+        "sourceIds": [
+          "countries-base"
+        ]
       }
     ],
     "question": {
@@ -523,28 +873,63 @@
     "steps": [
       {
         "title": "Unter und über der Oberfläche",
-        "text": "Magma ist geschmolzenes Gestein unter der Oberfläche. Es kann feste Kristalle und gelöste Gase enthalten. An der Oberfläche nennen wir es Lava.",
-        "fact": "Im Erdmantel ist nicht überall Magma. Der größte Teil ist fest."
+        "text": "Magma ist geschmolzenes Gestein unter der Oberfläche. Es kann feste Kristalle und gelöste Gase enthalten. An der Oberfläche nennen wir es Lava.\n\nMagma kann mehrere Bestandteile enthalten: Schmelze, Kristalle und Gas. Das Wort geschmolzen beschreibt deshalb ein Gemisch nicht vollständig wie reines flüssiges Wasser.",
+        "fact": "Im Erdmantel ist nicht überall Magma. Der größte Teil ist fest.",
+        "starter": "Geschmolzenes Gestein heißt unter der Erde Magma und draußen Lava.",
+        "deeper": "Die Bezeichnung hängt vom Ort ab, das Ausbruchsverhalten auch von Eigenschaften des Gemischs. Beides sollte nicht verwechselt werden.",
+        "whyItMatters": "Du unterscheidest Namen, Bestandteile und Eigenschaften eines Stoffes.",
+        "observe": "Beschrifte im Modell Magma und Lava. Suche zusätzlich die dargestellten Gase und erkläre, weshalb sie zur Beschreibung gehören.",
+        "sourceIds": [
+          "volcanoes-base"
+        ]
       },
       {
         "title": "Wege nach oben",
-        "text": "Magma kann sich sammeln und durch Risse oder Schlote aufsteigen. Oben kann es durch eine Öffnung austreten. Ein Krater ist eine Vertiefung am Vulkan.",
-        "fact": "Magmakammern sind oft Netzwerke von teilweise geschmolzenem Gestein."
+        "text": "Magma kann sich sammeln und durch Risse oder Schlote aufsteigen. Oben kann es durch eine Öffnung austreten. Ein Krater ist eine Vertiefung am Vulkan.\n\nEine Magmakammer ist im Lernbild übersichtlich gezeichnet. In der Wirklichkeit können mehrere Bereiche und Risse zusammenwirken. Ein Schlot und ein Krater bezeichnen verschiedene Teile des Weges.",
+        "fact": "Magmakammern sind oft Netzwerke von teilweise geschmolzenem Gestein.",
+        "starter": "Magma kann durch Wege im Gestein nach oben gelangen.",
+        "deeper": "Ein Querschnitt ist eine gedachte Schnittansicht. Er zeigt verborgene Vorgänge, die wir nicht so von außen beobachten können.",
+        "whyItMatters": "Du kannst ein vereinfachtes Schnittbild mit passenden Begriffen lesen.",
+        "observe": "Verfolge im Schaubild den Weg nach oben. Benenne Sammlung, Durchgang und Öffnung, ohne alle drei als dasselbe Loch zu bezeichnen.",
+        "sourceIds": [
+          "volcanoes-base"
+        ]
       },
       {
         "title": "Fließen oder explodieren",
-        "text": "Dünnflüssiges Magma lässt Gas leichter entweichen. Zähes, gasreiches Magma kann explosive Ausbrüche begünstigen. Dabei werden kleine Gesteins- und Glasstücke als Asche ausgestoßen.",
-        "fact": "Vulkanasche ist kein verbranntes Holz."
+        "text": "Dünnflüssiges Magma lässt Gas leichter entweichen. Zähes, gasreiches Magma kann explosive Ausbrüche begünstigen. Dabei werden kleine Gesteins- und Glasstücke als Asche ausgestoßen.\n\nDas Zusammenspiel ist wichtig: Gasgehalt allein oder Zähigkeit allein erklärt nicht jeden Ausbruch. Vergleiche deshalb im Labor zwei Zustände und benenne genau den veränderten Regler.",
+        "fact": "Vulkanasche ist kein verbranntes Holz.",
+        "starter": "Zähes Magma kann Gas schlechter entweichen lassen als dünnflüssiges.",
+        "deeper": "Vulkanasche besteht aus Gesteins- und Glasstückchen. Sie ist keine Asche aus verbranntem Holz und auch keine Wolke nur aus Wasserdampf.",
+        "whyItMatters": "Du kannst eine Vermutung an einem kontrollierten Modellvergleich prüfen.",
+        "observe": "Lass den Gasregler im Vulkanlabor gleich und verändere nur die Zähigkeit. Beschreibe den Unterschied und sage dazu, dass dies keine Vorhersage ist.",
+        "sourceIds": [
+          "volcanoes-base"
+        ]
       },
       {
         "title": "Formen erzählen Geschichten",
-        "text": "Breite Schildvulkane entstehen oft durch viele dünnflüssige Lavaflüsse. Schichtvulkane sind häufig steiler und aus verschiedenen Ablagerungen aufgebaut. Die Form allein sagt nicht genau voraus, was beim nächsten Ausbruch passiert.",
-        "fact": "Hawaii ist ein Beispiel für Vulkane über einem Hotspot."
+        "text": "Breite Schildvulkane entstehen oft durch viele dünnflüssige Lavaflüsse. Schichtvulkane sind häufig steiler und aus verschiedenen Ablagerungen aufgebaut. Die Form allein sagt nicht genau voraus, was beim nächsten Ausbruch passiert.\n\nViele Ablagerungen bilden nach und nach eine Form. Ein einzelnes Standbild zeigt daher auch eine Geschichte. Die Form verrät aber nicht sicher, wie der nächste Ausbruch ablaufen wird.",
+        "fact": "Hawaii ist ein Beispiel für Vulkane über einem Hotspot.",
+        "starter": "Breite und steile Vulkanformen entstehen auf unterschiedliche Weise.",
+        "deeper": "Eine Formbeschreibung ist kein Gefahrenurteil. Forschende brauchen Messungen und die Geschichte des einzelnen Vulkans.",
+        "whyItMatters": "Du lernst, aus einem Bild Hinweise zu gewinnen, ohne zu viel daraus zu schließen.",
+        "observe": "Vergleiche Schild- und Schichtvulkan im Bild. Trenne zwei sichtbare Unterschiede von einer Aussage, die das Bild allein nicht belegen kann.",
+        "sourceIds": [
+          "volcanoes-base"
+        ]
       },
       {
         "title": "Ein Vulkan schläft nicht wie du",
-        "text": "Ein Vulkan kann lange ruhig bleiben und trotzdem noch aktiv sein. Forschende beobachten Bodenbewegungen, Gase und kleine Beben. Ein einfaches Lernmodell kann keine Ausbrüche vorhersagen.",
-        "fact": "Öffne das Forscherlabor und vergleiche zähes mit dünnflüssigem Magma."
+        "text": "Ein Vulkan kann lange ruhig bleiben und trotzdem noch aktiv sein. Forschende beobachten Bodenbewegungen, Gase und kleine Beben. Ein einfaches Lernmodell kann keine Ausbrüche vorhersagen.\n\nRuhig ist eine Beobachtung für einen Zeitraum, kein Beweis für nie wieder. Messungen an Gasen, Boden und Beben helfen, Veränderungen zu erkennen. Warnungen kommen von zuständigen Fachstellen.",
+        "fact": "Öffne das Forscherlabor und vergleiche zähes mit dünnflüssigem Magma.",
+        "starter": "Ein ruhiger Vulkan kann weiter aktiv sein. Forschende beobachten ihn.",
+        "deeper": "Ein Lernregler bildet keine reale Überwachung ab. Eine Ausgabe des Modells darf nicht für Reise- oder Sicherheitsentscheidungen verwendet werden.",
+        "whyItMatters": "Du unterscheidest Lernen über einen Vulkan von einer wirklichen Gefahrenbewertung.",
+        "observe": "Nenne drei beobachtbare Messarten aus dem Kapitel. Erkläre dann, weshalb unser Modell keinen Ausbruch eines echten Vulkans vorhersagt.",
+        "sourceIds": [
+          "volcanoes-base"
+        ]
       }
     ],
     "question": {
@@ -573,28 +958,63 @@
     "steps": [
       {
         "title": "Verhakt und plötzlich bewegt",
-        "text": "Gesteinsflächen können sich an einer Störung verhaken. Obwohl Platten sich weiter bewegen, geht es dort nicht glatt weiter. Irgendwann rutscht das Gestein plötzlich: Ein Erdbeben entsteht.",
-        "fact": "Nicht jedes Erdbeben entsteht genau an einer Plattengrenze."
+        "text": "Gesteinsflächen können sich an einer Störung verhaken. Obwohl Platten sich weiter bewegen, geht es dort nicht glatt weiter. Irgendwann rutscht das Gestein plötzlich: Ein Erdbeben entsteht.\n\nDie langsame Bewegung und das plötzliche Rutschen sind verschiedene Teile des Vorgangs. Ein langes Aufbauen von Spannung kann einer kurzen Bewegung vorausgehen.",
+        "fact": "Nicht jedes Erdbeben entsteht genau an einer Plattengrenze.",
+        "starter": "Verhaktes Gestein kann plötzlich rutschen. Dann bebt die Erde.",
+        "deeper": "Unser Modell verkürzt die Zeit und vereinfacht die Bruchfläche. Es berechnet keinen Zeitpunkt für das nächste wirkliche Beben.",
+        "whyItMatters": "Du verbindest einen kurzen beobachteten Vorgang mit seiner längeren Vorgeschichte.",
+        "observe": "Vergleiche im Erdbebenlabor Spannung vor und Bewegung nach dem Rutschen. Sage voraus, welche Veränderung du erwartest, bevor du sie auslöst.",
+        "sourceIds": [
+          "quakes-base"
+        ]
       },
       {
         "title": "Herd und Epizentrum",
-        "text": "Der Ort, an dem das Rutschen beginnt, heißt Erdbebenherd. Er liegt meist unter der Erdoberfläche. Direkt darüber liegt das Epizentrum an der Oberfläche.",
-        "fact": "Das Epizentrum ist nicht der Erdkern."
+        "text": "Der Ort, an dem das Rutschen beginnt, heißt Erdbebenherd. Er liegt meist unter der Erdoberfläche. Direkt darüber liegt das Epizentrum an der Oberfläche.\n\nDirekt darüber beschreibt die Verbindung zur Oberfläche. Es bedeutet nicht, dass der Herd oben oder im Erdkern liegt. Beide Begriffe benennen verschiedene Orte desselben Ereignisses.",
+        "fact": "Das Epizentrum ist nicht der Erdkern.",
+        "starter": "Der Herd liegt dort, wo das Beben beginnt. Das Epizentrum liegt direkt darüber.",
+        "deeper": "Der Ausgangspunkt und die gesamte Bruchfläche sind nicht identisch. Ein vereinfachtes Punktbild zeigt den Beginn, nicht jeden Teil des Bruchs.",
+        "whyItMatters": "Du kannst Nachrichten über einen Bebenort genauer verstehen.",
+        "observe": "Zeichne einen Punkt unter einer Linie für die Oberfläche. Markiere den zweiten Punkt direkt darüber und beschrifte beide verschieden.",
+        "sourceIds": [
+          "quakes-base"
+        ]
       },
       {
         "title": "Wellen statt Löcher",
-        "text": "Vom Herd breiten sich Wellen aus. Sie bewegen den Boden. Verschiedene Wellen reisen unterschiedlich schnell durch Gestein. Forschende messen sie mit Seismometern.",
-        "fact": "Erdbebenwellen helfen auch, das Erdinnere zu untersuchen."
+        "text": "Vom Herd breiten sich Wellen aus. Sie bewegen den Boden. Verschiedene Wellen reisen unterschiedlich schnell durch Gestein. Forschende messen sie mit Seismometern.\n\nEine Welle überträgt eine Bewegung, nicht ein Loch durch die Erde. Unterschiedliche Ankunftszeiten können Forschenden Hinweise geben, die ein einzelnes Bild nicht zeigt.",
+        "fact": "Erdbebenwellen helfen auch, das Erdinnere zu untersuchen.",
+        "starter": "Erdbebenwellen bewegen den Boden. Messgeräte zeichnen die Bewegungen auf.",
+        "deeper": "Die verschiedenen Wellenarten verhalten sich in unterschiedlichen Materialien verschieden. Deshalb helfen sie beim Erforschen des verborgenen Erdinneren.",
+        "whyItMatters": "Du erkennst, weshalb Messungen auch etwas über nicht sichtbare Bereiche verraten.",
+        "observe": "Vergleiche im Wellenmodell zwei Ankunftszeiten. Beschreibe, was gemessen wurde, und trenne davon deine Erklärung für den Unterschied.",
+        "sourceIds": [
+          "quakes-base"
+        ]
       },
       {
         "title": "Größe und Wirkung",
-        "text": "Die Magnitude beschreibt die Größe eines Bebens. Wie stark es an einem Ort wirkt, hängt auch vom Abstand, der Tiefe, dem Untergrund und von Gebäuden ab.",
-        "fact": "Die Stärke am Ort und die Magnitude sind zwei unterschiedliche Dinge."
+        "text": "Die Magnitude beschreibt die Größe eines Bebens. Wie stark es an einem Ort wirkt, hängt auch vom Abstand, der Tiefe, dem Untergrund und von Gebäuden ab.\n\nZwei Orte können dasselbe Beben unterschiedlich stark spüren. Abstand und Untergrund spielen mit. Deshalb ist eine einzige Zahl keine vollständige Beschreibung aller Folgen.",
+        "fact": "Die Stärke am Ort und die Magnitude sind zwei unterschiedliche Dinge.",
+        "starter": "Die Größe eines Bebens und seine Wirkung an einem Ort sind nicht dasselbe.",
+        "deeper": "Magnitude beschreibt das Ereignis; Intensität beschreibt beobachtete Wirkungen an einem Ort. Zu einem Beben können verschiedene Intensitäten gehören.",
+        "whyItMatters": "Du kannst zwei Berichte über dasselbe Beben vergleichen, ohne sie vorschnell widersprüchlich zu nennen.",
+        "observe": "Halte im Modell die Magnitude gleich und verändere den Abstand. Beschreibe, welche örtliche Wirkung sich verändert und welche Eingabe gleich blieb.",
+        "sourceIds": [
+          "quakes-base"
+        ]
       },
       {
         "title": "Unter dem Meer",
-        "text": "Wird bei einem starken Seebeben der Meeresboden plötzlich angehoben oder abgesenkt, kann ein Tsunami entstehen. Das sind lange Wellen, die viel Wasser bewegen.",
-        "fact": "Nicht jedes Seebeben löst einen Tsunami aus."
+        "text": "Wird bei einem starken Seebeben der Meeresboden plötzlich angehoben oder abgesenkt, kann ein Tsunami entstehen. Das sind lange Wellen, die viel Wasser bewegen.\n\nNicht jedes Beben unter dem Meer verschiebt genügend Wasser auf die passende Weise. Der Ort unter Wasser allein reicht deshalb nicht als Erklärung für einen Tsunami.",
+        "fact": "Nicht jedes Seebeben löst einen Tsunami aus.",
+        "starter": "Ein stark bewegter Meeresboden kann lange Wasserwellen auslösen.",
+        "deeper": "Tsunamis unterscheiden sich von gewöhnlichen Windwellen. Ein Lehrbild erklärt einen Mechanismus, ersetzt aber keine offiziellen Warnungen oder Schutzanweisungen.",
+        "whyItMatters": "Du vermeidest eine falsche automatische Folgerung aus einem einzelnen Merkmal.",
+        "observe": "Zeichne eine gedachte Meeresbodenbewegung und ihre Wirkung auf das Wasser. Erkläre, welche Bedingung zusätzlich zu unter dem Meer nötig ist.",
+        "sourceIds": [
+          "quakes-base"
+        ]
       }
     ],
     "question": {
@@ -623,28 +1043,63 @@
     "steps": [
       {
         "title": "Kein eigener Scheinwerfer",
-        "text": "Der Mond umkreist die Erde. Er ist kein Stern und leuchtet nicht aus eigener Kraft. Seine Oberfläche reflektiert Sonnenlicht.",
-        "fact": "Die Sonne beleuchtet ungefähr eine Hälfte des Mondes."
+        "text": "Der Mond umkreist die Erde. Er ist kein Stern und leuchtet nicht aus eigener Kraft. Seine Oberfläche reflektiert Sonnenlicht.\n\nReflektieren heißt Licht zurückwerfen. Eine beleuchtete Wand kann ebenfalls hell aussehen, ohne selbst Licht zu erzeugen. Dieser Vergleich erklärt das Leuchten, nicht die Größe oder Entfernung des Mondes.",
+        "fact": "Die Sonne beleuchtet ungefähr eine Hälfte des Mondes.",
+        "starter": "Der Mond leuchtet, weil Sonnenlicht auf ihn fällt. Er ist keine eigene Lampe.",
+        "deeper": "Die Rückseite des Mondes ist nicht immer dunkel. Auch sie hat beleuchtete Zeiten, obwohl wir sie von der Erde nicht direkt sehen.",
+        "whyItMatters": "Du unterscheidest Lichtquelle und beleuchtete Oberfläche.",
+        "observe": "Beleuchte mit einem Erwachsenen einen Ball mit einer Taschenlampe. Beschreibe, wo das Licht herkommt. Schaue niemals direkt in die Sonne.",
+        "sourceIds": [
+          "moon-base"
+        ]
       },
       {
         "title": "Die Form verändert sich scheinbar",
-        "text": "Der Mond selbst bleibt rund. Während er um die Erde läuft, sehen wir verschieden viel von seiner beleuchteten Hälfte: Neumond, Halbmond und Vollmond sind Mondphasen.",
-        "fact": "Von Neumond zu Neumond dauert es ungefähr 29½ Tage."
+        "text": "Der Mond selbst bleibt rund. Während er um die Erde läuft, sehen wir verschieden viel von seiner beleuchteten Hälfte: Neumond, Halbmond und Vollmond sind Mondphasen.\n\nUnser Blick auf die beleuchtete Fläche verändert sich. Die dunkle Stelle ist deshalb kein fehlendes Stück Gestein. Erde, Sonne und Mond müssen gemeinsam betrachtet werden.",
+        "fact": "Von Neumond zu Neumond dauert es ungefähr 29½ Tage.",
+        "starter": "Der Mond bleibt rund. Wir sehen unterschiedlich viel seiner hellen Hälfte.",
+        "deeper": "Umlaufzeit und Phasenzyklus sind nicht gleich lang: Während der Mond umläuft, bewegt sich auch die Erde auf ihrer Bahn um die Sonne weiter.",
+        "whyItMatters": "Du erklärst eine veränderte Ansicht, ohne eine veränderte Form des Körpers zu erfinden.",
+        "observe": "Stelle drei Mondphasen im Labor ein. Sage zu jeder, welcher Anteil sichtbar hell ist und welcher Körper das Licht liefert.",
+        "sourceIds": [
+          "moon-base"
+        ]
       },
       {
         "title": "Ein Viertel zeigt einen Halbmond",
-        "text": "Beim ersten Viertel sehen wir die rechte Hälfte der Scheibe hell, wie üblich von der Nordhalbkugel betrachtet. Der Name meint ein Viertel des Weges durch den Phasenzyklus.",
-        "fact": "Gewöhnliche Mondphasen sind kein Schatten der Erde."
+        "text": "Beim ersten Viertel sehen wir die rechte Hälfte der Scheibe hell, wie üblich von der Nordhalbkugel betrachtet. Der Name meint ein Viertel des Weges durch den Phasenzyklus.\n\nDie Namen beschreiben zwei verschiedene Anteile: Ein Viertel des Phasenwegs kann eine halb beleuchtete sichtbare Scheibe ergeben. Rechts oder links hängt außerdem von der Betrachtung ab.",
+        "fact": "Gewöhnliche Mondphasen sind kein Schatten der Erde.",
+        "starter": "Beim ersten Viertel sieht die Scheibe halb hell aus. Viertel meint den Zyklus.",
+        "deeper": "Unsere übliche Darstellung entspricht dem Blick von der Nordhalbkugel. Eine gedrehte Zeichnung verändert die Richtung im Bild, nicht den Beleuchtungsmechanismus.",
+        "whyItMatters": "Du kannst scheinbar widersprüchliche Brüche auf ihre unterschiedlichen Bezugsgrößen prüfen.",
+        "observe": "Zeichne einen Zyklus mit vier Stationen. Markiere erstes Viertel und daneben die halb helle Mondscheibe; benenne beide Bruchteile verschieden.",
+        "sourceIds": [
+          "moon-base"
+        ]
       },
       {
         "title": "Krater und kleine Sprünge",
-        "text": "Viele Mondkrater entstanden durch Einschläge. Die Schwerkraft ist auf dem Mond etwa ein Sechstel so stark wie auf der Erde. Menschen wiegen dort weniger, haben aber noch dieselbe Masse.",
-        "fact": "Auf dem Mond gibt es keine dichte Luft wie bei uns."
+        "text": "Viele Mondkrater entstanden durch Einschläge. Die Schwerkraft ist auf dem Mond etwa ein Sechstel so stark wie auf der Erde. Menschen wiegen dort weniger, haben aber noch dieselbe Masse.\n\nMasse beschreibt, wie viel Materie ein Körper enthält; Gewichtskraft beschreibt die Anziehung auf ihn. Ein Mensch verliert beim Reisen zum Mond keine Körperteile, obwohl seine Gewichtskraft kleiner wird.",
+        "fact": "Auf dem Mond gibt es keine dichte Luft wie bei uns.",
+        "starter": "Der Mond hat Krater. Seine Schwerkraft ist schwächer als die auf der Erde.",
+        "deeper": "Eine Waage und eine Masseangabe sind nicht jede Art derselben Messung. Im Vergleich gilt die schwächere Anziehung an der Mondoberfläche.",
+        "whyItMatters": "Du kannst weniger Gewicht erklären, ohne weniger Masse zu behaupten.",
+        "observe": "Beschreibe einen gedachten Sprung auf Erde und Mond. Sage, was am Menschen gleich bleibt und welche Umgebungsbedingung sich ändert. Springe nicht von erhöhten Flächen.",
+        "sourceIds": [
+          "moon-base"
+        ]
       },
       {
         "title": "Menschen auf dem Mond",
-        "text": "1969 landete Apollo 11. Neil Armstrong und Buzz Aldrin gingen auf die Mondoberfläche. Michael Collins blieb im Raumschiff in der Mondumlaufbahn.",
-        "fact": "Das Mondlabor zeigt dir die Phasen; Größen und Abstände sind dort stark vereinfacht."
+        "text": "1969 landete Apollo 11. Neil Armstrong und Buzz Aldrin gingen auf die Mondoberfläche. Michael Collins blieb im Raumschiff in der Mondumlaufbahn.\n\nEine gemeinsame Mission enthält verschiedene Aufgaben. Auf dem Mond gehen und in der Mondumlaufbahn arbeiten waren beides Teile derselben Reise. Deshalb nennt eine vollständige Erklärung alle drei Beteiligten.",
+        "fact": "Das Mondlabor zeigt dir die Phasen; Größen und Abstände sind dort stark vereinfacht.",
+        "starter": "1969 betraten zwei Apollo-11-Astronauten den Mond. Ein dritter blieb in der Umlaufbahn.",
+        "deeper": "Eine frühere Landung und ein heutiges Forschungsvorhaben sind unterschiedliche Ereignisse. Ein historisches Datum darf nicht wie eine aktuelle Meldung dargestellt werden.",
+        "whyItMatters": "Du beschreibst Zusammenarbeit, ohne nur die sichtbarste Person zu nennen.",
+        "observe": "Ordne Armstrong, Aldrin und Collins ihren Aufgaben bei Apollo 11 zu. Erkläre, weshalb zwei Oberflächenbesuche nicht bedeuten, dass nur zwei Menschen beteiligt waren.",
+        "sourceIds": [
+          "moon-base"
+        ]
       }
     ],
     "question": {
@@ -673,28 +1128,63 @@
     "steps": [
       {
         "title": "Zwei Halbkugeln",
-        "text": "Der Äquator teilt die Erde in Nord- und Südhalbkugel. Sein Breitengrad ist null. Die Pole liegen an den beiden Enden der gedachten Erdachse.",
-        "fact": "Am Äquator ist weder überall Regenwald noch überall Wüste."
+        "text": "Der Äquator teilt die Erde in Nord- und Südhalbkugel. Sein Breitengrad ist null. Die Pole liegen an den beiden Enden der gedachten Erdachse.\n\nEine gedachte Linie hilft beim Beschreiben eines Ortes, auch wenn sie draußen nicht aufgemalt ist. Der Äquator ist zugleich die Bezugslinie für null Grad geografischer Breite.",
+        "fact": "Am Äquator ist weder überall Regenwald noch überall Wüste.",
+        "starter": "Der Äquator trennt Nord- und Südhalbkugel. Er ist eine gedachte Linie.",
+        "deeper": "Breite beschreibt einen Winkel, keine Entfernung in Metern. Die Karte nutzt ihn zur Lagebeschreibung.",
+        "whyItMatters": "Du kannst ein Zeichen auf einer Karte mit seiner geografischen Bedeutung verbinden.",
+        "observe": "Suche einen Ort nördlich und einen südlich des Äquators. Beschreibe ihre Lage, ohne oben und unten am Bildschirm als Begründung zu verwenden.",
+        "sourceIds": [
+          "navigation-base"
+        ]
       },
       {
         "title": "Breite und Länge",
-        "text": "Breitengrade zeigen, wie weit nördlich oder südlich vom Äquator ein Ort liegt. Längengrade zeigen, wie weit östlich oder westlich vom Nullmeridian ein Ort liegt. Zusammen helfen sie, Orte genau zu finden.",
-        "fact": "Alle Längengrade treffen sich an den Polen."
+        "text": "Breitengrade zeigen, wie weit nördlich oder südlich vom Äquator ein Ort liegt. Längengrade zeigen, wie weit östlich oder westlich vom Nullmeridian ein Ort liegt. Zusammen helfen sie, Orte genau zu finden.\n\nNur nördlich reicht nicht für einen eindeutigen Ort. Erst die zweite Richtung ergänzt die Lage. Das ähnelt Zeile und Spalte in einem Raster, ist auf der Kugel aber ein Winkelnetz.",
+        "fact": "Alle Längengrade treffen sich an den Polen.",
+        "starter": "Breite und Länge helfen zusammen, einen Ort auf der Erde zu finden.",
+        "deeper": "Die Längenkreise kommen an den Polen zusammen. Deshalb sind Strecken zwischen gleichen Längenunterschieden nicht auf jeder Breite gleich groß.",
+        "whyItMatters": "Du lernst, warum ein Ort zwei Koordinaten braucht.",
+        "observe": "Wähle zwei Orte mit ähnlicher Breite und verschiedener Länge. Erkläre, welche der beiden Angaben sie unterscheidet.",
+        "sourceIds": [
+          "navigation-base"
+        ]
       },
       {
         "title": "Der Nullmeridian",
-        "text": "Der Nullmeridian ist die vereinbarte Linie für null Grad Länge. Er läuft durch Greenwich in London. Anders als beim Äquator gibt es dafür keine besondere natürliche Lage.",
-        "fact": "Menschen mussten sich für einen gemeinsamen Anfang entscheiden."
+        "text": "Der Nullmeridian ist die vereinbarte Linie für null Grad Länge. Er läuft durch Greenwich in London. Anders als beim Äquator gibt es dafür keine besondere natürliche Lage.\n\nFür den Beginn der Längenzählung brauchte es eine Vereinbarung. Der Äquator hat dagegen eine geometrische Lage zwischen den Polen. Beide heißen null Grad, aber nicht in derselben Richtung.",
+        "fact": "Menschen mussten sich für einen gemeinsamen Anfang entscheiden.",
+        "starter": "Der Nullmeridian ist der vereinbarte Anfang für geografische Länge.",
+        "deeper": "Historischer Greenwich-Meridian und moderner geodätischer Nullmeridian sind nicht exakt dieselbe Linie. Unser einfaches Weltmodell unterscheidet diese kleine Abweichung nicht.",
+        "whyItMatters": "Du erkennst, dass eine gemeinsame Regel nicht automatisch ein Naturgesetz ist.",
+        "observe": "Finde den Nullmeridian und den Äquator. Beschrifte null Grad Länge und null Grad Breite und erkläre den Unterschied.",
+        "sourceIds": [
+          "navigation-base"
+        ]
       },
       {
         "title": "Die Wendekreise",
-        "text": "Die Wendekreise liegen etwa 23,4 Grad nördlich und südlich des Äquators. Zwischen ihnen kann die Sonne zu bestimmten Zeiten mittags genau über einem Ort stehen.",
-        "fact": "Diese Breite hängt mit der Neigung der Erdachse zusammen."
+        "text": "Die Wendekreise liegen etwa 23,4 Grad nördlich und südlich des Äquators. Zwischen ihnen kann die Sonne zu bestimmten Zeiten mittags genau über einem Ort stehen.\n\nDie Achsneigung erklärt, warum es einen begrenzten Bereich dafür gibt. Außerhalb der Tropen erreicht die Sonne dieses Genau-über-uns nicht, auch wenn ein Sommertag hell und warm ist.",
+        "fact": "Diese Breite hängt mit der Neigung der Erdachse zusammen.",
+        "starter": "Zwischen den Wendekreisen kann die Sonne mittags genau über einem Ort stehen.",
+        "deeper": "Zenit bedeutet direkt über dem Beobachtungsort. Höher als im Winter bedeutet noch nicht automatisch im Zenit.",
+        "whyItMatters": "Du kannst Sonnenhöhe und Wärme als unterschiedliche Aussagen behandeln.",
+        "observe": "Vergleiche im Jahreszeitenmodell einen tropischen Ort mit Deutschland. Beschreibe den Sonnenstand; schaue zur Prüfung nie direkt in die Sonne.",
+        "sourceIds": [
+          "navigation-base"
+        ]
       },
       {
         "title": "Wie spät ist es woanders?",
-        "text": "Die Erde dreht sich. Deshalb haben Orte im Osten und Westen nicht gleichzeitig Mittag nach der Sonne. Menschen nutzen Zeitzonen. Echte Grenzen sind viel unregelmäßiger als gleich breite Streifen.",
-        "fact": "Die Sommerzeit kann den Unterschied zwischen zwei Stadtuhren verändern."
+        "text": "Die Erde dreht sich. Deshalb haben Orte im Osten und Westen nicht gleichzeitig Mittag nach der Sonne. Menschen nutzen Zeitzonen. Echte Grenzen sind viel unregelmäßiger als gleich breite Streifen.\n\nDie Erddrehung erklärt den zeitlichen Unterschied; vereinbarte Zeitzonen machen Uhren alltagstauglich. Ihre Grenzen folgen deshalb nicht einfach einem gleichmäßigen Linienmuster.",
+        "fact": "Die Sommerzeit kann den Unterschied zwischen zwei Stadtuhren verändern.",
+        "starter": "Menschen haben Uhrzeiten vereinbart. Nicht überall ist zugleich Mittag nach der Sonne.",
+        "deeper": "Sommerzeit und politische Regeln können den Uhrunterschied ändern. Eine geografische Skizze ist deshalb kein vollständiger aktueller Fahrplan.",
+        "whyItMatters": "Du verstehst, weshalb eine Stadtzeit zusätzliche Regeln braucht.",
+        "observe": "Vergleiche zwei Städte im Welt-Uhren-Labor. Notiere auch das Datum und erkläre, warum eine feste ganzjährige Differenz nicht immer passt.",
+        "sourceIds": [
+          "navigation-base"
+        ]
       }
     ],
     "question": {
@@ -723,28 +1213,63 @@
     "steps": [
       {
         "title": "Berge wachsen langsam",
-        "text": "Wenn Platten zusammenstoßen, kann Gestein gefaltet und gehoben werden. So entstand etwa der Himalaya. Manche Berge sind Vulkane, aber längst nicht alle.",
-        "fact": "Der Everest ist der höchste Berg über dem Meeresspiegel. Die Messregel gehört zum Rekord."
+        "text": "Wenn Platten zusammenstoßen, kann Gestein gefaltet und gehoben werden. So entstand etwa der Himalaya. Manche Berge sind Vulkane, aber längst nicht alle.\n\nAufbauen und Abtragen wirken zusammen. Während sich Gestein hebt, können Wasser, Wind und Eis Material entfernen. Die heutige Form ist das Ergebnis einer langen Geschichte.",
+        "fact": "Der Everest ist der höchste Berg über dem Meeresspiegel. Die Messregel gehört zum Rekord.",
+        "starter": "Plattenbewegungen können Berge heben. Nicht jeder Berg ist ein Vulkan.",
+        "deeper": "Höchster Berg braucht eine Messregel. Höhe über dem Meer und Höhe vom Fuß bis zum Gipfel können unterschiedliche Vergleiche ergeben.",
+        "whyItMatters": "Du beschreibst Landschaft als Ergebnis von Vorgängen, statt nur als fertiges Bild.",
+        "observe": "Vergleiche ein Gebirge und einen Vulkan auf der Naturkarte. Nenne einen möglichen Bildungsprozess und sage, welche Information das Bild allein nicht beweist.",
+        "sourceIds": [
+          "landscapes-base"
+        ]
       },
       {
         "title": "Wasser trägt Gestein ab",
-        "text": "Flüsse fließen durch die Landschaft. Sie transportieren Sand, Steine und gelöste Stoffe. Über lange Zeit können sie tiefe Täler formen.",
-        "fact": "Der Amazonas führt besonders viel Wasser. Länge und Wassermenge sind verschiedene Rekorde."
+        "text": "Flüsse fließen durch die Landschaft. Sie transportieren Sand, Steine und gelöste Stoffe. Über lange Zeit können sie tiefe Täler formen.\n\nWasser kann Material abtragen, mitnehmen und an anderer Stelle ablagern. Das ist nicht nur ein Weg zum Meer, sondern auch ein Umbauen der Landschaft.",
+        "fact": "Der Amazonas führt besonders viel Wasser. Länge und Wassermenge sind verschiedene Rekorde.",
+        "starter": "Flüsse transportieren Wasser und Material. Über lange Zeit verändern sie Täler.",
+        "deeper": "Länge und Wassermenge sind unterschiedliche Merkmale eines Flusses. Ein Rekord ohne Merkmal beantwortet keine eindeutige Frage.",
+        "whyItMatters": "Du kannst Wasserbewegung mit einer Veränderung der Landschaft verbinden.",
+        "observe": "Zeichne an einem gedachten Fluss je eine Stelle für Abtragen und Ablagern. Erkläre, warum beide Vorgänge zur selben Landschaftsgeschichte gehören können.",
+        "sourceIds": [
+          "landscapes-base"
+        ]
       },
       {
         "title": "Ein See bleibt im Land",
-        "text": "Seen sammeln Wasser in Vertiefungen. Einige haben Zu- und Abflüsse; andere haben keinen Abfluss zum Meer. Der große Baikalsee liegt in Asien.",
-        "fact": "Das Kaspische Meer ist trotz seines Namens ein Binnengewässer."
+        "text": "Seen sammeln Wasser in Vertiefungen. Einige haben Zu- und Abflüsse; andere haben keinen Abfluss zum Meer. Der große Baikalsee liegt in Asien.\n\nDer Name allein entscheidet nicht über die Gewässerart. Das Kaspische Meer heißt Meer, ist aber ein Binnengewässer. Schau auf Lage und Verbindung statt nur auf das Wort im Namen.",
+        "fact": "Das Kaspische Meer ist trotz seines Namens ein Binnengewässer.",
+        "starter": "Ein See liegt in einer Vertiefung an Land. Manche Seen haben keinen Abfluss zum Meer.",
+        "deeper": "Zu- und Abfluss, Verdunstung und Niederschlag gehören zur Wasserbilanz. Ein See muss deshalb nicht unverändert voll bleiben.",
+        "whyItMatters": "Du lernst, Bezeichnungen an Merkmalen zu überprüfen.",
+        "observe": "Finde einen See und ein mit dem Ozean verbundenes Meer auf der Karte. Beschreibe die Wasserverbindungen beider, statt nur ihre Namen abzulesen.",
+        "sourceIds": [
+          "landscapes-base"
+        ]
       },
       {
         "title": "Trocken, nicht immer heiß",
-        "text": "Eine Wüste bekommt sehr wenig Niederschlag. Die Sahara ist die größte heiße Wüste. Antarktika ist eine noch größere, kalte Wüste.",
-        "fact": "Nicht jede Wüste besteht aus Sanddünen."
+        "text": "Eine Wüste bekommt sehr wenig Niederschlag. Die Sahara ist die größte heiße Wüste. Antarktika ist eine noch größere, kalte Wüste.\n\nEine Rekordfrage braucht ihre Gruppe: heiße Wüsten meint etwas anderes als alle Wüsten. Temperatur und geringe Niederschläge müssen getrennt genannt werden.",
+        "fact": "Nicht jede Wüste besteht aus Sanddünen.",
+        "starter": "Wüsten sind trocken. Die größte heiße Wüste und eine Kältewüste sind verschiedene Vergleiche.",
+        "deeper": "Eine dicke Eisschicht ist kein Beweis für viel heutigen Niederschlag. Gespeichertes Wasser und neu fallender Niederschlag sind verschiedene Größen.",
+        "whyItMatters": "Du kannst eine überraschende Einordnung mit einer klaren Zähl- oder Messregel begründen.",
+        "observe": "Vergleiche Sahara und Antarktika. Stelle zwei verschiedene Rekordfragen und erkläre, weshalb ihre Antworten unterschiedlich sein können.",
+        "sourceIds": [
+          "landscapes-base"
+        ]
       },
       {
         "title": "Eis als Landschaftsformer",
-        "text": "Ein Gletscher ist langsam fließendes Eis. Er kann Gestein abschleifen und große Täler formen. Ein Eisberg ist dagegen ein abgebrochenes Stück Eis im Wasser.",
-        "fact": "Gletscher findet man auch in hohen Gebirgen weit weg von den Polen."
+        "text": "Ein Gletscher ist langsam fließendes Eis. Er kann Gestein abschleifen und große Täler formen. Ein Eisberg ist dagegen ein abgebrochenes Stück Eis im Wasser.\n\nEis kann Material abschleifen und mitnehmen. Wenn es sich zurückzieht, bleiben geformte Täler und abgelagerte Reste zurück. Bewegung und Form gehören daher zur Erklärung eines Gletschers.",
+        "fact": "Gletscher findet man auch in hohen Gebirgen weit weg von den Polen.",
+        "starter": "Gletscher bewegen sich langsam an Land. Eisberge schwimmen als abgebrochene Eisstücke.",
+        "deeper": "Ein Gletscher kann zugleich fließen und sich verkürzen, wenn mehr Eis verloren geht als nachkommt. Fließrichtung und Änderung seiner Länge sind nicht dasselbe.",
+        "whyItMatters": "Du unterscheidest Eisbewegung von Wachstum oder Rückzug.",
+        "observe": "Vergleiche Gletscher und Eisberg im Schaubild. Zeichne ihre Lage zu Land und Wasser und sage, welche Darstellung eine gedachte Vereinfachung ist.",
+        "sourceIds": [
+          "landscapes-base"
+        ]
       }
     ],
     "question": {
@@ -773,28 +1298,63 @@
     "steps": [
       {
         "title": "Wetter ist heute, Klima ist lange",
-        "text": "Wetter beschreibt, was die Luft gerade macht. Klima beschreibt typische Bedingungen über viele Jahre. Ein kalter Tag allein sagt wenig darüber, wie sich das Klima langfristig verändert.",
-        "fact": "Auch in einem warmen Klima kann es einzelne kühle Tage geben."
+        "text": "Wetter beschreibt, was die Luft gerade macht. Klima beschreibt typische Bedingungen über viele Jahre. Ein kalter Tag allein sagt wenig darüber, wie sich das Klima langfristig verändert.\n\nEine Wetterbeobachtung ist ein Baustein für spätere Vergleiche. Erst viele passende Daten helfen, typische Bedingungen und Veränderungen zu erkennen. Drei Tage ersetzen keine lange Beobachtungsreihe.",
+        "fact": "Auch in einem warmen Klima kann es einzelne kühle Tage geben.",
+        "starter": "Klima beschreibt lange Zeiträume. Ein einzelner Tag ist Wetter.",
+        "deeper": "Ein Mittelwert zeigt nicht die gesamte Verteilung. Für Klima interessieren auch Unterschiede und wiederkehrende Muster.",
+        "whyItMatters": "Du kannst kurzfristige Beobachtungen und langfristige Aussagen passend einordnen.",
+        "observe": "Notiere einen Wetterzustand und eine Klimaaussage. Erkläre für beide, welchen Zeitraum du zum Überprüfen brauchen würdest.",
+        "sourceIds": [
+          "climate-base"
+        ]
       },
       {
         "title": "Sonnenenergie auf der Kugel",
-        "text": "Nahe dem Äquator trifft Sonnenlicht im Jahreslauf steiler auf. In polaren Gebieten trifft es flacher auf und verteilt sich auf größere Flächen. Deshalb gibt es breite Klimagürtel.",
-        "fact": "Höhe, Meeresströmungen und Winde verändern das Klima zusätzlich."
+        "text": "Nahe dem Äquator trifft Sonnenlicht im Jahreslauf steiler auf. In polaren Gebieten trifft es flacher auf und verteilt sich auf größere Flächen. Deshalb gibt es breite Klimagürtel.\n\nDieselbe Lichtmenge kann auf eine kleine oder große Fläche fallen. Für die Erwärmung eines Flächenstücks macht das einen Unterschied. So hilft der Sonnenwinkel beim Erklären breiter Klimagürtel.",
+        "fact": "Höhe, Meeresströmungen und Winde verändern das Klima zusätzlich.",
+        "starter": "Flach auftreffendes Sonnenlicht verteilt sich auf mehr Fläche.",
+        "deeper": "Breitengrad allein bestimmt nicht das vollständige örtliche Klima. Höhe, Strömungen und weitere Bedingungen können ähnliche Breiten unterschiedlich machen.",
+        "whyItMatters": "Du verbindest ein einfaches Flächenmodell mit einer Erklärung für die Erde.",
+        "observe": "Vergleiche im Jahreszeitenmodell einen steilen und einen flachen Lichteinfall. Beschreibe Fläche und Tagesdauer getrennt.",
+        "sourceIds": [
+          "climate-base"
+        ]
       },
       {
         "title": "Regenwald oder Savanne?",
-        "text": "In warmen, sehr feuchten Gebieten können tropische Regenwälder wachsen. Wo sich Regen- und Trockenzeiten stärker abwechseln, finden wir etwa Savannen. Beide können in den Tropen liegen.",
-        "fact": "Die Tropen sind kein einzelner Lebensraum."
+        "text": "In warmen, sehr feuchten Gebieten können tropische Regenwälder wachsen. Wo sich Regen- und Trockenzeiten stärker abwechseln, finden wir etwa Savannen. Beide können in den Tropen liegen.\n\nWenn du nur warm notierst, fehlen wichtige Bedingungen für Pflanzen. Wie viel Regen fällt und wann er fällt, verändert das Wasserangebot während des Jahres.",
+        "fact": "Die Tropen sind kein einzelner Lebensraum.",
+        "starter": "Regenwald und Savanne können in den Tropen liegen. Wasser und Regenzeiten unterscheiden sie.",
+        "deeper": "Eine Grenze auf einer einfachen Vegetationskarte ist nicht überall ein scharfer Wechsel in der Natur. Übergänge und örtliche Bedingungen bleiben wichtig.",
+        "whyItMatters": "Du kannst Pflanzenwelten mit mehreren Bedingungen statt nur einem Merkmal erklären.",
+        "observe": "Vergleiche zwei tropische Beispielorte auf der Vegetationskarte. Nenne eine Gemeinsamkeit und eine begründete Unterschiedsfrage zum Wasserangebot.",
+        "sourceIds": [
+          "climate-base"
+        ]
       },
       {
         "title": "Wald und Tundra",
-        "text": "In vielen gemäßigten Regionen wachsen Wälder. In sehr kalten Gebieten mit kurzem Sommer bleiben Pflanzen oft niedrig: Moose, Flechten und Sträucher gehören zur Tundra.",
-        "fact": "Wasser und Wärme beeinflussen Pflanzen, aber auch Böden und menschliche Nutzung."
+        "text": "In vielen gemäßigten Regionen wachsen Wälder. In sehr kalten Gebieten mit kurzem Sommer bleiben Pflanzen oft niedrig: Moose, Flechten und Sträucher gehören zur Tundra.\n\nBäume, Sträucher und Moose brauchen nicht alle dieselben Bedingungen. Wasser, Wärme und Boden wirken zusammen. Eine Landschaftsbezeichnung ist deshalb eine Orientierung, keine Beschreibung jeder einzelnen Pflanze.",
+        "fact": "Wasser und Wärme beeinflussen Pflanzen, aber auch Böden und menschliche Nutzung.",
+        "starter": "Ein kurzer kalter Sommer begrenzt das Pflanzenwachstum. In der Tundra bleiben viele Pflanzen niedrig.",
+        "deeper": "Menschliche Nutzung kann eine Pflanzenwelt ebenfalls verändern. Klima und Vegetation hängen zusammen, sind aber keine austauschbaren Begriffe.",
+        "whyItMatters": "Du lernst, eine Pflanzenkarte zu erklären und weitere Einflussgrößen mitzudenken.",
+        "observe": "Vergleiche Wald und Tundra auf der Karte. Beschreibe sichtbare Pflanzenformen und markiere, welche weiteren Bedingungen die Karte nicht zeigt.",
+        "sourceIds": [
+          "climate-base"
+        ]
       },
       {
         "title": "Lebensräume schützen",
-        "text": "Tiere brauchen Nahrung, Wasser und Schutz. Wird ein Lebensraum stark verändert, kann es schwer werden, all das zu finden. Eine Vielfalt von Arten kann einen Lebensraum widerstandsfähiger machen. Welche Beziehungen dabei helfen, hängt vom Lebensraum ab.",
-        "fact": "Wir können vor Ort Lebensräume schützen, Müll vermeiden und Dinge lange nutzen."
+        "text": "Tiere brauchen Nahrung, Wasser und Schutz. Wird ein Lebensraum stark verändert, kann es schwer werden, all das zu finden. Eine Vielfalt von Arten kann einen Lebensraum widerstandsfähiger machen. Welche Beziehungen dabei helfen, hängt vom Lebensraum ab.\n\nEine Art zu schützen heißt auch, Nahrung, Wasser und Schutzmöglichkeiten zu beachten. Ein schönes Bild eines Tiers reicht nicht, wenn sein Lebensraum die nötigen Bedingungen verliert.",
+        "fact": "Wir können vor Ort Lebensräume schützen, Müll vermeiden und Dinge lange nutzen.",
+        "starter": "Lebewesen brauchen passende Bedingungen. Schutz betrifft ihre Beziehungen und ihren Lebensraum.",
+        "deeper": "Vielfalt ist kein pauschaler Schutz vor jeder Veränderung. Entscheidend sind auch konkrete Beziehungen und die Art der Belastung.",
+        "whyItMatters": "Du erkennst einen Zusammenhang zwischen einer Art und ihrem ganzen Umfeld.",
+        "observe": "Wähle eine Art aus der Tierwelt. Erkläre eine passende Schutzidee mit einem Bedürfnis der Art; beobachte Tiere nur mit Abstand.",
+        "sourceIds": [
+          "climate-base"
+        ]
       }
     ],
     "question": {

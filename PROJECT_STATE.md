@@ -1,3 +1,17 @@
+# Aktiver Projektstand: Paket 3.5 / vernetzte Inhaltswellen nach PR26
+
+13.10.2026, Europe/Berlin. Gesamter unveränderter 3.5-Auftrag wird weitergeführt, nicht neu gestartet. Alle drei neu übergebenen Originaldokumente vollständig gelesen, einschließlich sämtlicher Nachträge. Sie sind durch den neuesten ausdrücklichen Nutzerauftrag gemeinsam verbindlich; die alte Formulierung, Anhänge seien bloß ergänzende Referenzen, ist überholt. Hash-/Längenquittung lokal work/p35-original-orders.json; keine zweite Aufgabenverwaltung.
+
+Tatsächlicher Start: PR26 von Arizona2k übernommen 2026-10-13T08:55:11Z; test-live c9d7ab0336ddcc89653241433dd06dc020688b39 enthält b8795c84758b11f08067d81d34d9e307407cee95. Vercel-success 56207451057 am selben Merge 08:55:40Z, Projektkennung Fa2b4U1PGCCtidxJnuAeZ1fGfoto. main537622796f7e1f9a886e7400f10b1f727d24f8dc unverändert. Keine offenen PRs/fremde Remote-Reservierung. Lauf package-3-5-content-2026-10-13; Branch codex/wunderkompass-excellence-content-2026-10-13; Basis c9d7ab0336ddcc89653241433dd06dc020688b39; eigene Reservierung f1471189d57c70ffd0ee373fb61aaf5ef9f636af (work/package-3-5-content-lock-owner.txt).
+
+Jetzt tatsächliche große kohärente Inhalts-/Engineeringwellen WK053–057 bearbeiten. Priorität: knappes JS-Budget (nur744 Bytes Totalspielraum) messen/risikoarm verbessern; alle80 Alttexte/Altersstaffeln/Quellen/Medien/Lernhandlungen nach WK055 substanziell nachredigieren; daran anschließende fachlich eigenständige Alt-/Neuthemen mit eingefrorenen neun Bestandszielen. Nicht nach einer einzelnen Grundlagenwelle stoppen, solange sichere Arbeit möglich ist. Vollständige Pflichtprüfungen und exakter finaler Quality nötig; automatische Strukturprüfung niemals als unabhängige Fach-/Kinderabnahme ausgeben.
+
+80/80 Redaktionsabschluss, neun Verdopplungen und plattformweite Fach-/Produktabnahme derzeit offen. Externe News-/Hardware-/Assistenz-/Hör-/Kinder-/Fachgates bleiben ausdrücklich offen; News disabled, keine Aktivierung. Keine eigenständige Übernahme/Publikation/Kosten. Pakete4–8 nach3.5 unverändert. WK038 bleibt gesondert spätere Nachfolgearbeit.
+
+---
+
+## Vorherige gesicherte Wellen (historische Checkpoints)
+
 # Aktiver Projektstand: Paket 3.5 / Welle 0–1
 
 13. Oktober2026, Europe/Berlin. Lauf package-3-5-foundation-2026-10-13, Codex; exklusiver Branch `codex/wunderkompass-excellence-3-5-2026-10-13`, Basis `d0dc9a35857e896d45d35c7474640a58087b0ec5`, eigene Reservierung `be76a352538745922383e039a9a91bb4d3ebabe4`, Eigentümer work/package-3-5-lock-owner.txt.

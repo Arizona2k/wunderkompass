@@ -10,8 +10,9 @@ export function measureBuild(dir){
  const entries=Object.keys(manifest).filter(k=>manifest[k].isEntry);if(entries.length!==1)throw Error('Expected exactly one application entry');visit(entries[0]);
  const size=(files,gzip=false)=>[...files].reduce((total,f)=>{const data=fs.readFileSync(path.join(dir,f));return total+(gzip?gzipSync(data).length:data.length);},0);
  const allJs=fs.readdirSync(path.join(dir,'assets')).filter(f=>f.endsWith('.js')).map(f=>'assets/'+f);
+ const learningText=fs.readdirSync(path.join(dir,'assets')).filter(f=>/^(book-content|journey-content)-.*\.json$/.test(f)).map(f=>'assets/'+f);if(learningText.length!==2)throw Error('Both current learning text payloads required');
  const journeyData=fs.readdirSync(path.join(dir,'assets')).filter(f=>/^journey-inquiries-.*\.json$/.test(f)).map(f=>'assets/'+f);
- return {journeyInquiryGzipBytes:size(journeyData,true),entryJsBytes:size(js),entryJsGzipBytes:size(js,true),entryCssBytes:size(css),entryCssGzipBytes:size(css,true),totalJsBytes:size(allJs),totalJsGzipBytes:size(allJs,true),largestJsBytes:Math.max(...allJs.map(f=>fs.statSync(path.join(dir,f)).size)),worldGeometryBytes:fs.statSync(path.join(dir,'world.json')).size,entryFiles:[...js],cssFiles:[...css]};
+ return {learningTextBytes:size(learningText),learningTextGzipBytes:size(learningText,true),journeyInquiryGzipBytes:size(journeyData,true),entryJsBytes:size(js),entryJsGzipBytes:size(js,true),entryCssBytes:size(css),entryCssGzipBytes:size(css,true),totalJsBytes:size(allJs),totalJsGzipBytes:size(allJs,true),largestJsBytes:Math.max(...allJs.map(f=>fs.statSync(path.join(dir,f)).size)),worldGeometryBytes:fs.statSync(path.join(dir,'world.json')).size,entryFiles:[...js],cssFiles:[...css]};
 }
 export function violations(metrics,budgets){return Object.entries(budgets).filter(([key,max])=>!Number.isFinite(metrics[key])||metrics[key]>max).map(([key,max])=>({metric:key,actual:metrics[key],maximum:max}));}
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){

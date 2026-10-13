@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T22:57:05.721Z",
+  "generatedAt": "2026-10-13T12:29:37.214Z",
   "personalProgressIncluded": false,
   "topics": 116,
   "categories": {
@@ -84,18 +84,18 @@
     {
       "file": "journeys.json",
       "sources": [
-        "app/learning-data.ts",
-        "app/expanded-learning-data.ts"
+        "app/journey-content.json",
+        "app/journey-index.json"
       ],
       "entries": 16,
-      "bytes": 44741,
-      "sha256": "d2f5c290c8069f8a4fb0b8403ec78b822fe2c48b16375785bebde455cc8e6ca0"
+      "bytes": 105962,
+      "sha256": "bed57ee8bde05d5eca377cd40faf013b722054c4aa2989001cf7d6ca33e0efeb"
     },
     {
       "file": "knowledge-words.json",
       "sources": [
-        "app/learning-data.ts",
-        "app/expanded-learning-data.ts"
+        "app/book-content.json",
+        "app/book-word-index.json"
       ],
       "entries": 90,
       "bytes": 14909,
@@ -104,8 +104,8 @@
     {
       "file": "why-questions.json",
       "sources": [
-        "app/learning-data.ts",
-        "app/expanded-learning-data.ts"
+        "app/book-content.json",
+        "app/book-word-index.json"
       ],
       "entries": 30,
       "bytes": 7428,

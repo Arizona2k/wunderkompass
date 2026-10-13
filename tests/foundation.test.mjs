@@ -15,8 +15,10 @@ test('bundle budget includes transitive shared chunks once, excludes deferred re
   fs.writeFileSync(path.join(dir,'.vite/manifest.json'),JSON.stringify(manifest));
   for(const [name,text] of [['main.js','123'],['shared.js','4567'],['reader.js','large article'],['main.css','css']])fs.writeFileSync(path.join(dir,'assets',name),text);fs.writeFileSync(path.join(dir,'world.json'),'{}');
   fs.writeFileSync(path.join(dir,'assets','journey-inquiries-fixture.json'),JSON.stringify({text:'deferred inquiry content'}));
+  fs.writeFileSync(path.join(dir,'assets','book-content-fixture.json'),'{}');fs.writeFileSync(path.join(dir,'assets','journey-content-fixture.json'),'{}');
   const m=measureBuild(dir);assert.ok(m.journeyInquiryGzipBytes>0);assert.equal(violations(m,{journeyInquiryGzipBytes:1})[0].metric,'journeyInquiryGzipBytes');assert.equal(m.entryJsBytes,7);assert.equal(m.entryCssBytes,3);assert.equal(m.totalJsBytes,20);assert.equal(m.entryFiles.length,2);
   assert.deepEqual(violations(m,{entryJsBytes:7}),[]);assert.equal(violations(m,{entryJsBytes:6})[0].metric,'entryJsBytes');assert.equal(violations({}, {entryJsBytes:7}).length,1);
+  assert.equal(m.learningTextBytes,4);assert.equal(violations(m,{learningTextGzipBytes:1})[0].metric,'learningTextGzipBytes');fs.unlinkSync(path.join(dir,'assets','book-content-fixture.json'));assert.throws(()=>measureBuild(dir),/Both current learning text payloads/);
  }finally{fs.rmSync(dir,{recursive:true,force:true});}
 });
 test('local selection follows real transitive unit dependencies and retains conservative browser/CI boundaries',()=>{

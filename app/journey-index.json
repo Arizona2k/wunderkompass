@@ -1,0 +1,733 @@
+[
+  {
+    "id": "planet",
+    "title": "Unser blauer Planet",
+    "intro": "Was macht die Erde zu unserem Zuhause?",
+    "icon": "globe",
+    "color": "blue",
+    "minutes": 7,
+    "photo": "earth",
+    "source": "https://science.nasa.gov/earth/facts/",
+    "sourceName": "NASA · Earth facts",
+    "steps": [
+      {
+        "title": "Ein Zuhause im Weltall",
+        "text": "Die Erde ist ein Planet."
+      },
+      {
+        "title": "Land und Wasser",
+        "text": "Etwa 71 von 100 Teilen der Erdoberfläche sind vom Ozean bedeckt.",
+        "tryIt": "Finde auf der Weltkugel eine Insel und einen Kontinent."
+      },
+      {
+        "title": "Eine unsichtbare Hülle",
+        "text": "Um die Erde liegt die Atmosphäre."
+      },
+      {
+        "title": "Warum fallen wir nicht herunter?",
+        "text": "Die Schwerkraft zieht Dinge zur Mitte der Erde.",
+        "tryIt": "Zeige an drei Stellen der Weltkugel, in welche Richtung dort unten ist."
+      },
+      {
+        "title": "Zwei Bewegungen, zwei Zeiten",
+        "text": "Die Erde dreht sich um ihre Achse."
+      }
+    ],
+    "question": {
+      "id": "journey-planet",
+      "category": "Weltkugel",
+      "question": "Wohin zieht die Schwerkraft dich?",
+      "answers": [
+        "Zur Mitte der Erde",
+        "Zum Nordpol",
+        "Immer zur Sonne"
+      ],
+      "correct": 0,
+      "why": "Unten bedeutet auf der Erde: in Richtung Erdmitte. Das gilt auch für Menschen auf der anderen Seite."
+    },
+    "activity": "Nimm einen Ball. Zeige auf mehrere Stellen und überlege: Wo wäre dort oben, wo unten?"
+  },
+  {
+    "id": "inside",
+    "title": "Unter unseren Füßen",
+    "intro": "Erdschichten, wandernde Platten und Vulkane.",
+    "icon": "layers",
+    "color": "orange",
+    "minutes": 9,
+    "photo": "volcano",
+    "lab": "plates",
+    "source": "https://pubs.usgs.gov/gip/dynamic/understanding.html",
+    "sourceName": "USGS · This Dynamic Earth",
+    "steps": [
+      {
+        "title": "Vier Schichten",
+        "text": "Von außen nach innen finden wir Erdkruste, Erdmantel, äußeren Kern und inneren Kern."
+      },
+      {
+        "title": "Heiß heißt nicht immer flüssig",
+        "text": "Der Mantel ist sehr heiß, besteht aber überwiegend aus festem Gestein."
+      },
+      {
+        "title": "Die Erde hat ein Plattenpuzzle",
+        "text": "Die feste äußere Hülle ist in große Platten geteilt."
+      },
+      {
+        "title": "Zusammen, auseinander, vorbei",
+        "text": "Platten können auseinanderdriften, zusammenstoßen oder aneinander vorbeigleiten."
+      },
+      {
+        "title": "Magma oder Lava?",
+        "text": "Geschmolzenes Gestein unter der Erdoberfläche heißt Magma."
+      }
+    ],
+    "question": {
+      "id": "journey-inside",
+      "category": "Erdschichten",
+      "question": "Wie heißt geschmolzenes Gestein an der Erdoberfläche?",
+      "answers": [
+        "Eis",
+        "Lava",
+        "Erdkern"
+      ],
+      "correct": 1,
+      "why": "Unter der Erde heißt es Magma. Sobald es an die Oberfläche gelangt, heißt es Lava."
+    },
+    "activity": "Lege zwei gefaltete Geschirrtücher nebeneinander. Schiebe sie langsam zusammen: Wie falten sie sich? Das ist nur ein Vergleich für die Entstehung von Gebirgen."
+  },
+  {
+    "id": "water",
+    "title": "Die Reise eines Tropfens",
+    "intro": "Wasser verschwindet nicht einfach. Es reist!",
+    "icon": "water",
+    "color": "blue",
+    "minutes": 8,
+    "lab": "water",
+    "source": "https://www.usgs.gov/water-science-school/water-cycle",
+    "sourceName": "USGS · Wasserkreislauf",
+    "steps": [
+      {
+        "title": "Drei Formen von Wasser",
+        "text": "Wasser kann fest, flüssig oder gasförmig sein."
+      },
+      {
+        "title": "Ab in die Luft",
+        "text": "Die Sonne erwärmt Meere, Seen und den Boden.",
+        "tryIt": "Was passiert mit einer nassen Socke, wenn sie zum Trocknen aufgehängt wird?"
+      },
+      {
+        "title": "Wie entstehen Wolken?",
+        "text": "Wenn feuchte Luft abkühlt, kann sich Wasserdampf in winzige Tröpfchen verwandeln."
+      },
+      {
+        "title": "Zurück auf die Erde",
+        "text": "Niederschlag kann Regen, Schnee oder Hagel sein."
+      },
+      {
+        "title": "Trinkwasser ist kostbar",
+        "text": "Das meiste Wasser auf der Erde ist salzig."
+      }
+    ],
+    "question": {
+      "id": "journey-water",
+      "category": "Wasser & Wetter",
+      "question": "Was passiert bei Kondensation?",
+      "answers": [
+        "Steine werden zu Sand",
+        "Eis wird wärmer",
+        "Wasserdampf wird zu Wassertröpfchen"
+      ],
+      "correct": 2,
+      "why": "Kühlt feuchte Luft ab, können kleine Tröpfchen entstehen. Viele Tröpfchen machen Wolken sichtbar."
+    },
+    "activity": "Fülle mit einem Erwachsenen kaltes Wasser in ein Glas. Beobachte die Außenseite: Die Tröpfchen dort kommen aus der Luft, nicht durch das Glas!"
+  },
+  {
+    "id": "weather",
+    "title": "Wetterforscher unterwegs",
+    "intro": "Wolken, Wind und der Unterschied zum Klima.",
+    "icon": "cloud",
+    "color": "purple",
+    "minutes": 7,
+    "source": "https://science.nasa.gov/kids/videos/video-whats-the-difference-between-weather-and-climate/",
+    "sourceName": "NASA Kids · Wetter und Klima",
+    "steps": [
+      {
+        "title": "Was ist heute draußen los?",
+        "text": "Wetter ist, was gerade in der Luft um uns herum passiert: Ist es warm oder kalt? Regnet es? Weht Wind? Wetter kann sich schon innerhalb eines Tages ändern."
+      },
+      {
+        "title": "Wind ist Luft in Bewegung",
+        "text": "Die Sonne erwärmt die Erde nicht überall gleich."
+      },
+      {
+        "title": "Wolken beobachten",
+        "text": "Wolken können wie Watte, wie dünne Federn oder wie eine graue Decke aussehen.",
+        "tryIt": "Sieh aus dem Fenster. Zeichne eine Wolkenform und beschreibe sie mit drei Wörtern."
+      },
+      {
+        "title": "Wetter ist kurz, Klima ist lang",
+        "text": "Wetter beschreibt einzelne Stunden und Tage."
+      },
+      {
+        "title": "Wie wissen wir das Wetter von morgen?",
+        "text": "Wetterstationen, Satelliten und andere Messgeräte sammeln Daten."
+      }
+    ],
+    "question": {
+      "id": "journey-weather",
+      "category": "Wasser & Wetter",
+      "question": "Was beschreibt Klima?",
+      "answers": [
+        "Typisches Wetter über viele Jahre",
+        "Nur den Regen von heute",
+        "Die Farbe einer Wolke"
+      ],
+      "correct": 0,
+      "why": "Klima beschreibt langfristige Muster. Wetter beschreibt dagegen die Bedingungen zu einer bestimmten Zeit."
+    },
+    "activity": "Führe drei Tage lang ein Wetterblatt: Wolken, Wind, Regen und Temperatur. Das ist eine Wetterbeobachtung – noch keine Klimamessung."
+  },
+  {
+    "id": "seasons",
+    "title": "Die Jahreszeiten-Maschine",
+    "intro": "Warum ist in Australien Weihnachten im Sommer?",
+    "icon": "sun",
+    "color": "yellow",
+    "minutes": 8,
+    "lab": "seasons",
+    "source": "https://spaceplace.nasa.gov/seasons/en/",
+    "sourceName": "NASA Space Place · Jahreszeiten",
+    "steps": [
+      {
+        "title": "Die Erde steht schief",
+        "text": "Die gedachte Erdachse ist gegenüber einer senkrechten Linie zur Umlaufbahn um etwa 23,4 Grad geneigt."
+      },
+      {
+        "title": "Sommer auf der Nordhalbkugel",
+        "text": "Um den Juni ist die Nordhalbkugel zur Sonne geneigt."
+      },
+      {
+        "title": "Winter auf der Nordhalbkugel",
+        "text": "Um den Dezember ist die Nordhalbkugel von der Sonne weg geneigt."
+      },
+      {
+        "title": "Frühling und Herbst",
+        "text": "Um März und September sind Tag und Nacht fast überall ungefähr gleich lang."
+      },
+      {
+        "title": "Ein Tag ist kein Jahr",
+        "text": "Drehen um die eigene Achse macht Tag und Nacht."
+      }
+    ],
+    "question": {
+      "id": "journey-seasons",
+      "category": "Jahreszeiten",
+      "question": "Welche Jahreszeit ist in Australien, wenn in Deutschland Sommer ist?",
+      "answers": [
+        "Auch Sommer",
+        "Winter",
+        "Immer Frühling"
+      ],
+      "correct": 1,
+      "why": "Deutschland liegt auf der Nordhalbkugel, Australien auf der Südhalbkugel. Ihre Jahreszeiten sind gegensätzlich."
+    },
+    "activity": "Halte einen Ball schief neben eine Taschenlampe. Lass seine Achse gleich ausgerichtet und bewege ihn um die Lampe. Mach das gemeinsam und schau nicht in das Licht."
+  },
+  {
+    "id": "ocean",
+    "title": "Tauchgang ins Weltmeer",
+    "intro": "Vom sonnigen Korallenriff in die dunkle Tiefsee.",
+    "icon": "waves",
+    "color": "blue",
+    "minutes": 8,
+    "photo": "reef",
+    "source": "https://oceanservice.noaa.gov/education/tutorial_corals/coral01_intro.html",
+    "sourceName": "NOAA · Korallen und Meereswissen",
+    "steps": [
+      {
+        "title": "Fünf Namen, ein Weltmeer",
+        "text": "Wir unterscheiden Pazifik, Atlantik, Indischen, Arktischen und Südlichen Ozean."
+      },
+      {
+        "title": "Warum ist das Meer salzig?",
+        "text": "Regen und Flüsse lösen winzige Mengen von Mineralien aus Gestein und bringen sie ins Meer."
+      },
+      {
+        "title": "Korallen sind Tiere",
+        "text": "Ein Korallenriff wird von vielen winzigen Korallentieren aufgebaut."
+      },
+      {
+        "title": "Immer tiefer, immer dunkler",
+        "text": "Sonnenlicht erreicht nur die oberen Bereiche des Meeres."
+      },
+      {
+        "title": "Wasser in Bewegung",
+        "text": "Wind, Temperaturunterschiede und Unterschiede im Salzgehalt helfen, Meeresströmungen anzutreiben."
+      }
+    ],
+    "question": {
+      "id": "journey-ocean",
+      "category": "Natur",
+      "question": "Was sind Korallen?",
+      "answers": [
+        "Bunte Steine",
+        "Unterwasserpflanzen",
+        "Tiere"
+      ],
+      "correct": 2,
+      "why": "Korallen bestehen aus kleinen Tieren, den Polypen. Viele leben mit Algen zusammen."
+    },
+    "activity": "Vergleiche auf der Weltkugel die Nordsee und den Pazifik. Welche ist ein kleineres Meer, welcher ein Ozean?"
+  },
+  {
+    "id": "nature",
+    "title": "Lebensräume voller Leben",
+    "intro": "Wüste, Wald, Savanne und Eiswelten erkunden.",
+    "icon": "leaf",
+    "color": "green",
+    "minutes": 8,
+    "source": "https://www.nps.gov/subjects/biodiversity/index.htm",
+    "sourceName": "National Park Service · Artenvielfalt",
+    "steps": [
+      {
+        "title": "Ein Zuhause für jedes Lebewesen",
+        "text": "Ein Lebensraum ist ein Ort, an dem ein Lebewesen Nahrung, Wasser und Schutz findet."
+      },
+      {
+        "title": "Regenwald und Savanne",
+        "text": "Tropische Regenwälder sind meist warm und feucht."
+      },
+      {
+        "title": "Wüste heißt trocken",
+        "text": "Eine Wüste bekommt sehr wenig Niederschlag."
+      },
+      {
+        "title": "Norden und Süden unterscheiden",
+        "text": "Eisbären leben in der Arktis im Norden."
+      },
+      {
+        "title": "Alle hängen zusammen",
+        "text": "Pflanzen nutzen Sonnenlicht, um Nahrung aufzubauen."
+      }
+    ],
+    "question": {
+      "id": "journey-nature",
+      "category": "Natur",
+      "question": "Was macht eine Wüste zur Wüste?",
+      "answers": [
+        "Wenig Niederschlag",
+        "Immer große Hitze",
+        "Dass dort Sand liegt"
+      ],
+      "correct": 0,
+      "why": "Wüsten sind sehr trocken. Es gibt heiße und kalte Wüsten, auch ohne große Sandflächen."
+    },
+    "activity": "Suche vom Weg aus drei verschiedene Lebewesen in deiner Umgebung. Beobachte sie, ohne sie zu stören oder mitzunehmen."
+  },
+  {
+    "id": "protect",
+    "title": "Wir passen auf die Erde auf",
+    "intro": "Kleine Ideen, große Gemeinschaftsaufgabe.",
+    "icon": "heart",
+    "color": "green",
+    "minutes": 7,
+    "source": "https://science.nasa.gov/kids/earth/what-is-the-greenhouse-effect/",
+    "sourceName": "NASA Kids · Treibhauseffekt",
+    "steps": [
+      {
+        "title": "Eine hilfreiche Wärmedecke",
+        "text": "Bestimmte Gase in der Atmosphäre halten einen Teil der Wärme zurück, die die Erde ins Weltall abgibt."
+      },
+      {
+        "title": "Die zusätzliche Erwärmung",
+        "text": "Menschen verbrennen Kohle, Erdöl und Erdgas."
+      },
+      {
+        "title": "Weniger verschwenden",
+        "text": "Dinge herstellen, transportieren und wegwerfen braucht Material und Energie."
+      },
+      {
+        "title": "Natur Platz geben",
+        "text": "Pflanzen und Tiere brauchen passende Lebensräume."
+      },
+      {
+        "title": "Gemeinsam etwas bewegen",
+        "text": "Du kannst Ideen sammeln, Fragen stellen und mit Erwachsenen kleine Vorhaben ausprobieren."
+      }
+    ],
+    "question": {
+      "id": "journey-protect",
+      "category": "Erde schützen",
+      "question": "Dein Spielzeug ist heil, aber du nutzt es nicht mehr. Was ist eine gute Idee?",
+      "answers": [
+        "Sofort wegwerfen",
+        "Weitergeben oder tauschen",
+        "Im Wald liegen lassen"
+      ],
+      "correct": 1,
+      "why": "Weitergeben und Tauschen helfen, Dinge länger zu nutzen und weniger Neues herstellen zu müssen."
+    },
+    "activity": "Finde mit einem Erwachsenen eine Sache, die ihr reparieren, ausleihen oder weitergeben könnt."
+  },
+  {
+    "id": "continents",
+    "title": "Sieben große Landwelten",
+    "intro": "Kontinente, Länder und Inseln auseinanderhalten.",
+    "icon": "globe",
+    "color": "green",
+    "minutes": 8,
+    "source": "https://www.naturalearthdata.com/",
+    "sourceName": "Natural Earth · Weltregionen",
+    "activity": "Zeige sieben Kontinente auf der Weltkugel. Suche auf jedem einen anderen Lebensraum.",
+    "steps": [
+      {
+        "title": "Kontinent oder Land?",
+        "text": "Ein Kontinent ist eine sehr große Landregion."
+      },
+      {
+        "title": "Europa und Asien",
+        "text": "Europa und Asien hängen als Landfläche zusammen."
+      },
+      {
+        "title": "Afrika und Amerika",
+        "text": "Afrika liegt beiderseits des Äquators."
+      },
+      {
+        "title": "Australien, Inseln und Eis",
+        "text": "Australien ist ein Land und der kleinste Kontinent in diesem Modell."
+      },
+      {
+        "title": "Eine Karte ist ein Modell",
+        "text": "Auf der Kugel sehen wir die Erde von außen."
+      }
+    ],
+    "question": {
+      "id": "journey-continents",
+      "category": "Weltkugel",
+      "question": "Was ist Kenia?",
+      "answers": [
+        "Ein Land in Afrika",
+        "Ein Ozean",
+        "Ein Kontinent"
+      ],
+      "correct": 0,
+      "why": "Kenia ist ein Land. Afrika ist der Kontinent, auf dem es liegt."
+    }
+  },
+  {
+    "id": "countries",
+    "title": "Länder, Städte und Flaggen",
+    "intro": "Reise zu Hauptstädten und entdecke Nachbarn.",
+    "icon": "compass",
+    "color": "blue",
+    "minutes": 8,
+    "source": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-populated-places/",
+    "sourceName": "Natural Earth · Städte",
+    "activity": "Suche Deutschland und seine neun Nachbarländer. Zeichne einen Reiseweg durch drei davon.",
+    "steps": [
+      {
+        "title": "Viele Länder, viele Menschen",
+        "text": "In einem Land wohnen Menschen mit unterschiedlichen Sprachen, Gewohnheiten und Ideen."
+      },
+      {
+        "title": "Die Hauptstadt",
+        "text": "In der Hauptstadt werden wichtige Aufgaben eines Landes erledigt."
+      },
+      {
+        "title": "Zeichen auf einer Flagge",
+        "text": "Eine Flagge ist ein Zeichen für ein Land oder Gebiet."
+      },
+      {
+        "title": "Nachbarn auf der Landkarte",
+        "text": "Länder können eine gemeinsame Landgrenze haben oder durch ein Meer getrennt sein.",
+        "tryIt": "Welches deutsche Nachbarland beginnt mit P?"
+      },
+      {
+        "title": "Größe und Bevölkerung",
+        "text": "Die Fläche sagt, wie viel Platz ein Land auf der Erde einnimmt."
+      }
+    ],
+    "question": {
+      "id": "journey-countries",
+      "category": "Länder",
+      "question": "Welche Stadt ist Australiens Hauptstadt?",
+      "answers": [
+        "Sydney",
+        "Canberra",
+        "Melbourne"
+      ],
+      "correct": 1,
+      "why": "Canberra ist die Hauptstadt Australiens. Sydney und Melbourne sind größere bekannte Städte."
+    }
+  },
+  {
+    "id": "volcanoes",
+    "title": "Feuerberge erforschen",
+    "intro": "Magma, Lava und Gase – ohne falsche Vorstellungen.",
+    "icon": "layers",
+    "color": "orange",
+    "minutes": 8,
+    "source": "https://volcanoes.usgs.gov/volcanic_ash/eruption_styles.html",
+    "sourceName": "USGS · Ausbruchsarten",
+    "activity": "Vergleiche Ätna, Fuji, Kīlauea und Island auf der Vulkan-Kartenebene.",
+    "steps": [
+      {
+        "title": "Unter und über der Oberfläche",
+        "text": "Magma ist geschmolzenes Gestein unter der Oberfläche."
+      },
+      {
+        "title": "Wege nach oben",
+        "text": "Magma kann sich sammeln und durch Risse oder Schlote aufsteigen."
+      },
+      {
+        "title": "Fließen oder explodieren",
+        "text": "Dünnflüssiges Magma lässt Gas leichter entweichen."
+      },
+      {
+        "title": "Formen erzählen Geschichten",
+        "text": "Breite Schildvulkane entstehen oft durch viele dünnflüssige Lavaflüsse."
+      },
+      {
+        "title": "Ein Vulkan schläft nicht wie du",
+        "text": "Ein Vulkan kann lange ruhig bleiben und trotzdem noch aktiv sein."
+      }
+    ],
+    "question": {
+      "id": "journey-volcanoes",
+      "category": "Erdschichten",
+      "question": "Was heißt geschmolzenes Gestein unter der Oberfläche?",
+      "answers": [
+        "Lava",
+        "Eis",
+        "Magma"
+      ],
+      "correct": 2,
+      "why": "Unter der Oberfläche heißt es Magma; an der Oberfläche Lava."
+    }
+  },
+  {
+    "id": "quakes",
+    "title": "Wenn die Erde bebt",
+    "intro": "Gestein rutscht, Wellen laufen durch die Erde.",
+    "icon": "layers",
+    "color": "orange",
+    "minutes": 7,
+    "source": "https://www.usgs.gov/programs/earthquake-hazards/science/science-earthquakes",
+    "sourceName": "USGS · Erdbeben",
+    "activity": "Lege eine Hand flach auf den Tisch. Klopfe mit der anderen ganz leicht daneben. Spürst du die Bewegung? Das ist nur ein Vergleich für Wellen.",
+    "steps": [
+      {
+        "title": "Verhakt und plötzlich bewegt",
+        "text": "Gesteinsflächen können sich an einer Störung verhaken."
+      },
+      {
+        "title": "Herd und Epizentrum",
+        "text": "Der Ort, an dem das Rutschen beginnt, heißt Erdbebenherd."
+      },
+      {
+        "title": "Wellen statt Löcher",
+        "text": "Vom Herd breiten sich Wellen aus."
+      },
+      {
+        "title": "Größe und Wirkung",
+        "text": "Die Magnitude beschreibt die Größe eines Bebens."
+      },
+      {
+        "title": "Unter dem Meer",
+        "text": "Wird bei einem starken Seebeben der Meeresboden plötzlich angehoben oder abgesenkt, kann ein Tsunami entstehen."
+      }
+    ],
+    "question": {
+      "id": "journey-quakes",
+      "category": "Erdschichten",
+      "question": "Wo liegt der Erdbebenherd?",
+      "answers": [
+        "Dort, wo das Rutschen im Gestein beginnt",
+        "Immer über den Wolken",
+        "Immer am Südpol"
+      ],
+      "correct": 0,
+      "why": "Der Herd ist der Ausgangspunkt der Bewegung. Das Epizentrum liegt an der Oberfläche direkt darüber."
+    }
+  },
+  {
+    "id": "moon",
+    "title": "Unser Nachbar, der Mond",
+    "intro": "Licht, Phasen, Krater und eine Reise von Menschen.",
+    "icon": "sun",
+    "color": "blue",
+    "minutes": 8,
+    "source": "https://science.nasa.gov/moon/",
+    "sourceName": "NASA · Mond",
+    "activity": "Beobachtet gemeinsam den Mond an mehreren Abenden. Zeichnet die Form und notiert das Datum.",
+    "steps": [
+      {
+        "title": "Kein eigener Scheinwerfer",
+        "text": "Der Mond umkreist die Erde."
+      },
+      {
+        "title": "Die Form verändert sich scheinbar",
+        "text": "Der Mond selbst bleibt rund."
+      },
+      {
+        "title": "Ein Viertel zeigt einen Halbmond",
+        "text": "Beim ersten Viertel sehen wir die rechte Hälfte der Scheibe hell, wie üblich von der Nordhalbkugel betrachtet."
+      },
+      {
+        "title": "Krater und kleine Sprünge",
+        "text": "Viele Mondkrater entstanden durch Einschläge."
+      },
+      {
+        "title": "Menschen auf dem Mond",
+        "text": "1969 landete Apollo 11."
+      }
+    ],
+    "question": {
+      "id": "journey-moon",
+      "category": "Weltkugel",
+      "question": "Warum sehen wir Mondphasen?",
+      "answers": [
+        "Der Mond verliert Stücke",
+        "Wir sehen verschieden viel seiner beleuchteten Hälfte",
+        "Die Sonne wird jeden Abend kleiner"
+      ],
+      "correct": 1,
+      "why": "Die Stellung von Sonne, Erde und Mond verändert unseren Blick auf die beleuchtete Hälfte."
+    }
+  },
+  {
+    "id": "navigation",
+    "title": "Die unsichtbaren Linien",
+    "intro": "Äquator, Pole, Wendekreise und Weltzeiten.",
+    "icon": "compass",
+    "color": "yellow",
+    "minutes": 8,
+    "source": "https://science.nasa.gov/earth/facts/",
+    "sourceName": "NASA · Erde",
+    "activity": "Finde den Nullmeridian und den Äquator. Wo würden sich die beiden Linien treffen?",
+    "steps": [
+      {
+        "title": "Zwei Halbkugeln",
+        "text": "Der Äquator teilt die Erde in Nord- und Südhalbkugel."
+      },
+      {
+        "title": "Breite und Länge",
+        "text": "Breitengrade zeigen, wie weit nördlich oder südlich vom Äquator ein Ort liegt."
+      },
+      {
+        "title": "Der Nullmeridian",
+        "text": "Der Nullmeridian ist die vereinbarte Linie für null Grad Länge."
+      },
+      {
+        "title": "Die Wendekreise",
+        "text": "Die Wendekreise liegen etwa 23,4 Grad nördlich und südlich des Äquators."
+      },
+      {
+        "title": "Wie spät ist es woanders?",
+        "text": "Die Erde dreht sich."
+      }
+    ],
+    "question": {
+      "id": "journey-navigation",
+      "category": "Weltkugel",
+      "question": "Welche Linie hat null Grad Breite?",
+      "answers": [
+        "Der Nordpol",
+        "Der Nullmeridian",
+        "Der Äquator"
+      ],
+      "correct": 2,
+      "why": "Der Äquator ist 0° Breite. Der Nullmeridian ist 0° Länge."
+    }
+  },
+  {
+    "id": "landscapes",
+    "title": "Berge, Flüsse und Wüsten",
+    "intro": "Wie Wasser, Wind, Eis und Platten Landschaften formen.",
+    "icon": "leaf",
+    "color": "green",
+    "minutes": 8,
+    "source": "https://www.nps.gov/subjects/geology/index.htm",
+    "sourceName": "National Park Service · Geologie",
+    "activity": "Suche auf der Naturkarte einen Berg, einen Fluss, einen See und eine Wüste.",
+    "steps": [
+      {
+        "title": "Berge wachsen langsam",
+        "text": "Wenn Platten zusammenstoßen, kann Gestein gefaltet und gehoben werden."
+      },
+      {
+        "title": "Wasser trägt Gestein ab",
+        "text": "Flüsse fließen durch die Landschaft."
+      },
+      {
+        "title": "Ein See bleibt im Land",
+        "text": "Seen sammeln Wasser in Vertiefungen."
+      },
+      {
+        "title": "Trocken, nicht immer heiß",
+        "text": "Eine Wüste bekommt sehr wenig Niederschlag."
+      },
+      {
+        "title": "Eis als Landschaftsformer",
+        "text": "Ein Gletscher ist langsam fließendes Eis."
+      }
+    ],
+    "question": {
+      "id": "journey-landscapes",
+      "category": "Natur",
+      "question": "Warum ist die Antarktis eine Wüste?",
+      "answers": [
+        "Weil dort sehr wenig Niederschlag fällt",
+        "Weil dort nur Sand liegt",
+        "Weil es überall sehr heiß ist"
+      ],
+      "correct": 0,
+      "why": "Wüsten sind trocken. Sie können heiß oder kalt sein."
+    }
+  },
+  {
+    "id": "climate",
+    "title": "Klima und Pflanzenwelten",
+    "intro": "Vom tropischen Wald bis zur kalten Tundra.",
+    "icon": "cloud",
+    "color": "green",
+    "minutes": 8,
+    "source": "https://science.nasa.gov/kids/earth/weather-and-climate/",
+    "sourceName": "NASA · Wetter und Klima",
+    "activity": "Vergleiche drei Beispielorte auf der Vegetationskarte. Was brauchen Pflanzen dort?",
+    "steps": [
+      {
+        "title": "Wetter ist heute, Klima ist lange",
+        "text": "Wetter beschreibt, was die Luft gerade macht."
+      },
+      {
+        "title": "Sonnenenergie auf der Kugel",
+        "text": "Nahe dem Äquator trifft Sonnenlicht im Jahreslauf steiler auf."
+      },
+      {
+        "title": "Regenwald oder Savanne?",
+        "text": "In warmen, sehr feuchten Gebieten können tropische Regenwälder wachsen."
+      },
+      {
+        "title": "Wald und Tundra",
+        "text": "In vielen gemäßigten Regionen wachsen Wälder."
+      },
+      {
+        "title": "Lebensräume schützen",
+        "text": "Tiere brauchen Nahrung, Wasser und Schutz."
+      }
+    ],
+    "question": {
+      "id": "journey-climate",
+      "category": "Natur",
+      "question": "Was beschreibt das Klima?",
+      "answers": [
+        "Nur den Regen heute",
+        "Typische Wetterbedingungen über viele Jahre",
+        "Nur eine einzelne Wolke"
+      ],
+      "correct": 1,
+      "why": "Wetter beschreibt den aktuellen Zustand. Klima beschreibt Muster über lange Zeit."
+    }
+  }
+]
