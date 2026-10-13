@@ -20,3 +20,5 @@ Fertige Pakete nach bestandenen lokalen Pflichtprüfungen als Ready for review; 
 Vorschau/Deployment nur bei passender gesonderter Freigabe. Offene Grenzen und Rückfallmöglichkeit:
 
 Bei Nachrichten: neue Generierung, 14-Tage-Themenrotation und inhaltliche Duplikate getrennt nachweisen; unterstützt/quarantänisiert/technisch getestet/operativ aktiv unterscheiden. Quellenrechte, Datumsbedeutung, signierte Content-Lane, Archiv/Offline/Rollback, reale Zugangslücken und einmalige Betriebsfreigaben konkret benennen. Keine automatische App-Codeübernahme oder unbekannten Kosten.
+
+Bei Paket 3.5: konkrete Welle und WK-IDs, unveränderte Fachbaseline je Bestand, tatsächliche neue Konzepte gegenüber bloßen Kandidaten, individuell überarbeiteter Altbestand und restlicher Gesamtauftrag. Quellen-/Claim-/Medien-/UI-Belege sowie automatisch geprüfte Struktur von menschlicher Fach-/Kinderabnahme trennen. `review-manifest.json` beschreibt sämtliche erstellten Bilder, gezielte Originalauswahl, Größenbudget und Reproduktionsweg. Nächste abhängige Welle erst nach reviewter Basis.

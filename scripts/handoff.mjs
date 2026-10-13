@@ -13,12 +13,12 @@ export async function createHandoff(report,directory='.qa-output',{requiredEngin
  if(report.status!=='passed'||report.scope!=='complete mandatory regression'||report.build!==learningFingerprint(process.cwd()))throw Error('Handoff lacks a complete current production-build proof');
  const unit=JSON.parse(await fs.readFile(path.join(directory,'unit-proof.json'),'utf8'));if(unit.status!=='passed'||unit.sourceDigest!==await sourceDigest())throw Error('Unit proof is missing or belongs to different code');
  const backlog=await fs.readFile('BACKLOG.md','utf8'),requirements=[];
- for(const line of backlog.split('\n').filter(l=>/^\| (?:A[1-6]|B[1-8]|B9|C|P3[A-D]) \|/.test(l))){
+ for(const line of backlog.split('\n').filter(l=>/^\| (?:A[1-6]|B[1-8]|B9|C|P3[A-D]|P35[A-D]) \|/.test(l))){
   const columns=line.split('|').map(c=>c.trim()),id=columns[1],files=[...line.matchAll(/\]\((?!https?:)([^)]+)\)/g)].map(m=>m[1]);
   const sources=[];for(const file of files){const resolved=path.resolve(file);if(!resolved.startsWith(process.cwd()+path.sep))throw Error('Invalid evidence path');const data=await fs.readFile(resolved);sources.push({file,sha256:createHash('sha256').update(data).digest('hex')});}
   requirements.push({id,requirements:columns[2],sources,remaining:columns.at(-2)});
  }
- if(requirements.length!==20)throw Error('Incomplete existing-backlog requirement mapping');
+ if(requirements.length!==24)throw Error('Incomplete existing-backlog requirement mapping');
  let engineProof=null;try{engineProof=JSON.parse(await fs.readFile(path.join(directory,'engine-report.json'),'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
  if(requiredEngines.length&&(!engineProof||engineProof.build!==report.build||engineProof.sourceDigest!==unit.sourceDigest||engineProof.status!=='passed'||engineProof.errors.length||requiredEngines.some(name=>!engineProof.engines.some(e=>e.name===name&&e.version&&e.chapters.length===16&&e.widths.length===4))))throw Error('Actual required browser engine evidence missing');
  const screenshots=[];for(const file of (await fs.readdir(directory)).filter(f=>/^(?:quality-|journey-engine-).*\.png$/.test(f)).sort()){const data=await fs.readFile(path.join(directory,file));if(data.subarray(0,8).toString('hex')!=='89504e470d0a1a0a')throw Error('Broken screenshot');screenshots.push({file,width:data.readUInt32BE(16),height:data.readUInt32BE(20),sha256:createHash('sha256').update(data).digest('hex')});}

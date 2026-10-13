@@ -1,5 +1,14 @@
 # Änderungsverlauf
 
+## 13. Oktober 2026 – Paket 3.5, Grundlagenwelle 0–1 (PR-Vorbereitung, unveröffentlicht)
+
+- Wissensartikel zeigen alle passenden Reisekapitel aus der bestehenden Verknüpfungstabelle. Weitere Stationen sind pro Reise freiwillig aufklappbar und erhalten Vorschauen aus vorhandenen Kapiteltexten.
+- Browser-Zurück stellt die aufgeklappten Stationen und den gewählten Tastaturfokus nach Sichtbarwerden des Wissensbereichs wieder her; Deep Links, Reload, Offline und bestehende Lernstände bleiben erhalten.
+- Die Chronik bestätigt PR 25 ausschließlich mit tatsächlichem Merge-/Vercel-Nachweis und führt die neue 3.5-Arbeit separat als noch nicht bereitgestellt.
+- Feste d0-Fachbaseline, vollständige erreichbare Historie, Quell-/Unterzustandsmanifest und redaktionelle Strukturprüfung eingerichtet; neue Fachinhalte und die weitere 3.5-Offensive bleiben offen.
+- Alle 40 Datenexporte werden automatisch gegen frische Extraktion aus aktuellen Quellen geprüft; ein alter Export mit altem Hash kann geänderte Quelldaten nicht mehr verdecken.
+- Aktive Quality-Aktionen auf offiziell abgeglichene Node-24-Commit-SHAs gepinnt. Alle Tests und Bildaufnahmen bleiben bestehen; vollständige Reports/Pflichtbilder und ein Hashmanifest begrenzen den Reviewupload. Diagnoseberichte bleiben bei beschädigten Bildern erhalten.
+
 ## 13. Oktober 2026 – Paket3 / WK-047–050 (implementiert, noch nicht veröffentlicht)
 
 Alle16 Lernreisen und80 Inhaltskapitel erhalten individuelle Ziele/Szenen sowie240 freiwillige Denkaufgaben mit konkreten Hinweisen und Antwortfeedback. Zehn ausgewählte Prozesse sind aktiv sortierbar, Merkzettel verbleiben im vorhandenen privaten Schema3-Pass. Kapitelkarte, explizite Kapitel-URLs, tatsächlicher Lesefortschritt, stabile Zurück-/Fortsetzungswege und passende beidseitige Wissensverbindungen ergänzen die bisherigen64 Schaubilder und16 Stempelabschlüsse. Mobile Gruppierung, gut lesbare HTML-Grafiklegenden und klare Fokus-/Touchflächen; bestehende IDs, Fragen und Mechaniken erhalten. Import/Reset beim geöffneten Kapitel kann den wiederhergestellten Stand nicht mehr sofort mit der vorherigen URL überschreiben.

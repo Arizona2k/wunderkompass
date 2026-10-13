@@ -16,6 +16,9 @@ const launch=(name,suites,offset)=>new Promise((resolve,reject)=>{
 // Iteration selection remains partial. It cannot produce a full acceptance report.
 if(process.env.QA_SUITE){const result=await launch('local-selected',process.env.QA_SUITE.split(','),0);process.exitCode=result.code??1;}
 else{
+ // Only clear our own previous-run output. Unit/content proofs from this run stay.
+ await fs.mkdir(path.join(root,'.qa-output'),{recursive:true});
+ for(const name of await fs.readdir(path.join(root,'.qa-output')))if(/^(quality-|journey-engine-)/.test(name)||['portable-report.json','handoff.json','engine-report.json','review'].includes(name))await fs.rm(path.join(root,'.qa-output',name),{recursive:true,force:true});
  let outcomes=[];
  try{
   // Never run another browser beside the reproducible performance sample phase.
