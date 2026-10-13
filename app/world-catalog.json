@@ -7386,7 +7386,15 @@
       ],
       "correct": 0,
       "why": "Elektrische Energie kann Licht oder Bewegung erzeugen. Der Schalter öffnet oder schließt den Stromkreis."
-    }
+    },
+    "learning": {
+      "starter": "Der Schalter kann den Weg für den Strom öffnen oder schließen.",
+      "observe": "Vergleiche im Bildschirmmodell einen geschlossenen Schalter mit einem unterbrochenen Rückweg. Erkläre beide Bedingungen. Keine Steckdose anfassen.",
+      "benefit": "Du erkennst, dass ein einzelner geschlossener Schalter einen unterbrochenen Weg nicht repariert."
+    },
+    "revision": 1,
+    "checkedAt": "2026-10-13",
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen."
   },
   {
     "id": "science-network",
@@ -7410,7 +7418,8 @@
     "locations": [],
     "related": [
       "invention-internet",
-      "history-web"
+      "history-web",
+      "science-encryption"
     ],
     "sources": [
       {
@@ -7430,7 +7439,15 @@
       ],
       "correct": 0,
       "why": "Router leiten Pakete weiter. Gemeinsame Regeln helfen den Computern, sie richtig zu verstehen. Manche Pakete können verschiedene Wege nehmen."
-    }
+    },
+    "learning": {
+      "starter": "Geräte schicken kleine Datenpakete über verbundene Zwischenstationen.",
+      "observe": "Schicke im Netzmodell ein Paket über einen anderen Weg. Unterscheide das Ziel vom Weg und das Internet von einer einzelnen Webseite.",
+      "benefit": "Du verstehst, warum mehrere Zwischenstationen zusammenarbeiten und nicht ein Gerät das ganze Netz bildet."
+    },
+    "revision": 1,
+    "checkedAt": "2026-10-13",
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen."
   },
   {
     "id": "science-flight",
@@ -7474,7 +7491,15 @@
       ],
       "correct": 0,
       "why": "Die Bewegung der Flügel durch die Luft erzeugt viel Auftrieb. Das Triebwerk hilft, den Luftwiderstand zu überwinden."
-    }
+    },
+    "learning": {
+      "starter": "Bewegte Luft am Flügel kann eine Kraft nach oben erzeugen.",
+      "observe": "Ändere im Kräftebild zuerst nur den Auftrieb, dann nur den Schub. Erkläre, welche Bewegungsrichtung die beiden Änderungen betreffen.",
+      "benefit": "Du trennst vier Kräfte und erkennst die Grenze eines einfachen Pfeilvergleichs."
+    },
+    "revision": 1,
+    "checkedAt": "2026-10-13",
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen."
   },
   {
     "id": "science-gps",
@@ -7518,7 +7543,15 @@
       ],
       "correct": 0,
       "why": "Ein Empfänger berechnet aus der Laufzeit, wie weit die Signale gereist sind. Mit vier oder mehr Satelliten kann er Ort und Zeitfehler bestimmen."
-    }
+    },
+    "learning": {
+      "starter": "Satellitensignale helfen einem Empfänger, Entfernungen und seinen Ort zu berechnen.",
+      "observe": "Vergleiche im Ortsrätsel Entfernungskreise mit einem gedachten räumlichen GPS. Erkläre, weshalb genaue Uhren dazugehören. Dein Standort bleibt privat.",
+      "benefit": "Du erkennst, welche Messung hinter einer Ortsangabe steckt und warum das flache Bild begrenzt ist."
+    },
+    "revision": 1,
+    "checkedAt": "2026-10-13",
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen."
   },
   {
     "id": "science-computer",
@@ -7543,7 +7576,8 @@
     "related": [
       "invention-computer",
       "person-ada_lovelace",
-      "person-al_khwarizmi"
+      "person-al_khwarizmi",
+      "science-checksum"
     ],
     "sources": [
       {
@@ -7567,7 +7601,15 @@
       ],
       "correct": 0,
       "why": "Mit Kombinationen können Zahlen und andere Daten dargestellt werden. Acht Bits reichen für die ganzen Zahlen von 0 bis 255."
-    }
+    },
+    "learning": {
+      "starter": "Mit Nullen und Einsen kann ein Computer Zahlen und andere Daten darstellen.",
+      "observe": "Schalte im Acht-Bit-Modell erst nur die kleinste, dann die größte Stelle an. Vermute den Unterschied und prüfe den Stellenwert.",
+      "benefit": "Du verstehst, dass nicht die Anzahl eingeschalteter Bits allein den Zahlenwert bestimmt."
+    },
+    "revision": 1,
+    "checkedAt": "2026-10-13",
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen."
   },
   {
     "id": "science-shadows",
@@ -7598,7 +7640,8 @@
     ],
     "related": [
       "history-pyramids",
-      "science-gps"
+      "science-gps",
+      "science-angle"
     ],
     "sources": [
       {
@@ -7618,7 +7661,15 @@
       ],
       "correct": 0,
       "why": "Sonnenstrahlen treffen auf einer gekrümmten Erde an verschiedenen Orten mit unterschiedlichen Winkeln auf. Der griechische Gelehrte Eratosthenes nutzte in Ägypten Schatten und Entfernungen für eine Schätzung des Erdumfangs."
-    }
+    },
+    "learning": {
+      "starter": "Gleich lange Stäbe können an verschiedenen Orten unterschiedliche Schatten werfen.",
+      "observe": "Vergleiche im Schattenmodell Sonnenrichtung und Oberflächenrichtung. Prüfe, welche Annahmen für eine Umfangsschätzung nötig sind.",
+      "benefit": "Du kannst aus einer Messidee eine begründete Schlussfolgerung ziehen und ihre Voraussetzungen nennen."
+    },
+    "revision": 1,
+    "checkedAt": "2026-10-13",
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen."
   },
   {
     "id": "animal-whale-shark",
@@ -8387,7 +8438,8 @@
     "related": [
       "science-magnetism",
       "invention-satellite",
-      "science-water-cycle"
+      "science-water-cycle",
+      "science-pressure"
     ],
     "sources": [
       {
@@ -8413,7 +8465,14 @@
     "locations": [],
     "links": [],
     "model": "atmosphere",
-    "sourceNote": "Fachlich geprüft am 9. Oktober 2026. Die Interaktion vereinfacht den Sachverhalt. Ihre Grenzen stehen direkt am Modell; sie ist keine Messung oder Vorhersage."
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "learning": {
+      "starter": "Die Erde besitzt eine Lufthülle. Nahe dem Boden ist sie dichter.",
+      "observe": "Wähle zwei Luftschichten. Vergleiche Höhe und Dichte, ohne die gezeichneten Grenzen als feste Decken auszugeben.",
+      "benefit": "Du trennst eine hilfreiche Einteilung von echten starren Grenzen."
+    },
+    "revision": 1,
+    "checkedAt": "2026-10-13"
   },
   {
     "id": "science-magnetism",
@@ -8445,7 +8504,8 @@
     "surprise": "Im Inneren der Erde steckt kein riesiger Stabmagnet.",
     "related": [
       "invention-compass",
-      "science-atmosphere"
+      "science-atmosphere",
+      "science-comet"
     ],
     "sources": [
       {
@@ -8467,7 +8527,14 @@
     "locations": [],
     "links": [],
     "model": "magnetism",
-    "sourceNote": "Fachlich geprüft am 9. Oktober 2026. Die Interaktion vereinfacht den Sachverhalt. Ihre Grenzen stehen direkt am Modell; sie ist keine Messung oder Vorhersage."
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "learning": {
+      "starter": "Das Erdmagnetfeld beeinflusst viele geladene Teilchen aus dem Weltraum.",
+      "observe": "Vergleiche im Modell ruhigen und stärkeren Sonnenwind. Beschreibe die Formänderung, ohne eine feste undurchdringliche Wand zu behaupten.",
+      "benefit": "Du kannst eine Schutzwirkung erklären und zugleich ihre Grenze beachten."
+    },
+    "revision": 1,
+    "checkedAt": "2026-10-13"
   },
   {
     "id": "science-currents",
@@ -8501,9 +8568,10 @@
       "science-foodweb",
       "animal-whale-shark",
       "science-coral-reef",
-      "science-tides"
+      "science-tides",
+      "science-buoyancy"
     ],
-    "sourceNote": "Einstieg am 9. Oktober 2026 anhand NOAA geprüft: Wind, Gezeiten und Dichteunterschiede als Antriebe. Dies ist keine erneute Fachabnahme aller Absätze oder des vereinfachten Modells.",
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
     "sources": [
       {
         "label": "NOAA · Meeresströmungen",
@@ -8524,7 +8592,13 @@
     "locations": [],
     "links": [],
     "model": "currents",
-    "sourceNote": "Fachlich geprüft am 9. Oktober 2026. Die Interaktion vereinfacht den Sachverhalt. Ihre Grenzen stehen direkt am Modell; sie ist keine Messung oder Vorhersage."
+    "learning": {
+      "starter": "Wind und Dichteunterschiede können Wasser bewegen.",
+      "observe": "Verändere im Wasserpaketvergleich zuerst nur Temperatur und dann nur Salzgehalt. Halte den Druckvergleich fest und begründe deine Beobachtung.",
+      "benefit": "Du lernst, eine einzelne Ursache von einem ganzen komplexen Meeresstrom zu unterscheiden."
+    },
+    "revision": 1,
+    "checkedAt": "2026-10-13"
   },
   {
     "id": "science-motor",
@@ -8579,7 +8653,14 @@
     "locations": [],
     "links": [],
     "model": "motor",
-    "sourceNote": "Fachlich geprüft am 9. Oktober 2026. Die Interaktion vereinfacht den Sachverhalt. Ihre Grenzen stehen direkt am Modell; sie ist keine Messung oder Vorhersage."
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "learning": {
+      "starter": "Strom in einer Spule kann im Magnetfeld eine Drehbewegung antreiben.",
+      "observe": "Schalte im Bildschirmmotor den Stromwender aus und wieder ein. Beschreibe, warum die passende Umschaltung beim Weiterdrehen hilft.",
+      "benefit": "Du verbindest Stromrichtung, Kraft und Drehbewegung statt nur eine Animation anzusehen."
+    },
+    "revision": 1,
+    "checkedAt": "2026-10-13"
   },
   {
     "id": "science-foodweb",
@@ -8636,7 +8717,14 @@
     "locations": [],
     "links": [],
     "model": "foodweb",
-    "sourceNote": "Fachlich geprüft am 9. Oktober 2026. Die Interaktion vereinfacht den Sachverhalt. Ihre Grenzen stehen direkt am Modell; sie ist keine Messung oder Vorhersage."
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "learning": {
+      "starter": "Eine Nahrungskette zeigt, wie Energie mit Nahrung weitergegeben wird.",
+      "observe": "Folge im Nahrungsnetz einem Pfeil vom Futter zum Fresser. Suche einen zweiten Weg und erkläre, weshalb eine einzelne Kette nicht alles zeigt.",
+      "benefit": "Du unterscheidest Pfeilrichtung, Stoffkreislauf und Energieübertragung."
+    },
+    "revision": 1,
+    "checkedAt": "2026-10-13"
   },
   {
     "id": "science-sound",
@@ -8668,7 +8756,8 @@
     "surprise": "Licht kann durch leeren Raum reisen. Schall braucht ein Material wie Luft, Wasser oder Metall.",
     "related": [
       "invention-phone",
-      "science-atmosphere"
+      "science-atmosphere",
+      "science-resonance"
     ],
     "sources": [
       {
@@ -8690,7 +8779,14 @@
     "locations": [],
     "links": [],
     "model": "sound",
-    "sourceNote": "Fachlich geprüft am 9. Oktober 2026. Die Interaktion vereinfacht den Sachverhalt. Ihre Grenzen stehen direkt am Modell; sie ist keine Messung oder Vorhersage."
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "learning": {
+      "starter": "Schwingungen können einen Ton erzeugen. Ihr Takt beeinflusst seine Höhe.",
+      "observe": "Ändere im stummen Tonmodell zuerst die Frequenz, dann die Auslenkung. Erkläre Tonhöhe und Stärke als verschiedene Vergleiche.",
+      "benefit": "Du verwechselst eine Druckkurve nicht mit einem fliegenden Luftteilchen oder mit hörbar geprüftem Ton."
+    },
+    "revision": 1,
+    "checkedAt": "2026-10-13"
   },
   {
     "id": "science-solar-system",
@@ -8725,7 +8821,10 @@
       "invention-satellite",
       "history-apollo11",
       "science-moon-phases",
-      "science-seasons"
+      "science-seasons",
+      "science-galaxy",
+      "science-comet",
+      "science-exoplanet"
     ],
     "sources": [
       {
@@ -8747,7 +8846,14 @@
     "locations": [],
     "links": [],
     "model": "solar-system",
-    "sourceNote": "Fachlich geprüft am 9. Oktober 2026. Die Interaktion vereinfacht den Sachverhalt. Ihre Grenzen stehen direkt am Modell; sie ist keine Messung oder Vorhersage."
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "learning": {
+      "starter": "Planeten unterscheiden sich in ihrer Größe und Entfernung von der Sonne.",
+      "observe": "Vergleiche dieselben beiden Planeten in Größen- und Abstandssicht. Sage vor dem Wechsel, welches Verhältnis du gerade untersuchst.",
+      "benefit": "Du liest zwei Maßstäbe bewusst und erkennst, weshalb ein hübsches Bild nicht automatisch maßstäblich ist."
+    },
+    "revision": 1,
+    "checkedAt": "2026-10-13"
   },
   {
     "id": "science-energy",
@@ -8781,7 +8887,12 @@
       "science-circuit",
       "science-motor",
       "invention-light",
-      "science-seasons"
+      "science-seasons",
+      "science-friction",
+      "science-heat-transfer",
+      "science-lever",
+      "science-pendulum",
+      "science-fusion"
     ],
     "sources": [
       {
@@ -8803,7 +8914,14 @@
     "locations": [],
     "links": [],
     "model": "energy",
-    "sourceNote": "Fachlich geprüft am 9. Oktober 2026. Die Interaktion vereinfacht den Sachverhalt. Ihre Grenzen stehen direkt am Modell; sie ist keine Messung oder Vorhersage."
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "learning": {
+      "starter": "Sonnenlicht kann Strom liefern. Ein Akku kann einen Teil für später speichern.",
+      "observe": "Vergleiche im Sonnenstrommodell einen hellen Tag mit einer Nacht bei leerem Akku. Prüfe Produktion und Verbrauch getrennt.",
+      "benefit": "Du kannst Speicherung von Erzeugung unterscheiden und eine begrenzte Reserve erklären."
+    },
+    "revision": 1,
+    "checkedAt": "2026-10-13"
   },
   {
     "id": "science-patterns",
@@ -8836,7 +8954,10 @@
     "related": [
       "science-computer",
       "invention-computer",
-      "person-grace_hopper"
+      "person-grace_hopper",
+      "science-probability",
+      "science-symmetry",
+      "science-fractals"
     ],
     "sources": [
       {
@@ -8858,7 +8979,14 @@
     "locations": [],
     "links": [],
     "model": "patterns",
-    "sourceNote": "Fachlich geprüft am 9. Oktober 2026. Die Interaktion vereinfacht den Sachverhalt. Ihre Grenzen stehen direkt am Modell; sie ist keine Messung oder Vorhersage."
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "learning": {
+      "starter": "Ein Computer kann nach einer gewählten Regel ähnliche Merkmale sortieren.",
+      "observe": "Sortiere dieselben Figuren zuerst nach Farbe und dann nach Form. Erkläre einen Fall, der beim Regelwechsel anders eingeordnet wird.",
+      "benefit": "Du verstehst, warum eine Sortierregel und gute Beispiele wichtig sind und Fehler möglich bleiben."
+    },
+    "revision": 1,
+    "checkedAt": "2026-10-13"
   },
   {
     "id": "science-water-cycle",
@@ -8893,7 +9021,8 @@
     "locations": [],
     "related": [
       "science-photosynthesis",
-      "science-atmosphere"
+      "science-atmosphere",
+      "science-surface-tension"
     ],
     "sources": [
       {
@@ -8905,7 +9034,7 @@
         "url": "https://www.usgs.gov/water-science-school/science/evapotranspiration-and-water-cycle?page=0"
       }
     ],
-    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
     "question": {
       "prompt": "Woraus besteht eine Wolke?",
       "answers": [
@@ -8917,8 +9046,8 @@
       "why": "Wolken sind sichtbar, weil kleine Tropfen oder Eiskristalle Licht streuen."
     },
     "links": [],
-    "revision": 1,
-    "checkedAt": "2026-10-09",
+    "revision": 2,
+    "checkedAt": "2026-10-13",
     "challenges": [
       {
         "id": "science-water-cycle-1",
@@ -8969,7 +9098,12 @@
         "why": "Eis, Grundwasser und Atmosphäre speichern Wasser unterschiedlich lange."
       }
     ],
-    "model": "water-cycle"
+    "model": "water-cycle",
+    "learning": {
+      "starter": "Wasser kann als Flüssigkeit, Dampf oder Eis an verschiedenen Orten vorkommen.",
+      "observe": "Verfolge im Wassermodell einen möglichen Weg. Suche eine Abzweigung und erkläre, warum es keinen vorgeschriebenen Start gibt.",
+      "benefit": "Du beschreibst Speicher und Zustandswechsel ohne Wasser im Modell einfach verschwinden zu lassen."
+    }
   },
   {
     "id": "science-photosynthesis",
@@ -9008,19 +9142,17 @@
       "science-foodweb",
       "science-fungi",
       "science-pollination",
-      "science-coral-reef"
+      "science-coral-reef",
+      "science-capillarity",
+      "science-cell"
     ],
     "sources": [
       {
         "label": "Kew: What is photosynthesis?",
         "url": "https://endeavour.kew.org/taster-resources/what-is-photosynthesis"
-      },
-      {
-        "label": "OpenStax: Overview of Photosynthesis",
-        "url": "https://openstax.org/books/biology-2e/pages/8-1-overview-of-photosynthesis"
       }
     ],
-    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
     "question": {
       "prompt": "Welche Energie nutzt die Fotosynthese?",
       "answers": [
@@ -9032,8 +9164,8 @@
       "why": "Licht liefert Energie für den Aufbau energiereicher Stoffe."
     },
     "links": [],
-    "revision": 1,
-    "checkedAt": "2026-10-09",
+    "revision": 2,
+    "checkedAt": "2026-10-13",
     "challenges": [
       {
         "id": "science-photosynthesis-1",
@@ -9083,7 +9215,12 @@
         "correct": 0,
         "why": "Pflanzen nutzen Zellatmung, um Energie aus energiereichen Stoffen verfügbar zu machen."
       }
-    ]
+    ],
+    "learning": {
+      "starter": "Grüne Pflanzen können Lichtenergie zum Aufbau energiereicher Stoffe nutzen.",
+      "observe": "Verbinde im Bild Licht, Wasser und Kohlendioxid mit dem Aufbau energiereicher Stoffe. Unterscheide diesen Prozess von der Zellatmung.",
+      "benefit": "Du verstehst eine Energiequelle vieler Nahrungsnetze und vermeidest die Idee, Pflanzen würden nicht atmen."
+    }
   },
   {
     "id": "science-pollination",
@@ -9131,7 +9268,7 @@
         "url": "https://australian.museum/learn/species-identification/ask-an-expert/what-is-pollination/"
       }
     ],
-    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
     "question": {
       "prompt": "Was wird bei der Bestäubung übertragen?",
       "answers": [
@@ -9143,8 +9280,8 @@
       "why": "Pollen gelangen vom Staubbeutel auf eine passende Narbe."
     },
     "links": [],
-    "revision": 1,
-    "checkedAt": "2026-10-09",
+    "revision": 2,
+    "checkedAt": "2026-10-13",
     "challenges": [
       {
         "id": "science-pollination-1",
@@ -9194,7 +9331,12 @@
         "correct": 0,
         "why": "Für erfolgreiche Fortpflanzung muss Pollen zur Pflanze passen; ein Transport allein genügt nicht."
       }
-    ]
+    ],
+    "learning": {
+      "starter": "Bestäubung bringt Pollen auf eine passende Narbe einer Blüte.",
+      "observe": "Beobachte eine Blüte mit Abstand und ohne Insekten anzufassen. Trenne den sichtbaren Besuch von dem nicht sicher bewiesenen Pollentransport.",
+      "benefit": "Du unterscheidest Beobachtung, Bestäubung und spätere Befruchtung."
+    }
   },
   {
     "id": "science-fungi",
@@ -9246,7 +9388,7 @@
         "url": "https://research.fs.usda.gov/treesearch/41353"
       }
     ],
-    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
     "question": {
       "prompt": "Wie heißt das Geflecht vieler Pilze?",
       "answers": [
@@ -9258,8 +9400,8 @@
       "why": "Myzel besteht aus vielen feinen Pilzfäden."
     },
     "links": [],
-    "revision": 1,
-    "checkedAt": "2026-10-09",
+    "revision": 2,
+    "checkedAt": "2026-10-13",
     "challenges": [
       {
         "id": "science-fungi-1",
@@ -9309,7 +9451,12 @@
         "correct": 0,
         "why": "Eine Verbindung allein belegt noch keinen bestimmten Austausch oder menschliche Kommunikation."
       }
-    ]
+    ],
+    "learning": {
+      "starter": "Viele Pilze bilden feine Fäden. Ein Pilzhut ist oft nur ein Teil davon.",
+      "observe": "Unterscheide in der Erklärung Myzel und Fruchtkörper. Betrachte Pilze draußen nur; keine sammeln, berühren oder essen.",
+      "benefit": "Du erkennst verschiedene Pilzrollen und behauptest nicht allein aus einem Bild, Bäume würden wie Menschen sprechen."
+    }
   },
   {
     "id": "science-coral-reef",
@@ -9358,7 +9505,7 @@
         "url": "https://oceanservice.noaa.gov/facts/coral_bleach.html"
       }
     ],
-    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
     "question": {
       "prompt": "Zu welcher Gruppe gehören Korallenpolypen?",
       "answers": [
@@ -9370,8 +9517,8 @@
       "why": "Polypen sind Tiere; viele von ihnen bauen Kalkskelette."
     },
     "links": [],
-    "revision": 1,
-    "checkedAt": "2026-10-09",
+    "revision": 2,
+    "checkedAt": "2026-10-13",
     "challenges": [
       {
         "id": "science-coral-reef-1",
@@ -9421,7 +9568,12 @@
         "correct": 0,
         "why": "Fotosynthetische Algenpartner sind auf Licht angewiesen; das gilt nicht für alle Korallenarten."
       }
-    ]
+    ],
+    "learning": {
+      "starter": "Korallenpolypen sind Tiere. Viele leben mit kleinen Algenpartnern zusammen.",
+      "observe": "Vergleiche eine Koralle mit Algenpartnern und eine gebleichte Koralle. Erkläre, weshalb Bleiche nicht automatisch sofortigen Tod bedeutet.",
+      "benefit": "Du verstehst Zusammenarbeit und Stress, ohne alle Korallen auf eine Lebensweise zu reduzieren."
+    }
   },
   {
     "id": "science-moon-phases",
@@ -9470,7 +9622,7 @@
         "url": "https://science.nasa.gov/moon/top-moon-questions/"
       }
     ],
-    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
     "question": {
       "prompt": "Woher kommt das Licht des Mondes?",
       "answers": [
@@ -9482,8 +9634,8 @@
       "why": "Die Mondoberfläche reflektiert Sonnenlicht."
     },
     "links": [],
-    "revision": 1,
-    "checkedAt": "2026-10-09",
+    "revision": 2,
+    "checkedAt": "2026-10-13",
     "challenges": [
       {
         "id": "science-moon-phases-1",
@@ -9534,7 +9686,12 @@
         "why": "Der Erdschatten ist nur bei einer Mondfinsternis die Ursache der Verdunkelung."
       }
     ],
-    "model": "moon-phases"
+    "model": "moon-phases",
+    "learning": {
+      "starter": "Die Sonne beleuchtet den Mond. Unser Blick auf seine helle Seite verändert sich.",
+      "observe": "Wähle im Modell zwei Mondpositionen. Vergleiche beleuchtete Hälfte und von der Erde sichtbaren Teil; trenne Phase und Finsternis.",
+      "benefit": "Du erklärst Mondphasen ohne die falsche pauschale Idee eines Erdschattens."
+    }
   },
   {
     "id": "science-seasons",
@@ -9570,7 +9727,8 @@
     "locations": [],
     "related": [
       "science-solar-system",
-      "science-energy"
+      "science-energy",
+      "science-heat-transfer"
     ],
     "sources": [
       {
@@ -9582,7 +9740,7 @@
         "url": "https://science.nasa.gov/helio-and-you-seasons-on-earth-mars-and-beyond/"
       }
     ],
-    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
     "question": {
       "prompt": "Was verursacht hauptsächlich die Jahreszeiten auf der Erde?",
       "answers": [
@@ -9594,8 +9752,8 @@
       "why": "Die Achsneigung verändert Sonnenstand und Tageslänge im Jahreslauf."
     },
     "links": [],
-    "revision": 1,
-    "checkedAt": "2026-10-09",
+    "revision": 2,
+    "checkedAt": "2026-10-13",
     "challenges": [
       {
         "id": "science-seasons-1",
@@ -9645,7 +9803,12 @@
         "correct": 0,
         "why": "Für Tageswetter braucht man weitere Daten über die Atmosphäre."
       }
-    ]
+    ],
+    "learning": {
+      "starter": "Die geneigte Erdachse verändert Sonnenstand und Tageslänge im Jahreslauf.",
+      "observe": "Vergleiche Nord- und Südhalbkugel zur gleichen Jahreszeit. Halte den Tag fest und erkläre die unterschiedliche Neigung zur Sonne.",
+      "benefit": "Du unterscheidest Achsneigung, Sonnenstand und Entfernung statt eine einzige einfache Abstandsregel zu übernehmen."
+    }
   },
   {
     "id": "science-tides",
@@ -9697,7 +9860,7 @@
         "url": "https://oceanservice.noaa.gov/facts/tidefrequency.html"
       }
     ],
-    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
     "question": {
       "prompt": "Welche Himmelskörper beeinflussen die Gezeiten?",
       "answers": [
@@ -9709,8 +9872,8 @@
       "why": "Die Anziehung von Mond und Sonne beeinflusst das Meer."
     },
     "links": [],
-    "revision": 1,
-    "checkedAt": "2026-10-09",
+    "revision": 2,
+    "checkedAt": "2026-10-13",
     "challenges": [
       {
         "id": "science-tides-1",
@@ -9760,6 +9923,1412 @@
         "correct": 0,
         "why": "Bei entsprechender Anordnung verstärken sich die Gezeiteneinflüsse."
       }
-    ]
+    ],
+    "learning": {
+      "starter": "Mond und Sonne beeinflussen den wechselnden Wasserstand am Meer.",
+      "observe": "Wechsle in der Küstenskizze zwischen Hoch- und Niedrigwasser. Trenne Wasserstand und den Zeitraum steigenden oder fallenden Wassers.",
+      "benefit": "Du verwendest Ebbe, Flut, Hoch- und Niedrigwasser präzise und beachtest örtliche Vorhersagen."
+    }
+  },
+  {
+    "id": "science-pressure",
+    "category": "science",
+    "title": "Druck: dieselbe Kraft, andere Fläche",
+    "intro": "Warum verteilt ein breiter Rucksackgurt eine Last angenehmer?",
+    "aliases": [
+      "pressure",
+      "Druck"
+    ],
+    "paragraphs": [
+      "Druck beschreibt, wie viel senkrechte Kraft auf eine Fläche wirkt. Verteilt sich dieselbe Kraft auf eine größere Fläche, wird der Druck kleiner. Kraft und Druck sind also verschiedene Größen.",
+      "Denk an zwei gleich schwere Pakete: Eines steht auf einer breiten Unterlage, das andere auf einer kleinen. Im Modell kannst du die Fläche verändern, ohne die Kraft zu ändern."
+    ],
+    "facts": [
+      {
+        "label": "Kraft",
+        "text": "In Newton (N)."
+      },
+      {
+        "label": "Druck",
+        "text": "Kraft pro Fläche, in Pascal (Pa)."
+      }
+    ],
+    "more": [
+      "Druck = Kraft geteilt durch Fläche. Bei 12 Newton und 3 Quadratmetern ergibt das 4 Pascal. Diese frei gewählten Modellzahlen sind keine Empfehlung für den Alltag.",
+      "Auch ruhende Luft übt Druck aus: Bewegte Teilchen stoßen gegen ihre Umgebung. Ein Gas drückt in verschiedene Richtungen; es ist kein Stapel fester Steine."
+    ],
+    "surprise": "Eine breite Fläche verteilt die gleiche Kraft auf mehr Platz.",
+    "learning": {
+      "starter": "Eine breite Fläche verteilt die gleiche Kraft auf mehr Platz.",
+      "observe": "Vergleiche zuerst bei gleicher Kraft zwei Flächen. Halbiere dann die Fläche: Welchen Faktor erwartest du beim Druck?",
+      "benefit": "Du kannst Kraft und Druck auseinanderhalten und erklären, warum eine Lastverteilung zählt."
+    },
+    "locations": [],
+    "related": [
+      "science-atmosphere",
+      "science-buoyancy",
+      "science-lever"
+    ],
+    "sources": [
+      {
+        "label": "NASA Glenn · Druck als Kraft pro Fläche",
+        "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/air-pressure/"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Bei gleicher Kraft wird die Kontaktfläche doppelt so groß. Was passiert mit dem Druck?",
+      "answers": [
+        "Er wird halb so groß.",
+        "Er wird doppelt so groß.",
+        "Er bleibt in jedem Fall gleich."
+      ],
+      "correct": 0,
+      "why": "Dieselbe Kraft verteilt sich auf doppelt so viel Fläche. Der Quotient aus Kraft und Fläche halbiert sich."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13",
+    "investigation": "pressure"
+  },
+  {
+    "id": "science-friction",
+    "category": "science",
+    "title": "Reibung: bremsen und Halt finden",
+    "intro": "Eine Bremse nutzt etwas, das beim Rutschen stören kann.",
+    "aliases": [
+      "friction",
+      "Reibung"
+    ],
+    "paragraphs": [
+      "Berühren sich zwei feste Oberflächen, kann Reibung ihr Gleiten behindern. Sie kann eine Bewegung bremsen. Ohne genügend Haftreibung würdest du beim Gehen wegrutschen, statt dich am Boden abzustoßen.",
+      "Gleitreibung und Haftreibung sind nicht dasselbe. Ein ruhender Klotz kann einer kleinen Zugkraft zunächst widerstehen. Erst bei ausreichend großer Zugkraft beginnt er zu rutschen."
+    ],
+    "facts": [
+      {
+        "label": "Haftreibung",
+        "text": "Kann zunächst ein Gleiten verhindern."
+      },
+      {
+        "label": "Gleitreibung",
+        "text": "Wirkt beim Gleiten zweier Kontaktflächen."
+      }
+    ],
+    "more": [
+      "Im einfachen Gleitmodell wächst die Reibungskraft mit der Kraft, die beide Flächen aufeinanderpresst. Materialien und ihre Oberfläche beeinflussen den Vergleich; die Regel ist keine Garantie für jedes Material.",
+      "Reibung kann Bewegungsenergie in innere Energie überführen. Reibe deine Hände nur sanft aneinander: Das Wärmegefühl ist eine Beobachtung, keine genaue Kraftmessung."
+    ],
+    "surprise": "Reibung kann rutschende Dinge bremsen und deinen Füßen Halt geben.",
+    "learning": {
+      "starter": "Reibung kann rutschende Dinge bremsen und deinen Füßen Halt geben.",
+      "observe": "Schiebe ein kleines Buch langsam auf einem Tisch und auf einem Tuch. Vermute vorher einen Unterschied. Drücke nicht stark und halte die Strecke gleich.",
+      "benefit": "Du erkennst, warum Reibung beim Bremsen nützt und beim Bewegen manchmal stört."
+    },
+    "locations": [],
+    "related": [
+      "science-energy",
+      "science-elasticity"
+    ],
+    "sources": [
+      {
+        "label": "Institute of Physics · Reibung zwischen festen Flächen",
+        "url": "https://spark.iop.org/friction-between-solid-surfaces"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Warum brauchen Schuhe beim Gehen genügend Halt am Boden?",
+      "answers": [
+        "Damit sie beim Abstoßen nicht wegrutschen.",
+        "Damit der Boden leichter wird.",
+        "Damit jede Bewegung ohne Kraft möglich ist."
+      ],
+      "correct": 0,
+      "why": "Haftreibung kann den Fuß am Boden halten, während du dich abstößt. Reibung ist deshalb nicht grundsätzlich unerwünscht."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "science-buoyancy",
+    "category": "science",
+    "title": "Auftrieb im Wasser: verdrängen statt zaubern",
+    "intro": "Ein großer Schiffsrumpf kann aus Stahl sein und trotzdem schwimmen.",
+    "aliases": [
+      "buoyancy",
+      "Auftrieb im Wasser"
+    ],
+    "paragraphs": [
+      "Wasser drückt gegen einen eingetauchten Körper. Weiter unten ist der Wasserdruck größer als weiter oben. Daraus ergibt sich eine Kraft nach oben: Auftrieb.",
+      "Die Auftriebskraft entspricht der Gewichtskraft des verdrängten Wassers. Ein schwimmender Körper verdrängt so viel Wasser, dass Auftrieb und eigene Gewichtskraft sich ausgleichen."
+    ],
+    "facts": [
+      {
+        "label": "Auftrieb",
+        "text": "Entspricht der Gewichtskraft des verdrängten Wassers."
+      },
+      {
+        "label": "Modellkörper",
+        "text": "3 kg Gesamtmasse; sein Volumen ist veränderbar."
+      }
+    ],
+    "more": [
+      "Entscheidend ist die mittlere Dichte des ganzen Körpers. Ein hohler Schiffsrumpf enthält viel Luft und verdrängt viel Wasser. Ein massiver Stahlklotz und ein hohles Stahlschiff sind deshalb unterschiedliche Vergleiche.",
+      "Unser Modell betrachtet ruhendes Wasser und einen starren Körper. Wellen, Lecks und Stabilität werden nicht berechnet. Es ist keine Bauanleitung für ein echtes Boot."
+    ],
+    "surprise": "Wasser kann Dinge nach oben drücken. Die Form bestimmt mit, wie viel Wasser sie verdrängen.",
+    "learning": {
+      "starter": "Wasser kann Dinge nach oben drücken. Die Form bestimmt mit, wie viel Wasser sie verdrängen.",
+      "observe": "Vergleiche im Modell zwei gleich schwere Körper mit unterschiedlichem Volumen. Vermute, welcher mehr Wasser verdrängen kann.",
+      "benefit": "Du erklärst Schwimmen mit Kräften und Volumen statt mit der pauschalen Regel „Metall sinkt“."
+    },
+    "locations": [],
+    "related": [
+      "science-pressure",
+      "science-currents"
+    ],
+    "sources": [
+      {
+        "label": "NOAA · Wasserverdrängung und Schwimmen",
+        "url": "https://www.noaa.gov/office-education/outreach-communication/hands-on-science-activities/build-a-boat"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Was zählt beim Auftrieb eines eingetauchten Körpers?",
+      "answers": [
+        "Die Gewichtskraft des verdrängten Wassers.",
+        "Die Farbe des Körpers.",
+        "Die Anzahl gemalter Fenster."
+      ],
+      "correct": 0,
+      "why": "Das verdrängte Wasser verbindet Volumen und Auftrieb. Beim Schwimmen gleicht diese Kraft die Gewichtskraft des Körpers aus."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13",
+    "investigation": "buoyancy"
+  },
+  {
+    "id": "science-surface-tension",
+    "category": "science",
+    "title": "Oberflächenspannung: eine besondere Wassergrenze",
+    "intro": "Warum bleibt ein kleiner Tropfen oft rundlich?",
+    "aliases": [
+      "surface-tension",
+      "Oberflächenspannung"
+    ],
+    "paragraphs": [
+      "Wassermoleküle ziehen einander an. An der Oberfläche haben sie eine andere Umgebung als im Inneren. Die Oberfläche verhält sich deshalb so, als wolle sie kleiner werden: Das nennen wir Oberflächenspannung.",
+      "Ein kleiner Tropfen kann rundlich wirken. Schwerkraft und die Unterlage verändern seine Form. Die Wasseroberfläche ist keine feste Haut, auf der jedes Tier oder jeder Gegenstand stehen könnte."
+    ],
+    "facts": [
+      {
+        "label": "Grenzfläche",
+        "text": "Keine feste Haut oder aufgelegte Folie."
+      },
+      {
+        "label": "Tropfenform",
+        "text": "Oberflächenkräfte, Unterlage und Schwerkraft wirken zusammen."
+      }
+    ],
+    "more": [
+      "Wasserläufer nutzen mit ihren Beinen die Oberflächenspannung, ohne die Oberfläche leicht zu durchbrechen. Größe, Gewicht und die Beschaffenheit der Beine sind dabei wichtig.",
+      "Bei größeren Wasseransammlungen wird die Schwerkraft im Formvergleich wichtiger. Ein See wird daher keine schwebende riesige Kugel wie ein kleiner idealisierter Tropfen."
+    ],
+    "surprise": "An der Wassergrenze ziehen winzige Teilchen aneinander. Kleine Tropfen können dadurch rundlich werden.",
+    "learning": {
+      "starter": "An der Wassergrenze ziehen winzige Teilchen aneinander. Kleine Tropfen können dadurch rundlich werden.",
+      "observe": "Gib mit einem Erwachsenen wenige Wassertropfen auf einen sauberen Löffel. Betrachte von der Seite, ohne den Löffel zum Mund zu führen.",
+      "benefit": "Du unterscheidest eine besondere Grenzfläche von einer festen Haut und beachtest die Größenordnung."
+    },
+    "locations": [],
+    "related": [
+      "science-capillarity",
+      "science-water-cycle"
+    ],
+    "sources": [
+      {
+        "label": "USGS · Oberflächenspannung von Wasser",
+        "url": "https://www.usgs.gov/water-science-school/science/surface-tension-and-water"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Welche Erklärung passt zur Oberflächenspannung?",
+      "answers": [
+        "Anziehung zwischen Teilchen prägt die Wassergrenze.",
+        "Auf jedem Wasser liegt eine feste Folie.",
+        "Große Seen müssen kugelrund schweben."
+      ],
+      "correct": 0,
+      "why": "Die Wechselwirkung der Moleküle prägt die Oberfläche. Ihre Wirkung wird durch Schwerkraft und Umgebung mitbestimmt."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "science-capillarity",
+    "category": "science",
+    "title": "Kapillarwirkung: Wasser auf schmalen Wegen",
+    "intro": "Ein Papiertuch kann Wasser ein Stück nach oben transportieren.",
+    "aliases": [
+      "capillarity",
+      "Kapillarwirkung"
+    ],
+    "paragraphs": [
+      "In engen Zwischenräumen kann Wasser steigen oder weiterwandern. Wasserteilchen ziehen einander an und werden auch von geeigneten Oberflächen angezogen. Dieses Zusammenspiel heißt Kapillarwirkung.",
+      "Ein Papiertuch enthält viele kleine Zwischenräume. Wenn ein Ende Wasser berührt, kann sich Wasser darin ausbreiten. Die Wirkung ist begrenzt: Sie hebt Wasser nicht beliebig hoch."
+    ],
+    "facts": [
+      {
+        "label": "Enger Weg",
+        "text": "Bei gleichem benetzbaren Material kann Wasser höher steigen."
+      },
+      {
+        "label": "Begrenzung",
+        "text": "Schwerkraft wirkt dem Steigen entgegen."
+      }
+    ],
+    "more": [
+      "In einem gut benetzbaren dünnen Röhrchen steigt Wasser höher als in einem breiteren. Die Schwerkraft wirkt dem Steigen entgegen. Das Material des Röhrchens spielt ebenfalls eine Rolle.",
+      "Wassertransport in hohen Bäumen ist komplizierter. Kapillarwirkung allein erklärt den gesamten Weg bis zur Baumkrone nicht; Verdunstung an Blättern ist ebenfalls wichtig."
+    ],
+    "surprise": "Wasser kann durch schmale Zwischenräume wandern, zum Beispiel in einem Papiertuch.",
+    "learning": {
+      "starter": "Wasser kann durch schmale Zwischenräume wandern, zum Beispiel in einem Papiertuch.",
+      "observe": "Halte nur eine Ecke eines trockenen Papiertuchs in wenig Wasser. Markiere mit einem Erwachsenen den ersten nassen Rand und beobachte, ob er weiterwandert.",
+      "benefit": "Du kannst eine beobachtete Wasserbewegung erklären, ohne ihr unbegrenzte Fähigkeiten zuzuschreiben."
+    },
+    "locations": [],
+    "related": [
+      "science-surface-tension",
+      "science-photosynthesis",
+      "science-chromatography"
+    ],
+    "sources": [
+      {
+        "label": "USGS · Kapillarwirkung und Wasser",
+        "url": "https://www.usgs.gov/water-science-school/science/capillary-action-and-water"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Was begrenzt unter anderem das Steigen von Wasser in einem dünnen Röhrchen?",
+      "answers": [
+        "Die entgegenwirkende Schwerkraft.",
+        "Eine eingebaute Wasserbatterie.",
+        "Das Verbot, eine Oberfläche zu berühren."
+      ],
+      "correct": 0,
+      "why": "Die Oberflächenkräfte können Wasser anheben, aber die Schwerkraft wirkt entgegen. Die erreichte Höhe bleibt begrenzt."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "science-diffusion",
+    "category": "science",
+    "title": "Diffusion: viele zufällige Teilchenwege",
+    "intro": "Ein Farbstoff kann sich auch ohne Rühren langsam verteilen.",
+    "aliases": [
+      "diffusion",
+      "Diffusion"
+    ],
+    "paragraphs": [
+      "Teilchen bewegen sich ungeordnet. Sind an einer Stelle viele und anderswo wenige Teilchen einer Sorte, führt diese Bewegung insgesamt oft zu einer gleichmäßigeren Verteilung. Diesen Vorgang nennen wir Diffusion.",
+      "Ein einzelnes Teilchen kann in beide Richtungen wandern. Der insgesamt beobachtete Ausgleich entsteht aus sehr vielen Wegen. Die Teilchen entscheiden nicht, wohin sie gebraucht werden."
+    ],
+    "facts": [
+      {
+        "label": "Einzelne Teilchen",
+        "text": "Bewegen sich ungeordnet in verschiedene Richtungen."
+      },
+      {
+        "label": "Gleichgewicht",
+        "text": "Bedeutet nicht, dass alle Teilchen stillstehen."
+      }
+    ],
+    "more": [
+      "Nach einem Konzentrationsausgleich bewegen sich Teilchen weiter. Gleiche Konzentration bedeutet nicht Stillstand. Durchmischung durch Strömungen ist ein anderer Vorgang und kann viel schneller sein.",
+      "Zellen tauschen Stoffe mit ihrer Umgebung aus. Diffusion ist dabei ein möglicher Weg; Zellmembranen lassen nicht jeden Stoff gleichermaßen passieren und Zellen nutzen auch weitere Transportmechanismen."
+    ],
+    "surprise": "Winzige Teilchen bewegen sich. Viele zufällige Wege können eine ungleiche Verteilung ausgleichen.",
+    "learning": {
+      "starter": "Winzige Teilchen bewegen sich. Viele zufällige Wege können eine ungleiche Verteilung ausgleichen.",
+      "observe": "Ein Erwachsener gibt einen Tropfen Lebensmittelfarbe in ein kleines Glas Wasser. Beobachte ohne Rühren. Beschreibe auch mögliche Wasserströmungen, statt alles automatisch Diffusion zu nennen.",
+      "benefit": "Du unterscheidest die zufällige Bewegung einzelner Teilchen von einem insgesamt gerichteten Stoffausgleich."
+    },
+    "locations": [],
+    "related": [
+      "science-cell",
+      "science-chromatography"
+    ],
+    "sources": [
+      {
+        "label": "Exploratorium · Diffusion und Stoffaustausch",
+        "url": "https://www.exploratorium.edu/snacks/agar-cell-diffusion"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Was passiert mit Teilchen nach einem Konzentrationsausgleich?",
+      "answers": [
+        "Sie bewegen sich weiter in verschiedene Richtungen.",
+        "Sie hören alle dauerhaft auf, sich zu bewegen.",
+        "Sie werden zu kleinen denkenden Helfern."
+      ],
+      "correct": 0,
+      "why": "Auch im Gleichgewicht bewegen sich Teilchen. Nur der beobachtete Nettoausgleich ist dann nicht mehr wie am Anfang gerichtet."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "science-chromatography",
+    "category": "science",
+    "title": "Chromatografie: eine Mischung auftrennen",
+    "intro": "In einer dunklen Tinte können mehrere Farbstoffe stecken.",
+    "aliases": [
+      "chromatography",
+      "Chromatografie"
+    ],
+    "paragraphs": [
+      "Chromatografie trennt Bestandteile einer Mischung. Eine bewegliche Flüssigkeit oder ein Gas transportiert sie an einem anderen Material entlang. Verschiedene Bestandteile wandern dabei unterschiedlich weit.",
+      "Bei Papierchromatografie kann Wasser durch Papier wandern und wasserlösliche Farbstoffe mitnehmen. Manche Farbstoffe haften stärker am Papier oder werden anders mit dem Wasser transportiert."
+    ],
+    "facts": [
+      {
+        "label": "Bewegliche Phase",
+        "text": "Transportierende Flüssigkeit oder transportierendes Gas."
+      },
+      {
+        "label": "Andere Phase",
+        "text": "Material, an dem Bestandteile unterschiedlich festgehalten werden."
+      }
+    ],
+    "more": [
+      "Ein Farbstreifen ist ein Hinweis auf unterschiedliche Bestandteile. Er ist keine vollständige chemische Identifizierung: Dazu braucht man passende Vergleichsstoffe und weitere Untersuchungen.",
+      "Es gibt verschiedene Formen der Chromatografie. Unser Papierbeispiel ist eine einfache Beobachtung; es erklärt nicht alle Geräte in einem Forschungslabor."
+    ],
+    "surprise": "Eine Mischung kann sich in verschiedene Spuren aufteilen, wenn ihre Teile unterschiedlich wandern.",
+    "learning": {
+      "starter": "Eine Mischung kann sich in verschiedene Spuren aufteilen, wenn ihre Teile unterschiedlich wandern.",
+      "observe": "Mit einem Erwachsenen und nur Wasser: Markiere einen Papierstreifen mit auswaschbarer Tinte oberhalb des unteren Rands. Tauche nur den Rand ein, nicht die Linie. Keine Lösungsmittel verwenden.",
+      "benefit": "Du kannst aus einer sichtbaren Spur eine vorsichtige Schlussfolgerung ziehen und ihre Grenze benennen."
+    },
+    "locations": [],
+    "related": [
+      "science-capillarity",
+      "science-diffusion"
+    ],
+    "sources": [
+      {
+        "label": "Exploratorium · Papierchromatografie",
+        "url": "https://www.exploratorium.edu/snacks/separation-anxiety"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Warum können bei Papierchromatografie mehrere Farbstreifen entstehen?",
+      "answers": [
+        "Weil Bestandteile unterschiedlich mitwandern und haften.",
+        "Weil das Papier völlig neue Farben erfinden muss.",
+        "Weil alle Bestandteile immer gleich weit wandern."
+      ],
+      "correct": 0,
+      "why": "Die unterschiedlichen Wechselwirkungen führen zu unterschiedlichen Wegen. Ein Streifen allein beweist noch nicht die genaue chemische Identität."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "science-heat-transfer",
+    "category": "science",
+    "title": "Wärmeübertragung: drei Wege der Energie",
+    "intro": "Energie kann durch Kontakt, bewegte Luft oder Strahlung weitergegeben werden.",
+    "aliases": [
+      "heat-transfer",
+      "Wärmeübertragung"
+    ],
+    "paragraphs": [
+      "Wärmeübertragung ist Energieübertragung aufgrund eines Temperaturunterschieds. Wärmeleitung geschieht durch ein Material oder an einer Kontaktstelle. Wärmeströmung transportiert Energie mit bewegter Luft oder Flüssigkeit.",
+      "Wärmestrahlung braucht keinen direkten Kontakt und kein transportierendes Luftpaket. So erreicht uns Energie von der Sonne durch den Weltraum. In einem Zimmer können mehrere Wege zugleich wirken."
+    ],
+    "facts": [
+      {
+        "label": "Drei Wege",
+        "text": "Leitung, Strömung und Strahlung."
+      },
+      {
+        "label": "Dämmung",
+        "text": "Verlangsamt Übertragung, erzeugt keine zusätzliche Wärme."
+      }
+    ],
+    "more": [
+      "Ein Metalllöffel und ein Holzlöffel können dieselbe Raumtemperatur haben und sich trotzdem verschieden anfühlen. Entscheidend ist auch, wie schnell sie Energie mit deiner Hand austauschen.",
+      "Eine Dämmung verlangsamt Wärmeübertragung. Sie erzeugt nicht von allein neue Wärme und hält Energie nicht unbegrenzt fest. Keine Versuche mit Herd, Feuer oder sehr heißen Gegenständen."
+    ],
+    "surprise": "Energie kann über Berührung, bewegte Luft und Strahlung weitergegeben werden.",
+    "learning": {
+      "starter": "Energie kann über Berührung, bewegte Luft und Strahlung weitergegeben werden.",
+      "observe": "Vergleiche ein Holzstück und einen Metalllöffel bei Raumtemperatur. Vermute vor dem Berühren, ob ein unterschiedliches Gefühl auch eine unterschiedliche Temperatur beweist.",
+      "benefit": "Du erklärst ein Wärmegefühl vorsichtig und kannst Dämmung von Wärmeerzeugung unterscheiden."
+    },
+    "locations": [],
+    "related": [
+      "science-energy",
+      "science-seasons"
+    ],
+    "sources": [
+      {
+        "label": "U.S. Department of Energy · Wärmeübertragung",
+        "url": "https://bsesc.energy.gov/energy-basics/heat-flow"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Welcher Übertragungsweg braucht kein Material zwischen Quelle und Empfänger?",
+      "answers": [
+        "Wärmestrahlung durch den freien Raum.",
+        "Wärmeleitung durch einen Metallstab.",
+        "Wärmeströmung in bewegter Luft."
+      ],
+      "correct": 0,
+      "why": "Strahlung kann Energie auch durch weitgehend leeren Raum übertragen. Leitung und Strömung benötigen Material."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "science-lever",
+    "category": "science",
+    "title": "Hebel: Kraft gegen Weg tauschen",
+    "intro": "Ein langer Hebelarm kann eine kleinere Kraft möglich machen.",
+    "aliases": [
+      "lever",
+      "Hebel"
+    ],
+    "paragraphs": [
+      "Ein Hebel dreht sich um einen Drehpunkt. Eine Kraft wirkt an einem Abstand zu diesem Punkt. Bei gleicher Kraft erzeugt ein größerer senkrechter Abstand eine stärkere Drehwirkung.",
+      "Für einen idealen waagerechten Hebel im Gleichgewicht gleichen sich die Drehwirkungen beider Seiten aus. Ein längerer Kraftarm kann deshalb eine kleinere Kraft zum Halten einer Last ermöglichen."
+    ],
+    "facts": [
+      {
+        "label": "Drehwirkung",
+        "text": "Kraft mal senkrechter Abstand zum Drehpunkt."
+      },
+      {
+        "label": "Modelllast",
+        "text": "12 N am Lastarm von 1 m."
+      }
+    ],
+    "more": [
+      "Diese Kraftersparnis ist keine kostenlose Energie. Die Seite mit dem längeren Arm legt beim Drehen einen längeren Weg zurück. Reibung und das Eigengewicht des Hebels kommen in der Wirklichkeit dazu.",
+      "Auch Knochen und Muskeln bilden Hebelsysteme. Nicht jedes System spart Kraft: Ein kurzer Muskelarm kann größere Kräfte benötigen und dafür schnelle oder weite Bewegungen ermöglichen."
+    ],
+    "surprise": "Ein Hebel dreht sich um einen Punkt. Abstand und Kraft bestimmen seine Drehwirkung.",
+    "learning": {
+      "starter": "Ein Hebel dreht sich um einen Punkt. Abstand und Kraft bestimmen seine Drehwirkung.",
+      "observe": "Verändere im Bildschirmmodell nur die Länge eines Arms. Vermute vor dem Rechnen, welche Kraft das Gleichgewicht hält. Keine schweren Gegenstände oder Menschen anheben.",
+      "benefit": "Du erkennst den Tausch zwischen Kraft und Weg und vermeidest die Idee einer kostenlosen Energiequelle."
+    },
+    "locations": [],
+    "related": [
+      "science-pressure",
+      "science-energy"
+    ],
+    "sources": [
+      {
+        "label": "Exploratorium · Hebel und Kraftarme",
+        "url": "https://annex.exploratorium.edu/wsw/participants/sfusd_links99-00-math/loril/math%20and%20science%20activities/arm_model.html"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Ein Kraftarm wird doppelt so lang, Last und Lastarm bleiben gleich. Was reicht im idealen Gleichgewicht?",
+      "answers": [
+        "Die halbe bisherige Kraft.",
+        "Die doppelte bisherige Kraft.",
+        "Gar keine Kraft mehr."
+      ],
+      "correct": 0,
+      "why": "Die Drehwirkung ist Kraft mal senkrechter Arm. Bei doppeltem Arm genügt die halbe Kraft für dieselbe Drehwirkung."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13",
+    "investigation": "lever"
+  },
+  {
+    "id": "science-elasticity",
+    "category": "science",
+    "title": "Elastizität: zurück zur alten Form",
+    "intro": "Verformen und dauerhaft verbiegen sind verschiedene Vorgänge.",
+    "aliases": [
+      "elasticity",
+      "Elastizität"
+    ],
+    "paragraphs": [
+      "Ein elastischer Körper kann nach einer Verformung wieder annähernd in seine ursprüngliche Form zurückkehren. Eine Feder oder ein geeignetes Gummiband sind vertraute Beispiele.",
+      "Wird die Belastung zu groß, kann eine Verformung bleiben oder das Material beschädigt werden. Elastizität bedeutet daher nicht, dass etwas unbegrenzt dehnbar und unzerstörbar ist."
+    ],
+    "facts": [
+      {
+        "label": "Elastisch",
+        "text": "Verformung geht im passenden Belastungsbereich zurück."
+      },
+      {
+        "label": "Bleibend",
+        "text": "Nach zu starker Belastung kann eine Verformung bleiben."
+      }
+    ],
+    "more": [
+      "Eine ideale Feder lässt sich in einem begrenzten Bereich mit einer einfachen Regel beschreiben: doppelte Dehnung benötigt doppelte Kraft. Ein Gummiband folgt dieser Regel nicht automatisch über seine ganze Dehnung.",
+      "Beim Verformen kann ein Körper Energie speichern und beim Zurückgehen abgeben. Reale Materialien geben einen Teil auch als innere Energie ab. Unser Vergleich sagt keine Bruchgrenze voraus."
+    ],
+    "surprise": "Manche Dinge bekommen nach vorsichtiger Verformung ihre alte Form zurück.",
+    "learning": {
+      "starter": "Manche Dinge bekommen nach vorsichtiger Verformung ihre alte Form zurück.",
+      "observe": "Zeichne eine Feder zuerst entspannt und dann gedehnt. Welche Veränderung erwartest du, wenn eine passende Belastung entfernt wird? Keine Dinge bis zur Bruchgrenze dehnen.",
+      "benefit": "Du kannst Rückkehr zur Form von bleibender Verformung unterscheiden und Modellgrenzen erkennen."
+    },
+    "locations": [],
+    "related": [
+      "science-friction",
+      "science-resonance"
+    ],
+    "sources": [
+      {
+        "label": "Exploratorium · Elastizität von Materialien",
+        "url": "https://annex.exploratorium.edu/cycling/frames3.html"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Was bedeutet elastisch in diesem Vergleich?",
+      "answers": [
+        "Nach kleiner Verformung wieder zur alten Form zurückkehren.",
+        "Bei jeder Kraft unzerstörbar bleiben.",
+        "Sich niemals verändern dürfen."
+      ],
+      "correct": 0,
+      "why": "Elastische Verformung ist rückgängig machbar. Die Aussage gilt nur im geeigneten Belastungsbereich eines Materials."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "science-pendulum",
+    "category": "science",
+    "title": "Pendel: Länge und Schwingungszeit",
+    "intro": "Warum schwingen zwei Pendel nicht immer gleich schnell?",
+    "aliases": [
+      "pendulum",
+      "Pendel"
+    ],
+    "paragraphs": [
+      "Ein Pendel kann hin und her schwingen. Die Schwerkraft führt es nach einer Auslenkung zurück. Dabei wechseln Lageenergie und Bewegungsenergie ihre Anteile.",
+      "Bei kleinen Auslenkungen braucht ein längeres einfaches Fadenpendel mehr Zeit für eine volle Schwingung als ein kürzeres. Die Masse beeinflusst diese ideale Schwingungszeit nicht."
+    ],
+    "facts": [
+      {
+        "label": "Volle Schwingung",
+        "text": "Hin und wieder zurück zum Ausgangspunkt."
+      },
+      {
+        "label": "Idealer Vergleich",
+        "text": "Kleine Auslenkung, Fadenlänge und Schwerkraft beachten."
+      }
+    ],
+    "more": [
+      "Die einfache Regel gilt für einen dünnen Faden und eine konzentrierte Masse, nicht für jedes beliebige schwingende Bauwerk. Sehr große Auslenkungen verändern die Schwingungszeit zusätzlich.",
+      "Ohne weiteres Anschieben werden reale Schwingungen kleiner: Luftwiderstand und Reibung bremsen. Das erklärt, warum eine Pendeluhr regelmäßig Energie nachbekommen muss."
+    ],
+    "surprise": "Ein Pendel schwingt hin und her. Ein längerer Faden kann die Schwingung langsamer machen.",
+    "learning": {
+      "starter": "Ein Pendel schwingt hin und her. Ein längerer Faden kann die Schwingung langsamer machen.",
+      "observe": "Vergleiche im Modell zwei Längen bei gleicher kleinen Auslenkung. Zähle immer eine vollständige Hin-und-zurück-Bewegung, nicht nur einen halben Weg.",
+      "benefit": "Du kannst einen fairen Vergleich planen und Länge, Masse und Auslenkung auseinanderhalten."
+    },
+    "locations": [],
+    "related": [
+      "science-resonance",
+      "science-energy"
+    ],
+    "sources": [
+      {
+        "label": "Exploratorium · Pendellängen und Schwingungen",
+        "url": "https://annex.exploratorium.edu/xref/exhibits/pendulum_table.html"
+      },
+      {
+        "label": "Clemson University · kleines Fadenpendel",
+        "url": "https://www.science.clemson.edu/physics/labs/labs/223/sample/index.html"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Was macht ein ideales Fadenpendel bei kleinen Auslenkungen langsamer?",
+      "answers": [
+        "Ein längerer Faden bei gleicher Schwerkraft.",
+        "Eine andere Farbe der Pendelkugel.",
+        "Allein eine größere Masse bei gleicher Länge."
+      ],
+      "correct": 0,
+      "why": "Für das einfache Pendel hängt die kleine Schwingungszeit von Länge und Schwerkraft ab, nicht von der Masse."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13",
+    "investigation": "pendulum"
+  },
+  {
+    "id": "science-resonance",
+    "category": "science",
+    "title": "Resonanz: im richtigen Takt anschieben",
+    "intro": "Ein kleiner regelmäßiger Anstoß kann eine Schwingung wachsen lassen.",
+    "aliases": [
+      "resonance",
+      "Resonanz"
+    ],
+    "paragraphs": [
+      "Viele Systeme schwingen nach einer Störung besonders leicht mit einer eigenen Frequenz. Passt ein regelmäßiger Antrieb gut dazu, kann die Schwingung stärker werden. Das nennen wir Resonanz.",
+      "Bei einer Schaukel kommt es nicht nur auf kräftiges Anschieben an, sondern auch auf den passenden Zeitpunkt. Ein unpassender Takt kann viel weniger Wirkung haben."
+    ],
+    "facts": [
+      {
+        "label": "Eigenfrequenz",
+        "text": "Ein besonders passender Schwingungstakt des Systems."
+      },
+      {
+        "label": "Dämpfung",
+        "text": "Begrenzt die durch einen Antrieb erzeugte Schwingung."
+      }
+    ],
+    "more": [
+      "Masse, Steifigkeit und Bauform beeinflussen Eigenfrequenzen. Reibung und andere Dämpfung begrenzen die Schwingung. Resonanz bedeutet nicht automatisch unbegrenztes Wachstum.",
+      "Musikinstrumente nutzen Resonanzen. Bei Bauwerken müssen Fachleute mögliche Anregungen und Dämpfung prüfen. Unser Bild ist keine Berechnung der Sicherheit einer Brücke."
+    ],
+    "surprise": "Passendes Anschieben im richtigen Takt kann eine Schwingung verstärken.",
+    "learning": {
+      "starter": "Passendes Anschieben im richtigen Takt kann eine Schwingung verstärken.",
+      "observe": "Vergleiche im Bildschirmmodell einen langsamen, passenden und schnellen Antrieb. Vermute vorher, bei welchem Takt die größte Auslenkung entsteht.",
+      "benefit": "Du erklärst die Wirkung eines Takts, statt jede stärkere Bewegung allein einer größeren Kraft zuzuschreiben."
+    },
+    "locations": [],
+    "related": [
+      "science-pendulum",
+      "science-sound",
+      "science-elasticity"
+    ],
+    "sources": [
+      {
+        "label": "Exploratorium · Resonanz und Eigenfrequenzen",
+        "url": "https://www.exploratorium.edu/snacks/resonant-rings"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Welche Bedingung kann Resonanz begünstigen?",
+      "answers": [
+        "Ein Antrieb nahe einer Eigenfrequenz des Systems.",
+        "Nur eine besonders bunte Oberfläche.",
+        "Ein System, das grundsätzlich nicht schwingen kann."
+      ],
+      "correct": 0,
+      "why": "Ein passender Antrieb kann besonders wirksam Energie in eine Schwingung übertragen. Dämpfung und Bauform bestimmen die tatsächliche Stärke mit."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13",
+    "investigation": "resonance"
+  },
+  {
+    "id": "science-probability",
+    "category": "science",
+    "title": "Wahrscheinlichkeit: möglich ist nicht garantiert",
+    "intro": "Eine Chance beschreibt viele mögliche Versuche, nicht den nächsten sicheren Ausgang.",
+    "aliases": [
+      "probability",
+      "Wahrscheinlichkeit"
+    ],
+    "paragraphs": [
+      "Wahrscheinlichkeit beschreibt, wie häufig wir ein Ergebnis unter festgelegten Bedingungen erwarten. Bei einem idealen fairen Würfel haben alle sechs Seiten die gleiche Chance.",
+      "Ein fairer Würfel hat für eine bestimmte Zahl die Chance eins von sechs. Das bedeutet nicht, dass diese Zahl in jedem Block von sechs Würfen genau einmal fallen muss."
+    ],
+    "facts": [
+      {
+        "label": "Einzelchance",
+        "text": "Für die Sechs: 1/6 im fairen Würfelmodell."
+      },
+      {
+        "label": "Keine Garantie",
+        "text": "Nicht jeder Block aus sechs Würfen enthält eine Sechs."
+      }
+    ],
+    "more": [
+      "Unabhängige Würfe ändern die nächste Chance nicht allein durch die vergangenen Ergebnisse. Eine lange Reihe gleicher Zahlen beweist für sich noch keinen Defekt und macht ein anderes Ergebnis nicht „fällig“.",
+      "Ein Bildschirmversuch zeigt eine Folge, keine Garantie. In echten Untersuchungen muss zuerst geklärt werden, ob das Modell „fair und unabhängig“ überhaupt passt."
+    ],
+    "surprise": "Eine Chance ist eine Erwartung. Sie verspricht dir keinen bestimmten nächsten Wurf.",
+    "learning": {
+      "starter": "Eine Chance ist eine Erwartung. Sie verspricht dir keinen bestimmten nächsten Wurf.",
+      "observe": "Wähle im Modell ein Ziel und notiere vor dem Versuch deine Erwartung. Vergleiche kurze und längere Serien. Keine Wette und kein Einsatz nötig.",
+      "benefit": "Du kannst eine Wahrscheinlichkeit von einem Versprechen unterscheiden und kurze Serien vorsichtig beurteilen."
+    },
+    "locations": [],
+    "related": [
+      "science-patterns",
+      "science-checksum"
+    ],
+    "sources": [
+      {
+        "label": "University of Cambridge, Plus · Wahrscheinlichkeit",
+        "url": "https://plus.maths.org/teacher-package-statistics-and-probability-theory"
+      },
+      {
+        "label": "Durham University · Unabhängigkeit von Ereignissen",
+        "url": "https://maths.dur.ac.uk/users/clare.wallace/Prob1/03-conditional.html"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Ein fairer Würfel zeigt dreimal eine Sechs. Welche Chance hat die nächste Sechs bei unabhängigem Wurf?",
+      "answers": [
+        "Weiterhin eins von sechs.",
+        "Jetzt garantiert null.",
+        "Jetzt garantiert hundert Prozent."
+      ],
+      "correct": 0,
+      "why": "Bei unabhängigen Würfen beeinflusst die bisherige Folge die nächste Einzelchance nicht. Ein erwarteter Anteil ist keine feste Reihenfolge."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13",
+    "investigation": "probability"
+  },
+  {
+    "id": "science-symmetry",
+    "category": "science",
+    "title": "Symmetrie: spiegeln, drehen, vergleichen",
+    "intro": "Eine Form kann nach einer Veränderung genauso aussehen wie vorher.",
+    "aliases": [
+      "symmetry",
+      "Symmetrie"
+    ],
+    "paragraphs": [
+      "Eine Figur ist spiegelsymmetrisch, wenn ihre Spiegelung an einer passenden Linie dieselbe Figur ergibt. Entsprechende Punkte liegen auf gegenüberliegenden Seiten gleich weit von dieser Linie entfernt.",
+      "Drehsymmetrie ist eine andere Möglichkeit. Ein Quadrat passt nach einer Vierteldrehung wieder auf sich. Ein gewöhnliches Rechteck braucht dafür eine halbe Drehung."
+    ],
+    "facts": [
+      {
+        "label": "Spiegeln",
+        "text": "Passende Teile wechseln die Seite an einer Achse."
+      },
+      {
+        "label": "Drehen",
+        "text": "Eine andere Bewegung, kein Synonym für Spiegeln."
+      }
+    ],
+    "more": [
+      "Symmetrie beschreibt die gesamte betrachtete Figur: Form, Muster und Farben können mitzählen. Eine gemalte Markierung kann die Symmetrie einer sonst passenden Form zerstören.",
+      "In der Natur sind Formen oft nur ungefähr symmetrisch. Eine kleine Abweichung ist eine Beobachtung und kein Fehler, den man für eine schöne Regel verschweigen muss."
+    ],
+    "surprise": "Eine symmetrische Form passt nach passendem Spiegeln oder Drehen wieder auf sich.",
+    "learning": {
+      "starter": "Eine symmetrische Form passt nach passendem Spiegeln oder Drehen wieder auf sich.",
+      "observe": "Falte ein Blatt und zeichne auf einer Seite einen Punkt. Übertrage seine Lage auf die andere Seite. Vergleiche beide Abstände zur Faltlinie.",
+      "benefit": "Du unterscheidest Spiegeln und Drehen und prüfst die ganze Figur statt nur ihren Umriss."
+    },
+    "locations": [],
+    "related": [
+      "science-angle",
+      "science-patterns",
+      "science-fractals"
+    ],
+    "sources": [
+      {
+        "label": "University of Cambridge, NRICH · Spiegelsymmetrie",
+        "url": "https://nrich.maths.org/problems/symmetry-challenge?tab=teacher"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Welche Aussage beschreibt eine Spiegelachse?",
+      "answers": [
+        "Die Spiegelung an ihr führt die Figur wieder auf sich.",
+        "Jede Linie durch eine Figur ist automatisch eine Spiegelachse.",
+        "Sie macht aus jeder Form einen Kreis."
+      ],
+      "correct": 0,
+      "why": "Eine Spiegelachse muss alle passenden Teile der Figur auf ihre Gegenstücke abbilden. Bloß durch die Mitte zu gehen reicht nicht."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "science-fractals",
+    "category": "science",
+    "title": "Fraktale: Muster in verschiedenen Größen",
+    "intro": "Eine einfache wiederholte Regel kann eine vielteilige Form erzeugen.",
+    "aliases": [
+      "fractals",
+      "Fraktale"
+    ],
+    "paragraphs": [
+      "Bei manchen Fraktalen sehen kleine Ausschnitte ähnlich aus wie die ganze Form. Ein Beispiel entsteht, wenn man aus einem Dreieck immer wieder mittlere Dreiecke entfernt.",
+      "Jede Wiederholung fügt kleinere Strukturen hinzu. Unsere Bildschirmfigur endet nach wenigen Schritten; ein ideales mathematisches Muster kann die Regel unbegrenzt fortsetzen."
+    ],
+    "facts": [
+      {
+        "label": "Regel im Modell",
+        "text": "Drei kleinere Teil-Dreiecke ersetzen ein größeres."
+      },
+      {
+        "label": "Begrenzte Darstellung",
+        "text": "Vier Schritte ergeben hier 81 gefüllte Teil-Dreiecke."
+      }
+    ],
+    "more": [
+      "Selbstähnlichkeit kann exakt oder nur ungefähr sein. Eine Baumkrone kann an verzweigte Muster erinnern, ist aber kein endloses, exakt wiederholtes mathematisches Bild.",
+      "Fraktale können eine gebrochene Dimension besitzen. Das ist ein anderes Maß als die übliche Länge oder Fläche einer einfachen Figur. Hier untersuchen wir zuerst die Wiederholungsregel, nicht eine Naturmessung."
+    ],
+    "surprise": "Eine wiederholte Regel kann ähnliche kleine und große Formen erzeugen.",
+    "learning": {
+      "starter": "Eine wiederholte Regel kann ähnliche kleine und große Formen erzeugen.",
+      "observe": "Vergleiche zwei aufeinanderfolgende Schritte im Modell. Beschreibe die Regel so, dass ein anderer Mensch den nächsten Schritt zeichnen könnte.",
+      "benefit": "Du kannst eine erzeugende Regel erkennen und ein endliches Bildschirmbild vom idealen Muster unterscheiden."
+    },
+    "locations": [],
+    "related": [
+      "science-symmetry",
+      "science-patterns"
+    ],
+    "sources": [
+      {
+        "label": "University of Cambridge, Plus · Fraktale",
+        "url": "https://plus.maths.org/how-compute-dimension-fractal"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Warum endet das Fraktalbild auf unserem Bildschirm?",
+      "answers": [
+        "Weil wir nur eine endliche Anzahl Schritte zeichnen.",
+        "Weil wiederholte Regeln grundsätzlich unmöglich sind.",
+        "Weil jeder Baum unendlich groß ist."
+      ],
+      "correct": 0,
+      "why": "Ein Computerbild hat begrenzte Schritte und Auflösung. Das ideale mathematische Muster und seine endliche Darstellung sind verschiedene Dinge."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13",
+    "investigation": "fractals"
+  },
+  {
+    "id": "science-angle",
+    "category": "science",
+    "title": "Winkel: drehen statt längere Arme malen",
+    "intro": "Eine größere Öffnung ist etwas anderes als längere Schenkel.",
+    "aliases": [
+      "angle",
+      "Winkel"
+    ],
+    "paragraphs": [
+      "Zwei Strahlen mit gemeinsamem Anfangspunkt bilden einen Winkel. Sein Maß beschreibt ihre Öffnung beziehungsweise die Drehung von einem zum anderen. Die Länge gezeichneter Schenkel bestimmt dieses Maß nicht.",
+      "Eine volle Drehung hat 360 Grad, eine halbe 180 und eine Vierteldrehung 90 Grad. Ein rechter Winkel entspricht einer Vierteldrehung."
+    ],
+    "facts": [
+      {
+        "label": "Vierteldrehung",
+        "text": "90°: ein rechter Winkel."
+      },
+      {
+        "label": "Volle Drehung",
+        "text": "360°: wieder dieselbe Richtung."
+      }
+    ],
+    "more": [
+      "Ein kleiner als 90 Grad großer Winkel heißt spitz. Ein Winkel zwischen 90 und 180 Grad heißt stumpf. Die Begriffe beschreiben Öffnungen, nicht besonders spitze oder stumpfe Materialien.",
+      "Beim Vergleichen muss klar sein, welchen der beiden möglichen Drehwege wir meinen. Unser Modell zeigt den kleineren Winkel zwischen null und 180 Grad; es deckt nicht jede Winkelart ab."
+    ],
+    "surprise": "Ein Winkel beschreibt eine Öffnung oder Drehung. Längere Linien machen ihn nicht automatisch größer.",
+    "learning": {
+      "starter": "Ein Winkel beschreibt eine Öffnung oder Drehung. Längere Linien machen ihn nicht automatisch größer.",
+      "observe": "Verändere den Modellwinkel. Vermute zuerst, ob die Öffnung kleiner, gleich oder größer als eine Vierteldrehung ist. Prüfe dann die Gradangabe.",
+      "benefit": "Du kannst eine Zeichnung richtig lesen und Länge von Drehung unterscheiden."
+    },
+    "locations": [],
+    "related": [
+      "science-shadows",
+      "science-symmetry"
+    ],
+    "sources": [
+      {
+        "label": "University of Cambridge, NRICH · Winkel und Drehungen",
+        "url": "https://nrich.maths.org/curriculum-maps/primary?tab=6"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Die Schenkel eines rechten Winkels werden länger gezeichnet. Wie groß bleibt der Winkel?",
+      "answers": [
+        "90 Grad bei unveränderter Richtung.",
+        "Immer doppelt so groß wie vorher.",
+        "So viele Grad wie die Linie Zentimeter hat."
+      ],
+      "correct": 0,
+      "why": "Die Richtungen bleiben unverändert. Die gezeichnete Länge ändert nicht die Öffnung zwischen den Schenkeln."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13",
+    "investigation": "angle"
+  },
+  {
+    "id": "science-encryption",
+    "category": "science",
+    "title": "Verschlüsselung: lesbar nur mit dem passenden Schlüssel",
+    "intro": "Eine Nachricht kann übertragen werden, ohne ihren Inhalt offen zu zeigen.",
+    "aliases": [
+      "encryption",
+      "Verschlüsselung"
+    ],
+    "paragraphs": [
+      "Verschlüsselung verwandelt lesbare Daten nach einer Regel und mithilfe eines Schlüssels in Geheimtext. Mit dem passenden Verfahren und Schlüssel kann daraus wieder Klartext werden.",
+      "Eine einfache Buchstabenverschiebung ist ein Lernbeispiel, keine sichere Verschlüsselung für echte Geheimnisse. Schon Ausprobieren weniger Verschiebungen kann sie verraten."
+    ],
+    "facts": [
+      {
+        "label": "Geheimhaltung",
+        "text": "Schützt die Lesbarkeit eines Inhalts."
+      },
+      {
+        "label": "Lernspiel",
+        "text": "Eine Buchstabenverschiebung ist keine sichere Alltagsverschlüsselung."
+      }
+    ],
+    "more": [
+      "Moderne Verfahren arbeiten mit viel größeren Schlüsselräumen und sorgfältig geprüften Regeln. Die Sicherheit hängt auch vom Umgang mit Schlüsseln und von der Umsetzung ab.",
+      "Verschlüsselung schützt die Lesbarkeit des Inhalts. Sie beweist für sich allein nicht, wer eine Nachricht abgeschickt hat. Für Herkunft und Veränderungen gibt es weitere Verfahren."
+    ],
+    "surprise": "Ein Schlüssel hilft, Geheimtext wieder lesbar zu machen. Unser Alphabetspiel ist nur zum Lernen.",
+    "learning": {
+      "starter": "Ein Schlüssel hilft, Geheimtext wieder lesbar zu machen. Unser Alphabetspiel ist nur zum Lernen.",
+      "observe": "Verschiebe im Modell die Buchstaben von WELT. Versuche anschließend einen anderen Schlüssel. Gib keine echten privaten Nachrichten ein.",
+      "benefit": "Du unterscheidest Geheimhaltung von Herkunftsprüfung und erkennst die Grenze eines Alphabetspiels."
+    },
+    "locations": [],
+    "related": [
+      "science-network",
+      "science-checksum"
+    ],
+    "sources": [
+      {
+        "label": "NIST · Klartext, Geheimtext und Schlüssel",
+        "url": "https://csrc.nist.gov/Projects/pec/fhe"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Wozu dient Verschlüsselung vor allem?",
+      "answers": [
+        "Inhalte für Unbefugte unlesbar zu machen.",
+        "Jede Nachricht automatisch wahr zu machen.",
+        "Den Absender ohne weitere Prüfung zu beweisen."
+      ],
+      "correct": 0,
+      "why": "Geheimhaltung schützt den Inhalt. Wahrheit und Herkunft erfordern andere Prüfungen; unser Alphabetspiel ist kein sicherer Alltagsdienst."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13",
+    "investigation": "encryption"
+  },
+  {
+    "id": "science-checksum",
+    "category": "science",
+    "title": "Prüfsummen: Veränderungen bemerken",
+    "intro": "Gleiche Prüfsumme heißt nicht automatisch gleicher oder wahrer Inhalt.",
+    "aliases": [
+      "checksum",
+      "Prüfsummen"
+    ],
+    "paragraphs": [
+      "Eine Prüfsumme wird nach einer festen Rechenregel aus Daten gebildet. Beim Empfangen kann man sie neu berechnen und vergleichen. Ein Unterschied zeigt, dass sich Daten oder Prüfsumme unterscheiden.",
+      "Eine sehr einfache Summe übersieht manche Änderungen: Die Zahlenfolgen 1, 2 und 2, 1 haben beide die Summe 3. Eine solche Übereinstimmung heißt Kollision."
+    ],
+    "facts": [
+      {
+        "label": "Kollision",
+        "text": "Unterschiedliche Daten haben denselben Prüfwert."
+      },
+      {
+        "label": "Einfache Summe",
+        "text": "1, 2 und 2, 1 ergeben beide 3."
+      }
+    ],
+    "more": [
+      "Kryptografische Hashverfahren sind viel anspruchsvoller. Sie sollen das absichtliche Finden passender Kollisionen erschweren. Eine einfache Modellsumme ist kein Ersatz für eine sichere digitale Signatur.",
+      "Auch ein korrekt geprüfter Hash beweist nicht, dass ein Nachrichtentext sachlich stimmt. Für einen vertrauenswürdigen Vergleich muss außerdem geklärt sein, woher der erwartete Wert kommt."
+    ],
+    "surprise": "Eine Rechenmarke kann Änderungen zeigen, aber nicht jeden Fehler oder die Wahrheit einer Aussage.",
+    "learning": {
+      "starter": "Eine Rechenmarke kann Änderungen zeigen, aber nicht jeden Fehler oder die Wahrheit einer Aussage.",
+      "observe": "Ändere die Zahlen im Modell und vergleiche die Summen. Suche zwei unterschiedliche Folgen mit gleichem Ergebnis, bevor du eine sichere Prüfung behauptest.",
+      "benefit": "Du verstehst, warum Datenprüfung, Herkunft und fachliche Wahrheit verschiedene Aufgaben bleiben."
+    },
+    "locations": [],
+    "related": [
+      "science-computer",
+      "science-encryption",
+      "science-probability"
+    ],
+    "sources": [
+      {
+        "label": "NIST · Prüfsummen",
+        "url": "https://csrc.nist.gov/glossary/term/checksum"
+      },
+      {
+        "label": "NIST · Secure Hash Standard",
+        "url": "https://www.nist.gov/publications/secure-hash-standard"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "1 + 2 und 2 + 1 ergeben dieselbe einfache Prüfsumme. Was zeigt das?",
+      "answers": [
+        "Verschiedene Daten können denselben Prüfwert haben.",
+        "Die Daten müssen deshalb genau gleich sein.",
+        "Beide Datenfolgen sind automatisch wahre Nachrichten."
+      ],
+      "correct": 0,
+      "why": "Die Reihenfolge ist verschieden, die Summe gleich. Das ist eine Kollision; eine einfache Summe erkennt diesen Unterschied nicht."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13",
+    "investigation": "checksum"
+  },
+  {
+    "id": "science-cell",
+    "category": "science",
+    "title": "Zellen: kleine lebende Einheiten",
+    "intro": "Pflanzen und Tiere bestehen aus vielen Zellen; manche Lebewesen aus einer einzigen.",
+    "aliases": [
+      "cell",
+      "Zellen"
+    ],
+    "paragraphs": [
+      "Eine Zelle ist eine grundlegende Einheit des Lebens. Ihre Membran trennt das Innere von der Umgebung und beteiligt sich am Stoffaustausch. Zellen sind keine winzigen starren Bauklötze.",
+      "Pflanzen und Tiere besitzen Zellen mit Zellkern. Bakterien haben keinen solchen von einer Membran umschlossenen Kern. Trotzdem sind sie lebende Zellen."
+    ],
+    "facts": [
+      {
+        "label": "Mit Zellkern",
+        "text": "Pflanzen und Tiere besitzen eukaryotische Zellen."
+      },
+      {
+        "label": "Ohne solchen Kern",
+        "text": "Bakterien sind trotzdem lebende Zellen."
+      }
+    ],
+    "more": [
+      "Zellmembran und Zellwand sind verschiedene Strukturen. Pflanzenzellen besitzen zusätzlich zur Membran eine Zellwand. Tierzellen haben keine entsprechende feste Zellwand.",
+      "Nicht jede Zelle hat dieselbe Form oder Aufgabe. Unser Schema zeigt ausgewählte Bauteile einer Pflanzenzelle, stark vergrößert und ohne echten Größenmaßstab."
+    ],
+    "surprise": "Zellen sind kleine lebende Einheiten. Eine Grenze trennt ihr Inneres von der Umgebung.",
+    "learning": {
+      "starter": "Zellen sind kleine lebende Einheiten. Eine Grenze trennt ihr Inneres von der Umgebung.",
+      "observe": "Vergleiche im Schema Membran, Wand und Kern. Vermute, welches Merkmal du bei einer Tierzelle oder einem Bakterium nicht einfach übernehmen darfst.",
+      "benefit": "Du unterscheidest Zelltypen und vermeidest die Vorstellung einer einzigen Bauform für alles Leben."
+    },
+    "locations": [],
+    "related": [
+      "science-diffusion",
+      "science-photosynthesis"
+    ],
+    "sources": [
+      {
+        "label": "NHGRI · Zellen und Zelltypen",
+        "url": "https://www.genome.gov/genetics-glossary/Cell"
+      },
+      {
+        "label": "NHGRI · Zellmembran",
+        "url": "https://www.genome.gov/genetics-glossary/Cell-Membrane-Plasma-Membrane"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Welche Aussage stimmt für Bakterien?",
+      "answers": [
+        "Sie sind Zellen ohne membranumhüllten Zellkern.",
+        "Sie sind grundsätzlich keine Lebewesen.",
+        "Sie besitzen immer dieselben Zellwände wie Tierzellen."
+      ],
+      "correct": 0,
+      "why": "Bakterien sind prokaryotische Zellen. Der fehlende membranumhüllte Kern bedeutet nicht, dass sie kein Leben oder keine Erbinformation besitzen."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "science-fusion",
+    "category": "science",
+    "title": "Kernfusion: Energie aus Sternen",
+    "intro": "Im Inneren der Sonne werden leichte Atomkerne zu schwereren verbunden.",
+    "aliases": [
+      "fusion",
+      "Kernfusion"
+    ],
+    "paragraphs": [
+      "Im heißen, dichten Sonneninneren können Wasserstoffkerne in mehreren Schritten zu Helium verbunden werden. Dabei wird Energie frei. Dieser Vorgang heißt Kernfusion.",
+      "Das ist keine gewöhnliche Verbrennung mit Sauerstoff. Sterne leuchten nicht, weil dort Holz oder Kohle wie in einem Lagerfeuer brennen."
+    ],
+    "facts": [
+      {
+        "label": "Sonneninneres",
+        "text": "Wasserstoffkerne werden in mehreren Schritten zu Helium verbunden."
+      },
+      {
+        "label": "Andere Vorgänge",
+        "text": "Chemische Verbrennung und Kernspaltung sind keine Kernfusion."
+      }
+    ],
+    "more": [
+      "Für diese Reaktionen braucht es besondere Bedingungen. Die elektrische Abstoßung positiv geladener Kerne erschwert ihre Annäherung; die einfache Darstellung ist keine Anleitung, Fusion selbst zu erzeugen.",
+      "Kernfusion und Kernspaltung sind verschiedene Vorgänge. Beim einen werden leichte Kerne verbunden, beim anderen wird ein schwerer Kern geteilt. Diese Karte betrachtet den Sternenprozess, keine Anlage auf der Erde."
+    ],
+    "surprise": "Im Inneren eines Sterns können leichte Kerne verbunden werden. Dabei wird Energie frei.",
+    "learning": {
+      "starter": "Im Inneren eines Sterns können leichte Kerne verbunden werden. Dabei wird Energie frei.",
+      "observe": "Ordne im Schema die Schritte „leichte Kerne“, „Verbindung“, „schwererer Kern und Energie“. Beschreibe, was gegenüber einem gewöhnlichen Feuer anders ist.",
+      "benefit": "Du erkennst den Ursprung der Sonnenenergie und verwechselst verschiedene Arten von Kernreaktionen nicht."
+    },
+    "locations": [],
+    "related": [
+      "science-energy",
+      "science-galaxy"
+    ],
+    "sources": [
+      {
+        "label": "NASA Science · Kernfusion in Sternen",
+        "url": "https://science.nasa.gov/universe/stars/"
+      },
+      {
+        "label": "U.S. Department of Energy · Fusion und Spaltung",
+        "url": "https://www.energy.gov/ne/articles/fission-and-fusion-what-difference"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Was beschreibt Kernfusion im Sonneninneren?",
+      "answers": [
+        "Leichte Atomkerne werden zu schwereren verbunden.",
+        "Holz verbrennt mit Sauerstoff.",
+        "Jeder Atomkern zerfällt ohne weitere Bedingungen."
+      ],
+      "correct": 0,
+      "why": "Fusion verbindet leichte Kerne unter besonderen Bedingungen. Sie unterscheidet sich sowohl vom chemischen Feuer als auch von Kernspaltung."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "science-galaxy",
+    "category": "science",
+    "title": "Galaxien: viel mehr als ein Sonnensystem",
+    "intro": "Unsere Sonne gehört zur Milchstraße, einer großen Sternenfamilie.",
+    "aliases": [
+      "galaxy",
+      "Galaxien"
+    ],
+    "paragraphs": [
+      "Eine Galaxie enthält Sterne, Gas, Staub und weitere Materie, die durch Schwerkraft zusammengehören. Ein Sonnensystem ist dagegen ein Stern mit seinen zugehörigen Begleitern.",
+      "Unsere Sonne liegt in der Milchstraße. Galaxien können unterschiedliche Formen besitzen: spiralförmig, elliptisch oder unregelmäßig. Ein einzelnes Bild zeigt nicht alle Einzelheiten ihrer räumlichen Struktur."
+    ],
+    "facts": [
+      {
+        "label": "Unsere Galaxie",
+        "text": "Die Milchstraße enthält unser Sonnensystem."
+      },
+      {
+        "label": "Größenordnung",
+        "text": "Ein Sonnensystem ist nicht eine ganze Galaxie."
+      }
+    ],
+    "more": [
+      "Licht braucht Zeit. Ein weit entferntes Galaxienbild zeigt deshalb Licht, das vor langer Zeit ausgesendet wurde. Ein Lichtjahr misst eine Entfernung, nicht das Alter einer Galaxie.",
+      "Unsere Skizze zeigt nur wenige stellvertretende Punkte und keine echte Sternenkarte. Größen und Abstände passen nicht auf einen gemeinsamen naturgetreuen Bildschirmmaßstab."
+    ],
+    "surprise": "Viele Sterne gehören zu einer Galaxie. Unser Sonnensystem ist ein kleiner Teil der Milchstraße.",
+    "learning": {
+      "starter": "Viele Sterne gehören zu einer Galaxie. Unser Sonnensystem ist ein kleiner Teil der Milchstraße.",
+      "observe": "Vergleiche im Schema Stern, Sonnensystem und Galaxie. Erkläre die verschachtelten Größen, ohne die Anzahl gezeichneter Punkte als echte Sternenzahl auszugeben.",
+      "benefit": "Du kannst verschiedene kosmische Größenordnungen trennen und eine Skizze vorsichtig lesen."
+    },
+    "locations": [],
+    "related": [
+      "science-solar-system",
+      "science-fusion",
+      "science-exoplanet"
+    ],
+    "sources": [
+      {
+        "label": "NASA Science · Galaxien",
+        "url": "https://science.nasa.gov/universe/galaxies/"
+      },
+      {
+        "label": "NASA · StarChild: Galaxies",
+        "url": "https://starchild.gsfc.nasa.gov/docs/StarChild/universe_level1/galaxies.html"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Welche Zuordnung passt?",
+      "answers": [
+        "Unser Sonnensystem ist ein Teil der Milchstraße.",
+        "Die Milchstraße ist ein einzelner Planet.",
+        "Jede Galaxie ist nur ein Mond der Erde."
+      ],
+      "correct": 0,
+      "why": "Die Milchstraße ist unsere Galaxie. Das Sonnensystem gehört zu ihr; es ist nicht die ganze Galaxie."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "science-comet",
+    "category": "science",
+    "title": "Kometen: Eis, Staub und Schweife",
+    "intro": "Ein Kometenschweif zeigt nicht einfach die Fahrtrichtung an.",
+    "aliases": [
+      "comet",
+      "Kometen"
+    ],
+    "paragraphs": [
+      "Ein Komet besitzt einen Kern aus Eis und weiteren Materialien, darunter Staub. Kommt er näher zur Sonne, können Gase und Staub eine Umgebung um den Kern bilden: die Koma.",
+      "Sonnenlicht und Sonnenwind beeinflussen das ausgeschleuderte Material. Ein Ionenschweif zeigt ungefähr von der Sonne weg. Der Staubschweif kann gekrümmt sein."
+    ],
+    "facts": [
+      {
+        "label": "Kometenkern",
+        "text": "Enthält Eis und weitere Materialien, darunter Staub."
+      },
+      {
+        "label": "Schweife",
+        "text": "Kein einfacher Pfeil für die Bewegungsrichtung."
+      }
+    ],
+    "more": [
+      "Der Schweif ist daher kein zuverlässiger Pfeil „hinter“ der Bewegungsrichtung. Beim Weg von der Sonne kann ein Schweif im Bild sogar vor dem Kometen liegen.",
+      "Eine Sternschnuppe ist etwas anderes: Sie bezeichnet eine Leuchterscheinung in einer Atmosphäre, wenn kleines Material hineintritt. Ein ferner Komet ist kein brennender Stern in unserer Luft."
+    ],
+    "surprise": "Ein Komet enthält Eis und Staub. Nahe der Sonne können Koma und Schweife entstehen.",
+    "learning": {
+      "starter": "Ein Komet enthält Eis und Staub. Nahe der Sonne können Koma und Schweife entstehen.",
+      "observe": "Drehe im Schema die gedachte Blickrichtung. Markiere zuerst die Sonne und dann die sonnenabgewandte Richtung. Trenne sie von einem gezeichneten Bewegungspfeil.",
+      "benefit": "Du vermeidest die Verwechslung von Komet, Sternschnuppe und einem Schweif als Fahrtrichtungsanzeiger."
+    },
+    "locations": [],
+    "related": [
+      "science-solar-system",
+      "science-magnetism"
+    ],
+    "sources": [
+      {
+        "label": "NASA Science · Kometen",
+        "url": "https://science.nasa.gov/solar-system/comets/facts/"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Was beeinflusst die Richtung eines Kometenschweifs besonders?",
+      "answers": [
+        "Sonnenlicht und Sonnenwind.",
+        "Nur die Lackfarbe des Kerns.",
+        "Immer allein die Bewegungsrichtung wie beim Fahrtwind."
+      ],
+      "correct": 0,
+      "why": "Schweifmaterial reagiert auf Sonnenlicht und Sonnenwind. Besonders der Ionenschweif ist ungefähr sonnenabgewandt, nicht einfach immer hinter der Bewegung."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "science-exoplanet",
+    "category": "science",
+    "title": "Exoplaneten: Planeten um andere Sterne",
+    "intro": "Ein kleiner Helligkeitseinbruch kann eine Forschungsfrage auslösen.",
+    "aliases": [
+      "exoplanet",
+      "Exoplaneten"
+    ],
+    "paragraphs": [
+      "Ein Exoplanet ist ein Planet außerhalb unseres Sonnensystems. Viele umkreisen andere Sterne. Sie sind oft schwer direkt zu sehen, weil ein Stern viel heller als ein Planet erscheint.",
+      "Zieht ein Planet aus unserer Blickrichtung vor seinem Stern vorbei, kann dessen gemessene Helligkeit kurz abnehmen. Wiederkehrende passende Einbrüche sind ein Hinweis auf einen möglichen Planeten."
+    ],
+    "facts": [
+      {
+        "label": "Außerhalb",
+        "text": "Ein Planet außerhalb unseres Sonnensystems."
+      },
+      {
+        "label": "Transit",
+        "text": "Vorbeiziehen vor dem Stern aus passender Blickrichtung."
+      }
+    ],
+    "more": [
+      "Nicht jede Bahn ist für uns passend ausgerichtet. Ein fehlender Transit beweist deshalb nicht, dass ein Stern keine Planeten hat. Außerdem können andere Vorgänge Helligkeiten verändern.",
+      "Ein Fundhinweis braucht weitere Prüfung. Ein Planet in einer passenden Temperaturzone beweist für sich keine bewohnbare Oberfläche und erst recht kein Leben."
+    ],
+    "surprise": "Manche Planeten gehören zu anderen Sternen. Ein Vorbeiziehen kann etwas Sternenlicht verdecken.",
+    "learning": {
+      "starter": "Manche Planeten gehören zu anderen Sternen. Ein Vorbeiziehen kann etwas Sternenlicht verdecken.",
+      "observe": "Vergleiche im Schema eine passende und eine seitlich vorbeiführende Bahn. Vermute vor dem Ablesen, ob wir bei beiden einen Helligkeitseinbruch sehen.",
+      "benefit": "Du unterscheidest einen Messhinweis von einem bestätigten Fund und von unbelegten Aussagen über Leben."
+    },
+    "locations": [],
+    "related": [
+      "science-galaxy",
+      "science-solar-system"
+    ],
+    "sources": [
+      {
+        "label": "NASA Science · Transitmessungen",
+        "url": "https://science.nasa.gov/exoplanets/whats-a-transit/"
+      },
+      {
+        "label": "NASA · Planeten durch Helligkeit messen",
+        "url": "https://spaceplace.nasa.gov/transits/en/"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "question": {
+      "prompt": "Was bedeutet ein fehlender Transit bei einem Stern?",
+      "answers": [
+        "Die Blickrichtung kann ungeeignet sein; Planeten sind damit nicht ausgeschlossen.",
+        "Dieser Stern kann garantiert keine Planeten haben.",
+        "Dort muss garantiert Leben existieren."
+      ],
+      "correct": 0,
+      "why": "Nur passend ausgerichtete Bahnen führen aus unserer Sicht zu einem Transit. Der fehlende Einbruch allein entscheidet daher nicht über vorhandene Planeten."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-13"
   }
 ]

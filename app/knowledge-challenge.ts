@@ -1,6 +1,5 @@
-import HINTS from './challenge-hints.json' with {type:'json'};
-import CATALOG from './world-catalog.json' with {type:'json'};
-import type {WorldTopic, WorldQuestion} from './world-types';
+import QUESTIONS from './world-question-index.json' with {type:'json'};
+import type {WorldQuestion} from './world-types';
 export type Difficulty='easy'|'medium'|'hard';
 export type ChallengeQuestion=WorldQuestion & {id:string;topic:string;topicTitle:string;difficulty:Difficulty;hints:readonly string[]};
 export const DIFFICULTIES: {id:Difficulty;label:string;description:string}[]=[
@@ -8,11 +7,7 @@ export const DIFFICULTIES: {id:Difficulty;label:string;description:string}[]=[
  {id:'medium',label:'Mittel',description:'Natur, Erde und Weltall: Beobachtungen erklären.'},
  {id:'hard',label:'Schwer',description:'Zusammenhänge übertragen und Behauptungen prüfen.'}
 ];
-const hintBank=HINTS as Record<string,{steps:string[]}>;
-export const CHALLENGE_BANK:ChallengeQuestion[]=(CATALOG as WorldTopic[]).filter(t=>!t.history?.sensitive).flatMap(t=>[
- {...t.question,id:t.id+':mini',topic:t.id,topicTitle:t.title,difficulty:'easy' as const},
- ...(t.challenges??[]).map(q=>({...q,topic:t.id,topicTitle:t.title}))
-]).map(q=>({...q,hints:hintBank[q.id]?.steps??[]}));
+export const CHALLENGE_BANK=QUESTIONS as ChallengeQuestion[];
 export type ChallengeSession={difficulty:Difficulty|null;ids:string[];orders:Record<string,string[]>;index:number;answer:string|null;done:boolean};
 export const emptyChallenge=():ChallengeSession=>({difficulty:null,ids:[],orders:{},index:0,answer:null,done:false});
 function shuffle<T>(items:T[],random:()=>number){const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}

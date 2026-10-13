@@ -128,6 +128,166 @@
       "kind": "transport",
       "why": "Wasser wechselt zwischen Erdoberfläche und Atmosphäre; dort entstehen Wolken und Niederschlag.",
       "checkedAt": "2026-10-09"
+    },
+    {
+      "id": "science-pressure--science-atmosphere",
+      "fromId": "science-pressure",
+      "toId": "science-atmosphere",
+      "kind": "context",
+      "why": "Druck ist Kraft pro Fläche. Der Vergleich erklärt, weshalb eine Lufthülle Druck ausüben kann, ohne eine feste Decke zu bilden.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-friction--science-energy",
+      "fromId": "science-friction",
+      "toId": "science-energy",
+      "kind": "context",
+      "why": "Reibung kann Bewegungsenergie in innere Energie überführen. Das verbindet den Kraftvergleich mit dem Erhalten und Umwandeln von Energie.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-buoyancy--science-pressure",
+      "fromId": "science-buoyancy",
+      "toId": "science-pressure",
+      "kind": "context",
+      "why": "Wasserdruck ist weiter unten größer. Diese Druckverteilung verbindet die Kraft-pro-Fläche-Idee mit der resultierenden Auftriebskraft.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-surface-tension--science-capillarity",
+      "fromId": "science-surface-tension",
+      "toId": "science-capillarity",
+      "kind": "context",
+      "why": "Die Wechselwirkung von Wasserteilchen prägt eine Grenzfläche und spielt beim Wandern in schmalen Zwischenräumen mit.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-diffusion--science-cell",
+      "fromId": "science-diffusion",
+      "toId": "science-cell",
+      "kind": "context",
+      "why": "Zellen tauschen Stoffe durch ihre Membran aus. Zufällige Teilchenbewegung ist ein möglicher Transportweg, aber nicht der einzige.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-chromatography--science-capillarity",
+      "fromId": "science-chromatography",
+      "toId": "science-capillarity",
+      "kind": "context",
+      "why": "Das Wasser kann durch enge Papierzwischenräume wandern. Farbstoffe werden dabei unterschiedlich mitgenommen und festgehalten.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-heat-transfer--science-energy",
+      "fromId": "science-heat-transfer",
+      "toId": "science-energy",
+      "kind": "context",
+      "why": "Wärmeübertragung verändert, wo Energie verfügbar ist. Eine Dämmung verlangsamt Übertragung und ist selbst keine Energiequelle.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-lever--science-pressure",
+      "fromId": "science-lever",
+      "toId": "science-pressure",
+      "kind": "context",
+      "why": "Beim Hebel zählt Kraft mal Abstand, beim Druck Kraft pro Fläche. Dieselbe Kraft kann deshalb in zwei verschiedenen Vergleichen unterschiedlich wirken.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-elasticity--science-friction",
+      "fromId": "science-elasticity",
+      "toId": "science-friction",
+      "kind": "context",
+      "why": "Ein Material kann sich verformen und Energie abgeben. Bei Bewegung kann Reibung einen Teil in innere Energie überführen.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-pendulum--science-resonance",
+      "fromId": "science-pendulum",
+      "toId": "science-resonance",
+      "kind": "context",
+      "why": "Die Pendellänge beeinflusst die Eigenfrequenz. Ein äußerer Antrieb kann bei passendem Takt besonders stark auf eine solche Schwingung wirken.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-probability--science-patterns",
+      "fromId": "science-probability",
+      "toId": "science-patterns",
+      "kind": "context",
+      "why": "Ein Computer kann in Beispielen Muster finden. Bei zufälligen Serien beweist ein auffälliges Muster allein aber noch keine feste Ursache.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-symmetry--science-angle",
+      "fromId": "science-symmetry",
+      "toId": "science-angle",
+      "kind": "context",
+      "why": "Eine Drehung wird mit einem Winkel beschrieben. Spiegeln und Drehen sind verschiedene Möglichkeiten, eine Figur auf sich abzubilden.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-fractals--science-symmetry",
+      "fromId": "science-fractals",
+      "toId": "science-symmetry",
+      "kind": "context",
+      "why": "Wiederholte geometrische Regeln können ähnliche Teilformen erzeugen. Das ist etwas anderes als eine Sortierung nach Farbe oder Form.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-angle--science-shadows",
+      "fromId": "science-angle",
+      "toId": "science-shadows",
+      "kind": "context",
+      "why": "Bei Schattenmessungen zählen Winkel zur Oberfläche und zur Sonnenrichtung. Längere gezeichnete Linien verändern nicht automatisch diesen Winkel.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-encryption--science-network",
+      "fromId": "science-encryption",
+      "toId": "science-network",
+      "kind": "context",
+      "why": "Netzwerke übertragen Daten. Verschlüsselung kann den Inhalt vor Mitlesen schützen, ohne den Übertragungsweg oder die Wahrheit zu garantieren.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-checksum--science-computer",
+      "fromId": "science-checksum",
+      "toId": "science-computer",
+      "kind": "context",
+      "why": "Ein Computer stellt Daten als Folgen dar. Ein zusammengefasster Prüfwert verliert Informationen und kann deshalb Kollisionen besitzen.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-fusion--science-energy",
+      "fromId": "science-fusion",
+      "toId": "science-energy",
+      "kind": "context",
+      "why": "Die Sonne liefert Energie; in ihrem Inneren wird diese durch Kernreaktionen freigesetzt. Das ist ein anderer Vorgang als Solarstrom in einer Zelle.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-galaxy--science-solar-system",
+      "fromId": "science-galaxy",
+      "toId": "science-solar-system",
+      "kind": "context",
+      "why": "Das Sonnensystem ist eine räumliche Gruppe um einen Stern. Eine Galaxie umfasst sehr viel mehr Sterne und weitere Materie.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-comet--science-solar-system",
+      "fromId": "science-comet",
+      "toId": "science-solar-system",
+      "kind": "context",
+      "why": "Kometen gehören zum Sonnensystem, sind aber keine der acht großen Planeten. Sonnenlicht und Sonnenwind beeinflussen ihre Schweife.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-exoplanet--science-galaxy",
+      "fromId": "science-exoplanet",
+      "toId": "science-galaxy",
+      "kind": "context",
+      "why": "Die Milchstraße enthält viele Sterne. Planeten um andere Sterne erweitern die Frage über unser eigenes Sonnensystem hinaus.",
+      "checkedAt": "2026-10-13"
     }
   ]
 }

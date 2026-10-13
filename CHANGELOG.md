@@ -1,5 +1,22 @@
 # Änderungsverlauf
 
+## Paket 3.5 – vernetzte Wissenschaftswelle (noch unveröffentlicht)
+
+- 23 eigene Wissenschaftskarten ergänzt, von Druck und Diffusion bis zu Prüfsummen und Exoplaneten. Bestehende 23 Karten mit individuell verfassten einfachen Erklärungen, Beobachtungsaufträgen und Lernnutzen erweitert. Freiwillige Vertiefungen, tatsächliche Quellen und Modellgrenzen bleiben sichtbar.
+- Zehn Bildschirmversuche und 13 eigene erklärende Schemata ergänzt. Hinweise und Mini-Fragen geben bei falschen Antworten keine fertige Lösung frei. Alle 142 bisherigen Challenge-Fragen bleiben unverändert; 23 neue kommen hinzu.
+- Jede neue Karte mit bestehenden Begriffen beidseitig verknüpft; tatsächliche Such-, Direkt-, Reload- und Zurückwege an allen neuen Karten geprüft.
+- Nach eigener Bildsichtung einen abgeschnittenen langen Titel bei 320 px korrigiert; neue Prüfung erkennt auch innerhalb einer Karte verdeckten Text. Doppelte Beobachtungs-/Nutzentexte durch kurze spezifische Fakten ersetzt. Prüfstand und KI-Unterstützung transparent; unabhängige Fachabnahme weiterhin offen.
+- Kompakte Grafikvorschauen halten den Katalog ruhig; vollständige Erklärungen stehen in der geöffneten Karte. Pagination wird mit allen tatsächlichen Katalog-IDs auf allen vier Seiten abgeglichen.
+- Neue Browserregression öffnet alle 46 Karten an sieben Breiten und mit großer Appschrift; alle 23 neuen Karten zusätzlich bei echtem nativen 200-%-Zoom, steuert Modelle, prüft freiwillige Ebenen/Antworten/axe und sämtliche neuen Suchwege. Kalte Offline-Abnahme aller neuen Karten ist Bestandteil der vollständigen Schlussprüfung.
+
+## Paket 3.5 – Wissensdaten nach Bedarf (noch unveröffentlicht)
+
+- Wissenskarten in sechs aus der unveränderten Hauptquelle erzeugte Themenpakete aufgeteilt; Routen laden ihre benötigten Bereiche. Fehlerhafte oder unvollständige Daten werden vor der Anzeige gesperrt und können ausdrücklich erneut geladen werden.
+- Alle 142 Challenge-Fragen samt individuellen Hinweisen in einen geprüften, kompakten Index übernommen. Keine Änderung an IDs, Passschema oder vorhandenen Spielständen.
+- Eigene Größenbudgets für ausgelagerte Kartentexte ergänzt; vorhandene JavaScript-/CSS-Budgets beibehalten. Tatsächlich gemessen: gesamtes JavaScript gzip um 39.141 Byte gegenüber dem Kapitelcheckpoint gesenkt; neue Textdateien separat ausgewiesen.
+- Browsernachweise für Kategoriebedarf, Datenfehler, Wiederholen, Wiederverwendung und Back ergänzt; Detailtest in Firefox/WebKit auf vollständige Öffnen-/Schließen-Folge korrigiert. Vollständige lokale Pflichtabnahme mit 119 Unitfällen, 27 Releasefällen und zehn Chromium-Gruppen (846,62 s / 126 Prüfbezeichnungen) bestanden; exakter neuer GitHub-Quality-Lauf bleibt erforderlich. Nach tatsächlicher Reload-Regression erfolgt die Wiederherstellung offener Kapitelverzeichnisse erst am fertig geladenen Artikel.
+
+
 ## 13. Oktober 2026 · Paket3.5, vernetzte Kapitel-Inhaltswelle (noch nicht bereitgestellt)
 
 - Alle80 bestehenden Kapitel erhalten individuell verfasste zusätzliche Erklärungen, einfache Einstiege, freiwillige Vertiefungen, konkreteNutzen- undBeobachtungstexte. Keine neuenKapitelidentitäten oder pauschaleFach-/Kinderabnahme.

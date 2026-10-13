@@ -1,0 +1,566 @@
+[
+  {
+    "id": "building-giza-pyramids",
+    "category": "buildings",
+    "title": "Pyramiden von Gizeh",
+    "intro": "Grabstätten für Könige und Teil großer religiöser Anlagen.",
+    "paragraphs": [
+      "Viele Arbeitsgruppen bearbeiteten und transportierten Steinblöcke. Wie alle Einzelheiten beim Bau abliefen, wird weiter erforscht."
+    ],
+    "facts": [
+      {
+        "label": "Wo?",
+        "text": "Gizeh, Ägypten"
+      },
+      {
+        "label": "Wann?",
+        "text": "um 2550 v. Chr."
+      },
+      {
+        "label": "Wie groß?",
+        "text": "Ursprüngliche Höhe der Cheops-Pyramide: etwa 146,5 Meter. Ihre heutige Höhe ist geringer."
+      },
+      {
+        "label": "Material & Konstruktion",
+        "text": "Kalkstein; in Teilen auch andere Gesteine."
+      }
+    ],
+    "more": [
+      "Bauwerke gehören auch zu den Menschen, die sie planten, bauten und pflegen. Ihre Geschichte kann schöne und schwierige Seiten haben.",
+      "Die Pyramiden waren königliche Grabanlagen. Die Cheops-Pyramide bestand überwiegend aus örtlichem Kalkstein und hatte einst eine helle Kalksteinverkleidung."
+    ],
+    "surprise": "Nicht ein einzelner Mensch baute eine Pyramide: Planung und Arbeit vieler Menschen waren nötig.",
+    "locations": [
+      {
+        "label": "Gizeh, Ägypten",
+        "lat": 29.979,
+        "lon": 31.134,
+        "iso": "EG"
+      }
+    ],
+    "related": [
+      "history-pyramids",
+      "history-writing"
+    ],
+    "sources": [
+      {
+        "label": "Offizielle Bauwerksquelle / UNESCO",
+        "url": "https://whc.unesco.org/en/list/86/"
+      },
+      {
+        "label": "Bauwerksbetreiber / Fachquelle zur Konstruktion",
+        "url": "https://egymonuments.gov.eg/en/monuments/the-great-pyramid"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "image": "giza-pyramids",
+    "building": {
+      "date": "um 2550 v. Chr.",
+      "size": "Ursprüngliche Höhe der Cheops-Pyramide: etwa 146,5 Meter. Ihre heutige Höhe ist geringer."
+    },
+    "model": "heights",
+    "question": {
+      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "answers": [
+        "Nicht ein einzelner Mensch baute eine Pyramide: Planung und Arbeit vieler Menschen waren nötig.",
+        "Bögen können Lasten seitlich zu ihren Stützen leiten.",
+        "Ein offenes Gitter kann eine große Konstruktion tragen und lässt den Wind hindurch."
+      ],
+      "correct": 0,
+      "why": "Viele Arbeitsgruppen bearbeiteten und transportierten Steinblöcke. Wie alle Einzelheiten beim Bau abliefen, wird weiter erforscht."
+    }
+  },
+  {
+    "id": "building-great-wall",
+    "category": "buildings",
+    "title": "Die Chinesische Mauer",
+    "intro": "Grenzen überwachen, verteidigen und Wege kontrollieren.",
+    "paragraphs": [
+      "Verschiedene Herrscher und Arbeitsgruppen bauten unterschiedliche Abschnitte. Schon ältere Anlagen wurden verbunden; viele bekannte Teile stammen aus der Ming-Zeit."
+    ],
+    "facts": [
+      {
+        "label": "Wo?",
+        "text": "Mauerregion nördlich von Peking"
+      },
+      {
+        "label": "Wann?",
+        "text": "Verschiedene Abschnitte über viele Jahrhunderte"
+      },
+      {
+        "label": "Wie groß?",
+        "text": "Das gesamte Netz aus Mauern und weiteren Anlagen umfasst mehr als 20.000 Kilometer. Kein einzelner gerader Mauerabschnitt ist so lang."
+      },
+      {
+        "label": "Material & Konstruktion",
+        "text": "Je nach Abschnitt gestampfte Erde, Ziegel und Stein."
+      }
+    ],
+    "more": [
+      "Bauwerke gehören auch zu den Menschen, die sie planten, bauten und pflegen. Ihre Geschichte kann schöne und schwierige Seiten haben.",
+      "Wälle, Mauern und Türme sollten Grenzen sichern. Unterschiedliche Bauzeiten und Landschaften erklären die verschiedenen Materialien und Formen."
+    ],
+    "surprise": "Es ist keine einzelne Mauer, die in einem Jahr fertig wurde.",
+    "locations": [
+      {
+        "label": "Mauerregion nördlich von Peking",
+        "lat": 40.43,
+        "lon": 116.57,
+        "iso": "CN"
+      }
+    ],
+    "related": [
+      "history-paper",
+      "person-cai_lun"
+    ],
+    "sources": [
+      {
+        "label": "Offizielle Bauwerksquelle / UNESCO",
+        "url": "https://whc.unesco.org/en/list/438/"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "image": "great-wall",
+    "building": {
+      "date": "Verschiedene Abschnitte über viele Jahrhunderte",
+      "size": "Das gesamte Netz aus Mauern und weiteren Anlagen umfasst mehr als 20.000 Kilometer. Kein einzelner gerader Mauerabschnitt ist so lang."
+    },
+    "model": null,
+    "question": {
+      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "answers": [
+        "Es ist keine einzelne Mauer, die in einem Jahr fertig wurde.",
+        "Ein Mausoleum ist ein Gebäude mit einer Grabstätte.",
+        "Eine Brücke muss ihr eigenes Gewicht, Fahrzeuge und Wind aushalten."
+      ],
+      "correct": 0,
+      "why": "Verschiedene Herrscher und Arbeitsgruppen bauten unterschiedliche Abschnitte. Schon ältere Anlagen wurden verbunden; viele bekannte Teile stammen aus der Ming-Zeit."
+    }
+  },
+  {
+    "id": "building-colosseum",
+    "category": "buildings",
+    "title": "Das Kolosseum",
+    "intro": "Öffentliche Veranstaltungen im Römischen Reich. Einige waren gewalttätig und wären heute nicht akzeptabel.",
+    "paragraphs": [
+      "Stein, Ziegel und römischer Beton bildeten viele Bögen und gewölbte Räume. Wege und Treppen verteilten die Besucher."
+    ],
+    "facts": [
+      {
+        "label": "Wo?",
+        "text": "Rom, Italien"
+      },
+      {
+        "label": "Wann?",
+        "text": "Eröffnet 80 n. Chr."
+      },
+      {
+        "label": "Wie groß?",
+        "text": "Etwa 189 Meter lang, 156 Meter breit und 48 Meter hoch. Länge, Breite und Höhe sind verschiedene Messrichtungen."
+      },
+      {
+        "label": "Material & Konstruktion",
+        "text": "Stein, Ziegel und römischer Beton."
+      }
+    ],
+    "more": [
+      "Bauwerke gehören auch zu den Menschen, die sie planten, bauten und pflegen. Ihre Geschichte kann schöne und schwierige Seiten haben.",
+      "Bögen können große Öffnungen überspannen, während Pfeiler Lasten nach unten weiterleiten. Viele Zugänge verteilten die Zuschauer auf die Sitzbereiche."
+    ],
+    "surprise": "Bögen können Lasten seitlich zu ihren Stützen leiten.",
+    "locations": [
+      {
+        "label": "Rom, Italien",
+        "lat": 41.89,
+        "lon": 12.492,
+        "iso": "IT"
+      }
+    ],
+    "related": [
+      "building-golden-gate-bridge",
+      "history-medieval_cities"
+    ],
+    "sources": [
+      {
+        "label": "Offizielle Bauwerksquelle / UNESCO",
+        "url": "https://colosseo.it/en/area/the-colosseum/"
+      },
+      {
+        "label": "Bauwerksbetreiber / Fachquelle zur Konstruktion",
+        "url": "https://www.turismoroma.it/en/node/1155"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "image": "colosseum",
+    "building": {
+      "date": "Eröffnet 80 n. Chr.",
+      "size": "Etwa 189 Meter lang, 156 Meter breit und 48 Meter hoch. Länge, Breite und Höhe sind verschiedene Messrichtungen."
+    },
+    "question": {
+      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "answers": [
+        "Bögen können Lasten seitlich zu ihren Stützen leiten.",
+        "Ein offenes Gitter kann eine große Konstruktion tragen und lässt den Wind hindurch.",
+        "Ein Schiff steigt mit dem Wasserspiegel. Es wird nicht von einem Kran hochgehoben."
+      ],
+      "correct": 0,
+      "why": "Stein, Ziegel und römischer Beton bildeten viele Bögen und gewölbte Räume. Wege und Treppen verteilten die Besucher."
+    }
+  },
+  {
+    "id": "building-taj-mahal",
+    "category": "buildings",
+    "title": "Das Taj Mahal",
+    "intro": "Erinnerung an Mumtaz Mahal; in Auftrag gegeben von ihrem Ehemann, dem Mogulherrscher Shah Jahan.",
+    "paragraphs": [
+      "Viele Handwerker gestalteten Marmor, Steineinlagen, Kuppel und Garten. Architektur, Kunst und Arbeit vieler Menschen kommen zusammen."
+    ],
+    "facts": [
+      {
+        "label": "Wo?",
+        "text": "Agra, Indien"
+      },
+      {
+        "label": "Wann?",
+        "text": "Hauptmausoleum 1632–1648; weitere Anlagen bis 1653"
+      },
+      {
+        "label": "Wie groß?",
+        "text": "Die äußere Kuppel ist etwa 44,4 Meter hoch. Das ist eine Kuppelhöhe, nicht die Gesamthöhe der Anlage."
+      },
+      {
+        "label": "Material & Konstruktion",
+        "text": "Ziegelmauerwerk im Kern; außen unter anderem Marmor."
+      }
+    ],
+    "more": [
+      "Bauwerke gehören auch zu den Menschen, die sie planten, bauten und pflegen. Ihre Geschichte kann schöne und schwierige Seiten haben.",
+      "Eine innere und eine äußere Kuppel bilden unterschiedliche Formen. Marmorverkleidung und eingelegte Steine schmücken ein tragendes Bauwerk."
+    ],
+    "surprise": "Ein Mausoleum ist ein Gebäude mit einer Grabstätte.",
+    "locations": [
+      {
+        "label": "Agra, Indien",
+        "lat": 27.175,
+        "lon": 78.042,
+        "iso": "IN"
+      }
+    ],
+    "related": [
+      "history-zero",
+      "building-giza-pyramids"
+    ],
+    "sources": [
+      {
+        "label": "Offizielle Bauwerksquelle / UNESCO",
+        "url": "https://whc.unesco.org/en/list/252/"
+      },
+      {
+        "label": "Bauwerksbetreiber / Fachquelle zur Konstruktion",
+        "url": "https://www.tajmahal.gov.in/overview.aspx"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "image": "taj-mahal",
+    "building": {
+      "date": "Hauptmausoleum 1632–1648; weitere Anlagen bis 1653",
+      "size": "Die äußere Kuppel ist etwa 44,4 Meter hoch. Das ist eine Kuppelhöhe, nicht die Gesamthöhe der Anlage."
+    },
+    "model": null,
+    "question": {
+      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "answers": [
+        "Ein Mausoleum ist ein Gebäude mit einer Grabstätte.",
+        "Eine Brücke muss ihr eigenes Gewicht, Fahrzeuge und Wind aushalten.",
+        "Bei hohen Gebäuden müssen Ingenieurinnen und Ingenieure besonders auf Wind und stabile Fundamente achten."
+      ],
+      "correct": 0,
+      "why": "Viele Handwerker gestalteten Marmor, Steineinlagen, Kuppel und Garten. Architektur, Kunst und Arbeit vieler Menschen kommen zusammen."
+    }
+  },
+  {
+    "id": "building-eiffel-tower",
+    "category": "buildings",
+    "title": "Der Eiffelturm",
+    "intro": "Ein besonderes Bauwerk für die Weltausstellung 1889.",
+    "paragraphs": [
+      "Ein Team entwarf die Konstruktion aus Eisenteilen. Dazu gehörten Maurice Koechlin, Émile Nouguier, Stephen Sauvestre und Gustave Eiffels Firma."
+    ],
+    "facts": [
+      {
+        "label": "Wo?",
+        "text": "Paris, Frankreich"
+      },
+      {
+        "label": "Wann?",
+        "text": "Fertiggestellt 1889"
+      },
+      {
+        "label": "Wie groß?",
+        "text": "Heute 330 Meter hoch, einschließlich Antennen."
+      },
+      {
+        "label": "Material & Konstruktion",
+        "text": "Eisen, zu einem Gitter verbunden."
+      }
+    ],
+    "more": [
+      "Bauwerke gehören auch zu den Menschen, die sie planten, bauten und pflegen. Ihre Geschichte kann schöne und schwierige Seiten haben.",
+      "Ein offenes Gitter braucht weniger Material als ein gleich großer massiver Block. Viele Dreiecke stabilisieren die Konstruktion; Wind und Gewicht müssen trotzdem genau berechnet werden."
+    ],
+    "surprise": "Ein offenes Gitter kann eine große Konstruktion tragen und lässt den Wind hindurch.",
+    "locations": [
+      {
+        "label": "Paris, Frankreich",
+        "lat": 48.858,
+        "lon": 2.294,
+        "iso": "FR"
+      }
+    ],
+    "related": [
+      "building-burj-khalifa",
+      "building-golden-gate-bridge"
+    ],
+    "sources": [
+      {
+        "label": "Offizielle Bauwerksquelle / UNESCO",
+        "url": "https://www.toureiffel.paris/en/the-monument/history"
+      },
+      {
+        "label": "Eiffelturm – aktuelle Maße",
+        "url": "https://www.toureiffel.paris/de/monument/zahlen"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "image": "eiffel-tower",
+    "building": {
+      "date": "Fertiggestellt 1889",
+      "size": "Heute 330 Meter hoch, einschließlich Antennen.",
+      "height": 330
+    },
+    "model": "heights",
+    "question": {
+      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "answers": [
+        "Ein offenes Gitter kann eine große Konstruktion tragen und lässt den Wind hindurch.",
+        "Ein Schiff steigt mit dem Wasserspiegel. Es wird nicht von einem Kran hochgehoben.",
+        "Nicht ein einzelner Mensch baute eine Pyramide: Planung und Arbeit vieler Menschen waren nötig."
+      ],
+      "correct": 0,
+      "why": "Ein Team entwarf die Konstruktion aus Eisenteilen. Dazu gehörten Maurice Koechlin, Émile Nouguier, Stephen Sauvestre und Gustave Eiffels Firma."
+    }
+  },
+  {
+    "id": "building-golden-gate-bridge",
+    "category": "buildings",
+    "title": "Golden Gate Bridge",
+    "intro": "Eine Straßenverbindung über die Meerenge Golden Gate.",
+    "paragraphs": [
+      "Bei der Hängebrücke tragen große Hauptkabel die Fahrbahn über kleinere Hängeseile. Türme und feste Anker halten das System."
+    ],
+    "facts": [
+      {
+        "label": "Wo?",
+        "text": "San Francisco, USA"
+      },
+      {
+        "label": "Wann?",
+        "text": "Eröffnet 1937"
+      },
+      {
+        "label": "Wie groß?",
+        "text": "Insgesamt 2.737 Meter lang. Die Hauptöffnung zwischen den Türmen misst 1.280 Meter."
+      },
+      {
+        "label": "Material & Konstruktion",
+        "text": "Stahlkabel und Stahltragwerk."
+      }
+    ],
+    "more": [
+      "Bauwerke gehören auch zu den Menschen, die sie planten, bauten und pflegen. Ihre Geschichte kann schöne und schwierige Seiten haben.",
+      "Die Fahrbahn hängt an Seilen. Diese übertragen Lasten auf die Hauptkabel; Türme und feste Verankerungen tragen das System gemeinsam."
+    ],
+    "surprise": "Eine Brücke muss ihr eigenes Gewicht, Fahrzeuge und Wind aushalten.",
+    "locations": [
+      {
+        "label": "San Francisco, USA",
+        "lat": 37.82,
+        "lon": -122.478,
+        "iso": "US"
+      }
+    ],
+    "related": [
+      "building-eiffel-tower",
+      "science-flight"
+    ],
+    "sources": [
+      {
+        "label": "Offizielle Bauwerksquelle / UNESCO",
+        "url": "https://www.goldengate.org/bridge/history-research/statistics-data/"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "image": "golden-gate-bridge",
+    "building": {
+      "date": "Eröffnet 1937",
+      "size": "Insgesamt 2.737 Meter lang. Die Hauptöffnung zwischen den Türmen misst 1.280 Meter."
+    },
+    "model": "bridge",
+    "question": {
+      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "answers": [
+        "Eine Brücke muss ihr eigenes Gewicht, Fahrzeuge und Wind aushalten.",
+        "Bei hohen Gebäuden müssen Ingenieurinnen und Ingenieure besonders auf Wind und stabile Fundamente achten.",
+        "Es ist keine einzelne Mauer, die in einem Jahr fertig wurde."
+      ],
+      "correct": 0,
+      "why": "Bei der Hängebrücke tragen große Hauptkabel die Fahrbahn über kleinere Hängeseile. Türme und feste Anker halten das System."
+    }
+  },
+  {
+    "id": "building-panama-canal",
+    "category": "buildings",
+    "title": "Der Panamakanal",
+    "intro": "Schiffe müssen für viele Reisen nicht mehr ganz um Südamerika fahren.",
+    "paragraphs": [
+      "Schleusen heben Schiffe auf die Höhe der Seen und senken sie wieder ab. Wasser fließt durch die Schwerkraft in die Kammern oder hinaus."
+    ],
+    "facts": [
+      {
+        "label": "Wo?",
+        "text": "Panama – Beispielregion der Schleusen"
+      },
+      {
+        "label": "Wann?",
+        "text": "Eröffnet 1914"
+      },
+      {
+        "label": "Wie groß?",
+        "text": "Der Kanal ist ungefähr 80 Kilometer lang. Schleusen heben Schiffe auf etwa 26 Meter über dem Meeresspiegel."
+      },
+      {
+        "label": "Material & Konstruktion",
+        "text": "Schleusenkammern aus großen Bauwerken, Wasserwege und Seen."
+      }
+    ],
+    "more": [
+      "Bauwerke gehören auch zu den Menschen, die sie planten, bauten und pflegen. Ihre Geschichte kann schöne und schwierige Seiten haben.",
+      "Der Kanal ist nicht einfach ein ebener Graben zwischen zwei Meeren. Schleusen heben und senken Schiffe. Wasser wird durch Höhenunterschiede bewegt."
+    ],
+    "surprise": "Ein Schiff steigt mit dem Wasserspiegel. Es wird nicht von einem Kran hochgehoben.",
+    "locations": [
+      {
+        "label": "Panama – Beispielregion der Schleusen",
+        "lat": 9.27,
+        "lon": -79.92,
+        "iso": "PA"
+      }
+    ],
+    "related": [
+      "invention-railway",
+      "building-golden-gate-bridge"
+    ],
+    "sources": [
+      {
+        "label": "Offizielle Bauwerksquelle / UNESCO",
+        "url": "https://pancanal.com/en/history-of-the-panama-canal/"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "image": "panama-canal",
+    "building": {
+      "date": "Eröffnet 1914",
+      "size": "Der Kanal ist ungefähr 80 Kilometer lang. Schleusen heben Schiffe auf etwa 26 Meter über dem Meeresspiegel."
+    },
+    "model": "lock",
+    "question": {
+      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "answers": [
+        "Ein Schiff steigt mit dem Wasserspiegel. Es wird nicht von einem Kran hochgehoben.",
+        "Nicht ein einzelner Mensch baute eine Pyramide: Planung und Arbeit vieler Menschen waren nötig.",
+        "Bögen können Lasten seitlich zu ihren Stützen leiten."
+      ],
+      "correct": 0,
+      "why": "Schleusen heben Schiffe auf die Höhe der Seen und senken sie wieder ab. Wasser fließt durch die Schwerkraft in die Kammern oder hinaus."
+    }
+  },
+  {
+    "id": "building-burj-khalifa",
+    "category": "buildings",
+    "title": "Burj Khalifa",
+    "intro": "Ein Hochhaus mit mehreren Nutzungen, zum Beispiel Wohnungen, Büros und Aussichtsbereichen.",
+    "paragraphs": [
+      "Ein kräftiger Kern und stützende Gebäudeteile tragen die Konstruktion. Beton, Stahl, Aufzüge und viele Fachleute mussten zusammenarbeiten."
+    ],
+    "facts": [
+      {
+        "label": "Wo?",
+        "text": "Dubai, Vereinigte Arabische Emirate"
+      },
+      {
+        "label": "Wann?",
+        "text": "Eröffnet 2010"
+      },
+      {
+        "label": "Wie groß?",
+        "text": "828 Meter hoch, einschließlich der Spitze."
+      },
+      {
+        "label": "Material & Konstruktion",
+        "text": "Vor allem Stahlbeton im Tragwerk; die Spitze enthält Stahl."
+      }
+    ],
+    "more": [
+      "Bauwerke gehören auch zu den Menschen, die sie planten, bauten und pflegen. Ihre Geschichte kann schöne und schwierige Seiten haben.",
+      "Drei Flügel stützen einen kräftigen Kern. Nach oben verändern sich die Querschnitte. Das hilft auch, Windkräfte auf das sehr hohe Gebäude zu begrenzen."
+    ],
+    "surprise": "Bei hohen Gebäuden müssen Ingenieurinnen und Ingenieure besonders auf Wind und stabile Fundamente achten.",
+    "locations": [
+      {
+        "label": "Dubai, Vereinigte Arabische Emirate",
+        "lat": 25.197,
+        "lon": 55.274,
+        "iso": "AE"
+      }
+    ],
+    "related": [
+      "building-eiffel-tower",
+      "science-computer"
+    ],
+    "sources": [
+      {
+        "label": "Offizielle Bauwerksquelle / UNESCO",
+        "url": "https://www.burjkhalifa.ae/img/fact-sheet.pdf"
+      },
+      {
+        "label": "Bauwerksbetreiber / Fachquelle zur Konstruktion",
+        "url": "https://www.som.com/projects/burj-khalifa/"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "building": {
+      "date": "Eröffnet 2010",
+      "size": "828 Meter hoch, einschließlich der Spitze.",
+      "height": 828
+    },
+    "model": "heights",
+    "question": {
+      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "answers": [
+        "Bei hohen Gebäuden müssen Ingenieurinnen und Ingenieure besonders auf Wind und stabile Fundamente achten.",
+        "Es ist keine einzelne Mauer, die in einem Jahr fertig wurde.",
+        "Ein Mausoleum ist ein Gebäude mit einer Grabstätte."
+      ],
+      "correct": 0,
+      "why": "Ein kräftiger Kern und stützende Gebäudeteile tragen die Konstruktion. Beton, Stahl, Aufzüge und viele Fachleute mussten zusammenarbeiten."
+    }
+  }
+]

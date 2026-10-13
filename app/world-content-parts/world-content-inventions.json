@@ -1,0 +1,1347 @@
+[
+  {
+    "id": "invention-light",
+    "category": "inventions",
+    "title": "Elektrisches Licht",
+    "intro": "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
+    "paragraphs": [
+      "Elektrische Energie sollte einen Raum zuverlässig beleuchten."
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "Wichtiger Schritt: 1879"
+      },
+      {
+        "label": "Viele Beteiligte",
+        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
+      }
+    ],
+    "more": [
+      "Viele Menschen arbeiteten daran, darunter Joseph Swan sowie Thomas Edison und sein Team. Sie verbesserten Lampen und Stromversorgung.",
+      "Heute nutzen viele Lampen LEDs. Sie erzeugen Licht anders als ein heißer Glühdraht. Vergleiche die elektrische Leistung, die Helligkeit und die Lebensdauer; eine möglichst sparsame passende Lampe vermeidet Verschwendung."
+    ],
+    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "locations": [
+      {
+        "label": "Menlo Park – Edisons Team",
+        "lat": 40.56,
+        "lon": -74.34,
+        "iso": "US"
+      },
+      {
+        "label": "England – Joseph Swans Arbeit",
+        "lat": 54.97,
+        "lon": -1.61,
+        "iso": "GB"
+      }
+    ],
+    "related": [
+      "history-electric_light",
+      "science-circuit"
+    ],
+    "sources": [
+      {
+        "label": "National Park Service – elektrisches Licht",
+        "url": "https://home.nps.gov/edis/learn/kidsyouth/the-electric-light-system-phonograph-motion-pictures.htm"
+      },
+      {
+        "label": "U.S. National Park Service, Thomas Edison National Historical Park",
+        "url": "https://home.nps.gov/edis/learn/kidsyouth/the-electric-light-system-phonograph-motion-pictures.htm"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "invention": {
+      "year": 1879,
+      "date": "Wichtiger Schritt: 1879",
+      "blueprint": "lamp",
+      "stages": [
+        {
+          "label": "Problem",
+          "text": "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen."
+        },
+        {
+          "label": "Idee",
+          "text": "Elektrische Energie sollte einen Raum zuverlässig beleuchten."
+        },
+        {
+          "label": "Entwicklung",
+          "text": "Viele Menschen arbeiteten daran, darunter Joseph Swan sowie Thomas Edison und sein Team. Sie verbesserten Lampen und Stromversorgung."
+        },
+        {
+          "label": "Früher",
+          "text": "In einer Glühlampe wurde ein dünner Draht so heiß, dass er leuchtete."
+        },
+        {
+          "label": "Heute",
+          "text": "LED-Lampen erzeugen Licht auf andere Weise und brauchen meist weniger Energie."
+        },
+        {
+          "label": "Zukunft",
+          "text": "Licht könnte noch sparsamer und besser reparierbar werden."
+        }
+      ],
+      "parts": [
+        {
+          "id": "0",
+          "name": "Glaskolben",
+          "description": "Schützt die Bauteile im Inneren."
+        },
+        {
+          "id": "1",
+          "name": "Glühdraht",
+          "description": "Wird bei der klassischen Glühlampe heiß und leuchtet."
+        },
+        {
+          "id": "2",
+          "name": "Sockel",
+          "description": "Verbindet die Lampe mit der Fassung."
+        }
+      ]
+    },
+    "question": {
+      "prompt": "Welches Problem hilft Elektrisches Licht zu lösen?",
+      "answers": [
+        "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
+        "Menschen wollten durch die Luft reisen.",
+        "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit."
+      ],
+      "correct": 0,
+      "why": "Elektrische Energie sollte einen Raum zuverlässig beleuchten. Viele Menschen arbeiteten daran, darunter Joseph Swan sowie Thomas Edison und sein Team. Sie verbesserten Lampen und Stromversorgung."
+    },
+    "model": "circuit"
+  },
+  {
+    "id": "invention-car",
+    "category": "inventions",
+    "title": "Das Auto",
+    "intro": "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
+    "paragraphs": [
+      "Ein Motor sollte die Räder antreiben."
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "Benz-Patent: 1886"
+      },
+      {
+        "label": "Viele Beteiligte",
+        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
+      }
+    ],
+    "more": [
+      "Es gab schon Dampf- und Elektrofahrzeuge. Karl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos.",
+      "Ein Verbrennungsmotor nutzt die Energie eines Kraftstoffs; ein Elektroauto einen Elektromotor und elektrische Energie. Beide brauchen zuverlässige Bremsen. Auch Bus, Bahn, Radfahren und Zufußgehen lösen die Aufgabe, Menschen zu bewegen."
+    ],
+    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "locations": [
+      {
+        "label": "Mannheim – Benz-Motorwagen",
+        "lat": 49.49,
+        "lon": 8.47,
+        "iso": "DE"
+      }
+    ],
+    "related": [
+      "person-karl_benz",
+      "person-bertha_benz",
+      "invention-railway"
+    ],
+    "sources": [
+      {
+        "label": "Mercedes-Benz Museum – Patent-Motorwagen",
+        "url": "https://group.mercedes-benz.com/company/tradition/museums-historical-sites/carl-benz-workshop.html"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "invention": {
+      "year": 1886,
+      "date": "Benz-Patent: 1886",
+      "blueprint": "car",
+      "stages": [
+        {
+          "label": "Problem",
+          "text": "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste."
+        },
+        {
+          "label": "Idee",
+          "text": "Ein Motor sollte die Räder antreiben."
+        },
+        {
+          "label": "Entwicklung",
+          "text": "Es gab schon Dampf- und Elektrofahrzeuge. Karl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos."
+        },
+        {
+          "label": "Früher",
+          "text": "Der Benz-Motorwagen hatte drei Räder und keinen geschlossenen Innenraum."
+        },
+        {
+          "label": "Heute",
+          "text": "Es gibt Autos mit Verbrennungsmotor, Elektromotor oder beiden. Bremsen und Sicherheitsgurte helfen, Menschen zu schützen."
+        },
+        {
+          "label": "Zukunft",
+          "text": "Fahrzeuge könnten weniger Energie brauchen; zu einer guten Zukunft gehören auch Busse, Bahnen und Fahrräder."
+        }
+      ],
+      "parts": [
+        {
+          "id": "0",
+          "name": "Motor",
+          "description": "Wandelt Energie in Bewegung um."
+        },
+        {
+          "id": "1",
+          "name": "Räder",
+          "description": "Rollen und tragen das Fahrzeug."
+        },
+        {
+          "id": "2",
+          "name": "Batterie",
+          "description": "Speichert Energie; beim Elektroauto für den Antrieb."
+        },
+        {
+          "id": "3",
+          "name": "Bremsen",
+          "description": "Verringern die Geschwindigkeit."
+        },
+        {
+          "id": "4",
+          "name": "Lenkrad",
+          "description": "Hilft, die Fahrtrichtung zu steuern."
+        },
+        {
+          "id": "5",
+          "name": "Sicherheitsgurt",
+          "description": "Hält Menschen bei starkem Bremsen oder einem Unfall im Sitz."
+        }
+      ]
+    },
+    "question": {
+      "prompt": "Welches Problem hilft Das Auto zu lösen?",
+      "answers": [
+        "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
+        "Eine Stimme war normalerweise nur in der Nähe hörbar.",
+        "Computer an verschiedenen Orten sollten Informationen austauschen."
+      ],
+      "correct": 0,
+      "why": "Ein Motor sollte die Räder antreiben. Es gab schon Dampf- und Elektrofahrzeuge. Karl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos."
+    },
+    "model": null
+  },
+  {
+    "id": "invention-railway",
+    "category": "inventions",
+    "title": "Die Eisenbahn",
+    "intro": "Viele Waren und Reisende mussten über Land transportiert werden.",
+    "paragraphs": [
+      "Räder auf Schienen und ein kräftiger Antrieb sollten Wagen ziehen."
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "Öffentliche Dampfbahn: 1825"
+      },
+      {
+        "label": "Viele Beteiligte",
+        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
+      }
+    ],
+    "more": [
+      "Schienenwege und Lokomotiven entstanden schrittweise. 1825 eröffnete die Bahn Stockton–Darlington. Viele Menschen verbesserten danach Strecken und Züge.",
+      "Bei einer Eisenbahn sind nicht nur die Fahrzeuge wichtig. Ein Fahrplan und Signale helfen, viele Züge gemeinsam zu betreiben. Schienen transportieren Menschen und Güter; neue Strecken verändern auch Landschaften."
+    ],
+    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "locations": [
+      {
+        "label": "Darlington – eine frühe Bahnstrecke",
+        "lat": 54.52,
+        "lon": -1.55,
+        "iso": "GB"
+      }
+    ],
+    "related": [
+      "history-railway",
+      "history-steam",
+      "invention-car"
+    ],
+    "sources": [
+      {
+        "label": "National Railway Museum",
+        "url": "https://blog.railwaymuseum.org.uk/shildon-the-cradle-of-the-railways-and-locomotion-no-1/"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "invention": {
+      "year": 1825,
+      "date": "Öffentliche Dampfbahn: 1825",
+      "blueprint": "train",
+      "stages": [
+        {
+          "label": "Problem",
+          "text": "Viele Waren und Reisende mussten über Land transportiert werden."
+        },
+        {
+          "label": "Idee",
+          "text": "Räder auf Schienen und ein kräftiger Antrieb sollten Wagen ziehen."
+        },
+        {
+          "label": "Entwicklung",
+          "text": "Schienenwege und Lokomotiven entstanden schrittweise. 1825 eröffnete die Bahn Stockton–Darlington. Viele Menschen verbesserten danach Strecken und Züge."
+        },
+        {
+          "label": "Früher",
+          "text": "Dampflokomotiven nutzten erhitztes Wasser. Der Dampf bewegte Kolben und Räder."
+        },
+        {
+          "label": "Heute",
+          "text": "Viele Züge fahren mit Elektromotoren. Gleise, Signale und Teams verbinden die Orte."
+        },
+        {
+          "label": "Zukunft",
+          "text": "Bahnreisen könnten sparsamer werden und mehr Menschen bequem verbinden."
+        }
+      ],
+      "parts": [
+        {
+          "id": "0",
+          "name": "Schienen",
+          "description": "Führen die Räder entlang der Strecke."
+        },
+        {
+          "id": "1",
+          "name": "Antrieb",
+          "description": "Bewegt den Zug."
+        },
+        {
+          "id": "2",
+          "name": "Wagen",
+          "description": "Transportieren Menschen oder Waren."
+        },
+        {
+          "id": "3",
+          "name": "Signale",
+          "description": "Helfen, den Zugverkehr sicher zu ordnen."
+        }
+      ]
+    },
+    "question": {
+      "prompt": "Welches Problem hilft Die Eisenbahn zu lösen?",
+      "answers": [
+        "Viele Waren und Reisende mussten über Land transportiert werden.",
+        "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
+        "Auf See gab es nicht immer sichtbare Landmarken oder Sterne."
+      ],
+      "correct": 0,
+      "why": "Räder auf Schienen und ein kräftiger Antrieb sollten Wagen ziehen. Schienenwege und Lokomotiven entstanden schrittweise. 1825 eröffnete die Bahn Stockton–Darlington. Viele Menschen verbesserten danach Strecken und Züge."
+    },
+    "model": null
+  },
+  {
+    "id": "invention-airplane",
+    "category": "inventions",
+    "title": "Das Flugzeug",
+    "intro": "Menschen wollten durch die Luft reisen.",
+    "paragraphs": [
+      "Flügel sollten Auftrieb erzeugen; der Flug musste steuerbar sein."
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "Gesteuerter Motorflug: 1903"
+      },
+      {
+        "label": "Viele Beteiligte",
+        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
+      }
+    ],
+    "more": [
+      "Ballons und Gleiter gab es schon. Die Wright-Brüder erprobten Steuerung und Flügel, bevor ihnen 1903 ein angetriebener, gesteuerter Flug gelang.",
+      "Ein Flügel lenkt strömende Luft nach unten. Die Luft übt dadurch auch eine Kraft auf den Flügel aus. Druckunterschiede gehören zur Erklärung. Luftteilchen müssen oben und unten nicht gleichzeitig am Ende des Flügels ankommen."
+    ],
+    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "locations": [
+      {
+        "label": "Kill Devil Hills – Flüge der Wright-Brüder",
+        "lat": 36,
+        "lon": -75.67,
+        "iso": "US"
+      }
+    ],
+    "related": [
+      "history-flight",
+      "science-flight"
+    ],
+    "sources": [
+      {
+        "label": "NASA – vier Kräfte beim Fliegen",
+        "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/"
+      },
+      {
+        "label": "Smithsonian National Air and Space Museum",
+        "url": "https://airandspace.si.edu/collection-objects/1903-wright-flyer/nasm_A19610048000"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "invention": {
+      "year": 1903,
+      "date": "Gesteuerter Motorflug: 1903",
+      "blueprint": "plane",
+      "stages": [
+        {
+          "label": "Problem",
+          "text": "Menschen wollten durch die Luft reisen."
+        },
+        {
+          "label": "Idee",
+          "text": "Flügel sollten Auftrieb erzeugen; der Flug musste steuerbar sein."
+        },
+        {
+          "label": "Entwicklung",
+          "text": "Ballons und Gleiter gab es schon. Die Wright-Brüder erprobten Steuerung und Flügel, bevor ihnen 1903 ein angetriebener, gesteuerter Flug gelang."
+        },
+        {
+          "label": "Früher",
+          "text": "Frühe Flugzeuge waren leicht, offen und hatten Propeller."
+        },
+        {
+          "label": "Heute",
+          "text": "Passagierflugzeuge verbinden weit entfernte Orte. Auch Gleitflugzeuge ohne eigenen Motor können fliegen."
+        },
+        {
+          "label": "Zukunft",
+          "text": "Teams erforschen leisere und sparsamere Flugzeuge."
+        }
+      ],
+      "parts": [
+        {
+          "id": "0",
+          "name": "Flügel",
+          "description": "Erzeugen bei Bewegung durch die Luft viel Auftrieb."
+        },
+        {
+          "id": "1",
+          "name": "Triebwerk",
+          "description": "Erzeugt Schub und hilft bei der Vorwärtsbewegung."
+        },
+        {
+          "id": "2",
+          "name": "Leitwerk",
+          "description": "Hilft beim Steuern und stabilen Fliegen."
+        },
+        {
+          "id": "3",
+          "name": "Cockpit",
+          "description": "Hier arbeiten die Pilotinnen und Piloten."
+        }
+      ]
+    },
+    "question": {
+      "prompt": "Welches Problem hilft Das Flugzeug zu lösen?",
+      "answers": [
+        "Menschen wollten durch die Luft reisen.",
+        "Computer an verschiedenen Orten sollten Informationen austauschen.",
+        "Ein Buch von Hand abzuschreiben dauerte lange."
+      ],
+      "correct": 0,
+      "why": "Flügel sollten Auftrieb erzeugen; der Flug musste steuerbar sein. Ballons und Gleiter gab es schon. Die Wright-Brüder erprobten Steuerung und Flügel, bevor ihnen 1903 ein angetriebener, gesteuerter Flug gelang."
+    },
+    "model": "flight"
+  },
+  {
+    "id": "invention-phone",
+    "category": "inventions",
+    "title": "Das Telefon",
+    "intro": "Eine Stimme war normalerweise nur in der Nähe hörbar.",
+    "paragraphs": [
+      "Schall sollte als Signal weit übertragen werden."
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "Bells US-Patent: 1876"
+      },
+      {
+        "label": "Viele Beteiligte",
+        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
+      }
+    ],
+    "more": [
+      "Viele Menschen experimentierten damit. Alexander Graham Bell erhielt 1876 ein wichtiges Patent. Auch Elisha Gray und andere arbeiteten an Telefontechnik.",
+      "Das Mikrofon macht aus Schallschwingungen ein elektrisches Signal. Am anderen Ende verwandelt ein Lautsprecher Signale wieder in Schall. Heute können Verbindungen zusätzlich digital und über Funk übertragen werden."
+    ],
+    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "locations": [
+      {
+        "label": "Boston – Beispielort der frühen Telefonentwicklung",
+        "lat": 42.36,
+        "lon": -71.06,
+        "iso": "US"
+      }
+    ],
+    "related": [
+      "invention-smartphone",
+      "invention-internet"
+    ],
+    "sources": [
+      {
+        "label": "Smithsonian – Bells Versuchstelefon",
+        "url": "https://www.si.edu/object/nmah_689864"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "invention": {
+      "year": 1876,
+      "date": "Bells US-Patent: 1876",
+      "blueprint": "phone",
+      "stages": [
+        {
+          "label": "Problem",
+          "text": "Eine Stimme war normalerweise nur in der Nähe hörbar."
+        },
+        {
+          "label": "Idee",
+          "text": "Schall sollte als Signal weit übertragen werden."
+        },
+        {
+          "label": "Entwicklung",
+          "text": "Viele Menschen experimentierten damit. Alexander Graham Bell erhielt 1876 ein wichtiges Patent. Auch Elisha Gray und andere arbeiteten an Telefontechnik."
+        },
+        {
+          "label": "Früher",
+          "text": "Ein frühes Telefon verband Geräte über Leitungen."
+        },
+        {
+          "label": "Heute",
+          "text": "Gespräche können über Kabel, Funk und Datennetze übertragen werden."
+        },
+        {
+          "label": "Zukunft",
+          "text": "Neue Geräte könnten leichter reparierbar sein und mit weniger Material auskommen."
+        }
+      ],
+      "parts": [
+        {
+          "id": "0",
+          "name": "Mikrofon",
+          "description": "Wandelt Schall in ein Signal um."
+        },
+        {
+          "id": "1",
+          "name": "Verbindung",
+          "description": "Überträgt das Signal zum anderen Gerät."
+        },
+        {
+          "id": "2",
+          "name": "Lautsprecher",
+          "description": "Macht das Signal wieder als Schall hörbar."
+        }
+      ]
+    },
+    "question": {
+      "prompt": "Welches Problem hilft Das Telefon zu lösen?",
+      "answers": [
+        "Eine Stimme war normalerweise nur in der Nähe hörbar.",
+        "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
+        "Menschen wollten Geräte und später Menschen ins Weltall bringen."
+      ],
+      "correct": 0,
+      "why": "Schall sollte als Signal weit übertragen werden. Viele Menschen experimentierten damit. Alexander Graham Bell erhielt 1876 ein wichtiges Patent. Auch Elisha Gray und andere arbeiteten an Telefontechnik."
+    },
+    "model": null
+  },
+  {
+    "id": "invention-computer",
+    "category": "inventions",
+    "title": "Der Computer",
+    "intro": "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
+    "paragraphs": [
+      "Eine Maschine sollte genaue Anweisungen Schritt für Schritt ausführen."
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "Viele Entwicklungsschritte seit dem 19. Jahrhundert"
+      },
+      {
+        "label": "Viele Beteiligte",
+        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
+      }
+    ],
+    "more": [
+      "Rechenmaschinen, mechanische Pläne und elektronische Computer hatten viele Beteiligte in mehreren Ländern. Es gibt nicht einen einzigen Erfinder des Computers.",
+      "Ein Computer führt Programme aus. Eingabe, Verarbeitung, Speicherung und Ausgabe arbeiten zusammen. Ein Ergebnis kann falsch sein, wenn das Programm oder seine Daten falsch sind; ein schneller Rechner ist nicht automatisch ein kluger Entscheider."
+    ],
+    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "locations": [
+      {
+        "label": "USA – eines von vielen Entwicklungszentren",
+        "lat": 40,
+        "lon": -75,
+        "iso": "US"
+      },
+      {
+        "label": "Deutschland – Zuses Computerarbeit",
+        "lat": 52.52,
+        "lon": 13.4,
+        "iso": "DE"
+      },
+      {
+        "label": "Großbritannien – frühe Computerprojekte",
+        "lat": 51.997,
+        "lon": -0.741,
+        "iso": "GB"
+      }
+    ],
+    "related": [
+      "person-ada_lovelace",
+      "person-grace_hopper",
+      "science-computer"
+    ],
+    "sources": [
+      {
+        "label": "Computer History Museum – Computerentwicklung",
+        "url": "https://www.computerhistory.org/timeline/computers/"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "invention": {
+      "year": 1940,
+      "date": "Viele Entwicklungsschritte seit dem 19. Jahrhundert",
+      "blueprint": "computer",
+      "stages": [
+        {
+          "label": "Problem",
+          "text": "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit."
+        },
+        {
+          "label": "Idee",
+          "text": "Eine Maschine sollte genaue Anweisungen Schritt für Schritt ausführen."
+        },
+        {
+          "label": "Entwicklung",
+          "text": "Rechenmaschinen, mechanische Pläne und elektronische Computer hatten viele Beteiligte in mehreren Ländern. Es gibt nicht einen einzigen Erfinder des Computers."
+        },
+        {
+          "label": "Früher",
+          "text": "Frühe elektronische Rechner füllten große Räume."
+        },
+        {
+          "label": "Heute",
+          "text": "Kleine Chips stecken in Laptops, Autos und vielen weiteren Geräten. Programme geben die Anweisungen."
+        },
+        {
+          "label": "Zukunft",
+          "text": "Computer könnten sparsamer werden und Menschen bei neuen Fragen helfen."
+        }
+      ],
+      "parts": [
+        {
+          "id": "0",
+          "name": "Prozessor",
+          "description": "Verarbeitet Anweisungen und Daten."
+        },
+        {
+          "id": "1",
+          "name": "Arbeitsspeicher",
+          "description": "Hält gerade gebrauchte Daten bereit."
+        },
+        {
+          "id": "2",
+          "name": "Speicher",
+          "description": "Bewahrt Dateien auch nach dem Ausschalten."
+        },
+        {
+          "id": "3",
+          "name": "Eingabe",
+          "description": "Zum Beispiel Tastatur oder Touchscreen."
+        },
+        {
+          "id": "4",
+          "name": "Ausgabe",
+          "description": "Zum Beispiel Bildschirm oder Lautsprecher."
+        }
+      ]
+    },
+    "question": {
+      "prompt": "Welches Problem hilft Der Computer zu lösen?",
+      "answers": [
+        "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
+        "Ein Buch von Hand abzuschreiben dauerte lange.",
+        "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen."
+      ],
+      "correct": 0,
+      "why": "Eine Maschine sollte genaue Anweisungen Schritt für Schritt ausführen. Rechenmaschinen, mechanische Pläne und elektronische Computer hatten viele Beteiligte in mehreren Ländern. Es gibt nicht einen einzigen Erfinder des Computers."
+    },
+    "model": "computer"
+  },
+  {
+    "id": "invention-internet",
+    "category": "inventions",
+    "title": "Das Internet",
+    "intro": "Computer an verschiedenen Orten sollten Informationen austauschen.",
+    "paragraphs": [
+      "Netze sollten miteinander verbunden werden."
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "ARPANET: 1969; TCP/IP-Umstellung: 1983"
+      },
+      {
+        "label": "Viele Beteiligte",
+        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
+      }
+    ],
+    "more": [
+      "Viele Teams entwickelten Paketübertragung und gemeinsame Regeln. Das ARPANET verband 1969 erste Rechner. Forschende aus mehreren Ländern trugen zur Entwicklung des Internets bei.",
+      "Gemeinsame Regeln, die Protokolle heißen, helfen verschiedenartigen Geräten beim Austausch. Daten können in Paketen über mehrere Zwischenstationen reisen. Nicht jede Verbindung ist immer verfügbar; Netze brauchen Wartung und Schutz."
+    ],
+    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "locations": [
+      {
+        "label": "Kalifornien – frühe ARPANET-Knoten",
+        "lat": 34.07,
+        "lon": -118.44,
+        "iso": "US"
+      },
+      {
+        "label": "Großbritannien – Forschung zur Paketvermittlung",
+        "lat": 51.42,
+        "lon": -0.34,
+        "iso": "GB"
+      }
+    ],
+    "related": [
+      "history-web",
+      "person-tim_berners_lee",
+      "science-network"
+    ],
+    "sources": [
+      {
+        "label": "Internet Society – Geschichte des Internets",
+        "url": "https://www.internetsociety.org/internet/history-internet/brief-history-internet/"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "invention": {
+      "year": 1969,
+      "date": "ARPANET: 1969; TCP/IP-Umstellung: 1983",
+      "blueprint": "network",
+      "stages": [
+        {
+          "label": "Problem",
+          "text": "Computer an verschiedenen Orten sollten Informationen austauschen."
+        },
+        {
+          "label": "Idee",
+          "text": "Netze sollten miteinander verbunden werden."
+        },
+        {
+          "label": "Entwicklung",
+          "text": "Viele Teams entwickelten Paketübertragung und gemeinsame Regeln. Das ARPANET verband 1969 erste Rechner. Forschende aus mehreren Ländern trugen zur Entwicklung des Internets bei."
+        },
+        {
+          "label": "Früher",
+          "text": "Einige Forschungsrechner waren über Leitungen verbunden."
+        },
+        {
+          "label": "Heute",
+          "text": "Das Internet verbindet viele Netze. Das Web mit seinen verlinkten Seiten ist eine Anwendung darauf."
+        },
+        {
+          "label": "Zukunft",
+          "text": "Menschen können an besserem Zugang, Datenschutz und sparsamen Netzen arbeiten."
+        }
+      ],
+      "parts": [
+        {
+          "id": "0",
+          "name": "Gerät",
+          "description": "Erzeugt und liest Daten."
+        },
+        {
+          "id": "1",
+          "name": "Router",
+          "description": "Leitet Datenpakete weiter."
+        },
+        {
+          "id": "2",
+          "name": "Verbindung",
+          "description": "Zum Beispiel Glasfaserkabel oder Funk."
+        },
+        {
+          "id": "3",
+          "name": "Protokoll",
+          "description": "Gemeinsame Regeln für den Datenaustausch."
+        }
+      ]
+    },
+    "question": {
+      "prompt": "Welches Problem hilft Das Internet zu lösen?",
+      "answers": [
+        "Computer an verschiedenen Orten sollten Informationen austauschen.",
+        "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
+        "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten."
+      ],
+      "correct": 0,
+      "why": "Netze sollten miteinander verbunden werden. Viele Teams entwickelten Paketübertragung und gemeinsame Regeln. Das ARPANET verband 1969 erste Rechner. Forschende aus mehreren Ländern trugen zur Entwicklung des Internets bei."
+    },
+    "model": "network"
+  },
+  {
+    "id": "invention-compass",
+    "category": "inventions",
+    "title": "Der Kompass",
+    "intro": "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
+    "paragraphs": [
+      "Eine magnetische Nadel konnte bei der Richtung helfen."
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "Navigation in China: etwa nach 1000"
+      },
+      {
+        "label": "Viele Beteiligte",
+        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
+      }
+    ],
+    "more": [
+      "Menschen kannten magnetische Steine schon früher. Seefahrer in China nutzten später magnetische Richtungsanzeigen; das Wissen verbreitete sich weiter.",
+      "Die Nadel orientiert sich am Magnetfeld der Erde. Magnetischer Norden und geografischer Nordpol liegen nicht genau am selben Ort. Metall und andere Magnete in der Nähe können die Anzeige stören."
+    ],
+    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "locations": [
+      {
+        "label": "China – frühe Navigationsgeschichte",
+        "lat": 30,
+        "lon": 120,
+        "iso": "CN"
+      }
+    ],
+    "related": [
+      "history-compass",
+      "science-gps"
+    ],
+    "sources": [
+      {
+        "label": "Smithsonian National Air and Space Museum, Time and Navigation",
+        "url": "https://timeandnavigation.si.edu/timeline2/1000"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "invention": {
+      "year": 1050,
+      "date": "Navigation in China: etwa nach 1000",
+      "blueprint": "compass",
+      "stages": [
+        {
+          "label": "Problem",
+          "text": "Auf See gab es nicht immer sichtbare Landmarken oder Sterne."
+        },
+        {
+          "label": "Idee",
+          "text": "Eine magnetische Nadel konnte bei der Richtung helfen."
+        },
+        {
+          "label": "Entwicklung",
+          "text": "Menschen kannten magnetische Steine schon früher. Seefahrer in China nutzten später magnetische Richtungsanzeigen; das Wissen verbreitete sich weiter."
+        },
+        {
+          "label": "Früher",
+          "text": "Frühe Formen unterschieden sich vom heutigen Taschenkompass."
+        },
+        {
+          "label": "Heute",
+          "text": "Eine Kompassnadel richtet sich ungefähr nach dem Erdmagnetfeld. Magnetisch Nord und geografisch Nord sind nicht genau dasselbe."
+        },
+        {
+          "label": "Zukunft",
+          "text": "Navigation verbindet weiterhin mehrere Hilfen, zum Beispiel Kompass, Karten und Satelliten."
+        }
+      ],
+      "parts": [
+        {
+          "id": "0",
+          "name": "Magnetische Nadel",
+          "description": "Richtet sich im Erdmagnetfeld aus."
+        },
+        {
+          "id": "1",
+          "name": "Skala",
+          "description": "Hilft beim Ablesen der Richtung."
+        },
+        {
+          "id": "2",
+          "name": "Gehäuse",
+          "description": "Schützt die bewegliche Nadel."
+        }
+      ]
+    },
+    "question": {
+      "prompt": "Welches Problem hilft Der Kompass zu lösen?",
+      "answers": [
+        "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
+        "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
+        "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen."
+      ],
+      "correct": 0,
+      "why": "Eine magnetische Nadel konnte bei der Richtung helfen. Menschen kannten magnetische Steine schon früher. Seefahrer in China nutzten später magnetische Richtungsanzeigen; das Wissen verbreitete sich weiter."
+    },
+    "model": null
+  },
+  {
+    "id": "invention-printing",
+    "category": "inventions",
+    "title": "Der Buchdruck",
+    "intro": "Ein Buch von Hand abzuschreiben dauerte lange.",
+    "paragraphs": [
+      "Buchstaben sollten zu Seiten zusammengestellt und oft abgedruckt werden."
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "Gutenbergs System: um 1450"
+      },
+      {
+        "label": "Viele Beteiligte",
+        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
+      }
+    ],
+    "more": [
+      "In China und Korea gab es bewegliche Druckzeichen vor Gutenberg. Seine Werkstatt verband Metalltypen, geeignete Farbe und eine Presse zu einem wirksamen europäischen System.",
+      "Mit derselben Druckform lassen sich viele gleiche Seiten herstellen. Eine Änderung muss vor dem Drucken in die Vorlage. Digital gespeicherte Texte sind leichter zu verändern; für verlässliche Bücher bleiben Quellen und sorgfältiges Korrigieren wichtig."
+    ],
+    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "locations": [
+      {
+        "label": "Mainz – Gutenbergs Werkstatt",
+        "lat": 50,
+        "lon": 8.27,
+        "iso": "DE"
+      },
+      {
+        "label": "Korea – ältere bewegliche Metallzeichen",
+        "lat": 36.64,
+        "lon": 127.49,
+        "iso": "KR"
+      },
+      {
+        "label": "China – ältere Drucktraditionen",
+        "lat": 34,
+        "lon": 110,
+        "iso": "CN"
+      }
+    ],
+    "related": [
+      "person-johannes_gutenberg",
+      "history-paper",
+      "person-cai_lun"
+    ],
+    "sources": [
+      {
+        "label": "Stadt Mainz / Gutenberg.de",
+        "url": "https://www.gutenberg.de/zeit/zeitleiste_gutenberg"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "invention": {
+      "year": 1450,
+      "date": "Gutenbergs System: um 1450",
+      "blueprint": "printer",
+      "stages": [
+        {
+          "label": "Problem",
+          "text": "Ein Buch von Hand abzuschreiben dauerte lange."
+        },
+        {
+          "label": "Idee",
+          "text": "Buchstaben sollten zu Seiten zusammengestellt und oft abgedruckt werden."
+        },
+        {
+          "label": "Entwicklung",
+          "text": "In China und Korea gab es bewegliche Druckzeichen vor Gutenberg. Seine Werkstatt verband Metalltypen, geeignete Farbe und eine Presse zu einem wirksamen europäischen System."
+        },
+        {
+          "label": "Früher",
+          "text": "Eine Druckwerkstatt setzte jede Seite aus einzelnen Buchstaben zusammen."
+        },
+        {
+          "label": "Heute",
+          "text": "Druckmaschinen und digitale Medien geben Texte an viele Menschen weiter."
+        },
+        {
+          "label": "Zukunft",
+          "text": "Lesen könnte noch zugänglicher werden, zum Beispiel durch Vorlesen und gut lesbare Texte."
+        }
+      ],
+      "parts": [
+        {
+          "id": "0",
+          "name": "Druckzeichen",
+          "description": "Werden zu Wörtern und Seiten zusammengestellt."
+        },
+        {
+          "id": "1",
+          "name": "Farbe",
+          "description": "Macht die Zeichen auf dem Papier sichtbar."
+        },
+        {
+          "id": "2",
+          "name": "Presse",
+          "description": "Drückt Papier auf die eingefärbte Druckform."
+        },
+        {
+          "id": "3",
+          "name": "Papier",
+          "description": "Trägt die gedruckte Nachricht."
+        }
+      ]
+    },
+    "question": {
+      "prompt": "Welches Problem hilft Der Buchdruck zu lösen?",
+      "answers": [
+        "Ein Buch von Hand abzuschreiben dauerte lange.",
+        "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
+        "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste."
+      ],
+      "correct": 0,
+      "why": "Buchstaben sollten zu Seiten zusammengestellt und oft abgedruckt werden. In China und Korea gab es bewegliche Druckzeichen vor Gutenberg. Seine Werkstatt verband Metalltypen, geeignete Farbe und eine Presse zu einem wirksamen europäischen System."
+    },
+    "model": null
+  },
+  {
+    "id": "invention-rocket",
+    "category": "inventions",
+    "title": "Die Rakete",
+    "intro": "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
+    "paragraphs": [
+      "Schnell ausströmendes Gas sollte die Rakete in die Gegenrichtung schieben."
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "Erste Flüssigkeitsrakete: 1926"
+      },
+      {
+        "label": "Viele Beteiligte",
+        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
+      }
+    ],
+    "more": [
+      "Raketen gab es lange vor der Raumfahrt. Robert Goddard startete 1926 eine Rakete mit flüssigen Treibstoffen. Später entwickelten große Teams leistungsfähigere Systeme.",
+      "Eine Rakete stößt Masse schnell nach hinten aus und erhält dadurch Schub. Sie muss sich nicht an Luft abstoßen und kann auch im Weltraum arbeiten. Einige heutige Raketenstufen werden nach der Landung erneut verwendet."
+    ],
+    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "locations": [
+      {
+        "label": "Auburn – Goddards Versuch 1926",
+        "lat": 42.19,
+        "lon": -71.83,
+        "iso": "US"
+      }
+    ],
+    "related": [
+      "history-apollo11",
+      "invention-satellite",
+      "person-katherine_johnson"
+    ],
+    "sources": [
+      {
+        "label": "NASA – erste Flüssigkeitsrakete",
+        "url": "https://www.nasa.gov/history/95-years-ago-goddards-first-liquid-fueled-rocket/"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "invention": {
+      "year": 1926,
+      "date": "Erste Flüssigkeitsrakete: 1926",
+      "blueprint": "rocket",
+      "stages": [
+        {
+          "label": "Problem",
+          "text": "Menschen wollten Geräte und später Menschen ins Weltall bringen."
+        },
+        {
+          "label": "Idee",
+          "text": "Schnell ausströmendes Gas sollte die Rakete in die Gegenrichtung schieben."
+        },
+        {
+          "label": "Entwicklung",
+          "text": "Raketen gab es lange vor der Raumfahrt. Robert Goddard startete 1926 eine Rakete mit flüssigen Treibstoffen. Später entwickelten große Teams leistungsfähigere Systeme."
+        },
+        {
+          "label": "Früher",
+          "text": "Goddards Versuchsrakete war klein und flog nur kurz."
+        },
+        {
+          "label": "Heute",
+          "text": "Raketen bringen Satelliten und Raumfahrzeuge auf ihren Weg. Manche Teile können erneut benutzt werden."
+        },
+        {
+          "label": "Zukunft",
+          "text": "Raumfahrt könnte Material sparen und Weltraummüll besser vermeiden."
+        }
+      ],
+      "parts": [
+        {
+          "id": "0",
+          "name": "Treibstoffsystem",
+          "description": "Stellt die Stoffe für den Antrieb bereit."
+        },
+        {
+          "id": "1",
+          "name": "Triebwerk",
+          "description": "Beschleunigt Gas nach hinten; die Rakete erhält Schub."
+        },
+        {
+          "id": "2",
+          "name": "Steuerung",
+          "description": "Hilft beim geplanten Kurs."
+        },
+        {
+          "id": "3",
+          "name": "Nutzlast",
+          "description": "Das, was transportiert wird: zum Beispiel ein Satellit."
+        }
+      ]
+    },
+    "question": {
+      "prompt": "Welches Problem hilft Die Rakete zu lösen?",
+      "answers": [
+        "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
+        "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
+        "Viele Waren und Reisende mussten über Land transportiert werden."
+      ],
+      "correct": 0,
+      "why": "Schnell ausströmendes Gas sollte die Rakete in die Gegenrichtung schieben. Raketen gab es lange vor der Raumfahrt. Robert Goddard startete 1926 eine Rakete mit flüssigen Treibstoffen. Später entwickelten große Teams leistungsfähigere Systeme."
+    },
+    "model": null
+  },
+  {
+    "id": "invention-satellite",
+    "category": "inventions",
+    "title": "Der Satellit",
+    "intro": "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
+    "paragraphs": [
+      "Ein Gerät sollte die Erde auf einer Umlaufbahn umkreisen."
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "Sputnik 1: 4. Oktober 1957"
+      },
+      {
+        "label": "Viele Beteiligte",
+        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
+      }
+    ],
+    "more": [
+      "Teams in der Sowjetunion brachten 1957 Sputnik 1 in eine Erdumlaufbahn. Weitere Länder und internationale Teams entwickelten viele unterschiedliche Satelliten.",
+      "Ein Satellit fällt ständig in Richtung Erde, bewegt sich aber seitwärts schnell genug, um sie immer wieder zu verfehlen. Messgeräte sammeln Daten; Antennen übertragen sie. Unterschiedliche Aufgaben brauchen unterschiedliche Umlaufbahnen."
+    ],
+    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "locations": [
+      {
+        "label": "Baikonur – Sputnik-Start, heute Kasachstan",
+        "lat": 45.92,
+        "lon": 63.34,
+        "iso": "KZ"
+      }
+    ],
+    "related": [
+      "science-gps",
+      "history-iss"
+    ],
+    "sources": [
+      {
+        "label": "NASA – Sputnik 1",
+        "url": "https://www.nasa.gov/history/dawn-of-the-space-age/"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "invention": {
+      "year": 1957,
+      "date": "Sputnik 1: 4. Oktober 1957",
+      "blueprint": "satellite",
+      "stages": [
+        {
+          "label": "Problem",
+          "text": "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen."
+        },
+        {
+          "label": "Idee",
+          "text": "Ein Gerät sollte die Erde auf einer Umlaufbahn umkreisen."
+        },
+        {
+          "label": "Entwicklung",
+          "text": "Teams in der Sowjetunion brachten 1957 Sputnik 1 in eine Erdumlaufbahn. Weitere Länder und internationale Teams entwickelten viele unterschiedliche Satelliten."
+        },
+        {
+          "label": "Früher",
+          "text": "Sputnik 1 sendete Funksignale."
+        },
+        {
+          "label": "Heute",
+          "text": "Satelliten helfen bei Wetterbeobachtung, Kommunikation, Navigation und Forschung. Sie bleiben nicht einfach unbeweglich über der Erde."
+        },
+        {
+          "label": "Zukunft",
+          "text": "Neue Projekte können Müll vermeiden und sichere Umlaufbahnen besser planen."
+        }
+      ],
+      "parts": [
+        {
+          "id": "0",
+          "name": "Energieversorgung",
+          "description": "Versorgt die Geräte mit elektrischer Energie."
+        },
+        {
+          "id": "1",
+          "name": "Antenne",
+          "description": "Sendet oder empfängt Signale."
+        },
+        {
+          "id": "2",
+          "name": "Messgeräte",
+          "description": "Untersuchen zum Beispiel Wetter oder Strahlung."
+        },
+        {
+          "id": "3",
+          "name": "Steuerung",
+          "description": "Hilft beim Ausrichten und beim geplanten Betrieb."
+        }
+      ]
+    },
+    "question": {
+      "prompt": "Welches Problem hilft Der Satellit zu lösen?",
+      "answers": [
+        "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
+        "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
+        "Menschen wollten durch die Luft reisen."
+      ],
+      "correct": 0,
+      "why": "Ein Gerät sollte die Erde auf einer Umlaufbahn umkreisen. Teams in der Sowjetunion brachten 1957 Sputnik 1 in eine Erdumlaufbahn. Weitere Länder und internationale Teams entwickelten viele unterschiedliche Satelliten."
+    },
+    "model": null
+  },
+  {
+    "id": "invention-smartphone",
+    "category": "inventions",
+    "title": "Das Smartphone",
+    "intro": "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
+    "paragraphs": [
+      "Telefon und kleiner Computer sollten zusammenarbeiten."
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "Frühe Kombinationen: 1990er-Jahre"
+      },
+      {
+        "label": "Viele Beteiligte",
+        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
+      }
+    ],
+    "more": [
+      "Viele Entwicklungen kamen zusammen: Mobilfunk, Chips, Akkus, Bildschirme und Programme. IBM und BellSouth kombinierten beim Simon in den 1990er-Jahren mehrere Funktionen.",
+      "Im Smartphone stecken viele frühere Entwicklungen: Computer, Funk, Bildschirm, Kamera und Akku. Reparieren und längeres Benutzen können Material sparen. Nicht jede neue Version ist für jede Aufgabe nötig."
+    ],
+    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "locations": [],
+    "related": [
+      "invention-phone",
+      "invention-computer",
+      "science-gps"
+    ],
+    "sources": [
+      {
+        "label": "Computer History Museum – Simon",
+        "url": "https://www.computerhistory.org/revolution/artifact/1733"
+      }
+    ],
+    "aliases": [],
+    "links": [],
+    "invention": {
+      "year": 1993,
+      "date": "Frühe Kombinationen: 1990er-Jahre",
+      "blueprint": "phone",
+      "stages": [
+        {
+          "label": "Problem",
+          "text": "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten."
+        },
+        {
+          "label": "Idee",
+          "text": "Telefon und kleiner Computer sollten zusammenarbeiten."
+        },
+        {
+          "label": "Entwicklung",
+          "text": "Viele Entwicklungen kamen zusammen: Mobilfunk, Chips, Akkus, Bildschirme und Programme. IBM und BellSouth kombinierten beim Simon in den 1990er-Jahren mehrere Funktionen."
+        },
+        {
+          "label": "Früher",
+          "text": "Frühe Kombinationsgeräte waren groß und konnten viel weniger als heutige Geräte."
+        },
+        {
+          "label": "Heute",
+          "text": "Ein Smartphone kann telefonieren, fotografieren, Karten anzeigen und Programme ausführen."
+        },
+        {
+          "label": "Zukunft",
+          "text": "Reparierbarkeit, längere Nutzung und weniger Rohstoffverbrauch könnten wichtiger werden."
+        }
+      ],
+      "parts": [
+        {
+          "id": "0",
+          "name": "Bildschirm",
+          "description": "Zeigt Informationen und kann Berührungen erkennen."
+        },
+        {
+          "id": "1",
+          "name": "Prozessor",
+          "description": "Verarbeitet die Anweisungen."
+        },
+        {
+          "id": "2",
+          "name": "Akku",
+          "description": "Speichert Energie für unterwegs."
+        },
+        {
+          "id": "3",
+          "name": "Funktechnik",
+          "description": "Verbindet das Gerät mit Netzen."
+        },
+        {
+          "id": "4",
+          "name": "Kamera",
+          "description": "Hält Licht als Bild fest."
+        }
+      ]
+    },
+    "question": {
+      "prompt": "Welches Problem hilft Das Smartphone zu lösen?",
+      "answers": [
+        "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
+        "Viele Waren und Reisende mussten über Land transportiert werden.",
+        "Eine Stimme war normalerweise nur in der Nähe hörbar."
+      ],
+      "correct": 0,
+      "why": "Telefon und kleiner Computer sollten zusammenarbeiten. Viele Entwicklungen kamen zusammen: Mobilfunk, Chips, Akkus, Bildschirme und Programme. IBM und BellSouth kombinierten beim Simon in den 1990er-Jahren mehrere Funktionen."
+    },
+    "model": null
+  }
+]

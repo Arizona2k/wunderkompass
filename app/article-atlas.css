@@ -3,7 +3,7 @@
 .article-atlas .article-hero {display:grid;grid-template-columns:minmax(0,1fr);background:var(--wk-paper);border:1px solid var(--wk-line);border-radius:var(--wk-radius);overflow:hidden;margin-bottom:18px}
 .article-atlas .article-hero-copy {padding:var(--article-space);min-width:0}
 .article-atlas .world-article-heading {margin:0}
-.article-atlas .world-article-heading h2 {font-size:clamp(28px,3.6vw,46px);line-height:1.13;letter-spacing:-.045em;margin:14px 0 18px;max-width:22ch;text-wrap:balance}
+.article-atlas .world-article-heading h2 {font-size:clamp(28px,3.6vw,46px);line-height:1.13;letter-spacing:-.045em;margin:14px 0 18px;max-width:22ch;text-wrap:balance;overflow-wrap:anywhere;hyphens:auto}
 .article-atlas .world-article-heading .eyebrow {color:var(--world-accent,var(--wk-teal));font-size:11px;line-height:1.7;letter-spacing:.09em}
 .article-atlas .article-context {font-size:14px;margin-top:8px}
 .article-atlas .world-intro {font-size:17px!important;line-height:1.65;max-width:52ch;color:var(--wk-muted)!important}
@@ -110,3 +110,12 @@
 .journey-linked-group h4 {font-size:16px;line-height:1.5;margin:0 0 8px;color:var(--wk-ink)}
 .journey-linked-group summary {min-height:44px;padding:12px 0;line-height:1.6;cursor:pointer;color:var(--wk-ink)}
 .journey-linked-group summary:focus-visible {outline:2px solid var(--wk-teal);outline-offset:3px;border-radius:4px}
+.science-investigation{padding:clamp(16px,3vw,28px);border:1px solid #b8cdd0;border-radius:18px;background:#f5f9fa;display:grid;gap:18px}
+.science-investigation label{display:grid;gap:12px;font-weight:600}
+.science-investigation input[type=range]{width:100%;min-height:44px;accent-color:#245d70}
+.science-investigation svg{width:100%;max-width:360px;justify-self:center;display:block}
+.science-dice-labels,.science-diagram-labels{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,130px),1fr));gap:12px;list-style:none;padding:0;margin:0}
+.science-dice-labels li,.science-diagram-labels span{font-size:1rem;line-height:1.55;overflow-wrap:anywhere}
+.science-explanation-diagram svg{width:100%;max-width:420px;align-self:center;display:block}
+.science-explanation-diagram{display:grid;gap:16px}
+.science-investigation .lab-feedback{margin:0;overflow-wrap:anywhere}

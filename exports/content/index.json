@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-13T12:41:34.058Z",
+  "generatedAt": "2026-10-13T14:28:24.658Z",
   "personalProgressIncluded": false,
-  "topics": 116,
+  "topics": 139,
   "categories": {
     "animals": 24,
     "history": 31,
     "people": 18,
     "inventions": 12,
     "buildings": 8,
-    "science": 23
+    "science": 46
   },
   "journeys": 16,
   "chapters": 80,
@@ -229,9 +229,9 @@
       "sources": [
         "app/challenge-hints.json"
       ],
-      "entries": 142,
-      "bytes": 33117,
-      "sha256": "d46f879f6c2e58ebd66066e83f7dbb4d2c2a8b8c505aebd8b43c00b648d7dac4"
+      "entries": 165,
+      "bytes": 37743,
+      "sha256": "61c93c0cfea8c650da1fba52df9ef293726f5927e7161db0a61897b1bdd9a3d7"
     },
     {
       "file": "world-connections.json",
@@ -239,26 +239,26 @@
         "app/world-connections.json"
       ],
       "entries": 2,
-      "bytes": 5049,
-      "sha256": "18316bb9b8dfd329e02f0bac538770a2672680fd07d9eb4e5596c4cdd9662ddf"
+      "bytes": 11909,
+      "sha256": "f028bf54fd5b07937d544681d970bc9dd06a192cd6678cf0711b7d884068a61c"
     },
     {
       "file": "world-topics.json",
       "sources": [
         "app/world-catalog.json"
       ],
-      "entries": 116,
-      "bytes": 339206,
-      "sha256": "b8c54fa3792eeacbb17206210a4a615a8f7dd704a54716ef25355857ba84b5f8"
+      "entries": 139,
+      "bytes": 427824,
+      "sha256": "b39344c672ddce1f548a1b3a424da32981623bbe763873e2c12c19f8c67d089d"
     },
     {
       "file": "world-index.json",
       "sources": [
         "app/world-index.json"
       ],
-      "entries": 116,
-      "bytes": 54618,
-      "sha256": "2c7de30e3a25fade4df8a8ff5d0b4a3cce651e2ae33818deee763b5e6442d5d6"
+      "entries": 139,
+      "bytes": 61246,
+      "sha256": "559725c1705f04abe7b884728015b425d7ef2d4c8ddc96c7b099ac8e5a957256"
     },
     {
       "file": "games.json",
@@ -391,9 +391,9 @@
       "sources": [
         "app/world-catalog.json"
       ],
-      "entries": 26,
-      "bytes": 2732,
-      "sha256": "fa3de4e5c8bc7a43a0ee6e16e38213bf7bc6d59c732681e062ff4e17ea4db4aa"
+      "entries": 36,
+      "bytes": 4021,
+      "sha256": "e8e22bd197756b905f6be2c8c438188c8e131c2b11680af6f26cba8b5121db5e"
     }
   ]
 }
