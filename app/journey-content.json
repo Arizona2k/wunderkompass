@@ -122,7 +122,8 @@
           "whyItMatters": "Du vermeidest die Vorstellung von Kontinenten auf einem unterirdischen Lavasee.",
           "observe": "Ordne Mantel, äußeren Kern und inneren Kern nach überwiegend fest oder flüssig. Begründe, warum die Farbe Rot im Modell keine Flüssigkeit beweist.",
           "sourceIds": [
-            "inside-base"
+            "inside-base",
+            "mantle"
           ]
         },
         {
@@ -282,7 +283,8 @@
           "whyItMatters": "Du trennst einen persönlichen Eindruck von einem vergleichbaren Messwert.",
           "observe": "Beschreibe das Wetter ohne Zahlen und mit einem vorhandenen Thermometer. Notiere auch Ort und Zeit und vergleiche beide Beschreibungen.",
           "sourceIds": [
-            "weather-base"
+            "weather-base",
+            "weather-climate"
           ]
         },
         {
@@ -319,7 +321,8 @@
           "whyItMatters": "Du erkennst, warum ein kalter Tag einer langfristigen Erwärmung nicht widerspricht.",
           "observe": "Erfinde keine Messwerte: Vergleiche dein Wetterblatt mit einer datierten Klimabeschreibung. Erkläre, welche unterschiedliche Frage beide beantworten.",
           "sourceIds": [
-            "weather-base"
+            "weather-base",
+            "weather-climate"
           ]
         },
         {
@@ -331,7 +334,8 @@
           "whyItMatters": "Du kannst eine veränderte Vorhersage als neue Einschätzung verstehen.",
           "observe": "Notiere einen Wetterbericht und vergleiche ihn später mit dem beobachteten Wetter. Markiere, was passte und wo die Aussage unsicher war.",
           "sourceIds": [
-            "weather-base"
+            "weather-base",
+            "weather-climate"
           ]
         }
       ],
@@ -467,7 +471,8 @@
           "whyItMatters": "Du kannst Wassertransport und Stofftransport auseinanderhalten.",
           "observe": "Zeichne zwei Pfeile: Wasser ins Meer und Wasser in die Luft. Beschrifte, bei welchem Pfeil gelöste Salze mitreisen können. Kein Meerwasser probieren.",
           "sourceIds": [
-            "ocean-base"
+            "ocean-base",
+            "ocean-salt"
           ]
         },
         {
@@ -503,7 +508,8 @@
           "whyItMatters": "Du beschreibst Meerwasser genauer als mit alles bewegt sich.",
           "observe": "Vergleiche Strömungs- und Gezeitenmodell. Beschreibe einmal eine Bewegung entlang einer Strecke und einmal eine Änderung der Wasserhöhe.",
           "sourceIds": [
-            "ocean-base"
+            "ocean-base",
+            "ocean-currents"
           ]
         }
       ],
@@ -759,7 +765,8 @@
           "whyItMatters": "Du kannst Karten lesen, ohne ihre Darstellung mit der Erde selbst zu verwechseln.",
           "observe": "Vergleiche ein polnahes Land und ein äquatornahes Land auf Kugel und flacher Karte. Beschreibe einen Unterschied der Darstellung.",
           "sourceIds": [
-            "continents-base"
+            "continents-base",
+            "maps"
           ]
         }
       ],
@@ -882,7 +889,8 @@
           "whyItMatters": "Du unterscheidest Namen, Bestandteile und Eigenschaften eines Stoffes.",
           "observe": "Beschrifte im Modell Magma und Lava. Suche zusätzlich die dargestellten Gase und erkläre, weshalb sie zur Beschreibung gehören.",
           "sourceIds": [
-            "volcanoes-base"
+            "volcanoes-base",
+            "volcano-detail"
           ]
         },
         {
@@ -894,7 +902,8 @@
           "whyItMatters": "Du kannst ein vereinfachtes Schnittbild mit passenden Begriffen lesen.",
           "observe": "Verfolge im Schaubild den Weg nach oben. Benenne Sammlung, Durchgang und Öffnung, ohne alle drei als dasselbe Loch zu bezeichnen.",
           "sourceIds": [
-            "volcanoes-base"
+            "volcanoes-base",
+            "volcano-detail"
           ]
         },
         {
@@ -906,7 +915,8 @@
           "whyItMatters": "Du kannst eine Vermutung an einem kontrollierten Modellvergleich prüfen.",
           "observe": "Lass den Gasregler im Vulkanlabor gleich und verändere nur die Zähigkeit. Beschreibe den Unterschied und sage dazu, dass dies keine Vorhersage ist.",
           "sourceIds": [
-            "volcanoes-base"
+            "volcanoes-base",
+            "volcano-detail"
           ]
         },
         {
@@ -918,7 +928,8 @@
           "whyItMatters": "Du lernst, aus einem Bild Hinweise zu gewinnen, ohne zu viel daraus zu schließen.",
           "observe": "Vergleiche Schild- und Schichtvulkan im Bild. Trenne zwei sichtbare Unterschiede von einer Aussage, die das Bild allein nicht belegen kann.",
           "sourceIds": [
-            "volcanoes-base"
+            "volcanoes-base",
+            "volcano-detail"
           ]
         },
         {
@@ -930,7 +941,8 @@
           "whyItMatters": "Du unterscheidest Lernen über einen Vulkan von einer wirklichen Gefahrenbewertung.",
           "observe": "Nenne drei beobachtbare Messarten aus dem Kapitel. Erkläre dann, weshalb unser Modell keinen Ausbruch eines echten Vulkans vorhersagt.",
           "sourceIds": [
-            "volcanoes-base"
+            "volcanoes-base",
+            "volcano-detail"
           ]
         }
       ],
@@ -954,7 +966,7 @@
       "icon": "layers",
       "color": "orange",
       "minutes": 7,
-      "source": "https://www.usgs.gov/programs/earthquake-hazards/science/science-earthquakes",
+      "source": "https://www.usgs.gov/programs/earthquake-hazards/science-earthquakes",
       "sourceName": "USGS · Erdbeben",
       "activity": "Lege eine Hand flach auf den Tisch. Klopfe mit der anderen ganz leicht daneben. Spürst du die Bewegung? Das ist nur ein Vergleich für Wellen.",
       "steps": [
@@ -1039,7 +1051,7 @@
       "icon": "sun",
       "color": "blue",
       "minutes": 8,
-      "source": "https://science.nasa.gov/moon/",
+      "source": "https://science.nasa.gov/moon/facts/",
       "sourceName": "NASA · Mond",
       "activity": "Beobachtet gemeinsam den Mond an mehreren Abenden. Zeichnet die Form und notiert das Datum.",
       "steps": [
@@ -1100,7 +1112,8 @@
           "whyItMatters": "Du beschreibst Zusammenarbeit, ohne nur die sichtbarste Person zu nennen.",
           "observe": "Ordne Armstrong, Aldrin und Collins ihren Aufgaben bei Apollo 11 zu. Erkläre, weshalb zwei Oberflächenbesuche nicht bedeuten, dass nur zwei Menschen beteiligt waren.",
           "sourceIds": [
-            "moon-base"
+            "moon-base",
+            "apollo"
           ]
         }
       ],
@@ -1161,7 +1174,8 @@
           "whyItMatters": "Du erkennst, dass eine gemeinsame Regel nicht automatisch ein Naturgesetz ist.",
           "observe": "Finde den Nullmeridian und den Äquator. Beschrifte null Grad Länge und null Grad Breite und erkläre den Unterschied.",
           "sourceIds": [
-            "navigation-base"
+            "navigation-base",
+            "meridian"
           ]
         },
         {
@@ -1270,7 +1284,8 @@
           "whyItMatters": "Du unterscheidest Eisbewegung von Wachstum oder Rückzug.",
           "observe": "Vergleiche Gletscher und Eisberg im Schaubild. Zeichne ihre Lage zu Land und Wasser und sage, welche Darstellung eine gedachte Vereinfachung ist.",
           "sourceIds": [
-            "landscapes-base"
+            "landscapes-base",
+            "glaciers"
           ]
         }
       ],
@@ -1307,7 +1322,8 @@
           "whyItMatters": "Du kannst kurzfristige Beobachtungen und langfristige Aussagen passend einordnen.",
           "observe": "Notiere einen Wetterzustand und eine Klimaaussage. Erkläre für beide, welchen Zeitraum du zum Überprüfen brauchen würdest.",
           "sourceIds": [
-            "climate-base"
+            "climate-base",
+            "weather-climate"
           ]
         },
         {
@@ -1343,7 +1359,8 @@
           "whyItMatters": "Du lernst, eine Pflanzenkarte zu erklären und weitere Einflussgrößen mitzudenken.",
           "observe": "Vergleiche Wald und Tundra auf der Karte. Beschreibe sichtbare Pflanzenformen und markiere, welche weiteren Bedingungen die Karte nicht zeigt.",
           "sourceIds": [
-            "climate-base"
+            "climate-base",
+            "weather-climate"
           ]
         },
         {
@@ -1355,7 +1372,8 @@
           "whyItMatters": "Du erkennst einen Zusammenhang zwischen einer Art und ihrem ganzen Umfeld.",
           "observe": "Wähle eine Art aus der Tierwelt. Erkläre eine passende Schutzidee mit einem Bedürfnis der Art; beobachte Tiere nur mit Abstand.",
           "sourceIds": [
-            "climate-base"
+            "climate-base",
+            "weather-climate"
           ]
         }
       ],

@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Codex",
+  "checkedOn": "2026-10-13",
+  "coverage": "Ausgewählte konkrete neue Präzisierungen; Einzel-Claim-Abnahme aller80 Kapitel weiterhin offen.",
+  "conflicts": [
+    {
+      "source": "NASA Earth Facts",
+      "finding": "Mantelabschnitt bezeichnet pauschal geschmolzenesGestein; daraus kein weltweiterLavasee abgeleitet. DifferenzierenderUSGS-Beleg und vorhandene korrekteManteltexte bewahrt."
+    },
+    {
+      "source": "NOAA Salinity",
+      "finding": "Formulierung Magma vom Erdkern nicht übernommen; eigeneTexte behaupten das nicht."
+    }
+  ],
+  "checks": [
+    {
+      "id": "mantle",
+      "url": "https://www.usgs.gov/faqs/are-tectonic-plates-floating-magma",
+      "checkedOn": "2026-10-13",
+      "method": "Suchindexauszug; Direktabruf Timeout",
+      "independentHumanReview": false,
+      "rights": "Nur Originalverweis und eigene Erklärung, keine fremden Texte/Bilder eingebunden.",
+      "limitation": "Keine pauschale Freigabe aller Kapitelbehauptungen."
+    },
+    {
+      "id": "ocean-salt",
+      "url": "https://oceanservice.noaa.gov/facts/whysalty.html",
+      "checkedOn": "2026-10-13",
+      "method": "Direkttext geöffnet; Herkunft und Salzgehalt",
+      "independentHumanReview": false,
+      "rights": "Nur Originalverweis und eigene Erklärung, keine fremden Texte/Bilder eingebunden.",
+      "limitation": "Keine pauschale Freigabe aller Kapitelbehauptungen."
+    },
+    {
+      "id": "ocean-currents",
+      "url": "https://oceanservice.noaa.gov/facts/current.html",
+      "checkedOn": "2026-10-13",
+      "method": "Direkttext geöffnet; Antriebe von Strömungen",
+      "independentHumanReview": false,
+      "rights": "Nur Originalverweis und eigene Erklärung, keine fremden Texte/Bilder eingebunden.",
+      "limitation": "Keine pauschale Freigabe aller Kapitelbehauptungen."
+    },
+    {
+      "id": "weather-climate",
+      "url": "https://www.noaa.gov/explainers/what-s-difference-between-climate-and-weather",
+      "checkedOn": "2026-10-13",
+      "method": "Direkttext geöffnet; verschiedene Zeitskalen",
+      "independentHumanReview": false,
+      "rights": "Nur Originalverweis und eigene Erklärung, keine fremden Texte/Bilder eingebunden.",
+      "limitation": "Keine pauschale Freigabe aller Kapitelbehauptungen."
+    },
+    {
+      "id": "volcano-detail",
+      "url": "https://www.usgs.gov/programs/VHP/about-volcanoes",
+      "checkedOn": "2026-10-13",
+      "method": "Direkttext geöffnet; Gemisch, Weg, Ausbruchsformen",
+      "independentHumanReview": false,
+      "rights": "Nur Originalverweis und eigene Erklärung, keine fremden Texte/Bilder eingebunden.",
+      "limitation": "Keine pauschale Freigabe aller Kapitelbehauptungen."
+    },
+    {
+      "id": "maps",
+      "url": "https://education.nationalgeographic.org/resource/selecting-map-projection/",
+      "checkedOn": "2026-10-13",
+      "method": "Direkttext geöffnet; Auswahl und Verzerrung",
+      "independentHumanReview": false,
+      "rights": "Nur Originalverweis und eigene Erklärung, keine fremden Texte/Bilder eingebunden.",
+      "limitation": "Keine pauschale Freigabe aller Kapitelbehauptungen."
+    },
+    {
+      "id": "glaciers",
+      "url": "https://www.nps.gov/subjects/geology/glacial-landforms.htm",
+      "checkedOn": "2026-10-13",
+      "method": "Direktseite erreichbar; ausgewählte Landschaftsprozesse",
+      "independentHumanReview": false,
+      "rights": "Nur Originalverweis und eigene Erklärung, keine fremden Texte/Bilder eingebunden.",
+      "limitation": "Keine pauschale Freigabe aller Kapitelbehauptungen."
+    },
+    {
+      "id": "apollo",
+      "url": "https://www.nasa.gov/history/apollo-11-mission-overview/",
+      "checkedOn": "2026-10-13",
+      "method": "Suchindexauszug; Besatzung und Aufgaben",
+      "independentHumanReview": false,
+      "rights": "Nur Originalverweis und eigene Erklärung, keine fremden Texte/Bilder eingebunden.",
+      "limitation": "Keine pauschale Freigabe aller Kapitelbehauptungen."
+    },
+    {
+      "id": "meridian",
+      "url": "https://www.rmg.co.uk/stories/time/what-prime-meridian-why-it-greenwich",
+      "checkedOn": "2026-10-13",
+      "method": "Suchindexauszug; historischer und moderner Meridian",
+      "independentHumanReview": false,
+      "rights": "Nur Originalverweis und eigene Erklärung, keine fremden Texte/Bilder eingebunden.",
+      "limitation": "Keine pauschale Freigabe aller Kapitelbehauptungen."
+    }
+  ]
+}
