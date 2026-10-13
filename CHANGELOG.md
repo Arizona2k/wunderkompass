@@ -1,5 +1,14 @@
 # Änderungsverlauf
 
+## 13. Oktober 2026 · Paket3.5, vernetzte Kapitel-Inhaltswelle (noch nicht bereitgestellt)
+
+- Alle80 bestehenden Kapitel erhalten individuell verfasste zusätzliche Erklärungen, einfache Einstiege, freiwillige Vertiefungen, konkreteNutzen- undBeobachtungstexte. Keine neuenKapitelidentitäten oder pauschaleFach-/Kinderabnahme.
+- GlobaleSuche führt auch zu allen80 einzelnenKapiteladressen statt lediglichdergespeichertenReisestation.
+- VollständigeReise-/Buchtexte als bedarfsweiseversionierteJSON-Assets; kompakteIndices, strikteValidierung, sharedFetch, Timeout/Retry, separateTextbudgets beiunverändertenJS-/CSS-Grenzen.
+- UngekürzteOriginalaufträge mitbytegleichemQuellnachweis; alte3.5-Baseline erhalten. PR26 anhand tatsächlicherMerge-/Vercel-Quittung nachgeführt, aktuelleKapitelwelle getrenntunbestätigt.
+- Ausgewählte fachlicheBelege und Quellenwidersprüche dokumentiert; vollständige80/80-Claim-/Grafik-/240-Aufgabenabnahme undalle9Verdopplungen bleibenoffen. News-Livebetrieb unverändertausgeschaltet.
+
+
 ## 13. Oktober 2026 – Paket 3.5, Grundlagenwelle 0–1 (PR-Vorbereitung, unveröffentlicht)
 
 - Wissensartikel zeigen alle passenden Reisekapitel aus der bestehenden Verknüpfungstabelle. Weitere Stationen sind pro Reise freiwillig aufklappbar und erhalten Vorschauen aus vorhandenen Kapiteltexten.

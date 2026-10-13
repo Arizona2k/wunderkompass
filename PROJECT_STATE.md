@@ -8,6 +8,14 @@ Jetzt tatsächliche große kohärente Inhalts-/Engineeringwellen WK053–057 bea
 
 80/80 Redaktionsabschluss, neun Verdopplungen und plattformweite Fach-/Produktabnahme derzeit offen. Externe News-/Hardware-/Assistenz-/Hör-/Kinder-/Fachgates bleiben ausdrücklich offen; News disabled, keine Aktivierung. Keine eigenständige Übernahme/Publikation/Kosten. Pakete4–8 nach3.5 unverändert. WK038 bleibt gesondert spätere Nachfolgearbeit.
 
+Gesicherte echte Implementierung: 56d494db86e4a143830728e39626e20b0dc270fd (80 individuelle Ergänzungen/Bedarfsdaten/Originalarchiv) und8e0b74f31c72574d358fb8c32ec332b5b92bcb3f (80 direkte Suchziele/konkrete Quellenverweise/aktuellerBranch-Deploy ausdrücklichdisabled). ZweiterCheckpoint nachGitHub gepusht, keinMerge/Deployment.114 Unitfälle und gezielte91,80-s-Reiseprobe am erstenCodeumfang bestanden; neue Suche/Quellenänderungen benötigen aktuelleVollprüfung. Alle80 neueTexte/Altersstaffeln/Beobachtungen tatsächlich inUI geprüft; keine individuelleWissenschafts-/Kinderfreigabe. BaselineN unverändert. NeueFacheinträge für9Mindestverdopplungen weiterhin0.
+
+Aktuell nächsterSchritt: aktuelle114+Unit-/Release-/Typ-/Lint-/Export-/Buildprüfung, frischec9-Vergleichsmessung, ganzeBrowserregression samt80Kapitel-Suche/kaltemOffline/Pass/Signatur/Archiv, kritischefinaleBildsichtung; danach koordinierterReady-PR gegentest-live undexakterGitHubQuality inklusiveFirefox/WebKit. Originalarchiv enthältalle3Originale bytegleich samtHashes; keine bloßeKurzfassung. OffeneClaims/Grafiken/Distraktoren undFachverdopplungen im selbenBACKLOG weiterzuführen; keine endgültigeGO-Empfehlung.
+
+Kapitelwelle2 lokal vollständig technisch geprüft:114 Unitfälle,27 Releasefälle, TypeScript/ESLint/aktueller40-Quellenabgleich/Build undunveränderteBudgets bestanden. VollerChromiumlauf633,068s/117Prüfbezeichnungen/alle10Gruppen,80individuelleTextansichten/240Altaufgaben/80Suchziele/80kalteOfflinekapitel; Pass/Sicherung/ZweiTab/Altstand/Worker/Signatur/Archiv erhalten. Ein echterTestbefund war eine zu breiteDateinamenerkennung (Loader-JS stattJSON); auftatsächlicheDatendateien präzisiert undvollständig erneut geprüft. Source-/Bild-/Aufgaben-/Fach-/Kinderabnahme bleibt separat offen.
+
+Frischec9-Baseline:277.929gzip Einstieg-JS/1.099.250gzip Gesamt-JS. Kapitel-/Suchwelle:266.483/1.091.869, Textassets37.986gzip zusätzlich(129kB roh); Gesamttransfer mitmehr Inhalt steigt, daher keinepauschaleWebsite-Beschleunigung.3warmeBuilds p50 1,909→2,011s, keineBuildbeschleunigung. Volle633-s-Probe istmitgrößererAbdeckung längeralsvorige579,90-s-Einzelprobe. Nächste sicher mögliche großeInhaltswelleWK053: Wissenschaftsbestand23→46 mitindividuellquellengebundenenAlt-/Neuerklärungen, passenderLernhandlung/Medienentscheidung undechterUI/Suche/Quervernetzung; andere8Verdopplungen weiteroffen. KeinWechselzuPaket4.
+
 ---
 
 ## Vorherige gesicherte Wellen (historische Checkpoints)

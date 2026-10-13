@@ -17,7 +17,7 @@ export async function performanceFlow(browser,base,ready,monitor,report){
    const metrics=await p.evaluate(()=>{const resources=performance.getEntriesByType('resource').map(r=>({file:new URL(r.name).pathname,bytes:r.decodedBodySize}));return {...window.__wkPerf,jsBytes:resources.filter(r=>r.file.endsWith('.js')).reduce((n,r)=>n+r.bytes,0),globe:resources.some(r=>/\/globe-/.test(r.file)),geometry:resources.some(r=>r.file==='/world.json'),resources,scrollY};});
    report.performance.samples.push({area:name,sample,readyMs,...metrics});
    assert.equal(metrics.globe,false,name+' must not preload the 3D globe');
-   if(['home','world','updates','journeys'].includes(name)){assert.ok(!metrics.resources.some(r=>/book-content-|journey-content-/.test(r.file)),name+' does not eagerly load learning text payloads');}
+   if(['home','world','updates','journeys'].includes(name)){assert.ok(!metrics.resources.some(r=>/(book-content|journey-content)-.*\.json$/.test(r.file)),name+' does not eagerly load learning text payloads');}
    if(['home','world','updates'].includes(name))assert.equal(metrics.geometry,false,name+' does not need country polygons');
    assert.ok(metrics.jsBytes<=(name==='home'?budgets.homeJsBytes:budgets.areaJsBytes),name+' initial JS budget');
    assert.ok(metrics.cls<=(name==='home'?budgets.homeCls:budgets.areaCls),name+' layout shift budget: '+metrics.cls);
