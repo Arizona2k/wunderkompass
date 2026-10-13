@@ -8,7 +8,11 @@ async function geometry(page,card,label){
  const clipped=await card.locator('h3,h4,p,summary,button,a,label').evaluateAll(nodes=>nodes.flatMap(el=>{
   if(!el.getClientRects().length)return [];const r=el.getBoundingClientRect();return r.left< -2||r.right>innerWidth+2||el.scrollWidth>el.clientWidth+2?[el.tagName+':'+el.textContent.slice(0,60)]:[];
  }));assert.deepEqual(clipped,[],label+' readable book text and controls');
- for(const control of await card.locator('button,summary,input,a').all())if(await control.isVisible()){const r=await control.boundingBox();assert.ok(r.height>=44,label+' touch height');}
+ for(const control of await card.locator('button,summary,input,a').all())if(await control.isVisible()){
+  const r=await control.boundingBox();
+  const detail=await control.evaluate(el=>({tag:el.tagName,type:el.getAttribute('type'),text:el.textContent?.slice(0,100),rect:el.getBoundingClientRect().toJSON(),minHeight:getComputedStyle(el).minHeight,height:getComputedStyle(el).height}));
+  assert.ok(r&&r.height>=44,label+' touch height '+JSON.stringify({box:r,element:detail}));
+ }
 }
 async function exercise(page,card,name){
  const l=book.learning[name];await card.getByText(l.benefit,{exact:true}).waitFor();
