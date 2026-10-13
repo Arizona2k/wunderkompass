@@ -1,5 +1,12 @@
 # Änderungsverlauf
 
+## Paket3.5 – Messen verstehen und Wissensbuch zuverlässiger bedienen (unveröffentlicht)
+
+- Sieben eigene SI-Begriffserklärungen mit freiwilligen Altersstufen, Beobachtungen, individuellen Denkfragen/Hilfen/Falschbegründungen und Quellen: Buch90→97 roh, alle90 Alttexte/30 Warum-Antworten und Pass-IDs erhalten. Drei begrenzte Zahlenmodelle und genaue6-Kugel-/3-Paar-Zählskizze; keine unabhängige Fachfreigabe behauptet.
+- Kontrast in Rückmeldungen nach echtemaxe-Befund korrigiert. Buchaktionen mitAbstand, Alphabet passend zumgewähltenThema; exakteWorttreffer bevorzugt, direkteWörter fokussiert und offeneDetails/Linkfokus beimBack erhalten.
+- Vollständige Buch-/Warum-/Vertiefungsidentitäten vorAnzeige/Cache geprüft: gut geformte aber verkürzte Daten werden zurückgehalten, ausdrücklichesRetry stellt vollständigeDaten wiederher. Keine Passmigration oder zweite Datenquelle.
+- Vollständige lokale Pflichtabnahme124 Unitfälle/27 Releasefälle/zehn Chromium-Gruppen789,55s, alterPass/Backup/Worker/Offline, alle siebenBreiten, native200% und Buchfavorit erhalten.998 Originalbilder,344 kuratiert45.857.223Byte; Grenzen unverändert. Engine-Abnahme umalle7 Wörter×4 Breiten erweitert; neuer exakter GitHub-Lauf erforderlich. Ganzer3.5-Auftrag bleibt inArbeit.
+
 ## Paket3.5 – Lernfragen, Kapitelgrafiken und effizientere Abnahme (unveröffentlicht)
 
 - 32 Reiseaufgaben erhalten plausible fachbezogene Fehlantworten und passende Begründungen; zwei Jahreszeitenfragen ausdrücklich für Deutschland. Alle240 richtigen Antworten, Indizes und Aufgabenidentitäten bleiben erhalten.

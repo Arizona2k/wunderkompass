@@ -6,6 +6,9 @@ import {sourceDigest} from './handoff.mjs';
 export const REVIEW_LIMIT=48*1024*1024;
 export const requiredScreenshots=[...['320','360','390','768','1024','1440','1920'].flatMap(w=>['quality-foundation-foundation-labs-'+w+'.png','quality-learning-journey-links-'+w+'.png']),...['320','1440'].flatMap(w=>['quality-news-feed-signed-news-rejected-'+w+'.png','quality-navigation-updates-all-details-'+w+'-full.png'])];
 export function retainScreenshot(name){
+ // Full open word cards remain captured/hashed; retain readable model close-ups
+ // and native combined zoom instead of seven very long cards at both widths.
+ if(/quality-learning-book-/.test(name))return /book-(?:model-(?:length|duration|temperature)-(?:320|1440)|temperature-large-320|native-200-large)\.png$/.test(name);
  if(/quality-(?:learning|research)-science-/.test(name))return /science-(?:native-200-large|(?:surface-tension|encryption)-large-320)\.png$/.test(name)||/science-(pressure|diffusion|fractals|cell|fusion|comet|exoplanet)-(hero|model)-(320|1440)\.png$/.test(name);
  // Engine tests still capture/measure four widths; upload mobile+desktop originals.
  if(name.startsWith('journey-engine-'))return /-(320|1440)\.png$/.test(name);

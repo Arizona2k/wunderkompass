@@ -1,5 +1,8 @@
 import scienceReview from '../content/science-editorial-review.json' with {type:'json'};
+import bookReview from '../content/book-editorial-review.json' with {type:'json'};
 export const REQUIRED_SCIENCE_ZOOM_IDS=scienceReview.topics.filter(t=>t.kind==='new').map(t=>t.id);
+export const REQUIRED_BOOK_TERMS=bookReview.entries.map(e=>e.id.slice('words:'.length));
+const sameSet=(actual,expected)=>Array.isArray(actual)&&actual.length===expected.length&&new Set(actual).size===actual.length&&expected.every(id=>actual.includes(id));
 export const REQUIRED_SUITES=['foundation','home','core','playground','backup','challenge','research','journeys','offline','news-feed'];
 export function aggregateQuality(outcomes){
  const seen=new Set(),result={scope:'complete mandatory regression',status:'passed',selectedSuites:REQUIRED_SUITES,workers:[],checks:[],views:[],timings:[],errors:[],consoleErrors:[],failedRequests:[],ownHttpErrors:[],externalRequests:[]};let build,browser;
@@ -10,7 +13,12 @@ export function aggregateQuality(outcomes){
   if(!report.build||!report.browser)throw Error('Missing build/browser proof');if(build&&build!==report.build||browser&&browser!==report.browser)throw Error('Mixed build/browser proof');build=report.build;browser=report.browser;
   for(const suite of worker.suites){if(seen.has(suite)||!REQUIRED_SUITES.includes(suite)||!report.selectedSuites.includes(suite))throw Error('Duplicate, unknown or missing suite '+suite);seen.add(suite);for(const phase of suite==='foundation'?['performance','components']:[suite])if(!report.timings.some(t=>t.suite===phase&&Number.isFinite(t.seconds)&&t.seconds>0))throw Error('Missing phase timing '+phase);}
   if(report.selectedSuites.length!==worker.suites.length)throw Error('Worker scope mismatch');
-  if(worker.suites.includes('journeys')){const z=report.nativeZoom;if(z?.percent!==200||z.cssWidth!==640||z.scale!==2||z.largeTextAlsoChecked!==true)throw Error('Missing actual native journey zoom proof');}
+  if(worker.suites.includes('journeys')){const z=report.nativeZoom;if(z?.percent!==200||z.cssWidth!==640||z.scale!==2||z.largeTextAlsoChecked!==true)throw Error('Missing actual native journey zoom proof');
+   const b=report.bookCoverage,bz=report.bookNativeZoom,requiredWidths=[320,360,390,768,1024,1440,1920];
+   if(!sameSet(b?.terms,REQUIRED_BOOK_TERMS)||!sameSet(b.widths,requiredWidths)||!sameSet(b.models,['length','duration','temperature'])||!Array.isArray(b.observed)||b.observed.length!==REQUIRED_BOOK_TERMS.length*requiredWidths.length||new Set(b.observed.map(v=>v.name+':'+v.width)).size!==b.observed.length||!REQUIRED_BOOK_TERMS.every(name=>requiredWidths.every(width=>b.observed.some(v=>v.name===name&&v.width===width))))throw Error('Missing complete actual book viewport proof');
+   if(bz?.percent!==200||bz.cssWidth!==640||bz.scale!==2||bz.largeTextAlsoChecked!==true||!sameSet(bz.terms,REQUIRED_BOOK_TERMS))throw Error('Missing actual native book zoom proof');
+  }
+  if(worker.suites.includes('offline')&&(!sameSet(report.bookOffline?.terms,REQUIRED_BOOK_TERMS)||report.bookOffline.retainedFavorite!==true))throw Error('Missing cold offline book proof');
   if(worker.suites.includes('research')){const z=report.scienceNativeZoom;if(z?.percent!==200||z.cssWidth!==640||z.scale!==2||z.cards!==REQUIRED_SCIENCE_ZOOM_IDS.length||z.largeTextAlsoChecked!==true||!Array.isArray(z.ids)||z.ids.length!==REQUIRED_SCIENCE_ZOOM_IDS.length||new Set(z.ids).size!==z.ids.length||REQUIRED_SCIENCE_ZOOM_IDS.some(id=>!z.ids.includes(id)))throw Error('Missing actual native science zoom proof');}
   result.workers.push({name:worker.name,suites:worker.suites,seconds:report.seconds,report:worker.name+'/portable-report.json',...(report.fixtureConfiguration?{fixtureConfiguration:true}:{} )});
   for(const [key,value] of Object.entries(report)){

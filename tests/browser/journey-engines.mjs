@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';import path from 'node:path';import assert fro
 import JOURNEYS from '../../exports/content/journeys.json' with {type:'json'};
 import DATA from '../../app/journey-inquiries.json' with {type:'json'};
 import {sourceDigest} from '../../scripts/handoff.mjs';
+import {bookEngineFlow} from './book-excellence.mjs';
 import {chromium,firefox,webkit} from '../../qa/node_modules/playwright/index.mjs';
 const engines=process.argv.includes('--chromium-only')?['chromium']:['firefox','webkit'],port=4480,base='http://127.0.0.1:'+port,report={build:(await fs.readFile('dist/index.html','utf8')).match(/name="learning-build" content="([^"]+)"/)?.[1],sourceDigest:await sourceDigest(),status:'running',scope:engines.join('+'),engines:[],errors:[]};
 const server=spawn(process.execPath,['tests/browser/preview-server.mjs'],{env:{...process.env,QA_PORT:String(port)},stdio:['ignore','pipe','pipe']});let log='';server.stdout.on('data',b=>log+=b);server.stderr.on('data',b=>log+=b);let browser;
@@ -13,7 +14,8 @@ try{
   await p.evaluate(()=>location.hash='journeys/water/3');await p.locator('[data-chapter-inquiry="water:2"]').waitFor();await p.getByRole('button',{name:'Weiter entdecken',exact:true}).click();await p.locator('[data-chapter-inquiry="water:3"]').waitFor();await p.goBack();await p.locator('[data-chapter-inquiry="water:2"]').waitFor();await p.reload();await p.locator('[data-chapter-inquiry="water:2"]').waitFor();
   for(const width of [320,390,768,1440]){await p.setViewportSize({width,height:900});await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);await p.locator('.journey-levels button').nth(1).focus();await p.screenshot({path:'.qa-output/journey-engine-'+name+'-'+width+'.png',fullPage:true,animations:'disabled'});}
   await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});assert.deepEqual(await p.evaluate(async()=>(await window.axe.run('.journey-reader',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
-  report.engines.push({name,version:browser.version(),chapters:checked,widths:[320,390,768,1440],seconds:(performance.now()-started)/1000});await browser.close();browser=null;
+  const bookProof=await bookEngineFlow(p,'.qa-output',name);
+  report.engines.push({name,version:browser.version(),chapters:checked,widths:[320,390,768,1440],...bookProof,seconds:(performance.now()-started)/1000});await browser.close();browser=null;
  }
  assert.deepEqual(report.errors,[]);report.status='passed';
 }catch(error){report.status='failed';report.failure=error.stack;throw error;}

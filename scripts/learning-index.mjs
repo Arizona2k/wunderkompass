@@ -7,7 +7,7 @@ export function journeyIndex(data){return data.journeys.map(j=>({...j,steps:j.st
 export function learningIndexes(check=false){
  const book=JSON.parse(fs.readFileSync('app/book-content.json','utf8')),journeys=JSON.parse(fs.readFileSync('app/journey-content.json','utf8'));
  validateBookData(book);validateJourneyContent(journeys,journeyIndex(journeys),JSON.parse(fs.readFileSync('app/journey-sources.json','utf8')));
- const outputs={'app/book-word-index.json':book.words.map(w=>w[0]),'app/journey-index.json':journeyIndex(journeys)};
+ const outputs={'app/book-word-index.json':book.words.map(w=>w[0]),'app/book-why-index.json':book.why.map(w=>w[0]),'app/book-learning-index.json':Object.keys(book.learning??{}),'app/journey-index.json':journeyIndex(journeys)};
  for(const [file,data] of Object.entries(outputs)){
   if(check){if(JSON.stringify(JSON.parse(fs.readFileSync(file,'utf8')))!==JSON.stringify(data))throw Error('Stale public learning index: '+file);}
   else fs.writeFileSync(file,JSON.stringify(data,null,2)+'\n');

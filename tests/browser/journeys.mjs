@@ -1,3 +1,4 @@
+import {bookExcellenceFlow} from './book-excellence.mjs';
 import {nativeJourneyZoom} from './journey-zoom.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -5,6 +6,7 @@ import path from 'node:path';
 import JOURNEYS from '../../exports/content/journeys.json' with {type:'json'};
 import {CHAPTER_LINKS} from '../../app/journey-links.ts';
 import data from '../../app/journey-inquiries.json' with {type:'json'};
+import book from '../../app/book-content.json' with {type:'json'};
 const editorial=JOURNEYS.flatMap(j=>j.steps.map((s,i)=>({...s,id:j.id+':'+i})));
 const saveKey='erde-entdecken:save:v3';
 async function open(p,id,index){await p.evaluate(route=>location.hash=route,'journeys/'+id+'/'+(index+1));await p.locator('[data-chapter-inquiry="'+id+':'+index+'"]').waitFor();}
@@ -69,9 +71,14 @@ export async function journeysFlow(browser,base,ready,monitor,report,shots,nativ
  const contentBroken=await browser.newContext({viewport:{width:320,height:844}}),contentPage=await contentBroken.newPage();monitor(contentPage);let contentRequests=0;const malformedContent=structuredClone({schemaVersion:1,journeys:JOURNEYS});delete malformedContent.journeys[0].steps[0].deeper;
  await contentPage.route('**/journey-content-*.json',async route=>{contentRequests++;if(contentRequests===1)await route.fulfill({json:malformedContent});else await route.continue();});
  await contentPage.goto(base+'/#journeys/water/3');await ready(contentPage);await contentPage.getByRole('button',{name:'Kapiteltext erneut laden',exact:true}).waitFor();assert.equal(await contentPage.getByText(JOURNEYS.find(j=>j.id==='water').steps[2].deeper,{exact:true}).count(),0);await contentPage.getByRole('button',{name:'Kapiteltext erneut laden',exact:true}).click();await contentPage.getByText(JOURNEYS.find(j=>j.id==='water').steps[2].whyItMatters,{exact:true}).waitFor();assert.equal(contentRequests,2);await contentBroken.close();report.checks.push('Invalid full chapter set is withheld; safe compact preview and pass survive, explicit retry recovers current complete content');
- const bookBroken=await browser.newContext({viewport:{width:390,height:844}}),bookPage=await bookBroken.newPage();monitor(bookPage);let bookRequests=0;
- await bookPage.route('**/book-content-*.json',async route=>{bookRequests++;if(bookRequests===1)await route.fulfill({json:{schemaVersion:1,words:[['A','B','<bad>']],why:[['Q','A']]}});else await route.continue();});
- await bookPage.goto(base+'/#book');await ready(bookPage);await bookPage.getByRole('button',{name:'Wissensbuch erneut laden',exact:true}).waitFor();assert.equal(await bookPage.locator('.word-card').count(),0);await bookPage.getByRole('button',{name:'Wissensbuch erneut laden',exact:true}).click();await bookPage.locator('.word-card').first().waitFor();assert.equal(bookRequests,2);await bookBroken.close();report.checks.push('Damaged book payload shows no unvalidated words; explicit retry restores all old glossary functions');
+ for(const damage of ['unsafe','partial-words','partial-why']){
+  const bookBroken=await browser.newContext({viewport:{width:390,height:844}}),bookPage=await bookBroken.newPage();monitor(bookPage);let bookRequests=0;const invalidBook=structuredClone(book);
+  if(damage==='unsafe')invalidBook.words[0][2]='<bad>';else if(damage==='partial-words')invalidBook.words.shift();else invalidBook.why.pop();
+  await bookPage.route('**/book-content-*.json',async route=>{bookRequests++;if(bookRequests===1)await route.fulfill({json:invalidBook});else await route.continue();});
+  await bookPage.goto(base+'/#book');await ready(bookPage);await bookPage.getByRole('button',{name:'Wissensbuch erneut laden',exact:true}).waitFor();assert.equal(await bookPage.locator('.word-card').count(),0);await bookPage.getByRole('button',{name:'Wissensbuch erneut laden',exact:true}).click();await bookPage.locator('.word-card').first().waitFor();assert.equal(bookRequests,2);await bookBroken.close();
+ }
+ report.checks.push('Unsafe or well-formed partial word/why payloads show no unvalidated book; explicit retry retrieves the complete book without caching missing entries');
+ await bookExcellenceFlow(browser,base,ready,monitor,report,shots);
  await nativeJourneyZoom(nativeBrowser.chromium,nativeBrowser.options,base,report,shots);
 }
 export async function prepareOfflineJourneys(p){await open(p,'water',2);const inquiry=p.locator('.journey-inquiry');await inquiry.locator('.journey-levels button').nth(2).click();await reveal(inquiry,'Dein Forschermerkzettel · freiwillig');await inquiry.locator('textarea').fill('Offline-Sicherung: Wasser kann seinen Zustand ändern.');await p.waitForFunction(key=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['journey:water']['chapter:2:note']==='Offline-Sicherung: Wasser kann seinen Zustand ändern.',saveKey);}

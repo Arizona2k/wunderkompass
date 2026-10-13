@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T18:28:35.082Z",
+  "generatedAt": "2026-10-13T22:27:12.226Z",
   "personalProgressIncluded": false,
   "topics": 139,
   "categories": {
@@ -13,7 +13,7 @@
   "journeys": 16,
   "chapters": 80,
   "quizQuestions": 76,
-  "knowledgeWords": 90,
+  "knowledgeWords": 97,
   "whyQuestions": 30,
   "routes": 8,
   "files": [
@@ -97,15 +97,15 @@
         "app/book-content.json",
         "app/book-word-index.json"
       ],
-      "entries": 90,
-      "bytes": 14909,
-      "sha256": "696126ab6b5c81531c9e5f33d66ffa9221f69ca227e970d4d4558aefc4f6eb98"
+      "entries": 97,
+      "bytes": 33948,
+      "sha256": "af6ad586bfec15c0ff8324dfc12879aceeb5070bc4d42e8b22d9adc6b43a4e97"
     },
     {
       "file": "why-questions.json",
       "sources": [
         "app/book-content.json",
-        "app/book-word-index.json"
+        "app/book-why-index.json"
       ],
       "entries": 30,
       "bytes": 7428,

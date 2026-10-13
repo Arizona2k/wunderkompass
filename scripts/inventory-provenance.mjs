@@ -14,7 +14,7 @@ export const surfaceStates=[
  ['journeys',['16-overviews','filters','80-chapters','three-levels','hint','wrong-answer','right-answer','sequence','note','resume','chapter-link','final-stamp']],
  ['games',['31-offers','filters','offer-entry','hint','wrong-answer','correct-answer','round-resume','finish','repeat']],
  ['labs',['11-models','three-levels','hint','measurement','comparison','note','model-limits','six-home-experiments','mission-entry']],
- ['book',['words','word-filter','why-open','notebook','nature-atlas','country-atlas','more-results','no-results']],
+ ['book',['words','word-filter','word-open-levels','measurement-models','word-hint','word-wrong-correct','word-sources','word-link-back-focus','book-partial-retry','why-open','notebook','nature-atlas','country-atlas','more-results','no-results']],
  ['updates',['latest','old-archive','all-details','prepared','source-evidence','back-focus']],
  ['news',['editorial','automatic','sources','archive','valid-refresh','rejected-signature','stale','offline','retry']],
  ['pass',['overview','badges','statistics','display','speech-settings','backup-export','backup-import-valid','backup-import-invalid','reset-confirmation','two-tabs']],
