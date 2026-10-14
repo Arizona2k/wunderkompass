@@ -6387,14 +6387,14 @@
       "id": "words:Verschlüsselung",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept. Formal semantic and independent acceptance open.",
-      "contentHash": "483de5f12707f91e8fbc8c9debb0a1e227985359c2981a08ca4d6cad4de186a7",
+      "contentHash": "fb78fab5231c4fa15708e6f62b1c2189a334cec0944028b1f2de3cb49d6f34c1",
       "ageLevels": {
         "6-8": "Eine vereinbarte Regel kann einen erfundenen Text verändern. Zum Zurücklesen braucht man die passende Regel und Angabe.",
         "9-11": "Daten werden nach einem kryptografischen Verfahren mit einem Schlüssel in eine andere Form umgewandelt. Ein passender Entschlüsselungsvorgang kann sie wieder nutzbar machen. Eine einfache Buchstabenspielregel ist kein verlässlicher Schutz echter Geheimnisse.",
         "12-14": "Eine Verschlüsselung und eine Prüfsumme haben unterschiedliche Ziele. Die Sicherheit hängt vom tatsächlichen Verfahren und den Schlüsseln ab, nicht bloß davon, ob ein Text ungewohnt aussieht. Unser Buchstabenspiel ist absichtlich leicht zu durchschauen."
       },
       "goal": "Du trennst eine nachvollziehbare Spielregel von einer tatsächlich geprüften Schutzfunktion.",
-      "observe": "Verschiebe im erfundenen AlphabetA bisZ jeden Buchstaben vonHUT um eine Stelle weiter:IVU. Erkläre die Rückregel. Verwende nur diesen Spieltext, keine echten Passwörter, Namen oder privaten Nachrichten.",
+      "observe": "Verschiebe im erfundenen Alphabet A bis Z jeden Buchstaben von HUT um eine Stelle weiter: IVU. Erkläre die Rückregel. Verwende nur diesen Spieltext, keine echten Passwörter, Namen oder privaten Nachrichten.",
       "sources": [
         {
           "url": "https://csrc.nist.gov/glossary/term/encryption",
@@ -6718,14 +6718,14 @@
       "id": "words:Klartext",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept. Formal semantic and independent acceptance open.",
-      "contentHash": "8bd3491e52be1d746311726a2b302bf8522286f573aa86ac5ad6da78a449a83b",
+      "contentHash": "33159623606a87cdcb9172ebbfad7fe9289eb8f2931d1e0b198e1c7ec3bfc650",
       "ageLevels": {
-        "6-8": "Im Buchstabenspiel istHUT der ursprüngliche Text.IVU ist die veränderte Form nach der vereinbarten Regel.",
+        "6-8": "Im Buchstabenspiel ist HUT der ursprüngliche Text.IVU ist die veränderte Form nach der vereinbarten Regel.",
         "9-11": "Klartext nennt in der Kryptografie die ursprünglichen nutzbaren Daten vor einer Verschlüsselung beziehungsweise nach einer passenden Entschlüsselung. Der Name bedeutet nicht, dass jeder Mensch dieselbe Sprache versteht oder dass der Inhalt öffentlich sein sollte.",
         "12-14": "Klartext kann auch andere Daten als eine gewöhnliche Nachricht bezeichnen. Öffentlich, privat und verschlüsselt sind verschiedene Eigenschaften. Ein unbekanntes Wort wird nicht allein dadurch verschlüsselt, dass du es nicht verstehst."
       },
       "goal": "Du unterscheidest ursprüngliche Daten, Sprachverständnis und die Entscheidung über Öffentlichkeit.",
-      "observe": "Vergleiche die erfundenenSpieltexteHUT undIVU bei der Regel eine Stelle vorwärts. Benenne Ausgangstext und veränderte Form. Schreibe dafür keine echten privaten Nachrichten oder Zugangsdaten auf.",
+      "observe": "Vergleiche die erfundenen Spieltexte HUT und IVU bei der Regel eine Stelle vorwärts. Benenne Ausgangstext und veränderte Form. Schreibe dafür keine echten privaten Nachrichten oder Zugangsdaten auf.",
       "sources": [
         {
           "url": "https://csrc.nist.gov/glossary/term/encryption",
