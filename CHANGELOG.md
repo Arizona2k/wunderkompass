@@ -231,3 +231,7 @@ Masterauftrag strukturiert in vorhandenes Projektgedächtnis integriert: Bestand
 ## 2026-10-09 – Dauerhafter Ready-for-review-Ablauf (WK-027, in Review)
 
 Bestehende Projektregeln/PR-Vorlage auf selbstständige prüfbereite PRs nach lokalen Pflichtprüfungen abgestimmt; fertige Draft-Zwischenstände werden selbstständig umgestellt. Aktuellen GitHub-Prüfstatus transparent melden, Fehler nach Möglichkeit beheben; grüne Tests und Ready ersetzen keine Nutzerbestätigung zur Übernahme. Bestehende Quality-CI und deaktivierte Release-Workflows unverändert, keine neue Automatisierung oder Kostenpflicht. Reiner Regel-/Übergabeauftrag; nur eigener Branch vor Deployment geschützt, kein Merge/main-/test-live-Schreiben oder Produktumbau. Tatsächliche Nachweise in PROJECT_STATE.md.
+
+### Paket3.5 – Wissensbuch-Bedarfsdaten und zuverlässiger Retryfokus (PR27, unveröffentlicht)
+
+Gleiche97Definitionen/30Warum-Antworten als kleiner vollständigerBuchkern; sieben freiwilligeVertiefungen erstbeimÖffnen. SHA256/Byte-/Identitäts-/Strukturprüfung, begrenzterAbruf und sichere Wiederholung. Suchindex erhältVertiefungen und erschließtBeobachtungen/Hinweise, auch inlokalerWortsuche. Initial39.559→22.834Bytes beiidentischemInhalt; Gesamtdatenwachsen undwerdenvollständigweiterbudgetiert. NachmanuellreproduziertemRetry-Fokusverlust RückkehrzurZusammenfassung, ohneanderengewähltenFokuszustehen. Firefox-Mindestgrößenprüfung nutzt tatsächlicheDOM-Höhe44 stattgerundeterProtokollkanten. Ganzer3.5-Auftrag/individuelleFach-/Menschenabnahmenweiteroffen; keineVeröffentlichung/News-Aktivierung.

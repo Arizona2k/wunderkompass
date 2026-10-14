@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "term": "Sekunde",
+  "learning": {
+    "symbol": "s",
+    "quantity": "Zeitdauer",
+    "starter": "Sekunden sagen, wie lange etwas dauert. Die Uhrzeit sagt, wann es passiert.",
+    "deeper": "Für sehr genaue Zeitmessungen nutzt die Definition eine bestimmte Frequenz von Cäsiumatomen. Eine Sekunde entspricht 9.192.631.770 Perioden dieser festgelegten Strahlung. Eine Handstoppuhr bleibt trotzdem begrenzt: Auch das Reagieren beim Starten und Stoppen braucht Zeit.",
+    "observe": "Wähle auf unserer gezeichneten Zeitlinie zuerst die Dauer, dann einen anderen Beginn. Bleibt die Dauer gleich, obwohl der Endpunkt wandert? Begründe es mit dem Abstand der Punkte.",
+    "benefit": "Du kannst in einer Beobachtung sauber zwischen Beginn, Ende und vergangener Zeit unterscheiden.",
+    "topic": "science-pendulum",
+    "question": {
+      "prompt": "Ein Vorgang beginnt bei Sekunde 20 und endet bei Sekunde 24. Wie lange dauert er?",
+      "answers": [
+        "4 Sekunden",
+        "20 Sekunden",
+        "24 Sekunden"
+      ],
+      "correct": 0,
+      "hint": "Betrachte den Abstand zwischen Beginn und Ende, nicht nur einen der beiden Zeitpunkte.",
+      "why": "24 minus 20 ergibt 4. Die beiden Zeitpunkte begrenzen die Dauer; keiner davon ist allein die vergangene Zeit.",
+      "wrongReasons": [
+        "",
+        "20 ist der Beginn auf dieser Zeitlinie. Das ist nicht die Zeit, die zwischen Beginn und Ende vergeht.",
+        "24 ist der Endpunkt. Zur Dauer gehört auch, wo der Vorgang begonnen hat."
+      ]
+    },
+    "connection": "Das Pendelmodell zeigt eine Schwingungsdauer. Diese Dauer ist keine Uhrzeit.",
+    "model": "duration",
+    "sources": [
+      {
+        "url": "https://www.nist.gov/si-redefinition/second-introduction",
+        "title": "NIST · Second: Introduction",
+        "anchor": "Difference between intervals and instants; 9,192,631,770 periods of cesium radiation",
+        "updatedOn": "2026-05-27",
+        "checkedOn": "2026-10-13"
+      }
+    ]
+  }
+}

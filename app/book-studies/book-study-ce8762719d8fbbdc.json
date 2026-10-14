@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Mol",
+  "learning": {
+    "symbol": "mol",
+    "quantity": "Stoffmenge",
+    "starter": "Beim Zählen ist wichtig, was als ein Teil gilt: eine einzelne Kugel oder ein ganzes Kugelpaar.",
+    "deeper": "Ein Mol enthält genau 6,02214076 × 10²³ der angegebenen Einheiten. Das können Atome, Moleküle oder andere genau bezeichnete Einheiten sein. Weil verschiedene Teilchen unterschiedliche Massen haben können, folgt aus gleicher Stoffmenge nicht automatisch gleiche Masse.",
+    "observe": "Zeichne sechs Kugeln, immer zwei als Paar. Du kannst sechs einzelne Kugeln oder drei Paare zählen. Sage vor jeder Zahl, was du zählst. Die Zeichnung ist eine Zählhilfe, keine echte Molmenge oder maßstäbliche Teilchenaufnahme.",
+    "benefit": "Du verstehst, warum eine Teilchenzahl erst zusammen mit der bezeichneten Teilchenart eindeutig ist.",
+    "topic": "science-water-cycle",
+    "question": {
+      "prompt": "Eine Zeichnung zeigt sechs Kugeln in drei Paaren. Was ist richtig?",
+      "answers": [
+        "Sechs Kugeln und drei Paare sind zwei richtige Zählungen",
+        "Es gibt automatisch sechs Paare",
+        "Die Zeichnung enthält schon ein echtes Mol"
+      ],
+      "correct": 0,
+      "hint": "Lege zuerst fest, was bei deiner Zählung als ein Teil zählt.",
+      "why": "Eine einzelne Kugel und ein Paar sind verschiedene Zähleinheiten. Sechs Kugeln ergeben hier drei Paare. Das kleine Bild steht nicht für die riesige Teilchenzahl eines Mols.",
+      "wrongReasons": [
+        "",
+        "Ein Paar enthält zwei Kugeln. Würdest du sechs Paare zählen, wären dafür zwölf Kugeln nötig.",
+        "Ein Mol bedeutet eine genau festgelegte, sehr große Teilchenzahl. Unsere sechs gezeichneten Kugeln sind nur eine Verständnishilfe."
+      ]
+    },
+    "connection": "Beim Wasserkreislauf bleiben Wassermoleküle Wasser, auch wenn sich der Zustand ändert. Eine Teilchenzählung muss ihre Einheiten benennen.",
+    "sources": [
+      {
+        "url": "https://www.nist.gov/si-redefinition/redefining-mole",
+        "title": "NIST · Redefining the Mole",
+        "anchor": "Specified atoms/molecules; relation between amount of substance and mass",
+        "updatedOn": null,
+        "checkedOn": "2026-10-13"
+      },
+      {
+        "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+        "title": "NIST · Definitions of SI Base Units",
+        "anchor": "Mole – Unit of Amount of Substance; exact Avogadro constant",
+        "updatedOn": "2025-08-13",
+        "checkedOn": "2026-10-13"
+      }
+    ],
+    "illustration": "entities"
+  }
+}

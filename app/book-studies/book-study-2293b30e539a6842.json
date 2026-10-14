@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Meter",
+  "learning": {
+    "symbol": "m",
+    "quantity": "Länge",
+    "starter": "Meter sagen, wie lang etwas ist. Ein gemeinsames Maß hilft uns, Messungen zu vergleichen.",
+    "deeper": "Der Meter wird heute über die festgelegte Lichtgeschwindigkeit und die Sekunde definiert. Dadurch hängt die Einheit nicht von einem einzelnen Stab oder der Körpergröße eines Menschen ab. Das heißt nicht, dass jedes Lineal unendlich genau misst.",
+    "observe": "Miss die kurze Seite eines geschlossenen Buchs zuerst mit deinen Fingerbreiten und dann mit einem Lineal. Vergleiche mit einer anderen Person: Warum passen die Fingerzahlen manchmal nicht zusammen?",
+    "benefit": "Du kannst erklären, warum eine Zahl erst zusammen mit ihrer Einheit eine verständliche Längenangabe wird.",
+    "topic": "science-pendulum",
+    "question": {
+      "prompt": "Zwei Kinder verwenden unterschiedlich breite Hände. Was hilft beim Vergleich der Buchlänge?",
+      "answers": [
+        "Nur die größere Zahl vergleichen",
+        "Beide mit derselben Längeneinheit messen",
+        "Die Hand mit mehr Fingern verwenden"
+      ],
+      "correct": 1,
+      "hint": "Überlege, ob ein einzelner Messschritt bei beiden Kindern gleich lang ist.",
+      "why": "Mit derselben Längeneinheit beziehen sich beide Zahlen auf gleich große Schritte. Unterschiedlich breite Hände können für dieselbe Buchlänge verschiedene Zahlen liefern.",
+      "wrongReasons": [
+        "Eine größere Zahl kann auch durch kleinere Messschritte entstehen. Sie bedeutet dann nicht automatisch ein längeres Buch.",
+        "",
+        "Beide Hände haben normalerweise dieselbe Fingerzahl. Entscheidend ist die Breite des verwendeten Messschritts, nicht die Zahl der Finger."
+      ]
+    },
+    "connection": "Beim Pendel verändert die Fadenlänge die Schwingungszeit. Achte auf die Längeneinheit im Modell.",
+    "model": "length",
+    "sources": [
+      {
+        "url": "https://www.nist.gov/si-redefinition/meter",
+        "title": "NIST · Meter",
+        "anchor": "Length based on bodily dimensions; need for a universal standard; current definition additionally checked against Definitions of SI Base Units",
+        "updatedOn": null,
+        "checkedOn": "2026-10-13"
+      },
+      {
+        "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+        "title": "NIST · Definitions of SI Base Units",
+        "anchor": "Meter – Unit of Length; fixed speed of light",
+        "updatedOn": "2025-08-13",
+        "checkedOn": "2026-10-13"
+      }
+    ]
+  }
+}

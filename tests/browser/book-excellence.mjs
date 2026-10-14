@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import book from '../../app/book-content.json' with {type:'json'};
+import studyIndex from '../../app/book-study-index.json' with {type:'json'};
 const terms=Object.keys(book.learning),widths=[320,360,390,768,1024,1440,1920];
 async function reveal(details){if(!await details.evaluate(e=>e.open))await details.locator(':scope > summary').click();}
 async function openWord(page,name){await page.evaluate(name=>location.hash='book/words/'+encodeURIComponent(name),name);const card=page.locator('[data-book-word="'+name+'"]');await card.waitFor();await reveal(card.locator('.book-study'));return card;}
@@ -11,7 +12,9 @@ async function geometry(page,card,label){
  for(const control of await card.locator('button,summary,input,a').all())if(await control.isVisible()){
   const r=await control.boundingBox();
   const detail=await control.evaluate(el=>({tag:el.tagName,type:el.getAttribute('type'),text:el.textContent?.slice(0,100),rect:el.getBoundingClientRect().toJSON(),minHeight:getComputedStyle(el).minHeight,height:getComputedStyle(el).height}));
-  assert.ok(r&&r.height>=44,label+' touch height '+JSON.stringify({box:r,element:detail}));
+  // Firefox protocol subtracts rounded absolute edges (44px can become43.99994).
+  // Read the DOMRect height directly; keep the strict44px minimum, no tolerance.
+  assert.ok(r&&detail.rect.height>=44,label+' touch height '+JSON.stringify({box:r,element:detail}));
  }
 }
 async function exercise(page,card,name){
@@ -28,6 +31,15 @@ async function exercise(page,card,name){
 async function axe(page){await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.knowledge-book',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag21aa','wcag22aa']}})).violations.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)}))),[],'book accessibility');}
 export async function bookExcellenceFlow(browser,base,ready,monitor,report,shots){
  const visited=[];
+ const lazyContext=await browser.newContext({viewport:{width:320,height:900},reducedMotion:'reduce'}),lazy=await lazyContext.newPage();monitor(lazy);lazy.setDefaultTimeout(20000);const requests=[];
+ lazy.on('request',request=>{if(/\/book-study-[^/]+\.json$/.test(new URL(request.url()).pathname))requests.push(request.url());});
+ try{
+  await lazy.goto(base+'#book/words/Meter');await ready(lazy);const card=lazy.locator('[data-book-word="Meter"]');await card.waitFor();assert.equal(requests.length,0,'definition does not fetch unopened learning parts');
+  let attempts=0;await lazy.route('**/'+studyIndex.Meter.file.replace('.json','-*.json'),async route=>{attempts++;if(attempts===1)await route.fulfill({contentType:'application/json',body:JSON.stringify({schemaVersion:1,term:'Meter',learning:{starter:'Nicht belegte Ersetzung'}})});else await route.continue();});
+  await reveal(card.locator('.book-study'));await card.getByRole('button',{name:'Wortvertiefung erneut laden',exact:true}).waitFor();assert.equal(await card.getByText(book.learning.Meter.deeper,{exact:true}).count(),0);await card.getByRole('button',{name:'Wortvertiefung erneut laden',exact:true}).focus();await lazy.keyboard.press('Enter');await card.getByText(book.learning.Meter.benefit,{exact:true}).waitFor();await lazy.waitForFunction(()=>document.activeElement?.matches('[data-book-word="Meter"] > .book-study > summary'));assert.equal(attempts,2,'failed part is not cached');
+  await card.locator('.book-study > summary').click();await card.locator('.book-study > summary').click();await card.getByText(book.learning.Meter.benefit,{exact:true}).waitFor();assert.equal(requests.length,2,'validated part is reused on reopen');assert.equal(await card.locator('h3').innerText(),'Meter','definition remains available throughout failure');
+ }finally{await lazyContext.close();}
+ report.checks.push('Book overview fetches no unopened enrichment; a corrupted exact word part is withheld, explicit retry recovers, validated reopen makes no additional request and definition/pass remain available');
  for(const width of widths){const c=await browser.newContext({viewport:{width,height:900},hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
   try{
    await p.goto(base+'#book');await ready(p);await p.locator('.word-card').first().waitFor();await p.getByRole('group',{name:'Wörter nach Anfangsbuchstaben',exact:true}).getByRole('button',{name:'E',exact:true}).click();await p.getByRole('tab',{name:'Messen',exact:true}).click();assert.equal(await p.locator('[data-book-word]').count(),7);const alphabet=p.getByRole('group',{name:'Wörter nach Anfangsbuchstaben',exact:true});assert.equal(await alphabet.getByRole('button',{name:'E',exact:true}).count(),0);await alphabet.getByRole('button',{name:'M',exact:true}).click();assert.equal(await p.locator('[data-book-word]').count(),2);await alphabet.getByRole('button',{name:'Alle',exact:true}).click();
@@ -36,6 +48,7 @@ export async function bookExcellenceFlow(browser,base,ready,monitor,report,shots
    if(width===390){
     for(const name of terms){await p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await p.getByRole('combobox',{name:'Lernwelt durchsuchen',exact:true}).fill(name);await p.getByRole('option').filter({has:p.getByText(name,{exact:true})}).first().click();assert.equal(new URL(p.url()).hash,'#book/words/'+encodeURIComponent(name));await p.locator('[data-book-word="'+name+'"]').waitFor();await p.reload();await ready(p);const card=await openWord(p,name);await card.locator('details[data-history-disclosure="book-deeper-'+name+'"] > summary').click();const link=card.locator('.book-topic-link');await link.focus();await p.keyboard.press('Enter');await p.locator('.world-article').waitFor();await p.goBack();await card.waitFor();await p.waitForFunction(name=>document.activeElement?.getAttribute('data-route-focus')==='word-topic-'+name,name);assert.equal(await card.locator('.book-study').evaluate(e=>e.open),true);}
     await p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await p.getByRole('combobox',{name:'Lernwelt durchsuchen',exact:true}).fill('Cäsium');await p.getByRole('option').filter({has:p.getByText('Sekunde',{exact:true})}).click();await p.locator('[data-book-word="Sekunde"]').waitFor();
+    const localSearch=p.getByRole('textbox',{name:'Wissenswörter durchsuchen',exact:true});await localSearch.fill('Cäsium');await p.locator('[data-book-word="Sekunde"]').waitFor();assert.equal(await p.locator('.word-card').count(),1,'local word search includes actual deeper text');
     await p.getByRole('tab',{name:'Warum?',exact:true}).click();for(const [question,answer] of book.why){const d=p.locator('.why-card').filter({hasText:question});await reveal(d);await d.getByText(answer,{exact:true}).waitFor();}
    }
    report.views.push({width,name:'all seven measurement words, voluntary levels, models and individual feedback'});

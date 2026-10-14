@@ -1,13 +1,24 @@
-import {useState} from 'react';
+import {useEffect,useRef,useState} from 'react';
+import {useBookStudy} from './book-study-data';
+import {restoreRouteView} from './hash-route';
+import {LearningStatus} from './learning-components';
 import {LearningDetails} from './learning-components';
 import type {BookLearning} from './book-data';
 import {lengthUnits,timeInterval,temperatureUnits} from './book-measure-math.mjs';
 import {WORLD_INDEX} from './world-index';
 import './book-study.css';
 const number=(n:number)=>n.toLocaleString('de-DE',{maximumFractionDigits:2});
+export function LazyBookStudy({term,onTopic}:{term:string;onTopic?:(id:string)=>void}){
+ const details=useRef<HTMLDetailsElement|null>(null),retryFocus=useRef(false);
+ const [active,setActive]=useState(false),{learning,error,retry}=useBookStudy(term,active);
+ useEffect(()=>{if(!learning)return;if(retryFocus.current){retryFocus.current=false;if(document.activeElement===document.body)details.current?.querySelector('summary')?.focus({preventScroll:true});}else if(history.state?.wunderFocus)restoreRouteView(location.hash.slice(1));},[learning]);
+ return <LearningDetails className="book-study" summary="Weiterforschen · freiwillig" data-book-study={term} data-history-disclosure={'book-study-'+term} onToggle={e=>{details.current=e.currentTarget;if(e.currentTarget.open)setActive(true);}}>
+  {learning?<BookStudy term={term} learning={learning} onTopic={onTopic}/>:<LearningStatus tone={error?'error':'loading'} action={error?<button className="secondary-button" onClick={e=>{retryFocus.current=document.activeElement===e.currentTarget;retry();}}>Wortvertiefung erneut laden</button>:undefined}>{error?'Diese Vertiefung konnte nicht sicher geladen werden. Definition, Pass und Notizen bleiben erhalten.':'Deine freiwillige Vertiefung wird geladen …'}</LearningStatus>}
+ </LearningDetails>;
+}
 export function BookStudy({term,learning,onTopic}:{term:string;learning:BookLearning;onTopic?:(id:string)=>void}){
  const [answer,setAnswer]=useState<number|null>(null),q=learning.question,topic=WORLD_INDEX.find(t=>t.id===learning.topic);
- return <LearningDetails className="book-study" summary="Weiterforschen · freiwillig" data-book-study={term} data-history-disclosure={'book-study-'+term}>
+ return <>
   <p>{learning.benefit}</p>
   <LearningDetails summary="Ganz einfach · etwa 6–8 Jahre" data-history-disclosure={'book-starter-'+term}><p>{learning.starter}</p></LearningDetails>
   <LearningDetails summary="Noch genauer · etwa 12–14 Jahre" data-history-disclosure={'book-deeper-'+term}><p>{learning.deeper}</p></LearningDetails>
@@ -17,7 +28,7 @@ export function BookStudy({term,learning,onTopic}:{term:string;learning:BookLear
   <section className="book-thinking" aria-label={'Denkfrage zu '+term}><h4>{q.prompt}</h4><LearningDetails summary="Ein Hinweis, wenn du möchtest"><p>{q.hint}</p></LearningDetails><div className="quiz-answers">{q.answers.map((a,i)=><button className="quiz-answer" key={a} onClick={()=>setAnswer(i)} aria-pressed={answer===i}>{a}</button>)}</div>{answer!==null&&<p className="book-feedback" role="status">{answer===q.correct?q.why:q.wrongReasons[answer]}</p>}</section>
   {topic&&<div className="book-connection"><p>{learning.connection}</p><a className="knowledge-link book-topic-link" href={'#world/topic/'+topic.id} data-route-focus={'word-topic-'+term} onClick={e=>{if(onTopic){e.preventDefault();onTopic(topic.id);}}}>Mit „{topic.title}“ weiterdenken →</a></div>}
   <LearningDetails summary="Quellen und Prüfstand"><p>Eigene Erklärung und Bildschirmmodelle mit KI-Unterstützung, am 13. Oktober 2026 anhand der verlinkten NIST-Belege selbst nachgeprüft. Eine unabhängige Fachabnahme steht noch aus. NIST hat diese WunderKompass-Erklärung nicht geprüft oder freigegeben.</p><ul>{learning.sources.map(s=><li key={s.url}><a href={s.url} target="_blank" rel="noreferrer">{s.title}</a>{s.updatedOn&&<span> · Quellenstand {new Date(s.updatedOn+'T12:00:00Z').toLocaleDateString('de-DE')}</span>}</li>)}</ul><p className="small-note">Eigene Beispiele und Zeichnungen; keine übernommenen Fotos, Logos oder Quelltexte. Quellen gelesen am 13. Oktober 2026.</p></LearningDetails>
- </LearningDetails>;
+ </>;
 }
 function MeasureModel({kind}:{kind:'length'|'duration'|'temperature'}){
  const [value,setValue]=useState(kind==='length'?50:kind==='duration'?4:0),[start,setStart]=useState(20);
