@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Längengrad",
+  "learning": {
+    "starter": "Der Längengrad beschreibt eine Lage östlich oder westlich einer vereinbarten Nulllinie. Er wird als Winkel angegeben.",
+    "deeper": "Die geografische Länge braucht einen vereinbarten Bezug. Für eine Position kommt außerdem die Breite hinzu. Ein Grad Länge entspricht nicht überall derselben Strecke: Längenkreise treffen sich an den Polen. Historische Greenwich-Markierung und heutiger genauer Referenzmeridian sind nicht exakt derselbe vermessene Bezug.",
+    "observe": "Markiere zwei gedachte Punkte mit 20 Grad östlicher Länge, einen nördlich und einen südlich des Äquators. Warum ist der Längengrad gleich, obwohl die Orte verschieden sind? Deine Papierzeichnung liefert keine gemessenen Entfernungen.",
+    "benefit": "Du verwendest östliche oder westliche Länge mit einem Bezug und verwechselst Winkel nicht mit einer überall gleichen Strecke.",
+    "topic": "invention-compass",
+    "connection": "Ein Kompass gibt eine Richtung, keinen Längengrad allein. Vergleiche die Richtungsangabe mit einer Position aus Breite und Länge.",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/longitude.html",
+        "title": "NOAA · Längengrad (Englisch)",
+        "anchor": "NOS measured-degree longitude, pole convergence and reference-meridian distinction paragraphs4–11. Exact smartphone accuracy/CORS count/constant atmospheric signal speed not adopted; no iStock imagery.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Koordinate",
+        "reason": "Geografische Länge ergänzt die Breite in einem vereinbarten Bezugssystem. Ein bloßes Zahlenpaar ohne Reihenfolge oder Bezug kann missverständlich sein."
+      },
+      {
+        "term": "Breitengrad",
+        "reason": "Breite und Länge beschreiben verschiedene Winkelangaben. Zusammen helfen sie, Positionen im vereinbarten System zu unterscheiden."
+      }
+    ],
+    "question": {
+      "prompt": "Was fehlt noch für eine Position, wenn du nur 20 Grad östliche Länge im vereinbarten System kennst?",
+      "answers": [
+        "Die Behauptung, dass alle Orte auf diesem Meridian gleich sind",
+        "Mindestens die geografische Breite",
+        "Die Annahme, dass die Erde eine flache Karte ist"
+      ],
+      "correct": 1,
+      "hint": "Ein Meridian verbindet viele verschiedene Nord-Süd-Lagen.",
+      "why": "Der Meridian enthält viele Punkte. Die Breite hilft, die Lage auf diesem Meridian zu unterscheiden.",
+      "wrongReasons": [
+        "Viele verschiedene Punkte können denselben Längengrad haben.",
+        "",
+        "Die Erde ist keine flache Karte. Eine Projektion ersetzt keine fehlende Breitenangabe."
+      ]
+    }
+  }
+}

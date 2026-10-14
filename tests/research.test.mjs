@@ -2,6 +2,8 @@ import {createSave,restoreSave,emptyProgress} from '../app/progress-storage.ts';
 import test from 'node:test';import assert from 'node:assert/strict';
 import {seasonalSun,moonObservation,moonAlignment,tideHeight,summarizeLab} from '../app/research-math.ts';
 import {LAB_SEARCH,EXPERIMENT_SEARCH,EXPERIMENT_RESEARCH,RESEARCH_QUESTIONS,RESEARCH_PATHS} from '../app/research-catalog.ts';
+import FEEDBACK from '../app/research-feedback.json' with {type:'json'};
+import LABS from '../exports/content/laboratories.json' with {type:'json'};
 import WORLD_INDEX from '../app/world-index.json' with {type:'json'};
 import WORLD_ROUTES from '../exports/content/world-routes.json' with {type:'json'};
 import JOURNEYS from '../exports/content/journeys.json' with {type:'json'};
@@ -31,6 +33,13 @@ test('all eleven lab paths and all three substantive inquiry tiers lead to actua
  for(const lab of LAB_SEARCH){const p=RESEARCH_PATHS[lab.id];assert.ok(p.task&&p.hint&&p.legend.length);assert.ok(p.book||WORLD_INDEX.some(t=>t.id===p.topic),p.topic);assert.ok(JOURNEYS.some(j=>j.id===p.journey),p.journey);assert.ok(LAB_SEARCH.some(l=>l.id===p.next));if(p.experiment)assert.ok(EXPERIMENT_SEARCH.some(e=>e.id===p.experiment));
   for(const level of ['medium','hard']){const q=RESEARCH_QUESTIONS[lab.id][level];assert.ok(q.prompt&&q.hint&&q.why&&q.wrong);assert.ok(q.correct>=0&&q.correct<q.answers.length);assert.equal(new Set(q.answers).size,q.answers.length);assert.notEqual(q.wrong,q.why);}
   assert.notEqual(RESEARCH_QUESTIONS[lab.id].medium.prompt,RESEARCH_QUESTIONS[lab.id].hard.prompt);
+ }
+});
+test('all33 retained laboratory questions explain each of66 wrong choices independently without changing correct-answer positions',()=>{
+ assert.deepEqual(Object.keys(FEEDBACK).sort(),LABS.map(l=>l.id).sort());
+ for(const lab of LABS)for(const level of ['easy','medium','hard']){
+  const q=level==='easy'?lab:RESEARCH_QUESTIONS[lab.id][level],reasons=FEEDBACK[lab.id][level];assert.equal(reasons.length,q.answers.length);assert.equal(reasons[q.correct],'');assert.equal(new Set(reasons.filter(Boolean)).size,q.answers.length-1);
+  for(let i=0;i<q.answers.length;i++)if(i!==q.correct){assert.ok(reasons[i].length>40);assert.notEqual(reasons[i],q.why);assert.ok(!/[<>\u0000-\u0008]/u.test(reasons[i]));}
  }
 });
 test('varied homepage knowledge trails use real bidirectional edges, actual routes and concrete activities',()=>{

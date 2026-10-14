@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';import fs from 'node:fs/promises';import path from 'node:path';
+import FEEDBACK from '../../app/research-feedback.json' with {type:'json'};
 import {RESEARCH_QUESTIONS} from '../../app/research-catalog.ts';
 import {NEWS_ENTRIES} from '../../app/news-data.ts';
 const labs=JSON.parse(await fs.readFile(new URL('../../exports/content/laboratories.json',import.meta.url),'utf8'));
@@ -43,7 +44,7 @@ export async function researchNewsFlow(browser,base,ready,monitor,report,shots){
     for(const level of ['easy','medium','hard']){
      await p.locator('.research-levels button').nth(['easy','medium','hard'].indexOf(level)).click();const q=level==='easy'?{prompt:lab.q,...lab}:RESEARCH_QUESTIONS[lab.id][level],question=p.locator('.research-question');
      await question.locator('summary').click();assert.ok((await question.innerText()).includes(level==='easy'?'Ein Denkhinweis':q.hint));
-     const answers=question.locator('.quiz-answer');await answers.nth((q.correct+1)%q.answers.length).click();await question.getByText('Schau noch einmal genau hin',{exact:true}).waitFor();assert.equal(await question.getByText(q.why,{exact:true}).count(),0,'wrong answer does not reveal full explanation');
+     const answers=question.locator('.quiz-answer');for(let wrong=0;wrong<q.answers.length;wrong++)if(wrong!==q.correct){await answers.nth(wrong).click();await question.getByText('Schau noch einmal genau hin',{exact:true}).waitFor();await question.getByText(FEEDBACK[lab.id][level][wrong],{exact:true}).waitFor();assert.equal(await question.getByText(q.why,{exact:true}).count(),0,'wrong answer does not reveal full explanation');await geometry(p,lab.id+' '+level+' wrong '+wrong+' '+width);if(level==='hard'&&wrong===q.answers.findIndex((_answer,index)=>index!==q.correct)&&width===320)await question.screenshot({path:path.join(shots,'research-'+lab.id+'-wrong-320.png'),animations:'disabled'});}
      await answers.nth(q.correct).click();await question.getByText('Gut erklärt · Forscherstempel verdient',{exact:true}).waitFor();await question.getByText(q.why,{exact:true}).waitFor();
     }
     await p.locator('.research-next details').first().locator('summary').click();await p.locator('.research-mission-checks input').first().check();await p.locator('.research-next details').nth(1).locator('summary').click();await p.locator('.research-next textarea').fill('Synthetische Erklärung für die Prüfung.');

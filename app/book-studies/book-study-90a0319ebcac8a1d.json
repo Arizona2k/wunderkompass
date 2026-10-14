@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Geoid",
+  "learning": {
+    "starter": "Um Höhen zu vergleichen, brauchen wir einen gemeinsamen Bezug. Das Geoid hilft dabei; es ist keine Karte aller Berge.",
+    "deeper": "Schwerkraft und die Verteilung von Masse beeinflussen die Form dieser Bezugsfläche. Geoid, glattes mathematisches Erdmodell und wirkliche Geländeoberfläche sind verschiedene Dinge. Eine anschauliche Zeichnung darf ihre Unterschiede vergrößern, ist dann aber nicht maßstäblich.",
+    "observe": "Zeichne eine gedachte Bezugsfläche als Linie und darüber zwei unterschiedlich hohe Hügel. Erkläre, welche Linie den Bezug und welche das Gelände zeigt. Deine einfache Skizze berechnet kein echtes Geoid.",
+    "benefit": "Du trennst eine Höhenbezugsfläche von der tatsächlichen Geländeform.",
+    "topic": "science-tides",
+    "connection": "Die Gezeitenkarte zeigt Veränderungen von Wasserständen. Das Geoid beschreibt dagegen einen idealisierten Höhenbezug, keine aktuelle Tide an einer Küste.",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/geoid.html",
+        "title": "NOAA · Geoid (Englisch)",
+        "anchor": "NOS definition and paragraphs20–21: idealized ocean shape extended through continents as elevation reference; no exaggerated source3D model or exact sea-level measurement copied.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Meeresspiegel",
+        "reason": "Das Geoid beschreibt einen idealisierten Höhenbezug, während beobachtete Wasserstände örtlich und zeitlich variieren. Bezug und einzelne Messung sind verschieden."
+      }
+    ],
+    "question": {
+      "prompt": "Was beschreibt das Geoid hier?",
+      "answers": [
+        "Alle Bergspitzen und Täler der wirklichen Geländeoberfläche",
+        "Eine gedachte Bezugsfläche für Höhen",
+        "Eine Behauptung, dass die Erde überall exakt kugelförmig ist"
+      ],
+      "correct": 1,
+      "hint": "Eine Höhe wird mit einem Bezug verglichen.",
+      "why": "Das Geoid dient als Höhenbezug. Es ist weder die Geländeoberfläche mit allen Bergen noch eine perfekte Kugel.",
+      "wrongReasons": [
+        "Die wirkliche Geländeoberfläche und die gedachte Bezugsfläche sind verschieden.",
+        "",
+        "Die Geoidform berücksichtigt Unterschiede, die eine perfekte Kugel nicht beschreibt."
+      ]
+    }
+  }
+}

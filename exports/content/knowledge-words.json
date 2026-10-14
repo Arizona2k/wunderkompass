@@ -61,7 +61,50 @@
   {
     "term": "Breitengrad",
     "short": "Weltkugel",
-    "more": "Ein Winkel, der zeigt, wie weit nördlich oder südlich vom Äquator ein Ort liegt."
+    "more": "Ein Winkel, der zeigt, wie weit nördlich oder südlich vom Äquator ein Ort liegt.",
+    "learning": {
+      "starter": "Der Breitengrad sagt, wie weit nördlich oder südlich des Äquators ein Ort liegt. Die Zahl wird als Winkel angegeben.",
+      "deeper": "0 Grad Breite liegt am Äquator; die Pole haben 90 Grad nördliche oder südliche Breite. Ein Breitengrad allein bestimmt noch keinen einzelnen Ort. Die Zeichnung einer perfekten Kugel ist ein Lernmodell; genaue Messungen berücksichtigen die abgeplattete Form der Erde.",
+      "observe": "Zeichne auf einer gedachten Kugel zwei Punkte auf demselben Breitenkreis, aber an verschiedenen Stellen rundherum. Welche Angabe teilen sie, und welche zweite Angabe würde sie unterscheiden? Die Skizze ist kein vermessener Globus.",
+      "benefit": "Du unterscheidest eine Nord-Süd-Winkelangabe von einer vollständigen Position.",
+      "topic": "invention-satellite",
+      "connection": "Eine Satellitenpositionierung kann mehrere Angaben liefern. Ein Breitengrad allein grenzt die Nord-Süd-Lage ein, nennt aber noch keinen einzelnen Ort.",
+      "sources": [
+        {
+          "url": "https://oceanservice.noaa.gov/facts/latitude.html",
+          "title": "NOAA · Breitengrad (Englisch)",
+          "anchor": "NOS latitude paragraphs5–6 and geocentric/geodetic distinction22–23. Own fictitious equal-latitude points; no iStock/municipal image or uniform exact kilometre-per-degree assumption.",
+          "updatedOn": "2026-09-23",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Koordinate",
+          "reason": "Geografische Breite kann ein Teil einer Positionsangabe sein. Ein Breitengrad allein bestimmt noch keinen einzelnen Ort."
+        },
+        {
+          "term": "Längengrad",
+          "reason": "Breite und Länge beschreiben verschiedene Winkelangaben. Zusammen helfen sie, Positionen im vereinbarten System zu unterscheiden."
+        }
+      ],
+      "question": {
+        "prompt": "Zwei gedachte Orte liegen beide bei 30 Grad nördlicher Breite. Was folgt daraus?",
+        "answers": [
+          "Sie haben denselben Breitengrad, können aber verschiedene Längengrade haben",
+          "Sie müssen derselbe Ort sein",
+          "Sie liegen beide am Nordpol"
+        ],
+        "correct": 0,
+        "hint": "Ein Breitenkreis enthält mehr als einen Punkt.",
+        "why": "Der gleiche Breitengrad legt eine Nord-Süd-Angabe fest. Die Längengrade können verschieden sein; 30 Grad ist nicht die Polbreite von 90 Grad.",
+        "wrongReasons": [
+          "",
+          "Ein Breitengrad allein legt keinen einzigen Ort fest.",
+          "Der Nordpol liegt bei 90 Grad nördlicher Breite, nicht bei 30 Grad."
+        ]
+      }
+    }
   },
   {
     "term": "Bucht",
@@ -221,7 +264,50 @@
   {
     "term": "Längengrad",
     "short": "Weltkugel",
-    "more": "Ein Winkel, der die Lage östlich oder westlich des Nullmeridians beschreibt."
+    "more": "Ein Winkel, der die Lage östlich oder westlich des Nullmeridians beschreibt.",
+    "learning": {
+      "starter": "Der Längengrad beschreibt eine Lage östlich oder westlich einer vereinbarten Nulllinie. Er wird als Winkel angegeben.",
+      "deeper": "Die geografische Länge braucht einen vereinbarten Bezug. Für eine Position kommt außerdem die Breite hinzu. Ein Grad Länge entspricht nicht überall derselben Strecke: Längenkreise treffen sich an den Polen. Historische Greenwich-Markierung und heutiger genauer Referenzmeridian sind nicht exakt derselbe vermessene Bezug.",
+      "observe": "Markiere zwei gedachte Punkte mit 20 Grad östlicher Länge, einen nördlich und einen südlich des Äquators. Warum ist der Längengrad gleich, obwohl die Orte verschieden sind? Deine Papierzeichnung liefert keine gemessenen Entfernungen.",
+      "benefit": "Du verwendest östliche oder westliche Länge mit einem Bezug und verwechselst Winkel nicht mit einer überall gleichen Strecke.",
+      "topic": "invention-compass",
+      "connection": "Ein Kompass gibt eine Richtung, keinen Längengrad allein. Vergleiche die Richtungsangabe mit einer Position aus Breite und Länge.",
+      "sources": [
+        {
+          "url": "https://oceanservice.noaa.gov/facts/longitude.html",
+          "title": "NOAA · Längengrad (Englisch)",
+          "anchor": "NOS measured-degree longitude, pole convergence and reference-meridian distinction paragraphs4–11. Exact smartphone accuracy/CORS count/constant atmospheric signal speed not adopted; no iStock imagery.",
+          "updatedOn": "2026-09-23",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Koordinate",
+          "reason": "Geografische Länge ergänzt die Breite in einem vereinbarten Bezugssystem. Ein bloßes Zahlenpaar ohne Reihenfolge oder Bezug kann missverständlich sein."
+        },
+        {
+          "term": "Breitengrad",
+          "reason": "Breite und Länge beschreiben verschiedene Winkelangaben. Zusammen helfen sie, Positionen im vereinbarten System zu unterscheiden."
+        }
+      ],
+      "question": {
+        "prompt": "Was fehlt noch für eine Position, wenn du nur 20 Grad östliche Länge im vereinbarten System kennst?",
+        "answers": [
+          "Die Behauptung, dass alle Orte auf diesem Meridian gleich sind",
+          "Mindestens die geografische Breite",
+          "Die Annahme, dass die Erde eine flache Karte ist"
+        ],
+        "correct": 1,
+        "hint": "Ein Meridian verbindet viele verschiedene Nord-Süd-Lagen.",
+        "why": "Der Meridian enthält viele Punkte. Die Breite hilft, die Lage auf diesem Meridian zu unterscheiden.",
+        "wrongReasons": [
+          "Viele verschiedene Punkte können denselben Längengrad haben.",
+          "",
+          "Die Erde ist keine flache Karte. Eine Projektion ersetzt keine fehlende Breitenangabe."
+        ]
+      }
+    }
   },
   {
     "term": "Lava",
@@ -300,7 +386,50 @@
   {
     "term": "Meeresspiegel",
     "short": "Meere",
-    "more": "Die Höhe der Meeresoberfläche. Für Höhenvergleiche nutzt man einen gemittelten Bezug."
+    "more": "Die Höhe der Meeresoberfläche. Für Höhenvergleiche nutzt man einen gemittelten Bezug.",
+    "learning": {
+      "starter": "Die Meeresoberfläche bewegt sich. Zum Vergleichen von Höhen betrachten wir einen erklärten, gemittelten Bezug.",
+      "deeper": "Eine Messung an einer Küste bezieht sich auf einen Punkt an Land. Sie ist nicht automatisch der weltweite Mittelwert. Lokale Landbewegung und Meeresströmungen können einen Vergleich beeinflussen. Eine einzelne Beobachtung bestimmt noch keinen langjährigen Trend.",
+      "observe": "Zeichne für einen erfundenen Messort drei Wasserhöhen über demselben Bezug: 2, 3 und 4 Zentimeter. Erkläre den Unterschied zwischen einem Einzelwert und dem Mittelwert. Die Zahlen sind ausgedacht und keine Meeresspiegelmessung oder Vorhersage.",
+      "benefit": "Du unterscheidest einzelne, lokale und gemittelte Höhenangaben.",
+      "topic": "science-tides",
+      "connection": "Die Gezeitenkarte zeigt wechselnde Wasserstände. Unterscheide einen Zeitpunkt, einen gemittelten Bezug und einen langjährigen Trend; die Modellkurve ist keine örtliche Vorhersage.",
+      "sources": [
+        {
+          "url": "https://oceanservice.noaa.gov/facts/sealevel.html",
+          "title": "NOAA · Meeresspiegel (Englisch)",
+          "anchor": "NOS selected global/local difference and tide-station/satellite measurements paragraphs5–8. Old2014 figures, population percentages and obsolete annual-rate values excluded; own invented centimetre series only.",
+          "updatedOn": "2026-09-23",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Geoid",
+          "reason": "Das Geoid beschreibt einen idealisierten Höhenbezug, während beobachtete Wasserstände örtlich und zeitlich variieren. Bezug und einzelne Messung sind verschieden."
+        },
+        {
+          "term": "Mittelwert",
+          "reason": "Mehrere Höhenwerte lassen sich unter einem gemeinsamen Bezug mitteln. Ein einzelner Wert ist noch kein langjähriger weltweiter Trend."
+        }
+      ],
+      "question": {
+        "prompt": "Was zeigt eine einzelne erfundene Wasserhöhe von 3 Zentimetern?",
+        "answers": [
+          "Eine sichere Vorhersage für alle Küsten",
+          "Den weltweiten langjährigen Trend",
+          "Nur diesen Einzelwert über dem vereinbarten Bezug"
+        ],
+        "correct": 2,
+        "hint": "Eine einzelne Zahl macht noch keine weltweite Zeitreihe.",
+        "why": "Der Einzelwert beschreibt nur diese gedachte Messung und ihren Bezug. Für einen Trend oder ein weltweites Mittel sind weitere geeignete Daten nötig.",
+        "wrongReasons": [
+          "Eine Einzelmessung trägt keine sichere Vorhersage für alle Küsten.",
+          "Ein einzelner Wert ist keine langjährige weltweite Messreihe.",
+          ""
+        ]
+      }
+    }
   },
   {
     "term": "Meeresströmung",
@@ -620,6 +749,10 @@
         {
           "term": "Wellenlänge",
           "reason": "Wellenlänge ist ein räumlicher Wiederholungsabstand. Eine Längeneinheit wie Meter macht seine Zahl vergleichbar."
+        },
+        {
+          "term": "Topografie",
+          "reason": "Höhenangaben brauchen eine Einheit und einen Bezug. Eine Strecke in Metern sagt ohne diese Erklärung nicht, wie sie in einer Geländezeichnung verwendet wird."
         }
       ]
     }
@@ -1714,6 +1847,10 @@
         {
           "term": "Hypothese",
           "reason": "Eine Kennzahl kann Beobachtungen zusammenfassen. Ob sie eine Hypothese unterstützt, hängt auch von Frage und Versuchsbedingungen ab."
+        },
+        {
+          "term": "Meeresspiegel",
+          "reason": "Mehrere Höhenwerte lassen sich unter einem gemeinsamen Bezug mitteln. Ein einzelner Wert ist noch kein langjähriger weltweiter Trend."
         }
       ],
       "question": {
@@ -2286,6 +2423,10 @@
         {
           "term": "Nahrungsnetz",
           "reason": "Ein Nahrungsnetz bildet ausgewählte Nahrungsbeziehungen ab. Ein Ökosystem umfasst darüber hinaus weitere Beziehungen und nicht lebende Bedingungen."
+        },
+        {
+          "term": "Dürre",
+          "reason": "Längerfristige Wasserknappheit betrifft Bedingungen für Lebewesen und ihre Umgebung. Eine Wasserlage lässt sich nicht aus einem einzelnen trockenen Tag ableiten."
         }
       ],
       "question": {
@@ -2398,6 +2539,234 @@
           "Die Strichdicke allein erklärt weder den Vorgang noch eine gemessene Menge.",
           "",
           "Verschiedene Speicher enthalten unterschiedliche Mengen. Der Kreislauf setzt keine Gleichheit voraus."
+        ]
+      }
+    }
+  },
+  {
+    "term": "Topografie",
+    "short": "Geografie & Karten",
+    "more": "Topografie beschreibt die Gestalt und Merkmale eines Gebiets, etwa Höhen, Täler und Gewässer. Eine topografische Karte stellt ausgewählte Merkmale dar. Höhenlinien verbinden Punkte gleicher Höhe über einer angegebenen Bezugsfläche; sie sind keine wirklichen Streifen am Berg.",
+    "learning": {
+      "starter": "Eine Karte kann zeigen, wo Berge, Täler und Gewässer liegen. Ihre Zeichen müssen erklärt werden.",
+      "deeper": "Höhenlinien brauchen eine Höhenangabe und einen Bezug. Was eine Karte darstellt, hängt auch vom Maßstab und ihrer Auswahl ab. Eine Karte zeigt nicht automatisch jede kleine Geländeform oder den neuesten Zustand.",
+      "observe": "Zeichne drei gedachte Punkte mit den Höhen 10, 10 und 20 Meter über demselben Bezug. Welche zwei könnten auf derselben Höhenlinie liegen? Die Papierpunkte bilden keinen echten Ort und beweisen keine Form des Geländes zwischen ihnen.",
+      "benefit": "Du liest Höhenangaben und unterscheidest eine Kartendarstellung vom wirklichen Gelände.",
+      "topic": "invention-compass",
+      "connection": "Der Kompass hilft bei Richtungen. Eine topografische Karte ergänzt andere Angaben, etwa Höhen: Eine Richtung allein ist noch keine Geländeform.",
+      "sources": [
+        {
+          "url": "https://www.usgs.gov/faqs/what-a-topographic-map",
+          "title": "U.S. Geological Survey · Topografie (Englisch)",
+          "anchor": "FAQ first paragraph: contours join equal elevations relative to reference surface; own fictitious three-point height example. No map image or terrain interpolation claimed.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Meter",
+          "reason": "Höhenangaben brauchen eine Einheit und einen Bezug. Eine Strecke in Metern sagt ohne diese Erklärung nicht, wie sie in einer Geländezeichnung verwendet wird."
+        }
+      ],
+      "question": {
+        "prompt": "Welche zwei Modellpunkte könnten auf derselben Höhenlinie liegen?",
+        "answers": [
+          "Die beiden mit 10 Metern über demselben Bezug",
+          "Jeder 10-Meter-Punkt mit dem 20-Meter-Punkt",
+          "Alle drei, nur weil sie auf einem Blatt stehen"
+        ],
+        "correct": 0,
+        "hint": "Die Linie verbindet gleiche Höhen über einem gemeinsamen Bezug.",
+        "why": "Die beiden gleich hohen Punkte können zu derselben Höhenlinie gehören. Ihre Zahl allein verrät noch nicht, wie die Linie zwischen ihnen verläuft.",
+        "wrongReasons": [
+          "",
+          "10 und 20 Meter sind verschiedene Höhen über demselben Bezug.",
+          "Der Ort auf dem Papier macht unterschiedliche Höhen nicht gleich."
+        ]
+      }
+    }
+  },
+  {
+    "term": "Geoid",
+    "short": "Geografie & Karten",
+    "more": "Das Geoid ist eine gedachte Bezugsfläche für Höhenmessungen. Sie orientiert sich am mittleren Meeresspiegel unter vereinfachten Bedingungen und wird auch unter den Kontinenten fortgesetzt. Sie folgt nicht den Bergen und Tälern des Landes und ist keine perfekte Kugel.",
+    "learning": {
+      "starter": "Um Höhen zu vergleichen, brauchen wir einen gemeinsamen Bezug. Das Geoid hilft dabei; es ist keine Karte aller Berge.",
+      "deeper": "Schwerkraft und die Verteilung von Masse beeinflussen die Form dieser Bezugsfläche. Geoid, glattes mathematisches Erdmodell und wirkliche Geländeoberfläche sind verschiedene Dinge. Eine anschauliche Zeichnung darf ihre Unterschiede vergrößern, ist dann aber nicht maßstäblich.",
+      "observe": "Zeichne eine gedachte Bezugsfläche als Linie und darüber zwei unterschiedlich hohe Hügel. Erkläre, welche Linie den Bezug und welche das Gelände zeigt. Deine einfache Skizze berechnet kein echtes Geoid.",
+      "benefit": "Du trennst eine Höhenbezugsfläche von der tatsächlichen Geländeform.",
+      "topic": "science-tides",
+      "connection": "Die Gezeitenkarte zeigt Veränderungen von Wasserständen. Das Geoid beschreibt dagegen einen idealisierten Höhenbezug, keine aktuelle Tide an einer Küste.",
+      "sources": [
+        {
+          "url": "https://oceanservice.noaa.gov/facts/geoid.html",
+          "title": "NOAA · Geoid (Englisch)",
+          "anchor": "NOS definition and paragraphs20–21: idealized ocean shape extended through continents as elevation reference; no exaggerated source3D model or exact sea-level measurement copied.",
+          "updatedOn": "2026-09-23",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Meeresspiegel",
+          "reason": "Das Geoid beschreibt einen idealisierten Höhenbezug, während beobachtete Wasserstände örtlich und zeitlich variieren. Bezug und einzelne Messung sind verschieden."
+        }
+      ],
+      "question": {
+        "prompt": "Was beschreibt das Geoid hier?",
+        "answers": [
+          "Alle Bergspitzen und Täler der wirklichen Geländeoberfläche",
+          "Eine gedachte Bezugsfläche für Höhen",
+          "Eine Behauptung, dass die Erde überall exakt kugelförmig ist"
+        ],
+        "correct": 1,
+        "hint": "Eine Höhe wird mit einem Bezug verglichen.",
+        "why": "Das Geoid dient als Höhenbezug. Es ist weder die Geländeoberfläche mit allen Bergen noch eine perfekte Kugel.",
+        "wrongReasons": [
+          "Die wirkliche Geländeoberfläche und die gedachte Bezugsfläche sind verschieden.",
+          "",
+          "Die Geoidform berücksichtigt Unterschiede, die eine perfekte Kugel nicht beschreibt."
+        ]
+      }
+    }
+  },
+  {
+    "term": "Koordinate",
+    "short": "Geografie & Karten",
+    "more": "Koordinaten beschreiben eine Position mit Angaben in einem festgelegten Bezugssystem. Bei einer einfachen Gitterzeichnung kann ein Zahlenpaar einen Punkt angeben. Für Orte auf der Erde verwenden wir zum Beispiel geografische Breite und Länge. Reihenfolge und Bezug gehören zur Angabe dazu.",
+    "learning": {
+      "starter": "Ein Zahlenpaar kann dir helfen, einen Punkt zu finden. Dazu musst du wissen, was die Zahlen bedeuten und wo du zu zählen beginnst.",
+      "deeper": "Verschiedene Bezugssysteme können dieselbe Position unterschiedlich beschreiben. Ein Paar allein ist deshalb keine vollständige Ortsangabe. Auch eine Lageänderung und eine andere Bezugsfläche können bei genauen Messungen wichtig sein.",
+      "observe": "Zeichne ein eigenes Gitter. Vereinbare zuerst: die erste Zahl zählt nach rechts, die zweite nach oben. Markiere (2, 3) und (3, 2). Sind es derselbe Punkt? Das Papiergitter ist keine geografische Breiten-/Längenkarte.",
+      "benefit": "Du beachtest Reihenfolge und Bezug statt ein Zahlenpaar ohne Erklärung zu verwenden.",
+      "topic": "invention-satellite",
+      "connection": "Satelliten können bei der Positionsbestimmung helfen. Eine Position braucht ein erklärtes Bezugssystem; unser Papiergitter misst keine Satellitensignale.",
+      "sources": [
+        {
+          "url": "https://oceanservice.noaa.gov/facts/geodesy.html",
+          "title": "NOAA · Koordinate (Englisch)",
+          "anchor": "Geodesy paragraphs6–9: assigning coordinates in consistent reference system; own ordered fictitious paper grid, not latitude/longitude or GPS precision measurement.",
+          "updatedOn": "2026-09-23",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Breitengrad",
+          "reason": "Geografische Breite kann ein Teil einer Positionsangabe sein. Ein Breitengrad allein bestimmt noch keinen einzelnen Ort."
+        },
+        {
+          "term": "Längengrad",
+          "reason": "Geografische Länge ergänzt die Breite in einem vereinbarten Bezugssystem. Ein bloßes Zahlenpaar ohne Reihenfolge oder Bezug kann missverständlich sein."
+        },
+        {
+          "term": "Kartenprojektion",
+          "reason": "Eine Position und ihre Darstellung auf einer flachen Karte sind verschiedene Schritte. Bezugssystem und Projektionsverfahren brauchen jeweils eine Erklärung."
+        }
+      ],
+      "question": {
+        "prompt": "Warum können (2, 3) und (3, 2) im vereinbarten Gitter verschiedene Punkte sein?",
+        "answers": [
+          "Weil die Zahlen immer dieselbe Position meinen",
+          "Weil Zahlen keine Positionen beschreiben können",
+          "Weil die erste und die zweite Zahl unterschiedliche Richtungen beschreiben"
+        ],
+        "correct": 2,
+        "hint": "In unserer Vereinbarung bedeutet zuerst rechts, danach oben.",
+        "why": "Mit der festgelegten Reihenfolge werden verschiedene Wege gezählt. Eine vertauschte Angabe beschreibt hier einen anderen Punkt.",
+        "wrongReasons": [
+          "Vertauschte Angaben sind in diesem Gitter nicht gleich: die Richtungen haben eine vereinbarte Reihenfolge.",
+          "Mit einem erklärten Bezugssystem können Zahlen sehr wohl Positionen beschreiben.",
+          ""
+        ]
+      }
+    }
+  },
+  {
+    "term": "Kartenprojektion",
+    "short": "Geografie & Karten",
+    "more": "Eine Kartenprojektion ist ein Verfahren, um die gekrümmte Erdoberfläche auf einer flachen Karte darzustellen. Dabei verändert sich die Darstellung bestimmter Eigenschaften. Eine flache Weltkarte kann die ganze Erdoberfläche nicht in jeder Hinsicht unverzerrt zeigen.",
+    "learning": {
+      "starter": "Die Erde ist rund, Papier ist flach. Eine Weltkarte muss deshalb bei der Darstellung Kompromisse machen.",
+      "deeper": "Welche Darstellung geeignet ist, hängt von der Frage ab. Eine Karte für einen Weg und eine Karte für den Vergleich von Gebieten brauchen nicht dieselbe Darstellung. Große Flächen auf dem Papier müssen nicht im gleichen Verhältnis große Flächen auf der Erde sein.",
+      "observe": "Vergleiche eine vorhandene Weltkarte mit dem WunderKompass-Globus. Achte auf die Form der Gebiete nahe den Polen. Prüfe die Kartenerklärung, bevor du aus der Darstellung auf ihre wirkliche Größe schließt.",
+      "benefit": "Du fragst nach dem Darstellungsverfahren, bevor du Größen aus einer flachen Weltkarte vergleichst.",
+      "topic": "invention-compass",
+      "connection": "Kompassrichtung und Kartendarstellung beantworten verschiedene Fragen. Prüfe bei einer flachen Karte die Erklärung, bevor du Richtungen oder Größen vergleichst.",
+      "sources": [
+        {
+          "url": "https://www.usgs.gov/science/science-explorer/maps-and-mapping/mapping-101",
+          "title": "U.S. Geological Survey · Kartenprojektion (Englisch)",
+          "anchor": "Actual Mapping101 selected FAQ excerpt atlines561–567: definition and unavoidable distortion. Linked fullFAQ timed out, not asserted read; own globe/map comparison, no source maps copied.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Koordinate",
+          "reason": "Eine Position und ihre Darstellung auf einer flachen Karte sind verschiedene Schritte. Bezugssystem und Projektionsverfahren brauchen jeweils eine Erklärung."
+        }
+      ],
+      "question": {
+        "prompt": "Was ist ein sinnvoller erster Schritt beim Größenvergleich auf einer Weltkarte?",
+        "answers": [
+          "Das Darstellungsverfahren und die Kartenerklärung prüfen",
+          "Jede Papierfläche ohne Prüfung gleichsetzen mit der wirklichen Fläche",
+          "Annehmen, dass jede flache Weltkarte alles unverzerrt zeigt"
+        ],
+        "correct": 0,
+        "hint": "Die Karte ist eine Darstellung mit bestimmten Eigenschaften.",
+        "why": "Das Verfahren beeinflusst, wie Eigenschaften der Erdoberfläche auf dem Papier erscheinen. Die Kartenerklärung hilft, passende Vergleiche zu wählen.",
+        "wrongReasons": [
+          "",
+          "Nicht jede Weltkarte bewahrt die Flächenverhältnisse. Ein ungeprüfter Vergleich kann irreführen.",
+          "Die gekrümmte ganze Erdoberfläche lässt sich nicht in jeder Hinsicht unverzerrt auf eine flache Karte übertragen."
+        ]
+      }
+    }
+  },
+  {
+    "term": "Dürre",
+    "short": "Geografie & Karten",
+    "more": "Dürre bezeichnet über längere Zeit trockenere Bedingungen als für eine Gegend üblich, die zu Wasserproblemen führen. Ein trockener Tag allein ist noch keine Dürre. Auch eine normalerweise trockene Wüste und eine ungewöhnliche Trockenphase sind verschiedene Begriffe.",
+    "learning": {
+      "starter": "Eine Dürre ist mehr als ein Tag ohne Regen. Über längere Zeit fehlt Wasser im Vergleich zu den üblichen Bedingungen einer Gegend.",
+      "deeper": "Wenig Niederschlag kann Böden austrocknen und Abfluss oder Wasserstände verringern. Für eine Bewertung müssen Ort, Zeitraum und Vergleich betrachtet werden. Es gibt keine einzige Zahl von Regentagen, die überall jede Form von Dürre bestimmt.",
+      "observe": "Zeichne zwei gedachte Monatslisten: normalerweise vier Regentage, diesmal zwei. Welche Angaben fehlen, bevor du die Wasserlage beurteilen kannst? Frage nach Regenmengen, Boden und Zeitraum. Die erfundenen Listen sind keine Wetterdaten oder Warnung für deinen Wohnort.",
+      "benefit": "Du unterscheidest einen trockenen Tag von einer längerfristigen Wasserknappheit und fragst nach dem passenden Vergleich.",
+      "topic": "science-water-cycle",
+      "connection": "Die Wasserkreislaufkarte verbindet Speicher und Austausch. Vergleiche mehr als einen Regentag: Boden, Wasserstände und längere Zeiträume gehören zur Wasserlage.",
+      "sources": [
+        {
+          "url": "https://www.usgs.gov/faqs/what-causes-drought",
+          "title": "U.S. Geological Survey · Dürre (Englisch)",
+          "anchor": "USGS FAQ opening definition and soil/stream/reservoir effects. Source old regional precipitation totals and stable-mean claim not adopted; own fictitious incomplete-rain-count exercise.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Ökosystem",
+          "reason": "Längerfristige Wasserknappheit betrifft Bedingungen für Lebewesen und ihre Umgebung. Eine Wasserlage lässt sich nicht aus einem einzelnen trockenen Tag ableiten."
+        }
+      ],
+      "question": {
+        "prompt": "Welche Beobachtung beschreibt nur das Wetter eines einzelnen Tages?",
+        "answers": [
+          "Messungen über mehrere Monate",
+          "Ein einzelner Tag ohne Regen",
+          "Ein Vergleich mehrjähriger Bedingungen"
+        ],
+        "correct": 1,
+        "hint": "Der Zeitraum und die örtliche Wasserlage gehören zur Bewertung.",
+        "why": "Ein Tag ohne Regen beschreibt nur diesen einen Tag. Für eine Dürrebewertung sind längerfristige Bedingungen und Wasserprobleme im örtlichen Vergleich wichtig.",
+        "wrongReasons": [
+          "Eine mehrmonatige Messreihe beschreibt einen längeren Zeitraum als einen einzelnen Tag.",
+          "",
+          "Der Vergleich mehrjähriger Bedingungen geht über das Wetter eines einzelnen Tages hinaus."
         ]
       }
     }

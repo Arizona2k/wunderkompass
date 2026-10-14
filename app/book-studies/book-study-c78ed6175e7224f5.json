@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Topografie",
+  "learning": {
+    "starter": "Eine Karte kann zeigen, wo Berge, Täler und Gewässer liegen. Ihre Zeichen müssen erklärt werden.",
+    "deeper": "Höhenlinien brauchen eine Höhenangabe und einen Bezug. Was eine Karte darstellt, hängt auch vom Maßstab und ihrer Auswahl ab. Eine Karte zeigt nicht automatisch jede kleine Geländeform oder den neuesten Zustand.",
+    "observe": "Zeichne drei gedachte Punkte mit den Höhen 10, 10 und 20 Meter über demselben Bezug. Welche zwei könnten auf derselben Höhenlinie liegen? Die Papierpunkte bilden keinen echten Ort und beweisen keine Form des Geländes zwischen ihnen.",
+    "benefit": "Du liest Höhenangaben und unterscheidest eine Kartendarstellung vom wirklichen Gelände.",
+    "topic": "invention-compass",
+    "connection": "Der Kompass hilft bei Richtungen. Eine topografische Karte ergänzt andere Angaben, etwa Höhen: Eine Richtung allein ist noch keine Geländeform.",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/faqs/what-a-topographic-map",
+        "title": "U.S. Geological Survey · Topografie (Englisch)",
+        "anchor": "FAQ first paragraph: contours join equal elevations relative to reference surface; own fictitious three-point height example. No map image or terrain interpolation claimed.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Meter",
+        "reason": "Höhenangaben brauchen eine Einheit und einen Bezug. Eine Strecke in Metern sagt ohne diese Erklärung nicht, wie sie in einer Geländezeichnung verwendet wird."
+      }
+    ],
+    "question": {
+      "prompt": "Welche zwei Modellpunkte könnten auf derselben Höhenlinie liegen?",
+      "answers": [
+        "Die beiden mit 10 Metern über demselben Bezug",
+        "Jeder 10-Meter-Punkt mit dem 20-Meter-Punkt",
+        "Alle drei, nur weil sie auf einem Blatt stehen"
+      ],
+      "correct": 0,
+      "hint": "Die Linie verbindet gleiche Höhen über einem gemeinsamen Bezug.",
+      "why": "Die beiden gleich hohen Punkte können zu derselben Höhenlinie gehören. Ihre Zahl allein verrät noch nicht, wie die Linie zwischen ihnen verläuft.",
+      "wrongReasons": [
+        "",
+        "10 und 20 Meter sind verschiedene Höhen über demselben Bezug.",
+        "Der Ort auf dem Papier macht unterschiedliche Höhen nicht gleich."
+      ]
+    }
+  }
+}

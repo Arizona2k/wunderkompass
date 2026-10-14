@@ -8,6 +8,8 @@ import {RESEARCH_LINK_REASONS} from './research-links';
 import {LAB_SEARCH} from './research-catalog';
 import {WORLD_INDEX} from './world-index';
 import QuestionHints from './question-hints';
+import FEEDBACK from './research-feedback.json' with {type:'json'};
+const feedback=FEEDBACK as Record<string,Record<ResearchLevel,readonly string[]>>;
 type Lab={id:string;q:string;answers:readonly string[];correct:number;why:string};
 export function ResearchPrediction({id}:{id:string}){
  const [prediction,setPrediction]=useSavedGame<string>('researchPrediction','');
@@ -25,7 +27,7 @@ function InquiryQuestion({lab,level,onComplete,onRead}:{lab:Lab;level:ResearchLe
  const [answer,setAnswer]=useSavedGame<number|null>(level==='easy'?'answer':'researchAnswer-'+level,null);
  const q=level==='easy'?{prompt:lab.q,answers:lab.answers,correct:lab.correct,why:lab.why,hint:RESEARCH_PATHS[lab.id].hint,wrong:'Vergleiche deine Antwort mit der Beobachtung. Der Denkhinweis hilft, ohne die Erklärung vorwegzunehmen.'}:RESEARCH_QUESTIONS[lab.id][level];
  const valid=typeof answer==='number'&&answer>=0&&answer<q.answers.length,right=valid&&answer===q.correct;
- return <div className="research-question"><h4>{q.prompt}</h4><QuestionHints hints={[q.hint]} onRead={onRead}/><div className="quiz-answers">{q.answers.map((text,i)=><button key={text} className={'quiz-answer '+(answer===i?(right?'is-correct':'is-incorrect'):'')} disabled={right} onClick={()=>{setAnswer(i);if(i===q.correct)onComplete(lab.id);}}>{text}{right&&answer===i&&<Check size={18}/>}</button>)}</div>{valid&&<div className="lab-feedback" role="status"><strong>{right?'Gut erklärt · Forscherstempel verdient':'Schau noch einmal genau hin'}</strong><p>{right?q.why:q.wrong}</p></div>}</div>;
+ return <div className="research-question"><h4>{q.prompt}</h4><QuestionHints hints={[q.hint]} onRead={onRead}/><div className="quiz-answers">{q.answers.map((text,i)=><button key={text} className={'quiz-answer '+(answer===i?(right?'is-correct':'is-incorrect'):'')} disabled={right} onClick={()=>{setAnswer(i);if(i===q.correct)onComplete(lab.id);}}>{text}{right&&answer===i&&<Check size={18}/>}</button>)}</div>{valid&&<div className="lab-feedback" role="status"><strong>{right?'Gut erklärt · Forscherstempel verdient':'Schau noch einmal genau hin'}</strong><p>{right?q.why:(feedback[lab.id]?.[level]?.[answer]||q.wrong)}</p></div>}</div>;
 }
 export function ResearchJournal({id}:{id:string}){
  const [journal,setJournal]=useSavedGame<string>('researchJournal','');const [mission,setMission]=useSavedModel<number>('researchMission',0,{min:0,max:7});const path=RESEARCH_PATHS[id],reasons=RESEARCH_LINK_REASONS[id],topic=WORLD_INDEX.find(t=>t.id===path.topic);

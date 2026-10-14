@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T08:55:00.716Z",
+  "generatedAt": "2026-10-14T10:04:37.251Z",
   "personalProgressIncluded": false,
   "topics": 139,
   "categories": {
@@ -13,7 +13,7 @@
   "journeys": 16,
   "chapters": 80,
   "quizQuestions": 76,
-  "knowledgeWords": 127,
+  "knowledgeWords": 132,
   "whyQuestions": 30,
   "routes": 8,
   "files": [
@@ -97,9 +97,9 @@
         "app/book-content.json",
         "app/book-word-index.json"
       ],
-      "entries": 127,
-      "bytes": 133144,
-      "sha256": "545a4692c7bc9f3290071d59d714b56393d7c5793e0f33fd93fbd0c0652935e1"
+      "entries": 132,
+      "bytes": 157372,
+      "sha256": "3c8e30d1477833072ce3ac8c8a3dadb9d86d0ea69a24d8bba29cddc84714c8fb"
     },
     {
       "file": "why-questions.json",
@@ -223,6 +223,15 @@
       "entries": 8,
       "bytes": 1801,
       "sha256": "b1445a3e3d48ecc73fa488db69db3d8025e55744625873382dff4288695dcc37"
+    },
+    {
+      "file": "research-feedback.json",
+      "sources": [
+        "app/research-feedback.json"
+      ],
+      "entries": 11,
+      "bytes": 9021,
+      "sha256": "7db383bdcbe01cc86569997689081fa49d17e8d66a17f78e7461b1769fa9fab0"
     },
     {
       "file": "challenge-hints.json",

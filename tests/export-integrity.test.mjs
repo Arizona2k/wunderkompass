@@ -8,7 +8,7 @@ test('actual forty-source extraction catches changed source despite an untouched
   // TypeScript is the same installed parser; this fixture is not another development checkout.
   fs.symlinkSync(path.resolve('node_modules'),path.join(root,'node_modules'),'dir');fs.writeFileSync(path.join(root,'package.json'),'{"type":"module"}');
   const extract=()=>{execFileSync(process.execPath,['scripts/export-content.mjs','--check'],{cwd:root,stdio:'pipe'});return JSON.parse(fs.readFileSync(path.join(root,'.qa-output/content-check/index.json'),'utf8'));};
-  const original=extract();assert.equal(verifyFreshExport(expected,original),true);assert.equal(original.files.length,40);
+  const original=extract();assert.equal(verifyFreshExport(expected,original),true);assert.equal(original.files.length,41);
   const countryPath=path.join(root,'app/country-metadata.json'),countries=JSON.parse(fs.readFileSync(countryPath,'utf8')),first=Object.keys(countries)[0];countries[first].capital='Synthetic stale-source fixture only';fs.writeFileSync(countryPath,JSON.stringify(countries));
   const changed=extract();assert.throws(()=>verifyFreshExport(expected,changed),/Source and checked export differ/);
   assert.notEqual(changed.files.find(f=>f.file==='country-metadata.json').sha256,expected.files.find(f=>f.file==='country-metadata.json').sha256);

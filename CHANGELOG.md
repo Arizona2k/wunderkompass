@@ -1,5 +1,13 @@
 # Änderungsverlauf
 
+## Paket3.5 · Geografie und spezifisches Laborfeedback (unveröffentlicht)
+
+- Fünf eigene Geografie-Erklärungen und drei alte Begriffe mit freiwilligen Altersstufen, Papierbeispielen, individuellen Denkfragen, Quellen und erklärten gegenseitigen Wissenswegen. AlteDefinitionen/IDs bleiben erhalten.
+- Alle elf Labore erhalten66 jeweils passende Erklärungen zu falschen Antworten in den33 vorhandenen Aufgaben. Richtige Antworten, Stempel, gespeicherte Einstellungen und Modelle bleiben erhalten.
+- Browserprüfung erkennt Textüberläufe nach jeder falschen Antwort. Portable Exporte und Inventur erfassen den echten Rückmeldungstext samt Herkunft, ohne Aufgaben künstlich neu zu zählen.
+- Implementierte Zwischenwelle; vollständige neue GitHub- und unabhängige Gesamtfachabnahme bleiben offen.
+
+
 ## Paket3.5 – Messen verstehen und Wissensbuch zuverlässiger bedienen (unveröffentlicht)
 
 - Sieben eigene SI-Begriffserklärungen mit freiwilligen Altersstufen, Beobachtungen, individuellen Denkfragen/Hilfen/Falschbegründungen und Quellen: Buch90→97 roh, alle90 Alttexte/30 Warum-Antworten und Pass-IDs erhalten. Drei begrenzte Zahlenmodelle und genaue6-Kugel-/3-Paar-Zählskizze; keine unabhängige Fachfreigabe behauptet.

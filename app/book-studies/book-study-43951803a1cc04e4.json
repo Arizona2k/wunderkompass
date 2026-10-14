@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Meeresspiegel",
+  "learning": {
+    "starter": "Die Meeresoberfläche bewegt sich. Zum Vergleichen von Höhen betrachten wir einen erklärten, gemittelten Bezug.",
+    "deeper": "Eine Messung an einer Küste bezieht sich auf einen Punkt an Land. Sie ist nicht automatisch der weltweite Mittelwert. Lokale Landbewegung und Meeresströmungen können einen Vergleich beeinflussen. Eine einzelne Beobachtung bestimmt noch keinen langjährigen Trend.",
+    "observe": "Zeichne für einen erfundenen Messort drei Wasserhöhen über demselben Bezug: 2, 3 und 4 Zentimeter. Erkläre den Unterschied zwischen einem Einzelwert und dem Mittelwert. Die Zahlen sind ausgedacht und keine Meeresspiegelmessung oder Vorhersage.",
+    "benefit": "Du unterscheidest einzelne, lokale und gemittelte Höhenangaben.",
+    "topic": "science-tides",
+    "connection": "Die Gezeitenkarte zeigt wechselnde Wasserstände. Unterscheide einen Zeitpunkt, einen gemittelten Bezug und einen langjährigen Trend; die Modellkurve ist keine örtliche Vorhersage.",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/sealevel.html",
+        "title": "NOAA · Meeresspiegel (Englisch)",
+        "anchor": "NOS selected global/local difference and tide-station/satellite measurements paragraphs5–8. Old2014 figures, population percentages and obsolete annual-rate values excluded; own invented centimetre series only.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Geoid",
+        "reason": "Das Geoid beschreibt einen idealisierten Höhenbezug, während beobachtete Wasserstände örtlich und zeitlich variieren. Bezug und einzelne Messung sind verschieden."
+      },
+      {
+        "term": "Mittelwert",
+        "reason": "Mehrere Höhenwerte lassen sich unter einem gemeinsamen Bezug mitteln. Ein einzelner Wert ist noch kein langjähriger weltweiter Trend."
+      }
+    ],
+    "question": {
+      "prompt": "Was zeigt eine einzelne erfundene Wasserhöhe von 3 Zentimetern?",
+      "answers": [
+        "Eine sichere Vorhersage für alle Küsten",
+        "Den weltweiten langjährigen Trend",
+        "Nur diesen Einzelwert über dem vereinbarten Bezug"
+      ],
+      "correct": 2,
+      "hint": "Eine einzelne Zahl macht noch keine weltweite Zeitreihe.",
+      "why": "Der Einzelwert beschreibt nur diese gedachte Messung und ihren Bezug. Für einen Trend oder ein weltweites Mittel sind weitere geeignete Daten nötig.",
+      "wrongReasons": [
+        "Eine Einzelmessung trägt keine sichere Vorhersage für alle Küsten.",
+        "Ein einzelner Wert ist keine langjährige weltweite Messreihe.",
+        ""
+      ]
+    }
+  }
+}

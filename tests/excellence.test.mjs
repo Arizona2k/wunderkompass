@@ -21,6 +21,16 @@ test('all old journeys, diagrams, tasks, games and labs stay in scope without be
  assert.equal(editorialReport(inventory).missingDossiers.length,inventory.records.length);
  assert.equal(editorialReport(inventory).scientificApproval,false);
 });
+test('lab inventory fingerprints actual feedback and records its canonical provenance without inflating the task stock',()=>{
+ const rows=inventory.records.filter(r=>r.family==='lab-tasks');assert.equal(rows.length,33);
+ for(const row of rows){assert.deepEqual(row.sourceFiles,['app/research-labs.tsx','app/research-catalog.ts','app/research-feedback.json']);assert.notEqual(row.dataHash,baseline.records.find(r=>r.id===row.id).dataHash);}
+ const fixture=fs.mkdtempSync('/tmp/wk-inventory-');try{
+  fs.cpSync('exports',fixture+'/exports',{recursive:true});fs.cpSync('public',fixture+'/public',{recursive:true});
+  const file=fixture+'/exports/content/research-feedback.json',feedback=JSON.parse(fs.readFileSync(file,'utf8'));feedback.moon.medium[0]+=' Synthetic regression marker.';fs.writeFileSync(file,JSON.stringify(feedback));
+  const after=collectInventory(fixture),changed=after.records.filter((r,i)=>r.dataHash!==inventory.records[i].dataHash);
+  assert.deepEqual(changed.map(r=>r.id),['lab-tasks:moon:medium']);assert.deepEqual(after.families,inventory.families);
+ }finally{fs.rmSync(fixture,{recursive:true,force:true});}
+});
 test('dossiers reject unsupported claims, unknown rights, stale UI and duplicate identities',()=>{
  const record=inventory.records[0],d={id:record.id,dataHash:record.dataHash,goal:'Observe',explanation:'Explain',example:'Compare',whyItMatters:'Understand',hint:'Think',feedback:'Explain result',modelLimits:'Not a full model',reviewedBy:'Synthetic fixture only',reviewedOn:'2026-10-13',ageLevels:{'6-8':'Observe','9-11':'Explain','12-14':'Transfer'},sources:[{id:'source',organisation:'Fixture',url:'https://example.org/source',rightsBasis:'Synthetic test',checkedOn:'2026-10-13'}],claims:[{statement:'Fixture only',sourceId:'source',anchor:'Section 1'}],mediaDecision:'No visual needed for this test',links:[],isolationReason:'Synthetic isolated test',ui:{build:'fixture-build',route:record.route,visible:true,search:true,back:true,offline:true,report:'synthetic report'}};
  const options={build:'fixture-build',knownIds:new Set(inventory.records.map(r=>r.id))};
