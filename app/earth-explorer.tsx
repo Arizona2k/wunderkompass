@@ -138,7 +138,7 @@ export default function EarthExplorer(){
   useEffect(()=>{const value=routePath.split('/')[0];if(MODES.includes(value)){setMode(value as Mode);setVisited(p=>new Set([...p,value]));setSpin(false);setTouchActive(false);}},[routePath]);
   useEffect(()=>{if(routePath!=='games'||mode!=='games'||!/^game-knowledge-|^order-knowledge-|^game-route-/.test(history.state?.wunderFocus??''))return;const frame=requestAnimationFrame(()=>restoreRouteView('games'));return()=>cancelAnimationFrame(frame);},[routePath,mode]);
   // Restore after the parent tab becomes visible, not while its article is hidden.
-  useEffect(()=>{if(mode!=='world'||!routePath.startsWith('world/'))return;const frame=requestAnimationFrame(()=>restoreRouteView(routePath));return()=>cancelAnimationFrame(frame);},[routePath,mode]);
+  useEffect(()=>{const visibleWorld=mode==='world'&&routePath.startsWith('world/'),visibleLab=mode==='labs'&&routePath.startsWith('labs/')&&!routePath.startsWith('labs/experiment/');if(!visibleWorld&&!visibleLab)return;const frame=requestAnimationFrame(()=>restoreRouteView(routePath));return()=>cancelAnimationFrame(frame);},[routePath,mode]);
 
   useEffect(()=>{if(!local.ready||hydratedRevision===local.restoreRevision)return;
     // An imported/reset pass takes precedence over a reader's pre-import URL.

@@ -41,9 +41,9 @@ test('reciprocal links retain every relevant chapter and never repeat a path',()
  for(const [id,links] of Object.entries(CHAPTER_LINKS))for(let index=0;index<links.length;index++)if(links[index].startsWith('world/topic/'))assert.ok(chapterLinksForTopic(links[index].slice(12)).some(c=>c.id===id&&c.index===index&&c.path===chapterPath(id,index)));
 });
 
-test('all240 stored correct choices keep their identities and meaning after selective editorial revision',()=>{
+test('all240 stored correct choices and individual hint-review coverage keep their identities after editorial revision',()=>{
  const retained=JSON.parse(fs.readFileSync('tests/fixtures/journey-task-identities.json','utf8')).tasks;assert.equal(retained.length,240);
  for(const old of retained){const split=old.id.lastIndexOf(':'),id=old.id.slice(0,split),level=Number(old.id.slice(split+1));const q=data.chapters.find(c=>c.id===id)?.tasks[level];assert.ok(q);assert.equal(q.correct,old.correct,old.id);assert.equal(q.answers[q.correct],old.correctAnswer,old.id);}
- const reviews=JSON.parse(fs.readFileSync('content/journey-task-review.json','utf8'));assert.equal(reviews.independentReview,false);
+ const reviews=JSON.parse(fs.readFileSync('content/journey-task-review.json','utf8'));assert.equal(reviews.independentReview,false);assert.equal(reviews.tasks.length,240);assert.equal(new Set(reviews.tasks.map(r=>r.id)).size,240);assert.deepEqual(new Set(reviews.tasks.map(r=>r.id)),new Set(retained.map(r=>r.id)));assert.equal(new Set(data.chapters.flatMap(c=>c.tasks.map(q=>q.hint))).size,240);
  for(const review of reviews.tasks){const split=review.id.lastIndexOf(':'),id=review.id.slice(0,split),level=Number(review.id.slice(split+1)),q=data.chapters.find(c=>c.id===id).tasks[level];assert.deepEqual(q,review.after);assert.equal(createHash('sha256').update(JSON.stringify(q)).digest('hex'),review.afterHash);assert.equal(q.correct,review.before.correct);for(let i=0;i<3;i++)if(i!==q.correct){assert.notEqual(q.answers[i],q.answers[q.correct]);assert.notEqual(q.wrong[i],q.why);}}
 });
