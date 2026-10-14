@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "term": "Genom",
+  "learning": {
+    "starter": "Genom heißt die ganze Sammlung der Erbinformation. Ein Gen gehört als einzelner Abschnitt dazu.",
+    "deeper": "Beim Menschen liegt DNA nicht nur in den Chromosomen des Zellkerns, sondern auch in Mitochondrien. Ein größeres Genom bedeutet nicht automatisch ein komplizierteres Lebewesen. Umfang und Aufgaben sind unterschiedliche Fragen.",
+    "observe": "Vergleiche zwei eigene Bastelanleitungen: eine lange mit vielen Wiederholungen und eine kurze mit mehreren Schritten. Warum beweist die Seitenzahl allein nicht, welche schwieriger ist? Der Vergleich bildet kein echtes Genom nach.",
+    "benefit": "Du unterscheidest gesamte Erbinformation, einzelne Gene und die bloße Größe einer Sammlung.",
+    "topic": "science-cell",
+    "connection": "Vergleiche Teil und Ganzes: Die Zellkarte erklärt den Zellaufbau, das Genom die Gesamtheit ihrer Erbinformation. Das sind unterschiedliche Beschreibungsebenen.",
+    "relatedWords": [
+      {
+        "term": "Gen",
+        "reason": "Ein Gen ist ein Abschnitt; zum Genom gehört die gesamte Erbinformation, auch weitere Bereiche."
+      },
+      {
+        "term": "Chromosom",
+        "reason": "Chromosomen verpacken einen Teil der DNA. Das Genom bezeichnet die gesamte Erbinformation."
+      },
+      {
+        "term": "Bakterium",
+        "reason": "Auch Bakterien besitzen Erbinformation. Ein einzelliges Lebewesen ist nicht dasselbe wie seine Informationssammlung."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Genome",
+        "title": "NIH/NHGRI · Genom (Englisch)",
+        "anchor": "Definition: entire DNA set including mitochondrial DNA; narration: no consistent correlation with biological complexity; no dated record examples used",
+        "updatedOn": "2026-10-13",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "question": {
+      "prompt": "Was lässt sich allein aus einem größeren Genom sicher schließen?",
+      "answers": [
+        "Das Lebewesen ist klüger",
+        "Es ist automatisch komplizierter",
+        "Es besitzt mehr Erbmaterial"
+      ],
+      "correct": 2,
+      "hint": "Trenne Menge von Fähigkeiten oder biologischer Komplexität.",
+      "why": "Mehr Erbmaterial beschreibt die Menge. Daraus folgt keine Rangliste der Fähigkeiten oder Komplexität.",
+      "wrongReasons": [
+        "Die Menge an Erbmaterial ist kein Maß für Klugheit.",
+        "Genomgröße und biologische Komplexität passen nicht in eine einfache Rangfolge.",
+        ""
+      ]
+    }
+  }
+}

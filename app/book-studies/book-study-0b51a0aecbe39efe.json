@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "term": "RNA",
+  "learning": {
+    "starter": "RNA hilft bei der Arbeit in Zellen. Es gibt verschiedene Arten mit unterschiedlichen Aufgaben.",
+    "deeper": "RNA ist meistens einzelsträngig. Ihr Zucker heißt Ribose, und sie verwendet die Basen A, U, C und G. Manche RNA trägt Nachrichten, andere hat strukturelle oder regulierende Aufgaben. Nicht jede RNA ist deshalb eine bloße Kopie für ein Protein.",
+    "observe": "Zeichne drei Papierkarten für Nachricht, Arbeitsplatz und Transport. Erkläre, warum sie unterschiedliche Rollen haben können. Diese Rollenhilfe zeigt keine echte RNA-Form und sagt nicht, dass RNA kleine Menschen oder Fahrzeuge enthält.",
+    "benefit": "Du unterscheidest verschiedene RNA-Aufgaben und vermeidest die Gleichsetzung von RNA und DNA.",
+    "topic": "science-cell",
+    "connection": "Die Zellkarte erklärt die lebende Einheit. RNA hat darin unterschiedliche Aufgaben; ein grobes Zellbild zeigt diese Moleküle nicht einzeln.",
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Ribonucleic-Acid-RNA",
+        "title": "NIH/NHGRI · RNA (Englisch)",
+        "anchor": "Definition: usually single-stranded, ribose, A/U/C/G and several RNA types/functions; no universal messenger-only claim.",
+        "updatedOn": "2026-10-13",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "DNA",
+        "reason": "RNA und DNA sind verwandte, aber verschiedene Moleküle. Vergleiche ihre Bausteine und Aufgaben."
+      },
+      {
+        "term": "Nukleotid",
+        "reason": "Nukleotide sind Bausteine von RNA. In RNA gehören Ribose und U statt T zu den grundlegenden Unterschieden gegenüber DNA."
+      },
+      {
+        "term": "Gen",
+        "reason": "Manche Gene enthalten Information für eine RNA, die selbst eine Aufgabe erfüllt. Nicht jede RNA dient nur als Protein-Nachricht."
+      },
+      {
+        "term": "Enzym",
+        "reason": "Die meisten Enzyme sind Proteine, einige bestehen aus RNA. Stoffart und biologische Aufgabe müssen unterschieden werden."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Aussage passt zu RNA?",
+      "answers": [
+        "Jede RNA hat exakt dieselbe Aufgabe",
+        "RNA ist immer dasselbe wie DNA",
+        "Verschiedene RNA-Arten erfüllen verschiedene Aufgaben"
+      ],
+      "correct": 2,
+      "hint": "Vergleiche Nachricht, Struktur und Transport als unterschiedliche Rollen.",
+      "why": "Es gibt mehrere RNA-Arten mit unterschiedlichen Aufgaben. Nachrichtentragende RNA ist nur ein Beispiel.",
+      "wrongReasons": [
+        "RNA-Arten können sich in ihren Aufgaben unterscheiden; nicht jede ist eine Nachricht für ein Protein.",
+        "RNA und DNA sind verwandte, aber verschiedene Moleküle. RNA verwendet unter anderem Ribose und U statt T.",
+        ""
+      ]
+    }
+  }
+}

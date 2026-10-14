@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "meaning": "Individual factual/learning dossiers, not a second backlog or independent approval",
+  "meaning": "Individually drafted vocabulary explanations and documented self-review; raw candidates, no independent scientific or age acceptance.",
   "independentReview": false,
   "rightsReference": "https://www.nist.gov/open/license",
   "entries": [
@@ -9,7 +9,7 @@
       "kind": "new-unit-explanation-candidate",
       "quantity": "Länge",
       "baselineComparison": "No standalone explanation of this unit in the 90 baseline terms. Incidental units, model numbers and short aliases are not separately counted. Final cross-catalog semantic acceptance remains open.",
-      "contentHash": "bcd8cb344108baa72160cda6e2dec7ac607aa76a450697d204642a8c544d7a22",
+      "contentHash": "f8bf8de14819408c790d68f55882e293c64772dce0c1908c7ec262347d91037b",
       "ageLevels": {
         "6-8": "Meter sagen, wie lang etwas ist. Ein gemeinsames Maß hilft uns, Messungen zu vergleichen.",
         "9-11": "Der Meter ist eine gemeinsame Einheit für Längen. Das Zeichen m gehört immer zur Zahl: 2 m sagt, welche Länge gemeint ist. Verschieden große Hände eignen sich zum Vergleichen, sind aber kein einheitliches Längenmaß.",
@@ -69,6 +69,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
           "anchor": "Meter – Unit of Length; fixed speed of light"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Wellenlänge",
+          "reason": "Wellenlänge ist ein räumlicher Wiederholungsabstand. Eine Längeneinheit wie Meter macht seine Zahl vergleichbar."
         }
       ]
     },
@@ -145,7 +151,7 @@
       "kind": "new-unit-explanation-candidate",
       "quantity": "Zeitdauer",
       "baselineComparison": "No standalone explanation of this unit in the 90 baseline terms. Incidental units, model numbers and short aliases are not separately counted. Final cross-catalog semantic acceptance remains open.",
-      "contentHash": "04877b59b4b7f3912b20f632688ac596f221b98257175ec6af6b021e9fe8246f",
+      "contentHash": "36f4f6406de32c95687286a704fb7961237d226053181d911c4751cd20bd6fa2",
       "ageLevels": {
         "6-8": "Sekunden sagen, wie lange etwas dauert. Die Uhrzeit sagt, wann es passiert.",
         "9-11": "Die Sekunde ist eine Zeiteinheit mit dem Zeichen s. Sie beschreibt zum Beispiel, wie lange ein Vorgang dauert. Die Uhrzeit seines Beginns und seine Dauer sind unterschiedliche Angaben: Ein Versuch kann um 10 Uhr beginnen und drei Sekunden dauern.",
@@ -198,6 +204,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.nist.gov/si-redefinition/second-introduction",
           "anchor": "Difference between intervals and instants; 9,192,631,770 periods of cesium radiation"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Frequenz",
+          "reason": "Hertz zählt vollständige Wiederholungen pro Sekunde. Zeitdauer und Wiederholungsrate sind verschiedene Angaben."
         }
       ]
     },
@@ -328,7 +340,7 @@
       "kind": "new-unit-explanation-candidate",
       "quantity": "Stoffmenge",
       "baselineComparison": "No standalone explanation of this unit in the 90 baseline terms. Incidental units, model numbers and short aliases are not separately counted. Final cross-catalog semantic acceptance remains open.",
-      "contentHash": "08a920d18f88737e8acbbeb209b591dc1523c9f12fedc58136de4ac9c9273d7b",
+      "contentHash": "9798cab00c1d6a958029059ca57f55a2ae2fe7aa38acf743463b5c9c4802f5c5",
       "ageLevels": {
         "6-8": "Beim Zählen ist wichtig, was als ein Teil gilt: eine einzelne Kugel oder ein ganzes Kugelpaar.",
         "9-11": "Mol ist die Einheit für die Stoffmenge. Sie beschreibt sehr große Anzahlen festgelegter Teilchen. Du musst dazusagen, ob etwa Atome oder ganze Moleküle gezählt werden. Ein Mol ist nicht einfach ein bestimmtes Gewicht in Kilogramm.",
@@ -388,6 +400,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
           "anchor": "Mole – Unit of Amount of Substance; exact Avogadro constant"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Atom",
+          "reason": "Atom benennt eine Teilchenart; Mol ist eine Einheit für die Anzahl festgelegter Teilchen. Teilchenart und Stoffmenge sind verschieden."
         }
       ]
     },
@@ -451,7 +469,2369 @@
           "anchor": "Photometry; direction; distinction from lumen and radiant power"
         }
       ]
+    },
+    {
+      "id": "words:DNA",
+      "kind": "new-biological-explanation-candidate",
+      "baselineComparison": "Distinct vocabulary explanation absent from the90 baseline terms. Not counted as a new science card or alias. Cross-catalog independent semantic acceptance remains open.",
+      "contentHash": "3263601ee837e008680a1f72f2e1995d5a59bf49426fc40d91cf85ec74d4d795",
+      "ageLevels": {
+        "6-8": "Zellen bewahren Informationen in einem Stoff namens DNA auf. Die Reihenfolge kleiner Bausteine macht dabei einen Unterschied.",
+        "9-11": "DNA ist ein Molekül, das Erbinformation trägt. Die Reihenfolge ihrer Bausteine enthält Informationen, die Zellen nutzen. Sie ist kein Plan, der deine Entscheidungen oder deine ganze Zukunft festlegt.",
+        "12-14": "DNA besteht gewöhnlich aus zwei verbundenen Strängen. Ihre vier Basen heißen A, T, C und G; A passt zu T und C zu G. Die Reihenfolge enthält unter anderem Information für Proteine oder RNA."
+      },
+      "goal": "Du unterscheidest den Informationsträger von der Reihenfolge seiner Bausteine.",
+      "observe": "Schreibe AATT und ATAT auf. Beide enthalten dieselben Buchstaben, aber in anderer Reihenfolge. Erkläre, warum bloßes Zählen die Anordnung nicht beschreibt. Das ist eine Zeichenhilfe, keine echte DNA.",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid-DNA",
+          "title": "NIH/NHGRI · DNA (Englisch)",
+          "anchor": "Definition: two linked strands; A–T and C–G pairing; sequence encodes information for protein or RNA",
+          "updatedOn": "2026-10-13",
+          "checkedOn": "2026-10-14"
+        },
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Genetic-Code",
+          "title": "NIH/NHGRI · Gene legen deine Zukunft nicht fest (Englisch)",
+          "anchor": "Narration: neither genes nor DNA determine who you are or what you shall do",
+          "updatedOn": "2026-10-13",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "AATT und ATAT enthalten gleich viele A und T. Was ist trotzdem verschieden?",
+        "answers": [
+          "Die Reihenfolge",
+          "Die Gesamtzahl der Zeichen",
+          "Die verwendeten Zeichenarten"
+        ],
+        "correct": 0,
+        "hint": "Lies beide Folgen von links nach rechts.",
+        "why": "Dieselben Zeichen können verschieden angeordnet sein. Bei DNA ist die Reihenfolge wichtig für die enthaltene Information.",
+        "wrongReasons": [
+          "",
+          "Beide Folgen enthalten vier Zeichen. Die Gesamtzahl erklärt den Unterschied nicht.",
+          "Beide verwenden A und T. Unterschiedlich ist ihre Anordnung."
+        ]
+      },
+      "connection": "Auf der Zellkarte erkennst du verschiedene Bereiche einer Zelle. Die DNA erklärt, wie Zellen Informationen bewahren; die grobe Zellzeichnung zeigt diese Moleküle nicht einzeln.",
+      "relatedWords": [
+        {
+          "term": "Gen",
+          "reason": "Ein Gen ist ein bestimmter Informationsabschnitt; DNA ist der molekulare Informationsträger."
+        },
+        {
+          "term": "Chromosom",
+          "reason": "Chromosomen ordnen lange DNA zusammen mit Proteinen. Verpackung und Informationsträger sind verschiedene Begriffe."
+        },
+        {
+          "term": "Nukleotid",
+          "reason": "Viele verbundene Nukleotide bilden die DNA-Kette. Vergleiche einzelnen Baustein und gesamten Aufbau."
+        },
+        {
+          "term": "Mutation",
+          "reason": "Eine Mutation verändert die DNA-Reihenfolge. Die Beschreibung einer Veränderung erklärt noch nicht ihre Wirkung."
+        },
+        {
+          "term": "RNA",
+          "reason": "RNA und DNA sind verwandte, aber verschiedene Moleküle. Vergleiche ihre Bausteine und Aufgaben."
+        }
+      ],
+      "reviewedBy": "Codex self-review using selected original NHGRI definitions and narration; KI-supported drafting",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "rightsBasisId": "nhgri-own-explanations-2026-10-14",
+      "mediaDecision": "Own paper-letter comparison distinguishes order from letter counts; linked cell diagram establishes a different scale. No molecular photograph or copied NIH artwork.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid-DNA",
+          "anchor": "Definition: two linked strands; A–T and C–G pairing; sequence encodes information for protein or RNA"
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid-DNA",
+          "anchor": "Definition: two linked strands; A–T and C–G pairing; sequence encodes information for protein or RNA"
+        },
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Genetic-Code",
+          "anchor": "Narration: neither genes nor DNA determine who you are or what you shall do"
+        }
+      ]
+    },
+    {
+      "id": "words:Gen",
+      "kind": "new-biological-explanation-candidate",
+      "baselineComparison": "Distinct vocabulary explanation absent from the90 baseline terms. Not counted as a new science card or alias. Cross-catalog independent semantic acceptance remains open.",
+      "contentHash": "ddddf71fd48d041aa2c8bec754985612e3fc5b95fbbd246996ebf7d52198f013",
+      "ageLevels": {
+        "6-8": "Ein Gen ist ein bestimmter Abschnitt der DNA. Zellen können seine Information nutzen.",
+        "9-11": "Ein Gen ist ein Abschnitt der Erbinformation. Er enthält Information für ein bestimmtes Protein oder eine funktionsfähige RNA. Ein einzelnes Gen bestimmt nicht, wie ein Mensch denkt, handelt oder leben wird.",
+        "12-14": "Viele Gene enthalten Informationen für Proteine. Andere liefern RNA, die selbst eine Aufgabe erfüllt. Gene sind deshalb nicht einfach fertige Körperteile. Ihre Nutzung gehört zu vielen miteinander verbundenen Vorgängen in Zellen."
+      },
+      "goal": "Du erklärst, warum ein Gen ein Abschnitt und kein vollständiges Lebewesen ist.",
+      "observe": "Schreibe eine kurze Anleitung mit drei Abschnitten und markiere einen davon. Vergleiche Abschnitt und ganze Anleitung. Diese Papierhilfe erklärt nur die Begriffe Teil und Ganzes, keine echten Gene oder Merkmale.",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Gene",
+          "title": "NIH/NHGRI · Gen (Englisch)",
+          "anchor": "Definition plus narration: protein-coding genes and functional RNA genes",
+          "updatedOn": "2026-10-13",
+          "checkedOn": "2026-10-14"
+        },
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Genetic-Code",
+          "title": "NIH/NHGRI · Gene legen deine Zukunft nicht fest (Englisch)",
+          "anchor": "Narration: neither genes nor DNA determine who you are or what you shall do",
+          "updatedOn": "2026-10-13",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Was beschreibt ein Gen am besten?",
+        "answers": [
+          "Ein fertiges Körperteil",
+          "Einen bestimmten Informationsabschnitt",
+          "Die gesamte DNA eines Lebewesens"
+        ],
+        "correct": 1,
+        "hint": "Vergleiche einen Abschnitt mit einer ganzen Sammlung.",
+        "why": "Ein Gen ist ein bestimmter Abschnitt mit biologischer Information. Die gesamte DNA wird als Genom bezeichnet.",
+        "wrongReasons": [
+          "Ein Körperteil besteht aus Zellen und vielen Stoffen. Ein Gen ist ein Informationsabschnitt.",
+          "",
+          "Die Gesamtheit der DNA heißt Genom. Ein Gen ist nur ein bestimmter Abschnitt."
+        ]
+      },
+      "connection": "Die Zellkarte zeigt verschiedene Aufgaben in einer lebenden Einheit. Gene liefern unter anderem Informationen für Proteine, die an dieser Zellarbeit beteiligt sind.",
+      "relatedWords": [
+        {
+          "term": "DNA",
+          "reason": "Ein Gen ist ein bestimmter Informationsabschnitt; DNA ist der molekulare Informationsträger."
+        },
+        {
+          "term": "Genom",
+          "reason": "Ein Gen ist ein Abschnitt; zum Genom gehört die gesamte Erbinformation, auch weitere Bereiche."
+        },
+        {
+          "term": "Protein",
+          "reason": "Viele Gene enthalten Information für Proteine. Ein Informationsabschnitt ist nicht das daraus gebildete Molekül."
+        },
+        {
+          "term": "RNA",
+          "reason": "Manche Gene enthalten Information für eine RNA, die selbst eine Aufgabe erfüllt. Nicht jede RNA dient nur als Protein-Nachricht."
+        }
+      ],
+      "reviewedBy": "Codex self-review using selected original NHGRI definitions and narration; KI-supported drafting",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "rightsBasisId": "nhgri-own-explanations-2026-10-14",
+      "mediaDecision": "Own instruction-section exercise separates information section from whole organism; avoids portraits that could suggest genetic determinism.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Gene",
+          "anchor": "Definition plus narration: protein-coding genes and functional RNA genes"
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Gene",
+          "anchor": "Definition plus narration: protein-coding genes and functional RNA genes"
+        },
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Genetic-Code",
+          "anchor": "Narration: neither genes nor DNA determine who you are or what you shall do"
+        }
+      ]
+    },
+    {
+      "id": "words:Genom",
+      "kind": "new-biological-explanation-candidate",
+      "baselineComparison": "Distinct vocabulary explanation absent from the90 baseline terms. Not counted as a new science card or alias. Cross-catalog independent semantic acceptance remains open.",
+      "contentHash": "bfbfbf1f8eb6a4d9b6862601ba18c675a2041dccbdb73a123722183072d60c0e",
+      "ageLevels": {
+        "6-8": "Genom heißt die ganze Sammlung der Erbinformation. Ein Gen gehört als einzelner Abschnitt dazu.",
+        "9-11": "Das Genom ist die Gesamtheit der Erbinformation eines Lebewesens. Bei zellulären Lebewesen liegt sie in DNA. Gene sind Teile dieser Gesamtheit; auch andere DNA-Abschnitte gehören dazu.",
+        "12-14": "Beim Menschen liegt DNA nicht nur in den Chromosomen des Zellkerns, sondern auch in Mitochondrien. Ein größeres Genom bedeutet nicht automatisch ein komplizierteres Lebewesen. Umfang und Aufgaben sind unterschiedliche Fragen."
+      },
+      "goal": "Du unterscheidest gesamte Erbinformation, einzelne Gene und die bloße Größe einer Sammlung.",
+      "observe": "Vergleiche zwei eigene Bastelanleitungen: eine lange mit vielen Wiederholungen und eine kurze mit mehreren Schritten. Warum beweist die Seitenzahl allein nicht, welche schwieriger ist? Der Vergleich bildet kein echtes Genom nach.",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Genome",
+          "title": "NIH/NHGRI · Genom (Englisch)",
+          "anchor": "Definition: entire DNA set including mitochondrial DNA; narration: no consistent correlation with biological complexity; no dated record examples used",
+          "updatedOn": "2026-10-13",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Was lässt sich allein aus einem größeren Genom sicher schließen?",
+        "answers": [
+          "Das Lebewesen ist klüger",
+          "Es ist automatisch komplizierter",
+          "Es besitzt mehr Erbmaterial"
+        ],
+        "correct": 2,
+        "hint": "Trenne Menge von Fähigkeiten oder biologischer Komplexität.",
+        "why": "Mehr Erbmaterial beschreibt die Menge. Daraus folgt keine Rangliste der Fähigkeiten oder Komplexität.",
+        "wrongReasons": [
+          "Die Menge an Erbmaterial ist kein Maß für Klugheit.",
+          "Genomgröße und biologische Komplexität passen nicht in eine einfache Rangfolge.",
+          ""
+        ]
+      },
+      "connection": "Vergleiche Teil und Ganzes: Die Zellkarte erklärt den Zellaufbau, das Genom die Gesamtheit ihrer Erbinformation. Das sind unterschiedliche Beschreibungsebenen.",
+      "relatedWords": [
+        {
+          "term": "Gen",
+          "reason": "Ein Gen ist ein Abschnitt; zum Genom gehört die gesamte Erbinformation, auch weitere Bereiche."
+        },
+        {
+          "term": "Chromosom",
+          "reason": "Chromosomen verpacken einen Teil der DNA. Das Genom bezeichnet die gesamte Erbinformation."
+        },
+        {
+          "term": "Bakterium",
+          "reason": "Auch Bakterien besitzen Erbinformation. Ein einzelliges Lebewesen ist nicht dasselbe wie seine Informationssammlung."
+        }
+      ],
+      "reviewedBy": "Codex self-review using selected original NHGRI definitions and narration; KI-supported drafting",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "rightsBasisId": "nhgri-own-explanations-2026-10-14",
+      "mediaDecision": "Own length/repetition comparison separates information amount from complexity; no misleading genome-size ranking illustration.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Genome",
+          "anchor": "Definition: entire DNA set including mitochondrial DNA; narration: no consistent correlation with biological complexity; no dated record examples used"
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Genome",
+          "anchor": "Definition: entire DNA set including mitochondrial DNA; narration: no consistent correlation with biological complexity; no dated record examples used"
+        }
+      ]
+    },
+    {
+      "id": "words:Chromosom",
+      "kind": "new-biological-explanation-candidate",
+      "baselineComparison": "Distinct vocabulary explanation absent from the90 baseline terms. Not counted as a new science card or alias. Cross-catalog independent semantic acceptance remains open.",
+      "contentHash": "ebebe28fd937f597dbcbf2fc70bf626c559267c902d0a478e4551fcd3b780ab9",
+      "ageLevels": {
+        "6-8": "Lange DNA wird zusammen mit Proteinen geordnet. So entsteht ein Chromosom.",
+        "9-11": "Ein Chromosom besteht aus einem langen DNA-Molekül und zugehörigen Proteinen. Diese Verpackung hilft, Erbinformation in Zellen zu ordnen und bei Zellteilungen weiterzugeben. Chromosomen sehen nicht immer wie ein X aus.",
+        "12-14": "Viele Chromosomen von Pflanzen und Tieren liegen im Zellkern. Ihre Form verändert sich im Zellzyklus; die bekannte X-Zeichnung zeigt nicht jeden Zustand. Verschiedene Lebewesen besitzen unterschiedliche Chromosomenzahlen und -formen."
+      },
+      "goal": "Du erkennst, dass eine bekannte Chromosomenzeichnung nur einen bestimmten Zustand zeigt.",
+      "observe": "Lege einen langen Faden locker hin und rolle ihn dann auf eine Papprolle. Welche Anordnung braucht weniger Platz? Die Rolle ist nur eine Verpackungshilfe: ein Chromosom ist viel komplizierter und kein echter Fadenknäuel.",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Chromosome",
+          "title": "NIH/NHGRI · Chromosom (Englisch)",
+          "anchor": "Definition: DNA and protein; narration: variable shapes/numbers and packaging; textbook X not universal",
+          "updatedOn": "2026-10-13",
+          "checkedOn": "2026-10-14"
+        },
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Genome",
+          "title": "NIH/NHGRI · DNA im Zellkern und in Mitochondrien (Englisch)",
+          "anchor": "Definition: genome includes nuclear chromosomes and mitochondrial DNA; no universal nuclear-only claim",
+          "updatedOn": "2026-10-13",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Eine Zeichnung zeigt ein Chromosom als X. Was musst du beachten?",
+        "answers": [
+          "Es hat nicht zu jeder Zeit diese Form",
+          "Jede Zelle enthält genau ein X",
+          "Ein X ist ein ganzer Zellkern"
+        ],
+        "correct": 0,
+        "hint": "Eine Zeichnung kann einen einzelnen Zustand auswählen.",
+        "why": "Chromosomen verändern ihre sichtbare Form während des Zellzyklus. Ein X ist kein allgemeines Bild jedes Chromosoms.",
+        "wrongReasons": [
+          "",
+          "Zahl und Form hängen vom Lebewesen und vom Zellzustand ab. Ein einziges X ist keine allgemeine Regel.",
+          "Ein Zellkern enthält unter anderem Chromosomen. Ein gezeichnetes Chromosom ist nicht der ganze Kern."
+        ]
+      },
+      "connection": "Im Zellbild wird ein Zellkern gezeigt. Die großen Kernchromosomen von Pflanzen und Tieren gehören in diesen Bereich; die grobe Zeichnung ist keine Chromosomenaufnahme.",
+      "relatedWords": [
+        {
+          "term": "DNA",
+          "reason": "Chromosomen ordnen lange DNA zusammen mit Proteinen. Verpackung und Informationsträger sind verschiedene Begriffe."
+        },
+        {
+          "term": "Genom",
+          "reason": "Chromosomen verpacken einen Teil der DNA. Das Genom bezeichnet die gesamte Erbinformation."
+        }
+      ],
+      "reviewedBy": "Codex self-review using selected original NHGRI definitions and narration; KI-supported drafting",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "rightsBasisId": "nhgri-own-explanations-2026-10-14",
+      "mediaDecision": "Own thread-and-spool observation explains packing with explicit analogy limits; no universal X-shaped chromosome image.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Chromosome",
+          "anchor": "Definition: DNA and protein; narration: variable shapes/numbers and packaging; textbook X not universal"
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Chromosome",
+          "anchor": "Definition: DNA and protein; narration: variable shapes/numbers and packaging; textbook X not universal"
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Genome",
+          "anchor": "Definition: genome includes nuclear chromosomes and mitochondrial DNA; no universal nuclear-only claim"
+        }
+      ]
+    },
+    {
+      "id": "words:Protein",
+      "kind": "new-biological-explanation-candidate",
+      "baselineComparison": "Distinct vocabulary explanation absent from the90 baseline terms. Not counted as a new science card or alias. Cross-catalog independent semantic acceptance remains open.",
+      "contentHash": "443b04a0c8af394610f083e765732ed197a16e9cf441b1da3403e48391d5d5ef",
+      "ageLevels": {
+        "6-8": "Proteine sind wichtige Stoffe in Zellen. Ihre gefaltete Form passt zu ihren Aufgaben.",
+        "9-11": "Proteine bestehen aus gefalteten Ketten von Aminosäuren. Sie erfüllen viele Aufgaben: Manche geben Strukturen Halt, andere helfen bei chemischen Reaktionen. Protein bedeutet also mehr als ein Nährstoff auf einer Verpackung.",
+        "12-14": "Ein Protein kann aus einer oder mehreren Aminosäureketten bestehen. Reihenfolge und räumliche Faltung gehören zu seiner Struktur. Proteine erfüllen unterschiedliche Aufgaben; nicht jedes Protein ist ein Enzym."
+      },
+      "goal": "Du verbindest den Aufbau eines Proteins mit seiner Form, ohne alle Proteine gleichzusetzen.",
+      "observe": "Falte denselben Papierstreifen einmal zum Zickzack und einmal als Rolle. Beschreibe die verschiedenen Formen bei gleichem Material. Das erklärt nur die Idee einer Faltung, nicht die Chemie echter Proteine.",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Protein",
+          "title": "NIH/NHGRI · Protein (Englisch)",
+          "anchor": "Definition: one or more folded amino-acid chains; structure, function and regulation; narration: structural proteins and enzymes",
+          "updatedOn": "2026-10-13",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Warum beschreibt „Protein“ nicht nur eine einzige Aufgabe?",
+        "answers": [
+          "Alle Proteine sind dasselbe Enzym",
+          "Verschiedene Proteine erfüllen verschiedene Aufgaben",
+          "Proteine kommen nur in Lebensmitteln vor"
+        ],
+        "correct": 1,
+        "hint": "Denke an Halt geben und Reaktionen unterstützen.",
+        "why": "Proteine können unterschiedliche Strukturen und Aufgaben haben. Einige sind Enzyme, andere nicht.",
+        "wrongReasons": [
+          "Enzyme sind eine besondere Gruppe. Nicht alle Proteine sind Enzyme.",
+          "",
+          "Proteine arbeiten in lebenden Zellen. Lebensmittel sind nur ein alltäglicher Ort, an dem wir ihnen begegnen."
+        ]
+      },
+      "connection": "Die Zellkarte zeigt Bereiche einer Zelle. Proteine sind Stoffe, die unterschiedliche Aufgaben darin erfüllen. Eine Zellskizze zeigt noch keine genaue Proteinfaltung.",
+      "relatedWords": [
+        {
+          "term": "Gen",
+          "reason": "Viele Gene enthalten Information für Proteine. Ein Informationsabschnitt ist nicht das daraus gebildete Molekül."
+        },
+        {
+          "term": "Enzym",
+          "reason": "Viele Enzyme sind Proteine, aber nicht jedes Protein ist ein Enzym. Vergleiche Stoffgruppe und besondere Aufgabe."
+        }
+      ],
+      "reviewedBy": "Codex self-review using selected original NHGRI definitions and narration; KI-supported drafting",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "rightsBasisId": "nhgri-own-explanations-2026-10-14",
+      "mediaDecision": "Own paper-fold observation compares shape at constant material; no claim that folded paper represents true molecular geometry.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Protein",
+          "anchor": "Definition: one or more folded amino-acid chains; structure, function and regulation; narration: structural proteins and enzymes"
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Protein",
+          "anchor": "Definition: one or more folded amino-acid chains; structure, function and regulation; narration: structural proteins and enzymes"
+        }
+      ]
+    },
+    {
+      "id": "words:Enzym",
+      "kind": "new-biological-explanation-candidate",
+      "baselineComparison": "Distinct vocabulary explanation absent from the90 baseline terms. Not counted as a new science card or alias. Cross-catalog independent semantic acceptance remains open.",
+      "contentHash": "637ad196440d1b5dca76192398212f1fc155ba8b3304224e6e8855e1f037b09c",
+      "ageLevels": {
+        "6-8": "Ein Enzym hilft einer passenden chemischen Reaktion, schneller abzulaufen. Es kann mehrmals helfen.",
+        "9-11": "Ein Enzym beschleunigt eine bestimmte chemische Reaktion in Lebewesen. Es wird dabei nicht wie ein Ausgangsstoff verbraucht und kann erneut helfen. Die meisten Enzyme sind Proteine; einige bestehen aus RNA.",
+        "12-14": "Enzyme sind biologische Katalysatoren. Verschiedene Enzyme passen zu unterschiedlichen Reaktionen. „Nicht verbraucht“ heißt nicht unzerstörbar: Es beschreibt ihre Rolle bei der jeweiligen Reaktion."
+      },
+      "goal": "Du unterscheidest einen wiederverwendbaren Reaktionshelfer von einem verbrauchten Ausgangsstoff.",
+      "observe": "Stell dir eine Person vor, die nacheinander mehrere passende Kartenpaare zusammenlegt. Sie gehört nicht zu den fertigen Paaren. Wo hilft dieser Vergleich beim Wiederverwenden, und wo erklärt er noch keine echte Chemie?",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Enzyme",
+          "title": "NIH/NHGRI · Enzym (Englisch)",
+          "anchor": "Definition and narration: specific reusable biological catalyst; usually protein, sometimes RNA",
+          "updatedOn": "2026-10-13",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Was ist typisch für ein Enzym bei seiner Reaktion?",
+        "answers": [
+          "Es ist immer der verbrauchte Ausgangsstoff",
+          "Es verwandelt jede beliebige Sache",
+          "Es kann die passende Reaktion wiederholt beschleunigen"
+        ],
+        "correct": 2,
+        "hint": "Achte auf passende Reaktion und Wiederverwendung.",
+        "why": "Ein Enzym beschleunigt eine bestimmte Reaktion und kann dabei wiederverwendet werden.",
+        "wrongReasons": [
+          "Das Enzym wirkt als Katalysator. Es wird bei seiner Reaktion nicht wie ein Ausgangsstoff verbraucht.",
+          "Verschiedene Enzyme helfen unterschiedlichen Reaktionen. Sie sind keine beliebigen Zauberwerkzeuge.",
+          ""
+        ]
+      },
+      "connection": "Eine Zelle führt viele chemische Reaktionen aus. Die Zellkarte erklärt die lebende Einheit, Enzyme helfen beim Verständnis ihrer Reaktionsabläufe.",
+      "relatedWords": [
+        {
+          "term": "Protein",
+          "reason": "Viele Enzyme sind Proteine, aber nicht jedes Protein ist ein Enzym. Vergleiche Stoffgruppe und besondere Aufgabe."
+        },
+        {
+          "term": "RNA",
+          "reason": "Die meisten Enzyme sind Proteine, einige bestehen aus RNA. Stoffart und biologische Aufgabe müssen unterschieden werden."
+        }
+      ],
+      "reviewedBy": "Codex self-review using selected original NHGRI definitions and narration; KI-supported drafting",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "rightsBasisId": "nhgri-own-explanations-2026-10-14",
+      "mediaDecision": "Own repeated card-pair helper comparison explains reuse; no unnecessary chemical experiment or copied enzyme artwork.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Enzyme",
+          "anchor": "Definition and narration: specific reusable biological catalyst; usually protein, sometimes RNA"
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Enzyme",
+          "anchor": "Definition and narration: specific reusable biological catalyst; usually protein, sometimes RNA"
+        }
+      ]
+    },
+    {
+      "id": "words:Mutation",
+      "kind": "new-biological-explanation-candidate",
+      "baselineComparison": "Distinct vocabulary explanation absent from the90 baseline terms. Not counted as a new science card or alias. Cross-catalog independent semantic acceptance remains open.",
+      "contentHash": "7fb97d2d558716b8c6e74b136f04132679d4958319ad2a86880e89c399384d13",
+      "ageLevels": {
+        "6-8": "Manchmal verändert sich ein Stück DNA. Diese Veränderung heißt Mutation.",
+        "9-11": "Eine Mutation ist eine Veränderung der DNA-Reihenfolge. Sie kann unterschiedliche Folgen haben oder ohne erkennbare Wirkung bleiben. Mutationen sind keine absichtlichen Wünsche und verleihen keine Superheldenkräfte.",
+        "12-14": "Mutationen können etwa beim Kopieren von DNA entstehen. Nicht jede Veränderung wird an Nachkommen weitergegeben: Veränderungen in gewöhnlichen Körperzellen und in Keimzellen sind dabei zu unterscheiden. Aus dem Wort allein folgt keine Gesundheitsvorhersage."
+      },
+      "goal": "Du trennst eine beobachtete Veränderung von Vermutungen über ihre möglichen Folgen.",
+      "observe": "Schreibe ATCG ab und ändere nur ein Zeichen. Beschreibe zunächst die Veränderung. Warum kannst du ohne weitere Informationen noch nicht sagen, welche biologische Wirkung sie hätte? Papierzeichen sind kein echtes Erbmaterial.",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Mutation",
+          "title": "NIH/NHGRI · Mutation (Englisch)",
+          "anchor": "Definition: change in DNA sequence; germline versus somatic; narration: fictional superhero claims rejected; no individual diagnosis",
+          "updatedOn": "2026-10-13",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Was weißt du durch die Bezeichnung Mutation allein?",
+        "answers": [
+          "Die DNA-Reihenfolge wurde verändert",
+          "Es entsteht sicher eine Superkraft",
+          "Sie wird immer an Kinder vererbt"
+        ],
+        "correct": 0,
+        "hint": "Unterscheide die Veränderung von einer garantierten Folge.",
+        "why": "Mutation bezeichnet eine DNA-Veränderung. Wirkung und Vererbung müssen gesondert untersucht werden.",
+        "wrongReasons": [
+          "",
+          "Superkräfte gehören zur Fiktion. Eine DNA-Veränderung beweist keine solche Fähigkeit.",
+          "Ob eine Veränderung vererbt werden kann, hängt unter anderem davon ab, in welchen Zellen sie auftritt."
+        ]
+      },
+      "connection": "Die Zellkarte betrachtet den Aufbau, diese Erklärung eine Veränderung der Erbinformation. Halte Struktur, Veränderung und mögliche Folgen getrennt.",
+      "relatedWords": [
+        {
+          "term": "DNA",
+          "reason": "Eine Mutation verändert die DNA-Reihenfolge. Die Beschreibung einer Veränderung erklärt noch nicht ihre Wirkung."
+        },
+        {
+          "term": "Evolution",
+          "reason": "Erbliche Veränderungen können zur Vielfalt beitragen. Evolution betrachtet Populationen über Generationen."
+        }
+      ],
+      "reviewedBy": "Codex self-review using selected original NHGRI definitions and narration; KI-supported drafting",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "rightsBasisId": "nhgri-own-explanations-2026-10-14",
+      "mediaDecision": "Own single-symbol-change observation separates sequence change from an unknown biological effect; no superhero or medical image.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Mutation",
+          "anchor": "Definition: change in DNA sequence; germline versus somatic; narration: fictional superhero claims rejected; no individual diagnosis"
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Mutation",
+          "anchor": "Definition: change in DNA sequence; germline versus somatic; narration: fictional superhero claims rejected; no individual diagnosis"
+        }
+      ]
+    },
+    {
+      "id": "words:Nukleotid",
+      "kind": "new-biological-explanation-candidate",
+      "baselineComparison": "Distinct vocabulary explanation absent from the90 baseline terms. Not counted as a new science card or alias. Cross-catalog independent semantic acceptance remains open.",
+      "contentHash": "02f2e5bf4dfae63188c3883199e7ef4b1a1960c2737357188187afea2e34109a",
+      "ageLevels": {
+        "6-8": "DNA und RNA bestehen aus vielen verbundenen Bausteinen. Ein solcher Baustein heißt Nukleotid.",
+        "9-11": "Nukleotide sind Bausteine von DNA und RNA. Jedes enthält einen Zucker, eine Phosphatgruppe und eine Base. Ein einzelner Baustein ist noch kein ganzes Gen oder vollständiges Genom.",
+        "12-14": "Bei DNA heißt der Zucker Desoxyribose, bei RNA Ribose. DNA verwendet die Basen A, T, C und G; RNA verwendet U anstelle von T. Viele verbundene Nukleotide bilden lange Ketten."
+      },
+      "goal": "Du ordnest Baustein, Kette und Informationsabschnitt auseinander.",
+      "observe": "Zeichne drei verschieden geformte Teile in einem Rahmen und wiederhole den Rahmen als Kette. Welche drei Teile gehören zu einem Baustein? Die Zeichnung zeigt nur eine Gliederung, keine echte Molekülform oder Größen.",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Nucleotide",
+          "title": "NIH/NHGRI · Nukleotid (Englisch)",
+          "anchor": "Definition: sugar, phosphate and base; ribose/deoxyribose; RNA U versus DNA T",
+          "updatedOn": "2026-10-13",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Welche Aussage beschreibt ein Nukleotid?",
+        "answers": [
+          "Es ist das vollständige Genom",
+          "Es enthält Zucker, Phosphat und eine Base",
+          "Es ist immer eine ganze Zelle"
+        ],
+        "correct": 1,
+        "hint": "Suche die drei Bestandteile eines einzelnen Bausteins.",
+        "why": "Zucker, Phosphatgruppe und Base bilden zusammen einen Nukleotid-Baustein. Viele davon gehören zu DNA oder RNA.",
+        "wrongReasons": [
+          "Das Genom bezeichnet die ganze Erbinformation. Ein Nukleotid ist ein einzelner Baustein.",
+          "",
+          "Eine Zelle besteht aus vielen verschiedenen Stoffen und Strukturen. Ein Nukleotid ist viel kleiner als dieses Ganze."
+        ]
+      },
+      "connection": "Die Zellkarte zeigt eine lebende Einheit, Nukleotide sind einzelne Bausteine ihrer DNA oder RNA. Vergleiche die Ebenen, ohne ihre Zeichnungsgrößen gleichzusetzen.",
+      "relatedWords": [
+        {
+          "term": "DNA",
+          "reason": "Viele verbundene Nukleotide bilden die DNA-Kette. Vergleiche einzelnen Baustein und gesamten Aufbau."
+        },
+        {
+          "term": "RNA",
+          "reason": "Nukleotide sind Bausteine von RNA. In RNA gehören Ribose und U statt T zu den grundlegenden Unterschieden gegenüber DNA."
+        }
+      ],
+      "reviewedBy": "Codex self-review using selected original NHGRI definitions and narration; KI-supported drafting",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "rightsBasisId": "nhgri-own-explanations-2026-10-14",
+      "mediaDecision": "Own three-part paper drawing distinguishes building block and chain with explicit shape/scale limits; no copied molecular diagram.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Nucleotide",
+          "anchor": "Definition: sugar, phosphate and base; ribose/deoxyribose; RNA U versus DNA T"
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Nucleotide",
+          "anchor": "Definition: sugar, phosphate and base; ribose/deoxyribose; RNA U versus DNA T"
+        }
+      ]
+    },
+    {
+      "id": "words:Bakterium",
+      "kind": "new-biological-explanation-candidate",
+      "baselineComparison": "Distinct vocabulary explanation absent from the90 baseline terms. Not counted as a new science card or alias. Cross-catalog independent semantic acceptance remains open.",
+      "contentHash": "49ddac7f476f761d010d13be3d218658d4ff39e73368c4344884451ee104dd3a",
+      "ageLevels": {
+        "6-8": "Ein Bakterium besteht aus einer Zelle. Es gibt viele verschiedene Bakterien.",
+        "9-11": "Ein Bakterium ist ein einzelliges Lebewesen. Bakterien leben in vielen Umgebungen und erfüllen unterschiedliche Aufgaben. Viele sind harmlos oder hilfreich, manche können Krankheiten verursachen. „Bakterium“ bedeutet nicht automatisch „gefährlich“.",
+        "12-14": "Bakterien gehören zu den Mikroorganismen. Ihre Formen und Lebensweisen unterscheiden sich. Manche spielen wichtige Rollen in Ökosystemen oder im menschlichen Körper. Aus einer Formzeichnung allein lässt sich nicht erkennen, ob eine Art schädlich ist."
+      },
+      "goal": "Du vermeidest die falsche Gleichsetzung von Bakterien mit Krankheitserregern.",
+      "observe": "Zeichne eine Kugel, einen Stab und eine Spirale. Diese Formen können an Bakterien erinnern. Warum verrät die Form allein noch keine Lebensweise? Keine unbekannten Mikroorganismen züchten oder Proben anfassen.",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Bacteria",
+          "title": "NIH/NHGRI · Bakterium (Englisch)",
+          "anchor": "Definition: diverse single-celled organisms, ecosystem roles, most harmless/helpful; outdated ten-to-one narration deliberately excluded",
+          "updatedOn": "2026-10-13",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Was gilt für Bakterien als ganze Gruppe?",
+        "answers": [
+          "Alle verursachen Krankheiten",
+          "Alle haben dieselbe Aufgabe",
+          "Ihre Lebensweisen und Wirkungen unterscheiden sich"
+        ],
+        "correct": 2,
+        "hint": "Eine große Gruppe kann verschiedene Arten enthalten.",
+        "why": "Bakterien sind vielfältig. Viele sind harmlos oder hilfreich, einige können Krankheiten verursachen.",
+        "wrongReasons": [
+          "Nur ein Teil der Arten verursacht Krankheiten. Der Gruppenname allein beschreibt keine Gefahr.",
+          "Verschiedene Arten können unterschiedliche Umgebungen und Aufgaben haben.",
+          ""
+        ]
+      },
+      "connection": "Auch ein Bakterium ist eine Zelle. Vergleiche die Vielfalt lebender Einheiten mit der Zellkarte: Eine einzelne Zeichnung steht nicht für jede Zellform.",
+      "relatedWords": [
+        {
+          "term": "Genom",
+          "reason": "Auch Bakterien besitzen Erbinformation. Ein einzelliges Lebewesen ist nicht dasselbe wie seine Informationssammlung."
+        },
+        {
+          "term": "Evolution",
+          "reason": "Auch Populationen einzelliger Lebewesen können sich über Generationen verändern. Ein Einzelwesen und die Population sind verschieden."
+        },
+        {
+          "term": "Mikroorganismus",
+          "reason": "Bakterien sind eine Gruppe sehr kleiner Lebewesen. Mikroorganismus ist ein weiter gefasster Größenbegriff und keine einzelne Verwandtschaftsgruppe."
+        }
+      ],
+      "reviewedBy": "Codex self-review using selected original NHGRI definitions and narration; KI-supported drafting",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "rightsBasisId": "nhgri-own-explanations-2026-10-14",
+      "mediaDecision": "Own paper sphere/rod/spiral comparison distinguishes shapes from species identification; linked cell overview, no culture experiment or unlicensed micrograph.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Bacteria",
+          "anchor": "Definition: diverse single-celled organisms, ecosystem roles, most harmless/helpful; outdated ten-to-one narration deliberately excluded"
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Bacteria",
+          "anchor": "Definition: diverse single-celled organisms, ecosystem roles, most harmless/helpful; outdated ten-to-one narration deliberately excluded"
+        }
+      ]
+    },
+    {
+      "id": "words:Evolution",
+      "kind": "new-biological-explanation-candidate",
+      "baselineComparison": "Distinct vocabulary explanation absent from the90 baseline terms. Not counted as a new science card or alias. Cross-catalog independent semantic acceptance remains open.",
+      "contentHash": "cbe00bb5c0325f9ec74b3443e6f241f76f20feb233d6cfecee0cee79136889fe",
+      "ageLevels": {
+        "6-8": "Über viele Generationen können sich Gruppen von Lebewesen verändern. Ein einzelnes Tier verwandelt sich nicht auf Wunsch.",
+        "9-11": "Evolution beschreibt Veränderungen vererbbarer Eigenschaften in Populationen über Generationen. Sie passiert nicht, weil ein einzelnes Tier beschließt, anders zu werden. Umweltbedingungen können beeinflussen, welche Eigenschaften sich häufiger weitervererben.",
+        "12-14": "Erbliche Unterschiede entstehen unter anderem durch Mutationen. Wenn Lebewesen mit bestimmten Eigenschaften mehr Nachkommen hinterlassen, können diese Eigenschaften in der Population häufiger werden. Evolution hat kein vorgegebenes Ziel der „Perfektion“."
+      },
+      "goal": "Du unterscheidest Veränderungen über Generationen von Veränderungen eines einzelnen Lebewesens.",
+      "observe": "Lege Papierkarten für drei aufeinanderfolgende Generationen aus und zähle jeweils zwei Farben. Beschreibe nur, welche Farbe häufiger wird. Warum reicht dieses künstliche Bild noch nicht aus, um echte Evolution zu beweisen?",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Evolution",
+          "title": "NIH/NHGRI · Evolution (Englisch)",
+          "anchor": "Definition: genetic variation, differential offspring and change over successive generations; no goal-directed transformation",
+          "updatedOn": "2026-10-13",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Welche Beobachtung passt grundsätzlich zur Evolution?",
+        "answers": [
+          "Erbliche Eigenschaften werden über Generationen häufiger",
+          "Ein Tier wünscht sich sofort einen neuen Körper",
+          "Ein Tier wächst im Laufe eines Tages"
+        ],
+        "correct": 0,
+        "hint": "Achte auf Generationen und Vererbung, nicht nur auf Zeit.",
+        "why": "Evolution betrifft Veränderungen vererbbarer Eigenschaften in Populationen über Generationen. Wachsen ist etwas anderes.",
+        "wrongReasons": [
+          "",
+          "Ein Wunsch verändert nicht gezielt die vererbbare Ausstattung eines Tiers.",
+          "Das Wachstum eines einzelnen Tiers beschreibt seine Entwicklung, nicht allein Evolution über Generationen."
+        ]
+      },
+      "connection": "Die Zellkarte betrachtet eine lebende Einheit. Evolution untersucht vererbbare Veränderungen in Populationen über Generationen; ein einzelnes Zellbild zeigt diesen Zeitverlauf nicht.",
+      "relatedWords": [
+        {
+          "term": "Mutation",
+          "reason": "Erbliche Veränderungen können zur Vielfalt beitragen. Evolution betrachtet Populationen über Generationen."
+        },
+        {
+          "term": "Bakterium",
+          "reason": "Auch Populationen einzelliger Lebewesen können sich über Generationen verändern. Ein Einzelwesen und die Population sind verschieden."
+        }
+      ],
+      "reviewedBy": "Codex self-review using selected original NHGRI definitions and narration; KI-supported drafting",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "rightsBasisId": "nhgri-own-explanations-2026-10-14",
+      "mediaDecision": "Own successive paper-generation colour count distinguishes group change from an individual; no linear progress-to-human illustration.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Evolution",
+          "anchor": "Definition: genetic variation, differential offspring and change over successive generations; no goal-directed transformation"
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Evolution",
+          "anchor": "Definition: genetic variation, differential offspring and change over successive generations; no goal-directed transformation"
+        }
+      ]
+    },
+    {
+      "id": "words:Atom",
+      "kind": "new-physical-explanation-candidate",
+      "baselineComparison": "Standalone vocabulary absent from90 baseline terms; no new science-card count inferred from this glossary explanation. Independent cross-catalog semantic acceptance remains open.",
+      "contentHash": "7aecf6cdaeae650c1365e1aae454f0af45685d409a63d76f0685d440a03705ab",
+      "ageLevels": {
+        "6-8": "Ein Atom ist viel kleiner als ein Sandkorn. Es hat einen kleinen Kern und eine Hülle aus Elektronen.",
+        "9-11": "Atome sind winzige Bausteine chemischer Elemente. Ein Atom besitzt einen Kern und eine Elektronenhülle. Ein Atom ist keine verkleinerte Zelle: Zellen enthalten sehr viele Atome und verschiedene Moleküle.",
+        "12-14": "Der Kern enthält positiv geladene Protonen und häufig Neutronen. Die Elektronenhülle bestimmt wichtige chemische Eigenschaften. Die Zeichnung mit einem Kern und runden Bahnen ist nur ein Modell; Elektronen laufen nicht wie kleine Planeten auf festen Kreisbahnen."
+      },
+      "goal": "Du unterscheidest Atom, Atomkern und Zelle und erkennst die Grenze einer einfachen Zeichnung.",
+      "observe": "Zeichne einen Punkt in einen Kreis. Was erklärt diese Skizze über Kern und Hülle? Welche Größen und Bewegungen beweist sie nicht? Du zeichnest keine maßstäbliche Atomaufnahme.",
+      "sources": [
+        {
+          "url": "https://www.energy.gov/science/doe-explainsnuclei",
+          "title": "U.S. Department of Energy · Atom (Englisch)",
+          "anchor": "Nuclei: small nucleus, positive protons, neutral neutrons, surrounding negative electrons; no universal mass-percentage claim. Electron-cloud caveat separately checked against DOE Electrons.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        },
+        {
+          "url": "https://www.energy.gov/science/doe-explainsisotopes",
+          "title": "U.S. Department of Energy · Isotope und Wasserstoffvarianten (Englisch)",
+          "anchor": "Hydrogen isotope caption: zero, one or two neutrons; no universal hydrogen-without-neutrons rule",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        },
+        {
+          "url": "https://www.energy.gov/science/doe-explainselectrons",
+          "title": "U.S. Department of Energy · Elektronenhülle (Englisch)",
+          "anchor": "Cloud description rather than fixed planetary orbits; source image and essentially-no-mass simplification not adopted",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Was ist richtig an einer einfachen Atomzeichnung?",
+        "answers": [
+          "Sie zeigt jede Elektronenbahn als echten Kreis",
+          "Sie kann Kern und Hülle unterscheiden, ist aber vereinfacht",
+          "Sie zeigt eine vollständige Zelle"
+        ],
+        "correct": 1,
+        "hint": "Eine Zeichnung kann die Gliederung zeigen, ohne alles genau abzubilden.",
+        "why": "Kern und Hülle sind unterschiedliche Bereiche. Eine vereinfachte Skizze beweist keine genauen Elektronenbahnen oder Größen.",
+        "wrongReasons": [
+          "Elektronen werden nicht als kleine Planeten auf festen Kreisbahnen beschrieben.",
+          "",
+          "Eine Zelle enthält viele Atome und Moleküle. Ein einzelnes Atom ist keine Zelle."
+        ]
+      },
+      "connection": "Bei der Kernfusion verbinden sich leichte Atomkerne. Vergleiche den Kern mit dem ganzen Atom: Die Elektronenhülle und der Kern sind nicht derselbe Bereich.",
+      "relatedWords": [
+        {
+          "term": "Proton",
+          "reason": "Ein Atom umfasst Kern und Hülle; ein Proton ist ein einzelnes positiv geladenes Kernteilchen."
+        },
+        {
+          "term": "Elektron",
+          "reason": "Elektronen gehören zur Atomhülle. Vergleiche das ganze Atom mit einem negativ geladenen Teilchen."
+        },
+        {
+          "term": "Mol",
+          "reason": "Atom benennt eine Teilchenart; Mol ist eine Einheit für die Anzahl festgelegter Teilchen. Teilchenart und Stoffmenge sind verschieden."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected original DOE and NIST claims; explicit source inaccuracies not adopted",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "rightsBasisId": "doe-own-explanations-2026-10-14",
+      "mediaDecision": "Own nucleus/shell paper sketch with explicit scale/orbit limits; no copyrighted Science Photo Library source image.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.energy.gov/science/doe-explainsnuclei",
+          "anchor": "Nuclei: small nucleus, positive protons, neutral neutrons, surrounding negative electrons; no universal mass-percentage claim. Electron-cloud caveat separately checked against DOE Electrons."
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.energy.gov/science/doe-explainselectrons",
+          "anchor": "Cloud description rather than fixed planetary orbits; source image and essentially-no-mass simplification not adopted"
+        }
+      ]
+    },
+    {
+      "id": "words:Isotop",
+      "kind": "new-physical-explanation-candidate",
+      "baselineComparison": "Standalone vocabulary absent from90 baseline terms; no new science-card count inferred from this glossary explanation. Independent cross-catalog semantic acceptance remains open.",
+      "contentHash": "e425a46da9b27a2b0090119725f4706f92c17892742d3666b1e763fdf6718709",
+      "ageLevels": {
+        "6-8": "Zwei Atome können zum selben Element gehören und trotzdem verschieden viele Neutronen haben. Dann gehören sie zu verschiedenen Isotopen.",
+        "9-11": "Isotope sind Varianten desselben chemischen Elements. Ihre Kerne enthalten gleich viele Protonen, aber unterschiedlich viele Neutronen. Nicht jedes Isotop ist radioaktiv: Es gibt stabile und instabile Isotope.",
+        "12-14": "Kohlenstoff-12 hat sechs Protonen und sechs Neutronen, Kohlenstoff-13 sechs Protonen und sieben Neutronen. Die Protonenzahl bleibt gleich. Die Zahl hinter dem Namen zählt hier Protonen und Neutronen zusammen."
+      },
+      "goal": "Du kannst gleiche Protonenzahl und verschiedene Neutronenzahl getrennt vergleichen.",
+      "observe": "Zeichne zwei Kerne: jeweils sechs Kreise mit P, dazu einmal sechs und einmal sieben mit N. Welche Zahl bleibt gleich? Welche Summe ändert sich? Diese Zählskizze sagt nichts über echte Größen oder Kernformen.",
+      "sources": [
+        {
+          "url": "https://www.energy.gov/science/doe-explainsisotopes",
+          "title": "U.S. Department of Energy · Isotop (Englisch)",
+          "anchor": "Opening definition and carbon-12/carbon-13 example; stable versus unstable. Unsupported universal artificial-isotope claim and media not reused.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Was unterscheidet Kohlenstoff-12 von Kohlenstoff-13?",
+        "answers": [
+          "Eine andere Neutronenzahl",
+          "Eine andere Protonenzahl",
+          "Ein vollständig anderes Element"
+        ],
+        "correct": 0,
+        "hint": "Beide heißen Kohlenstoff. Zähle die N in den Beispielkernen.",
+        "why": "Beide Kerne haben sechs Protonen. Kohlenstoff-13 hat ein Neutron mehr als Kohlenstoff-12.",
+        "wrongReasons": [
+          "",
+          "Eine andere Protonenzahl würde ein anderes Element bedeuten. Hier bleiben es sechs Protonen.",
+          "Die gleiche Protonenzahl ordnet beide Varianten dem Element Kohlenstoff zu."
+        ]
+      },
+      "connection": "Bei der Fusion sind bestimmte Atomkerne beteiligt. Isotope unterscheiden sich in ihrer Neutronenzahl; das beeinflusst, welche Kernreaktionen möglich sind.",
+      "relatedWords": [
+        {
+          "term": "Proton",
+          "reason": "Gleiche Protonenzahl ordnet Isotope demselben Element zu. Eine veränderte Protonenzahl bedeutet ein anderes Element."
+        },
+        {
+          "term": "Neutron",
+          "reason": "Verschiedene Neutronenzahlen unterscheiden die Isotope eines Elements. Protonenzahl und Neutronenzahl sind verschiedene Angaben."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected original DOE and NIST claims; explicit source inaccuracies not adopted",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "rightsBasisId": "doe-own-explanations-2026-10-14",
+      "mediaDecision": "Own proton/neutron count drawing, checked carbon12/13 numbers, no copied Wikimedia graphic or universal artificial-isotope claim.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.energy.gov/science/doe-explainsisotopes",
+          "anchor": "Opening definition and carbon-12/carbon-13 example; stable versus unstable. Unsupported universal artificial-isotope claim and media not reused."
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.energy.gov/science/doe-explainsisotopes",
+          "anchor": "Opening definition and carbon-12/carbon-13 example; stable versus unstable. Unsupported universal artificial-isotope claim and media not reused."
+        }
+      ]
+    },
+    {
+      "id": "words:Proton",
+      "kind": "new-physical-explanation-candidate",
+      "baselineComparison": "Standalone vocabulary absent from90 baseline terms; no new science-card count inferred from this glossary explanation. Independent cross-catalog semantic acceptance remains open.",
+      "contentHash": "571f29e46a4264badf03b5d03544842e9d39fb486b4bdbf2c800f594b0ccfb74",
+      "ageLevels": {
+        "6-8": "Protonen gehören zum Atomkern. Sie tragen eine positive elektrische Ladung.",
+        "9-11": "Ein Proton ist ein positiv elektrisch geladenes Teilchen im Atomkern. Die Zahl der Protonen legt fest, zu welchem chemischen Element ein Atom gehört. Ein Proton ist kleiner als ein ganzes Atom.",
+        "12-14": "Wasserstoffkerne besitzen ein Proton, Kohlenstoffkerne sechs. Verändert sich die Protonenzahl, ist es ein anderer Elementkern. Protonenzahl und Summe aus Protonen und Neutronen sind verschiedene Angaben."
+      },
+      "goal": "Du verstehst, warum die Protonenzahl ein Elementmerkmal ist und nicht einfach die gesamte Teilchenzahl.",
+      "observe": "Lege Papierkarten mit P und N in zwei Gruppen. Ändere einmal nur die Zahl der N und dann die Zahl der P. Welcher Eingriff würde in diesem Zählmodell das Element ändern? Echte Kerne sind keine Papierkarten.",
+      "sources": [
+        {
+          "url": "https://www.energy.gov/science/doe-explainsprotons",
+          "title": "U.S. Department of Energy · Proton (Englisch)",
+          "anchor": "Positive charge and proton count determines atomic number; misleading baryon-number/mass paragraph excluded.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Welche Änderung ergibt einen anderen Elementkern?",
+        "answers": [
+          "Nur ein zusätzliches Neutron",
+          "Nur ein anderes Bildformat",
+          "Eine veränderte Protonenzahl"
+        ],
+        "correct": 2,
+        "hint": "Das Element wird über die Zahl der Protonen eingeordnet.",
+        "why": "Eine andere Protonenzahl bedeutet ein anderes Element. Eine Neutronenänderung kann dagegen ein anderes Isotop desselben Elements ergeben.",
+        "wrongReasons": [
+          "Ein zusätzliches Neutron ändert die Protonenzahl nicht. Es kann die Isotopenzuordnung ändern.",
+          "Das Format einer Zeichnung verändert keinen wirklichen Atomkern.",
+          ""
+        ]
+      },
+      "connection": "Die Fusionskarte erklärt Veränderungen von Atomkernen. Die Protonenzahl hilft dabei, den Elementkern vor und nach einer Reaktion zu unterscheiden.",
+      "relatedWords": [
+        {
+          "term": "Atom",
+          "reason": "Ein Atom umfasst Kern und Hülle; ein Proton ist ein einzelnes positiv geladenes Kernteilchen."
+        },
+        {
+          "term": "Isotop",
+          "reason": "Gleiche Protonenzahl ordnet Isotope demselben Element zu. Eine veränderte Protonenzahl bedeutet ein anderes Element."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected original DOE and NIST claims; explicit source inaccuracies not adopted",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "rightsBasisId": "doe-own-explanations-2026-10-14",
+      "mediaDecision": "Own P/N paper-count observation to separate element identity and total nucleon count; no copied nuclear artwork.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.energy.gov/science/doe-explainsprotons",
+          "anchor": "Positive charge and proton count determines atomic number; misleading baryon-number/mass paragraph excluded."
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.energy.gov/science/doe-explainsprotons",
+          "anchor": "Positive charge and proton count determines atomic number; misleading baryon-number/mass paragraph excluded."
+        }
+      ]
+    },
+    {
+      "id": "words:Elektron",
+      "kind": "new-physical-explanation-candidate",
+      "baselineComparison": "Standalone vocabulary absent from90 baseline terms; no new science-card count inferred from this glossary explanation. Independent cross-catalog semantic acceptance remains open.",
+      "contentHash": "114687b8d3e5a0d0d0f1830260c3e6ccc338da1e6ee98c8509a79ede99901071",
+      "ageLevels": {
+        "6-8": "Elektronen tragen eine negative Ladung. In einem Atom gehören sie zur Hülle um den Kern.",
+        "9-11": "Ein Elektron ist ein negativ elektrisch geladenes Teilchen. Elektronen gehören zur Hülle von Atomen und spielen bei chemischen Bindungen und elektrischem Strom eine wichtige Rolle. Sie sind keine kleinen Planeten auf festen Kreisbahnen.",
+        "12-14": "In einem elektrisch neutralen Atom gleichen sich die Ladungen der Protonen und Elektronen aus. Elektronen besitzen eine kleine, aber nicht null große Masse. Für ihren Aufenthaltsort verwendet die Physik Wahrscheinlichkeiten, keine fest eingezeichneten Planetenbahnen."
+      },
+      "goal": "Du kannst elektrische Ladung von einer vereinfachten Bewegungsskizze unterscheiden.",
+      "observe": "Markiere in einer eigenen Zeichnung den Kern und einen Hüllenbereich, ohne Kreisbahnen als Fahrspuren einzuzeichnen. Beschreibe, warum eine Zeichnung nur ein Modell ist. Du beobachtest damit keine echten Elektronen.",
+      "sources": [
+        {
+          "url": "https://www.energy.gov/science/doe-explainselectrons",
+          "title": "U.S. Department of Energy · Elektron (Englisch)",
+          "anchor": "Negative charge, neutral atom and cloud description; misleading essentially-no-mass simplification excluded. Nonzero mass additionally requires NIST electron-mass constant anchor before adoption.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        },
+        {
+          "url": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+          "title": "NIST · Elektronenmasse, CODATA2022 (Englisch)",
+          "anchor": "Complete listing, electron mass: positive nonzero value; no exact number copied into the child explanation",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Welche Aussage über Elektronen ist zutreffend?",
+        "answers": [
+          "Sie haben eine negative elektrische Ladung",
+          "Sie sind immer kleine Planeten",
+          "Sie haben exakt keine Masse"
+        ],
+        "correct": 0,
+        "hint": "Ein Ladungszeichen beschreibt eine Eigenschaft, keine Kreisbahn.",
+        "why": "Elektronen tragen negative Ladung. Ihre Masse ist klein, aber nicht null; feste Planetenbahnen sind kein korrektes Bild.",
+        "wrongReasons": [
+          "",
+          "Eine Elektronenhülle wird nicht durch feste Kreisbahnen kleiner Planeten beschrieben.",
+          "Die Elektronenmasse ist nicht null. „Sehr klein“ und „gar nicht vorhanden“ sind verschieden."
+        ]
+      },
+      "connection": "Auf der Elektrizitätskarte geht es um bewegte Ladungen. Elektronen sind negativ geladene Teilchen; eine Stromskizze ist keine genaue Darstellung ihrer mikroskopischen Bewegung.",
+      "relatedWords": [
+        {
+          "term": "Atom",
+          "reason": "Elektronen gehören zur Atomhülle. Vergleiche das ganze Atom mit einem negativ geladenen Teilchen."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected original DOE and NIST claims; explicit source inaccuracies not adopted",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "rightsBasisId": "doe-own-explanations-2026-10-14",
+      "mediaDecision": "Own region sketch, no planetary-orbit image or OpenStax-credited source figure. Nonzero mass independently checked at NIST.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.energy.gov/science/doe-explainselectrons",
+          "anchor": "Negative charge, neutral atom and cloud description; misleading essentially-no-mass simplification excluded. Nonzero mass additionally requires NIST electron-mass constant anchor before adoption."
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+          "anchor": "Complete listing, electron mass: positive nonzero value; no exact number copied into the child explanation"
+        }
+      ]
+    },
+    {
+      "id": "words:Neutron",
+      "kind": "new-physical-explanation-candidate",
+      "baselineComparison": "Standalone vocabulary absent from90 baseline terms; no new science-card count inferred from this glossary explanation. Independent cross-catalog semantic acceptance remains open.",
+      "contentHash": "04dcccce8a4f6af14d8f488b22b5c2524482ab0ea48152b5d4d114cd4dca23f4",
+      "ageLevels": {
+        "6-8": "Viele Atomkerne enthalten Neutronen. Sie tragen insgesamt weder positive noch negative elektrische Ladung.",
+        "9-11": "Ein Neutron ist ein Teilchen ohne elektrische Gesamtladung. Es gehört zu vielen Atomkernen. Das häufigste Wasserstoffisotop besitzt im Kern nur ein Proton und kein Neutron; andere Wasserstoffisotope besitzen Neutronen.",
+        "12-14": "Neutronen und Protonen sind verschiedene Kernteilchen. Bei gleichbleibender Protonenzahl kann eine andere Neutronenzahl ein anderes Isotop ergeben. Neutronen gehören zum Kern, nicht zur Elektronenhülle."
+      },
+      "goal": "Du erkennst, warum „neutral“ ein Ladungsmerkmal ist und trotzdem verschiedene Isotope möglich sind.",
+      "observe": "Zeichne die drei Wasserstoffkerne mit einem P und null, einem oder zwei N. Welche Zahl ist in allen Beispielen gleich? Die Skizze ist nur ein Zählmodell, keine Aussage über die Form echter Kerne.",
+      "sources": [
+        {
+          "url": "https://www.energy.gov/science/doe-explainsneutrons",
+          "title": "U.S. Department of Energy · Neutron (Englisch)",
+          "anchor": "Neutral electric charge and nuclear location; universal hydrogen exception corrected using DOE Isotopes hydrogen examples. No medical or free-neutron experiment.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        },
+        {
+          "url": "https://www.energy.gov/science/doe-explainsisotopes",
+          "title": "U.S. Department of Energy · Isotope und Wasserstoffvarianten (Englisch)",
+          "anchor": "Hydrogen isotope caption: zero, one or two neutrons; no universal hydrogen-without-neutrons rule",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Welches Merkmal beschreibt ein Neutron?",
+        "answers": [
+          "Es ist ein negativ geladenes Elektron",
+          "Es besitzt keine elektrische Gesamtladung",
+          "Es ist ein ganzes Wasserstoffatom"
+        ],
+        "correct": 1,
+        "hint": "Trenne Kernteilchen, Hüllenteilchen und den gesamten Aufbau.",
+        "why": "Ein Neutron ist ein Kernteilchen ohne elektrische Gesamtladung. Ein Elektron ist etwas anderes, und ein Atom umfasst mehr als ein einzelnes Neutron.",
+        "wrongReasons": [
+          "Elektronen tragen negative Ladung und gehören in Atomen zur Hülle. Neutronen sind andere Teilchen.",
+          "",
+          "Ein Wasserstoffatom besteht aus Kern und Elektronenhülle. Ein Neutron allein ist kein Atom."
+        ]
+      },
+      "connection": "Bei der Kernfusion können Neutronen eine Rolle spielen. Vergleiche Kernteilchen mit Elektronen der Hülle und lies die Grenzen der vereinfachten Fusionszeichnung.",
+      "relatedWords": [
+        {
+          "term": "Isotop",
+          "reason": "Verschiedene Neutronenzahlen unterscheiden die Isotope eines Elements. Protonenzahl und Neutronenzahl sind verschiedene Angaben."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected original DOE and NIST claims; explicit source inaccuracies not adopted",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "rightsBasisId": "doe-own-explanations-2026-10-14",
+      "mediaDecision": "Own three-hydrogen-isotope counting sketch corrects universal no-neutron simplification; no medical imagery or physical neutron experiment.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.energy.gov/science/doe-explainsneutrons",
+          "anchor": "Neutral electric charge and nuclear location; universal hydrogen exception corrected using DOE Isotopes hydrogen examples. No medical or free-neutron experiment."
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.energy.gov/science/doe-explainsisotopes",
+          "anchor": "Hydrogen isotope caption: zero, one or two neutrons; no universal hydrogen-without-neutrons rule"
+        }
+      ]
+    },
+    {
+      "id": "words:Mittelwert",
+      "kind": "new-vocabulary-explanation-candidate",
+      "baselineComparison": "Standalone glossary explanation absent from90 baseline terms; own learning goal, no alias or new science-card count. Independent semantic acceptance remains open.",
+      "contentHash": "eaf0cd38b3f260429a8d4fa5867ffd1fa2f587c13c16de19e24f273b24f2b669",
+      "ageLevels": {
+        "6-8": "Addiere die Zahlen und teile durch ihre Anzahl. So erhältst du den arithmetischen Mittelwert.",
+        "9-11": "Der arithmetische Mittelwert verteilt die Summe mehrerer Zahlen gleichmäßig auf ihre Anzahl. Bei den Beispielzahlen 2, 4 und 9 ergibt die Summe 15, geteilt durch drei also 5. Nicht jede einzelne Zahl muss nahe am Mittelwert liegen.",
+        "12-14": "Ein sehr großer oder kleiner Wert kann den Mittelwert deutlich verschieben. Darum erzählt er nicht die ganze Geschichte einer Datenreihe. Reihenfolge, Streuung und andere Kennzahlen können zusätzlich wichtig sein."
+      },
+      "goal": "Du kannst einen Mittelwert berechnen und erklären, warum ein einzelner Extremwert ihn verschieben kann.",
+      "observe": "Lege drei Zettel mit 2, 4 und 9 aus. Berechne ihren Mittelwert. Ersetze dann 9 durch 24 und rechne erneut. Was verändert sich, obwohl zwei Zettel gleich geblieben sind? Das sind erfundene Zahlen, keine echte Untersuchung.",
+      "sources": [
+        {
+          "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+          "title": "NIST · Mittelwert (Englisch)",
+          "anchor": "Definition of location, mean=sum/number; extremes influence the mean. Own numerical examples, no source data or chart copied.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Welcher arithmetische Mittelwert gehört zu 2, 4 und 9?",
+        "answers": [
+          "4, weil die Zahl in der Mitte steht",
+          "5, weil 15 durch drei geteilt wird",
+          "15, weil das die Summe ist"
+        ],
+        "correct": 1,
+        "hint": "Nach dem Addieren fehlt noch ein Rechenschritt.",
+        "why": "2 + 4 + 9 = 15. Drei Zahlen wurden addiert, also wird durch drei geteilt: 15 ÷ 3 = 5.",
+        "wrongReasons": [
+          "Die mittlere sortierte Zahl gehört zum Median. Beim Mittelwert wird die Summe durch die Anzahl geteilt.",
+          "",
+          "15 ist nur die Summe. Für den arithmetischen Mittelwert wird noch durch drei geteilt."
+        ]
+      },
+      "connection": "Im Wahrscheinlichkeitsmodell sammelst du Ergebnisse. Ein Mittelwert fasst Zahlen anders zusammen als eine Häufigkeit; prüfe, welche Frage du beantworten möchtest.",
+      "relatedWords": [
+        {
+          "term": "Median",
+          "reason": "Mittelwert verwendet Summe und Anzahl; Median die sortierte Mitte. Dieselben Zahlen können unterschiedliche Kennzahlen ergeben."
+        },
+        {
+          "term": "Hypothese",
+          "reason": "Eine Kennzahl kann Beobachtungen zusammenfassen. Ob sie eine Hypothese unterstützt, hängt auch von Frage und Versuchsbedingungen ab."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected original primary definitions; own examples and exercises",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "rightsBasisId": "nist-own-statistics-2026-10-14",
+      "mediaDecision": "Own invented2/4/9 paper-number sum/division exercise; no source chart/data copied or population ranking.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+          "anchor": "Definition of location, mean=sum/number; extremes influence the mean. Own numerical examples, no source data or chart copied."
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+          "anchor": "Definition of location, mean=sum/number; extremes influence the mean. Own numerical examples, no source data or chart copied."
+        }
+      ]
+    },
+    {
+      "id": "words:Median",
+      "kind": "new-vocabulary-explanation-candidate",
+      "baselineComparison": "Standalone glossary explanation absent from90 baseline terms; own learning goal, no alias or new science-card count. Independent semantic acceptance remains open.",
+      "contentHash": "7cb1a742647ec7738bedfd0c4a45f9298613b16f4c37ac9c84ae6c7979290afc",
+      "ageLevels": {
+        "6-8": "Sortiere die Zahlen. Der Median beschreibt ihre Mitte, nicht die Summe aller Zahlen.",
+        "9-11": "Für den Median werden Zahlen zuerst der Größe nach sortiert. Bei einer ungeraden Anzahl ist er der mittlere Wert. Bei einer geraden Anzahl wird gewöhnlich der Mittelwert der beiden mittleren Zahlen verwendet.",
+        "12-14": "Bei 1, 2 und 30 ist der Median 2, der arithmetische Mittelwert aber 11. Beide Kennzahlen beantworten verschiedene Fragen. Wiederholte gleiche Zahlen sind erlaubt; es müssen nicht genau gleich viele Werte streng kleiner und größer sein."
+      },
+      "goal": "Du unterscheidest sortierte Mitte und arithmetischen Mittelwert, auch bei einer geraden Anzahl.",
+      "observe": "Sortiere Zettel mit 8, 1, 3 und 12. Finde die beiden mittleren Zahlen und bilde daraus den Mittelwert. Warum ist das Ergebnis 5,5 und nicht 8? Es geht nur um diese erfundene Reihe.",
+      "sources": [
+        {
+          "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+          "title": "NIST · Median (Englisch)",
+          "anchor": "Median formulas for odd/even sorted samples; mean/median differ. Own examples and ties caveat, no source chart or data copied.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Was ist der Median der sortierten Beispielreihe 1, 3, 8 und 12?",
+        "answers": [
+          "3, weil links begonnen wird",
+          "8, weil das die größere mittlere Zahl ist",
+          "5,5 als Mittelwert von 3 und 8"
+        ],
+        "correct": 2,
+        "hint": "Bei vier Zahlen gibt es zwei mittlere Plätze.",
+        "why": "Die beiden mittleren Zahlen sind 3 und 8. Ihr Mittelwert ist (3 + 8) ÷ 2 = 5,5.",
+        "wrongReasons": [
+          "3 ist eine der beiden mittleren Zahlen. Bei einer geraden Anzahl wird auch die andere berücksichtigt.",
+          "Nur die größere mittlere Zahl auszuwählen überspringt die 3. Beide mittleren Werte gehören zur Berechnung.",
+          ""
+        ]
+      },
+      "connection": "Eine Ergebnisreihe kann verschieden zusammengefasst werden. Vergleiche ihre sortierte Mitte mit Häufigkeiten im Wahrscheinlichkeitsmodell, statt alle Kennzahlen gleichzusetzen.",
+      "relatedWords": [
+        {
+          "term": "Mittelwert",
+          "reason": "Mittelwert verwendet Summe und Anzahl; Median die sortierte Mitte. Dieselben Zahlen können unterschiedliche Kennzahlen ergeben."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected original primary definitions; own examples and exercises",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "rightsBasisId": "nist-own-statistics-2026-10-14",
+      "mediaDecision": "Own sorted paper-number task with odd/even cases; no strict-half claim with tied values.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+          "anchor": "Median formulas for odd/even sorted samples; mean/median differ. Own examples and ties caveat, no source chart or data copied."
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+          "anchor": "Median formulas for odd/even sorted samples; mean/median differ. Own examples and ties caveat, no source chart or data copied."
+        }
+      ]
+    },
+    {
+      "id": "words:RNA",
+      "kind": "new-vocabulary-explanation-candidate",
+      "baselineComparison": "Standalone glossary explanation absent from90 baseline terms; own learning goal, no alias or new science-card count. Independent semantic acceptance remains open.",
+      "contentHash": "374c26eccb70945e41d23e300b16e1d93c865d67eae352a543146786e0974bf0",
+      "ageLevels": {
+        "6-8": "RNA hilft bei der Arbeit in Zellen. Es gibt verschiedene Arten mit unterschiedlichen Aufgaben.",
+        "9-11": "RNA ist ein Molekül, das in Zellen verschiedene Aufgaben erfüllt. Manche RNA bringt Information zur Herstellung von Proteinen, andere ist am Aufbau oder an der Arbeit dieser Herstellungsorte beteiligt. RNA ist nicht einfach eine zweite Bezeichnung für DNA.",
+        "12-14": "RNA ist meistens einzelsträngig. Ihr Zucker heißt Ribose, und sie verwendet die Basen A, U, C und G. Manche RNA trägt Nachrichten, andere hat strukturelle oder regulierende Aufgaben. Nicht jede RNA ist deshalb eine bloße Kopie für ein Protein."
+      },
+      "goal": "Du unterscheidest verschiedene RNA-Aufgaben und vermeidest die Gleichsetzung von RNA und DNA.",
+      "observe": "Zeichne drei Papierkarten für Nachricht, Arbeitsplatz und Transport. Erkläre, warum sie unterschiedliche Rollen haben können. Diese Rollenhilfe zeigt keine echte RNA-Form und sagt nicht, dass RNA kleine Menschen oder Fahrzeuge enthält.",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Ribonucleic-Acid-RNA",
+          "title": "NIH/NHGRI · RNA (Englisch)",
+          "anchor": "Definition: usually single-stranded, ribose, A/U/C/G and several RNA types/functions; no universal messenger-only claim.",
+          "updatedOn": "2026-10-13",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Welche Aussage passt zu RNA?",
+        "answers": [
+          "Jede RNA hat exakt dieselbe Aufgabe",
+          "RNA ist immer dasselbe wie DNA",
+          "Verschiedene RNA-Arten erfüllen verschiedene Aufgaben"
+        ],
+        "correct": 2,
+        "hint": "Vergleiche Nachricht, Struktur und Transport als unterschiedliche Rollen.",
+        "why": "Es gibt mehrere RNA-Arten mit unterschiedlichen Aufgaben. Nachrichtentragende RNA ist nur ein Beispiel.",
+        "wrongReasons": [
+          "RNA-Arten können sich in ihren Aufgaben unterscheiden; nicht jede ist eine Nachricht für ein Protein.",
+          "RNA und DNA sind verwandte, aber verschiedene Moleküle. RNA verwendet unter anderem Ribose und U statt T.",
+          ""
+        ]
+      },
+      "connection": "Die Zellkarte erklärt die lebende Einheit. RNA hat darin unterschiedliche Aufgaben; ein grobes Zellbild zeigt diese Moleküle nicht einzeln.",
+      "relatedWords": [
+        {
+          "term": "DNA",
+          "reason": "RNA und DNA sind verwandte, aber verschiedene Moleküle. Vergleiche ihre Bausteine und Aufgaben."
+        },
+        {
+          "term": "Nukleotid",
+          "reason": "Nukleotide sind Bausteine von RNA. In RNA gehören Ribose und U statt T zu den grundlegenden Unterschieden gegenüber DNA."
+        },
+        {
+          "term": "Gen",
+          "reason": "Manche Gene enthalten Information für eine RNA, die selbst eine Aufgabe erfüllt. Nicht jede RNA dient nur als Protein-Nachricht."
+        },
+        {
+          "term": "Enzym",
+          "reason": "Die meisten Enzyme sind Proteine, einige bestehen aus RNA. Stoffart und biologische Aufgabe müssen unterschieden werden."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected original primary definitions; own examples and exercises",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "rightsBasisId": "nhgri-own-explanations-2026-10-14",
+      "mediaDecision": "Own three-role paper-card comparison, clearly not molecular geometry; existing cell overview linked.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Ribonucleic-Acid-RNA",
+          "anchor": "Definition: usually single-stranded, ribose, A/U/C/G and several RNA types/functions; no universal messenger-only claim."
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.genome.gov/genetics-glossary/Ribonucleic-Acid-RNA",
+          "anchor": "Definition: usually single-stranded, ribose, A/U/C/G and several RNA types/functions; no universal messenger-only claim."
+        }
+      ]
+    },
+    {
+      "id": "words:Algorithmus",
+      "kind": "new-vocabulary-explanation-candidate",
+      "baselineComparison": "Standalone glossary explanation absent from90 baseline terms; own learning goal, no alias or new science-card count. Independent semantic acceptance remains open.",
+      "contentHash": "1647641302ecee28f7ffb5e7aefb88b060633941d10ed198a12b96dc3f29be9a",
+      "ageLevels": {
+        "6-8": "Ein Algorithmus ist eine genaue Folge ausführbarer Schritte. Sie hilft, eine Aufgabe nachvollziehbar zu lösen.",
+        "9-11": "Ein Algorithmus beschreibt ausführbare Schritte, um ein bestimmtes Ergebnis zu erreichen. Für eine kleine Sortieraufgabe kann er zum Beispiel genau festlegen, welche Karten verglichen und wann vertauscht werden. Ein unklarer Wunsch wie „Mach es schön“ ist noch keine solche Anleitung.",
+        "12-14": "Verschiedene Algorithmen können dieselbe Aufgabe lösen und unterschiedlich viel Arbeit benötigen. Eine eindeutige Anleitung ist nicht automatisch sachlich richtig: Auch ihre Annahmen und das Ergebnis müssen geprüft werden."
+      },
+      "goal": "Du kannst eine ausführbare Schrittfolge von einem unklaren Ziel unterscheiden.",
+      "observe": "Lege zwei Zahlenkarten aus. Schreibe eine Anleitung: Vergleiche beide; wenn links die größere Zahl liegt, tausche sie. Teste zwei verschiedene Anfangsreihenfolgen. Erkläre, warum diese Anleitung nur die kleine Zwei-Karten-Aufgabe beschreibt.",
+      "sources": [
+        {
+          "url": "https://xlinux.nist.gov/dads/HTML/algorithm.html",
+          "title": "NIST · Algorithmus (Englisch)",
+          "anchor": "Computable steps towards a desired result; own two-card algorithm and examples. Author PEB/NIST, no CRC Press entry or implementation reused.",
+          "updatedOn": "2020-11-09",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Welche Anweisung ist für die Zwei-Karten-Aufgabe ausreichend genau?",
+        "answers": [
+          "Vergleiche die Zahlen und tausche, wenn links die größere liegt",
+          "Ordne irgendwie schön",
+          "Mach einfach das Richtige"
+        ],
+        "correct": 0,
+        "hint": "Eine andere Person soll dieselben Schritte nachvollziehen können.",
+        "why": "Vergleich und Tauschbedingung sind ausdrücklich beschrieben. Die beiden anderen Wünsche legen keine eindeutigen Schritte fest.",
+        "wrongReasons": [
+          "",
+          "„Schön“ legt nicht fest, welche Zahlen verglichen oder wann Karten getauscht werden.",
+          "„Das Richtige“ beschreibt ein Ziel, aber keine überprüfbare Schrittfolge."
+        ]
+      },
+      "connection": "Beim Verschlüsseln werden klare Regeln auf Zeichen angewendet. Unterscheide ausführbare Schritte, ihr Ziel und die Frage, ob das Verfahren tatsächlich sicher ist.",
+      "relatedWords": [
+        {
+          "term": "Hypothese",
+          "reason": "Eine Schrittfolge führt eine Aufgabe aus; eine Hypothese ist eine prüfbare Aussage. Ausführung und Begründung sind verschiedene Fragen."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected original primary definitions; own examples and exercises",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "rightsBasisId": "nist-dads-own-2026-10-14",
+      "mediaDecision": "Own two-card executable comparison/swap instruction, no borrowed code or copyrighted CRC definition.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://xlinux.nist.gov/dads/HTML/algorithm.html",
+          "anchor": "Computable steps towards a desired result; own two-card algorithm and examples. Author PEB/NIST, no CRC Press entry or implementation reused."
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://xlinux.nist.gov/dads/HTML/algorithm.html",
+          "anchor": "Computable steps towards a desired result; own two-card algorithm and examples. Author PEB/NIST, no CRC Press entry or implementation reused."
+        }
+      ]
+    },
+    {
+      "id": "words:Hypothese",
+      "kind": "new-vocabulary-explanation-candidate",
+      "baselineComparison": "Standalone glossary explanation absent from90 baseline terms; own learning goal, no alias or new science-card count. Independent semantic acceptance remains open.",
+      "contentHash": "5b62203533e90b74ff4c21100978eeb66b06061a583f111164ee0c7e56677599",
+      "ageLevels": {
+        "6-8": "Formuliere zuerst eine prüfbare Vermutung. Dann untersuche, ob deine Beobachtung dazu passt.",
+        "9-11": "Eine Hypothese ist eine begründete Aussage, die sich prüfen lässt. Sie macht eine untersuchbare Erwartung, statt nur „Es fühlt sich richtig an“ zu sagen. Ein passendes Ergebnis unterstützt sie; eine einzelne passende Beobachtung beweist nicht jede allgemeine Aussage endgültig.",
+        "12-14": "Bei einer fairen Prüfung werden mögliche Einflüsse bedacht und Ergebnisse festgehalten. Widersprechende Beobachtungen sind nützlich: Sie können zeigen, dass eine Vermutung oder die Versuchsgestaltung geändert werden muss."
+      },
+      "goal": "Du trennst überprüfbare Vermutung, Beobachtung und vorsichtige Schlussfolgerung.",
+      "observe": "Vermute, welche von zwei verschieden gefalteten Papierformen auf derselben Tischfläche länger stehen bleibt. Lege vorher fest, was du vergleichst, und wiederhole die Beobachtung. Welche Einflüsse könnten dein Ergebnis verändern?",
+      "sources": [
+        {
+          "url": "https://spaceplace.nasa.gov/review/science-fair/scientific-method.html",
+          "title": "NASA · Hypothese (Englisch)",
+          "anchor": "Scientific-method steps: testable hypothesis, variables/controls, record observations, evaluate support and errors, further research; no one-test-becomes-theory claim.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Deine kleine Beobachtung passt zu deiner Hypothese. Was folgt daraus?",
+        "answers": [
+          "Sie ist für alle Situationen endgültig bewiesen",
+          "Das Ergebnis unterstützt sie unter diesen Bedingungen",
+          "Andere Einflüsse müssen nicht mehr bedacht werden"
+        ],
+        "correct": 1,
+        "hint": "Unterscheide Unterstützung durch eine Beobachtung von einem allgemeinen Beweis.",
+        "why": "Ein passendes Ergebnis kann eine Hypothese unterstützen. Bedingungen, Wiederholungen und mögliche andere Einflüsse bleiben wichtig.",
+        "wrongReasons": [
+          "Eine einzelne kleine Untersuchung prüft nicht automatisch alle Situationen.",
+          "",
+          "Andere Einflüsse können das Ergebnis mitverursachen. Eine faire Auswertung betrachtet sie weiterhin."
+        ]
+      },
+      "connection": "Im Wahrscheinlichkeitsmodell kannst du zunächst eine Erwartung formulieren und dann Ergebnisse sammeln. Einzelne Ergebnisse beweisen noch keine allgemeine Vermutung.",
+      "relatedWords": [
+        {
+          "term": "Mittelwert",
+          "reason": "Eine Kennzahl kann Beobachtungen zusammenfassen. Ob sie eine Hypothese unterstützt, hängt auch von Frage und Versuchsbedingungen ab."
+        },
+        {
+          "term": "Algorithmus",
+          "reason": "Eine Schrittfolge führt eine Aufgabe aus; eine Hypothese ist eine prüfbare Aussage. Ausführung und Begründung sind verschiedene Fragen."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected original primary definitions; own examples and exercises",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "rightsBasisId": "nasa-own-science-method-2026-10-14",
+      "mediaDecision": "Own paper-stability observation with controls/repetition and limits; no animal experiment or single-test theory upgrade.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://spaceplace.nasa.gov/review/science-fair/scientific-method.html",
+          "anchor": "Scientific-method steps: testable hypothesis, variables/controls, record observations, evaluate support and errors, further research; no one-test-becomes-theory claim."
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://spaceplace.nasa.gov/review/science-fair/scientific-method.html",
+          "anchor": "Scientific-method steps: testable hypothesis, variables/controls, record observations, evaluate support and errors, further research; no one-test-becomes-theory claim."
+        }
+      ]
+    },
+    {
+      "id": "words:Kraft",
+      "kind": "new-motion-wave-explanation-candidate",
+      "baselineComparison": "Distinct standalone vocabulary absent from90 baseline terms; no alias/new science-card count. Independent cross-catalog acceptance open.",
+      "contentHash": "07b40d74fa5acde99fadc560732bb4b0f63f4ded7b75d2fcded68d13b8773d22",
+      "ageLevels": {
+        "6-8": "Beim Ziehen oder Schieben wirken Kräfte. Sie können etwas schneller, langsamer oder anders geformt machen.",
+        "9-11": "Eine Kraft beschreibt eine Wechselwirkung zwischen Körpern. Kräfte können Bewegung verändern oder Körper verformen. Mehrere Kräfte müssen gemeinsam betrachtet werden: Wenn sie sich an einem Körper ausgleichen, bedeutet das nicht, dass überhaupt keine Kräfte wirken.",
+        "12-14": "Für eine gleichbleibende Masse gilt im einfachen Bewegungsmodell: resultierende Kraft = Masse mal Beschleunigung. Richtung und Zusammenwirken sind wichtig. Eine Kraft allein beweist nicht, dass ein Körper sich schon bewegt."
+      },
+      "goal": "Du unterscheidest einzelne Kräfte, ihr Zusammenwirken und die daraus folgende Veränderung.",
+      "observe": "Drücke einen weichen Papierknäuel vorsichtig zwischen beiden Händen. Beschreibe Bewegung und Verformung getrennt. Überlege, welche Kräfte wirken, auch wenn der Knäuel insgesamt an derselben Stelle bleibt.",
+      "sources": [
+        {
+          "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/equations-of-motion/",
+          "title": "NASA · Kraft (Englisch)",
+          "anchor": "Equilibrium and net opposing force; constant-mass F=m·a; own paper observation, no flight calculation or source illustration copied.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Zwei entgegengesetzte Kräfte gleichen sich an einem Körper aus. Was folgt daraus?",
+        "answers": [
+          "Es gibt überhaupt keine Kräfte",
+          "Die resultierende Kraft ist null",
+          "Der Körper muss verschwinden"
+        ],
+        "correct": 1,
+        "hint": "Einzelne Kräfte und ihre gemeinsame Wirkung sind verschieden.",
+        "why": "Die Kräfte können vorhanden sein und sich trotzdem ausgleichen. Ihre resultierende Kraft ist dann null.",
+        "wrongReasons": [
+          "Ausgleich bedeutet nicht Abwesenheit: Die einzelnen Kräfte können weiterhin wirken.",
+          "",
+          "Kräfteausgleich lässt einen Körper nicht verschwinden; er beschreibt das Zusammenwirken der Kräfte."
+        ]
+      },
+      "connection": "Am Hebel wirken Kräfte mit unterschiedlichen Hebelarmen. Vergleiche einzelne Kräfte und ihre Drehwirkung, statt nur die größere Zahl zu wählen.",
+      "relatedWords": [
+        {
+          "term": "Beschleunigung",
+          "reason": "Bei konstanter Masse verändert eine resultierende Kraft die Geschwindigkeit. Beschleunigung beschreibt diese Veränderung mit der Zeit."
+        },
+        {
+          "term": "Trägheit",
+          "reason": "Trägheit beschreibt den unveränderten Bewegungszustand ohne resultierende Kraft. Kräfteausgleich und völlige Abwesenheit von Kräften sind verschieden."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected NASA/NIST original claims; own bounded paper examples",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "rightsBasisId": "nasa-own-science-method-2026-10-14",
+      "mediaDecision": "Own gentle paper-ball deformation observation distinguishes motion and force balance; existing lever model linked.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/equations-of-motion/",
+          "anchor": "Equilibrium and net opposing force; constant-mass F=m·a; own paper observation, no flight calculation or source illustration copied."
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/equations-of-motion/",
+          "anchor": "Equilibrium and net opposing force; constant-mass F=m·a; own paper observation, no flight calculation or source illustration copied."
+        }
+      ]
+    },
+    {
+      "id": "words:Trägheit",
+      "kind": "new-motion-wave-explanation-candidate",
+      "baselineComparison": "Distinct standalone vocabulary absent from90 baseline terms; no alias/new science-card count. Independent cross-catalog acceptance open.",
+      "contentHash": "ce6fbe989117f9a4c9dfea332b2e5e80541f9731f00d0102f089c02308f9ff75",
+      "ageLevels": {
+        "6-8": "Ein Körper ändert seine Bewegung nicht einfach von selbst. Kräfte können ihn anstoßen, bremsen oder umlenken.",
+        "9-11": "Trägheit bedeutet, dass ein Körper seinen Bewegungszustand nicht von selbst ändert. Im passenden einfachen Bezugssystem bleibt er ohne resultierende Kraft in Ruhe oder bewegt sich gleichförmig geradeaus. Alltagsgegenstände werden oft durch Reibung langsamer.",
+        "12-14": "Newton beschreibt den Fall ohne resultierende Kraft. Ein rollender Gegenstand auf einem Tisch ist kein reibungsfreies Modell: Kontakt und Luft können ihn bremsen. Beobachtung und idealisierte Annahme müssen unterschieden werden."
+      },
+      "goal": "Du erklärst, warum das Anhalten im Alltag nicht bedeutet, dass Bewegung immer eine antreibende Kraft braucht.",
+      "observe": "Schiebe eine Papierkarte langsam über eine glatte und eine rauere Tischunterlage. Beschreibe, warum diese Alltagsbeobachtung nicht den gedachten Fall ohne Reibung darstellt. Bleib bei einer kleinen, ungefährlichen Bewegung auf dem Tisch.",
+      "sources": [
+        {
+          "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-motion-newtons-first-law/",
+          "title": "NASA · Trägheit (Englisch)",
+          "anchor": "First-law net-force condition, constant straight velocity; friction/drag distinction. No dated Newton biography claim used.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Warum beweist das Anhalten auf einer rauen Unterlage nicht, dass Bewegung immer Antrieb braucht?",
+        "answers": [
+          "Weil in diesem Beispiel Reibung bremst",
+          "Weil alle Kräfte fehlen",
+          "Weil Trägheit nur ein anderes Wort für Müdigkeit ist"
+        ],
+        "correct": 0,
+        "hint": "Prüfe die Bedingungen des Alltagsversuchs.",
+        "why": "Auf der rauen Unterlage wirkt Reibung. Der ideale Fall ohne resultierende Kraft ist eine andere Bedingung.",
+        "wrongReasons": [
+          "",
+          "Gerade die bremsende Reibung zeigt, dass Kräfte wirken.",
+          "Trägheit ist ein physikalischer Begriff für Bewegungsverhalten, keine Beschreibung von Müdigkeit."
+        ]
+      },
+      "connection": "Die Reibungskarte zeigt, warum Bewegung im Alltag gebremst werden kann. Vergleiche diesen Fall mit dem gedachten Modell ohne resultierende Kraft.",
+      "relatedWords": [
+        {
+          "term": "Kraft",
+          "reason": "Trägheit beschreibt den unveränderten Bewegungszustand ohne resultierende Kraft. Kräfteausgleich und völlige Abwesenheit von Kräften sind verschieden."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected NASA/NIST original claims; own bounded paper examples",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "rightsBasisId": "nasa-own-science-method-2026-10-14",
+      "mediaDecision": "Own small paper sliding observation explicitly not frictionless; existing friction model supplies context.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-motion-newtons-first-law/",
+          "anchor": "First-law net-force condition, constant straight velocity; friction/drag distinction. No dated Newton biography claim used."
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-motion-newtons-first-law/",
+          "anchor": "First-law net-force condition, constant straight velocity; friction/drag distinction. No dated Newton biography claim used."
+        }
+      ]
+    },
+    {
+      "id": "words:Geschwindigkeit",
+      "kind": "new-motion-wave-explanation-candidate",
+      "baselineComparison": "Distinct standalone vocabulary absent from90 baseline terms; no alias/new science-card count. Independent cross-catalog acceptance open.",
+      "contentHash": "ecfb0385e1a2a0468aea32763e918c81d958b0a7a832188348efdf6ec5bf915e",
+      "ageLevels": {
+        "6-8": "Vergleiche Strecke und Zeit. Dieselbe Strecke in weniger Zeit bedeutet bei diesem Vergleich eine größere mittlere Schnelligkeit.",
+        "9-11": "Geschwindigkeit beschreibt, wie sich ein Ort mit der Zeit verändert. Zum genauen Beschreiben einer Bewegung gehören auch Richtung und Bezugssystem. Eine große zurückgelegte Strecke allein sagt noch nicht, wie schnell etwas war: Die benötigte Zeit gehört dazu.",
+        "12-14": "Schnelligkeit ist der Betrag der Geschwindigkeit; die physikalische Geschwindigkeit hat zusätzlich eine Richtung. Zwei Bewegungen können gleich schnell sein und trotzdem in entgegengesetzte Richtungen führen."
+      },
+      "goal": "Du berücksichtigst Zeit und Richtung statt nur die Länge einer Strecke.",
+      "observe": "Zeichne zwei gleich lange Pfeile, einen nach links und einen nach rechts. Welche Angabe ist gleich, welche verschieden? Das sind gedachte Bewegungen, keine Messung eines echten Fahrzeugs.",
+      "sources": [
+        {
+          "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/equations-of-motion/",
+          "title": "NASA · Geschwindigkeit (Englisch)",
+          "anchor": "Vector velocity, location/time and initial velocity in one-dimensional constant-force model; own arrows and examples.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Zwei gleich schnelle Bewegungen führen in entgegengesetzte Richtungen. Was gilt?",
+        "answers": [
+          "Ihre Richtungen sind gleich",
+          "Sie haben automatisch dieselbe physikalische Geschwindigkeit",
+          "Ihre Schnelligkeit ist gleich, die Richtung verschieden"
+        ],
+        "correct": 2,
+        "hint": "Unterscheide Betrag und Richtung.",
+        "why": "Gleiche Schnelligkeit beschreibt den Betrag. Entgegengesetzte Richtungen bedeuten unterschiedliche Geschwindigkeitsvektoren.",
+        "wrongReasons": [
+          "Die Pfeile zeigen ausdrücklich in unterschiedliche Richtungen.",
+          "Zur physikalischen Geschwindigkeit gehört auch die Richtung; gleiche Schnelligkeit allein reicht nicht.",
+          ""
+        ]
+      },
+      "connection": "Beim Pendel ändern sich Schnelligkeit und Richtung während einer Schwingung. Eine Fadenlänge ist noch keine Geschwindigkeit: Zeit und Bewegung gehören dazu.",
+      "relatedWords": [
+        {
+          "term": "Beschleunigung",
+          "reason": "Geschwindigkeit umfasst Betrag und Richtung; Beschleunigung beschreibt eine Änderung davon mit der Zeit."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected NASA/NIST original claims; own bounded paper examples",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "rightsBasisId": "nasa-own-science-method-2026-10-14",
+      "mediaDecision": "Own equal-length opposite arrows explain magnitude/direction; no claim of measured vehicle motion.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/equations-of-motion/",
+          "anchor": "Vector velocity, location/time and initial velocity in one-dimensional constant-force model; own arrows and examples."
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/equations-of-motion/",
+          "anchor": "Vector velocity, location/time and initial velocity in one-dimensional constant-force model; own arrows and examples."
+        }
+      ]
+    },
+    {
+      "id": "words:Beschleunigung",
+      "kind": "new-motion-wave-explanation-candidate",
+      "baselineComparison": "Distinct standalone vocabulary absent from90 baseline terms; no alias/new science-card count. Independent cross-catalog acceptance open.",
+      "contentHash": "f9c7c00c62e2636384c72cf478e0773a42eb6da070221a647a101a3f8b68602e",
+      "ageLevels": {
+        "6-8": "Wenn Bewegung schneller, langsamer oder in eine andere Richtung wird, verändert sich die Geschwindigkeit.",
+        "9-11": "Beschleunigung beschreibt eine Änderung der Geschwindigkeit mit der Zeit. Dazu gehört schneller oder langsamer werden, aber auch eine Änderung der Bewegungsrichtung. Ein Körper kann daher beschleunigen, obwohl seine Schnelligkeit gleich bleibt.",
+        "12-14": "Beim gleich schnellen Fahren durch eine Kurve ändert sich die Richtung. Physikalisch ist das Beschleunigung. Für eine konstante Masse hängt sie im einfachen Modell von der resultierenden Kraft ab, nicht nur von einem beliebigen einzelnen Schub."
+      },
+      "goal": "Du erkennst Richtungsänderung und Bremsen ebenfalls als Geschwindigkeitsänderung.",
+      "observe": "Fahre mit dem Finger langsam entlang eines gezeichneten Kreises. Beschreibe, wie sich die Richtung verändert. Das ist eine Zeichenhilfe; sie misst keine tatsächliche Beschleunigung.",
+      "sources": [
+        {
+          "url": "https://science.nasa.gov/learn/basics-of-space-flight/chapter3-2/",
+          "title": "NASA · Beschleunigung (Englisch)",
+          "anchor": "Acceleration parallel, opposite and angled to velocity; old metal-cylinder kilogram definition deliberately not adopted.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Eine gedachte Bewegung bleibt gleich schnell, führt aber durch eine Kurve. Was ändert sich?",
+        "answers": [
+          "Gar nichts an der Geschwindigkeit",
+          "Ihre Richtung, also der Geschwindigkeitsvektor",
+          "Die Richtung spielt in der Physik keine Rolle"
+        ],
+        "correct": 1,
+        "hint": "Geschwindigkeit umfasst mehr als Schnelligkeit.",
+        "why": "Eine andere Richtung verändert den Geschwindigkeitsvektor. Daher liegt auch bei gleichbleibender Schnelligkeit Beschleunigung vor.",
+        "wrongReasons": [
+          "Der Betrag kann gleich bleiben, während sich die Richtung ändert.",
+          "",
+          "Für die physikalische Geschwindigkeit ist die Richtung ausdrücklich ein Bestandteil."
+        ]
+      },
+      "connection": "Das Pendel wechselt seine Bewegungsrichtung. Vergleiche die Änderung seiner Geschwindigkeit mit der bloßen Zeit für eine ganze Schwingung.",
+      "relatedWords": [
+        {
+          "term": "Kraft",
+          "reason": "Bei konstanter Masse verändert eine resultierende Kraft die Geschwindigkeit. Beschleunigung beschreibt diese Veränderung mit der Zeit."
+        },
+        {
+          "term": "Geschwindigkeit",
+          "reason": "Geschwindigkeit umfasst Betrag und Richtung; Beschleunigung beschreibt eine Änderung davon mit der Zeit."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected NASA/NIST original claims; own bounded paper examples",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "rightsBasisId": "nasa-own-science-method-2026-10-14",
+      "mediaDecision": "Own finger-on-drawn-circle direction comparison, not measured acceleration; pendulum context linked.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://science.nasa.gov/learn/basics-of-space-flight/chapter3-2/",
+          "anchor": "Acceleration parallel, opposite and angled to velocity; old metal-cylinder kilogram definition deliberately not adopted."
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://science.nasa.gov/learn/basics-of-space-flight/chapter3-2/",
+          "anchor": "Acceleration parallel, opposite and angled to velocity; old metal-cylinder kilogram definition deliberately not adopted."
+        }
+      ]
+    },
+    {
+      "id": "words:Frequenz",
+      "kind": "new-motion-wave-explanation-candidate",
+      "baselineComparison": "Distinct standalone vocabulary absent from90 baseline terms; no alias/new science-card count. Independent cross-catalog acceptance open.",
+      "contentHash": "49000568cd1dff089382b5d83f1d4c820ef868ba5c97849657b2fe156a26838c",
+      "ageLevels": {
+        "6-8": "Zähle, wie oft sich etwas in derselben Zeit wiederholt. Mehr Wiederholungen pro Sekunde bedeuten eine höhere Frequenz.",
+        "9-11": "Die Frequenz zählt, wie oft sich ein wiederkehrender Vorgang in einer bestimmten Zeit wiederholt. Die Einheit Hertz bedeutet Wiederholungen pro Sekunde. Eine höhere Frequenz bedeutet nicht automatisch einen größeren Ausschlag oder einen lauteren Ton.",
+        "12-14": "Bei einem regelmäßigen Vorgang ist die Frequenz der Kehrwert seiner Periodendauer. Dauert ein Zyklus zwei Sekunden, beträgt die Frequenz 0,5 Hertz. Ausschlag und Wiederholungsrate sind verschiedene Eigenschaften."
+      },
+      "goal": "Du unterscheidest Wiederholungsrate, Dauer eines Zyklus und Stärke eines Ausschlags.",
+      "observe": "Tippe ruhig auf den Tisch und zähle Wiederholungen in einem gleich langen Zeitfenster. Vergleiche zwei gedachte Muster: vier und acht Wiederholungen. Was musst du gleich halten, damit der Vergleich sinnvoll ist?",
+      "sources": [
+        {
+          "url": "https://csrc.nist.gov/glossary/term/frequency",
+          "title": "NIST · Frequenz (Englisch)",
+          "anchor": "NIST frequency definition: repetitive event rate, f=1/T, hertz cycles/s; own invented examples, no hearing experiment or copyrighted standard reused.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "In derselben Zeit werden acht statt vier vollständige Zyklen gezählt. Was ist höher?",
+        "answers": [
+          "Die Frequenz",
+          "Automatisch die Lautstärke",
+          "Automatisch die Länge jedes Zyklus"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche die Anzahl in demselben Zeitfenster.",
+        "why": "Mehr vollständige Wiederholungen in derselben Zeit bedeuten eine höhere Frequenz. Daraus folgt keine automatische Lautstärkenänderung.",
+        "wrongReasons": [
+          "",
+          "Lautstärke wird nicht allein durch die Wiederholungsrate festgelegt.",
+          "Mehr Zyklen in derselben Zeit bedeuten bei regelmäßiger Wiederholung kürzere, nicht längere Zyklen."
+        ]
+      },
+      "connection": "Die Resonanzkarte verbindet regelmäßige Anregung und Schwingung. Frequenz zählt Wiederholungen; ein großer Ausschlag ist eine andere Eigenschaft.",
+      "relatedWords": [
+        {
+          "term": "Sekunde",
+          "reason": "Hertz zählt vollständige Wiederholungen pro Sekunde. Zeitdauer und Wiederholungsrate sind verschiedene Angaben."
+        },
+        {
+          "term": "Wellenlänge",
+          "reason": "Wellenlänge beschreibt räumliche Wiederholung, Frequenz Wiederholung in der Zeit. Ausbreitungsgeschwindigkeit verbindet die Angaben."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected NASA/NIST original claims; own bounded paper examples",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "rightsBasisId": "nist-own-statistics-2026-10-14",
+      "mediaDecision": "Own equal-time repetitive-count example; no loud-sound or hearing experiment.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://csrc.nist.gov/glossary/term/frequency",
+          "anchor": "NIST frequency definition: repetitive event rate, f=1/T, hertz cycles/s; own invented examples, no hearing experiment or copyrighted standard reused."
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://csrc.nist.gov/glossary/term/frequency",
+          "anchor": "NIST frequency definition: repetitive event rate, f=1/T, hertz cycles/s; own invented examples, no hearing experiment or copyrighted standard reused."
+        }
+      ]
+    },
+    {
+      "id": "words:Wellenlänge",
+      "kind": "new-motion-wave-explanation-candidate",
+      "baselineComparison": "Distinct standalone vocabulary absent from90 baseline terms; no alias/new science-card count. Independent cross-catalog acceptance open.",
+      "contentHash": "3fac2502c2d0b94c6b3c7503109303144a23ec485605e4a666804a351f22b187",
+      "ageLevels": {
+        "6-8": "Suche zwei benachbarte gleiche Stellen eines Wellenmusters. Ihr Abstand ist die Wellenlänge.",
+        "9-11": "Die Wellenlänge ist ein räumlicher Abstand in einem wiederkehrenden Wellenmuster: zum Beispiel von einem Wellenberg zum nächsten. Sie ist eine Länge, keine Zeit. Die Höhe eines Wellenbergs ist eine andere Angabe.",
+        "12-14": "Bei einer regelmäßigen Welle gehören Ausbreitungsgeschwindigkeit, Frequenz und Wellenlänge zusammen. Ein Abstand auf einer Zeichnung muss eine erklärte Skala haben; verschiedene Zeichnungsgrößen beweisen keine unterschiedlichen echten Wellenlängen."
+      },
+      "goal": "Du trennst Wiederholungsabstand, Ausschlag und Zeitangaben einer Welle.",
+      "observe": "Zeichne zwei Wellenlinien: gleiche Höhe, aber einmal breite und einmal enge Wiederholung. Markiere jeweils den Abstand von Berg zu Berg. Welche Größe hast du verändert, obwohl die Höhe gleich bleibt?",
+      "sources": [
+        {
+          "url": "https://science.nasa.gov/ems/02_anatomy/",
+          "title": "NASA · Wellenlänge (Englisch)",
+          "anchor": "Wavelength section: distance between crests; frequency/wavelength relation. Own paper wave, no NASA images or absolute no-matter-transport generalization used.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Was beschreibt die Wellenlänge in deiner gleichmäßig wiederholten Zeichnung?",
+        "answers": [
+          "Die Dauer eines Versuchs",
+          "Die Höhe vom Mittelpunkt zum Berg",
+          "Den Abstand zwischen benachbarten Bergen"
+        ],
+        "correct": 2,
+        "hint": "Es geht um einen räumlichen Wiederholungsabstand.",
+        "why": "Benachbarte Wellenberge sind gleiche Stellen im Muster. Ihr räumlicher Abstand beschreibt hier die Wellenlänge.",
+        "wrongReasons": [
+          "Eine Dauer ist eine Zeitangabe. Wellenlänge ist eine Länge.",
+          "Die Höhe des Ausschlags ist eine andere Eigenschaft als der Wiederholungsabstand.",
+          ""
+        ]
+      },
+      "connection": "Blätter nehmen Lichtenergie auf. Wellenlänge beschreibt eine Eigenschaft dieses Lichts; eine grobe Blattzeichnung ist noch kein gemessenes Lichtspektrum.",
+      "relatedWords": [
+        {
+          "term": "Meter",
+          "reason": "Wellenlänge ist ein räumlicher Wiederholungsabstand. Eine Längeneinheit wie Meter macht seine Zahl vergleichbar."
+        },
+        {
+          "term": "Frequenz",
+          "reason": "Wellenlänge beschreibt räumliche Wiederholung, Frequenz Wiederholung in der Zeit. Ausbreitungsgeschwindigkeit verbindet die Angaben."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected NASA/NIST original claims; own bounded paper examples",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "rightsBasisId": "nasa-own-science-method-2026-10-14",
+      "mediaDecision": "Own equal-height wide/narrow paper waves distinguish wavelength/amplitude; no copied NASA image or universal matter-transport claim.",
+      "claims": [
+        {
+          "field": "word[2]",
+          "sourceUrl": "https://science.nasa.gov/ems/02_anatomy/",
+          "anchor": "Wavelength section: distance between crests; frequency/wavelength relation. Own paper wave, no NASA images or absolute no-matter-transport generalization used."
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://science.nasa.gov/ems/02_anatomy/",
+          "anchor": "Wavelength section: distance between crests; frequency/wavelength relation. Own paper wave, no NASA images or absolute no-matter-transport generalization used."
+        }
+      ]
+    },
+    {
+      "id": "words:Mikroorganismus",
+      "kind": "new-ecology-explanation-candidate",
+      "baselineComparison": "Absent from90 baseline terms; distinct vocabulary candidate, no nature-card doubling claim.",
+      "contentHash": "1ff7e06043edba3eca3492bc781372b107029fe30bbac15c758ccf93e5dcf2ae",
+      "ageLevels": {
+        "6-8": "Viele Lebewesen sind so klein, dass wir für ihre Einzelheiten eine Vergrößerung brauchen. Sie können unterschiedliche Aufgaben erfüllen.",
+        "9-11": "Mikroorganismen sind sehr kleine Lebewesen, deren Einzelheiten oft erst mit einem Mikroskop erkennbar werden. Dazu gehören verschiedene Gruppen, etwa Bakterien und manche Pilze oder Algen. Klein bedeutet nicht automatisch gefährlich, und nicht jeder Mikroorganismus besteht nur aus einer Zelle.",
+        "12-14": "Mikroorganismus beschreibt vor allem die kleine Größe, nicht eine einzige Verwandtschaftsgruppe. Unterschiedliche Mikroorganismen können zum Stoffabbau oder anderen Vorgängen beitragen. Eine ähnliche Form beweist weder dieselbe Art noch dieselbe Wirkung."
+      },
+      "goal": "Du unterscheidest kleine Größe, biologische Gruppe und mögliche Aufgabe.",
+      "observe": "Zeichne eine kleine Form und eine vergrößerte Ansicht mit zusätzlichen Einzelheiten. Erkläre, was eine Vergrößerung sichtbar machen könnte. Diese Papierzeichnung ist keine Aufnahme oder Bestimmung eines echten Mikroorganismus.",
+      "sources": [
+        {
+          "url": "https://www.nps.gov/teachers/classrooms/microorganisms-in-the-utah-desert.htm",
+          "title": "National Park Service · Mikroorganismus (Englisch)",
+          "anchor": "Operational small-organism/details definition, selected ecological roles; deprecated kingdom taxonomy, ten-to-one ratio and pH/oxygen claims excluded.",
+          "updatedOn": "2025-04-29",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Was weißt du aus dem Wort Mikroorganismus allein?",
+        "answers": [
+          "Dass jedes Beispiel gefährlich ist",
+          "Dass es ein sehr kleines Lebewesen ist",
+          "Dass alle Beispiele dieselbe Art sind"
+        ],
+        "correct": 1,
+        "hint": "Der Begriff grenzt keine einzige Art oder Wirkung ein.",
+        "why": "Mikroorganismus beschreibt sehr kleine Lebewesen verschiedener Gruppen. Wirkung und genaue Zugehörigkeit müssen gesondert untersucht werden.",
+        "wrongReasons": [
+          "Kleine Größe beweist keine Gefahr; viele Mikroorganismen erfüllen nützliche ökologische Aufgaben.",
+          "",
+          "Der Sammelbegriff umfasst verschiedene Gruppen und Arten, nicht eine einzige Art."
+        ]
+      },
+      "connection": "Die Pilzkarte unterscheidet sichtbare Fruchtkörper vom übrigen Pilz. Nicht jeder Pilz ist ein Mikroorganismus; die Begriffe beschreiben verschiedene Eigenschaften.",
+      "relatedWords": [
+        {
+          "term": "Bakterium",
+          "reason": "Bakterien sind eine Gruppe sehr kleiner Lebewesen. Mikroorganismus ist ein weiter gefasster Größenbegriff und keine einzelne Verwandtschaftsgruppe."
+        },
+        {
+          "term": "Zersetzung",
+          "reason": "Manche Mikroorganismen bauen abgestorbenes Material ab. Größe und ökologische Aufgabe sind verschiedene Eigenschaften."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected primary ecological claims; source simplifications excluded",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "rightsBasisId": "nps-own-2026-10-14",
+      "mediaDecision": "Own explicitly bounded paper comparison: Zeichne eine kleine Form und eine vergrößerte Ansicht mit zusätzlichen Einzelheiten. Erkläre, was eine Vergrößerung sichtbar machen könnte. Diese Papierzeichnung ist keine Aufnahme oder Bestimmung eines echten Mikroorganismus. No source worksheet/image/logo or organism handling. Appropriate existing illustrated world card linked.",
+      "claims": [
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.nps.gov/teachers/classrooms/microorganisms-in-the-utah-desert.htm",
+          "anchor": "Operational small-organism/details definition, selected ecological roles; deprecated kingdom taxonomy, ten-to-one ratio and pH/oxygen claims excluded."
+        }
+      ]
+    },
+    {
+      "id": "words:Ökosystem",
+      "kind": "new-ecology-explanation-candidate",
+      "baselineComparison": "Absent from90 baseline terms; distinct vocabulary candidate, no nature-card doubling claim.",
+      "contentHash": "d11ec0e05814e376313ab5c18a29019ff06f49cd9edab7fd34ea1931af1d1804",
+      "ageLevels": {
+        "6-8": "In einem Ökosystem gehören Lebewesen und ihre Umgebung zusammen. Sie beeinflussen sich gegenseitig.",
+        "9-11": "Ein Ökosystem umfasst Lebewesen, ihre nicht lebende Umgebung und die Beziehungen zwischen beidem. Zu einem Wald gehören deshalb nicht nur Tiere und Pflanzen, sondern auch Wasser, Boden, Luft und weitere Bedingungen. Ein Lebensraum und ein Ökosystem beschreiben verwandte, aber verschiedene Blickrichtungen.",
+        "12-14": "Welche Grenze wir um ein Ökosystem ziehen, hängt von der Untersuchungsfrage ab. Ein kleiner Teich und ein großer Wald können so betrachtet werden. Energieflüsse und Stoffkreisläufe sind verschiedene Prozesse; Energie wird dabei nicht aus dem Nichts erzeugt."
+      },
+      "goal": "Du betrachtest Beziehungen und Umweltbedingungen statt nur eine Liste von Arten.",
+      "observe": "Zeichne für einen gedachten Teich Wasser, Licht, Pflanzen und Tiere. Verbinde zwei Bestandteile mit einem Pfeil und erkläre ihre Beziehung. Welche wichtige Bedingung würde in einer reinen Tierliste fehlen?",
+      "sources": [
+        {
+          "url": "https://www.nps.gov/teachers/classrooms/craters-ecosystem.htm",
+          "title": "National Park Service · Ökosystem (Englisch)",
+          "anchor": "Living/nonliving ecosystem definition and physical-environment interaction. Own pond map; universal solar power, energy creation and absolute closed-Earth claims excluded.",
+          "updatedOn": "2024-08-24",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Welche Darstellung berücksichtigt ein Ökosystem am besten?",
+        "answers": [
+          "Nur eine Liste der Tiere",
+          "Nur den Namen eines Ortes",
+          "Lebewesen, Umweltbedingungen und erklärte Beziehungen"
+        ],
+        "correct": 2,
+        "hint": "Vergleiche Teile und ihr Zusammenwirken.",
+        "why": "Ein Ökosystem umfasst lebende und nicht lebende Bestandteile sowie ihre Beziehungen. Eine Artenliste allein beschreibt das nicht vollständig.",
+        "wrongReasons": [
+          "Zur Betrachtung gehören auch Umweltbedingungen und Beziehungen, nicht nur Tiere.",
+          "Ein Ortsname sagt noch nicht, welche Bestandteile wie miteinander verbunden sind.",
+          ""
+        ]
+      },
+      "connection": "Die Honigbienenkarte verbindet Nahrung, Bestäubung und Umgebung. Betrachte diese Beziehungen und die Bedingungen, statt ein Ökosystem auf eine Tierliste zu reduzieren.",
+      "relatedWords": [
+        {
+          "term": "Lebensraum",
+          "reason": "Lebensraum betrachtet passende Bedingungen für bestimmte Lebewesen; Ökosystem betrachtet zusätzlich die Beziehungen der Gemeinschaft und Umgebung."
+        },
+        {
+          "term": "Biodiversität",
+          "reason": "Vielfalt umfasst auch die Ebene unterschiedlicher Ökosysteme. Eine einzelne Tieranzahl beschreibt noch nicht diese Vielfalt."
+        },
+        {
+          "term": "Nahrungsnetz",
+          "reason": "Ein Nahrungsnetz bildet ausgewählte Nahrungsbeziehungen ab. Ein Ökosystem umfasst darüber hinaus weitere Beziehungen und nicht lebende Bedingungen."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected primary ecological claims; source simplifications excluded",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "rightsBasisId": "nps-own-2026-10-14",
+      "mediaDecision": "Own explicitly bounded paper comparison: Zeichne für einen gedachten Teich Wasser, Licht, Pflanzen und Tiere. Verbinde zwei Bestandteile mit einem Pfeil und erkläre ihre Beziehung. Welche wichtige Bedingung würde in einer reinen Tierliste fehlen? No source worksheet/image/logo or organism handling. Appropriate existing illustrated world card linked.",
+      "claims": [
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.nps.gov/teachers/classrooms/craters-ecosystem.htm",
+          "anchor": "Living/nonliving ecosystem definition and physical-environment interaction. Own pond map; universal solar power, energy creation and absolute closed-Earth claims excluded."
+        }
+      ]
+    },
+    {
+      "id": "words:Zersetzung",
+      "kind": "new-ecology-explanation-candidate",
+      "baselineComparison": "Absent from90 baseline terms; distinct vocabulary candidate, no nature-card doubling claim.",
+      "contentHash": "ccb898b5af079fdad683646aacd6ef8cc8cae14c446f0630fb60801cb237263f",
+      "ageLevels": {
+        "6-8": "Abgestorbene Pflanzenreste können von Lebewesen abgebaut werden. Dabei verändert sich das Material.",
+        "9-11": "Bei der Zersetzung wird abgestorbenes organisches Material nach und nach abgebaut. Pilze, Bakterien und weitere Lebewesen können daran beteiligt sein. Stoffe verschwinden dabei nicht einfach: Sie werden verändert und gelangen in weitere Kreisläufe.",
+        "12-14": "Zersetzung trägt dazu bei, dass Nährstoffe erneut verfügbar werden. Die Geschwindigkeit hängt unter anderem von Material und Umweltbedingungen ab. Ein abgefallenes Blatt wird deshalb nicht überall gleich schnell abgebaut."
+      },
+      "goal": "Du erklärst Abbau und Stoffweitergabe, ohne das Material für verschwunden zu halten.",
+      "observe": "Vergleiche zwei gezeichnete Szenen: viele frische Blätter und stärker zerfallene Blattreste. Welche Veränderung würdest du untersuchen? Die Bilder wären Momentaufnahmen und zeigen noch keine gemessene Geschwindigkeit.",
+      "sources": [
+        {
+          "url": "https://www.nps.gov/subjects/biodiversity/services-provided-by-biodiversity.htm",
+          "title": "National Park Service · Zersetzung (Englisch)",
+          "anchor": "Decomposition section, microbial/fungal/invertebrate participation and nutrient recycling. No medicinal examples, energy creation or unsupported percentages adopted.",
+          "updatedOn": "2016-03-15",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Was ist eine sinnvolle Beschreibung der Zersetzung?",
+        "answers": [
+          "Organisches Material wird verändert und weiter abgebaut",
+          "Alle beteiligten Stoffe hören auf zu existieren",
+          "Jedes Blatt wird überall gleich schnell abgebaut"
+        ],
+        "correct": 0,
+        "hint": "Trenne Stoffveränderung von bloßem Verschwinden.",
+        "why": "Beim Abbau verändern Lebewesen organisches Material. Seine Stoffe werden weitergegeben oder in andere Formen überführt.",
+        "wrongReasons": [
+          "",
+          "Die beteiligten Stoffe verschwinden nicht einfach aus der Welt; sie werden verändert und weitergegeben.",
+          "Material und Umweltbedingungen unterscheiden sich. Daraus können unterschiedliche Abbaugeschwindigkeiten folgen."
+        ]
+      },
+      "connection": "Die Pilzkarte zeigt auch den Abbau abgestorbenen Materials. Vergleiche diese Aufgabe mit anderen Rollen von Pilzen: Nicht jeder Pilz wirkt gleich.",
+      "relatedWords": [
+        {
+          "term": "Mikroorganismus",
+          "reason": "Manche Mikroorganismen bauen abgestorbenes Material ab. Größe und ökologische Aufgabe sind verschiedene Eigenschaften."
+        },
+        {
+          "term": "Kohlenstoffkreislauf",
+          "reason": "Der Abbau abgestorbenen Materials kann Kohlenstoff zwischen Speichern bewegen. Ein Stoffkreislauf ist nicht dasselbe wie unverändert kreisende Energie."
+        },
+        {
+          "term": "Nahrungsnetz",
+          "reason": "Abgestorbenes Material wird ebenfalls genutzt und abgebaut. Eine einfache Kette lebender Modelltiere zeigt nicht alle diese Wege."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected primary ecological claims; source simplifications excluded",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "rightsBasisId": "nps-own-2026-10-14",
+      "mediaDecision": "Own explicitly bounded paper comparison: Vergleiche zwei gezeichnete Szenen: viele frische Blätter und stärker zerfallene Blattreste. Welche Veränderung würdest du untersuchen? Die Bilder wären Momentaufnahmen und zeigen noch keine gemessene Geschwindigkeit. No source worksheet/image/logo or organism handling. Appropriate existing illustrated world card linked.",
+      "claims": [
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.nps.gov/subjects/biodiversity/services-provided-by-biodiversity.htm",
+          "anchor": "Decomposition section, microbial/fungal/invertebrate participation and nutrient recycling. No medicinal examples, energy creation or unsupported percentages adopted."
+        }
+      ]
+    },
+    {
+      "id": "words:Kohlenstoffkreislauf",
+      "kind": "new-ecology-explanation-candidate",
+      "baselineComparison": "Absent from90 baseline terms; distinct vocabulary candidate, no nature-card doubling claim.",
+      "contentHash": "385d57191bb10027bdb8a4d9492683d0826f4ff8132d62ef6f355a53eb646d4c",
+      "ageLevels": {
+        "6-8": "Kohlenstoff kann von einem Speicher in einen anderen gelangen. Pflanzen, Tiere, Luft, Meer und Boden gehören zu verschiedenen Wegen.",
+        "9-11": "Kohlenstoff bewegt sich zwischen verschiedenen Speichern, etwa Luft, Lebewesen, Boden, Meer und Gestein. Der Kohlenstoffkreislauf beschreibt diese Wege und Umwandlungen. Er bedeutet nicht, dass überall gleich viel gespeichert ist oder jede Bewegung gleich schnell abläuft.",
+        "12-14": "Fotosynthese, Atmung, Abbau und Verbrennung verbinden Teile des Kreislaufs. Menschen verändern die Verteilung zum Beispiel durch das Verbrennen fossiler Brennstoffe. Ein Kreislaufbild ist keine Messung und keine Behauptung eines exakt geschlossenen Systems seit aller Zeit."
+      },
+      "goal": "Du unterscheidest Speicher, Austauschvorgang und unbekannte Mengenangaben.",
+      "observe": "Zeichne drei Felder für Luft, Pflanze und Boden. Beschrifte einen möglichen Weg, statt nur unbenannte Pfeile zu malen. Was zeigt die Skizze nicht über Mengen und Geschwindigkeit?",
+      "sources": [
+        {
+          "url": "https://oceanservice.noaa.gov/facts/carbon-cycle.html",
+          "title": "NOAA · Kohlenstoffkreislauf (Englisch)",
+          "anchor": "Stores, exchanges and human fossil-fuel redistribution; no atoms created, exact closed-Earth history or unneeded3.6-million-year claim.",
+          "updatedOn": "2026-09-23",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Was brauchst du, um einen Pfeil im Kreislaufbild verständlich zu machen?",
+        "answers": [
+          "Nur einen besonders dicken Strich",
+          "Eine Erklärung, welcher Vorgang den Austausch beschreibt",
+          "Die Behauptung, dass alle Speicher gleich groß sind"
+        ],
+        "correct": 1,
+        "hint": "Ein Pfeil allein nennt noch keinen Prozess.",
+        "why": "Die Erklärung des Vorgangs macht verständlich, wie Kohlenstoff zwischen Speichern wechseln kann. Mengen und Zeiten benötigen weitere Angaben.",
+        "wrongReasons": [
+          "Die Strichdicke allein erklärt weder den Vorgang noch eine gemessene Menge.",
+          "",
+          "Verschiedene Speicher enthalten unterschiedliche Mengen. Der Kreislauf setzt keine Gleichheit voraus."
+        ]
+      },
+      "connection": "Fotosynthese verbindet Kohlenstoff aus Kohlendioxid mit Pflanzenstoffen. Ein Blatt allein zeigt nicht die Mengen oder Geschwindigkeiten des gesamten Kreislaufs.",
+      "relatedWords": [
+        {
+          "term": "Zersetzung",
+          "reason": "Der Abbau abgestorbenen Materials kann Kohlenstoff zwischen Speichern bewegen. Ein Stoffkreislauf ist nicht dasselbe wie unverändert kreisende Energie."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected primary ecological claims; source simplifications excluded",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "rightsBasisId": "noaa-nos-own-2026-10-14",
+      "mediaDecision": "Own explicitly bounded paper comparison: Zeichne drei Felder für Luft, Pflanze und Boden. Beschrifte einen möglichen Weg, statt nur unbenannte Pfeile zu malen. Was zeigt die Skizze nicht über Mengen und Geschwindigkeit? No source worksheet/image/logo or organism handling. Appropriate existing illustrated world card linked.",
+      "claims": [
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://oceanservice.noaa.gov/facts/carbon-cycle.html",
+          "anchor": "Stores, exchanges and human fossil-fuel redistribution; no atoms created, exact closed-Earth history or unneeded3.6-million-year claim."
+        }
+      ]
+    },
+    {
+      "id": "words:Biodiversität",
+      "kind": "old-vocabulary-redaction",
+      "baselineComparison": "Existing baseline definition/order/ID preserved verbatim; new independent age levels, exercise, feedback and explained connections. Not a new entry.",
+      "contentHash": "aa01581edc1914cd347c8daa20d930842d803d43e8bf43e87a1223e8171b4b88",
+      "ageLevels": {
+        "6-8": "Vielfalt gibt es zwischen Arten, innerhalb einer Art und zwischen Lebensgemeinschaften. Nur große Tiere zu zählen, zeigt deshalb nicht alles.",
+        "9-11": "Die Vielfalt von Lebewesen, ihren genetischen Unterschieden und Lebensräumen.",
+        "12-14": "Biodiversität umfasst verschiedene Ebenen. Eine Artenliste beschreibt eine davon. Genetische Unterschiede innerhalb von Arten und unterschiedliche Ökosysteme sind weitere Ebenen. Viele einzelne Lebewesen sind nicht automatisch viele verschiedene Arten."
+      },
+      "goal": "Du unterscheidest die Menge von Lebewesen von unterschiedlichen Formen und Ebenen der Vielfalt.",
+      "observe": "Zeichne sechs erfundene Blätter: erst sechs gleiche, dann zwei unterschiedliche Formen mit je drei Beispielen. Erkläre den Unterschied zwischen Anzahl und Vielfalt. Die Zeichnung bestimmt keine echte Art und misst nicht die gesamte Biodiversität eines Ortes.",
+      "sources": [
+        {
+          "url": "https://www.nps.gov/subjects/biodiversity/what-is-biodiversity.htm",
+          "title": "National Park Service · Biodiversität (Englisch)",
+          "anchor": "Paragraphs28 and33: diversity includes less visible organisms and ecosystem/species/gene levels; own invented counting example is not a field identification.",
+          "updatedOn": "2019-03-04",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Zwei gedachte Listen enthalten je sechs Lebewesen. Was kannst du aus der Zahl allein schließen?",
+        "answers": [
+          "Beide Orte haben dieselbe Biodiversität",
+          "Nur die Anzahl der gelisteten Lebewesen ist gleich",
+          "Beide Orte enthalten sechs verschiedene Arten"
+        ],
+        "correct": 1,
+        "hint": "Anzahl und Verschiedenheit beantworten verschiedene Fragen.",
+        "why": "Die Zahl sechs beschreibt die Anzahl. Für Artenvielfalt und andere Ebenen brauchst du zusätzliche Informationen darüber, was verschieden ist.",
+        "wrongReasons": [
+          "Eine gleiche Anzahl belegt weder gleiche Artenvielfalt noch gleiche genetische oder ökologische Vielfalt.",
+          "",
+          "Mehrere Beispiele können zur selben Art gehören. Eine Anzahl nennt noch keine Artenzahl."
+        ]
+      },
+      "connection": "Die Pilzkarte ergänzt häufig übersehene Lebensformen. Sichtbare Tiere allein bilden nicht die gesamte biologische Vielfalt ab.",
+      "relatedWords": [
+        {
+          "term": "Ökosystem",
+          "reason": "Vielfalt umfasst auch die Ebene unterschiedlicher Ökosysteme. Eine einzelne Tieranzahl beschreibt noch nicht diese Vielfalt."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected primary ecological claims; source simplifications excluded",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "rightsBasisId": "nps-own-2026-10-14",
+      "mediaDecision": "Own explicitly bounded paper comparison: Zeichne sechs erfundene Blätter: erst sechs gleiche, dann zwei unterschiedliche Formen mit je drei Beispielen. Erkläre den Unterschied zwischen Anzahl und Vielfalt. Die Zeichnung bestimmt keine echte Art und misst nicht die gesamte Biodiversität eines Ortes. No source worksheet/image/logo or organism handling. Appropriate existing illustrated world card linked.",
+      "claims": [
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.nps.gov/subjects/biodiversity/what-is-biodiversity.htm",
+          "anchor": "Paragraphs28 and33: diversity includes less visible organisms and ecosystem/species/gene levels; own invented counting example is not a field identification."
+        }
+      ]
+    },
+    {
+      "id": "words:Lebensraum",
+      "kind": "old-vocabulary-redaction",
+      "baselineComparison": "Existing baseline definition/order/ID preserved verbatim; new independent age levels, exercise, feedback and explained connections. Not a new entry.",
+      "contentHash": "db54e5e3ddf69aa3faeb17a169605068df4c0b9f86bb0720336840446a0095e2",
+      "ageLevels": {
+        "6-8": "Ein passender Lebensraum bietet einem Lebewesen wichtige Bedingungen. Derselbe Ort passt nicht für jedes Lebewesen gleich gut.",
+        "9-11": "Ein Ort, der einem Lebewesen Nahrung, Wasser und passende Bedingungen bietet. Ein Teich und ein Wald sind Beispiele.",
+        "12-14": "Lebensraum wird aus der Sicht bestimmter Lebewesen betrachtet. Wasser, Nahrung, Schutz und weitere Bedingungen wirken zusammen. Beim Ökosystem betrachten wir zusätzlich die Beziehungen der Gemeinschaft mit ihrer nicht lebenden Umgebung. Die Begriffe sind keine bloßen Ersatznamen."
+      },
+      "goal": "Du prüfst passende Bedingungen für ein Lebewesen statt nur einen Ortsnamen.",
+      "observe": "Zeichne einen gedachten Teich. Notiere für ein Wassertier Wasser und Nahrung, für einen Vogel einen möglichen Schutzplatz. Welche Angaben müsstest du kennen, bevor du beurteilen könntest, ob der Ort für eine bestimmte Art passt? Keine Tiere sammeln oder umsetzen.",
+      "sources": [
+        {
+          "url": "https://www.nps.gov/teachers/classrooms/habitats.htm",
+          "title": "National Park Service · Lebensraum (Englisch)",
+          "anchor": "Selected background and habitat elements food/water/shelter/cover. Deprecated Species=plant/animal/insect and universal five-biome classification excluded.",
+          "updatedOn": "2017-07-25",
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Warum reicht das Wort Wald allein nicht aus, um einen passenden Lebensraum zu beschreiben?",
+        "answers": [
+          "Weil verschiedene Lebewesen unterschiedliche Bedingungen brauchen",
+          "Weil in einem Wald überhaupt keine Tiere leben",
+          "Weil jeder Ort für jede Art gleich gut passt"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche die Bedürfnisse, nicht nur den Namen des Ortes.",
+        "why": "Ein Ortsname nennt noch nicht Nahrung, Schutz und weitere passende Bedingungen für eine bestimmte Art.",
+        "wrongReasons": [
+          "",
+          "Die falsche Antwort behauptet, dass im Wald keine Tiere leben. Das folgt nicht aus dem Ortsnamen.",
+          "Verschiedene Lebewesen brauchen unterschiedliche Bedingungen; Orte sind nicht für jede Art gleich geeignet."
+        ]
+      },
+      "connection": "Bei der Honigbiene gehören Nahrung und geeignete Bedingungen zusammen. Ein Ortsname allein beschreibt noch keinen passenden Lebensraum.",
+      "relatedWords": [
+        {
+          "term": "Ökosystem",
+          "reason": "Lebensraum betrachtet passende Bedingungen für bestimmte Lebewesen; Ökosystem betrachtet zusätzlich die Beziehungen der Gemeinschaft und Umgebung."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected primary ecological claims; source simplifications excluded",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "rightsBasisId": "nps-own-2026-10-14",
+      "mediaDecision": "Own explicitly bounded paper comparison: Zeichne einen gedachten Teich. Notiere für ein Wassertier Wasser und Nahrung, für einen Vogel einen möglichen Schutzplatz. Welche Angaben müsstest du kennen, bevor du beurteilen könntest, ob der Ort für eine bestimmte Art passt? Keine Tiere sammeln oder umsetzen. No source worksheet/image/logo or organism handling. Appropriate existing illustrated world card linked.",
+      "claims": [
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.nps.gov/teachers/classrooms/habitats.htm",
+          "anchor": "Selected background and habitat elements food/water/shelter/cover. Deprecated Species=plant/animal/insect and universal five-biome classification excluded."
+        }
+      ]
+    },
+    {
+      "id": "words:Nahrungsnetz",
+      "kind": "old-vocabulary-redaction",
+      "baselineComparison": "Existing baseline definition/order/ID preserved verbatim; new independent age levels, exercise, feedback and explained connections. Not a new entry.",
+      "contentHash": "b04b851e7668086aa165e4dccc062cf9f84eb4d8a0a795d4095fc0ccee2172fb",
+      "ageLevels": {
+        "6-8": "Viele Lebewesen haben mehr als eine Nahrungsbeziehung. Mehrere verbundene Nahrungsketten ergeben ein Netz.",
+        "9-11": "Die Verbindungen zwischen Lebewesen, die einander fressen oder als Nahrung dienen. Viele Nahrungsketten hängen zusammen.",
+        "12-14": "Ein Pfeil braucht eine erklärte Richtung. In unserer Skizze zeigt er von der Nahrung zum Lebewesen, das sie frisst: So wird auch eine Energieübertragung sichtbar. Das Netz zeigt ausgewählte Beziehungen, keine vollständige Messung. Energie fließt durch das System; sie kreist nicht wie ein Stoff immer unverändert zurück."
+      },
+      "goal": "Du liest Pfeilrichtungen und erkennst, was eine vereinfachte Nahrungskette auslässt.",
+      "observe": "Zeichne ein erfundenes Netz: Pflanze → Tier A, Pflanze → Tier B, Tier A → Tier C. Schreibe dazu, was die Pfeile bedeuten. Welche Beziehung würde eine einzelne Kette weglassen? Die Buchstaben bezeichnen Modelltiere, keine nachgewiesenen Artenbeziehungen.",
+      "sources": [
+        {
+          "url": "https://www.nps.gov/common/uploads/teachers/lessonplans/Ecosystems%20Lesson%20Plan_5082.pdf",
+          "title": "National Park Service · Nahrungsnetz (Englisch)",
+          "anchor": "Version9/2019 pages2–3, related chains form food webs and energy transfer. Universal plants/sun food webs and energy cycle language excluded; original fictional letter diagram, no worksheet copied.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-14"
+        }
+      ],
+      "question": {
+        "prompt": "Was muss neben den Pfeilen einer Nahrungsnetzskizze stehen?",
+        "answers": [
+          "Dass jedes Tier genau eine Nahrung hat",
+          "Dass Energie unverändert im Kreis läuft",
+          "Eine Erklärung der Pfeilrichtung"
+        ],
+        "correct": 2,
+        "hint": "Von der Nahrung zum Fresser oder andersherum? Ohne Erklärung bleibt das unklar.",
+        "why": "Eine eindeutige Erklärung macht die Pfeile lesbar. Unsere Modellpfeile zeigen von der Nahrung zum Fresser; andere Darstellungen müssen ihre Richtung ebenfalls erklären.",
+        "wrongReasons": [
+          "Mehrere mögliche Nahrungsbeziehungen sind gerade der Grund für ein Netz statt nur einer Kette.",
+          "Energiefluss ist kein unverändert geschlossener Stoffkreislauf. Diese Behauptung wäre wissenschaftlich irreführend.",
+          ""
+        ]
+      },
+      "connection": "Die Meeresschildkrötenkarte erklärt auch ihre Nahrung. Ordne die dort beschriebene Beziehung ein, ohne aus einer Art ein vollständiges Meeresnetz abzuleiten.",
+      "relatedWords": [
+        {
+          "term": "Ökosystem",
+          "reason": "Ein Nahrungsnetz bildet ausgewählte Nahrungsbeziehungen ab. Ein Ökosystem umfasst darüber hinaus weitere Beziehungen und nicht lebende Bedingungen."
+        },
+        {
+          "term": "Zersetzung",
+          "reason": "Abgestorbenes Material wird ebenfalls genutzt und abgebaut. Eine einfache Kette lebender Modelltiere zeigt nicht alle diese Wege."
+        }
+      ],
+      "reviewedBy": "Codex self-review of selected primary ecological claims; source simplifications excluded",
+      "reviewedOn": "2026-10-14",
+      "nextReview": "2027-04-14",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "rightsBasisId": "nps-own-2026-10-14",
+      "mediaDecision": "Own explicitly bounded paper comparison: Zeichne ein erfundenes Netz: Pflanze → Tier A, Pflanze → Tier B, Tier A → Tier C. Schreibe dazu, was die Pfeile bedeuten. Welche Beziehung würde eine einzelne Kette weglassen? Die Buchstaben bezeichnen Modelltiere, keine nachgewiesenen Artenbeziehungen. No source worksheet/image/logo or organism handling. Appropriate existing illustrated world card linked.",
+      "claims": [
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://www.nps.gov/common/uploads/teachers/lessonplans/Ecosystems%20Lesson%20Plan_5082.pdf",
+          "anchor": "Version9/2019 pages2–3, related chains form food webs and energy transfer. Universal plants/sun food webs and energy cycle language excluded; original fictional letter diagram, no worksheet copied."
+        }
+      ]
     }
   ],
-  "rightsBasis": "Own German explanations, examples, questions, mathematical code and SVGs. NIST factual references explicitly acknowledged; no photos, logos, source wording or endorsement. NIST Open license read on 2026-10-13; third-party and fee-bearing SRD not reused. No rights for routine News retrieval inferred."
+  "rightsBasis": "Own German explanations, examples, questions, mathematical code and SVGs. NIST factual references explicitly acknowledged; no photos, logos, source wording or endorsement. NIST Open license read on 2026-10-13; third-party and fee-bearing SRD not reused. No rights for routine News retrieval inferred.",
+  "rightsReferences": [
+    {
+      "id": "nhgri-own-explanations-2026-10-14",
+      "url": "https://www.genome.gov/about-nhgri/Policies-Guidance/Copyright",
+      "checkedOn": "2026-10-14",
+      "basis": "NHGRI government-authored information public domain unless individually marked. Own German explanations, examples and questions with NIH/NHGRI acknowledgement and links; no photos/logos/third-party media or endorsement. No routine News retrieval rights inferred."
+    },
+    {
+      "id": "doe-own-explanations-2026-10-14",
+      "url": "https://www.energy.gov/web-policies",
+      "checkedOn": "2026-10-14",
+      "basis": "Government information public domain unless individually marked; DOE acknowledged. Own German explanations and paper observations, no images, source wording, third-party images or endorsement. Source inaccuracies reviewed separately. No News retrieval authorization inferred."
+    },
+    {
+      "id": "nist-own-statistics-2026-10-14",
+      "url": "https://www.nist.gov/open/license",
+      "checkedOn": "2026-10-13",
+      "basis": "Own invented numeric examples and calculations; NIST handbook principles cited, no charts or data copied. Existing NIST rights decision retained; no institute endorsement. Prior rights page read on13October reused; new selected factual pages read on14October."
+    },
+    {
+      "id": "nist-dads-own-2026-10-14",
+      "url": "https://data.nist.gov/pdr/lps/FDB59097469D5200E043065706813E54165/pdr%3Av/1.0.3",
+      "checkedOn": "2026-10-14",
+      "basis": "DADS rights statement distinguishes CRC Press definitions from public-domain entries. Algorithm authored by PEB/NIST, no CRC statement on this entry. Own child explanation and two-card procedure, no external implementation reused."
+    },
+    {
+      "id": "nasa-own-science-method-2026-10-14",
+      "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "checkedOn": "2026-10-13",
+      "basis": "Existing NASA factual-reference/no-endorsement decision reused. Own paper example, no images/logo/source wording or animal experiment. No routine News permission inferred. Prior rights page read on13October reused; new selected factual pages read on14October."
+    },
+    {
+      "id": "nps-own-2026-10-14",
+      "url": "https://www.nps.gov/aboutus/disclaimer.htm",
+      "checkedOn": "2026-10-14",
+      "basis": "Government employee official works generally public domain unless otherwise; third-party material and Arrowhead excluded. Own German explanations and original paper exercises, NPS acknowledged, no copying of source worksheets/media/logos or endorsement. No automatic News use authorization inferred."
+    },
+    {
+      "id": "noaa-nos-own-2026-10-14",
+      "url": "https://oceanservice.noaa.gov/disclaimer.html",
+      "checkedOn": "2026-10-14",
+      "basis": "NOS information may be distributed/copied unless otherwise noted. Own German explanation with NOAA factual source acknowledged; no source diagram/media/seal/agency-identification use, no official NOAA wording or endorsement claimed. Not automatic News feed permission."
+    }
+  ]
 }

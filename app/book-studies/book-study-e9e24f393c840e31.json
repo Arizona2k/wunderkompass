@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "term": "Bakterium",
+  "learning": {
+    "starter": "Ein Bakterium besteht aus einer Zelle. Es gibt viele verschiedene Bakterien.",
+    "deeper": "Bakterien gehören zu den Mikroorganismen. Ihre Formen und Lebensweisen unterscheiden sich. Manche spielen wichtige Rollen in Ökosystemen oder im menschlichen Körper. Aus einer Formzeichnung allein lässt sich nicht erkennen, ob eine Art schädlich ist.",
+    "observe": "Zeichne eine Kugel, einen Stab und eine Spirale. Diese Formen können an Bakterien erinnern. Warum verrät die Form allein noch keine Lebensweise? Keine unbekannten Mikroorganismen züchten oder Proben anfassen.",
+    "benefit": "Du vermeidest die falsche Gleichsetzung von Bakterien mit Krankheitserregern.",
+    "topic": "science-cell",
+    "connection": "Auch ein Bakterium ist eine Zelle. Vergleiche die Vielfalt lebender Einheiten mit der Zellkarte: Eine einzelne Zeichnung steht nicht für jede Zellform.",
+    "relatedWords": [
+      {
+        "term": "Genom",
+        "reason": "Auch Bakterien besitzen Erbinformation. Ein einzelliges Lebewesen ist nicht dasselbe wie seine Informationssammlung."
+      },
+      {
+        "term": "Evolution",
+        "reason": "Auch Populationen einzelliger Lebewesen können sich über Generationen verändern. Ein Einzelwesen und die Population sind verschieden."
+      },
+      {
+        "term": "Mikroorganismus",
+        "reason": "Bakterien sind eine Gruppe sehr kleiner Lebewesen. Mikroorganismus ist ein weiter gefasster Größenbegriff und keine einzelne Verwandtschaftsgruppe."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Bacteria",
+        "title": "NIH/NHGRI · Bakterium (Englisch)",
+        "anchor": "Definition: diverse single-celled organisms, ecosystem roles, most harmless/helpful; outdated ten-to-one narration deliberately excluded",
+        "updatedOn": "2026-10-13",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "question": {
+      "prompt": "Was gilt für Bakterien als ganze Gruppe?",
+      "answers": [
+        "Alle verursachen Krankheiten",
+        "Alle haben dieselbe Aufgabe",
+        "Ihre Lebensweisen und Wirkungen unterscheiden sich"
+      ],
+      "correct": 2,
+      "hint": "Eine große Gruppe kann verschiedene Arten enthalten.",
+      "why": "Bakterien sind vielfältig. Viele sind harmlos oder hilfreich, einige können Krankheiten verursachen.",
+      "wrongReasons": [
+        "Nur ein Teil der Arten verursacht Krankheiten. Der Gruppenname allein beschreibt keine Gefahr.",
+        "Verschiedene Arten können unterschiedliche Umgebungen und Aufgaben haben.",
+        ""
+      ]
+    }
+  }
+}

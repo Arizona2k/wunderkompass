@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Evolution",
+  "learning": {
+    "starter": "Über viele Generationen können sich Gruppen von Lebewesen verändern. Ein einzelnes Tier verwandelt sich nicht auf Wunsch.",
+    "deeper": "Erbliche Unterschiede entstehen unter anderem durch Mutationen. Wenn Lebewesen mit bestimmten Eigenschaften mehr Nachkommen hinterlassen, können diese Eigenschaften in der Population häufiger werden. Evolution hat kein vorgegebenes Ziel der „Perfektion“.",
+    "observe": "Lege Papierkarten für drei aufeinanderfolgende Generationen aus und zähle jeweils zwei Farben. Beschreibe nur, welche Farbe häufiger wird. Warum reicht dieses künstliche Bild noch nicht aus, um echte Evolution zu beweisen?",
+    "benefit": "Du unterscheidest Veränderungen über Generationen von Veränderungen eines einzelnen Lebewesens.",
+    "topic": "science-cell",
+    "connection": "Die Zellkarte betrachtet eine lebende Einheit. Evolution untersucht vererbbare Veränderungen in Populationen über Generationen; ein einzelnes Zellbild zeigt diesen Zeitverlauf nicht.",
+    "relatedWords": [
+      {
+        "term": "Mutation",
+        "reason": "Erbliche Veränderungen können zur Vielfalt beitragen. Evolution betrachtet Populationen über Generationen."
+      },
+      {
+        "term": "Bakterium",
+        "reason": "Auch Populationen einzelliger Lebewesen können sich über Generationen verändern. Ein Einzelwesen und die Population sind verschieden."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Evolution",
+        "title": "NIH/NHGRI · Evolution (Englisch)",
+        "anchor": "Definition: genetic variation, differential offspring and change over successive generations; no goal-directed transformation",
+        "updatedOn": "2026-10-13",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "question": {
+      "prompt": "Welche Beobachtung passt grundsätzlich zur Evolution?",
+      "answers": [
+        "Erbliche Eigenschaften werden über Generationen häufiger",
+        "Ein Tier wünscht sich sofort einen neuen Körper",
+        "Ein Tier wächst im Laufe eines Tages"
+      ],
+      "correct": 0,
+      "hint": "Achte auf Generationen und Vererbung, nicht nur auf Zeit.",
+      "why": "Evolution betrifft Veränderungen vererbbarer Eigenschaften in Populationen über Generationen. Wachsen ist etwas anderes.",
+      "wrongReasons": [
+        "",
+        "Ein Wunsch verändert nicht gezielt die vererbbare Ausstattung eines Tiers.",
+        "Das Wachstum eines einzelnen Tiers beschreibt seine Entwicklung, nicht allein Evolution über Generationen."
+      ]
+    }
+  }
+}

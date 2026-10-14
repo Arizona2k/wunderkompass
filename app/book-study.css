@@ -22,3 +22,11 @@
 .book-entities{margin:18px 0;padding-top:12px;border-top:1px solid #dce7eb}
 .book-entities svg{display:block;width:100%;height:auto}
 .book-entities figcaption{font-size:1em;line-height:1.7;overflow-wrap:anywhere}
+
+.word-grid:has(>.word-card:only-child){grid-template-columns:minmax(0,1fr);max-width:42rem}
+.book-measure input{accent-color:#245d70}
+.book-world-links{margin-top:20px;padding-top:12px;border-top:1px solid #dce7eb}
+.book-world-links summary{min-height:44px;padding:10px 0;line-height:1.6;cursor:pointer}
+.book-world-links ul{list-style:none;padding:0;margin:12px 0}
+.book-world-links li{padding:14px 0;border-top:1px solid #e2eaed}
+.book-world-links p{font-size:1em;line-height:1.7}

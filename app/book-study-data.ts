@@ -1,5 +1,6 @@
 import {useEffect,useState} from 'react';
 import INDEX from './book-study-index.json' with {type:'json'};
+import WORDS from './book-word-index.json' with {type:'json'};
 import {WORLD_INDEX} from './world-index';
 import {validateBookPart,readBookBytes} from './book-part-validation.mjs';
 import type {BookLearning} from './book-data';
@@ -15,7 +16,7 @@ export function loadBookStudy(term:string):Promise<BookLearning>{
   if(!url||!meta||meta.bytes>1048576)throw Error('Unbekannte Wortvertiefung');
   const response=await fetch(url,{signal:AbortSignal.timeout(12000)});
   const bytes=await readBookBytes(response,meta.bytes);
-  const learning=await validateBookPart(bytes,term,meta,WORLD_INDEX.map(t=>t.id)) as BookLearning;
+  const learning=await validateBookPart(bytes,term,meta,WORLD_INDEX.map(t=>t.id),WORDS) as BookLearning;
   saved.set(term,learning);return learning;
  })().finally(()=>pending.delete(term));pending.set(term,request);return request;
 }

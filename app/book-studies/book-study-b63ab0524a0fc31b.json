@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Lebensraum",
+  "learning": {
+    "starter": "Ein passender Lebensraum bietet einem Lebewesen wichtige Bedingungen. Derselbe Ort passt nicht für jedes Lebewesen gleich gut.",
+    "deeper": "Lebensraum wird aus der Sicht bestimmter Lebewesen betrachtet. Wasser, Nahrung, Schutz und weitere Bedingungen wirken zusammen. Beim Ökosystem betrachten wir zusätzlich die Beziehungen der Gemeinschaft mit ihrer nicht lebenden Umgebung. Die Begriffe sind keine bloßen Ersatznamen.",
+    "observe": "Zeichne einen gedachten Teich. Notiere für ein Wassertier Wasser und Nahrung, für einen Vogel einen möglichen Schutzplatz. Welche Angaben müsstest du kennen, bevor du beurteilen könntest, ob der Ort für eine bestimmte Art passt? Keine Tiere sammeln oder umsetzen.",
+    "benefit": "Du prüfst passende Bedingungen für ein Lebewesen statt nur einen Ortsnamen.",
+    "topic": "animal-honey-bee",
+    "connection": "Bei der Honigbiene gehören Nahrung und geeignete Bedingungen zusammen. Ein Ortsname allein beschreibt noch keinen passenden Lebensraum.",
+    "sources": [
+      {
+        "url": "https://www.nps.gov/teachers/classrooms/habitats.htm",
+        "title": "National Park Service · Lebensraum (Englisch)",
+        "anchor": "Selected background and habitat elements food/water/shelter/cover. Deprecated Species=plant/animal/insect and universal five-biome classification excluded.",
+        "updatedOn": "2017-07-25",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Ökosystem",
+        "reason": "Lebensraum betrachtet passende Bedingungen für bestimmte Lebewesen; Ökosystem betrachtet zusätzlich die Beziehungen der Gemeinschaft und Umgebung."
+      }
+    ],
+    "question": {
+      "prompt": "Warum reicht das Wort Wald allein nicht aus, um einen passenden Lebensraum zu beschreiben?",
+      "answers": [
+        "Weil verschiedene Lebewesen unterschiedliche Bedingungen brauchen",
+        "Weil in einem Wald überhaupt keine Tiere leben",
+        "Weil jeder Ort für jede Art gleich gut passt"
+      ],
+      "correct": 0,
+      "hint": "Vergleiche die Bedürfnisse, nicht nur den Namen des Ortes.",
+      "why": "Ein Ortsname nennt noch nicht Nahrung, Schutz und weitere passende Bedingungen für eine bestimmte Art.",
+      "wrongReasons": [
+        "",
+        "Die falsche Antwort behauptet, dass im Wald keine Tiere leben. Das folgt nicht aus dem Ortsnamen.",
+        "Verschiedene Lebewesen brauchen unterschiedliche Bedingungen; Orte sind nicht für jede Art gleich geeignet."
+      ]
+    }
+  }
+}

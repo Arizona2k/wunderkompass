@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Mutation",
+  "learning": {
+    "starter": "Manchmal verändert sich ein Stück DNA. Diese Veränderung heißt Mutation.",
+    "deeper": "Mutationen können etwa beim Kopieren von DNA entstehen. Nicht jede Veränderung wird an Nachkommen weitergegeben: Veränderungen in gewöhnlichen Körperzellen und in Keimzellen sind dabei zu unterscheiden. Aus dem Wort allein folgt keine Gesundheitsvorhersage.",
+    "observe": "Schreibe ATCG ab und ändere nur ein Zeichen. Beschreibe zunächst die Veränderung. Warum kannst du ohne weitere Informationen noch nicht sagen, welche biologische Wirkung sie hätte? Papierzeichen sind kein echtes Erbmaterial.",
+    "benefit": "Du trennst eine beobachtete Veränderung von Vermutungen über ihre möglichen Folgen.",
+    "topic": "science-cell",
+    "connection": "Die Zellkarte betrachtet den Aufbau, diese Erklärung eine Veränderung der Erbinformation. Halte Struktur, Veränderung und mögliche Folgen getrennt.",
+    "relatedWords": [
+      {
+        "term": "DNA",
+        "reason": "Eine Mutation verändert die DNA-Reihenfolge. Die Beschreibung einer Veränderung erklärt noch nicht ihre Wirkung."
+      },
+      {
+        "term": "Evolution",
+        "reason": "Erbliche Veränderungen können zur Vielfalt beitragen. Evolution betrachtet Populationen über Generationen."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Mutation",
+        "title": "NIH/NHGRI · Mutation (Englisch)",
+        "anchor": "Definition: change in DNA sequence; germline versus somatic; narration: fictional superhero claims rejected; no individual diagnosis",
+        "updatedOn": "2026-10-13",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "question": {
+      "prompt": "Was weißt du durch die Bezeichnung Mutation allein?",
+      "answers": [
+        "Die DNA-Reihenfolge wurde verändert",
+        "Es entsteht sicher eine Superkraft",
+        "Sie wird immer an Kinder vererbt"
+      ],
+      "correct": 0,
+      "hint": "Unterscheide die Veränderung von einer garantierten Folge.",
+      "why": "Mutation bezeichnet eine DNA-Veränderung. Wirkung und Vererbung müssen gesondert untersucht werden.",
+      "wrongReasons": [
+        "",
+        "Superkräfte gehören zur Fiktion. Eine DNA-Veränderung beweist keine solche Fähigkeit.",
+        "Ob eine Veränderung vererbt werden kann, hängt unter anderem davon ab, in welchen Zellen sie auftritt."
+      ]
+    }
+  }
+}

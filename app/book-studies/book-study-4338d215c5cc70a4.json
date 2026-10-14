@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Trägheit",
+  "learning": {
+    "starter": "Ein Körper ändert seine Bewegung nicht einfach von selbst. Kräfte können ihn anstoßen, bremsen oder umlenken.",
+    "deeper": "Newton beschreibt den Fall ohne resultierende Kraft. Ein rollender Gegenstand auf einem Tisch ist kein reibungsfreies Modell: Kontakt und Luft können ihn bremsen. Beobachtung und idealisierte Annahme müssen unterschieden werden.",
+    "observe": "Schiebe eine Papierkarte langsam über eine glatte und eine rauere Tischunterlage. Beschreibe, warum diese Alltagsbeobachtung nicht den gedachten Fall ohne Reibung darstellt. Bleib bei einer kleinen, ungefährlichen Bewegung auf dem Tisch.",
+    "benefit": "Du erklärst, warum das Anhalten im Alltag nicht bedeutet, dass Bewegung immer eine antreibende Kraft braucht.",
+    "topic": "science-friction",
+    "connection": "Die Reibungskarte zeigt, warum Bewegung im Alltag gebremst werden kann. Vergleiche diesen Fall mit dem gedachten Modell ohne resultierende Kraft.",
+    "sources": [
+      {
+        "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-motion-newtons-first-law/",
+        "title": "NASA · Trägheit (Englisch)",
+        "anchor": "First-law net-force condition, constant straight velocity; friction/drag distinction. No dated Newton biography claim used.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Kraft",
+        "reason": "Trägheit beschreibt den unveränderten Bewegungszustand ohne resultierende Kraft. Kräfteausgleich und völlige Abwesenheit von Kräften sind verschieden."
+      }
+    ],
+    "question": {
+      "prompt": "Warum beweist das Anhalten auf einer rauen Unterlage nicht, dass Bewegung immer Antrieb braucht?",
+      "answers": [
+        "Weil in diesem Beispiel Reibung bremst",
+        "Weil alle Kräfte fehlen",
+        "Weil Trägheit nur ein anderes Wort für Müdigkeit ist"
+      ],
+      "correct": 0,
+      "hint": "Prüfe die Bedingungen des Alltagsversuchs.",
+      "why": "Auf der rauen Unterlage wirkt Reibung. Der ideale Fall ohne resultierende Kraft ist eine andere Bedingung.",
+      "wrongReasons": [
+        "",
+        "Gerade die bremsende Reibung zeigt, dass Kräfte wirken.",
+        "Trägheit ist ein physikalischer Begriff für Bewegungsverhalten, keine Beschreibung von Müdigkeit."
+      ]
+    }
+  }
+}

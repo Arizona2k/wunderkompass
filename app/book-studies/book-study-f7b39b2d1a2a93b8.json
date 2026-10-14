@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Proton",
+  "learning": {
+    "starter": "Protonen gehören zum Atomkern. Sie tragen eine positive elektrische Ladung.",
+    "deeper": "Wasserstoffkerne besitzen ein Proton, Kohlenstoffkerne sechs. Verändert sich die Protonenzahl, ist es ein anderer Elementkern. Protonenzahl und Summe aus Protonen und Neutronen sind verschiedene Angaben.",
+    "observe": "Lege Papierkarten mit P und N in zwei Gruppen. Ändere einmal nur die Zahl der N und dann die Zahl der P. Welcher Eingriff würde in diesem Zählmodell das Element ändern? Echte Kerne sind keine Papierkarten.",
+    "benefit": "Du verstehst, warum die Protonenzahl ein Elementmerkmal ist und nicht einfach die gesamte Teilchenzahl.",
+    "topic": "science-fusion",
+    "connection": "Die Fusionskarte erklärt Veränderungen von Atomkernen. Die Protonenzahl hilft dabei, den Elementkern vor und nach einer Reaktion zu unterscheiden.",
+    "sources": [
+      {
+        "url": "https://www.energy.gov/science/doe-explainsprotons",
+        "title": "U.S. Department of Energy · Proton (Englisch)",
+        "anchor": "Positive charge and proton count determines atomic number; misleading baryon-number/mass paragraph excluded.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Atom",
+        "reason": "Ein Atom umfasst Kern und Hülle; ein Proton ist ein einzelnes positiv geladenes Kernteilchen."
+      },
+      {
+        "term": "Isotop",
+        "reason": "Gleiche Protonenzahl ordnet Isotope demselben Element zu. Eine veränderte Protonenzahl bedeutet ein anderes Element."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Änderung ergibt einen anderen Elementkern?",
+      "answers": [
+        "Nur ein zusätzliches Neutron",
+        "Nur ein anderes Bildformat",
+        "Eine veränderte Protonenzahl"
+      ],
+      "correct": 2,
+      "hint": "Das Element wird über die Zahl der Protonen eingeordnet.",
+      "why": "Eine andere Protonenzahl bedeutet ein anderes Element. Eine Neutronenänderung kann dagegen ein anderes Isotop desselben Elements ergeben.",
+      "wrongReasons": [
+        "Ein zusätzliches Neutron ändert die Protonenzahl nicht. Es kann die Isotopenzuordnung ändern.",
+        "Das Format einer Zeichnung verändert keinen wirklichen Atomkern.",
+        ""
+      ]
+    }
+  }
+}

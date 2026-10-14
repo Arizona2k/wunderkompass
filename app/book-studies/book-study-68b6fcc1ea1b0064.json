@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Frequenz",
+  "learning": {
+    "starter": "Zähle, wie oft sich etwas in derselben Zeit wiederholt. Mehr Wiederholungen pro Sekunde bedeuten eine höhere Frequenz.",
+    "deeper": "Bei einem regelmäßigen Vorgang ist die Frequenz der Kehrwert seiner Periodendauer. Dauert ein Zyklus zwei Sekunden, beträgt die Frequenz 0,5 Hertz. Ausschlag und Wiederholungsrate sind verschiedene Eigenschaften.",
+    "observe": "Tippe ruhig auf den Tisch und zähle Wiederholungen in einem gleich langen Zeitfenster. Vergleiche zwei gedachte Muster: vier und acht Wiederholungen. Was musst du gleich halten, damit der Vergleich sinnvoll ist?",
+    "benefit": "Du unterscheidest Wiederholungsrate, Dauer eines Zyklus und Stärke eines Ausschlags.",
+    "topic": "science-resonance",
+    "connection": "Die Resonanzkarte verbindet regelmäßige Anregung und Schwingung. Frequenz zählt Wiederholungen; ein großer Ausschlag ist eine andere Eigenschaft.",
+    "sources": [
+      {
+        "url": "https://csrc.nist.gov/glossary/term/frequency",
+        "title": "NIST · Frequenz (Englisch)",
+        "anchor": "NIST frequency definition: repetitive event rate, f=1/T, hertz cycles/s; own invented examples, no hearing experiment or copyrighted standard reused.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Sekunde",
+        "reason": "Hertz zählt vollständige Wiederholungen pro Sekunde. Zeitdauer und Wiederholungsrate sind verschiedene Angaben."
+      },
+      {
+        "term": "Wellenlänge",
+        "reason": "Wellenlänge beschreibt räumliche Wiederholung, Frequenz Wiederholung in der Zeit. Ausbreitungsgeschwindigkeit verbindet die Angaben."
+      }
+    ],
+    "question": {
+      "prompt": "In derselben Zeit werden acht statt vier vollständige Zyklen gezählt. Was ist höher?",
+      "answers": [
+        "Die Frequenz",
+        "Automatisch die Lautstärke",
+        "Automatisch die Länge jedes Zyklus"
+      ],
+      "correct": 0,
+      "hint": "Vergleiche die Anzahl in demselben Zeitfenster.",
+      "why": "Mehr vollständige Wiederholungen in derselben Zeit bedeuten eine höhere Frequenz. Daraus folgt keine automatische Lautstärkenänderung.",
+      "wrongReasons": [
+        "",
+        "Lautstärke wird nicht allein durch die Wiederholungsrate festgelegt.",
+        "Mehr Zyklen in derselben Zeit bedeuten bei regelmäßiger Wiederholung kürzere, nicht längere Zyklen."
+      ]
+    }
+  }
+}

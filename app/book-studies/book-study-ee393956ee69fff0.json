@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Beschleunigung",
+  "learning": {
+    "starter": "Wenn Bewegung schneller, langsamer oder in eine andere Richtung wird, verändert sich die Geschwindigkeit.",
+    "deeper": "Beim gleich schnellen Fahren durch eine Kurve ändert sich die Richtung. Physikalisch ist das Beschleunigung. Für eine konstante Masse hängt sie im einfachen Modell von der resultierenden Kraft ab, nicht nur von einem beliebigen einzelnen Schub.",
+    "observe": "Fahre mit dem Finger langsam entlang eines gezeichneten Kreises. Beschreibe, wie sich die Richtung verändert. Das ist eine Zeichenhilfe; sie misst keine tatsächliche Beschleunigung.",
+    "benefit": "Du erkennst Richtungsänderung und Bremsen ebenfalls als Geschwindigkeitsänderung.",
+    "topic": "science-pendulum",
+    "connection": "Das Pendel wechselt seine Bewegungsrichtung. Vergleiche die Änderung seiner Geschwindigkeit mit der bloßen Zeit für eine ganze Schwingung.",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/learn/basics-of-space-flight/chapter3-2/",
+        "title": "NASA · Beschleunigung (Englisch)",
+        "anchor": "Acceleration parallel, opposite and angled to velocity; old metal-cylinder kilogram definition deliberately not adopted.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Kraft",
+        "reason": "Bei konstanter Masse verändert eine resultierende Kraft die Geschwindigkeit. Beschleunigung beschreibt diese Veränderung mit der Zeit."
+      },
+      {
+        "term": "Geschwindigkeit",
+        "reason": "Geschwindigkeit umfasst Betrag und Richtung; Beschleunigung beschreibt eine Änderung davon mit der Zeit."
+      }
+    ],
+    "question": {
+      "prompt": "Eine gedachte Bewegung bleibt gleich schnell, führt aber durch eine Kurve. Was ändert sich?",
+      "answers": [
+        "Gar nichts an der Geschwindigkeit",
+        "Ihre Richtung, also der Geschwindigkeitsvektor",
+        "Die Richtung spielt in der Physik keine Rolle"
+      ],
+      "correct": 1,
+      "hint": "Geschwindigkeit umfasst mehr als Schnelligkeit.",
+      "why": "Eine andere Richtung verändert den Geschwindigkeitsvektor. Daher liegt auch bei gleichbleibender Schnelligkeit Beschleunigung vor.",
+      "wrongReasons": [
+        "Der Betrag kann gleich bleiben, während sich die Richtung ändert.",
+        "",
+        "Für die physikalische Geschwindigkeit ist die Richtung ausdrücklich ein Bestandteil."
+      ]
+    }
+  }
+}

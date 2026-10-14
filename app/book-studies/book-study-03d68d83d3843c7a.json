@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "term": "Ökosystem",
+  "learning": {
+    "starter": "In einem Ökosystem gehören Lebewesen und ihre Umgebung zusammen. Sie beeinflussen sich gegenseitig.",
+    "deeper": "Welche Grenze wir um ein Ökosystem ziehen, hängt von der Untersuchungsfrage ab. Ein kleiner Teich und ein großer Wald können so betrachtet werden. Energieflüsse und Stoffkreisläufe sind verschiedene Prozesse; Energie wird dabei nicht aus dem Nichts erzeugt.",
+    "observe": "Zeichne für einen gedachten Teich Wasser, Licht, Pflanzen und Tiere. Verbinde zwei Bestandteile mit einem Pfeil und erkläre ihre Beziehung. Welche wichtige Bedingung würde in einer reinen Tierliste fehlen?",
+    "benefit": "Du betrachtest Beziehungen und Umweltbedingungen statt nur eine Liste von Arten.",
+    "topic": "animal-honey-bee",
+    "connection": "Die Honigbienenkarte verbindet Nahrung, Bestäubung und Umgebung. Betrachte diese Beziehungen und die Bedingungen, statt ein Ökosystem auf eine Tierliste zu reduzieren.",
+    "sources": [
+      {
+        "url": "https://www.nps.gov/teachers/classrooms/craters-ecosystem.htm",
+        "title": "National Park Service · Ökosystem (Englisch)",
+        "anchor": "Living/nonliving ecosystem definition and physical-environment interaction. Own pond map; universal solar power, energy creation and absolute closed-Earth claims excluded.",
+        "updatedOn": "2024-08-24",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Lebensraum",
+        "reason": "Lebensraum betrachtet passende Bedingungen für bestimmte Lebewesen; Ökosystem betrachtet zusätzlich die Beziehungen der Gemeinschaft und Umgebung."
+      },
+      {
+        "term": "Biodiversität",
+        "reason": "Vielfalt umfasst auch die Ebene unterschiedlicher Ökosysteme. Eine einzelne Tieranzahl beschreibt noch nicht diese Vielfalt."
+      },
+      {
+        "term": "Nahrungsnetz",
+        "reason": "Ein Nahrungsnetz bildet ausgewählte Nahrungsbeziehungen ab. Ein Ökosystem umfasst darüber hinaus weitere Beziehungen und nicht lebende Bedingungen."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Darstellung berücksichtigt ein Ökosystem am besten?",
+      "answers": [
+        "Nur eine Liste der Tiere",
+        "Nur den Namen eines Ortes",
+        "Lebewesen, Umweltbedingungen und erklärte Beziehungen"
+      ],
+      "correct": 2,
+      "hint": "Vergleiche Teile und ihr Zusammenwirken.",
+      "why": "Ein Ökosystem umfasst lebende und nicht lebende Bestandteile sowie ihre Beziehungen. Eine Artenliste allein beschreibt das nicht vollständig.",
+      "wrongReasons": [
+        "Zur Betrachtung gehören auch Umweltbedingungen und Beziehungen, nicht nur Tiere.",
+        "Ein Ortsname sagt noch nicht, welche Bestandteile wie miteinander verbunden sind.",
+        ""
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Nahrungsnetz",
+  "learning": {
+    "starter": "Viele Lebewesen haben mehr als eine Nahrungsbeziehung. Mehrere verbundene Nahrungsketten ergeben ein Netz.",
+    "deeper": "Ein Pfeil braucht eine erklärte Richtung. In unserer Skizze zeigt er von der Nahrung zum Lebewesen, das sie frisst: So wird auch eine Energieübertragung sichtbar. Das Netz zeigt ausgewählte Beziehungen, keine vollständige Messung. Energie fließt durch das System; sie kreist nicht wie ein Stoff immer unverändert zurück.",
+    "observe": "Zeichne ein erfundenes Netz: Pflanze → Tier A, Pflanze → Tier B, Tier A → Tier C. Schreibe dazu, was die Pfeile bedeuten. Welche Beziehung würde eine einzelne Kette weglassen? Die Buchstaben bezeichnen Modelltiere, keine nachgewiesenen Artenbeziehungen.",
+    "benefit": "Du liest Pfeilrichtungen und erkennst, was eine vereinfachte Nahrungskette auslässt.",
+    "topic": "animal-green-sea-turtle",
+    "connection": "Die Meeresschildkrötenkarte erklärt auch ihre Nahrung. Ordne die dort beschriebene Beziehung ein, ohne aus einer Art ein vollständiges Meeresnetz abzuleiten.",
+    "sources": [
+      {
+        "url": "https://www.nps.gov/common/uploads/teachers/lessonplans/Ecosystems%20Lesson%20Plan_5082.pdf",
+        "title": "National Park Service · Nahrungsnetz (Englisch)",
+        "anchor": "Version9/2019 pages2–3, related chains form food webs and energy transfer. Universal plants/sun food webs and energy cycle language excluded; original fictional letter diagram, no worksheet copied.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Ökosystem",
+        "reason": "Ein Nahrungsnetz bildet ausgewählte Nahrungsbeziehungen ab. Ein Ökosystem umfasst darüber hinaus weitere Beziehungen und nicht lebende Bedingungen."
+      },
+      {
+        "term": "Zersetzung",
+        "reason": "Abgestorbenes Material wird ebenfalls genutzt und abgebaut. Eine einfache Kette lebender Modelltiere zeigt nicht alle diese Wege."
+      }
+    ],
+    "question": {
+      "prompt": "Was muss neben den Pfeilen einer Nahrungsnetzskizze stehen?",
+      "answers": [
+        "Dass jedes Tier genau eine Nahrung hat",
+        "Dass Energie unverändert im Kreis läuft",
+        "Eine Erklärung der Pfeilrichtung"
+      ],
+      "correct": 2,
+      "hint": "Von der Nahrung zum Fresser oder andersherum? Ohne Erklärung bleibt das unklar.",
+      "why": "Eine eindeutige Erklärung macht die Pfeile lesbar. Unsere Modellpfeile zeigen von der Nahrung zum Fresser; andere Darstellungen müssen ihre Richtung ebenfalls erklären.",
+      "wrongReasons": [
+        "Mehrere mögliche Nahrungsbeziehungen sind gerade der Grund für ein Netz statt nur einer Kette.",
+        "Energiefluss ist kein unverändert geschlossener Stoffkreislauf. Diese Behauptung wäre wissenschaftlich irreführend.",
+        ""
+      ]
+    }
+  }
+}

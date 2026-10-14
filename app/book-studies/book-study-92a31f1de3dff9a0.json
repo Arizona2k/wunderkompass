@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Protein",
+  "learning": {
+    "starter": "Proteine sind wichtige Stoffe in Zellen. Ihre gefaltete Form passt zu ihren Aufgaben.",
+    "deeper": "Ein Protein kann aus einer oder mehreren Aminosäureketten bestehen. Reihenfolge und räumliche Faltung gehören zu seiner Struktur. Proteine erfüllen unterschiedliche Aufgaben; nicht jedes Protein ist ein Enzym.",
+    "observe": "Falte denselben Papierstreifen einmal zum Zickzack und einmal als Rolle. Beschreibe die verschiedenen Formen bei gleichem Material. Das erklärt nur die Idee einer Faltung, nicht die Chemie echter Proteine.",
+    "benefit": "Du verbindest den Aufbau eines Proteins mit seiner Form, ohne alle Proteine gleichzusetzen.",
+    "topic": "science-cell",
+    "connection": "Die Zellkarte zeigt Bereiche einer Zelle. Proteine sind Stoffe, die unterschiedliche Aufgaben darin erfüllen. Eine Zellskizze zeigt noch keine genaue Proteinfaltung.",
+    "relatedWords": [
+      {
+        "term": "Gen",
+        "reason": "Viele Gene enthalten Information für Proteine. Ein Informationsabschnitt ist nicht das daraus gebildete Molekül."
+      },
+      {
+        "term": "Enzym",
+        "reason": "Viele Enzyme sind Proteine, aber nicht jedes Protein ist ein Enzym. Vergleiche Stoffgruppe und besondere Aufgabe."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Protein",
+        "title": "NIH/NHGRI · Protein (Englisch)",
+        "anchor": "Definition: one or more folded amino-acid chains; structure, function and regulation; narration: structural proteins and enzymes",
+        "updatedOn": "2026-10-13",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "question": {
+      "prompt": "Warum beschreibt „Protein“ nicht nur eine einzige Aufgabe?",
+      "answers": [
+        "Alle Proteine sind dasselbe Enzym",
+        "Verschiedene Proteine erfüllen verschiedene Aufgaben",
+        "Proteine kommen nur in Lebensmitteln vor"
+      ],
+      "correct": 1,
+      "hint": "Denke an Halt geben und Reaktionen unterstützen.",
+      "why": "Proteine können unterschiedliche Strukturen und Aufgaben haben. Einige sind Enzyme, andere nicht.",
+      "wrongReasons": [
+        "Enzyme sind eine besondere Gruppe. Nicht alle Proteine sind Enzyme.",
+        "",
+        "Proteine arbeiten in lebenden Zellen. Lebensmittel sind nur ein alltäglicher Ort, an dem wir ihnen begegnen."
+      ]
+    }
+  }
+}

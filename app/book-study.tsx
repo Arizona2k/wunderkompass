@@ -1,6 +1,6 @@
 import {useEffect,useRef,useState} from 'react';
 import {useBookStudy} from './book-study-data';
-import {restoreRouteView} from './hash-route';
+import {navigateHash,restoreRouteView} from './hash-route';
 import {LearningStatus} from './learning-components';
 import {LearningDetails} from './learning-components';
 import type {BookLearning} from './book-data';
@@ -17,7 +17,7 @@ export function LazyBookStudy({term,onTopic}:{term:string;onTopic?:(id:string)=>
  </LearningDetails>;
 }
 export function BookStudy({term,learning,onTopic}:{term:string;learning:BookLearning;onTopic?:(id:string)=>void}){
- const [answer,setAnswer]=useState<number|null>(null),q=learning.question,topic=WORLD_INDEX.find(t=>t.id===learning.topic);
+ const [answer,setAnswer]=useState<number|null>(null),q=learning.question,checked=[...new Set(learning.sources.map(s=>s.checkedOn))].map(d=>new Date(d+'T12:00:00Z').toLocaleDateString('de-DE')).join(', '),topic=WORLD_INDEX.find(t=>t.id===learning.topic);
  return <>
   <p>{learning.benefit}</p>
   <LearningDetails summary="Ganz einfach · etwa 6–8 Jahre" data-history-disclosure={'book-starter-'+term}><p>{learning.starter}</p></LearningDetails>
@@ -27,7 +27,8 @@ export function BookStudy({term,learning,onTopic}:{term:string;learning:BookLear
   <LearningDetails summary="Selbst beobachten und erklären"><p>{learning.observe}</p></LearningDetails>
   <section className="book-thinking" aria-label={'Denkfrage zu '+term}><h4>{q.prompt}</h4><LearningDetails summary="Ein Hinweis, wenn du möchtest"><p>{q.hint}</p></LearningDetails><div className="quiz-answers">{q.answers.map((a,i)=><button className="quiz-answer" key={a} onClick={()=>setAnswer(i)} aria-pressed={answer===i}>{a}</button>)}</div>{answer!==null&&<p className="book-feedback" role="status">{answer===q.correct?q.why:q.wrongReasons[answer]}</p>}</section>
   {topic&&<div className="book-connection"><p>{learning.connection}</p><a className="knowledge-link book-topic-link" href={'#world/topic/'+topic.id} data-route-focus={'word-topic-'+term} onClick={e=>{if(onTopic){e.preventDefault();onTopic(topic.id);}}}>Mit „{topic.title}“ weiterdenken →</a></div>}
-  <LearningDetails summary="Quellen und Prüfstand"><p>Eigene Erklärung und Bildschirmmodelle mit KI-Unterstützung, am 13. Oktober 2026 anhand der verlinkten NIST-Belege selbst nachgeprüft. Eine unabhängige Fachabnahme steht noch aus. NIST hat diese WunderKompass-Erklärung nicht geprüft oder freigegeben.</p><ul>{learning.sources.map(s=><li key={s.url}><a href={s.url} target="_blank" rel="noreferrer">{s.title}</a>{s.updatedOn&&<span> · Quellenstand {new Date(s.updatedOn+'T12:00:00Z').toLocaleDateString('de-DE')}</span>}</li>)}</ul><p className="small-note">Eigene Beispiele und Zeichnungen; keine übernommenen Fotos, Logos oder Quelltexte. Quellen gelesen am 13. Oktober 2026.</p></LearningDetails>
+  {learning.relatedWords?.length&&<LearningDetails summary="Mit anderen Wörtern weiterdenken" data-history-disclosure={'book-related-'+term}><ul>{learning.relatedWords.map(link=><li key={link.term}><p>{link.reason}</p><a className="book-topic-link" href={'#book/words/'+encodeURIComponent(link.term)} data-route-focus={'word-related-'+term+'-'+link.term} onClick={e=>{e.preventDefault();navigateHash('book/words/'+encodeURIComponent(link.term));}}>Mit „{link.term}“ weiterdenken →</a></li>)}</ul></LearningDetails>}
+  <LearningDetails summary="Quellen und Prüfstand"><p>Mit KI-Unterstützung erstellt; Codex hat die Erklärung gegen ausgewählte Belegstellen der verlinkten Quellen abgeglichen. Eine unabhängige Fachabnahme steht noch aus. Die Quellengeber haben diese WunderKompass-Erklärung nicht geprüft oder freigegeben. Belegstellenabgleich: {checked}.</p><ul>{learning.sources.map(s=><li key={s.url}><a href={s.url} target="_blank" rel="noreferrer">{s.title}</a>{s.updatedOn&&<span> · Quellenstand {new Date(s.updatedOn+'T12:00:00Z').toLocaleDateString('de-DE')}</span>}</li>)}</ul><p className="small-note">Eigene Beispiele und Zeichnungen; keine übernommenen Fotos, Logos oder Quelltexte. Quellenabruf am {checked}.</p></LearningDetails>
  </>;
 }
 function MeasureModel({kind}:{kind:'length'|'duration'|'temperature'}){

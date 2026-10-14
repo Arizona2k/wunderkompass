@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "term": "Neutron",
+  "learning": {
+    "starter": "Viele Atomkerne enthalten Neutronen. Sie tragen insgesamt weder positive noch negative elektrische Ladung.",
+    "deeper": "Neutronen und Protonen sind verschiedene Kernteilchen. Bei gleichbleibender Protonenzahl kann eine andere Neutronenzahl ein anderes Isotop ergeben. Neutronen gehören zum Kern, nicht zur Elektronenhülle.",
+    "observe": "Zeichne die drei Wasserstoffkerne mit einem P und null, einem oder zwei N. Welche Zahl ist in allen Beispielen gleich? Die Skizze ist nur ein Zählmodell, keine Aussage über die Form echter Kerne.",
+    "benefit": "Du erkennst, warum „neutral“ ein Ladungsmerkmal ist und trotzdem verschiedene Isotope möglich sind.",
+    "topic": "science-fusion",
+    "connection": "Bei der Kernfusion können Neutronen eine Rolle spielen. Vergleiche Kernteilchen mit Elektronen der Hülle und lies die Grenzen der vereinfachten Fusionszeichnung.",
+    "sources": [
+      {
+        "url": "https://www.energy.gov/science/doe-explainsneutrons",
+        "title": "U.S. Department of Energy · Neutron (Englisch)",
+        "anchor": "Neutral electric charge and nuclear location; universal hydrogen exception corrected using DOE Isotopes hydrogen examples. No medical or free-neutron experiment.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      },
+      {
+        "url": "https://www.energy.gov/science/doe-explainsisotopes",
+        "title": "U.S. Department of Energy · Isotope und Wasserstoffvarianten (Englisch)",
+        "anchor": "Hydrogen isotope caption: zero, one or two neutrons; no universal hydrogen-without-neutrons rule",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Isotop",
+        "reason": "Verschiedene Neutronenzahlen unterscheiden die Isotope eines Elements. Protonenzahl und Neutronenzahl sind verschiedene Angaben."
+      }
+    ],
+    "question": {
+      "prompt": "Welches Merkmal beschreibt ein Neutron?",
+      "answers": [
+        "Es ist ein negativ geladenes Elektron",
+        "Es besitzt keine elektrische Gesamtladung",
+        "Es ist ein ganzes Wasserstoffatom"
+      ],
+      "correct": 1,
+      "hint": "Trenne Kernteilchen, Hüllenteilchen und den gesamten Aufbau.",
+      "why": "Ein Neutron ist ein Kernteilchen ohne elektrische Gesamtladung. Ein Elektron ist etwas anderes, und ein Atom umfasst mehr als ein einzelnes Neutron.",
+      "wrongReasons": [
+        "Elektronen tragen negative Ladung und gehören in Atomen zur Hülle. Neutronen sind andere Teilchen.",
+        "",
+        "Ein Wasserstoffatom besteht aus Kern und Elektronenhülle. Ein Neutron allein ist kein Atom."
+      ]
+    }
+  }
+}

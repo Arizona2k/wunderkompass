@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "term": "Atom",
+  "learning": {
+    "starter": "Ein Atom ist viel kleiner als ein Sandkorn. Es hat einen kleinen Kern und eine Hülle aus Elektronen.",
+    "deeper": "Der Kern enthält positiv geladene Protonen und häufig Neutronen. Die Elektronenhülle bestimmt wichtige chemische Eigenschaften. Die Zeichnung mit einem Kern und runden Bahnen ist nur ein Modell; Elektronen laufen nicht wie kleine Planeten auf festen Kreisbahnen.",
+    "observe": "Zeichne einen Punkt in einen Kreis. Was erklärt diese Skizze über Kern und Hülle? Welche Größen und Bewegungen beweist sie nicht? Du zeichnest keine maßstäbliche Atomaufnahme.",
+    "benefit": "Du unterscheidest Atom, Atomkern und Zelle und erkennst die Grenze einer einfachen Zeichnung.",
+    "topic": "science-fusion",
+    "connection": "Bei der Kernfusion verbinden sich leichte Atomkerne. Vergleiche den Kern mit dem ganzen Atom: Die Elektronenhülle und der Kern sind nicht derselbe Bereich.",
+    "sources": [
+      {
+        "url": "https://www.energy.gov/science/doe-explainsnuclei",
+        "title": "U.S. Department of Energy · Atom (Englisch)",
+        "anchor": "Nuclei: small nucleus, positive protons, neutral neutrons, surrounding negative electrons; no universal mass-percentage claim. Electron-cloud caveat separately checked against DOE Electrons.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      },
+      {
+        "url": "https://www.energy.gov/science/doe-explainsisotopes",
+        "title": "U.S. Department of Energy · Isotope und Wasserstoffvarianten (Englisch)",
+        "anchor": "Hydrogen isotope caption: zero, one or two neutrons; no universal hydrogen-without-neutrons rule",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      },
+      {
+        "url": "https://www.energy.gov/science/doe-explainselectrons",
+        "title": "U.S. Department of Energy · Elektronenhülle (Englisch)",
+        "anchor": "Cloud description rather than fixed planetary orbits; source image and essentially-no-mass simplification not adopted",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Proton",
+        "reason": "Ein Atom umfasst Kern und Hülle; ein Proton ist ein einzelnes positiv geladenes Kernteilchen."
+      },
+      {
+        "term": "Elektron",
+        "reason": "Elektronen gehören zur Atomhülle. Vergleiche das ganze Atom mit einem negativ geladenen Teilchen."
+      },
+      {
+        "term": "Mol",
+        "reason": "Atom benennt eine Teilchenart; Mol ist eine Einheit für die Anzahl festgelegter Teilchen. Teilchenart und Stoffmenge sind verschieden."
+      }
+    ],
+    "question": {
+      "prompt": "Was ist richtig an einer einfachen Atomzeichnung?",
+      "answers": [
+        "Sie zeigt jede Elektronenbahn als echten Kreis",
+        "Sie kann Kern und Hülle unterscheiden, ist aber vereinfacht",
+        "Sie zeigt eine vollständige Zelle"
+      ],
+      "correct": 1,
+      "hint": "Eine Zeichnung kann die Gliederung zeigen, ohne alles genau abzubilden.",
+      "why": "Kern und Hülle sind unterschiedliche Bereiche. Eine vereinfachte Skizze beweist keine genauen Elektronenbahnen oder Größen.",
+      "wrongReasons": [
+        "Elektronen werden nicht als kleine Planeten auf festen Kreisbahnen beschrieben.",
+        "",
+        "Eine Zelle enthält viele Atome und Moleküle. Ein einzelnes Atom ist keine Zelle."
+      ]
+    }
+  }
+}

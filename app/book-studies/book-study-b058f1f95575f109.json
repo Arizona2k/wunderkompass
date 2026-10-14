@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "term": "Chromosom",
+  "learning": {
+    "starter": "Lange DNA wird zusammen mit Proteinen geordnet. So entsteht ein Chromosom.",
+    "deeper": "Viele Chromosomen von Pflanzen und Tieren liegen im Zellkern. Ihre Form verändert sich im Zellzyklus; die bekannte X-Zeichnung zeigt nicht jeden Zustand. Verschiedene Lebewesen besitzen unterschiedliche Chromosomenzahlen und -formen.",
+    "observe": "Lege einen langen Faden locker hin und rolle ihn dann auf eine Papprolle. Welche Anordnung braucht weniger Platz? Die Rolle ist nur eine Verpackungshilfe: ein Chromosom ist viel komplizierter und kein echter Fadenknäuel.",
+    "benefit": "Du erkennst, dass eine bekannte Chromosomenzeichnung nur einen bestimmten Zustand zeigt.",
+    "topic": "science-cell",
+    "connection": "Im Zellbild wird ein Zellkern gezeigt. Die großen Kernchromosomen von Pflanzen und Tieren gehören in diesen Bereich; die grobe Zeichnung ist keine Chromosomenaufnahme.",
+    "relatedWords": [
+      {
+        "term": "DNA",
+        "reason": "Chromosomen ordnen lange DNA zusammen mit Proteinen. Verpackung und Informationsträger sind verschiedene Begriffe."
+      },
+      {
+        "term": "Genom",
+        "reason": "Chromosomen verpacken einen Teil der DNA. Das Genom bezeichnet die gesamte Erbinformation."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Chromosome",
+        "title": "NIH/NHGRI · Chromosom (Englisch)",
+        "anchor": "Definition: DNA and protein; narration: variable shapes/numbers and packaging; textbook X not universal",
+        "updatedOn": "2026-10-13",
+        "checkedOn": "2026-10-14"
+      },
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Genome",
+        "title": "NIH/NHGRI · DNA im Zellkern und in Mitochondrien (Englisch)",
+        "anchor": "Definition: genome includes nuclear chromosomes and mitochondrial DNA; no universal nuclear-only claim",
+        "updatedOn": "2026-10-13",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "question": {
+      "prompt": "Eine Zeichnung zeigt ein Chromosom als X. Was musst du beachten?",
+      "answers": [
+        "Es hat nicht zu jeder Zeit diese Form",
+        "Jede Zelle enthält genau ein X",
+        "Ein X ist ein ganzer Zellkern"
+      ],
+      "correct": 0,
+      "hint": "Eine Zeichnung kann einen einzelnen Zustand auswählen.",
+      "why": "Chromosomen verändern ihre sichtbare Form während des Zellzyklus. Ein X ist kein allgemeines Bild jedes Chromosoms.",
+      "wrongReasons": [
+        "",
+        "Zahl und Form hängen vom Lebewesen und vom Zellzustand ab. Ein einziges X ist keine allgemeine Regel.",
+        "Ein Zellkern enthält unter anderem Chromosomen. Ein gezeichnetes Chromosom ist nicht der ganze Kern."
+      ]
+    }
+  }
+}

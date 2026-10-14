@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Isotop",
+  "learning": {
+    "starter": "Zwei Atome können zum selben Element gehören und trotzdem verschieden viele Neutronen haben. Dann gehören sie zu verschiedenen Isotopen.",
+    "deeper": "Kohlenstoff-12 hat sechs Protonen und sechs Neutronen, Kohlenstoff-13 sechs Protonen und sieben Neutronen. Die Protonenzahl bleibt gleich. Die Zahl hinter dem Namen zählt hier Protonen und Neutronen zusammen.",
+    "observe": "Zeichne zwei Kerne: jeweils sechs Kreise mit P, dazu einmal sechs und einmal sieben mit N. Welche Zahl bleibt gleich? Welche Summe ändert sich? Diese Zählskizze sagt nichts über echte Größen oder Kernformen.",
+    "benefit": "Du kannst gleiche Protonenzahl und verschiedene Neutronenzahl getrennt vergleichen.",
+    "topic": "science-fusion",
+    "connection": "Bei der Fusion sind bestimmte Atomkerne beteiligt. Isotope unterscheiden sich in ihrer Neutronenzahl; das beeinflusst, welche Kernreaktionen möglich sind.",
+    "sources": [
+      {
+        "url": "https://www.energy.gov/science/doe-explainsisotopes",
+        "title": "U.S. Department of Energy · Isotop (Englisch)",
+        "anchor": "Opening definition and carbon-12/carbon-13 example; stable versus unstable. Unsupported universal artificial-isotope claim and media not reused.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Proton",
+        "reason": "Gleiche Protonenzahl ordnet Isotope demselben Element zu. Eine veränderte Protonenzahl bedeutet ein anderes Element."
+      },
+      {
+        "term": "Neutron",
+        "reason": "Verschiedene Neutronenzahlen unterscheiden die Isotope eines Elements. Protonenzahl und Neutronenzahl sind verschiedene Angaben."
+      }
+    ],
+    "question": {
+      "prompt": "Was unterscheidet Kohlenstoff-12 von Kohlenstoff-13?",
+      "answers": [
+        "Eine andere Neutronenzahl",
+        "Eine andere Protonenzahl",
+        "Ein vollständig anderes Element"
+      ],
+      "correct": 0,
+      "hint": "Beide heißen Kohlenstoff. Zähle die N in den Beispielkernen.",
+      "why": "Beide Kerne haben sechs Protonen. Kohlenstoff-13 hat ein Neutron mehr als Kohlenstoff-12.",
+      "wrongReasons": [
+        "",
+        "Eine andere Protonenzahl würde ein anderes Element bedeuten. Hier bleiben es sechs Protonen.",
+        "Die gleiche Protonenzahl ordnet beide Varianten dem Element Kohlenstoff zu."
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Kohlenstoffkreislauf",
+  "learning": {
+    "starter": "Kohlenstoff kann von einem Speicher in einen anderen gelangen. Pflanzen, Tiere, Luft, Meer und Boden gehören zu verschiedenen Wegen.",
+    "deeper": "Fotosynthese, Atmung, Abbau und Verbrennung verbinden Teile des Kreislaufs. Menschen verändern die Verteilung zum Beispiel durch das Verbrennen fossiler Brennstoffe. Ein Kreislaufbild ist keine Messung und keine Behauptung eines exakt geschlossenen Systems seit aller Zeit.",
+    "observe": "Zeichne drei Felder für Luft, Pflanze und Boden. Beschrifte einen möglichen Weg, statt nur unbenannte Pfeile zu malen. Was zeigt die Skizze nicht über Mengen und Geschwindigkeit?",
+    "benefit": "Du unterscheidest Speicher, Austauschvorgang und unbekannte Mengenangaben.",
+    "topic": "science-photosynthesis",
+    "connection": "Fotosynthese verbindet Kohlenstoff aus Kohlendioxid mit Pflanzenstoffen. Ein Blatt allein zeigt nicht die Mengen oder Geschwindigkeiten des gesamten Kreislaufs.",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/carbon-cycle.html",
+        "title": "NOAA · Kohlenstoffkreislauf (Englisch)",
+        "anchor": "Stores, exchanges and human fossil-fuel redistribution; no atoms created, exact closed-Earth history or unneeded3.6-million-year claim.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Zersetzung",
+        "reason": "Der Abbau abgestorbenen Materials kann Kohlenstoff zwischen Speichern bewegen. Ein Stoffkreislauf ist nicht dasselbe wie unverändert kreisende Energie."
+      }
+    ],
+    "question": {
+      "prompt": "Was brauchst du, um einen Pfeil im Kreislaufbild verständlich zu machen?",
+      "answers": [
+        "Nur einen besonders dicken Strich",
+        "Eine Erklärung, welcher Vorgang den Austausch beschreibt",
+        "Die Behauptung, dass alle Speicher gleich groß sind"
+      ],
+      "correct": 1,
+      "hint": "Ein Pfeil allein nennt noch keinen Prozess.",
+      "why": "Die Erklärung des Vorgangs macht verständlich, wie Kohlenstoff zwischen Speichern wechseln kann. Mengen und Zeiten benötigen weitere Angaben.",
+      "wrongReasons": [
+        "Die Strichdicke allein erklärt weder den Vorgang noch eine gemessene Menge.",
+        "",
+        "Verschiedene Speicher enthalten unterschiedliche Mengen. Der Kreislauf setzt keine Gleichheit voraus."
+      ]
+    }
+  }
+}
