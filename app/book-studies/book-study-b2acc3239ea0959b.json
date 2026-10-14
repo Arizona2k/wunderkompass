@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Stichprobe",
+  "learning": {
+    "starter": "Du prüfst einige Dinge statt aller. Überlege, welche Dinge bei deiner Auswahl fehlen.",
+    "deeper": "Eine große Stichprobe kann trotzdem einseitig sein, wenn bestimmte Teile der Gruppe kaum vorkommen. Die Auswahlmethode, Größe und Fragestellung gehören zusammen. Ein einzelner Ausschnitt beweist nicht jede Eigenschaft einer ganzen Bevölkerung.",
+    "observe": "Zeichne zwölf erfundene Formen in drei Reihen. Vergleiche eine Auswahl nur aus der ersten Reihe mit einer Auswahl aus mehreren Reihen. Das Gedankenbeispiel ist keine echte Befragung und keine statistische Garantie.",
+    "benefit": "Du hinterfragst, wer oder was in einer Auswertung tatsächlich berücksichtigt wurde.",
+    "connection": "Das Wahrscheinlichkeitsmodell sammelt einzelne Ergebnisse. Auswahl und Anzahl bestimmen, was eine Ergebnisliste zeigt; beobachtete Häufigkeit und vollständige Grundgesamtheit bleiben verschieden.",
+    "topic": "science-probability",
+    "sources": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/glossary.htm",
+        "title": "NIST · Stichprobe (Englisch)",
+        "anchor": "Actual sample299–301 andpopulation242: subset of population, sampling choice matters. Exclude generic recommended minimum sizes and blanket95percent claims.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Wahrscheinlichkeit",
+        "reason": "Die beobachtete Auswahl und theoretische Chancen im Modell sind verschieden. Eine einseitige Auswahl wird nicht allein durch größere Zahl repräsentativ."
+      },
+      {
+        "term": "Mittelwert",
+        "reason": "Ein Mittelwert fasst die ausgewählten Zahlen zusammen. Er behebt nicht automatisch fehlende oder einseitig ausgewählte Teile einer größeren Gruppe."
+      }
+    ],
+    "question": {
+      "prompt": "Du prüfst nur die erste Reihe. Was musst du bedenken?",
+      "answers": [
+        "Die anderen Reihen wurden nicht geprüft",
+        "Die erste Reihe beweist alles über jede Form",
+        "Eine beliebige Auswahl ist immer gerecht verteilt"
+      ],
+      "correct": 0,
+      "hint": "Welche Teile der gezeichneten Gesamtgruppe fehlen?",
+      "why": "Die ungeprüften Reihen fehlen. Eigenschaften des gewählten Ausschnitts dürfen deshalb nicht ungeprüft auf alle Formen übertragen werden.",
+      "wrongReasons": [
+        "",
+        "Die gewählte Reihe enthält keine Beobachtungen über die anderen Reihen.",
+        "Die Auswahlmethode beeinflusst, welche Teile der Gruppe vorkommen."
+      ]
+    }
+  }
+}

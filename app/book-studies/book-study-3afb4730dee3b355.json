@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Galaxie",
+  "learning": {
+    "starter": "Viele Sterne gehören zu einem größeren System. Unsere Sonne ist einer der Sterne unserer Galaxie.",
+    "deeper": "Galaxien haben verschiedene Formen. Eine Spiralzeichnung ist nicht die Form jeder Galaxie und keine maßstäbliche Karte ihrer Sterne. Einzelne Planetensysteme sind Bestandteile auf einer anderen Größenebene.",
+    "observe": "Zeichne einen kleinen Kreis für ein erfundenes Planetensystem innerhalb eines größeren Galaxienzeichens. Beschrifte die unterschiedlichen Ebenen. Die Symbole messen keine Abstände, Sternzahlen oder tatsächliche Größe.",
+    "benefit": "Du unterscheidest ein Planetensystem von seiner größeren galaktischen Umgebung.",
+    "connection": "Die Galaxienkarte vergleicht System und Form. Unser einzelnes Sonnensystem und die Milchstraße sind verschiedene Ebenen derselben räumlichen Einordnung.",
+    "topic": "science-galaxy",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/universe/galaxies/",
+        "title": "NASA · Galaxie (Englisch)",
+        "anchor": "Selected actual scientific270–285: gravity-bound systems, shape variety, MilkyWay context. No obsolete discoverycounts or universal central black-hole assertion.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Lichtjahr",
+        "reason": "Galaxien sind räumliche Systeme; ein Lichtjahr ist eine Entfernungsangabe. Ein Jahressymbol ist keine Messung ihrer Größe oder ihres Alters."
+      }
+    ],
+    "question": {
+      "prompt": "Was zeigen die zwei unterschiedlich beschrifteten Symbole?",
+      "answers": [
+        "Verschiedene Ebenen, nicht echte Größen im Maßstab",
+        "Dass jede Galaxie nur eine Sonne besitzt",
+        "Eine genaue Zahl aller Sterne"
+      ],
+      "correct": 0,
+      "hint": "Lies die Ebenenbeschriftung und die Grenze der ausdrücklich erfundenen Zeichnung.",
+      "why": "Die Zeichen trennen Planetensystem und Galaxie. Ihre Papiergrößen zählen keine Sterne und geben keinen verlässlichen Maßstab.",
+      "wrongReasons": [
+        "",
+        "Eine Galaxie ist ein größeres System mit vielen Sternen, nicht nur dem Stern unseres Sonnensystems.",
+        "Die Symbole enthalten keine vollständige Sternzählung."
+      ]
+    }
+  }
+}

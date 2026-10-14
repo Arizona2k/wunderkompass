@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Zellkern",
+  "learning": {
+    "starter": "Bei manchen Zelltypen liegt viel Erbinformation in einem umhüllten Kern. Andere Zelltypen besitzen diesen Kern nicht.",
+    "deeper": "Die Kernhülle ermöglicht Austausch durch besondere Poren. Ein Schema mit einem Kreis in der Mitte ist kein Beleg, dass jeder Kern genau mittig liegt. Mitochondrien können außerdem eigene DNA enthalten.",
+    "observe": "Zeichne einen Kern innerhalb eines erfundenen Zellschemas und daneben einen anderen Zelltyp ohne umhüllten Kern. Beschrifte beide. Die Zeichnung ist ein Vergleich, kein Foto und keine Festlegung einer immer gleichen Kernposition.",
+    "benefit": "Du kannst einen Kernbereich erklären und vermeidest die falsche Behauptung, jede Zelle müsse ihn haben.",
+    "connection": "Vergleiche den gezeichneten Zelltyp mit einer Bakterienzelle ohne umhüllten Kern. Chromosomen und Kern sind nicht in jedem Zelltyp gleich organisiert.",
+    "topic": "science-cell",
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Nucleus",
+        "title": "NHGRI · Zellkern",
+        "anchor": "Definition membrane-enclosed organelle and exchange through pores; excludes literal always central/all DNA in nucleus; mitochondria and prokaryotic exceptions retained.",
+        "updatedOn": "2026-10-14",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Chromosom",
+        "reason": "Kernchromosomen liegen im Zellkern eukaryotischer Zelltypen. Andere Organisation und etwa mitochondriale DNA begrenzen die Aussage für alle Zellen."
+      },
+      {
+        "term": "Mitochondrium",
+        "reason": "Der Kern ist nicht der einzige mögliche DNA-Ort einer eukaryotischen Zelle. Mitochondrien besitzen eigene DNA und dienen einer anderen Zellaufgabe."
+      }
+    ],
+    "question": {
+      "prompt": "Was darfst du aus einem zentral gezeichneten Kern nicht schließen?",
+      "answers": [
+        "Dass ein bestimmtes Schema einen Kern darstellen soll",
+        "Dass jeder echte Zellkern immer genau in der Mitte liegt",
+        "Dass die Zeichnung nur ein Modell ist"
+      ],
+      "correct": 1,
+      "hint": "Trenne den gewählten Platz eines Symbols von allen wirklichen Zellformen.",
+      "why": "Die Mitte ist eine Zeichenentscheidung. Sie beweist keine universelle Position in allen echten Zellen.",
+      "wrongReasons": [
+        "Ein beschriftetes Kerns­ymbol kann den dargestellten Bereich erklären, auch wenn es keine echte Lage misst.",
+        "",
+        "Die ausdrücklich erfundene Zeichnung darf als Modell bezeichnet werden. Das ist keine Behauptung über alle echten Zellen."
+      ]
+    }
+  }
+}

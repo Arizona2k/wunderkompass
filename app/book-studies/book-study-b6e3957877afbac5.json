@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Planet",
+  "learning": {
+    "starter": "Planeten unseres Sonnensystems umkreisen die Sonne. Die Sonne ist der zentrale Stern, nicht ein neunter Planet.",
+    "deeper": "Die acht Planeten haben unterschiedliche Größen und Umlaufzeiten. Gleiche Symbole einer Zeichnung wären eine Modellentscheidung. Ein Mond umkreist einen Planeten und ist in diesem vereinfachten Vergleich eine andere Art von Körper.",
+    "observe": "Zeichne eine gedachte Sonne mit zwei verschieden beschrifteten Planetenbahnen. Kennzeichne: Größen, Abstände und Bahnzeiten nicht maßstäblich. Die Skizze ordnet Körper und misst nicht den wirklichen Raum.",
+    "benefit": "Du unterscheidest Stern, Planet und Mond und liest gleiche Symbole nicht als gleiche wirkliche Größen.",
+    "connection": "Die Planetenkarten und das Labor verwenden verschiedene Maßstäbe. Lies die jeweilige Grenze statt symbolische Abstände und Größen zugleich für real zu halten.",
+    "topic": "science-solar-system",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/solar-system/planets/",
+        "title": "NASA · Planeten",
+        "anchor": "Selected scientific lines273–405: eight planets, central star, different bodies and sizes; no old discovery counts or copied imagery.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Asteroid",
+        "reason": "Asteroiden und Planeten sind verschiedene Gruppen von Körpern. Eine vereinfachte Planetenkarte zählt nicht jedes kleinere Objekt im Sonnensystem."
+      }
+    ],
+    "question": {
+      "prompt": "Was bedeutet eine gleiche Symbolgröße zweier Planeten in einer Skizze?",
+      "answers": [
+        "Nur eine Darstellungsentscheidung, kein Beweis gleicher echter Größen",
+        "Beide Planeten sind immer gleich groß",
+        "Beide brauchen genau gleich lange für einen Umlauf"
+      ],
+      "correct": 0,
+      "hint": "Prüfe den Maßstab und die Beschriftung, bevor du aus dem Symbol eine echte Größe ableitest.",
+      "why": "Gleiche Symbole können das Bild übersichtlicher machen. Sie belegen ohne maßstäbliche Daten weder gleiche Größe noch Umlaufzeit.",
+      "wrongReasons": [
+        "",
+        "Das Sonnensystem enthält unterschiedlich große Planeten. Die Skizze hebt diesen Unterschied nicht auf.",
+        "Eine Symbolgröße ist keine Messung einer Umlaufzeit."
+      ]
+    }
+  }
+}

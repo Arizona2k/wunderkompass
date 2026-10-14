@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Umlaufbahn",
+  "learning": {
+    "starter": "Eine Umlaufbahn beschreibt den Weg eines Körpers um einen anderen. Ein Kreisbild ist nur eine einfache mögliche Darstellung.",
+    "deeper": "Gravitation und Bewegungszustand gehören zur Erklärung. Eine gezeichnete Bahn ist keine starre Schiene und nicht jede Bahn ist kreisrund. Eine Positionsskizze allein sagt nicht, wann ein echter Körper einen bestimmten Ort erreicht.",
+    "observe": "Zeichne eine gedachte ovale Bahn und drei Positionen mit Bewegungspfeilen. Beschrifte die Skizze als Modell. Sie berechnet weder eine reale Umlaufdauer noch die genaue nächste Position.",
+    "benefit": "Du unterscheidest Weg, momentane Position und eine berechnete Zukunftsangabe.",
+    "connection": "Im Mondlabor unterscheiden sich Lage, Umlauf und Beobachtungsrichtung. Die eigene ovale Skizze ist keine Vorhersage echter Mondpositionen oder Finsternistermine.",
+    "lab": "moon",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/what-is-gravity/en/",
+        "title": "NASA · Umlaufbahn (Englisch)",
+        "anchor": "Actual14/31: gravity orbital context planetsandmoon. Own direction-andpath distinction; not all circles, no actual ephemeris or stabilityguarantee.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was zeigt die selbst gezeichnete Bahn sicher als Modellinhalt?",
+      "answers": [
+        "Einen gedachten Weg mit markierten Positionen",
+        "Eine starre echte Schiene im Weltall",
+        "Die genaue Uhrzeit jeder wirklichen Planetenposition"
+      ],
+      "correct": 0,
+      "hint": "Die Positionen wurden selbst festgelegt und nicht astronomisch gemessen.",
+      "why": "Der Modellweg ordnet Positionen. Für tatsächliche Uhrzeiten wären reale Bahnparameter und Berechnungen nötig.",
+      "wrongReasons": [
+        "",
+        "Eine Bahn ist keine materielle Schiene, an der ein Planet befestigt ist.",
+        "Die Zeichnung enthält keine tatsächlichen Bahndaten oder berechneten Ankunftszeiten."
+      ]
+    }
+  }
+}

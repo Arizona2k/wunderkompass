@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Gletscher",
+  "learning": {
+    "starter": "Ein Gletscher besteht aus angesammeltem Eis an Land. Das Eis kann sich langsam bewegen und die Landschaft verändern.",
+    "deeper": "Ein Gletscher ist kein auf dem Meer treibender Eisberg. Aufbau durch Schnee, Bewegung und Schmelzen sind verschiedene Vorgänge. Eine kurze Zeichnung zeigt keine Messreihe zum Wachstum oder Rückgang eines konkreten Gletschers.",
+    "observe": "Zeichne einen gedachten Schneebereich oberhalb einer Eiszunge mit Bewegungspfeil. Füge den möglichen Abfluss separat ein. Benutze nur Papier; das Bild erlaubt keine Aussagen zu einer sicheren Wanderroute oder echten Änderungsrate.",
+    "benefit": "Du unterscheidest gespeichertes Eis, Bewegung und abfließendes Wasser.",
+    "connection": "Im Wasserlabor ist Eis ein Speicher. Die zusätzliche Zeichnung erklärt Bewegung und Abfluss, ohne eine überall gleiche Aufenthaltsdauer festzulegen.",
+    "lab": "water",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/glaciers-and-icecaps",
+        "title": "USGS · Gletscher (Englisch)",
+        "anchor": "Actual35–36: snowaccumulation/compaction, ice motion gravity, sedimentdrag. Exclude oldglobalrecords, universalretreatrates and incorrect blueice-reflection explanation.",
+        "updatedOn": "2026-09-17",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Fjord",
+        "reason": "Ein Fjord verbindet ein glazial geformtes Tal mit Meerwasser. Nicht jede lange Bucht belegt diese Entstehung."
+      },
+      {
+        "term": "Süßwasser",
+        "reason": "Gespeichertes Eis kann Süßwasser enthalten. Salzarmut und eine sichere Trinkfreigabe müssen trotzdem getrennt geprüft werden."
+      }
+    ],
+    "question": {
+      "prompt": "Welcher Satz trennt die Modellbestandteile sinnvoll?",
+      "answers": [
+        "Eis kann gespeichert sein und sich bewegen; Schmelzwasser ist ein anderer Weg",
+        "Ein Gletscher ist dasselbe wie jeder schwimmende Eiswürfel",
+        "Ein Pfeil misst automatisch den heutigen Rückgang eines echten Gletschers"
+      ],
+      "correct": 0,
+      "hint": "Die gezeichneten Speicher und Pfeile benennen verschiedene Vorgänge.",
+      "why": "Eisbewegung und Schmelzwasser sind verschiedene Wege. Für reale Änderungen wären Ort, Zeit und Messungen erforderlich.",
+      "wrongReasons": [
+        "",
+        "Ein Gletscher ist eine Eismasse an Land; ein beliebiger schwimmender Eiswürfel stellt diese nicht vollständig dar.",
+        "Ein frei gezeichneter Pfeil enthält keine gemessene Änderungsrate."
+      ]
+    }
+  }
+}

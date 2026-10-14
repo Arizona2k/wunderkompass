@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Plattentektonik",
+  "learning": {
+    "starter": "Die feste äußere Hülle der Erde besteht aus bewegten Platten. Sie umfasst auch Meeresboden und entspricht nicht einfach den politischen Ländern.",
+    "deeper": "Die Platten bewegen sich über sehr lange Zeiten. Der Mantel darunter ist überwiegend fest und kann sich langsam verformen; er ist kein weltweiter flüssiger Lavaozean. Vereinfachte Pfeile messen keine echten heutigen Geschwindigkeiten.",
+    "observe": "Zeichne zwei gedachte Plattenflächen mit unterschiedlichen Bewegungspfeilen und darüber eine unabhängige Ländergrenze. Das Schema hat keinen Kartenmaßstab und zeigt nicht jede Bruchfläche oder geologische Bewegung.",
+    "benefit": "Du unterscheidest geologische Platten, politische Länder und ein vereinfachtes Bewegungsmodell.",
+    "connection": "Im Plattenlabor kannst du Bewegungsrichtungen vergleichen. Die Tuchfaltung erklärt nur einen Teil der Vorgänge: Material, Zeitmaßstab und echte Subduktion sind darin nicht vollständig dargestellt.",
+    "lab": "plates",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/faqs/are-tectonic-plates-floating-magma",
+        "title": "USGS · Platten und Mantel",
+        "anchor": "Full FAQ selected scientific opening: predominantly solid mantle, very slow deformation/local melt; outer core liquid, no global magma ocean.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Erdbeben",
+        "reason": "Viele Beben hängen mit Bewegungen an Bruchflächen zusammen; Platten erklären einen geologischen Zusammenhang. Politische Grenzen sind keine automatisch entsprechenden Bruch- oder Plattengrenzen."
+      },
+      {
+        "term": "Erdkruste",
+        "reason": "Die Kruste ist eine Erdschicht; tektonische Platten enthalten zusätzlich festen obersten Mantel. Schichtname und beweglicher Bereich sind keine Synonyme."
+      }
+    ],
+    "question": {
+      "prompt": "Was darfst du aus einer gezeichneten Ländergrenze nicht schließen?",
+      "answers": [
+        "Dass Menschen eine politische Grenze beschreiben",
+        "Dass Platten auch Meeresboden enthalten können",
+        "Dass dort zwingend eine geologische Plattengrenze liegt"
+      ],
+      "correct": 2,
+      "hint": "Politische Zuständigkeit und geologische Struktur sind verschiedene Arten von Grenzen.",
+      "why": "Eine Ländergrenze ist kein automatischer Nachweis einer geologischen Plattengrenze. Beide können verschieden verlaufen.",
+      "wrongReasons": [
+        "Eine Ländergrenze kann politische Zuständigkeit beschreiben. Sie beweist nur keine geologische Struktur.",
+        "Meeresboden kann zu Platten gehören. Eine Ländergrenze widerspricht diesem Aufbau nicht.",
+        ""
+      ]
+    }
+  }
+}

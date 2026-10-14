@@ -1,8 +1,8 @@
 {
   "science-pendulum": {
     "file": "book-topic-science-pendulum.json",
-    "bytes": 790,
-    "sha256": "291e6f007bedbfd1030a9e8d47394bd3ea08fababad969dd0177a315426f2811"
+    "bytes": 997,
+    "sha256": "fd36830b6b3982f131d811276278c06868f648756a4bdd0bf0acfb74c0d26814"
   },
   "science-buoyancy": {
     "file": "book-topic-science-buoyancy.json",
@@ -16,13 +16,13 @@
   },
   "science-heat-transfer": {
     "file": "book-topic-science-heat-transfer.json",
-    "bytes": 253,
-    "sha256": "148ab817c2e7ed0aba2e28b8bcb87569db4e8dd695e0320284f63578a10eccea"
+    "bytes": 1219,
+    "sha256": "5010aae1530cffc7c5759b62837b174d19980a62ec400a2e09274f6f805957f7"
   },
   "science-water-cycle": {
     "file": "book-topic-science-water-cycle.json",
-    "bytes": 489,
-    "sha256": "77be54dacd2c42fca1f208a73704ce976e7fc8069aad46ae86cf0232eca935ad"
+    "bytes": 1958,
+    "sha256": "73f91c6e500bb0814d8cfffabb9be9bcd0db549833c268a2fe9cbc7e82dfd6f4"
   },
   "science-photosynthesis": {
     "file": "book-topic-science-photosynthesis.json",
@@ -31,23 +31,23 @@
   },
   "science-cell": {
     "file": "book-topic-science-cell.json",
-    "bytes": 2469,
-    "sha256": "8aa1674f8c2a459c25dba7f47bd51a6dc56c780175d02ed413dc1ac58f0bbe3c"
+    "bytes": 3714,
+    "sha256": "4560ba47748b1ee3ae90f34b9d1f4adcb6b026a86523064aaed80f2284db6507"
   },
   "science-fusion": {
     "file": "book-topic-science-fusion.json",
-    "bytes": 916,
-    "sha256": "edb055032ff1622f3c5093e6f0c5aa8796df21bacfa6d0be3c40976ef5096c89"
+    "bytes": 1584,
+    "sha256": "b9250f95cd466cc987b39c35064ae724dc0da571a2ad77cecd39a3d1611cba76"
   },
   "science-probability": {
     "file": "book-topic-science-probability.json",
-    "bytes": 759,
-    "sha256": "4f8f443edff6b3a2271bb529320ecf0eb97e04f9ad4654860c75ea14b9de7ca8"
+    "bytes": 1483,
+    "sha256": "9d97304b8f8a7c86376157e1235e41e805e69cc685e610802c62582981fd8919"
   },
   "science-encryption": {
     "file": "book-topic-science-encryption.json",
-    "bytes": 301,
-    "sha256": "61b197d6844faff74dd704f7ef75b21ee51944fa97133f024f44a925feabc563"
+    "bytes": 1000,
+    "sha256": "50b541d492cdb102c2a96c04231d6a5f420d1c7d460cfc4932d54153e59cee41"
   },
   "science-lever": {
     "file": "book-topic-science-lever.json",
@@ -81,17 +81,157 @@
   },
   "invention-compass": {
     "file": "book-topic-invention-compass.json",
-    "bytes": 702,
-    "sha256": "25f0b02ecab2309f352c2a3b6c270349772c70906c840a0bf1ea5f9ed024356a"
+    "bytes": 939,
+    "sha256": "22a599fe6108c47b00fd54438aaa1d42366de5e8a9d4e9b274ee13ba869f9e1b"
   },
   "science-tides": {
     "file": "book-topic-science-tides.json",
-    "bytes": 527,
-    "sha256": "a109b2bd90909509a90af1ea35988d935d1e110326d149b0abe4063239f11206"
+    "bytes": 1137,
+    "sha256": "b78870f43c26c54ae1633b19fd31d7c710727d86226b4628d22d143fbfc10030"
   },
   "invention-satellite": {
     "file": "book-topic-invention-satellite.json",
-    "bytes": 503,
-    "sha256": "67856cda9b6be87ecb0cafed041aa66d5b8dbc70d4bf63ebabdfd8e8370c8550"
+    "bytes": 929,
+    "sha256": "c0aab9dce1cd08e262d99c1ca846be3f3afe15bc71df0a833a39df7b785b0438"
+  },
+  "science-moon-phases": {
+    "file": "book-topic-science-moon-phases.json",
+    "bytes": 864,
+    "sha256": "8058ea4c987f3aab78e9c721ae0f4beac9cc3f75068cf68e11675c33a8b57ec6"
+  },
+  "science-energy": {
+    "file": "book-topic-science-energy.json",
+    "bytes": 755,
+    "sha256": "17fb0f428fb7903fdcc2e6b90d2ca1346d078eb12af628a4d023a281172b71bc"
+  },
+  "science-angle": {
+    "file": "book-topic-science-angle.json",
+    "bytes": 704,
+    "sha256": "fb4d1da90c8f7e26d7474859ef3b30f81b6cf347f0c24959a88a55f7fa653a1c"
+  },
+  "science-atmosphere": {
+    "file": "book-topic-science-atmosphere.json",
+    "bytes": 270,
+    "sha256": "1cbacba91dd92ea26983153c5013e68534283e7231bb39331e52f605080a18ae"
+  },
+  "science-surface-tension": {
+    "file": "book-topic-science-surface-tension.json",
+    "bytes": 494,
+    "sha256": "3f4dcecf600361237ff92dc4916639b648f23961e39fc7a1afbd2a82692b0ba7"
+  },
+  "science-capillarity": {
+    "file": "book-topic-science-capillarity.json",
+    "bytes": 510,
+    "sha256": "a39e0bc8852c3d9e406046dc3dcdf886dddb7ebd1de12dde0c556c461972727e"
+  },
+  "science-solar-system": {
+    "file": "book-topic-science-solar-system.json",
+    "bytes": 538,
+    "sha256": "92783c11f4413d61cdb2e3644ead10447074ffb92c1c1df6bcd121b6bc1f745f"
+  },
+  "science-seasons": {
+    "file": "book-topic-science-seasons.json",
+    "bytes": 494,
+    "sha256": "61e169d8fe05f25b0a4d6f61e72e2d3bbf6a1649568d97f8b743e531b17bcda3"
+  },
+  "lab-quake": {
+    "file": "book-topic-lab-quake.json",
+    "bytes": 1343,
+    "sha256": "84cbf13e75c106bc6a23eed63f3d7e0e6aa89af71c2ab6be21bd723909255ccc"
+  },
+  "lab-plates": {
+    "file": "book-topic-lab-plates.json",
+    "bytes": 1215,
+    "sha256": "c87eff6d92f1625900cecbf939724b96034933457451ae72aec2150a24aa5e5d"
+  },
+  "science-computer": {
+    "file": "book-topic-science-computer.json",
+    "bytes": 747,
+    "sha256": "114d370273122d65d366b7d576bafb3bcd8894178b562b9eac12a2f61bad4d91"
+  },
+  "science-checksum": {
+    "file": "book-topic-science-checksum.json",
+    "bytes": 524,
+    "sha256": "a5c6fe12805100976b6592f62ee811f1b853cce1fe8238de444944d2d9d4861d"
+  },
+  "science-galaxy": {
+    "file": "book-topic-science-galaxy.json",
+    "bytes": 532,
+    "sha256": "7b1756aabf67a6051c68cf5f94476c552bab81120cdf4573563c2ba638c0630f"
+  },
+  "science-comet": {
+    "file": "book-topic-science-comet.json",
+    "bytes": 285,
+    "sha256": "c0cb42ccd84bcbc07799032f0274e740c7e6b85c86d30ff2f3d93cbe8a55d625"
+  },
+  "science-exoplanet": {
+    "file": "book-topic-science-exoplanet.json",
+    "bytes": 553,
+    "sha256": "4e346d412b4d5fd68a92ec0b3ab3ee94fd5f47e338df55c4bf824e0eac1e8080"
+  },
+  "science-symmetry": {
+    "file": "book-topic-science-symmetry.json",
+    "bytes": 273,
+    "sha256": "524b574a78f5c1f5610292d024bb81e7374d3ee6eda210f94b6191d33fbde3bd"
+  },
+  "lab-depth": {
+    "file": "book-topic-lab-depth.json",
+    "bytes": 905,
+    "sha256": "aef1257fa3c5f6026f5db0fb8b1b4bb95581e892bc44fd34a25b0e166c2e41fa"
+  },
+  "lab-volcano": {
+    "file": "book-topic-lab-volcano.json",
+    "bytes": 1810,
+    "sha256": "35c30f39d9c8a672fa5942449b538cf823daf2d93934a0d5ce1de3864d06f861"
+  },
+  "lab-water": {
+    "file": "book-topic-lab-water.json",
+    "bytes": 3057,
+    "sha256": "060a838b4753865c47485f5a5405112838e5956d974caa09a5f8a9ffa1df5d59"
+  },
+  "lab-seasons": {
+    "file": "book-topic-lab-seasons.json",
+    "bytes": 2454,
+    "sha256": "6d67764af580173243fa1b58fbca4cf44ed9632319a50d40e5ee5773bd5ed131"
+  },
+  "lab-clocks": {
+    "file": "book-topic-lab-clocks.json",
+    "bytes": 712,
+    "sha256": "9ca2584e68666de2abc1666bb642d5d315f1ae52e231af14e5d3c8244d37ba26"
+  },
+  "lab-tides": {
+    "file": "book-topic-lab-tides.json",
+    "bytes": 948,
+    "sha256": "4f3fa28645c50de3a41aafbf38417800cd976a99eaf99c0a3fa937bcc9179e24"
+  },
+  "lab-moon": {
+    "file": "book-topic-lab-moon.json",
+    "bytes": 286,
+    "sha256": "1ac40aa6aa9a5827c0fba927a7d46e0c4e9fb41039c26e832fd0e76e38fe7a89"
+  },
+  "lab-solar": {
+    "file": "book-topic-lab-solar.json",
+    "bytes": 301,
+    "sha256": "106b64b60be254b1751b8cb0476f4f2e9bb69c1b813d04c95672fb702e4640b1"
+  },
+  "lab-weather": {
+    "file": "book-topic-lab-weather.json",
+    "bytes": 1829,
+    "sha256": "ec93473461a23b995fe146902b3f0c1913a0ba07ddc9a21283c11276358982df"
+  },
+  "science-foodweb": {
+    "file": "book-topic-science-foodweb.json",
+    "bytes": 312,
+    "sha256": "c1626d7d7c390050a561feb316b9062cba5ae4507763e9bf1c51119e042f831e"
+  },
+  "science-coral-reef": {
+    "file": "book-topic-science-coral-reef.json",
+    "bytes": 282,
+    "sha256": "72268f147d289413c8e6b380fad7be7f0aacbfd517cc6f4a903cac308d31ddf4"
+  },
+  "science-currents": {
+    "file": "book-topic-science-currents.json",
+    "bytes": 510,
+    "sha256": "9dee21cd25a0a63a2e744f5fab90030178de36236b98e0b25747aaf1b9b6022c"
   }
 }

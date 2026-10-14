@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Seismometer",
+  "learning": {
+    "starter": "Ein Seismometer zeichnet Bodenbewegungen über die Zeit auf. Die Aufzeichnung ist eine Messreihe, kein Foto des Erdinneren.",
+    "deeper": "Ein Instrument misst die Bewegung an seinem Standort. Für die Auswertung einer Erdbebenquelle werden Messungen und Verfahren verglichen. Eine einzelne gezeichnete Kurve ist keine sichere Ortsbestimmung oder Vorhersage eines künftigen Bebens.",
+    "observe": "Zeichne eine ausdrücklich erfundene Zeitlinie mit zuerst kleinen und dann größeren Ausschlägen. Beschrifte Zeit und gedachte Bewegung. Das Papierbild ist weder eine echte Aufzeichnung noch eine Auswertung eines realen Erdbebens.",
+    "benefit": "Du erkennst, was eine Messkurve zeigt und welche Aussagen sie allein nicht trägt.",
+    "connection": "Die Wellenanzeige im Bebenlabor ist eine schematische Animation. Eine erfundene Zeitkurve ergänzt den Messbegriff, ohne echte Seismometerdaten vorzutäuschen.",
+    "lab": "quake",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/programs/earthquake-hazards/earthquake-magnitude-energy-release-and-shaking-intensity",
+        "title": "USGS · Seismometer (Englisch)",
+        "anchor": "Actual primary search excerpt of instrument paragraph: records local groundmotion asfunctiontime. Fullpage reopening timed out; no claim fullarticle checked or real magnitude computed.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Magnitude",
+        "reason": "Bodenbewegung wird gemessen; die Quellgröße wird mit Verfahren ausgewertet. Ein einzelnes erfundenes Kurvenbild enthält noch keine echte Magnitudenbestimmung."
+      }
+    ],
+    "question": {
+      "prompt": "Was zeigt ein Seismometer unmittelbar als Messung?",
+      "answers": [
+        "Ein direktes Foto jeder Erdschicht",
+        "Bodenbewegung am Standort über die Zeit",
+        "Den sicheren Zeitpunkt des nächsten Erdbebens"
+      ],
+      "correct": 1,
+      "hint": "Unterscheide gemessene Bewegung, spätere Auswertung und Zukunftsbehauptung.",
+      "why": "Das Gerät zeichnet Standortbewegung auf. Eine Quelle zu bestimmen erfordert weitere Auswertung; ein sicherer Zukunftstermin ergibt sich daraus nicht.",
+      "wrongReasons": [
+        "Eine Bewegungskurve ist keine Fotografie des Erdinneren.",
+        "",
+        "Die Aufzeichnung einer Bewegung ist keine sichere Vorhersage eines kommenden Bebens."
+      ]
+    }
+  }
+}

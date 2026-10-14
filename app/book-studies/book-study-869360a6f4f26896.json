@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Bit",
+  "learning": {
+    "starter": "Eine Stelle kann hier zwei Zeichen annehmen. Erst eine Regel erklärt, was wir mit den Zeichen meinen.",
+    "deeper": "0 und1 sind keine zwingenden Helligkeits- oder Sprachangaben. Mehrere Bits können gemeinsam Daten darstellen. Ein einzelnes gezeichnetes Bit ist noch kein Byte und nicht automatisch ein ganzer Buchstabe.",
+    "observe": "Zeichne drei Kästchen und fülle jedes mit0 oder1. Erfinde keine persönlichen Geheimnisse. Das Papier zeigt nur eine Zeichenfolge; es misst weder einen Strom noch den Speicherzustand eines echten Computers.",
+    "benefit": "Du unterscheidest eine einzelne binäre Stelle von der Bedeutung einer ganzen Zeichenfolge.",
+    "connection": "Die Computerkarte erklärt Datenverarbeitung. Ein Bit benennt eine Stelle; viele Stellen und vereinbarte Regeln erlauben unterschiedliche Darstellungen.",
+    "topic": "science-computer",
+    "sources": [
+      {
+        "url": "https://csrc.nist.gov/glossary/term/bit",
+        "title": "NIST · Bit (Englisch)",
+        "anchor": "Actual selected Definitions122–147, binary digit0or1, NIST IR8459; no every-bit-as-character assumption.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Byte",
+        "reason": "Bit beschreibt einen binären Wert; ein Byte fasst acht Bits zusammen. Anzahl der Einheiten und deren Größenebene sind verschieden."
+      },
+      {
+        "term": "Algorithmus",
+        "reason": "Ein Algorithmus beschreibt Schritte. Binäre Werte können Daten dieser Schritte darstellen, legen aber nicht allein den Ablauf fest."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Werte darf ein Bit in dieser Erklärung annehmen?",
+      "answers": [
+        "0 oder1",
+        "Beliebig viele Werte gleichzeitig",
+        "Immer einen vollständigen Buchstaben"
+      ],
+      "correct": 0,
+      "hint": "Binär bezeichnet hier die Auswahl zwischen zwei Werten.",
+      "why": "Ein Bit hat einen der beiden binären Werte. Eine Bedeutung wie ein Buchstabe benötigt zusätzlich eine passende Darstellung und Regel.",
+      "wrongReasons": [
+        "",
+        "Beliebig viele Werte wären nicht die hier beschriebene einzelne binäre Stelle.",
+        "Ein Bit ist nicht automatisch ein ganzer Buchstabe. Darstellung und Kodierung brauchen eine Regel."
+      ]
+    }
+  }
+}

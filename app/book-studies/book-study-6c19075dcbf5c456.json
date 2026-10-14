@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Byte",
+  "learning": {
+    "starter": "Acht0-oder1-Stellen bilden ein Byte. Welche Bedeutung die Gruppe hat, muss eine vereinbarte Regel erklären.",
+    "deeper": "Die Bits können als Zahl, Zeichenbestandteil oder andere Daten interpretiert werden. Die Einheit der Datenmenge und der Inhalt sind verschiedene Angaben. Eine Papiergruppe misst noch keine wirkliche Datei.",
+    "observe": "Zeichne genau acht Kästchen und fülle sie mit0 oder1. Zähle die Stellen. Schreibe keine echten Passwörter hinein: Das erfundene Beispiel erklärt die Gruppengröße, nicht eine reale Datei oder Kodierung.",
+    "benefit": "Du kannst Bits und ihre Achtergruppe auseinanderhalten, ohne jedes Byte für einen Buchstaben zu halten.",
+    "connection": "Die Computerkarte trennt Daten von ihrer Verarbeitung. Ein Byte ist eine Größenangabe der Bitgruppe, keine Aussage, was diese Gruppe in einem Programm bedeutet.",
+    "topic": "science-computer",
+    "sources": [
+      {
+        "url": "https://csrc.nist.gov/glossary/term/Byte",
+        "title": "NIST · Byte (Englisch)",
+        "anchor": "Actual selected Definitions115–137, eight-bit sequence/group, NIST IR8459; no universal character encoding or kilobyte convention.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Bit",
+        "reason": "Bit beschreibt einen binären Wert; ein Byte fasst acht Bits zusammen. Anzahl der Einheiten und deren Größenebene sind verschieden."
+      }
+    ],
+    "question": {
+      "prompt": "Wie viele Bitstellen hat ein Byte in diesem Beispiel?",
+      "answers": [
+        "Eine",
+        "Acht",
+        "Eine unbestimmte Zahl von Buchstaben"
+      ],
+      "correct": 1,
+      "hint": "Zähle die binären Stellen, nicht die Bedeutung, die du ihnen geben möchtest.",
+      "why": "Die definierte Gruppe enthält acht Bits. Eine Bedeutung wie ein Buchstabe ist eine zusätzliche Kodierungsfrage.",
+      "wrongReasons": [
+        "Ein einzelnes Bit ist nicht die hier definierte Achtergruppe.",
+        "",
+        "Die Gruppengröße wird in Bits angegeben. Eine Buchstabenanzahl ersetzt diese Definition nicht."
+      ]
+    }
+  }
+}

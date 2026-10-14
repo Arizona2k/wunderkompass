@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Adhäsion",
+  "learning": {
+    "starter": "Wasser und ein anderes Material können aufeinander wirken. Ein Tropfen verhält sich deshalb nicht auf jeder Fläche gleich.",
+    "deeper": "Benetzung hängt von beiden Materialien und ihrer Oberfläche ab. Wasser muss nicht auf jedem Stoff gleich stark haften. Eine gezeichnete Verbindung zur Wand misst keine genaue Anziehung oder Steighöhe.",
+    "observe": "Zeichne Wassersymbole neben einer gedachten Gefäßwand. Markiere Wasser-zu-Wand und Wasser-zu-Wasser verschieden. Die eigene Skizze stellt keine wirkliche Oberfläche dar und misst keine Kräfte.",
+    "benefit": "Du kannst Wasser-zu-Material von Wasser-zu-Wasser unterscheiden, ohne überall gleiches Haften anzunehmen.",
+    "connection": "Kapillarwirkung verbindet Benetzung, Oberflächenspannung und Gewicht. Wasser-zu-Wand ist ein Teil dieser Erklärung, nicht automatisch ein unbegrenzter Aufzug.",
+    "topic": "science-capillarity",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/capillary-action-and-water",
+        "title": "USGS · Kapillarwirkung",
+        "anchor": "Selected lines19–23: wetting, adhesion/cohesion, narrow spaces and limited rise. Excluded entire-tree ascent explained only by capillarity and borrowed figure.",
+        "updatedOn": "2026-08-24",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Kohäsion",
+        "reason": "Teilchen desselben Stoffes und die Wechselwirkung verschiedener Materialien sind verschiedene Paarungen. Zeichne Wasser-zu-Wasser und Wasser-zu-Wand getrennt."
+      },
+      {
+        "term": "Kapillarwirkung",
+        "reason": "Benetzung eines passenden Materials kann zur Flüssigkeitsbewegung in engen Räumen beitragen. Sie allein erzeugt keinen unbegrenzten Wasseraufzug."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Verbindung veranschaulicht hier Adhäsion?",
+      "answers": [
+        "Nur Wasser-zu-Wasser",
+        "Eine geografische Grenze",
+        "Wasser-zu-einem anderen Wandmaterial"
+      ],
+      "correct": 2,
+      "hint": "Suche nach der Verbindung zweier verschiedener Materialien.",
+      "why": "Wasser und die andersartige Wand bilden die hier gemeinte Materialpaarung. Reine Wasser-zu-Wasser-Linien stehen für Kohäsion.",
+      "wrongReasons": [
+        "Wasser-zu-Wasser gehört zur Kohäsion, nicht zu der hier gemeinten Materialpaarung.",
+        "Eine geografische Grenze beschreibt keine Teilchenwechselwirkung zwischen Wasser und Wand.",
+        ""
+      ]
+    }
+  }
+}

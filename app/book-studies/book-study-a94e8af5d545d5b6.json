@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Lichtjahr",
+  "learning": {
+    "starter": "Der Name klingt nach Zeit, meint hier aber eine Strecke. Licht braucht für weit entfernte Objekte eine bestimmte Laufzeit.",
+    "deeper": "Die Einheitenvereinbarung legt fest, welches Jahr für die Strecke gemeint ist. Eine Lichtlaufzeit und eine gegenwärtige Entfernung im sich ausdehnenden Universum dürfen nicht beliebig gleichgesetzt werden. Unser Beispiel erklärt nur die Einheit.",
+    "observe": "Ordne die drei PapierbegriffeMeter,Sekunde undLichtjahr den Gruppen Länge undZeit zu. Schreibe keine echte Sternentfernung dazu. Das Sortieren ist eine Begriffsaufgabe, keine astronomische Messung oder kosmologische Rechnung.",
+    "benefit": "Du vermeidest die Verwechslung einer astronomischen Längeneinheit mit einer Zeitdauer.",
+    "connection": "Galaxienentfernungen brauchen passende große Längeneinheiten. Eine Lichtjahresangabe und eine Jahresdauer sind verschieden; bei kosmologischen Entfernungen sind weitere Erklärungen nötig.",
+    "topic": "science-galaxy",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/light-year/en/",
+        "title": "NASA · Lichtjahr (Englisch)",
+        "anchor": "Actual full15–23: distanceunit/light travel delay. Excludeold GN-z11 farthestrecord andidentifying cosmiclookbacktime withpresentdistance; article-date2020 notsitefooter2026.",
+        "updatedOn": "2020-08-27",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Galaxie",
+        "reason": "Galaxien sind räumliche Systeme; ein Lichtjahr ist eine Entfernungsangabe. Ein Jahressymbol ist keine Messung ihrer Größe oder ihres Alters."
+      }
+    ],
+    "question": {
+      "prompt": "In welche Gruppe gehört Lichtjahr in dieser Aufgabe?",
+      "answers": [
+        "Zeitdauer allein wegen des Namens",
+        "Eine Zahl ohne irgendeine Einheit",
+        "Länge beziehungsweise Entfernung"
+      ],
+      "correct": 2,
+      "hint": "Lies die Definition der Einheit statt nur ihren Wortteil Jahr.",
+      "why": "Das Lichtjahr benennt eine Strecke. Die Zeitvereinbarung gehört zur Festlegung dieser Längeneinheit, macht sie aber nicht zur Einheit einer gewöhnlichen Dauer.",
+      "wrongReasons": [
+        "Der Wortteil allein ist keine Einheitenbestimmung. Die Definition nennt eine Strecke.",
+        "Lichtjahr ist selbst eine definierte Einheit und keine bloße einheitenlose Zahl.",
+        ""
+      ]
+    }
+  }
+}

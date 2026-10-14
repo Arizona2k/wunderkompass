@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Brechung",
+  "learning": {
+    "starter": "Ein Übergang von Luft zu Wasser kann den Lichtweg verändern. Ein Gegenstand kann dadurch anders aussehen, als er liegt.",
+    "deeper": "Beim schrägen Übergang wird ein Lichtstrahl in einem einfachen Modell abgelenkt. Bei senkrechtem Eintritt ändert sich die Richtung nicht. Eine Skizze erklärt den Weg, misst aber keine genaue Stoffeigenschaft.",
+    "observe": "Zeichne eine waagerechte Grenze zwischen gedachter Luft und Wasser. Vergleiche einen schrägen und einen senkrechten Lichtweg. Beide sind erfundene Skizzen: nicht aus dem Bild auf tatsächliche Winkel oder Tiefen schließen.",
+    "benefit": "Du erkennst den Übergang zwischen Stoffen und vermeidest die Behauptung, jeder Lichtweg müsse knicken.",
+    "connection": "Die Winkelkarte hilft beim Lesen einer Richtung. Unterscheide eine Winkelzeichnung von einer gemessenen Lichtbrechung.",
+    "topic": "science-angle",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/ems/03_behaviors/",
+        "title": "NASA · Licht und Materie",
+        "anchor": "Reflection, Absorption, Scatter, Refraction selected scientific paragraphs; no source illustrations, city-temperature numbers or universal absorption-to-heat claims.",
+        "updatedOn": "2023-08-03",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Reflexion",
+        "reason": "Ein Übergang in ein anderes Material und zurückgeworfenes Licht sind verschiedene Wege. Eine eigene Strahlskizze erklärt Richtungen, nicht alle Lichteigenschaften."
+      }
+    ],
+    "question": {
+      "prompt": "Was braucht die Erklärung einer Lichtbrechung hier?",
+      "answers": [
+        "Nur den Namen einer Farbe",
+        "Die Behauptung, Licht gehe überall gleich schnell",
+        "Einen Übergang zwischen Stoffen und seine Richtung"
+      ],
+      "correct": 2,
+      "hint": "Markiere erst die Stoffgrenze und die Richtung, in der Licht auf sie trifft.",
+      "why": "Stoffübergang und Einfallsrichtung gehören zur Erklärung. Ein senkrechter Übergang hat keinen seitlichen Knick.",
+      "wrongReasons": [
+        "Eine Farbe allein beschreibt weder den Stoffübergang noch die Einfallsrichtung.",
+        "Unterschiedliche Ausbreitungsgeschwindigkeit gehört zur Erklärung. Überall gleiche Geschwindigkeit erklärt diesen Übergang nicht.",
+        ""
+      ]
+    }
+  }
+}

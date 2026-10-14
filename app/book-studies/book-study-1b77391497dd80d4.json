@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Hauptstadt",
+  "learning": {
+    "starter": "Eine Hauptstadt hat wichtige Aufgaben für ein Land. Sie muss nicht die größte oder bekannteste Stadt sein.",
+    "deeper": "Canberra wurde als Regierungssitz gewählt, obwohl Sydney und Melbourne wichtige Städte waren. Regierungsaufgaben, Einwohnerzahl und Bekanntheit sind verschiedene Angaben. Auch die Regeln anderer Länder dürfen nicht aus diesem einen Beispiel abgeleitet werden.",
+    "observe": "Zeichne drei erfundene Stadtsymbole. Markiere die größte Form getrennt vom gedachten Regierungssitz. Die Fantasiekarte ist keine echte Wahl, Einwohnerzählung oder Aussage über aktuelle Landesregeln.",
+    "benefit": "Du unterscheidest die staatliche Funktion einer Stadt von Größe und Bekanntheit.",
+    "connection": "Stadtuhren zeigen Zeiten, nicht die politische Funktion einer Stadt. Der Funktionsvergleich ergänzt diese zweite Frage, ohne Uhrzeit und Hauptstadt gleichzusetzen.",
+    "lab": "clocks",
+    "sources": [
+      {
+        "url": "https://www.nca.gov.au/education/canberras-history/canberra-seat-government",
+        "title": "National Capital Authority · Hauptstadt",
+        "anchor": "Actual14/16/24–28: Canberra chosen seat ofgovernment, not Sydney/Melbourne, parliament move1927. Exclude obsolete300000population, allstates singlecapital or territorialstatus shortcut.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was beweist das größte gezeichnete Stadtsymbol nicht automatisch?",
+      "answers": [
+        "Dass es als größte Form gezeichnet wurde",
+        "Dass es deshalb der Regierungssitz sein muss",
+        "Dass andere Symbole kleiner sind"
+      ],
+      "correct": 1,
+      "hint": "Die Aufgabe im Staat wurde separat beschriftet, nicht aus der Formgröße bestimmt.",
+      "why": "Die Regierungssitz-Funktion ergibt sich nicht automatisch aus Größe. Die Fantasiekarte hält beide Angaben getrennt.",
+      "wrongReasons": [
+        "Die sichtbare Symbolgröße darf beschrieben werden.",
+        "",
+        "Kleinere Symbole sind als Zeichnungsformen vergleichbar; das bestimmt keine staatliche Aufgabe."
+      ]
+    }
+  }
+}

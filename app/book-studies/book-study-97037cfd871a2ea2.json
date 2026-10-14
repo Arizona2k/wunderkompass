@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Magnitude",
+  "learning": {
+    "starter": "Magnitude beschreibt die Größe eines Erdbebens an seiner Quelle. Wie stark es an einem bestimmten Ort wirkt, ist eine andere Angabe.",
+    "deeper": "Bei derselben Erdbebenquelle können verschiedene Orte unterschiedlich stark schütteln. Auswertungsverfahren können leicht unterschiedliche Magnitudenschätzungen liefern. Magnitude allein ist keine sichere Aussage über Schäden eines einzelnen Hauses.",
+    "observe": "Zeichne eine gedachte Quelle und zwei unterschiedliche Standorte. Notiere dieselbe gedachte Quellgröße, aber keine erfundenen realen Schadenswerte. Das Bild erklärt eine Unterscheidung und ersetzt keine Gefahrenkarte.",
+    "benefit": "Du trennst die Größe eines Erdbebens von seiner örtlichen Wirkung.",
+    "connection": "Das Bebenlabor variiert die Tiefe einer erfundenen Quelle. Seine Anzeige ist kein echter Magnitudenwert und keine ortsgenaue Schadensberechnung.",
+    "lab": "quake",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/faqs/what-difference-between-earthquake-magnitude-and-earthquake-intensity-what-modified-mercalli",
+        "title": "USGS · Magnitude (Englisch)",
+        "anchor": "Actual primary opening about earthquake size versus local shaking; source excerpt accessible, standalone fullpage not yet reread. Exclude source erroneous MMImaximumX/unqualifiedaccuracy comparison, historic events.",
+        "updatedOn": "2024-09-10",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Seismometer",
+        "reason": "Bodenbewegung wird gemessen; die Quellgröße wird mit Verfahren ausgewertet. Ein einzelnes erfundenes Kurvenbild enthält noch keine echte Magnitudenbestimmung."
+      },
+      {
+        "term": "Epizentrum",
+        "reason": "Quellgröße und Oberflächenlage sind unterschiedliche Angaben. Ein Punkt auf einer Karte ist kein ortsgenauer Schadenswert."
+      }
+    ],
+    "question": {
+      "prompt": "Zwei Orte erleben dieselbe Quelle unterschiedlich. Was folgt daraus?",
+      "answers": [
+        "Örtliche Wirkung und Quellgröße sind verschiedene Angaben",
+        "Jeder Ort besitzt deshalb ein eigenes neues Erdbeben",
+        "Magnitude allein beweist den Schaden jedes Hauses"
+      ],
+      "correct": 0,
+      "hint": "Eine Quelle kann auf unterschiedlichen Wegen zu verschiedenen Orten wirken.",
+      "why": "Magnitude ordnet die Quellgröße ein; örtliche Intensität beschreibt das Schütteln am Standort. Unterschiede bedeuten nicht automatisch verschiedene Quellen.",
+      "wrongReasons": [
+        "",
+        "Unterschiedliches Schütteln am Standort beweist kein zusätzliches Erdbeben.",
+        "Auch Standort, Untergrund und Bauweise begrenzen Aussagen zu einem konkreten Schaden."
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Symmetrie",
+  "learning": {
+    "starter": "Eine passende Spiegelachse teilt eine Form so, dass die beiden Seiten beim Spiegeln zusammenpassen.",
+    "deeper": "Ein Rechteck mit verschieden langen Seiten hat zwei Spiegelachsen durch seine Seitenmitten. Seine Diagonalen sind keine Spiegelachsen. Eine halbe Drehung kann ebenfalls passen, aber Drehsymmetrie und Spiegelsymmetrie sind verschiedene Prüfungen.",
+    "observe": "Zeichne ein Rechteck mit einer deutlich langen und einer kurzen Seite. Markiere die beiden Linien durch gegenüberliegende Seitenmitten. Vergleiche spiegelnde Punktpaare; die eigene Zeichnung kann ungenau sein und ersetzt keinen geometrischen Beweis.",
+    "benefit": "Du prüfst eine behauptete Symmetrie anhand einer bestimmten Veränderung.",
+    "connection": "Die Symmetriekarte prüft Spiegelungen. Das eigene Rechteck trennt passende Mittelachsen von einer nur ähnlich aussehenden diagonalen Linie.",
+    "topic": "science-symmetry",
+    "sources": [
+      {
+        "url": "https://nrich.maths.org/problems/symmetry-challenge",
+        "title": "NRICH · University of Cambridge · Symmetrie (Englisch)",
+        "anchor": "Actual teacher214–227: reflection, spatial reasoning, systematic tests. Own non-square rectangle example; no protected3x3 puzzle, worksheet, diagram, solutioncount or wording copied.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Winkel",
+        "reason": "Winkel vergleichen Richtungen. Eine behauptete Symmetrie muss zusätzlich prüfen, ob die gesamte Form nach einer bestimmten Veränderung passt."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Linie ist beim Rechteck mit verschieden langen Seiten keine Spiegelachse?",
+      "answers": [
+        "Die Linie durch die Mitten der kurzen Seiten",
+        "Die Linie durch die Mitten der langen Seiten",
+        "Eine Diagonale zwischen gegenüberliegenden Ecken"
+      ],
+      "correct": 2,
+      "hint": "Beim Spiegeln müssen nicht nur Eckpunkte, sondern auch die zugehörigen Seiten passen.",
+      "why": "Eine Diagonalspiegelung würde lange und kurze Seiten vertauschen. Beim nicht quadratischen Rechteck passen sie deshalb nicht aufeinander.",
+      "wrongReasons": [
+        "Diese Mittellinie spiegelt die beiden passenden Rechteckhälften aufeinander.",
+        "Auch diese Mittellinie erhält die Form beim Spiegeln.",
+        ""
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Exoplanet",
+  "learning": {
+    "starter": "Es gibt auch Planeten außerhalb unseres eigenen Sonnensystems. Forschende suchen nach überprüfbaren Hinweisen auf sie.",
+    "deeper": "Bei geeigneter Blickrichtung kann ein Planet vor seinem Stern vorbeiziehen und dessen gemessenes Licht etwas verringern. Nicht jede Bahn ist dafür passend ausgerichtet. Ein einzelner Helligkeitsabfall braucht weitere Prüfung.",
+    "observe": "Zeichne eine gedachte Sternscheibe und eine kleine davorliegende Planetenscheibe. Beschrifte die Blickrichtung. Das Papierbeispiel ist keine echte Entdeckung und beweist weder Wasser noch Leben auf einem Planeten.",
+    "benefit": "Du unterscheidest einen Planetenhinweis von einer unbelegten Aussage über Leben oder Bewohnbarkeit.",
+    "connection": "Die Exoplanetenkarte zeigt eine begrenzte Helligkeitsmessidee. Prüfe die Blickrichtung und die Aussagegrenze, statt jeden Kurvenknick sofort für einen Lebensnachweis zu halten.",
+    "topic": "science-exoplanet",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/transits/en/",
+        "title": "NASA · Exoplanet (Englisch)",
+        "anchor": "Actual full scientific35–45: planets outsideSolarSystem andline-of-sight transit detection. Excludehabitability/life/discoverycounts andunqualifiedall-orbits-detectable.",
+        "updatedOn": "2024-03-29",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Transit",
+        "reason": "Ein Transit kann bei geeigneter Blickrichtung einen Hinweis auf einen Planeten geben. Nicht jeder Exoplanet wird mit genau dieser Methode gefunden."
+      }
+    ],
+    "question": {
+      "prompt": "Was zeigt das gedachte Scheibenbeispiel allein?",
+      "answers": [
+        "Nur eine mögliche Anordnung, keinen Lebensnachweis",
+        "Dass auf jedem Exoplaneten Menschen wohnen",
+        "Eine reale neue Planetenentdeckung"
+      ],
+      "correct": 0,
+      "hint": "Die Skizze enthält eine Anordnung, aber keine tatsächlichen Messreihen eines Sterns.",
+      "why": "Die Scheiben erklären eine mögliche Beobachtungsgeometrie. Sie sind kein Entdeckungsbericht und kein Nachweis von Leben.",
+      "wrongReasons": [
+        "",
+        "Der Begriff bezeichnet einen Planeten außerhalb unseres Systems, nicht eine bestätigte menschliche Bevölkerung.",
+        "Eine erfundene Papierzeichnung ist keine wirkliche Messung oder bestätigte Entdeckung."
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Südpol",
+  "learning": {
+    "starter": "Der geografische Südpol ist das südliche Ende der Erdachse. Er liegt auf Antarktika.",
+    "deeper": "Nord- und Südpol sind keine zwei gleichartigen Landschaften: Im Süden liegt ein Kontinent, im Norden ein Ozean. Eine Achszeichnung erklärt die Pole, zeigt aber keine vollständigen Eisbedingungen oder eine sichere Route dorthin.",
+    "observe": "Markiere auf Papier beide Enden einer gedachten Erdachse. Ergänze südlich Land und nördlich Ozean als getrennte Landschaftshinweise. Die Skizze ist keine genaue Höhen-, Wetter- oder Expeditionskarte.",
+    "benefit": "Du vergleichst gegenüberliegende geografische Pole, ohne ihre Landschaften gleichzusetzen.",
+    "connection": "Die entgegengesetzten Lichtbedingungen im Jahreszeitenlabor sind nicht dasselbe wie die Landschaft der Pole. Der Vergleich trennt die zwei Betrachtungen.",
+    "lab": "seasons",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/latitude.html",
+        "title": "NOAA · Südpol (Englisch)",
+        "anchor": "Previously actually fulllatitude: southernpolar90 andgeographical reference. Own axiscomparison, no iceconditions/currentclimate or magnetic coincidence asserted.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Welcher Landschaftshinweis passt zum geografischen Südpol?",
+      "answers": [
+        "Er liegt auf demselben Ozean wie der Nordpol",
+        "Er liegt auf dem Kontinent Antarktika",
+        "Die Achszeichnung beweist ein sicheres Reiseziel"
+      ],
+      "correct": 1,
+      "hint": "Gegenüberliegende Achsenden müssen nicht denselben Untergrund besitzen.",
+      "why": "Der Südpol liegt auf Antarktika. Die gemeinsame Achse macht die beiden Landschaften nicht gleich und ist keine Sicherheitskarte.",
+      "wrongReasons": [
+        "Der Nordpol liegt über dem Arktischen Ozean; der Südpol besitzt einen anderen Untergrund.",
+        "",
+        "Ein Achsenschema enthält keine aktuellen Sicherheits- oder Wetterdaten."
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Strahlung",
+  "learning": {
+    "starter": "Sichtbares Licht ist eine Art elektromagnetischer Strahlung. Radiowellen können wir nicht mit den Augen sehen.",
+    "deeper": "Elektromagnetische Strahlung kann sich auch im Vakuum ausbreiten. Schall braucht dagegen ein Medium. Diese Erklärung behandelt elektromagnetische Strahlung und macht keine pauschalen Gesundheits- oder Sicherheitsurteile.",
+    "observe": "Sortiere die Begriffe sichtbares Licht, Radiowelle und Schall auf Papier. Kennzeichne, welche zwei zur elektromagnetischen Gruppe gehören. Das Sortieren ersetzt keine Messung von Stärke, Frequenz oder einer Gefahr.",
+    "benefit": "Du verwechselst Unsichtbarkeit nicht mit fehlender Strahlung und trennst Licht von Schall.",
+    "connection": "Satelliten können Informationen mit elektromagnetischen Signalen austauschen. Dies ist etwas anderes als Schallübertragung durch leeren Weltraum.",
+    "topic": "invention-satellite",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/ems/02_anatomy/",
+        "title": "NASA · Elektromagnetische Wellen",
+        "anchor": "Selected Energy / Electromagnetic waves / Waves or particles / Describing electromagnetic energy; rest mass and vacuum qualifiers retained.",
+        "updatedOn": "2023-08-03",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Spektrum",
+        "reason": "Ein Spektrum ordnet elektromagnetische Strahlung nach einer Größe wie Wellenlänge. Eine bunte Skizze zeigt nur ausgewählte Bereiche und keine vollständige Messung."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Auswahl gehört hier zur elektromagnetischen Strahlung?",
+      "answers": [
+        "Sichtbares Licht und Schall",
+        "Nur Dinge, die man sehen kann",
+        "Sichtbares Licht und Radiowellen"
+      ],
+      "correct": 2,
+      "hint": "Prüfe nicht nur die Sichtbarkeit: Schall und Licht übertragen Energie auf unterschiedliche Weise.",
+      "why": "Sichtbares Licht und Radiowellen sind elektromagnetisch. Schall ist eine mechanische Welle und braucht ein Medium.",
+      "wrongReasons": [
+        "Schall gehört nicht zur elektromagnetischen Gruppe. Seine Ausbreitung benötigt Materie.",
+        "Radiowellen sind unsichtbar und dennoch elektromagnetische Strahlung. Sichtbarkeit ist kein Gruppenkriterium.",
+        ""
+      ]
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import {LAB_SEARCH} from '../app/research-catalog.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -32,14 +33,14 @@ test('damaged, partial, renamed or duplicate journey payload never replaces a va
 });
 
 test('well-formed but partial, renamed or reordered books are withheld against generated identity indexes',()=>{
- const expected={words:wordIndex,why:whyIndex,learning:learningIndex};assert.equal(validateBookData(book,expected),book);assert.deepEqual(whyIndex,book.why.map(q=>q[0]));
- for(const mutate of [b=>b.words.shift(),b=>b.why.pop(),b=>b.words.reverse(),b=>b.why.reverse(),b=>b.words[0][0]='Unbekannter Begriff',b=>b.why[0][0]='Unbekannte Frage']){const broken=structuredClone(book);mutate(broken);assert.equal(validateBookData(broken),broken,'shape alone is insufficient');assert.throws(()=>validateBookData(broken,expected),/Identitäten/);}
+ const core={schemaVersion:1,words:book.words,why:book.why},expected={words:wordIndex,why:whyIndex,learning:[]};assert.equal(validateBookData(core,expected),core);assert.deepEqual(whyIndex,book.why.map(q=>q[0]));
+ for(const mutate of [b=>b.words.shift(),b=>b.why.pop(),b=>b.words.reverse(),b=>b.why.reverse(),b=>b.words[0][0]='Unbekannter Begriff',b=>b.why[0][0]='Unbekannte Frage']){const broken=structuredClone(core);mutate(broken);assert.equal(validateBookData(broken),broken,'shape alone is insufficient');assert.throws(()=>validateBookData(broken,expected),/Identitäten/);}
 });
 test('distinct measurement and biological explanations have checked references, voluntary learning, plausible feedback and real links; damaged enrichment fails closed',()=>{
  const expected={words:wordIndex,why:whyIndex,learning:learningIndex,topics:worldIndex.map(t=>t.id)};
- assert.equal(book.words.length,132);assert.equal(learningIndex.length,48);assert.equal(new Set(Object.values(book.learning).filter(l=>l.quantity).map(l=>l.quantity)).size,7);
- const review=JSON.parse(fs.readFileSync('content/book-editorial-review.json','utf8'));assert.equal(review.independentReview,false);assert.equal(review.entries.length,48);
- for(const [name,l] of Object.entries(book.learning)){const r=review.entries.find(x=>x.id==='words:'+name);assert.equal(fingerprint([book.words.find(w=>w[0]===name),l]),r.contentHash);assert.ok(!r.acceptedForDoubling);assert.notEqual(l.starter,l.deeper);assert.ok(l.benefit.length>50);assert.ok(l.observe.length>70);assert.equal(l.question.wrongReasons[l.question.correct],'');assert.equal(new Set(l.question.wrongReasons.filter(Boolean)).size,2);assert.ok(l.connection.length>50);assert.ok(expected.topics.includes(l.topic));}
+ assert.equal(book.words.length,180);assert.equal(learningIndex.length,180);assert.equal(new Set(Object.values(book.learning).filter(l=>l.quantity).map(l=>l.quantity)).size,7);
+ const review=JSON.parse(fs.readFileSync('content/book-editorial-review.json','utf8'));assert.equal(review.independentReview,false);assert.equal(review.entries.length,180);
+ for(const [name,l] of Object.entries(book.learning)){const r=review.entries.find(x=>x.id==='words:'+name);assert.equal(fingerprint([book.words.find(w=>w[0]===name),l]),r.contentHash);assert.ok(!r.acceptedForDoubling);assert.notEqual(l.starter,l.deeper);assert.ok(l.benefit.length>50);assert.ok(l.observe.length>70);assert.equal(l.question.wrongReasons[l.question.correct],'');assert.equal(new Set(l.question.wrongReasons.filter(Boolean)).size,2);assert.ok(l.connection.length>50);assert.ok(l.topic?expected.topics.includes(l.topic):LAB_SEARCH.some(item=>item.id===l.lab));}
  for(const mutate of [b=>delete b.learning,b=>delete b.learning.Meter,b=>b.learning.Meter.topic='unknown',b=>b.learning.Kelvin.sources=[],b=>b.learning.Sekunde.sources[0].url='http://example.com',b=>b.learning.Mol.sources[0].checkedOn='never',b=>b.learning.Kelvin.sources[0].checkedOn='2026-02-30',b=>b.learning.Ampere.question.correct=3,b=>b.learning.Candela.question.wrongReasons[0]='',b=>b.learning.Meter.model='unknown',b=>b.learning.Mol.illustration='unknown',b=>b.learning.Meter.starter='<script>']){const broken=structuredClone(book);mutate(broken);assert.throws(()=>validateBookData(broken,expected));}
 });
 test('measurement models keep physical examples consistent across units, shifted starts and different temperature zero points',()=>{

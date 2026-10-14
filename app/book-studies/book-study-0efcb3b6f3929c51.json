@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Kondensation",
+  "learning": {
+    "starter": "Gasförmiges Wasser kann zu flüssigen Tröpfchen werden. Eine kühle Fläche kann solche Tröpfchen sichtbar machen.",
+    "deeper": "Die Tröpfchen außen an einem kalten Gefäß können aus Wasser in der umgebenden Luft entstehen. Sie müssen nicht durch eine intakte Gefäßwand gewandert sein. Die genaue Bildung hängt von den Bedingungen der Luft und Oberfläche ab.",
+    "observe": "Vergleiche auf Papier ein kaltes und ein weniger kaltes geschlossenes Gefäß. Markiere mögliche Tröpfchen außen und Wasser innen getrennt. Das erfundene Bild ist keine echte Feuchtemessung und belegt keinen undichten Behälter.",
+    "benefit": "Du erklärst sichtbare Tröpfchen und trennst Wasser aus der Luft von einem vermeintlichen Wanddurchgang.",
+    "connection": "Kondensation ist ein Zustandswechsel im Wasserkreislauf. Der praktische Vergleich am kalten Gefäß verbindet das große Schema mit einer begrenzten Beobachtung.",
+    "topic": "science-water-cycle",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/water-cycle",
+        "title": "USGS · Wasserkreislauf",
+        "anchor": "Selected scientific storage/flux/state body: evaporation, condensation, atmospheric water, precipitation, groundwater and infiltration. Own fictitious observations, no diagrams or current percentage records copied.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Verdunstung",
+        "reason": "Flüssig-zu-gasförmig und gasförmig-zu-flüssig sind unterschiedliche Zustandswechsel. Wasser wird dabei nicht vernichtet oder aus neuen Atomen erzeugt."
+      },
+      {
+        "term": "Wasserdampf",
+        "reason": "Gasförmiges Wasser ist unsichtbar; kondensierte Tröpfchen können sichtbar sein. Alltagssprache und fachliche Zustandsbeschreibung müssen unterschieden werden."
+      }
+    ],
+    "question": {
+      "prompt": "Woher können Tröpfchen außen an einem kalten, intakten Gefäß kommen?",
+      "answers": [
+        "Aus gasförmigem Wasser der umgebenden Luft",
+        "Nur durch ein Loch in der Gefäßwand",
+        "Aus neu erzeugten Wasseratomen"
+      ],
+      "correct": 0,
+      "hint": "Die Luft um das Gefäß enthält ebenfalls Wasser in gasförmiger Form.",
+      "why": "Unter passenden Bedingungen kann Wasser aus der Luft kondensieren. Eine intakte Wand muss dafür nicht durchlässig werden.",
+      "wrongReasons": [
+        "",
+        "Ein Loch ist keine zwingende Erklärung für Kondensation außen. Prüfe die Umgebungsluft.",
+        "Eine Zustandsänderung erzeugt keine neuen Atome. Sie verändert die Form des vorhandenen Wassers."
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Luftdruck",
+  "learning": {
+    "starter": "Luft übt Druck auf Flächen aus. Die vielen bewegten Luftteilchen tragen dazu bei.",
+    "deeper": "Luftdruck wirkt nicht nur nach unten. Messwerte können mit Höhe und Wetterlage variieren; für Vergleiche muss der Bezug klar sein. Ein einzelner hoher oder niedriger Wert liefert keine sichere vollständige Wettervorhersage.",
+    "observe": "Markiere in einem gedachten Behälter Pfeile zu Boden, Seiten und Deckel. Beschrifte die Richtungen. Keine geschlossenen Behälter erhitzen oder unter Druck setzen; die Zeichnung enthält keine gemessenen Kräfte.",
+    "benefit": "Du erkennst mehrere Druckrichtungen und prüfst den Vergleichsbezug eines Messwerts.",
+    "connection": "Der Druckbegriff ergänzt das Wetterlabor. Seine begrenzten Regler sind weder ein echter Drucksensor noch eine sichere Prognose aus einem Einzelwert.",
+    "lab": "weather",
+    "sources": [
+      {
+        "url": "https://www.noaa.gov/jetstream/atmosphere/air-pressure",
+        "title": "NOAA · Luftdruck (Englisch)",
+        "anchor": "Actual55–68/75: particleforces, pressure multidirectional, altitudevariation. Exclude universalheat invariably raises pressure regardlessvolume, containerexperiments and pressure-as-simpleweight-only claim.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Welche Druckrichtung ist im Teilchenmodell möglich?",
+      "answers": [
+        "Nur senkrecht nach unten",
+        "Auch zu einer Seitenfläche",
+        "Keine Richtung, weil Luft unsichtbar ist"
+      ],
+      "correct": 1,
+      "hint": "Die Luftteilchen im Gedankenbild bewegen sich in verschiedene Richtungen.",
+      "why": "Auch eine Seitenfläche kann Kräfte durch Teilchenstöße erfahren. Unsichtbarkeit bedeutet nicht, dass Luft keinen Druck ausübt.",
+      "wrongReasons": [
+        "Druck auf Flächen ist nicht auf eine einzige Richtung begrenzt.",
+        "",
+        "Sichtbarkeit und die Wirkung von Teilchenstößen sind verschiedene Eigenschaften."
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Fjord",
+  "learning": {
+    "starter": "Ein Fjord ist eine Meeresbucht in einem von Gletschern geformten Tal. Der Talboden liegt unter dem Meeresspiegel.",
+    "deeper": "Nicht jede lange Bucht ist automatisch ein Fjord. Form, Wasserstand und Entstehungsgeschichte gehören zur Einordnung. Ein U-Profil erklärt eine typische Form, verrät aber ohne Daten keine genaue Tiefe oder das Alter eines echten Tals.",
+    "observe": "Zeichne ein gedachtes U-Tal und eine waagerechte Meeresspiegellinie oberhalb des Talbodens. Markiere den vom Meer gefüllten Bereich. Die selbst gewählten Höhen sind keine tatsächlichen Messwerte.",
+    "benefit": "Du verbindest Talform und Meerwasser mit einer begründeten Entstehungserklärung.",
+    "connection": "Das Wasserlabor enthält Speicher und Wege. Die Talzeichnung ergänzt einen Ort des Meeres und ist keine überall gleiche Station oder Tiefe im Kreislauf.",
+    "lab": "water",
+    "sources": [
+      {
+        "url": "https://www.nps.gov/articles/ushapedvalleysfjordshangingvalleys.htm",
+        "title": "NPS · Fjord (Englisch)",
+        "anchor": "Actual20/26/33: glacier eroded valley, floor belowsealevel inundatedocean, steepwalls. No all bays fjords, copiedphotographs or universal depth.",
+        "updatedOn": "2018-02-09",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Gletscher",
+        "reason": "Ein Fjord verbindet ein glazial geformtes Tal mit Meerwasser. Nicht jede lange Bucht belegt diese Entstehung."
+      }
+    ],
+    "question": {
+      "prompt": "Warum reicht „langes Wassergebiet“ als sichere Fjordbestimmung nicht aus?",
+      "answers": [
+        "Weil jeder See automatisch ein Fjord ist",
+        "Weil Fjorde kein Meerwasser enthalten können",
+        "Weil auch die glaziale Entstehung und Lage des Talbodens wichtig sind"
+      ],
+      "correct": 2,
+      "hint": "Der Begriff beschreibt mehr als nur den Umriss auf einer Karte.",
+      "why": "Die Fjorderklärung enthält ein von Gletschern geformtes und vom Meer gefülltes Tal. Ein langer Umriss allein belegt diese Geschichte nicht.",
+      "wrongReasons": [
+        "Ein See ist nicht automatisch eine Meeresbucht in einem glazialen Tal.",
+        "Ein Fjord wird durch Meerwasser gefüllt; das passt gerade zu seiner Lage.",
+        ""
+      ]
+    }
+  }
+}

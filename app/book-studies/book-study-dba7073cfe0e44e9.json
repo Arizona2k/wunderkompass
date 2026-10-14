@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "term": "Reflexion",
+  "learning": {
+    "starter": "Wir sehen viele Dinge, weil Licht von ihnen zu unseren Augen kommt. Ein Spiegel lenkt Licht besonders geordnet zurück.",
+    "deeper": "Reflexion unterscheidet sich von Licht, das durch einen Stoff hindurchgeht oder aufgenommen wird. Ein gezeichnetes Lichtstrahlmodell erklärt eine Richtung, aber nicht jede Eigenschaft des Lichts.",
+    "observe": "Zeichne einen Pfeil zu einer gedachten Spiegelkante und einen zurück. Markiere den Ort der Richtungsänderung. Diese Zeichnung ist ein eigenes Richtungsbeispiel, keine Messung; schaue nie direkt in die Sonne oder einen Laser.",
+    "benefit": "Du kannst zurückgeworfenes Licht von einer selbst leuchtenden Quelle unterscheiden.",
+    "connection": "Auch die Mondoberfläche reflektiert Sonnenlicht. Vergleiche die Quelle des Lichts mit der von uns beobachteten hellen Mondfläche.",
+    "topic": "science-moon-phases",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/ems/03_behaviors/",
+        "title": "NASA · Licht und Materie",
+        "anchor": "Reflection, Absorption, Scatter, Refraction selected scientific paragraphs; no source illustrations, city-temperature numbers or universal absorption-to-heat claims.",
+        "updatedOn": "2023-08-03",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Vollmond",
+        "reason": "Die helle Vollmondscheibe zeigt reflektiertes Sonnenlicht. Lichtquelle, zurückgeworfenes Licht und beobachtete Phase sind verschiedene Angaben."
+      },
+      {
+        "term": "Absorption",
+        "reason": "Ein Material kann eintreffendes Licht zurückwerfen oder Energie daraus aufnehmen. Die Begriffe beschreiben unterschiedliche Wege, keine überall gleichen Anteile."
+      },
+      {
+        "term": "Brechung",
+        "reason": "Ein Übergang in ein anderes Material und zurückgeworfenes Licht sind verschiedene Wege. Eine eigene Strahlskizze erklärt Richtungen, nicht alle Lichteigenschaften."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Beschreibung passt zur Reflexion an einem Spiegel?",
+      "answers": [
+        "Licht wird an der Fläche zurückgeworfen",
+        "Licht hört auf zu existieren",
+        "Der Spiegel muss selbst ein Stern sein"
+      ],
+      "correct": 0,
+      "hint": "Folge in deiner Skizze dem Weg vor und nach der Spiegelkante.",
+      "why": "Bei Reflexion kommt Licht von der Fläche zurück. Der Spiegel muss dafür nicht selbst wie ein Stern leuchten.",
+      "wrongReasons": [
+        "",
+        "Zurückgeworfenes Licht ist nicht verschwunden. Unterscheide seinen Weg von seiner Aufnahme im Stoff.",
+        "Eine beleuchtete Fläche kann reflektieren, ohne selbst ein Stern oder eine Lampe zu sein."
+      ]
+    }
+  }
+}

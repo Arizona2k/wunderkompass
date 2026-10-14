@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Grundwasser",
+  "learning": {
+    "starter": "Unter der Oberfläche kann Wasser Zwischenräume im Boden oder Gestein füllen. Es liegt nicht überall als großer offener unterirdischer See vor.",
+    "deeper": "Grundwasser hängt mit dem Untergrund, seiner Durchlässigkeit, Nachlieferung und Entnahme zusammen. Eine gezeichnete blaue Fläche erklärt einen Speicher vereinfacht; sie ist keine Bohrung, Trinkwasserprüfung oder überall gleiche Tiefenangabe.",
+    "observe": "Zeichne Körnchen mit ausdrücklich erfundenen Zwischenräumen und Wasserzeichen darin. Vergleiche mit einem offenen Hohlraum. Das Schema zeigt zwei verschiedene Vorstellungen, keine echte Probe und keine sichere Trinkwasserquelle.",
+    "benefit": "Du erkennst Wasser in Zwischenräumen und trennst ein Speichermodell von einer echten Wasserprüfung.",
+    "connection": "Die Wasserkreislaufkarte enthält Speicher unter der Oberfläche. Ein Speicherzeichen beschreibt keinen exakten Wasserstand oder eine geprüfte Trinkwasserquelle.",
+    "topic": "science-water-cycle",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/water-cycle",
+        "title": "USGS · Wasserkreislauf",
+        "anchor": "Selected scientific storage/flux/state body: evaporation, condensation, atmospheric water, precipitation, groundwater and infiltration. Own fictitious observations, no diagrams or current percentage records copied.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Versickerung",
+        "reason": "Versickerung ist ein Weg in den Untergrund, Grundwasser ein dortiger Speicher. Der Weg beweist keine sofortige Ankunft an einer Quelle oder Trinkwasserqualität."
+      },
+      {
+        "term": "Wasserkreislauf",
+        "reason": "Unterirdische Speicherung ergänzt die dargestellten Wasserwege. Eine einfache Kreiszeichnung enthält keine überall gleiche Aufenthaltsdauer."
+      }
+    ],
+    "question": {
+      "prompt": "Was veranschaulicht die Körnchenskizze?",
+      "answers": [
+        "Wasser in gedachten Zwischenräumen",
+        "Den Beweis eines überall offenen unterirdischen Sees",
+        "Eine sichere Trinkwasserfreigabe"
+      ],
+      "correct": 0,
+      "hint": "Betrachte die Räume zwischen den Körnchen und die ausdrücklich genannte Modellgrenze.",
+      "why": "Die Zeichnung zeigt Wasser in gedachten Zwischenräumen. Sie beweist weder einen riesigen Hohlraum noch Trinkwasserqualität.",
+      "wrongReasons": [
+        "",
+        "Zwischenräume zwischen Körnchen sind keine überall offene unterirdische Höhle.",
+        "Ein Schema enthält keine Wasseranalyse. Versuchswasser oder unbekanntes Wasser wird nicht als trinkbar eingestuft."
+      ]
+    }
+  }
+}

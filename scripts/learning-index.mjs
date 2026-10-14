@@ -13,14 +13,16 @@ export function learningIndexes(check=false){
   const file='book-study-'+createHash('sha256').update(term).digest('hex').slice(0,16)+'.json',payload={schemaVersion:1,term,learning},bytes=JSON.stringify(payload,null,2)+'\n';
   studies[term]={file,bytes:Buffer.byteLength(bytes),sha256:createHash('sha256').update(bytes).digest('hex')};outputs['app/book-studies/'+file]=payload;
  }
- const topicParts={};for(const [topic,links] of Object.entries(Object.groupBy(Object.entries(book.learning??{}),([,l])=>l.topic))){
+ const topicParts={};for(const [topic,links] of Object.entries(Object.groupBy(Object.entries(book.learning??{}),([,l])=>l.topic??'lab-'+l.lab))){
   if(!/^[a-z][a-z0-9_-]*$/.test(topic))throw Error('Unsafe book-topic identity');const file='book-topic-'+topic+'.json',payload={schemaVersion:1,topic,links:links.map(([term,l])=>({term,reason:l.connection}))},bytes=JSON.stringify(payload,null,2)+'\n';outputs['app/book-topic-parts/'+file]=payload;topicParts[topic]={file,bytes:Buffer.byteLength(bytes),sha256:createHash('sha256').update(bytes).digest('hex')};
  }
  outputs['app/book-topic-index.json']=topicParts;
  outputs['app/book-study-index.json']=studies;
- const searchBytes=JSON.stringify(outputs['app/book-search.json'],null,2)+'\n';outputs['app/book-search-integrity.json']={bytes:Buffer.byteLength(searchBytes),sha256:createHash('sha256').update(searchBytes).digest('hex')};
+ const studyIndexBytes=JSON.stringify(studies,null,2)+'\n';outputs['app/book-study-index-integrity.json']={bytes:Buffer.byteLength(studyIndexBytes),sha256:createHash('sha256').update(studyIndexBytes).digest('hex')};
+ const searchParts=[],searchEntries=Object.entries(outputs['app/book-search.json']);for(let offset=0;offset<searchEntries.length;offset+=48){const entries=searchEntries.slice(offset,offset+48),file='book-search-part-'+(offset/48)+'.json',payload=Object.fromEntries(entries),bytes=JSON.stringify(payload,null,2)+'\n';outputs['app/book-search-parts/'+file]=payload;searchParts.push({file,terms:entries.map(([term])=>term),bytes:Buffer.byteLength(bytes),sha256:createHash('sha256').update(bytes).digest('hex')});}
+ const searchBytes=JSON.stringify(outputs['app/book-search.json'],null,2)+'\n';outputs['app/book-search-integrity.json']={bytes:Buffer.byteLength(searchBytes),sha256:createHash('sha256').update(searchBytes).digest('hex'),parts:searchParts};
  for(const [file,data] of Object.entries(outputs)){
-  if(check){if(JSON.stringify(JSON.parse(fs.readFileSync(file,'utf8')))!==JSON.stringify(data)||(file.startsWith('app/book-studies/')||file.startsWith('app/book-topic-parts/')||file==='app/book-search.json')&&fs.readFileSync(file,'utf8')!==JSON.stringify(data,null,2)+'\n')throw Error('Stale public learning index: '+file);}
+  if(check){if(JSON.stringify(JSON.parse(fs.readFileSync(file,'utf8')))!==JSON.stringify(data)||(file.startsWith('app/book-studies/')||file.startsWith('app/book-topic-parts/')||file.startsWith('app/book-search-parts/')||file==='app/book-search.json'||file==='app/book-study-index.json')&&fs.readFileSync(file,'utf8')!==JSON.stringify(data,null,2)+'\n')throw Error('Stale public learning index: '+file);}
   else{fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,JSON.stringify(data,null,2)+'\n');}
  }
  const expected=Object.values(studies).map(s=>s.file).sort(),actual=fs.readdirSync('app/book-studies').filter(f=>f.endsWith('.json')).sort();
@@ -29,6 +31,9 @@ export function learningIndexes(check=false){
  const topicExpected=Object.values(topicParts).map(p=>p.file).sort(),topicActual=fs.existsSync('app/book-topic-parts')?fs.readdirSync('app/book-topic-parts').filter(f=>f.endsWith('.json')).sort():[];
  if(check&&JSON.stringify(topicActual)!==JSON.stringify(topicExpected))throw Error('Stale public book topic parts');
  if(!check)for(const file of topicActual)if(!topicExpected.includes(file))fs.unlinkSync('app/book-topic-parts/'+file);
+ const searchExpected=searchParts.map(p=>p.file).sort(),searchActual=fs.existsSync('app/book-search-parts')?fs.readdirSync('app/book-search-parts').filter(f=>f.endsWith('.json')).sort():[];
+ if(check&&JSON.stringify(searchActual)!==JSON.stringify(searchExpected))throw Error('Stale public book search parts');
+ if(!check)for(const file of searchActual)if(!searchExpected.includes(file))fs.unlinkSync('app/book-search-parts/'+file);
  return outputs;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))learningIndexes(process.argv.includes('--check'));

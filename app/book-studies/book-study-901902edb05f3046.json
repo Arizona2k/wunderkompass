@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Jahreszeiten",
+  "learning": {
+    "starter": "Im Laufe des Jahres ändern sich durch die geneigte Erdachse Sonnenstand und Tageslänge. Nord- und Südhalbkugel haben gegensätzliche jahreszeitliche Lichtverhältnisse.",
+    "deeper": "Die Jahreszeiten sind nicht einfach ein überall gleiches Wetterprogramm. Region, Breitengrad und weitere Bedingungen beeinflussen das Klima. Die tägliche Drehung läuft während eines langen Sommertags weiter.",
+    "observe": "Zeichne zwei gegenüberliegende Punkte einer gedachten geneigten Erde. Beschrifte die unterschiedliche Lichtausrichtung in einer Jahressituation. Das Schema erklärt Lichtbedingungen und nennt keine sichere Temperatur für echte Orte.",
+    "benefit": "Du erklärst jahreszeitliche Lichtänderungen und unterscheidest sie von einer lokalen Wettervorhersage.",
+    "connection": "Die Karte und das Labor vergleichen Achsneigung und Licht. Ergänze lokale Bedingungen, bevor du von diesem Modell auf tatsächliches Wetter schließen möchtest.",
+    "topic": "science-seasons",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/seasons/en/",
+        "title": "NASA Space Place · Jahreszeiten",
+        "anchor": "Full tilt/light/rotation body: opposite hemispheres; exclude impact-origin certainty, forever fixed axis or universal every-day sunrise claims.",
+        "updatedOn": "2025-07-29",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Erdachse",
+        "reason": "Die Achsneigung beeinflusst jahreszeitliche Lichtbedingungen. Tägliche Rotation und Jahresumlauf bleiben verschiedene Bewegungen; eine Temperaturprognose ist dies nicht."
+      }
+    ],
+    "question": {
+      "prompt": "Was kann die einfache Achsskizze allein nicht sicher nennen?",
+      "answers": [
+        "Eine gedachte Lichtausrichtung",
+        "Die Unterscheidung zweier Halbkugeln",
+        "Die tatsächliche Temperatur eines Ortes morgen"
+      ],
+      "correct": 2,
+      "hint": "Das Modell enthält Lichtgeometrie, aber keine vollständigen aktuellen Wetterdaten.",
+      "why": "Die tatsächliche Temperatur hängt von weiteren Bedingungen ab. Ein Lichtmodell liefert keine sichere Wettervorhersage.",
+      "wrongReasons": [
+        "Eine gedachte Ausrichtung ist gerade der erklärte Inhalt des Schemas.",
+        "Die beiden Halbkugeln lassen sich im Modell unterscheiden; daraus entsteht aber kein vollständiger Wetterbericht.",
+        ""
+      ]
+    }
+  }
+}

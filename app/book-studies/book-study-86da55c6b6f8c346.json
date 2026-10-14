@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Prüfsumme",
+  "learning": {
+    "starter": "Eine kleine Kontrollzahl kann auf eine Änderung hinweisen. Sie sagt aber nicht automatisch, wer etwas geschrieben hat.",
+    "deeper": "Im einfachen Summenbeispiel ergeben1 und2 dieselbe Summe wie0 und3. Unterschiedliche Inhalte können also denselben Prüfwert haben. Eine kryptografische Prüfung braucht andere Eigenschaften; eine Summe ist keine Verschlüsselung oder Signatur.",
+    "observe": "Vergleiche auf Papier die erfundenen Zahlenpaare1+2 und0+3. Berechne beide Summen und erkläre den gleichen Wert bei verschiedenen Paaren. Das Beispiel ist keine wirkliche Datei- oder Sicherheitsprüfung.",
+    "benefit": "Du erkennst die Grenze einer Kontrollzahl und hältst einen gleichen Wert nicht für einen vollständigen Echtheitsbeweis.",
+    "connection": "Die Prüfsummenkarte zeigt einen begrenzten Zahlenvergleich. Erkläre gleiche Kontrollzahl, gleiche Daten und vertrauenswürdige Herkunft als verschiedene Aussagen.",
+    "topic": "science-checksum",
+    "sources": [
+      {
+        "url": "https://csrc.nist.gov/glossary/term/checksum",
+        "title": "NIST · Prüfsumme (Englisch)",
+        "anchor": "Actual checksum definition fromNIST SP800-128/CNSSI: content-dependent value for change detection. Toy sum collision explicitly shown, no authenticity claim.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Hashfunktion",
+        "reason": "Prüfsummen und Hashwerte können Änderungen erkennbar machen. Eine bloße Übereinstimmung beweist nicht automatisch Echtheit oder das Ausbleiben jeder Kollision."
+      }
+    ],
+    "question": {
+      "prompt": "Was beweisen die gleichen Summen der beiden verschiedenen Zahlenpaare?",
+      "answers": [
+        "Dass die Paare identisch sind",
+        "Nur dass diese einfache Prüfsumme gleich ist",
+        "Dass die Daten sicher verschlüsselt wurden"
+      ],
+      "correct": 1,
+      "hint": "Vergleiche zuerst die Ausgangspaare, dann ihre berechneten Werte.",
+      "why": "Beide Summen sind3, obwohl die Paare verschieden sind. Der gleiche Prüfwert dieser einfachen Regel beweist keine identischen Daten.",
+      "wrongReasons": [
+        "Die Ausgangspaare1/2 und0/3 sind verschieden; eine gleiche Summe macht sie nicht identisch.",
+        "",
+        "Eine Summenbildung verschlüsselt die Daten nicht. Prüfung und Verbergen sind unterschiedliche Ziele."
+      ]
+    }
+  }
+}

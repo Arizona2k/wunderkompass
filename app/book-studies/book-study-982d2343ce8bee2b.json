@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Wendekreis",
+  "learning": {
+    "starter": "Die beiden Wendekreise begrenzen einen Gürtel um den Äquator. Sie hängen mit der Neigung der Erdachse zusammen.",
+    "deeper": "Im vereinfachten Jahresmodell kann die Mittagssonne zwischen den Wendekreisen im Zenit stehen. Die ungefähre Breitenlage ist kein exakter ewiger Wert und kein Beleg für überall gleiche Hitze, Regenmenge oder Landschaft.",
+    "observe": "Zeichne Äquator und zwei getrennte gedachte Gürtelränder. Markiere einen Punkt dazwischen und einen außerhalb. Schaue nie zur Sonne; das Papiermodell ersetzt weder eine Beobachtung noch örtliche Wetterdaten.",
+    "benefit": "Du trennst einen geometrischen Sonnenstandsbereich von einer vollständigen Klimabeschreibung.",
+    "connection": "Im Jahreszeitenlabor verändert die Achsneigung die Lichtverteilung. Die Gürtelzeichnung ergänzt den Sonnenstandsbereich, ohne einen einfachen Klimaschalter daraus zu machen.",
+    "lab": "seasons",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/seasons/en/",
+        "title": "NASA · Wendekreis (Englisch)",
+        "anchor": "Actually read full selected14October: Earth axis tilt andhemispheres. Original approximate23.4degrees retained; own latitude-bandgeometry not climateforecast/exactpermanenttilt.",
+        "updatedOn": "2025-07-29",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was folgt aus einem Punkt zwischen den Wendekreisen nicht automatisch?",
+      "answers": [
+        "Dass er im gezeichneten Gürtel liegt",
+        "Dass seine Breite im Modell eingeordnet wurde",
+        "Dass es dort jeden Tag dasselbe Wetter gibt"
+      ],
+      "correct": 2,
+      "hint": "Eine gezeichnete Breitenlage enthält keine täglichen Wetterbeobachtungen.",
+      "why": "Der Gürtel ordnet einen geometrischen Bereich ein. Wetter und Lebensraum hängen von weiteren Bedingungen ab und sind keine konstanten Folgen dieser einen Linie.",
+      "wrongReasons": [
+        "Ein markierter Punkt zwischen den Rändern liegt definitionsgemäß im gezeichneten Gürtel.",
+        "Die Linien können eine gedachte Breitenlage einordnen; das ist noch keine Wetterprognose.",
+        ""
+      ]
+    }
+  }
+}

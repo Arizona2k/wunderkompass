@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Taiga",
+  "learning": {
+    "starter": "Taiga bezeichnet nördliche boreale Wälder. Viele Nadelbäume sind an lange kalte Winter angepasst.",
+    "deeper": "Ein verschneiter Baum allein beweist noch keine ganze Taigalandschaft. Die Gruppe beschreibt einen größeren Lebensraum mit mehreren Bedingungen. Eine gezeichnete Nadelbaumform zählt weder reale Arten noch die Fläche eines echten Waldes.",
+    "observe": "Vergleiche einen gedachten Waldstreifen mit einem einzelnen Baumzeichen. Beschrifte Lebensraum und Einzelbaum getrennt. Das Papier ist keine tatsächliche Waldkarte oder Bestimmung einer Pflanze.",
+    "benefit": "Du trennst einen größeren Lebensraum von einem einzelnen sichtbaren Merkmal.",
+    "connection": "Lichtbedingungen im Jahreszeitenlabor sind nur ein Teil der Lebensraumbedingungen. Der Waldvergleich ergänzt die größere ökologische Einordnung.",
+    "lab": "seasons",
+    "sources": [
+      {
+        "url": "https://www.nps.gov/subjects/nnlandmarks/boreal.htm",
+        "title": "NPS · Taiga",
+        "anchor": "Actual20–23: borealforests/taiga, coniferdomination,longwinter/shortsummer. Exclude largest10percent, universalpermafrost/allroot-shallow or sourceD.Caldwellartwork.",
+        "updatedOn": "2025-04-10",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Warum genügt ein Foto eines verschneiten Einzelbaums nicht zur vollständigen Taigaeinordnung?",
+      "answers": [
+        "Weil Nadelbäume im Winter grundsätzlich verschwinden",
+        "Weil Landschaft, Lage und weitere Bedingungen fehlen können",
+        "Weil jeder verschneite Baum automatisch alle borealen Wälder zeigt"
+      ],
+      "correct": 1,
+      "hint": "Ein einzelnes Merkmal enthält nicht die ganze Beschreibung des Lebensraums.",
+      "why": "Die Einordnung einer Landschaft benötigt mehr Informationen als ein einzelnes Baumfoto. Das Bild ist kein vollständiger Wald- oder Klimabefund.",
+      "wrongReasons": [
+        "Ein verschneites Baumzeichen bedeutet kein Verschwinden der Nadelbäume.",
+        "",
+        "Ein Einzelbaum kann nicht die gesamte Vielfalt und Lage borealer Wälder belegen."
+      ]
+    }
+  }
+}

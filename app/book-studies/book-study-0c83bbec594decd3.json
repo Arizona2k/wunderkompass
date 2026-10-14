@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Maßstab",
+  "learning": {
+    "starter": "Ein kleiner Plan kann eine größere Strecke darstellen. Der Maßstab erklärt den Unterschied.",
+    "deeper": "Bei 1:100 werden Längen durch 100 geteilt. Flächen ändern sich dabei anders als einzelne Strecken. Auf einer Weltkarte können Projektionen außerdem Verzerrungen erzeugen; ein Beispielplan ist kein überall genauer Ersatz für jede Erdkarte.",
+    "observe": "Zeichne eine gedachte 2 m lange Wand im Maßstab 1:100: 2 m sind 200 cm, also wird die Linie 2 cm lang. Nutze nur einen erfundenen Raum; der Plan ersetzt keine sichere Vermessung oder Bauanleitung.",
+    "benefit": "Du rechnest mit denselben Einheiten und erkennst Grenzen vereinfachter Pläne.",
+    "connection": "Richtung und Kartenmaßstab erklären verschiedene Eigenschaften eines Plans. Ein Kompass allein misst keine Entfernung; auch die Projektion begrenzt weltweite Streckenvergleiche.",
+    "topic": "invention-compass",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/educational-resources/27-ideas-teaching-topographic-maps-0",
+        "title": "USGS · Maßstab (Englisch)",
+        "anchor": "Actual MapScale paragraph: ratio1:10000 sameunits map toground. Own1:100 toy floorplan arithmetic, no source map, data, worksheet or current mapcount.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Skala",
+        "reason": "Eine Skala ordnet beschriftete Werte; ein Maßstab vergleicht Strecken in Darstellung und Wirklichkeit. Gleich aussehende Striche erklären nicht beide Beziehungen."
+      },
+      {
+        "term": "Kartenprojektion",
+        "reason": "Ein Streckenverhältnis beschreibt einen gewählten Plan. Eine Weltkartenprojektion kann zusätzlich Verzerrungen enthalten; Maßstab allein behebt diese nicht."
+      }
+    ],
+    "question": {
+      "prompt": "Wie lang ist eine gedachte 2-m-Wand im Plan mit Maßstab 1:100?",
+      "answers": [
+        "2 cm",
+        "200 cm",
+        "100 m"
+      ],
+      "correct": 0,
+      "hint": "Wandle zuerst Meter in Zentimeter um und teile dann durch 100.",
+      "why": "2 m = 200 cm; 200 cm ÷ 100 = 2 cm. Maßstab und Einheiten werden gemeinsam benutzt.",
+      "wrongReasons": [
+        "",
+        "200 cm ist die gedachte wirkliche Länge vor der Verkleinerung.",
+        "Der Plan verkleinert die Strecke; 100 m wäre eine viel größere Strecke."
+      ]
+    }
+  }
+}

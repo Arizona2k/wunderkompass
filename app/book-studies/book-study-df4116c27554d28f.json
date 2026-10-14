@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Kernspaltung",
+  "learning": {
+    "starter": "Ein Kern kann sich in kleinere Teile aufspalten. Im Papierbild zeigen wir nur eine begrenzte Zeichenerklärung.",
+    "deeper": "Welche Teilchen und Energien entstehen, hängt von der konkreten Reaktion ab. Eine aufgeteilte Papierform ist keine sichere Vorhersage eines wirklichen Vorgangs und keine Anleitung zum Bau oder Betrieb einer Anlage.",
+    "observe": "Zeichne ein erfundenes Kernsymbol und zwei kleinere Folgesymbole. Schreibe Modellgrenze dazu: keine echten Teilchenzahlen, Energien oder Versuchsanleitung. Verwende ausschließlich Papier, keine Materialien für einen Kernversuch.",
+    "benefit": "Du kannst Spalten und Verbinden von Kernen unterscheiden, ohne eine Spielzeichnung für eine echte Reaktion zu halten.",
+    "connection": "Die Fusionskarte bietet einen Vergleich zum Verbinden leichter Kerne. Stelle Spalten und Verbinden gegenüber und trenne beide Papierhilfen von tatsächlichen Kernreaktionen.",
+    "topic": "science-fusion",
+    "sources": [
+      {
+        "url": "https://www.energy.gov/ne/articles/fission-and-fusion-what-difference",
+        "title": "U.S. Department of Energy · Kernspaltung (Englisch)",
+        "anchor": "Actual selected29–36: heaviernucleus splits/lightfragments andneutrons. Ownqualifier nuclearprocess, no all-fission-trigger orzeroemission/lifecycle/safetyclaim, no operationalsteps. Source published2021-04-01, actual last-update date not known and not inferred from publication.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Kernfusion",
+        "reason": "Leichte Kerne zusammenführen und schwere Kerne teilen sind verschiedene Kernvorgänge. Die Begriffe erklären keine sicheren Experimente für zu Hause."
+      }
+    ],
+    "question": {
+      "prompt": "Wodurch unterscheidet sich die Spaltungs-Zeichenhilfe von der Fusions-Zeichenhilfe?",
+      "answers": [
+        "Nur durch eine anders gewählte Farbe",
+        "Sie zeigt Aufteilen statt Verbinden",
+        "Sie misst automatisch eine echte Energiemenge"
+      ],
+      "correct": 1,
+      "hint": "Vergleiche die dargestellte Grundrichtung des Vorgangs, nicht die Farbe.",
+      "why": "Spalten und Verbinden sind verschiedene dargestellte Grundvorgänge. Die Zeichenhilfe berechnet keine wirkliche Energiemenge oder vollständige Reaktion.",
+      "wrongReasons": [
+        "Die Vorgänge werden nach Aufteilen und Verbinden unterschieden, nicht bloß nach einer Zeichnungsfarbe.",
+        "",
+        "Eine Papierzeichnung ohne konkrete Reaktionsdaten misst keine wirkliche Energie."
+      ]
+    }
+  }
+}

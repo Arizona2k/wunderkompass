@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Absorption",
+  "learning": {
+    "starter": "Manches Licht wird von einem Material aufgenommen. Es wird dann nicht einfach zurückgeworfen.",
+    "deeper": "Wie viel Licht aufgenommen wird, hängt vom Material und von der Wellenlänge ab. Energieaufnahme bedeutet nicht, dass bei jedem Vorgang ausschließlich Wärme entsteht oder jedes dunkle Material unter allen Bedingungen heißer ist.",
+    "observe": "Zeichne drei Pfeilwege zu einem erfundenen Material: zurück, hindurch, im Material endend. Schreibe die zugehörigen Begriffe daneben. Die Pfeile zeigen keine gemessenen Energiemengen und sind keine vollständige Teilchenphysik.",
+    "benefit": "Du trennst die Aufnahme von Lichtenergie von Reflexion und Durchgang.",
+    "connection": "Die Solarzellenkarte zeigt einen anderen möglichen Weg aufgenommener Lichtenergie: elektrische Energie. Aufnahme von Licht ist nicht bei jedem Vorgang nur Erwärmung.",
+    "topic": "science-energy",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/ems/03_behaviors/",
+        "title": "NASA · Licht und Materie",
+        "anchor": "Reflection, Absorption, Scatter, Refraction selected scientific paragraphs; no source illustrations, city-temperature numbers or universal absorption-to-heat claims.",
+        "updatedOn": "2023-08-03",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Reflexion",
+        "reason": "Ein Material kann eintreffendes Licht zurückwerfen oder Energie daraus aufnehmen. Die Begriffe beschreiben unterschiedliche Wege, keine überall gleichen Anteile."
+      }
+    ],
+    "question": {
+      "prompt": "Was unterscheidet Absorption hier von Reflexion?",
+      "answers": [
+        "Das Licht wird immer unverändert zurückgeworfen",
+        "Das Material nimmt Energie aus dem Licht auf",
+        "Das Material muss durchsichtig sein"
+      ],
+      "correct": 1,
+      "hint": "Achte darauf, ob Energie in das Material gelangt oder Licht zurückkommt.",
+      "why": "Bei Absorption wird Energie im Material aufgenommen. Ein reflektierter Pfeil beschreibt dagegen zurückgeworfenes Licht.",
+      "wrongReasons": [
+        "Unverändertes Zurückwerfen beschreibt Reflexion, nicht die Aufnahme im Material.",
+        "",
+        "Auch undurchsichtige Materialien können Lichtenergie aufnehmen. Durchsichtigkeit allein ist kein Absorptionsnachweis."
+      ]
+    }
+  }
+}

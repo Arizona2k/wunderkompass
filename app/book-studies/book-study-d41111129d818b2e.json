@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Erosion",
+  "learning": {
+    "starter": "Bei Erosion wird Material abgetragen. Bewegtes Eis kann dadurch ein Tal umformen.",
+    "deeper": "Verwitterung verändert oder zerkleinert Material am Ort; Erosion beinhaltet dessen Abtragung. Beide können zusammenwirken, sind aber verschiedene Vorgänge. Ein Talbild allein sagt nicht, wie schnell jeder Teil verändert wurde.",
+    "observe": "Zeichne vorher und nachher für ein erfundenes Tal. Markiere abgetragenes Material mit Pfeilen zu einem anderen Ort. Das Papier ist eine Begriffszeichnung, kein echter Versuch mit Gletscherkräften oder eine gemessene Erosionsrate.",
+    "benefit": "Du unterscheidest Materialveränderung am Ort von dessen Abtragung.",
+    "connection": "Das Wasserlabor ordnet Wasserwege. Die ergänzende Talaufgabe zeigt, dass mit einem Transportweg auch Material bewegt werden kann; beide Größen bleiben getrennt.",
+    "lab": "water",
+    "sources": [
+      {
+        "url": "https://www.nps.gov/articles/ushapedvalleysfjordshangingvalleys.htm",
+        "title": "NPS · Erosion (Englisch)",
+        "anchor": "Actual20/26/33: glacial eroding valleyfloor/walls. Newexplanation focused on transport/detachment; no universal erosionrate, copiedmedia or exacthistoricclimate.",
+        "updatedOn": "2018-02-09",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Verwitterung",
+        "reason": "Materialveränderung am Ort und Abtragung sind verschiedene Vorgänge. Beide können zusammenwirken, dürfen aber nicht allein aus einer Farbe abgelesen werden."
+      },
+      {
+        "term": "Sediment",
+        "reason": "Abgetragenes Material kann an anderer Stelle abgelagert werden. Transportweg und Ablagerung sind unterschiedliche Teile einer Materialgeschichte."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Ergänzung kennzeichnet Erosion in der Zeichnung?",
+      "answers": [
+        "Ein Pfeil für Material, das vom ursprünglichen Ort abgetragen wird",
+        "Nur eine andere Farbe ohne Materialweg",
+        "Eine frei erfundene exakte Zeit für jedes echte Tal"
+      ],
+      "correct": 0,
+      "hint": "Suche den gezeichneten Ortswechsel des Materials.",
+      "why": "Der Materialweg veranschaulicht Abtragung. Andere Farbe allein erklärt keinen Transport und das Gedankenbild berechnet keine reale Dauer.",
+      "wrongReasons": [
+        "",
+        "Eine Farbe zeigt ohne Erklärung keinen Materialweg oder Abtragungsvorgang.",
+        "Ohne Messdaten ist die Zeichnung kein Datierungs- oder Geschwindigkeitsnachweis."
+      ]
+    }
+  }
+}

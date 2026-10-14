@@ -24,3 +24,14 @@ export async function readBookBytes(response,maxBytes){
  try{for(;;){const {done,value}=await reader.read();if(done)break;length+=value.byteLength;if(length>maxBytes)throw Error('Wissensdaten zu groß');chunks.push(value);}}finally{await reader.cancel();}
  const bytes=new Uint8Array(length);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.byteLength;}return bytes;
 }
+
+export async function validateBookStudyIndex(bytes,expected,terms,allowedFiles){
+ const data=await verifiedBookJSON(bytes,expected);
+ if(!data||Array.isArray(data)||JSON.stringify(Object.keys(data))!==JSON.stringify(terms)||new Set(Object.values(data).map(m=>m?.file)).size!==terms.length||!Object.values(data).every(m=>/^book-study-[a-f0-9]{16}\.json$/.test(m?.file)&&allowedFiles.includes(m.file)&&Number.isInteger(m.bytes)&&m.bytes>0&&m.bytes<=8000&&/^[a-f0-9]{64}$/.test(m.sha256)))throw Error('Beschädigter Wortkatalog');
+ return data;
+}
+export async function validateBookSearchPart(bytes,expected){
+ const data=await verifiedBookJSON(bytes,expected);
+ if(!data||Array.isArray(data)||JSON.stringify(Object.keys(data))!==JSON.stringify(expected.terms)||!Object.values(data).every(s=>typeof s==='string'&&s.length<=100000&&!/[<>\u0000-\u0008]/u.test(s)))throw Error('Unvollständiger Wortsuchteil');
+ return data;
+}

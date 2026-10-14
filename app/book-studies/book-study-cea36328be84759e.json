@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Verschlüsselung",
+  "learning": {
+    "starter": "Eine vereinbarte Regel kann einen erfundenen Text verändern. Zum Zurücklesen braucht man die passende Regel und Angabe.",
+    "deeper": "Eine Verschlüsselung und eine Prüfsumme haben unterschiedliche Ziele. Die Sicherheit hängt vom tatsächlichen Verfahren und den Schlüsseln ab, nicht bloß davon, ob ein Text ungewohnt aussieht. Unser Buchstabenspiel ist absichtlich leicht zu durchschauen.",
+    "observe": "Verschiebe im erfundenen AlphabetA bisZ jeden Buchstaben vonHUT um eine Stelle weiter:IVU. Erkläre die Rückregel. Verwende nur diesen Spieltext, keine echten Passwörter, Namen oder privaten Nachrichten.",
+    "benefit": "Du trennst eine nachvollziehbare Spielregel von einer tatsächlich geprüften Schutzfunktion.",
+    "connection": "Die Verschlüsselungskarte lässt dich ein begrenztes Buchstabenspiel erkunden. Erkläre dabei ausdrücklich die Grenze zwischen Lernregel und echter Datensicherheit.",
+    "topic": "science-encryption",
+    "sources": [
+      {
+        "url": "https://csrc.nist.gov/glossary/term/encryption",
+        "title": "NIST · Verschlüsselung (Englisch)",
+        "anchor": "Actual selected Definitions128–143: algorithm/key transform plaintext to ciphertext, NIST SP800-133Rev2 and800-57; no toy cipher as real protection.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Schlüssel",
+        "reason": "Der Schlüssel ist eine Eingabe für ein kryptografisches Verfahren. Ein beliebiger Ersatzbuchstabe ist noch kein sicheres System."
+      },
+      {
+        "term": "Klartext",
+        "reason": "Klartext ist die Eingabe vor der Verschlüsselung. Seine tatsächliche Verständlichkeit und seine Vertraulichkeit sind getrennte Fragen."
+      }
+    ],
+    "question": {
+      "prompt": "Was zeigt das leicht lösbareHUT-zu-IVU-Spiel?",
+      "answers": [
+        "Einen garantierten Schutz aller Geheimnisse",
+        "Eine sichere Verschlüsselung unabhängig von der Regel",
+        "Nur eine einfache nachvollziehbare Umwandlung"
+      ],
+      "correct": 2,
+      "hint": "Leicht rückgängig zu machen bedeutet hier Spielregel, nicht garantierte Sicherheit.",
+      "why": "Die Umwandlung erklärt ein Prinzip. Sie ist absichtlich einfach und darf nicht als Schutz echter privater Daten verwendet werden.",
+      "wrongReasons": [
+        "Ein leicht lösbares Buchstabenspiel garantiert keinen Schutz echter Geheimnisse.",
+        "Die tatsächliche Sicherheit hängt vom Verfahren und den Schlüsseln ab. Ungewohnte Zeichen allein sind kein Nachweis.",
+        ""
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Meerenge",
+  "learning": {
+    "starter": "Eine Meerenge ist eine schmale Wasserverbindung. Sie verbindet größere Wassergebiete, nicht zwei Landwege.",
+    "deeper": "Schmal bezeichnet die Form, nicht automatisch geringe Tiefe oder schwache Strömung. Die gezeichnete Verbindung enthält keine sichere Schiffsroute. Ein schmaler Landsteg beschreibt dagegen eine andere Anordnung.",
+    "observe": "Zeichne zwei gedachte Wasserflächen mit schmaler Verbindung und daneben zwei Landflächen mit Landsteg. Beschrifte Wasserweg und Landweg getrennt; nutze keine echten Routenangaben.",
+    "benefit": "Du unterscheidest Wasserverbindung, Landverbindung und unbekannte Bedingungen.",
+    "connection": "Das Gezeitenlabor ist kein Strömungs- oder Schifffahrtsplan für eine Meerenge. Der Wasserwegvergleich erklärt gerade die Grenze einer solchen einfachen Skizze.",
+    "lab": "tides",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/us-board-on-geographic-names/gnis-domestic-names-feature-classes",
+        "title": "USGS · Meerenge",
+        "anchor": "Actually selected search excerpt Channel passage/strait class; fullpage unavailable. Original narrowwaterconnection retained; no quotedtaxonomy, actualshippingdepth or currentforecast.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was folgt aus einem schmalen Wasserweg nicht automatisch?",
+      "answers": [
+        "Dass eine gedachte Verbindung gezeichnet ist",
+        "Dass er überall flach und ungefährlich ist",
+        "Dass die Landflächen daneben eingeordnet werden können"
+      ],
+      "correct": 1,
+      "hint": "Breite, Tiefe und Sicherheit sind verschiedene Informationen.",
+      "why": "Der Umriss beschreibt eine Breite, nicht gemessene Tiefe oder geprüfte Sicherheit.",
+      "wrongReasons": [
+        "Eine beschriftete gedachte Verbindung darf als Modellinhalt beschrieben werden.",
+        "",
+        "Die Landflächen sind sichtbare Modellteile; sie bestimmen keine Wassergefahr."
+      ]
+    }
+  }
+}

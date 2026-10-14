@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Schwerkraft",
+  "learning": {
+    "starter": "Dinge mit Masse ziehen einander an. Die Erdanziehung ist ein Beispiel für Schwerkraft.",
+    "deeper": "Die Stärke hängt unter anderem von Masse und Abstand ab. Anziehung ist gegenseitig; die Bewegungswirkung muss deshalb nicht für beide Körper gleich groß sein. Ein Papierpfeil misst keine tatsächliche Kraft und ist kein vollständiges Modell der Gravitation.",
+    "observe": "Zeichne zwei erfundene Körper und Pfeile für gegenseitige Anziehung. Beschrifte sie als qualitative Idee, ohne freie Zahlen für echte Kräfte zu erfinden. Kein Werfen oder Springen als Messversuch.",
+    "benefit": "Du erkennst gegenseitige Anziehung und unterscheidest sie von einer gemessenen Bewegungswirkung.",
+    "connection": "Das Gezeitenlabor verbindet die Anziehung mit räumlich unterschiedlichen Wirkungen. Das einfache Pfeilpaar allein erklärt keine reale Küstenzeit oder Wasserhöhe.",
+    "lab": "tides",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/what-is-gravity/en/",
+        "title": "NASA · Schwerkraft (Englisch)",
+        "anchor": "Actual14/17/21/28/31: attraction, massanddistance, reciprocalforces, orbitalcontext. Exclude massaloneplanetweightcomparison, outdated GRACE status, relativityclaim/copyanimation.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Welche Aussage passt zur gegenseitigen Anziehung?",
+      "answers": [
+        "Nur der große Körper zieht, der kleine nie",
+        "Beide Körper ziehen einander an",
+        "Ein beliebiger Papierpfeil misst die wirkliche Kraft"
+      ],
+      "correct": 1,
+      "hint": "Die Wechselwirkung betrifft beide Körper, nicht nur den größer gezeichneten.",
+      "why": "Die Anziehung wirkt auf beide Körper. Die Zeichnung zeigt die Idee, keine berechneten realen Kräfte oder Beschleunigungen.",
+      "wrongReasons": [
+        "Auch ein kleiner Körper ist an der gegenseitigen Anziehung beteiligt.",
+        "",
+        "Ohne Größen, Abstand und Verfahren ist der Pfeil kein Messwert."
+      ]
+    }
+  }
+}

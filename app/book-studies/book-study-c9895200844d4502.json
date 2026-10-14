@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Erdbeben",
+  "learning": {
+    "starter": "Bei einem Erdbeben wird der Boden erschüttert. Häufig hängt dies mit plötzlich gegeneinander verrutschendem Gestein an einer Bruchfläche zusammen.",
+    "deeper": "Herd, Bruchfläche und Wirkung an einem Ort sind verschiedene Angaben. Eine auslösbare Bildschirmwelle kann einen Zusammenhang zeigen, aber keine realen Ankunftszeiten, Magnituden oder Sicherheit von Gebäuden vorhersagen.",
+    "observe": "Zeichne eine gedachte Bruchfläche mit einem Beginnpunkt und zwei Ortsmarkierungen. Liste die fehlenden Angaben auf: echte Tiefe, Material und Messwerte. Das eigene Schema ist keine Warnung oder Handlungsanleitung für ein reales Beben.",
+    "benefit": "Du trennst eine Erklärung des Vorgangs von einer unbelegten Vorhersage seiner örtlichen Wirkung.",
+    "connection": "Im Erdbebenlabor lässt sich eine schematische Welle auslösen. Begründe, was sie über den dargestellten Vorgang zeigt und was sie nicht berechnet: echte Ankunftszeiten, Magnituden, Gebäudeschäden oder den Zeitpunkt des nächsten Bebens.",
+    "lab": "quake",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/programs/earthquake-hazards/science-earthquakes",
+        "title": "USGS · Erdbeben erklären",
+        "anchor": "Selected first50 scientific lines: hypocentre/epicentre, fault slip, Earth layers and boundaries; no universal aftershock forecast or source media.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Erdbebenherd",
+        "reason": "Ein Beginnpunkt erklärt einen Teil des Bebenvorgangs. Die auslösbare schematische Welle ist kein Zeitpunkt eines zukünftigen realen Bebens."
+      },
+      {
+        "term": "Plattentektonik",
+        "reason": "Viele Beben hängen mit Bewegungen an Bruchflächen zusammen; Platten erklären einen geologischen Zusammenhang. Politische Grenzen sind keine automatisch entsprechenden Bruch- oder Plattengrenzen."
+      }
+    ],
+    "question": {
+      "prompt": "Was ist die auslösbare schematische Welle im Labor?",
+      "answers": [
+        "Ein begrenztes Erklärmodell",
+        "Ein sicherer Zeitpunkt des nächsten echten Bebens",
+        "Eine Prüfung der Sicherheit jedes Gebäudes"
+      ],
+      "correct": 0,
+      "hint": "Suche nach echten Messdaten und einer ausdrücklich genannten Vorhersagefähigkeit.",
+      "why": "Die Welle erklärt einen ausgewählten Zusammenhang. Sie enthält keine vollständige reale Prognose oder Gebäudebeurteilung.",
+      "wrongReasons": [
+        "",
+        "Eine Modellwelle bestimmt nicht den Zeitpunkt eines künftigen realen Bebens.",
+        "Gebäudesicherheit braucht andere Informationen und Prüfungen. Das Wellenmodell übernimmt diese Aufgabe nicht."
+      ]
+    }
+  }
+}

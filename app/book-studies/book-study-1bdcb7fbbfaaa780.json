@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Photon",
+  "learning": {
+    "starter": "Licht lässt sich bei manchen Messungen als einzelne Energieportionen beschreiben. Diese nennen wir Photonen.",
+    "deeper": "Photonen haben keine Ruhemasse. In einem Vakuum breitet sich Licht mit Lichtgeschwindigkeit aus; eine Papierkugel beschreibt weder alle Eigenschaften eines Photons noch das Verhalten in einem Material.",
+    "observe": "Lege sechs gezeichnete Kreise als Zählzeichen auf Papier. Erkläre, was sie zeigen: sechs gedachte Portionen. Erkläre auch, was fehlt: Die Kreise sind keine Fotos, Größenmessungen oder Flugbahnen einzelner Photonen.",
+    "benefit": "Du erkennst einen Zählvergleich und seine Grenzen, statt Licht für kleine sichtbare Kugeln zu halten.",
+    "connection": "Bei Solarzellen kann Licht Energie an Material abgeben. Der Photonbegriff hilft beim Verstehen dieser Wechselwirkung, ohne eine Kugelmaschine daraus zu machen.",
+    "topic": "science-energy",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/ems/02_anatomy/",
+        "title": "NASA · Elektromagnetische Wellen",
+        "anchor": "Selected Energy / Electromagnetic waves / Waves or particles / Describing electromagnetic energy; rest mass and vacuum qualifiers retained.",
+        "updatedOn": "2023-08-03",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Energie",
+        "reason": "Photonen beschreiben einzelne elektromagnetische Energiequanten. Ein Zählsymbol ist keine schwere sichtbare Kugel und keine vollständige Darstellung des Lichts."
+      }
+    ],
+    "question": {
+      "prompt": "Was sind die Papierkreise im Photonbeispiel?",
+      "answers": [
+        "Echte sichtbare Photonen",
+        "Nur Zählzeichen für gedachte Portionen",
+        "Nachweise einer schweren Kugel im Licht"
+      ],
+      "correct": 1,
+      "hint": "Ein eigenes Symbol ist nicht identisch mit dem dargestellten Gegenstand.",
+      "why": "Die Kreise dienen nur dem Zählen. Photonen lassen sich damit nicht wie sichtbare schwere Kugeln darstellen.",
+      "wrongReasons": [
+        "Eine Papierzeichnung ist keine unmittelbare Aufnahme von Photonen.",
+        "",
+        "Die Kreise haben Papiermasse, aber diese Masse ist keine Eigenschaft des dargestellten Photons."
+      ]
+    }
+  }
+}

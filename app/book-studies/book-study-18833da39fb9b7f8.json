@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Delta",
+  "learning": {
+    "starter": "Ein Delta kann entstehen, wenn an einer Flussmündung mehr Material abgelagert als wieder entfernt wird. Nicht jede Mündung bildet eines.",
+    "deeper": "Fluss, Wellen und Gezeiten wirken zusammen. Ein Delta muss nicht dreieckig sein oder immer gleich viele Arme besitzen. Eine Zeichnung zeigt eine gedachte Ablagerung und sagt keine künftige Küstenlinie voraus.",
+    "observe": "Zeichne eine gedachte Mündung mit drei Materialzeichen, von denen zwei liegen bleiben und eines weitergetragen wird. Beschrifte dies als erfundene Bilanz, nicht als echte Sedimentmessung.",
+    "benefit": "Du erklärst Ablagerung und Abtransport statt nur eine Dreiecksform zu erkennen.",
+    "connection": "Das Wasserlabor verfolgt Wasserwege. Die Mündungsaufgabe ergänzt einen getrennten Materialfluss; Wasser- und Sedimentmenge sind nicht identisch.",
+    "lab": "water",
+    "sources": [
+      {
+        "url": "https://www.nps.gov/articles/delta-landforms.htm",
+        "title": "NPS · Delta",
+        "anchor": "Actual24–26: sedimentaccumulationatmouth wheninput exceedsremoval; not alltriangles, wave/tide effects. Exclude copiedmaps andactualmouthchangeforecast.",
+        "updatedOn": "2019-03-20",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Welche Angabe ist für eine Ablagerungsbilanz wichtig?",
+      "answers": [
+        "Nur der Name des Flusses",
+        "Zugeführtes und wieder entferntes Material",
+        "Eine immer gleiche dreieckige Form"
+      ],
+      "correct": 1,
+      "hint": "Vergleiche, was ankommt und was wieder wegtransportiert wird.",
+      "why": "Die Materialwege bestimmen die gedachte Bilanz. Eine Form allein enthält diese Mengenangaben nicht.",
+      "wrongReasons": [
+        "Ein Name beschreibt keine zugeführten oder entfernten Mengen.",
+        "",
+        "Nicht jedes Delta hat dieselbe Form; Form ist keine vollständige Bilanz."
+      ]
+    }
+  }
+}

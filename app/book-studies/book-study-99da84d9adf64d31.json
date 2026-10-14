@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Transit",
+  "learning": {
+    "starter": "Eine kleine Scheibe kann aus deiner Richtung vor einer größeren vorbeiziehen. Aus einer anderen Richtung kann sie daneben aussehen.",
+    "deeper": "Die Verringerung des gemessenen Lichts kann beim Suchen nach Planeten helfen. Sie ist keine beliebige vollständige Abschaltung eines Sterns. Wiederholungen und weitere Prüfungen gehören zur Deutung einer echten Messreihe.",
+    "observe": "Lege zwei Papierkreise verschieden groß nebeneinander und schiebe den kleineren im gezeichneten Blickfeld davor. Beschrifte eigene Scheibenskizze, keine Sternmessung. Schaue dafür niemals direkt in die Sonne oder einen Laser.",
+    "benefit": "Du beachtest die Beobachterrichtung und trennst eine Skizze von einer geprüften astronomischen Messung.",
+    "connection": "Die Exoplanetenkarte verknüpft die passende Blickrichtung mit einer kleinen Lichtänderung. Ein Transit ist ein Beobachtungsvorgang und nicht dasselbe wie die ganze Planetendefinition.",
+    "topic": "science-exoplanet",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/transits/en/",
+        "title": "NASA · Transit (Englisch)",
+        "anchor": "Actual selected35–41: foreground planet, star dimming, geometry; no upcomingcalendar/image or unsafeSolarobservations.",
+        "updatedOn": "2024-03-29",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Exoplanet",
+        "reason": "Ein Transit kann bei geeigneter Blickrichtung einen Hinweis auf einen Planeten geben. Nicht jeder Exoplanet wird mit genau dieser Methode gefunden."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Angabe gehört zum Transitvergleich?",
+      "answers": [
+        "Nur die Lieblingsfarbe der Scheiben",
+        "Die Richtung, aus der du auf die Anordnung blickst",
+        "Eine sichere Aussage über das Wetter eines Planeten"
+      ],
+      "correct": 1,
+      "hint": "Vor und daneben hängen in diesem Beispiel von der Blickrichtung ab.",
+      "why": "Die Blickrichtung entscheidet, ob sich die Scheiben überdecken. Papierfarbe und ein ungeprüfter Wetterbericht erklären diese Anordnung nicht.",
+      "wrongReasons": [
+        "Eine gewählte Papierfarbe ersetzt keine Beobachterrichtung.",
+        "",
+        "Die Scheibenanordnung liefert keine Wetterdaten des gedachten Planeten."
+      ]
+    }
+  }
+}

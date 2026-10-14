@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Meeresströmung",
+  "learning": {
+    "starter": "Eine Meeresströmung bewegt Wasser von einem Ort zu einem anderen. Es gibt Strömungen an der Oberfläche und in tieferen Bereichen.",
+    "deeper": "Wind, Gezeiten und Dichteunterschiede können beitragen. Ein Wellenberg oder eine örtliche Wasserhöhe beschreibt deshalb nicht automatisch denselben Vorgang wie ein längerer Wassertransport. Ein einzelner Pfeil ist keine vollständige globale Strömungskarte.",
+    "observe": "Zeichne einen gedachten Wassertransportpfeil und daneben eine getrennte Wasserstandslinie. Beschrifte Richtung und Höhe verschieden. Das Papier zeigt keine sichere Schwimmstelle und keine aktuellen Strömungsgeschwindigkeiten.",
+    "benefit": "Du trennst Wassertransport, Welle und Wasserstand als unterschiedliche Beobachtungen.",
+    "connection": "Die Strömungskarte erklärt Wassertransport und verschiedene Antriebe. Der getrennte Höhenvergleich hilft, diesen Vorgang nicht mit einer reinen Gezeitenhöhe gleichzusetzen.",
+    "topic": "science-currents",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/current.html",
+        "title": "NOAA · Meeresströmung (Englisch)",
+        "anchor": "Actual7–12: directedwatermovement, wind/density/tides, surfaceanddeep. Exclude universal strongestshore/constanttideforecasts/simplistic GulfStreamonlyclimate or sourcevideo.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Welche Angabe beschreibt den Transportpfeil?",
+      "answers": [
+        "Eine garantierte sichere Badestelle",
+        "Nur die Höhe eines Wasserstands ohne Bewegungsrichtung",
+        "Eine gedachte Richtung der Wasserbewegung"
+      ],
+      "correct": 2,
+      "hint": "Der Pfeil bezeichnet eine Bewegung; die getrennte Linie eine Höhe.",
+      "why": "Die Richtung ist Modellinhalt. Sicherheits- oder Geschwindigkeitsangaben benötigen echte aktuelle Daten und folgen nicht aus einem Pfeil.",
+      "wrongReasons": [
+        "Ein frei gewählter Pfeil erlaubt keine Sicherheitsentscheidung am Wasser.",
+        "Höhe und Transport sind unterschiedliche Größen; die Linie ersetzt nicht den Bewegungspfeil.",
+        ""
+      ]
+    }
+  }
+}

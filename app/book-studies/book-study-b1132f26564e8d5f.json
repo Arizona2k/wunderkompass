@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Schlot",
+  "learning": {
+    "starter": "Ein Schlot ist ein Förderweg nach oben. Er ist nicht automatisch ein einziges gerades Rohr.",
+    "deeper": "Ein Vulkansystem kann mehrere Risse und Wege besitzen. Ein senkrechter Pfeil erklärt eine mögliche Verbindung zur Oberfläche, bildet aber nicht jeden realen Verlauf ab. Ausgang, Weg und Sammelbereich sind verschiedene Teile des Modells.",
+    "observe": "Zeichne einen gedachten Sammelbereich, zwei abzweigende Wege und einen Ausgang. Beschrifte jeden Teil getrennt. Das Papiernetz ist keine Karte eines echten Vulkans und keine Anleitung zum Erkunden gefährlicher Öffnungen.",
+    "benefit": "Du unterscheidest Förderweg, Ausgang und Speicher in einer vereinfachten Vulkandarstellung.",
+    "connection": "Im Vulkanlabor verbindet der sichtbare Weg Untergrund und Ausgang. Die zusätzliche Verzweigung erklärt, weshalb dieser eine Weg eine Vereinfachung bleibt.",
+    "lab": "volcano",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/programs/VHP/about-volcanoes",
+        "title": "USGS · Schlot (Englisch)",
+        "anchor": "Actual AboutVolcanoes30/36–39: connectedcracks/vent path for risingmagma, no universal singlepipe, no instructions or forecast.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Magmakammer",
+        "reason": "Ein Sammelbereich und ein Förderweg sind unterschiedliche Modellteile. Eine gezeichnete Verbindung beweist keinen echten Ausbruchszeitpunkt."
+      }
+    ],
+    "question": {
+      "prompt": "Was benennt der Schlot in der Skizze?",
+      "answers": [
+        "Den gesamten festen inneren Erdkern",
+        "Einen gedachten Förderweg zur Oberfläche",
+        "Die garantierte Dauer bis zum nächsten Ausbruch"
+      ],
+      "correct": 1,
+      "hint": "Verfolge die Verbindung zwischen Sammelbereich und Ausgang.",
+      "why": "Der Förderweg verbindet Bereiche im gedachten System. Er ist kein Erdkern und enthält keinen berechneten Zukunftstermin.",
+      "wrongReasons": [
+        "Der Kern liegt auf einer ganz anderen Größen- und Strukturebene.",
+        "",
+        "Ein gezeichneter Weg enthält keine echten Überwachungsdaten für eine Ausbruchszeit."
+      ]
+    }
+  }
+}

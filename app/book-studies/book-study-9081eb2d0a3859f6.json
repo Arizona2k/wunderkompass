@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Niederschlag",
+  "learning": {
+    "starter": "Wasser gelangt aus der Atmosphäre zur Oberfläche, etwa als Regen oder Schnee.",
+    "deeper": "Niederschlag umfasst verschiedene Formen und nicht nur flüssigen Regen. Ein gezeichneter Tropfen zählt keine Liter. Für Mengenangaben braucht man eine Fläche, einen Zeitraum und eine geeignete Messung.",
+    "observe": "Schreibe zwei erfundene Beobachtungen auf: Regen heute und Schnee gestern. Erkläre, was beide gemeinsam haben. Aus den Wörtern lassen sich weder eine genaue Menge noch ein künftiger Wetterverlauf ablesen.",
+    "benefit": "Du erkennst mehrere Niederschlagsformen und verwechselst Wetterzeichen nicht mit Messwerten.",
+    "connection": "Niederschlag ist ein Rückweg von Wasser aus der Atmosphäre. Die schematische Tropfenzahl ist keine reale Regenmessung.",
+    "topic": "science-water-cycle",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/water-cycle",
+        "title": "USGS · Wasserkreislauf",
+        "anchor": "Selected scientific storage/flux/state body: evaporation, condensation, atmospheric water, precipitation, groundwater and infiltration. Own fictitious observations, no diagrams or current percentage records copied.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Wasserkreislauf",
+        "reason": "Wasser aus der Atmosphäre ist ein Weg im Kreislauf. Ein gezeichneter Tropfen ist keine gemessene Niederschlagsmenge oder ein vollständiger Rundkurs."
+      }
+    ],
+    "question": {
+      "prompt": "Was folgt aus einem gezeichneten Regentropfen ohne Skala?",
+      "answers": [
+        "Eine genaue Regenmenge in Litern",
+        "Eine sichere Wettervorhersage",
+        "Nur das gemeinte Regenzeichen"
+      ],
+      "correct": 2,
+      "hint": "Suche nach einer Messskala, einem Zeitraum und einer Flächenangabe.",
+      "why": "Das Symbol benennt Regen. Ohne passende Messdaten gibt es weder eine quantitative Menge noch eine sichere Vorhersage.",
+      "wrongReasons": [
+        "Ein unskaliertes Symbol ist kein Literzähler.",
+        "Ein einzelnes Symbol berechnet keinen künftigen Wetterverlauf.",
+        ""
+      ]
+    }
+  }
+}

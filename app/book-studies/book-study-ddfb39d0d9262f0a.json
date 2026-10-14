@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Magmakammer",
+  "learning": {
+    "starter": "Magma kann sich unter einem Vulkan sammeln. Der Sammelbereich muss keine einfache runde Höhle sein.",
+    "deeper": "Verschiedene verbundene Bereiche und Risse können am System beteiligt sein. Ein runder Speicher im Schulbild ist eine Vereinfachung. Die gezeichnete Form beweist weder die reale Tiefe noch Menge oder Zeitpunkt eines Ausbruchs.",
+    "observe": "Vergleiche eine runde gedachte Speicherskizze mit einem eigenen Netz aus zwei verbundenen Bereichen. Beschrifte beide als vereinfachte Möglichkeiten, nicht als Messbilder. Erhitze keine Stoffe für diesen Vergleich.",
+    "benefit": "Du hinterfragst, welche Vereinfachung hinter einem bekannten Vulkanbild steckt.",
+    "connection": "Das Labor benutzt eine übersichtliche Darstellung. Die ergänzende Netzskizze zeigt eine Grenze dieses Bildes und lässt die bisherigen Modellregler unverändert.",
+    "lab": "volcano",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/programs/VHP/about-volcanoes",
+        "title": "USGS · Magmakammer (Englisch)",
+        "anchor": "Actual AboutVolcanoes30: interconnectedstorageareas and cracks; not always simple hollow roundcave, no real locationforecast.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Magma",
+        "reason": "Material und Sammelbereich erfüllen unterschiedliche Rollen. Magma bezeichnet nicht automatisch eine einfache kreisrunde Höhle."
+      },
+      {
+        "term": "Schlot",
+        "reason": "Ein Sammelbereich und ein Förderweg sind unterschiedliche Modellteile. Eine gezeichnete Verbindung beweist keinen echten Ausbruchszeitpunkt."
+      }
+    ],
+    "question": {
+      "prompt": "Was ist an einer runden Magmakammer im Schulbild zu beachten?",
+      "answers": [
+        "Sie ist ein vereinfachtes Symbol, keine Garantie der realen Form",
+        "Jeder echte Speicher muss genau kreisrund sein",
+        "Die Papiergröße misst die echte Magmamenge"
+      ],
+      "correct": 0,
+      "hint": "Die Form wurde für die Erklärung gewählt, nicht unter der Erde fotografiert.",
+      "why": "Das runde Zeichen ist leicht lesbar, kann aber vernetzte reale Bereiche vereinfachen. Es liefert keine genaue Mengen- oder Tiefenmessung.",
+      "wrongReasons": [
+        "",
+        "Verbundene Bereiche können komplizierter aufgebaut sein als ein Kreis.",
+        "Ohne Maßstab und echte Daten stellt Papierfläche keine gemessene Magmamenge dar."
+      ]
+    }
+  }
+}

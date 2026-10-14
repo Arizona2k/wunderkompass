@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Klartext",
+  "learning": {
+    "starter": "Im Buchstabenspiel istHUT der ursprüngliche Text.IVU ist die veränderte Form nach der vereinbarten Regel.",
+    "deeper": "Klartext kann auch andere Daten als eine gewöhnliche Nachricht bezeichnen. Öffentlich, privat und verschlüsselt sind verschiedene Eigenschaften. Ein unbekanntes Wort wird nicht allein dadurch verschlüsselt, dass du es nicht verstehst.",
+    "observe": "Vergleiche die erfundenenSpieltexteHUT undIVU bei der Regel eine Stelle vorwärts. Benenne Ausgangstext und veränderte Form. Schreibe dafür keine echten privaten Nachrichten oder Zugangsdaten auf.",
+    "benefit": "Du unterscheidest ursprüngliche Daten, Sprachverständnis und die Entscheidung über Öffentlichkeit.",
+    "connection": "Die Verschlüsselungskarte zeigt einen Ausgangstext und eine veränderte Form. Verwende nur die erfundenen Spielwörter und trenne den Lernvergleich von echten privaten Daten.",
+    "topic": "science-encryption",
+    "sources": [
+      {
+        "url": "https://csrc.nist.gov/glossary/term/encryption",
+        "title": "NIST · Klartext (Englisch)",
+        "anchor": "Actual selected Definitions121/128: input plaintext transformedto ciphertext, NIST SP800-82r3/800-133Rev2. Not a literal universally-understandable language claim.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Verschlüsselung",
+        "reason": "Klartext ist die Eingabe vor der Verschlüsselung. Seine tatsächliche Verständlichkeit und seine Vertraulichkeit sind getrennte Fragen."
+      },
+      {
+        "term": "Schlüssel",
+        "reason": "Schlüssel und zu verarbeitende Nachricht erfüllen unterschiedliche Rollen. Nicht jeder Schlüssel ist eine geheime Nachricht oder ein Passwort."
+      }
+    ],
+    "question": {
+      "prompt": "Was istHUT im vereinbarten Verschiebespiel?",
+      "answers": [
+        "Automatisch ein öffentliches Geheimnis",
+        "Der Ausgangstext vor dieser Umwandlung",
+        "Ein Beweis, dass jeder jede Sprache versteht"
+      ],
+      "correct": 1,
+      "hint": "Der Begriff beschreibt die Rolle in dem Vorgang, nicht die Berechtigung zur Veröffentlichung.",
+      "why": "HUT ist hier der Ausgangstext. Daraus folgt weder Öffentlichkeit noch universelles Sprachverständnis.",
+      "wrongReasons": [
+        "Die Rolle als Ausgangstext erteilt keine Erlaubnis, echte private Inhalte zu veröffentlichen.",
+        "",
+        "Eine kryptografische Rolle und Sprachverständnis sind verschiedene Eigenschaften."
+      ]
+    }
+  }
+}

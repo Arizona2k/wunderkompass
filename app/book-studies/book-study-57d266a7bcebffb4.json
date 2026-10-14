@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Äquator",
+  "learning": {
+    "starter": "Der Äquator ist die gedachte Mittellinie zwischen Nord- und Südpol. Sein Breitengrad ist null.",
+    "deeper": "Der Äquator ist keine aufgemalte Linie auf der echten Erde und keine Landesgrenze. Er dient der geografischen Einordnung. Die Lage auf dieser Linie allein beschreibt noch nicht das gesamte Klima eines Ortes.",
+    "observe": "Zeichne einen gedachten Erdkreis mit einer Mittellinie und beschrifte nördlich, südlich und 0°. Die flache Skizze ist ein vereinfachter Globus, keine genaue Erdform oder Klimakarte.",
+    "benefit": "Du verwendest die Mittellinie als Bezug und trennst Koordinate, Grenze und Klima.",
+    "connection": "Im Jahreszeitenlabor sind Achse, Licht und Jahresumlauf getrennt. Die Mittellinie ergänzt die Hemisphären, ohne aus der Breite allein das Wetter zu bestimmen.",
+    "lab": "seasons",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/latitude.html",
+        "title": "NOAA · Äquator (Englisch)",
+        "anchor": "Previously actually read full latitude primary: equator0degrees, north/south latitude. Own sphere midpoint not actual climatic boundary or GPS estimate.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was bedeutet 0° Breite im Gedankenmodell?",
+      "answers": [
+        "Die Mitte zwischen nördlicher und südlicher Breitenrichtung",
+        "Ein Ort ohne jede geografische Lage",
+        "Die sichere tägliche Temperatur jedes Orts"
+      ],
+      "correct": 0,
+      "hint": "Die Breitenangabe verwendet den Äquator als Bezug.",
+      "why": "0° Breite beschreibt den Äquator. Eine Koordinate ist keine Temperaturprognose und bedeutet nicht das Fehlen einer Lage.",
+      "wrongReasons": [
+        "",
+        "Null ist hier ein vereinbarter Koordinatenwert und kein fehlender Ort.",
+        "Breite allein liefert keine täglichen Wetter- oder Temperaturdaten."
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Nullmeridian",
+  "learning": {
+    "starter": "Der Nullmeridian ist die Bezugslinie für null Grad geografischer Länge. Sie ist mit Greenwich verbunden.",
+    "deeper": "Anders als beim Äquator muss für die Längenrichtung ein Anfangsmeridian vereinbart werden. Geografische Länge und gesetzliche Uhrzeit sind trotzdem verschiedene Angaben; reale Zeitzonengrenzen folgen nicht überall geraden Meridianen.",
+    "observe": "Zeichne eine gedachte Kugel mit einem markierten Anfangsmeridian und zwei Punkten östlich beziehungsweise westlich. Schreibe die Richtungen aus. Die Skizze ist keine exakte Messung einer historischen Linie oder einer Zeitzone.",
+    "benefit": "Du unterscheidest den Bezug für Länge vom Bezug für Breite und von einer Zeitregel.",
+    "connection": "Das Uhrenlabor verwendet ausdrücklich begrenzte Uhrzeitmodelle. Der Anfangsmeridian erklärt einen geografischen Bezug, nicht alle gesetzlichen Zeitgrenzen.",
+    "lab": "clocks",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/longitude.html",
+        "title": "NOAA · Nullmeridian (Englisch)",
+        "anchor": "Previously actually full longitude primary: chosen0longitude throughGreenwich, longitudeversuslatitude. No exacthistoricmeridian/GPSoffset or false longitude equals time boundaries.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Wofür dient der Nullmeridian unmittelbar?",
+      "answers": [
+        "Für die Salzmenge des Meeres",
+        "Für die tägliche Temperatur",
+        "Als vereinbarter Bezug der geografischen Länge"
+      ],
+      "correct": 2,
+      "hint": "Der Name gehört zu einer Richtung des geografischen Koordinatensystems.",
+      "why": "Der Anfangsmeridian ordnet Längenangaben. Er misst weder Salz noch Wetter und ist keine vollständige gesetzliche Zeitzonenkarte.",
+      "wrongReasons": [
+        "Salzgehalt ist eine Materialeigenschaft, keine geografische Länge.",
+        "Ein Meridian enthält keine aktuellen Temperaturmessungen.",
+        ""
+      ]
+    }
+  }
+}

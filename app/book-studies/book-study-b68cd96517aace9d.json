@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "term": "Neumond",
+  "learning": {
+    "starter": "Bei Neumond sehen wir von der Erde normalerweise kaum etwas von der sonnenbeleuchteten Mondseite.",
+    "deeper": "Der Mond liegt in dieser Phase ungefähr in Richtung der Sonne. Das bedeutet nicht, dass er selbst verschwunden ist oder jeden Neumond die Sonne verdeckt. Die geneigte Bahn ist für die Unterscheidung zur Sonnenfinsternis wichtig.",
+    "observe": "Markiere in einer ausdrücklich vereinfachten Draufsicht die Phase in Sonnenrichtung. Schreibe dazu: keine Vorhersage einer Sonnenfinsternis. Schaue nie direkt in die Sonne; diese Aufgabe verwendet nur Papierzeichen.",
+    "benefit": "Du trennst eine wenig sichtbare Mondphase von einem verschwundenen Mond oder einer sicheren Finsternis.",
+    "connection": "Die Phasenkarte ist keine Finsternisvorhersage. Das räumliche Labor erklärt, weshalb die geneigte Bahn zusätzlich wichtig ist.",
+    "topic": "science-moon-phases",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/moon/moon-phases/",
+        "title": "NASA · Mondphasen",
+        "anchor": "Selected scientific lines287–370: reflected sunlight, illuminated view, first quarter and synodic month; eclipse exceptions and observer perspective retained.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      },
+      {
+        "url": "https://science.nasa.gov/moon/eclipses/",
+        "title": "NASA · Finsternisse",
+        "anchor": "Actual selected science296–345: inclined orbit and alignment. No prediction dates or viewing safety experiment.",
+        "checkedOn": "2026-10-14",
+        "updatedOn": null
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Mondphase",
+        "reason": "Neumond ist eine Beobachterphase mit wenig sichtbarem sonnenbeleuchtetem Anteil. Die Mondkugel bleibt vorhanden; eine Finsternis ist ein eigener Vorgang."
+      }
+    ],
+    "question": {
+      "prompt": "Was darfst du allein aus dem Phasennamen Neumond nicht ableiten?",
+      "answers": [
+        "Eine wenig sichtbare beleuchtete Mondseite",
+        "Eine sichere Sonnenfinsternis an deinem Ort",
+        "Dass der Mond die Erde weiter umkreist"
+      ],
+      "correct": 1,
+      "hint": "Eine Phase nennt noch keine genaue räumliche Ausrichtung und Sichtbarkeit einer Finsternis.",
+      "why": "Neumond allein genügt nicht für eine lokale Sonnenfinsternis. Der Mond muss passend ausgerichtet sein, und Sichtbarkeit hängt vom Ort ab.",
+      "wrongReasons": [
+        "Eine wenig sichtbare beleuchtete Seite gehört zur Phasenerklärung.",
+        "",
+        "Die Mondbewegung hört bei dieser Phase nicht auf. Der Phasenname beendet die Umlaufbahn nicht."
+      ]
+    }
+  }
+}

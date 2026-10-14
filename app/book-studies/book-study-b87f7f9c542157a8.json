@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Ebbe und Flut",
+  "learning": {
+    "starter": "An vielen Küsten steigen und fallen Wasserstände durch Gezeiten. Vor allem Mond und Sonne tragen zu dieser regelmäßigen Wirkung bei.",
+    "deeper": "Örtliche Gezeiten unterscheiden sich. Hoch- und Niedrigwasser benennen Wasserstände; ihr Höhenunterschied ist der Tidenhub. Eine vereinfachte Kurve ist weder ein Fahrplan für jede Küste noch eine sichere Wattwanderempfehlung.",
+    "observe": "Zeichne zwei erfundene Wasserstände von 1 und 3 Zentimetern über demselben Bezug. Bestimme den Unterschied. Die erfundenen Werte sind keine Gezeitenmessung, kein Meeresspiegeltrend und keine Sicherheitsangabe.",
+    "benefit": "Du kannst zwei Wasserstände vergleichen und erkennst die Grenze zu einer echten örtlichen Gezeitenvorhersage.",
+    "connection": "Die Gezeitenkarte und das Labor erklären eine Überlagerung. Aktuelle örtliche Angaben und Sicherheitsregeln lassen sich daraus nicht ersetzen.",
+    "topic": "science-tides",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/tides.html",
+        "title": "NOAA · Gezeiten",
+        "anchor": "Full lines5–13: Sun/Moon gravitational influence, rise/fall, highest/lowest level and tidal range. No all-coasts-identical-period or safe-walking inference.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Springtide",
+        "reason": "Springtide beschreibt häufig einen größeren örtlichen Höhenunterschied um Neu- oder Vollmond. Das Wort benennt keine Jahreszeit oder sichere Wattwanderzeit."
+      },
+      {
+        "term": "Nipptide",
+        "reason": "Nipptide beschreibt eine anders überlagerte Gezeitenwirkung mit kleinerem Unterschied. Kleiner bedeutet nicht ausgeschaltete Mondanziehung oder überall null Gezeiten."
+      }
+    ],
+    "question": {
+      "prompt": "Was bedeuten 1 und 3 Zentimeter im Papierbeispiel?",
+      "answers": [
+        "Zwei erfundene Werte mit einem Unterschied von 2 Zentimetern",
+        "Eine sichere Wattwanderzeit",
+        "Die Gezeiten jeder Küste"
+      ],
+      "correct": 0,
+      "hint": "Rechne den Unterschied aus, aber lies die ausdrücklich genannte Herkunft der Zahlen.",
+      "why": "3 minus1 ergibt2 Zentimeter. Die Rechnung macht erfundene Zahlen nicht zu realen Gezeitendaten.",
+      "wrongReasons": [
+        "",
+        "Ein Höhenvergleich nennt keinen sicheren Zeitpunkt für eine Wattwanderung.",
+        "Die Werte gehören nur zum erfundenen Beispiel, nicht zu sämtlichen Küsten."
+      ]
+    }
+  }
+}

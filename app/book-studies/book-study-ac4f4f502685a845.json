@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Erdmantel",
+  "learning": {
+    "starter": "Zwischen Kruste und Kern liegt der Mantel. Sein heißes Gestein ist überwiegend fest.",
+    "deeper": "Festes Mantelgestein kann sich über sehr lange Zeiträume verformen. Magma entsteht örtlich; es ist kein überall flüssiger Ozean unter schwimmenden Kontinenten. Ein bewegtes Tuch erklärt höchstens Formänderung, nicht Temperatur, Material oder Zeitmaßstab.",
+    "observe": "Zeichne Kruste, Mantel und Kern getrennt. Markiere ein kleines ausdrücklich gedachtes Schmelzgebiet, ohne den ganzen Mantel auszumalen. Das Schema erklärt eine Unterscheidung und berechnet keinen echten Schmelzort.",
+    "benefit": "Du erkennst, warum langsame Verformung und überwiegend fester Zustand zusammenpassen können.",
+    "connection": "Das Plattenlabor setzt kein schwimmendes Magmameer voraus. Die ergänzende Skizze trennt ein örtliches Schmelzgebiet vom überwiegend festen Mantel.",
+    "lab": "plates",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/faqs/are-tectonic-plates-floating-magma",
+        "title": "USGS · Erdmantel (Englisch)",
+        "anchor": "Actual earlier full FAQ: mantle predominantly solid, local melting, liquid outer core separate. No assumption globally liquid mantle or copied source diagram.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Erdkern",
+        "reason": "Kern und Mantel sind unterschiedliche Erdschichten. Ein flüssiger äußerer Kern macht den überwiegend festen Mantel nicht zu einem Magmameer."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Aussage beschreibt das Mantelmodell passend?",
+      "answers": [
+        "Der Mantel ist überall ein Meer aus Magma",
+        "Im Mantel liegt nur kaltes Wasser",
+        "Der Mantel ist überwiegend fest; Schmelze entsteht örtlich"
+      ],
+      "correct": 2,
+      "hint": "Langsame Verformung bedeutet nicht, dass die gesamte Schicht flüssig ist.",
+      "why": "Überwiegend festes Material und örtliche Schmelze widersprechen sich nicht. Das lokale Beispiel ersetzt keine geologische Messung.",
+      "wrongReasons": [
+        "Eine globale Magmaschicht würde die Unterscheidung von überwiegend festem Mantel und örtlichem Magma aufheben.",
+        "Der Mantel ist eine heiße Gesteinsschicht, kein kalter Wasserspeicher.",
+        ""
+      ]
+    }
+  }
+}

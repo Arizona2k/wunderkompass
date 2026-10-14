@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Datenstruktur",
+  "learning": {
+    "starter": "Ein geordneter Zettelstapel und ein verzweigter Plan können Informationen auf unterschiedliche Weise zugänglich machen.",
+    "deeper": "Die Ordnung beeinflusst, welche Vorgänge einfach sind, etwa Suchen oder Einfügen. Eine Papierzeichnung beweist keine tatsächliche Laufzeit eines Computerprogramms. Dieselbe Sammlung kann je nach Aufgabe anders organisiert werden.",
+    "observe": "Schreibe die erfundenenTierwörter Fuchs,Reh undAmsel auf drei Zettel. Vergleiche eine Liste mit einer Ordnung nach Anfangsbuchstaben. Das Sortieren ist dein eigenes Beispiel und keine Computerzeitmessung.",
+    "benefit": "Du wählst eine Ordnung nach der Aufgabe und verwechselst Übersichtlichkeit nicht mit gemessener Programmlaufzeit.",
+    "connection": "Die Computerkarte erklärt Datenverarbeitung. Die Datenstruktur ergänzt, wie Informationen für bestimmte Vorgänge organisiert werden, ohne eine echte Laufzeit aus Papierformen abzuleiten.",
+    "topic": "science-computer",
+    "sources": [
+      {
+        "url": "https://xlinux.nist.gov/dads/HTML/dataStructure.html",
+        "title": "NIST · Datenstruktur (Englisch)",
+        "anchor": "Actual selected definition4–6, authorPEB; organisation supports operations. Citation-date2024 notclaimedoriginalcreation; no borrowedpersonal-address example.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Hashfunktion",
+        "reason": "Ein Hashwert verarbeitet eine gewählte Darstellung von Daten. Deren Ordnung und die Eigenschaften einer Struktur sind eigene Fragen."
+      },
+      {
+        "term": "Algorithmus",
+        "reason": "Datenordnung und Verarbeitungsschritte wirken zusammen. Eine Liste benennt noch nicht jedes Verfahren, das mit ihr ausgeführt werden kann."
+      }
+    ],
+    "question": {
+      "prompt": "Wovon sollte eine passende Datenordnung hier abhängen?",
+      "answers": [
+        "Von der Aufgabe und den benötigten Zugriffen",
+        "Nur von der schönsten Papierfarbe",
+        "Von der Behauptung, jede Ordnung sei gleich schnell"
+      ],
+      "correct": 0,
+      "hint": "Frage zuerst, ob du etwas suchen, anhängen oder anders verändern möchtest.",
+      "why": "Eine Datenstruktur soll zu ihren Vorgängen passen. Papierfarbe und ungeprüfte Geschwindigkeitsbehauptungen beantworten diese Aufgabe nicht.",
+      "wrongReasons": [
+        "",
+        "Eine Papierfarbe bestimmt keine passenden Datenzugriffe oder Strukturregeln.",
+        "Unterschiedliche Ordnungen können unterschiedliche Vorgänge begünstigen. Gleich schnell ist ohne Messung keine begründete Aussage."
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Eukaryot",
+  "learning": {
+    "starter": "Dieser Name beschreibt eine Gruppe nach ihrem Zellaufbau. Er sagt nicht einfach groß oder klein.",
+    "deeper": "Die Gruppierung beruht auf Zelleigenschaften und nicht nur auf der sichtbaren Größe. Ein gezeichnetes Kernsymbol kann bei einem Vergleich helfen, ist aber keine vollständige Bestimmung eines unbekannten Lebewesens.",
+    "observe": "Ordne auf Papier die bekannten Beispiele Pflanze und Bakterium den beschrifteten Zelltypen mit beziehungsweise ohne umhüllten Kern zu. Verwende keine unbekannten Proben. Dieses Sortieren überprüft einen Begriff und ersetzt keine biologische Bestimmung.",
+    "benefit": "Du ordnest den Begriff nach dem Zellaufbau statt nach der Größe eines Lebewesens.",
+    "connection": "Der Zellbauplan hilft beim Strukturvergleich. Große Tiere und kleine einzelne eukaryotische Lebewesen lassen sich nicht allein nach Größe in diese Gruppen sortieren.",
+    "topic": "science-cell",
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Cell",
+        "title": "NHGRI · Zellen",
+        "anchor": "Full definition and narration: unicellular/multicellular, eukaryotic/prokaryotic groups. No adult cell-count range or nanobot agency copied.",
+        "updatedOn": "2026-10-14",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Zelle",
+        "reason": "Eukaryotische Zelltypen besitzen einen membranumhüllten Kern. Die Gruppe wird nicht bloß nach der Größe eines Lebewesens oder Zeichens bestimmt."
+      }
+    ],
+    "question": {
+      "prompt": "Woran orientiert sich die Unterscheidung in diesem einfachen Vergleich?",
+      "answers": [
+        "Am Zellaufbau, besonders dem umhüllten Kern",
+        "Nur an der Größe auf dem Papier",
+        "Nur an einer beliebig gewählten Farbe"
+      ],
+      "correct": 0,
+      "hint": "Vergleiche die beschriftete Struktur, nicht die Größe der Zeichnung.",
+      "why": "Der umhüllte Kern gehört zur Unterscheidung der Zelltypen. Symbolgröße und Zeichenfarbe sind keine eigenen biologische­n Gruppenmerkmale.",
+      "wrongReasons": [
+        "",
+        "Eine vergrößerte oder verkleinerte Zeichnung ändert den Zelltyp nicht.",
+        "Die gewählte Farbe eines Schemas ist kein Nachweis für die tatsächliche biologische Gruppe."
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Kontinent",
+  "learning": {
+    "starter": "Unser Lernmodell benennt sieben Kontinente. Ein Kontinent ist nicht automatisch dasselbe wie eine tektonische Platte.",
+    "deeper": "Geografische Einteilungen und bewegliche geologische Platten beantworten unterschiedliche Fragen. Eine Platte kann Land und Meeresboden tragen. Die Zahl sieben beschreibt unsere gewählte Kontinenteinteilung, nicht ein Experiment zur Plattenzahl.",
+    "observe": "Zeichne zwei gedachte Landflächen auf einem gemeinsam markierten Plattenbereich. Beschrifte Landform und Platte getrennt. Die Fantasieskizze ist keine tatsächliche Grenze oder Zählung der Erdplatten.",
+    "benefit": "Du unterscheidest geografische Einteilung und geologischen Bewegungsbereich.",
+    "connection": "Das Plattenlabor vergleicht geologische Bewegungen. Die Kontinenteinteilung des Globus bleibt eine andere Betrachtung und ändert keine gespeicherten Kartenstände.",
+    "lab": "plates",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/faqs/are-tectonic-plates-floating-magma",
+        "title": "USGS · Kontinent",
+        "anchor": "Previously actually full selectedplateFAQ: tectonicplates/mantle not liquidsea. Sevencontinents explicitly an own existinglearningmodel, not a claimed geological measurement or soleuniversal classification.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was ist eine falsche Gleichsetzung?",
+      "answers": [
+        "Die Symbole sind ausdrücklich als Modell beschriftet",
+        "Unsere Kontinenteinteilung nennt sieben",
+        "Ein Kontinent ist in jedem Fall genau eine tektonische Platte"
+      ],
+      "correct": 2,
+      "hint": "Landflächen und Platten wurden aus unterschiedlichen Gründen eingezeichnet.",
+      "why": "Kontinent und Platte sind verschiedene Begriffe. Die Fantasieskizze zeigt diese Möglichkeit, zählt aber keine tatsächlichen Erdplatten.",
+      "wrongReasons": [
+        "Die Modellbeschriftung hält die Grenze der Aussage sichtbar.",
+        "Sieben benennt die gewählte Lernkonvention, keinen universellen Versuchsbefund.",
+        ""
+      ]
+    }
+  }
+}

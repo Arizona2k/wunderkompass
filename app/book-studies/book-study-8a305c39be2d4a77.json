@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Wetter",
+  "learning": {
+    "starter": "Wetter beschreibt Luftbedingungen an einem Ort zu einer Zeit. Dazu zählen etwa Temperatur, Wind und Niederschlag.",
+    "deeper": "Ort, Zeitpunkt und gemessene Größe gehören zur Angabe. Eine einzelne Temperatur sagt nicht gleichzeitig alles über Wind und Regen aus. Das tatsächliche Wetter kann von langfristigen Durchschnittswerten abweichen.",
+    "observe": "Fülle einen Papier-Wetterzettel mit ausdrücklich erfundenem Ort, Zeitpunkt und drei getrennten Größen. Kennzeichne alle Werte als erfunden. Das Blatt ist keine aktuelle Meldung oder Entscheidungshilfe für gefährliches Wetter.",
+    "benefit": "Du formulierst eine nachvollziehbare Wetterangabe und erkennst fehlende Daten.",
+    "connection": "Die Regler im Wetterlabor erzeugen einen gedachten Zustand. Ein vollständig beschrifteter Wetterzettel trennt diesen Modellzustand von tatsächlich beobachteten Daten.",
+    "lab": "weather",
+    "sources": [
+      {
+        "url": "https://www.noaa.gov/jetstream/global/climate-vs-weather",
+        "title": "NOAA · Wetter (Englisch)",
+        "anchor": "Actual31–38: atmosphericconditions specifictime, temperaturewindrain examples, longtermnormal versus actualday.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was fehlt bei der Angabe „Heute ist es 10 Grad“ besonders für einen Vergleich?",
+      "answers": [
+        "Ein klarer Ort und eine passende Einheit beziehungsweise Messangabe",
+        "Ein frei erfundener Länderrekord",
+        "Ein Versprechen, dass es morgen genau gleich wird"
+      ],
+      "correct": 0,
+      "hint": "Vergleichbare Angaben brauchen einen Bezug; eine Zukunftsgarantie gehört nicht dazu.",
+      "why": "Ort, Zeit und Einheit machen eine Angabe einordenbar. Die heutige Zahl liefert keine sichere morgige Vorhersage.",
+      "wrongReasons": [
+        "",
+        "Ein erfundener Rekord ist keine Messinformation und darf nicht ergänzt werden.",
+        "Die aktuelle Temperatur garantiert kein gleiches zukünftiges Wetter."
+      ]
+    }
+  }
+}

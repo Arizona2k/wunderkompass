@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "term": "Spektrum",
+  "learning": {
+    "starter": "Unser sichtbares Licht ist nur ein Abschnitt einer viel größeren Ordnung. Ein Farbband zeigt nicht alles.",
+    "deeper": "Ein Messspektrum kann außerdem zeigen, wie viel Strahlung bei bestimmten Wellenlängen gemessen wurde. Eine bunte Zeichnung ohne Skala ist kein genauer Messbericht und beweist keine Zusammensetzung eines Sterns.",
+    "observe": "Zeichne drei Felder für Radio, Infrarot und sichtbar. Markiere das sichtbare Feld als Ausschnitt. Diese grobe Ordnungszeichnung hat absichtlich keine maßstabsgetreuen Breiten und zeigt nicht alle Spektralbereiche.",
+    "benefit": "Du liest ein Farbband als Ausschnitt und unterscheidest Darstellung von wirklicher Messung.",
+    "connection": "Sterne senden Strahlung aus. Ein Spektrum kann ihre Untersuchung unterstützen, während die Fusionskarte den Vorgang im Sterninneren erklärt.",
+    "topic": "science-fusion",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/ems/02_anatomy/",
+        "title": "NASA · Elektromagnetische Wellen",
+        "anchor": "Selected Energy / Electromagnetic waves / Waves or particles / Describing electromagnetic energy; rest mass and vacuum qualifiers retained.",
+        "updatedOn": "2023-08-03",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Strahlung",
+        "reason": "Ein Spektrum ordnet elektromagnetische Strahlung nach einer Größe wie Wellenlänge. Eine bunte Skizze zeigt nur ausgewählte Bereiche und keine vollständige Messung."
+      },
+      {
+        "term": "Infrarot",
+        "reason": "Infrarot ist ein Teil des elektromagnetischen Spektrums außerhalb des für uns sichtbaren Bereichs. Gewählte Bildfarben machen es als Darstellung lesbar."
+      },
+      {
+        "term": "Wellenlänge",
+        "reason": "Wellenlänge kann als Ordnungsgröße eines Spektrums dienen. Ein räumlicher Wiederholungsabstand und eine ganze spektrale Verteilung sind verschiedene Begriffe."
+      }
+    ],
+    "question": {
+      "prompt": "Was darfst du aus drei gleich breiten gezeichneten Spektralfeldern schließen?",
+      "answers": [
+        "Nur die gemeinte grobe Ordnung, nicht gleiche echte Bereichsbreiten",
+        "Dass alle Strahlung sichtbar ist",
+        "Dass die Felder eine genaue Messung ersetzen"
+      ],
+      "correct": 0,
+      "hint": "Suche eine echte Skala und Messwerte, bevor du Größen aus der Zeichnung ableitest.",
+      "why": "Die Felder geben eine grobe Ordnung an. Ohne passende Skala sagen ihre Papierbreiten nichts über tatsächliche Bereichsbreiten.",
+      "wrongReasons": [
+        "",
+        "Radio und Infrarot sind nicht für unsere Augen sichtbar. Ein Farbband macht sie nicht sichtbar wie gewöhnliches Licht.",
+        "Eine Ordnungszeichnung ohne Messdaten ersetzt keinen Messbericht."
+      ]
+    }
+  }
+}

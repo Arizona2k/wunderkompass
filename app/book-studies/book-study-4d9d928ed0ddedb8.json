@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Vulkanasche",
+  "learning": {
+    "starter": "Vulkanasche besteht aus sehr kleinen Gesteins- und Glasstücken. Sie entsteht nicht wie Holzasche beim Verbrennen.",
+    "deeper": "Bei explosiven Vorgängen kann Gesteinsmaterial zerteilt und herausgeschleudert werden. Wind kann die kleinen Teilchen weitertragen. Ein Aschezeichen im Modell ist weder ungefährlicher Staub noch eine genaue Vorhersage für einen Ort.",
+    "observe": "Beschrifte auf Papier zwei getrennte gedachte Proben: Holzverbrennungsreste und vulkanische Gesteinsfragmente. Keine Asche sammeln, berühren, verbrennen oder einatmen; der sichere Vergleich verwendet ausschließlich Wörter und Zeichnungen.",
+    "benefit": "Du unterscheidest zwei sehr verschieden entstandene Materialien trotz ähnlicher Alltagsbezeichnung.",
+    "connection": "Ein explosiver Modellzustand zeigt einen vereinfachten Zusammenhang, nicht echte Ascheteilchen oder deren Verteilung. Der Papiervergleich ergänzt die Materialherkunft.",
+    "lab": "volcano",
+    "sources": [
+      {
+        "url": "https://volcanoes.usgs.gov/volcanic_ash/ash.html",
+        "title": "USGS · Vulkanasche (Englisch)",
+        "anchor": "Actual32–34: rock/mineral/volcanicglass fragments, not combustionproduct, wind dispersal. Exclude medical advice, handling, copiedmedia, universal distances or hazardsforecast.",
+        "updatedOn": "2016-01-25",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Gestein",
+        "reason": "Vulkanasche besteht aus kleinen vulkanischen Materialfragmenten. Die Bezeichnung Asche bedeutet hier keine Holzverbrennung."
+      }
+    ],
+    "question": {
+      "prompt": "Warum ist Vulkanasche nicht einfach verbranntes Holz?",
+      "answers": [
+        "Weil jeder dunkle Staub aus Holz besteht",
+        "Weil ein Vulkan nie Gesteinsmaterial enthält",
+        "Weil es zerteiltes vulkanisches Gesteins- und Glasmaterial ist"
+      ],
+      "correct": 2,
+      "hint": "Vergleiche die Herkunft der Materialien, nicht nur ihre Farbe.",
+      "why": "Vulkanische Fragmente entstehen durch Zerteilen und Auswerfen von Gesteinsmaterial. Das ist ein anderer Vorgang als Holzverbrennung.",
+      "wrongReasons": [
+        "Eine Farbe beweist keine Herkunft. Dunkle Teilchen sind nicht automatisch Holzreste.",
+        "Vulkane fördern Gesteinsmaterial; die Asche kann daraus entstandene kleine Fragmente enthalten.",
+        ""
+      ]
+    }
+  }
+}

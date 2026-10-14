@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Tropen",
+  "learning": {
+    "starter": "Die Tropen liegen im geografischen Gürtel zwischen den Wendekreisen. Das ist nicht überall dieselbe Landschaft.",
+    "deeper": "Breite und Sonnenstand erklären einen Teil der Bedingungen. Regenwald, trockene Landschaften und andere Lebensräume dürfen nicht aus einer einzigen Gürtelfarbe gleichgesetzt werden. Ein geografischer Bereich und eine bestimmte Klimaklassifikation sind unterschiedliche Einteilungen.",
+    "observe": "Markiere zwei erfundene Punkte zwischen den Wendekreisen. Beschrifte ihre gezeichnete Lage, aber lasse Niederschlag und Höhenlage offen. Schaue nicht zur Sonne; das Schema ist keine tatsächliche Klimamessung.",
+    "benefit": "Du ordnest einen Breitengürtel ein, ohne allen Punkten dasselbe Wetter zuzuschreiben.",
+    "connection": "Das Jahreszeitenlabor vergleicht Achsneigung und Licht. Die Tropenpunkte ergänzen eine Lagefrage, ohne eine vollständige Klimakarte daraus zu machen.",
+    "lab": "seasons",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/seasons/en/",
+        "title": "NASA · Tropen",
+        "anchor": "Actually full selected axis/seasonssource, original geographicbelt retained. Own beltversuslocalweather distinction; no universalrainforest/temperature/constantdaylength claim.",
+        "updatedOn": "2025-07-29",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was folgt aus zwei Punkten im gezeichneten Tropengürtel nicht automatisch?",
+      "answers": [
+        "Dass beide in dem gewählten Bereich liegen",
+        "Dass sie genau denselben örtlichen Niederschlag besitzen",
+        "Dass die Wendekreise ihren Lagebereich begrenzen"
+      ],
+      "correct": 1,
+      "hint": "Die Zeichnung enthält keine Regenmessungen für die zwei Orte.",
+      "why": "Der Gürtel beschreibt eine Lage. Gleicher örtlicher Niederschlag wurde damit nicht nachgewiesen.",
+      "wrongReasons": [
+        "Die Lage im gezeichneten Bereich ist eine zulässige Modellbeschreibung.",
+        "",
+        "Die Wendekreise begrenzen den geografischen Gürtel; das bestimmt nicht jedes Ortswetter."
+      ]
+    }
+  }
+}

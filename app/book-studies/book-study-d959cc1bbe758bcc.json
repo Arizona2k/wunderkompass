@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Plankton",
+  "learning": {
+    "starter": "Plankton wird von Wasserströmungen mitgetragen. Es ist nicht der Name für nur eine einzige Tierart.",
+    "deeper": "Plankton umfasst unterschiedliche Lebewesen, darunter auch größere schwache Schwimmer. Manche gehören nur in einer frühen Lebensphase dazu. Größe oder ein einzelner Bildpunkt allein legt die Gruppe nicht fest; entscheidend ist hier das Mitdriften.",
+    "observe": "Zeichne einen Gedankenstrom und zwei Wesen: eines wird mitgetragen, das andere bewegt sich deutlich dagegen. Beschrifte die erfundenen Verhaltensweisen. Keine lebenden Tiere oder Wasserproben sammeln; die Zeichnung bestimmt keine wirkliche Art.",
+    "benefit": "Du ordnest den Begriff nach Verhalten ein und vermeidest eine Gleichsetzung mit winzig oder einer einzelnen Art.",
+    "connection": "Im Nahrungsnetz können verschiedene Planktonorganismen unterschiedliche Rollen besitzen. Mitdriften beschreibt ihre Lebensweise, nicht automatisch dasselbe Futter oder dieselbe Art.",
+    "topic": "science-foodweb",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/plankton.html",
+        "title": "NOAA · Plankton (Englisch)",
+        "anchor": "Actual6–8/17: driftcriterion, smallandlargerorganisms, someyoungstagesonly. Exclude literal allphytoplanktonplants, universalnightmigration, microscopicall or spacevisiblemigration claims.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Welches Merkmal ist für den Planktonbegriff hier entscheidend?",
+      "answers": [
+        "Mit Strömungen treiben und nicht ausreichend dagegen anschwimmen",
+        "Immer derselbe sichtbare Farbpunkt sein",
+        "Ausnahmslos kleiner als jeder gezeichnete Punkt sein"
+      ],
+      "correct": 0,
+      "hint": "Vergleiche das Verhalten im gedachten Wasserstrom, nicht die Größe deiner Zeichen.",
+      "why": "Mitdriften ist das relevante Merkmal. Die Gruppe umfasst verschiedene Lebewesen und nicht ausschließlich winzige gezeichnete Punkte.",
+      "wrongReasons": [
+        "",
+        "Eine Darstellungsfarbe definiert keine biologische Gruppe.",
+        "Zeichengröße ist frei gewählt; auch größere Lebewesen können zum Plankton gehören."
+      ]
+    }
+  }
+}

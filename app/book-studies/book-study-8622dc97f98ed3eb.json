@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "term": "Nordpol",
+  "learning": {
+    "starter": "Der geografische Nordpol ist das nördliche Ende der gedachten Erdachse. Er ist kein Ort, den jedes Kompassbild genau angibt.",
+    "deeper": "Geografische Pole und magnetische Pole sind verschiedene Begriffe. Der geografische Nordpol liegt über dem Arktischen Ozean; das Meereis verändert sich und ist kein fester Kontinent. Eine Karte mit Eisfläche muss ihren tatsächlichen Stand nennen.",
+    "observe": "Markiere das obere Achsende eines gedachten Globus und beschrifte geografischer Nordpol. Zeichne kein frei erfundenes aktuelles Eisbild dazu. Das Achsenschema ist keine Navigations- oder Reiseanweisung.",
+    "benefit": "Du trennst Achsende, magnetische Richtung und eine zeitabhängige Eisfläche.",
+    "connection": "Das Jahreszeitenlabor nutzt eine gedachte Achse. Die Ergänzung benennt ihren geografischen Pol und verhindert eine Verwechslung mit Kompass oder aktuellem Eisstand.",
+    "lab": "seasons",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/latitude.html",
+        "title": "NOAA · Nordpol (Englisch)",
+        "anchor": "Previously full latitude scientific polar90degrees andlatdefinition. Originaloceanlocation retained, new clarification geographicaxispoint not magneticneedle target; no currentseaiceextent.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-14"
+      },
+      {
+        "url": "https://www.ncei.noaa.gov/products/geomagnetism-frequently-asked-questions",
+        "title": "NOAA NCEI · geografische und magnetische Pole",
+        "anchor": "Actual selected11/30/35–39: rotation axis and magnetic poles distinct; no obsolete WMM2020coordinates, offsetangle, magneticstormpredictions or images.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was benennt der geografische Nordpol im Achsenschema?",
+      "answers": [
+        "Das nördliche Achsende",
+        "Jede Stelle, zu der ein beliebiger Magnet zeigt",
+        "Einen unveränderlichen nördlichen Landkontinent"
+      ],
+      "correct": 0,
+      "hint": "Geografisch beschreibt hier die Achse und nicht den Kompass.",
+      "why": "Das Achsende definiert den geografischen Pol. Magnetische Richtungen und sich veränderndes Meereis müssen getrennt betrachtet werden.",
+      "wrongReasons": [
+        "",
+        "Eine magnetische Richtung legt nicht dieselbe Definition wie das geografische Achsende fest.",
+        "Über dem Arktischen Ozean liegt kein fester nördlicher Kontinent."
+      ]
+    }
+  }
+}

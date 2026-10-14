@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Erdkern",
+  "learning": {
+    "starter": "Ganz innen liegt der Erdkern. Sein äußerer Teil ist flüssig und sein innerer Teil fest.",
+    "deeper": "Innerer und äußerer Kern sind verschiedene Bereiche. Heiß bedeutet nicht automatisch flüssig: Auch die Bedingungen im Inneren sind wichtig. Eine farbige Zeichnung zeigt die Ordnung der Schichten, nicht eine geöffnete oder direkt fotografierte Erde.",
+    "observe": "Zeichne zwei ineinanderliegende Kernbereiche innerhalb eines Mantelrings. Beschrifte fest innen und flüssig außen. Die Farben sind frei gewählt; Ringdicken sind kein Maßstab und Papierzustände keine echten Erdmaterialien.",
+    "benefit": "Du unterscheidest die beiden Kernbereiche und erkennst die Grenze einer Schichtenskizze.",
+    "connection": "Das Erdschichtenlabor ordnet Kruste, Mantel und Kern. Die eigene Zweiteilung vertieft den Kern, ohne aus dem Farbbild eine maßstäbliche Aufnahme zu machen.",
+    "lab": "depth",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/programs/earthquake-hazards/science-earthquakes",
+        "title": "USGS · Erdkern (Englisch)",
+        "anchor": "Earlier actual same-day selected Earthstructure paragraph: inner solid, outer liquid, crust/mantle/core. Fresh reopening timed out; use earlier documented reading, no new thickness/temperature claim.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Erdmantel",
+        "reason": "Kern und Mantel sind unterschiedliche Erdschichten. Ein flüssiger äußerer Kern macht den überwiegend festen Mantel nicht zu einem Magmameer."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Beschriftung gehört zum vereinfachten Erdkernmodell?",
+      "answers": [
+        "Innerer Kern fest, äußerer Kern flüssig",
+        "Beide Kernbereiche sind kaltes Wasser",
+        "Der gesamte Mantel ist der flüssige Kern"
+      ],
+      "correct": 0,
+      "hint": "Trenne den Kern vom Mantel und den inneren vom äußeren Kernbereich.",
+      "why": "Der Kern besitzt einen festen inneren und einen flüssigen äußeren Bereich. Das Modell ordnet Zustände zu, bildet aber keine tatsächlichen Temperaturen oder Größen ab.",
+      "wrongReasons": [
+        "",
+        "Kernmaterial ist kein kalter Wasserspeicher. Die beschrifteten Bereiche beschreiben andere Erdmaterialien.",
+        "Mantel und Kern sind unterschiedliche Schichten; überwiegend fester Mantel ist nicht gleich äußerer Kern."
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Wasserdampf",
+  "learning": {
+    "starter": "Wasser kann als unsichtbares Gas in der Luft vorkommen. Die sichtbare weiße Wolke besteht dagegen aus kleinen Tröpfchen oder Eisteilchen.",
+    "deeper": "Die Alltagssprache nennt sichtbare Nebelwolken oft Dampf. Fachlich unterscheidet man gasförmiges Wasser von den sichtbaren kondensierten Tröpfchen. Unsichtbarkeit bedeutet nicht, dass die Luft überhaupt kein Wasser enthält.",
+    "observe": "Sortiere die drei Papierbegriffe unsichtbares Gas, sichtbare Tröpfchen und sichtbare Eiskristalle. Ordne sie der gasförmigen oder kondensierten Form zu. Die Wörter sind keine Beobachtung einzelner echter Moleküle.",
+    "benefit": "Du verstehst den Unterschied zwischen einer sichtbaren Wolke und dem unsichtbaren gasförmigen Wasser.",
+    "connection": "Die Wasserkreislaufkarte verbindet unsichtbares gasförmiges Wasser und sichtbare Kondensation. Trenne beide Zeichen im Modell.",
+    "topic": "science-water-cycle",
+    "sources": [
+      {
+        "url": "https://www.noaa.gov/jetstream/clouds",
+        "title": "NOAA · Wolken",
+        "anchor": "Full selected cloud body: water droplets/ice crystals and condensation, gas itself invisible. No smoke-formation guarantee or numerical cloud claims.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Kondensation",
+        "reason": "Gasförmiges Wasser ist unsichtbar; kondensierte Tröpfchen können sichtbar sein. Alltagssprache und fachliche Zustandsbeschreibung müssen unterschieden werden."
+      }
+    ],
+    "question": {
+      "prompt": "Was zeigt eine weiße sichtbare Wasserwolke hauptsächlich?",
+      "answers": [
+        "Unsichtbares Gas als feste weiße Farbe",
+        "Kleine kondensierte Tröpfchen oder Eisteilchen",
+        "Dass Wasser verschwunden ist"
+      ],
+      "correct": 1,
+      "hint": "Sichtbar und gasförmig sind bei dieser Erklärung nicht dasselbe.",
+      "why": "Die sichtbare Wolke enthält kondensierte Teilchen. Wasserdampf im fachlichen Sinn ist das gasförmige Wasser.",
+      "wrongReasons": [
+        "Die weiße sichtbare Wolke wird nicht einfach als Farbe des unsichtbaren Gases erklärt.",
+        "",
+        "Kondensierte Tröpfchen sind vorhandenes Wasser, kein Nachweis, dass es verschwunden ist."
+      ]
+    }
+  }
+}

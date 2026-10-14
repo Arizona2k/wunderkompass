@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "term": "Zelle",
+  "learning": {
+    "starter": "Eine Zelle kann allein leben oder mit anderen Zellen zusammenarbeiten. Ein großes Lebewesen besteht aus vielen Zellen.",
+    "deeper": "Zellen mit membranumhülltem Zellkern werden eukaryotisch genannt, solche ohne diesen Kern prokaryotisch. Eine gemeinsame Zeichnung darf diese Unterschiede nicht einfach weglassen. Viren sind keine Zellen.",
+    "observe": "Zeichne zwei ausdrücklich erfundene Zellschemata: mit umhülltem Kern und ohne diesen Kern. Schreibe darunter, dass Form, Zahl und Größen nicht wirklich gemessen sind. Sammle oder züchte dafür keine Mikroorganismen.",
+    "benefit": "Du erkennst unterschiedliche Zelltypen und vermeidest eine einzige vermeintlich richtige Zellform.",
+    "connection": "Die Zellkarte zeigt einen vereinfachten Bauplan. Frage immer, welchen Zelltyp ein Schema darstellt, statt es auf alle Lebewesen zu übertragen.",
+    "topic": "science-cell",
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Cell",
+        "title": "NHGRI · Zellen",
+        "anchor": "Full definition and narration: unicellular/multicellular, eukaryotic/prokaryotic groups. No adult cell-count range or nanobot agency copied.",
+        "updatedOn": "2026-10-14",
+        "checkedOn": "2026-10-14"
+      },
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Virus",
+        "title": "NHGRI · Viren und Wirtszellen",
+        "anchor": "Selected full definition/narration: nucleic acid plus protein coat and host cell dependency; no diseases, medical advice, copied illustration or viral culture.",
+        "updatedOn": "2026-10-14",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Zellmembran",
+        "reason": "Die Membran grenzt die Zelle ab und ist am Stoffaustausch beteiligt. Ein Ring im Schema ist keine vollständige Darstellung aller Transportvorgänge."
+      },
+      {
+        "term": "Eukaryot",
+        "reason": "Eukaryotische Zelltypen besitzen einen membranumhüllten Kern. Die Gruppe wird nicht bloß nach der Größe eines Lebewesens oder Zeichens bestimmt."
+      },
+      {
+        "term": "Prokaryot",
+        "reason": "Prokaryotische Zellen besitzen keinen membranumhüllten Kern. Dies bedeutet nicht fehlende Erbinformation oder einen leeren Zellinhalt."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Aussage passt zu den zwei unterschiedlichen Zellschemata?",
+      "answers": [
+        "Jede Zelle hat einen membranumhüllten Kern",
+        "Alle Lebewesen bestehen aus genau einer Zelle",
+        "Zellen unterscheiden sich; nicht jede hat einen solchen Kern"
+      ],
+      "correct": 2,
+      "hint": "Vergleiche die beiden ausdrücklich verschiedenen Schemata.",
+      "why": "Es gibt Zelltypen mit und ohne membranumhüllten Zellkern. Auch die Anzahl von Zellen eines Lebewesens kann verschieden sein.",
+      "wrongReasons": [
+        "Bakterienzellen haben keinen membranumhüllten Kern. Die Aussage würde diesen Zelltyp auslassen.",
+        "Viele Lebewesen bestehen aus zahlreichen Zellen. Einzeller sind nicht der einzige mögliche Aufbau.",
+        ""
+      ]
+    }
+  }
+}

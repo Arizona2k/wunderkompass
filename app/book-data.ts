@@ -5,7 +5,7 @@ import whyIndex from './book-why-index.json' with {type:'json'};
 import {WORLD_INDEX} from './world-index';
 import {validateBookData} from './book-validation.mjs';
 export type BookSource={url:string;title:string;anchor:string;updatedOn:string|null;checkedOn:string};
-export type BookLearning={symbol?:string;quantity?:string;relatedWords?:{term:string;reason:string}[];starter:string;deeper:string;observe:string;benefit:string;topic:string;connection:string;model?:'length'|'duration'|'temperature';illustration?:'entities';sources:BookSource[];question:{prompt:string;answers:string[];correct:number;hint:string;why:string;wrongReasons:string[]}};
+export type BookLearning=({topic:string;lab?:never}|{lab:string;topic?:never})&{symbol?:string;quantity?:string;relatedWords?:{term:string;reason:string}[];starter:string;deeper:string;observe:string;benefit:string;connection:string;model?:'length'|'duration'|'temperature';illustration?:'entities';sources:BookSource[];question:{prompt:string;answers:string[];correct:number;hint:string;why:string;wrongReasons:string[]}};
 export type BookData={schemaVersion:1;words:[string,string,string][];why:[string,string][];learning?:Record<string,BookLearning>};
 let saved:BookData|null=null,pending:Promise<BookData>|null=null;
 export function loadBookData():Promise<BookData>{

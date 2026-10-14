@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Zellmembran",
+  "learning": {
+    "starter": "Die Membran bildet eine Grenze, an der bestimmte Stoffe hinein- oder hinausgelangen können.",
+    "deeper": "Ein einfacher Ring kann die Abgrenzung zeigen, aber nicht den ganzen Aufbau und alle Transportvorgänge. Membran und Zellwand sind verschiedene Strukturen. Der Austausch ist kein bewusstes Entscheiden einer kleinen Person.",
+    "observe": "Zeichne einen gedachten Zellring mit zwei unterschiedlich beschrifteten Pfeilen hinein und hinaus. Markiere ihn als Schema. Die Pfeile stehen nicht für beliebige offene Löcher und messen keine Stoffmenge oder Transportzeit.",
+    "benefit": "Du erkennst eine Grenze mit Austausch und unterscheidest Membran, Zellwand und eine geschlossene Dose.",
+    "connection": "Die Zellkarte zeigt einen begrenzten Bauplan. Ein Membranring ist eine Hilfe für die Abgrenzung, keine maßstäbliche Aufnahme oder Zellwand.",
+    "topic": "science-cell",
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Cell-Membrane-Plasma-Membrane",
+        "title": "NHGRI · Zellmembran",
+        "anchor": "Full definition: boundary, lipid bilayer, selective transport; narration distinguishes cell wall. No universal cholesterol or conscious-decision metaphor.",
+        "updatedOn": "2026-10-14",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Zelle",
+        "reason": "Die Membran grenzt die Zelle ab und ist am Stoffaustausch beteiligt. Ein Ring im Schema ist keine vollständige Darstellung aller Transportvorgänge."
+      }
+    ],
+    "question": {
+      "prompt": "Was erklärt eine Membranskizze mit Stoffpfeilen?",
+      "answers": [
+        "Abgrenzung und möglichen Stoffaustausch",
+        "Dass jeder Stoff immer ungehindert hindurchgeht",
+        "Dass Membran und Zellwand dieselbe Struktur sind"
+      ],
+      "correct": 0,
+      "hint": "Eine Grenze kann einen geregelten Austausch ermöglichen, ohne völlig offen zu sein.",
+      "why": "Die Membran grenzt ab und beteiligt sich am Austausch. Die Skizze erklärt nicht, dass alle Stoffe immer frei hindurchgehen.",
+      "wrongReasons": [
+        "",
+        "Der Austausch hängt von Stoffen und Membranvorgängen ab. Ein Pfeil ist kein Beleg für unbegrenzten Durchgang.",
+        "Eine zusätzliche Zellwand und die Zellmembran sind unterschiedliche Strukturen."
+      ]
+    }
+  }
+}

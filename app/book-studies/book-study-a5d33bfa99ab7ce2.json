@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Recycling",
+  "learning": {
+    "starter": "Beim Recycling werden Materialien aufbereitet. Weiterbenutzen und Abfallvermeiden sind andere Möglichkeiten.",
+    "deeper": "Ein noch nutzbarer Gegenstand muss nicht allein wegen seines Alters weggeworfen werden. Welche Materialien gesammelt und verwertet werden, hängt auch von örtlichen Regeln ab. Ein Recyclingsymbol allein ist keine Garantie, dass ein beliebiger Gegenstand überall verwertet wird.",
+    "observe": "Ordne drei eigene Papierkarten: einen Stift weiterverwenden, einen kaputten Gegenstand fachgerecht reparieren, Material aufbereiten. Keine Abfälle anfassen oder Geräte öffnen; die Karten enthalten nur gedachte Vorgänge.",
+    "benefit": "Du trennst Wiederverwendung, Reparatur und Materialaufbereitung.",
+    "connection": "Das Wasserlabor erklärt Stoffwege nur für sein Modell. Die Karten ergänzen Materialentscheidungen im Alltag; keine Entsorgungsregel wird aus dem Kreislaufbild abgeleitet.",
+    "lab": "water",
+    "sources": [
+      {
+        "url": "https://www.epa.gov/recycle/what-you-can-do",
+        "title": "US EPA · Recycling",
+        "anchor": "Actual23/45–57: reduce/reuse/recycle distinct, maintain/repair/use school supplies. Exclude US-specificbininstructions, oldmercurybattery andtoolhandling advice, copiedactivities/media.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Ein intakter Stift wird weiterbenutzt. Welcher Vorgang passt?",
+      "answers": [
+        "Wiederverwendung, nicht erst eine neue Materialaufbereitung",
+        "Eine garantierte neue Rohstoffanalyse",
+        "Automatisch Recycling in jeder örtlichen Anlage"
+      ],
+      "correct": 0,
+      "hint": "Der Gegenstand bleibt in Gebrauch und wurde im Beispiel nicht zu neuem Material aufbereitet.",
+      "why": "Weiterbenutzen erhält den Gegenstand. Recycling beschreibt einen anderen Schritt mit Materialaufbereitung.",
+      "wrongReasons": [
+        "",
+        "Das Beispiel enthält keine Materialanalyse.",
+        "Nutzung und Aufbereitung sind verschieden; eine örtliche Anlage wurde nicht geprüft."
+      ]
+    }
+  }
+}

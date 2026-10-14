@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Kernfusion",
+  "learning": {
+    "starter": "Im Inneren der Sonne laufen Kernvorgänge ab. Sie sind etwas anderes als ein kleines Holzfeuer.",
+    "deeper": "Die genaue Reaktion umfasst bestimmte Kerne, Teilchen und Energien. Zwei gemalte Kugeln, die du zusammenschiebst, sind keine echte Kernfusion. Temperatur, Druck und weitere Bedingungen lassen sich nicht aus Papierbildern ableiten.",
+    "observe": "Zeichne zwei gedachte Kernsymbole und daneben ein Verbindungszeichen. Beschrifte es als vereinfachte Zeichenhilfe, nicht als vollständige Reaktionsgleichung. Diese Aufgabe nutzt nur Papier und enthält keine Anleitung für einen echten Kernversuch.",
+    "benefit": "Du unterscheidest einen Kernvorgang von Verbrennung und erkennst die Grenzen einer einfachen Zeichenhilfe.",
+    "connection": "Die Fusionskarte erklärt ein begrenztes Kerns­chema. Lies die Modellgrenzen: Ein Bild zeigt nicht die realen Bedingungen, eine technische Anlage oder deren Wirkungsgrad.",
+    "topic": "science-fusion",
+    "sources": [
+      {
+        "url": "https://www.energy.gov/ne/articles/fission-and-fusion-what-difference",
+        "title": "U.S. Department of Energy · Kernfusion (Englisch)",
+        "anchor": "Actual selected43–48: nuclei join, light-nucleus reactions andSun, demandingconditions. Excludeliteraltwo H atoms directlysingleHe, universalpositiveyield orreactorpromises. Source published2021-04-01, actual last-update date not known and not inferred from publication.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Kernspaltung",
+        "reason": "Leichte Kerne zusammenführen und schwere Kerne teilen sind verschiedene Kernvorgänge. Die Begriffe erklären keine sicheren Experimente für zu Hause."
+      },
+      {
+        "term": "Energie",
+        "reason": "Bestimmte Kernvorgänge können Energie freisetzen. Ein Papierpfeil misst keinen realen Energieertrag und gibt keine Betriebsgarantie."
+      }
+    ],
+    "question": {
+      "prompt": "Was sind die zusammengeschobenen Papierzeichen?",
+      "answers": [
+        "Nur eine begrenzte Zeichenhilfe, kein wirklicher Kernversuch",
+        "Eine reale Fusion mit gemessener Energie",
+        "Ein Beweis einer vollständigen Reaktionsgleichung"
+      ],
+      "correct": 0,
+      "hint": "Ein Symbol und ein physikalischer Vorgang haben unterschiedliche Aussagekraft.",
+      "why": "Die Papierzeichen können das Verbinden veranschaulichen. Sie sind keine wirkliche Kernreaktion, keine Messung und keine vollständige Gleichung.",
+      "wrongReasons": [
+        "",
+        "Papierzeichen verbinden keine tatsächlichen Atomkerne und messen keine freiwerdende Energie.",
+        "Teilchen, Bedingungen und Energien fehlen in der Zeichenhilfe; sie ist keine vollständige Reaktionsgleichung."
+      ]
+    }
+  }
+}

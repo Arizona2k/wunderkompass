@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Konvektion",
+  "learning": {
+    "starter": "Bewegte Luft oder bewegtes Wasser kann Energie mitnehmen. Das ist anders als Wärmeleitung durch einen festen Stab.",
+    "deeper": "Temperaturunterschiede können Strömungen antreiben; auch ein Lüfter kann Luft bewegen. Nicht jede Luftbewegung ist allein durch Erwärmung entstanden. Eine Pfeilzeichnung berechnet keine Windgeschwindigkeit oder Wetterentwicklung.",
+    "observe": "Zeichne einen gedachten Raum mit Luftpfeilen und einen festen Stab mit einem Energiepfeil. Beschrifte die unterschiedlichen Vorgänge. Beide Zeichnungen sind Beispiele ohne reale Temperatur- oder Strömungsmessung.",
+    "benefit": "Du erkennst einen bewegten Stoffstrom als Wärmeweg und trennst ihn von Leitung.",
+    "connection": "Vergleiche die Strömungspfeile mit den anderen Wärmewegen. Ein schematischer Pfeil ist keine gemessene Raumluftgeschwindigkeit.",
+    "topic": "science-heat-transfer",
+    "sources": [
+      {
+        "url": "https://bsesc.energy.gov/energy-basics/heat-flow",
+        "title": "U.S. Department of Energy · Wärmeübertragung",
+        "anchor": "Full body lines11–22: conduction, convection, radiation. Natural warm-to-cool direction; own safe hypothetical comparisons, no building-efficiency guarantees.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Wärmeleitung",
+        "reason": "Leitung durch Material und Energie, die ein bewegtes Gas oder eine Flüssigkeit mitführt, sind verschiedene Übertragungswege."
+      },
+      {
+        "term": "Wärmestrahlung",
+        "reason": "Ein bewegter Stoffstrom und elektromagnetische Strahlung sind verschiedene Wärmewege. Strahlung benötigt keinen solchen Luftstrom oder direkten Kontakt."
+      }
+    ],
+    "question": {
+      "prompt": "Welches Beispiel passt zu Konvektion?",
+      "answers": [
+        "Nur ein ruhender Energiepfad im festen Stab",
+        "Ein Lichtsignal durch leeren Raum",
+        "Bewegte Luft, die Energie mitführt"
+      ],
+      "correct": 2,
+      "hint": "Suche nach einem tatsächlich bewegten Gas oder einer Flüssigkeit.",
+      "why": "Ein Luftstrom führt Materie und Energie mit. Leitung im Stab und Strahlung durch leeren Raum sind andere Wärmewege.",
+      "wrongReasons": [
+        "Leitung im ruhenden festen Stab ist nicht derselbe Vorgang wie ein bewegter Luftstrom.",
+        "Ein Lichtsignal braucht keine Luftströmung. Das beschreibt Strahlung, nicht diesen Konvektionsweg.",
+        ""
+      ]
+    }
+  }
+}

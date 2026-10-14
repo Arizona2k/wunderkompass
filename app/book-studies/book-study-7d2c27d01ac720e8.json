@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Hashfunktion",
+  "learning": {
+    "starter": "Eine Rechenregel kann aus Daten einen kürzeren Prüfwert machen. Verschiedene Regeln bieten sehr unterschiedlichen Schutz.",
+    "deeper": "Ein gleicher Hashwert ist kein mathematischer Beweis, dass bei jeder denkbaren Eingabe gleiche Daten vorliegen. Kryptografische Kollisionsresistenz meint praktische Schwierigkeit, nicht unmögliche Gleichheiten. Herkunft und Signatur sind weitere Fragen.",
+    "observe": "Erfinde eine ausdrücklich schlechte Regel: Addiere zwei Zahlen. Vergleiche1/2 mit0/3. Erkläre, weshalb dieser gleiche Wert kein Beispiel für eine starke kryptografische Hashfunktion ist und keine echten Daten schützt.",
+    "benefit": "Du unterscheidest einen kurzen Prüfwert von tatsächlich benötigten kryptografischen Eigenschaften.",
+    "connection": "Die Prüfsummenkarte erklärt den ersten Vergleichsschritt. Eine kryptografische Hashfunktion und eine geprüfte Herkunft sind zusätzliche, getrennte Anforderungen.",
+    "topic": "science-checksum",
+    "sources": [
+      {
+        "url": "https://csrc.nist.gov/glossary/term/hash_function",
+        "title": "NIST · Hashfunktion (Englisch)",
+        "anchor": "Actual selected Definitions123–151: fixed-size output andcryptographic collision resistance, FIPS186-5/NIST SP800-185. Exclude literal impossible-collision phrasing.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Prüfsumme",
+        "reason": "Prüfsummen und Hashwerte können Änderungen erkennbar machen. Eine bloße Übereinstimmung beweist nicht automatisch Echtheit oder das Ausbleiben jeder Kollision."
+      },
+      {
+        "term": "Datenstruktur",
+        "reason": "Ein Hashwert verarbeitet eine gewählte Darstellung von Daten. Deren Ordnung und die Eigenschaften einer Struktur sind eigene Fragen."
+      }
+    ],
+    "question": {
+      "prompt": "Was zeigt die leicht gefundene gleiche Summe verschiedener Zahlenpaare?",
+      "answers": [
+        "Eine immer unmögliche Kollision",
+        "Einen Beweis vertrauenswürdiger Herkunft",
+        "Eine Schwäche dieser absichtlich einfachen Spielregel"
+      ],
+      "correct": 2,
+      "hint": "Ein Gegenbeispiel zur Spielregel ist kein Nachweis einer starken kryptografischen Eigenschaft.",
+      "why": "Die gleiche Summe ist bei dieser schlechten Regel leicht zu finden. Genau deshalb ersetzt sie keine kryptografische Hashfunktion.",
+      "wrongReasons": [
+        "Die zwei verschiedenen Paare liefern gerade den gleichen Wert. Die Spielregel zeigt eine mögliche Gleichheit.",
+        "Ein Prüfwert allein benennt keinen vertrauenswürdigen Absender. Dafür sind weitere Prüfungen nötig.",
+        ""
+      ]
+    }
+  }
+}

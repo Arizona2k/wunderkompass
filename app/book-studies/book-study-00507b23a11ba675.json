@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Zeitzone",
+  "learning": {
+    "starter": "In einer Zeitzone gilt eine vereinbarte Uhrzeit. Die Grenzen folgen nicht überall geraden Linien auf der Erde.",
+    "deeper": "In Deutschland gilt im Winter MEZ und während der Sommerzeit MESZ. Der Abstand zur UTC ist dann verschieden. Eine grobe Sonnenzeitkarte mit 15°-Schritten ist keine vollständige Karte gesetzlicher Uhrzeiten oder Sommerzeitregeln.",
+    "observe": "Rechne auf Papier mit einer gedachten UTC von 10 Uhr: MEZ ergibt 11 Uhr, MESZ 12 Uhr. Das ist ein Zahlenvergleich und keine Bestimmung heutiger Uhrzeiten oder eines konkreten Umstellungstags.",
+    "benefit": "Du unterscheidest UTC-Bezug, gesetzliche Zeit und ein vereinfachtes Sonnenzeitmodell.",
+    "connection": "Das Uhrenlabor verwendet die vereinbarten Zeitregeln seiner Städte. Die Papierrechnung trennt diese Regeln von einer groben 15°-Meridiankarte.",
+    "lab": "clocks",
+    "sources": [
+      {
+        "url": "https://www.ptb.de/cms/ptb/fachabteilungen/abt4/fb-44/ag-441/darstellung-der-gesetzlichen-zeit/koordinierte-weltzeitskala-utc.html",
+        "title": "PTB · Zeitzone",
+        "anchor": "Previously actually selected284–293 same-day: GermanyMEZUTC+1/MESZUTC+2. Own civiltimeversussolar meridians distinction, no worldwidealways15degreeboundaries or guesseddst dates.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Welche Uhrzeit gehört im Gedankenvergleich zu UTC 10 Uhr und MEZ?",
+      "answers": [
+        "9 Uhr, weil jede Zeit abgezogen wird",
+        "10 Uhr ohne Unterschied",
+        "11 Uhr, weil MEZ hier UTC plus eine Stunde ist"
+      ],
+      "correct": 2,
+      "hint": "Benutze den angegebenen Abstand plus eine Stunde.",
+      "why": "10 Uhr + 1 Stunde = 11 Uhr. Der Vergleich bestimmt keine weltweite Sommerzeitregel.",
+      "wrongReasons": [
+        "Der angegebene Abstand wird addiert, nicht ohne Begründung abgezogen.",
+        "MEZ besitzt im Beispiel einen Abstand von einer Stunde zur UTC.",
+        ""
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "term": "Ozean",
+  "learning": {
+    "starter": "Die benannten Ozeane sind Teile eines verbundenen Weltmeers. Ihre Namen machen daraus keine voneinander abgeschlossenen Becken.",
+    "deeper": "Die Einteilung in benannte Großräume hat eine Geschichte und ist eine geografische Vereinbarung. Eine Trennlinie auf einer Übersicht ist keine echte Mauer im Wasser. Unterschiedliche Benennungen müssen mit dem verwendeten Modell erklärt werden.",
+    "observe": "Zeichne eine zusammenhängende gedachte Wasserfläche mit fünf verschieden beschrifteten Bereichen. Lasse die Übergänge offen. Das Papier legt eine Benennung fest, keine vollständige Erdkarte oder gesetzlich verbindliche Grenze.",
+    "benefit": "Du unterscheidest verbundene Wasserfläche und geografische Namen.",
+    "connection": "Die Strömungskarte verfolgt Wasserwege. Die Ozeannamen ordnen große Räume, ohne den Wassertransport an einer Beschriftung enden zu lassen.",
+    "topic": "science-currents",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/howmanyoceans.html",
+        "title": "NOAA · Ozean (Englisch)",
+        "anchor": "Actual5/9–11: oneglobalocean, namedregions, historicalclassificationvariation. Exclude outdatedIHOstatus/allcountriesagreement/71percentage map or image copy.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was bedeutet eine Namensgrenze zwischen zwei gezeichneten Ozeanbereichen?",
+      "answers": [
+        "Eine Unterscheidung im gewählten Modell, keine physische Wassermauer",
+        "Dass kein Wasser jemals zwischen ihnen bewegt werden kann",
+        "Eine gemessene neue Wand unter dem Meer"
+      ],
+      "correct": 0,
+      "hint": "Beschriftung und Verbindung sind zwei verschiedene Eigenschaften der Zeichnung.",
+      "why": "Der Name ordnet einen geografischen Bereich. Er baut keine Wand und verhindert keinen Wassertransport zwischen verbundenen Bereichen.",
+      "wrongReasons": [
+        "",
+        "Benannte Bereiche können verbunden sein und Wasser austauschen.",
+        "Eine eingezeichnete Namenslinie ist kein Nachweis eines realen Bauwerks."
+      ]
+    }
+  }
+}

@@ -1,3 +1,5 @@
+import {bookExcellenceFlow} from './book-excellence.mjs';
+import {nativeJourneyZoom} from './journey-zoom.mjs';
 import {prepareOfflineBook,offlineBook} from './book-excellence.mjs';
 import {journeysFlow,prepareOfflineJourneys,offlineJourneys} from './journeys.mjs';
 import {scienceExcellenceFlow,offlineScienceExcellence} from './science-excellence.mjs';
@@ -19,7 +21,7 @@ if(shots!==qaRoot&&!shots.startsWith(qaRoot+path.sep))throw Error('Browser evide
 const {chromium}=await import(process.env.QA_PLAYWRIGHT_MODULE??new URL('../../qa/node_modules/playwright/index.mjs',import.meta.url).href);
 const pack=process.env.QA_CHROMIUM_MODULE?(await import(process.env.QA_CHROMIUM_MODULE)).default:null;
 const options={headless:true,...(process.env.QA_BROWSER_EXECUTABLE?{executablePath:process.env.QA_BROWSER_EXECUTABLE}:{}),env:{...process.env,...(process.env.QA_BROWSER_LIB_PATH?{LD_LIBRARY_PATH:process.env.QA_BROWSER_LIB_PATH,FONTCONFIG_PATH:path.join(process.env.QA_BROWSER_LIB_PATH,'fonts')}:{})},args:[...(pack?pack.args.filter(a=>a!=='--single-process'&&!a.includes('incognito')):[]),'--enable-unsafe-swiftshader'],timeout:20000};
-const availableSuites=['foundation','home','core','playground','backup','challenge','research','journeys','offline'];const selectedSuites=process.env.QA_SUITE?process.env.QA_SUITE.split(','):availableSuites;if(selectedSuites.some(s=>!availableSuites.includes(s)))throw Error('Unknown local browser suite');const runSuite=s=>selectedSuites.includes(s);
+const availableSuites=['foundation','home','core','playground','backup','challenge','research','journeys','book','offline'];const selectedSuites=process.env.QA_SUITE?process.env.QA_SUITE.split(','):availableSuites;if(selectedSuites.some(s=>!availableSuites.includes(s)))throw Error('Unknown local browser suite');const runSuite=s=>selectedSuites.includes(s);
 const browserStarted=performance.now();
 const report={timings:[],scope:process.env.QA_SUITE?'partial local iteration':'complete mandatory regression',selectedSuites,build:(await fs.readFile(path.resolve(project,process.env.QA_DIST??'dist','index.html'),'utf8')).match(/name="learning-build" content="([^"]+)"/)?.[1],browser:'',checks:[],errors:[],consoleErrors:[],failedRequests:[],ownHttpErrors:[],externalRequests:[],views:[]};let browser;
 async function timed(name,run){const start=performance.now();try{return await run();}finally{report.timings.push({suite:name,seconds:(performance.now()-start)/1000});}}
@@ -34,8 +36,9 @@ const monitor=p=>{p.on('console',m=>{if(m.type()==='error')report.consoleErrors.
 browser=await chromium.launch(options);report.browser=browser.version();
 try{
  if(runSuite('foundation')){await timed('performance',()=>performanceFlow(browser,base,ready,monitor,report));await timed('components',()=>componentFlow(browser,base,ready,monitor,report,shots));await worldContentFlow(browser,base,ready,monitor,report,shots);}
-if(runSuite('research'))await timed('research',async()=>{await researchNewsFlow(browser,base,ready,monitor,report,shots);await scienceExcellenceFlow(browser,base,ready,monitor,report,shots,{chromium,options});});
-if(runSuite('journeys'))await timed('journeys',()=>journeysFlow(browser,base,ready,monitor,report,shots,{chromium,options}));
+if(runSuite('research'))await timed('research',async()=>{await researchNewsFlow(browser,base,ready,monitor,report,shots);await scienceExcellenceFlow(browser,base,ready,monitor,report,shots,{chromium,options,includeBook:process.env.QA_BOOK_INLINE==='true'});});
+if(runSuite('journeys'))await timed('journeys',()=>journeysFlow(browser,base,ready,monitor,report,shots,{chromium,options,includeBook:process.env.QA_BOOK_INLINE==='true'}));
+if(runSuite('book'))await timed('book',async()=>{await bookExcellenceFlow(browser,base,ready,monitor,report,shots);await nativeJourneyZoom(chromium,options,base,report,shots,{bookOnly:true});});
 if(runSuite('home'))await timed('home',()=>homepageOverview(browser,base,ready,monitor,report,shots));
  const coreStarted=performance.now();
  if(runSuite('core'))for(const [width,height] of [[1440,900],[768,1024],[390,844],[360,800]]){

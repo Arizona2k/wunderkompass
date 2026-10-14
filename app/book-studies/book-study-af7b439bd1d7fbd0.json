@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Messwert",
+  "learning": {
+    "starter": "Beim Messen bekommst du eine Zahl mit einer Einheit. Schreibe auch auf, was du gemessen hast.",
+    "deeper": "Ein Ergebnis hängt unter anderem vom Messgerät und Vorgehen ab. Zusätzliche Nachkommastellen allein machen es nicht genauer. Messunsicherheit beschreibt, wie genau wir die gesuchte Größe anhand der Messung einschätzen können.",
+    "observe": "Miss eine Buchkante dreimal mit demselben Lineal. Notiere Länge, Einheit und Startpunkt. Kleine Unterschiede sind Anlass, dein Vorgehen zu vergleichen, nicht automatisch ein Beweis für ein kaputtes Buch oder Gerät.",
+    "benefit": "Du gibst eine gemessene Größe verständlich an und unterscheidest Zahl und Genauigkeit.",
+    "connection": "Beim Pendelmodell ist die Fadenlänge eine Eingabe. Ein Modellwert ist keine automatisch gemessene reale Länge; prüfe Einheit und Messweg getrennt.",
+    "topic": "science-pendulum",
+    "sources": [
+      {
+        "url": "https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-2-classification-components-uncertainty",
+        "title": "NIST · Messwert (Englisch)",
+        "anchor": "Actual sections2.1–2.3 andnote: measurement result estimates measurand; uncertainty differs from error. Own ruler example, no source formula or quoted prose.",
+        "updatedOn": "2023-03-01",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Messunsicherheit",
+        "reason": "Ein Ergebnis und die Einschätzung seiner Verlässlichkeit gehören zusammen. Viele Nachkommastellen allein belegen keine grenzenlose Genauigkeit."
+      },
+      {
+        "term": "Meter",
+        "reason": "Ein Zahlenwert braucht eine passende Einheit und eine bezeichnete Größe. Meter benennt Länge und ist kein vollständiger Messbericht."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Angabe beschreibt die gemessene Länge verständlich?",
+      "answers": [
+        "12 ohne weitere Angaben",
+        "Die Buchkante ist etwa 12 cm lang",
+        "12 cm bedeutet ohne Unsicherheit ganz exakt"
+      ],
+      "correct": 1,
+      "hint": "Die Angabe soll Gegenstand, Zahl und Einheit zusammenführen.",
+      "why": "Die Buchkante benennt die Größe; 12 cm verbindet Zahl und Längeneinheit. Das Wort etwa ersetzt keine genaue Unsicherheitsanalyse, vermeidet aber eine unbegründete Exaktheitsbehauptung.",
+      "wrongReasons": [
+        "Ohne Einheit und Messgegenstand ist die Zahl keine verständliche Längenangabe.",
+        "",
+        "Die Einheit allein garantiert keine unbegrenzte Genauigkeit des Geräts oder Vorgehens."
+      ]
+    }
+  }
+}
