@@ -1,3 +1,4 @@
+import {whyEngineFlow} from './why-learning.mjs';
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import {spawn} from 'node:child_process';
 import JOURNEYS from '../../exports/content/journeys.json' with {type:'json'};
 import DATA from '../../app/journey-inquiries.json' with {type:'json'};
@@ -5,7 +6,7 @@ import {sourceDigest} from '../../scripts/handoff.mjs';
 import {bookEngineFlow} from './book-excellence.mjs';
 import {chromium,firefox,webkit} from '../../qa/node_modules/playwright/index.mjs';
 const kinds=process.argv.includes('--chromium-pair')?['chromium','chromium']:process.argv.includes('--chromium-only')?['chromium']:['firefox','webkit'];
-const serial=process.argv.includes('--serial'),output=process.env.QA_ENGINE_OUTPUT_DIR??'.qa-output',port=Number(process.env.QA_ENGINE_PORT??4480);
+const serial=!process.argv.includes('--parallel')||process.argv.includes('--serial'),output=process.env.QA_ENGINE_OUTPUT_DIR??'.qa-output',port=Number(process.env.QA_ENGINE_PORT??4480);
 if(!Number.isInteger(port)||port<1024||port>65534)throw Error('Invalid isolated engine port');
 const report={build:(await fs.readFile('dist/index.html','utf8')).match(/name="learning-build" content="([^"]+)"/)?.[1],sourceDigest:await sourceDigest(),status:'running',scope:kinds.join('+'),scheduling:serial?'serial':'parallel isolated servers/profiles',engines:[],errors:[]};
 await fs.mkdir(output,{recursive:true});const servers=new Set(),browsers=new Set(),started=performance.now();
@@ -22,9 +23,9 @@ async function runEngine(kind,offset){
   await p.evaluate(()=>location.hash='journeys/water/3');await p.locator('[data-chapter-inquiry="water:2"]').waitFor();await p.getByRole('button',{name:'Weiter entdecken',exact:true}).click();await p.locator('[data-chapter-inquiry="water:3"]').waitFor();await p.goBack();await p.locator('[data-chapter-inquiry="water:2"]').waitFor();await p.reload();await p.locator('[data-chapter-inquiry="water:2"]').waitFor();
   for(const width of [320,390,768,1440]){await p.setViewportSize({width,height:900});await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);await p.locator('.journey-levels button').nth(1).focus();await p.screenshot({path:path.join(output,'journey-engine-'+name+'-'+width+'.png'),fullPage:true,animations:'disabled'});}
   await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});assert.deepEqual(await p.evaluate(async()=>(await window.axe.run('.journey-reader',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
-  const bookProof=await bookEngineFlow(p,output,name);
+  const bookProof=await bookEngineFlow(p,output,name),whyProof=await whyEngineFlow(p);
   assert.deepEqual(errors,[]);
-  return {name,version:browser.version(),chapters:checked,widths:[320,390,768,1440],...bookProof,seconds:(performance.now()-started)/1000,port:port+offset};
+  return {name,version:browser.version(),chapters:checked,widths:[320,390,768,1440],...bookProof,...whyProof,seconds:(performance.now()-started)/1000,port:port+offset};
  }finally{await browser?.close();if(browser)browsers.delete(browser);server.kill('SIGTERM');servers.delete(server);}
 }
 try{

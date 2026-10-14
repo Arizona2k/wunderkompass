@@ -10,5 +10,11 @@
       "term": "Hashfunktion",
       "reason": "Die Prüfsummenkarte erklärt den ersten Vergleichsschritt. Eine kryptografische Hashfunktion und eine geprüfte Herkunft sind zusätzliche, getrennte Anforderungen."
     }
+  ],
+  "questions": [
+    {
+      "question": "Warum beweist eine passende Prüfsumme nicht automatisch Echtheit?",
+      "reason": "Du trennst Änderungsprüfung, Eindeutigkeit und Herkunft. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+    }
   ]
 }

@@ -1,7 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import os from 'node:os';import path from 'node:path';
 import {retainScreenshot,requiredScreenshots,prepareReview} from '../scripts/review-evidence.mjs';
 test('critical states are always retained while interchangeable intermediate binaries can be reproduced',()=>{
- assert.ok(requiredScreenshots.every(retainScreenshot));
+ assert.ok(requiredScreenshots.every(retainScreenshot));assert.equal(retainScreenshot('quality-book-why-59-1440.png'),true);assert.equal(retainScreenshot('quality-book-why-source-25-320.png'),true);assert.equal(retainScreenshot('quality-book-why-starter-35-320.png'),true);assert.equal(retainScreenshot('quality-book-why-0-320.png'),false,'full Why card remains captured/hashed; readable critical crops retained');
  for(const model of ['length','duration','temperature'])for(const width of [320,1440])assert.equal(retainScreenshot('quality-learning-book-model-'+model+'-'+width+'.png'),true);
  for(const prefix of ['quality-learning','quality-book']){for(const model of ['length','duration','temperature'])for(const width of [320,1440])assert.equal(retainScreenshot(prefix+'-book-model-'+model+'-'+width+'.png'),true);assert.equal(retainScreenshot(prefix+'-book-native-200-large.png'),true);assert.equal(retainScreenshot(prefix+'-book-photon-320.png'),false);}
  assert.equal(retainScreenshot('quality-learning-book-native-200-large.png'),true);assert.equal(retainScreenshot('quality-learning-book-temperature-large-320.png'),true);assert.equal(retainScreenshot('quality-learning-book-meter-320.png'),false,'long full word card remains captured/hashed, readable close-up retained');

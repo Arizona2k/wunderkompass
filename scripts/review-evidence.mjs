@@ -5,7 +5,11 @@ import {fileURLToPath} from 'node:url';
 import {sourceDigest} from './handoff.mjs';
 export const REVIEW_LIMIT=48*1024*1024;
 export const requiredScreenshots=[...['320','360','390','768','1024','1440','1920'].flatMap(w=>['quality-foundation-foundation-labs-'+w+'.png','quality-learning-journey-links-'+w+'.png']),...['320','1440'].flatMap(w=>['quality-news-feed-signed-news-rejected-'+w+'.png','quality-navigation-updates-all-details-'+w+'-full.png'])];
+requiredScreenshots.push(...['source-5-320','source-25-320','starter-30-320','starter-35-320','starter-48-320','starter-59-320','59-1440','native-200-large','overview-320'].map(key=>'quality-book-why-'+key+'.png'));
 export function retainScreenshot(name){
+ // All120 full Why cards are captured and hashed. Retain readable evidence of
+ // partial sources, four new domains, desktop, native zoom and the mobile overview.
+ if(/quality-book-why-/.test(name))return /why-(?:(?:source-(?:5|25)|starter-(?:30|35|48|59))-320|59-1440|native-200-large|overview-320)\.png$/.test(name);
  // Full open word cards remain captured/hashed; retain readable model close-ups
  // and native combined zoom instead of seven very long cards at both widths.
  if(/quality-(?:learning|book)-book-/.test(name))return /book-(?:model-(?:length|duration|temperature)-(?:320|1440)|temperature-large-320|native-200-large)\.png$/.test(name);

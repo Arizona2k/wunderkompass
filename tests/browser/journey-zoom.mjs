@@ -1,3 +1,4 @@
+import {whyAtZoom} from './why-learning.mjs';
 import {bookStudyAtZoom} from './book-excellence.mjs';
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';
 /** Native Chromium zoom preference in a fresh QA profile, never CSS zoom or a
@@ -22,6 +23,7 @@ export async function nativeJourneyZoom(chromium,options,base,report,shots,{book
   await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});assert.deepEqual(await p.evaluate(async()=>(await window.axe.run('.journey-reader',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
   }
   if(includeBook||bookOnly)await bookStudyAtZoom(p,report,capture);
+  if(bookOnly)await whyAtZoom(p,report,capture);
   if(!bookOnly){report.nativeZoom={percent:200,...dimensions,largeTextAlsoChecked:true};report.speechAvailability=await p.evaluate(()=>({api:'speechSynthesis' in window,germanVoices:window.speechSynthesis?.getVoices().filter(v=>v.lang.startsWith('de')).length??0,audibleTestPerformed:false}));report.checks.push('Actual native Chromium 200% zoom, measured 640 CSS px / 1280 screen px / DPR 2; four journeys, large text, focus, reflow and axe');}assert.deepEqual(errors,[]);
  }finally{await context.close();}
 }

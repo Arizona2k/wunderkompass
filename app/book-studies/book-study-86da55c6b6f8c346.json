@@ -38,6 +38,12 @@
         "",
         "Eine Summenbildung verschlüsselt die Daten nicht. Prüfung und Verbergen sind unterschiedliche Ziele."
       ]
-    }
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum beweist eine passende Prüfsumme nicht automatisch Echtheit?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Prüfsumme“: Du trennst Änderungsprüfung, Eindeutigkeit und Herkunft."
+      }
+    ]
   }
 }

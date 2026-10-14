@@ -22,7 +22,9 @@
     "bookStudyIndexBytes": 40000,
     "bookStudyIndexGzipBytes": 12000,
     "largestBookTopicBytes": 40000,
-    "largestBookTopicGzipBytes": 12000
+    "largestBookTopicGzipBytes": 12000,
+    "bookWhyBytes": 200000,
+    "bookWhyGzipBytes": 50000
   },
   "browser": {
     "homeJsBytes": 1050000,

@@ -49,7 +49,7 @@ test('topic parts reject altered bytes, wrong identities, absent/duplicate/unkno
  await assert.rejects(validateBookTopicPart(bytes.subarray(1),topic,meta,words),/Unvollständig/);
  const changed=Buffer.from(bytes);changed[50]^=1;await assert.rejects(validateBookTopicPart(changed,topic,meta,words),/Verändert/);
  for(const mutate of [d=>d.topic='other-topic',d=>d.links=[],d=>d.links.push(d.links[0]),d=>d.links[0].term='UnsupportedWord',d=>d.links[0].reason='<script>',d=>d.links[0].reason='   ',d=>d.links=[null]]){
-  const broken=JSON.parse(bytes);mutate(broken);const body=Buffer.from(JSON.stringify(broken));await assert.rejects(validateBookTopicPart(body,topic,digest(body),words),/Beschädigte/);
+  const broken=JSON.parse(bytes);mutate(broken);const body=Buffer.from(JSON.stringify(broken));await assert.rejects(validateBookTopicPart(body,topic,{...meta,...digest(body)},words),/Beschädigte/);
  }
 });
 

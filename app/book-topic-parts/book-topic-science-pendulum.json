@@ -22,5 +22,11 @@
       "term": "Messwert",
       "reason": "Beim Pendelmodell ist die Fadenlänge eine Eingabe. Ein Modellwert ist keine automatisch gemessene reale Länge; prüfe Einheit und Messweg getrennt."
     }
+  ],
+  "questions": [
+    {
+      "question": "Warum beeinflusst die Länge eines Pendels seinen Takt?",
+      "reason": "Du änderst eine Modellgröße bewusst und beschreibst ihre Wirkung mit passenden Einheiten. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+    }
   ]
 }

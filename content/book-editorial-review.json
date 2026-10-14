@@ -9,7 +9,7 @@
       "kind": "new-unit-explanation-candidate",
       "quantity": "Länge",
       "baselineComparison": "No standalone explanation of this unit in the 90 baseline terms. Incidental units, model numbers and short aliases are not separately counted. Final cross-catalog semantic acceptance remains open.",
-      "contentHash": "547e69b239037b36a35a6f20bf0f081b23e96fdb3786850f371d4cb0137d5bbd",
+      "contentHash": "b1ea22253d64a1b4f9ea87906b7304a3b5dd238b08936505b1086eded8dfb5de",
       "ageLevels": {
         "6-8": "Meter sagen, wie lang etwas ist. Ein gemeinsames Maß hilft uns, Messungen zu vergleichen.",
         "9-11": "Der Meter ist eine gemeinsame Einheit für Längen. Das Zeichen m gehört immer zur Zahl: 2 m sagt, welche Länge gemeint ist. Verschieden große Hände eignen sich zum Vergleichen, sind aber kein einheitliches Längenmaß.",
@@ -56,7 +56,7 @@
       "nextReview": "2027-04-13",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "schema-root-nist-own-explanations-2026-10-13",
       "mediaDecision": "Own bounded interactive length comparison with readable HTML labels",
       "claims": [
@@ -83,6 +83,12 @@
         {
           "term": "Messwert",
           "reason": "Ein Zahlenwert braucht eine passende Einheit und eine bezeichnete Größe. Meter benennt Länge und ist kein vollständiger Messbericht."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum beeinflusst die Länge eines Pendels seinen Takt?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Meter“: Du änderst eine Modellgröße bewusst und beschreibst ihre Wirkung mit passenden Einheiten."
         }
       ]
     },
@@ -581,7 +587,7 @@
       "id": "words:Gen",
       "kind": "new-biological-explanation-candidate",
       "baselineComparison": "Distinct vocabulary explanation absent from the90 baseline terms. Not counted as a new science card or alias. Cross-catalog independent semantic acceptance remains open.",
-      "contentHash": "ddddf71fd48d041aa2c8bec754985612e3fc5b95fbbd246996ebf7d52198f013",
+      "contentHash": "028a00778d8dc76970859bad4d19a2f9394b751b7dbad92a3ced6fcc01db76cd",
       "ageLevels": {
         "6-8": "Ein Gen ist ein bestimmter Abschnitt der DNA. Zellen können seine Information nutzen.",
         "9-11": "Ein Gen ist ein Abschnitt der Erbinformation. Er enthält Information für ein bestimmtes Protein oder eine funktionsfähige RNA. Ein einzelnes Gen bestimmt nicht, wie ein Mensch denkt, handelt oder leben wird.",
@@ -645,7 +651,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nhgri-own-explanations-2026-10-14",
       "mediaDecision": "Own instruction-section exercise separates information section from whole organism; avoids portraits that could suggest genetic determinism.",
       "claims": [
@@ -663,6 +669,12 @@
           "field": "word[2]",
           "sourceUrl": "https://www.genome.gov/genetics-glossary/Genetic-Code",
           "anchor": "Narration: neither genes nor DNA determine who you are or what you shall do"
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum verrät ein einzelnes Gen nicht automatisch alle Eigenschaften?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Gen“: Du vermeidest genetische Festlegungen und trennst verschiedene Einflussebenen."
         }
       ]
     },
@@ -966,7 +978,7 @@
       "id": "words:Mutation",
       "kind": "new-biological-explanation-candidate",
       "baselineComparison": "Distinct vocabulary explanation absent from the90 baseline terms. Not counted as a new science card or alias. Cross-catalog independent semantic acceptance remains open.",
-      "contentHash": "7fb97d2d558716b8c6e74b136f04132679d4958319ad2a86880e89c399384d13",
+      "contentHash": "46e8b57e9c15180a206cf7a53d61ead386839b29f6298b4e7270a890748c856c",
       "ageLevels": {
         "6-8": "Manchmal verändert sich ein Stück DNA. Diese Veränderung heißt Mutation.",
         "9-11": "Eine Mutation ist eine Veränderung der DNA-Reihenfolge. Sie kann unterschiedliche Folgen haben oder ohne erkennbare Wirkung bleiben. Mutationen sind keine absichtlichen Wünsche und verleihen keine Superheldenkräfte.",
@@ -1015,7 +1027,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nhgri-own-explanations-2026-10-14",
       "mediaDecision": "Own single-symbol-change observation separates sequence change from an unknown biological effect; no superhero or medical image.",
       "claims": [
@@ -1028,6 +1040,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.genome.gov/genetics-glossary/Mutation",
           "anchor": "Definition: change in DNA sequence; germline versus somatic; narration: fictional superhero claims rejected; no individual diagnosis"
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum ist eine Mutation nicht automatisch gut oder schlecht?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Mutation“: Du trennst beobachtete Änderung von einer erst zu belegenden Wirkung."
         }
       ]
     },
@@ -1615,7 +1633,7 @@
       "id": "words:Mittelwert",
       "kind": "new-vocabulary-explanation-candidate",
       "baselineComparison": "Standalone glossary explanation absent from90 baseline terms; own learning goal, no alias or new science-card count. Independent semantic acceptance remains open.",
-      "contentHash": "37e7dc9088d4e928f3f8aa106cd70786eec1aa25bf4353aba292f054f6a6867d",
+      "contentHash": "d4f371e8cc38bb663d2133b20725cc434280c42ed1f4e67ab9fcb3029dc26d2c",
       "ageLevels": {
         "6-8": "Addiere die Zahlen und teile durch ihre Anzahl. So erhältst du den arithmetischen Mittelwert.",
         "9-11": "Der arithmetische Mittelwert verteilt die Summe mehrerer Zahlen gleichmäßig auf ihre Anzahl. Bei den Beispielzahlen 2, 4 und 9 ergibt die Summe 15, geteilt durch drei also 5. Nicht jede einzelne Zahl muss nahe am Mittelwert liegen.",
@@ -1672,7 +1690,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nist-own-statistics-2026-10-14",
       "mediaDecision": "Own invented2/4/9 paper-number sum/division exercise; no source chart/data copied or population ranking.",
       "claims": [
@@ -1685,6 +1703,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
           "anchor": "Definition of location, mean=sum/number; extremes influence the mean. Own numerical examples, no source data or chart copied."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum kann ein einzelner sehr großer Wert einen Durchschnitt verschieben?",
+          "reason": "Du wählst eine Kennzahl nach der Frage und erkennst den Einfluss eines Extremwerts. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
         }
       ]
     },
@@ -1976,7 +2000,7 @@
       "id": "words:Kraft",
       "kind": "new-motion-wave-explanation-candidate",
       "baselineComparison": "Distinct standalone vocabulary absent from90 baseline terms; no alias/new science-card count. Independent cross-catalog acceptance open.",
-      "contentHash": "07b40d74fa5acde99fadc560732bb4b0f63f4ded7b75d2fcded68d13b8773d22",
+      "contentHash": "eab07f750f768d92bf30edc3092ec04e16384ce202fc6c0755938c7437cd76a6",
       "ageLevels": {
         "6-8": "Beim Ziehen oder Schieben wirken Kräfte. Sie können etwas schneller, langsamer oder anders geformt machen.",
         "9-11": "Eine Kraft beschreibt eine Wechselwirkung zwischen Körpern. Kräfte können Bewegung verändern oder Körper verformen. Mehrere Kräfte müssen gemeinsam betrachtet werden: Wenn sie sich an einem Körper ausgleichen, bedeutet das nicht, dass überhaupt keine Kräfte wirken.",
@@ -2025,7 +2049,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nasa-own-science-method-2026-10-14",
       "mediaDecision": "Own gentle paper-ball deformation observation distinguishes motion and force balance; existing lever model linked.",
       "claims": [
@@ -2038,6 +2062,20 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/equations-of-motion/",
           "anchor": "Equilibrium and net opposing force; constant-mass F=m·a; own paper observation, no flight calculation or source illustration copied."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum helfen raue Schuhsohlen beim Gehen?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Kraft“: Du erkennst, warum eine bremsende Wechselwirkung beim Gehen nützlich sein kann."
+        },
+        {
+          "question": "Warum hilft ein langer Hebelarm beim Drehen?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Kraft“: Du verbindest Kraft, Drehpunkt und Weg statt nur die Länge eines Stabs zu vergleichen."
+        },
+        {
+          "question": "Warum kehrt eine Feder nicht nach jeder Belastung ganz zurück?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Kraft“: Du erkennst den Geltungsbereich eines Materialmodells."
         }
       ]
     },
@@ -2244,7 +2282,7 @@
       "id": "words:Frequenz",
       "kind": "new-motion-wave-explanation-candidate",
       "baselineComparison": "Distinct standalone vocabulary absent from90 baseline terms; no alias/new science-card count. Independent cross-catalog acceptance open.",
-      "contentHash": "49000568cd1dff089382b5d83f1d4c820ef868ba5c97849657b2fe156a26838c",
+      "contentHash": "866f380555a6ad15aa2f58b416150b88ec5bf0231b11c16332d8e0aade9d81e3",
       "ageLevels": {
         "6-8": "Zähle, wie oft sich etwas in derselben Zeit wiederholt. Mehr Wiederholungen pro Sekunde bedeuten eine höhere Frequenz.",
         "9-11": "Die Frequenz zählt, wie oft sich ein wiederkehrender Vorgang in einer bestimmten Zeit wiederholt. Die Einheit Hertz bedeutet Wiederholungen pro Sekunde. Eine höhere Frequenz bedeutet nicht automatisch einen größeren Ausschlag oder einen lauteren Ton.",
@@ -2293,7 +2331,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current UI/search/direct/context/back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nist-own-statistics-2026-10-14",
       "mediaDecision": "Own equal-time repetitive-count example; no loud-sound or hearing experiment.",
       "claims": [
@@ -2306,6 +2344,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://csrc.nist.gov/glossary/term/frequency",
           "anchor": "NIST frequency definition: repetitive event rate, f=1/T, hertz cycles/s; own invented examples, no hearing experiment or copyrighted standard reused."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum kann Anschieben im passenden Takt wirksamer sein?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Frequenz“: Du erklärst eine Taktwirkung und benennst ihre begrenzenden Bedingungen."
         }
       ]
     },
@@ -2714,7 +2758,7 @@
       "id": "words:Lebensraum",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Existing baseline definition/order/ID preserved verbatim; new independent age levels, exercise, feedback and explained connections. Not a new entry.",
-      "contentHash": "db54e5e3ddf69aa3faeb17a169605068df4c0b9f86bb0720336840446a0095e2",
+      "contentHash": "86b6c831482d0433a75f8f153790b236bfe64ce9425e22f6169c61e6aa39451e",
       "ageLevels": {
         "6-8": "Ein passender Lebensraum bietet einem Lebewesen wichtige Bedingungen. Derselbe Ort passt nicht für jedes Lebewesen gleich gut.",
         "9-11": "Ein Ort, der einem Lebewesen Nahrung, Wasser und passende Bedingungen bietet. Ein Teich und ein Wald sind Beispiele.",
@@ -2759,7 +2803,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/direct/context/back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nps-own-2026-10-14",
       "mediaDecision": "Own explicitly bounded paper comparison: Zeichne einen gedachten Teich. Notiere für ein Wassertier Wasser und Nahrung, für einen Vogel einen möglichen Schutzplatz. Welche Angaben müsstest du kennen, bevor du beurteilen könntest, ob der Ort für eine bestimmte Art passt? Keine Tiere sammeln oder umsetzen. No source worksheet/image/logo or organism handling. Appropriate existing illustrated world card linked.",
       "claims": [
@@ -2767,6 +2811,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.nps.gov/teachers/classrooms/habitats.htm",
           "anchor": "Selected background and habitat elements food/water/shelter/cover. Deprecated Species=plant/animal/insect and universal five-biome classification excluded."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum haben Eisbären keine Pinguine als Nachbarn?",
+          "reason": "Der Lebensraumbegriff erweitert den Kartenpunkt um Bedürfnisse und Verbreitungsbedingungen einer Art."
         }
       ]
     },
@@ -2898,7 +2948,7 @@
       "id": "words:Geoid",
       "kind": "new-geography-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; standalone vocabulary, no new geographical-place or nature-card count.",
-      "contentHash": "de0fe48df5154b05af0834b8c89ef30b84208c68bef3ef74914c1f8bb36c1e95",
+      "contentHash": "b6a781c39e587d69bdd04e18d7bad9f0ce1a1123a0aa739ff1f1f163ee5538cf",
       "ageLevels": {
         "6-8": "Um Höhen zu vergleichen, brauchen wir einen gemeinsamen Bezug. Das Geoid hilft dabei; es ist keine Karte aller Berge.",
         "9-11": "Das Geoid ist eine gedachte Bezugsfläche für Höhenmessungen. Sie orientiert sich am mittleren Meeresspiegel unter vereinfachten Bedingungen und wird auch unter den Kontinenten fortgesetzt. Sie folgt nicht den Bergen und Tälern des Landes und ist keine perfekte Kugel.",
@@ -2943,7 +2993,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "noaa-nos-own-2026-10-14",
       "mediaDecision": "Own bounded observation: Zeichne eine gedachte Bezugsfläche als Linie und darüber zwei unterschiedlich hohe Hügel. Erkläre, welche Linie den Bezug und welche das Gelände zeigt. Deine einfache Skizze berechnet kein echtes Geoid. No source map, iStock graphic, municipal photo or logo reused. Existing globe/illustrated card supplies context.",
       "claims": [
@@ -2952,13 +3002,19 @@
           "sourceUrl": "https://oceanservice.noaa.gov/facts/geoid.html",
           "anchor": "NOS definition and paragraphs20–21: idealized ocean shape extended through continents as elevation reference; no exaggerated source3D model or exact sea-level measurement copied."
         }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum ist die Erde rund?",
+          "reason": "Das Geoid ist ein eigenes Bezugsmodell und keine Fotografie: Vergleiche seine Aufgabe mit der einer Kugeldarstellung."
+        }
       ]
     },
     {
       "id": "words:Koordinate",
       "kind": "new-geography-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; standalone vocabulary, no new geographical-place or nature-card count.",
-      "contentHash": "8eb18a37bd37d121c17d1bb26240d55854180759ea2e8cb2c9c98cc41ea9f426",
+      "contentHash": "fd471da0382541c7a1d6cd38be2a30c765901798738c47102a26a3fe53cf3523",
       "ageLevels": {
         "6-8": "Ein Zahlenpaar kann dir helfen, einen Punkt zu finden. Dazu musst du wissen, was die Zahlen bedeuten und wo du zu zählen beginnst.",
         "9-11": "Koordinaten beschreiben eine Position mit Angaben in einem festgelegten Bezugssystem. Bei einer einfachen Gitterzeichnung kann ein Zahlenpaar einen Punkt angeben. Für Orte auf der Erde verwenden wir zum Beispiel geografische Breite und Länge. Reihenfolge und Bezug gehören zur Angabe dazu.",
@@ -3011,7 +3067,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "noaa-nos-own-2026-10-14",
       "mediaDecision": "Own bounded observation: Zeichne ein eigenes Gitter. Vereinbare zuerst: die erste Zahl zählt nach rechts, die zweite nach oben. Markiere (2, 3) und (3, 2). Sind es derselbe Punkt? Das Papiergitter ist keine geografische Breiten-/Längenkarte. No source map, iStock graphic, municipal photo or logo reused. Existing globe/illustrated card supplies context.",
       "claims": [
@@ -3020,13 +3076,19 @@
           "sourceUrl": "https://oceanservice.noaa.gov/facts/geodesy.html",
           "anchor": "Geodesy paragraphs6–9: assigning coordinates in consistent reference system; own ordered fictitious paper grid, not latitude/longitude or GPS precision measurement."
         }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum ist ein GPS-Punkt keine grenzenlos genaue Ortsangabe?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Koordinate“: Du fragst nach Bezug und Genauigkeit statt nur nach der Zahl der Ziffern."
+        }
       ]
     },
     {
       "id": "words:Kartenprojektion",
       "kind": "new-geography-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; standalone vocabulary, no new geographical-place or nature-card count.",
-      "contentHash": "ae8d6d4f7b436ca70436917a3337f47b7006c5499f38518be8d1dd46a88c10dc",
+      "contentHash": "624b0c10e9e3905bd856e2ea914ed7b43ab3c8d7e7c0f4252c1bbb4a7d8eed11",
       "ageLevels": {
         "6-8": "Die Erde ist rund, Papier ist flach. Eine Weltkarte muss deshalb bei der Darstellung Kompromisse machen.",
         "9-11": "Eine Kartenprojektion ist ein Verfahren, um die gekrümmte Erdoberfläche auf einer flachen Karte darzustellen. Dabei verändert sich die Darstellung bestimmter Eigenschaften. Eine flache Weltkarte kann die ganze Erdoberfläche nicht in jeder Hinsicht unverzerrt zeigen.",
@@ -3075,7 +3137,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "usgs-own-2026-10-14",
       "mediaDecision": "Own bounded observation: Vergleiche eine vorhandene Weltkarte mit dem WunderKompass-Globus. Achte auf die Form der Gebiete nahe den Polen. Prüfe die Kartenerklärung, bevor du aus der Darstellung auf ihre wirkliche Größe schließt. No source map, iStock graphic, municipal photo or logo reused. Existing globe/illustrated card supplies context.",
       "claims": [
@@ -3083,6 +3145,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.usgs.gov/science/science-explorer/maps-and-mapping/mapping-101",
           "anchor": "Actual Mapping101 selected FAQ excerpt atlines561–567: definition and unavoidable distortion. Linked fullFAQ timed out, not asserted read; own globe/map comparison, no source maps copied."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum passt eine runde Erde nicht genau auf eine flache Karte?",
+          "reason": "Die Kartenprojektion erklärt, welche Eigenschaften beim Übertragen einer Kugel auf eine Fläche verändert werden können."
         }
       ]
     },
@@ -3539,7 +3607,7 @@
       "id": "words:Streuung",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept, no count of another category or synonym as an additional word.",
-      "contentHash": "b0155ac3548a3fe3690bae2bc28b32730f4c6f6cde7da2f35151043023ad706f",
+      "contentHash": "3e390f59ac41ac651899e2cc8ea4a05e600b3bc407a056785079c560a32d4ca5",
       "ageLevels": {
         "6-8": "Licht kann nach einer Begegnung mit Teilchen in viele Richtungen weiterlaufen. Darum kommt Himmelslicht nicht nur direkt von der Sonne.",
         "9-11": "Licht wird durch Wechselwirkung mit Teilchen oder Strukturen in verschiedene Richtungen verteilt. Wie stark dies geschieht, hängt unter anderem von Wellenlänge und Größe der streuenden Teilchen ab.",
@@ -3582,7 +3650,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nasa-own-science-method-2026-10-14",
       "mediaDecision": "Own explicitly bounded paper observation: Zeichne einen ankommenden Pfeil und mehrere abgehende Pfeile an einem gedachten Punkt. Vergleiche mit nur einem zurückgehenden Spiegelpfeil. Diese eigene Skizze zeigt Richtungen, keine wirklichen Luftmoleküle oder Anteile. Existing own illustrated card or lab supplies context; no source image, diagram, logo, text or worksheet reproduced.",
       "claims": [
@@ -3591,13 +3659,23 @@
           "sourceUrl": "https://science.nasa.gov/ems/03_behaviors/",
           "anchor": "Reflection, Absorption, Scatter, Refraction selected scientific paragraphs; no source illustrations, city-temperature numbers or universal absorption-to-heat claims."
         }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum ist der Himmel blau?",
+          "reason": "Die Streuungskarte erklärt, wie Licht seine Richtung ändert. Damit kannst du den Weg vom Sonnenlicht zum Auge prüfen."
+        },
+        {
+          "question": "Warum ist ein Sonnenuntergang oft rot?",
+          "reason": "Vergleiche im Streuungsbegriff den direkten Lichtweg mit seitlichen Wegen und übertrage diese Unterscheidung auf einen Sonnenuntergang."
+        }
       ]
     },
     {
       "id": "words:Photon",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept, no count of another category or synonym as an additional word.",
-      "contentHash": "f58e7d9cddd461486b5e1ae8686b20b36147851a81b684271c1df68162802794",
+      "contentHash": "84283cb15c880c02d5794c8d6d0c9698c4e1f2cd2b2881df476a003b1f02b355",
       "ageLevels": {
         "6-8": "Licht lässt sich bei manchen Messungen als einzelne Energieportionen beschreiben. Diese nennen wir Photonen.",
         "9-11": "Ein Photon ist ein einzelnes Energiequant des elektromagnetischen Feldes. Licht zeigt sowohl Wellen- als auch Teilcheneigenschaften. Ein Photon ist keine kleine massive Kugel, die man mit einer Lupe sehen könnte.",
@@ -3645,7 +3723,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nasa-own-science-method-2026-10-14",
       "mediaDecision": "Own explicitly bounded paper observation: Lege sechs gezeichnete Kreise als Zählzeichen auf Papier. Erkläre, was sie zeigen: sechs gedachte Portionen. Erkläre auch, was fehlt: Die Kreise sind keine Fotos, Größenmessungen oder Flugbahnen einzelner Photonen. Existing own illustrated card or lab supplies context; no source image, diagram, logo, text or worksheet reproduced.",
       "claims": [
@@ -3653,6 +3731,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://science.nasa.gov/ems/02_anatomy/",
           "anchor": "Selected Energy / Electromagnetic waves / Waves or particles / Describing electromagnetic energy; rest mass and vacuum qualifiers retained."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum sind Photonen im Bild keine winzigen sichtbaren Murmeln?",
+          "reason": "Du nutzt mehrere Modelle, ohne ein einzelnes Bild wörtlich zu nehmen. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
         }
       ]
     },
@@ -3794,7 +3878,7 @@
       "id": "words:Infrarot",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept, no count of another category or synonym as an additional word.",
-      "contentHash": "0c83d8218cc1ba50482fd321de004068c3275fc56787820847fcf89824258bd3",
+      "contentHash": "52317775f5c350669316106920de84714bbca26b5cbcfed5185420efb3c328ce",
       "ageLevels": {
         "6-8": "Wärmebilder zeigen etwas, das unsere Augen nicht direkt sehen. Ihre Farben werden für uns als Darstellung gewählt.",
         "9-11": "Infrarot ist elektromagnetische Strahlung mit längeren Wellenlängen als sichtbares rotes Licht. Unsere Augen sehen sie nicht. Warme Gegenstände senden unter anderem Infrarotstrahlung aus.",
@@ -3846,7 +3930,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nasa-own-science-method-2026-10-14",
       "mediaDecision": "Own explicitly bounded paper observation: Erfinde drei Messwerte und eine Farbzuordnung auf Papier: niedrig blau, mittel gelb, hoch rot. Beschrifte sie ausdrücklich als erfundenes Beispiel. Diese Farbtabelle ist keine Messung deiner Haut oder eines echten Raumes. Existing own illustrated card or lab supplies context; no source image, diagram, logo, text or worksheet reproduced.",
       "claims": [
@@ -3854,6 +3938,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://science.nasa.gov/ems/07_infraredwaves/",
           "anchor": "Selected thermal imaging / emitted infrared / false colour interpretation; no human only-infrared assertion or old instrument counts."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum haben Wärmebilder Farben, die wir am Gegenstand nicht sehen?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Infrarot“: Du liest eine Messdarstellung mit ihrer Legende statt Farben als unmittelbare Wirklichkeit zu behandeln."
         }
       ]
     },
@@ -3999,7 +4089,7 @@
       "id": "words:Wärmeleitung",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept, no count of another category or synonym as an additional word.",
-      "contentHash": "01a2e07a6c7f86016a70c8894ecc498e8bf38babaa92fa6198ef45eb0d28f9ae",
+      "contentHash": "45f75dc21f3b1c67cbd98857a941e85874439de2fc19236870c3c8d236c903c2",
       "ageLevels": {
         "6-8": "An einer Stelle wird ein Gegenstand wärmer; Energie kann durch das Material zu anderen Stellen gelangen.",
         "9-11": "Energie wird innerhalb eines Materials oder zwischen berührenden Materialien übertragen, ohne dass ein ganzer Stoffstrom dafür nötig ist. Unterschiedliche Materialien leiten Wärme unterschiedlich gut.",
@@ -4051,7 +4141,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "doe-own-explanations-2026-10-14",
       "mediaDecision": "Own explicitly bounded paper observation: Zeichne einen gedachten festen Stab mit einem wärmeren und einem kühleren Ende. Markiere den Energiepfad im Material. Der Stab ist nur ein Papiermodell: Verwende dafür kein Feuer und erhitze keine echten Gegenstände. Existing own illustrated card or lab supplies context; no source image, diagram, logo, text or worksheet reproduced.",
       "claims": [
@@ -4060,13 +4150,19 @@
           "sourceUrl": "https://bsesc.energy.gov/energy-basics/heat-flow",
           "anchor": "Full body lines11–22: conduction, convection, radiation. Natural warm-to-cool direction; own safe hypothetical comparisons, no building-efficiency guarantees."
         }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum fühlen sich gleich warme Materialien manchmal verschieden an?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Wärmeleitung“: Du trennst Temperatureigenschaft und Energieübertragung."
+        }
       ]
     },
     {
       "id": "words:Konvektion",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept, no count of another category or synonym as an additional word.",
-      "contentHash": "7112777f2c3ee06aa2bb8f9cf11632802606b1f35b08a6ac81be1237773909f3",
+      "contentHash": "2681a3385a0a4471411d3fbcbe82dec795fe71feec2ba8ca132e5a00d7cd10b6",
       "ageLevels": {
         "6-8": "Bewegte Luft oder bewegtes Wasser kann Energie mitnehmen. Das ist anders als Wärmeleitung durch einen festen Stab.",
         "9-11": "Eine bewegte Flüssigkeit oder ein bewegtes Gas führt Energie mit. Solche Strömungen können Wärme übertragen. Ein starrer Festkörper ist nicht derselbe Vorgang wie eine bewegte Luftströmung.",
@@ -4118,7 +4214,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "doe-own-explanations-2026-10-14",
       "mediaDecision": "Own explicitly bounded paper observation: Zeichne einen gedachten Raum mit Luftpfeilen und einen festen Stab mit einem Energiepfeil. Beschrifte die unterschiedlichen Vorgänge. Beide Zeichnungen sind Beispiele ohne reale Temperatur- oder Strömungsmessung. Existing own illustrated card or lab supplies context; no source image, diagram, logo, text or worksheet reproduced.",
       "claims": [
@@ -4126,6 +4222,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://bsesc.energy.gov/energy-basics/heat-flow",
           "anchor": "Full body lines11–22: conduction, convection, radiation. Natural warm-to-cool direction; own safe hypothetical comparisons, no building-efficiency guarantees."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum bewegt erwärmtes Wasser manchmal weiteres Wasser mit?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Konvektion“: Du unterscheidest den Energieweg vom mitbewegten Material."
         }
       ]
     },
@@ -4334,7 +4436,7 @@
       "id": "words:Oberflächenspannung",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept, no count of another category or synonym as an additional word.",
-      "contentHash": "09404aa58ddf7485e4f2a491035bb3dfcde7efe51c0ee746b4c8af319c63db4e",
+      "contentHash": "da3068cd4e60e7930400624b38e4e4e435a580fe36e216b02c74c2423601ac9b",
       "ageLevels": {
         "6-8": "Ein Wassertropfen kann eine gekrümmte Oberfläche bilden. Diese Fläche verhält sich anders als eine beliebig dehnbare Papierzeichnung.",
         "9-11": "Die Grenzfläche einer Flüssigkeit widersetzt sich einer Vergrößerung ihrer Fläche. Bei Wasser tragen die Wechselwirkungen der Moleküle dazu bei. Die Oberfläche ist dabei keine feste Haut aus einem anderen Stoff.",
@@ -4382,7 +4484,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "usgs-own-2026-10-14",
       "mediaDecision": "Own explicitly bounded paper observation: Vergleiche zwei eigene Tropfenskizzen mit glatter und stark vergrößerter Grenzlinie. Beschrifte sie als Formvergleich, nicht als Energiemessung. Verwende keine Nadeln oder zerbrechlichen Gefäße für dieses Papierbeispiel. Existing own illustrated card or lab supplies context; no source image, diagram, logo, text or worksheet reproduced.",
       "claims": [
@@ -4391,13 +4493,19 @@
           "sourceUrl": "https://www.usgs.gov/water-science-school/science/surface-tension-and-water",
           "anchor": "Selected scientific lines34–57: cohesion and resistance to increasing interface. Excluded claim of water greatest except mercury, simplistic stronger surface bonds, unsupported membrane-as-real-skin and third-party images."
         }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum kann eine Nadel anders auf Wasser liegen als untertauchen?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Oberflächenspannung“: Du unterscheidest Grenzflächenwirkung von einem allgemeinen Schwimmversprechen."
+        }
       ]
     },
     {
       "id": "words:Kapillarwirkung",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept, no count of another category or synonym as an additional word.",
-      "contentHash": "ebc04903783c9f0d1e9cf9921466c4508cd10b63a7ad9e0646343fc483ea9beb",
+      "contentHash": "ee0acd929edb73c5fd87334f3dff7f73b3e706393ca35c97ba0ef0fe1cc50dd0",
       "ageLevels": {
         "6-8": "Wasser kann in kleinen Zwischenräumen wandern. Darum lässt sich eine feuchte Stelle in einem passenden Tuch ausbreiten.",
         "9-11": "Eine Flüssigkeit kann in engen benetzbaren Räumen ihre Lage verändern, etwa in kleinen Zwischenräumen eines Tuchs. Anziehung zum Material, Zusammenhalt der Flüssigkeit und Schwerkraft wirken dabei zusammen.",
@@ -4445,7 +4553,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "usgs-own-2026-10-14",
       "mediaDecision": "Own explicitly bounded paper observation: Zeichne ein gedachtes Tuch mit kleinen Zwischenräumen und eine begrenzte feuchte Zone. Kennzeichne, dass Pfeile nur eine mögliche Ausbreitung zeigen. Sie geben keine gemessene Geschwindigkeit oder unbegrenzte Steighöhe an. Existing own illustrated card or lab supplies context; no source image, diagram, logo, text or worksheet reproduced.",
       "claims": [
@@ -4453,6 +4561,16 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.usgs.gov/water-science-school/science/capillary-action-and-water",
           "anchor": "Selected lines19–23: wetting, adhesion/cohesion, narrow spaces and limited rise. Excluded entire-tree ascent explained only by capillarity and borrowed figure."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum zieht Wasser in einem Papiertuch nach oben?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Kapillarwirkung“: Du erklärst einen Alltagsweg des Wassers mit mehreren zusammenwirkenden Bedingungen."
+        },
+        {
+          "question": "Warum kann ein schwarzer Stift mehrere Farben enthalten?",
+          "reason": "Das flüssige Trägermittel kann sich auf engen Wegen im Papier bewegen. Unterschiedliche Stoffwanderung und Stoffbestimmung brauchen darüber hinaus weitere Bedingungen; Kapillarwirkung allein identifiziert keinen Farbstoff."
         }
       ]
     },
@@ -4543,7 +4661,7 @@
       "id": "words:Zellmembran",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept, no count of another category or synonym as an additional word.",
-      "contentHash": "db3148d3bd89a5186b1ed755d7c8ad8095dec3b2c970131bbe802fe5ca26d72a",
+      "contentHash": "1341a27f3059dd8c29ef6de6907ece25b08a61982dd753f2c3ca7f94414a8680",
       "ageLevels": {
         "6-8": "Die Membran bildet eine Grenze, an der bestimmte Stoffe hinein- oder hinausgelangen können.",
         "9-11": "Die Zellmembran begrenzt eine Zelle gegenüber ihrer Umgebung. Sie ist am kontrollierten Austausch von Stoffen beteiligt. Sie ist nicht dasselbe wie die zusätzliche feste Zellwand mancher Zelltypen.",
@@ -4591,7 +4709,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nhgri-own-explanations-2026-10-14",
       "mediaDecision": "Own explicitly bounded paper observation: Zeichne einen gedachten Zellring mit zwei unterschiedlich beschrifteten Pfeilen hinein und hinaus. Markiere ihn als Schema. Die Pfeile stehen nicht für beliebige offene Löcher und messen keine Stoffmenge oder Transportzeit. Existing own illustrated card or lab supplies context; no source image, diagram, logo, text or worksheet reproduced.",
       "claims": [
@@ -4599,6 +4717,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.genome.gov/genetics-glossary/Cell-Membrane-Plasma-Membrane",
           "anchor": "Full definition: boundary, lipid bilayer, selective transport; narration distinguishes cell wall. No universal cholesterol or conscious-decision metaphor."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum ist eine Zellmembran mehr als eine einfache Mauer?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Zellmembran“: Du verbindest Schutz und Austausch, ohne die Bildgrenze wörtlich zu nehmen."
         }
       ]
     },
@@ -4803,7 +4927,7 @@
       "id": "words:Prokaryot",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept, no count of another category or synonym as an additional word.",
-      "contentHash": "76bc4477af17863805a821df67b4f67770b954413683e27c5adf09a773d6c144",
+      "contentHash": "0ce19324dec07eb262f3e972dc8eec01f415c43905c7a79ebe0de5f3500593c6",
       "ageLevels": {
         "6-8": "Manche Zellen haben keinen umhüllten Kern. Trotzdem besitzen sie Erbinformation und können leben.",
         "9-11": "Prokaryot bezeichnet ein Lebewesen mit Zellen ohne membranumhüllten Zellkern. Ein Beispiel sind Bakterien. Ohne diesen Kern bedeutet nicht ohne Erbinformation oder ohne geregelte Zellvorgänge.",
@@ -4851,7 +4975,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nhgri-own-explanations-2026-10-14",
       "mediaDecision": "Own explicitly bounded paper observation: Zeichne ein erfundenes Zellschema ohne Kernhülle und markiere darin einen Bereich mit DNA. Schreibe darunter: nicht maßstäblich, keine echte Aufnahme. Unbekannte Mikroorganismen werden dafür weder gesammelt noch gezüchtet. Existing own illustrated card or lab supplies context; no source image, diagram, logo, text or worksheet reproduced.",
       "claims": [
@@ -4859,6 +4983,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.genome.gov/genetics-glossary/Cell",
           "anchor": "Full definition and narration: unicellular/multicellular, eukaryotic/prokaryotic groups. No adult cell-count range or nanobot agency copied."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum kann eine Zelle Erbinformation ohne Zellkern besitzen?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Prokaryot“: Du unterscheidest den Aufbewahrungsbereich von der enthaltenen Information."
         }
       ]
     },
@@ -5122,7 +5252,7 @@
       "id": "words:Niederschlag",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "ad54693f987b330c6c31c0994609e31db9a68fd5aa6dd7143e5b1f8cffd22fcb",
+      "contentHash": "5fb6535e519a10decd0349fa94fb2afa0cffa30b237a2d71f884cccdaa126bcc",
       "ageLevels": {
         "6-8": "Wasser gelangt aus der Atmosphäre zur Oberfläche, etwa als Regen oder Schnee.",
         "9-11": "Wasser, das aus Wolken zur Erde fällt, etwa Regen, Schnee oder Hagel.",
@@ -5170,7 +5300,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "usgs-own-2026-10-14",
       "mediaDecision": "Own explicitly bounded paper observation: Schreibe zwei erfundene Beobachtungen auf: Regen heute und Schnee gestern. Erkläre, was beide gemeinsam haben. Aus den Wörtern lassen sich weder eine genaue Menge noch ein künftiger Wetterverlauf ablesen. Existing own illustrated card or lab supplies context; no source image, diagram, logo, text or worksheet reproduced.",
       "claims": [
@@ -5178,6 +5308,16 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.usgs.gov/water-science-school/water-cycle",
           "anchor": "Selected scientific storage/flux/state body: evaporation, condensation, atmospheric water, precipitation, groundwater and infiltration. Own fictitious observations, no diagrams or current percentage records copied."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum können Wolken schweben?",
+          "reason": "Der Niederschlagsbegriff unterscheidet kleine Wolkenteilchen von fallenden Tropfen oder Eiskristallen."
+        },
+        {
+          "question": "Warum regnet es?",
+          "reason": "Die Niederschlagserklärung hilft, verschiedene Wasserformen auf einem Weg von der Wolke zum Boden zu verfolgen."
         }
       ]
     },
@@ -5386,7 +5526,7 @@
       "id": "words:Mondphase",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "41c533d5963124161da066adfc0b6655e8c70895945300608e63309e6f3dc60e",
+      "contentHash": "239478033ca8bf0dfc4f51442173c947e0aea51070dad702f6019fb7b93e2540",
       "ageLevels": {
         "6-8": "Der Mond wird von der Sonne beleuchtet. Während er die Erde umrundet, sehen wir unterschiedliche Teile seiner beleuchteten Seite.",
         "9-11": "Die scheinbare Form des Mondes, weil wir verschieden viel seiner beleuchteten Hälfte sehen.",
@@ -5438,7 +5578,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nasa-own-science-method-2026-10-14",
       "mediaDecision": "Own explicitly bounded paper observation: Zeichne eine gedachte Sonne, Erde und vier Mondpositionen von oben. Ergänze daneben getrennte Scheibenansichten von der Erde. Die Skizze ist weder maßstabsgetreu noch eine Berechnung echter Sichtbarkeitszeiten. Existing own illustrated card or lab supplies context; no source image, diagram, logo, text or worksheet reproduced.",
       "claims": [
@@ -5446,6 +5586,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://science.nasa.gov/moon/moon-phases/",
           "anchor": "Selected scientific lines287–370: reflected sunlight, illuminated view, first quarter and synodic month; eclipse exceptions and observer perspective retained."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum leuchtet der Mond?",
+          "reason": "Das Mondlabor trennt beleuchtete Hälfte und sichtbare Ansicht. Begründe jede Phase mit Lichtquelle und Blickrichtung."
         }
       ]
     },
@@ -5658,7 +5804,7 @@
       "id": "words:Erdachse",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "d5f9a3128d2b305d24157120026d56f1bc8f5ac63bf43ea1fd4b221b80bd364e",
+      "contentHash": "c79fe10603fc3a6199794b12fa65fcd3301efdca78679d4b8199ef46c3dfa836",
       "ageLevels": {
         "6-8": "Die Erdachse ist eine gedachte Linie, um die sich die Erde dreht. Sie ist kein wirklicher Stab durch den Planeten.",
         "9-11": "Gedachte Linie durch Nordpol, Erdmitte und Südpol. Um sie dreht sich die Erde.",
@@ -5706,7 +5852,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nasa-own-science-method-2026-10-14",
       "mediaDecision": "Own explicitly bounded paper observation: Zeichne eine gedachte Kugel mit Achslinie und einem getrennten Umlaufpfeil. Beschrifte Drehung und Umlauf verschieden. Die Papierzeichnung enthält keine genaue Himmelsmechanik oder Wetterberechnung. Existing own illustrated card or lab supplies context; no source image, diagram, logo, text or worksheet reproduced.",
       "claims": [
@@ -5715,13 +5861,23 @@
           "sourceUrl": "https://spaceplace.nasa.gov/seasons/en/",
           "anchor": "Full tilt/light/rotation body: opposite hemispheres; exclude impact-origin certainty, forever fixed axis or universal every-day sunrise claims."
         }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum merken wir die Erddrehung nicht?",
+          "reason": "Gemeinsame Bewegung und Achsdrehung sind verschiedene Gedanken: Verfolge die Erdachse und benenne die Grenze des Zugvergleichs."
+        },
+        {
+          "question": "Warum gibt es Tag und Nacht?",
+          "reason": "Im Achsenbegriff kannst du tägliche Drehung und jährlichen Umlauf sprachlich und zeichnerisch trennen."
+        }
       ]
     },
     {
       "id": "words:Jahreszeiten",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "a72fc02e19d2e17b6d9d5e969b20294db07fa6156e95e0ae1b770ba3f551e4b8",
+      "contentHash": "aa3f73f88387b0f2ad1512f1e1e1f03b8ab67e1c061f0d77451d4533e59ffe85",
       "ageLevels": {
         "6-8": "Im Laufe des Jahres ändern sich durch die geneigte Erdachse Sonnenstand und Tageslänge. Nord- und Südhalbkugel haben gegensätzliche jahreszeitliche Lichtverhältnisse.",
         "9-11": "Der Wechsel von Frühling, Sommer, Herbst und Winter in vielen Gegenden. Er hängt mit der geneigten Erdachse zusammen.",
@@ -5769,7 +5925,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nasa-own-science-method-2026-10-14",
       "mediaDecision": "Own explicitly bounded paper observation: Zeichne zwei gegenüberliegende Punkte einer gedachten geneigten Erde. Beschrifte die unterschiedliche Lichtausrichtung in einer Jahressituation. Das Schema erklärt Lichtbedingungen und nennt keine sichere Temperatur für echte Orte. Existing own illustrated card or lab supplies context; no source image, diagram, logo, text or worksheet reproduced.",
       "claims": [
@@ -5778,13 +5934,23 @@
           "sourceUrl": "https://spaceplace.nasa.gov/seasons/en/",
           "anchor": "Full tilt/light/rotation body: opposite hemispheres; exclude impact-origin certainty, forever fixed axis or universal every-day sunrise claims."
         }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum gibt es Jahreszeiten?",
+          "reason": "Das Jahreszeitenlabor lässt dich beide Halbkugeln bei derselben Bahnstellung vergleichen, statt nur eine Entfernung zu betrachten."
+        },
+        {
+          "question": "Warum ist es an den Polen kalt?",
+          "reason": "Im Jahreszeitenlabor kannst du die Beleuchtung einer Polregion in zwei Jahresstellungen gegenüberstellen."
+        }
       ]
     },
     {
       "id": "words:Ebbe und Flut",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "d45724f0cdf6416fea57a4ebaef3f474f92550fddb84481e890b848de450c5f8",
+      "contentHash": "74e8897eeb2cd20a0f896e6aed734701120c53df8b407c436d4398a7a19f7fdc",
       "ageLevels": {
         "6-8": "An vielen Küsten steigen und fallen Wasserstände durch Gezeiten. Vor allem Mond und Sonne tragen zu dieser regelmäßigen Wirkung bei.",
         "9-11": "Das regelmäßige Sinken und Steigen des Meeresspiegels. Vor allem der Mond und auch die Sonne verursachen die Gezeiten.",
@@ -5836,7 +6002,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "noaa-nos-own-2026-10-14",
       "mediaDecision": "Own explicitly bounded paper observation: Zeichne zwei erfundene Wasserstände von 1 und 3 Zentimetern über demselben Bezug. Bestimme den Unterschied. Die erfundenen Werte sind keine Gezeitenmessung, kein Meeresspiegeltrend und keine Sicherheitsangabe. Existing own illustrated card or lab supplies context; no source image, diagram, logo, text or worksheet reproduced.",
       "claims": [
@@ -5844,6 +6010,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://oceanservice.noaa.gov/facts/tides.html",
           "anchor": "Full lines5–13: Sun/Moon gravitational influence, rise/fall, highest/lowest level and tidal range. No all-coasts-identical-period or safe-walking inference."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum gibt es Ebbe und Flut?",
+          "reason": "Das Gezeitenlabor lässt Stellungen vergleichen. Es liefert keine örtlichen Wattzeiten oder sicheren Küstenentscheidungen."
         }
       ]
     },
@@ -6123,7 +6295,7 @@
       "id": "words:Plattentektonik",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "85a762ff19a4a56c332455b8ed2a059f9dc65108f17c0c98fd0fb9bb5763cadc",
+      "contentHash": "91e8222ed858bbfe5f4f70c2f65ecf46295a3676d95d7594ed052d60d92ceb8e",
       "ageLevels": {
         "6-8": "Die feste äußere Hülle der Erde besteht aus bewegten Platten. Sie umfasst auch Meeresboden und entspricht nicht einfach den politischen Ländern.",
         "9-11": "Die Bewegung der großen festen Platten an der Außenseite der Erde. Sie verändert die Erde über lange Zeit.",
@@ -6175,7 +6347,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "usgs-own-2026-10-14",
       "mediaDecision": "Own explicitly bounded paper observation: Zeichne zwei gedachte Plattenflächen mit unterschiedlichen Bewegungspfeilen und darüber eine unabhängige Ländergrenze. Das Schema hat keinen Kartenmaßstab und zeigt nicht jede Bruchfläche oder geologische Bewegung. Existing own illustrated card or lab supplies context; no source image, diagram, logo, text or worksheet reproduced.",
       "claims": [
@@ -6184,13 +6356,23 @@
           "sourceUrl": "https://www.usgs.gov/faqs/are-tectonic-plates-floating-magma",
           "anchor": "Full FAQ selected scientific opening: predominantly solid mantle, very slow deformation/local melt; outer core liquid, no global magma ocean."
         }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Ist jeder Berg ein Vulkan?",
+          "reason": "Das Plattenlabor zeigt andere Bewegungen als ein Vulkanausbruch. Vergleiche damit zwei mögliche Ursachen einer Landschaftsform."
+        },
+        {
+          "question": "Schwimmen Kontinente auf Lava?",
+          "reason": "Das Plattenlabor zeigt die Bewegung der festen äußeren Hülle. Erkläre, welche Material- und Zeitvorstellungen das Bild vereinfacht."
+        }
       ]
     },
     {
       "id": "words:Erdbeben",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "b284736d77d90cbd8a4859c0c7321b800c64586fcb866366974bbc44852aee37",
+      "contentHash": "5316a40c3ae97d855f6fec62599b1cff37ba8e6ad4e4cdb7768a7eb0b3fa1a72",
       "ageLevels": {
         "6-8": "Bei einem Erdbeben wird der Boden erschüttert. Häufig hängt dies mit plötzlich gegeneinander verrutschendem Gestein an einer Bruchfläche zusammen.",
         "9-11": "Eine Erschütterung des Bodens. Häufig entstehen Erdbeben, wenn Gestein an einer Bruchfläche plötzlich verrutscht.",
@@ -6242,7 +6424,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "usgs-own-2026-10-14",
       "mediaDecision": "Own explicitly bounded paper observation: Zeichne eine gedachte Bruchfläche mit einem Beginnpunkt und zwei Ortsmarkierungen. Liste die fehlenden Angaben auf: echte Tiefe, Material und Messwerte. Das eigene Schema ist keine Warnung oder Handlungsanleitung für ein reales Beben. Existing own illustrated card or lab supplies context; no source image, diagram, logo, text or worksheet reproduced.",
       "claims": [
@@ -6250,6 +6432,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.usgs.gov/programs/earthquake-hazards/science-earthquakes",
           "anchor": "Selected first50 scientific lines: hypocentre/epicentre, fault slip, Earth layers and boundaries; no universal aftershock forecast or source media."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum gibt es Erdbeben?",
+          "reason": "Das Erdbebenlabor trennt Ursache, Ausbreitung und örtliche Wirkung und ermöglicht einen begrenzten Modellvergleich."
         }
       ]
     },
@@ -6324,7 +6512,7 @@
       "id": "words:Byte",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept. Formal semantic and independent acceptance open.",
-      "contentHash": "bcbd626fc9de4356c526dea1b7c63f23974474c8b1de8f4b9ff186cc48f4d3bf",
+      "contentHash": "ba0f8f3d2626123c3190c3b0182b0249b312748d1b1b8ac25cda6aab74af2286",
       "ageLevels": {
         "6-8": "Acht0-oder1-Stellen bilden ein Byte. Welche Bedeutung die Gruppe hat, muss eine vereinbarte Regel erklären.",
         "9-11": "Ein Byte ist hier eine Gruppe aus acht Bits. Diese Gruppe kann verschieden interpretiert werden. Sie ist nicht automatisch ein bestimmter Buchstabe.",
@@ -6372,7 +6560,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nist-own-digital-facts-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Zeichne genau acht Kästchen und fülle sie mit0 oder1. Zähle die Stellen. Schreibe keine echten Passwörter hinein: Das erfundene Beispiel erklärt die Gruppengröße, nicht eine reale Datei oder Kodierung.",
       "claims": [
@@ -6381,13 +6569,19 @@
           "sourceUrl": "https://csrc.nist.gov/glossary/term/Byte",
           "anchor": "Actual selected Definitions115–137, eight-bit sequence/group, NIST IR8459; no universal character encoding or kilobyte convention."
         }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum sind acht Bits nicht dasselbe wie die Zahl acht?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Byte“: Du trennst Datenumfang und die Bedeutung einer Darstellung."
+        }
       ]
     },
     {
       "id": "words:Verschlüsselung",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept. Formal semantic and independent acceptance open.",
-      "contentHash": "fb78fab5231c4fa15708e6f62b1c2189a334cec0944028b1f2de3cb49d6f34c1",
+      "contentHash": "e2d6bdc96f5784b272b72791a207e97671c0530e611b401591d4901fec6643e3",
       "ageLevels": {
         "6-8": "Eine vereinbarte Regel kann einen erfundenen Text verändern. Zum Zurücklesen braucht man die passende Regel und Angabe.",
         "9-11": "Daten werden nach einem kryptografischen Verfahren mit einem Schlüssel in eine andere Form umgewandelt. Ein passender Entschlüsselungsvorgang kann sie wieder nutzbar machen. Eine einfache Buchstabenspielregel ist kein verlässlicher Schutz echter Geheimnisse.",
@@ -6439,7 +6633,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nist-own-digital-facts-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Verschiebe im erfundenen AlphabetA bisZ jeden Buchstaben vonHUT um eine Stelle weiter:IVU. Erkläre die Rückregel. Verwende nur diesen Spieltext, keine echten Passwörter, Namen oder privaten Nachrichten.",
       "claims": [
@@ -6447,6 +6641,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://csrc.nist.gov/glossary/term/encryption",
           "anchor": "Actual selected Definitions128–143: algorithm/key transform plaintext to ciphertext, NIST SP800-133Rev2 and800-57; no toy cipher as real protection."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum ist eine leicht lesbar zurückdrehbare Geheimregel kein sicherer Schutz?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Verschlüsselung“: Du erkennst den Unterschied zwischen einem anschaulichen Prinzip und geprüfter Sicherheit."
         }
       ]
     },
@@ -6521,7 +6721,7 @@
       "id": "words:Prüfsumme",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept. Formal semantic and independent acceptance open.",
-      "contentHash": "849c13cee2421172f97703a1b29d624b703f87200755e5cab931e211fd183712",
+      "contentHash": "9da57d2232b61fb5694bf0ef40be3cbdeead36497e846d04d57c0e218a5985ad",
       "ageLevels": {
         "6-8": "Eine kleine Kontrollzahl kann auf eine Änderung hinweisen. Sie sagt aber nicht automatisch, wer etwas geschrieben hat.",
         "9-11": "Eine Prüfsumme wird aus Daten berechnet und kann helfen, Veränderungen zu entdecken. Gleiche Prüfsummen beweisen bei einem einfachen Verfahren nicht automatisch gleiche Daten, einen vertrauenswürdigen Absender oder geheime Inhalte.",
@@ -6569,7 +6769,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nist-own-digital-facts-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Vergleiche auf Papier die erfundenen Zahlenpaare1+2 und0+3. Berechne beide Summen und erkläre den gleichen Wert bei verschiedenen Paaren. Das Beispiel ist keine wirkliche Datei- oder Sicherheitsprüfung.",
       "claims": [
@@ -6577,6 +6777,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://csrc.nist.gov/glossary/term/checksum",
           "anchor": "Actual checksum definition fromNIST SP800-128/CNSSI: content-dependent value for change detection. Toy sum collision explicitly shown, no authenticity claim."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum beweist eine passende Prüfsumme nicht automatisch Echtheit?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Prüfsumme“: Du trennst Änderungsprüfung, Eindeutigkeit und Herkunft."
         }
       ]
     },
@@ -6848,7 +7054,7 @@
       "id": "words:Komet",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept. Formal semantic and independent acceptance open.",
-      "contentHash": "0ec76d44fdb73f84c28a724b92f76f2ff4e303eca8e0789023b961046cf8b753",
+      "contentHash": "62b24e22060e47bec6f08e85db611f44282d2a8961ea1002e3cfe045e1931c0b",
       "ageLevels": {
         "6-8": "Ein eisreicher Körper kann in Sonnennähe Material abgeben. Dadurch kann ein Schweif sichtbar werden.",
         "9-11": "Ein Komet ist ein kleiner Himmelskörper mit Eis und weiteren Bestandteilen wie Staub. In Sonnennähe können Gas und Staub eine Hülle und Schweife bilden. Ein Komet ist kein selbst leuchtender Stern mit langen Haaren.",
@@ -6896,7 +7102,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nasa-own-science-method-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Zeichne eine gedachte Sonne und einen Kometenkern getrennt von einer Materialhülle. Schreibe ausdrücklich keine echte Beobachtung daneben. Das Schema berechnet weder eine reale Bahn noch eine sichere Schweifform.",
       "claims": [
@@ -6904,6 +7110,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://science.nasa.gov/solar-system/comets/facts/",
           "anchor": "Actual selected264–265: nucleus ice/dust, coma fromwarming, dust/ion tails. No all-comets-visible-tail or surewaterorigin, impactrisk or sourceimage."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum zeigt ein Kometenschweif nicht einfach die Flugrichtung an?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Komet“: Du unterscheidest Körperbewegung und Wirkung auf abgegebenes Material."
         }
       ]
     },
@@ -7041,7 +7253,7 @@
       "id": "words:Transit",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept. Formal semantic and independent acceptance open.",
-      "contentHash": "f5b1c09f1b3e69653b7c16b6ff9cef76a7ae56ee553a23cfbb454bdb4daa2ba1",
+      "contentHash": "50f02c31e40a42591e7cbf7128cd251809d51d23ce5fa5099601a38eaca8664b",
       "ageLevels": {
         "6-8": "Eine kleine Scheibe kann aus deiner Richtung vor einer größeren vorbeiziehen. Aus einer anderen Richtung kann sie daneben aussehen.",
         "9-11": "Bei einem astronomischen Transit zieht ein Körper aus unserer Blickrichtung vor einem anderen vorbei. Bei manchen Exoplaneten liegt die Bahn so, dass sie einen kleinen Teil des Sternlichts verdecken. Die Blickrichtung ist entscheidend.",
@@ -7089,7 +7301,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nasa-own-science-method-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Lege zwei Papierkreise verschieden groß nebeneinander und schiebe den kleineren im gezeichneten Blickfeld davor. Beschrifte eigene Scheibenskizze, keine Sternmessung. Schaue dafür niemals direkt in die Sonne oder einen Laser.",
       "claims": [
@@ -7097,6 +7309,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://spaceplace.nasa.gov/transits/en/",
           "anchor": "Actual selected35–41: foreground planet, star dimming, geometry; no upcomingcalendar/image or unsafeSolarobservations."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum können wir nicht jeden Exoplaneten durch einen Transit finden?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Transit“: Du trennst Beobachtbarkeit, Hinweis und gesicherten Nachweis."
         }
       ]
     },
@@ -7364,7 +7582,7 @@
       "id": "words:Messunsicherheit",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept. Formal semantic and independent acceptance open.",
-      "contentHash": "fdd8d2e41a7e6570c84fcf8634dca04cc0ef1ef7b9fd60b5243d908e43598039",
+      "contentHash": "544458ad9d9175536f9b15c6d46c60230322c1a8346c48c0686b6b42bf52034e",
       "ageLevels": {
         "6-8": "Ein Messgerät zeigt nicht jedes winzige Stück. Deshalb ist Messen nicht grenzenlos genau.",
         "9-11": "Messunsicherheit beschreibt, wie genau eine gesuchte Größe anhand einer Messung eingeschätzt werden kann. Sie ist nicht dasselbe wie ein bekannter Fehler. Auch ein sorgfältiges Ergebnis braucht Angaben zu seiner Verlässlichkeit.",
@@ -7412,7 +7630,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nist-own-statistics-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Vergleiche gedachte Lineale mit Zentimeter- und Millimeterstrichen auf Papier. Welche kleineren Schritte lassen sich ablesen? Die Zeichnung ist keine Kalibrierung und liefert keinen berechneten Unsicherheitswert für ein echtes Gerät.",
       "claims": [
@@ -7420,6 +7638,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-2-classification-components-uncertainty",
           "anchor": "Actual2.1 andnote148: uncertainty accompanies result, not same as actual error; no universal95percent or guaranteed interval."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum machen zusätzliche Nachkommastellen eine Messung nicht automatisch genauer?",
+          "reason": "Du fragst nach der Begründung einer Genauigkeitsangabe statt nach bloßer Ziffernzahl. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
         }
       ]
     },
@@ -7494,7 +7718,7 @@
       "id": "words:Wahrscheinlichkeit",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept. Formal semantic and independent acceptance open.",
-      "contentHash": "53a979d32496c9c8e55a54af50702383ba24eb9580dfcb2aaa7dd87f6601a4d3",
+      "contentHash": "83b638ee0292be6c3706484f36997d96db4e28a6bfe8cba59fcd56cc9aa202ba",
       "ageLevels": {
         "6-8": "Manche Ergebnisse sind möglich, aber nicht sicher. Ein Modell hilft, ihre Chancen zu vergleichen.",
         "9-11": "Wahrscheinlichkeit beschreibt, wie möglich ein Ereignis unter bestimmten Bedingungen ist. Eine Wahrscheinlichkeit zwischen 0 und 1 ist keine Vorhersage, was beim nächsten Versuch sicher passiert. Das zugrunde liegende Modell muss zur Frage passen.",
@@ -7542,7 +7766,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nist-own-statistics-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Schreibe A und B als die beiden Möglichkeiten eines ausdrücklich gedachten fairen Versuchs auf. Notiere eine erfundene Folge A, A, B. Vergleiche mögliche Chancen mit dieser kurzen Ergebnisliste; sie ist keine echte Zufallsmessung.",
       "claims": [
@@ -7550,6 +7774,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm",
           "anchor": "Actual NIST binomial definition8: exactly two mutually exclusive outcomes, fixed single-trial probability. Explicit independence in own hypothetical model, no assertion of real coin fairness or copied formulas/data."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum muss nach mehreren gleichen Zufallsergebnissen kein Ausgleich kommen?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Wahrscheinlichkeit“: Du vermeidest den Fehlschluss, ein zufälliger Ausgleich sei sofort fällig."
         }
       ]
     },
@@ -7620,7 +7850,7 @@
       "id": "words:Maßstab",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept. Formal semantic and independent acceptance open.",
-      "contentHash": "a9e6a50f90a9bf1f093a4723acb3f104375faa109264e92b750b9103e6cebc97",
+      "contentHash": "8efcee59cfca9201a23b92208c01ffc7b271247fef28d611b0cb0cf1f912a29e",
       "ageLevels": {
         "6-8": "Ein kleiner Plan kann eine größere Strecke darstellen. Der Maßstab erklärt den Unterschied.",
         "9-11": "Ein Maßstab gibt an, wie Strecken einer Zeichnung zu den gemeinten Strecken passen. Bei 1:100 entspricht 1 cm auf dem Plan 100 cm in der beschriebenen Wirklichkeit. Beide Seiten des Verhältnisses müssen dieselbe Einheit verwenden.",
@@ -7672,7 +7902,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "usgs-own-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Zeichne eine gedachte 2 m lange Wand im Maßstab 1:100: 2 m sind 200 cm, also wird die Linie 2 cm lang. Nutze nur einen erfundenen Raum; der Plan ersetzt keine sichere Vermessung oder Bauanleitung.",
       "claims": [
@@ -7681,13 +7911,19 @@
           "sourceUrl": "https://www.usgs.gov/educational-resources/27-ideas-teaching-topographic-maps-0",
           "anchor": "Actual MapScale paragraph: ratio1:10000 sameunits map toground. Own1:100 toy floorplan arithmetic, no source map, data, worksheet or current mapcount."
         }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum kann ein Papierplan eine echte Bauprüfung nicht ersetzen?",
+          "reason": "Du erkennst Nutzen und Grenze einer maßstäblichen Darstellung. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+        }
       ]
     },
     {
       "id": "words:Winkel",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept. Formal semantic and independent acceptance open.",
-      "contentHash": "2252d45ef5822cbd54ef58080d021f08800ad6d9323a50c4c427fd7bcc22a727",
+      "contentHash": "07ba3d6b1c3e590e3602b9bbbe2cd6c368e95feedd3fadfd432d718d02e9c1c7",
       "ageLevels": {
         "6-8": "Ein Pfeil kann sich drehen. Eine Vierteldrehung zeigt einen rechten Winkel.",
         "9-11": "Ein Winkel beschreibt eine Öffnung zwischen Richtungen oder eine Drehung. Eine Vierteldrehung entspricht einem rechten Winkel von 90°. Die Länge gezeichneter Pfeile bestimmt nicht die Größe ihrer Richtungsänderung.",
@@ -7735,7 +7971,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nrich-own-mathematical-facts-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Zeichne einen Pfeil nach oben und einen nach rechts, beide vom selben Punkt aus. Markiere eine Vierteldrehung im Uhrzeigersinn. Zeichne einen Pfeil länger: Die Richtungen und ihr Winkel bleiben gleich.",
       "claims": [
@@ -7744,13 +7980,19 @@
           "sourceUrl": "https://nrich.maths.org/problems/turning",
           "anchor": "Actual turning conceptual teaching: angles measure turns; own quarter-turn arrow example only, no NRICH activity/tool/template/worksheet or wording copied."
         }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum ändert ein längerer gezeichneter Pfeil nicht den Winkel?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Winkel“: Du unterscheidest Richtungsänderung von Streckenlänge."
+        }
       ]
     },
     {
       "id": "words:Symmetrie",
       "kind": "new-individual-explanation-candidate",
       "baselineComparison": "Absent from90 baseline terms; separate explanatory concept. Formal semantic and independent acceptance open.",
-      "contentHash": "7d275ce77324d657937d931b6fadb4602f32312c10c1db57e56845353ede0728",
+      "contentHash": "1311860b1fda6b0b9ff36fbcc9b3db071cca56074da54e79a2cccb6bff83c31b",
       "ageLevels": {
         "6-8": "Eine passende Spiegelachse teilt eine Form so, dass die beiden Seiten beim Spiegeln zusammenpassen.",
         "9-11": "Symmetrie bedeutet, dass eine Form nach einer bestimmten Veränderung mit sich selbst übereinstimmt. Bei Spiegelsymmetrie passt sie beim Spiegeln an einer Achse. Verschiedene Arten von Symmetrie müssen getrennt geprüft werden.",
@@ -7798,7 +8040,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nrich-own-mathematical-facts-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Zeichne ein Rechteck mit einer deutlich langen und einer kurzen Seite. Markiere die beiden Linien durch gegenüberliegende Seitenmitten. Vergleiche spiegelnde Punktpaare; die eigene Zeichnung kann ungenau sein und ersetzt keinen geometrischen Beweis.",
       "claims": [
@@ -7807,13 +8049,19 @@
           "sourceUrl": "https://nrich.maths.org/problems/symmetry-challenge",
           "anchor": "Actual teacher214–227: reflection, spatial reasoning, systematic tests. Own non-square rectangle example; no protected3x3 puzzle, worksheet, diagram, solutioncount or wording copied."
         }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum ist nicht jede Diagonale eine Spiegelachse?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Symmetrie“: Du prüfst eine Symmetrie an der ganzen Form statt an einem einzelnen Merkmal."
+        }
       ]
     },
     {
       "id": "words:Erdkern",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "4aabbb70e4a20d7986badc2800771c3873ba548b59522327ccbd332ecf30666e",
+      "contentHash": "ff5bead834ab5dee3927ce16bbd5f26f4367d10e0015c74075e915f6169679ac",
       "ageLevels": {
         "6-8": "Ganz innen liegt der Erdkern. Sein äußerer Teil ist flüssig und sein innerer Teil fest.",
         "9-11": "Die innersten Teile der Erde. Der äußere Kern ist flüssig, der innere fest. Beide bestehen vor allem aus Metall.",
@@ -7861,7 +8109,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "usgs-own-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Zeichne zwei ineinanderliegende Kernbereiche innerhalb eines Mantelrings. Beschrifte fest innen und flüssig außen. Die Farben sind frei gewählt; Ringdicken sind kein Maßstab und Papierzustände keine echten Erdmaterialien.",
       "claims": [
@@ -7869,6 +8117,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.usgs.gov/programs/earthquake-hazards/science-earthquakes",
           "anchor": "Earlier actual same-day selected Earthstructure paragraph: inner solid, outer liquid, crust/mantle/core. Fresh reopening timed out; use earlier documented reading, no new thickness/temperature claim."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Können wir bis zum Mittelpunkt graben?",
+          "reason": "Der Erdkernbegriff zeigt einen inneren Bereich, den wir mit indirekten Hinweisen untersuchen, statt ihn vollständig zu erbohren."
         }
       ]
     },
@@ -8455,7 +8709,7 @@
       "id": "words:Vulkan",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "f91226893af1d32ffd32e844b93022f7633077f67dfff842296ff7bd222a49b6",
+      "contentHash": "7a2452a9fd52f6b0463274c6923c5bab105d3b8b40c614338796d26ed8b4d7fa",
       "ageLevels": {
         "6-8": "An einem Vulkan können Gesteinsmaterial und Gase aus dem Erdinneren austreten. Nicht jeder Vulkan sieht wie ein hoher Kegel aus.",
         "9-11": "Eine Stelle, an der Magma, Gase und manchmal Asche aus dem Erdinneren austreten können.",
@@ -8503,7 +8757,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "usgs-own-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Zeichne zwei erfundene Profile mit einem Ausgang: eines breit, eines steiler. Beschrifte sie ausdrücklich als Modelle. Suche keine echten Ausbruchsorte auf und leite aus der Form keine sichere Gefahrenprognose ab.",
       "claims": [
@@ -8511,6 +8765,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.usgs.gov/programs/VHP/about-volcanoes",
           "anchor": "Actual AboutVolcanoes24/30/37–43: vent/outlets, different eruptionways, no copiedsoda experiment or globalmountaincounts."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum bricht ein Vulkan aus?",
+          "reason": "Das Vulkanlabor vergleicht Einflussgrößen. Benenne dabei ausdrücklich, welche echten Messdaten keine Bildschirmdarstellung ersetzt."
         }
       ]
     },
@@ -8967,7 +9227,7 @@
       "id": "words:Einzugsgebiet",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "25fedecdd249612f5861fa0da7b3df8daf32b13f71c4201957f1e09711d114a0",
+      "contentHash": "04ed2752d3356a6d485aa63fb69738a6d8ea61fc26ba2cb2e82c6f46c7d1217c",
       "ageLevels": {
         "6-8": "Zu einem Einzugsgebiet gehören Flächen, deren Wasser zu einem gemeinsamen Ausgang gelangt. Ein Bergkamm kann Wasserwege trennen.",
         "9-11": "Die Fläche, aus der Wasser zu einem bestimmten Fluss oder See abfließt.",
@@ -9015,7 +9275,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "usgs-own-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Zeichne zwei gedachte Hänge mit einem Kamm dazwischen und je einem Abfluss. Verfolge nur die eingezeichneten Oberflächenpfeile. Das Schema lässt Untergrundwege und Wetterdaten offen und ist keine tatsächliche Hochwasservorhersage.",
       "claims": [
@@ -9024,13 +9284,19 @@
           "sourceUrl": "https://www.usgs.gov/water-science-school/science/watersheds-and-drainage-basins",
           "anchor": "Actual34–36/56–59: commonoutlet, drainage divide, nestedbasins, not allprecipinstantoutflow. Exclude oldpercentage/data/sheetbudget/currentnationwidefigures."
         }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum hört ein Fluss nicht an einer Grenze auf?",
+          "reason": "Das Einzugsgebiet ordnet Wasserwege nach ihrer gemeinsamen Abflussrichtung und nicht nach Staatsgrenzen."
+        }
       ]
     },
     {
       "id": "words:Süßwasser",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "044702bc425bd975bc595d0cc23e68febdd94cd5eed815a7319996d3c6eff0e1",
+      "contentHash": "f045826f90c74f5cc6b93fcd25f54a6461b00a1b7af67c894386c7e19ed3df4f",
       "ageLevels": {
         "6-8": "Süßwasser enthält wenig gelöstes Salz. Das Wort bedeutet nicht, dass es nach Zucker schmeckt oder ohne Prüfung trinkbar ist.",
         "9-11": "Wasser mit wenig gelöstem Salz. Es ist nicht süß im Geschmack. Viel Süßwasser steckt in Eis oder unter der Erde.",
@@ -9078,7 +9344,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "usgs-own-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Erstelle eine Papierübersicht mit den getrennten Spalten wenig Salz und zum Trinken geprüft. Markiere ausdrücklich erfundene Beispiele. Keine unbekannten Wasserproben kosten, sammeln oder aufgrund der Zeichnung trinken.",
       "claims": [
@@ -9086,6 +9352,16 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.usgs.gov/water-science-school/science/glaciers-and-icecaps",
           "anchor": "Actual glaciersstorefreshwater andwatercycle, scientifically bounded distinction low salts. No quantitypercent/currentglobalwaterinventory, no safetyinference."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum ist Meerwasser nicht zum Trinken geeignet?",
+          "reason": "Der Süßwasserbegriff trennt Salzgehalt von Trinkwassereignung. Auch wenig Salz ersetzt keine Wasserprüfung."
+        },
+        {
+          "question": "Warum ist das Meer salzig?",
+          "reason": "Der Süßwasserbegriff hilft dir, geringe Salzanteile nicht mit der vollständigen Abwesenheit gelöster Stoffe gleichzusetzen."
         }
       ]
     },
@@ -9397,7 +9673,7 @@
       "id": "words:Nordpol",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "c242a5ffb9a3a21bb304d3c782f691514ee13a152824598088d708d51ec3ae3f",
+      "contentHash": "c21444a57fe9fccdf29425cbd8482f6c822f66d97aeec54dcd04cf05fe1484b1",
       "ageLevels": {
         "6-8": "Der geografische Nordpol ist das nördliche Ende der gedachten Erdachse. Er ist kein Ort, den jedes Kompassbild genau angibt.",
         "9-11": "Das nördliche Ende der Erdachse. Er liegt im Arktischen Ozean auf Meereis.",
@@ -9447,7 +9723,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "noaa-nos-own-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Markiere das obere Achsende eines gedachten Globus und beschrifte geografischer Nordpol. Zeichne kein frei erfundenes aktuelles Eisbild dazu. Das Achsenschema ist keine Navigations- oder Reiseanweisung.",
       "claims": [
@@ -9460,6 +9736,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.ncei.noaa.gov/products/geomagnetism-frequently-asked-questions",
           "anchor": "Actual selected11/30/35–39: rotation axis and magnetic poles distinct; no obsolete WMM2020coordinates, offsetangle, magneticstormpredictions or images."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Ist Eis am Nordpol dasselbe wie Eis am Südpol?",
+          "reason": "Der Nordpolbegriff hilft, geografischen Pol, magnetischen Pol und die Unterlage des Eises auseinanderzuhalten."
         }
       ]
     },
@@ -9583,7 +9865,7 @@
       "id": "words:Schwerkraft",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "2427b7ad64c0dc08c62818f44ba5ea58de0ec6dbf4932ee9e1060dc97df9a8fc",
+      "contentHash": "a6fe248f5934ab8a9fc71afa12aac9209f8a5466230e1fa8c357483c2c32ef6e",
       "ageLevels": {
         "6-8": "Dinge mit Masse ziehen einander an. Die Erdanziehung ist ein Beispiel für Schwerkraft.",
         "9-11": "Die Anziehung zwischen Dingen mit Masse. Die Erde zieht uns und andere Dinge zu ihrer Mitte.",
@@ -9626,7 +9908,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nasa-own-science-method-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Zeichne zwei erfundene Körper und Pfeile für gegenseitige Anziehung. Beschrifte sie als qualitative Idee, ohne freie Zahlen für echte Kräfte zu erfinden. Kein Werfen oder Springen als Messversuch.",
       "claims": [
@@ -9634,6 +9916,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://spaceplace.nasa.gov/what-is-gravity/en/",
           "anchor": "Actual14/17/21/28/31: attraction, massanddistance, reciprocalforces, orbitalcontext. Exclude massaloneplanetweightcomparison, outdated GRACE status, relativityclaim/copyanimation."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum fallen Menschen in Australien nicht herunter?",
+          "reason": "Die Schwerkrafterklärung hilft dir, Unten-Pfeile an verschiedenen Stellen der Erdkugel einzuzeichnen."
         }
       ]
     },
@@ -10279,7 +10567,7 @@
       "id": "words:Meeresströmung",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "657ea549c3b47c945f1934c88ce9c497ad2ba106442ebc9359fc4af22d50175d",
+      "contentHash": "e6e55928774cd29ad90128d9aa529e1a5cb0d0868107605ace16fa67a72446c2",
       "ageLevels": {
         "6-8": "Eine Meeresströmung bewegt Wasser von einem Ort zu einem anderen. Es gibt Strömungen an der Oberfläche und in tieferen Bereichen.",
         "9-11": "Wasser, das sich über größere Strecken im Meer bewegt. Strömungen transportieren Wärme und Stoffe.",
@@ -10322,7 +10610,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "noaa-nos-own-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Zeichne einen gedachten Wassertransportpfeil und daneben eine getrennte Wasserstandslinie. Beschrifte Richtung und Höhe verschieden. Das Papier zeigt keine sichere Schwimmstelle und keine aktuellen Strömungsgeschwindigkeiten.",
       "claims": [
@@ -10330,6 +10618,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://oceanservice.noaa.gov/facts/current.html",
           "anchor": "Actual7–12: directedwatermovement, wind/density/tides, surfaceanddeep. Exclude universal strongestshore/constanttideforecasts/simplistic GulfStreamonlyclimate or sourcevideo."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum gibt es Wellen im Meer?",
+          "reason": "Der Begriff Meeresströmung beschreibt bewegtes Wasser. Stelle ihm einen wandernden Wellenberg als andere Betrachtung gegenüber."
         }
       ]
     },
@@ -10690,7 +10984,7 @@
       "id": "words:Gewitter",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "e652837147e93a0639cbbe8f7e874598744ca3a503ae4c34dbc3a2d1f4359426",
+      "contentHash": "18ed39aaa557e388c227ab88e78cfe78f4379eadf1fdb43208004fd4a3ce21b9",
       "ageLevels": {
         "6-8": "Blitz und Donner gehören zum Gewitter. Der Blitz ist eine elektrische Entladung, keine Lampenfarbe in einer Wolke.",
         "9-11": "Wetter mit Blitz und Donner, häufig in hohen Wolken mit kräftiger aufsteigender Luft.",
@@ -10733,7 +11027,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "noaa-nos-own-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Ordne auf Papier drei gedachte Karten: Wolkenbild, elektrische Entladung, zugehöriger Donner. Markiere, welche Angaben fehlen. Die Karten sind keine aktuelle Vorhersage oder Sicherheitsfreigabe.",
       "claims": [
@@ -10741,6 +11035,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.noaa.gov/jetstream/lightning",
           "anchor": "Actual40: lightningandresultingthundercharacterize thunderstorm. Exclude outdatedglobalstormcounts, weaponexamples, directoutdoorobservation or predictfromsingletemperature."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum kommt der Donner nach dem Blitz?",
+          "reason": "Der Gewitterbegriff ordnet Blitz und Donner demselben Wetterereignis zu; die Zeitdifferenz ist keine Entwarnung."
         }
       ]
     },
@@ -10806,7 +11106,7 @@
       "id": "words:Dichte",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "b82fc7ac5d56b09316d756db9793e33096087bef28c01092c70a917dbfe0e4f9",
+      "contentHash": "bc138da541bed864bb4e54a319a6a7dde33c4ed0922e7d6f4c02cc492a8d2588",
       "ageLevels": {
         "6-8": "Dichte vergleicht Masse und Volumen. Zwei gleich große gedachte Körper können verschieden viel Masse haben.",
         "9-11": "Wie viel Masse in einem bestimmten Volumen steckt. Eis ist weniger dicht als flüssiges Wasser.",
@@ -10849,7 +11149,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "usgs-own-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Zeichne zwei gleich große gedachte Kästchen und gib ihnen 2 beziehungsweise 4 Masseneinheiten. Vergleiche nur dieses Zahlenmodell, ohne echte Stoffeigenschaften oder ein Schwimmergebnis zu erfinden.",
       "claims": [
@@ -10858,13 +11158,23 @@
           "sourceUrl": "https://www.usgs.gov/water-science-school/science/water-density",
           "anchor": "Actual primary definition available in search excerpt: masspervolume. Fullpage unavailableaftertimeouts. Own equalvolume2/4 examples; no universalwaterdensity, 4degree claim or copiedexperiment."
         }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum schwimmt Eis?",
+          "reason": "Der Dichtebegriff vergleicht Masse und Volumen. Verwende denselben Gedanken für Wasser und gewöhnliches Eis."
+        },
+        {
+          "question": "Warum kann ein Schiff aus schwerem Material schwimmen?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Dichte“: Du prüfst Form und Größen, statt aus dem Materialnamen allein auf Schwimmen zu schließen."
+        }
       ]
     },
     {
       "id": "words:Hauptstadt",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "89f8363eefc8e6d41e1f6ce9e15d101e6471d196fd8929fa572e725ff327260b",
+      "contentHash": "396a06c74a9ffe7dfbcc30ed5d55b38bb6df2d41ad89fa14f328d577404376f6",
       "ageLevels": {
         "6-8": "Eine Hauptstadt hat wichtige Aufgaben für ein Land. Sie muss nicht die größte oder bekannteste Stadt sein.",
         "9-11": "Eine Stadt mit wichtigen Aufgaben für ein Land. Manche Länder haben mehrere Hauptstädte.",
@@ -10907,7 +11217,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "nca-own-facts-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Zeichne drei erfundene Stadtsymbole. Markiere die größte Form getrennt vom gedachten Regierungssitz. Die Fantasiekarte ist keine echte Wahl, Einwohnerzählung oder Aussage über aktuelle Landesregeln.",
       "claims": [
@@ -10915,6 +11225,16 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.nca.gov.au/education/canberras-history/canberra-seat-government",
           "anchor": "Actual14/16/24–28: Canberra chosen seat ofgovernment, not Sydney/Melbourne, parliament move1927. Exclude obsolete300000population, allstates singlecapital or territorialstatus shortcut."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum haben Länder Grenzen?",
+          "reason": "Der Hauptstadtbegriff ist ein weiteres Beispiel menschlicher Gebietseinteilung; er erklärt keine natürliche Landschaftsgrenze."
+        },
+        {
+          "question": "Warum ist Canberra die Hauptstadt und nicht Sydney?",
+          "reason": "Der Hauptstadtbegriff unterscheidet die politische Funktion einer Stadt von ihrer Größe oder Bekanntheit."
         }
       ]
     },
@@ -10980,7 +11300,7 @@
       "id": "words:Wüste",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "0c5a794024451c2e0a3bb3a2d033f06e3ecbf52e34ad6d4c202d9044dbdb82a4",
+      "contentHash": "9aca22f15e87a13cbf14a025b0e86cf1fcde355e77f160060340b64e1867781a",
       "ageLevels": {
         "6-8": "Eine Wüste ist sehr trocken. Trockenheit bedeutet nicht automatisch große Hitze.",
         "9-11": "Eine Gegend mit sehr wenig Niederschlag. Wüsten können heiß oder kalt sein.",
@@ -11023,7 +11343,7 @@
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Reciprocal Why routes added; complete current browser evidence still required. Independent acceptance remains open.",
       "rightsBasisId": "noaa-nos-own-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Zeichne zwei erfundene Klimakarten mit wenig Niederschlag: eine als warm, die andere als kalt beschriftet. Die Werte sind Gedankenangaben, keine Messreihe oder aktuelle Wettermeldung.",
       "claims": [
@@ -11031,6 +11351,12 @@
           "field": "learning.deeper",
           "sourceUrl": "https://www.noaa.gov/jetstream/global/climate-zones",
           "anchor": "Actual40–41: dryclimates relatedprecipitation versuspotential evaporation. No universal20–35latitudeband, warm-only deserts or true rainfallforecast."
+        }
+      ],
+      "relatedQuestions": [
+        {
+          "question": "Warum ist eine Wüste nicht immer heiß?",
+          "reason": "Der Wüstenbegriff trennt Trockenheit von Temperatur und Sandbildern. Prüfe damit auch eine kalte Landschaft."
         }
       ]
     },

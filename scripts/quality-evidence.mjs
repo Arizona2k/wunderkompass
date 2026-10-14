@@ -1,3 +1,5 @@
+import whyQuestions from '../app/book-why-index.json' with {type:'json'};
+export const REQUIRED_WHY_QUESTIONS=whyQuestions;
 import scienceReview from '../content/science-editorial-review.json' with {type:'json'};
 import bookReview from '../content/book-editorial-review.json' with {type:'json'};
 export const REQUIRED_SCIENCE_ZOOM_IDS=scienceReview.topics.filter(t=>t.kind==='new').map(t=>t.id);
@@ -17,8 +19,10 @@ export function aggregateQuality(outcomes){
   if(worker.suites.includes('book')){const b=report.bookCoverage,bz=report.bookNativeZoom,requiredWidths=[320,360,390,768,1024,1440,1920];
    if(!sameSet(b?.terms,REQUIRED_BOOK_TERMS)||!sameSet(b.widths,requiredWidths)||!sameSet(b.models,['length','duration','temperature'])||!Array.isArray(b.observed)||b.observed.length!==REQUIRED_BOOK_TERMS.length*requiredWidths.length||new Set(b.observed.map(v=>v.name+':'+v.width)).size!==b.observed.length||!REQUIRED_BOOK_TERMS.every(name=>requiredWidths.every(width=>b.observed.some(v=>v.name===name&&v.width===width))))throw Error('Missing complete actual book viewport proof');
    if(bz?.percent!==200||bz.cssWidth!==640||bz.scale!==2||bz.largeTextAlsoChecked!==true||!sameSet(bz.terms,REQUIRED_BOOK_TERMS))throw Error('Missing actual native book zoom proof');
+   const w=report.whyCoverage,z=report.whyNativeZoom,widths=[320,360,390,768,1440];if(!sameSet(w?.questions,REQUIRED_WHY_QUESTIONS)||!sameSet(w.widths,widths)||w.independentAcceptance!==false||!Array.isArray(w.observed)||w.observed.length!==REQUIRED_WHY_QUESTIONS.length*widths.length||new Set(w.observed.map(v=>v.question+':'+v.width)).size!==w.observed.length||!REQUIRED_WHY_QUESTIONS.every(question=>widths.every(width=>w.observed.some(v=>v.question===question&&v.width===width))))throw Error('Missing complete Why viewport proof');if(z?.percent!==200||z.cssWidth!==640||z.scale!==2||z.largeTextAlsoChecked!==true||!sameSet(z.questions,REQUIRED_WHY_QUESTIONS))throw Error('Missing native Why zoom proof');
   }
   if(worker.suites.includes('offline')&&(!sameSet(report.bookOffline?.terms,REQUIRED_BOOK_TERMS)||report.bookOffline.retainedFavorite!==true))throw Error('Missing cold offline book proof');
+  if(worker.suites.includes('offline')&&(!sameSet(report.whyOffline?.questions,REQUIRED_WHY_QUESTIONS)||report.whyOffline.contextAndBackFocus!==true))throw Error('Missing cold offline Why proof');
   if(worker.suites.includes('research')){const z=report.scienceNativeZoom;if(z?.percent!==200||z.cssWidth!==640||z.scale!==2||z.cards!==REQUIRED_SCIENCE_ZOOM_IDS.length||z.largeTextAlsoChecked!==true||!Array.isArray(z.ids)||z.ids.length!==REQUIRED_SCIENCE_ZOOM_IDS.length||new Set(z.ids).size!==z.ids.length||REQUIRED_SCIENCE_ZOOM_IDS.some(id=>!z.ids.includes(id)))throw Error('Missing actual native science zoom proof');}
   result.workers.push({name:worker.name,suites:worker.suites,seconds:report.seconds,report:worker.name+'/portable-report.json',...(report.fixtureConfiguration?{fixtureConfiguration:true}:{} )});
   for(const [key,value] of Object.entries(report)){

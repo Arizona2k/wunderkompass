@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T19:10:31.054Z",
+  "generatedAt": "2026-10-14T19:57:11.410Z",
   "personalProgressIncluded": false,
   "topics": 139,
   "categories": {
@@ -14,7 +14,7 @@
   "chapters": 80,
   "quizQuestions": 76,
   "knowledgeWords": 180,
-  "whyQuestions": 30,
+  "whyQuestions": 60,
   "routes": 8,
   "files": [
     {
@@ -98,8 +98,8 @@
         "app/book-word-index.json"
       ],
       "entries": 180,
-      "bytes": 502049,
-      "sha256": "b68862637390bc08ea92b583e28b9782a247ee1d20849062ea6bf52aeea37b82"
+      "bytes": 518007,
+      "sha256": "a8cacbe911b4f30fd376542e3114879a4d81cced802e9cbeb244afda55bafb80"
     },
     {
       "file": "why-questions.json",
@@ -107,9 +107,9 @@
         "app/book-content.json",
         "app/book-why-index.json"
       ],
-      "entries": 30,
-      "bytes": 7428,
-      "sha256": "0a471fc504c3ed58e79909c6a9565749b5ba8fa496154b21741a95c823391eef"
+      "entries": 60,
+      "bytes": 110877,
+      "sha256": "3b62ff95f6c52a475898a64cd30811887101994a6493b576b32c527a3597ae3c"
     },
     {
       "file": "earth-badges.json",
