@@ -2240,7 +2240,7 @@
       "relatedQuestions": [
         {
           "question": "Warum kann ein einzelner sehr großer Wert einen Durchschnitt verschieben?",
-          "reason": "Du wählst eine Kennzahl nach der Frage und erkennst den Einfluss eines Extremwerts. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+          "reason": "Beim Mittelwert kannst du dieselbe Zahlenliste mit einem veränderten großen Wert vergleichen. Prüfe, warum sich der Mittelwert anders verhalten kann als der mittlere Listenwert."
         }
       ]
     },
@@ -3524,11 +3524,11 @@
       "relatedQuestions": [
         {
           "question": "Warum ist der Himmel blau?",
-          "reason": "Die Streuungskarte erklärt, wie Licht seine Richtung ändert. Damit kannst du den Weg vom Sonnenlicht zum Auge prüfen."
+          "reason": "Die Atmosphärenkarte zeigt die Lufthülle und ihre Schichten. Wie Licht darin seine Richtung ändert, kannst du zusätzlich bei „Streuung“ nachlesen."
         },
         {
           "question": "Warum ist ein Sonnenuntergang oft rot?",
-          "reason": "Vergleiche im Streuungsbegriff den direkten Lichtweg mit seitlichen Wegen und übertrage diese Unterscheidung auf einen Sonnenuntergang."
+          "reason": "Die Atmosphärenkarte ordnet die Luft um die Erde ein. Vergleiche zusätzlich bei „Streuung“ den direkten Weg des Sonnenlichts mit seitlich abgelenktem Licht."
         }
       ]
     },
@@ -3573,7 +3573,7 @@
       "relatedQuestions": [
         {
           "question": "Warum sind Photonen im Bild keine winzigen sichtbaren Murmeln?",
-          "reason": "Du nutzt mehrere Modelle, ohne ein einzelnes Bild wörtlich zu nehmen. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+          "reason": "Die Photon-Erklärung vergleicht verschiedene Lichtmodelle. Benenne bei einer Kugelskizze genau, welche Eigenschaft das Zeichen zeigen soll; es ist keine vergrößerte Fotografie eines Photons."
         }
       ]
     },
@@ -4593,11 +4593,11 @@
       "relatedQuestions": [
         {
           "question": "Warum können Wolken schweben?",
-          "reason": "Der Niederschlagsbegriff unterscheidet kleine Wolkenteilchen von fallenden Tropfen oder Eiskristallen."
+          "reason": "Die Wasserkreislaufkarte zeigt Wolkentröpfchen, Eiskristalle und Niederschlag. Verfolge dort, wann Wasser in der Luft bleibt und wann Teilchen zum Boden fallen."
         },
         {
           "question": "Warum regnet es?",
-          "reason": "Die Niederschlagserklärung hilft, verschiedene Wasserformen auf einem Weg von der Wolke zum Boden zu verfolgen."
+          "reason": "Die Wasserkreislaufkarte verfolgt Wasser vom Verdunsten über Wolken bis zum Boden. Ordne flüssige Tropfen, gasförmiges Wasser und Eis an den passenden Stellen ein."
         }
       ]
     },
@@ -4775,7 +4775,7 @@
       "relatedQuestions": [
         {
           "question": "Warum leuchtet der Mond?",
-          "reason": "Das Mondlabor trennt beleuchtete Hälfte und sichtbare Ansicht. Begründe jede Phase mit Lichtquelle und Blickrichtung."
+          "reason": "Das Mondphasenmodell auf der Karte zeigt die beleuchtete Hälfte und unseren Blick darauf. Verfolge das Sonnenlicht, ohne gewöhnliche Phasen mit dem Erdschatten zu verwechseln."
         }
       ]
     },
@@ -4948,11 +4948,11 @@
       "relatedQuestions": [
         {
           "question": "Warum merken wir die Erddrehung nicht?",
-          "reason": "Gemeinsame Bewegung und Achsdrehung sind verschiedene Gedanken: Verfolge die Erdachse und benenne die Grenze des Zugvergleichs."
+          "reason": "Die Jahreszeitenkarte zeigt die geneigte Erdachse im Jahreslauf. Unterscheide dabei die tägliche Drehung von der Reise um die Sonne; der Zugvergleich erklärt nur einen Teil der gemeinsamen Bewegung."
         },
         {
           "question": "Warum gibt es Tag und Nacht?",
-          "reason": "Im Achsenbegriff kannst du tägliche Drehung und jährlichen Umlauf sprachlich und zeichnerisch trennen."
+          "reason": "Auf der Jahreszeitenkarte bleibt die Erde ein drehender Planet. Trenne die tägliche Drehung für Tag und Nacht vom Jahresumlauf und der geneigten Achse."
         }
       ]
     },
@@ -4997,11 +4997,11 @@
       "relatedQuestions": [
         {
           "question": "Warum gibt es Jahreszeiten?",
-          "reason": "Das Jahreszeitenlabor lässt dich beide Halbkugeln bei derselben Bahnstellung vergleichen, statt nur eine Entfernung zu betrachten."
+          "reason": "Die Jahreszeitenkarte vergleicht Sonnenstand und Tageslänge auf beiden Halbkugeln. Prüfe, warum Deutschland und Australien gleichzeitig unterschiedliche Jahreszeiten haben können."
         },
         {
           "question": "Warum ist es an den Polen kalt?",
-          "reason": "Im Jahreszeitenlabor kannst du die Beleuchtung einer Polregion in zwei Jahresstellungen gegenüberstellen."
+          "reason": "Auf der Jahreszeitenkarte vergleichst du Sonnenstand und Tageslänge. Damit kannst du überlegen, wie sich flach einfallendes Licht auf eine größere Bodenfläche verteilt."
         }
       ]
     },
@@ -5050,7 +5050,7 @@
       "relatedQuestions": [
         {
           "question": "Warum gibt es Ebbe und Flut?",
-          "reason": "Das Gezeitenlabor lässt Stellungen vergleichen. Es liefert keine örtlichen Wattzeiten oder sicheren Küstenentscheidungen."
+          "reason": "Die Gezeitenkarte trennt steigendes und fallendes Wasser von Hoch- und Niedrigwasser. Vergleiche die Küstenbilder; örtliche Ausflugszeiten lassen sich daraus nicht ablesen."
         }
       ]
     },
@@ -6097,7 +6097,7 @@
       "relatedQuestions": [
         {
           "question": "Warum machen zusätzliche Nachkommastellen eine Messung nicht automatisch genauer?",
-          "reason": "Du fragst nach der Begründung einer Genauigkeitsangabe statt nach bloßer Ziffernzahl. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+          "reason": "Bei der Messunsicherheit vergleichst du Zahlen mit den Bedingungen ihrer Ermittlung. Zusätzliche Stellen hinter dem Komma ersetzen keine genauere Messung."
         }
       ]
     },
@@ -6273,7 +6273,7 @@
       "relatedQuestions": [
         {
           "question": "Warum kann ein Papierplan eine echte Bauprüfung nicht ersetzen?",
-          "reason": "Du erkennst Nutzen und Grenze einer maßstäblichen Darstellung. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+          "reason": "Bei „Maßstab“ vergleichst du gezeichnete Längen mit gedachten Originalgrößen. Daraus folgt noch keine Aussage darüber, welche Last ein echtes Bauwerk sicher tragen kann."
         }
       ]
     },
@@ -6408,7 +6408,7 @@
       "relatedQuestions": [
         {
           "question": "Können wir bis zum Mittelpunkt graben?",
-          "reason": "Der Erdkernbegriff zeigt einen inneren Bereich, den wir mit indirekten Hinweisen untersuchen, statt ihn vollständig zu erbohren."
+          "reason": "Im Labor „Zum Mittelpunkt“ wählst du Tiefen in einem Erdmodell. Seine Schichten beruhen auf einer wissenschaftlichen Beschreibung; die Bildschirmreise ist keine wirkliche Bohrung."
         }
       ]
     },
@@ -7142,7 +7142,7 @@
       "relatedQuestions": [
         {
           "question": "Warum hört ein Fluss nicht an einer Grenze auf?",
-          "reason": "Das Einzugsgebiet ordnet Wasserwege nach ihrer gemeinsamen Abflussrichtung und nicht nach Staatsgrenzen."
+          "reason": "Im Wasserkreislauflabor verfolgst du Wege des Wassers. Vergleiche diese Wege mit einem Einzugsgebiet: Staatsgrenzen bestimmen nicht, wohin Wasser bergab abfließt."
         }
       ]
     },
@@ -7191,7 +7191,7 @@
         },
         {
           "question": "Warum ist das Meer salzig?",
-          "reason": "Der Süßwasserbegriff hilft dir, geringe Salzanteile nicht mit der vollständigen Abwesenheit gelöster Stoffe gleichzusetzen."
+          "reason": "Im Wasserkreislauflabor ordnest du Wasserwege. Ergänze gedanklich die Salzfrage: Wasser kann verdunsten, während gelöste Salze zurückbleiben; das Kreislaufbild zeigt diese Stoffe nicht einzeln."
         }
       ]
     },
@@ -7944,7 +7944,7 @@
       "relatedQuestions": [
         {
           "question": "Warum gibt es Wellen im Meer?",
-          "reason": "Der Begriff Meeresströmung beschreibt bewegtes Wasser. Stelle ihm einen wandernden Wellenberg als andere Betrachtung gegenüber."
+          "reason": "Die Strömungskarte zeigt Wind, Gezeiten und Dichteunterschiede als Antriebe. Unterscheide dabei bewegtes Meerwasser von einem weiterwandernden Wellenberg."
         }
       ]
     },
@@ -8193,7 +8193,7 @@
       "relatedQuestions": [
         {
           "question": "Warum kommt der Donner nach dem Blitz?",
-          "reason": "Der Gewitterbegriff ordnet Blitz und Donner demselben Wetterereignis zu; die Zeitdifferenz ist keine Entwarnung."
+          "reason": "Das Wetterlabor verändert ausgewählte Luftbedingungen. Die Erklärung zu Blitz und Donner ergänzt ein anderes Merkmal eines Gewitters; aus dem Lernmodell folgt keine Entwarnung."
         }
       ]
     },
@@ -8267,7 +8267,7 @@
       "relatedQuestions": [
         {
           "question": "Warum schwimmt Eis?",
-          "reason": "Der Dichtebegriff vergleicht Masse und Volumen. Verwende denselben Gedanken für Wasser und gewöhnliches Eis."
+          "reason": "Das Wasserkreislauflabor zeigt Eis als Wasserspeicher. Warum gewöhnliches Eis schwimmt, ergänzt der Dichtebegriff: Vergleiche Masse und Volumen, statt nur die Temperatur zu betrachten."
         },
         {
           "question": "Warum kann ein Schiff aus schwerem Material schwimmen?",
@@ -8783,11 +8783,11 @@
           "checkedOn": "2026-10-14"
         }
       ],
-      "connection": "Gemeinsame Bewegung und Achsdrehung sind verschiedene Gedanken: Verfolge die Erdachse und benenne die Grenze des Zugvergleichs.",
+      "connection": "Die Jahreszeitenkarte zeigt die geneigte Erdachse im Jahreslauf. Unterscheide dabei die tägliche Drehung von der Reise um die Sonne; der Zugvergleich erklärt nur einen Teil der gemeinsamen Bewegung.",
       "relatedWords": [
         {
           "term": "Erdachse",
-          "reason": "Gemeinsame Bewegung und Achsdrehung sind verschiedene Gedanken: Verfolge die Erdachse und benenne die Grenze des Zugvergleichs."
+          "reason": "Die Jahreszeitenkarte zeigt die geneigte Erdachse im Jahreslauf. Unterscheide dabei die tägliche Drehung von der Reise um die Sonne; der Zugvergleich erklärt nur einen Teil der gemeinsamen Bewegung."
         }
       ],
       "topic": "science-seasons"
@@ -8806,11 +8806,11 @@
           "checkedOn": "2026-10-14"
         }
       ],
-      "connection": "Die Streuungskarte erklärt, wie Licht seine Richtung ändert. Damit kannst du den Weg vom Sonnenlicht zum Auge prüfen.",
+      "connection": "Die Atmosphärenkarte zeigt die Lufthülle und ihre Schichten. Wie Licht darin seine Richtung ändert, kannst du zusätzlich bei „Streuung“ nachlesen.",
       "relatedWords": [
         {
           "term": "Streuung",
-          "reason": "Die Streuungskarte erklärt, wie Licht seine Richtung ändert. Damit kannst du den Weg vom Sonnenlicht zum Auge prüfen."
+          "reason": "Die Atmosphärenkarte zeigt die Lufthülle und ihre Schichten. Wie Licht darin seine Richtung ändert, kannst du zusätzlich bei „Streuung“ nachlesen."
         }
       ],
       "topic": "science-atmosphere"
@@ -8829,11 +8829,11 @@
           "checkedOn": "2026-10-14"
         }
       ],
-      "connection": "Vergleiche im Streuungsbegriff den direkten Lichtweg mit seitlichen Wegen und übertrage diese Unterscheidung auf einen Sonnenuntergang.",
+      "connection": "Die Atmosphärenkarte ordnet die Luft um die Erde ein. Vergleiche zusätzlich bei „Streuung“ den direkten Weg des Sonnenlichts mit seitlich abgelenktem Licht.",
       "relatedWords": [
         {
           "term": "Streuung",
-          "reason": "Vergleiche im Streuungsbegriff den direkten Lichtweg mit seitlichen Wegen und übertrage diese Unterscheidung auf einen Sonnenuntergang."
+          "reason": "Die Atmosphärenkarte ordnet die Luft um die Erde ein. Vergleiche zusätzlich bei „Streuung“ den direkten Weg des Sonnenlichts mit seitlich abgelenktem Licht."
         }
       ],
       "topic": "science-atmosphere"
@@ -8948,11 +8948,11 @@
           "checkedOn": "2026-10-14"
         }
       ],
-      "connection": "Der Erdkernbegriff zeigt einen inneren Bereich, den wir mit indirekten Hinweisen untersuchen, statt ihn vollständig zu erbohren.",
+      "connection": "Im Labor „Zum Mittelpunkt“ wählst du Tiefen in einem Erdmodell. Seine Schichten beruhen auf einer wissenschaftlichen Beschreibung; die Bildschirmreise ist keine wirkliche Bohrung.",
       "relatedWords": [
         {
           "term": "Erdkern",
-          "reason": "Der Erdkernbegriff zeigt einen inneren Bereich, den wir mit indirekten Hinweisen untersuchen, statt ihn vollständig zu erbohren."
+          "reason": "Im Labor „Zum Mittelpunkt“ wählst du Tiefen in einem Erdmodell. Seine Schichten beruhen auf einer wissenschaftlichen Beschreibung; die Bildschirmreise ist keine wirkliche Bohrung."
         }
       ],
       "lab": "depth"
@@ -8971,11 +8971,11 @@
           "checkedOn": "2026-10-14"
         }
       ],
-      "connection": "Der Niederschlagsbegriff unterscheidet kleine Wolkenteilchen von fallenden Tropfen oder Eiskristallen.",
+      "connection": "Die Wasserkreislaufkarte zeigt Wolkentröpfchen, Eiskristalle und Niederschlag. Verfolge dort, wann Wasser in der Luft bleibt und wann Teilchen zum Boden fallen.",
       "relatedWords": [
         {
           "term": "Niederschlag",
-          "reason": "Der Niederschlagsbegriff unterscheidet kleine Wolkenteilchen von fallenden Tropfen oder Eiskristallen."
+          "reason": "Die Wasserkreislaufkarte zeigt Wolkentröpfchen, Eiskristalle und Niederschlag. Verfolge dort, wann Wasser in der Luft bleibt und wann Teilchen zum Boden fallen."
         }
       ],
       "topic": "science-water-cycle"
@@ -9037,11 +9037,11 @@
           "checkedOn": "2026-10-14"
         }
       ],
-      "connection": "Im Achsenbegriff kannst du tägliche Drehung und jährlichen Umlauf sprachlich und zeichnerisch trennen.",
+      "connection": "Auf der Jahreszeitenkarte bleibt die Erde ein drehender Planet. Trenne die tägliche Drehung für Tag und Nacht vom Jahresumlauf und der geneigten Achse.",
       "relatedWords": [
         {
           "term": "Erdachse",
-          "reason": "Im Achsenbegriff kannst du tägliche Drehung und jährlichen Umlauf sprachlich und zeichnerisch trennen."
+          "reason": "Auf der Jahreszeitenkarte bleibt die Erde ein drehender Planet. Trenne die tägliche Drehung für Tag und Nacht vom Jahresumlauf und der geneigten Achse."
         }
       ],
       "topic": "science-seasons"
@@ -9060,11 +9060,11 @@
           "checkedOn": "2026-10-14"
         }
       ],
-      "connection": "Das Jahreszeitenlabor lässt dich beide Halbkugeln bei derselben Bahnstellung vergleichen, statt nur eine Entfernung zu betrachten.",
+      "connection": "Die Jahreszeitenkarte vergleicht Sonnenstand und Tageslänge auf beiden Halbkugeln. Prüfe, warum Deutschland und Australien gleichzeitig unterschiedliche Jahreszeiten haben können.",
       "relatedWords": [
         {
           "term": "Jahreszeiten",
-          "reason": "Das Jahreszeitenlabor lässt dich beide Halbkugeln bei derselben Bahnstellung vergleichen, statt nur eine Entfernung zu betrachten."
+          "reason": "Die Jahreszeitenkarte vergleicht Sonnenstand und Tageslänge auf beiden Halbkugeln. Prüfe, warum Deutschland und Australien gleichzeitig unterschiedliche Jahreszeiten haben können."
         }
       ],
       "topic": "science-seasons"
@@ -9083,11 +9083,11 @@
           "checkedOn": "2026-10-14"
         }
       ],
-      "connection": "Die Niederschlagserklärung hilft, verschiedene Wasserformen auf einem Weg von der Wolke zum Boden zu verfolgen.",
+      "connection": "Die Wasserkreislaufkarte verfolgt Wasser vom Verdunsten über Wolken bis zum Boden. Ordne flüssige Tropfen, gasförmiges Wasser und Eis an den passenden Stellen ein.",
       "relatedWords": [
         {
           "term": "Niederschlag",
-          "reason": "Die Niederschlagserklärung hilft, verschiedene Wasserformen auf einem Weg von der Wolke zum Boden zu verfolgen."
+          "reason": "Die Wasserkreislaufkarte verfolgt Wasser vom Verdunsten über Wolken bis zum Boden. Ordne flüssige Tropfen, gasförmiges Wasser und Eis an den passenden Stellen ein."
         }
       ],
       "topic": "science-water-cycle"
@@ -9182,11 +9182,11 @@
           "checkedOn": "2026-10-14"
         }
       ],
-      "connection": "Im Jahreszeitenlabor kannst du die Beleuchtung einer Polregion in zwei Jahresstellungen gegenüberstellen.",
+      "connection": "Auf der Jahreszeitenkarte vergleichst du Sonnenstand und Tageslänge. Damit kannst du überlegen, wie sich flach einfallendes Licht auf eine größere Bodenfläche verteilt.",
       "relatedWords": [
         {
           "term": "Jahreszeiten",
-          "reason": "Im Jahreszeitenlabor kannst du die Beleuchtung einer Polregion in zwei Jahresstellungen gegenüberstellen."
+          "reason": "Auf der Jahreszeitenkarte vergleichst du Sonnenstand und Tageslänge. Damit kannst du überlegen, wie sich flach einfallendes Licht auf eine größere Bodenfläche verteilt."
         }
       ],
       "topic": "science-seasons"
@@ -9205,11 +9205,11 @@
           "checkedOn": "2026-10-14"
         }
       ],
-      "connection": "Der Begriff Meeresströmung beschreibt bewegtes Wasser. Stelle ihm einen wandernden Wellenberg als andere Betrachtung gegenüber.",
+      "connection": "Die Strömungskarte zeigt Wind, Gezeiten und Dichteunterschiede als Antriebe. Unterscheide dabei bewegtes Meerwasser von einem weiterwandernden Wellenberg.",
       "relatedWords": [
         {
           "term": "Meeresströmung",
-          "reason": "Der Begriff Meeresströmung beschreibt bewegtes Wasser. Stelle ihm einen wandernden Wellenberg als andere Betrachtung gegenüber."
+          "reason": "Die Strömungskarte zeigt Wind, Gezeiten und Dichteunterschiede als Antriebe. Unterscheide dabei bewegtes Meerwasser von einem weiterwandernden Wellenberg."
         }
       ],
       "topic": "science-currents"
@@ -9228,11 +9228,11 @@
           "checkedOn": "2026-10-14"
         }
       ],
-      "connection": "Das Mondlabor trennt beleuchtete Hälfte und sichtbare Ansicht. Begründe jede Phase mit Lichtquelle und Blickrichtung.",
+      "connection": "Das Mondphasenmodell auf der Karte zeigt die beleuchtete Hälfte und unseren Blick darauf. Verfolge das Sonnenlicht, ohne gewöhnliche Phasen mit dem Erdschatten zu verwechseln.",
       "relatedWords": [
         {
           "term": "Mondphase",
-          "reason": "Das Mondlabor trennt beleuchtete Hälfte und sichtbare Ansicht. Begründe jede Phase mit Lichtquelle und Blickrichtung."
+          "reason": "Das Mondphasenmodell auf der Karte zeigt die beleuchtete Hälfte und unseren Blick darauf. Verfolge das Sonnenlicht, ohne gewöhnliche Phasen mit dem Erdschatten zu verwechseln."
         }
       ],
       "topic": "science-moon-phases"
@@ -9251,11 +9251,11 @@
           "checkedOn": "2026-10-14"
         }
       ],
-      "connection": "Das Gezeitenlabor lässt Stellungen vergleichen. Es liefert keine örtlichen Wattzeiten oder sicheren Küstenentscheidungen.",
+      "connection": "Die Gezeitenkarte trennt steigendes und fallendes Wasser von Hoch- und Niedrigwasser. Vergleiche die Küstenbilder; örtliche Ausflugszeiten lassen sich daraus nicht ablesen.",
       "relatedWords": [
         {
           "term": "Ebbe und Flut",
-          "reason": "Das Gezeitenlabor lässt Stellungen vergleichen. Es liefert keine örtlichen Wattzeiten oder sicheren Küstenentscheidungen."
+          "reason": "Die Gezeitenkarte trennt steigendes und fallendes Wasser von Hoch- und Niedrigwasser. Vergleiche die Küstenbilder; örtliche Ausflugszeiten lassen sich daraus nicht ablesen."
         }
       ],
       "topic": "science-tides"
@@ -9281,11 +9281,11 @@
           "checkedOn": "2026-10-14"
         }
       ],
-      "connection": "Der Süßwasserbegriff hilft dir, geringe Salzanteile nicht mit der vollständigen Abwesenheit gelöster Stoffe gleichzusetzen.",
+      "connection": "Im Wasserkreislauflabor ordnest du Wasserwege. Ergänze gedanklich die Salzfrage: Wasser kann verdunsten, während gelöste Salze zurückbleiben; das Kreislaufbild zeigt diese Stoffe nicht einzeln.",
       "relatedWords": [
         {
           "term": "Süßwasser",
-          "reason": "Der Süßwasserbegriff hilft dir, geringe Salzanteile nicht mit der vollständigen Abwesenheit gelöster Stoffe gleichzusetzen."
+          "reason": "Im Wasserkreislauflabor ordnest du Wasserwege. Ergänze gedanklich die Salzfrage: Wasser kann verdunsten, während gelöste Salze zurückbleiben; das Kreislaufbild zeigt diese Stoffe nicht einzeln."
         }
       ],
       "lab": "water"
@@ -9352,11 +9352,11 @@
           "checkedOn": "2026-10-14"
         }
       ],
-      "connection": "Der Dichtebegriff vergleicht Masse und Volumen. Verwende denselben Gedanken für Wasser und gewöhnliches Eis.",
+      "connection": "Das Wasserkreislauflabor zeigt Eis als Wasserspeicher. Warum gewöhnliches Eis schwimmt, ergänzt der Dichtebegriff: Vergleiche Masse und Volumen, statt nur die Temperatur zu betrachten.",
       "relatedWords": [
         {
           "term": "Dichte",
-          "reason": "Der Dichtebegriff vergleicht Masse und Volumen. Verwende denselben Gedanken für Wasser und gewöhnliches Eis."
+          "reason": "Das Wasserkreislauflabor zeigt Eis als Wasserspeicher. Warum gewöhnliches Eis schwimmt, ergänzt der Dichtebegriff: Vergleiche Masse und Volumen, statt nur die Temperatur zu betrachten."
         }
       ],
       "lab": "water",
@@ -9383,11 +9383,11 @@
           "checkedOn": "2026-10-14"
         }
       ],
-      "connection": "Der Gewitterbegriff ordnet Blitz und Donner demselben Wetterereignis zu; die Zeitdifferenz ist keine Entwarnung.",
+      "connection": "Das Wetterlabor verändert ausgewählte Luftbedingungen. Die Erklärung zu Blitz und Donner ergänzt ein anderes Merkmal eines Gewitters; aus dem Lernmodell folgt keine Entwarnung.",
       "relatedWords": [
         {
           "term": "Gewitter",
-          "reason": "Der Gewitterbegriff ordnet Blitz und Donner demselben Wetterereignis zu; die Zeitdifferenz ist keine Entwarnung."
+          "reason": "Das Wetterlabor verändert ausgewählte Luftbedingungen. Die Erklärung zu Blitz und Donner ergänzt ein anderes Merkmal eines Gewitters; aus dem Lernmodell folgt keine Entwarnung."
         }
       ],
       "lab": "weather"
@@ -9406,11 +9406,11 @@
           "checkedOn": "2026-10-14"
         }
       ],
-      "connection": "Das Einzugsgebiet ordnet Wasserwege nach ihrer gemeinsamen Abflussrichtung und nicht nach Staatsgrenzen.",
+      "connection": "Im Wasserkreislauflabor verfolgst du Wege des Wassers. Vergleiche diese Wege mit einem Einzugsgebiet: Staatsgrenzen bestimmen nicht, wohin Wasser bergab abfließt.",
       "relatedWords": [
         {
           "term": "Einzugsgebiet",
-          "reason": "Das Einzugsgebiet ordnet Wasserwege nach ihrer gemeinsamen Abflussrichtung und nicht nach Staatsgrenzen."
+          "reason": "Im Wasserkreislauflabor verfolgst du Wege des Wassers. Vergleiche diese Wege mit einem Einzugsgebiet: Staatsgrenzen bestimmen nicht, wohin Wasser bergab abfließt."
         }
       ],
       "lab": "water"
@@ -9472,7 +9472,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Kapillarwirkung“: Du erklärst einen Alltagsweg des Wassers mit mehreren zusammenwirkenden Bedingungen."
         }
       ],
-      "connection": "Du erklärst einen Alltagsweg des Wassers mit mehreren zusammenwirkenden Bedingungen. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Auf der Kapillarwirkungskarte vergleichst du Wasserwege in schmalen Zwischenräumen. Prüfe, welche Rolle Material, Benetzung und die Form des Weges spielen."
     },
     "Warum kann eine Nadel anders auf Wasser liegen als untertauchen?": {
       "starter": "Die Wasseroberfläche kann kleine Dinge anders tragen als das Wasser darunter. Sie ist trotzdem keine feste Folie.",
@@ -9495,7 +9495,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Oberflächenspannung“: Du unterscheidest Grenzflächenwirkung von einem allgemeinen Schwimmversprechen."
         }
       ],
-      "connection": "Du unterscheidest Grenzflächenwirkung von einem allgemeinen Schwimmversprechen. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Die Oberflächenspannungskarte beschreibt Kräfte an der Wassergrenze. Vergleiche diese Wirkung mit dem Auftrieb eines eingetauchten Körpers; es sind unterschiedliche Erklärungsanteile."
     },
     "Warum kann ein Schiff aus schwerem Material schwimmen?": {
       "starter": "Ein Schiff besitzt einen großen Rumpf mit Innenraum. Seine Form ist wichtig, nicht nur der Name des Materials.",
@@ -9518,7 +9518,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Dichte“: Du prüfst Form und Größen, statt aus dem Materialnamen allein auf Schwimmen zu schließen."
         }
       ],
-      "connection": "Du prüfst Form und Größen, statt aus dem Materialnamen allein auf Schwimmen zu schließen. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Auf der Auftriebskarte vergleichst du Masse und verdrängtes Wasser. Beziehe beim Schiff seine gesamte Form mit ein, einschließlich des Innenraums."
     },
     "Warum helfen raue Schuhsohlen beim Gehen?": {
       "starter": "Beim Gehen braucht der Fuß Halt am Boden. Reibung hilft dabei, sich abzustoßen.",
@@ -9541,7 +9541,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Kraft“: Du erkennst, warum eine bremsende Wechselwirkung beim Gehen nützlich sein kann."
         }
       ],
-      "connection": "Du erkennst, warum eine bremsende Wechselwirkung beim Gehen nützlich sein kann. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Die Reibungskarte beschreibt Kontaktflächen und Bewegung. Übertrage den Gedanken auf die Schuhsohle: Zum Abstoßen brauchst du Halt am Boden."
     },
     "Warum bleibt ein Farbfleck in Wasser nicht immer an derselben Stelle?": {
       "starter": "Kleine Teilchen bewegen sich. Dadurch kann Farbe einen größeren Bereich erreichen.",
@@ -9559,7 +9559,7 @@
         }
       ],
       "relatedWords": [],
-      "connection": "Du trennst zwei mögliche Ursachen einer sichtbaren Verteilung. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Die Diffusionskarte erklärt viele zufällige Teilchenwege. Prüfe am Farbfleck zusätzlich, ob eine Strömung das Wasser als Ganzes bewegt."
     },
     "Warum kann ein schwarzer Stift mehrere Farben enthalten?": {
       "starter": "Was wie eine Farbe aussieht, kann eine Mischung sein. Eine Trennung kann Unterschiede sichtbar machen.",
@@ -9589,7 +9589,7 @@
           "reason": "Das flüssige Trägermittel kann sich auf engen Wegen im Papier bewegen. Unterschiedliche Stoffwanderung und Stoffbestimmung brauchen darüber hinaus weitere Bedingungen; Kapillarwirkung allein identifiziert keinen Farbstoff."
         }
       ],
-      "connection": "Du unterscheidest sichtbare Gesamtfarbe, Trennung und tatsächliche Stoffbestimmung. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Die Chromatografiekarte zeigt, wie Bestandteile einer Mischung verschieden weit mitwandern können. Ein getrennter Fleck liefert einen Hinweis, aber noch keinen sicheren Stoffnamen."
     },
     "Warum fühlen sich gleich warme Materialien manchmal verschieden an?": {
       "starter": "Deine Hand fühlt auch den Wärmefluss. Deshalb ist gleich warm nicht immer gleich empfunden.",
@@ -9612,7 +9612,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Wärmeleitung“: Du trennst Temperatureigenschaft und Energieübertragung."
         }
       ],
-      "connection": "Du trennst Temperatureigenschaft und Energieübertragung. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Die Wärmeübertragungskarte trennt Temperatur von übertragener Energie. Überlege, wie verschieden schnell zwei Materialien deiner Hand Energie entziehen können."
     },
     "Warum bewegt erwärmtes Wasser manchmal weiteres Wasser mit?": {
       "starter": "Bewegtes Wasser kann Wärme mitnehmen. So können Stoff und Energie gemeinsam einen Weg zurücklegen.",
@@ -9635,7 +9635,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Konvektion“: Du unterscheidest den Energieweg vom mitbewegten Material."
         }
       ],
-      "connection": "Du unterscheidest den Energieweg vom mitbewegten Material. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Auf der Wärmeübertragungskarte gehört mitbewegtes Wasser zur Konvektion. Vergleiche diesen Stofftransport mit Wärmeleitung ohne eine solche Wasserströmung."
     },
     "Warum hilft ein langer Hebelarm beim Drehen?": {
       "starter": "Weiter vom Drehpunkt kann eine Kraft anders wirken. Der Abstand gehört zur Erklärung.",
@@ -9658,7 +9658,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Kraft“: Du verbindest Kraft, Drehpunkt und Weg statt nur die Länge eines Stabs zu vergleichen."
         }
       ],
-      "connection": "Du verbindest Kraft, Drehpunkt und Weg statt nur die Länge eines Stabs zu vergleichen. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Im Hebelmodell vergleichst du Kraft und Abstand zum Drehpunkt. Beobachte zugleich, welchen Weg die Hand bei einem längeren Hebelarm zurücklegt."
     },
     "Warum kehrt eine Feder nicht nach jeder Belastung ganz zurück?": {
       "starter": "Eine Feder kann zurückgehen. Zu starkes Ziehen kann sie trotzdem dauerhaft verändern.",
@@ -9681,7 +9681,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Kraft“: Du erkennst den Geltungsbereich eines Materialmodells."
         }
       ],
-      "connection": "Du erkennst den Geltungsbereich eines Materialmodells. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Die Elastizitätskarte beschreibt Rückverformung innerhalb eines begrenzten Bereichs. Vergleiche eine zurückkehrende Form mit einer Form, die nach der Belastung verändert bleibt."
     },
     "Warum beeinflusst die Länge eines Pendels seinen Takt?": {
       "starter": "Ein längerer Faden kann im einfachen Modell einen langsameren Pendeltakt ergeben.",
@@ -9711,7 +9711,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Meter“: Du änderst eine Modellgröße bewusst und beschreibst ihre Wirkung mit passenden Einheiten."
         }
       ],
-      "connection": "Du änderst eine Modellgröße bewusst und beschreibst ihre Wirkung mit passenden Einheiten. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Das Pendelmodell lässt die Länge verändern. Vergleiche die Zeit für eine ganze Hin-und-zurück-Bewegung, statt nur die gezeichnete Pendelgröße zu betrachten."
     },
     "Warum kann Anschieben im passenden Takt wirksamer sein?": {
       "starter": "Ein passender Takt kann eine Schwingung unterstützen. Nicht jedes Anschieben passt gleich gut.",
@@ -9734,7 +9734,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Frequenz“: Du erklärst eine Taktwirkung und benennst ihre begrenzenden Bedingungen."
         }
       ],
-      "connection": "Du erklärst eine Taktwirkung und benennst ihre begrenzenden Bedingungen. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Das Resonanzmodell vergleicht den Takt des Anstoßens mit der Schwingung. Achte darauf, wann Energie passend zugeführt wird und was die Bewegung begrenzt."
     },
     "Warum muss nach mehreren gleichen Zufallsergebnissen kein Ausgleich kommen?": {
       "starter": "Ein gedachtes faires Zufallsspiel merkt sich nicht, welches Ergebnis gerade öfter kam.",
@@ -9757,7 +9757,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Wahrscheinlichkeit“: Du vermeidest den Fehlschluss, ein zufälliger Ausgleich sei sofort fällig."
         }
       ],
-      "connection": "Du vermeidest den Fehlschluss, ein zufälliger Ausgleich sei sofort fällig. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Die Wahrscheinlichkeitskarte unterscheidet mögliche Ergebnisse von sicheren Vorhersagen. Wende das auf eine neue unabhängige Ziehung an, ohne aus der bisherigen Folge eine Pflicht zum Ausgleich abzuleiten."
     },
     "Warum kann ein einzelner sehr großer Wert einen Durchschnitt verschieben?": {
       "starter": "Ein sehr großer Zahlenzettel zieht die gemeinsame Summe nach oben.",
@@ -9774,7 +9774,7 @@
         }
       ],
       "relatedWords": [],
-      "connection": "Du wählst eine Kennzahl nach der Frage und erkennst den Einfluss eines Extremwerts. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich.",
+      "connection": "Beim Mittelwert kannst du dieselbe Zahlenliste mit einem veränderten großen Wert vergleichen. Prüfe, warum sich der Mittelwert anders verhalten kann als der mittlere Listenwert.",
       "word": "Mittelwert"
     },
     "Warum ist nicht jede Diagonale eine Spiegelachse?": {
@@ -9798,7 +9798,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Symmetrie“: Du prüfst eine Symmetrie an der ganzen Form statt an einem einzelnen Merkmal."
         }
       ],
-      "connection": "Du prüfst eine Symmetrie an der ganzen Form statt an einem einzelnen Merkmal. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Die Symmetriezeichnung zeigt Formen an einer Spiegelachse. Prüfe, ob beim Spiegeln die ganze Form auf sich passt. Eine Diagonale verbindet zunächst nur zwei Ecken und muss diese Bedingung nicht erfüllen."
     },
     "Warum ändert ein längerer gezeichneter Pfeil nicht den Winkel?": {
       "starter": "Die Richtung zählt für den Winkel. Ein längerer Pfeil kann trotzdem in dieselbe Richtung zeigen.",
@@ -9821,7 +9821,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Winkel“: Du unterscheidest Richtungsänderung von Streckenlänge."
         }
       ],
-      "connection": "Du unterscheidest Richtungsänderung von Streckenlänge. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Im Winkelmodell vergleichst du die Richtungen zweier Schenkel. Verlängere einen gedachten Schenkel, ohne ihn zu drehen, und prüfe, welche Größe dabei gleich bleibt."
     },
     "Warum machen zusätzliche Nachkommastellen eine Messung nicht automatisch genauer?": {
       "starter": "Mehr geschriebene Zahlenstellen machen die Striche eines Lineals nicht feiner.",
@@ -9838,7 +9838,7 @@
         }
       ],
       "relatedWords": [],
-      "connection": "Du fragst nach der Begründung einer Genauigkeitsangabe statt nach bloßer Ziffernzahl. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich.",
+      "connection": "Bei der Messunsicherheit vergleichst du Zahlen mit den Bedingungen ihrer Ermittlung. Zusätzliche Stellen hinter dem Komma ersetzen keine genauere Messung.",
       "word": "Messunsicherheit"
     },
     "Warum beweist eine passende Prüfsumme nicht automatisch Echtheit?": {
@@ -9862,7 +9862,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Prüfsumme“: Du trennst Änderungsprüfung, Eindeutigkeit und Herkunft."
         }
       ],
-      "connection": "Du trennst Änderungsprüfung, Eindeutigkeit und Herkunft. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Die Prüfsummenkarte zeigt, wie eine Veränderung auffallen kann. Trenne das Prüfergebnis von der Frage, wer die Nachricht geschickt hat und ob du diesem Absender vertrauen kannst."
     },
     "Warum ist eine leicht lesbar zurückdrehbare Geheimregel kein sicherer Schutz?": {
       "starter": "Ein Spielcode kann zurückgedreht werden. Er schützt echte Geheimnisse nicht zuverlässig.",
@@ -9885,7 +9885,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Verschlüsselung“: Du erkennst den Unterschied zwischen einem anschaulichen Prinzip und geprüfter Sicherheit."
         }
       ],
-      "connection": "Du erkennst den Unterschied zwischen einem anschaulichen Prinzip und geprüfter Sicherheit. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Die Verschlüsselungskarte erklärt einen Schutzgedanken und seine Modellgrenzen. Eine sichtbare Rückdrehregel kann das Prinzip zeigen, liefert aber noch keinen geprüften sicheren Schutz."
     },
     "Warum sind acht Bits nicht dasselbe wie die Zahl acht?": {
       "starter": "Acht Kästchen zählen acht Stellen. Ihre Zeichen können unterschiedliche Inhalte darstellen.",
@@ -9908,7 +9908,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Byte“: Du trennst Datenumfang und die Bedeutung einer Darstellung."
         }
       ],
-      "connection": "Du trennst Datenumfang und die Bedeutung einer Darstellung. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Die Computerkarte zeigt Darstellungen mit Nullen und Einsen. Unterscheide die Anzahl der Bitstellen von der Zahl oder Bedeutung, die eine bestimmte Folge darstellen soll."
     },
     "Warum ist eine Zellmembran mehr als eine einfache Mauer?": {
       "starter": "Eine Zelle braucht eine Grenze und zugleich Austausch. Beides gehört zusammen.",
@@ -9931,7 +9931,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Zellmembran“: Du verbindest Schutz und Austausch, ohne die Bildgrenze wörtlich zu nehmen."
         }
       ],
-      "connection": "Du verbindest Schutz und Austausch, ohne die Bildgrenze wörtlich zu nehmen. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Die Zellkarte beschreibt Zellbestandteile und ihre Aufgaben. Vergleiche Schutz mit geregeltem Stoffaustausch; eine Membran ist keine überall gleich dichte Mauer."
     },
     "Warum verrät ein einzelnes Gen nicht automatisch alle Eigenschaften?": {
       "starter": "Ein Merkmal braucht oft mehrere Erklärungen. Ein einzelnes Gen sagt nicht alles über einen Menschen.",
@@ -9961,7 +9961,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Gen“: Du vermeidest genetische Festlegungen und trennst verschiedene Einflussebenen."
         }
       ],
-      "connection": "Du vermeidest genetische Festlegungen und trennst verschiedene Einflussebenen. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Die Zellkarte ordnet Erbinformation in lebende Zellen ein. Ergänze die Frage nach mehreren Genen und Umweltbedingungen, bevor du eine Eigenschaft auf einen einzigen Einfluss zurückführst."
     },
     "Warum ist eine Mutation nicht automatisch gut oder schlecht?": {
       "starter": "Geändert bedeutet nicht automatisch besser oder schlechter. Die Wirkung muss geprüft werden.",
@@ -9984,7 +9984,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Mutation“: Du trennst beobachtete Änderung von einer erst zu belegenden Wirkung."
         }
       ],
-      "connection": "Du trennst beobachtete Änderung von einer erst zu belegenden Wirkung. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Auf der Zellkarte begegnet dir Erbinformation als Teil einer Zelle. Eine veränderte Information sagt für sich allein noch nicht, welche Wirkung sie unter bestimmten Bedingungen hat."
     },
     "Warum kann eine Zelle Erbinformation ohne Zellkern besitzen?": {
       "starter": "Bei manchen Zellen liegt DNA nicht in einem eigenen Zellkern. Sie ist trotzdem vorhanden.",
@@ -10007,7 +10007,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Prokaryot“: Du unterscheidest den Aufbewahrungsbereich von der enthaltenen Information."
         }
       ],
-      "connection": "Du unterscheidest den Aufbewahrungsbereich von der enthaltenen Information. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Die Zellkarte unterscheidet Zelltypen. Vergleiche Erbinformation im Zellkern mit Bakterien, deren DNA nicht in einem von einer Membran umgebenen Zellkern liegt."
     },
     "Warum sind Photonen im Bild keine winzigen sichtbaren Murmeln?": {
       "starter": "Ein Punkt im Lichtbild ist ein Zeichen zur Erklärung, keine fotografierte Murmel.",
@@ -10024,7 +10024,7 @@
         }
       ],
       "relatedWords": [],
-      "connection": "Du nutzt mehrere Modelle, ohne ein einzelnes Bild wörtlich zu nehmen. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich.",
+      "connection": "Die Photon-Erklärung vergleicht verschiedene Lichtmodelle. Benenne bei einer Kugelskizze genau, welche Eigenschaft das Zeichen zeigen soll; es ist keine vergrößerte Fotografie eines Photons.",
       "word": "Photon"
     },
     "Warum haben Wärmebilder Farben, die wir am Gegenstand nicht sehen?": {
@@ -10048,7 +10048,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Infrarot“: Du liest eine Messdarstellung mit ihrer Legende statt Farben als unmittelbare Wirklichkeit zu behandeln."
         }
       ],
-      "connection": "Du liest eine Messdarstellung mit ihrer Legende statt Farben als unmittelbare Wirklichkeit zu behandeln. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Die Wärmeübertragungskarte behandelt auch Strahlung. Überlege beim Wärmebild, wie gemessene Strahlung in eine Darstellung mit Legendenfarben übersetzt wird."
     },
     "Warum zeigt ein Kometenschweif nicht einfach die Flugrichtung an?": {
       "starter": "Der Komet bewegt sich, und sein abgegebenes Material reagiert auch auf die Sonne.",
@@ -10071,7 +10071,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Komet“: Du unterscheidest Körperbewegung und Wirkung auf abgegebenes Material."
         }
       ],
-      "connection": "Du unterscheidest Körperbewegung und Wirkung auf abgegebenes Material. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Die Kometenkarte trennt Kometenkörper, Staub- und Gasschweif. Vergleiche die Wirkung von Sonnenlicht und Sonnenwind mit der Bewegungsrichtung des Körpers."
     },
     "Warum können wir nicht jeden Exoplaneten durch einen Transit finden?": {
       "starter": "Ein Planet muss aus unserer Sicht vor dem Stern vorbeikommen. Das klappt nicht bei jeder Bahn.",
@@ -10094,7 +10094,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Transit“: Du trennst Beobachtbarkeit, Hinweis und gesicherten Nachweis."
         }
       ],
-      "connection": "Du trennst Beobachtbarkeit, Hinweis und gesicherten Nachweis. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Im Transitschema der Exoplanetenkarte vergleichst du Blickrichtung und einen möglichen Helligkeitseinbruch. Ein Planet kann vorhanden sein, ohne aus unserer Richtung vor dem Stern vorbeizuziehen."
     },
     "Warum ist ein GPS-Punkt keine grenzenlos genaue Ortsangabe?": {
       "starter": "Ein Kartenpunkt ist eine Messdarstellung. Er ist nicht grenzenlos genau.",
@@ -10117,7 +10117,7 @@
           "reason": "Vergleiche die Erklärung mit dem Begriff „Koordinate“: Du fragst nach Bezug und Genauigkeit statt nur nach der Zahl der Ziffern."
         }
       ],
-      "connection": "Du fragst nach Bezug und Genauigkeit statt nur nach der Zahl der Ziffern. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich."
+      "connection": "Die GPS-Karte verbindet Satellitensignale mit der Bestimmung eines Orts. Prüfe zusätzlich Bezug und Unsicherheit; viele angezeigte Nachkommastellen sind noch kein Genauigkeitsnachweis."
     },
     "Warum kann ein Papierplan eine echte Bauprüfung nicht ersetzen?": {
       "starter": "Ein Plan hilft beim Denken. Er beweist noch nicht, dass ein echtes Bauwerk sicher ist.",
@@ -10134,7 +10134,7 @@
         }
       ],
       "relatedWords": [],
-      "connection": "Du erkennst Nutzen und Grenze einer maßstäblichen Darstellung. Die verknüpfte Karte bietet dazu einen weiteren begrenzten Vergleich.",
+      "connection": "Bei „Maßstab“ vergleichst du gezeichnete Längen mit gedachten Originalgrößen. Daraus folgt noch keine Aussage darüber, welche Last ein echtes Bauwerk sicher tragen kann.",
       "word": "Maßstab"
     }
   }

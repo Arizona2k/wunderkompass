@@ -16,7 +16,10 @@ jobs:
   checks:
     name: Required quality checks
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    # Full 180-word/60-Why matrices, native zoom, cold offline and actual engines.
+    # Measured Chromium alone: 31.59 min after the profile fix. This job budget
+    # does not alter any assertion timeout, retry, suite or fail-closed gate.
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1; Node 24
         with:

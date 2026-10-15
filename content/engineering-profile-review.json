@@ -122,5 +122,37 @@
     "Existing test profile can restore multiple pages; reported visibility alone did not reveal slow input.",
     "No browser security or network policy disabled.",
     "No human/scientific/device acceptance."
-  ]
+  ],
+  "fullRegressionComparison": {
+    "before": {
+      "head": "ce79751021b028bdce5a6ca8865c5db674061f87",
+      "seconds": 3622.351845996,
+      "offlineSeconds": 2838.534537759,
+      "bookSeconds": 1909.2293681429999
+    },
+    "after": {
+      "head": "4c1fcc2f9a00fc1a2d38dc1acf703c80fb5d5475",
+      "seconds": 1895.608054914,
+      "offlineSeconds": 275.708036785,
+      "bookSeconds": 1795.8247259529999
+    },
+    "sameProductBuild": "dc20b76680161d86",
+    "bothPassed": true,
+    "mandatoryGroups": 11,
+    "statusStatements": 136,
+    "sameCoverageAndThresholds": true,
+    "limitation": "One full before/after pair in the same environment ID, not interleaved or a CI p50/p95 guarantee; short read-only inspector observation in after run, no app/QA logic changed through inspector."
+  },
+  "ciCapacityDecision": {
+    "observedCancelledRuns": [
+      38630214889,
+      38695766156
+    ],
+    "oldJobMinutes": 20,
+    "newJobMinutes": 50,
+    "reason": "Measured full Chromium exceeds old whole-job cap even after actual optimization. Actual Firefox/WebKit and setup/handoff also remain mandatory. No assertion timeout or test count relaxed.",
+    "newPaidService": false,
+    "billingConfigurationChanged": false,
+    "quotaAccess": "Not available through existing connector/credential; no zero-billing guarantee."
+  }
 }
