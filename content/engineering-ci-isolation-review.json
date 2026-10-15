@@ -905,5 +905,38 @@
     "experiment": "Move exactly the same180 search/reload/reciprocal/Back/focus checks, same390x900 viewport, from book to existing navigation worker. Seven180-word matrices, native zoom, all Why checks, current3 workers/ports/jobs,35-minute limit and all assertions retained. New complete exact180 navigation field/timing required by aggregator and handoff.",
     "predictedOnly": "Book critical phase could shrink by508.508s; whole duration and runner-minute benefit require new full measured acceptance. No billed/free-tier or cost-reduction claim from cancelled run.",
     "nextAcceptance": "pending corrected full same-snapshot local/GitHub checks"
+  },
+  "fixtureShutdownFollowup": {
+    "headBeforeFix": "8094826cf173b7dc38163554537e97691f493cce",
+    "localPrevious": "failed632.946s; six-release fixture blocked in server.close at generation5 with one accepted unused TCP socket (bytesRead0/bytesWritten0), no listening server. Inspector cleanup attempt then failed ERR_VM_DYNAMIC_IMPORT_CALLBACK_MISSING and ended the own test; this is no passing proof.",
+    "evidence": "work/p35-8094826-failed-proof; read-only socket inspection recorded before own diagnostic cleanup failure",
+    "change": "Stop isolated fixture listener then closeAllConnections. Browser stays open for unchanged real offline/old-chunk/pass assertions. Applied to retention and resilience, no production/runtime changes.",
+    "realTcpRegression": "passed; actual zero-byte accepted socket proves old close waits, new helper closes it and origin is unreachable; repeated cleanup safe",
+    "targetedBrowser": {
+      "status": "passed",
+      "retentionCycles": 3,
+      "allComplete": true,
+      "resilience": {
+        "kind": "chromium",
+        "networkRecovery": true,
+        "quotaRecovery": true,
+        "completeAssets": true,
+        "offlineReload": true,
+        "passPreserved": true,
+        "assetCount": 453,
+        "realProgress": true,
+        "metrics": {
+          "assets": 453,
+          "reused": 0,
+          "reusedBytes": 0,
+          "downloaded": 453,
+          "downloadedBytes": 18938735,
+          "seconds": 1.26060000000149,
+          "completedAt": 1792102660913
+        },
+        "serverStopped": true
+      }
+    },
+    "fullCurrentAcceptance": "pending new immutable full local and GitHub run; do not infer full success or timing/cost improvement from targeted probes"
   }
 }

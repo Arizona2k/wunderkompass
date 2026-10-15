@@ -1,5 +1,10 @@
 # Änderungsverlauf
 
+## Paket3.5 · Reproduzierbares Abschalten der Offline-Prüfserver (unveröffentlicht)
+
+- Echte ungenutzte Browser-TCP-Verbindung als Ursache eines hängenden Testserverendes nachgewiesen. Isolierte Offline-Fixtures schließen ihre Verbindungen jetzt nach dem Listener; Browser und sämtliche echten Offline-/Altchunk-/Passprüfungen bleiben erhalten.
+- RealeTCP-Regression, drei vollständige6-Versionen-Browserproben und echte HTTP503-/Quota-/Fortschritts-/Pass-/Offlinewiederherstellung bestanden. Kein gelockerter Timeout, Skip oder Retry. Vollständige unveränderte neue lokale/GitHub-Abnahme gesondert erforderlich.
+
 ## Paket3.5 · Naturorte verstehen und Offline-Updates absichern (unveröffentlicht, Gesamtpaket weiter in Arbeit)
 
 - Naturatlas um34 eigenständige Erklärungen erweitert und34 alte Einträge individuell nachredigiert: freiwillige Alters-/Beobachtungsebenen,68 Denkfragen mit Hinweisen und antwortspezifischen Rückmeldungen sowie transparente Quellen- und Prüfstände. Sechs Tierprojektionen bleiben getrennt gezählt.
