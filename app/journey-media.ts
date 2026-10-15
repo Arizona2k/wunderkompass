@@ -1,6 +1,6 @@
 import { PHOTOS } from './learning-media';
 import newPhotos from './journey-photos.json';
-import worldPhotos from './world-photos.json';
+import worldPhotos from './world-photo-core.json';
 
 export type JourneyImage = {
   src: string;

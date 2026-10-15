@@ -1,3 +1,5 @@
+import photoIds from '../app/world-photo-ids.json' with {type:'json'};
+export const REQUIRED_PHOTO_IDS=photoIds;
 import whyQuestions from '../app/book-why-index.json' with {type:'json'};
 export const REQUIRED_WHY_QUESTIONS=whyQuestions;
 import scienceReview from '../content/science-editorial-review.json' with {type:'json'};
@@ -15,6 +17,8 @@ export function aggregateQuality(outcomes){
   if(!report.build||!report.browser)throw Error('Missing build/browser proof');if(build&&build!==report.build||browser&&browser!==report.browser)throw Error('Mixed build/browser proof');build=report.build;browser=report.browser;
   for(const suite of worker.suites){if(seen.has(suite)||!REQUIRED_SUITES.includes(suite)||!report.selectedSuites.includes(suite))throw Error('Duplicate, unknown or missing suite '+suite);seen.add(suite);for(const phase of suite==='foundation'?['performance','components']:[suite])if(!report.timings.some(t=>t.suite===phase&&Number.isFinite(t.seconds)&&t.seconds>0))throw Error('Missing phase timing '+phase);}
   if(report.selectedSuites.length!==worker.suites.length)throw Error('Worker scope mismatch');
+  if(worker.suites.includes('foundation')){const o=report.offlineResilience;if(o?.kind!=='chromium'||o.networkRecovery!==true||o.quotaRecovery!==true||o.completeAssets!==true||o.offlineReload!==true||o.passPreserved!==true)throw Error('Missing actual offline failure/recovery proof');const p=report.photoMetadata,expected=REQUIRED_PHOTO_IDS.flatMap(id=>[320,1440].map(width=>id+':'+width));if(!p||!sameSet(p.images,REQUIRED_PHOTO_IDS)||!sameSet(p.cases?.map(c=>c.id+':'+c.width),expected)||p.immediateHomeCredits!==true||p.oneRequestPerSession!==true||p.tamperAndNetworkRetry!==true||p.retryFocus!==true||!Number.isFinite(p.seconds)||p.seconds<=0)throw Error('Missing complete photo metadata proof');}
+  if(worker.suites.includes('offline')&&(!sameSet(report.photoOffline?.images,REQUIRED_PHOTO_IDS)||report.photoOffline.coldRestart!==true||report.photoOffline.verifiedCatalog!==true))throw Error('Missing cold offline photo metadata proof');
   if(worker.suites.includes('journeys')){const z=report.nativeZoom;if(z?.percent!==200||z.cssWidth!==640||z.scale!==2||z.largeTextAlsoChecked!==true)throw Error('Missing actual native journey zoom proof');}
   if(worker.suites.includes('book')){const b=report.bookCoverage,bz=report.bookNativeZoom,requiredWidths=[320,360,390,768,1024,1440,1920];
    if(!sameSet(b?.terms,REQUIRED_BOOK_TERMS)||!sameSet(b.widths,requiredWidths)||!sameSet(b.models,['length','duration','temperature'])||!Array.isArray(b.observed)||b.observed.length!==REQUIRED_BOOK_TERMS.length*requiredWidths.length||new Set(b.observed.map(v=>v.name+':'+v.width)).size!==b.observed.length||!REQUIRED_BOOK_TERMS.every(name=>requiredWidths.every(width=>b.observed.some(v=>v.name===name&&v.width===width))))throw Error('Missing complete actual book viewport proof');

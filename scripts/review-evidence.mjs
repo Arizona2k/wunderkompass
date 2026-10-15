@@ -18,6 +18,9 @@ export function retainScreenshot(name){
  if(name.startsWith('journey-engine-'))return /-(320|1440)\.png$/.test(name);
  if(name.startsWith('quality-foundation-')||name.startsWith('quality-news-feed-'))return true;
  if(/quality-learning-journey-large-focus-/.test(name))return /-(320|1440)\.png$/.test(name);
+ // Repeated desktop long overviews are represented by mobile full histories and
+ // desktop keyboard/large-text/component evidence. All captured originals stay hashed.
+ if(/^quality-navigation-home-(?:return-(?:320|1440)|first-1440)-top\.png$/.test(name)||name==='quality-learning-playground-selection-full-1440.png')return false;
  // Full expanded-history Pflichtbilder already contain these archive-only rows.
  if(/quality-navigation-updates-archive-/.test(name))return false;
  if(/quality-learning-(journey-links-|journey-large-focus-|journey-native|journey-[a-z]+-390\.png)/.test(name))return true;

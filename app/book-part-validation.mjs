@@ -1,12 +1,8 @@
+import {verifiedContentJSON as verifiedBookJSON} from './verified-content.mjs';
+export {verifiedContentJSON as verifiedBookJSON,readLimitedBytes as readBookBytes} from './verified-content.mjs';
 import WHY_QUESTIONS from './book-why-index.json' with {type:'json'};
 import {validateBookData} from './book-validation.mjs';
 
-export async function verifiedBookJSON(bytes,expected){
- if(!expected||bytes.byteLength!==expected.bytes)throw Error('Unvollständige Wortvertiefung');
- const digest=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(n=>n.toString(16).padStart(2,'0')).join('');
- if(digest!==expected.sha256)throw Error('Veränderte Wortvertiefung');
- return JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes));
-}
 export async function validateBookPart(bytes,term,expected,topics,knownWords=[]){
  const data=await verifiedBookJSON(bytes,expected);
  if(data?.schemaVersion!==1||data.term!==term)throw Error('Falsche Wortvertiefung');
@@ -20,13 +16,6 @@ export async function validateBookTopicPayload(bytes,topic,expected,knownWords){
  return {links:data.links,questions:data.questions};
 }
 export async function validateBookTopicPart(bytes,topic,expected,knownWords){return (await validateBookTopicPayload(bytes,topic,expected,knownWords)).links;}
-export async function readBookBytes(response,maxBytes){
- if(!response.ok||!response.body)throw Error('Wissensdaten nicht erreichbar');
- const reader=response.body.getReader(),chunks=[];let length=0;
- try{for(;;){const {done,value}=await reader.read();if(done)break;length+=value.byteLength;if(length>maxBytes)throw Error('Wissensdaten zu groß');chunks.push(value);}}finally{await reader.cancel();}
- const bytes=new Uint8Array(length);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.byteLength;}return bytes;
-}
-
 export async function validateBookStudyIndex(bytes,expected,terms,allowedFiles){
  const data=await verifiedBookJSON(bytes,expected);
  if(!data||Array.isArray(data)||JSON.stringify(Object.keys(data))!==JSON.stringify(terms)||new Set(Object.values(data).map(m=>m?.file)).size!==terms.length||!Object.values(data).every(m=>/^book-study-[a-f0-9]{16}\.json$/.test(m?.file)&&allowedFiles.includes(m.file)&&Number.isInteger(m.bytes)&&m.bytes>0&&m.bytes<=8000&&/^[a-f0-9]{64}$/.test(m.sha256)))throw Error('Beschädigter Wortkatalog');

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import {measureBuild,violations} from '../scripts/performance-budget.mjs';
+import {measureBuild,violations,observedTrends} from '../scripts/performance-budget.mjs';
 import {selectTests} from '../scripts/test-selection.mjs';
 import {learningFingerprint} from '../build/learning-fingerprint.mjs';
 
@@ -51,4 +51,15 @@ test('compact world index preserves every catalog identity and all overview/time
  const index=JSON.parse(fs.readFileSync('app/world-index.json','utf8')),full=JSON.parse(fs.readFileSync('app/world-catalog.json','utf8'));
  assert.deepEqual(index.map(t=>t.id),full.map(t=>t.id));
  for(let i=0;i<full.length;i++){const a=index[i],b=full[i];for(const k of ['id','category','title','intro','aliases','locations','image','model'])assert.deepEqual(a[k],b[k],b.id+' '+k);assert.equal(a.group,b.animal?.group);assert.equal(a.habitat,b.animal?.habitat);assert.equal(a.date,b.history?.date??b.invention?.date);assert.equal(a.year,b.history?.year??b.invention?.year);assert.equal(a.field,b.person?.field);assert.equal(a.lifespan,b.person?.lifespan);assert.equal(a.sensitive,b.history?.sensitive);assert.equal(a.question,undefined);assert.equal(a.paragraphs,undefined);}
+});
+
+test('authorised total growth metrics remain visible without global caps; initial and individual safety budgets still fail closed',()=>{
+ const config=JSON.parse(fs.readFileSync('performance-budgets.json','utf8'));
+ for(const name of ['totalJsBytes','totalJsGzipBytes','journeyInquiryGzipBytes']){assert.equal(config.build[name],undefined);assert.ok(config.observeOnly.includes(name));}
+ const enormous={totalJsBytes:100000000,totalJsGzipBytes:50000000,journeyInquiryBytes:20000000,journeyInquiryGzipBytes:10000000};
+ assert.deepEqual(violations({...enormous,...config.build},config.build),[],'aggregate growth alone cannot reject a valid initial/individual build');
+ const trends=observedTrends(enormous,config.observeOnly);assert.equal(trends.totalJsGzipBytes.current,50000000);assert.equal(trends.journeyInquiryGzipBytes.current,10000000);assert.ok(trends.totalJsGzipBytes.difference>0);
+ assert.throws(()=>observedTrends({},config.observeOnly),/Missing observed/);
+ for(const key of ['entryJsBytes','entryJsGzipBytes','entryCssBytes','largestBookStudyBytes','bookStudyIndexBytes','bookWhyBytes'])assert.ok(config.build[key]>0,key+' protection retained');
+ const invalid={...config.build,entryJsGzipBytes:config.build.entryJsGzipBytes+1};assert.equal(violations(invalid,config.build)[0].metric,'entryJsGzipBytes');
 });

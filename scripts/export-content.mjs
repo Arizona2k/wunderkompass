@@ -1,3 +1,5 @@
+import {worldPhotoIndex} from './world-photo-index.mjs';
+worldPhotoIndex(process.argv.includes('--check'));
 import {worldQuestionIndex,worldParts} from './world-question-index.mjs';
 import {learningIndexes} from './learning-index.mjs';
 import fs from 'node:fs';import path from 'node:path';import vm from 'node:vm';import crypto from 'node:crypto';import ts from 'typescript';

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "status": "implemented; actual current-commit CI and runner-cost acceptance pending",
+  "decisionComments": [6189174371, 6191114862],
+  "baseline": {
+    "commit": "2d651bc5bc78816c4c9d042d5f0bb4e2b2da7953",
+    "run": 38702172666,
+    "job": 116312732337,
+    "conclusion": "cancelled after total job timeout; not a passing comparison",
+    "jobElapsedSeconds": 3025,
+    "chromiumSeconds": 1866.463083582,
+    "additionalEngineStepElapsedSeconds": 992,
+    "standardChecks": "passed",
+    "actualFirefoxWebKit": "incomplete",
+    "handoff": "skipped",
+    "newsReadiness": "skipped",
+    "reviewBytes": 50901901,
+    "reviewLimitBytes": 50331648,
+    "reviewStatus": "failed"
+  },
+  "implementation": {
+    "singleVerifiedProductionBuild": true,
+    "separateBrowserRunners": ["chromium", "firefox", "webkit"],
+    "sameSnapshotFields": ["testedCommit", "runId", "attempt", "sourceDigest", "build"],
+    "artifactFileHashes": "SHA256 and exact byte lengths; action download digest mismatch fails",
+    "maximumConcurrentBrowserJobs": 3,
+    "failFast": false,
+    "runner": "unchanged ubuntu-24.04 standard GitHub runner",
+    "permission": "contents:read only",
+    "individualAssertionTimeoutsChanged": false,
+    "coverageRemoved": false,
+    "automaticRetriesAdded": false,
+    "engineProgress": "each30 cases and real phase seconds",
+    "newMandatoryOfflineChecks": "actual HTTP failure/recovery, all assets, pass preservation and offline reload in every engine; emulated browser quota/recovery additionally in Chromium",
+    "finalAggregation": "all successful required jobs, same run/attempt/commit/build/source; full existing matrices and actual engine proof required",
+    "artifactRetentionDays": {"build": 1, "browserEvidence": 7, "finalReports": 7},
+    "duplicateScreenshotUpload": false,
+    "paidServicesOrBillingSettingsChanged": false
+  },
+  "limits": [
+    "No completed equivalent baseline exists for the old serial job; do not claim reduced total runner minutes from a cancelled50-minute run.",
+    "Actual job elapsed/billed minutes and setup/upload overhead must be reported from the new run; billable account quota is not readable through the current connector.",
+    "The private repository uses existing standard runners; no new paid provider, tariff or spending setting has been introduced.",
+    "Thirty-five minutes per browser job, ten for standards and five for aggregation bound the configured work; a timeout remains a failed acceptance.",
+    "Local actual Firefox/WebKit installation remains blocked by permitted download-host403; Chromium is not a substitute.",
+    "All27 critical screenshots retained. Long Chromium evidence stays; engine four-width captures are bounded original viewports plus actual model/offline closeups. Duplicate desktop return/full selection views omitted from upload, still captured/hashed.48MiB review limit unchanged."
+  ]
+}

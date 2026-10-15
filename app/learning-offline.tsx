@@ -15,6 +15,7 @@ function isPrepared(worker: ServiceWorker): Promise<boolean> {
 }
 export default function LearningOffline({ onBeforeReload }: { onBeforeReload: () => Promise<void> }) {
   const [available, setAvailable] = useState(false), [busy, setBusy] = useState(false), [ready, setReady] = useState(false);
+  const [failed,setFailed]=useState(false);
   const [message, setMessage] = useState(''), [waiting, setWaiting] = useState<ServiceWorker | null>(null), [install, setInstall] = useState<InstallEvent | null>(null);
   const action = useRef(onBeforeReload); useEffect(()=>{action.current=onBeforeReload;},[onBeforeReload]);
   const firstController = useRef<ServiceWorker | null>(null);
@@ -24,11 +25,11 @@ export default function LearningOffline({ onBeforeReload }: { onBeforeReload: ()
       if (!worker) return;
       worker.addEventListener('statechange', () => {
         if (worker.state === 'installed') {
-          setBusy(false);
+          setBusy(false); setFailed(false); setMessage('');
           if (navigator.serviceWorker.controller) setWaiting(registration.waiting ?? worker);
           else { setReady(true); setBusy(false); }
         }
-        if (worker.state === 'redundant') { setBusy(false); setMessage('Offline konnte nicht vollständig vorbereitet werden. Bitte online noch einmal versuchen.'); }
+        if (worker.state === 'redundant') { setBusy(false); setFailed(true); setMessage('Offline konnte nicht vollständig vorbereitet werden. Bitte online noch einmal versuchen.'); }
       });
     };
     track(registration.installing);
@@ -54,7 +55,7 @@ export default function LearningOffline({ onBeforeReload }: { onBeforeReload: ()
     return () => { live = false; window.removeEventListener('beforeinstallprompt', prompt); navigator.serviceWorker.removeEventListener('controllerchange', changed); };
   }, []);
   async function prepare() {
-    if (busy) return; setBusy(true); setMessage('Die Lernwelt wird heruntergeladen. Lass diese Seite kurz offen.');
+    if (busy) return; setBusy(true); setFailed(false); setMessage('Die Lernwelt wird heruntergeladen. Lass diese Seite kurz offen.');
     try {
       const previous = await navigator.serviceWorker.getRegistration('/');
       // Browser storage may have been cleared while a registration survived.
@@ -62,8 +63,8 @@ export default function LearningOffline({ onBeforeReload }: { onBeforeReload: ()
       const registration = await navigator.serviceWorker.register('/learning-worker.js', { scope: '/', updateViaCache: 'none' });
       observe(registration);
       if (registration.active && !registration.installing) { setReady(await isPrepared(registration.active)); setBusy(false); }
-    } catch { setBusy(false); setMessage('Offline-Vorbereitung hat nicht geklappt. Prüfe die Verbindung und versuche es noch einmal.'); }
+    } catch { setBusy(false); setFailed(true); setMessage('Offline-Vorbereitung hat nicht geklappt. Prüfe die Verbindung und versuche es noch einmal.'); }
   }
   if (!available) return null;
-  return <aside className="offline-learning" aria-label="Offline lernen"><div><strong>{ready ? 'Deine Lernwelt ist offline vorbereitet.' : 'Auch ohne Internet weiter entdecken'}</strong><p>{ready ? 'Die vorbereitete Version funktioniert auch nach einem Offline-Neustart. Quellenlinks brauchen Internet.' : 'Lade einmal die Lernwelt mit Bildern auf dieses Gerät. Dein Entdeckerpass bleibt im selben Browser.'}</p></div>{waiting ? <button className="secondary-button" onClick={async () => { await action.current(); waiting.postMessage({ type: 'ACTIVATE_LEARNING_RELEASE' }); }}><RefreshCw size={18}/> Neue Version laden</button> : !ready ? <button className="secondary-button" disabled={busy} onClick={() => void prepare()}><Download size={18}/>{busy ? 'Wird vorbereitet …' : 'Für offline vorbereiten'}</button> : <span className="offline-ready"><Check size={20}/> Bereit</span>}{install && <button className="secondary-button" onClick={async () => { await install.prompt(); await install.userChoice; setInstall(null); }}>Auf dem Gerät installieren</button>}{message && !ready && <p className="offline-message" role="status">{message}</p>}</aside>;
+  return <aside className="offline-learning" aria-label="Offline lernen"><div><strong>{ready ? 'Deine Lernwelt ist offline vorbereitet.' : 'Auch ohne Internet weiter entdecken'}</strong><p>{ready ? 'Die vorbereitete Version funktioniert auch nach einem Offline-Neustart. Quellenlinks brauchen Internet.' : 'Lade einmal die Lernwelt mit Bildern auf dieses Gerät. Dein Entdeckerpass bleibt im selben Browser.'}</p></div>{waiting ? <button className="secondary-button" onClick={async () => { await action.current(); waiting.postMessage({ type: 'ACTIVATE_LEARNING_RELEASE' }); }}><RefreshCw size={18}/> Neue Version laden</button> : !ready || failed ? <button className="secondary-button" disabled={busy} onClick={() => void prepare()}><Download size={18}/>{busy ? 'Wird vorbereitet …' : 'Für offline vorbereiten'}</button> : <span className="offline-ready"><Check size={20}/> Bereit</span>}{install && <button className="secondary-button" onClick={async () => { await install.prompt(); await install.userChoice; setInstall(null); }}>Auf dem Gerät installieren</button>}{message && (!ready || failed) && <p className="offline-message" role="status">{message}</p>}</aside>;
 }

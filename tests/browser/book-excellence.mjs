@@ -100,7 +100,7 @@ export async function offlineBook(page,report){
 }
 export async function bookEngineFlow(page,shots,engine){
  const observed=[],engineWidths=[320,390,768,1440];await page.evaluate(()=>document.querySelector('.earth-app').classList.remove('large-reading'));
- for(const width of engineWidths){await page.setViewportSize({width,height:900});for(const name of terms){const card=await openWord(page,name);await exercise(page,card,name);await geometry(page,card,engine+' book '+name+' '+width);observed.push({name,width});}
+ for(const width of engineWidths){await page.setViewportSize({width,height:900});for(const name of terms){const card=await openWord(page,name);await exercise(page,card,name);await geometry(page,card,engine+' book '+name+' '+width);observed.push({name,width});if(observed.length%30===0)console.log('ENGINE_PROGRESS',JSON.stringify({engine,phase:'book',cases:observed.length,total:terms.length*engineWidths.length,width,term:name}));}
   if(width===320||width===1440){const card=await openWord(page,'Kelvin');await card.locator('.book-measure').screenshot({path:shots+'/journey-engine-'+engine+'-book-'+width+'.png'});}
  }
  return {bookTerms:[...new Set(observed.map(v=>v.name))],bookWidths:engineWidths,bookObserved:observed};
