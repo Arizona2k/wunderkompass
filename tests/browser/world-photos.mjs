@@ -27,6 +27,35 @@ export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
    assert.equal(requests,1,'One verified metadata request shared by all49 pictures');
   }finally{await context.close();}
  }
+ // Clicking the photograph must keep the enclosing card as the history opener.
+ // A tabindex on the decorative figure steals this focus and breaks real Back.
+ for(const width of [320,1440]){
+  const context=await browser.newContext({viewport:{width,height:900},hasTouch:width===320,reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);
+  try{
+   await page.goto(base+'/#world');await ready(page);
+   for(const category of ['animals','history','people','buildings']){
+    const key='world-category-'+category,card=page.locator('.world-view [data-route-focus="'+key+'"]');
+    assert.equal(await card.locator('.world-photo[tabindex],.world-photo [tabindex],.world-photo button,.world-photo a').count(),0,'compact photograph never creates an interactive child inside its card');
+    await card.locator('img').click();await page.waitForFunction(category=>location.hash==='#world/'+category,category);await page.locator('.world-topic-tile').first().waitFor();
+    await page.goBack();await page.waitForFunction(key=>document.activeElement?.dataset.routeFocus===key,key);
+    assert.equal(await card.evaluate(el=>el===document.activeElement),true,'photograph click restores its actual card opener');
+   }
+  }finally{await context.close();}
+ }
+ // A failed deferred catalog inside a clickable compact card must stay usable
+ // without nesting another button. The article retains its explicit safe retry.
+ {
+  const context=await browser.newContext({viewport:{width:320,height:900}}),page=await context.newPage();page.setDefaultTimeout(20000);
+  try{
+   await page.route('**/world-photos-*.json',route=>route.abort('failed'));
+   await page.goto(base+'/#world/animals');await ready(page);
+   const card=page.locator('.world-topic-tile').filter({has:page.locator('.world-photo [role=status]')}).first();
+   await card.getByText('Du kannst die Wissenskarte trotzdem öffnen.',{exact:true}).waitFor();
+   assert.equal(await card.locator('button,a,[tabindex]').count(),0,'failed compact photograph never nests controls inside a card');
+   await card.screenshot({path:shots+'/world-photo-card-error-320.png'});await card.click();await page.locator('.world-article').waitFor();
+   await page.getByRole('button',{name:'Bild erneut laden',exact:true}).waitFor();
+  }finally{await context.close();}
+ }
  for(const failure of ['tampered','network']){
   // Expected network errors belong to this isolated negative fixture only.
   const context=await browser.newContext({viewport:{width:320,height:900}}),page=await context.newPage();page.setDefaultTimeout(20000);let requests=0;
@@ -40,7 +69,7 @@ export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
    await inspect(page,'whale-shark');assert.equal(requests,2,'Failure clears the shared pending request for a safe retry');
   }finally{await context.close();}
  }
- report.photoMetadata={images:Object.keys(photos),cases:observed,immediateHomeCredits:true,oneRequestPerSession:true,tamperAndNetworkRetry:true,retryFocus:true,seconds:(performance.now()-started)/1000};
+ report.photoMetadata={images:Object.keys(photos),cases:observed,immediateHomeCredits:true,oneRequestPerSession:true,tamperAndNetworkRetry:true,retryFocus:true,photoCardBackFocus:true,seconds:(performance.now()-started)/1000};
  report.checks.push('All49 photos and complete rights at320/1440; bounded verified demand catalog, no home catalog request, tamper/network retry with focus');
 }
 

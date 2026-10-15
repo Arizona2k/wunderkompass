@@ -12,7 +12,7 @@ import journeys from'../app/journey-index.json' with{type:'json'};
 import terms from'../app/book-learning-index.json' with{type:'json'};
 import questions from'../app/book-why-index.json' with{type:'json'};
 test('actual engines require every original chapter, book/Why viewport case and complete offline recovery',()=>{
- const widths=[320,390,768,1440],engine={version:'actual engine',chapters:journeys.map(j=>j.id+':0'),widths,bookTerms:terms,bookObserved:terms.flatMap(name=>widths.map(width=>({name,width}))),whyQuestions:questions,whyObserved:questions.flatMap(question=>widths.map(width=>({question,width}))),offlineResilience:{networkRecovery:true,completeAssets:true,offlineReload:true,passPreserved:true}};
+ const widths=[320,390,768,1440],engine={version:'actual engine',chapters:journeys.map(j=>j.id+':0'),widths,bookTerms:terms,bookObserved:terms.flatMap(name=>widths.map(width=>({name,width}))),whyQuestions:questions,whyObserved:questions.flatMap(question=>widths.map(width=>({question,width}))),offlineResilience:{networkRecovery:true,completeAssets:true,offlineReload:true,serverStopped:true,passPreserved:true}};
  assert.equal(!!engineComplete(engine),true);
- for(const change of [e=>{e.chapters[0]='invented:0';},e=>{e.bookObserved.pop();},e=>{e.whyObserved[0]=e.whyObserved[1];},e=>{delete e.offlineResilience;},e=>{e.offlineResilience.passPreserved=false;}]){const e=structuredClone(engine);change(e);assert.equal(!!engineComplete(e),false);}
+ for(const change of [e=>{delete e.offlineResilience.serverStopped;},e=>{e.chapters[0]='invented:0';},e=>{e.bookObserved.pop();},e=>{e.whyObserved[0]=e.whyObserved[1];},e=>{delete e.offlineResilience;},e=>{e.offlineResilience.passPreserved=false;}]){const e=structuredClone(engine);change(e);assert.equal(!!engineComplete(e),false);}
 });

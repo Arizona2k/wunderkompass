@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "34 individual manuscripts and approximate map-point checks; not integrated; no independent acceptance",
+  "status": "34 new manuscripts with map-point checks and 25 old-entry editorial manuscripts; not integrated; no independent acceptance",
   "checkedOn": "2026-10-15",
   "entries": [
     {
@@ -1424,5 +1424,968 @@
   ],
   "backlog": "WK-054 in BACKLOG.md; original34 depth/UI/search/reciprocal/offline gates still open",
   "independentAcceptance": false,
-  "rights": "Own German explanations; source facts paraphrased; no third-party photo or copied map adopted. Wikidata structured coordinate statements CC0; no map tiles/media reused."
+  "rights": "Own German explanations; source facts paraphrased; no third-party photo or copied map adopted. Wikidata structured coordinate statements CC0; no map tiles/media reused.",
+  "existingEntries": [
+    {
+      "id": "sahara",
+      "starter": "Eine Wüste besteht nicht immer aus weichen Sanddünen. In der Sahara gibt es auch Fels, Kies und Berge. Wasser und Wind können selbst in einer sehr trockenen Landschaft Spuren hinterlassen.",
+      "deeper": "Eine NASA-Aufnahme aus dem Sudan zeigt Tafelberge und ein trockenes Flussbett. Forschende lesen aus Gesteinsschichten und Abtragungsformen eine Landschaftsgeschichte. Ein trockenes Bett bedeutet nicht, dass Wasser dort niemals eine Rolle gespielt hat.",
+      "observe": "Zeichne Dünen, eine Felsfläche und ein trockenes Flussbett als drei unterschiedliche Formen. Welche davon widerlegt die Behauptung Wüste ist immer nur Sand? Das sind eigene Skizzen, keine vollständige Oberflächenkarte der Sahara.",
+      "benefit": "Du ersetzt ein einseitiges Wüstenbild durch einen Vergleich verschiedener Landschaftsformen.",
+      "word": "Verwitterung",
+      "connection": "Verwitterung verändert Gestein an Ort und Stelle. Zusammen mit der Abtragung durch Wasser und Wind hilft sie, auch felsige Wüstenlandschaften zu erklären.",
+      "question": {
+        "prompt": "Ein Foto zeigt Felsberge in einer sehr trockenen Region. Kann es trotzdem eine Wüste zeigen?",
+        "answers": [
+          "Ja, Wüste bedeutet nicht automatisch Sanddünen",
+          "Nein, jede Wüste besteht vollständig aus Sand",
+          "Nur wenn das Foto gelb eingefärbt wurde"
+        ],
+        "correct": 0,
+        "hint": "Entscheidend ist nicht allein die Art des sichtbaren Bodenmaterials.",
+        "why": "Auch Fels und Kies gehören zu Wüstenlandschaften. Sanddünen sind nur eine mögliche Form.",
+        "wrong": [
+          null,
+          "Es gibt auch felsige und kiesige Wüstenflächen. Das Wort Wüste beschreibt nicht nur eine Materialart.",
+          "Eine Bildfarbe bestimmt nicht den Landschaftstyp. Dafür brauchst du Angaben über die tatsächlichen Bedingungen."
+        ]
+      },
+      "source": {
+        "url": "https://science.nasa.gov/earth/earth-observatory/eroded-beauty-in-the-sahara-desert-150604/",
+        "title": "NASA: Eroded Beauty in the Sahara Desert",
+        "updatedOn": null,
+        "anchors": [
+          "mesas",
+          "dry river",
+          "weathering processes"
+        ],
+        "claimScope": "Konkretes felsiges Beispiel im Sudan; keine neuen Flächenanteile oder behaupteten aktuellen Wasserstände."
+      },
+      "modelProposal": "Eigene Gegenüberstellung Düne–Fels–trockenes Flussbett, keine kopierte Aufnahme.",
+      "independentAccepted": false
+    },
+    {
+      "id": "antarctic-desert",
+      "text": "Das Innere der Antarktis erhält sehr wenig Niederschlag. Deshalb sind große Teile eine Kältewüste, obwohl über lange Zeit viel Eis zusammengekommen ist. An den Küsten kann deutlich mehr Schnee fallen.",
+      "starter": "Viel Eis am Boden und wenig neuer Schnee passen zusammen. Das Eis ist ein gespeicherter Vorrat aus langer Zeit. Niederschlag beschreibt dagegen, wie viel Wasser neu aus der Atmosphäre ankommt.",
+      "deeper": "Im Inneren und an den Küsten der Antarktis sind die Niederschlagsbedingungen verschieden. Die Bezeichnung Kältewüste darf deshalb nicht als überall gleicher Schneefall verstanden werden. Vorrat und jährlicher Zufluss sind unterschiedliche Größen.",
+      "observe": "Zeichne einen großen Vorratsbehälter und daneben einen kleinen Pfeil für neuen Zufluss. Erkläre, warum die Größe des Vorrats allein die Stärke des heutigen Zuflusses nicht zeigt. Die Zeichnung ist keine Berechnung der antarktischen Eismasse.",
+      "benefit": "Du unterscheidest gespeichertes Wasser von neuem Niederschlag und vermeidest eine pauschale Aussage über den ganzen Kontinent.",
+      "word": "Niederschlag",
+      "connection": "Niederschlag umfasst auch Schnee. Für eine Kältewüste ist wichtig, wie wenig neu ankommt, nicht wie viel altes Eis bereits gespeichert ist.",
+      "question": {
+        "prompt": "Warum kann ein Gebiet mit viel altem Eis trotzdem sehr trocken sein?",
+        "answers": [
+          "Weil Eis überhaupt kein Wasser enthält",
+          "Weil wenig neuer Niederschlag und ein großer alter Vorrat zusammen möglich sind",
+          "Weil Wüsten immer heiß sein müssen"
+        ],
+        "correct": 1,
+        "hint": "Vergleiche einen gespeicherten Vorrat mit dem, was pro Jahr neu hinzukommt.",
+        "why": "Ein über lange Zeit aufgebauter Eisvorrat sagt nicht allein, wie viel Schnee heute fällt. Das Innere der Antarktis erhält wenig neuen Niederschlag.",
+        "wrong": [
+          "Eis ist festes Wasser. Der Unterschied liegt zwischen bereits gespeichertem Wasser und neuem Niederschlag.",
+          null,
+          "Trockenheit ist nicht dasselbe wie Hitze. Auch eine kalte Region kann sehr wenig Niederschlag erhalten."
+        ]
+      },
+      "source": {
+        "url": "https://legacy.bas.ac.uk/about_antarctica/geography/weather/snow.php",
+        "title": "British Antarctic Survey: Snow in Antarctica",
+        "updatedOn": null,
+        "anchors": [
+          "distribution of precipitation",
+          "near the coast",
+          "the interior"
+        ],
+        "claimScope": "Klarer Küsten-/Binnenunterschied und niedriger Schneezufluss im Inneren; keine neue flächendeckende Niederschlagszahl."
+      },
+      "modelProposal": "Eigenes Vorrat-/Zufluss-Schema, keine reale Eismassenbilanz.",
+      "independentAccepted": false
+    },
+    {
+      "id": "atacama",
+      "starter": "Sehr trocken heißt nicht ohne jede Wirkung von Wasser. Am Salar de Atacama gelangen gelegentlich Wasser und mitgeführte Teilchen in ein Salzbecken. Bei Verdunstung bleibt Salz zurück.",
+      "deeper": "Die historische NASA-Aufnahme zeigt außerdem Vegetation an Quellen. Ein Salzbecken, eine Quelle und die gesamte Atacama sind verschiedene räumliche Ebenen. Ein einzelnes Beispiel belegt weder heutigen Wasserreichtum noch einen unveränderlichen Rekord absoluter Trockenheit.",
+      "observe": "Ordne drei gezeichnete Pfeile: Wasser kommt aus höherem Gelände, Teilchen werden mitgeführt, Wasser verdunstet aus dem Becken. Welche Spur könnte zurückbleiben? Das ist ein qualitatives Schema; du sollst keine Salzlösung trinken oder erhitzen.",
+      "benefit": "Du erkennst Wasserwirkungen in einer trockenen Landschaft und beachtest die begrenzte Aussage eines konkreten Beispiels.",
+      "word": "Verdunstung",
+      "connection": "Verdunstung erklärt, wie Wasser das eingeschlossene Salzbecken verlassen kann, während Salze zurückbleiben. Trockenheit bedeutet nicht, dass Wasser nie eine Rolle spielt.",
+      "question": {
+        "prompt": "Was kann nach der Verdunstung von Wasser aus einem Salzbecken sichtbar zurückbleiben?",
+        "answers": [
+          "Ein Nachweis, dass die ganze Wüste immer nass ist",
+          "Ein neuer Ozean allein durch den Namen des Beckens",
+          "Salzkrusten aus zuvor gelösten Salzen"
+        ],
+        "correct": 2,
+        "hint": "Unterscheide das verdunstende Wasser von den darin gelösten Stoffen.",
+        "why": "Das Wasser geht in die Luft über, während Salze im Becken zurückbleiben können. Daraus können Salzkrusten entstehen.",
+        "wrong": [
+          "Ein einzelnes Wasserereignis im Salzbecken beschreibt nicht die Feuchtigkeit der ganzen Atacama zu jeder Zeit.",
+          "Ein Name verwandelt ein Becken nicht in einen Ozean. Entscheidend sind die tatsächlichen Wasser- und Stoffwege.",
+          null
+        ]
+      },
+      "source": {
+        "url": "https://science.nasa.gov/earth/earth-observatory/salar-de-atacama-chile-76518/",
+        "title": "NASA: Salar de Atacama, Chile",
+        "updatedOn": null,
+        "anchors": [
+          "springs",
+          "occasional floods",
+          "evaporation",
+          "salts remain behind"
+        ],
+        "claimScope": "Prozesse am konkreten Salzbecken, historische Falschfarbenaufnahme nicht als natürliche Farbe oder heutiger Zustand; keine absolute nie-Regen-Aussage."
+      },
+      "modelProposal": "Eigenes Wasser-/Salzfluss-Schema mit freiwilliger Prozesszuordnung.",
+      "independentAccepted": false
+    },
+    {
+      "id": "gobi",
+      "starter": "Zur Gobi gehören nicht nur Sandflächen, sondern auch nackter Fels und Steppenlandschaften. Wind kann feinen Staub aus trockenen Oberflächen aufnehmen und forttragen. Der Staub bleibt nicht an einer eingezeichneten Landesgrenze stehen.",
+      "deeper": "Eine NASA-Aufnahme vom 26. April 2012 zeigt Staubfahnen aus dem Grenzgebiet der Mongolei und Chinas. Das Datum gehört zur Beobachtung. Es ist keine Vorhersage für heutige Luftqualität und keine Aussage, dass jeder Wüstenteil ständig einen Staubsturm besitzt.",
+      "observe": "Zeichne eine Staubquelle und mehrere Pfeile für Wind. Markiere dann eine Landesgrenze, die die Pfeile kreuzen. Erkläre den Unterschied zwischen natürlichem Transport und Kartenlinie. Wirbeln oder einatmen von echtem Staub gehört nicht zur Aufgabe.",
+      "benefit": "Du verknüpfst Windtransport mit grenzüberschreitenden Naturvorgängen und erkennst die zeitliche Grenze eines Bildbelegs.",
+      "word": "Erosion",
+      "connection": "Erosion schließt das Abtragen und Fortführen von Material ein. Die Staubfahnen der Gobi zeigen ein Beispiel für Transport durch Wind.",
+      "question": {
+        "prompt": "Was belegt eine datierte Aufnahme einer Staubfahne?",
+        "answers": [
+          "Eine beobachtete Staubfahne zu diesem Aufnahmezeitpunkt",
+          "Die genaue Luftqualität an jedem heutigen Tag",
+          "Dass Wind an Landesgrenzen anhält"
+        ],
+        "correct": 0,
+        "hint": "Frage zuerst: Wann wurde die Beobachtung gemacht?",
+        "why": "Eine datierte Aufnahme ist ein Beleg für einen bestimmten beobachteten Zustand. Sie ist keine automatische Aussage über heute oder alle Orte.",
+        "wrong": [
+          null,
+          "Für heutige Luftqualität brauchst du aktuelle passende Messungen. Ein historisches Bild ersetzt sie nicht.",
+          "Eine politische Grenzlinie stoppt den Wind nicht. Staub kann mit der Luft über Grenzen transportiert werden."
+        ]
+      },
+      "source": {
+        "url": "https://science.nasa.gov/earth/earth-observatory/gobi-desert-dust-storm-77771/",
+        "title": "NASA: Gobi Desert Dust Storm",
+        "updatedOn": null,
+        "anchors": [
+          "April 26, 2012",
+          "Mongolia and China",
+          "sand and bare rock to grassy steppe"
+        ],
+        "claimScope": "Historischer Staubtransport und Landschaftsvielfalt; keine heutige Luftqualitäts- oder Sturmwarnung."
+      },
+      "modelProposal": "Eigene Staubtransport-Pfeile mit Datumshinweis, keine Gesundheits- oder Wettervorhersage.",
+      "independentAccepted": false
+    },
+    {
+      "id": "amazon-forest",
+      "starter": "Ein Regenwald ist nicht nur eine Fläche voller Bäume. Dort leben sehr verschiedene Arten miteinander. Pflanzen geben außerdem Wasser an die Luft ab und sind Teil des Wasserkreislaufs.",
+      "deeper": "Im Amazonasgebiet können viele Wolken den Blick optischer Satelliten auf den Boden verdecken. Forschende müssen deshalb Beobachtungen und Methoden sorgfältig auswählen. Eine grüne Fläche auf einem Bild liefert keine vollständige Artenliste und beweist nicht, dass der Wald unverändert ist.",
+      "observe": "Zeichne einen Wald mit Boden, Bäumen und Wolken. Markiere einen Pfeil für Wasser, das Pflanzen an die Luft abgeben. Zeichne dann eine Wolkendecke über eine gedachte Aufnahme von oben: Welche Informationen fehlen nun? Das ist ein eigenes Schema und keine reale Bestandskarte.",
+      "benefit": "Du verbindest Lebensvielfalt mit Wasserwegen und den Grenzen von Fernerkundung.",
+      "word": "Biodiversität",
+      "connection": "Biodiversität umfasst die Vielfalt des Lebens. Eine bewaldete Fläche allein sagt noch nicht, welche Arten dort vorkommen und wie sie miteinander verbunden sind.",
+      "question": {
+        "prompt": "Beweist eine grüne Fläche auf einem Satellitenbild bereits, welche Tier- und Pflanzenarten dort alle leben?",
+        "answers": [
+          "Ja, jede Art besitzt auf solchen Bildern eine eigene eindeutig erkennbare Farbe",
+          "Nein, für eine vollständige Artenübersicht reichen grüne Bildflächen allein nicht",
+          "Ja, Wolken verbessern automatisch den Blick auf jede Art"
+        ],
+        "correct": 1,
+        "hint": "Unterscheide eine großräumige Oberfläche von einzelnen Arten.",
+        "why": "Ein Bild kann Hinweise auf Vegetation liefern. Die vollständige Vielfalt einzelner Arten ist daraus allein nicht ablesbar.",
+        "wrong": [
+          "Die Farben eines solchen Bildes sind keine vollständigen Artenetiketten. Viele verschiedene Arten können in ähnlich grün wirkender Vegetation leben.",
+          null,
+          "Wolken können optische Blicke auf den Boden verdecken. Sie machen eine vollständige Artenübersicht nicht automatisch möglich."
+        ]
+      },
+      "source": {
+        "url": "https://science.nasa.gov/earth/earth-observatory/mapping-the-amazon-145649/",
+        "title": "NASA: Mapping the Amazon",
+        "updatedOn": null,
+        "anchors": [
+          "transpiration",
+          "mosaic",
+          "clouds",
+          "obscuring satellite views"
+        ],
+        "claimScope": "Wasserabgabe und Grenzen optischer Beobachtung; keine historischen Flächen-, Artenanteils-, Bevölkerungs- oder Kohlenstoffbilanzzahlen als aktueller Gesamtzustand."
+      },
+      "modelProposal": "Eigenes Wald–Wasser–Wolken-Schema mit ausdrücklich begrenztem Blick von oben.",
+      "independentAccepted": false
+    },
+    {
+      "id": "congo-forest",
+      "starter": "Die Wälder des Kongobeckens bieten vielen Arten Lebensräume. Satelliten können Veränderungen der Baumdecke über längere Zeit sichtbar machen. Ein verlorener Baum und eine dauerhaft in ein Feld umgewandelte Fläche sind aber nicht genau dieselbe Information.",
+      "deeper": "Eine 2025 veröffentlichte Auswertung beschreibt Veränderungen rund um Kisangani von 2001 bis 2024. Verlust von Baumdeckung kann verschiedene Ursachen haben, darunter Nutzung, Feuer oder andere Schäden. Der Begriff Entwaldung bezeichnet eine enger bestimmte Veränderung; die beiden Angaben darf man nicht unbesehen gleichsetzen.",
+      "observe": "Vergleiche zwei erfundene Waldskizzen mit weniger Bäumen im zweiten Bild. Notiere zuerst nur, was sichtbar anders ist. Welche zusätzlichen Angaben bräuchtest du, um Ursache und Dauer der Veränderung zu kennen? Die Skizzen sind keine Messungen des Kongowaldes.",
+      "benefit": "Du trennst beobachtete Veränderung von ihrer Ursache und einer weitergehenden Schlussfolgerung.",
+      "word": "Lebensraum",
+      "connection": "Ein Lebensraum wird durch seine Bedingungen und Lebewesen geprägt. Änderungen der Baumdecke können solche Bedingungen verändern; ein einzelner Kartenwert erklärt noch nicht alle Folgen.",
+      "question": {
+        "prompt": "Zwei Bilder zeigen weniger Baumdeckung im zweiten Bild. Was ist ohne weitere Angaben noch offen?",
+        "answers": [
+          "Ob zwischen den Bildern ein sichtbarer Unterschied liegt",
+          "Ob die Bilddateien Namen haben",
+          "Welche Ursache die Veränderung hat und ob sie dauerhaft ist"
+        ],
+        "correct": 2,
+        "hint": "Sichtbare Veränderung und Erklärung dieser Veränderung sind zwei Schritte.",
+        "why": "Die Bilder können eine Veränderung zeigen. Für Ursache und Dauer brauchst du zusätzliche passende Informationen.",
+        "wrong": [
+          "Der sichtbare Unterschied ist bereits die Beobachtung. Noch nicht geklärt ist damit, wodurch er entstand und wie lange er anhält.",
+          "Ein Dateiname erklärt keine Ursache. Wichtiger sind Aufnahmezeit, Methode und zusätzliche Informationen über die Fläche.",
+          null
+        ]
+      },
+      "source": {
+        "url": "https://science.nasa.gov/earth/earth-observatory/reshaping-the-forests-around-kisangani-154817/",
+        "title": "NASA: Reshaping the Forests Around Kisangani",
+        "updatedOn": null,
+        "anchors": [
+          "2001 - 2024",
+          "tree cover",
+          "loss is not the same as deforestation"
+        ],
+        "claimScope": "Regionaler Beobachtungszeitraum und Unterschied Baumdeckungsverlust/Entwaldung; keine nicht überprüften Gesamtflächenvergleiche oder aktuellen Bevölkerungszahlen."
+      },
+      "modelProposal": "Eigene Vorher-/Nachher-Skizzen mit Trennung Beobachtung–Erklärung, keine nachgezeichnete reale Verlustkarte.",
+      "independentAccepted": false
+    },
+    {
+      "id": "borneo",
+      "starter": "Ein Blätterdach verändert, wie Regen den Waldboden erreicht. Wird Wald entfernt, können Regen und abfließendes Wasser leichter lockeres Material forttragen. Eine Landschaft hängt deshalb auch mit den Wasserwegen unterhalb des Waldes zusammen.",
+      "deeper": "Die NASA beschreibt für eine historische Aufnahme aus Kalimantan Rodungsflächen und Flüsse mit mitgeführtem Material. Kalimantan ist der indonesische Teil Borneos, nicht ein anderer Name für die ganze Insel. Eine Aufnahme von 2000 ist keine aktuelle Karte sämtlicher Wälder Borneos.",
+      "observe": "Zeichne eine bewachsene und eine unbedeckte Hangfläche mit denselben gedachten Regentropfen. Markiere mögliche Wasser- und Teilchenwege. Die Skizze zeigt einen Zusammenhang und berechnet keinen echten Bodenverlust. Es werden keine Pflanzen ausgerissen und keine Erde in Gewässer geschüttet.",
+      "benefit": "Du verbindest Waldschutz mit Boden und Flüssen und unterscheidest Teilregion von Gesamtinsel.",
+      "word": "Erosion",
+      "connection": "Erosion beschreibt Abtragung und Weitertransport. Am Beispiel einer veränderten Waldfläche wird deutlich, warum der Zustand des Bodens auch für Wasserwege wichtig ist.",
+      "question": {
+        "prompt": "Eine Quelle beschreibt eine Fläche in Kalimantan. Welche räumliche Einordnung ist richtig?",
+        "answers": [
+          "Sie beschreibt ein Beispiel im indonesischen Teil Borneos, nicht automatisch die ganze Insel",
+          "Kalimantan ist stets ein anderer Name für alle drei Länder auf Borneo",
+          "Die Aufnahme gilt ohne Prüfung gleichzeitig für jeden Wald der Erde"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche eine Teilregion mit der größeren Insel.",
+        "why": "Kalimantan bezeichnet den indonesischen Teil Borneos. Die Beobachtung eines Beispiels darf nicht ungeprüft auf alle Wälder übertragen werden.",
+        "wrong": [
+          null,
+          "Borneo umfasst auch Gebiete Malaysias und Bruneis. Kalimantan bezeichnet hier den indonesischen Teil.",
+          "Ein regionales Beispiel hat räumliche Grenzen. Für andere Wälder brauchst du jeweils passende Beobachtungen."
+        ]
+      },
+      "source": {
+        "url": "https://science.nasa.gov/earth/earth-observatory/kalimantan-borneo-indonesia-78461/",
+        "title": "NASA: Kalimantan, Borneo, Indonesia",
+        "updatedOn": null,
+        "anchors": [
+          "Indonesian portion",
+          "July 16, 2000",
+          "erosion",
+          "sediment"
+        ],
+        "claimScope": "Konkrete historische Beobachtung und Boden-/Wasserzusammenhang; keine behauptete heutige Gesamtrodungsrate oder pauschale Schuldzuschreibung an einzelne Verbraucher."
+      },
+      "modelProposal": "Eigener qualitativer Vergleich bewachsener/unbedeckter Hang, keine numerische Erosionssimulation.",
+      "independentAccepted": false
+    },
+    {
+      "id": "victoria",
+      "starter": "Am Victoriasee liegen Ufer in drei Ländern: Uganda, Kenia und Tansania. Der See ist ein zusammenhängendes Gewässer. Eine eingezeichnete Staatsgrenze trennt sein Wasser nicht in drei Becken.",
+      "deeper": "Eine Karte kann gleichzeitig natürliche Formen und menschlich festgelegte Grenzen zeigen. Für die Bedeutung des Sees zählen nicht nur seine Umrisse, sondern auch die Menschen und Lebensräume an verschiedenen Ufern. Eine frühere Meldung über seinen Wasserstand ist kein verlässlicher Wert für heute.",
+      "observe": "Zeichne einen erfundenen See und teile seine Umgebung mit drei gestrichelten Landesgrenzen. Verfolge die zusammenhängende Wasserfläche. Welche Linie bezeichnet Natur, welche eine Vereinbarung? Deine Zeichnung ist keine tatsächliche Grenzkarte des Victoriasees.",
+      "benefit": "Du liest natürliche Formen und Staatsgrenzen als unterschiedliche Karteninformationen.",
+      "word": "Kartenprojektion",
+      "connection": "Eine Kartenprojektion bildet die gekrümmte Erdoberfläche auf einer Ebene ab. Auch auf einer solchen Karte musst du Wasserfläche und eingezeichnete politische Grenzen auseinanderhalten.",
+      "question": {
+        "prompt": "Ein See besitzt Ufer in drei Ländern. Was folgt daraus?",
+        "answers": [
+          "Er ist automatisch in drei natürliche Becken geteilt",
+          "Nur eines der Länder kann ein Ufer besitzen",
+          "Die Staatsgrenzen und die zusammenhängende Wasserfläche sind unterschiedliche Informationen"
+        ],
+        "correct": 2,
+        "hint": "Eine gezeichnete Grenzlinie ist keine Wand im Wasser.",
+        "why": "Länder können Ufer desselben zusammenhängenden Sees besitzen. Politische Grenzen sind keine Beckenwände.",
+        "wrong": [
+          "Eine Staatsgrenze erzeugt keine natürliche Trennwand. Die Form des Gewässers musst du unabhängig von der Grenzlinie betrachten.",
+          "Mehrere Länder können Ufer desselben Sees besitzen. Beim Victoriasee sind es Uganda, Kenia und Tansania.",
+          null
+        ]
+      },
+      "source": {
+        "url": "https://science.nasa.gov/earth/earth-observatory/lake-victorias-falling-waters/",
+        "title": "NASA: Lake Victoria’s Falling Waters",
+        "updatedOn": null,
+        "anchors": [
+          "bordered by Kenya, Tanzania, and Uganda"
+        ],
+        "claimScope": "Nur Lage an den drei Ländern; historische Wasserstands-/Bevölkerungswerte nicht als aktuelle Angaben übernehmen. Kartenprojektion aus der bestehenden separat geprüften Begriffserklärung."
+      },
+      "modelProposal": "Eigene qualitative Unterscheidung Wasserform/Grenzlinie, keine erfundenen realen Landesgrenzen.",
+      "independentAccepted": false
+    },
+    {
+      "id": "baikal",
+      "starter": "Der Baikalsee ist sehr tief. Seine Oberfläche und seine Tiefe sind aber zwei verschiedene Größen. Ein Blick von oben zeigt noch nicht, wie viel Wasser unter dieser Fläche liegt.",
+      "deeper": "Der See liegt in einer Riftzone, in der sich Teile der Erdkruste voneinander entfernen. Sein großes Wasservolumen kann über den Sommer aufgenommene Wärme speichern. Eine winterliche Eisaufnahme ist keine Aussage darüber, ob Eis heute betreten werden könnte; sie ist dafür kein Sicherheitsnachweis.",
+      "observe": "Zeichne zwei gleich breite Becken mit verschiedener Tiefe. Welche Angaben fehlen bei einer reinen Ansicht von oben? Du brauchst dafür kein echtes Wasser und sollst kein gefrorenes Gewässer betreten. Die Skizze zeigt erfundene Becken, keine vermessenen Seeböden.",
+      "benefit": "Du unterscheidest Fläche, Tiefe und Volumen und behandelst eine historische Aufnahme nicht als Sicherheitsauskunft.",
+      "word": "Plattentektonik",
+      "connection": "Plattentektonik hilft dir, eine Riftzone zu verstehen. Beim Baikal ist die Bewegung im Untergrund mit der Entstehung eines tiefen Seebeckens verbunden.",
+      "question": {
+        "prompt": "Zwei Seen sehen von oben gleich groß aus. Besitzen sie deshalb sicher dasselbe Wasservolumen?",
+        "answers": [
+          "Nein, auch ihre Tiefe und die Form des Beckens sind wichtig",
+          "Ja, die Wasseroberfläche ist die einzige wichtige Angabe",
+          "Ja, sobald beide einen Namen besitzen"
+        ],
+        "correct": 0,
+        "hint": "Überlege, was unter der sichtbaren Wasseroberfläche liegt.",
+        "why": "Gleiche Oberflächen bedeuten nicht automatisch gleiche Becken. Tiefe und Beckenform beeinflussen ebenfalls das Wasservolumen.",
+        "wrong": [
+          null,
+          "Die Oberfläche allein beschreibt den Raum unter Wasser nicht. Ein flaches und ein tiefes Becken können von oben gleich breit aussehen.",
+          "Ein Name liefert keine Größenmessung. Dafür brauchst du Angaben über Fläche, Tiefe und Beckenform."
+        ]
+      },
+      "source": {
+        "url": "https://science.nasa.gov/earth/earth-observatory/ice-covers-lake-baikal-48878/",
+        "title": "NASA: Ice Covers Lake Baikal",
+        "updatedOn": null,
+        "anchors": [
+          "considerable volume",
+          "retain heat",
+          "occupies a rift"
+        ],
+        "claimScope": "Riftlage und Wärmespeicherung; historische Hinweise zu Fahrzeugen/Betreten von Eis ausdrücklich nicht übernommen. Kein aktueller Vereisungsbericht."
+      },
+      "modelProposal": "Eigener qualitativer Querschnitt zweier unterschiedlich tiefer Becken, keine echten Bathymetriedaten.",
+      "independentAccepted": false
+    },
+    {
+      "id": "caspian",
+      "starter": "Das Kaspische Meer heißt Meer, ist aber ein großes eingeschlossenes Binnengewässer. Flüsse bringen Wasser hinein; ein natürlicher Flussausgang zum Weltmeer fehlt. Wasser kann seine Oberfläche als Wasserdampf verlassen.",
+      "deeper": "Bei Verdunstung geht Wasser in die Luft über, während gelöste Salze überwiegend zurückbleiben. Für den Wasserstand sind Zufluss und Wasserverluste wichtig. Das erklärt einen Zusammenhang, sagt aber ohne aktuelle Messungen nicht, wie hoch der See heute steht oder wie salzig jede Stelle ist.",
+      "observe": "Zeichne ein Becken mit einem Zuflusspfeil und einem Pfeil nach oben für Verdunstung. Markiere Salz als kleine Punkte. Welche Teilchen bleiben in diesem vereinfachten Schema zurück? Die Zeichnung berechnet weder echte Salzwerte noch einen zukünftigen Wasserstand.",
+      "benefit": "Du erklärst den Wasserkreislauf eines eingeschlossenen Sees, statt dich allein nach seinem Namen zu richten.",
+      "word": "Verdunstung",
+      "connection": "Verdunstung beschreibt den Übergang flüssigen Wassers in Wasserdampf. In einem eingeschlossenen See ist sie ein wichtiger Weg, auf dem Wasser das Becken verlassen kann.",
+      "question": {
+        "prompt": "Was bleibt bei der Verdunstung von salzhaltigem Wasser überwiegend im Becken zurück?",
+        "answers": [
+          "Das gesamte Wasser, denn Verdunstung verändert nichts",
+          "Die gelösten Salze",
+          "Nur der Name des Sees"
+        ],
+        "correct": 1,
+        "hint": "Unterscheide das Wasser, das gasförmig wird, von gelösten Salzen.",
+        "why": "Wasser geht als Wasserdampf in die Luft über. Die gelösten Salze verdunsten dabei nicht einfach im gleichen Verhältnis mit.",
+        "wrong": [
+          "Bei Verdunstung verlässt Wasser die Flüssigkeit als Wasserdampf. Deshalb kann sich die verbleibende Wassermenge ändern.",
+          null,
+          "Der Name beschreibt keinen Stofffluss. Hier geht es um Wasser und darin gelöste Salze."
+        ]
+      },
+      "source": {
+        "url": "https://science.nasa.gov/earth/earth-observatory/caspian-sea-44253/",
+        "title": "NASA: Caspian Sea",
+        "updatedOn": null,
+        "anchors": [
+          "Multiple rivers",
+          "Lacking an outlet",
+          "evaporation",
+          "accumulation of salt"
+        ],
+        "claimScope": "Zuflüsse, fehlender natürlicher Ausgang zum Ozean und Verdunstung/Salzanreicherung; keine alten Flächen-/Tiefen-/Salzwerte als aktuelle Messdaten."
+      },
+      "modelProposal": "Eigenes Stofffluss-Schema; keine Simulation des wirklichen heutigen Pegels.",
+      "independentAccepted": false
+    },
+    {
+      "id": "russia-size",
+      "starter": "Größtes Land bedeutet hier: größte Fläche. Daraus folgt nicht automatisch die größte Bevölkerung. Eine gute Rekordfrage sagt zuerst, was verglichen wird.",
+      "deeper": "Eine ebene Weltkarte kann Flächen unterschiedlich verzerren. Für einen Ländervergleich brauchst du daher dieselbe definierte Flächenangabe und nicht nur den optischen Eindruck. Ein Beispielpunkt im Land zeigt weder seine Grenze noch die Größe aller Regionen.",
+      "observe": "Zeichne zwei erfundene Länder: eines mit großer Fläche und wenigen Punkten für Menschen, eines mit kleiner Fläche und vielen Punkten. Welche Rangfolge ergibt sich bei Fläche, welche bei Bevölkerung? Die Zahlen und Formen sind absichtlich erfunden und keine Russland-Statistik.",
+      "benefit": "Du unterscheidest Größe nach Fläche von anderen Vergleichen und erkennst Kartengrenzen.",
+      "word": "Kartenprojektion",
+      "connection": "Kartenprojektionen übertragen die gekrümmte Erde auf eine Ebene und verändern dabei Eigenschaften. Sichtbare Flächengröße auf einer Karte und statistisch gemessene Landesfläche sind deshalb auseinanderzuhalten.",
+      "question": {
+        "prompt": "Ein Land ist nach Fläche am größten. Was folgt daraus nicht automatisch?",
+        "answers": [
+          "Dass sich die Aussage auf Fläche bezieht",
+          "Dass dieses Land auch die meisten Einwohner hat",
+          "Dass für den Vergleich eine Messgröße angegeben wurde"
+        ],
+        "correct": 1,
+        "hint": "Fläche und Anzahl von Menschen sind zwei unterschiedliche Größen.",
+        "why": "Ein Flächenrekord ist kein Bevölkerungsrekord. Für die Einwohnerzahl brauchst du eine eigene passende Statistik.",
+        "wrong": [
+          "Die Formulierung nach Fläche sagt die Messgröße bereits. Offen ist dadurch weiterhin die Bevölkerung.",
+          null,
+          "Die Messgröße Fläche wurde genannt. Sie beantwortet aber nicht zugleich Fragen nach anderen Größen."
+        ]
+      },
+      "source": {
+        "url": "https://data.un.org/legacy/en/iso/ru.html",
+        "title": "UN Statistics Division: Russian Federation country profile",
+        "updatedOn": null,
+        "anchors": [
+          "Surface area (km2)"
+        ],
+        "claimScope": "Flächenmetrik; keine Übernahme zeitabhängiger Einwohnerzahlen oder umstrittener zusätzlicher Gebietsansprüche. Projektionsmechanismus aus bereits geprüfter Begriffserklärung."
+      },
+      "modelProposal": "Eigenes fiktives Vergleichsschema Fläche/Bevölkerung, keine neue Landesgeometrie.",
+      "independentAccepted": false
+    },
+    {
+      "id": "vatican-size",
+      "starter": "Ein kleiner Staat kann auf einer großen Weltkarte kaum als Fläche sichtbar sein. Eine Markierung hilft dir beim Finden. Der Punkt ist aber nicht die echte Landesform.",
+      "deeper": "Die offizielle Geografieseite nennt rund 44 Hektar für Vatikanstadt. Das ist weniger als ein Quadratkilometer. Bei einem kleinen Maßstab würde diese Fläche nur sehr wenig Platz auf dem Bildschirm erhalten. Ein größer gezeichneter Suchpunkt löst dieses Darstellungsproblem, ohne die Landesfläche zu vergrößern.",
+      "observe": "Zeichne ein kleines Quadrat und betrachte es in zwei selbst gezeichneten Kartenrahmen: einmal die ganze Welt, einmal eine nahe Stadtumgebung. Warum ist ein Punkt in der Übersicht hilfreich? Das Schema ist kein maßstäblicher Vatikan-Stadtplan.",
+      "benefit": "Du unterscheidest ein hilfreiches Kartenzeichen von der wirklichen Ausdehnung eines Ortes.",
+      "word": "Maßstab",
+      "connection": "Der Maßstab verbindet eine Kartenstrecke mit einer wirklichen Strecke. Ein vereinfachtes Suchsymbol ist dagegen oft absichtlich größer als die maßstäbliche Fläche eines sehr kleinen Staates.",
+      "question": {
+        "prompt": "Ein großer Punkt markiert einen sehr kleinen Staat auf der Weltkarte. Was zeigt der Punkt zuverlässig?",
+        "answers": [
+          "Den genauen Grenzverlauf in echter Größe",
+          "Die Anzahl aller dort lebenden Menschen",
+          "Die ungefähre Lage, nicht automatisch die Landesfläche"
+        ],
+        "correct": 2,
+        "hint": "Ein Suchzeichen soll auffindbar sein. Es muss nicht maßstäblich so groß wie der Staat sein.",
+        "why": "Die Markierung hilft bei der Orientierung. Ihre gezeichnete Größe ist kein Messwert für die Fläche des Staates.",
+        "wrong": [
+          "Ein einfacher Suchpunkt bildet keine genaue Landesgrenze ab. Dafür wäre eine passende detaillierte Karte nötig.",
+          "Ein Lagepunkt enthält keine Einwohnerzählung. Seine Größe ist hier ein Darstellungsmerkmal.",
+          null
+        ]
+      },
+      "source": {
+        "url": "https://www.vaticanstate.va/en/state-and-government/general-informations/geography.html",
+        "title": "Vatican City State: Geography",
+        "updatedOn": null,
+        "anchors": [
+          "0.44 km2",
+          "44 hectares"
+        ],
+        "claimScope": "Flächenangabe laut Geografieseite, Suchtext zugänglich; Direktabruf teilweise blockiert. Die englische History-Seite enthält eine widersprechende Einheit und wird nicht übernommen. Vollständigen direkten Beleg vor Produktintegration erneut sichern."
+      },
+      "modelProposal": "Eigenes Zoom-/Suchzeichen-Schema, keine übernommenen Kartenkacheln.",
+      "independentAccepted": false
+    },
+    {
+      "id": "vostok",
+      "starter": "Ein Temperaturrekord braucht Ort, Datum und eine Messregel. Bei Wostok geht es um gemessene Lufttemperatur. Die Temperatur der Schneeoberfläche ist eine andere Messgröße.",
+      "deeper": "Die WMO-Tabelle mit Stand 31. Juli 2025 führt −89,2 °C am 21. Juli 1983 an der Station Wostok. Satellitenuntersuchungen der Oberfläche beantworten eine andere Frage. Ein kälterer Oberflächenwert widerlegt deshalb nicht allein einen Lufttemperaturrekord. Quellenstand und Ereignisdatum sind getrennt anzugeben.",
+      "observe": "Schreibe zwei Beschriftungen: Luft über dem Boden und Oberfläche des Bodens. Welche Zusatzangaben braucht ein Vergleich? Stelle kein Kälteexperiment an; die Aufgabe benötigt nur Papier und die dokumentierten Messbeschreibungen.",
+      "benefit": "Du prüfst, ob Rekordwerte dieselbe Größe und Methode vergleichen.",
+      "word": "Kelvin",
+      "connection": "Kelvin ist eine Temperatureinheit. Neben der verwendeten Skala musst du weiterhin wissen, welche Temperatur wo und wie gemessen wurde; eine Umrechnung ersetzt diese Angaben nicht.",
+      "question": {
+        "prompt": "Kannst du eine Lufttemperatur und eine Schneeoberflächentemperatur ohne Erläuterung als denselben Rekord vergleichen?",
+        "answers": [
+          "Nein, die Messgrößen müssen unterschieden werden",
+          "Ja, jede negative Zahl misst automatisch dasselbe",
+          "Ja, das Datum ist bei einem Rekord grundsätzlich unwichtig"
+        ],
+        "correct": 0,
+        "hint": "Frage, was der Sensor jeweils erfasst.",
+        "why": "Luft und Oberfläche können unterschiedliche Temperaturen besitzen. Ein sinnvoller Vergleich nennt Messgröße, Methode, Ort und Zeit.",
+        "wrong": [
+          null,
+          "Ein Minuszeichen bezeichnet nur die Lage auf einer Skala. Es macht zwei verschiedene Messgrößen nicht gleich.",
+          "Das Datum ordnet das gemessene Ereignis ein. Ohne Zeitangabe fehlt eine wichtige Information zum Rekord."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://wmo.int/sites/default/files/2025-07/Table_Records_25Jul2025.pdf",
+          "title": "WMO: Records of Weather and Climate Extremes, as of 31 July 2025",
+          "updatedOn": "2025-07-31",
+          "anchors": [
+            "Lowest temperature",
+            "Vostok",
+            "21/July/1983"
+          ],
+          "claimScope": "Belegter Tabellenstand, keine unbelegte Behauptung eines neu abgefragten 2026-Rekordarchivs."
+        },
+        {
+          "url": "https://science.nasa.gov/science-research/earth-science/09dec_coldspot/",
+          "title": "NASA: The Coldest Place in the World",
+          "updatedOn": null,
+          "anchors": [
+            "surface temperature",
+            "satellites"
+          ],
+          "claimScope": "Unterschied Oberflächenbeobachtung/Lufttemperatur, keine neue Rekordzahl übernommen."
+        }
+      ],
+      "modelProposal": "Eigene Gegenüberstellung zweier Messgrößen mit Quellen-/Ereignisdatum, kein echtes Thermometer.",
+      "independentAccepted": false
+    },
+    {
+      "id": "furnace-creek",
+      "starter": "Ein Hitzerekord ist ein einzelner Messwert an einem bestimmten Ort und Tag. Er beschreibt nicht automatisch einen normalen Sommertag. Auch ein heißer Boden und die Luft darüber müssen nicht gleich warm sein.",
+      "deeper": "Die WMO-Tabelle mit Stand 31. Juli 2025 führt 56,7 °C für Furnace Creek am 10. Juli 1913. Das Tabellenjahr ist nicht das Jahr dieses Ereignisses. Eine Nachricht über eine andere Messart oder einen anderen Zeitraum muss entsprechend erklärt werden; Zahlen allein genügen nicht.",
+      "observe": "Erfinde fünf harmlose Papier-Beispielwerte und markiere den höchsten. Ist dieser höchste Wert zugleich jeder einzelne Wert der Reihe? Die Aufgabe ist ein Zahlenvergleich, keine Wetterstatistik und kein Anlass, sich großer Hitze auszusetzen.",
+      "benefit": "Du unterscheidest einen Extremwert von typischen Bedingungen und beachtest die Zeitangaben einer Quelle.",
+      "word": "Mittelwert",
+      "connection": "Ein Mittelwert fasst mehrere Zahlen zusammen. Ein einzelner Höchstwert beantwortet eine andere Frage und darf nicht als typischer Durchschnitt ausgegeben werden.",
+      "question": {
+        "prompt": "Was zeigt der höchste Wert einer Messreihe allein nicht?",
+        "answers": [
+          "Welcher Wert innerhalb dieser Reihe am höchsten liegt",
+          "Dass dieser Wert für alle Tage typisch ist",
+          "Eine Eigenschaft genau dieser Messreihe"
+        ],
+        "correct": 1,
+        "hint": "Ein Maximum ist eine einzelne Extremangabe, kein typischer Tagesablauf.",
+        "why": "Aus einem Höchstwert allein lässt sich nicht schließen, wie häufig oder typisch solche Werte sind. Dafür braucht man die Verteilung und den Zeitraum der Messungen.",
+        "wrong": [
+          "Das Maximum benennt gerade den höchsten Wert dieser Reihe. Es erklärt nur nicht allein die typischen Bedingungen.",
+          null,
+          "Das Maximum ist eine Eigenschaft der Reihe. Für Häufigkeit und typische Bedingungen brauchst du mehr als diesen einen Wert."
+        ]
+      },
+      "source": {
+        "url": "https://wmo.int/sites/default/files/2025-07/Table_Records_25Jul2025.pdf",
+        "title": "WMO: Records of Weather and Climate Extremes, as of 31 July 2025",
+        "updatedOn": "2025-07-31",
+        "anchors": [
+          "Highest temperature",
+          "56.7 °C",
+          "10/July/1913",
+          "Furnace Creek"
+        ],
+        "claimScope": "Genauer belegter Tabellen-/Ereignisstand; keine fiktive 2026-Archivabfrage oder Behauptung einer garantierten heutigen Temperatur."
+      },
+      "modelProposal": "Eigener fiktiver Zahlenvergleich Maximum/typische Werte, keine Wettervorhersage.",
+      "independentAccepted": false
+    },
+    {
+      "id": "everest",
+      "starter": "Ein hoher Gipfel braucht einen gemeinsamen Startpunkt für die Messung. Beim Everest ist das die mittlere Höhe des Meeresspiegels. So kannst du Berge vergleichen, obwohl ihr Fuß auf ganz unterschiedlicher Höhe liegt.",
+      "deeper": "Höhe über dem Meer, Abstand vom Bergfuß und Abstand vom Erdmittelpunkt beantworten verschiedene Fragen. Everest, Mauna Kea und Chimborazo stehen deshalb für verschiedene Vergleiche. Die Erde ist keine perfekte Kugel. Aus einer Rekordüberschrift allein erkennst du die Messregel noch nicht.",
+      "observe": "Zeichne eine gemeinsame waagerechte Meereshöhe und zwei Berge: einen auf einem Hochland, einen mit Fuß unter Wasser. Markiere jeweils Meer–Gipfel und Fuß–Gipfel. Welche Strecken hast du verglichen? Die Zeichnung zeigt erfundene Formen und keine maßstäblichen Bergdaten.",
+      "benefit": "Du fragst bei einem Rekord zuerst nach Messgröße und Bezugspunkt.",
+      "word": "Meter",
+      "connection": "Meter ist die Längeneinheit. Für eine Höhenangabe brauchst du zusätzlich einen Bezugspunkt; die Einheit allein legt den Beginn deiner Messung nicht fest.",
+      "question": {
+        "prompt": "Zwei Berge sollen nach ihrer Höhe über dem Meer verglichen werden. Welche Angabe hilft?",
+        "answers": [
+          "Die beiden Höhen mit demselben Meeresspiegel-Bezug",
+          "Nur die Strecke vom jeweiligen Bergfuß zum Gipfel",
+          "Die Farbe der Gipfel auf einem Foto"
+        ],
+        "correct": 0,
+        "hint": "Überlege, wo bei beiden Messungen der gemeinsame Nullpunkt liegt.",
+        "why": "Eine gemeinsame Bezugshöhe macht genau diesen Höhenvergleich sinnvoll. Der Bergfuß kann bei den beiden Bergen auf unterschiedlicher Höhe liegen.",
+        "wrong": [
+          null,
+          "Das wäre ein anderer Vergleich: Höhe vom jeweiligen Fuß aus. Ein hoher Standort des Bergfußes wird dabei nicht mitgemessen.",
+          "Farben sagen nichts Verlässliches über die Höhe über dem Meer aus. Auch Bildbearbeitung, Schnee und Licht verändern sie."
+        ]
+      },
+      "source": {
+        "url": "https://oceanservice.noaa.gov/facts/highestpoint.html",
+        "title": "NOAA: What is the highest point on Earth as measured from Earth's center?",
+        "updatedOn": "2026-09-23",
+        "anchors": [
+          "mean sea level",
+          "Mauna Kea",
+          "Earth is not a perfect sphere"
+        ],
+        "claimScope": "Unterschied der drei Bezugspunkte. Die ältere gerundete Everestzahl dieser Seite wird nicht als neue Höhenmessung übernommen; bestehende Basiszahl separat erhalten/prüfen."
+      },
+      "modelProposal": "Eigenes qualitatives Höhenvergleichsschema mit umschaltbarem Bezugspunkt; keine realen Bergsilhouetten oder Messwerte.",
+      "independentAccepted": false
+    },
+    {
+      "id": "alps",
+      "starter": "Die Alpen werden angehoben, während Wasser und Eis Gestein abtragen. Eine Landschaft kann also gleichzeitig aufgebaut und verändert werden. Ein Tal ist kein unveränderlicher Einschnitt.",
+      "deeper": "Frühere Gletscher verbreiterten viele Täler. Flüsse können schmalere Rinnen darin einschneiden. Die Entstehung eines Gebirges und die heutige Form seiner Täler sind unterschiedliche Teile derselben Geschichte. Nicht jedes Alpental hat genau dieselbe Entwicklung.",
+      "observe": "Zeichne einmal einen schmalen V-förmigen, einmal einen breiten U-förmigen Talquerschnitt. Beschreibe, wie sich Bodenbreite und Hänge unterscheiden. Das sind vereinfachte Formvergleiche; aus der Buchstabenform allein lässt sich kein echtes Tal vollständig erklären.",
+      "benefit": "Du trennst Gebirgsbildung von späterer Formung durch Wasser und Eis.",
+      "word": "Erosion",
+      "connection": "Erosion erklärt, wie Material abgetragen und transportiert wird. In den Alpen wirken diese Vorgänge gleichzeitig mit der Hebung des Gesteins.",
+      "question": {
+        "prompt": "Ein Gebirge wird angehoben. Kann es gleichzeitig durch Wasser und Eis Material verlieren?",
+        "answers": [
+          "Nein, ein Gebirge verändert sich immer nur durch einen Vorgang",
+          "Ja, Hebung und Abtragung können gleichzeitig wirken",
+          "Nur wenn die gesamte Bergkette aus Eis besteht"
+        ],
+        "correct": 1,
+        "hint": "Denke an Vorgänge im Untergrund und an der Oberfläche.",
+        "why": "Hebung bewegt Gestein nach oben. Wasser und Gletscher können zugleich Material an der Oberfläche abtragen. Daraus folgt keine überall gleiche Änderungsrate.",
+        "wrong": [
+          "Mehrere Vorgänge können gleichzeitig wirken. Die Hebung im Untergrund schaltet die Abtragung an der Oberfläche nicht aus.",
+          null,
+          "Ein Gletscher kann auch an festem Gestein arbeiten. Das Gebirge muss dafür nicht selbst aus Eis bestehen."
+        ]
+      },
+      "source": {
+        "url": "https://science.nasa.gov/earth/earth-observatory/a-clear-view-of-the-alps-48845/",
+        "title": "NASA: A Clear View of the Alps",
+        "updatedOn": null,
+        "anchors": [
+          "tectonic uplift",
+          "glaciers and rivers",
+          "U-shaped valleys"
+        ],
+        "claimScope": "Gleichzeitige Hebung und Abtragung sowie glaziale/fluviale Talformung; keine Übernahme der historischen Studie als überall heute gültiges exaktes Gleichgewicht."
+      },
+      "modelProposal": "Eigene gegenübergestellte Talquerschnitte mit getrennten Erklärungen für Fluss und Gletscher.",
+      "independentAccepted": false
+    },
+    {
+      "id": "himalaya",
+      "starter": "Die Erdoberfläche besteht aus großen Platten. Im Himalaya treffen zwei Kontinentalplatten aufeinander. Gestein wird dabei über sehr lange Zeit zusammengeschoben und angehoben.",
+      "deeper": "Die Kollision von Indien und Eurasien verformt eine breite Region. Berge entstehen nicht nur an einer dünnen gezeichneten Linie. Erdbeben zeigen, dass sich Teile der Erdkruste ruckartig bewegen können; eine vereinfachte Plattenzeichnung sagt keinen Zeitpunkt eines Bebens vorher.",
+      "observe": "Schiebe zwei Streifen weiches Papier vorsichtig gegeneinander. Wo faltet oder überlappt es? Vergleiche anschließend mit einer Plattenzeichnung. Papier ist kein echtes Gestein; die kurze Bewegung bildet weder geologische Dauer noch die Tiefe eines Gebirges ab.",
+      "benefit": "Du erkennst eine Plattengrenze als verformte Region und beachtest die Grenzen eines einfachen Modells.",
+      "word": "Plattentektonik",
+      "connection": "Plattentektonik erklärt Bewegungen großer Erdplatten. Die Kollision im Himalaya ist ein Beispiel für Zusammenstoßen statt Auseinanderdriften.",
+      "question": {
+        "prompt": "Was erklärt das Zusammenschieben zweier Kontinentalplatten im Himalaya?",
+        "answers": [
+          "Den genauen Tag des nächsten Erdbebens",
+          "Dass jeder hohe Berg ein Vulkan ist",
+          "Einen Vorgang, der Erdkruste verformt und Gebirge aufbaut"
+        ],
+        "correct": 2,
+        "hint": "Das Modell beschreibt einen geologischen Vorgang, keine genaue Terminvorhersage.",
+        "why": "Zusammenstoßende Kontinentalplatten können die Erdkruste verkürzen, verdicken und anheben. Das erklärt Gebirgsbildung, aber keinen genauen Erdbebentermin.",
+        "wrong": [
+          "Aus der Plattenbewegung lässt sich kein genauer Tag eines Erdbebens ablesen. Dafür wäre das Modell viel zu grob.",
+          "Hohe Berge können auch durch Kollision und Hebung entstehen. Eine große Höhe ist kein Nachweis für einen Vulkan.",
+          null
+        ]
+      },
+      "source": {
+        "url": "https://www.usgs.gov/publications/seismicity-earth-1900-2010-himalaya-and-vicinity",
+        "title": "USGS: Seismicity of the Earth 1900–2010, Himalaya and vicinity",
+        "updatedOn": null,
+        "anchors": [
+          "collision of the India and Eurasia continental plates",
+          "broad footprint"
+        ],
+        "claimScope": "Kontinentale Kollision und breite Verformungszone; keine neue exakte Geschwindigkeit oder Erdbebenprognose."
+      },
+      "modelProposal": "Eigenes Kollisionsschema; keine simulierte reale Erdbebenvorhersage.",
+      "independentAccepted": false
+    },
+    {
+      "id": "andes",
+      "starter": "Ein hohes Gebirge verändert Wege von feuchter Luft. Auf verschiedenen Seiten der Anden können deshalb sehr unterschiedliche Landschaften liegen. Ein Kartenpunkt im Gebirge beschreibt nicht das Klima der ganzen Bergkette.",
+      "deeper": "An den östlichen Hängen kann aus dem Inneren Südamerikas zugeführte feuchte Luft Niederschlag bringen. Weiter westlich liegen sehr trockene Gebiete. Höhe, Windrichtung und Lage wirken zusammen; ein Regenschatten ist keine Behauptung, dass hinter jedem Berg niemals Regen fällt.",
+      "observe": "Zeichne einen Gebirgsquerschnitt mit einem Pfeil für feuchte Luft. Markiere eine mögliche regenreichere und eine trockenere Seite. Ändere dann gedanklich die Windrichtung. Deine Skizze zeigt einen Zusammenhang, aber keine echte Wetterkarte oder Vorhersage.",
+      "benefit": "Du beziehst beim Landschaftsvergleich Luftbewegung und Gebirge ein.",
+      "word": "Niederschlag",
+      "connection": "Niederschlag erklärt, wie Wasser aus der Atmosphäre an die Oberfläche gelangt. Die Anden zeigen, warum sich seine Verteilung räumlich unterscheiden kann.",
+      "question": {
+        "prompt": "Was brauchst du zusätzlich zur Lage eines Gebirges, um einen Regenschatten zu erklären?",
+        "answers": [
+          "Die Herkunft und Bewegungsrichtung feuchter Luft",
+          "Nur den Namen des höchsten Gipfels",
+          "Die Behauptung, hinter Bergen regne es niemals"
+        ],
+        "correct": 0,
+        "hint": "Welche Seite zuerst feuchte Luft erreicht, hängt von ihrer Bewegung ab.",
+        "why": "Ein Regenschatten hängt von Luftströmung, Feuchte und Gebirge ab. Er beschreibt einen Zusammenhang, kein absolutes Verbot von Regen.",
+        "wrong": [
+          null,
+          "Ein Gipfelname erklärt nicht, welche Seite feuchte Luft erreicht. Dazu brauchst du Angaben über Luftbewegung und Feuchte.",
+          "Auch in trockenen Gebieten kann Niederschlag fallen. Ein Regenschatten ist keine Regel mit dem Wort niemals."
+        ]
+      },
+      "source": {
+        "url": "https://science.nasa.gov/earth/earth-observatory/looking-down-on-the-andes-151670/",
+        "title": "NASA: Looking Down on the Andes",
+        "updatedOn": null,
+        "anchors": [
+          "rain shadow effect",
+          "moisture is carried by winds",
+          "eastern slopes"
+        ],
+        "claimScope": "Regenschatten und feuchte östliche Hänge; historische/pauschale Extremangaben zur Regenhäufigkeit werden nicht übernommen."
+      },
+      "modelProposal": "Qualitatives eigenes Gebirgs-/Luftwegschema, ausdrücklich kein Klima- oder Wetterrechner.",
+      "independentAccepted": false
+    },
+    {
+      "id": "rockies",
+      "starter": "Ein Gebirge hat eine lange Geschichte. Im Rocky Mountain National Park haben Wasser und frühere Gletscher Täler geformt. Das alte Gestein und die Form eines Tales müssen deshalb nicht gleich alt sein.",
+      "deeper": "Im untersuchten Parkgebiet schnitten Flüsse zunächst Täler ein. Spätere Gletscher verbreiterten viele dieser Querschnitte und lagerten mitgeführtes Gestein ab. Moränen sind solche Ablagerungen. Dieser Park ist ein Beispiel innerhalb der viel größeren Rocky Mountains, keine Beschreibung jedes Abschnitts.",
+      "observe": "Zeichne eine Talrinne, dann eine breitere Rinne und am Ende einen kleinen Haufen transportiertes Material. Ordne die Begriffe Abtragen, Transportieren und Ablagern zu. Die Skizze ist ein Prozessvergleich und zeigt keinen echten Gletscher in Echtzeit.",
+      "benefit": "Du verknüpfst Talformen mit Transport und Ablagerung statt nur mit Bergnamen.",
+      "word": "Gletscher",
+      "connection": "Ein Gletscher ist bewegtes Eis. An ihm kannst du verstehen, wie Eis Gestein mitführt und nach dem Schmelzen Ablagerungen hinterlässt.",
+      "question": {
+        "prompt": "Ein Gletscher schmilzt und lässt mitgeführte Steine zurück. Welcher Vorgang ist das?",
+        "answers": [
+          "Das Entstehen eines neuen Vulkans",
+          "Ablagerung von zuvor transportiertem Material",
+          "Ein Beweis, dass alle Berge gleich alt sind"
+        ],
+        "correct": 1,
+        "hint": "Unterscheide Material entfernen, bewegen und am Ende liegen lassen.",
+        "why": "Das mitgeführte Gestein bleibt beim Schmelzen liegen. Solche Ablagerungen gehören zu den Spuren früherer Gletscher.",
+        "wrong": [
+          "Zurückgelassene Steine allein zeigen keinen Vulkan. Hier geht es um Material, das Eis vorher transportiert hat.",
+          null,
+          "Eine Ablagerung verrät nicht, dass alle Berge gleich alt wären. Gesteinsalter und Landschaftsform sind unterschiedliche Fragen."
+        ]
+      },
+      "source": {
+        "url": "https://www.nps.gov/romo/learn/nature/geologicactivity.htm",
+        "title": "NPS: Geologic Activity, Rocky Mountain National Park",
+        "updatedOn": "2025-02-18",
+        "anchors": [
+          "Glacial Period",
+          "U-shaped valleys",
+          "moraines"
+        ],
+        "claimScope": "Talformung und Moränen im konkreten Parkgebiet; keine Verallgemeinerung auf die gesamte Bergkette oder neue Alterszahlen."
+      },
+      "modelProposal": "Eigenes dreiteiliges Prozessschema Talformung–Transport–Ablagerung.",
+      "independentAccepted": false
+    },
+    {
+      "id": "kilimanjaro",
+      "starter": "Obwohl der Kilimandscharo nahe am Äquator liegt, wird es auf dem hohen Berg kühler. An seinen Hängen verändern sich Pflanzen und Lebensräume mit der Höhe. Tropische Lage bedeutet nicht überall tropische Wärme.",
+      "deeper": "Am Berg folgen auf bewirtschaftete tiefere Bereiche ein Waldgürtel, höhere Vegetationszonen und sehr spärlich bewachsene Höhen. Diese vereinfachte Folge zeigt einen Höhengradienten, keine scharfen überall gleich hohen Linien. Die Quelle beschreibt eine Aufnahme von 2017; ihre Eisfläche ist kein aktueller Zustandsbericht.",
+      "observe": "Zeichne einen hohen Berg und beschrifte Fuß, Hang und Gipfel. Erkläre, warum der Breitengrad allein noch nicht genügt, um die Pflanzen am Gipfel zu beschreiben. Die Skizze ist weder eine Wanderempfehlung noch eine Karte sicherer Wege.",
+      "benefit": "Du unterscheidest den Einfluss von geografischer Breite und Höhe.",
+      "word": "Klima",
+      "connection": "Klima beschreibt längerfristige Wetterverhältnisse. Am Kilimandscharo zeigt die Höhe, warum ein grober Breitengrad-Gürtel lokale Bedingungen nicht vollständig erklärt.",
+      "question": {
+        "prompt": "Warum beschreibt nahe am Äquator den Gipfel des Kilimandscharo noch nicht ausreichend?",
+        "answers": [
+          "Weil geografische Breite grundsätzlich keinen Einfluss hat",
+          "Weil alle Berge dieselbe Pflanzenwelt besitzen",
+          "Weil auch die große Höhe Temperatur und Lebensräume beeinflusst"
+        ],
+        "correct": 2,
+        "hint": "Vergleiche zwei Orte am selben Berg: einen tief unten und einen am Gipfel.",
+        "why": "Die geografische Breite ist wichtig, aber nicht die einzige Größe. Höhe und weitere örtliche Bedingungen verändern die Lebensräume am Berg.",
+        "wrong": [
+          "Die Breite beeinflusst die Sonnenverhältnisse. Sie erklärt nur nicht allein alle örtlichen Bedingungen eines hohen Berges.",
+          "Berge unterscheiden sich in Höhe, Lage und weiteren Bedingungen. Deshalb besitzen sie nicht automatisch dieselben Pflanzenzonen.",
+          null
+        ]
+      },
+      "source": {
+        "url": "https://science.nasa.gov/earth/earth-observatory/the-zones-of-kilimanjaro-89605/",
+        "title": "NASA: The Zones of Kilimanjaro",
+        "updatedOn": null,
+        "anchors": [
+          "volcanic mountain in Tanzania",
+          "vegetation zones",
+          "climate is colder and less humid"
+        ],
+        "claimScope": "Höhenabhängige Vegetation und historisch datierte Aufnahme, kein aktueller Gletscherflächenwert oder starrer zonaler Grenzwert."
+      },
+      "modelProposal": "Eigener qualitativer Höhenquerschnitt ohne versprochene reale Temperaturberechnung.",
+      "independentAccepted": false
+    },
+    {
+      "id": "amazon",
+      "starter": "Viele kleine Bäche und Nebenflüsse bringen Wasser zum Amazonas. Mit dem Wasser gelangen auch feine Teilchen und Nährstoffe bis ins Meer. Ein Fluss verbindet deshalb Landschaften mit dem Ozean.",
+      "deeper": "Das Einzugsgebiet umfasst die Flächen, deren Wasser in ein Flusssystem gelangt. An der Amazonas-Mündung verändert das eingetragene Material auch Bedingungen im Atlantik. Eine Satellitenkarte der Chlorophyllmenge ist aber weder eine Aufnahme aller Tiere noch ein direkter Beweis für sauberes oder schmutziges Wasser.",
+      "observe": "Zeichne drei Nebenflüsse, einen gemeinsamen Hauptfluss und das Meer. Verfolge einen gedachten Wassertropfen aus einem Seitenast bis zur Mündung. Was könnte er mittransportieren? Die Zeichnung zeigt keine echte Wassermenge, Geschwindigkeit oder Gewässergrenze.",
+      "benefit": "Du verstehst, warum Veränderungen weit flussaufwärts auch für die Mündung wichtig sein können.",
+      "word": "Einzugsgebiet",
+      "connection": "Einzugsgebiet bezeichnet nicht nur die sichtbare Flusslinie. Es verbindet die Flächen und Nebenflüsse, aus denen Wasser in das gemeinsame System gelangt.",
+      "question": {
+        "prompt": "Warum reicht eine dünne Flusslinie nicht, um das Einzugsgebiet des Amazonas zu zeigen?",
+        "answers": [
+          "Auch Wasser aus umgebenden Flächen und Nebenflüssen gelangt in das System",
+          "Ein Fluss kann grundsätzlich keine Nebenflüsse haben",
+          "Das Einzugsgebiet ist immer nur die Mündung"
+        ],
+        "correct": 0,
+        "hint": "Denke an den Weg, bevor Wasser den Hauptfluss erreicht.",
+        "why": "Ein Einzugsgebiet umfasst die zugehörige Fläche, nicht nur den Hauptfluss. Nebenflüsse verbinden viele dieser Teilgebiete.",
+        "wrong": [
+          null,
+          "Nebenflüsse sind ein wichtiger Teil dieses Flusssystems. Sie bringen Wasser aus weiteren Gebieten zum Hauptfluss.",
+          "Die Mündung ist der Übergang zum Meer. Das Einzugsgebiet erstreckt sich dagegen weit flussaufwärts."
+        ]
+      },
+      "source": {
+        "url": "https://science.nasa.gov/earth/earth-observatory/amazon-river-in-the-atlantic-ocean-7021/",
+        "title": "NASA: Amazon River in the Atlantic Ocean",
+        "updatedOn": null,
+        "anchors": [
+          "streams",
+          "nutrients",
+          "chlorophyll"
+        ],
+        "claimScope": "Nebenflüsse, Materialtransport und Einfluss der Mündungsfahne; keine alten exakten Längen-/Abflusswerte als neue Messung, keine Tierzählung aus Chlorophyllfarben."
+      },
+      "modelProposal": "Eigenes Flussnetzschema mit Einzugsgebiet und Mündung.",
+      "independentAccepted": false
+    },
+    {
+      "id": "nile",
+      "starter": "Weißer und Blauer Nil treffen sich bei Khartum. Wasser aus verschiedenen Regionen kommt dort zusammen. Ein trockener Ort kann deshalb einen großen Fluss besitzen, dessen Wasser auch von weit her stammt.",
+      "deeper": "Der Niederschlag direkt neben einem Fluss erklärt seine Wassermenge nicht allein. Du musst auch sein Einzugsgebiet betrachten. Die Bezeichnungen Weißer und Blauer Nil sind Namen zweier Flüsse, keine verlässliche Farbvorschrift für jedes Foto und jede Jahreszeit.",
+      "observe": "Zeichne zwei unterschiedlich gefärbte Pfeile aus getrennten Regionen zu einem gemeinsamen Fluss. Beschrifte die Herkunft, nicht eine behauptete echte Wasserfarbe. Erkläre, warum Regen weit entfernt den Fluss weiter unten beeinflussen kann. Das Schema berechnet keinen Abfluss.",
+      "benefit": "Du unterscheidest örtliches Wetter von der Herkunft des Flusswassers.",
+      "word": "Einzugsgebiet",
+      "connection": "Das Einzugsgebiet hilft dir, den Nil als verbundenes Flusssystem zu sehen. Eine Beobachtung am Ufer allein beschreibt noch nicht alle Zuflüsse.",
+      "question": {
+        "prompt": "An einem Ort am Nil regnet es wenig. Muss deshalb auch wenig Wasser im Fluss sein?",
+        "answers": [
+          "Ja, nur Regen direkt über dem Ufer zählt",
+          "Nein, Wasser kann aus anderen Teilen des Flusssystems stammen",
+          "Ja, Flüsse können kein Wasser aus Nebenflüssen erhalten"
+        ],
+        "correct": 1,
+        "hint": "Verfolge das Flusssystem entgegen der Fließrichtung zu seinen Zuflüssen.",
+        "why": "Ein Fluss kann Wasser aus weit entfernten Gebieten erhalten. Lokaler Regen ist deshalb nur ein Teil der Erklärung.",
+        "wrong": [
+          "Wasser gelangt auch über Zuflüsse aus anderen Gebieten zum Ort. Es muss nicht direkt über diesem Ufer geregnet haben.",
+          null,
+          "Weißer und Blauer Nil zeigen gerade den Zusammenhang von Zuflüssen. Nebenflüsse können Wasser aus anderen Regionen heranführen."
+        ]
+      },
+      "source": {
+        "url": "https://science.nasa.gov/earth/earth-observatory/two-niles-meet-81186/",
+        "title": "NASA: Two Niles Meet",
+        "updatedOn": null,
+        "anchors": [
+          "White Nile and the Blue Nile",
+          "Khartoum",
+          "rain-poor"
+        ],
+        "claimScope": "Zusammenfluss und trockener Standort; keine historischen Einwohnerzahlen oder aktuellen politischen Angaben."
+      },
+      "modelProposal": "Eigenes Zusammenflussschema mit Herkunftspfeilen, keine reale Wasserfarbkarte.",
+      "independentAccepted": false
+    },
+    {
+      "id": "rhine",
+      "starter": "Ein Fluss kann sich vor dem Meer in mehrere Wege teilen. Beim Rhein gehört die Mündung zu einem größeren Deltasystem. Eine einzige Linie auf einer kleinen Weltkarte vereinfacht diese vielen Wasserwege stark.",
+      "deeper": "Das Rhein-Maas-Schelde-Delta liegt in den Niederlanden. Der Name nennt mehrere verbundene Flusssysteme. Ein Kartenpunkt hilft beim Finden der Region, bildet aber weder alle Verzweigungen noch die genaue Grenze des Deltas ab.",
+      "observe": "Zeichne einen Fluss, der sich vor dem Meer in zwei Arme verzweigt. Vergleiche das mit zwei Nebenflüssen, die zusammenlaufen. In welche Richtung verfolgst du jeweils das Wasser? Die selbst gezeichneten Linien sind kein echter Rheinverlauf.",
+      "benefit": "Du unterscheidest Zusammenfluss und Verzweigung und erkennst vereinfachte Kartenzeichen.",
+      "word": "Delta",
+      "connection": "Ein Delta erklärt eine Mündungslandschaft mit Ablagerungen und oft mehreren Wasserwegen. Das Rhein-Maas-Schelde-System bietet dafür eine konkrete Region.",
+      "question": {
+        "prompt": "Welche Zeichnung zeigt eine Verzweigung flussabwärts?",
+        "answers": [
+          "Zwei Zuflüsse, die in einen einzigen Fluss zusammenlaufen",
+          "Eine Markierung ohne Wasserwege",
+          "Ein Wasserweg, der sich in mehrere Arme teilt"
+        ],
+        "correct": 2,
+        "hint": "Verfolge die Wege in Richtung Meer.",
+        "why": "Bei einer Verzweigung teilt sich ein Wasserweg flussabwärts in mehrere Arme. Zwei zusammenlaufende Zuflüsse zeigen den umgekehrten Zusammenhang.",
+        "wrong": [
+          "Das ist ein Zusammenfluss. Für die Verzweigung musst du in Fließrichtung von einem Weg zu mehreren Wegen kommen.",
+          "Ein Punkt kann eine Region markieren, zeigt aber keine Verzweigung der Wasserwege.",
+          null
+        ]
+      },
+      "source": {
+        "url": "https://www.nasa.gov/image-article/rhine-meuse-scheldt-river-delta-netherlands/",
+        "title": "NASA: The Rhine–Meuse–Scheldt river delta in the Netherlands",
+        "updatedOn": "2020-04-28",
+        "anchors": [
+          "Rhine–Meuse–Scheldt delta",
+          "Netherlands"
+        ],
+        "claimScope": "Bezeichnung und Lage der Deltaregion; die allgemeine Deltaerklärung braucht zusätzlich die vorhandene geprüfte Begriffsquelle, keine erfundene Behauptung über einzelne Rhein-Mündungsarme."
+      },
+      "modelProposal": "Vergleich Zusammenfluss/Verzweigung; Ergänzung der allgemeinen Deltaquelle vor Integration prüfen.",
+      "independentAccepted": false
+    },
+    {
+      "id": "yangtze",
+      "starter": "Der Jangtse transportiert nicht nur Wasser. Feine Gesteins- und Bodenteilchen können mitströmen. An der Küste wird dieser Transport auf manchen Aufnahmen als andersfarbiges Wasser sichtbar.",
+      "deeper": "Eine NASA-Aufnahme vom 12. April 2002 zeigt eine bräunliche Sedimentfahne im Ostchinesischen Meer. Das ist eine Beobachtung mit Datum und Aufnahmemethode, kein heutiger Zustandsbericht. Aus der Farbe allein lässt sich auch nicht die Trinkwasserqualität bestimmen.",
+      "observe": "Zeichne klares Wasser und Wasser mit wenigen kleinen Teilchen. Welche Unterschiede zeigt deine Zeichnung, welche nicht? Sie erklärt das Mitführen von Material, misst aber weder Teilchengröße noch Wasserqualität. Nimm für diese Aufgabe kein Wasser aus einem Fluss.",
+      "benefit": "Du trennst sichtbaren Materialtransport von einer unbelegten Aussage über Wasserqualität.",
+      "word": "Sediment",
+      "connection": "Sediment bezeichnet abgelagertes Material. Flüsse können solche Teilchen vorher transportieren; eine Mündungsfahne macht einen Teil dieses Transports sichtbar.",
+      "question": {
+        "prompt": "Was lässt sich aus einer bräunlichen Wasserfarbe allein nicht sicher ableiten?",
+        "answers": [
+          "Dass das Wasser sicher trinkbar oder sicher giftig ist",
+          "Dass ein Foto eine sichtbare Farbe zeigt",
+          "Dass das Bild zu einem bestimmten Aufnahmetag gehört"
+        ],
+        "correct": 0,
+        "hint": "Ein Foto ersetzt keine Untersuchung der Wasserqualität.",
+        "why": "Farbe allein ist kein ausreichender Test auf Trinkbarkeit oder Giftstoffe. Dafür braucht man geeignete Untersuchungen.",
+        "wrong": [
+          null,
+          "Die sichtbare Farbe kannst du beschreiben. Die schwierigere Frage ist, welche Ursachen und Eigenschaften sie belegt.",
+          "Ein dokumentiertes Aufnahmedatum ordnet das Bild zeitlich ein. Es beantwortet aber keine Frage nach Trinkwasserqualität."
+        ]
+      },
+      "source": {
+        "url": "https://science.nasa.gov/earth/earth-observatory/heavy-sediment-from-the-yangtze-river-9428/",
+        "title": "NASA: Heavy Sediment from the Yangtze River",
+        "updatedOn": null,
+        "anchors": [
+          "sediments",
+          "East China Sea",
+          "April 12, 2002"
+        ],
+        "claimScope": "Historische Beobachtung einer Sedimentfahne; keine heutige Verschmutzungs- oder Trinkbarkeitsdiagnose."
+      },
+      "modelProposal": "Eigene Teilchenskizze ohne reale Wasserdiagnostik.",
+      "independentAccepted": false
+    },
+    {
+      "id": "mississippi",
+      "starter": "Ein Flusslauf bleibt über lange Zeit nicht immer an derselben Stelle. Beim Mississippi wurden Schleifen verlagert und frühere Wasserwege zurückgelassen. Eine Landschaft ist auch dort veränderlich, wo eine Karte klare Linien zeigt.",
+      "deeper": "Der Mississippi wurde zur Festlegung einiger US-Bundesstaatsgrenzen genutzt. Veränderungen des Flusslaufs zeigen, warum eine Verwaltungsgrenze und ein heutiges Flussbett nicht automatisch dieselbe Linie sind. Die Quelle beschreibt konkrete Beispiele und keine Regel für sämtliche Grenzen.",
+      "observe": "Zeichne eine Flussschleife auf Papier und darüber auf transparentem Papier eine veränderte Schleife. Eine dritte, fest gezeichnete Grenzlinie bleibt gleich. Was verändert sich, was nicht? Das ist ein Vergleich von Kartenebenen und keine echte Grenzkarte.",
+      "benefit": "Du unterscheidest natürliche Veränderungen von menschlich festgelegten Kartenlinien.",
+      "word": "Erosion",
+      "connection": "Erosion und Ablagerung tragen zur Veränderung von Flusslandschaften bei. Ein heutiger Wasserweg muss deshalb nicht mit dem historischen Verlauf übereinstimmen.",
+      "question": {
+        "prompt": "Ein historisch als Grenze genutzter Fluss verlagert seinen Lauf. Was musst du auf einer aktuellen Karte unterscheiden?",
+        "answers": [
+          "Nur die Farbe des Kartenhintergrunds",
+          "Den heutigen Wasserweg und die festgelegte Verwaltungsgrenze",
+          "Die Behauptung, jeder Fluss sei immer unverändert"
+        ],
+        "correct": 1,
+        "hint": "Ein Wasserlauf und eine vereinbarte Grenze sind unterschiedliche Arten von Linien.",
+        "why": "Die natürliche Wasserlinie kann sich ändern. Ob und wie eine Grenze mitwandert, ist damit allein noch nicht beantwortet.",
+        "wrong": [
+          "Die Hintergrundfarbe erklärt nicht, ob eine Linie einen Fluss oder eine Verwaltungsgrenze darstellt. Dazu brauchst du die Kartenlegende und passende Angaben.",
+          null,
+          "Flüsse können ihren Lauf verändern. Eine unveränderliche Linie ist deshalb keine sichere Annahme für jede Flusslandschaft."
+        ]
+      },
+      "source": {
+        "url": "https://science.nasa.gov/earth/earth-observatory/meandering-mississippi-river-147001/",
+        "title": "NASA: Meandering Mississippi River",
+        "updatedOn": null,
+        "anchors": [
+          "state boundary",
+          "channels have migrated",
+          "floodplain"
+        ],
+        "claimScope": "Konkretes Beispiel veränderter Flussläufe gegenüber Grenzlinien; keine allgemeine rechtsverbindliche Aussage über sämtliche Flussgrenzen."
+      },
+      "modelProposal": "Eigenes überlagerbares Vorher-/Nachher-Linienschema, keine neuen echten Geodaten.",
+      "independentAccepted": false
+    }
+  ]
 }

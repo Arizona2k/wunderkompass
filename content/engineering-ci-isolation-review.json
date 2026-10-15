@@ -1,7 +1,11 @@
 {
   "schemaVersion": 1,
   "status": "implemented; actual current-commit CI and runner-cost acceptance pending",
-  "decisionComments": [6189174371, 6191114862],
+  "decisionComments": [
+    6189174371,
+    6191114862,
+    6191886451
+  ],
   "baseline": {
     "commit": "2d651bc5bc78816c4c9d042d5f0bb4e2b2da7953",
     "run": 38702172666,
@@ -20,8 +24,18 @@
   },
   "implementation": {
     "singleVerifiedProductionBuild": true,
-    "separateBrowserRunners": ["chromium", "firefox", "webkit"],
-    "sameSnapshotFields": ["testedCommit", "runId", "attempt", "sourceDigest", "build"],
+    "separateBrowserRunners": [
+      "chromium",
+      "firefox",
+      "webkit"
+    ],
+    "sameSnapshotFields": [
+      "testedCommit",
+      "runId",
+      "attempt",
+      "sourceDigest",
+      "build"
+    ],
     "artifactFileHashes": "SHA256 and exact byte lengths; action download digest mismatch fails",
     "maximumConcurrentBrowserJobs": 3,
     "failFast": false,
@@ -33,7 +47,11 @@
     "engineProgress": "each30 cases and real phase seconds",
     "newMandatoryOfflineChecks": "actual HTTP failure/recovery, all assets, pass preservation and offline reload in every engine; emulated browser quota/recovery additionally in Chromium",
     "finalAggregation": "all successful required jobs, same run/attempt/commit/build/source; full existing matrices and actual engine proof required",
-    "artifactRetentionDays": {"build": 1, "browserEvidence": 7, "finalReports": 7},
+    "artifactRetentionDays": {
+      "build": 1,
+      "browserEvidence": 7,
+      "finalReports": 7
+    },
     "duplicateScreenshotUpload": false,
     "paidServicesOrBillingSettingsChanged": false
   },
@@ -44,5 +62,26 @@
     "Thirty-five minutes per browser job, ten for standards and five for aggregation bound the configured work; a timeout remains a failed acceptance.",
     "Local actual Firefox/WebKit installation remains blocked by permitted download-host403; Chromium is not a substitute.",
     "All27 critical screenshots retained. Long Chromium evidence stays; engine four-width captures are bounded original viewports plus actual model/offline closeups. Duplicate desktop return/full selection views omitted from upload, still captured/hashed.48MiB review limit unchanged."
-  ]
+  ],
+  "firstIsolatedRun": {
+    "run": 38734155494,
+    "head": "1e1108a804685f34e48e4b58184ef05a1010a6d9",
+    "testedMergeCommit": "9877a74a4354e26127671c200c50977714345fc8",
+    "conclusion": "failure; not a complete performance acceptance",
+    "jobElapsedSeconds": {
+      "standards": 74,
+      "firefox": 724,
+      "chromium": 1483,
+      "webkit": 111,
+      "requiredCollector": 4
+    },
+    "totalElapsedRunnerSeconds": 2396,
+    "billing": "Observed elapsed time, not account billed/free quota evidence",
+    "actualFirefoxSeconds": 654.873622609,
+    "actualFirefoxCoverage": "16 original first chapters,180 words x4 widths,60 Why x4 widths,actual offline recovery passed",
+    "chromium": "same actual category photograph Back-focus failure as local; remaining complete book/research/journeys/play/backup/challenge groups finished",
+    "webkit": "actual browser internal error with context offline emulation during reload; no pass",
+    "diagnostics": "Hidden .qa-output reports were excluded from failure upload; fix scoped inclusion and capture failed pages before browser closes",
+    "correctionStatus": "card photograph focus and real stopped-server offline fixture proven locally in isolated current-product build; final current-commit full regression/engines pending"
+  }
 }

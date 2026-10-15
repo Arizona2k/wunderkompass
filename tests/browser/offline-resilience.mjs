@@ -19,8 +19,13 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   const cached=await page.evaluate(async()=>{const name=(await caches.keys()).find(n=>n.startsWith('earth-learning-')),c=await caches.open(name);return{paths:(await c.keys()).map(r=>new URL(r.url).pathname),metrics:await(await c.match('/__learning_offline_metrics__')).json()};});
   for(const asset of assets)assert.ok(cached.paths.includes(asset),'every offline asset '+asset);assert.equal(cached.metrics.downloaded+cached.metrics.reused,assets.length);report.networkRecovery=true;report.completeAssets=true;report.metrics=cached.metrics;
   assert.deepEqual(await snapshot(),saved);report.passPreserved=true;
-  await context.setOffline(true);await page.reload();await page.locator('.world-mini-question').waitFor();await page.getByRole('button',{name:'In deinem Forscherbuch',exact:true}).waitFor();report.offlineReload=true;
+  await new Promise((resolve,reject)=>server.close(error=>error?reject(error):resolve()));
+  await assert.rejects(fetch(base+'/',{signal:AbortSignal.timeout(2000)}),'fixture server is really unreachable before the offline reload');report.serverStopped=true;
+  await page.reload();await page.locator('.world-mini-question').waitFor();await page.getByRole('button',{name:'In deinem Forscherbuch',exact:true}).waitFor();report.offlineReload=true;
   if(shots)await page.locator('.offline-learning').screenshot({path:shots+'/'+shotName+'-320.png'});
   return report;
+ }catch(error){
+  if(shots){await fs.writeFile(path.join(shots,shotName+'-failure.json'),JSON.stringify({...report,status:'failed',failure:error.stack},null,2));await page.screenshot({path:path.join(shots,shotName+'-failure-320.png'),animations:'disabled',timeout:5000}).catch(()=>{});}
+  throw error;
  }finally{if(cdp)await cdp.detach();await context.close();await new Promise(resolve=>server.close(resolve));}
 }

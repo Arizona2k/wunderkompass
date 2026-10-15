@@ -57,6 +57,11 @@ if(runSuite('home'))await timed('home',()=>homepageOverview(browser,base,ready,m
  if(runSuite('playground'))await timed('playground',()=>playgroundFlow(browser,base,ready,monitor,report,shots));
  if(runSuite('backup'))await timed('backup',()=>backupFlow(browser,base,ready,monitor,report,shots));
  if(runSuite('challenge'))await timed('challenge',()=>challengeHints(browser,base,ready,monitor,report,shots));
+}catch(error){
+ // Preserve the actual failed page before closing its browser, without hiding
+ // the original assertion if a crashed page cannot provide an image.
+ for(const [i,page]of browser.contexts().flatMap(c=>c.pages()).entries())if(!page.isClosed())await page.screenshot({path:path.join(shots,'portable-failure-'+i+'.png'),animations:'disabled',timeout:5000}).catch(()=>{});
+ throw error;
 }finally{await browser.close();browser=null;}
 if(runSuite('offline')){
 const offlineStarted=performance.now();
