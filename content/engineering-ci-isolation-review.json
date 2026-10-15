@@ -1,10 +1,11 @@
 {
   "schemaVersion": 1,
-  "status": "implemented; actual current-commit CI and runner-cost acceptance pending",
+  "status": "Same-snapshot isolated Quality69 passed on7a86053; subsequent Nature/retention/progress/search changes require their own complete exact-head acceptance",
   "decisionComments": [
     6189174371,
     6191114862,
-    6191886451
+    6191886451,
+    6193186292
   ],
   "baseline": {
     "commit": "2d651bc5bc78816c4c9d042d5f0bb4e2b2da7953",
@@ -83,5 +84,551 @@
     "webkit": "actual browser internal error with context offline emulation during reload; no pass",
     "diagnostics": "Hidden .qa-output reports were excluded from failure upload; fix scoped inclusion and capture failed pages before browser closes",
     "correctionStatus": "card photograph focus and real stopped-server offline fixture proven locally in isolated current-product build; final current-commit full regression/engines pending"
+  },
+  "acceptedReference": {
+    "head": "7a86053da848cdaa59d3905a0472e4ab76af8490",
+    "run": 38738747719,
+    "testedMergeCommit": "c885e8cd9793fb91c853abcbdf74e3289593edd3",
+    "conclusion": "success",
+    "jobElapsedSeconds": {
+      "standards": 100,
+      "chromium": 2027,
+      "firefox": 775,
+      "webkit": 602,
+      "requiredCollector": 21
+    },
+    "totalObservedRunnerSeconds": 3525,
+    "billingEvidence": "Not available; observed elapsed time is not billed/free quota proof",
+    "chromiumSeconds": 1953.752338038,
+    "chromiumBookSeconds": 1834.836832695,
+    "chromiumJobMarginSeconds": 73,
+    "review": {
+      "capturedImages": 1491,
+      "retainedImages": 362,
+      "bytes": 48492089,
+      "limit": 50331648,
+      "all27CriticalImagesPreserved": true
+    }
+  },
+  "followupCandidates": {
+    "chromium": "No extra shard/job/timeout adopted without a positive cost/stability comparison. Added actual per-width book matrix/navigation timings; immutable same-snapshot aggregation retained.",
+    "screenshots": {
+      "adopted": "Preserve same-snapshot capture hashes across the final collector, including omitted originals; reject missing/altered/malformed sealed evidence. Original binaries unchanged.27 old plus2 new Nature critical images,48MiB gate unchanged.",
+      "rejectedExperiment": {
+        "method": "PNG DEFLATE9 only, identical filtered pixels/dimensions/metadata",
+        "images": 362,
+        "beforeBytes": 45523126,
+        "afterBytes": 45465588,
+        "seconds": 40.223820435,
+        "decision": "Rejected:57538bytes saved for40.224s worsens CI margin; no new codec/library adopted"
+      }
+    },
+    "offline": "Targeted verified-complete/active-tab retention and genuine persisted-file progress. Original SHA/byte incremental reuse and all-asset atomic install retained.",
+    "interaction": "Reproducible real UI Event Timing/long-task/frame/heap observation plus equal-result ranking comparison at467/3000/6000 documents; see script and isolated sample below. Physical device/full large-product/field-INP acceptance remains open."
+  },
+  "interactionExperiment": {
+    "build": "a1c8b7fe1bf8c2ec",
+    "sourceHashes": {
+      "legacy": "3be54d6cb60cfe7abf083faf6145777cbbe26ef0f775dea082cf342c24b18792",
+      "current": "8b3c4d34ed061b7599959ca70cf6a0bce80f81ec3db3d181b403c0715d93f5aa"
+    },
+    "method": "Actual headless Chromium;390x844 touch viewport;CPU1x/4x via CDP;3 fresh contexts each. Real UI actions + Event Timing, long tasks, requestAnimationFrame and JS heap. Then actual ranking functions on current catalog and3000/6000 synthetic distinct IDs/text markers, identical queries/results. Synthetic ranking is not a full6000-card product/device/field-INP test;heap includes allocation/GC noise. No physical hardware or production traffic.",
+    "status": "passed",
+    "isolatedLocalBrowserRun": true,
+    "ranking": [
+      {
+        "count": 467,
+        "cpuRate": 1,
+        "sample": 0,
+        "prepareMs": 4,
+        "beforeMs": 57.5,
+        "afterMs": 26.299999997019768,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 3000,
+        "cpuRate": 1,
+        "sample": 0,
+        "prepareMs": 23.30000000447035,
+        "beforeMs": 270.19999999552965,
+        "afterMs": 107.20000000298023,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 6000,
+        "cpuRate": 1,
+        "sample": 0,
+        "prepareMs": 62,
+        "beforeMs": 506.90000000596046,
+        "afterMs": 208.69999999552965,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 467,
+        "cpuRate": 1,
+        "sample": 1,
+        "prepareMs": 4,
+        "beforeMs": 42.5,
+        "afterMs": 20.200000002980232,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "after",
+          "before"
+        ]
+      },
+      {
+        "count": 3000,
+        "cpuRate": 1,
+        "sample": 1,
+        "prepareMs": 19.100000001490116,
+        "beforeMs": 243.29999999701977,
+        "afterMs": 108.89999999850988,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "after",
+          "before"
+        ]
+      },
+      {
+        "count": 6000,
+        "cpuRate": 1,
+        "sample": 1,
+        "prepareMs": 43.600000001490116,
+        "beforeMs": 483.90000000596046,
+        "afterMs": 223.29999999701977,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "after",
+          "before"
+        ]
+      },
+      {
+        "count": 467,
+        "cpuRate": 1,
+        "sample": 2,
+        "prepareMs": 3.7000000029802322,
+        "beforeMs": 44.100000001490116,
+        "afterMs": 27,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 3000,
+        "cpuRate": 1,
+        "sample": 2,
+        "prepareMs": 19.69999999552965,
+        "beforeMs": 256.70000000298023,
+        "afterMs": 117.69999999552965,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 6000,
+        "cpuRate": 1,
+        "sample": 2,
+        "prepareMs": 44.399999998509884,
+        "beforeMs": 522.5,
+        "afterMs": 213.79999999701977,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 467,
+        "cpuRate": 4,
+        "sample": 0,
+        "prepareMs": 21.399999998509884,
+        "beforeMs": 223.60000000149012,
+        "afterMs": 127,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 3000,
+        "cpuRate": 4,
+        "sample": 0,
+        "prepareMs": 112.60000000149012,
+        "beforeMs": 1248.2999999970198,
+        "afterMs": 494,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 6000,
+        "cpuRate": 4,
+        "sample": 0,
+        "prepareMs": 211,
+        "beforeMs": 2340.7999999970198,
+        "afterMs": 1032.2000000029802,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 467,
+        "cpuRate": 4,
+        "sample": 1,
+        "prepareMs": 17.900000005960464,
+        "beforeMs": 232.19999999552965,
+        "afterMs": 99.20000000298023,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "after",
+          "before"
+        ]
+      },
+      {
+        "count": 3000,
+        "cpuRate": 4,
+        "sample": 1,
+        "prepareMs": 97.29999999701977,
+        "beforeMs": 1171.8000000044703,
+        "afterMs": 533.7999999970198,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "after",
+          "before"
+        ]
+      },
+      {
+        "count": 6000,
+        "cpuRate": 4,
+        "sample": 1,
+        "prepareMs": 243.19999999552965,
+        "beforeMs": 2323.6999999955297,
+        "afterMs": 1021.8000000044703,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "after",
+          "before"
+        ]
+      },
+      {
+        "count": 467,
+        "cpuRate": 4,
+        "sample": 2,
+        "prepareMs": 18.5,
+        "beforeMs": 200.79999999701977,
+        "afterMs": 89.20000000298023,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 3000,
+        "cpuRate": 4,
+        "sample": 2,
+        "prepareMs": 112.90000000596046,
+        "beforeMs": 1247.8999999985099,
+        "afterMs": 535.0999999940395,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 6000,
+        "cpuRate": 4,
+        "sample": 2,
+        "prepareMs": 214.39999999850988,
+        "beforeMs": 2477.60000000149,
+        "afterMs": 1173,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      }
+    ],
+    "uiObservations": [
+      {
+        "cpuRate": 1,
+        "sample": 0,
+        "readyMs": 588.4936250000001,
+        "searchInputToPaintMs": 902.260741,
+        "searchNavigationMs": 933.0782960000001,
+        "gameNavigationAndFlipMs": 1016.7735580000003,
+        "heapUsedAfterSearchAndGame": 26968208,
+        "globeReadyMs": 972.9137840000003,
+        "heapAfterGlobe": 22614632,
+        "globeElement": "CANVAS",
+        "observedMaxEventDurationMs": 96,
+        "uiLongTaskCount": 4,
+        "uiLongestTaskMs": 196,
+        "globeObservedFrameP95Ms": 16.800000000000182
+      },
+      {
+        "cpuRate": 1,
+        "sample": 1,
+        "readyMs": 601.8902300000009,
+        "searchInputToPaintMs": 939.7203360000003,
+        "searchNavigationMs": 933.6664829999991,
+        "gameNavigationAndFlipMs": 1016.4623879999999,
+        "heapUsedAfterSearchAndGame": 36925600,
+        "globeReadyMs": 964.3650529999995,
+        "heapAfterGlobe": 22623944,
+        "globeElement": "CANVAS",
+        "observedMaxEventDurationMs": 88,
+        "uiLongTaskCount": 4,
+        "uiLongestTaskMs": 226,
+        "globeObservedFrameP95Ms": 33.30000000000007
+      },
+      {
+        "cpuRate": 1,
+        "sample": 2,
+        "readyMs": 543.1150469999993,
+        "searchInputToPaintMs": 908.531946000001,
+        "searchNavigationMs": 933.5514349999994,
+        "gameNavigationAndFlipMs": 983.0284169999977,
+        "heapUsedAfterSearchAndGame": 32016720,
+        "globeReadyMs": 931.8881610000026,
+        "heapAfterGlobe": 22610656,
+        "globeElement": "CANVAS",
+        "observedMaxEventDurationMs": 80,
+        "uiLongTaskCount": 5,
+        "uiLongestTaskMs": 182,
+        "globeObservedFrameP95Ms": 16.799999999999955
+      },
+      {
+        "cpuRate": 4,
+        "sample": 0,
+        "readyMs": 1324.6650760000011,
+        "searchInputToPaintMs": 2363.6541700000016,
+        "searchNavigationMs": 1335.7971519999992,
+        "gameNavigationAndFlipMs": 981.0026550000002,
+        "heapUsedAfterSearchAndGame": 27482392,
+        "globeReadyMs": 1999.3652810000021,
+        "heapAfterGlobe": 21721696,
+        "globeElement": "CANVAS",
+        "observedMaxEventDurationMs": 288,
+        "uiLongTaskCount": 24,
+        "uiLongestTaskMs": 585,
+        "globeObservedFrameP95Ms": 100
+      },
+      {
+        "cpuRate": 4,
+        "sample": 1,
+        "readyMs": 1468.456600999998,
+        "searchInputToPaintMs": 2356.544692999996,
+        "searchNavigationMs": 1331.978559999996,
+        "gameNavigationAndFlipMs": 901.0936689999944,
+        "heapUsedAfterSearchAndGame": 32069072,
+        "globeReadyMs": 1865.7073890000029,
+        "heapAfterGlobe": 21739676,
+        "globeElement": "CANVAS",
+        "observedMaxEventDurationMs": 312,
+        "uiLongTaskCount": 25,
+        "uiLongestTaskMs": 585,
+        "globeObservedFrameP95Ms": 100
+      },
+      {
+        "cpuRate": 4,
+        "sample": 2,
+        "readyMs": 1512.3128949999955,
+        "searchInputToPaintMs": 2303.531784999999,
+        "searchNavigationMs": 1266.8358730000036,
+        "gameNavigationAndFlipMs": 865.4194169999973,
+        "heapUsedAfterSearchAndGame": 27963692,
+        "globeReadyMs": 1930.7285540000012,
+        "heapAfterGlobe": 21719880,
+        "globeElement": "CANVAS",
+        "observedMaxEventDurationMs": 272,
+        "uiLongTaskCount": 27,
+        "uiLongestTaskMs": 698,
+        "globeObservedFrameP95Ms": 83.40000000000009
+      }
+    ],
+    "decision": "Adopt prepared normalization: identical ranking across all18 measured cases and actual-catalog regression. At6000/4x median five-query total2340.8→1032.2ms; one-time preparation214.4ms. This comparison is scoring only, not a before/after UI or physical-device guarantee. Current UI heap and event timing separately observed; real modern GPU/device and retained-memory baseline remain open.",
+    "retainedMemory": {
+      "method": "JSHeapUsedSize after explicit CDP garbage collection at each stage, one fresh context per467/3000/6000 repeated unique-marker source documents. Raw documents remain rooted while prepared index is added and released. Retained fixture JS heap, not total browser RAM/GPU/device evidence. Current467 comprise words/Nature/world/chapter documents; no new product articles are claimed.",
+      "rows": [
+        {
+          "count": 467,
+          "baseline": 6646588,
+          "rawHeap": 6933128,
+          "preparedHeap": 7668956,
+          "additionalRetainedPreparedBytes": 735828,
+          "releasedHeap": 6934368,
+          "releasedPreparedBytes": 734588
+        },
+        {
+          "count": 3000,
+          "baseline": 6639224,
+          "rawHeap": 7342548,
+          "preparedHeap": 12876232,
+          "additionalRetainedPreparedBytes": 5533684,
+          "releasedHeap": 8233920,
+          "releasedPreparedBytes": 4642312
+        },
+        {
+          "count": 6000,
+          "baseline": 6645188,
+          "rawHeap": 7842048,
+          "preparedHeap": 19253348,
+          "additionalRetainedPreparedBytes": 11411300,
+          "releasedHeap": 9844476,
+          "releasedPreparedBytes": 9408872
+        }
+      ],
+      "status": "passed",
+      "decision": "Measured cost accepted for the current catalog: additional retained735828bytes at467 source documents. At6000 synthetic documents11411300bytes additional,9408872bytes released when prepared index is removed; remaining flattened raw strings are not claimed to disappear. No total browser RAM/device guarantee."
+    }
   }
 }

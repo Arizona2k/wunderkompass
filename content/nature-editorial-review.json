@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "68 individual first manuscripts (34 retained +34 new), specific questions and source scopes preserved; prototype exists locally, product integration and independent acceptance pending",
+  "status": "68 individual explanations integrated into current PR source; complete current UI/offline/CI and independent acceptance pending",
   "checkedOn": "2026-10-15",
   "entries": [
     {
@@ -31,13 +31,24 @@
         "Verwitterung"
       ],
       "modelProposal": "Zeitliche Reihenfolge von Ablagerung, Hebung und späterem Einschneiden; ausdrücklich qualitatives eigenes Schema.",
+      "word": "Erosion",
+      "connection": "Erosion beschreibt das Abtragen und Weitertransportieren von Material. Der Colorado River macht diese Wirkung an einer konkreten Landschaft sichtbar.",
+      "mapPoint": {
+        "id": "grand-canyon",
+        "qid": "Q118841",
+        "lat": 36.0975,
+        "lon": -112.0953,
+        "source": "https://www.wikidata.org/wiki/Q118841",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "open": [
         "Koordinaten anhand geeigneter Ortsquelle prüfen",
         "Taxonomie/Budget/UI/Suche/reziproke Wege/Offline",
         "individuelle Abnahme"
       ],
-      "word": "Erosion",
-      "connection": "Erosion beschreibt das Abtragen und Weitertransportieren von Material. Der Colorado River macht diese Wirkung an einer konkreten Landschaft sichtbar.",
       "question": {
         "prompt": "Eine alte Gesteinsschicht wird durch eine später entstandene Schlucht sichtbar. Müssen Gestein und Schlucht gleich alt sein?",
         "answers": [
@@ -81,12 +92,23 @@
       ],
       "lab": "volcano",
       "modelProposal": "Zwei qualitative Wasserwege mit beobachtbaren Phasen, keine Druck-/Temperaturvorhersage.",
+      "connection": "Das Vulkanlabor zeigt einen begrenzten Lavaausbruch. Vergleiche damit den Geysir: Hier bewegen sich heißes Wasser und Dampf statt Lava.",
+      "mapPoint": {
+        "id": "yellowstone-geysers",
+        "qid": "Q351",
+        "lat": 44.6,
+        "lon": -110.5,
+        "source": "https://www.wikidata.org/wiki/Q351",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Parkregion; nicht ein bestimmter Geysirschlot"
+      },
       "open": [
         "Koordinaten und Sicherheitsquelle zu Wegegebot prüfen",
         "Modell fachlich/visuell prüfen",
         "gesamte technische Abnahme"
       ],
-      "connection": "Das Vulkanlabor zeigt einen begrenzten Lavaausbruch. Vergleiche damit den Geysir: Hier bewegen sich heißes Wasser und Dampf statt Lava.",
       "question": {
         "prompt": "Warum ist ein Geysir trotz seines aufsteigenden Strahls kein Lavastrom?",
         "answers": [
@@ -130,13 +152,24 @@
         "Versickerung"
       ],
       "modelProposal": "Unterschied gelöste Stoffe/lose Körner in einer eigenen schematischen Wasserwegzeichnung.",
+      "word": "Grundwasser",
+      "connection": "Grundwasser kann durch Gesteinsräume fließen. Bei Mammoth Cave verändert geeignetes Wasser das Kalkgestein durch chemisches Lösen.",
+      "mapPoint": {
+        "id": "mammoth-cave",
+        "qid": "Q242681",
+        "lat": 37.1869,
+        "lon": -86.1011,
+        "source": "https://www.wikidata.org/wiki/Q242681",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "open": [
         "Wort- und Labor-IDs exakt abgleichen; Vorschläge sind noch keine gültigen Links",
         "Koordinaten/Sicherheitsquelle",
         "technische und fachliche Abnahme"
       ],
-      "word": "Grundwasser",
-      "connection": "Grundwasser kann durch Gesteinsräume fließen. Bei Mammoth Cave verändert geeignetes Wasser das Kalkgestein durch chemisches Lösen.",
       "question": {
         "prompt": "Was unterscheidet das Lösen von Kalkstein vom bloßen Mitnehmen loser Sandkörner?",
         "answers": [
@@ -178,13 +211,24 @@
         "Erosion"
       ],
       "modelProposal": "Vergleich dreier begrenzter Entwicklungsbilder, keine realistische Einsturzsimulation.",
+      "word": "Verwitterung",
+      "connection": "Verwitterung verändert Gestein an seinem Ort. In Bryce wirkt sie zusammen mit der späteren Abtragung gelockerten Materials.",
+      "mapPoint": {
+        "id": "bryce-hoodoos",
+        "qid": "Q219562",
+        "lat": 37.64,
+        "lon": -112.17,
+        "source": "https://www.wikidata.org/wiki/Q219562",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "open": [
         "Koordinaten",
         "Querverbindungen begründen und IDs prüfen",
         "Medien-/Browser-/Fachabnahme"
       ],
-      "word": "Verwitterung",
-      "connection": "Verwitterung verändert Gestein an seinem Ort. In Bryce wirkt sie zusammen mit der späteren Abtragung gelockerten Materials.",
       "question": {
         "prompt": "Was kann ein enger Riss in Gestein für seine weitere Verwitterung bedeuten?",
         "answers": [
@@ -228,13 +272,24 @@
         "Sediment"
       ],
       "modelProposal": "Eigene Schnittskizze von poröser/geringer durchlässiger Schicht und möglichem Wasserweg; keine fotografische oder maßstäbliche Rekonstruktion.",
+      "word": "Verwitterung",
+      "connection": "Die Verwitterung des Sandsteins hängt auch von seinen Bindungen und Wasserwegen ab. Nicht jeder Hohlraum entsteht durch Wind allein.",
+      "mapPoint": {
+        "id": "arches-sandstone",
+        "qid": "Q223969",
+        "lat": 38.7281,
+        "lon": -109.54,
+        "source": "https://www.wikidata.org/wiki/Q223969",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "open": [
         "Koordinaten",
         "Kapillarwirkung gegenüber Durchlässigkeit ausdrücklich unterscheiden",
         "vollständige Abnahme"
       ],
-      "word": "Verwitterung",
-      "connection": "Die Verwitterung des Sandsteins hängt auch von seinen Bindungen und Wasserwegen ab. Nicht jeder Hohlraum entsteht durch Wind allein.",
       "question": {
         "prompt": "Warum wäre Sandsteinbogen entsteht nur durch Wind eine zu einfache Erklärung?",
         "answers": [
@@ -289,13 +344,24 @@
         "aiNotice": "Eigener KI-unterstützter WunderKompass-Text; keine Autorenschaft, Freigabe oder Genauigkeitsgarantie der Quellenorganisation behaupten."
       },
       "modelProposal": "Qualitativer zeitversetzter Wasserweg, keine erfundenen Durchfluss- oder Reisetage.",
+      "word": "Delta",
+      "connection": "Die Worterklärung führt in Flussverzweigung und Ablagerung ein. Das Okavango-Delta ergänzt ein wichtiges Gegenbeispiel zur Vorstellung: Ein Delta muss am Meer liegen.",
+      "mapPoint": {
+        "id": "okavango-delta",
+        "qid": "Q14227911",
+        "lat": -19.4,
+        "lon": 22.9,
+        "source": "https://www.wikidata.org/wiki/Q14227911",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "open": [
         "Koordinaten",
         "Tatsächlich verfügbarer Medienweg oder eigenes geeignetes Schema",
         "UI/reziproke Wege/Offline/fachliche Abnahme"
       ],
-      "word": "Delta",
-      "connection": "Die Worterklärung führt in Flussverzweigung und Ablagerung ein. Das Okavango-Delta ergänzt ein wichtiges Gegenbeispiel zur Vorstellung: Ein Delta muss am Meer liegen.",
       "question": {
         "prompt": "Muss jedes Delta direkt an einem Meer liegen?",
         "answers": [
@@ -341,6 +407,17 @@
         "claimScope": "Regen, saisonale Süßwasserlagunen, gehemmte Versickerung und Wind; keine übernommene Jahresstatistik oder UNESCO-Datensyndikation."
       },
       "mediaDecision": "Eigenes Nass-/Trocken-Schema mit klarer Modellgrenze statt ungeprüfter Fremdaufnahme.",
+      "mapPoint": {
+        "id": "lencois-maranhenses",
+        "qid": "Q647777",
+        "lat": -2.4833,
+        "lon": -43.1333,
+        "source": "https://www.wikidata.org/wiki/Q647777",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Warum beweisen große Sanddünen allein noch kein Wüstenklima?",
         "answers": [
@@ -385,6 +462,17 @@
         "claimScope": "Lage, geschlossene Becken, Salz-/Sedimentablagerungen; alte Flächenzahl, heutiger Gletscherzustand und Korallenbezeichnung bewusst nicht übernommen."
       },
       "mediaDecision": "Eigenes qualitatatives Stoff-/Wasserweg-Schema; keine aktuelle Satellitenaufnahme behaupten.",
+      "mapPoint": {
+        "id": "salar-uyuni",
+        "qid": "Q76122",
+        "lat": -20.3333,
+        "lon": -67.7,
+        "source": "https://www.wikidata.org/wiki/Q76122",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Was geschieht im vereinfachten Modell eines salzhaltigen, abflusslosen Beckens bei Verdunstung?",
         "answers": [
@@ -430,6 +518,17 @@
         "claimScope": "Namib/Küstennebel/Wind/Eisenoxidation; keine veralteten Regenzahlen oder Höchst-/Ältestrekorde."
       },
       "mediaDecision": "Eigene Küsten-/Windskizze. Quellenbild ist eine ASTER/DEM-Kombination mit internationalen Urhebern; nicht pauschal als NASA-Public-Domain übernommen.",
+      "mapPoint": {
+        "id": "namib-fog",
+        "qid": "Q131377",
+        "lat": -23,
+        "lon": 15,
+        "source": "https://www.wikidata.org/wiki/Q131377",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Was zeigt Küstennebel über den Wasserhaushalt einer trockenen Landschaft?",
         "answers": [
@@ -474,6 +573,17 @@
           "claimScope": "Gestaltende Prozesse und verschiedene Lebensräume; kein kopierter Zustandsbericht, keine Fotos übernommen."
         }
       ],
+      "mapPoint": {
+        "id": "wadden-sea",
+        "qid": "Q26080",
+        "lat": 53.5333,
+        "lon": 6.8833,
+        "source": "https://www.wikidata.org/wiki/Q26080",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "open": [
         "Sicherheitsquelle zum Watt nachführen",
         "Lage-/Regionnachweise und Rechtehinweis der Website lesen"
@@ -522,6 +632,17 @@
         "claimScope": "Basaltabkühlung/Klüfte und Abgrenzung von Sage; keine kopierten Fotos/Logos oder uneingeschränkte Gleichförmigkeit behaupten."
       },
       "mediaDecision": "Eigene nicht maßstäbliche Säulenskizze; National-Trust-Fotos sind ausdrücklich fremd urheberrechtlich geschützt.",
+      "mapPoint": {
+        "id": "giants-causeway",
+        "qid": "Q106187",
+        "lat": 55.2408,
+        "lon": -6.5117,
+        "source": "https://www.wikidata.org/wiki/Q106187",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Welche Unterscheidung ist beim Giant’s Causeway wichtig?",
         "answers": [
@@ -566,6 +687,17 @@
         "claimScope": "Eiskappenstruktur, Untereisvulkane und Schmelzwasser; keine historischen Flächen-/Volumenwerte als aktuellen Stand ausgegeben."
       },
       "mediaDecision": "Eigene begrenzte Eis-/Wärme-Schnittzeichnung; keine fremden Karten/Fotos kopiert.",
+      "mapPoint": {
+        "id": "vatnajokull",
+        "qid": "Q179734",
+        "lat": 64.4,
+        "lon": -16.8,
+        "source": "https://www.wikidata.org/wiki/Q179734",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Warum reicht ein einzelner Kartenpunkt nicht, um Vatnajökull vollständig zu zeigen?",
         "answers": [
@@ -610,6 +742,17 @@
         "claimScope": "Nordatlantik, schwimmende Algen, bewegliche Strömungsgrenzen; keine unveränderliche Kartengrenze oder Universalrekorde nötig."
       },
       "mediaDecision": "Eigene Orientierungsskizze mit ausdrücklich schematischen Strömungspfeilen; nicht als heutige Messkarte.",
+      "mapPoint": {
+        "id": "sargasso-sea",
+        "qid": "Q169274",
+        "lat": 27.5,
+        "lon": -50,
+        "source": "https://www.wikidata.org/wiki/Q169274",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Wodurch werden die Grenzen der Sargassosee vor allem beschrieben?",
         "answers": [
@@ -665,6 +808,17 @@
         }
       ],
       "mediaDecision": "Eigene begrenzte Land-/Meer-/Eis-Schnittzeichnung; keine Originalbilder oder Messgrafiken übernommen.",
+      "mapPoint": {
+        "id": "ross-ice-shelf",
+        "qid": "Q200255",
+        "lat": -81.5,
+        "lon": -175,
+        "source": "https://www.wikidata.org/wiki/Q200255",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Was unterscheidet Schelfeis grundsätzlich von gewöhnlichem Meereis?",
         "answers": [
@@ -721,6 +875,17 @@
         }
       ],
       "context": "Das Gebiet ist Country der Eastern Kuku Yalanji. Landschaft und Kulturgeschichte werden nicht als menschenleere Entdeckung dargestellt.",
+      "mapPoint": {
+        "id": "daintree",
+        "qid": "Q5209517",
+        "lat": -16.2,
+        "lon": 145.4,
+        "source": "https://www.wikidata.org/wiki/Q5209517",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "open": [
         "Direkten Quellenabruf vor Integration nachprüfen oder Quellenlücke sichtbar machen",
         "Koordinaten und ursprüngliche Ortsnamen",
@@ -770,6 +935,17 @@
       },
       "sourceDecision": "Ältere bpn.com.pl-Seite wegen auffälliger themenfremder Medizin-/Fremdlinks verworfen. Keine Verlinkung dieser Seite im Produkt.",
       "mediaDecision": "Eigene Lebensraumzeichnung, kein fremdes Waldfoto.",
+      "mapPoint": {
+        "id": "bialowieza",
+        "qid": "Q192666",
+        "lat": 52.75,
+        "lon": 23.95,
+        "source": "https://www.wikidata.org/wiki/Q192666",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Kann liegendes totes Holz in einem Wald noch eine ökologische Rolle besitzen?",
         "answers": [
@@ -813,6 +989,17 @@
         "claimScope": "Akzeptierte Art, natürliche Verbreitung Sokotra, Baum/trockenes Biom. Keine ungeprüften Harz-/Heil-/Nebel- oder Kronenfunktionsbehauptungen."
       },
       "mediaDecision": "Eigene Orientierungskarte; keine ungeprüfte Darstellung der Baumgestalt und keine kopierten Herbarbilder.",
+      "mapPoint": {
+        "id": "socotra-vegetation",
+        "qid": "Q82859",
+        "lat": 12.51,
+        "lon": 53.92,
+        "source": "https://www.wikidata.org/wiki/Q82859",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "open": [
         "Koordinaten und regionale Kontextquelle",
         "gezielte Medien-/Lernabnahme"
@@ -872,6 +1059,17 @@
         }
       ],
       "mediaDecision": "Eigene schematische Wurzel-/Sedimentzeichnung, keine fremden Satellitenbilder.",
+      "mapPoint": {
+        "id": "sundarbans",
+        "qid": "Q4526",
+        "lat": 21.75,
+        "lon": 88.75,
+        "source": "https://www.wikidata.org/wiki/Q4526",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Warum sind die Sundarbans nicht sinnvoll als nur ein Wald oder nur Wasser beschrieben?",
         "answers": [
@@ -915,6 +1113,17 @@
           "Seasonal wetland expansion"
         ],
         "claimScope": "Beschriebener Umkehrmechanismus; keine alten Flächen-/Tiefenwerte, Monats- oder heutige Regelmäßigkeitsgarantie."
+      },
+      "mapPoint": {
+        "id": "tonle-sap",
+        "qid": "Q199938",
+        "lat": 12.8833,
+        "lon": 104.0667,
+        "source": "https://www.wikidata.org/wiki/Q199938",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
       },
       "open": [
         "Aktuellen MRC-/Hydrologie-Nachweis ergänzen oder historischen Geltungsbereich sichtbar lassen",
@@ -964,6 +1173,17 @@
         "claimScope": "Riftlage und Uferstaaten; keine fremden Lake-Kivu-Aussagen auf Tanganyika übertragen, keine historischen Rekord-/Bevölkerungsdaten."
       },
       "mediaDecision": "Eigene Orientierungskarte mit ausdrücklich vereinfachter geologischer Kontextskizze.",
+      "mapPoint": {
+        "id": "tanganyika",
+        "qid": "Q5511",
+        "lat": -6.1,
+        "lon": 29.5,
+        "source": "https://www.wikidata.org/wiki/Q5511",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Was verbindet den Tanganjikasee mit Plattentektonik?",
         "answers": [
@@ -1009,6 +1229,17 @@
         "claimScope": "Lage, Einzugsbecken und Sedimentarchiv; keine damalige heutige Wetterlage, Stadtbevölkerung oder unklarer Höchstrekord."
       },
       "mediaDecision": "Eigene Schicht-/Spurenskizze; keine übernommene Astronautenaufnahme.",
+      "mapPoint": {
+        "id": "titicaca",
+        "qid": "Q35342",
+        "lat": -15.8167,
+        "lon": -69.3167,
+        "source": "https://www.wikidata.org/wiki/Q35342",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Warum sind Ablagerungen am Seeboden für Forschende interessant?",
         "answers": [
@@ -1054,6 +1285,17 @@
         "claimScope": "Vergletscherung/Uferformen/Abflüsse und Landschaftswandel am Oberen See, keine pauschale Entstehungserklärung jeder Insel."
       },
       "mediaDecision": "Eigene Hang-/Uferlinienskizze, keine genaue Rekonstruktion ehemaliger Seepegel.",
+      "mapPoint": {
+        "id": "lake-superior",
+        "qid": "Q1066",
+        "lat": 47.5289,
+        "lon": -87.76,
+        "source": "https://www.wikidata.org/wiki/Q1066",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Sind altes Gestein und eine später durch Gletscher veränderte Küstenform automatisch gleich alt?",
         "answers": [
@@ -1099,6 +1341,17 @@
         "claimScope": "Lage und Landschafts-/Sedimentzusammenhang; keine alte Kanaldebatte oder Sedimentquote als heutige politische Nachricht."
       },
       "mediaDecision": "Eigene verzweigte Mündungsskizze ohne heutige Grenz-/Strömungsmessung.",
+      "mapPoint": {
+        "id": "danube-delta",
+        "qid": "Q184429",
+        "lat": 45.2,
+        "lon": 29.5,
+        "source": "https://www.wikidata.org/wiki/Q184429",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Warum ist ein Delta keine für immer unveränderliche Fläche?",
         "answers": [
@@ -1143,6 +1396,17 @@
         "claimScope": "Basalt, Brüche, Abtragung und Fallverlagerung; umstrittene Höhen-/Rekordzahlen bewusst ausgelassen."
       },
       "mediaDecision": "Eigene zweizeitige Kanten-/Fließpfeilzeichnung, keine Besuchs- oder Absturzsimulation.",
+      "mapPoint": {
+        "id": "victoria-falls",
+        "qid": "Q43278",
+        "lat": -17.9248,
+        "lon": 25.8581,
+        "source": "https://www.wikidata.org/wiki/Q43278",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Die Kante eines Wasserfalls verlagert sich über lange Zeit flussaufwärts. Bedeutet das, dass sein Wasser nun bergauf fließt?",
         "answers": [
@@ -1188,6 +1452,17 @@
         "claimScope": "Grenzlage, Inseln/Stufen, Lavagestein und Schluchtbildung; keine alten Besucherzahlen oder Ranglisten."
       },
       "mediaDecision": "Eigene schematische Aufsicht; keine unbelegten Abflusswerte, keine falsche maßstäbliche Wasserfallkarte.",
+      "mapPoint": {
+        "id": "iguazu-falls",
+        "qid": "Q36332",
+        "lat": -25.6953,
+        "lon": -54.4367,
+        "source": "https://www.wikidata.org/wiki/Q36332",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Warum kann sich ein großer Fluss in viele nebeneinanderliegende Wasserfälle aufteilen?",
         "answers": [
@@ -1241,6 +1516,17 @@
         }
       ],
       "mediaDecision": "Eigene dreiteilige Entstehungsskizze mit deutlich beschrifteter fester Kruste und fließendem Inneren.",
+      "mapPoint": {
+        "id": "jeju-lava-tube",
+        "qid": "Q6750353",
+        "lat": 33.5283,
+        "lon": 126.7701,
+        "source": "https://www.wikidata.org/wiki/Q6750353",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Wie kann eine Lavaröhre entstehen?",
         "answers": [
@@ -1296,6 +1582,17 @@
         }
       ],
       "mediaDecision": "Eigene Stoffwegskizze, keine ASTER-Falschfarbenaufnahme als natürliches Foto ausgegeben.",
+      "mapPoint": {
+        "id": "pamukkale",
+        "qid": "Q3892919",
+        "lat": 37.9167,
+        "lon": 29.15,
+        "source": "https://www.wikidata.org/wiki/Q3892919",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Pamukkale-Ortsmarker; nicht der genaue Terrassenumriss oder ein Zugang"
+      },
       "question": {
         "prompt": "Welcher Vorgang hilft, die Kalkterrassen von Pamukkale zu erklären?",
         "answers": [
@@ -1342,6 +1639,17 @@
         "claimScope": "Einsturzhohlform und Wasserwege. Vereinfachte Farberklärung sowie alte Besucher-/Schnee-/Frostangaben bewusst nicht übernommen."
       },
       "mediaDecision": "Eigene begrenzte Caldera-/Wasserbilanzskizze ohne geologische Maßstabs- oder Vorhersagebehauptung.",
+      "mapPoint": {
+        "id": "crater-lake",
+        "qid": "Q329266",
+        "lat": 42.9436,
+        "lon": -122.1067,
+        "source": "https://www.wikidata.org/wiki/Q329266",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Woher erhält Crater Lake einen wichtigen Teil seines Wassers?",
         "answers": [
@@ -1387,6 +1695,17 @@
         "claimScope": "Gips, Wasserwege, Kristallbildung/Zerkleinerung und Windtransport; keine garantierten Wind- oder Überflutungsintervalle."
       },
       "mediaDecision": "Eigene beschriftete Stoff-/Kornfolge, keine fremden Landschaftsaufnahmen.",
+      "mapPoint": {
+        "id": "white-sands",
+        "qid": "Q1200164",
+        "lat": 32.7797,
+        "lon": -106.1717,
+        "source": "https://www.wikidata.org/wiki/Q1200164",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Warum bedeutet eine Düne nicht automatisch, dass ihr Sand aus Quarz besteht?",
         "answers": [
@@ -1431,6 +1750,17 @@
         "claimScope": "Lage, Hohlraum und ausdrücklich wahrscheinlicher historischer Zusammenhang; keine Altersgewissheit, heutige Sauerstoffmessung oder Tauchberatung."
       },
       "mediaDecision": "Eigene Wasserstands-/Hohlraumskizze ohne Tiefenmaßstab.",
+      "mapPoint": {
+        "id": "great-blue-hole",
+        "qid": "Q86486",
+        "lat": 17.3156,
+        "lon": -87.5344,
+        "source": "https://www.wikidata.org/wiki/Q86486",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Warum muss bei der Entstehung des Great Blue Hole auch ein früher anderer Meeresspiegel bedacht werden?",
         "answers": [
@@ -1476,6 +1806,17 @@
         "claimScope": "Lage, Kalk und mehrere Entwicklungsprozesse; keine unkritisch übernommenen Arten-/Inselzahlen oder Sagen als Entstehungsbeweis."
       },
       "mediaDecision": "Eigene qualitative Gesteins-/Wasser-Schnittskizze; keine Fotografie oder exakte Rekonstruktion.",
+      "mapPoint": {
+        "id": "ha-long-bay",
+        "qid": "Q190128",
+        "lat": 20.9,
+        "lon": 107.2,
+        "source": "https://www.wikidata.org/wiki/Q190128",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Welche Erklärung unterscheidet Naturvorgang und Sage in der Hạ-Long-Bucht passend?",
         "answers": [
@@ -1529,6 +1870,17 @@
         }
       ],
       "mediaDecision": "Eigene Eis-/Tal-/Meeres-Skizze; keine übernommenen Tourismusbilder oder Mapbox-Karten.",
+      "mapPoint": {
+        "id": "sognefjord",
+        "qid": "Q208495",
+        "lat": 61.1,
+        "lon": 5.1667,
+        "source": "https://www.wikidata.org/wiki/Q208495",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Warum gehört ein Fjord nicht einfach zur gleichen Erklärung wie jedes beliebige Flusstal?",
         "answers": [
@@ -1575,6 +1927,17 @@
         "claimScope": "Strömungs-/Nährstoff-/Nahrungsnetzzusammenhang. Keine historische Reise als aktuell, keine vollständige Tierzählung aus Chlorophyll."
       },
       "mediaDecision": "Eigene begrenzte Wasserweg-/Nahrungsnetzzeichnung mit getrennten Pfeillegenden.",
+      "mapPoint": {
+        "id": "galapagos-upwelling",
+        "qid": "Q38095",
+        "lat": -0.6667,
+        "lon": -90.55,
+        "source": "https://www.wikidata.org/wiki/Q38095",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Beweist eine hohe Chlorophyllanzeige auf einer Satellitenkarte bereits die genaue Anzahl aller Fische?",
         "answers": [
@@ -1621,6 +1984,17 @@
         "claimScope": "Flusstal, wiederholte Vergletscherung, Abrasion und Sedimentfüllung; keine einzelne Grafik als vollständige oder maßstäbliche Geschichte."
       },
       "mediaDecision": "Eigener begrenzter Querschnittvergleich, keine kopierten Parktafeln oder Fotos.",
+      "mapPoint": {
+        "id": "yosemite-valley",
+        "qid": "Q1996389",
+        "lat": 37.7167,
+        "lon": -119.65,
+        "source": "https://www.wikidata.org/wiki/Q1996389",
+        "property": "P625",
+        "checkedOn": "2026-10-15",
+        "license": "CC0 1.0 (structured statements only)",
+        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      },
       "question": {
         "prompt": "Welche Erklärung berücksichtigt mehrere Schritte der Formung des Yosemite Valley?",
         "answers": [
@@ -2971,5 +3345,35 @@
       "modelProposal": "Eigenes qualitatives Plattengrenze-/Hotspot-Schema; keine Vulkanausbruchsvorhersage.",
       "independentAccepted": false
     }
-  ]
+  ],
+  "implementation": {
+    "oldExplanations": 34,
+    "newExplanations": 34,
+    "animalProjectionsExcluded": 6,
+    "individualQuestions": 68,
+    "keyboardProcessModels": [
+      "grand-canyon",
+      "yellowstone-geysers",
+      "mammoth-cave",
+      "ross-ice-shelf",
+      "reef",
+      "sundarbans",
+      "galapagos-upwelling",
+      "crater-lake",
+      "namib-fog",
+      "vatnajokull"
+    ],
+    "paths": [
+      "app/nature-content.json",
+      "app/nature-atlas.tsx",
+      "app/nature-study.tsx",
+      "app/nature-process.tsx",
+      "app/nature-study-data.ts",
+      "app/nature-search-data.ts",
+      "app/nature-connections.tsx",
+      "tests/nature-learning.test.mjs",
+      "tests/browser/nature-learning.mjs"
+    ],
+    "acceptance": "Not independently accepted. All68 media/model decisions, source claim review, full new browser/offline/engine proof and whole3.5 acceptance remain required."
+  }
 }

@@ -1,5 +1,13 @@
 # Änderungsverlauf
 
+## Paket3.5 · Naturorte verstehen und Offline-Updates absichern (unveröffentlicht, Gesamtpaket weiter in Arbeit)
+
+- Naturatlas um34 eigenständige Erklärungen erweitert und34 alte Einträge individuell nachredigiert: freiwillige Alters-/Beobachtungsebenen,68 Denkfragen mit Hinweisen und antwortspezifischen Rückmeldungen sowie transparente Quellen- und Prüfstände. Sechs Tierprojektionen bleiben getrennt gezählt.
+- Zwölfer-Pagination, Filter, Suche in Vertiefungstexten, genaue Direktadressen, Notizbuch und erklärte Gegenverweise; Übersicht und Öffnerfokus beim Zurückkehren erhalten. Zehn eigene schrittweise bedienbare Erklärgrafiken mit Modellgrenzen, große Schrift und lesbare Beschriftungen. Keine unabhängige Fachabnahme behauptet.
+- Offline-Aufräumlogik behält vollständige Rückfallversionen und die Dateien offener alter Tabs. Echte Dateizähler zeigen nur geprüfte, gespeicherte Assets; vollständige Versionsprüfung bleibt Voraussetzung für Bereit. Der finale Bildnachweis erhält auch die Hashes nicht hochgeladener Originale.
+- Suchtexte werden für den Katalog einmal statt je Tasteneingabe aufbereitet; bisherige Rangfolge und Tippfehlertoleranz bleiben erhalten. Isolierter Vergleich mit6000 synthetischen Dokumenten/4×CPU: fünf Anfragen im Median2340.8→1032.2ms, einmalige Vorbereitung214.4ms. Kein Feld-/Hardware- oder vollständiger UI-Geschwindigkeitsbeleg.
+- Gezielte Naturmatrix272Breitenfälle plus native200%, Such-/Rückwege und162Unitfälle bestanden; volle neueWebsite-/Offline-/Engine-/GitHub-Abnahme und sämtliche übrigen Masteranforderungen bleiben gesondert erforderlich.
+
 ## Paket3.5 · Geografie und spezifisches Laborfeedback (unveröffentlicht)
 
 - Fünf eigene Geografie-Erklärungen und drei alte Begriffe mit freiwilligen Altersstufen, Papierbeispielen, individuellen Denkfragen, Quellen und erklärten gegenseitigen Wissenswegen. AlteDefinitionen/IDs bleiben erhalten.

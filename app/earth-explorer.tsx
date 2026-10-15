@@ -90,7 +90,7 @@ export default function EarthExplorer(){
   const [mapLayer,setMapLayer]=useState<MapLayer>("plain");const [borders,setBorders]=useState(true);
   const searchOpener=useRef<HTMLElement|null>(null),searchNavigated=useRef(false);
   function openSearch(){searchOpener.current=document.activeElement as HTMLElement|null;searchNavigated.current=false;setSearchOpen(true);}
-  const [parents,setParents]=useState(false);const [searchOpen,setSearchOpen]=useState(false);const [bookLookup,setBookLookup]=useState<{tab:"words"|"why";term:string}>();const [help,setHelp]=useState(false);const [passport,setPassport]=useState(false);const [speechReady,setSpeechReady]=useState(false);const [speaking,setSpeaking]=useState(false);const [speechNotice,setSpeechNotice]=useState("");
+  const [parents,setParents]=useState(false);const [searchOpen,setSearchOpen]=useState(false);const [bookLookup,setBookLookup]=useState<{tab:"words"|"why"|"nature";term:string}>();const [help,setHelp]=useState(false);const [passport,setPassport]=useState(false);const [speechReady,setSpeechReady]=useState(false);const [speaking,setSpeaking]=useState(false);const [speechNotice,setSpeechNotice]=useState("");
   const [online,setOnline]=useState(true);const [mission,setMission]=useState(0);const [missionDone,setMissionDone]=useState(false);const [showHint,setShowHint]=useState(false);
   const [hintLevel,setHintLevel]=useState(0);const [quizDifficulty,setQuizDifficulty]=useState<Difficulty>("normal");const [quizCategory,setQuizCategory]=useState("Alle Themen");const [quiz,setQuiz]=useState(QUESTIONS.slice(0,8));const [questionIndex,setQuestionIndex]=useState(0);const [answer,setAnswer]=useState<number|null>(null);const [score,setScore]=useState(0);const [quizFinished,setQuizFinished]=useState(false);
   const speechUtterance=useRef<SpeechSynthesisUtterance|null>(null);
@@ -133,7 +133,7 @@ export default function EarthExplorer(){
 
   useEffect(()=>{const update=()=>setOnline(navigator.onLine);update();window.addEventListener("online",update);window.addEventListener("offline",update);return()=>{window.removeEventListener("online",update);window.removeEventListener("offline",update);};},[]);
   // eslint-disable-next-line react-hooks/set-state-in-effect -- Apply an explicit shared knowledge-book direct link.
-  useEffect(()=>{const parts=routePath.split('/');if(parts[0]==='book'&&['words','why'].includes(parts[1])&&parts[2]){try{setBookLookup({tab:parts[1] as 'words'|'why',term:decodeURIComponent(parts.slice(2).join('/'))});}catch{}}},[routePath]);
+  useEffect(()=>{const parts=routePath.split('/');if(parts[0]==='book'&&['words','why','nature'].includes(parts[1])&&(parts[2]||parts[1]==='nature')){try{setBookLookup({tab:parts[1] as 'words'|'why'|'nature',term:decodeURIComponent(parts.slice(2).join('/'))});}catch{}}},[routePath]);
   // eslint-disable-next-line react-hooks/set-state-in-effect -- Apply external browser navigation.
   useEffect(()=>{const value=routePath.split('/')[0];if(MODES.includes(value)){setMode(value as Mode);setVisited(p=>new Set([...p,value]));setSpin(false);setTouchActive(false);}},[routePath]);
   useEffect(()=>{if(routePath!=='games'||mode!=='games'||!/^game-knowledge-|^order-knowledge-|^game-route-/.test(history.state?.wunderFocus??''))return;const frame=requestAnimationFrame(()=>restoreRouteView('games'));return()=>cancelAnimationFrame(frame);},[routePath,mode]);
@@ -214,7 +214,7 @@ export default function EarthExplorer(){
   const searchJourney=useCallback((id:string,index?:number)=>{goMode("journeys","journeys/"+id+(index===undefined?"":"/"+(index+1)));},[goMode]);
   const worldNavigate=useCallback((mode:Mode,id?:string,iso?:string)=>{if(mode==="journeys"&&id){searchJourney(id);}else if(mode==="labs"&&id){goMode("labs","labs/"+id);}else if(iso){const c=actions.current.countries.find((c:Country)=>c.properties.iso===iso);if(c)atlasAction(countryPlace(c));}else goMode(mode);},[goMode,atlasAction,searchJourney]);
   const worldActions:WorldActions={progress:local.progress,onActivity:rememberActivity,onVisit:discover,onLearn:worldLearn,onFavorite:local.favorite,onRead:voiceAction,onPlace:atlasAction,onNavigate:worldNavigate,onSave:local.worldState,onReview:local.review,onGame:openWorldGame,onClear:local.clearGame};
-  const searchKnowledge=useCallback((tab:"words"|"why",term:string)=>{goMode("book","book/"+tab+"/"+encodeURIComponent(term));setBookLookup({tab,term});},[goMode]);
+  const searchKnowledge=useCallback((tab:"words"|"why"|"nature",term:string)=>{goMode("book","book/"+tab+"/"+encodeURIComponent(term));setBookLookup({tab,term});},[goMode]);
   const last=local.progress.lastActivity;const lastJourney=last?.type==="journey"&&!completedJourneys.has(last.id)?JOURNEYS.find(j=>j.id===last.id):null;
   const lastWorld=last?.type==="topic"?WORLD_INDEX.find(t=>t.id===last.id):null,lastRoute=last?.type==="route"?WORLD_ROUTES.find(r=>r.id===last.id):null;
   const lastGame=last?.type==="game"&&last.family&&local.progress.gameSessions[last.id]?GAME_INDEX.find(g=>g.family===last.family&&(g.id===last.id||'world:'+g.id===last.id)):null;

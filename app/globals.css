@@ -158,3 +158,5 @@
 
 /* Reserve the active panel before asynchronous pass hydration/lazy content. */
 .learning-panel{min-block-size:max(400px,calc(100svh - 250px))}
+
+.offline-progress{flex-basis:100%;min-width:0}.offline-progress progress{display:block;width:100%;max-width:32rem;height:1rem;accent-color:#245d70}.offline-progress p{line-height:1.6;margin-block:.5rem}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "six complete browser pairs passed; full actual app regression/engine/cross-tab acceptance pending",
+  "status": "All12 controlled scaling runs and targeted worker/real Chromium retention/progress/failure probes passed; full new current-snapshot regression and actual engines pending",
   "build": "4bac37a99f354f40",
   "method": "Two fresh actual Chromium contexts for each complete app +0/+1000/+3000 synthetic2KB JSON assets; local uncompressed HTTP,10ms synthetic latency. Update adds one new payload and retains all old content. Metadata/HTML release changes are explicit fixtures, not a production deployment. Browser storage estimate is not a real weak-device or disk-quota guarantee.",
   "rows": [
@@ -154,5 +154,73 @@
     "tests/offline-worker.test.mjs",
     "tests/offline-assets.test.mjs"
   ],
-  "independentAcceptance": false
+  "independentAcceptance": false,
+  "retentionFollowup": {
+    "before": "Three new regression cases fail the former creation-order cleanup: unfinished cache can displace rollback, needed multi-tab releases are deleted, unknown legacy tabs lose complete fallback.",
+    "afterWorkerTests": "12 real Node cases passed, including all9 former install/integrity/failure cases",
+    "realChromiumLifecycle": {
+      "multipleTabs": true,
+      "partialNeverReplacesFallback": true,
+      "unknownLegacyProtected": true,
+      "orphanCleanup": true,
+      "stoppedServerOldChunk": true,
+      "canaryPreserved": true,
+      "storage": [
+        {
+          "phase": "one complete release",
+          "quota": 2147493762,
+          "usage": 10114,
+          "usageDetails": {
+            "caches": 1633,
+            "serviceWorkerRegistrations": 8481
+          }
+        },
+        {
+          "phase": "three releases protected by known open tabs",
+          "quota": 2147499006,
+          "usage": 15358,
+          "usageDetails": {
+            "caches": 6877,
+            "serviceWorkerRegistrations": 8481
+          }
+        },
+        {
+          "phase": "two releases after old tabs close",
+          "quota": 2147499475,
+          "usage": 15827,
+          "usageDetails": {
+            "caches": 7346,
+            "serviceWorkerRegistrations": 8481
+          }
+        }
+      ]
+    },
+    "scope": "Six isolated synthetic release lifecycles with actual browser CacheStorage/workers/clients and actual server shutdown; synthetic storage canary is not a real user pass. Complete real-app/pass regression additionally required.",
+    "legacyTradeoff": "Unknown old clients protect all complete fallbacks; activation can wait up to1s in parallel for legacy replies. Storage can temporarily exceed two releases until old tabs close and a later activation prunes them. Not a storage-reduction claim."
+  },
+  "progressFollowup": {
+    "implementation": "Count only assets after byte/SHA verification and successful cache.put; a separate checking phase precedes the atomic ready marker. UI samples only installing workers at750ms and stops/cleans channels on completion/failure/unmount. No time-derived percentage.",
+    "actualAppProbe": {
+      "kind": "chromium",
+      "networkRecovery": true,
+      "quotaRecovery": true,
+      "completeAssets": true,
+      "offlineReload": true,
+      "passPreserved": true,
+      "assetCount": 453,
+      "realProgress": true,
+      "metrics": {
+        "assets": 453,
+        "reused": 0,
+        "reusedBytes": 0,
+        "downloaded": 453,
+        "downloadedBytes": 18938715,
+        "seconds": 1.3707999999970197,
+        "completedAt": 1792086436234
+      },
+      "serverStopped": true
+    },
+    "strongerAcceptance": "Passed: hold a required asset, observe a strictly positive persisted count below total, then release and require complete ready, unchanged actual pass and stopped-server offline reload. Full cold-browser/Nature/engine coverage still requires final root/CI.",
+    "actualAppProbeBuild": "4188881b794c5cb0"
+  }
 }

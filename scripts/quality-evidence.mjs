@@ -1,3 +1,6 @@
+import {retentionComplete} from './handoff.mjs';
+import natureIds from '../app/nature-entry-ids.json' with {type:'json'};
+export const REQUIRED_NATURE_IDS=natureIds;
 import photoIds from '../app/world-photo-ids.json' with {type:'json'};
 export const REQUIRED_PHOTO_IDS=photoIds;
 import whyQuestions from '../app/book-why-index.json' with {type:'json'};
@@ -7,7 +10,7 @@ import bookReview from '../content/book-editorial-review.json' with {type:'json'
 export const REQUIRED_SCIENCE_ZOOM_IDS=scienceReview.topics.filter(t=>t.kind==='new').map(t=>t.id);
 export const REQUIRED_BOOK_TERMS=bookReview.entries.map(e=>e.id.slice('words:'.length));
 const sameSet=(actual,expected)=>Array.isArray(actual)&&actual.length===expected.length&&new Set(actual).size===actual.length&&expected.every(id=>actual.includes(id));
-export const REQUIRED_SUITES=['foundation','home','core','playground','backup','challenge','research','journeys','book','offline','news-feed'];
+export const REQUIRED_SUITES=['foundation','home','core','playground','backup','challenge','research','journeys','book','nature','offline','news-feed'];
 export function aggregateQuality(outcomes){
  const seen=new Set(),result={scope:'complete mandatory regression',status:'passed',selectedSuites:REQUIRED_SUITES,workers:[],checks:[],views:[],timings:[],errors:[],consoleErrors:[],failedRequests:[],ownHttpErrors:[],externalRequests:[]};let build,browser;
  for(const worker of outcomes){
@@ -17,7 +20,7 @@ export function aggregateQuality(outcomes){
   if(!report.build||!report.browser)throw Error('Missing build/browser proof');if(build&&build!==report.build||browser&&browser!==report.browser)throw Error('Mixed build/browser proof');build=report.build;browser=report.browser;
   for(const suite of worker.suites){if(seen.has(suite)||!REQUIRED_SUITES.includes(suite)||!report.selectedSuites.includes(suite))throw Error('Duplicate, unknown or missing suite '+suite);seen.add(suite);for(const phase of suite==='foundation'?['performance','components']:[suite])if(!report.timings.some(t=>t.suite===phase&&Number.isFinite(t.seconds)&&t.seconds>0))throw Error('Missing phase timing '+phase);}
   if(report.selectedSuites.length!==worker.suites.length)throw Error('Worker scope mismatch');
-  if(worker.suites.includes('foundation')){const o=report.offlineResilience;if(o?.kind!=='chromium'||o.networkRecovery!==true||o.quotaRecovery!==true||o.completeAssets!==true||o.offlineReload!==true||o.serverStopped!==true||o.passPreserved!==true)throw Error('Missing actual offline failure/recovery proof');const p=report.photoMetadata,expected=REQUIRED_PHOTO_IDS.flatMap(id=>[320,1440].map(width=>id+':'+width));if(!p||!sameSet(p.images,REQUIRED_PHOTO_IDS)||!sameSet(p.cases?.map(c=>c.id+':'+c.width),expected)||p.immediateHomeCredits!==true||p.oneRequestPerSession!==true||p.tamperAndNetworkRetry!==true||p.retryFocus!==true||p.photoCardBackFocus!==true||!Number.isFinite(p.seconds)||p.seconds<=0)throw Error('Missing complete photo metadata proof');}
+  if(worker.suites.includes('foundation')){if(!retentionComplete(report.offlineRetention))throw Error('Missing multiple-release offline retention proof');const o=report.offlineResilience;if(o?.kind!=='chromium'||o.realProgress!==true||o.networkRecovery!==true||o.quotaRecovery!==true||o.completeAssets!==true||o.offlineReload!==true||o.serverStopped!==true||o.passPreserved!==true)throw Error('Missing actual offline failure/recovery proof');const p=report.photoMetadata,expected=REQUIRED_PHOTO_IDS.flatMap(id=>[320,1440].map(width=>id+':'+width));if(!p||!sameSet(p.images,REQUIRED_PHOTO_IDS)||!sameSet(p.cases?.map(c=>c.id+':'+c.width),expected)||p.immediateHomeCredits!==true||p.oneRequestPerSession!==true||p.tamperAndNetworkRetry!==true||p.retryFocus!==true||p.photoCardBackFocus!==true||!Number.isFinite(p.seconds)||p.seconds<=0)throw Error('Missing complete photo metadata proof');}
   if(worker.suites.includes('offline')&&(!sameSet(report.photoOffline?.images,REQUIRED_PHOTO_IDS)||report.photoOffline.coldRestart!==true||report.photoOffline.verifiedCatalog!==true))throw Error('Missing cold offline photo metadata proof');
   if(worker.suites.includes('journeys')){const z=report.nativeZoom;if(z?.percent!==200||z.cssWidth!==640||z.scale!==2||z.largeTextAlsoChecked!==true)throw Error('Missing actual native journey zoom proof');}
   if(worker.suites.includes('book')){const b=report.bookCoverage,bz=report.bookNativeZoom,requiredWidths=[320,360,390,768,1024,1440,1920];
@@ -27,6 +30,8 @@ export function aggregateQuality(outcomes){
   }
   if(worker.suites.includes('offline')&&(!sameSet(report.bookOffline?.terms,REQUIRED_BOOK_TERMS)||report.bookOffline.retainedFavorite!==true))throw Error('Missing cold offline book proof');
   if(worker.suites.includes('offline')&&(!sameSet(report.whyOffline?.questions,REQUIRED_WHY_QUESTIONS)||report.whyOffline.contextAndBackFocus!==true))throw Error('Missing cold offline Why proof');
+  if(worker.suites.includes('nature')){const n=report.natureCoverage,z=report.natureNativeZoom,widths=[320,390,768,1440];if(!sameSet(n?.ids,REQUIRED_NATURE_IDS)||!sameSet(n.widths,widths)||!sameSet(n.observed?.map(v=>v.id+':'+v.width),REQUIRED_NATURE_IDS.flatMap(id=>widths.map(w=>id+':'+w)))||n.searchAndBackFocus!==true||n.paginationBack!==true||n.pinnedRetry!==true||n.independentAcceptance!==false)throw Error('Missing full nature viewport/navigation proof');if(z?.percent!==200||z.cssWidth!==640||z.scale!==2||z.largeTextAlsoChecked!==true||!sameSet(z.ids,REQUIRED_NATURE_IDS))throw Error('Missing actual native nature zoom proof');}
+  if(worker.suites.includes('offline')&&(!sameSet(report.natureOffline?.ids,REQUIRED_NATURE_IDS)||report.natureOffline.coldRestart!==true))throw Error('Missing cold offline nature proof');
   if(worker.suites.includes('research')){const z=report.scienceNativeZoom;if(z?.percent!==200||z.cssWidth!==640||z.scale!==2||z.cards!==REQUIRED_SCIENCE_ZOOM_IDS.length||z.largeTextAlsoChecked!==true||!Array.isArray(z.ids)||z.ids.length!==REQUIRED_SCIENCE_ZOOM_IDS.length||new Set(z.ids).size!==z.ids.length||REQUIRED_SCIENCE_ZOOM_IDS.some(id=>!z.ids.includes(id)))throw Error('Missing actual native science zoom proof');}
   result.workers.push({name:worker.name,suites:worker.suites,seconds:report.seconds,report:worker.name+'/portable-report.json',...(report.fixtureConfiguration?{fixtureConfiguration:true}:{} )});
   for(const [key,value] of Object.entries(report)){

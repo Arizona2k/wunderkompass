@@ -25,7 +25,7 @@ else{
   const foundation=await launch('quality-foundation',['foundation'],0);outcomes.push(foundation);if(foundation.code!==0)throw Error('Foundation phase failed');
   const news=await launch('quality-news-feed',['news-feed'],3);outcomes.push(news);if(news.code!==0)throw Error('Signed news phase failed');
   // Offline owns navigation's server. Research and other learning suites run sequentially; book has its own server/profile/cache.
-  outcomes.push(...await Promise.all([launch('quality-navigation',['home','core','offline'],1),launch('quality-learning',['journeys','playground','backup','challenge','research'],2),launch('quality-book',['book'],5)]));
+  outcomes.push(...await Promise.all([launch('quality-navigation',['home','core','offline'],1),launch('quality-learning',['journeys','playground','backup','challenge','research','nature'],2),launch('quality-book',['book'],5)]));
   const reports=await Promise.all(outcomes.map(async result=>({...result,report:JSON.parse(await fs.readFile(path.join(root,'.qa-output',result.name,'portable-report.json'),'utf8'))})));
   const report=aggregateQuality(reports);report.seconds=(performance.now()-started)/1000;
   for(const result of outcomes)for(const file of await fs.readdir(path.join(root,'.qa-output',result.name)))if(file.endsWith('.png'))await fs.copyFile(path.join(root,'.qa-output',result.name,file),path.join(root,'.qa-output',result.name+'-'+file));

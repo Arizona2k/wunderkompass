@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T07:40:34.807Z",
+  "generatedAt": "2026-10-15T17:44:44.028Z",
   "personalProgressIncluded": false,
   "topics": 139,
   "categories": {
@@ -126,9 +126,9 @@
         "app/nature-data.ts",
         "app/plate-points.json"
       ],
-      "entries": 40,
-      "bytes": 14032,
-      "sha256": "ed14a96da03eb11d99391cae795733d695962125cccc2f6b2b19f300164358e0"
+      "entries": 74,
+      "bytes": 29446,
+      "sha256": "318f6f4489b23f5b0da7fee6b7fedbe66b65cca6a631f55aa7160de61466ec3d"
     },
     {
       "file": "plate-locations.json",
@@ -146,9 +146,9 @@
         "app/nature-data.ts",
         "app/plate-points.json"
       ],
-      "entries": 15,
-      "bytes": 2222,
-      "sha256": "f2acf0cf226655ab023a0fa63720e1db2b1a4f9e1eefb4af559f7718ee6463d9"
+      "entries": 16,
+      "bytes": 2440,
+      "sha256": "5b739de21604e8e60b813207084f9a715a4187e0546e46f6b0bdf456b6105ae0"
     },
     {
       "file": "climate-zones.json",
@@ -223,6 +223,15 @@
       "entries": 8,
       "bytes": 1801,
       "sha256": "b1445a3e3d48ecc73fa488db69db3d8025e55744625873382dff4288695dcc37"
+    },
+    {
+      "file": "nature-learning.json",
+      "sources": [
+        "app/nature-content.json"
+      ],
+      "entries": 2,
+      "bytes": 202940,
+      "sha256": "3c2495cc26200e7c699e670e59b595df056571ea92299703ccfa179962f4bd02"
     },
     {
       "file": "research-feedback.json",

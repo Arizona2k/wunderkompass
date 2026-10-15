@@ -1,4 +1,6 @@
 import {offlineResilience} from './offline-resilience.mjs';
+import {offlineRetention} from './offline-retention.mjs';
+import {natureEngine} from './nature-learning.mjs';
 import {whyEngineFlow} from './why-learning.mjs';
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import {spawn} from 'node:child_process';
 import JOURNEYS from '../../exports/content/journeys.json' with {type:'json'};
@@ -30,8 +32,10 @@ async function runEngine(kind,offset){
   const offlineStarted=performance.now(),offlineProof=await offlineResilience(browser,{port:port+offset+10,shots:output,kind});console.log('ENGINE_PHASE',JSON.stringify({engine:name,phase:'offline',seconds:(performance.now()-offlineStarted)/1000}));await p.bringToFront();
   const bookStarted=performance.now(),bookProof=await bookEngineFlow(p,output,name);const bookSeconds=(performance.now()-bookStarted)/1000;console.log('ENGINE_PHASE',JSON.stringify({engine:name,phase:'book',seconds:bookSeconds}));
   const whyStarted=performance.now(),whyProof=await whyEngineFlow(p);const whySeconds=(performance.now()-whyStarted)/1000;console.log('ENGINE_PHASE',JSON.stringify({engine:name,phase:'why',seconds:whySeconds}));
+  const retentionProof=await offlineRetention(browser);
+  const natureStarted=performance.now(),natureProof=await natureEngine(p,{engine:name,shots:output}),natureSeconds=(performance.now()-natureStarted)/1000;console.log('ENGINE_PHASE',JSON.stringify({engine:name,phase:'nature',seconds:natureSeconds}));
   assert.deepEqual(errors,[]);
-  return {name,version:browser.version(),chapters:checked,widths:[320,390,768,1440],...bookProof,...whyProof,offlineResilience:offlineProof,phaseSeconds:{journeys:journeySeconds,book:bookSeconds,why:whySeconds},seconds:(performance.now()-started)/1000,port:port+offset};
+  return {name,version:browser.version(),chapters:checked,widths:[320,390,768,1440],...bookProof,...whyProof,...natureProof,offlineRetention:retentionProof,offlineResilience:offlineProof,phaseSeconds:{journeys:journeySeconds,book:bookSeconds,why:whySeconds,nature:natureSeconds},seconds:(performance.now()-started)/1000,port:port+offset};
  }finally{await browser?.close();if(browser)browsers.delete(browser);server.kill('SIGTERM');servers.delete(server);}
 }
 try{
