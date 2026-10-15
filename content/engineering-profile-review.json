@@ -1,0 +1,126 @@
+{
+  "status": "passed",
+  "scope": "Six interleaved cold-profile pairs; identical actual exercise actions and DOM/source/geometry assertions; local sample only, no CI guarantee",
+  "baseline": {
+    "p50": 11.952517599999998,
+    "p95": 12.90268129,
+    "sum": 68.13546105799998
+  },
+  "foreground": {
+    "p50": 0.4578499640000009,
+    "p95": 0.5186576449999993,
+    "sum": 2.6527633690000076
+  },
+  "rows": [
+    {
+      "pair": 0,
+      "term": "Meter",
+      "samples": {
+        "baseline": {
+          "seconds": 12.90268129,
+          "pages": 3,
+          "visibility": "visible"
+        },
+        "foreground": {
+          "seconds": 0.5186576449999993,
+          "pages": 3,
+          "visibility": "visible"
+        }
+      }
+    },
+    {
+      "pair": 1,
+      "term": "DNA",
+      "samples": {
+        "foreground": {
+          "seconds": 0.4474780350000001,
+          "pages": 3,
+          "visibility": "visible"
+        },
+        "baseline": {
+          "seconds": 10.455164403,
+          "pages": 3,
+          "visibility": "visible"
+        }
+      }
+    },
+    {
+      "pair": 2,
+      "term": "Prüfsumme",
+      "samples": {
+        "baseline": {
+          "seconds": 11.952517599999998,
+          "pages": 3,
+          "visibility": "visible"
+        },
+        "foreground": {
+          "seconds": 0.4833081269999966,
+          "pages": 3,
+          "visibility": "visible"
+        }
+      }
+    },
+    {
+      "pair": 3,
+      "term": "Transit",
+      "samples": {
+        "foreground": {
+          "seconds": 0.4578499640000009,
+          "pages": 3,
+          "visibility": "visible"
+        },
+        "baseline": {
+          "seconds": 12.440067617999993,
+          "pages": 3,
+          "visibility": "visible"
+        }
+      }
+    },
+    {
+      "pair": 4,
+      "term": "Taiga",
+      "samples": {
+        "baseline": {
+          "seconds": 9.945074394999988,
+          "pages": 3,
+          "visibility": "visible"
+        },
+        "foreground": {
+          "seconds": 0.4022887239999982,
+          "pages": 3,
+          "visibility": "visible"
+        }
+      }
+    },
+    {
+      "pair": 5,
+      "term": "Tsunami",
+      "samples": {
+        "foreground": {
+          "seconds": 0.3431808740000124,
+          "pages": 3,
+          "visibility": "visible"
+        },
+        "baseline": {
+          "seconds": 10.439955751999994,
+          "pages": 3,
+          "visibility": "visible"
+        }
+      }
+    }
+  ],
+  "schemaVersion": 1,
+  "measuredOn": "2026-10-15",
+  "head": "ce79751021b028bdce5a6ca8865c5db674061f87",
+  "build": "dc20b76680161d86",
+  "browser": "Chromium 151.0.7922.173",
+  "command": "QA_BROWSER_EXECUTABLE=/usr/bin/chromium node scripts/measure-profile-foreground.mjs",
+  "precondition": "Completed full mandatory browser regression creates the synthetic quality-navigation/portable-offline-profile; work copies only, never personal profiles.",
+  "decision": "Adopt explicit Playwright bringToFront for native-zoom and offline persistent contexts. All original assertions, widths, inputs, thresholds, source checks, screenshots and suites retained.",
+  "limitations": [
+    "Six local pairs, not a CI p50/p95 guarantee.",
+    "Existing test profile can restore multiple pages; reported visibility alone did not reveal slow input.",
+    "No browser security or network policy disabled.",
+    "No human/scientific/device acceptance."
+  ]
+}

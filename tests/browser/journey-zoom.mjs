@@ -10,6 +10,7 @@ export async function nativeJourneyZoom(chromium,options,base,report,shots,{book
  await fs.writeFile(path.join(profile,'Default','Preferences'),JSON.stringify({partition:{default_zoom_level:{x:Math.log(2)/Math.log(1.2)}}}));
  const context=await chromium.launchPersistentContext(profile,{...options,...(!options.executablePath?{channel:'chromium'}:{}),viewport:{width:1280,height:900},deviceScaleFactor:1,reducedMotion:'reduce'}),p=context.pages()[0];const errors=[];p.on('pageerror',e=>errors.push(e.message));
  try{
+  await p.bringToFront();
   await p.goto(base+(bookOnly?'/#book':'/#journeys/water/3'));await p.locator(bookOnly?'.word-card':'[data-chapter-inquiry="water:2"]').first().waitFor();
   const cdp=await context.newCDPSession(p);
   const capture=async name=>{const clip=await p.evaluate(()=>({x:scrollX*devicePixelRatio,y:scrollY*devicePixelRatio,width:innerWidth*devicePixelRatio,height:innerHeight*devicePixelRatio,scale:1}));const result=await cdp.send('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,clip});await fs.writeFile(path.join(shots,name),Buffer.from(result.data,'base64'));};
