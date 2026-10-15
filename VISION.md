@@ -1,5 +1,7 @@
 # Produktvision WunderKompass
 
+WunderKompass ist dauerhaft ein zusammenhängendes Wissens- und Lernsystem. Neue Erkenntnisse sollen passende alte Artikel, Wörter, Karten, Reisen, Spiele und Forschung sinnvoll bereichern; Auffindbarkeit, gegenseitige Rückwege und technische Abhängigkeiten gehören zur Integration. Nicht jede Änderung berührt jedes Modul. Qualität und erkennbarer Lerngewinn gehen vor Mengen, künstlichen Beziehungen oder Prototypen. Der [Dauerauftrag15.10.2026](content/auftrag-2026-10-13/WunderKompass_Dauerauftrag_2026-10-15.md) ergänzt die bestehenden Ziele; operative Folgenanalyse/Prüfung in QUALITY, Verhalten in AGENTS und Aufgaben ausschließlich im BACKLOG. Technik- und Prozesseffizienz ermöglichen hochwertige große Produktwellen, ersetzen diese aber nicht.
+
 ## Dauerhafte Nutzerentscheidung vom 15. Oktober 2026: freies Wachstum und echte Performance
 
 Diese Grundsätze gelten für Paket 3.5, alle späteren Pakete 4–8 und sämtliche zukünftigen GO-Runden. Grundlage sind die vollständig gelesenen Entscheidungen in PR #27 ([Gesamtgrößen](https://github.com/Arizona2k/wunderkompass/pull/27#issuecomment-6189174371), [CI/Offline](https://github.com/Arizona2k/wunderkompass/pull/27#issuecomment-6191114862), [Performance/Offline-Abwägung](https://github.com/Arizona2k/wunderkompass/pull/27#issuecomment-6191886451), [moderne Zielgeräte und fünf Optimierungskandidaten](https://github.com/Arizona2k/wunderkompass/pull/27#issuecomment-6193186292)) und der ergänzende Nutzerauftrag zur dauerhaften Geltung.

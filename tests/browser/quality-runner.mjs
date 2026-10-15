@@ -7,7 +7,7 @@ import {createHandoff} from '../../scripts/handoff.mjs';
 
 const root=fileURLToPath(new URL('../..',import.meta.url)),started=performance.now(),basePort=Number(process.env.QA_PORT??4182),children=new Set();
 if(!Number.isInteger(basePort)||basePort<1024||basePort>65529)throw Error('Invalid isolated browser port');
-process.once('SIGTERM',()=>{for(const child of children)child.kill('SIGTERM');process.exit(143);});
+for(const [signal,code]of[['SIGTERM',143],['SIGINT',130]])process.once(signal,()=>{for(const child of children)child.kill('SIGTERM');process.exit(code);});
 const launch=(name,suites,offset)=>new Promise((resolve,reject)=>{
  const child=spawn(process.execPath,[suites[0]==='news-feed'?'tests/browser/news-feed-runner.mjs':'tests/browser/portable-smoke.mjs'],{cwd:root,env:{...process.env,QA_SUITE:suites.join(','),QA_PORT:String(basePort+offset),QA_OUTPUT_DIR:'.qa-output/'+name},stdio:['ignore','pipe','pipe']});children.add(child);
  child.stdout.on('data',b=>process.stdout.write('['+name+'] '+b));child.stderr.on('data',b=>process.stderr.write('['+name+'] '+b));

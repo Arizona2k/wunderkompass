@@ -1,0 +1,727 @@
+{
+  "schemaVersion": 1,
+  "meaning": "Durable individual editorial manuscripts; no second backlog. All24 are prepared only, not applied to app/world-catalog.json, not technical/scientific acceptance or a new-content count. Tasks remain WK053 in BACKLOG.",
+  "reviewedOn": "2026-10-15",
+  "independentReview": false,
+  "topics": [],
+  "preparedManuscripts": [
+    {
+      "id": "invention-battery",
+      "title": "Die Batterie",
+      "intro": "Wie versorgt eine Taschenlampe ihren Lichtstrahl unterwegs?",
+      "starter": "In einer Batterie können chemische Vorgänge elektrische Energie liefern. Dazu braucht die Lampe einen geschlossenen Stromweg.",
+      "explain": "Eine Zelle enthält zwei unterschiedliche Elektroden und einen Stoff, durch den geladene Teilchen wandern können: den Elektrolyten. Beim Entladen fließen Elektronen außen durch die angeschlossene Lampe. Innen übernehmen Ionen einen anderen Teil des Weges. Eine Batterie ist kein Behälter voller fertig gespeicherten Stroms.",
+      "deeper": "Akkus lassen sich mit geeigneten Ladegeräten wieder aufladen. Dabei werden chemische Veränderungen teilweise umgekehrt; das gelingt nicht verlustfrei und nicht unbegrenzt. Nicht wiederaufladbare Batterien gehören niemals ins Ladegerät.",
+      "observe": "Zeichne nur auf Papier Batterie, Lampe und zwei Leitungen. Trenne an einer Stelle den gezeichneten Weg. Erkläre, warum eine zweite volle Batterie allein diese Unterbrechung nicht beseitigt. Keine Batterien öffnen oder kurzschließen.",
+      "benefit": "Du unterscheidest chemische Energiespeicherung vom Stromfluss und erkennst, warum ein leerer Akku und ein kaputtes Kabel verschiedene Fehler sind.",
+      "date": "1800 · Voltas Batterie; nicht die Erfindung heutiger Akkus",
+      "question": {
+        "prompt": "Die Batterie ist voll, aber eine Leitung zur Lampe ist unterbrochen. Was fehlt?",
+        "answers": [
+          "Ein geschlossener Stromweg",
+          "Eine noch vollere Batterie bei weiterhin offener Leitung",
+          "Zwei freie Kabelenden, die sich nicht berühren"
+        ],
+        "correct": 0,
+        "hint": "Verfolge den Weg durch Lampe und Batterie zurück zum Anfang.",
+        "wrong": [
+          "Eine vollere Batterie schließt die Lücke in der Leitung nicht.",
+          "Ohne geeigneten Kontakt bleibt der Weg hier unterbrochen."
+        ],
+        "why": "Eine volle Batterie kann die Lampe nur in einem passenden geschlossenen Stromkreis versorgen."
+      },
+      "relatedReasons": {
+        "science-circuit": "Die Batterie liefert Energie; der geschlossene Stromkreis erklärt den Weg durch die Lampe.",
+        "science-energy": "Ein Akku kann Energie für später bereitstellen; die chemische Funktionsweise erklärt diese Karte.",
+        "invention-smartphone": "Ein Smartphone braucht einen passenden wiederaufladbaren Akku."
+      },
+      "media": "Eigener Querschnitt: zwei Elektroden, Innenweg der Ionen und äußerer Stromkreis getrennt. Keine Elektronen durch den Elektrolyten zeichnen.",
+      "sourceClaims": [
+        {
+          "url": "https://www.energy.gov/science/doe-explainsbatteries",
+          "anchor": "Absätze zu chemischem Potenzial, Elektroden, Elektrolyt und Aufladen",
+          "claims": [
+            "Elektroden und Elektrolyt; Elektronen außen, Ionen innen",
+            "Aufladen kehrt chemische Vorgänge um, Alterung bleibt"
+          ]
+        }
+      ],
+      "additionalCheck": "Volta-1800-Museumsbeleg bislang Suchfund; direkte Objektseite nicht abrufbar. Datum vor Produktintegration erneut belegen.",
+      "novelty": "Chemische Zelle und innere/äußere Ladungswege; keine zweite allgemeine Energie-Speicherkarte."
+    },
+    {
+      "id": "invention-generator",
+      "title": "Der Generator",
+      "intro": "Wie wird aus einer Drehbewegung elektrische Energie?",
+      "starter": "Ein Generator wandelt Bewegung in elektrische Energie um. In vielen Bauformen bewegen sich Magnet und Drahtspule gegeneinander.",
+      "explain": "Ändert sich das Magnetfeld durch eine Spule, kann an ihren Anschlüssen eine Spannung entstehen. In einem geschlossenen Stromkreis kann dadurch Strom fließen. Der Antrieb liefert die Energie. Ein Magnet allein ist keine unerschöpfliche Energiequelle.",
+      "deeper": "Michael Faraday untersuchte 1831 die elektromagnetische Induktion. Sein überliefertes Gerät verband eine Drahtspule und einen bewegten Stabmagneten mit einem Strommessgerät. Ein Motor nutzt elektrische Energie für Bewegung; ein Generator hat die umgekehrte Nutzrichtung. Nicht jede Stromquelle ist ein Generator: Eine Solarzelle arbeitet anders.",
+      "observe": "Vergleiche im späteren Bildschirmmodell: Magnet steht; Magnet bewegt sich hinein; Magnet bewegt sich hinaus. Vermute vor jedem Schritt, ob das Messgerät ausschlägt. Keine Steckdosen oder echten Anlagen verwenden.",
+      "benefit": "Du erkennst den gemeinsamen Schritt zwischen Windrad, Wasserkraft und vielen Kraftwerken und verwechselt Energieumwandlung nicht mit Energieerzeugung aus dem Nichts.",
+      "date": "1831 · Faradays Induktionsversuche",
+      "question": {
+        "prompt": "Spule und Magnet bleiben vollkommen unverändert stehen. Reicht das hier für dauernd fließenden Strom?",
+        "answers": [
+          "Nein, das Magnetfeld durch die Spule muss sich ändern",
+          "Ja, ein ruhender Dauermagnet reicht für dauernden Strom",
+          "Ja, viele Windungen ersetzen jede Änderung des Magnetfelds"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche den ruhenden Zustand mit dem Hin- und Herbewegen.",
+        "wrong": [
+          "Ein ruhender Dauermagnet liefert in dieser unveränderten Anordnung keine dauernde Spannung.",
+          "Mehr Windungen ersetzen die notwendige Änderung nicht."
+        ],
+        "why": "In diesem vereinfachten Modell entsteht die Spannung durch Änderung des Magnetfelds, nicht durch die bloße Anwesenheit des Magneten."
+      },
+      "relatedReasons": {
+        "science-motor": "Motor und Generator verbinden Bewegung und elektrische Energie in unterschiedlicher Nutzrichtung.",
+        "science-magnetism": "Das sich ändernde Magnetfeld erklärt die Induktion.",
+        "science-circuit": "Strom zur angeschlossenen Lampe braucht zusätzlich einen geschlossenen Weg."
+      },
+      "media": "Eigene Schrittgrafik mit Spule, bewegtem Magneten und qualitativer Anzeige. Spannung und Strom nicht gleichsetzen; kein Mengenmodell.",
+      "sourceClaims": [
+        {
+          "url": "https://www.rigb.org/explore-science/explore/collection/michael-faradays-generator",
+          "anchor": "Description, Datierung October 1831 und bewegter Magnet im Stromkreis",
+          "claims": [
+            "Spule/Stabmagnet/Messgerät; Bewegung erzeugt registrierten Strom",
+            "Induktion von Faraday 1831 untersucht"
+          ]
+        },
+        {
+          "url": "https://www.eia.gov/energyexplained/electricity/how-electricity-is-generated.php",
+          "anchor": "Electromagnetic generators; turbines",
+          "claims": [
+            "Antrieb und Generator wandeln Energie um"
+          ]
+        }
+      ],
+      "additionalCheck": "Spannung bei offenem Kreis zusätzlich an der CHM-Induktionsquelle vollständig lesen; keine Behauptung, alle Generatoren hätten Elektromagnete.",
+      "novelty": "Induktion als technische Gewinnung elektrischer Energie statt erneutes Beschreiben des vorhandenen Motors."
+    },
+    {
+      "id": "invention-transistor",
+      "title": "Der Transistor",
+      "intro": "Wie kann ein winziges Bauteil elektrische Signale steuern?",
+      "starter": "Ein Transistor kann als kleiner elektronischer Schalter arbeiten. Ein Signal steuert, ob ein anderer Stromweg stark oder schwach leitet.",
+      "explain": "Transistoren bestehen aus besonderen Materialien, den Halbleitern. Sie können in passenden Schaltungen schalten oder Signale verstärken. Ihre Energie kommt aus der Versorgung der Schaltung. Ein schwaches Signal erzeugt nicht plötzlich zusätzliche Energie.",
+      "deeper": "John Bardeen und Walter Brattain zeigten im Dezember 1947 bei Bell Labs einen funktionierenden Verstärker aus Germanium mit feinen Kontakten. William Shockley leitete die Forschungsgruppe und entwickelte die Technik weiter. Heutige Chips verwenden andere, stark verkleinerte Bauformen. Ein einzelner Transistor versteht keine Wörter und ist noch kein ganzer Computer.",
+      "observe": "Nutze nur das Bildschirmmodell: Stelle einen Steuereingang auf aus und dann auf ein. Vergleiche den gesteuerten Weg. Erkläre anschließend den Unterschied zwischen Steuersignal und Energieversorgung.",
+      "benefit": "Du verstehst einen wichtigen Baustein von Computern, ohne Rechenprogramme mit dem Material des Chips zu verwechseln.",
+      "date": "1947 · funktionierender Punktkontakttransistor; viele spätere Bauformen",
+      "question": {
+        "prompt": "Ein Transistor verstärkt ein Signal. Woher kommt die zusätzliche abgegebene Energie?",
+        "answers": [
+          "Aus der Stromversorgung der Schaltung",
+          "Allein aus dem schwachen Steuersignal",
+          "Der Transistor vermehrt Energie aus dem Nichts"
+        ],
+        "correct": 0,
+        "hint": "Trenne die Frage nach dem Steuern von der Frage nach der Energiequelle.",
+        "wrong": [
+          "Das Steuersignal lenkt die Wirkung; es ist nicht allein die Energiequelle des verstärkten Ausgangs.",
+          "Das widerspricht der Energieerhaltung."
+        ],
+        "why": "Das Eingangssignal steuert die Wirkung; die Versorgung stellt die benötigte Energie bereit."
+      },
+      "relatedReasons": {
+        "invention-computer": "Viele Transistoren können zu Schaltungen für Rechnen und Speichern verbunden werden.",
+        "invention-smartphone": "Chips im Smartphone enthalten viele solche elektronischen Bausteine.",
+        "science-circuit": "Auch ein elektronischer Schalter gehört zu einer versorgten Schaltung."
+      },
+      "media": "Eigenes ausdrücklich symbolisches Steuerweg-Modell; kein mechanischer Wasserhahn als angeblich wörtlicher Aufbau und kein Germaniumfoto kopiert.",
+      "sourceClaims": [
+        {
+          "url": "https://www.computerhistory.org/siliconengine/invention-of-the-point-contact-transistor/",
+          "anchor": "1947, Absätze Bardeen/Brattain, 16./23. Dezember und Bauteilkontakte",
+          "claims": [
+            "Funktionierender Halbleiterverstärker 1947",
+            "Rollen Bardeen, Brattain und Shockley; Germaniumkontakte"
+          ]
+        }
+      ],
+      "additionalCheck": "Schalt-/Verstärkerfunktion, heutiger MOSFET und Energieversorgung zusätzlich an vollständiger Primärfachquelle lesen; Nobel-Seiten 403 nicht als vollständig geprüft markieren.",
+      "novelty": "Bauteil und Signalsteuerung statt zweite Computerübersicht."
+    },
+    {
+      "id": "invention-camera",
+      "title": "Die Kamera",
+      "intro": "Warum kann Licht ein Bild hinterlassen?",
+      "starter": "Eine Kamera lässt Licht von einer Szene hinein. Eine lichtempfindliche Fläche kann das Bild festhalten.",
+      "explain": "Schon eine kleine Öffnung in einem dunklen Kasten kann auf der gegenüberliegenden Wand ein umgekehrtes Bild erzeugen. Eine solche Camera obscura speichert das Bild noch nicht. Für ein Foto braucht es zusätzlich eine Aufzeichnung, früher mit lichtempfindlichen Stoffen, heute oft mit einem elektronischen Sensor.",
+      "deeper": "Linsen helfen, ein helles und scharfes Bild zu formen. Die Entwicklung der Fotografie hatte viele Beteiligte, darunter Niépce, Daguerre und Talbot. 1839 wurde Daguerres Verfahren öffentlich vorgestellt; das ist nicht das Erfindungsdatum jeder Kamera. Ein Foto zeigt außerdem immer nur einen gewählten Ausschnitt.",
+      "observe": "Zeichne einen Pfeil, eine kleine Öffnung und eine gegenüberliegende Bildfläche. Verbinde Pfeilspitze und Pfeilfuß jeweils geradlinig durch die Öffnung mit der Fläche. Was passiert mit oben und unten? Niemals die Sonne durch eine Öffnung, Linse oder Kamera ansehen.",
+      "benefit": "Du unterscheidest das Entstehen eines Bildes von seiner Speicherung und kannst Fotos als ausgewählte Ansichten hinterfragen.",
+      "date": "1839 · öffentliche Vorstellung der Daguerreotypie, Kameravorläufer sind älter",
+      "question": {
+        "prompt": "Was fehlt einem einfachen dunklen Lochkasten, damit er ein dauerhaftes Foto festhält?",
+        "answers": [
+          "Eine lichtempfindliche Aufzeichnung",
+          "Nur eine kleinere Öffnung ohne Aufzeichnungsfläche",
+          "Nur ein dunklerer Kasten ohne Aufzeichnungsfläche"
+        ],
+        "correct": 0,
+        "hint": "Das Bild an der Innenwand verschwindet, wenn das Licht oder die Szene verschwindet.",
+        "wrong": [
+          "Eine kleinere Öffnung verändert das Bild, hält es aber nicht dauerhaft fest.",
+          "Ein dunkler Kasten hilft bei der Bildentstehung, ersetzt aber keine Speicherung."
+        ],
+        "why": "Die Öffnung formt das Bild; erst eine geeignete lichtempfindliche Fläche kann es aufzeichnen."
+      },
+      "relatedReasons": {
+        "invention-smartphone": "Das Smartphone verbindet Kamerasensor, Verarbeitung und Speicherung.",
+        "invention-telescope": "Beide nutzen Optik; ein Fernrohr muss das betrachtete Bild nicht selbst speichern."
+      },
+      "media": "Eigene Strahlenskizze mit beschrifteten Lichtwegen außerhalb des SVG; kein fremdes historisches Foto. Modell zeigt Lochkamera, nicht alle Objektive.",
+      "sourceClaims": [
+        {
+          "url": "https://blog.scienceandmediamuseum.org.uk/introduction-camera-obscura/",
+          "anchor": "The history of the camera obscura, Absätze 1–4",
+          "claims": [
+            "Umgekehrtes Bild durch kleine Öffnung",
+            "Camera-obscura-Vorläufer und mehrere Beteiligte"
+          ]
+        }
+      ],
+      "additionalCheck": "1839 sowie elektronische Sensorfunktion vor Integration an zweiter vollständiger Museums-/Primärquelle lesen; keine ungeprüfte Erstfoto-Jahreszahl übernehmen.",
+      "novelty": "Optische Bildentstehung und Aufzeichnung statt weitere Smartphone-Funktionsliste."
+    },
+    {
+      "id": "invention-telescope",
+      "title": "Das Fernrohr",
+      "intro": "Wie sammelt ein Fernrohr mehr Licht als dein Auge?",
+      "starter": "Ein Fernrohr sammelt Licht von weit entfernten Dingen. Eine Linse oder ein Spiegel formt daraus ein Bild.",
+      "explain": "Für schwach leuchtende Sterne ist wichtig, wie viel Licht die große vordere Linse oder der Hauptspiegel auffängt. Stärkeres Vergrößern allein zaubert keine feinen Einzelheiten in ein unscharfes Bild. Manche Fernrohre arbeiten mit Linsen, andere mit Spiegeln.",
+      "deeper": "Ein früher schriftlicher Beleg ist der niederländische Patentantrag von Hans Lippershey aus dem Jahr 1608. Galileo erfand das Fernrohr nicht, verbesserte und nutzte es aber für Himmelsbeobachtungen. Weltraumteleskope müssen nicht alle sichtbares Licht sammeln; je nach Strahlungsart brauchen sie andere Instrumente.",
+      "observe": "Vergleiche nur gezeichnete gleichmäßig verteilte Lichtpunkte hinter zwei unterschiedlich großen Kreisöffnungen. Welche Öffnung fängt mehr Punkte auf? Das ist ein Flächenvergleich, kein echtes optisches Experiment. Niemals mit Fernrohr, Fernglas oder Linse in die Sonne schauen.",
+      "benefit": "Du kannst Werbung mit riesigen Vergrößerungszahlen besser einordnen und verstehst, warum Forschende große Spiegel bauen.",
+      "date": "1608 · belegter Patentantrag; keine gesicherte Alleinerfindung",
+      "question": {
+        "prompt": "Warum kann ein größerer Hauptspiegel bei sonst gleichen Bedingungen schwächere Sterne zeigen?",
+        "answers": [
+          "Er sammelt mehr Licht",
+          "Er macht die Sterne heller als sie sind",
+          "Er holt die Sterne näher zur Erde"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche, wie viele gezeichnete Lichtpunkte in kleine und große Öffnung fallen.",
+        "wrong": [
+          "Der Spiegel verändert die tatsächliche Leuchtkraft des Sterns nicht.",
+          "Ein Fernrohr bewegt die Sterne nicht."
+        ],
+        "why": "Eine größere Sammelfläche fängt mehr des ankommenden Lichts auf."
+      },
+      "relatedReasons": {
+        "invention-satellite": "Weltraumteleskope können als künstliche Satelliten die Erde umkreisen.",
+        "invention-camera": "Optische Bilder können mit Kamerasensoren aufgezeichnet werden.",
+        "science-solar-system": "Fernrohre helfen, Körper im Sonnensystem zu beobachten."
+      },
+      "media": "Eigener Flächen-/Lichtpunktvergleich mit klarer Modellgrenze; kein reales Himmelsfoto oder Sonnenschauexperiment.",
+      "sourceClaims": [
+        {
+          "url": "https://science.nasa.gov/universe/telescopes-101/",
+          "anchor": "Telescopes / Refracting telescopes / Reflecting telescopes",
+          "claims": [
+            "Linsen/Spiegel sammeln Licht, Größe der Sammelfläche zählt"
+          ]
+        },
+        {
+          "url": "https://starchild.gsfc.nasa.gov/docs/StarChild/questions/question37.html",
+          "anchor": "Answer, erster und zweiter Absatz",
+          "claims": [
+            "Patentantrag 1608; Galileo nicht Erfinder"
+          ]
+        }
+      ],
+      "additionalCheck": "Sonnen-Sicherheitshinweis mit zugänglicher NASA-Sicherheitsquelle ergänzen; keine historische Aussage, Galileo sei der erste astronomische Nutzer überhaupt.",
+      "novelty": "Instrumentelle Lichtsammelfläche und Geschichte statt neuer Stern-/Planetenartikel."
+    },
+    {
+      "id": "invention-microscope",
+      "title": "Das Mikroskop",
+      "intro": "Wie werden kleine Strukturen unterscheidbar?",
+      "starter": "Ein Lichtmikroskop hilft, kleine Dinge genauer zu erkennen. Dafür braucht es Licht, Linsen und eine passende Scharfeinstellung.",
+      "explain": "Bei einem zusammengesetzten Lichtmikroskop erzeugt das Objektiv ein vergrößertes Zwischenbild. Durch das Okular kann dieses Bild weiter betrachtet werden. Ein bloß größeres unscharfes Bild zeigt noch keine zusätzlichen Einzelheiten.",
+      "deeper": "Robert Hooke veröffentlichte 1665 in Micrographia Zeichnungen von kleinen Strukturen. Die verlinkte Museumskopie seines beschriebenen Mikroskops stammt aus den 1920er-Jahren; sie ist kein Originalgerät von 1665. Mikroskopie ist älter als diese Veröffentlichung und entwickelte sich durch viele Menschen weiter.",
+      "observe": "Vergleiche in der späteren Ansicht zwei gleich stark vergrößerte Muster: eines scharf, eines verschwommen. Welche Unterschiede kannst du sicher beschreiben? Zum eigenen Beobachten reicht Papier mit feinem Aufdruck. Keine unbekannten Flüssigkeiten oder Körperproben untersuchen.",
+      "benefit": "Du unterscheidest Vergrößerung von erkennbaren Details und lernst, ein Museumsoriginal von einer späteren Nachbildung zu unterscheiden.",
+      "date": "1665 · Hookes Micrographia, nicht Erfindungsjahr aller Mikroskope",
+      "question": {
+        "prompt": "Ein Bild wird größer angezeigt, bleibt aber genauso unscharf. Sind damit sicher neue Details sichtbar?",
+        "answers": [
+          "Nein, Größe allein reicht nicht",
+          "Ja, mehr Vergrößerung schafft immer neue Einzelheiten",
+          "Ja, größere Bildpunkte machen selbst unsichtbare Trennlinien sichtbar"
+        ],
+        "correct": 0,
+        "hint": "Kannst du im verschwommenen Muster wirklich zwei benachbarte Linien unterscheiden?",
+        "wrong": [
+          "Eine weitere Vergrößerung kann ein unscharfes Bild nur größer machen.",
+          "Größere Bildpunkte enthalten nicht automatisch zusätzliche Informationen."
+        ],
+        "why": "Erkennbare Details hängen auch von Optik, Schärfe und Beleuchtung ab."
+      },
+      "relatedReasons": {
+        "invention-telescope": "Beide nutzen Optik; Mikroskope untersuchen kleine nahe Strukturen statt ferne Himmelskörper."
+      },
+      "media": "Eigener Vergleich von Vergrößerung und Detailerkennbarkeit; qualifiziertes Lichtmikroskop, kein Elektronenmikroskop. Keine kopierten Hooke-Illustrationen.",
+      "sourceClaims": [
+        {
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8391/hookes-compound-microscope-copy-1665-1675",
+          "anchor": "Absatz Robert Hooke’s bestseller / this 1920s replica",
+          "claims": [
+            "Micrographia 1665; Museumsexemplar spätere Replik"
+          ]
+        }
+      ],
+      "additionalCheck": "Vollständige Primärfachquelle zum optischen Strahlengang/Auflösungsbegriff fehlt noch; daher Manuskript, nicht produktionsreif.",
+      "novelty": "Mikroskopisches Instrument, Auflösung und Nachbildungsquellenkritik statt Synonym für Vergrößerung."
+    },
+    {
+      "id": "invention-refrigerator",
+      "title": "Der Kühlschrank",
+      "intro": "Wohin verschwindet die Wärme aus dem Inneren?",
+      "starter": "Ein Kühlschrank transportiert Wärme aus seinem Innenraum nach draußen. Dafür braucht er Energie.",
+      "explain": "Bei einem üblichen Kompressorkühlschrank nimmt ein Kältemittel innen Wärme auf und gibt sie außen wieder ab. Ein Kompressor und weitere Bauteile halten den Kreislauf in Gang. Deshalb wird der Raum durch einen Kühlschrank nicht insgesamt kälter. Auch die zugeführte elektrische Energie landet am Ende überwiegend als Wärme im Raum.",
+      "deeper": "Kälte ist kein Stoff, den das Gerät hineinfüllt. Wärmedämmung bremst den Wärmestrom von außen nach innen. Unterschiedliche Geräte nutzen unterschiedliche Kältemittel; sie gehören in geschlossene, fachgerecht gewartete Systeme. Die verlinkte große Kühlanlage stammt von 1906 und ist ein Beispiel aus der Entwicklung, keine erste Erfindung aller Kühlschränke.",
+      "observe": "Zeichne einen Kasten und zwei verschiedenfarbige Pfeile: Wärme innen nach außen, elektrische Energie zum Gerät. Was ändert sich, wenn die Tür offen bleibt? Nur zeichnen und überlegen; keine Geräteteile anfassen oder Rohre öffnen.",
+      "benefit": "Du verstehst, warum eine geschlossene Tür und gute Dämmung helfen und warum ein Kühlschrank kein Ersatz für eine Raumkühlung ist.",
+      "date": "1906 · verlinkte historische Kühlanlage, kein Erfindungsdatum",
+      "question": {
+        "prompt": "Ein Kühlschrank läuft mit offener Tür im geschlossenen Raum. Wird der ganze Raum dadurch dauerhaft kühler?",
+        "answers": [
+          "Nein, das Gerät gibt die transportierte Wärme und seine Betriebsenergie an den Raum ab",
+          "Ja, aus der Tür entweicht Kälte ohne Wärmeabgabe",
+          "Ja, die Steckdose nimmt die gesamte Wärme wieder auf"
+        ],
+        "correct": 0,
+        "hint": "Verfolge sowohl den Wärmepfeil als auch den Energiepfeil über die Grenze des ganzen Raumes.",
+        "wrong": [
+          "Die Wärme wird außen wieder abgegeben; es entweicht kein eigener Stoff namens Kälte.",
+          "Die Stromversorgung liefert Energie und ist hier kein Wärmeabfluss aus dem Raum."
+        ],
+        "why": "Ohne eine Wärmeabgabe außerhalb des Raums wird daraus keine Raumkühlung."
+      },
+      "relatedReasons": {
+        "science-heat-transfer": "Wärmeübertragung und Dämmung erklären die zwei Seiten des Kühlschranks.",
+        "science-energy": "Der Betrieb benötigt Energie; der Stromverbrauch ist von der transportierten Wärme zu unterscheiden."
+      },
+      "media": "Eigene Energieflussgrafik mit eindeutigem Innen-/Außenraum, keine gefährliche Bauanleitung. Kompressorzyklus vor detaillierter Animation zusätzlich belegen.",
+      "sourceClaims": [
+        {
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co64200/co2-refrigeration-plant-by-j-and-e-hall",
+          "anchor": "Objektdaten Made 1906 und Erklärung zum Wärmetransport",
+          "claims": [
+            "Datiertes Objekt 1906",
+            "Kompression/Expansion im Wärmetransport"
+          ]
+        }
+      ],
+      "additionalCheck": "Energieflussbilanz und genaues Verdampfer-/Verflüssigerprinzip benötigen zweite vollständig gelesene Primärfachquelle; Museumstext allein ist kein vollständiger Lehrbuchbeleg.",
+      "novelty": "Technischer Wärmetransport und Systemgrenze statt zweite allgemeine Wärmekarte."
+    },
+    {
+      "id": "invention-bicycle",
+      "title": "Das Fahrrad",
+      "intro": "Wie erreicht die Kraft deiner Beine das Hinterrad?",
+      "starter": "Beim gewöhnlichen Kettenfahrrad bewegen die Pedale eine Kette. Sie treibt das Hinterrad an.",
+      "explain": "Die Kette verbindet das Kettenblatt vorn mit einem Zahnrad am Hinterrad. Eine Übersetzung kann verändern, wie oft sich das Rad bei einer Pedalumdrehung dreht. Das tauscht Kraftbedarf gegen Weg, ohne zusätzliche Energie zu erfinden.",
+      "deeper": "Das Rover-Sicherheitsfahrrad von 1885 hatte einen Hinterrad-Kettenantrieb und ähnlich große Räder. Gegenüber dem Hochrad saß man näher am Boden. Dieses Museumsobjekt hatte Vollgummireifen; heutige Luftreifen dürfen nicht in seine Zeichnung zurückdatiert werden. Fahrradgeschichte begann vor 1885 und hat viele Beteiligte.",
+      "observe": "Zeichne zwei gezahnte Kreise und markiere je einen Zahn. Vergleiche bei einer langsamen gedachten Kettenbewegung ein kleines und ein großes hinteres Zahnrad. Erkläre: Was ändert sich an Drehzahl und notwendiger Pedalkraft? Keinen echten Antrieb mit Fingern drehen.",
+      "benefit": "Du kannst einen leichteren Gang mit mehr Pedalumdrehungen verbinden und vermeidest die Vorstellung kostenloser Energie durch Zahnräder.",
+      "date": "1885 · Rover-Sicherheitsfahrrad, nicht das erste Fahrrad überhaupt",
+      "question": {
+        "prompt": "Was verbindet beim beschriebenen Kettenfahrrad die Pedale mit dem Hinterrad?",
+        "answers": [
+          "Kettenblatt, Kette und hinteres Zahnrad",
+          "Allein das Vorderrad, ohne Verbindung zum Pedal",
+          "Die Vorderradbremse als Antrieb des Hinterrads"
+        ],
+        "correct": 0,
+        "hint": "Verfolge den mechanischen Weg vom Pedal zum Hinterrad.",
+        "wrong": [
+          "Das Vorderrad stellt in diesem Modell keinen mechanischen Weg vom Pedal zum Hinterrad her.",
+          "Eine Bremse verzögert die Bewegung; sie überträgt hier nicht den Pedalantrieb."
+        ],
+        "why": "Die Kette überträgt die Bewegung zwischen dem vorderen und dem hinteren Zahnrad."
+      },
+      "relatedReasons": {
+        "science-friction": "Reifen brauchen Halt am Boden, während Reibung an anderer Stelle bremst.",
+        "science-lever": "Mechanische Übersetzungen tauschen Kraft und Weg.",
+        "invention-car": "Beide benötigen Antrieb, Steuerung und sichere Bremsen; die Energiequellen unterscheiden sich."
+      },
+      "media": "Eigener nummerierter Kettenantrieb, gleichzeitige sichtbare Drehrichtungen; historische Vollgummireifen von heutiger Vergleichsansicht trennen.",
+      "sourceClaims": [
+        {
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co25833/rover-safety-bicycle-1885",
+          "anchor": "Objektbeschreibung Kettenantrieb, Räder, Vollgummi und Starley 1885; Rights",
+          "claims": [
+            "Rover 1885 und Ketten-Hinterradantrieb",
+            "Historisches Objekt hat Vollgummireifen; niedrigere Sitzlage als Hochrad"
+          ]
+        }
+      ],
+      "additionalCheck": "Übersetzungs-/Kraftbeziehung noch an vollständiger primärer Mechanikquelle überprüfen; keine aktuelle Unfallquote behaupten.",
+      "novelty": "Muskelbetriebener Kettenantrieb und Gangübersetzung statt weiteres Kraftfahrzeug."
+    },
+    {
+      "id": "invention-elevator",
+      "title": "Der Aufzug",
+      "intro": "Was hilft einer Kabine sicher von Stockwerk zu Stockwerk?",
+      "starter": "Ein Aufzug bewegt Menschen oder Lasten nach oben und unten. Antrieb und Sicherheitseinrichtungen haben dabei verschiedene Aufgaben.",
+      "explain": "Bei einem typischen Seilaufzug bewegt ein Antrieb die Kabine über Seile und eine Treibscheibe. Ein Gegengewicht gleicht einen Teil der Masse aus. Sicherheit entsteht durch mehrere zusammenarbeitende Einrichtungen, nicht allein durch einen starken Motor. Andere Aufzüge arbeiten beispielsweise hydraulisch.",
+      "deeper": "Elisha Otis verkaufte 1853 einen Aufzug mit einer Sicherheitsbremse. 1854 zeigte er eine Fangvorrichtung öffentlich; 1857 installierte sein Unternehmen einen Personenaufzug im New Yorker Haughwout-Gebäude. Das sind Entwicklungsschritte, keine Behauptung, vorher habe es keine Lastenaufzüge gegeben. Die Unternehmenschronik ist eine Eigenquelle und braucht kritischen Gegenabgleich.",
+      "observe": "Vergleiche im Bildschirmplan die Rollen: Was bewegt die Kabine, was hält sie im Störungsfall? Ordne die Aufgaben zunächst ohne Auflösung zu. Keine echten Türen blockieren, keinen Schacht betreten und keine Sicherheitseinrichtung ausprobieren.",
+      "benefit": "Du erkennst, warum Barrierefreiheit und sichere Wartung ebenso zur Technik gehören wie schnelleres Hochfahren.",
+      "date": "1853/1854 · Otis-Sicherheitsbremse und öffentliche Vorführung",
+      "question": {
+        "prompt": "Welche Aufgabe hat die Fangvorrichtung im beschriebenen Sicherheitsmodell?",
+        "answers": [
+          "Eine gefährliche Abwärtsbewegung im Störungsfall bremsen",
+          "Statt des Antriebs jede normale Fahrt ausführen",
+          "Die Masse der Kabine dauerhaft beseitigen"
+        ],
+        "correct": 0,
+        "hint": "Trenne den normalen Antrieb von der Einrichtung für einen Störungsfall.",
+        "wrong": [
+          "Die Fangvorrichtung ist für den Störungsfall da und ersetzt nicht den gewöhnlichen Antrieb.",
+          "Die Einrichtung bremst eine Bewegung; sie lässt die Masse der Kabine nicht verschwinden."
+        ],
+        "why": "Die Fangvorrichtung ist eine zusätzliche Sicherheitseinrichtung; sie ist nicht der gewöhnliche Antrieb."
+      },
+      "relatedReasons": {
+        "science-friction": "Bremsende Kräfte sind für das Sicherheitsprinzip wichtig.",
+        "science-motor": "Ein Antrieb kann elektrische Energie in Bewegung umsetzen.",
+        "building-eiffel-tower": "Der Eiffelturm besitzt Aufzüge; seine geneigten Pfeiler stellen besondere Anforderungen."
+      },
+      "media": "Eigener qualitativer Seil-/Gegengewichtsplan. Keine Bau- oder Manipulationsanleitung und keine Behauptung, jede Aufzugsart habe denselben Aufbau.",
+      "sourceClaims": [
+        {
+          "url": "https://www.otis.com/en/us/our-company/history",
+          "anchor": "1850s: 1853, 1854, 1854–57",
+          "claims": [
+            "Verkauf 1853, Vorführung 1854, Personenaufzug 1857"
+          ]
+        }
+      ],
+      "additionalCheck": "Unabhängiger Museums-/Patentgegenabgleich und technische Primärquelle zu Treibscheibe/Gegengewicht offen. Verbindungs-IDs vor Integration gegen Katalog prüfen.",
+      "novelty": "Vertikaler Transport, Gegenlast und getrennte Sicherheit statt zweiter Hochhausartikel."
+    },
+    {
+      "id": "invention-seismograph",
+      "title": "Der Seismograf",
+      "intro": "Wie lässt sich zitternder Boden aufzeichnen?",
+      "starter": "Ein Seismograf zeichnet Bodenbewegungen auf. Das hilft, bereits entstandene Erdbeben zu untersuchen.",
+      "explain": "In einem einfachen Modell bewegt sich das am Boden befestigte Gehäuse mit dem Boden. Eine aufgehängte Masse folgt wegen ihrer Trägheit anders. Die relative Bewegung kann als Kurve aufgezeichnet werden. Diese Aufzeichnung heißt Seismogramm; ein Seismometer bezeichnet den messenden Teil, oft wird das Wort auch für das Gerät benutzt.",
+      "deeper": "Eine einzelne Kurve verrät nicht von selbst den genauen Ort eines Bebens. Forschende vergleichen Messungen mehrerer Stationen und Wellenankunftszeiten. Heutige Geräte speichern oft digital. Der USGS-Zeitstrahl nennt mehrere Entwicklungsschritte im 19. Jahrhundert; eine vereinfachende FAQ-Angabe von 1890 als erste Erfindung wird deshalb nicht unbesehen übernommen.",
+      "observe": "Vergleiche im späteren Bildschirmmodell Boden, Gehäuse, Masse und Kurve. Sage voraus, was sich relativ wozu bewegt. Wiederhole nur mit einer anderen gedachten Bewegungsrichtung. Keine schweren Pendel oder wackligen Aufbauten bauen.",
+      "benefit": "Du unterscheidest eine Messung nach Beginn von Erschütterungen von einer angeblich sicheren Vorhersage eines künftigen Erdbebens.",
+      "date": "19. Jahrhundert · mehrere Entwicklungsschritte; kein einziges Erstjahr behauptet",
+      "question": {
+        "prompt": "Was ist ein Seismogramm?",
+        "answers": [
+          "Die aufgezeichnete Bodenbewegung an einer Messstation",
+          "Ein sicherer Kalender aller zukünftigen Erdbeben",
+          "Ein Foto des gesamten Erdinneren"
+        ],
+        "correct": 0,
+        "hint": "Trenne Gerät, Messwert und spätere Deutung.",
+        "wrong": [
+          "Eine Aufzeichnung macht daraus keinen Kalender künftiger Beben.",
+          "Eine einzelne Bewegungskurve ist kein Foto und zeigt nicht das gesamte Erdinnere."
+        ],
+        "why": "Die Kurve dokumentiert gemessene Bewegung; weitere Stationen und Auswertung helfen bei der Einordnung."
+      },
+      "relatedReasons": {
+        "science-pendulum": "Eine träge aufgehängte Masse kann für ein vereinfachtes Messprinzip genutzt werden.",
+        "science-resonance": "Ein Messgerät reagiert selbst auf Bewegung; sein Verhalten muss bei der Auswertung berücksichtigt werden."
+      },
+      "media": "Eigene relative Bewegungszeichnung mit fest beschriftetem Bezugssystem und qualitativer Kurve; ausdrücklich keine Bebenprognose.",
+      "sourceClaims": [
+        {
+          "url": "https://www.usgs.gov/programs/earthquake-hazards/seismographs-keeping-track-earthquakes",
+          "anchor": "Abschnitte Seismographs sowie Digital Seismometers",
+          "claims": [
+            "Masse/Gehäuse und relative Bewegung; mehrere Richtungen/Stationen",
+            "Digitale Aufzeichnung"
+          ]
+        },
+        {
+          "url": "https://earthquake.usgs.gov/education/eqscience-timeline.php",
+          "anchor": "1855, 1879, 1889, 1894",
+          "claims": [
+            "Mehrere Entwicklungsschritte statt singulärer Erst-Erfindung 1890"
+          ]
+        }
+      ],
+      "additionalCheck": "Vor UI-Übernahme FAQ-Grundbegriffe vollständig abrufen und sichere Vorhersagegrenze mit eigener aktueller USGS-FAQ belegen.",
+      "novelty": "Messgerät, Bezugssystem und Datenauswertung statt weiterer Erdbebenbeschreibung."
+    },
+    {
+      "id": "invention-3d-printing",
+      "title": "Der 3D-Druck",
+      "intro": "Wie wird aus einem digitalen Entwurf ein räumlicher Gegenstand?",
+      "starter": "Ein 3D-Drucker baut einen Gegenstand nach digitalen Vorgaben auf. Häufig entsteht er Schicht für Schicht.",
+      "explain": "Beim additiven Herstellen wird Material gezielt aufgebaut. Eine Fräse arbeitet anders: Sie nimmt Material von einem Ausgangsstück weg. Verschiedene 3D-Druckverfahren nutzen beispielsweise Kunststoff, Metall oder Keramik. Nicht jedes Verfahren schmilzt einen Kunststofffaden.",
+      "deeper": "Charles Hull entwickelte die Stereolithografie, bei der geeignetes flüssiges Material durch Licht schichtweise aushärtet. Für dieses Verfahren erhielt er 1986 ein Patent. Das Datum bezeichnet nicht die gemeinsame Erfindung sämtlicher additiven Verfahren. Ein fertiger Entwurf und ein gelungener Druck sind außerdem noch keine Freigabe für ein sicherheitskritisches Bauteil.",
+      "observe": "Ordne drei selbst gezeichnete Querschnitte zu einem Stapel. Sage voraus, welche Form daraus entsteht, und vergleiche mit der Seitenansicht. Ändere eine mittlere Schicht. Keine heißen Düsen, Harze, Pulver oder Laser selbst bedienen.",
+      "benefit": "Du verstehst räumliche Entwürfe, prüfst Modellgrenzen und erkennst den Unterschied zwischen einem Anschauungsmodell und einem geprüften Ersatzteil.",
+      "date": "1986 · Patent auf Hulls Stereolithografie, nicht Beginn aller additiven Verfahren",
+      "question": {
+        "prompt": "Was beschreibt additives Herstellen am besten?",
+        "answers": [
+          "Material nach einem Entwurf aufbauen",
+          "Immer nur Material von einem vollen Block wegnehmen",
+          "Aus einem beliebigen Foto automatisch ein geprüftes Bauteil herstellen"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche Aufbauen mit dem Wegnehmen eines Materials.",
+        "wrong": [
+          "Das beschreibt abtragende Bearbeitung und nicht den additiven Aufbau.",
+          "Ein Foto ersetzt weder den räumlichen Entwurf noch die notwendige Bauteilprüfung."
+        ],
+        "why": "Additive Verfahren bauen Material gezielt auf; Material und genaue Technik unterscheiden sich."
+      },
+      "relatedReasons": {
+        "invention-computer": "Ein digitaler Entwurf enthält die Vorgaben für den Aufbau.",
+        "invention-printing": "Beide folgen einem Entwurf, aber räumlicher Materialaufbau unterscheidet sich vom Buchdruck.",
+        "science-angle": "Ansichten und Winkel helfen, einen räumlichen Entwurf zu beschreiben."
+      },
+      "media": "Eigener tastaturbedienbarer Schichtvergleich aus drei Querschnitten; keine realistische Produktfestigkeit simulieren.",
+      "sourceClaims": [
+        {
+          "url": "https://www.nist.gov/additive-manufacturing/what-additive-manufacturing",
+          "anchor": "What is Additive Manufacturing? und Werkstoffbeispiele",
+          "claims": [
+            "Additiver Aufbau; verschiedene Werkstoffe"
+          ]
+        },
+        {
+          "url": "https://www.invent.org/blog/inventors/3d-printing-chuck-hull",
+          "anchor": "1986 patented stereolithography",
+          "claims": [
+            "Patentjahr 1986 für Hulls Verfahren"
+          ]
+        },
+        {
+          "url": "https://www.invent.org/inductees/charles-hull",
+          "anchor": "Method uses UV light; photopolymer layer by layer",
+          "claims": [
+            "Stereolithografie mit lichtaushärtendem Material"
+          ]
+        }
+      ],
+      "additionalCheck": "NIHF-Blog-Haupttext sowie Stützstrukturen/Querschnittsmodell vor Produktintegration vollständig prüfen; keine Kostengrenze oder Festigkeitsgarantie behaupten.",
+      "novelty": "Räumlicher Materialaufbau mit Querschnitten statt neu benanntem Buchdruck."
+    },
+    {
+      "id": "invention-sewing-machine",
+      "title": "Die Nähmaschine",
+      "intro": "Wie kann eine Maschine zwei Fäden zu einer Naht verbinden?",
+      "starter": "Eine Nähmaschine bewegt Nadel und Faden in einer wiederholten Folge. Bei einem Doppelsteppstich greifen zwei Fäden ineinander.",
+      "explain": "In Howes historischer Maschine arbeiteten eine Nadel und ein Schiffchen mit einem zweiten Faden zusammen. So entstand ein anderer Bewegungsablauf als beim Nähen von Hand. Das Patent wurde am 10. September 1846 erteilt. Es ist ein belegter Entwicklungsschritt, kein Beweis für einen alleinigen Erfinder sämtlicher Nähmaschinen.",
+      "deeper": "Nicht jede Nähmaschine erzeugt dieselbe Stichart. Auch der Transport des Stoffs und die Abstimmung der Bewegungen gehören zur Funktion. Maschinen erleichtern gleichmäßige Wiederholung; Stoffwahl, Planung, Reparatur und sichere Bedienung bleiben menschliche Aufgaben.",
+      "observe": "Lege auf Papier zwei verschiedenfarbige gezeichnete Fadenwege übereinander. Beschreibe, an welcher Stelle sie sich verschlingen sollen. Vergleiche eine lose Kreuzung mit einer Verbindung. Nur zeichnen; keine echte Nadel oder eingeschaltete Maschine verwenden.",
+      "benefit": "Du erkennst, wie ein technisches System eine Aufgabe mit einem eigenen Ablauf löst, statt eine menschliche Hand bloß nachzubauen.",
+      "date": "1846 · Howes belegtes Patent auf eine Doppelsteppstich-Maschine",
+      "question": {
+        "prompt": "Welche Zusammenarbeit beschreibt die hier erklärte historische Doppelsteppstich-Maschine?",
+        "answers": [
+          "Nadel und Schiffchen verbinden zwei Fäden",
+          "Eine Nadel ohne zweiten Faden erzeugt denselben Doppelsteppstich",
+          "Der Stoff klebt ohne Fadenverbindung zusammen"
+        ],
+        "correct": 0,
+        "hint": "Achte auf die zwei getrennten Fadenwege und ihre Verbindung.",
+        "wrong": [
+          "Der hier beschriebene Doppelsteppstich benötigt zwei ineinandergreifende Fäden. Andere Sticharten sind davon zu unterscheiden.",
+          "Die beschriebene Naht entsteht durch Fäden und nicht durch Klebstoff."
+        ],
+        "why": "Die Quelle beschreibt Nadel und Schiffchenfaden als zusammenwirkende Teile der Stichbildung."
+      },
+      "relatedReasons": {
+        "invention-computer": "Ein verlässlich wiederholter Ablauf lässt sich in einzelne Schritte zerlegen; das macht ihn noch nicht zu einem Computer.",
+        "invention-printing": "Beide mechanisieren wiederholte Arbeit, verarbeiten aber andere Materialien mit anderer Wirkung."
+      },
+      "media": "Eigene schematische Stichfolge mit zwei unterscheidbaren Fadenfarben und Text; historische Patentzeichnung nicht kopieren und keine gefährliche Bedienanleitung.",
+      "sourceClaims": [
+        {
+          "url": "https://www.archives.gov/exhibits/designs_for_democracy/symbols_and_substance/articles/sewing_machine_2.html",
+          "anchor": "Patent granted September 10, 1846; needle and shuttle thread",
+          "claims": [
+            "Patentdatum und zwei ineinandergreifende Fäden"
+          ]
+        },
+        {
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co44744/sewing-machine-by-elias-howe",
+          "anchor": "Objekt circa 1846; Lockstitch und Weiterentwicklung",
+          "claims": [
+            "Historischer Objektnachweis und Rechts-/Entwicklungskontext"
+          ]
+        }
+      ],
+      "additionalCheck": "Ablaufanimation mit korrekter Schleifen-/Schiffchenbewegung vor Produktintegration fachlich gegen konkrete Primärzeichnung prüfen. Keine Produktivitätszahl ungeprüft übernehmen.",
+      "novelty": "Textiltechnik und Fadenverbindung statt künstliche Abspaltung einer vorhandenen Maschine."
+    }
+  ],
+  "preparedExisting": [
+    {
+      "id": "invention-light",
+      "starter": "Eine elektrische Lampe macht aus elektrischer Energie Licht. Damit ein Raum hell wird, müssen Lampe und Stromversorgung zusammenpassen.",
+      "paragraph": "Eine Lampe allein ist noch kein Beleuchtungssystem. Leitungen bringen elektrische Energie zur Lampe, Schalter steuern den Stromweg. Bei einer Glühlampe leuchtet ein heißer Faden; heutige Lampen können anders arbeiten. Der Vergleich zeigt deshalb zwei Bauarten und keinen einzigen unveränderten Lampentyp.",
+      "observe": "Wähle im vorhandenen Plan nacheinander Leuchtteil, Leitung und Anschluss. Beschreibe jeweils eine andere Aufgabe. Vergleiche dann Damals und Heute: Welches Ziel bleibt gleich, obwohl sich die Bauart verändert? Nur am Bildschirm untersuchen, keine echte Lampe öffnen.",
+      "benefit": "Du unterscheidest ein einzelnes Bauteil vom ganzen Versorgungssystem und kannst erklären, warum eine gute Idee oft viele zusammenpassende Verbesserungen braucht.",
+      "hint": "Vergleiche das Ziel einer Lampe mit dem Ziel eines Verkehrsmittels. Was soll sich für Menschen nach Sonnenuntergang ändern?",
+      "wrong": [
+        "Durch die Luft zu reisen ist ein Transportproblem. Hier geht es um die Wahrnehmung in einem dunklen Raum.",
+        "Wiederholte Rechnungen gehören zu einer anderen Aufgabe. Die Lampe führt keine Rechenanweisungen aus."
+      ],
+      "sourceStatus": "NPS-Haupttext vollständig gelesen, insbesondere Glühfaden/Systembestandteile und ausdrücklicher Hinweis auf viele Beteiligte; heutige LED-Funktion vor weiterer Detailerweiterung gesondert belegen."
+    },
+    {
+      "id": "invention-car",
+      "starter": "Ein Auto hat einen Antrieb, der seine Räder bewegen kann. Lenken und Bremsen sind andere Aufgaben als das Antreiben.",
+      "paragraph": "Motor, Räder, Lenkung und Bremsen müssen zusammenarbeiten. Ein stärkerer Motor ersetzt keine verlässlichen Bremsen und keine passende Straße. Der historische Benzinwagen ist ein Entwicklungsschritt; heutige Autos haben unterschiedliche Antriebe. Die Karte bezeichnet deshalb nicht ein einziges Fahrzeug als Ursprung sämtlicher Autos.",
+      "observe": "Untersuche im vorhandenen Teileplan Antrieb, Räder, Lenkung und Bremse. Denke dir einen Fehler bei genau einem Teil aus. Welches Verhalten des Autos würde sich ändern, welches andere Teil könnte den Fehler nicht einfach ersetzen? Keine echten Fahrzeuge bedienen.",
+      "benefit": "Du beschreibst Technik über zusammenwirkende Aufgaben und beurteilst ein Verkehrsmittel auch nach Sicherheit statt allein nach Motorleistung.",
+      "hint": "Welche beiden Antworten betreffen vor allem Informationen? Welche betrifft dagegen den Transport eines Wagens?",
+      "wrong": [
+        "Eine Stimme weit zu übertragen betrifft ein Kommunikationsgerät. Der Wagen soll Menschen oder Lasten fortbewegen.",
+        "Computer zu verbinden ist ein Informationsproblem. Hier wird eine mechanische Bewegung gesucht."
+      ],
+      "sourceStatus": "Mercedes-Benz-Primärseite vollständig im Hauptabschnitt gelesen; Hersteller-Eigenquelle, unabhängiger Abgleich und sichere Brems-/Antriebsfachquelle für weitergehende Behauptungen offen."
+    },
+    {
+      "id": "invention-railway",
+      "starter": "Ein Zug bewegt Wagen auf Schienen. Viele Reisende oder Waren können zusammen transportiert werden.",
+      "paragraph": "Zur Eisenbahn gehören mehr Dinge als eine Lokomotive: Fahrzeuge, Gleise, Stationen und ein abgestimmter Betrieb. Ein historischer Eröffnungstag belegt deshalb nicht die plötzliche Erfindung aller ihrer Teile. Die Quelle beschreibt die Fahrt von Locomotion 1825 und erklärt ausdrücklich, dass diese Maschine nicht die erste Dampflokomotive war.",
+      "observe": "Wähle im vorhandenen Plan Gleis, Antrieb und Wagen. Ordne gedanklich zu: Was trägt und führt, was bewegt, was transportiert die Menschen oder Waren? Vergleiche das historische Fahrzeug mit der heutigen Darstellung. Nicht an echten Gleisen forschen.",
+      "benefit": "Du erkennst Verkehr als abgestimmtes System und kannst ein belegtes Ereignis von einer zu einfachen Geschichte über einen einzelnen Erfinder unterscheiden.",
+      "hint": "Überlege, welches Problem eine gemeinsame Strecke mit vielen Wagen löst. Die anderen Antworten betreffen Rechnen und Orientierung.",
+      "wrong": [
+        "Ein Rechner kann wiederholte Rechnungen bearbeiten. Das erklärt noch nicht den Transport vieler Wagen auf einer Strecke.",
+        "Landmarken oder Sterne betreffen vor allem Orientierung. Die Eisenbahnkarte fragt nach dem gemeinsamen Transport."
+      ],
+      "sourceStatus": "National-Railway-Museum-Haupttext zur Fahrt27.09.1825, älteren Lokomotiven und Infrastruktur gelesen; keine Fahrgastzahl oder aktuelle Umweltbilanz ergänzt."
+    },
+    {
+      "id": "invention-airplane",
+      "starter": "Flügel, Antrieb und Steuerung haben beim Flugzeug verschiedene Aufgaben. Ein Flugzeug muss sich nicht nur in der Luft halten, sondern auch lenken lassen.",
+      "paragraph": "Beim Fliegen wirken Auftrieb, Gewichtskraft, Schub und Widerstand zusammen. Ein Flugzeug lässt sich nicht allein durch einen großen Motor erklären. Seine Flügel, Fluglage und Steuerung beeinflussen die Bewegung ebenfalls. Das vorhandene Modell ist eine vereinfachte Lernhilfe und keine Anleitung zum Bauen oder Fliegen.",
+      "observe": "Vergleiche im Teileplan Flügel, Antrieb und Steuerflächen. Sage voraus: Welche Aufgabe würde fehlen, wenn man nur den Motor betrachtet? Prüfe danach die Beschreibung jedes Teils und ändere deine Erklärung, falls nötig.",
+      "benefit": "Du unterscheidest Kräfte und Steuerung und erkennst, warum ein erfolgreicher Versuch mehr braucht als die Erzeugung von Vorwärtsbewegung.",
+      "hint": "Verbinde das Fortbewegungsziel mit dem Ort, an dem es erreicht werden soll. Datenübertragung und Vervielfältigung lösen andere Probleme.",
+      "wrong": [
+        "Informationen zwischen Computern zu übertragen beschreibt ein Netzwerk. Es erklärt nicht den Transport durch die Luft.",
+        "Viele gleiche Buchseiten zu erzeugen ist eine Vervielfältigungsaufgabe. Ein Flugzeug braucht stattdessen tragende und steuernde Flächen."
+      ],
+      "sourceStatus": "NASA-Haupttext zu allen vier Kräften, Steuerung und Unterscheidung von Schub/Auftrieb vollständig gelesen. Keine zusätzliche historische Erstbehauptung eingeführt."
+    },
+    {
+      "id": "invention-phone",
+      "starter": "Ein Telefon überträgt Signale. Im Empfänger werden sie wieder als Stimme hörbar.",
+      "paragraph": "Mikrofon, Übertragungsweg und Lautsprecher lösen verschiedene Teile der Aufgabe. Das Mikrofon nimmt Schall auf, der Übertragungsweg bringt ein Signal weiter, und der Lautsprecher erzeugt wieder Schall. Ein verständliches Gespräch braucht das Zusammenwirken dieser Teile.",
+      "observe": "Gehe im Plan die Reihenfolge Mikrofon, Signalweg, Lautsprecher durch. Beschreibe, an welcher Stelle Schall vorkommt und wo ein übertragenes Signal. Was wäre bei einem ausgefallenen Lautsprecher noch möglich, was nicht?",
+      "benefit": "Du trennst eine Nachricht von ihrem technischen Transport und kannst einen Fehler an einer bestimmten Stelle des Weges vermuten.",
+      "hint": "Welche Antwort betrifft den Austausch zwischen zwei Menschen, auch wenn sie weit voneinander entfernt sind?",
+      "wrong": [
+        "Richtungen ohne Landmarken zu bestimmen ist eine Orientierungsaufgabe. Ein Telefon überträgt dagegen ein Gespräch.",
+        "Geräte ins Weltall zu bringen erfordert einen Transportantrieb. Das Telefon selbst übernimmt diesen Start nicht."
+      ],
+      "sourceStatus": "Bisherige Smithsonian-Objektseite erneut404. Alternative Smithsonian-Katalogseite nmah_704159 vollständig gelesen: Membran, veränderlicher Strom und hörbare Schwingung am Empfänger; Beleg für das Funktionsprinzip, nicht für sämtliche Patentprioritäten."
+    },
+    {
+      "id": "invention-computer",
+      "starter": "Ein Computer führt Anweisungen aus. Er braucht passende Daten und ein Programm; schneller rechnen bedeutet nicht automatisch, richtig zu entscheiden.",
+      "paragraph": "Eingabe, Verarbeitung, Arbeitsspeicher, dauerhafter Speicher und Ausgabe erfüllen verschiedene Aufgaben. Ein Ergebnis kann falsch sein, obwohl der Rechner seine Anweisungen genau befolgt hat: Auch die Daten oder das Programm können ungeeignet sein. Die große Geschichte der Computer besteht aus vielen unterschiedlich gebauten Geräten.",
+      "observe": "Verfolge im vorhandenen Plan eine eingegebene Zahl bis zur Ausgabe. Vergleiche danach Arbeitsspeicher und dauerhaften Speicher. Welche Aufgabe hätten beide, wenn du einen Text bearbeitest und ihn anschließend speichern möchtest?",
+      "benefit": "Du kannst technische Abläufe erklären und prüfst Ergebnisse, statt einem schnellen Gerät automatisch Recht zu geben.",
+      "hint": "Denke an viele gleiche Arbeitsschritte mit Daten. Welche Antwort beschreibt diese Wiederholung statt bloß ein bestimmtes Medium oder einen Aufenthaltsort?",
+      "wrong": [
+        "Buchseiten oft zu vervielfältigen erklärt eine Drucktechnik. Ein Computer kann jedoch viele unterschiedliche Anweisungen verarbeiten.",
+        "Ein Gerät im Weltraum kann einen Computer enthalten. Der Computer ist aber nicht durch seinen Aufenthaltsort definiert."
+      ],
+      "sourceStatus": "CHM-Computerzeitstrahl vollständig abrufbar, ausgewählte Hauptstellen zu verschiedenen Rechnerbauformen gelesen. Keine Masse-/Leistungszahl oder singuläre Erst-Erfinderbehauptung ergänzt."
+    },
+    {
+      "id": "invention-internet",
+      "starter": "Das Internet verbindet viele Computernetze. Gemeinsame Regeln helfen den Geräten, Informationen auszutauschen.",
+      "paragraph": "Informationen können in Datenpaketen übertragen werden. Die beteiligten Netze brauchen gemeinsame Regeln, damit diese Pakete an passenden Stellen weitergegeben werden können. Ein einzelnes Gerät oder ein einzelnes Netz ist deshalb noch nicht das gesamte Internet. Seine Geschichte umfasst viele Beiträge aus verschiedenen Ländern.",
+      "observe": "Vergleiche im vorhandenen Plan Endgerät, Verbindung und Vermittlungspunkt. Erkläre den Weg einer Nachricht in eigenen Worten. Welche Verbindung könnte unterbrochen sein, wenn dein Gerät funktioniert, aber das Ziel nicht erreichbar ist? Das ist eine Denkaufgabe, kein Eingriff in echte Netze.",
+      "benefit": "Du unterscheidest ein Gerät von einem Netz und kannst Verbindungsprobleme eingrenzen, ohne private Daten oder Passwörter weiterzugeben.",
+      "hint": "Unterscheide das Bewegen von Dingen vom Übertragen von Informationen zwischen Computern.",
+      "wrong": [
+        "Eine Rakete kann ein Gerät transportieren. Das beschreibt noch keine gemeinsamen Regeln zwischen Computernetzen.",
+        "Elektrisches Licht löst ein Beleuchtungsproblem. Das Internet soll dagegen Informationen zwischen Netzen austauschen."
+      ],
+      "sourceStatus": "Internet-Society-Bericht beteiligter Entwickler, Hauptpassagen zu Paketvermittlung/ARPANET gelesen. Heutige Ausfallsicherheit nicht pauschal garantiert; zusätzliche Protokolldetails vor Vertiefung gesondert belegen."
+    },
+    {
+      "id": "invention-compass",
+      "starter": "Eine frei bewegliche magnetische Nadel kann bei der Orientierung helfen. Sie zeigt nicht automatisch, wo dein Ziel liegt.",
+      "paragraph": "Die Kompassnadel reagiert auf ein Magnetfeld. Für eine sinnvolle Orientierung brauchst du zusätzlich eine Richtungsangabe und musst sie mit deiner Umgebung oder einer Karte vergleichen. Ein Kompass ist daher etwas anderes als ein vollständiges Navigationsgerät mit Standort und Ziel. Die angezeigte magnetische Nordrichtung kann von geografisch Nord abweichen. Ein naher Magnet kann die Nadel ebenfalls beeinflussen.",
+      "observe": "Untersuche im vorhandenen Plan Nadel und Richtungsskala. Formuliere zwei verschiedene Fragen: In welcher Richtung liegt Norden? Und in welcher Richtung liegt mein Ziel? Warum beantwortet die Nadel allein die zweite Frage nicht? Nur das Bildschirmmodell verwenden.",
+      "benefit": "Du trennst eine Richtungsinformation von einem fertigen Reiseweg und kannst die Grenzen eines einzelnen Messgeräts erklären.",
+      "hint": "Welche Antwort beschreibt eine fehlende Orientierungshilfe, wenn vertraute sichtbare Anhaltspunkte fehlen?",
+      "wrong": [
+        "Die Erde aus einer Umlaufbahn zu beobachten ist eine Aufgabe von Satelliten. Die Kompassnadel liefert eine Richtung am Ort.",
+        "Nachts einen Raum zu beleuchten ist ein anderes Problem. Eine Kompassnadel erzeugt kein Licht."
+      ],
+      "sourceStatus": "Bisherige Smithsonian-Zeitleiste weist den Abruf zurück; historische Erstheitsangaben nicht frisch bestätigt. USGS-Audio-Transkript vollständig gelesen: frei bewegliche magnetische Nadel, Erdfeld und lokale Störungen. Neue Funktionsquelle im Produkt ergänzen."
+    },
+    {
+      "id": "invention-printing",
+      "starter": "Beim Druck können vorbereitete Zeichen oder Bilder mehrfach auf ein Material übertragen werden. Beim historischen Buchdruck lassen sich einzelne Zeichen zu einer Seite zusammensetzen.",
+      "paragraph": "Zur historischen Druckwerkstatt gehören Schriftzeichen, Farbe, Papier und eine Presse. Wiederverwendbare Zeichen sparen nicht jeden Arbeitsschritt: Zuerst muss eine Seite richtig zusammengestellt und geprüft werden. Ein falsch gesetztes Zeichen kann sonst in vielen Abzügen wiederkehren. Die Entwicklung beweglicher Schriftzeichen begann nicht erst mit Gutenberg.",
+      "observe": "Stelle dir eine Zeile aus einzeln beweglichen Zeichen vor. Vertausche gedanklich zwei Zeichen. Was müsstest du vor dem nächsten Druck ändern, und warum wären bereits gedruckte Seiten davon nicht automatisch berichtigt?",
+      "benefit": "Du verstehst Wiederverwendung und erkennst, warum eine Kontrolle vor dem Vervielfältigen wichtig ist.",
+      "hint": "Vergleiche ein einzelnes von Hand geschriebenes Exemplar mit vielen Abzügen derselben vorbereiteten Seite.",
+      "wrong": [
+        "Ein Smartphone kombiniert Kommunikation und Datenverarbeitung. Die Druckkarte fragt nach der Vervielfältigung von Seiten.",
+        "Ein selbst angetriebener Wagen löst eine Transportaufgabe und vervielfältigt noch keinen Text."
+      ],
+      "sourceStatus": "Mainzer Gutenberg-Zeitleiste Hauptpassagen1450–1455 gelesen; Detailquelle zur Drucktechnik und zu älteren ostasiatischen Druckzeichen vor Erweiterung vollständig nachlesen. Keine Auflagenzahl ergänzt."
+    },
+    {
+      "id": "invention-rocket",
+      "starter": "Eine Rakete stößt Material nach hinten aus und wird dabei nach vorn beschleunigt. Sie braucht keine Luft, gegen die sie sich abstützt.",
+      "paragraph": "Die Richtung des ausgestoßenen Gases und die Schubrichtung sind entgegengesetzt. Der Raketenantrieb lässt sich deshalb nicht mit Rädern auf einer Straße erklären. Die Quelle zu Goddard berichtet über einen Flüssigkeitsraketenstart von1926 und korrigiert ausdrücklich die Vorstellung, Raketen bräuchten Außenluft zum Abstoßen.",
+      "observe": "Zeige im vorhandenen Plan mit zwei gedanklichen Pfeilen, wohin Gas austritt und wohin der Schub wirkt. Begründe den Unterschied. Bleibe beim Bildschirmmodell; keine Feuer-, Druck- oder selbstgebauten Raketenversuche.",
+      "benefit": "Du kannst die Schubrichtung erklären und unterscheidest eine physikalische Lernskizze von einer sicheren Bauanleitung.",
+      "hint": "Welche Antwort betrifft einen Transport über die gewöhnliche Erdoberfläche hinaus? Die beiden anderen nennen Alltagsaufgaben am Boden.",
+      "wrong": [
+        "Ein Raum kann mit einer Lampe beleuchtet werden. Das erklärt nicht den Antrieb eines Geräts ins Weltall.",
+        "Viele Waren auf einer Landstrecke zu transportieren beschreibt eher eine Bahn- oder Straßenaufgabe, nicht das Startproblem dieser Karte."
+      ],
+      "sourceStatus": "NASA-Hauptpassagen zu16.03.1926 und Vakuumfehlschluss gelesen. Keine widersprüchliche Geburtsjahresangabe der Quelle oder Höhenzahl übernommen."
+    },
+    {
+      "id": "invention-satellite",
+      "starter": "Ein künstlicher Satellit bewegt sich auf einer Umlaufbahn. Seine Aufgabe kann Beobachten, Messen oder das Übertragen von Signalen sein.",
+      "paragraph": "Ein Satellit ist nicht dasselbe wie die Rakete, die ihn startet. Nach dem Start können seine Instrumente auf einer Umlaufbahn eigene Aufgaben erfüllen. Die überlieferte Sputnik-Datierung von1957 ist ein historischer Schritt. Heutige Satelliten unterscheiden sich unter anderem nach Instrumenten, Energieversorgung und Auftrag.",
+      "observe": "Vergleiche im Teileplan Instrument, Energieversorgung und Antenne. Welches Teil sammelt Messdaten, welches überträgt Signale und welches versorgt das Gerät? Beschreibe die Zusammenarbeit, statt jedes Teil als unabhängigen Satelliten zu zählen.",
+      "benefit": "Du unterscheidest Start, Versorgung und Forschungsauftrag und kannst die Erdebeobachtung von einer bloßen Weltraumfahrt abgrenzen.",
+      "hint": "Trenne die Aufgabe auf der Umlaufbahn vom vorherigen Start und vom Transport auf Straßen.",
+      "wrong": [
+        "Ein Wagen mit eigenem Antrieb löst eine Aufgabe auf dem Boden. Er umkreist die Erde nicht als Forschungsgerät.",
+        "Fliegen durch die Luft ist noch keine Umlaufbahn. Die Satellitenkarte beschreibt einen anderen Aufenthalts- und Arbeitszusammenhang."
+      ],
+      "sourceStatus": "NASA-Hauptabschnitt Sputnik1/04.10.1957 gelesen; keine aktuelle Satellitenzahl, Umlaufgarantie oder genaue Modellbahn behauptet."
+    },
+    {
+      "id": "invention-smartphone",
+      "starter": "Ein Smartphone verbindet Telefon und Computerfunktionen in einem mobilen Gerät. Mehrere Bauteile und Programme arbeiten dabei zusammen.",
+      "paragraph": "Bildschirm, Funkverbindung, Prozessor, Speicher und Energieversorgung haben unterschiedliche Aufgaben. Ein heller Bildschirm beweist zum Beispiel noch nicht, dass eine Funkverbindung besteht. Frühe Kombinationsgeräte zeigen Entwicklungsschritte; das heutige Smartphone entstand aus vielen zuvor entwickelten Techniken.",
+      "observe": "Wähle im vorhandenen Teileplan zwei Funktionen, etwa Bildschirm und Funk. Vermute, was ohne die eine noch mit der anderen möglich sein könnte. Erkläre den Unterschied zwischen einer gespeicherten Notiz und einer Nachricht, die erst übertragen werden muss. Keine Anmeldung oder privaten Daten nötig.",
+      "benefit": "Du verstehst die Grenzen einzelner Funktionen und musst bei einem Verbindungsfehler nicht automatisch deine gespeicherten Inhalte für verloren halten.",
+      "hint": "Eine Antwort verbindet mehrere Aufgaben in einem mobilen Gerät. Welche geht über die reine Sprachübertragung hinaus?",
+      "wrong": [
+        "Viele Reisende und Waren auf einer Strecke zu bewegen ist eine Transportaufgabe. Hier werden mehrere Informationsfunktionen kombiniert.",
+        "Nur eine Stimme aus der Ferne hörbar zu machen beschreibt bereits ein Telefon. Die Frage sucht zusätzlich die Verarbeitung von Informationen unterwegs."
+      ],
+      "sourceStatus": "CHM-Objekt1733 vollständig gelesen: Simon kombiniert Mobiltelefon, Organizer, Fax und Pager; 1993 als DateIntroduced nicht mit späterem Verkaufsstart gleichsetzen. Keine Preis-/Akkulaufzeit- oder Erstheitswerbung übernommen."
+    }
+  ],
+  "implementationNotes": "Existing work/stage-existing-wave.py prepares answer-specific feedback outside unchanged questions, preserves all12 IDs/answer arrays/correct indexes/stages/parts, and adds directed learning. Not yet applied. Validate sources/model decisions, integrate into actual app, test old saves/navigation/offline/screens, only then report implemented. New12 need individual diagrams and remaining primary evidence; not production-ready."
+}

@@ -1,5 +1,11 @@
 # Verbindliche Qualität und Tests
 
+## Änderungsfolgenanalyse und effiziente Meilensteine
+
+Vor relevanter Implementierung im bestehenden Durchlauf bestimmen: (1) direkte Daten/Komponenten, (2) technische Import-/Schema-Abhängigkeiten, (3) fachlich betroffene Altinhalte, (4) Indizes/Kategorien/erklärte Verweise/Navigation/Offline-Ressourcen, (5) stabile IDs/korrekte Antworten/Fortschritte, (6) gezielte Prüfungen und (7) zusätzliche Integrations-/Regressionsrisiken. Bestehende test:affected-Importanalyse, Export-/Inventur-/Referenzverträge erweitern, wo sie konkrete Fehler verhindern. Technisch explizite Kanten von redaktionell zu prüfenden Zusammenhängen unterscheiden; keine vollständige automatische Semantikerkennung versprechen und kein neues Architekturframework errichten.
+
+Gezielte Iteration zuerst; vollständige Pflichtabnahme an gebündelten unveränderten Meilensteinen und vor Freigabe. Stand/Build/Digest und alle bisherigen Browser-/Offline-/Security-/Fortschrittsprüfungen erhalten. Laufzeit- und Organisationsänderungen anhand realer Phasenzeiten, Runner-Minuten, Abdeckung und Stabilität bewerten; Prognosen von bestandenen Messungen trennen. Bei Unterbrechung eigene Prozesse/Ports tatsächlich prüfen und gezielt beenden, keine fremden Dienste töten. Nicht dringliche Detailarbeit knapp im einzigen BACKLOG zurückstellen. Der vollständige neue Dauerauftrag ist in AGENTS verlinkt; keine zusätzliche Verwaltungsstruktur.
+
 ## Paket 2C: vollständige Abnahme bei effizienterer Ausführung
 
 `test:browser` bleibt eine vollständige Pflichtprüfung. Der instrumentierte portable-smoke wird vom vorhandenen Produktionsprüfweg orchestriert: Performance/Komponenten zuerst ohne zweiten Browser, signierte News in isolierter Off-/On-Testkonfiguration, danach höchstens drei gemessene, voneinander isolierte Arbeiter. Jede Gruppe hat eigenen Port, Ausgabeordner, Browserkontexte, Profile und Service-Worker-Ursprung. Offline beendet nur den eigenen Server und prüft dessen tatsächliche Unerreichbarkeit. Aggregation schlägt bei fehlender/doppelter Gruppe, rotem Exit, fehlendem Bericht/Timing, gemischtem Build/Browser oder erfassten Fehlern fehl. Keine pauschalen Retries, höheren Timeouts, CI-Ausnahmen oder ausgelassenen bisherigen Gruppen. `QA_SUITE` bleibt ausdrücklich lokale Teilprüfung und erzeugt keine vollständige Übergabefreigabe.

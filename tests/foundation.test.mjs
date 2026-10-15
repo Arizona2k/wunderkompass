@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {measureBuild,violations,observedTrends} from '../scripts/performance-budget.mjs';
-import {selectTests} from '../scripts/test-selection.mjs';
+import {selectTests,changeImpact} from '../scripts/test-selection.mjs';
 import {learningFingerprint} from '../build/learning-fingerprint.mjs';
 
 test('bundle budget includes transitive shared chunks once, excludes deferred readers, and fails oversize/missing metrics',()=>{
@@ -37,6 +37,15 @@ test('local selection follows real transitive unit dependencies and retains cons
  const removed=selectTests(['app/deleted-runtime-dependency.mjs']);assert.ok(removed.unitTests.includes('tests/progress.test.mjs'));assert.ok(removed.browser.includes('backup'));
  assert.ok(selectTests(['app/news-content.json']).browser.includes('research'),'published news is browser content');
  assert.ok(selectTests(['app/book-content.json']).browser.includes('book'),'actual book contents retain the independent viewport/native-zoom group in local selection');
+ assert.ok(selectTests(['app/nature-content.json']).browser.includes('nature'),'unknown/shared selection must include the actual nature group');
+});
+test('change impact distinguishes explicit relationships, stale search entries and persistent-data risk without pretending semantic approval',()=>{
+ const before=[{id:'a',title:'Old',category:'science',intro:'A',related:['b']},{id:'b',title:'B',category:'science',intro:'B',related:['a']}],catalog=structuredClone(before);catalog[0].title='Changed';
+ const options={catalog,index:before,previous:before,exportIndex:{files:[{file:'world-topics.json',sources:['app/world-catalog.json']}]}};
+ const r=changeImpact(['app/world-catalog.json'],options);assert.deepEqual(r.changedTopicIds,['a']);assert.deepEqual(r.relatedEditorialCandidates,['b']);assert.deepEqual(r.searchIndexMismatches,['a']);assert.deepEqual(r.generatedExports,['exports/content/world-topics.json']);assert.equal(r.offlineBuildReview,true);assert.equal(r.savedProgressReview,false);
+ assert.equal(changeImpact(['app/progress-storage.ts']).savedProgressReview,true);
+ assert.deepEqual(changeImpact(['content/invention-editorial-review.json']).changedTopicIds,[],'prepared manuscripts are not catalog additions');
+ for(const broken of [[catalog[0],catalog[0]],[{...catalog[0],related:['missing']},catalog[1]]])assert.throws(()=>changeImpact(['app/world-catalog.json'],{...options,catalog:broken}));
 });
 test('offline fingerprint covers entry/config/package changes, ignores local evidence and is content-based',()=>{
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'wk-inputs-'));

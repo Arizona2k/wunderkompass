@@ -3,7 +3,7 @@ import {offlineRetention} from './offline-retention.mjs';
 import {natureFlow,offlineNature,natureNativeZoom} from './nature-learning.mjs';
 import {worldPhotoFlow,offlineWorldPhotos} from './world-photos.mjs';
 import {whyFlow,offlineWhy} from './why-learning.mjs';
-import {bookExcellenceFlow} from './book-excellence.mjs';
+import {bookExcellenceFlow,bookNavigationSuite} from './book-excellence.mjs';
 import {nativeJourneyZoom} from './journey-zoom.mjs';
 import {prepareOfflineBook,offlineBook} from './book-excellence.mjs';
 import {journeysFlow,prepareOfflineJourneys,offlineJourneys} from './journeys.mjs';
@@ -57,6 +57,7 @@ if(runSuite('home'))await timed('home',()=>homepageOverview(browser,base,ready,m
  }
  if(runSuite('core')){const small=await browser.newContext({viewport:{width:320,height:568},hasTouch:true,reducedMotion:'reduce'}),smallPage=await small.newPage();monitor(smallPage);await smallPage.goto(base);await ready(smallPage);await articleAtlas(smallPage,ready,report,320,shots);await passDesign(smallPage,report,320,shots);await small.close();}
  if(runSuite('core'))report.timings.push({suite:'core',seconds:(performance.now()-coreStarted)/1000});
+ if(runSuite('core'))await timed('book-navigation',()=>bookNavigationSuite(browser,base,ready,monitor,report,shots));
  if(runSuite('playground'))await timed('playground',()=>playgroundFlow(browser,base,ready,monitor,report,shots));
  if(runSuite('backup'))await timed('backup',()=>backupFlow(browser,base,ready,monitor,report,shots));
  if(runSuite('challenge'))await timed('challenge',()=>challengeHints(browser,base,ready,monitor,report,shots));

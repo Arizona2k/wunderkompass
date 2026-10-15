@@ -72,7 +72,6 @@ export async function bookExcellenceFlow(browser,base,ready,monitor,report,shots
    report.bookPhaseTimings.push({phase:'full word matrix with screenshot/axe',width,seconds:(performance.now()-widthStarted)/1000});
    if(width===320){const card=await openWord(p,'Kelvin');await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));await geometry(p,card,'large book320');await card.locator('.book-measure').screenshot({path:shots+'/book-temperature-large-320.png'});await p.evaluate(()=>document.querySelector('.earth-app').classList.remove('large-reading'));}
    if(width===390){
-    const navigationStarted=performance.now();await bookNavigationFlow(p,ready,terms,shots);report.bookPhaseTimings.push({phase:'all180 global search/reload/reciprocal/Back paths',width,seconds:(performance.now()-navigationStarted)/1000});
     await openWord(p,'DNA');await p.getByRole('group',{name:'Wörter nach Anfangsbuchstaben',exact:true}).getByRole('button',{name:'M',exact:true}).click();await p.locator('[data-book-word="Meter"]').waitFor();assert.equal(await p.locator('[data-book-word="DNA"]').count(),0,'alphabet deliberately leaves an exact routed definition');await p.getByRole('group',{name:'Wörter nach Anfangsbuchstaben',exact:true}).getByRole('button',{name:'Alle',exact:true}).click();assert.ok(await p.locator('.word-card').count()>1,'reset restores the broad list');
     await p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await p.getByRole('combobox',{name:'Lernwelt durchsuchen',exact:true}).fill('Cäsium');await p.getByRole('option').filter({has:p.getByText('Sekunde',{exact:true})}).click();await p.locator('[data-book-word="Sekunde"]').waitFor();
     const localSearch=p.getByRole('textbox',{name:'Wissenswörter durchsuchen',exact:true});await localSearch.fill('Cäsium');await p.locator('[data-book-word="Sekunde"]').waitFor();assert.equal(await p.locator('.word-card').count(),1,'local word search includes actual deeper text');
@@ -81,7 +80,7 @@ export async function bookExcellenceFlow(browser,base,ready,monitor,report,shots
    report.views.push({width,name:terms.length+' individual book explanations, voluntary levels, models and feedback'});
   }finally{await c.close();}
  }
- report.bookCoverage={terms:[...new Set(visited.map(v=>v.name))],widths:[...new Set(visited.map(v=>v.width))],observed:visited,models:[...new Set(terms.map(t=>book.learning[t].model).filter(Boolean))]};report.checks.push(terms.length+' individual book explanations at all seven widths: actual easy/deep/observation/source levels, three changing keyboard models, individual hint/wrong/right, all direct/search/reload/context/Back/focus paths, all retained and new Why answers, large text and axe');
+ report.bookCoverage={terms:[...new Set(visited.map(v=>v.name))],widths:[...new Set(visited.map(v=>v.width))],observed:visited,models:[...new Set(terms.map(t=>book.learning[t].model).filter(Boolean))]};report.checks.push(terms.length+' individual book explanations at all seven widths: actual easy/deep/observation/source levels, three changing keyboard models, individual hint/wrong/right, all retained and new Why answers, large text and axe');
 }
 export async function bookStudyAtZoom(page,report,capture){
  const visited=[];await page.evaluate(()=>document.querySelector('.earth-app').classList.remove('large-reading'));
@@ -108,10 +107,18 @@ export async function bookEngineFlow(page,shots,engine){
 }
 
 export async function bookNavigationFlow(p,ready,names=terms,shots='work'){
+ const observed=[];
  for(const name of names){try{
 await p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await p.getByRole('combobox',{name:'Lernwelt durchsuchen',exact:true}).fill(name);await p.getByRole('option').filter({has:p.getByText('Wissenswörter',{exact:true})}).filter({has:p.getByText(name,{exact:true})}).click();assert.equal(new URL(p.url()).hash,'#book/words/'+encodeURIComponent(name));await p.locator('[data-book-word="'+name+'"]').waitFor();await p.reload();await ready(p);const card=await openWord(p,name);await card.locator('details[data-history-disclosure="book-deeper-'+name+'"] > summary').click();const learning=book.learning[name],destination=learning.topic??'lab-'+learning.lab,link=card.locator('.book-connection .book-topic-link');await link.focus();await p.keyboard.press('Enter');await p.locator(learning.topic?'.world-article':'#lab-heading').waitFor();
      const reciprocal=p.locator('[data-history-disclosure="topic-book-'+destination+'"]');await reveal(reciprocal);const backLink=reciprocal.getByRole('link',{name:'„'+name+'“ im Wissensbuch öffnen →',exact:true});await backLink.focus();await p.keyboard.press('Enter');await card.waitFor();assert.equal(await p.locator('.word-card').count(),1,'exact routed definition');await p.goBack();await reciprocal.waitFor();await p.waitForFunction(key=>document.activeElement?.getAttribute('data-route-focus')===key,'topic-word-'+destination+'-'+name);await p.goBack();await card.waitFor();await p.waitForFunction(key=>document.activeElement?.getAttribute('data-route-focus')===key,(learning.topic?'word-topic-':'word-lab-')+name);assert.equal(await card.locator('.book-study').evaluate(e=>e.open),true);
      const related=book.learning[name].relatedWords?.[0];if(related){const d=card.locator('[data-history-disclosure="book-related-'+name+'"]');await reveal(d);const target=d.getByRole('link',{name:'Mit „'+related.term+'“ weiterdenken →',exact:true});await target.focus();await p.keyboard.press('Enter');await p.locator('[data-book-word="'+related.term+'"]').waitFor();assert.equal(await p.locator('.word-card').count(),1);await p.goBack();await card.waitFor();await p.waitForFunction(key=>document.activeElement?.getAttribute('data-route-focus')===key,'word-related-'+name+'-'+related.term);}
 
+ observed.push(name);
  }catch(error){const state=await p.evaluate(()=>({url:location.href,active:{tag:document.activeElement?.tagName,focus:document.activeElement?.getAttribute('data-route-focus')},history:history.state,focusTrace:window.__focusTrace}));await p.screenshot({path:shots+'/book-navigation-failure.png',fullPage:true,animations:'disabled'});console.error('BOOK_NAVIGATION_FAILURE',JSON.stringify({name,...state}));throw new Error('Book navigation '+name+': '+error.message+'\n'+JSON.stringify(state),{cause:error});}}
+ return {terms:observed,width:390,search:true,reload:true,reciprocal:true,backFocus:true};
+}
+
+export async function bookNavigationSuite(browser,base,ready,monitor,report,shots){
+ const context=await browser.newContext({viewport:{width:390,height:900},reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);
+ try{await page.goto(base+'#book');await ready(page);report.bookNavigationCoverage=await bookNavigationFlow(page,ready,terms,shots);report.checks.push('All180 real book global search/reload/reciprocal/Back/focus paths, unchanged assertions at390×900 in the existing isolated navigation worker');}finally{await context.close();}
 }

@@ -1,4 +1,4 @@
-import {retentionComplete} from './handoff.mjs';
+import {retentionComplete,bookNavigationComplete} from './handoff.mjs';
 import natureIds from '../app/nature-entry-ids.json' with {type:'json'};
 export const REQUIRED_NATURE_IDS=natureIds;
 import photoIds from '../app/world-photo-ids.json' with {type:'json'};
@@ -20,6 +20,7 @@ export function aggregateQuality(outcomes){
   if(!report.build||!report.browser)throw Error('Missing build/browser proof');if(build&&build!==report.build||browser&&browser!==report.browser)throw Error('Mixed build/browser proof');build=report.build;browser=report.browser;
   for(const suite of worker.suites){if(seen.has(suite)||!REQUIRED_SUITES.includes(suite)||!report.selectedSuites.includes(suite))throw Error('Duplicate, unknown or missing suite '+suite);seen.add(suite);for(const phase of suite==='foundation'?['performance','components']:[suite])if(!report.timings.some(t=>t.suite===phase&&Number.isFinite(t.seconds)&&t.seconds>0))throw Error('Missing phase timing '+phase);}
   if(report.selectedSuites.length!==worker.suites.length)throw Error('Worker scope mismatch');
+  if(worker.suites.includes('core')&&(!bookNavigationComplete(report.bookNavigationCoverage)||!report.timings.some(t=>t.suite==='book-navigation'&&Number.isFinite(t.seconds)&&t.seconds>0)))throw Error('Missing complete moved book navigation proof');
   if(worker.suites.includes('foundation')){if(!retentionComplete(report.offlineRetention))throw Error('Missing multiple-release offline retention proof');const o=report.offlineResilience;if(o?.kind!=='chromium'||o.realProgress!==true||o.networkRecovery!==true||o.quotaRecovery!==true||o.completeAssets!==true||o.offlineReload!==true||o.serverStopped!==true||o.passPreserved!==true)throw Error('Missing actual offline failure/recovery proof');const p=report.photoMetadata,expected=REQUIRED_PHOTO_IDS.flatMap(id=>[320,1440].map(width=>id+':'+width));if(!p||!sameSet(p.images,REQUIRED_PHOTO_IDS)||!sameSet(p.cases?.map(c=>c.id+':'+c.width),expected)||p.immediateHomeCredits!==true||p.oneRequestPerSession!==true||p.tamperAndNetworkRetry!==true||p.retryFocus!==true||p.photoCardBackFocus!==true||!Number.isFinite(p.seconds)||p.seconds<=0)throw Error('Missing complete photo metadata proof');}
   if(worker.suites.includes('offline')&&(!sameSet(report.photoOffline?.images,REQUIRED_PHOTO_IDS)||report.photoOffline.coldRestart!==true||report.photoOffline.verifiedCatalog!==true))throw Error('Missing cold offline photo metadata proof');
   if(worker.suites.includes('journeys')){const z=report.nativeZoom;if(z?.percent!==200||z.cssWidth!==640||z.scale!==2||z.largeTextAlsoChecked!==true)throw Error('Missing actual native journey zoom proof');}

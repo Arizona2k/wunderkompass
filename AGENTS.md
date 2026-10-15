@@ -1,5 +1,13 @@
 # Anleitung für Codex
 
+## Präzisierter Dauerauftrag vom 15. Oktober 2026
+
+Der vollständig archivierte [Nutzer-Nachtrag](content/auftrag-2026-10-13/WunderKompass_Dauerauftrag_2026-10-15.md) ergänzt alle bisherigen Originale dauerhaft für3.5/4–8/GO. WunderKompass als zusammenhängendes Lernsystem entwickeln: vor relevanten Änderungen unmittelbare/technische Abhängigkeiten, fachlich betroffene Altinhalte, Indizes/Verweise/Navigation/Offline, Fortschrittsrisiken und nötige Tests nach QUALITY bestimmen. Nur begründete Beziehungen ergänzen; explizite Graphkanten sind keine automatische vollständige Fachanalyse.
+
+Gezielt iterieren, dann vollständige unveränderte Meilensteine abnehmen. Wiederkehrende Prozessengpässe nach gesamter Zeit/Stabilität/Ressourcen/Wartung priorisieren; keine Mikrooptimierungs-Endlosschleifen, blinden Timeouterhöhungen, Zusatzkosten oder weicheren Tests. Kleine nicht dringliche Verbesserungen ausschließlich im vorhandenen BACKLOG zurückstellen. Nach echten Technikblockern sichtbare ganzheitliche Inhalts-/Produktwellen integrieren, keine anwachsende Prototypsammlung.
+
+Wichtige eigene Manuskripte/Quellen/Prototypen rechtzeitig in geeigneten bestehenden Projektstrukturen und im selben Branch sichern; work/ oder Chat allein genügen nicht. Keine unnötigen Roharchive, privaten Daten oder Prüfbilder committen. PROJECT_STATE führt den tatsächlichen Fortsetzungsstand. Für die aktuelle Übergabe gelten die sieben knappen Ergebnisfragen des Nachtrags statt redundanter15-Punkte-Wiederholung; Manuskript/implementiert/technisch geprüft/fachlich geprüft/unabhängig akzeptiert/veröffentlicht ausdrücklich unterscheiden. Alle bisherigen IDs, richtigen Antworten, Speicher-/Quellen-/Kosten-/Freigabegrenzen und der volle Masterumfang bleiben erhalten.
+
 ## Dauerhafte Nutzerentscheidung vom 15. Oktober 2026: freies Wachstum und echte Performance
 
 Diese Grundsätze gelten für Paket 3.5, alle späteren Pakete 4–8 und sämtliche zukünftigen GO-Runden. Grundlage sind die vollständig gelesenen Entscheidungen in PR #27 ([Gesamtgrößen](https://github.com/Arizona2k/wunderkompass/pull/27#issuecomment-6189174371), [CI/Offline](https://github.com/Arizona2k/wunderkompass/pull/27#issuecomment-6191114862), [Performance/Offline-Abwägung](https://github.com/Arizona2k/wunderkompass/pull/27#issuecomment-6191886451), [moderne Zielgeräte und fünf Optimierungskandidaten](https://github.com/Arizona2k/wunderkompass/pull/27#issuecomment-6193186292)) und der ergänzende Nutzerauftrag zur dauerhaften Geltung.
