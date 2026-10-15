@@ -634,7 +634,7 @@
   "secondIsolatedRun": {
     "run": 38781764690,
     "head": "ce36cd8434879ffa3997740968631a65ef810c0b",
-    "currentStatus": "Chromium failed in new lifecycle observer; standard checks passed; Firefox/WebKit allowed to finish, no cancellation",
+    "currentStatus": "Completed failure: standards and actualFirefox passed;Chromium lifecycle observer failed;WebKit optional navigator.storage.estimate assumption failed;Required gate failed",
     "rootCauseEvidence": "Waiting worker received ACTIVATE_LEARNING_RELEASE, while observer repeatedly requested LEARNING_STATUS from incumbent. State trace retained waiting/installing; repeated incumbent message lifetimes prevented reliable transition. No activation exceptions reported.",
     "correction": "Observe actual waiting/installing completion before sending new active-version/readiness query. All original deadlines and version/cache/multi-tab/legacy/rollback/server-stop assertions unchanged; no production workaround or retries. Restore actual visible engine reader after the isolated fixture.",
     "repeatedRealChromiumProof": {
@@ -754,6 +754,138 @@
         }
       ]
     },
-    "fullNewAcceptance": "Required at next exact head; Quality70 cannot be reported green"
+    "fullNewAcceptance": "Required at next exact head; Quality70 cannot be reported green",
+    "jobElapsedSeconds": {
+      "standards": 110,
+      "chromium": 177,
+      "firefox": 767,
+      "webkit": 699,
+      "requiredCollector": 7
+    },
+    "totalObservedRunnerSeconds": 1760,
+    "timeComparisonLimit": "Failed partial Chromium run;29.33 observed runner minutes are not a successful/cost-equivalent improvement over69. Billing/quota still unavailable.",
+    "firefox": {
+      "executionSeconds": 701.979908536,
+      "journeysSeconds": 11.436964506999999,
+      "bookSeconds": 463.935091694,
+      "whySeconds": 66.91915053699998,
+      "natureSeconds": 144.93981374899997,
+      "coverage": "16 original first chapters;180 words×4;60 Why×4;68 Nature×4 including individual levels/hints/wrong/right/sources/10 actual keyboard model drawings;full real offline recovery and synthetic retention passed on this actual engine. No independent pedagogy or hardware approval."
+    },
+    "webkit": {
+      "journeysSeconds": 14.851674073000002,
+      "offlineSeconds": 4.203173687000002,
+      "bookSeconds": 456.17572557500006,
+      "whySeconds": 64.18874717600004,
+      "failure": "Optional navigator.storage.estimate unavailable; real CacheStorage/offline proof before that passed. No completed Nature/retention acceptance."
+    },
+    "storageCompatibilityCorrection": {
+      "code": "Always measure exact cached response body bytes/count/version names; native quota estimate is additional only when actually available. No CacheStorage/retention assertion skipped, no invented disk/RAM usage.",
+      "localActualBrowserEvidence": {
+        "status": "passed",
+        "normal": {
+          "multipleTabs": true,
+          "partialNeverReplacesFallback": true,
+          "unknownLegacyProtected": true,
+          "orphanCleanup": true,
+          "stoppedServerOldChunk": true,
+          "canaryPreserved": true,
+          "storage": [
+            {
+              "phase": "one complete release",
+              "estimateAvailable": true,
+              "quota": 2147494061,
+              "usage": 10413,
+              "usageDetails": {
+                "caches": 1633,
+                "serviceWorkerRegistrations": 8780
+              },
+              "cachedBodyBytes": 689,
+              "cachedResponses": 4,
+              "cacheVersions": [
+                "earth-learning-aaaaaaaaaaaaaaaa"
+              ]
+            },
+            {
+              "phase": "three releases protected by known open tabs",
+              "estimateAvailable": true,
+              "quota": 2147499317,
+              "usage": 15669,
+              "usageDetails": {
+                "caches": 6889,
+                "serviceWorkerRegistrations": 8780
+              },
+              "cachedBodyBytes": 2067,
+              "cachedResponses": 12,
+              "cacheVersions": [
+                "earth-learning-aaaaaaaaaaaaaaaa",
+                "earth-learning-bbbbbbbbbbbbbbbb",
+                "earth-learning-cccccccccccccccc"
+              ]
+            },
+            {
+              "phase": "two releases after old tabs close",
+              "estimateAvailable": true,
+              "quota": 2147499757,
+              "usage": 16109,
+              "usageDetails": {
+                "caches": 7329,
+                "serviceWorkerRegistrations": 8780
+              },
+              "cachedBodyBytes": 1378,
+              "cachedResponses": 8,
+              "cacheVersions": [
+                "earth-learning-eeeeeeeeeeeeeeee",
+                "earth-learning-ffffffffffffffff"
+              ]
+            }
+          ],
+          "storageMeaning": "Exact cached response body bytes in the isolated fixture, not CacheStorage overhead/total browser RAM/disk guarantee. Optional native quota estimate is reported only where actually available."
+        },
+        "missingEstimateAPI": {
+          "multipleTabs": true,
+          "partialNeverReplacesFallback": true,
+          "unknownLegacyProtected": true,
+          "orphanCleanup": true,
+          "stoppedServerOldChunk": true,
+          "canaryPreserved": true,
+          "storage": [
+            {
+              "phase": "one complete release",
+              "estimateAvailable": false,
+              "cachedBodyBytes": 689,
+              "cachedResponses": 4,
+              "cacheVersions": [
+                "earth-learning-aaaaaaaaaaaaaaaa"
+              ]
+            },
+            {
+              "phase": "three releases protected by known open tabs",
+              "estimateAvailable": false,
+              "cachedBodyBytes": 2068,
+              "cachedResponses": 12,
+              "cacheVersions": [
+                "earth-learning-aaaaaaaaaaaaaaaa",
+                "earth-learning-bbbbbbbbbbbbbbbb",
+                "earth-learning-cccccccccccccccc"
+              ]
+            },
+            {
+              "phase": "two releases after old tabs close",
+              "estimateAvailable": false,
+              "cachedBodyBytes": 1379,
+              "cachedResponses": 8,
+              "cacheVersions": [
+                "earth-learning-eeeeeeeeeeeeeeee",
+                "earth-learning-ffffffffffffffff"
+              ]
+            }
+          ],
+          "storageMeaning": "Exact cached response body bytes in the isolated fixture, not CacheStorage overhead/total browser RAM/disk guarantee. Optional native quota estimate is reported only where actually available."
+        },
+        "meaning": "Same full six-release assertions run with actual API and deliberately absent optional estimate API; exact cached response bytes measured in both. Actual WebKit still requires GitHub acceptance."
+      },
+      "actualWebKitAcceptance": "Pending next full exact-head GitHub run"
+    }
   }
 }
