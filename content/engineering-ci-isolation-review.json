@@ -630,5 +630,130 @@
       "status": "passed",
       "decision": "Measured cost accepted for the current catalog: additional retained735828bytes at467 source documents. At6000 synthetic documents11411300bytes additional,9408872bytes released when prepared index is removed; remaining flattened raw strings are not claimed to disappear. No total browser RAM/device guarantee."
     }
+  },
+  "secondIsolatedRun": {
+    "run": 38781764690,
+    "head": "ce36cd8434879ffa3997740968631a65ef810c0b",
+    "currentStatus": "Chromium failed in new lifecycle observer; standard checks passed; Firefox/WebKit allowed to finish, no cancellation",
+    "rootCauseEvidence": "Waiting worker received ACTIVATE_LEARNING_RELEASE, while observer repeatedly requested LEARNING_STATUS from incumbent. State trace retained waiting/installing; repeated incumbent message lifetimes prevented reliable transition. No activation exceptions reported.",
+    "correction": "Observe actual waiting/installing completion before sending new active-version/readiness query. All original deadlines and version/cache/multi-tab/legacy/rollback/server-stop assertions unchanged; no production workaround or retries. Restore actual visible engine reader after the isolated fixture.",
+    "repeatedRealChromiumProof": {
+      "status": "passed",
+      "method": "Three full real Chromium six-release/multi-tab lifecycles. Wait for actual waiting/installing transition before querying new active version; original version/readiness/cache/rollback/unknown-legacy/server-stop/canary assertions unchanged; original deadlines unchanged. No actual game/user profile claimed.",
+      "runs": [
+        {
+          "multipleTabs": true,
+          "partialNeverReplacesFallback": true,
+          "unknownLegacyProtected": true,
+          "orphanCleanup": true,
+          "stoppedServerOldChunk": true,
+          "canaryPreserved": true,
+          "storage": [
+            {
+              "phase": "one complete release",
+              "quota": 2147494061,
+              "usage": 10413,
+              "usageDetails": {
+                "caches": 1633,
+                "serviceWorkerRegistrations": 8780
+              }
+            },
+            {
+              "phase": "three releases protected by known open tabs",
+              "quota": 2147499305,
+              "usage": 15657,
+              "usageDetails": {
+                "caches": 6877,
+                "serviceWorkerRegistrations": 8780
+              }
+            },
+            {
+              "phase": "two releases after old tabs close",
+              "quota": 2147499731,
+              "usage": 16083,
+              "usageDetails": {
+                "caches": 7303,
+                "serviceWorkerRegistrations": 8780
+              }
+            }
+          ]
+        },
+        {
+          "multipleTabs": true,
+          "partialNeverReplacesFallback": true,
+          "unknownLegacyProtected": true,
+          "orphanCleanup": true,
+          "stoppedServerOldChunk": true,
+          "canaryPreserved": true,
+          "storage": [
+            {
+              "phase": "one complete release",
+              "quota": 2147494061,
+              "usage": 10413,
+              "usageDetails": {
+                "caches": 1633,
+                "serviceWorkerRegistrations": 8780
+              }
+            },
+            {
+              "phase": "three releases protected by known open tabs",
+              "quota": 2147499318,
+              "usage": 15670,
+              "usageDetails": {
+                "caches": 6890,
+                "serviceWorkerRegistrations": 8780
+              }
+            },
+            {
+              "phase": "two releases after old tabs close",
+              "quota": 2147499774,
+              "usage": 16126,
+              "usageDetails": {
+                "caches": 7346,
+                "serviceWorkerRegistrations": 8780
+              }
+            }
+          ]
+        },
+        {
+          "multipleTabs": true,
+          "partialNeverReplacesFallback": true,
+          "unknownLegacyProtected": true,
+          "orphanCleanup": true,
+          "stoppedServerOldChunk": true,
+          "canaryPreserved": true,
+          "storage": [
+            {
+              "phase": "one complete release",
+              "quota": 2147494062,
+              "usage": 10414,
+              "usageDetails": {
+                "caches": 1634,
+                "serviceWorkerRegistrations": 8780
+              }
+            },
+            {
+              "phase": "three releases protected by known open tabs",
+              "quota": 2147499318,
+              "usage": 15670,
+              "usageDetails": {
+                "caches": 6890,
+                "serviceWorkerRegistrations": 8780
+              }
+            },
+            {
+              "phase": "two releases after old tabs close",
+              "quota": 2147499773,
+              "usage": 16125,
+              "usageDetails": {
+                "caches": 7345,
+                "serviceWorkerRegistrations": 8780
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "fullNewAcceptance": "Required at next exact head; Quality70 cannot be reported green"
   }
 }
