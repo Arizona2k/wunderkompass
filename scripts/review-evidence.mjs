@@ -31,7 +31,7 @@ export function retainScreenshot(name){
  // Keep mobile and desktop views. Intermediate widths are still measured and recorded.
  return /-(320|1440)(?:-full|-model|-top)?\.png$/.test(name)&&!/-full\.png$/.test(name);
 }
-export async function prepareReview(directory='.qa-output'){
+export async function prepareReview(directory='.qa-output',{sealedCaptureLedger=null}={}){
  const started=performance.now();
  const files=(await fs.readdir(directory)).sort(),destination=path.join(directory,'review');await fs.rm(destination,{recursive:true,force:true});await fs.mkdir(destination,{recursive:true});
  let report=null,handoff=null;
@@ -39,10 +39,12 @@ export async function prepareReview(directory='.qa-output'){
  const complete=report?.status==='passed'&&report.scope==='complete mandatory regression';
  const screenshots=[],copied=[];let generatedBytes=0,retainedBytes=0;
  let previous=null;
- try{const candidate=JSON.parse(await fs.readFile(path.join(directory,'review-manifest.json'),'utf8'));if(complete&&candidate.status==='passed'&&candidate.build===report.build&&candidate.sourceDigest===handoff?.sourceDigest){
+ if(sealedCaptureLedger){
+  const candidate=sealedCaptureLedger;
+  if(!complete||candidate.status!=='passed'||candidate.build!==report.build||candidate.sourceDigest!==handoff?.sourceDigest)throw Error('Mixed sealed capture snapshot');
   if(!Array.isArray(candidate.screenshots)||new Set(candidate.screenshots.map(s=>s.file)).size!==candidate.screenshots.length||!candidate.screenshots.every(s=>typeof s.file==='string'&&s.file===path.basename(s.file)&&/^(quality-|journey-engine-).*\.png$/.test(s.file)&&Number.isInteger(s.bytes)&&s.bytes>=24&&Number.isInteger(s.width)&&s.width>0&&Number.isInteger(s.height)&&s.height>0&&/^[a-f0-9]{64}$/.test(s.sha256)&&typeof s.retained==='boolean'))throw Error('Invalid sealed capture ledger');
   previous=candidate;
- }}catch(error){if(error.code!=='ENOENT')throw error;}
+ }
  const prior=new Map((previous?.screenshots??[]).map(s=>[s.file,s]));
  // Preserve failure reports even if a damaged PNG aborts curation.
  for(const name of files.filter(f=>/\.(json|xml)$/.test(f))){await fs.copyFile(path.join(directory,name),path.join(destination,name));copied.push(name);}

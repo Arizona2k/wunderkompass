@@ -61,7 +61,8 @@ async function collect(){
  await fs.writeFile('.qa-output/engine-report.json',JSON.stringify(combined,null,2));
  await createHandoff(await read('.qa-output/portable-report.json'),'.qa-output',{requiredEngines:['firefox','webkit']});
  await fs.writeFile('.qa-output/ci-cost-observations.json',JSON.stringify({meaning:'Measured browser execution sum; full runner setup/upload minutes must also be read from GitHub job timestamps. No zero-cost or total improvement guarantee.',...expected,browserSeconds:proofs.reduce((n,p)=>n+p.seconds,0),browserWallSeconds:Math.max(...proofs.map(p=>p.seconds)),jobs:proofs.map(({kind,seconds})=>({kind,seconds})),maximumConcurrentBrowserJobs:3},null,2));
- await prepareReview();console.log('All required same-commit browser and engine evidence accepted. No merge or release authorization.');
+ // Only reuse the capture ledger whose bytes were sealed by this run's validated Chromium job.
+ await prepareReview('.qa-output',{sealedCaptureLedger:await read('work/quality-chromium/review-manifest.json')});console.log('All required same-commit browser and engine evidence accepted. No merge or release authorization.');
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  const [action,kind]=process.argv.slice(2);if(action==='pack')await pack();else if(action==='restore')await restore();else if(action==='job')await job(kind);else if(action==='collect')await collect();else throw Error('Use pack, restore, job KIND or collect');

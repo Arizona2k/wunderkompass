@@ -30,9 +30,11 @@ test('final collection preserves hashes for every omitted original and rejects m
   await fs.writeFile(path.join(dir,'portable-report.json'),JSON.stringify({status:'passed',scope:'complete mandatory regression',build:'same-build'}));await fs.writeFile(path.join(dir,'handoff.json'),JSON.stringify({sourceDigest:digest,build:'same-build'}));
   for(const name of requiredScreenshots)await fs.writeFile(path.join(dir,name),png);
   const omitted={file:'quality-book-why-0-320.png',bytes:9876,width:320,height:1400,sha256:'a'.repeat(64),retained:false};
-  await fs.writeFile(path.join(dir,'review-manifest.json'),JSON.stringify({status:'passed',build:'same-build',sourceDigest:digest,screenshots:[omitted,...requiredScreenshots.map(file=>({file,bytes:png.length,width:1,height:1,sha256:sha,retained:true}))]}));
-  const result=await prepareReview(dir);assert.equal(result.status,'passed');assert.deepEqual(result.screenshots.find(s=>s.file===omitted.file),omitted);assert.equal(result.screenshots.length,requiredScreenshots.length+1);assert.equal(result.generatedBytes,result.retainedBytes+9876);
-  await fs.writeFile(path.join(dir,requiredScreenshots[0]),Buffer.concat([png,Buffer.from('changed')]));await assert.rejects(prepareReview(dir),/Changed sealed screenshot/);
-  await fs.unlink(path.join(dir,requiredScreenshots[0]));await assert.rejects(prepareReview(dir),/Missing sealed screenshot/);
+  const ledger={status:'passed',build:'same-build',sourceDigest:digest,screenshots:[omitted,...requiredScreenshots.map(file=>({file,bytes:png.length,width:1,height:1,sha256:sha,retained:true}))]};await fs.writeFile(path.join(dir,'review-manifest.json'),JSON.stringify(ledger));
+  const result=await prepareReview(dir,{sealedCaptureLedger:ledger});assert.equal(result.status,'passed');assert.deepEqual(result.screenshots.find(s=>s.file===omitted.file),omitted);assert.equal(result.screenshots.length,requiredScreenshots.length+1);assert.equal(result.generatedBytes,result.retainedBytes+9876);
+  await fs.writeFile(path.join(dir,requiredScreenshots[0]),Buffer.concat([png,Buffer.from('changed')]));await assert.rejects(prepareReview(dir,{sealedCaptureLedger:ledger}),/Changed sealed screenshot/);
+  await fs.unlink(path.join(dir,requiredScreenshots[0]));await assert.rejects(prepareReview(dir,{sealedCaptureLedger:ledger}),/Missing sealed screenshot/);
+  await assert.rejects(prepareReview(dir,{sealedCaptureLedger:{...ledger,sourceDigest:'c'.repeat(64)}}),/Mixed sealed/);
+  await assert.rejects(prepareReview(dir,{sealedCaptureLedger:{...ledger,screenshots:[...ledger.screenshots,ledger.screenshots[0]]}}),/Invalid sealed/);
  }finally{await fs.rm(dir,{recursive:true,force:true});}
 });
