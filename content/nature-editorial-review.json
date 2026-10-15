@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "34 new manuscripts with map-point checks and 25 old-entry editorial manuscripts; not integrated; no independent acceptance",
+  "status": "68 individual first manuscripts (34 retained +34 new), specific questions and source scopes preserved; prototype exists locally, product integration and independent acceptance pending",
   "checkedOn": "2026-10-15",
   "entries": [
     {
@@ -31,18 +31,28 @@
         "Verwitterung"
       ],
       "modelProposal": "Zeitliche Reihenfolge von Ablagerung, Hebung und späterem Einschneiden; ausdrücklich qualitatives eigenes Schema.",
+      "open": [
+        "Koordinaten anhand geeigneter Ortsquelle prüfen",
+        "Taxonomie/Budget/UI/Suche/reziproke Wege/Offline",
+        "individuelle Abnahme"
+      ],
       "word": "Erosion",
       "connection": "Erosion beschreibt das Abtragen und Weitertransportieren von Material. Der Colorado River macht diese Wirkung an einer konkreten Landschaft sichtbar.",
-      "mapPoint": {
-        "id": "grand-canyon",
-        "qid": "Q118841",
-        "lat": 36.0975,
-        "lon": -112.0953,
-        "source": "https://www.wikidata.org/wiki/Q118841",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Eine alte Gesteinsschicht wird durch eine später entstandene Schlucht sichtbar. Müssen Gestein und Schlucht gleich alt sein?",
+        "answers": [
+          "Nein, das Gestein kann schon vor dem Einschneiden der Schlucht vorhanden gewesen sein",
+          "Ja, sichtbares Gestein entsteht immer erst zusammen mit der Schlucht",
+          "Ja, jede Schlucht ist genau einen Tag älter als ihre Gesteine"
+        ],
+        "correct": 0,
+        "hint": "Unterscheide das Material von der später daraus geformten Landschaft.",
+        "why": "Die Gesteinsschichten können zuerst abgelagert worden sein. Das spätere Einschneiden macht sie sichtbar; es erzeugt nicht automatisch ihr ursprüngliches Alter.",
+        "wrong": [
+          null,
+          "Das Sichtbarwerden erzeugt das Gestein nicht neu. Bereits vorhandene Schichten können viel später freigelegt werden.",
+          "Es gibt keinen solchen allgemeinen Tagesabstand. Die Reihenfolge muss aus den konkreten geologischen Belegen erklärt werden."
+        ]
       }
     },
     {
@@ -71,17 +81,27 @@
       ],
       "lab": "volcano",
       "modelProposal": "Zwei qualitative Wasserwege mit beobachtbaren Phasen, keine Druck-/Temperaturvorhersage.",
+      "open": [
+        "Koordinaten und Sicherheitsquelle zu Wegegebot prüfen",
+        "Modell fachlich/visuell prüfen",
+        "gesamte technische Abnahme"
+      ],
       "connection": "Das Vulkanlabor zeigt einen begrenzten Lavaausbruch. Vergleiche damit den Geysir: Hier bewegen sich heißes Wasser und Dampf statt Lava.",
-      "mapPoint": {
-        "id": "yellowstone-geysers",
-        "qid": "Q351",
-        "lat": 44.6,
-        "lon": -110.5,
-        "source": "https://www.wikidata.org/wiki/Q351",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Parkregion; nicht ein bestimmter Geysirschlot"
+      "question": {
+        "prompt": "Warum ist ein Geysir trotz seines aufsteigenden Strahls kein Lavastrom?",
+        "answers": [
+          "Weil jedes heiße Wasser automatisch aus geschmolzenem Gestein besteht",
+          "Weil er Wasser und Dampf ausstößt, nicht ausgetretenes geschmolzenes Gestein",
+          "Weil unter Geysiren niemals Wärme vorhanden ist"
+        ],
+        "correct": 1,
+        "hint": "Vergleiche zunächst, welcher Stoff austritt.",
+        "why": "Ein Geysir betrifft heißes Wasser und Dampf. Lava ist geschmolzenes Gestein an der Oberfläche. Ähnlich auffällige Bewegungen bedeuten nicht denselben Vorgang.",
+        "wrong": [
+          "Heißes Wasser und geschmolzenes Gestein sind verschiedene Stoffe. Die Temperatur allein macht Wasser nicht zur Lava.",
+          null,
+          "Die Erhitzung gehört zum Geysir-System. Das unterscheidet es aber weiterhin von einem Lavastrom."
+        ]
       }
     },
     {
@@ -110,18 +130,28 @@
         "Versickerung"
       ],
       "modelProposal": "Unterschied gelöste Stoffe/lose Körner in einer eigenen schematischen Wasserwegzeichnung.",
+      "open": [
+        "Wort- und Labor-IDs exakt abgleichen; Vorschläge sind noch keine gültigen Links",
+        "Koordinaten/Sicherheitsquelle",
+        "technische und fachliche Abnahme"
+      ],
       "word": "Grundwasser",
       "connection": "Grundwasser kann durch Gesteinsräume fließen. Bei Mammoth Cave verändert geeignetes Wasser das Kalkgestein durch chemisches Lösen.",
-      "mapPoint": {
-        "id": "mammoth-cave",
-        "qid": "Q242681",
-        "lat": 37.1869,
-        "lon": -86.1011,
-        "source": "https://www.wikidata.org/wiki/Q242681",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Was unterscheidet das Lösen von Kalkstein vom bloßen Mitnehmen loser Sandkörner?",
+        "answers": [
+          "Beim Lösen müssen immer dieselben großen Körner sichtbar mitschwimmen",
+          "Es gibt grundsätzlich keinen Unterschied zwischen beiden Vorgängen",
+          "Beim Lösen gehen Stoffe in die Lösung über, während lose Körner als Teilchen transportiert werden"
+        ],
+        "correct": 2,
+        "hint": "Denke daran, ob du einzelne feste Körner noch als solche verfolgen kannst.",
+        "why": "Gelöste Stoffe und mitgeführte feste Körner sind nicht dasselbe. Bei der Höhlenbildung kann schwach saures Wasser Kalkstein chemisch lösen.",
+        "wrong": [
+          "Beim Lösen musst du nicht dieselben festen Körner mitschwimmen sehen. Das unterscheidet Lösung gerade vom reinen Körnertransport.",
+          "Beide Vorgänge können Material verlagern, aber auf unterschiedliche Weise. Das hilft, die Höhlenbildung genauer zu erklären.",
+          null
+        ]
       }
     },
     {
@@ -148,18 +178,28 @@
         "Erosion"
       ],
       "modelProposal": "Vergleich dreier begrenzter Entwicklungsbilder, keine realistische Einsturzsimulation.",
+      "open": [
+        "Koordinaten",
+        "Querverbindungen begründen und IDs prüfen",
+        "Medien-/Browser-/Fachabnahme"
+      ],
       "word": "Verwitterung",
       "connection": "Verwitterung verändert Gestein an seinem Ort. In Bryce wirkt sie zusammen mit der späteren Abtragung gelockerten Materials.",
-      "mapPoint": {
-        "id": "bryce-hoodoos",
-        "qid": "Q219562",
-        "lat": 37.64,
-        "lon": -112.17,
-        "source": "https://www.wikidata.org/wiki/Q219562",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Was kann ein enger Riss in Gestein für seine weitere Verwitterung bedeuten?",
+        "answers": [
+          "Er kann Wasser einen Weg bieten und dadurch weitere Veränderungen ermöglichen",
+          "Er beweist, dass der ganze Felsturm morgen einstürzt",
+          "Er macht das Gestein für immer unveränderlich"
+        ],
+        "correct": 0,
+        "hint": "Ein möglicher Wasserweg ist noch keine genaue Zeitvorhersage.",
+        "why": "Wasser und Verwitterung können an Rissen wirken. Daraus lässt sich aber kein genauer Zeitpunkt für die Veränderung eines bestimmten Felsturms ablesen.",
+        "wrong": [
+          null,
+          "Die Skizze erklärt einen möglichen Prozess. Für eine genaue Einsturzzeit liefert sie keinen Nachweis.",
+          "Ein Riss schaltet Verwitterung nicht aus. Er kann im Gegenteil einen Weg für Wasser eröffnen."
+        ]
       }
     },
     {
@@ -188,18 +228,28 @@
         "Sediment"
       ],
       "modelProposal": "Eigene Schnittskizze von poröser/geringer durchlässiger Schicht und möglichem Wasserweg; keine fotografische oder maßstäbliche Rekonstruktion.",
+      "open": [
+        "Koordinaten",
+        "Kapillarwirkung gegenüber Durchlässigkeit ausdrücklich unterscheiden",
+        "vollständige Abnahme"
+      ],
       "word": "Verwitterung",
       "connection": "Die Verwitterung des Sandsteins hängt auch von seinen Bindungen und Wasserwegen ab. Nicht jeder Hohlraum entsteht durch Wind allein.",
-      "mapPoint": {
-        "id": "arches-sandstone",
-        "qid": "Q223969",
-        "lat": 38.7281,
-        "lon": -109.54,
-        "source": "https://www.wikidata.org/wiki/Q223969",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Warum wäre Sandsteinbogen entsteht nur durch Wind eine zu einfache Erklärung?",
+        "answers": [
+          "Weil Wasser an Gestein grundsätzlich nie etwas verändert",
+          "Weil auch Gesteinsaufbau, Risse und Wasserwege eine Rolle spielen",
+          "Weil jeder Bogen aus flüssigem Salz besteht"
+        ],
+        "correct": 1,
+        "hint": "Beachte nicht nur das Wetter, sondern auch den Aufbau des Gesteins.",
+        "why": "Im Arches-Gebiet wirken mehrere Bedingungen zusammen. Schichten, Risse und Wasserwege helfen zu erklären, wo Verwitterung und Abtragung wirken.",
+        "wrong": [
+          "Wasser kann Gestein auf unterschiedliche Weise verändern. Es darf in der Erklärung nicht pauschal ausgeschlossen werden.",
+          null,
+          "Die sichtbaren Bögen bestehen aus Gestein. Die geologische Rolle von Salz im Untergrund macht sie nicht zu flüssigen Salzformen."
+        ]
       }
     },
     {
@@ -239,18 +289,28 @@
         "aiNotice": "Eigener KI-unterstützter WunderKompass-Text; keine Autorenschaft, Freigabe oder Genauigkeitsgarantie der Quellenorganisation behaupten."
       },
       "modelProposal": "Qualitativer zeitversetzter Wasserweg, keine erfundenen Durchfluss- oder Reisetage.",
+      "open": [
+        "Koordinaten",
+        "Tatsächlich verfügbarer Medienweg oder eigenes geeignetes Schema",
+        "UI/reziproke Wege/Offline/fachliche Abnahme"
+      ],
       "word": "Delta",
       "connection": "Die Worterklärung führt in Flussverzweigung und Ablagerung ein. Das Okavango-Delta ergänzt ein wichtiges Gegenbeispiel zur Vorstellung: Ein Delta muss am Meer liegen.",
-      "mapPoint": {
-        "id": "okavango-delta",
-        "qid": "Q14227911",
-        "lat": -19.4,
-        "lon": 22.9,
-        "source": "https://www.wikidata.org/wiki/Q14227911",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Muss jedes Delta direkt an einem Meer liegen?",
+        "answers": [
+          "Ja, sonst kann sich ein Fluss grundsätzlich nicht verzweigen",
+          "Ja, Wasser kann im Land niemals enden",
+          "Nein, das Okavango-Delta zeigt eine verzweigte Wasserlandschaft im Landesinneren"
+        ],
+        "correct": 2,
+        "hint": "Vergleiche die Lage dieses Deltas mit einer gewöhnlichen Meeresmündung.",
+        "why": "Das Okavango-Delta liegt im Landesinneren. Der Begriff Delta ist deshalb nicht auf einen direkten Übergang zum Meer beschränkt.",
+        "wrong": [
+          "Ein Fluss kann sich auch im Landesinneren verzweigen. Das Okavango-Delta ist dafür ein konkretes Beispiel.",
+          "Wasserwege können im Inland enden, versickern oder Wasser an die Atmosphäre verlieren. Nicht jeder Fluss erreicht das Meer.",
+          null
+        ]
       }
     },
     {
@@ -281,16 +341,21 @@
         "claimScope": "Regen, saisonale Süßwasserlagunen, gehemmte Versickerung und Wind; keine übernommene Jahresstatistik oder UNESCO-Datensyndikation."
       },
       "mediaDecision": "Eigenes Nass-/Trocken-Schema mit klarer Modellgrenze statt ungeprüfter Fremdaufnahme.",
-      "mapPoint": {
-        "id": "lencois-maranhenses",
-        "qid": "Q647777",
-        "lat": -2.4833,
-        "lon": -43.1333,
-        "source": "https://www.wikidata.org/wiki/Q647777",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Warum beweisen große Sanddünen allein noch kein Wüstenklima?",
+        "answers": [
+          "Weil auch in einer regenreicheren Küstenlandschaft Dünen und zeitweise Lagunen vorkommen können",
+          "Weil Sand nur aus Wolken entstehen kann",
+          "Weil jede Sandfläche immer trocken bleibt"
+        ],
+        "correct": 0,
+        "hint": "Unterscheide das sichtbare Material von den längerfristigen Niederschlagsbedingungen.",
+        "why": "Eine Sandlandschaft beschreibt zunächst ihre Oberfläche. Die saisonalen Lagunen von Lençóis Maranhenses zeigen, dass Dünen nicht automatisch ein dauerhaft trockenes Wüstenklima bedeuten.",
+        "wrong": [
+          null,
+          "Der Ursprung von Sand ist eine andere Frage. Die Klimaeinordnung braucht Angaben zu den Bedingungen, nicht diese Behauptung.",
+          "Wasser kann sich auch zwischen Dünen sammeln. Die zeitweisen Lagunen widersprechen gerade einer immer trockenen Sandfläche."
+        ]
       }
     },
     {
@@ -320,16 +385,21 @@
         "claimScope": "Lage, geschlossene Becken, Salz-/Sedimentablagerungen; alte Flächenzahl, heutiger Gletscherzustand und Korallenbezeichnung bewusst nicht übernommen."
       },
       "mediaDecision": "Eigenes qualitatatives Stoff-/Wasserweg-Schema; keine aktuelle Satellitenaufnahme behaupten.",
-      "mapPoint": {
-        "id": "salar-uyuni",
-        "qid": "Q76122",
-        "lat": -20.3333,
-        "lon": -67.7,
-        "source": "https://www.wikidata.org/wiki/Q76122",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Was geschieht im vereinfachten Modell eines salzhaltigen, abflusslosen Beckens bei Verdunstung?",
+        "answers": [
+          "Salz und Wasser verschwinden immer vollständig im gleichen Verhältnis",
+          "Wasser geht in die Luft über, während Salze im Becken zurückbleiben können",
+          "Das Becken wird allein dadurch automatisch mit dem Ozean verbunden"
+        ],
+        "correct": 1,
+        "hint": "Verfolge Wasser und gelöste Salze als zwei verschiedene Bestandteile.",
+        "why": "Verdunstung entfernt Wasser aus der Flüssigkeit. Gelöste Salze bleiben dabei zurück und können bei passenden Bedingungen Krusten bilden.",
+        "wrong": [
+          "Wasser und gelöste Salze verhalten sich bei Verdunstung nicht gleich. Genau diese Trennung hilft, die Salzfläche zu erklären.",
+          null,
+          "Verdunstung erzeugt keinen neuen Flussausgang. Das Becken bleibt in diesem Modell eingeschlossen."
+        ]
       }
     },
     {
@@ -360,16 +430,21 @@
         "claimScope": "Namib/Küstennebel/Wind/Eisenoxidation; keine veralteten Regenzahlen oder Höchst-/Ältestrekorde."
       },
       "mediaDecision": "Eigene Küsten-/Windskizze. Quellenbild ist eine ASTER/DEM-Kombination mit internationalen Urhebern; nicht pauschal als NASA-Public-Domain übernommen.",
-      "mapPoint": {
-        "id": "namib-fog",
-        "qid": "Q131377",
-        "lat": -23,
-        "lon": 15,
-        "source": "https://www.wikidata.org/wiki/Q131377",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Was zeigt Küstennebel über den Wasserhaushalt einer trockenen Landschaft?",
+        "answers": [
+          "Dass Regen die einzige mögliche Form von Feuchtigkeit ist",
+          "Dass jede Wüste dadurch ein Regenwald wird",
+          "Dass auch Nebel Feuchtigkeit bereitstellen kann, ohne mit starkem Regen gleichgesetzt zu werden"
+        ],
+        "correct": 2,
+        "hint": "Vergleiche sichtbare kleine Nebeltröpfchen mit fallendem Regen.",
+        "why": "Nebel kann eine wichtige Feuchtequelle sein. Das macht aus einer trockenen Landschaft aber nicht automatisch ein Gebiet mit viel Regen.",
+        "wrong": [
+          "Wasser kann eine Landschaft auch auf anderen Wegen erreichen. Nebel ist deshalb in dieser Betrachtung wichtig.",
+          "Eine zusätzliche Feuchtequelle bedeutet nicht, dass sich alle Klimabedingungen in die eines Regenwalds verwandeln.",
+          null
+        ]
       }
     },
     {
@@ -399,16 +474,25 @@
           "claimScope": "Gestaltende Prozesse und verschiedene Lebensräume; kein kopierter Zustandsbericht, keine Fotos übernommen."
         }
       ],
-      "mapPoint": {
-        "id": "wadden-sea",
-        "qid": "Q26080",
-        "lat": 53.5333,
-        "lon": 6.8833,
-        "source": "https://www.wikidata.org/wiki/Q26080",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "open": [
+        "Sicherheitsquelle zum Watt nachführen",
+        "Lage-/Regionnachweise und Rechtehinweis der Website lesen"
+      ],
+      "question": {
+        "prompt": "Eine Wattfläche liegt einige Stunden später wieder unter Wasser. Welche Beobachtung hilft am besten zur Erklärung?",
+        "answers": [
+          "Der Wechsel des Wasserstands durch die Gezeiten",
+          "Nur die Farbe eines Strandkorbs",
+          "Die Behauptung, dass das gesamte Meer verschwunden war"
+        ],
+        "correct": 0,
+        "hint": "Beachte den zeitlichen Wechsel des Wasserstands.",
+        "why": "Im Wattenmeer beeinflussen die Gezeiten, wann Flächen trockenfallen und wieder überflutet werden. Das ist kein vollständiges Verschwinden des Meeres.",
+        "wrong": [
+          null,
+          "Die Farbe eines Gegenstands erklärt den Wasserstandswechsel nicht. Dafür musst du die Bewegung des Wassers betrachten.",
+          "Beim Trockenfallen bestimmter Flächen verschwindet nicht das ganze Meer. Der Wasserstand und die Wasserverteilung verändern sich."
+        ]
       }
     },
     {
@@ -438,16 +522,21 @@
         "claimScope": "Basaltabkühlung/Klüfte und Abgrenzung von Sage; keine kopierten Fotos/Logos oder uneingeschränkte Gleichförmigkeit behaupten."
       },
       "mediaDecision": "Eigene nicht maßstäbliche Säulenskizze; National-Trust-Fotos sind ausdrücklich fremd urheberrechtlich geschützt.",
-      "mapPoint": {
-        "id": "giants-causeway",
-        "qid": "Q106187",
-        "lat": 55.2408,
-        "lon": -6.5117,
-        "source": "https://www.wikidata.org/wiki/Q106187",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Welche Unterscheidung ist beim Giant’s Causeway wichtig?",
+        "answers": [
+          "Jede überlieferte Geschichte ist automatisch ein geologischer Messbericht",
+          "Eine Sage kann spannend sein, während die Entstehung der Basaltsäulen geologisch erklärt wird",
+          "Basalt ist grundsätzlich aus Holz"
+        ],
+        "correct": 1,
+        "hint": "Erzählung und Naturerklärung können unterschiedliche Zwecke besitzen.",
+        "why": "Sagen gehören zur Kulturgeschichte. Die Basaltsäulen lassen sich über das Abkühlen und Zusammenziehen von Lava erklären; die Sage ist kein wissenschaftlicher Beleg dafür.",
+        "wrong": [
+          "Eine Sage muss keine geologische Beobachtungsmethode besitzen. Das macht sie nicht zu einem Messbericht.",
+          null,
+          "Basalt ist vulkanisches Gestein. Holz erklärt weder sein Material noch die Säulenbildung."
+        ]
       }
     },
     {
@@ -477,16 +566,21 @@
         "claimScope": "Eiskappenstruktur, Untereisvulkane und Schmelzwasser; keine historischen Flächen-/Volumenwerte als aktuellen Stand ausgegeben."
       },
       "mediaDecision": "Eigene begrenzte Eis-/Wärme-Schnittzeichnung; keine fremden Karten/Fotos kopiert.",
-      "mapPoint": {
-        "id": "vatnajokull",
-        "qid": "Q179734",
-        "lat": 64.4,
-        "lon": -16.8,
-        "source": "https://www.wikidata.org/wiki/Q179734",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Warum reicht ein einzelner Kartenpunkt nicht, um Vatnajökull vollständig zu zeigen?",
+        "answers": [
+          "Weil der Name keine Buchstaben enthält",
+          "Weil jeder Gletscher genau punktförmig ist",
+          "Weil der Gletscher eine größere Fläche und mehrere Auslassgletscher besitzt"
+        ],
+        "correct": 2,
+        "hint": "Unterscheide ein Suchzeichen von der wirklichen räumlichen Ausdehnung.",
+        "why": "Der Punkt hilft bei der Orientierung. Er ersetzt keine Karte der großen Eiskappe und ihrer Auslassgletscher.",
+        "wrong": [
+          "Die Schreibweise eines Namens ist nicht das Darstellungsproblem. Es geht um die Ausdehnung des Eises.",
+          "Ein Gletscher besitzt eine räumliche Ausdehnung und ist kein mathematischer Punkt.",
+          null
+        ]
       }
     },
     {
@@ -516,16 +610,21 @@
         "claimScope": "Nordatlantik, schwimmende Algen, bewegliche Strömungsgrenzen; keine unveränderliche Kartengrenze oder Universalrekorde nötig."
       },
       "mediaDecision": "Eigene Orientierungsskizze mit ausdrücklich schematischen Strömungspfeilen; nicht als heutige Messkarte.",
-      "mapPoint": {
-        "id": "sargasso-sea",
-        "qid": "Q169274",
-        "lat": 27.5,
-        "lon": -50,
-        "source": "https://www.wikidata.org/wiki/Q169274",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Wodurch werden die Grenzen der Sargassosee vor allem beschrieben?",
+        "answers": [
+          "Durch umgebende Meeresströmungen statt einer vollständig umlaufenden Küste",
+          "Durch eine starre Mauer im Ozean",
+          "Durch den Rand eines einzigen großen Sees an Land"
+        ],
+        "correct": 0,
+        "hint": "Suche nach bewegtem Wasser als Begrenzung.",
+        "why": "Die Sargassosee wird durch ein System von Strömungen eingegrenzt. Eine solche Grenze ist nicht mit einer festen Landküste gleichzusetzen.",
+        "wrong": [
+          null,
+          "Im Meer steht dort keine umlaufende Mauer. Die Einordnung bezieht sich auf Meeresströmungen.",
+          "Die Sargassosee liegt im Ozean und ist kein eingeschlossener See an Land."
+        ]
       }
     },
     {
@@ -566,16 +665,21 @@
         }
       ],
       "mediaDecision": "Eigene begrenzte Land-/Meer-/Eis-Schnittzeichnung; keine Originalbilder oder Messgrafiken übernommen.",
-      "mapPoint": {
-        "id": "ross-ice-shelf",
-        "qid": "Q200255",
-        "lat": -81.5,
-        "lon": -175,
-        "source": "https://www.wikidata.org/wiki/Q200255",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Was unterscheidet Schelfeis grundsätzlich von gewöhnlichem Meereis?",
+        "answers": [
+          "Schelfeis ist immer nur über Nacht gefrorener Regen",
+          "Schelfeis hängt mit Landeis zusammen und schwimmt auf dem Meer; Meereis entsteht durch Gefrieren von Meerwasser",
+          "Zwischen beidem gibt es in keiner Hinsicht einen Unterschied"
+        ],
+        "correct": 1,
+        "hint": "Vergleiche die Herkunft des Eises und die Verbindung zum Land.",
+        "why": "Schelfeis ist die schwimmende Fortsetzung von Landeis, auch wenn weitere Eis- und Schneeanteile hinzukommen können. Meereis entsteht dagegen durch Gefrieren von Meerwasser.",
+        "wrong": [
+          "Damit wird die Herkunft von Schelfeis nicht erklärt. Es ist mit dem Landeis verbunden und kann über lange Zeit gespeist werden.",
+          null,
+          "Beide schwimmen, entstehen aber nicht einfach auf dieselbe Weise. Die Herkunft ist für die Erklärung wichtig."
+        ]
       }
     },
     {
@@ -617,16 +721,26 @@
         }
       ],
       "context": "Das Gebiet ist Country der Eastern Kuku Yalanji. Landschaft und Kulturgeschichte werden nicht als menschenleere Entdeckung dargestellt.",
-      "mapPoint": {
-        "id": "daintree",
-        "qid": "Q5209517",
-        "lat": -16.2,
-        "lon": 145.4,
-        "source": "https://www.wikidata.org/wiki/Q5209517",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "open": [
+        "Direkten Quellenabruf vor Integration nachprüfen oder Quellenlücke sichtbar machen",
+        "Koordinaten und ursprüngliche Ortsnamen",
+        "Schema-/UI-/Offline-/Fachabnahme"
+      ],
+      "question": {
+        "prompt": "Welche Aussage geht respektvoll mit der Geschichte des Daintree-Gebiets um?",
+        "answers": [
+          "Das Gebiet hatte vor heutigen Reiseberichten überhaupt keine menschliche Geschichte",
+          "Traditionelle Eigentümer gehören ausschließlich in eine ferne Vergangenheit",
+          "Das Land ist auch heute mit den Eastern Kuku Yalanji als Traditional Owners verbunden"
+        ],
+        "correct": 2,
+        "hint": "Eine alte kulturelle Verbindung muss nicht in der Vergangenheit beendet sein.",
+        "why": "Die Eastern Kuku Yalanji sind als Traditional Owners mit diesem Land verbunden. Das ist keine bloß abgeschlossene Vorgeschichte eines heutigen Ausflugsziels.",
+        "wrong": [
+          "Die Behauptung einer menschenleeren Vorgeschichte würde die lange kulturelle Verbindung übergehen.",
+          "Traditionelle Eigentümer und ihre Verbindung zum Land gehören auch in die Gegenwart. Sie sind nicht nur eine historische Randnotiz.",
+          null
+        ]
       }
     },
     {
@@ -656,16 +770,21 @@
       },
       "sourceDecision": "Ältere bpn.com.pl-Seite wegen auffälliger themenfremder Medizin-/Fremdlinks verworfen. Keine Verlinkung dieser Seite im Produkt.",
       "mediaDecision": "Eigene Lebensraumzeichnung, kein fremdes Waldfoto.",
-      "mapPoint": {
-        "id": "bialowieza",
-        "qid": "Q192666",
-        "lat": 52.75,
-        "lon": 23.95,
-        "source": "https://www.wikidata.org/wiki/Q192666",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Kann liegendes totes Holz in einem Wald noch eine ökologische Rolle besitzen?",
+        "answers": [
+          "Ja, es kann Lebensraum und Material für Zersetzung sein",
+          "Nein, totes Holz ist grundsätzlich für alle Lebewesen nutzlos",
+          "Nein, Leben ist ausschließlich in grünen Blättern möglich"
+        ],
+        "correct": 0,
+        "hint": "Denke an Pilze, kleine Tiere und den Abbau organischen Materials.",
+        "why": "Totes Holz kann vielen Organismen Lebensraum bieten und in Stoffkreisläufe eingehen. Tot beschreibt den Baumteil, nicht eine völlige Abwesenheit von Leben daran.",
+        "wrong": [
+          null,
+          "Auch totes Holz kann besiedelt und abgebaut werden. Die Aussage nutzlos für alle Lebewesen wäre falsch.",
+          "Lebewesen nutzen sehr verschiedene Teile eines Waldes. Grüne Blätter sind nicht der einzige Lebensraum."
+        ]
       }
     },
     {
@@ -694,16 +813,25 @@
         "claimScope": "Akzeptierte Art, natürliche Verbreitung Sokotra, Baum/trockenes Biom. Keine ungeprüften Harz-/Heil-/Nebel- oder Kronenfunktionsbehauptungen."
       },
       "mediaDecision": "Eigene Orientierungskarte; keine ungeprüfte Darstellung der Baumgestalt und keine kopierten Herbarbilder.",
-      "mapPoint": {
-        "id": "socotra-vegetation",
-        "qid": "Q82859",
-        "lat": 12.51,
-        "lon": 53.92,
-        "source": "https://www.wikidata.org/wiki/Q82859",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "open": [
+        "Koordinaten und regionale Kontextquelle",
+        "gezielte Medien-/Lernabnahme"
+      ],
+      "question": {
+        "prompt": "Was bedeutet die Zuordnung des Drachenblutbaums Dracaena cinnabari zu Sokotra?",
+        "answers": [
+          "Dass alle Pflanzen mit ähnlichem Namen überall dieselbe Art sind",
+          "Dass eine konkrete Pflanzenart mit einem bestimmten natürlichen Verbreitungsgebiet betrachtet wird",
+          "Dass jeder rote Pflanzensaft automatisch als Medizin verwendet werden sollte"
+        ],
+        "correct": 1,
+        "hint": "Achte auf den wissenschaftlichen Artnamen statt nur auf einen ähnlichen Alltagsnamen.",
+        "why": "Der wissenschaftliche Name bezeichnet eine bestimmte Art. Ähnliche Namen reichen weder zur Gleichsetzung verschiedener Arten noch für medizinische Schlussfolgerungen.",
+        "wrong": [
+          "Ähnliche Alltagsnamen können verschiedene Arten bezeichnen. Deshalb ist der genaue Artname hilfreich.",
+          null,
+          "Aus Farbe oder Name folgt keine sichere Heilwirkung oder Anwendung. Hier geht es um Pflanzengeografie, nicht um Medizin."
+        ]
       }
     },
     {
@@ -744,16 +872,21 @@
         }
       ],
       "mediaDecision": "Eigene schematische Wurzel-/Sedimentzeichnung, keine fremden Satellitenbilder.",
-      "mapPoint": {
-        "id": "sundarbans",
-        "qid": "Q4526",
-        "lat": 21.75,
-        "lon": 88.75,
-        "source": "https://www.wikidata.org/wiki/Q4526",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Warum sind die Sundarbans nicht sinnvoll als nur ein Wald oder nur Wasser beschrieben?",
+        "answers": [
+          "Weil dort grundsätzlich keine Pflanzen vorkommen",
+          "Weil Meer und Land nirgends miteinander verbunden sind",
+          "Weil Mangroven, Wasserwege, Gezeiten und Lebensgemeinschaften zusammengehören"
+        ],
+        "correct": 2,
+        "hint": "Betrachte den Übergang zwischen Land und Meer.",
+        "why": "Die Sundarbans sind eine Mangrovenlandschaft mit Wasserwegen und Gezeiteneinfluss. Die Verbindungen zwischen diesen Teilen sind wichtig für ihre Lebensräume.",
+        "wrong": [
+          "Mangroven sind Pflanzen und prägen diese Landschaft. Sie aus der Erklärung zu entfernen, würde den Lebensraum verfehlen.",
+          "Küstenlandschaften zeigen gerade Verbindungen zwischen Land und Meer. Die Wasserwege und Gezeiten gehören dazu.",
+          null
+        ]
       }
     },
     {
@@ -783,16 +916,25 @@
         ],
         "claimScope": "Beschriebener Umkehrmechanismus; keine alten Flächen-/Tiefenwerte, Monats- oder heutige Regelmäßigkeitsgarantie."
       },
-      "mapPoint": {
-        "id": "tonle-sap",
-        "qid": "Q199938",
-        "lat": 12.8833,
-        "lon": 104.0667,
-        "source": "https://www.wikidata.org/wiki/Q199938",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "open": [
+        "Aktuellen MRC-/Hydrologie-Nachweis ergänzen oder historischen Geltungsbereich sichtbar lassen",
+        "Modell und Rückwege"
+      ],
+      "question": {
+        "prompt": "Warum ist die Behauptung ein Fluss fließt hier immer in derselben Richtung für den Tonle-Sap-Zusammenhang zu einfach?",
+        "answers": [
+          "Weil saisonale Wasserstandsunterschiede die Fließrichtung der Verbindung verändern können",
+          "Weil jeder Fluss auf der Erde täglich gleichzeitig umkehrt",
+          "Weil Wasser grundsätzlich bergauf statt bergab fließt"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche die Wasserstände des Sees und des verbundenen Flusssystems.",
+        "why": "Im Tonle-Sap-System verändert der saisonale Zusammenhang mit dem Mekong die Wasserbewegung. Das ist eine besondere hydrologische Situation, keine allgemeine Regel für alle Flüsse.",
+        "wrong": [
+          null,
+          "Die Beobachtung lässt sich nicht auf einen gemeinsamen täglichen Wechsel aller Flüsse übertragen.",
+          "Die Richtung hängt von den jeweiligen Wasserständen und Verbindungen ab. Sie ist kein Beleg für eine pauschale Regel Wasser fließt bergauf."
+        ]
       }
     },
     {
@@ -822,16 +964,21 @@
         "claimScope": "Riftlage und Uferstaaten; keine fremden Lake-Kivu-Aussagen auf Tanganyika übertragen, keine historischen Rekord-/Bevölkerungsdaten."
       },
       "mediaDecision": "Eigene Orientierungskarte mit ausdrücklich vereinfachter geologischer Kontextskizze.",
-      "mapPoint": {
-        "id": "tanganyika",
-        "qid": "Q5511",
-        "lat": -6.1,
-        "lon": 29.5,
-        "source": "https://www.wikidata.org/wiki/Q5511",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Was verbindet den Tanganjikasee mit Plattentektonik?",
+        "answers": [
+          "Seine gesamte Tiefe entsteht an jedem Tag neu durch einen einzigen Wellenschlag",
+          "Er liegt in einem Riftgebiet, dessen Entwicklung mit der Bewegung der Erdkruste zusammenhängt",
+          "Sein Name bestimmt die Lage aller Erdplatten"
+        ],
+        "correct": 1,
+        "hint": "Unterscheide die langfristige Formung eines Beckens von einer kurzen Bewegung an der Oberfläche.",
+        "why": "Der See liegt im ostafrikanischen Riftsystem. Die Entwicklung des Beckens gehört zur geologischen Geschichte der Erdkruste, nicht zu einem einzelnen Wellenschlag.",
+        "wrong": [
+          "Wellen an der Oberfläche erklären nicht die langfristige Entstehung des tiefen Riftbeckens.",
+          null,
+          "Ein Ortsname verursacht keine Plattenbewegung. Die Lage ergibt sich aus geologischen Zusammenhängen."
+        ]
       }
     },
     {
@@ -862,16 +1009,21 @@
         "claimScope": "Lage, Einzugsbecken und Sedimentarchiv; keine damalige heutige Wetterlage, Stadtbevölkerung oder unklarer Höchstrekord."
       },
       "mediaDecision": "Eigene Schicht-/Spurenskizze; keine übernommene Astronautenaufnahme.",
-      "mapPoint": {
-        "id": "titicaca",
-        "qid": "Q35342",
-        "lat": -15.8167,
-        "lon": -69.3167,
-        "source": "https://www.wikidata.org/wiki/Q35342",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Warum sind Ablagerungen am Seeboden für Forschende interessant?",
+        "answers": [
+          "Weil jede Schicht immer ohne Prüfung genau ein Kalenderjahr bedeutet",
+          "Weil Sedimente niemals Informationen über frühere Bedingungen enthalten",
+          "Weil sie Spuren früherer Bedingungen bewahren können, die fachlich untersucht und datiert werden müssen"
+        ],
+        "correct": 2,
+        "hint": "Ein mögliches Archiv braucht eine Methode zum Lesen und zeitlichen Einordnen.",
+        "why": "Sedimente können ein Umweltarchiv sein. Ihre Bedeutung und Zeitfolge ergeben sich aber erst durch passende Untersuchung, nicht durch eine allgemeine Schicht-ist-ein-Jahr-Regel.",
+        "wrong": [
+          "Die zeitliche Bedeutung einer Schicht muss geprüft werden. Nicht jede Ablagerung entspricht automatisch genau einem Jahr.",
+          "Zusammensetzung und Abfolge können Hinweise enthalten. Sie müssen jedoch sorgfältig untersucht werden.",
+          null
+        ]
       }
     },
     {
@@ -902,16 +1054,21 @@
         "claimScope": "Vergletscherung/Uferformen/Abflüsse und Landschaftswandel am Oberen See, keine pauschale Entstehungserklärung jeder Insel."
       },
       "mediaDecision": "Eigene Hang-/Uferlinienskizze, keine genaue Rekonstruktion ehemaliger Seepegel.",
-      "mapPoint": {
-        "id": "lake-superior",
-        "qid": "Q1066",
-        "lat": 47.5289,
-        "lon": -87.76,
-        "source": "https://www.wikidata.org/wiki/Q1066",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Sind altes Gestein und eine später durch Gletscher veränderte Küstenform automatisch gleich alt?",
+        "answers": [
+          "Nein, Material und spätere Landschaftsform können unterschiedliche Alter besitzen",
+          "Ja, ein Gletscher erzeugt jedes vorhandene Gestein neu",
+          "Ja, das Alter einer Insel ist grundsätzlich exakt ihr Name"
+        ],
+        "correct": 0,
+        "hint": "Trenne die Entstehung des Materials von einer späteren Bearbeitung.",
+        "why": "Bereits vorhandenes Gestein kann später durch Eis, Wasser und andere Vorgänge verändert werden. Die Formung macht das Material nicht automatisch neu.",
+        "wrong": [
+          null,
+          "Gletscher können altes Gestein abtragen und umformen. Dafür müssen sie es nicht neu entstehen lassen.",
+          "Ein Name ist keine Altersmessung. Material und Form müssen mit geologischen Methoden untersucht werden."
+        ]
       }
     },
     {
@@ -942,16 +1099,21 @@
         "claimScope": "Lage und Landschafts-/Sedimentzusammenhang; keine alte Kanaldebatte oder Sedimentquote als heutige politische Nachricht."
       },
       "mediaDecision": "Eigene verzweigte Mündungsskizze ohne heutige Grenz-/Strömungsmessung.",
-      "mapPoint": {
-        "id": "danube-delta",
-        "qid": "Q184429",
-        "lat": 45.2,
-        "lon": 29.5,
-        "source": "https://www.wikidata.org/wiki/Q184429",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Warum ist ein Delta keine für immer unveränderliche Fläche?",
+        "answers": [
+          "Weil jeder Fluss an der Mündung ohne Wasser endet",
+          "Weil Ablagerung, Abtragung und Wasserwege seine Form verändern können",
+          "Weil das Wort Delta eine feste Betonmauer bezeichnet"
+        ],
+        "correct": 1,
+        "hint": "Überlege, was mit ankommendem und wieder abgetragenem Material geschieht.",
+        "why": "Deltas werden durch mehrere natürliche und menschlich beeinflusste Vorgänge geprägt. Ihre Form ist kein für alle Zeiten unveränderlicher Kartenumriss.",
+        "wrong": [
+          "Eine Mündung ist gerade mit Wasserbewegung verbunden. Die Behauptung erklärt keine Deltaentwicklung.",
+          null,
+          "Ein Delta ist eine Landschaftsform und keine allgemeine Bezeichnung für eine feste Mauer."
+        ]
       }
     },
     {
@@ -981,16 +1143,21 @@
         "claimScope": "Basalt, Brüche, Abtragung und Fallverlagerung; umstrittene Höhen-/Rekordzahlen bewusst ausgelassen."
       },
       "mediaDecision": "Eigene zweizeitige Kanten-/Fließpfeilzeichnung, keine Besuchs- oder Absturzsimulation.",
-      "mapPoint": {
-        "id": "victoria-falls",
-        "qid": "Q43278",
-        "lat": -17.9248,
-        "lon": 25.8581,
-        "source": "https://www.wikidata.org/wiki/Q43278",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Die Kante eines Wasserfalls verlagert sich über lange Zeit flussaufwärts. Bedeutet das, dass sein Wasser nun bergauf fließt?",
+        "answers": [
+          "Ja, beides ist genau dieselbe Bewegung",
+          "Ja, Wasserfälle kehren täglich alle Flüsse um",
+          "Nein, die langsame Verlagerung der Kante und die Fließrichtung des Wassers sind unterschiedliche Vorgänge"
+        ],
+        "correct": 2,
+        "hint": "Vergleiche die Bewegung einer Form über lange Zeit mit der Bewegung des Wassers im Moment.",
+        "why": "Abtragung kann die Lage der Wasserfallkante verändern. Das ist nicht mit einer Umkehr der Wasserströmung gleichzusetzen.",
+        "wrong": [
+          "Die Form der Kante und das Wasser verändern sich auf unterschiedliche Weise und auf unterschiedlichen Zeitskalen.",
+          "Die langsame geologische Entwicklung ist keine tägliche Umkehr eines ganzen Flusses.",
+          null
+        ]
       }
     },
     {
@@ -1021,16 +1188,21 @@
         "claimScope": "Grenzlage, Inseln/Stufen, Lavagestein und Schluchtbildung; keine alten Besucherzahlen oder Ranglisten."
       },
       "mediaDecision": "Eigene schematische Aufsicht; keine unbelegten Abflusswerte, keine falsche maßstäbliche Wasserfallkarte.",
-      "mapPoint": {
-        "id": "iguazu-falls",
-        "qid": "Q36332",
-        "lat": -25.6953,
-        "lon": -54.4367,
-        "source": "https://www.wikidata.org/wiki/Q36332",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Warum kann sich ein großer Fluss in viele nebeneinanderliegende Wasserfälle aufteilen?",
+        "answers": [
+          "Weil Wasserwege und die Form des Gesteinsuntergrunds die Verteilung beeinflussen",
+          "Weil Wasser grundsätzlich nur in exakt einer geraden Linie fließt",
+          "Weil der Name eines Wasserfalls seine Wassermenge festlegt"
+        ],
+        "correct": 0,
+        "hint": "Beachte nicht nur das Wasser, sondern auch die Fläche und Stufen darunter.",
+        "why": "Die Landschaftsform und Wasserwege helfen zu erklären, wie sich Wasser auf mehrere Fälle verteilt. Ein einzelner gerader Pfeil ist dafür zu stark vereinfacht.",
+        "wrong": [
+          null,
+          "Wasserwege können sich verzweigen und über verschiedene Stufen fließen. Eine einzige gerade Linie bildet das nicht vollständig ab.",
+          "Der Name verursacht weder Fließweg noch Wassermenge. Dafür sind die tatsächlichen Bedingungen wichtig."
+        ]
       }
     },
     {
@@ -1069,16 +1241,21 @@
         }
       ],
       "mediaDecision": "Eigene dreiteilige Entstehungsskizze mit deutlich beschrifteter fester Kruste und fließendem Inneren.",
-      "mapPoint": {
-        "id": "jeju-lava-tube",
-        "qid": "Q6750353",
-        "lat": 33.5283,
-        "lon": 126.7701,
-        "source": "https://www.wikidata.org/wiki/Q6750353",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Wie kann eine Lavaröhre entstehen?",
+        "answers": [
+          "Wasser friert zu einer dauerhaften heißen Röhre",
+          "Außen erstarrt Lava, während im Inneren noch Lava weiterfließen und schließlich abfließen kann",
+          "Jede Höhle wird ausschließlich von Tieren ausgegraben"
+        ],
+        "correct": 1,
+        "hint": "Vergleiche die Temperatur und Bewegung außen und im Inneren eines Lavastroms.",
+        "why": "Eine erstarrende Außenschicht kann einen weiterhin fließenden inneren Lavastrom umgeben. Fließt dieser ab, kann ein Hohlraum zurückbleiben.",
+        "wrong": [
+          "Eine Lavaröhre entsteht aus vulkanischem Material. Gefrierendes Wasser erklärt diesen Vorgang nicht.",
+          null,
+          "Höhlen haben verschiedene Entstehungswege. Eine Lavaröhre ist ein vulkanisch entstandener Hohlraum."
+        ]
       }
     },
     {
@@ -1119,16 +1296,21 @@
         }
       ],
       "mediaDecision": "Eigene Stoffwegskizze, keine ASTER-Falschfarbenaufnahme als natürliches Foto ausgegeben.",
-      "mapPoint": {
-        "id": "pamukkale",
-        "qid": "Q3892919",
-        "lat": 37.9167,
-        "lon": 29.15,
-        "source": "https://www.wikidata.org/wiki/Q3892919",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Pamukkale-Ortsmarker; nicht der genaue Terrassenumriss oder ein Zugang"
+      "question": {
+        "prompt": "Welcher Vorgang hilft, die Kalkterrassen von Pamukkale zu erklären?",
+        "answers": [
+          "Es wird ausschließlich loser Sand weggeweht",
+          "Jede Terrasse besteht aus künstlich gefrorenem Meerwasser",
+          "Mineralreiches Wasser kann Kalk ablagern und so Formen aufbauen"
+        ],
+        "correct": 2,
+        "hint": "Hier geht es nicht nur um Material, das verschwindet, sondern auch um Material, das neu liegen bleibt.",
+        "why": "Kalkablagerung aus mineralreichem Wasser kann die Terrassen aufbauen. Das ist von der chemischen Lösung oder reinen Abtragung von Gestein zu unterscheiden.",
+        "wrong": [
+          "Windtransport von Sand erklärt den Aufbau dieser Kalkablagerungen nicht.",
+          "Die Terrassen sind keine künstlichen Eisformen. Ihr Material und ihre Bildung hängen mit mineralreichem Wasser zusammen.",
+          null
+        ]
       }
     },
     {
@@ -1160,16 +1342,21 @@
         "claimScope": "Einsturzhohlform und Wasserwege. Vereinfachte Farberklärung sowie alte Besucher-/Schnee-/Frostangaben bewusst nicht übernommen."
       },
       "mediaDecision": "Eigene begrenzte Caldera-/Wasserbilanzskizze ohne geologische Maßstabs- oder Vorhersagebehauptung.",
-      "mapPoint": {
-        "id": "crater-lake",
-        "qid": "Q329266",
-        "lat": 42.9436,
-        "lon": -122.1067,
-        "source": "https://www.wikidata.org/wiki/Q329266",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Woher erhält Crater Lake einen wichtigen Teil seines Wassers?",
+        "answers": [
+          "Aus Regen und Schnee im Becken",
+          "Aus einem täglichen Zufluss des offenen Ozeans",
+          "Ausschließlich aus Lava, die zu kaltem Wasser wird"
+        ],
+        "correct": 0,
+        "hint": "Überlege, welches Wasser aus der Atmosphäre in das Becken gelangen kann.",
+        "why": "Niederschlag als Regen und Schnee speist den See. Eine vulkanische Entstehung des Beckens bedeutet nicht, dass sein heutiges Wasser aus Lava entsteht.",
+        "wrong": [
+          null,
+          "Crater Lake ist kein täglich vom offenen Meer durchflutetes Küstenbecken.",
+          "Lava verwandelt sich nicht einfach in Seewasser. Beckenentstehung und Herkunft des heutigen Wassers sind verschiedene Fragen."
+        ]
       }
     },
     {
@@ -1200,16 +1387,21 @@
         "claimScope": "Gips, Wasserwege, Kristallbildung/Zerkleinerung und Windtransport; keine garantierten Wind- oder Überflutungsintervalle."
       },
       "mediaDecision": "Eigene beschriftete Stoff-/Kornfolge, keine fremden Landschaftsaufnahmen.",
-      "mapPoint": {
-        "id": "white-sands",
-        "qid": "Q1200164",
-        "lat": 32.7797,
-        "lon": -106.1717,
-        "source": "https://www.wikidata.org/wiki/Q1200164",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Warum bedeutet eine Düne nicht automatisch, dass ihr Sand aus Quarz besteht?",
+        "answers": [
+          "Weil alle Dünen aus reinem Wasser bestehen",
+          "Weil auch anderes körniges Material wie Gips zu Dünen transportiert werden kann",
+          "Weil die Form eines Hügels jede Materialuntersuchung ersetzt"
+        ],
+        "correct": 1,
+        "hint": "Unterscheide die Form einer Ablagerung von ihrer stofflichen Zusammensetzung.",
+        "why": "Düne beschreibt eine durch Wind geformte Ablagerung. In White Sands besteht das Sandmaterial aus Gips; die Form allein legt das Mineral nicht fest.",
+        "wrong": [
+          "Eine Düne besteht aus abgelagertem körnigem Material. Flüssiges Wasser erklärt hier nicht den Dünenkörper.",
+          null,
+          "Ähnliche Formen können aus unterschiedlichen Materialien bestehen. Für die Zusammensetzung brauchst du passende Beobachtungen oder Untersuchungen."
+        ]
       }
     },
     {
@@ -1239,16 +1431,21 @@
         "claimScope": "Lage, Hohlraum und ausdrücklich wahrscheinlicher historischer Zusammenhang; keine Altersgewissheit, heutige Sauerstoffmessung oder Tauchberatung."
       },
       "mediaDecision": "Eigene Wasserstands-/Hohlraumskizze ohne Tiefenmaßstab.",
-      "mapPoint": {
-        "id": "great-blue-hole",
-        "qid": "Q86486",
-        "lat": 17.3156,
-        "lon": -87.5344,
-        "source": "https://www.wikidata.org/wiki/Q86486",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Warum muss bei der Entstehung des Great Blue Hole auch ein früher anderer Meeresspiegel bedacht werden?",
+        "answers": [
+          "Weil der Meeresspiegel überall und jederzeit genau gleich war",
+          "Weil Blau grundsätzlich ein bestimmtes Gesteinsalter bedeutet",
+          "Weil heute überflutete Hohlräume unter früher anderen Bedingungen entstanden sein können"
+        ],
+        "correct": 2,
+        "hint": "Der heutige Zustand muss nicht derselbe wie während der Entstehung sein.",
+        "why": "Eine heute unter Wasser liegende Form kann eine ältere Entstehungsgeschichte besitzen. Meeresspiegeländerungen sind deshalb Teil der Erklärung, ohne eine exakte Datierung vorzutäuschen.",
+        "wrong": [
+          "Der Meeresspiegel hat sich über geologische Zeit verändert. Ein unveränderlicher Wert wäre keine passende Annahme.",
+          "Die Farbe allein liefert keine genaue Altersbestimmung. Dafür braucht man andere Belege und Methoden.",
+          null
+        ]
       }
     },
     {
@@ -1279,16 +1476,21 @@
         "claimScope": "Lage, Kalk und mehrere Entwicklungsprozesse; keine unkritisch übernommenen Arten-/Inselzahlen oder Sagen als Entstehungsbeweis."
       },
       "mediaDecision": "Eigene qualitative Gesteins-/Wasser-Schnittskizze; keine Fotografie oder exakte Rekonstruktion.",
-      "mapPoint": {
-        "id": "ha-long-bay",
-        "qid": "Q190128",
-        "lat": 20.9,
-        "lon": 107.2,
-        "source": "https://www.wikidata.org/wiki/Q190128",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Welche Erklärung unterscheidet Naturvorgang und Sage in der Hạ-Long-Bucht passend?",
+        "answers": [
+          "Die Kalkinseln werden geologisch untersucht; eine Sage ist eine andere Form des Erzählens",
+          "Die Sage ersetzt jede Untersuchung des Kalkgesteins",
+          "Jede Kalkinsel entstand sicher an genau demselben Tag"
+        ],
+        "correct": 0,
+        "hint": "Eine spannende Erzählung muss keine wissenschaftliche Entstehungserklärung sein.",
+        "why": "Kalkgestein, Lösung, Hebung und Abtragung gehören zur geologischen Untersuchung. Eine Sage kann kulturell bedeutsam sein, ersetzt diese Belege aber nicht.",
+        "wrong": [
+          null,
+          "Eine Sage erfüllt einen anderen Zweck. Für eine geologische Erklärung bleiben Material und überprüfbare Vorgänge wichtig.",
+          "Aus der ähnlichen Landschaftsform folgt kein gemeinsamer exakter Entstehungstag aller Inseln."
+        ]
       }
     },
     {
@@ -1327,16 +1529,21 @@
         }
       ],
       "mediaDecision": "Eigene Eis-/Tal-/Meeres-Skizze; keine übernommenen Tourismusbilder oder Mapbox-Karten.",
-      "mapPoint": {
-        "id": "sognefjord",
-        "qid": "Q208495",
-        "lat": 61.1,
-        "lon": 5.1667,
-        "source": "https://www.wikidata.org/wiki/Q208495",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Warum gehört ein Fjord nicht einfach zur gleichen Erklärung wie jedes beliebige Flusstal?",
+        "answers": [
+          "Weil alle Täler immer ohne Wasser entstehen",
+          "Weil glaziale Formung und spätere Überflutung durch Meerwasser für einen Fjord wichtig sind",
+          "Weil die Länge seines Namens seine Tiefe festlegt"
+        ],
+        "correct": 1,
+        "hint": "Betrachte, was ein Gletscher formen kann und was nach seinem Rückzug geschieht.",
+        "why": "Ein Fjord ist mit glazial geformten Tälern verbunden, in die Meerwasser gelangt. Die Entstehung braucht mehr als die Angabe, dass dort heute Wasser liegt.",
+        "wrong": [
+          "Wasser und Eis können wichtige Kräfte bei der Talformung sein. Die Behauptung ohne Wasser wäre zu pauschal.",
+          null,
+          "Name und Tiefe sind verschiedene Dinge. Eine Tiefenangabe braucht eine Messung."
+        ]
       }
     },
     {
@@ -1368,16 +1575,21 @@
         "claimScope": "Strömungs-/Nährstoff-/Nahrungsnetzzusammenhang. Keine historische Reise als aktuell, keine vollständige Tierzählung aus Chlorophyll."
       },
       "mediaDecision": "Eigene begrenzte Wasserweg-/Nahrungsnetzzeichnung mit getrennten Pfeillegenden.",
-      "mapPoint": {
-        "id": "galapagos-upwelling",
-        "qid": "Q38095",
-        "lat": -0.6667,
-        "lon": -90.55,
-        "source": "https://www.wikidata.org/wiki/Q38095",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Beweist eine hohe Chlorophyllanzeige auf einer Satellitenkarte bereits die genaue Anzahl aller Fische?",
+        "answers": [
+          "Ja, jede Farbfläche ist automatisch eine vollständige Fischzählung",
+          "Ja, Chlorophyll und Fischzahl sind dieselbe Messgröße",
+          "Nein, Chlorophyll gibt Hinweise auf pflanzliches Plankton und ist keine vollständige Fischzählung"
+        ],
+        "correct": 2,
+        "hint": "Frage zuerst, welche Größe der Sensor beziehungsweise die Karte wirklich beschreibt.",
+        "why": "Chlorophyll ist ein Hinweis auf photosynthetisch aktive Organismen. Nährstoffe, Plankton und weitere Teile des Nahrungsnetzes hängen zusammen, sind aber keine identischen Messgrößen.",
+        "wrong": [
+          "Eine solche Farbkarte erfasst nicht automatisch jeden Fisch. Ihre Messgröße muss genau benannt werden.",
+          "Chlorophyllgehalt und Anzahl von Fischen sind unterschiedliche Größen. Ein Zusammenhang ersetzt keine Zählung.",
+          null
+        ]
       }
     },
     {
@@ -1409,20 +1621,25 @@
         "claimScope": "Flusstal, wiederholte Vergletscherung, Abrasion und Sedimentfüllung; keine einzelne Grafik als vollständige oder maßstäbliche Geschichte."
       },
       "mediaDecision": "Eigener begrenzter Querschnittvergleich, keine kopierten Parktafeln oder Fotos.",
-      "mapPoint": {
-        "id": "yosemite-valley",
-        "qid": "Q1996389",
-        "lat": 37.7167,
-        "lon": -119.65,
-        "source": "https://www.wikidata.org/wiki/Q1996389",
-        "property": "P625",
-        "checkedOn": "2026-10-15",
-        "license": "CC0 1.0 (structured statements only)",
-        "scope": "Ungefährer Orientierungs-/Beispielpunkt; keine Ausdehnung, Reiseroute oder Vermessung"
+      "question": {
+        "prompt": "Welche Erklärung berücksichtigt mehrere Schritte der Formung des Yosemite Valley?",
+        "answers": [
+          "Flüsse, spätere Gletscher und Ablagerungen können nacheinander und zusammen an der Landschaft wirken",
+          "Ein einziger kurzer Windstoß erzeugt sicher jedes Tal vollständig",
+          "Das Gestein muss genau im Moment des letzten Fotos entstanden sein"
+        ],
+        "correct": 0,
+        "hint": "Unterscheide Materialalter, verschiedene Formungsprozesse und spätere Ablagerung.",
+        "why": "Die Landschaft besitzt eine mehrstufige Geschichte. Ein einzelner Vorgang oder Aufnahmezeitpunkt erklärt nicht alle beobachteten Formen.",
+        "wrong": [
+          null,
+          "Die Formung eines solchen Tals lässt sich nicht durch die erfundene Wirkung eines einzigen kurzen Windstoßes erklären.",
+          "Ein Foto macht Gestein sichtbar, erzeugt es aber nicht neu. Sein Alter muss anders untersucht werden."
+        ]
       }
     }
   ],
-  "backlog": "WK-054 in BACKLOG.md; original34 depth/UI/search/reciprocal/offline gates still open",
+  "backlog": "WK-054 in existing BACKLOG.md; no independent acceptance or completed growth claim from manuscripts",
   "independentAcceptance": false,
   "rights": "Own German explanations; source facts paraphrased; no third-party photo or copied map adopted. Wikidata structured coordinate statements CC0; no map tiles/media reused.",
   "existingEntries": [
@@ -1697,6 +1914,184 @@
       "independentAccepted": false
     },
     {
+      "id": "reef",
+      "starter": "Korallen sind Tiere. Viele riffbildende Korallen leben mit winzigen Algen zusammen. Diese Partnerschaft hilft beim Leben im flachen, lichtdurchfluteten Meer.",
+      "deeper": "Steinkorallen bilden Kalkskelette. Viele Polypen tragen über lange Zeit zum Aufbau eines Riffs bei. Bei Belastungen kann die Partnerschaft mit den Algen gestört werden und Korallen können bleichen. Gebleichte Korallen sind nicht automatisch schon tot; Dauer und Stärke der Belastung sind wichtig.",
+      "observe": "Zeichne zwei verbundene Kästchen: Korallentier und Algenpartner. Markiere ihre Verbindung. Was fehlt bei der Behauptung ein Korallenriff ist nur ein unbelebter Stein? Die Skizze zeigt eine Beziehung, keine genaue Zelle oder Vorhersage zur Gesundheit eines bestimmten Riffs.",
+      "benefit": "Du unterscheidest Tier, Lebensgemeinschaft und aufgebautes Kalkgerüst.",
+      "word": "Korallen",
+      "connection": "Die Begriffserklärung hilft dir, Korallen als Tiere zu erkennen. Das Great Barrier Reef zeigt, wie viele solcher Lebewesen gemeinsam eine große Riffstruktur aufbauen können.",
+      "question": {
+        "prompt": "Welche Aussage beschreibt viele flache riffbildende Korallen passend?",
+        "answers": [
+          "Sie sind ausschließlich unbelebte Steine",
+          "Sie sind Tiere, die oft mit kleinen Algen zusammenleben",
+          "Sie sind alle Landpflanzen"
+        ],
+        "correct": 1,
+        "hint": "Unterscheide das lebende Tier von seinem Kalkgerüst.",
+        "why": "Korallen sind Tiere. Viele riffbildende Korallen besitzen eine enge Partnerschaft mit Algen; ihr Gerüst ist nicht mit dem ganzen Lebewesen gleichzusetzen.",
+        "wrong": [
+          "Das Kalkgerüst ist nur ein Teil der Riffstruktur. Die Korallenpolypen selbst sind lebende Tiere.",
+          null,
+          "Korallen sind keine Landpflanzen. Manche Algen in ihrer Partnerschaft betreiben zwar Fotosynthese, aber das macht das Korallentier nicht zur Pflanze."
+        ]
+      },
+      "modelProposal": "Eigenes Polyp–Algen-Partnerschaftsschema, keine mikroskopische Originalaufnahme.",
+      "independentAccepted": false,
+      "sources": [
+        {
+          "url": "https://oceanservice.noaa.gov/facts/coral.html",
+          "title": "NOAA: Are corals animals or plants?",
+          "updatedOn": null,
+          "anchors": [
+            "polyps",
+            "symbiosis",
+            "limestone"
+          ],
+          "claimScope": "Korallen als Tiere, Partnerschaft und Kalkgerüst; keine heutige Gesamtzustandsbehauptung über das Great Barrier Reef."
+        },
+        {
+          "url": "https://oceanservice.noaa.gov/facts/coral_bleach.html",
+          "title": "NOAA: What is coral bleaching?",
+          "updatedOn": "2026-09-23",
+          "anchors": [
+            "not dead",
+            "can survive",
+            "stress"
+          ],
+          "claimScope": "Haupttext vollständig gelesen: Bleichung ist nicht automatisch Tod; keine neue regionale aktuelle Bleichungsrate."
+        }
+      ]
+    },
+    {
+      "id": "mariana",
+      "starter": "Mit zunehmender Tiefe im Meer steigt der Druck. Über einem tiefen Ort befindet sich eine größere Wassersäule. Challenger Deep im Marianengraben liegt ungefähr elf Kilometer unter der Wasseroberfläche.",
+      "deeper": "Eine Tiefenangabe ist nicht dasselbe wie eine Druckangabe. Für einen vereinfachten Druckvergleich sind zusätzlich etwa die Wasserdichte und die Schwerkraft wichtig. Ein Kartenpunkt bezeichnet den untersuchten Bereich, nicht die vollständige Form oder Länge des Grabens.",
+      "observe": "Zeichne zwei Punkte unter derselben Wasseroberfläche: einen flach und einen tiefer. Markiere jeweils die darüberliegende Wassersäule. Welche ist länger? Das Papiermodell misst keinen echten Meeresdruck und ist keine Anleitung zum Tauchen.",
+      "benefit": "Du erklärst einen Tiefenvergleich über eine Ursache des Drucks statt nur über eine Rekordzahl.",
+      "word": "Kraft",
+      "connection": "Zum Verstehen von Druck brauchst du die Größe Kraft: Druck beschreibt Kraft pro Fläche. Im Meer trägt die darüberliegende Wassersäule zur Belastung bei; der Begriffslink berechnet keinen echten Tiefseedruck.",
+      "question": {
+        "prompt": "An welchem von zwei Punkten unter derselben Meeresoberfläche ist der Wasserdruck in der vereinfachten Betrachtung größer?",
+        "answers": [
+          "Immer an dem Punkt mit dem kürzeren Namen",
+          "Am flacheren Punkt, weil weniger Wasser darüber liegt",
+          "Am tieferen Punkt mit der größeren Wassersäule darüber"
+        ],
+        "correct": 2,
+        "hint": "Vergleiche die Menge an Wasser oberhalb der beiden Punkte.",
+        "why": "Die größere Wassersäule über dem tieferen Punkt trägt zu höherem Druck bei. Die Zeichnung ist nur eine vereinfachte Erklärung.",
+        "wrong": [
+          "Ein Ortsname verursacht keinen Druckunterschied. Entscheidend sind die physikalischen Bedingungen.",
+          "Weniger Wasser über dem flacheren Punkt erklärt nicht den größeren Druck. In diesem Vergleich steigt der Druck mit der Tiefe.",
+          null
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/pacific-islands/habitat-conservation/marianas-trench-marine-national-monument",
+          "title": "NOAA Fisheries: Mariana Trench Marine National Monument",
+          "updatedOn": null,
+          "anchors": [
+            "Challenger Deep",
+            "around 11,000 meters"
+          ],
+          "claimScope": "Ungefähre Tiefe, keine behauptete zentimetergenaue neue Vermessung."
+        },
+        {
+          "url": "https://oceanservice.noaa.gov/facts/pressure.html",
+          "title": "NOAA: How does pressure change with ocean depth?",
+          "updatedOn": null,
+          "anchors": [
+            "pressure",
+            "depth"
+          ],
+          "claimScope": "Zusammenhang Wassertiefe/Druck; vereinfachtes eigenes Schema ohne Tauchberatung."
+        }
+      ],
+      "modelProposal": "Eigener qualitativer Wassersäulenvergleich; keine Druckmessung oder sichere Tauchtiefe.",
+      "independentAccepted": false
+    },
+    {
+      "id": "tundra",
+      "starter": "In der Tundra ist die Zeit zum Wachsen kurz. Viele Pflanzen bleiben niedrig. Tundra gibt es weit im Norden und auch hoch im Gebirge, wo keine Bäume mehr wachsen.",
+      "deeper": "Arktische und alpine Tundra teilen manche Merkmale, sind aber nicht identisch. Dauerhaft gefrorener Boden spielt in vielen arktischen Gebieten eine wichtige Rolle; daraus folgt nicht, dass jede hochgelegene Tundra denselben Boden besitzt. Ein Vegetationsgürtel ist eine Vereinfachung vieler örtlicher Bedingungen.",
+      "observe": "Vergleiche in zwei eigenen Skizzen einen nördlichen Standort und einen hohen Bergstandort. Markiere die kurze Wachstumszeit als gemeinsame Bedingung. Welche weiteren Informationen über Boden und Wasser würdest du brauchen? Die Zeichnung legt keine echte Vegetationsgrenze fest.",
+      "benefit": "Du vergleichst Lebensräume nach Bedingungen und vermeidest die Gleichsetzung ähnlicher Landschaften.",
+      "word": "Tundra",
+      "connection": "Der Begriff hilft dir, eine niedrige, baumfreie Vegetation mit kurzer Wachstumszeit zu beschreiben. Der Kartenpunkt ist ein Beispiel, nicht die gesamte Ausdehnung dieser Lebensräume.",
+      "question": {
+        "prompt": "Warum sind arktische und alpine Tundra trotz ähnlicher Merkmale nicht einfach derselbe Ortstyp mit völlig gleichen Bedingungen?",
+        "answers": [
+          "Weil Boden, Höhe, Lage und Wasserverhältnisse unterschiedlich sein können",
+          "Weil alpine Tundra grundsätzlich aus hohen Bäumen besteht",
+          "Weil ähnliche Pflanzenformen alle anderen Unterschiede ausschließen"
+        ],
+        "correct": 0,
+        "hint": "Eine gemeinsame Eigenschaft macht noch nicht alle Bedingungen gleich.",
+        "why": "Ähnliche niedrige Vegetation kann unter verschiedenen örtlichen Bedingungen vorkommen. Deshalb müssen Unterschiede von Lage, Boden und Wasser mit betrachtet werden.",
+        "wrong": [
+          null,
+          "Alpine Tundra liegt oberhalb der Baumgrenze. Hohe geschlossene Baumbestände beschreiben gerade nicht ihren typischen Charakter.",
+          "Ähnliche Pflanzenformen sind nur ein Vergleichsmerkmal. Daraus folgt keine völlige Gleichheit von Boden und Klima."
+        ]
+      },
+      "source": {
+        "url": "https://www.nps.gov/subjects/arctic/naturescience.htm",
+        "title": "NPS: Nature and Science – The Arctic, Tundra",
+        "updatedOn": "2020-10-07",
+        "anchors": [
+          "two types of tundra",
+          "short growing seasons",
+          "alpine tundra"
+        ],
+        "claimScope": "Unterschied arktisch/alpin und kurze Wachstumszeit; keine pauschale weltweite Permafrostpflicht oder universelle exakte Tageszahl."
+      },
+      "modelProposal": "Eigenes Vergleichsschema nördlich/hochgelegen mit klarer Modellgrenze.",
+      "independentAccepted": false
+    },
+    {
+      "id": "temperate-forest",
+      "starter": "In vielen Wäldern Europas verändern sich Laubbäume im Lauf der Jahreszeiten. Bei vielen Arten fallen im Herbst Blätter ab. Ein einzelner Baum zeigt aber nicht alle Arten und Standorte eines ganzen Waldes.",
+      "deeper": "Nicht alle Bäume verlieren ihre Blätter gleichzeitig oder jedes Jahr vollständig. Art, Standort und Bedingungen sind wichtig. Eine kleine eigene Beobachtung an einem Baum ist wertvoll, ersetzt aber keine Untersuchung aller Wälder Europas.",
+      "observe": "Beobachte vom sicheren Weg aus denselben erreichbaren Baum an zwei Tagen. Notiere Datum und sichtbare Blattveränderungen, ohne Blätter oder Äste abzureißen. Welche Aussagen über diesen Baum sind belegt, welche über den ganzen Wald noch offen? Keine unbekannten Pflanzen oder Pilze essen.",
+      "benefit": "Du planst eine datierte Beobachtung und trennst ein einzelnes Beispiel vom gesamten Lebensraum.",
+      "word": "Jahreszeiten",
+      "connection": "Jahreszeiten verändern Licht- und Temperaturbedingungen. Der jährliche Blattwechsel vieler Laubbäume macht einen Teil dieser Veränderungen in deiner Umgebung beobachtbar.",
+      "question": {
+        "prompt": "Du beobachtest einen Baum an zwei Herbsttagen. Welche Aussage ist damit am besten belegt?",
+        "answers": [
+          "Alle Bäume Europas verändern sich genau am selben Tag",
+          "Die notierten Veränderungen an diesem Baum an diesen beiden Tagen",
+          "Jeder Baum verliert grundsätzlich alle Blätter"
+        ],
+        "correct": 1,
+        "hint": "Achte darauf, wie viele Orte und Zeitpunkte du wirklich beobachtet hast.",
+        "why": "Die Beobachtung belegt zunächst diesen Baum und die notierten Zeitpunkte. Größere Aussagen brauchen weitere passende Beobachtungen.",
+        "wrong": [
+          "Zwei Beobachtungen an einem Baum belegen keinen gemeinsamen Termin für alle europäischen Bäume.",
+          null,
+          "Es gibt verschiedene Baumarten und Formen des Blattwechsels. Eine solche absolute Aussage folgt nicht aus deinem Beispiel."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.nps.gov/articles/how-do-trees-change-in-the-fall.htm",
+          "title": "NPS: How do trees change in the fall?",
+          "updatedOn": "2025-01-27",
+          "anchors": [
+            "Why some leaves fall off",
+            "scar tissue",
+            "Why some leaves stick around"
+          ],
+          "claimScope": "Vollständiger Haupttext gelesen; allgemeiner Blattwechsel und unterschiedliche Baumtypen. Keine US-spezifischen Arten/vereinfachte Gefrierphysik auf Europa übertragen. Frühere BfN-Naturdetektive-URL leitet zu allgemeiner Bildungsseite und wird ausdrücklich nicht als Beleg genutzt."
+        }
+      ],
+      "modelProposal": "Eigene datierte Jahreszeiten-Beobachtungskarte, keine automatisch diagnostizierte Baumgesundheit.",
+      "independentAccepted": false
+    },
+    {
       "id": "victoria",
       "starter": "Am Victoriasee liegen Ufer in drei Ländern: Uganda, Kenia und Tansania. Der See ist ein zusammenhängendes Gewässer. Eine eingezeichnete Staatsgrenze trennt sein Wasser nicht in drei Becken.",
       "deeper": "Eine Karte kann gleichzeitig natürliche Formen und menschlich festgelegte Grenzen zeigen. Für die Bedeutung des Sees zählen nicht nur seine Umrisse, sondern auch die Menschen und Lebensräume an verschiedenen Ufern. Eine frühere Meldung über seinen Wasserstand ist kein verlässlicher Wert für heute.",
@@ -1870,14 +2265,14 @@
         ]
       },
       "source": {
-        "url": "https://www.vaticanstate.va/en/state-and-government/general-informations/geography.html",
-        "title": "Vatican City State: Geography",
+        "url": "https://www.vaticanstate.va/fr/etat-et-gouvernorat/notes-generales/geographie.html",
+        "title": "Vatican City State: Géographie",
         "updatedOn": null,
         "anchors": [
-          "0.44 km2",
+          "0,44 km2",
           "44 hectares"
         ],
-        "claimScope": "Flächenangabe laut Geografieseite, Suchtext zugänglich; Direktabruf teilweise blockiert. Die englische History-Seite enthält eine widersprechende Einheit und wird nicht übernommen. Vollständigen direkten Beleg vor Produktintegration erneut sichern."
+        "claimScope": "Französische offizielle Geografieseite vollständig gelesen, Fläche0,44km²=44ha. Widersprechende Einheit der englischen History-Seite nicht übernommen. Keine fremden Karten oder Medien."
       },
       "modelProposal": "Eigenes Zoom-/Suchzeichen-Schema, keine übernommenen Kartenkacheln.",
       "independentAccepted": false
@@ -2385,6 +2780,195 @@
         "claimScope": "Konkretes Beispiel veränderter Flussläufe gegenüber Grenzlinien; keine allgemeine rechtsverbindliche Aussage über sämtliche Flussgrenzen."
       },
       "modelProposal": "Eigenes überlagerbares Vorher-/Nachher-Linienschema, keine neuen echten Geodaten.",
+      "independentAccepted": false
+    },
+    {
+      "id": "etna",
+      "starter": "Am Ätna können Lava, Gase und Asche austreten. Ein Vulkan ist deshalb nicht nur ein Berg mit einer einzigen Art von Ausbruch. Forschende beobachten verschiedene Zeichen seiner Aktivität.",
+      "deeper": "Das INGV beschreibt am Ätna sowohl austretende Lavaströme als auch explosive Aktivität mit Aschewolken. Die Art und Stärke können sich unterscheiden. Ein kleines Lernmodell zeigt nur ausgewählte Zusammenhänge und kann keinen wirklichen Ausbruch vorhersagen.",
+      "observe": "Ordne drei eigene Symbole zu: fließendes geschmolzenes Gestein, feine Gesteinsteilchen und austretendes Gas. Welche Unterschiede zeigt eine Zeichnung mit nur einem roten Lavastreifen nicht? Die Papieraufgabe verwendet weder Feuer noch heiße Stoffe.",
+      "benefit": "Du vergleichst verschiedene Produkte vulkanischer Aktivität statt alle Ausbrüche gleichzusetzen.",
+      "word": "Lava",
+      "connection": "Lava ist an die Oberfläche gelangtes geschmolzenes Gestein. Die Begriffserklärung hilft, einen Lavastrom von Gasen und einer Aschewolke zu unterscheiden.",
+      "question": {
+        "prompt": "Warum reicht ein roter Lavastreifen nicht aus, um alle möglichen Vorgänge am Ätna zu erklären?",
+        "answers": [
+          "Weil Lava, Asche und Gase unterschiedliche Erscheinungen sind",
+          "Weil an Vulkanen grundsätzlich niemals Gas austritt",
+          "Weil jede Vulkanzeichnung eine genaue Vorhersage liefert"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche, was fließt, was als feine Teilchen und was gasförmig austritt.",
+        "why": "Ein Lavastrom ist nur eine mögliche Erscheinung. Asche und Gase müssen für eine umfassendere Erklärung getrennt betrachtet werden.",
+        "wrong": [
+          null,
+          "Gase können zu vulkanischer Aktivität gehören. Ihr Austreten ist nicht automatisch durch eine Lavazeichnung erklärt.",
+          "Eine Lernzeichnung vereinfacht. Sie sagt keinen Zeitpunkt und Verlauf eines echten Ausbruchs vorher."
+        ]
+      },
+      "source": {
+        "url": "https://www.ct.ingv.it/etna/",
+        "title": "INGV Osservatorio Etneo: Monte Etna",
+        "updatedOn": null,
+        "anchors": [
+          "colate laviche",
+          "attività fortemente esplosiva",
+          "gas e cenere"
+        ],
+        "claimScope": "Grundunterscheidung Lava/Gas/Asche; historische Höhendaten, aktuelle Kraterzahlen und Warnstufen nicht übernommen. Hauptabsätze vollständig gelesen; eigene deutsche Erklärung, keine übernommenen Medien."
+      },
+      "modelProposal": "Eigene qualitative Gegenüberstellung Lava/Asche/Gas; Verweis auf das bestehende Vulkanlabor ohne Prognoseversprechen.",
+      "independentAccepted": false
+    },
+    {
+      "id": "fuji",
+      "starter": "Der Fuji ist ein Vulkan mit einer gut erkennbaren Bergform. Eine ruhige Oberfläche im Foto verrät aber nicht die ganze Geschichte. Für vergangene Ausbrüche braucht man zusätzliche Belege und Aufzeichnungen.",
+      "deeper": "Das Smithsonian Global Volcanism Program beschreibt Fujisan als Schichtvulkan. Verschiedene Ablagerungen tragen zum Aufbau solcher Vulkane bei. Eine regelmäßige Silhouette ist weder eine vollständige Schnittzeichnung noch eine Sicherheitsbewertung für heute.",
+      "observe": "Zeichne einen Vulkan von außen und daneben einen ausdrücklich erfundenen Querschnitt mit Schichten. Welche Informationen sind in der Außenansicht nicht sichtbar? Die Skizze zeigt keine vermessenen inneren Schichten des Fuji.",
+      "benefit": "Du unterscheidest sichtbare Form von innerem Aufbau und historischer Aktivität.",
+      "word": "Vulkan",
+      "connection": "Ein Vulkan ist mehr als seine Bergsilhouette. Die Begriffserklärung verknüpft den sichtbaren Berg mit dem Austritt von Material aus dem Erdinneren.",
+      "question": {
+        "prompt": "Was kannst du aus einem einzelnen ruhigen Vulkanfoto allein nicht sicher schließen?",
+        "answers": [
+          "Welche äußere Form auf dem Foto sichtbar ist",
+          "Dass der Vulkan für immer erloschen und ein Besuch sicher ist",
+          "Ob das Foto eine Landschaft zeigt"
+        ],
+        "correct": 1,
+        "hint": "Eine Momentaufnahme ist keine vollständige Geschichte und keine Sicherheitsauskunft.",
+        "why": "Ein Foto belegt einen sichtbaren Zustand. Eine Einordnung der Aktivität und eine aktuelle Sicherheitsbewertung brauchen weitere fachliche Informationen.",
+        "wrong": [
+          "Die sichtbare äußere Form kannst du beschreiben. Die weitergehende Aussage über dauerhafte Ruhe folgt daraus nicht.",
+          null,
+          "Du kannst den Bildinhalt als Landschaft erkennen. Das ersetzt trotzdem keine vulkanologische Einordnung."
+        ]
+      },
+      "source": {
+        "url": "https://volcano.si.edu/volcano.cfm?vn=283030",
+        "title": "Smithsonian Global Volcanism Program: Fujisan",
+        "updatedOn": null,
+        "anchors": [
+          "Composite",
+          "Stratovolcano",
+          "1707"
+        ],
+        "claimScope": "Vulkantyp und letzter bestätigter Ausbruch ab1707 im vollständig gelesenen Hauptabsatz/Tabellenausschnitt. Spätere unsichere Einträge nicht als bestätigte Ausbrüche ausgeben; Basistext präzisieren: letzter bestätigter Ausbruch."
+      },
+      "modelProposal": "Eigene Außenansicht/erfundener Schichtquerschnitt mit klarer Trennung von Beobachtung und Modell.",
+      "independentAccepted": false
+    },
+    {
+      "id": "kilauea",
+      "starter": "Kīlauea ist ein Schildvulkan. Viele Lavaströme haben zu seinem Aufbau beigetragen. Die breite Form bedeutet aber nicht, dass jede seiner Ausbruchsphasen gleich abläuft.",
+      "deeper": "Der USGS beschreibt in der Geschichte Kīlaueas sowohl von Lavaströmen als auch von explosiver Aktivität geprägte Zeiten. Eine Einteilung nach Vulkanform ist deshalb keine Garantie eines einzigen Ausbruchsstils. Gesteinsschichten und Datierungen helfen, die Vergangenheit zu untersuchen.",
+      "observe": "Zeichne mehrere flache Schichten als selbst erfundenes Aufbau-Schema. Ergänze daneben zwei getrennte Beschriftungen: Form des Vulkans und Art einer Aktivitätsphase. Warum sind das verschiedene Fragen? Die Zeichnung bildet keine reale Gefahrenlage ab.",
+      "benefit": "Du vermeidest die falsche Regel Schildvulkan ist immer ungefährlich oder immer nur ruhig fließende Lava.",
+      "word": "Schildvulkan",
+      "connection": "Schildvulkan beschreibt eine typische breite Vulkanform. Kīlaueas Geschichte zeigt, dass die Form allein noch nicht jeden Ausbruchsstil festlegt.",
+      "question": {
+        "prompt": "Was folgt aus der Bezeichnung Schildvulkan nicht automatisch?",
+        "answers": [
+          "Dass damit eine Vulkanform beschrieben wird",
+          "Dass ein Vulkan sehr unterschiedliche Spuren hinterlassen kann",
+          "Dass alle Ausbrüche immer gleich und ungefährlich sind"
+        ],
+        "correct": 2,
+        "hint": "Vergleiche die Form eines Berges mit dem Verlauf einzelner Aktivitätsphasen.",
+        "why": "Die Form beschreibt nicht automatisch jede Aktivitätsphase. Am Kīlauea sind unterschiedliche Ausbruchsstile aus der Geschichte belegt.",
+        "wrong": [
+          "Die Form ist tatsächlich Teil der Bezeichnung. Sie ist nur keine vollständige Aussage über alle Ausbrüche.",
+          "Unterschiedliche geologische Spuren passen zur Geschichte verschiedener Phasen. Sie sind kein Widerspruch zur Einordnung als Schildvulkan.",
+          null
+        ]
+      },
+      "source": {
+        "url": "https://www.usgs.gov/volcanoes/kilauea/science/geology-and-history-kilauea",
+        "title": "USGS: Geology and History of Kīlauea",
+        "updatedOn": "2023-11-29",
+        "anchors": [
+          "shield volcano",
+          "Explosive and Effusive Cycles",
+          "Geologic mapping and dating"
+        ],
+        "claimScope": "Schildform und wechselnde historische Ausbruchsstile; keine aktuellen Warnstufen, unüberprüften Alters-/Flächenzahlen oder Reisefreigaben."
+      },
+      "modelProposal": "Eigenes getrenntes Schema Form/Aktivitätsstil; kein ungefährliches Realvulkanversprechen.",
+      "independentAccepted": false
+    },
+    {
+      "id": "vesuvius",
+      "starter": "Vulkanasche ist nicht die weiche Asche eines Lagerfeuers. Sie besteht aus kleinen Teilen von Gestein, Mineralen und vulkanischem Glas. Der Name allein kann deshalb eine falsche Vorstellung wecken.",
+      "deeper": "Bei explosiver Aktivität kann Material zerkleinert und mit Gasen in die Luft getragen werden. Der Vesuv ist ein historisches Beispiel für explosive vulkanische Aktivität. Eine Lernzeichnung erklärt Material und Vorgänge, ersetzt aber keine echte Beobachtung oder Gefahrenwarnung.",
+      "observe": "Zeichne drei klar als erfunden markierte Teilchenarten: kleines Gesteinsstück, Mineralstück und Glasstück. Vergleiche diese Beschreibung mit der Vorstellung verbranntes Holz. Es wird keine echte Asche gesammelt, berührt oder eingeatmet.",
+      "benefit": "Du hinterfragst einen alltagssprachlichen Namen und lernst eine sachlich passendere Materialvorstellung.",
+      "word": "Vulkanasche",
+      "connection": "Vulkanasche erklärt die kleinen festen Teilchen eines vulkanischen Auswurfs. Der Begriff verhindert die Verwechslung mit der Asche von verbranntem Holz.",
+      "question": {
+        "prompt": "Welche Beschreibung passt zu Vulkanasche?",
+        "answers": [
+          "Kleine feste Bruchstücke aus Gestein, Mineralen und vulkanischem Glas",
+          "Immer nur Reste von verbranntem Holz",
+          "Ein Gas ohne feste Teilchen"
+        ],
+        "correct": 0,
+        "hint": "Hier bezeichnet Asche die Größe vulkanischer Teilchen, nicht einfach verbranntes Material.",
+        "why": "Vulkanasche enthält kleine feste Bruchstücke. Ihre Entstehung und Zusammensetzung unterscheiden sich von gewöhnlicher Holzasche.",
+        "wrong": [
+          null,
+          "Der Name Asche ist hier missverständlich: Vulkanasche ist nicht einfach das Produkt eines Holzfeuers.",
+          "Vulkanische Gase und feste Ascheteilchen sind verschiedene Dinge, auch wenn sie gemeinsam auftreten können."
+        ]
+      },
+      "source": {
+        "url": "https://volcanoes.usgs.gov/volcanic_ash/ash.html",
+        "title": "USGS: Volcanic Ash",
+        "updatedOn": null,
+        "anchors": [
+          "rock",
+          "minerals",
+          "volcanic glass"
+        ],
+        "claimScope": "Zusammensetzung und Begriffsklärung, keine aktuelle Vesuv-Warnung. Der historische Vesuvbezug bleibt der vorhandenen Basisquelle zugeordnet; eigene Skizze, keine übernommenen Mikrofotos."
+      },
+      "modelProposal": "Eigene Teilchensymbole mit ausdrücklich nicht maßstäblicher Form; keine echten Proben.",
+      "independentAccepted": false
+    },
+    {
+      "id": "iceland",
+      "starter": "Auf Island bewegen sich Teile großer Erdplatten voneinander weg. Zugleich liegt dort ein Hotspot. Das Zusammentreffen zweier Zusammenhänge hilft, den Vulkanismus der Insel zu verstehen.",
+      "deeper": "Ein Hotspot kann auch an einer auseinanderdriftenden Plattengrenze liegen. Deshalb sind die Begriffe Hotspot und Plattengrenze keine gegenseitigen Ausschlüsse. Das vereinfachte Schema beschreibt geologische Zusammenhänge und keinen genauen Ort des nächsten Ausbruchs.",
+      "observe": "Lege zwei Papierstreifen nebeneinander und bewege sie etwas auseinander. Markiere darunter getrennt einen gedachten Hotspot. Welche Markierung beschreibt Plattenbewegung, welche eine zusätzliche Quelle heißen Mantelmaterials? Das Papier ist kein echter Erdmantel und keine Zeit- oder Gefahrenberechnung.",
+      "benefit": "Du kombinierst zwei geologische Erklärungsansätze, statt eine falsche Entweder-oder-Regel zu verwenden.",
+      "word": "Plattentektonik",
+      "connection": "Plattentektonik erklärt die Bewegung der Erdplatten. Island zeigt, dass eine auseinanderdriftende Grenze und ein Hotspot im selben Gebiet zusammenwirken können.",
+      "question": {
+        "prompt": "Schließen sich Hotspot und auseinanderdriftende Plattengrenze grundsätzlich aus?",
+        "answers": [
+          "Ja, beides kann niemals im selben Gebiet vorkommen",
+          "Nein, Island ist ein Beispiel für ihr Zusammentreffen",
+          "Ja, alle Hotspots sind Landesgrenzen"
+        ],
+        "correct": 1,
+        "hint": "Eine Beschreibung der Plattenbewegung und ein Hotspot beantworten nicht genau dieselbe Frage.",
+        "why": "Einige Hotspots liegen an auseinanderdriftenden Plattengrenzen; Island ist ein Beispiel. Die beiden Begriffe sind keine Gegensätze.",
+        "wrong": [
+          "Island zeigt gerade, dass die beiden Zusammenhänge gemeinsam vorkommen können. Die Entweder-oder-Regel wäre zu einfach.",
+          null,
+          "Ein Hotspot ist ein geologischer Begriff und keine politische Landesgrenze."
+        ]
+      },
+      "source": {
+        "url": "https://www.usgs.gov/faqs/what-a-hotspot-and-how-do-you-know-its-there",
+        "title": "USGS: What is a hotspot and how do you know it is there?",
+        "updatedOn": null,
+        "anchors": [
+          "Iceland",
+          "diverging plate boundaries"
+        ],
+        "claimScope": "Vollständiger FAQ-Hauptabsatz gelesen: Island als Beispiel Hotspot an divergierender Grenze; keine aktuelle Gefahren-/Ausbruchsvorhersage, keine gesicherte Behauptung einer vollständig erklärten Hotspot-Ursache."
+      },
+      "modelProposal": "Eigenes qualitatives Plattengrenze-/Hotspot-Schema; keine Vulkanausbruchsvorhersage.",
       "independentAccepted": false
     }
   ]
