@@ -1503,7 +1503,7 @@
       "why": "Beide mechanisieren wiederholte Arbeit, verarbeiten aber andere Materialien mit anderer Wirkung."
     }
   ],
-  "UIAcceptance": "New twelve integrated in source; actual new UI/model tests and full acceptance pending. Historical twelve proofs remain bound to their original snapshots.",
+  "UIAcceptance": "Targeted actual Chromium: all24 x7 widths and6 models, large text/native200%, links/focus/axe passed198.008s. All12 new mobile/desktop plans and6 mobile/desktop/native models personally viewed by Codex. Final immutable full root, offline, Firefox/WebKit, additional regression images and Quality aggregation remain mandatory; independent acceptance false.",
   "integratedManuscriptIds": [
     "invention-battery",
     "invention-generator",
@@ -1517,5 +1517,78 @@
     "invention-seismograph",
     "invention-3d-printing",
     "invention-sewing-machine"
-  ]
+  ],
+  "newModelReview": {
+    "reviewedBy": "Codex; not independent scientific, child or physical-device acceptance",
+    "reviewedOn": "2026-10-16",
+    "ids": [
+      "invention-battery",
+      "invention-generator",
+      "invention-transistor",
+      "invention-camera",
+      "invention-telescope",
+      "invention-microscope",
+      "invention-refrigerator",
+      "invention-bicycle",
+      "invention-elevator",
+      "invention-seismograph",
+      "invention-3d-printing",
+      "invention-sewing-machine"
+    ],
+    "actualTargetedBrowser": {
+      "build": "b3ae2e07bee80ae6",
+      "status": "passed",
+      "seconds": 198.00805235599998,
+      "topicWidthCases": 168,
+      "modelWidthCases": 42,
+      "nativeModelCases": 6,
+      "widths": [
+        320,
+        360,
+        390,
+        768,
+        1024,
+        1440,
+        1920
+      ],
+      "nativeZoomPercent": 200,
+      "nativePhysicalPixels": [
+        1280,
+        900
+      ],
+      "nativeCssPixels": [
+        640,
+        450
+      ],
+      "largeText": true,
+      "wrongSpecificFeedback": true,
+      "retainedSeededSaves": true,
+      "reciprocalLinksAndBackFocus": true,
+      "axe": true,
+      "completeRootAndIndependentEngines": "Pending on the final immutable snapshot; this targeted proof cannot substitute for them."
+    },
+    "actualVisualInspection": "All12 new plans at320 and1440, all6 new experiments at320/1440 and physical1280px native200% personally viewed. Controls readable and no text overlap in these captures; normal vertical viewport scrolling remains necessary with zoom. Final full-run regression captures still require inspection.",
+    "correctedFindings": [
+      "Large-reading320: long new step labels overflowed. Explicit number/text columns, wrapping and single-column enlarged-text steps correct the observed defect without shortening scientific content.",
+      "Tablet768: Wärmedämmung stranded its final g. Add a discretionary break between Wärme and dämmung, retaining the original canonical name.",
+      "Every new topic needs at least two substantive deeper paragraphs; individually authored second explanations added rather than lowering the old depth test."
+    ],
+    "retainedMechanics": "Frozen exact original12 invention objects and all142 original questions; no schema/progress ID changes. Old plan screenshot crop hashes can differ after surrounding step reflow/subpixel positions; no byte-identity claim for this wave. Original sealed evidence unmodified.",
+    "requiredImages": {
+      "previousChromiumRoles": 58,
+      "currentChromiumRoles": 102,
+      "added": "24 new plan crops +18 functional model mobile/desktop/native states +2 actual text-wrapping regressions",
+      "budgetBytes": 150000000,
+      "noOldRoleRemoved": true
+    },
+    "modelLimits": {
+      "generator": "Qualitative momentary induced response, no voltage/current calculation or perpetual energy.",
+      "transistor": "Symbolic switching separates control and supply, not an anatomical/analog semiconductor simulation.",
+      "layers": "Cross-sections and missing middle material; no manufacturing, support or strength approval.",
+      "resolution": "Actual same-scale enlargement of sharp/blurred geometry; no new information or calculated optical resolution.",
+      "aperture": "Same81 synthetic points, counted in two circle sizes; no star brightness, distance or magnification calculation.",
+      "seismograph": "Qualitative initial relative displacement; no computed oscillator, real earthquake data or prediction."
+    },
+    "independentAcceptance": false
+  }
 }

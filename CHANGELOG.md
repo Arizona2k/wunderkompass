@@ -1,5 +1,11 @@
 # Änderungsverlauf
 
+## Paket3.5 · zwölf neue Erfindungen erkunden (unveröffentlicht)
+
+- Batterie, Generator, Transistor, Kamera, Teleskop, Mikroskop, Kühlschrank, Fahrrad, Aufzug, Seismograph, 3D-Druck und Nähmaschine mit eigenen Funktionsplänen, auswählbaren Teilen, verständlichen Erklärungen, freiwilligen Vertiefungen, individuellen Fragen/Hilfen und 29 erklärten gegenseitigen Wissensverbindungen ergänzt. Historische Zeitanker ausdrücklich von Ersterfindungsbehauptungen getrennt.
+- Sechs freiwillige, tatsächlich bedienbare Modelle für Induktion, Steuerung/Versorgung, Schichten, Bildgröße/erkennbare Details, Sammelfläche und relative Bodenbewegung. Modellgrenzen sichtbar; bestehende zwölf Erfindungsmechaniken, Originalfragen und Schema-3-Spielstände bleiben erhalten.
+- Echte mobile Umbruchfehler bei großer Schrift und Tablet-Bauteilbeschriftungen behoben. Browsermatrizen und fehlerschließende Nachweise um alle neuen Themen/Modellzustände erweitert; sämtliche alten Pflichtrollen erhalten. Vorbereiteter Chronikeintrag ergänzt; keine Veröffentlichung oder unabhängige Fachfreigabe daraus ableiten.
+
 ## Paket3.5 · autorisierte Chromium-Zeitreserve (unveröffentlicht)
 
 - Nur das Chromium-Joblimit von35auf50Minuten erhöht; Firefox/WebKit bleiben35Minuten. Bestehende Matrix mit einem Ausdruck erhalten. Quality78 hatte Browserlauf und Nachweiserstellung bestanden und wurde unmittelbar vor erfolgreicher Nachweisübergabe abgebrochen. Vollständige Tests, Laufzeitmessungen und Freigabegrenzen bleiben erhalten; künftige Laufzeiten weiter vergleichen.

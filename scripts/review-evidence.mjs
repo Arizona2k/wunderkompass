@@ -23,19 +23,19 @@ export function reviewStorage(screenshots,retainedBytes,{previous=null}={}){
 export const requiredScreenshots=[...['320','360','390','768','1024','1440','1920'].flatMap(w=>['quality-foundation-foundation-labs-'+w+'.png','quality-learning-journey-links-'+w+'.png']),...['320','1440'].flatMap(w=>['quality-news-feed-signed-news-rejected-'+w+'.png','quality-navigation-updates-all-details-'+w+'-full.png'])];
 requiredScreenshots.push(...[320,1440].map(width=>'quality-learning-nature-model-grand-canyon-phase-3-'+width+'.png'));
 requiredScreenshots.push(...['source-5-320','source-25-320','starter-30-320','starter-35-320','starter-48-320','starter-59-320','59-1440','native-200-large','overview-320'].map(key=>'quality-book-why-'+key+'.png'));
-requiredScreenshots.push(...[320,1440].flatMap(width=>worldIndex.filter(t=>t.category==='inventions').map(t=>'quality-navigation-invention-model-'+t.id+'-'+width+'.png')),'quality-navigation-invention-native-200-large.png');
+requiredScreenshots.push(...[320,1440].flatMap(width=>worldIndex.filter(t=>t.category==='inventions').map(t=>'quality-navigation-invention-model-'+t.id+'-'+width+'.png')),'quality-navigation-invention-native-200-large.png','quality-navigation-invention-steps-large-320.png','quality-navigation-invention-labels-fridge-768.png');
 requiredScreenshots.push(...[320,1440].flatMap(width=>['keyboard','pointer'].map(input=>'quality-foundation-foundation-route-focus-'+input+'-'+width+'.png')));
 requiredScreenshots.push(...worldIndex.filter(t=>t.inventionModel).flatMap(t=>[...([320,1440].map(width=>'quality-navigation-invention-experiment-'+t.id+'-'+width+'.png')),'quality-navigation-invention-experiment-native-'+t.id+'.png']));
 export function retainScreenshot(name){
  // Each individual plan and distinct functional model has review value.
  // Keep mobile/desktop and actual native model states; never fill the budget.
- if(/^quality-navigation-invention-/.test(name))return /invention-(?:(?:model|experiment)-invention-[a-z0-9-]+-(?:320|1440)|experiment-native-invention-[a-z0-9-]+|native-200-large)\.png$/.test(name);
+ if(/^quality-navigation-invention-/.test(name))return /invention-(?:(?:model|experiment)-invention-[a-z0-9-]+-(?:320|1440)|experiment-native-invention-[a-z0-9-]+|native-200-large|steps-large-320|labels-fridge-768)\.png$/.test(name);
  // All120 full Why cards are captured and hashed. Retain readable evidence of
  // partial sources, four new domains, desktop, native zoom and the mobile overview.
  if(/quality-book-why-/.test(name))return /why-(?:(?:source-(?:5|25)|starter-(?:30|35|48|59))-320|59-1440|native-200-large|overview-320)\.png$/.test(name);
  // Full open word cards remain captured/hashed; retain readable model close-ups
  // and native combined zoom instead of seven very long cards at both widths.
- if(/quality-(?:learning|book)-book-/.test(name))return /book-(?:model-(?:length|duration|temperature)-(?:320|1440)|temperature-large-320|native-200-large)\.png$/.test(name);
+ if(/quality-(?:learning|book)-book-/.test(name))return /book-(?:model-(?:length|duration|temperature)-(?:320|1440)|temperature-large-320|native-200-large|steps-large-320|labels-fridge-768)\.png$/.test(name);
  if(/quality-(?:learning|research)-science-/.test(name))return /science-(?:native-200-large|(?:surface-tension|encryption)-large-320)\.png$/.test(name)||/science-(pressure|diffusion|fractals|cell|fusion|comet|exoplanet)-(hero|model)-(320|1440)\.png$/.test(name);
  // Engine jobs already upload their four-width originals. Count every actually
  // stored PNG in the final budget as well, rather than hiding390/768 there.
