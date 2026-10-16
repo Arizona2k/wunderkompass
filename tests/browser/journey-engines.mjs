@@ -1,3 +1,5 @@
+import JOURNEY_CONTENT from '../../app/journey-content.json' with {type:'json'};
+import JOURNEY_SOURCES from '../../app/journey-sources.json' with {type:'json'};
 import {historyEngineView} from './discovery-central.mjs';
 import {offlineResilience} from './offline-resilience.mjs';
 import {offlineRetention} from './offline-retention.mjs';
@@ -40,8 +42,21 @@ async function runEngine(kind,offset){
   assert.deepEqual(errors,[]);
   const inventionStarted=performance.now(),inventionProof=await inventionsEngine(browser,base,{engine:name,shots:output}),inventionSeconds=(performance.now()-inventionStarted)/1000;console.log('ENGINE_PHASE',JSON.stringify({engine:name,phase:'inventions',seconds:inventionSeconds}));
   const historyViews=[];for(const width of [320,390,768,1440]){await p.setViewportSize({width,height:900});historyViews.push(await historyEngineView(p,width,output,{engine:name}));}
+ const oceanSourceViews=[];
+ for(const width of [320,390,768,1440]){await p.setViewportSize({width,height:900});
+  for(const [index,step] of JOURNEY_CONTENT.journeys.find(j=>j.id==='ocean').steps.entries()){
+   await p.evaluate(i=>location.hash='journeys/ocean/'+(i+1),index);await p.locator('[data-chapter-inquiry="ocean:'+index+'"]').waitFor();await p.getByText(step.whyItMatters,{exact:true}).waitFor();await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));
+   const summary=p.locator('summary').filter({hasText:'Für Erwachsene: Quellen'}),details=summary.locator('..');if(!await details.evaluate(e=>e.open))await summary.click();
+   const links=p.locator('.journey-source'),observed=await links.evaluateAll(a=>a.map(e=>e.getAttribute('href')));assert.deepEqual(observed,step.sourceIds.map(id=>JOURNEY_SOURCES[id].url));assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
+   for(const a of await links.all()){const box=await a.boundingBox();assert.ok(box.height>=44&&box.x>=-2&&box.x+box.width<=width+2,'readable chapter source touch target');}
+   const first=links.first();await first.focus();await p.keyboard.press('Tab');await p.keyboard.press('Shift+Tab');assert.ok(await first.evaluate(e=>e===document.activeElement&&e.matches(':focus-visible')));
+   await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});assert.deepEqual(await details.evaluate(async el=>(await window.axe.run(el,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
+   if(index===3&&[320,1440].includes(width))await details.screenshot({path:path.join(output,'journey-engine-'+name+'-ocean-sources-'+width+'.png'),animations:'disabled'});
+   oceanSourceViews.push({id:'ocean:'+index,width,links:observed,readable:true,axe:true,largeText:true,keyboard:true});
+  }
+ }
  const buildingStarted=performance.now(),buildingProof=await buildingsEngine(browser,base,{engine:name,shots:output}),buildingSeconds=(performance.now()-buildingStarted)/1000;console.log('ENGINE_PHASE',JSON.stringify({engine:name,phase:'buildings',seconds:buildingSeconds}));
-  return {name,historyViews,version:browser.version(),chapters:checked,widths:[320,390,768,1440],...bookProof,...whyProof,...natureProof,...inventionProof,...buildingProof,offlineRetention:retentionProof,offlineResilience:offlineProof,phaseSeconds:{journeys:journeySeconds,book:bookSeconds,why:whySeconds,nature:natureSeconds,inventions:inventionSeconds,buildings:buildingSeconds},seconds:(performance.now()-started)/1000,port:port+offset};
+  return {name,historyViews,oceanSourceViews,version:browser.version(),chapters:checked,widths:[320,390,768,1440],...bookProof,...whyProof,...natureProof,...inventionProof,...buildingProof,offlineRetention:retentionProof,offlineResilience:offlineProof,phaseSeconds:{journeys:journeySeconds,book:bookSeconds,why:whySeconds,nature:natureSeconds,inventions:inventionSeconds,buildings:buildingSeconds},seconds:(performance.now()-started)/1000,port:port+offset};
  }finally{await browser?.close();if(browser)browsers.delete(browser);server.kill('SIGTERM');servers.delete(server);}
 }
 try{
