@@ -15,9 +15,9 @@ test('final image budget accounts for every actually uploaded PNG once, includin
 });
 
 import {engineComplete,scheduleComplete}from'../scripts/handoff.mjs';
-test('book starts only after all isolated samples, overlaps later checks and never adds a fourth worker',()=>{
- const schedule={mode:'performance-first-book-overlap',performanceSamples:21,performanceCompletedSeconds:30,bookStartedSeconds:30.1,foundationCompletedSeconds:110,newsCompletedSeconds:140,peakWorkers:3};assert.equal(scheduleComplete(schedule),true);
- for(const change of [s=>{delete s.mode;},s=>{s.performanceSamples=20;},s=>{s.bookStartedSeconds=29;},s=>{s.bookStartedSeconds=111;},s=>{s.newsCompletedSeconds=100;},s=>{s.peakWorkers=4;},s=>{s.peakWorkers=0;},s=>{s.foundationCompletedSeconds=NaN;},s=>{s.performanceCompletedSeconds=-1;}]){const s={...schedule};change(s);assert.equal(scheduleComplete(s),false);}
+test('balanced workers start after all isolated samples, foundation and news without adding a fourth worker',()=>{
+ const schedule={mode:'balanced-three-workers',performanceSamples:21,performanceCompletedSeconds:30,bookStartedSeconds:140.1,foundationCompletedSeconds:110,newsCompletedSeconds:140,peakWorkers:3};assert.equal(scheduleComplete(schedule),true);
+ for(const change of [s=>{delete s.mode;},s=>{s.performanceSamples=20;},s=>{s.bookStartedSeconds=29;},s=>{s.foundationCompletedSeconds=29;},s=>{s.newsCompletedSeconds=100;},s=>{s.peakWorkers=4;},s=>{s.peakWorkers=0;},s=>{s.foundationCompletedSeconds=NaN;},s=>{s.performanceCompletedSeconds=-1;}]){const s={...schedule};change(s);assert.equal(scheduleComplete(s),false);}
  assert.equal(scheduleComplete(null),false);
 });
 import journeys from'../app/journey-index.json' with{type:'json'};

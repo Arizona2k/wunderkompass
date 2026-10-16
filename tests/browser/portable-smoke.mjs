@@ -27,10 +27,10 @@ if(shots!==qaRoot&&!shots.startsWith(qaRoot+path.sep))throw Error('Browser evide
 const {chromium}=await import(process.env.QA_PLAYWRIGHT_MODULE??new URL('../../qa/node_modules/playwright/index.mjs',import.meta.url).href);
 const pack=process.env.QA_CHROMIUM_MODULE?(await import(process.env.QA_CHROMIUM_MODULE)).default:null;
 const options={headless:true,...(process.env.QA_BROWSER_EXECUTABLE?{executablePath:process.env.QA_BROWSER_EXECUTABLE}:{}),env:{...process.env,...(process.env.QA_BROWSER_LIB_PATH?{LD_LIBRARY_PATH:process.env.QA_BROWSER_LIB_PATH,FONTCONFIG_PATH:path.join(process.env.QA_BROWSER_LIB_PATH,'fonts')}:{})},args:[...(pack?pack.args.filter(a=>a!=='--single-process'&&!a.includes('incognito')):[]),'--enable-unsafe-swiftshader'],timeout:20000};
-const availableSuites=['foundation','home','core','playground','backup','challenge','research','journeys','book','nature','offline'];const selectedSuites=process.env.QA_SUITE?process.env.QA_SUITE.split(','):availableSuites;if(selectedSuites.some(s=>!availableSuites.includes(s)))throw Error('Unknown local browser suite');const runSuite=s=>selectedSuites.includes(s);
+const availableSuites=['foundation','home','core','playground','backup','challenge','research','journeys','book','why','inventions','nature','offline'];const selectedSuites=process.env.QA_SUITE?process.env.QA_SUITE.split(','):availableSuites;if(selectedSuites.some(s=>!availableSuites.includes(s)))throw Error('Unknown local browser suite');const runSuite=s=>selectedSuites.includes(s);
 const browserStarted=performance.now();
 const report={timings:[],scope:process.env.QA_SUITE?'partial local iteration':'complete mandatory regression',selectedSuites,build:(await fs.readFile(path.resolve(project,process.env.QA_DIST??'dist','index.html'),'utf8')).match(/name="learning-build" content="([^"]+)"/)?.[1],browser:'',checks:[],errors:[],consoleErrors:[],failedRequests:[],ownHttpErrors:[],externalRequests:[],views:[]};let browser;
-async function timed(name,run){const start=performance.now();try{return await run();}finally{report.timings.push({suite:name,seconds:(performance.now()-start)/1000});}}
+async function timed(name,run){const start=performance.now();try{return await run();}finally{const timing={suite:name,seconds:(performance.now()-start)/1000};report.timings.push(timing);console.log('QUALITY_PHASE',JSON.stringify(timing));}}
 await fs.mkdir(shots,{recursive:true});const server=spawn(process.execPath,['tests/browser/preview-server.mjs'],{cwd:project,stdio:['ignore','pipe','pipe']});let serverLog='';server.stdout.on('data',b=>serverLog+=b);server.stderr.on('data',b=>serverLog+=b);process.on('exit',()=>server.kill('SIGTERM'));
 process.once('SIGTERM',()=>{server.kill('SIGTERM');void browser?.close().finally(()=>process.exit(143));if(!browser)process.exit(143);});
 try {
@@ -44,7 +44,8 @@ try{
  if(runSuite('foundation')){await timed('performance',()=>performanceFlow(browser,base,ready,monitor,report));process.send?.({type:'quality-performance-complete',samples:report.performance.samples.length});await timed('components',()=>componentFlow(browser,base,ready,monitor,report,shots));await worldContentFlow(browser,base,ready,monitor,report,shots);await worldPhotoFlow(browser,base,ready,monitor,report,shots);report.offlineResilience=await offlineResilience(browser,{port:Number(port)+1,shots});report.offlineRetention=await offlineRetention(browser,{shots});}
 if(runSuite('research'))await timed('research',async()=>{await researchNewsFlow(browser,base,ready,monitor,report,shots);await scienceExcellenceFlow(browser,base,ready,monitor,report,shots,{chromium,options,includeBook:process.env.QA_BOOK_INLINE==='true'});});
 if(runSuite('journeys'))await timed('journeys',()=>journeysFlow(browser,base,ready,monitor,report,shots,{chromium,options,includeBook:process.env.QA_BOOK_INLINE==='true'}));
-if(runSuite('book'))await timed('book',async()=>{await bookExcellenceFlow(browser,base,ready,monitor,report,shots);await nativeJourneyZoom(chromium,options,base,report,shots,{bookOnly:true});await whyFlow(browser,base,ready,monitor,report,shots);});
+if(runSuite('book'))await timed('book',async()=>{await bookExcellenceFlow(browser,base,ready,monitor,report,shots);await nativeJourneyZoom(chromium,options,base,report,shots,{bookOnly:true,includeWhy:false});});
+if(runSuite('why'))await timed('why',async()=>{await whyFlow(browser,base,ready,monitor,report,shots);await nativeJourneyZoom(chromium,options,base,report,shots,{bookOnly:true,includeBook:false,includeWhy:true});});
 if(runSuite('nature'))await timed('nature',async()=>{await natureFlow(browser,base,ready,monitor,report,shots);await natureNativeZoom(chromium,options,base,report,shots);});
 if(runSuite('home'))await timed('home',()=>homepageOverview(browser,base,ready,monitor,report,shots));
  const coreStarted=performance.now();
@@ -59,7 +60,7 @@ if(runSuite('home'))await timed('home',()=>homepageOverview(browser,base,ready,m
  if(runSuite('core')){const small=await browser.newContext({viewport:{width:320,height:568},hasTouch:true,reducedMotion:'reduce'}),smallPage=await small.newPage();monitor(smallPage);await smallPage.goto(base);await ready(smallPage);await articleAtlas(smallPage,ready,report,320,shots);await passDesign(smallPage,report,320,shots);await small.close();}
  if(runSuite('core'))report.timings.push({suite:'core',seconds:(performance.now()-coreStarted)/1000});
  if(runSuite('core'))await timed('book-navigation',()=>bookNavigationSuite(browser,base,ready,monitor,report,shots));
- if(runSuite('core'))await timed('inventions',async()=>{await inventionsFlow(browser,base,ready,monitor,report,shots);await inventionsNativeZoom(chromium,options,base,report,shots);});
+ if(runSuite('inventions'))await timed('inventions',async()=>{await inventionsFlow(browser,base,ready,monitor,report,shots);await inventionsNativeZoom(chromium,options,base,report,shots);});
  if(runSuite('playground'))await timed('playground',()=>playgroundFlow(browser,base,ready,monitor,report,shots));
  if(runSuite('backup'))await timed('backup',()=>backupFlow(browser,base,ready,monitor,report,shots));
  if(runSuite('challenge'))await timed('challenge',()=>challengeHints(browser,base,ready,monitor,report,shots));

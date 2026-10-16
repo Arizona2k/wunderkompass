@@ -1,5 +1,11 @@
 # Kontrollierte automatische Testfreigabe – vorbereitet, ausgeschaltet
 
+## Kontrollierte Teilreleases – zusätzliche Nutzerentscheidung16.10.2026
+
+Vollständig fertige, isolierbare Teilwellen großer Pakete dürfen als konkrete Releasekandidaten vorbereitet werden; der nicht veröffentlichte Masterrest bleibt im einzigen BACKLOG. PR27/Entwicklungsbranch erhalten. Vor einem ausnahmsweise nötigen kurzlebigen Releasebranch/-PR die tatsächlichen Vercel-/Hostingtrigger und Schutzbedingungen prüfen: schon eine neue erreichbare Preview ist eine Bereitstellung und braucht ausdrückliche passende Freigabe. Aktuell keine solche Bereitstellung autorisiert.
+
+Die gesamte Pflichtabnahme nach QUALITY muss den exakten Kandidatencommit/Build/Digest belegen, einschließlich notwendiger unabhängiger Fach-/Kinder-/Gerätegates. Vor Nutzerentscheidung Inhalt/Nutzen/Ausnahmen, Zielwebsite, geprüften Stand, aktuelle funktionierende Zielversion und tatsächlichen Rollback samt Pass-/Cache-/Datenkompatibilität vorlegen. Ein Code-Rollback allein garantiert keine Daten-Rückmigration. Danach nur bei konkreter Nutzerfreigabe mergen/bereitstellen; tatsächlich veröffentlichten Stand erfassen und Änderungen sicher mit dem laufenden Branch abgleichen. Keine Aktivierung von test-release.yml, Auto-Merge, News-Live, neuen Rechten oder Kosten durch diese Regel. Details im archivierten Master-Dauerauftrag16.10. und Issue28, keine neue Releaseverwaltung.
+
 Stand: 9. Oktober 2026. Einrichtung auf `codex/test-release-2026-10-09`, Basis `test-live` 1f7fe74a0f8e7e14bf8e709aea2135dc1b09172c. main, test-live, Vercel-Einstellungen und bestehende Testwebsite werden durch diese Einrichtung nicht geändert. Keine Freigabelinks/Zugangsdaten speichern.
 
 ## Aktueller PR-Betrieb: manuelle Übernahme
