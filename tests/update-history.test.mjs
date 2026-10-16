@@ -50,7 +50,7 @@ test('test website chronology retains the merged and deployed product rounds, wi
   assert.ok(Date.parse(deployment.createdAt)>=Date.parse(record.mergedAt));assert.ok(TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.includes(record.mergeCommit));
  }
  // Confirmation date differs from observation date and from the merge instant.
- assert.equal(updateDate(testEntries[0]),'16. Oktober 2026 um 23:23:51 MESZ');assert.equal(testEntries[0].confirmedOn,'2026-10-16');
+ assert.equal(updateDate(testEntries[0]),'16. Oktober 2026 um 23:23:51 MESZ');assert.equal(testEntries[0].confirmedOn,TEST_HISTORY_EVIDENCE.checkedOn);
  const foundation=testEntries.find(e=>e.evidence.pullRequest===26);assert.equal(updateDate(foundation),'13. Oktober 2026 um 10:55:40 MESZ');
  assert.equal(testEntries[0].occurredAt,'2026-10-16T21:23:51Z');
  assert.equal(testEntries[0].id,'offline-learning-3-5','receipt promotes the same prepared PR30 identity');assert.equal(testEntries.find(e=>e.evidence.pullRequest===29).id,'clear-update-chronicle');assert.equal(testEntries.find(e=>e.evidence.pullRequest===29).occurredAt,'2026-10-16T19:33:21Z');assert.equal(foundation.id,'excellence-foundation-3-5');
@@ -132,7 +132,9 @@ test('every old and new update has a concise reader category, with technical han
 // Actual publication evidence must advance the reader UI, not just append unused metadata.
 test('PR30 receipt includes real ancestry and promotes its stable identity while open PR27 remains prepared',()=>{
  const receipt=TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===30),entry=UPDATE_HISTORY.find(p=>p.id==='offline-learning-3-5');
- assert.ok(entry);assert.equal(entry.status,'test-available');assert.equal(entry.occurredAt,'2026-10-16T21:23:51Z');assert.equal(TEST_HISTORY_EVIDENCE.testLive.commit,'71255ec55833fa1c4056a5c95310fa4fb78b8a30');
+ assert.ok(entry);assert.equal(entry.status,'test-available');assert.equal(entry.occurredAt,'2026-10-16T21:23:51Z');assert.ok(TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.includes(receipt.mergeCommit));
  assert.equal(confirmedTestDeployment(receipt,{...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(s=>s!==receipt.mergeCommit)}),null);
  const pending=PREPARED_UPDATES.find(e=>e.id==='excellence-chapters-3-5');assert.ok(pending);assert.equal(pending.evidence.pullRequest,27);assert.equal(pending.status,'prepared');assert.equal(pending.occurredAt,null);assert.equal(pending.availableOn,null);assert.deepEqual(pending.links,[]);assert.ok(!publicUpdates().some(e=>e.id===pending.id));assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));
 });
+
+test('actual PR30 receipt promotes the existing offline identity only with current merge ancestry and successful Vercel evidence',()=>{const receipt=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===30),entry=UPDATE_HISTORY.find(e=>e.id==='offline-learning-3-5');assert.equal(entry.occurredAt,'2026-10-16T21:23:51Z');assert.equal(entry.status,'test-available');assert.equal(entry.evidence.revision,'71255ec55833fa1c4056a5c95310fa4fb78b8a30');const unrelated={...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(x=>x!==receipt.mergeCommit)};assert.equal(confirmedTestDeployment(receipt,unrelated),null);const missing=structuredClone(receipt);missing.deploymentStatuses=[];assert.equal(confirmedTestDeployment(missing),null);assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));assert.ok(!publicUpdates().some(e=>e.evidence.pullRequest===27));assert.equal(publicUpdates().filter(e=>e.id===entry.id).length,1);});

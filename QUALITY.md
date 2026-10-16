@@ -1,5 +1,11 @@
 # Verbindliche Qualität und Tests
 
+## Dauerhaft: frühe gezielte Browserprüfung vor der vollständigen Abnahme
+
+Neue/geänderte Funktionen und besonders neue Browserassertionen früh im tatsächlichen betroffenen Browser ausführen, mit vorhandenen Produktionsbrowsermodulen. Chromium, Firefox und WebKit anhand des betroffenen Verhaltens tatsächlich prüfen; Emulation nicht als andere Engine ausgeben. Fehler vor der großen Schlussprüfung ursächlich korrigieren und gezielt retesten. Teilberichte mit Scope/Engine/Build/Quelldigest bleiben Teilnachweise. Die vollständige unveränderte Schlussprüfung am endgültigen Stand einschließlich aller erforderlichen Browser, Breiten, Offline-, Pass-, Accessibility- und Sicherheitsfälle ist vor Übergabe weiterhin Pflicht. Keine zusätzliche Testplattform, schwächeren Assertions oder gestrichenen Tests. Diese Nutzerentscheidung vom17.10.2026 gilt auch für spätere Pakete und GO-Runden.
+
+Lokale Iteration: vorhandenes `test:affected --run` prüft betroffene vorhandene native `.mjs`/`.cjs`/`.js` zuerst mit `node --check`, ohne Modulcode auszuführen. Doppelte Imports wie im tatsächlich roten Quality85 werden so früh erkannt. Unbekannte/gelöschte Eingaben bleiben konservativ; breite Browserauswahl folgt dem bestehenden REQUIRED_SUITES-Vertrag. Alle bisherigen Schlussprüfungen unverändert, keine neuen Jobs oder Browsergruppen.
+
 ## Aktuelle Nutzerentscheidung16.10.2026 – Paket3.5 fortsetzen, News pausiert
 
 Paket3.5 bleibt vor allen Paketen4–8 und neuen Themenideen die aktuelle Priorität. Nach tatsächlichem Nutzermerge von PR29 dessen exakten test-live-/Vercel-Erfolg prüfen und Verbesserungen kontrolliert in den gesicherten PR27-Stand integrieren; keine Resets, Überschreibungen, Doppelentwicklung oder neue Gesamtplanung. Alle vorbereiteten und entwickelten Inhalte/Erfindungen/Bauwerke/Reisen/Modelle/Funktionen/Tests und Aufgaben erhalten. Große zusammenhängende, eigenständig nutzbare Abschnitte implementieren, korrigieren, vollständig prüfen und mit exaktem grünem Quality als mergebereite PRs übergeben; nur der Nutzer gibt den Merge frei. Fertige Kandidaten stabil halten, unabhängige Arbeit im selben seriellen Durchlauf fortsetzen, abhängige Änderungen nach Basismerge erneut abgleichen.

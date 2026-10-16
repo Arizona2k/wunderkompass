@@ -1,5 +1,9 @@
 # Änderungsverlauf
 
+## Paket3.5 – korrekte Offline-Verfügbarkeit und frühere Syntaxfehler
+
+PR30 anhanddes tatsächlichen Nutzermerges undVercel-Erfolgs inklusiveaktuellerAbstammung alsverfügbar nachgeführt; gleicherChronikeintrag undallealtenNachweise erhalten. Vorhandene lokaleTestauswahl prüftgeänderte nativeNode-Module frühaufSyntax undbeziehtbreiteBrowserauswahl ausdem bestehendenPflichtvertrag. KeinePrüfung reduziert, keineunfertigenFachinhalte oderNewsfunktionen übernommen. AktuelleAbnahme imPR.
+
 ## Paket3.5 – vollständige Offline-Vorbereitung: Testbereitstellung PR30 bestätigt
 
 Nutzermerge71255ec55833fa1c4056a5c95310fa4fb78b8a30 am16.10.2026 um21:23:32Z, Vercel-Erfolg56564217841 um21:23:51Z belegen dieTestbereitstellung.
