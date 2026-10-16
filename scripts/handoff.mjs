@@ -14,6 +14,7 @@ export async function sourceDigest(root=process.cwd()){
  const hash=createHash('sha256');for(const file of files.sort())hash.update(path.relative(root,file)).update('\0').update(await fs.readFile(file)).update('\0');return hash.digest('hex');
 }
 export const retentionComplete=r=>['multipleTabs','partialNeverReplacesFallback','unknownLegacyProtected','orphanCleanup','stoppedServerOldChunk','canaryPreserved'].every(k=>r?.[k]===true);
+export const scheduleComplete=s=>s?.mode==='performance-first-book-overlap'&&s.performanceSamples===21&&['performanceCompletedSeconds','bookStartedSeconds','foundationCompletedSeconds','newsCompletedSeconds'].every(k=>Number.isFinite(s[k])&&s[k]>=0)&&s.performanceCompletedSeconds<=s.bookStartedSeconds&&s.bookStartedSeconds<s.foundationCompletedSeconds&&s.foundationCompletedSeconds<=s.newsCompletedSeconds&&Number.isInteger(s.peakWorkers)&&s.peakWorkers>=1&&s.peakWorkers<=3;
 export const bookNavigationComplete=r=>r?.width===390&&['search','reload','reciprocal','backFocus'].every(k=>r[k]===true)&&Array.isArray(r.terms)&&r.terms.length===bookLearningIndex.length&&new Set(r.terms).size===r.terms.length&&bookLearningIndex.every(term=>r.terms.includes(term));
 import worldIndex from '../app/world-index.json' with {type:'json'};
 const inventionIds=worldIndex.filter(t=>t.category==='inventions').map(t=>t.id),inventionWidths=[320,390,768,1440];
@@ -22,6 +23,7 @@ export const engineComplete=e=>inventionEngineComplete(e)&&retentionComplete(e.o
 export async function createHandoff(report,directory='.qa-output',{requiredEngines=[]}={}){
  if(!bookNavigationComplete(report.bookNavigationCoverage))throw Error('Handoff lacks complete current book navigation proof');
  if(report.status!=='passed'||report.scope!=='complete mandatory regression'||report.build!==learningFingerprint(process.cwd()))throw Error('Handoff lacks a complete current production-build proof');
+ if(!scheduleComplete(report.scheduling))throw Error('Handoff lacks isolated performance and bounded worker scheduling proof');
  const unit=JSON.parse(await fs.readFile(path.join(directory,'unit-proof.json'),'utf8'));if(unit.status!=='passed'||unit.sourceDigest!==await sourceDigest())throw Error('Unit proof is missing or belongs to different code');
  const backlog=await fs.readFile('BACKLOG.md','utf8'),requirements=[];
  for(const line of backlog.split('\n').filter(l=>/^\| (?:A[1-6]|B[1-8]|B9|C|P3[A-D]|P35[A-D]) \|/.test(l))){

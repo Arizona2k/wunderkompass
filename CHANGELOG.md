@@ -1,5 +1,10 @@
 # Änderungsverlauf
 
+## Paket3.5 · Vorhandene Prüfzeit besser nutzen (unveröffentlicht, Vollabnahme offen)
+
+- Nach tatsächlichem35-Minuten-Abbruch vonQuality75 startet der vorhandene lange Bucharbeiter künftig direkt nach allen21 erfolgreich allein gemessenen Performanceproben. Komponenten/Basis dürfen mit ihm überlappen; gleiche Server-/Profil-/Cache-Isolation und maximal3 Arbeiter, keine neuen Jobs oder höheren Timeouts. Alle Testfunktionen, Matrizen, axe-Prüfungen und Originalbilder bleiben unverändert. Zeit-/Signal-/Sample-/Peaknachweis im Handoff verhindert falsches Grün; tatsächlicher vollständiger Vorher-/Nachhervergleich bleibt Abnahme.
+
+
 ## Paket3.5 · Fokus behalten und alle Reviewbilder zählen (unveröffentlicht)
 
 - Tatsächlich reproduzierte Fokus-/Scrollübernahme nach frischer Tastatur-/Touch-/Mausbedienung behoben. Zwei ausstehende Navigationsframes dürfen eine gerade geöffnete Spielhilfe nicht mehr verlassen; Enter-Schließen und reguläre Rückkehrwege bleiben erhalten. Vier reale320/1440-Regressionsfälle, Fehlerscreenshot mit Kontext/SHA und fehlerschließende Aggregation ergänzt.
