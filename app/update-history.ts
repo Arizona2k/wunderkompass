@@ -330,6 +330,26 @@ const JOURNEY_COPY:UpdateCopy = {
  ]
 };
 const TEST_COPY:Record<number,UpdateCopy> = {
+ 29:{
+ "id": "clear-update-chronicle",
+ "icon": "🧭",
+ "category": "Einfachere Bedienung",
+ "title": "Neuigkeiten leichter überblicken",
+ "summary": "Die Entwicklungsgeschichte erklärt konkrete Verbesserungen mit kurzen Texten und freiwilligen Details. Kategorien und klare Datumsangaben helfen dir, passende Neuigkeiten zu finden.",
+ "details": [
+  "Auch die älteren Einträge erklären konkret, was du entdecken oder leichter bedienen kannst.",
+  "Kurze Zusammenfassungen und freiwillige Einzelheiten halten die Übersicht ruhig.",
+  "Zeitangaben und Nachweise bleiben erhalten; vorbereitete Änderungen werden nicht als verfügbar angezeigt.",
+  "Spielplatz: Eine mit der Tastatur geöffnete Spielhilfe behält deinen Platz. Auch nach einem schnellen Bereichswechsel kannst du sie mit Enter wieder schließen."
+ ],
+ "benefit": "Du kannst schneller erkennen, welche Änderung dir hilft und wo du sie findest.",
+ "links": [
+  {
+   "label": "Was ist neu?",
+   "hash": "updates"
+  }
+ ]
+},
  "3": {
   "id": "test-website",
   "icon": "🚀",
@@ -708,19 +728,19 @@ const TEST_COPY:Record<number,UpdateCopy> = {
 const TEST_UPDATES=TEST_EVIDENCE.pullRequests.flatMap(record=>TEST_COPY[record.number]?[testUpdate(record,TEST_COPY[record.number])]:[]);
 export const UPDATE_HISTORY:UpdateEntry[]=[...SITES_HISTORY,...TEST_UPDATES.filter(e=>e.status==='test-available')];
 const PREPARED_JOURNEYS:UpdateEntry={...JOURNEY_COPY,version:'Paket 3',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-12',publishedOn:null,availableOn:null,occurredAt:null,summary:'Die Lernreise-Verbesserungen sind vorbereitet; ihre Bereitstellung ist noch unbestätigt.',links:[],evidence:{file:'BACKLOG.md',revision:'d6945c8',quote:'WK-048: Lernreisen 2.0 – alle 16 Reisen/80 Kapitel ganzheitlich modernisieren.'}};
-const PREPARED_CHRONICLE:UpdateEntry = {
- "id": "clear-update-chronicle",
+const PREPARED_OFFLINE:UpdateEntry={
+ "id": "offline-learning-3-5",
  "icon": "🧭",
  "category": "Einfachere Bedienung",
- "title": "Neuigkeiten leichter überblicken",
- "summary": "Die Entwicklungsgeschichte bekommt verständlichere Texte, erkennbare Kategorien und getrennte Hinweise zu früheren Veröffentlichungen und zur Testversion. Diese Überarbeitung ist noch nicht bereitgestellt.",
+ "title": "Deine Lernwelt verlässlich mitnehmen",
+ "summary": "Bei der Offline-Vorbereitung zeigt ein echter Dateizähler den Fortschritt. Beim nächsten Versionswechsel werden passende gespeicherte Dateien erneut geprüft und wiederverwendet. Diese Erweiterung ist noch nicht bereitgestellt.",
  "details": [
-  "Auch die älteren Einträge erklären konkret, was du entdecken oder leichter bedienen kannst.",
-  "Kurze Zusammenfassungen und freiwillige Einzelheiten halten die Übersicht ruhig.",
-  "Zeitangaben und Nachweise bleiben erhalten; vorbereitete Änderungen werden nicht als verfügbar angezeigt.",
-  "Spielplatz: Eine mit der Tastatur geöffnete Spielhilfe behält deinen Platz. Auch nach einem schnellen Bereichswechsel kannst du sie mit Enter wieder schließen."
+  "Der Fortschritt zählt nur Dateien, die vollständig geprüft und sicher gespeichert wurden.",
+  "Unveränderte gespeicherte Dateien müssen beim Update nicht erneut heruntergeladen werden; jede Datei wird trotzdem auf Größe und Prüfsumme kontrolliert.",
+  "Ältere offene Tabs behalten die Dateien ihrer Version. Die letzte vollständige Version bleibt als Rückfall erhalten.",
+  "Bei Verbindungs- oder Speicherfehlern wird die unvollständige Vorbereitung verworfen. Erneutes Vorbereiten bleibt möglich; dein Entdeckerpass bleibt erhalten."
  ],
- "benefit": "Du kannst schneller erkennen, welche Änderung dir hilft und wo du sie findest.",
+ "benefit": "Du kannst erkennen, wie die Vorbereitung vorankommt, und nach einem Fehler sicher neu versuchen. Eltern können die Lernwelt für unterwegs vollständig vorbereiten.",
  "links": [],
  "version": "In Vorbereitung",
  "channel": "vercel-test",
@@ -731,11 +751,11 @@ const PREPARED_CHRONICLE:UpdateEntry = {
  "occurredAt": null,
  "evidence": {
   "file": "BACKLOG.md",
-  "revision": "c9d7ab0",
+  "revision": "d63e946",
   "quote": "WK-057"
  }
 };
-export const PREPARED_UPDATES:UpdateEntry[]=[PREPARED_CHRONICLE,...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[])];
+export const PREPARED_UPDATES:UpdateEntry[]=[PREPARED_OFFLINE,...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[])];
 export const updateLabel=(entry:UpdateEntry)=>entry.channel==='sites'?`Frühere Website · Version ${entry.version}`:entry.status==='prepared'?'In Vorbereitung · noch nicht verfügbar':'Testversion · verfügbar';
 const updateDay=(entry:UpdateEntry)=>entry.availableOn??entry.publishedOn??entry.confirmedOn;
 export function publicUpdates(entries:readonly UpdateEntry[]=UPDATE_HISTORY){

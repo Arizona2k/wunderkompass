@@ -1,3 +1,5 @@
+import {offlineResilience} from './offline-resilience.mjs';
+import {offlineRetention} from './offline-retention.mjs';
 import {historyEngineView} from './discovery-central.mjs';
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import {spawn} from 'node:child_process';
 import JOURNEYS from '../../exports/content/journeys.json' with {type:'json'};
@@ -15,7 +17,8 @@ try{
   for(const width of [320,390,768,1440]){await p.setViewportSize({width,height:900});await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);await p.locator('.journey-levels button').nth(1).focus();await p.screenshot({path:'.qa-output/journey-engine-'+name+'-'+width+'.png',fullPage:true,animations:'disabled'});}
   await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});assert.deepEqual(await p.evaluate(async()=>(await window.axe.run('.journey-reader',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
   for(const width of [320,390,768,1440]){await p.setViewportSize({width,height:900});historyViews.push(await historyEngineView(p,width,'.qa-output',{engine:name}));}
-  report.engines.push({name,historyViews,version:browser.version(),chapters:checked,widths:[320,390,768,1440],seconds:(performance.now()-started)/1000});await browser.close();browser=null;
+  const offlineResilienceProof=await offlineResilience(browser,{port:4778,shots:'.qa-output',kind:name}),offlineRetentionProof=await offlineRetention(browser,{shots:'.qa-output',kind:name});
+  report.engines.push({name,historyViews,offlineResilience:offlineResilienceProof,offlineRetention:offlineRetentionProof,version:browser.version(),chapters:checked,widths:[320,390,768,1440],seconds:(performance.now()-started)/1000});await browser.close();browser=null;
  }
  assert.deepEqual(report.errors,[]);report.status='passed';
 }catch(error){report.status='failed';report.failure=error.stack;throw error;}

@@ -1,3 +1,5 @@
+import {offlineResilience} from './offline-resilience.mjs';
+import {offlineRetention} from './offline-retention.mjs';
 import {journeysFlow,prepareOfflineJourneys,offlineJourneys} from './journeys.mjs';
 import {researchNewsFlow,offlineResearchNews} from './research-news.mjs';
 import {performanceFlow,componentFlow} from './foundation.mjs';
@@ -30,7 +32,7 @@ const ready=p=>p.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])')
 const monitor=p=>{p.on('console',m=>{if(m.type()==='error')report.consoleErrors.push(m.text());});p.on('requestfailed',r=>report.failedRequests.push({url:r.url(),error:r.failure()?.errorText}));p.on('pageerror',e=>report.errors.push(e.message));p.on('response',r=>{if(r.url().startsWith(base)&&r.status()>=400)report.ownHttpErrors.push({path:r.url().replace(base,''),status:r.status()});});p.on('request',r=>{if(!r.url().startsWith(base)&&!r.url().startsWith('data:')&&!r.url().startsWith('blob:'))report.externalRequests.push(r.url());});};
 browser=await chromium.launch(options);report.browser=browser.version();
 try{
- if(runSuite('foundation')){await timed('performance',()=>performanceFlow(browser,base,ready,monitor,report));await timed('components',()=>componentFlow(browser,base,ready,monitor,report,shots));}
+ if(runSuite('foundation')){await timed('performance',()=>performanceFlow(browser,base,ready,monitor,report));await timed('components',()=>componentFlow(browser,base,ready,monitor,report,shots));report.offlineResilience=await offlineResilience(browser,{port:Number(port)+1,shots});report.offlineRetention=await offlineRetention(browser,{shots});}
 if(runSuite('research'))await timed('research',()=>researchNewsFlow(browser,base,ready,monitor,report,shots));
 if(runSuite('journeys'))await timed('journeys',()=>journeysFlow(browser,base,ready,monitor,report,shots,{chromium,options}));
 if(runSuite('home'))await timed('home',()=>homepageOverview(browser,base,ready,monitor,report,shots));

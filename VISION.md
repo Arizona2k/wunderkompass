@@ -1,5 +1,16 @@
 # Produktvision WunderKompass
 
+## Aktuelle Nutzerentscheidung16.10.2026 – Paket3.5 fortsetzen, News pausiert
+
+Paket3.5 bleibt vor allen Paketen4–8 und neuen Themenideen die aktuelle Priorität. Nach tatsächlichem Nutzermerge von PR29 dessen exakten test-live-/Vercel-Erfolg prüfen und Verbesserungen kontrolliert in den gesicherten PR27-Stand integrieren; keine Resets, Überschreibungen, Doppelentwicklung oder neue Gesamtplanung. Alle vorbereiteten und entwickelten Inhalte/Erfindungen/Bauwerke/Reisen/Modelle/Funktionen/Tests und Aufgaben erhalten. Große zusammenhängende, eigenständig nutzbare Abschnitte implementieren, korrigieren, vollständig prüfen und mit exaktem grünem Quality als mergebereite PRs übergeben; nur der Nutzer gibt den Merge frei. Fertige Kandidaten stabil halten, unabhängige Arbeit im selben seriellen Durchlauf fortsetzen, abhängige Änderungen nach Basismerge erneut abgleichen.
+
+**Nachrichtenthema vollständig pausiert bis zu einem erneuten ausdrücklichen Nutzerauftrag.** Bestehenden News-Code, Quellen-/Betriebsnachweise und offene Anforderungen erhalten; keine weitere Newsentwicklung, Quellenanbindung, Einrichtung oder Aktivierung. Vorhandene unveränderte Sicherheits-/Regressionsprüfungen der Website bleiben vollständig. Diese Pause hat Vorrang vor älteren News-Prioritäten und Aktivierungsaufträgen unten; keine Newsarbeit als nächsten Schritt empfehlen. Pakete4–8 und neue Ideen bleiben im einzigen BACKLOG, werden jetzt nicht begonnen. Keine neuen Kosten, eigene Übernahme/Veröffentlichung, unnötige Prüfinfrastruktur oder Qualitätsabsenkung.
+
+
+Dauerhafte Nutzerentscheidung15./16.10. bleibt auch in unabhängigen Lieferabschnitten verbindlich: keine künstlichen Gesamtgrößengates für JavaScript oder die gesamten Lernreise-Aufgabendaten, auch keine höheren Ersatzgrenzen. Gesamtsummen verpflichtend als endliche Mess-/Trendwerte ausweisen; Einstieg/CSS/Einzelressourcen, tatsächliche Bereitschaft/CLS/Ladeverhalten und alle Sicherheits-/Offline-/Pass-/Browserprüfungen bleiben vollständig verbindlich. Nachweislich sinnvolle Verbesserungen eigenständig umsetzen und tatsächlichen Nutzen/Grenzen dokumentieren. Die akzeptierten etwa0,5s bei der ersten vollständigen Offline-Integritätsvorbereitung sind keine pauschale Regressionserlaubnis.
+
+
+
 Dauerhafte Nutzerentscheidung15./16.10. bleibt auch in unabhängigen Lieferabschnitten verbindlich: keine künstlichen Gesamtgrößengates für JavaScript oder die gesamten Lernreise-Aufgabendaten, auch keine höheren Ersatzgrenzen. Gesamtsummen verpflichtend als endliche Mess-/Trendwerte ausweisen; Einstieg/CSS/Einzelressourcen, tatsächliche Bereitschaft/CLS/Ladeverhalten und alle Sicherheits-/Offline-/Pass-/Browserprüfungen bleiben vollständig verbindlich. Nachweislich sinnvolle Verbesserungen eigenständig umsetzen und tatsächlichen Nutzen/Grenzen dokumentieren. Die akzeptierten etwa0,5s bei der ersten vollständigen Offline-Integritätsvorbereitung sind keine pauschale Regressionserlaubnis.
 
 ## Vorrangiger Fortsetzungsauftrag16.10.2026 – abschnittsweise Lieferung

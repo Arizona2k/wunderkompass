@@ -1,0 +1,46 @@
+import fs from 'node:fs/promises';import http from 'node:http';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+import {stopTestServer} from './stop-test-server.mjs';
+
+// Real CacheStorage/worker lifecycle, isolated synthetic releases. This supplements
+// the complete real-app/offline/pass tests; it is not a release or a real game save.
+export async function offlineRetention(browser,{shots,kind=browser.browserType().name(),simulateMissingEstimate=false}={}){
+ const template=await fs.readFile('build/learning-worker.js','utf8'),versions=['a','b','c','d','e','f'].map(c=>c.repeat(16));let generation=0;
+ const content=version=>Buffer.from('verified old-tab chunk '+version),metadata=data=>({bytes:data.length,sha256:createHash('sha256').update(data).digest('hex')});
+ const server=http.createServer((req,res)=>{const url=new URL(req.url,'http://localhost'),version=versions[generation];
+  if(url.pathname==='/learning-worker.js'){const asset='/assets/release-'+version+'.js',data=content(version);res.writeHead(200,{'Content-Type':'text/javascript','Cache-Control':'no-store'}).end(template.replace('__BUILD__',JSON.stringify(version)).replace('__ASSETS__',JSON.stringify([asset])).replace('__ASSET_META__',JSON.stringify({[asset]:metadata(data)})));return;}
+  if(url.pathname==='/'){res.writeHead(200,{'Content-Type':'text/html','Cache-Control':'no-store'}).end('<!doctype html><meta name="learning-build" content="'+version+'"><title>Isolated worker probe</title><p>Local synthetic release '+version+'</p><script>window.fixtureVersion='+JSON.stringify(version)+';if(!location.search)navigator.serviceWorker.addEventListener("message",e=>{if(e.data?.type==="LEARNING_QUERY_VERSION")e.ports[0]?.postMessage({version:window.fixtureVersion})});if(!localStorage.getItem("fixture-game-canary"))localStorage.setItem("fixture-game-canary","saved-before-update")</script>');return;}
+  if(url.pathname==='/assets/release-'+version+'.js'){res.writeHead(200,{'Content-Type':'text/javascript','Cache-Control':'no-store'}).end(content(version));return;}
+  res.writeHead(404).end('Old assets deliberately unavailable on the current server');
+ });await new Promise(r=>server.listen(0,'127.0.0.1',r));const base='http://127.0.0.1:'+server.address().port,context=await browser.newContext(),pages=[],prefix='earth-learning-',report={multipleTabs:false,partialNeverReplacesFallback:false,unknownLegacyProtected:false,orphanCleanup:false,stoppedServerOldChunk:false,canaryPreserved:false,storage:[],storageMeaning:'Exact cached response body bytes in the isolated fixture, not CacheStorage overhead/total browser RAM/disk guarantee. Optional native quota estimate is reported only where actually available.'};
+ if(simulateMissingEstimate)await context.addInitScript(()=>Object.defineProperty(navigator,'storage',{value:undefined}));
+ const storageSample=(p,phase)=>p.evaluate(async phase=>{
+  const cacheVersions=(await caches.keys()).filter(n=>n.startsWith('earth-learning-'));let cachedBodyBytes=0,cachedResponses=0;
+  for(const name of cacheVersions){const c=await caches.open(name);for(const request of await c.keys()){const response=await c.match(request);if(!response)throw Error('Cache changed while measuring');cachedBodyBytes+=(await response.arrayBuffer()).byteLength;cachedResponses++;}}
+  const estimateAvailable=typeof navigator.storage?.estimate==='function',estimate=estimateAvailable?await navigator.storage.estimate():null;
+  return{phase,estimateAvailable,...(estimate??{}),cachedBodyBytes,cachedResponses,cacheVersions};
+ },phase);
+ const poll=async(fn,label)=>{const deadline=Date.now()+20000;while(Date.now()<deadline){if(await fn())return;await new Promise(r=>setTimeout(r,50));}throw Error('Worker lifecycle did not settle: '+label);};
+ const names=p=>p.evaluate(async()=> (await caches.keys()).filter(n=>n.startsWith('earth-learning-')));
+ const page=async(query='')=>{const p=await context.newPage();pages.push(p);await p.goto(base+'/'+query);return p;};
+ const update=async p=>{await p.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration('/');await r.update();});await poll(()=>p.evaluate(async()=> (await navigator.serviceWorker.getRegistration('/'))?.waiting?.state==='installed'),'installed waiting release');};
+ // Do not repeatedly extend the incumbent's message lifetime while asking it to
+ // make way. First observe the actual worker transition, then verify new data.
+ const activate=async(p,version)=>{await p.evaluate(async()=>{(await navigator.serviceWorker.getRegistration('/')).waiting.postMessage({type:'ACTIVATE_LEARNING_RELEASE'});});await poll(()=>p.evaluate(async version=>{const r=await navigator.serviceWorker.getRegistration('/');if(r?.waiting||r?.installing||r?.active?.state!=='activated')return false;const channel=new MessageChannel();return new Promise(resolve=>{const timer=setTimeout(()=>{channel.port1.close();resolve(false);},1000);channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();resolve(e.data?.version===version&&e.data?.ready===true)};r.active.postMessage({type:'LEARNING_STATUS'},[channel.port2]);});},version),'activated complete release');};
+ const seed=async(p,version,complete)=>p.evaluate(async({version,complete})=>{const c=await caches.open('earth-learning-'+version);await c.put('/',new Response('<meta name="learning-build" content="'+version+'">'));await c.put('/assets/fixture-'+version+'.js',new Response('synthetic older release'));if(complete){await c.put('/__learning_offline_metrics__',new Response(JSON.stringify({assets:1,completedAt:1})));await c.put('/__learning_offline_ready__',new Response(version));}},{version,complete});
+ try{
+  const a=await page();await a.evaluate(()=>navigator.serviceWorker.register('/learning-worker.js',{scope:'/',updateViaCache:'none'}));await poll(()=>a.evaluate(()=>!!navigator.serviceWorker.controller),'initial controller');report.storage.push(await storageSample(a,'one complete release'));
+  generation=1;const b=await page();await update(b);await seed(b,'obsolete',true);await seed(b,'partial',false);await activate(b,versions[1]);let kept=await names(b);assert.ok(kept.includes(prefix+versions[0]));assert.ok(!kept.includes(prefix+'obsolete'));assert.ok(!kept.includes(prefix+'partial'));report.partialNeverReplacesFallback=true;
+  generation=2;const c=await page();await update(c);await seed(c,'another-obsolete',true);await activate(c,versions[2]);kept=await names(c);assert.deepEqual(kept.sort(),versions.slice(0,3).map(v=>prefix+v).sort());assert.equal(await a.evaluate(url=>fetch(url).then(r=>r.text()),base+'/assets/release-'+versions[0]+'.js'),content(versions[0]).toString());report.multipleTabs=true;report.storage.push(await storageSample(c,'three releases protected by known open tabs'));
+  await a.close();await b.close();generation=3;const d=await page();await update(d);await activate(d,versions[3]);assert.deepEqual((await names(d)).sort(),versions.slice(2,4).map(v=>prefix+v).sort());report.orphanCleanup=true;
+  const legacy=await page('?legacy=1');await seed(d,'protected-legacy',true);await seed(d,'partial-newest',false);generation=4;const e=await page();await update(e);await activate(e,versions[4]);kept=await names(e);assert.ok(kept.includes(prefix+'protected-legacy'));assert.ok(kept.includes(prefix+versions[2]));assert.ok(!kept.includes(prefix+'partial-newest'));report.unknownLegacyProtected=true;
+  await legacy.close();await c.close();await d.close();generation=5;const f=await page();await update(f);await activate(f,versions[5]);assert.deepEqual((await names(f)).sort(),versions.slice(4,6).map(v=>prefix+v).sort());report.storage.push(await storageSample(f,'two releases after old tabs close'));
+  await stopTestServer(server);await assert.rejects(fetch(base+'/',{signal:AbortSignal.timeout(2000)}));assert.equal(await e.evaluate(url=>fetch(url).then(r=>r.text()),base+'/assets/release-'+versions[4]+'.js'),content(versions[4]).toString());report.stoppedServerOldChunk=true;assert.equal(await e.evaluate(()=>localStorage.getItem('fixture-game-canary')),'saved-before-update');report.canaryPreserved=true;return report;
+ }catch(error){
+  if(shots){
+   const diagnostics=await Promise.all(pages.filter(p=>!p.isClosed()).map(async p=>({url:p.url(),state:await p.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration('/'),cached=[];for(const name of await caches.keys()){const c=await caches.open(name),marker=await c.match('/__learning_offline_ready__');cached.push({name,marker:marker?await marker.text():null,paths:(await c.keys()).map(r=>new URL(r.url).pathname)});}return{active:r?.active?.state,waiting:r?.waiting?.state,installing:r?.installing?.state,controller:!!navigator.serviceWorker.controller,fixtureVersion:window.fixtureVersion,cached};}).catch(e=>({error:String(e)}))})));
+   await fs.writeFile(shots+'/offline-retention-'+kind+'-failure.json',JSON.stringify({status:'failed',report,diagnostics,failure:error.stack},null,2)).catch(()=>{});
+   const current=pages.filter(p=>!p.isClosed()).at(-1);if(current)await current.screenshot({path:shots+'/offline-retention-'+kind+'-failure.png',timeout:5000}).catch(()=>{});
+  }
+  throw error;
+ }finally{await context.close();await stopTestServer(server);}
+}
