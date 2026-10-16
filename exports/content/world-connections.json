@@ -616,6 +616,134 @@
       "kind": "exploration",
       "why": "Beide mechanisieren wiederholte Arbeit, verarbeiten aber andere Materialien mit anderer Wirkung.",
       "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-pont-du-gard--science-water-cycle",
+      "fromId": "building-pont-du-gard",
+      "toId": "science-water-cycle",
+      "kind": "exploration",
+      "why": "Die Quelle liefert Wasser aus dem natürlichen Wasserkreislauf. Die Wasserbrücke verändert dessen Weg zur Stadt, erzeugt aber kein neues Wasser.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-pont-du-gard--building-colosseum",
+      "fromId": "building-pont-du-gard",
+      "toId": "building-colosseum",
+      "kind": "exploration",
+      "why": "Beide römischen Bauwerke nutzen Bögen. Beim Pont du Gard tragen sie eine Wasserrinne, beim Kolosseum Teile eines ganz anders genutzten Gebäudes.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-great-zimbabwe--building-great-wall",
+      "fromId": "building-great-zimbabwe",
+      "toId": "building-great-wall",
+      "kind": "exploration",
+      "why": "Mauern erfüllen an verschiedenen Orten unterschiedliche Aufgaben und nutzen unterschiedliche Materialien. Ihre bloße Größe beweist weder dieselbe Nutzung noch dieselbe Bauweise.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-great-zimbabwe--history-timbuktu",
+      "fromId": "building-great-zimbabwe",
+      "toId": "history-timbuktu",
+      "kind": "exploration",
+      "why": "Groß-Simbabwe und Timbuktu zeigen eigenständige afrikanische Stadt- und Handelsgeschichten. Ein Vergleich macht Unterschiede sichtbar; er belegt keine direkte Route zwischen beiden Orten.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-horyu-ji--science-patterns",
+      "fromId": "building-horyu-ji",
+      "toId": "science-patterns",
+      "kind": "exploration",
+      "why": "Wiederholte Stützenfelder und Bauteile helfen, eine Konstruktion zu ordnen. Das Erkennen eines Musters ersetzt aber keine Prüfung, wie Kräfte tatsächlich weitergeleitet werden.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-horyu-ji--building-eiffel-tower",
+      "fromId": "building-horyu-ji",
+      "toId": "building-eiffel-tower",
+      "kind": "exploration",
+      "why": "Holztempel und Eisenturm nutzen unterschiedliche Materialien und Formen. Bei beiden kannst du nach einem zusammenhängenden Lastweg zum Untergrund fragen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-djenne-mosque--history-timbuktu",
+      "fromId": "building-djenne-mosque",
+      "toId": "history-timbuktu",
+      "kind": "exploration",
+      "why": "Djenné und Timbuktu sind unterschiedliche malische Stadtgeschichten mit eigener Architektur und überliefertem Wissen. Der Vergleich verbindet Handwerk und kulturelle Nutzung, ohne beide Orte gleichzusetzen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-djenne-mosque--building-horyu-ji",
+      "fromId": "building-djenne-mosque",
+      "toId": "building-horyu-ji",
+      "kind": "exploration",
+      "why": "Lehmbau und Holzbau verlangen unterschiedliche Erhaltung. Gemeinsam ist die Frage, wie überliefertes Handwerk vorhandene Bauteile fachkundig bewahren kann.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-lalibela--invention-3d-printing",
+      "fromId": "building-lalibela",
+      "toId": "invention-3d-printing",
+      "kind": "exploration",
+      "why": "Die Felsbearbeitung nimmt Material weg, während viele additive Druckverfahren Material aufbauen. Der Vergleich verbindet räumliche Form und Herstellungsweg, ohne historische Werkzeuge gleichzusetzen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-lalibela--science-water-cycle",
+      "fromId": "building-lalibela",
+      "toId": "science-water-cycle",
+      "kind": "exploration",
+      "why": "Niederschlag ist Teil des Wasserkreislaufs; ein Bauwerk muss mit diesem Wasser umgehen. Die Entwässerung in Lalibela verbindet natürlichen Wasserweg und Schutz der gebauten Formen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-angkor-wat--science-water-cycle",
+      "fromId": "building-angkor-wat",
+      "toId": "science-water-cycle",
+      "kind": "exploration",
+      "why": "Natürlicher Niederschlag und gebaute Becken oder Kanäle beeinflussen Wasserwege. Das erklärt noch nicht jeden historischen Zweck, hilft aber, Landschaft und Bauwerk gemeinsam zu betrachten.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-angkor-wat--building-panama-canal",
+      "fromId": "building-angkor-wat",
+      "toId": "building-panama-canal",
+      "kind": "exploration",
+      "why": "Beide Anlagen machen Wasserbau sichtbar, haben aber andere Aufgaben und Geschichten. Die Schleusen des Panamakanals dürfen nicht als Erklärung für jeden Wassergraben übertragen werden.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-palenque--history-maya",
+      "fromId": "building-palenque",
+      "toId": "history-maya",
+      "kind": "exploration",
+      "why": "Die Geschichte der Maya erschließt kulturelle und zeitliche Zusammenhänge. Palenques konkrete Bauten ergänzen diesen Überblick, ersetzen aber keine Aussagen über alle Maya-Städte oder heutige Gemeinschaften.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-palenque--building-colosseum",
+      "fromId": "building-palenque",
+      "toId": "building-colosseum",
+      "kind": "exploration",
+      "why": "Ein Kraggewölbe und ein Keilsteinbogen schließen Räume mit unterschiedlichen Anordnungen. Der Vergleich hilft, ähnliche Umrisse nicht vorschnell als dieselbe Konstruktion zu lesen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-sydney-opera--science-angle",
+      "fromId": "building-sydney-opera",
+      "toId": "science-angle",
+      "kind": "exploration",
+      "why": "Ein Winkel kann beschreiben, welcher Ausschnitt einer Kreislinie markiert wird. Der Radius bleibt dabei eine andere Größe; so lassen sich Form und Maß getrennt untersuchen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-sydney-opera--science-sound",
+      "fromId": "building-sydney-opera",
+      "toId": "science-sound",
+      "kind": "exploration",
+      "why": "Ein Aufführungshaus verbindet Architektur und Schall. Seine markante Außenform allein beweist aber noch keine bestimmte Akustik im Innenraum.",
+      "checkedAt": "2026-10-16"
     }
   ]
 }

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-16T12:43:37.520Z",
+  "generatedAt": "2026-10-16T17:07:36.285Z",
   "personalProgressIncluded": false,
-  "topics": 151,
+  "topics": 159,
   "categories": {
     "animals": 24,
     "history": 31,
     "people": 18,
     "inventions": 24,
-    "buildings": 8,
+    "buildings": 16,
     "science": 46
   },
   "journeys": 16,
@@ -247,9 +247,9 @@
       "sources": [
         "app/challenge-hints.json"
       ],
-      "entries": 177,
-      "bytes": 41921,
-      "sha256": "40088f89736c272cd47e6a2ee938110ca6f9b5b605c071d8866ee5142c2f6cd7"
+      "entries": 185,
+      "bytes": 43688,
+      "sha256": "ad7719c578a4a2e0ff9dbc0e9c6c1f4db3f56b168227f8689b1327035c69859a"
     },
     {
       "file": "world-connections.json",
@@ -257,26 +257,26 @@
         "app/world-connections.json"
       ],
       "entries": 2,
-      "bytes": 24949,
-      "sha256": "7a5e8f0485e1e8c633784ca1e9d639da03c336592ed72be16d50b599ac62033c"
+      "bytes": 31324,
+      "sha256": "409ee1b6cb5d829426645b3db466b026243fe80e1713b2cbaa12c2d08ee0b374"
     },
     {
       "file": "world-topics.json",
       "sources": [
         "app/world-catalog.json"
       ],
-      "entries": 151,
-      "bytes": 530342,
-      "sha256": "b5cb7374851b13b137c411902d98a105f1d656de66e34753e09ddb373943108a"
+      "entries": 159,
+      "bytes": 582906,
+      "sha256": "9f486343cbff25b6ae75df2d86c4afd32de87a1928e22dd5adf323c978f540ac"
     },
     {
       "file": "world-index.json",
       "sources": [
         "app/world-index.json"
       ],
-      "entries": 151,
-      "bytes": 65579,
-      "sha256": "a9c302f81731165e8269289a81a819505e12b1aa4e44afefc58139625bc37f70"
+      "entries": 159,
+      "bytes": 69647,
+      "sha256": "dc00c128113a7c7a8128e2d18ed9dee84b8beb69d6e0494547aa0ade4720eced"
     },
     {
       "file": "games.json",

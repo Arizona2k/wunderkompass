@@ -303,7 +303,7 @@
       "modelDecision": "Qualitative eigene Prinzipskizze; keine genaue historische Fügung oder Simulation eines Erdbebens.",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "contentHash": "c17909cc56456d4dd8eb1807058d27a0b4a0c2c4e30df047d5956427f7a1dc5d"
+      "contentHash": "eb2d9ac0cb3025d0d2bd10dc45a1585c397386ef52bd4b5840b2c9a3f67367ed"
     },
     {
       "id": "building-djenne-mosque",
@@ -409,7 +409,7 @@
       "modelDecision": "Eigene schematische Draufsicht ohne genaue Maße, Kanalnetzrekonstruktion oder hydraulischeBerechnung.",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "contentHash": "713878a34e55aced5671129a65633e114968b1e007de57796aed93032acfe929"
+      "contentHash": "e0efaff5c4b1a92b5e9edae22525c1c47e3b2032bf7ac04797e8580e413c4e4c"
     },
     {
       "id": "building-palenque",
@@ -442,7 +442,7 @@
       "modelDecision": "Eigene Prinzipdarstellung zuRaum undBauform; keine maßstäbliche Rekonstruktion eines bestimmtenPalenque-Raums.",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "contentHash": "cfda443eefa586ec035f9e1c77d40b58136e86e6e17f1a6e3c050bd2742a2328"
+      "contentHash": "378d4b738d0cce78d341c7ddcf1f96363068c8bf16544d260d0f657b590bf8b3"
     },
     {
       "id": "building-sydney-opera",
@@ -568,5 +568,16 @@
       "why": "Ein Aufführungshaus verbindet Architektur und Schall. Seine markante Außenform allein beweist aber noch keine bestimmte Akustik im Innenraum."
     }
   ],
-  "preparedManuscripts": []
+  "preparedManuscripts": [],
+  "UIAcceptance": "All16 x7 widths/search/back/native200 passed preliminary 95.065s. Personal image review found Horyu stranded final letter despite passed geometry; actual negative browser regression reproduced. New corrected snapshot requires full target/root/CI acceptance; no independent approval.",
+  "modelReview": {
+    "kind": "three actual bounded comparisons",
+    "models": [
+      "aqueduct source elevation",
+      "corbel opening widths126/78/30drawing units",
+      "same-circle arcs at20/45/75degrees"
+    ],
+    "limits": "No real fluid simulation, safe structural design or 3D roof/acoustic calculation",
+    "independentReview": false
+  }
 }

@@ -4,6 +4,7 @@ import type {WorldTopic} from './world-types';
 type Kind=NonNullable<NonNullable<WorldTopic['building']>['exploration']>['kind'];
 const LEGEND:Record<Kind,[string,string,string]>={aqueduct:['Fluss im Tal','Tragende Bögen','Wasserrinne'], 'dry-stone':['Steinlagen ohne Mörtel','Versetzte Fugen','Weitere Wohnbauten'],timber:['Stützen','Konsolen und Dach','Lastweg zum Untergrund'],earth:['Tragende Wand','Äußere Putzfläche','Pflege des ganzen Bauwerks'],'rock-cut':['Vorhandener Fels','Ausgeräumter Zugang','Getrennte Entwässerung'],'temple-water':['Tempelbereich','Umgebender Graben','Wasserwege der Landschaft'],corbel:['Seitliche Steinlagen','Vorkragende Lagen','Verbleibende Öffnung'],shells:['Gemeinsamer Mittelpunkt','Gleicher Radius','Verschiedene Kreisbögen']};
 const ink='#285463',stone='#a4c7bb',orange='#c06a35',water='#317f9a';
+const TITLES:Record<Kind,string>={aqueduct:'Wie kommt das Wasser über das Tal?','dry-stone':'Was erzählen die Steinlagen?',timber:'Wie trägt das Holz das Dach?',earth:'Warum gehört Pflege zum Bauwerk?','rock-cut':'Was bleibt vom Fels stehen?','temple-water':'Wo endet der Tempelbereich?',corbel:'Wie wird die Öffnung kleiner?',shells:'Was haben die Dachformen gemeinsam?'};
 function Mark({x,y,n}:{x:number;y:number;n:number}){return <g><circle cx={x} cy={y} r="15" fill={ink}/><text x={x} y={y+5} textAnchor="middle" fill="white" fontSize="16">{n}</text></g>;}
 function Diagram({kind,step,variant}:{kind:Kind;step:number;variant:number}){
  const angle=[20,45,75][variant]*Math.PI/180;
@@ -28,7 +29,7 @@ export default function BuildingDiscovery({topic,onSolved}:{topic:WorldTopic;onS
  function choose(n:number){setStep(n);const next=[...new Set([...seen,n])];setSeen(next);if([0,1,2].every(i=>next.includes(i)))onSolved();}
  const result=data.kind==='aqueduct'?(variant===0?'Die Quelle liegt im Vergleich oberhalb der Rinne. Ihr Weg zur Stadt fällt ab.':'Eine tiefer gelegene Quelle versorgt diese höhere offene Rinne nicht allein durch Abwärtsfließen. Eine Pumpe ist hier nicht vorgesehen.'):data.kind==='corbel'?'Mehr Vorrücken verkleinert die gezeichnete Öffnung. Das beweist keine ausreichende Tragfähigkeit.':'Der orange Ausschnitt ändert seine Länge; beide Radien bleiben gleich. Das ist ein Kreisvergleich, keine Berechnung des räumlichen Dachs.';
  return <section className="structure-model building-discovery" data-building-kind={data.kind} data-building-step={step}>
-  <p className="eyebrow">BAUWERK ENTDECKEN</p><h3>Formen lesen, Zusammenhänge verstehen</h3>
+  <p className="eyebrow">BAUWERK ENTDECKEN</p><h3>{TITLES[data.kind]}</h3>
   <div className="building-diagram"><Diagram kind={data.kind} step={step} variant={variant}/></div>
   <ol className="building-legend">{LEGEND[data.kind].map((label,i)=><li key={label}><span aria-hidden="true">{i+1}</span>{label}</li>)}</ol>
   <div className="structure-buttons" role="group" aria-label="Bauwerk in drei Schritten erkunden">{['Orientieren','Aufbau erkennen','Zusammenhänge'].map((s,i)=><button key={s} className="secondary-button" aria-pressed={step===i} onClick={()=>choose(i)}>{i+1} · {s}</button>)}</div>

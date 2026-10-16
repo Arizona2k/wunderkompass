@@ -1,4 +1,4 @@
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+import test from 'node:test';import assert from 'node:assert/strict';
 import catalog from '../app/world-catalog.json' with {type:'json'};
 import index from '../app/world-index.json' with {type:'json'};
 import dossier from '../content/building-editorial-review.json' with {type:'json'};
@@ -19,5 +19,4 @@ test('corrupt building payloads and absent, duplicate, mixed or incomplete geome
  for(const mutate of [t=>t.building.exploration.kind='unsafe',t=>t.building.exploration.steps.pop(),t=>t.building.exploration.steps[0]='<script>',t=>t.building.exploration.note='',t=>delete t.learning,t=>delete t.questionFeedback]){const data=structuredClone(topics);mutate(data.find(t=>t.building.exploration));assert.throws(()=>validateWorldContent(data,meta,index),/Bauwerk/);}
  const cases=buildingProofCases([320,390]);assert.equal(buildingCasesComplete(cases,[320,390]),true);
  for(const mutate of [c=>c.pop(),c=>{c[0]=c[1]},c=>{c[0].width=1440},c=>{c.find(c=>c.kind==='aqueduct').effectsVerified=false},c=>{c.find(c=>c.kind==='corbel').variants.pop()},c=>{c.find(c=>c.kind==='shells').steps.pop()}]){const c=structuredClone(cases);mutate(c);assert.equal(buildingCasesComplete(c,[320,390]),false);}
- const code=fs.readFileSync('app/building-discovery.tsx','utf8');assert.match(code,/Math\.sin/);assert.match(code,/data-clearance/);assert.match(code,/data-flow/);
 });

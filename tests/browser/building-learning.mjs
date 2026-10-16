@@ -22,6 +22,8 @@ export async function exerciseBuilding(p,t,{width,shots,full=true}={}){
     if(previous!==null)assert.notDeepEqual(actual,previous,'control changes actual geometry, not just button');previous=actual;variants.push(i);
   }}
   if(shots&&[320,1440].includes(width))await model.screenshot({path:path.join(shots,'building-model-'+t.id+'-'+width+'.png'),animations:'disabled'});
+  const lastLine=await model.locator('.model-result').evaluate(e=>{const r=document.createRange();r.selectNodeContents(e);const lines=[...r.getClientRects()].filter(x=>x.width>0);return{count:lines.length,last:lines.at(-1)?.width,font:parseFloat(getComputedStyle(e).fontSize)};});
+  if(lastLine.count>1)assert.ok(lastLine.last>=lastLine.font,t.id+' '+width+': no stranded single-letter ending');
  }
  if(full){for(const [label,text] of [['Ganz einfach · etwa 6–8 Jahre',t.learning.starter],['Selbst beobachten und erklären · freiwillig',t.learning.observe],['Noch genauer · etwa 12–14 Jahre',t.more[0]]]){const d=card.locator('details').filter({has:p.getByText(label,{exact:true})}).last();await reveal(d);await d.getByText(text,{exact:true}).waitFor();}
   const q=card.locator('.world-mini-question');await reveal(q.locator('.world-game-hint'));await q.getByText(t.questionFeedback.hint,{exact:true}).waitFor();
