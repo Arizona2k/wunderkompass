@@ -1,5 +1,10 @@
 # Anleitung für Codex
 
+## Gezielter Nutzer-Nachtrag16.10.2026 – Chromium-Zeitreserve
+
+Nur der Chromium-Matrixjob erhält ausdrücklich freigegebene **50 Minuten** statt35; Firefox/WebKit bleiben35, Standards10 und Required5. Einfacher Matrixausdruck, keine neuen Jobs/Runner/Dienste oder Prüfverkürzungen. Dies präzisiert ältere Verbote blinder Timeouterhöhungen: Die konkrete Änderung ist nach gemessenem erfolgreichem Browserlauf mit Abbruch bei abschließender Nachweissicherung autorisiert. Alle Breiten/Browser/axe/Offline/Pflichtbilder, Snapshot-/Integritätsprüfungen und Fortschritts-/Phasenmessungen bleiben vollständig. Laufende Vollprüfungen nicht abbrechen; gezielt iterieren, volle Abnahmen an bestehenden Meilensteinen. Bei den nächsten erfolgreichen vollständigen Läufen tatsächliche Chromiumzeit samt Sicherung/Upload vergleichen; anhaltendes Wachstum zuerst ursächlich untersuchen, kein automatisch weiter erhöhtes Limit. Freigabe-/Kosten-/Veröffentlichungsgrenzen unverändert.
+
+
 ## Ergänzender Master-Dauerauftrag vom16. Oktober2026
 
 Der [vollständige47-Abschnitt-Auftrag](content/auftrag-2026-10-13/WunderKompass_Master_Dauerauftrag_2026-10-16.md) und [Issue28 einschließlich Ergänzungen](https://github.com/Arizona2k/wunderkompass/issues/28) sind dauerhaft verbindliche Quellen für3.5/4–8/GO, keine zweite Aufgabenliste. Neue Regeln haben bei Widersprüchen mit alten Kurzsätzen Vorrang; Originale bleiben unverändert. Sechs Hauptbereiche und heutige Testerzugänge erhalten. Strategische Erlebniswelten in VISION, konkrete Prioritäten ausschließlich BACKLOG; zunächst WK053–058 und echte CI-Blocker, danach sichtbare Inhaltswellen. Kein automatischer Start allein durch Issue/Datum/Uhrzeit, keine unbefristeten Hintergrundagenten.

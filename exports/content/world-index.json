@@ -2399,5 +2399,153 @@
       "Exoplaneten"
     ],
     "locations": []
+  },
+  {
+    "id": "invention-battery",
+    "category": "inventions",
+    "title": "Die Batterie",
+    "intro": "Wie versorgt eine Taschenlampe ihren Lichtstrahl unterwegs?",
+    "aliases": [],
+    "locations": [],
+    "model": null,
+    "year": 1800,
+    "date": "1800 · Voltas Batterie; nicht die Erfindung heutiger Akkus"
+  },
+  {
+    "id": "invention-generator",
+    "category": "inventions",
+    "title": "Der Generator",
+    "intro": "Wie wird aus einer Drehbewegung elektrische Energie?",
+    "aliases": [],
+    "locations": [],
+    "model": null,
+    "year": 1831,
+    "date": "1831 · Faradays Induktionsversuche",
+    "inventionModel": "generator"
+  },
+  {
+    "id": "invention-transistor",
+    "category": "inventions",
+    "title": "Der Transistor",
+    "intro": "Wie kann ein winziges Bauteil elektrische Signale steuern?",
+    "aliases": [],
+    "locations": [],
+    "model": null,
+    "year": 1947,
+    "date": "1947 · funktionierender Punktkontakttransistor; viele spätere Bauformen",
+    "inventionModel": "transistor"
+  },
+  {
+    "id": "invention-camera",
+    "category": "inventions",
+    "title": "Die Kamera",
+    "intro": "Warum kann Licht ein Bild hinterlassen?",
+    "aliases": [],
+    "locations": [],
+    "model": null,
+    "year": 1839,
+    "date": "1839 · öffentliche Vorstellung der Daguerreotypie, Kameravorläufer sind älter"
+  },
+  {
+    "id": "invention-telescope",
+    "category": "inventions",
+    "title": "Das Fernrohr",
+    "intro": "Wie sammelt ein Fernrohr mehr Licht als dein Auge?",
+    "aliases": [
+      "Teleskop"
+    ],
+    "locations": [],
+    "model": null,
+    "year": 1608,
+    "date": "1608 · belegter Patentantrag; keine gesicherte Alleinerfindung",
+    "inventionModel": "aperture"
+  },
+  {
+    "id": "invention-microscope",
+    "category": "inventions",
+    "title": "Das Mikroskop",
+    "intro": "Wie werden kleine Strukturen unterscheidbar?",
+    "aliases": [],
+    "locations": [],
+    "model": null,
+    "year": 1665,
+    "date": "1665 · Hookes Micrographia, nicht Erfindungsjahr aller Mikroskope",
+    "inventionModel": "resolution"
+  },
+  {
+    "id": "invention-refrigerator",
+    "category": "inventions",
+    "title": "Der Kühlschrank",
+    "intro": "Wohin verschwindet die Wärme aus dem Inneren?",
+    "aliases": [
+      "Kompressorkühlschrank"
+    ],
+    "locations": [],
+    "model": null,
+    "year": 1906,
+    "date": "1906 · verlinkte historische Kühlanlage, kein Erfindungsdatum"
+  },
+  {
+    "id": "invention-bicycle",
+    "category": "inventions",
+    "title": "Das Fahrrad",
+    "intro": "Wie erreicht die Kraft deiner Beine das Hinterrad?",
+    "aliases": [],
+    "locations": [],
+    "model": null,
+    "year": 1885,
+    "date": "1885 · Rover-Sicherheitsfahrrad, nicht das erste Fahrrad überhaupt"
+  },
+  {
+    "id": "invention-elevator",
+    "category": "inventions",
+    "title": "Der Aufzug",
+    "intro": "Was hilft einer Kabine sicher von Stockwerk zu Stockwerk?",
+    "aliases": [],
+    "locations": [],
+    "model": null,
+    "year": 1854,
+    "date": "1853/1854 · Otis-Sicherheitsbremse und öffentliche Vorführung"
+  },
+  {
+    "id": "invention-seismograph",
+    "category": "inventions",
+    "title": "Der Seismograf",
+    "intro": "Wie lässt sich zitternder Boden aufzeichnen?",
+    "aliases": [
+      "Seismometer",
+      "Seismogramm"
+    ],
+    "locations": [],
+    "model": null,
+    "year": 1855,
+    "date": "1855 · frühes Gerät bei Karl Kreil; viele Entwicklungsschritte im 19. Jahrhundert",
+    "inventionModel": "seismograph"
+  },
+  {
+    "id": "invention-3d-printing",
+    "category": "inventions",
+    "title": "Der 3D-Druck",
+    "intro": "Wie wird aus einem digitalen Entwurf ein räumlicher Gegenstand?",
+    "aliases": [
+      "additive Fertigung",
+      "Stereolithografie"
+    ],
+    "locations": [],
+    "model": null,
+    "year": 1986,
+    "date": "1986 · Patent auf Hulls Stereolithografie, nicht Beginn aller additiven Verfahren",
+    "inventionModel": "layers"
+  },
+  {
+    "id": "invention-sewing-machine",
+    "category": "inventions",
+    "title": "Die Nähmaschine",
+    "intro": "Wie kann eine Maschine zwei Fäden zu einer Naht verbinden?",
+    "aliases": [],
+    "locations": [],
+    "model": null,
+    "year": 1846,
+    "date": "1846 · Howes belegtes Patent auf eine Doppelsteppstich-Maschine"
   }
 ]

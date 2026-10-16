@@ -21,7 +21,10 @@
     "locations": [],
     "related": [
       "invention-light",
-      "invention-car"
+      "invention-car",
+      "invention-battery",
+      "invention-generator",
+      "invention-transistor"
     ],
     "sources": [
       {
@@ -424,7 +427,8 @@
     "related": [
       "invention-compass",
       "science-atmosphere",
-      "science-comet"
+      "science-comet",
+      "invention-generator"
     ],
     "sources": [
       {
@@ -550,7 +554,9 @@
     "related": [
       "science-circuit",
       "science-energy",
-      "invention-car"
+      "invention-car",
+      "invention-generator",
+      "invention-elevator"
     ],
     "sources": [
       {
@@ -743,7 +749,8 @@
       "science-seasons",
       "science-galaxy",
       "science-comet",
-      "science-exoplanet"
+      "science-exoplanet",
+      "invention-telescope"
     ],
     "sources": [
       {
@@ -811,7 +818,9 @@
       "science-heat-transfer",
       "science-lever",
       "science-pendulum",
-      "science-fusion"
+      "science-fusion",
+      "invention-battery",
+      "invention-refrigerator"
     ],
     "sources": [
       {
@@ -1946,7 +1955,9 @@
     "locations": [],
     "related": [
       "science-energy",
-      "science-elasticity"
+      "science-elasticity",
+      "invention-bicycle",
+      "invention-elevator"
     ],
     "sources": [
       {
@@ -2302,7 +2313,8 @@
     "locations": [],
     "related": [
       "science-energy",
-      "science-seasons"
+      "science-seasons",
+      "invention-refrigerator"
     ],
     "sources": [
       {
@@ -2361,7 +2373,8 @@
     "locations": [],
     "related": [
       "science-pressure",
-      "science-energy"
+      "science-energy",
+      "invention-bicycle"
     ],
     "sources": [
       {
@@ -2480,7 +2493,8 @@
     "locations": [],
     "related": [
       "science-resonance",
-      "science-energy"
+      "science-energy",
+      "invention-seismograph"
     ],
     "sources": [
       {
@@ -2545,7 +2559,8 @@
     "related": [
       "science-pendulum",
       "science-sound",
-      "science-elasticity"
+      "science-elasticity",
+      "invention-seismograph"
     ],
     "sources": [
       {
@@ -2789,7 +2804,8 @@
     "locations": [],
     "related": [
       "science-shadows",
-      "science-symmetry"
+      "science-symmetry",
+      "invention-3d-printing"
     ],
     "sources": [
       {

@@ -1,5 +1,10 @@
 # Verbindliche Qualität und Tests
 
+## Gezielter Nutzer-Nachtrag16.10.2026 – Chromium-Zeitreserve
+
+Nur der Chromium-Matrixjob erhält ausdrücklich freigegebene **50 Minuten** statt35; Firefox/WebKit bleiben35, Standards10 und Required5. Einfacher Matrixausdruck, keine neuen Jobs/Runner/Dienste oder Prüfverkürzungen. Dies präzisiert ältere Verbote blinder Timeouterhöhungen: Die konkrete Änderung ist nach gemessenem erfolgreichem Browserlauf mit Abbruch bei abschließender Nachweissicherung autorisiert. Alle Breiten/Browser/axe/Offline/Pflichtbilder, Snapshot-/Integritätsprüfungen und Fortschritts-/Phasenmessungen bleiben vollständig. Laufende Vollprüfungen nicht abbrechen; gezielt iterieren, volle Abnahmen an bestehenden Meilensteinen. Bei den nächsten erfolgreichen vollständigen Läufen tatsächliche Chromiumzeit samt Sicherung/Upload vergleichen; anhaltendes Wachstum zuerst ursächlich untersuchen, kein automatisch weiter erhöhtes Limit. Freigabe-/Kosten-/Veröffentlichungsgrenzen unverändert.
+
+
 ## Kontrollierte Teilrelease-Abnahme und Folgenprüfung –16.10.2026
 
 Der in AGENTS verlinkte vollständige neueste Dauerauftrag und Issue28 gelten zusätzlich. Für jeden konkreten Teilrelease: tatsächliche Implementierung/Lernwert/Fachquellen und Medienrechte, vollständige isolierbare Daten-/Komponenten-/Migrationsabhängigkeiten, Suche/Navigation/gegenseitige Wege, alle vereinbarten Breiten/Chromium/Firefox/WebKit/native200%/große Schrift/Tastatur/Touch/Fokus/axe, Pass/Altstände/Backup/Import/Reset, kaltes Offline/atomare Updates/alte Tabs/Quota/Fehler/Security/Performance sowie notwendige unabhängige Fach-/Kinder-/Geräte-/Assistenzgates vollständig prüfen. Originale Screenshot- und Digestbindung erhalten. Fehlende zwingende externe Abnahme verhindert die Releaseempfehlung; technisches Grün ist keine fachliche Garantie.

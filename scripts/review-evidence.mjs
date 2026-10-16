@@ -25,10 +25,11 @@ requiredScreenshots.push(...[320,1440].map(width=>'quality-learning-nature-model
 requiredScreenshots.push(...['source-5-320','source-25-320','starter-30-320','starter-35-320','starter-48-320','starter-59-320','59-1440','native-200-large','overview-320'].map(key=>'quality-book-why-'+key+'.png'));
 requiredScreenshots.push(...[320,1440].flatMap(width=>worldIndex.filter(t=>t.category==='inventions').map(t=>'quality-navigation-invention-model-'+t.id+'-'+width+'.png')),'quality-navigation-invention-native-200-large.png');
 requiredScreenshots.push(...[320,1440].flatMap(width=>['keyboard','pointer'].map(input=>'quality-foundation-foundation-route-focus-'+input+'-'+width+'.png')));
+requiredScreenshots.push(...worldIndex.filter(t=>t.inventionModel).flatMap(t=>[...([320,1440].map(width=>'quality-navigation-invention-experiment-'+t.id+'-'+width+'.png')),'quality-navigation-invention-experiment-native-'+t.id+'.png']));
 export function retainScreenshot(name){
- // Individually changed diagrams/labels have distinct review value: all12
- // mobile+desktop plans total only0.61MB. Preserve the actual native zoom too.
- if(/^quality-navigation-invention-/.test(name))return /invention-(?:model-invention-[a-z0-9-]+-(?:320|1440)|native-200-large)\.png$/.test(name);
+ // Each individual plan and distinct functional model has review value.
+ // Keep mobile/desktop and actual native model states; never fill the budget.
+ if(/^quality-navigation-invention-/.test(name))return /invention-(?:(?:model|experiment)-invention-[a-z0-9-]+-(?:320|1440)|experiment-native-invention-[a-z0-9-]+|native-200-large)\.png$/.test(name);
  // All120 full Why cards are captured and hashed. Retain readable evidence of
  // partial sources, four new domains, desktop, native zoom and the mobile overview.
  if(/quality-book-why-/.test(name))return /why-(?:(?:source-(?:5|25)|starter-(?:30|35|48|59))-320|59-1440|native-200-large|overview-320)\.png$/.test(name);

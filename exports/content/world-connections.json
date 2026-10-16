@@ -384,6 +384,238 @@
       "kind": "partnership",
       "why": "Ein Smartphone verarbeitet Programme und Daten wie ein Computer. Funk, Akku und die mobile Bauform ergänzen diese Aufgabe.",
       "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-battery--science-circuit",
+      "fromId": "invention-battery",
+      "toId": "science-circuit",
+      "kind": "exploration",
+      "why": "Die Batterie liefert Energie; der geschlossene Stromkreis erklärt den Weg durch die Lampe.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-battery--science-energy",
+      "fromId": "invention-battery",
+      "toId": "science-energy",
+      "kind": "exploration",
+      "why": "Ein Akku kann Energie für später bereitstellen; die chemische Funktionsweise erklärt diese Karte.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-battery--invention-smartphone",
+      "fromId": "invention-battery",
+      "toId": "invention-smartphone",
+      "kind": "exploration",
+      "why": "Ein Smartphone braucht einen passenden wiederaufladbaren Akku.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-generator--science-motor",
+      "fromId": "invention-generator",
+      "toId": "science-motor",
+      "kind": "exploration",
+      "why": "Motor und Generator verbinden Bewegung und elektrische Energie in unterschiedlicher Nutzrichtung.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-generator--science-magnetism",
+      "fromId": "invention-generator",
+      "toId": "science-magnetism",
+      "kind": "exploration",
+      "why": "Das sich ändernde Magnetfeld erklärt die Induktion.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-generator--science-circuit",
+      "fromId": "invention-generator",
+      "toId": "science-circuit",
+      "kind": "exploration",
+      "why": "Strom zur angeschlossenen Lampe braucht zusätzlich einen geschlossenen Weg.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-transistor--invention-computer",
+      "fromId": "invention-transistor",
+      "toId": "invention-computer",
+      "kind": "exploration",
+      "why": "Viele Transistoren können zu Schaltungen für Rechnen und Speichern verbunden werden.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-transistor--invention-smartphone",
+      "fromId": "invention-transistor",
+      "toId": "invention-smartphone",
+      "kind": "exploration",
+      "why": "Chips im Smartphone enthalten viele solche elektronischen Bausteine.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-transistor--science-circuit",
+      "fromId": "invention-transistor",
+      "toId": "science-circuit",
+      "kind": "exploration",
+      "why": "Auch ein elektronischer Schalter gehört zu einer versorgten Schaltung.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-camera--invention-smartphone",
+      "fromId": "invention-camera",
+      "toId": "invention-smartphone",
+      "kind": "exploration",
+      "why": "Das Smartphone verbindet Kamerasensor, Verarbeitung und Speicherung.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-camera--invention-telescope",
+      "fromId": "invention-camera",
+      "toId": "invention-telescope",
+      "kind": "exploration",
+      "why": "Beide nutzen Optik; ein Fernrohr muss das betrachtete Bild nicht selbst speichern.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-telescope--invention-satellite",
+      "fromId": "invention-telescope",
+      "toId": "invention-satellite",
+      "kind": "exploration",
+      "why": "Weltraumteleskope können als künstliche Satelliten die Erde umkreisen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-telescope--science-solar-system",
+      "fromId": "invention-telescope",
+      "toId": "science-solar-system",
+      "kind": "exploration",
+      "why": "Fernrohre helfen, Körper im Sonnensystem zu beobachten.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-microscope--invention-telescope",
+      "fromId": "invention-microscope",
+      "toId": "invention-telescope",
+      "kind": "exploration",
+      "why": "Beide nutzen Optik; Mikroskope untersuchen kleine nahe Strukturen statt ferne Himmelskörper.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-refrigerator--science-heat-transfer",
+      "fromId": "invention-refrigerator",
+      "toId": "science-heat-transfer",
+      "kind": "exploration",
+      "why": "Wärmeübertragung und Dämmung erklären die zwei Seiten des Kühlschranks.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-refrigerator--science-energy",
+      "fromId": "invention-refrigerator",
+      "toId": "science-energy",
+      "kind": "exploration",
+      "why": "Der Betrieb benötigt Energie; der Stromverbrauch ist von der transportierten Wärme zu unterscheiden.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-bicycle--science-friction",
+      "fromId": "invention-bicycle",
+      "toId": "science-friction",
+      "kind": "exploration",
+      "why": "Reifen brauchen Halt am Boden, während Reibung an anderer Stelle bremst.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-bicycle--science-lever",
+      "fromId": "invention-bicycle",
+      "toId": "science-lever",
+      "kind": "exploration",
+      "why": "Eine Übersetzung tauscht Kraftbedarf gegen Drehweg: Bei einem leichteren Gang drehst du die Pedale häufiger. Die Hebelkarte hilft, mechanischen Vorteil von zusätzlichem Energiegewinn zu unterscheiden.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-bicycle--invention-car",
+      "fromId": "invention-bicycle",
+      "toId": "invention-car",
+      "kind": "exploration",
+      "why": "Beide benötigen Antrieb, Steuerung und sichere Bremsen; die Energiequellen unterscheiden sich.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-elevator--science-friction",
+      "fromId": "invention-elevator",
+      "toId": "science-friction",
+      "kind": "exploration",
+      "why": "Bremsende Kräfte sind für das Sicherheitsprinzip wichtig.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-elevator--science-motor",
+      "fromId": "invention-elevator",
+      "toId": "science-motor",
+      "kind": "exploration",
+      "why": "Ein Antrieb kann elektrische Energie in Bewegung umsetzen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-elevator--building-eiffel-tower",
+      "fromId": "invention-elevator",
+      "toId": "building-eiffel-tower",
+      "kind": "exploration",
+      "why": "Der Eiffelturm besitzt Aufzüge; seine geneigten Pfeiler stellen besondere Anforderungen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-seismograph--science-pendulum",
+      "fromId": "invention-seismograph",
+      "toId": "science-pendulum",
+      "kind": "exploration",
+      "why": "Eine träge aufgehängte Masse kann für ein vereinfachtes Messprinzip genutzt werden.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-seismograph--science-resonance",
+      "fromId": "invention-seismograph",
+      "toId": "science-resonance",
+      "kind": "exploration",
+      "why": "Ein Messgerät reagiert selbst auf Bewegung; sein Verhalten muss bei der Auswertung berücksichtigt werden.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-3d-printing--invention-computer",
+      "fromId": "invention-3d-printing",
+      "toId": "invention-computer",
+      "kind": "exploration",
+      "why": "Ein digitaler Entwurf enthält die Vorgaben für den Aufbau.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-3d-printing--invention-printing",
+      "fromId": "invention-3d-printing",
+      "toId": "invention-printing",
+      "kind": "exploration",
+      "why": "Beide folgen einem Entwurf, aber räumlicher Materialaufbau unterscheidet sich vom Buchdruck.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-3d-printing--science-angle",
+      "fromId": "invention-3d-printing",
+      "toId": "science-angle",
+      "kind": "exploration",
+      "why": "Ansichten und Winkel helfen, einen räumlichen Entwurf zu beschreiben.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-sewing-machine--invention-computer",
+      "fromId": "invention-sewing-machine",
+      "toId": "invention-computer",
+      "kind": "exploration",
+      "why": "Ein verlässlich wiederholter Ablauf lässt sich in einzelne Schritte zerlegen; das macht ihn noch nicht zu einem Computer.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-sewing-machine--invention-printing",
+      "fromId": "invention-sewing-machine",
+      "toId": "invention-printing",
+      "kind": "exploration",
+      "why": "Beide mechanisieren wiederholte Arbeit, verarbeiten aber andere Materialien mit anderer Wirkung.",
+      "checkedAt": "2026-10-16"
     }
   ]
 }

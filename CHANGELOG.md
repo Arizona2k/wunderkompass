@@ -1,5 +1,9 @@
 # Änderungsverlauf
 
+## Paket3.5 · autorisierte Chromium-Zeitreserve (unveröffentlicht)
+
+- Nur das Chromium-Joblimit von35auf50Minuten erhöht; Firefox/WebKit bleiben35Minuten. Bestehende Matrix mit einem Ausdruck erhalten. Quality78 hatte Browserlauf und Nachweiserstellung bestanden und wurde unmittelbar vor erfolgreicher Nachweisübergabe abgebrochen. Vollständige Tests, Laufzeitmessungen und Freigabegrenzen bleiben erhalten; künftige Laufzeiten weiter vergleichen.
+
 ## Paket3.5 · Dauerauftrag und vollständige Prüfgruppen (unveröffentlicht)
 
 - Vollständigen neuen47-Abschnitt-Dauerauftrag16.10. bytegleich gesichert und Issue28 samt Ergänzung gelesen. Zehn vernetzte Erlebnisfelder innerhalb der sechs vorhandenen Hauptbereiche, kontrollierte vollständig abgenommene Teilrelease-Kandidaten und dauerhafte Folgenprüfung älterer veröffentlichter Inhalte in den bestehenden Regeln verankert. Keine zweite Roadmap oder vorzeitige Veröffentlichung; Pakete3.5/4–8 und alle offenen Sollziele erhalten.

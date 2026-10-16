@@ -1577,5 +1577,34 @@
     "isolation": "Book keeps basePort+5 and own outputs/profile/cache. Foundation failure/recovery uses basePort+1; cache-retention fixture randomport0. No offline server shared. Performance contexts all closed and successful before signal.",
     "evidence": "Measured performance/book/foundation/news ordering and peak worker count saved in portable report; full handoff fails if signal/sample count/order/overlap/worker bound absent. Original component and accessibility assertions retained. Source digest distinguishes this QA change even with unchanged app build.",
     "acceptance": "Compare actual final full wall time and exact-head Quality, preserve coverage and record variance; do not call a cancelled previous run green or claim savings from forecasts."
+  },
+  "chromiumTimeoutDecision20261016": {
+    "authorization": "Latest explicit user instruction: Chromium 35 to 50 minutes only; all other job limits and full coverage unchanged.",
+    "reason": {
+      "run": 38896189146,
+      "number": 78,
+      "head": "e707db585b36e0363ff4dc3cc8037337589c065c",
+      "chromiumBrowserSeconds": 2035.12680962,
+      "checks": 142,
+      "browserResult": "passed",
+      "curationResult": "passed",
+      "jobProofLoggedAt": "2026-10-16T12:25:05.9669177Z",
+      "cancellationLoggedAt": "2026-10-16T12:25:05.9919312Z",
+      "completeJobAcceptance": false,
+      "note": "Browser and curation passed; timeout prevented successful evidence handoff. Required remained failed."
+    },
+    "limitsMinutes": {
+      "standards": 10,
+      "chromium": 50,
+      "firefox": 35,
+      "webkit": 35,
+      "required": 5
+    },
+    "implementation": "Existing matrix expression only: matrix.engine == 'chromium' && 50 || 35",
+    "sameCoverageAndTiming": true,
+    "existingRunsInterrupted": false,
+    "nextComparison": "Compare actual complete Chromium regression, sealing/upload and total job time against successful Quality77 (1589.568337232 seconds browser) and Quality78. Investigate persistent growth; never automatically raise the limit again.",
+    "newCostsServicesRunners": false,
+    "operationalActivation": false
   }
 }

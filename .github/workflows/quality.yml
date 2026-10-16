@@ -63,7 +63,9 @@ jobs:
     runs-on: ubuntu-24.04
     # Separate runners, ports, profiles and worker caches. Same immutable build.
     # No shared-process concurrency experiment; every existing matrix remains.
-    timeout-minutes: 35
+    # User-approved margin for Chromium regression plus evidence sealing/upload.
+    # Other engines keep their existing limit; phase timings remain mandatory.
+    timeout-minutes: ${{ matrix.engine == 'chromium' && 50 || 35 }}
     strategy:
       fail-fast: false
       max-parallel: 3

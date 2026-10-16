@@ -1,3 +1,4 @@
+import retainedReviewRequirements from './fixtures/retained-review-requirements.json' with {type:'json'};
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import os from 'node:os';import path from 'node:path';
 import {retainScreenshot,requiredScreenshots,prepareReview,REVIEW_LIMIT,reviewStorage} from '../scripts/review-evidence.mjs';
 import {sourceDigest} from '../scripts/handoff.mjs';
@@ -20,7 +21,7 @@ test('byte-identical states keep their filenames/checksums; comparisons require 
  assert.equal('retainedBytesDelta' in reviewStorage(captures,400).comparison,false);
 });
 test('critical states are always retained while interchangeable intermediate binaries can be reproduced',()=>{
- for(const width of [320,1440])for(const id of ['phone','printing','railway'])assert.equal(retainScreenshot('quality-navigation-invention-model-invention-'+id+'-'+width+'.png'),true);assert.equal(retainScreenshot('quality-navigation-invention-native-200-large.png'),true);assert.equal(requiredScreenshots.filter(f=>f.startsWith('quality-navigation-invention-model-')).length,24,'all individually changed models/labels have durable mobile+desktop review value');
+ for(const width of [320,1440])for(const id of ['phone','printing','railway'])assert.equal(retainScreenshot('quality-navigation-invention-model-invention-'+id+'-'+width+'.png'),true);assert.equal(retainScreenshot('quality-navigation-invention-native-200-large.png'),true);assert.equal(requiredScreenshots.filter(f=>f.startsWith('quality-navigation-invention-model-')).length,48,'all individually changed models/labels have durable mobile+desktop review value');
  assert.ok(requiredScreenshots.every(retainScreenshot));assert.equal(retainScreenshot('quality-book-why-59-1440.png'),true);assert.equal(retainScreenshot('quality-book-why-source-25-320.png'),true);assert.equal(retainScreenshot('quality-book-why-starter-35-320.png'),true);assert.equal(retainScreenshot('quality-book-why-0-320.png'),false,'full Why card remains captured/hashed; readable critical crops retained');
  for(const model of ['length','duration','temperature'])for(const width of [320,1440])assert.equal(retainScreenshot('quality-learning-book-model-'+model+'-'+width+'.png'),true);
  for(const prefix of ['quality-learning','quality-book']){for(const model of ['length','duration','temperature'])for(const width of [320,1440])assert.equal(retainScreenshot(prefix+'-book-model-'+model+'-'+width+'.png'),true);assert.equal(retainScreenshot(prefix+'-book-native-200-large.png'),true);assert.equal(retainScreenshot(prefix+'-book-photon-320.png'),false);}
@@ -55,4 +56,14 @@ test('final collection preserves hashes for every omitted original and rejects m
   await assert.rejects(prepareReview(dir,{sealedCaptureLedger:{...ledger,sourceDigest:'c'.repeat(64)}}),/Mixed sealed/);
   await assert.rejects(prepareReview(dir,{sealedCaptureLedger:{...ledger,screenshots:[...ledger.screenshots,ledger.screenshots[0]]}}),/Invalid sealed/);
  }finally{await fs.rm(dir,{recursive:true,force:true});}
+});
+
+
+test('all58 sealed historical required roles survive the expanded invention review matrix',()=>{
+ assert.equal(retainedReviewRequirements.length,58);assert.equal(new Set(requiredScreenshots).size,requiredScreenshots.length);
+ for(const file of retainedReviewRequirements){assert.ok(requiredScreenshots.includes(file),file+' required role retained');assert.equal(retainScreenshot(file),true);}
+ for(const id of ['invention-generator','invention-transistor','invention-microscope','invention-telescope','invention-seismograph','invention-3d-printing']){
+  for(const width of[320,1440])assert.ok(requiredScreenshots.includes('quality-navigation-invention-experiment-'+id+'-'+width+'.png'));
+  assert.ok(requiredScreenshots.includes('quality-navigation-invention-experiment-native-'+id+'.png'));
+ }
 });

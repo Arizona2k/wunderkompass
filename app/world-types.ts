@@ -9,8 +9,8 @@ export type WorldTopic={questionFeedback?:{hint:string;wrongReasons:(string|null
  animal?:{group:string;habitat:string;continent:string;diet:string;skill:string;size:{min:number;max:number;unit:string;measurement_de:string;text_de:string};protection:{text_de:string;scope:string;checked_at:string}};
  history?:{year:number;date:string;era:string;sensitive:boolean};
  person?:{lifespan:string;field:string;method:string};
- invention?:{year:number;date:string;stages:{label:string;text:string}[];parts:{id:string;name:string;description:string}[];blueprint:'car'|'plane'|'lamp'|'computer'|'phone'|'printer'|'compass'|'train'|'rocket'|'satellite'|'network'};
+ invention?:{year:number;date:string;walkthrough?:boolean;model?:keyof typeof import('./invention-experiment-contract.mjs').INVENTION_EXPERIMENTS;stages:{label:string;text:string}[];parts:{id:string;name:string;description:string}[];blueprint:'car'|'plane'|'lamp'|'computer'|'phone'|'printer'|'compass'|'train'|'rocket'|'satellite'|'network'|import('./invention-discovery').DiscoveryKind};
  building?:{date:string;size:string;height?:number};
 };
-export type WorldEntry=Pick<WorldTopic,'id'|'category'|'title'|'intro'|'aliases'|'locations'|'image'|'model'> & {group?:string;habitat?:string;continent?:string;year?:number;era?:string;date?:string;field?:string;lifespan?:string;sensitive?:boolean};
+export type WorldEntry=Pick<WorldTopic,'id'|'category'|'title'|'intro'|'aliases'|'locations'|'image'|'model'> & {inventionModel?:NonNullable<WorldTopic['invention']>['model'];group?:string;habitat?:string;continent?:string;year?:number;era?:string;date?:string;field?:string;lifespan?:string;sensitive?:boolean};
 export type WorldActions={progress:LocalProgress;onActivity:(activity:Activity)=>void;onVisit:(id:string)=>void;onLearn:(id:string)=>void;onFavorite:(id:string)=>void;onRead:(s:string)=>void;onPlace:(p:Place)=>void;onNavigate:(mode:Mode,id?:string,iso?:string)=>void;onSave:(id:string,key:string,value:unknown,activity:Activity)=>void;onReview:(id:string,correct:boolean)=>void;onGame:(id:string)=>void;onClear:(id:string)=>void};

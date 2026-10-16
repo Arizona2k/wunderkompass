@@ -1,3 +1,4 @@
+import {INVENTION_EXPERIMENTS} from './invention-experiment-contract.mjs';
 export function validateWorldContent(data,index,allIndex=index){
  const text=v=>typeof v==='string'&&v.trim().length>0&&v.length<=20000&&!/[<>\u0000-\u0008]/u.test(v);
  if(!Array.isArray(data)||data.length!==index.length)throw Error('Unvollständiger Wissenskatalog');
@@ -8,6 +9,9 @@ export function validateWorldContent(data,index,allIndex=index){
   if(t.learning!==undefined&&(!t.learning||!['starter','observe','benefit'].every(k=>text(t.learning[k]))))throw Error('Beschädigte Lernhilfe');
   if(t.category==='science'&&(!t.learning||!['starter','observe','benefit'].every(k=>text(t.learning[k]))))throw Error('Unvollständige Lernstufen');
   if(t.investigation!==undefined&&!['pressure','buoyancy','lever','probability','angle','checksum','pendulum','resonance','fractals','encryption'].includes(t.investigation))throw Error('Unbekanntes Lernmodell');
+  if(t.invention!==undefined){const d=t.invention,kinds=['car','plane','lamp','computer','phone','printer','compass','train','rocket','satellite','network','battery','generator','transistor','camera','telescope','microscope','refrigerator','bicycle','elevator','seismograph','3d-printing','sewing-machine'],models=INVENTION_EXPERIMENTS;
+   if(!d||!Number.isFinite(d.year)||!text(d.date)||!kinds.includes(d.blueprint)||d.walkthrough!==undefined&&typeof d.walkthrough!=='boolean'||!Array.isArray(d.stages)||d.stages.length!==6||!d.stages.every(s=>text(s.label)&&text(s.text))||!Array.isArray(d.parts)||d.parts.length<3||d.parts.length>6||!d.parts.every(p=>text(p.id)&&text(p.name)&&text(p.description))||new Set(d.parts.map(p=>p.id)).size!==d.parts.length||d.model!==undefined&&(!Object.hasOwn(models,d.model)||models[d.model].blueprint!==d.blueprint||d.walkthrough!==true))throw Error('Beschädigter Erfindungsplan');
+  }
   if(t.animal&&(!t.animal.size||!Number.isFinite(t.animal.size.min)||!Number.isFinite(t.animal.size.max)||t.animal.size.min<0||t.animal.size.max<t.animal.size.min||!['m','cm','mm','kg'].includes(t.animal.size.unit)||!['group','habitat','continent','diet','skill'].every(k=>text(t.animal[k]))))throw Error('Beschädigter Tiervergleich');
   if(t.challenges!==undefined&&(!Array.isArray(t.challenges)||!t.challenges.every(c=>text(c.id)&&['medium','hard'].includes(c.difficulty)&&text(c.prompt)&&Array.isArray(c.answers)&&c.answers.length>=2&&c.answers.every(text)&&new Set(c.answers).size===c.answers.length&&Number.isInteger(c.correct)&&c.correct>=0&&c.correct<c.answers.length&&text(c.why))))throw Error('Beschädigte Challenge');
   if(!Array.isArray(t.related)||!t.related.every(id=>allIndex.some(e=>e.id===id))||!Array.isArray(t.sources)||!t.sources.length||!t.sources.every(s=>text(s.label)&&typeof s.url==='string'&&/^https:\/\//.test(s.url)))throw Error('Fehlender Wissens- oder Quellenverweis');
