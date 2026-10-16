@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "d63e946de8a02df2d0493e19081a7f07574b51cd",
+    "commit": "71255ec55833fa1c4056a5c95310fa4fb78b8a30",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -26,7 +26,8 @@
       "2de46220f602ce7ac6124afb59db0aed50dfc8e4",
       "d0dc9a35857e896d45d35c7474640a58087b0ec5",
       "c9d7ab0336ddcc89653241433dd06dc020688b39",
-      "d63e946de8a02df2d0493e19081a7f07574b51cd"
+      "d63e946de8a02df2d0493e19081a7f07574b51cd",
+      "71255ec55833fa1c4056a5c95310fa4fb78b8a30"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -702,6 +703,16 @@
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/7VaP7cwWzpp4Lf4AkPRWJH1yyn5a"
         }
       ]
+    },
+    {
+      "number": 27,
+      "title": "Paket 3.5 · Lernreisen, Wissenschaft und Wissensbuch vertiefen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/27",
+      "base": "test-live",
+      "mergedAt": null,
+      "mergeCommit": null,
+      "statusesUrl": null,
+      "deploymentStatuses": []
     }
   ]
 }

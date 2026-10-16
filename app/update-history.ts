@@ -329,7 +329,43 @@ const JOURNEY_COPY:UpdateCopy = {
   }
  ]
 };
-const CONTENT_COPY:UpdateCopy={id:'excellence-chapters-3-5',icon:'🧭',category:'Neue Inhalte',title:'Natur und Technik genauer entdecken',summary:'Lernreisen, Wissenswörter und Warum-Antworten verbinden verständliche Erklärungen mit freiwilligen Denkaufgaben. Naturorte und vorhandene Erfindungen erhalten eigene Beobachtungsaufgaben, lesbare Modelle und erklärte Wege zu passenden Themen.',details:['Alle 80 Kapitel erhalten einfache Einstiege, freiwillige Vertiefungen und Beobachtungsideen. Alle 240 Aufgaben erhalten einzeln formulierte Denkhinweise; 32 gezielte Korrekturen typischer Fehlvorstellungen und alle bisherigen richtigen Antworten bleiben erhalten. Die 64 Kapitelgrafiken bieten lesbare Beschriftungen; Mondphasen und Ländergrenzen werden gezielt korrigiert. Die fünf Meereskapitel verweisen auf passende Originalbelege zu Ozeanen, Riffen und Wasserbewegung.','23 neue und 23 vorhandene Wissenschaftskarten laden zum Weiterdenken ein; zehn Bildschirmversuche und 13 eigene Erklärgrafiken zeigen konkrete Zusammenhänge und Modellgrenzen. Alle elf Labore erklären die beiden falschen Antworten jeder vorhandenen Denkfrage individuell.','90 neue und 90 bisherige Wissenswörter bieten individuelle Vertiefungen. 30 neue und 30 erhaltene Warum-Antworten verbinden einfache Einstiege, genauere Erklärungen, sichere Beobachtungsideen und passende Quellen; drei Messmodelle laden zum Vergleichen ein.','34 neue und 34 überarbeitete Naturerklärungen bieten individuelle Fragen, Quellen und erklärte Rückverweise; zehn bedienbare Schrittgrafiken machen etwa Schluchtbildung und schwimmendes Eis verständlich. Filter und Suche erschließen den langen Atlas.','Zwölf vorhandene Erfindungen erhalten Beobachtungsaufgaben, Denkhinweise und jeweils zwei konkrete Fehlbegründungen. Telefon und Buchdruck zeigen klarere Funktionspläne; lesbare, dauerhaft nummerierte Bauteile sowie erklärte gegenseitige Wissenswege helfen beim Erkunden. Zwölf neue Erfindungen ergänzen etwa Batterie, Mikroskop und Nähmaschine; sechs freiwillige Modelle untersuchen Induktion, Schalten, Schichten, Bildgröße, Sammelfläche und Bodenbewegung. Acht neue Bauwerke führen etwa nach Groß-Simbabwe, Lalibela und Sydney. Alle acht bisherigen Bauwerke erhalten eigene Beobachtungsideen und konkrete Fehlrückmeldungen; drei Vergleiche machen Quellhöhe, Steinlagen und Kreisbögen untersuchbar. Bestehende Fragen und Spielstände bleiben erhalten.'],benefit:'Kinder können Zusammenhänge im eigenen Tempo erkunden und gezielt wiederfinden. Eltern sehen Quellenverweise und den tatsächlichen Prüfstand; ihre bisherigen Sicherungen bleiben nutzbar.',links:[{label:'Lernreisen',hash:'journeys'},{label:'Wissenschaft & Weltall',hash:'world/science'},{label:'Erfindungen',hash:'world/inventions'},{label:'Messen im Wissensbuch',hash:'book/words/Meter'},{label:'Naturatlas',hash:'book/nature'}]};
+const CONTENT_COPY:UpdateCopy={
+ "id": "excellence-chapters-3-5",
+ "icon": "🧭",
+ "category": "Neue Inhalte",
+ "title": "Natur und Technik genauer entdecken",
+ "summary": "Lernreisen, Wissenswörter und Naturorte erhalten freiwillige Denkaufgaben und verständliche Vertiefungen. Eigene Technikmodelle und erklärte Wissensverbindungen laden zum Vergleichen ein.",
+ "details": [
+  "Alle 80 Kapitel bieten zusätzliche Einstiege, Vertiefungen und Beobachtungsideen. 240 einzeln formulierte Denkhinweise und lesbare Grafikbeschriftungen helfen beim Weiterdenken; die fünf Meereskapitel verweisen auf passende Originalbelege.",
+  "23 neue und 23 vorhandene Wissenschaftskarten erklären ihre Zusammenhänge genauer. Zehn freiwillige Bildschirmversuche machen eigene Vergleiche möglich und nennen ihre Modellgrenzen.",
+  "180 Wissenswörter und 60 Warum-Antworten verbinden einfache Einstiege, genauere Erklärungen und sichere Beobachtungsideen. Drei Messmodelle helfen beim Vergleichen.",
+  "34 neue und 34 überarbeitete Naturerklärungen bieten eigene Fragen, Quellen und erklärte Rückverweise. Zehn bedienbare Schrittgrafiken zeigen etwa Schluchtbildung und schwimmendes Eis; Filter und Suche helfen beim Wiederfinden.",
+  "Zwölf neue Erfindungen und acht neue Bauwerke ergänzen den Bestand. Auch die bisherigen Karten erhalten Beobachtungsaufgaben und konkrete Rückmeldungen; sechs Technikmodelle und drei Bauwerksvergleiche lassen sich freiwillig untersuchen."
+ ],
+ "benefit": "Kinder können Zusammenhänge im eigenen Tempo erkunden und gezielt wiederfinden. Eltern sehen Quellenverweise und den tatsächlichen Prüfstand; bisherige Sicherungen bleiben nutzbar.",
+ "links": [
+  {
+   "label": "Lernreisen",
+   "hash": "journeys"
+  },
+  {
+   "label": "Wissenschaft & Weltall",
+   "hash": "world/science"
+  },
+  {
+   "label": "Erfindungen",
+   "hash": "world/inventions"
+  },
+  {
+   "label": "Messen im Wissensbuch",
+   "hash": "book/words/Meter"
+  },
+  {
+   "label": "Naturatlas",
+   "hash": "book/nature"
+  }
+ ]
+};
 const OFFLINE_COPY:UpdateCopy={
  "id": "offline-learning-3-5",
  "icon": "🧭",

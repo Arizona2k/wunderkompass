@@ -38,8 +38,8 @@ test('publication entries match successful deployments, source provenance and Be
 
 test('test website chronology retains the merged and deployed product rounds, with truthful channel dates',()=>{
  const entries=publicUpdates(),testEntries=entries.filter(e=>e.channel==='vercel-test');
- assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[29,26,25,24,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
- assert.equal(entries.length,32);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
+ assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[30,29,26,25,24,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
+ assert.equal(entries.length,33);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
  assert.ok(!PREPARED_UPDATES.some(e=>e.id==='foundation-2a'));
  assert.ok(UPDATE_HISTORY.some(e=>e.evidence.pullRequest===22));
@@ -50,10 +50,10 @@ test('test website chronology retains the merged and deployed product rounds, wi
   assert.ok(Date.parse(deployment.createdAt)>=Date.parse(record.mergedAt));assert.ok(TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.includes(record.mergeCommit));
  }
  // Confirmation date differs from observation date and from the merge instant.
- assert.equal(updateDate(testEntries[0]),'16. Oktober 2026 um 21:33:21 MESZ');assert.equal(testEntries[0].confirmedOn,'2026-10-16');
+ assert.equal(updateDate(testEntries[0]),'16. Oktober 2026 um 23:23:51 MESZ');assert.equal(testEntries[0].confirmedOn,'2026-10-16');
  const foundation=testEntries.find(e=>e.evidence.pullRequest===26);assert.equal(updateDate(foundation),'13. Oktober 2026 um 10:55:40 MESZ');
- assert.equal(testEntries[0].occurredAt,'2026-10-16T19:33:21Z');
- assert.equal(testEntries[0].id,'clear-update-chronicle','receipt promotes the same prepared PR29 identity');assert.equal(foundation.id,'excellence-foundation-3-5');
+ assert.equal(testEntries[0].occurredAt,'2026-10-16T21:23:51Z');
+ assert.equal(testEntries[0].id,'offline-learning-3-5','receipt promotes the same prepared PR30 identity');assert.equal(testEntries.find(e=>e.evidence.pullRequest===29).id,'clear-update-chronicle');assert.equal(testEntries.find(e=>e.evidence.pullRequest===29).occurredAt,'2026-10-16T19:33:21Z');assert.equal(foundation.id,'excellence-foundation-3-5');
  assert.equal(testEntries.find(e=>e.evidence.pullRequest===17).occurredAt,'2026-10-10T11:40:50Z','old availability remains unchanged');
  assert.ok(!testEntries.some(e=>[4,13].includes(e.evidence.pullRequest)),'internal workflow-only PRs excluded');
 });
@@ -127,4 +127,12 @@ test('every old and new update has a concise reader category, with technical han
  }
  assert.equal(publicUpdates().find(e=>e.id==='clear-update-chronicle').status,'test-available');
  assert.equal(PREPARED_UPDATES.some(e=>e.id==='clear-update-chronicle'),false);
+});
+
+// Actual publication evidence must advance the reader UI, not just append unused metadata.
+test('PR30 receipt includes real ancestry and promotes its stable identity while open PR27 remains prepared',()=>{
+ const receipt=TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===30),entry=UPDATE_HISTORY.find(p=>p.id==='offline-learning-3-5');
+ assert.ok(entry);assert.equal(entry.status,'test-available');assert.equal(entry.occurredAt,'2026-10-16T21:23:51Z');assert.equal(TEST_HISTORY_EVIDENCE.testLive.commit,'71255ec55833fa1c4056a5c95310fa4fb78b8a30');
+ assert.equal(confirmedTestDeployment(receipt,{...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(s=>s!==receipt.mergeCommit)}),null);
+ const pending=PREPARED_UPDATES.find(e=>e.id==='excellence-chapters-3-5');assert.ok(pending);assert.equal(pending.evidence.pullRequest,27);assert.equal(pending.status,'prepared');assert.equal(pending.occurredAt,null);assert.equal(pending.availableOn,null);assert.deepEqual(pending.links,[]);assert.ok(!publicUpdates().some(e=>e.id===pending.id));assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));
 });
