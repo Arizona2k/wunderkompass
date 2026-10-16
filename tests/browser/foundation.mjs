@@ -3,8 +3,6 @@ import {pendingRouteFocusFlow} from './route-focus.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
-import {createHash} from 'node:crypto';
-import {pendingRouteFocusFlow} from './route-focus.mjs';
 const budgets=JSON.parse(await fs.readFile(new URL('../../performance-budgets.json',import.meta.url),'utf8')).browser;
 const routes=[['home','','#discovery-title'],['world','world','.world-choice'],['games','games','.game-tile'],['labs','labs','.research-tile'],['journeys','journeys','.journey-tile'],['book','book','.word-card'],['updates','updates','#updates-title']];
 
