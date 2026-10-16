@@ -5,11 +5,8 @@
     "entryJsGzipBytes": 280000,
     "entryCssBytes": 325000,
     "entryCssGzipBytes": 56000,
-    "totalJsBytes": 3800000,
-    "totalJsGzipBytes": 1100000,
     "largestJsBytes": 1750000,
-    "worldGeometryBytes": 1800000,
-    "journeyInquiryGzipBytes": 50000
+    "worldGeometryBytes": 1800000
   },
   "browser": {
     "homeJsBytes": 1050000,
@@ -18,5 +15,11 @@
     "areaCls": 0.1,
     "readyMs": 6000,
     "lcpMs": 6000
-  }
+  },
+  "observeOnly": [
+    "totalJsBytes",
+    "totalJsGzipBytes",
+    "journeyInquiryBytes",
+    "journeyInquiryGzipBytes"
+  ]
 }

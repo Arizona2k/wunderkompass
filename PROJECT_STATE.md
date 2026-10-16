@@ -1,3 +1,44 @@
+# Aktueller Lieferabschnitt – verständliche Update-Chronik,16.10.2026
+
+## Letzte Testpräzisierung nach Quality83
+
+08f8d7770ac70b09a7008117d212af378115732c:115Unit/27Release/TS/Lint/Build/40Exporte1957Inventarsätze undlokalerVollroot663.992s/115Labels bestanden. NativegesamteChronik/Negativseite/viervertrauteFokusfälle/kaltOffline bestanden;791erzeugte/312behaltenePNG/43770983Byte/106229017Reserve, Originale/Hashes unverändert in work/chronik-08f8d77-complete-proof. Quality83/38950622802: vollständigeChromiumregression erstmals auchremotegrün494.389s; Firefox scheitert danach anfocus-visible derneuenChronikprobe, keinegrüneGesamt-Abnahme.
+
+DieProbe hatte nachPointerklicksFokusnurperSkriptgesetzt. Jetzt realeTab→ShiftTab-RückkehrzumSummary, tatsächlichenFokus/sichtbarenRahmenvorundnachEnter kontrollieren, beiFehlernOriginalbild/Kontext sichern. KeineAssertionentfernt/gelockert undkeineProduktänderung. LokaleFirefox-/WebKitbereitstellungmitvorhandenengepinntenPlaywright-Tools versucht; Downloadserverantworten403Domainforbidden, keineMirror-/Zugriffsumgehung. TatsächlicheEngineabnahme weiterübervorhandenesGitHubQuality, dortwurdenbeideEnginepaketeerfolgreichinstalliert. NachgezielterProbe erneutunveränderlichevollständige lokale/GitHub-Abnahme, erstbeivollständigemErfolgReady. Letzterapp-Buildbleibt3e6aac64dab2595f; Quellen-/QADigeständertsich, altenBelegnichtumbinden.
+
+
+## Aktueller Abschlusskandidat – Fokuskorrektur wiederverwendet, Wachstumsregel übernommen
+
+08c2759 nach nativeViewport-Korrektur vollständig lokal bestanden651.920s,787erzeugte/308behaltenePNG/43425247Byte. UnveränderteOriginale/Hashes in work/chronik-08c2759-complete-proof. Quality82/38947887867 dagegen früh an originalerfoundation.mjs:53 rot: Spielhilfe schließt nach verzögerterFokuswiederherstellung nicht. KeinneuerTimeout/Retry undkeinReady. Bekannter bereitsinPR27behobenerFehler, deshalbgenau dessen isolierbaren scheduleRouteRestore-Guard undvier echte320/1440-Tastatur-/Touch-/Mausfälle wiederverwendet; keineunfertigenInhaltsabhängigkeiten.
+
+Vorher tatsächlicheReproduktion: zwei ausstehendeFrames, vertrauenswürdigesEnter, FokusMAIN, offengebliebeneHilfe, Scroll7666→0. Nachher allevierFälle: SUMMARY bleibtaktiv, Enter schließt, Scroll7666beziehungsweise2511exakterhalten. BestehendeSiebenbreitenprüfungen unverändertundumFokuserhaltverstärkt, vierOriginalbilder zusätzlichPflicht; fehlende/duplizierte/unvertrauteBelege scheitern. Bei künftigenFehlern aktuelleWorker-JSON/Original-PNGauchvorabgewiesenerAggregation sichern.
+
+BereitsverbindlicheNutzerentscheidungzumfreienWachstum indieseneigenständigenAbschnitt übernommen: nur künstlicheJS-/Aufgabengesamtkappen entfernt, keinehöhereErsatzgrenze. Roh-/gzip-Summen weitergemessen/alsendlicheTrendwerte geprüft. HistorischetatsächlicheChronikmessung eb67783/Build75d91146c9329d5e alsVergleich, keineLeistungs-/Publikationsgarantie. AlleEinstiegs-/CSS-/Einzeldatei-/Geometrie- undBrowserperformancegrenzen unverändert. Auch ohne diesePolicyänderungbestand derFokusbuilddiealtenGrenzen; keineversteckteBudgetanhebungzumKaschiereneinesFehlers.
+
+TatsächlicherProduktionsworker-Wechselvon sauberemtest-live c9d7ab0/Build ea9996c25b668859 zumaktuellenApp-Build3e6aac64dab2595f bestanden: vorbereitete130Assets, echtegespeicherteSpielrunde/Favorit, tatsächlicherUpdateknopf, gesamterSchema3-Fortschrittbytegleich, beidevollständigenCacheversionen130/130 erhalten; Browsergeschlossen/Servergestoppt, kalteOffline-Chronik31EinträgeundganzerPassunverändert. EigenessynthetischesProfil, keinepersönlichenDaten. Report/Screenshots .qa-output/chronik-old-new-update; Quelle031164a88a937aa4fe4b0291b3a7886d46c49cfe13640f482ae714d05530d794.
+
+Jetzt Korrekturkandidat imselbenPR29 sichern, vollständigeStandards/lokaleRoot-/Firefox-/WebKit-/GitHub-Abnahme amunverändertenFinalhead. Neuere echteQuittung imPR29; vorigemlokalenGrün keinegrüneGitHub-Abnahmeandichten. OriginalPR27 bleibt2c23ad9. KeinMerge/Deployment/Newsstart, gesamteMasterrestliste unverändert.
+
+
+## Nachweisaufnahme nach Quality81 korrigiert
+
+Chronikhead eb677839e937773935b99759f8b8f8a198d1c0ee lokal vollständig bestanden648.843s/113Labels,114Unit/27Release/TS/Lint/Build/40Exporte1957Inventarsätze. Originale samtHashes unverändert in work/chronik-eb67783-complete-proof;785erzeugte/307behaltenePNG/43359812Byte/106640188Reserve. GitHub Quality81/38945554263 dagegen rot: native200%-Aufnahme am Ende derlangenChronik uniform, vonbestehenderPrüfungkorrektabgewiesen. KeinReady daraus. NichtalsWebsite-/Offline-/Timeoutfehler ausgeben; Navigation/Offline dort grün.
+
+Korrektur: tatsächlichen sichtbaren CDP-Viewport direkt aufnehmen (fromSurface/captureBeyondViewport=false), keine beihohemScrollweg falschskalierten absolutenDPR-Ausschnitte. Vollständige1280×900/DPR2-Bildmaße undNichtleerheit unverändertstreng; gescheiterteOriginale künftigvorAssertion sichern unddiagnostischbewahren. Erster/letztergeöffneterEintrag imnativenZoom enthalteneMetadaten müssen gemessenevollständigeBilder und>1000CSS-PixelWeg nachweisen; leereNegativseite wird tatsächlichzurückgewiesen. Gezielt aufChromium151 bestanden:640CSS/DPR2, Scroll561→31863,1280×900,26/21Farbstichproben. AlteversiegelteBelege unverändert; neuevollständigeAbnahme/Quality amKorrekturhead erforderlich. KeineApp-/Inhalts-/Schema-/Budgetänderung, keineTimeouts/Retry-Ausnahmen.
+
+
+Nutzerauftrag vollständig archiviert unter content/auftrag-2026-10-13/WunderKompass_Fortsetzungsauftrag_2026-10-16.md. Neues abschnittsweises Liefermodell ersetzt alte Ein-PR-/Sammeldraft- und grundsätzliche Newsfreigabesatzungen; technische und einschlägige unabhängige Gates bleiben. Bestehender vollständiger Masterumfang/Rest in BACKLOG und PR27 erhalten.
+
+Einziger aktiver Durchlauf package-3-5-content-2026-10-13, eigene Reservierung wunderkompass-development-lock/f1471189d57c70ffd0ee373fb61aaf5ef9f636af; keine zweite Beanspruchung. Originalarbeitsbaum sauber, PR27 unverändert2c23ad99152c53118bfd2d4484d65844c4650d05 remote gesichert. Seine volle lokale Prüfung2172.232s/144Label,179Unit/27Release/TS/Lint/Build/42Exporte bestanden; Quality80/38938329507 alle5Jobs grün, Quelle7c5845d78bbaea94da29ffbddd1298a7d7886090b9b8b96c1a21a87e610c7bbd/Build10185666f3786e87, getesteterMerge b71111628962adc45a0fac194e2bb460ac5f00c8. Unveränderte lokale470PNG/50031646Byte und Collector528PNG/57020713Byte nach Hash-/Snapshotbindung gesichert. Chromiumbrowser1846.469s,Job32:05,FF999.138s/WK668.407s; erweiterte Matrix, keine kausale Beschleunigungsgarantie. Fach-/Kinder-/Gerätegates dort offen; kein Gesamt-GO.
+
+Aufgrund ausdrücklich neuer Nutzerentscheidung jetzt separater **seriell im selben Durchlauf** bearbeiteter Worktree work/p35-chronik, Branch codex/wunderkompass-update-chronik-2026-10-16, Basis des tatsächlichen aktuellen test-live c9d7ab0336ddcc89653241433dd06dc020688b39. main537622796f7e1f9a886e7400f10b1f727d24f8dc unverändert. Keine Originalcommits zurücksetzen, keinen fremden Zweig überschreiben. Vercel-Gitdeployment dieses neuen Branchs vor Push explizit ausgeschaltet. Vor Ready vollständige Schlussprüfungen am unveränderten Abschnittshead; tatsächliche finalen Resultate und PR im zugehörigen GitHub-Übergabebericht lesen, keine alten Erfolge neu binden.
+
+Umgesetzt:31 bestätigte Chronikeinträge einschließlich erneut verifiziertem PR26/Mergec9d7ab0/Verfügbarkeit13.10.08:55:40Z, vollständige13er-Siteshistorie, eigene Kategorien, klarere Zusammenfassungen/Nutzen/Bedienerklärungen. Keine versteckte Abhängigkeit von PR27; dessen unbestätigte Inhalte nicht als verfügbar anzeigen. Eigene Chronikänderung ohne erfundenes Datum vorbereitet. StabileIDs/Quelle/Zeit/Sortierung/Links, Lernstände/gespeicherteRunden/Schema3 unverändert.
+
+Nächster Schritt: tatsächliche Browser-/Bildprüfung und vollständige Unit/Release/TS/Lint/Build/Verify/Browser/Engine-/Quality-Abnahme dieses Abschnitts, Ready-PR gegen test-live. Danach stabil halten; nach Nutzermerge mit PR27-BACKLOG/Regeln/Chronik kollisionssicher zusammenführen und neue tatsächliche Basis prüfen. Newsblocker einmal konkret in content/news-operations.md festhalten und alle erreichbaren unabhängigen Masterarbeiten fortsetzen. Nicht zwischen zwei Worktrees denselben Build-/Proofordner überschreiben.
+
+## Historischer voriger test-live-Checkpoint (bezieht sich nicht auf die neue Chronikabnahme)
+
 # Aktiver Projektstand: Paket 3.5 / Welle 0–1
 
 13. Oktober2026, Europe/Berlin. Lauf package-3-5-foundation-2026-10-13, Codex; exklusiver Branch `codex/wunderkompass-excellence-3-5-2026-10-13`, Basis `d0dc9a35857e896d45d35c7474640a58087b0ec5`, eigene Reservierung `be76a352538745922383e039a9a91bb4d3ebabe4`, Eigentümer work/package-3-5-lock-owner.txt.

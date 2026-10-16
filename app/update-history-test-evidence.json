@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "d0dc9a35857e896d45d35c7474640a58087b0ec5",
+    "commit": "c9d7ab0336ddcc89653241433dd06dc020688b39",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -24,7 +24,8 @@
       "4b73cdb4ab049bcfe227fd43f07c80e8ffe68b0f",
       "1f7fe74a0f8e7e14bf8e709aea2135dc1b09172c",
       "2de46220f602ce7ac6124afb59db0aed50dfc8e4",
-      "d0dc9a35857e896d45d35c7474640a58087b0ec5"
+      "d0dc9a35857e896d45d35c7474640a58087b0ec5",
+      "c9d7ab0336ddcc89653241433dd06dc020688b39"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -605,6 +606,37 @@
           "createdAt": "2026-10-12T23:52:52Z",
           "updatedAt": "2026-10-12T23:52:52Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/41fwCxz3tAEcWCwmMhcZmrX94pdt"
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "title": "Paket 3.5: vollständige Kapitelrückwege und geprüfte Grundlagen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/26",
+      "base": "test-live",
+      "mergedAt": "2026-10-13T08:55:11Z",
+      "mergeCommit": "c9d7ab0336ddcc89653241433dd06dc020688b39",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/c9d7ab0336ddcc89653241433dd06dc020688b39/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56207451057,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-13T08:55:40Z",
+          "updatedAt": "2026-10-13T08:55:40Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/Fa2b4U1PGCCtidxJnuAeZ1fGfoto"
+        },
+        {
+          "id": 56207421454,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-13T08:55:15Z",
+          "updatedAt": "2026-10-13T08:55:15Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/Fa2b4U1PGCCtidxJnuAeZ1fGfoto"
         }
       ]
     }

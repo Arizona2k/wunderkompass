@@ -1,5 +1,15 @@
 # Änderungsverlauf
 
+## Vorbereitet – verständliche Update-Chronik,16.10.2026
+
+- Alle31 belegten verfügbaren Einträge verständlicher zusammengefasst und mit passenden Kategorien ergänzt. Auch ältere Veröffentlichungen erklären konkrete Entdeckungen, Bedienwege und Familiennutzen. Technische Test-/Implementierungsdetails aus Lesertexten entfernt; gleiche Wiederbereitstellung weiterhin ehrlich ohne neue Funktionen.
+- Hauptansicht zeigt ruhige Datumszeilen; belegte sekundengenaue Uhrzeiten stehen zusätzlich in den freiwilligen Einzelheiten. Historische IDs/Quellen/Daten bleiben erhalten. PR26 nur anhand tatsächlichem Merge und erneut geprüftem Vercel-Erfolg in der Testversion bestätigt; eigene Chronikänderung bleibt unveröffentlicht vorbereitet.
+- Bestehende siebenbreite Browserprüfung um lesbare Kategorien/kurze Datumszeilen ergänzt. Lange offene Chronik mit großer Schrift zusätzlich in Firefox/WebKit an vier Breiten und bei echtem200%-Chromiumzoom; fehlende/duplizierte/unvollständige Chroniknachweise werden abgewiesen. Originalaufnahmen/Pflichtbilder erhalten, zwei nativeNachweise zusätzlich. Vorhandene150-MB-Reviewregel mit Speicher-/Duplikat-/Reservebericht in diesen unabhängigen Abschnitt übernommen, keine Produktion-/Offlinebudgetänderung.
+- Bekannten Fokusfehler gezielt aus bestehendem PR27 übernommen: Schneller Wechsel zum Spielplatz darf die begonnene Tastatur-/Touchbedienung der Spielhilfe nicht überschreiben. Vier reproduzierbare Fälle und ihre Originalbilder ergänzen die unveränderten Tests. Vorab abgewiesene Browserarbeiter behalten künftig aktuelle Diagnosen.
+- Bereits beschlossene künstliche JavaScript-/Aufgabendaten-Gesamtkappen entfernt; beobachtete Roh-/gzip-Trends und sämtliche Einstiegs-/Einzel-/Browserleistungsprüfungen bleiben. Tatsächlicher Wechsel vom alten vorbereiteten Build mit vollständig unverändertem synthetischem Pass, erhaltenen Cacheversionen und kaltem Offline-Neustart geprüft.
+- Neues abschnittsweises Liefermodell und ausdrücklich beauftragter autonomer Newsbetrieb nach geprüftem Setupmerge dauerhaft verankert. Noch fehlende Modell-/Quellen-/Hosting-/Schlüssel-/Rechtevoraussetzungen konkret dokumentiert; weder News noch Website eigenständig aktiviert. Gesamter übriger Paket3.5-Stand bleibt in PR27 gesichert.
+
+
 ## 13. Oktober 2026 – Paket 3.5, Grundlagenwelle 0–1 (PR-Vorbereitung, unveröffentlicht)
 
 - Wissensartikel zeigen alle passenden Reisekapitel aus der bestehenden Verknüpfungstabelle. Weitere Stationen sind pro Reise freiwillig aufklappbar und erhalten Vorschauen aus vorhandenen Kapiteltexten.
