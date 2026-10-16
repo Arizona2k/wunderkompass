@@ -86,3 +86,11 @@ test('conservative local browser selection retains every mandatory UI group afte
  assert.deepEqual(selectTests(['scripts/news/engine.mjs']).browser,[]);
  assert.deepEqual(selectTests(['README.md']).browser,[]);
 });
+
+test('authorised aggregate growth stays measured while initial and individual budgets remain enforced',()=>{
+ const c=JSON.parse(fs.readFileSync('performance-budgets.json','utf8'));
+ for(const key of ['totalJsBytes','totalJsGzipBytes','journeyInquiryGzipBytes']){assert.equal(c.build[key],undefined);assert.ok(c.observeOnly.includes(key));}
+ const large={totalJsBytes:100000000,totalJsGzipBytes:50000000,journeyInquiryBytes:20000000,journeyInquiryGzipBytes:10000000};
+ assert.deepEqual(violations({...large,...c.build},c.build),[]);assert.equal(observedTrends(large,c.observeOnly).totalJsGzipBytes.current,50000000);assert.throws(()=>observedTrends({},c.observeOnly),/Missing observed/);
+ for(const key of ['entryJsBytes','entryJsGzipBytes','entryCssBytes','entryCssGzipBytes','largestJsBytes','worldGeometryBytes']){assert.ok(c.build[key]>0);assert.equal(violations({...c.build,[key]:c.build[key]+1},c.build)[0].metric,key);}
+});

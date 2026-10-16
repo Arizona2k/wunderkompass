@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {publicUpdates,PREPARED_UPDATES,updateLabel} from '../../app/update-history.ts';
+import {publicUpdates,PREPARED_UPDATES,updateLabel,formatHistoryDay} from '../../app/update-history.ts';
 import {DISCOVERY_CONNECTIONS} from '../../app/discovery-data.ts';
 import {KNOWLEDGE_CONNECTIONS} from '../../app/knowledge-connections.ts';
 const read=async p=>JSON.parse(await fs.readFile(new URL(p,import.meta.url),'utf8'));
@@ -188,6 +188,8 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    const before=await readProgress();await p.getByRole('link',{name:'✨ Was ist neu?',exact:true}).click();await p.locator('.updates-timeline').first().waitFor();
    assert.equal(await p.locator('.updates-timeline>li').count(),publicUpdates().length);
    assert.deepEqual(await p.locator('.updates-meta>span:first-child').allTextContents(),publicUpdates().map(updateLabel));
+   assert.deepEqual(await p.locator('.updates-timeline>li .updates-category').allTextContents(),publicUpdates().map(e=>e.category),'every historical and current update has its own readable category');
+   assert.deepEqual(await p.locator('.updates-timeline>li time').allTextContents(),publicUpdates().map(e=>formatHistoryDay(e.availableOn??e.publishedOn??e.confirmedOn)),'concise dates retain the precise evidence in datetime');
    assert.equal(await p.locator('.updates-timeline>li[data-update-channel=sites]').count(),13,'retain every historical Sites publication');
    assert.equal(await p.locator('.updates-timeline>li[data-update-channel=vercel-test]').count(),publicUpdates().filter(e=>e.channel==='vercel-test').length,'include independently confirmed test website rounds');
    assert.equal(await p.locator('.updates-timeline>li').first().getAttribute('data-update-id'),publicUpdates()[0].id,'latest confirmed package keeps its ID and comes first');
@@ -203,11 +205,12 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    assert.equal(await p.locator('.updates-prepared-entry[data-update-status=prepared]').count(),PREPARED_UPDATES.length);assert.equal(await p.locator('.updates-prepared-entry').getAttribute('data-update-id'),PREPARED_UPDATES[0].id);
    assert.equal(await p.locator('.updates-prepared-entry time,.updates-prepared-entry a').count(),0,'unavailable work has no invented date or feature launch link');
    await p.locator('.updates-prepared').screenshot({path:shots+'/updates-prepared-'+width+'.png',animations:'disabled'});await p.locator('.updates-prepared>summary').click();}
-   await p.locator('.updates-archive>summary').click();await homeTextGeometry(p);await p.locator('.updates-timeline>li').last().getByText(/^6\. Oktober 2026 um/).waitFor();await p.locator('.updates-timeline>li').last().screenshot({path:shots+'/updates-first-release-'+width+'.png',animations:'disabled'});await p.screenshot({path:shots+'/updates-archive-'+width+'-full.png',fullPage:true,animations:'disabled'});
+   await p.locator('.updates-archive>summary').click();await homeTextGeometry(p);await p.locator('.updates-timeline>li').last().getByText('6. Oktober 2026',{exact:true}).waitFor();await p.locator('.updates-timeline>li').last().screenshot({path:shots+'/updates-first-release-'+width+'.png',animations:'disabled'});await p.screenshot({path:shots+'/updates-archive-'+width+'-full.png',fullPage:true,animations:'disabled'});
    await p.locator('.updates-provenance>summary').click();await homeTextGeometry(p);
    // Real disclosure controls expose bounded changes and the family benefit.
    for(const entry of publicUpdates()){
     const item=p.locator('.updates-timeline>li[data-update-id="'+entry.id+'"]');
+    assert.equal(await item.locator('.updates-category').evaluate(el=>parseFloat(getComputedStyle(el).fontSize)>=14),true,'category remains readable '+entry.id);
     const disclosure=item.locator('.updates-details');
     await disclosure.locator('summary').click();
     assert.equal(await disclosure.evaluate(el=>el.open),true,'native disclosure opens '+entry.id);
@@ -266,4 +269,38 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, history/back/forward, 13 Sites + independently confirmed test website updates including PR 23, separate undated prepared work, all concrete-change disclosures and family benefits, expanded long history and large-font details, read-only pass, WCAG axe');
   }finally{await c.close();}
  }
+}
+
+// Reuse the real chronicle, native disclosures and shared text-geometry checks.
+// Chromium's complete home suite still exercises every link, state and Back path.
+export async function historyEngineView(page,width,shots,{engine='chromium',capture}={}){
+ await page.evaluate(()=>location.hash='updates');await page.locator('#updates-title').waitFor();
+ await page.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));
+ const entries=publicUpdates(),before=await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
+ assert.deepEqual(await page.locator('.updates-timeline>li').evaluateAll(es=>es.map(e=>e.dataset.updateId)),entries.map(e=>e.id));
+ const archive=page.locator('.updates-archive');if(!await archive.evaluate(el=>el.open))await archive.locator(':scope > summary').click();
+ for(const entry of entries){
+  const item=page.locator('[data-update-id="'+entry.id+'"]'),d=item.locator('.updates-details');
+  if(!await d.evaluate(el=>el.open))await d.locator('summary').click();
+  assert.equal(await item.locator('.updates-category').innerText(),entry.category);
+  assert.equal(await item.locator('.updates-summary').innerText(),entry.summary);
+  assert.equal(await d.locator('li').count(),entry.details.length);
+ }
+ await homeTextGeometry(page);
+ const first=page.locator('.updates-timeline>li').first(),last=page.locator('.updates-timeline>li').last();
+ const summary=first.locator('.updates-details>summary');
+ await summary.focus();await page.keyboard.press('Tab');await page.keyboard.press('Shift+Tab');
+ const focus=await summary.evaluate(el=>({active:el===document.activeElement,visible:el.matches(':focus-visible'),outline:parseFloat(getComputedStyle(el).outlineWidth)}));
+ if(!focus.active||!focus.visible||focus.outline<2)await page.screenshot({path:shots+'/journey-engine-'+engine+'-history-focus-failure-'+width+'.png',animations:'disabled'});
+ assert.equal(focus.active&&focus.visible&&focus.outline>=2,true,'real Tab navigation gives visible keyboard focus '+JSON.stringify(focus));
+ await page.keyboard.press('Enter');assert.equal(await first.locator('.updates-details').evaluate(el=>el.open),false);await page.keyboard.press('Enter');assert.equal(await first.locator('.updates-details').evaluate(el=>el.open),true);
+ assert.equal(await summary.evaluate(el=>el===document.activeElement&&el.matches(':focus-visible')&&parseFloat(getComputedStyle(el).outlineWidth)>=2),true,'visible keyboard focus persists when reopening the chronicle');
+ const captures=[];
+ const take=async(name,item)=>{await item.scrollIntoViewIfNeeded();if(capture)captures.push(await capture(name));else await page.screenshot({path:shots+'/'+name,animations:'disabled'});};
+ await take('journey-engine-'+engine+'-history-first-'+width+'.png',first);
+ await take('journey-engine-'+engine+'-history-oldest-'+width+'.png',last);
+ await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.update-history',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
+ assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress),before,'chronicle does not write learning progress');
+ if(capture)assert.ok(captures[1].scrollY>captures[0].scrollY+1000,'native capture really reaches the far end of the long history');
+ return {width,entries:entries.map(e=>e.id),expanded:true,largeText:true,keyboard:true,axe:true,passPreserved:true,...(capture?{captures}:{})};
 }

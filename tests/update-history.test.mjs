@@ -24,7 +24,7 @@ test('publication entries match successful deployments, source provenance and Be
   if(entry.evidence.publicationVersion!==undefined){
    const source=HISTORY_EVIDENCE.versions.find(v=>v.number===entry.evidence.publicationVersion);assert.equal(source.publication.status,'succeeded');assert.equal(source.publication.type,'publish');assert.equal(source.sourceCommit,entry.evidence.revision);assert.equal(entry.publishedOn,berlinDay(source.publication.completedAt));
   }
-  for(const link of entry.links)assert.ok(['globe','world','labs','games','journeys','book','news','world/topic/science-moon-phases'].includes(link.hash));
+  for(const link of entry.links)assert.ok(['globe','world','labs','games','journeys','book','news','world/topic/science-moon-phases','updates'].includes(link.hash));
  }
  assert.equal(HISTORY_EVIDENCE.versions.find(v=>v.number===6).publication,null);
  assert.equal(berlinDay(HISTORY_EVIDENCE.site.createdAt),'2026-10-06','project began after Berlin midnight');
@@ -38,21 +38,22 @@ test('publication entries match successful deployments, source provenance and Be
 
 test('test website chronology retains the merged and deployed product rounds, with truthful channel dates',()=>{
  const entries=publicUpdates(),testEntries=entries.filter(e=>e.channel==='vercel-test');
- assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[26,25,24,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
- assert.equal(entries.length,31);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
+ assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[29,26,25,24,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
+ assert.equal(entries.length,32);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
  assert.ok(!PREPARED_UPDATES.some(e=>e.id==='foundation-2a'));
  assert.ok(UPDATE_HISTORY.some(e=>e.evidence.pullRequest===22));
- assert.equal(updateLabel(testEntries[0]),'Testwebsite · verfügbar');assert.equal(updateLabel(entries.find(e=>e.id==='site-v14')),'Sites · Version 14');
+ assert.equal(updateLabel(testEntries[0]),'Testversion · verfügbar');assert.equal(updateLabel(entries.find(e=>e.id==='site-v14')),'Frühere Website · Version 14');
  for(const entry of testEntries){
   const record=TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===entry.evidence.pullRequest),deployment=confirmedTestDeployment(record);
   assert.ok(deployment);assert.equal(entry.evidence.revision,record.mergeCommit);assert.equal(entry.availableOn,berlinDay(deployment.createdAt));assert.equal(entry.occurredAt,deployment.createdAt);
   assert.ok(Date.parse(deployment.createdAt)>=Date.parse(record.mergedAt));assert.ok(TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.includes(record.mergeCommit));
  }
  // Confirmation date differs from observation date and from the merge instant.
- assert.equal(updateDate(testEntries[0]),'13. Oktober 2026 um 10:55:40 MESZ');assert.equal(testEntries[0].confirmedOn,'2026-10-13');
- assert.equal(testEntries[0].occurredAt,'2026-10-13T08:55:40Z');
- assert.equal(testEntries[0].id,'excellence-foundation-3-5','receipt promotes the existing PR 23 entry, without replacing its ID');
+ assert.equal(updateDate(testEntries[0]),'16. Oktober 2026 um 21:33:21 MESZ');assert.equal(testEntries[0].confirmedOn,'2026-10-16');
+ const foundation=testEntries.find(e=>e.evidence.pullRequest===26);assert.equal(updateDate(foundation),'13. Oktober 2026 um 10:55:40 MESZ');
+ assert.equal(testEntries[0].occurredAt,'2026-10-16T19:33:21Z');
+ assert.equal(testEntries[0].id,'clear-update-chronicle','receipt promotes the same prepared PR29 identity');assert.equal(foundation.id,'excellence-foundation-3-5');
  assert.equal(testEntries.find(e=>e.evidence.pullRequest===17).occurredAt,'2026-10-10T11:40:50Z','old availability remains unchanged');
  assert.ok(!testEntries.some(e=>[4,13].includes(e.evidence.pullRequest)),'internal workflow-only PRs excluded');
 });
@@ -113,3 +114,17 @@ test('actual PR 23 appears only with its exact merged and deployed receipt; earl
 });
 
 test('PR25 and PR26 require their exact real deployment receipts',()=>{const entry=UPDATE_HISTORY.find(e=>e.id==='journeys-3');assert.equal(entry.evidence.pullRequest,25);assert.equal(entry.evidence.revision,'d0dc9a35857e896d45d35c7474640a58087b0ec5');assert.equal(entry.occurredAt,'2026-10-12T23:52:52Z');const record=structuredClone(TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===25));record.deploymentStatuses=[];assert.equal(testUpdate(record,entry).status,'prepared');const available=UPDATE_HISTORY.find(e=>e.id==='excellence-foundation-3-5');assert.equal(available.occurredAt,'2026-10-13T08:55:40Z');const missing=structuredClone(TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===26));missing.deploymentStatuses=[];const pending=testUpdate(missing,available);assert.equal(pending.status,'prepared');assert.equal(pending.occurredAt,null);assert.deepEqual(pending.links,[]);assert.equal(publicUpdates([pending]).length,0);assert.equal(publicUpdates().some(e=>e.id===available.id),true);});
+
+
+
+
+test('every old and new update has a concise reader category, with technical handoff details kept outside its main copy',()=>{
+ const categories=['Neue Inhalte','Spielen und Lernen','Einfachere Bedienung','Fehler behoben','Anschaulicher erklärt','Bereitstellung','Nachrichten verstehen'];
+ for(const entry of [...UPDATE_HISTORY,...PREPARED_UPDATES]){
+  assert.ok(categories.includes(entry.category),entry.id+' explicit editorial category');
+  assert.ok(entry.summary.length<=400,entry.id+' short readable summary');
+  for(const text of [entry.title,entry.summary,...entry.details])assert.doesNotMatch(text,/\b(?:Commit|SHA|CI|Schema.?3|PR #|test-live|Unit|axe|Runner|Paket [234])\b|[a-f0-9]{40}/,entry.id+' visitor copy does not expose developer handoff terms');
+ }
+ assert.equal(publicUpdates().find(e=>e.id==='clear-update-chronicle').status,'test-available');
+ assert.equal(PREPARED_UPDATES.some(e=>e.id==='clear-update-chronicle'),false);
+});

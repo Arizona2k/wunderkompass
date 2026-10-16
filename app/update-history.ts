@@ -1,6 +1,8 @@
 /** Sites publications and deployed test updates have distinct evidence and labels.
  * A merge alone never establishes availability; prepared work stays separate. */
+export type UpdateCategory='Neue Inhalte'|'Spielen und Lernen'|'Einfachere Bedienung'|'Fehler behoben'|'Anschaulicher erklärt'|'Bereitstellung'|'Nachrichten verstehen';
 export type UpdateEntry = {
+ category:UpdateCategory;
  id:string; version:string; channel:'sites'|'vercel-test'; status:'publication-confirmed'|'test-available'|'prepared';
  confirmedOn:string; publishedOn:string|null; availableOn:string|null; occurredAt:string|null; icon:string; title:string;
  summary:string; details:string[]; benefit:string; links:{label:string;hash:string}[];
@@ -15,21 +17,277 @@ export function berlinDay(timestamp:string){
  const value=(type:string)=>parts.find(p=>p.type===type)!.value;
  return `${value('year')}-${value('month')}-${value('day')}`;
 }
-type HistoryCopy=Pick<UpdateEntry,'icon'|'title'|'summary'|'details'|'benefit'|'links'>;
-const HISTORY_COPY:Record<number,HistoryCopy>= {
- 1:{icon:'🌍',title:'Eine Weltkugel voller Fragen',summary:'Die erste veröffentlichte Lernwelt macht die Erde drehbar und erkundbar. Erdschichten, Tag und Nacht und ein Quiz laden zum Ausprobieren ein.',details:['Auf der Weltkugel kannst du Länder und Meere entdecken.','Eine eigene Ansicht führt ins Innere der Erde.','Die Tag-und-Nacht-Ansicht erklärt eine weitere Seite unseres Planeten.','Quiz und Vorlesen bieten verschiedene Zugänge zum Wissen.'],benefit:'Kinder können selbst beobachten, zuhören und ihr Wissen ausprobieren. Eltern finden einen gemeinsamen Einstieg in Fragen über die Erde.',links:[{label:'Weltkugel',hash:'globe'}]},
- 2:{icon:'🧭',title:'Aus Neugier wird eine Lernreise',summary:'Kapitel, Spiele und ein Wissensbuch ergänzen das freie Entdecken. Du entscheidest, ob du einer Reise folgst oder lieber spielerisch forschst.',details:['Lernreisen führen Kapitel für Kapitel durch ein Thema und bieten Vorlesen.','Am Reiseende warten ein Experiment oder Rätsel und ein Reisestempel.','Länder-Memory verbindet Länder mit ihren Hauptstädten.','Reihenfolge-Spiele und das Wissensbuch helfen beim Ordnen und Nachschlagen.'],benefit:'Kinder lernen in ihrem eigenen Tempo und auf verschiedenen Wegen. Eltern können ein Kapitel begleiten oder gemeinsam ein Spiel wählen.',links:[{label:'Lernreisen',hash:'journeys'},{label:'Spielplatz',hash:'games'}]},
- 3:{icon:'🧪',title:'Was passiert, wenn …?',summary:'Die Erde wird zum Forscherlabor: Länderporträts, Naturspiele und weitere Experimente kommen dazu. Modelle laden ein, eigene Vermutungen zu prüfen.',details:['Länderporträts ergänzen die Weltkugel mit Informationen zum gewählten Land.','Vulkan-Werkstatt, Erdbeben-Wellen und Wetterstation machen Naturphänomene erkundbar.','Weitere Labore behandeln etwa Wasserkreislauf, Jahreszeiten, Mondphasen und Gezeiten.','Flaggen-, Lebensraum- und Tierdetektiv-Spiele eröffnen zusätzliche Lernwege.'],benefit:'Kinder können Fragen durch Ausprobieren verfolgen. Eltern haben konkrete Anlässe, über Länder, Tiere und Naturereignisse zu sprechen.',links:[{label:'Forscherlabor',hash:'labs'},{label:'Weltkugel',hash:'globe'}]},
- 4:{icon:'🎒',title:'Lieblingswissen finden und mitnehmen',summary:'Eine gemeinsame Suche und der sicherbare Entdeckerpass erleichtern das Weiterlernen. Schrift und Bewegung lassen sich an die eigenen Bedürfnisse anpassen.',details:['Die gemeinsame Suche macht Lerninhalte von einem Ort aus auffindbar.','Der Entdeckerpass lässt sich als Datei herunterladen und wieder einlesen.','Größere Schrift und weniger Bewegung sind frei wählbar.','Persönlicher Lernstand und Notizen werden auf dem eigenen Gerät gespeichert.'],benefit:'Kinder können angenehmer lesen und schneller wieder anknüpfen. Eltern können den Pass für einen Gerätewechsel sichern; die Sicherungsdatei bleibt privat.',links:[{label:'Wissensbuch',hash:'book'}]},
- 5:{icon:'🪐',title:'Wie weit ist es bis zum Neptun?',summary:'Ein Sonnensystem-Modell erweitert den Blick über die Erde hinaus. Planeten, Bahnen und Abstände lassen sich vergleichen; freiwillige Hinweise helfen beim Forschen.',details:['Acht Planeten sind im Sonnensystem-Modell auswählbar.','Ein Zeitregler verändert die Positionen auf den vereinfachten Umlaufbahnen.','Angaben zu Sonnenabstand und Umlaufzeit helfen beim Vergleichen.','Die Modellgrenzen erklären, warum die Darstellung kein maßstabsgetreues Abbild ist.','Lernhilfen geben auf Wunsch schrittweise Hinweise.'],benefit:'Kinder können Unterschiede selbst entdecken, statt nur Planetennamen zu lernen. Eltern können gemeinsam über Zeit, Entfernung und die Grenzen eines Modells sprechen.',links:[{label:'Forscherlabor',hash:'labs'}]},
- 7:{icon:'✨',title:'Sechs Türen zu einer größeren Welt',summary:'90 Wissenskarten öffnen sechs Themenwelten – von Tieren bis zur Wissenschaft. Lernrouten, Spiele und freiwillige Offline-Vorbereitung ergänzen die Entdeckungen.',details:['Tiere, Geschichte, große Köpfe, Erfindungen, Bauwerke und Wissenschaft erhalten eigene Themenzugänge.','90 Wissenskarten bilden den ersten Katalog dieser Welten.','Wissensrouten führen über mehrere zusammengehörende Karten.','Spiele wie Tierdetektiv und „Sortiere die Zeit“ greifen die neuen Themen auf.','Die Lernwelt kann vorab für die Nutzung ohne Internet auf das Gerät geladen werden.'],benefit:'Kinder folgen ihrer Neugier auch über die Erde hinaus. Familien können einen Lernweg gemeinsam wählen und sich vor einer Reise auf Offline-Nutzung vorbereiten.',links:[{label:'Wissenswelten',hash:'world'}]},
- 8:{icon:'🔁',title:'Die Wissenswelt wird erneut bereitgestellt',summary:'Die Website wird noch einmal mit denselben Lerninhalten bereitgestellt. Dieser belegte Zwischenstand gehört zur Geschichte, bringt aber keine neuen Lernfunktionen.',details:['Der gesicherte Inhaltsstand entspricht Version 7: dieselben 90 Wissenskarten und Lernfunktionen.'],benefit:'Kinder und Eltern können die schon bekannten Welten weiter nutzen. Dieser Eintrag macht die erneute Bereitstellung transparent, ohne neue Inhalte zu versprechen.',links:[{label:'Wissenswelten',hash:'world'}]},
- 9:{icon:'📷',title:'Ein Bild als Auftakt zur Lernreise',summary:'Ausgewählte Fotos machen die Einstiege der Lernreisen anschaulicher. Zugehörige Bildnachweise bleiben erreichbar.',details:['Die Einstiegsbilder der Lernreisen erhalten thematisch ausgewählte Fotos.','Die verwendeten Bilder werden mit ihren Bildnachweisen verknüpft.'],benefit:'Kinder bekommen einen anschaulichen ersten Eindruck vom Thema. Eltern können die Bildherkunft nachsehen; erklärende Kapitelgrafiken folgen erst später.',links:[{label:'Lernreisen',hash:'journeys'}]},
- 10:{icon:'💾',title:'Weiterlernen, wo du aufgehört hast',summary:'Begonnene Spiele und der Entdeckerpass werden verlässlicher wiederhergestellt. Mehrere offene Fenster im selben Browser gleichen den Lernstand auf demselben Gerät ab.',details:['Gespeicherte Spielrunden behalten ihre Fragen und Antwortmöglichkeiten beim Wiederherstellen.','Ein gemeinsamer Lernspeicher bündelt den bisherigen Fortschritt.','Offene Browserfenster gleichen Änderungen am Pass auf demselben Gerät ab.','Sicherungen bleiben der Weg, den Pass auf ein anderes Gerät mitzunehmen.'],benefit:'Kinder können eine begonnene Runde wieder aufnehmen. Eltern können den Lernstand sichern, ohne eine automatische Synchronisierung zwischen Geräten vorauszusetzen.',links:[{label:'Spielplatz',hash:'games'}]},
- 11:{icon:'🔎',title:'Gesuchtes finden, Gehörtes verstehen',summary:'Spiele und passende Suchbegriffe werden leichter gefunden. Direktlinks, Browser-Zurück und eine bessere Stimmenauswahl helfen beim Wiederanknüpfen.',details:['Die Suche berücksichtigt auch Spiele und passende Begriffe.','Direktlinks öffnen Wissenskarten im passenden Bereich.','Browser-Zurück führt durch die zuvor besuchten Lernansichten.','Im Entdeckerpass lässt sich eine verfügbare Vorlesestimme auswählen.'],benefit:'Kinder gelangen leichter vom gesuchten Begriff zum passenden Lernweg. Eltern können eine auf ihrem Gerät vorhandene Stimme gemeinsam auswählen.',links:[{label:'Wissensbuch',hash:'book'},{label:'Spielplatz',hash:'games'}]},
- 12:{icon:'🖼️',title:'So funktioniert es – Bild für Bild',summary:'Erklärende Zeichnungen zeigen, was Texte allein schwer vermitteln. Lernreisen, Erfindungen, Bauwerke und Geschichte bekommen passende visuelle Vertiefungen.',details:['Kapitelgrafiken veranschaulichen die Erklärungen in den Lernreisen.','Funktionszeichnungen zeigen Bauteile und Zusammenhänge von Erfindungen.','Bauwerksmodelle führen durch Bauschritte und tragende Teile.','Geschichtskarten ordnen Ereignisse in hilfreiche Kontextfolgen ein.','Passende Karten und aufklappbare Details ergänzen die Darstellungen.'],benefit:'Kinder können Abläufe und Bauteile leichter miteinander verbinden. Eltern können eine Zeichnung als Gesprächseinstieg nutzen und bei Interesse gemeinsam tiefer einsteigen.',links:[{label:'Lernreisen',hash:'journeys'},{label:'Wissenswelten',hash:'world'}]},
- 13:{icon:'🌊',title:'Vom Walhai bis zu Computerregeln',summary:'18 zusätzliche Karten erweitern den Katalog von 90 auf 108 Entdeckungen. Neun weitere Modelle machen Natur und Technik erkundbar.',details:['Walhai, Gartenkreuzspinne, Dromedar und Seeadler ergänzen die Tierwelt.','Maya, Polynesien, Timbuktu, Griechenland und Rom erweitern die Geschichte.','Neue Wissenschaftskarten behandeln unter anderem Atmosphäre, Magnetismus, Strömungen und Schall.','Neun Modelle erschließen auch Motor, Nahrungsketten, Sonnensystem, Sonnenenergie und Musterregeln.'],benefit:'Kinder finden neue Fragen in vertrauten Welten. Eltern können Tiere, Geschichte und Technik miteinander verbinden, statt nur einzelne Fakten nachzuschlagen.',links:[{label:'Wissenswelten',hash:'world'},{label:'Forscherlabor',hash:'labs'}]},
- 14:{icon:'🛠️',title:'Kleine Hürden beim Entdecken verschwinden',summary:'Tierkarten, Hilfe und Elterntipps werden leichter erreichbar. Nach dem Einlesen einer Sicherung bleibt die passende Fortsetzung erhalten.',details:['Die Suche zeigt Tierkarten klarer, ohne doppelte Trefferwege.','Hilfe und Elterntipps lassen sich direkt öffnen; Suchdialoge schließen zuverlässiger.','Ein zweites offenes Fenster überschreibt das aus einer Sicherung übernommene Fortsetzungsziel nicht mehr.','Das Nahrungsspiel berücksichtigt auch die neu hinzugekommenen Tierkarten.'],benefit:'Kinder kommen mit weniger Umwegen zum Ziel und können passend weiterlernen. Eltern finden Unterstützung schneller und können Sicherungen zuverlässiger mitnehmen.',links:[{label:'Wissenswelten',hash:'world'},{label:'Spielplatz',hash:'games'}]}
+type HistoryCopy=Pick<UpdateEntry,'icon'|'category'|'title'|'summary'|'details'|'benefit'|'links'>;
+const HISTORY_COPY:Record<number,HistoryCopy> = {
+ "1": {
+  "icon": "🌍",
+  "category": "Neue Inhalte",
+  "title": "Eine Weltkugel voller Fragen",
+  "summary": "Drehe die Erde, erkunde ihr Inneres und beobachte Tag und Nacht. Ein Quiz und die Vorlesefunktion laden dazu ein, eigene Fragen zu verfolgen.",
+  "details": [
+   "Auf der Weltkugel kannst du Länder und Meere entdecken.",
+   "Eine eigene Ansicht führt ins Innere der Erde.",
+   "Die Tag-und-Nacht-Ansicht erklärt eine weitere Seite unseres Planeten.",
+   "Quiz und Vorlesen bieten verschiedene Zugänge zum Wissen."
+  ],
+  "benefit": "Du kannst selbst beobachten, zuhören und dein Wissen ausprobieren. Eltern finden einen gemeinsamen Einstieg in Fragen über die Erde.",
+  "links": [
+   {
+    "label": "Weltkugel",
+    "hash": "globe"
+   }
+  ]
+ },
+ "2": {
+  "icon": "🧭",
+  "category": "Spielen und Lernen",
+  "title": "Aus Neugier wird eine Lernreise",
+  "summary": "Folge einem Thema Kapitel für Kapitel oder entdecke es in einem Spiel. Lernreisen, Länder-Memory und das Wissensbuch eröffnen unterschiedliche Wege zum Wissen.",
+  "details": [
+   "Lernreisen führen Kapitel für Kapitel durch ein Thema und bieten Vorlesen.",
+   "Am Reiseende warten ein Experiment oder Rätsel und ein Reisestempel.",
+   "Länder-Memory verbindet Länder mit ihren Hauptstädten.",
+   "Reihenfolge-Spiele und das Wissensbuch helfen beim Ordnen und Nachschlagen."
+  ],
+  "benefit": "Du lernst in deinem eigenen Tempo und auf verschiedenen Wegen. Eltern können ein Kapitel begleiten oder gemeinsam ein Spiel wählen.",
+  "links": [
+   {
+    "label": "Lernreisen",
+    "hash": "journeys"
+   },
+   {
+    "label": "Spielplatz",
+    "hash": "games"
+   }
+  ]
+ },
+ "3": {
+  "icon": "🧪",
+  "category": "Spielen und Lernen",
+  "title": "Was passiert, wenn …?",
+  "summary": "Was verändert sich, wenn du eine Einstellung ausprobierst? Neue digitale Labore, Länderporträts und Naturspiele helfen dir, Vermutungen zu prüfen.",
+  "details": [
+   "Länderporträts ergänzen die Weltkugel mit Informationen zum gewählten Land.",
+   "Vulkan-Werkstatt, Erdbeben-Wellen und Wetterstation machen Naturphänomene erkundbar.",
+   "Weitere Labore behandeln etwa Wasserkreislauf, Jahreszeiten, Mondphasen und Gezeiten.",
+   "Flaggen-, Lebensraum- und Tierdetektiv-Spiele eröffnen zusätzliche Lernwege."
+  ],
+  "benefit": "Du kannst Fragen durch Ausprobieren verfolgen. Eltern haben konkrete Anlässe, über Länder, Tiere und Naturereignisse zu sprechen.",
+  "links": [
+   {
+    "label": "Forscherlabor",
+    "hash": "labs"
+   },
+   {
+    "label": "Weltkugel",
+    "hash": "globe"
+   }
+  ]
+ },
+ "4": {
+  "icon": "🎒",
+  "category": "Einfachere Bedienung",
+  "title": "Lieblingswissen finden und mitnehmen",
+  "summary": "Finde ein Thema über die gemeinsame Suche und nimm deinen Lernstand als Sicherungsdatei mit. Größere Schrift und weniger Bewegung machen das Lesen angenehmer.",
+  "details": [
+   "Die gemeinsame Suche macht Lerninhalte von einem Ort aus auffindbar.",
+   "Der Entdeckerpass lässt sich als Datei herunterladen und wieder einlesen.",
+   "Größere Schrift und weniger Bewegung sind frei wählbar.",
+   "Persönlicher Lernstand und Notizen werden auf dem eigenen Gerät gespeichert."
+  ],
+  "benefit": "Du kannst angenehmer lesen und schneller wieder anknüpfen. Eltern können den Pass für einen Gerätewechsel sichern; die Sicherungsdatei bleibt privat.",
+  "links": [
+   {
+    "label": "Wissensbuch",
+    "hash": "book"
+   }
+  ]
+ },
+ "5": {
+  "icon": "🪐",
+  "category": "Spielen und Lernen",
+  "title": "Wie weit ist es bis zum Neptun?",
+  "summary": "Wähle einen der acht Planeten und vergleiche seine Entfernung zur Sonne und seine Umlaufzeit. Ein Zeitregler und freiwillige Hinweise helfen dir beim Erkunden.",
+  "details": [
+   "Acht Planeten sind im Sonnensystem-Modell auswählbar.",
+   "Ein Zeitregler verändert die Positionen auf den vereinfachten Umlaufbahnen.",
+   "Angaben zu Sonnenabstand und Umlaufzeit helfen beim Vergleichen.",
+   "Die Modellgrenzen erklären, warum die Darstellung kein maßstabsgetreues Abbild ist.",
+   "Lernhilfen geben auf Wunsch schrittweise Hinweise."
+  ],
+  "benefit": "Du kannst Unterschiede selbst entdecken, statt nur Planetennamen zu lernen. Eltern können gemeinsam über Zeit, Entfernung und die Grenzen eines Modells sprechen.",
+  "links": [
+   {
+    "label": "Forscherlabor",
+    "hash": "labs"
+   }
+  ]
+ },
+ "7": {
+  "icon": "✨",
+  "category": "Neue Inhalte",
+  "title": "Sechs Türen zu einer größeren Welt",
+  "summary": "Von Tieren bis zu Erfindungen: Sechs Wissenswelten und ihre ersten 90 Karten öffnen neue Entdeckungswege. Zusammengehörende Karten lassen sich auf Wissensrouten erkunden.",
+  "details": [
+   "Tiere, Geschichte, große Köpfe, Erfindungen, Bauwerke und Wissenschaft erhalten eigene Themenzugänge.",
+   "90 Wissenskarten bilden den ersten Katalog dieser Welten.",
+   "Wissensrouten führen über mehrere zusammengehörende Karten.",
+   "Spiele wie Tierdetektiv und „Sortiere die Zeit“ greifen die neuen Themen auf.",
+   "Die Lernwelt kann vorab für die Nutzung ohne Internet auf das Gerät geladen werden."
+  ],
+  "benefit": "Kinder folgen ihrer Neugier auch über die Erde hinaus. Familien können einen Lernweg gemeinsam wählen und sich vor einer Reise auf Offline-Nutzung vorbereiten.",
+  "links": [
+   {
+    "label": "Wissenswelten",
+    "hash": "world"
+   }
+  ]
+ },
+ "8": {
+  "icon": "🔁",
+  "category": "Bereitstellung",
+  "title": "Die Wissenswelt wird erneut bereitgestellt",
+  "summary": "Die bekannten Wissenswelten wurden erneut bereitgestellt. Die gesicherten Lerninhalte blieben dabei gleich; neue Funktionen kamen nicht hinzu.",
+  "details": [
+   "Der gesicherte Inhaltsstand entspricht Version 7: dieselben 90 Wissenskarten und Lernfunktionen."
+  ],
+  "benefit": "Ihr könnt die schon bekannten Welten weiter nutzen. Dieser Eintrag macht die erneute Bereitstellung transparent, ohne neue Inhalte zu versprechen.",
+  "links": [
+   {
+    "label": "Wissenswelten",
+    "hash": "world"
+   }
+  ]
+ },
+ "9": {
+  "icon": "📷",
+  "category": "Anschaulicher erklärt",
+  "title": "Ein Bild als Auftakt zur Lernreise",
+  "summary": "Thematisch passende Fotos begrüßen dich am Beginn ausgewählter Lernreisen. Ihre Herkunft kannst du in den Bildnachweisen nachlesen.",
+  "details": [
+   "Die Einstiegsbilder der Lernreisen erhalten thematisch ausgewählte Fotos.",
+   "Die verwendeten Bilder werden mit ihren Bildnachweisen verknüpft."
+  ],
+  "benefit": "Du bekommst einen anschaulichen ersten Eindruck vom Thema. Eltern können die Bildherkunft nachsehen; erklärende Kapitelgrafiken folgen erst später.",
+  "links": [
+   {
+    "label": "Lernreisen",
+    "hash": "journeys"
+   }
+  ]
+ },
+ "10": {
+  "icon": "💾",
+  "category": "Fehler behoben",
+  "title": "Weiterlernen, wo du aufgehört hast",
+  "summary": "Setze eine begonnene Spielrunde mit denselben Fragen und Antwortmöglichkeiten fort. Mehrere offene Fenster gleichen deinen Lernstand auf demselben Gerät ab.",
+  "details": [
+   "Gespeicherte Spielrunden behalten ihre Fragen und Antwortmöglichkeiten beim Wiederherstellen.",
+   "Ein gemeinsamer Entdeckerpass bewahrt deinen bisherigen Lernfortschritt.",
+   "Offene Browserfenster gleichen Änderungen am Pass auf demselben Gerät ab.",
+   "Sicherungen bleiben der Weg, den Pass auf ein anderes Gerät mitzunehmen."
+  ],
+  "benefit": "Du kannst eine begonnene Runde wieder aufnehmen. Eltern können den Lernstand sichern, ohne eine automatische Synchronisierung zwischen Geräten vorauszusetzen.",
+  "links": [
+   {
+    "label": "Spielplatz",
+    "hash": "games"
+   }
+  ]
+ },
+ "11": {
+  "icon": "🔎",
+  "category": "Einfachere Bedienung",
+  "title": "Gesuchtes finden, Gehörtes verstehen",
+  "summary": "Suche nach einem Spiel oder Begriff und öffne passende Wissenskarten direkt. Browser-Zurück und eine wählbare Vorlesestimme erleichtern das Weiterlernen.",
+  "details": [
+   "Die Suche berücksichtigt auch Spiele und passende Begriffe.",
+   "Direktlinks öffnen Wissenskarten im passenden Bereich.",
+   "Browser-Zurück führt durch die zuvor besuchten Lernansichten.",
+   "Im Entdeckerpass lässt sich eine verfügbare Vorlesestimme auswählen."
+  ],
+  "benefit": "Du gelangst leichter vom gesuchten Begriff zum passenden Lernweg. Eltern können eine auf ihrem Gerät vorhandene Stimme gemeinsam auswählen.",
+  "links": [
+   {
+    "label": "Wissensbuch",
+    "hash": "book"
+   },
+   {
+    "label": "Spielplatz",
+    "hash": "games"
+   }
+  ]
+ },
+ "12": {
+  "icon": "🖼️",
+  "category": "Anschaulicher erklärt",
+  "title": "So funktioniert es – Bild für Bild",
+  "summary": "Schau dir an, wie ein Gerät funktioniert, ein Bauwerk entsteht oder ein Ereignis eingeordnet wird. Neue Erklärzeichnungen ergänzen die Lernreisen und Wissenskarten.",
+  "details": [
+   "Kapitelgrafiken veranschaulichen die Erklärungen in den Lernreisen.",
+   "Funktionszeichnungen zeigen Bauteile und Zusammenhänge von Erfindungen.",
+   "Bauwerksmodelle führen durch Bauschritte und tragende Teile.",
+   "Geschichtskarten ordnen Ereignisse in hilfreiche Kontextfolgen ein.",
+   "Passende Karten und aufklappbare Details ergänzen die Darstellungen."
+  ],
+  "benefit": "Du kannst Abläufe und Bauteile leichter miteinander verbinden. Eltern können eine Zeichnung als Gesprächseinstieg nutzen und bei Interesse gemeinsam tiefer einsteigen.",
+  "links": [
+   {
+    "label": "Lernreisen",
+    "hash": "journeys"
+   },
+   {
+    "label": "Wissenswelten",
+    "hash": "world"
+   }
+  ]
+ },
+ "13": {
+  "icon": "🌊",
+  "category": "Neue Inhalte",
+  "title": "Vom Walhai bis zu Computerregeln",
+  "summary": "Entdecke unter anderem Walhai, Timbuktu und Schall: 18 zusätzliche Karten erweitern den damaligen Bestand auf 108. Neun weitere Modelle zeigen Zusammenhänge aus Natur und Technik.",
+  "details": [
+   "Walhai, Gartenkreuzspinne, Dromedar und Seeadler ergänzen die Tierwelt.",
+   "Maya, Polynesien, Timbuktu, Griechenland und Rom erweitern die Geschichte.",
+   "Neue Wissenschaftskarten behandeln unter anderem Atmosphäre, Magnetismus, Strömungen und Schall.",
+   "Neun Modelle erschließen auch Motor, Nahrungsketten, Sonnensystem, Sonnenenergie und Musterregeln."
+  ],
+  "benefit": "Du findest neue Fragen in vertrauten Welten. Eltern können Tiere, Geschichte und Technik miteinander verbinden, statt nur einzelne Fakten nachzuschlagen.",
+  "links": [
+   {
+    "label": "Wissenswelten",
+    "hash": "world"
+   },
+   {
+    "label": "Forscherlabor",
+    "hash": "labs"
+   }
+  ]
+ },
+ "14": {
+  "icon": "🛠️",
+  "category": "Fehler behoben",
+  "title": "Kleine Hürden beim Entdecken verschwinden",
+  "summary": "Tierkarten sind in der Suche leichter zu finden; Hilfe und Elterntipps lassen sich direkt öffnen. Nach dem Einlesen einer Sicherung bleibt die passende Fortsetzung auch bei mehreren offenen Fenstern erhalten.",
+  "details": [
+   "Die Suche zeigt Tierkarten klarer, ohne doppelte Trefferwege.",
+   "Hilfe und Elterntipps lassen sich direkt öffnen; Suchdialoge schließen zuverlässiger.",
+   "Ein zweites offenes Fenster überschreibt das aus einer Sicherung übernommene Fortsetzungsziel nicht mehr.",
+   "Das Nahrungsspiel berücksichtigt auch die neu hinzugekommenen Tierkarten."
+  ],
+  "benefit": "Kinder kommen mit weniger Umwegen zum Ziel und können passend weiterlernen. Eltern finden Unterstützung schneller und können Sicherungen zuverlässiger mitnehmen.",
+  "links": [
+   {
+    "label": "Wissenswelten",
+    "hash": "world"
+   },
+   {
+    "label": "Spielplatz",
+    "hash": "games"
+   }
+  ]
+ }
 };
 const SITES_HISTORY:UpdateEntry[]=EVIDENCE.versions.flatMap(record=>{
  const copy=HISTORY_COPY[record.number],publication=record.publication;
@@ -50,37 +308,430 @@ export function testUpdate(record:TestRecord,copy:UpdateCopy,baseline=TEST_EVIDE
  const deployment=confirmedTestDeployment(record,baseline);
  return {...copy,links:deployment?copy.links:[],version:String(record.number),channel:'vercel-test',status:deployment?'test-available':'prepared',confirmedOn:TEST_EVIDENCE.checkedOn,publishedOn:null,availableOn:deployment?berlinDay(deployment.createdAt):null,occurredAt:deployment?.createdAt??null,evidence:{file:'app/update-history-test-evidence.json',revision:record.mergeCommit??'',quote:record.mergeCommit??`"number": ${record.number}`,pullRequest:record.number}};
 }
-const JOURNEY_COPY:HistoryCopy & {id:string}={id:'journeys-3',icon:'🧭',title:'Lernreisen: nicht nur lesen, selbst weiterdenken',summary:'Alle 16 Lernreisen bieten eigene Kapitelziele, freiwillige Denkaufgaben und private Merkzettel. Kapiteladressen helfen beim Wiederanknüpfen; die bisherigen Reisestempel bleiben erhalten.',details:['Alle 80 Inhaltskapitel erhalten eigene Aufgaben zum Entdecken, Erklären und Übertragen.','Freiwillige Hinweise und konkrete Rückmeldungen helfen beim Weiterdenken.','Kapiteladressen und Kapitelkarten erleichtern das Zurückkehren zur richtigen Station.','Private Merkzettel bleiben im vorhandenen Entdeckerpass; bisherige Stempel und Spielstände werden erhalten.','Lesbare Grafikbeschriftungen und ruhige Abstände unterstützen kleine Bildschirme und größere Schrift.'],benefit:'Kinder können Zusammenhänge selbst erklären und später an ihren eigenen Gedanken anknüpfen. Eltern behalten den bisherigen Lernstand und die vertrauten Sicherungen.',links:[{label:'Lernreisen',hash:'journeys'}]};
-const CONTENT_COPY:UpdateCopy={id:'excellence-chapters-3-5',icon:'🧭',title:'Natur und Technik genauer entdecken',summary:'Lernreisen, Wissenswörter und Warum-Antworten verbinden verständliche Erklärungen mit freiwilligen Denkaufgaben. Naturorte und vorhandene Erfindungen erhalten eigene Beobachtungsaufgaben, lesbare Modelle und erklärte Wege zu passenden Themen.',details:['Alle 80 Kapitel erhalten einfache Einstiege, freiwillige Vertiefungen und Beobachtungsideen. Alle 240 Aufgaben erhalten einzeln formulierte Denkhinweise; 32 gezielte Korrekturen typischer Fehlvorstellungen und alle bisherigen richtigen Antworten bleiben erhalten. Die 64 Kapitelgrafiken bieten lesbare Beschriftungen; Mondphasen und Ländergrenzen werden gezielt korrigiert.','23 neue und 23 vorhandene Wissenschaftskarten laden zum Weiterdenken ein; zehn Bildschirmversuche und 13 eigene Erklärgrafiken zeigen konkrete Zusammenhänge und Modellgrenzen. Alle elf Labore erklären die beiden falschen Antworten jeder vorhandenen Denkfrage individuell.','90 neue und 90 bisherige Wissenswörter bieten individuelle Vertiefungen. 30 neue und 30 erhaltene Warum-Antworten verbinden einfache Einstiege, genauere Erklärungen, sichere Beobachtungsideen und passende Quellen; drei Messmodelle laden zum Vergleichen ein.','34 neue und 34 überarbeitete Naturerklärungen bieten individuelle Fragen, Quellen und erklärte Rückverweise; zehn bedienbare Schrittgrafiken machen etwa Schluchtbildung und schwimmendes Eis verständlich. Filter und Suche erschließen den langen Atlas.','Zwölf vorhandene Erfindungen erhalten Beobachtungsaufgaben, Denkhinweise und jeweils zwei konkrete Fehlbegründungen. Telefon und Buchdruck zeigen klarere Funktionspläne; lesbare, dauerhaft nummerierte Bauteile sowie erklärte gegenseitige Wissenswege helfen beim Erkunden. Zwölf neue Erfindungen ergänzen etwa Batterie, Mikroskop und Nähmaschine; sechs freiwillige Modelle untersuchen Induktion, Schalten, Schichten, Bildgröße, Sammelfläche und Bodenbewegung. Acht neue Bauwerke führen etwa nach Groß-Simbabwe, Lalibela und Sydney. Alle acht bisherigen Bauwerke erhalten eigene Beobachtungsideen und konkrete Fehlrückmeldungen; drei Vergleiche machen Quellhöhe, Steinlagen und Kreisbögen untersuchbar. Bestehende Fragen und Spielstände bleiben erhalten.'],benefit:'Kinder können Zusammenhänge im eigenen Tempo erkunden und gezielt wiederfinden. Eltern sehen Quellenverweise und den tatsächlichen Prüfstand; ihre bisherigen Sicherungen bleiben nutzbar.',links:[{label:'Lernreisen',hash:'journeys'},{label:'Wissenschaft & Weltall',hash:'world/science'},{label:'Erfindungen',hash:'world/inventions'},{label:'Messen im Wissensbuch',hash:'book/words/Meter'},{label:'Naturatlas',hash:'book/nature'}]};
+const JOURNEY_COPY:UpdateCopy = {
+ "id": "journeys-3",
+ "icon": "🧭",
+ "category": "Spielen und Lernen",
+ "title": "Lernreisen: nicht nur lesen, selbst weiterdenken",
+ "summary": "Entdecken, erklären, übertragen: Jede Lernreise bietet eigene Kapitelziele und freiwillige Denkaufgaben. Private Merkzettel und direkte Kapiteladressen helfen dir, später wieder anzuknüpfen.",
+ "details": [
+  "Alle 80 Inhaltskapitel erhalten eigene Aufgaben zum Entdecken, Erklären und Übertragen.",
+  "Freiwillige Hinweise und konkrete Rückmeldungen helfen beim Weiterdenken.",
+  "Kapiteladressen und Kapitelkarten erleichtern das Zurückkehren zur richtigen Station.",
+  "Private Merkzettel bleiben im vorhandenen Entdeckerpass; bisherige Stempel und Spielstände werden erhalten.",
+  "Lesbare Grafikbeschriftungen und ruhige Abstände unterstützen kleine Bildschirme und größere Schrift."
+ ],
+ "benefit": "Du kannst Zusammenhänge selbst erklären und später an deine eigenen Gedanken anknüpfen. Eltern behalten den bisherigen Lernstand und die vertrauten Sicherungen.",
+ "links": [
+  {
+   "label": "Lernreisen",
+   "hash": "journeys"
+  }
+ ]
+};
+const CONTENT_COPY:UpdateCopy={id:'excellence-chapters-3-5',icon:'🧭',category:'Neue Inhalte',title:'Natur und Technik genauer entdecken',summary:'Lernreisen, Wissenswörter und Warum-Antworten verbinden verständliche Erklärungen mit freiwilligen Denkaufgaben. Naturorte und vorhandene Erfindungen erhalten eigene Beobachtungsaufgaben, lesbare Modelle und erklärte Wege zu passenden Themen.',details:['Alle 80 Kapitel erhalten einfache Einstiege, freiwillige Vertiefungen und Beobachtungsideen. Alle 240 Aufgaben erhalten einzeln formulierte Denkhinweise; 32 gezielte Korrekturen typischer Fehlvorstellungen und alle bisherigen richtigen Antworten bleiben erhalten. Die 64 Kapitelgrafiken bieten lesbare Beschriftungen; Mondphasen und Ländergrenzen werden gezielt korrigiert.','23 neue und 23 vorhandene Wissenschaftskarten laden zum Weiterdenken ein; zehn Bildschirmversuche und 13 eigene Erklärgrafiken zeigen konkrete Zusammenhänge und Modellgrenzen. Alle elf Labore erklären die beiden falschen Antworten jeder vorhandenen Denkfrage individuell.','90 neue und 90 bisherige Wissenswörter bieten individuelle Vertiefungen. 30 neue und 30 erhaltene Warum-Antworten verbinden einfache Einstiege, genauere Erklärungen, sichere Beobachtungsideen und passende Quellen; drei Messmodelle laden zum Vergleichen ein.','34 neue und 34 überarbeitete Naturerklärungen bieten individuelle Fragen, Quellen und erklärte Rückverweise; zehn bedienbare Schrittgrafiken machen etwa Schluchtbildung und schwimmendes Eis verständlich. Filter und Suche erschließen den langen Atlas.','Zwölf vorhandene Erfindungen erhalten Beobachtungsaufgaben, Denkhinweise und jeweils zwei konkrete Fehlbegründungen. Telefon und Buchdruck zeigen klarere Funktionspläne; lesbare, dauerhaft nummerierte Bauteile sowie erklärte gegenseitige Wissenswege helfen beim Erkunden. Zwölf neue Erfindungen ergänzen etwa Batterie, Mikroskop und Nähmaschine; sechs freiwillige Modelle untersuchen Induktion, Schalten, Schichten, Bildgröße, Sammelfläche und Bodenbewegung. Acht neue Bauwerke führen etwa nach Groß-Simbabwe, Lalibela und Sydney. Alle acht bisherigen Bauwerke erhalten eigene Beobachtungsideen und konkrete Fehlrückmeldungen; drei Vergleiche machen Quellhöhe, Steinlagen und Kreisbögen untersuchbar. Bestehende Fragen und Spielstände bleiben erhalten.'],benefit:'Kinder können Zusammenhänge im eigenen Tempo erkunden und gezielt wiederfinden. Eltern sehen Quellenverweise und den tatsächlichen Prüfstand; ihre bisherigen Sicherungen bleiben nutzbar.',links:[{label:'Lernreisen',hash:'journeys'},{label:'Wissenschaft & Weltall',hash:'world/science'},{label:'Erfindungen',hash:'world/inventions'},{label:'Messen im Wissensbuch',hash:'book/words/Meter'},{label:'Naturatlas',hash:'book/nature'}]};
 const TEST_COPY:Record<number,UpdateCopy>={
  27:CONTENT_COPY,
- 3:{id:'test-website',icon:'🚀',title:'Ein eigener Platz zum Ausprobieren',summary:'Die vorhandene Lernwelt erhält eine Testwebsite. Dort können Verbesserungen ausprobiert werden, bevor sie für die Hauptwebsite freigegeben werden.',details:['Der hier erste belegte Testwebsite-Stand stellt die erhaltene Lernwelt bereit.'],benefit:'Kinder und Eltern können Verbesserungen auf der Testwebsite kennenlernen. Eine erfolgreiche Testbereitstellung bedeutet weiterhin keine Veröffentlichung auf der Hauptwebsite.',links:[{label:'Lernwelt entdecken',hash:'globe'}]},
- 9:{id:'connected-discoveries',icon:'🌿',title:'Was verbindet Pflanzen, Wasser und den Mond?',summary:'Acht neue Karten und zwei Lernrouten verbinden Natur und Weltall. Die Wissens-Challenge lädt zum Spielen auf drei frei wählbaren Stufen ein.',details:['Wasser, Fotosynthese, Bestäubung, Pilze, Korallenriffe, Mondphasen, Jahreszeiten und Gezeiten ergänzen den Katalog auf 116 Karten.','Zwei zusätzliche Lernrouten und erklärte Wissensverbindungen verbinden neue und vorhandene Themen.','Zwei bedienbare Modelle helfen beim Ausprobieren.','Die Challenge bietet sechs Aufgaben pro Runde; leicht, mittel und schwer bleiben frei wählbar.','Begonnene Challenge-Runden lassen sich im vorhandenen Entdeckerpass fortsetzen.'],benefit:'Kinder können erkennen, vergleichen oder weiterdenken, ohne eine feste Altersstufe zugewiesen zu bekommen. Eltern finden zusammenhängende Themen für gemeinsames Forschen.',links:[{label:'Wissenswelten',hash:'world'},{label:'Spielplatz',hash:'games'}]},
- 10:{id:'hint-correction',icon:'🧩',title:'Ein Denkanstoß statt der fertigen Lösung',summary:'Die Challenge-Hilfe unterstützt das Überlegen, ohne die Antwort vorwegzunehmen. Die vollständige Erklärung erscheint erst nach einer richtigen Antwort.',details:['Alle drei Challenge-Stufen bieten freiwillige Denkhinweise.','Nach einer falschen Antwort bleibt die vollständige Auflösung verborgen.','Eine richtige Antwort öffnet die zugehörige Erklärung.','Die nächste Aufgabe beginnt wieder mit geschlossenem Hinweis.'],benefit:'Kinder behalten die Gelegenheit, selbst auf die Lösung zu kommen. Eltern können einen Hinweis gemeinsam besprechen, ohne die Antwort schon zu verraten.',links:[{label:'Spielplatz',hash:'games'}]},
- 11:{id:'individual-hints',icon:'💡',title:'Jede Frage bekommt ihren eigenen Denkanstoß',summary:'Alle 142 Challenge-Aufgaben erhalten passende Hinweise. Bei ausgewählten Fragen lässt sich auf Wunsch ein zweiter Denkschritt öffnen.',details:['Jede der 142 spielbaren Fragen erhält einen eigenen Einstiegshinweis.','38 Fragen bieten einen zweiten, gezielteren Denkschritt; insgesamt gibt es 180 Hinweise.','Themenname und Vorlesen machen auch allgemein formulierte Fragen verständlicher.','Die vollständige Erklärung bleibt bis zur richtigen Antwort verborgen.'],benefit:'Kinder bekommen Hilfe zur aktuellen Frage statt allgemeiner Tipps. Eltern können schrittweise unterstützen; der zweite Hinweis ist eine bewusste Wahl.',links:[{label:'Spielplatz',hash:'games'}]},
- 12:{id:'discovery-centre',icon:'✨',title:'Die ganze Wissenswelt auf einen Blick',summary:'Die Entdeckerzentrale zeigt mehr als die Erde: sechs Welten, eine sichtbare Suche und Wissensspuren verbinden den Einstieg mit dem Weiterforschen.',details:['Sechs Themenzugänge führen von der Startseite in die vorhandenen Wissenswelten.','Die Suche und die Weltkugel sind direkt erreichbar.','Drei wählbare Wissensspuren verbinden je zwei passende Karten und eine Lernroute.','Ein direkter Challenge-Einstieg berücksichtigt begonnene Runden.'],benefit:'Kinder finden einen Anfang, der zu ihrer Neugier passt. Eltern erkennen schneller, welche Themen und Lernwege bereits vorhanden sind.',links:[{label:'Entdecken',hash:'globe'}]},
- 14:{id:'science-articles',icon:'🌙',title:'Mond und Meer verständlich erforschen',summary:'Wissenskarten bekommen klar getrennte Lese- und Forschungsbereiche. Eigene Grafiken und ein Küstenvergleich machen Mondphasen und Wasserstände anschaulicher.',details:['Artikel bieten Sprungziele zu Erklärungen, Forschung, Fragen und passenden vorhandenen Lernrouten.','Eigene Zeichnungen erklären Mondphasen, Gezeiten und Meeresströmungen.','Ein Vergleich zeigt dieselbe Beispielküste bei zwei Wasserständen.','Grafikbeschriftungen stehen auch auf schmalen Smartphones als separater Text mit gut lesbarer Schrift; Alternativtexte und Modellgrenzen bleiben erhalten.','110 Mini-Fragen verwenden passende Denkhinweise; die Auflösung folgt erst nach einer richtigen Antwort.'],benefit:'Kinder können zwischen Lesen, Beobachten und Ausprobieren wechseln. Eltern können Zeichnungen gemeinsam erklären und auch auf kleinen Bildschirmen die Beschriftungen lesen.',links:[{label:'Mondphasen',hash:'world/topic/science-moon-phases'},{label:'Wissenswelten',hash:'world'}]},
- 15:{id:'explorer-pass',icon:'🎒',title:'Ein klarer Platz für deine Entdeckungen',summary:'Der Entdeckerpass ordnet Fortschritt, Lernwege und Sicherungen. Vier Abschnittswege bringen dich direkt zum gewünschten Bereich.',details:['Übersicht, Lernwege, Sicherung und Einstellungen sind direkt anwählbar.','Schließen und „Weiter entdecken“ bleiben beim Scrollen erreichbar.','Sämtliche Abzeichen bleiben in aufklappbaren Sammlungen verfügbar.','Sichern und Wiederherstellen erhalten getrennte, verständliche Flächen.','Große Schrift und weniger Bewegung gelten auch im Pass; lange ausgewählte Stimmennamen sind vollständig lesbar.'],benefit:'Kinder finden ihre Entdeckungen leichter wieder. Eltern gelangen ohne langes Scrollen zu Sicherungen und Einstellungen; bisherige Lernstände und Spielrunden bleiben erhalten.',links:[]},
- 16:{id:'calm-connections',icon:'🔗',title:'Zusammenhänge mit mehr Ruhe lesen',summary:'Unter „Warum hängt das zusammen?“ gliedern Abstände und feine Trennlinien die Wissensverbindungen. Die Erklärungen und Wege zu anderen Themen bleiben erhalten.',details:['Die grünen vertikalen Balken neben den Erklärungen entfallen.','Mehr Abstand und dezente horizontale Linien trennen die Einträge.','Klare Linktitel ersetzen farbige Kachelhintergründe; Pfeile und sichtbarer Tastaturfokus bleiben.'],benefit:'Kinder und Eltern können sich leichter auf den Zusammenhang konzentrieren und die passenden Themen weiterhin direkt öffnen.',links:[{label:'Wissenswelten',hash:'world'}]},
- 17:{id:'explorer-pass-fine',icon:'🏅',title:'Mehr Luft im kleinen Entdeckerpass',summary:'Der Pass zeigt seine wichtigsten Informationen zuerst. Ein kompakterer Kopf, größere Schalter und ruhiger Fokus erleichtern die Nutzung auf kleinen Smartphones.',details:['Der kompaktere Passkopf lässt bei großer Schrift mehr Platz für den Inhalt.','Hauptwerte stehen in klaren Gruppen; zusätzliche Statistiken bleiben freiwillig aufklappbar.','Sichern und Wiederherstellen stehen vor den längeren Zusatzhinweisen.','Einstellungen erhalten getrennte Gruppen und größere Touchflächen für Schalter.','Abschnittswege fokussieren die Überschrift mit einem schmalen, kontrastreichen Rahmen; auch Hovertexte bleiben gut lesbar.'],benefit:'Kinder können die wichtigsten Werte schneller erfassen. Eltern erreichen Sicherungen und Einstellungen auch mit großer Schrift; alle Lernstände, Abzeichen und Funktionen bleiben erhalten.',links:[]},
- 18:{id:'first-visit-home',icon:'🧭',title:'Ein guter Anfang für deine Neugier',summary:'Die Startseite erklärt kurz, was du entdecken kannst, und zeigt einen klaren ersten Schritt. Diese Chronik macht die belegte Entwicklung nachvollziehbar.',details:['Weltkugel und Suche stehen als erste Aktionen bereit.','Fünf geordnete Hauptbereiche und sechs Weltenkarten erschließen die vorhandenen Lernwege.','Begonnene Lernaktivitäten lassen sich am passenden Kapitel fortsetzen.','Zurück bringt dich an die vorherige Stelle und erhält offene Abschnitte sowie deine gewählte Wissensspur.','„Was ist neu?“ unterscheidet frühere Sites-Veröffentlichungen, bestätigte Testupdates und Änderungen ohne Bereitstellungsnachweis.'],benefit:'Kinder finden schneller einen freiwilligen ersten Schritt oder ihre Fortsetzung. Eltern erkennen, was die Lernwelt bietet und welche Verbesserungen tatsächlich verfügbar sind.',links:[{label:'Entdecken',hash:'globe'}]},
- 19:{id:'history-polish',icon:'🖼️',title:'Die Entwicklungsgeschichte wird anschaulicher',summary:'Kürzere Zusammenfassungen und freiwillig aufklappbare Änderungen erklären genauer, wie WunderKompass wächst.',details:['Die bestehenden Einträge nennen konkrete belegte Änderungen.','Aufklappbare Details erläutern den Nutzen für Kinder und Eltern.','Klare Datumszeilen, ruhige Symbole und dezente Trennlinien ordnen die Zeitleiste.'],benefit:'Familien können die Entwicklung überblicken und nur bei Interesse mehr lesen.',links:[]},
- 20:{id:'clear-main-navigation',icon:'🧭',title:'Wissenswelten sind wieder direkt erreichbar',summary:'Sechs klar benannte Hauptbereiche führen zur Weltkugel, zu Wissen, Spielen, Experimenten, Lernreisen und zum Wissensbuch. Wissenswelten öffnen die bestehende Übersicht direkt.',details:['Wissenswelten sind auch innerhalb ihrer Themenkarten und Lernrouten als eigener Bereich erkennbar.','Die Übersicht nennt ihre verknüpften Kartenwege klar Wissensrouten; Lernreisen bleiben der eigene Bereich für geführte Kapitel.','Die Navigation ordnet alle sechs Bereiche auf Smartphones in zwei, auf Tablets in drei und auf breiten Bildschirmen in sechs Spalten an.','Lesbare Namen, große Touchziele und sichtbarer Tastaturfokus erleichtern die Auswahl auch mit größerer Schrift.','Die Suche findet die Weltenübersicht und Kategorien; Browser-Zurück bringt den Fokus wieder zur geöffneten Karte, Wissensverknüpfung oder Lernroute.'],benefit:'Kinder finden Wissen und Spiele leichter auseinander. Eltern können direkt zu einem Bereich wechseln und nach einer Entdeckung zuverlässig zurückkehren.',links:[{label:'Alle Wissenswelten',hash:'world'},{label:'Weltkugel entdecken',hash:'globe'}]},
- 21:{id:'playground-2',icon:'🧩',title:'31 Spielideen, ein klarer Einstieg',summary:'Alle Spielangebote finden in einer gemeinsamen Auswahl zusammen. Reihenfolge, Lebensräume und Fakten-Detektiv erhalten neue Spielräume und verständliche Lernrückmeldungen.',details:['Freiwillige Themen- und Spielartfilter, Lernziele, Altersorientierung und erkennbare Rundenstände erleichtern die Auswahl.','Lebensräume und Fakten-Detektiv bieten jeweils leicht, mittel und schwer: Grundlagen erkennen, Zusammenhänge vergleichen und Wissen übertragen. 24 konkrete Aufgaben bilden die sechs Stufenrunden.','Zwei freiwillige Denkschritte unterstützen jede neue Aufgabe; falsche Antworten bekommen eine passende Erklärung und lassen sich ohne Punktabzug korrigieren.','Im Sortierspiel bleibt ein fehlerhafter Bau erhalten: Bausteine lassen sich entfernen und neu einordnen, statt alles neu mischen zu müssen.','Neue Runden lassen sich fortsetzen; unsichere Aufgaben freiwillig wiederholen. Passende vorhandene Wissenskarten und Routen führen weiter, alte gespeicherte Runden und Stempel bleiben erhalten.'],benefit:'Kinder finden leichter einen passenden Einstieg und können selbst entscheiden, wie viel Hilfe sie brauchen. Eltern bekommen konkrete Lernziele und können gemeinsam vergleichen, erklären oder eine Pause machen.',links:[{label:'Spielplatz entdecken',hash:'games'}]},
- 22:{id:'foundation-2a',icon:'🛠️',title:'Mehr Ruhe beim Laden und Entdecken',summary:'WunderKompass lädt große Lernbereiche erst, wenn sie gebraucht werden. Einheitliche Raster und verständliche Meldungen erleichtern das Entdecken auf kleinen und großen Bildschirmen.',details:['Spielauswahl, Forscherlabor und Wissensrouten teilen lesbare Raster mit passenden Abständen und großen Touchflächen.','Weltkugel, Wissensartikel, Spiele und zusätzliche Dialoginhalte werden bei Bedarf geladen; die Kartenübersicht bleibt direkt erreichbar.','Lade-, Leer- und Fehlermeldungen erklären den nächsten Schritt; freiwillige Details bleiben mit der Tastatur bedienbar.','Automatische Größen- und Browserprüfungen überwachen die sieben Einstiegsbereiche, Layoutsprünge und gemeinsame Komponenten.','Vorhandene Lernstände und Offlinefunktionen bleiben erhalten; ein echter Versionswechsel wurde mit einem synthetischen gespeicherten Pass geprüft.'],benefit:'Kinder können sich auf ihre nächste Entdeckung konzentrieren. Eltern erhalten besser lesbare Auswahlflächen und klare Rückmeldungen, während große Inhalte erst bei Bedarf geladen werden.',links:[{label:'Spielplatz',hash:'games'},{label:'Forscherlabor',hash:'labs'}]},
- 23:{id:'research-2b',icon:'🧪',title:'Selbst vermuten, vergleichen und weiterforschen',summary:'Alle elf digitalen Labore bekommen eigene Forschungsaufgaben, drei Lernstufen und einen privaten Merkzettel. Neue vertiefte Modelle, passende Wissenswege und verständliche Nachrichten verbinden Ausprobieren mit Erklären.',details:['In allen elf Laboren lassen sich zwei Beobachtungen festhalten, Bedingungen vergleichen und eigene Erklärungen im vorhandenen Entdeckerpass sichern.','Jahreszeiten zeigen Tageslänge und Sonnenstand; das Mondmodell erklärt Bahnknoten und Finsternis-Ausrichtungen, Gezeitenkurven vergleichen Mond- und Sonnenbeiträge. Alle drei benennen ihre Modellgrenzen.','Sechs praktische Versuche erhalten sichere Vergleichsaufgaben; bestehende Globusmissionen führen auf Wunsch in ein passendes Labor.','Die Suche öffnet sofort und findet auch Labore, praktische Versuche und Nachrichten. Acht erklärte Wissensspuren bieten passende konkrete Aktivitäten und Rückwege.','Eigene geprüfte Kindernachrichten behalten Quellen, echte Daten und ein Archiv. Ihre tägliche technische Prüfkette ist vorbereitet und getestet, im Betrieb aber ausgeschaltet.'],benefit:'Kinder können eine Vermutung selbst prüfen und erklären statt nur die richtige Antwort anzutippen. Eltern finden sichere gemeinsame Versuche, nachvollziehbare Quellen und erhaltene Lernstände; unbekannte neue Nachrichten brauchen weiterhin eine redaktionelle Prüfung.',links:[{label:'Forscherlabor',hash:'labs'},{label:'Nachrichten & Quellen',hash:'news'}]},
- 24:{id:'news-engineering-2c',icon:'📰',title:'Nachrichten mit nachvollziehbarem Prüfstand',summary:'Nachrichten unterscheiden automatische Quellenabgleiche von quellenbasierten Erklärungen. Signierte neue Ausgaben können in einer länger geöffneten Lernwelt sicher nachgeladen werden; der tägliche Livebetrieb ist noch nicht aktiviert.',details:['Nachrichten, Suche und Vorschau teilen sich eine ressourcenschonende Aktualisierung mit sicherer Wiederholung nach Verbindungsfehlern.','Jede neue Ausgabe wird auf Signatur und Reihenfolge geprüft; die letzte gültige Ausgabe bleibt offline verfügbar.','Eigenständige neue Themen bleiben auch bei wenigen Quellen zulässig, während gleiche Ereignisse und bloße Datumswechsel gesperrt bleiben.','Zwei strukturierte Bereiche sind technisch angeschlossen: Erdbeobachtung und Exoplanetendaten. Weitere Themen brauchen passende erlaubte Quellen.','Lernstände bleiben erhalten; die tägliche automatische Veröffentlichung wartet auf den gesonderten sicheren Betriebsweg.'],benefit:'Kinder und Eltern sehen verständlich, woher Nachrichten stammen und welcher Prüfstand tatsächlich vorliegt. Unterbrechungen verlieren weder geprüfte Meldungen noch den Entdeckerpass.',links:[{label:'Kindernachrichten',hash:'news'}]},
- 25:JOURNEY_COPY,
- 26:{id:'excellence-foundation-3-5',icon:'🧭',title:'Passende Reisestationen leichter finden',summary:'Wissensartikel verweisen auf alle passenden Stationen einer Lernreise. Weitere Stationen lassen sich freiwillig öffnen; beim Zurückkehren bleibt der passende Fokus erhalten.',details:['Die erste passende Station bleibt direkt sichtbar.','Weitere Stationen derselben Reise lassen sich freiwillig aufklappen.','Beim Zurückkehren bleiben aufgeklappte Stationen und der Tastaturfokus erhalten.'],benefit:'Kinder und Eltern können ein Thema an mehreren passenden Stationen weiterverfolgen.',links:[{label:'Lernreisen',hash:'journeys'}]}
-
+ 29:{
+ "id": "clear-update-chronicle",
+ "icon": "🧭",
+ "category": "Einfachere Bedienung",
+ "title": "Neuigkeiten leichter überblicken",
+ "summary": "Die Entwicklungsgeschichte erklärt konkrete Verbesserungen mit kurzen Texten und freiwilligen Details. Kategorien und klare Datumsangaben helfen dir, passende Neuigkeiten zu finden.",
+ "details": [
+  "Auch die älteren Einträge erklären konkret, was du entdecken oder leichter bedienen kannst.",
+  "Kurze Zusammenfassungen und freiwillige Einzelheiten halten die Übersicht ruhig.",
+  "Zeitangaben und Nachweise bleiben erhalten; vorbereitete Änderungen werden nicht als verfügbar angezeigt.",
+  "Spielplatz: Eine mit der Tastatur geöffnete Spielhilfe behält deinen Platz. Auch nach einem schnellen Bereichswechsel kannst du sie mit Enter wieder schließen."
+ ],
+ "benefit": "Du kannst schneller erkennen, welche Änderung dir hilft und wo du sie findest.",
+ "links": [
+  {
+   "label": "Was ist neu?",
+   "hash": "updates"
+  }
+ ]
+},
+ "3": {
+  "id": "test-website",
+  "icon": "🚀",
+  "category": "Bereitstellung",
+  "title": "Ein eigener Platz zum Ausprobieren",
+  "summary": "Eine eigene Testversion macht neue Verbesserungen vor ihrer Freigabe für die Hauptwebsite ausprobierbar. Dieser erste belegte Teststand enthielt die bereits vorhandene Lernwelt.",
+  "details": [
+   "Der hier erste belegte Testwebsite-Stand stellt die erhaltene Lernwelt bereit."
+  ],
+  "benefit": "Ihr könnt Verbesserungen auf der Testwebsite kennenlernen. Eine erfolgreiche Testbereitstellung bedeutet weiterhin keine Veröffentlichung auf der Hauptwebsite.",
+  "links": [
+   {
+    "label": "Lernwelt entdecken",
+    "hash": "globe"
+   }
+  ]
+ },
+ "9": {
+  "id": "connected-discoveries",
+  "icon": "🌿",
+  "category": "Neue Inhalte",
+  "title": "Was verbindet Pflanzen, Wasser und den Mond?",
+  "summary": "Was haben Pflanzen, Wasser und der Mond miteinander zu tun? Acht neue Wissenskarten und zwei zusätzliche Routen verbinden diese Themen; die Challenge bietet drei frei wählbare Stufen.",
+  "details": [
+   "Wasser, Fotosynthese, Bestäubung, Pilze, Korallenriffe, Mondphasen, Jahreszeiten und Gezeiten ergänzen den Katalog auf 116 Karten.",
+   "Zwei zusätzliche Lernrouten und erklärte Wissensverbindungen verbinden neue und vorhandene Themen.",
+   "Zwei bedienbare Modelle helfen beim Ausprobieren.",
+   "Die Challenge bietet sechs Aufgaben pro Runde; leicht, mittel und schwer bleiben frei wählbar.",
+   "Begonnene Challenge-Runden lassen sich im vorhandenen Entdeckerpass fortsetzen."
+  ],
+  "benefit": "Du kannst erkennen, vergleichen oder weiterdenken, ohne eine feste Altersstufe zugewiesen zu bekommen. Eltern finden zusammenhängende Themen für gemeinsames Forschen.",
+  "links": [
+   {
+    "label": "Wissenswelten",
+    "hash": "world"
+   },
+   {
+    "label": "Spielplatz",
+    "hash": "games"
+   }
+  ]
+ },
+ "10": {
+  "id": "hint-correction",
+  "icon": "🧩",
+  "category": "Spielen und Lernen",
+  "title": "Ein Denkanstoß statt der fertigen Lösung",
+  "summary": "Ein freiwilliger Hinweis hilft dir beim Überlegen, ohne gleich die Lösung zu zeigen. Erst eine richtige Antwort öffnet die vollständige Erklärung.",
+  "details": [
+   "Alle drei Challenge-Stufen bieten freiwillige Denkhinweise.",
+   "Nach einer falschen Antwort bleibt die vollständige Auflösung verborgen.",
+   "Eine richtige Antwort öffnet die zugehörige Erklärung.",
+   "Die nächste Aufgabe beginnt wieder mit geschlossenem Hinweis."
+  ],
+  "benefit": "Du behältst die Gelegenheit, selbst auf die Lösung zu kommen. Eltern können einen Hinweis gemeinsam besprechen, ohne die Antwort schon zu verraten.",
+  "links": [
+   {
+    "label": "Spielplatz",
+    "hash": "games"
+   }
+  ]
+ },
+ "11": {
+  "id": "individual-hints",
+  "icon": "💡",
+  "category": "Spielen und Lernen",
+  "title": "Jede Frage bekommt ihren eigenen Denkanstoß",
+  "summary": "Die Hilfe passt jetzt zur Frage, die du gerade löst. Bei ausgewählten Challenge-Aufgaben kannst du freiwillig einen zweiten Denkschritt öffnen.",
+  "details": [
+   "Jede der 142 spielbaren Fragen erhält einen eigenen Einstiegshinweis.",
+   "38 Fragen bieten einen zweiten, gezielteren Denkschritt; insgesamt gibt es 180 Hinweise.",
+   "Themenname und Vorlesen machen auch allgemein formulierte Fragen verständlicher.",
+   "Die vollständige Erklärung bleibt bis zur richtigen Antwort verborgen."
+  ],
+  "benefit": "Du bekommst Hilfe zur aktuellen Frage statt allgemeiner Tipps. Eltern können schrittweise unterstützen; der zweite Hinweis ist eine bewusste Wahl.",
+  "links": [
+   {
+    "label": "Spielplatz",
+    "hash": "games"
+   }
+  ]
+ },
+ "12": {
+  "id": "discovery-centre",
+  "icon": "✨",
+  "category": "Einfachere Bedienung",
+  "title": "Die ganze Wissenswelt auf einen Blick",
+  "summary": "Wähle auf der Startseite eine Wissenswelt, suche nach einer Frage oder folge einer Wissensspur. Auch eine begonnene Challenge kannst du direkt wieder aufnehmen.",
+  "details": [
+   "Sechs Themenzugänge führen von der Startseite in die vorhandenen Wissenswelten.",
+   "Die Suche und die Weltkugel sind direkt erreichbar.",
+   "Drei wählbare Wissensspuren verbinden je zwei passende Karten und eine Lernroute.",
+   "Ein direkter Challenge-Einstieg berücksichtigt begonnene Runden."
+  ],
+  "benefit": "Du findest einen Anfang, der zu deiner Neugier passt. Eltern erkennen schneller, welche Themen und Lernwege bereits vorhanden sind.",
+  "links": [
+   {
+    "label": "Entdecken",
+    "hash": "globe"
+   }
+  ]
+ },
+ "14": {
+  "id": "science-articles",
+  "icon": "🌙",
+  "category": "Anschaulicher erklärt",
+  "title": "Mond und Meer verständlich erforschen",
+  "summary": "Warum verändert der Mond seine Form und weshalb steigt das Wasser an einer Küste? Erklärzeichnungen, ein Küstenvergleich und besser lesbare Beschriftungen helfen dir beim Forschen.",
+  "details": [
+   "Artikel bieten Sprungziele zu Erklärungen, Forschung, Fragen und passenden vorhandenen Lernrouten.",
+   "Eigene Zeichnungen erklären Mondphasen, Gezeiten und Meeresströmungen.",
+   "Ein Vergleich zeigt dieselbe Beispielküste bei zwei Wasserständen.",
+   "Grafikbeschriftungen stehen auch auf schmalen Smartphones als separater Text mit gut lesbarer Schrift; Alternativtexte und Modellgrenzen bleiben erhalten.",
+   "110 Mini-Fragen verwenden passende Denkhinweise; die Auflösung folgt erst nach einer richtigen Antwort."
+  ],
+  "benefit": "Du kannst zwischen Lesen, Beobachten und Ausprobieren wechseln. Eltern können Zeichnungen gemeinsam erklären und auch auf kleinen Bildschirmen die Beschriftungen lesen.",
+  "links": [
+   {
+    "label": "Mondphasen",
+    "hash": "world/topic/science-moon-phases"
+   },
+   {
+    "label": "Wissenswelten",
+    "hash": "world"
+   }
+  ]
+ },
+ "15": {
+  "id": "explorer-pass",
+  "icon": "🎒",
+  "category": "Einfachere Bedienung",
+  "title": "Ein klarer Platz für deine Entdeckungen",
+  "summary": "Im Entdeckerpass findest du deine Entdeckungen, Lernwege, Sicherungen und Einstellungen in eigenen Abschnitten. Die wichtigsten Wege bleiben auch beim Scrollen erreichbar.",
+  "details": [
+   "Übersicht, Lernwege, Sicherung und Einstellungen sind direkt anwählbar.",
+   "Schließen und „Weiter entdecken“ bleiben beim Scrollen erreichbar.",
+   "Sämtliche Abzeichen bleiben in aufklappbaren Sammlungen verfügbar.",
+   "Sichern und Wiederherstellen erhalten getrennte, verständliche Flächen.",
+   "Große Schrift und weniger Bewegung gelten auch im Pass; lange ausgewählte Stimmennamen sind vollständig lesbar."
+  ],
+  "benefit": "Du findest deine Entdeckungen leichter wieder. Eltern gelangen ohne langes Scrollen zu Sicherungen und Einstellungen; bisherige Lernstände und Spielrunden bleiben erhalten.",
+  "links": []
+ },
+ "16": {
+  "id": "calm-connections",
+  "icon": "🔗",
+  "category": "Einfachere Bedienung",
+  "title": "Zusammenhänge mit mehr Ruhe lesen",
+  "summary": "Warum hängen zwei Themen zusammen? Ruhigere Abstände und feine Trennlinien machen die Erklärungen leichter lesbar; die direkten Wege zum Weiterentdecken bleiben erhalten.",
+  "details": [
+   "Die grünen vertikalen Balken neben den Erklärungen entfallen.",
+   "Mehr Abstand und dezente horizontale Linien trennen die Einträge.",
+   "Klare Linktitel ersetzen farbige Kachelhintergründe; Pfeile und sichtbarer Tastaturfokus bleiben."
+  ],
+  "benefit": "Ihr könnt euch leichter auf den Zusammenhang konzentrieren und die passenden Themen weiterhin direkt öffnen.",
+  "links": [
+   {
+    "label": "Wissenswelten",
+    "hash": "world"
+   }
+  ]
+ },
+ "17": {
+  "id": "explorer-pass-fine",
+  "icon": "🏅",
+  "category": "Einfachere Bedienung",
+  "title": "Mehr Luft im kleinen Entdeckerpass",
+  "summary": "Auf kleinen Bildschirmen zeigt dein Pass die wichtigsten Informationen zuerst. Größere Schalter und klar gegliederte Einstellungen lassen mehr Platz zum Lesen und Antippen.",
+  "details": [
+   "Der kompaktere Passkopf lässt bei großer Schrift mehr Platz für den Inhalt.",
+   "Hauptwerte stehen in klaren Gruppen; zusätzliche Statistiken bleiben freiwillig aufklappbar.",
+   "Sichern und Wiederherstellen stehen vor den längeren Zusatzhinweisen.",
+   "Einstellungen erhalten getrennte Gruppen und größere Touchflächen für Schalter.",
+   "Abschnittswege fokussieren die Überschrift mit einem schmalen, kontrastreichen Rahmen; auch Hovertexte bleiben gut lesbar."
+  ],
+  "benefit": "Du kannst die wichtigsten Werte schneller erfassen. Eltern erreichen Sicherungen und Einstellungen auch mit großer Schrift; alle Lernstände, Abzeichen und Funktionen bleiben erhalten.",
+  "links": []
+ },
+ "18": {
+  "id": "first-visit-home",
+  "icon": "🧭",
+  "category": "Einfachere Bedienung",
+  "title": "Ein guter Anfang für deine Neugier",
+  "summary": "Neu hier? Die Startseite zeigt dir einen klaren ersten Schritt zur Weltkugel oder Suche; begonnene Lernaktivitäten lassen sich an der passenden Station fortsetzen.",
+  "details": [
+   "Weltkugel und Suche stehen als erste Aktionen bereit.",
+   "Fünf geordnete Hauptbereiche und sechs Weltenkarten erschließen die vorhandenen Lernwege.",
+   "Begonnene Lernaktivitäten lassen sich am passenden Kapitel fortsetzen.",
+   "Zurück bringt dich an die vorherige Stelle und erhält offene Abschnitte sowie deine gewählte Wissensspur.",
+   "„Was ist neu?“ unterscheidet frühere Sites-Veröffentlichungen, bestätigte Testupdates und Änderungen ohne Bereitstellungsnachweis."
+  ],
+  "benefit": "Du findest schneller einen freiwilligen ersten Schritt oder deine Fortsetzung. Eltern erkennen, was die Lernwelt bietet und welche Verbesserungen tatsächlich verfügbar sind.",
+  "links": [
+   {
+    "label": "Entdecken",
+    "hash": "globe"
+   }
+  ]
+ },
+ "19": {
+  "id": "history-polish",
+  "icon": "🖼️",
+  "category": "Einfachere Bedienung",
+  "title": "Die Entwicklungsgeschichte wird anschaulicher",
+  "summary": "Du kannst die Entwicklung schneller überblicken: Kurze Zusammenfassungen nennen die wichtigsten Änderungen. Einzelheiten und ihren Nutzen öffnest du nur bei Interesse.",
+  "details": [
+   "Die bestehenden Einträge nennen konkrete belegte Änderungen.",
+   "Aufklappbare Details erläutern den Nutzen für Kinder und Eltern.",
+   "Klare Datumszeilen, ruhige Symbole und dezente Trennlinien ordnen die Zeitleiste."
+  ],
+  "benefit": "Familien können die Entwicklung überblicken und nur bei Interesse mehr lesen.",
+  "links": []
+ },
+ "20": {
+  "id": "clear-main-navigation",
+  "icon": "🧭",
+  "category": "Einfachere Bedienung",
+  "title": "Wissenswelten sind wieder direkt erreichbar",
+  "summary": "Wissenswelten, Spiele, Forscherlabor, Lernreisen und Wissensbuch sind direkt erreichbar. Die sechs Hauptbereiche passen sich deinem Bildschirm an und behalten verständliche Namen.",
+  "details": [
+   "Wissenswelten sind auch innerhalb ihrer Themenkarten und Lernrouten als eigener Bereich erkennbar.",
+   "Die Übersicht nennt ihre verknüpften Kartenwege klar Wissensrouten; Lernreisen bleiben der eigene Bereich für geführte Kapitel.",
+   "Die Navigation ordnet alle sechs Bereiche auf Smartphones in zwei, auf Tablets in drei und auf breiten Bildschirmen in sechs Spalten an.",
+   "Lesbare Namen, große Touchziele und sichtbarer Tastaturfokus erleichtern die Auswahl auch mit größerer Schrift.",
+   "Die Suche findet die Weltenübersicht und Kategorien; Browser-Zurück bringt den Fokus wieder zur geöffneten Karte, Wissensverknüpfung oder Lernroute."
+  ],
+  "benefit": "Du kannst Wissen und Spiele leichter unterscheiden. Eltern können direkt zu einem Bereich wechseln und nach einer Entdeckung zuverlässig zurückkehren.",
+  "links": [
+   {
+    "label": "Alle Wissenswelten",
+    "hash": "world"
+   },
+   {
+    "label": "Weltkugel entdecken",
+    "hash": "globe"
+   }
+  ]
+ },
+ "21": {
+  "id": "playground-2",
+  "icon": "🧩",
+  "category": "Spielen und Lernen",
+  "title": "31 Spielideen, ein klarer Einstieg",
+  "summary": "Finde unter 31 Spielangeboten eine passende Idee und erkenne, wo du eine Runde fortsetzen kannst. Lebensräume und Fakten-Detektiv bieten neue Denkaufgaben und freiwillige Hilfen.",
+  "details": [
+   "Freiwillige Themen- und Spielartfilter, Lernziele, Altersorientierung und erkennbare Rundenstände erleichtern die Auswahl.",
+   "Lebensräume und Fakten-Detektiv bieten jeweils leicht, mittel und schwer: Grundlagen erkennen, Zusammenhänge vergleichen und Wissen übertragen. 24 konkrete Aufgaben bilden die sechs Stufenrunden.",
+   "Zwei freiwillige Denkschritte unterstützen jede neue Aufgabe; falsche Antworten bekommen eine passende Erklärung und lassen sich ohne Punktabzug korrigieren.",
+   "Im Sortierspiel bleibt ein fehlerhafter Bau erhalten: Bausteine lassen sich entfernen und neu einordnen, statt alles neu mischen zu müssen.",
+   "Neue Runden lassen sich fortsetzen; unsichere Aufgaben freiwillig wiederholen. Passende vorhandene Wissenskarten und Routen führen weiter, alte gespeicherte Runden und Stempel bleiben erhalten."
+  ],
+  "benefit": "Du findest leichter einen passenden Einstieg und kannst selbst entscheiden, wie viel Hilfe du brauchst. Eltern bekommen konkrete Lernziele und können gemeinsam vergleichen, erklären oder eine Pause machen.",
+  "links": [
+   {
+    "label": "Spielplatz entdecken",
+    "hash": "games"
+   }
+  ]
+ },
+ "22": {
+  "id": "foundation-2a",
+  "icon": "🛠️",
+  "category": "Einfachere Bedienung",
+  "title": "Mehr Ruhe beim Laden und Entdecken",
+  "summary": "Große Lernbereiche laden erst, wenn du sie öffnest. Klarere Auswahlflächen und verständliche Lade- oder Fehlermeldungen helfen dir auf kleinen und großen Bildschirmen weiter.",
+  "details": [
+   "Spielauswahl, Forscherlabor und Wissensrouten teilen lesbare Raster mit passenden Abständen und großen Touchflächen.",
+   "Weltkugel, Wissensartikel, Spiele und zusätzliche Dialoginhalte werden bei Bedarf geladen; die Kartenübersicht bleibt direkt erreichbar.",
+   "Lade-, Leer- und Fehlermeldungen erklären den nächsten Schritt; freiwillige Details bleiben mit der Tastatur bedienbar.",
+   "Abstände und Schrift passen sich an schmale und breite Bildschirme an; große Auswahlflächen lassen sich leichter antippen.",
+   "Deine Lernstände und die Vorbereitung zum Lernen ohne Internet bleiben erhalten."
+  ],
+  "benefit": "Du kannst dich auf deine nächste Entdeckung konzentrieren. Eltern erhalten besser lesbare Auswahlflächen und klare Rückmeldungen, während große Inhalte erst bei Bedarf geladen werden.",
+  "links": [
+   {
+    "label": "Spielplatz",
+    "hash": "games"
+   },
+   {
+    "label": "Forscherlabor",
+    "hash": "labs"
+   }
+  ]
+ },
+ "23": {
+  "id": "research-2b",
+  "icon": "🧪",
+  "category": "Spielen und Lernen",
+  "title": "Selbst vermuten, vergleichen und weiterforschen",
+  "summary": "Halte eine Vermutung fest, vergleiche zwei Beobachtungen und erkläre dein Ergebnis. Alle elf digitalen Labore bieten eigene Forschungsaufgaben; praktische Versuche und passende Wissenswege führen weiter.",
+  "details": [
+   "In allen elf Laboren lassen sich zwei Beobachtungen festhalten, Bedingungen vergleichen und eigene Erklärungen im vorhandenen Entdeckerpass sichern.",
+   "Jahreszeiten zeigen Tageslänge und Sonnenstand; das Mondmodell erklärt Bahnknoten und Finsternis-Ausrichtungen, Gezeitenkurven vergleichen Mond- und Sonnenbeiträge. Alle drei benennen ihre Modellgrenzen.",
+   "Sechs praktische Versuche erhalten sichere Vergleichsaufgaben; bestehende Globusmissionen führen auf Wunsch in ein passendes Labor.",
+   "Die Suche öffnet sofort und findet auch Labore, praktische Versuche und Nachrichten. Acht erklärte Wissensspuren bieten passende konkrete Aktivitäten und Rückwege.",
+   "Die Nachrichten zeigen Quellen, ihren tatsächlichen Stand und ältere Ausgaben im Archiv. Der tägliche automatische Nachrichtenbetrieb ist damit noch nicht eingeschaltet."
+  ],
+  "benefit": "Du kannst eine Vermutung selbst prüfen und dein Ergebnis erklären. Familien finden passende gemeinsame Versuche und behalten ihre bisherigen Lernstände; Sicherheitshinweise gehören zu jedem praktischen Versuch.",
+  "links": [
+   {
+    "label": "Forscherlabor",
+    "hash": "labs"
+   },
+   {
+    "label": "Nachrichten & Quellen",
+    "hash": "news"
+   }
+  ]
+ },
+ "24": {
+  "id": "news-engineering-2c",
+  "icon": "📰",
+  "category": "Nachrichten verstehen",
+  "title": "Nachrichten mit nachvollziehbarem Prüfstand",
+  "summary": "Bei Nachrichten erkennst du, ob sie automatisch mit Quelldaten abgeglichen wurden oder eine quellenbasierte Erklärung sind. Neue signierte Ausgaben lassen sich nachladen; der tägliche automatische Betrieb ist noch nicht aktiv.",
+  "details": [
+   "Wenn du zum Nachrichtenbereich zurückkehrst, wieder online bist oder die Lernwelt länger geöffnet lässt, kann sie nach neuen Ausgaben suchen.",
+   "Nur Ausgaben mit gültigem Herkunftsnachweis werden übernommen. Ohne Internet bleibt die letzte gültige Ausgabe lesbar.",
+   "Ein neues eigenständiges Ereignis darf ausgewählt werden. Dieselbe Meldung mit einem anderen Datum zählt nicht als neue Nachricht.",
+   "Die Vorbereitung nutzt Daten zur Erdbeobachtung und zu Planeten außerhalb unseres Sonnensystems. Andere Themen benötigen weitere geeignete Quellen.",
+   "Die automatische tägliche Veröffentlichung braucht noch einen vollständig eingerichteten und geprüften Betrieb. Bis dahin bleibt sie ausgeschaltet."
+  ],
+  "benefit": "Du kannst die Herkunft einer Meldung und ihren Prüfstand nachvollziehen. Automatischer Quellenabgleich bedeutet keine menschliche Einzelprüfung; bei einer Verbindungsunterbrechung bleibt die letzte gültige Ausgabe verfügbar.",
+  "links": [
+   {
+    "label": "Kindernachrichten",
+    "hash": "news"
+   }
+  ]
+ },
+ "25": {
+  "id": "journeys-3",
+  "icon": "🧭",
+  "category": "Spielen und Lernen",
+  "title": "Lernreisen: nicht nur lesen, selbst weiterdenken",
+  "summary": "Entdecken, erklären, übertragen: Jede Lernreise bietet eigene Kapitelziele und freiwillige Denkaufgaben. Private Merkzettel und direkte Kapiteladressen helfen dir, später wieder anzuknüpfen.",
+  "details": [
+   "Alle 80 Inhaltskapitel erhalten eigene Aufgaben zum Entdecken, Erklären und Übertragen.",
+   "Freiwillige Hinweise und konkrete Rückmeldungen helfen beim Weiterdenken.",
+   "Kapiteladressen und Kapitelkarten erleichtern das Zurückkehren zur richtigen Station.",
+   "Private Merkzettel bleiben im vorhandenen Entdeckerpass; bisherige Stempel und Spielstände werden erhalten.",
+   "Lesbare Grafikbeschriftungen und ruhige Abstände unterstützen kleine Bildschirme und größere Schrift."
+  ],
+  "benefit": "Du kannst Zusammenhänge selbst erklären und später an deine eigenen Gedanken anknüpfen. Eltern behalten den bisherigen Lernstand und die vertrauten Sicherungen.",
+  "links": [
+   {
+    "label": "Lernreisen",
+    "hash": "journeys"
+   }
+  ]
+ },
+ "26": {
+  "id": "excellence-foundation-3-5",
+  "icon": "🧭",
+  "title": "Passende Reisestationen leichter finden",
+  "summary": "Zu einem Wissensartikel findest du alle passenden Stationen einer Lernreise. Weitere Stationen kannst du aufklappen; beim Zurückkehren bleibt dein vorheriger Platz erhalten.",
+  "details": [
+   "Die erste passende Station bleibt direkt sichtbar.",
+   "Weitere Stationen derselben Reise lassen sich freiwillig aufklappen.",
+   "Beim Zurückkehren bleiben aufgeklappte Stationen und der Tastaturfokus erhalten."
+  ],
+  "benefit": "Kinder und Eltern können ein Thema an mehreren passenden Stationen weiterverfolgen.",
+  "links": [
+   {
+    "label": "Wissenswelten",
+    "hash": "world"
+   },
+   {
+    "label": "Lernreisen",
+    "hash": "journeys"
+   }
+  ],
+  "category": "Einfachere Bedienung"
+ }
 };
 const TEST_UPDATES=TEST_EVIDENCE.pullRequests.flatMap(record=>TEST_COPY[record.number]?[testUpdate(record,TEST_COPY[record.number])]:[]);
 export const UPDATE_HISTORY:UpdateEntry[]=[...SITES_HISTORY,...TEST_UPDATES.filter(e=>e.status==='test-available')];
 const PREPARED_JOURNEYS:UpdateEntry={...JOURNEY_COPY,version:'Paket 3',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-12',publishedOn:null,availableOn:null,occurredAt:null,summary:'Die Lernreise-Verbesserungen sind vorbereitet; ihre Bereitstellung ist noch unbestätigt.',links:[],evidence:{file:'BACKLOG.md',revision:'d6945c8',quote:'WK-048: Lernreisen 2.0 – alle 16 Reisen/80 Kapitel ganzheitlich modernisieren.'}};
-const PREPARED_EXCELLENCE:UpdateEntry={id:'excellence-foundation-3-5',version:'Paket 3.5 · Grundlage',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-13',publishedOn:null,availableOn:null,occurredAt:null,icon:'🧭',title:'Passende Reisestationen leichter finden',summary:'Wissensartikel verweisen auf alle passenden Stationen einer Lernreise. Diese Änderungen sind vorbereitet und noch nicht bereitgestellt.',details:['Die erste passende Station bleibt direkt sichtbar.','Weitere Stationen derselben Reise lassen sich freiwillig aufklappen.','Beim Zurückkehren bleiben aufgeklappte Stationen und der Tastaturfokus erhalten.'],benefit:'Kinder und Eltern können ein Thema an mehreren passenden Stationen weiterverfolgen.',links:[],evidence:{file:'BACKLOG.md',revision:'24b26aa',quote:'WK-052: vollständige Mehrfachrückwege.'}};
-const PREPARED_CONTENT:UpdateEntry={...CONTENT_COPY,version:'Paket 3.5 · Inhaltswelle',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-14',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{file:'BACKLOG.md',revision:'codex/wunderkompass-excellence-content-2026-10-13',quote:'WK-053 / WK-054 / WK-055: vernetzte Inhaltswellen',pullRequest:27}};
-export const PREPARED_UPDATES:UpdateEntry[]=[...(!TEST_UPDATES.some(e=>e.id===PREPARED_CONTENT.id)?[PREPARED_CONTENT]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_EXCELLENCE.id)?[PREPARED_EXCELLENCE]:[]),...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[])];
-export const updateLabel=(entry:UpdateEntry)=>entry.channel==='sites'?`Sites · Version ${entry.version}`:entry.status==='prepared'?'Bereitstellung noch unbestätigt':'Testwebsite · verfügbar';
+export const PREPARED_UPDATES:UpdateEntry[]=[...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[])];
+export const updateLabel=(entry:UpdateEntry)=>entry.channel==='sites'?`Frühere Website · Version ${entry.version}`:entry.status==='prepared'?'In Vorbereitung · noch nicht verfügbar':'Testversion · verfügbar';
 const updateDay=(entry:UpdateEntry)=>entry.availableOn??entry.publishedOn??entry.confirmedOn;
 export function publicUpdates(entries:readonly UpdateEntry[]=UPDATE_HISTORY){
  return entries.filter(e=>e.status==='publication-confirmed'&&e.channel==='sites'||e.status==='test-available'&&e.channel==='vercel-test'&&e.availableOn!==null).toSorted((a,b)=>updateDay(b).localeCompare(updateDay(a))||(Date.parse(b.occurredAt??'')||0)-(Date.parse(a.occurredAt??'')||0)||Number(b.version)-Number(a.version));

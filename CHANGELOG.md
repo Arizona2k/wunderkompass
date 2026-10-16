@@ -1,5 +1,10 @@
 # Änderungsverlauf
 
+## Paket3.5 – Integration der übernommenen Chronik,16.10.2026 (noch unveröffentlicht)
+
+PR29 tatsächlich durch den Nutzer übernommen und am exakten test-live-Merge erfolgreich vonVercel bereitgestellt. Verbesserte historische Texte/Kategorien/Fokus- und nativeBildnachweise kontrolliert in den bestehenden PR27-Stand integriert; dessen Welt-/Buch-/Natur-/Erfindungs-/Bauwerks-/Reise-/Offline-/Browserbestand erhalten. Dieselbe vorbereitete Chronik-ID anhand wirklicher Merge-/Bereitstellungsquittung als verfügbar nachgeführt; PR27 bleibt unbestätigt. Die neue vollständige News-Pause und Paket3.5-Priorität in den bestehenden Regeln festgehalten. Keine weitere Newsentwicklung, Aktivierung, neuen Kosten oder eigene Veröffentlichung. Aktuelle tatsächliche Abnahme und Restumfang im PR/PROJECT_STATE.
+
+
 ## Paket3.5 · zwölf neue Erfindungen erkunden (unveröffentlicht)
 
 - Batterie, Generator, Transistor, Kamera, Teleskop, Mikroskop, Kühlschrank, Fahrrad, Aufzug, Seismograph, 3D-Druck und Nähmaschine mit eigenen Funktionsplänen, auswählbaren Teilen, verständlichen Erklärungen, freiwilligen Vertiefungen, individuellen Fragen/Hilfen und 29 erklärten gegenseitigen Wissensverbindungen ergänzt. Historische Zeitanker ausdrücklich von Ersterfindungsbehauptungen getrennt.

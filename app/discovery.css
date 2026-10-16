@@ -114,6 +114,8 @@
 .updates-meta>span:last-child{flex-basis:100%;font-size:13px}
 .updates-meta time{display:block;font-size:16px;font-weight:650;color:var(--wk-ink);letter-spacing:.01em}
 .updates-entry h2{font-size:23px;line-height:1.35;font-weight:750;margin:0 0 10px}
+.update-history .updates-category{font-size:14px;line-height:1.5;font-weight:650;color:var(--wk-teal);margin:0 0 8px}
+.large-reading .update-history .updates-category{font-size:17px}
 .updates-entry p,.updates-provenance p{font-size:16px;line-height:1.7;max-width:730px;margin:8px 0;color:var(--wk-muted)}
 .updates-links{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:10px}
 .updates-links a{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--wk-teal);font-size:15px;font-weight:650;text-decoration:underline;text-underline-offset:4px}

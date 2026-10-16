@@ -68,3 +68,11 @@ test('all58 sealed historical required roles survive the expanded invention revi
   assert.ok(requiredScreenshots.includes('quality-navigation-invention-experiment-native-'+id+'.png'));
  }
 });
+
+
+ test('review budget is exactly 150 decimal MB and storage accounting never deletes identical evidence',()=>{
+ assert.equal(REVIEW_LIMIT,150_000_000);const a={file:'focus-320.png',bytes:100,sha256:'same',retained:true},b={...a,file:'focus-390.png'},c={...a,file:'already-omitted.png',retained:false};
+ const r=reviewStorage([a,b,c],200);assert.equal(r.retainedImages,2);assert.equal(r.reserveBytes,149_999_800);assert.equal(r.exactDuplicates.retainedExtraBytes,100);assert.equal(r.exactDuplicates.alreadyOmittedCopiesWithRetainedOriginal,1);assert.equal(r.exactDuplicates.automaticDuplicateRemovals,0);
+ assert.equal(reviewStorage([],150_000_000).withinBudget,true);assert.equal(reviewStorage([],150_000_001).withinBudget,false);
+ for(const invalid of [-1,NaN,Infinity,0.1])assert.equal(reviewStorage([],invalid).withinBudget,false);
+ });

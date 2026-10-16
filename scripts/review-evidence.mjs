@@ -20,7 +20,7 @@ export function reviewStorage(screenshots,retainedBytes,{previous=null}={}){
   comparison:comparable?{status:'same capture matrix; informational only',previousBuild:previous.build??null,previousSourceDigest:previous.sourceDigest??null,retainedImagesDelta:screenshots.filter(capture=>capture.retained).length-previous.screenshots.filter(capture=>capture.retained).length,retainedBytesDelta:retainedBytes-previous.retainedBytes}:{status:previous?'different or invalid matrix; no savings claim':'previous comparable run not supplied'},
  };
 }
-export const requiredScreenshots=[...['320','360','390','768','1024','1440','1920'].flatMap(w=>['quality-foundation-foundation-labs-'+w+'.png','quality-learning-journey-links-'+w+'.png']),...['320','1440'].flatMap(w=>['quality-news-feed-signed-news-rejected-'+w+'.png','quality-navigation-updates-all-details-'+w+'-full.png'])];
+export const requiredScreenshots=['quality-learning-journey-engine-chromium-native-history-first-640.png','quality-learning-journey-engine-chromium-native-history-oldest-640.png',...['320','360','390','768','1024','1440','1920'].flatMap(w=>['quality-foundation-foundation-labs-'+w+'.png','quality-learning-journey-links-'+w+'.png']),...['320','1440'].flatMap(w=>['quality-news-feed-signed-news-rejected-'+w+'.png','quality-navigation-updates-all-details-'+w+'-full.png'])];
 requiredScreenshots.push(...[320,1440].map(width=>'quality-learning-nature-model-grand-canyon-phase-3-'+width+'.png'));
 requiredScreenshots.push(...['source-5-320','source-25-320','starter-30-320','starter-35-320','starter-48-320','starter-59-320','59-1440','native-200-large','overview-320'].map(key=>'quality-book-why-'+key+'.png'));
 requiredScreenshots.push(...[320,1440].flatMap(width=>worldIndex.filter(t=>t.category==='inventions').map(t=>'quality-navigation-invention-model-'+t.id+'-'+width+'.png')),'quality-navigation-invention-native-200-large.png','quality-navigation-invention-steps-large-320.png','quality-navigation-invention-labels-fridge-768.png');
@@ -28,6 +28,7 @@ requiredScreenshots.push(...[320,1440].flatMap(width=>['keyboard','pointer'].map
 requiredScreenshots.push(...worldIndex.filter(t=>t.inventionModel).flatMap(t=>[...([320,1440].map(width=>'quality-navigation-invention-experiment-'+t.id+'-'+width+'.png')),'quality-navigation-invention-experiment-native-'+t.id+'.png']));
 requiredScreenshots.push(...worldIndex.filter(t=>t.buildingKind).flatMap(t=>[320,1440].map(w=>'quality-navigation-building-model-'+t.id+'-'+w+'.png')),'quality-navigation-building-native-200-large.png','quality-navigation-building-large-320.png');
 export function retainScreenshot(name){
+ if(requiredScreenshots.includes(name))return true;
  // Each individual plan and distinct functional model has review value.
  // Keep mobile/desktop and actual native model states; never fill the budget.
  if(/^quality-navigation-invention-/.test(name))return /invention-(?:(?:model|experiment)-invention-[a-z0-9-]+-(?:320|1440)|experiment-native-invention-[a-z0-9-]+|native-200-large|steps-large-320|labels-fridge-768)\.png$/.test(name);

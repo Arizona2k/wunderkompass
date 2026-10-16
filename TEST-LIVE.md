@@ -1,5 +1,17 @@
 # Kontrollierte automatische Testfreigabe – vorbereitet, ausgeschaltet
 
+## Aktuelle Nutzerentscheidung16.10.2026 – Paket3.5 fortsetzen, News pausiert
+
+Paket3.5 bleibt vor allen Paketen4–8 und neuen Themenideen die aktuelle Priorität. Nach tatsächlichem Nutzermerge von PR29 dessen exakten test-live-/Vercel-Erfolg prüfen und Verbesserungen kontrolliert in den gesicherten PR27-Stand integrieren; keine Resets, Überschreibungen, Doppelentwicklung oder neue Gesamtplanung. Alle vorbereiteten und entwickelten Inhalte/Erfindungen/Bauwerke/Reisen/Modelle/Funktionen/Tests und Aufgaben erhalten. Große zusammenhängende, eigenständig nutzbare Abschnitte implementieren, korrigieren, vollständig prüfen und mit exaktem grünem Quality als mergebereite PRs übergeben; nur der Nutzer gibt den Merge frei. Fertige Kandidaten stabil halten, unabhängige Arbeit im selben seriellen Durchlauf fortsetzen, abhängige Änderungen nach Basismerge erneut abgleichen.
+
+**Nachrichtenthema vollständig pausiert bis zu einem erneuten ausdrücklichen Nutzerauftrag.** Bestehenden News-Code, Quellen-/Betriebsnachweise und offene Anforderungen erhalten; keine weitere Newsentwicklung, Quellenanbindung, Einrichtung oder Aktivierung. Vorhandene unveränderte Sicherheits-/Regressionsprüfungen der Website bleiben vollständig. Diese Pause hat Vorrang vor älteren News-Prioritäten und Aktivierungsaufträgen unten; keine Newsarbeit als nächsten Schritt empfehlen. Pakete4–8 und neue Ideen bleiben im einzigen BACKLOG, werden jetzt nicht begonnen. Keine neuen Kosten, eigene Übernahme/Veröffentlichung, unnötige Prüfinfrastruktur oder Qualitätsabsenkung.
+
+
+## Vorrangiger Fortsetzungsauftrag16.10.2026 – abschnittsweise Lieferung
+
+Der [vollständige Originalauftrag](content/auftrag-2026-10-13/WunderKompass_Fortsetzungsauftrag_2026-10-16.md) und die vorrangige Umsetzung in AGENTS ersetzen ältere Ein-PR-/Sammeldraft-/Kein-Teilrelease-Regeln sowie pauschale News-Livestartsperren. Zusammenhängende unabhängig nutzbare Abschnitte vollständig mit ihren tatsächlichen Abhängigkeiten prüfen, aktuellen grünen Quality-Stand nachweisen und als Ready-PR gegen test-live übergeben. Anwendbare Sicherheits-/Fach-/Kinder-/Gerätegates bleiben verbindlich, fehlende Abnahmen ehrlich offen. Ein unabhängiger Masterrest blockiert nicht automatisch. Vor Trennung Originalstand sichern, Previewtrigger prüfen, fertige Kandidaten stabil halten; nach Nutzermerge abhängige Abschnitte gegen die wirkliche neue Basis nachprüfen.
+
+
 ## Kontrollierte Teilreleases – zusätzliche Nutzerentscheidung16.10.2026
 
 Vollständig fertige, isolierbare Teilwellen großer Pakete dürfen als konkrete Releasekandidaten vorbereitet werden; der nicht veröffentlichte Masterrest bleibt im einzigen BACKLOG. PR27/Entwicklungsbranch erhalten. Vor einem ausnahmsweise nötigen kurzlebigen Releasebranch/-PR die tatsächlichen Vercel-/Hostingtrigger und Schutzbedingungen prüfen: schon eine neue erreichbare Preview ist eine Bereitstellung und braucht ausdrückliche passende Freigabe. Aktuell keine solche Bereitstellung autorisiert.

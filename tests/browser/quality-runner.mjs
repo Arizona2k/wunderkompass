@@ -42,6 +42,9 @@ else{
   for(const result of outcomes)for(const file of await fs.readdir(path.join(root,'.qa-output',result.name)))if(file.endsWith('.png'))await fs.copyFile(path.join(root,'.qa-output',result.name,file),path.join(root,'.qa-output',canonicalScreenshotName(result.name,file)),constants.COPYFILE_EXCL);
   await fs.writeFile(path.join(root,'.qa-output/portable-report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,seconds:report.seconds,checks:report.checks.length,timings:report.timings,scheduling}));
   await createHandoff(report);
- }catch(error){await fs.mkdir(path.join(root,'.qa-output'),{recursive:true});await fs.writeFile(path.join(root,'.qa-output/portable-report.json'),JSON.stringify({status:'failed',scope:'complete mandatory regression',seconds:(performance.now()-started)/1000,outcomes,scheduling:{...scheduling,peakWorkers},failure:error.stack},null,2));throw error;}
+ }catch(error){await fs.mkdir(path.join(root,'.qa-output'),{recursive:true});
+  // Preserve current worker originals even when fail-closed aggregation rejects them.
+  for(const result of outcomes){const dir=path.join(root,'.qa-output',result.name);for(const file of await fs.readdir(dir).catch(()=>[]))if(/\.(png|json)$/.test(file))await fs.copyFile(path.join(dir,file),path.join(root,'.qa-output',canonicalScreenshotName(result.name,file)));}
+await fs.writeFile(path.join(root,'.qa-output/portable-report.json'),JSON.stringify({status:'failed',scope:'complete mandatory regression',seconds:(performance.now()-started)/1000,outcomes,scheduling:{...scheduling,peakWorkers},failure:error.stack},null,2));throw error;}
  finally{for(const child of children)child.kill('SIGTERM');}
 }
