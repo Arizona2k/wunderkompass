@@ -1,17 +1,18 @@
-import fs from 'node:fs/promises';import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';
 
 // Native browser zoom changes CSS viewport dimensions. Locator screenshots can
 // use the wrong clip and return a cropped/blank image. Capture the real visible
-// viewport in device coordinates, as the established book/journey proofs do.
+// viewport directly. Absolute clips multiplied by DPR become invalid at deep
+// scroll offsets in Chromium headless-shell, even when an early capture works.
 export async function captureNativeViewport(page,file){
- const dimensions=await page.evaluate(()=>({cssWidth:innerWidth,cssHeight:innerHeight,scale:devicePixelRatio,x:scrollX*devicePixelRatio,y:scrollY*devicePixelRatio}));
- const clip={x:dimensions.x,y:dimensions.y,width:dimensions.cssWidth*dimensions.scale,height:dimensions.cssHeight*dimensions.scale,scale:1};
+ const dimensions=await page.evaluate(()=>({cssWidth:innerWidth,cssHeight:innerHeight,scale:devicePixelRatio,scrollY}));
  const cdp=await page.context().newCDPSession(page);
  try{
-  const r=await cdp.send('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,clip}),png=Buffer.from(r.data,'base64');
+  const r=await cdp.send('Page.captureScreenshot',{format:'png',fromSurface:true,captureBeyondViewport:false}),png=Buffer.from(r.data,'base64');
+  await fs.writeFile(file,png); // Preserve the actual failed capture, too.
   assert.equal(png.subarray(0,8).toString('hex'),'89504e470d0a1a0a');
   const pixelWidth=png.readUInt32BE(16),pixelHeight=png.readUInt32BE(20);
-  assert.ok(Math.abs(pixelWidth-clip.width)<=1&&Math.abs(pixelHeight-clip.height)<=1,'native proof covers the full measured physical viewport');
+  assert.ok(Math.abs(pixelWidth-dimensions.cssWidth*dimensions.scale)<=1&&Math.abs(pixelHeight-dimensions.cssHeight*dimensions.scale)<=1,'native proof covers the full measured physical viewport');
   const sampledColors=await page.evaluate(async data=>{
    const bytes=Uint8Array.from(atob(data),c=>c.charCodeAt(0)),image=await createImageBitmap(new Blob([bytes],{type:'image/png'})),canvas=new OffscreenCanvas(image.width,image.height),ctx=canvas.getContext('2d');ctx.drawImage(image,0,0);image.close();
    const {width,height}=canvas,pixels=ctx.getImageData(0,0,width,height).data,colors=new Set();
@@ -20,6 +21,10 @@ export async function captureNativeViewport(page,file){
    canvas.width=canvas.height=1;return colors.size;
   },r.data);
   assert.ok(sampledColors>1,'Native screenshot is uniform instead of showing the tested interface');
-  await fs.writeFile(file,png);return{cssWidth:dimensions.cssWidth,cssHeight:dimensions.cssHeight,scale:dimensions.scale,pixelWidth,pixelHeight,sampledColors};
+  return{...dimensions,pixelWidth,pixelHeight,sampledColors};
+ }catch(error){
+  await fs.mkdir('.qa-output',{recursive:true});
+  try{await fs.copyFile(file,path.join('.qa-output','quality-failure-'+path.basename(file)));}catch{/* The original protocol error still fails the job. */}
+  error.message+=' '+JSON.stringify({file,...dimensions});throw error;
  }finally{await cdp.detach();}
 }

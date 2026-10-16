@@ -290,10 +290,12 @@ export async function historyEngineView(page,width,shots,{engine='chromium',capt
  const first=page.locator('.updates-timeline>li').first(),last=page.locator('.updates-timeline>li').last();
  await first.locator('.updates-details>summary').focus();await page.keyboard.press('Enter');assert.equal(await first.locator('.updates-details').evaluate(el=>el.open),false);await page.keyboard.press('Enter');assert.equal(await first.locator('.updates-details').evaluate(el=>el.open),true);
  assert.equal(await first.locator('.updates-details>summary').evaluate(el=>el.matches(':focus-visible')&&parseFloat(getComputedStyle(el).outlineWidth)>=2),true,'visible keyboard focus in expanded chronicle');
- const take=async(name,item)=>{await item.scrollIntoViewIfNeeded();if(capture)await capture(name);else await page.screenshot({path:shots+'/'+name,animations:'disabled'});};
+ const captures=[];
+ const take=async(name,item)=>{await item.scrollIntoViewIfNeeded();if(capture)captures.push(await capture(name));else await page.screenshot({path:shots+'/'+name,animations:'disabled'});};
  await take('journey-engine-'+engine+'-history-first-'+width+'.png',first);
  await take('journey-engine-'+engine+'-history-oldest-'+width+'.png',last);
  await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.update-history',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
  assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress),before,'chronicle does not write learning progress');
- return {width,entries:entries.map(e=>e.id),expanded:true,largeText:true,keyboard:true,axe:true,passPreserved:true};
+ if(capture)assert.ok(captures[1].scrollY>captures[0].scrollY+1000,'native capture really reaches the far end of the long history');
+ return {width,entries:entries.map(e=>e.id),expanded:true,largeText:true,keyboard:true,axe:true,passPreserved:true,...(capture?{captures}:{})};
 }

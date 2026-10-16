@@ -14,7 +14,7 @@ export function historyViewsComplete(views,widths){
  const ids=publicUpdates().map(e=>e.id);
  return Array.isArray(views)&&views.length===widths.length&&new Set(views.map(v=>v.width)).size===widths.length&&widths.every(width=>views.some(v=>v.width===width&&['expanded','largeText','keyboard','axe','passPreserved'].every(k=>v[k]===true)&&Array.isArray(v.entries)&&v.entries.length===ids.length&&new Set(v.entries).size===ids.length&&ids.every(id=>v.entries.includes(id))));
 }
-export const nativeHistoryComplete=z=>z?.percent===200&&z.scale===2&&historyViewsComplete([z],[640]);
+export const nativeHistoryComplete=z=>z?.percent===200&&z.scale===2&&z.blankCaptureRejected===true&&historyViewsComplete([z],[640])&&Array.isArray(z.captures)&&z.captures.length===2&&z.captures.every(c=>c.cssWidth===640&&c.scale===2&&c.pixelWidth===1280&&c.pixelHeight===900&&c.sampledColors>1&&Number.isFinite(c.scrollY))&&z.captures[1].scrollY>z.captures[0].scrollY+1000;
 export async function createHandoff(report,directory='.qa-output',{requiredEngines=[]}={}){
  if(!nativeHistoryComplete(report.nativeHistory))throw Error('Missing complete native history zoom proof');
  if(report.status!=='passed'||report.scope!=='complete mandatory regression'||report.build!==learningFingerprint(process.cwd()))throw Error('Handoff lacks a complete current production-build proof');
