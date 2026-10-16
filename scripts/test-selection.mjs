@@ -3,6 +3,7 @@ import path from 'node:path';
 import {execFileSync,spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import ts from 'typescript';
+import {REQUIRED_SUITES} from './quality-evidence.mjs';
 
 const root=process.cwd();
 function resolve(from,specifier){
@@ -24,9 +25,18 @@ export function dependencies(entry,seen=new Set(),graph=new Map()){
  }
  for(const next of graph.get(file))dependencies(next,seen,graph);return seen;
 }
+// Parse changed native Node modules before starting expensive existing checks.
+// This catches duplicated imports introduced by merges; TS/lint do not cover
+// every browser harness module. No module code is executed by --check.
+export function checkSyntaxFiles(files){
+ const started=performance.now(),checked=[];
+ for(const file of files){const result=spawnSync(process.execPath,['--check',file],{encoding:'utf8'});if(result.error)throw result.error;if(result.status!==0)throw Error('Node syntax check failed: '+file+'\n'+(result.stderr??result.stdout));checked.push(file);}
+ return {checked,seconds:(performance.now()-started)/1000};
+}
 export function selectTests(changed){
  const files=[...new Set(changed.map(f=>f.replaceAll('\\','/')))];
  const runtime=files.filter(f=>!/^work\/|^\.qa-output\//.test(f)&&!/\.md$/.test(f));
+ const syntaxFiles=runtime.filter(f=>/\.(?:mjs|cjs|js)$/.test(f)&&fs.existsSync(f)&&fs.statSync(f).isFile()).sort();
  const newsOnly=runtime.length>0&&runtime.every(f=>/^(scripts\/news\/|tests\/news.*\.test\.mjs$|content\/news-source-policy\.json$)/.test(f));
  const infrastructure=!newsOnly&&runtime.some(f=>/^(package\.json|pnpm-lock|qa\/|vite\.|tsconfig|eslint|build\/|scripts\/|\.github\/|performance-budgets)/.test(f));
  const unknown=!newsOnly&&runtime.some(f=>! /^(app\/|components\/|hooks\/|lib\/|migration\/|public\/|exports\/|tests\/)/.test(f));
@@ -43,9 +53,9 @@ export function selectTests(changed){
   else if(!infrastructure&&!unknown&&runtime.every(f=>/^(app\/update-history|tests\/update-history\.test\.mjs)/.test(f)))browser=['home','offline'];
   else if(!infrastructure&&!unknown&&runtime.every(f=>/^(app\/journey-inquir|tests\/journeys\.test\.mjs|exports\/content\/journey-inquiries\.json)/.test(f)))browser=['journeys','backup','offline'];
   else if(runtime.every(f=>/^tests\/.*\.test\.mjs$/.test(f)))browser=[];
-  else browser=['foundation','home','core','playground','backup','challenge','research','journeys','offline'];
+  else browser=REQUIRED_SUITES.filter(s=>s!=='news-feed');
  }
- return {scope:'local iteration only',fullRequiredBeforeReady:true,changed:files,unitTests,release:infrastructure||unknown||runtime.some(f=>f.startsWith('tests/release/')),browser,reason:infrastructure||unknown||deleted?'Unknown/shared/deleted input: conservative full selection':newsOnly?'News preparation server code only; no browser content changed':'Transitive unit dependencies and explicit browser-risk mapping; unknown UI changes select the full browser path'};
+ return {scope:'local iteration only',fullRequiredBeforeReady:true,changed:files,syntaxFiles,unitTests,release:infrastructure||unknown||runtime.some(f=>f.startsWith('tests/release/')),browser,reason:infrastructure||unknown||deleted?'Unknown/shared/deleted input: conservative full selection':newsOnly?'News preparation server code only; no browser content changed':'Transitive unit dependencies and explicit browser-risk mapping; unknown UI changes select the full browser path'};
 }
 function changedFiles(base){
  const git=(...a)=>execFileSync('git',a,{encoding:'utf8'}).trim().split('\n').filter(Boolean);
@@ -57,6 +67,7 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
  const plan=selectTests(provided>=0?args[provided+1].split(','):changedFiles(base>=0?args[base+1]:'origin/test-live'));
  console.log(JSON.stringify(plan,null,2));
  if(args.includes('--run')){
+  console.log('Changed Node module syntax',JSON.stringify(checkSyntaxFiles(plan.syntaxFiles)));
   const run=(command,argv,env=process.env)=>{const result=spawnSync(command,argv,{stdio:'inherit',env});if(result.status!==0)process.exit(result.status??1);};
   run('corepack',['pnpm','run','typecheck:fast']);run('corepack',['pnpm','run','lint:fast']);
   if(plan.unitTests.length)run(process.execPath,['--import','./scripts/test-runtime.mjs','--test',...plan.unitTests]);

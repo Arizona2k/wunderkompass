@@ -4,7 +4,8 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {measureBuild,violations,observedTrends} from '../scripts/performance-budget.mjs';
-import {selectTests} from '../scripts/test-selection.mjs';
+import {selectTests,checkSyntaxFiles} from '../scripts/test-selection.mjs';
+import {REQUIRED_SUITES} from '../scripts/quality-evidence.mjs';
 import {learningFingerprint} from '../build/learning-fingerprint.mjs';
 
 test('bundle budget includes transitive shared chunks once, excludes deferred readers, and fails oversize/missing metrics',()=>{
@@ -51,3 +52,10 @@ test('authorised aggregate growth stays measured while initial and individual bu
  assert.deepEqual(violations({...large,...c.build},c.build),[]);assert.equal(observedTrends(large,c.observeOnly).totalJsGzipBytes.current,50000000);assert.throws(()=>observedTrends({},c.observeOnly),/Missing observed/);
  for(const key of ['entryJsBytes','entryJsGzipBytes','entryCssBytes','entryCssGzipBytes','largestJsBytes','worldGeometryBytes']){assert.ok(c.build[key]>0);assert.equal(violations({...c.build,[key]:c.build[key]+1},c.build)[0].metric,key);}
 });
+
+test('local changed-module syntax rejects the actual duplicate-import failure before any browser execution',()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'wk-node-syntax-'));
+ try{const file=path.join(dir,'browser-module.mjs');fs.writeFileSync(file,"import {createHash} from 'node:crypto';\nimport {createHash} from 'node:crypto';\n");assert.throws(()=>checkSyntaxFiles([file]),/Node syntax check failed/);fs.writeFileSync(file,"import {createHash} from 'node:crypto';\nexport const hash = createHash;\n");assert.deepEqual(checkSyntaxFiles([file]).checked,[file]);assert.ok(selectTests(['tests/browser/foundation.mjs']).syntaxFiles.includes('tests/browser/foundation.mjs'));assert.deepEqual(selectTests(['README.md']).syntaxFiles,[]);assert.deepEqual(selectTests(['app/deleted-runtime-dependency.mjs']).syntaxFiles,[]);}finally{fs.rmSync(dir,{recursive:true,force:true});}
+});
+
+test('local conservative selection uses the same required UI groups as full acceptance',()=>{for(const file of ['unknown-runtime-input.js','scripts/quality-evidence.mjs','app/learning-data.ts'])assert.deepEqual(new Set(selectTests([file]).browser),new Set(REQUIRED_SUITES.filter(s=>s!=='news-feed')));assert.deepEqual(selectTests(['app/challenge-hints.json']).browser,['challenge','offline']);});
