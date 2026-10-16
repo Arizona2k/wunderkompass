@@ -1,5 +1,11 @@
 # Änderungsverlauf
 
+## Paket3.5 · Fokus behalten und alle Reviewbilder zählen (unveröffentlicht)
+
+- Tatsächlich reproduzierte Fokus-/Scrollübernahme nach frischer Tastatur-/Touch-/Mausbedienung behoben. Zwei ausstehende Navigationsframes dürfen eine gerade geöffnete Spielhilfe nicht mehr verlassen; Enter-Schließen und reguläre Rückkehrwege bleiben erhalten. Vier reale320/1440-Regressionsfälle, Fehlerscreenshot mit Kontext/SHA und fehlerschließende Aggregation ergänzt.
+- Reviewbericht zählt künftig sämtliche tatsächlich hochgeladenenPNG-Dateilisten einschließlich390/768-Enginebilder. Korrigierte CI73-Referenz401 Bilder/50327955Byte; alter397er-Ledger unverändert archiviert. Fehlende Breiten-/Byte-/Dateizuordnung scheitert. Alle24 individuellen Erfindungspläne behalten: insgesamt607211Byte, nur510513Byte mehr als die frühere Vierer-Auswahl;58Chromium-Pflichtbilder insgesamt. Kein Budgetauffüllen und keine alten Bilder entfernt.
+
+
 - QA-Reviewbudget auf exakt150.000.000Byte geändert, ausschließlich aufbewahrte Prüfbilder. Bestehendes Manifest berichtet Anzahl/Reserve/SHA-Dubletten und optionalen Vergleich gleicher Matrizen;0 Pflichtbilder entfernt, keine Produktions-/Offlinebudgetänderung. Zwei veraltete geschlossene native Testprofile gezielt bereinigt(7642821Byte); Originalbilder/Prüfberichte unverändert. Noch unveröffentlicht.
 
 ## Paket3.5 · Erfindungen genauer verstehen (unveröffentlicht)

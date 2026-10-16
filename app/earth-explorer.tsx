@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {useHashRoute,navigateHash,replaceHash,focusLearningMain,restoreRouteView} from "./hash-route";
+import {useHashRoute,navigateHash,replaceHash,focusLearningMain,scheduleRouteRestore} from "./hash-route";
 import { localId } from "./local-id";
 
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -136,9 +136,9 @@ export default function EarthExplorer(){
   useEffect(()=>{const parts=routePath.split('/');if(parts[0]==='book'&&['words','why','nature'].includes(parts[1])&&(parts[2]||parts[1]==='nature')){try{setBookLookup({tab:parts[1] as 'words'|'why'|'nature',term:decodeURIComponent(parts.slice(2).join('/'))});}catch{}}},[routePath]);
   // eslint-disable-next-line react-hooks/set-state-in-effect -- Apply external browser navigation.
   useEffect(()=>{const value=routePath.split('/')[0];if(MODES.includes(value)){setMode(value as Mode);setVisited(p=>new Set([...p,value]));setSpin(false);setTouchActive(false);}},[routePath]);
-  useEffect(()=>{if(routePath!=='games'||mode!=='games'||!/^game-knowledge-|^order-knowledge-|^game-route-/.test(history.state?.wunderFocus??''))return;const frame=requestAnimationFrame(()=>restoreRouteView('games'));return()=>cancelAnimationFrame(frame);},[routePath,mode]);
+  useEffect(()=>{if(routePath!=='games'||mode!=='games'||!/^game-knowledge-|^order-knowledge-|^game-route-/.test(history.state?.wunderFocus??''))return;return scheduleRouteRestore('games');},[routePath,mode]);
   // Restore after the parent tab becomes visible, not while its article is hidden.
-  useEffect(()=>{const visibleWorld=mode==='world'&&routePath.startsWith('world/'),visibleLab=mode==='labs'&&routePath.startsWith('labs/')&&!routePath.startsWith('labs/experiment/');if(!visibleWorld&&!visibleLab)return;const frame=requestAnimationFrame(()=>restoreRouteView(routePath));return()=>cancelAnimationFrame(frame);},[routePath,mode]);
+  useEffect(()=>{const visibleWorld=mode==='world'&&routePath.startsWith('world/'),visibleLab=mode==='labs'&&routePath.startsWith('labs/')&&!routePath.startsWith('labs/experiment/');if(!visibleWorld&&!visibleLab)return;return scheduleRouteRestore(routePath);},[routePath,mode]);
 
   useEffect(()=>{if(!local.ready||hydratedRevision===local.restoreRevision)return;
     // An imported/reset pass takes precedence over a reader's pre-import URL.

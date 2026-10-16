@@ -113,7 +113,7 @@
   "followupCandidates": {
     "chromium": "No extra shard/job/timeout adopted without a positive cost/stability comparison. Added actual per-width book matrix/navigation timings; immutable same-snapshot aggregation retained.",
     "screenshots": {
-      "adopted": "Preserve same-snapshot capture hashes across the final collector, including omitted originals; reject missing/altered/malformed sealed evidence. Original binaries unchanged.27 old plus2 new Nature critical images,48MiB gate unchanged.",
+      "adopted": "Preserve same-snapshot capture hashes across the final collector, including omitted originals; reject missing/altered/malformed sealed evidence. Original binaries unchanged.27 old plus2 new Nature critical images,48MiB gate unchanged. Historical budget; superseded16Oct by150000000Byte for review images only.",
       "rejectedExperiment": {
         "method": "PNG DEFLATE9 only, identical filtered pixels/dimensions/metadata",
         "images": 362,
@@ -1122,7 +1122,7 @@
   },
   "reviewStorageDecision": {
     "decidedOn": "2026-10-16",
-    "status": "Implemented in existing review curator; full new milestone pending",
+    "status": "Implemented in existing curator/collector; exact-head immutable completion evidence is in CI artifacts and PR27. Historical measurements below retain their own commit scope.",
     "limitBytes": 150000000,
     "scope": "Retained QA/review PNGs exclusively; production, initial-load, single-request and offline budgets unchanged.",
     "productionBudgetSha256": "4a2e4990bbf3da83068122d8220d30d1e390dc99a51dbbee57378a335e971466",
@@ -1314,7 +1314,7 @@
       "retainedBytesDelta": -31564,
       "meaning": "Quality72 versus73: same1530 captures/397 retained, including Firefox/WebKit. Tiny byte difference is capture variance, not newly achieved savings. Local Chromium-only379 images are not comparable to397 final-engine images."
     },
-    "decision": "Existing curation already avoids unnecessary long cards/overview binaries and uploads final collector JSON/XML only, without duplicating PNG artifacts. Ten byte-identical groups in local full proof include different width, restored switch state, quota versus source errors, partial versus identity failure and backup/display sections. Keep those contexts; no hash-based removal or new image store. Three omitted identical copies already have retained originals; no newly removed review image. No DEFLATE9 micro-optimization.",
+    "decision": "Existing curation already avoids unnecessary long cards/overview binaries and uploads final collector JSON/XML only, without duplicating PNG artifacts. Ten byte-identical groups in local full proof include different width, restored switch state, quota versus source errors, partial versus identity failure and backup/display sections. Keep those contexts; no hash-based removal or new image store. Three omitted identical copies already have retained originals; no newly removed review image. No DEFLATE9 micro-optimization. Original curated397 count was not total actual stored401; see audited actualUploadedReference. This discrepancy is now fail-closed in the existing collector; do not compare397 to future actual count as if all additional images were newly stored.",
     "cleanup": {
       "scope": "Two closed profiles from completed superseded targeted native capture probe only; no sealed evidence, capture, report or source removed. Both helpers create fresh profiles before every run. Latest invention/cold-offline and all full-run profiles remain.",
       "removed": [
@@ -1337,6 +1337,179 @@
       "removedBytes": 7642821
     },
     "unchanged": "All existing mandatory captures and full matrices, PNG bytes/hashes, source/commit/build sealing, failure captures and all tests remain; new invention images add five mandatory captures. Historical sealed proofs and raw original instructions unchanged.",
-    "next": "Stop image optimization after acceptance; resume prepared invention and other open product waves in sole BACKLOG."
+    "next": "Stop image optimization after acceptance; resume prepared invention and other open product waves in sole BACKLOG.",
+    "actualUploadedReference": {
+      "runId": 38818861035,
+      "head": "73f5df2f2aec50b735001f0e87a71f32b2934418",
+      "testedCommit": "d9ef7db3bde96a836991b021428b5c78213eb1f9",
+      "sourceDigest": "3d265353b23c90f83afc56cb4cabb7170f482de1bed0b9981d2843aafeecdc40",
+      "build": "cf0ec3172193801e",
+      "generatedImages": 1530,
+      "actuallyUploadedImages": 401,
+      "actuallyUploadedPngBytes": 50327955,
+      "reserveUnder150MB": 99672045,
+      "chromium": {
+        "count": 379,
+        "bytes": 48975238
+      },
+      "firefox": {
+        "count": 11,
+        "bytes": 664108
+      },
+      "webkit": {
+        "count": 11,
+        "bytes": 688609
+      },
+      "previousCuratedLedger": {
+        "images": 397,
+        "bytes": 50025849,
+        "originalSha256": "4ab38838da613952f679beeee1be904f8a7bfd80422d1a17ed5b6f397f3249c3"
+      },
+      "accountingGap": {
+        "images": 4,
+        "bytes": 302106,
+        "reason": "Engine390/768 PNGs were already uploaded in the separate browser artifacts but omitted from the final curated count. Future collector counts all four widths and verifies total count/bytes against all actually uploaded job-file lists. No new engine storage or retrospective change of sealed evidence."
+      },
+      "verification": "Original Firefox/WebKit artifact file bytes/SHA256 match their sealed job-proof lists and same run/commit/source/build; Chromium retained bytes match the original CI73 log. Final collector ledger extracted unchanged from artifact12013916501."
+    },
+    "criticalNewEvidence": {
+      "inventionDiagrams": 24,
+      "distinctSha256": 24,
+      "candidateBytes": 607211,
+      "additionalBytesVersusFourRepresentativeDiagrams": 510513,
+      "reason": "Individually corrected models and labels/line breaks justify all12 mobile+desktop originals; no extra capture/render, only retain already generated originals. Adds20 critical originals, not an attempt to fill150MB.",
+      "pendingRouteFocus": 4,
+      "mandatoryChromiumImages": 58,
+      "allExistingMandatoryImagesPreserved": true
+    },
+    "newChecks": "Exact decimal ceiling inclusive; corrupt/missing/changed sealed evidence still rejected; no automatic hash deduplication. Missing engine320/390/768/1440 originals or count/byte disagreement between final manifest and actual uploads reject collection."
+  },
+  "local74Acceptance": {
+    "head": "86388249ede1d12aede6d9e33e25e92a93f30f35",
+    "sourceDigest": "cf2eafd4cbdc423f8ffd2f813c5e5ab7b0e45c30543a9ae68cc8b067c87e6972",
+    "build": "ec38e9431c0a8abc",
+    "status": "passed",
+    "seconds": 1886.573765729,
+    "checks": 141,
+    "unitCases": 168,
+    "releaseCases": 27,
+    "exports": 42,
+    "inventoryRecords": 2200,
+    "generatedImages": 1534,
+    "curatedImages": 384,
+    "curatedBytes": 45907999,
+    "scope": "Complete local Chromium only, before the subsequent route-focus guard and final storage-accounting refinements; not acceptance of the next source/commit. Curated originals/reports saved separately without profiles/build duplication."
+  },
+  "quality74Followup": {
+    "runId": 38858257342,
+    "head": "86388249ede1d12aede6d9e33e25e92a93f30f35",
+    "testedCommit": "02af7d9efbf0585dfabcf471d2c647dab8bd69a9",
+    "status": "failure",
+    "standards": "success",
+    "chromium": "failure at foundation.mjs55: Enter did not close the native game guide; completed widths320/360/390/768/1024, failure on1440. Original failure artifact had JSON but no failure PNG.",
+    "firefox": {
+      "status": "success",
+      "seconds": 933.615220007,
+      "inventionCases": 48
+    },
+    "webkit": {
+      "status": "success",
+      "seconds": 751.578696021,
+      "inventionCases": 48
+    },
+    "required": "failure",
+    "reproduction": {
+      "before": [
+        {
+          "width": 320,
+          "pending": 2,
+          "before": true,
+          "after": {
+            "tag": "MAIN",
+            "id": "learning-main",
+            "className": "learning-main"
+          },
+          "focused": false,
+          "closed": false
+        },
+        {
+          "width": 1440,
+          "pending": 2,
+          "before": true,
+          "after": {
+            "tag": "MAIN",
+            "id": "learning-main",
+            "className": "learning-main"
+          },
+          "focused": false,
+          "closed": false
+        }
+      ],
+      "after": [
+        {
+          "width": 320,
+          "input": "keyboard",
+          "pendingFrames": 2,
+          "trustedInput": true,
+          "focused": true,
+          "closed": true,
+          "scrollKept": true,
+          "beforeY": 7666,
+          "afterY": 7666,
+          "active": {
+            "tag": "SUMMARY",
+            "id": ""
+          }
+        },
+        {
+          "width": 320,
+          "input": "pointer",
+          "pendingFrames": 2,
+          "trustedInput": true,
+          "focused": true,
+          "closed": true,
+          "scrollKept": true,
+          "beforeY": 7666,
+          "afterY": 7666,
+          "active": {
+            "tag": "SUMMARY",
+            "id": ""
+          }
+        },
+        {
+          "width": 1440,
+          "input": "keyboard",
+          "pendingFrames": 2,
+          "trustedInput": true,
+          "focused": true,
+          "closed": true,
+          "scrollKept": true,
+          "beforeY": 2511,
+          "afterY": 2511,
+          "active": {
+            "tag": "SUMMARY",
+            "id": ""
+          }
+        },
+        {
+          "width": 1440,
+          "input": "pointer",
+          "pendingFrames": 2,
+          "trustedInput": true,
+          "focused": true,
+          "closed": true,
+          "scrollKept": true,
+          "beforeY": 2511,
+          "afterY": 2511,
+          "active": {
+            "tag": "SUMMARY",
+            "id": ""
+          }
+        }
+      ]
+    },
+    "fix": "Two real pending navigation frames stole focus and scroll after fresh input. Deferred restores now cancel on trusted key/pointer input and remove temporary listeners. Normal routing/Back restore remains. Permanent four-case320/1440 keyboard/touch/mouse browser regression with unchanged scroll, focus and second-Enter closure; fail-closed aggregation. Original seven-width disclosure assertions kept and strengthened; unexpected component failures additionally save context and original PNG checksum.",
+    "visualReview": "Actual old/new320 screenshots inspected: old jumps to top/MAIN; new preserves open guide and visible focus. Actual CI74 Firefox/WebKit phone320 originals inspected after verifying every artifact file hash.",
+    "acceptance": "Targeted reproduction/fix checks pass, new complete immutable local/GitHub acceptance still required; no retries/skips/timeout increases."
   }
 }

@@ -16,9 +16,11 @@ export function assertSnapshot(actual,expected){
  if(!/^(?:local|[0-9]+)$/.test(actual.runId)||!/^[0-9]+$/.test(actual.attempt))throw Error('Malformed quality run identity');
  if(!/^[a-f0-9]{40}$/.test(actual.testedCommit)||!/^[a-f0-9]{64}$/.test(actual.sourceDigest)||!/^[a-f0-9]{16}$/.test(actual.build))throw Error('Malformed quality snapshot');
 }
-export function validateCollectedProofs(proofs,expected){
+export function validateCollectedProofs(proofs,expected,review=null){
  if(!Array.isArray(proofs)||proofs.length!==3||new Set(proofs.map(p=>p.kind)).size!==3)throw Error('All three independent browser jobs required');
  for(const kind of ['chromium','firefox','webkit']){const proof=proofs.find(p=>p.kind===kind);assertSnapshot(proof,expected);if(proof.status!=='passed'||!Number.isFinite(proof.seconds)||proof.seconds<=0||!Array.isArray(proof.files)||!proof.files.length)throw Error('Missing or failed browser job '+kind);}
+ for(const kind of ['firefox','webkit'])for(const width of [320,390,768,1440])if(!proofs.find(p=>p.kind===kind).files.some(f=>f.file==='journey-engine-'+kind+'-'+width+'.png'))throw Error('Missing required engine image '+kind+' '+width);
+ if(review){const images=proofs.flatMap(p=>p.files).filter(f=>f.file.endsWith('.png'));if(new Set(images.map(f=>f.file)).size!==images.length||images.length!==review.storage?.retainedImages||images.reduce((sum,f)=>sum+f.bytes,0)!==review.retainedBytes)throw Error('Uploaded screenshot accounting differs from retained review images');}
 }
 async function copy(from,to){await fs.mkdir(path.dirname(to),{recursive:true});await fs.copyFile(from,to);}
 async function pack(){
@@ -62,7 +64,7 @@ async function collect(){
  await createHandoff(await read('.qa-output/portable-report.json'),'.qa-output',{requiredEngines:['firefox','webkit']});
  await fs.writeFile('.qa-output/ci-cost-observations.json',JSON.stringify({meaning:'Measured browser execution sum; full runner setup/upload minutes must also be read from GitHub job timestamps. No zero-cost or total improvement guarantee.',...expected,browserSeconds:proofs.reduce((n,p)=>n+p.seconds,0),browserWallSeconds:Math.max(...proofs.map(p=>p.seconds)),jobs:proofs.map(({kind,seconds})=>({kind,seconds})),maximumConcurrentBrowserJobs:3},null,2));
  // Only reuse the capture ledger whose bytes were sealed by this run's validated Chromium job.
- await prepareReview('.qa-output',{sealedCaptureLedger:await read('work/quality-chromium/review-manifest.json')});console.log('All required same-commit browser and engine evidence accepted. No merge or release authorization.');
+ const review=await prepareReview('.qa-output',{sealedCaptureLedger:await read('work/quality-chromium/review-manifest.json')});validateCollectedProofs(proofs,expected,review);console.log(JSON.stringify({stage:'actual-uploaded-review-images',images:review.storage.retainedImages,bytes:review.retainedBytes,reserveBytes:review.storage.reserveBytes}));console.log('All required same-commit browser and engine evidence accepted. No merge or release authorization.');
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  const [action,kind]=process.argv.slice(2);if(action==='pack')await pack();else if(action==='restore')await restore();else if(action==='job')await job(kind);else if(action==='collect')await collect();else throw Error('Use pack, restore, job KIND or collect');

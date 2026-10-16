@@ -37,4 +37,15 @@ export function restoreRouteView(path:string,focus=true){
  }
  else focusLearningMain();
 }
-export function useHashRoute(restore=true){const first=useRef(true);const path=useSyncExternalStore(subscribe,read,()=> 'globe');useEffect(()=>{const initial=first.current;first.current=false;if(!restore||path==='globe'||path==='updates'||path.startsWith('news'))return;const frame=requestAnimationFrame(()=>restoreRouteView(path,!initial||!!history.state?.wunderRoute));return()=>cancelAnimationFrame(frame);},[path,restore]);return path;}
+// A user can already be operating the new view before its deferred navigation
+// frame runs. Never steal that focus or scroll position after fresh input.
+export function scheduleRouteRestore(path:string,focus=true){
+ let pending=true;
+ const detach=()=>{window.removeEventListener('keydown',interact,true);window.removeEventListener('pointerdown',interact,true);};
+ const cancel=()=>{if(!pending)return;pending=false;cancelAnimationFrame(frame);detach();};
+ const interact=(event:Event)=>{if(event.isTrusted)cancel();};
+ const frame=requestAnimationFrame(()=>{if(!pending)return;pending=false;detach();restoreRouteView(path,focus);});
+ window.addEventListener('keydown',interact,true);window.addEventListener('pointerdown',interact,true);
+ return cancel;
+}
+export function useHashRoute(restore=true){const first=useRef(true);const path=useSyncExternalStore(subscribe,read,()=> 'globe');useEffect(()=>{const initial=first.current;first.current=false;if(!restore||path==='globe'||path==='updates'||path.startsWith('news'))return;return scheduleRouteRestore(path,!initial||!!history.state?.wunderRoute);},[path,restore]);return path;}

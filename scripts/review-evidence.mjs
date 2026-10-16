@@ -3,6 +3,7 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {sourceDigest} from './handoff.mjs';
+import worldIndex from '../app/world-index.json' with {type:'json'};
 // Decimal MB, exclusively retained review PNGs; no production/offline budget.
 export const REVIEW_LIMIT=150_000_000;
 export function reviewStorage(screenshots,retainedBytes,{previous=null}={}){
@@ -22,11 +23,12 @@ export function reviewStorage(screenshots,retainedBytes,{previous=null}={}){
 export const requiredScreenshots=[...['320','360','390','768','1024','1440','1920'].flatMap(w=>['quality-foundation-foundation-labs-'+w+'.png','quality-learning-journey-links-'+w+'.png']),...['320','1440'].flatMap(w=>['quality-news-feed-signed-news-rejected-'+w+'.png','quality-navigation-updates-all-details-'+w+'-full.png'])];
 requiredScreenshots.push(...[320,1440].map(width=>'quality-learning-nature-model-grand-canyon-phase-3-'+width+'.png'));
 requiredScreenshots.push(...['source-5-320','source-25-320','starter-30-320','starter-35-320','starter-48-320','starter-59-320','59-1440','native-200-large','overview-320'].map(key=>'quality-book-why-'+key+'.png'));
-requiredScreenshots.push(...[320,1440].flatMap(width=>['phone','printing'].map(id=>'quality-navigation-invention-model-invention-'+id+'-'+width+'.png')),'quality-navigation-invention-native-200-large.png');
+requiredScreenshots.push(...[320,1440].flatMap(width=>worldIndex.filter(t=>t.category==='inventions').map(t=>'quality-navigation-invention-model-'+t.id+'-'+width+'.png')),'quality-navigation-invention-native-200-large.png');
+requiredScreenshots.push(...[320,1440].flatMap(width=>['keyboard','pointer'].map(input=>'quality-foundation-foundation-route-focus-'+input+'-'+width+'.png')));
 export function retainScreenshot(name){
- // New invention captures: every original is hashed; show legible phone/press
- // mobile+desktop diagrams and actual native zoom. All old mandatory images stay.
- if(/^quality-navigation-invention-/.test(name))return /invention-(?:model-invention-(?:phone|printing)-(?:320|1440)|native-200-large)\.png$/.test(name);
+ // Individually changed diagrams/labels have distinct review value: all12
+ // mobile+desktop plans total only0.61MB. Preserve the actual native zoom too.
+ if(/^quality-navigation-invention-/.test(name))return /invention-(?:model-invention-[a-z0-9-]+-(?:320|1440)|native-200-large)\.png$/.test(name);
  // All120 full Why cards are captured and hashed. Retain readable evidence of
  // partial sources, four new domains, desktop, native zoom and the mobile overview.
  if(/quality-book-why-/.test(name))return /why-(?:(?:source-(?:5|25)|starter-(?:30|35|48|59))-320|59-1440|native-200-large|overview-320)\.png$/.test(name);
@@ -34,8 +36,9 @@ export function retainScreenshot(name){
  // and native combined zoom instead of seven very long cards at both widths.
  if(/quality-(?:learning|book)-book-/.test(name))return /book-(?:model-(?:length|duration|temperature)-(?:320|1440)|temperature-large-320|native-200-large)\.png$/.test(name);
  if(/quality-(?:learning|research)-science-/.test(name))return /science-(?:native-200-large|(?:surface-tension|encryption)-large-320)\.png$/.test(name)||/science-(pressure|diffusion|fractals|cell|fusion|comet|exoplanet)-(hero|model)-(320|1440)\.png$/.test(name);
- // Engine tests still capture/measure four widths; upload mobile+desktop originals.
- if(name.startsWith('journey-engine-'))return /-(320|1440)\.png$/.test(name);
+ // Engine jobs already upload their four-width originals. Count every actually
+ // stored PNG in the final budget as well, rather than hiding390/768 there.
+ if(name.startsWith('journey-engine-'))return true;
  if(name.startsWith('quality-foundation-')||name.startsWith('quality-news-feed-'))return true;
  if(/quality-learning-journey-large-focus-/.test(name))return /-(320|1440)\.png$/.test(name);
  // Repeated desktop long overviews are represented by mobile full histories and

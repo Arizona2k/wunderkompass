@@ -1,10 +1,17 @@
 import test from 'node:test';import assert from 'node:assert/strict';import {assertSnapshot,validateCollectedProofs}from'../scripts/quality-artifacts.mjs';
 const snapshot={runId:'1234',attempt:'1',testedCommit:'a'.repeat(40),sourceDigest:'b'.repeat(64),build:'c'.repeat(16)};
-const proofs=()=>['chromium','firefox','webkit'].map(kind=>({kind,status:'passed',...snapshot,seconds:10,files:[{file:'actual.json',bytes:1,sha256:'d'.repeat(64)}]}));
+const proofs=()=>['chromium','firefox','webkit'].map(kind=>({kind,status:'passed',...snapshot,seconds:10,files:[{file:'actual.json',bytes:1,sha256:'d'.repeat(64)},...(kind==='chromium'?[]:[320,390,768,1440].map(width=>({file:'journey-engine-'+kind+'-'+width+'.png',bytes:1,sha256:'e'.repeat(64)})))]}));
 test('separate runner evidence cannot pass with a missing/failed job, mixed commit/build/digest, duplicate kind or empty proof',()=>{
  assert.doesNotThrow(()=>validateCollectedProofs(proofs(),snapshot));
  for(const change of [p=>{p[1].runId='1233';},p=>{p[2].attempt='2';},p=>p.pop(),p=>{p[0].kind='firefox';},p=>{p[1].testedCommit='e'.repeat(40);},p=>{p[2].sourceDigest='e'.repeat(64);},p=>{p[0].build='e'.repeat(16);},p=>{p[1].status='running';},p=>{p[1].seconds=0;},p=>{p[0].files=[];},p=>{delete p[2].sourceDigest;}]){const p=proofs();change(p);assert.throws(()=>validateCollectedProofs(p,snapshot));}
  assert.throws(()=>assertSnapshot({testedCommit:'same',sourceDigest:'same',build:'same',runId:'local',attempt:'1'},{testedCommit:'same',sourceDigest:'same',build:'same',runId:'local',attempt:'1'}),/Malformed/);
+ for(const kind of ['firefox','webkit'])for(const width of [320,390,768,1440]){const p=proofs();p.find(p=>p.kind===kind).files=p.find(p=>p.kind===kind).files.filter(f=>f.file!=='journey-engine-'+kind+'-'+width+'.png');assert.throws(()=>validateCollectedProofs(p,snapshot),/Missing required engine image/);}
+});
+
+test('final image budget accounts for every actually uploaded PNG once, including intermediate engine widths',()=>{
+ const p=proofs(),review={storage:{retainedImages:8},retainedBytes:8};assert.doesNotThrow(()=>validateCollectedProofs(p,snapshot,review));
+ for(const changed of [{...review,retainedBytes:7},{...review,storage:{retainedImages:7}}])assert.throws(()=>validateCollectedProofs(p,snapshot,changed),/Uploaded screenshot accounting/);
+ const duplicate=proofs();duplicate[0].files.push({...duplicate[1].files[1]});assert.throws(()=>validateCollectedProofs(duplicate,snapshot,{storage:{retainedImages:9},retainedBytes:9}),/Uploaded screenshot accounting/);
 });
 
 import {engineComplete}from'../scripts/handoff.mjs';
