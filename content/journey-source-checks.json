@@ -95,5 +95,92 @@
       "rights": "Nur Originalverweis und eigene Erklärung, keine fremden Texte/Bilder eingebunden.",
       "limitation": "Keine pauschale Freigabe aller Kapitelbehauptungen."
     }
-  ]
+  ],
+  "followUp20261016": {
+    "reviewer": "Codex",
+    "checkedOn": "2026-10-16",
+    "method": "Originalseiten über vorhandenen Web-Lesezugang tatsächlich geöffnet, passende Textabschnitte gelesen und mit vorhandenen eigenen Kapiteltexten verglichen. Keine News-Automation oder regelmäßigen Abrufe.",
+    "independentHumanReview": false,
+    "rights": "Nur überprüfbare Originalverweise und eigene deutsche Erklärungen; keine fremden Artikel, Bilder, Grafiken oder Logos übernommen.",
+    "oldChecksPreserved": true,
+    "chapters": [
+      {
+        "id": "ocean:0",
+        "sources": [
+          "ocean-basins",
+          "ocean-sizes"
+        ],
+        "checkedClaims": [
+          "Ein zusammenhängendes Weltmeer, in fünf benannte Regionen gegliedert.",
+          "Größter/kleinster Ozean entsprechend der Rangfolge der NOAA-Seite."
+        ],
+        "change": "Allgemeine Korallenquelle als Kapitelbeleg durch passende Becken-/Größenquellen ersetzt; Beobachtung von politischer Ländergrenze auf einen nur über Wasser führenden Weg präzisiert."
+      },
+      {
+        "id": "ocean:1",
+        "sources": [
+          "ocean-salt"
+        ],
+        "checkedClaims": [
+          "Gelöste Stoffe aus Gesteinen an Land und aus dem Meeresboden.",
+          "Salzgehalt variiert mit Verdunstung, Regen und Süßwasserzufluss."
+        ],
+        "change": "Vorhandenen passenden Salzbeleg erhalten und erneut gegen den ausgewählten Inhalt abgeglichen. Falsche Quellenformulierung über Magma aus dem Erdkern weiterhin nicht übernommen."
+      },
+      {
+        "id": "ocean:2",
+        "sources": [
+          "ocean-base",
+          "ocean-coral-symbiosis",
+          "ocean-coral-range"
+        ],
+        "checkedClaims": [
+          "Polypen sind Tiere, Steinkorallen bauen Kalkskelette.",
+          "Viele Flachwasserkorallen nutzen Algenpartner und Licht.",
+          "Auch kaltes dunkles Tiefwasser kann von riffbildenden Steinkorallen besiedelt sein."
+        ],
+        "change": "Konkrete Symbiose-/Verbreitungsquellen ergänzt; freiwillige Vertiefung unterscheidet Flachwasserriffe und Tiefseeriffe ausdrücklich."
+      },
+      {
+        "id": "ocean:3",
+        "sources": [
+          "ocean-light",
+          "ocean-pressure",
+          "ocean-depth",
+          "ocean-bioluminescence"
+        ],
+        "checkedClaims": [
+          "Mit der Tiefe nimmt das Sonnenlicht ab und der Wasserdruck zu.",
+          "Einige Meereslebewesen erzeugen Licht; nicht alle Tiere leuchten.",
+          "Challenger Deep im Marianengraben ist ungefähr elf Kilometer tief."
+        ],
+        "change": "Vier fachlich passende Originalbelege statt einer allgemeinen Korallenseite; nicht als vollständige Abnahme aller Anpassungs-/Temperatur-/Bilddetails ausgeben."
+      },
+      {
+        "id": "ocean:4",
+        "sources": [
+          "ocean-currents",
+          "ocean-tides",
+          "ocean-waves"
+        ],
+        "checkedClaims": [
+          "Strömungen bewegen Wasser zwischen Orten und werden durch Wind, Dichteunterschiede und Gezeiten angetrieben.",
+          "Gezeiten reagieren auf Mond und Sonne.",
+          "Eine fortschreitende Welle bedeutet nicht, dass jedes Wasserteilchen die ganze Strecke mitreist."
+        ],
+        "change": "Vorhandenen Strömungsbeleg erhalten, Wellen-/Gezeitenbelege ergänzen die unterschiedlichen Aussagen."
+      }
+    ],
+    "rejectedEvidence": [
+      {
+        "url": "https://www.ngdc.noaa.gov/mgg/global/etopo1_ocean_volumes.html",
+        "finding": "Weiterleitung auf allgemeine ETOPO-Modellseite, keine dort direkt gelesene alte Größentabelle als Beleg ausgegeben; stattdessen direkte NOAA-Seite zur Rangfolge verwendet."
+      }
+    ],
+    "limits": [
+      "Selbstprüfung ausgewählter Aussagen in fünf bestehenden Kapiteln, keine unabhängige Fachabnahme oder Freigabe aller80 Kapitel.",
+      "Alle80 Fragen-/Grafik-/Kinder-/Gerätegates und übrigen Kapitelprüfungen bleiben offen.",
+      "Keine neuen Kapitel oder neuen Wissensartikel gezählt."
+    ]
+  }
 }

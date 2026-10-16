@@ -457,9 +457,10 @@
           "starter": "Fünf Ozeane haben eigene Namen. Ihr Wasser ist miteinander verbunden.",
           "deeper": "Benennungen und Abgrenzungen sind Vereinbarungen. Unser Fünf-Ozeane-Modell ist eine Orientierungshilfe, keine Trennung in fünf geschlossene Behälter.",
           "whyItMatters": "Du liest Meeresnamen auf einer Karte, ohne das Weltmeer in getrennte Seen zu verwandeln.",
-          "observe": "Verfolge auf der Kugel einen möglichen Wasserweg zwischen Atlantik und Pazifik. Du brauchst dafür keine Ländergrenze zu überqueren.",
+          "observe": "Verfolge auf der Kugel einen möglichen Wasserweg zwischen Atlantik und Pazifik. Kannst du einen Weg finden, der nur über Wasser führt? Die gedachten Ozeangrenzen sind keine Wände.",
           "sourceIds": [
-            "ocean-base"
+            "ocean-basins",
+            "ocean-sizes"
           ]
         },
         {
@@ -471,7 +472,6 @@
           "whyItMatters": "Du kannst Wassertransport und Stofftransport auseinanderhalten.",
           "observe": "Zeichne zwei Pfeile: Wasser ins Meer und Wasser in die Luft. Beschrifte, bei welchem Pfeil gelöste Salze mitreisen können. Kein Meerwasser probieren.",
           "sourceIds": [
-            "ocean-base",
             "ocean-salt"
           ]
         },
@@ -480,11 +480,13 @@
           "text": "Ein Korallenriff wird von vielen winzigen Korallentieren aufgebaut. Viele riffbildende Korallen leben mit kleinen Algen zusammen. Die Algen brauchen Sonnenlicht. Deshalb wachsen solche Riffe meistens in flachem, warmem, klarem Meerwasser.\n\nEin Korallentier ist klein; sein gemeinsam gebauter Lebensraum kann groß sein. Kalkskelett und lebendes Tier sind nicht dasselbe. Viele andere Arten nutzen das Riff als Zuhause.",
           "fact": "Ein Riff bietet Fischen, Krebsen und vielen anderen Lebewesen Verstecke und Nahrung.",
           "starter": "Korallen sind Tiere. Viele kleine Polypen bauen zusammen ein Riff.",
-          "deeper": "Nicht alle Korallen bauen tropische Flachwasserriffe. Unsere Erklärung beschreibt besonders riffbildende Korallen mit ihren Algenpartnern.",
+          "deeper": "Auch im kalten, dunklen Meer können manche Steinkorallen Riffe aufbauen. Unser Bild zeigt warme Flachwasserriffe mit Algenpartnern und beschreibt nicht alle Korallen.",
           "whyItMatters": "Du erkennst die Zusammenarbeit und den Unterschied zwischen Organismus und Lebensraum.",
           "observe": "Betrachte die Korallenkarte. Zeige das Tier, sein Skelett und Tiere, die im Riff leben, als drei verschiedene Teile deiner Erklärung.",
           "sourceIds": [
-            "ocean-base"
+            "ocean-base",
+            "ocean-coral-symbiosis",
+            "ocean-coral-range"
           ]
         },
         {
@@ -496,7 +498,10 @@
           "whyItMatters": "Du vermeidest den Schluss dunkel gleich unbewohnt.",
           "observe": "Vergleiche im Schaubild Oberfläche und Tiefe. Welche Bedingungen ändern sich? Erkläre, warum ein Tier nicht überall dieselben Bedingungen vorfindet.",
           "sourceIds": [
-            "ocean-base"
+            "ocean-light",
+            "ocean-pressure",
+            "ocean-depth",
+            "ocean-bioluminescence"
           ]
         },
         {
@@ -508,8 +513,9 @@
           "whyItMatters": "Du beschreibst Meerwasser genauer als mit alles bewegt sich.",
           "observe": "Vergleiche Strömungs- und Gezeitenmodell. Beschreibe einmal eine Bewegung entlang einer Strecke und einmal eine Änderung der Wasserhöhe.",
           "sourceIds": [
-            "ocean-base",
-            "ocean-currents"
+            "ocean-currents",
+            "ocean-tides",
+            "ocean-waves"
           ]
         }
       ],

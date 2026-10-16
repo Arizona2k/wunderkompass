@@ -671,7 +671,7 @@
         "9-11": "Grundtext und zusätzliche Erklärung",
         "12-14": "Benennungen und Abgrenzungen sind Vereinbarungen. Unser Fünf-Ozeane-Modell ist eine Orientierungshilfe, keine Trennung in fünf geschlossene Behälter."
       },
-      "observation": "Verfolge auf der Kugel einen möglichen Wasserweg zwischen Atlantik und Pazifik. Du brauchst dafür keine Ländergrenze zu überqueren.",
+      "observation": "Verfolge auf der Kugel einen möglichen Wasserweg zwischen Atlantik und Pazifik. Kannst du einen Weg finden, der nur über Wasser führt? Die gedachten Ozeangrenzen sind keine Wände.",
       "whyItMatters": "Du liest Meeresnamen auf einer Karte, ohne das Weltmeer in getrennte Seen zu verwandeln.",
       "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
       "existingTasks": {
@@ -679,10 +679,11 @@
         "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
       },
       "sources": [
-        "ocean-base"
+        "ocean-basins",
+        "ocean-sizes"
       ],
       "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
-      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "sourceStatus": "16.10.2026: konkrete unten benannte NOAA-Originalabschnitte selbst gegengeprüft; Quellen direkt diesem Kapitel zugeordnet. Keine unabhängige vollständige Fach-/Kinder-/Grafikabnahme.",
       "currentTextHash": "097d0f1e3c887207edb8372ec3048aef30d6aca9039203a20716ee20a3e43e2b"
     },
     {
@@ -705,11 +706,10 @@
         "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
       },
       "sources": [
-        "ocean-base",
         "ocean-salt"
       ],
       "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
-      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "sourceStatus": "16.10.2026: konkrete unten benannte NOAA-Originalabschnitte selbst gegengeprüft; Quellen direkt diesem Kapitel zugeordnet. Keine unabhängige vollständige Fach-/Kinder-/Grafikabnahme.",
       "currentTextHash": "bbcf758ef73fff3e3b1d4215cfcc2358fbc63f2a3b0d5b5d15be5c60d865dbb4"
     },
     {
@@ -722,7 +722,7 @@
       "ages": {
         "6-8": "Korallen sind Tiere. Viele kleine Polypen bauen zusammen ein Riff.",
         "9-11": "Grundtext und zusätzliche Erklärung",
-        "12-14": "Nicht alle Korallen bauen tropische Flachwasserriffe. Unsere Erklärung beschreibt besonders riffbildende Korallen mit ihren Algenpartnern."
+        "12-14": "Auch im kalten, dunklen Meer können manche Steinkorallen Riffe aufbauen. Unser Bild zeigt warme Flachwasserriffe mit Algenpartnern und beschreibt nicht alle Korallen."
       },
       "observation": "Betrachte die Korallenkarte. Zeige das Tier, sein Skelett und Tiere, die im Riff leben, als drei verschiedene Teile deiner Erklärung.",
       "whyItMatters": "Du erkennst die Zusammenarbeit und den Unterschied zwischen Organismus und Lebensraum.",
@@ -732,10 +732,12 @@
         "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
       },
       "sources": [
-        "ocean-base"
+        "ocean-base",
+        "ocean-coral-symbiosis",
+        "ocean-coral-range"
       ],
       "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
-      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "sourceStatus": "16.10.2026: konkrete unten benannte NOAA-Originalabschnitte selbst gegengeprüft; Quellen direkt diesem Kapitel zugeordnet. Keine unabhängige vollständige Fach-/Kinder-/Grafikabnahme.",
       "currentTextHash": "3389e71c57405ea00d99ef8df825fb375138e4a460bbda0bbc1c9535226e9294"
     },
     {
@@ -758,10 +760,13 @@
         "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
       },
       "sources": [
-        "ocean-base"
+        "ocean-light",
+        "ocean-pressure",
+        "ocean-depth",
+        "ocean-bioluminescence"
       ],
       "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
-      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "sourceStatus": "16.10.2026: konkrete unten benannte NOAA-Originalabschnitte selbst gegengeprüft; Quellen direkt diesem Kapitel zugeordnet. Keine unabhängige vollständige Fach-/Kinder-/Grafikabnahme.",
       "currentTextHash": "0d77357065929e2234e499845ee080fc383b0dbf3192c0a26634271673cdc936"
     },
     {
@@ -784,11 +789,12 @@
         "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
       },
       "sources": [
-        "ocean-base",
-        "ocean-currents"
+        "ocean-currents",
+        "ocean-tides",
+        "ocean-waves"
       ],
       "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
-      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "sourceStatus": "16.10.2026: konkrete unten benannte NOAA-Originalabschnitte selbst gegengeprüft; Quellen direkt diesem Kapitel zugeordnet. Keine unabhängige vollständige Fach-/Kinder-/Grafikabnahme.",
       "currentTextHash": "c1f31dd2e4d807689b93afc76745aa83d90603969a4811d458333283817f9ec5"
     },
     {

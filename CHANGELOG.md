@@ -1,5 +1,10 @@
 # Änderungsverlauf
 
+## Paket 3.5 – konkrete Quellen für die Meeres-Lernreise (noch unveröffentlicht)
+
+Fünf vorhandene Kapitel erhalten passende, tatsächlich gelesene NOAA-Originalbelege zu zusammenhängenden Ozeanbecken, Salz, Korallen, Licht, Druck, Tiefe, Gezeiten und Wellen. Die Beobachtung zu Ozeangrenzen vermeidet eine missverständliche politische Ländergrenze; die freiwillige Korallenvertiefung unterscheidet warme Flachwasserriffe von kalten Tiefseeriffen. Bestehende Absätze, Kapitel-/Fragen-/Antwortidentitäten, Modelle, Bilder und Fortschritte erhalten. Die bisherigen Quellenakten bleiben erhalten; neue Selbstprüfung ausdrücklich keine unabhängige Fach-/Kinderabnahme. Aktuelle Kapitelquellen und schmale Quellansichten im vorhandenen Browserpfad zusätzlich geprüft; tatsächlicher Endstatus im PR. Kein neues Kapitel gezählt, keine Veröffentlichung oder Newsentwicklung.
+
+
 ## Paket3.5 – Integration der übernommenen Chronik,16.10.2026 (noch unveröffentlicht)
 
 PR29 tatsächlich durch den Nutzer übernommen und am exakten test-live-Merge erfolgreich vonVercel bereitgestellt. Verbesserte historische Texte/Kategorien/Fokus- und nativeBildnachweise kontrolliert in den bestehenden PR27-Stand integriert; dessen Welt-/Buch-/Natur-/Erfindungs-/Bauwerks-/Reise-/Offline-/Browserbestand erhalten. Dieselbe vorbereitete Chronik-ID anhand wirklicher Merge-/Bereitstellungsquittung als verfügbar nachgeführt; PR27 bleibt unbestätigt. Die neue vollständige News-Pause und Paket3.5-Priorität in den bestehenden Regeln festgehalten. Keine weitere Newsentwicklung, Aktivierung, neuen Kosten oder eigene Veröffentlichung. Aktuelle tatsächliche Abnahme und Restumfang im PR/PROJECT_STATE.
