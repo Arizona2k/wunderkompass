@@ -172,3 +172,6 @@
 .building-comparison .model-buttons{margin-top:12px;flex-wrap:wrap}
 .building-discovery .structure-buttons{display:flex;flex-wrap:wrap;gap:10px}
 .building-discovery .structure-buttons button{flex:1 1 150px;min-height:44px;white-space:normal;overflow-wrap:break-word}
+
+.offline-progress progress{appearance:none;border:0;border-radius:999px;overflow:hidden;background:#dbe8ee}.offline-progress progress::-webkit-progress-bar{background:#dbe8ee;border-radius:999px}.offline-progress progress::-webkit-progress-value{background:#245d70;border-radius:999px}.offline-progress progress::-moz-progress-bar{background:#245d70;border-radius:999px}
+@media(forced-colors:active){.offline-progress progress::-webkit-progress-value{background:Highlight}.offline-progress progress::-moz-progress-bar{background:Highlight}}

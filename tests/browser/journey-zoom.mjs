@@ -1,3 +1,4 @@
+import {offlineResilience} from './offline-resilience.mjs';
 import {historyEngineView} from './discovery-central.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {whyAtZoom} from './why-learning.mjs';
@@ -28,6 +29,7 @@ export async function nativeJourneyZoom(chromium,options,base,report,shots,{book
   report.nativeHistory={percent:200,scale:dimensions.scale,...await historyEngineView(p,640,shots,{engine:'chromium-native',capture:name=>captureNativeViewport(p,path.join(shots,name))})};
   const blank=await context.newPage();
   try{await assert.rejects(captureNativeViewport(blank,path.join(shots,'history-native-blank-negative.png')),/Native screenshot is uniform/);report.nativeHistory.blankCaptureRejected=true;}finally{await blank.close();}
+  report.offlineNative=await offlineResilience(null,{port:4779,shots,kind:'chromium',context,native:true});
   }
   if(includeBook)await bookStudyAtZoom(p,report,capture);
   if(includeWhy)await whyAtZoom(p,report,capture);

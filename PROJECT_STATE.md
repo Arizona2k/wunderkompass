@@ -1,5 +1,27 @@
 # Aktiver Projektstand – Paket 3.5 / PR #27
 
+## Kontrollierter Folgeabgleich nach tatsächlichem Nutzermerge PR30
+
+PR30 vom Nutzer am16.10.2026 um21:23:32Z nachtest-live übernommen, Merge71255ec55833fa1c4056a5c95310fa4fb78b8a30. Jüngster Vercel-Bot-Erfolg56564217841 um21:23:51Z (vorherpending56564201868), bestehendes Projekt/Deployment7VaP7cwWzpp4Lf4AkPRWJH1yyn5a tatsächlich bestätigt. Keine eigeneÜbernahme/Veröffentlichung. DieselbeChronik-ID offline-learning-3-5 erhält diesenbelegtenStatus, kein zweiterEintrag; alle32vorherigenEinträge bleiben.
+
+VorAbgleich gesicherterPR27-Head c56a49effb74afd3335ed46723d760a8860fa6c5: vollständigerlokalerRoot2105,140s/147Prüflabels,184Unit/27Release/TS/Lint/Build/42Exporte2285Records undQuality88 allefünfJobs grün. Quelle51e69195621c35f68c4b2a03634fec0de25c3447f7bb49c36befcc2a5759b0d5, App781cf4c58df3b85d; lokaleunveränderte482PNG/55.280.963Byte undBerichte unterwork/p35-c56a49e-complete-proof, echteCI-Quittungenunterwork/p35-quality88-final. DieseNachweise bleibenam altenStand, nichtaufdenFolgemerge umetikettieren. CI88 Chromium2142,425s/Job36:54,Firefox1100,673s,WebKit935,456s; tatsächliche560CI-Bilder64.438.653Byte/85.561.347Reserve. Gegenüber80 andereerweiterteMatrix, keinekausaleBeschleunigung oderSpeicherersparnis behaupten.
+
+PR30-Fortschritts-/Quota-/Alt-Tab-/Native-/ganzerPass-Nachweise mit sämtlichenweiteren3.5-Inhalts-/Fokus-/Sicherheitsmatrizen kontrolliertzusammenführen. KeinblanketOurs, Reset, Datenverlust, zweitePrüfarchitektur oderneueGesamtplanung. DoppeltergeerbterHelper wurde vorBrowserstart perSyntaxcheckerkannt undeinmaligerhalten. NeueAbnahmeamkombiniertenStand erforderlich, exakteHead-/Test-/CIquittungimPR; Reservierung972b6733f7d83c39c5d30ba014f99212f7a2e5c1 nochunverändert bis korrekterÜbergabe.
+
+News vollständigpausiert; alle73neuen/73weiterenaltenWeltkarten undrestlichenWK053–058 samt80Kapitel/64Grafiken/240Aufgaben/31Spiele/11Labore/6Versuche/12Missionen sowieunabhängigenAbnahmen bleibenim einzigenBACKLOG erhalten. IsolierbarkeitderQuellen-/Lesbarkeitskorrekturgeprüft: app/journey-content.json undeigeneKapitelquellenexistierennoch nichtintest-live, daherkeinversteckterHalbrelease; verbleibenimkohärentenLernreisenabschnittvonPR27. WeiterevorbereiteteInhalts-/Lernwellen ausdemzentralenBACKLOG fortführen, nurmitgeklärtenAbhängigkeiten separatübergeben. Pakete4–8/WK038 undspätereIdeen unverändertspäter.
+
+
+## Historischer Übergabecheckpoint: eigenständiger Paket3.5-Abschnitt: Offline-Vorbereitung16.10.2026
+
+Serieller Durchlauf package-3-5-after-pr29-2026-10-16; Eigentümer972b6733f7d83c39c5d30ba014f99212f7a2e5c1. Bestehende3.5-Arbeit inPR27 und ursprünglicherHead2c23ad99152c53118bfd2d4484d65844c4650d05 vollständig erhalten, zusätzlich Git-Bundle gesichert; PR29 kontrolliert im selben Entwicklungsbranch als0688d17bb8bd714a4c1825ea4d6e7aa91768c743 integriert. 359Wissens-/Originaldateien bytegleich,183Unit/27Release/TS/Lint/Build/42Exporte2285Records am kombiniertenStand bestanden; vollständiger neuer GitHub-Lauf noch separat abzuwarten. Keine fachliche Gesamtfreigabe.
+
+Dieser eigenständig nutzbare Abschnitt basiert direkt auf dem tatsächlichen Nutzermerge vonPR29/test-live d63e946de8a02df2d0493e19081a7f07574b51cd. Übernahme16.10.19:33:03Z, vercel[bot] success56556024591 um19:33:21Z am exaktenMerge, vorherpending56556006623, bestehendesVercelprojekt unverändert. Chronik mit gleicherID nachgeführt; neuerOfflineeintrag bis eigenemNachweis vorbereitet. Kein Zugriff aufgeschütztenTestlink als persönlich geprüfteLive-UI behauptet.
+
+Bereits entwickelten Offline-Produktcode ausPR27 wiederverwenden: ganzeLernwelt/vollständigeEndassetliste, genaueGrößen-/SHA256-Prüfung jederneuen/wiederverwendetenDatei, maximal6Dateioperationen, realerDateizähler/Fehlerwiederholung, letztevollständigeFallbackversion/alteTabs/Quota. Keine neuenFachinhalte, Speicher-/Spiel-/Karten-/Kapitelkennungen oder Newsfunktionen übernehmen. Keine AbhängigkeitvonunfertigenBuch-/Natur-/Wissenschaftsdaten. AllebestehendenEndtests unverändertzuzüglichgezielterOfflinefälle; aktuellePflichtprüfungen/Ready-/Qualityquittung imzugehörigenPR, nichtausdemalten3.5-Meilenstein ableiten.
+
+NewsvollständigpausiertbisneuemexplizitemAuftrag; alteEntwicklung/Tests/Betriebsstände erhalten. Rest3.5/WK053–058 vollständigimzentralenBACKLOG/PR27;73neue/73weiterealteWeltkartenundKapitel-/Spiele-/Labor-/Modell-/Fach-/Kinder-/Gerätegates offen. Pakete4–8/WK038späterunverändert. NachNutzermergediesesfertigenAbschnitts relevanteKorrekturenkontrolliertnachPR27übernehmen; keineResetsoderDoppelentwicklung. KeinAuto-Merge/Deployment/Kosten. EigeneReservierungnurmitpassenderSHA nachgesicherterÜbergabelösen.
+
+
 ## Aktueller Durchlauf nach PR29 –16.10.2026
 
 Durchlauf package-3-5-after-pr29-2026-10-16, bestehender Branch/PR27. Neue eigene Reservierung972b6733f7d83c39c5d30ba014f99212f7a2e5c1, tatsächlich exklusiv beansprucht; Eigentümer vor jeder Freigabe prüfen. Gesicherter originaler lokaler/Remotehead2c23ad99152c53118bfd2d4484d65844c4650d05, sauber; zusätzlich work/p35-before-pr29-integration.bundle. Alle vorbereiteten Manuskripte bleiben im bestehenden work und versionierten Quellenakten erhalten. Vorherige tatsächlich grüne Quality80 und vollständige lokale2c23-Abnahme stehen unverändert im PR27 und work/p35-2c23ad9-complete-proof; ältere Absätze unten sind historische Checkpoints, keine aktuelle Freigabe.

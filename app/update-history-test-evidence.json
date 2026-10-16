@@ -671,6 +671,37 @@
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/HmZ6chib1mhGBASF6SeKpbofM16U"
         }
       ]
+    },
+    {
+      "number": 30,
+      "title": "Vollständige Offline-Vorbereitung mit echtem Fortschritt und sicheren Updates",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/30",
+      "base": "test-live",
+      "mergedAt": "2026-10-16T21:23:32Z",
+      "mergeCommit": "71255ec55833fa1c4056a5c95310fa4fb78b8a30",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/71255ec55833fa1c4056a5c95310fa4fb78b8a30/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56564217841,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-16T21:23:51Z",
+          "updatedAt": "2026-10-16T21:23:51Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/7VaP7cwWzpp4Lf4AkPRWJH1yyn5a"
+        },
+        {
+          "id": 56564201868,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-16T21:23:36Z",
+          "updatedAt": "2026-10-16T21:23:36Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/7VaP7cwWzpp4Lf4AkPRWJH1yyn5a"
+        }
+      ]
     }
   ]
 }

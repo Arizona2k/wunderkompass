@@ -1,5 +1,12 @@
 # Änderungsverlauf
 
+## Paket3.5 – vollständige Offline-Vorbereitung: Testbereitstellung PR30 bestätigt
+
+Nutzermerge71255ec55833fa1c4056a5c95310fa4fb78b8a30 am16.10.2026 um21:23:32Z, Vercel-Erfolg56564217841 um21:23:51Z belegen dieTestbereitstellung.
+
+Vorhandene geprüfte Offline-Verbesserungen ausPR27 als unabhängigen Abschnitt aufdem tatsächlichübernommenenPR29-Stand integriert. EchterDateifortschritt; genaueIntegritätsprüfung beiAbruf/Wiederverwendung, vollständigeEndassetliste, begrenzteDateiverarbeitung undsichereFehlerwiederholung. LetztevollständigeVersion undbenötigteAlt-Tab-Dateien behalten; unvollständigeVersionen nichtalsFallback verwenden. Entdeckerpass/IDs/Spielstände unverändert. PR29 anhandtatsächlichemMerge/Vercelbeleg nachgeführt, eigenerChroniktext vorbereitet. News-Pause/Paket3.5-Priorität inbestehendenRegeln; sämtlichegrößere3.5-Inhalte bleibeninPR27gesichert. TatsächlichePrüfquittungimPR.
+
+
 ## Paket 3.5 – konkrete Quellen für die Meeres-Lernreise (noch unveröffentlicht)
 
 Fünf vorhandene Kapitel erhalten passende, tatsächlich gelesene NOAA-Originalbelege zu zusammenhängenden Ozeanbecken, Salz, Korallen, Licht, Druck, Tiefe, Gezeiten und Wellen. Die Beobachtung zu Ozeangrenzen vermeidet eine missverständliche politische Ländergrenze; die freiwillige Korallenvertiefung unterscheidet warme Flachwasserriffe von kalten Tiefseeriffen. Bestehende Absätze, Kapitel-/Fragen-/Antwortidentitäten, Modelle, Bilder und Fortschritte erhalten. Die bisherigen Quellenakten bleiben erhalten; neue Selbstprüfung ausdrücklich keine unabhängige Fach-/Kinderabnahme. Aktuelle Kapitelquellen und schmale Quellansichten im vorhandenen Browserpfad zusätzlich geprüft; tatsächlicher Endstatus im PR. Kein neues Kapitel gezählt, keine Veröffentlichung oder Newsentwicklung.

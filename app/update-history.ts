@@ -330,7 +330,23 @@ const JOURNEY_COPY:UpdateCopy = {
  ]
 };
 const CONTENT_COPY:UpdateCopy={id:'excellence-chapters-3-5',icon:'🧭',category:'Neue Inhalte',title:'Natur und Technik genauer entdecken',summary:'Lernreisen, Wissenswörter und Warum-Antworten verbinden verständliche Erklärungen mit freiwilligen Denkaufgaben. Naturorte und vorhandene Erfindungen erhalten eigene Beobachtungsaufgaben, lesbare Modelle und erklärte Wege zu passenden Themen.',details:['Alle 80 Kapitel erhalten einfache Einstiege, freiwillige Vertiefungen und Beobachtungsideen. Alle 240 Aufgaben erhalten einzeln formulierte Denkhinweise; 32 gezielte Korrekturen typischer Fehlvorstellungen und alle bisherigen richtigen Antworten bleiben erhalten. Die 64 Kapitelgrafiken bieten lesbare Beschriftungen; Mondphasen und Ländergrenzen werden gezielt korrigiert. Die fünf Meereskapitel verweisen auf passende Originalbelege zu Ozeanen, Riffen und Wasserbewegung.','23 neue und 23 vorhandene Wissenschaftskarten laden zum Weiterdenken ein; zehn Bildschirmversuche und 13 eigene Erklärgrafiken zeigen konkrete Zusammenhänge und Modellgrenzen. Alle elf Labore erklären die beiden falschen Antworten jeder vorhandenen Denkfrage individuell.','90 neue und 90 bisherige Wissenswörter bieten individuelle Vertiefungen. 30 neue und 30 erhaltene Warum-Antworten verbinden einfache Einstiege, genauere Erklärungen, sichere Beobachtungsideen und passende Quellen; drei Messmodelle laden zum Vergleichen ein.','34 neue und 34 überarbeitete Naturerklärungen bieten individuelle Fragen, Quellen und erklärte Rückverweise; zehn bedienbare Schrittgrafiken machen etwa Schluchtbildung und schwimmendes Eis verständlich. Filter und Suche erschließen den langen Atlas.','Zwölf vorhandene Erfindungen erhalten Beobachtungsaufgaben, Denkhinweise und jeweils zwei konkrete Fehlbegründungen. Telefon und Buchdruck zeigen klarere Funktionspläne; lesbare, dauerhaft nummerierte Bauteile sowie erklärte gegenseitige Wissenswege helfen beim Erkunden. Zwölf neue Erfindungen ergänzen etwa Batterie, Mikroskop und Nähmaschine; sechs freiwillige Modelle untersuchen Induktion, Schalten, Schichten, Bildgröße, Sammelfläche und Bodenbewegung. Acht neue Bauwerke führen etwa nach Groß-Simbabwe, Lalibela und Sydney. Alle acht bisherigen Bauwerke erhalten eigene Beobachtungsideen und konkrete Fehlrückmeldungen; drei Vergleiche machen Quellhöhe, Steinlagen und Kreisbögen untersuchbar. Bestehende Fragen und Spielstände bleiben erhalten.'],benefit:'Kinder können Zusammenhänge im eigenen Tempo erkunden und gezielt wiederfinden. Eltern sehen Quellenverweise und den tatsächlichen Prüfstand; ihre bisherigen Sicherungen bleiben nutzbar.',links:[{label:'Lernreisen',hash:'journeys'},{label:'Wissenschaft & Weltall',hash:'world/science'},{label:'Erfindungen',hash:'world/inventions'},{label:'Messen im Wissensbuch',hash:'book/words/Meter'},{label:'Naturatlas',hash:'book/nature'}]};
+const OFFLINE_COPY:UpdateCopy={
+ "id": "offline-learning-3-5",
+ "icon": "🧭",
+ "category": "Einfachere Bedienung",
+ "title": "Deine Lernwelt verlässlich mitnehmen",
+ "summary": "Bei der Offline-Vorbereitung zeigt ein echter Dateizähler den Fortschritt. Beim nächsten Versionswechsel werden passende gespeicherte Dateien erneut geprüft und wiederverwendet.",
+ "details": [
+  "Der Fortschritt zählt nur Dateien, die vollständig geprüft und sicher gespeichert wurden.",
+  "Unveränderte gespeicherte Dateien müssen beim Update nicht erneut heruntergeladen werden; jede Datei wird trotzdem auf Größe und Prüfsumme kontrolliert.",
+  "Ältere offene Tabs behalten die Dateien ihrer Version. Die letzte vollständige Version bleibt als Rückfall erhalten.",
+  "Bei Verbindungs- oder Speicherfehlern wird die unvollständige Vorbereitung verworfen. Erneutes Vorbereiten bleibt möglich; dein Entdeckerpass bleibt erhalten."
+ ],
+ "benefit": "Du kannst erkennen, wie die Vorbereitung vorankommt, und nach einem Fehler sicher neu versuchen. Eltern können die Lernwelt für unterwegs vollständig vorbereiten.",
+ "links": []
+};
 const TEST_COPY:Record<number,UpdateCopy>={
+ 30:OFFLINE_COPY,
  27:CONTENT_COPY,
  29:{
  "id": "clear-update-chronicle",
@@ -730,6 +746,7 @@ const TEST_COPY:Record<number,UpdateCopy>={
 const TEST_UPDATES=TEST_EVIDENCE.pullRequests.flatMap(record=>TEST_COPY[record.number]?[testUpdate(record,TEST_COPY[record.number])]:[]);
 export const UPDATE_HISTORY:UpdateEntry[]=[...SITES_HISTORY,...TEST_UPDATES.filter(e=>e.status==='test-available')];
 const PREPARED_JOURNEYS:UpdateEntry={...JOURNEY_COPY,version:'Paket 3',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-12',publishedOn:null,availableOn:null,occurredAt:null,summary:'Die Lernreise-Verbesserungen sind vorbereitet; ihre Bereitstellung ist noch unbestätigt.',links:[],evidence:{file:'BACKLOG.md',revision:'d6945c8',quote:'WK-048: Lernreisen 2.0 – alle 16 Reisen/80 Kapitel ganzheitlich modernisieren.'}};
+
 export const PREPARED_UPDATES:UpdateEntry[]=[...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[])];
 export const updateLabel=(entry:UpdateEntry)=>entry.channel==='sites'?`Frühere Website · Version ${entry.version}`:entry.status==='prepared'?'In Vorbereitung · noch nicht verfügbar':'Testversion · verfügbar';
 const updateDay=(entry:UpdateEntry)=>entry.availableOn??entry.publishedOn??entry.confirmedOn;

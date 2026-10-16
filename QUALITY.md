@@ -6,6 +6,8 @@ Paket3.5 bleibt vor allen Paketen4–8 und neuen Themenideen die aktuelle Priori
 
 **Nachrichtenthema vollständig pausiert bis zu einem erneuten ausdrücklichen Nutzerauftrag.** Bestehenden News-Code, Quellen-/Betriebsnachweise und offene Anforderungen erhalten; keine weitere Newsentwicklung, Quellenanbindung, Einrichtung oder Aktivierung. Vorhandene unveränderte Sicherheits-/Regressionsprüfungen der Website bleiben vollständig. Diese Pause hat Vorrang vor älteren News-Prioritäten und Aktivierungsaufträgen unten; keine Newsarbeit als nächsten Schritt empfehlen. Pakete4–8 und neue Ideen bleiben im einzigen BACKLOG, werden jetzt nicht begonnen. Keine neuen Kosten, eigene Übernahme/Veröffentlichung, unnötige Prüfinfrastruktur oder Qualitätsabsenkung.
 
+Dauerhafte Nutzerentscheidung15./16.10. bleibt auch in unabhängigen Lieferabschnitten verbindlich: keine künstlichen Gesamtgrößengates für JavaScript oder die gesamten Lernreise-Aufgabendaten, auch keine höheren Ersatzgrenzen. Gesamtsummen verpflichtend als endliche Mess-/Trendwerte ausweisen; Einstieg/CSS/Einzelressourcen, tatsächliche Bereitschaft/CLS/Ladeverhalten und alle Sicherheits-/Offline-/Pass-/Browserprüfungen bleiben vollständig verbindlich. Nachweislich sinnvolle Verbesserungen eigenständig umsetzen und tatsächlichen Nutzen/Grenzen dokumentieren. Die akzeptierten etwa0,5s bei der ersten vollständigen Offline-Integritätsvorbereitung sind keine pauschale Regressionserlaubnis.
+
 
 ## Vorrangiger Fortsetzungsauftrag16.10.2026 – abschnittsweise Lieferung
 
@@ -229,3 +231,7 @@ Diese Grundsätze gelten für Paket 3.5, alle späteren Pakete 4–8 und sämtli
 - Bestehenden Branch, Reservierung und einzigen BACKLOG fortführen; wichtige laufende Tests nicht unnötig unterbrechen. Keine neue Roadmap oder parallele Entwicklung. Alle ursprünglichen Paket-3.5-Abnahmen und die Reihenfolge 4–8 bleiben erhalten. Keine neuen Kosten/Dienste, kein eigenständiger Merge/Deployment und keine News-Liveaktivierung. Fehlende unabhängige Fach-, Kinder- und Geräteabnahmen ehrlich ausweisen.
 
 Gezielte Prozesskorrektur nach Quality85: Der vorhandene lokale `test:affected --run` beginnt mit `node --check` der betroffenen vorhandenen nativen JS-Module. Nachgewiesener doppelter Browserimport wird ohne Chromiumstart abgefangen; synthetische Negativ-/Positivprobe und alle47 tatsächlichen Browsermodule geprüft (eine lokale Messung1,295s, keine p50-/Kostenbehauptung). Alle bisherigen Pflichtprüfungen und fail-closed Endmatrizen bleiben vollständig; Syntaxprüfung ist keine Funktionsabnahme.
+
+## Paket3.5-Offlineabschnitt – tatsächliche Produktabnahme
+
+Alle bestehenden vollständigen Browser-/Inhalts-/News-Sicherheitsregressionen erhalten. Vorhandene isolierte Offline-Fixtures ausPR27 wiederverwenden, nichtneuePrüfarchitektur bauen: echteDateifortschritte, HTTP-/Quota-FehlerundWiederherstellung, tatsächlichesServerende, vollständigerPasserhalt, sechsVersionen/mehrereTabs/unvollständigeCaches/Legacyhandshake undgeladeneAltchunks. BestehenderChromium-/Firefox-/WebKit-Handoff verlangt dieseNachweise zusätzlichzur unverändertenChronik-/Reisematrix. NativerZoom,grosseSchrift undsiebenBreiten prüfen; synthetischeQuota/Cache-Bytes sindkeinephysischeGerätegarantie. AlteOriginalquittungenunverändert, neuerBuild/Head/QuelleundBilder kritischprüfen.
