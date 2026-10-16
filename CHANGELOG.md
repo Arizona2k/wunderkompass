@@ -1,5 +1,9 @@
 # Änderungsverlauf
 
+## Paket3.5 – korrekte Offline-Verfügbarkeit und frühere Syntaxfehler
+
+PR30 anhanddes tatsächlichen Nutzermerges undVercel-Erfolgs inklusiveaktuellerAbstammung alsverfügbar nachgeführt; gleicherChronikeintrag undallealtenNachweise erhalten. Vorhandene lokaleTestauswahl prüftgeänderte nativeNode-Module frühaufSyntax undbeziehtbreiteBrowserauswahl ausdem bestehendenPflichtvertrag. KeinePrüfung reduziert, keineunfertigenFachinhalte oderNewsfunktionen übernommen. AktuelleAbnahme imPR.
+
 ## Paket3.5 – vollständige Offline-Vorbereitung mit sichtbarem Fortschritt (noch unveröffentlicht)
 
 Vorhandene geprüfte Offline-Verbesserungen ausPR27 als unabhängigen Abschnitt aufdem tatsächlichübernommenenPR29-Stand integriert. EchterDateifortschritt; genaueIntegritätsprüfung beiAbruf/Wiederverwendung, vollständigeEndassetliste, begrenzteDateiverarbeitung undsichereFehlerwiederholung. LetztevollständigeVersion undbenötigteAlt-Tab-Dateien behalten; unvollständigeVersionen nichtalsFallback verwenden. Entdeckerpass/IDs/Spielstände unverändert. PR29 anhandtatsächlichemMerge/Vercelbeleg nachgeführt, eigenerChroniktext vorbereitet. News-Pause/Paket3.5-Priorität inbestehendenRegeln; sämtlichegrößere3.5-Inhalte bleibeninPR27gesichert. TatsächlichePrüfquittungimPR.

@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "d63e946de8a02df2d0493e19081a7f07574b51cd",
+    "commit": "71255ec55833fa1c4056a5c95310fa4fb78b8a30",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -26,7 +26,8 @@
       "2de46220f602ce7ac6124afb59db0aed50dfc8e4",
       "d0dc9a35857e896d45d35c7474640a58087b0ec5",
       "c9d7ab0336ddcc89653241433dd06dc020688b39",
-      "d63e946de8a02df2d0493e19081a7f07574b51cd"
+      "d63e946de8a02df2d0493e19081a7f07574b51cd",
+      "71255ec55833fa1c4056a5c95310fa4fb78b8a30"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -669,6 +670,37 @@
           "createdAt": "2026-10-16T19:33:07Z",
           "updatedAt": "2026-10-16T19:33:07Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/HmZ6chib1mhGBASF6SeKpbofM16U"
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "title": "Vollständige Offline-Vorbereitung mit echtem Fortschritt und sicheren Updates",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/30",
+      "base": "test-live",
+      "mergedAt": "2026-10-16T21:23:32Z",
+      "mergeCommit": "71255ec55833fa1c4056a5c95310fa4fb78b8a30",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/71255ec55833fa1c4056a5c95310fa4fb78b8a30/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56564217841,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-16T21:23:51Z",
+          "updatedAt": "2026-10-16T21:23:51Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/7VaP7cwWzpp4Lf4AkPRWJH1yyn5a"
+        },
+        {
+          "id": 56564201868,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-16T21:23:36Z",
+          "updatedAt": "2026-10-16T21:23:36Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/7VaP7cwWzpp4Lf4AkPRWJH1yyn5a"
         }
       ]
     }
