@@ -1,3 +1,17 @@
+# Aktueller Lieferabschnitt – verständliche Update-Chronik,16.10.2026
+
+Nutzerauftrag vollständig archiviert unter content/auftrag-2026-10-13/WunderKompass_Fortsetzungsauftrag_2026-10-16.md. Neues abschnittsweises Liefermodell ersetzt alte Ein-PR-/Sammeldraft- und grundsätzliche Newsfreigabesatzungen; technische und einschlägige unabhängige Gates bleiben. Bestehender vollständiger Masterumfang/Rest in BACKLOG und PR27 erhalten.
+
+Einziger aktiver Durchlauf package-3-5-content-2026-10-13, eigene Reservierung wunderkompass-development-lock/f1471189d57c70ffd0ee373fb61aaf5ef9f636af; keine zweite Beanspruchung. Originalarbeitsbaum sauber, PR27 unverändert2c23ad99152c53118bfd2d4484d65844c4650d05 remote gesichert. Seine volle lokale Prüfung2172.232s/144Label,179Unit/27Release/TS/Lint/Build/42Exporte bestanden; Quality80/38938329507 alle5Jobs grün, Quelle7c5845d78bbaea94da29ffbddd1298a7d7886090b9b8b96c1a21a87e610c7bbd/Build10185666f3786e87, getesteterMerge b71111628962adc45a0fac194e2bb460ac5f00c8. Unveränderte lokale470PNG/50031646Byte und Collector528PNG/57020713Byte nach Hash-/Snapshotbindung gesichert. Chromiumbrowser1846.469s,Job32:05,FF999.138s/WK668.407s; erweiterte Matrix, keine kausale Beschleunigungsgarantie. Fach-/Kinder-/Gerätegates dort offen; kein Gesamt-GO.
+
+Aufgrund ausdrücklich neuer Nutzerentscheidung jetzt separater **seriell im selben Durchlauf** bearbeiteter Worktree work/p35-chronik, Branch codex/wunderkompass-update-chronik-2026-10-16, Basis des tatsächlichen aktuellen test-live c9d7ab0336ddcc89653241433dd06dc020688b39. main537622796f7e1f9a886e7400f10b1f727d24f8dc unverändert. Keine Originalcommits zurücksetzen, keinen fremden Zweig überschreiben. Vercel-Gitdeployment dieses neuen Branchs vor Push explizit ausgeschaltet. Vor Ready vollständige Schlussprüfungen am unveränderten Abschnittshead; tatsächliche finalen Resultate und PR im zugehörigen GitHub-Übergabebericht lesen, keine alten Erfolge neu binden.
+
+Umgesetzt:31 bestätigte Chronikeinträge einschließlich erneut verifiziertem PR26/Mergec9d7ab0/Verfügbarkeit13.10.08:55:40Z, vollständige13er-Siteshistorie, eigene Kategorien, klarere Zusammenfassungen/Nutzen/Bedienerklärungen. Keine versteckte Abhängigkeit von PR27; dessen unbestätigte Inhalte nicht als verfügbar anzeigen. Eigene Chronikänderung ohne erfundenes Datum vorbereitet. StabileIDs/Quelle/Zeit/Sortierung/Links, Lernstände/gespeicherteRunden/Schema3 unverändert.
+
+Nächster Schritt: tatsächliche Browser-/Bildprüfung und vollständige Unit/Release/TS/Lint/Build/Verify/Browser/Engine-/Quality-Abnahme dieses Abschnitts, Ready-PR gegen test-live. Danach stabil halten; nach Nutzermerge mit PR27-BACKLOG/Regeln/Chronik kollisionssicher zusammenführen und neue tatsächliche Basis prüfen. Newsblocker einmal konkret in content/news-operations.md festhalten und alle erreichbaren unabhängigen Masterarbeiten fortsetzen. Nicht zwischen zwei Worktrees denselben Build-/Proofordner überschreiben.
+
+## Historischer voriger test-live-Checkpoint (bezieht sich nicht auf die neue Chronikabnahme)
+
 # Aktiver Projektstand: Paket 3.5 / Welle 0–1
 
 13. Oktober2026, Europe/Berlin. Lauf package-3-5-foundation-2026-10-13, Codex; exklusiver Branch `codex/wunderkompass-excellence-3-5-2026-10-13`, Basis `d0dc9a35857e896d45d35c7474640a58087b0ec5`, eigene Reservierung `be76a352538745922383e039a9a91bb4d3ebabe4`, Eigentümer work/package-3-5-lock-owner.txt.

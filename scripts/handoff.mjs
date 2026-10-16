@@ -1,3 +1,4 @@
+import {publicUpdates} from '../app/update-history.ts';
 import fs from 'node:fs/promises';import path from 'node:path';import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {learningFingerprint} from '../build/learning-fingerprint.mjs';
@@ -9,7 +10,13 @@ export async function sourceDigest(root=process.cwd()){
  for(const name of ['package.json','pnpm-lock.yaml','pnpm-workspace.yaml','vite.config.ts','tsconfig.json','eslint.config.mjs','performance-budgets.json','vercel.json','qa/package.json','qa/pnpm-lock.yaml','qa/pnpm-workspace.yaml'])files.push(path.join(root,name));
  const hash=createHash('sha256');for(const file of files.sort())hash.update(path.relative(root,file)).update('\0').update(await fs.readFile(file)).update('\0');return hash.digest('hex');
 }
+export function historyViewsComplete(views,widths){
+ const ids=publicUpdates().map(e=>e.id);
+ return Array.isArray(views)&&views.length===widths.length&&new Set(views.map(v=>v.width)).size===widths.length&&widths.every(width=>views.some(v=>v.width===width&&['expanded','largeText','keyboard','axe','passPreserved'].every(k=>v[k]===true)&&Array.isArray(v.entries)&&v.entries.length===ids.length&&new Set(v.entries).size===ids.length&&ids.every(id=>v.entries.includes(id))));
+}
+export const nativeHistoryComplete=z=>z?.percent===200&&z.scale===2&&historyViewsComplete([z],[640]);
 export async function createHandoff(report,directory='.qa-output',{requiredEngines=[]}={}){
+ if(!nativeHistoryComplete(report.nativeHistory))throw Error('Missing complete native history zoom proof');
  if(report.status!=='passed'||report.scope!=='complete mandatory regression'||report.build!==learningFingerprint(process.cwd()))throw Error('Handoff lacks a complete current production-build proof');
  const unit=JSON.parse(await fs.readFile(path.join(directory,'unit-proof.json'),'utf8'));if(unit.status!=='passed'||unit.sourceDigest!==await sourceDigest())throw Error('Unit proof is missing or belongs to different code');
  const backlog=await fs.readFile('BACKLOG.md','utf8'),requirements=[];
@@ -20,7 +27,7 @@ export async function createHandoff(report,directory='.qa-output',{requiredEngin
  }
  if(requirements.length!==24)throw Error('Incomplete existing-backlog requirement mapping');
  let engineProof=null;try{engineProof=JSON.parse(await fs.readFile(path.join(directory,'engine-report.json'),'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
- if(requiredEngines.length&&(!engineProof||engineProof.build!==report.build||engineProof.sourceDigest!==unit.sourceDigest||engineProof.status!=='passed'||engineProof.errors.length||requiredEngines.some(name=>!engineProof.engines.some(e=>e.name===name&&e.version&&e.chapters.length===16&&e.widths.length===4))))throw Error('Actual required browser engine evidence missing');
+ if(requiredEngines.length&&(!engineProof||engineProof.build!==report.build||engineProof.sourceDigest!==unit.sourceDigest||engineProof.status!=='passed'||engineProof.errors.length||requiredEngines.some(name=>!engineProof.engines.some(e=>e.name===name&&e.version&&e.chapters.length===16&&e.widths.length===4&&historyViewsComplete(e.historyViews,[320,390,768,1440])))))throw Error('Actual required browser engine evidence missing');
  const screenshots=[];for(const file of (await fs.readdir(directory)).filter(f=>/^(?:quality-|journey-engine-).*\.png$/.test(f)).sort()){const data=await fs.readFile(path.join(directory,file));if(data.subarray(0,8).toString('hex')!=='89504e470d0a1a0a')throw Error('Broken screenshot');screenshots.push({file,width:data.readUInt32BE(16),height:data.readUInt32BE(20),sha256:createHash('sha256').update(data).digest('hex')});}
  if(!screenshots.length)throw Error('Missing actual screenshots');
  let pr=null;if(process.env.GITHUB_EVENT_PATH){const event=JSON.parse(await fs.readFile(process.env.GITHUB_EVENT_PATH,'utf8'));if(event.pull_request)pr={number:event.pull_request.number,head:event.pull_request.head.sha,base:event.pull_request.base.sha};}

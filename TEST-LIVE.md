@@ -1,5 +1,13 @@
 # Kontrollierte automatische Testfreigabe – vorbereitet, ausgeschaltet
 
+## Vorrangiger Fortsetzungsauftrag16.10.2026 – abschnittsweise Lieferung
+
+Der [vollständige Originalauftrag](content/auftrag-2026-10-13/WunderKompass_Fortsetzungsauftrag_2026-10-16.md) und die vorrangige Umsetzung in AGENTS ersetzen ältere Ein-PR-/Sammeldraft-/Kein-Teilrelease-Regeln sowie pauschale News-Livestartsperren. Zusammenhängende unabhängig nutzbare Abschnitte vollständig mit ihren tatsächlichen Abhängigkeiten prüfen, aktuellen grünen Quality-Stand nachweisen und als Ready-PR gegen test-live übergeben. Anwendbare Sicherheits-/Fach-/Kinder-/Gerätegates bleiben verbindlich, fehlende Abnahmen ehrlich offen. Ein unabhängiger Masterrest blockiert nicht automatisch. Vor Trennung Originalstand sichern, Previewtrigger prüfen, fertige Kandidaten stabil halten; nach Nutzermerge abhängige Abschnitte gegen die wirkliche neue Basis nachprüfen.
+
+App-Code/Quellen-/Prüf-/Rechteänderungen weiter nur durch Nutzermerge; kein Auto-Merge/Deployment/Kosten oder neue Konten. Getrennte tägliche News-Inhalte dürfen nach Merge des nachweislich betriebsfähigen Setups **ohne zusätzliche Start- oder Einzelfreigabe** erscheinen. Vorhandene drei Sachgeneratoren sind keine breit recherchierende KI-Redaktion; tatsächliche Modell-/Quellen-/Hosting-/Schlüssel-/Rechte-/Scheduler-/Auslieferungsnachweise erforderlich. Noch fehlende Technik statt fehlender Nutzerbeauftragung benennen (news-operations). Chronik konkrete Lesertexte/Kategorien/Nutzen/echteLinks, echte historische/Test-/Vorbereitungsstatus; technische Protokolle getrennt. Rückweg/Schema3-Kompatibilität und Folgenprüfung veröffentlichter Inhalte erhalten.
+
+Review-PNG-Obergrenze ausschließlich150.000.000Byte; keine Produktions-/Lade-/Offlinebudgetänderung, keine Auffüllung. Originale/Pflichtbilder/volleMatrix/Hashes unverändert. Bestehende Kuratierung berichtet tatsächliche erzeugte/aufbewahrte Bilder, Bytes/Reserve, exakte Duplikate und informativen Vorlaufvergleich; ähnliche Zustände sind keine löschbaren Dubletten. Keine versiegelten Beweise ändern, keine neue Bildverwaltungsplattform. Konkrete frühere Chromium50-Minuten-/Wachstum-/Offlineoptimierungen bleiben in PR27 gesichert und werden durch diesen unabhängigen Chronikabschnitt nicht zurückgenommen.
+
 Stand: 9. Oktober 2026. Einrichtung auf `codex/test-release-2026-10-09`, Basis `test-live` 1f7fe74a0f8e7e14bf8e709aea2135dc1b09172c. main, test-live, Vercel-Einstellungen und bestehende Testwebsite werden durch diese Einrichtung nicht geändert. Keine Freigabelinks/Zugangsdaten speichern.
 
 ## Aktueller PR-Betrieb: manuelle Übernahme

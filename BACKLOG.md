@@ -1,5 +1,16 @@
 # Gemeinsamer Entwicklungsbestand
 
+## Aktueller Lieferabschnitt16.10.2026 – verständliche Update-Chronik (WK032/033/057)
+
+Der neue Fortsetzungsauftrag ersetzt das frühere Sammeldraftmodell. Dieser Abschnitt basiert unabhängig auf test-live c9d7ab0; PR27 bleibt unverändert mit allen bisherigen Erweiterungen remote gesichert (2c23ad99152c53118bfd2d4484d65844c4650d05). Keine Teilfunktion aus dessen unfertigen fachlichen Wellen wird vorausgesetzt. Einziger gemeinsamer Aufgabenbestand bleibt BACKLOG; die vorhandenen Einträge/WK-IDs unten werden weder ersetzt noch gelöscht.
+
+Umfang/Abnahme: alle31 belegten verfügbaren Chronikeinträge verständlich nachredigieren, eigene lesbare Kategorien und ruhige bestehende Zeitleiste, geschlossene Details/Nutzen/echteLinks, PR26 nur anhand tatsächlichem Merge+Vercel-Erfolg nachführen; eigener Eintrag korrekt vorbereitet. Alle13 veröffentlichten historischen Sitesstände/IDs/Daten/Nachweise erhalten. Kein Lern-/Fragen-/Speicher-/Quellenbetriebsumbau. Alle sieben Breiten, aufgeklappte lange Historie, große Schrift/native200%, Tastatur/Touch/Back/axe/Offline und gesamte bestehende Pflichtregression/Firefox/WebKit prüfen. Status bis exakter Schlussabnahme **in Prüfung**, keine vorweggenommene Freigabe.
+
+Nächste priorisierte Lieferabschnitte: vollständige News-Einrichtung einschließlich echter unbeaufsichtigter Recherche/Neutextgenerierung, sofern technische Zugänge vorliegen; danach übrige WK051–058 entsprechend Abhängigkeiten. Newsblocker hält andere Abschnitte nicht an. Neues Liefermodell/Chronikstandard dauerhaft in AGENTS/QUALITY/VISION/TEST-LIVE/news-operations; keine erneute grundsätzliche Newsfreigabe verlangen.
+
+Masterrest bleibt vollständig: Im gesicherten PR27 sind73 neue Weltartikel noch nicht integriert (Tiere24/Geschichte31/Menschen18),73 weitere alte Karten individuell nachzuarbeiten, unabhängige Akzeptanz neuer Artikel0; alle80Kapitel/64Grafiken/240Aufgaben sowie31Spiele/11Labore/6Versuche/12Missionen/übrige Oberfläche/Engineering und einschlägige Fach-/Kinder-/Geräteabnahmen nach den vollständigen Originalen weiterhin prüfen/abschließen. Bereits in PR27 implementierte Buch-/Warum-/Natur-/Wissenschafts-/Erfindungs-/Gebäudeerweiterungen erhalten und nicht doppelt zählen. Der genaue bestehende Deckungsstand bleibt in PR27/BACKLOG am gesicherten2c23ad9 erhalten und wird bei Zusammenführung kollisionssicher übernommen. Pakete3.5→4→5→6→7→8 und späteres Memory WK038 unverändert. Dies ist keine Streichung oder zweite konkurrierende Priorisierung.
+
+
 Stand: 12. Oktober 2026. Einziger Aufgabenbestand für GO und spätere geplante Durchläufe. Aufgaben behalten ihre ID; neue IDs fortlaufend vergeben. Prioritäten: P0 Datenverlust/Blockade, P1 Kernfunktion und belastbare Prüfungen, P2 Nutzbarkeit/Fachqualität/Performance, P3 Ausbau. Aktuell erhöhte Priorität für die vollständige Designmodernisierung (WK-025/026/028); Inhalte, Spiele und Wissensnetz bleiben Teil der Entwicklungsrunden. Aktive Reservierung und Übergabe stehen ausschließlich in PROJECT_STATE.md.
 
 | ID | Priorität | Status | Aufgabe und Anlass | Akzeptanzkriterien / Nachweis |
