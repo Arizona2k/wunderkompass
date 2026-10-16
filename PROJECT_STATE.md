@@ -1,5 +1,12 @@
 # Aktueller Lieferabschnitt – verständliche Update-Chronik,16.10.2026
 
+## Letzte Testpräzisierung nach Quality83
+
+08f8d7770ac70b09a7008117d212af378115732c:115Unit/27Release/TS/Lint/Build/40Exporte1957Inventarsätze undlokalerVollroot663.992s/115Labels bestanden. NativegesamteChronik/Negativseite/viervertrauteFokusfälle/kaltOffline bestanden;791erzeugte/312behaltenePNG/43770983Byte/106229017Reserve, Originale/Hashes unverändert in work/chronik-08f8d77-complete-proof. Quality83/38950622802: vollständigeChromiumregression erstmals auchremotegrün494.389s; Firefox scheitert danach anfocus-visible derneuenChronikprobe, keinegrüneGesamt-Abnahme.
+
+DieProbe hatte nachPointerklicksFokusnurperSkriptgesetzt. Jetzt realeTab→ShiftTab-RückkehrzumSummary, tatsächlichenFokus/sichtbarenRahmenvorundnachEnter kontrollieren, beiFehlernOriginalbild/Kontext sichern. KeineAssertionentfernt/gelockert undkeineProduktänderung. LokaleFirefox-/WebKitbereitstellungmitvorhandenengepinntenPlaywright-Tools versucht; Downloadserverantworten403Domainforbidden, keineMirror-/Zugriffsumgehung. TatsächlicheEngineabnahme weiterübervorhandenesGitHubQuality, dortwurdenbeideEnginepaketeerfolgreichinstalliert. NachgezielterProbe erneutunveränderlichevollständige lokale/GitHub-Abnahme, erstbeivollständigemErfolgReady. Letzterapp-Buildbleibt3e6aac64dab2595f; Quellen-/QADigeständertsich, altenBelegnichtumbinden.
+
+
 ## Aktueller Abschlusskandidat – Fokuskorrektur wiederverwendet, Wachstumsregel übernommen
 
 08c2759 nach nativeViewport-Korrektur vollständig lokal bestanden651.920s,787erzeugte/308behaltenePNG/43425247Byte. UnveränderteOriginale/Hashes in work/chronik-08c2759-complete-proof. Quality82/38947887867 dagegen früh an originalerfoundation.mjs:53 rot: Spielhilfe schließt nach verzögerterFokuswiederherstellung nicht. KeinneuerTimeout/Retry undkeinReady. Bekannter bereitsinPR27behobenerFehler, deshalbgenau dessen isolierbaren scheduleRouteRestore-Guard undvier echte320/1440-Tastatur-/Touch-/Mausfälle wiederverwendet; keineunfertigenInhaltsabhängigkeiten.
