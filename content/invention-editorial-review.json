@@ -1,9 +1,630 @@
 {
   "schemaVersion": 1,
-  "meaning": "Durable individual editorial manuscripts; no second backlog. All24 are prepared only, not applied to app/world-catalog.json, not technical/scientific acceptance or a new-content count. Tasks remain WK053 in BACKLOG.",
-  "reviewedOn": "2026-10-15",
+  "meaning": "Source/learning dossiers, no second backlog or independent approval. Existing twelve are enriched in product; twelve distinct new work manuscripts are not integrated or counted.",
+  "reviewedOn": "2026-10-16",
   "independentReview": false,
-  "topics": [],
+  "topics": [
+    {
+      "id": "invention-light",
+      "kind": "individually-extended-existing",
+      "contentHash": "b61a412b1a46b83e8e009971e5e2342205b0e9be7d748290834b2e02c99cc0f6",
+      "goal": "Du unterscheidest ein einzelnes Bauteil vom ganzen Versorgungssystem und kannst erklären, warum eine gute Idee oft viele zusammenpassende Verbesserungen braucht.",
+      "ageLevels": {
+        "6-8": "Eine elektrische Lampe macht aus elektrischer Energie Licht. Damit ein Raum hell wird, müssen Lampe und Stromversorgung zusammenpassen.",
+        "9-11": "Elektrische Energie sollte einen Raum zuverlässig beleuchten. Eine Lampe allein ist noch kein Beleuchtungssystem. Leitungen bringen elektrische Energie zur Lampe, Schalter steuern den Stromweg. Bei einer Glühlampe leuchtet ein heißer Faden; heutige Lampen können anders arbeiten. Der Vergleich zeigt deshalb zwei Bauarten und keinen einzigen unveränderten Lampentyp.",
+        "12-14": "Viele Menschen arbeiteten daran, darunter Joseph Swan sowie Thomas Edison und sein Team. Sie verbesserten Lampen und Stromversorgung. Heute nutzen viele Lampen LEDs. Sie erzeugen Licht anders als ein heißer Glühdraht. Vergleiche die elektrische Leistung, die Helligkeit und die Lebensdauer; eine möglichst sparsame passende Lampe vermeidet Verschwendung."
+      },
+      "observation": "Wähle im vorhandenen Plan nacheinander Glaskolben, Glühdraht und Sockel. Beschreibe jeweils eine andere Aufgabe. Vergleiche dann Damals und Heute: Welches Ziel bleibt gleich, obwohl sich die Bauart verändert? Nur am Bildschirm untersuchen, keine echte Lampe öffnen.",
+      "questionPreserved": {
+        "prompt": "Welches Problem hilft Elektrisches Licht zu lösen?",
+        "answers": [
+          "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
+          "Menschen wollten durch die Luft reisen.",
+          "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit."
+        ],
+        "correct": 0,
+        "why": "Elektrische Energie sollte einen Raum zuverlässig beleuchten. Viele Menschen arbeiteten daran, darunter Joseph Swan sowie Thomas Edison und sein Team. Sie verbesserten Lampen und Stromversorgung."
+      },
+      "answerSpecificFeedback": {
+        "hint": "Vergleiche das Ziel einer Lampe mit dem Ziel eines Verkehrsmittels. Was soll sich für Menschen nach Sonnenuntergang ändern?",
+        "wrongReasons": [
+          null,
+          "Durch die Luft zu reisen ist ein Transportproblem. Hier geht es um die Wahrnehmung in einem dunklen Raum.",
+          "Wiederholte Rechnungen gehören zu einer anderen Aufgabe. Die Lampe führt keine Rechenanweisungen aus."
+        ]
+      },
+      "sourceAccess": "NPS-Haupttext vollständig gelesen, insbesondere Glühfaden/Systembestandteile und ausdrücklicher Hinweis auf viele Beteiligte; heutige LED-Funktion vor weiterer Detailerweiterung gesondert belegen.",
+      "sources": [
+        {
+          "label": "National Park Service – elektrisches Licht",
+          "url": "https://home.nps.gov/edis/learn/kidsyouth/the-electric-light-system-phonograph-motion-pictures.htm"
+        },
+        {
+          "label": "U.S. National Park Service, Thomas Edison National Historical Park",
+          "url": "https://home.nps.gov/edis/learn/kidsyouth/the-electric-light-system-phonograph-motion-pictures.htm"
+        }
+      ],
+      "mediaDecision": {
+        "retained": "Existing six-stage story, then/now drawing and individual parts, with new directed observation",
+        "reason": "Wähle im vorhandenen Plan nacheinander Glaskolben, Glühdraht und Sockel. Beschreibe jeweils eine andere Aufgabe. Vergleiche dann Damals und Heute: Welches Ziel bleibt gleich, obwohl sich die Bauart verändert? Nur am Bildschirm untersuchen, keine echte Lampe öffnen.",
+        "limits": "Qualitative example drawings; no construction instruction or engineering simulation",
+        "individualDrawingReview": "Codex reviewed the actual mobile drawing and controls; no independent scientific/child approval.",
+        "changes": "Existing function/parts drawing retained; new permanent readable HTML labels and directed observation.",
+        "mechanicDecision": "Six existing history stages, two historical/modern views and individual keyboard/touch-selectable parts already support the component-comparison goal. Added specific observation, hint and wrong-answer feedback rather than an unnecessary separate simulation."
+      },
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "reviewedBy": "Codex, not an independent human reviewer",
+      "UIAcceptance": "Targeted12×7 widths, actual native200%/large text, old saves/answers, reciprocal search/Back, real cold offline passed; complete final CI and independent acceptance pending.",
+      "reviewedOn": "2026-10-16"
+    },
+    {
+      "id": "invention-car",
+      "kind": "individually-extended-existing",
+      "contentHash": "dd7d95cf13036a0edb6adce7835a82661e7bef1aebca87b7dbbcb1201513d68b",
+      "goal": "Du beschreibst Technik über zusammenwirkende Aufgaben und beurteilst ein Verkehrsmittel auch nach Sicherheit statt allein nach Motorleistung.",
+      "ageLevels": {
+        "6-8": "Ein Auto hat einen Antrieb, der seine Räder bewegen kann. Lenken und Bremsen sind andere Aufgaben als das Antreiben.",
+        "9-11": "Ein Motor sollte die Räder antreiben. Motor, Räder, Lenkung und Bremsen müssen zusammenarbeiten. Ein stärkerer Motor ersetzt keine verlässlichen Bremsen und keine passende Straße. Der historische Benzinwagen ist ein Entwicklungsschritt; heutige Autos haben unterschiedliche Antriebe. Die Karte bezeichnet deshalb nicht ein einziges Fahrzeug als Ursprung sämtlicher Autos.",
+        "12-14": "Es gab schon Dampf- und Elektrofahrzeuge. Karl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos. Ein Verbrennungsmotor nutzt die Energie eines Kraftstoffs; ein Elektroauto einen Elektromotor und elektrische Energie. Beide brauchen zuverlässige Bremsen. Auch Bus, Bahn, Radfahren und Zufußgehen lösen die Aufgabe, Menschen zu bewegen."
+      },
+      "observation": "Untersuche im vorhandenen Teileplan Antrieb, Räder, Lenkung und Bremse. Denke dir einen Fehler bei genau einem Teil aus. Welches Verhalten des Autos würde sich ändern, welches andere Teil könnte den Fehler nicht einfach ersetzen? Keine echten Fahrzeuge bedienen.",
+      "questionPreserved": {
+        "prompt": "Welches Problem hilft Das Auto zu lösen?",
+        "answers": [
+          "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
+          "Eine Stimme war normalerweise nur in der Nähe hörbar.",
+          "Computer an verschiedenen Orten sollten Informationen austauschen."
+        ],
+        "correct": 0,
+        "why": "Ein Motor sollte die Räder antreiben. Es gab schon Dampf- und Elektrofahrzeuge. Karl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos."
+      },
+      "answerSpecificFeedback": {
+        "hint": "Welche beiden Antworten betreffen vor allem Informationen? Welche betrifft dagegen den Transport eines Wagens?",
+        "wrongReasons": [
+          null,
+          "Eine Stimme weit zu übertragen betrifft ein Kommunikationsgerät. Der Wagen soll Menschen oder Lasten fortbewegen.",
+          "Computer zu verbinden ist ein Informationsproblem. Hier wird eine mechanische Bewegung gesucht."
+        ]
+      },
+      "sourceAccess": "Mercedes-Benz-Primärseite vollständig im Hauptabschnitt gelesen; Hersteller-Eigenquelle, unabhängiger Abgleich und sichere Brems-/Antriebsfachquelle für weitergehende Behauptungen offen.",
+      "sources": [
+        {
+          "label": "Mercedes-Benz Museum – Patent-Motorwagen",
+          "url": "https://group.mercedes-benz.com/company/tradition/museums-historical-sites/carl-benz-workshop.html"
+        }
+      ],
+      "mediaDecision": {
+        "retained": "Existing six-stage story, then/now drawing and individual parts, with new directed observation",
+        "reason": "Untersuche im vorhandenen Teileplan Antrieb, Räder, Lenkung und Bremse. Denke dir einen Fehler bei genau einem Teil aus. Welches Verhalten des Autos würde sich ändern, welches andere Teil könnte den Fehler nicht einfach ersetzen? Keine echten Fahrzeuge bedienen.",
+        "limits": "Qualitative example drawings; no construction instruction or engineering simulation",
+        "individualDrawingReview": "Codex reviewed the actual mobile drawing and controls; no independent scientific/child approval.",
+        "changes": "Explicit belt/brake, callout avoids obscuring the small brake; wheel label targets actual wheel.",
+        "mechanicDecision": "Six existing history stages, two historical/modern views and individual keyboard/touch-selectable parts already support the component-comparison goal. Added specific observation, hint and wrong-answer feedback rather than an unnecessary separate simulation."
+      },
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "reviewedBy": "Codex, not an independent human reviewer",
+      "UIAcceptance": "Targeted12×7 widths, actual native200%/large text, old saves/answers, reciprocal search/Back, real cold offline passed; complete final CI and independent acceptance pending.",
+      "reviewedOn": "2026-10-16"
+    },
+    {
+      "id": "invention-railway",
+      "kind": "individually-extended-existing",
+      "contentHash": "d770442b36d9827cc9de51361582d751a2ad7d3dab70586fe9e9555dac6d3cd2",
+      "goal": "Du erkennst Verkehr als abgestimmtes System und kannst ein belegtes Ereignis von einer zu einfachen Geschichte über einen einzelnen Erfinder unterscheiden.",
+      "ageLevels": {
+        "6-8": "Ein Zug bewegt Wagen auf Schienen. Viele Reisende oder Waren können zusammen transportiert werden.",
+        "9-11": "Räder auf Schienen und ein kräftiger Antrieb sollten Wagen ziehen. Zur Eisenbahn gehören mehr Dinge als eine Lokomotive: Fahrzeuge, Gleise, Stationen und ein abgestimmter Betrieb. Ein historischer Eröffnungstag belegt deshalb nicht die plötzliche Erfindung aller ihrer Teile. Die Quelle beschreibt die Fahrt von Locomotion 1825 und erklärt ausdrücklich, dass diese Maschine nicht die erste Dampflokomotive war.",
+        "12-14": "Schienenwege und Lokomotiven entstanden schrittweise. 1825 eröffnete die Bahn Stockton–Darlington. Viele Menschen verbesserten danach Strecken und Züge. Bei einer Eisenbahn sind nicht nur die Fahrzeuge wichtig. Ein Fahrplan und Signale helfen, viele Züge gemeinsam zu betreiben. Schienen transportieren Menschen und Güter; neue Strecken verändern auch Landschaften."
+      },
+      "observation": "Wähle im vorhandenen Plan Gleis, Antrieb und Wagen. Ordne gedanklich zu: Was trägt und führt, was bewegt, was transportiert die Menschen oder Waren? Vergleiche das historische Fahrzeug mit der heutigen Darstellung. Nicht an echten Gleisen forschen.",
+      "questionPreserved": {
+        "prompt": "Welches Problem hilft Die Eisenbahn zu lösen?",
+        "answers": [
+          "Viele Waren und Reisende mussten über Land transportiert werden.",
+          "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
+          "Auf See gab es nicht immer sichtbare Landmarken oder Sterne."
+        ],
+        "correct": 0,
+        "why": "Räder auf Schienen und ein kräftiger Antrieb sollten Wagen ziehen. Schienenwege und Lokomotiven entstanden schrittweise. 1825 eröffnete die Bahn Stockton–Darlington. Viele Menschen verbesserten danach Strecken und Züge."
+      },
+      "answerSpecificFeedback": {
+        "hint": "Überlege, welches Problem eine gemeinsame Strecke mit vielen Wagen löst. Die anderen Antworten betreffen Rechnen und Orientierung.",
+        "wrongReasons": [
+          null,
+          "Ein Rechner kann wiederholte Rechnungen bearbeiten. Das erklärt noch nicht den Transport vieler Wagen auf einer Strecke.",
+          "Landmarken oder Sterne betreffen vor allem Orientierung. Die Eisenbahnkarte fragt nach dem gemeinsamen Transport."
+        ]
+      },
+      "sourceAccess": "National-Railway-Museum-Haupttext zur Fahrt27.09.1825, älteren Lokomotiven und Infrastruktur gelesen; keine Fahrgastzahl oder aktuelle Umweltbilanz ergänzt.",
+      "sources": [
+        {
+          "label": "National Railway Museum",
+          "url": "https://blog.railwaymuseum.org.uk/shildon-the-cradle-of-the-railways-and-locomotion-no-1/"
+        }
+      ],
+      "mediaDecision": {
+        "retained": "Existing six-stage story, then/now drawing and individual parts, with new directed observation",
+        "reason": "Wähle im vorhandenen Plan Gleis, Antrieb und Wagen. Ordne gedanklich zu: Was trägt und führt, was bewegt, was transportiert die Menschen oder Waren? Vergleiche das historische Fahrzeug mit der heutigen Darstellung. Nicht an echten Gleisen forschen.",
+        "limits": "Qualitative example drawings; no construction instruction or engineering simulation",
+        "individualDrawingReview": "Codex reviewed the actual mobile drawing and controls; no independent scientific/child approval.",
+        "changes": "Rail/drive/signal markers moved onto the actual depicted components.",
+        "mechanicDecision": "Six existing history stages, two historical/modern views and individual keyboard/touch-selectable parts already support the component-comparison goal. Added specific observation, hint and wrong-answer feedback rather than an unnecessary separate simulation."
+      },
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "reviewedBy": "Codex, not an independent human reviewer",
+      "UIAcceptance": "Targeted12×7 widths, actual native200%/large text, old saves/answers, reciprocal search/Back, real cold offline passed; complete final CI and independent acceptance pending.",
+      "reviewedOn": "2026-10-16"
+    },
+    {
+      "id": "invention-airplane",
+      "kind": "individually-extended-existing",
+      "contentHash": "15f938e2c806dec9476e4f5f51360d23a48fee3e717018f5ab90ba2d61caf774",
+      "goal": "Du unterscheidest Kräfte und Steuerung und erkennst, warum ein erfolgreicher Versuch mehr braucht als die Erzeugung von Vorwärtsbewegung.",
+      "ageLevels": {
+        "6-8": "Flügel, Antrieb und Steuerung haben beim Flugzeug verschiedene Aufgaben. Ein Flugzeug muss sich nicht nur in der Luft halten, sondern auch lenken lassen.",
+        "9-11": "Flügel sollten Auftrieb erzeugen; der Flug musste steuerbar sein. Beim Fliegen wirken Auftrieb, Gewichtskraft, Schub und Widerstand zusammen. Ein Flugzeug lässt sich nicht allein durch einen großen Motor erklären. Seine Flügel, Fluglage und Steuerung beeinflussen die Bewegung ebenfalls. Das vorhandene Modell ist eine vereinfachte Lernhilfe und keine Anleitung zum Bauen oder Fliegen.",
+        "12-14": "Ballons und Gleiter gab es schon. Die Wright-Brüder erprobten Steuerung und Flügel, bevor ihnen 1903 ein angetriebener, gesteuerter Flug gelang. Ein Flügel lenkt strömende Luft nach unten. Die Luft übt dadurch auch eine Kraft auf den Flügel aus. Druckunterschiede gehören zur Erklärung. Luftteilchen müssen oben und unten nicht gleichzeitig am Ende des Flügels ankommen."
+      },
+      "observation": "Vergleiche im Teileplan Flügel, Antrieb und Steuerflächen. Sage voraus: Welche Aufgabe würde fehlen, wenn man nur den Motor betrachtet? Prüfe danach die Beschreibung jedes Teils und ändere deine Erklärung, falls nötig.",
+      "questionPreserved": {
+        "prompt": "Welches Problem hilft Das Flugzeug zu lösen?",
+        "answers": [
+          "Menschen wollten durch die Luft reisen.",
+          "Computer an verschiedenen Orten sollten Informationen austauschen.",
+          "Ein Buch von Hand abzuschreiben dauerte lange."
+        ],
+        "correct": 0,
+        "why": "Flügel sollten Auftrieb erzeugen; der Flug musste steuerbar sein. Ballons und Gleiter gab es schon. Die Wright-Brüder erprobten Steuerung und Flügel, bevor ihnen 1903 ein angetriebener, gesteuerter Flug gelang."
+      },
+      "answerSpecificFeedback": {
+        "hint": "Verbinde das Fortbewegungsziel mit dem Ort, an dem es erreicht werden soll. Datenübertragung und Vervielfältigung lösen andere Probleme.",
+        "wrongReasons": [
+          null,
+          "Informationen zwischen Computern zu übertragen beschreibt ein Netzwerk. Es erklärt nicht den Transport durch die Luft.",
+          "Viele gleiche Buchseiten zu erzeugen ist eine Vervielfältigungsaufgabe. Ein Flugzeug braucht stattdessen tragende und steuernde Flächen."
+        ]
+      },
+      "sourceAccess": "NASA-Haupttext zu allen vier Kräften, Steuerung und Unterscheidung von Schub/Auftrieb vollständig gelesen. Keine zusätzliche historische Erstbehauptung eingeführt.",
+      "sources": [
+        {
+          "label": "NASA – vier Kräfte beim Fliegen",
+          "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/"
+        },
+        {
+          "label": "Smithsonian National Air and Space Museum",
+          "url": "https://airandspace.si.edu/collection-objects/1903-wright-flyer/nasm_A19610048000"
+        }
+      ],
+      "mediaDecision": {
+        "retained": "Existing six-stage story, then/now drawing and individual parts, with new directed observation",
+        "reason": "Vergleiche im Teileplan Flügel, Antrieb und Steuerflächen. Sage voraus: Welche Aufgabe würde fehlen, wenn man nur den Motor betrachtet? Prüfe danach die Beschreibung jedes Teils und ändere deine Erklärung, falls nötig.",
+        "limits": "Qualitative example drawings; no construction instruction or engineering simulation",
+        "individualDrawingReview": "Codex reviewed the actual mobile drawing and controls; no independent scientific/child approval.",
+        "changes": "Wing, engine, tail and cockpit markers aligned with corresponding shapes.",
+        "mechanicDecision": "Six existing history stages, two historical/modern views and individual keyboard/touch-selectable parts already support the component-comparison goal. Added specific observation, hint and wrong-answer feedback rather than an unnecessary separate simulation."
+      },
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "reviewedBy": "Codex, not an independent human reviewer",
+      "UIAcceptance": "Targeted12×7 widths, actual native200%/large text, old saves/answers, reciprocal search/Back, real cold offline passed; complete final CI and independent acceptance pending.",
+      "reviewedOn": "2026-10-16"
+    },
+    {
+      "id": "invention-phone",
+      "kind": "individually-extended-existing",
+      "contentHash": "4b97c7117f455195233a95e6b43233cf65c17e13fdbe1b8ecfdf50e202db541d",
+      "goal": "Du trennst eine Nachricht von ihrem technischen Transport und kannst einen Fehler an einer bestimmten Stelle des Weges vermuten.",
+      "ageLevels": {
+        "6-8": "Ein Telefon überträgt Signale. Im Empfänger werden sie wieder als Stimme hörbar.",
+        "9-11": "Schall sollte als Signal weit übertragen werden. Mikrofon, Übertragungsweg und Lautsprecher lösen verschiedene Teile der Aufgabe. Das Mikrofon nimmt Schall auf, der Übertragungsweg bringt ein Signal weiter, und der Lautsprecher erzeugt wieder Schall. Ein verständliches Gespräch braucht das Zusammenwirken dieser Teile.",
+        "12-14": "Viele Menschen experimentierten damit. Alexander Graham Bell erhielt 1876 ein wichtiges Patent. Auch Elisha Gray und andere arbeiteten an Telefontechnik. Das Mikrofon macht aus Schallschwingungen ein elektrisches Signal. Am anderen Ende verwandelt ein Lautsprecher Signale wieder in Schall. Heute können Verbindungen zusätzlich digital und über Funk übertragen werden."
+      },
+      "observation": "Gehe im Plan die Reihenfolge Mikrofon, Signalweg, Lautsprecher durch. Beschreibe, an welcher Stelle Schall vorkommt und wo ein übertragenes Signal. Was wäre bei einem ausgefallenen Lautsprecher noch möglich, was nicht?",
+      "questionPreserved": {
+        "prompt": "Welches Problem hilft Das Telefon zu lösen?",
+        "answers": [
+          "Eine Stimme war normalerweise nur in der Nähe hörbar.",
+          "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
+          "Menschen wollten Geräte und später Menschen ins Weltall bringen."
+        ],
+        "correct": 0,
+        "why": "Schall sollte als Signal weit übertragen werden. Viele Menschen experimentierten damit. Alexander Graham Bell erhielt 1876 ein wichtiges Patent. Auch Elisha Gray und andere arbeiteten an Telefontechnik."
+      },
+      "answerSpecificFeedback": {
+        "hint": "Welche Antwort betrifft den Austausch zwischen zwei Menschen, auch wenn sie weit voneinander entfernt sind?",
+        "wrongReasons": [
+          null,
+          "Richtungen ohne Landmarken zu bestimmen ist eine Orientierungsaufgabe. Ein Telefon überträgt dagegen ein Gespräch.",
+          "Geräte ins Weltall zu bringen erfordert einen Transportantrieb. Das Telefon selbst übernimmt diesen Start nicht."
+        ]
+      },
+      "sourceAccess": "Bisherige Smithsonian-Objektseite erneut404. Alternative Smithsonian-Katalogseite nmah_704159 vollständig gelesen: Membran, veränderlicher Strom und hörbare Schwingung am Empfänger; Beleg für das Funktionsprinzip, nicht für sämtliche Patentprioritäten.",
+      "sources": [
+        {
+          "label": "Smithsonian – Bells Versuchstelefon",
+          "url": "https://www.si.edu/object/nmah_689864"
+        },
+        {
+          "label": "Smithsonian – Schall, elektrisches Signal und Empfänger",
+          "url": "https://collections.si.edu/search/detail/edanmdm:nmah_704159"
+        }
+      ],
+      "mediaDecision": {
+        "retained": "Existing six-stage story, then/now drawing and individual parts, with new directed observation",
+        "reason": "Gehe im Plan die Reihenfolge Mikrofon, Signalweg, Lautsprecher durch. Beschreibe, an welcher Stelle Schall vorkommt und wo ein übertragenes Signal. Was wäre bei einem ausgefallenen Lautsprecher noch möglich, was nicht?",
+        "limits": "Qualitative example drawings; no construction instruction or engineering simulation",
+        "individualDrawingReview": "Codex reviewed the actual mobile drawing and controls; no independent scientific/child approval.",
+        "changes": "Own microphone→signal→speaker functional diagram; comparison images retained.",
+        "mechanicDecision": "Six existing history stages, two historical/modern views and individual keyboard/touch-selectable parts already support the component-comparison goal. Added specific observation, hint and wrong-answer feedback rather than an unnecessary separate simulation."
+      },
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "reviewedBy": "Codex, not an independent human reviewer",
+      "UIAcceptance": "Targeted12×7 widths, actual native200%/large text, old saves/answers, reciprocal search/Back, real cold offline passed; complete final CI and independent acceptance pending.",
+      "reviewedOn": "2026-10-16"
+    },
+    {
+      "id": "invention-computer",
+      "kind": "individually-extended-existing",
+      "contentHash": "435b0a3e0140be4caaa3a60b77dfcc1ce6dd2c19913463f5122c6df2bb40b1af",
+      "goal": "Du kannst technische Abläufe erklären und prüfst Ergebnisse, statt einem schnellen Gerät automatisch Recht zu geben.",
+      "ageLevels": {
+        "6-8": "Ein Computer führt Anweisungen aus. Er braucht passende Daten und ein Programm; schneller rechnen bedeutet nicht automatisch, richtig zu entscheiden.",
+        "9-11": "Eine Maschine sollte genaue Anweisungen Schritt für Schritt ausführen. Eingabe, Verarbeitung, Arbeitsspeicher, dauerhafter Speicher und Ausgabe erfüllen verschiedene Aufgaben. Ein Ergebnis kann falsch sein, obwohl der Rechner seine Anweisungen genau befolgt hat: Auch die Daten oder das Programm können ungeeignet sein. Die große Geschichte der Computer besteht aus vielen unterschiedlich gebauten Geräten.",
+        "12-14": "Rechenmaschinen, mechanische Pläne und elektronische Computer hatten viele Beteiligte in mehreren Ländern. Es gibt nicht einen einzigen Erfinder des Computers. Ein Computer führt Programme aus. Eingabe, Verarbeitung, Speicherung und Ausgabe arbeiten zusammen. Ein Ergebnis kann falsch sein, wenn das Programm oder seine Daten falsch sind; ein schneller Rechner ist nicht automatisch ein kluger Entscheider."
+      },
+      "observation": "Verfolge im vorhandenen Plan eine eingegebene Zahl bis zur Ausgabe. Vergleiche danach Arbeitsspeicher und dauerhaften Speicher. Welche Aufgabe hätten beide, wenn du einen Text bearbeitest und ihn anschließend speichern möchtest?",
+      "questionPreserved": {
+        "prompt": "Welches Problem hilft Der Computer zu lösen?",
+        "answers": [
+          "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
+          "Ein Buch von Hand abzuschreiben dauerte lange.",
+          "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen."
+        ],
+        "correct": 0,
+        "why": "Eine Maschine sollte genaue Anweisungen Schritt für Schritt ausführen. Rechenmaschinen, mechanische Pläne und elektronische Computer hatten viele Beteiligte in mehreren Ländern. Es gibt nicht einen einzigen Erfinder des Computers."
+      },
+      "answerSpecificFeedback": {
+        "hint": "Denke an viele gleiche Arbeitsschritte mit Daten. Welche Antwort beschreibt diese Wiederholung statt bloß ein bestimmtes Medium oder einen Aufenthaltsort?",
+        "wrongReasons": [
+          null,
+          "Buchseiten oft zu vervielfältigen erklärt eine Drucktechnik. Ein Computer kann jedoch viele unterschiedliche Anweisungen verarbeiten.",
+          "Ein Gerät im Weltraum kann einen Computer enthalten. Der Computer ist aber nicht durch seinen Aufenthaltsort definiert."
+        ]
+      },
+      "sourceAccess": "CHM-Computerzeitstrahl vollständig abrufbar, ausgewählte Hauptstellen zu verschiedenen Rechnerbauformen gelesen. Keine Masse-/Leistungszahl oder singuläre Erst-Erfinderbehauptung ergänzt.",
+      "sources": [
+        {
+          "label": "Computer History Museum – Computerentwicklung",
+          "url": "https://www.computerhistory.org/timeline/computers/"
+        }
+      ],
+      "mediaDecision": {
+        "retained": "Existing six-stage story, then/now drawing and individual parts, with new directed observation",
+        "reason": "Verfolge im vorhandenen Plan eine eingegebene Zahl bis zur Ausgabe. Vergleiche danach Arbeitsspeicher und dauerhaften Speicher. Welche Aufgabe hätten beide, wenn du einen Text bearbeitest und ihn anschließend speichern möchtest?",
+        "limits": "Qualitative example drawings; no construction instruction or engineering simulation",
+        "individualDrawingReview": "Codex reviewed the actual mobile drawing and controls; no independent scientific/child approval.",
+        "changes": "Existing function/parts drawing retained; new permanent readable HTML labels and directed observation.",
+        "mechanicDecision": "Six existing history stages, two historical/modern views and individual keyboard/touch-selectable parts already support the component-comparison goal. Added specific observation, hint and wrong-answer feedback rather than an unnecessary separate simulation."
+      },
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "reviewedBy": "Codex, not an independent human reviewer",
+      "UIAcceptance": "Targeted12×7 widths, actual native200%/large text, old saves/answers, reciprocal search/Back, real cold offline passed; complete final CI and independent acceptance pending.",
+      "reviewedOn": "2026-10-16"
+    },
+    {
+      "id": "invention-internet",
+      "kind": "individually-extended-existing",
+      "contentHash": "b72e5903c4e47ce10fcb2e1343eb251311fc6591446b387b47db69efbed0bcec",
+      "goal": "Du unterscheidest ein Gerät von einem Netz und kannst Verbindungsprobleme eingrenzen, ohne private Daten oder Passwörter weiterzugeben.",
+      "ageLevels": {
+        "6-8": "Das Internet verbindet viele Computernetze. Gemeinsame Regeln helfen den Geräten, Informationen auszutauschen.",
+        "9-11": "Netze sollten miteinander verbunden werden. Informationen können in Datenpaketen übertragen werden. Die beteiligten Netze brauchen gemeinsame Regeln, damit diese Pakete an passenden Stellen weitergegeben werden können. Ein einzelnes Gerät oder ein einzelnes Netz ist deshalb noch nicht das gesamte Internet. Seine Geschichte umfasst viele Beiträge aus verschiedenen Ländern.",
+        "12-14": "Viele Teams entwickelten Paketübertragung und gemeinsame Regeln. Das ARPANET verband 1969 erste Rechner. Forschende aus mehreren Ländern trugen zur Entwicklung des Internets bei. Gemeinsame Regeln, die Protokolle heißen, helfen verschiedenartigen Geräten beim Austausch. Daten können in Paketen über mehrere Zwischenstationen reisen. Nicht jede Verbindung ist immer verfügbar; Netze brauchen Wartung und Schutz."
+      },
+      "observation": "Vergleiche im vorhandenen Plan Endgerät, Verbindung und Vermittlungspunkt. Erkläre den Weg einer Nachricht in eigenen Worten. Welche Verbindung könnte unterbrochen sein, wenn dein Gerät funktioniert, aber das Ziel nicht erreichbar ist? Das ist eine Denkaufgabe, kein Eingriff in echte Netze.",
+      "questionPreserved": {
+        "prompt": "Welches Problem hilft Das Internet zu lösen?",
+        "answers": [
+          "Computer an verschiedenen Orten sollten Informationen austauschen.",
+          "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
+          "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten."
+        ],
+        "correct": 0,
+        "why": "Netze sollten miteinander verbunden werden. Viele Teams entwickelten Paketübertragung und gemeinsame Regeln. Das ARPANET verband 1969 erste Rechner. Forschende aus mehreren Ländern trugen zur Entwicklung des Internets bei."
+      },
+      "answerSpecificFeedback": {
+        "hint": "Unterscheide das Bewegen von Dingen vom Übertragen von Informationen zwischen Computern.",
+        "wrongReasons": [
+          null,
+          "Eine Rakete kann ein Gerät transportieren. Das beschreibt noch keine gemeinsamen Regeln zwischen Computernetzen.",
+          "Elektrisches Licht löst ein Beleuchtungsproblem. Das Internet soll dagegen Informationen zwischen Netzen austauschen."
+        ]
+      },
+      "sourceAccess": "Internet-Society-Bericht beteiligter Entwickler, Hauptpassagen zu Paketvermittlung/ARPANET gelesen. Heutige Ausfallsicherheit nicht pauschal garantiert; zusätzliche Protokolldetails vor Vertiefung gesondert belegen.",
+      "sources": [
+        {
+          "label": "Internet Society – Geschichte des Internets",
+          "url": "https://www.internetsociety.org/internet/history-internet/brief-history-internet/"
+        }
+      ],
+      "mediaDecision": {
+        "retained": "Existing six-stage story, then/now drawing and individual parts, with new directed observation",
+        "reason": "Vergleiche im vorhandenen Plan Endgerät, Verbindung und Vermittlungspunkt. Erkläre den Weg einer Nachricht in eigenen Worten. Welche Verbindung könnte unterbrochen sein, wenn dein Gerät funktioniert, aber das Ziel nicht erreichbar ist? Das ist eine Denkaufgabe, kein Eingriff in echte Netze.",
+        "limits": "Qualitative example drawings; no construction instruction or engineering simulation",
+        "individualDrawingReview": "Codex reviewed the actual mobile drawing and controls; no independent scientific/child approval.",
+        "changes": "Router and connection markers aligned with actual center/link, protocol represented as a rule box.",
+        "mechanicDecision": "Six existing history stages, two historical/modern views and individual keyboard/touch-selectable parts already support the component-comparison goal. Added specific observation, hint and wrong-answer feedback rather than an unnecessary separate simulation."
+      },
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "reviewedBy": "Codex, not an independent human reviewer",
+      "UIAcceptance": "Targeted12×7 widths, actual native200%/large text, old saves/answers, reciprocal search/Back, real cold offline passed; complete final CI and independent acceptance pending.",
+      "reviewedOn": "2026-10-16"
+    },
+    {
+      "id": "invention-compass",
+      "kind": "individually-extended-existing",
+      "contentHash": "ff96e58ce0792eaafa22482408e0d3119a435e5dab1132036e4871501cca60be",
+      "goal": "Du trennst eine Richtungsinformation von einem fertigen Reiseweg und kannst die Grenzen eines einzelnen Messgeräts erklären.",
+      "ageLevels": {
+        "6-8": "Eine frei bewegliche magnetische Nadel kann bei der Orientierung helfen. Sie zeigt nicht automatisch, wo dein Ziel liegt.",
+        "9-11": "Eine magnetische Nadel konnte bei der Richtung helfen. Die Kompassnadel reagiert auf ein Magnetfeld. Für eine sinnvolle Orientierung brauchst du zusätzlich eine Richtungsangabe und musst sie mit deiner Umgebung oder einer Karte vergleichen. Ein Kompass ist daher etwas anderes als ein vollständiges Navigationsgerät mit Standort und Ziel. Die angezeigte magnetische Nordrichtung kann von geografisch Nord abweichen. Ein naher Magnet kann die Nadel ebenfalls beeinflussen.",
+        "12-14": "Menschen kannten magnetische Steine schon früher. Seefahrer in China nutzten später magnetische Richtungsanzeigen; das Wissen verbreitete sich weiter. Die Nadel orientiert sich am Magnetfeld der Erde. Magnetischer Norden und geografischer Nordpol liegen nicht genau am selben Ort. Metall und andere Magnete in der Nähe können die Anzeige stören."
+      },
+      "observation": "Untersuche im vorhandenen Plan Nadel und Richtungsskala. Formuliere zwei verschiedene Fragen: In welcher Richtung liegt Norden? Und in welcher Richtung liegt mein Ziel? Warum beantwortet die Nadel allein die zweite Frage nicht? Nur das Bildschirmmodell verwenden.",
+      "questionPreserved": {
+        "prompt": "Welches Problem hilft Der Kompass zu lösen?",
+        "answers": [
+          "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
+          "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
+          "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen."
+        ],
+        "correct": 0,
+        "why": "Eine magnetische Nadel konnte bei der Richtung helfen. Menschen kannten magnetische Steine schon früher. Seefahrer in China nutzten später magnetische Richtungsanzeigen; das Wissen verbreitete sich weiter."
+      },
+      "answerSpecificFeedback": {
+        "hint": "Welche Antwort beschreibt eine fehlende Orientierungshilfe, wenn vertraute sichtbare Anhaltspunkte fehlen?",
+        "wrongReasons": [
+          null,
+          "Die Erde aus einer Umlaufbahn zu beobachten ist eine Aufgabe von Satelliten. Die Kompassnadel liefert eine Richtung am Ort.",
+          "Nachts einen Raum zu beleuchten ist ein anderes Problem. Eine Kompassnadel erzeugt kein Licht."
+        ]
+      },
+      "sourceAccess": "Bisherige Smithsonian-Zeitleiste weist den Abruf zurück; historische Erstheitsangaben nicht frisch bestätigt. USGS-Audio-Transkript vollständig gelesen: frei bewegliche magnetische Nadel, Erdfeld und lokale Störungen. Neue Funktionsquelle im Produkt ergänzen.",
+      "sources": [
+        {
+          "label": "Smithsonian National Air and Space Museum, Time and Navigation",
+          "url": "https://timeandnavigation.si.edu/timeline2/1000"
+        },
+        {
+          "label": "USGS – Funktionsweise der Kompassnadel",
+          "url": "https://www.usgs.gov/media/audio/how-does-compass-work"
+        }
+      ],
+      "mediaDecision": {
+        "retained": "Existing six-stage story, then/now drawing and individual parts, with new directed observation",
+        "reason": "Untersuche im vorhandenen Plan Nadel und Richtungsskala. Formuliere zwei verschiedene Fragen: In welcher Richtung liegt Norden? Und in welcher Richtung liegt mein Ziel? Warum beantwortet die Nadel allein die zweite Frage nicht? Nur das Bildschirmmodell verwenden.",
+        "limits": "Qualitative example drawings; no construction instruction or engineering simulation",
+        "individualDrawingReview": "Codex reviewed the actual mobile drawing and controls; no independent scientific/child approval.",
+        "changes": "Existing function/parts drawing retained; new permanent readable HTML labels and directed observation.",
+        "mechanicDecision": "Six existing history stages, two historical/modern views and individual keyboard/touch-selectable parts already support the component-comparison goal. Added specific observation, hint and wrong-answer feedback rather than an unnecessary separate simulation."
+      },
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "reviewedBy": "Codex, not an independent human reviewer",
+      "UIAcceptance": "Targeted12×7 widths, actual native200%/large text, old saves/answers, reciprocal search/Back, real cold offline passed; complete final CI and independent acceptance pending.",
+      "reviewedOn": "2026-10-16"
+    },
+    {
+      "id": "invention-printing",
+      "kind": "individually-extended-existing",
+      "contentHash": "e52a94bdab7ee1f5eb20eb85f2fc8c097135d202a70ba094af034048fc9b4e54",
+      "goal": "Du verstehst Wiederverwendung und erkennst, warum eine Kontrolle vor dem Vervielfältigen wichtig ist.",
+      "ageLevels": {
+        "6-8": "Beim Druck können vorbereitete Zeichen oder Bilder mehrfach auf ein Material übertragen werden. Beim historischen Buchdruck lassen sich einzelne Zeichen zu einer Seite zusammensetzen.",
+        "9-11": "Buchstaben sollten zu Seiten zusammengestellt und oft abgedruckt werden. Zur historischen Druckwerkstatt gehören Schriftzeichen, Farbe, Papier und eine Presse. Wiederverwendbare Zeichen sparen nicht jeden Arbeitsschritt: Zuerst muss eine Seite richtig zusammengestellt und geprüft werden. Ein falsch gesetztes Zeichen kann sonst in vielen Abzügen wiederkehren. Die Entwicklung beweglicher Schriftzeichen begann nicht erst mit Gutenberg.",
+        "12-14": "In China und Korea gab es bewegliche Druckzeichen vor Gutenberg. Seine Werkstatt verband Metalltypen, geeignete Farbe und eine Presse zu einem wirksamen europäischen System. Mit derselben Druckform lassen sich viele gleiche Seiten herstellen. Eine Änderung muss vor dem Drucken in die Vorlage. Digital gespeicherte Texte sind leichter zu verändern; für verlässliche Bücher bleiben Quellen und sorgfältiges Korrigieren wichtig."
+      },
+      "observation": "Stelle dir eine Zeile aus einzeln beweglichen Zeichen vor. Vertausche gedanklich zwei Zeichen. Was müsstest du vor dem nächsten Druck ändern, und warum wären bereits gedruckte Seiten davon nicht automatisch berichtigt?",
+      "questionPreserved": {
+        "prompt": "Welches Problem hilft Der Buchdruck zu lösen?",
+        "answers": [
+          "Ein Buch von Hand abzuschreiben dauerte lange.",
+          "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
+          "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste."
+        ],
+        "correct": 0,
+        "why": "Buchstaben sollten zu Seiten zusammengestellt und oft abgedruckt werden. In China und Korea gab es bewegliche Druckzeichen vor Gutenberg. Seine Werkstatt verband Metalltypen, geeignete Farbe und eine Presse zu einem wirksamen europäischen System."
+      },
+      "answerSpecificFeedback": {
+        "hint": "Vergleiche ein einzelnes von Hand geschriebenes Exemplar mit vielen Abzügen derselben vorbereiteten Seite.",
+        "wrongReasons": [
+          null,
+          "Ein Smartphone kombiniert Kommunikation und Datenverarbeitung. Die Druckkarte fragt nach der Vervielfältigung von Seiten.",
+          "Ein selbst angetriebener Wagen löst eine Transportaufgabe und vervielfältigt noch keinen Text."
+        ]
+      },
+      "sourceAccess": "Mainzer Gutenberg-Zeitleiste und vollständiger Technik-Haupttext der Stadt Mainz gelesen: einzelne Lettern, Satz, Farbe, Papier und Spindelpresse. Ältere ostasiatische Prioritäten aus dem vorhandenen Bestand bleiben separat unabhängig zu prüfen; keine Auflagenzahl ergänzt.",
+      "sources": [
+        {
+          "label": "Stadt Mainz / Gutenberg.de",
+          "url": "https://www.gutenberg.de/zeit/zeitleiste_gutenberg"
+        },
+        {
+          "label": "Gutenberg-Museum Mainz – Zeichen, Satz und Presse",
+          "url": "https://www.gutenberg.de/erfindung/"
+        }
+      ],
+      "mediaDecision": {
+        "retained": "Existing six-stage story, then/now drawing and individual parts, with new directed observation",
+        "reason": "Stelle dir eine Zeile aus einzeln beweglichen Zeichen vor. Vertausche gedanklich zwei Zeichen. Was müsstest du vor dem nächsten Druck ändern, und warum wären bereits gedruckte Seiten davon nicht automatisch berichtigt?",
+        "limits": "Qualitative example drawings; no construction instruction or engineering simulation",
+        "individualDrawingReview": "Codex reviewed the actual mobile drawing and controls; no independent scientific/child approval.",
+        "changes": "Paper, type blocks and ink shown as separated qualitative layers; no mirrored text claim.",
+        "mechanicDecision": "Six existing history stages, two historical/modern views and individual keyboard/touch-selectable parts already support the component-comparison goal. Added specific observation, hint and wrong-answer feedback rather than an unnecessary separate simulation."
+      },
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "reviewedBy": "Codex, not an independent human reviewer",
+      "UIAcceptance": "Targeted12×7 widths, actual native200%/large text, old saves/answers, reciprocal search/Back, real cold offline passed; complete final CI and independent acceptance pending.",
+      "reviewedOn": "2026-10-16"
+    },
+    {
+      "id": "invention-rocket",
+      "kind": "individually-extended-existing",
+      "contentHash": "fa9f13e87f3de5ffadd517209c6e379fee912d47f5f1ab427a39892465bbfc38",
+      "goal": "Du kannst die Schubrichtung erklären und unterscheidest eine physikalische Lernskizze von einer sicheren Bauanleitung.",
+      "ageLevels": {
+        "6-8": "Eine Rakete stößt Material nach hinten aus und wird dabei nach vorn beschleunigt. Sie braucht keine Luft, gegen die sie sich abstützt.",
+        "9-11": "Schnell ausströmendes Gas sollte die Rakete in die Gegenrichtung schieben. Die Richtung des ausgestoßenen Gases und die Schubrichtung sind entgegengesetzt. Der Raketenantrieb lässt sich deshalb nicht mit Rädern auf einer Straße erklären. Die Quelle zu Goddard berichtet über einen Flüssigkeitsraketenstart von1926 und korrigiert ausdrücklich die Vorstellung, Raketen bräuchten Außenluft zum Abstoßen.",
+        "12-14": "Raketen gab es lange vor der Raumfahrt. Robert Goddard startete 1926 eine Rakete mit flüssigen Treibstoffen. Später entwickelten große Teams leistungsfähigere Systeme. Eine Rakete stößt Masse schnell nach hinten aus und erhält dadurch Schub. Sie muss sich nicht an Luft abstoßen und kann auch im Weltraum arbeiten. Einige heutige Raketenstufen werden nach der Landung erneut verwendet."
+      },
+      "observation": "Zeige im vorhandenen Plan mit zwei gedanklichen Pfeilen, wohin Gas austritt und wohin der Schub wirkt. Begründe den Unterschied. Bleibe beim Bildschirmmodell; keine Feuer-, Druck- oder selbstgebauten Raketenversuche.",
+      "questionPreserved": {
+        "prompt": "Welches Problem hilft Die Rakete zu lösen?",
+        "answers": [
+          "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
+          "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
+          "Viele Waren und Reisende mussten über Land transportiert werden."
+        ],
+        "correct": 0,
+        "why": "Schnell ausströmendes Gas sollte die Rakete in die Gegenrichtung schieben. Raketen gab es lange vor der Raumfahrt. Robert Goddard startete 1926 eine Rakete mit flüssigen Treibstoffen. Später entwickelten große Teams leistungsfähigere Systeme."
+      },
+      "answerSpecificFeedback": {
+        "hint": "Welche Antwort betrifft einen Transport über die gewöhnliche Erdoberfläche hinaus? Die beiden anderen nennen Alltagsaufgaben am Boden.",
+        "wrongReasons": [
+          null,
+          "Ein Raum kann mit einer Lampe beleuchtet werden. Das erklärt nicht den Antrieb eines Geräts ins Weltall.",
+          "Viele Waren auf einer Landstrecke zu transportieren beschreibt eher eine Bahn- oder Straßenaufgabe, nicht das Startproblem dieser Karte."
+        ]
+      },
+      "sourceAccess": "NASA-Hauptpassagen zu16.03.1926 und Vakuumfehlschluss gelesen. Keine widersprüchliche Geburtsjahresangabe der Quelle oder Höhenzahl übernommen.",
+      "sources": [
+        {
+          "label": "NASA – erste Flüssigkeitsrakete",
+          "url": "https://www.nasa.gov/history/95-years-ago-goddards-first-liquid-fueled-rocket/"
+        }
+      ],
+      "mediaDecision": {
+        "retained": "Existing six-stage story, then/now drawing and individual parts, with new directed observation",
+        "reason": "Zeige im vorhandenen Plan mit zwei gedanklichen Pfeilen, wohin Gas austritt und wohin der Schub wirkt. Begründe den Unterschied. Bleibe beim Bildschirmmodell; keine Feuer-, Druck- oder selbstgebauten Raketenversuche.",
+        "limits": "Qualitative example drawings; no construction instruction or engineering simulation",
+        "individualDrawingReview": "Codex reviewed the actual mobile drawing and controls; no independent scientific/child approval.",
+        "changes": "Distinct control block with callout; fuel, engine and payload remain separate.",
+        "mechanicDecision": "Six existing history stages, two historical/modern views and individual keyboard/touch-selectable parts already support the component-comparison goal. Added specific observation, hint and wrong-answer feedback rather than an unnecessary separate simulation."
+      },
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "reviewedBy": "Codex, not an independent human reviewer",
+      "UIAcceptance": "Targeted12×7 widths, actual native200%/large text, old saves/answers, reciprocal search/Back, real cold offline passed; complete final CI and independent acceptance pending.",
+      "reviewedOn": "2026-10-16"
+    },
+    {
+      "id": "invention-satellite",
+      "kind": "individually-extended-existing",
+      "contentHash": "3849cce1828192e368f03f045b620c520f89a56180643f68a97e586626b3c8d3",
+      "goal": "Du unterscheidest Start, Versorgung und Forschungsauftrag und kannst die Erdebeobachtung von einer bloßen Weltraumfahrt abgrenzen.",
+      "ageLevels": {
+        "6-8": "Ein künstlicher Satellit bewegt sich auf einer Umlaufbahn. Seine Aufgabe kann Beobachten, Messen oder das Übertragen von Signalen sein.",
+        "9-11": "Ein Gerät sollte die Erde auf einer Umlaufbahn umkreisen. Ein Satellit ist nicht dasselbe wie die Rakete, die ihn startet. Nach dem Start können seine Instrumente auf einer Umlaufbahn eigene Aufgaben erfüllen. Die überlieferte Sputnik-Datierung von1957 ist ein historischer Schritt. Heutige Satelliten unterscheiden sich unter anderem nach Instrumenten, Energieversorgung und Auftrag.",
+        "12-14": "Teams in der Sowjetunion brachten 1957 Sputnik 1 in eine Erdumlaufbahn. Weitere Länder und internationale Teams entwickelten viele unterschiedliche Satelliten. Ein Satellit fällt ständig in Richtung Erde, bewegt sich aber seitwärts schnell genug, um sie immer wieder zu verfehlen. Messgeräte sammeln Daten; Antennen übertragen sie. Unterschiedliche Aufgaben brauchen unterschiedliche Umlaufbahnen."
+      },
+      "observation": "Vergleiche im Teileplan Instrument, Energieversorgung und Antenne. Welches Teil sammelt Messdaten, welches überträgt Signale und welches versorgt das Gerät? Beschreibe die Zusammenarbeit, statt jedes Teil als unabhängigen Satelliten zu zählen.",
+      "questionPreserved": {
+        "prompt": "Welches Problem hilft Der Satellit zu lösen?",
+        "answers": [
+          "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
+          "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
+          "Menschen wollten durch die Luft reisen."
+        ],
+        "correct": 0,
+        "why": "Ein Gerät sollte die Erde auf einer Umlaufbahn umkreisen. Teams in der Sowjetunion brachten 1957 Sputnik 1 in eine Erdumlaufbahn. Weitere Länder und internationale Teams entwickelten viele unterschiedliche Satelliten."
+      },
+      "answerSpecificFeedback": {
+        "hint": "Trenne die Aufgabe auf der Umlaufbahn vom vorherigen Start und vom Transport auf Straßen.",
+        "wrongReasons": [
+          null,
+          "Ein Wagen mit eigenem Antrieb löst eine Aufgabe auf dem Boden. Er umkreist die Erde nicht als Forschungsgerät.",
+          "Fliegen durch die Luft ist noch keine Umlaufbahn. Die Satellitenkarte beschreibt einen anderen Aufenthalts- und Arbeitszusammenhang."
+        ]
+      },
+      "sourceAccess": "NASA-Hauptabschnitt Sputnik1/04.10.1957 gelesen; keine aktuelle Satellitenzahl, Umlaufgarantie oder genaue Modellbahn behauptet.",
+      "sources": [
+        {
+          "label": "NASA – Sputnik 1",
+          "url": "https://www.nasa.gov/history/dawn-of-the-space-age/"
+        }
+      ],
+      "mediaDecision": {
+        "retained": "Existing six-stage story, then/now drawing and individual parts, with new directed observation",
+        "reason": "Vergleiche im Teileplan Instrument, Energieversorgung und Antenne. Welches Teil sammelt Messdaten, welches überträgt Signale und welches versorgt das Gerät? Beschreibe die Zusammenarbeit, statt jedes Teil als unabhängigen Satelliten zu zählen.",
+        "limits": "Qualitative example drawings; no construction instruction or engineering simulation",
+        "individualDrawingReview": "Codex reviewed the actual mobile drawing and controls; no independent scientific/child approval.",
+        "changes": "Existing function/parts drawing retained; new permanent readable HTML labels and directed observation.",
+        "mechanicDecision": "Six existing history stages, two historical/modern views and individual keyboard/touch-selectable parts already support the component-comparison goal. Added specific observation, hint and wrong-answer feedback rather than an unnecessary separate simulation."
+      },
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "reviewedBy": "Codex, not an independent human reviewer",
+      "UIAcceptance": "Targeted12×7 widths, actual native200%/large text, old saves/answers, reciprocal search/Back, real cold offline passed; complete final CI and independent acceptance pending.",
+      "reviewedOn": "2026-10-16"
+    },
+    {
+      "id": "invention-smartphone",
+      "kind": "individually-extended-existing",
+      "contentHash": "ad17982bb3c896b1e9f60ef5b8a672429e81d0fdd2fb7a08d64d350173d9fdfe",
+      "goal": "Du verstehst die Grenzen einzelner Funktionen und musst bei einem Verbindungsfehler nicht automatisch deine gespeicherten Inhalte für verloren halten.",
+      "ageLevels": {
+        "6-8": "Ein Smartphone verbindet Telefon und Computerfunktionen in einem mobilen Gerät. Mehrere Bauteile und Programme arbeiten dabei zusammen.",
+        "9-11": "Telefon und kleiner Computer sollten zusammenarbeiten. Bildschirm, Funkverbindung, Prozessor, Speicher und Energieversorgung haben unterschiedliche Aufgaben. Ein heller Bildschirm beweist zum Beispiel noch nicht, dass eine Funkverbindung besteht. Frühe Kombinationsgeräte zeigen Entwicklungsschritte; das heutige Smartphone entstand aus vielen zuvor entwickelten Techniken.",
+        "12-14": "Viele Entwicklungen kamen zusammen: Mobilfunk, Chips, Akkus, Bildschirme und Programme. IBM und BellSouth kombinierten beim Simon in den 1990er-Jahren mehrere Funktionen. Im Smartphone stecken viele frühere Entwicklungen: Computer, Funk, Bildschirm, Kamera und Akku. Reparieren und längeres Benutzen können Material sparen. Nicht jede neue Version ist für jede Aufgabe nötig."
+      },
+      "observation": "Wähle im vorhandenen Teileplan zwei Funktionen, etwa Bildschirm und Funk. Vermute, was ohne die eine noch mit der anderen möglich sein könnte. Erkläre den Unterschied zwischen einer gespeicherten Notiz und einer Nachricht, die erst übertragen werden muss. Keine Anmeldung oder privaten Daten nötig.",
+      "questionPreserved": {
+        "prompt": "Welches Problem hilft Das Smartphone zu lösen?",
+        "answers": [
+          "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
+          "Viele Waren und Reisende mussten über Land transportiert werden.",
+          "Eine Stimme war normalerweise nur in der Nähe hörbar."
+        ],
+        "correct": 0,
+        "why": "Telefon und kleiner Computer sollten zusammenarbeiten. Viele Entwicklungen kamen zusammen: Mobilfunk, Chips, Akkus, Bildschirme und Programme. IBM und BellSouth kombinierten beim Simon in den 1990er-Jahren mehrere Funktionen."
+      },
+      "answerSpecificFeedback": {
+        "hint": "Eine Antwort verbindet mehrere Aufgaben in einem mobilen Gerät. Welche geht über die reine Sprachübertragung hinaus?",
+        "wrongReasons": [
+          null,
+          "Viele Reisende und Waren auf einer Strecke zu bewegen ist eine Transportaufgabe. Hier werden mehrere Informationsfunktionen kombiniert.",
+          "Nur eine Stimme aus der Ferne hörbar zu machen beschreibt bereits ein Telefon. Die Frage sucht zusätzlich die Verarbeitung von Informationen unterwegs."
+        ]
+      },
+      "sourceAccess": "CHM-Objekt1733 vollständig gelesen: Simon kombiniert Mobiltelefon, Organizer, Fax und Pager; 1993 als DateIntroduced nicht mit späterem Verkaufsstart gleichsetzen. Keine Preis-/Akkulaufzeit- oder Erstheitswerbung übernommen.",
+      "sources": [
+        {
+          "label": "Computer History Museum – Simon",
+          "url": "https://www.computerhistory.org/revolution/artifact/1733"
+        }
+      ],
+      "mediaDecision": {
+        "retained": "Existing six-stage story, then/now drawing and individual parts, with new directed observation",
+        "reason": "Wähle im vorhandenen Teileplan zwei Funktionen, etwa Bildschirm und Funk. Vermute, was ohne die eine noch mit der anderen möglich sein könnte. Erkläre den Unterschied zwischen einer gespeicherten Notiz und einer Nachricht, die erst übertragen werden muss. Keine Anmeldung oder privaten Daten nötig.",
+        "limits": "Qualitative example drawings; no construction instruction or engineering simulation",
+        "individualDrawingReview": "Codex reviewed the actual mobile drawing and controls; no independent scientific/child approval.",
+        "changes": "Existing function/parts drawing retained; new permanent readable HTML labels and directed observation.",
+        "mechanicDecision": "Six existing history stages, two historical/modern views and individual keyboard/touch-selectable parts already support the component-comparison goal. Added specific observation, hint and wrong-answer feedback rather than an unnecessary separate simulation."
+      },
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "reviewedBy": "Codex, not an independent human reviewer",
+      "UIAcceptance": "Targeted12×7 widths, actual native200%/large text, old saves/answers, reciprocal search/Back, real cold offline passed; complete final CI and independent acceptance pending.",
+      "reviewedOn": "2026-10-16"
+    }
+  ],
   "preparedManuscripts": [
     {
       "id": "invention-battery",
@@ -44,9 +665,16 @@
             "Elektroden und Elektrolyt; Elektronen außen, Ionen innen",
             "Aufladen kehrt chemische Vorgänge um, Alterung bleibt"
           ]
+        },
+        {
+          "url": "https://www.rigb.org/explore-science/our-collection/iconic-objects-ri-collection",
+          "anchor": "Alessandro Volta’s voltaic pile, eigener Abschnitt",
+          "claims": [
+            "Jahresanker1800; das gezeigte spätere Exemplar wurde1814 übergeben"
+          ]
         }
       ],
-      "additionalCheck": "Volta-1800-Museumsbeleg bislang Suchfund; direkte Objektseite nicht abrufbar. Datum vor Produktintegration erneut belegen.",
+      "additionalCheck": "Royal-Institution-Datierungsabschnitt und vollständige Objektbeschreibung nachgelesen. Objekt ist ein frühes Beispiel, nicht das erste Exemplar. Eigene UI/Grafik und unabhängige Fach-/Kinderabnahme offen.",
       "novelty": "Chemische Zelle und innere/äußere Ladungswege; keine zweite allgemeine Energie-Speicherkarte."
     },
     {
@@ -57,7 +685,7 @@
       "explain": "Ändert sich das Magnetfeld durch eine Spule, kann an ihren Anschlüssen eine Spannung entstehen. In einem geschlossenen Stromkreis kann dadurch Strom fließen. Der Antrieb liefert die Energie. Ein Magnet allein ist keine unerschöpfliche Energiequelle.",
       "deeper": "Michael Faraday untersuchte 1831 die elektromagnetische Induktion. Sein überliefertes Gerät verband eine Drahtspule und einen bewegten Stabmagneten mit einem Strommessgerät. Ein Motor nutzt elektrische Energie für Bewegung; ein Generator hat die umgekehrte Nutzrichtung. Nicht jede Stromquelle ist ein Generator: Eine Solarzelle arbeitet anders.",
       "observe": "Vergleiche im späteren Bildschirmmodell: Magnet steht; Magnet bewegt sich hinein; Magnet bewegt sich hinaus. Vermute vor jedem Schritt, ob das Messgerät ausschlägt. Keine Steckdosen oder echten Anlagen verwenden.",
-      "benefit": "Du erkennst den gemeinsamen Schritt zwischen Windrad, Wasserkraft und vielen Kraftwerken und verwechselt Energieumwandlung nicht mit Energieerzeugung aus dem Nichts.",
+      "benefit": "Du erkennst den gemeinsamen Schritt zwischen Windrad, Wasserkraft und vielen Kraftwerken und verwechselst Energieumwandlung nicht mit Energieerzeugung aus dem Nichts.",
       "date": "1831 · Faradays Induktionsversuche",
       "question": {
         "prompt": "Spule und Magnet bleiben vollkommen unverändert stehen. Reicht das hier für dauernd fließenden Strom?",
@@ -139,9 +767,23 @@
             "Funktionierender Halbleiterverstärker 1947",
             "Rollen Bardeen, Brattain und Shockley; Germaniumkontakte"
           ]
+        },
+        {
+          "url": "https://efficiencywins.nexperia.com/efficient-products/understanding-the-switching-characteristics-of-rets",
+          "anchor": "Einleitung und on/off-Zustände, AutorBurkhardLaue",
+          "claims": [
+            "Bipolartransistoren können über einen Steuereingang schalten; technische Varianten beachten"
+          ]
+        },
+        {
+          "url": "https://www.ti.com/lit/pdf/tidu002",
+          "anchor": "Considerations for High-Gain Multistage Designs, Abschnitt3.2, gedruckteSeite4/PDF-Seite7",
+          "claims": [
+            "Strom im Ausgangstransistor des beschriebenen Verstärkers stammt aus der Stromversorgung"
+          ]
         }
       ],
-      "additionalCheck": "Schalt-/Verstärkerfunktion, heutiger MOSFET und Energieversorgung zusätzlich an vollständiger Primärfachquelle lesen; Nobel-Seiten 403 nicht als vollständig geprüft markieren.",
+      "additionalCheck": "Hersteller-Haupttext zum Schalten und konkrete TI-Passage zur Versorgung des Ausgangstransistors gelesen. Historisches Punktkontaktgerät nicht mit modernem MOSFET gleichsetzen. Eigene rein symbolische Grafik und unabhängige Fach-/Kinderabnahme offen.",
       "novelty": "Bauteil und Signalsteuerung statt zweite Computerübersicht."
     },
     {
@@ -182,9 +824,23 @@
             "Umgekehrtes Bild durch kleine Öffnung",
             "Camera-obscura-Vorläufer und mehrere Beteiligte"
           ]
+        },
+        {
+          "url": "https://www.scienceandmediamuseum.org.uk/about-us/press-office/daguerreotypes-digital-celebrate-world-photography-day-national-science-and",
+          "anchor": "Haupttext zur Bekanntgabe am19.08.1839 und zur Daguerreotypie",
+          "claims": [
+            "1839 bezeichnet die Bekanntgabe des Verfahrens, nicht den Beginn sämtlicher Kameras"
+          ]
+        },
+        {
+          "url": "https://blog.scienceandmediamuseum.org.uk/why-do-we-collect-photography/",
+          "anchor": "Collecting photography in the digital age",
+          "claims": [
+            "Das Museum sammelt unter anderem elektronische Bildsensoren"
+          ]
         }
       ],
-      "additionalCheck": "1839 sowie elektronische Sensorfunktion vor Integration an zweiter vollständiger Museums-/Primärquelle lesen; keine ungeprüfte Erstfoto-Jahreszahl übernehmen.",
+      "additionalCheck": "Museumshauptpassagen zu1839 und digitaler Bildaufzeichnung nachgelesen; keine Erstfoto-Alleinbehauptung. Eigene Lochkamera-Grafik, Sonnenwarnung und unabhängige Abnahme vor Produktintegration prüfen.",
       "novelty": "Optische Bildentstehung und Aufzeichnung statt weitere Smartphone-Funktionsliste."
     },
     {
@@ -232,9 +888,16 @@
           "claims": [
             "Patentantrag 1608; Galileo nicht Erfinder"
           ]
+        },
+        {
+          "url": "https://science.nasa.gov/eclipses/safety/",
+          "anchor": "Eclipse Eye Safety, Warnungen vor Kamera/Fernrohr/Fernglas und Lochöffnung",
+          "claims": [
+            "Sonnenblick durch optische Geräte kann schwereAugenschäden verursachen; Kartenversuch bleibt vollständig aufPapier"
+          ]
         }
       ],
-      "additionalCheck": "Sonnen-Sicherheitshinweis mit zugänglicher NASA-Sicherheitsquelle ergänzen; keine historische Aussage, Galileo sei der erste astronomische Nutzer überhaupt.",
+      "additionalCheck": "NASA-Sicherheitsabschnitt nachgelesen; keine Sonnenbeobachtung anleiten. Historische Ersterfindung und Galileo weiterhin qualifiziert. Eigene UI/Grafik und unabhängige Abnahme offen.",
       "novelty": "Instrumentelle Lichtsammelfläche und Geschichte statt neuer Stern-/Planetenartikel."
     },
     {
@@ -242,7 +905,7 @@
       "title": "Das Mikroskop",
       "intro": "Wie werden kleine Strukturen unterscheidbar?",
       "starter": "Ein Lichtmikroskop hilft, kleine Dinge genauer zu erkennen. Dafür braucht es Licht, Linsen und eine passende Scharfeinstellung.",
-      "explain": "Bei einem zusammengesetzten Lichtmikroskop erzeugt das Objektiv ein vergrößertes Zwischenbild. Durch das Okular kann dieses Bild weiter betrachtet werden. Ein bloß größeres unscharfes Bild zeigt noch keine zusätzlichen Einzelheiten.",
+      "explain": "Bei einem klassischen zusammengesetzten Lichtmikroskop erzeugt das Objektiv ein vergrößertes Zwischenbild. Durch das Okular lässt sich dieses Bild weiter betrachten. Ein bloß größeres unscharfes Bild zeigt noch keine zusätzlichen Einzelheiten. Moderne Mikroskope können weitere Linsen besitzen.",
       "deeper": "Robert Hooke veröffentlichte 1665 in Micrographia Zeichnungen von kleinen Strukturen. Die verlinkte Museumskopie seines beschriebenen Mikroskops stammt aus den 1920er-Jahren; sie ist kein Originalgerät von 1665. Mikroskopie ist älter als diese Veröffentlichung und entwickelte sich durch viele Menschen weiter.",
       "observe": "Vergleiche in der späteren Ansicht zwei gleich stark vergrößerte Muster: eines scharf, eines verschwommen. Welche Unterschiede kannst du sicher beschreiben? Zum eigenen Beobachten reicht Papier mit feinem Aufdruck. Keine unbekannten Flüssigkeiten oder Körperproben untersuchen.",
       "benefit": "Du unterscheidest Vergrößerung von erkennbaren Details und lernst, ein Museumsoriginal von einer späteren Nachbildung zu unterscheiden.",
@@ -273,9 +936,24 @@
           "claims": [
             "Micrographia 1665; Museumsexemplar spätere Replik"
           ]
+        },
+        {
+          "url": "https://www.microscopyu.com/microscopy-basics/components",
+          "anchor": "Figures11–13, Zwischenbild und Unterschied festeTubuslänge/unendlich korrigiert",
+          "claims": [
+            "Beim klassisch endlichen Modell erzeugt das Objektiv ein Zwischenbild; Okular betrachtet es weiter",
+            "Moderne unendlich korrigierte Geräte verwenden zusätzlich eine Tubuslinse"
+          ]
+        },
+        {
+          "url": "https://www.microscopyu.com/microscopy-basics/useful-magnification-range",
+          "anchor": "Empty Magnification, Einleitung und Figure1",
+          "claims": [
+            "Zusätzliche Vergrößerung allein erzeugt keine neuen Details"
+          ]
         }
       ],
-      "additionalCheck": "Vollständige Primärfachquelle zum optischen Strahlengang/Auflösungsbegriff fehlt noch; daher Manuskript, nicht produktionsreif.",
+      "additionalCheck": "Optik-Hauptpassagen und nutzbare Vergrößerung bei NikonMicroscopyU vollständig in den relevanten Abschnitten gelesen; Hersteller-/Fachexpertenquelle, keine unabhängige Kinderabnahme. Eigene qualitative Grafik/Bedienprüfung noch erforderlich.",
       "novelty": "Mikroskopisches Instrument, Auflösung und Nachbildungsquellenkritik statt Synonym für Vergrößerung."
     },
     {
@@ -316,9 +994,17 @@
             "Datiertes Objekt 1906",
             "Kompression/Expansion im Wärmetransport"
           ]
+        },
+        {
+          "url": "https://www.danfoss.com/en/about-danfoss/our-businesses/cooling/the-fridge-how-it-works/",
+          "anchor": "What a refrigerator does; Compressor/Condenser/Evaporator; How a refrigerator system works",
+          "claims": [
+            "Wärme wird innen aufgenommen und außen abgegeben",
+            "Geschlossener Kompressorkreislauf mit Verdampfung und Kondensation"
+          ]
         }
       ],
-      "additionalCheck": "Energieflussbilanz und genaues Verdampfer-/Verflüssigerprinzip benötigen zweite vollständig gelesene Primärfachquelle; Museumstext allein ist kein vollständiger Lehrbuchbeleg.",
+      "additionalCheck": "Vollständigen technischen Danfoss-Haupttext gelesen; Hersteller-Eigenquelle. Keine dort genannten Alkohol-/Spray-Versuche übernehmen, keine Rohre/Geräte anfassen. Eigene Energieflussgrafik und unabhängige Fachabnahme offen.",
       "novelty": "Technischer Wärmetransport und Systemgrenze statt zweite allgemeine Wärmekarte."
     },
     {
@@ -360,9 +1046,17 @@
             "Rover 1885 und Ketten-Hinterradantrieb",
             "Historisches Objekt hat Vollgummireifen; niedrigere Sitzlage als Hochrad"
           ]
+        },
+        {
+          "url": "https://annex.exploratorium.edu/cycling/gears1.html",
+          "anchor": "The Benefits of Gears und Count your teeth, PaulDoherty",
+          "claims": [
+            "Gangwahl verändert das Verhältnis von Pedal- zu Hinterradumdrehungen",
+            "Zahnzahlen des vorderen und hinteren Zahnrads bestimmen die Übersetzung im beschriebenen Kettenantrieb"
+          ]
         }
       ],
-      "additionalCheck": "Übersetzungs-/Kraftbeziehung noch an vollständiger primärer Mechanikquelle überprüfen; keine aktuelle Unfallquote behaupten.",
+      "additionalCheck": "Vollständiger historischer Exploratorium-Haupttext im offiziellenAnnex gelesen; altes www-Ziel nicht erreichbar, funktionierendeMuseumsquelle ergänzen. Keine kopierten Bilder/Animationen oder aktuelleUnfallquote. Eigene qualitativeKetten-/Gangdarstellung und unabhängigeAbnahme offen.",
       "novelty": "Muskelbetriebener Kettenantrieb und Gangübersetzung statt weiteres Kraftfahrzeug."
     },
     {
@@ -403,9 +1097,17 @@
           "claims": [
             "Verkauf 1853, Vorführung 1854, Personenaufzug 1857"
           ]
+        },
+        {
+          "url": "https://www.otis.com/en/us/tools-resources/high-rise-safety-systems/",
+          "anchor": "Engineered for safety; The machine/The brakes/The safeties; Sample scenario",
+          "claims": [
+            "Treibscheibe bewegt Seile an Kabine und Gegengewicht",
+            "Antrieb, Maschinenbremse und Fangvorrichtung sind verschiedene Komponenten"
+          ]
         }
       ],
-      "additionalCheck": "Unabhängiger Museums-/Patentgegenabgleich und technische Primärquelle zu Treibscheibe/Gegengewicht offen. Verbindungs-IDs vor Integration gegen Katalog prüfen.",
+      "additionalCheck": "Technische Otis-Hauptabschnitte zu Treibscheibe/Gegengewicht, Regler und Fangvorrichtung nachgelesen. Historische LOC-Seite intern nicht abrufbar; unabhängiger Museums-/Patentgegenabgleich bleibt offen. Keine realeManipulation/Bedienanleitung. UI/Modellprüfung offen.",
       "novelty": "Vertikaler Transport, Gegenlast und getrennte Sicherheit statt zweiter Hochhausartikel."
     },
     {
@@ -453,9 +1155,23 @@
           "claims": [
             "Mehrere Entwicklungsschritte statt singulärer Erst-Erfindung 1890"
           ]
+        },
+        {
+          "url": "https://www.usgs.gov/faqs/seismometers-seismographs-seismograms-whats-difference-how-do-they-work",
+          "anchor": "FAQ-Hauptabsätze zu Messgerät, relativer Bewegung und Seismogramm",
+          "claims": [
+            "Seismogramm ist die Aufzeichnung an einem Ort; Gerät misst relative Bewegung"
+          ]
+        },
+        {
+          "url": "https://www.usgs.gov/faqs/can-you-predict-earthquakes",
+          "anchor": "FAQ-Hauptabsätze1–16, Unterschied Vorhersage/Wahrscheinlichkeit",
+          "claims": [
+            "Keine verlässliche genaue Vorhersage von Zeitpunkt, Ort und Stärke eines künftigen großen Bebens"
+          ]
         }
       ],
-      "additionalCheck": "Vor UI-Übernahme FAQ-Grundbegriffe vollständig abrufen und sichere Vorhersagegrenze mit eigener aktueller USGS-FAQ belegen.",
+      "additionalCheck": "Beide aktuellen USGS-FAQ-Haupttexte gelesen. PauschalesErstjahr1890 der Geräte-FAQ widerspricht älteren Entwicklungsschritten imUSGS-Zeitstrahl; deshalb kein einzelnesErstjahr übernehmen. Eigenes Bezugsmodell und unabhängige Fach-/Kinderprüfung offen.",
       "novelty": "Messgerät, Bezugssystem und Datenauswertung statt weiterer Erdbebenbeschreibung."
     },
     {
@@ -512,7 +1228,7 @@
           ]
         }
       ],
-      "additionalCheck": "NIHF-Blog-Haupttext sowie Stützstrukturen/Querschnittsmodell vor Produktintegration vollständig prüfen; keine Kostengrenze oder Festigkeitsgarantie behaupten.",
+      "additionalCheck": "NIHF-Blog-Hauptpassagen zu1986, Entstehungsidee und UV-Photopolymerverfahren nachgelesen. Eigener tastaturbedienbarer Querschnittsvergleich und klare Grenzen zu Stützen/Festigkeit vor Integration prüfen; keine sichereBauteilfreigabe simulieren.",
       "novelty": "Räumlicher Materialaufbau mit Querschnitten statt neu benanntem Buchdruck."
     },
     {
@@ -565,163 +1281,263 @@
       "novelty": "Textiltechnik und Fadenverbindung statt künstliche Abspaltung einer vorhandenen Maschine."
     }
   ],
-  "preparedExisting": [
+  "preparedExisting": [],
+  "implementationNotes": "Existing twelve individually integrated. Original IDs/questions/answers/correct indexes, six stages, part IDs and saved keys retained. Prepared twelve new concepts remain outside the product. No independent scientific or child acceptance, no release. Old work/stage scripts have already been applied and must not overwrite subsequent refinements.",
+  "modelReview": {
+    "status": "Seven existing diagrams corrected or clarified; five retained after code and actual visual inspection. Readable permanent HTML numbers/names, selected part states, native zoom and honest functional limits checked by Codex; independent acceptance pending.",
+    "reviewedBy": "Codex",
+    "definiteCoordinateFindings": [
+      {
+        "id": "invention-railway",
+        "partId": "0",
+        "part": "Schienen",
+        "currentPoint": [
+          149,
+          164
+        ],
+        "evidence": "Both actual rail paths lie at y274 and y294; circle radius21 at y164 does not touch either.",
+        "proposedPoint": [
+          470,
+          284
+        ]
+      },
+      {
+        "id": "invention-railway",
+        "partId": "1",
+        "part": "Antrieb",
+        "currentPoint": [
+          259,
+          270
+        ],
+        "evidence": "Current point is on track region, while depicted locomotive body is above y229.",
+        "proposedPoint": [
+          166,
+          179
+        ]
+      },
+      {
+        "id": "invention-airplane",
+        "partId": "3",
+        "part": "Cockpit",
+        "currentPoint": [
+          424,
+          110
+        ],
+        "evidence": "Actual cockpit window stroke M430158H470 has y158; current21-radius circle ends at y131.",
+        "proposedPoint": [
+          450,
+          158
+        ]
+      },
+      {
+        "id": "invention-airplane",
+        "partId": "1",
+        "part": "Triebwerk",
+        "currentPoint": [
+          426,
+          171
+        ],
+        "evidence": "Engine ellipse is centered410,205 with radius37,17; centering label on it is clearer.",
+        "proposedPoint": [
+          410,
+          205
+        ]
+      },
+      {
+        "id": "invention-internet",
+        "partId": "2",
+        "part": "Verbindung",
+        "currentPoint": [
+          400,
+          104
+        ],
+        "evidence": "Actual right-device connection runs horizontally at y151; current point is in empty space.",
+        "proposedPoint": [
+          400,
+          151
+        ]
+      }
+    ],
+    "functionalDiagramFindings": [
+      {
+        "id": "invention-phone",
+        "finding": "Current parts diagram reuses the modern phone exterior. Microphone/speaker points indicate screen areas rather than drawn signal components.",
+        "proposedImprovement": "Keep then/now pictures, but give the interactive parts plan an original simple microphone→signal path→speaker drawing, with readable external HTML labels and explicit functional/non-anatomical limit. Preserve all three part IDs/seen/selected keys."
+      },
+      {
+        "id": "invention-car",
+        "finding": "Seatbelt part6 points inside an empty window; no belt stroke is depicted.",
+        "proposedImprovement": "Add an explicit schematic diagonal belt in that window, verify selected number visually. No safety or crash-performance simulation claim."
+      }
+    ],
+    "retainedAfterCodeInspection": [
+      "invention-light: glass/filament/socket mapping coherent; LED comparison still needs personal browser review",
+      "invention-computer: separate processor/RAM/storage/input/output mapping coherent",
+      "invention-compass: actual labels are needle/scale/case and match current regions; do not act on earlier guessed label names",
+      "invention-satellite: power/antenna/instrument/control regions coherent",
+      "invention-smartphone: screen/processor/battery/radio/camera mapping broadly coherent; verify mobile diagram and external labels",
+      "invention-printing: interactive press and then/now comparison retained, verify ink/type region individually",
+      "invention-rocket: qualitative cutaway retained, inspect distinction of control unit and fuel/payload"
+    ],
+    "sharedChecksBeforeAcceptance": [
+      "Do not count these media-review notes as implemented changes",
+      "Existing HTML part controls, keyboard paths,44px touch alternatives and stable saved part IDs remain mandatory",
+      "Review tiny duplicate SVG text; use existing readable HTML captions/part labels rather than another illegible internal label",
+      "Historical magnetic-spoon comparison is a schematic/reconstruction question, not a freshly verified earliest-use claim",
+      "Integrate with the existing12 manuscripts after current engineering milestone; no new branch/prototype application"
+    ]
+  },
+  "newConnections": [
     {
-      "id": "invention-light",
-      "starter": "Eine elektrische Lampe macht aus elektrischer Energie Licht. Damit ein Raum hell wird, müssen Lampe und Stromversorgung zusammenpassen.",
-      "paragraph": "Eine Lampe allein ist noch kein Beleuchtungssystem. Leitungen bringen elektrische Energie zur Lampe, Schalter steuern den Stromweg. Bei einer Glühlampe leuchtet ein heißer Faden; heutige Lampen können anders arbeiten. Der Vergleich zeigt deshalb zwei Bauarten und keinen einzigen unveränderten Lampentyp.",
-      "observe": "Wähle im vorhandenen Plan nacheinander Leuchtteil, Leitung und Anschluss. Beschreibe jeweils eine andere Aufgabe. Vergleiche dann Damals und Heute: Welches Ziel bleibt gleich, obwohl sich die Bauart verändert? Nur am Bildschirm untersuchen, keine echte Lampe öffnen.",
-      "benefit": "Du unterscheidest ein einzelnes Bauteil vom ganzen Versorgungssystem und kannst erklären, warum eine gute Idee oft viele zusammenpassende Verbesserungen braucht.",
-      "hint": "Vergleiche das Ziel einer Lampe mit dem Ziel eines Verkehrsmittels. Was soll sich für Menschen nach Sonnenuntergang ändern?",
-      "wrong": [
-        "Durch die Luft zu reisen ist ein Transportproblem. Hier geht es um die Wahrnehmung in einem dunklen Raum.",
-        "Wiederholte Rechnungen gehören zu einer anderen Aufgabe. Die Lampe führt keine Rechenanweisungen aus."
-      ],
-      "sourceStatus": "NPS-Haupttext vollständig gelesen, insbesondere Glühfaden/Systembestandteile und ausdrücklicher Hinweis auf viele Beteiligte; heutige LED-Funktion vor weiterer Detailerweiterung gesondert belegen."
+      "from": "invention-light",
+      "to": "science-circuit",
+      "why": "Eine Lampe braucht elektrische Energie und einen geschlossenen Stromweg. Der Stromkreis erklärt das Zusammenspiel mit Leitung und Schalter.",
+      "reciprocal": true
     },
     {
-      "id": "invention-car",
-      "starter": "Ein Auto hat einen Antrieb, der seine Räder bewegen kann. Lenken und Bremsen sind andere Aufgaben als das Antreiben.",
-      "paragraph": "Motor, Räder, Lenkung und Bremsen müssen zusammenarbeiten. Ein stärkerer Motor ersetzt keine verlässlichen Bremsen und keine passende Straße. Der historische Benzinwagen ist ein Entwicklungsschritt; heutige Autos haben unterschiedliche Antriebe. Die Karte bezeichnet deshalb nicht ein einziges Fahrzeug als Ursprung sämtlicher Autos.",
-      "observe": "Untersuche im vorhandenen Teileplan Antrieb, Räder, Lenkung und Bremse. Denke dir einen Fehler bei genau einem Teil aus. Welches Verhalten des Autos würde sich ändern, welches andere Teil könnte den Fehler nicht einfach ersetzen? Keine echten Fahrzeuge bedienen.",
-      "benefit": "Du beschreibst Technik über zusammenwirkende Aufgaben und beurteilst ein Verkehrsmittel auch nach Sicherheit statt allein nach Motorleistung.",
-      "hint": "Welche beiden Antworten betreffen vor allem Informationen? Welche betrifft dagegen den Transport eines Wagens?",
-      "wrong": [
-        "Eine Stimme weit zu übertragen betrifft ein Kommunikationsgerät. Der Wagen soll Menschen oder Lasten fortbewegen.",
-        "Computer zu verbinden ist ein Informationsproblem. Hier wird eine mechanische Bewegung gesucht."
-      ],
-      "sourceStatus": "Mercedes-Benz-Primärseite vollständig im Hauptabschnitt gelesen; Hersteller-Eigenquelle, unabhängiger Abgleich und sichere Brems-/Antriebsfachquelle für weitergehende Behauptungen offen."
+      "from": "invention-car",
+      "to": "invention-railway",
+      "why": "Auto und Eisenbahn transportieren Menschen und Lasten. Beim Zug führen Schienen die Räder; beim Auto wird die Fahrtrichtung anders gesteuert.",
+      "reciprocal": true
     },
     {
-      "id": "invention-railway",
-      "starter": "Ein Zug bewegt Wagen auf Schienen. Viele Reisende oder Waren können zusammen transportiert werden.",
-      "paragraph": "Zur Eisenbahn gehören mehr Dinge als eine Lokomotive: Fahrzeuge, Gleise, Stationen und ein abgestimmter Betrieb. Ein historischer Eröffnungstag belegt deshalb nicht die plötzliche Erfindung aller ihrer Teile. Die Quelle beschreibt die Fahrt von Locomotion 1825 und erklärt ausdrücklich, dass diese Maschine nicht die erste Dampflokomotive war.",
-      "observe": "Wähle im vorhandenen Plan Gleis, Antrieb und Wagen. Ordne gedanklich zu: Was trägt und führt, was bewegt, was transportiert die Menschen oder Waren? Vergleiche das historische Fahrzeug mit der heutigen Darstellung. Nicht an echten Gleisen forschen.",
-      "benefit": "Du erkennst Verkehr als abgestimmtes System und kannst ein belegtes Ereignis von einer zu einfachen Geschichte über einen einzelnen Erfinder unterscheiden.",
-      "hint": "Überlege, welches Problem eine gemeinsame Strecke mit vielen Wagen löst. Die anderen Antworten betreffen Rechnen und Orientierung.",
-      "wrong": [
-        "Ein Rechner kann wiederholte Rechnungen bearbeiten. Das erklärt noch nicht den Transport vieler Wagen auf einer Strecke.",
-        "Landmarken oder Sterne betreffen vor allem Orientierung. Die Eisenbahnkarte fragt nach dem gemeinsamen Transport."
-      ],
-      "sourceStatus": "National-Railway-Museum-Haupttext zur Fahrt27.09.1825, älteren Lokomotiven und Infrastruktur gelesen; keine Fahrgastzahl oder aktuelle Umweltbilanz ergänzt."
+      "from": "invention-railway",
+      "to": "history-steam",
+      "why": "Dampfmaschinen trieben frühe Lokomotiven an. Die Technikgeschichte zeigt, warum Antrieb, Gleise und Betrieb schrittweise zusammenwuchsen.",
+      "reciprocal": true
     },
     {
-      "id": "invention-airplane",
-      "starter": "Flügel, Antrieb und Steuerung haben beim Flugzeug verschiedene Aufgaben. Ein Flugzeug muss sich nicht nur in der Luft halten, sondern auch lenken lassen.",
-      "paragraph": "Beim Fliegen wirken Auftrieb, Gewichtskraft, Schub und Widerstand zusammen. Ein Flugzeug lässt sich nicht allein durch einen großen Motor erklären. Seine Flügel, Fluglage und Steuerung beeinflussen die Bewegung ebenfalls. Das vorhandene Modell ist eine vereinfachte Lernhilfe und keine Anleitung zum Bauen oder Fliegen.",
-      "observe": "Vergleiche im Teileplan Flügel, Antrieb und Steuerflächen. Sage voraus: Welche Aufgabe würde fehlen, wenn man nur den Motor betrachtet? Prüfe danach die Beschreibung jedes Teils und ändere deine Erklärung, falls nötig.",
-      "benefit": "Du unterscheidest Kräfte und Steuerung und erkennst, warum ein erfolgreicher Versuch mehr braucht als die Erzeugung von Vorwärtsbewegung.",
-      "hint": "Verbinde das Fortbewegungsziel mit dem Ort, an dem es erreicht werden soll. Datenübertragung und Vervielfältigung lösen andere Probleme.",
-      "wrong": [
-        "Informationen zwischen Computern zu übertragen beschreibt ein Netzwerk. Es erklärt nicht den Transport durch die Luft.",
-        "Viele gleiche Buchseiten zu erzeugen ist eine Vervielfältigungsaufgabe. Ein Flugzeug braucht stattdessen tragende und steuernde Flächen."
-      ],
-      "sourceStatus": "NASA-Haupttext zu allen vier Kräften, Steuerung und Unterscheidung von Schub/Auftrieb vollständig gelesen. Keine zusätzliche historische Erstbehauptung eingeführt."
+      "from": "invention-airplane",
+      "to": "science-flight",
+      "why": "Die Erfindungskarte ordnet Flügel, Triebwerk und Steuerung zu. Die Flugkarte erklärt die dabei wirkenden Kräfte genauer.",
+      "reciprocal": true
     },
     {
-      "id": "invention-phone",
-      "starter": "Ein Telefon überträgt Signale. Im Empfänger werden sie wieder als Stimme hörbar.",
-      "paragraph": "Mikrofon, Übertragungsweg und Lautsprecher lösen verschiedene Teile der Aufgabe. Das Mikrofon nimmt Schall auf, der Übertragungsweg bringt ein Signal weiter, und der Lautsprecher erzeugt wieder Schall. Ein verständliches Gespräch braucht das Zusammenwirken dieser Teile.",
-      "observe": "Gehe im Plan die Reihenfolge Mikrofon, Signalweg, Lautsprecher durch. Beschreibe, an welcher Stelle Schall vorkommt und wo ein übertragenes Signal. Was wäre bei einem ausgefallenen Lautsprecher noch möglich, was nicht?",
-      "benefit": "Du trennst eine Nachricht von ihrem technischen Transport und kannst einen Fehler an einer bestimmten Stelle des Weges vermuten.",
-      "hint": "Welche Antwort betrifft den Austausch zwischen zwei Menschen, auch wenn sie weit voneinander entfernt sind?",
-      "wrong": [
-        "Richtungen ohne Landmarken zu bestimmen ist eine Orientierungsaufgabe. Ein Telefon überträgt dagegen ein Gespräch.",
-        "Geräte ins Weltall zu bringen erfordert einen Transportantrieb. Das Telefon selbst übernimmt diesen Start nicht."
-      ],
-      "sourceStatus": "Bisherige Smithsonian-Objektseite erneut404. Alternative Smithsonian-Katalogseite nmah_704159 vollständig gelesen: Membran, veränderlicher Strom und hörbare Schwingung am Empfänger; Beleg für das Funktionsprinzip, nicht für sämtliche Patentprioritäten."
+      "from": "invention-phone",
+      "to": "invention-smartphone",
+      "why": "Beide übertragen Gespräche. Ein Smartphone verbindet diese Aufgabe zusätzlich mit Computerfunktionen; ein Bildschirm allein stellt noch keine Verbindung her.",
+      "reciprocal": true
     },
     {
-      "id": "invention-computer",
-      "starter": "Ein Computer führt Anweisungen aus. Er braucht passende Daten und ein Programm; schneller rechnen bedeutet nicht automatisch, richtig zu entscheiden.",
-      "paragraph": "Eingabe, Verarbeitung, Arbeitsspeicher, dauerhafter Speicher und Ausgabe erfüllen verschiedene Aufgaben. Ein Ergebnis kann falsch sein, obwohl der Rechner seine Anweisungen genau befolgt hat: Auch die Daten oder das Programm können ungeeignet sein. Die große Geschichte der Computer besteht aus vielen unterschiedlich gebauten Geräten.",
-      "observe": "Verfolge im vorhandenen Plan eine eingegebene Zahl bis zur Ausgabe. Vergleiche danach Arbeitsspeicher und dauerhaften Speicher. Welche Aufgabe hätten beide, wenn du einen Text bearbeitest und ihn anschließend speichern möchtest?",
-      "benefit": "Du kannst technische Abläufe erklären und prüfst Ergebnisse, statt einem schnellen Gerät automatisch Recht zu geben.",
-      "hint": "Denke an viele gleiche Arbeitsschritte mit Daten. Welche Antwort beschreibt diese Wiederholung statt bloß ein bestimmtes Medium oder einen Aufenthaltsort?",
-      "wrong": [
-        "Buchseiten oft zu vervielfältigen erklärt eine Drucktechnik. Ein Computer kann jedoch viele unterschiedliche Anweisungen verarbeiten.",
-        "Ein Gerät im Weltraum kann einen Computer enthalten. Der Computer ist aber nicht durch seinen Aufenthaltsort definiert."
-      ],
-      "sourceStatus": "CHM-Computerzeitstrahl vollständig abrufbar, ausgewählte Hauptstellen zu verschiedenen Rechnerbauformen gelesen. Keine Masse-/Leistungszahl oder singuläre Erst-Erfinderbehauptung ergänzt."
+      "from": "invention-computer",
+      "to": "science-computer",
+      "why": "Die Erfindungskarte zeigt die Aufgaben der Bauteile. Die Wissenschaftskarte erklärt, wie Daten und Anweisungen bei der Verarbeitung zusammenarbeiten.",
+      "reciprocal": true
     },
     {
-      "id": "invention-internet",
-      "starter": "Das Internet verbindet viele Computernetze. Gemeinsame Regeln helfen den Geräten, Informationen auszutauschen.",
-      "paragraph": "Informationen können in Datenpaketen übertragen werden. Die beteiligten Netze brauchen gemeinsame Regeln, damit diese Pakete an passenden Stellen weitergegeben werden können. Ein einzelnes Gerät oder ein einzelnes Netz ist deshalb noch nicht das gesamte Internet. Seine Geschichte umfasst viele Beiträge aus verschiedenen Ländern.",
-      "observe": "Vergleiche im vorhandenen Plan Endgerät, Verbindung und Vermittlungspunkt. Erkläre den Weg einer Nachricht in eigenen Worten. Welche Verbindung könnte unterbrochen sein, wenn dein Gerät funktioniert, aber das Ziel nicht erreichbar ist? Das ist eine Denkaufgabe, kein Eingriff in echte Netze.",
-      "benefit": "Du unterscheidest ein Gerät von einem Netz und kannst Verbindungsprobleme eingrenzen, ohne private Daten oder Passwörter weiterzugeben.",
-      "hint": "Unterscheide das Bewegen von Dingen vom Übertragen von Informationen zwischen Computern.",
-      "wrong": [
-        "Eine Rakete kann ein Gerät transportieren. Das beschreibt noch keine gemeinsamen Regeln zwischen Computernetzen.",
-        "Elektrisches Licht löst ein Beleuchtungsproblem. Das Internet soll dagegen Informationen zwischen Netzen austauschen."
-      ],
-      "sourceStatus": "Internet-Society-Bericht beteiligter Entwickler, Hauptpassagen zu Paketvermittlung/ARPANET gelesen. Heutige Ausfallsicherheit nicht pauschal garantiert; zusätzliche Protokolldetails vor Vertiefung gesondert belegen."
+      "from": "invention-internet",
+      "to": "science-network",
+      "why": "Einzelne Netze sind Teile eines größeren Verbunds. Die Netzwerkkarte vertieft den Weg von Daten und die dafür nötigen gemeinsamen Regeln.",
+      "reciprocal": true
     },
     {
-      "id": "invention-compass",
-      "starter": "Eine frei bewegliche magnetische Nadel kann bei der Orientierung helfen. Sie zeigt nicht automatisch, wo dein Ziel liegt.",
-      "paragraph": "Die Kompassnadel reagiert auf ein Magnetfeld. Für eine sinnvolle Orientierung brauchst du zusätzlich eine Richtungsangabe und musst sie mit deiner Umgebung oder einer Karte vergleichen. Ein Kompass ist daher etwas anderes als ein vollständiges Navigationsgerät mit Standort und Ziel. Die angezeigte magnetische Nordrichtung kann von geografisch Nord abweichen. Ein naher Magnet kann die Nadel ebenfalls beeinflussen.",
-      "observe": "Untersuche im vorhandenen Plan Nadel und Richtungsskala. Formuliere zwei verschiedene Fragen: In welcher Richtung liegt Norden? Und in welcher Richtung liegt mein Ziel? Warum beantwortet die Nadel allein die zweite Frage nicht? Nur das Bildschirmmodell verwenden.",
-      "benefit": "Du trennst eine Richtungsinformation von einem fertigen Reiseweg und kannst die Grenzen eines einzelnen Messgeräts erklären.",
-      "hint": "Welche Antwort beschreibt eine fehlende Orientierungshilfe, wenn vertraute sichtbare Anhaltspunkte fehlen?",
-      "wrong": [
-        "Die Erde aus einer Umlaufbahn zu beobachten ist eine Aufgabe von Satelliten. Die Kompassnadel liefert eine Richtung am Ort.",
-        "Nachts einen Raum zu beleuchten ist ein anderes Problem. Eine Kompassnadel erzeugt kein Licht."
-      ],
-      "sourceStatus": "Bisherige Smithsonian-Zeitleiste weist den Abruf zurück; historische Erstheitsangaben nicht frisch bestätigt. USGS-Audio-Transkript vollständig gelesen: frei bewegliche magnetische Nadel, Erdfeld und lokale Störungen. Neue Funktionsquelle im Produkt ergänzen."
+      "from": "invention-compass",
+      "to": "science-gps",
+      "why": "Ein Kompass liefert eine magnetische Richtung. Satellitennavigation kann zusätzlich einen Standort bestimmen; Richtung und Standort sind verschiedene Informationen.",
+      "reciprocal": true
     },
     {
-      "id": "invention-printing",
-      "starter": "Beim Druck können vorbereitete Zeichen oder Bilder mehrfach auf ein Material übertragen werden. Beim historischen Buchdruck lassen sich einzelne Zeichen zu einer Seite zusammensetzen.",
-      "paragraph": "Zur historischen Druckwerkstatt gehören Schriftzeichen, Farbe, Papier und eine Presse. Wiederverwendbare Zeichen sparen nicht jeden Arbeitsschritt: Zuerst muss eine Seite richtig zusammengestellt und geprüft werden. Ein falsch gesetztes Zeichen kann sonst in vielen Abzügen wiederkehren. Die Entwicklung beweglicher Schriftzeichen begann nicht erst mit Gutenberg.",
-      "observe": "Stelle dir eine Zeile aus einzeln beweglichen Zeichen vor. Vertausche gedanklich zwei Zeichen. Was müsstest du vor dem nächsten Druck ändern, und warum wären bereits gedruckte Seiten davon nicht automatisch berichtigt?",
-      "benefit": "Du verstehst Wiederverwendung und erkennst, warum eine Kontrolle vor dem Vervielfältigen wichtig ist.",
-      "hint": "Vergleiche ein einzelnes von Hand geschriebenes Exemplar mit vielen Abzügen derselben vorbereiteten Seite.",
-      "wrong": [
-        "Ein Smartphone kombiniert Kommunikation und Datenverarbeitung. Die Druckkarte fragt nach der Vervielfältigung von Seiten.",
-        "Ein selbst angetriebener Wagen löst eine Transportaufgabe und vervielfältigt noch keinen Text."
-      ],
-      "sourceStatus": "Mainzer Gutenberg-Zeitleiste Hauptpassagen1450–1455 gelesen; Detailquelle zur Drucktechnik und zu älteren ostasiatischen Druckzeichen vor Erweiterung vollständig nachlesen. Keine Auflagenzahl ergänzt."
+      "from": "invention-printing",
+      "to": "history-paper",
+      "why": "Die Druckform überträgt Zeichen auf ein Material. Die Papiergeschichte erklärt die Entwicklung eines wichtigen Trägers für gedruckte Nachrichten.",
+      "reciprocal": true
     },
     {
-      "id": "invention-rocket",
-      "starter": "Eine Rakete stößt Material nach hinten aus und wird dabei nach vorn beschleunigt. Sie braucht keine Luft, gegen die sie sich abstützt.",
-      "paragraph": "Die Richtung des ausgestoßenen Gases und die Schubrichtung sind entgegengesetzt. Der Raketenantrieb lässt sich deshalb nicht mit Rädern auf einer Straße erklären. Die Quelle zu Goddard berichtet über einen Flüssigkeitsraketenstart von1926 und korrigiert ausdrücklich die Vorstellung, Raketen bräuchten Außenluft zum Abstoßen.",
-      "observe": "Zeige im vorhandenen Plan mit zwei gedanklichen Pfeilen, wohin Gas austritt und wohin der Schub wirkt. Begründe den Unterschied. Bleibe beim Bildschirmmodell; keine Feuer-, Druck- oder selbstgebauten Raketenversuche.",
-      "benefit": "Du kannst die Schubrichtung erklären und unterscheidest eine physikalische Lernskizze von einer sicheren Bauanleitung.",
-      "hint": "Welche Antwort betrifft einen Transport über die gewöhnliche Erdoberfläche hinaus? Die beiden anderen nennen Alltagsaufgaben am Boden.",
-      "wrong": [
-        "Ein Raum kann mit einer Lampe beleuchtet werden. Das erklärt nicht den Antrieb eines Geräts ins Weltall.",
-        "Viele Waren auf einer Landstrecke zu transportieren beschreibt eher eine Bahn- oder Straßenaufgabe, nicht das Startproblem dieser Karte."
-      ],
-      "sourceStatus": "NASA-Hauptpassagen zu16.03.1926 und Vakuumfehlschluss gelesen. Keine widersprüchliche Geburtsjahresangabe der Quelle oder Höhenzahl übernommen."
+      "from": "invention-rocket",
+      "to": "invention-satellite",
+      "why": "Eine Rakete kann einen Satelliten starten. Der Satellit erfüllt danach andere Aufgaben, etwa Messen oder Übertragen von Signalen.",
+      "reciprocal": true
     },
     {
-      "id": "invention-satellite",
-      "starter": "Ein künstlicher Satellit bewegt sich auf einer Umlaufbahn. Seine Aufgabe kann Beobachten, Messen oder das Übertragen von Signalen sein.",
-      "paragraph": "Ein Satellit ist nicht dasselbe wie die Rakete, die ihn startet. Nach dem Start können seine Instrumente auf einer Umlaufbahn eigene Aufgaben erfüllen. Die überlieferte Sputnik-Datierung von1957 ist ein historischer Schritt. Heutige Satelliten unterscheiden sich unter anderem nach Instrumenten, Energieversorgung und Auftrag.",
-      "observe": "Vergleiche im Teileplan Instrument, Energieversorgung und Antenne. Welches Teil sammelt Messdaten, welches überträgt Signale und welches versorgt das Gerät? Beschreibe die Zusammenarbeit, statt jedes Teil als unabhängigen Satelliten zu zählen.",
-      "benefit": "Du unterscheidest Start, Versorgung und Forschungsauftrag und kannst die Erdebeobachtung von einer bloßen Weltraumfahrt abgrenzen.",
-      "hint": "Trenne die Aufgabe auf der Umlaufbahn vom vorherigen Start und vom Transport auf Straßen.",
-      "wrong": [
-        "Ein Wagen mit eigenem Antrieb löst eine Aufgabe auf dem Boden. Er umkreist die Erde nicht als Forschungsgerät.",
-        "Fliegen durch die Luft ist noch keine Umlaufbahn. Die Satellitenkarte beschreibt einen anderen Aufenthalts- und Arbeitszusammenhang."
-      ],
-      "sourceStatus": "NASA-Hauptabschnitt Sputnik1/04.10.1957 gelesen; keine aktuelle Satellitenzahl, Umlaufgarantie oder genaue Modellbahn behauptet."
+      "from": "invention-satellite",
+      "to": "science-gps",
+      "why": "Navigationssatelliten senden Signale. Die GPS-Karte erklärt, wie ein Empfangsgerät mehrere solcher Signale für eine Standortbestimmung nutzt.",
+      "reciprocal": true
     },
     {
-      "id": "invention-smartphone",
-      "starter": "Ein Smartphone verbindet Telefon und Computerfunktionen in einem mobilen Gerät. Mehrere Bauteile und Programme arbeiten dabei zusammen.",
-      "paragraph": "Bildschirm, Funkverbindung, Prozessor, Speicher und Energieversorgung haben unterschiedliche Aufgaben. Ein heller Bildschirm beweist zum Beispiel noch nicht, dass eine Funkverbindung besteht. Frühe Kombinationsgeräte zeigen Entwicklungsschritte; das heutige Smartphone entstand aus vielen zuvor entwickelten Techniken.",
-      "observe": "Wähle im vorhandenen Teileplan zwei Funktionen, etwa Bildschirm und Funk. Vermute, was ohne die eine noch mit der anderen möglich sein könnte. Erkläre den Unterschied zwischen einer gespeicherten Notiz und einer Nachricht, die erst übertragen werden muss. Keine Anmeldung oder privaten Daten nötig.",
-      "benefit": "Du verstehst die Grenzen einzelner Funktionen und musst bei einem Verbindungsfehler nicht automatisch deine gespeicherten Inhalte für verloren halten.",
-      "hint": "Eine Antwort verbindet mehrere Aufgaben in einem mobilen Gerät. Welche geht über die reine Sprachübertragung hinaus?",
-      "wrong": [
-        "Viele Reisende und Waren auf einer Strecke zu bewegen ist eine Transportaufgabe. Hier werden mehrere Informationsfunktionen kombiniert.",
-        "Nur eine Stimme aus der Ferne hörbar zu machen beschreibt bereits ein Telefon. Die Frage sucht zusätzlich die Verarbeitung von Informationen unterwegs."
-      ],
-      "sourceStatus": "CHM-Objekt1733 vollständig gelesen: Simon kombiniert Mobiltelefon, Organizer, Fax und Pager; 1993 als DateIntroduced nicht mit späterem Verkaufsstart gleichsetzen. Keine Preis-/Akkulaufzeit- oder Erstheitswerbung übernommen."
+      "from": "invention-smartphone",
+      "to": "invention-computer",
+      "why": "Ein Smartphone verarbeitet Programme und Daten wie ein Computer. Funk, Akku und die mobile Bauform ergänzen diese Aufgabe.",
+      "reciprocal": true
     }
   ],
-  "implementationNotes": "Existing work/stage-existing-wave.py prepares answer-specific feedback outside unchanged questions, preserves all12 IDs/answer arrays/correct indexes/stages/parts, and adds directed learning. Not yet applied. Validate sources/model decisions, integrate into actual app, test old saves/navigation/offline/screens, only then report implemented. New12 need individual diagrams and remaining primary evidence; not production-ready."
+  "UIAcceptance": {
+    "scope": "targeted current built UI only; complete final same-snapshot local/GitHub acceptance still required",
+    "build": "384dc6ad7e77d23b",
+    "status": "passed",
+    "seconds": 116.68066847600001,
+    "widths": [
+      320,
+      360,
+      390,
+      768,
+      1024,
+      1440,
+      1920
+    ],
+    "cases": 84,
+    "retainedQuestionsAndSaves": true,
+    "reciprocalBackFocus": true,
+    "coldOffline": {
+      "ids": [
+        "invention-light",
+        "invention-car",
+        "invention-railway",
+        "invention-airplane",
+        "invention-phone",
+        "invention-computer",
+        "invention-internet",
+        "invention-compass",
+        "invention-printing",
+        "invention-rocket",
+        "invention-satellite",
+        "invention-smartphone"
+      ],
+      "coldRestart": true,
+      "partsUsable": true
+    },
+    "native": {
+      "percent": 200,
+      "cssWidth": 640,
+      "scale": 2,
+      "largeTextAlsoChecked": true,
+      "ids": [
+        "invention-light",
+        "invention-car",
+        "invention-railway",
+        "invention-airplane",
+        "invention-phone",
+        "invention-computer",
+        "invention-internet",
+        "invention-compass",
+        "invention-printing",
+        "invention-rocket",
+        "invention-satellite",
+        "invention-smartphone"
+      ],
+      "screenshot": {
+        "cssWidth": 640,
+        "cssHeight": 450,
+        "scale": 2,
+        "pixelWidth": 1280,
+        "pixelHeight": 900,
+        "sampledColors": 20
+      },
+      "blankCaptureRejected": true
+    },
+    "sharedNatureCapture": {
+      "cssWidth": 640,
+      "cssHeight": 450,
+      "scale": 2,
+      "pixelWidth": 1280,
+      "pixelHeight": 900,
+      "sampledColors": 29
+    },
+    "reports": [
+      "work/p35-inventions-candidate-browser.log",
+      ".qa-output/inventions-selected/report.json",
+      ".qa-output/native-capture-selected/report.json"
+    ],
+    "visualInspection": "All twelve mobile diagram variants, phone desktop, large text and corrected full-width native screenshots personally inspected by Codex during iteration; final CI screenshots must be inspected again. One orphan-letter label fixed after visual inspection. This is not independent human/editorial acceptance."
+  }
 }

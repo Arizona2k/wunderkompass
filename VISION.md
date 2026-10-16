@@ -1,5 +1,7 @@
 # Produktvision WunderKompass
 
+Reviewbilder wirtschaftlich als Qualitätsnachweise einsetzen:150.000.000 Byte sind die ausschließliche QA-Obergrenze, kein Speicherziel und keine Änderung der Website-/Offlinebudgets. Relevante Zustände, Pflichtbilder und versiegelte Originalbelege erhalten; identische Pixel rechtfertigen allein keine Zusammenlegung. Bestehende Architektur, klare Speicher-/Duplikat-/Vorvergleichsberichte und gezielte sichere Bereinigung bevorzugen. Bei nachgewiesen effizienter Auswahl Produktentwicklung priorisieren, keine langwierigen Mikrooptimierungen. Diese Nutzerentscheidung vom16.10.2026 gilt dauerhaft auch für4–8 und GO; Einzelregeln in AGENTS/QUALITY, Aufgaben ausschließlich im BACKLOG.
+
 WunderKompass ist dauerhaft ein zusammenhängendes Wissens- und Lernsystem. Neue Erkenntnisse sollen passende alte Artikel, Wörter, Karten, Reisen, Spiele und Forschung sinnvoll bereichern; Auffindbarkeit, gegenseitige Rückwege und technische Abhängigkeiten gehören zur Integration. Nicht jede Änderung berührt jedes Modul. Qualität und erkennbarer Lerngewinn gehen vor Mengen, künstlichen Beziehungen oder Prototypen. Der [Dauerauftrag15.10.2026](content/auftrag-2026-10-13/WunderKompass_Dauerauftrag_2026-10-15.md) ergänzt die bestehenden Ziele; operative Folgenanalyse/Prüfung in QUALITY, Verhalten in AGENTS und Aufgaben ausschließlich im BACKLOG. Technik- und Prozesseffizienz ermöglichen hochwertige große Produktwellen, ersetzen diese aber nicht.
 
 ## Dauerhafte Nutzerentscheidung vom 15. Oktober 2026: freies Wachstum und echte Performance

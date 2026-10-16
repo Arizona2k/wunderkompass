@@ -3,11 +3,30 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {sourceDigest} from './handoff.mjs';
-export const REVIEW_LIMIT=48*1024*1024;
+// Decimal MB, exclusively retained review PNGs; no production/offline budget.
+export const REVIEW_LIMIT=150_000_000;
+export function reviewStorage(screenshots,retainedBytes,{previous=null}={}){
+ const groups=new Map();
+ for(const capture of screenshots){const group=groups.get(capture.sha256)??[];group.push(capture);groups.set(capture.sha256,group);}
+ const duplicateGroups=[...groups.values()].filter(group=>group.length>1);
+ const retainedGroups=duplicateGroups.map(group=>group.filter(capture=>capture.retained)).filter(group=>group.length>1);
+ const omittedCopies=duplicateGroups.filter(group=>group.some(capture=>capture.retained)).flatMap(group=>group.filter(capture=>!capture.retained));
+ const matrix=items=>createHash('sha256').update(items.map(capture=>capture.file).sort().join('\n')).digest('hex');
+ const currentMatrix=matrix(screenshots),comparable=previous?.status==='passed'&&Array.isArray(previous.screenshots)&&matrix(previous.screenshots)===currentMatrix&&Number.isSafeInteger(previous.retainedBytes)&&previous.retainedBytes>=0;
+ return {generatedImages:screenshots.length,retainedImages:screenshots.filter(capture=>capture.retained).length,omittedImages:screenshots.filter(capture=>!capture.retained).length,
+  retainedBytes,limitBytes:REVIEW_LIMIT,reserveBytes:REVIEW_LIMIT-retainedBytes,withinBudget:Number.isSafeInteger(retainedBytes)&&retainedBytes>=0&&retainedBytes<=REVIEW_LIMIT,matrixSha256:currentMatrix,
+  exactDuplicates:{groups:duplicateGroups.map(group=>({sha256:group[0].sha256,files:group.map(({file,retained})=>({file,retained}))})),extraCaptures:duplicateGroups.reduce((sum,group)=>sum+group.length-1,0),retainedExtraCopies:retainedGroups.reduce((sum,group)=>sum+group.length-1,0),retainedExtraBytes:retainedGroups.reduce((sum,group)=>sum+group.slice(1).reduce((bytes,capture)=>bytes+capture.bytes,0),0),alreadyOmittedCopiesWithRetainedOriginal:omittedCopies.length,alreadyOmittedBytesWithRetainedOriginal:omittedCopies.reduce((sum,capture)=>sum+capture.bytes,0),automaticDuplicateRemovals:0,meaning:'Byte identity alone never removes a distinct state, width, focus, failure or mandatory image. Omitted copies describe existing explicit curation, not new deduplication savings.'},
+  comparison:comparable?{status:'same capture matrix; informational only',previousBuild:previous.build??null,previousSourceDigest:previous.sourceDigest??null,retainedImagesDelta:screenshots.filter(capture=>capture.retained).length-previous.screenshots.filter(capture=>capture.retained).length,retainedBytesDelta:retainedBytes-previous.retainedBytes}:{status:previous?'different or invalid matrix; no savings claim':'previous comparable run not supplied'},
+ };
+}
 export const requiredScreenshots=[...['320','360','390','768','1024','1440','1920'].flatMap(w=>['quality-foundation-foundation-labs-'+w+'.png','quality-learning-journey-links-'+w+'.png']),...['320','1440'].flatMap(w=>['quality-news-feed-signed-news-rejected-'+w+'.png','quality-navigation-updates-all-details-'+w+'-full.png'])];
 requiredScreenshots.push(...[320,1440].map(width=>'quality-learning-nature-model-grand-canyon-phase-3-'+width+'.png'));
 requiredScreenshots.push(...['source-5-320','source-25-320','starter-30-320','starter-35-320','starter-48-320','starter-59-320','59-1440','native-200-large','overview-320'].map(key=>'quality-book-why-'+key+'.png'));
+requiredScreenshots.push(...[320,1440].flatMap(width=>['phone','printing'].map(id=>'quality-navigation-invention-model-invention-'+id+'-'+width+'.png')),'quality-navigation-invention-native-200-large.png');
 export function retainScreenshot(name){
+ // New invention captures: every original is hashed; show legible phone/press
+ // mobile+desktop diagrams and actual native zoom. All old mandatory images stay.
+ if(/^quality-navigation-invention-/.test(name))return /invention-(?:model-invention-(?:phone|printing)-(?:320|1440)|native-200-large)\.png$/.test(name);
  // All120 full Why cards are captured and hashed. Retain readable evidence of
  // partial sources, four new domains, desktop, native zoom and the mobile overview.
  if(/quality-book-why-/.test(name))return /why-(?:(?:source-(?:5|25)|starter-(?:30|35|48|59))-320|59-1440|native-200-large|overview-320)\.png$/.test(name);
@@ -31,7 +50,7 @@ export function retainScreenshot(name){
  // Keep mobile and desktop views. Intermediate widths are still measured and recorded.
  return /-(320|1440)(?:-full|-model|-top)?\.png$/.test(name)&&!/-full\.png$/.test(name);
 }
-export async function prepareReview(directory='.qa-output',{sealedCaptureLedger=null}={}){
+export async function prepareReview(directory='.qa-output',{sealedCaptureLedger=null,previousStorageReport=null}={}){
  const started=performance.now();
  const files=(await fs.readdir(directory)).sort(),destination=path.join(directory,'review');await fs.rm(destination,{recursive:true,force:true});await fs.mkdir(destination,{recursive:true});
  let report=null,handoff=null;
@@ -62,15 +81,15 @@ export async function prepareReview(directory='.qa-output',{sealedCaptureLedger=
  for(const capture of prior.values()){if(capture.retained)throw Error('Missing sealed screenshot '+capture.file);screenshots.push(capture);generatedBytes+=capture.bytes;}
  screenshots.sort((a,b)=>a.file.localeCompare(b.file));
 
- const errors=[];
+ const storage=reviewStorage(screenshots,retainedBytes,{previous:previousStorageReport}),errors=[];
  if(complete){
   if(!handoff||handoff.sourceDigest!==await sourceDigest()||handoff.build!==report.build)errors.push('Current handoff/code/build proof required');
   for(const name of requiredScreenshots)if(!screenshots.some(s=>s.file===name&&s.retained))errors.push('Missing required critical image '+name);
-  if(retainedBytes>REVIEW_LIMIT)errors.push('Review screenshot budget exceeded; revise coverage explicitly instead of dropping required evidence');
+  if(!storage.withinBudget)errors.push('Review screenshot budget exceeded; revise coverage explicitly instead of dropping required evidence');
  }
- const manifest={schemaVersion:1,status:complete&&!errors.length?'passed':'diagnostic',errors,build:report?.build??null,sourceDigest:handoff?.sourceDigest??null,generatedBytes,retainedBytes,limit:REVIEW_LIMIT,seconds:(performance.now()-started)/1000,screenshots,reports:copied,meaning:'Every captured original PNG is hashed, including the same-snapshot collector ledger of omitted originals. Required and representative originals plus all reports are uploaded unchanged. Omitted originals are reproducible with the full browser suite. Failed runs keep every current image. No automatic visual approval.'};
+ const manifest={schemaVersion:1,status:complete&&!errors.length?'passed':'diagnostic',errors,build:report?.build??null,sourceDigest:handoff?.sourceDigest??null,generatedBytes,retainedBytes,limit:REVIEW_LIMIT,storage,seconds:(performance.now()-started)/1000,screenshots,reports:copied,meaning:'Every captured original PNG is hashed, including the same-snapshot collector ledger of omitted originals. Required and representative originals plus all reports are uploaded unchanged. Omitted originals are reproducible with the full browser suite. Failed runs keep every current image. No automatic visual approval.'};
  await fs.writeFile(path.join(destination,'review-manifest.json'),JSON.stringify(manifest,null,2)+'\n');
- console.log(JSON.stringify({status:manifest.status,generatedBytes,retainedBytes,images:screenshots.length,retained:screenshots.filter(s=>s.retained).length,largestRetained:screenshots.filter(s=>s.retained).sort((a,b)=>b.bytes-a.bytes).slice(0,8).map(({file,bytes})=>({file,bytes})),errors}));
+ console.log(JSON.stringify({status:manifest.status,generatedBytes,retainedBytes,images:storage.generatedImages,retained:storage.retainedImages,reserveBytes:storage.reserveBytes,exactDuplicateExtraCaptures:storage.exactDuplicates.extraCaptures,alreadyOmittedIdenticalCopies:storage.exactDuplicates.alreadyOmittedCopiesWithRetainedOriginal,automaticDuplicateRemovals:0,comparison:storage.comparison,largestRetained:screenshots.filter(s=>s.retained).sort((a,b)=>b.bytes-a.bytes).slice(0,8).map(({file,bytes})=>({file,bytes})),errors}));
  if(errors.length)throw Error(errors.join('\n'));return manifest;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))await prepareReview();

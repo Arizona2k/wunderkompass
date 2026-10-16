@@ -1,5 +1,9 @@
 # Anleitung für Codex
 
+## Dauerhafte Nutzerentscheidung: wirtschaftliche Reviewbilder, 16. Oktober 2026
+
+Aufbewahrte QA-/Review-PNGs haben eine Obergrenze von **150.000.000 Byte (150 MB dezimal)** statt48MiB. Dies ist ausschließlich ein Reviewbudget, kein Zielwert und keine Änderung von Produktions-, Ladezeit-, Einzelabruf- oder Offlinebudgets. Bestehende Bildkuratierung verwenden; keine zusätzliche Bildverwaltungsplattform. Nach größeren Läufen erzeugte/aufbewahrte Anzahl, tatsächliche Bytes, Reserve, exakt belegte Dubletten bzw. vermiedene Ablagen und Vergleich zum vorherigen vergleichbaren Lauf berichten. Unterschiedliche Zustände/Breiten/Fokus/Schrift/Offline/Fehler auch bei identischen Pixeln erhalten, wenn sie Prüfwert besitzen. Pflichtbilder, vollständige Matrizen, Originalchecksummen und Snapshotbindung bleiben verbindlich. Versiegelte Nachweise nicht nachträglich verändern. Nur nachweislich entbehrliche eigene temporäre Dateien entfernen; aktuelle/fremde Prozesse und Git-Historie nicht bereinigen. Bei bereits effizienter Auswahl Befund knapp dokumentieren und Produktentwicklung fortsetzen; keine Mikrooptimierungsschleifen.
+
 ## Präzisierter Dauerauftrag vom 15. Oktober 2026
 
 Der vollständig archivierte [Nutzer-Nachtrag](content/auftrag-2026-10-13/WunderKompass_Dauerauftrag_2026-10-15.md) ergänzt alle bisherigen Originale dauerhaft für3.5/4–8/GO. WunderKompass als zusammenhängendes Lernsystem entwickeln: vor relevanten Änderungen unmittelbare/technische Abhängigkeiten, fachlich betroffene Altinhalte, Indizes/Verweise/Navigation/Offline, Fortschrittsrisiken und nötige Tests nach QUALITY bestimmen. Nur begründete Beziehungen ergänzen; explizite Graphkanten sind keine automatische vollständige Fachanalyse.

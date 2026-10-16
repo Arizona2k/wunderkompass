@@ -2737,7 +2737,8 @@
     ],
     "related": [
       "person-cai_lun",
-      "history-writing"
+      "history-writing",
+      "invention-printing"
     ],
     "sources": [
       {
@@ -3138,7 +3139,8 @@
     ],
     "related": [
       "history-writing",
-      "history-web"
+      "history-web",
+      "invention-railway"
     ],
     "sources": [
       {
@@ -5441,7 +5443,8 @@
     "title": "Elektrisches Licht",
     "intro": "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
     "paragraphs": [
-      "Elektrische Energie sollte einen Raum zuverlässig beleuchten."
+      "Elektrische Energie sollte einen Raum zuverlässig beleuchten.",
+      "Eine Lampe allein ist noch kein Beleuchtungssystem. Leitungen bringen elektrische Energie zur Lampe, Schalter steuern den Stromweg. Bei einer Glühlampe leuchtet ein heißer Faden; heutige Lampen können anders arbeiten. Der Vergleich zeigt deshalb zwei Bauarten und keinen einzigen unveränderten Lampentyp."
     ],
     "facts": [
       {
@@ -5546,7 +5549,21 @@
       "correct": 0,
       "why": "Elektrische Energie sollte einen Raum zuverlässig beleuchten. Viele Menschen arbeiteten daran, darunter Joseph Swan sowie Thomas Edison und sein Team. Sie verbesserten Lampen und Stromversorgung."
     },
-    "model": "circuit"
+    "model": "circuit",
+    "learning": {
+      "starter": "Eine elektrische Lampe macht aus elektrischer Energie Licht. Damit ein Raum hell wird, müssen Lampe und Stromversorgung zusammenpassen.",
+      "observe": "Wähle im vorhandenen Plan nacheinander Glaskolben, Glühdraht und Sockel. Beschreibe jeweils eine andere Aufgabe. Vergleiche dann Damals und Heute: Welches Ziel bleibt gleich, obwohl sich die Bauart verändert? Nur am Bildschirm untersuchen, keine echte Lampe öffnen.",
+      "benefit": "Du unterscheidest ein einzelnes Bauteil vom ganzen Versorgungssystem und kannst erklären, warum eine gute Idee oft viele zusammenpassende Verbesserungen braucht."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche das Ziel einer Lampe mit dem Ziel eines Verkehrsmittels. Was soll sich für Menschen nach Sonnenuntergang ändern?",
+      "wrongReasons": [
+        null,
+        "Durch die Luft zu reisen ist ein Transportproblem. Hier geht es um die Wahrnehmung in einem dunklen Raum.",
+        "Wiederholte Rechnungen gehören zu einer anderen Aufgabe. Die Lampe führt keine Rechenanweisungen aus."
+      ]
+    },
+    "sourceNote": "Die Quellen belegen unterschiedliche Teile dieser Entwicklung. Die ergänzten Lernhilfen entstanden mit KI-Unterstützung. Eine unabhängige Fach- und Kinderprüfung steht noch aus."
   },
   {
     "id": "invention-car",
@@ -5554,7 +5571,8 @@
     "title": "Das Auto",
     "intro": "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
     "paragraphs": [
-      "Ein Motor sollte die Räder antreiben."
+      "Ein Motor sollte die Räder antreiben.",
+      "Motor, Räder, Lenkung und Bremsen müssen zusammenarbeiten. Ein stärkerer Motor ersetzt keine verlässlichen Bremsen und keine passende Straße. Der historische Benzinwagen ist ein Entwicklungsschritt; heutige Autos haben unterschiedliche Antriebe. Die Karte bezeichnet deshalb nicht ein einziges Fahrzeug als Ursprung sämtlicher Autos."
     ],
     "facts": [
       {
@@ -5665,7 +5683,21 @@
       "correct": 0,
       "why": "Ein Motor sollte die Räder antreiben. Es gab schon Dampf- und Elektrofahrzeuge. Karl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos."
     },
-    "model": null
+    "model": null,
+    "learning": {
+      "starter": "Ein Auto hat einen Antrieb, der seine Räder bewegen kann. Lenken und Bremsen sind andere Aufgaben als das Antreiben.",
+      "observe": "Untersuche im vorhandenen Teileplan Antrieb, Räder, Lenkung und Bremse. Denke dir einen Fehler bei genau einem Teil aus. Welches Verhalten des Autos würde sich ändern, welches andere Teil könnte den Fehler nicht einfach ersetzen? Keine echten Fahrzeuge bedienen.",
+      "benefit": "Du beschreibst Technik über zusammenwirkende Aufgaben und beurteilst ein Verkehrsmittel auch nach Sicherheit statt allein nach Motorleistung."
+    },
+    "questionFeedback": {
+      "hint": "Welche beiden Antworten betreffen vor allem Informationen? Welche betrifft dagegen den Transport eines Wagens?",
+      "wrongReasons": [
+        null,
+        "Eine Stimme weit zu übertragen betrifft ein Kommunikationsgerät. Der Wagen soll Menschen oder Lasten fortbewegen.",
+        "Computer zu verbinden ist ein Informationsproblem. Hier wird eine mechanische Bewegung gesucht."
+      ]
+    },
+    "sourceNote": "Die Quellen belegen unterschiedliche Teile dieser Entwicklung. Die ergänzten Lernhilfen entstanden mit KI-Unterstützung. Eine unabhängige Fach- und Kinderprüfung steht noch aus."
   },
   {
     "id": "invention-railway",
@@ -5673,7 +5705,8 @@
     "title": "Die Eisenbahn",
     "intro": "Viele Waren und Reisende mussten über Land transportiert werden.",
     "paragraphs": [
-      "Räder auf Schienen und ein kräftiger Antrieb sollten Wagen ziehen."
+      "Räder auf Schienen und ein kräftiger Antrieb sollten Wagen ziehen.",
+      "Zur Eisenbahn gehören mehr Dinge als eine Lokomotive: Fahrzeuge, Gleise, Stationen und ein abgestimmter Betrieb. Ein historischer Eröffnungstag belegt deshalb nicht die plötzliche Erfindung aller ihrer Teile. Die Quelle beschreibt die Fahrt von Locomotion 1825 und erklärt ausdrücklich, dass diese Maschine nicht die erste Dampflokomotive war."
     ],
     "facts": [
       {
@@ -5774,7 +5807,21 @@
       "correct": 0,
       "why": "Räder auf Schienen und ein kräftiger Antrieb sollten Wagen ziehen. Schienenwege und Lokomotiven entstanden schrittweise. 1825 eröffnete die Bahn Stockton–Darlington. Viele Menschen verbesserten danach Strecken und Züge."
     },
-    "model": null
+    "model": null,
+    "learning": {
+      "starter": "Ein Zug bewegt Wagen auf Schienen. Viele Reisende oder Waren können zusammen transportiert werden.",
+      "observe": "Wähle im vorhandenen Plan Gleis, Antrieb und Wagen. Ordne gedanklich zu: Was trägt und führt, was bewegt, was transportiert die Menschen oder Waren? Vergleiche das historische Fahrzeug mit der heutigen Darstellung. Nicht an echten Gleisen forschen.",
+      "benefit": "Du erkennst Verkehr als abgestimmtes System und kannst ein belegtes Ereignis von einer zu einfachen Geschichte über einen einzelnen Erfinder unterscheiden."
+    },
+    "questionFeedback": {
+      "hint": "Überlege, welches Problem eine gemeinsame Strecke mit vielen Wagen löst. Die anderen Antworten betreffen Rechnen und Orientierung.",
+      "wrongReasons": [
+        null,
+        "Ein Rechner kann wiederholte Rechnungen bearbeiten. Das erklärt noch nicht den Transport vieler Wagen auf einer Strecke.",
+        "Landmarken oder Sterne betreffen vor allem Orientierung. Die Eisenbahnkarte fragt nach dem gemeinsamen Transport."
+      ]
+    },
+    "sourceNote": "Die Quellen belegen unterschiedliche Teile dieser Entwicklung. Die ergänzten Lernhilfen entstanden mit KI-Unterstützung. Eine unabhängige Fach- und Kinderprüfung steht noch aus."
   },
   {
     "id": "invention-airplane",
@@ -5782,7 +5829,8 @@
     "title": "Das Flugzeug",
     "intro": "Menschen wollten durch die Luft reisen.",
     "paragraphs": [
-      "Flügel sollten Auftrieb erzeugen; der Flug musste steuerbar sein."
+      "Flügel sollten Auftrieb erzeugen; der Flug musste steuerbar sein.",
+      "Beim Fliegen wirken Auftrieb, Gewichtskraft, Schub und Widerstand zusammen. Ein Flugzeug lässt sich nicht allein durch einen großen Motor erklären. Seine Flügel, Fluglage und Steuerung beeinflussen die Bewegung ebenfalls. Das vorhandene Modell ist eine vereinfachte Lernhilfe und keine Anleitung zum Bauen oder Fliegen."
     ],
     "facts": [
       {
@@ -5886,7 +5934,21 @@
       "correct": 0,
       "why": "Flügel sollten Auftrieb erzeugen; der Flug musste steuerbar sein. Ballons und Gleiter gab es schon. Die Wright-Brüder erprobten Steuerung und Flügel, bevor ihnen 1903 ein angetriebener, gesteuerter Flug gelang."
     },
-    "model": "flight"
+    "model": "flight",
+    "learning": {
+      "starter": "Flügel, Antrieb und Steuerung haben beim Flugzeug verschiedene Aufgaben. Ein Flugzeug muss sich nicht nur in der Luft halten, sondern auch lenken lassen.",
+      "observe": "Vergleiche im Teileplan Flügel, Antrieb und Steuerflächen. Sage voraus: Welche Aufgabe würde fehlen, wenn man nur den Motor betrachtet? Prüfe danach die Beschreibung jedes Teils und ändere deine Erklärung, falls nötig.",
+      "benefit": "Du unterscheidest Kräfte und Steuerung und erkennst, warum ein erfolgreicher Versuch mehr braucht als die Erzeugung von Vorwärtsbewegung."
+    },
+    "questionFeedback": {
+      "hint": "Verbinde das Fortbewegungsziel mit dem Ort, an dem es erreicht werden soll. Datenübertragung und Vervielfältigung lösen andere Probleme.",
+      "wrongReasons": [
+        null,
+        "Informationen zwischen Computern zu übertragen beschreibt ein Netzwerk. Es erklärt nicht den Transport durch die Luft.",
+        "Viele gleiche Buchseiten zu erzeugen ist eine Vervielfältigungsaufgabe. Ein Flugzeug braucht stattdessen tragende und steuernde Flächen."
+      ]
+    },
+    "sourceNote": "Die Quellen belegen unterschiedliche Teile dieser Entwicklung. Die ergänzten Lernhilfen entstanden mit KI-Unterstützung. Eine unabhängige Fach- und Kinderprüfung steht noch aus."
   },
   {
     "id": "invention-phone",
@@ -5894,7 +5956,8 @@
     "title": "Das Telefon",
     "intro": "Eine Stimme war normalerweise nur in der Nähe hörbar.",
     "paragraphs": [
-      "Schall sollte als Signal weit übertragen werden."
+      "Schall sollte als Signal weit übertragen werden.",
+      "Mikrofon, Übertragungsweg und Lautsprecher lösen verschiedene Teile der Aufgabe. Das Mikrofon nimmt Schall auf, der Übertragungsweg bringt ein Signal weiter, und der Lautsprecher erzeugt wieder Schall. Ein verständliches Gespräch braucht das Zusammenwirken dieser Teile."
     ],
     "facts": [
       {
@@ -5927,6 +5990,10 @@
       {
         "label": "Smithsonian – Bells Versuchstelefon",
         "url": "https://www.si.edu/object/nmah_689864"
+      },
+      {
+        "label": "Smithsonian – Schall, elektrisches Signal und Empfänger",
+        "url": "https://collections.si.edu/search/detail/edanmdm:nmah_704159"
       }
     ],
     "aliases": [],
@@ -5989,7 +6056,21 @@
       "correct": 0,
       "why": "Schall sollte als Signal weit übertragen werden. Viele Menschen experimentierten damit. Alexander Graham Bell erhielt 1876 ein wichtiges Patent. Auch Elisha Gray und andere arbeiteten an Telefontechnik."
     },
-    "model": null
+    "model": null,
+    "learning": {
+      "starter": "Ein Telefon überträgt Signale. Im Empfänger werden sie wieder als Stimme hörbar.",
+      "observe": "Gehe im Plan die Reihenfolge Mikrofon, Signalweg, Lautsprecher durch. Beschreibe, an welcher Stelle Schall vorkommt und wo ein übertragenes Signal. Was wäre bei einem ausgefallenen Lautsprecher noch möglich, was nicht?",
+      "benefit": "Du trennst eine Nachricht von ihrem technischen Transport und kannst einen Fehler an einer bestimmten Stelle des Weges vermuten."
+    },
+    "questionFeedback": {
+      "hint": "Welche Antwort betrifft den Austausch zwischen zwei Menschen, auch wenn sie weit voneinander entfernt sind?",
+      "wrongReasons": [
+        null,
+        "Richtungen ohne Landmarken zu bestimmen ist eine Orientierungsaufgabe. Ein Telefon überträgt dagegen ein Gespräch.",
+        "Geräte ins Weltall zu bringen erfordert einen Transportantrieb. Das Telefon selbst übernimmt diesen Start nicht."
+      ]
+    },
+    "sourceNote": "Die Quellen belegen unterschiedliche Teile dieser Entwicklung. Die ergänzten Lernhilfen entstanden mit KI-Unterstützung. Eine unabhängige Fach- und Kinderprüfung steht noch aus."
   },
   {
     "id": "invention-computer",
@@ -5997,7 +6078,8 @@
     "title": "Der Computer",
     "intro": "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
     "paragraphs": [
-      "Eine Maschine sollte genaue Anweisungen Schritt für Schritt ausführen."
+      "Eine Maschine sollte genaue Anweisungen Schritt für Schritt ausführen.",
+      "Eingabe, Verarbeitung, Arbeitsspeicher, dauerhafter Speicher und Ausgabe erfüllen verschiedene Aufgaben. Ein Ergebnis kann falsch sein, obwohl der Rechner seine Anweisungen genau befolgt hat: Auch die Daten oder das Programm können ungeeignet sein. Die große Geschichte der Computer besteht aus vielen unterschiedlich gebauten Geräten."
     ],
     "facts": [
       {
@@ -6037,7 +6119,8 @@
     "related": [
       "person-ada_lovelace",
       "person-grace_hopper",
-      "science-computer"
+      "science-computer",
+      "invention-smartphone"
     ],
     "sources": [
       {
@@ -6115,7 +6198,21 @@
       "correct": 0,
       "why": "Eine Maschine sollte genaue Anweisungen Schritt für Schritt ausführen. Rechenmaschinen, mechanische Pläne und elektronische Computer hatten viele Beteiligte in mehreren Ländern. Es gibt nicht einen einzigen Erfinder des Computers."
     },
-    "model": "computer"
+    "model": "computer",
+    "learning": {
+      "starter": "Ein Computer führt Anweisungen aus. Er braucht passende Daten und ein Programm; schneller rechnen bedeutet nicht automatisch, richtig zu entscheiden.",
+      "observe": "Verfolge im vorhandenen Plan eine eingegebene Zahl bis zur Ausgabe. Vergleiche danach Arbeitsspeicher und dauerhaften Speicher. Welche Aufgabe hätten beide, wenn du einen Text bearbeitest und ihn anschließend speichern möchtest?",
+      "benefit": "Du kannst technische Abläufe erklären und prüfst Ergebnisse, statt einem schnellen Gerät automatisch Recht zu geben."
+    },
+    "questionFeedback": {
+      "hint": "Denke an viele gleiche Arbeitsschritte mit Daten. Welche Antwort beschreibt diese Wiederholung statt bloß ein bestimmtes Medium oder einen Aufenthaltsort?",
+      "wrongReasons": [
+        null,
+        "Buchseiten oft zu vervielfältigen erklärt eine Drucktechnik. Ein Computer kann jedoch viele unterschiedliche Anweisungen verarbeiten.",
+        "Ein Gerät im Weltraum kann einen Computer enthalten. Der Computer ist aber nicht durch seinen Aufenthaltsort definiert."
+      ]
+    },
+    "sourceNote": "Die Quellen belegen unterschiedliche Teile dieser Entwicklung. Die ergänzten Lernhilfen entstanden mit KI-Unterstützung. Eine unabhängige Fach- und Kinderprüfung steht noch aus."
   },
   {
     "id": "invention-internet",
@@ -6123,7 +6220,8 @@
     "title": "Das Internet",
     "intro": "Computer an verschiedenen Orten sollten Informationen austauschen.",
     "paragraphs": [
-      "Netze sollten miteinander verbunden werden."
+      "Netze sollten miteinander verbunden werden.",
+      "Informationen können in Datenpaketen übertragen werden. Die beteiligten Netze brauchen gemeinsame Regeln, damit diese Pakete an passenden Stellen weitergegeben werden können. Ein einzelnes Gerät oder ein einzelnes Netz ist deshalb noch nicht das gesamte Internet. Seine Geschichte umfasst viele Beiträge aus verschiedenen Ländern."
     ],
     "facts": [
       {
@@ -6230,7 +6328,21 @@
       "correct": 0,
       "why": "Netze sollten miteinander verbunden werden. Viele Teams entwickelten Paketübertragung und gemeinsame Regeln. Das ARPANET verband 1969 erste Rechner. Forschende aus mehreren Ländern trugen zur Entwicklung des Internets bei."
     },
-    "model": "network"
+    "model": "network",
+    "learning": {
+      "starter": "Das Internet verbindet viele Computernetze. Gemeinsame Regeln helfen den Geräten, Informationen auszutauschen.",
+      "observe": "Vergleiche im vorhandenen Plan Endgerät, Verbindung und Vermittlungspunkt. Erkläre den Weg einer Nachricht in eigenen Worten. Welche Verbindung könnte unterbrochen sein, wenn dein Gerät funktioniert, aber das Ziel nicht erreichbar ist? Das ist eine Denkaufgabe, kein Eingriff in echte Netze.",
+      "benefit": "Du unterscheidest ein Gerät von einem Netz und kannst Verbindungsprobleme eingrenzen, ohne private Daten oder Passwörter weiterzugeben."
+    },
+    "questionFeedback": {
+      "hint": "Unterscheide das Bewegen von Dingen vom Übertragen von Informationen zwischen Computern.",
+      "wrongReasons": [
+        null,
+        "Eine Rakete kann ein Gerät transportieren. Das beschreibt noch keine gemeinsamen Regeln zwischen Computernetzen.",
+        "Elektrisches Licht löst ein Beleuchtungsproblem. Das Internet soll dagegen Informationen zwischen Netzen austauschen."
+      ]
+    },
+    "sourceNote": "Die Quellen belegen unterschiedliche Teile dieser Entwicklung. Die ergänzten Lernhilfen entstanden mit KI-Unterstützung. Eine unabhängige Fach- und Kinderprüfung steht noch aus."
   },
   {
     "id": "invention-compass",
@@ -6238,7 +6350,8 @@
     "title": "Der Kompass",
     "intro": "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
     "paragraphs": [
-      "Eine magnetische Nadel konnte bei der Richtung helfen."
+      "Eine magnetische Nadel konnte bei der Richtung helfen.",
+      "Die Kompassnadel reagiert auf ein Magnetfeld. Für eine sinnvolle Orientierung brauchst du zusätzlich eine Richtungsangabe und musst sie mit deiner Umgebung oder einer Karte vergleichen. Ein Kompass ist daher etwas anderes als ein vollständiges Navigationsgerät mit Standort und Ziel. Die angezeigte magnetische Nordrichtung kann von geografisch Nord abweichen. Ein naher Magnet kann die Nadel ebenfalls beeinflussen."
     ],
     "facts": [
       {
@@ -6271,6 +6384,10 @@
       {
         "label": "Smithsonian National Air and Space Museum, Time and Navigation",
         "url": "https://timeandnavigation.si.edu/timeline2/1000"
+      },
+      {
+        "label": "USGS – Funktionsweise der Kompassnadel",
+        "url": "https://www.usgs.gov/media/audio/how-does-compass-work"
       }
     ],
     "aliases": [],
@@ -6333,7 +6450,21 @@
       "correct": 0,
       "why": "Eine magnetische Nadel konnte bei der Richtung helfen. Menschen kannten magnetische Steine schon früher. Seefahrer in China nutzten später magnetische Richtungsanzeigen; das Wissen verbreitete sich weiter."
     },
-    "model": null
+    "model": null,
+    "learning": {
+      "starter": "Eine frei bewegliche magnetische Nadel kann bei der Orientierung helfen. Sie zeigt nicht automatisch, wo dein Ziel liegt.",
+      "observe": "Untersuche im vorhandenen Plan Nadel und Richtungsskala. Formuliere zwei verschiedene Fragen: In welcher Richtung liegt Norden? Und in welcher Richtung liegt mein Ziel? Warum beantwortet die Nadel allein die zweite Frage nicht? Nur das Bildschirmmodell verwenden.",
+      "benefit": "Du trennst eine Richtungsinformation von einem fertigen Reiseweg und kannst die Grenzen eines einzelnen Messgeräts erklären."
+    },
+    "questionFeedback": {
+      "hint": "Welche Antwort beschreibt eine fehlende Orientierungshilfe, wenn vertraute sichtbare Anhaltspunkte fehlen?",
+      "wrongReasons": [
+        null,
+        "Die Erde aus einer Umlaufbahn zu beobachten ist eine Aufgabe von Satelliten. Die Kompassnadel liefert eine Richtung am Ort.",
+        "Nachts einen Raum zu beleuchten ist ein anderes Problem. Eine Kompassnadel erzeugt kein Licht."
+      ]
+    },
+    "sourceNote": "Die Quellen belegen unterschiedliche Teile dieser Entwicklung. Die ergänzten Lernhilfen entstanden mit KI-Unterstützung. Eine unabhängige Fach- und Kinderprüfung steht noch aus."
   },
   {
     "id": "invention-printing",
@@ -6341,7 +6472,8 @@
     "title": "Der Buchdruck",
     "intro": "Ein Buch von Hand abzuschreiben dauerte lange.",
     "paragraphs": [
-      "Buchstaben sollten zu Seiten zusammengestellt und oft abgedruckt werden."
+      "Buchstaben sollten zu Seiten zusammengestellt und oft abgedruckt werden.",
+      "Zur historischen Druckwerkstatt gehören Schriftzeichen, Farbe, Papier und eine Presse. Wiederverwendbare Zeichen sparen nicht jeden Arbeitsschritt: Zuerst muss eine Seite richtig zusammengestellt und geprüft werden. Ein falsch gesetztes Zeichen kann sonst in vielen Abzügen wiederkehren. Die Entwicklung beweglicher Schriftzeichen begann nicht erst mit Gutenberg."
     ],
     "facts": [
       {
@@ -6387,6 +6519,10 @@
       {
         "label": "Stadt Mainz / Gutenberg.de",
         "url": "https://www.gutenberg.de/zeit/zeitleiste_gutenberg"
+      },
+      {
+        "label": "Gutenberg-Museum Mainz – Zeichen, Satz und Presse",
+        "url": "https://www.gutenberg.de/erfindung/"
       }
     ],
     "aliases": [],
@@ -6454,7 +6590,21 @@
       "correct": 0,
       "why": "Buchstaben sollten zu Seiten zusammengestellt und oft abgedruckt werden. In China und Korea gab es bewegliche Druckzeichen vor Gutenberg. Seine Werkstatt verband Metalltypen, geeignete Farbe und eine Presse zu einem wirksamen europäischen System."
     },
-    "model": null
+    "model": null,
+    "learning": {
+      "starter": "Beim Druck können vorbereitete Zeichen oder Bilder mehrfach auf ein Material übertragen werden. Beim historischen Buchdruck lassen sich einzelne Zeichen zu einer Seite zusammensetzen.",
+      "observe": "Stelle dir eine Zeile aus einzeln beweglichen Zeichen vor. Vertausche gedanklich zwei Zeichen. Was müsstest du vor dem nächsten Druck ändern, und warum wären bereits gedruckte Seiten davon nicht automatisch berichtigt?",
+      "benefit": "Du verstehst Wiederverwendung und erkennst, warum eine Kontrolle vor dem Vervielfältigen wichtig ist."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche ein einzelnes von Hand geschriebenes Exemplar mit vielen Abzügen derselben vorbereiteten Seite.",
+      "wrongReasons": [
+        null,
+        "Ein Smartphone kombiniert Kommunikation und Datenverarbeitung. Die Druckkarte fragt nach der Vervielfältigung von Seiten.",
+        "Ein selbst angetriebener Wagen löst eine Transportaufgabe und vervielfältigt noch keinen Text."
+      ]
+    },
+    "sourceNote": "Die Quellen belegen unterschiedliche Teile dieser Entwicklung. Die ergänzten Lernhilfen entstanden mit KI-Unterstützung. Eine unabhängige Fach- und Kinderprüfung steht noch aus."
   },
   {
     "id": "invention-rocket",
@@ -6462,7 +6612,8 @@
     "title": "Die Rakete",
     "intro": "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
     "paragraphs": [
-      "Schnell ausströmendes Gas sollte die Rakete in die Gegenrichtung schieben."
+      "Schnell ausströmendes Gas sollte die Rakete in die Gegenrichtung schieben.",
+      "Die Richtung des ausgestoßenen Gases und die Schubrichtung sind entgegengesetzt. Der Raketenantrieb lässt sich deshalb nicht mit Rädern auf einer Straße erklären. Die Quelle zu Goddard berichtet über einen Flüssigkeitsraketenstart von1926 und korrigiert ausdrücklich die Vorstellung, Raketen bräuchten Außenluft zum Abstoßen."
     ],
     "facts": [
       {
@@ -6563,7 +6714,21 @@
       "correct": 0,
       "why": "Schnell ausströmendes Gas sollte die Rakete in die Gegenrichtung schieben. Raketen gab es lange vor der Raumfahrt. Robert Goddard startete 1926 eine Rakete mit flüssigen Treibstoffen. Später entwickelten große Teams leistungsfähigere Systeme."
     },
-    "model": null
+    "model": null,
+    "learning": {
+      "starter": "Eine Rakete stößt Material nach hinten aus und wird dabei nach vorn beschleunigt. Sie braucht keine Luft, gegen die sie sich abstützt.",
+      "observe": "Zeige im vorhandenen Plan mit zwei gedanklichen Pfeilen, wohin Gas austritt und wohin der Schub wirkt. Begründe den Unterschied. Bleibe beim Bildschirmmodell; keine Feuer-, Druck- oder selbstgebauten Raketenversuche.",
+      "benefit": "Du kannst die Schubrichtung erklären und unterscheidest eine physikalische Lernskizze von einer sicheren Bauanleitung."
+    },
+    "questionFeedback": {
+      "hint": "Welche Antwort betrifft einen Transport über die gewöhnliche Erdoberfläche hinaus? Die beiden anderen nennen Alltagsaufgaben am Boden.",
+      "wrongReasons": [
+        null,
+        "Ein Raum kann mit einer Lampe beleuchtet werden. Das erklärt nicht den Antrieb eines Geräts ins Weltall.",
+        "Viele Waren auf einer Landstrecke zu transportieren beschreibt eher eine Bahn- oder Straßenaufgabe, nicht das Startproblem dieser Karte."
+      ]
+    },
+    "sourceNote": "Die Quellen belegen unterschiedliche Teile dieser Entwicklung. Die ergänzten Lernhilfen entstanden mit KI-Unterstützung. Eine unabhängige Fach- und Kinderprüfung steht noch aus."
   },
   {
     "id": "invention-satellite",
@@ -6571,7 +6736,8 @@
     "title": "Der Satellit",
     "intro": "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
     "paragraphs": [
-      "Ein Gerät sollte die Erde auf einer Umlaufbahn umkreisen."
+      "Ein Gerät sollte die Erde auf einer Umlaufbahn umkreisen.",
+      "Ein Satellit ist nicht dasselbe wie die Rakete, die ihn startet. Nach dem Start können seine Instrumente auf einer Umlaufbahn eigene Aufgaben erfüllen. Die überlieferte Sputnik-Datierung von1957 ist ein historischer Schritt. Heutige Satelliten unterscheiden sich unter anderem nach Instrumenten, Energieversorgung und Auftrag."
     ],
     "facts": [
       {
@@ -6598,7 +6764,8 @@
     ],
     "related": [
       "science-gps",
-      "history-iss"
+      "history-iss",
+      "invention-rocket"
     ],
     "sources": [
       {
@@ -6671,7 +6838,21 @@
       "correct": 0,
       "why": "Ein Gerät sollte die Erde auf einer Umlaufbahn umkreisen. Teams in der Sowjetunion brachten 1957 Sputnik 1 in eine Erdumlaufbahn. Weitere Länder und internationale Teams entwickelten viele unterschiedliche Satelliten."
     },
-    "model": null
+    "model": null,
+    "learning": {
+      "starter": "Ein künstlicher Satellit bewegt sich auf einer Umlaufbahn. Seine Aufgabe kann Beobachten, Messen oder das Übertragen von Signalen sein.",
+      "observe": "Vergleiche im Teileplan Instrument, Energieversorgung und Antenne. Welches Teil sammelt Messdaten, welches überträgt Signale und welches versorgt das Gerät? Beschreibe die Zusammenarbeit, statt jedes Teil als unabhängigen Satelliten zu zählen.",
+      "benefit": "Du unterscheidest Start, Versorgung und Forschungsauftrag und kannst die Erdebeobachtung von einer bloßen Weltraumfahrt abgrenzen."
+    },
+    "questionFeedback": {
+      "hint": "Trenne die Aufgabe auf der Umlaufbahn vom vorherigen Start und vom Transport auf Straßen.",
+      "wrongReasons": [
+        null,
+        "Ein Wagen mit eigenem Antrieb löst eine Aufgabe auf dem Boden. Er umkreist die Erde nicht als Forschungsgerät.",
+        "Fliegen durch die Luft ist noch keine Umlaufbahn. Die Satellitenkarte beschreibt einen anderen Aufenthalts- und Arbeitszusammenhang."
+      ]
+    },
+    "sourceNote": "Die Quellen belegen unterschiedliche Teile dieser Entwicklung. Die ergänzten Lernhilfen entstanden mit KI-Unterstützung. Eine unabhängige Fach- und Kinderprüfung steht noch aus."
   },
   {
     "id": "invention-smartphone",
@@ -6679,7 +6860,8 @@
     "title": "Das Smartphone",
     "intro": "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
     "paragraphs": [
-      "Telefon und kleiner Computer sollten zusammenarbeiten."
+      "Telefon und kleiner Computer sollten zusammenarbeiten.",
+      "Bildschirm, Funkverbindung, Prozessor, Speicher und Energieversorgung haben unterschiedliche Aufgaben. Ein heller Bildschirm beweist zum Beispiel noch nicht, dass eine Funkverbindung besteht. Frühe Kombinationsgeräte zeigen Entwicklungsschritte; das heutige Smartphone entstand aus vielen zuvor entwickelten Techniken."
     ],
     "facts": [
       {
@@ -6778,7 +6960,21 @@
       "correct": 0,
       "why": "Telefon und kleiner Computer sollten zusammenarbeiten. Viele Entwicklungen kamen zusammen: Mobilfunk, Chips, Akkus, Bildschirme und Programme. IBM und BellSouth kombinierten beim Simon in den 1990er-Jahren mehrere Funktionen."
     },
-    "model": null
+    "model": null,
+    "learning": {
+      "starter": "Ein Smartphone verbindet Telefon und Computerfunktionen in einem mobilen Gerät. Mehrere Bauteile und Programme arbeiten dabei zusammen.",
+      "observe": "Wähle im vorhandenen Teileplan zwei Funktionen, etwa Bildschirm und Funk. Vermute, was ohne die eine noch mit der anderen möglich sein könnte. Erkläre den Unterschied zwischen einer gespeicherten Notiz und einer Nachricht, die erst übertragen werden muss. Keine Anmeldung oder privaten Daten nötig.",
+      "benefit": "Du verstehst die Grenzen einzelner Funktionen und musst bei einem Verbindungsfehler nicht automatisch deine gespeicherten Inhalte für verloren halten."
+    },
+    "questionFeedback": {
+      "hint": "Eine Antwort verbindet mehrere Aufgaben in einem mobilen Gerät. Welche geht über die reine Sprachübertragung hinaus?",
+      "wrongReasons": [
+        null,
+        "Viele Reisende und Waren auf einer Strecke zu bewegen ist eine Transportaufgabe. Hier werden mehrere Informationsfunktionen kombiniert.",
+        "Nur eine Stimme aus der Ferne hörbar zu machen beschreibt bereits ein Telefon. Die Frage sucht zusätzlich die Verarbeitung von Informationen unterwegs."
+      ]
+    },
+    "sourceNote": "Die Quellen belegen unterschiedliche Teile dieser Entwicklung. Die ergänzten Lernhilfen entstanden mit KI-Unterstützung. Eine unabhängige Fach- und Kinderprüfung steht noch aus."
   },
   {
     "id": "building-giza-pyramids",

@@ -938,5 +938,405 @@
       }
     },
     "fullCurrentAcceptance": "pending new immutable full local and GitHub run; do not infer full success or timing/cost improvement from targeted probes"
+  },
+  "quality72Acceptance": {
+    "head": "8094826cf173b7dc38163554537e97691f493cce",
+    "run": 38814533914,
+    "ciMerge": "b2cf34073a92be61fb74a27fe587ac8607380582",
+    "sourceDigest": "2db1300089eb07bfef7cb2fda74d522be9a4f677d54d4d15a03fe8c9fae9b79e",
+    "build": "cf0ec3172193801e",
+    "status": "all standard/chromium/firefox/webkit/required jobs passed",
+    "chromiumSeconds": 1993.205433592,
+    "checks": 140,
+    "timings": [
+      {
+        "suite": "performance",
+        "seconds": 38.771792608
+      },
+      {
+        "suite": "components",
+        "seconds": 21.558453096000004
+      },
+      {
+        "suite": "news-feed",
+        "seconds": 29.697482519
+      },
+      {
+        "suite": "home",
+        "seconds": 419.74389967099995
+      },
+      {
+        "suite": "core",
+        "seconds": 343.97030776599996
+      },
+      {
+        "suite": "book-navigation",
+        "seconds": 526.153404481
+      },
+      {
+        "suite": "offline",
+        "seconds": 294.2867947510001
+      },
+      {
+        "suite": "research",
+        "seconds": 523.434381273
+      },
+      {
+        "suite": "journeys",
+        "seconds": 253.34077286600007
+      },
+      {
+        "suite": "nature",
+        "seconds": 659.940303766
+      },
+      {
+        "suite": "playground",
+        "seconds": 119.099541219
+      },
+      {
+        "suite": "backup",
+        "seconds": 20.030409058999968
+      },
+      {
+        "suite": "challenge",
+        "seconds": 126.85539598200005
+      },
+      {
+        "suite": "book",
+        "seconds": 1860.0654858859998
+      }
+    ],
+    "review": {
+      "captures": 1530,
+      "retained": 397,
+      "retainedBytes": 50057413,
+      "limitBytes": 50331648
+    },
+    "meaning": "Passing expanded same-snapshot regression; not an independent scientific/visual approval, nor proof of reduced cost compared with an older smaller scope."
+  },
+  "local73Acceptance": {
+    "head": "73f5df2f2aec50b735001f0e87a71f32b2934418",
+    "sourceDigest": "3d265353b23c90f83afc56cb4cabb7170f482de1bed0b9981d2843aafeecdc40",
+    "build": "cf0ec3172193801e",
+    "status": "passed",
+    "seconds": 1935.587378917,
+    "checks": 139,
+    "workers": [
+      {
+        "name": "quality-foundation",
+        "suites": [
+          "foundation"
+        ],
+        "seconds": 107.19042963700001,
+        "report": "quality-foundation/portable-report.json"
+      },
+      {
+        "name": "quality-news-feed",
+        "suites": [
+          "news-feed"
+        ],
+        "seconds": 30.303892853999997,
+        "report": "quality-news-feed/portable-report.json",
+        "fixtureConfiguration": true
+      },
+      {
+        "name": "quality-navigation",
+        "suites": [
+          "home",
+          "core",
+          "offline"
+        ],
+        "seconds": 1379.8661409420001,
+        "report": "quality-navigation/portable-report.json"
+      },
+      {
+        "name": "quality-learning",
+        "suites": [
+          "journeys",
+          "playground",
+          "backup",
+          "challenge",
+          "research",
+          "nature"
+        ],
+        "seconds": 1678.0845408730002,
+        "report": "quality-learning/portable-report.json"
+      },
+      {
+        "name": "quality-book",
+        "suites": [
+          "book"
+        ],
+        "seconds": 1796.710340138,
+        "report": "quality-book/portable-report.json"
+      }
+    ],
+    "bookPhaseTimings": [
+      {
+        "phase": "full word matrix with screenshot/axe",
+        "width": 320,
+        "seconds": 277.979995786
+      },
+      {
+        "phase": "full word matrix with screenshot/axe",
+        "width": 360,
+        "seconds": 178.75044339299998
+      },
+      {
+        "phase": "full word matrix with screenshot/axe",
+        "width": 390,
+        "seconds": 158.36261592900001
+      },
+      {
+        "phase": "full word matrix with screenshot/axe",
+        "width": 768,
+        "seconds": 173.88632851800008
+      },
+      {
+        "phase": "full word matrix with screenshot/axe",
+        "width": 1024,
+        "seconds": 182.77757203399995
+      },
+      {
+        "phase": "full word matrix with screenshot/axe",
+        "width": 1440,
+        "seconds": 291.64585278299995
+      },
+      {
+        "phase": "full word matrix with screenshot/axe",
+        "width": 1920,
+        "seconds": 148.34595294800005
+      }
+    ],
+    "meaning": "Single full local passing repetition; immutable proof archived before next product wave. Brief read-only synchronous own-process URL/module inspection, no debugger pause/page mutation/assertion change; no p50/p95/billed-cost or production hardware inference."
+  },
+  "quality73Acceptance": {
+    "head": "73f5df2f2aec50b735001f0e87a71f32b2934418",
+    "runId": 38818861035,
+    "status": "success",
+    "jobs": "Standards, Chromium, actual Firefox/WebKit and Required all completed successfully; GitHub API rechecked16Oct2026.",
+    "chromiumSeconds": 1658.699835755,
+    "sourceDigest": "3d265353b23c90f83afc56cb4cabb7170f482de1bed0b9981d2843aafeecdc40",
+    "build": "cf0ec3172193801e",
+    "meaning": "Previous immutable milestone only; not acceptance of the uncommitted invention/image-budget wave. Single-run timing variance is not p50/p95, billing or a causal optimization guarantee."
+  },
+  "reviewStorageDecision": {
+    "decidedOn": "2026-10-16",
+    "status": "Implemented in existing review curator; full new milestone pending",
+    "limitBytes": 150000000,
+    "scope": "Retained QA/review PNGs exclusively; production, initial-load, single-request and offline budgets unchanged.",
+    "productionBudgetSha256": "4a2e4990bbf3da83068122d8220d30d1e390dc99a51dbbee57378a335e971466",
+    "localChromiumBaseline": {
+      "sourceDigest": "3d265353b23c90f83afc56cb4cabb7170f482de1bed0b9981d2843aafeecdc40",
+      "build": "cf0ec3172193801e",
+      "generatedBytes": 262123457,
+      "generatedImages": 1508,
+      "retainedImages": 379,
+      "omittedImages": 1129,
+      "retainedBytes": 45943901,
+      "limitBytes": 150000000,
+      "reserveBytes": 104056099,
+      "withinBudget": true,
+      "matrixSha256": "1e5b013772bac5b8779eeb21b37150ef5a6c99c604516956c16ee2918122e26d",
+      "exactDuplicates": {
+        "groups": [
+          {
+            "sha256": "10d777e861436250bd49d177ceac5bded908698c90b80f65ea958a27395ae56d",
+            "files": [
+              {
+                "file": "quality-foundation-foundation-switch-before-1440.png",
+                "retained": true
+              },
+              {
+                "file": "quality-foundation-foundation-switch-before-320.png",
+                "retained": true
+              },
+              {
+                "file": "quality-foundation-foundation-switch-restored-1440.png",
+                "retained": true
+              },
+              {
+                "file": "quality-foundation-foundation-switch-restored-320.png",
+                "retained": true
+              }
+            ]
+          },
+          {
+            "sha256": "405715980596b0c30d1ac0b9ef1883a165ea73e195b355cc1763fa40225c4a41",
+            "files": [
+              {
+                "file": "quality-foundation-foundation-switch-changed-1440.png",
+                "retained": true
+              },
+              {
+                "file": "quality-foundation-foundation-switch-changed-320.png",
+                "retained": true
+              }
+            ]
+          },
+          {
+            "sha256": "70443947ec3bff89e4c0f1a0b846d21a83edea9ca89d198e2f54c3ff9013d888",
+            "files": [
+              {
+                "file": "quality-foundation-offline-resilience-chromium-quota-error-320.png",
+                "retained": true
+              },
+              {
+                "file": "quality-foundation-offline-resilience-chromium-source-error-320.png",
+                "retained": true
+              }
+            ]
+          },
+          {
+            "sha256": "ed6a324a938624bd6516296fd8a65cbe0b6fa3abc79bb73e5da40b86bc71afc0",
+            "files": [
+              {
+                "file": "quality-foundation-world-content-identity-320.png",
+                "retained": true
+              },
+              {
+                "file": "quality-foundation-world-content-partial-320.png",
+                "retained": true
+              }
+            ]
+          },
+          {
+            "sha256": "115c1c1b626223f4ed08af6d50594fdd3716851f4ce1d57e8af51a364b78bb07",
+            "files": [
+              {
+                "file": "quality-navigation-discovery-pathways-390.png",
+                "retained": false
+              },
+              {
+                "file": "quality-navigation-home-next-390.png",
+                "retained": false
+              }
+            ]
+          },
+          {
+            "sha256": "475bbd0ffa31bffa57998e7977c46a6a56f561b550ea754ce26c88947166defd",
+            "files": [
+              {
+                "file": "quality-navigation-home-credits-1440.png",
+                "retained": true
+              },
+              {
+                "file": "quality-navigation-home-credits-1920.png",
+                "retained": false
+              }
+            ]
+          },
+          {
+            "sha256": "ac0f43ca597ea6eb02b143735ca6886c56eef7765a33f2f56c7f63c6fe1089db",
+            "files": [
+              {
+                "file": "quality-navigation-navigation-knowledge-routes-1440.png",
+                "retained": true
+              },
+              {
+                "file": "quality-navigation-navigation-knowledge-routes-1920.png",
+                "retained": false
+              }
+            ]
+          },
+          {
+            "sha256": "83703164e2896ca33685e24599c55e0872d0fa2760b895e1fd1ca63ee90fba9c",
+            "files": [
+              {
+                "file": "quality-navigation-pass-backup-large-1440.png",
+                "retained": true
+              },
+              {
+                "file": "quality-navigation-pass-display-large-1440.png",
+                "retained": true
+              }
+            ]
+          },
+          {
+            "sha256": "9c0c17ffb69dcb9155a621df58ed4e7b87bc7e58e1db0c8e0d984b2e6a015713",
+            "files": [
+              {
+                "file": "quality-navigation-pass-backup-large-768.png",
+                "retained": false
+              },
+              {
+                "file": "quality-navigation-pass-display-large-768.png",
+                "retained": false
+              }
+            ]
+          },
+          {
+            "sha256": "98efd0d29a0616a4e7847140093cba9a6986cf9c79db211d273b46e8185f85de",
+            "files": [
+              {
+                "file": "quality-navigation-updates-prepared-1440.png",
+                "retained": true
+              },
+              {
+                "file": "quality-navigation-updates-prepared-1920.png",
+                "retained": false
+              }
+            ]
+          }
+        ],
+        "extraCaptures": 12,
+        "retainedExtraCopies": 7,
+        "retainedExtraBytes": 196894,
+        "alreadyOmittedCopiesWithRetainedOriginal": 3,
+        "alreadyOmittedBytesWithRetainedOriginal": 128562,
+        "automaticDuplicateRemovals": 0,
+        "meaning": "Byte identity alone never removes a distinct state, width, focus, failure or mandatory image. Omitted copies describe existing explicit curation, not new deduplication savings."
+      },
+      "comparison": {
+        "status": "previous comparable run not supplied"
+      }
+    },
+    "previousComparableFullCiRuns": [
+      {
+        "run": 72,
+        "generatedImages": 1530,
+        "retainedImages": 397,
+        "generatedBytes": 286766391,
+        "retainedBytes": 50057413,
+        "reserveUnderNewLimit": 99942587
+      },
+      {
+        "run": 73,
+        "generatedImages": 1530,
+        "retainedImages": 397,
+        "generatedBytes": 286731403,
+        "retainedBytes": 50025849,
+        "reserveUnderNewLimit": 99974151
+      }
+    ],
+    "comparison": {
+      "retainedImagesDelta": 0,
+      "retainedBytesDelta": -31564,
+      "meaning": "Quality72 versus73: same1530 captures/397 retained, including Firefox/WebKit. Tiny byte difference is capture variance, not newly achieved savings. Local Chromium-only379 images are not comparable to397 final-engine images."
+    },
+    "decision": "Existing curation already avoids unnecessary long cards/overview binaries and uploads final collector JSON/XML only, without duplicating PNG artifacts. Ten byte-identical groups in local full proof include different width, restored switch state, quota versus source errors, partial versus identity failure and backup/display sections. Keep those contexts; no hash-based removal or new image store. Three omitted identical copies already have retained originals; no newly removed review image. No DEFLATE9 micro-optimization.",
+    "cleanup": {
+      "scope": "Two closed profiles from completed superseded targeted native capture probe only; no sealed evidence, capture, report or source removed. Both helpers create fresh profiles before every run. Latest invention/cold-offline and all full-run profiles remain.",
+      "removed": [
+        {
+          "path": ".qa-output/native-capture-selected/invention-native-zoom-profile",
+          "files": 208,
+          "bytes": 3427270
+        },
+        {
+          "path": ".qa-output/native-capture-selected/nature-native-zoom-profile",
+          "files": 271,
+          "bytes": 4215551
+        }
+      ],
+      "preservedProofHashes": {
+        "report.json": "491d3d91fb307295d418813243e95e56aee150162ddbb1198128a06f290caed9",
+        "nature-native-200-large.png": "7f33050440a2517244ada6cba011b51561a040054cf08d4f0e0b0745db9fda5e",
+        "invention-native-200-large.png": "6b67eac4275108a6bf586e6e65c083176bb51608e1aacc87caa28dedf765e695"
+      },
+      "removedBytes": 7642821
+    },
+    "unchanged": "All existing mandatory captures and full matrices, PNG bytes/hashes, source/commit/build sealing, failure captures and all tests remain; new invention images add five mandatory captures. Historical sealed proofs and raw original instructions unchanged.",
+    "next": "Stop image optimization after acceptance; resume prepared invention and other open product waves in sole BACKLOG."
   }
 }

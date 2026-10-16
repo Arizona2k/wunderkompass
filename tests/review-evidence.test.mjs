@@ -1,8 +1,26 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import os from 'node:os';import path from 'node:path';
-import {retainScreenshot,requiredScreenshots,prepareReview} from '../scripts/review-evidence.mjs';
+import {retainScreenshot,requiredScreenshots,prepareReview,REVIEW_LIMIT,reviewStorage} from '../scripts/review-evidence.mjs';
 import {sourceDigest} from '../scripts/handoff.mjs';
 import {createHash} from 'node:crypto';
+test('review-only ceiling is decimal150MB, inclusive, fail-closed and never a storage target',()=>{
+ assert.equal(REVIEW_LIMIT,150_000_000);
+ assert.equal(reviewStorage([],150_000_000).withinBudget,true);
+ assert.equal(reviewStorage([],150_000_001).withinBudget,false);
+ for(const bytes of [NaN,Infinity,-1,1.5])assert.equal(reviewStorage([],bytes).withinBudget,false);
+ const small=reviewStorage([],50_000_000);assert.equal(small.retainedBytes,50_000_000);assert.equal(small.reserveBytes,100_000_000);
+});
+test('byte-identical states keep their filenames/checksums; comparisons require the same full capture matrix',()=>{
+ const captures=[{file:'quality-focus-320.png',sha256:'a'.repeat(64),bytes:100,retained:true},{file:'quality-offline-320.png',sha256:'a'.repeat(64),bytes:100,retained:true},{file:'quality-ordinary-390.png',sha256:'a'.repeat(64),bytes:100,retained:false},{file:'quality-error-1440.png',sha256:'b'.repeat(64),bytes:200,retained:true}];
+ const before=structuredClone(captures),previous={status:'passed',build:'old',sourceDigest:'c'.repeat(64),screenshots:[...captures].reverse(),retainedBytes:450};
+ const result=reviewStorage(captures,400,{previous});assert.deepEqual(captures,before);
+ assert.deepEqual([result.generatedImages,result.retainedImages,result.omittedImages,result.reserveBytes],[4,3,1,149_999_600]);
+ assert.equal(result.exactDuplicates.extraCaptures,2);assert.equal(result.exactDuplicates.retainedExtraCopies,1);assert.equal(result.exactDuplicates.retainedExtraBytes,100);assert.equal(result.exactDuplicates.alreadyOmittedCopiesWithRetainedOriginal,1);assert.equal(result.exactDuplicates.alreadyOmittedBytesWithRetainedOriginal,100);assert.equal(result.exactDuplicates.automaticDuplicateRemovals,0);assert.equal(result.exactDuplicates.groups[0].files.length,3);
+ assert.equal(result.comparison.retainedBytesDelta,-50);assert.equal(result.comparison.retainedImagesDelta,0);
+ for(const changed of [{...previous,status:'failed'},{...previous,screenshots:captures.slice(1)},{...previous,retainedBytes:NaN}])assert.equal('retainedBytesDelta' in reviewStorage(captures,400,{previous:changed}).comparison,false);
+ assert.equal('retainedBytesDelta' in reviewStorage(captures,400).comparison,false);
+});
 test('critical states are always retained while interchangeable intermediate binaries can be reproduced',()=>{
+ for(const width of [320,1440])for(const id of ['phone','printing'])assert.equal(retainScreenshot('quality-navigation-invention-model-invention-'+id+'-'+width+'.png'),true);assert.equal(retainScreenshot('quality-navigation-invention-native-200-large.png'),true);assert.equal(retainScreenshot('quality-navigation-invention-model-invention-railway-320.png'),false,'original remains captured/hashed and personally reviewed; representative new diagrams retained');
  assert.ok(requiredScreenshots.every(retainScreenshot));assert.equal(retainScreenshot('quality-book-why-59-1440.png'),true);assert.equal(retainScreenshot('quality-book-why-source-25-320.png'),true);assert.equal(retainScreenshot('quality-book-why-starter-35-320.png'),true);assert.equal(retainScreenshot('quality-book-why-0-320.png'),false,'full Why card remains captured/hashed; readable critical crops retained');
  for(const model of ['length','duration','temperature'])for(const width of [320,1440])assert.equal(retainScreenshot('quality-learning-book-model-'+model+'-'+width+'.png'),true);
  for(const prefix of ['quality-learning','quality-book']){for(const model of ['length','duration','temperature'])for(const width of [320,1440])assert.equal(retainScreenshot(prefix+'-book-model-'+model+'-'+width+'.png'),true);assert.equal(retainScreenshot(prefix+'-book-native-200-large.png'),true);assert.equal(retainScreenshot(prefix+'-book-photon-320.png'),false);}
@@ -31,7 +49,7 @@ test('final collection preserves hashes for every omitted original and rejects m
   for(const name of requiredScreenshots)await fs.writeFile(path.join(dir,name),png);
   const omitted={file:'quality-book-why-0-320.png',bytes:9876,width:320,height:1400,sha256:'a'.repeat(64),retained:false};
   const ledger={status:'passed',build:'same-build',sourceDigest:digest,screenshots:[omitted,...requiredScreenshots.map(file=>({file,bytes:png.length,width:1,height:1,sha256:sha,retained:true}))]};await fs.writeFile(path.join(dir,'review-manifest.json'),JSON.stringify(ledger));
-  const result=await prepareReview(dir,{sealedCaptureLedger:ledger});assert.equal(result.status,'passed');assert.deepEqual(result.screenshots.find(s=>s.file===omitted.file),omitted);assert.equal(result.screenshots.length,requiredScreenshots.length+1);assert.equal(result.generatedBytes,result.retainedBytes+9876);
+  const result=await prepareReview(dir,{sealedCaptureLedger:ledger,previousStorageReport:{...ledger,retainedBytes:png.length*requiredScreenshots.length}});assert.equal(result.status,'passed');assert.deepEqual(result.screenshots.find(s=>s.file===omitted.file),omitted);assert.equal(result.screenshots.length,requiredScreenshots.length+1);assert.equal(result.generatedBytes,result.retainedBytes+9876);assert.equal(result.limit,150_000_000);assert.equal(result.storage.exactDuplicates.retainedExtraCopies,requiredScreenshots.length-1,'even identical mandatory originals remain stored separately');assert.equal(result.storage.comparison.retainedBytesDelta,0);assert.equal(result.storage.reserveBytes,150_000_000-result.retainedBytes);
   await fs.writeFile(path.join(dir,requiredScreenshots[0]),Buffer.concat([png,Buffer.from('changed')]));await assert.rejects(prepareReview(dir,{sealedCaptureLedger:ledger}),/Changed sealed screenshot/);
   await fs.unlink(path.join(dir,requiredScreenshots[0]));await assert.rejects(prepareReview(dir,{sealedCaptureLedger:ledger}),/Missing sealed screenshot/);
   await assert.rejects(prepareReview(dir,{sealedCaptureLedger:{...ledger,sourceDigest:'c'.repeat(64)}}),/Mixed sealed/);

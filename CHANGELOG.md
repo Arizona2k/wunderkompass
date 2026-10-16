@@ -1,5 +1,14 @@
 # Änderungsverlauf
 
+- QA-Reviewbudget auf exakt150.000.000Byte geändert, ausschließlich aufbewahrte Prüfbilder. Bestehendes Manifest berichtet Anzahl/Reserve/SHA-Dubletten und optionalen Vergleich gleicher Matrizen;0 Pflichtbilder entfernt, keine Produktions-/Offlinebudgetänderung. Zwei veraltete geschlossene native Testprofile gezielt bereinigt(7642821Byte); Originalbilder/Prüfberichte unverändert. Noch unveröffentlicht.
+
+## Paket3.5 · Erfindungen genauer verstehen (unveröffentlicht)
+
+- Alle zwölf bestehenden Erfindungskarten um individuelle einfache Erklärungen, Beobachtungsaufgaben, Nutzen und Hinweise ergänzt.24 spezifische Rückmeldungen erklären falsche Antworten; alte Fragen, richtige Antworten und Spielstände erhalten.
+- Zwölf Wissenswege verständlich erklärt und gegenseitig geöffnet, etwa Kompass/GPS und Rakete/Satellit. Beziehungen werden als Verbindungen gezählt, nicht als neue Wissensartikel. Zwölf zusätzliche Erfindungsmanuskripte bleiben ausdrücklich vorbereitet.
+- Zug-, Flugzeug- und Internetmarkierungen korrigiert; Auto, Rakete und Druckplan präzisiert. Telefon zeigt einen eigenen Schall–Signal–Schall-Funktionsweg. Lesbare HTML-Namen und Nummern bleiben auch nach Erkunden sichtbar, mit getrennten Haken und44px-Bedienflächen.
+- Quellen-/Prüfstand verständlicher und ohne pauschale neue menschliche Fachfreigabe. Wiederaufnahme-Checkpoint stark verdichtet; vollständige frühere Nachweiskette bleibt in Git erhalten, Originalaufträge unverändert.
+
 ## Paket3.5 · Reproduzierbares Abschalten der Offline-Prüfserver (unveröffentlicht)
 
 - Echte ungenutzte Browser-TCP-Verbindung als Ursache eines hängenden Testserverendes nachgewiesen. Isolierte Offline-Fixtures schließen ihre Verbindungen jetzt nach dem Listener; Browser und sämtliche echten Offline-/Altchunk-/Passprüfungen bleiben erhalten.

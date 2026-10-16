@@ -288,6 +288,102 @@
       "kind": "context",
       "why": "Die Milchstraße enthält viele Sterne. Planeten um andere Sterne erweitern die Frage über unser eigenes Sonnensystem hinaus.",
       "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "invention-light--science-circuit",
+      "fromId": "invention-light",
+      "toId": "science-circuit",
+      "kind": "needs",
+      "why": "Eine Lampe braucht elektrische Energie und einen geschlossenen Stromweg. Der Stromkreis erklärt das Zusammenspiel mit Leitung und Schalter.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-car--invention-railway",
+      "fromId": "invention-car",
+      "toId": "invention-railway",
+      "kind": "transport",
+      "why": "Auto und Eisenbahn transportieren Menschen und Lasten. Beim Zug führen Schienen die Räder; beim Auto wird die Fahrtrichtung anders gesteuert.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-railway--history-steam",
+      "fromId": "invention-railway",
+      "toId": "history-steam",
+      "kind": "context",
+      "why": "Dampfmaschinen trieben frühe Lokomotiven an. Die Technikgeschichte zeigt, warum Antrieb, Gleise und Betrieb schrittweise zusammenwuchsen.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-airplane--science-flight",
+      "fromId": "invention-airplane",
+      "toId": "science-flight",
+      "kind": "cause",
+      "why": "Die Erfindungskarte ordnet Flügel, Triebwerk und Steuerung zu. Die Flugkarte erklärt die dabei wirkenden Kräfte genauer.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-phone--invention-smartphone",
+      "fromId": "invention-phone",
+      "toId": "invention-smartphone",
+      "kind": "context",
+      "why": "Beide übertragen Gespräche. Ein Smartphone verbindet diese Aufgabe zusätzlich mit Computerfunktionen; ein Bildschirm allein stellt noch keine Verbindung her.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-computer--science-computer",
+      "fromId": "invention-computer",
+      "toId": "science-computer",
+      "kind": "partnership",
+      "why": "Die Erfindungskarte zeigt die Aufgaben der Bauteile. Die Wissenschaftskarte erklärt, wie Daten und Anweisungen bei der Verarbeitung zusammenarbeiten.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-internet--science-network",
+      "fromId": "invention-internet",
+      "toId": "science-network",
+      "kind": "partnership",
+      "why": "Einzelne Netze sind Teile eines größeren Verbunds. Die Netzwerkkarte vertieft den Weg von Daten und die dafür nötigen gemeinsamen Regeln.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-compass--science-gps",
+      "fromId": "invention-compass",
+      "toId": "science-gps",
+      "kind": "exploration",
+      "why": "Ein Kompass liefert eine magnetische Richtung. Satellitennavigation kann zusätzlich einen Standort bestimmen; Richtung und Standort sind verschiedene Informationen.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-printing--history-paper",
+      "fromId": "invention-printing",
+      "toId": "history-paper",
+      "kind": "needs",
+      "why": "Die Druckform überträgt Zeichen auf ein Material. Die Papiergeschichte erklärt die Entwicklung eines wichtigen Trägers für gedruckte Nachrichten.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-rocket--invention-satellite",
+      "fromId": "invention-rocket",
+      "toId": "invention-satellite",
+      "kind": "transport",
+      "why": "Eine Rakete kann einen Satelliten starten. Der Satellit erfüllt danach andere Aufgaben, etwa Messen oder Übertragen von Signalen.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-satellite--science-gps",
+      "fromId": "invention-satellite",
+      "toId": "science-gps",
+      "kind": "exploration",
+      "why": "Navigationssatelliten senden Signale. Die GPS-Karte erklärt, wie ein Empfangsgerät mehrere solcher Signale für eine Standortbestimmung nutzt.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-smartphone--invention-computer",
+      "fromId": "invention-smartphone",
+      "toId": "invention-computer",
+      "kind": "partnership",
+      "why": "Ein Smartphone verarbeitet Programme und Daten wie ein Computer. Funk, Akku und die mobile Bauform ergänzen diese Aufgabe.",
+      "checkedAt": "2026-10-15"
     }
   ]
 }
