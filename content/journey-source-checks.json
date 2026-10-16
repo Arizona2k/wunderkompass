@@ -182,5 +182,22 @@
       "Alle80 Fragen-/Grafik-/Kinder-/Gerätegates und übrigen Kapitelprüfungen bleiben offen.",
       "Keine neuen Kapitel oder neuen Wissensartikel gezählt."
     ]
+  },
+  "technicalSourceControlFollowup": {
+    "checkedOn": "2026-10-17",
+    "scope": "Technical source controls, no new scientific approval",
+    "trigger": "Quality91 Firefox at exact75c04f6 failed readable chapter source touch target; original failed log did not include numeric geometry, so root cause is not claimed proven. Chromium35-case baseline minimum44px passed.",
+    "change": "Source links min-height48px, max-inline-size100%, overflow-wrap:anywhere. Actual DOM plus protocol geometry checked after scrolling the link into view; strict44px boundary, source identities, all20 original engine cases, focus and axe retained. Same cases now run before unrelated book/model groups; no added runner/suite.",
+    "localAfter": {
+      "app": "b6f07d6ddaa64531",
+      "sevenWidthCases": 35,
+      "minimumDOMHeight": 48,
+      "engineSourceOnlyCases": 20,
+      "engineSourceOnlySeconds": 8.629014119999999,
+      "scope": "explicit partial local actual Chromium; does not satisfy engineComplete/full handoff"
+    },
+    "diagnostics": "Future source failures save original PNG and numeric geometry JSON before context closes. Previous failure screenshot cannot be reconstructed.",
+    "independentHumanReview": false,
+    "actualFirefoxRetest": "pending final same-code GitHub Quality; current91 Chromium must finish before pushing follow-up"
   }
 }

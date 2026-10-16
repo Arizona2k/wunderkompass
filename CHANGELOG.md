@@ -1,5 +1,9 @@
 # Änderungsverlauf
 
+## Paket3.5 – größere Quellen-Touchflächen und frühere Engineprüfung (noch unveröffentlicht)
+
+Quellenlinks der Meereskapitel erhalten48px Mindesthöhe und begrenzten Wortumbruch. Unveränderte20Quelle-/Breiten-/Fokus-/axe-Fälle laufen in vorhandenen Engineprüfungen zuerst; numerische Fehlerdaten und Originalbilder vor Kontextschluss sichern. Strenges44px-Gate und allevollständigenTests bleiben. Lokale20-/35-Fälle bestanden; tatsächlicheFirefox-/FinalCI-Abnahme noch erforderlich.
+
 ## Paket3.5 – Reise-Lernhilfen und lesbare Kapitelgrafiken (noch unveröffentlicht)
 
 240 freiwillige Hinweise individuell aus dem erhaltenen Masterstand übernommen,32 Aufgabenoptionen/Rückmeldungen präzisiert; richtige Antworten und gespeicherte Positionen erhalten. Wörter der64 bestehenden Grafiken bleiben als HTML lesbar; Mondansichten und politische Beispielgrenzen zeigen den passenden Zusammenhang. Redaktionelle Nachkontrolle entfernt zwei alte Hinweisbezüge und erklärt falsche Apollo-Jahreszahlen unterschiedlich. Keine neuen Kapitel oder vollständige unabhängige Fachabnahme behauptet. Frühe gezielte tatsächliche Browserprüfungen dauerhaft in bestehenden Regeln verankert; alle vollständigen Endprüfungen bleiben Pflicht. Nachweis und tatsächliche Bereitstellung nach Nutzerfreigabe im zugehörigen PR.

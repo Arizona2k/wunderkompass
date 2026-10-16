@@ -1,5 +1,13 @@
 # Aktiver Projektstand – Paket 3.5 / PR #27
 
+## WK055/057 – gezielter Firefox-Quellenbefund während der Schlussprüfung17.10.2026
+
+Quality91 am75c04f6: Standards undWebKit erfolgreich; Firefox scheiterte nach den übrigen durchlaufenen Gruppen an readable chapter source touch target. Der alte Fehlertext enthält keine numerischen Rechtecke und kein Quellen-Fehlerbild, deshalb keine erfundene gesicherte Ursachenbehauptung. Der weiterlaufendeChromium-/Nachweislauf bleibt unangetastet. KeinPush des Folgecommits, bevor der gesamteLauf91 abgeschlossen ist.
+
+Begrenzte Korrektur am unveröffentlichten Master, nicht im unabhängig abgenommenenPR32: Quellenlinks48px Mindesthöhe, begrenzteBreite und sicherer Wortumbruch; die strenge44px-Prüfung bleibt und verlangt zusätzlich direkteDOM-Geometrie/16px-Schrift. Vorher35Chromiumfälle an siebenBreiten mind44px; nachher35Fälle mind48px, echteQuellenansichten20Fälle im vorhandenenRunner8,629s mit Tastatur/axe bestanden. Dieselben20Firefox-/WebKit-Fälle laufen künftig zuerst; Fehler speichern Originalbild und Größen-/Positionsdaten vor Kontextschluss. NeueOption --ocean-sources-only ist ausdrücklich lokaleTeilprüfung und wird von engineComplete abgewiesen; gesamte ursprüngliche Abnahme bleibt vollständig. EchteFirefox-Nachprüfung und neuevolleFinalCI erforderlich, kein altesGrün übertragen und keine weitereOptimierungsrunde.
+
+PR32/3f85694 ist unabhängig lokal vollständig bestanden (135Unit/27Release/TS/Lint/Build/40Exporte/10Browsergruppen790,368s/114Labels), Original342PNG45.561.240B unverändert gesichert; tatsächlichesUpdatevonveröffentlichterBasis759400e erhältganzenPass/alteNotiz/Stufe undkaltenOfflineweg,106/128Dateien wiederverwendet. Quality92 läuft am unverändertenLieferhead; Ready erst nach vollständigemErfolg. News pausiert, gesamterMasterrest/4–8 erhalten. Exakte finaleHead-/CI-/Lockquittung in den zugehörigenPRs, keineDokumentations-CI-Schleife.
+
 ## WK055/052 – Reise-Lernhilfen als eigenständiger Lieferabschnitt,17.10.2026
 
 Aktuelle Basis ist der tatsächlich übernommene PR31-Merge `759400e477fe9eb5ee5ce307de578fa3f72cb926`; offizieller Vercel-Erfolg56568706586 vom16.10.22:38:23Z am bestehenden Projekt bestätigt. Kein eigener Merge oder Deployment. Originalmaster und alle vorbereiteten Inhalte bleiben im bestehenden PR27 gesichert, einschließlich kontrolliertem Folgeabgleich `b967efdcdb985f04bb80b2cdb046925414ccf986`. Eine Reservierung `73d510039ade410d404a5fd0f309e9e0cc6bc1cd`, Durchlauf `package-3-5-after-pr31-2026-10-17`, kein paralleler Agent oder zweiter Backlog.
