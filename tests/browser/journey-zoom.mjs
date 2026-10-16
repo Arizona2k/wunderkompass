@@ -18,7 +18,7 @@ export async function nativeJourneyZoom(chromium,options,base,report,shots){
   for(const [id,index] of [['water',2],['inside',0],['navigation',0],['climate',4]]){
    await p.evaluate(route=>location.hash=route,'journeys/'+id+'/'+(index+1));await p.locator('[data-chapter-inquiry="'+id+':'+index+'"]').waitFor();
    assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'native 200% reflow '+id);
-   await p.locator('.journey-task').scrollIntoViewIfNeeded();await p.locator('.journey-levels button').nth(2).focus();await capture('journey-native-200-'+id+'.png');
+   await p.locator('.journey-task').scrollIntoViewIfNeeded();await p.locator('.journey-levels button').nth(2).focus();const hint=p.locator('.journey-task summary');if(!await hint.evaluate(e=>e.parentElement.open))await hint.click();await p.locator('.journey-task details[open]').waitFor();await capture('journey-native-200-'+id+'.png');
   }
   await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'native zoom plus large app text');await p.locator('.journey-task').scrollIntoViewIfNeeded();await capture('journey-native-200-large.png');
   await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});assert.deepEqual(await p.evaluate(async()=>(await window.axe.run('.journey-reader',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);

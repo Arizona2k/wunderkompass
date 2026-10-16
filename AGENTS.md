@@ -1,5 +1,9 @@
 # Anleitung für Codex
 
+## Dauerhafte Nutzerentscheidung17.10.2026 – früh in den betroffenen Browsern prüfen
+
+Neue oder geänderte Funktionen und insbesondere neue Browsertests frühzeitig gezielt im gebauten Produkt und in den tatsächlich betroffenen verfügbaren Browsern ausführen. Gefundene Fehler möglichst vor der großen Schlussprüfung korrigieren und gezielt erneut prüfen. Vorhandene geeignete Prüfumgebung und Browsermodule nutzen; keine zusätzliche große Optimierungsrunde oder neue Testarchitektur. Teilprüfungen mit Browser, Umfang, Build und Ergebnis kenntlich machen. Vor Übergabe bleiben sämtliche vollständigen Pflichtprüfungen am endgültigen Stand unverändert verbindlich; kein Test entfällt und Chromium-Emulation ersetzt keinen tatsächlichen Firefox-/WebKit-Lauf. Nach jedem Nutzermerge tatsächliche Übernahme und Testbereitstellung prüfen, abhängige Entwicklung kontrolliert abgleichen und den offenen Paket-3.5-Master fortführen. News bleibt pausiert.
+
 Lokale Iteration: vorhandenes `test:affected --run` prüft betroffene vorhandene native `.mjs`/`.cjs`/`.js` zuerst mit `node --check`, ohne Modulcode auszuführen. Doppelte Imports wie im tatsächlich roten Quality85 werden so früh erkannt. Unbekannte/gelöschte Eingaben bleiben konservativ; breite Browserauswahl folgt dem bestehenden REQUIRED_SUITES-Vertrag. Alle bisherigen Schlussprüfungen unverändert, keine neuen Jobs oder Browsergruppen.
 
 ## Aktuelle Nutzerentscheidung16.10.2026 – Paket3.5 fortsetzen, News pausiert

@@ -1,0 +1,1205 @@
+{
+  "sourceCommit": "1b4e1b70c8288bc1c89a8f67d4741409d070ff91",
+  "tasks": [
+    {
+      "id": "planet:0:0",
+      "correct": 0,
+      "correctAnswer": "Die Sonne"
+    },
+    {
+      "id": "planet:0:1",
+      "correct": 2,
+      "correctAnswer": "Ihre Oberfläche reflektiert Licht"
+    },
+    {
+      "id": "planet:0:2",
+      "correct": 1,
+      "correctAnswer": "Die Größen sind im Bild vereinfacht"
+    },
+    {
+      "id": "planet:1:0",
+      "correct": 2,
+      "correctAnswer": "Der Ozean"
+    },
+    {
+      "id": "planet:1:1",
+      "correct": 1,
+      "correctAnswer": "71 Wasser,29 Land"
+    },
+    {
+      "id": "planet:1:2",
+      "correct": 0,
+      "correctAnswer": "Nein, der Bildausschnitt reicht nicht"
+    },
+    {
+      "id": "planet:2:0",
+      "correct": 1,
+      "correctAnswer": "Luft"
+    },
+    {
+      "id": "planet:2:1",
+      "correct": 0,
+      "correctAnswer": "Luft ist in Bewegung"
+    },
+    {
+      "id": "planet:2:2",
+      "correct": 2,
+      "correctAnswer": "Nein, dafür braucht man weitere Messungen"
+    },
+    {
+      "id": "planet:3:0",
+      "correct": 0,
+      "correctAnswer": "Zur Erdmitte"
+    },
+    {
+      "id": "planet:3:1",
+      "correct": 2,
+      "correctAnswer": "Beide zur Erdmitte"
+    },
+    {
+      "id": "planet:3:2",
+      "correct": 1,
+      "correctAnswer": "Nein, nur unsere Ansicht ändert sich"
+    },
+    {
+      "id": "planet:4:0",
+      "correct": 2,
+      "correctAnswer": "Drehung um die Erdachse"
+    },
+    {
+      "id": "planet:4:1",
+      "correct": 1,
+      "correctAnswer": "Achsdrehung:Tag; Sonnenumlauf:Jahr"
+    },
+    {
+      "id": "planet:4:2",
+      "correct": 0,
+      "correctAnswer": "Ein Sonnenumlauf dauert ungefähr 365¼ Tage"
+    },
+    {
+      "id": "inside:0:0",
+      "correct": 0,
+      "correctAnswer": "Die Erdkruste"
+    },
+    {
+      "id": "inside:0:1",
+      "correct": 2,
+      "correctAnswer": "Damit man sie erkennen kann"
+    },
+    {
+      "id": "inside:0:2",
+      "correct": 1,
+      "correctAnswer": "Unter anderem aus Erdbebenwellen"
+    },
+    {
+      "id": "inside:1:0",
+      "correct": 2,
+      "correctAnswer": "Der äußere Kern"
+    },
+    {
+      "id": "inside:1:1",
+      "correct": 1,
+      "correctAnswer": "Gestein bleibt überwiegend fest und verformt sich langsam"
+    },
+    {
+      "id": "inside:1:2",
+      "correct": 0,
+      "correctAnswer": "Die wirkliche Dauer und Zusammensetzung des Mantels"
+    },
+    {
+      "id": "inside:2:0",
+      "correct": 1,
+      "correctAnswer": "Kruste und oberster fester Mantelteil"
+    },
+    {
+      "id": "inside:2:1",
+      "correct": 0,
+      "correctAnswer": "Ja, beide können auf einer Platte liegen"
+    },
+    {
+      "id": "inside:2:2",
+      "correct": 2,
+      "correctAnswer": "Die Bewegung ist zeitlich stark beschleunigt"
+    },
+    {
+      "id": "inside:3:0",
+      "correct": 0,
+      "correctAnswer": "Platten stoßen zusammen"
+    },
+    {
+      "id": "inside:3:1",
+      "correct": 2,
+      "correctAnswer": "Bei allen drei Bewegungsarten"
+    },
+    {
+      "id": "inside:3:2",
+      "correct": 1,
+      "correctAnswer": "Echte Gebirgsbildung dauert sehr viel länger"
+    },
+    {
+      "id": "inside:4:0",
+      "correct": 2,
+      "correctAnswer": "Lava"
+    },
+    {
+      "id": "inside:4:1",
+      "correct": 1,
+      "correctAnswer": "Der Ort unter oder an der Oberfläche"
+    },
+    {
+      "id": "inside:4:2",
+      "correct": 0,
+      "correctAnswer": "Nein, etwa Hotspots können anders liegen"
+    },
+    {
+      "id": "water:0:0",
+      "correct": 1,
+      "correctAnswer": "Wasserdampf"
+    },
+    {
+      "id": "water:0:1",
+      "correct": 0,
+      "correctAnswer": "Wir sehen viele kleine Tröpfchen"
+    },
+    {
+      "id": "water:0:2",
+      "correct": 2,
+      "correctAnswer": "Wasser kann auch ohne Kochen verdunsten"
+    },
+    {
+      "id": "water:1:0",
+      "correct": 0,
+      "correctAnswer": "Verdunstung"
+    },
+    {
+      "id": "water:1:1",
+      "correct": 2,
+      "correctAnswer": "Warme, bewegte, trockene Luft"
+    },
+    {
+      "id": "water:1:2",
+      "correct": 1,
+      "correctAnswer": "Nein, zwei Bedingungen wurden verändert"
+    },
+    {
+      "id": "water:2:0",
+      "correct": 2,
+      "correctAnswer": "Wasserdampf wird zu Tröpfchen"
+    },
+    {
+      "id": "water:2:1",
+      "correct": 1,
+      "correctAnswer": "Viele Tröpfchen oder Eiskristalle"
+    },
+    {
+      "id": "water:2:2",
+      "correct": 0,
+      "correctAnswer": "Wasserdampf der Raumluft kondensiert"
+    },
+    {
+      "id": "water:3:0",
+      "correct": 1,
+      "correctAnswer": "Versickern"
+    },
+    {
+      "id": "water:3:1",
+      "correct": 0,
+      "correctAnswer": "Wasser fließt oberirdisch oder versickert"
+    },
+    {
+      "id": "water:3:2",
+      "correct": 2,
+      "correctAnswer": "Nein, ein Tropfen kann an vielen Stellen starten"
+    },
+    {
+      "id": "water:4:0",
+      "correct": 0,
+      "correctAnswer": "Nein"
+    },
+    {
+      "id": "water:4:1",
+      "correct": 2,
+      "correctAnswer": "Viel Wasser ist salzig oder in Eis und Boden gespeichert"
+    },
+    {
+      "id": "water:4:2",
+      "correct": 1,
+      "correctAnswer": "Nein, auch Unsichtbares muss berücksichtigt werden"
+    },
+    {
+      "id": "weather:0:0",
+      "correct": 2,
+      "correctAnswer": "Ein Thermometer"
+    },
+    {
+      "id": "weather:0:1",
+      "correct": 1,
+      "correctAnswer": "Temperatur, Wind und Niederschlag heute"
+    },
+    {
+      "id": "weather:0:2",
+      "correct": 0,
+      "correctAnswer": "An diesem Messort wurde an diesem Tag kein Regen gesammelt"
+    },
+    {
+      "id": "weather:1:0",
+      "correct": 1,
+      "correctAnswer": "Luft in Bewegung"
+    },
+    {
+      "id": "weather:1:1",
+      "correct": 0,
+      "correctAnswer": "Unterschiede in Erwärmung und Luftdruck"
+    },
+    {
+      "id": "weather:1:2",
+      "correct": 2,
+      "correctAnswer": "Nein, dafür braucht man weitere Messungen"
+    },
+    {
+      "id": "weather:2:0",
+      "correct": 0,
+      "correctAnswer": "Eine Wolke am Boden"
+    },
+    {
+      "id": "weather:2:1",
+      "correct": 2,
+      "correctAnswer": "Tröpfchen oder Kristalle sind nicht immer ausreichend gewachsen"
+    },
+    {
+      "id": "weather:2:2",
+      "correct": 1,
+      "correctAnswer": "Nein, weitere Informationen sind nötig"
+    },
+    {
+      "id": "weather:3:0",
+      "correct": 2,
+      "correctAnswer": "Heute regnet es an unserem Messort"
+    },
+    {
+      "id": "weather:3:1",
+      "correct": 1,
+      "correctAnswer": "Viele vergleichbare Messungen über lange Zeit"
+    },
+    {
+      "id": "weather:3:2",
+      "correct": 0,
+      "correctAnswer": "Nein, Einzelwetter und langfristiger Verlauf sind verschieden"
+    },
+    {
+      "id": "weather:4:0",
+      "correct": 1,
+      "correctAnswer": "Aus Messdaten und Modellen"
+    },
+    {
+      "id": "weather:4:1",
+      "correct": 0,
+      "correctAnswer": "Die weiter entfernte Zukunft"
+    },
+    {
+      "id": "weather:4:2",
+      "correct": 2,
+      "correctAnswer": "Nein, neue Daten können die Einschätzung verbessern"
+    },
+    {
+      "id": "seasons:0:0",
+      "correct": 2,
+      "correctAnswer": "Eine gedachte Linie der Drehung"
+    },
+    {
+      "id": "seasons:0:1",
+      "correct": 1,
+      "correctAnswer": "In dieselbe Richtung im Raum"
+    },
+    {
+      "id": "seasons:0:2",
+      "correct": 0,
+      "correctAnswer": "Nein, dafür brauchst du den angegebenen Maßstab"
+    },
+    {
+      "id": "seasons:1:0",
+      "correct": 1,
+      "correctAnswer": "Sommer"
+    },
+    {
+      "id": "seasons:1:1",
+      "correct": 0,
+      "correctAnswer": "Höherer Sonnenstand und längere Tage"
+    },
+    {
+      "id": "seasons:1:2",
+      "correct": 2,
+      "correctAnswer": "Nein, dort ist die andere Jahreszeit; Wetter zusätzlich prüfen"
+    },
+    {
+      "id": "seasons:2:0",
+      "correct": 0,
+      "correctAnswer": "Kürzer"
+    },
+    {
+      "id": "seasons:2:1",
+      "correct": 2,
+      "correctAnswer": "Niedrigerer Sonnenstand und kürzere Tage"
+    },
+    {
+      "id": "seasons:2:2",
+      "correct": 1,
+      "correctAnswer": "Nein, beide sind fast gleich weit von der Sonne entfernt"
+    },
+    {
+      "id": "seasons:3:0",
+      "correct": 2,
+      "correctAnswer": "Um März und September"
+    },
+    {
+      "id": "seasons:3:1",
+      "correct": 1,
+      "correctAnswer": "Herbst"
+    },
+    {
+      "id": "seasons:3:2",
+      "correct": 0,
+      "correctAnswer": "Nein, passende örtliche Jahresmuster können anders aussehen"
+    },
+    {
+      "id": "seasons:4:0",
+      "correct": 1,
+      "correctAnswer": "Drehung um die eigene Achse"
+    },
+    {
+      "id": "seasons:4:1",
+      "correct": 0,
+      "correctAnswer": "Sonnenumlauf mit geneigter Achse"
+    },
+    {
+      "id": "seasons:4:2",
+      "correct": 2,
+      "correctAnswer": "Nein, Wetter und Jahreszeit sind verschieden"
+    },
+    {
+      "id": "ocean:0:0",
+      "correct": 1,
+      "correctAnswer": "Der Pazifik"
+    },
+    {
+      "id": "ocean:0:1",
+      "correct": 0,
+      "correctAnswer": "Das Wasser bleibt verbunden"
+    },
+    {
+      "id": "ocean:0:2",
+      "correct": 2,
+      "correctAnswer": "Nein, Farben helfen beim Benennen"
+    },
+    {
+      "id": "ocean:1:0",
+      "correct": 0,
+      "correctAnswer": "Das Salz"
+    },
+    {
+      "id": "ocean:1:1",
+      "correct": 2,
+      "correctAnswer": "Unter anderem mit Flüssen aus Gestein"
+    },
+    {
+      "id": "ocean:1:2",
+      "correct": 1,
+      "correctAnswer": "Nein, die Mengen können viel geringer sein"
+    },
+    {
+      "id": "ocean:2:0",
+      "correct": 2,
+      "correctAnswer": "Tiere"
+    },
+    {
+      "id": "ocean:2:1",
+      "correct": 1,
+      "correctAnswer": "Ihre mit ihnen lebenden Algen nutzen Sonnenlicht"
+    },
+    {
+      "id": "ocean:2:2",
+      "correct": 0,
+      "correctAnswer": "Nein, die Erklärung spricht über viele riffbildende Korallen"
+    },
+    {
+      "id": "ocean:3:0",
+      "correct": 1,
+      "correctAnswer": "Er nimmt zu"
+    },
+    {
+      "id": "ocean:3:1",
+      "correct": 0,
+      "correctAnswer": "Wenig Sonnenlicht und hoher Druck"
+    },
+    {
+      "id": "ocean:3:2",
+      "correct": 2,
+      "correctAnswer": "Nein, manche Lebewesen erzeugen eigenes Licht"
+    },
+    {
+      "id": "ocean:4:0",
+      "correct": 0,
+      "correctAnswer": "Die Schwerkraft von Mond und Sonne"
+    },
+    {
+      "id": "ocean:4:1",
+      "correct": 2,
+      "correctAnswer": "Wärme und Nährstoffe"
+    },
+    {
+      "id": "ocean:4:2",
+      "correct": 1,
+      "correctAnswer": "Nein, Wellenbewegung und Teilchenweg sind verschieden"
+    },
+    {
+      "id": "nature:0:0",
+      "correct": 0,
+      "correctAnswer": "Nahrung, Wasser und Schutz"
+    },
+    {
+      "id": "nature:0:1",
+      "correct": 2,
+      "correctAnswer": "Sie sind an unterschiedliche Umgebungen angepasst"
+    },
+    {
+      "id": "nature:0:2",
+      "correct": 1,
+      "correctAnswer": "Ja, geeignete Bedingungen sind entscheidend"
+    },
+    {
+      "id": "nature:1:0",
+      "correct": 2,
+      "correctAnswer": "Gräser, einzelne Bäume und Regen- und Trockenzeiten"
+    },
+    {
+      "id": "nature:1:1",
+      "correct": 1,
+      "correctAnswer": "Ihre Niederschlagsbedingungen unterscheiden sich"
+    },
+    {
+      "id": "nature:1:2",
+      "correct": 0,
+      "correctAnswer": "Auch kühlere Regenwälder als Gegenbeispiele betrachten"
+    },
+    {
+      "id": "nature:2:0",
+      "correct": 1,
+      "correctAnswer": "Sehr wenig Niederschlag"
+    },
+    {
+      "id": "nature:2:1",
+      "correct": 0,
+      "correctAnswer": "Dort fällt sehr wenig Niederschlag"
+    },
+    {
+      "id": "nature:2:2",
+      "correct": 2,
+      "correctAnswer": "Nein, im Höcker wird Fett gespeichert"
+    },
+    {
+      "id": "nature:3:0",
+      "correct": 0,
+      "correctAnswer": "In der Arktis"
+    },
+    {
+      "id": "nature:3:1",
+      "correct": 2,
+      "correctAnswer": "Nordpol:Meer unter Eis; Südpol:Land unter Eis"
+    },
+    {
+      "id": "nature:3:2",
+      "correct": 1,
+      "correctAnswer": "Nein, nicht alle Pinguine leben im Eis"
+    },
+    {
+      "id": "nature:4:0",
+      "correct": 2,
+      "correctAnswer": "Sonnenlicht"
+    },
+    {
+      "id": "nature:4:1",
+      "correct": 1,
+      "correctAnswer": "Sie bauen abgestorbene Reste ab"
+    },
+    {
+      "id": "nature:4:2",
+      "correct": 0,
+      "correctAnswer": "Ja, weil Beziehungen im Netz verändert werden"
+    },
+    {
+      "id": "protect:0:0",
+      "correct": 2,
+      "correctAnswer": "Bestimmte Gase der Atmosphäre"
+    },
+    {
+      "id": "protect:0:1",
+      "correct": 1,
+      "correctAnswer": "Im Durchschnitt deutlich kälter"
+    },
+    {
+      "id": "protect:0:2",
+      "correct": 0,
+      "correctAnswer": "Dass Gase genau wie Stofffasern funktionieren"
+    },
+    {
+      "id": "protect:1:0",
+      "correct": 1,
+      "correctAnswer": "Kohlendioxid"
+    },
+    {
+      "id": "protect:1:1",
+      "correct": 0,
+      "correctAnswer": "Es verstärkt den Treibhauseffekt"
+    },
+    {
+      "id": "protect:1:2",
+      "correct": 2,
+      "correctAnswer": "Nein, Erwachsene, Unternehmen und Länder müssen gemeinsam handeln"
+    },
+    {
+      "id": "protect:2:0",
+      "correct": 0,
+      "correctAnswer": "Dinge länger nutzen oder reparieren"
+    },
+    {
+      "id": "protect:2:1",
+      "correct": 2,
+      "correctAnswer": "Der Gegenstand kann weiter genutzt werden"
+    },
+    {
+      "id": "protect:2:2",
+      "correct": 1,
+      "correctAnswer": "Eine zuständige erwachsene Person fragen"
+    },
+    {
+      "id": "protect:3:0",
+      "correct": 2,
+      "correctAnswer": "Abstand halten"
+    },
+    {
+      "id": "protect:3:1",
+      "correct": 1,
+      "correctAnswer": "Nahrung für bestimmte Insekten"
+    },
+    {
+      "id": "protect:3:2",
+      "correct": 0,
+      "correctAnswer": "Nein, in Ruhe lassen ist oft die bessere Hilfe"
+    },
+    {
+      "id": "protect:4:0",
+      "correct": 1,
+      "correctAnswer": "Fragen stellen und Möglichkeiten sammeln"
+    },
+    {
+      "id": "protect:4:1",
+      "correct": 0,
+      "correctAnswer": "Möglichkeiten und Bedürfnisse unterscheiden sich"
+    },
+    {
+      "id": "protect:4:2",
+      "correct": 2,
+      "correctAnswer": "Umweltidee und Sicherheit gemeinsam prüfen"
+    },
+    {
+      "id": "continents:0:0",
+      "correct": 2,
+      "correctAnswer": "Afrika:Kontinent; Kenia:Land"
+    },
+    {
+      "id": "continents:0:1",
+      "correct": 1,
+      "correctAnswer": "Ja"
+    },
+    {
+      "id": "continents:0:2",
+      "correct": 0,
+      "correctAnswer": "Nicht automatisch; erst das Einteilungsmodell prüfen"
+    },
+    {
+      "id": "continents:1:0",
+      "correct": 1,
+      "correctAnswer": "Eurasien"
+    },
+    {
+      "id": "continents:1:1",
+      "correct": 0,
+      "correctAnswer": "Die Einteilung folgt auch Vereinbarungen"
+    },
+    {
+      "id": "continents:1:2",
+      "correct": 2,
+      "correctAnswer": "Nein, ein Land kann in beiden Regionen liegen"
+    },
+    {
+      "id": "continents:2:0",
+      "correct": 0,
+      "correctAnswer": "Eine schmale Landbrücke"
+    },
+    {
+      "id": "continents:2:1",
+      "correct": 2,
+      "correctAnswer": "Ein Teil liegt nördlich, ein Teil südlich"
+    },
+    {
+      "id": "continents:2:2",
+      "correct": 1,
+      "correctAnswer": "Vergleiche verschiedener Landschaften und Lebensräume"
+    },
+    {
+      "id": "continents:3:0",
+      "correct": 2,
+      "correctAnswer": "Am Südpol"
+    },
+    {
+      "id": "continents:3:1",
+      "correct": 1,
+      "correctAnswer": "Ozeanien ist die größere Weltregion mit vielen Inseln"
+    },
+    {
+      "id": "continents:3:2",
+      "correct": 0,
+      "correctAnswer": "Nein, Ort und Untergrund mitprüfen"
+    },
+    {
+      "id": "continents:4:0",
+      "correct": 1,
+      "correctAnswer": "Eine Kugeloberfläche wird auf eine Fläche übertragen"
+    },
+    {
+      "id": "continents:4:1",
+      "correct": 0,
+      "correctAnswer": "Sie wirken im Verhältnis besonders groß"
+    },
+    {
+      "id": "continents:4:2",
+      "correct": 2,
+      "correctAnswer": "Geeignete Projektion oder tatsächliche Flächenwerte nutzen"
+    },
+    {
+      "id": "countries:0:0",
+      "correct": 0,
+      "correctAnswer": "Nein"
+    },
+    {
+      "id": "countries:0:1",
+      "correct": 2,
+      "correctAnswer": "Verschiedene Orte und Perspektiven vergleichen"
+    },
+    {
+      "id": "countries:0:2",
+      "correct": 1,
+      "correctAnswer": "Nur mit weiteren passenden Belegen, nicht aus dem Foto allein"
+    },
+    {
+      "id": "countries:1:0",
+      "correct": 2,
+      "correctAnswer": "Berlin"
+    },
+    {
+      "id": "countries:1:1",
+      "correct": 1,
+      "correctAnswer": "Nein"
+    },
+    {
+      "id": "countries:1:2",
+      "correct": 0,
+      "correctAnswer": "Nein, Australiens Hauptstadt ist Canberra"
+    },
+    {
+      "id": "countries:2:0",
+      "correct": 1,
+      "correctAnswer": "Ein Zeichen für ein Land oder Gebiet"
+    },
+    {
+      "id": "countries:2:1",
+      "correct": 0,
+      "correctAnswer": "Manche Flaggen verwenden ähnliche Farben"
+    },
+    {
+      "id": "countries:2:2",
+      "correct": 2,
+      "correctAnswer": "Nein, ein Symbol beweist keine einheitliche Lebensweise"
+    },
+    {
+      "id": "countries:3:0",
+      "correct": 0,
+      "correctAnswer": "Polen"
+    },
+    {
+      "id": "countries:3:1",
+      "correct": 2,
+      "correctAnswer": "Nein, Flüsse können Grenzen überqueren"
+    },
+    {
+      "id": "countries:3:2",
+      "correct": 1,
+      "correctAnswer": "Nein, diese beiden Begriffe sind verschieden"
+    },
+    {
+      "id": "countries:4:0",
+      "correct": 2,
+      "correctAnswer": "Wie viele Menschen dort leben"
+    },
+    {
+      "id": "countries:4:1",
+      "correct": 1,
+      "correctAnswer": "Nein"
+    },
+    {
+      "id": "countries:4:2",
+      "correct": 0,
+      "correctAnswer": "Datenjahr und möglichst passende Messweise prüfen"
+    },
+    {
+      "id": "volcanoes:0:0",
+      "correct": 0,
+      "correctAnswer": "Magma"
+    },
+    {
+      "id": "volcanoes:0:1",
+      "correct": 2,
+      "correctAnswer": "Schmelze mit Kristallen und gelösten Gasen"
+    },
+    {
+      "id": "volcanoes:0:2",
+      "correct": 1,
+      "correctAnswer": "Nein, der Mantel ist überwiegend fest"
+    },
+    {
+      "id": "volcanoes:1:0",
+      "correct": 2,
+      "correctAnswer": "Durch passende Risse und Schlote"
+    },
+    {
+      "id": "volcanoes:1:1",
+      "correct": 1,
+      "correctAnswer": "Schmelzbereiche können komplexe Netzwerke sein"
+    },
+    {
+      "id": "volcanoes:1:2",
+      "correct": 0,
+      "correctAnswer": "Nein, es ist ein vereinfachter möglicher Aufbau"
+    },
+    {
+      "id": "volcanoes:2:0",
+      "correct": 1,
+      "correctAnswer": "Kleinen Gesteins- und Glasstücken"
+    },
+    {
+      "id": "volcanoes:2:1",
+      "correct": 0,
+      "correctAnswer": "Zähes, gasreiches Magma"
+    },
+    {
+      "id": "volcanoes:2:2",
+      "correct": 2,
+      "correctAnswer": "Nein, das Modell erklärt nur begrenzte Zusammenhänge"
+    },
+    {
+      "id": "volcanoes:3:0",
+      "correct": 0,
+      "correctAnswer": "Breit und eher flach"
+    },
+    {
+      "id": "volcanoes:3:1",
+      "correct": 2,
+      "correctAnswer": "Mehrere Ausbruchsprozesse hinterlassen verschiedene Materialien"
+    },
+    {
+      "id": "volcanoes:3:2",
+      "correct": 1,
+      "correctAnswer": "Nein, weitere Informationen und Messungen sind nötig"
+    },
+    {
+      "id": "volcanoes:4:0",
+      "correct": 2,
+      "correctAnswer": "Nein"
+    },
+    {
+      "id": "volcanoes:4:1",
+      "correct": 1,
+      "correctAnswer": "Bodenbewegung, Gase und kleine Beben"
+    },
+    {
+      "id": "volcanoes:4:2",
+      "correct": 0,
+      "correctAnswer": "Keine echte Gefahrenentscheidung daraus ableiten"
+    },
+    {
+      "id": "quakes:0:0",
+      "correct": 0,
+      "correctAnswer": "Plötzliches Rutschen an einer Gesteinsstörung"
+    },
+    {
+      "id": "quakes:0:1",
+      "correct": 2,
+      "correctAnswer": "Gesteinsflächen können sich verhaken"
+    },
+    {
+      "id": "quakes:0:2",
+      "correct": 1,
+      "correctAnswer": "Nein, es gibt auch Beben abseits davon"
+    },
+    {
+      "id": "quakes:1:0",
+      "correct": 2,
+      "correctAnswer": "Der Ort, an dem die Bewegung beginnt"
+    },
+    {
+      "id": "quakes:1:1",
+      "correct": 1,
+      "correctAnswer": "Direkt darüber an der Oberfläche"
+    },
+    {
+      "id": "quakes:1:2",
+      "correct": 0,
+      "correctAnswer": "Nein, dafür fehlt die Tiefeninformation"
+    },
+    {
+      "id": "quakes:2:0",
+      "correct": 1,
+      "correctAnswer": "Ein Seismometer"
+    },
+    {
+      "id": "quakes:2:1",
+      "correct": 0,
+      "correctAnswer": "Wellenarten und Wege unterscheiden sich"
+    },
+    {
+      "id": "quakes:2:2",
+      "correct": 2,
+      "correctAnswer": "Hinweise aus Veränderungen und Laufzeiten"
+    },
+    {
+      "id": "quakes:3:0",
+      "correct": 0,
+      "correctAnswer": "Die Größe des Bebens"
+    },
+    {
+      "id": "quakes:3:1",
+      "correct": 2,
+      "correctAnswer": "Abstand, Tiefe, Untergrund und Gebäude spielen mit"
+    },
+    {
+      "id": "quakes:3:2",
+      "correct": 1,
+      "correctAnswer": "Nein, örtliche Bedingungen bleiben wichtig"
+    },
+    {
+      "id": "quakes:4:0",
+      "correct": 2,
+      "correctAnswer": "Plötzliche Hebung oder Senkung des Meeresbodens"
+    },
+    {
+      "id": "quakes:4:1",
+      "correct": 1,
+      "correctAnswer": "Nicht jedes bewegt den Meeresboden dafür ausreichend"
+    },
+    {
+      "id": "quakes:4:2",
+      "correct": 0,
+      "correctAnswer": "Nein, zuständige Warninformationen bleiben nötig"
+    },
+    {
+      "id": "moon:0:0",
+      "correct": 2,
+      "correctAnswer": "Von reflektiertem Sonnenlicht"
+    },
+    {
+      "id": "moon:0:1",
+      "correct": 1,
+      "correctAnswer": "Ungefähr eine Hälfte"
+    },
+    {
+      "id": "moon:0:2",
+      "correct": 0,
+      "correctAnswer": "Nein, reflektiertes Licht kann auch tags sichtbar sein"
+    },
+    {
+      "id": "moon:1:0",
+      "correct": 1,
+      "correctAnswer": "Nein, wir sehen verschieden viel der beleuchteten Hälfte"
+    },
+    {
+      "id": "moon:1:1",
+      "correct": 0,
+      "correctAnswer": "Unsere Ansicht der beleuchteten Hälfte unterscheidet sich"
+    },
+    {
+      "id": "moon:1:2",
+      "correct": 2,
+      "correctAnswer": "Nein, dafür fehlen passende Maßstäbe"
+    },
+    {
+      "id": "moon:2:0",
+      "correct": 0,
+      "correctAnswer": "Ungefähr eine Hälfte"
+    },
+    {
+      "id": "moon:2:1",
+      "correct": 2,
+      "correctAnswer": "Etwa ein Viertel des Phasenzyklus ist vergangen"
+    },
+    {
+      "id": "moon:2:2",
+      "correct": 1,
+      "correctAnswer": "Nein, sie entstehen durch unsere Ansicht der beleuchteten Hälfte"
+    },
+    {
+      "id": "moon:3:0",
+      "correct": 2,
+      "correctAnswer": "Einschläge"
+    },
+    {
+      "id": "moon:3:1",
+      "correct": 1,
+      "correctAnswer": "Die Gewichtskraft, nicht seine Masse"
+    },
+    {
+      "id": "moon:3:2",
+      "correct": 0,
+      "correctAnswer": "Nein, dort fehlt eine dichte atembare Atmosphäre"
+    },
+    {
+      "id": "moon:4:0",
+      "correct": 1,
+      "correctAnswer": "1969"
+    },
+    {
+      "id": "moon:4:1",
+      "correct": 0,
+      "correctAnswer": "Er blieb im Raumschiff in der Mondumlaufbahn"
+    },
+    {
+      "id": "moon:4:2",
+      "correct": 2,
+      "correctAnswer": "Beleuchtungsansichten, aber keine vollständige Landung"
+    },
+    {
+      "id": "navigation:0:0",
+      "correct": 2,
+      "correctAnswer": "Null Grad"
+    },
+    {
+      "id": "navigation:0:1",
+      "correct": 1,
+      "correctAnswer": "Nord- und Südhalbkugel"
+    },
+    {
+      "id": "navigation:0:2",
+      "correct": 0,
+      "correctAnswer": "Nein, örtliche Bedingungen unterscheiden sich"
+    },
+    {
+      "id": "navigation:1:0",
+      "correct": 1,
+      "correctAnswer": "Wie weit nördlich oder südlich des Äquators ein Ort liegt"
+    },
+    {
+      "id": "navigation:1:1",
+      "correct": 0,
+      "correctAnswer": "Sie beschreiben zwei verschiedene Lageangaben"
+    },
+    {
+      "id": "navigation:1:2",
+      "correct": 2,
+      "correctAnswer": "Nein, ihre Länge kann verschieden sein"
+    },
+    {
+      "id": "navigation:2:0",
+      "correct": 0,
+      "correctAnswer": "Die vereinbarte Linie für null Grad Länge"
+    },
+    {
+      "id": "navigation:2:1",
+      "correct": 2,
+      "correctAnswer": "Sein Anfang wurde vereinbart"
+    },
+    {
+      "id": "navigation:2:2",
+      "correct": 1,
+      "correctAnswer": "Das Bezugssystem mitlesen"
+    },
+    {
+      "id": "navigation:3:0",
+      "correct": 2,
+      "correctAnswer": "23,4 Grad nördlich und südlich des Äquators"
+    },
+    {
+      "id": "navigation:3:1",
+      "correct": 1,
+      "correctAnswer": "Mit der Neigung der Erdachse"
+    },
+    {
+      "id": "navigation:3:2",
+      "correct": 0,
+      "correctAnswer": "Nein, Deutschland liegt außerhalb der Tropen"
+    },
+    {
+      "id": "navigation:4:0",
+      "correct": 1,
+      "correctAnswer": "Die Erde dreht sich"
+    },
+    {
+      "id": "navigation:4:1",
+      "correct": 0,
+      "correctAnswer": "Menschen berücksichtigen vereinbarte Gebiete"
+    },
+    {
+      "id": "navigation:4:2",
+      "correct": 2,
+      "correctAnswer": "Nein, Sommerzeitregeln können sie verändern"
+    },
+    {
+      "id": "landscapes:0:0",
+      "correct": 2,
+      "correctAnswer": "Es wird gefaltet und gehoben"
+    },
+    {
+      "id": "landscapes:0:1",
+      "correct": 1,
+      "correctAnswer": "Nein, Berge entstehen auf verschiedene Weise"
+    },
+    {
+      "id": "landscapes:0:2",
+      "correct": 0,
+      "correctAnswer": "Nicht ohne dieselbe Messregel"
+    },
+    {
+      "id": "landscapes:1:0",
+      "correct": 1,
+      "correctAnswer": "Sand, Steine und gelöste Stoffe"
+    },
+    {
+      "id": "landscapes:1:1",
+      "correct": 0,
+      "correctAnswer": "Er kann Material abtragen und transportieren"
+    },
+    {
+      "id": "landscapes:1:2",
+      "correct": 2,
+      "correctAnswer": "Nein, Länge und Wassermenge sind verschiedene Größen"
+    },
+    {
+      "id": "landscapes:2:0",
+      "correct": 0,
+      "correctAnswer": "In einer Vertiefung im Land"
+    },
+    {
+      "id": "landscapes:2:1",
+      "correct": 2,
+      "correctAnswer": "Nein"
+    },
+    {
+      "id": "landscapes:2:2",
+      "correct": 1,
+      "correctAnswer": "Nein, Lage und Verbindungen zeigen ein Binnengewässer"
+    },
+    {
+      "id": "landscapes:3:0",
+      "correct": 2,
+      "correctAnswer": "Geringer Niederschlag"
+    },
+    {
+      "id": "landscapes:3:1",
+      "correct": 1,
+      "correctAnswer": "Beide enthalten sehr trockene Regionen"
+    },
+    {
+      "id": "landscapes:3:2",
+      "correct": 0,
+      "correctAnswer": "Nein, erst den Niederschlag untersuchen"
+    },
+    {
+      "id": "landscapes:4:0",
+      "correct": 1,
+      "correctAnswer": "Langsam fließendes Eis"
+    },
+    {
+      "id": "landscapes:4:1",
+      "correct": 0,
+      "correctAnswer": "Er kann Gestein abschleifen und Täler formen"
+    },
+    {
+      "id": "landscapes:4:2",
+      "correct": 2,
+      "correctAnswer": "Ja, etwa in hohen Gebirgen"
+    },
+    {
+      "id": "climate:0:0",
+      "correct": 2,
+      "correctAnswer": "Typische Bedingungen über viele Jahre"
+    },
+    {
+      "id": "climate:0:1",
+      "correct": 1,
+      "correctAnswer": "Lange vergleichbare Messreihen"
+    },
+    {
+      "id": "climate:0:2",
+      "correct": 0,
+      "correctAnswer": "Nein, Wetter kann um typische Bedingungen schwanken"
+    },
+    {
+      "id": "climate:1:0",
+      "correct": 1,
+      "correctAnswer": "Flacher"
+    },
+    {
+      "id": "climate:1:1",
+      "correct": 0,
+      "correctAnswer": "Es verteilt sich auf eine größere Fläche"
+    },
+    {
+      "id": "climate:1:2",
+      "correct": 2,
+      "correctAnswer": "Nein, Höhe, Meer und weitere Einflüsse zählen"
+    },
+    {
+      "id": "climate:2:0",
+      "correct": 0,
+      "correctAnswer": "Warm und sehr feucht"
+    },
+    {
+      "id": "climate:2:1",
+      "correct": 2,
+      "correctAnswer": "Den Wechsel von Regen- und Trockenzeiten vergleichen"
+    },
+    {
+      "id": "climate:2:2",
+      "correct": 1,
+      "correctAnswer": "Nein, die Farbe zeigt einen groben Gürtel"
+    },
+    {
+      "id": "climate:3:0",
+      "correct": 2,
+      "correctAnswer": "Moose, Flechten und niedrige Sträucher"
+    },
+    {
+      "id": "climate:3:1",
+      "correct": 1,
+      "correctAnswer": "Die Wachstumsbedingungen sind begrenzt"
+    },
+    {
+      "id": "climate:3:2",
+      "correct": 0,
+      "correctAnswer": "Nein, Wasser, Boden und Nutzung können verschieden sein"
+    },
+    {
+      "id": "climate:4:0",
+      "correct": 1,
+      "correctAnswer": "Nahrung, Wasser und Schutz"
+    },
+    {
+      "id": "climate:4:1",
+      "correct": 0,
+      "correctAnswer": "Bedürfnisse und Beziehungen können betroffen sein"
+    },
+    {
+      "id": "climate:4:2",
+      "correct": 2,
+      "correctAnswer": "Nein, mögliche Vorteile hängen vom Zusammenhang ab"
+    }
+  ]
+}
