@@ -88,7 +88,7 @@ export async function prepareOfflineJourneys(p){await open(p,'water',2);const in
 // Run the changed learning controls first, also in the existing real-engine path.
 // This is a targeted part of the existing journey suite, never a replacement.
 export async function journeySupportView(p,{widths,shots,engine}){
- const started=performance.now(),hints=[],diagrams=[],wasLarge=await p.locator('.earth-app').evaluate(e=>e.classList.contains('large-reading'));
+ const initialRoute=await p.evaluate(()=>location.hash),started=performance.now(),hints=[],diagrams=[],wasLarge=await p.locator('.earth-app').evaluate(e=>e.classList.contains('large-reading'));
  try{
   await p.setViewportSize({width:390,height:844});
   for(const c of data.chapters){
@@ -146,6 +146,6 @@ export async function journeySupportView(p,{widths,shots,engine}){
   assert.equal(hints.length,240);assert.equal(new Set(hints).size,240);
   assert.equal(diagrams.length,64*widths.length);assert.equal(new Set(diagrams.map(d=>d.id+':'+d.width)).size,diagrams.length);
   return {hints,diagrams,widths,seconds:(performance.now()-started)/1000};
- }catch(error){await p.screenshot({path:path.join(shots,'journey-engine-'+engine+'-support'+'-failure.png'),fullPage:true}).catch(()=>{});throw error;}finally{if(!wasLarge)await p.evaluate(()=>document.querySelector('.earth-app')?.classList.remove('large-reading'));await p.setViewportSize({width:390,height:844});}
+ }catch(error){await p.screenshot({path:path.join(shots,'journey-engine-'+engine+'-support'+'-failure.png'),fullPage:true}).catch(()=>{});throw error;}finally{if(!wasLarge)await p.evaluate(()=>document.querySelector('.earth-app')?.classList.remove('large-reading'));await p.setViewportSize({width:390,height:844});await p.evaluate(hash=>location.hash=hash,initialRoute);if(initialRoute==='#journeys')await p.locator('.journey-filters input').waitFor();}
 }
 export async function offlineJourneys(p,report){await open(p,'water',2);await p.getByText(JOURNEYS.find(j=>j.id==='water').steps[2].whyItMatters,{exact:true}).waitFor();await reveal(p.locator('.journey-inquiry'),'Dein Forschermerkzettel · freiwillig');assert.equal(await p.locator('.journey-inquiry textarea').inputValue(),'Offline-Sicherung: Wasser kann seinen Zustand ändern.');assert.equal(await p.locator('.journey-levels button').nth(2).getAttribute('aria-pressed'),'true');for(const j of JOURNEYS)for(let i=0;i<5;i++){await open(p,j.id,i);await p.getByText(j.steps[i].whyItMatters,{exact:true}).waitFor();await reveal(p,'Noch genauer · etwa 12–14 Jahre');await p.getByText(j.steps[i].deeper,{exact:true}).waitFor();assert.equal(await p.locator('.journey-task .quiz-answer').count(),3);}await p.evaluate(()=>location.hash='world/topic/science-water-cycle');await p.locator('.journey-topic-links').waitFor();const disclosure=p.locator('details[data-history-disclosure="journey-links-science-water-cycle-water"]');await disclosure.locator('summary').click();await p.locator('.journey-topic-links a[href="#journeys/water/5"]').click();await p.locator('[data-chapter-inquiry="water:4"]').waitFor();report.checks.push('Cold restart without server: complete reciprocal chapter links and all 16 journey inquiries and private notebook/level restore from the same schema-3 pass');}
