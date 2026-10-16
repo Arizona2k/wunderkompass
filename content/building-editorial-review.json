@@ -569,7 +569,7 @@
     }
   ],
   "preparedManuscripts": [],
-  "UIAcceptance": "All16 x7 widths/search/back/native200 passed preliminary 95.065s. Personal image review found Horyu stranded final letter despite passed geometry; actual negative browser regression reproduced. New corrected snapshot requires full target/root/CI acceptance; no independent approval.",
+  "UIAcceptance": "Preliminary16x7 viewport + search/Back + actual native200/large-text passed95.065s, after actual Horyu wrap correction114.946s, with retained shuffled choices/model state/favorites96.058s. Personal review of all8new plans at320/1440 additionally found inherited orange stroke overpainting Horyu marker3; marker stroke isolation and actual browser assertion added. Final current targeted/complete root/CI still required. Independent human/child/device acceptance remains false.",
   "modelReview": {
     "kind": "three actual bounded comparisons",
     "models": [
