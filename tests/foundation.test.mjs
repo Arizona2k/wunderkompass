@@ -5,6 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import {measureBuild,violations,observedTrends} from '../scripts/performance-budget.mjs';
 import {selectTests,changeImpact} from '../scripts/test-selection.mjs';
+import {REQUIRED_SUITES} from '../scripts/quality-evidence.mjs';
 import {learningFingerprint} from '../build/learning-fingerprint.mjs';
 
 test('bundle budget includes transitive shared chunks once, excludes deferred readers, and fails oversize/missing metrics',()=>{
@@ -71,4 +72,17 @@ test('authorised total growth metrics remain visible without global caps; initia
  assert.throws(()=>observedTrends({},config.observeOnly),/Missing observed/);
  for(const key of ['entryJsBytes','entryJsGzipBytes','entryCssBytes','largestBookStudyBytes','bookStudyIndexBytes','bookWhyBytes'])assert.ok(config.build[key]>0,key+' protection retained');
  const invalid={...config.build,entryJsGzipBytes:config.build.entryJsGzipBytes+1};assert.equal(violations(invalid,config.build)[0].metric,'entryJsGzipBytes');
+});
+
+
+test('conservative local browser selection retains every mandatory UI group after suite extraction',()=>{
+ const required=REQUIRED_SUITES.filter(s=>s!=='news-feed');
+ for(const file of ['app/book-content.json','app/invention-blueprint.tsx','app/world-topic.tsx','scripts/quality-evidence.mjs','unknown-runtime-input.js']){
+  const plan=selectTests([file]);assert.deepEqual(new Set(plan.browser),new Set(required),file+' cannot lose a required extracted UI group');assert.equal(plan.fullRequiredBeforeReady,true);
+ }
+ // Deliberately narrow iteration and the isolated signed-feed lane remain
+ // separate from mandatory full acceptance; this does not broaden every edit.
+ assert.deepEqual(selectTests(['app/challenge-hints.json']).browser,['challenge','offline']);
+ assert.deepEqual(selectTests(['scripts/news/engine.mjs']).browser,[]);
+ assert.deepEqual(selectTests(['README.md']).browser,[]);
 });

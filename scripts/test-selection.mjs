@@ -3,6 +3,7 @@ import path from 'node:path';
 import {execFileSync,spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import ts from 'typescript';
+import {REQUIRED_SUITES} from './quality-evidence.mjs';
 
 const root=process.cwd();
 function resolve(from,specifier){
@@ -66,7 +67,9 @@ export function selectTests(changed,{base='HEAD'}={}){
   else if(!infrastructure&&!unknown&&runtime.every(f=>/^(app\/update-history|tests\/update-history\.test\.mjs)/.test(f)))browser=['home','offline'];
   else if(!infrastructure&&!unknown&&runtime.every(f=>/^(app\/journey-inquir|tests\/journeys\.test\.mjs|exports\/content\/journey-inquiries\.json)/.test(f)))browser=['journeys','backup','offline'];
   else if(runtime.every(f=>/^tests\/.*\.test\.mjs$/.test(f)))browser=[];
-  else browser=['foundation','home','core','playground','backup','challenge','research','journeys','book','nature','offline'];
+  // The signed-feed fixture has its own runner/configuration. All actual UI
+  // groups follow the acceptance contract, including future extracted groups.
+  else browser=REQUIRED_SUITES.filter(s=>s!=='news-feed');
  }
  return {scope:'local iteration only',fullRequiredBeforeReady:true,changed:files,impact:changeImpact(files,{base}),unitTests,release:infrastructure||unknown||runtime.some(f=>f.startsWith('tests/release/')),browser,reason:infrastructure||unknown||deleted?'Unknown/shared/deleted input: conservative full selection':newsOnly?'News preparation server code only; no browser content changed':'Transitive unit dependencies and explicit browser-risk mapping; unknown UI changes select the full browser path'};
 }

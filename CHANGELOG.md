@@ -1,9 +1,10 @@
 # Änderungsverlauf
 
-## Paket3.5 · Vorhandene Prüfzeit besser nutzen (unveröffentlicht, Vollabnahme offen)
+## Paket3.5 · Dauerauftrag und vollständige Prüfgruppen (unveröffentlicht)
 
-- Nach tatsächlichem35-Minuten-Abbruch vonQuality75 startet der vorhandene lange Bucharbeiter künftig direkt nach allen21 erfolgreich allein gemessenen Performanceproben. Komponenten/Basis dürfen mit ihm überlappen; gleiche Server-/Profil-/Cache-Isolation und maximal3 Arbeiter, keine neuen Jobs oder höheren Timeouts. Alle Testfunktionen, Matrizen, axe-Prüfungen und Originalbilder bleiben unverändert. Zeit-/Signal-/Sample-/Peaknachweis im Handoff verhindert falsches Grün; tatsächlicher vollständiger Vorher-/Nachhervergleich bleibt Abnahme.
-
+- Vollständigen neuen47-Abschnitt-Dauerauftrag16.10. bytegleich gesichert und Issue28 samt Ergänzung gelesen. Zehn vernetzte Erlebnisfelder innerhalb der sechs vorhandenen Hauptbereiche, kontrollierte vollständig abgenommene Teilrelease-Kandidaten und dauerhafte Folgenprüfung älterer veröffentlichter Inhalte in den bestehenden Regeln verankert. Keine zweite Roadmap oder vorzeitige Veröffentlichung; Pakete3.5/4–8 und alle offenen Sollziele erhalten.
+- Ungleich lange Chromiumgruppen anhand tatsächlicher Phasenzeiten ausbalanciert: vollständige Warum-/nativeZoom-Prüfung zuNavigation, Erfindungen/nativeZoom zuBuch; dieselben drei isoliertenArbeiter, alle21Leistungssamples/Basis/News zuerstallein. Alle bisherigenAssertions/Matrizen/axe/Pflichtbilder bleiben. CanonicalDateizuordnung und fehlerschließende vollständigeGruppenaggregation ergänzt. Quality77am11f-Head vollständig grün, Chromium26:30min statt vorheriger35minAbbrüche; lokalevolleEinzelprobe62.412s kürzer als7f. Keine neuenCI-Jobs, längerenTimeouts oder Kostenversprechen.
+- Frühstart-Überlappungsversuch7f brachte keinen messbarenGesamtnutzen und wurde zurückgenommen; kein Erfolg daraus behauptet. Konservativen lokalenTestselektor gegen fehlende neu ausgegliederteWarum-/Erfindungsgruppen abgesichert: vorhandenenPflichtvertrag wiederverwenden, engerIterationsumfang bleibteng. Neue lokalePrüfung und exakteHead-CI nötig; keinealtenBelege umetikettieren.
 
 ## Paket3.5 · Fokus behalten und alle Reviewbilder zählen (unveröffentlicht)
 
