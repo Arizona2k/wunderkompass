@@ -1,0 +1,333 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-16",
+  "scope": "independent package3.5 offline section; paired actual Chromium controlled scaling, not a release or device guarantee",
+  "status": "12/12 measured runs passed; final candidate acceptance separately in PR",
+  "measuredBuildBeforeFinalProgressColourRefinement": "df18b056f693f0ff",
+  "runtimeWorkerSourceSha256": "7032560bcbf66406f2260f50862e9f408dce48f1d07db20e324dce3262b08aa6",
+  "bulkFixtureSha256": "4102925df78658cc963f1836011a649e53169fc8d90367dff3c229ca5075ef17",
+  "method": "Two fresh actual Chromium contexts for each complete app +0/+1000/+3000 synthetic2KB JSON assets; local uncompressed HTTP,10ms synthetic latency. Update adds one new payload and retains all old content. Metadata/HTML release changes are explicit fixtures, not a production deployment. Browser storage estimate is not a real weak-device or disk-quota guarantee.",
+  "rows": [
+    {
+      "extraSyntheticAssets": 0,
+      "sample": 0,
+      "assets": 128,
+      "before": {
+        "initialSeconds": 0.9307835659999998,
+        "initialTransfer": {
+          "bytes": 17221245,
+          "requests": 130
+        },
+        "updateSeconds": 1.7212553549999998,
+        "updateTransfer": {
+          "bytes": 17221323,
+          "requests": 131
+        },
+        "peakRequests": 5
+      },
+      "after": {
+        "initialSeconds": 0.8937477089999998,
+        "initialTransfer": {
+          "bytes": 17242094,
+          "requests": 130
+        },
+        "updateSeconds": 2.001441201,
+        "updateTransfer": {
+          "bytes": 29498,
+          "requests": 3
+        },
+        "peakRequests": 6,
+        "reused": 128
+      },
+      "cacheCountsBefore": [
+        {
+          "complete": true,
+          "count": 130
+        },
+        {
+          "complete": true,
+          "count": 131
+        }
+      ],
+      "cacheCountsAfter": [
+        {
+          "complete": true,
+          "count": 131
+        },
+        {
+          "complete": true,
+          "count": 132
+        }
+      ]
+    },
+    {
+      "extraSyntheticAssets": 0,
+      "sample": 1,
+      "assets": 128,
+      "before": {
+        "initialSeconds": 0.9014166420000002,
+        "initialTransfer": {
+          "bytes": 17221245,
+          "requests": 130
+        },
+        "updateSeconds": 0.5056982399999997,
+        "updateTransfer": {
+          "bytes": 17221323,
+          "requests": 131
+        },
+        "peakRequests": 6
+      },
+      "after": {
+        "initialSeconds": 0.918829608,
+        "initialTransfer": {
+          "bytes": 17242094,
+          "requests": 130
+        },
+        "updateSeconds": 0.33369157799999993,
+        "updateTransfer": {
+          "bytes": 29498,
+          "requests": 3
+        },
+        "peakRequests": 6,
+        "reused": 128
+      },
+      "cacheCountsBefore": [
+        {
+          "complete": true,
+          "count": 130
+        },
+        {
+          "complete": true,
+          "count": 131
+        }
+      ],
+      "cacheCountsAfter": [
+        {
+          "complete": true,
+          "count": 131
+        },
+        {
+          "complete": true,
+          "count": 132
+        }
+      ]
+    },
+    {
+      "extraSyntheticAssets": 1000,
+      "sample": 0,
+      "assets": 1128,
+      "before": {
+        "initialSeconds": 4.972893901,
+        "initialTransfer": {
+          "bytes": 19267135,
+          "requests": 1130
+        },
+        "updateSeconds": 4.931458255,
+        "updateTransfer": {
+          "bytes": 19267213,
+          "requests": 1131
+        },
+        "peakRequests": 6
+      },
+      "after": {
+        "initialSeconds": 4.9471080810000005,
+        "initialTransfer": {
+          "bytes": 19396874,
+          "requests": 1130
+        },
+        "updateSeconds": 1.2552044659999992,
+        "updateTransfer": {
+          "bytes": 156278,
+          "requests": 3
+        },
+        "peakRequests": 6,
+        "reused": 1128
+      },
+      "cacheCountsBefore": [
+        {
+          "complete": true,
+          "count": 1130
+        },
+        {
+          "complete": true,
+          "count": 1131
+        }
+      ],
+      "cacheCountsAfter": [
+        {
+          "complete": true,
+          "count": 1131
+        },
+        {
+          "complete": true,
+          "count": 1132
+        }
+      ]
+    },
+    {
+      "extraSyntheticAssets": 1000,
+      "sample": 1,
+      "assets": 1128,
+      "before": {
+        "initialSeconds": 4.941671143000003,
+        "initialTransfer": {
+          "bytes": 19267135,
+          "requests": 1130
+        },
+        "updateSeconds": 4.771289120999998,
+        "updateTransfer": {
+          "bytes": 19267213,
+          "requests": 1131
+        },
+        "peakRequests": 4
+      },
+      "after": {
+        "initialSeconds": 5.443535657999999,
+        "initialTransfer": {
+          "bytes": 19396874,
+          "requests": 1130
+        },
+        "updateSeconds": 1.098367929,
+        "updateTransfer": {
+          "bytes": 156278,
+          "requests": 3
+        },
+        "peakRequests": 6,
+        "reused": 1128
+      },
+      "cacheCountsBefore": [
+        {
+          "complete": true,
+          "count": 1130
+        },
+        {
+          "complete": true,
+          "count": 1131
+        }
+      ],
+      "cacheCountsAfter": [
+        {
+          "complete": true,
+          "count": 1131
+        },
+        {
+          "complete": true,
+          "count": 1132
+        }
+      ]
+    },
+    {
+      "extraSyntheticAssets": 3000,
+      "sample": 0,
+      "assets": 3128,
+      "before": {
+        "initialSeconds": 14.025707987999999,
+        "initialTransfer": {
+          "bytes": 23361135,
+          "requests": 3130
+        },
+        "updateSeconds": 13.488027571000005,
+        "updateTransfer": {
+          "bytes": 23361213,
+          "requests": 3131
+        },
+        "peakRequests": 6
+      },
+      "after": {
+        "initialSeconds": 13.559453152000001,
+        "initialTransfer": {
+          "bytes": 23710874,
+          "requests": 3130
+        },
+        "updateSeconds": 3.1128266220000005,
+        "updateTransfer": {
+          "bytes": 414278,
+          "requests": 3
+        },
+        "peakRequests": 4,
+        "reused": 3128
+      },
+      "cacheCountsBefore": [
+        {
+          "complete": true,
+          "count": 3130
+        },
+        {
+          "complete": true,
+          "count": 3131
+        }
+      ],
+      "cacheCountsAfter": [
+        {
+          "complete": true,
+          "count": 3131
+        },
+        {
+          "complete": true,
+          "count": 3132
+        }
+      ]
+    },
+    {
+      "extraSyntheticAssets": 3000,
+      "sample": 1,
+      "assets": 3128,
+      "before": {
+        "initialSeconds": 14.086063249999999,
+        "initialTransfer": {
+          "bytes": 23361135,
+          "requests": 3130
+        },
+        "updateSeconds": 13.776862154000002,
+        "updateTransfer": {
+          "bytes": 23361213,
+          "requests": 3131
+        },
+        "peakRequests": 6
+      },
+      "after": {
+        "initialSeconds": 13.548659603,
+        "initialTransfer": {
+          "bytes": 23710874,
+          "requests": 3130
+        },
+        "updateSeconds": 2.8212542019999964,
+        "updateTransfer": {
+          "bytes": 414278,
+          "requests": 3
+        },
+        "peakRequests": 6,
+        "reused": 3128
+      },
+      "cacheCountsBefore": [
+        {
+          "complete": true,
+          "count": 3130
+        },
+        {
+          "complete": true,
+          "count": 3131
+        }
+      ],
+      "cacheCountsAfter": [
+        {
+          "complete": true,
+          "count": 3131
+        },
+        {
+          "complete": true,
+          "count": 3132
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Two fresh samples per size/variant, not a robust p50/p95, flake or billing estimate.",
+    "Bulk and incremental variants use the same full app assets; a synthetic update adds one new payload. No content omitted.",
+    "Final visual refinement changes only progressbar colours/CSS and its generated asset hashes; this older measured build is not relabeled as final. Worker runtime source is unchanged.",
+    "Uncompressed local HTTP transfer, not actual Vercel compression or hardware/weak-device performance.",
+    "Complete old and new caches intentionally coexist; reuse reduces transfer, not the necessary duplicate cache storage.",
+    "No new total-size limit, quota or universal first-install speed guarantee.",
+    "Original work reports and prior sealed evidence remain unchanged."
+  ]
+}

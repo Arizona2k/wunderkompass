@@ -1,5 +1,16 @@
 # Aktueller Lieferabschnitt – verständliche Update-Chronik,16.10.2026
 
+## Aktueller eigenständiger Paket3.5-Abschnitt: Offline-Vorbereitung16.10.2026
+
+Serieller Durchlauf package-3-5-after-pr29-2026-10-16; Eigentümer972b6733f7d83c39c5d30ba014f99212f7a2e5c1. Bestehende3.5-Arbeit inPR27 und ursprünglicherHead2c23ad99152c53118bfd2d4484d65844c4650d05 vollständig erhalten, zusätzlich Git-Bundle gesichert; PR29 kontrolliert im selben Entwicklungsbranch als0688d17bb8bd714a4c1825ea4d6e7aa91768c743 integriert. 359Wissens-/Originaldateien bytegleich,183Unit/27Release/TS/Lint/Build/42Exporte2285Records am kombiniertenStand bestanden; vollständiger neuer GitHub-Lauf noch separat abzuwarten. Keine fachliche Gesamtfreigabe.
+
+Dieser eigenständig nutzbare Abschnitt basiert direkt auf dem tatsächlichen Nutzermerge vonPR29/test-live d63e946de8a02df2d0493e19081a7f07574b51cd. Übernahme16.10.19:33:03Z, vercel[bot] success56556024591 um19:33:21Z am exaktenMerge, vorherpending56556006623, bestehendesVercelprojekt unverändert. Chronik mit gleicherID nachgeführt; neuerOfflineeintrag bis eigenemNachweis vorbereitet. Kein Zugriff aufgeschütztenTestlink als persönlich geprüfteLive-UI behauptet.
+
+Bereits entwickelten Offline-Produktcode ausPR27 wiederverwenden: ganzeLernwelt/vollständigeEndassetliste, genaueGrößen-/SHA256-Prüfung jederneuen/wiederverwendetenDatei, maximal6Dateioperationen, realerDateizähler/Fehlerwiederholung, letztevollständigeFallbackversion/alteTabs/Quota. Keine neuenFachinhalte, Speicher-/Spiel-/Karten-/Kapitelkennungen oder Newsfunktionen übernehmen. Keine AbhängigkeitvonunfertigenBuch-/Natur-/Wissenschaftsdaten. AllebestehendenEndtests unverändertzuzüglichgezielterOfflinefälle; aktuellePflichtprüfungen/Ready-/Qualityquittung imzugehörigenPR, nichtausdemalten3.5-Meilenstein ableiten.
+
+NewsvollständigpausiertbisneuemexplizitemAuftrag; alteEntwicklung/Tests/Betriebsstände erhalten. Rest3.5/WK053–058 vollständigimzentralenBACKLOG/PR27;73neue/73weiterealteWeltkartenundKapitel-/Spiele-/Labor-/Modell-/Fach-/Kinder-/Gerätegates offen. Pakete4–8/WK038späterunverändert. NachNutzermergediesesfertigenAbschnitts relevanteKorrekturenkontrolliertnachPR27übernehmen; keineResetsoderDoppelentwicklung. KeinAuto-Merge/Deployment/Kosten. EigeneReservierungnurmitpassenderSHA nachgesicherterÜbergabelösen.
+
+
 ## Letzte Testpräzisierung nach Quality83
 
 08f8d7770ac70b09a7008117d212af378115732c:115Unit/27Release/TS/Lint/Build/40Exporte1957Inventarsätze undlokalerVollroot663.992s/115Labels bestanden. NativegesamteChronik/Negativseite/viervertrauteFokusfälle/kaltOffline bestanden;791erzeugte/312behaltenePNG/43770983Byte/106229017Reserve, Originale/Hashes unverändert in work/chronik-08f8d77-complete-proof. Quality83/38950622802: vollständigeChromiumregression erstmals auchremotegrün494.389s; Firefox scheitert danach anfocus-visible derneuenChronikprobe, keinegrüneGesamt-Abnahme.

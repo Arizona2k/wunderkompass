@@ -1,5 +1,10 @@
 # Änderungsverlauf
 
+## Paket3.5 – vollständige Offline-Vorbereitung mit sichtbarem Fortschritt (noch unveröffentlicht)
+
+Vorhandene geprüfte Offline-Verbesserungen ausPR27 als unabhängigen Abschnitt aufdem tatsächlichübernommenenPR29-Stand integriert. EchterDateifortschritt; genaueIntegritätsprüfung beiAbruf/Wiederverwendung, vollständigeEndassetliste, begrenzteDateiverarbeitung undsichereFehlerwiederholung. LetztevollständigeVersion undbenötigteAlt-Tab-Dateien behalten; unvollständigeVersionen nichtalsFallback verwenden. Entdeckerpass/IDs/Spielstände unverändert. PR29 anhandtatsächlichemMerge/Vercelbeleg nachgeführt, eigenerChroniktext vorbereitet. News-Pause/Paket3.5-Priorität inbestehendenRegeln; sämtlichegrößere3.5-Inhalte bleibeninPR27gesichert. TatsächlichePrüfquittungimPR.
+
+
 ## Vorbereitet – verständliche Update-Chronik,16.10.2026
 
 - Alle31 belegten verfügbaren Einträge verständlicher zusammengefasst und mit passenden Kategorien ergänzt. Auch ältere Veröffentlichungen erklären konkrete Entdeckungen, Bedienwege und Familiennutzen. Technische Test-/Implementierungsdetails aus Lesertexten entfernt; gleiche Wiederbereitstellung weiterhin ehrlich ohne neue Funktionen.

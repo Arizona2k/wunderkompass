@@ -158,3 +158,8 @@
 
 /* Reserve the active panel before asynchronous pass hydration/lazy content. */
 .learning-panel{min-block-size:max(400px,calc(100svh - 250px))}
+
+.offline-progress{flex-basis:100%;min-width:0}.offline-progress progress{display:block;width:100%;max-width:32rem;height:1rem;accent-color:#245d70}.offline-progress p{line-height:1.6;margin-block:.5rem}
+
+.offline-progress progress{appearance:none;border:0;border-radius:999px;overflow:hidden;background:#dbe8ee}.offline-progress progress::-webkit-progress-bar{background:#dbe8ee;border-radius:999px}.offline-progress progress::-webkit-progress-value{background:#245d70;border-radius:999px}.offline-progress progress::-moz-progress-bar{background:#245d70;border-radius:999px}
+@media(forced-colors:active){.offline-progress progress::-webkit-progress-value{background:Highlight}.offline-progress progress::-moz-progress-bar{background:Highlight}}
