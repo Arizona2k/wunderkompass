@@ -1,5 +1,9 @@
 # Änderungsverlauf
 
+## Paket3.5 – Reise-Lernhilfen und lesbare Kapitelgrafiken (noch unveröffentlicht)
+
+240 freiwillige Hinweise individuell aus dem erhaltenen Masterstand übernommen,32 Aufgabenoptionen/Rückmeldungen präzisiert; richtige Antworten und gespeicherte Positionen erhalten. Wörter der64 bestehenden Grafiken bleiben als HTML lesbar; Mondansichten und politische Beispielgrenzen zeigen den passenden Zusammenhang. Redaktionelle Nachkontrolle entfernt zwei alte Hinweisbezüge und erklärt falsche Apollo-Jahreszahlen unterschiedlich. Keine neuen Kapitel oder vollständige unabhängige Fachabnahme behauptet. Frühe gezielte tatsächliche Browserprüfungen dauerhaft in bestehenden Regeln verankert; alle vollständigen Endprüfungen bleiben Pflicht. Nachweis und tatsächliche Bereitstellung nach Nutzerfreigabe im zugehörigen PR.
+
 ## Paket3.5 – korrekte Offline-Verfügbarkeit und frühere Syntaxfehler
 
 PR30 anhanddes tatsächlichen Nutzermerges undVercel-Erfolgs inklusiveaktuellerAbstammung alsverfügbar nachgeführt; gleicherChronikeintrag undallealtenNachweise erhalten. Vorhandene lokaleTestauswahl prüftgeänderte nativeNode-Module frühaufSyntax undbeziehtbreiteBrowserauswahl ausdem bestehendenPflichtvertrag. KeinePrüfung reduziert, keineunfertigenFachinhalte oderNewsfunktionen übernommen. AktuelleAbnahme imPR.

@@ -29,6 +29,7 @@ requiredScreenshots.push(...worldIndex.filter(t=>t.inventionModel).flatMap(t=>[.
 requiredScreenshots.push(...worldIndex.filter(t=>t.buildingKind).flatMap(t=>[320,1440].map(w=>'quality-navigation-building-model-'+t.id+'-'+w+'.png')),'quality-navigation-building-native-200-large.png','quality-navigation-building-large-320.png');
 
 requiredScreenshots.push('quality-foundation-offline-resilience-chromium-source-error-320.png','quality-foundation-offline-resilience-chromium-quota-error-320.png','quality-learning-offline-resilience-native-progress-640.png',...[320,360,390,768,1024,1440,1920].map(w=>'quality-foundation-offline-resilience-chromium-progress-'+w+'.png'));
+requiredScreenshots.push(...[320,1440].flatMap(w=>['moon-1','moon-2','water-2','inside-2','countries-3'].map(id=>'quality-learning-journey-engine-chromium-support-'+id+'-'+w+'.png')));
 export function retainScreenshot(name){
  if(requiredScreenshots.includes(name))return true;
  // Each individual plan and distinct functional model has review value.

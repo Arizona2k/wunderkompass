@@ -1,3 +1,4 @@
+import JOURNEY_DATA from '../app/journey-inquiries.json' with {type:'json'};
 import JOURNEY_CONTENT from '../app/journey-content.json' with {type:'json'};
 import JOURNEY_SOURCES from '../app/journey-sources.json' with {type:'json'};
 import {publicUpdates} from '../app/update-history.ts';
@@ -9,6 +10,13 @@ import fs from 'node:fs/promises';import path from 'node:path';import {createHas
 import {fileURLToPath} from 'node:url';
 import {learningFingerprint} from '../build/learning-fingerprint.mjs';
 import bookLearningIndex from '../app/book-learning-index.json' with {type:'json'};
+
+export function journeySupportComplete(proof,widths){
+ const hints=JOURNEY_DATA.chapters.flatMap(c=>c.tasks.map((_,level)=>c.id+':'+level));
+ const diagrams=JOURNEY_DATA.chapters.filter(c=>c.index>0).flatMap(c=>widths.map(width=>c.id+':'+width));
+ const exact=(observed,expected)=>Array.isArray(observed)&&observed.length===expected.length&&new Set(observed).size===expected.length&&expected.every(id=>observed.includes(id));
+ return exact(proof?.hints,hints)&&exact(proof?.widths,widths)&&Array.isArray(proof?.diagrams)&&exact(proof.diagrams.map(d=>d.id+':'+d.width),diagrams)&&proof.diagrams.every(d=>d.readable===true&&d.largeText===true&&d.keyboard===true&&Number.isInteger(d.states)&&d.states>0)&&Number.isFinite(proof.seconds)&&proof.seconds>0;
+}
 
 export async function sourceDigest(root=process.cwd()){
  const files=[];
@@ -49,6 +57,7 @@ export function offlineComplete(o,kind,{native=false}={}){
  return o?.kind===kind&&['realProgress','networkRecovery','completeAssets','offlineReload','serverStopped','passPreserved'].every(k=>o[k]===true)&&(kind!=='chromium'||o.quotaRecovery===true)&&Number.isInteger(o.assetCount)&&o.assetCount>0&&o.metrics?.assets===o.assetCount&&o.metrics.reused+o.metrics.downloaded===o.assetCount&&Array.isArray(o.progressViews)&&o.progressViews.length===widths.length&&new Set(o.progressViews.map(v=>v.width)).size===widths.length&&widths.every(width=>o.progressViews.some(v=>v.width===width&&v.cssWidth===width&&v.largeText===true&&v.axe===true&&v.verified>0&&v.verified<v.total&&v.total===o.assetCount&&(!native||v.scale===2&&v.screenshot?.pixelWidth===1280&&v.screenshot.sampledColors>1)));
 }
 export async function createHandoff(report,directory='.qa-output',{requiredEngines=[]}={}){
+ if(!journeySupportComplete(report.journeySupport,[320,360,390,768,1024,1440,1920]))throw Error('Missing complete journey hint/diagram evidence');
  if(!retentionComplete(report.offlineRetention)||!offlineComplete(report.offlineResilience,'chromium')||!offlineComplete(report.offlineNative,'chromium',{native:true}))throw Error('Missing complete current offline evidence');
  if(!nativeHistoryComplete(report.nativeHistory))throw Error('Missing complete native history zoom proof');
  if(!buildingCasesComplete(report.buildingCoverage?.observed,[320,360,390,768,1024,1440,1920])||!buildingCasesComplete(report.buildingNativeZoom?.observed,[640])||!buildingCasesComplete(report.buildingsOffline?.observed,[1280]))throw Error('Handoff lacks actual complete building proof');
@@ -65,7 +74,7 @@ export async function createHandoff(report,directory='.qa-output',{requiredEngin
  if(requirements.length!==24)throw Error('Incomplete existing-backlog requirement mapping');
  let engineProof=null;try{engineProof=JSON.parse(await fs.readFile(path.join(directory,'engine-report.json'),'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
 
- if(requiredEngines.length&&(!engineProof||engineProof.build!==report.build||engineProof.sourceDigest!==unit.sourceDigest||engineProof.status!=='passed'||engineProof.errors.length||requiredEngines.some(name=>!engineProof.engines.some(e=>e.name===name&&engineComplete(e)&&historyViewsComplete(e.historyViews,[320,390,768,1440])))))throw Error('Actual required browser engine evidence missing');
+ if(requiredEngines.length&&(!engineProof||engineProof.build!==report.build||engineProof.sourceDigest!==unit.sourceDigest||engineProof.status!=='passed'||engineProof.errors.length||requiredEngines.some(name=>!engineProof.engines.some(e=>e.name===name&&journeySupportComplete(e.journeySupport,[320,390,768,1440])&&engineComplete(e)&&historyViewsComplete(e.historyViews,[320,390,768,1440])))))throw Error('Actual required browser engine evidence missing');
  const screenshots=[];for(const file of (await fs.readdir(directory)).filter(f=>/^(?:quality-|journey-engine-).*\.png$/.test(f)).sort()){const data=await fs.readFile(path.join(directory,file));if(data.subarray(0,8).toString('hex')!=='89504e470d0a1a0a')throw Error('Broken screenshot');screenshots.push({file,width:data.readUInt32BE(16),height:data.readUInt32BE(20),sha256:createHash('sha256').update(data).digest('hex')});}
  if(!screenshots.length)throw Error('Missing actual screenshots');
  let pr=null;if(process.env.GITHUB_EVENT_PATH){const event=JSON.parse(await fs.readFile(process.env.GITHUB_EVENT_PATH,'utf8'));if(event.pull_request)pr={number:event.pull_request.number,head:event.pull_request.head.sha,base:event.pull_request.base.sha};}

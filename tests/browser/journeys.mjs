@@ -23,6 +23,7 @@ async function axe(p,selector){await p.addScriptTag({path:new URL('../../qa/node
 export async function journeysFlow(browser,base,ready,monitor,report,shots,nativeBrowser){
  const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce',acceptDownloads:true}),p=await context.newPage();monitor(p);p.setDefaultTimeout(20000);
  await p.goto(base+'/#journeys');await ready(p);await p.locator('.journey-tile').first().waitFor();assert.equal(await p.locator('.journey-tile').count(),16);
+ report.journeySupport=await journeySupportView(p,{widths:[320,360,390,768,1024,1440,1920],shots,engine:'chromium'});
  await p.locator('.journey-filters input').fill('Wolken');assert.ok(await p.locator('.journey-tile').count()<16);await p.locator('.journey-filters input').fill('');
  for(const c of data.chapters){
   await open(p,c.journeyId,c.index);const text=editorial.find(s=>s.id===c.id);await p.getByText(text.whyItMatters,{exact:true}).waitFor();await reveal(p,'Ganz einfach · etwa 6–8 Jahre');await p.getByText(text.starter,{exact:true}).waitFor();await reveal(p,'Noch genauer · etwa 12–14 Jahre');await p.getByText(text.deeper,{exact:true}).waitFor();await reveal(p,'Selbst beobachten und erklären · freiwillig');await p.getByText(text.observe,{exact:true}).waitFor();if(c.journeyId==='ocean'){await reveal(p,'Für Erwachsene: Quellen');for(const key of text.sourceIds){const source=JOURNEY_SOURCES[key],link=p.locator('.journey-source').filter({hasText:source.title});assert.equal(await link.getAttribute('href'),source.url);assert.ok(await link.isVisible());}assert.equal(await p.locator('.journey-source').count(),text.sourceIds.length);}
@@ -84,4 +85,67 @@ export async function journeysFlow(browser,base,ready,monitor,report,shots,nativ
  await nativeJourneyZoom(nativeBrowser.chromium,nativeBrowser.options,base,report,shots,{includeBook:nativeBrowser.includeBook!==false});
 }
 export async function prepareOfflineJourneys(p){await open(p,'water',2);const inquiry=p.locator('.journey-inquiry');await inquiry.locator('.journey-levels button').nth(2).click();await reveal(inquiry,'Dein Forschermerkzettel · freiwillig');await inquiry.locator('textarea').fill('Offline-Sicherung: Wasser kann seinen Zustand ändern.');await p.waitForFunction(key=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['journey:water']['chapter:2:note']==='Offline-Sicherung: Wasser kann seinen Zustand ändern.',saveKey);}
+// Run the changed learning controls first, also in the existing real-engine path.
+// This is a targeted part of the existing journey suite, never a replacement.
+export async function journeySupportView(p,{widths,shots,engine}){
+ const started=performance.now(),hints=[],diagrams=[],wasLarge=await p.locator('.earth-app').evaluate(e=>e.classList.contains('large-reading'));
+ try{
+  await p.setViewportSize({width:390,height:844});
+  for(const c of data.chapters){
+   await open(p,c.journeyId,c.index);
+   const inquiry=p.locator('[data-chapter-inquiry="'+c.id+'"]');
+   for(const [level,q] of c.tasks.entries()){
+    await inquiry.locator('.journey-levels button').nth(level).click();
+    const summary=inquiry.locator('.journey-task summary'),details=summary.locator('..');
+    if(await details.evaluate(e=>e.open))await summary.click();
+    assert.equal(await inquiry.getByText(q.hint,{exact:true}).isVisible(),false,'hint stays voluntary');
+    await summary.focus();await p.keyboard.press('Enter');
+    await inquiry.getByText(q.hint,{exact:true}).waitFor();
+    assert.equal(await inquiry.getByText(q.why,{exact:true}).count(),0,'opening a hint does not disclose the answer explanation');
+    await summary.click();hints.push(c.id+':'+level);
+   }
+  }
+  for(const width of widths){
+   await p.setViewportSize({width,height:900});
+   await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));
+   for(const c of data.chapters.filter(c=>c.index>0)){
+    await open(p,c.journeyId,c.index);
+    const visual=p.locator('[data-chapter-visual="'+c.id+'"]');await visual.waitFor();
+    await geometry(p,c.id+' diagram '+width);
+    assert.ok(await visual.locator('svg').getAttribute('aria-label'),'original image description remains');
+    assert.equal(await visual.locator('svg text').evaluateAll(nodes=>nodes.filter(n=>!/^\d+$/.test(n.textContent.trim())).length),0,'words are readable HTML instead of scaled SVG text');
+    const choices=await visual.locator('.visual-choice button').all();
+    for(const [selected,choice] of choices.entries()){
+     await choice.click();assert.equal(await choice.getAttribute('aria-pressed'),'true');
+     const labels=await visual.locator('.chapter-diagram-key span').evaluateAll(nodes=>nodes.map(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {text:e.textContent,size:parseFloat(s.fontSize),left:r.left,right:r.right};}));
+     assert.ok(labels.every(l=>l.text&&l.size>=16&&l.left>=-2&&l.right<=width+2),'readable unclipped HTML labels');
+     if(c.id==='countries:3'){
+      await visual.locator('.chapter-diagram-key').getByText(['Gemeinsame Landgrenze','Meer','Fluss über die Grenze'][selected],{exact:true}).waitFor();
+      assert.equal(await visual.getByText('Feste äußere Hülle',{exact:true}).count(),0,'political borders do not show tectonic plates');
+     }
+     if(c.journeyId==='moon'&&c.index<=2){
+      const phase=c.index===2?1:selected;
+      await visual.locator('.chapter-diagram-key').getByText('Von der Erde: '+['Neumond','halbe Scheibe hell','Vollmond'][phase],{exact:true}).waitFor();
+      assert.equal(await visual.locator('svg circle[fill="#f1cb82"]').count(),phase===2?1:0,'only full moon has a full illuminated disk');
+      assert.equal(await visual.locator('svg path[fill="#f1cb82"]').count(),phase===1?1:0,'quarter view has exactly one illuminated half');
+     }
+     const box=await choice.boundingBox();assert.ok(box.height>=44,'diagram touch target');
+    }
+    await choices[0].focus();await p.keyboard.press('Tab');await p.keyboard.press('Shift+Tab');assert.ok(await choices[0].evaluate(e=>e===document.activeElement&&e.matches(':focus-visible')),'visible keyboard focus');
+    if([320,1440].includes(width)&&['moon:1','moon:2','water:2','inside:2','countries:3'].includes(c.id))await visual.screenshot({path:path.join(shots,'journey-engine-'+engine+'-support'+'-'+c.id.replace(':','-')+'-'+width+'.png'),animations:'disabled'});
+    if([320,1440].includes(width)&&['ocean:4','landscapes:1','water:2'].includes(c.id)){
+     const level=c.id==='water:2'?2:0,inquiry=p.locator('.journey-inquiry');await inquiry.locator('.journey-levels button').nth(level).click();
+     const summary=inquiry.locator('.journey-task summary');if(!await summary.evaluate(e=>e.parentElement.open))await summary.click();
+     await inquiry.getByText(c.tasks[level].hint,{exact:true}).waitFor();await geometry(p,c.id+' open hint '+width);
+     await inquiry.locator('.journey-task').screenshot({path:path.join(shots,'journey-engine-'+engine+'-support-hint-'+c.id.replace(':','-')+'-'+width+'.png'),animations:'disabled'});await summary.click();
+    }
+    diagrams.push({id:c.id,width,states:choices.length,readable:true,largeText:true,keyboard:true});
+   }
+   await axe(p,'.journey-reader');
+  }
+  assert.equal(hints.length,240);assert.equal(new Set(hints).size,240);
+  assert.equal(diagrams.length,64*widths.length);assert.equal(new Set(diagrams.map(d=>d.id+':'+d.width)).size,diagrams.length);
+  return {hints,diagrams,widths,seconds:(performance.now()-started)/1000};
+ }catch(error){await p.screenshot({path:path.join(shots,'journey-engine-'+engine+'-support'+'-failure.png'),fullPage:true}).catch(()=>{});throw error;}finally{if(!wasLarge)await p.evaluate(()=>document.querySelector('.earth-app')?.classList.remove('large-reading'));await p.setViewportSize({width:390,height:844});}
+}
 export async function offlineJourneys(p,report){await open(p,'water',2);await p.getByText(JOURNEYS.find(j=>j.id==='water').steps[2].whyItMatters,{exact:true}).waitFor();await reveal(p.locator('.journey-inquiry'),'Dein Forschermerkzettel · freiwillig');assert.equal(await p.locator('.journey-inquiry textarea').inputValue(),'Offline-Sicherung: Wasser kann seinen Zustand ändern.');assert.equal(await p.locator('.journey-levels button').nth(2).getAttribute('aria-pressed'),'true');for(const j of JOURNEYS)for(let i=0;i<5;i++){await open(p,j.id,i);await p.getByText(j.steps[i].whyItMatters,{exact:true}).waitFor();await reveal(p,'Noch genauer · etwa 12–14 Jahre');await p.getByText(j.steps[i].deeper,{exact:true}).waitFor();assert.equal(await p.locator('.journey-task .quiz-answer').count(),3);}await p.evaluate(()=>location.hash='world/topic/science-water-cycle');await p.locator('.journey-topic-links').waitFor();const disclosure=p.locator('details[data-history-disclosure="journey-links-science-water-cycle-water"]');await disclosure.locator('summary').click();await p.locator('.journey-topic-links a[href="#journeys/water/5"]').click();await p.locator('[data-chapter-inquiry="water:4"]').waitFor();report.checks.push('Cold restart without server: complete reciprocal chapter links and all 16 journey inquiries and private notebook/level restore from the same schema-3 pass');}
