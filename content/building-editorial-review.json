@@ -1,0 +1,572 @@
+{
+  "schemaVersion": 1,
+  "meaning": "Eight retained building explanations individually enriched; eight existing manuscripts integrated. Source self-review and technical tests are not independent acceptance. Sole tasks remain BACKLOG WK053/WK057.",
+  "reviewedOn": "2026-10-16",
+  "independentReview": false,
+  "acceptedForDoubling": false,
+  "rights": "Nur eigene deutsche Texte und eigene begrenzte geometrische Skizzen; keine fremden Fotos, Pläne oder Logos übernehmen. Quellenfakten mit konkreten Ankern, keine individuelleFach-/Kinder-/Gerätefreigabe. UNESCO-Beschreibungen stehen unter CC BY-SA IGO 3.0; Originalformulierungen nichtübersetzen/kopieren.",
+  "topics": [
+    {
+      "id": "building-giza-pyramids",
+      "kind": "individually-extended-existing",
+      "goal": "Du unterscheidest ein erklärtes Bauprinzip von offenen Fragen zum genauen historischen Transport.",
+      "ageLevels": {
+        "6-8": "Viele Menschen planten und bauten die Pyramiden gemeinsam.",
+        "9-11": "Viele Arbeitsgruppen bearbeiteten und transportierten Steinblöcke. Wie alle Einzelheiten beim Bau abliefen, wird weiter erforscht.",
+        "12-14": "Eine Form verrät nicht jeden Arbeitsschritt: Ein Schnitt kann Kammern zeigen, aber nicht beweisen, auf welchem Weg jeder einzelne Stein an seinen Platz gelangte."
+      },
+      "sourceClaims": [
+        {
+          "url": "https://egymonuments.gov.eg/en/monuments/the-great-pyramid",
+          "anchor": "Retained construction explanation / source self-review; exact access limits below",
+          "claims": [
+            "Eine Form verrät nicht jeden Arbeitsschritt: Ein Schnitt kann Kammern zeigen, aber nicht beweisen, auf welchem Weg jeder einzelne Stein an seinen Platz gelangte."
+          ],
+          "freshIndependentVerification": false
+        }
+      ],
+      "sourceAccess": "Retained linked references; Giza operator, Great Wall UNESCO/NASA, Taj operator, Eiffel operator, Golden Gate construction stats and SOM construction text read in current wave. Colosseum operator timed out; city page and Panama history currently expose incomplete content. Existing numerical claims are retained, not presented as newly independently verified.",
+      "modelDecision": "Existing structure/bridge/lock/height controls retained; new individual observations, entry level and answer-specific feedback. No additional simulation without a distinct learning goal.",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "contentHash": "3115ddf9829a255d74ae04c14698c9ae376145fcb4ff020344809f267af4b017"
+    },
+    {
+      "id": "building-great-wall",
+      "kind": "individually-extended-existing",
+      "goal": "Du liest eine lange Baugeschichte, ohne ein ganzes Netz mit einem einzigen Bauabschnitt zu verwechseln.",
+      "ageLevels": {
+        "6-8": "Die Chinesische Mauer besteht aus vielen verschiedenen Anlagen.",
+        "9-11": "Verschiedene Herrscher und Arbeitsgruppen bauten unterschiedliche Abschnitte. Schon ältere Anlagen wurden verbunden; viele bekannte Teile stammen aus der Ming-Zeit.",
+        "12-14": "Auch bekannte Bilder brauchen Nachprüfung: Die Mauer ist vom Mond aus nicht mit bloßem Auge zu erkennen. Selbst aus einer niedrigen Erdumlaufbahn ist sie ohne Hilfsmittel schwer zu sehen."
+      },
+      "sourceClaims": [
+        {
+          "url": "https://www.nasa.gov/image-article/great-wall/",
+          "anchor": "Image article, explanatory paragraph about Moon and low orbit (lines254–256)",
+          "claims": [
+            "Auch bekannte Bilder brauchen Nachprüfung: Die Mauer ist vom Mond aus nicht mit bloßem Auge zu erkennen. Selbst aus einer niedrigen Erdumlaufbahn ist sie ohne Hilfsmittel schwer zu sehen."
+          ],
+          "freshIndependentVerification": false
+        }
+      ],
+      "sourceAccess": "Retained linked references; Giza operator, Great Wall UNESCO/NASA, Taj operator, Eiffel operator, Golden Gate construction stats and SOM construction text read in current wave. Colosseum operator timed out; city page and Panama history currently expose incomplete content. Existing numerical claims are retained, not presented as newly independently verified.",
+      "modelDecision": "Existing structure/bridge/lock/height controls retained; new individual observations, entry level and answer-specific feedback. No additional simulation without a distinct learning goal.",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "contentHash": "2eeb66010130816e748778e5dd14081f6a1ed0fb364b6fc35583d6a7078d71f3"
+    },
+    {
+      "id": "building-colosseum",
+      "kind": "individually-extended-existing",
+      "goal": "Du erkennst, dass eine große Öffnung und ein tragender Rahmen gemeinsam erklärt werden müssen.",
+      "ageLevels": {
+        "6-8": "Viele Bögen und Wege gehören zum Kolosseum.",
+        "9-11": "Stein, Ziegel und römischer Beton bildeten viele Bögen und gewölbte Räume. Wege und Treppen verteilten die Besucher.",
+        "12-14": "Ein sichtbarer Bogen ist nicht nur Schmuck. Seine Form und die angrenzenden Bauteile gehören zusammen. Das vereinfachte Bild ersetzt keine Berechnung, wie viel Gewicht ein bestimmter Bogen sicher trägt."
+      },
+      "sourceClaims": [
+        {
+          "url": "https://www.turismoroma.it/en/node/1155",
+          "anchor": "Retained construction explanation / source self-review; exact access limits below",
+          "claims": [
+            "Ein sichtbarer Bogen ist nicht nur Schmuck. Seine Form und die angrenzenden Bauteile gehören zusammen. Das vereinfachte Bild ersetzt keine Berechnung, wie viel Gewicht ein bestimmter Bogen sicher trägt."
+          ],
+          "freshIndependentVerification": false
+        }
+      ],
+      "sourceAccess": "Retained linked references; Giza operator, Great Wall UNESCO/NASA, Taj operator, Eiffel operator, Golden Gate construction stats and SOM construction text read in current wave. Colosseum operator timed out; city page and Panama history currently expose incomplete content. Existing numerical claims are retained, not presented as newly independently verified.",
+      "modelDecision": "Existing structure/bridge/lock/height controls retained; new individual observations, entry level and answer-specific feedback. No additional simulation without a distinct learning goal.",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "contentHash": "a7b793dde76619bf8edb1ba636f62609d8d7b27c95a0aaf3e6ea40aff608bf18"
+    },
+    {
+      "id": "building-taj-mahal",
+      "kind": "individually-extended-existing",
+      "goal": "Du trennst die Nutzung eines Mausoleums von seiner Konstruktion und seiner Verzierung.",
+      "ageLevels": {
+        "6-8": "Das Taj Mahal ist ein kunstvoll gestaltetes Gebäude mit einer Grabstätte.",
+        "9-11": "Viele Handwerker gestalteten Marmor, Steineinlagen, Kuppel und Garten. Architektur, Kunst und Arbeit vieler Menschen kommen zusammen.",
+        "12-14": "Verkleidung und Tragwerk sind unterschiedliche Aufgaben. Eine schöne Oberfläche erklärt noch nicht, welche Bauteile ein Dach tragen. Der Schnitt macht zwei Kuppelformen sichtbar; ihre Maße sind in dieser Zeichnung nicht berechnet."
+      },
+      "sourceClaims": [
+        {
+          "url": "https://www.tajmahal.gov.in/overview.aspx",
+          "anchor": "Retained construction explanation / source self-review; exact access limits below",
+          "claims": [
+            "Verkleidung und Tragwerk sind unterschiedliche Aufgaben. Eine schöne Oberfläche erklärt noch nicht, welche Bauteile ein Dach tragen. Der Schnitt macht zwei Kuppelformen sichtbar; ihre Maße sind in dieser Zeichnung nicht berechnet."
+          ],
+          "freshIndependentVerification": false
+        }
+      ],
+      "sourceAccess": "Retained linked references; Giza operator, Great Wall UNESCO/NASA, Taj operator, Eiffel operator, Golden Gate construction stats and SOM construction text read in current wave. Colosseum operator timed out; city page and Panama history currently expose incomplete content. Existing numerical claims are retained, not presented as newly independently verified.",
+      "modelDecision": "Existing structure/bridge/lock/height controls retained; new individual observations, entry level and answer-specific feedback. No additional simulation without a distinct learning goal.",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "contentHash": "ad794d35e1af3f5b6d0ef5c361194c126ba3ff06e1cffe0cdc10dad43f287f8d"
+    },
+    {
+      "id": "building-eiffel-tower",
+      "kind": "individually-extended-existing",
+      "goal": "Du erkennst, dass Materialanordnung und ein durchgehender Lastweg wichtig sind, nicht nur ein hoher Umriss.",
+      "ageLevels": {
+        "6-8": "Viele verbundene Eisenteile bilden den Eiffelturm.",
+        "9-11": "Ein Team entwarf die Konstruktion aus Eisenteilen. Dazu gehörten Maurice Koechlin, Émile Nouguier, Stephen Sauvestre und Gustave Eiffels Firma.",
+        "12-14": "Ein offenes Gitter ist nicht automatisch gegen jeden Wind sicher. Verbindungen, Material und Form müssen gemeinsam berechnet werden. Der Turm zeigt, wie ein Team aus vielen einzelnen Teilen ein gemeinsames Tragwerk entwickelte."
+      },
+      "sourceClaims": [
+        {
+          "url": "https://www.toureiffel.paris/de/monument/zahlen",
+          "anchor": "Retained construction explanation / source self-review; exact access limits below",
+          "claims": [
+            "Ein offenes Gitter ist nicht automatisch gegen jeden Wind sicher. Verbindungen, Material und Form müssen gemeinsam berechnet werden. Der Turm zeigt, wie ein Team aus vielen einzelnen Teilen ein gemeinsames Tragwerk entwickelte."
+          ],
+          "freshIndependentVerification": false
+        }
+      ],
+      "sourceAccess": "Retained linked references; Giza operator, Great Wall UNESCO/NASA, Taj operator, Eiffel operator, Golden Gate construction stats and SOM construction text read in current wave. Colosseum operator timed out; city page and Panama history currently expose incomplete content. Existing numerical claims are retained, not presented as newly independently verified.",
+      "modelDecision": "Existing structure/bridge/lock/height controls retained; new individual observations, entry level and answer-specific feedback. No additional simulation without a distinct learning goal.",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "contentHash": "bd9e4ad546dde6fbc90612c8b02c060d82924d1c714f3f77be639723b7653756"
+    },
+    {
+      "id": "building-golden-gate-bridge",
+      "kind": "individually-extended-existing",
+      "goal": "Du verwechselst weder die Hauptöffnung mit der Gesamtlänge noch ein Lernmodell mit einer Sicherheitsberechnung.",
+      "ageLevels": {
+        "6-8": "Die Fahrbahn der Brücke hängt an Seilen.",
+        "9-11": "Bei der Hängebrücke tragen große Hauptkabel die Fahrbahn über kleinere Hängeseile. Türme und feste Anker halten das System.",
+        "12-14": "Die offiziellen Maße beschreiben unterschiedliche Strecken: Die Gesamtlänge schließt Zufahrtsbereiche ein, die Hauptöffnung liegt zwischen den Türmen. Kabel übertragen Lasten; sie beseitigen weder Gewicht noch Wind."
+      },
+      "sourceClaims": [
+        {
+          "url": "https://www.goldengate.org/bridge/history-research/statistics-data/design-construction-stats/",
+          "anchor": "Retained construction explanation / source self-review; exact access limits below",
+          "claims": [
+            "Die offiziellen Maße beschreiben unterschiedliche Strecken: Die Gesamtlänge schließt Zufahrtsbereiche ein, die Hauptöffnung liegt zwischen den Türmen. Kabel übertragen Lasten; sie beseitigen weder Gewicht noch Wind."
+          ],
+          "freshIndependentVerification": false
+        }
+      ],
+      "sourceAccess": "Retained linked references; Giza operator, Great Wall UNESCO/NASA, Taj operator, Eiffel operator, Golden Gate construction stats and SOM construction text read in current wave. Colosseum operator timed out; city page and Panama history currently expose incomplete content. Existing numerical claims are retained, not presented as newly independently verified.",
+      "modelDecision": "Existing structure/bridge/lock/height controls retained; new individual observations, entry level and answer-specific feedback. No additional simulation without a distinct learning goal.",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "contentHash": "0768e7210774f945f31052774ce094c5aaf7bffd2c1f244161889b9f174272b1"
+    },
+    {
+      "id": "building-panama-canal",
+      "kind": "individually-extended-existing",
+      "goal": "Du unterscheidest das Heben durch einen veränderten Wasserstand vom Heben durch einen Kran.",
+      "ageLevels": {
+        "6-8": "In einer Schleuse fährt das Schiff mit dem Wasserstand nach oben oder unten.",
+        "9-11": "Schleusen heben Schiffe auf die Höhe der Seen und senken sie wieder ab. Wasser fließt durch die Schwerkraft in die Kammern oder hinaus.",
+        "12-14": "Das Wasser in einer Schleuse gehört zu einem größeren System aus Seen, Kammern und Verbindungen. Ein Bildschirmregler ersetzt nicht den tatsächlichen Betriebsablauf. Bei einem wirklichen Kanal müssen Wasservorrat, Tore und Schiffsverkehr gemeinsam berücksichtigt werden."
+      },
+      "sourceClaims": [
+        {
+          "url": "https://pancanal.com/en/history-of-the-panama-canal/",
+          "anchor": "Retained construction explanation / source self-review; exact access limits below",
+          "claims": [
+            "Das Wasser in einer Schleuse gehört zu einem größeren System aus Seen, Kammern und Verbindungen. Ein Bildschirmregler ersetzt nicht den tatsächlichen Betriebsablauf. Bei einem wirklichen Kanal müssen Wasservorrat, Tore und Schiffsverkehr gemeinsam berücksichtigt werden."
+          ],
+          "freshIndependentVerification": false
+        }
+      ],
+      "sourceAccess": "Retained linked references; Giza operator, Great Wall UNESCO/NASA, Taj operator, Eiffel operator, Golden Gate construction stats and SOM construction text read in current wave. Colosseum operator timed out; city page and Panama history currently expose incomplete content. Existing numerical claims are retained, not presented as newly independently verified.",
+      "modelDecision": "Existing structure/bridge/lock/height controls retained; new individual observations, entry level and answer-specific feedback. No additional simulation without a distinct learning goal.",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "contentHash": "eb95ee0713031e652faea77b5482d1cc6391d77a9881670c47a37a7196952ee9"
+    },
+    {
+      "id": "building-burj-khalifa",
+      "kind": "individually-extended-existing",
+      "goal": "Du erkennst, dass Rekordhöhe nicht erklärt, wie Wind, Lasten und Untergrund zusammenwirken.",
+      "ageLevels": {
+        "6-8": "Ein hoher Turm braucht ein gemeinsam tragendes System.",
+        "9-11": "Ein kräftiger Kern und stützende Gebäudeteile tragen die Konstruktion. Beton, Stahl, Aufzüge und viele Fachleute mussten zusammenarbeiten.",
+        "12-14": "Der Kern steht nicht allein: Die drei Flügel stützen sich über den gemeinsamen Kern gegenseitig. Unterschiedliche Querschnitte verändern auch die Wirkung des Windes. Das vereinfachte Bild berechnet keine reale Gebäudebewegung."
+      },
+      "sourceClaims": [
+        {
+          "url": "https://www.som.com/projects/burj-khalifa/",
+          "anchor": "Retained construction explanation / source self-review; exact access limits below",
+          "claims": [
+            "Der Kern steht nicht allein: Die drei Flügel stützen sich über den gemeinsamen Kern gegenseitig. Unterschiedliche Querschnitte verändern auch die Wirkung des Windes. Das vereinfachte Bild berechnet keine reale Gebäudebewegung."
+          ],
+          "freshIndependentVerification": false
+        }
+      ],
+      "sourceAccess": "Retained linked references; Giza operator, Great Wall UNESCO/NASA, Taj operator, Eiffel operator, Golden Gate construction stats and SOM construction text read in current wave. Colosseum operator timed out; city page and Panama history currently expose incomplete content. Existing numerical claims are retained, not presented as newly independently verified.",
+      "modelDecision": "Existing structure/bridge/lock/height controls retained; new individual observations, entry level and answer-specific feedback. No additional simulation without a distinct learning goal.",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "contentHash": "2e9fcc47deb823b037e0eba033c4ea00a2233c155fead8d1a5cc9563d83b47ea"
+    },
+    {
+      "id": "building-pont-du-gard",
+      "kind": "new",
+      "goal": "Du trennst Wasserquelle, Fließrichtung und Tragwerk und verwechselst die Länge einer Brücke nicht mit einer ganzen Leitung.",
+      "ageLevels": {
+        "6-8": "Oben auf dieser römischen Brücke verlief eine Wasserrinne. Sie brachte Wasser zur Stadt.",
+        "9-11": "Die Römer bauten den Pont du Gard im ersten Jahrhundert nach Christus als Teil einer Wasserleitung nach Nîmes. Drei Bogenreihen tragen die Rinne über den Gardon. Das Wasser der Leitung kam von einer höher gelegenen Quelle; es wurde nicht aus dem Fluss unter der Brücke nach oben gepumpt. Ein kleines Gefälle genügte für den Wasserweg. Die hohe Brücke half, die benötigte Lage der Rinne beim Überqueren des Tals beizubehalten. Brücke und gesamte Leitung sind deshalb verschiedene Größen: Nur ein Teil der ungefähr 50 Kilometer langen Strecke führte über den Pont du Gard.",
+        "12-14": "Verfolge zwei getrennte Wege: Der Gardon fließt im Tal; die Rinne überquert ihn auf dem Bauwerk. Eine Leitung kann einen Fluss also kreuzen, ohne ihr Wasser aus diesem Fluss zu beziehen. Die Bögen übertragen Lasten auf Pfeiler und Untergrund. Die Zeichnung zeigt nur das Prinzip der Bogenreihen und der Rinne. Sie berechnet weder Steindruck noch Wassermenge oder eine sichere Tragfähigkeit."
+      },
+      "sourceClaims": [
+        {
+          "url": "https://whc.unesco.org/en/list/344/",
+          "anchor": "Outstanding Universal Value / Brief synthesis, Absätze zu Bauzeit, Rinne und drei Ebenen",
+          "claims": [
+            "Wasserleitung für Nîmes und Quelle bei Uzès",
+            "Drei Bogenebenen; mittleres erstes Jahrhundert"
+          ]
+        },
+        {
+          "url": "https://pontdugard.fr/en/discover/monument",
+          "anchor": "The monument / The aqueduct:5 centuries, Absätze1–3",
+          "claims": [
+            "Erstes Jahrhundert nach Christus; Quelle nach Nîmes durch Schwerkraft",
+            "Rund49Meter Brückenhöhe und50Kilometer Gesamtleitung"
+          ]
+        }
+      ],
+      "sourceAccess": "UNESCO-Haupttext und Betreibertext tatsächlich gelesen. Veraltete UNESCO-Kurzfassung vorBeginn unsererZeitrechnung widerspricht der aktuellen BriefSynthesis und dem Betreibertext; deshalb erstesJahrhundert n.Chr. Keine schwankenden Tagesmengen/ungeprüften Bauzeitrekorde übernehmen.",
+      "modelDecision": "Eigene Prinzipskizze, kein maßstäblicher Bauplan und keine Wasser- oder Tragwerksberechnung.",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "contentHash": "2c5b6708ad312921141e2c7c400f6dbe0bfcf18a3289b66d9163ad83e71ad45c"
+    },
+    {
+      "id": "building-great-zimbabwe",
+      "kind": "new",
+      "goal": "Du erkennst handwerkliches Wissen und prüfst, welche Teile einer vergangenen Stadt überhaupt noch erhalten sind.",
+      "ageLevels": {
+        "6-8": "Hier bauten Menschen große Mauern aus passend gesetzten Steinen. Zwischen ihnen liegt kein Mörtel.",
+        "9-11": "In Groß-Simbabwe bauten Vorfahren der heutigen Shona über mehrere Jahrhunderte eine bedeutende Stadt. Ihre erhaltenen Mauern bestehen aus sorgfältig gesetzten Granitsteinen. Mörtel zwischen den Steinen war dafür nicht nötig. Die Große Einfriedung ist nur ein Teil der Anlage. Früher gehörten auch Wohnbauten aus vergänglicheren Materialien dazu. Die heute sichtbaren Steinmauern zeigen deshalb nicht allein, wie die ganze Stadt aussah oder wie alle Menschen dort lebten.",
+        "12-14": "Trockenmauerwerk bedeutet nicht, Steine beliebig aufzuhäufen. Passende Auflageflächen und die Anordnung der Lagen gehören zur handwerklichen Arbeit. Einige Mauern verjüngen sich nach oben. Archäologische Funde belegen regionale Herstellung und weitreichende Handelskontakte. Frühere Behauptungen, fremde Völker hätten die Stadt erbaut, widersprachen späteren archäologischen Nachweisen ihrer afrikanischen Entstehung. Die genaue Funktion einzelner Mauern bleibt eine Forschungsfrage."
+      },
+      "sourceClaims": [
+        {
+          "url": "https://whc.unesco.org/en/list/364/",
+          "anchor": "Brief synthesis, Gruppen/HillRuins/GreatEnclosure; Forschung/Handelsfunde",
+          "claims": [
+            "Shona-Kultur und Bauphasen11.–15.Jahrhundert",
+            "Mehrere Teile der Stadt; archäologisch belegte Handelskontakte"
+          ]
+        },
+        {
+          "url": "https://www.metmuseum.org/essays/great-zimbabwe-11th-15th-century",
+          "anchor": "Stone Ruins sowie GreatZimbabwe’sInhabitants, Absätze zu Mauerwerk und daga",
+          "claims": [
+            "Granit ohne Mörtel, nachinnen versetzte Lagen",
+            "Vergängliche Wohnbauten ergänzten Steinmauern; afrikanischer Ursprung archäologisch bestätigt"
+          ]
+        }
+      ],
+      "sourceAccess": "UNESCO und Met-Essay tatsächlich gelesen. Legendäre Königin-von-Saba-Zuschreibung nicht als Tatsache verwenden. Unterschiedliche Stadt-/Schutzflächen nicht mischen, vereinfachte Aufgabeursachen und fehlerverdächtige19.Jahrhundert-Angabe der UNESCO-Valley-Zeile nicht übernehmen.",
+      "modelDecision": "Eigene Lernskizze für Mauerlagen; weder genaue Rekonstruktion einer bestimmten Mauer noch Bauanleitung.",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "contentHash": "c4969414f9745114d6a73f724dd60eb5b5eec7def3a642a42b42eaffbb07c24a"
+    },
+    {
+      "id": "building-horyu-ji",
+      "kind": "new",
+      "goal": "Du liest ein Tragwerk als zusammenhängenden Lastweg und verwechselst lange Erhaltung nicht mit völliger Unzerstörbarkeit.",
+      "ageLevels": {
+        "6-8": "Holzstützen tragen hier Balken und Dächer. Verbundene Teile geben das Gewicht weiter.",
+        "9-11": "Zur buddhistischen Tempelanlage Hōryū-ji in Japan gehören sehr alte erhaltene Holzbauten. Einige stammen aus dem späten siebten oder frühen achten Jahrhundert. Das Alter der Anlage bedeutet nicht, dass jedes heutige Holzstück seit der ersten Gründung unverändert geblieben ist. Stützen, Balken und auskragende Konsolen tragen die weit ausladenden Dächer. Die Verbindung dieser Teile leitet Lasten weiter. Der Tempel ist zugleich ein Ort religiöser Praxis und kein verlassenes Technikmodell.",
+        "12-14": "Ein weit herausragendes Dach braucht einen nachvollziehbaren Lastweg. In der Skizze verfolgst du Dach, Konsolen und Stützen bis zum Untergrund. Die Pfeile geben eine Richtung an, keine gemessene Kraft. Erhalten bedeutet auch pflegen: Fachleute untersuchen und reparieren beschädigte Teile mit geeigneten Methoden. Holzbau allein verspricht weder Unverwundbarkeit bei Feuer noch Sicherheit bei jedem Erdbeben."
+      },
+      "sourceClaims": [
+        {
+          "url": "https://whc.unesco.org/en/list/660/",
+          "anchor": "BriefSynthesis, Absätze zu Brand670/Wiederaufbau und baySystem/bracketing; Authenticity",
+          "claims": [
+            "ÜberlieferterBrand und erhalteneBauphasen",
+            "Dachlasten über Konsolen zuHolzstützen; kontrollierte Reparaturen"
+          ]
+        },
+        {
+          "url": "https://www.pref.nara.lg.jp/n037/71423.html",
+          "anchor": "AboutHoryu-jiTemple, Gründungs-/Brandbericht und WesternPrecinct",
+          "claims": [
+            "Traditionelle Gründung607 und Brandüberlieferung670",
+            "MehrereBaugruppen und historischeHolzbauten"
+          ]
+        }
+      ],
+      "sourceAccess": "UNESCO und Nara-Präfektur-Haupttext tatsächlich gelesen: Gründungs-/Brandüberlieferung, Wiederaufbau, heutige Baugruppen und Konsolen. Die Detailmaße eines einzelnen in Reparatur beschriebenen Gebäudes nicht als Maße der ganzen Anlage übernehmen. Tempel-Pagodentext timedout; keine Erdbeben- oder Brandsicherheitsrekorde behaupten.",
+      "modelDecision": "Qualitative eigene Prinzipskizze; keine genaue historische Fügung oder Simulation eines Erdbebens.",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "contentHash": "c17909cc56456d4dd8eb1807058d27a0b4a0c2c4e30df047d5956427f7a1dc5d"
+    },
+    {
+      "id": "building-djenne-mosque",
+      "kind": "new",
+      "goal": "Du unterscheidest Bauen von Erhalten und erkennst, warum eine scheinbar einfache Reparatur Folgen für andere Teile haben kann.",
+      "ageLevels": {
+        "6-8": "Diese Moschee nutzt Lehmbaustoffe. Menschen pflegen sie mit handwerklichem Wissen.",
+        "9-11": "Die heutige Große Moschee von Djenné entstand 1906–1907 an einem Ort mit älteren Vorgängerbauten. Wände, Stützen und Putz nutzen traditionelle erdgebundene Baustoffe. Lokales Handwerk und religiöses Leben gehören zum Verständnis des Bauwerks. Die Gemeinschaft pflegt die Oberfläche regelmäßig. Dabei ist nicht beliebig viel neuer Putz automatisch besser: Auch zusätzliche Schichten bringen Gewicht mit. Fachkundige Instandhaltung muss Oberfläche, Dach und tragende Teile gemeinsam betrachten.",
+        "12-14": "Eine Oberflächenschicht und eine tragende Wand haben verschiedene Aufgaben. Das Ergänzen von Putz kann beschädigte Oberflächen schützen, ersetzt aber keine Untersuchung von Dach und Tragwerk. Bei Restaurierungen arbeiteten Fachleute mit örtlichen Handwerksgemeinschaften. So gehört überliefertes Wissen zur Erhaltung. Die Zeichnung ist keine Rezeptur für historischen Lehmputz und keine Anleitung zum Klettern oder Reparieren."
+      },
+      "sourceClaims": [
+        {
+          "url": "https://whc.unesco.org/en/list/116/",
+          "anchor": "BriefSynthesis/Kriteriumiv/Authenticity, Wiederaufbau1906–1907 und Handwerk",
+          "claims": [
+            "Bauphase1906–1907; erdgebundene Architektur",
+            "Überlieferung der Handwerkstechniken"
+          ]
+        },
+        {
+          "url": "https://the.akdn/En/Where-We-Work/West-Africa/Mali/Earthen-Architecture-Programme-Mali",
+          "anchor": "Djenné, Absätze zu jährlichem banco und Restaurierung ab2008",
+          "claims": [
+            "ZusätzlichePutzmengen belasteten Dach undWände",
+            "Restaurierung undArbeit mit örtlicherHandwerksgemeinschaft"
+          ]
+        }
+      ],
+      "sourceAccess": "UNESCO sowie vollständigen aktuellen AKDN-Abschnitt Djenné tatsächlich gelesen. Zusätzliche banco-Schichten belasteten das Tragwerk; Pflege und passende fachliche Erhaltung gemeinsam beschreiben. Smarthistory indexiert, direkter Abruf403; keine Fremdfotos oder Putzrezepte übernehmen. Bauphase1906–1907 vom älteren Standort unterscheiden.",
+      "modelDecision": "Eigene Funktionsübersicht ohne genaue Materialmischung, Belastungswerte oder historische Fassadenrekonstruktion.",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "contentHash": "bd7601ef9b42aa3f9c1cdda8d678ab14ab0d4189f8fc420edf97d1c6ee7234ad"
+    },
+    {
+      "id": "building-lalibela",
+      "kind": "new",
+      "goal": "Du unterscheidest Material und Hohlraum und erkennst, dass nicht jedes Bauwerk auf dieselbe Weise entsteht.",
+      "ageLevels": {
+        "6-8": "Hier arbeiteten Menschen Räume aus dem Fels heraus. Sie bauten nicht nur Stein auf Stein.",
+        "9-11": "In Lalibela wurden mittelalterliche Kirchen aus anstehendem Fels herausgearbeitet. Manche stehen in tiefen ausgehauenen Höfen. Türen, Räume und Stützen entstanden nicht einfach durch das Stapeln fertig angelieferter Steinblöcke. Die Anlage umfasst elf Kirchen und Verbindungswege. Gräben dienen auch der Entwässerung. Wasser kann Gestein und Bauwerk schädigen; die erhaltenen Formen brauchen deshalb weiter Schutz und Pflege. Die Kirchen bleiben religiös genutzte Orte.",
+        "12-14": "Beim Lesen der Skizze musst du festes Material und ausgeräumten Raum unterscheiden. Eine dunkle Form kann den Fels darstellen, eine helle Aussparung einen Zugang. Frage deshalb zuerst nach der Legende. Entwässerung gehört zur Erhaltung des Ganzen. Ein gezeichneter Graben zeigt nur einen möglichen Wasserweg; er beweist weder die richtige Ausführung eines historischen Grabens noch die Stabilität des verbleibenden Felsens."
+      },
+      "sourceClaims": [
+        {
+          "url": "https://whc.unesco.org/en/list/18/",
+          "anchor": "BriefSynthesis, Felsblöcke/Türen/Räume/Gräben; Integrity/Authenticity",
+          "claims": [
+            "Elf Kirchen und ausFels herausgearbeiteteBaukörper",
+            "Entwässerung und Erhaltung; fortdauernde religiöse Nutzung"
+          ]
+        },
+        {
+          "url": "https://www.wmf.org/projects/rock-hewn-churches",
+          "anchor": "Projektbeschreibung/TrainingCraftspeople, indexierterHaupttext",
+          "claims": [
+            "Konservierung und verbesserteEntwässerung",
+            "LokaleHandwerkerausbildung imErhaltungsprojekt"
+          ]
+        }
+      ],
+      "sourceAccess": "UNESCO-Haupttext tatsächlich gelesen. WMF-Projekttext überSuchindex verfügbar; direkterAbruf liefertnurSkript-/Newsletterrahmen, daher nicht als vollständigerOriginalabruf bezeichnen.12./13.Jahrhundert als vorsichtigeEinordnung statt genauer ungesicherterEinzeldaten.",
+      "modelDecision": "Eigene schematische Material-/Raumskizze; keine Rekonstruktion der genauen Baufolge und keine Grabungsanleitung.",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "contentHash": "2c251339d8b43f45c9221119856e7965ab635660aea0e1d2236753a84a60ef8c"
+    },
+    {
+      "id": "building-angkor-wat",
+      "kind": "new",
+      "goal": "Du liest Karten und Größenangaben genauer und vermeidest, die Eigenschaften einer ganzen Region einem einzelnen Gebäude zuzuschreiben.",
+      "ageLevels": {
+        "6-8": "Angkor Wat ist ein Tempel in einer viel größeren historischen Landschaft. Ein Wassergraben umgibt ihn.",
+        "9-11": "Angkor Wat gehört zur großen historischen Landschaft von Angkor in Kambodscha. Der Tempel stammt aus dem zwölften Jahrhundert. Galerien, Höfe und Türme bilden eine zusammenhängende Anlage, die von einem breiten Wassergraben umgeben ist. Die Region Angkor umfasst weitere Tempel, Siedlungen, Straßen, Becken und Kanäle aus mehreren Jahrhunderten. Die Fläche des ganzen Welterbegebiets ist deshalb keine Größenangabe für Angkor Wat allein. Auch heute gehören Menschen und religiöses Leben zu dieser Landschaft.",
+        "12-14": "Im Übersichtsbild suchst du zuerst den Rand des Tempels, dann den Graben und schließlich weitere Wasserwege. Eine räumliche Verbindung allein verrät noch nicht, zu welcher Zeit ein Kanal genutzt wurde oder welchem Zweck er genau diente. Aus einem schönen Grundriss lassen sich nicht alle bautechnischen Zusammenhänge ablesen. Sandsteinflächen, tragende Teile, Pflege und Wasserhaushalt brauchen eigene Untersuchungen. Die schematische Wasserübersicht berechnet keine Überflutung und keine Standsicherheit."
+      },
+      "sourceClaims": [
+        {
+          "url": "https://whc.unesco.org/en/list/668/",
+          "anchor": "BriefSynthesis/Integrity, regionaleAnlage, Wasserbauwerke undbewohnteSiedlungen",
+          "claims": [
+            "VieleTempel undhydraulischeAnlagen inAngkor",
+            "Landschaft bleibt bewohnt und religiös genutzt"
+          ]
+        },
+        {
+          "url": "https://apsaraauthority.gov.kh/our-work/archeological-research-conservation/34/",
+          "anchor": "Conservation and restoration work atAngkorWat, Hauptabsatz",
+          "claims": [
+            "Datierung12.Jahrhundert",
+            "Tempel mit umgebendemWassergraben"
+          ]
+        },
+        {
+          "url": "https://asia-archive.si.edu/object/S1987.901/",
+          "anchor": "Label, second paragraph (line69), Angkor Wat ca.1150",
+          "claims": [
+            "Angkor Wat was built in the twelfth century; object dimensions are NOT temple dimensions"
+          ]
+        }
+      ],
+      "sourceAccess": "UNESCO-Haupttext und Smithsonian-Objektlabel tatsächlich gelesen: Tempel im zwölften Jahrhundert. APSARA-Absatz im Suchindex zugänglich, Direktabruf fehlgeschlagen; widersprüchliche Flächenangabe nicht übernehmen. Smithsonian-Objektmaße und unklare Bildrechte nicht auf Tempel oder Mediennutzung übertragen. Keine bestimmte ungesicherte Grabenfunktion behaupten.",
+      "modelDecision": "Eigene schematische Draufsicht ohne genaue Maße, Kanalnetzrekonstruktion oder hydraulischeBerechnung.",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "contentHash": "713878a34e55aced5671129a65633e114968b1e007de57796aed93032acfe929"
+    },
+    {
+      "id": "building-palenque",
+      "kind": "new",
+      "goal": "Du trennst Beobachtung von Deutung und nutzt Pläne, Architektur und Quellen als unterschiedliche Hinweise.",
+      "ageLevels": {
+        "6-8": "In Palenque lebten Menschen der Maya. Erhaltene Bauten zeigen Räume, Höfe, Bilder und Schrift.",
+        "9-11": "Palenque war eine Stadt der Maya im heutigen Mexiko. Ihre bekannte Blütezeit lag ungefähr zwischen 500 und 700 n.Chr. Tempel, Palastbauten, Höfe und Wohnbereiche gehörten zu einem größeren städtischen Zusammenhang. Steinerne Dächer, Galerien und reich gestaltete Flächen prägen die erhaltenen Bauten. Bilder und Schriftzeichen ergänzen die räumliche Architektur. Ein Raumplan zeigt Wege und Nachbarschaften, erklärt aber nicht von selbst die Bedeutung jeder Inschrift oder die Nutzung jedes Zimmers.",
+        "12-14": "Beim Vergleich von Bauformen zählt der genaue Aufbau. Ein Kraggewölbe rückt Steinlagen schrittweise zur Mitte vor. Es ist nicht dasselbe Prinzip wie ein Bogen aus keilförmig angeordneten Steinen; beide brauchen geeignete Auflager und genaue Prüfung. Funde, Bauzustände und Schriftzeugnisse ergänzen sich. Verlässliche Erklärungen verbinden diese Hinweise, statt eine vermutete Funktion allein aus der Höhe eines Turms abzuleiten. Maya-Kulturen gehören zudem nicht nur der Vergangenheit an."
+      },
+      "sourceClaims": [
+        {
+          "url": "https://whc.unesco.org/en/list/411/",
+          "anchor": "BriefSynthesis, städtischerGrundriss/Galerien/Gewölbe/Schrift undClassicperiod",
+          "claims": [
+            "Palenque mitPalästen, Tempeln undWohnbereichen",
+            "Bauten undSchrift/Kalendersysteme; ungefähr500–700n.Chr."
+          ]
+        },
+        {
+          "url": "https://lugares.inah.gob.mx/en/node/5523",
+          "anchor": "TheStyleofMayaGulfCoastArchitecture, VergleichmitPalenque undcorbelledvaults",
+          "claims": [
+            "Kraggewölbe alsBauprinzip derMaya-Architektur",
+            "Palenque alsarchitektonischerVergleich; unterschiedliche Materialien verschiedenerOrte beachten"
+          ]
+        }
+      ],
+      "sourceAccess": "UNESCO und aktueller INAH-Haupttext tatsächlich gelesen. INAH beschreibt im Artikel vor allem Comalcalco und vergleicht Palenque: Ziegel und dortige Entwässerungsdaten nicht auf Palenque übertragen. Der separate INAH-Welterbetext ist teils UNESCO-Übernahme und keine unabhängige Bestätigung. Nur eigene Texte/Prinzipskizzen, keine Übernahme der BY-NC-ND-Medien oder Übersetzung geschützter Formulierungen.",
+      "modelDecision": "Eigene Prinzipdarstellung zuRaum undBauform; keine maßstäbliche Rekonstruktion eines bestimmtenPalenque-Raums.",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "contentHash": "cfda443eefa586ec035f9e1c77d40b58136e86e6e17f1a6e3c050bd2742a2328"
+    },
+    {
+      "id": "building-sydney-opera",
+      "kind": "new",
+      "goal": "Du unterscheidest Größe und Krümmung und erkennst, wie eine mathematische Idee beim Bauen helfen kann, ohne alle Probleme allein zu lösen.",
+      "ageLevels": {
+        "6-8": "Die Dächer sehen verschieden aus. Eine gemeinsame Kugelform half, ihre Bauteile zu planen.",
+        "9-11": "Das Opernhaus von Sydney wurde 1973 eröffnet. Seine auffälligen Dächer erinnern an Segel oder Schalen. Tatsächlich gehören zu ihrer Konstruktion vorgefertigte Betonbauteile und ein gemeinsames geometrisches Prinzip: Teile derselben Kugelform. Jørn Utzon entwickelte den Entwurf; viele Architektinnen, Ingenieure und Handwerksleute wirkten an der Ausführung mit. Das Haus wird für verschiedene Aufführungen genutzt. Eine besondere Außenform erklärt nicht automatisch, wie gut sich jeder Ton in einem Saal hören lässt.",
+        "12-14": "Im geometrischen Vergleich kann ein längerer und ein kürzerer Kreisbogen denselben Radius haben. Das ist eine zweidimensionale Hilfe zur gemeinsamen Krümmung; die wirklichen Dächer sind räumliche Konstruktionen. Die Kugelgeometrie erleichterte wiederholbare Bauteile. Damit waren nicht sämtliche Aufgaben gelöst: Tragwerk, Bauausführung, Innenräume und Erhaltung verlangen zusätzliches Wissen. Die populäre Geschichte von einer geschälten Orange ist kein sicher belegter einzelner Entdeckungsmoment."
+      },
+      "sourceClaims": [
+        {
+          "url": "https://whc.unesco.org/en/list/166/",
+          "anchor": "OutstandingUniversalValue, kollektiveEntwurfs-/Ingenieurleistung undAufführungsnutzung",
+          "claims": [
+            "Zusammenarbeit mitUtzon undArup",
+            "NutzungalsAufführungsort undBauwerk des20.Jahrhunderts"
+          ]
+        },
+        {
+          "url": "https://www.sydneyoperahouse.com/our-story/the-spherical-solution",
+          "anchor": "Absätze58–81, sphere/prefabrication/orangeMyth",
+          "claims": [
+            "GemeinsameKugelgeometrie undwiederholbareBauteile",
+            "Orangenanekdote nicht alsbelegteEinzelentdeckung ausgeben"
+          ]
+        },
+        {
+          "url": "https://www.sydneyoperahouse.com/our-story/50-years-extraordinary-moments",
+          "anchor": "Eröffnungsabsätze understeAufführungen",
+          "claims": [
+            "Eröffnung20.Oktober1973",
+            "Aufführungen schonvoroffiziellerEröffnung"
+          ]
+        }
+      ],
+      "sourceAccess": "UNESCO sowiebeide aktuellenBetreiber-Haupttexte tatsächlich gelesen. Eigene geometrische Skizzen stattkopierterEntwurfspläne. GemeinschaftsleistungundGrenzen derKreisanalogie beachten; keineberechneteStatik oderAkustik behaupten.",
+      "modelDecision": "Eigene zweidimensionale Geometriehilfe, keine historische Dachprojektion, Statik- oder Akustiksimulation.",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "contentHash": "48847331f038963204606f9350f87e50d96da03be75ece18483baf6a571ce770"
+    }
+  ],
+  "newConnections": [
+    {
+      "from": "building-pont-du-gard",
+      "to": "science-water-cycle",
+      "why": "Die Quelle liefert Wasser aus dem natürlichen Wasserkreislauf. Die Wasserbrücke verändert dessen Weg zur Stadt, erzeugt aber kein neues Wasser."
+    },
+    {
+      "from": "building-pont-du-gard",
+      "to": "building-colosseum",
+      "why": "Beide römischen Bauwerke nutzen Bögen. Beim Pont du Gard tragen sie eine Wasserrinne, beim Kolosseum Teile eines ganz anders genutzten Gebäudes."
+    },
+    {
+      "from": "building-great-zimbabwe",
+      "to": "building-great-wall",
+      "why": "Mauern erfüllen an verschiedenen Orten unterschiedliche Aufgaben und nutzen unterschiedliche Materialien. Ihre bloße Größe beweist weder dieselbe Nutzung noch dieselbe Bauweise."
+    },
+    {
+      "from": "building-great-zimbabwe",
+      "to": "history-timbuktu",
+      "why": "Groß-Simbabwe und Timbuktu zeigen eigenständige afrikanische Stadt- und Handelsgeschichten. Ein Vergleich macht Unterschiede sichtbar; er belegt keine direkte Route zwischen beiden Orten."
+    },
+    {
+      "from": "building-horyu-ji",
+      "to": "science-patterns",
+      "why": "Wiederholte Stützenfelder und Bauteile helfen, eine Konstruktion zu ordnen. Das Erkennen eines Musters ersetzt aber keine Prüfung, wie Kräfte tatsächlich weitergeleitet werden."
+    },
+    {
+      "from": "building-horyu-ji",
+      "to": "building-eiffel-tower",
+      "why": "Holztempel und Eisenturm nutzen unterschiedliche Materialien und Formen. Bei beiden kannst du nach einem zusammenhängenden Lastweg zum Untergrund fragen."
+    },
+    {
+      "from": "building-djenne-mosque",
+      "to": "history-timbuktu",
+      "why": "Djenné und Timbuktu sind unterschiedliche malische Stadtgeschichten mit eigener Architektur und überliefertem Wissen. Der Vergleich verbindet Handwerk und kulturelle Nutzung, ohne beide Orte gleichzusetzen."
+    },
+    {
+      "from": "building-djenne-mosque",
+      "to": "building-horyu-ji",
+      "why": "Lehmbau und Holzbau verlangen unterschiedliche Erhaltung. Gemeinsam ist die Frage, wie überliefertes Handwerk vorhandene Bauteile fachkundig bewahren kann."
+    },
+    {
+      "from": "building-lalibela",
+      "to": "invention-3d-printing",
+      "why": "Die Felsbearbeitung nimmt Material weg, während viele additive Druckverfahren Material aufbauen. Der Vergleich verbindet räumliche Form und Herstellungsweg, ohne historische Werkzeuge gleichzusetzen."
+    },
+    {
+      "from": "building-lalibela",
+      "to": "science-water-cycle",
+      "why": "Niederschlag ist Teil des Wasserkreislaufs; ein Bauwerk muss mit diesem Wasser umgehen. Die Entwässerung in Lalibela verbindet natürlichen Wasserweg und Schutz der gebauten Formen."
+    },
+    {
+      "from": "building-angkor-wat",
+      "to": "science-water-cycle",
+      "why": "Natürlicher Niederschlag und gebaute Becken oder Kanäle beeinflussen Wasserwege. Das erklärt noch nicht jeden historischen Zweck, hilft aber, Landschaft und Bauwerk gemeinsam zu betrachten."
+    },
+    {
+      "from": "building-angkor-wat",
+      "to": "building-panama-canal",
+      "why": "Beide Anlagen machen Wasserbau sichtbar, haben aber andere Aufgaben und Geschichten. Die Schleusen des Panamakanals dürfen nicht als Erklärung für jeden Wassergraben übertragen werden."
+    },
+    {
+      "from": "building-palenque",
+      "to": "history-maya",
+      "why": "Die Geschichte der Maya erschließt kulturelle und zeitliche Zusammenhänge. Palenques konkrete Bauten ergänzen diesen Überblick, ersetzen aber keine Aussagen über alle Maya-Städte oder heutige Gemeinschaften."
+    },
+    {
+      "from": "building-palenque",
+      "to": "building-colosseum",
+      "why": "Ein Kraggewölbe und ein Keilsteinbogen schließen Räume mit unterschiedlichen Anordnungen. Der Vergleich hilft, ähnliche Umrisse nicht vorschnell als dieselbe Konstruktion zu lesen."
+    },
+    {
+      "from": "building-sydney-opera",
+      "to": "science-angle",
+      "why": "Ein Winkel kann beschreiben, welcher Ausschnitt einer Kreislinie markiert wird. Der Radius bleibt dabei eine andere Größe; so lassen sich Form und Maß getrennt untersuchen."
+    },
+    {
+      "from": "building-sydney-opera",
+      "to": "science-sound",
+      "why": "Ein Aufführungshaus verbindet Architektur und Schall. Seine markante Außenform allein beweist aber noch keine bestimmte Akustik im Innenraum."
+    }
+  ],
+  "preparedManuscripts": []
+}

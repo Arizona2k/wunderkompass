@@ -26,6 +26,7 @@ requiredScreenshots.push(...['source-5-320','source-25-320','starter-30-320','st
 requiredScreenshots.push(...[320,1440].flatMap(width=>worldIndex.filter(t=>t.category==='inventions').map(t=>'quality-navigation-invention-model-'+t.id+'-'+width+'.png')),'quality-navigation-invention-native-200-large.png','quality-navigation-invention-steps-large-320.png','quality-navigation-invention-labels-fridge-768.png');
 requiredScreenshots.push(...[320,1440].flatMap(width=>['keyboard','pointer'].map(input=>'quality-foundation-foundation-route-focus-'+input+'-'+width+'.png')));
 requiredScreenshots.push(...worldIndex.filter(t=>t.inventionModel).flatMap(t=>[...([320,1440].map(width=>'quality-navigation-invention-experiment-'+t.id+'-'+width+'.png')),'quality-navigation-invention-experiment-native-'+t.id+'.png']));
+requiredScreenshots.push(...worldIndex.filter(t=>t.buildingKind).flatMap(t=>[320,1440].map(w=>'quality-navigation-building-model-'+t.id+'-'+w+'.png')),'quality-navigation-building-native-200-large.png','quality-navigation-building-large-320.png');
 export function retainScreenshot(name){
  // Each individual plan and distinct functional model has review value.
  // Keep mobile/desktop and actual native model states; never fill the budget.

@@ -3057,5 +3057,149 @@
       "Verfolge die zwei unterschiedlich dargestellten Fadenwege. Welche Bauteile müssen im beschriebenen Stichprinzip zusammenarbeiten?",
       "Vergleiche die Fadenverbindung mit einer losen Kreuzung oder einer Klebestelle. Welche Art von Verbindung beschreibt die Erklärung tatsächlich?"
     ]
+  },
+  {
+    "prompt": "Woher kam das Wasser, das oben über den Pont du Gard floss?",
+    "answers": [
+      "Aus einer höher gelegenen Quelle entlang der Wasserleitung.",
+      "Es sprang vom Fluss unter der Brücke nach oben.",
+      "Die Höhe der Bögen erzeugte neues Wasser."
+    ],
+    "correct": 0,
+    "why": "Die Leitung führte Wasser von einer höher gelegenen Quelle nach Nîmes. Die Brücke trug die Rinne über das Tal; sie erzeugte oder pumpte kein Wasser.",
+    "id": "building-pont-du-gard:mini",
+    "topic": "building-pont-du-gard",
+    "topicTitle": "Pont du Gard – Wasser über dem Fluss",
+    "difficulty": "easy",
+    "hints": [
+      "Suche den Anfang der Wasserleitung, nicht den nächsten sichtbaren Fluss.",
+      "Verfolge den Wasserweg von der Quelle zur Stadt: Der Anfang lag höher als das Ziel."
+    ]
+  },
+  {
+    "prompt": "Was bedeutet Trockenmauerwerk in Groß-Simbabwe?",
+    "answers": [
+      "Die Steine wurden sorgfältig ohne Mörtel zwischen ihnen gesetzt.",
+      "Jede beliebige Steinlage ist dadurch immer einsturzsicher.",
+      "Die Mauern bestanden früher nur aus unsichtbarem Zement."
+    ],
+    "correct": 0,
+    "why": "Die erhaltenen Granitsteine wurden ohne Mörtel angeordnet. Sorgfalt, Form und Untergrund bleiben wichtig; daraus folgt keine allgemeine Einsturzsicherheit.",
+    "id": "building-great-zimbabwe:mini",
+    "topic": "building-great-zimbabwe",
+    "topicTitle": "Groß-Simbabwe – Steine ohne Mörtel",
+    "difficulty": "easy",
+    "hints": [
+      "Trockenmauerwerk beschreibt, wie Steine angeordnet sind und was zwischen ihnen liegt. Suche danach in der Erklärung.",
+      "Zwischen den Steinen wurde kein Mörtel verwendet."
+    ]
+  },
+  {
+    "prompt": "Welche Erklärung passt zum hölzernen Tragwerk von Hōryū-ji?",
+    "answers": [
+      "Stützen und verbundene Bauteile leiten Dachlasten zum Untergrund.",
+      "Das Dach schwebt, weil das Holz besonders alt ist.",
+      "Jeder Holzbau übersteht ohne Pflege beliebig viele Schäden."
+    ],
+    "correct": 0,
+    "why": "Das Gewicht wird über verbundene Bauteile und Stützen weitergeleitet. Alter ersetzt weder einen tragfähigen Lastweg noch Erhaltung und sorgfältige Prüfung.",
+    "id": "building-horyu-ji:mini",
+    "topic": "building-horyu-ji",
+    "topicTitle": "Hōryū-ji – Dächer auf Holzstützen",
+    "difficulty": "easy",
+    "hints": [
+      "Das Dach liegt nicht nur an einem einzigen unsichtbaren Punkt auf.",
+      "Konsolen, Balken und Stützen haben unterschiedliche Aufgaben im Lastweg."
+    ]
+  },
+  {
+    "prompt": "Warum ist immer mehr neuer Putz nicht automatisch die beste Erhaltung?",
+    "answers": [
+      "Zusätzliche Schichten bringen auch Gewicht; Dach und Tragwerk müssen mitgeprüft werden.",
+      "Lehmoberflächen brauchen grundsätzlich niemals Pflege.",
+      "Die ursprünglichen Wände müssen dabei immer vollständig verschwinden."
+    ],
+    "correct": 0,
+    "why": "Erhaltung betrachtet Oberfläche und Tragwerk zusammen. Neue Schichten können zusätzliches Gewicht einbringen; fachkundige Pflege ist deshalb mehr als bloßes Überdecken.",
+    "id": "building-djenne-mosque:mini",
+    "topic": "building-djenne-mosque",
+    "topicTitle": "Die Große Moschee von Djenné",
+    "difficulty": "easy",
+    "hints": [
+      "Putz ist ebenfalls Material mit Gewicht. Prüfe, ob mehr davon allein die ganze Konstruktion verbessert.",
+      "Oberfläche, Dach und tragende Wände hängen zusammen."
+    ]
+  },
+  {
+    "prompt": "Was unterscheidet die Felskirchen von einem Haus aus aufeinandergelegten Blöcken?",
+    "answers": [
+      "Räume und Formen wurden aus dem vorhandenen Fels herausgearbeitet.",
+      "Sämtliches Gestein verschwand, bevor die Räume entstanden.",
+      "Ein gezeichneter Hohlraum beweist allein die Sicherheit jeder Felsdecke."
+    ],
+    "correct": 0,
+    "why": "Der vorhandene Fels wurde gezielt abgetragen. Verbleibender Baukörper und ausgehauene Freiräume gehören zusammen; ihre wirkliche Stabilität muss fachkundig geprüft werden.",
+    "id": "building-lalibela:mini",
+    "topic": "building-lalibela",
+    "topicTitle": "Lalibela – Räume aus dem Fels",
+    "difficulty": "easy",
+    "hints": [
+      "Dach und Wände können aus dem Material bestehen, das stehen bleibt.",
+      "Hier gehört gezieltes Wegnehmen zum Entstehen des Raums."
+    ]
+  },
+  {
+    "prompt": "Warum darfst du die Fläche der gesamten Region Angkor nicht als Tempelfläche von Angkor Wat angeben?",
+    "answers": [
+      "Die Region enthält weitere Tempel, Siedlungen und Wasseranlagen.",
+      "Jeder Wassergraben hat automatisch dieselbe Fläche wie der Tempel.",
+      "Ein Kartenname macht alle Umrisse gleich groß."
+    ],
+    "correct": 0,
+    "why": "Angkor Wat ist nur ein Bestandteil der größeren Landschaft Angkor. Eine Flächenangabe braucht einen klar benannten räumlichen Bezug.",
+    "id": "building-angkor-wat:mini",
+    "topic": "building-angkor-wat",
+    "topicTitle": "Angkor Wat – Tempel und Wasserwege",
+    "difficulty": "easy",
+    "hints": [
+      "Angkor und Angkor Wat bezeichnen nicht dieselbe Ausdehnung.",
+      "Zur größeren Region gehören viele weitere Anlagen."
+    ]
+  },
+  {
+    "prompt": "Was kannst du aus einem einfachen Grundriss sicherer ablesen als die Bedeutung einer Inschrift?",
+    "answers": [
+      "Welche gezeichneten Räume durch einen sichtbaren Zugang verbunden sind.",
+      "Welcher unübersetzte Satz an jeder Wand steht.",
+      "Wie jeder einzelne Mensch an jedem Tag lebte."
+    ],
+    "correct": 0,
+    "why": "Ein Grundriss kann sichtbare räumliche Verbindungen zeigen. Schriftbedeutungen und konkrete Lebensabläufe benötigen zusätzliche fachliche Hinweise.",
+    "id": "building-palenque:mini",
+    "topic": "building-palenque",
+    "topicTitle": "Palenque – Räume, Höfe und Schrift",
+    "difficulty": "easy",
+    "hints": [
+      "Suche nach einer sichtbaren Öffnung zwischen zwei eingezeichneten Räumen.",
+      "Eine räumliche Verbindung ist noch keine Übersetzung eines Wandtexts."
+    ]
+  },
+  {
+    "prompt": "Können ein längerer und ein kürzerer Ausschnitt derselben Kreislinie denselben Radius haben?",
+    "answers": [
+      "Ja, beide bleiben gleich weit von derselben Kreismitte entfernt.",
+      "Nein, jeder längere Ausschnitt braucht automatisch einen größeren Radius.",
+      "Ja, deshalb braucht ein echtes Dach niemals ein Tragwerk."
+    ],
+    "correct": 0,
+    "why": "Der Radius ist der Abstand zur Kreismitte. Unterschiedlich lange Ausschnitte derselben Kreislinie behalten diesen Abstand; reale Dachlasten sind eine zusätzliche Frage.",
+    "id": "building-sydney-opera:mini",
+    "topic": "building-sydney-opera",
+    "topicTitle": "Das Opernhaus von Sydney",
+    "difficulty": "easy",
+    "hints": [
+      "Zeichne zuerst einen Kreis mit festem Mittelpunkt.",
+      "Markiere darauf zwei verschieden lange Ausschnitte und vergleiche ihren Abstand zur Mitte."
+    ]
   }
 ]

@@ -1,0 +1,148 @@
+[
+  {
+    "id": "building-giza-pyramids",
+    "question": {
+      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "answers": [
+        "Nicht ein einzelner Mensch baute eine Pyramide: Planung und Arbeit vieler Menschen waren nötig.",
+        "Bögen können Lasten seitlich zu ihren Stützen leiten.",
+        "Ein offenes Gitter kann eine große Konstruktion tragen und lässt den Wind hindurch."
+      ],
+      "correct": 0,
+      "why": "Viele Arbeitsgruppen bearbeiteten und transportierten Steinblöcke. Wie alle Einzelheiten beim Bau abliefen, wird weiter erforscht."
+    },
+    "model": "heights",
+    "building": {
+      "date": "um 2550 v. Chr.",
+      "size": "Ursprüngliche Höhe der Cheops-Pyramide: etwa 146,5 Meter. Ihre heutige Höhe ist geringer."
+    }
+  },
+  {
+    "id": "building-great-wall",
+    "question": {
+      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "answers": [
+        "Es ist keine einzelne Mauer, die in einem Jahr fertig wurde.",
+        "Ein Mausoleum ist ein Gebäude mit einer Grabstätte.",
+        "Eine Brücke muss ihr eigenes Gewicht, Fahrzeuge und Wind aushalten."
+      ],
+      "correct": 0,
+      "why": "Verschiedene Herrscher und Arbeitsgruppen bauten unterschiedliche Abschnitte. Schon ältere Anlagen wurden verbunden; viele bekannte Teile stammen aus der Ming-Zeit."
+    },
+    "model": null,
+    "building": {
+      "date": "Verschiedene Abschnitte über viele Jahrhunderte",
+      "size": "Das gesamte Netz aus Mauern und weiteren Anlagen umfasst mehr als 20.000 Kilometer. Kein einzelner gerader Mauerabschnitt ist so lang."
+    }
+  },
+  {
+    "id": "building-colosseum",
+    "question": {
+      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "answers": [
+        "Bögen können Lasten seitlich zu ihren Stützen leiten.",
+        "Ein offenes Gitter kann eine große Konstruktion tragen und lässt den Wind hindurch.",
+        "Ein Schiff steigt mit dem Wasserspiegel. Es wird nicht von einem Kran hochgehoben."
+      ],
+      "correct": 0,
+      "why": "Stein, Ziegel und römischer Beton bildeten viele Bögen und gewölbte Räume. Wege und Treppen verteilten die Besucher."
+    },
+    "model": null,
+    "building": {
+      "date": "Eröffnet 80 n. Chr.",
+      "size": "Etwa 189 Meter lang, 156 Meter breit und 48 Meter hoch. Länge, Breite und Höhe sind verschiedene Messrichtungen."
+    }
+  },
+  {
+    "id": "building-taj-mahal",
+    "question": {
+      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "answers": [
+        "Ein Mausoleum ist ein Gebäude mit einer Grabstätte.",
+        "Eine Brücke muss ihr eigenes Gewicht, Fahrzeuge und Wind aushalten.",
+        "Bei hohen Gebäuden müssen Ingenieurinnen und Ingenieure besonders auf Wind und stabile Fundamente achten."
+      ],
+      "correct": 0,
+      "why": "Viele Handwerker gestalteten Marmor, Steineinlagen, Kuppel und Garten. Architektur, Kunst und Arbeit vieler Menschen kommen zusammen."
+    },
+    "model": null,
+    "building": {
+      "date": "Hauptmausoleum 1632–1648; weitere Anlagen bis 1653",
+      "size": "Die äußere Kuppel ist etwa 44,4 Meter hoch. Das ist eine Kuppelhöhe, nicht die Gesamthöhe der Anlage."
+    }
+  },
+  {
+    "id": "building-eiffel-tower",
+    "question": {
+      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "answers": [
+        "Ein offenes Gitter kann eine große Konstruktion tragen und lässt den Wind hindurch.",
+        "Ein Schiff steigt mit dem Wasserspiegel. Es wird nicht von einem Kran hochgehoben.",
+        "Nicht ein einzelner Mensch baute eine Pyramide: Planung und Arbeit vieler Menschen waren nötig."
+      ],
+      "correct": 0,
+      "why": "Ein Team entwarf die Konstruktion aus Eisenteilen. Dazu gehörten Maurice Koechlin, Émile Nouguier, Stephen Sauvestre und Gustave Eiffels Firma."
+    },
+    "model": "heights",
+    "building": {
+      "date": "Fertiggestellt 1889",
+      "size": "Heute 330 Meter hoch, einschließlich Antennen.",
+      "height": 330
+    }
+  },
+  {
+    "id": "building-golden-gate-bridge",
+    "question": {
+      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "answers": [
+        "Eine Brücke muss ihr eigenes Gewicht, Fahrzeuge und Wind aushalten.",
+        "Bei hohen Gebäuden müssen Ingenieurinnen und Ingenieure besonders auf Wind und stabile Fundamente achten.",
+        "Es ist keine einzelne Mauer, die in einem Jahr fertig wurde."
+      ],
+      "correct": 0,
+      "why": "Bei der Hängebrücke tragen große Hauptkabel die Fahrbahn über kleinere Hängeseile. Türme und feste Anker halten das System."
+    },
+    "model": "bridge",
+    "building": {
+      "date": "Eröffnet 1937",
+      "size": "Insgesamt 2.737 Meter lang. Die Hauptöffnung zwischen den Türmen misst 1.280 Meter."
+    }
+  },
+  {
+    "id": "building-panama-canal",
+    "question": {
+      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "answers": [
+        "Ein Schiff steigt mit dem Wasserspiegel. Es wird nicht von einem Kran hochgehoben.",
+        "Nicht ein einzelner Mensch baute eine Pyramide: Planung und Arbeit vieler Menschen waren nötig.",
+        "Bögen können Lasten seitlich zu ihren Stützen leiten."
+      ],
+      "correct": 0,
+      "why": "Schleusen heben Schiffe auf die Höhe der Seen und senken sie wieder ab. Wasser fließt durch die Schwerkraft in die Kammern oder hinaus."
+    },
+    "model": "lock",
+    "building": {
+      "date": "Eröffnet 1914",
+      "size": "Der Kanal ist ungefähr 80 Kilometer lang. Schleusen heben Schiffe auf etwa 26 Meter über dem Meeresspiegel."
+    }
+  },
+  {
+    "id": "building-burj-khalifa",
+    "question": {
+      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "answers": [
+        "Bei hohen Gebäuden müssen Ingenieurinnen und Ingenieure besonders auf Wind und stabile Fundamente achten.",
+        "Es ist keine einzelne Mauer, die in einem Jahr fertig wurde.",
+        "Ein Mausoleum ist ein Gebäude mit einer Grabstätte."
+      ],
+      "correct": 0,
+      "why": "Ein kräftiger Kern und stützende Gebäudeteile tragen die Konstruktion. Beton, Stahl, Aufzüge und viele Fachleute mussten zusammenarbeiten."
+    },
+    "model": "heights",
+    "building": {
+      "date": "Eröffnet 2010",
+      "size": "828 Meter hoch, einschließlich der Spitze.",
+      "height": 828
+    }
+  }
+]

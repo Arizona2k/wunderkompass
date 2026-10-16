@@ -1090,7 +1090,7 @@
     {
       "id": "invention-3d-printing",
       "kind": "new",
-      "contentHash": "551e4d036b838d85ddb93e777d63b6015681df1159f6cec7e687e04e8370686a",
+      "contentHash": "9b6dffee408abdcc65a5a35ba57e345b30694d94e01cf861cc07508ae5952e92",
       "goal": "Du verstehst räumliche Entwürfe, prüfst Modellgrenzen und erkennst den Unterschied zwischen einem Anschauungsmodell und einem geprüften Ersatzteil.",
       "ageLevels": {
         "6-8": "Ein 3D-Drucker baut einen Gegenstand nach digitalen Vorgaben auf. Häufig entsteht er Schicht für Schicht.",
@@ -1133,7 +1133,10 @@
       "acceptedForDoubling": false,
       "reviewedBy": "Codex, not an independent reviewer",
       "UIAcceptance": "Current source requires fresh viewport/model/native/offline and complete immutable proofs; historical results apply only to their own recorded SHA. No independent approval.",
-      "reviewedOn": "2026-10-16"
+      "reviewedOn": "2026-10-16",
+      "relationshipMaintenance": [
+        "building-lalibela"
+      ]
     },
     {
       "id": "invention-sewing-machine",

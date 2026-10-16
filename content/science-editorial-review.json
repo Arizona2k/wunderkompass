@@ -610,7 +610,7 @@
     {
       "id": "science-sound",
       "kind": "individually-extended-existing",
-      "contentHash": "3c573b10f65e226c67b5095725f5b03db4ce5c983cc73fb0149762ec5101aceb",
+      "contentHash": "66b36b07a4fad427f8e456d0135c42c87cf386586ef5365ef3338a3b66626ed0",
       "goal": "Du verwechselst eine Druckkurve nicht mit einem fliegenden Luftteilchen oder mit hörbar geprüftem Ton.",
       "ageLevels": {
         "6-8": "Schwingungen können einen Ton erzeugen. Ihr Takt beeinflusst seine Höhe.",
@@ -658,7 +658,10 @@
       "independentReview": false,
       "nextSourceReview": "2027-04-13",
       "UIAcceptance": "pending current real browser, search/direct/context/back/offline proof",
-      "acceptedForDoubling": false
+      "acceptedForDoubling": false,
+      "relationshipMaintenance": [
+        "building-sydney-opera"
+      ]
     },
     {
       "id": "science-solar-system",
@@ -781,7 +784,7 @@
     {
       "id": "science-patterns",
       "kind": "individually-extended-existing",
-      "contentHash": "0d6492b3f2e5756e662d0be217e7c59db73dcacbb165a67d1a6207a235c2d600",
+      "contentHash": "162df28a8b8fbe63bb7da129f6b2d60c3aed2bbe931452b0a90af3124fe66e8c",
       "goal": "Du verstehst, warum eine Sortierregel und gute Beispiele wichtig sind und Fehler möglich bleiben.",
       "ageLevels": {
         "6-8": "Ein Computer kann nach einer gewählten Regel ähnliche Merkmale sortieren.",
@@ -833,12 +836,15 @@
       "independentReview": false,
       "nextSourceReview": "2027-04-13",
       "UIAcceptance": "pending current real browser, search/direct/context/back/offline proof",
-      "acceptedForDoubling": false
+      "acceptedForDoubling": false,
+      "relationshipMaintenance": [
+        "building-horyu-ji"
+      ]
     },
     {
       "id": "science-water-cycle",
       "kind": "individually-extended-existing",
-      "contentHash": "c21ecdc70e0188efe970de057fb0a16390fa9333a486234b26e419883442b6a3",
+      "contentHash": "41afab1f51ab6ea61f338114f34c7a49bb1bb2dd5a4b9d8ca75be3359ec33a9a",
       "goal": "Du beschreibst Speicher und Zustandswechsel ohne Wasser im Modell einfach verschwinden zu lassen.",
       "ageLevels": {
         "6-8": "Wasser kann als Flüssigkeit, Dampf oder Eis an verschiedenen Orten vorkommen.",
@@ -893,7 +899,12 @@
       "independentReview": false,
       "nextSourceReview": "2027-04-13",
       "UIAcceptance": "pending current real browser, search/direct/context/back/offline proof",
-      "acceptedForDoubling": false
+      "acceptedForDoubling": false,
+      "relationshipMaintenance": [
+        "building-pont-du-gard",
+        "building-lalibela",
+        "building-angkor-wat"
+      ]
     },
     {
       "id": "science-photosynthesis",
@@ -2139,7 +2150,7 @@
     {
       "id": "science-angle",
       "kind": "new",
-      "contentHash": "3776f8f7eb2e7e21824acab0784aecabc9a84edc76c7d0e40ad5dc1c96825423",
+      "contentHash": "9cb402d680ddb44008a46721da95141f53418f6b974c7fc92ee1633b7e3fcc44",
       "goal": "Du kannst eine Zeichnung richtig lesen und Länge von Drehung unterscheiden.",
       "ageLevels": {
         "6-8": "Ein Winkel beschreibt eine Öffnung oder Drehung. Längere Linien machen ihn nicht automatisch größer.",
@@ -2187,7 +2198,10 @@
       "nextSourceReview": "2027-04-13",
       "UIAcceptance": "targeted four-width science browser passed (all 46); full current regression and exact CI still pending",
       "acceptedForDoubling": false,
-      "semanticDecision": "Distinct concept, learning question and explanation against the 23 original science topics, glossary and other collections; not an alias or second count of a journey/lab/question. Measuring an opening differs from the retained Earth-shadow circumference inquiry."
+      "semanticDecision": "Distinct concept, learning question and explanation against the 23 original science topics, glossary and other collections; not an alias or second count of a journey/lab/question. Measuring an opening differs from the retained Earth-shadow circumference inquiry.",
+      "relationshipMaintenance": [
+        "building-sydney-opera"
+      ]
     },
     {
       "id": "science-encryption",

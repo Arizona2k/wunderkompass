@@ -1,6 +1,7 @@
 import {offlineResilience} from './offline-resilience.mjs';
 import {offlineRetention} from './offline-retention.mjs';
 import {natureEngine} from './nature-learning.mjs';
+import {buildingsEngine} from './building-learning.mjs';
 import {inventionsEngine} from './inventions-learning.mjs';
 import {whyEngineFlow} from './why-learning.mjs';
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import {spawn} from 'node:child_process';
@@ -37,7 +38,8 @@ async function runEngine(kind,offset){
   const natureStarted=performance.now(),natureProof=await natureEngine(p,{engine:name,shots:output}),natureSeconds=(performance.now()-natureStarted)/1000;console.log('ENGINE_PHASE',JSON.stringify({engine:name,phase:'nature',seconds:natureSeconds}));
   assert.deepEqual(errors,[]);
   const inventionStarted=performance.now(),inventionProof=await inventionsEngine(browser,base,{engine:name,shots:output}),inventionSeconds=(performance.now()-inventionStarted)/1000;console.log('ENGINE_PHASE',JSON.stringify({engine:name,phase:'inventions',seconds:inventionSeconds}));
-  return {name,version:browser.version(),chapters:checked,widths:[320,390,768,1440],...bookProof,...whyProof,...natureProof,...inventionProof,offlineRetention:retentionProof,offlineResilience:offlineProof,phaseSeconds:{journeys:journeySeconds,book:bookSeconds,why:whySeconds,nature:natureSeconds,inventions:inventionSeconds},seconds:(performance.now()-started)/1000,port:port+offset};
+  const buildingStarted=performance.now(),buildingProof=await buildingsEngine(browser,base,{engine:name,shots:output}),buildingSeconds=(performance.now()-buildingStarted)/1000;console.log('ENGINE_PHASE',JSON.stringify({engine:name,phase:'buildings',seconds:buildingSeconds}));
+  return {name,version:browser.version(),chapters:checked,widths:[320,390,768,1440],...bookProof,...whyProof,...natureProof,...inventionProof,...buildingProof,offlineRetention:retentionProof,offlineResilience:offlineProof,phaseSeconds:{journeys:journeySeconds,book:bookSeconds,why:whySeconds,nature:natureSeconds,inventions:inventionSeconds,buildings:buildingSeconds},seconds:(performance.now()-started)/1000,port:port+offset};
  }finally{await browser?.close();if(browser)browsers.delete(browser);server.kill('SIGTERM');servers.delete(server);}
 }
 try{
