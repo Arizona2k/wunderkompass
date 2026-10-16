@@ -1,5 +1,9 @@
 # Verbindliche Qualität und Tests
 
+## Dauerhaft: frühe gezielte Browserprüfung vor der vollständigen Abnahme
+
+Neue/geänderte Funktionen und besonders neue Browserassertionen früh im tatsächlichen betroffenen Browser ausführen, mit vorhandenen Produktionsbrowsermodulen. Chromium, Firefox und WebKit anhand des betroffenen Verhaltens tatsächlich prüfen; Emulation nicht als andere Engine ausgeben. Fehler vor der großen Schlussprüfung ursächlich korrigieren und gezielt retesten. Teilberichte mit Scope/Engine/Build/Quelldigest bleiben Teilnachweise. Die vollständige unveränderte Schlussprüfung am endgültigen Stand einschließlich aller erforderlichen Browser, Breiten, Offline-, Pass-, Accessibility- und Sicherheitsfälle ist vor Übergabe weiterhin Pflicht. Keine zusätzliche Testplattform, schwächeren Assertions oder gestrichenen Tests. Diese Nutzerentscheidung vom17.10.2026 gilt auch für spätere Pakete und GO-Runden.
+
 Lokale Iteration: vorhandenes `test:affected --run` prüft betroffene vorhandene native `.mjs`/`.cjs`/`.js` zuerst mit `node --check`, ohne Modulcode auszuführen. Doppelte Imports wie im tatsächlich roten Quality85 werden so früh erkannt. Unbekannte/gelöschte Eingaben bleiben konservativ; breite Browserauswahl folgt dem bestehenden REQUIRED_SUITES-Vertrag. Alle bisherigen Schlussprüfungen unverändert, keine neuen Jobs oder Browsergruppen.
 
 ## Aktuelle Nutzerentscheidung16.10.2026 – Paket3.5 fortsetzen, News pausiert

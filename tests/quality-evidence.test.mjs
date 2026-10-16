@@ -1,12 +1,14 @@
+import JOURNEY_DATA from '../app/journey-inquiries.json' with {type:'json'};
 import {publicUpdates} from '../app/update-history.ts';
-import {historyViewsComplete,nativeHistoryComplete,offlineComplete,retentionComplete} from '../scripts/handoff.mjs';
+import {journeySupportComplete,historyViewsComplete,nativeHistoryComplete,offlineComplete,retentionComplete} from '../scripts/handoff.mjs';
 const captures=()=>[100,31000].map(scrollY=>({cssWidth:640,cssHeight:450,scale:2,pixelWidth:1280,pixelHeight:900,sampledColors:10,scrollY}));
 const historyView=width=>({width,entries:publicUpdates().map(e=>e.id),expanded:true,largeText:true,keyboard:true,axe:true,passPreserved:true});
 import test from 'node:test';import assert from 'node:assert/strict';
 import {aggregateQuality,REQUIRED_SUITES} from '../scripts/quality-evidence.mjs';
 const retention=()=>Object.fromEntries(['multipleTabs','partialNeverReplacesFallback','unknownLegacyProtected','orphanCleanup','stoppedServerOldChunk','canaryPreserved'].map(k=>[k,true]));
 const offline=(kind='chromium',native=false)=>({kind,realProgress:true,networkRecovery:true,quotaRecovery:kind==='chromium'?true:null,completeAssets:true,offlineReload:true,serverStopped:true,passPreserved:true,assetCount:130,metrics:{assets:130,reused:0,downloaded:130},progressViews:(native?[640]:[320,360,390,768,1024,1440,1920]).map(width=>({width,cssWidth:width,scale:native?2:1,largeText:true,axe:true,verified:12,total:130,...(native?{screenshot:{pixelWidth:1280,sampledColors:2}}:{})}))});
-function proof(name,suites){return {name,suites,code:0,report:{...(suites.includes('foundation')?{offlineResilience:offline(),offlineRetention:retention(),pendingRouteFocus:{cases:[320,1440].flatMap(width=>['keyboard','pointer'].map(input=>({width,input,pendingFrames:1,trustedInput:true,focused:true,closed:true,scrollKept:true})))}}:{}),...(suites.includes('journeys')?{offlineNative:offline('chromium',true),nativeHistory:{percent:200,scale:2,blankCaptureRejected:true,captures:captures(),...historyView(640)},nativeZoom:{percent:200,cssWidth:640,scale:2,largeTextAlsoChecked:true},speechAvailability:{germanVoices:0,audibleTestPerformed:false}}:{}),selectedSuites:suites,status:'passed',build:'actual-build',browser:'actual-browser',seconds:1,checks:['tested '+name],views:[],timings:suites.flatMap(s=>s==='foundation'?['performance','components']:[s]).map(suite=>({suite,seconds:1})),errors:[],consoleErrors:[],failedRequests:[],ownHttpErrors:[],externalRequests:[]}};}
+const support=(widths=[320,360,390,768,1024,1440,1920])=>({hints:JOURNEY_DATA.chapters.flatMap(c=>c.tasks.map((_,n)=>c.id+':'+n)),widths,diagrams:JOURNEY_DATA.chapters.filter(c=>c.index>0).flatMap(c=>widths.map(width=>({id:c.id,width,states:3,readable:true,largeText:true,keyboard:true}))),seconds:1});
+function proof(name,suites){return {name,suites,code:0,report:{...(suites.includes('foundation')?{offlineResilience:offline(),offlineRetention:retention(),pendingRouteFocus:{cases:[320,1440].flatMap(width=>['keyboard','pointer'].map(input=>({width,input,pendingFrames:1,trustedInput:true,focused:true,closed:true,scrollKept:true})))}}:{}),...(suites.includes('journeys')?{journeySupport:support(),offlineNative:offline('chromium',true),nativeHistory:{percent:200,scale:2,blankCaptureRejected:true,captures:captures(),...historyView(640)},nativeZoom:{percent:200,cssWidth:640,scale:2,largeTextAlsoChecked:true},speechAvailability:{germanVoices:0,audibleTestPerformed:false}}:{}),selectedSuites:suites,status:'passed',build:'actual-build',browser:'actual-browser',seconds:1,checks:['tested '+name],views:[],timings:suites.flatMap(s=>s==='foundation'?['performance','components']:[s]).map(suite=>({suite,seconds:1})),errors:[],consoleErrors:[],failedRequests:[],ownHttpErrors:[],externalRequests:[]}};}
 test('full quality aggregation rejects missing, red, duplicate, mixed-build, malformed and error evidence without skips',()=>{
  const all=[proof('foundation',['foundation']),proof('navigation',['home','core','offline']),proof('learning',['research','journeys','playground','backup','challenge']),proof('signed-news',['news-feed'])];
  assert.deepEqual(aggregateQuality(all).selectedSuites,REQUIRED_SUITES);assert.equal(aggregateQuality(all).checks.length,4);
@@ -26,4 +28,10 @@ test('offline handoff rejects missing, duplicated or invented progress, absent f
  const n=offline('chromium',true);assert.ok(offlineComplete(n,'chromium',{native:true}));n.progressViews[0].screenshot.sampledColors=1;assert.equal(offlineComplete(n,'chromium',{native:true}),false);
  const r=retention();assert.ok(retentionComplete(r));delete r.unknownLegacyProtected;assert.equal(retentionComplete(r),false);
  const all=[proof('foundation',['foundation']),proof('navigation',['home','core','offline']),proof('learning',['research','journeys','playground','backup','challenge']),proof('signed-news',['news-feed'])];delete all[0].report.offlineRetention;assert.throws(()=>aggregateQuality(all),/offline/);
+});
+
+test('journey support proof rejects missing widths, hints, diagrams, duplicate cases or false keyboard evidence',()=>{
+ const widths=[320,390,768,1440];assert.equal(journeySupportComplete(support(widths),widths),true);
+ for(const change of [p=>p.hints.pop(),p=>p.hints[1]=p.hints[0],p=>p.widths.pop(),p=>p.diagrams.pop(),p=>p.diagrams[0].keyboard=false,p=>p.diagrams[0].states=0,p=>p.seconds=0]){const p=support(widths);change(p);assert.equal(journeySupportComplete(p,widths),false);}
+ assert.equal(journeySupportComplete(support([320,390]),widths),false);
 });
