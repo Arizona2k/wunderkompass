@@ -1,5 +1,7 @@
 # Anleitung für Codex
 
+Dauerhafte Nutzerentscheidung15./16.10. bleibt auch in unabhängigen Lieferabschnitten verbindlich: keine künstlichen Gesamtgrößengates für JavaScript oder die gesamten Lernreise-Aufgabendaten, auch keine höheren Ersatzgrenzen. Gesamtsummen verpflichtend als endliche Mess-/Trendwerte ausweisen; Einstieg/CSS/Einzelressourcen, tatsächliche Bereitschaft/CLS/Ladeverhalten und alle Sicherheits-/Offline-/Pass-/Browserprüfungen bleiben vollständig verbindlich. Nachweislich sinnvolle Verbesserungen eigenständig umsetzen und tatsächlichen Nutzen/Grenzen dokumentieren. Die akzeptierten etwa0,5s bei der ersten vollständigen Offline-Integritätsvorbereitung sind keine pauschale Regressionserlaubnis.
+
 ## Vorrangiger Fortsetzungsauftrag16.10.2026: abgeschlossene Lieferabschnitte
 
 Der [vollständige neue Originalauftrag](content/auftrag-2026-10-13/WunderKompass_Fortsetzungsauftrag_2026-10-16.md) wurde vollständig übernommen (27756Byte; SHA256 `d54c47b62146ad48740acaa78a199cc7e88b1da6a81f19ba73b593b000de2391`). Er **ersetzt** ältere Ein-PR-/Gesamtdraft-/Kein-Teilrelease-Regeln und frühere pauschale News-Livestartsperren. Originalquellen/Historie bleiben erhalten; widersprechende ältere Absätze unten sind insoweit historische Vorgaben. Keine zweite Roadmap oder Aufgabenliste.

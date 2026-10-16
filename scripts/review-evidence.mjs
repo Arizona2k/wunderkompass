@@ -20,6 +20,7 @@ export function reviewStorage(screenshots,retainedBytes,{previous=null}={}){
  };
 }
 export const requiredScreenshots=['quality-learning-journey-engine-chromium-native-history-first-640.png','quality-learning-journey-engine-chromium-native-history-oldest-640.png',...['320','360','390','768','1024','1440','1920'].flatMap(w=>['quality-foundation-foundation-labs-'+w+'.png','quality-learning-journey-links-'+w+'.png']),...['320','1440'].flatMap(w=>['quality-news-feed-signed-news-rejected-'+w+'.png','quality-navigation-updates-all-details-'+w+'-full.png'])];
+requiredScreenshots.push(...[320,1440].flatMap(w=>['keyboard','pointer'].map(input=>'quality-foundation-foundation-route-focus-'+input+'-'+w+'.png')));
 export function retainScreenshot(name){
  if(requiredScreenshots.includes(name))return true;
  if(name.startsWith('journey-engine-')||name.startsWith('quality-foundation-')||name.startsWith('quality-news-feed-'))return true;

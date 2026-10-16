@@ -717,7 +717,8 @@ const PREPARED_CHRONICLE:UpdateEntry = {
  "details": [
   "Auch die älteren Einträge erklären konkret, was du entdecken oder leichter bedienen kannst.",
   "Kurze Zusammenfassungen und freiwillige Einzelheiten halten die Übersicht ruhig.",
-  "Zeitangaben und Nachweise bleiben erhalten; vorbereitete Änderungen werden nicht als verfügbar angezeigt."
+  "Zeitangaben und Nachweise bleiben erhalten; vorbereitete Änderungen werden nicht als verfügbar angezeigt.",
+  "Spielplatz: Eine mit der Tastatur geöffnete Spielhilfe behält deinen Platz. Auch nach einem schnellen Bereichswechsel kannst du sie mit Enter wieder schließen."
  ],
  "benefit": "Du kannst schneller erkennen, welche Änderung dir hilft und wo du sie findest.",
  "links": [],

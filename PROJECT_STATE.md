@@ -1,5 +1,18 @@
 # Aktueller Lieferabschnitt – verständliche Update-Chronik,16.10.2026
 
+## Aktueller Abschlusskandidat – Fokuskorrektur wiederverwendet, Wachstumsregel übernommen
+
+08c2759 nach nativeViewport-Korrektur vollständig lokal bestanden651.920s,787erzeugte/308behaltenePNG/43425247Byte. UnveränderteOriginale/Hashes in work/chronik-08c2759-complete-proof. Quality82/38947887867 dagegen früh an originalerfoundation.mjs:53 rot: Spielhilfe schließt nach verzögerterFokuswiederherstellung nicht. KeinneuerTimeout/Retry undkeinReady. Bekannter bereitsinPR27behobenerFehler, deshalbgenau dessen isolierbaren scheduleRouteRestore-Guard undvier echte320/1440-Tastatur-/Touch-/Mausfälle wiederverwendet; keineunfertigenInhaltsabhängigkeiten.
+
+Vorher tatsächlicheReproduktion: zwei ausstehendeFrames, vertrauenswürdigesEnter, FokusMAIN, offengebliebeneHilfe, Scroll7666→0. Nachher allevierFälle: SUMMARY bleibtaktiv, Enter schließt, Scroll7666beziehungsweise2511exakterhalten. BestehendeSiebenbreitenprüfungen unverändertundumFokuserhaltverstärkt, vierOriginalbilder zusätzlichPflicht; fehlende/duplizierte/unvertrauteBelege scheitern. Bei künftigenFehlern aktuelleWorker-JSON/Original-PNGauchvorabgewiesenerAggregation sichern.
+
+BereitsverbindlicheNutzerentscheidungzumfreienWachstum indieseneigenständigenAbschnitt übernommen: nur künstlicheJS-/Aufgabengesamtkappen entfernt, keinehöhereErsatzgrenze. Roh-/gzip-Summen weitergemessen/alsendlicheTrendwerte geprüft. HistorischetatsächlicheChronikmessung eb67783/Build75d91146c9329d5e alsVergleich, keineLeistungs-/Publikationsgarantie. AlleEinstiegs-/CSS-/Einzeldatei-/Geometrie- undBrowserperformancegrenzen unverändert. Auch ohne diesePolicyänderungbestand derFokusbuilddiealtenGrenzen; keineversteckteBudgetanhebungzumKaschiereneinesFehlers.
+
+TatsächlicherProduktionsworker-Wechselvon sauberemtest-live c9d7ab0/Build ea9996c25b668859 zumaktuellenApp-Build3e6aac64dab2595f bestanden: vorbereitete130Assets, echtegespeicherteSpielrunde/Favorit, tatsächlicherUpdateknopf, gesamterSchema3-Fortschrittbytegleich, beidevollständigenCacheversionen130/130 erhalten; Browsergeschlossen/Servergestoppt, kalteOffline-Chronik31EinträgeundganzerPassunverändert. EigenessynthetischesProfil, keinepersönlichenDaten. Report/Screenshots .qa-output/chronik-old-new-update; Quelle031164a88a937aa4fe4b0291b3a7886d46c49cfe13640f482ae714d05530d794.
+
+Jetzt Korrekturkandidat imselbenPR29 sichern, vollständigeStandards/lokaleRoot-/Firefox-/WebKit-/GitHub-Abnahme amunverändertenFinalhead. Neuere echteQuittung imPR29; vorigemlokalenGrün keinegrüneGitHub-Abnahmeandichten. OriginalPR27 bleibt2c23ad9. KeinMerge/Deployment/Newsstart, gesamteMasterrestliste unverändert.
+
+
 ## Nachweisaufnahme nach Quality81 korrigiert
 
 Chronikhead eb677839e937773935b99759f8b8f8a198d1c0ee lokal vollständig bestanden648.843s/113Labels,114Unit/27Release/TS/Lint/Build/40Exporte1957Inventarsätze. Originale samtHashes unverändert in work/chronik-eb67783-complete-proof;785erzeugte/307behaltenePNG/43359812Byte/106640188Reserve. GitHub Quality81/38945554263 dagegen rot: native200%-Aufnahme am Ende derlangenChronik uniform, vonbestehenderPrüfungkorrektabgewiesen. KeinReady daraus. NichtalsWebsite-/Offline-/Timeoutfehler ausgeben; Navigation/Offline dort grün.
