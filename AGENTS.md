@@ -2,6 +2,8 @@
 
 ## Aktueller Arbeits- und Freigabevertrag ·17.10.2026
 
+Setup34 ist durch den Nutzer tatsächlich übernommen; Ruleset25304083 ist aktiv/strict/ohneBypass. Keine erneute gewohnheitsmäßige Einrichtungsfreigabe verlangen. Tatsächliche aktuelle Fakten in TEST-LIVE/PROJECT_STATE prüfen; Routine nur mit komplettem aktuellem Quality, vertrauenswürdigem Zielhelper und nachgewiesenen Betriebsbedingungen. PR27 bleibt ausgeschlossen; News pausiert.
+
 Der [vollständige Originalauftrag17.10.](content/auftrag-2026-10-13/WunderKompass_Fortsetzungsauftrag_2026-10-17.md) ist vorrangig; alle15Abschnitte ungekürzt archiviert. Ältere pauschale Verbote sinnvoller Optimierung und einer Testübernahme nach jeder einzelnen Nutzerfreigabe sind **überholt**, auch wenn historische Statusabsätze sie zitieren. Originalquellen und technische Schutzpflichten bleiben erhalten. Dieser Vertrag gilt dauerhaft für3.5,4–8 und GO.
 
 - Fachübergreifend arbeiten: Produkt/Strategie, UX/Forschung, visuelles Design, Architektur, Entwicklung, Inhalte/Didaktik/Medien, QA, Recht/Datenschutz/Sicherheit, Release/Infrastruktur, verständliche Kommunikation und Betrieb gemeinsam nach tatsächlichem Bedarf berücksichtigen. Keine erfundenen Berufsqualifikationen, Nutzerstudien oder unabhängigen Abnahmen; keine127Agenten oder neuen Verwaltungsprozesse.

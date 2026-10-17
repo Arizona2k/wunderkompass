@@ -1,5 +1,6 @@
+import {preserveEngineDiagnostics} from './engine-diagnostics.mjs';
 import {solarFlow} from './solar-comparison.mjs';
-import {animalFlow} from './animal-learning.mjs';
+import {animalFlow,animalNavigation} from './animal-learning.mjs';
 import {journeySupportView} from './journeys.mjs';
 import JOURNEY_CONTENT from '../../app/journey-content.json' with {type:'json'};
 import JOURNEY_SOURCES from '../../app/journey-sources.json' with {type:'json'};
@@ -16,11 +17,12 @@ import DATA from '../../app/journey-inquiries.json' with {type:'json'};
 import {sourceDigest} from '../../scripts/handoff.mjs';
 import {bookEngineFlow} from './book-excellence.mjs';
 import {chromium,firefox,webkit} from '../../qa/node_modules/playwright/index.mjs';
+const searchOnly=process.argv.includes('--search-only');
 const chosen=process.argv.find(a=>a.startsWith('--engine='))?.slice(9);if(chosen&&!['firefox','webkit'].includes(chosen))throw Error('Unknown actual engine');
 const kinds=chosen?[chosen]:process.argv.includes('--chromium-pair')?['chromium','chromium']:process.argv.includes('--chromium-only')?['chromium']:['firefox','webkit'];
 const serial=!process.argv.includes('--parallel')||process.argv.includes('--serial'),output=process.env.QA_ENGINE_OUTPUT_DIR??'.qa-output',port=Number(process.env.QA_ENGINE_PORT??4480);
 if(!Number.isInteger(port)||port<1024||port>65534)throw Error('Invalid isolated engine port');
-const report={build:(await fs.readFile('dist/index.html','utf8')).match(/name="learning-build" content="([^"]+)"/)?.[1],sourceDigest:await sourceDigest(),testedCommit:process.env.GITHUB_SHA??null,status:'running',scope:process.argv.includes('--ocean-sources-only')?'partial local ocean source regression':kinds.join('+'),scheduling:serial?'serial':'parallel isolated servers/profiles',engines:[],errors:[]};
+const report={build:(await fs.readFile('dist/index.html','utf8')).match(/name="learning-build" content="([^"]+)"/)?.[1],sourceDigest:await sourceDigest(),testedCommit:process.env.GITHUB_SHA??null,status:'running',scope:searchOnly?'partial actual-engine keyboard search':process.argv.includes('--ocean-sources-only')?'partial local ocean source regression':kinds.join('+'),scheduling:serial?'serial':'parallel isolated servers/profiles',engines:[],errors:[]};
 await fs.mkdir(output,{recursive:true});const servers=new Set(),browsers=new Set(),started=performance.now();
 process.once('SIGTERM',()=>{for(const server of servers)server.kill('SIGTERM');for(const browser of browsers)void browser.close();process.exitCode=143;});
 // Run the changed source controls before unrelated book/model matrices. Every
@@ -60,6 +62,7 @@ async function runEngine(kind,offset){
   for(let n=0;n<40&&!log.includes('WK_PREVIEW_READY');n++){if(server.exitCode!==null)throw Error(log);await new Promise(r=>setTimeout(r,100));}assert.ok(log.includes('WK_PREVIEW_READY'),log);
   browser=await {chromium,firefox,webkit}[kind].launch({headless:true,...(kind==='chromium'&&process.env.QA_BROWSER_EXECUTABLE?{executablePath:process.env.QA_BROWSER_EXECUTABLE}:{}),args:kind==='chromium'?['--enable-unsafe-swiftshader']:[]});browsers.add(browser);
   const context=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await context.newPage();p.on('pageerror',e=>errors.push(e.message));p.setDefaultTimeout(20000);await p.goto(base+'/#journeys');await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor();
+  if(searchOnly){const coveredAnimalIds=await animalNavigation(browser,base,page=>page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor(),page=>page.on('pageerror',e=>errors.push(e.message)),output);assert.deepEqual(errors,[]);return {name,version:browser.version(),scope:'partial actual-engine keyboard search',keyboardNavigation:true,coveredAnimalIds,seconds:(performance.now()-started)/1000};}
   const sourcesStarted=performance.now(),oceanSourceViews=await verifyOceanSources(p,name),sourceSeconds=(performance.now()-sourcesStarted)/1000;console.log('ENGINE_PHASE',JSON.stringify({engine:name,phase:'ocean-sources',seconds:sourceSeconds}));
   if(process.argv.includes('--ocean-sources-only'))return {name,version:browser.version(),scope:'partial local ocean source regression; not full acceptance',chapters:[],widths:[320,390,768,1440],oceanSourceViews,seconds:(performance.now()-started)/1000,port:port+offset};
   const solarReport={checks:[]};await solarFlow(browser,base,p=>p.locator('.model-solar-system').waitFor(),p=>p.on('pageerror',e=>errors.push(e.message)),solarReport,output,{widths:[320,390,768,1440]});for(const file of await fs.readdir(output))if(/^solar-caption-.*\.png$/.test(file))await fs.rename(path.join(output,file),path.join(output,'journey-engine-'+name+'-'+file));
@@ -81,7 +84,7 @@ async function runEngine(kind,offset){
   const historyViews=[];for(const width of [320,390,768,1440]){await p.setViewportSize({width,height:900});historyViews.push(await historyEngineView(p,width,output,{engine:name}));}
  const buildingStarted=performance.now(),buildingProof=await buildingsEngine(browser,base,{engine:name,shots:output}),buildingSeconds=(performance.now()-buildingStarted)/1000;console.log('ENGINE_PHASE',JSON.stringify({engine:name,phase:'buildings',seconds:buildingSeconds}));
   return {name,animalCoverage:animalReport.animalCoverage,solarCaptionCoverage:solarReport.solarCaptionCoverage,journeySupport,historyViews,oceanSourceViews,version:browser.version(),chapters:checked,widths:[320,390,768,1440],...bookProof,...whyProof,...natureProof,...inventionProof,...buildingProof,offlineRetention:retentionProof,offlineResilience:offlineProof,phaseSeconds:{animals:animalSeconds,oceanSources:sourceSeconds,journeys:journeySeconds,book:bookSeconds,why:whySeconds,nature:natureSeconds,inventions:inventionSeconds,buildings:buildingSeconds},seconds:(performance.now()-started)/1000,port:port+offset};
- }finally{await browser?.close();if(browser)browsers.delete(browser);server.kill('SIGTERM');servers.delete(server);}
+ }finally{await preserveEngineDiagnostics(output,kind);await browser?.close();if(browser)browsers.delete(browser);server.kill('SIGTERM');servers.delete(server);}
 }
 try{
  const outcomes=serial?await (async()=>{const results=[];for(const [i,kind] of kinds.entries()){try{results.push({status:'fulfilled',value:await runEngine(kind,i)});}catch(reason){results.push({status:'rejected',reason});}}return results;})():await Promise.allSettled(kinds.map(runEngine));
@@ -89,4 +92,4 @@ try{
  if(report.engines.length!==kinds.length||report.errors.length)throw Error('Incomplete or failed actual engine checks: '+report.errors.join('\n'));
  assert.equal(report.sourceDigest,await sourceDigest(),'source remains unchanged throughout engine checks');report.status='passed';
 }catch(error){report.status='failed';report.failure=error.stack;throw error;}
-finally{for(const browser of browsers)await browser.close();for(const server of servers)server.kill('SIGTERM');report.seconds=(performance.now()-started)/1000;await fs.writeFile(path.join(output,'engine-report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));}
+finally{for(const browser of browsers)await browser.close();for(const server of servers)server.kill('SIGTERM');report.seconds=(performance.now()-started)/1000;await fs.writeFile(path.join(output,searchOnly?'early-search-report.json':'engine-report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));}

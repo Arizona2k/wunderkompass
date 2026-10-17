@@ -4,21 +4,43 @@ const A='a'.repeat(40),B='b'.repeat(40),M='c'.repeat(40),repo='Arizona2k/wunderk
 const config={repository:repo,target:'test-live',setupHeadRef:'codex/setup',qualityWorkflowId:379737085,qualityAppId:15368,validBefore:'2026-11-15T23:00:00.000Z'};
 const now=new Date('2026-10-17T12:00:00Z');
 function fixture(){return {
-  setup:{number:34,head:{ref:'codex/setup',repo:{full_name:repo}},merged:true,base:{ref:'test-live'},merged_by:{login:'Arizona2k'}},setupIncluded:true,
-  repository:{full_name:repo},targetSha:A,
+  setup:{number:34,head:{ref:'codex/setup',repo:{full_name:repo}},merged:true,merge_commit_sha:M,base:{ref:'test-live',repo:{full_name:repo}},merged_by:{login:'Arizona2k'}},setupIncluded:true,
+  repository:{full_name:repo,permissions:{push:true}},targetSha:A,
   pr:{number:35,state:'open',draft:false,user:{login:'Arizona2k'},base:{sha:A,ref:'test-live',repo:{full_name:repo}},head:{sha:B,ref:'codex/animals',repo:{full_name:repo}},merge_commit_sha:M,mergeable:true,mergeable_state:'clean',changed_files:2},
-  files:[{filename:'app/animals.tsx'},{filename:'tests/animals.test.mjs'}],
-  productReview:{complete:true,noGateWeakening:true,head:B,base:A},deploymentHealthy:true,changesRequested:false,
+  files:[{filename:'app/animals.tsx',status:'modified'},{filename:'tests/animals.test.mjs',status:'added'}],
+  productReview:{complete:true,noGateWeakening:true,head:B,base:A},deploymentHealthy:true,changesRequested:false,otherActiveRelease:false,foreignReservation:false,
   rules:{enforcement:'active',bypass_actors:[],conditions:{ref_name:{include:['refs/heads/test-live'],exclude:[]}},rules:[{type:'pull_request'},{type:'required_status_checks',parameters:{strict_required_status_checks_policy:true,required_status_checks:[{context:'Required quality checks',integration_id:15368}]}}]},
   quality:{id:123,run_attempt:1,workflow_id:379737085,path:'.github/workflows/quality.yml',repository:{full_name:repo},head_sha:B,event:'pull_request',status:'completed',conclusion:'success'},latestQualityRun:123,
   check:{id:456,name:'Required quality checks',status:'completed',conclusion:'success',head_sha:B,app:{id:15368},details_url:`https://github.com/${repo}/actions/runs/123/job/456`},
-  receipt:{repository:repo,event:'pull_request',automatic:true,pr:35,head:B,base:A,target:'test-live',testedCommit:M,runId:'123',attempt:'1',workflowRef:repo+'/.github/workflows/quality.yml@refs/pull/35/merge'}
+  receipt:{repository:repo,event:'pull_request',automatic:true,pr:35,head:B,base:A,target:'test-live',testedCommit:M,workflowSha:M,runId:'123',attempt:'1',workflowRef:repo+'/.github/workflows/quality.yml@refs/pull/35/merge'}
 };}
 test('same-head complete routine PR may use regular protected merge; normal tests/docs need no new blanket approval',()=>{
   const f=fixture();assert.equal(readiness(f,now,config).eligible,true);assert.equal(readiness(f,now,config).automaticQueueAllowed,false);
   for(const path of ['tests/animal-search.test.mjs','tests/browser/animal-learning.mjs','BACKLOG.md','PROJECT_STATE.md','CHANGELOG.md'])assert.equal(critical(path),false);
 });
 for(const [name,change] of [
+  ['missing base in all partially read facts',f=>{delete f.pr.base.sha;delete f.targetSha;delete f.receipt.base;delete f.productReview.base;}],
+  ['missing draft state',f=>{delete f.pr.draft;}],['invalid PR number',f=>{f.pr.number='35';}],
+  ['missing reported write access',f=>{delete f.repository.permissions;}],
+  ['missing file status',f=>{delete f.files[0].status;}],
+  ['unknown file status',f=>{f.files[0].status='unknown';}],
+  ['renamed source missing',f=>{f.files[0].status='renamed';}],
+  ['empty renamed source',f=>{f.files[0].status='renamed';f.files[0].previous_filename='';}],
+  ['duplicate file list',f=>{f.files[1]={...f.files[0]};}],
+  ['missing changes-requested observation',f=>{delete f.changesRequested;}],
+  ['missing release-concurrency observation',f=>{delete f.otherActiveRelease;}],
+  ['missing reservation observation',f=>{delete f.foreignReservation;}],
+  ['unknown deployment',f=>{delete f.deploymentHealthy;}],
+  ['string review approval',f=>{f.productReview.complete='false';}],
+  ['string safety approval',f=>{f.productReview.noGateWeakening='false';}],
+  ['string setup merge',f=>{f.setup.merged='false';}],
+  ['missing setup merge commit',f=>{delete f.setup.merge_commit_sha;}],
+  ['foreign setup target',f=>{f.setup.base.repo.full_name='other/repo';}],
+  ['missing workflow source commit',f=>{delete f.receipt.workflowSha;}],
+  ['different workflow source commit',f=>{f.receipt.workflowSha=A;}],
+  ['missing run ID',f=>{delete f.quality.id;delete f.latestQualityRun;}],
+  ['missing run attempt',f=>{delete f.quality.run_attempt;f.receipt.attempt='undefined';}],
+  ['missing check ID',f=>{delete f.check.id;}],
   ['setup unmerged',f=>{f.setup.merged=false;}],['setup not owner-approved',f=>{f.setup.merged_by.login='bot';}],
   ['setup absent from target',f=>{f.setupIncluded=false;}],['master draft',f=>{f.pr.number=27;}],
   ['draft',f=>{f.pr.draft=true;}],['closed',f=>{f.pr.state='closed';}],['wrong target',f=>{f.pr.base.ref='main';}],
@@ -54,4 +76,9 @@ test('operating permit expires before Pro day begins; no silent extension or inv
   for(const time of ['2026-11-15T22:55:00Z','2026-11-15T23:00:00Z','2026-11-16T12:00:00Z','2027-01-01','invalid'])assert.throws(()=>readiness(fixture(),new Date(time),config),/expired/);
   assert.throws(()=>readiness(fixture(),now,{...config,setupHeadRef:null}),/setup/);
   assert.throws(()=>readiness(fixture(),now,{...config,validBefore:'unknown'}),/expired/);
+});
+
+test('a fully tested exact draft can become eligible after Ready without rerunning identical tests',()=>{
+ const f=fixture();f.pr.draft=true;assert.throws(()=>readiness(f,now,config));
+ f.pr.draft=false;assert.equal(readiness(f,now,config).eligible,true);
 });

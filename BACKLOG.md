@@ -1,3 +1,7 @@
+## Aktueller Stand nach Nutzermerge34 ·17.10.2026
+
+WK052/057: Setup34 übernommen und strikter nativer Pflichtcheck tatsächlich aktiv (Ruleset25304083), gemeinsame Härtung kontrolliert mit unveröffentlichtem Master abgleichen. Erster geeigneter vollständiger Routineabschnitt mit erwarteter Head-SHA/normalem geschütztem Merge und tatsächlichem Vercel-/Browsernachtest noch nachzuweisen. Cloud-Proxy blockiert Vercel403; Testhost/Freigabe beim Nutzer angefragt, kein Umweg. Details/Reservierung/Prüfstand in PROJECT_STATE und TEST-LIVE. WK053:24neue Tierarten anhand bestehender24Manuskripte/72Denkaufträge weiterentwickeln; keine Bestandswerkstätten doppelt zählen, vollständige Quellen/Mess-/Schutz-/Medien-/Lern-/UI-/Speicher-/Offlineprüfung. Chameleon→unveröffentlichtes heat-transfer-Ziel vor Teilentnahme auflösen. Alle übrigen bestehenden Aufgaben bleiben; keine zweite Planung, News pausiert.
+
 # Gemeinsamer Entwicklungsbestand
 
 Aktueller Ergänzungscheckpoint17.10.: Einrichtungs-PR34 auf test-live8d05beb, erster unveränderter Kandidat f029e028f1ebc485618c1478d059a46ab04470dc in vollständiger lokaler/GitHub-Abnahme. Notwendige Actions-Leseberechtigung und frühe API-Prüfung für endgültige Folgekorrektur erkannt; laufende Volltests nicht unterbrechen. Nutzermerge/aktive native Schutzregeln weiterhin erforderlich, keine Automatik aktiviert.

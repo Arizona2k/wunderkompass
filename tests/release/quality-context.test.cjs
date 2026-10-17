@@ -22,6 +22,7 @@ for (const [name,change] of [
   ['foreign repository',f=>{f.env.GITHUB_REPOSITORY='other/repo';}],
   ['wrong workflow',f=>{f.env.GITHUB_WORKFLOW_REF=f.env.GITHUB_WORKFLOW_REF.replace('quality.yml','spoof.yml');}],
   ['missing workflow commit',f=>{delete f.env.GITHUB_WORKFLOW_SHA;}],
+  ['different workflow commit',f=>{f.env.GITHUB_WORKFLOW_SHA=A;}],
   ['missing run attempt',f=>{delete f.env.GITHUB_RUN_ATTEMPT;}],
   ['wrong event',f=>{f.env.GITHUB_EVENT_NAME='pull_request_target';}],
   ['head checkout instead of integration',f=>{f.env.GITHUB_SHA=B;}],
@@ -85,4 +86,8 @@ test('actual depth-1 checkout retains integration parents through raw commit hea
     })().catch(e=>{console.error(e.message);process.exitCode=1;});`;
   const apiOutput=execFileSync(process.execPath,['-e',program],{cwd:shallow,encoding:'utf8',env:{...process.env,...f.env,GITHUB_EVENT_PATH:eventFile,GITHUB_TOKEN:'synthetic-qa-token'}});
   assert.match(apiOutput,/guards passed/);
+});
+
+test('draft QA receipt records eligible source/target; fresh readiness still excludes drafts',()=>{
+ const f=fixture();f.pr.draft=true;assert.equal(context(f.env,f.event,M,f.parents).automatic,true);
 });

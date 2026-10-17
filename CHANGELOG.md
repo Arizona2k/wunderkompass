@@ -1,3 +1,7 @@
+## Unveröffentlichter Master-Rückabgleich17.10.2026
+
+PR34 nach tatsächlichem Nutzermerge/Vercel-Erfolg und aktivem nativen strikten Pflichtcheck kontrolliert integrieren; alle umfangreicheren Masterprüfungen und Inhalte erhalten. Keine Produktveröffentlichung aus diesem Rückabgleich behauptet. Nachrichten pausiert,24Tierarten/WK053 prioritär; tatsächliche Schlussprüfungen am endgültigen Stand folgen.
+
 # Änderungsverlauf
 
 WK053:24neue Artmanuskripte mit eigenständigen Lernzielen und72individuellen Denkaufträgen/Hinweisen gesichert. Konkrete Quellenfallen, vorgeschlagene fachliche Beziehungen und fehlende Integrations-/Prüfvoraussetzungen einzeln dokumentiert. Dies ist abgeschlossene redaktionelle Vorbereitung, **keine neue öffentliche Tierwelt**, keine Medien-/Fachabnahme. Veröffentlichter24erBestand unverändert.

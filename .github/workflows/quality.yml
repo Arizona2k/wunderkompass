@@ -107,6 +107,9 @@ jobs:
         run: pnpm --dir qa install --frozen-lockfile
       - name: Install actual engine and dependencies
         run: pnpm --dir qa exec playwright install --with-deps ${{ matrix.engine }}
+      - name: Early actual-engine keyboard search
+        if: matrix.engine != 'chromium'
+        run: node tests/browser/journey-engines.mjs --engine=${{ matrix.engine }} --search-only
       - name: Complete Chromium regression
         if: matrix.engine == 'chromium'
         run: pnpm run test:browser
