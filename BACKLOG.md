@@ -1,5 +1,7 @@
 # Gemeinsamer Entwicklungsbestand
 
+Im aktuellen Lieferabschnitt zusätzlich konkreten Suchfokusfehler bei verzögertem Modulabruf reproduziert: Nach dem Laden blieb „Schließen“ fokussiert; eine Leertaste konnte den Dialog schließen. Suchfeld fokussiert jetzt ausdrücklich beim Erscheinen. Kontrollierte Lade-/Tastatur-/Wiederöffnungs-/Frühschließprobe, tatsächliche Eingabebereitschaft aller24 Suchwege und begrenzte Fehlerdiagnostik ergänzen dieselben Prüfgruppen. Neue lokale Teilprobe bestanden (51,910s); danach vollständige neue Schlussabnahme, keine vorzeitige Ready-Meldung. Alle alten10 Gruppen/Browser/PNG-Rollen und offene Masteraufgaben bleiben erhalten.
+
 Messbarer Begleitfix im selben Abschnitt: Startseite lädt nur ihre acht kanonischen Wissensspuren statt den gesamten wachsenden Graphen. Vollständiger Graph bleibt für Artikel erhalten, Ableitung mit Export-/Negativtests gegen veraltete oder fehlende Daten gesichert. Erstabruf278.005Byte Gzip, bisherige PR32-Basis278.476Byte; ursprüngliches280.000Byte-Gate bleibt erhalten. Kein neuer Optimierungsdurchlauf.
 
 ## Aktueller Tier-/Planeten-Lieferabschnitt · WK053/056/057 · in Prüfung

@@ -39,7 +39,7 @@ export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='n
  return {id:data.id,width,state,levels:[0,1,2],bothEvidence:true,wrongAndCorrect:true,keyboard,geometry:true};
 }
 export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix=widths}={}){
- const observed=[],focusChecks=[],start=performance.now();
+ const observed=[],focusChecks=[],start=performance.now(),searchFocus=await delayedSearchFocus(browser,base,monitor,shots);
  for(const width of matrix){
   const c=await browser.newContext({viewport:{width,height:900},hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
   const pass=createSave();pass.progress.favorites=['topic:animal-polar-bear'];pass.progress.notes=[{id:'animal-test-note',text:'Synthetische alte Notiz',at:'2026-10-17T07:00:00.000Z'}];pass.progress.gameSessions['world:animal-detective']={items:['animal-lion','animal-polar-bear'],index:1,roundAnswer:'alte Antwort'};
@@ -63,8 +63,8 @@ export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix
    console.log('Animal workshop',width,DATA.entries.length,'cards passed');
   }catch(error){await p.screenshot({path:path.join(shots,'animal-failure-'+width+'.png'),fullPage:true,timeout:5000}).catch(()=>{});throw error;}finally{await c.close();}
  }
- await animalNavigation(browser,base,ready,monitor);
- report.animalCoverage={observed,focusChecks,seconds:(performance.now()-start)/1000,oldSessionsPreserved:true,largeText:true,axe:true,independentAcceptance:false,navigation:true};
+ await animalNavigation(browser,base,ready,monitor,shots);
+ report.animalCoverage={observed,focusChecks,searchFocus,seconds:(performance.now()-start)/1000,oldSessionsPreserved:true,largeText:true,axe:true,independentAcceptance:false,navigation:true};
  report.checks.push('24 existing animal cards: individual evidence, three voluntary thinking paths,48 reasoning tasks, wrong/correct feedback, keyboard, large text, axe and old/new session reload at'+matrix.join('/'));
 }
 export async function animalNativeZoom(chromium,options,base,report,shots){
@@ -74,14 +74,41 @@ export async function animalNativeZoom(chromium,options,base,report,shots){
 }
 export async function offlineAnimals(p,report){const observed=[];for(const data of DATA.entries)observed.push(await exerciseAnimal(p,data,{width:1280,keyboard:true,state:'offline'}));report.animalOffline={cards:DATA.entries.length,coldRestart:true,observed};report.checks.push('All24 animal workshops usable after real server shutdown and cold offline browser restart');}
 
-async function animalNavigation(browser,base,ready,monitor){
- const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await c.newPage();monitor(p);
+export async function animalNavigation(browser,base,ready,monitor,shots){
+ const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await c.newPage(),engine=browser.browserType().name();monitor(p);let current='initial',stage='home';
+ await p.addInitScript(()=>{window.__animalSearchTrace=[];for(const type of ['input','change','focusin','focusout','hashchange','popstate'])window.addEventListener(type,event=>{const target=event.target;if(target?.getAttribute?.('role')==='combobox'||type==='hashchange'||type==='popstate'){window.__animalSearchTrace.push({type,value:target?.value??null,hash:location.hash,at:performance.now(),trusted:event.isTrusted});if(window.__animalSearchTrace.length>32)window.__animalSearchTrace.shift();}},true);});
  try{await p.goto(base);await ready(p);for(const entry of DATA.entries){
-  const t=topics.find(t=>t.id===entry.id);
-  await p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await p.getByRole('combobox',{name:'Lernwelt durchsuchen',exact:true}).fill(t.title);await p.getByRole('option').filter({has:p.getByText(t.title,{exact:true})}).click();await p.locator('[data-animal-inquiry="'+entry.id+'"]').waitFor({state:'attached'});await p.reload();await ready(p);
+  current=entry.id;const t=topics.find(t=>t.id===entry.id);stage='open search';
+  await p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();const input=p.getByRole('combobox',{name:'Lernwelt durchsuchen',exact:true});await input.waitFor();
+  stage='actual input focus';await p.waitForFunction(()=>document.activeElement?.matches('.search-dialog [role="combobox"]'));
+  stage='fill exact title';await input.fill(t.title);assert.equal(await input.inputValue(),t.title,'complete title, including accents and spaces');
+  stage='select exact result';await p.getByRole('option').filter({has:p.getByText(t.title,{exact:true})}).click();await p.locator('[data-animal-inquiry="'+entry.id+'"]').waitFor({state:'attached'});stage='reload';await p.reload();await ready(p);
   const edge=review.newConnections.find(e=>e.fromId===entry.id||e.toId===entry.id);assert.ok(edge,'individual explained context '+entry.id);const otherId=edge.fromId===entry.id?edge.toId:edge.fromId;
-  const selector='[data-route-focus="world-connection-'+entry.id+'-'+otherId+'"]';await p.locator(selector).click();await p.getByRole('heading',{name:catalog.find(t=>t.id===otherId).title,exact:true}).waitFor();
-  await p.goBack();await p.locator('[data-animal-inquiry="'+entry.id+'"]').waitFor({state:'attached'});await p.waitForFunction(selector=>document.activeElement?.matches(selector),selector);
+  const selector='[data-route-focus="world-connection-'+entry.id+'-'+otherId+'"]';stage='explained connection';await p.locator(selector).click();await p.getByRole('heading',{name:catalog.find(t=>t.id===otherId).title,exact:true}).waitFor();
+  stage='back and opener focus';await p.goBack();await p.locator('[data-animal-inquiry="'+entry.id+'"]').waitFor({state:'attached'});await p.waitForFunction(selector=>document.activeElement?.matches(selector),selector);
  }
- }finally{await c.close();}
+ }catch(error){const state=await p.evaluate(()=>({url:location.href,active:document.activeElement?.outerHTML.slice(0,700),query:document.querySelector('.search-dialog [role="combobox"]')?.value??null,queryAttribute:document.querySelector('.search-dialog [role="combobox"]')?.getAttribute('value')??null,dialog:document.querySelector('.search-dialog')?.getAttribute('data-state')??null,options:[...document.querySelectorAll('[role="option"]')].map(e=>({value:e.getAttribute('data-value'),text:e.textContent?.slice(0,180)})),trace:window.__animalSearchTrace??[]})).catch(()=>({unavailable:true}));const failure={engine,current,stage,error:error.message,...state};console.error('ANIMAL_SEARCH_FAILURE',JSON.stringify(failure));if(shots){await fs.writeFile(path.join(shots,'animal-search-failure-'+engine+'.json'),JSON.stringify(failure,null,2));await p.screenshot({path:path.join(shots,'animal-search-failure-'+engine+'.png'),fullPage:true,animations:'disabled'}).catch(()=>{});}throw new Error('Animal navigation '+engine+' '+current+' '+stage+': '+error.message,{cause:error});}finally{await c.close();}
+}
+
+// A lazy search must focus its real input even if the dialog initially contains
+// only the loading state and close button. No sleep or request retry is used.
+export async function delayedSearchFocus(browser,base,monitor,shots){
+ const engine=browser.browserType().name();
+ async function setup(){
+  const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await c.newPage();monitor(p);let release;const gate=new Promise(resolve=>release=resolve);
+  await p.route('**/assets/global-search-*.js',async route=>{await gate;await route.continue();});
+  await p.goto(base+'#world/topic/animal-whale-shark');await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor();const requested=p.waitForRequest(r=>/\/assets\/global-search-.*\.js/.test(r.url()));const opener=p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true});await opener.focus();await p.keyboard.press('Enter');await requested;await p.waitForFunction(()=>!!document.activeElement?.closest('.search-dialog'));return {c,p,release,opener};
+ }
+ let a=await setup();
+ try{
+  a.release();const input=a.p.getByRole('combobox',{name:'Lernwelt durchsuchen',exact:true});await input.waitFor();await a.p.waitForFunction(()=>document.activeElement?.matches('.search-dialog [role="combobox"]'));
+  await a.p.keyboard.type('Großer Tümmler');assert.equal(await input.inputValue(),'Großer Tümmler');const result=a.p.getByRole('option').filter({has:a.p.getByText('Großer Tümmler',{exact:true})});await result.waitFor();if(shots)await a.p.locator('.search-dialog').screenshot({path:path.join(shots,'animal-search-delayed-390.png'),animations:'disabled'});await result.click();await a.p.locator('[data-animal-inquiry="animal-common-bottlenose-dolphin"]').waitFor({state:'attached'});
+  await a.p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await a.p.waitForFunction(()=>document.activeElement?.matches('.search-dialog [role="combobox"]'));await a.p.keyboard.type('Grüne Meeresschildkröte');assert.equal(await input.inputValue(),'Grüne Meeresschildkröte');await a.p.getByRole('option').filter({has:a.p.getByText('Grüne Meeresschildkröte',{exact:true})}).click();await a.p.locator('[data-animal-inquiry="animal-green-sea-turtle"]').waitFor({state:'attached'});await a.p.waitForLoadState('networkidle');
+ }catch(error){if(shots)await a.p.screenshot({path:path.join(shots,'animal-search-delayed-failure-'+engine+'.png'),fullPage:true,animations:'disabled'}).catch(()=>{});throw error;}finally{a.release();await a.c.close();}
+ a=await setup();
+ try{
+  await a.p.keyboard.press('Escape');await a.p.locator('.search-dialog').waitFor({state:'hidden'});await a.p.waitForFunction(()=>document.activeElement?.getAttribute('aria-label')==='Lernwelt durchsuchen');const response=a.p.waitForResponse(r=>/\/assets\/global-search-.*\.js/.test(r.url()));a.release();await (await response).finished();await a.p.waitForLoadState('networkidle');assert.equal(await a.p.locator('.search-dialog').count(),0,'late module cannot reopen a closed dialog');assert.equal(await a.opener.evaluate(e=>document.activeElement===e),true,'late module cannot steal restored opener focus');
+ }finally{a.release();await a.c.close();}
+ console.log('Delayed search input',engine,'real keyboard, two accented full titles, reopen and early close passed');
+ return {delayedModule:true,keyboardQuery:true,reopenReady:true,closedBeforeReady:true,openerRestored:true};
 }

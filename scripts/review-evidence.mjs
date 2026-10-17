@@ -26,6 +26,7 @@ requiredScreenshots.push(...[320,1440].flatMap(w=>['moon-1','moon-2','water-2','
 requiredScreenshots.push('quality-navigation-solar-caption-negative-320.png');
 requiredScreenshots.push(...[320,360,390,402,768,1024,1440,1920].flatMap(w=>['normal','large'].flatMap(state=>['diameters','distances'].map(mode=>'quality-navigation-solar-caption-'+mode+'-'+state+'-'+w+'.png'))),...['diameters','distances'].map(mode=>'quality-navigation-solar-caption-'+mode+'-large-640.png'));
 requiredScreenshots.push(...[320,360,390,768,1024,1440,1920].flatMap(w=>[...[0,1,2].flatMap(level=>['normal','large'].map(state=>'quality-navigation-animal-workshop-'+state+'-'+level+'-'+w+'.png')),'quality-navigation-animal-workshop-focus-'+w+'.png']),'quality-navigation-animal-native-200-large-640.png');
+requiredScreenshots.push('quality-navigation-animal-search-delayed-390.png');
 export function retainScreenshot(name){
  if(requiredScreenshots.includes(name))return true;
  if(name.startsWith('journey-engine-')||name.startsWith('quality-foundation-')||name.startsWith('quality-news-feed-'))return true;

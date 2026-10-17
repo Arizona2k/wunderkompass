@@ -1,5 +1,7 @@
 # Änderungsverlauf
 
+- Suchfeld fokussiert beim Erscheinen auch nach verzögertem Modulabruf. Verhindert, dass Tastatureingaben am Schließen-Knopf landen. Kontrollierte Lade-, echte Tastatur-, Wiederöffnungs- und frühe Schließprüfung mit Rückfokus; konkrete Fehlerdiagnostik für alle24 Tier-Suchwege.
+
 - Die Startseite lädt nur ihre acht tatsächlich gezeigten kanonischen Wissensspuren. Der vollständige Graph bleibt für Wissenskarten erhalten. Gemessener Einstieg278.005Byte Gzip statt278.476Byte auf der unveränderten PR32-Basis; alle Spuren und Erstabrufbudgets erhalten, Ableitung gegen Quellenabweichung geprüft.
 
 ## In Entwicklung · Tierwerkstätten und Planetenbeschriftung · 17.10.2026
