@@ -1,3 +1,9 @@
+## Quellenzugang · tatsächlicher WebKit-Befund in Quality105
+
+Headb266d11: vollständiger lokaler Chromiumlauf1510,016s/alle10Gruppen/119Berichtseinträge bestanden, finale320/360/390/1440- und native200%-Bilder persönlich angesehen. GitHub105 hat Chromium und den vollständigen Firefoxteil bestanden, scheitert danach im neuen WebKit-Quellentest an der unveränderten Fokusassertion. Kein Ready/Merge und kein als grün ausgegebener Lauf. Originale Logs und Artefakt12104040699 bleiben erhalten.
+
+Bestehenden frühen tatsächlichen Tastaturpfad gezielt um dieselben Quellenkontrollen ergänzt: kein neuer Job/Workflow/Server oder entfallener Fall. Quellenhelper als gemeinsam verwendetes Testmodul ausgezogen; vollständige spätere Matrix bleibt identisch. Tastaturprüfung aktiviert ihr echtes Browserdokument nach vorherigen isolierten Kontexten ausdrücklich; aktive Elemente, Tabfolge, sichtbarer Fokus und Dokumentfokus werden bei einem erneuten Fehler konkret aufgezeichnet. Dies ist eine begründete Testvorbereitung, noch keine behauptete bestätigte WebKit-Ursache. Endgültige volle lokale/GitHub-Abnahme am folgenden Commit bleibt verbindlich. Testwebsite weiterhin vom Cloudproxy gesperrt; neuerCloud-Auftrag zur tatsächlichen Websitezuordnung nötig.
+
 ## Aktueller Folgeabschnitt · Quellen der Lernreisen ·17.10.2026
 
 Basis ist der tatsächliche NutzermergePR34 `45bdb549cb6392ceb220cdc256264223bbabfde1`; offizieller Vercel-Erfolg56594156614 vom17.10.13:29:15Z bestätigt. Ruleset25304083 aktiv/strict/keineBypassakteure; main unverändert. Eigene Reservierungba8025f190d765813e9462f522bae121a7e9a0bd. MasterPR27 kontrolliert auf99d5967 mit allen bisherigen Inhalten/Manuskripten abgeglichen, nicht automatisch übernehmbar. Keine parallele Entwicklung.

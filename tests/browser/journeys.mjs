@@ -1,3 +1,5 @@
+import {journeySourceView} from './journey-sources.mjs';
+export {journeySourceView} from './journey-sources.mjs';
 import {nativeJourneyZoom} from './journey-zoom.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -66,46 +68,6 @@ export async function journeysFlow(browser,base,ready,monitor,report,shots,nativ
 }
 export async function prepareOfflineJourneys(p){await open(p,'water',2);const inquiry=p.locator('.journey-inquiry');await inquiry.locator('.journey-levels button').nth(2).click();await reveal(inquiry,'Dein Forschermerkzettel · freiwillig');await inquiry.locator('textarea').fill('Offline-Sicherung: Wasser kann seinen Zustand ändern.');await p.waitForFunction(key=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['journey:water']['chapter:2:note']==='Offline-Sicherung: Wasser kann seinen Zustand ändern.',saveKey);}
 
-// Source access is part of the existing real-engine suite, not a new gate.
-export async function journeySourceView(p,{widths,shots,engine}){
- const initialRoute=await p.evaluate(()=>location.hash),viewport=p.viewportSize(),wasLarge=await p.locator('.earth-app').evaluate(e=>e.classList.contains('large-reading')),views=[];
- try{
-  for(const width of widths){
-   await p.setViewportSize({width,height:900});
-   for(const large of [false,true]){
-    await p.locator('.earth-app').evaluate((e,large)=>e.classList.toggle('large-reading',large),large);
-    for(const journey of JOURNEYS){
-     await open(p,journey.id,0);await reveal(p,'Für Erwachsene: Quellen');
-     const source=p.locator('a.journey-source');
-     assert.equal(await source.count(),1,'one unchanged original source per journey');
-     assert.equal(await source.getAttribute('href'),journey.source,'original source destination');
-     assert.equal(await source.innerText(),journey.sourceName,'original source credit');
-     assert.equal(await source.getAttribute('target'),'_blank');
-     assert.ok((await source.getAttribute('rel')).split(/\s+/).includes('noreferrer'));
-     const metric=await source.evaluate(e=>{const r=e.getBoundingClientRect(),range=document.createRange();range.selectNodeContents(e);const ink=range.getBoundingClientRect();return {height:r.height,font:parseFloat(getComputedStyle(e).fontSize),left:r.left,right:r.right,inkLeft:ink.left,inkRight:ink.right};});
-     assert.ok(metric.height>=44,'source link touch target: '+journey.id+' '+width+' '+large);
-     assert.ok(metric.font>=(large?18.3:16),'source credit follows the large-reading setting');
-     assert.ok(metric.left>=-2&&metric.right<=width+2&&metric.inkLeft>=metric.left-2&&metric.inkRight<=metric.right+2,'source text stays visible');
-     await source.focus();await p.keyboard.press('Tab');await p.keyboard.press('Shift+Tab');
-     assert.ok(await source.evaluate(e=>e===document.activeElement&&e.matches(':focus-visible')),'source keyboard focus stays visible');
-     views.push({journey:journey.id,width,large,...metric,keyboard:true});
-     if(journey.id==='navigation'&&[320,1440].includes(width))await source.locator('..').screenshot({path:path.join(shots,'journey-engine-'+engine+'-sources-'+(large?'large':'normal')+'-'+width+'.png'),animations:'disabled'});
-    }
-   }
-  }
-  // Every chapter keeps the same original source, including completed/resumed paths.
-  for(const journey of JOURNEYS)for(let index=0;index<journey.steps.length;index++){
-   await open(p,journey.id,index);await reveal(p,'Für Erwachsene: Quellen');
-   assert.equal(await p.locator('a.journey-source').getAttribute('href'),journey.source);
-  }
-  assert.equal(views.length,JOURNEYS.length*widths.length*2);
-  return {views,chapters:80,scope:'source credit readability, touch, keyboard and unchanged original links'};
- }finally{
-  await p.locator('.earth-app').evaluate((e,large)=>e.classList.toggle('large-reading',large),wasLarge);
-  await p.setViewportSize(viewport);await p.evaluate(hash=>location.hash=hash,initialRoute);
-  if(initialRoute==='#journeys')await p.locator('.journey-filters input').waitFor();
- }
-}
 // Run the changed learning controls first, also in the existing real-engine path.
 // This is a targeted part of the existing journey suite, never a replacement.
 export async function journeySupportView(p,{widths,shots,engine}){
