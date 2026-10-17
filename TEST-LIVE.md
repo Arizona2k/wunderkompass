@@ -1,3 +1,7 @@
+## Aktuelle Einordnung · 17.10.2026
+
+Maßgeblich sind der [aktueller Originalauftrag](content/auftrag-2026-10-13/WunderKompass_Produktfortsetzung_2026-10-17.txt) und der aktuelle Vertrag in AGENTS.md. Der Datenschutz-Sonderauftrag ist beendet; normale vollständige Folgeabschnitte dürfen unter unveränderten TEST-LIVE-Bedingungen regulär übernommen werden. Historische Nutzermerge-Pausen und ältere technische Fehlerberichte gelten nicht ungeprüft fort. News pausiert; main und sämtliche Schutz-/Kosten-/Abnahmegrenzen bleiben erhalten.
+
 <!-- CONTINUATION36-CURRENT-START -->
 ## Tatsächlicher Testzugang und abgeschlossener Suchabschnitt36 ·17.10.2026
 
@@ -28,9 +32,9 @@ Im bestehenden [Vercel-Projekt](https://vercel.com/interaktive-wissens-und-lernp
 
 Danach normalen HTTP-/Browserzugriff, tatsächlichen Build und betroffene Funktionen prüfen. Einen200-Status allein nicht mit dem richtigen aktuellen Build gleichsetzen. Keine erfundene Vercel-Änderung oder automatische dauernde Browserüberwachung versprechen. Vorhandene ereignisgesteuerte GitHub-Prüfungen und Vercel-Deployments laufen regulär; keine zusätzlichen Agenten/Scheduler.
 
-## Vorrangige Nutzerentscheidung im laufenden Auftrag ·17.10.2026
+## Historische Nutzermerge-Pause · durch Produktfortsetzung ersetzt
 
-Der Nutzer hat die automatische Übernahme ausdrücklich zurückgestellt: „auto merge erstmal zurückstellen … ich merge dann selber wenn du mir das go gibst“. Bestehende Prüfungen und fachliche/technische Entwicklung weiterführen und gesichert übergeben. **Keine eigene oder automatische PR-Übernahme und keine wartende Auto-Merge-Aktivierung. Der Nutzer mergt selbst.** Eine konkrete GO-Empfehlung erst nach sämtlichen tatsächlich erforderlichen aktuellen Prüf- und Abnahmenachweisen des bezeichneten PRs; fehlende oder rote Nachweise offen nennen. PR27 bleibt Draft, bis seine eigenen Voraussetzungen vollständig erfüllt sind. Diese neueste Entscheidung hat Vorrang vor den nachfolgenden älteren Routine-Automatikfreigaben; keine Schutz-, Kosten-, main- oder Newsänderung.
+Die damalige Nutzermerge-Pause ist für vollständig geprüfte normale Folgeabschnitte durch den aktuellen Originalauftrag ersetzt. Technische Schutzregeln und erforderliche Abnahmen bleiben unverändert. Die ursprüngliche Formulierung bleibt in Git nachvollziehbar.
 
 # Verbindliche, begrenzte Testübernahme
 

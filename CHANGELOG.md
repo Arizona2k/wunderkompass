@@ -1,3 +1,7 @@
+## In Entwicklung: Geschichtsquellen untersuchen
+
+Zwei neue Artikel zu Khipus und Mohenjo-Daro, eigene ausdrücklich erfundene bedienbare Lernbilder und sechs Aufgaben zu Beobachten, Vergleichen und Schlussgrenzen. Frühe Schrift erklärt Bildzeichen, abstrakte Markierungen und spätere Lautverwendungen genauer, mit individuellem Fehlfeedback; vier gegenseitige Wissenswege ergänzt. Mobile Knopfabstände, Modell-Sprung und Grafik-Kontrast geprüft und verbessert. Fachliche/pädagogische KI-Gegenprüfung gemäß aktueller Nutzerklarstellung dokumentiert; externe Menschenabnahmen kein Abschlussgate. Keine Veröffentlichung oder vollständiger Paketabschluss aus den frühen Teilprüfungen ableiten.
+
 ## 17. Oktober2026 · unabhängig geprüfte Suchvorbereitung auf test-live
 
 PR36 wurde nach vollständiger Quality und identischer geprüfter Integration am17.10.21:58:22Europe/Berlin übernommen (68cb0bd). Die bestehende Suche bereitet Namen, Vorschautexte und Aliase einmal je Katalogänderung vor; Inhalte, Trefferbewertung, Schreibvariantentoleranz, Reihenfolge und Pass bleiben erhalten. Tatsächlicher Vercel-Erfolg und neuer Testbuild01f5ee4aa7e78830 samt Such-/Quellen-/Rückwegen nachgeprüft. Keine zusätzlichen Lernartikel durch diesen technischen Abschnitt veröffentlicht; der größere Master bleibt in Arbeit. Exakte Nachweise und Grenzen inPR36/PROJECT_STATE.

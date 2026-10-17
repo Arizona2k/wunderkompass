@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {historyLearningFlow} from './history-learning.mjs';
 import fs from 'node:fs/promises';
 await import('../../scripts/test-runtime.mjs');
 const {createSave,SAVE_KEY}=await import('../../app/progress-storage.ts');
@@ -24,6 +25,7 @@ export async function worldContentFlow(browser,base,ready,monitor,report,shots){
  }
  report.checks.push('Demand-loaded category content: no unrelated article data, exact identity/partial-payload rejection, bounded explicit retry, validated reuse, category changes and Back at 320px');
  await gameContentFlow(browser,base,ready,monitor,report,shots);
+ await historyLearningFlow(browser,base,ready,monitor,report,shots);
 }
 
 async function gameContentFlow(browser,base,ready,monitor,report,shots){

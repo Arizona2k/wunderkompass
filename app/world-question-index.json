@@ -3609,5 +3609,107 @@
     "hints": [
       "Welche Form des Körperendes könnte sich um eine geeignete Haltestruktur legen? Der Tiername allein erklärt keine Fähigkeit."
     ]
+  },
+  {
+    "prompt": "Wofür wurden Khipus im Inka-Reich unter anderem verwendet?",
+    "answers": [
+      "Zum Festhalten von Vorräten und anderen Mengen",
+      "Als elektrisches Telefonnetz",
+      "Als Beweis, dass jeder Knoten einen Buchstaben bedeutet"
+    ],
+    "correct": 0,
+    "why": "Khipus konnten Mengen und Verwaltungsinformationen festhalten. Ihre Bedeutung hängt von mehreren Merkmalen und dem Zusammenhang ab.",
+    "id": "history-khipu:mini",
+    "topic": "history-khipu",
+    "topicTitle": "Khipus: Informationen in Schnüren",
+    "difficulty": "easy",
+    "hints": [
+      "Überlege, welche Informationen Menschen beim Verteilen von Vorräten aufbewahren müssen."
+    ]
+  },
+  {
+    "id": "history-khipu:compare",
+    "difficulty": "medium",
+    "prompt": "Du erkennst in unserem erfundenen Lernbild drei und fünf Zeichen. Was fehlt ohne Vereinbarung?",
+    "answers": [
+      "Ob die Zeichen etwa Körbe oder Personen zählen",
+      "Dass fünf mehr als drei ist",
+      "Die Möglichkeit, beide gezeichneten Mengen zu vergleichen"
+    ],
+    "correct": 0,
+    "why": "Eine Anzahl lässt sich vergleichen, ohne zu wissen, was gezählt wird. Die Bedeutung braucht eine vereinbarte Zuordnung.",
+    "topic": "history-khipu",
+    "topicTitle": "Khipus: Informationen in Schnüren",
+    "hints": [
+      "Vergleiche Zählen und Benennen: Welche Information bleibt, wenn die Beschriftung der Dinge fehlt?"
+    ]
+  },
+  {
+    "id": "history-khipu:limits",
+    "difficulty": "hard",
+    "prompt": "Ein Khipu enthält erkennbare Zahlen. Welche Schlussfolgerung geht über diesen Befund hinaus?",
+    "answers": [
+      "Dass damit jede weitere Bedeutung des Khipus vollständig geklärt ist",
+      "Dass bestimmte Mengen aufgezeichnet sein können",
+      "Dass Knoten und Anordnung untersucht werden können"
+    ],
+    "correct": 0,
+    "why": "Erkennbare Zahlen beweisen keine vollständige Entschlüsselung aller weiteren Merkmale oder Bedeutungen.",
+    "topic": "history-khipu",
+    "topicTitle": "Khipus: Informationen in Schnüren",
+    "hints": [
+      "Eine erkennbare Zahl ist ein Befund. Prüfe, ob damit auch Farbe, Anordnung und weiterer Zusammenhang erklärt sind."
+    ]
+  },
+  {
+    "prompt": "Welche Spur nennt die UNESCO für die Stadtplanung von Mohenjo-Daro?",
+    "answers": [
+      "Straßen und ein System von Abläufen",
+      "Ein modernes elektrisches U-Bahn-Netz",
+      "Satellitenaufnahmen aus der Bauzeit"
+    ],
+    "correct": 0,
+    "why": "Ausgegrabene Straßen und Wasseranlagen sind materielle Spuren. Ihre Untersuchung erlaubt begrenzte Aussagen über die Stadtplanung.",
+    "id": "history-mohenjo-daro:mini",
+    "topic": "history-mohenjo-daro",
+    "topicTitle": "Mohenjo-Daro: Spuren einer geplanten Stadt",
+    "difficulty": "easy",
+    "hints": [
+      "Suche nach Spuren, die als Baureste erhalten sein können."
+    ]
+  },
+  {
+    "id": "history-mohenjo-daro:compare",
+    "difficulty": "medium",
+    "prompt": "In einem Haus wird ein Ablauf gefunden. Was ist damit direkt belegt?",
+    "answers": [
+      "An dieser Stelle gab es eine bauliche Einrichtung für einen Wasserweg",
+      "Dass alle Bewohner der Stadt dasselbe Einkommen hatten",
+      "Dass das Wasser immer keimfrei war"
+    ],
+    "correct": 0,
+    "why": "Der Fund belegt zunächst die bauliche Einrichtung. Einkommen oder Keimfreiheit benötigen andere Belege.",
+    "topic": "history-mohenjo-daro",
+    "topicTitle": "Mohenjo-Daro: Spuren einer geplanten Stadt",
+    "hints": [
+      "Beschreibe erst das gefundene Bauteil. Welche anderen Aussagen würden Untersuchungen an Menschen oder Wasser benötigen?"
+    ]
+  },
+  {
+    "id": "history-mohenjo-daro:limits",
+    "difficulty": "hard",
+    "prompt": "Warum reicht ein ausgegrabener Stadtteil nicht für jede Aussage über die gesamte Stadt?",
+    "answers": [
+      "Untersuchter Ausschnitt und Gesamtstadt sind nicht automatisch gleich",
+      "Weil Baureste grundsätzlich nichts über Menschen verraten",
+      "Weil nur schriftliche Quellen wissenschaftlich zählen"
+    ],
+    "correct": 0,
+    "why": "Materielle Quellen sind wertvoll, aber ihr räumlicher und zeitlicher Ausschnitt begrenzt die Schlüsse. Weitere Funde können sie ergänzen.",
+    "topic": "history-mohenjo-daro",
+    "topicTitle": "Mohenjo-Daro: Spuren einer geplanten Stadt",
+    "hints": [
+      "Vergleiche den untersuchten Ausschnitt mit dem Gebiet, über das die Aussage gemacht wird."
+    ]
   }
 ]

@@ -1,3 +1,4 @@
+import {nativeHistoryLearning} from './history-learning.mjs';
 import {offlineResilience} from './offline-resilience.mjs';
 import {historyEngineView} from './discovery-central.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
@@ -41,6 +42,7 @@ export async function nativeJourneyZoom(chromium,options,base,report,shots,{book
   }
   if(includeBook)await bookStudyAtZoom(p,report,capture);
   if(includeWhy)await whyAtZoom(p,report,capture);
+  if(!bookOnly)await nativeHistoryLearning(p,base,report,name=>captureNativeViewport(p,path.join(shots,name)));
   if(!bookOnly){report.nativeZoom={percent:200,...dimensions,largeTextAlsoChecked:true};report.speechAvailability=await p.evaluate(()=>({api:'speechSynthesis' in window,germanVoices:window.speechSynthesis?.getVoices().filter(v=>v.lang.startsWith('de')).length??0,audibleTestPerformed:false}));report.checks.push('Actual native Chromium 200% zoom, measured 640 CSS px / 1280 screen px / DPR 2; four journeys, large text, focus, reflow and axe');}assert.deepEqual(errors,[]);
  }finally{await context.close();}
 }

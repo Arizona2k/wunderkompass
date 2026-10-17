@@ -34,6 +34,7 @@ requiredScreenshots.push(...worldIndex.filter(t=>t.buildingKind).flatMap(t=>[320
 requiredScreenshots.push('quality-foundation-offline-resilience-chromium-source-error-320.png','quality-foundation-offline-resilience-chromium-quota-error-320.png','quality-learning-offline-resilience-native-progress-640.png',...[320,360,390,768,1024,1440,1920].map(w=>'quality-foundation-offline-resilience-chromium-progress-'+w+'.png'));
 requiredScreenshots.push(...[320,1440].flatMap(w=>['moon-1','moon-2','water-2','inside-2','countries-3'].map(id=>'quality-learning-journey-engine-chromium-support-'+id+'-'+w+'.png')));
 requiredScreenshots.push('quality-navigation-animal-search-delayed-390.png');
+requiredScreenshots.push(...['history-khipu','history-mohenjo-daro'].flatMap(id=>[...[320,1440].map(w=>'quality-navigation-'+id+'-'+w+'.png'),...['top','diagram','controls'].map(state=>'quality-learning-history-learning-native-'+id+'-'+state+'.png')]),...[320,1440].map(w=>'quality-navigation-history-writing-feedback-'+w+'.png'));
 export function retainScreenshot(name){
  if(requiredScreenshots.includes(name))return true;
  // Each individual plan and distinct functional model has review value.

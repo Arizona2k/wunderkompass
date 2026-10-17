@@ -44,6 +44,6 @@ test('each addition has an explained reciprocal edge without unfinished external
 });
 
 test('all185 preceding questions and hints survive the24 additions without changing their identities or content',()=>{
- const old=review.retainedQuestionBank;assert.equal(old.count,185);assert.equal(questions.length,old.count+24);assert.equal(digest(questions.slice(0,old.count)),old.sha256);
+ const old=review.retainedQuestionBank;assert.equal(old.count,185);assert.equal(questions.length,old.count+24+6);assert.equal(digest(questions.slice(0,old.count)),old.sha256);
  for(const e of review.entries){const t=catalog.find(t=>t.id===e.id);assert.equal(t.questionFeedback.wrongReasons.length,3);assert.equal(t.questionFeedback.wrongReasons[t.question.correct],null);assert.equal(t.image,undefined);assert.ok(t.questionFeedback.hint.length>=45);}
 });
