@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: read
+  pull-requests: read
+  actions: read
 
 concurrency:
   group: quality-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
@@ -33,6 +35,12 @@ jobs:
           cache-dependency-path: |
             pnpm-lock.yaml
             qa/pnpm-lock.yaml
+      - name: Bind Quality to this PR and integration base
+        run: node scripts/release/quality-context.cjs capture
+      - name: Verify read access and current PR before expensive checks
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/release/quality-context.cjs verify
       - name: Install application with frozen lockfile
         run: pnpm install --frozen-lockfile
       - name: TypeScript
@@ -51,14 +59,20 @@ jobs:
         run: pnpm --dir qa install --frozen-lockfile
       - name: Install Chromium and system dependencies
         run: pnpm --dir qa exec playwright install --with-deps chromium
-      - name: Production browser regression
-        run: pnpm run test:browser
       - name: Install additional browser engines
         run: pnpm --dir qa exec playwright install --with-deps firefox webkit
+      - name: Early actual-engine keyboard search before the complete regression
+        run: node tests/browser/journey-engines.mjs --search-only
+      - name: Production browser regression
+        run: pnpm run test:browser
       - name: Actual Firefox and WebKit journey checks
         run: node tests/browser/journey-engines.mjs
       - name: Handoff with actual engine evidence
         run: node scripts/handoff.mjs --require-engines
+      - name: Reject stale PR head, base or unexpected workflow origin
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/release/quality-context.cjs verify
       - name: Read-only original news-source readiness report
         run: node scripts/news/readiness.mjs --ci-report
       - name: Prepare bounded review evidence

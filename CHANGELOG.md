@@ -1,5 +1,9 @@
 # Änderungsverlauf
 
+## Vorbereitete Testübernahme und aktuelle Quality-Bindung ·17.10.2026
+
+Bestehenden Quality-Abschluss beider Workflowvarianten schreibfrei an aktuellen PR/Head/Zielbasis/Integrationscommit/Run/Attempt/Workflow gebunden; negative Tests für veraltete/gemischte/unvollständige Herkunft. Begrenzte Readinessentscheidung mit strikter nativer Pflichtcheck-Voraussetzung, manueller Setupübernahme und konservativem Pro-Ende16.11.00:00Europe/Berlin. Originalauftrag vollständig archiviert, fachübergreifende Pflege und ausdrücklich sinnvolle Optimierung in bestehenden Regeln präzisiert. Keine neue volle Pipeline, kein Publisher, keine Aktivierung; tatsächlicher Branchschutz mangels Adminschnittstelle noch offen. Lernfunktionen/IDs/Pass/Offline und sämtliche Pflichtprüfungen erhalten; News pausiert.
+
 - Suchfeld fokussiert beim Erscheinen auch nach verzögertem Modulabruf. Verhindert, dass Tastatureingaben am Schließen-Knopf landen. Kontrollierte Lade-, echte Tastatur-, Wiederöffnungs- und frühe Schließprüfung mit Rückfokus; konkrete Fehlerdiagnostik für alle24 Tier-Suchwege.
 
 - Die Startseite lädt nur ihre acht tatsächlich gezeigten kanonischen Wissensspuren. Der vollständige Graph bleibt für Wissenskarten erhalten. Gemessener Einstieg278.005Byte Gzip statt278.476Byte auf der unveränderten PR32-Basis; alle Spuren und Erstabrufbudgets erhalten, Ableitung gegen Quellenabweichung geprüft.
