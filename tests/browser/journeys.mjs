@@ -66,11 +66,52 @@ export async function journeysFlow(browser,base,ready,monitor,report,shots,nativ
 }
 export async function prepareOfflineJourneys(p){await open(p,'water',2);const inquiry=p.locator('.journey-inquiry');await inquiry.locator('.journey-levels button').nth(2).click();await reveal(inquiry,'Dein Forschermerkzettel · freiwillig');await inquiry.locator('textarea').fill('Offline-Sicherung: Wasser kann seinen Zustand ändern.');await p.waitForFunction(key=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['journey:water']['chapter:2:note']==='Offline-Sicherung: Wasser kann seinen Zustand ändern.',saveKey);}
 
+// Source access is part of the existing real-engine suite, not a new gate.
+export async function journeySourceView(p,{widths,shots,engine}){
+ const initialRoute=await p.evaluate(()=>location.hash),viewport=p.viewportSize(),wasLarge=await p.locator('.earth-app').evaluate(e=>e.classList.contains('large-reading')),views=[];
+ try{
+  for(const width of widths){
+   await p.setViewportSize({width,height:900});
+   for(const large of [false,true]){
+    await p.locator('.earth-app').evaluate((e,large)=>e.classList.toggle('large-reading',large),large);
+    for(const journey of JOURNEYS){
+     await open(p,journey.id,0);await reveal(p,'Für Erwachsene: Quellen');
+     const source=p.locator('a.journey-source');
+     assert.equal(await source.count(),1,'one unchanged original source per journey');
+     assert.equal(await source.getAttribute('href'),journey.source,'original source destination');
+     assert.equal(await source.innerText(),journey.sourceName,'original source credit');
+     assert.equal(await source.getAttribute('target'),'_blank');
+     assert.ok((await source.getAttribute('rel')).split(/\s+/).includes('noreferrer'));
+     const metric=await source.evaluate(e=>{const r=e.getBoundingClientRect(),range=document.createRange();range.selectNodeContents(e);const ink=range.getBoundingClientRect();return {height:r.height,font:parseFloat(getComputedStyle(e).fontSize),left:r.left,right:r.right,inkLeft:ink.left,inkRight:ink.right};});
+     assert.ok(metric.height>=44,'source link touch target: '+journey.id+' '+width+' '+large);
+     assert.ok(metric.font>=(large?18.3:16),'source credit follows the large-reading setting');
+     assert.ok(metric.left>=-2&&metric.right<=width+2&&metric.inkLeft>=metric.left-2&&metric.inkRight<=metric.right+2,'source text stays visible');
+     await source.focus();await p.keyboard.press('Tab');await p.keyboard.press('Shift+Tab');
+     assert.ok(await source.evaluate(e=>e===document.activeElement&&e.matches(':focus-visible')),'source keyboard focus stays visible');
+     views.push({journey:journey.id,width,large,...metric,keyboard:true});
+     if(journey.id==='navigation'&&[320,1440].includes(width))await source.locator('..').screenshot({path:path.join(shots,'journey-engine-'+engine+'-sources-'+(large?'large':'normal')+'-'+width+'.png'),animations:'disabled'});
+    }
+   }
+  }
+  // Every chapter keeps the same original source, including completed/resumed paths.
+  for(const journey of JOURNEYS)for(let index=0;index<journey.steps.length;index++){
+   await open(p,journey.id,index);await reveal(p,'Für Erwachsene: Quellen');
+   assert.equal(await p.locator('a.journey-source').getAttribute('href'),journey.source);
+  }
+  assert.equal(views.length,JOURNEYS.length*widths.length*2);
+  return {views,chapters:80,scope:'source credit readability, touch, keyboard and unchanged original links'};
+ }finally{
+  await p.locator('.earth-app').evaluate((e,large)=>e.classList.toggle('large-reading',large),wasLarge);
+  await p.setViewportSize(viewport);await p.evaluate(hash=>location.hash=hash,initialRoute);
+  if(initialRoute==='#journeys')await p.locator('.journey-filters input').waitFor();
+ }
+}
 // Run the changed learning controls first, also in the existing real-engine path.
 // This is a targeted part of the existing journey suite, never a replacement.
 export async function journeySupportView(p,{widths,shots,engine}){
  const initialRoute=await p.evaluate(()=>location.hash),started=performance.now(),hints=[],diagrams=[],wasLarge=await p.locator('.earth-app').evaluate(e=>e.classList.contains('large-reading'));
  try{
+  const sources=await journeySourceView(p,{widths,shots,engine});
   await p.setViewportSize({width:390,height:844});
   for(const c of data.chapters){
    await open(p,c.journeyId,c.index);
@@ -126,7 +167,7 @@ export async function journeySupportView(p,{widths,shots,engine}){
   }
   assert.equal(hints.length,240);assert.equal(new Set(hints).size,240);
   assert.equal(diagrams.length,64*widths.length);assert.equal(new Set(diagrams.map(d=>d.id+':'+d.width)).size,diagrams.length);
-  return {hints,diagrams,widths,seconds:(performance.now()-started)/1000};
+  return {hints,diagrams,sources,widths,seconds:(performance.now()-started)/1000};
  }catch(error){await p.screenshot({path:path.join(shots,'journey-engine-'+engine+'-support'+'-failure.png'),fullPage:true}).catch(()=>{});throw error;}finally{if(!wasLarge)await p.evaluate(()=>document.querySelector('.earth-app')?.classList.remove('large-reading'));await p.setViewportSize({width:390,height:844});await p.evaluate(hash=>location.hash=hash,initialRoute);if(initialRoute==='#journeys')await p.locator('.journey-filters input').waitFor();}
 }
 export async function offlineJourneys(p,report){await open(p,'water',2);await reveal(p.locator('.journey-inquiry'),'Dein Forschermerkzettel · freiwillig');assert.equal(await p.locator('.journey-inquiry textarea').inputValue(),'Offline-Sicherung: Wasser kann seinen Zustand ändern.');assert.equal(await p.locator('.journey-levels button').nth(2).getAttribute('aria-pressed'),'true');for(const j of JOURNEYS){await open(p,j.id,4);assert.equal(await p.locator('.journey-task .quiz-answer').count(),3);}await p.evaluate(()=>location.hash='world/topic/science-water-cycle');await p.locator('.journey-topic-links').waitFor();const disclosure=p.locator('details[data-history-disclosure="journey-links-science-water-cycle-water"]');await disclosure.locator('summary').click();await p.locator('.journey-topic-links a[href="#journeys/water/5"]').click();await p.locator('[data-chapter-inquiry="water:4"]').waitFor();report.checks.push('Cold restart without server: complete reciprocal chapter links and all 16 journey inquiries and private notebook/level restore from the same schema-3 pass');}

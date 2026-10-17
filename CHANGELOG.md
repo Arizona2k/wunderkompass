@@ -1,3 +1,9 @@
+## Unveröffentlicht · Quellen leichter lesen und antippen
+
+- Quellenlinks aller16 bestehenden Lernreisen verwenden16px statt13px Grundschrift (18,4px bei großer Schrift) und mindestens48px statt zuvor20,8px Linkhöhe. Lange Namen umbrechen; Unterstreichung, kräftigerer Textkontrast und sichtbarer Tastaturfokus unterstützen den Zugang zu Originalbelegen.
+- Vorhandene echte Browsermatrix prüft Quellenzugang normal/groß, Touchgeometrie, Tastatur und alle80 ursprünglichen Kapitelziele; zusätzlich nativen200%-Zoom. Keine Texte, Quellenadressen, Reiseabschlüsse, Passfelder oder Freigabeschranken geändert.
+- Chronikeintrag bleibt bis zum nachgewiesenen Merge und Vercel-Erfolg ausdrücklich in Vorbereitung; endgültige Prüfquittung im Liefer-PR. Nachrichten bleiben pausiert.
+
 # Änderungsverlauf
 
 ## Vorbereitete Testübernahme und aktuelle Quality-Bindung ·17.10.2026

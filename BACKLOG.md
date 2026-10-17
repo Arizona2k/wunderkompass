@@ -1,3 +1,7 @@
+## WK055 · Lieferabschnitt Quellenzugang ·17.10.2026
+
+Bestehende Masterverbesserung kontrolliert ausgezogen: Quellenlinks aller16 Lernreisen von13px/20,8px Linkhöhe auf normale Leseschrift und mindestens48px Touchhöhe, umbrechbare Namen, klarer Kontrast/Unterstreichung. Kein neuer Fachinhalt und keine Änderung an Quellenzielen, Reise-/Passdaten oder Freigaberegeln. Frühe reale Chromium-Gegenprobe erkennt den ursprünglichen zu kleinen Link. Bestehende vollständige Matrix um Quellengeometrie, Tastatur und80 Kapitelziele erweitert; nativer200%-Zoom bleibt. Endgültige Pflichtnachweise und tatsächliche Verfügbarkeit werden im Liefer-PR quittiert; bis dahin Chronik vorbereitet. Paket3.5/24neue Arten und alle übrigen Aufgaben bleiben offen; bestehende24Tierwerkstätten zählen nicht als neue Arten. News pausiert.
+
 # Gemeinsamer Entwicklungsbestand
 
 ## Aktive Fortsetzung17.10.2026 – WK052/057 und WK053
