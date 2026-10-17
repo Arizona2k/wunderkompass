@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "0c0ebcb55fc9e81bbe55ae9aa100100df098c0a5",
+    "commit": "68cb0bd9e2d5de329c64e6f8c18da0b3e6f8bc90",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -29,7 +29,10 @@
       "d63e946de8a02df2d0493e19081a7f07574b51cd",
       "71255ec55833fa1c4056a5c95310fa4fb78b8a30",
       "759400e477fe9eb5ee5ce307de578fa3f72cb926",
-      "0c0ebcb55fc9e81bbe55ae9aa100100df098c0a5"
+      "0c0ebcb55fc9e81bbe55ae9aa100100df098c0a5",
+      "8d05beb0bc9930cd18e6128477c090c9d97caf9a",
+      "8e5012ed5deadee3d88aada0cdffd0b05eaacc5c",
+      "68cb0bd9e2d5de329c64e6f8c18da0b3e6f8bc90"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -765,6 +768,68 @@
           "createdAt": "2026-10-16T23:51:16Z",
           "updatedAt": "2026-10-16T23:51:16Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/8Wc153qiGJp55CEVEbpgDzLuyYG8"
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "title": "Tierforscher-Werkstätten und lesbare Planetenvergleiche",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/33",
+      "base": "test-live",
+      "mergedAt": "2026-10-17T09:48:40Z",
+      "mergeCommit": "8d05beb0bc9930cd18e6128477c090c9d97caf9a",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/8d05beb0bc9930cd18e6128477c090c9d97caf9a/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56588633806,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-17T09:48:59Z",
+          "updatedAt": "2026-10-17T09:48:59Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/Bddo78NaDx64KDtcViGm3pgdMsGQ"
+        },
+        {
+          "id": 56588627612,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-17T09:48:43Z",
+          "updatedAt": "2026-10-17T09:48:43Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/Bddo78NaDx64KDtcViGm3pgdMsGQ"
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "title": "Lernreisen: Quellen leichter lesen und antippen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/35",
+      "base": "test-live",
+      "mergedAt": "2026-10-17T15:59:32Z",
+      "mergeCommit": "8e5012ed5deadee3d88aada0cdffd0b05eaacc5c",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/8e5012ed5deadee3d88aada0cdffd0b05eaacc5c/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56598435114,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-17T15:59:46Z",
+          "updatedAt": "2026-10-17T15:59:46Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/4S4xyEXZXgbmT5MLY1gbTvfuJRWr"
+        },
+        {
+          "id": 56598430030,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-17T15:59:35Z",
+          "updatedAt": "2026-10-17T15:59:35Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/4S4xyEXZXgbmT5MLY1gbTvfuJRWr"
         }
       ]
     }

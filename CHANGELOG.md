@@ -1,3 +1,9 @@
+## 17.10.2026 · implementierter Labor-Lieferabschnitt, Bereitstellung noch unbestätigt
+
+-66 konkrete Erklärungen zu falschen Antworten in11bestehendenLaboren statt allgemeiner Rückmeldung; bestehende33Fragen/Antwortpositionen und Schema3-Fortschritte erhalten.
+- Antwortbindung und tatsächliche Rückmeldungen in bestehender Unit-/Browserprobe geprüft; öffentlicheInhaltsexporte schließen die neuen Texte ein.
+- VorhandeneChronikidentitäten für die belegtenTierwerkstätten(PR33) und lesbarenReisequellen(PR35) nachgeführt. NeuerLaborabschnitt bleibt bis tatsächlichemNachweis vorbereitet.
+
 ## Unveröffentlicht · Quellen leichter lesen und antippen
 
 - Quellenlinks aller16 bestehenden Lernreisen verwenden16px statt13px Grundschrift (18,4px bei großer Schrift) und mindestens48px statt zuvor20,8px Linkhöhe. Lange Namen umbrechen; Unterstreichung, kräftigerer Textkontrast und sichtbarer Tastaturfokus unterstützen den Zugang zu Originalbelegen.

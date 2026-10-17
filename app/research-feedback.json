@@ -1,0 +1,57 @@
+{
+ "depth": {
+  "easy":["Die Erdkruste ist die feste äußere Schicht, kein flüssiges Metallmeer.","","Der innere Kern ist trotz hoher Temperatur fest. Druck und Material gehören zur Erklärung."],
+  "medium":["Heiß bedeutet nicht vollständig flüssig. Der Mantel ist überwiegend fest, während der äußere Kern flüssig ist.","","Mantelgestein ist heiß. Sein überwiegend fester Zustand bedeutet nicht, dass es kalt sein muss."],
+  "hard":["","Die Kruste hat unter Ozeanen und Kontinenten unterschiedliche Dicken. Eine einzige Schemazahl gilt nicht überall.","Eine Zeichnung ist keine Bohrung oder direkte Aufnahme aus dem Erdkern. Ihre Grenzen bleiben wichtig."]
+ },
+ "volcano": {
+  "easy":["Die Höhe allein beschreibt nicht, wie Gas in Magma zurückgehalten wird. Vergleiche die inneren Modellbedingungen.","Ein kalter Wind ist in diesem Modell keine Erklärung für eingeschlossenes Gas und einen explosiven Ausbruch.",""],
+  "medium":["Mehr gleichzeitig veränderte Bedingungen machen die Ursache gerade schwerer erkennbar. Halte eine Bedingung gleich.","","Zähigkeit kann beeinflussen, wie gut Gas entweicht. Deshalb darf sie beim Vergleich nicht unbeachtet wechseln."],
+  "hard":["Eine Modellanzeige kann keine Sicherheit für einen echten Vulkan bescheinigen. Bleibe bei der dargestellten Modellwirkung.","Echte Ausbrüche hängen von weiteren Bedingungen ab. Die vereinfachte Anzeige ist keine genaue Vorhersage.",""]
+ },
+ "quake": {
+  "easy":["","Der Erdmittelpunkt ist nicht der Oberflächenpunkt über dem Herd. Trenne Inneres und Oberfläche.","Erdbeben können unter Land oder Meer beginnen. Der Begriff Epizentrum legt keinen Ozean fest."],
+  "medium":["","Der gegenüberliegende Pol liegt nicht direkt über dem Herd. Folge der Verbindung zur nahen Oberfläche.","Das Epizentrum liegt an der Oberfläche und damit nicht im Erdkern."],
+  "hard":["Der Abstand allein beschreibt nicht alle Bedingungen. Auch Tiefe und Untergrund können die Wirkung beeinflussen.","","Eine Uhrzeit allein erklärt keine Erschütterungsstärke. Prüfe die tatsächlichen Bedingungen des Bebens und Ortes."]
+ },
+ "weather": {
+  "easy":["Eine normale sichtbare Wolke besteht nicht nur aus Rauch. Unterscheide Rauchpartikel von Wasserteilchen.","","Wasserdampf selbst ist unsichtbar. Sichtbare Wolken enthalten Tröpfchen oder Eiskristalle."],
+  "medium":["Das Wasser muss nicht durch die Glaswand sickern. Auch die umgebende Luft enthält Wasser in gasförmiger Form.","","Die Tröpfchen sind flüssiges Wasser, keine Rauchpartikel. Vergleiche die kalte Fläche mit der Raumluft."],
+  "hard":["Die gezeichneten Punkte sind nicht in Litern geeicht. Ihre Anzahl ist keine gemessene Regenmenge.","","Windstille macht eine vereinfachte Zeichnung nicht zur Wetterprognose. Weitere Bedingungen und echte Daten fehlen."]
+ },
+ "water": {
+  "easy":["Das Wasser hört beim Verdunsten nicht auf zu existieren. Es verändert seinen Zustand.","Verdunstung macht Wasser nicht automatisch salzig. Vergleiche flüssiges Wasser und die gasförmige Form.",""],
+  "medium":["","Wasser kann auch aus unterschiedlich großen Schalen verdunsten. Gleiche Größen dienen hier dem faireren Vergleich.","Die Schalengröße lässt Wasser nicht automatisch kochen. Im Versuch verwenden wir Wasser ohne Erhitzen."],
+  "hard":["Die vier Stationen sind eine Auswahl, kein verpflichtender Fahrplan für jedes Wasserteilchen.","","Ein Wasserkreislauf hat keine überall gleiche Umlaufdauer. Speicherung und verschiedene Wege können unterschiedlich lange dauern."]
+ },
+ "seasons": {
+  "easy":["","Die Sonne geht im Winter nicht aus. Vergleiche Ausrichtung, Sonnenstand und Tageslänge.","Die Entfernung allein erklärt die gegensätzlichen Jahreszeiten der beiden Halbkugeln nicht. Prüfe die Achsneigung."],
+  "medium":["Die Sonne hört im Winter nicht auf zu leuchten. Unsere Ausrichtung zur Sonne und die Tageslänge ändern sich.","","Die tägliche Erdrotation geht auch im Sommer weiter. Ein langer Sommertag bedeutet keinen Stillstand der Erde."],
+  "hard":["","Ohne Achsneigung werden nicht alle Orte gleich warm. Breitengrad und andere Bedingungen bleiben verschieden.","Die Erde rotiert im Modell weiterhin. Das Entfernen der Achsneigung beendet nicht den täglichen Wechsel von Tag und Nacht."]
+ },
+ "plates": {
+  "easy":["Eine Erdplatte entspricht nicht einfach einem einzelnen Land. Politische und geologische Grenzen sind verschieden.","","Die feste äußere Hülle ist kein Meer aus flüssiger Lava. Unterscheide Platten und örtlich vorkommendes Magma."],
+  "medium":["Auseinanderdriften und seitliches Vorbeigleiten haben verschiedene Bewegungsrichtungen und Folgen.","","Plattenbewegungen sind nicht auf Länder oder Landflächen beschränkt. Meeresboden gehört ebenfalls zu Platten."],
+  "hard":["Tücher können nicht jede Subduktion und alle Gesteinseigenschaften darstellen. Ihre Falten sind ein begrenzter Vergleich.","","Die Bewegung der Tücher liefert keine echte geologische Geschwindigkeit. Material und Zeitmaßstab unterscheiden sich."]
+ },
+ "moon": {
+  "easy":["Der Mond ist keine selbst leuchtende Lampe. Prüfe, woher das auf seine Oberfläche fallende Licht kommt.","Ein Stern und unser Mond sind unterschiedliche Himmelskörper. Die Mondoberfläche reflektiert Sonnenlicht.",""],
+  "medium":["Viertel bezeichnet hier den Abschnitt des Mondmonats, nicht ein Viertel der sichtbaren Scheibe.","","Beim ersten Viertel ist die sichtbare Scheibe nicht ganz hell. Vergleiche Phasennamen und beobachtete Lichtfläche."],
+  "hard":["Der Mond reflektiert auch beim Vollmond Sonnenlicht. Fehlende Reflexion erklärt nicht, warum eine Finsternis ausbleibt.","","Die Sonne geht nicht monatlich aus. Für eine Finsternis zählt die passende räumliche Ausrichtung."]
+ },
+ "clocks": {
+  "easy":["","Verschiedene Uhranzeigen bedeuten in diesem Labor nicht, dass die Zeit in einem Land schneller abläuft.","Minuten gibt es auch auf den anderen dargestellten Uhren. Vergleiche denselben Moment und seine Ortszeitangaben."],
+  "medium":["Die Umstellung ändert nicht die Dauer einer Sekunde. Sie ändert die gesetzliche Uhrzeitanzeige im Verhältnis zu UTC.","","Eine gesetzliche Zeitumstellung kehrt die Erdrotation nicht um. Uhrzeitregel und Erdbewegung sind verschieden."],
+  "hard":["Datum und Sommerzeit können zum Vergleich gehören. Eine Uhrzeit ohne diese Angaben bleibt mehrdeutig.","","Die dargestellten Städte haben nicht immer dieselbe Ortszeit. Denselben Moment beschreiben unterschiedliche Uhr- und Datumsanzeigen."]
+ },
+ "tides": {
+  "easy":["Regen allein erklärt nicht die regelmäßige gemeinsame Gezeitenwirkung von Mond und Sonne.","","Schwimmende Fische erzeugen nicht die dargestellte regelmäßige Gezeitenwirkung. Vergleiche die Himmelskörper und ihre Anziehung."],
+  "medium":["","Die Mondanziehung verschwindet bei Halbmond nicht. Die Wirkungen von Mond und Sonne überlagern sich anders.","Ein kleinerer Unterschied ist nicht automatisch null. Im Modell bleibt Gezeitenwirkung bestehen."],
+  "hard":["Küsten haben unterschiedliche örtliche Gezeiten. Diese Modellkurve gilt nicht als sichere Angabe für jede Küste.","","Vollmond ist kein Sicherheitsnachweis für einen Aufenthalt im Watt. Aktuelle örtliche Angaben und Sicherheitsregeln bleiben nötig."]
+ },
+ "solar": {
+  "easy":["Die Sonne ist kein Planet. Unterscheide den zentralen Stern von den Planeten, die ihn umkreisen.","","Unser Mond umkreist die Erde; die Sonne ist der Stern unseres Planetensystems und kein Erdmond."],
+  "medium":["","Die acht dargestellten Planeten haben unterschiedliche Umlaufzeiten. Vergleiche denselben Zeitschritt auf zwei Bahnen.","Die äußeren Planeten sind keine Monde der Erde. Im dargestellten Planetensystem umlaufen sie die Sonne."],
+  "hard":["Im Modell sind acht Planeten dargestellt. Die Schwierigkeit des Maßstabs hängt nicht an einer Zahl von vier.","","Die Planeten haben unterschiedliche Größen. Gleiche gezeichnete Symbolgrößen wären eine Darstellungsentscheidung, kein Beweis gleicher echter Größen."]
+ }
+}
