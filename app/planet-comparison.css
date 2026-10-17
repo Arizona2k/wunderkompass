@@ -1,0 +1,18 @@
+.world-model .planet-size-comparison{margin:1.25rem auto;min-width:0;max-width:600px}
+.world-model .planet-size-comparison svg{display:block;width:100%;height:auto;max-height:320px;margin:0}
+.world-model .planet-size-key{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}
+.world-model .planet-size-key p{min-width:0;margin:.5rem 0;text-align:center;font-size:1rem;line-height:1.5;overflow-wrap:anywhere}
+.world-model .planet-size-comparison figcaption{margin-block-start:.75rem;text-align:center;font-size:1rem;line-height:1.6;overflow-wrap:anywhere}
+@media(max-width:650px){
+ .world-model.model-solar-system .planet-distance-chart>div{grid-template-columns:minmax(0,1fr) auto;gap:.25rem .75rem}
+ .world-model.model-solar-system .planet-distance-chart .distance-track{grid-column:1/-1;grid-row:2;margin:.5rem .4rem .75rem}
+}
+
+.large-reading .planet-size-comparison figcaption{font-size:1.15rem;line-height:1.65}
+
+.world-model.model-solar-system .model-result{font-size:1rem;line-height:1.6}
+
+.world-model.model-solar-system .planet-distance-chart>div>span,.world-model.model-solar-system .planet-distance-chart strong{font-size:1rem;line-height:1.5}
+.large-reading .model-solar-system .planet-distance-chart strong,.large-reading .model-solar-system .planet-distance-chart>div>span{font-size:1.15rem}
+.world-model.model-solar-system .small-note{font-size:1rem!important;line-height:1.6}
+.large-reading .world-model.model-solar-system .small-note{font-size:1.15rem!important}

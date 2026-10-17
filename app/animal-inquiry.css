@@ -1,0 +1,19 @@
+
+/* Optional animal evidence work uses the existing calm article language. */
+.animal-inquiry{margin-block:1.5rem;border:1px solid var(--border,#dce5e1);border-radius:var(--radius,1rem);background:var(--card,#fff);overflow-wrap:anywhere}
+.animal-inquiry>summary{padding:1rem;font-weight:700;cursor:pointer;min-height:48px;box-sizing:border-box}
+.animal-inquiry-body{padding:0 1rem 1rem}
+.animal-inquiry-body h3{font-size:clamp(1.15rem,2.4vw,1.5rem);line-height:1.4;font-weight:700}
+.animal-inquiry-body h4{font-size:1.0625rem;line-height:1.5;font-weight:700;margin-block:1.5rem .75rem}
+.animal-inquiry-levels{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr));gap:.65rem;margin-block:1rem 1.5rem}
+.animal-inquiry-levels button{justify-content:flex-start;text-align:left;white-space:normal;min-height:64px;padding:.8rem;align-items:flex-start}
+.animal-inquiry-levels button svg{flex-shrink:0;margin-top:.2rem}
+.animal-inquiry-levels button span{min-width:0}
+.animal-inquiry-levels small{display:block;font-size:1rem;font-weight:400;margin-top:.2rem}
+.animal-inquiry-levels [aria-pressed=true]{background:#eaf1f6;color:#16394b;border-color:#688697}
+.animal-evidence-row{padding-block:.5rem;border-block-start:1px solid #dce5e1}
+.animal-evidence-row:last-of-type{border-block-end:1px solid #dce5e1}
+.animal-evidence-row p{padding-inline:.5rem;line-height:1.65}
+.animal-inquiry .knowledge-link{width:100%;min-height:48px}
+.animal-inquiry .quiz-answer{min-width:0;text-align:left;white-space:normal}
+.animal-inquiry-sources{margin-block-start:1.5rem}

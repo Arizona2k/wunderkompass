@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T22:52:52.310Z",
+  "generatedAt": "2026-10-17T07:58:36.549Z",
   "personalProgressIncluded": false,
   "topics": 116,
   "categories": {
@@ -17,6 +17,15 @@
   "whyQuestions": 30,
   "routes": 8,
   "files": [
+    {
+      "file": "animal-inquiries.json",
+      "sources": [
+        "app/animal-inquiries.json"
+      ],
+      "entries": 24,
+      "bytes": 53003,
+      "sha256": "129bfe0e8c3b3f991df282c29501272cb840e6655d47061f796798534989aca0"
+    },
     {
       "file": "continents.json",
       "sources": [
@@ -236,11 +245,13 @@
     {
       "file": "world-connections.json",
       "sources": [
-        "app/world-connections.json"
+        "app/world-connections.json",
+        "app/discovery-data.ts",
+        "app/discovery-connections.json"
       ],
       "entries": 2,
-      "bytes": 5049,
-      "sha256": "18316bb9b8dfd329e02f0bac538770a2672680fd07d9eb4e5596c4cdd9662ddf"
+      "bytes": 11540,
+      "sha256": "bd6d97978454b2b8e389fa42917732c3025ee047c1ebe9eeca54f367685208c3"
     },
     {
       "file": "world-topics.json",
@@ -248,8 +259,8 @@
         "app/world-catalog.json"
       ],
       "entries": 116,
-      "bytes": 339206,
-      "sha256": "b8c54fa3792eeacbb17206210a4a615a8f7dd704a54716ef25355857ba84b5f8"
+      "bytes": 340013,
+      "sha256": "9177a6bc9a3f5a3c48389477a57567716d852f8bd707f85d8f37b8323e3a3484"
     },
     {
       "file": "world-index.json",

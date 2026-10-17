@@ -1,5 +1,7 @@
 # Anleitung für Codex
 
+Dauerhafter Befund17.10.2026: Mobile SVG-Beschriftungen können trotz fehlendem Seitenüberlauf innerhalb des viewBox abgeschnitten sein. Das ist ein Darstellungsfehler. Bei betroffenen Grafiken sichtbare Textgrenzen, mobile CSS-Vergrößerung, große Schrift und echten Zoom gezielt prüfen. Längere Beschriftungen/Einheiten als gut lesbares umbrechbares HTML ausgeben, wissenschaftliche Werte/Skalen/Alternativtexte erhalten; nicht durch kleinere Schrift oder hidden Overflow kaschieren. Nutzerscreenshot des Planetenvergleichs ist verbindlicher Regressionfall.
+
 ## Dauerhafte Nutzerentscheidung17.10.2026 – früh in den betroffenen Browsern prüfen
 
 Neue oder geänderte Funktionen und insbesondere neue Browsertests frühzeitig gezielt im gebauten Produkt und in den tatsächlich betroffenen verfügbaren Browsern ausführen. Gefundene Fehler möglichst vor der großen Schlussprüfung korrigieren und gezielt erneut prüfen. Vorhandene geeignete Prüfumgebung und Browsermodule nutzen; keine zusätzliche große Optimierungsrunde oder neue Testarchitektur. Teilprüfungen mit Browser, Umfang, Build und Ergebnis kenntlich machen. Vor Übergabe bleiben sämtliche vollständigen Pflichtprüfungen am endgültigen Stand unverändert verbindlich; kein Test entfällt und Chromium-Emulation ersetzt keinen tatsächlichen Firefox-/WebKit-Lauf. Nach jedem Nutzermerge tatsächliche Übernahme und Testbereitstellung prüfen, abhängige Entwicklung kontrolliert abgleichen und den offenen Paket-3.5-Master fortführen. News bleibt pausiert.
