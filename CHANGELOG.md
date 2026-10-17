@@ -1,5 +1,9 @@
 # Änderungsverlauf
 
+## Paket3.5 – bestätigte Lernhilfen aus PR32 kontrolliert zurückgeführt
+
+Die vom Nutzer übernommene und am bestehendenVercel-Testprojekt bestätigte Lernhilfe(240Hinweise/64lesbareGrafiken/32Aufgabenrückmeldungen) erhält im Entwicklungsstand ihren belegtenChronikstatus unter derselbenID. Alle33bisherigenEinträge und der volle unveröffentlichteMasterumfang bleiben. Individuell geprüfter Entwicklungsmerge ohne doppelteHinweisentwicklung oder Verlust der umfangreicherenMastertests; neuevolleSchlussprüfung erforderlich. DieChroniknachführung und Quellenlinkverbesserung desMasters sind noch nicht veröffentlicht. Nachrichtenthema bleibt vollständigpausiert.
+
 ## Paket3.5 – größere Quellen-Touchflächen und frühere Engineprüfung (noch unveröffentlicht)
 
 Quellenlinks der Meereskapitel erhalten48px Mindesthöhe und begrenzten Wortumbruch. Unveränderte20Quelle-/Breiten-/Fokus-/axe-Fälle laufen in vorhandenen Engineprüfungen zuerst; numerische Fehlerdaten und Originalbilder vor Kontextschluss sichern. Strenges44px-Gate und allevollständigenTests bleiben. Lokale20-/35-Fälle bestanden; tatsächlicheFirefox-/FinalCI-Abnahme noch erforderlich.

@@ -336,7 +336,7 @@ const CONTENT_COPY:UpdateCopy={
  "title": "Natur und Technik genauer entdecken",
  "summary": "Lernreisen, Wissenswörter und Naturorte erhalten freiwillige Denkaufgaben und verständliche Vertiefungen. Eigene Technikmodelle und erklärte Wissensverbindungen laden zum Vergleichen ein.",
  "details": [
-  "Alle 80 Kapitel bieten zusätzliche Einstiege, Vertiefungen und Beobachtungsideen. 240 einzeln formulierte Denkhinweise und lesbare Grafikbeschriftungen helfen beim Weiterdenken; die fünf Meereskapitel verweisen auf passende Originalbelege.",
+  "Alle 80 Kapitel bieten zusätzliche Einstiege, Vertiefungen und Beobachtungsideen; die fünf Meereskapitel verweisen auf passende Originalbelege. Die bereits verfügbaren Denkhinweise und Grafikbeschriftungen sind im eigenen Lernhilfen-Update beschrieben.",
   "23 neue und 23 vorhandene Wissenschaftskarten erklären ihre Zusammenhänge genauer. Zehn freiwillige Bildschirmversuche machen eigene Vergleiche möglich und nennen ihre Modellgrenzen.",
   "180 Wissenswörter und 60 Warum-Antworten verbinden einfache Einstiege, genauere Erklärungen und sichere Beobachtungsideen. Drei Messmodelle helfen beim Vergleichen.",
   "34 neue und 34 überarbeitete Naturerklärungen bieten eigene Fragen, Quellen und erklärte Rückverweise. Zehn bedienbare Schrittgrafiken zeigen etwa Schluchtbildung und schwimmendes Eis; Filter und Suche helfen beim Wiederfinden.",
@@ -381,7 +381,22 @@ const OFFLINE_COPY:UpdateCopy={
  "benefit": "Du kannst erkennen, wie die Vorbereitung vorankommt, und nach einem Fehler sicher neu versuchen. Eltern können die Lernwelt für unterwegs vollständig vorbereiten.",
  "links": []
 };
+// The actual PR number is assigned by GitHub, never guessed before creating it.
+// Reconcile this same stable identity with its real merge/deployment on the next GO.
+export const JOURNEY_SUPPORT_COPY:UpdateCopy={
+ id:'journey-reading-support-3-5',icon:'🧭',category:'Spielen und Lernen',
+ title:'Weiterdenken mit lesbaren Bildern und passenden Hinweisen',
+ summary:'Die Lernreisen erhalten genauer passende Denkhinweise. Beschriftungen unter den Kapitelgrafiken bleiben auch auf kleinen Bildschirmen gut lesbar.',
+ details:[
+  'Alle 240 bisherigen Denkaufgaben erhalten individuell formulierte freiwillige Hinweise. Sie unterstützen das Nachdenken, ohne eine Antwort automatisch auszuwählen.',
+  'Bei 32 Aufgaben werden ablenkende Antwortmöglichkeiten und ihre Rückmeldungen gezielter. Die richtigen Antworten und bereits gespeicherten Positionen bleiben erhalten.',
+  'Die 64 vorhandenen Kapitelgrafiken behalten ihre Bedienung; Wörter stehen als lesbarer Text unter der Zeichnung. Ländergrenzen und die Ansichten von Neumond, erstem Viertel und Vollmond werden genauer dargestellt.'
+ ],
+ benefit:'Kinder können sich gezielt Hilfe holen und Bilder auch mit großer Schrift untersuchen. Familien können ihre bisherigen Reisen und Merkzettel weiterverwenden.',
+ links:[{label:'Lernreisen',hash:'journeys'}]
+};
 const TEST_COPY:Record<number,UpdateCopy>={
+ 32:JOURNEY_SUPPORT_COPY,
  30:OFFLINE_COPY,
  27:CONTENT_COPY,
  29:{
@@ -780,10 +795,11 @@ const TEST_COPY:Record<number,UpdateCopy>={
  }
 };
 const TEST_UPDATES=TEST_EVIDENCE.pullRequests.flatMap(record=>TEST_COPY[record.number]?[testUpdate(record,TEST_COPY[record.number])]:[]);
+const PREPARED_JOURNEY_SUPPORT:UpdateEntry={...JOURNEY_SUPPORT_COPY,version:'Lernhilfen',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{file:'content/journey-task-review.json',revision:'prepared',quote:'Individuelle Reise-Lernhilfen, noch ohne bestätigte Übernahme und Testbereitstellung.'}};
 export const UPDATE_HISTORY:UpdateEntry[]=[...SITES_HISTORY,...TEST_UPDATES.filter(e=>e.status==='test-available')];
 const PREPARED_JOURNEYS:UpdateEntry={...JOURNEY_COPY,version:'Paket 3',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-12',publishedOn:null,availableOn:null,occurredAt:null,summary:'Die Lernreise-Verbesserungen sind vorbereitet; ihre Bereitstellung ist noch unbestätigt.',links:[],evidence:{file:'BACKLOG.md',revision:'d6945c8',quote:'WK-048: Lernreisen 2.0 – alle 16 Reisen/80 Kapitel ganzheitlich modernisieren.'}};
 
-export const PREPARED_UPDATES:UpdateEntry[]=[...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[])];
+export const PREPARED_UPDATES:UpdateEntry[]=[...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SUPPORT.id)?[PREPARED_JOURNEY_SUPPORT]:[])];
 export const updateLabel=(entry:UpdateEntry)=>entry.channel==='sites'?`Frühere Website · Version ${entry.version}`:entry.status==='prepared'?'In Vorbereitung · noch nicht verfügbar':'Testversion · verfügbar';
 const updateDay=(entry:UpdateEntry)=>entry.availableOn??entry.publishedOn??entry.confirmedOn;
 export function publicUpdates(entries:readonly UpdateEntry[]=UPDATE_HISTORY){
