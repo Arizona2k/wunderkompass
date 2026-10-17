@@ -20,9 +20,17 @@ export async function nativeJourneyZoom(chromium,options,base,report,shots,{book
   if(!bookOnly){for(const [id,index] of [['water',2],['inside',0],['navigation',0],['climate',4]]){
    await p.evaluate(route=>location.hash=route,'journeys/'+id+'/'+(index+1));await p.locator('[data-chapter-inquiry="'+id+':'+index+'"]').waitFor();
    assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'native 200% reflow '+id);
+   const sources=p.locator('summary').filter({hasText:'Für Erwachsene: Quellen'});if(!await sources.evaluate(e=>e.parentElement.open))await sources.click();
+   await p.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+   for(const source of await p.locator('a.journey-source').all()){
+   const metrics=await source.evaluate(e=>{const r=e.getBoundingClientRect();return {height:r.height,font:parseFloat(getComputedStyle(e).fontSize),left:r.left,right:r.right};});
+   assert.ok(metrics.height>=44&&metrics.font>=16&&metrics.left>=-2&&metrics.right<=dimensions.cssWidth+2,'source readability and touch at native 200%');
+   await source.focus();await p.keyboard.press('Tab');await p.keyboard.press('Shift+Tab');assert.ok(await source.evaluate(e=>e===document.activeElement&&e.matches(':focus-visible')),'source focus at native 200%');
+   if(id==='navigation'){await source.scrollIntoViewIfNeeded();await capture('journey-native-200-source.png');}
+   }
    await p.locator('.journey-task').scrollIntoViewIfNeeded();await p.locator('.journey-levels button').nth(2).focus();const hint=p.locator('.journey-task summary');if(!await hint.evaluate(e=>e.parentElement.open))await hint.click();await p.locator('.journey-task details[open]').waitFor();await capture('journey-native-200-'+id+'.png');
   }
-  await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'native zoom plus large app text');await p.locator('.journey-task').scrollIntoViewIfNeeded();await capture('journey-native-200-large.png');
+  await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));await p.waitForFunction(()=>{const sources=[...document.querySelectorAll('a.journey-source')];return sources.length&&sources.every(e=>parseFloat(getComputedStyle(e).fontSize)>=18.3);});assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'native zoom plus large app text');await p.locator('.journey-task').scrollIntoViewIfNeeded();await capture('journey-native-200-large.png');
   await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});assert.deepEqual(await p.evaluate(async()=>(await window.axe.run('.journey-reader',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
   }
   if(!bookOnly){

@@ -1,3 +1,15 @@
+## Unveröffentlicht · verständlichere Denkaufgaben zu24neuen Tierarten
+
+-48Rückmeldungen zu falschen Antworten erklären jetzt die jeweilige Fehlvorstellung, statt nur die richtige Erklärung mit derselben allgemeinen Einleitung zu wiederholen.
+-Vier freiwillige Hinweise regen zum Prüfen und Vergleichen an; der Monarchfalter-Hinweis kopiert die richtige Antwort nicht mehr. Aufgaben, Antwortreihenfolge, richtige Begründungen und gespeicherte Antworten bleiben erhalten.
+-PR35-Quellenzugang im Master mit dessen vollständigen Kapitelquellmengen und nativer200%-Mehrfachlinkprüfung zusammengeführt. Große Quellenschrift in vorhandener Reise-CSS, ohne Einstieg-CSS-Budget zu erhöhen. Keine Veröffentlichung oder unabhängige Abnahme behauptet.
+
+## Unveröffentlicht · Quellen leichter lesen und antippen
+
+- Quellenlinks aller16 bestehenden Lernreisen verwenden16px statt13px Grundschrift (18,4px bei großer Schrift) und mindestens48px statt zuvor20,8px Linkhöhe. Lange Namen umbrechen; Unterstreichung, kräftigerer Textkontrast und sichtbarer Tastaturfokus unterstützen den Zugang zu Originalbelegen.
+- Vorhandene echte Browsermatrix prüft Quellenzugang normal/groß, Touchgeometrie, Tastatur und alle80 ursprünglichen Kapitelziele; zusätzlich nativen200%-Zoom. Keine Texte, Quellenadressen, Reiseabschlüsse, Passfelder oder Freigabeschranken geändert.
+- Chronikeintrag bleibt bis zum nachgewiesenen Merge und Vercel-Erfolg ausdrücklich in Vorbereitung; endgültige Prüfquittung im Liefer-PR. Nachrichten bleiben pausiert.
+
 ## Unveröffentlicht · kompaktere vollständige Wissenskarten
 
 -Nur automatisch erzeugte Kategorie-Auslieferungen ohne Einrückungs-Leerraum: gleicher Inhalt mit126445Byte weniger Rohdaten und5743Byte weniger gzip. Lesbarer kanonischer Katalog, alle Quellen/Lernfunktionen und vollständige Offline-Inhalte erhalten; keine Budgeterhöhung oder Architekturänderung.

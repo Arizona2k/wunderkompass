@@ -822,7 +822,16 @@ export const ANIMAL_EXPANSION_COPY:HistoryCopy&{id:string}={
  benefit:'Kinder können neue Arten kennenlernen und zugleich lernen, Beobachtung und Schlussfolgerung zu unterscheiden. Eltern finden nachvollziehbare Originalquellen und transparente Prüfgrenzen.',links:[{label:'Tierwelt',hash:'world/animals'}]
 };
 const PREPARED_ANIMAL_EXPANSION:UpdateEntry={...ANIMAL_EXPANSION_COPY,version:'Neue Tierarten',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{pullRequest:27,file:'content/animal-expansion-review.json',revision:'prepared',quote:'Im Master implementiert; vollständige technische und unabhängige fachliche Abnahme sowie Bereitstellung nicht behauptet.'}};
-export const PREPARED_UPDATES:UpdateEntry[]=[PREPARED_ANIMAL_EXPANSION,...(!TEST_UPDATES.some(e=>e.id===PREPARED_ANIMAL_SOLAR.id)?[PREPARED_ANIMAL_SOLAR]:[]),...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SUPPORT.id)?[PREPARED_JOURNEY_SUPPORT]:[])];
+export const JOURNEY_SOURCE_COPY:HistoryCopy&{id:string}={
+ id:'journey-readable-sources-3-5',icon:'📖',category:'Einfachere Bedienung',
+ title:'Quellen in den Lernreisen leichter öffnen',
+ summary:'Die Quellenangaben aller 16 Lernreisen werden größer und leichter antippbar. Du kannst die ursprünglichen Belege weiterhin freiwillig im Quellenabschnitt öffnen.',
+ details:['Quellenlinks verwenden die normale Leseschrift statt kleiner Fußnotenschrift und wachsen bei großer Schrift mit.','Mindestens 48 Pixel hohe Linkflächen erleichtern das Antippen; lange Bezeichnungen dürfen umbrechen.','Unterstreichung und sichtbarer Tastaturfokus machen die Verweise auch ohne Farberkennung erkennbar.'],
+ benefit:'Kinder und Eltern können Belege auf kleinen Bildschirmen und mit großer Schrift leichter lesen und erreichen. Reiseinhalte und gespeicherte Fortschritte bleiben erhalten.',
+ links:[{label:'Lernreisen',hash:'journeys'}]
+};
+const PREPARED_JOURNEY_SOURCES:UpdateEntry={...JOURNEY_SOURCE_COPY,version:'Lesbare Quellen',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{pullRequest:35,file:'PROJECT_STATE.md',revision:'8e5012ed5deadee3d88aada0cdffd0b05eaacc5c',quote:'Nutzermerge und Vercel-Status bestätigt; tatsächlicher Website-/Buildnachtest am geschützten Testerzugang noch offen.'}};
+export const PREPARED_UPDATES:UpdateEntry[]=[PREPARED_ANIMAL_EXPANSION,PREPARED_JOURNEY_SOURCES,...(!TEST_UPDATES.some(e=>e.id===PREPARED_ANIMAL_SOLAR.id)?[PREPARED_ANIMAL_SOLAR]:[]),...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SUPPORT.id)?[PREPARED_JOURNEY_SUPPORT]:[])];
 export const updateLabel=(entry:UpdateEntry)=>entry.channel==='sites'?`Frühere Website · Version ${entry.version}`:entry.status==='prepared'?'In Vorbereitung · noch nicht verfügbar':'Testversion · verfügbar';
 const updateDay=(entry:UpdateEntry)=>entry.availableOn??entry.publishedOn??entry.confirmedOn;
 export function publicUpdates(entries:readonly UpdateEntry[]=UPDATE_HISTORY){

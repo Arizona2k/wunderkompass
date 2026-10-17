@@ -4,6 +4,9 @@ Aktueller Auftrag: [vollständiges Original17.10.2026](content/auftrag-2026-10-1
 
 ## Tatsächlicher Zustand
 
+Aktualisierung17.10.2026 nach PR35: Nutzermerge8e5012ed5deadee3d88aada0cdffd0b05eaacc5c um17:59:32Europe/Berlin und Vercel-success56598435114 um17:59:46 am gleichen Commit bestätigt; geprüfter Integrationsbaum und Mergebaum identisch. Ruleset25304083 unverändert aktiv/strict/ohneBypass. Aktuelle Cloud erlaubt den Testhost, tatsächliche HTTP-/Chromiumprobe erreicht jedoch nur302→Vercel-SSO und anschließend CONNECT403 am nicht freigegebenen Anmeldehost. Kein Websiteinhalt/Build geladen. Weitere automatische Übernahmen bleiben bis legitimen geschützten Zugriff und erfolgreichem Produktnachtest angehalten; keine neue grundsätzliche Aktivierungsfreigabe und keine Änderung der Schutzregeln. Kein Agentenmerge; PR27 ausgeschlossen. Die folgenden älteren Setupbeobachtungen bleiben historisch nachvollziehbar.
+
+
 17.10.2026 nach NutzermergePR34: aktueller test-live45bdb549cb6392ceb220cdc256264223bbabfde1. Arizona2k übernahm den unveränderten Head8d1152b4bba1cac0394c9990271dd692740611e2 um15:28:59Europe/Berlin; Vercel-success56594156614 um15:29:15 am exakten Merge bestätigt. PR27 bleibt unfertiger Draft, main unverändert.
 
 Native Einstellung tatsächlich gelesen: Ruleset25304083 „test-live requires current complete Quality“ ist active, ausschließlich refs/heads/test-live, PR-Pflicht/0Approvals/gelösteReviewthreads, strict_required_status_checks_policy:true, Required quality checks aus GitHubActions15368, bypass_actors:[], current_user_can_bypass:never. Branch meldet protected:true. Repository allow_auto_merge weiterhinfalse; deshalb autorisierter regulärer bereits grüner Merge mit erwarteter Head-SHA. Kein Admin-/Direktpush-Umweg. Administration über die Verbindung weiterhin nicht verfügbar, Lesen des aktiven Rulesets funktioniert.

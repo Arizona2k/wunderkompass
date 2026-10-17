@@ -121,13 +121,19 @@
         }
       ],
       "articleSHA256": "da59c0cc3f57508227850f126efbfb820bb736ef09a4f46e025b9d72555faa70",
-      "runtimeTeachingContentSHA256": "cacbd006315625a6d2d4f2e77e30bbc36f4538514b4a323f77c48c97c8427bdb",
+      "runtimeTeachingContentSHA256": "436fd486674113c0df1a777b062d4f73a601d22a23974cea7d41d1b9d605a17c",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "cacbd006315625a6d2d4f2e77e30bbc36f4538514b4a323f77c48c97c8427bdb"
     },
     {
       "id": "animal-short-beaked-echidna",
@@ -244,13 +250,19 @@
         }
       ],
       "articleSHA256": "f6dbbe0dda089fb5f4f2f5cf382595d5f81dd248a76234ca29db975869a37fd7",
-      "runtimeTeachingContentSHA256": "e80ea80a0f3a8f6e5a4bc044b4658a4f99faac75d351962cb340903477aa43d1",
+      "runtimeTeachingContentSHA256": "e3dbed9a5bce8ec50226f7c4bafa4163264e72f730bc7668fd813ddc87967059",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "e80ea80a0f3a8f6e5a4bc044b4658a4f99faac75d351962cb340903477aa43d1"
     },
     {
       "id": "animal-okapi",
@@ -367,13 +379,19 @@
         }
       ],
       "articleSHA256": "85e4122f632c5ff32bfadc184d78c06c6a4d1557267e485c3a8fd7d7b9b940de",
-      "runtimeTeachingContentSHA256": "0ad68bca5a5a76cdeeb57a595da2913dd2ca96f300e598394cb007ca21f1856d",
+      "runtimeTeachingContentSHA256": "65005cee2212dffb922859d6b025de83ef59e93af4f9aa1efd9e989d38c85535",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "0ad68bca5a5a76cdeeb57a595da2913dd2ca96f300e598394cb007ca21f1856d"
     },
     {
       "id": "animal-meerkat",
@@ -490,13 +508,19 @@
         }
       ],
       "articleSHA256": "996a2a3dac5d0abf533ae7cf2907fa6293b4cace5f9e95223ebfe3c210d4b26a",
-      "runtimeTeachingContentSHA256": "a3501f0a7305a2f99b68d292a523abd8bcbf5c904a82ae4427103e09a5f0c319",
+      "runtimeTeachingContentSHA256": "83b1340c9c0b9903cf4dfd2c84709d7c7655b2f780e5335e99ac478a4764a1a9",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "a3501f0a7305a2f99b68d292a523abd8bcbf5c904a82ae4427103e09a5f0c319"
     },
     {
       "id": "animal-ring-tailed-lemur",
@@ -613,13 +637,19 @@
         }
       ],
       "articleSHA256": "be06365733e4d43916124f4305f71883db5e436d149372932f81807f9b4d3bf2",
-      "runtimeTeachingContentSHA256": "c24bf49f2a045042937b9d101a1fff85ded8919ac32c0ad7674610de39a1e9d2",
+      "runtimeTeachingContentSHA256": "374df14d8310d4def983600f11ab576ff70220ca4d73d28d118b3ded32d03e59",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "c24bf49f2a045042937b9d101a1fff85ded8919ac32c0ad7674610de39a1e9d2"
     },
     {
       "id": "animal-north-american-beaver",
@@ -736,13 +766,19 @@
         }
       ],
       "articleSHA256": "6b9104839e4f66b76fa32628daac0b6cdac6545006df3b99735fe0ebec837557",
-      "runtimeTeachingContentSHA256": "6be4ea991f5a26ff022d90d3e769f4d5ca282b1c68aee10a943fd1c679f7950a",
+      "runtimeTeachingContentSHA256": "260547df753cc4f7ba4bd6edc150be1185f636d9fb7ee05a67f31d0f28a9d862",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "6be4ea991f5a26ff022d90d3e769f4d5ca282b1c68aee10a943fd1c679f7950a"
     },
     {
       "id": "animal-walrus",
@@ -867,7 +903,7 @@
         }
       ],
       "articleSHA256": "77f63b8941e5956d7c9b64e845e959e3af8f2f5448e79da772315fa5327c1515",
-      "runtimeTeachingContentSHA256": "a23d188646b3d11f057dcda17069efc36dfa4e6f254d4af47ba30945b8c858e8",
+      "runtimeTeachingContentSHA256": "67c90f5d3ef51a1ed3f264a92f0db6a150b8f2a97ac2c2794516aa816ca7bb0a",
       "previousRuntimeGoal": "Art, Unterart und Schutzregel auseinanderhalten.",
       "previousObservationTask": {
         "kind": "observe-and-sort",
@@ -885,8 +921,14 @@
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "a23d188646b3d11f057dcda17069efc36dfa4e6f254d4af47ba30945b8c858e8"
     },
     {
       "id": "animal-red-fox",
@@ -1003,13 +1045,19 @@
         }
       ],
       "articleSHA256": "11b72defa98c1d5ecbc79c211608b3c68e483f91eccabd77095f2a502c450da1",
-      "runtimeTeachingContentSHA256": "1068b1007354738f5ac8915a10a7c067392a580abda276b6f5e675136d6d1f33",
+      "runtimeTeachingContentSHA256": "0d62d12a962cd88caf5a7ed76254c1f7a359ad2c4e4762b956d7df675ad1ec81",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "1068b1007354738f5ac8915a10a7c067392a580abda276b6f5e675136d6d1f33"
     },
     {
       "id": "animal-raccoon",
@@ -1126,13 +1174,19 @@
         }
       ],
       "articleSHA256": "c3bb898d6f97a6917413a91c35f295f3dad276cc5ee6099afc95ffaed8def546",
-      "runtimeTeachingContentSHA256": "66eb1c64d618dafffa0b40e76e89d72c3c8d4cd58a2c78f00abeb80516aae0cf",
+      "runtimeTeachingContentSHA256": "74547cedd83876ebeee6da6db8dcfdf73a59f26d4d30cd12887681c4967e6b88",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "66eb1c64d618dafffa0b40e76e89d72c3c8d4cd58a2c78f00abeb80516aae0cf"
     },
     {
       "id": "animal-hedgehog",
@@ -1249,13 +1303,19 @@
         }
       ],
       "articleSHA256": "a13279fbf718556b6ba11243eaa4024ba956b5a45c38afd1d2f75d32ae05cf23",
-      "runtimeTeachingContentSHA256": "bef2eb33f76ec3819cd9738a3393846067e3d5084fdfbca1c018b37f06e99304",
+      "runtimeTeachingContentSHA256": "9da4a6305ff0210078f3a20635f1020419a65903bb2e319bfd82da74fd9050bd",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "bef2eb33f76ec3819cd9738a3393846067e3d5084fdfbca1c018b37f06e99304"
     },
     {
       "id": "animal-barn-owl",
@@ -1372,13 +1432,19 @@
         }
       ],
       "articleSHA256": "4cec2312c8616ac8e26e7f2a1dbc6820d0b259068742fabafe30d551afe93148",
-      "runtimeTeachingContentSHA256": "54285066d1e0e512f513f9bf540a0fe475ca224f9e2ae01a4a976770ea22a2d5",
+      "runtimeTeachingContentSHA256": "4ae18819196e6265c03fdb6c5027185ab1980191d8123dd97dba1ea3b9058531",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "54285066d1e0e512f513f9bf540a0fe475ca224f9e2ae01a4a976770ea22a2d5"
     },
     {
       "id": "animal-kingfisher",
@@ -1499,13 +1565,19 @@
         }
       ],
       "articleSHA256": "56b1c3f356794a15717af0e5b2aca2d3cdded4d7b49bfd531450e82a3424b9ce",
-      "runtimeTeachingContentSHA256": "311464820c0953758d772fb8922121f024eabfb0702ac40f82b940126d3ba421",
+      "runtimeTeachingContentSHA256": "f0df3a2686c5bc37ddcbbf9c2f7cdb2dae7fbaa2ac1c9a487bedb763bc233940",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "311464820c0953758d772fb8922121f024eabfb0702ac40f82b940126d3ba421"
     },
     {
       "id": "animal-ostrich",
@@ -1622,13 +1694,19 @@
         }
       ],
       "articleSHA256": "cfd8211bd23ae48fd4da2f2c534311560e79df0989347f080649c7f5f72644cf",
-      "runtimeTeachingContentSHA256": "892fb77492f9797ea8e2cd92e8a5df372faa38b7d08419ccf91b646d25337f8d",
+      "runtimeTeachingContentSHA256": "8e91f2d0031017a091e710ad36061cd18a652ef0d42f0b9d0397531fe224c851",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "892fb77492f9797ea8e2cd92e8a5df372faa38b7d08419ccf91b646d25337f8d"
     },
     {
       "id": "animal-atlantic-puffin",
@@ -1675,7 +1753,7 @@
         "12-14": {
           "kind": "assess-evidence",
           "task": "Zwei Zählungen fanden zu verschiedenen Jahreszeiten statt. Was musst du prüfen, bevor du aus der Differenz einen Bestandsrückgang ableitest?",
-          "hint": "Vergleiche Zeit, Ort, Suchmethode und Aufwand der beiden Zählungen.",
+          "hint": "Stelle dir vor, du sollst beide Zählungen wiederholen. Welche Angaben über die Durchführung würdest du dafür benötigen?",
           "feedback": "Jahreszeit und Aufenthaltsort können die Beobachtbarkeit verändern."
         }
       },
@@ -1745,13 +1823,19 @@
         }
       ],
       "articleSHA256": "4d003f28830ba565fa7de6753a8c8986f3f24cc6ce58db4ebe9d6cbd7f72ba46",
-      "runtimeTeachingContentSHA256": "128eddf2a026e58a7e1ec2db8d84cdc08f04d7e8a61d75709d0c4c1854e66889",
+      "runtimeTeachingContentSHA256": "f21b32891860bae20fb6c5106f17f7365be6e927a23631762f0efa7eb34aaa93",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "128eddf2a026e58a7e1ec2db8d84cdc08f04d7e8a61d75709d0c4c1854e66889"
     },
     {
       "id": "animal-common-chameleon",
@@ -1798,7 +1882,7 @@
         "12-14": {
           "kind": "assess-evidence",
           "task": "Hintergrund und Temperatur ändern sich gleichzeitig. Wie würdest du gedanklich trennen, welcher Faktor einen beobachteten Farbwechsel erklärt?",
-          "hint": "Entwirf einen Gedankenvergleich mit nur einer veränderten Bedingung; kein Versuch am Tier.",
+          "hint": "Überlege, welche Einflüsse du im Gedankenvergleich auseinanderhalten musst. Beobachte nur mit Abstand; verändere keine Bedingungen für ein Tier.",
           "feedback": "Ein fairer Vergleich verändert nicht alle Bedingungen zugleich."
         }
       },
@@ -1875,13 +1959,19 @@
         }
       ],
       "articleSHA256": "671dac3f4e7ac0903fa6f4a51cd7e77471df7df81c261abf645aa20bb69a9bf8",
-      "runtimeTeachingContentSHA256": "40e8334e293fd97d98509e2d72e5af3b9e14d6713a8471b8e1a3698eaeaf1fd8",
+      "runtimeTeachingContentSHA256": "547050e5bfe811ae30c5d2e9451dd976ff7656e0d894633ac5393e47c0c2d811",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "40e8334e293fd97d98509e2d72e5af3b9e14d6713a8471b8e1a3698eaeaf1fd8"
     },
     {
       "id": "animal-fire-salamander",
@@ -2002,13 +2092,19 @@
         }
       ],
       "articleSHA256": "b10fabbdbfc92f45a6b04368c544632c1a067be42bf5c0d724704a1c3ff3787b",
-      "runtimeTeachingContentSHA256": "b0dfcc229f936c693284ba177b91226ab9aa38aa6a2df435a9fb81d4a791a725",
+      "runtimeTeachingContentSHA256": "e8d277241673ae29793e307870bec972ffc4c30a311d9659dbad62a4598ae88b",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "b0dfcc229f936c693284ba177b91226ab9aa38aa6a2df435a9fb81d4a791a725"
     },
     {
       "id": "animal-common-frog",
@@ -2125,13 +2221,19 @@
         }
       ],
       "articleSHA256": "9eb085854b51e551e5d4031d92eefd788a89d86878b616bb2fbe0bccaed87cd7",
-      "runtimeTeachingContentSHA256": "742a297ea424ee0aaa6bf3df9be410e4908b9d006633c097a1097894b991278b",
+      "runtimeTeachingContentSHA256": "78f4317ed9570d9def7deaec8c35e42336c5693227a594ab0a0f3ebaa5e3d959",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "742a297ea424ee0aaa6bf3df9be410e4908b9d006633c097a1097894b991278b"
     },
     {
       "id": "animal-eastern-clown-anemonefish",
@@ -2248,13 +2350,19 @@
         }
       ],
       "articleSHA256": "dc6e206d73a964d981f4e904db94c0f4d1b953d1fc324a6c892108f0f127bca5",
-      "runtimeTeachingContentSHA256": "a6e63c1780085ccdd3d8f2e5f8c614498abc02e629852c45c657c833c53c13ca",
+      "runtimeTeachingContentSHA256": "a888bfb9647730d86058a56b59c3bace576369f318c43c43b0f3d86d7826ed66",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "a6e63c1780085ccdd3d8f2e5f8c614498abc02e629852c45c657c833c53c13ca"
     },
     {
       "id": "animal-european-eel",
@@ -2383,13 +2491,18 @@
         }
       ],
       "articleSHA256": "62981a51e7b5c272834147c8c4795edb0ea3ba38bfb64c21a8b7f46645db9c0d",
-      "runtimeTeachingContentSHA256": "9f3d3739aee502f04ed8c51eb890d270bd7f494c0590e3dce64a69b210d88a37",
+      "runtimeTeachingContentSHA256": "4facde6aa29870d03d877f33666414970f9e9f0c527efb54d25247884575e956",
       "sourceAccessLimit": "Earlier canonical/PMC requests were blocked; access gap now resolved through the official DTU author repository. Independent scientific review remains open.",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
       },
       "previousSourceAccessLimit": "Primary DOI and author-correction evidence found; full text/abstract reading blocked by site response. No spawning observation claimed. Complete primary-text reading remains open before scientific acceptance.",
       "primarySourceRead": {
@@ -2408,7 +2521,8 @@
         },
         "rights": "Official author-repository research reading; only links and original German explanation used. No paper, image, map or copied passage distributed.",
         "independentReview": false
-      }
+      },
+      "previousTeachingContentSHA256": "9f3d3739aee502f04ed8c51eb890d270bd7f494c0590e3dce64a69b210d88a37"
     },
     {
       "id": "animal-monarch-butterfly",
@@ -2449,7 +2563,7 @@
         "9-11": {
           "kind": "explain-a-connection",
           "task": "Warum ist „Jeder Monarch fliegt dieselbe Strecke“ zu pauschal?",
-          "hint": "Die Quelle unterscheidet ausdrücklich verschiedene Populationen.",
+          "hint": "Achte in der Beschreibung darauf, auf welche Gruppe sich eine beobachtete Wanderroute bezieht. Wie weit reicht dieser Beleg?",
           "feedback": "Eine verbreitete Wanderstrategie gilt nicht automatisch für jedes Tier der Art."
         },
         "12-14": {
@@ -2525,13 +2639,19 @@
         }
       ],
       "articleSHA256": "b7e871f2bd641d50da42ac093e150642d8a15c31a654c0ca60147834d304540d",
-      "runtimeTeachingContentSHA256": "4ca5c4d4b16f55a81b392bc8bc1e4aff39471016b629c93a0628c6102c19f46b",
+      "runtimeTeachingContentSHA256": "964fa4c17560216a327938e619ee6247d6c44c27fce0ba597d32de86f662f5cd",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "4ca5c4d4b16f55a81b392bc8bc1e4aff39471016b629c93a0628c6102c19f46b"
     },
     {
       "id": "animal-garden-snail",
@@ -2652,13 +2772,19 @@
         }
       ],
       "articleSHA256": "4a122fe106b6b63af25dd3db2dfffe9692ef71c8c3fc4d98c2bf80ab93756546",
-      "runtimeTeachingContentSHA256": "db96a22f450cc51913b4cdcdd4f1524839717752cf69ba31a066de9ac124150a",
+      "runtimeTeachingContentSHA256": "eb5322611b13670270278ecb7897c6e4b082f837cb2f624bd58de69e0e0c8cb3",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "db96a22f450cc51913b4cdcdd4f1524839717752cf69ba31a066de9ac124150a"
     },
     {
       "id": "animal-european-lobster",
@@ -2775,13 +2901,19 @@
         }
       ],
       "articleSHA256": "0f3264fb875f5629adaa4bee74608fdafc49914adef5414f62598d254eb772e4",
-      "runtimeTeachingContentSHA256": "92e3169b4453e5a0b1fb3f79a1c2cd84d3fa07765b06a32955de799ff6881c08",
+      "runtimeTeachingContentSHA256": "59740ac8a2334d1a0f601f564aaf39d46a86f3051ff125d62ca08c1cacdacde2",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "92e3169b4453e5a0b1fb3f79a1c2cd84d3fa07765b06a32955de799ff6881c08"
     },
     {
       "id": "animal-common-cuttlefish",
@@ -2828,7 +2960,7 @@
         "12-14": {
           "kind": "assess-evidence",
           "task": "Zwei Tiere sehen auf verschiedenen Fotos verschieden aus. Welche zusätzlichen Angaben brauchst du, bevor du zwei Arten behauptest?",
-          "hint": "Du brauchst etwa Artbestimmung, Aufnahmezeit und Beobachtungsverlauf.",
+          "hint": "Welche Informationen fehlen zwischen den beiden Momentaufnahmen? Überlege, welche davon bei der Artfrage wirklich helfen würden.",
           "feedback": "Veränderliches Aussehen und unterschiedliche Art sind keine gleichbedeutenden Aussagen."
         }
       },
@@ -2902,13 +3034,19 @@
         }
       ],
       "articleSHA256": "e3ce98e97fad71eccf2c3747a0402fff0a1d53595dfbef418bbfeba33f99c124",
-      "runtimeTeachingContentSHA256": "44ad5b3d3ac42296d417765f3a0609d15f1ace23f8c5dd9b984df6b0bb7a9e1e",
+      "runtimeTeachingContentSHA256": "d3a2b62968a26f323f13f64b18532f834d355f8f9a7c7cfd231392ab1b0041fc",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "44ad5b3d3ac42296d417765f3a0609d15f1ace23f8c5dd9b984df6b0bb7a9e1e"
     },
     {
       "id": "animal-short-snouted-seahorse",
@@ -3035,13 +3173,19 @@
         }
       ],
       "articleSHA256": "06d81691da3f92301c4dcc1bd982400c80fd2d3255767d0b535a1ff805aff04d",
-      "runtimeTeachingContentSHA256": "fc6c53373a3fd6d517574c6b2623127762f2c9a9a9cafd515fb2acfec7c0c151",
+      "runtimeTeachingContentSHA256": "63e250abd8c71405f71391c0bc33ab3c18d170f7307ebaf1459f27f45273830c",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
-      }
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        }
+      },
+      "previousTeachingContentSHA256": "fc6c53373a3fd6d517574c6b2623127762f2c9a9a9cafd515fb2acfec7c0c151"
     }
   ],
   "newConnections": [

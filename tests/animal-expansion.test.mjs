@@ -1,4 +1,5 @@
 import questions from '../app/world-question-index.json' with {type:'json'};
+import inquiries from '../app/animal-inquiries.json' with {type:'json'};
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {createHash} from 'node:crypto';
 import catalog from '../app/world-catalog.json' with {type:'json'};
 import metadata from '../app/animal-illustrations.json' with {type:'json'};
@@ -8,6 +9,16 @@ import graph from '../app/world-connections.json' with {type:'json'};
 import {validateWorldContent} from '../app/world-content-validation.mjs';
 import index from '../app/world-index.json' with {type:'json'};
 const digest=data=>createHash('sha256').update(JSON.stringify(data)).digest('hex');
+test('new voluntary hints do not copy the answer and wrong feedback does not just repeat the correct explanation',()=>{
+ for(const entry of review.entries){
+  const inquiry=inquiries.entries.find(e=>e.id===entry.id);
+  for(const level of ['reason','transfer']){
+   const task=inquiry[level],label=entry.id+':'+level;
+   assert.notEqual(task.hint.trim(),task.answers[task.correct].trim(),label+' hint leaves the choice to the learner');
+   assert.equal(task.feedback[1-task.correct].trim().endsWith(task.feedback[task.correct].trim()),false,label+' wrong feedback explains the specific misconception');
+  }
+ }
+});
 test('exactly24 additional distinct species retain all original24 and individually bind their authored runtime content',()=>{
  const animals=catalog.filter(t=>t.category==='animals');assert.equal(animals.length,48);assert.equal(review.entries.length,24);
  assert.equal(review.runtimeNewSpecies,24);assert.equal(review.acceptedNew,0);assert.equal(review.independentReview,false);
