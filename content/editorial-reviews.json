@@ -1,5 +1,228 @@
 {
   "schemaVersion": 1,
-  "meaning": "Individual content dossiers, never a second backlog or automatic scientific acceptance. Existing and new subject reviews are still open at the P3.5 foundation checkpoint.",
-  "dossiers": []
+  "meaning": "Individuelle belegte fachliche/pädagogische KI-Gegenprüfungen mit aktuellem gezielten UI-Nachweis; kein zweiter Backlog, keine automatische Wahrheitsgarantie und keine externe Menschen-Abschlussbedingung. Drei konkret geprüfte Artikel, übriger Alt-/Neubestand nicht pauschal geprüft. Komplette Master-Browser/Engine-Abnahme separat erforderlich.",
+  "dossiers": [
+    {
+      "id": "topics-history:history-khipu",
+      "dataHash": "a0d489a9be636313d03953188e8b6d1e208f3f9dfd607e27a0d98504dfa1e85f",
+      "goal": "Du unterscheidest eine Zahl von der Bedeutung dieser Zahl und erkennst die Grenzen einer Quelle.",
+      "explanation": "Konkrete Artikelabsätze, Fakten und Vertiefungen unter dem gebundenen Inhalts-Hash geprüft.",
+      "example": "Verändere zwei Mengen im Lernbild. Blende dann die Bedeutung aus: Was weißt du noch, und welche Information fehlt?",
+      "whyItMatters": "Du unterscheidest eine Zahl von der Bedeutung dieser Zahl und erkennst die Grenzen einer Quelle.",
+      "hint": "Überlege, welche Informationen Menschen beim Verteilen von Vorräten aufbewahren müssen.",
+      "feedback": "Beide konkreten Falschbegründungen und richtige Erklärung des gebundenen Artikels einzeln geprüft.",
+      "modelLimits": "Quellenpassagen zu Aufbau, Mengen, Stellenwerten und Verwaltung am 17.10.2026 selbst gelesen. Eigene Texte und ein ausdrücklich erfundenes Zählschnur-Lernbild; keine kopierten Museumsmedien. Keine gemeinsame Fundkoordinate für alle Khipus erfunden.",
+      "reviewedBy": "Codex KI-Selbstprüfung mit separater Gegenlese nach Erstellung; keine Menschenprüfung",
+      "reviewedOn": "2026-10-18",
+      "ageLevels": {
+        "6-8": "Menschen können eine Menge festhalten, auch wenn sie keine Buchstaben dafür benutzen. Hier helfen Schnüre und Knoten.",
+        "9-11": "Verändere zwei Mengen im Lernbild. Blende dann die Bedeutung aus: Was weißt du noch, und welche Information fehlt?",
+        "12-14": "Welche weiteren Inhalte Khipus bewahren konnten, ist eine Forschungsfrage. Eine sichtbare Menge ist nicht automatisch eine vollständig verstandene Nachricht."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "Smithsonian NMAI",
+          "url": "https://americanindian.si.edu/exhibitions/infinityofnations/andes/143866.html",
+          "checkedOn": "2026-10-17",
+          "rightsBasis": "Eigene deutsche Erklärung geprüfter Fakten; keine Quelltexte/Bilder/Logos übernommen."
+        },
+        {
+          "id": "source-1",
+          "organisation": "NIST Museum",
+          "url": "https://www.nist.gov/nist-museum/standardizing-empire",
+          "checkedOn": "2026-10-17",
+          "rightsBasis": "Eigene deutsche Erklärung geprüfter Fakten; keine Quelltexte/Bilder/Logos übernommen."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "A main cord carries pendant cords whose knots, arrangement and colors can encode quantities.",
+          "sourceId": "source-0",
+          "anchor": "About This Object, paragraph15"
+        },
+        {
+          "statement": "Numerical khipu can use base10 place values; full meaning requires more than counting simple marks.",
+          "sourceId": "source-1",
+          "anchor": "What is a khipu, paragraphs142–157"
+        },
+        {
+          "statement": "Additional non-numeric meaning is a research interpretation, not universal decipherment claimed here.",
+          "sourceId": "source-0",
+          "anchor": "paragraph16: explicitly tentative interpretation"
+        }
+      ],
+      "links": [
+        "topics-history:history-writing",
+        "topics-history:history-web"
+      ],
+      "ui": {
+        "build": "52fea67953fbe003",
+        "route": "world/topic/history-khipu",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Gezielte tatsächliche Chromiumprüfung siebenBreiten, Suche/Back/Reload und Großschrift/axe; separater tatsächlicher kalter Offline-Neustart einschließlich altem Schriftartikel. Build52fea67953fbe003. Einzelreport-SHA256 f9db19d1e7f728b546ea87268f955fa6e701013e0958b78a4f2b91fd302e73ef; Offline-SHA256 7bca8f757ae3d4d207d3d004aaff340860d8410a521f2083dc40d47a63bf4a31. Keine volle Master-/Menschenprüfung behauptet."
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "dataHash": "a0d489a9be636313d03953188e8b6d1e208f3f9dfd607e27a0d98504dfa1e85f",
+        "reviewedOn": "2026-10-18",
+        "sourceFindings": "Quellenpassagen zu Aufbau, Mengen, Stellenwerten und Verwaltung am 17.10.2026 selbst gelesen. Eigene Texte und ein ausdrücklich erfundenes Zählschnur-Lernbild; keine kopierten Museumsmedien. Keine gemeinsame Fundkoordinate für alle Khipus erfunden. KI-Gegenprüfung separat dokumentieren; keine externe Menschenabnahme behauptet.",
+        "factualFindings": "Every factual paragraph, source note, correct answer and individual wrong reason compared against the source-anchored claims above; no source image copied. Time anchors explicitly approximate; model explicitly invented.",
+        "pedagogicalFindings": "Entry uses concrete quantities or water paths; voluntary second level compares states; third level questions inference. Help explains the reason; no diagnosis, risky experiment or score from the picture.",
+        "conceptAndLinkFindings": "Eigenständiger Lerngegenstand, kein Synonym-/Varianten-Doppelzählen. Distinct historical source and learning object, not a synonym of an existing article. Gegenseitige Kontextwege geprüft; kein Beleg für direkte historische Übertragung zwischen den Kulturen behauptet.",
+        "countercheck": "Separate rereading after creation: distinguish historical evidence from invented diagram; re-evaluate each distractor and each inference; check known and unknown conclusions. Human review is not assumed.",
+        "corrections": "Khipu opening narrowed to quantities and administrative information to avoid implying universal decipherment; city comparison says before the canal to match the visible endpoint. Existing writing corrected pictographs-only simplification.",
+        "remainingUncertainty": "Fachliche Grenzen bleiben die offene Bedeutung einzelner Quellenmerkmale beziehungsweise der ausgegrabene Ausschnitt. Gezielte aktuelle UI-/Offlineprüfung bestanden; komplette neue Master-Abnahme bleibt separat erforderlich.",
+        "unresolvedBlockingClaims": []
+      },
+      "media": [
+        {
+          "path": "app/history-evidence.tsx",
+          "license": "Eigener Projektcode; keine Drittmedien",
+          "credit": "WunderKompass, eigene erfundene Lernzeichnung",
+          "alt": "Dynamische SVG-Beschreibung und sichtbare responsive HTML-Legende im gebundenen Artikel",
+          "learningPurpose": "Du unterscheidest eine Zahl von der Bedeutung dieser Zahl und erkennst die Grenzen einer Quelle."
+        }
+      ]
+    },
+    {
+      "id": "topics-history:history-mohenjo-daro",
+      "dataHash": "f3ae48be26eb58fed0f9e11e8853f468c0715d77fe5445bb0ff3c17315a32ba5",
+      "goal": "Du lernst, einen sichtbaren Befund von einer weitergehenden Vermutung zu unterscheiden.",
+      "explanation": "Konkrete Artikelabsätze, Fakten und Vertiefungen unter dem gebundenen Inhalts-Hash geprüft.",
+      "example": "Vergleiche die zwei erfundenen Pläne: Wo endet der Wasserweg? Welche Aussage kannst du direkt am Bild prüfen?",
+      "whyItMatters": "Du lernst, einen sichtbaren Befund von einer weitergehenden Vermutung zu unterscheiden.",
+      "hint": "Suche nach Spuren, die als Baureste erhalten sein können.",
+      "feedback": "Beide konkreten Falschbegründungen und richtige Erklärung des gebundenen Artikels einzeln geprüft.",
+      "modelLimits": "UNESCO-Abschnitte Brief synthesis, Integrity und Protection am 17.10.2026 selbst gelesen. Die Kurzbeschreibung und die ausführliche Beschreibung verwenden unterschiedliche Ziegelangaben; daraus wird hier keine pauschale Materialbehauptung übernommen. Eigenes ausdrücklich erfundenes Planmodell, kein originaler Ausgrabungsplan, keine kopierten UNESCO-Fotos.",
+      "reviewedBy": "Codex KI-Selbstprüfung mit separater Gegenlese nach Erstellung; keine Menschenprüfung",
+      "reviewedOn": "2026-10-18",
+      "ageLevels": {
+        "6-8": "Alte Straßen und Wasserwege sind Spuren. Sie helfen uns zu verstehen, wie Menschen eine Stadt planten.",
+        "9-11": "Vergleiche die zwei erfundenen Pläne: Wo endet der Wasserweg? Welche Aussage kannst du direkt am Bild prüfen?",
+        "12-14": "Die Erhaltung ist selbst eine Forschungsaufgabe: Feuchtigkeit und Salze können die alten Reste schädigen. Schutzarbeit soll die noch vorhandenen Spuren bewahren."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "UNESCO World Heritage Centre",
+          "url": "https://whc.unesco.org/en/list/138/",
+          "checkedOn": "2026-10-17",
+          "rightsBasis": "Eigene deutsche Erklärung geprüfter Fakten; keine Quelltexte/Bilder/Logos übernommen."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Mohenjo-Daro lies in Sindh/Pakistan; excavated streets and drainage provide evidence of city planning.",
+          "sourceId": "source-0",
+          "anchor": "Brief synthesis51–54 and coordinate124"
+        },
+        {
+          "statement": "Only part has been excavated; salts/moisture affect conservation.",
+          "sourceId": "source-0",
+          "anchor": "Integrity59–60 and conservation64–71"
+        }
+      ],
+      "links": [
+        "topics-history:history-rome",
+        "topics-history:history-writing"
+      ],
+      "ui": {
+        "build": "52fea67953fbe003",
+        "route": "world/topic/history-mohenjo-daro",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Gezielte tatsächliche Chromiumprüfung siebenBreiten, Suche/Back/Reload und Großschrift/axe; separater tatsächlicher kalter Offline-Neustart einschließlich altem Schriftartikel. Build52fea67953fbe003. Einzelreport-SHA256 f9db19d1e7f728b546ea87268f955fa6e701013e0958b78a4f2b91fd302e73ef; Offline-SHA256 7bca8f757ae3d4d207d3d004aaff340860d8410a521f2083dc40d47a63bf4a31. Keine volle Master-/Menschenprüfung behauptet."
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "dataHash": "f3ae48be26eb58fed0f9e11e8853f468c0715d77fe5445bb0ff3c17315a32ba5",
+        "reviewedOn": "2026-10-18",
+        "sourceFindings": "UNESCO-Abschnitte Brief synthesis, Integrity und Protection am 17.10.2026 selbst gelesen. Die Kurzbeschreibung und die ausführliche Beschreibung verwenden unterschiedliche Ziegelangaben; daraus wird hier keine pauschale Materialbehauptung übernommen. Eigenes ausdrücklich erfundenes Planmodell, kein originaler Ausgrabungsplan, keine kopierten UNESCO-Fotos. KI-Gegenprüfung separat dokumentieren; keine externe Menschenabnahme behauptet.",
+        "factualFindings": "Every factual paragraph, source note, correct answer and individual wrong reason compared against the source-anchored claims above; no source image copied. Time anchors explicitly approximate; model explicitly invented.",
+        "pedagogicalFindings": "Entry uses concrete quantities or water paths; voluntary second level compares states; third level questions inference. Help explains the reason; no diagnosis, risky experiment or score from the picture.",
+        "conceptAndLinkFindings": "Eigenständiger Lerngegenstand, kein Synonym-/Varianten-Doppelzählen. Distinct historical source and learning object, not a synonym of an existing article. Gegenseitige Kontextwege geprüft; kein Beleg für direkte historische Übertragung zwischen den Kulturen behauptet.",
+        "countercheck": "Separate rereading after creation: distinguish historical evidence from invented diagram; re-evaluate each distractor and each inference; check known and unknown conclusions. Human review is not assumed.",
+        "corrections": "Khipu opening narrowed to quantities and administrative information to avoid implying universal decipherment; city comparison says before the canal to match the visible endpoint. Existing writing corrected pictographs-only simplification.",
+        "remainingUncertainty": "Fachliche Grenzen bleiben die offene Bedeutung einzelner Quellenmerkmale beziehungsweise der ausgegrabene Ausschnitt. Gezielte aktuelle UI-/Offlineprüfung bestanden; komplette neue Master-Abnahme bleibt separat erforderlich.",
+        "unresolvedBlockingClaims": []
+      },
+      "media": [
+        {
+          "path": "app/history-evidence.tsx",
+          "license": "Eigener Projektcode; keine Drittmedien",
+          "credit": "WunderKompass, eigene erfundene Lernzeichnung",
+          "alt": "Dynamische SVG-Beschreibung und sichtbare responsive HTML-Legende im gebundenen Artikel",
+          "learningPurpose": "Du lernst, einen sichtbaren Befund von einer weitergehenden Vermutung zu unterscheiden."
+        }
+      ]
+    },
+    {
+      "id": "topics-history:history-writing",
+      "dataHash": "7ada62f2e707f233157698cdb2d41e9533aae74f9c4acbd78de12c4bbf806f7b",
+      "goal": "Du erkennst, warum eine gespeicherte Menge und eine verständliche Nachricht nicht dasselbe sind.",
+      "explanation": "Konkrete Artikelabsätze, Fakten und Vertiefungen unter dem gebundenen Inhalts-Hash geprüft.",
+      "example": "Stell dir drei abgegebene Körbe vor. Welche Information könntest du zählen, und welche gemeinsame Regel brauchst du zum Verstehen deiner Zeichen?",
+      "whyItMatters": "Du erkennst, warum eine gespeicherte Menge und eine verständliche Nachricht nicht dasselbe sind.",
+      "hint": "Stell dir einen Händler vor, der sich viele Lieferungen merken muss. Wofür könnten aufgeschriebene Zeichen nützlich sein?",
+      "feedback": "Beide konkreten Falschbegründungen und richtige Erklärung des gebundenen Artikels einzeln geprüft.",
+      "modelLimits": "Der Met-Artikel erklärt frühe Bildzeichen und abstrakte Markierungen sowie spätere Lautverwendungen. Der Zeitanker ist ungefähr und bezeichnet keinen einzelnen Erfindungstag. Khipus zeigen eine andere Form von Aufzeichnung; ihre Verbindung hier ist ein Vergleich, keine behauptete direkte historische Übertragung.",
+      "reviewedBy": "Codex KI-Selbstprüfung mit separater Gegenlese nach Erstellung; keine Menschenprüfung",
+      "reviewedOn": "2026-10-18",
+      "ageLevels": {
+        "6-8": "Eine Nachricht kann bleiben, auch wenn niemand sie gerade erzählt. Zeichen auf Ton halfen dabei.",
+        "9-11": "Stell dir drei abgegebene Körbe vor. Welche Information könntest du zählen, und welche gemeinsame Regel brauchst du zum Verstehen deiner Zeichen?",
+        "12-14": "Unterscheide frühe Zeichenarten, spätere Lautverwendung und die Grenzen eines ungefähren Zeitankers."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "The Metropolitan Museum of Art",
+          "url": "https://www.metmuseum.org/essays/the-origins-of-writing",
+          "checkedOn": "2026-10-17",
+          "rightsBasis": "Eigene deutsche Erklärung geprüfter Fakten; keine Quelltexte/Bilder/Logos übernommen."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Frühe Zeichen waren bildlich und abstrakt; Lautverwendungen entwickelten sich später.",
+          "sourceId": "source-0",
+          "anchor": "Met The Origins of Writing paragraphs30–43"
+        }
+      ],
+      "links": [
+        "topics-history:history-web",
+        "topics-history:history-khipu",
+        "topics-history:history-mohenjo-daro"
+      ],
+      "ui": {
+        "build": "52fea67953fbe003",
+        "route": "world/topic/history-writing",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Gezielte tatsächliche Chromiumprüfung siebenBreiten, Suche/Back/Reload und Großschrift/axe; separater tatsächlicher kalter Offline-Neustart einschließlich altem Schriftartikel. Build52fea67953fbe003. Einzelreport-SHA256 f9db19d1e7f728b546ea87268f955fa6e701013e0958b78a4f2b91fd302e73ef; Offline-SHA256 7bca8f757ae3d4d207d3d004aaff340860d8410a521f2083dc40d47a63bf4a31. Keine volle Master-/Menschenprüfung behauptet."
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "dataHash": "7ada62f2e707f233157698cdb2d41e9533aae74f9c4acbd78de12c4bbf806f7b",
+        "reviewedOn": "2026-10-18",
+        "sourceFindings": "Met The Origins of Writing, actual paragraphs30–43 read17Oct2026.",
+        "factualFindings": "Zeichenarten, spätere Entwicklung, ungefähre Zeitanker und unveränderte richtige Antwort gegen die benannte Met-Passage gegengeprüft.",
+        "pedagogicalFindings": "Konkreter Einstieg, freiwillige eigene Beobachtung, genauere Vertiefung und beide individuell erklärten Fehlvorstellungen geprüft.",
+        "conceptAndLinkFindings": "Eigenständiger Lerngegenstand, kein Synonym-/Varianten-Doppelzählen. Altartikel, nicht als neue Karte gezählt.  Gegenseitige Kontextwege geprüft; kein Beleg für direkte historische Übertragung zwischen den Kulturen behauptet.",
+        "countercheck": "After initial writing, re-read distinction between pictographs and abstract marks, later wedge and sound development; no alphabet-at-once or transmission-to-Inka claim. Distractors remain the old stable choices; new feedback explains technology/context without giving an unrelated answer.",
+        "corrections": "Pictographs-only simplification corrected; concrete starter/observation/benefit and wrong reasons added; original question/title/date/location remain.",
+        "remainingUncertainty": "Approximate dates; evidence does not prove a single inventor or one-day origin.",
+        "unresolvedBlockingClaims": []
+      },
+      "mediaDecision": "Bewusst kein neues Fundbild: eigenes Mengenbeispiel und der verknüpfte Khipu-Vergleich vermitteln die Aufzeichnungsidee; keine geschützte Abbildung nötig."
+    }
+  ]
 }

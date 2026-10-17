@@ -38,7 +38,9 @@ export async function historyLearningFlow(browser,base,ready,monitor,report,shot
    for(const summary of await p.locator('.world-short details summary').all())await summary.click();
    await p.getByText(old.learning.starter,{exact:true}).waitFor();await p.getByText(old.learning.observe,{exact:true}).waitFor();
    const question=p.locator('.world-mini-question');for(const index of [1,2]){await question.getByRole('button').filter({hasText:old.question.answers[index]}).click();await question.getByText(old.questionFeedback.wrongReasons[index],{exact:true}).waitFor();}
-   await question.screenshot({path:path.join(shots,'history-writing-feedback-'+width+'.png')});await question.getByRole('button').filter({hasText:old.question.answers[0]}).click();await p.reload();await p.locator('.world-mini-question').getByText(old.question.why,{exact:true}).waitFor();assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);oldWriting.push({width,levels:true,bothWrongReasons:true,retainedCorrectAnswer:true,reload:true});
+   await question.screenshot({path:path.join(shots,'history-writing-feedback-'+width+'.png')});await question.getByRole('button').filter({hasText:old.question.answers[0]}).click();await p.reload();await p.locator('.world-mini-question').getByText(old.question.why,{exact:true}).waitFor();assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
+   const oldFocus='world-related-'+old.id+'-'+old.related[0];await p.locator('[data-route-focus="'+oldFocus+'"]').focus();await p.keyboard.press('Enter');await p.waitForURL('**/#world/topic/'+old.related[0]);await p.goBack();await p.waitForFunction(value=>document.activeElement?.dataset.routeFocus===value,oldFocus);
+   await p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();const search=p.getByRole('dialog');await search.locator('input').fill(old.title);await search.getByRole('option').filter({hasText:old.title}).first().click();await p.locator('.world-mini-question').waitFor();assert.equal(new URL(p.url()).hash,'#world/topic/history-writing');oldWriting.push({width,levels:true,bothWrongReasons:true,retainedCorrectAnswer:true,reload:true,search:true,backFocus:true});
    await p.goto(base+'#world/topic/history-mohenjo-daro');await p.locator('.world-mini-question').waitFor();
   }
   await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await p.getByRole('button',{name:'Pass sichern',exact:true}).click();await p.getByRole('switch',{name:'Größere Schrift',exact:true}).click();await p.keyboard.press('Escape');await p.getByRole('dialog').waitFor({state:'hidden'});await checkGeometry(p);
@@ -50,6 +52,10 @@ export async function historyLearningFlow(browser,base,ready,monitor,report,shot
 }
 export async function offlineHistoryLearning(p,report){
  for(const t of topics){await p.evaluate(id=>location.hash='world/topic/'+id,t.id);await p.locator('.world-mini-question').waitFor();await explore(p,t);}
+ const old=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8')).find(t=>t.id==='history-writing');
+ await p.evaluate(()=>location.hash='world/topic/history-writing');await p.locator('.world-mini-question').waitFor();for(const summary of await p.locator('.world-short details summary').all())await summary.click();await p.getByText(old.learning.starter,{exact:true}).waitFor();await p.getByText(old.learning.observe,{exact:true}).waitFor();
+ const question=p.locator('.world-mini-question');for(const index of [1,2]){await question.getByRole('button').filter({hasText:old.question.answers[index]}).click();await question.getByText(old.questionFeedback.wrongReasons[index],{exact:true}).waitFor();}await question.getByRole('button').filter({hasText:old.question.answers[0]}).click();await p.reload();await p.locator('.world-mini-question').getByText(old.question.why,{exact:true}).waitFor();
+ report.historyWritingOffline={starter:true,observation:true,bothWrongReasons:true,retainedAnswer:true,reload:true};
  report.checks.push('Both previously unopened historical sources and their interactive learning pictures work after actual cold offline restart');
 }
 export async function historyLearningEngine(browser,base,{engine,shots}){

@@ -24,6 +24,11 @@ test('growth completion consumes current individual AI counterchecks instead of 
  assert.throws(()=>compareBaseline(inventory,baseline,{editorialReview:{...synthetic,inventoryFingerprint:'old'}}),/Stale/);
  const duplicate=structuredClone(synthetic);duplicate.results.push(duplicate.results[0]);assert.throws(()=>compareBaseline(inventory,baseline,{editorialReview:duplicate}),/Duplicate/);
 });
+test('the three actual history counterchecks bind their own source claims, current content and individual built UI evidence',()=>{
+ const registry=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8'));
+ const required=['topics-history:history-khipu','topics-history:history-mohenjo-daro','topics-history:history-writing'];
+ for(const id of required){const dossier=registry.dossiers.find(d=>d.id===id);assert.ok(dossier,id);const record=inventory.records.find(r=>r.id===id),result=validateDossier(dossier,record,{build:dossier.ui.build,knownIds:new Set(inventory.records.map(r=>r.id))});assert.equal(result.structurallyReady,true,JSON.stringify(result.errors));assert.equal(result.aiSelfReviewComplete,true,JSON.stringify(result.reviewErrors));assert.equal(result.scientificApproval,false);assert.equal(result.externalHumanReviewRequired,false);}
+});
 test('all old journeys, diagrams, tasks, games and labs stay in scope without becoming new articles',()=>{
  const counts=Object.fromEntries(inventory.families.map(f=>[f.id,f.count]));
  for(const [id,n] of Object.entries({journeys:16,chapters:80,'chapter-graphics':80,'journey-tasks':240,'journey-processes':10,games:31,labs:11,experiments:6,missions:12}))assert.equal(counts[id],n,id);
