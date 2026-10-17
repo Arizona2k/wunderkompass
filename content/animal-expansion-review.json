@@ -197,7 +197,65 @@
           ],
           "anchor": "SIZE; HABITAT AND DIET"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-platypus",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-platypus-320.png",
+        "currentSHA256": "a70caa09bcd0ec1f37e515b0b84cda5a3a0265cb15456a8e6df6766abdf73bf8",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-platypus",
+        "articleSHA256": "a8343374f1564bf8261a19bbb6cde992966b11bc0581666907b4d10ececd3ed4",
+        "teachingSHA256": "a06cb930538e155f5990aaf11ee357cfa2ae053281cb67627f8fb6b17983def2",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-short-beaked-echidna",
@@ -371,7 +429,65 @@
           ],
           "anchor": "Size Range; Feeding and diet"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-short-beaked-echidna",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-short-beaked-echidna-320.png",
+        "currentSHA256": "816337a85c9dde2840440618d5ceb198bd35811220faa9bf820fc78999f89287",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-short-beaked-echidna",
+        "articleSHA256": "2cc2f7045ae2a84a422267e4d854c61d5753e730ac73a119dfd89996a42c69fd",
+        "teachingSHA256": "b6f87b44b0fc298e9b3b246d7b795e271273113798a6ad8fc80a1bab6722c76a",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-okapi",
@@ -545,7 +661,65 @@
           ],
           "anchor": "SIZE; ABOUT; CONSERVATION"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-okapi",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-okapi-320.png",
+        "currentSHA256": "fda60aaff7eb49b541d4eae96b1d9aa6e07506a840a7fa14e093ce4bdd511d6c",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-okapi",
+        "articleSHA256": "f67662ec65b7de647c1bc011106788b3b5690f59b5fb65d8f0177e635e0b61f1",
+        "teachingSHA256": "9cf2c52929c5a10ec60237f9bdf4609c7b5666a05201b833e7c7fffe5807178e",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-meerkat",
@@ -719,7 +893,65 @@
           ],
           "anchor": "SIZE; ABOUT; HABITAT AND DIET"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-meerkat",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-meerkat-320.png",
+        "currentSHA256": "7e0866df0329f7fdd455d01310f3afcd39d37f7aa825390e7a8e4615a859be89",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-meerkat",
+        "articleSHA256": "e29a5b9acd94ee7d996ea28615f5e5592a4514eaa09bcd4a99211bc20e59ad05",
+        "teachingSHA256": "70d084a749129d570160f475eee824d6d22b48318338db4d03b609ed096f92c1",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-ring-tailed-lemur",
@@ -901,7 +1133,65 @@
           ],
           "anchor": "Size; Communication; Native Habitat"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-ring-tailed-lemur",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-ring-tailed-lemur-320.png",
+        "currentSHA256": "8b0d597f9fec8393c0fd753955ea6f263163f912eb4fb0c27cf0435d5abe21ef",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-ring-tailed-lemur",
+        "articleSHA256": "a60ade6188ef742167a6a7d1063f8d9c26cd438541a1dd680e46c1800c23989e",
+        "teachingSHA256": "99042138b545c44d44f9d05ac1439abe4c4164c2b277fcc0208b50bb8e036d6e",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-north-american-beaver",
@@ -1074,7 +1364,65 @@
           ],
           "anchor": "Size; Native Habitat; Food/Eating Habits"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-north-american-beaver",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-north-american-beaver-320.png",
+        "currentSHA256": "f4ebda4cc5aef400f4793d8baec7429143593198f8a0c65f52dcd16c5c36a68e",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-north-american-beaver",
+        "articleSHA256": "be546e3e74f54bef85ad148eac9ddc781fd4fe2a92937374360756ba96cb00b2",
+        "teachingSHA256": "bfbbb737d1c594b7ca9d7b9c68791c3a36be5665fe4e029fb8f48301499aceb5",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-walrus",
@@ -1282,7 +1630,65 @@
           ],
           "anchor": "Physical Description / Field Identification; MMC Did You Know"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-walrus",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-walrus-320.png",
+        "currentSHA256": "6af0bcfe2f63a9c15465c21ce6e8749f242bcb0c532a295644a22beca25b2d17",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-walrus",
+        "articleSHA256": "5cb6fa739576b1283a171254f86a78f028739e797675c4289efed065fe131b82",
+        "teachingSHA256": "c31cb91e65c344b3bf4dc48c443f0f6cfea15a423eeeeffbff76eddd3a175752",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-red-fox",
@@ -1455,7 +1861,65 @@
           ],
           "anchor": "Physical Description; Geographic Range; Food Habits"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-red-fox",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-red-fox-320.png",
+        "currentSHA256": "c9d936ab61630ed1d2ddcc82249325350f4ee207999176964908cb366018e157",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-red-fox",
+        "articleSHA256": "534a747ba8ee69ad6585e205c9bcd6022c89096f64526f64360eeb40fa8da91b",
+        "teachingSHA256": "1a2727d12ae967fed0544245acd6346b0b28aed8e606e8e012eaaab62d04d0ef",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-raccoon",
@@ -1629,7 +2093,65 @@
           ],
           "anchor": "Physical Description; Geographic Range; Food Habits"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-raccoon",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-raccoon-320.png",
+        "currentSHA256": "813ad3ee4643e1d41e32f262ed5e2f4725050168abeedbbfff3354c84e824a25",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-raccoon",
+        "articleSHA256": "88f0b21efb874e854ac9707f3cfe35ad7eb81e297d5c1802d63ef5238a8a968c",
+        "teachingSHA256": "c3b9f1bf2afc9a025a07ad6f6fbce75b28e1975578fcae79fd8561249feb6380",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-hedgehog",
@@ -1804,7 +2326,65 @@
           ],
           "anchor": "Statistics; About; How people can help"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-hedgehog",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-hedgehog-320.png",
+        "currentSHA256": "c9c8806ff224aee2dbf33f183ebfa75cf8d1bbf35af56e8898a00ac643cb8478",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-hedgehog",
+        "articleSHA256": "e838432b1a85e21bc3fd1f20c9b7012c2eaeb071df457d7a88d6c519aaa83db1",
+        "teachingSHA256": "5a79df4731922efc36050144e9e091436dbc9e97dfc53675fa8b289f93975b6b",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-barn-owl",
@@ -1986,7 +2566,65 @@
           ],
           "anchor": "Biometrics / Wing length / All adults; Diet; Conservation Status"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-barn-owl",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-barn-owl-320.png",
+        "currentSHA256": "9e9e231323d087b04856727d1d4a2825ae4728ba6a08376857151b8736d888c8",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-barn-owl",
+        "articleSHA256": "32ea2c471fee742343bcb3a4b6b09b6ebf780329353ab87649b8076a56aab025",
+        "teachingSHA256": "556abd5ef9232e7edf15245a2ba62615554833bf66fffb54c51b399aa6a343e4",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-kingfisher",
@@ -2178,6 +2816,64 @@
         "after": "Ein Foto zeigt dir einen Farbeindruck. Welche Fragen über die Probe bleiben offen, wenn du nur dieses Bild hast?",
         "finding": "Separate critical reread after correction: prior hint was relevant but too close to the choice wording; now asks for a comparison or missing information without copying the correct choice. Answers, solution and save identity unchanged.",
         "remaining": "Current targeted UI/coldoffline proof and final full technical acceptance required."
+      },
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-kingfisher",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-kingfisher-320.png",
+        "currentSHA256": "41496a5305831963ed081418c224eee0e9e09d5cf6af5ce651faab4eb7770a2f",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-kingfisher",
+        "articleSHA256": "306d2b18ee5adc46c62816df33b2e98a91264c60c21914515e06fb9c5f9b8b6b",
+        "teachingSHA256": "39eba201c4cb5e0cbffafda22ee73f4b9c31e9c7b0db7041076bde7a88a7e407",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
       }
     },
     {
@@ -2352,7 +3048,65 @@
           ],
           "anchor": "SIZE; ABOUT; HABITAT AND DIET"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-ostrich",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-ostrich-320.png",
+        "currentSHA256": "fa7cb687ed415a2657903a562be324ef2e2522cac19be2e296aa73264269e835",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-ostrich",
+        "articleSHA256": "24712706e814b269614fdb9b21e357a66b7915822fa5ba4f38824ade8f7a0030",
+        "teachingSHA256": "89e5ba2ecfb94b52d595379f5998a34555d9a33dc7288d3601326ff7a328f163",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-atlantic-puffin",
@@ -2526,7 +3280,65 @@
           ],
           "anchor": "Identification; Conservation; IUCN Status"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-atlantic-puffin",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-atlantic-puffin-320.png",
+        "currentSHA256": "610a5e46a299a5ee5eb42d7821e3f47cb1f797ad150b3077aa2031dc02a3902c",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-atlantic-puffin",
+        "articleSHA256": "e39854eca5783ff508b8226bb45d7d0090299485a352e73ab022d3d5ba0827f9",
+        "teachingSHA256": "8c789f9e657b358f3a7851282a450b024599d9aa593f6d6195c23fe88f94df4a",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-common-chameleon",
@@ -2707,7 +3519,65 @@
           ],
           "anchor": "Physical Description; Communication and Perception"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-common-chameleon",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-common-chameleon-320.png",
+        "currentSHA256": "60d30f3c34c4786930fedf79400ecd44aba2b0cd79b4deeda4c6ab41700d58b3",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-common-chameleon",
+        "articleSHA256": "43e81408e1e0d0d26c1eb45f6c5dd435c425285c559b6523e1ccc9f7415fa149",
+        "teachingSHA256": "00cfee711526100e0b8273dbf160586d6f01bc0f20f1ef118ef2160e25d9a4c8",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-fire-salamander",
@@ -2892,7 +3762,65 @@
           ],
           "anchor": "Körperbau und Besonderheiten; Lebensraum; Fortpflanzung; Bedrohungen"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-fire-salamander",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-fire-salamander-320.png",
+        "currentSHA256": "d8555d8262cff0942308af3646bb08f7af3187f074277f0c32eaf2bf2ca77acd",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-fire-salamander",
+        "articleSHA256": "1af7d2a3f9c860a45448aab98de7287ecf3aaf0b9a852e37a2ff3b637afedd3c",
+        "teachingSHA256": "260df2bc83316b8270a2bcb46b4452aa68387aac68e3a56e2aeb32bb13b3fdd5",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-common-frog",
@@ -3066,7 +3994,65 @@
           ],
           "anchor": "Statistics; About; How to identify"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-common-frog",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-common-frog-320.png",
+        "currentSHA256": "22b719ea7ea9344492d5df402450a262fe04e72ed57459d6c0631bfdcf053725",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-common-frog",
+        "articleSHA256": "38d661537b84571c190d7d1469aa1a5361d2c02fee3ec61a7305599e8d1d050e",
+        "teachingSHA256": "cfb562af02022c18f7e97e1798c8fec9acc4f1efe9c69d77467320906410c23b",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-eastern-clown-anemonefish",
@@ -3248,7 +4234,65 @@
           ],
           "anchor": "Size Range; Habitat; Feeding and diet; Distribution"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-eastern-clown-anemonefish",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-eastern-clown-anemonefish-320.png",
+        "currentSHA256": "9f5c5c6779a0e09de5e7f0208e50e2638ec3860c1a933f48192b1bd891d72862",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-eastern-clown-anemonefish",
+        "articleSHA256": "93f187ff35993953d289e185b18351dbed9a584bdf7deb202ac255c32a3aa11f",
+        "teachingSHA256": "7f975222f2dfd6ef39f0daffa0e5a7025db4081608fcb3b87f8f44a0b4b39ef8",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-european-eel",
@@ -3481,7 +4525,65 @@
           ],
           "anchor": "WWT species facts; Wright et al. 2022 Abstract/Discussion; Author Correction"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-european-eel",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-european-eel-320.png",
+        "currentSHA256": "69de613aba73797afe1bff75c36c0591912256c6026121449dedd377c3cc9bf0",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-european-eel",
+        "articleSHA256": "c6475d84d15a8eb810261b3a28a1fe06ea1f914011b1124041b22608d1f1f72c",
+        "teachingSHA256": "b4d109ea461f3585fb8f23d9f02d77ca7793bafb0f3c31f340e922fb11d820b8",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-monarch-butterfly",
@@ -3665,7 +4767,65 @@
           ],
           "anchor": "Size & Shape; Habitat; Behavior"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-monarch-butterfly",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-monarch-butterfly-320.png",
+        "currentSHA256": "c98ee53e73fbb2c80b16d3e008d0bd132715145da690f092170542c546641c12",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-monarch-butterfly",
+        "articleSHA256": "f293c09eeceba14ea4ea909dbd1b505ec9bf5d80b9283841bd4f0f8f40bf8af0",
+        "teachingSHA256": "b83df6df892366030304faa6d58197c134825f3e81973471b391a5c726172517",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-garden-snail",
@@ -3854,7 +5014,65 @@
           ],
           "anchor": "Conchological Society Description; NHM snails and slugs"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-garden-snail",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-garden-snail-320.png",
+        "currentSHA256": "807add4aa59d0ab37f8bc3d35225d537a53b8f70713853f5f64aceba79f7bc06",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-garden-snail",
+        "articleSHA256": "29aeb238dff55f31591879d738eff8a2332765e6032c2357e52785ee050a4bfe",
+        "teachingSHA256": "f825d22485071c72343c4efe8be43bc552b381872e4ba27327f4283ad230640f",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-european-lobster",
@@ -4028,7 +5246,65 @@
           ],
           "anchor": "Statistics; About; How to identify"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-european-lobster",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-european-lobster-320.png",
+        "currentSHA256": "6c4f5aeb347f7845cbfb15b6ee3fd446ba496175a87a583ed1bad54f893d7fb0",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-european-lobster",
+        "articleSHA256": "43e2c6298bc0612017b4d4a851df3fedbc4e4433e731d845dddf78425980ee1a",
+        "teachingSHA256": "50c6ea9a5bf150b50bf6a4431cd6fbc5d38d897ced07146e187c95e619129cfc",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-common-cuttlefish",
@@ -4213,7 +5489,65 @@
           ],
           "anchor": "MarLIN Description / Identifying features; Wildlife Trusts About"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-common-cuttlefish",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-common-cuttlefish-320.png",
+        "currentSHA256": "14d93ad37054c239cf6a56bac50f2bf7e7d53199f454b9947aa298d9e4f0a552",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-common-cuttlefish",
+        "articleSHA256": "84d295c77e2d30828367e4a75c5e11aeaf14c7cbcf303300f4c7a290be2faafd",
+        "teachingSHA256": "349431cff5cd4cdd9b0a113f3b8d4347c20035fbcf5dfc526d1b44ea3698e463",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     },
     {
       "id": "animal-short-snouted-seahorse",
@@ -4413,7 +5747,65 @@
           ],
           "anchor": "MarLIN Description / Identifying features; Wildlife Trusts Distribution"
         }
-      ]
+      ],
+      "currentVisualCountercheck": {
+        "build": "b92d7a70954a64bd",
+        "comparisonReport": "/workspace/work/wk-continuation/current-animal-image-countercheck/current-b92-figure-comparison.json",
+        "comparisonSHA256": "d996240b131ae43f92177649fb1e10919f61a77f9a443d4209a2c4df9cf0fb46",
+        "id": "animal-short-snouted-seahorse",
+        "currentFile": "/workspace/work/wk-continuation/animal-targeted/animal-new-short-snouted-seahorse-320.png",
+        "currentSHA256": "847fff70d0db52f5783a562536ca71c79e9608909aae3d7865d962314159834b",
+        "samePixelsAsPersonallyViewed7166": true,
+        "meaning": "Fresh current actual capture is pixel-identical to the individually personally viewed figure, whose trait labels/model limits were checked. No human/physical-device review claimed."
+      },
+      "sourceAndLearningAIReview": {
+        "mode": "ai-self-review",
+        "registryId": "topics-animals:animal-short-snouted-seahorse",
+        "articleSHA256": "fd8a9e3c70ca2e99487cba4f5dd2ecae20d9bbfd1f10dc3210c60aa6f115b260",
+        "teachingSHA256": "6541da8567443b7820b9b760a1c93efec61fba6fa2d7301be06ce4aacd65cef7",
+        "reviewedOn": "2026-10-18",
+        "currentTargetedUI": {
+          "build": "b92d7a70954a64bd",
+          "proofs": {
+            "history-targeted": {
+              "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+              "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "history-native-offline": {
+              "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+              "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            },
+            "animal-targeted": {
+              "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+              "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+            },
+            "animal-native-offline": {
+              "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+              "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+            },
+            "content-corrections-targeted": {
+              "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+              "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+              "build": "b92d7a70954a64bd",
+              "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+              "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+            }
+          }
+        },
+        "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten."
+      }
     }
   ],
   "newConnections": [
@@ -4607,5 +5999,41 @@
     "count": 185,
     "sha256": "29de18d437bb4c4bce80f53805c0efc26c3b1488d4eadc46776f7746d90aa635",
     "meaning": "All185 preceding Master questions and hints, not only the142 public baseline, must remain byte-equivalent as JSON. No overall question limit."
-  }
+  },
+  "aiSelfReviewStatus": {
+    "checkedOn": "2026-10-18",
+    "individualNewSpecies": 24,
+    "registeredIds": [
+      "topics-animals:animal-platypus",
+      "topics-animals:animal-short-beaked-echidna",
+      "topics-animals:animal-okapi",
+      "topics-animals:animal-meerkat",
+      "topics-animals:animal-ring-tailed-lemur",
+      "topics-animals:animal-north-american-beaver",
+      "topics-animals:animal-walrus",
+      "topics-animals:animal-red-fox",
+      "topics-animals:animal-raccoon",
+      "topics-animals:animal-hedgehog",
+      "topics-animals:animal-barn-owl",
+      "topics-animals:animal-kingfisher",
+      "topics-animals:animal-ostrich",
+      "topics-animals:animal-atlantic-puffin",
+      "topics-animals:animal-common-chameleon",
+      "topics-animals:animal-fire-salamander",
+      "topics-animals:animal-common-frog",
+      "topics-animals:animal-eastern-clown-anemonefish",
+      "topics-animals:animal-european-eel",
+      "topics-animals:animal-monarch-butterfly",
+      "topics-animals:animal-garden-snail",
+      "topics-animals:animal-european-lobster",
+      "topics-animals:animal-common-cuttlefish",
+      "topics-animals:animal-short-snouted-seahorse"
+    ],
+    "historicalAcceptedNew": 0,
+    "externalHumanGate": false,
+    "fullExistingSpeciesApproval": false,
+    "proofBuild": "b92d7a70954a64bd",
+    "remaining": "Abschließende Pflichtprüfungen am endgültigen Gitstand, danach normaler zulässiger Lieferabschnitt und tatsächlicher Auslieferungsnachtest. Nicht sämtliche alten Artikel oder Paket3.5 allein aus24neuenDossiers abschließen."
+  },
+  "retainedQuestionBankScope": "Frozen preceding185-question hash remains historical reference; exact individually documented prompt/why corrections in editorial-reviews are validated before historical comparison. No original hashes or answer positions regenerated."
 }

@@ -48,7 +48,7 @@
       "contentHash": "a0d489a9be636313d03953188e8b6d1e208f3f9dfd607e27a0d98504dfa1e85f",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Actual targeted14 topic-width cases/3levels/search/Back/reload/large text/axe plus native200% and previously-unopened cold offline passed; see exact earlyTechnicalProof. Complete final regression still required.",
+      "uiEvidence": "Actual current targeted history keyboard/touch/search/back/reload/large/native/coldoffline proof at build b92d7a70954a64bd; complete final regression remains separate.",
       "claims": [
         {
           "statement": "A main cord carries pendant cords whose knots, arrangement and colors can encode quantities.",
@@ -99,6 +99,34 @@
         "corrections": "Khipu opening narrowed to quantities and administrative information to avoid implying universal decipherment; city comparison says before the canal to match the visible endpoint. Existing writing corrected pictographs-only simplification.",
         "remainingUncertainty": "Khipu additional meanings remain a research question; excavated city subset cannot establish universal health or equality. Actual UI/native/offline proof remains pending and prevents full technical completion.",
         "unresolvedBlockingClaims": []
+      },
+      "historicalUIEvidenceBeforeLatestCorrection": "Actual targeted14 topic-width cases/3levels/search/Back/reload/large text/axe plus native200% and previously-unopened cold offline passed; see exact earlyTechnicalProof. Complete final regression still required.",
+      "currentTargetedUIEvidence": {
+        "build": "b92d7a70954a64bd",
+        "proofs": {
+          "history-targeted": {
+            "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+            "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+            "build": "b92d7a70954a64bd",
+            "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+            "scope": "actual Chromium history partial proof; not full regression"
+          },
+          "history-native-offline": {
+            "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+            "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+            "build": "b92d7a70954a64bd",
+            "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+          },
+          "content-corrections-targeted": {
+            "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+            "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+            "build": "b92d7a70954a64bd",
+            "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+            "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+          }
+        },
+        "scope": "Actual completed current targeted UI evidence; not full regression. All preceding reports retained under their original build archives."
       }
     },
     {
@@ -122,7 +150,7 @@
       "contentHash": "f3ae48be26eb58fed0f9e11e8853f468c0715d77fe5445bb0ff3c17315a32ba5",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Actual targeted14 topic-width cases/3levels/search/Back/reload/large text/axe plus native200% and previously-unopened cold offline passed; see exact earlyTechnicalProof. Complete final regression still required.",
+      "uiEvidence": "Actual current targeted history keyboard/touch/search/back/reload/large/native/coldoffline proof at build b92d7a70954a64bd; complete final regression remains separate.",
       "claims": [
         {
           "statement": "Mohenjo-Daro lies in Sindh/Pakistan; excavated streets and drainage provide evidence of city planning.",
@@ -162,6 +190,34 @@
         "corrections": "Khipu opening narrowed to quantities and administrative information to avoid implying universal decipherment; city comparison says before the canal to match the visible endpoint. Existing writing corrected pictographs-only simplification.",
         "remainingUncertainty": "Khipu additional meanings remain a research question; excavated city subset cannot establish universal health or equality. Actual UI/native/offline proof remains pending and prevents full technical completion.",
         "unresolvedBlockingClaims": []
+      },
+      "historicalUIEvidenceBeforeLatestCorrection": "Actual targeted14 topic-width cases/3levels/search/Back/reload/large text/axe plus native200% and previously-unopened cold offline passed; see exact earlyTechnicalProof. Complete final regression still required.",
+      "currentTargetedUIEvidence": {
+        "build": "b92d7a70954a64bd",
+        "proofs": {
+          "history-targeted": {
+            "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+            "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+            "build": "b92d7a70954a64bd",
+            "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+            "scope": "actual Chromium history partial proof; not full regression"
+          },
+          "history-native-offline": {
+            "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+            "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+            "build": "b92d7a70954a64bd",
+            "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+          },
+          "content-corrections-targeted": {
+            "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+            "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+            "build": "b92d7a70954a64bd",
+            "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+            "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+          }
+        },
+        "scope": "Actual completed current targeted UI evidence; not full regression. All preceding reports retained under their original build archives."
       }
     }
   ],
@@ -295,7 +351,7 @@
       "sourceNote": "Der Zeitanker ordnet das Thema ein. Er ist weder ein genauer Beginn noch ein Ende einer ganzen Kultur. Heutige Küsten auf der Karte zeigen keine historischen Grenzen."
     }
   },
-  "oldImprovement": "Existing writing article corrects pictographs-only simplification using actually read Met paragraphs; old question/title/answer positions unchanged. Writing/Web/Rome gain only relevant reciprocal paths.",
+  "oldImprovement": "Met-based writing correction retained; current individual reflection and immediate quantity-answer explanation added. Original answer strings, solution, title, chronology and locations retained; exact question explanation delta documented in editorial-reviews, original comparison bank unchanged.",
   "openGates": [
     "complete final master standards/browser regression and actual Firefox/WebKit at final snapshot",
     "remaining29 new history topics and all remaining originalWK051–058 tasks, individual source/factual/pedagogical AI counterchecks; external humans not a gate"
@@ -315,13 +371,40 @@
   "oldWritingSelfReview": {
     "mode": "ai-self-review",
     "reviewedOn": "2026-10-18",
-    "dataHash": "7ada62f2e707f233157698cdb2d41e9533aae74f9c4acbd78de12c4bbf806f7b",
-    "scope": "Existing history-writing article, old exact mini-question retained, three reading/observation layers, individual hints and both wrong reasons, source and reciprocal links.",
-    "source": "Met The Origins of Writing, actual paragraphs30–43 read17Oct2026.",
+    "dataHash": "7a24011db51fdd27eef162efe8f702fece57a36ff48cfadf05f888859d4d4bdb",
+    "scope": "Current old writing article including its individually revised source-limit reflection and directly appropriate correct explanation; all original question/answer identities and positions retained.",
+    "source": "Met31/36–39 actually reread18Oct2026; earlier17Octread retained in original record.",
     "countercheck": "After initial writing, re-read distinction between pictographs and abstract marks, later wedge and sound development; no alphabet-at-once or transmission-to-Inka claim. Distractors remain the old stable choices; new feedback explains technology/context without giving an unrelated answer.",
-    "corrections": "Pictographs-only simplification corrected; concrete starter/observation/benefit and wrong reasons added; original question/title/date/location remain.",
+    "corrections": "Earlier pictograph-only correction retained. Now individual source reflection and direct grain-count explanation; original answer strings/solution/title/date/location unchanged.",
     "remainingUncertainty": "Approximate dates; evidence does not prove a single inventor or one-day origin.",
-    "unresolvedBlockingClaims": []
+    "unresolvedBlockingClaims": [],
+    "currentTargetedUI": {
+      "build": "b92d7a70954a64bd",
+      "proofs": {
+        "history-targeted": {
+          "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+          "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+          "build": "b92d7a70954a64bd",
+          "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+          "scope": "actual Chromium history partial proof; not full regression"
+        },
+        "history-native-offline": {
+          "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+          "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+          "build": "b92d7a70954a64bd",
+          "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+          "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+        },
+        "content-corrections-targeted": {
+          "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+          "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+          "build": "b92d7a70954a64bd",
+          "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      },
+      "scope": "Actual completed current targeted UI evidence; not full regression. All preceding reports retained under their original build archives."
+    }
   },
   "visualCountercheck": {
     "reviewedOn": "2026-10-18",
@@ -330,192 +413,31 @@
     "status": "Personally inspected320px normal/large and actual native200% top/diagram/controls; no label cropping or button collision in final observed views. Native diagrams captured separately to avoid partial viewport evidence."
   },
   "earlyTechnicalProof": {
-    "meaning": "Partial evidence, not complete final regression; exact snapshots retained without relabelling.",
-    "targeted": {
-      "build": "d1a3d08c3722094e",
-      "sourceDigest": "6cf368cb7bcda6bc1c7062a4952ff8e5b566ca6c2449412f821db9f2f80deb7c",
-      "browser": "154.0.8037.57",
-      "observed": {
-        "observed": [
-          {
-            "id": "history-khipu",
-            "width": 320,
-            "levels": 3,
-            "realControls": true,
-            "feedback": true,
-            "reload": true,
-            "search": true,
-            "backFocus": true
-          },
-          {
-            "id": "history-mohenjo-daro",
-            "width": 320,
-            "levels": 3,
-            "realControls": true,
-            "feedback": true,
-            "reload": true,
-            "search": true,
-            "backFocus": true
-          },
-          {
-            "id": "history-khipu",
-            "width": 360,
-            "levels": 3,
-            "realControls": true,
-            "feedback": true,
-            "reload": true,
-            "search": true,
-            "backFocus": true
-          },
-          {
-            "id": "history-mohenjo-daro",
-            "width": 360,
-            "levels": 3,
-            "realControls": true,
-            "feedback": true,
-            "reload": true,
-            "search": true,
-            "backFocus": true
-          },
-          {
-            "id": "history-khipu",
-            "width": 390,
-            "levels": 3,
-            "realControls": true,
-            "feedback": true,
-            "reload": true,
-            "search": true,
-            "backFocus": true
-          },
-          {
-            "id": "history-mohenjo-daro",
-            "width": 390,
-            "levels": 3,
-            "realControls": true,
-            "feedback": true,
-            "reload": true,
-            "search": true,
-            "backFocus": true
-          },
-          {
-            "id": "history-khipu",
-            "width": 768,
-            "levels": 3,
-            "realControls": true,
-            "feedback": true,
-            "reload": true,
-            "search": true,
-            "backFocus": true
-          },
-          {
-            "id": "history-mohenjo-daro",
-            "width": 768,
-            "levels": 3,
-            "realControls": true,
-            "feedback": true,
-            "reload": true,
-            "search": true,
-            "backFocus": true
-          },
-          {
-            "id": "history-khipu",
-            "width": 1024,
-            "levels": 3,
-            "realControls": true,
-            "feedback": true,
-            "reload": true,
-            "search": true,
-            "backFocus": true
-          },
-          {
-            "id": "history-mohenjo-daro",
-            "width": 1024,
-            "levels": 3,
-            "realControls": true,
-            "feedback": true,
-            "reload": true,
-            "search": true,
-            "backFocus": true
-          },
-          {
-            "id": "history-khipu",
-            "width": 1440,
-            "levels": 3,
-            "realControls": true,
-            "feedback": true,
-            "reload": true,
-            "search": true,
-            "backFocus": true
-          },
-          {
-            "id": "history-mohenjo-daro",
-            "width": 1440,
-            "levels": 3,
-            "realControls": true,
-            "feedback": true,
-            "reload": true,
-            "search": true,
-            "backFocus": true
-          },
-          {
-            "id": "history-khipu",
-            "width": 1920,
-            "levels": 3,
-            "realControls": true,
-            "feedback": true,
-            "reload": true,
-            "search": true,
-            "backFocus": true
-          },
-          {
-            "id": "history-mohenjo-daro",
-            "width": 1920,
-            "levels": 3,
-            "realControls": true,
-            "feedback": true,
-            "reload": true,
-            "search": true,
-            "backFocus": true
-          }
-        ],
-        "oldWriting": [
-          {
-            "width": 320,
-            "levels": true,
-            "bothWrongReasons": true,
-            "retainedCorrectAnswer": true,
-            "reload": true
-          },
-          {
-            "width": 1440,
-            "levels": true,
-            "bothWrongReasons": true,
-            "retainedCorrectAnswer": true,
-            "reload": true
-          }
-        ]
+    "build": "b92d7a70954a64bd",
+    "proofs": {
+      "history-targeted": {
+        "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+        "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+        "build": "b92d7a70954a64bd",
+        "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+        "scope": "actual Chromium history partial proof; not full regression"
       },
-      "reportSha256": "1e8e10df9d164ca629c7624ca43d2fe8068d1debdbe018634908928a5803eebe"
+      "history-native-offline": {
+        "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+        "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+        "build": "b92d7a70954a64bd",
+        "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+        "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+      },
+      "content-corrections-targeted": {
+        "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+        "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+        "build": "b92d7a70954a64bd",
+        "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+        "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+      }
     },
-    "nativeAndColdOffline": {
-      "build": "d1a3d08c3722094e",
-      "sourceDigest": "0a63d6c0db820dd38140e44994203967f6f07a92d4272827588fce36ffc60e44",
-      "browser": "154.0.8037.57",
-      "native": {
-        "percent": 200,
-        "scale": 2,
-        "largeText": true,
-        "observed": [
-          "history-khipu",
-          "history-mohenjo-daro"
-        ]
-      },
-      "checks": [
-        "Both historical learning pictures at actual native200% plus large text: all three levels and real controls",
-        "Both previously unopened historical sources and their interactive learning pictures work after actual cold offline restart"
-      ],
-      "reportSha256": "82ecfa3eaaafc84839b5d24fc56ee78f11dffb859fef18af11a2c99ce15eb03b"
-    }
+    "scope": "Actual completed current targeted UI evidence; not full regression. All preceding reports retained under their original build archives."
   },
   "legacyCountercheck20261018": {
     "scope": "26bisheridentischeZusatztexte/26Antwortkettengelesen;18individuellunpassendeRichtigerklärungengezieltkorrigiert;andere8begründetbeibehalten. Keinepauschale26Ganzartikel-Fachabnahme.",
@@ -1509,5 +1431,18 @@
         "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
       }
     ]
+  },
+  "oldImprovementBeforeLatestCorrection": "Existing writing article corrects pictographs-only simplification using actually read Met paragraphs; old question/title/answer positions unchanged. Writing/Web/Rome gain only relevant reciprocal paths.",
+  "retainedQuestionBankScope": "Frozen original209bank remains byte-identical as historical reference. Current explicit prompt/why corrections are checked individually and originals reconstructed; no answer, solution or identity change.",
+  "oldWritingSelfReviewBeforeLatestCorrection": {
+    "mode": "ai-self-review",
+    "reviewedOn": "2026-10-18",
+    "dataHash": "7ada62f2e707f233157698cdb2d41e9533aae74f9c4acbd78de12c4bbf806f7b",
+    "scope": "Existing history-writing article, old exact mini-question retained, three reading/observation layers, individual hints and both wrong reasons, source and reciprocal links.",
+    "source": "Met The Origins of Writing, actual paragraphs30–43 read17Oct2026.",
+    "countercheck": "After initial writing, re-read distinction between pictographs and abstract marks, later wedge and sound development; no alphabet-at-once or transmission-to-Inka claim. Distractors remain the old stable choices; new feedback explains technology/context without giving an unrelated answer.",
+    "corrections": "Pictographs-only simplification corrected; concrete starter/observation/benefit and wrong reasons added; original question/title/date/location remain.",
+    "remainingUncertainty": "Approximate dates; evidence does not prove a single inventor or one-day origin.",
+    "unresolvedBlockingClaims": []
   }
 }
