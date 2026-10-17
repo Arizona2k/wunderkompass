@@ -1,7 +1,9 @@
+import AnimalIllustration,{hasAnimalIllustration} from './animal-illustration';
 import ScienceDiagram,{hasScienceDiagram} from './science-diagram';
-export const hasTopicIllustration=(id:string)=>hasScienceDiagram(id)||['science-moon-phases','science-tides','science-currents'].includes(id);
+export const hasTopicIllustration=(id:string)=>hasAnimalIllustration(id)||hasScienceDiagram(id)||['science-moon-phases','science-tides','science-currents'].includes(id);
 /** Original explanatory drawings; HTML labels retain their size on small screens. */
 export default function TopicIllustration({id,compact=false}:{id:string;compact?:boolean}){
+ if(hasAnimalIllustration(id))return <AnimalIllustration id={id} compact={compact}/>;
  if(hasScienceDiagram(id))return <ScienceDiagram id={id} compact={compact}/>;
  const moon=id==='science-moon-phases',tides=id==='science-tides';
  const label=moon?'Vier ausgewählte Mondphasen: Neumond, zunehmender Halbmond, Vollmond und abnehmender Halbmond.':tides?'Dieselbe schematische Küste bei niedrigem und hohem Wasserstand.':'Drei Antriebe für Meeresströmungen: Wind, Gezeiten und Dichteunterschiede.';

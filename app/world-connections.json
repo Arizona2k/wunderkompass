@@ -880,6 +880,190 @@
       "kind": "context",
       "why": "Vergleiche den kurzen Sprint eines Gepards mit dem Anschleichen und Zusammenwirken von Löwen. Schnellster Sprint und eine erfolgreiche gemeinsame Jagd sind verschiedene Vergleiche.",
       "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-platypus-red-kangaroo",
+      "fromId": "animal-platypus",
+      "toId": "animal-red-kangaroo",
+      "why": "Säugetiere können ihre Jungen auf unterschiedliche Weise zur Welt bringen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-short-beaked-echidna-platypus",
+      "fromId": "animal-short-beaked-echidna",
+      "toId": "animal-platypus",
+      "why": "Zwei eierlegende Säugetiere zeigen eine gemeinsame Fortpflanzungsbesonderheit und unterschiedliche Nahrungssuche.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-okapi-giraffe",
+      "fromId": "animal-okapi",
+      "toId": "animal-giraffe",
+      "why": "Wald- und Savannenverwandte lassen sich nach Lebensraum und Nahrungserwerb vergleichen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-meerkat-honey-bee",
+      "fromId": "animal-meerkat",
+      "toId": "animal-honey-bee",
+      "why": "Gruppenleben kann unterschiedliche Formen der Zusammenarbeit hervorbringen; Insektenstaat und Säugetiergruppe unterscheiden.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-ring-tailed-lemur-western-lowland-gorilla",
+      "fromId": "animal-ring-tailed-lemur",
+      "toId": "animal-western-lowland-gorilla",
+      "why": "Zwei Primaten zeigen unterschiedliche Kommunikationsmittel; keine menschlichen Sätze unterstellen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-north-american-beaver-water-cycle",
+      "fromId": "animal-north-american-beaver",
+      "toId": "science-water-cycle",
+      "why": "Biberbau und Wasserwege verbinden ein Tierverhalten mit einer Landschaftsveränderung.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-walrus-polar-bear",
+      "fromId": "animal-walrus",
+      "toId": "animal-polar-bear",
+      "why": "Arktische Lebensräume und unterschiedliche Schutzbewertungen anhand derselben Region vergleichen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-red-fox-hedgehog",
+      "fromId": "animal-red-fox",
+      "toId": "animal-hedgehog",
+      "why": "Lebensraumstrukturen in Siedlungen aus Sicht verschiedener Wildtiere vergleichen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-raccoon-red-fox",
+      "fromId": "animal-raccoon",
+      "toId": "animal-red-fox",
+      "why": "Zwei anpassungsfähige Säugetiere verbinden Tastsinn und veränderte Lebensräume.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-barn-owl-white-tailed-eagle",
+      "fromId": "animal-barn-owl",
+      "toId": "animal-white-tailed-eagle",
+      "why": "Zwei Greifvogelbeispiele unterscheiden; Jagdmethoden und Gehör erst nach Einzelbelegen vergleichen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-kingfisher-shadows",
+      "fromId": "animal-kingfisher",
+      "toId": "science-shadows",
+      "why": "Licht und Wahrnehmung verbinden Vogelmerkmale mit der Wirkung von Licht.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-ostrich-emperor-penguin",
+      "fromId": "animal-ostrich",
+      "toId": "animal-emperor-penguin",
+      "why": "Zwei flugunfähige Vögel nutzen Körperteile in sehr unterschiedlichen Lebensräumen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-atlantic-puffin-emperor-penguin",
+      "fromId": "animal-atlantic-puffin",
+      "toId": "animal-emperor-penguin",
+      "why": "Brutgebiet und Nahrungsraum zweier Meeresvögel sachlich vergleichen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-common-chameleon-common-cuttlefish",
+      "fromId": "animal-common-chameleon",
+      "toId": "animal-common-cuttlefish",
+      "why": "Beide Tiere können ihre Färbung ändern. Vergleiche die Funktionen und Grenzen, ohne eine beliebige Musterkopie anzunehmen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-fire-salamander-axolotl",
+      "fromId": "animal-fire-salamander",
+      "toId": "animal-axolotl",
+      "why": "Äußere Kiemen und unterschiedliche Entwicklungsverläufe zweier Amphibien vergleichen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-common-frog-fire-salamander",
+      "fromId": "animal-common-frog",
+      "toId": "animal-fire-salamander",
+      "why": "Zwei Amphibien verbinden Wasser- und Landlebensräume auf unterschiedliche Weise.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-eastern-clown-anemonefish-coral-reef",
+      "fromId": "animal-eastern-clown-anemonefish",
+      "toId": "science-coral-reef",
+      "why": "Rifflebensraum und Beziehungen zwischen unterschiedlichen Lebewesen untersuchen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-european-eel-currents",
+      "fromId": "animal-european-eel",
+      "toId": "science-currents",
+      "why": "Ozeanströmungen und durchgängige Wanderwege verbinden mehrere Lebensabschnitte.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-monarch-butterfly-honey-bee",
+      "fromId": "animal-monarch-butterfly",
+      "toId": "animal-honey-bee",
+      "why": "Zwei Insekten zeigen unterschiedliche Lebenszyklen und Beziehungen zu Pflanzen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-garden-snail-hedgehog",
+      "fromId": "animal-garden-snail",
+      "toId": "animal-hedgehog",
+      "why": "Feuchtigkeit, Verstecke und unterschiedliche Gartenbeobachtungen vergleichen; keine sichere konkrete Beutebeziehung behaupten.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-european-lobster-common-octopus",
+      "fromId": "animal-european-lobster",
+      "toId": "animal-common-octopus",
+      "why": "Zwei wirbellose Meerestiere mit sehr unterschiedlicher Körperstütze vergleichen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-common-cuttlefish-common-octopus",
+      "fromId": "animal-common-cuttlefish",
+      "toId": "animal-common-octopus",
+      "why": "Verwandte Kopffüßer nach tatsächlichen Körpermerkmalen statt Sammelnamen vergleichen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-short-snouted-seahorse-foodweb",
+      "fromId": "animal-short-snouted-seahorse",
+      "toId": "science-foodweb",
+      "why": "Kleine Beutetiere, Verstecke und Räuber als Teil eines Nahrungsnetzes erklären.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
     }
   ]
 }

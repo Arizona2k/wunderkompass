@@ -1101,5 +1101,1167 @@
       "https://www.rspb.org.uk/birds-and-wildlife/birds-of-the-month/august-birds-of-the-month"
     ],
     "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+  },
+  {
+    "id": "animal-platypus",
+    "goal": "Eier und Milch passen zusammen.",
+    "evidence": [
+      {
+        "label": "Schnabel und Sinne",
+        "text": "Das Schnabeltier legt Eier. Nach dem Schlüpfen versorgt die Mutter ihre Jungen mit Milch. Es gehört zu den Säugetieren."
+      },
+      {
+        "label": "Fortpflanzung",
+        "text": "Im weichen Schnabel sitzen Sinnesrezeptoren. Sie helfen ihm, unter Wasser Beutetiere in seiner Nähe zu finden."
+      }
+    ],
+    "reason": {
+      "prompt": "Erkläre, warum der Schnabel mehr als ein Werkzeug zum Aufnehmen von Nahrung ist.",
+      "answers": [
+        "Der Schnabel ist nur eine harte Schaufel ohne Sinnesrezeptoren.",
+        "Sein Schnabel nimmt auch Sinnesinformationen auf."
+      ],
+      "correct": 1,
+      "hint": "Suche in der Beschreibung nach dem Wahrnehmen, nicht nur nach dem Fressen.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Der Schnabel hilft bei der Suche nach Beute durch Sinnesinformationen.",
+        "Der Schnabel hilft bei der Suche nach Beute durch Sinnesinformationen."
+      ]
+    },
+    "transfer": {
+      "prompt": "Jemand findet ein Ei und behauptet: „Das muss von einem Vogel sein.“ Welcher weitere Beleg wäre nötig?",
+      "answers": [
+        "Das Ei allein genügt nicht; weitere Merkmale und die Jungtierversorgung zählen.",
+        "Jedes gefundene Ei muss von einem Vogel stammen."
+      ],
+      "correct": 0,
+      "hint": "Frage nach weiteren Merkmalen und der Versorgung der Jungen.",
+      "feedback": [
+        "Ein einzelnes Merkmal reicht zur sicheren Tierzuordnung nicht aus.",
+        "Die Aussage geht über die Belege hinaus. Ein einzelnes Merkmal reicht zur sicheren Tierzuordnung nicht aus."
+      ]
+    },
+    "sourceUrls": [
+      "https://animals.sandiegozoo.org/animals/platypus"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Ordne Eierlegen und Milchgeben der richtigen Aussage zu: Was erfährst du über die Fortpflanzung?",
+      "hint": "Trenne das Legen eines Eis von der Ernährung des geschlüpften Jungen."
+    }
+  },
+  {
+    "id": "animal-short-beaked-echidna",
+    "goal": "Ein Name verrät noch keine Verwandtschaft.",
+    "evidence": [
+      {
+        "label": "Graben",
+        "text": "Der Kurzschnabeligel hat Stacheln, eine lange Schnauze und kräftige Grabkrallen. Er ist ein eierlegendes Säugetier."
+      },
+      {
+        "label": "Nahrung aufnehmen",
+        "text": "Mit der klebrigen Zunge nimmt er Ameisen und Termiten auf. Die Krallen helfen, ihre Verstecke zu öffnen."
+      }
+    ],
+    "reason": {
+      "prompt": "Beschreibe die Nahrungssuche als Folge zweier verschiedener Handlungen.",
+      "answers": [
+        "Die Krallen öffnen Verstecke; die Zunge nimmt Nahrung auf.",
+        "Die Grabkrallen ersetzen die Zunge bei jeder Nahrungsaufnahme."
+      ],
+      "correct": 0,
+      "hint": "Erkläre, warum ein Werkzeug zum Graben noch keine Zunge ersetzt.",
+      "feedback": [
+        "Öffnen und Aufnehmen sind verschiedene Teilaufgaben der Nahrungssuche.",
+        "Die Aussage geht über die Belege hinaus. Öffnen und Aufnehmen sind verschiedene Teilaufgaben der Nahrungssuche."
+      ]
+    },
+    "transfer": {
+      "prompt": "Ist ein Tier mit Stacheln automatisch nahe mit einem europäischen Igel verwandt? Begründe, welche Angaben du zusätzlich brauchst.",
+      "answers": [
+        "Stacheln beweisen eine nahe Verwandtschaft mit europäischen Igeln.",
+        "Ähnliche Stacheln allein zeigen keine nahe Verwandtschaft."
+      ],
+      "correct": 1,
+      "hint": "Vergleiche Merkmale der Fortpflanzung statt nur der Körperoberfläche.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Ähnliches Aussehen kann zu unterschiedlichen Tiergruppen gehören.",
+        "Ähnliches Aussehen kann zu unterschiedlichen Tiergruppen gehören."
+      ]
+    },
+    "sourceUrls": [
+      "https://australian.museum/learn/animals/mammals/short-beaked-echidna/"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Zeige auf einer eigenen Skizze, was Krallen und Zunge jeweils beitragen.",
+      "hint": "Beginne beim Öffnen eines Verstecks und gehe dann zur Nahrungsaufnahme."
+    }
+  },
+  {
+    "id": "animal-okapi",
+    "goal": "Streifen allein erzählen keine ganze Familiengeschichte.",
+    "evidence": [
+      {
+        "label": "Gestreifte Beine",
+        "text": "Das Okapi lebt in Wäldern der Demokratischen Republik Kongo. Mit seiner langen Zunge greift es Blätter."
+      },
+      {
+        "label": "Greifzunge",
+        "text": "Seine Beine tragen helle Streifen. Trotzdem ist es mit der Giraffe verwandt und kein Zebra."
+      }
+    ],
+    "reason": {
+      "prompt": "Warum könnte ein reiner Vergleich der Fellmuster bei der Verwandtschaftsfrage irreführen?",
+      "answers": [
+        "Gleiche Streifen bedeuten immer dieselbe Tierfamilie.",
+        "Ein Fellmuster allein klärt die Abstammung nicht."
+      ],
+      "correct": 1,
+      "hint": "Unterscheide ein sichtbares Muster von einem Beleg zur Abstammung.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Fellmuster allein reichen nicht zur Erklärung der Verwandtschaft.",
+        "Fellmuster allein reichen nicht zur Erklärung der Verwandtschaft."
+      ]
+    },
+    "transfer": {
+      "prompt": "Entwirf zwei verschiedene Fragen: eine zum Aussehen und eine zur Abstammung. Welche Quellen könnten jeweils helfen?",
+      "answers": [
+        "Aussehen und Abstammung brauchen unterschiedliche Belege.",
+        "Eine Beschreibung der Streifen beantwortet jede Frage zur Abstammung."
+      ],
+      "correct": 0,
+      "hint": "Eine Fotobeschreibung und eine Verwandtschaftsuntersuchung beantworten verschiedene Fragen.",
+      "feedback": [
+        "Aussehen und Verwandtschaft sind unterschiedliche Untersuchungsfragen.",
+        "Die Aussage geht über die Belege hinaus. Aussehen und Verwandtschaft sind unterschiedliche Untersuchungsfragen."
+      ]
+    },
+    "sourceUrls": [
+      "https://animals.sandiegozoo.org/animals/okapi"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Vergleiche die beschriebenen Beine und das Greifen mit der Zunge.",
+      "hint": "Beschreibe zunächst, was du an Beinen und Zunge jeweils vergleichen willst."
+    }
+  },
+  {
+    "id": "animal-meerkat",
+    "goal": "Gemeinsam leben heißt unterschiedliche Aufgaben beobachten.",
+    "evidence": [
+      {
+        "label": "Nahrung suchen",
+        "text": "Erdmännchen gehören zu den Mangusten, nicht zu den Katzen. Sie leben in Gruppen und suchen unter anderem nach kleinen wirbellosen Tieren."
+      },
+      {
+        "label": "Ausschau halten",
+        "text": "Während einige nach Nahrung suchen, halten andere Ausschau. Warnrufe können die Gruppe auf Gefahren aufmerksam machen."
+      }
+    ],
+    "reason": {
+      "prompt": "Erkläre, warum Nahrungssuche und Ausschauhalten zusammen nützlich sein können.",
+      "answers": [
+        "Ausschauhalten kann Gefahren anzeigen, während andere Nahrung suchen.",
+        "Wer Nahrung sucht, kann gleichzeitig immer alles in seiner Umgebung beobachten."
+      ],
+      "correct": 0,
+      "hint": "Denke daran, wohin sich die Aufmerksamkeit bei der Nahrungssuche richtet.",
+      "feedback": [
+        "Ausschauhalten kann Gefahren anzeigen, während andere mit Nahrungssuche beschäftigt sind.",
+        "Die Aussage geht über die Belege hinaus. Ausschauhalten kann Gefahren anzeigen, während andere mit Nahrungssuche beschäftigt sind."
+      ]
+    },
+    "transfer": {
+      "prompt": "Auf einem Foto steht ein Erdmännchen aufrecht. Beweist das bereits, dass gerade ein Feind da ist? Was müsstest du beobachten?",
+      "answers": [
+        "Jedes aufrechte Erdmännchen beweist einen Feind direkt daneben.",
+        "Die Körperhaltung allein beweist keinen gerade anwesenden Feind."
+      ],
+      "correct": 1,
+      "hint": "Ein Foto hat keinen zeitlichen Verlauf und zeigt keinen sicheren Auslöser.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Eine Körperhaltung allein belegt noch keinen konkreten Alarm.",
+        "Eine Körperhaltung allein belegt noch keinen konkreten Alarm."
+      ]
+    },
+    "sourceUrls": [
+      "https://animals.sandiegozoo.org/animals/meerkat"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Beschreibe zwei unterschiedliche Tätigkeiten innerhalb einer Gruppe.",
+      "hint": "Suche in den Absätzen nach zwei Verben für unterschiedliche Gruppenaufgaben."
+    }
+  },
+  {
+    "id": "animal-ring-tailed-lemur",
+    "goal": "Nachrichten können über mehrere Sinne ankommen.",
+    "evidence": [
+      {
+        "label": "Sichtbares Signal",
+        "text": "Kattas leben auf Madagaskar. Aufgerichtete Schwänze können der Gruppe beim Zusammenbleiben helfen."
+      },
+      {
+        "label": "Duft und Ruf",
+        "text": "Duftmarken und Rufe sind weitere Wege ihrer Verständigung. Nicht jede Mitteilung ist sichtbar."
+      }
+    ],
+    "reason": {
+      "prompt": "Vergleiche, was Schwanzhaltung und Duftmarken jeweils übertragen können.",
+      "answers": [
+        "Alle Informationen eines Kattas sind nur mit den Augen wahrnehmbar.",
+        "Haltung und Duftmarken nutzen unterschiedliche Sinneswege."
+      ],
+      "correct": 1,
+      "hint": "Überlege, welche Sinnesinformation jeder Kommunikationsweg verwendet.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Sichtbare Haltung und Duftmarken nutzen unterschiedliche Sinneswege.",
+        "Sichtbare Haltung und Duftmarken nutzen unterschiedliche Sinneswege."
+      ]
+    },
+    "transfer": {
+      "prompt": "Du hörst keinen Ruf. Darfst du schließen, dass keine Verständigung stattfindet? Entwirf eine passende Gegenprüfung.",
+      "answers": [
+        "Ohne hörbaren Ruf können andere Kommunikationswege bestehen.",
+        "Ohne hörbaren Ruf findet sicher keine Verständigung statt."
+      ],
+      "correct": 0,
+      "hint": "Prüfe ausdrücklich, welche Kommunikationswege deine Beobachtung gar nicht erfasst.",
+      "feedback": [
+        "Fehlender Ton schließt andere Informationswege nicht aus.",
+        "Die Aussage geht über die Belege hinaus. Fehlender Ton schließt andere Informationswege nicht aus."
+      ]
+    },
+    "sourceUrls": [
+      "https://www.nationalzoo.si.edu/animals/ring-tailed-lemur"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Finde einen sichtbaren und einen nicht sichtbaren Kommunikationsweg.",
+      "hint": "Ein Weg betrifft den Schwanz. Suche den anderen außerhalb des Sehens."
+    }
+  },
+  {
+    "id": "animal-north-american-beaver",
+    "goal": "Bauen kann einen ganzen Lebensraum verändern.",
+    "evidence": [
+      {
+        "label": "Wasser bremsen",
+        "text": "Ein Biberdamm bremst Wasser. Dahinter kann ein Teich entstehen, den auch andere Lebewesen nutzen."
+      },
+      {
+        "label": "Wohnen",
+        "text": "Die Wohnburg ist ein anderes Bauwerk. Ihr Eingang kann unter Wasser liegen, während die Wohnkammer darüber liegt."
+      }
+    ],
+    "reason": {
+      "prompt": "Erkläre die Kette: Damm, langsameres Wasser, veränderter Lebensraum.",
+      "answers": [
+        "Ein Damm verändert die Strömung und damit Lebensbedingungen.",
+        "Ein Damm lässt das Wasser überall unverändert schnell fließen."
+      ],
+      "correct": 0,
+      "hint": "Beginne bei der Strömung, bevor du über neue Lebensräume nachdenkst.",
+      "feedback": [
+        "Langsameres Wasser kann einen Teich und damit andere Lebensbedingungen entstehen lassen.",
+        "Die Aussage geht über die Belege hinaus. Langsameres Wasser kann einen Teich und damit andere Lebensbedingungen entstehen lassen."
+      ]
+    },
+    "transfer": {
+      "prompt": "Kann ein Damm für manche Arten hilfreich und an anderer Stelle problematisch sein? Benenne, welche Informationen zur Bewertung fehlen.",
+      "answers": [
+        "Ein Bauwerk ist für alle Lebewesen und alle Menschen immer gleich nützlich.",
+        "Nutzen und Probleme müssen für verschiedene Betroffene geprüft werden."
+      ],
+      "correct": 1,
+      "hint": "Überlege getrennt an die Tiere im Teich und an mögliche Überflutungsflächen.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Eine Veränderung kann für verschiedene Betroffene unterschiedliche Folgen haben.",
+        "Eine Veränderung kann für verschiedene Betroffene unterschiedliche Folgen haben."
+      ]
+    },
+    "sourceUrls": [
+      "https://www.nationalzoo.si.edu/animals/beaver"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Ordne Damm und Wohnburg ihren unterschiedlichen Aufgaben zu.",
+      "hint": "Unterscheide ein Hindernis im Fluss von einem Aufenthaltsraum."
+    }
+  },
+  {
+    "id": "animal-walrus",
+    "goal": "Art, Unterart und Schutzregel auseinanderhalten.",
+    "evidence": [
+      {
+        "label": "Tastborsten",
+        "text": "Walrosse haben empfindliche Tastborsten am Maul. Damit finden sie unter anderem kleine Beutetiere am Meeresboden; ihre Stoßzähne sind keine Gabeln zum Aufspießen der Nahrung."
+      },
+      {
+        "label": "Arktischer Lebensraum",
+        "text": "Zum Ruhen nutzen Walrosse Küsten und Meereis. Pazifische Walrosse sind eine Unterart derselben Art. Ein Schutzprogramm für Alaska beschreibt nicht automatisch die ganze weltweite Gefährdung."
+      }
+    ],
+    "reason": {
+      "prompt": "Warum sagt der Ort eines Schutzprogramms nicht die gesamte Verbreitung einer Art aus?",
+      "answers": [
+        "Das Gebiet eines Programms zeigt immer die gesamte Weltverbreitung.",
+        "Ein Programmgebiet ist nicht die gesamte Verbreitung einer Tierart."
+      ],
+      "correct": 1,
+      "hint": "Unterscheide Zuständigkeitsgebiet und gesamte Tierverbreitung.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Ein Programm in Alaska belegt seinen eigenen Bereich, keine vollständige Weltkarte.",
+        "Ein Programm in Alaska belegt seinen eigenen Bereich, keine vollständige Weltkarte."
+      ]
+    },
+    "transfer": {
+      "prompt": "Eine US-Schutzregel ist belegt. Welche zusätzliche Quelle brauchst du für eine weltweite IUCN-Einstufung?",
+      "answers": [
+        "Eine globale Bewertung braucht einen passenden weltweiten Beleg.",
+        "Eine Schutzregel in Alaska beweist dieselbe Einstufung überall."
+      ],
+      "correct": 0,
+      "hint": "Frage, ob die Quelle Rechtsschutz oder Gefährdung nach weltweiten Kriterien beschreibt.",
+      "feedback": [
+        "Rechtsraum und weltweite Bewertung sind verschiedene Angaben.",
+        "Die Aussage geht über die Belege hinaus. Rechtsraum und weltweite Bewertung sind verschiedene Angaben."
+      ]
+    },
+    "sourceUrls": [
+      "https://www.fws.gov/program/alaska-marine-mammals-management-office/alaska-walrus-program",
+      "https://seamap.env.duke.edu/species/180639/html",
+      "https://www.mmc.gov/priority-topics/species-of-concern/pacific-walrus/"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Unterscheide die Wörter Art und Unterart in den beiden wissenschaftlichen Namen.",
+      "hint": "Vergleiche, welcher Name aus zwei und welcher aus drei Wörtern besteht."
+    }
+  },
+  {
+    "id": "animal-red-fox",
+    "goal": "Ein Lebensraum ist mehr als ein einzelner Wald.",
+    "evidence": [
+      {
+        "label": "Lebensräume",
+        "text": "Rotfüchse nutzen verschiedene Lebensräume. Dazu gehören Wälder, offene Landschaften und menschliche Siedlungen."
+      },
+      {
+        "label": "Verständigung",
+        "text": "Rufe und Duftmarken gehören zu ihrer Verständigung. Die sichtbare Fellfarbe allein beschreibt nicht ihr ganzes Verhalten."
+      }
+    ],
+    "reason": {
+      "prompt": "Erkläre, warum ein Fuchs in einer Siedlung nicht automatisch ein entflohenes Haustier ist.",
+      "answers": [
+        "Ein Wildtier kann in einer Siedlung leben, ohne ein Haustier zu sein.",
+        "Jeder Fuchs in einer Siedlung ist ein entflohenes Haustier."
+      ],
+      "correct": 0,
+      "hint": "Trenne den Aufenthalt nahe Menschen von einer Haltung durch Menschen.",
+      "feedback": [
+        "Ein Wildtier kann einen Siedlungsraum nutzen, ohne ein Haustier zu sein.",
+        "Die Aussage geht über die Belege hinaus. Ein Wildtier kann einen Siedlungsraum nutzen, ohne ein Haustier zu sein."
+      ]
+    },
+    "transfer": {
+      "prompt": "Du entdeckst einen Fuchs am Tag. Reicht diese Einzelbeobachtung, um die Aktivität aller Füchse zu beschreiben?",
+      "answers": [
+        "Ein tagsüber beobachteter Fuchs beweist, dass alle Füchse nur tagsüber aktiv sind.",
+        "Eine Einzelbeobachtung beschreibt keinen ganzen Tagesablauf der Art."
+      ],
+      "correct": 1,
+      "hint": "Ein Zeitpunkt ist kein vollständiger Tagesablauf einer ganzen Art.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Einzelfall und allgemeine Aussage müssen getrennt werden.",
+        "Einzelfall und allgemeine Aussage müssen getrennt werden."
+      ]
+    },
+    "sourceUrls": [
+      "https://animaldiversity.org/accounts/Vulpes_vulpes/"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Sortiere die genannten Lebensräume nach eigenen Vergleichsmerkmalen.",
+      "hint": "Wähle eigene nachvollziehbare Gruppen wie dichter Bewuchs oder Siedlung."
+    }
+  },
+  {
+    "id": "animal-raccoon",
+    "goal": "Mit den Pfoten Informationen sammeln.",
+    "evidence": [
+      {
+        "label": "Empfindliche Pfoten",
+        "text": "Waschbären besitzen empfindliche Vorderpfoten. Damit können sie Gegenstände ertasten und bearbeiten."
+      },
+      {
+        "label": "Lebensraum und Herkunft",
+        "text": "Sie nutzen Wälder und auch Siedlungsräume. Ein Fundort am Haus erklärt noch nicht, wo die Art ursprünglich heimisch war."
+      }
+    ],
+    "reason": {
+      "prompt": "Warum sind empfindliche Pfoten bei der Untersuchung eines Gegenstands hilfreich?",
+      "answers": [
+        "Ein Blick liefert immer genau dieselben Informationen wie das Ertasten.",
+        "Tasten liefert Informationen durch unmittelbaren Kontakt."
+      ],
+      "correct": 1,
+      "hint": "Suche den Zusammenhang zwischen Empfindlichkeit und Untersuchung.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Tasten kann Informationen liefern, die ein Blick allein nicht erfasst.",
+        "Tasten kann Informationen liefern, die ein Blick allein nicht erfasst."
+      ]
+    },
+    "transfer": {
+      "prompt": "Eine Art kommt heute in einer Region vor. Welche Belege brauchst du, bevor du sie dort als ursprünglich heimisch bezeichnest?",
+      "answers": [
+        "Heutiges Vorkommen und ursprüngliche Verbreitung brauchen getrennte Belege.",
+        "Ein heutiger Fund beweist, dass die Art dort schon immer heimisch war."
+      ],
+      "correct": 0,
+      "hint": "Eine alte Verbreitungskarte und die Einführungsgeschichte wären weitere Belegarten.",
+      "feedback": [
+        "Heutiges Vorkommen und ursprüngliche Verbreitung sind nicht dasselbe.",
+        "Die Aussage geht über die Belege hinaus. Heutiges Vorkommen und ursprüngliche Verbreitung sind nicht dasselbe."
+      ]
+    },
+    "sourceUrls": [
+      "https://animaldiversity.org/accounts/Procyon_lotor/"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Beschreibe den Unterschied zwischen Sehen und Tasten.",
+      "hint": "Vergleiche die empfangene Information statt nur das verwendete Körperteil."
+    }
+  },
+  {
+    "id": "animal-hedgehog",
+    "goal": "Ein guter Garten braucht auch Verstecke.",
+    "evidence": [
+      {
+        "label": "Nahrungssuche",
+        "text": "Braunbrustigel sind vor allem nachts unterwegs. Sie fressen unter anderem Käfer und Regenwürmer."
+      },
+      {
+        "label": "Geschützter Ruheplatz",
+        "text": "Hecken und Laub bieten geschützte Plätze. Im Winter können sie mit abgesenktem Stoffwechsel Energie sparen."
+      }
+    ],
+    "reason": {
+      "prompt": "Warum kann eine völlig aufgeräumte Fläche weniger Verstecke bieten?",
+      "answers": [
+        "Weniger Hecken und Laub können weniger Rückzugsplätze bedeuten.",
+        "Je weniger Verstecke ein Garten hat, desto mehr Schutz bietet er automatisch."
+      ],
+      "correct": 0,
+      "hint": "Vergleiche die Zahl geeigneter geschützter Stellen, nicht nur die Ordnung.",
+      "feedback": [
+        "Das Entfernen von Hecken oder Laub kann Rückzugsmöglichkeiten vermindern.",
+        "Die Aussage geht über die Belege hinaus. Das Entfernen von Hecken oder Laub kann Rückzugsmöglichkeiten vermindern."
+      ]
+    },
+    "transfer": {
+      "prompt": "Zwei Gärten unterscheiden sich gleichzeitig in Licht, Verstecken und Nahrung. Beweist ein Igelbesuch, welcher einzelne Faktor ausschlaggebend war?",
+      "answers": [
+        "Ein Besuch beweist, welcher von drei gleichzeitig veränderten Faktoren wirkt.",
+        "Mehrere zugleich veränderte Bedingungen erlauben keinen eindeutigen Ursachenbeweis."
+      ],
+      "correct": 1,
+      "hint": "Überlege, welche Bedingungen für einen fairen Vergleich gleich bleiben müssten.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Mehrere gleichzeitig veränderte Bedingungen verhindern eine eindeutige Ursachenbehauptung.",
+        "Mehrere gleichzeitig veränderte Bedingungen verhindern eine eindeutige Ursachenbehauptung."
+      ]
+    },
+    "sourceUrls": [
+      "https://www.wildlifetrusts.org/wildlife-explorer/mammals/european-hedgehog"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Zeichne Nahrungssuche und einen geschützten Ruheplatz getrennt ein.",
+      "hint": "Zeichne den Ruheplatz als eigenen Teil des Gartens."
+    }
+  },
+  {
+    "id": "animal-barn-owl",
+    "goal": "Artwissen benötigt mehr als ein bekanntes Gesicht.",
+    "evidence": [
+      {
+        "label": "Name und Merkmale",
+        "text": "Die Schleiereule jagt vor allem kleine Säugetiere, etwa Mäuse und Wühlmäuse. Grasreiche Flächen können ihren Beutetieren Nahrung und Deckung bieten."
+      },
+      {
+        "label": "Nahrungssuche",
+        "text": "Ihr heller Gesichtsschleier hilft beim Wiedererkennen. Für eine sichere Artbestimmung braucht es weitere passende Merkmale; ein einzelner unscharfer Fleck auf einem Nachtfoto reicht nicht."
+      }
+    ],
+    "reason": {
+      "prompt": "Welche zusätzliche Beschreibung würde dir bei einer unscharfen Beobachtung helfen?",
+      "answers": [
+        "Ein unscharfer heller Fleck genügt zur sicheren Bestimmung jeder Eule.",
+        "Mehrere passende Merkmale können eine Bestimmung absichern."
+      ],
+      "correct": 1,
+      "hint": "Bedenke Körperform, Größe und weitere beobachtbare Einzelheiten.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Ein weiteres passendes Merkmal kann die Bestimmung absichern; seine Quelle muss geprüft werden.",
+        "Ein weiteres passendes Merkmal kann die Bestimmung absichern; seine Quelle muss geprüft werden."
+      ]
+    },
+    "transfer": {
+      "prompt": "Wäre ein einzelnes helles Gesicht auf einem Nachtfoto ein sicherer Artnachweis? Begründe, was noch geprüft werden müsste.",
+      "answers": [
+        "Ein Hinweis auf einem Foto ersetzt keine abgesicherte Artbestimmung.",
+        "Ein helles Gesicht auf einem Nachtfoto ist immer ein vollständiger Artnachweis."
+      ],
+      "correct": 0,
+      "hint": "Unterscheide einen auffälligen Hinweis von mehreren übereinstimmenden Bestimmungsmerkmalen.",
+      "feedback": [
+        "Wiedererkennen ist noch keine vollständige Bestimmung.",
+        "Die Aussage geht über die Belege hinaus. Wiedererkennen ist noch keine vollständige Bestimmung."
+      ]
+    },
+    "sourceUrls": [
+      "https://www.bto.org/learn/about-birds/birdfacts/barn-owl"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Unterscheide Alltagsnamen und wissenschaftlichen Namen.",
+      "hint": "Suche nach dem Namen, der sprachübergreifend auf die Art verweist."
+    }
+  },
+  {
+    "id": "animal-kingfisher",
+    "goal": "Eine Farbe kann durch Struktur entstehen.",
+    "evidence": [
+      {
+        "label": "Sitzwarte und Jagd",
+        "text": "Eisvögel jagen an Gewässern nach Fischen. Häufig halten sie von einer Sitzwarte Ausschau."
+      },
+      {
+        "label": "Gewässer",
+        "text": "Das leuchtende Blau wird durch die feine Struktur der Federn erzeugt. Blau aussehen heißt nicht immer, einen blauen Farbstoff zu besitzen."
+      }
+    ],
+    "reason": {
+      "prompt": "Erkläre den Unterschied zwischen einer blauen Farbe und einem blauen Farbstoff.",
+      "answers": [
+        "Die Jagd verbindet einen geeigneten Sitzplatz und erreichbare Beute im Wasser.",
+        "Die Farbe allein erklärt, ob Nahrung erreichbar ist."
+      ],
+      "correct": 0,
+      "hint": "Eine beobachtete Farbe erklärt noch nicht, wie das Licht verändert wird.",
+      "feedback": [
+        "Feine Strukturen können ein blaues Aussehen erzeugen, ohne blauen Farbstoff vorauszusetzen.",
+        "Die Aussage geht über die Belege hinaus. Feine Strukturen können ein blaues Aussehen erzeugen, ohne blauen Farbstoff vorauszusetzen."
+      ]
+    },
+    "transfer": {
+      "prompt": "Ein blauer Stoff und eine blaue Feder sehen ähnlich aus. Welche Untersuchung wäre nötig, um ihre Farbentstehung zu vergleichen?",
+      "answers": [
+        "Ein einzelnes Foto genügt zur Bewertung aller Gewässer.",
+        "Für einen fairen Gewässervergleich müssen weitere Bedingungen geprüft werden."
+      ],
+      "correct": 1,
+      "hint": "Vergleiche Farbentstehung und Betrachtungsbedingungen statt nur einen Farbeindruck.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Gleiche Wahrnehmung kann unterschiedliche physikalische Ursachen haben.",
+        "Gleiche Wahrnehmung kann unterschiedliche physikalische Ursachen haben."
+      ]
+    },
+    "sourceUrls": [
+      "https://www.rspb.org.uk/birds-and-wildlife/kingfisher",
+      "https://www.bto.org/learn/about-birds/birdfacts/kingfisher"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Verbinde Sitzwarte, Wasser und Fisch zu einer einfachen Beobachtungsskizze.",
+      "hint": "Beschrifte den Ort zum Ausschauhalten und den Ort der Beute."
+    }
+  },
+  {
+    "id": "animal-ostrich",
+    "goal": "Nicht fliegen heißt nicht nutzlos.",
+    "evidence": [
+      {
+        "label": "Vogelmerkmale",
+        "text": "Strauße sind große laufende Vögel. Ihre Flügel können beim Halten des Gleichgewichts helfen."
+      },
+      {
+        "label": "Fortbewegung",
+        "text": "Bei einem Richtungswechsel ist Balance wichtig. Ein Körperteil kann eine andere Aufgabe erfüllen als bei einem fliegenden Vogel."
+      }
+    ],
+    "reason": {
+      "prompt": "Warum sind Flügel nicht automatisch nutzlos, wenn ein Vogel nicht fliegt?",
+      "answers": [
+        "Ein Vogel, der nicht fliegt, wird dadurch zu einer anderen Tiergruppe.",
+        "Flugunfähigkeit verändert nicht die Zugehörigkeit zu den Vögeln."
+      ],
+      "correct": 1,
+      "hint": "Prüfe die beschriebene Aufgabe bei einem Richtungswechsel.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Ein Körperteil kann auch bei fehlender Flugfähigkeit eine belegte Funktion haben.",
+        "Ein Körperteil kann auch bei fehlender Flugfähigkeit eine belegte Funktion haben."
+      ]
+    },
+    "transfer": {
+      "prompt": "Jemand nennt jeden flugunfähigen Vogel einen Strauß. Welchen Gegenbeleg findest du im vorhandenen Bestand?",
+      "answers": [
+        "Verschiedene Merkmale müssen zur Einordnung gemeinsam betrachtet werden.",
+        "Eine einzelne Fortbewegungsart bestimmt die ganze Verwandtschaft."
+      ],
+      "correct": 0,
+      "hint": "Im Bestand gibt es einen weiteren flugunfähigen Vogel aus einem ganz anderen Lebensraum.",
+      "feedback": [
+        "Eine gemeinsame Eigenschaft macht verschiedene Arten nicht identisch.",
+        "Die Aussage geht über die Belege hinaus. Eine gemeinsame Eigenschaft macht verschiedene Arten nicht identisch."
+      ]
+    },
+    "sourceUrls": [
+      "https://animals.sandiegozoo.org/animals/ostrich"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Vergleiche Fliegen und Gleichgewichthalten als zwei Tätigkeiten.",
+      "hint": "Frage nach Tätigkeiten und nicht danach, welcher Vogel besser ist."
+    }
+  },
+  {
+    "id": "animal-atlantic-puffin",
+    "goal": "Zwischen Insel und offenem Meer wechseln.",
+    "evidence": [
+      {
+        "label": "Brutküste",
+        "text": "Papageitaucher brüten an Küsten und auf Inseln im Nordatlantik. Sie nutzen unter anderem Erdhöhlen als Nistplätze."
+      },
+      {
+        "label": "Nahrungsraum Meer",
+        "text": "Nahrung suchen sie schwimmend unter Wasser. Außerhalb der Brutzeit verbringen sie viel Zeit weit draußen auf dem Meer."
+      }
+    ],
+    "reason": {
+      "prompt": "Warum reicht eine Karte der Brutplätze nicht zur vollständigen Beschreibung ihres Lebensraums?",
+      "answers": [
+        "Eine Brutkarte zeigt nicht jeden Aufenthalt zu jeder Jahreszeit.",
+        "Die Brutkarte zeigt immer den Aufenthaltsort aller Tiere im ganzen Jahr."
+      ],
+      "correct": 0,
+      "hint": "Frage, wo die Tiere außerhalb der Brutzeit sind.",
+      "feedback": [
+        "Eine Brutplatzkarte zeigt nicht automatisch alle jahreszeitlichen Aufenthaltsorte.",
+        "Die Aussage geht über die Belege hinaus. Eine Brutplatzkarte zeigt nicht automatisch alle jahreszeitlichen Aufenthaltsorte."
+      ]
+    },
+    "transfer": {
+      "prompt": "Zwei Zählungen fanden zu verschiedenen Jahreszeiten statt. Was musst du prüfen, bevor du aus der Differenz einen Bestandsrückgang ableitest?",
+      "answers": [
+        "Jede Differenz zwischen zwei beliebigen Zählungen beweist einen Bestandsrückgang.",
+        "Zeit, Ort und Methode beeinflussen die Vergleichbarkeit von Zählungen."
+      ],
+      "correct": 1,
+      "hint": "Vergleiche Zeit, Ort, Suchmethode und Aufwand der beiden Zählungen.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Jahreszeit und Aufenthaltsort können die Beobachtbarkeit verändern.",
+        "Jahreszeit und Aufenthaltsort können die Beobachtbarkeit verändern."
+      ]
+    },
+    "sourceUrls": [
+      "https://www.audubon.org/field-guide/bird/atlantic-puffin"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Ordne Nisten und Nahrungssuche den beschriebenen Orten zu.",
+      "hint": "Nisten gehört zur Brutzeit; Nahrungssuche ist eine andere Tätigkeit."
+    }
+  },
+  {
+    "id": "animal-common-chameleon",
+    "goal": "Farbwechsel ist keine beliebige Verkleidung.",
+    "evidence": [
+      {
+        "label": "Greifen und Schauen",
+        "text": "Das Europäische Chamäleon greift mit Füßen und Schwanz an Zweigen. Seine Augen können sich unabhängig bewegen."
+      },
+      {
+        "label": "Farbänderung",
+        "text": "Seine Färbung kann sich verändern. Temperatur und innerer Zustand spielen dabei eine Rolle; es kopiert nicht beliebige Hintergrundmuster."
+      }
+    ],
+    "reason": {
+      "prompt": "Warum ist „Es kann jedes Muster nachmachen“ keine passende Erklärung?",
+      "answers": [
+        "Jede denkbare Tapete lässt sich von der Haut exakt nachbilden.",
+        "Begrenzte Farbänderung ist keine beliebige Musterkopie."
+      ],
+      "correct": 1,
+      "hint": "Unterscheide eine begrenzte Farbänderung von beliebigen Fotomustern.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Die Quelle beschreibt Farbänderungen unter bestimmten Bedingungen, keine unbegrenzte Musterkopie.",
+        "Die Quelle beschreibt Farbänderungen unter bestimmten Bedingungen, keine unbegrenzte Musterkopie."
+      ]
+    },
+    "transfer": {
+      "prompt": "Hintergrund und Temperatur ändern sich gleichzeitig. Wie würdest du gedanklich trennen, welcher Faktor einen beobachteten Farbwechsel erklärt?",
+      "answers": [
+        "Ein Gedankenvergleich ändert jeweils nur eine Bedingung.",
+        "Wenn Hintergrund und Temperatur zugleich wechseln, ist die Ursache bereits bewiesen."
+      ],
+      "correct": 0,
+      "hint": "Entwirf einen Gedankenvergleich mit nur einer veränderten Bedingung; kein Versuch am Tier.",
+      "feedback": [
+        "Ein fairer Vergleich verändert nicht alle Bedingungen zugleich.",
+        "Die Aussage geht über die Belege hinaus. Ein fairer Vergleich verändert nicht alle Bedingungen zugleich."
+      ]
+    },
+    "sourceUrls": [
+      "https://animaldiversity.org/accounts/Chamaeleo_chamaeleon/"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Finde Greifen, Schauen und Farbwechsel als verschiedene Fähigkeiten.",
+      "hint": "Ordne Füße, Augen und Haut verschiedenen Tätigkeiten zu."
+    }
+  },
+  {
+    "id": "animal-fire-salamander",
+    "goal": "Wald und Bach gehören zu einer Lebensgeschichte.",
+    "evidence": [
+      {
+        "label": "Waldleben",
+        "text": "Feuersalamander leben in feuchten, strukturreichen Wäldern. Viele mitteleuropäische Weibchen setzen Larven in Gewässern ab."
+      },
+      {
+        "label": "Larven im Wasser",
+        "text": "Die Larven tragen äußere Kiemen. Die Bedingungen im Wald und im Larvengewässer sind deshalb beide wichtig."
+      }
+    ],
+    "reason": {
+      "prompt": "Warum hilft nur ein guter Wald nicht, wenn das zugehörige Larvengewässer zerstört wird?",
+      "answers": [
+        "Verschiedene Entwicklungsabschnitte brauchen geeignete verbundene Lebensräume.",
+        "Ein guter Wald kann jedes zerstörte Larvengewässer vollständig ersetzen."
+      ],
+      "correct": 0,
+      "hint": "Verfolge den Weg zwischen den Entwicklungsabschnitten.",
+      "feedback": [
+        "Eine Art kann für verschiedene Entwicklungsabschnitte unterschiedliche geeignete Orte benötigen.",
+        "Die Aussage geht über die Belege hinaus. Eine Art kann für verschiedene Entwicklungsabschnitte unterschiedliche geeignete Orte benötigen."
+      ]
+    },
+    "transfer": {
+      "prompt": "Darf die Beschreibung einer mitteleuropäischen Population ungeprüft für alle Unterarten weltweit gelten?",
+      "answers": [
+        "Eine regionale Beschreibung gilt ohne weitere Prüfung für alle Unterarten weltweit.",
+        "Region und Fortpflanzungsform müssen zum Beleg passen."
+      ],
+      "correct": 1,
+      "hint": "Achte auf Region und Unterart im Geltungsbereich der Quelle.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Region und Entwicklungsform müssen zum jeweiligen Beleg passen.",
+        "Region und Entwicklungsform müssen zum jeweiligen Beleg passen."
+      ]
+    },
+    "sourceUrls": [
+      "https://nabu-lfa-feldherpetologie.jimdoweb.com/tiergruppen/amphibien/feuersalamander/",
+      "https://www.nabu-euskirchen.de/2026/06/03/feuersalamander-ein-portrait/"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Zeichne Wald und Larvengewässer als zwei verbundene Lebensorte.",
+      "hint": "Beginne bei den Larven und zeichne erst danach den Lebensraum der erwachsenen Tiere."
+    }
+  },
+  {
+    "id": "animal-common-frog",
+    "goal": "Ein Tier braucht im Laufe des Lebens verschiedene Orte.",
+    "evidence": [
+      {
+        "label": "Entwicklung im Wasser",
+        "text": "Grasfrösche laichen in Gewässern. Aus dem Laich entwickeln sich Kaulquappen."
+      },
+      {
+        "label": "Leben an Land",
+        "text": "Erwachsene Tiere verbringen viel Zeit auch an Land, etwa in Gärten und Wäldern. Nicht jeder Frosch ist ständig im Wasser."
+      }
+    ],
+    "reason": {
+      "prompt": "Warum muss man bei der Lebensraumbeschreibung nach dem Entwicklungsabschnitt fragen?",
+      "answers": [
+        "Alle Entwicklungsabschnitte verbringen ihre gesamte Zeit am gleichen Ort.",
+        "Der genutzte Lebensraum kann sich im Lebenslauf ändern."
+      ],
+      "correct": 1,
+      "hint": "Überlege, ob alle Entwicklungsabschnitte dieselben Bedingungen brauchen.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Laich und Kaulquappen sind an Gewässer gebunden; die Lebensraumnutzung ändert sich später.",
+        "Laich und Kaulquappen sind an Gewässer gebunden; die Lebensraumnutzung ändert sich später."
+      ]
+    },
+    "transfer": {
+      "prompt": "In einem Teich fehlen an einem Tag erwachsene Frösche. Beweist das, dass die Umgebung für die Art ungeeignet ist?",
+      "answers": [
+        "Zeit, Lebensstadium und Aufenthalt an Land müssen mitgeprüft werden.",
+        "Ein Teich ohne erwachsenen Frosch an einem Tag beweist einen ungeeigneten Lebensraum."
+      ],
+      "correct": 0,
+      "hint": "Frage nach Entwicklungsstadium, Jahreszeit und möglichem Aufenthalt außerhalb des Teichs.",
+      "feedback": [
+        "Ein Ort und ein Zeitpunkt erfassen nicht den ganzen Lebenszyklus.",
+        "Die Aussage geht über die Belege hinaus. Ein Ort und ein Zeitpunkt erfassen nicht den ganzen Lebenszyklus."
+      ]
+    },
+    "sourceUrls": [
+      "https://www.wildlifetrusts.org/wildlife-explorer/amphibians/common-frog"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Lege eine einfache Reihenfolge aus Laich, Kaulquappe und erwachsenem Tier.",
+      "hint": "Nutze die Namen der Entwicklungsabschnitte als Zeitanker."
+    }
+  },
+  {
+    "id": "animal-eastern-clown-anemonefish",
+    "goal": "Ein ähnliches Muster kann verschiedene Arten verdecken.",
+    "evidence": [
+      {
+        "label": "Fisch und Seeanemone",
+        "text": "Der Echte Clownfisch lebt zwischen den Tentakeln bestimmter Seeanemonen. Er nimmt unter anderem Algen und Zooplankton auf."
+      },
+      {
+        "label": "Genaue Art",
+        "text": "Amphiprion percula und der ähnliche Amphiprion ocellaris sind verschiedene Arten. Nicht jedes orange-weiß gestreifte Tier darf automatisch gleich bestimmt werden."
+      }
+    ],
+    "reason": {
+      "prompt": "Warum hilft eine genaue Artbezeichnung bei einer Frage nach der Verbreitung?",
+      "answers": [
+        "Eine Verbreitungsangabe muss zur genau beschriebenen Art passen.",
+        "Alle orange-weißen Fische haben zwangsläufig dieselbe Verbreitung."
+      ],
+      "correct": 0,
+      "hint": "Prüfe, welche der ähnlich benannten Arten die Quelle tatsächlich beschreibt.",
+      "feedback": [
+        "Eine artspezifische Verbreitung darf nicht auf alle ähnlichen Tiere übertragen werden.",
+        "Die Aussage geht über die Belege hinaus. Eine artspezifische Verbreitung darf nicht auf alle ähnlichen Tiere übertragen werden."
+      ]
+    },
+    "transfer": {
+      "prompt": "Ein Foto trägt nur die Aufschrift „Clownfisch“. Darf daraus die Verbreitung einer ganz bestimmten Art abgeleitet werden?",
+      "answers": [
+        "Die Beschriftung Clownfisch beweist bei jedem Foto genau Amphiprion percula.",
+        "Ein Gruppenname und ein Foto allein sichern die genaue Art nicht ab."
+      ],
+      "correct": 1,
+      "hint": "Eine Gruppenbeschriftung ersetzt keinen vollständigen Artbeleg.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Gruppenname, Foto und Artbeleg müssen zusammenpassen.",
+        "Gruppenname, Foto und Artbeleg müssen zusammenpassen."
+      ]
+    },
+    "sourceUrls": [
+      "https://australian.museum/learn/animals/fishes/eastern-clown-anemonefish-amphiprion-percula/"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Unterscheide den Fisch und seine Seeanemone als zwei Tiere.",
+      "hint": "Die Seeanemone ist keine Pflanze und kein Körperteil des Fisches."
+    }
+  },
+  {
+    "id": "animal-european-eel",
+    "goal": "Eine Wanderung verbindet Flüsse und Ozean.",
+    "evidence": [
+      {
+        "label": "Verbundenes Wasser",
+        "text": "Die Lebensgeschichte des Europäischen Aals verbindet europäische Gewässer mit dem Atlantik. Junge Entwicklungsstadien gelangen mit Meeresströmungen an Küsten."
+      },
+      {
+        "label": "Wanderhindernisse",
+        "text": "Barrieren in Flüssen können Wanderwege unterbrechen. Eine offene Verbindung gehört deshalb zur Betrachtung des Lebensraums."
+      }
+    ],
+    "reason": {
+      "prompt": "Erkläre, warum ein Hindernis an einer Stelle für einen Wanderfisch bedeutsam sein kann.",
+      "answers": [
+        "Ein Hindernis an einer Stelle hat grundsätzlich keine Bedeutung für den weiteren Weg.",
+        "Ein Hindernis kann den Zugang zu einem weiteren Lebensraum verhindern."
+      ],
+      "correct": 1,
+      "hint": "Verfolge gedanklich den zusammenhängenden Weg vor und nach dem Hindernis.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Ein unterbrochener Weg kann den Zugang zu einem weiteren Lebensraum verhindern.",
+        "Ein unterbrochener Weg kann den Zugang zu einem weiteren Lebensraum verhindern."
+      ]
+    },
+    "transfer": {
+      "prompt": "Wie unterscheiden sich ein beobachteter Larvenfund und eine direkt beobachtete Eiablage als Forschungsbeleg?",
+      "answers": [
+        "Ein Larvenfund und eine direkt beobachtete Eiablage sind verschiedene Belegarten.",
+        "Ein Larvenfund ist automatisch eine direkt beobachtete Eiablage."
+      ],
+      "correct": 0,
+      "hint": "Unterscheide direktes Beobachten von einer Schlussfolgerung aus Fundorten und Entwicklungsstadien.",
+      "feedback": [
+        "Beobachtung und daraus abgeleitete Erklärung müssen kenntlich bleiben.",
+        "Die Aussage geht über die Belege hinaus. Beobachtung und daraus abgeleitete Erklärung müssen kenntlich bleiben."
+      ]
+    },
+    "sourceUrls": [
+      "https://www.wildlifetrusts.org/national-marine-week/incredible-journeys",
+      "https://www.wwt.org.uk/discover-wetlands/wetland-wildlife/species-factfiles/european-eel",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9562336/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9755116/"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Verbinde Fluss, Küste und Meer auf einer eigenen Übersicht.",
+      "hint": "Zeige Verbindungen statt einer einzigen festen Wohnadresse."
+    }
+  },
+  {
+    "id": "animal-monarch-butterfly",
+    "goal": "Eine Art kann verschiedene Wanderstrategien besitzen.",
+    "evidence": [
+      {
+        "label": "Entwicklungsstadien",
+        "text": "Viele Monarchfalter in Nordamerika wandern. Es gibt aber auch Populationen, die nicht dieselbe lange Wanderung unternehmen."
+      },
+      {
+        "label": "Unterschiedliche Populationen",
+        "text": "Die Raupen nehmen mit Seidenpflanzen bestimmte Abwehrstoffe auf. Ihre auffällige Färbung gehört zur Beziehung zwischen Nahrung und Schutz."
+      }
+    ],
+    "reason": {
+      "prompt": "Warum ist „Jeder Monarch fliegt dieselbe Strecke“ zu pauschal?",
+      "answers": [
+        "Die Quelle unterscheidet ausdrücklich verschiedene Populationen.",
+        "Eine bekannte Wanderroute gilt unverändert für jedes Tier der Art."
+      ],
+      "correct": 0,
+      "hint": "Die Quelle unterscheidet ausdrücklich verschiedene Populationen.",
+      "feedback": [
+        "Eine verbreitete Wanderstrategie gilt nicht automatisch für jedes Tier der Art.",
+        "Die Aussage geht über die Belege hinaus. Eine verbreitete Wanderstrategie gilt nicht automatisch für jedes Tier der Art."
+      ]
+    },
+    "transfer": {
+      "prompt": "Wenn Tiere einer Population wandern, darf diese Beobachtung auf alle Populationen weltweit übertragen werden?",
+      "answers": [
+        "Ein Artname beweist dieselbe Wanderstrategie sämtlicher Populationen.",
+        "Das Verhalten einer Population gilt nicht automatisch für alle weltweit."
+      ],
+      "correct": 1,
+      "hint": "Prüfe, für welche Population der beobachtete Weg tatsächlich belegt wurde.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Artname allein legt nicht jedes Verhalten aller Populationen fest.",
+        "Artname allein legt nicht jedes Verhalten aller Populationen fest."
+      ]
+    },
+    "sourceUrls": [
+      "https://www.fws.gov/species/monarch-danaus-plexippus"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Unterscheide Raupe und Falter als zwei Entwicklungsstadien.",
+      "hint": "Vergleiche Entwicklungsform und Wanderverhalten getrennt."
+    }
+  },
+  {
+    "id": "animal-garden-snail",
+    "goal": "Ein vertrauter Gartenbewohner hat mehrere Sinne.",
+    "evidence": [
+      {
+        "label": "Beobachten ohne Anfassen",
+        "text": "Cornu aspersum ist eine Landschneckenart. Sie wird besonders bei feuchtem Wetter und nachts beobachtet."
+      },
+      {
+        "label": "Sinne und Umgebung",
+        "text": "Schnecken nutzen unter anderem Berührung und chemische Signale zur Orientierung. Sie erleben ihre Umgebung nicht wie ein Mensch."
+      }
+    ],
+    "reason": {
+      "prompt": "Warum könnten Zeitpunkt und Feuchtigkeit beeinflussen, ob du Schnecken siehst?",
+      "answers": [
+        "Eine Schnecke ist zu jeder Zeit unter allen Wetterbedingungen gleich gut sichtbar.",
+        "Feuchtigkeit und Nachtaktivität beeinflussen die Sichtbarkeit."
+      ],
+      "correct": 1,
+      "hint": "Trenne Aktivität und Sichtbarkeit von der gesamten Tierzahl.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Feuchtigkeit und Nachtaktivität können beeinflussen, wann Tiere sichtbar werden.",
+        "Feuchtigkeit und Nachtaktivität können beeinflussen, wann Tiere sichtbar werden."
+      ]
+    },
+    "transfer": {
+      "prompt": "Du findest nach Regen mehr Schnecken als gestern. Ist damit bewiesen, dass über Nacht mehr Tiere entstanden sind?",
+      "answers": [
+        "Mehr sichtbare Tiere beweisen nicht automatisch einen größeren Bestand.",
+        "Nach Regen sichtbare Schnecken müssen alle in der vergangenen Nacht neu entstanden sein."
+      ],
+      "correct": 0,
+      "hint": "Vergleiche Entstehen neuer Tiere mit dem Sichtbarwerden schon vorhandener Tiere.",
+      "feedback": [
+        "Mehr sichtbare Tiere bedeuten nicht automatisch einen gewachsenen Bestand.",
+        "Die Aussage geht über die Belege hinaus. Mehr sichtbare Tiere bedeuten nicht automatisch einen gewachsenen Bestand."
+      ]
+    },
+    "sourceUrls": [
+      "https://www.nhm.ac.uk/discover/snails-and-slugs.html",
+      "https://conchsoc.org/aids_to_id/helasp.php"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Beschreibe eine Schneckenbeobachtung, ohne das Tier zu berühren.",
+      "hint": "Beobachte aus Abstand und benenne nur Ort, Wetter und sichtbare Bewegung."
+    }
+  },
+  {
+    "id": "animal-european-lobster",
+    "goal": "Wachsen trotz harter Außenhülle.",
+    "evidence": [
+      {
+        "label": "Scheren",
+        "text": "Der Europäische Hummer ist ein Krebstier. Seine beiden großen Scheren können verschiedene Aufgaben bei der Nahrungsaufnahme erfüllen."
+      },
+      {
+        "label": "Außenhülle und Wachstum",
+        "text": "Zum Wachsen muss er seine feste Außenhülle abstreifen. Eine Häutung ist kein Wechsel zu einer anderen Tierart."
+      }
+    ],
+    "reason": {
+      "prompt": "Warum kann ein Hummer nicht einfach in einer unverändert engen Hülle weiterwachsen?",
+      "answers": [
+        "Eine feste enge Außenhülle wird für weiteres Wachstum abgestreift.",
+        "Die gleiche unverändert enge Hülle kann unbegrenzt mitwachsen."
+      ],
+      "correct": 0,
+      "hint": "Stelle dir eine unverändert enge äußere Begrenzung vor.",
+      "feedback": [
+        "Häutung ermöglicht Größenwachstum trotz fester Außenhülle.",
+        "Die Aussage geht über die Belege hinaus. Häutung ermöglicht Größenwachstum trotz fester Außenhülle."
+      ]
+    },
+    "transfer": {
+      "prompt": "Eine leere Hülle liegt am Boden. Ist das ein sicherer Beweis, dass ein Hummer gestorben ist? Welche andere Erklärung gibt es?",
+      "answers": [
+        "Jede leere Hülle beweist den Tod des Tiers.",
+        "Eine leere Hülle kann von einer Häutung stammen."
+      ],
+      "correct": 1,
+      "hint": "Suche eine Erklärung, bei der das Tier die Hülle verlassen hat und weiterlebt.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Eine zurückgelassene Struktur kann mehrere Entstehungsursachen haben.",
+        "Eine zurückgelassene Struktur kann mehrere Entstehungsursachen haben."
+      ]
+    },
+    "sourceUrls": [
+      "https://www.wildlifetrusts.org/wildlife-explorer/marine/crustaceans/lobster"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Unterscheide Greifwerkzeug und Außenhülle.",
+      "hint": "Eine Schere greift; die Außenhülle umschließt den Körper."
+    }
+  },
+  {
+    "id": "animal-common-cuttlefish",
+    "goal": "Tintenfisch ist kein einzelner Körperbau.",
+    "evidence": [
+      {
+        "label": "Körperbau",
+        "text": "Die Gewöhnliche Sepia besitzt acht Arme und zusätzlich zwei längere Fangtentakel. Ihr breiter Mantel trägt seitliche Flossen. Damit unterscheidet sie sich vom Gewöhnlichen Kraken."
+      },
+      {
+        "label": "Veränderliches Muster",
+        "text": "Ihre Färbung und ihr Muster können sich rasch verändern. Das hilft unter anderem bei Tarnung und Verständigung. Ein Foto hält nur einen Augenblick fest und zeigt nicht alle möglichen Zustände."
+      }
+    ],
+    "reason": {
+      "prompt": "Warum kann eine Aufnahme nicht alle möglichen Muster desselben Tiers zeigen?",
+      "answers": [
+        "Ein Foto zeigt automatisch alle möglichen Muster desselben Tiers.",
+        "Ein Foto zeigt nur einen Zeitpunkt des veränderlichen Musters."
+      ],
+      "correct": 1,
+      "hint": "Ein Foto hält keinen vollständigen zeitlichen Farbwechsel fest.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Ein einzelner Aufnahmezeitpunkt erfasst nur einen Zustand eines veränderlichen Musters.",
+        "Ein einzelner Aufnahmezeitpunkt erfasst nur einen Zustand eines veränderlichen Musters."
+      ]
+    },
+    "transfer": {
+      "prompt": "Zwei Tiere sehen auf verschiedenen Fotos verschieden aus. Welche zusätzlichen Angaben brauchst du, bevor du zwei Arten behauptest?",
+      "answers": [
+        "Für die Artfrage zählen weitere Merkmale und der Beobachtungskontext.",
+        "Verschiedene Farben auf zwei Fotos beweisen immer verschiedene Arten."
+      ],
+      "correct": 0,
+      "hint": "Du brauchst etwa Artbestimmung, Aufnahmezeit und Beobachtungsverlauf.",
+      "feedback": [
+        "Veränderliches Aussehen und unterschiedliche Art sind keine gleichbedeutenden Aussagen.",
+        "Die Aussage geht über die Belege hinaus. Veränderliches Aussehen und unterschiedliche Art sind keine gleichbedeutenden Aussagen."
+      ]
+    },
+    "sourceUrls": [
+      "https://www.wildlifetrusts.org/wildlife-explorer/marine/squids-octopuses-and-cuttlefish/common-cuttlefish",
+      "https://www.marlin.ac.uk/species/detail/1098"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Vergleiche die Karte mit dem Gewöhnlichen Kraken: Welche Beschreibung gehört zu welcher Art?",
+      "hint": "Prüfe Artname und beschriebene Körpermerkmale zusammen."
+    }
+  },
+  {
+    "id": "animal-short-snouted-seahorse",
+    "goal": "Ein Greifschwanz kann im Wasser Halt geben.",
+    "evidence": [
+      {
+        "label": "Festhalten",
+        "text": "Das Kurzschnäuzige Seepferdchen ist ein Fisch. Mit dem Greifschwanz kann es sich an Pflanzen oder anderen geeigneten Strukturen festhalten."
+      },
+      {
+        "label": "Nahrung und Verwandtschaft",
+        "text": "Seine Nahrung besteht aus kleinen Beutetieren. Der Name „Seepferdchen“ bedeutet keine Verwandtschaft zu Pferden."
+      }
+    ],
+    "reason": {
+      "prompt": "Warum ist eine genaue Beschreibung des Lebensraums hilfreicher als nur das Wort Meer?",
+      "answers": [
+        "Haltestrukturen machen die Beschreibung des Lebensraums genauer.",
+        "Die Angabe Meer erklärt bereits alle Bedingungen eines Lebensraums."
+      ],
+      "correct": 0,
+      "hint": "Suche nach Strukturen und Bedingungen statt nur einem großen Raumbegriff.",
+      "feedback": [
+        "Pflanzen und andere geeignete Haltestrukturen beschreiben einen konkreteren Lebensraum.",
+        "Die Aussage geht über die Belege hinaus. Pflanzen und andere geeignete Haltestrukturen beschreiben einen konkreteren Lebensraum."
+      ]
+    },
+    "transfer": {
+      "prompt": "Eine ungewöhnliche Behauptung steht auf einer Fachwebseite. Welche zusätzliche Prüfung ist nötig, bevor du sie als gesicherte Erklärung übernimmst?",
+      "answers": [
+        "Jede Aussage auf einer fachnahen Webseite darf ungeprüft als gesichert gelten.",
+        "Eine unklare Behauptung braucht einen passenden zusätzlichen Fachbeleg."
+      ],
+      "correct": 1,
+      "hint": "Frage nach einem passenden unabhängigen Fachbeleg, nicht nur nach dem Namen der Webseite.",
+      "feedback": [
+        "Die Aussage geht über die Belege hinaus. Auch fachnahe Webseiten benötigen eine Aussagenprüfung; unklare Behauptungen bleiben gesperrt.",
+        "Auch fachnahe Webseiten benötigen eine Aussagenprüfung; unklare Behauptungen bleiben gesperrt."
+      ]
+    },
+    "sourceUrls": [
+      "https://www.wildlifetrusts.org/wildlife-explorer/marine/fish-including-sharks-skates-and-rays/short-snouted-seahorse",
+      "https://www.marlin.ac.uk/species/detail/1788"
+    ],
+    "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+    "observation": {
+      "task": "Vergleiche Festhalten und freies Schwimmen als zwei Tätigkeiten.",
+      "hint": "Vergleiche den Nutzen eines Haltepunkts mit der Fortbewegung."
+    }
   }
 ]

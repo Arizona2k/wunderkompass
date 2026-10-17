@@ -1,0 +1,8 @@
+/* Quiet original field studies: HTML labels reflow without scaling SVG text. */
+.animal-illustration{margin:0;min-width:0;max-width:100%;overflow-wrap:anywhere}
+.animal-illustration img{display:block;width:100%;height:auto;max-height:23rem;object-fit:contain;border-radius:1rem;background:#edf2ee}
+.animal-illustration-labels{display:flex;flex-wrap:wrap;gap:.65rem 1.1rem;margin-block:1rem;font-size:1rem;line-height:1.6;color:#245d70}
+.animal-illustration-labels span{min-width:0;border-block-end:1px solid #c3d3ce;padding-block:.25rem}
+.animal-illustration figcaption{font-size:1rem;line-height:1.6;color:#425c62}
+.large-reading .animal-illustration-labels,.large-reading .animal-illustration figcaption{font-size:1.15rem}
+.animal-illustration.compact img{max-height:12rem}

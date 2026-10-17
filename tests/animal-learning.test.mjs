@@ -5,14 +5,15 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import DATA from '../app/animal-inquiries.json' with {type:'json'};
 import catalog from '../app/world-catalog.json' with {type:'json'};
+import expansion from '../content/animal-expansion-review.json' with {type:'json'};
 const baseline=JSON.parse(fs.readFileSync('content/animal-editorial-review.json','utf8')).entries;
 import {createHash} from 'node:crypto';
 import {createSave,restoreSave} from '../app/progress-storage.ts';
 
 test('all24 original animal identities/answers remain unchanged and every new evidence quote is present in its own article',()=>{
- const animals=catalog.filter(t=>t.category==='animals');assert.equal(DATA.entries.length,24);assert.equal(new Set(DATA.entries.map(e=>e.id)).size,24);assert.deepEqual(new Set(DATA.entries.map(e=>e.id)),new Set(animals.map(t=>t.id)));
- for(const t of animals){const old=baseline.find(e=>e.id===t.id),entry=DATA.entries.find(e=>e.id===t.id);assert.ok(old,t.id+' original identity');assert.deepEqual(entry.evidence.map(e=>e.text),t.paragraphs);assert.deepEqual(entry.sourceUrls,t.sources.map(s=>s.url));assert.equal(createHash('sha256').update(JSON.stringify(entry)).digest('hex'),old.teachingContentSHA256,t.id+' individually versioned teaching content');for(const task of [entry.reason,entry.transfer]){assert.equal(task.answers.length,2);assert.equal(new Set(task.answers).size,2);assert.ok(task.correct===0||task.correct===1);assert.equal(task.feedback.length,2);assert.ok(task.feedback.every(text=>text.length>30));assert.ok(task.hint.length>25);}}
- assert.equal(new Set(DATA.entries.flatMap(e=>[e.reason.prompt,e.transfer.prompt])).size,48,'individual reasoning instead of one generic question');
+ const animals=catalog.filter(t=>t.category==='animals');assert.equal(animals.length,48);assert.equal(DATA.entries.length,48);assert.equal(new Set(DATA.entries.map(e=>e.id)).size,48);assert.equal(baseline.length,24);assert.deepEqual(new Set(DATA.entries.map(e=>e.id)),new Set(animals.map(t=>t.id)));
+ for(const t of animals){const old=baseline.find(e=>e.id===t.id),added=expansion.entries.find(e=>e.id===t.id),entry=DATA.entries.find(e=>e.id===t.id);assert.ok(old||added,t.id+' original or individually reviewed new identity');assert.deepEqual(entry.evidence.map(e=>e.text),t.paragraphs);assert.deepEqual(entry.sourceUrls,t.sources.map(s=>s.url));assert.equal(createHash('sha256').update(JSON.stringify(entry)).digest('hex'),old?.teachingContentSHA256??added.runtimeTeachingContentSHA256,t.id+' individually versioned teaching content');for(const task of [entry.reason,entry.transfer]){assert.equal(task.answers.length,2);assert.equal(new Set(task.answers).size,2);assert.ok(task.correct===0||task.correct===1);assert.equal(task.feedback.length,2);assert.ok(task.feedback.every(text=>text.length>30));assert.ok(task.hint.length>25);}}
+ assert.equal(new Set(DATA.entries.flatMap(e=>[e.reason.prompt,e.transfer.prompt])).size,96,'individual reasoning instead of one generic question');
 });
 
 test('existing schema3 backup keeps every old topic/game field together with the optional workshop state',()=>{

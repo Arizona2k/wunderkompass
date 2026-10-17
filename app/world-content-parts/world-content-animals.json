@@ -546,7 +546,8 @@
     "related": [
       "animal-african-savanna-elephant",
       "animal-honey-bee",
-      "animal-red-kangaroo"
+      "animal-red-kangaroo",
+      "animal-okapi"
     ],
     "sources": [
       {
@@ -798,7 +799,8 @@
     "related": [
       "animal-african-savanna-elephant",
       "animal-honey-bee",
-      "animal-bornean-orangutan"
+      "animal-bornean-orangutan",
+      "animal-ring-tailed-lemur"
     ],
     "sources": [
       {
@@ -1039,7 +1041,8 @@
     ],
     "related": [
       "animal-emperor-penguin",
-      "animal-orca"
+      "animal-orca",
+      "animal-walrus"
     ],
     "sources": [
       {
@@ -1163,7 +1166,9 @@
       "animal-african-savanna-elephant",
       "animal-honey-bee",
       "animal-polar-bear",
-      "animal-white-tailed-eagle"
+      "animal-white-tailed-eagle",
+      "animal-ostrich",
+      "animal-atlantic-puffin"
     ],
     "sources": [
       {
@@ -1669,7 +1674,9 @@
       "animal-african-savanna-elephant",
       "animal-honey-bee",
       "science-coral-reef",
-      "animal-garden-cross-spider"
+      "animal-garden-cross-spider",
+      "animal-european-lobster",
+      "animal-common-cuttlefish"
     ],
     "sources": [
       {
@@ -1919,7 +1926,8 @@
     ],
     "related": [
       "animal-koala",
-      "animal-giraffe"
+      "animal-giraffe",
+      "animal-platypus"
     ],
     "sources": [
       {
@@ -2286,7 +2294,9 @@
     "related": [
       "animal-african-savanna-elephant",
       "science-pollination",
-      "animal-garden-cross-spider"
+      "animal-garden-cross-spider",
+      "animal-meerkat",
+      "animal-monarch-butterfly"
     ],
     "sources": [
       {
@@ -2414,7 +2424,8 @@
     "related": [
       "animal-african-savanna-elephant",
       "animal-honey-bee",
-      "animal-whale-shark"
+      "animal-whale-shark",
+      "animal-fire-salamander"
     ],
     "sources": [
       {
@@ -2830,7 +2841,8 @@
     "related": [
       "science-flight",
       "science-foodweb",
-      "animal-emperor-penguin"
+      "animal-emperor-penguin",
+      "animal-barn-owl"
     ],
     "sources": [
       {
@@ -2887,5 +2899,2475 @@
       }
     },
     "sourceNote": "Größen sind typische Bereiche mit genannter Messrichtung, keine Rekordmaße. Schutzangaben geprüft am 9. Oktober 2026; regionale und weltweite Bewertungen unterscheiden sich."
+  },
+  {
+    "id": "animal-platypus",
+    "category": "animals",
+    "title": "Schnabeltier",
+    "intro": "Eier und Milch passen zusammen.",
+    "paragraphs": [
+      "Das Schnabeltier legt Eier. Nach dem Schlüpfen versorgt die Mutter ihre Jungen mit Milch. Es gehört zu den Säugetieren.",
+      "Im weichen Schnabel sitzen Sinnesrezeptoren. Sie helfen ihm, unter Wasser Beutetiere in seiner Nähe zu finden."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Säugetiere"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Flüsse und Seen."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Kleine Wassertiere."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Etwa 37–63 cm; die Quellenbereiche unterscheiden Weibchen und Männchen."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Gewässer sauber halten; weggeworfene Schnüre und Fangnetze können Schnabeltiere gefährden."
+      }
+    ],
+    "more": [
+      "Ordne Eierlegen und Milchgeben der richtigen Aussage zu: Was erfährst du über die Fortpflanzung?",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Der Schnabel hilft bei der Suche nach Beute durch Sinnesinformationen.",
+    "locations": [
+      {
+        "label": "Südostaustralien · Beispielregion",
+        "lat": -37.5,
+        "lon": 145
+      }
+    ],
+    "related": [
+      "animal-red-kangaroo",
+      "animal-short-beaked-echidna"
+    ],
+    "aliases": [
+      "platypus",
+      "Ornithorhynchus anatinus"
+    ],
+    "sources": [
+      {
+        "label": "San Diego Zoo Wildlife Alliance · Schnabeltier",
+        "url": "https://animals.sandiegozoo.org/animals/platypus"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Säugetiere",
+      "habitat": "Flüsse und Seen",
+      "continent": "Australien",
+      "diet": "Kleine Wassertiere",
+      "skill": "Sinnesrezeptoren im Schnabel",
+      "size": {
+        "min": 37,
+        "max": 63,
+        "unit": "cm",
+        "measurement_de": "Länge von der Schnabel- bis zur Schwanzspitze",
+        "text_de": "Etwa 37–63 cm; die Quellenbereiche unterscheiden Weibchen und Männchen.",
+        "kind": "range"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Gewässer sauber halten; weggeworfene Schnüre und Fangnetze können Schnabeltiere gefährden.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Was passt zum Schnabeltier?",
+      "answers": [
+        "Es legt Eier und gibt seinen Jungen Milch.",
+        "Es ist ein Vogel, weil es Eier legt.",
+        "Seine Jungen werden ausschließlich mit Blättern ernährt."
+      ],
+      "correct": 0,
+      "why": "Eierlegen und Milchgeben beschreiben zwei verschiedene Vorgänge desselben Säugetiers."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Eier und Milch passen zusammen.",
+      "observe": "Ordne Eierlegen und Milchgeben der richtigen Aussage zu: Was erfährst du über die Fortpflanzung?",
+      "benefit": "Eierlegen und Milchgeben beschreiben zwei verschiedene Vorgänge desselben Säugetiers."
+    }
+  },
+  {
+    "id": "animal-short-beaked-echidna",
+    "category": "animals",
+    "title": "Kurzschnabeligel",
+    "intro": "Ein Name verrät noch keine Verwandtschaft.",
+    "paragraphs": [
+      "Der Kurzschnabeligel hat Stacheln, eine lange Schnauze und kräftige Grabkrallen. Er ist ein eierlegendes Säugetier.",
+      "Mit der klebrigen Zunge nimmt er Ameisen und Termiten auf. Die Krallen helfen, ihre Verstecke zu öffnen."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Säugetiere"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Wälder und offene Landschaften."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Ameisen und Termiten."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Etwa 40–55 cm."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Wilde Tiere und ihre Verstecke nicht stören. Diese Karte überträgt keine Gefährdungsangabe anderer Ameisenigelarten."
+      }
+    ],
+    "more": [
+      "Zeige auf einer eigenen Skizze, was Krallen und Zunge jeweils beitragen.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Öffnen und Aufnehmen sind verschiedene Teilaufgaben der Nahrungssuche.",
+    "locations": [
+      {
+        "label": "Südostaustralien · Beispielregion",
+        "lat": -34.2,
+        "lon": 149.1
+      }
+    ],
+    "related": [
+      "animal-platypus"
+    ],
+    "aliases": [
+      "short-beaked-echidna",
+      "Tachyglossus aculeatus"
+    ],
+    "sources": [
+      {
+        "label": "Australian Museum · Kurzschnabeligel",
+        "url": "https://australian.museum/learn/animals/mammals/short-beaked-echidna/"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Säugetiere",
+      "habitat": "Wälder und offene Landschaften",
+      "continent": "Australien",
+      "diet": "Ameisen und Termiten",
+      "skill": "Grabkrallen und klebrige Zunge",
+      "size": {
+        "min": 40,
+        "max": 55,
+        "unit": "cm",
+        "measurement_de": "Längenangabe des Australian Museum",
+        "text_de": "Etwa 40–55 cm.",
+        "kind": "range"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Wilde Tiere und ihre Verstecke nicht stören. Diese Karte überträgt keine Gefährdungsangabe anderer Ameisenigelarten.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Wie nimmt der Kurzschnabeligel seine Nahrung auf?",
+      "answers": [
+        "Er pflückt ausschließlich Blätter.",
+        "Er nimmt kleine Beutetiere mit seiner Zunge auf.",
+        "Er filtert Meerwasser durch Kiemen."
+      ],
+      "correct": 1,
+      "why": "Krallen öffnen Verstecke; die Zunge nimmt Nahrung auf."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Ein Name verrät noch keine Verwandtschaft.",
+      "observe": "Zeige auf einer eigenen Skizze, was Krallen und Zunge jeweils beitragen.",
+      "benefit": "Krallen öffnen Verstecke; die Zunge nimmt Nahrung auf."
+    }
+  },
+  {
+    "id": "animal-okapi",
+    "category": "animals",
+    "title": "Okapi",
+    "intro": "Streifen allein erzählen keine ganze Familiengeschichte.",
+    "paragraphs": [
+      "Das Okapi lebt in Wäldern der Demokratischen Republik Kongo. Mit seiner langen Zunge greift es Blätter.",
+      "Seine Beine tragen helle Streifen. Trotzdem ist es mit der Giraffe verwandt und kein Zebra."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Säugetiere"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Regenwald."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Blätter und andere Pflanzenteile."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Ungefähr 1,5 m hoch; das ist eine Höhenangabe, keine Körperlänge."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Waldverlust und Wilderei bedrohen Okapis. Der Schutz ihres Regenwaldes hilft auch anderen dort lebenden Arten."
+      }
+    ],
+    "more": [
+      "Vergleiche die beschriebenen Beine und das Greifen mit der Zunge.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Fellmuster allein reichen nicht zur Erklärung der Verwandtschaft.",
+    "locations": [
+      {
+        "label": "Ituriwald · Beispielregion",
+        "lat": 1.5,
+        "lon": 28.5
+      }
+    ],
+    "related": [
+      "animal-giraffe"
+    ],
+    "aliases": [
+      "okapi",
+      "Okapia johnstoni"
+    ],
+    "sources": [
+      {
+        "label": "San Diego Zoo Wildlife Alliance · Okapi",
+        "url": "https://animals.sandiegozoo.org/animals/okapi"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Säugetiere",
+      "habitat": "Regenwald",
+      "continent": "Afrika",
+      "diet": "Blätter und andere Pflanzenteile",
+      "skill": "Greifzunge",
+      "size": {
+        "min": 1.5,
+        "max": 1.5,
+        "unit": "m",
+        "measurement_de": "Höhenangabe der Zoo-Artenseite",
+        "text_de": "Ungefähr 1,5 m hoch; das ist eine Höhenangabe, keine Körperlänge.",
+        "kind": "typical"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Waldverlust und Wilderei bedrohen Okapis. Der Schutz ihres Regenwaldes hilft auch anderen dort lebenden Arten.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Mit welchem Tier ist das Okapi nahe verwandt?",
+      "answers": [
+        "Mit dem Zebra, allein wegen der Streifen.",
+        "Mit einem Insekt.",
+        "Mit der Giraffe."
+      ],
+      "correct": 2,
+      "why": "Das Okapi ist mit der Giraffe verwandt. Ähnliche Streifen machen es nicht zum Zebra."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Streifen allein erzählen keine ganze Familiengeschichte.",
+      "observe": "Vergleiche die beschriebenen Beine und das Greifen mit der Zunge.",
+      "benefit": "Streifen betreffen das Aussehen; die Zunge ist am Nahrungserwerb beteiligt."
+    }
+  },
+  {
+    "id": "animal-meerkat",
+    "category": "animals",
+    "title": "Erdmännchen",
+    "intro": "Gemeinsam leben heißt unterschiedliche Aufgaben beobachten.",
+    "paragraphs": [
+      "Erdmännchen gehören zu den Mangusten, nicht zu den Katzen. Sie leben in Gruppen und suchen unter anderem nach kleinen wirbellosen Tieren.",
+      "Während einige nach Nahrung suchen, halten andere Ausschau. Warnrufe können die Gruppe auf Gefahren aufmerksam machen."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Säugetiere"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Trockene offene Landschaften."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Vor allem kleine Tiere."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Etwa 24–29 cm; die Angabe beschreibt nicht die Höhe beim Aufrichten."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Erdmännchen sind Wildtiere. Nicht als Haustiere halten und ihre Baue nicht stören."
+      }
+    ],
+    "more": [
+      "Beschreibe zwei unterschiedliche Tätigkeiten innerhalb einer Gruppe.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Ausschauhalten kann Gefahren anzeigen, während andere mit Nahrungssuche beschäftigt sind.",
+    "locations": [
+      {
+        "label": "Kalahari · Beispielregion",
+        "lat": -26,
+        "lon": 21
+      }
+    ],
+    "related": [
+      "animal-honey-bee"
+    ],
+    "aliases": [
+      "meerkat",
+      "Suricata suricatta"
+    ],
+    "sources": [
+      {
+        "label": "San Diego Zoo Wildlife Alliance · Erdmännchen",
+        "url": "https://animals.sandiegozoo.org/animals/meerkat"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Säugetiere",
+      "habitat": "Trockene offene Landschaften",
+      "continent": "Afrika",
+      "diet": "Vor allem kleine Tiere",
+      "skill": "Ausschauhalten in der Gruppe",
+      "size": {
+        "min": 24,
+        "max": 29,
+        "unit": "cm",
+        "measurement_de": "Körperlänge nach der Zoo-Artenseite",
+        "text_de": "Etwa 24–29 cm; die Angabe beschreibt nicht die Höhe beim Aufrichten.",
+        "kind": "range"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Erdmännchen sind Wildtiere. Nicht als Haustiere halten und ihre Baue nicht stören.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Welche beiden Tätigkeiten können Erdmännchen in einer Gruppe ausüben?",
+      "answers": [
+        "Nahrung suchen und Ausschau halten.",
+        "Alle müssen jederzeit dieselbe Tätigkeit ausüben.",
+        "Nur Pflanzen anbauen und ernten."
+      ],
+      "correct": 0,
+      "why": "Nahrung suchen und Ausschau halten sind zwei verschiedene Tätigkeiten."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Gemeinsam leben heißt unterschiedliche Aufgaben beobachten.",
+      "observe": "Beschreibe zwei unterschiedliche Tätigkeiten innerhalb einer Gruppe.",
+      "benefit": "Nahrung suchen und Ausschau halten sind zwei verschiedene Tätigkeiten."
+    }
+  },
+  {
+    "id": "animal-ring-tailed-lemur",
+    "category": "animals",
+    "title": "Katta",
+    "intro": "Nachrichten können über mehrere Sinne ankommen.",
+    "paragraphs": [
+      "Kattas leben auf Madagaskar. Aufgerichtete Schwänze können der Gruppe beim Zusammenbleiben helfen.",
+      "Duftmarken und Rufe sind weitere Wege ihrer Verständigung. Nicht jede Mitteilung ist sichtbar."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Säugetiere"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Offene Wälder und trockene Landschaften."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Früchte und andere Pflanzenteile."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Der Schwanz kann bis etwa 61 cm lang werden."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Lebensräume auf Madagaskar erhalten und wilde Kattas nicht fangen."
+      }
+    ],
+    "more": [
+      "Finde einen sichtbaren und einen nicht sichtbaren Kommunikationsweg.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Sichtbare Haltung und Duftmarken nutzen unterschiedliche Sinneswege.",
+    "locations": [
+      {
+        "label": "Südwestmadagaskar · Beispielregion",
+        "lat": -23,
+        "lon": 44.5
+      }
+    ],
+    "related": [
+      "animal-western-lowland-gorilla"
+    ],
+    "aliases": [
+      "ring-tailed-lemur",
+      "Lemur catta"
+    ],
+    "sources": [
+      {
+        "label": "Smithsonian National Zoo · Katta",
+        "url": "https://www.nationalzoo.si.edu/animals/ring-tailed-lemur"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Säugetiere",
+      "habitat": "Offene Wälder und trockene Landschaften",
+      "continent": "Afrika",
+      "diet": "Früchte und andere Pflanzenteile",
+      "skill": "Duftmarken und sichtbare Signale",
+      "size": {
+        "min": 61,
+        "max": 61,
+        "unit": "cm",
+        "measurement_de": "Schwanzlänge, nicht Länge des ganzen Tiers",
+        "text_de": "Der Schwanz kann bis etwa 61 cm lang werden.",
+        "kind": "upper-bound"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Lebensräume auf Madagaskar erhalten und wilde Kattas nicht fangen.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Welcher Kommunikationsweg eines Kattas wird gerochen?",
+      "answers": [
+        "Ein aufgerichteter Schwanz.",
+        "Eine Duftmarke.",
+        "Die Farbe des Himmels."
+      ],
+      "correct": 1,
+      "why": "Schwanzhaltung ist sichtbar; Duftmarken werden gerochen."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Nachrichten können über mehrere Sinne ankommen.",
+      "observe": "Finde einen sichtbaren und einen nicht sichtbaren Kommunikationsweg.",
+      "benefit": "Schwanzhaltung ist sichtbar; Duftmarken werden gerochen."
+    }
+  },
+  {
+    "id": "animal-north-american-beaver",
+    "category": "animals",
+    "title": "Nordamerikanischer Biber",
+    "intro": "Bauen kann einen ganzen Lebensraum verändern.",
+    "paragraphs": [
+      "Ein Biberdamm bremst Wasser. Dahinter kann ein Teich entstehen, den auch andere Lebewesen nutzen.",
+      "Die Wohnburg ist ein anderes Bauwerk. Ihr Eingang kann unter Wasser liegen, während die Wohnkammer darüber liegt."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Säugetiere"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Flüsse und Feuchtgebiete."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Pflanzen und Rinde."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Etwa 16–30 kg; ein deutlich höheres Einzelrekordgewicht ist kein typischer Bereich."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Biberteiche können vielen Arten helfen; Überflutungen und betroffene Flächen müssen vor Ort mitbedacht werden."
+      }
+    ],
+    "more": [
+      "Ordne Damm und Wohnburg ihren unterschiedlichen Aufgaben zu.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Langsameres Wasser kann einen Teich und damit andere Lebensbedingungen entstehen lassen.",
+    "locations": [
+      {
+        "label": "Montana · Beispielregion",
+        "lat": 46,
+        "lon": -110
+      }
+    ],
+    "related": [
+      "science-water-cycle"
+    ],
+    "aliases": [
+      "north-american-beaver",
+      "Castor canadensis"
+    ],
+    "sources": [
+      {
+        "label": "Smithsonian National Zoo · Nordamerikanischer Biber",
+        "url": "https://www.nationalzoo.si.edu/animals/beaver"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Säugetiere",
+      "habitat": "Flüsse und Feuchtgebiete",
+      "continent": "Nordamerika",
+      "diet": "Pflanzen und Rinde",
+      "skill": "Dämme bauen",
+      "size": {
+        "min": 16,
+        "max": 30,
+        "unit": "kg",
+        "measurement_de": "Gewicht nordamerikanischer Biber",
+        "text_de": "Etwa 16–30 kg; ein deutlich höheres Einzelrekordgewicht ist kein typischer Bereich.",
+        "kind": "range"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Biberteiche können vielen Arten helfen; Überflutungen und betroffene Flächen müssen vor Ort mitbedacht werden.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Was unterscheidet Biberdamm und Wohnburg?",
+      "answers": [
+        "Beides ist ausschließlich ein Futterlager.",
+        "Der Damm ist immer die Wohnkammer.",
+        "Der Damm bremst Wasser; die Burg dient dem Wohnen."
+      ],
+      "correct": 2,
+      "why": "Der Damm verändert das Wasser; die Wohnburg dient dem Wohnen."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Bauen kann einen ganzen Lebensraum verändern.",
+      "observe": "Ordne Damm und Wohnburg ihren unterschiedlichen Aufgaben zu.",
+      "benefit": "Der Damm verändert das Wasser; die Wohnburg dient dem Wohnen."
+    }
+  },
+  {
+    "id": "animal-walrus",
+    "category": "animals",
+    "title": "Walross",
+    "intro": "Art, Unterart und Schutzregel auseinanderhalten.",
+    "paragraphs": [
+      "Walrosse haben empfindliche Tastborsten am Maul. Damit finden sie unter anderem kleine Beutetiere am Meeresboden; ihre Stoßzähne sind keine Gabeln zum Aufspießen der Nahrung.",
+      "Zum Ruhen nutzen Walrosse Küsten und Meereis. Pazifische Walrosse sind eine Unterart derselben Art. Ein Schutzprogramm für Alaska beschreibt nicht automatisch die ganze weltweite Gefährdung."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Säugetiere"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Arktische Küsten und Meere."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Vor allem wirbellose Bodentiere."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Große Männchen erreichen laut Artenprofil etwa 3,6 m; Weibchen bleiben kleiner."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Verlust von Meereis verändert wichtige Ruheplätze pazifischer Walrosse. US-Rechtsschutz und weltweite Gefährdung sind verschiedene Angaben."
+      }
+    ],
+    "more": [
+      "Unterscheide die Wörter Art und Unterart in den beiden wissenschaftlichen Namen.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Ein Programm in Alaska belegt seinen eigenen Bereich, keine vollständige Weltkarte.",
+    "locations": [
+      {
+        "label": "Beringstraße · Beispielregion",
+        "lat": 66,
+        "lon": -169
+      }
+    ],
+    "related": [
+      "animal-polar-bear"
+    ],
+    "aliases": [
+      "walrus",
+      "Odobenus rosmarus"
+    ],
+    "sources": [
+      {
+        "label": "US Fish & Wildlife Service · Walross",
+        "url": "https://www.fws.gov/program/alaska-marine-mammals-management-office/alaska-walrus-program"
+      },
+      {
+        "label": "OBIS-SEAMAP · Walrus: Artprofil und Körpermaße",
+        "url": "https://seamap.env.duke.edu/species/180639/html"
+      },
+      {
+        "label": "Marine Mammal Commission · Pacific Walrus",
+        "url": "https://www.mmc.gov/priority-topics/species-of-concern/pacific-walrus/"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Säugetiere",
+      "habitat": "Arktische Küsten und Meere",
+      "continent": "Arktis",
+      "diet": "Vor allem wirbellose Bodentiere",
+      "skill": "Tastborsten am Maul",
+      "size": {
+        "min": 3.6,
+        "max": 3.6,
+        "unit": "m",
+        "measurement_de": "Genannte Körperlänge großer Männchen",
+        "text_de": "Große Männchen erreichen laut Artenprofil etwa 3,6 m; Weibchen bleiben kleiner.",
+        "kind": "upper-bound"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Verlust von Meereis verändert wichtige Ruheplätze pazifischer Walrosse. US-Rechtsschutz und weltweite Gefährdung sind verschiedene Angaben.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Womit ertastet ein Walross Nahrung am Meeresboden?",
+      "answers": [
+        "Mit empfindlichen Borsten am Maul.",
+        "Mit Vogelfedern.",
+        "Es muss mit seinen Stoßzähnen jedes Beutetier aufspießen."
+      ],
+      "correct": 0,
+      "why": "Die empfindlichen Borsten liefern Tastinformationen. Die Stoßzähne sind keine Werkzeuge zum Aufspießen der Nahrung."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Art, Unterart und Schutzregel auseinanderhalten.",
+      "observe": "Unterscheide die Wörter Art und Unterart in den beiden wissenschaftlichen Namen.",
+      "benefit": "Odobenus rosmarus ist der Artname; divergens bezeichnet hier die pazifische Unterart."
+    }
+  },
+  {
+    "id": "animal-red-fox",
+    "category": "animals",
+    "title": "Rotfuchs",
+    "intro": "Ein Lebensraum ist mehr als ein einzelner Wald.",
+    "paragraphs": [
+      "Rotfüchse nutzen verschiedene Lebensräume. Dazu gehören Wälder, offene Landschaften und menschliche Siedlungen.",
+      "Rufe und Duftmarken gehören zu ihrer Verständigung. Die sichtbare Fellfarbe allein beschreibt nicht ihr ganzes Verhalten."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Säugetiere"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Wälder, Offenland und Siedlungen."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Verschiedene tierische und pflanzliche Nahrung."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Etwa 45,5–90 cm ohne den Schwanz; die Größen unterscheiden sich zwischen Regionen."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Füchse aus Abstand beobachten und nicht an Fütterung durch Menschen gewöhnen."
+      }
+    ],
+    "more": [
+      "Sortiere die genannten Lebensräume nach eigenen Vergleichsmerkmalen.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Ein Wildtier kann einen Siedlungsraum nutzen, ohne ein Haustier zu sein.",
+    "locations": [
+      {
+        "label": "Mitteleuropa · Beispielregion",
+        "lat": 51,
+        "lon": 10
+      }
+    ],
+    "related": [
+      "animal-hedgehog",
+      "animal-raccoon"
+    ],
+    "aliases": [
+      "red-fox",
+      "Vulpes vulpes"
+    ],
+    "sources": [
+      {
+        "label": "University of Michigan · Animal Diversity Web · Rotfuchs",
+        "url": "https://animaldiversity.org/accounts/Vulpes_vulpes/"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Säugetiere",
+      "habitat": "Wälder, Offenland und Siedlungen",
+      "continent": "Mehrere Kontinente",
+      "diet": "Verschiedene tierische und pflanzliche Nahrung",
+      "skill": "Rufe und Duftmarken",
+      "size": {
+        "min": 45.5,
+        "max": 90,
+        "unit": "cm",
+        "measurement_de": "Kopf-Rumpf-Länge ohne Schwanz",
+        "text_de": "Etwa 45,5–90 cm ohne den Schwanz; die Größen unterscheiden sich zwischen Regionen.",
+        "kind": "range"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Füchse aus Abstand beobachten und nicht an Fütterung durch Menschen gewöhnen.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Wo können Rotfüchse leben?",
+      "answers": [
+        "Ausschließlich in dichtem Wald.",
+        "Unter anderem in Wäldern, offenem Land und Siedlungen.",
+        "Nur im offenen Meer."
+      ],
+      "correct": 1,
+      "why": "Rotfüchse nutzen Wälder, offene Landschaften und auch Siedlungen. Der Aufenthalt bei Menschen macht sie nicht zu Haustieren."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Ein Lebensraum ist mehr als ein einzelner Wald.",
+      "observe": "Sortiere die genannten Lebensräume nach eigenen Vergleichsmerkmalen.",
+      "benefit": "Ein Lebensraumvergleich braucht beschriebene Merkmale und keine Rangfolge gut/schlecht."
+    }
+  },
+  {
+    "id": "animal-raccoon",
+    "category": "animals",
+    "title": "Waschbär",
+    "intro": "Mit den Pfoten Informationen sammeln.",
+    "paragraphs": [
+      "Waschbären besitzen empfindliche Vorderpfoten. Damit können sie Gegenstände ertasten und bearbeiten.",
+      "Sie nutzen Wälder und auch Siedlungsräume. Ein Fundort am Haus erklärt noch nicht, wo die Art ursprünglich heimisch war."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Säugetiere"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Wälder und Siedlungsräume."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Verschiedene tierische und pflanzliche Nahrung."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Etwa 60,3–95 cm einschließlich Schwanz; nicht mit einer reinen Kopf-Rumpf-Länge verwechseln."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Wildtiere nicht füttern, fangen oder in andere Regionen bringen. Heutiges Vorkommen ist nicht immer ursprüngliche Verbreitung."
+      }
+    ],
+    "more": [
+      "Beschreibe den Unterschied zwischen Sehen und Tasten.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Tasten kann Informationen liefern, die ein Blick allein nicht erfasst.",
+    "locations": [
+      {
+        "label": "Östliches Nordamerika · Beispielregion",
+        "lat": 40,
+        "lon": -85
+      }
+    ],
+    "related": [
+      "animal-red-fox"
+    ],
+    "aliases": [
+      "raccoon",
+      "Procyon lotor"
+    ],
+    "sources": [
+      {
+        "label": "University of Michigan · Animal Diversity Web · Waschbär",
+        "url": "https://animaldiversity.org/accounts/Procyon_lotor/"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Säugetiere",
+      "habitat": "Wälder und Siedlungsräume",
+      "continent": "Ursprünglich Nordamerika",
+      "diet": "Verschiedene tierische und pflanzliche Nahrung",
+      "skill": "Empfindliche Vorderpfoten",
+      "size": {
+        "min": 60.3,
+        "max": 95,
+        "unit": "cm",
+        "measurement_de": "Gesamtlänge einschließlich Schwanz nach ADW",
+        "text_de": "Etwa 60,3–95 cm einschließlich Schwanz; nicht mit einer reinen Kopf-Rumpf-Länge verwechseln.",
+        "kind": "range"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Wildtiere nicht füttern, fangen oder in andere Regionen bringen. Heutiges Vorkommen ist nicht immer ursprüngliche Verbreitung.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Welcher Sinn spielt bei den Vorderpfoten des Waschbären eine Rolle?",
+      "answers": [
+        "Nur der Geschmackssinn.",
+        "Die Pfoten hören wie Ohren.",
+        "Der Tastsinn."
+      ],
+      "correct": 2,
+      "why": "Sehen nutzt Lichtinformation, Tasten unmittelbaren Kontakt."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Mit den Pfoten Informationen sammeln.",
+      "observe": "Beschreibe den Unterschied zwischen Sehen und Tasten.",
+      "benefit": "Sehen nutzt Lichtinformation, Tasten unmittelbaren Kontakt."
+    }
+  },
+  {
+    "id": "animal-hedgehog",
+    "category": "animals",
+    "title": "Braunbrustigel",
+    "intro": "Ein guter Garten braucht auch Verstecke.",
+    "paragraphs": [
+      "Braunbrustigel sind vor allem nachts unterwegs. Sie fressen unter anderem Käfer und Regenwürmer.",
+      "Hecken und Laub bieten geschützte Plätze. Im Winter können sie mit abgesenktem Stoffwechsel Energie sparen."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Säugetiere"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Hecken, Gärten und Waldränder."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Kleine wirbellose Tiere."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Etwa 15–30 cm; der kurze Schwanz ist zusätzlich angegeben."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Hecken und Laub bieten Rückzug. Ruheplätze nicht aufräumen oder Tiere für Beobachtungen wecken."
+      }
+    ],
+    "more": [
+      "Zeichne Nahrungssuche und einen geschützten Ruheplatz getrennt ein.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Das Entfernen von Hecken oder Laub kann Rückzugsmöglichkeiten vermindern.",
+    "locations": [
+      {
+        "label": "Südengland · Beispielregion",
+        "lat": 51,
+        "lon": 0
+      }
+    ],
+    "related": [
+      "animal-red-fox",
+      "animal-garden-snail"
+    ],
+    "aliases": [
+      "hedgehog",
+      "Erinaceus europaeus"
+    ],
+    "sources": [
+      {
+        "label": "The Wildlife Trusts · Braunbrustigel",
+        "url": "https://www.wildlifetrusts.org/wildlife-explorer/mammals/european-hedgehog"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Säugetiere",
+      "habitat": "Hecken, Gärten und Waldränder",
+      "continent": "Europa",
+      "diet": "Kleine wirbellose Tiere",
+      "skill": "Winterschlaf",
+      "size": {
+        "min": 15,
+        "max": 30,
+        "unit": "cm",
+        "measurement_de": "Körperlänge der britischen Artenbeschreibung",
+        "text_de": "Etwa 15–30 cm; der kurze Schwanz ist zusätzlich angegeben.",
+        "kind": "range"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Hecken und Laub bieten Rückzug. Ruheplätze nicht aufräumen oder Tiere für Beobachtungen wecken.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Was bietet einem Igel einen geschützten Platz?",
+      "answers": [
+        "Eine Hecke oder ein Laubversteck.",
+        "Eine völlig kahle offene Fläche ohne Deckung.",
+        "Ein dauerhaft hell beleuchteter leerer Platz."
+      ],
+      "correct": 0,
+      "why": "Hecken und Laub können geschützte Rückzugsplätze bieten; eine kahle Fläche bietet weniger Deckung."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Ein guter Garten braucht auch Verstecke.",
+      "observe": "Zeichne Nahrungssuche und einen geschützten Ruheplatz getrennt ein.",
+      "benefit": "Nahrung und Versteck sind unterschiedliche Bedürfnisse."
+    }
+  },
+  {
+    "id": "animal-barn-owl",
+    "category": "animals",
+    "title": "Schleiereule",
+    "intro": "Artwissen benötigt mehr als ein bekanntes Gesicht.",
+    "paragraphs": [
+      "Die Schleiereule jagt vor allem kleine Säugetiere, etwa Mäuse und Wühlmäuse. Grasreiche Flächen können ihren Beutetieren Nahrung und Deckung bieten.",
+      "Ihr heller Gesichtsschleier hilft beim Wiedererkennen. Für eine sichere Artbestimmung braucht es weitere passende Merkmale; ein einzelner unscharfer Fleck auf einem Nachtfoto reicht nicht."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Vögel"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Offene Landschaften."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Vor allem kleine Säugetiere."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Die angegebene Stichprobe umfasst Flügellängen von etwa 28–30,4 cm; das ist weder Körperlänge noch Spannweite."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Strukturreiche Grasflächen können kleine Säugetiere und damit Nahrung für Schleiereulen bieten."
+      }
+    ],
+    "more": [
+      "Unterscheide Alltagsnamen und wissenschaftlichen Namen.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Ein weiteres passendes Merkmal kann die Bestimmung absichern; seine Quelle muss geprüft werden.",
+    "locations": [
+      {
+        "label": "Großbritannien · Beispielregion",
+        "lat": 52,
+        "lon": 0
+      }
+    ],
+    "related": [
+      "animal-white-tailed-eagle"
+    ],
+    "aliases": [
+      "barn-owl",
+      "Tyto alba"
+    ],
+    "sources": [
+      {
+        "label": "British Trust for Ornithology · Schleiereule",
+        "url": "https://www.bto.org/learn/about-birds/birdfacts/barn-owl"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Vögel",
+      "habitat": "Offene Landschaften",
+      "continent": "Europa",
+      "diet": "Vor allem kleine Säugetiere",
+      "skill": "Jagd auf kleine Säugetiere",
+      "size": {
+        "min": 28,
+        "max": 30.4,
+        "unit": "cm",
+        "measurement_de": "Flügellänge gemessener erwachsener Vögel bei BTO, nicht Spannweite",
+        "text_de": "Die angegebene Stichprobe umfasst Flügellängen von etwa 28–30,4 cm; das ist weder Körperlänge noch Spannweite.",
+        "kind": "range"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Strukturreiche Grasflächen können kleine Säugetiere und damit Nahrung für Schleiereulen bieten.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Welcher Name gehört zur hier beschriebenen Schleiereule?",
+      "answers": [
+        "Alcedo atthis.",
+        "Tyto alba.",
+        "Amphiprion percula."
+      ],
+      "correct": 1,
+      "why": "Tyto alba ist der wissenschaftliche Name der hier behandelten Schleiereule. Der Name allein ersetzt keine Prüfung einer Beobachtung."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Artwissen benötigt mehr als ein bekanntes Gesicht.",
+      "observe": "Unterscheide Alltagsnamen und wissenschaftlichen Namen.",
+      "benefit": "Schleiereule und Tyto alba bezeichnen dieselbe hier untersuchte Art."
+    }
+  },
+  {
+    "id": "animal-kingfisher",
+    "category": "animals",
+    "title": "Eisvogel",
+    "intro": "Eine Farbe kann durch Struktur entstehen.",
+    "paragraphs": [
+      "Eisvögel jagen an Gewässern nach Fischen. Häufig halten sie von einer Sitzwarte Ausschau.",
+      "Das leuchtende Blau wird durch die feine Struktur der Federn erzeugt. Blau aussehen heißt nicht immer, einen blauen Farbstoff zu besitzen."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Vögel"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Flussufer und Stillgewässer."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Vor allem kleine Fische."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "In der angegebenen Stichprobe etwa 76–82 mm Flügellänge; nicht die Länge des ganzen Vogels."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Saubere Gewässer und geeignete Ufer schützen wichtige Nahrungs- und Brutlebensräume."
+      }
+    ],
+    "more": [
+      "Verbinde Sitzwarte, Wasser und Fisch zu einer einfachen Beobachtungsskizze.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Feine Strukturen können ein blaues Aussehen erzeugen, ohne blauen Farbstoff vorauszusetzen.",
+    "locations": [
+      {
+        "label": "Mitteleuropa · Beispielregion",
+        "lat": 52,
+        "lon": 10
+      }
+    ],
+    "related": [
+      "science-shadows"
+    ],
+    "aliases": [
+      "kingfisher",
+      "Alcedo atthis"
+    ],
+    "sources": [
+      {
+        "label": "RSPB · Eisvogel",
+        "url": "https://www.rspb.org.uk/birds-and-wildlife/kingfisher"
+      },
+      {
+        "label": "BTO · Kingfisher: gemessene Flügellängen",
+        "url": "https://www.bto.org/learn/about-birds/birdfacts/kingfisher"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Vögel",
+      "habitat": "Flussufer und Stillgewässer",
+      "continent": "Europa und Asien",
+      "diet": "Vor allem kleine Fische",
+      "skill": "Stoßtauchen",
+      "size": {
+        "min": 76,
+        "max": 82,
+        "unit": "mm",
+        "measurement_de": "Flügellänge erwachsener Vögel in der BTO-Stichprobe, nicht Spannweite",
+        "text_de": "In der angegebenen Stichprobe etwa 76–82 mm Flügellänge; nicht die Länge des ganzen Vogels.",
+        "kind": "range"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Saubere Gewässer und geeignete Ufer schützen wichtige Nahrungs- und Brutlebensräume.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Wo sucht der Eisvogel unter anderem nach Nahrung?",
+      "answers": [
+        "Nur auf trockenen Kornfeldern.",
+        "Ausschließlich in Baumwipfeln ohne Wasser.",
+        "An Gewässern mit kleinen Fischen."
+      ],
+      "correct": 2,
+      "why": "Der Eisvogel jagt unter anderem kleine Fische in Gewässern; geeignete Ufer und erreichbare Beute gehören zusammen."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Eine Farbe kann durch Struktur entstehen.",
+      "observe": "Verbinde Sitzwarte, Wasser und Fisch zu einer einfachen Beobachtungsskizze.",
+      "benefit": "Sitzwarte und Gewässer sind verschiedene Teile der Jagdsituation."
+    }
+  },
+  {
+    "id": "animal-ostrich",
+    "category": "animals",
+    "title": "Afrikanischer Strauß",
+    "intro": "Nicht fliegen heißt nicht nutzlos.",
+    "paragraphs": [
+      "Strauße sind große laufende Vögel. Ihre Flügel können beim Halten des Gleichgewichts helfen.",
+      "Bei einem Richtungswechsel ist Balance wichtig. Ein Körperteil kann eine andere Aufgabe erfüllen als bei einem fliegenden Vogel."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Vögel"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Savannen und trockene offene Landschaften."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Vor allem Pflanzen, auch kleine Tiere."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Weibchen etwa 90–110 kg, Männchen etwa 100–130 kg."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Strauße aus sicherem Abstand beobachten und wilde Tiere und Nester nicht stören."
+      }
+    ],
+    "more": [
+      "Vergleiche Fliegen und Gleichgewichthalten als zwei Tätigkeiten.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Ein Körperteil kann auch bei fehlender Flugfähigkeit eine belegte Funktion haben.",
+    "locations": [
+      {
+        "label": "Südliches Afrika · Beispielregion",
+        "lat": -22,
+        "lon": 18
+      }
+    ],
+    "related": [
+      "animal-emperor-penguin"
+    ],
+    "aliases": [
+      "ostrich",
+      "Struthio camelus"
+    ],
+    "sources": [
+      {
+        "label": "San Diego Zoo Wildlife Alliance · Afrikanischer Strauß",
+        "url": "https://animals.sandiegozoo.org/animals/ostrich"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Vögel",
+      "habitat": "Savannen und trockene offene Landschaften",
+      "continent": "Afrika",
+      "diet": "Vor allem Pflanzen, auch kleine Tiere",
+      "skill": "Laufen statt Fliegen",
+      "size": {
+        "min": 90,
+        "max": 130,
+        "unit": "kg",
+        "measurement_de": "Gewicht erwachsener Tiere nach der Zoo-Artenseite",
+        "text_de": "Weibchen etwa 90–110 kg, Männchen etwa 100–130 kg.",
+        "kind": "range"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Strauße aus sicherem Abstand beobachten und wilde Tiere und Nester nicht stören.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Was stimmt über den Strauß?",
+      "answers": [
+        "Er ist ein Vogel, obwohl er nicht fliegt.",
+        "Er ist wegen seiner Flugunfähigkeit ein Säugetier.",
+        "Jeder Vogel muss fliegen können."
+      ],
+      "correct": 0,
+      "why": "Ein Strauß besitzt Vogelmerkmale, obwohl er nicht fliegt. Flugfähigkeit allein definiert nicht die Tiergruppe."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Nicht fliegen heißt nicht nutzlos.",
+      "observe": "Vergleiche Fliegen und Gleichgewichthalten als zwei Tätigkeiten.",
+      "benefit": "Fliegen und Balance halten sind unterschiedliche Aufgaben."
+    }
+  },
+  {
+    "id": "animal-atlantic-puffin",
+    "category": "animals",
+    "title": "Papageitaucher",
+    "intro": "Zwischen Insel und offenem Meer wechseln.",
+    "paragraphs": [
+      "Papageitaucher brüten an Küsten und auf Inseln im Nordatlantik. Sie nutzen unter anderem Erdhöhlen als Nistplätze.",
+      "Nahrung suchen sie schwimmend unter Wasser. Außerhalb der Brutzeit verbringen sie viel Zeit weit draußen auf dem Meer."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Vögel"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Küsten und offenes Meer."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Vor allem kleine Fische."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Etwa 25–33 cm; die Spannweite ist ein anderes Maß."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Brutinseln vor Störung und eingeschleppten Räubern schützen. Eine regionale Zählung beschreibt nicht automatisch die gesamte Art."
+      }
+    ],
+    "more": [
+      "Ordne Nisten und Nahrungssuche den beschriebenen Orten zu.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Eine Brutplatzkarte zeigt nicht automatisch alle jahreszeitlichen Aufenthaltsorte.",
+    "locations": [
+      {
+        "label": "Island · Beispielregion",
+        "lat": 64,
+        "lon": -20
+      }
+    ],
+    "related": [
+      "animal-emperor-penguin"
+    ],
+    "aliases": [
+      "atlantic-puffin",
+      "Fratercula arctica"
+    ],
+    "sources": [
+      {
+        "label": "National Audubon Society · Papageitaucher",
+        "url": "https://www.audubon.org/field-guide/bird/atlantic-puffin"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Vögel",
+      "habitat": "Küsten und offenes Meer",
+      "continent": "Nordatlantik",
+      "diet": "Vor allem kleine Fische",
+      "skill": "Fliegen und Tauchen",
+      "size": {
+        "min": 25,
+        "max": 33,
+        "unit": "cm",
+        "measurement_de": "Körperlänge des Atlantischen Papageitauchers",
+        "text_de": "Etwa 25–33 cm; die Spannweite ist ein anderes Maß.",
+        "kind": "range"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Brutinseln vor Störung und eingeschleppten Räubern schützen. Eine regionale Zählung beschreibt nicht automatisch die gesamte Art.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Gehören Brutplatz und Nahrungsraum immer zum selben Ort?",
+      "answers": [
+        "Ja, Papageitaucher bleiben immer am Nest.",
+        "Nein, Brutküste und Meer erfüllen unterschiedliche Aufgaben.",
+        "Papageitaucher brauchen grundsätzlich kein Meer."
+      ],
+      "correct": 1,
+      "why": "Inseln bieten Nistplätze; Nahrung wird im Wasser gesucht."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Zwischen Insel und offenem Meer wechseln.",
+      "observe": "Ordne Nisten und Nahrungssuche den beschriebenen Orten zu.",
+      "benefit": "Inseln bieten Nistplätze; Nahrung wird im Wasser gesucht."
+    }
+  },
+  {
+    "id": "animal-common-chameleon",
+    "category": "animals",
+    "title": "Europäisches Chamäleon",
+    "intro": "Farbwechsel ist keine beliebige Verkleidung.",
+    "paragraphs": [
+      "Das Europäische Chamäleon greift mit Füßen und Schwanz an Zweigen. Seine Augen können sich unabhängig bewegen.",
+      "Seine Färbung kann sich verändern. Temperatur und innerer Zustand spielen dabei eine Rolle; es kopiert nicht beliebige Hintergrundmuster."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Reptilien"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Büsche und Bäume."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Vor allem Insekten."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Erwachsene Weibchen wiegen nach dieser Artenbeschreibung etwa 21–56 g; dies ist keine Länge und keine Angabe für alle Geschlechter."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Keine Farbversuche an lebenden Tieren durchführen. Tiere und ihre Haltezweige nicht stören."
+      }
+    ],
+    "more": [
+      "Finde Greifen, Schauen und Farbwechsel als verschiedene Fähigkeiten.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Die Quelle beschreibt Farbänderungen unter bestimmten Bedingungen, keine unbegrenzte Musterkopie.",
+    "locations": [
+      {
+        "label": "Südliche Iberische Halbinsel · Beispielregion",
+        "lat": 37,
+        "lon": -5
+      }
+    ],
+    "related": [
+      "animal-common-cuttlefish"
+    ],
+    "aliases": [
+      "common-chameleon",
+      "Chamaeleo chamaeleon"
+    ],
+    "sources": [
+      {
+        "label": "University of Michigan · Animal Diversity Web · Europäisches Chamäleon",
+        "url": "https://animaldiversity.org/accounts/Chamaeleo_chamaeleon/"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Reptilien",
+      "habitat": "Büsche und Bäume",
+      "continent": "Mittelmeerraum",
+      "diet": "Vor allem Insekten",
+      "skill": "Greifschwanz und unabhängig bewegliche Augen",
+      "size": {
+        "min": 21,
+        "max": 56,
+        "unit": "g",
+        "kind": "range",
+        "measurement_de": "Gewicht erwachsener Weibchen nach ADW",
+        "text_de": "Erwachsene Weibchen wiegen nach dieser Artenbeschreibung etwa 21–56 g; dies ist keine Länge und keine Angabe für alle Geschlechter."
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Keine Farbversuche an lebenden Tieren durchführen. Tiere und ihre Haltezweige nicht stören.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Was kann das Europäische Chamäleon?",
+      "answers": [
+        "Beliebige Fotomuster genau kopieren.",
+        "Seinen Schwanz wie ein Rad abwerfen und nach Wunsch neu bilden.",
+        "Mit dem Schwanz greifen und die Färbung begrenzt verändern."
+      ],
+      "correct": 2,
+      "why": "Greifen, Wahrnehmen und Farbänderung sind verschiedene Fähigkeiten."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Farbwechsel ist keine beliebige Verkleidung.",
+      "observe": "Finde Greifen, Schauen und Farbwechsel als verschiedene Fähigkeiten.",
+      "benefit": "Greifen, Wahrnehmen und Farbänderung sind verschiedene Fähigkeiten."
+    }
+  },
+  {
+    "id": "animal-fire-salamander",
+    "category": "animals",
+    "title": "Feuersalamander",
+    "intro": "Wald und Bach gehören zu einer Lebensgeschichte.",
+    "paragraphs": [
+      "Feuersalamander leben in feuchten, strukturreichen Wäldern. Viele mitteleuropäische Weibchen setzen Larven in Gewässern ab.",
+      "Die Larven tragen äußere Kiemen. Die Bedingungen im Wald und im Larvengewässer sind deshalb beide wichtig."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Amphibien"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Feuchte Wälder und Larvengewässer."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Kleine wirbellose Tiere."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Die Artenbeschreibung nennt etwa 15–25 cm."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Tiere nicht anfassen oder umsetzen. Geeignete Wälder und Larvengewässer erhalten; Krankheiten können Bestände bedrohen."
+      }
+    ],
+    "more": [
+      "Zeichne Wald und Larvengewässer als zwei verbundene Lebensorte.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Eine Art kann für verschiedene Entwicklungsabschnitte unterschiedliche geeignete Orte benötigen.",
+    "locations": [
+      {
+        "label": "Eifel · Beispielregion",
+        "lat": 50.6,
+        "lon": 6.7
+      }
+    ],
+    "related": [
+      "animal-axolotl",
+      "animal-common-frog"
+    ],
+    "aliases": [
+      "fire-salamander",
+      "Salamandra salamandra"
+    ],
+    "sources": [
+      {
+        "label": "NABU · Feldherpetologie · Feuersalamander",
+        "url": "https://nabu-lfa-feldherpetologie.jimdoweb.com/tiergruppen/amphibien/feuersalamander/"
+      },
+      {
+        "label": "NABU Euskirchen · Feuersalamander-Portrait",
+        "url": "https://www.nabu-euskirchen.de/2026/06/03/feuersalamander-ein-portrait/"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Amphibien",
+      "habitat": "Feuchte Wälder und Larvengewässer",
+      "continent": "Europa",
+      "diet": "Kleine wirbellose Tiere",
+      "skill": "Leben in Wald und Bach",
+      "size": {
+        "min": 15,
+        "max": 25,
+        "unit": "cm",
+        "measurement_de": "Länge erwachsener Tiere nach NABU Euskirchen",
+        "text_de": "Die Artenbeschreibung nennt etwa 15–25 cm.",
+        "kind": "range"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Tiere nicht anfassen oder umsetzen. Geeignete Wälder und Larvengewässer erhalten; Krankheiten können Bestände bedrohen.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Was tragen Feuersalamanderlarven?",
+      "answers": [
+        "Äußere Kiemen.",
+        "Federn.",
+        "Eine Vogeleierschale als dauerhafte Körperhülle."
+      ],
+      "correct": 0,
+      "why": "Die Larven tragen äußere Kiemen und leben im Wasser. Erwachsene Tiere nutzen überwiegend den Wald."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Wald und Bach gehören zu einer Lebensgeschichte.",
+      "observe": "Zeichne Wald und Larvengewässer als zwei verbundene Lebensorte.",
+      "benefit": "Wald und Larvengewässer sind miteinander verbundene Lebensorte."
+    }
+  },
+  {
+    "id": "animal-common-frog",
+    "category": "animals",
+    "title": "Grasfrosch",
+    "intro": "Ein Tier braucht im Laufe des Lebens verschiedene Orte.",
+    "paragraphs": [
+      "Grasfrösche laichen in Gewässern. Aus dem Laich entwickeln sich Kaulquappen.",
+      "Erwachsene Tiere verbringen viel Zeit auch an Land, etwa in Gärten und Wäldern. Nicht jeder Frosch ist ständig im Wasser."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Amphibien"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Gewässer, Wälder und Gärten."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Kleine Tiere."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Die Artenbeschreibung nennt etwa 8–13 cm."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Laich und Tiere nicht entnehmen. Gewässer und geeignete Landlebensräume zusammen erhalten."
+      }
+    ],
+    "more": [
+      "Lege eine einfache Reihenfolge aus Laich, Kaulquappe und erwachsenem Tier.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Laich und Kaulquappen sind an Gewässer gebunden; die Lebensraumnutzung ändert sich später.",
+    "locations": [
+      {
+        "label": "Großbritannien · Beispielregion",
+        "lat": 54,
+        "lon": -2
+      }
+    ],
+    "related": [
+      "animal-fire-salamander"
+    ],
+    "aliases": [
+      "common-frog",
+      "Rana temporaria"
+    ],
+    "sources": [
+      {
+        "label": "The Wildlife Trusts · Grasfrosch",
+        "url": "https://www.wildlifetrusts.org/wildlife-explorer/amphibians/common-frog"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Amphibien",
+      "habitat": "Gewässer, Wälder und Gärten",
+      "continent": "Europa",
+      "diet": "Kleine Tiere",
+      "skill": "Metamorphose",
+      "size": {
+        "min": 8,
+        "max": 13,
+        "unit": "cm",
+        "measurement_de": "Längenangabe der britischen Artenseite",
+        "text_de": "Die Artenbeschreibung nennt etwa 8–13 cm.",
+        "kind": "range"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Laich und Tiere nicht entnehmen. Gewässer und geeignete Landlebensräume zusammen erhalten.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Welche Reihenfolge passt zum Grasfrosch?",
+      "answers": [
+        "Erwachsenes Tier, dann erst Kaulquappe.",
+        "Laich, Kaulquappe, junger Frosch.",
+        "Blüte, Samen, erwachsener Frosch."
+      ],
+      "correct": 1,
+      "why": "Laich kommt vor Kaulquappen; danach folgen junge und erwachsene Frösche."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Ein Tier braucht im Laufe des Lebens verschiedene Orte.",
+      "observe": "Lege eine einfache Reihenfolge aus Laich, Kaulquappe und erwachsenem Tier.",
+      "benefit": "Laich kommt vor Kaulquappen; danach folgen junge und erwachsene Frösche."
+    }
+  },
+  {
+    "id": "animal-eastern-clown-anemonefish",
+    "category": "animals",
+    "title": "Echter Clownfisch",
+    "intro": "Ein ähnliches Muster kann verschiedene Arten verdecken.",
+    "paragraphs": [
+      "Der Echte Clownfisch lebt zwischen den Tentakeln bestimmter Seeanemonen. Er nimmt unter anderem Algen und Zooplankton auf.",
+      "Amphiprion percula und der ähnliche Amphiprion ocellaris sind verschiedene Arten. Nicht jedes orange-weiß gestreifte Tier darf automatisch gleich bestimmt werden."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Fische"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Korallenriffe mit Seeanemonen."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Algen und Zooplankton."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Die Museumsseite nennt eine Länge bis etwa 8 cm."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Fische und Seeanemonen nicht fangen oder berühren. Ähnliche Arten nicht ohne Beleg gleichsetzen."
+      }
+    ],
+    "more": [
+      "Unterscheide den Fisch und seine Seeanemone als zwei Tiere.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Eine artspezifische Verbreitung darf nicht auf alle ähnlichen Tiere übertragen werden.",
+    "locations": [
+      {
+        "label": "Great Barrier Reef · Beispielregion",
+        "lat": -16.5,
+        "lon": 146
+      }
+    ],
+    "related": [
+      "science-coral-reef"
+    ],
+    "aliases": [
+      "eastern-clown-anemonefish",
+      "Amphiprion percula"
+    ],
+    "sources": [
+      {
+        "label": "Australian Museum · Echter Clownfisch",
+        "url": "https://australian.museum/learn/animals/fishes/eastern-clown-anemonefish-amphiprion-percula/"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Fische",
+      "habitat": "Korallenriffe mit Seeanemonen",
+      "continent": "Westlicher Pazifik",
+      "diet": "Algen und Zooplankton",
+      "skill": "Zusammenleben mit Seeanemonen",
+      "size": {
+        "min": 8,
+        "max": 8,
+        "unit": "cm",
+        "measurement_de": "Längenangabe des Australian Museum für Amphiprion percula",
+        "text_de": "Die Museumsseite nennt eine Länge bis etwa 8 cm.",
+        "kind": "upper-bound"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Fische und Seeanemonen nicht fangen oder berühren. Ähnliche Arten nicht ohne Beleg gleichsetzen.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Was ist die Seeanemone beim Clownfisch?",
+      "answers": [
+        "Ein Teil des Fischschwanzes.",
+        "Eine Pflanze mit Blüten.",
+        "Ein anderes Tier."
+      ],
+      "correct": 2,
+      "why": "Fisch und Seeanemone sind zwei unterschiedliche Tiere."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Ein ähnliches Muster kann verschiedene Arten verdecken.",
+      "observe": "Unterscheide den Fisch und seine Seeanemone als zwei Tiere.",
+      "benefit": "Fisch und Seeanemone sind zwei unterschiedliche Tiere."
+    }
+  },
+  {
+    "id": "animal-european-eel",
+    "category": "animals",
+    "title": "Europäischer Aal",
+    "intro": "Eine Wanderung verbindet Flüsse und Ozean.",
+    "paragraphs": [
+      "Die Lebensgeschichte des Europäischen Aals verbindet europäische Gewässer mit dem Atlantik. Junge Entwicklungsstadien gelangen mit Meeresströmungen an Küsten.",
+      "Barrieren in Flüssen können Wanderwege unterbrechen. Eine offene Verbindung gehört deshalb zur Betrachtung des Lebensraums."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Fische"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Flüsse, Küsten und Atlantik."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Kleine Wassertiere."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Häufig etwa 60–80 cm; die Quelle nennt ausnahmsweise bis 1,5 m. Der Balken zeigt den häufigen Bereich, keinen Rekord."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Schlechte Wasserqualität und unterbrochene Wanderwege bedrohen Aale. Die Ursachen ihres Rückgangs wirken zusammen."
+      }
+    ],
+    "more": [
+      "Verbinde Fluss, Küste und Meer auf einer eigenen Übersicht.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Ein unterbrochener Weg kann den Zugang zu einem weiteren Lebensraum verhindern.",
+    "locations": [
+      {
+        "label": "Flüsse Südenglands · Beispielregion",
+        "lat": 51,
+        "lon": 0
+      }
+    ],
+    "related": [
+      "science-currents"
+    ],
+    "aliases": [
+      "european-eel",
+      "Anguilla anguilla"
+    ],
+    "sources": [
+      {
+        "label": "The Wildlife Trusts · Europäischer Aal",
+        "url": "https://www.wildlifetrusts.org/national-marine-week/incredible-journeys"
+      },
+      {
+        "label": "WWT · European Eel",
+        "url": "https://www.wwt.org.uk/discover-wetlands/wetland-wildlife/species-factfiles/european-eel"
+      },
+      {
+        "label": "Wright et al.2022 · Verfolgte Aalwanderung, keine beobachtete Eiablage",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9562336/"
+      },
+      {
+        "label": "Autorinnen und Autoren · Korrektur der Geschwindigkeitseinheit",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9755116/"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Fische",
+      "habitat": "Flüsse, Küsten und Atlantik",
+      "continent": "Europa und Nordatlantik",
+      "diet": "Kleine Wassertiere",
+      "skill": "Wanderung zwischen Lebensräumen",
+      "size": {
+        "min": 60,
+        "max": 80,
+        "unit": "cm",
+        "measurement_de": "Genannter häufiger Längenbereich nach WWT",
+        "text_de": "Häufig etwa 60–80 cm; die Quelle nennt ausnahmsweise bis 1,5 m. Der Balken zeigt den häufigen Bereich, keinen Rekord.",
+        "kind": "range"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Schlechte Wasserqualität und unterbrochene Wanderwege bedrohen Aale. Die Ursachen ihres Rückgangs wirken zusammen.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Warum sind offene Wanderwege für den Aal wichtig?",
+      "answers": [
+        "Seine Lebensgeschichte verbindet unterschiedliche Gewässer.",
+        "Er verbringt das ganze Leben unverändert an derselben Stelle.",
+        "Er kann nur an Land leben."
+      ],
+      "correct": 0,
+      "why": "Fluss, Küste und Ozean gehören zur betrachteten Lebensgeschichte."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Eine Wanderung verbindet Flüsse und Ozean.",
+      "observe": "Verbinde Fluss, Küste und Meer auf einer eigenen Übersicht.",
+      "benefit": "Fluss, Küste und Ozean gehören zur betrachteten Lebensgeschichte."
+    }
+  },
+  {
+    "id": "animal-monarch-butterfly",
+    "category": "animals",
+    "title": "Monarchfalter",
+    "intro": "Eine Art kann verschiedene Wanderstrategien besitzen.",
+    "paragraphs": [
+      "Viele Monarchfalter in Nordamerika wandern. Es gibt aber auch Populationen, die nicht dieselbe lange Wanderung unternehmen.",
+      "Die Raupen nehmen mit Seidenpflanzen bestimmte Abwehrstoffe auf. Ihre auffällige Färbung gehört zur Beziehung zwischen Nahrung und Schutz."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Insekten"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Blütenreiche Landschaften."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Raupen: Seidenpflanzen; Falter: Nektar."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Etwa 7,6–10,2 cm Spannweite; 3–4 Zoll wurden mit 2,54 cm je Zoll umgerechnet."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Blütenreiche Lebensräume und geeignete Raupenpflanzen erhalten. Vorgeschlagene US-Regeln nicht als bereits geltende weltweite Bewertung ausgeben."
+      }
+    ],
+    "more": [
+      "Unterscheide Raupe und Falter als zwei Entwicklungsstadien.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Eine verbreitete Wanderstrategie gilt nicht automatisch für jedes Tier der Art.",
+    "locations": [
+      {
+        "label": "Zentralmexiko · Beispielregion",
+        "lat": 19.6,
+        "lon": -100.2
+      }
+    ],
+    "related": [
+      "animal-honey-bee"
+    ],
+    "aliases": [
+      "monarch-butterfly",
+      "Danaus plexippus"
+    ],
+    "sources": [
+      {
+        "label": "US Fish & Wildlife Service · Monarchfalter",
+        "url": "https://www.fws.gov/species/monarch-danaus-plexippus"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Insekten",
+      "habitat": "Blütenreiche Landschaften",
+      "continent": "Vor allem Nordamerika",
+      "diet": "Raupen: Seidenpflanzen; Falter: Nektar",
+      "skill": "Wandernde und ortstreue Populationen",
+      "size": {
+        "min": 7.62,
+        "max": 10.16,
+        "unit": "cm",
+        "measurement_de": "Flügelspannweite nach USFWS; aus 3–4 Zoll umgerechnet",
+        "text_de": "Etwa 7,6–10,2 cm Spannweite; 3–4 Zoll wurden mit 2,54 cm je Zoll umgerechnet.",
+        "kind": "range"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Blütenreiche Lebensräume und geeignete Raupenpflanzen erhalten. Vorgeschlagene US-Regeln nicht als bereits geltende weltweite Bewertung ausgeben.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Welche Aussage über Monarchfalter passt?",
+      "answers": [
+        "Jedes Tier fliegt immer exakt dieselbe Strecke.",
+        "Es gibt wandernde und nicht in gleicher Weise wandernde Populationen.",
+        "Die Raupe ist eine ganz andere Tierart als der Falter."
+      ],
+      "correct": 1,
+      "why": "Raupe und Falter sind Entwicklungsstadien; wandernde und nicht wandernde Populationen unterscheiden sich."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Eine Art kann verschiedene Wanderstrategien besitzen.",
+      "observe": "Unterscheide Raupe und Falter als zwei Entwicklungsstadien.",
+      "benefit": "Raupe und Falter sind Entwicklungsstadien; wandernde und nicht wandernde Populationen unterscheiden sich."
+    }
+  },
+  {
+    "id": "animal-garden-snail",
+    "category": "animals",
+    "title": "Gefleckte Weinbergschnecke",
+    "intro": "Ein vertrauter Gartenbewohner hat mehrere Sinne.",
+    "paragraphs": [
+      "Cornu aspersum ist eine Landschneckenart. Sie wird besonders bei feuchtem Wetter und nachts beobachtet.",
+      "Schnecken nutzen unter anderem Berührung und chemische Signale zur Orientierung. Sie erleben ihre Umgebung nicht wie ein Mensch."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Weichtiere"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Gärten, Hecken und andere Verstecke."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Pflanzliches Material."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Die Schale ist etwa 25–40 mm breit; ihre Höhe ist ein anderes Maß."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Aus Abstand beobachten; Schnecken nicht versetzen und keine Tiere in andere Regionen aussetzen."
+      }
+    ],
+    "more": [
+      "Beschreibe eine Schneckenbeobachtung, ohne das Tier zu berühren.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Feuchtigkeit und Nachtaktivität können beeinflussen, wann Tiere sichtbar werden.",
+    "locations": [
+      {
+        "label": "Westfrankreich · Beispielregion",
+        "lat": 48,
+        "lon": -1.5
+      }
+    ],
+    "related": [
+      "animal-hedgehog"
+    ],
+    "aliases": [
+      "garden-snail",
+      "Cornu aspersum"
+    ],
+    "sources": [
+      {
+        "label": "Natural History Museum · Gefleckte Weinbergschnecke",
+        "url": "https://www.nhm.ac.uk/discover/snails-and-slugs.html"
+      },
+      {
+        "label": "Conchological Society · Cornu aspersum: Gehäusemaße",
+        "url": "https://conchsoc.org/aids_to_id/helasp.php"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Weichtiere",
+      "habitat": "Gärten, Hecken und andere Verstecke",
+      "continent": "Ursprünglich Mittelmeerraum",
+      "diet": "Pflanzliches Material",
+      "skill": "Orientierung mit mehreren Sinnen",
+      "size": {
+        "min": 25,
+        "max": 40,
+        "unit": "mm",
+        "measurement_de": "Gehäusebreite, nicht Länge des ausgestreckten Tiers",
+        "text_de": "Die Schale ist etwa 25–40 mm breit; ihre Höhe ist ein anderes Maß.",
+        "kind": "range"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Aus Abstand beobachten; Schnecken nicht versetzen und keine Tiere in andere Regionen aussetzen.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Welches Maß beschreibt hier die 25–40 mm?",
+      "answers": [
+        "Die Länge aller Fühler zusammen.",
+        "Die Länge jeder zurückgelegten Strecke.",
+        "Die Breite des Gehäuses."
+      ],
+      "correct": 2,
+      "why": "Die Maßangabe gehört zur Gehäusebreite; der ausgestreckte weiche Körper und die Gehäusehöhe sind andere Maße."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Ein vertrauter Gartenbewohner hat mehrere Sinne.",
+      "observe": "Beschreibe eine Schneckenbeobachtung, ohne das Tier zu berühren.",
+      "benefit": "Eine sichere Beobachtung benötigt kein Anfassen oder Versetzen der Schnecke."
+    }
+  },
+  {
+    "id": "animal-european-lobster",
+    "category": "animals",
+    "title": "Europäischer Hummer",
+    "intro": "Wachsen trotz harter Außenhülle.",
+    "paragraphs": [
+      "Der Europäische Hummer ist ein Krebstier. Seine beiden großen Scheren können verschiedene Aufgaben bei der Nahrungsaufnahme erfüllen.",
+      "Zum Wachsen muss er seine feste Außenhülle abstreifen. Eine Häutung ist kein Wechsel zu einer anderen Tierart."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Krebstiere"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Felsiger Meeresboden."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Verschiedene wirbellose Meerestiere."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Meist bis etwa 50 cm; dieselbe Quelle nennt auch größere Einzeltiere bis 60 cm."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Örtliche Übernutzung kann Bestände belasten. Das ist keine eigene weltweite Gefährdungseinstufung."
+      }
+    ],
+    "more": [
+      "Unterscheide Greifwerkzeug und Außenhülle.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Häutung ermöglicht Größenwachstum trotz fester Außenhülle.",
+    "locations": [
+      {
+        "label": "Küste Cornwalls · Beispielregion",
+        "lat": 50,
+        "lon": -5
+      }
+    ],
+    "related": [
+      "animal-common-octopus"
+    ],
+    "aliases": [
+      "european-lobster",
+      "Homarus gammarus"
+    ],
+    "sources": [
+      {
+        "label": "The Wildlife Trusts · Europäischer Hummer",
+        "url": "https://www.wildlifetrusts.org/wildlife-explorer/marine/crustaceans/lobster"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Krebstiere",
+      "habitat": "Felsiger Meeresboden",
+      "continent": "Europa und Ostatlantik",
+      "diet": "Verschiedene wirbellose Meerestiere",
+      "skill": "Scheren mit verschiedenen Aufgaben",
+      "size": {
+        "min": 50,
+        "max": 50,
+        "unit": "cm",
+        "measurement_de": "Übliche obere Längenangabe der britischen Artenseite",
+        "text_de": "Meist bis etwa 50 cm; dieselbe Quelle nennt auch größere Einzeltiere bis 60 cm.",
+        "kind": "upper-bound"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Örtliche Übernutzung kann Bestände belasten. Das ist keine eigene weltweite Gefährdungseinstufung.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Warum häutet sich ein Hummer?",
+      "answers": [
+        "Seine feste Außenhülle muss beim Wachsen ersetzt werden.",
+        "Er verwandelt sich dadurch in eine andere Art.",
+        "Er legt damit Vogelfedern ab."
+      ],
+      "correct": 0,
+      "why": "Eine unverändert feste Außenhülle kann nicht unbegrenzt mitwachsen. Bei der Häutung wird sie abgestreift."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Wachsen trotz harter Außenhülle.",
+      "observe": "Unterscheide Greifwerkzeug und Außenhülle.",
+      "benefit": "Greifwerkzeug und stützende Körperhülle haben verschiedene Aufgaben."
+    }
+  },
+  {
+    "id": "animal-common-cuttlefish",
+    "category": "animals",
+    "title": "Gewöhnliche Sepia",
+    "intro": "Tintenfisch ist kein einzelner Körperbau.",
+    "paragraphs": [
+      "Die Gewöhnliche Sepia besitzt acht Arme und zusätzlich zwei längere Fangtentakel. Ihr breiter Mantel trägt seitliche Flossen. Damit unterscheidet sie sich vom Gewöhnlichen Kraken.",
+      "Ihre Färbung und ihr Muster können sich rasch verändern. Das hilft unter anderem bei Tarnung und Verständigung. Ein Foto hält nur einen Augenblick fest und zeigt nicht alle möglichen Zustände."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Weichtiere"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Küstennaher Meeresboden."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Krebse, Fische und andere kleine Meerestiere."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Bis etwa 45 cm Mantellänge; Arme und Fangtentakel sind darin nicht enthalten."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Tiere und Laichplätze nicht stören. Regionale Häufigkeit ist keine eigene weltweite Gefährdungsbewertung."
+      }
+    ],
+    "more": [
+      "Vergleiche die Karte mit dem Gewöhnlichen Kraken: Welche Beschreibung gehört zu welcher Art?",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Ein einzelner Aufnahmezeitpunkt erfasst nur einen Zustand eines veränderlichen Musters.",
+    "locations": [
+      {
+        "label": "Ärmelkanalküste · Beispielregion",
+        "lat": 50,
+        "lon": -2
+      }
+    ],
+    "related": [
+      "animal-common-octopus",
+      "animal-common-chameleon"
+    ],
+    "aliases": [
+      "common-cuttlefish",
+      "Sepia officinalis",
+      "Gewöhnlicher Tintenfisch"
+    ],
+    "sources": [
+      {
+        "label": "The Wildlife Trusts · Gewöhnlicher Tintenfisch",
+        "url": "https://www.wildlifetrusts.org/wildlife-explorer/marine/squids-octopuses-and-cuttlefish/common-cuttlefish"
+      },
+      {
+        "label": "MarLIN · Sepia officinalis: Körperbau und Mantellänge",
+        "url": "https://www.marlin.ac.uk/species/detail/1098"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Weichtiere",
+      "habitat": "Küstennaher Meeresboden",
+      "continent": "Ostatlantik und Mittelmeer",
+      "diet": "Krebse, Fische und andere kleine Meerestiere",
+      "skill": "Schneller Farb- und Musterwechsel",
+      "size": {
+        "min": 45,
+        "max": 45,
+        "unit": "cm",
+        "measurement_de": "Mantellänge ohne Arme und Fangtentakel nach MarLIN",
+        "text_de": "Bis etwa 45 cm Mantellänge; Arme und Fangtentakel sind darin nicht enthalten.",
+        "kind": "upper-bound"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Tiere und Laichplätze nicht stören. Regionale Häufigkeit ist keine eigene weltweite Gefährdungsbewertung.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Was unterscheidet Sepia und Krake?",
+      "answers": [
+        "Beide Namen bezeichnen zwingend dieselbe Art.",
+        "Sepia besitzt acht Arme und zusätzlich zwei längere Fangtentakel.",
+        "Ein Krake besitzt ein Vogelskelett."
+      ],
+      "correct": 1,
+      "why": "Sepia besitzt acht Arme und zwei zusätzliche Fangtentakel. Der Krake hat acht Arme ohne diese beiden zusätzlichen Fangtentakel."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Tintenfisch ist kein einzelner Körperbau.",
+      "observe": "Vergleiche die Karte mit dem Gewöhnlichen Kraken: Welche Beschreibung gehört zu welcher Art?",
+      "benefit": "Krake und Sepia sind verwandte, aber unterschiedliche Kopffüßer."
+    }
+  },
+  {
+    "id": "animal-short-snouted-seahorse",
+    "category": "animals",
+    "title": "Kurzschnäuziges Seepferdchen",
+    "intro": "Ein Greifschwanz kann im Wasser Halt geben.",
+    "paragraphs": [
+      "Das Kurzschnäuzige Seepferdchen ist ein Fisch. Mit dem Greifschwanz kann es sich an Pflanzen oder anderen geeigneten Strukturen festhalten.",
+      "Seine Nahrung besteht aus kleinen Beutetieren. Der Name „Seepferdchen“ bedeutet keine Verwandtschaft zu Pferden."
+    ],
+    "facts": [
+      {
+        "label": "Tiergruppe",
+        "text": "Fische"
+      },
+      {
+        "label": "Lebensraum",
+        "text": "Küsten mit Haltestrukturen."
+      },
+      {
+        "label": "Nahrung",
+        "text": "Kleine Beutetiere."
+      },
+      {
+        "label": "Maß und Messrichtung",
+        "text": "Bis etwa 15 cm; die Quelle erläutert den Messpunkt nicht weiter."
+      },
+      {
+        "label": "Schutz und Rücksicht",
+        "text": "Seepferdchen nicht fangen und keine getrockneten Meerestiere als Souvenirs kaufen. Fragwürdige Fortpflanzungs- und DD-Aussagen werden nicht übernommen."
+      }
+    ],
+    "more": [
+      "Vergleiche Festhalten und freies Schwimmen als zwei Tätigkeiten.",
+      "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
+    ],
+    "surprise": "Pflanzen und andere geeignete Haltestrukturen beschreiben einen konkreteren Lebensraum.",
+    "locations": [
+      {
+        "label": "Südenglische Küste · Beispielregion",
+        "lat": 50,
+        "lon": -3
+      }
+    ],
+    "related": [
+      "science-foodweb"
+    ],
+    "aliases": [
+      "short-snouted-seahorse",
+      "Hippocampus hippocampus"
+    ],
+    "sources": [
+      {
+        "label": "The Wildlife Trusts · Kurzschnäuziges Seepferdchen",
+        "url": "https://www.wildlifetrusts.org/wildlife-explorer/marine/fish-including-sharks-skates-and-rays/short-snouted-seahorse"
+      },
+      {
+        "label": "MarLIN · Hippocampus hippocampus: Merkmale und Länge",
+        "url": "https://www.marlin.ac.uk/species/detail/1788"
+      }
+    ],
+    "sourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+    "animal": {
+      "group": "Fische",
+      "habitat": "Küsten mit Haltestrukturen",
+      "continent": "Ostatlantik und Mittelmeer",
+      "diet": "Kleine Beutetiere",
+      "skill": "Greifschwanz",
+      "size": {
+        "min": 15,
+        "max": 15,
+        "unit": "cm",
+        "measurement_de": "Länge nach der MarLIN-Artenbeschreibung",
+        "text_de": "Bis etwa 15 cm; die Quelle erläutert den Messpunkt nicht weiter.",
+        "kind": "upper-bound"
+      },
+      "protection": {
+        "scope": "source_description_not_global_assessment",
+        "category": "not-assessed-here",
+        "text_de": "Seepferdchen nicht fangen und keine getrockneten Meerestiere als Souvenirs kaufen. Fragwürdige Fortpflanzungs- und DD-Aussagen werden nicht übernommen.",
+        "checked_at": "2026-10-17"
+      }
+    },
+    "question": {
+      "prompt": "Womit kann sich dieses Seepferdchen festhalten?",
+      "answers": [
+        "Mit Pferdehufen.",
+        "Mit Vogelflügeln.",
+        "Mit seinem Greifschwanz."
+      ],
+      "correct": 2,
+      "why": "Der Greifschwanz kann sich um geeignete Haltestrukturen legen. Ein Seepferdchen ist ein Fisch und kein kleines Pferd."
+    },
+    "links": [
+      {
+        "label": "Lebensräume in der Lernreise erkunden",
+        "mode": "journeys",
+        "id": "nature"
+      }
+    ],
+    "learning": {
+      "starter": "Ein Greifschwanz kann im Wasser Halt geben.",
+      "observe": "Vergleiche Festhalten und freies Schwimmen als zwei Tätigkeiten.",
+      "benefit": "Festhalten sichert einen Ort; Schwimmen verändert den Aufenthaltsort."
+    }
   }
 ]

@@ -4,20 +4,20 @@ import draft from '../content/animal-expansion-review.json' with {type:'json'};
 import catalog from '../app/world-catalog.json' with {type:'json'};
 import original from '../content/animal-editorial-review.json' with {type:'json'};
 
-test('24 distinct animal manuscripts keep original species separate and do not fabricate runtime or independent acceptance',()=>{
- assert.equal(draft.entries.length,24);assert.equal(draft.runtimeNewSpecies,0);assert.equal(draft.acceptedNew,0);assert.equal(draft.independentReview,false);
+test('24 individually authored new species are implemented beside the24 originals without fabricating independent acceptance',()=>{
+ assert.equal(draft.entries.length,24);assert.equal(draft.runtimeNewSpecies,24);assert.equal(draft.acceptedNew,0);assert.equal(draft.independentReview,false);
  const ids=new Set(catalog.map(t=>t.id)),prepared=new Set(draft.entries.map(e=>e.id));
  assert.equal(prepared.size,24);assert.equal(new Set(draft.entries.map(e=>e.taxon)).size,24);
  assert.equal(original.entries.length,24);for(const old of original.entries)assert.ok(ids.has(old.id));
  for(const e of draft.entries){
-  assert.equal(ids.has(e.id),false,'prepared manuscript is not silently counted as runtime '+e.id);
-  assert.equal(e.stage,'authored-manuscript');assert.equal(e.runtimeIntegrated,false);assert.equal(e.independentlyAccepted,false);
+  assert.equal(ids.has(e.id),true,'implemented species really exists in runtime '+e.id);
+  assert.equal(e.stage,'implemented-awaiting-full-validation');assert.equal(e.runtimeIntegrated,true);assert.equal(e.independentlyAccepted,false);
   assert.match(e.taxon,/^[A-Z][a-z]+ [a-z]+$/,'one species, not a group/subspecies alias');
   assert.equal(e.paragraphs.length,2);assert.deepEqual(e.claims.map(c=>c.statement),e.paragraphs);
   const url=new URL(e.source.url);assert.equal(url.protocol,'https:');assert.equal(url.username,'');assert.equal(url.password,'');
   assert.ok(e.claims.every(c=>c.anchor.length>10));assert.equal(e.source.accessedOn,draft.preparedOn);
   for(const c of e.proposedConnections){assert.ok(c.reason.length>35);assert.notEqual(c.target,e.id);assert.ok(ids.has(c.target)||prepared.has(c.target),e.id+' no invented destination');}
-  assert.equal(e.media.status,'not-implemented');assert.ok(e.limits.length>50);assert.ok(e.openBeforeRuntime.length>=4);
+  assert.equal(e.media.status,'own-vector-implemented-awaiting-visual-review');assert.ok(e.limits.length>50);assert.ok(e.openBeforeRuntime.length>=3);assert.ok(e.runtimeMeasurement.anchor.length>10);assert.equal(e.independentlyAccepted,false);
  }
 });
 

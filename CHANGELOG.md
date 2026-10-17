@@ -1,3 +1,9 @@
+## Unveröffentlicht ·24 zusätzliche Tierarten im Master
+
+-24 eigenständige neue Artkarten aus vorhandenen Manuskripten: Erklärungen, präzise Maße/Quellen,24 Wissensfragen,24 Beobachtungsaufträge und48 Begründungs-/Transferfragen mit freiwilligen Hinweisen und konkretem Feedback.
+-24 eigene leichte Merkmalszeichnungen mit lesbaren HTML-Legenden, Alternativtexten und Modellgrenzen; keine kopierten Bilder.23 erklärte gegenseitige Verbindungen, bestehende Artikel/Spielstände erhalten.
+-Grammvergleich, Unterscheidung oberer/typischer Vergleichswerte und deutsche Zahlendarstellung. Keine neue globale Gefährdungseinstufung erfunden; wissenschaftliche und unabhängige Abnahmen bleiben getrennt offen, besonders Primärvolltext zur Aalwanderung. Technische Endabnahme folgt gesondert; Chronik vorbereitet, nicht verfügbar. News pausiert.
+
 ## Unveröffentlichter Master-Rückabgleich17.10.2026
 
 PR34 nach tatsächlichem Nutzermerge/Vercel-Erfolg und aktivem nativen strikten Pflichtcheck kontrolliert integrieren; alle umfangreicheren Masterprüfungen und Inhalte erhalten. Keine Produktveröffentlichung aus diesem Rückabgleich behauptet. Nachrichten pausiert,24Tierarten/WK053 prioritär; tatsächliche Schlussprüfungen am endgültigen Stand folgen.
