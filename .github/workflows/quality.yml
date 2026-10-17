@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: read
+  pull-requests: read
+  actions: read
 
 concurrency:
   group: quality-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
@@ -32,6 +34,12 @@ jobs:
           cache-dependency-path: |
             pnpm-lock.yaml
             qa/pnpm-lock.yaml
+      - name: Bind Quality to this PR and integration base
+        run: node scripts/release/quality-context.cjs capture
+      - name: Verify read access and current PR before expensive checks
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/release/quality-context.cjs verify
       - name: Install application with frozen lockfile
         run: pnpm install --frozen-lockfile
       - name: TypeScript
@@ -165,8 +173,14 @@ jobs:
           name: quality-evidence-webkit-${{ github.run_id }}-${{ github.run_attempt }}
           path: work/quality-webkit/
           digest-mismatch: error
+      - name: Bind final collector to this PR and integration base
+        run: node scripts/release/quality-context.cjs capture
       - name: Fail-closed same-snapshot aggregation and required handoff
         run: node scripts/quality-artifacts.mjs collect
+      - name: Reject stale PR head, base or unexpected workflow origin
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/release/quality-context.cjs verify
       - name: Upload final reports without duplicating screenshot storage
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
@@ -174,5 +188,6 @@ jobs:
           path: |
             .qa-output/review/*.json
             .qa-output/review/*.xml
+            .qa-output/ci-context.json
           if-no-files-found: error
           retention-days: 7

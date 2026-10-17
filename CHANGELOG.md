@@ -1,5 +1,11 @@
 # Änderungsverlauf
 
+WK053:24neue Artmanuskripte mit eigenständigen Lernzielen und72individuellen Denkaufträgen/Hinweisen gesichert. Konkrete Quellenfallen, vorgeschlagene fachliche Beziehungen und fehlende Integrations-/Prüfvoraussetzungen einzeln dokumentiert. Dies ist abgeschlossene redaktionelle Vorbereitung, **keine neue öffentliche Tierwelt**, keine Medien-/Fachabnahme. Veröffentlichter24erBestand unverändert.
+
+## Vorbereitete Testübernahme und aktuelle Quality-Bindung ·17.10.2026
+
+Bestehenden Quality-Abschluss beider Workflowvarianten schreibfrei an aktuellen PR/Head/Zielbasis/Integrationscommit/Run/Attempt/Workflow gebunden; negative Tests für veraltete/gemischte/unvollständige Herkunft. Begrenzte Readinessentscheidung mit strikter nativer Pflichtcheck-Voraussetzung, manueller Setupübernahme und konservativem Pro-Ende16.11.00:00Europe/Berlin. Originalauftrag vollständig archiviert, fachübergreifende Pflege und ausdrücklich sinnvolle Optimierung in bestehenden Regeln präzisiert. Keine neue volle Pipeline, kein Publisher, keine Aktivierung; tatsächlicher Branchschutz mangels Adminschnittstelle noch offen. Lernfunktionen/IDs/Pass/Offline und sämtliche Pflichtprüfungen erhalten; News pausiert.
+
 ## Tierforscher-Werkstatt und lesbarer Planetenvergleich (Vercel-Testwebsite,17.10.2026)
 
 NutzermergePR33 `8d05beb0bc9930cd18e6128477c090c9d97caf9a` am17.10.09:48:40Z, offizieller Vercel-Erfolg am selben Commit09:48:59Z (11:48UhrEurope/Berlin). Nachfolgende Chroniknachführung zunächst im erhaltenen Master, keine eigene Veröffentlichung. Suchfeld fokussiert auch nach verzögertem Laden tatsächlich das Eingabefeld; echtes Tippen mit Leerzeichen schließt den Dialog nicht mehr versehentlich.

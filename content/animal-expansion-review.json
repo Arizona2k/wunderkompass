@@ -1,0 +1,1666 @@
+{
+  "schemaVersion": 1,
+  "preparedOn": "2026-10-17",
+  "meaning": "24 individually authored new-animal manuscripts in the existing WK053 wave, not a second backlog. No runtime articles, accepted additions, media or independent approvals claimed. Required gaps stay in BACKLOG; source-page reading is not blanket verification. Existing24 workshops are a separate preserved baseline.",
+  "runtimeNewSpecies": 0,
+  "acceptedNew": 0,
+  "independentReview": false,
+  "entries": [
+    {
+      "id": "animal-platypus",
+      "title": "Schnabeltier",
+      "taxon": "Ornithorhynchus anatinus",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Eier und Milch passen zusammen.",
+      "intro": "Eier und Milch passen zusammen.",
+      "paragraphs": [
+        "Das Schnabeltier legt Eier. Nach dem Schlüpfen versorgt die Mutter ihre Jungen mit Milch. Es gehört zu den Säugetieren.",
+        "Im weichen Schnabel sitzen Sinnesrezeptoren. Sie helfen ihm, unter Wasser Beutetiere in seiner Nähe zu finden."
+      ],
+      "source": {
+        "url": "https://animals.sandiegozoo.org/animals/platypus",
+        "sections": "ABOUT; HABITAT AND DIET; FAMILY LIFE",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Das Schnabeltier legt Eier. Nach dem Schlüpfen versorgt die Mutter ihre Jungen mit Milch. Es gehört zu den Säugetieren.",
+          "anchor": "ABOUT; HABITAT AND DIET; FAMILY LIFE"
+        },
+        {
+          "statement": "Im weichen Schnabel sitzen Sinnesrezeptoren. Sie helfen ihm, unter Wasser Beutetiere in seiner Nähe zu finden.",
+          "anchor": "ABOUT; HABITAT AND DIET; FAMILY LIFE"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Ordne Eierlegen und Milchgeben der richtigen Aussage zu: Was erfährst du über die Fortpflanzung?",
+          "hint": "Trenne das Legen eines Eis von der Ernährung des geschlüpften Jungen.",
+          "feedback": "Eierlegen und Milchgeben beschreiben zwei verschiedene Vorgänge desselben Säugetiers."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Erkläre, warum der Schnabel mehr als ein Werkzeug zum Aufnehmen von Nahrung ist.",
+          "hint": "Suche in der Beschreibung nach dem Wahrnehmen, nicht nur nach dem Fressen.",
+          "feedback": "Der Schnabel hilft bei der Suche nach Beute durch Sinnesinformationen."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Jemand findet ein Ei und behauptet: „Das muss von einem Vogel sein.“ Welcher weitere Beleg wäre nötig?",
+          "hint": "Frage nach weiteren Merkmalen und der Versorgung der Jungen.",
+          "feedback": "Ein einzelnes Merkmal reicht zur sicheren Tierzuordnung nicht aus."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-red-kangaroo",
+          "reason": "Säugetiere können ihre Jungen auf unterschiedliche Weise zur Welt bringen.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Kein Stromschlag- oder unbegrenztes Fernortungsmodell; kein sicherer Hinweis zum Anfassen.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-short-beaked-echidna",
+      "title": "Kurzschnabeligel",
+      "taxon": "Tachyglossus aculeatus",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Ein Name verrät noch keine Verwandtschaft.",
+      "intro": "Ein Name verrät noch keine Verwandtschaft.",
+      "paragraphs": [
+        "Der Kurzschnabeligel hat Stacheln, eine lange Schnauze und kräftige Grabkrallen. Er ist ein eierlegendes Säugetier.",
+        "Mit der klebrigen Zunge nimmt er Ameisen und Termiten auf. Die Krallen helfen, ihre Verstecke zu öffnen."
+      ],
+      "source": {
+        "url": "https://australian.museum/learn/animals/mammals/short-beaked-echidna/",
+        "sections": "Identification; Feeding and diet; Reproduction and life cycle",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Der Kurzschnabeligel hat Stacheln, eine lange Schnauze und kräftige Grabkrallen. Er ist ein eierlegendes Säugetier.",
+          "anchor": "Identification; Feeding and diet; Reproduction and life cycle"
+        },
+        {
+          "statement": "Mit der klebrigen Zunge nimmt er Ameisen und Termiten auf. Die Krallen helfen, ihre Verstecke zu öffnen.",
+          "anchor": "Identification; Feeding and diet; Reproduction and life cycle"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Zeige auf einer eigenen Skizze, was Krallen und Zunge jeweils beitragen.",
+          "hint": "Beginne beim Öffnen eines Verstecks und gehe dann zur Nahrungsaufnahme.",
+          "feedback": "Krallen öffnen Verstecke; die Zunge nimmt Nahrung auf."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Beschreibe die Nahrungssuche als Folge zweier verschiedener Handlungen.",
+          "hint": "Erkläre, warum ein Werkzeug zum Graben noch keine Zunge ersetzt.",
+          "feedback": "Öffnen und Aufnehmen sind verschiedene Teilaufgaben der Nahrungssuche."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Ist ein Tier mit Stacheln automatisch nahe mit einem europäischen Igel verwandt? Begründe, welche Angaben du zusätzlich brauchst.",
+          "hint": "Vergleiche Merkmale der Fortpflanzung statt nur der Körperoberfläche.",
+          "feedback": "Ähnliches Aussehen kann zu unterschiedlichen Tiergruppen gehören."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-platypus",
+          "reason": "Zwei eierlegende Säugetiere zeigen eine gemeinsame Fortpflanzungsbesonderheit und unterschiedliche Nahrungssuche.",
+          "targetStage": "same-unpublished-manuscript-wave"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Museumseite artbezogen; gruppenweite Gefährdung aller Ameisenigel nicht übertragen; individuelle Fotos nicht pauschal freigegeben.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-okapi",
+      "title": "Okapi",
+      "taxon": "Okapia johnstoni",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Streifen allein erzählen keine ganze Familiengeschichte.",
+      "intro": "Streifen allein erzählen keine ganze Familiengeschichte.",
+      "paragraphs": [
+        "Das Okapi lebt in Wäldern der Demokratischen Republik Kongo. Mit seiner langen Zunge greift es Blätter.",
+        "Seine Beine tragen helle Streifen. Trotzdem ist es mit der Giraffe verwandt und kein Zebra."
+      ],
+      "source": {
+        "url": "https://animals.sandiegozoo.org/animals/okapi",
+        "sections": "ABOUT; HABITAT AND DIET",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Das Okapi lebt in Wäldern der Demokratischen Republik Kongo. Mit seiner langen Zunge greift es Blätter.",
+          "anchor": "ABOUT; HABITAT AND DIET"
+        },
+        {
+          "statement": "Seine Beine tragen helle Streifen. Trotzdem ist es mit der Giraffe verwandt und kein Zebra.",
+          "anchor": "ABOUT; HABITAT AND DIET"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Vergleiche die beschriebenen Beine und das Greifen mit der Zunge.",
+          "hint": "Beschreibe zunächst, was du an Beinen und Zunge jeweils vergleichen willst.",
+          "feedback": "Streifen betreffen das Aussehen; die Zunge ist am Nahrungserwerb beteiligt."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Warum könnte ein reiner Vergleich der Fellmuster bei der Verwandtschaftsfrage irreführen?",
+          "hint": "Unterscheide ein sichtbares Muster von einem Beleg zur Abstammung.",
+          "feedback": "Fellmuster allein reichen nicht zur Erklärung der Verwandtschaft."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Entwirf zwei verschiedene Fragen: eine zum Aussehen und eine zur Abstammung. Welche Quellen könnten jeweils helfen?",
+          "hint": "Eine Fotobeschreibung und eine Verwandtschaftsuntersuchung beantworten verschiedene Fragen.",
+          "feedback": "Aussehen und Verwandtschaft sind unterschiedliche Untersuchungsfragen."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-giraffe",
+          "reason": "Wald- und Savannenverwandte lassen sich nach Lebensraum und Nahrungserwerb vergleichen.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Mögliche Funktionen der Streifen nicht als eindeutig experimentell bewiesen darstellen.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-meerkat",
+      "title": "Erdmännchen",
+      "taxon": "Suricata suricatta",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Gemeinsam leben heißt unterschiedliche Aufgaben beobachten.",
+      "intro": "Gemeinsam leben heißt unterschiedliche Aufgaben beobachten.",
+      "paragraphs": [
+        "Erdmännchen gehören zu den Mangusten, nicht zu den Katzen. Sie leben in Gruppen und suchen unter anderem nach kleinen wirbellosen Tieren.",
+        "Während einige nach Nahrung suchen, halten andere Ausschau. Warnrufe können die Gruppe auf Gefahren aufmerksam machen."
+      ],
+      "source": {
+        "url": "https://animals.sandiegozoo.org/animals/meerkat",
+        "sections": "ABOUT; HABITAT AND DIET; FAMILY LIFE",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Erdmännchen gehören zu den Mangusten, nicht zu den Katzen. Sie leben in Gruppen und suchen unter anderem nach kleinen wirbellosen Tieren.",
+          "anchor": "ABOUT; HABITAT AND DIET; FAMILY LIFE"
+        },
+        {
+          "statement": "Während einige nach Nahrung suchen, halten andere Ausschau. Warnrufe können die Gruppe auf Gefahren aufmerksam machen.",
+          "anchor": "ABOUT; HABITAT AND DIET; FAMILY LIFE"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Beschreibe zwei unterschiedliche Tätigkeiten innerhalb einer Gruppe.",
+          "hint": "Suche in den Absätzen nach zwei Verben für unterschiedliche Gruppenaufgaben.",
+          "feedback": "Nahrung suchen und Ausschau halten sind zwei verschiedene Tätigkeiten."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Erkläre, warum Nahrungssuche und Ausschauhalten zusammen nützlich sein können.",
+          "hint": "Denke daran, wohin sich die Aufmerksamkeit bei der Nahrungssuche richtet.",
+          "feedback": "Ausschauhalten kann Gefahren anzeigen, während andere mit Nahrungssuche beschäftigt sind."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Auf einem Foto steht ein Erdmännchen aufrecht. Beweist das bereits, dass gerade ein Feind da ist? Was müsstest du beobachten?",
+          "hint": "Ein Foto hat keinen zeitlichen Verlauf und zeigt keinen sicheren Auslöser.",
+          "feedback": "Eine Körperhaltung allein belegt noch keinen konkreten Alarm."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-honey-bee",
+          "reason": "Gruppenleben kann unterschiedliche Formen der Zusammenarbeit hervorbringen; Insektenstaat und Säugetiergruppe unterscheiden.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Keine menschlichen Dienstpläne, Absichten oder Sprache in das Verhalten hineinlesen.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-ring-tailed-lemur",
+      "title": "Katta",
+      "taxon": "Lemur catta",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Nachrichten können über mehrere Sinne ankommen.",
+      "intro": "Nachrichten können über mehrere Sinne ankommen.",
+      "paragraphs": [
+        "Kattas leben auf Madagaskar. Aufgerichtete Schwänze können der Gruppe beim Zusammenbleiben helfen.",
+        "Duftmarken und Rufe sind weitere Wege ihrer Verständigung. Nicht jede Mitteilung ist sichtbar."
+      ],
+      "source": {
+        "url": "https://www.nationalzoo.si.edu/animals/ring-tailed-lemur",
+        "sections": "Communication; Native Habitat; Food/Eating Habits",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Kattas leben auf Madagaskar. Aufgerichtete Schwänze können der Gruppe beim Zusammenbleiben helfen.",
+          "anchor": "Communication; Native Habitat; Food/Eating Habits"
+        },
+        {
+          "statement": "Duftmarken und Rufe sind weitere Wege ihrer Verständigung. Nicht jede Mitteilung ist sichtbar.",
+          "anchor": "Communication; Native Habitat; Food/Eating Habits"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Finde einen sichtbaren und einen nicht sichtbaren Kommunikationsweg.",
+          "hint": "Ein Weg betrifft den Schwanz. Suche den anderen außerhalb des Sehens.",
+          "feedback": "Schwanzhaltung ist sichtbar; Duftmarken werden gerochen."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Vergleiche, was Schwanzhaltung und Duftmarken jeweils übertragen können.",
+          "hint": "Überlege, welche Sinnesinformation jeder Kommunikationsweg verwendet.",
+          "feedback": "Sichtbare Haltung und Duftmarken nutzen unterschiedliche Sinneswege."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Du hörst keinen Ruf. Darfst du schließen, dass keine Verständigung stattfindet? Entwirf eine passende Gegenprüfung.",
+          "hint": "Prüfe ausdrücklich, welche Kommunikationswege deine Beobachtung gar nicht erfasst.",
+          "feedback": "Fehlender Ton schließt andere Informationswege nicht aus."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-western-lowland-gorilla",
+          "reason": "Zwei Primaten zeigen unterschiedliche Kommunikationsmittel; keine menschlichen Sätze unterstellen.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Keine feste Schwanzbandzahl als Fotoaufgabe; Maßrichtung und aktuelle Schutzangaben vor Integration extra prüfen.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-north-american-beaver",
+      "title": "Nordamerikanischer Biber",
+      "taxon": "Castor canadensis",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Bauen kann einen ganzen Lebensraum verändern.",
+      "intro": "Bauen kann einen ganzen Lebensraum verändern.",
+      "paragraphs": [
+        "Ein Biberdamm bremst Wasser. Dahinter kann ein Teich entstehen, den auch andere Lebewesen nutzen.",
+        "Die Wohnburg ist ein anderes Bauwerk. Ihr Eingang kann unter Wasser liegen, während die Wohnkammer darüber liegt."
+      ],
+      "source": {
+        "url": "https://www.nationalzoo.si.edu/animals/beaver",
+        "sections": "Native Habitat; Communication; Food/Eating Habits",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Ein Biberdamm bremst Wasser. Dahinter kann ein Teich entstehen, den auch andere Lebewesen nutzen.",
+          "anchor": "Native Habitat; Communication; Food/Eating Habits"
+        },
+        {
+          "statement": "Die Wohnburg ist ein anderes Bauwerk. Ihr Eingang kann unter Wasser liegen, während die Wohnkammer darüber liegt.",
+          "anchor": "Native Habitat; Communication; Food/Eating Habits"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Ordne Damm und Wohnburg ihren unterschiedlichen Aufgaben zu.",
+          "hint": "Unterscheide ein Hindernis im Fluss von einem Aufenthaltsraum.",
+          "feedback": "Der Damm verändert das Wasser; die Wohnburg dient dem Wohnen."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Erkläre die Kette: Damm, langsameres Wasser, veränderter Lebensraum.",
+          "hint": "Beginne bei der Strömung, bevor du über neue Lebensräume nachdenkst.",
+          "feedback": "Langsameres Wasser kann einen Teich und damit andere Lebensbedingungen entstehen lassen."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Kann ein Damm für manche Arten hilfreich und an anderer Stelle problematisch sein? Benenne, welche Informationen zur Bewertung fehlen.",
+          "hint": "Überlege getrennt an die Tiere im Teich und an mögliche Überflutungsflächen.",
+          "feedback": "Eine Veränderung kann für verschiedene Betroffene unterschiedliche Folgen haben."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "science-water-cycle",
+          "reason": "Biberbau und Wasserwege verbinden ein Tierverhalten mit einer Landschaftsveränderung.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Diese Karte behandelt Castor canadensis, nicht Castor fiber; Schwanz nicht als Maurerkelle darstellen.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-walrus",
+      "title": "Walross",
+      "taxon": "Odobenus rosmarus",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Art, Unterart und Schutzregel auseinanderhalten.",
+      "intro": "Art, Unterart und Schutzregel auseinanderhalten.",
+      "paragraphs": [
+        "Das Pazifische Walross wird als Unterart Odobenus rosmarus divergens geführt. Pazifische und Atlantische Walrosse werden hier nicht als zwei neue Arten gezählt.",
+        "Das US-Programm betreut Walrosse in Alaska. Eine dortige Schutzregel ist keine weltweite Gefährdungsbewertung."
+      ],
+      "source": {
+        "url": "https://www.fws.gov/program/alaska-marine-mammals-management-office/alaska-walrus-program",
+        "sections": "What We Do; Pacific walrus taxonomic rank",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Das Pazifische Walross wird als Unterart Odobenus rosmarus divergens geführt. Pazifische und Atlantische Walrosse werden hier nicht als zwei neue Arten gezählt.",
+          "anchor": "What We Do; Pacific walrus taxonomic rank"
+        },
+        {
+          "statement": "Das US-Programm betreut Walrosse in Alaska. Eine dortige Schutzregel ist keine weltweite Gefährdungsbewertung.",
+          "anchor": "What We Do; Pacific walrus taxonomic rank"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Unterscheide die Wörter Art und Unterart in den beiden wissenschaftlichen Namen.",
+          "hint": "Vergleiche, welcher Name aus zwei und welcher aus drei Wörtern besteht.",
+          "feedback": "Odobenus rosmarus ist der Artname; divergens bezeichnet hier die pazifische Unterart."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Warum sagt der Ort eines Schutzprogramms nicht die gesamte Verbreitung einer Art aus?",
+          "hint": "Unterscheide Zuständigkeitsgebiet und gesamte Tierverbreitung.",
+          "feedback": "Ein Programm in Alaska belegt seinen eigenen Bereich, keine vollständige Weltkarte."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Eine US-Schutzregel ist belegt. Welche zusätzliche Quelle brauchst du für eine weltweite IUCN-Einstufung?",
+          "hint": "Frage, ob die Quelle Rechtsschutz oder Gefährdung nach weltweiten Kriterien beschreibt.",
+          "feedback": "Rechtsraum und weltweite Bewertung sind verschiedene Angaben."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-polar-bear",
+          "reason": "Arktische Lebensräume und unterschiedliche Schutzbewertungen anhand derselben Region vergleichen.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Nahrung, Körpermaße und Tastborsten noch aus einer zusätzlichen artspezifischen Quelle belegen; keine fertige Vollkarte behaupten.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-red-fox",
+      "title": "Rotfuchs",
+      "taxon": "Vulpes vulpes",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Ein Lebensraum ist mehr als ein einzelner Wald.",
+      "intro": "Ein Lebensraum ist mehr als ein einzelner Wald.",
+      "paragraphs": [
+        "Rotfüchse nutzen verschiedene Lebensräume. Dazu gehören Wälder, offene Landschaften und menschliche Siedlungen.",
+        "Rufe und Duftmarken gehören zu ihrer Verständigung. Die sichtbare Fellfarbe allein beschreibt nicht ihr ganzes Verhalten."
+      ],
+      "source": {
+        "url": "https://animaldiversity.org/accounts/Vulpes_vulpes/",
+        "sections": "Habitat; Communication and Perception",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Rotfüchse nutzen verschiedene Lebensräume. Dazu gehören Wälder, offene Landschaften und menschliche Siedlungen.",
+          "anchor": "Habitat; Communication and Perception"
+        },
+        {
+          "statement": "Rufe und Duftmarken gehören zu ihrer Verständigung. Die sichtbare Fellfarbe allein beschreibt nicht ihr ganzes Verhalten.",
+          "anchor": "Habitat; Communication and Perception"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Sortiere die genannten Lebensräume nach eigenen Vergleichsmerkmalen.",
+          "hint": "Wähle eigene nachvollziehbare Gruppen wie dichter Bewuchs oder Siedlung.",
+          "feedback": "Ein Lebensraumvergleich braucht beschriebene Merkmale und keine Rangfolge gut/schlecht."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Erkläre, warum ein Fuchs in einer Siedlung nicht automatisch ein entflohenes Haustier ist.",
+          "hint": "Trenne den Aufenthalt nahe Menschen von einer Haltung durch Menschen.",
+          "feedback": "Ein Wildtier kann einen Siedlungsraum nutzen, ohne ein Haustier zu sein."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Du entdeckst einen Fuchs am Tag. Reicht diese Einzelbeobachtung, um die Aktivität aller Füchse zu beschreiben?",
+          "hint": "Ein Zeitpunkt ist kein vollständiger Tagesablauf einer ganzen Art.",
+          "feedback": "Einzelfall und allgemeine Aussage müssen getrennt werden."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-hedgehog",
+          "reason": "Lebensraumstrukturen in Siedlungen aus Sicht verschiedener Wildtiere vergleichen.",
+          "targetStage": "same-unpublished-manuscript-wave"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "ADW-Konto ist eine ältere Fachzusammenstellung; aktuelle Schutz- oder Verbreitungszahlen daraus nicht ungeprüft übernehmen.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-raccoon",
+      "title": "Waschbär",
+      "taxon": "Procyon lotor",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Mit den Pfoten Informationen sammeln.",
+      "intro": "Mit den Pfoten Informationen sammeln.",
+      "paragraphs": [
+        "Waschbären besitzen empfindliche Vorderpfoten. Damit können sie Gegenstände ertasten und bearbeiten.",
+        "Sie nutzen Wälder und auch Siedlungsräume. Ein Fundort am Haus erklärt noch nicht, wo die Art ursprünglich heimisch war."
+      ],
+      "source": {
+        "url": "https://animaldiversity.org/accounts/Procyon_lotor/",
+        "sections": "Habitat; Communication and Perception",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Waschbären besitzen empfindliche Vorderpfoten. Damit können sie Gegenstände ertasten und bearbeiten.",
+          "anchor": "Habitat; Communication and Perception"
+        },
+        {
+          "statement": "Sie nutzen Wälder und auch Siedlungsräume. Ein Fundort am Haus erklärt noch nicht, wo die Art ursprünglich heimisch war.",
+          "anchor": "Habitat; Communication and Perception"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Beschreibe den Unterschied zwischen Sehen und Tasten.",
+          "hint": "Vergleiche die empfangene Information statt nur das verwendete Körperteil.",
+          "feedback": "Sehen nutzt Lichtinformation, Tasten unmittelbaren Kontakt."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Warum sind empfindliche Pfoten bei der Untersuchung eines Gegenstands hilfreich?",
+          "hint": "Suche den Zusammenhang zwischen Empfindlichkeit und Untersuchung.",
+          "feedback": "Tasten kann Informationen liefern, die ein Blick allein nicht erfasst."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Eine Art kommt heute in einer Region vor. Welche Belege brauchst du, bevor du sie dort als ursprünglich heimisch bezeichnest?",
+          "hint": "Eine alte Verbreitungskarte und die Einführungsgeschichte wären weitere Belegarten.",
+          "feedback": "Heutiges Vorkommen und ursprüngliche Verbreitung sind nicht dasselbe."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-red-fox",
+          "reason": "Zwei anpassungsfähige Säugetiere verbinden Tastsinn und veränderte Lebensräume.",
+          "targetStage": "same-unpublished-manuscript-wave"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "ADW nennt ältere Taxonomiebezeichnungen; heutige Artgrenzen und invasive Auswirkungen gesondert prüfen, keine Tiere füttern/anfassen lassen.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-hedgehog",
+      "title": "Braunbrustigel",
+      "taxon": "Erinaceus europaeus",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Ein guter Garten braucht auch Verstecke.",
+      "intro": "Ein guter Garten braucht auch Verstecke.",
+      "paragraphs": [
+        "Braunbrustigel sind vor allem nachts unterwegs. Sie fressen unter anderem Käfer und Regenwürmer.",
+        "Hecken und Laub bieten geschützte Plätze. Im Winter können sie mit abgesenktem Stoffwechsel Energie sparen."
+      ],
+      "source": {
+        "url": "https://www.wildlifetrusts.org/wildlife-explorer/mammals/european-hedgehog",
+        "sections": "About; How to identify",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Braunbrustigel sind vor allem nachts unterwegs. Sie fressen unter anderem Käfer und Regenwürmer.",
+          "anchor": "About; How to identify"
+        },
+        {
+          "statement": "Hecken und Laub bieten geschützte Plätze. Im Winter können sie mit abgesenktem Stoffwechsel Energie sparen.",
+          "anchor": "About; How to identify"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Zeichne Nahrungssuche und einen geschützten Ruheplatz getrennt ein.",
+          "hint": "Zeichne den Ruheplatz als eigenen Teil des Gartens.",
+          "feedback": "Nahrung und Versteck sind unterschiedliche Bedürfnisse."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Warum kann eine völlig aufgeräumte Fläche weniger Verstecke bieten?",
+          "hint": "Vergleiche die Zahl geeigneter geschützter Stellen, nicht nur die Ordnung.",
+          "feedback": "Das Entfernen von Hecken oder Laub kann Rückzugsmöglichkeiten vermindern."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Zwei Gärten unterscheiden sich gleichzeitig in Licht, Verstecken und Nahrung. Beweist ein Igelbesuch, welcher einzelne Faktor ausschlaggebend war?",
+          "hint": "Überlege, welche Bedingungen für einen fairen Vergleich gleich bleiben müssten.",
+          "feedback": "Mehrere gleichzeitig veränderte Bedingungen verhindern eine eindeutige Ursachenbehauptung."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-red-fox",
+          "reason": "Siedlungslebensräume aus Sicht von Nahrungssuchern und ihren Rückzugsplätzen vergleichen.",
+          "targetStage": "same-unpublished-manuscript-wave"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Britische Saison- und Schutzangaben nicht pauschal auf alle Regionen übertragen; keine Fütterungs- oder Anfassversuche.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-barn-owl",
+      "title": "Schleiereule",
+      "taxon": "Tyto alba",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Artwissen benötigt mehr als ein bekanntes Gesicht.",
+      "intro": "Artwissen benötigt mehr als ein bekanntes Gesicht.",
+      "paragraphs": [
+        "Die Schleiereule ist eine eigene Vogelart. Ihr wissenschaftlicher Name lautet Tyto alba.",
+        "Ein typischer Gesichtsschleier kann beim Wiedererkennen helfen. Eine sichere Bestimmung muss weitere Merkmale berücksichtigen."
+      ],
+      "source": {
+        "url": "https://www.bto.org/learn/about-birds/birdfacts/barn-owl",
+        "sections": "BirdFacts species identity",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Die Schleiereule ist eine eigene Vogelart. Ihr wissenschaftlicher Name lautet Tyto alba.",
+          "anchor": "BirdFacts species identity"
+        },
+        {
+          "statement": "Ein typischer Gesichtsschleier kann beim Wiedererkennen helfen. Eine sichere Bestimmung muss weitere Merkmale berücksichtigen.",
+          "anchor": "BirdFacts species identity"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Unterscheide Alltagsnamen und wissenschaftlichen Namen.",
+          "hint": "Suche nach dem Namen, der sprachübergreifend auf die Art verweist.",
+          "feedback": "Schleiereule und Tyto alba bezeichnen dieselbe hier untersuchte Art."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Welche zusätzliche Beschreibung würde dir bei einer unscharfen Beobachtung helfen?",
+          "hint": "Bedenke Körperform, Größe und weitere beobachtbare Einzelheiten.",
+          "feedback": "Ein weiteres passendes Merkmal kann die Bestimmung absichern; seine Quelle muss geprüft werden."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Wäre ein einzelnes helles Gesicht auf einem Nachtfoto ein sicherer Artnachweis? Begründe, was noch geprüft werden müsste.",
+          "hint": "Unterscheide einen auffälligen Hinweis von mehreren übereinstimmenden Bestimmungsmerkmalen.",
+          "feedback": "Wiedererkennen ist noch keine vollständige Bestimmung."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-white-tailed-eagle",
+          "reason": "Zwei Greifvogelbeispiele unterscheiden; Jagdmethoden und Gehör erst nach Einzelbelegen vergleichen.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "BTO-Seite erreicht; konkrete Gehör-/Flug-/Nahrungs- und Größenclaims noch gezielt absichern. Kein leeres Artenprofil als fertig zählen.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-kingfisher",
+      "title": "Eisvogel",
+      "taxon": "Alcedo atthis",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Eine Farbe kann durch Struktur entstehen.",
+      "intro": "Eine Farbe kann durch Struktur entstehen.",
+      "paragraphs": [
+        "Eisvögel jagen an Gewässern nach Fischen. Häufig halten sie von einer Sitzwarte Ausschau.",
+        "Das leuchtende Blau wird durch die feine Struktur der Federn erzeugt. Blau aussehen heißt nicht immer, einen blauen Farbstoff zu besitzen."
+      ],
+      "source": {
+        "url": "https://www.rspb.org.uk/birds-and-wildlife/kingfisher",
+        "sections": "Introduction; identification; structural colour",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Eisvögel jagen an Gewässern nach Fischen. Häufig halten sie von einer Sitzwarte Ausschau.",
+          "anchor": "Introduction; identification; structural colour"
+        },
+        {
+          "statement": "Das leuchtende Blau wird durch die feine Struktur der Federn erzeugt. Blau aussehen heißt nicht immer, einen blauen Farbstoff zu besitzen.",
+          "anchor": "Introduction; identification; structural colour"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Verbinde Sitzwarte, Wasser und Fisch zu einer einfachen Beobachtungsskizze.",
+          "hint": "Beschrifte den Ort zum Ausschauhalten und den Ort der Beute.",
+          "feedback": "Sitzwarte und Gewässer sind verschiedene Teile der Jagdsituation."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Erkläre den Unterschied zwischen einer blauen Farbe und einem blauen Farbstoff.",
+          "hint": "Eine beobachtete Farbe erklärt noch nicht, wie das Licht verändert wird.",
+          "feedback": "Feine Strukturen können ein blaues Aussehen erzeugen, ohne blauen Farbstoff vorauszusetzen."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Ein blauer Stoff und eine blaue Feder sehen ähnlich aus. Welche Untersuchung wäre nötig, um ihre Farbentstehung zu vergleichen?",
+          "hint": "Vergleiche Farbentstehung und Betrachtungsbedingungen statt nur einen Farbeindruck.",
+          "feedback": "Gleiche Wahrnehmung kann unterschiedliche physikalische Ursachen haben."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "science-shadows",
+          "reason": "Licht und Wahrnehmung verbinden Vogelmerkmale mit der Wirkung von Licht.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "UK-Grünliste nicht als globale Gefährdungsbewertung oder fehlenden Schutzbedarf ausgeben.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-ostrich",
+      "title": "Afrikanischer Strauß",
+      "taxon": "Struthio camelus",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Nicht fliegen heißt nicht nutzlos.",
+      "intro": "Nicht fliegen heißt nicht nutzlos.",
+      "paragraphs": [
+        "Strauße sind große laufende Vögel. Ihre Flügel können beim Halten des Gleichgewichts helfen.",
+        "Bei einem Richtungswechsel ist Balance wichtig. Ein Körperteil kann eine andere Aufgabe erfüllen als bei einem fliegenden Vogel."
+      ],
+      "source": {
+        "url": "https://animals.sandiegozoo.org/animals/ostrich",
+        "sections": "ABOUT; HABITAT AND DIET",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Strauße sind große laufende Vögel. Ihre Flügel können beim Halten des Gleichgewichts helfen.",
+          "anchor": "ABOUT; HABITAT AND DIET"
+        },
+        {
+          "statement": "Bei einem Richtungswechsel ist Balance wichtig. Ein Körperteil kann eine andere Aufgabe erfüllen als bei einem fliegenden Vogel.",
+          "anchor": "ABOUT; HABITAT AND DIET"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Vergleiche Fliegen und Gleichgewichthalten als zwei Tätigkeiten.",
+          "hint": "Frage nach Tätigkeiten und nicht danach, welcher Vogel besser ist.",
+          "feedback": "Fliegen und Balance halten sind unterschiedliche Aufgaben."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Warum sind Flügel nicht automatisch nutzlos, wenn ein Vogel nicht fliegt?",
+          "hint": "Prüfe die beschriebene Aufgabe bei einem Richtungswechsel.",
+          "feedback": "Ein Körperteil kann auch bei fehlender Flugfähigkeit eine belegte Funktion haben."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Jemand nennt jeden flugunfähigen Vogel einen Strauß. Welchen Gegenbeleg findest du im vorhandenen Bestand?",
+          "hint": "Im Bestand gibt es einen weiteren flugunfähigen Vogel aus einem ganz anderen Lebensraum.",
+          "feedback": "Eine gemeinsame Eigenschaft macht verschiedene Arten nicht identisch."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-emperor-penguin",
+          "reason": "Zwei flugunfähige Vögel nutzen Körperteile in sehr unterschiedlichen Lebensräumen.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Somalistrauß nicht als bloße zweite neue Karte derselben Art zählen; fehlerhafte Höhenumrechnung auf der Quellseite nicht kopieren.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-atlantic-puffin",
+      "title": "Papageitaucher",
+      "taxon": "Fratercula arctica",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Zwischen Insel und offenem Meer wechseln.",
+      "intro": "Zwischen Insel und offenem Meer wechseln.",
+      "paragraphs": [
+        "Papageitaucher brüten an Küsten und auf Inseln im Nordatlantik. Sie nutzen unter anderem Erdhöhlen als Nistplätze.",
+        "Nahrung suchen sie schwimmend unter Wasser. Außerhalb der Brutzeit verbringen sie viel Zeit weit draußen auf dem Meer."
+      ],
+      "source": {
+        "url": "https://www.audubon.org/field-guide/bird/atlantic-puffin",
+        "sections": "Habitat; Feeding Behavior; Nesting",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Papageitaucher brüten an Küsten und auf Inseln im Nordatlantik. Sie nutzen unter anderem Erdhöhlen als Nistplätze.",
+          "anchor": "Habitat; Feeding Behavior; Nesting"
+        },
+        {
+          "statement": "Nahrung suchen sie schwimmend unter Wasser. Außerhalb der Brutzeit verbringen sie viel Zeit weit draußen auf dem Meer.",
+          "anchor": "Habitat; Feeding Behavior; Nesting"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Ordne Nisten und Nahrungssuche den beschriebenen Orten zu.",
+          "hint": "Nisten gehört zur Brutzeit; Nahrungssuche ist eine andere Tätigkeit.",
+          "feedback": "Inseln bieten Nistplätze; Nahrung wird im Wasser gesucht."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Warum reicht eine Karte der Brutplätze nicht zur vollständigen Beschreibung ihres Lebensraums?",
+          "hint": "Frage, wo die Tiere außerhalb der Brutzeit sind.",
+          "feedback": "Eine Brutplatzkarte zeigt nicht automatisch alle jahreszeitlichen Aufenthaltsorte."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Zwei Zählungen fanden zu verschiedenen Jahreszeiten statt. Was musst du prüfen, bevor du aus der Differenz einen Bestandsrückgang ableitest?",
+          "hint": "Vergleiche Zeit, Ort, Suchmethode und Aufwand der beiden Zählungen.",
+          "feedback": "Jahreszeit und Aufenthaltsort können die Beobachtbarkeit verändern."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-emperor-penguin",
+          "reason": "Brutgebiet und Nahrungsraum zweier Meeresvögel sachlich vergleichen.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Nordamerikanische Teilkarte nicht als Gesamtverbreitung ausgeben; Datumsbezug von Schutz-/Bestandszahlen noch prüfen.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-common-chameleon",
+      "title": "Europäisches Chamäleon",
+      "taxon": "Chamaeleo chamaeleon",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Farbwechsel ist keine beliebige Verkleidung.",
+      "intro": "Farbwechsel ist keine beliebige Verkleidung.",
+      "paragraphs": [
+        "Das Europäische Chamäleon greift mit Füßen und Schwanz an Zweigen. Seine Augen können sich unabhängig bewegen.",
+        "Seine Färbung kann sich verändern. Temperatur und innerer Zustand spielen dabei eine Rolle; es kopiert nicht beliebige Hintergrundmuster."
+      ],
+      "source": {
+        "url": "https://animaldiversity.org/accounts/Chamaeleo_chamaeleon/",
+        "sections": "Physical Description; Behavior",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Das Europäische Chamäleon greift mit Füßen und Schwanz an Zweigen. Seine Augen können sich unabhängig bewegen.",
+          "anchor": "Physical Description; Behavior"
+        },
+        {
+          "statement": "Seine Färbung kann sich verändern. Temperatur und innerer Zustand spielen dabei eine Rolle; es kopiert nicht beliebige Hintergrundmuster.",
+          "anchor": "Physical Description; Behavior"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Finde Greifen, Schauen und Farbwechsel als verschiedene Fähigkeiten.",
+          "hint": "Ordne Füße, Augen und Haut verschiedenen Tätigkeiten zu.",
+          "feedback": "Greifen, Wahrnehmen und Farbänderung sind verschiedene Fähigkeiten."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Warum ist „Es kann jedes Muster nachmachen“ keine passende Erklärung?",
+          "hint": "Unterscheide eine begrenzte Farbänderung von beliebigen Fotomustern.",
+          "feedback": "Die Quelle beschreibt Farbänderungen unter bestimmten Bedingungen, keine unbegrenzte Musterkopie."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Hintergrund und Temperatur ändern sich gleichzeitig. Wie würdest du gedanklich trennen, welcher Faktor einen beobachteten Farbwechsel erklärt?",
+          "hint": "Entwirf einen Gedankenvergleich mit nur einer veränderten Bedingung; kein Versuch am Tier.",
+          "feedback": "Ein fairer Vergleich verändert nicht alle Bedingungen zugleich."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "science-heat-transfer",
+          "reason": "Ein Tiermerkmal mit Umgebungstemperatur verbinden, ohne Vermutung als Ursachenbeweis auszugeben.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Kein lebendes Tier für Farbexperimente reizen; Messpunkt der Größenangabe und heutige Schutzdaten extra prüfen.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-fire-salamander",
+      "title": "Feuersalamander",
+      "taxon": "Salamandra salamandra",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Wald und Bach gehören zu einer Lebensgeschichte.",
+      "intro": "Wald und Bach gehören zu einer Lebensgeschichte.",
+      "paragraphs": [
+        "Feuersalamander leben in feuchten, strukturreichen Wäldern. Viele mitteleuropäische Weibchen setzen Larven in Gewässern ab.",
+        "Die Larven tragen äußere Kiemen. Die Bedingungen im Wald und im Larvengewässer sind deshalb beide wichtig."
+      ],
+      "source": {
+        "url": "https://nabu-lfa-feldherpetologie.jimdoweb.com/tiergruppen/amphibien/feuersalamander/",
+        "sections": "Artportrait; Fortpflanzung; Larvengewässer",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Feuersalamander leben in feuchten, strukturreichen Wäldern. Viele mitteleuropäische Weibchen setzen Larven in Gewässern ab.",
+          "anchor": "Artportrait; Fortpflanzung; Larvengewässer"
+        },
+        {
+          "statement": "Die Larven tragen äußere Kiemen. Die Bedingungen im Wald und im Larvengewässer sind deshalb beide wichtig.",
+          "anchor": "Artportrait; Fortpflanzung; Larvengewässer"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Zeichne Wald und Larvengewässer als zwei verbundene Lebensorte.",
+          "hint": "Beginne bei den Larven und zeichne erst danach den Lebensraum der erwachsenen Tiere.",
+          "feedback": "Wald und Larvengewässer sind miteinander verbundene Lebensorte."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Warum hilft nur ein guter Wald nicht, wenn das zugehörige Larvengewässer zerstört wird?",
+          "hint": "Verfolge den Weg zwischen den Entwicklungsabschnitten.",
+          "feedback": "Eine Art kann für verschiedene Entwicklungsabschnitte unterschiedliche geeignete Orte benötigen."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Darf die Beschreibung einer mitteleuropäischen Population ungeprüft für alle Unterarten weltweit gelten?",
+          "hint": "Achte auf Region und Unterart im Geltungsbereich der Quelle.",
+          "feedback": "Region und Entwicklungsform müssen zum jeweiligen Beleg passen."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-axolotl",
+          "reason": "Äußere Kiemen und unterschiedliche Entwicklungsverläufe zweier Amphibien vergleichen.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Fortpflanzung variiert regional/unterartlich; keine Verallgemeinerung aller Populationen. Tiere nicht umsetzen oder anfassen.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-common-frog",
+      "title": "Grasfrosch",
+      "taxon": "Rana temporaria",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Ein Tier braucht im Laufe des Lebens verschiedene Orte.",
+      "intro": "Ein Tier braucht im Laufe des Lebens verschiedene Orte.",
+      "paragraphs": [
+        "Grasfrösche laichen in Gewässern. Aus dem Laich entwickeln sich Kaulquappen.",
+        "Erwachsene Tiere verbringen viel Zeit auch an Land, etwa in Gärten und Wäldern. Nicht jeder Frosch ist ständig im Wasser."
+      ],
+      "source": {
+        "url": "https://www.wildlifetrusts.org/wildlife-explorer/amphibians/common-frog",
+        "sections": "About; How to identify",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Grasfrösche laichen in Gewässern. Aus dem Laich entwickeln sich Kaulquappen.",
+          "anchor": "About; How to identify"
+        },
+        {
+          "statement": "Erwachsene Tiere verbringen viel Zeit auch an Land, etwa in Gärten und Wäldern. Nicht jeder Frosch ist ständig im Wasser.",
+          "anchor": "About; How to identify"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Lege eine einfache Reihenfolge aus Laich, Kaulquappe und erwachsenem Tier.",
+          "hint": "Nutze die Namen der Entwicklungsabschnitte als Zeitanker.",
+          "feedback": "Laich kommt vor Kaulquappen; danach folgen junge und erwachsene Frösche."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Warum muss man bei der Lebensraumbeschreibung nach dem Entwicklungsabschnitt fragen?",
+          "hint": "Überlege, ob alle Entwicklungsabschnitte dieselben Bedingungen brauchen.",
+          "feedback": "Laich und Kaulquappen sind an Gewässer gebunden; die Lebensraumnutzung ändert sich später."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "In einem Teich fehlen an einem Tag erwachsene Frösche. Beweist das, dass die Umgebung für die Art ungeeignet ist?",
+          "hint": "Frage nach Entwicklungsstadium, Jahreszeit und möglichem Aufenthalt außerhalb des Teichs.",
+          "feedback": "Ein Ort und ein Zeitpunkt erfassen nicht den ganzen Lebenszyklus."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-fire-salamander",
+          "reason": "Zwei Amphibien verbinden Wasser- und Landlebensräume auf unterschiedliche Weise.",
+          "targetStage": "same-unpublished-manuscript-wave"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Britische Saisonzeiten und Schutzgesetze nicht als weltweit gültig darstellen; keine Entnahme von Laich.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-eastern-clown-anemonefish",
+      "title": "Echter Clownfisch",
+      "taxon": "Amphiprion percula",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Ein ähnliches Muster kann verschiedene Arten verdecken.",
+      "intro": "Ein ähnliches Muster kann verschiedene Arten verdecken.",
+      "paragraphs": [
+        "Der Echte Clownfisch lebt zwischen den Tentakeln bestimmter Seeanemonen. Er nimmt unter anderem Algen und Zooplankton auf.",
+        "Amphiprion percula und der ähnliche Amphiprion ocellaris sind verschiedene Arten. Nicht jedes orange-weiß gestreifte Tier darf automatisch gleich bestimmt werden."
+      ],
+      "source": {
+        "url": "https://australian.museum/learn/animals/fishes/eastern-clown-anemonefish-amphiprion-percula/",
+        "sections": "Habitat; Distribution; Feeding and diet",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Der Echte Clownfisch lebt zwischen den Tentakeln bestimmter Seeanemonen. Er nimmt unter anderem Algen und Zooplankton auf.",
+          "anchor": "Habitat; Distribution; Feeding and diet"
+        },
+        {
+          "statement": "Amphiprion percula und der ähnliche Amphiprion ocellaris sind verschiedene Arten. Nicht jedes orange-weiß gestreifte Tier darf automatisch gleich bestimmt werden.",
+          "anchor": "Habitat; Distribution; Feeding and diet"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Unterscheide den Fisch und seine Seeanemone als zwei Tiere.",
+          "hint": "Die Seeanemone ist keine Pflanze und kein Körperteil des Fisches.",
+          "feedback": "Fisch und Seeanemone sind zwei unterschiedliche Tiere."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Warum hilft eine genaue Artbezeichnung bei einer Frage nach der Verbreitung?",
+          "hint": "Prüfe, welche der ähnlich benannten Arten die Quelle tatsächlich beschreibt.",
+          "feedback": "Eine artspezifische Verbreitung darf nicht auf alle ähnlichen Tiere übertragen werden."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Ein Foto trägt nur die Aufschrift „Clownfisch“. Darf daraus die Verbreitung einer ganz bestimmten Art abgeleitet werden?",
+          "hint": "Eine Gruppenbeschriftung ersetzt keinen vollständigen Artbeleg.",
+          "feedback": "Gruppenname, Foto und Artbeleg müssen zusammenpassen."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "science-coral-reef",
+          "reason": "Rifflebensraum und Beziehungen zwischen unterschiedlichen Lebewesen untersuchen.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Keine Nemo-Abbildung oder fremde Unterwasserfotos übernehmen; A.percula nicht mit A.ocellaris verwechseln.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-european-eel",
+      "title": "Europäischer Aal",
+      "taxon": "Anguilla anguilla",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Eine Wanderung verbindet Flüsse und Ozean.",
+      "intro": "Eine Wanderung verbindet Flüsse und Ozean.",
+      "paragraphs": [
+        "Die Lebensgeschichte des Europäischen Aals verbindet europäische Gewässer mit dem Atlantik. Junge Entwicklungsstadien gelangen mit Meeresströmungen an Küsten.",
+        "Barrieren in Flüssen können Wanderwege unterbrechen. Eine offene Verbindung gehört deshalb zur Betrachtung des Lebensraums."
+      ],
+      "source": {
+        "url": "https://www.wildlifetrusts.org/national-marine-week/incredible-journeys",
+        "sections": "The epic life journey of the European eel",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Die Lebensgeschichte des Europäischen Aals verbindet europäische Gewässer mit dem Atlantik. Junge Entwicklungsstadien gelangen mit Meeresströmungen an Küsten.",
+          "anchor": "The epic life journey of the European eel"
+        },
+        {
+          "statement": "Barrieren in Flüssen können Wanderwege unterbrechen. Eine offene Verbindung gehört deshalb zur Betrachtung des Lebensraums.",
+          "anchor": "The epic life journey of the European eel"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Verbinde Fluss, Küste und Meer auf einer eigenen Übersicht.",
+          "hint": "Zeige Verbindungen statt einer einzigen festen Wohnadresse.",
+          "feedback": "Fluss, Küste und Ozean gehören zur betrachteten Lebensgeschichte."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Erkläre, warum ein Hindernis an einer Stelle für einen Wanderfisch bedeutsam sein kann.",
+          "hint": "Verfolge gedanklich den zusammenhängenden Weg vor und nach dem Hindernis.",
+          "feedback": "Ein unterbrochener Weg kann den Zugang zu einem weiteren Lebensraum verhindern."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Wie unterscheiden sich ein beobachteter Larvenfund und eine direkt beobachtete Eiablage als Forschungsbeleg?",
+          "hint": "Unterscheide direktes Beobachten von einer Schlussfolgerung aus Fundorten und Entwicklungsstadien.",
+          "feedback": "Beobachtung und daraus abgeleitete Erklärung müssen kenntlich bleiben."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "science-currents",
+          "reason": "Ozeanströmungen und durchgängige Wanderwege verbinden mehrere Lebensabschnitte.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Laichvorgang/Sargassosee nicht als direkt beobachtetes vollständiges Ereignis schildern; zusätzliche Primärstudie sowie aktuelle Gefährdungsdaten vor Integration nötig.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-monarch-butterfly",
+      "title": "Monarchfalter",
+      "taxon": "Danaus plexippus",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Eine Art kann verschiedene Wanderstrategien besitzen.",
+      "intro": "Eine Art kann verschiedene Wanderstrategien besitzen.",
+      "paragraphs": [
+        "Viele Monarchfalter in Nordamerika wandern. Es gibt aber auch Populationen, die nicht dieselbe lange Wanderung unternehmen.",
+        "Die Raupen nehmen mit Seidenpflanzen bestimmte Abwehrstoffe auf. Ihre auffällige Färbung gehört zur Beziehung zwischen Nahrung und Schutz."
+      ],
+      "source": {
+        "url": "https://www.fws.gov/species/monarch-danaus-plexippus",
+        "sections": "Overview; populations and migration",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Viele Monarchfalter in Nordamerika wandern. Es gibt aber auch Populationen, die nicht dieselbe lange Wanderung unternehmen.",
+          "anchor": "Overview; populations and migration"
+        },
+        {
+          "statement": "Die Raupen nehmen mit Seidenpflanzen bestimmte Abwehrstoffe auf. Ihre auffällige Färbung gehört zur Beziehung zwischen Nahrung und Schutz.",
+          "anchor": "Overview; populations and migration"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Unterscheide Raupe und Falter als zwei Entwicklungsstadien.",
+          "hint": "Vergleiche Entwicklungsform und Wanderverhalten getrennt.",
+          "feedback": "Raupe und Falter sind Entwicklungsstadien; wandernde und nicht wandernde Populationen unterscheiden sich."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Warum ist „Jeder Monarch fliegt dieselbe Strecke“ zu pauschal?",
+          "hint": "Die Quelle unterscheidet ausdrücklich verschiedene Populationen.",
+          "feedback": "Eine verbreitete Wanderstrategie gilt nicht automatisch für jedes Tier der Art."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Wenn Tiere einer Population wandern, darf diese Beobachtung auf alle Populationen weltweit übertragen werden?",
+          "hint": "Prüfe, für welche Population der beobachtete Weg tatsächlich belegt wurde.",
+          "feedback": "Artname allein legt nicht jedes Verhalten aller Populationen fest."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-honey-bee",
+          "reason": "Zwei Insekten zeigen unterschiedliche Lebenszyklen und Beziehungen zu Pflanzen.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Vorgeschlagene US-Schutzregel ist keine bereits geltende weltweite Einstufung; keine giftigen Pflanzen anfassen oder Raupen füttern lassen.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-garden-snail",
+      "title": "Gefleckte Weinbergschnecke",
+      "taxon": "Cornu aspersum",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Ein vertrauter Gartenbewohner hat mehrere Sinne.",
+      "intro": "Ein vertrauter Gartenbewohner hat mehrere Sinne.",
+      "paragraphs": [
+        "Cornu aspersum ist eine Landschneckenart. Sie wird besonders bei feuchtem Wetter und nachts beobachtet.",
+        "Schnecken nutzen unter anderem Berührung und chemische Signale zur Orientierung. Sie erleben ihre Umgebung nicht wie ein Mensch."
+      ],
+      "source": {
+        "url": "https://www.nhm.ac.uk/discover/snails-and-slugs.html",
+        "sections": "Snails and slugs to watch out for; Where to find; senses",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Cornu aspersum ist eine Landschneckenart. Sie wird besonders bei feuchtem Wetter und nachts beobachtet.",
+          "anchor": "Snails and slugs to watch out for; Where to find; senses"
+        },
+        {
+          "statement": "Schnecken nutzen unter anderem Berührung und chemische Signale zur Orientierung. Sie erleben ihre Umgebung nicht wie ein Mensch.",
+          "anchor": "Snails and slugs to watch out for; Where to find; senses"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Beschreibe eine Schneckenbeobachtung, ohne das Tier zu berühren.",
+          "hint": "Beobachte aus Abstand und benenne nur Ort, Wetter und sichtbare Bewegung.",
+          "feedback": "Eine sichere Beobachtung benötigt kein Anfassen oder Versetzen der Schnecke."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Warum könnten Zeitpunkt und Feuchtigkeit beeinflussen, ob du Schnecken siehst?",
+          "hint": "Trenne Aktivität und Sichtbarkeit von der gesamten Tierzahl.",
+          "feedback": "Feuchtigkeit und Nachtaktivität können beeinflussen, wann Tiere sichtbar werden."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Du findest nach Regen mehr Schnecken als gestern. Ist damit bewiesen, dass über Nacht mehr Tiere entstanden sind?",
+          "hint": "Vergleiche Entstehen neuer Tiere mit dem Sichtbarwerden schon vorhandener Tiere.",
+          "feedback": "Mehr sichtbare Tiere bedeuten nicht automatisch einen gewachsenen Bestand."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-hedgehog",
+          "reason": "Feuchtigkeit, Verstecke und unterschiedliche Gartenbeobachtungen vergleichen; keine sichere konkrete Beutebeziehung behaupten.",
+          "targetStage": "same-unpublished-manuscript-wave"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Gruppenweite Aussagen der Museumsseite nicht unbesehen artspezifisch übertragen; Größen-/Radula- und Schutzclaims zusätzlich prüfen.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-european-lobster",
+      "title": "Europäischer Hummer",
+      "taxon": "Homarus gammarus",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Wachsen trotz harter Außenhülle.",
+      "intro": "Wachsen trotz harter Außenhülle.",
+      "paragraphs": [
+        "Der Europäische Hummer ist ein Krebstier. Seine beiden großen Scheren können verschiedene Aufgaben bei der Nahrungsaufnahme erfüllen.",
+        "Zum Wachsen muss er seine feste Außenhülle abstreifen. Eine Häutung ist kein Wechsel zu einer anderen Tierart."
+      ],
+      "source": {
+        "url": "https://www.wildlifetrusts.org/wildlife-explorer/marine/crustaceans/lobster",
+        "sections": "About; How to identify",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Der Europäische Hummer ist ein Krebstier. Seine beiden großen Scheren können verschiedene Aufgaben bei der Nahrungsaufnahme erfüllen.",
+          "anchor": "About; How to identify"
+        },
+        {
+          "statement": "Zum Wachsen muss er seine feste Außenhülle abstreifen. Eine Häutung ist kein Wechsel zu einer anderen Tierart.",
+          "anchor": "About; How to identify"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Unterscheide Greifwerkzeug und Außenhülle.",
+          "hint": "Eine Schere greift; die Außenhülle umschließt den Körper.",
+          "feedback": "Greifwerkzeug und stützende Körperhülle haben verschiedene Aufgaben."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Warum kann ein Hummer nicht einfach in einer unverändert engen Hülle weiterwachsen?",
+          "hint": "Stelle dir eine unverändert enge äußere Begrenzung vor.",
+          "feedback": "Häutung ermöglicht Größenwachstum trotz fester Außenhülle."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Eine leere Hülle liegt am Boden. Ist das ein sicherer Beweis, dass ein Hummer gestorben ist? Welche andere Erklärung gibt es?",
+          "hint": "Suche eine Erklärung, bei der das Tier die Hülle verlassen hat und weiterlebt.",
+          "feedback": "Eine zurückgelassene Struktur kann mehrere Entstehungsursachen haben."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-common-octopus",
+          "reason": "Zwei wirbellose Meerestiere mit sehr unterschiedlicher Körperstütze vergleichen.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Keine Gleichsetzung mit Languste oder Amerikanischem Hummer; Fotos und Größenmesspunkte vor Integration prüfen.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-common-cuttlefish",
+      "title": "Gewöhnlicher Tintenfisch",
+      "taxon": "Sepia officinalis",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Tintenfisch ist kein einzelner Körperbau.",
+      "intro": "Tintenfisch ist kein einzelner Körperbau.",
+      "paragraphs": [
+        "Sepia officinalis gehört zu den Kopffüßern. Sie besitzt einen anderen Körperbau als ein Krake.",
+        "Farb- und Musteränderungen helfen bei Tarnung und Verständigung. Ein einzelnes Bild zeigt nur einen Augenblick."
+      ],
+      "source": {
+        "url": "https://www.wildlifetrusts.org/wildlife-explorer/marine/squids-octopuses-and-cuttlefish/common-cuttlefish",
+        "sections": "About; How to identify",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Sepia officinalis gehört zu den Kopffüßern. Sie besitzt einen anderen Körperbau als ein Krake.",
+          "anchor": "About; How to identify"
+        },
+        {
+          "statement": "Farb- und Musteränderungen helfen bei Tarnung und Verständigung. Ein einzelnes Bild zeigt nur einen Augenblick.",
+          "anchor": "About; How to identify"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Vergleiche die Karte mit dem Gewöhnlichen Kraken: Welche Beschreibung gehört zu welcher Art?",
+          "hint": "Prüfe Artname und beschriebene Körpermerkmale zusammen.",
+          "feedback": "Krake und Sepia sind verwandte, aber unterschiedliche Kopffüßer."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Warum kann eine Aufnahme nicht alle möglichen Muster desselben Tiers zeigen?",
+          "hint": "Ein Foto hält keinen vollständigen zeitlichen Farbwechsel fest.",
+          "feedback": "Ein einzelner Aufnahmezeitpunkt erfasst nur einen Zustand eines veränderlichen Musters."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Zwei Tiere sehen auf verschiedenen Fotos verschieden aus. Welche zusätzlichen Angaben brauchst du, bevor du zwei Arten behauptest?",
+          "hint": "Du brauchst etwa Artbestimmung, Aufnahmezeit und Beobachtungsverlauf.",
+          "feedback": "Veränderliches Aussehen und unterschiedliche Art sind keine gleichbedeutenden Aussagen."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "animal-common-octopus",
+          "reason": "Verwandte Kopffüßer nach tatsächlichen Körpermerkmalen statt Sammelnamen vergleichen.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Arm-/Tentakelzahl, Schulp und konkrete Farbzell-Erklärung vor Integration anhand weiterer Primärquelle absichern.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    },
+    {
+      "id": "animal-short-snouted-seahorse",
+      "title": "Kurzschnäuziges Seepferdchen",
+      "taxon": "Hippocampus hippocampus",
+      "stage": "authored-manuscript",
+      "runtimeIntegrated": false,
+      "independentlyAccepted": false,
+      "goal": "Ein Greifschwanz kann im Wasser Halt geben.",
+      "intro": "Ein Greifschwanz kann im Wasser Halt geben.",
+      "paragraphs": [
+        "Das Kurzschnäuzige Seepferdchen ist ein Fisch. Mit dem Greifschwanz kann es sich an Pflanzen oder anderen geeigneten Strukturen festhalten.",
+        "Seine Nahrung besteht aus kleinen Beutetieren. Der Name „Seepferdchen“ bedeutet keine Verwandtschaft zu Pferden."
+      ],
+      "source": {
+        "url": "https://www.wildlifetrusts.org/wildlife-explorer/marine/fish-including-sharks-skates-and-rays/short-snouted-seahorse",
+        "sections": "About; How to identify; reproduction note",
+        "accessedOn": "2026-10-17",
+        "status": "source-page-read; individual claim/media/measurement completion remains open"
+      },
+      "claims": [
+        {
+          "statement": "Das Kurzschnäuzige Seepferdchen ist ein Fisch. Mit dem Greifschwanz kann es sich an Pflanzen oder anderen geeigneten Strukturen festhalten.",
+          "anchor": "About; How to identify; reproduction note"
+        },
+        {
+          "statement": "Seine Nahrung besteht aus kleinen Beutetieren. Der Name „Seepferdchen“ bedeutet keine Verwandtschaft zu Pferden.",
+          "anchor": "About; How to identify; reproduction note"
+        }
+      ],
+      "levels": {
+        "6-8": {
+          "kind": "observe-and-sort",
+          "task": "Vergleiche Festhalten und freies Schwimmen als zwei Tätigkeiten.",
+          "hint": "Vergleiche den Nutzen eines Haltepunkts mit der Fortbewegung.",
+          "feedback": "Festhalten sichert einen Ort; Schwimmen verändert den Aufenthaltsort."
+        },
+        "9-11": {
+          "kind": "explain-a-connection",
+          "task": "Warum ist eine genaue Beschreibung des Lebensraums hilfreicher als nur das Wort Meer?",
+          "hint": "Suche nach Strukturen und Bedingungen statt nur einem großen Raumbegriff.",
+          "feedback": "Pflanzen und andere geeignete Haltestrukturen beschreiben einen konkreteren Lebensraum."
+        },
+        "12-14": {
+          "kind": "assess-evidence",
+          "task": "Eine Quelle nennt „Selbstbefruchtung“ und behandelt DD als „nicht gelistet“. Sollten diese Aussagen ungeprüft in eine Kinderkarte gelangen?",
+          "hint": "DD ist eine Datenlage-Kategorie; ungewöhnliche Fortpflanzungsbehauptungen brauchen eine weitere Fachquelle.",
+          "feedback": "Auch fachnahe Webseiten benötigen eine Aussagenprüfung; unklare Behauptungen bleiben gesperrt."
+        }
+      },
+      "proposedConnections": [
+        {
+          "target": "science-foodweb",
+          "reason": "Kleine Beutetiere, Verstecke und Räuber als Teil eines Nahrungsnetzes erklären.",
+          "targetStage": "existing-runtime"
+        }
+      ],
+      "media": {
+        "status": "not-implemented",
+        "decision": "Eigene lesbare Vergleichs-/Belegdarstellung passend zum Lernziel vorbereiten. Keine fremden Fotos, Logos oder Modelle übernommen."
+      },
+      "limits": "Quellenseite enthält problematische Fortpflanzungs-/DD-Formulierungen. Diese ausdrücklich NICHT übernehmen; unabhängige Fachquelle vor Fortpflanzungs- oder IUCN-Angabe nötig.",
+      "openBeforeRuntime": [
+        "Art-/Konzeptabgleich und vollständige Source-Claims fertigstellen.",
+        "Artspezifische Messspanne, Messrichtung und Schutzbeschreibung belegen; keine ungeprüften Zahlen.",
+        "Eigene sinnvolle Darstellung und Lernhandlungen in vorhandene Komponenten integrieren.",
+        "Neue und betroffene alte Rückwege, Suche, Speicherung, Offline und tatsächliche Browser einschließlich großer Schrift/Zoom prüfen.",
+        "Volle Abschnittsabnahme und tatsächliche Veröffentlichung getrennt nachweisen."
+      ]
+    }
+  ]
+}

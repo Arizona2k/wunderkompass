@@ -1,5 +1,9 @@
 # Produktvision WunderKompass
 
+Aktuelle dauerhafte Präzisierung17.10.2026: [Originalauftrag](content/auftrag-2026-10-13/WunderKompass_Fortsetzungsauftrag_2026-10-17.md). Die elf fachübergreifenden Perspektiven von Strategie/UX/Design bis Didaktik/Sicherheit/Betrieb wirken am gleichen Lernprodukt zusammen; keine zusätzlichen Rollensysteme. Neue Inhalte, relevante Altredaktion, Medien/Design, Lernmechaniken und Wissensnetz gemeinsam entwickeln. Sinnvolle Technik-/Gestaltungs-/Prozessoptimierung ist ausdrücklich beauftragt, einschließlich größerer nachgewiesen vorteilhafter Änderungen; Aufwand und Risiken berücksichtigen. Alte „keine Optimierungsrunde“-Kurzregeln sind kein allgemeines Verbesserungsverbot.
+
+Nach einmaliger manueller Setupübernahme sind normale vollständig geprüfte Folgeabschnitte unter den verbindlichen Bedingungen aus TEST-LIVE automatisch zur bestehenden Testwebsite freigegeben; alte pauschale Einzelmergeverbote sind insoweit überholt. Keine neue Freigabe für main, andere Websites, öffentlichen Zugang, Kosten oder pausierte News. Paket3.5/Tierwelt zuerst,4–8 unverändert; Zukunftsideen nicht ungeprüft in3.5 ziehen. Bestehende technische/fachliche Qualitätsziele und offenen unabhängigen Abnahmen bleiben.
+
 Dauerhafter Arbeitsgrundsatz17.10.2026: sichtbare Lernverbesserungen in zusammenhängenden Abschnitten entwickeln; neue/geänderte Funktionen und neue Browsertests früh mit der vorhandenen Umgebung in den betroffenen tatsächlichen Browsern prüfen. Fehler vor der vollständigen Schlussabnahme korrigieren, sämtliche Endtests erhalten. Nutzermerge und tatsächliche Testbereitstellung kontrolliert abgleichen; ein fertiger Teilabschnitt beendet nicht Paket3.5. News bleibt pausiert, Pakete4–8 und spätere Ideen bleiben erhalten.
 
 ## Aktuelle Nutzerentscheidung16.10.2026 – Paket3.5 fortsetzen, News pausiert

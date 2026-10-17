@@ -6,12 +6,14 @@ import {fileURLToPath} from 'node:url';
 import {sourceDigest,createHandoff,engineComplete} from './handoff.mjs';
 import {learningFingerprint} from '../build/learning-fingerprint.mjs';
 import {prepareReview} from './review-evidence.mjs';
+import qualityContext from './release/quality-context.cjs';
 
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const read=async file=>JSON.parse(await fs.readFile(file,'utf8'));
 const head=()=>execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
-async function snapshot(){const commit=head();if(process.env.GITHUB_SHA&&process.env.GITHUB_SHA!==commit)throw Error('Checkout differs from tested CI commit');return {testedCommit:commit,runId:process.env.GITHUB_RUN_ID??'local',attempt:process.env.GITHUB_RUN_ATTEMPT??'1',sourceDigest:await sourceDigest(),build:learningFingerprint(process.cwd())};}
+async function snapshot(){const commit=head();if(process.env.GITHUB_SHA&&process.env.GITHUB_SHA!==commit)throw Error('Checkout differs from tested CI commit');return {context:qualityContext.currentContext(),testedCommit:commit,runId:process.env.GITHUB_RUN_ID??'local',attempt:process.env.GITHUB_RUN_ATTEMPT??'1',sourceDigest:await sourceDigest(),build:learningFingerprint(process.cwd())};}
 export function assertSnapshot(actual,expected){
+ if(expected.context)qualityContext.assertContext(actual?.context,expected.context);
  for(const key of ['testedCommit','sourceDigest','build','runId','attempt'])if(typeof actual?.[key]!=='string'||actual[key]!==expected[key])throw Error('Mixed or missing quality snapshot '+key);
  if(!/^(?:local|[0-9]+)$/.test(actual.runId)||!/^[0-9]+$/.test(actual.attempt))throw Error('Malformed quality run identity');
  if(!/^[a-f0-9]{40}$/.test(actual.testedCommit)||!/^[a-f0-9]{64}$/.test(actual.sourceDigest)||!/^[a-f0-9]{16}$/.test(actual.build))throw Error('Malformed quality snapshot');

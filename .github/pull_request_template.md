@@ -15,7 +15,7 @@ Getesteter Head-/Basisstand, tatsächlich ausgeführte lokale Pflichtprüfungen 
 - [ ] Keine persönlichen Pässe, Profile oder Geheimnisse enthalten.
 - [ ] Veröffentlichungsstand und nächster Schritt dokumentiert.
 
-Fertige Pakete nach bestandenen lokalen Pflichtprüfungen als Ready for review; Draft nur für gekennzeichnete Zwischenstände und nach Fertigstellung selbstständig umstellen. Ready for review und grüne CI sind keine Übernahmefreigabe: Merge nach test-live ausschließlich nach ausdrücklicher Nutzerbestätigung. Kein Auto-Merge, keine main-Änderung oder Aktivierung der deaktivierten Release-Kette.
+Fertige Pakete nach bestandenen lokalen Pflichtprüfungen als Ready for review; Draft nur für gekennzeichnete Zwischenstände und nach Fertigstellung selbstständig umstellen. Setup sowie Änderungen der Freigabe-/Sicherheits-/Kostenbasis werden manuell übernommen. Für normale fertig geprüfte Folgeabschnitte gilt nach belegter Einrichtung die begrenzte Testfreigabe aus TEST-LIVE.md; keine erneute routinemäßige Einzelzustimmung. PR27/Drafts bleiben ausgeschlossen; main und die deaktivierte Legacy-Pushkette bleiben unberührt.
 
 Vorschau/Deployment nur bei passender gesonderter Freigabe. Offene Grenzen und Rückfallmöglichkeit:
 
