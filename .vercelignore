@@ -1,0 +1,34 @@
+# Keep local credentials and personal data out of CLI deployment uploads.
+# Required source, scripts, build inputs and both lockfiles remain included.
+.git/
+.env
+.env.*
+**/.env
+**/.env.*
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/*.jks
+**/*.keystore
+**/credentials.json
+**/service-account*.json
+**/*.sqlite
+**/*.sqlite3
+**/*.db
+**/*.log
+**/*.har
+**/wunderkompass-pass-*.json
+**/erde-entdecken-pass-*.json
+**/private/**
+**/backups/**
+work/
+.qa-output/
+qa/.qa-output/
+.sites-runtime/
+.agents/
+.codex/
+dist/
+node_modules/
+qa/node_modules/
+pnpm-store/

@@ -1,4 +1,10 @@
+## 17.10.2026 · Datenschutzvorsorge (WK-059)
+
+Persönliche Passdateien,lokale Credential-/Schlüssel-/DB-/HAR-/Logdateien und private Sicherungsordner zusätzlich von Git und CLI-Deploymentuploads ausgeschlossen. Sichere `.env.example` und SECURITY.md erläutern den weiterhin schlüsselfreien Start und repositorylokale Commitkonfiguration. Historische Metadatenbereinigung mit unveränderten Dateibäumen lokal vorbereitet; öffentliche Altdaten noch nicht entfernt. Nachweise/Grenzen und Übernahmestand in PROJECT_STATE.md.
+
 ## Unveröffentlicht · Quellen leichter lesen und antippen
+
+
 
 - Quellenlinks aller16 bestehenden Lernreisen verwenden16px statt13px Grundschrift (18,4px bei großer Schrift) und mindestens48px statt zuvor20,8px Linkhöhe. Lange Namen umbrechen; Unterstreichung, kräftigerer Textkontrast und sichtbarer Tastaturfokus unterstützen den Zugang zu Originalbelegen.
 - Vorhandene echte Browsermatrix prüft Quellenzugang normal/groß, Touchgeometrie, Tastatur und alle80 ursprünglichen Kapitelziele; zusätzlich nativen200%-Zoom. Keine Texte, Quellenadressen, Reiseabschlüsse, Passfelder oder Freigabeschranken geändert.

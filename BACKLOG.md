@@ -26,6 +26,10 @@ Bestehende Masterverbesserung kontrolliert ausgezogen: Quellenlinks aller16 Lern
 
 # Gemeinsamer Entwicklungsbestand
 
+## WK-059 · Datenschutz nach öffentlicher Repositoryfreigabe
+
+P1 · in Prüfung: Sicherheitsbranch von test-live68cb0bd. Alle zugänglichen Branches/PR-Refs/195Commits,Projektdateien/Bildmetadaten/OCR sowie GitHub-PR-/Issue-/Actionsinhalte geprüft. Keine echten Zugangsdaten bestätigt; private historische Autor-/Committerdaten und98Actions-Laufmetadaten bleiben öffentlich. Künftige lokale Commitidentität korrigiert,Pass-/Secret-/CLI-Uploadausschlüsse und sichere Konfigurationshinweise umgesetzt. Lokalen Rewrite mit195 unveränderten Dateibäumen vorbereitet; kein Remote-Rewrite. Akzeptanz: Funktionsprüfungen und reguläre Sicherheits-PR-Übernahme nach test-live,keine fremden PRs; konkrete historische Restschritte und Grenzen benennen. Binäre Actions-Artefakte wegenHTTP403 nicht vollständig zugänglich. Aktueller Nachweis ausschließlich PROJECT_STATE/zugehörigerPR.
+
 ## Aktive Fortsetzung17.10.2026 – WK052/057 und WK053
 
 Verbindlicher [neuer Originalauftrag](content/auftrag-2026-10-13/WunderKompass_Fortsetzungsauftrag_2026-10-17.md) vollständig archiviert, keine zweite Roadmap. WK052/057: begrenzten Setup-PR auf tatsächlichem test-live8d05beb vorbereiten; bestehenden Quality-Abschluss beider Varianten an PR/Head/Basis/Run/Workflow binden, aktive native strikte Pflichtchecks verlangen. Einmaliger Nutzermerge des Setups; danach geeignete fertige Routinen ohne neue Einzelzustimmung innerhalb des belegten Betriebsfensters. Freigabe-/Sicherheits-/Kostenänderungen weiterhin manuell. Die alten pauschalen „kein Auto-Merge“-/„keine Optimierung“-Kurzregeln sind durch diese ausdrückliche Entscheidung ersetzt; alle technischen Standards und vollständigen Prüfmatrizen bleiben. Kein neuer Workflowpublisher, keine direkten Zielbranchpushes und keine Änderung von main.
