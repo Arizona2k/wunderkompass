@@ -1,3 +1,8 @@
+## Unveröffentlicht · vollständige Prüfbelege erhalten
+
+- Frühe und vollständige Engineprüfungen sichern Such-/Quellenbelege unter getrennten Namen. Originalbilder und Diagnosewerte bleiben unverändert; der Schutz gegen tatsächliches Überschreiben bleibt aktiv.
+- Diagnose-JSONs auch im bestehenden Erfolgsartefakt und Collector erhalten. Keine Produktänderung oder vorzeitige technische/fachliche Freigabe.
+
 ## Unveröffentlicht · präzisere Diagnose der verzögerten Suche
 
 -Exakte Tastatureingaben im tatsächlichen Vordergrunddokument prüfen; verzögertes Nachladen, zwei vollständige deutsche Tiernamen, erneutes Öffnen und Schließen vor Ladeende bleiben unverändert abgesichert.

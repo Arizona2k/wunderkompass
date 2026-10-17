@@ -52,13 +52,13 @@ async function job(kind){
  if(kind==='chromium'){if(report.scope!=='complete mandatory regression')throw Error('Partial Chromium cannot pass');await prepareReview();}
  else if(report.sourceDigest!==expected.sourceDigest||report.testedCommit!==expected.testedCommit||report.engines.length!==1||report.engines[0].name!==kind||!engineComplete(report.engines[0])||report.errors.length)throw Error('Incomplete actual engine '+kind);
  const source=kind==='chromium'?'.qa-output/review':'.qa-output',files=[];
- for(const name of (await fs.readdir(source)).sort()){if(kind!=='chromium'&&!/^journey-engine-.*\.png$|^engine-report\.json$/.test(name))continue;if(!/\.(png|json|xml)$/.test(name))continue;const data=await fs.readFile(source+'/'+name);await fs.writeFile(directory+'/'+name,data);files.push({file:name,bytes:data.length,sha256:sha(data)});}
+ for(const name of (await fs.readdir(source)).sort()){if(kind!=='chromium'&&!/^journey-engine-.*\.(png|json)$|^engine-report\.json$/.test(name))continue;if(!/\.(png|json|xml)$/.test(name))continue;const data=await fs.readFile(source+'/'+name);await fs.writeFile(directory+'/'+name,data);files.push({file:name,bytes:data.length,sha256:sha(data)});}
  await fs.writeFile(directory+'/job-proof.json',JSON.stringify({schemaVersion:1,kind,status:'passed',...expected,seconds:report.seconds,files},null,2));
  console.log(JSON.stringify({stage:'browser-job-proof',kind,...expected,seconds:report.seconds,bytes:files.reduce((n,f)=>n+f.bytes,0)}));
 }
 async function collect(){
  const expected=await snapshot(),proofs=[];await restore();
- for(const kind of ['chromium','firefox','webkit']){const directory='work/quality-'+kind,proof=await read(directory+'/job-proof.json');proofs.push(proof);for(const f of proof.files){if(f.file!==path.basename(f.file))throw Error('Invalid evidence filename');const data=await fs.readFile(directory+'/'+f.file);if(data.length!==f.bytes||sha(data)!==f.sha256)throw Error('Damaged browser evidence '+f.file);if(kind==='chromium'||f.file.endsWith('.png'))await copy(directory+'/'+f.file,'.qa-output/'+f.file);}}
+ for(const kind of ['chromium','firefox','webkit']){const directory='work/quality-'+kind,proof=await read(directory+'/job-proof.json');proofs.push(proof);for(const f of proof.files){if(f.file!==path.basename(f.file))throw Error('Invalid evidence filename');const data=await fs.readFile(directory+'/'+f.file);if(data.length!==f.bytes||sha(data)!==f.sha256)throw Error('Damaged browser evidence '+f.file);if(kind==='chromium'||f.file.endsWith('.png')||/^journey-engine-.*\.json$/.test(f.file))await copy(directory+'/'+f.file,'.qa-output/'+f.file);}}
  validateCollectedProofs(proofs,expected);
  const reports=await Promise.all(['firefox','webkit'].map(kind=>read('work/quality-'+kind+'/engine-report.json')));
  const combined={...expected,status:'passed',scope:'firefox+webkit from isolated same-snapshot jobs',engines:reports.flatMap(r=>r.engines),errors:[],seconds:reports.reduce((n,r)=>n+r.seconds,0),wallSeconds:Math.max(...reports.map(r=>r.seconds))};

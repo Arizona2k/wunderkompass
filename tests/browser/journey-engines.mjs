@@ -84,7 +84,8 @@ async function runEngine(kind,offset){
   const historyViews=[];for(const width of [320,390,768,1440]){await p.setViewportSize({width,height:900});historyViews.push(await historyEngineView(p,width,output,{engine:name}));}
  const buildingStarted=performance.now(),buildingProof=await buildingsEngine(browser,base,{engine:name,shots:output}),buildingSeconds=(performance.now()-buildingStarted)/1000;console.log('ENGINE_PHASE',JSON.stringify({engine:name,phase:'buildings',seconds:buildingSeconds}));
   return {name,animalCoverage:animalReport.animalCoverage,solarCaptionCoverage:solarReport.solarCaptionCoverage,journeySupport,historyViews,oceanSourceViews,version:browser.version(),chapters:checked,widths:[320,390,768,1440],...bookProof,...whyProof,...natureProof,...inventionProof,...buildingProof,offlineRetention:retentionProof,offlineResilience:offlineProof,phaseSeconds:{animals:animalSeconds,oceanSources:sourceSeconds,journeys:journeySeconds,book:bookSeconds,why:whySeconds,nature:natureSeconds,inventions:inventionSeconds,buildings:buildingSeconds},seconds:(performance.now()-started)/1000,port:port+offset};
- }finally{await preserveEngineDiagnostics(output,kind);await browser?.close();if(browser)browsers.delete(browser);server.kill('SIGTERM');servers.delete(server);}
+ }catch(error){console.error('ENGINE_CHECK_FAILURE',JSON.stringify({engine:name,error:error.stack}));throw error;
+ }finally{try{await preserveEngineDiagnostics(output,kind,{phase:searchOnly?'early-search':'full'});}finally{await browser?.close();if(browser)browsers.delete(browser);server.kill('SIGTERM');servers.delete(server);}}
 }
 try{
  const outcomes=serial?await (async()=>{const results=[];for(const [i,kind] of kinds.entries()){try{results.push({status:'fulfilled',value:await runEngine(kind,i)});}catch(reason){results.push({status:'rejected',reason});}}return results;})():await Promise.allSettled(kinds.map(runEngine));
