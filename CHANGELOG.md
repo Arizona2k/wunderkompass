@@ -1,3 +1,7 @@
+## 18. Oktober2026 · Labor-Rückmeldungen auf der Testwebsite
+
+Die elf bestehenden Labore erklären alle66falschenAntwortmöglichkeiten individuell. PR38 ist nach vollständigerQuality samt tatsächlichemFirefox/WebKit übernommen und unter unverändertemTestzugang mit Buildab9a25f99ae5aaaf nachgeprüft. Fragen, Modelle und gespeicherteLernstände bleiben erhalten. Der größereMaster mit neuenGeschichtsartikeln, Altredaktion und Design bleibt inArbeit; neue Inhalte dadurch nicht pauschal veröffentlicht.
+
 ## In Entwicklung: Geschichtsquellen untersuchen
 
 Zwei neue Artikel zu Khipus und Mohenjo-Daro, eigene ausdrücklich erfundene bedienbare Lernbilder und sechs Aufgaben zu Beobachten, Vergleichen und Schlussgrenzen. Frühe Schrift erklärt Bildzeichen, abstrakte Markierungen und spätere Lautverwendungen genauer, mit individuellem Fehlfeedback; vier gegenseitige Wissenswege ergänzt. Mobile Knopfabstände, Modell-Sprung und Grafik-Kontrast geprüft und verbessert. Fachliche/pädagogische KI-Gegenprüfung gemäß aktueller Nutzerklarstellung dokumentiert; externe Menschenabnahmen kein Abschlussgate. Keine Veröffentlichung oder vollständiger Paketabschluss aus den frühen Teilprüfungen ableiten.
@@ -21,6 +25,16 @@ PR36 wurde nach vollständiger Quality und identischer geprüfter Integration am
 -48Rückmeldungen zu falschen Antworten erklären jetzt die jeweilige Fehlvorstellung, statt nur die richtige Erklärung mit derselben allgemeinen Einleitung zu wiederholen.
 -Vier freiwillige Hinweise regen zum Prüfen und Vergleichen an; der Monarchfalter-Hinweis kopiert die richtige Antwort nicht mehr. Aufgaben, Antwortreihenfolge, richtige Begründungen und gespeicherte Antworten bleiben erhalten.
 -PR35-Quellenzugang im Master mit dessen vollständigen Kapitelquellmengen und nativer200%-Mehrfachlinkprüfung zusammengeführt. Große Quellenschrift in vorhandener Reise-CSS, ohne Einstieg-CSS-Budget zu erhöhen. Keine Veröffentlichung oder unabhängige Abnahme behauptet.
+
+<details><summary>Historische Vorbereitung des inzwischen übernommenen Laborabschnitts38</summary>
+
+## 17.10.2026 · implementierter Labor-Lieferabschnitt, Bereitstellung noch unbestätigt
+
+-66 konkrete Erklärungen zu falschen Antworten in11bestehendenLaboren statt allgemeiner Rückmeldung; bestehende33Fragen/Antwortpositionen und Schema3-Fortschritte erhalten.
+- Antwortbindung und tatsächliche Rückmeldungen in bestehender Unit-/Browserprobe geprüft; öffentlicheInhaltsexporte schließen die neuen Texte ein.
+- VorhandeneChronikidentitäten für die belegtenTierwerkstätten(PR33) und lesbarenReisequellen(PR35) nachgeführt. NeuerLaborabschnitt bleibt bis tatsächlichemNachweis vorbereitet.
+
+</details>
 
 ## Unveröffentlicht · Quellen leichter lesen und antippen
 

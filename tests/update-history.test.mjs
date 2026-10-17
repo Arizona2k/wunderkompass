@@ -39,8 +39,8 @@ test('publication entries match successful deployments, source provenance and Be
 
 test('test website chronology retains the merged and deployed product rounds, with truthful channel dates',()=>{
  const entries=publicUpdates(),testEntries=entries.filter(e=>e.channel==='vercel-test');
- assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[33,32,30,29,26,25,24,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
- assert.equal(entries.length,35);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
+ assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[38,36,35,33,32,30,29,26,25,24,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
+ assert.equal(entries.length,38);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
  assert.ok(!PREPARED_UPDATES.some(e=>e.id==='foundation-2a'));
  assert.ok(UPDATE_HISTORY.some(e=>e.evidence.pullRequest===22));
@@ -51,11 +51,11 @@ test('test website chronology retains the merged and deployed product rounds, wi
   assert.ok(Date.parse(deployment.createdAt)>=Date.parse(record.mergedAt));assert.ok(TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.includes(record.mergeCommit));
  }
  // Confirmation date differs from observation date and from the merge instant.
- assert.equal(updateDate(testEntries[0]),'17. Oktober 2026 um 11:48:59 MESZ');assert.equal(testEntries[0].confirmedOn,TEST_HISTORY_EVIDENCE.checkedOn);
- const foundation=testEntries.find(e=>e.evidence.pullRequest===26);assert.equal(updateDate(foundation),'13. Oktober 2026 um 10:55:40 MESZ');
- assert.equal(testEntries[0].occurredAt,'2026-10-17T09:48:59Z');
+ assert.equal(updateDate(testEntries[0]),'18. Oktober 2026 um 00:20:23 MESZ');assert.equal(testEntries[0].confirmedOn,TEST_HISTORY_EVIDENCE.checkedOn);
  const journeySupport=testEntries.find(e=>e.evidence.pullRequest===32);assert.equal(updateDate(journeySupport),'17. Oktober 2026 um 01:51:27 MESZ');assert.equal(journeySupport.occurredAt,'2026-10-16T23:51:27Z');
- assert.equal(testEntries[0].id,ANIMAL_SOLAR_COPY.id,'receipt promotes the same prepared PR33 identity');assert.equal(journeySupport.id,'journey-reading-support-3-5','PR32 identity remains unchanged');assert.equal(testEntries.find(e=>e.evidence.pullRequest===30).id,'offline-learning-3-5');assert.equal(testEntries.find(e=>e.evidence.pullRequest===29).id,'clear-update-chronicle');assert.equal(testEntries.find(e=>e.evidence.pullRequest===29).occurredAt,'2026-10-16T19:33:21Z');assert.equal(foundation.id,'excellence-foundation-3-5');
+ const foundation=testEntries.find(e=>e.evidence.pullRequest===26);assert.equal(updateDate(foundation),'13. Oktober 2026 um 10:55:40 MESZ');
+ assert.equal(testEntries[0].occurredAt,'2026-10-17T22:20:23Z');
+ assert.equal(testEntries[0].id,'lab-feedback-3-5','actual PR38 receipt promotes its prepared identity without duplicate preview');assert.equal(testEntries.find(e=>e.evidence.pullRequest===35).id,'journey-readable-sources-3-5');assert.equal(testEntries.find(e=>e.evidence.pullRequest===36).id,'prepared-search-3-5');assert.equal(testEntries.find(e=>e.evidence.pullRequest===32).id,'journey-reading-support-3-5','PR32 identity retained');assert.equal(testEntries.find(e=>e.evidence.pullRequest===30).id,'offline-learning-3-5');assert.equal(testEntries.find(e=>e.evidence.pullRequest===29).id,'clear-update-chronicle');assert.equal(testEntries.find(e=>e.evidence.pullRequest===29).occurredAt,'2026-10-16T19:33:21Z');assert.equal(foundation.id,'excellence-foundation-3-5');
  assert.equal(testEntries.find(e=>e.evidence.pullRequest===17).occurredAt,'2026-10-10T11:40:50Z','old availability remains unchanged');
  assert.ok(!testEntries.some(e=>[4,13].includes(e.evidence.pullRequest)),'internal workflow-only PRs excluded');
 });
@@ -132,11 +132,12 @@ test('every old and new update has a concise reader category, with technical han
 });
 
 // Actual publication evidence must advance the reader UI, not just append unused metadata.
-test('PR30 receipt includes real ancestry and promotes its stable identity while open PR27 remains prepared',()=>{
+test('PR30 ancestry and actual PR33 receipt preserve historical availability without promoting missing evidence',()=>{
  const receipt=TEST_HISTORY_EVIDENCE.pullRequests.find(p=>p.number===30),entry=UPDATE_HISTORY.find(p=>p.id==='offline-learning-3-5');
  assert.ok(entry);assert.equal(entry.status,'test-available');assert.equal(entry.occurredAt,'2026-10-16T21:23:51Z');assert.ok(TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.includes(receipt.mergeCommit));
  assert.equal(confirmedTestDeployment(receipt,{...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(s=>s!==receipt.mergeCommit)}),null);
- const pending=PREPARED_UPDATES.find(e=>e.id==='excellence-chapters-3-5');assert.ok(pending);assert.equal(pending.evidence.pullRequest,27);assert.equal(pending.status,'prepared');assert.equal(pending.occurredAt,null);assert.equal(pending.availableOn,null);assert.deepEqual(pending.links,[]);assert.ok(!publicUpdates().some(e=>e.id===pending.id));assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));
+ const masterPending=PREPARED_UPDATES.find(e=>e.id==='excellence-chapters-3-5');assert.ok(masterPending);assert.equal(masterPending.status,'prepared');assert.equal(masterPending.evidence.pullRequest,27);assert.equal(masterPending.occurredAt,null);assert.equal(masterPending.availableOn,null);assert.deepEqual(masterPending.links,[]);assert.ok(!publicUpdates().some(e=>e.id===masterPending.id));
+ const available=UPDATE_HISTORY.find(e=>e.id==='animal-evidence-solar-labels-3-5');assert.ok(available);assert.equal(available.occurredAt,'2026-10-17T09:48:59Z');assert.equal(available.evidence.revision,'8d05beb0bc9930cd18e6128477c090c9d97caf9a');const absent=structuredClone(TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===33));absent.deploymentStatuses=[];const pending=testUpdate(absent,available);assert.equal(pending.evidence.pullRequest,33);assert.equal(pending.status,'prepared');assert.equal(pending.occurredAt,null);assert.equal(pending.availableOn,null);assert.deepEqual(pending.links,[]);assert.deepEqual(publicUpdates([pending]),[]);assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));
 });
 
 test('actual PR30 receipt promotes the existing offline identity only with current merge ancestry and successful Vercel evidence',()=>{const receipt=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===30),entry=UPDATE_HISTORY.find(e=>e.id==='offline-learning-3-5');assert.equal(entry.occurredAt,'2026-10-16T21:23:51Z');assert.equal(entry.status,'test-available');assert.equal(entry.evidence.revision,'71255ec55833fa1c4056a5c95310fa4fb78b8a30');const unrelated={...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(x=>x!==receipt.mergeCommit)};assert.equal(confirmedTestDeployment(receipt,unrelated),null);const missing=structuredClone(receipt);missing.deploymentStatuses=[];assert.equal(confirmedTestDeployment(missing),null);assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));assert.ok(!publicUpdates().some(e=>e.evidence.pullRequest===27));assert.equal(publicUpdates().filter(e=>e.id===entry.id).length,1);});

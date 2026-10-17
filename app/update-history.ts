@@ -408,7 +408,24 @@ export const ANIMAL_SOLAR_COPY:UpdateCopy={
  ],
  benefit:'Kinder können Wissen mit Belegen begründen und Grenzen eines Bildes erkennen. Familien können die Karten und Planetenwerte mit großer Schrift gemeinsam lesen.',links:[{label:'Tierforscher-Werkstatt',hash:'world/topic/animal-whale-shark'},{label:'Planeten vergleichen',hash:'world/topic/science-solar-system'}]
 };
-const TEST_COPY:Record<number,UpdateCopy>={
+export const JOURNEY_SOURCE_COPY:HistoryCopy&{id:string}={
+ id:'journey-readable-sources-3-5',icon:'📖',category:'Einfachere Bedienung',
+ title:'Quellen in den Lernreisen leichter öffnen',
+ summary:'Die Quellenangaben aller 16 Lernreisen werden größer und leichter antippbar. Du kannst die ursprünglichen Belege weiterhin freiwillig im Quellenabschnitt öffnen.',
+ details:['Quellenlinks verwenden die normale Leseschrift statt kleiner Fußnotenschrift und wachsen bei großer Schrift mit.','Mindestens 48 Pixel hohe Linkflächen erleichtern das Antippen; lange Bezeichnungen dürfen umbrechen.','Unterstreichung und sichtbarer Tastaturfokus machen die Verweise auch ohne Farberkennung erkennbar.'],
+ benefit:'Kinder und Eltern können Belege auf kleinen Bildschirmen und mit großer Schrift leichter lesen und erreichen. Reiseinhalte und gespeicherte Fortschritte bleiben erhalten.',
+ links:[{label:'Lernreisen',hash:'journeys'}]
+};
+export const LAB_FEEDBACK_COPY:UpdateCopy={
+ id:'lab-feedback-3-5',icon:'🧪',category:'Anschaulicher erklärt',title:'Aus einem Irrtum weiterforschen',
+ summary:'Die elf Forscherlabore erhalten passende Erklärungen zu falschen Antworten. So kannst du erkennen, welcher Gedanke noch nicht zur Beobachtung passt.',
+ details:['Bei allen 33 bestehenden Laborfragen unterscheidet die Rückmeldung zwischen den beiden falschen Antworten: insgesamt 66 konkrete Erklärungen.','Die drei freiwilligen Denkstufen, Hinweise und Modelle bleiben erhalten. Du kannst nach einem Fehlversuch weiter überlegen und erneut antworten.','Vermutungen, Modellvergleiche, Forschernotizen und bereits verdiente Stempel bleiben im bisherigen Entdeckerpass.'],
+ benefit:'Du bekommst einen konkreten Anhaltspunkt zum Weiterdenken. Familien können Missverständnisse gemeinsam am vertrauten Modell untersuchen.',links:[{label:'Forscherlabor',hash:'labs'}]
+};
+const TEST_COPY:Record<number,UpdateCopy> = {
+ 38:LAB_FEEDBACK_COPY,
+ 36:{id:'prepared-search-3-5',icon:'🔎',category:'Einfachere Bedienung',title:'Die Suche bereitet bekannte Begriffe vor',summary:'Namen und Suchhinweise werden einmal vorbereitet. Beim Tippen muss die Suche dieselben Wörter dadurch seltener erneut bearbeiten.',details:['Die vertrauten Treffer, Schreibvarianten und Rückwege bleiben erhalten.','Begriffe und Vorschautexte werden bei einem veränderten Katalog neu vorbereitet; die Lerninhalte bleiben unverändert.'],benefit:'Die Suche erledigt beim wiederholten Tippen weniger unnötige Arbeit. Deine bisherigen Suchwege und Lernstände bleiben erhalten.',links:[{label:'Wissenswelten durchsuchen',hash:'world'}]},
+ 35:JOURNEY_SOURCE_COPY,
  33:ANIMAL_SOLAR_COPY,
  32:JOURNEY_SUPPORT_COPY,
  30:OFFLINE_COPY,
@@ -822,16 +839,9 @@ export const ANIMAL_EXPANSION_COPY:HistoryCopy&{id:string}={
  benefit:'Kinder können neue Arten kennenlernen und zugleich lernen, Beobachtung und Schlussfolgerung zu unterscheiden. Eltern finden nachvollziehbare Originalquellen und transparente Prüfgrenzen.',links:[{label:'Tierwelt',hash:'world/animals'}]
 };
 const PREPARED_ANIMAL_EXPANSION:UpdateEntry={...ANIMAL_EXPANSION_COPY,version:'Neue Tierarten',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{pullRequest:27,file:'content/animal-expansion-review.json',revision:'prepared',quote:'Im Master implementiert; vollständige technische und unabhängige fachliche Abnahme sowie Bereitstellung nicht behauptet.'}};
-export const JOURNEY_SOURCE_COPY:HistoryCopy&{id:string}={
- id:'journey-readable-sources-3-5',icon:'📖',category:'Einfachere Bedienung',
- title:'Quellen in den Lernreisen leichter öffnen',
- summary:'Die Quellenangaben aller 16 Lernreisen werden größer und leichter antippbar. Du kannst die ursprünglichen Belege weiterhin freiwillig im Quellenabschnitt öffnen.',
- details:['Quellenlinks verwenden die normale Leseschrift statt kleiner Fußnotenschrift und wachsen bei großer Schrift mit.','Mindestens 48 Pixel hohe Linkflächen erleichtern das Antippen; lange Bezeichnungen dürfen umbrechen.','Unterstreichung und sichtbarer Tastaturfokus machen die Verweise auch ohne Farberkennung erkennbar.'],
- benefit:'Kinder und Eltern können Belege auf kleinen Bildschirmen und mit großer Schrift leichter lesen und erreichen. Reiseinhalte und gespeicherte Fortschritte bleiben erhalten.',
- links:[{label:'Lernreisen',hash:'journeys'}]
-};
-const PREPARED_JOURNEY_SOURCES:UpdateEntry={...JOURNEY_SOURCE_COPY,version:'Lesbare Quellen',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{pullRequest:35,file:'PROJECT_STATE.md',revision:'8e5012ed5deadee3d88aada0cdffd0b05eaacc5c',quote:'Nutzermerge und Vercel-Status bestätigt; tatsächlicher Website-/Buildnachtest am geschützten Testerzugang noch offen.'}};
-export const PREPARED_UPDATES:UpdateEntry[]=[PREPARED_ANIMAL_EXPANSION,PREPARED_JOURNEY_SOURCES,...(!TEST_UPDATES.some(e=>e.id===PREPARED_ANIMAL_SOLAR.id)?[PREPARED_ANIMAL_SOLAR]:[]),...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SUPPORT.id)?[PREPARED_JOURNEY_SUPPORT]:[])];
+const PREPARED_LAB_FEEDBACK:UpdateEntry={...LAB_FEEDBACK_COPY,version:'Labor-Rückmeldungen',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{file:'content/research-editorial-review.json',revision:'prepared',quote:'Eigener Labor-Lieferabschnitt; noch kein bestätigter Merge oder Bereitstellungsnachweis.'}};
+const PREPARED_JOURNEY_SOURCES:UpdateEntry={...JOURNEY_SOURCE_COPY,version:'Lesbare Quellen',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{file:'CHANGELOG.md',revision:'prepared',quote:'Lesbare und leichter antippbare Quellenlinks; noch kein bestätigter Merge oder Vercel-Erfolg.'}};
+export const PREPARED_UPDATES:UpdateEntry[]=[PREPARED_ANIMAL_EXPANSION,...(!TEST_UPDATES.some(e=>e.id===PREPARED_LAB_FEEDBACK.id)?[PREPARED_LAB_FEEDBACK]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SOURCES.id)?[PREPARED_JOURNEY_SOURCES]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_ANIMAL_SOLAR.id)?[PREPARED_ANIMAL_SOLAR]:[]),...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SUPPORT.id)?[PREPARED_JOURNEY_SUPPORT]:[])];
 export const updateLabel=(entry:UpdateEntry)=>entry.channel==='sites'?`Frühere Website · Version ${entry.version}`:entry.status==='prepared'?'In Vorbereitung · noch nicht verfügbar':'Testversion · verfügbar';
 const updateDay=(entry:UpdateEntry)=>entry.availableOn??entry.publishedOn??entry.confirmedOn;
 export function publicUpdates(entries:readonly UpdateEntry[]=UPDATE_HISTORY){
