@@ -21,9 +21,9 @@ test('existing schema3 backup keeps every old topic/game field together with the
  const restored=restoreSave(JSON.parse(JSON.stringify(pass)),true);assert.deepEqual(restored.progress.gameSessions,pass.progress.gameSessions);assert.deepEqual(restored.progress.favorites,pass.progress.favorites);
 });
 
-test('source biological article bytes are preserved rather than replacing old facts with the teaching interpretation',()=>{
+test('source biological article data and old related links are preserved while explained reciprocal links are appended',()=>{
  const review=JSON.parse(fs.readFileSync('content/animal-editorial-review.json','utf8'));assert.equal(review.independentReview,false);assert.equal(review.newSpecies,0);assert.equal(review.acceptedNew,0);assert.equal(review.entries.length,24);
- for(const e of review.entries){const current=catalog.find(t=>t.id===e.id);assert.equal(createHash('sha256').update(JSON.stringify(current)).digest('hex'),e.originalArticleSHA256,e.id+' original text, sources, measurements, images and correct answer preserved');}
+ for(const e of review.entries){const current=catalog.find(t=>t.id===e.id);assert.deepEqual(current.related.slice(0,e.originalRelated.length),e.originalRelated,e.id+' old related links retained in order');assert.equal(createHash('sha256').update(JSON.stringify({...current,related:e.originalRelated})).digest('hex'),e.originalArticleSHA256,e.id+' original text, sources, measurements, images and correct answer preserved; only additional links allowed');}
 });
 
 test('complete animal evidence rejects absent/duplicate widths, levels, large text, keyboard, saves and native/offline states',()=>{
