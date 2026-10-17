@@ -128,6 +128,142 @@
       "kind": "transport",
       "why": "Wasser wechselt zwischen Erdoberfläche und Atmosphäre; dort entstehen Wolken und Niederschlag.",
       "checkedAt": "2026-10-09"
+    },
+    {
+      "id": "animal-inquiry-lion-bengal-tiger",
+      "fromId": "animal-lion",
+      "toId": "animal-bengal-tiger",
+      "kind": "context",
+      "why": "Beide sind große Katzen. Löwen leben häufig im Rudel, erwachsene Tiger meist allein. Verwandtschaft bedeutet nicht dieselbe Lebensweise.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-african-savanna-elephant-giant-panda",
+      "fromId": "animal-african-savanna-elephant",
+      "toId": "animal-giant-panda",
+      "kind": "context",
+      "why": "Rüssel und besonderer Handgelenkknochen sind verschiedene Hilfen beim Greifen von Nahrung. Vergleiche Körperteil und Aufgabe, ohne beide gleichzusetzen.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-giraffe-red-kangaroo",
+      "fromId": "animal-giraffe",
+      "toId": "animal-red-kangaroo",
+      "kind": "context",
+      "why": "Bei der Giraffe wird die Höhe beschrieben, beim Riesenkänguru das Gewicht erwachsener Männchen. Erst Messgröße und Bezugsgruppe machen einen Vergleich sinnvoll.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-giant-panda-koala",
+      "fromId": "animal-giant-panda",
+      "toId": "animal-koala",
+      "kind": "context",
+      "why": "Panda und Koala brauchen unterschiedliche Pflanzennahrung: überwiegend Bambus beziehungsweise Blätter bestimmter Eukalyptusarten. Viele beliebige Pflanzen reichen nicht als Speiseplan.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-western-lowland-gorilla-bornean-orangutan",
+      "fromId": "animal-western-lowland-gorilla",
+      "toId": "animal-bornean-orangutan",
+      "kind": "context",
+      "why": "Beide brauchen Waldlebensräume. Vergleiche den Knöchelgang des Gorillas mit den langen Greifarmen des Orang-Utans statt aus „Wald“ dieselbe Fortbewegung abzuleiten.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-polar-bear-emperor-penguin",
+      "fromId": "animal-polar-bear",
+      "toId": "animal-emperor-penguin",
+      "kind": "context",
+      "why": "Beide leben in kalten Gebieten, aber nicht als natürliche Nachbarn: Eisbären in der Arktis, Kaiserpinguine in der Antarktis. Prüfe die beiden Pole auf der Weltkugel.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-blue-whale-whale-shark",
+      "fromId": "animal-blue-whale",
+      "toId": "animal-whale-shark",
+      "kind": "context",
+      "why": "Beide sammeln kleine Nahrung aus dem Wasser. Der Blauwal ist ein luftatmendes Säugetier, der Walhai ein Fisch mit Kiemen: Nahrung und Namen reichen zur Einordnung nicht aus.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-common-bottlenose-dolphin-whale-shark",
+      "fromId": "animal-common-bottlenose-dolphin",
+      "toId": "animal-whale-shark",
+      "kind": "context",
+      "why": "Der Delfin muss Luft an der Oberfläche holen, der Walhai nutzt Kiemen. Ein gemeinsamer Lebensraum bedeutet nicht dieselbe Atmung.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-orca-common-bottlenose-dolphin",
+      "fromId": "animal-orca",
+      "toId": "animal-common-bottlenose-dolphin",
+      "kind": "context",
+      "why": "Der Orca gehört zur Delfinfamilie. Vergleiche Familienleben und wechselnde Gruppen, ohne den Speiseplan einer Orcapopulation auf alle Delfine zu übertragen.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-common-octopus-garden-cross-spider",
+      "fromId": "animal-common-octopus",
+      "toId": "animal-garden-cross-spider",
+      "kind": "context",
+      "why": "Acht Arme und acht Beine sind unterschiedliche Merkmale. Eine gleiche Anzahl macht Krake und Spinne nicht zu derselben Tiergruppe.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-green-sea-turtle-common-bottlenose-dolphin",
+      "fromId": "animal-green-sea-turtle",
+      "toId": "animal-common-bottlenose-dolphin",
+      "kind": "context",
+      "why": "Meeresschildkröte und Delfin müssen trotz ihres Wasserlebens Luft holen. Vergleiche Atmung und Fortbewegung als getrennte Eigenschaften.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-jaguar-bengal-tiger",
+      "fromId": "animal-jaguar",
+      "toId": "animal-bengal-tiger",
+      "kind": "context",
+      "why": "Jaguar und Bengaltiger können gut schwimmen. Eine schwimmende Katze wird dadurch nicht zum Fisch und verliert ihre übrigen Fähigkeiten nicht.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-honey-bee-garden-cross-spider",
+      "fromId": "animal-honey-bee",
+      "toId": "animal-garden-cross-spider",
+      "kind": "context",
+      "why": "Die Biene hat sechs Beine, die Spinne acht. Prüfe Körpermerkmale und verwechsle einen Blütenbesuch nicht mit einem Beleg für dieselbe Tiergruppe.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-axolotl-whale-shark",
+      "fromId": "animal-axolotl",
+      "toId": "animal-whale-shark",
+      "kind": "context",
+      "why": "Beide nehmen mit Kiemen Sauerstoff aus dem Wasser auf. Trotzdem ist der Axolotl ein Amphibium und der Walhai ein Fisch: Ein einzelnes gemeinsames Merkmal genügt nicht für jede Einordnung.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-dromedary-science-energy",
+      "fromId": "animal-dromedary",
+      "toId": "science-energy",
+      "kind": "context",
+      "why": "Das Fett im Höcker ist ein Energievorrat, kein Trinkwassertank. Die Energiekarte hilft, einen Vorrat von seinen unterschiedlichen Nutzungen zu unterscheiden.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-white-tailed-eagle-emperor-penguin",
+      "fromId": "animal-white-tailed-eagle",
+      "toId": "animal-emperor-penguin",
+      "kind": "context",
+      "why": "Beides sind Vögel mit Flügeln. Der Seeadler kann gleiten, der Kaiserpinguin nutzt seine Flügel beim Schwimmen. Derselbe Körperteil kann unterschiedlich eingesetzt werden.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-cheetah-lion",
+      "fromId": "animal-cheetah",
+      "toId": "animal-lion",
+      "kind": "context",
+      "why": "Vergleiche den kurzen Sprint eines Gepards mit dem Anschleichen und Zusammenwirken von Löwen. Schnellster Sprint und eine erfolgreiche gemeinsame Jagd sind verschiedene Vergleiche.",
+      "checkedAt": "2026-10-17"
     }
   ]
 }

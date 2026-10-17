@@ -4,7 +4,7 @@ import {navigateHash,restoreRouteView} from './hash-route';
 import DiscoveryVisual from './discovery-visual';
 import WorldGateways from './world-gateways';
 import {WORLD_INDEX,WORLD_ROUTES} from './world-index';
-import {KNOWLEDGE_CONNECTIONS} from './knowledge-connections';
+import DISCOVERY_CONNECTION_INDEX from './discovery-connections.json';
 import {DISCOVERY_CONNECTIONS,DISCOVERY_ACTIVITIES} from './discovery-data';
 import type {WorldCategory} from './world-types';
 function rememberTrail(id:string){try{sessionStorage.setItem('wunderkompass-discovery-trail',id);}catch{}}
@@ -34,7 +34,7 @@ export function DiscoveryConnections({onTopic,onRoute,onGame}:{onTopic:(id:strin
  const [selected,setSelected]=useState(initialTrail);
  const activity=DISCOVERY_ACTIVITIES[selected];
  const select=(i:number)=>{setSelected(i);rememberTrail(DISCOVERY_CONNECTIONS[i].id);};
- const pick=DISCOVERY_CONNECTIONS[selected],connection=KNOWLEDGE_CONNECTIONS.find(c=>c.id===pick.id)!;
+ const pick=DISCOVERY_CONNECTIONS[selected],connection=DISCOVERY_CONNECTION_INDEX.find(c=>c.id===pick.id)!;
  const from=WORLD_INDEX.find(t=>t.id===connection.fromId)!,to=WORLD_INDEX.find(t=>t.id===connection.toId)!,route=WORLD_ROUTES.find(r=>r.id===pick.routeId)!;
  return <section className="discovery-pathways" aria-label="Wissen verbinden und ausprobieren">
   <div className="discovery-network"><p className="eyebrow"><Compass size={16}/> ALLES HÄNGT ZUSAMMEN</p><h2>Eine Frage. Zwei Welten.</h2><p className="discovery-intro">Wähle eine Spur und entdecke die Verbindung.</p>

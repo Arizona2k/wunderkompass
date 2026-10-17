@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "759400e477fe9eb5ee5ce307de578fa3f72cb926",
+    "commit": "0c0ebcb55fc9e81bbe55ae9aa100100df098c0a5",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -28,7 +28,8 @@
       "c9d7ab0336ddcc89653241433dd06dc020688b39",
       "d63e946de8a02df2d0493e19081a7f07574b51cd",
       "71255ec55833fa1c4056a5c95310fa4fb78b8a30",
-      "759400e477fe9eb5ee5ce307de578fa3f72cb926"
+      "759400e477fe9eb5ee5ce307de578fa3f72cb926",
+      "0c0ebcb55fc9e81bbe55ae9aa100100df098c0a5"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -733,6 +734,37 @@
           "createdAt": "2026-10-16T22:38:12Z",
           "updatedAt": "2026-10-16T22:38:12Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/6tSwpbhWYHjWwkbMXfcH3ygJWJPT"
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "title": "Lernreisen: passende Denkhinweise und lesbare Kapitelgrafiken",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/32",
+      "base": "test-live",
+      "mergedAt": "2026-10-16T23:51:12Z",
+      "mergeCommit": "0c0ebcb55fc9e81bbe55ae9aa100100df098c0a5",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/0c0ebcb55fc9e81bbe55ae9aa100100df098c0a5/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56572118168,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-16T23:51:27Z",
+          "updatedAt": "2026-10-16T23:51:27Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/8Wc153qiGJp55CEVEbpgDzLuyYG8"
+        },
+        {
+          "id": 56572110746,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-16T23:51:16Z",
+          "updatedAt": "2026-10-16T23:51:16Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/8Wc153qiGJp55CEVEbpgDzLuyYG8"
         }
       ]
     }

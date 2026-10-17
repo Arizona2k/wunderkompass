@@ -1,5 +1,14 @@
 # Gemeinsamer Entwicklungsbestand
 
+Messbarer Begleitfix im selben Abschnitt: Startseite lädt nur ihre acht kanonischen Wissensspuren statt den gesamten wachsenden Graphen. Vollständiger Graph bleibt für Artikel erhalten, Ableitung mit Export-/Negativtests gegen veraltete oder fehlende Daten gesichert. Erstabruf278.004Byte Gzip, bisherige PR32-Basis278.476Byte; ursprüngliches280.000Byte-Gate bleibt erhalten. Kein neuer Optimierungsdurchlauf.
+
+## Aktueller Tier-/Planeten-Lieferabschnitt · WK053/056/057 · in Prüfung
+
+24 vorhandene Tierkarten mit individuell aufdeckbaren Belegen, drei freiwilligen Denkwegen,48 Aufgaben und17 erklärten gegenseitigen Wissensverbindungen erweitert. Bestandsartikel/Antworten/Medien/Schutzdaten/Spielstände unverändert; ausschließlich neue Verweise und optionale Sitzungsfelder ergänzt. Planetenfehler aus Nutzerscreenshot reproduziert und mit umbrechbaren HTML-Beschriftungen, lesbaren Abstandswerten und großer Schrift behoben. Alle wissenschaftlichen Werte/Skalen/Alternativtexte erhalten. Negative Abschneideprobe sowie vollständige mobile/Tablet/Desktop-/Großschrift-/Zoom-/Browser-/Offline-/Altstandmatrix in bestehende Prüfgruppen integriert. Keine neue Testplattform oder abgeschwächten Gates;150MB gelten weiter nur für Reviewbilder. Aktueller Prüf- und Sicherungsstand im PROJECT_STATE, endgültige Head-/CI-Quittung im PR.
+
+Dies ist ein unabhängig nutzbarer Bestandsabschnitt, **kein Abschluss der Tierwelt oder von Paket3.5**. Alle24 neuen Tierarten, weitere49 neue Weltkarten, fachliche Nachredaktion sämtlicher Bestände und der volle Master WK053–058 bleiben offen und erhalten. Originalmaster/68 Naturmanuskripte/Erfindungen/Bauwerke/Reisen/Modelle und zusätzliche Mastertests sind in PR27 gesichert; sie werden hier nicht versehentlich als veröffentlicht mitgenommen. Pakete4–8/WK038 und spätere Ideen unverändert erhalten. News vollständig pausiert. Nach vollständiger Abnahme: Ready-PR gegen test-live; Merge allein durch Nutzer; tatsächliche Bereitstellung nach dessen Übernahme prüfen. Danach Tierwelt um die24 fachlich belegten neuen Arten erweitern und Bestandsredaktion fortsetzen.
+
+
 Gezielte tatsächliche Reiseprüfung nach Testkorrektur:208,423s bestanden, alle240 Aufgaben/Hinweise,64 Diagramme an siebenBreiten (448 Fälle), vorhandene Rückwege/Stempel/Notizen/Offline und nativer200%-Zoom einschließlich geöffneter Hinweise. Originale unterwork/targeted-after-route-restore-proof; vorheriger roter146,340s-Beleg unverändert unterwork/early-before-route-restore. Ursache war fehlende Rückkehr des neuen Testhelpers zur Reiseübersicht; Start-Hash wird jetzt wiederhergestellt, alte Suchassertion unverändert. Aktuelle gesamte lokale/CI-Schlussabnahme bleibt gesondert erforderlich.
 
 ## WK055/052 – Reise-Lernhilfen als eigenständiger Lieferabschnitt,17.10.2026

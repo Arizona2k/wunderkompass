@@ -1,3 +1,5 @@
+import {solarFlow} from './solar-comparison.mjs';
+import {animalFlow} from './animal-learning.mjs';
 import {journeySupportView} from './journeys.mjs';
 import {offlineResilience} from './offline-resilience.mjs';
 import {offlineRetention} from './offline-retention.mjs';
@@ -13,6 +15,8 @@ try{
  for(let n=0;n<40&&!log.includes('WK_PREVIEW_READY');n++){if(server.exitCode!==null)throw Error(log);await new Promise(r=>setTimeout(r,100));}assert.ok(log.includes('WK_PREVIEW_READY'),log);
  for(const name of engines){const started=performance.now(),checked=[],historyViews=[];browser=await {chromium,firefox,webkit}[name].launch({headless:true,...(name==='chromium'&&process.env.QA_BROWSER_EXECUTABLE?{executablePath:process.env.QA_BROWSER_EXECUTABLE}:{}),args:name==='chromium'?['--enable-unsafe-swiftshader']:[]});
   const context=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await context.newPage();p.on('pageerror',e=>report.errors.push(e.message));p.setDefaultTimeout(20000);await p.goto(base+'/#journeys');await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor();
+  const solarReport={checks:[]};await solarFlow(browser,base,p=>p.locator('.model-solar-system').waitFor(),p=>p.on('pageerror',e=>report.errors.push(e.message)),solarReport,'.qa-output',{widths:[320,390,768,1440]});for(const file of await fs.readdir('.qa-output'))if(/^solar-caption-.*\.png$/.test(file))await fs.rename(path.join('.qa-output',file),path.join('.qa-output','journey-engine-'+name+'-'+file));
+  const animalReport={checks:[]};await animalFlow(browser,base,p=>p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor(),p=>p.on('pageerror',e=>report.errors.push(e.message)),animalReport,'.qa-output',{matrix:[320,390,768,1440]});for(const file of await fs.readdir('.qa-output'))if(/^animal-.*\.png$/.test(file))await fs.rename(path.join('.qa-output',file),path.join('.qa-output','journey-engine-'+name+'-'+file));
   const journeySupport=await journeySupportView(p,{widths:[320,390,768,1440],shots:'.qa-output',engine:name});
   for(const j of JOURNEYS){await p.evaluate(id=>location.hash='journeys/'+id+'/1',j.id);const inquiry=p.locator('[data-chapter-inquiry="'+j.id+':0"]');await inquiry.waitFor();const c=DATA.chapters.find(c=>c.id===j.id+':0'),q=c.tasks[2];await inquiry.locator('.journey-levels button').nth(2).click();await inquiry.locator('.quiz-answer').nth((q.correct+1)%3).click();assert.equal(await inquiry.getByText(q.why,{exact:true}).count(),0);await inquiry.locator('.quiz-answer').nth(q.correct).click();await inquiry.getByText(q.why,{exact:true}).waitFor();assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);checked.push(c.id);}
   await p.evaluate(()=>location.hash='journeys/water/3');await p.locator('[data-chapter-inquiry="water:2"]').waitFor();await p.getByRole('button',{name:'Weiter entdecken',exact:true}).click();await p.locator('[data-chapter-inquiry="water:3"]').waitFor();await p.goBack();await p.locator('[data-chapter-inquiry="water:2"]').waitFor();await p.reload();await p.locator('[data-chapter-inquiry="water:2"]').waitFor();
@@ -20,7 +24,7 @@ try{
   await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});assert.deepEqual(await p.evaluate(async()=>(await window.axe.run('.journey-reader',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
   for(const width of [320,390,768,1440]){await p.setViewportSize({width,height:900});historyViews.push(await historyEngineView(p,width,'.qa-output',{engine:name}));}
   const offlineResilienceProof=await offlineResilience(browser,{port:4778,shots:'.qa-output',kind:name}),offlineRetentionProof=await offlineRetention(browser,{shots:'.qa-output',kind:name});
-  report.engines.push({name,historyViews,journeySupport,offlineResilience:offlineResilienceProof,offlineRetention:offlineRetentionProof,version:browser.version(),chapters:checked,widths:[320,390,768,1440],seconds:(performance.now()-started)/1000});await browser.close();browser=null;
+  report.engines.push({name,animalCoverage:animalReport.animalCoverage,solarCaptionCoverage:solarReport.solarCaptionCoverage,historyViews,journeySupport,offlineResilience:offlineResilienceProof,offlineRetention:offlineRetentionProof,version:browser.version(),chapters:checked,widths:[320,390,768,1440],seconds:(performance.now()-started)/1000});await browser.close();browser=null;
  }
  assert.deepEqual(report.errors,[]);report.status='passed';
 }catch(error){report.status='failed';report.failure=error.stack;throw error;}

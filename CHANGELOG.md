@@ -1,5 +1,15 @@
 # Änderungsverlauf
 
+- Die Startseite lädt nur ihre acht tatsächlich gezeigten kanonischen Wissensspuren. Der vollständige Graph bleibt für Wissenskarten erhalten. Gemessener Einstieg278.004Byte Gzip statt278.476Byte auf der unveränderten PR32-Basis; alle Spuren und Erstabrufbudgets erhalten, Ableitung gegen Quellenabweichung geprüft.
+
+## In Entwicklung · Tierwerkstätten und Planetenbeschriftung · 17.10.2026
+
+- Alle24 vorhandenen Tierkarten um freiwillige Belegarbeit, drei Denkwege und48 individuelle Begründungs-/Transferfragen ergänzt; Hinweise, konkrete Fehlerrückmeldungen und Speicherung im vorhandenen Entdeckerpass.
+-17 erklärte gegenseitige Wissensverbindungen und zugehörige Themenverweise ergänzt; ursprüngliche Verweise, Fachtexte, Antworten und Medien erhalten. Keine neue Tierart und keine unabhängige Fach-/Kinderfreigabe behauptet.
+- Abgeschnittene Planeteneinheit auf kleinen Geräten durch lesbares umbrechbares HTML ersetzt; Abstandswerte/Großschrift verbessert. Zahlen, Skalen und Alternativtexte erhalten. Positive und absichtlich negative Browserfälle, nativerZoom, Offline-/Altstand-/Such-/Rückfokusprüfungen in vorhandene Abnahme integriert.
+- Tatsächliche PR32-Merge-/Vercelquittung in Chronik nachgeführt; neuer Lieferabschnitt bleibt vorbereitet. Kein eigener Merge, Deployment oder Newsbetrieb. Bestehender kombinierter Browserjob erhält50Minuten statt20, ohne entfallene Tests oder neue Runner.
+
+
 ## Paket3.5 – Reise-Lernhilfen und lesbare Kapitelgrafiken (noch unveröffentlicht)
 
 240 freiwillige Hinweise individuell aus dem erhaltenen Masterstand übernommen,32 Aufgabenoptionen/Rückmeldungen präzisiert; richtige Antworten und gespeicherte Positionen erhalten. Wörter der64 bestehenden Grafiken bleiben als HTML lesbar; Mondansichten und politische Beispielgrenzen zeigen den passenden Zusammenhang. Redaktionelle Nachkontrolle entfernt zwei alte Hinweisbezüge und erklärt falsche Apollo-Jahreszahlen unterschiedlich. Keine neuen Kapitel oder vollständige unabhängige Fachabnahme behauptet. Frühe gezielte tatsächliche Browserprüfungen dauerhaft in bestehenden Regeln verankert; alle vollständigen Endprüfungen bleiben Pflicht. Nachweis und tatsächliche Bereitstellung nach Nutzerfreigabe im zugehörigen PR.
