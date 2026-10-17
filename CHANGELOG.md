@@ -1,5 +1,11 @@
 # Änderungsverlauf
 
+## Tierforscher-Werkstatt und lesbarer Planetenvergleich (in Entwicklung, unveröffentlicht)
+
+24 vorhandene Tierkarten erhalten individuelle Belegpaare, drei freiwillige Denkwege und 48 Begründungs-/Transferaufgaben mit konkreten Hinweisen und Feedback. 17 neue erklärte Gegenverbindungen unterstützen den Vergleich. Bestehende Artikel, Mini-Fragen, richtige Antworten, Bilder und Sitzungsfelder bleiben erhalten; keine neue Tierart oder unabhängige Fach-/Kinderabnahme gezählt.
+
+Den vom Nutzer gezeigten abgeschnittenen Planetenhinweis auf 320/360/390/402 px im unveränderten Browserbuild reproduziert. Planetennamen, Verhältnisse und Einheit als lesbares HTML unter dem Größenbild; lesbare Abstandswerte und Hinweise auch bei großer Schrift. Acht Planetenverhältnisse, lineare Abstandsskala, Alternativtexte und Abschluss-/Speicherlogik unverändert. Zusätzliche tatsächliche Textgrenzen-/Schrift-/Geometrieprüfungen in vorhandenen Browsergruppen, alle früheren Pflichtprüfungen erhalten. Finale technische Abnahme und tatsächliche Bereitstellung gesondert im PR; kein Merge/Deployment durch Codex. News bleibt pausiert.
+
 ## Paket3.5 – bestätigte Lernhilfen aus PR32 kontrolliert zurückgeführt
 
 Die vom Nutzer übernommene und am bestehendenVercel-Testprojekt bestätigte Lernhilfe(240Hinweise/64lesbareGrafiken/32Aufgabenrückmeldungen) erhält im Entwicklungsstand ihren belegtenChronikstatus unter derselbenID. Alle33bisherigenEinträge und der volle unveröffentlichteMasterumfang bleiben. Individuell geprüfter Entwicklungsmerge ohne doppelteHinweisentwicklung oder Verlust der umfangreicherenMastertests; neuevolleSchlussprüfung erforderlich. DieChroniknachführung und Quellenlinkverbesserung desMasters sind noch nicht veröffentlicht. Nachrichtenthema bleibt vollständigpausiert.

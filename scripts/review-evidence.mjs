@@ -21,6 +21,9 @@ export function reviewStorage(screenshots,retainedBytes,{previous=null}={}){
  };
 }
 export const requiredScreenshots=['quality-learning-journey-engine-chromium-native-history-first-640.png','quality-learning-journey-engine-chromium-native-history-oldest-640.png',...['320','360','390','768','1024','1440','1920'].flatMap(w=>['quality-foundation-foundation-labs-'+w+'.png','quality-learning-journey-links-'+w+'.png']),...['320','1440'].flatMap(w=>['quality-news-feed-signed-news-rejected-'+w+'.png','quality-navigation-updates-all-details-'+w+'-full.png'])];
+requiredScreenshots.push('quality-navigation-solar-caption-negative-320.png');
+requiredScreenshots.push(...[320,360,390,402,768,1024,1440,1920].flatMap(w=>['normal','large'].flatMap(state=>['diameters','distances'].map(mode=>'quality-navigation-solar-caption-'+mode+'-'+state+'-'+w+'.png'))),...['diameters','distances'].map(mode=>'quality-navigation-solar-caption-'+mode+'-large-640.png'));
+requiredScreenshots.push(...[320,360,390,768,1024,1440,1920].flatMap(w=>[...[0,1,2].flatMap(level=>['normal','large'].map(state=>'quality-navigation-animal-workshop-'+state+'-'+level+'-'+w+'.png')),'quality-navigation-animal-workshop-focus-'+w+'.png']),'quality-navigation-animal-native-200-large-640.png');
 requiredScreenshots.push(...[320,1440].map(width=>'quality-learning-nature-model-grand-canyon-phase-3-'+width+'.png'));
 requiredScreenshots.push(...['source-5-320','source-25-320','starter-30-320','starter-35-320','starter-48-320','starter-59-320','59-1440','native-200-large','overview-320'].map(key=>'quality-book-why-'+key+'.png'));
 requiredScreenshots.push(...[320,1440].flatMap(width=>worldIndex.filter(t=>t.category==='inventions').map(t=>'quality-navigation-invention-model-'+t.id+'-'+width+'.png')),'quality-navigation-invention-native-200-large.png','quality-navigation-invention-steps-large-320.png','quality-navigation-invention-labels-fridge-768.png');

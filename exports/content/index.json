@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T22:54:01.789Z",
+  "generatedAt": "2026-10-17T07:43:45.679Z",
   "personalProgressIncluded": false,
   "topics": 159,
   "categories": {
@@ -71,6 +71,15 @@
       "entries": 76,
       "bytes": 26913,
       "sha256": "0d92523ed27720467e08d4c74d3cbe3c0eb69591d70f3fec71bc19aedeb58f7d"
+    },
+    {
+      "file": "animal-inquiries.json",
+      "sources": [
+        "app/animal-inquiries.json"
+      ],
+      "entries": 24,
+      "bytes": 53001,
+      "sha256": "1a2f3b5d2f5da9397989f8b0da73d470a56d4fec35e72b6fc2df7d2a3001d7cf"
     },
     {
       "file": "journey-inquiries.json",
@@ -257,8 +266,8 @@
         "app/world-connections.json"
       ],
       "entries": 2,
-      "bytes": 31324,
-      "sha256": "409ee1b6cb5d829426645b3db466b026243fe80e1713b2cbaa12c2d08ee0b374"
+      "bytes": 37815,
+      "sha256": "6f5f09eb5ec723585c1d9c0e0386bd190b6b5179d728eca0e5d7c8ff0b450431"
     },
     {
       "file": "world-topics.json",

@@ -1,0 +1,1108 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "animal-african-savanna-elephant",
+      "goal": "Ein Werkzeug kann mehrere Aufgaben erfüllen.",
+      "evidence": [
+        {
+          "label": "Familie",
+          "text": "Verwandte Weibchen leben mit ihren Jungen in Familien. Ein erfahrenes Weibchen führt sie."
+        },
+        {
+          "label": "Rüssel",
+          "text": "Mit dem Rüssel kann er riechen, greifen und Wasser ins Maul bringen."
+        }
+      ],
+      "reason": {
+        "prompt": "Was lässt sich über den Rüssel sagen?",
+        "answers": [
+          "Er dient nur dazu, Wasser ins Maul zu bringen.",
+          "Er hilft bei der Nahrungssuche und beim Greifen."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Die Karte belegt mehrere Tätigkeiten: Riechen, Greifen und Wasser ins Maul bringen. „Nur“ würde andere belegte Aufgaben ausschließen.",
+          "Er hilft bei der Nahrungssuche und beim Greifen. Die Karte belegt mehrere Tätigkeiten: Riechen, Greifen und Wasser ins Maul bringen. „Nur“ würde andere belegte Aufgaben ausschließen."
+        ],
+        "hint": "Unterscheide eine beobachtete Tätigkeit von einer Aussage über alle möglichen Tätigkeiten."
+      },
+      "transfer": {
+        "prompt": "Ein Elefant greift einen Zweig. Beweist das, dass sein Rüssel nur zum Greifen dient?",
+        "answers": [
+          "Nein. Derselbe Körperteil kann mehrere Aufgaben haben.",
+          "Ja. Eine Beobachtung zeigt alle seine Fähigkeiten."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Nein. Derselbe Körperteil kann mehrere Aufgaben haben. Ein einzelner beobachteter Einsatz schließt andere belegte Fähigkeiten nicht aus.",
+          "Ein einzelner beobachteter Einsatz schließt andere belegte Fähigkeiten nicht aus."
+        ],
+        "hint": "Unterscheide eine beobachtete Tätigkeit von einer Aussage über alle möglichen Tätigkeiten."
+      },
+      "limit": "Ein einzelner beobachteter Einsatz schließt andere belegte Fähigkeiten nicht aus.",
+      "sourceUrls": [
+        "https://www.tokyo-zoo.net/tama/encyclopedia/african-bush-elephant/index.html",
+        "https://www.wwf.de/themen-projekte/artenlexikon/afrikanischer-savannenelefant",
+        "https://www.worldwildlife.org/species/elephant/african-elephant/african-savanna-elephant/"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-lion",
+      "goal": "Gemeinsames Verhalten und allgemeine Regeln unterscheiden.",
+      "evidence": [
+        {
+          "label": "Zusammenleben",
+          "text": "Löwen leben in Rudeln. Weibchen jagen oft zusammen und betreuen gemeinsam die Jungen."
+        },
+        {
+          "label": "Jagd",
+          "text": "Beim Jagen können sie ihre Beute von verschiedenen Seiten überraschen."
+        }
+      ],
+      "reason": {
+        "prompt": "Wie kann das Rudel bei einer Jagd helfen?",
+        "answers": [
+          "Mehrere Tiere können sich aus verschiedenen Richtungen nähern.",
+          "Zusammenarbeit bedeutet, dass sich alle Tiere gleich bewegen müssen."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Mehrere Tiere können sich aus verschiedenen Richtungen nähern. Gemeinsame Jagd kann verschiedene Annäherungsrichtungen umfassen. Zusammenarbeit ist nicht dasselbe wie identische Bewegung.",
+          "Gemeinsame Jagd kann verschiedene Annäherungsrichtungen umfassen. Zusammenarbeit ist nicht dasselbe wie identische Bewegung."
+        ],
+        "hint": "Achte darauf, ob die Aussage eine Art oder eine ganze Tiergruppe betrifft."
+      },
+      "transfer": {
+        "prompt": "Kann man vom Löwenrudel auf alle Katzen schließen?",
+        "answers": [
+          "Ja. Alle Katzen müssen in Rudeln leben.",
+          "Nein. Dafür braucht man Beobachtungen anderer Katzenarten."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Eine gut belegte Lebensweise einer Art ist noch keine Regel für alle verwandten Tiere.",
+          "Nein. Dafür braucht man Beobachtungen anderer Katzenarten. Eine gut belegte Lebensweise einer Art ist noch keine Regel für alle verwandten Tiere."
+        ],
+        "hint": "Achte darauf, ob die Aussage eine Art oder eine ganze Tiergruppe betrifft."
+      },
+      "limit": "Eine gut belegte Lebensweise einer Art ist noch keine Regel für alle verwandten Tiere.",
+      "sourceUrls": [
+        "https://www.nationalzoo.si.edu/animals/lion",
+        "https://www.wwf.de/themen-projekte/artenlexikon/loewe/"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-cheetah",
+      "goal": "Geschwindigkeit von Ausdauer unterscheiden.",
+      "evidence": [
+        {
+          "label": "Jungtiere",
+          "text": "Weibchen ziehen ihre Jungen meist allein auf. Männchen leben häufig in kleinen Gruppen."
+        },
+        {
+          "label": "Sprint",
+          "text": "Geparden können für kurze Zeit sehr schnell sprinten."
+        }
+      ],
+      "reason": {
+        "prompt": "Was ist beim Vergleich zweier Läufe wichtig?",
+        "answers": [
+          "Die höchste kurz erreichte Geschwindigkeit reicht als Vergleich aus.",
+          "Auch die Länge der Strecke und die Dauer zählen."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Eine kurz erreichte Geschwindigkeit sagt nicht, wie lange sie gehalten wird. Auch Strecke und Dauer gehören zum Vergleich.",
+          "Auch die Länge der Strecke und die Dauer zählen. Eine kurz erreichte Geschwindigkeit sagt nicht, wie lange sie gehalten wird. Auch Strecke und Dauer gehören zum Vergleich."
+        ],
+        "hint": "Vergleiche eine Höchstgeschwindigkeit mit einem über längere Zeit gehaltenen Tempo."
+      },
+      "transfer": {
+        "prompt": "Ein Gepard ist auf einer kurzen Strecke schneller. Was bleibt für eine lange Strecke offen?",
+        "answers": [
+          "Dass er auf jeder Strecke gewinnen muss.",
+          "Ob er das Tempo auf der ganzen Strecke halten kann."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Aus einem kurzen Sprint folgt kein unbegrenzter Ausdauervorteil.",
+          "Ob er das Tempo auf der ganzen Strecke halten kann. Aus einem kurzen Sprint folgt kein unbegrenzter Ausdauervorteil."
+        ],
+        "hint": "Vergleiche eine Höchstgeschwindigkeit mit einem über längere Zeit gehaltenen Tempo."
+      },
+      "limit": "Aus einem kurzen Sprint folgt kein unbegrenzter Ausdauervorteil.",
+      "sourceUrls": [
+        "https://nationalzoo.si.edu/animals/cheetah",
+        "https://www.wwf.de/themen-projekte/artenlexikon/gepard/"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-bengal-tiger",
+      "goal": "Eine Lebensweise nicht auf jede Situation übertragen.",
+      "evidence": [
+        {
+          "label": "Allein unterwegs",
+          "text": "Erwachsene Tiger leben meist allein. Die Mutter bleibt bei ihren Jungen, bis sie selbstständig sind."
+        },
+        {
+          "label": "Anschleichen",
+          "text": "Ein Tiger kann sich leise an seine Beute anschleichen."
+        }
+      ],
+      "reason": {
+        "prompt": "Warum passt Anschleichen zur Jagd?",
+        "answers": [
+          "Anschleichen macht die Entfernung zur Beute unwichtig.",
+          "Der Tiger nähert sich der Beute unauffällig."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Der Tiger nähert sich der Beute. Die Annäherung bleibt wichtig, auch wenn sie leise geschieht.",
+          "Der Tiger nähert sich der Beute unauffällig. Der Tiger nähert sich der Beute. Die Annäherung bleibt wichtig, auch wenn sie leise geschieht."
+        ],
+        "hint": "Lies das kleine Wort vor „allein“ und suche die genannte Ausnahme."
+      },
+      "transfer": {
+        "prompt": "Ein Foto zeigt eine Tigerin mit Jungen. Widerspricht das der Aussage „Erwachsene leben meist allein“?",
+        "answers": [
+          "Nein. „Meist“ lässt Ausnahmen wie die Jungenaufzucht zu.",
+          "Ja. Ein Gegenbeispiel widerlegt jede Aussage mit „meist“."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Nein. „Meist“ lässt Ausnahmen wie die Jungenaufzucht zu. „Meist“ und „immer“ sind unterschiedliche Aussagen. Die Karte nennt die Mutter mit Jungen ausdrücklich.",
+          "„Meist“ und „immer“ sind unterschiedliche Aussagen. Die Karte nennt die Mutter mit Jungen ausdrücklich."
+        ],
+        "hint": "Lies das kleine Wort vor „allein“ und suche die genannte Ausnahme."
+      },
+      "limit": "„Meist“ und „immer“ sind unterschiedliche Aussagen. Die Karte nennt die Mutter mit Jungen ausdrücklich.",
+      "sourceUrls": [
+        "https://www.wwf.de/themen-projekte/artenlexikon/bengal-tiger"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-giraffe",
+      "goal": "Messrichtungen und Körpermerkmale getrennt beschreiben.",
+      "evidence": [
+        {
+          "label": "Gruppe",
+          "text": "Giraffen treffen sich in Gruppen. An Wasserstellen können andere auf Gefahr achten, während ein Tier trinkt."
+        },
+        {
+          "label": "Blätter erreichen",
+          "text": "Mit der langen Zunge erreichen sie Blätter zwischen dornigen Zweigen."
+        }
+      ],
+      "reason": {
+        "prompt": "Was unterstützt das Fressen zwischen Zweigen?",
+        "answers": [
+          "Eine Angabe zur Körperhöhe erklärt schon das Greifen der Blätter.",
+          "Die lange bewegliche Zunge."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Die Höhe beschreibt eine Strecke. Wie Blätter zwischen Zweigen erreicht werden, erklärt zusätzlich die bewegliche Zunge.",
+          "Die lange bewegliche Zunge. Die Höhe beschreibt eine Strecke. Wie Blätter zwischen Zweigen erreicht werden, erklärt zusätzlich die bewegliche Zunge."
+        ],
+        "hint": "Frage zuerst: Von wo bis wo wurde gemessen?"
+      },
+      "transfer": {
+        "prompt": "Zwei Tierkarten nennen vier Meter. Sind die Tiere damit gleich hoch?",
+        "answers": [
+          "Nur wenn beide Werte dieselbe Messrichtung beschreiben.",
+          "Ja. Gleiche Zahlen bedeuten immer gleiche Körperhöhe."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Nur wenn beide Werte dieselbe Messrichtung beschreiben. Körperlänge und Höhe sind unterschiedliche Strecken; Einheit und Messrichtung gehören zur Zahl.",
+          "Körperlänge und Höhe sind unterschiedliche Strecken; Einheit und Messrichtung gehören zur Zahl."
+        ],
+        "hint": "Frage zuerst: Von wo bis wo wurde gemessen?"
+      },
+      "limit": "Körperlänge und Höhe sind unterschiedliche Strecken; Einheit und Messrichtung gehören zur Zahl.",
+      "sourceUrls": [
+        "https://animals.sandiegozoo.org/animals/giraffe?qt-animals_page_content_tabs=1",
+        "https://www.columbuszoo.org/animals/giraffe",
+        "https://iucn.org/press-release/202508/four-giraffe-species-officially-recognised-major-conservation-reclassification"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-giant-panda",
+      "goal": "Verwandtschaft und Nahrung nicht verwechseln.",
+      "evidence": [
+        {
+          "label": "Duftnachrichten",
+          "text": "Erwachsene Pandas sind oft allein unterwegs. Mit Duftmarken geben sie anderen Pandas Nachrichten."
+        },
+        {
+          "label": "Bambus zerbeißen",
+          "text": "Starke Zähne und Kiefer helfen ihnen, harten Bambus zu zerbeißen."
+        }
+      ],
+      "reason": {
+        "prompt": "Welche Hilfe passt zum harten Bambus?",
+        "answers": [
+          "Weil es Pflanzen sind, brauchen sie keine kräftigen Zähne.",
+          "Kräftige Zähne und Kiefer."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Auch Pflanzen können hart sein: Die Karte nennt ausdrücklich den Bambus und die kräftigen Zähne und Kiefer.",
+          "Kräftige Zähne und Kiefer. Auch Pflanzen können hart sein: Die Karte nennt ausdrücklich den Bambus und die kräftigen Zähne und Kiefer."
+        ],
+        "hint": "Prüfe den Speiseplan direkt, statt ihn nur aus einem Namen abzuleiten."
+      },
+      "transfer": {
+        "prompt": "Ein Panda gehört zu den Raubtieren. Muss er deshalb überwiegend Fleisch fressen?",
+        "answers": [
+          "Nein. Die Karte belegt überwiegend Bambus als Nahrung.",
+          "Ja. Der Gruppenname ist ein vollständiger Speiseplan."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Nein. Die Karte belegt überwiegend Bambus als Nahrung. Die zoologische Verwandtschaftsgruppe und die überwiegende Nahrung sind zwei verschiedene Informationen.",
+          "Die zoologische Verwandtschaftsgruppe und die überwiegende Nahrung sind zwei verschiedene Informationen."
+        ],
+        "hint": "Prüfe den Speiseplan direkt, statt ihn nur aus einem Namen abzuleiten."
+      },
+      "limit": "Die zoologische Verwandtschaftsgruppe und die überwiegende Nahrung sind zwei verschiedene Informationen.",
+      "sourceUrls": [
+        "https://www.nationalzoo.si.edu/animals/giant-panda",
+        "https://www.wwf.de/themen-projekte/artenlexikon/grosser-panda/"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-western-lowland-gorilla",
+      "goal": "Lebensraumschutz mit Nahrung verbinden.",
+      "evidence": [
+        {
+          "label": "Gruppe",
+          "text": "In einer Gruppe leben meist ein erwachsenes Männchen, mehrere Weibchen und ihre Jungen."
+        },
+        {
+          "label": "Fortbewegung",
+          "text": "Beim Gehen auf allen vieren stützt er sich auf die Fingerknöchel."
+        }
+      ],
+      "reason": {
+        "prompt": "Warum reicht für den Schutz nicht nur ein sicherer Schlafplatz?",
+        "answers": [
+          "Ein sicherer Schlafplatz macht die Nahrung im Wald entbehrlich.",
+          "Auch passende Nahrung im Lebensraum ist nötig."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Schutz umfasst mehr als einen Ruheort: Die überwiegend pflanzliche Nahrung muss ebenfalls verfügbar sein.",
+          "Auch passende Nahrung im Lebensraum ist nötig. Schutz umfasst mehr als einen Ruheort: Die überwiegend pflanzliche Nahrung muss ebenfalls verfügbar sein."
+        ],
+        "hint": "Unterscheide die Bezeichnung eines Lebensraums von seinen konkreten Bedingungen."
+      },
+      "transfer": {
+        "prompt": "Ein Wald hat viele Bäume. Ist damit schon bewiesen, dass er für diese Gorillas geeignet ist?",
+        "answers": [
+          "Nein. Man muss auch Nahrung, Schutz und weitere Bedingungen prüfen.",
+          "Ja. Jede Ansammlung von Bäumen ist gleich geeignet."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Nein. Man muss auch Nahrung, Schutz und weitere Bedingungen prüfen. „Wald“ ist eine grobe Lebensraumbeschreibung, keine vollständige Prüfung eines bestimmten Ortes.",
+          "„Wald“ ist eine grobe Lebensraumbeschreibung, keine vollständige Prüfung eines bestimmten Ortes."
+        ],
+        "hint": "Unterscheide die Bezeichnung eines Lebensraums von seinen konkreten Bedingungen."
+      },
+      "limit": "„Wald“ ist eine grobe Lebensraumbeschreibung, keine vollständige Prüfung eines bestimmten Ortes.",
+      "sourceUrls": [
+        "https://www.nationalzoo.si.edu/animals/western-lowland-gorilla",
+        "https://www.wwf.de/themen-projekte/artenlexikon/westlicher-gorilla"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-bornean-orangutan",
+      "goal": "Körpermerkmale mit Bewegung in Bäumen verbinden.",
+      "evidence": [
+        {
+          "label": "Lange Lernzeit",
+          "text": "Sie sind oft allein unterwegs. Junge Orang-Utans lernen viele Jahre von ihrer Mutter."
+        },
+        {
+          "label": "Klettern",
+          "text": "Ihre langen Arme und Greifhände helfen beim Klettern in den Bäumen."
+        }
+      ],
+      "reason": {
+        "prompt": "Wobei helfen lange Arme und Greifhände?",
+        "answers": [
+          "Greifhände nützen nur beim Ruhen, nicht bei Bewegung.",
+          "Beim Bewegen zwischen Ästen."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Die Karte verbindet die langen Arme und Greifhände ausdrücklich mit dem Klettern. Ein Körperteil kann bei Bewegung Halt geben.",
+          "Beim Bewegen zwischen Ästen. Die Karte verbindet die langen Arme und Greifhände ausdrücklich mit dem Klettern. Ein Körperteil kann bei Bewegung Halt geben."
+        ],
+        "hint": "Vergleiche den Zeitraum eines Fotos mit dem Zeitraum des Lernens."
+      },
+      "transfer": {
+        "prompt": "Was kann ein einzelnes Kletterfoto über das Lernen eines Jungtiers zeigen?",
+        "answers": [
+          "Eine Bewegung, aber nicht die gesamte jahrelange Lernzeit.",
+          "Dass es schon alles ohne seine Mutter gelernt hat."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Eine Bewegung, aber nicht die gesamte jahrelange Lernzeit. Ein kurzer sichtbarer Ausschnitt belegt nicht den ganzen Entwicklungsweg.",
+          "Ein kurzer sichtbarer Ausschnitt belegt nicht den ganzen Entwicklungsweg."
+        ],
+        "hint": "Vergleiche den Zeitraum eines Fotos mit dem Zeitraum des Lernens."
+      },
+      "limit": "Ein kurzer sichtbarer Ausschnitt belegt nicht den ganzen Entwicklungsweg.",
+      "sourceUrls": [
+        "https://www.wwf.de/themen-projekte/artenlexikon/borneo-orang-utan"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-polar-bear",
+      "goal": "Schwimmen von der Eignung eines Lebensraums unterscheiden.",
+      "evidence": [
+        {
+          "label": "Mutter und Junge",
+          "text": "Erwachsene Eisbären sind oft allein. Mütter bleiben bei ihren Jungen."
+        },
+        {
+          "label": "Tatzen",
+          "text": "Große Tatzen helfen beim Laufen auf Eis und beim Schwimmen."
+        }
+      ],
+      "reason": {
+        "prompt": "Warum ersetzt Schwimmen die Jagdfläche nicht einfach?",
+        "answers": [
+          "Wer gut schwimmt, findet damit automatisch auch genug Nahrung.",
+          "Bewegung im Wasser und Jagd auf dem Meereis sind verschiedene Aufgaben."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Fortbewegung im Wasser allein ist kein Nachweis für ausreichende Nahrung. Die Karte beschreibt Meereis als wichtige Jagdfläche.",
+          "Bewegung im Wasser und Jagd auf dem Meereis sind verschiedene Aufgaben. Fortbewegung im Wasser allein ist kein Nachweis für ausreichende Nahrung. Die Karte beschreibt Meereis als wichtige Jagdfläche."
+        ],
+        "hint": "Trenne „kann schwimmen“ von „findet dadurch ausreichend Nahrung“."
+      },
+      "transfer": {
+        "prompt": "Ein Eisbär schwimmt auf einem Foto. Beweist das, dass weniger Meereis kein Problem ist?",
+        "answers": [
+          "Ja. Ein schwimmender Eisbär braucht nie Meereis.",
+          "Nein. Das Bild zeigt keine ausreichende Jagdversorgung."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Eine beobachtete Fähigkeit ist kein Nachweis, dass alle Anforderungen an den Lebensraum erfüllt sind.",
+          "Nein. Das Bild zeigt keine ausreichende Jagdversorgung. Eine beobachtete Fähigkeit ist kein Nachweis, dass alle Anforderungen an den Lebensraum erfüllt sind."
+        ],
+        "hint": "Trenne „kann schwimmen“ von „findet dadurch ausreichend Nahrung“."
+      },
+      "limit": "Eine beobachtete Fähigkeit ist kein Nachweis, dass alle Anforderungen an den Lebensraum erfüllt sind.",
+      "sourceUrls": [
+        "https://animals.sandiegozoo.org/animals/polar-bear",
+        "https://www.wwf.de/themen-projekte/artenlexikon/eisbaer/"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-emperor-penguin",
+      "goal": "Flügel nicht allein mit Fliegen gleichsetzen.",
+      "evidence": [
+        {
+          "label": "Zusammenrücken",
+          "text": "Bei großer Kälte rücken viele Pinguine eng zusammen und wärmen sich gegenseitig."
+        },
+        {
+          "label": "Tauchen",
+          "text": "Er kann tief tauchen, um im Meer Nahrung zu finden."
+        }
+      ],
+      "reason": {
+        "prompt": "Welche Funktion passt zu den Flügeln eines Kaiserpinguins?",
+        "answers": [
+          "Sie sind vor allem ein Beleg, dass dieser Vogel auch fliegen muss.",
+          "Sie unterstützen die Fortbewegung im Wasser."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Vögel besitzen Flügel mit unterschiedlichen Funktionen. Beim Kaiserpinguin helfen sie beim Schwimmen, nicht beim Flug durch die Luft.",
+          "Sie unterstützen die Fortbewegung im Wasser. Vögel besitzen Flügel mit unterschiedlichen Funktionen. Beim Kaiserpinguin helfen sie beim Schwimmen, nicht beim Flug durch die Luft."
+        ],
+        "hint": "Vergleiche Arktis und Antarktis auf der Weltkugel."
+      },
+      "transfer": {
+        "prompt": "Sind Eisbären und Kaiserpinguine natürliche Nachbarn, weil beide in kalten Regionen leben?",
+        "answers": [
+          "Ja. Kälte ist ein Beleg für denselben Wohnort.",
+          "Nein. Ihre natürlichen Gebiete liegen an unterschiedlichen Polen."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Ähnliche Umweltbedingungen beweisen keine gemeinsame geografische Verbreitung.",
+          "Nein. Ihre natürlichen Gebiete liegen an unterschiedlichen Polen. Ähnliche Umweltbedingungen beweisen keine gemeinsame geografische Verbreitung."
+        ],
+        "hint": "Vergleiche Arktis und Antarktis auf der Weltkugel."
+      },
+      "limit": "Ähnliche Umweltbedingungen beweisen keine gemeinsame geografische Verbreitung.",
+      "sourceUrls": [
+        "https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/",
+        "https://www.penguinsinternational.org/penguin-record-breakers/",
+        "https://iucn.org/press-release/202604/emperor-penguin-and-antarctic-fur-seal-now-endangered-due-climate-change-iucn"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-blue-whale",
+      "goal": "Tiergröße und Größe seiner Nahrung getrennt betrachten.",
+      "evidence": [
+        {
+          "label": "Zusammenleben",
+          "text": "Oft schwimmen sie allein oder zu zweit, manchmal in kleinen Gruppen."
+        },
+        {
+          "label": "Barten",
+          "text": "Barten im Maul halten Krill zurück, während das Wasser herausgedrückt wird."
+        }
+      ],
+      "reason": {
+        "prompt": "Was wird beim Fressen mit den Barten getrennt?",
+        "answers": [
+          "Die Barten halten das Wasser zurück und lassen den Krill hinaus.",
+          "Nahrung bleibt zurück, während Wasser hinausgelangt."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Die Richtung ist vertauscht: Nahrung bleibt zurück, während Wasser hinausgedrückt wird.",
+          "Nahrung bleibt zurück, während Wasser hinausgelangt. Die Richtung ist vertauscht: Nahrung bleibt zurück, während Wasser hinausgedrückt wird."
+        ],
+        "hint": "Unterscheide die Größe eines einzelnen Nahrungstiers von der gesamten Nahrungsmenge."
+      },
+      "transfer": {
+        "prompt": "Muss das größte Tier auch die größten Beutetiere fressen?",
+        "answers": [
+          "Ja. Körpergröße und Beutegröße müssen gleich wachsen.",
+          "Nein. Beim Blauwal sind viele kleine Krilltiere die Nahrung."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Eine große Nahrungsmenge kann aus vielen kleinen Tieren bestehen. Die Größe eines einzelnen Beutetiers ist eine andere Größe.",
+          "Nein. Beim Blauwal sind viele kleine Krilltiere die Nahrung. Eine große Nahrungsmenge kann aus vielen kleinen Tieren bestehen. Die Größe eines einzelnen Beutetiers ist eine andere Größe."
+        ],
+        "hint": "Unterscheide die Größe eines einzelnen Nahrungstiers von der gesamten Nahrungsmenge."
+      },
+      "limit": "Eine große Nahrungsmenge kann aus vielen kleinen Tieren bestehen. Die Größe eines einzelnen Beutetiers ist eine andere Größe.",
+      "sourceUrls": [
+        "https://www.fisheries.noaa.gov/species/blue-whale",
+        "https://www.worldwildlife.org/species/whale/blue-whale/"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-common-bottlenose-dolphin",
+      "goal": "Echoortung und Atmung auseinanderhalten.",
+      "evidence": [
+        {
+          "label": "Wechselnde Gruppen",
+          "text": "Sie bilden Gruppen, die sich immer wieder trennen und neu zusammenfinden."
+        },
+        {
+          "label": "Echo",
+          "text": "Mit Klicklauten und deren Echo können sie Nahrung im Wasser orten."
+        }
+      ],
+      "reason": {
+        "prompt": "Was kann ein zurückkehrendes Echo liefern?",
+        "answers": [
+          "Einen Hinweis auf ein Objekt im Wasser.",
+          "Ein ausgesendeter Klick belegt ohne Rückecho schon die Lage der Beute."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Einen Hinweis auf ein Objekt im Wasser. Das zurückkehrende Echo ist die wichtige zusätzliche Information. Ein ausgesendeter Laut allein beschreibt noch kein bestimmtes Ziel.",
+          "Das zurückkehrende Echo ist die wichtige zusätzliche Information. Ein ausgesendeter Laut allein beschreibt noch kein bestimmtes Ziel."
+        ],
+        "hint": "Suche ein Merkmal, das mehr als den Umriss beschreibt."
+      },
+      "transfer": {
+        "prompt": "Ein Tier schwimmt und hat eine ähnliche Form wie ein Fisch. Reicht das für die Einordnung?",
+        "answers": [
+          "Nein. Auch Merkmale wie die Atmung müssen betrachtet werden.",
+          "Ja. Ähnliche Form beweist dieselbe Tiergruppe."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Nein. Auch Merkmale wie die Atmung müssen betrachtet werden. Ähnliche Körperformen können zu ähnlicher Fortbewegung passen, ohne dieselbe Verwandtschaftsgruppe zu bedeuten.",
+          "Ähnliche Körperformen können zu ähnlicher Fortbewegung passen, ohne dieselbe Verwandtschaftsgruppe zu bedeuten."
+        ],
+        "hint": "Suche ein Merkmal, das mehr als den Umriss beschreibt."
+      },
+      "limit": "Ähnliche Körperformen können zu ähnlicher Fortbewegung passen, ohne dieselbe Verwandtschaftsgruppe zu bedeuten.",
+      "sourceUrls": [
+        "https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin",
+        "https://www.worldwildlife.org/species/dolphin-and-porpoise/common-bottlenose-dolphin/",
+        "https://iucn-csg.org/red-list-updates-published-for-sperm-whales-and-lahilles-bottlenose-dolphins/"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-orca",
+      "goal": "Aussagen über Populationen vorsichtig verallgemeinern.",
+      "evidence": [
+        {
+          "label": "Familie",
+          "text": "Viele Orcas leben in Familiengruppen und lernen von anderen Gruppenmitgliedern."
+        },
+        {
+          "label": "Zusammenarbeit",
+          "text": "Beim Jagen können sie als Team zusammenarbeiten."
+        }
+      ],
+      "reason": {
+        "prompt": "Was kann die Familie außer Schutz vermitteln?",
+        "answers": [
+          "Alles Gelernte muss jedes Jungtier ohne die Gruppe herausfinden.",
+          "Junge können von anderen Gruppenmitgliedern lernen."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Die Karte nennt Lernen von Gruppenmitgliedern. Allein erkunden und von anderen lernen schließen sich nicht grundsätzlich aus.",
+          "Junge können von anderen Gruppenmitgliedern lernen. Die Karte nennt Lernen von Gruppenmitgliedern. Allein erkunden und von anderen lernen schließen sich nicht grundsätzlich aus."
+        ],
+        "hint": "Prüfe, ob von einer Familie, einer Population oder der ganzen Art gesprochen wird."
+      },
+      "transfer": {
+        "prompt": "Eine Orcagruppe frisst bestimmte Beute. Gilt ihr Speiseplan damit für alle Orcas?",
+        "answers": [
+          "Nein. Nahrung kann sich zwischen Populationen unterscheiden.",
+          "Ja. Eine Gruppe steht für jeden Orca auf der Erde."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Nein. Nahrung kann sich zwischen Populationen unterscheiden. Eine Beobachtung an einer Population lässt sich nicht ohne weitere Belege auf alle Populationen übertragen.",
+          "Eine Beobachtung an einer Population lässt sich nicht ohne weitere Belege auf alle Populationen übertragen."
+        ],
+        "hint": "Prüfe, ob von einer Familie, einer Population oder der ganzen Art gesprochen wird."
+      },
+      "limit": "Eine Beobachtung an einer Population lässt sich nicht ohne weitere Belege auf alle Populationen übertragen.",
+      "sourceUrls": [
+        "https://www.fisheries.noaa.gov/species/killer-whale",
+        "https://www.wwf.org.uk/learn/fascinating-facts/orcas"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-common-octopus",
+      "goal": "Bewegung und Sinnesleistung eines Arms unterscheiden.",
+      "evidence": [
+        {
+          "label": "Versteck",
+          "text": "Meist lebt er allein und versteckt sich in einer Felsspalte oder Höhle."
+        },
+        {
+          "label": "Wasser ausstoßen",
+          "text": "Er kann Wasser ausstoßen und sich dadurch schnell fortbewegen."
+        }
+      ],
+      "reason": {
+        "prompt": "Wie passt ausgestoßenes Wasser zur Bewegung?",
+        "answers": [
+          "Der Wasserstrahl ist Teil seiner Fortbewegung.",
+          "Ausgestoßenes Wasser kann für seine Bewegung keine Rolle spielen."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Der Wasserstrahl ist Teil seiner Fortbewegung. Die Karte nennt den Wasserausstoß als Weg der Fortbewegung. Das Versteck beschreibt dagegen einen Aufenthaltsort.",
+          "Die Karte nennt den Wasserausstoß als Weg der Fortbewegung. Das Versteck beschreibt dagegen einen Aufenthaltsort."
+        ],
+        "hint": "Lies den Überraschungsfakt und vergleiche ihn mit dem Greifen."
+      },
+      "transfer": {
+        "prompt": "Sind die Arme nur zum Festhalten da?",
+        "answers": [
+          "Nein. Die Karte nennt auch Fühlen und das Erkennen chemischer Spuren.",
+          "Ja. Ein Körperteil kann immer nur eine Aufgabe haben."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Nein. Die Karte nennt auch Fühlen und das Erkennen chemischer Spuren. Die beobachtete Greifbewegung zeigt nur eine von mehreren belegten Leistungen der Arme.",
+          "Die beobachtete Greifbewegung zeigt nur eine von mehreren belegten Leistungen der Arme."
+        ],
+        "hint": "Lies den Überraschungsfakt und vergleiche ihn mit dem Greifen."
+      },
+      "limit": "Die beobachtete Greifbewegung zeigt nur eine von mehreren belegten Leistungen der Arme.",
+      "sourceUrls": [
+        "https://www.aquarium-larochelle.com/en/species-encyclopedia/common-octopus/",
+        "https://www.devonandsevernifca.gov.uk/wp-content/uploads/2025/06/Agenda-Item-11-Influx-of-Octopus-into-Devon-and-the-South-West.pdf"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-green-sea-turtle",
+      "goal": "Schwimmen, Atmen und Fortpflanzung getrennt erklären.",
+      "evidence": [
+        {
+          "label": "Wanderung",
+          "text": "Sie legt weite Wege zwischen Futterplätzen und Niststränden zurück."
+        },
+        {
+          "label": "Niststrand",
+          "text": "Weibchen finden zur Eiablage wieder in die Gegend ihres eigenen Geburtsstrands."
+        }
+      ],
+      "reason": {
+        "prompt": "Warum gehören Futterplatz und Niststrand beide zum Schutz?",
+        "answers": [
+          "Mit erhaltenen Futterplätzen werden Niststrände unwichtig.",
+          "Sie erfüllen unterschiedliche Aufgaben im Leben der Schildkröte."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Nahrungssuche und Eiablage sind verschiedene Anforderungen. Der Schutz eines Orts ersetzt nicht automatisch den Schutz des anderen.",
+          "Sie erfüllen unterschiedliche Aufgaben im Leben der Schildkröte. Nahrungssuche und Eiablage sind verschiedene Anforderungen. Der Schutz eines Orts ersetzt nicht automatisch den Schutz des anderen."
+        ],
+        "hint": "Vergleiche die Atmung mit der des Delfins und des Walhais."
+      },
+      "transfer": {
+        "prompt": "Eine Meeresschildkröte lebt im Wasser. Hat sie deshalb Kiemen?",
+        "answers": [
+          "Ja. Alle dauerhaft schwimmenden Tiere haben Kiemen.",
+          "Nein. Sie muss zum Luftholen an die Oberfläche."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Der Lebensraum allein bestimmt nicht die Atmungsorgane eines Tiers.",
+          "Nein. Sie muss zum Luftholen an die Oberfläche. Der Lebensraum allein bestimmt nicht die Atmungsorgane eines Tiers."
+        ],
+        "hint": "Vergleiche die Atmung mit der des Delfins und des Walhais."
+      },
+      "limit": "Der Lebensraum allein bestimmt nicht die Atmungsorgane eines Tiers.",
+      "sourceUrls": [
+        "https://www.fisheries.noaa.gov/species/green-turtle",
+        "https://turtle-foundation.org/de/meeresschildkroeten/arten/",
+        "https://iucn.org/press-release/202510/arctic-seals-threatened-climate-change-birds-decline-globally-iucn-red-list"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-red-kangaroo",
+      "goal": "Vergleichswerte mit ihrer Bezugsgruppe lesen.",
+      "evidence": [
+        {
+          "label": "Gruppe",
+          "text": "Kängurus leben oft in Gruppen."
+        },
+        {
+          "label": "Hinterbeine",
+          "text": "Mit den starken Hinterbeinen kann es schnell hüpfen."
+        }
+      ],
+      "reason": {
+        "prompt": "Welche Körperteile fallen beim Hüpfen besonders auf?",
+        "answers": [
+          "Die kräftigen Hinterbeine.",
+          "Allein eine Gewichtsangabe benennt schon die beteiligten Körperteile."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Die kräftigen Hinterbeine. Gewicht ist eine Messgröße. Welche Körperteile beim Hüpfen helfen, muss aus dem Körperbau erklärt werden.",
+          "Gewicht ist eine Messgröße. Welche Körperteile beim Hüpfen helfen, muss aus dem Körperbau erklärt werden."
+        ],
+        "hint": "Lies nicht nur die Zahl, sondern auch die Beschreibung direkt davor."
+      },
+      "transfer": {
+        "prompt": "Die Karte nennt eine Gewichtsspanne erwachsener Männchen. Gilt sie unverändert für jedes Jungtier?",
+        "answers": [
+          "Nein. Alter und Geschlecht begrenzen den Vergleich.",
+          "Ja. Jede Zahl gilt immer für alle Tiere einer Art."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Nein. Alter und Geschlecht begrenzen den Vergleich. Eine Messung muss zusammen mit ihrer Bezugsgruppe gelesen werden; die Karte nennt diese ausdrücklich.",
+          "Eine Messung muss zusammen mit ihrer Bezugsgruppe gelesen werden; die Karte nennt diese ausdrücklich."
+        ],
+        "hint": "Lies nicht nur die Zahl, sondern auch die Beschreibung direkt davor."
+      },
+      "limit": "Eine Messung muss zusammen mit ihrer Bezugsgruppe gelesen werden; die Karte nennt diese ausdrücklich.",
+      "sourceUrls": [
+        "https://www.taronga.org.au/wildlife-and-conservation/animals/detail/red-kangaroo"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-koala",
+      "goal": "Eine spezialisierte Nahrungsauswahl erkennen.",
+      "evidence": [
+        {
+          "label": "Ruhezeiten",
+          "text": "Sie sind oft allein und verbringen viel Zeit ruhend in Bäumen."
+        },
+        {
+          "label": "Festhalten",
+          "text": "Kräftige Arme und Hände halten sie sicher an Ästen fest."
+        }
+      ],
+      "reason": {
+        "prompt": "Was helfen kräftige Greifhände im Baum?",
+        "answers": [
+          "Sie geben Halt an Ästen.",
+          "Geeignete Nahrung macht einen sicheren Halt im Baum unnötig."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Sie geben Halt an Ästen. Nahrung und Halt sind verschiedene Anforderungen. Passende Blätter allein erklären nicht, wie sich das Tier am Ast festhält.",
+          "Nahrung und Halt sind verschiedene Anforderungen. Passende Blätter allein erklären nicht, wie sich das Tier am Ast festhält."
+        ],
+        "hint": "Achte auf das Wort „bestimmter“ in der Nahrungsbeschreibung."
+      },
+      "transfer": {
+        "prompt": "In einem Gebiet stehen viele Bäume. Reicht das als Nachweis für Koalanahrung?",
+        "answers": [
+          "Nein. Es müssen geeignete Eukalyptusarten vorhanden sein.",
+          "Ja. Ein Koala kann beliebige Baumblätter fressen."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Nein. Es müssen geeignete Eukalyptusarten vorhanden sein. Eine große Menge ungeeigneter Pflanzen ersetzt die passende Nahrung nicht.",
+          "Eine große Menge ungeeigneter Pflanzen ersetzt die passende Nahrung nicht."
+        ],
+        "hint": "Achte auf das Wort „bestimmter“ in der Nahrungsbeschreibung."
+      },
+      "limit": "Eine große Menge ungeeigneter Pflanzen ersetzt die passende Nahrung nicht.",
+      "sourceUrls": [
+        "https://animals.sandiegozoo.org/animals/koala",
+        "https://www.dcceew.gov.au/environment/biodiversity/threatened/species/koalas/listing-under-national-environmental-law"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-jaguar",
+      "goal": "Fähigkeit und Lebensraum nicht gleichsetzen.",
+      "evidence": [
+        {
+          "label": "Allein unterwegs",
+          "text": "Erwachsene Jaguare sind meist allein unterwegs. Die Mutter zieht ihre Jungen auf."
+        },
+        {
+          "label": "Klettern und Schwimmen",
+          "text": "Sie können gut klettern und schwimmen."
+        }
+      ],
+      "reason": {
+        "prompt": "Was zeigt die Kombination aus Klettern und Schwimmen?",
+        "answers": [
+          "Ein Tier kann unterschiedliche Bewegungsweisen nutzen.",
+          "Die Fähigkeit zu klettern schließt das Schwimmen aus."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Ein Tier kann unterschiedliche Bewegungsweisen nutzen. Die Karte nennt beide Fähigkeiten. Eine Tierart muss sich nicht auf genau eine Bewegungsweise beschränken.",
+          "Die Karte nennt beide Fähigkeiten. Eine Tierart muss sich nicht auf genau eine Bewegungsweise beschränken."
+        ],
+        "hint": "Vergleiche den Jaguar mit einem schwimmenden Tiger."
+      },
+      "transfer": {
+        "prompt": "Wird ein Jaguar zum Meerestier, sobald er schwimmt?",
+        "answers": [
+          "Nein. Eine Tätigkeit allein ändert nicht seine Tiergruppe.",
+          "Ja. Schwimmen ordnet jedes Tier neu ein."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Nein. Eine Tätigkeit allein ändert nicht seine Tiergruppe. Eine Bewegung, eine Tiergruppe und ein typischer Lebensraum sind drei verschiedene Beschreibungen.",
+          "Eine Bewegung, eine Tiergruppe und ein typischer Lebensraum sind drei verschiedene Beschreibungen."
+        ],
+        "hint": "Vergleiche den Jaguar mit einem schwimmenden Tiger."
+      },
+      "limit": "Eine Bewegung, eine Tiergruppe und ein typischer Lebensraum sind drei verschiedene Beschreibungen.",
+      "sourceUrls": [
+        "https://www.wwf.ch/de/tierarten/jaguar-der-im-fliegen-jagt",
+        "https://animals.sandiegozoo.org/animals/jaguar"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-honey-bee",
+      "goal": "Bestäubung von Nahrungssuche unterscheiden.",
+      "evidence": [
+        {
+          "label": "Bienenvolk",
+          "text": "Im Bienenvolk gibt es eine Königin, viele Arbeiterinnen und männliche Drohnen."
+        },
+        {
+          "label": "Pollen weitertragen",
+          "text": "Beim Blütenbesuch tragen sie Pollen weiter und bestäuben Pflanzen."
+        }
+      ],
+      "reason": {
+        "prompt": "Wie können Blütenbesuch und Bestäubung zusammenhängen?",
+        "answers": [
+          "Beim Besuch kann Pollen zur nächsten Blüte gelangen.",
+          "Jeder Blütenbesuch erzeugt sofort eine fertige Frucht."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Beim Besuch kann Pollen zur nächsten Blüte gelangen. Pollenübertragung ist ein Schritt. Sie garantiert noch nicht für jeden einzelnen Besuch eine Frucht.",
+          "Pollenübertragung ist ein Schritt. Sie garantiert noch nicht für jeden einzelnen Besuch eine Frucht."
+        ],
+        "hint": "Unterscheide den beobachteten Besuch von der viel größeren behaupteten Wirkung."
+      },
+      "transfer": {
+        "prompt": "Eine Biene sitzt auf einer Blüte. Ist damit jede Pflanze in der Umgebung bestäubt?",
+        "answers": [
+          "Nein. Ein einzelner Besuch belegt keine vollständige Bestäubung.",
+          "Ja. Eine Biene erledigt damit jede Blüte im ganzen Gebiet."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Nein. Ein einzelner Besuch belegt keine vollständige Bestäubung. Ein sichtbarer Einzelvorgang ist kein Nachweis für die gesamte Fläche oder alle Pflanzenarten.",
+          "Ein sichtbarer Einzelvorgang ist kein Nachweis für die gesamte Fläche oder alle Pflanzenarten."
+        ],
+        "hint": "Unterscheide den beobachteten Besuch von der viel größeren behaupteten Wirkung."
+      },
+      "limit": "Ein sichtbarer Einzelvorgang ist kein Nachweis für die gesamte Fläche oder alle Pflanzenarten.",
+      "sourceUrls": [
+        "https://www.zoo-frankfurt.de/de/tiere-von-a-z-detailansicht/animal/tiere-von-a-z-detailansicht/honigbiene-europaeische-westliche",
+        "https://www.nczoo.org/wildlife/animals/honey-bee",
+        "https://fmach.it/en/Communication/Press-releases/Wild-Honey-Bee-a-step-forward-for-its-protection"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-axolotl",
+      "goal": "Ein Merkmal nicht zur Regel für alle Amphibien machen.",
+      "evidence": [
+        {
+          "label": "Lebensweise",
+          "text": "Axolotl leben meist allein."
+        },
+        {
+          "label": "Außenkiemen",
+          "text": "Mit ihren federartigen Außenkiemen können sie unter Wasser Sauerstoff aufnehmen."
+        }
+      ],
+      "reason": {
+        "prompt": "Was leisten die federartigen Außenkiemen?",
+        "answers": [
+          "Sie zeigen nur eine Form, ohne etwas mit Atmung zu tun zu haben.",
+          "Sie nehmen Sauerstoff aus dem Wasser auf."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Die Karte beschreibt die Außenkiemen ausdrücklich als Organe zur Aufnahme von Sauerstoff aus dem Wasser.",
+          "Sie nehmen Sauerstoff aus dem Wasser auf. Die Karte beschreibt die Außenkiemen ausdrücklich als Organe zur Aufnahme von Sauerstoff aus dem Wasser."
+        ],
+        "hint": "Achte darauf, ob die Aussage die Art oder alle Amphibien betrifft."
+      },
+      "transfer": {
+        "prompt": "Behält jedes erwachsene Amphibium Außenkiemen wie der Axolotl?",
+        "answers": [
+          "Das folgt nicht aus dem Beispiel des Axolotls.",
+          "Ja. Ein Beispiel beweist dieselbe Entwicklung aller Amphibien."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Das folgt nicht aus dem Beispiel des Axolotls. Der Axolotl ist ein besonderes Beispiel. Für andere Amphibien braucht man eigene Entwicklungsbelege.",
+          "Der Axolotl ist ein besonderes Beispiel. Für andere Amphibien braucht man eigene Entwicklungsbelege."
+        ],
+        "hint": "Achte darauf, ob die Aussage die Art oder alle Amphibien betrifft."
+      },
+      "limit": "Der Axolotl ist ein besonderes Beispiel. Für andere Amphibien braucht man eigene Entwicklungsbelege.",
+      "sourceUrls": [
+        "https://www.torontozoo.com/animals/Axolotl",
+        "https://animals.sandiegozoo.org/animals/axolotl"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-whale-shark",
+      "goal": "Ähnliche Namen gegen Körpermerkmale prüfen.",
+      "evidence": [
+        {
+          "label": "Kiemen und Nahrung",
+          "text": "Mit Kiemen nimmt er Sauerstoff aus dem Wasser auf. Er sammelt winzige Nahrungsteilchen mit seinem großen Maul."
+        },
+        {
+          "label": "Fleckenmuster",
+          "text": "Sein helles Fleckenmuster hilft Forschenden, einzelne Walhaie wiederzuerkennen."
+        }
+      ],
+      "reason": {
+        "prompt": "Welcher Beleg ist für den Vergleich mit einem Wal entscheidend?",
+        "answers": [
+          "Der Walhai nimmt Sauerstoff mit Kiemen auf.",
+          "Die Buchstaben „Wal“ im Namen beweisen eine Lunge."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Der Walhai nimmt Sauerstoff mit Kiemen auf. Ein Name ist kein Atmungsorgan. Der Walhai ist ein Fisch, ein Wal ein Säugetier.",
+          "Ein Name ist kein Atmungsorgan. Der Walhai ist ein Fisch, ein Wal ein Säugetier."
+        ],
+        "hint": "Vergleiche Nahrung, Atmung und Namen jeweils getrennt."
+      },
+      "transfer": {
+        "prompt": "Können Walhai und Blauwal beide kleine Nahrung fressen und trotzdem verschieden verwandt sein?",
+        "answers": [
+          "Nein. Dieselbe Nahrung macht alle Tiere zu Verwandten.",
+          "Ja. Ähnliche Nahrung allein beweist keine gleiche Tiergruppe."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Nahrung und Verwandtschaft sind verschiedene Fragen. Für die Einordnung werden weitere Merkmale betrachtet.",
+          "Ja. Ähnliche Nahrung allein beweist keine gleiche Tiergruppe. Nahrung und Verwandtschaft sind verschiedene Fragen. Für die Einordnung werden weitere Merkmale betrachtet."
+        ],
+        "hint": "Vergleiche Nahrung, Atmung und Namen jeweils getrennt."
+      },
+      "limit": "Nahrung und Verwandtschaft sind verschiedene Fragen. Für die Einordnung werden weitere Merkmale betrachtet.",
+      "sourceUrls": [
+        "https://www.georgiaaquarium.org/animal/whale-shark/"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-garden-cross-spider",
+      "goal": "Tiergruppen anhand überprüfbarer Merkmale unterscheiden.",
+      "evidence": [
+        {
+          "label": "Acht Beine",
+          "text": "Spinnen haben acht Beine. Insekten haben sechs. Die Kreuzspinne gehört deshalb nicht zu den Insekten."
+        },
+        {
+          "label": "Netzerschütterung",
+          "text": "Bewegt sich ein Insekt im Netz, spürt die Spinne die Erschütterung der Fäden."
+        }
+      ],
+      "reason": {
+        "prompt": "Wie erhält die Spinne im Netz einen Hinweis auf Bewegung?",
+        "answers": [
+          "Bewegung im Netz kann sie nur erkennen, wenn sie das Beutetier sieht.",
+          "Über die Erschütterung der Fäden."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Die Erschütterung der Fäden ist selbst ein Hinweis auf Bewegung. Die Erklärung setzt kein sichtbares Bild der Beute voraus.",
+          "Über die Erschütterung der Fäden. Die Erschütterung der Fäden ist selbst ein Hinweis auf Bewegung. Die Erklärung setzt kein sichtbares Bild der Beute voraus."
+        ],
+        "hint": "Frage dich, ob das Bild wirklich den ganzen Körper zeigt."
+      },
+      "transfer": {
+        "prompt": "Auf einem Foto sind nur sechs Beine zu sehen. Ist die Kreuzspinne damit sicher ein Insekt?",
+        "answers": [
+          "Nein. Verdeckte Beine und die sichere Artbestimmung müssen berücksichtigt werden.",
+          "Ja. Alles, was im Bild fehlt, existiert auch am Tier nicht."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Nein. Verdeckte Beine und die sichere Artbestimmung müssen berücksichtigt werden. Ein Foto kann Körperteile verdecken. Sichtbarkeit und tatsächliche Anzahl sind nicht dasselbe.",
+          "Ein Foto kann Körperteile verdecken. Sichtbarkeit und tatsächliche Anzahl sind nicht dasselbe."
+        ],
+        "hint": "Frage dich, ob das Bild wirklich den ganzen Körper zeigt."
+      },
+      "limit": "Ein Foto kann Körperteile verdecken. Sichtbarkeit und tatsächliche Anzahl sind nicht dasselbe.",
+      "sourceUrls": [
+        "https://www.wildlifetrusts.org/wildlife-explorer/invertebrates/spiders/garden-spider"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-dromedary",
+      "goal": "Energie- und Wasservorrat unterscheiden.",
+      "evidence": [
+        {
+          "label": "Fettvorrat",
+          "text": "Im Höcker steckt Fett als Energievorrat. Er ist kein Wassertank."
+        },
+        {
+          "label": "Füße und Wimpern",
+          "text": "Breite, gepolsterte Füße helfen auf Sand. Lange Wimpern schützen die Augen vor Staub."
+        }
+      ],
+      "reason": {
+        "prompt": "Welche Aussage passt zum Höcker?",
+        "answers": [
+          "Er ist ein direkt auffüllbarer Trinkwassertank.",
+          "Er enthält einen Fettvorrat."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Fett dient als Energievorrat. Der Höcker ist kein Behälter für Trinkwasser.",
+          "Er enthält einen Fettvorrat. Fett dient als Energievorrat. Der Höcker ist kein Behälter für Trinkwasser."
+        ],
+        "hint": "Suche das ausdrücklich genannte Gegenbeispiel im Überraschungsfakt."
+      },
+      "transfer": {
+        "prompt": "Beweist ein Höcker, dass jedes Kamel genau einen besitzt?",
+        "answers": [
+          "Ja. Ein Merkmal des Dromedars gilt für jede Kamelart.",
+          "Nein. Die Karte nennt das Trampeltier mit zwei Höckern."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Der Vergleich verschiedener Kamelarten verhindert eine falsche Verallgemeinerung.",
+          "Nein. Die Karte nennt das Trampeltier mit zwei Höckern. Der Vergleich verschiedener Kamelarten verhindert eine falsche Verallgemeinerung."
+        ],
+        "hint": "Suche das ausdrücklich genannte Gegenbeispiel im Überraschungsfakt."
+      },
+      "limit": "Der Vergleich verschiedener Kamelarten verhindert eine falsche Verallgemeinerung.",
+      "sourceUrls": [
+        "https://animaldiversity.org/accounts/Camelus_dromedarius/"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    },
+    {
+      "id": "animal-white-tailed-eagle",
+      "goal": "Körpermaß und Verhalten richtig vergleichen.",
+      "evidence": [
+        {
+          "label": "Gleitflug",
+          "text": "Breite Flügel tragen ihn beim Gleiten. Er sucht nach Nahrung an Seen, Flüssen und Küsten."
+        },
+        {
+          "label": "Junges Gefieder",
+          "text": "Junge Seeadler sehen dunkler aus. Das weiße Schwanzgefieder entwickelt sich später."
+        }
+      ],
+      "reason": {
+        "prompt": "Warum sind wenige Flügelschläge kein Beweis für Stillstand?",
+        "answers": [
+          "Der Adler kann sich gleitend weiterbewegen.",
+          "Ohne neue Flügelschläge kann kein Weg zurückgelegt werden."
+        ],
+        "correct": 0,
+        "feedback": [
+          "Der Adler kann sich gleitend weiterbewegen. Beim Gleiten bewegt sich der Vogel auch zwischen Flügelschlägen weiter. Die Anzahl der Schläge ist nicht seine zurückgelegte Strecke.",
+          "Beim Gleiten bewegt sich der Vogel auch zwischen Flügelschlägen weiter. Die Anzahl der Schläge ist nicht seine zurückgelegte Strecke."
+        ],
+        "hint": "Vergleiche die Altersangabe mit dem beobachteten Gefieder."
+      },
+      "transfer": {
+        "prompt": "Ein junger Adler hat noch keinen weißen Schwanz. Kann man ihn allein deshalb ausschließen?",
+        "answers": [
+          "Ja. Alle Merkmale müssen in jedem Alter gleich aussehen.",
+          "Nein. Das Gefieder verändert sich beim Heranwachsen."
+        ],
+        "correct": 1,
+        "feedback": [
+          "Alter gehört zur Beschreibung eines Merkmals. Die Karte unterscheidet junge und ältere Tiere.",
+          "Nein. Das Gefieder verändert sich beim Heranwachsen. Alter gehört zur Beschreibung eines Merkmals. Die Karte unterscheidet junge und ältere Tiere."
+        ],
+        "hint": "Vergleiche die Altersangabe mit dem beobachteten Gefieder."
+      },
+      "limit": "Alter gehört zur Beschreibung eines Merkmals. Die Karte unterscheidet junge und ältere Tiere.",
+      "sourceUrls": [
+        "https://www.rspb.org.uk/birds-and-wildlife/birds-of-the-month/august-birds-of-the-month"
+      ],
+      "status": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen."
+    }
+  ]
+}

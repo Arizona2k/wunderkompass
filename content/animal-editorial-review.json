@@ -1,0 +1,1050 @@
+{
+  "schemaVersion": 1,
+  "preparedOn": "2026-10-17",
+  "sourceBase": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+  "independentReview": false,
+  "newSpecies": 0,
+  "acceptedNew": 0,
+  "meaning": "Individuelle pädagogische Werkstätten für die24 vorhandenen Tiere. Keine vollständige 2x-Tierwelt-/Fach-/Kinderabnahme. Alle24 neuen Arten und weitere Fachredaktion bleiben WK053 offen. Technische Endabnahme separat im tatsächlichen PR.",
+  "entries": [
+    {
+      "id": "animal-african-savanna-elephant",
+      "originalArticleSHA256": "256d3d0b8eb133e7ff8ef009f032c66241a2c9ce2f298eed09cd40650d789ef5",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Ein Werkzeug kann mehrere Aufgaben erfüllen.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Was lässt sich über den Rüssel sagen?",
+        "12-14": "Ein Elefant greift einen Zweig. Beweist das, dass sein Rüssel nur zum Greifen dient?"
+      },
+      "claims": [
+        {
+          "statement": "Verwandte Weibchen leben mit ihren Jungen in Familien. Ein erfahrenes Weibchen führt sie.",
+          "sourceUrls": [
+            "https://www.tokyo-zoo.net/tama/encyclopedia/african-bush-elephant/index.html",
+            "https://www.wwf.de/themen-projekte/artenlexikon/afrikanischer-savannenelefant",
+            "https://www.worldwildlife.org/species/elephant/african-elephant/african-savanna-elephant/"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Mit dem Rüssel kann er riechen, greifen und Wasser ins Maul bringen.",
+          "sourceUrls": [
+            "https://www.tokyo-zoo.net/tama/encyclopedia/african-bush-elephant/index.html",
+            "https://www.wwf.de/themen-projekte/artenlexikon/afrikanischer-savannenelefant",
+            "https://www.worldwildlife.org/species/elephant/african-elephant/african-savanna-elephant/"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Ein einzelner beobachteter Einsatz schließt andere belegte Fähigkeiten nicht aus.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "2807e8f93e4009dd7882639a0d2ab46862eb8e88011dbbcdfb114b8bbcb075a7"
+    },
+    {
+      "id": "animal-lion",
+      "originalArticleSHA256": "8c0aca39b624864f8e9b23ddc9263f229460dd30e7026fa5346cdaff93121a0d",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Gemeinsames Verhalten und allgemeine Regeln unterscheiden.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Wie kann das Rudel bei einer Jagd helfen?",
+        "12-14": "Kann man vom Löwenrudel auf alle Katzen schließen?"
+      },
+      "claims": [
+        {
+          "statement": "Löwen leben in Rudeln. Weibchen jagen oft zusammen und betreuen gemeinsam die Jungen.",
+          "sourceUrls": [
+            "https://www.nationalzoo.si.edu/animals/lion",
+            "https://www.wwf.de/themen-projekte/artenlexikon/loewe/"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Beim Jagen können sie ihre Beute von verschiedenen Seiten überraschen.",
+          "sourceUrls": [
+            "https://www.nationalzoo.si.edu/animals/lion",
+            "https://www.wwf.de/themen-projekte/artenlexikon/loewe/"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Eine gut belegte Lebensweise einer Art ist noch keine Regel für alle verwandten Tiere.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "3220299ddcfd1a194e49c44eef6da3472ff9c52a2343f127bc017133c665a59e"
+    },
+    {
+      "id": "animal-cheetah",
+      "originalArticleSHA256": "0a9ddf725373fdc011b8a7f6c983b5e046dcd1d73b369b23eaa844a085d0a2ec",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Geschwindigkeit von Ausdauer unterscheiden.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Was ist beim Vergleich zweier Läufe wichtig?",
+        "12-14": "Ein Gepard ist auf einer kurzen Strecke schneller. Was bleibt für eine lange Strecke offen?"
+      },
+      "claims": [
+        {
+          "statement": "Weibchen ziehen ihre Jungen meist allein auf. Männchen leben häufig in kleinen Gruppen.",
+          "sourceUrls": [
+            "https://nationalzoo.si.edu/animals/cheetah",
+            "https://www.wwf.de/themen-projekte/artenlexikon/gepard/"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Geparden können für kurze Zeit sehr schnell sprinten.",
+          "sourceUrls": [
+            "https://nationalzoo.si.edu/animals/cheetah",
+            "https://www.wwf.de/themen-projekte/artenlexikon/gepard/"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Aus einem kurzen Sprint folgt kein unbegrenzter Ausdauervorteil.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "91c77469bc008a5157d9091220924206a1eb80fe18a5a7034007e5e36a64637f"
+    },
+    {
+      "id": "animal-bengal-tiger",
+      "originalArticleSHA256": "76e0270e48ce7489090888c4e9c339b0d79519db9ad7bcc11be82cf9ad3f8685",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Eine Lebensweise nicht auf jede Situation übertragen.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Warum passt Anschleichen zur Jagd?",
+        "12-14": "Ein Foto zeigt eine Tigerin mit Jungen. Widerspricht das der Aussage „Erwachsene leben meist allein“?"
+      },
+      "claims": [
+        {
+          "statement": "Erwachsene Tiger leben meist allein. Die Mutter bleibt bei ihren Jungen, bis sie selbstständig sind.",
+          "sourceUrls": [
+            "https://www.wwf.de/themen-projekte/artenlexikon/bengal-tiger"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Ein Tiger kann sich leise an seine Beute anschleichen.",
+          "sourceUrls": [
+            "https://www.wwf.de/themen-projekte/artenlexikon/bengal-tiger"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "„Meist“ und „immer“ sind unterschiedliche Aussagen. Die Karte nennt die Mutter mit Jungen ausdrücklich.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "7bab4c59d7d48108c30ff141d228c3c7576ef9e0f3f096e276a833745039bfc0"
+    },
+    {
+      "id": "animal-giraffe",
+      "originalArticleSHA256": "5da9e89f536798a3c8bbf03834df43b6986663023716b1225081bee72c7c0a26",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Messrichtungen und Körpermerkmale getrennt beschreiben.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Was unterstützt das Fressen zwischen Zweigen?",
+        "12-14": "Zwei Tierkarten nennen vier Meter. Sind die Tiere damit gleich hoch?"
+      },
+      "claims": [
+        {
+          "statement": "Giraffen treffen sich in Gruppen. An Wasserstellen können andere auf Gefahr achten, während ein Tier trinkt.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/giraffe?qt-animals_page_content_tabs=1",
+            "https://www.columbuszoo.org/animals/giraffe",
+            "https://iucn.org/press-release/202508/four-giraffe-species-officially-recognised-major-conservation-reclassification"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Mit der langen Zunge erreichen sie Blätter zwischen dornigen Zweigen.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/giraffe?qt-animals_page_content_tabs=1",
+            "https://www.columbuszoo.org/animals/giraffe",
+            "https://iucn.org/press-release/202508/four-giraffe-species-officially-recognised-major-conservation-reclassification"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Körperlänge und Höhe sind unterschiedliche Strecken; Einheit und Messrichtung gehören zur Zahl.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "e64460ec62fef54c18022ed453d88b018bd5dc1e56dd8bd6695b4815641ac1af"
+    },
+    {
+      "id": "animal-giant-panda",
+      "originalArticleSHA256": "5617476c214011d2a170b2c8ecf6a745b121425c4c2c5b95830e0b07f64f8b18",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Verwandtschaft und Nahrung nicht verwechseln.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Welche Hilfe passt zum harten Bambus?",
+        "12-14": "Ein Panda gehört zu den Raubtieren. Muss er deshalb überwiegend Fleisch fressen?"
+      },
+      "claims": [
+        {
+          "statement": "Erwachsene Pandas sind oft allein unterwegs. Mit Duftmarken geben sie anderen Pandas Nachrichten.",
+          "sourceUrls": [
+            "https://www.nationalzoo.si.edu/animals/giant-panda",
+            "https://www.wwf.de/themen-projekte/artenlexikon/grosser-panda/"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Starke Zähne und Kiefer helfen ihnen, harten Bambus zu zerbeißen.",
+          "sourceUrls": [
+            "https://www.nationalzoo.si.edu/animals/giant-panda",
+            "https://www.wwf.de/themen-projekte/artenlexikon/grosser-panda/"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Die zoologische Verwandtschaftsgruppe und die überwiegende Nahrung sind zwei verschiedene Informationen.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "0ba4dc32d3a46165810c6f5c442cb58a7bcc7ac7a8cfbe4a10cb8a8f45a3568c"
+    },
+    {
+      "id": "animal-western-lowland-gorilla",
+      "originalArticleSHA256": "42280cbf5616bf6ca3c2f75cd29f643ee6eca151f71dd89e3edab062e946f7a4",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Lebensraumschutz mit Nahrung verbinden.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Warum reicht für den Schutz nicht nur ein sicherer Schlafplatz?",
+        "12-14": "Ein Wald hat viele Bäume. Ist damit schon bewiesen, dass er für diese Gorillas geeignet ist?"
+      },
+      "claims": [
+        {
+          "statement": "In einer Gruppe leben meist ein erwachsenes Männchen, mehrere Weibchen und ihre Jungen.",
+          "sourceUrls": [
+            "https://www.nationalzoo.si.edu/animals/western-lowland-gorilla",
+            "https://www.wwf.de/themen-projekte/artenlexikon/westlicher-gorilla"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Beim Gehen auf allen vieren stützt er sich auf die Fingerknöchel.",
+          "sourceUrls": [
+            "https://www.nationalzoo.si.edu/animals/western-lowland-gorilla",
+            "https://www.wwf.de/themen-projekte/artenlexikon/westlicher-gorilla"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "„Wald“ ist eine grobe Lebensraumbeschreibung, keine vollständige Prüfung eines bestimmten Ortes.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "1cd043bfde43959862529c739e51dc7c4a7ac8c3999570f0cbc3341e0cc4e008"
+    },
+    {
+      "id": "animal-bornean-orangutan",
+      "originalArticleSHA256": "d00b5077a2dd178037ef7c67f3e620a2021d2406c88242284861030b9e0436f0",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Körpermerkmale mit Bewegung in Bäumen verbinden.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Wobei helfen lange Arme und Greifhände?",
+        "12-14": "Was kann ein einzelnes Kletterfoto über das Lernen eines Jungtiers zeigen?"
+      },
+      "claims": [
+        {
+          "statement": "Sie sind oft allein unterwegs. Junge Orang-Utans lernen viele Jahre von ihrer Mutter.",
+          "sourceUrls": [
+            "https://www.wwf.de/themen-projekte/artenlexikon/borneo-orang-utan"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Ihre langen Arme und Greifhände helfen beim Klettern in den Bäumen.",
+          "sourceUrls": [
+            "https://www.wwf.de/themen-projekte/artenlexikon/borneo-orang-utan"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Ein kurzer sichtbarer Ausschnitt belegt nicht den ganzen Entwicklungsweg.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "8f72c43f291c73a2ed8490c8c14261460730c9c33abc644c0703d9981afea78f"
+    },
+    {
+      "id": "animal-polar-bear",
+      "originalArticleSHA256": "e378c2cf3b79f0e176088136917dc3a0a6a016408b8491d67cfdc28b1b654018",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Schwimmen von der Eignung eines Lebensraums unterscheiden.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Warum ersetzt Schwimmen die Jagdfläche nicht einfach?",
+        "12-14": "Ein Eisbär schwimmt auf einem Foto. Beweist das, dass weniger Meereis kein Problem ist?"
+      },
+      "claims": [
+        {
+          "statement": "Erwachsene Eisbären sind oft allein. Mütter bleiben bei ihren Jungen.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/polar-bear",
+            "https://www.wwf.de/themen-projekte/artenlexikon/eisbaer/"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Große Tatzen helfen beim Laufen auf Eis und beim Schwimmen.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/polar-bear",
+            "https://www.wwf.de/themen-projekte/artenlexikon/eisbaer/"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Eine beobachtete Fähigkeit ist kein Nachweis, dass alle Anforderungen an den Lebensraum erfüllt sind.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "3197988c2eb63be36e32353a543a49a83e9096bf5dd2702eb73e57dbd6e124c3"
+    },
+    {
+      "id": "animal-emperor-penguin",
+      "originalArticleSHA256": "6eb15616e025bc94d02124073ee3fbacc9c5f19aebfee99eebaa30da1e9995a7",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Flügel nicht allein mit Fliegen gleichsetzen.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Welche Funktion passt zu den Flügeln eines Kaiserpinguins?",
+        "12-14": "Sind Eisbären und Kaiserpinguine natürliche Nachbarn, weil beide in kalten Regionen leben?"
+      },
+      "claims": [
+        {
+          "statement": "Bei großer Kälte rücken viele Pinguine eng zusammen und wärmen sich gegenseitig.",
+          "sourceUrls": [
+            "https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/",
+            "https://www.penguinsinternational.org/penguin-record-breakers/",
+            "https://iucn.org/press-release/202604/emperor-penguin-and-antarctic-fur-seal-now-endangered-due-climate-change-iucn"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Er kann tief tauchen, um im Meer Nahrung zu finden.",
+          "sourceUrls": [
+            "https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/",
+            "https://www.penguinsinternational.org/penguin-record-breakers/",
+            "https://iucn.org/press-release/202604/emperor-penguin-and-antarctic-fur-seal-now-endangered-due-climate-change-iucn"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Ähnliche Umweltbedingungen beweisen keine gemeinsame geografische Verbreitung.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "b224c5b2cb1849ee4661f364b9f03ea461e7fbbf3ff8d80ea9ef826ee686b764"
+    },
+    {
+      "id": "animal-blue-whale",
+      "originalArticleSHA256": "786d8640f6bfc749f8c89cbe66db6ff6c145e26772c11fdbe9ab654d1e2c1644",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Tiergröße und Größe seiner Nahrung getrennt betrachten.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Was wird beim Fressen mit den Barten getrennt?",
+        "12-14": "Muss das größte Tier auch die größten Beutetiere fressen?"
+      },
+      "claims": [
+        {
+          "statement": "Oft schwimmen sie allein oder zu zweit, manchmal in kleinen Gruppen.",
+          "sourceUrls": [
+            "https://www.fisheries.noaa.gov/species/blue-whale",
+            "https://www.worldwildlife.org/species/whale/blue-whale/"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Barten im Maul halten Krill zurück, während das Wasser herausgedrückt wird.",
+          "sourceUrls": [
+            "https://www.fisheries.noaa.gov/species/blue-whale",
+            "https://www.worldwildlife.org/species/whale/blue-whale/"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Eine große Nahrungsmenge kann aus vielen kleinen Tieren bestehen. Die Größe eines einzelnen Beutetiers ist eine andere Größe.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "1c36a6c0b81d0e567c98e60ad32835aeadadc8c2d2d8d3d80d05d5c972211e18"
+    },
+    {
+      "id": "animal-common-bottlenose-dolphin",
+      "originalArticleSHA256": "5b6a350065718c875836550005e915093ad0d9547c5cc2ee2ccbdef90e3fac23",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Echoortung und Atmung auseinanderhalten.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Was kann ein zurückkehrendes Echo liefern?",
+        "12-14": "Ein Tier schwimmt und hat eine ähnliche Form wie ein Fisch. Reicht das für die Einordnung?"
+      },
+      "claims": [
+        {
+          "statement": "Sie bilden Gruppen, die sich immer wieder trennen und neu zusammenfinden.",
+          "sourceUrls": [
+            "https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin",
+            "https://www.worldwildlife.org/species/dolphin-and-porpoise/common-bottlenose-dolphin/",
+            "https://iucn-csg.org/red-list-updates-published-for-sperm-whales-and-lahilles-bottlenose-dolphins/"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Mit Klicklauten und deren Echo können sie Nahrung im Wasser orten.",
+          "sourceUrls": [
+            "https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin",
+            "https://www.worldwildlife.org/species/dolphin-and-porpoise/common-bottlenose-dolphin/",
+            "https://iucn-csg.org/red-list-updates-published-for-sperm-whales-and-lahilles-bottlenose-dolphins/"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Ähnliche Körperformen können zu ähnlicher Fortbewegung passen, ohne dieselbe Verwandtschaftsgruppe zu bedeuten.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "cafc727a4abe3778a462d314f84682defb6c66840258c29d1f3151b1817e5085"
+    },
+    {
+      "id": "animal-orca",
+      "originalArticleSHA256": "a29ea28bcac7858d867b5c726b39241f0e96ca51fe3e3d96a5458fb231e6d00c",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Aussagen über Populationen vorsichtig verallgemeinern.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Was kann die Familie außer Schutz vermitteln?",
+        "12-14": "Eine Orcagruppe frisst bestimmte Beute. Gilt ihr Speiseplan damit für alle Orcas?"
+      },
+      "claims": [
+        {
+          "statement": "Viele Orcas leben in Familiengruppen und lernen von anderen Gruppenmitgliedern.",
+          "sourceUrls": [
+            "https://www.fisheries.noaa.gov/species/killer-whale",
+            "https://www.wwf.org.uk/learn/fascinating-facts/orcas"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Beim Jagen können sie als Team zusammenarbeiten.",
+          "sourceUrls": [
+            "https://www.fisheries.noaa.gov/species/killer-whale",
+            "https://www.wwf.org.uk/learn/fascinating-facts/orcas"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Eine Beobachtung an einer Population lässt sich nicht ohne weitere Belege auf alle Populationen übertragen.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "16432717cf864a03785d55009a6bdca6d11dcaeccde9b360f15d6b8490386e90"
+    },
+    {
+      "id": "animal-common-octopus",
+      "originalArticleSHA256": "30d0d5e62164e024300008b759fbc34eff4b5f0f43745b9151185bec5b739624",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Bewegung und Sinnesleistung eines Arms unterscheiden.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Wie passt ausgestoßenes Wasser zur Bewegung?",
+        "12-14": "Sind die Arme nur zum Festhalten da?"
+      },
+      "claims": [
+        {
+          "statement": "Meist lebt er allein und versteckt sich in einer Felsspalte oder Höhle.",
+          "sourceUrls": [
+            "https://www.aquarium-larochelle.com/en/species-encyclopedia/common-octopus/",
+            "https://www.devonandsevernifca.gov.uk/wp-content/uploads/2025/06/Agenda-Item-11-Influx-of-Octopus-into-Devon-and-the-South-West.pdf"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Er kann Wasser ausstoßen und sich dadurch schnell fortbewegen.",
+          "sourceUrls": [
+            "https://www.aquarium-larochelle.com/en/species-encyclopedia/common-octopus/",
+            "https://www.devonandsevernifca.gov.uk/wp-content/uploads/2025/06/Agenda-Item-11-Influx-of-Octopus-into-Devon-and-the-South-West.pdf"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Die beobachtete Greifbewegung zeigt nur eine von mehreren belegten Leistungen der Arme.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "2f67c935e53293517f9fe9429ebf7b7df757e491965eb78ee70b46ff6c894a56"
+    },
+    {
+      "id": "animal-green-sea-turtle",
+      "originalArticleSHA256": "7013adcbc3b47462b65ff45a62515ba003f0ee8f2302e2236b6ee869babfa1d9",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Schwimmen, Atmen und Fortpflanzung getrennt erklären.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Warum gehören Futterplatz und Niststrand beide zum Schutz?",
+        "12-14": "Eine Meeresschildkröte lebt im Wasser. Hat sie deshalb Kiemen?"
+      },
+      "claims": [
+        {
+          "statement": "Sie legt weite Wege zwischen Futterplätzen und Niststränden zurück.",
+          "sourceUrls": [
+            "https://www.fisheries.noaa.gov/species/green-turtle",
+            "https://turtle-foundation.org/de/meeresschildkroeten/arten/",
+            "https://iucn.org/press-release/202510/arctic-seals-threatened-climate-change-birds-decline-globally-iucn-red-list"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Weibchen finden zur Eiablage wieder in die Gegend ihres eigenen Geburtsstrands.",
+          "sourceUrls": [
+            "https://www.fisheries.noaa.gov/species/green-turtle",
+            "https://turtle-foundation.org/de/meeresschildkroeten/arten/",
+            "https://iucn.org/press-release/202510/arctic-seals-threatened-climate-change-birds-decline-globally-iucn-red-list"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Der Lebensraum allein bestimmt nicht die Atmungsorgane eines Tiers.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "54b5b509dccdeb0ffb07fc934160409f8aa2df0ddf21ae78b75af98a6e0a2fc1"
+    },
+    {
+      "id": "animal-red-kangaroo",
+      "originalArticleSHA256": "32d6c342e10b90e7f9261431280b4454ab0fc24476c33db1e517f7d4eb2097b2",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Vergleichswerte mit ihrer Bezugsgruppe lesen.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Welche Körperteile fallen beim Hüpfen besonders auf?",
+        "12-14": "Die Karte nennt eine Gewichtsspanne erwachsener Männchen. Gilt sie unverändert für jedes Jungtier?"
+      },
+      "claims": [
+        {
+          "statement": "Kängurus leben oft in Gruppen.",
+          "sourceUrls": [
+            "https://www.taronga.org.au/wildlife-and-conservation/animals/detail/red-kangaroo"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Mit den starken Hinterbeinen kann es schnell hüpfen.",
+          "sourceUrls": [
+            "https://www.taronga.org.au/wildlife-and-conservation/animals/detail/red-kangaroo"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Eine Messung muss zusammen mit ihrer Bezugsgruppe gelesen werden; die Karte nennt diese ausdrücklich.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "91f5593511e5bc6aa9ab24c93b451a7c775b78c78eda1fe41b672d08c24e7365"
+    },
+    {
+      "id": "animal-koala",
+      "originalArticleSHA256": "918c24195889a162283909693ee2355614dbeecfd7220b35947df19657cdcf78",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Eine spezialisierte Nahrungsauswahl erkennen.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Was helfen kräftige Greifhände im Baum?",
+        "12-14": "In einem Gebiet stehen viele Bäume. Reicht das als Nachweis für Koalanahrung?"
+      },
+      "claims": [
+        {
+          "statement": "Sie sind oft allein und verbringen viel Zeit ruhend in Bäumen.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/koala",
+            "https://www.dcceew.gov.au/environment/biodiversity/threatened/species/koalas/listing-under-national-environmental-law"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Kräftige Arme und Hände halten sie sicher an Ästen fest.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/koala",
+            "https://www.dcceew.gov.au/environment/biodiversity/threatened/species/koalas/listing-under-national-environmental-law"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Eine große Menge ungeeigneter Pflanzen ersetzt die passende Nahrung nicht.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "0434a01d28ce70460e8146c2432c1f1cc9d353b6c9469aeec6fd29ead535a83b"
+    },
+    {
+      "id": "animal-jaguar",
+      "originalArticleSHA256": "3e8be51af0579b813dcb6315335c2538140e9a8f335a279514c94002614a8896",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Fähigkeit und Lebensraum nicht gleichsetzen.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Was zeigt die Kombination aus Klettern und Schwimmen?",
+        "12-14": "Wird ein Jaguar zum Meerestier, sobald er schwimmt?"
+      },
+      "claims": [
+        {
+          "statement": "Erwachsene Jaguare sind meist allein unterwegs. Die Mutter zieht ihre Jungen auf.",
+          "sourceUrls": [
+            "https://www.wwf.ch/de/tierarten/jaguar-der-im-fliegen-jagt",
+            "https://animals.sandiegozoo.org/animals/jaguar"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Sie können gut klettern und schwimmen.",
+          "sourceUrls": [
+            "https://www.wwf.ch/de/tierarten/jaguar-der-im-fliegen-jagt",
+            "https://animals.sandiegozoo.org/animals/jaguar"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Eine Bewegung, eine Tiergruppe und ein typischer Lebensraum sind drei verschiedene Beschreibungen.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "fe9b94039a29dadb3fec7f1c1f05ce710f129973edf90ab51d11ee1850f80843"
+    },
+    {
+      "id": "animal-honey-bee",
+      "originalArticleSHA256": "5e01f16832977e7ea32135c4d85f1c9e5667bcb5788344911dabd7d170184e47",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Bestäubung von Nahrungssuche unterscheiden.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Wie können Blütenbesuch und Bestäubung zusammenhängen?",
+        "12-14": "Eine Biene sitzt auf einer Blüte. Ist damit jede Pflanze in der Umgebung bestäubt?"
+      },
+      "claims": [
+        {
+          "statement": "Im Bienenvolk gibt es eine Königin, viele Arbeiterinnen und männliche Drohnen.",
+          "sourceUrls": [
+            "https://www.zoo-frankfurt.de/de/tiere-von-a-z-detailansicht/animal/tiere-von-a-z-detailansicht/honigbiene-europaeische-westliche",
+            "https://www.nczoo.org/wildlife/animals/honey-bee",
+            "https://fmach.it/en/Communication/Press-releases/Wild-Honey-Bee-a-step-forward-for-its-protection"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Beim Blütenbesuch tragen sie Pollen weiter und bestäuben Pflanzen.",
+          "sourceUrls": [
+            "https://www.zoo-frankfurt.de/de/tiere-von-a-z-detailansicht/animal/tiere-von-a-z-detailansicht/honigbiene-europaeische-westliche",
+            "https://www.nczoo.org/wildlife/animals/honey-bee",
+            "https://fmach.it/en/Communication/Press-releases/Wild-Honey-Bee-a-step-forward-for-its-protection"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Ein sichtbarer Einzelvorgang ist kein Nachweis für die gesamte Fläche oder alle Pflanzenarten.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "ff6dc2f2608b2b8e15678d1f4513196441c478f9ddedddd758e85c082ce315a0"
+    },
+    {
+      "id": "animal-axolotl",
+      "originalArticleSHA256": "c71a93c045d9b009187bd488eef85fd2955de588b574a87c94c1676537a3f1f6",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Ein Merkmal nicht zur Regel für alle Amphibien machen.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Was leisten die federartigen Außenkiemen?",
+        "12-14": "Behält jedes erwachsene Amphibium Außenkiemen wie der Axolotl?"
+      },
+      "claims": [
+        {
+          "statement": "Axolotl leben meist allein.",
+          "sourceUrls": [
+            "https://www.torontozoo.com/animals/Axolotl",
+            "https://animals.sandiegozoo.org/animals/axolotl"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Mit ihren federartigen Außenkiemen können sie unter Wasser Sauerstoff aufnehmen.",
+          "sourceUrls": [
+            "https://www.torontozoo.com/animals/Axolotl",
+            "https://animals.sandiegozoo.org/animals/axolotl"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Der Axolotl ist ein besonderes Beispiel. Für andere Amphibien braucht man eigene Entwicklungsbelege.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "ad860460f0356a565b2cec50e707f693fcb98e7a62dbc9e99cd32b74713d398c"
+    },
+    {
+      "id": "animal-whale-shark",
+      "originalArticleSHA256": "e61e3be5877bdfdd039ab1a9b5b09fc9a1bd914d8022e9fd06e48abeb53f0c95",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Ähnliche Namen gegen Körpermerkmale prüfen.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Welcher Beleg ist für den Vergleich mit einem Wal entscheidend?",
+        "12-14": "Können Walhai und Blauwal beide kleine Nahrung fressen und trotzdem verschieden verwandt sein?"
+      },
+      "claims": [
+        {
+          "statement": "Mit Kiemen nimmt er Sauerstoff aus dem Wasser auf. Er sammelt winzige Nahrungsteilchen mit seinem großen Maul.",
+          "sourceUrls": [
+            "https://www.georgiaaquarium.org/animal/whale-shark/"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Sein helles Fleckenmuster hilft Forschenden, einzelne Walhaie wiederzuerkennen.",
+          "sourceUrls": [
+            "https://www.georgiaaquarium.org/animal/whale-shark/"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Nahrung und Verwandtschaft sind verschiedene Fragen. Für die Einordnung werden weitere Merkmale betrachtet.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "679bf277b1e4b0dd15e73b3ad41fcbb0d1157af13655a254057013c1d3c608c9"
+    },
+    {
+      "id": "animal-garden-cross-spider",
+      "originalArticleSHA256": "43f67110119cb2c3e4b7bcfe5e43dcc6a445ed266d6e8a542af861978e4d2ba6",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Tiergruppen anhand überprüfbarer Merkmale unterscheiden.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Wie erhält die Spinne im Netz einen Hinweis auf Bewegung?",
+        "12-14": "Auf einem Foto sind nur sechs Beine zu sehen. Ist die Kreuzspinne damit sicher ein Insekt?"
+      },
+      "claims": [
+        {
+          "statement": "Spinnen haben acht Beine. Insekten haben sechs. Die Kreuzspinne gehört deshalb nicht zu den Insekten.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/wildlife-explorer/invertebrates/spiders/garden-spider"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Bewegt sich ein Insekt im Netz, spürt die Spinne die Erschütterung der Fäden.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/wildlife-explorer/invertebrates/spiders/garden-spider"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Ein Foto kann Körperteile verdecken. Sichtbarkeit und tatsächliche Anzahl sind nicht dasselbe.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "95a7d5148fa29ff9b34e50181f45412f34e74fcb2c93f4db75f25479fdd0d493"
+    },
+    {
+      "id": "animal-dromedary",
+      "originalArticleSHA256": "58f7e6dfef75515bf862c6ae215add29dc04adcb61120db3aff82d1f94e171a5",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Energie- und Wasservorrat unterscheiden.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Welche Aussage passt zum Höcker?",
+        "12-14": "Beweist ein Höcker, dass jedes Kamel genau einen besitzt?"
+      },
+      "claims": [
+        {
+          "statement": "Im Höcker steckt Fett als Energievorrat. Er ist kein Wassertank.",
+          "sourceUrls": [
+            "https://animaldiversity.org/accounts/Camelus_dromedarius/"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Breite, gepolsterte Füße helfen auf Sand. Lange Wimpern schützen die Augen vor Staub.",
+          "sourceUrls": [
+            "https://animaldiversity.org/accounts/Camelus_dromedarius/"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Der Vergleich verschiedener Kamelarten verhindert eine falsche Verallgemeinerung.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "45bb1da5a0b1bd9b7182a6e06be2120a5b83030e1d3597334a039c3c60bcb4a4"
+    },
+    {
+      "id": "animal-white-tailed-eagle",
+      "originalArticleSHA256": "097dd69415e373e4d564abf333604fbab62c22407abc233249e33a8d8065cfbb",
+      "originalCommit": "5ba39b36fabaa5360bff6d918d79169fb0ca5f74",
+      "change": "Eigene freiwillige Beleg-/Begründungs-/Transferwerkstatt, bisheriger Artikel vollständig erhalten. Keine neue Tierart und keine erneute IUCN-Abnahme.",
+      "goal": "Körpermaß und Verhalten richtig vergleichen.",
+      "levels": {
+        "6-8": "Zwei individuell beschriftete Belege aus der eigenen Tierkarte aufdecken und in eigenen Worten vergleichen.",
+        "9-11": "Warum sind wenige Flügelschläge kein Beweis für Stillstand?",
+        "12-14": "Ein junger Adler hat noch keinen weißen Schwanz. Kann man ihn allein deshalb ausschließen?"
+      },
+      "claims": [
+        {
+          "statement": "Breite Flügel tragen ihn beim Gleiten. Er sucht nach Nahrung an Seen, Flüssen und Küsten.",
+          "sourceUrls": [
+            "https://www.rspb.org.uk/birds-and-wildlife/birds-of-the-month/august-birds-of-the-month"
+          ],
+          "anchor": "Erhaltener Absatz 1 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        },
+        {
+          "statement": "Junge Seeadler sehen dunkler aus. Das weiße Schwanzgefieder entwickelt sich später.",
+          "sourceUrls": [
+            "https://www.rspb.org.uk/birds-and-wildlife/birds-of-the-month/august-birds-of-the-month"
+          ],
+          "anchor": "Erhaltener Absatz 2 der originalen Tierkarte; nicht als neu unabhängig geprüft ausgeben."
+        }
+      ],
+      "sourceStatus": "Erhaltene verlinkte Bestandsbelege. Dies ist keine neue Vollprüfung aller Größen-, Gefährdungs- oder Verbreitungsangaben.",
+      "reviewedBy": "Codex: Lernaufgaben-/Implementierungsselbstprüfung, keine unabhängige Fach- oder Kinderabnahme.",
+      "mediaDecision": "Vorhandenes lokales lizenziertes Tierfoto samt Alternativtext und Bildnachweis erhalten. Belege als lesbares HTML statt einer erfundenen Tiersimulation.",
+      "limits": "Alter gehört zur Beschreibung eines Merkmals. Die Karte unterscheidet junge und ältere Tiere.",
+      "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
+      "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
+      "teachingContentSHA256": "ef36c999e0b45ccf5bd6d3b4bfaa723a9d40d6a1f5a139442802e00b4af9fd0c"
+    }
+  ],
+  "referenceCheck": [
+    {
+      "url": "https://kids.nationalgeographic.com/animals",
+      "observedOn": "2026-10-17",
+      "observed": "Textansicht tatsächlich geöffnet: Tiergruppen sowie getrennte Spiele-/Quiz-/Videowege sichtbar. Kein vollständiger interaktiver Produkttest oder Überlegenheitsnachweis."
+    },
+    {
+      "url": "https://klexikon.zum.de/wiki/Tiere",
+      "observedOn": "2026-10-17",
+      "observed": "Textansicht tatsächlich geöffnet: erklärt unterschiedliche Einteilungswege und verlinkt einfache Lesefassung. Einzelne allgemeine Formulierungen zur Atmung sind zu pauschal und werden ausdrücklich nicht als Fachbeleg übernommen."
+    }
+  ],
+  "ownBenefit": "Belege selbst aufdecken, danach Zusammenhang und Grenzen einer Schlussfolgerung prüfen; vorhandene Fotos, freien Zugang und alte Quiz-/Speicherwege erhalten.",
+  "newConnections": [
+    {
+      "id": "animal-inquiry-lion-bengal-tiger",
+      "fromId": "animal-lion",
+      "toId": "animal-bengal-tiger",
+      "kind": "context",
+      "why": "Beide sind große Katzen. Löwen leben häufig im Rudel, erwachsene Tiger meist allein. Verwandtschaft bedeutet nicht dieselbe Lebensweise.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-african-savanna-elephant-giant-panda",
+      "fromId": "animal-african-savanna-elephant",
+      "toId": "animal-giant-panda",
+      "kind": "context",
+      "why": "Rüssel und besonderer Handgelenkknochen sind verschiedene Hilfen beim Greifen von Nahrung. Vergleiche Körperteil und Aufgabe, ohne beide gleichzusetzen.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-giraffe-red-kangaroo",
+      "fromId": "animal-giraffe",
+      "toId": "animal-red-kangaroo",
+      "kind": "context",
+      "why": "Bei der Giraffe wird die Höhe beschrieben, beim Riesenkänguru das Gewicht erwachsener Männchen. Erst Messgröße und Bezugsgruppe machen einen Vergleich sinnvoll.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-giant-panda-koala",
+      "fromId": "animal-giant-panda",
+      "toId": "animal-koala",
+      "kind": "context",
+      "why": "Panda und Koala brauchen unterschiedliche Pflanzennahrung: überwiegend Bambus beziehungsweise Blätter bestimmter Eukalyptusarten. Viele beliebige Pflanzen reichen nicht als Speiseplan.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-western-lowland-gorilla-bornean-orangutan",
+      "fromId": "animal-western-lowland-gorilla",
+      "toId": "animal-bornean-orangutan",
+      "kind": "context",
+      "why": "Beide brauchen Waldlebensräume. Vergleiche den Knöchelgang des Gorillas mit den langen Greifarmen des Orang-Utans statt aus „Wald“ dieselbe Fortbewegung abzuleiten.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-polar-bear-emperor-penguin",
+      "fromId": "animal-polar-bear",
+      "toId": "animal-emperor-penguin",
+      "kind": "context",
+      "why": "Beide leben in kalten Gebieten, aber nicht als natürliche Nachbarn: Eisbären in der Arktis, Kaiserpinguine in der Antarktis. Prüfe die beiden Pole auf der Weltkugel.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-blue-whale-whale-shark",
+      "fromId": "animal-blue-whale",
+      "toId": "animal-whale-shark",
+      "kind": "context",
+      "why": "Beide sammeln kleine Nahrung aus dem Wasser. Der Blauwal ist ein luftatmendes Säugetier, der Walhai ein Fisch mit Kiemen: Nahrung und Namen reichen zur Einordnung nicht aus.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-common-bottlenose-dolphin-whale-shark",
+      "fromId": "animal-common-bottlenose-dolphin",
+      "toId": "animal-whale-shark",
+      "kind": "context",
+      "why": "Der Delfin muss Luft an der Oberfläche holen, der Walhai nutzt Kiemen. Ein gemeinsamer Lebensraum bedeutet nicht dieselbe Atmung.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-orca-common-bottlenose-dolphin",
+      "fromId": "animal-orca",
+      "toId": "animal-common-bottlenose-dolphin",
+      "kind": "context",
+      "why": "Der Orca gehört zur Delfinfamilie. Vergleiche Familienleben und wechselnde Gruppen, ohne den Speiseplan einer Orcapopulation auf alle Delfine zu übertragen.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-common-octopus-garden-cross-spider",
+      "fromId": "animal-common-octopus",
+      "toId": "animal-garden-cross-spider",
+      "kind": "context",
+      "why": "Acht Arme und acht Beine sind unterschiedliche Merkmale. Eine gleiche Anzahl macht Krake und Spinne nicht zu derselben Tiergruppe.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-green-sea-turtle-common-bottlenose-dolphin",
+      "fromId": "animal-green-sea-turtle",
+      "toId": "animal-common-bottlenose-dolphin",
+      "kind": "context",
+      "why": "Meeresschildkröte und Delfin müssen trotz ihres Wasserlebens Luft holen. Vergleiche Atmung und Fortbewegung als getrennte Eigenschaften.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-jaguar-bengal-tiger",
+      "fromId": "animal-jaguar",
+      "toId": "animal-bengal-tiger",
+      "kind": "context",
+      "why": "Jaguar und Bengaltiger können gut schwimmen. Eine schwimmende Katze wird dadurch nicht zum Fisch und verliert ihre übrigen Fähigkeiten nicht.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-honey-bee-garden-cross-spider",
+      "fromId": "animal-honey-bee",
+      "toId": "animal-garden-cross-spider",
+      "kind": "context",
+      "why": "Die Biene hat sechs Beine, die Spinne acht. Prüfe Körpermerkmale und verwechsle einen Blütenbesuch nicht mit einem Beleg für dieselbe Tiergruppe.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-axolotl-whale-shark",
+      "fromId": "animal-axolotl",
+      "toId": "animal-whale-shark",
+      "kind": "context",
+      "why": "Beide nehmen mit Kiemen Sauerstoff aus dem Wasser auf. Trotzdem ist der Axolotl ein Amphibium und der Walhai ein Fisch: Ein einzelnes gemeinsames Merkmal genügt nicht für jede Einordnung.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-dromedary-science-energy",
+      "fromId": "animal-dromedary",
+      "toId": "science-energy",
+      "kind": "context",
+      "why": "Das Fett im Höcker ist ein Energievorrat, kein Trinkwassertank. Die Energiekarte hilft, einen Vorrat von seinen unterschiedlichen Nutzungen zu unterscheiden.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-white-tailed-eagle-emperor-penguin",
+      "fromId": "animal-white-tailed-eagle",
+      "toId": "animal-emperor-penguin",
+      "kind": "context",
+      "why": "Beides sind Vögel mit Flügeln. Der Seeadler kann gleiten, der Kaiserpinguin nutzt seine Flügel beim Schwimmen. Derselbe Körperteil kann unterschiedlich eingesetzt werden.",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-inquiry-cheetah-lion",
+      "fromId": "animal-cheetah",
+      "toId": "animal-lion",
+      "kind": "context",
+      "why": "Vergleiche den kurzen Sprint eines Gepards mit dem Anschleichen und Zusammenwirken von Löwen. Schnellster Sprint und eine erfolgreiche gemeinsame Jagd sind verschiedene Vergleiche.",
+      "checkedAt": "2026-10-17"
+    }
+  ],
+  "connectionReview": "Eigene kuratierte Vergleiche auf Grundlage der erhaltenen Karten;17.10.2026 Selbstprüfung, keine unabhängige Fachabnahme oder neue IUCN-Bewertung.",
+  "selfReview": "24 einzelne Belegpaare und48 Aufgaben gelesen; realistische Fehlannahmen statt beliebiger Unsinnsantworten nachgezogen. Richtige Antwortpositionen der neuen Aufgaben deterministisch verteilt, gespeicherte Antworttexte bleiben stabil. Keine Änderung der24 bisherigen Mini-Fragen. Externe Fach-/Kinderabnahme weiterhin offen."
+}
