@@ -1,5 +1,13 @@
 # Aktueller Lieferabschnitt – verständliche Update-Chronik,16.10.2026
 
+## Laufende Fortsetzung17.10.2026 · Setup und Tierwelt
+
+Aktuell verifiziert: Master PR27 da3c1d4, einzig offener Draft; test-live8d05beb entspricht tatsächlichem NutzermergePR33, offizieller Vercel-Erfolg56588633806 bestätigt. Voriger Master Quality100 vollständig grün an genau da3c1d4; keine Übertragung dieses Grüns auf neue Änderungen. Beide vorhandenen Worktrees waren sauber, keine aktiven Actions. Vollständiges Gitbundle vor Fortsetzung unter work/p35-test-setup/pre-continuation.bundle. Neue exklusive Reservierung06e1c9b87fa358b2ded3a1fc1ce714819ab0d2dd, Run package35-test-setup-2026-10-17; ältere unten genannte Eigentümer sind historische abgeschlossene Läufe.
+
+Begrenzter Setupkandidat separat aus test-live, Branch codex/wunderkompass-test-quality-setup-2026-10-17; Preview explizit aus. Derselbe serielle Durchlauf, kein zweiter Backlog/Agent. Neuer Nutzerauftrag vollständig bytegleich archiviert; aktive Grundsätze präzisiert, Pro bis16.11.2026 bestätigt. Gemeinsame schreibfreie Kontextprüfung und begrenzte Readinessentscheidung implementiert; tatsächliche gezielte und volle Prüfquittungen folgen im PR, kein vorzeitiges Ready/Grün. Masterdaten und veröffentlichte Appfunktionen unverändert.
+
+Adminblockade konkret: test-live protected:false, Rulesets[], Schutz-API403 Resource not accessible by integration, kein unterstütztes Admin-Schreibwerkzeug. Kein Umgehungsversuch. TEST-LIVE enthält genauen Nutzer-Schritt. Automatik noch nicht aktiv; Setup muss zuerst vom Nutzer gemergt und tatsächlicher Branchschutz nachgewiesen werden. Keine zusätzliche gewohnheitsmäßige spätere Betriebsfreigabe gefordert. News vollständig pausiert, main unangetastet. Tierwelt24neue Arten und vollständiger übriger Masterumfang bleiben offen.
+
 ## Suchfokus bei verzögertem Laden korrigiert · 17.10.2026
 
 Der vollständige lokale Chromium-Lauf am588c5c1 bestand alle zehn Pflichtgruppen (1011,808s,119 Prüflabels), einschließlich aller24 Tierwerkstätten, aller Planetenfälle, echter Fokuszustände und kaltem Offline-Neustart. Die Originale samt versiegeltem Review liegen unverändert unter `work/p35-animals/delivery-full-588c5c1-originals`. Das war dennoch **keine** vollständige Freigabe: Quality96 am älteren Remote-Heada0f4 bestand Chromium und Firefox, scheiterte im WebKit-Suchweg. Auch der weiterlaufende Masterlauf97 zeigt dort einen Fehler, ohne von uns unterbrochen zu werden.

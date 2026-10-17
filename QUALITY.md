@@ -1,5 +1,15 @@
 # Verbindliche Qualität und Tests
 
+## Vorrangige Präzisierung17.10.2026
+
+[Originalauftrag](content/auftrag-2026-10-13/WunderKompass_Fortsetzungsauftrag_2026-10-17.md) und aktueller Vertrag in AGENTS sind maßgeblich. Frühe gezielte tatsächliche Browserprüfungen und vollständige Schlussabnahme bleiben; sinnvolle ursächliche Optimierung ist ausdrücklich zulässig. Keine pauschale Wiederholung/Timeoutkaschierung und keine Qualitätsabsenkung.
+
+Der bestehende Abschluss **Required quality checks** bleibt die einzige volle Testpipeline. In beiden vorhandenen Varianten muss die neue schreibfreie Kontextprobe PR-Nummer, Head, Zielbasis, synthetischen Integrationscommit mit beiden Eltern, Run/Attempt sowie den erwarteten Quality-Workflow binden und am Ende gegen den tatsächlichen GitHub-Stand prüfen. Bei der Splitvariante tragen alle Build-/Browserbelege denselben Kontext; fehlende, fehlgeschlagene, abgebrochene, übersprungene oder gemischte Pflichtteile bleiben blockierend. Manueller/lokaler QA-Lauf ist keine automatische Releasequittung.
+
+GitHub muss auf test-live **tatsächlich aktiv** PR-Pflicht und strikte Required quality checks von GitHub Actions erzwingen, ohne Bypass. Jobname, JSON-Vorlage, lokaler Readinessbericht oder Dokumentation genügen nicht. Setup/Freigabegrundlagen manuell; normale zusätzliche Produkttests und Statusdokumentation anhand ihres Inhalts beurteilen. Nach manuell übernommenem Setup gelten die begrenzten Routine-Übernahmen aus TEST-LIVE; sämtliche ältere pauschalen Einzelmerge-/Auto-Merge-Verbote in historischen Absätzen sind insoweit überholt. Legacy-Pushworkflow bleibt deaktiviert. Kein main-/News-/Kostenauftrag.
+
+Nachtest: geprüften Integrationsbaum und tatsächlichen Merge vergleichen; nur bei Identität vorhandene volle Nachweise weiterverwenden, dann tatsächliches Vercel-Deployment und gezielte Funktionsprobe. Relevante Unterschiede erneut passend prüfen. Quellen-/Kinder-/Fach-/Geräteabnahmen nur mit wirklichem Nachweis; technische Grünmeldung ist keine fachliche Garantie. Bei unbestätigter Bereitstellung weitere Automatik stoppen.
+
 Asynchron geladene Dialogfelder auch mit kontrolliert verzögertem Modulabruf prüfen: sichtbares Feld und tatsächliche Eingabebereitschaft unterscheiden. Echte Tastatureingabe, erneutes Öffnen und Schließen vor Ladeende einschließlich Rückfokus prüfen; kein späteres Wiederöffnen oder Fokusstehlen. Ein nach dem Laden fokussierter Schließen-Knopf ist kein suchbereiter Zustand. Neue Suchtests erfassen bei Fehlern Phase, Wert, Fokus, Treffer und begrenzte Ereignisse; keine pauschalen Retries, Sleeps oder Timeout-Erhöhungen.
 
 Fokusaufnahmen mit tatsächlicher Tastaturnavigation erzeugen und vor der Aufnahme aktives Element, `:focus-visible` und sichtbare Umrandung prüfen. Eine Auswahlmarkierung nach einem Mausklick ist kein Nachweis sichtbaren Tastaturfokus. Alle bisherigen Fokus-/Touch-/Breitenprüfungen bleiben erhalten. Der Tierwerkstatt-Test vom17.10. wurde nach genau diesem visuellen Befund korrigiert; ältere Nachweise bleiben als Originale erhalten.
