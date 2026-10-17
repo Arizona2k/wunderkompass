@@ -1,5 +1,7 @@
 # Verbindliche Qualität und Tests
 
+Asynchron geladene Dialogfelder auch mit kontrolliert verzögertem Modulabruf prüfen: sichtbares Feld und tatsächliche Eingabebereitschaft unterscheiden. Echte Tastatureingabe, erneutes Öffnen und Schließen vor Ladeende einschließlich Rückfokus prüfen; kein späteres Wiederöffnen oder Fokusstehlen. Ein nach dem Laden fokussierter Schließen-Knopf ist kein suchbereiter Zustand. Neue Suchtests erfassen bei Fehlern Phase, Wert, Fokus, Treffer und begrenzte Ereignisse; keine pauschalen Retries, Sleeps oder Timeout-Erhöhungen.
+
 Fokusaufnahmen mit tatsächlicher Tastaturnavigation erzeugen und vor der Aufnahme aktives Element, `:focus-visible` und sichtbare Umrandung prüfen. Eine Auswahlmarkierung nach einem Mausklick ist kein Nachweis sichtbaren Tastaturfokus. Alle bisherigen Fokus-/Touch-/Breitenprüfungen bleiben erhalten. Der Tierwerkstatt-Test vom17.10. wurde nach genau diesem visuellen Befund korrigiert; ältere Nachweise bleiben als Originale erhalten.
 
 ## Dauerhaft: frühe gezielte Browserprüfung vor der vollständigen Abnahme

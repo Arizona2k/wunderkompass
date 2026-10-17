@@ -1,5 +1,7 @@
 # Gemeinsamer Entwicklungsbestand
 
+Zusätzliche ursächliche Qualitätskorrektur: Bei verzögertem Suchmodul blieb der Schließen-Knopf fokussiert; Tastatureingabe konnte den Dialog schließen. Kontrolliert im unveränderten Liefer-Build588 reproduziert, Suchfeld beim Mounten fokussiert und tatsächliche Eingabebereitschaft/Late-Load/Wiederöffnung/Escape/Rückfokus samt konkreter Fehlerdiagnose ergänzt. Kleine Korrektur aus Liefer-PR33 in Master übernommen, alle Inhalte und14 Mastergruppen erhalten. Neue vollständige Abnahme erforderlich, laufenden Quality97 nicht unterbrechen. Voller Rest WK053–058/24 neue Tierarten/49 weitere Weltkarten/80-Kapitel-/Fach-/Kinder-/Geräteabnahmen unverändert offen; News pausiert.
+
 Die erhaltene Tier-/Planeten-Welle wird nach den vollständig beendeten roten Abnahmen37798/Quality95 ursächlich korrigiert: mehrere vorbereitete Chronikeinträge, korrekter Suchstart und echter sichtbarer Tastaturfokus statt bloßer Auswahl. Keine Fälle gestrichen, keine Gesamtprüfung abgebrochen. Acht kanonische Startseitenspuren als geprüfte Ableitung entlasten den Einstieg, der ganze Graph bleibt erhalten. Unabhängiger Liefer-PR33 bleibt bis finalen grünen Pflichtprüfungen Draft. Masterrest und Reservierung erhalten; tatsächliche Quittung im PROJECT_STATE/PR. Sieben künftige Tierquellen samt konkreten Arten-/Rechtefallen nur als Quellenlektüre gesichert, Zählstand neuer Tierarten weiterhin0; alle24 Neuanlagen bleiben offen.
 
 ## Laufende Tierwelt und konkreter Darstellungsfehler · 17.10.2026 (WK053/056/057)

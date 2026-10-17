@@ -1,5 +1,14 @@
 # Aktiver Projektstand – Paket 3.5 / PR #27
 
+## Konkreten asynchronen Suchfokusfehler korrigiert · 17.10.2026
+
+Quality97 am Remote752b8ed läuft noch; kein Push bis zu seinem tatsächlichen Ende, damit kein cancel-in-progress ausgelöst wird. WebKit scheiterte bei einem Tier-Suchweg, während andere Gruppen weiterliefen. Derselbe Fehler war in Quality96 des unabhängigen Lieferabschnitts sichtbar. Der lokale Liefer-Volltest588c5c1 bestand davor vollständig (1011,808s), ersetzt jedoch keine echte WebKit-Abnahme.
+
+Im unveränderten Liefer-Build588 kontrolliert einen Produktfehler reproduziert: Suchmodul zurückhalten, Dialog fokussiert zunächst „Schließen“, Modul freigeben. Der Knopf behielt den Fokus; echte Tastatureingabe „Großer Tümmler“ schloss mit dem Leerzeichen den Dialog. Originalberichte/Bilder in work/p35-animals/search-lazy-focus-before-confirmed. Suchfeld jetzt beim Mounten explizit fokussiert; Ranking, Inhalte und Speicher bleiben unverändert. Alle24 Suchwege prüfen vor dem Ausfüllen den wirklichen Eingabefokus und den vollständigen Wert. Neue kontrollierte Probe umfasst verzögertes Laden, zwei echte Tastaturabfragen mit Umlauten/ß, erneutes Öffnen sowie Escape vor Ladeende mit Rückfokus und ohne spätere Wiederöffnung. Begrenzte Fehlerdiagnose mit Phase/Wert/Fokus/Ergebnissen/Ereignissen und Originalbild.
+
+Frühe Lieferprobe nach der Korrektur erfolgreich (51,910s): verzögerte Suche und alle24 Werkstätten normal/groß bei320px, sichtbarer3px-Fokus und24 Such-/Reload-/Verbindungs-/Rückwege. Neue Aufnahme persönlich angesehen. Der Master übernimmt dieselbe kleine Prop- und Testkorrektur kontrolliert; alle159 Artikel, zusätzlichen Modelle/Originale/Manuskripte und14 bestehenden Mastergruppen erhalten. Lokale Standards und aktuelle volle GitHub-Abnahme am neuen Masterhead folgen. PR27 bleibt Draft, kein Gesamtabschluss. PR33 wird erst nach allen exakten lokalen und GitHub-Pflichtprüfungen Ready. News pausiert, Reservierung90788e84996c2c468d62e87a80da684600c561eb aktiv; kein Merge/Deployment/Kosten.
+
+
 ## Gesicherte Abschlusskorrekturen · 17.10.2026
 
 Der erste vollständige lokale Lauf am `37798b87a679879a9b981bc879d8741bc29c649d` ist beendet (2289,944s), ohne Abbruch. Foundation/Performance/Offline-Schutz, signierter News-Regressionslauf, vollständige Lern-/Natur-/Spiel-/Backup-/Hinweisgruppe und Wissensbuch/Erfindungen bestanden. Navigation scheiterte an einer alten Ein-Eintrag-Annahme bei inzwischen zwei vorbereiteten Chronikeinträgen; deshalb war die Gesamtabnahme ausdrücklich rot. Quality95 (`39015129199`) ebenfalls beendet/rot: Firefox und WebKit bestanden die frühen Planeten-/Tierbreiten, scheiterten anschließend beide am falschen Startseiten-Ready-Locator des neuen Suchtests. Alle Originale unverändert unter `work/p35-animals/master-full-37798b8-originals`; keine laufenden Vollprüfungen unterbrochen oder alten Erfolge umetikettiert.
