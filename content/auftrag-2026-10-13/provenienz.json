@@ -70,6 +70,13 @@
       "sha256": "8692353830b54d85e126e94b3d0009181823ef7f295eb09046faa78b329f759a",
       "read": "Neuesten Vorrangblock in Issue28 vollständig gelesen; im aktuellen Chat nochmals ausdrücklich beauftragt.",
       "authority": "Bestehenden seriellen Durchlauf, geprüfte Stände und Arbeit erhalten; vorhandene Implementierung zuerst kritisch fertigstellen, keine neuen Themen in laufende Schlussabnahme ziehen. Der aktuelle Chat bestätigt ausdrücklich die bestehende selbstständige test-live-Freigabe normaler vollständig geprüfter Teilabschnitte samt Auslieferungsprüfung und Weiterarbeit."
+    },
+    {
+      "file": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt",
+      "bytes": 10835,
+      "sha256": "1cbb3d1d9640f2a6f10488956bb93ed4e899dc054ed4baa4b0f449234997484b",
+      "read": "Alle neun Abschnitte im aktuellen Chat vollständig gelesen; unveränderte Originalbytes einschließlich CRLF erhalten. Erst nach Abschluss des eingefrorenen lokalen und CI-Laufs48ec0ba übernommen.",
+      "authority": "Ergänzt bestehenden seriellen Gesamtauftrag dauerhaft: Alt-/Neuinhalte tatsächlich gegenprüfen, konkrete Fehlerursachen beheben, historische Baselines bewahren und dokumentierte notwendige Inhaltskorrekturen erlauben. Bestehende Freigaben/Grenzen unverändert; keine zweite Roadmap."
     }
   ]
 }

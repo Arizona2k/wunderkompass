@@ -7,7 +7,7 @@
     {
       "id": "invention-light",
       "kind": "individually-extended-existing",
-      "contentHash": "b61a412b1a46b83e8e009971e5e2342205b0e9be7d748290834b2e02c99cc0f6",
+      "contentHash": "8897bf410dbe1bf8924baabbc8e68c966900c1fcd684fee675838234e1308cf0",
       "goal": "Du unterscheidest ein einzelnes Bauteil vom ganzen Versorgungssystem und kannst erklären, warum eine gute Idee oft viele zusammenpassende Verbesserungen braucht.",
       "ageLevels": {
         "6-8": "Eine elektrische Lampe macht aus elektrischer Energie Licht. Damit ein Raum hell wird, müssen Lampe und Stromversorgung zusammenpassen.",
@@ -56,12 +56,44 @@
       "acceptedForDoubling": false,
       "reviewedBy": "Codex, not an independent human reviewer",
       "UIAcceptance": "Current source requires fresh viewport/model/native/offline and complete immutable proofs; historical results apply only to their own recorded SHA. No independent approval.",
-      "reviewedOn": "2026-10-16"
+      "reviewedOn": "2026-10-16",
+      "beforeCorrection20261018": {
+        "contentHash": "b61a412b1a46b83e8e009971e5e2342205b0e9be7d748290834b2e02c99cc0f6",
+        "question": {
+          "prompt": "Welches Problem hilft Elektrisches Licht zu lösen?",
+          "answers": [
+            "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
+            "Menschen wollten durch die Luft reisen.",
+            "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit."
+          ],
+          "correct": 0,
+          "why": "Elektrische Energie sollte einen Raum zuverlässig beleuchten. Viele Menschen arbeiteten daran, darunter Joseph Swan sowie Thomas Edison und sein Team. Sie verbesserten Lampen und Stromversorgung."
+        },
+        "answerSpecificFeedback": {
+          "hint": "Vergleiche das Ziel einer Lampe mit dem Ziel eines Verkehrsmittels. Was soll sich für Menschen nach Sonnenuntergang ändern?",
+          "wrongReasons": [
+            null,
+            "Durch die Luft zu reisen ist ein Transportproblem. Hier geht es um die Wahrnehmung in einem dunklen Raum.",
+            "Wiederholte Rechnungen gehören zu einer anderen Aufgabe. Die Lampe führt keine Rechenanweisungen aus."
+          ]
+        }
+      },
+      "questionCurrent": {
+        "prompt": "Welches Beleuchtungsproblem soll elektrisches Licht lösen?",
+        "answers": [
+          "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
+          "Menschen wollten durch die Luft reisen.",
+          "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit."
+        ],
+        "correct": 0,
+        "why": "Elektrische Energie sollte einen Raum zuverlässig beleuchten. Viele Menschen arbeiteten daran, darunter Joseph Swan sowie Thomas Edison und sein Team. Sie verbesserten Lampen und Stromversorgung."
+      },
+      "questionPreservationScope": "questionPreserved bleibt historische Originalbaseline. questionCurrent ist der gezielt dokumentiert korrigierte aktuelle Stand; IDs/Antworten/Lösung unverändert."
     },
     {
       "id": "invention-car",
       "kind": "individually-extended-existing",
-      "contentHash": "0e297982ef89f721b4c084137f1c0415d7e41d359334e15c14879ecfbb2dc75b",
+      "contentHash": "d2187c9a5d3afa6e9f5d26bb760c1b586c8d379399af592258ba6e71c2a744e1",
       "goal": "Du beschreibst Technik über zusammenwirkende Aufgaben und beurteilst ein Verkehrsmittel auch nach Sicherheit statt allein nach Motorleistung.",
       "ageLevels": {
         "6-8": "Ein Auto hat einen Antrieb, der seine Räder bewegen kann. Lenken und Bremsen sind andere Aufgaben als das Antreiben.",
@@ -106,12 +138,44 @@
       "acceptedForDoubling": false,
       "reviewedBy": "Codex, not an independent human reviewer",
       "UIAcceptance": "Current source requires fresh viewport/model/native/offline and complete immutable proofs; historical results apply only to their own recorded SHA. No independent approval.",
-      "reviewedOn": "2026-10-16"
+      "reviewedOn": "2026-10-16",
+      "beforeCorrection20261018": {
+        "contentHash": "0e297982ef89f721b4c084137f1c0415d7e41d359334e15c14879ecfbb2dc75b",
+        "question": {
+          "prompt": "Welches Problem hilft Das Auto zu lösen?",
+          "answers": [
+            "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
+            "Eine Stimme war normalerweise nur in der Nähe hörbar.",
+            "Computer an verschiedenen Orten sollten Informationen austauschen."
+          ],
+          "correct": 0,
+          "why": "Ein Motor sollte die Räder antreiben. Es gab schon Dampf- und Elektrofahrzeuge. Karl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos."
+        },
+        "answerSpecificFeedback": {
+          "hint": "Welche beiden Antworten betreffen vor allem Informationen? Welche betrifft dagegen den Transport eines Wagens?",
+          "wrongReasons": [
+            null,
+            "Eine Stimme weit zu übertragen betrifft ein Kommunikationsgerät. Der Wagen soll Menschen oder Lasten fortbewegen.",
+            "Computer zu verbinden ist ein Informationsproblem. Hier wird eine mechanische Bewegung gesucht."
+          ]
+        }
+      },
+      "questionCurrent": {
+        "prompt": "Welche Transportaufgabe soll ein Auto übernehmen?",
+        "answers": [
+          "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
+          "Eine Stimme war normalerweise nur in der Nähe hörbar.",
+          "Computer an verschiedenen Orten sollten Informationen austauschen."
+        ],
+        "correct": 0,
+        "why": "Ein Motor sollte die Räder antreiben. Es gab schon Dampf- und Elektrofahrzeuge. Karl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos."
+      },
+      "questionPreservationScope": "questionPreserved bleibt historische Originalbaseline. questionCurrent ist der gezielt dokumentiert korrigierte aktuelle Stand; IDs/Antworten/Lösung unverändert."
     },
     {
       "id": "invention-railway",
       "kind": "individually-extended-existing",
-      "contentHash": "d770442b36d9827cc9de51361582d751a2ad7d3dab70586fe9e9555dac6d3cd2",
+      "contentHash": "a9e02e7996b0e43b8240f3e5674cc9caba3adf47f56541bcc42775fd1f449aa2",
       "goal": "Du erkennst Verkehr als abgestimmtes System und kannst ein belegtes Ereignis von einer zu einfachen Geschichte über einen einzelnen Erfinder unterscheiden.",
       "ageLevels": {
         "6-8": "Ein Zug bewegt Wagen auf Schienen. Viele Reisende oder Waren können zusammen transportiert werden.",
@@ -156,12 +220,44 @@
       "acceptedForDoubling": false,
       "reviewedBy": "Codex, not an independent human reviewer",
       "UIAcceptance": "Current source requires fresh viewport/model/native/offline and complete immutable proofs; historical results apply only to their own recorded SHA. No independent approval.",
-      "reviewedOn": "2026-10-16"
+      "reviewedOn": "2026-10-16",
+      "beforeCorrection20261018": {
+        "contentHash": "d770442b36d9827cc9de51361582d751a2ad7d3dab70586fe9e9555dac6d3cd2",
+        "question": {
+          "prompt": "Welches Problem hilft Die Eisenbahn zu lösen?",
+          "answers": [
+            "Viele Waren und Reisende mussten über Land transportiert werden.",
+            "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
+            "Auf See gab es nicht immer sichtbare Landmarken oder Sterne."
+          ],
+          "correct": 0,
+          "why": "Räder auf Schienen und ein kräftiger Antrieb sollten Wagen ziehen. Schienenwege und Lokomotiven entstanden schrittweise. 1825 eröffnete die Bahn Stockton–Darlington. Viele Menschen verbesserten danach Strecken und Züge."
+        },
+        "answerSpecificFeedback": {
+          "hint": "Überlege, welches Problem eine gemeinsame Strecke mit vielen Wagen löst. Die anderen Antworten betreffen Rechnen und Orientierung.",
+          "wrongReasons": [
+            null,
+            "Ein Rechner kann wiederholte Rechnungen bearbeiten. Das erklärt noch nicht den Transport vieler Wagen auf einer Strecke.",
+            "Landmarken oder Sterne betreffen vor allem Orientierung. Die Eisenbahnkarte fragt nach dem gemeinsamen Transport."
+          ]
+        }
+      },
+      "questionCurrent": {
+        "prompt": "Bei welcher Aufgabe hilft eine Eisenbahn?",
+        "answers": [
+          "Viele Waren und Reisende mussten über Land transportiert werden.",
+          "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
+          "Auf See gab es nicht immer sichtbare Landmarken oder Sterne."
+        ],
+        "correct": 0,
+        "why": "Räder auf Schienen und ein kräftiger Antrieb sollten Wagen ziehen. Schienenwege und Lokomotiven entstanden schrittweise. 1825 eröffnete die Bahn Stockton–Darlington. Viele Menschen verbesserten danach Strecken und Züge."
+      },
+      "questionPreservationScope": "questionPreserved bleibt historische Originalbaseline. questionCurrent ist der gezielt dokumentiert korrigierte aktuelle Stand; IDs/Antworten/Lösung unverändert."
     },
     {
       "id": "invention-airplane",
       "kind": "individually-extended-existing",
-      "contentHash": "15f938e2c806dec9476e4f5f51360d23a48fee3e717018f5ab90ba2d61caf774",
+      "contentHash": "1a5f6929b89be71534ff1c0f340b620469f268ed1b104fc03bc2afa07db301e1",
       "goal": "Du unterscheidest Kräfte und Steuerung und erkennst, warum ein erfolgreicher Versuch mehr braucht als die Erzeugung von Vorwärtsbewegung.",
       "ageLevels": {
         "6-8": "Flügel, Antrieb und Steuerung haben beim Flugzeug verschiedene Aufgaben. Ein Flugzeug muss sich nicht nur in der Luft halten, sondern auch lenken lassen.",
@@ -210,12 +306,44 @@
       "acceptedForDoubling": false,
       "reviewedBy": "Codex, not an independent human reviewer",
       "UIAcceptance": "Current source requires fresh viewport/model/native/offline and complete immutable proofs; historical results apply only to their own recorded SHA. No independent approval.",
-      "reviewedOn": "2026-10-16"
+      "reviewedOn": "2026-10-16",
+      "beforeCorrection20261018": {
+        "contentHash": "15f938e2c806dec9476e4f5f51360d23a48fee3e717018f5ab90ba2d61caf774",
+        "question": {
+          "prompt": "Welches Problem hilft Das Flugzeug zu lösen?",
+          "answers": [
+            "Menschen wollten durch die Luft reisen.",
+            "Computer an verschiedenen Orten sollten Informationen austauschen.",
+            "Ein Buch von Hand abzuschreiben dauerte lange."
+          ],
+          "correct": 0,
+          "why": "Flügel sollten Auftrieb erzeugen; der Flug musste steuerbar sein. Ballons und Gleiter gab es schon. Die Wright-Brüder erprobten Steuerung und Flügel, bevor ihnen 1903 ein angetriebener, gesteuerter Flug gelang."
+        },
+        "answerSpecificFeedback": {
+          "hint": "Verbinde das Fortbewegungsziel mit dem Ort, an dem es erreicht werden soll. Datenübertragung und Vervielfältigung lösen andere Probleme.",
+          "wrongReasons": [
+            null,
+            "Informationen zwischen Computern zu übertragen beschreibt ein Netzwerk. Es erklärt nicht den Transport durch die Luft.",
+            "Viele gleiche Buchseiten zu erzeugen ist eine Vervielfältigungsaufgabe. Ein Flugzeug braucht stattdessen tragende und steuernde Flächen."
+          ]
+        }
+      },
+      "questionCurrent": {
+        "prompt": "Welches Reiseproblem soll ein Flugzeug lösen?",
+        "answers": [
+          "Menschen wollten durch die Luft reisen.",
+          "Computer an verschiedenen Orten sollten Informationen austauschen.",
+          "Ein Buch von Hand abzuschreiben dauerte lange."
+        ],
+        "correct": 0,
+        "why": "Flügel sollten Auftrieb erzeugen; der Flug musste steuerbar sein. Ballons und Gleiter gab es schon. Die Wright-Brüder erprobten Steuerung und Flügel, bevor ihnen 1903 ein angetriebener, gesteuerter Flug gelang."
+      },
+      "questionPreservationScope": "questionPreserved bleibt historische Originalbaseline. questionCurrent ist der gezielt dokumentiert korrigierte aktuelle Stand; IDs/Antworten/Lösung unverändert."
     },
     {
       "id": "invention-phone",
       "kind": "individually-extended-existing",
-      "contentHash": "4b97c7117f455195233a95e6b43233cf65c17e13fdbe1b8ecfdf50e202db541d",
+      "contentHash": "6677322dcaf13a0c04af2bb2b90cf037e76e0d10046ca337760d20577321a014",
       "goal": "Du trennst eine Nachricht von ihrem technischen Transport und kannst einen Fehler an einer bestimmten Stelle des Weges vermuten.",
       "ageLevels": {
         "6-8": "Ein Telefon überträgt Signale. Im Empfänger werden sie wieder als Stimme hörbar.",
@@ -264,12 +392,44 @@
       "acceptedForDoubling": false,
       "reviewedBy": "Codex, not an independent human reviewer",
       "UIAcceptance": "Current source requires fresh viewport/model/native/offline and complete immutable proofs; historical results apply only to their own recorded SHA. No independent approval.",
-      "reviewedOn": "2026-10-16"
+      "reviewedOn": "2026-10-16",
+      "beforeCorrection20261018": {
+        "contentHash": "4b97c7117f455195233a95e6b43233cf65c17e13fdbe1b8ecfdf50e202db541d",
+        "question": {
+          "prompt": "Welches Problem hilft Das Telefon zu lösen?",
+          "answers": [
+            "Eine Stimme war normalerweise nur in der Nähe hörbar.",
+            "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
+            "Menschen wollten Geräte und später Menschen ins Weltall bringen."
+          ],
+          "correct": 0,
+          "why": "Schall sollte als Signal weit übertragen werden. Viele Menschen experimentierten damit. Alexander Graham Bell erhielt 1876 ein wichtiges Patent. Auch Elisha Gray und andere arbeiteten an Telefontechnik."
+        },
+        "answerSpecificFeedback": {
+          "hint": "Welche Antwort betrifft den Austausch zwischen zwei Menschen, auch wenn sie weit voneinander entfernt sind?",
+          "wrongReasons": [
+            null,
+            "Richtungen ohne Landmarken zu bestimmen ist eine Orientierungsaufgabe. Ein Telefon überträgt dagegen ein Gespräch.",
+            "Geräte ins Weltall zu bringen erfordert einen Transportantrieb. Das Telefon selbst übernimmt diesen Start nicht."
+          ]
+        }
+      },
+      "questionCurrent": {
+        "prompt": "Welches Kommunikationsproblem soll ein Telefon lösen?",
+        "answers": [
+          "Eine Stimme war normalerweise nur in der Nähe hörbar.",
+          "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
+          "Menschen wollten Geräte und später Menschen ins Weltall bringen."
+        ],
+        "correct": 0,
+        "why": "Schall sollte als Signal weit übertragen werden. Viele Menschen experimentierten damit. Alexander Graham Bell erhielt 1876 ein wichtiges Patent. Auch Elisha Gray und andere arbeiteten an Telefontechnik."
+      },
+      "questionPreservationScope": "questionPreserved bleibt historische Originalbaseline. questionCurrent ist der gezielt dokumentiert korrigierte aktuelle Stand; IDs/Antworten/Lösung unverändert."
     },
     {
       "id": "invention-computer",
       "kind": "individually-extended-existing",
-      "contentHash": "793951f553a47c270e6612fbcc22581d75a4873d9a520a069f0ae339b1f079f3",
+      "contentHash": "dc3e383717e8a64c8c41776516cc63570705455f60da91e787cbc9028d78b1f3",
       "goal": "Du kannst technische Abläufe erklären und prüfst Ergebnisse, statt einem schnellen Gerät automatisch Recht zu geben.",
       "ageLevels": {
         "6-8": "Ein Computer führt Anweisungen aus. Er braucht passende Daten und ein Programm; schneller rechnen bedeutet nicht automatisch, richtig zu entscheiden.",
@@ -314,12 +474,44 @@
       "acceptedForDoubling": false,
       "reviewedBy": "Codex, not an independent human reviewer",
       "UIAcceptance": "Current source requires fresh viewport/model/native/offline and complete immutable proofs; historical results apply only to their own recorded SHA. No independent approval.",
-      "reviewedOn": "2026-10-16"
+      "reviewedOn": "2026-10-16",
+      "beforeCorrection20261018": {
+        "contentHash": "793951f553a47c270e6612fbcc22581d75a4873d9a520a069f0ae339b1f079f3",
+        "question": {
+          "prompt": "Welches Problem hilft Der Computer zu lösen?",
+          "answers": [
+            "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
+            "Ein Buch von Hand abzuschreiben dauerte lange.",
+            "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen."
+          ],
+          "correct": 0,
+          "why": "Eine Maschine sollte genaue Anweisungen Schritt für Schritt ausführen. Rechenmaschinen, mechanische Pläne und elektronische Computer hatten viele Beteiligte in mehreren Ländern. Es gibt nicht einen einzigen Erfinder des Computers."
+        },
+        "answerSpecificFeedback": {
+          "hint": "Denke an viele gleiche Arbeitsschritte mit Daten. Welche Antwort beschreibt diese Wiederholung statt bloß ein bestimmtes Medium oder einen Aufenthaltsort?",
+          "wrongReasons": [
+            null,
+            "Buchseiten oft zu vervielfältigen erklärt eine Drucktechnik. Ein Computer kann jedoch viele unterschiedliche Anweisungen verarbeiten.",
+            "Ein Gerät im Weltraum kann einen Computer enthalten. Der Computer ist aber nicht durch seinen Aufenthaltsort definiert."
+          ]
+        }
+      },
+      "questionCurrent": {
+        "prompt": "Bei welcher Aufgabe hilft ein Computer mit wiederholbaren Anweisungen?",
+        "answers": [
+          "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
+          "Ein Buch von Hand abzuschreiben dauerte lange.",
+          "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen."
+        ],
+        "correct": 0,
+        "why": "Eine Maschine sollte genaue Anweisungen Schritt für Schritt ausführen. Rechenmaschinen, mechanische Pläne und elektronische Computer hatten viele Beteiligte in mehreren Ländern. Es gibt nicht einen einzigen Erfinder des Computers."
+      },
+      "questionPreservationScope": "questionPreserved bleibt historische Originalbaseline. questionCurrent ist der gezielt dokumentiert korrigierte aktuelle Stand; IDs/Antworten/Lösung unverändert."
     },
     {
       "id": "invention-internet",
       "kind": "individually-extended-existing",
-      "contentHash": "b72e5903c4e47ce10fcb2e1343eb251311fc6591446b387b47db69efbed0bcec",
+      "contentHash": "6a3ab0069d933605b335abf7abafd472afe054d51cc15a0bf742129dc2e4454b",
       "goal": "Du unterscheidest ein Gerät von einem Netz und kannst Verbindungsprobleme eingrenzen, ohne private Daten oder Passwörter weiterzugeben.",
       "ageLevels": {
         "6-8": "Das Internet verbindet viele Computernetze. Gemeinsame Regeln helfen den Geräten, Informationen auszutauschen.",
@@ -342,7 +534,7 @@
         "wrongReasons": [
           null,
           "Eine Rakete kann ein Gerät transportieren. Das beschreibt noch keine gemeinsamen Regeln zwischen Computernetzen.",
-          "Elektrisches Licht löst ein Beleuchtungsproblem. Das Internet soll dagegen Informationen zwischen Netzen austauschen."
+          "Das beschreibt Aufgaben eines Smartphones. Es kann dafür Internetdienste nutzen. Die Frage zielt auf das Verbinden von Computernetzen, nicht auf die Kombination von Funktionen in einem einzelnen Gerät."
         ]
       },
       "sourceAccess": "Internet-Society-Bericht beteiligter Entwickler, Hauptpassagen zu Paketvermittlung/ARPANET gelesen. Heutige Ausfallsicherheit nicht pauschal garantiert; zusätzliche Protokolldetails vor Vertiefung gesondert belegen.",
@@ -364,12 +556,44 @@
       "acceptedForDoubling": false,
       "reviewedBy": "Codex, not an independent human reviewer",
       "UIAcceptance": "Current source requires fresh viewport/model/native/offline and complete immutable proofs; historical results apply only to their own recorded SHA. No independent approval.",
-      "reviewedOn": "2026-10-16"
+      "reviewedOn": "2026-10-16",
+      "beforeCorrection20261018": {
+        "contentHash": "b72e5903c4e47ce10fcb2e1343eb251311fc6591446b387b47db69efbed0bcec",
+        "question": {
+          "prompt": "Welches Problem hilft Das Internet zu lösen?",
+          "answers": [
+            "Computer an verschiedenen Orten sollten Informationen austauschen.",
+            "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
+            "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten."
+          ],
+          "correct": 0,
+          "why": "Netze sollten miteinander verbunden werden. Viele Teams entwickelten Paketübertragung und gemeinsame Regeln. Das ARPANET verband 1969 erste Rechner. Forschende aus mehreren Ländern trugen zur Entwicklung des Internets bei."
+        },
+        "answerSpecificFeedback": {
+          "hint": "Unterscheide das Bewegen von Dingen vom Übertragen von Informationen zwischen Computern.",
+          "wrongReasons": [
+            null,
+            "Eine Rakete kann ein Gerät transportieren. Das beschreibt noch keine gemeinsamen Regeln zwischen Computernetzen.",
+            "Elektrisches Licht löst ein Beleuchtungsproblem. Das Internet soll dagegen Informationen zwischen Netzen austauschen."
+          ]
+        }
+      },
+      "questionCurrent": {
+        "prompt": "Welche grundlegende Aufgabe hat das Internet als Netz aus Netzen?",
+        "answers": [
+          "Computer an verschiedenen Orten sollten Informationen austauschen.",
+          "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
+          "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten."
+        ],
+        "correct": 0,
+        "why": "Netze sollten miteinander verbunden werden. Viele Teams entwickelten Paketübertragung und gemeinsame Regeln. Das ARPANET verband 1969 erste Rechner. Forschende aus mehreren Ländern trugen zur Entwicklung des Internets bei."
+      },
+      "questionPreservationScope": "questionPreserved bleibt historische Originalbaseline. questionCurrent ist der gezielt dokumentiert korrigierte aktuelle Stand; IDs/Antworten/Lösung unverändert."
     },
     {
       "id": "invention-compass",
       "kind": "individually-extended-existing",
-      "contentHash": "ff96e58ce0792eaafa22482408e0d3119a435e5dab1132036e4871501cca60be",
+      "contentHash": "afa20a2f751f6aac82f250df3b99972ba830ba32761244c3660ada4af0760341",
       "goal": "Du trennst eine Richtungsinformation von einem fertigen Reiseweg und kannst die Grenzen eines einzelnen Messgeräts erklären.",
       "ageLevels": {
         "6-8": "Eine frei bewegliche magnetische Nadel kann bei der Orientierung helfen. Sie zeigt nicht automatisch, wo dein Ziel liegt.",
@@ -418,12 +642,44 @@
       "acceptedForDoubling": false,
       "reviewedBy": "Codex, not an independent human reviewer",
       "UIAcceptance": "Current source requires fresh viewport/model/native/offline and complete immutable proofs; historical results apply only to their own recorded SHA. No independent approval.",
-      "reviewedOn": "2026-10-16"
+      "reviewedOn": "2026-10-16",
+      "beforeCorrection20261018": {
+        "contentHash": "ff96e58ce0792eaafa22482408e0d3119a435e5dab1132036e4871501cca60be",
+        "question": {
+          "prompt": "Welches Problem hilft Der Kompass zu lösen?",
+          "answers": [
+            "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
+            "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
+            "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen."
+          ],
+          "correct": 0,
+          "why": "Eine magnetische Nadel konnte bei der Richtung helfen. Menschen kannten magnetische Steine schon früher. Seefahrer in China nutzten später magnetische Richtungsanzeigen; das Wissen verbreitete sich weiter."
+        },
+        "answerSpecificFeedback": {
+          "hint": "Welche Antwort beschreibt eine fehlende Orientierungshilfe, wenn vertraute sichtbare Anhaltspunkte fehlen?",
+          "wrongReasons": [
+            null,
+            "Die Erde aus einer Umlaufbahn zu beobachten ist eine Aufgabe von Satelliten. Die Kompassnadel liefert eine Richtung am Ort.",
+            "Nachts einen Raum zu beleuchten ist ein anderes Problem. Eine Kompassnadel erzeugt kein Licht."
+          ]
+        }
+      },
+      "questionCurrent": {
+        "prompt": "Welches Orientierungsproblem soll ein Kompass lösen?",
+        "answers": [
+          "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
+          "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
+          "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen."
+        ],
+        "correct": 0,
+        "why": "Eine magnetische Nadel konnte bei der Richtung helfen. Menschen kannten magnetische Steine schon früher. Seefahrer in China nutzten später magnetische Richtungsanzeigen; das Wissen verbreitete sich weiter."
+      },
+      "questionPreservationScope": "questionPreserved bleibt historische Originalbaseline. questionCurrent ist der gezielt dokumentiert korrigierte aktuelle Stand; IDs/Antworten/Lösung unverändert."
     },
     {
       "id": "invention-printing",
       "kind": "individually-extended-existing",
-      "contentHash": "1766a124948c0a2c669e4aac4dd6799f3264f17d0d1176a9bfc78be658ab3672",
+      "contentHash": "a5986f63bf742399244be846a84cc571deb2839132e9a2d34a22f19e9f3cd653",
       "goal": "Du verstehst Wiederverwendung und erkennst, warum eine Kontrolle vor dem Vervielfältigen wichtig ist.",
       "ageLevels": {
         "6-8": "Beim Druck können vorbereitete Zeichen oder Bilder mehrfach auf ein Material übertragen werden. Beim historischen Buchdruck lassen sich einzelne Zeichen zu einer Seite zusammensetzen.",
@@ -472,12 +728,44 @@
       "acceptedForDoubling": false,
       "reviewedBy": "Codex, not an independent human reviewer",
       "UIAcceptance": "Current source requires fresh viewport/model/native/offline and complete immutable proofs; historical results apply only to their own recorded SHA. No independent approval.",
-      "reviewedOn": "2026-10-16"
+      "reviewedOn": "2026-10-16",
+      "beforeCorrection20261018": {
+        "contentHash": "1766a124948c0a2c669e4aac4dd6799f3264f17d0d1176a9bfc78be658ab3672",
+        "question": {
+          "prompt": "Welches Problem hilft Der Buchdruck zu lösen?",
+          "answers": [
+            "Ein Buch von Hand abzuschreiben dauerte lange.",
+            "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
+            "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste."
+          ],
+          "correct": 0,
+          "why": "Buchstaben sollten zu Seiten zusammengestellt und oft abgedruckt werden. In China und Korea gab es bewegliche Druckzeichen vor Gutenberg. Seine Werkstatt verband Metalltypen, geeignete Farbe und eine Presse zu einem wirksamen europäischen System."
+        },
+        "answerSpecificFeedback": {
+          "hint": "Vergleiche ein einzelnes von Hand geschriebenes Exemplar mit vielen Abzügen derselben vorbereiteten Seite.",
+          "wrongReasons": [
+            null,
+            "Ein Smartphone kombiniert Kommunikation und Datenverarbeitung. Die Druckkarte fragt nach der Vervielfältigung von Seiten.",
+            "Ein selbst angetriebener Wagen löst eine Transportaufgabe und vervielfältigt noch keinen Text."
+          ]
+        }
+      },
+      "questionCurrent": {
+        "prompt": "Welches Problem sollte der Buchdruck lösen?",
+        "answers": [
+          "Ein Buch von Hand abzuschreiben dauerte lange.",
+          "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
+          "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste."
+        ],
+        "correct": 0,
+        "why": "Buchstaben sollten zu Seiten zusammengestellt und oft abgedruckt werden. In China und Korea gab es bewegliche Druckzeichen vor Gutenberg. Seine Werkstatt verband Metalltypen, geeignete Farbe und eine Presse zu einem wirksamen europäischen System."
+      },
+      "questionPreservationScope": "questionPreserved bleibt historische Originalbaseline. questionCurrent ist der gezielt dokumentiert korrigierte aktuelle Stand; IDs/Antworten/Lösung unverändert."
     },
     {
       "id": "invention-rocket",
       "kind": "individually-extended-existing",
-      "contentHash": "fa9f13e87f3de5ffadd517209c6e379fee912d47f5f1ab427a39892465bbfc38",
+      "contentHash": "bb99283f27b3374e2b10aaccd646910a53369ee13729834cab01aa9998d7240e",
       "goal": "Du kannst die Schubrichtung erklären und unterscheidest eine physikalische Lernskizze von einer sicheren Bauanleitung.",
       "ageLevels": {
         "6-8": "Eine Rakete stößt Material nach hinten aus und wird dabei nach vorn beschleunigt. Sie braucht keine Luft, gegen die sie sich abstützt.",
@@ -522,12 +810,44 @@
       "acceptedForDoubling": false,
       "reviewedBy": "Codex, not an independent human reviewer",
       "UIAcceptance": "Current source requires fresh viewport/model/native/offline and complete immutable proofs; historical results apply only to their own recorded SHA. No independent approval.",
-      "reviewedOn": "2026-10-16"
+      "reviewedOn": "2026-10-16",
+      "beforeCorrection20261018": {
+        "contentHash": "fa9f13e87f3de5ffadd517209c6e379fee912d47f5f1ab427a39892465bbfc38",
+        "question": {
+          "prompt": "Welches Problem hilft Die Rakete zu lösen?",
+          "answers": [
+            "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
+            "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
+            "Viele Waren und Reisende mussten über Land transportiert werden."
+          ],
+          "correct": 0,
+          "why": "Schnell ausströmendes Gas sollte die Rakete in die Gegenrichtung schieben. Raketen gab es lange vor der Raumfahrt. Robert Goddard startete 1926 eine Rakete mit flüssigen Treibstoffen. Später entwickelten große Teams leistungsfähigere Systeme."
+        },
+        "answerSpecificFeedback": {
+          "hint": "Welche Antwort betrifft einen Transport über die gewöhnliche Erdoberfläche hinaus? Die beiden anderen nennen Alltagsaufgaben am Boden.",
+          "wrongReasons": [
+            null,
+            "Ein Raum kann mit einer Lampe beleuchtet werden. Das erklärt nicht den Antrieb eines Geräts ins Weltall.",
+            "Viele Waren auf einer Landstrecke zu transportieren beschreibt eher eine Bahn- oder Straßenaufgabe, nicht das Startproblem dieser Karte."
+          ]
+        }
+      },
+      "questionCurrent": {
+        "prompt": "Welches Transportziel beschreibt die Raumfahrt-Rakete in dieser Karte?",
+        "answers": [
+          "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
+          "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
+          "Viele Waren und Reisende mussten über Land transportiert werden."
+        ],
+        "correct": 0,
+        "why": "Schnell ausströmendes Gas sollte die Rakete in die Gegenrichtung schieben. Raketen gab es lange vor der Raumfahrt. Robert Goddard startete 1926 eine Rakete mit flüssigen Treibstoffen. Später entwickelten große Teams leistungsfähigere Systeme."
+      },
+      "questionPreservationScope": "questionPreserved bleibt historische Originalbaseline. questionCurrent ist der gezielt dokumentiert korrigierte aktuelle Stand; IDs/Antworten/Lösung unverändert."
     },
     {
       "id": "invention-satellite",
       "kind": "individually-extended-existing",
-      "contentHash": "6c5696dc010c7b36bed7cbe9633f0ef5eafdaae92037548a9e63f91917ecf685",
+      "contentHash": "299136fdbfc0fd5740b3c9f5ed8623b079b2726da22da5150013060728c186d8",
       "goal": "Du unterscheidest Start, Versorgung und Forschungsauftrag und kannst die Erdebeobachtung von einer bloßen Weltraumfahrt abgrenzen.",
       "ageLevels": {
         "6-8": "Ein künstlicher Satellit bewegt sich auf einer Umlaufbahn. Seine Aufgabe kann Beobachten, Messen oder das Übertragen von Signalen sein.",
@@ -572,12 +892,44 @@
       "acceptedForDoubling": false,
       "reviewedBy": "Codex, not an independent human reviewer",
       "UIAcceptance": "Current source requires fresh viewport/model/native/offline and complete immutable proofs; historical results apply only to their own recorded SHA. No independent approval.",
-      "reviewedOn": "2026-10-16"
+      "reviewedOn": "2026-10-16",
+      "beforeCorrection20261018": {
+        "contentHash": "6c5696dc010c7b36bed7cbe9633f0ef5eafdaae92037548a9e63f91917ecf685",
+        "question": {
+          "prompt": "Welches Problem hilft Der Satellit zu lösen?",
+          "answers": [
+            "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
+            "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
+            "Menschen wollten durch die Luft reisen."
+          ],
+          "correct": 0,
+          "why": "Ein Gerät sollte die Erde auf einer Umlaufbahn umkreisen. Teams in der Sowjetunion brachten 1957 Sputnik 1 in eine Erdumlaufbahn. Weitere Länder und internationale Teams entwickelten viele unterschiedliche Satelliten."
+        },
+        "answerSpecificFeedback": {
+          "hint": "Trenne die Aufgabe auf der Umlaufbahn vom vorherigen Start und vom Transport auf Straßen.",
+          "wrongReasons": [
+            null,
+            "Ein Wagen mit eigenem Antrieb löst eine Aufgabe auf dem Boden. Er umkreist die Erde nicht als Forschungsgerät.",
+            "Fliegen durch die Luft ist noch keine Umlaufbahn. Die Satellitenkarte beschreibt einen anderen Aufenthalts- und Arbeitszusammenhang."
+          ]
+        }
+      },
+      "questionCurrent": {
+        "prompt": "Welche Aufgabe beschreibt die Satellitenkarte?",
+        "answers": [
+          "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
+          "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
+          "Menschen wollten durch die Luft reisen."
+        ],
+        "correct": 0,
+        "why": "Ein Gerät sollte die Erde auf einer Umlaufbahn umkreisen. Teams in der Sowjetunion brachten 1957 Sputnik 1 in eine Erdumlaufbahn. Weitere Länder und internationale Teams entwickelten viele unterschiedliche Satelliten."
+      },
+      "questionPreservationScope": "questionPreserved bleibt historische Originalbaseline. questionCurrent ist der gezielt dokumentiert korrigierte aktuelle Stand; IDs/Antworten/Lösung unverändert."
     },
     {
       "id": "invention-smartphone",
       "kind": "individually-extended-existing",
-      "contentHash": "3f6e054e8390c8cbc9dc7fa38117e8051c23c288e2ef8a4621abd19839d3efc6",
+      "contentHash": "9817532fee389cab0052dcc23f007b20a2ff28443c2a4edeb8959aa01d043620",
       "goal": "Du verstehst die Grenzen einzelner Funktionen und musst bei einem Verbindungsfehler nicht automatisch deine gespeicherten Inhalte für verloren halten.",
       "ageLevels": {
         "6-8": "Ein Smartphone verbindet Telefon und Computerfunktionen in einem mobilen Gerät. Mehrere Bauteile und Programme arbeiten dabei zusammen.",
@@ -622,7 +974,39 @@
       "acceptedForDoubling": false,
       "reviewedBy": "Codex, not an independent human reviewer",
       "UIAcceptance": "Current source requires fresh viewport/model/native/offline and complete immutable proofs; historical results apply only to their own recorded SHA. No independent approval.",
-      "reviewedOn": "2026-10-16"
+      "reviewedOn": "2026-10-16",
+      "beforeCorrection20261018": {
+        "contentHash": "3f6e054e8390c8cbc9dc7fa38117e8051c23c288e2ef8a4621abd19839d3efc6",
+        "question": {
+          "prompt": "Welches Problem hilft Das Smartphone zu lösen?",
+          "answers": [
+            "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
+            "Viele Waren und Reisende mussten über Land transportiert werden.",
+            "Eine Stimme war normalerweise nur in der Nähe hörbar."
+          ],
+          "correct": 0,
+          "why": "Telefon und kleiner Computer sollten zusammenarbeiten. Viele Entwicklungen kamen zusammen: Mobilfunk, Chips, Akkus, Bildschirme und Programme. IBM und BellSouth kombinierten beim Simon in den 1990er-Jahren mehrere Funktionen."
+        },
+        "answerSpecificFeedback": {
+          "hint": "Eine Antwort verbindet mehrere Aufgaben in einem mobilen Gerät. Welche geht über die reine Sprachübertragung hinaus?",
+          "wrongReasons": [
+            null,
+            "Viele Reisende und Waren auf einer Strecke zu bewegen ist eine Transportaufgabe. Hier werden mehrere Informationsfunktionen kombiniert.",
+            "Nur eine Stimme aus der Ferne hörbar zu machen beschreibt bereits ein Telefon. Die Frage sucht zusätzlich die Verarbeitung von Informationen unterwegs."
+          ]
+        }
+      },
+      "questionCurrent": {
+        "prompt": "Welche Aufgaben verbindet ein Smartphone?",
+        "answers": [
+          "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
+          "Viele Waren und Reisende mussten über Land transportiert werden.",
+          "Eine Stimme war normalerweise nur in der Nähe hörbar."
+        ],
+        "correct": 0,
+        "why": "Telefon und kleiner Computer sollten zusammenarbeiten. Viele Entwicklungen kamen zusammen: Mobilfunk, Chips, Akkus, Bildschirme und Programme. IBM und BellSouth kombinierten beim Simon in den 1990er-Jahren mehrere Funktionen."
+      },
+      "questionPreservationScope": "questionPreserved bleibt historische Originalbaseline. questionCurrent ist der gezielt dokumentiert korrigierte aktuelle Stand; IDs/Antworten/Lösung unverändert."
     },
     {
       "id": "invention-battery",
@@ -1593,5 +1977,47 @@
       "seismograph": "Qualitative initial relative displacement; no computed oscillator, real earthquake data or prediction."
     },
     "independentAcceptance": false
+  },
+  "countercheck20261018": {
+    "status": "content-corrected-current-ui-pending",
+    "scope": "Alle24Erfindungs-Mini-Fragen, sämtlicheAntworten und je zweiFalschgründe gelesen;18Personen-Frage/Antwort/Erklärung gelesen, nicht alle ganzenArtikel fachlich freigegeben.",
+    "cause": "Internet-Falschgrund imQuelldatensatz passt zurLichtkarte statt zur vorhandenenSmartphone-Antwort; Dossier wiederholt denselbenFehler. Rendering ordnet über q.answers.indexOf(answer) zu und nicht über den gemischtenBildschirmindex. Keine belegte Renderingursache. Kein vorhandenes aktives Generierungsskript für den falschenText gefunden.",
+    "internet": {
+      "before": "Elektrisches Licht löst ein Beleuchtungsproblem. Das Internet soll dagegen Informationen zwischen Netzen austauschen.",
+      "after": "Das beschreibt Aufgaben eines Smartphones. Es kann dafür Internetdienste nutzen. Die Frage zielt auf das Verbinden von Computernetzen, nicht auf die Kombination von Funktionen in einem einzelnen Gerät.",
+      "source": {
+        "url": "https://www.internetsociety.org/internet/history-internet/brief-history-internet/",
+        "anchor": "131–134: sharing/applications/general infrastructure;137–138network interoperability;152TCP/IP1983;231portabledevices",
+        "checkedOn": "2026-10-18"
+      },
+      "criticalReread": "Smartphones können Internetdienste nutzen: deshalb nicht behaupten, mobileKommunikation sei vomInternet unabhängig. Aufgabe trennt Infrastruktur von einem Gerät; Raketenantwort weiter alsTransportziel erklärt."
+    },
+    "relatedFamily": "Die anderen23Erfindungskarten einschließlich beiderFalschgründe geprüft; kein weiterer eindeutigerVertauschungsfehler in dieserMini-Fragenfamilie gefunden. Das ist keineFaktenabnahme allerDatums-/Artikel-/Modellinhalte.",
+    "einstein": {
+      "before": "Ein Gedankenexperiment bedeutet: Du stellst dir eine Situation genau vor und überlegst, was daraus folgt.",
+      "after": "Einstein untersuchte, wie Raum und Zeit zusammenhängen und welche Rolle Licht dabei spielt. Seine Relativitätstheorien gehören zu diesen Arbeiten.",
+      "source": {
+        "url": "https://www.einstein-online.info/en/category/elementary/special-relativity-elementary/",
+        "anchor": "32space/time/motion,43–50space/time/light;actualfullpageread",
+        "checkedOn": "2026-10-18"
+      },
+      "sourceAccessLimit": "Nobel-canonicalpage returns403; not claimed freshlyread. Existinglinks retained; accessible AEIsource added.",
+      "criticalReread": "NeueBegründung beantwortet Licht/Raum/Zeit direkt. Gedankenexperiment bleibt als separate passendeMethodenerklärung imArtikel erhalten. Andere17Personen-Grundfragen gelesen; vollständigeAltartikel-/Distraktorqualität bleibt gesondert offen."
+    },
+    "questionCorrections": [
+      "invention-light:mini",
+      "invention-car:mini",
+      "invention-railway:mini",
+      "invention-airplane:mini",
+      "invention-phone:mini",
+      "invention-computer:mini",
+      "invention-internet:mini",
+      "invention-compass:mini",
+      "invention-printing:mini",
+      "invention-rocket:mini",
+      "invention-satellite:mini",
+      "invention-smartphone:mini"
+    ],
+    "technicalEvidence": "NeuegezielteBrowser-/Save-/Offline-/EngineprüfungundabschließendePflichtprüfungennoch offen."
   }
 }

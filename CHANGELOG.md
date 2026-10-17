@@ -1,3 +1,9 @@
+## 2026-10-18 · Inhaltskorrekturen im bestehenden Master vorbereitet
+
+Internet-Rückmeldung der konkreten Smartphone-Antwort zugeordnet; Einstein-Erklärung auf Licht/Raum/Zeit bezogen. Zwölf Erfindungsfragen,26 individuelle Geschichtsvertiefungen und18 unmittelbare Richtigerklärungen redigiert. Historische Originalbanken mit31 engen dokumentierten Ausnahmen und unveränderten IDs/Antworten/Lösungen geschützt; aktuelle gemischte Auswahl/Altpass/Offline-Proben ergänzt.
+
+Bestehende Tierwelle samt Altwerkstätten fachlich und pädagogisch nachgearbeitet: falsche Hinweise, Belegzuordnungen und Blauwal-Bestätigung korrigiert; konkrete Quellen-/Mess-/Schutz-/Mediengrenzen präzisiert. Vorhandene Geschichtsvollroutine in Chromium-Abnahme eingebunden; Fokusprüfung nutzt echteTab-Bedienung, sensible Einführung bleibt freiwillig. Neuer Originalnachtrag bytegleich archiviert und tatsächliche Lücken in vier vorhandenen Regeldokumenten ergänzt. Vollständige aktuelle Abnahme/Bereitstellung noch offen; PR27Draft und Paket3.5 in Arbeit.
+
 ## 18. Oktober2026 · Labor-Rückmeldungen auf der Testwebsite
 
 Die elf bestehenden Labore erklären alle66falschenAntwortmöglichkeiten individuell. PR38 ist nach vollständigerQuality samt tatsächlichemFirefox/WebKit übernommen und unter unverändertemTestzugang mit Buildab9a25f99ae5aaaf nachgeprüft. Fragen, Modelle und gespeicherteLernstände bleiben erhalten. Der größereMaster mit neuenGeschichtsartikeln, Altredaktion und Design bleibt inArbeit; neue Inhalte dadurch nicht pauschal veröffentlicht.

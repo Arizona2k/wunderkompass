@@ -72,9 +72,9 @@
       },
       "limits": "Kein Stromschlag- oder unbegrenztes Fernortungsmodell; kein sicherer Hinweis zum Anfassen.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Das Schnabeltier legt Eier. Nach dem Schlüpfen versorgt die Mutter ihre Jungen mit Milch. Es gehört zu den Säugetieren.",
@@ -118,10 +118,20 @@
             "https://animals.sandiegozoo.org/animals/platypus"
           ],
           "anchor": "SIZE; HABITAT AND DIET"
+        },
+        {
+          "statement": "Gewässer sauber halten. Weggeworfene Angelschnüre und Krebsfallen können Schnabeltiere gefährden.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/platypus",
+            "https://australian.museum/learn/animals/mammals/platypus/",
+            "https://www.environment.nsw.gov.au/topics/animals-and-plants/native-animals/native-animal-facts/land-mammals/platypus"
+          ],
+          "anchor": "ABOUT46–56, HABITAT57–68, FAMILY82–84, SIZE97–101; 64–71,83–104,114–118,139–149; no adult handling advice reused; 118–119,126–132, especially discarded fishing line/yabby traps",
+          "scope": "Individually source-backed correction; no own global conservation assessment."
         }
       ],
-      "articleSHA256": "da59c0cc3f57508227850f126efbfb820bb736ef09a4f46e025b9d72555faa70",
-      "runtimeTeachingContentSHA256": "436fd486674113c0df1a777b062d4f73a601d22a23974cea7d41d1b9d605a17c",
+      "articleSHA256": "a8343374f1564bf8261a19bbb6cde992966b11bc0581666907b4d10ececd3ed4",
+      "runtimeTeachingContentSHA256": "a06cb930538e155f5990aaf11ee357cfa2ae053281cb67627f8fb6b17983def2",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -131,9 +141,63 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-platypus",
+          "sourceReads": [
+            {
+              "url": "https://animals.sandiegozoo.org/animals/platypus",
+              "anchors": "ABOUT46–56, HABITAT57–68, FAMILY82–84, SIZE97–101"
+            },
+            {
+              "url": "https://australian.museum/learn/animals/mammals/platypus/",
+              "anchors": "64–71,83–104,114–118,139–149; no adult handling advice reused"
+            },
+            {
+              "url": "https://www.environment.nsw.gov.au/topics/animals-and-plants/native-animals/native-animal-facts/land-mammals/platypus",
+              "anchors": "118–119,126–132, especially discarded fishing line/yabby traps"
+            }
+          ],
+          "findings": "Eggs/milk/mammal, bill receptors and nearby aquatic prey, freshwater/example southeastAustralia and37–63cm combined male/female range supported. Avoid undated global IUCN claim: AM itself dates assessment2014. Protection claim lacks its own actual current citation.",
+          "proposedCorrection": "Add actually read NSW protection source; use precise discarded fishing line/crayfish traps rather than unsupported specific net wording. Do not change stable question/answer/order/storage IDs.",
+          "pedagogyCountercheck": "Eggs and milk are distinct processes; single trait does not establish bird classification. Individual wrong reasons correctly address both misconceptions; no need to duplicate established work.",
+          "remaining": "Actual current diagram/learning-task review and complete target integration proof; related old kangaroo source only read in code, not freshly verified.",
+          "actualTeachingFinding": "Actual inquiry has swapped evidence labels: Schnabel und Sinne labels the eggs/milk paragraph, Fortpflanzung labels the receptor paragraph. Swap the two labels after frozen checks finish; do not change choices, answers or save IDs."
         }
       },
-      "previousTeachingContentSHA256": "cacbd006315625a6d2d4f2e77e30bbc36f4538514b4a323f77c48c97c8427bdb"
+      "previousTeachingContentSHA256": "cacbd006315625a6d2d4f2e77e30bbc36f4538514b4a323f77c48c97c8427bdb",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "da59c0cc3f57508227850f126efbfb820bb736ef09a4f46e025b9d72555faa70",
+      "preCountercheckTeachingContentSHA256": "436fd486674113c0df1a777b062d4f73a601d22a23974cea7d41d1b9d605a17c",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Das Schnabeltier legt Eier. Nach dem Schlüpfen versorgt die Mutter ihre Jungen mit Milch. Es gehört zu den Säugetieren.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/platypus"
+          ],
+          "anchor": "SIZE; HABITAT AND DIET"
+        },
+        {
+          "statement": "Im weichen Schnabel sitzen Sinnesrezeptoren. Sie helfen ihm, unter Wasser Beutetiere in seiner Nähe zu finden.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/platypus"
+          ],
+          "anchor": "SIZE; HABITAT AND DIET"
+        },
+        {
+          "statement": "Etwa 37–63 cm; die Quellenbereiche unterscheiden Weibchen und Männchen.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/platypus"
+          ],
+          "anchor": "SIZE; HABITAT AND DIET"
+        }
+      ]
     },
     {
       "id": "animal-short-beaked-echidna",
@@ -201,9 +265,9 @@
       },
       "limits": "Museumseite artbezogen; gruppenweite Gefährdung aller Ameisenigel nicht übertragen; individuelle Fotos nicht pauschal freigegeben.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Der Kurzschnabeligel hat Stacheln, eine lange Schnauze und kräftige Grabkrallen. Er ist ein eierlegendes Säugetier.",
@@ -249,8 +313,8 @@
           "anchor": "Size Range; Feeding and diet"
         }
       ],
-      "articleSHA256": "f6dbbe0dda089fb5f4f2f5cf382595d5f81dd248a76234ca29db975869a37fd7",
-      "runtimeTeachingContentSHA256": "e3dbed9a5bce8ec50226f7c4bafa4163264e72f730bc7668fd813ddc87967059",
+      "articleSHA256": "2cc2f7045ae2a84a422267e4d854c61d5753e730ac73a119dfd89996a42c69fd",
+      "runtimeTeachingContentSHA256": "b6f87b44b0fc298e9b3b246d7b795e271273113798a6ad8fc80a1bab6722c76a",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -260,9 +324,54 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-short-beaked-echidna",
+          "sourceReads": [
+            {
+              "url": "https://australian.museum/learn/animals/mammals/short-beaked-echidna/",
+              "anchors": "size58–59, identification65–70, habitat79–87, feeding94–96, reproduction115–118"
+            }
+          ],
+          "findings": "Tachyglossusaculeatus, spines/snout/claws, egg-laying mammal, ant/termite tongue,40–55cm and exampleAustralia supported. No risk category of long-beaked species transferred; no image/media copied.",
+          "pedagogyCountercheck": "Opening prey nest and taking food are distinct actions. Hint does not simply name correct answer. Surface similarity/name not proof of hedgehog relationship.",
+          "remaining": "Actual current diagram/learning tasks and full target integration proof.",
+          "actualTeachingFinding": "Actual observation/reason/transfer inspected, labels Graben / Nahrung aufnehmen match their respective paragraphs; original question/correct positions retained."
         }
       },
-      "previousTeachingContentSHA256": "e80ea80a0f3a8f6e5a4bc044b4658a4f99faac75d351962cb340903477aa43d1"
+      "previousTeachingContentSHA256": "e80ea80a0f3a8f6e5a4bc044b4658a4f99faac75d351962cb340903477aa43d1",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "f6dbbe0dda089fb5f4f2f5cf382595d5f81dd248a76234ca29db975869a37fd7",
+      "preCountercheckTeachingContentSHA256": "e3dbed9a5bce8ec50226f7c4bafa4163264e72f730bc7668fd813ddc87967059",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Der Kurzschnabeligel hat Stacheln, eine lange Schnauze und kräftige Grabkrallen. Er ist ein eierlegendes Säugetier.",
+          "sourceUrls": [
+            "https://australian.museum/learn/animals/mammals/short-beaked-echidna/"
+          ],
+          "anchor": "Size Range; Feeding and diet"
+        },
+        {
+          "statement": "Mit der klebrigen Zunge nimmt er Ameisen und Termiten auf. Die Krallen helfen, ihre Verstecke zu öffnen.",
+          "sourceUrls": [
+            "https://australian.museum/learn/animals/mammals/short-beaked-echidna/"
+          ],
+          "anchor": "Size Range; Feeding and diet"
+        },
+        {
+          "statement": "Etwa 40–55 cm.",
+          "sourceUrls": [
+            "https://australian.museum/learn/animals/mammals/short-beaked-echidna/"
+          ],
+          "anchor": "Size Range; Feeding and diet"
+        }
+      ]
     },
     {
       "id": "animal-okapi",
@@ -330,9 +439,9 @@
       },
       "limits": "Mögliche Funktionen der Streifen nicht als eindeutig experimentell bewiesen darstellen.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Das Okapi lebt in Wäldern der Demokratischen Republik Kongo. Mit seiner langen Zunge greift es Blätter.",
@@ -378,8 +487,8 @@
           "anchor": "SIZE; ABOUT; CONSERVATION"
         }
       ],
-      "articleSHA256": "85e4122f632c5ff32bfadc184d78c06c6a4d1557267e485c3a8fd7d7b9b940de",
-      "runtimeTeachingContentSHA256": "65005cee2212dffb922859d6b025de83ef59e93af4f9aa1efd9e989d38c85535",
+      "articleSHA256": "f67662ec65b7de647c1bc011106788b3b5690f59b5fb65d8f0177e635e0b61f1",
+      "runtimeTeachingContentSHA256": "9cf2c52929c5a10ec60237f9bdf4609c7b5666a05201b833e7c7fffe5807178e",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -389,9 +498,54 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-okapi",
+          "sourceReads": [
+            {
+              "url": "https://animals.sandiegozoo.org/animals/okapi",
+              "anchors": "ABOUT43–48, habitat49–54, conservation64–66, height80–84"
+            }
+          ],
+          "findings": "Okapiajohnstoni in DR Congo rainforest, prehensile tongue, giraffe relationship, striped legs, habitat loss/poaching and approximate1.5m HEIGHT supported. Do not call this body length or adopt undated population decline percent.",
+          "pedagogyCountercheck": "Stripes alone do not establish zebra relationship; correct answer and both explanations match source. Camouflage hypotheses not promoted to certainty.",
+          "remaining": "Current diagram/tasks and full target proof; old giraffe relevant context read in code, taxonomy source not yet freshly opened.",
+          "actualTeachingFinding": "Actual inquiry has crossed labels: Gestreifte Beine labels location/tongue paragraph, Greifzunge labels stripes/relationship paragraph. Replace labels with matching tongue/habitat and stripes/relationship meanings after frozen checks finish."
         }
       },
-      "previousTeachingContentSHA256": "0ad68bca5a5a76cdeeb57a595da2913dd2ca96f300e598394cb007ca21f1856d"
+      "previousTeachingContentSHA256": "0ad68bca5a5a76cdeeb57a595da2913dd2ca96f300e598394cb007ca21f1856d",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "85e4122f632c5ff32bfadc184d78c06c6a4d1557267e485c3a8fd7d7b9b940de",
+      "preCountercheckTeachingContentSHA256": "65005cee2212dffb922859d6b025de83ef59e93af4f9aa1efd9e989d38c85535",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Das Okapi lebt in Wäldern der Demokratischen Republik Kongo. Mit seiner langen Zunge greift es Blätter.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/okapi"
+          ],
+          "anchor": "SIZE; ABOUT; CONSERVATION"
+        },
+        {
+          "statement": "Seine Beine tragen helle Streifen. Trotzdem ist es mit der Giraffe verwandt und kein Zebra.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/okapi"
+          ],
+          "anchor": "SIZE; ABOUT; CONSERVATION"
+        },
+        {
+          "statement": "Ungefähr 1,5 m hoch; das ist eine Höhenangabe, keine Körperlänge.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/okapi"
+          ],
+          "anchor": "SIZE; ABOUT; CONSERVATION"
+        }
+      ]
     },
     {
       "id": "animal-meerkat",
@@ -459,9 +613,9 @@
       },
       "limits": "Keine menschlichen Dienstpläne, Absichten oder Sprache in das Verhalten hineinlesen.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Erdmännchen gehören zu den Mangusten, nicht zu den Katzen. Sie leben in Gruppen und suchen unter anderem nach kleinen wirbellosen Tieren.",
@@ -507,8 +661,8 @@
           "anchor": "SIZE; ABOUT; HABITAT AND DIET"
         }
       ],
-      "articleSHA256": "996a2a3dac5d0abf533ae7cf2907fa6293b4cace5f9e95223ebfe3c210d4b26a",
-      "runtimeTeachingContentSHA256": "83b1340c9c0b9903cf4dfd2c84709d7c7655b2f780e5335e99ac478a4764a1a9",
+      "articleSHA256": "e29a5b9acd94ee7d996ea28615f5e5592a4514eaa09bcd4a99211bc20e59ad05",
+      "runtimeTeachingContentSHA256": "70d084a749129d570160f475eee824d6d22b48318338db4d03b609ed096f92c1",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -518,9 +672,54 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-meerkat",
+          "sourceReads": [
+            {
+              "url": "https://animals.sandiegozoo.org/animals/meerkat",
+              "anchors": "taxonomy38–40, ABOUT46–56, Kalahari/diet63–69, conservation80–82, SIZE102–106"
+            }
+          ],
+          "findings": "Suricatasuricatta/mongoose, group foraging/guard/alarm, Kalahari example, mainly small prey,24–29cm source length and no-pet guidance supported. No unneeded immunity/snake-handling or fixed group-size claims imported.",
+          "pedagogyCountercheck": "Different simultaneous activities demonstrate group behavior; a single visible individual does not prove solitary species. Do not imply bee and mammal social systems are identical.",
+          "remaining": "Current diagram/tasks and target proof; old honeybee relevant context read only in code, full old fact review not claimed.",
+          "actualTeachingFinding": "Actual observation/reason/transfer inspected: roles/source limitations correctly represented; evidence labels match paragraphs."
         }
       },
-      "previousTeachingContentSHA256": "a3501f0a7305a2f99b68d292a523abd8bcbf5c904a82ae4427103e09a5f0c319"
+      "previousTeachingContentSHA256": "a3501f0a7305a2f99b68d292a523abd8bcbf5c904a82ae4427103e09a5f0c319",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "996a2a3dac5d0abf533ae7cf2907fa6293b4cace5f9e95223ebfe3c210d4b26a",
+      "preCountercheckTeachingContentSHA256": "83b1340c9c0b9903cf4dfd2c84709d7c7655b2f780e5335e99ac478a4764a1a9",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Erdmännchen gehören zu den Mangusten, nicht zu den Katzen. Sie leben in Gruppen und suchen unter anderem nach kleinen wirbellosen Tieren.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/meerkat"
+          ],
+          "anchor": "SIZE; ABOUT; HABITAT AND DIET"
+        },
+        {
+          "statement": "Während einige nach Nahrung suchen, halten andere Ausschau. Warnrufe können die Gruppe auf Gefahren aufmerksam machen.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/meerkat"
+          ],
+          "anchor": "SIZE; ABOUT; HABITAT AND DIET"
+        },
+        {
+          "statement": "Etwa 24–29 cm; die Angabe beschreibt nicht die Höhe beim Aufrichten.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/meerkat"
+          ],
+          "anchor": "SIZE; ABOUT; HABITAT AND DIET"
+        }
+      ]
     },
     {
       "id": "animal-ring-tailed-lemur",
@@ -588,9 +787,9 @@
       },
       "limits": "Keine feste Schwanzbandzahl als Fotoaufgabe; Maßrichtung und aktuelle Schutzangaben vor Integration extra prüfen.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Kattas leben auf Madagaskar. Aufgerichtete Schwänze können der Gruppe beim Zusammenbleiben helfen.",
@@ -634,10 +833,18 @@
             "https://www.nationalzoo.si.edu/animals/ring-tailed-lemur"
           ],
           "anchor": "Size; Communication; Native Habitat"
+        },
+        {
+          "statement": "Früchte, Blätter und auch Insekten.",
+          "sourceUrls": [
+            "https://www.nationalzoo.si.edu/animals/ring-tailed-lemur"
+          ],
+          "anchor": "31–40 tail61cm/nativeMadagascar;47–60 olfactory/visual/vocal;64 diet;82 habitat/trade threats",
+          "scope": "Individually source-backed correction; no own global conservation assessment."
         }
       ],
-      "articleSHA256": "be06365733e4d43916124f4305f71883db5e436d149372932f81807f9b4d3bf2",
-      "runtimeTeachingContentSHA256": "374df14d8310d4def983600f11ab576ff70220ca4d73d28d118b3ded32d03e59",
+      "articleSHA256": "a60ade6188ef742167a6a7d1063f8d9c26cd438541a1dd680e46c1800c23989e",
+      "runtimeTeachingContentSHA256": "99042138b545c44d44f9d05ac1439abe4c4164c2b277fcc0208b50bb8e036d6e",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -647,9 +854,54 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-ring-tailed-lemur",
+          "sourceReads": [
+            {
+              "url": "https://www.nationalzoo.si.edu/animals/ring-tailed-lemur",
+              "anchors": "31–40 tail61cm/nativeMadagascar;47–60 olfactory/visual/vocal;64 diet;82 habitat/trade threats"
+            }
+          ],
+          "findings": "Source supports Lemurcatta/Madagascar/visual tail vs scent/calls and61cm tail upper bound; do not reuse fixed13-ring count or old80% habitat-loss statistic. Diet field currently lists only fruits/plant parts although source explicitly includes insects and small vertebrates.",
+          "proposedCorrection": "Clarify food as fruit/leaves and also insects rather than suggesting an exclusively plant diet.",
+          "pedagogyCountercheck": "Actual evidence labels and individual wrong feedback inspected: visible, smelled and heard signals separated; no audible signal does not prove no communication. Hint without light is nonexclusive but explicitly asks to compare sensory channels.",
+          "remaining": "Actual diagram and complete current target evidence."
         }
       },
-      "previousTeachingContentSHA256": "c24bf49f2a045042937b9d101a1fff85ded8919ac32c0ad7674610de39a1e9d2"
+      "previousTeachingContentSHA256": "c24bf49f2a045042937b9d101a1fff85ded8919ac32c0ad7674610de39a1e9d2",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "be06365733e4d43916124f4305f71883db5e436d149372932f81807f9b4d3bf2",
+      "preCountercheckTeachingContentSHA256": "374df14d8310d4def983600f11ab576ff70220ca4d73d28d118b3ded32d03e59",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Kattas leben auf Madagaskar. Aufgerichtete Schwänze können der Gruppe beim Zusammenbleiben helfen.",
+          "sourceUrls": [
+            "https://www.nationalzoo.si.edu/animals/ring-tailed-lemur"
+          ],
+          "anchor": "Size; Communication; Native Habitat"
+        },
+        {
+          "statement": "Duftmarken und Rufe sind weitere Wege ihrer Verständigung. Nicht jede Mitteilung ist sichtbar.",
+          "sourceUrls": [
+            "https://www.nationalzoo.si.edu/animals/ring-tailed-lemur"
+          ],
+          "anchor": "Size; Communication; Native Habitat"
+        },
+        {
+          "statement": "Der Schwanz kann bis etwa 61 cm lang werden.",
+          "sourceUrls": [
+            "https://www.nationalzoo.si.edu/animals/ring-tailed-lemur"
+          ],
+          "anchor": "Size; Communication; Native Habitat"
+        }
+      ]
     },
     {
       "id": "animal-north-american-beaver",
@@ -717,9 +969,9 @@
       },
       "limits": "Diese Karte behandelt Castor canadensis, nicht Castor fiber; Schwanz nicht als Maurerkelle darstellen.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Ein Biberdamm bremst Wasser. Dahinter kann ein Teich entstehen, den auch andere Lebewesen nutzen.",
@@ -765,8 +1017,8 @@
           "anchor": "Size; Native Habitat; Food/Eating Habits"
         }
       ],
-      "articleSHA256": "6b9104839e4f66b76fa32628daac0b6cdac6545006df3b99735fe0ebec837557",
-      "runtimeTeachingContentSHA256": "260547df753cc4f7ba4bd6edc150be1185f636d9fb7ee05a67f31d0f28a9d862",
+      "articleSHA256": "be546e3e74f54bef85ad148eac9ddc781fd4fe2a92937374360756ba96cb00b2",
+      "runtimeTeachingContentSHA256": "bfbbb737d1c594b7ca9d7b9c68791c3a36be5665fe4e029fb8f48301499aceb5",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -776,9 +1028,53 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-north-american-beaver",
+          "sourceReads": [
+            {
+              "url": "https://www.nationalzoo.si.edu/animals/beaver",
+              "anchors": "physical32–40,weight43,dam48/lodge49,herbivory62,local adverse flooding85–86"
+            }
+          ],
+          "findings": "NorthAmerican species scope,16–30kg typical source range separate50kg record, plant diet, dam/lodge distinction and variable local effects supported. Do not recast as Eurasian beaver or claim every family builds every structure.",
+          "pedagogyCountercheck": "Actual evidence labels water slowing/housing match their passages; causal chain and multiple stakeholders appropriate. Stable choices and correct positions unchanged.",
+          "remaining": "Actual current diagram and target integration proof."
         }
       },
-      "previousTeachingContentSHA256": "6be4ea991f5a26ff022d90d3e769f4d5ca282b1c68aee10a943fd1c679f7950a"
+      "previousTeachingContentSHA256": "6be4ea991f5a26ff022d90d3e769f4d5ca282b1c68aee10a943fd1c679f7950a",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "6b9104839e4f66b76fa32628daac0b6cdac6545006df3b99735fe0ebec837557",
+      "preCountercheckTeachingContentSHA256": "260547df753cc4f7ba4bd6edc150be1185f636d9fb7ee05a67f31d0f28a9d862",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Ein Biberdamm bremst Wasser. Dahinter kann ein Teich entstehen, den auch andere Lebewesen nutzen.",
+          "sourceUrls": [
+            "https://www.nationalzoo.si.edu/animals/beaver"
+          ],
+          "anchor": "Size; Native Habitat; Food/Eating Habits"
+        },
+        {
+          "statement": "Die Wohnburg ist ein anderes Bauwerk. Ihr Eingang kann unter Wasser liegen, während die Wohnkammer darüber liegt.",
+          "sourceUrls": [
+            "https://www.nationalzoo.si.edu/animals/beaver"
+          ],
+          "anchor": "Size; Native Habitat; Food/Eating Habits"
+        },
+        {
+          "statement": "Etwa 16–30 kg; ein deutlich höheres Einzelrekordgewicht ist kein typischer Bereich.",
+          "sourceUrls": [
+            "https://www.nationalzoo.si.edu/animals/beaver"
+          ],
+          "anchor": "Size; Native Habitat; Food/Eating Habits"
+        }
+      ]
     },
     {
       "id": "animal-walrus",
@@ -846,9 +1142,9 @@
       },
       "limits": "Nahrung, Körpermaße und Tastborsten noch aus einer zusätzlichen artspezifischen Quelle belegen; keine fertige Vollkarte behaupten.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Das Pazifische Walross wird als Unterart Odobenus rosmarus divergens geführt. Pazifische und Atlantische Walrosse werden hier nicht als zwei neue Arten gezählt.",
@@ -902,8 +1198,8 @@
           "anchor": "Physical Description / Field Identification; MMC Did You Know"
         }
       ],
-      "articleSHA256": "77f63b8941e5956d7c9b64e845e959e3af8f2f5448e79da772315fa5327c1515",
-      "runtimeTeachingContentSHA256": "67c90f5d3ef51a1ed3f264a92f0db6a150b8f2a97ac2c2794516aa816ca7bb0a",
+      "articleSHA256": "5cb6fa739576b1283a171254f86a78f028739e797675c4289efed065fe131b82",
+      "runtimeTeachingContentSHA256": "c31cb91e65c344b3bf4dc48c443f0f6cfea15a423eeeeffbff76eddd3a175752",
       "previousRuntimeGoal": "Art, Unterart und Schutzregel auseinanderhalten.",
       "previousObservationTask": {
         "kind": "observe-and-sort",
@@ -926,9 +1222,67 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-walrus",
+          "sourceReads": [
+            {
+              "url": "https://www.fws.gov/program/alaska-marine-mammals-management-office/alaska-walrus-program",
+              "anchors": "171–175,195–196: Pacific Alaska program and legalMMPA only"
+            },
+            {
+              "url": "https://seamap.env.duke.edu/species/180639/html",
+              "anchors": "taxonomy26–47,body54 male3.6m/female3m,habitat61–67,diet70; dated narrative about3subspecies not adopted"
+            },
+            {
+              "url": "https://www.mmc.gov/priority-topics/species-of-concern/pacific-walrus/",
+              "anchors": "86 whiskers/not-tusks,93 Pacific subspecies/seaice,114–123 changing haulouts; old population comparisons excluded"
+            }
+          ],
+          "findings": "SpeciesOdobenusrosmarus distinguished from Pacificsubspecies;3.6m upper male length, whisker prey sensing versus tusks, coastal/ice resting and Arctic range supported. LegalUS protection is not globalIUCN status. Do not adopt old taxonomic count3 in Duke narrative or outdated uncertain population sizes.",
+          "pedagogyCountercheck": "Actual evidence labels match facts; observation distinguishes bristles/tusks, reason feedback explains sense not spearing, transfer distinguishes legal territory/global assessment. Stable questions and answer positions retained.",
+          "remaining": "Actual current diagram and full target proof."
         }
       },
-      "previousTeachingContentSHA256": "a23d188646b3d11f057dcda17069efc36dfa4e6f254d4af47ba30945b8c858e8"
+      "previousTeachingContentSHA256": "a23d188646b3d11f057dcda17069efc36dfa4e6f254d4af47ba30945b8c858e8",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "77f63b8941e5956d7c9b64e845e959e3af8f2f5448e79da772315fa5327c1515",
+      "preCountercheckTeachingContentSHA256": "67c90f5d3ef51a1ed3f264a92f0db6a150b8f2a97ac2c2794516aa816ca7bb0a",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Walrosse haben empfindliche Tastborsten am Maul. Damit finden sie unter anderem kleine Beutetiere am Meeresboden; ihre Stoßzähne sind keine Gabeln zum Aufspießen der Nahrung.",
+          "sourceUrls": [
+            "https://www.fws.gov/program/alaska-marine-mammals-management-office/alaska-walrus-program",
+            "https://seamap.env.duke.edu/species/180639/html",
+            "https://www.mmc.gov/priority-topics/species-of-concern/pacific-walrus/"
+          ],
+          "anchor": "Physical Description / Field Identification; MMC Did You Know"
+        },
+        {
+          "statement": "Zum Ruhen nutzen Walrosse Küsten und Meereis. Pazifische Walrosse sind eine Unterart derselben Art. Ein Schutzprogramm für Alaska beschreibt nicht automatisch die ganze weltweite Gefährdung.",
+          "sourceUrls": [
+            "https://www.fws.gov/program/alaska-marine-mammals-management-office/alaska-walrus-program",
+            "https://seamap.env.duke.edu/species/180639/html",
+            "https://www.mmc.gov/priority-topics/species-of-concern/pacific-walrus/"
+          ],
+          "anchor": "Physical Description / Field Identification; MMC Did You Know"
+        },
+        {
+          "statement": "Große Männchen erreichen laut Artenprofil etwa 3,6 m; Weibchen bleiben kleiner.",
+          "sourceUrls": [
+            "https://www.fws.gov/program/alaska-marine-mammals-management-office/alaska-walrus-program",
+            "https://seamap.env.duke.edu/species/180639/html",
+            "https://www.mmc.gov/priority-topics/species-of-concern/pacific-walrus/"
+          ],
+          "anchor": "Physical Description / Field Identification; MMC Did You Know"
+        }
+      ]
     },
     {
       "id": "animal-red-fox",
@@ -996,9 +1350,9 @@
       },
       "limits": "ADW-Konto ist eine ältere Fachzusammenstellung; aktuelle Schutz- oder Verbreitungszahlen daraus nicht ungeprüft übernehmen.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Rotfüchse nutzen verschiedene Lebensräume. Dazu gehören Wälder, offene Landschaften und menschliche Siedlungen.",
@@ -1044,8 +1398,8 @@
           "anchor": "Physical Description; Geographic Range; Food Habits"
         }
       ],
-      "articleSHA256": "11b72defa98c1d5ecbc79c211608b3c68e483f91eccabd77095f2a502c450da1",
-      "runtimeTeachingContentSHA256": "0d62d12a962cd88caf5a7ed76254c1f7a359ad2c4e4762b956d7df675ad1ec81",
+      "articleSHA256": "534a747ba8ee69ad6585e205c9bcd6022c89096f64526f64360eeb40fa8da91b",
+      "runtimeTeachingContentSHA256": "1a2727d12ae967fed0544245acd6346b0b28aed8e606e8e012eaaab62d04d0ef",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -1055,9 +1409,53 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-red-fox",
+          "sourceReads": [
+            {
+              "url": "https://animaldiversity.org/accounts/Vulpes_vulpes/",
+              "anchors": "range42,habitat58,bodylength83/97,communication228–230,diet246"
+            }
+          ],
+          "findings": "Vulpesvulpes, multiple habitats including urban, vocal/scent communication,455–900mm head/body without tail=45.5–90cm and omnivory supported. No volatile population/status or disease inference from daytime sighting adopted.",
+          "pedagogyCountercheck": "Actual passage/evidence labels, all question choices/hints/wrong reasons, settlement-vs-pet and single-observation limits inspected and sound.",
+          "remaining": "Actual current diagram and full target proof."
         }
       },
-      "previousTeachingContentSHA256": "1068b1007354738f5ac8915a10a7c067392a580abda276b6f5e675136d6d1f33"
+      "previousTeachingContentSHA256": "1068b1007354738f5ac8915a10a7c067392a580abda276b6f5e675136d6d1f33",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "11b72defa98c1d5ecbc79c211608b3c68e483f91eccabd77095f2a502c450da1",
+      "preCountercheckTeachingContentSHA256": "0d62d12a962cd88caf5a7ed76254c1f7a359ad2c4e4762b956d7df675ad1ec81",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Rotfüchse nutzen verschiedene Lebensräume. Dazu gehören Wälder, offene Landschaften und menschliche Siedlungen.",
+          "sourceUrls": [
+            "https://animaldiversity.org/accounts/Vulpes_vulpes/"
+          ],
+          "anchor": "Physical Description; Geographic Range; Food Habits"
+        },
+        {
+          "statement": "Rufe und Duftmarken gehören zu ihrer Verständigung. Die sichtbare Fellfarbe allein beschreibt nicht ihr ganzes Verhalten.",
+          "sourceUrls": [
+            "https://animaldiversity.org/accounts/Vulpes_vulpes/"
+          ],
+          "anchor": "Physical Description; Geographic Range; Food Habits"
+        },
+        {
+          "statement": "Etwa 45,5–90 cm ohne den Schwanz; die Größen unterscheiden sich zwischen Regionen.",
+          "sourceUrls": [
+            "https://animaldiversity.org/accounts/Vulpes_vulpes/"
+          ],
+          "anchor": "Physical Description; Geographic Range; Food Habits"
+        }
+      ]
     },
     {
       "id": "animal-raccoon",
@@ -1111,8 +1509,9 @@
       "proposedConnections": [
         {
           "target": "animal-red-fox",
-          "reason": "Zwei anpassungsfähige Säugetiere verbinden Tastsinn und veränderte Lebensräume.",
-          "targetStage": "same-unpublished-manuscript-wave"
+          "reason": "Zwei anpassungsfähige Säugetiere nach Nahrungssuche und Lebensräumen in Siedlungen vergleichen; die empfindlichen Vorderpfoten beschreibt hier die Waschbärkarte.",
+          "targetStage": "same-unpublished-manuscript-wave",
+          "historicalReason": "Zwei anpassungsfähige Säugetiere verbinden Tastsinn und veränderte Lebensräume."
         }
       ],
       "media": {
@@ -1125,9 +1524,9 @@
       },
       "limits": "ADW nennt ältere Taxonomiebezeichnungen; heutige Artgrenzen und invasive Auswirkungen gesondert prüfen, keine Tiere füttern/anfassen lassen.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Waschbären besitzen empfindliche Vorderpfoten. Damit können sie Gegenstände ertasten und bearbeiten.",
@@ -1173,8 +1572,8 @@
           "anchor": "Physical Description; Geographic Range; Food Habits"
         }
       ],
-      "articleSHA256": "c3bb898d6f97a6917413a91c35f295f3dad276cc5ee6099afc95ffaed8def546",
-      "runtimeTeachingContentSHA256": "74547cedd83876ebeee6da6db8dcfdf73a59f26d4d30cd12887681c4967e6b88",
+      "articleSHA256": "88f0b21efb874e854ac9707f3cfe35ad7eb81e297d5c1802d63ef5238a8a968c",
+      "runtimeTeachingContentSHA256": "c3b9f1bf2afc9a025a07ad6f6fbce75b28e1975578fcae79fd8561249feb6380",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -1184,9 +1583,53 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-raccoon",
+          "sourceReads": [
+            {
+              "url": "https://animaldiversity.org/accounts/Procyon_lotor/",
+              "anchors": "range44,weight80/90,tactile214,diet227–228"
+            }
+          ],
+          "findings": "Procyonlotor and1.8–10.4kg variable region/weight, tactile forepaws, mixed diet and settlements/introduced range supported. Ignore confusing common header Guadeloupe raccoon; canonical species body is Procyonlotor. No disease/handling inference or universal original-range claim adopted.",
+          "pedagogyCountercheck": "Actual evidence labels match; touching versus seeing/smelling feedback specific; present occurrence versus historical origin appropriately separated.",
+          "remaining": "Actual current illustration and target proof."
         }
       },
-      "previousTeachingContentSHA256": "66eb1c64d618dafffa0b40e76e89d72c3c8d4cd58a2c78f00abeb80516aae0cf"
+      "previousTeachingContentSHA256": "66eb1c64d618dafffa0b40e76e89d72c3c8d4cd58a2c78f00abeb80516aae0cf",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "c3bb898d6f97a6917413a91c35f295f3dad276cc5ee6099afc95ffaed8def546",
+      "preCountercheckTeachingContentSHA256": "74547cedd83876ebeee6da6db8dcfdf73a59f26d4d30cd12887681c4967e6b88",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Waschbären besitzen empfindliche Vorderpfoten. Damit können sie Gegenstände ertasten und bearbeiten.",
+          "sourceUrls": [
+            "https://animaldiversity.org/accounts/Procyon_lotor/"
+          ],
+          "anchor": "Physical Description; Geographic Range; Food Habits"
+        },
+        {
+          "statement": "Sie nutzen Wälder und auch Siedlungsräume. Ein Fundort am Haus erklärt noch nicht, wo die Art ursprünglich heimisch war.",
+          "sourceUrls": [
+            "https://animaldiversity.org/accounts/Procyon_lotor/"
+          ],
+          "anchor": "Physical Description; Geographic Range; Food Habits"
+        },
+        {
+          "statement": "Je nach Region etwa 1,8–10,4 kg. Dies ist ein Gewicht, keine Körperlänge.",
+          "sourceUrls": [
+            "https://animaldiversity.org/accounts/Procyon_lotor/"
+          ],
+          "anchor": "Physical Description; Geographic Range; Food Habits"
+        }
+      ]
     },
     {
       "id": "animal-hedgehog",
@@ -1254,9 +1697,9 @@
       },
       "limits": "Britische Saison- und Schutzangaben nicht pauschal auf alle Regionen übertragen; keine Fütterungs- oder Anfassversuche.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Braunbrustigel sind vor allem nachts unterwegs. Sie fressen unter anderem Käfer und Regenwürmer.",
@@ -1271,7 +1714,7 @@
         "max": 30,
         "unit": "cm",
         "measurement_de": "Körperlänge der britischen Artenbeschreibung",
-        "text_de": "Etwa 15–30 cm; der kurze Schwanz ist zusätzlich angegeben.",
+        "text_de": "Etwa 15–30 cm Körperlänge; der kurze Schwanz kommt zusätzlich hinzu.",
         "kind": "range",
         "sourceUrls": [
           "https://www.wildlifetrusts.org/wildlife-explorer/mammals/european-hedgehog"
@@ -1295,15 +1738,16 @@
           "anchor": "Statistics; About; How people can help"
         },
         {
-          "statement": "Etwa 15–30 cm; der kurze Schwanz ist zusätzlich angegeben.",
+          "statement": "Etwa 15–30 cm Körperlänge; der kurze Schwanz kommt zusätzlich hinzu.",
           "sourceUrls": [
             "https://www.wildlifetrusts.org/wildlife-explorer/mammals/european-hedgehog"
           ],
-          "anchor": "Statistics; About; How people can help"
+          "anchor": "15,scientific19,size32–33,habitat50,diet51,hibernation52",
+          "historicalStatement": "Etwa 15–30 cm; der kurze Schwanz ist zusätzlich angegeben."
         }
       ],
-      "articleSHA256": "a13279fbf718556b6ba11243eaa4024ba956b5a45c38afd1d2f75d32ae05cf23",
-      "runtimeTeachingContentSHA256": "9da4a6305ff0210078f3a20635f1020419a65903bb2e319bfd82da74fd9050bd",
+      "articleSHA256": "e838432b1a85e21bc3fd1f20c9b7012c2eaeb071df457d7a88d6c519aaa83db1",
+      "runtimeTeachingContentSHA256": "5a79df4731922efc36050144e9e091436dbc9e97dfc53675fa8b289f93975b6b",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -1313,9 +1757,54 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-hedgehog",
+          "sourceReads": [
+            {
+              "url": "https://www.wildlifetrusts.org/wildlife-explorer/mammals/european-hedgehog",
+              "anchors": "15,scientific19,size32–33,habitat50,diet51,hibernation52"
+            }
+          ],
+          "findings": "Erinaceuseuropaeus, mainly nocturnal, beetles/worms/invertebrates, shelter and reduced winter metabolism supported;15–30cm length withtail separately1–2cm. No global status copied from British RedList.",
+          "proposedCorrection": "Current size copy says short tail is additionally stated although UI does not give its value; clarify head/body length without short tail or say tail comes in addition.",
+          "pedagogyCountercheck": "Evidence labels match; source-based shelter comparison and confounded-garden causal inference well separated; no forcing/waking wild animals.",
+          "remaining": "Actual current illustration and target proof."
         }
       },
-      "previousTeachingContentSHA256": "bef2eb33f76ec3819cd9738a3393846067e3d5084fdfbca1c018b37f06e99304"
+      "previousTeachingContentSHA256": "bef2eb33f76ec3819cd9738a3393846067e3d5084fdfbca1c018b37f06e99304",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "a13279fbf718556b6ba11243eaa4024ba956b5a45c38afd1d2f75d32ae05cf23",
+      "preCountercheckTeachingContentSHA256": "9da4a6305ff0210078f3a20635f1020419a65903bb2e319bfd82da74fd9050bd",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Braunbrustigel sind vor allem nachts unterwegs. Sie fressen unter anderem Käfer und Regenwürmer.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/wildlife-explorer/mammals/european-hedgehog"
+          ],
+          "anchor": "Statistics; About; How people can help"
+        },
+        {
+          "statement": "Hecken und Laub bieten geschützte Plätze. Im Winter können sie mit abgesenktem Stoffwechsel Energie sparen.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/wildlife-explorer/mammals/european-hedgehog"
+          ],
+          "anchor": "Statistics; About; How people can help"
+        },
+        {
+          "statement": "Etwa 15–30 cm; der kurze Schwanz ist zusätzlich angegeben.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/wildlife-explorer/mammals/european-hedgehog"
+          ],
+          "anchor": "Statistics; About; How people can help"
+        }
+      ]
     },
     {
       "id": "animal-barn-owl",
@@ -1369,8 +1858,9 @@
       "proposedConnections": [
         {
           "target": "animal-white-tailed-eagle",
-          "reason": "Zwei Greifvogelbeispiele unterscheiden; Jagdmethoden und Gehör erst nach Einzelbelegen vergleichen.",
-          "targetStage": "existing-runtime"
+          "reason": "Eine Eule und einen Adler als jagende Vögel aus unterschiedlichen Vogelgruppen vergleichen; Flügellänge und Spannweite unterscheiden.",
+          "targetStage": "existing-runtime",
+          "historicalReason": "Zwei Greifvogelbeispiele unterscheiden; Jagdmethoden und Gehör erst nach Einzelbelegen vergleichen."
         }
       ],
       "media": {
@@ -1383,9 +1873,9 @@
       },
       "limits": "BTO-Seite erreicht; konkrete Gehör-/Flug-/Nahrungs- und Größenclaims noch gezielt absichern. Kein leeres Artenprofil als fertig zählen.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Die Schleiereule ist eine eigene Vogelart. Ihr wissenschaftlicher Name lautet Tyto alba.",
@@ -1400,7 +1890,7 @@
         "max": 30.4,
         "unit": "cm",
         "measurement_de": "Flügellänge gemessener erwachsener Vögel bei BTO, nicht Spannweite",
-        "text_de": "Die angegebene Stichprobe umfasst Flügellängen von etwa 28–30,4 cm; das ist weder Körperlänge noch Spannweite.",
+        "text_de": "Die BTO-Stichprobe erwachsener Vögel umfasst etwa 28–30,4 cm Flügellänge; das ist weder Körperlänge noch Spannweite.",
         "kind": "range",
         "sourceUrls": [
           "https://www.bto.org/learn/about-birds/birdfacts/barn-owl"
@@ -1424,15 +1914,17 @@
           "anchor": "Biometrics / Wing length / All adults; Diet; Conservation Status"
         },
         {
-          "statement": "Die angegebene Stichprobe umfasst Flügellängen von etwa 28–30,4 cm; das ist weder Körperlänge noch Spannweite.",
+          "statement": "Die BTO-Stichprobe erwachsener Vögel umfasst etwa 28–30,4 cm Flügellänge; das ist weder Körperlänge noch Spannweite.",
           "sourceUrls": [
-            "https://www.bto.org/learn/about-birds/birdfacts/barn-owl"
+            "https://www.bto.org/learn/about-birds/birdfacts/barn-owl",
+            "https://www.rspb.org.uk/birds-and-wildlife/barn-owl"
           ],
-          "anchor": "Biometrics / Wing length / All adults; Diet; Conservation Status"
+          "anchor": "biometrics414–446, adult wing range280–304mm,N536; scientific490;smallmammals/grass cover544–545; 15–16 and26–32 actual heart-shaped face/dark eyes/pale underside;43 farm/grass habitat;UK legal/status scope not generalized",
+          "historicalStatement": "Die angegebene Stichprobe umfasst Flügellängen von etwa 28–30,4 cm; das ist weder Körperlänge noch Spannweite."
         }
       ],
-      "articleSHA256": "4cec2312c8616ac8e26e7f2a1dbc6820d0b259068742fabafe30d551afe93148",
-      "runtimeTeachingContentSHA256": "4ae18819196e6265c03fdb6c5027185ab1980191d8123dd97dba1ea3b9058531",
+      "articleSHA256": "32ea2c471fee742343bcb3a4b6b09b6ebf780329353ab87649b8076a56aab025",
+      "runtimeTeachingContentSHA256": "556abd5ef9232e7edf15245a2ba62615554833bf66fffb54c51b399aa6a343e4",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -1442,9 +1934,59 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-barn-owl",
+          "sourceReads": [
+            {
+              "url": "https://www.bto.org/learn/about-birds/birdfacts/barn-owl",
+              "anchors": "biometrics414–446, adult wing range280–304mm,N536; scientific490;smallmammals/grass cover544–545"
+            },
+            {
+              "url": "https://www.rspb.org.uk/birds-and-wildlife/barn-owl",
+              "anchors": "15–16 and26–32 actual heart-shaped face/dark eyes/pale underside;43 farm/grass habitat;UK legal/status scope not generalized"
+            }
+          ],
+          "findings": "Tytoalba UK scope, small-mammal feeding, grassy cover and28–30.4cm adult wing length supported. BTO juveniles span262–305mm; specify adult reference rather than implying universal full range. Body weights use percentiles but unused wing table uses ranges.",
+          "actualTeachingFinding": "Evidence labels crossed: Name und Merkmale labels feeding paragraph; Nahrungssuche labels facial appearance/identification. Relabel to match each actual paragraph.",
+          "proposedCorrection": "Name adult sample in size explanation; preserve original mini answer positions.",
+          "pedagogyCountercheck": "Actual individual feedback inspected. Taxon recall is only entry stage; additional/uncertain observational evidence in upper levels. Need check face description source separately, no false guaranteed photo identification.",
+          "remaining": "Actual illustration and current target proof."
         }
       },
-      "previousTeachingContentSHA256": "54285066d1e0e512f513f9bf540a0fe475ca224f9e2ae01a4a976770ea22a2d5"
+      "previousTeachingContentSHA256": "54285066d1e0e512f513f9bf540a0fe475ca224f9e2ae01a4a976770ea22a2d5",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "4cec2312c8616ac8e26e7f2a1dbc6820d0b259068742fabafe30d551afe93148",
+      "preCountercheckTeachingContentSHA256": "4ae18819196e6265c03fdb6c5027185ab1980191d8123dd97dba1ea3b9058531",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Die Schleiereule jagt vor allem kleine Säugetiere, etwa Mäuse und Wühlmäuse. Grasreiche Flächen können ihren Beutetieren Nahrung und Deckung bieten.",
+          "sourceUrls": [
+            "https://www.bto.org/learn/about-birds/birdfacts/barn-owl"
+          ],
+          "anchor": "Biometrics / Wing length / All adults; Diet; Conservation Status"
+        },
+        {
+          "statement": "Ihr heller Gesichtsschleier hilft beim Wiedererkennen. Für eine sichere Artbestimmung braucht es weitere passende Merkmale; ein einzelner unscharfer Fleck auf einem Nachtfoto reicht nicht.",
+          "sourceUrls": [
+            "https://www.bto.org/learn/about-birds/birdfacts/barn-owl"
+          ],
+          "anchor": "Biometrics / Wing length / All adults; Diet; Conservation Status"
+        },
+        {
+          "statement": "Die angegebene Stichprobe umfasst Flügellängen von etwa 28–30,4 cm; das ist weder Körperlänge noch Spannweite.",
+          "sourceUrls": [
+            "https://www.bto.org/learn/about-birds/birdfacts/barn-owl"
+          ],
+          "anchor": "Biometrics / Wing length / All adults; Diet; Conservation Status"
+        }
+      ]
     },
     {
       "id": "animal-kingfisher",
@@ -1491,7 +2033,7 @@
         "12-14": {
           "kind": "assess-evidence",
           "task": "Ein blauer Stoff und eine blaue Feder sehen ähnlich aus. Welche Untersuchung wäre nötig, um ihre Farbentstehung zu vergleichen?",
-          "hint": "Vergleiche Farbentstehung und Betrachtungsbedingungen statt nur einen Farbeindruck.",
+          "hint": "Ein Foto zeigt dir einen Farbeindruck. Welche Fragen über die Probe bleiben offen, wenn du nur dieses Bild hast?",
           "feedback": "Gleiche Wahrnehmung kann unterschiedliche physikalische Ursachen haben."
         }
       },
@@ -1512,9 +2054,9 @@
       },
       "limits": "UK-Grünliste nicht als globale Gefährdungsbewertung oder fehlenden Schutzbedarf ausgeben.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Eisvögel jagen an Gewässern nach Fischen. Häufig halten sie von einer Sitzwarte Ausschau.",
@@ -1564,8 +2106,8 @@
           "anchor": "Biometrics / Wing length / All adults; RSPB How to identify"
         }
       ],
-      "articleSHA256": "56b1c3f356794a15717af0e5b2aca2d3cdded4d7b49bfd531450e82a3424b9ce",
-      "runtimeTeachingContentSHA256": "f0df3a2686c5bc37ddcbbf9c2f7cdb2dae7fbaa2ac1c9a487bedb763bc233940",
+      "articleSHA256": "306d2b18ee5adc46c62816df33b2e98a91264c60c21914515e06fb9c5f9b8b6b",
+      "runtimeTeachingContentSHA256": "39eba201c4cb5e0cbffafda22ee73f4b9c31e9c7b0db7041076bde7a88a7e407",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -1575,9 +2117,68 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-kingfisher",
+          "sourceReads": [
+            {
+              "url": "https://www.bto.org/learn/about-birds/birdfacts/kingfisher",
+              "anchors": "432–464: wing range76–82mm juvenileN2526 and adultN607; scientific508"
+            },
+            {
+              "url": "https://www.rspb.org.uk/birds-and-wildlife/kingfisher",
+              "anchors": "17 fishing/perch/habitat;26 explicitly no blue pigment, microscopic light-scattering structures;43 slow/clear water"
+            }
+          ],
+          "findings": "Alcedo atthis and76–82mm wing range supported, not body length/span. RSPB actually read: blue appearance from tiny light-scattering structures, not blue pigment; fish/perch and clear slow water supported. UK Green not a global IUCN assessment.",
+          "actualTeachingFinding": "Transfer wrong-choice feedback explains different photo colors and no species change, whereas the wrong choice asserts same blue appearance proves same physical cause. Feedback addresses a different misconception; correct specifically after frozen tests finish.",
+          "pedagogyCountercheck": "Visible evidence labels match; fish/perch entry and pigment-vs-structure reasoning inspected and supported. Transfer wrong feedback still needs the specifically identified correction.",
+          "remaining": "Actual current illustration and full target proof."
         }
       },
-      "previousTeachingContentSHA256": "311464820c0953758d772fb8922121f024eabfb0702ac40f82b940126d3ba421"
+      "previousTeachingContentSHA256": "311464820c0953758d772fb8922121f024eabfb0702ac40f82b940126d3ba421",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "56b1c3f356794a15717af0e5b2aca2d3cdded4d7b49bfd531450e82a3424b9ce",
+      "preCountercheckTeachingContentSHA256": "f0df3a2686c5bc37ddcbbf9c2f7cdb2dae7fbaa2ac1c9a487bedb763bc233940",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Eisvögel jagen an Gewässern nach Fischen. Häufig halten sie von einer Sitzwarte Ausschau.",
+          "sourceUrls": [
+            "https://www.rspb.org.uk/birds-and-wildlife/kingfisher",
+            "https://www.bto.org/learn/about-birds/birdfacts/kingfisher"
+          ],
+          "anchor": "Biometrics / Wing length / All adults; RSPB How to identify"
+        },
+        {
+          "statement": "Das leuchtende Blau wird durch die feine Struktur der Federn erzeugt. Blau aussehen heißt nicht immer, einen blauen Farbstoff zu besitzen.",
+          "sourceUrls": [
+            "https://www.rspb.org.uk/birds-and-wildlife/kingfisher",
+            "https://www.bto.org/learn/about-birds/birdfacts/kingfisher"
+          ],
+          "anchor": "Biometrics / Wing length / All adults; RSPB How to identify"
+        },
+        {
+          "statement": "In der angegebenen Stichprobe etwa 76–82 mm Flügellänge; nicht die Länge des ganzen Vogels.",
+          "sourceUrls": [
+            "https://www.rspb.org.uk/birds-and-wildlife/kingfisher",
+            "https://www.bto.org/learn/about-birds/birdfacts/kingfisher"
+          ],
+          "anchor": "Biometrics / Wing length / All adults; RSPB How to identify"
+        }
+      ],
+      "postCreationHintCountercheck20261018": {
+        "stage": "transfer",
+        "before": "Vergleiche Farbentstehung und Betrachtungsbedingungen statt nur einen Farbeindruck.",
+        "after": "Ein Foto zeigt dir einen Farbeindruck. Welche Fragen über die Probe bleiben offen, wenn du nur dieses Bild hast?",
+        "finding": "Separate critical reread after correction: prior hint was relevant but too close to the choice wording; now asks for a comparison or missing information without copying the correct choice. Answers, solution and save identity unchanged.",
+        "remaining": "Current targeted UI/coldoffline proof and final full technical acceptance required."
+      }
     },
     {
       "id": "animal-ostrich",
@@ -1645,9 +2246,9 @@
       },
       "limits": "Somalistrauß nicht als bloße zweite neue Karte derselben Art zählen; fehlerhafte Höhenumrechnung auf der Quellseite nicht kopieren.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Strauße sind große laufende Vögel. Ihre Flügel können beim Halten des Gleichgewichts helfen.",
@@ -1693,8 +2294,8 @@
           "anchor": "SIZE; ABOUT; HABITAT AND DIET"
         }
       ],
-      "articleSHA256": "cfd8211bd23ae48fd4da2f2c534311560e79df0989347f080649c7f5f72644cf",
-      "runtimeTeachingContentSHA256": "8e91f2d0031017a091e710ad36061cd18a652ef0d42f0b9d0397531fe224c851",
+      "articleSHA256": "24712706e814b269614fdb9b21e357a66b7915822fa5ba4f38824ade8f7a0030",
+      "runtimeTeachingContentSHA256": "89e5ba2ecfb94b52d595379f5998a34555d9a33dc7288d3601326ff7a328f163",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -1704,9 +2305,54 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-ostrich",
+          "sourceReads": [
+            {
+              "url": "https://animals.sandiegozoo.org/animals/ostrich",
+              "anchors": "32 species;46–51 flightlessness, balance and display;57 diet;101 female90–110kg/male100–130kg"
+            }
+          ],
+          "findings": "Weight, running/wing balance in turns and omnivory supported. Do not copy erroneous male-height conversion21.m at99, dated four-subspecies scheme41, or broad undated conservation assurance80.",
+          "pedagogyCountercheck": "Evidence labels and both levels/individual feedback inspected; emperor penguin counterexample valid; no unsupported exclusive function or inference that flightlessness identifies species.",
+          "remaining": "Actual current illustration, relevant old-context verification and full target integration proof.",
+          "actualArticleCountercheck": "Current full runtime facts, habitat/diet/measurement/protection and mini-question/hint/each wrong reason additionally read after initial dossier/inquiry pass. No question/answer/position change proposed."
         }
       },
-      "previousTeachingContentSHA256": "892fb77492f9797ea8e2cd92e8a5df372faa38b7d08419ccf91b646d25337f8d"
+      "previousTeachingContentSHA256": "892fb77492f9797ea8e2cd92e8a5df372faa38b7d08419ccf91b646d25337f8d",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "cfd8211bd23ae48fd4da2f2c534311560e79df0989347f080649c7f5f72644cf",
+      "preCountercheckTeachingContentSHA256": "8e91f2d0031017a091e710ad36061cd18a652ef0d42f0b9d0397531fe224c851",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Strauße sind große laufende Vögel. Ihre Flügel können beim Halten des Gleichgewichts helfen.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/ostrich"
+          ],
+          "anchor": "SIZE; ABOUT; HABITAT AND DIET"
+        },
+        {
+          "statement": "Bei einem Richtungswechsel ist Balance wichtig. Ein Körperteil kann eine andere Aufgabe erfüllen als bei einem fliegenden Vogel.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/ostrich"
+          ],
+          "anchor": "SIZE; ABOUT; HABITAT AND DIET"
+        },
+        {
+          "statement": "Weibchen etwa 90–110 kg, Männchen etwa 100–130 kg.",
+          "sourceUrls": [
+            "https://animals.sandiegozoo.org/animals/ostrich"
+          ],
+          "anchor": "SIZE; ABOUT; HABITAT AND DIET"
+        }
+      ]
     },
     {
       "id": "animal-atlantic-puffin",
@@ -1774,9 +2420,9 @@
       },
       "limits": "Nordamerikanische Teilkarte nicht als Gesamtverbreitung ausgeben; Datumsbezug von Schutz-/Bestandszahlen noch prüfen.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Papageitaucher brüten an Küsten und auf Inseln im Nordatlantik. Sie nutzen unter anderem Erdhöhlen als Nistplätze.",
@@ -1822,8 +2468,8 @@
           "anchor": "Identification; Conservation; IUCN Status"
         }
       ],
-      "articleSHA256": "4d003f28830ba565fa7de6753a8c8986f3f24cc6ce58db4ebe9d6cbd7f72ba46",
-      "runtimeTeachingContentSHA256": "f21b32891860bae20fb6c5106f17f7365be6e927a23631762f0efa7eb34aaa93",
+      "articleSHA256": "e39854eca5783ff508b8226bb45d7d0090299485a352e73ab022d3d5ba0827f9",
+      "runtimeTeachingContentSHA256": "8c789f9e657b358f3a7851282a450b024599d9aa593f6d6195c23fe88f94df4a",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -1833,9 +2479,54 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-atlantic-puffin",
+          "sourceReads": [
+            {
+              "url": "https://www.audubon.org/field-guide/bird/atlantic-puffin",
+              "anchors": "51 North Atlantic/open-sea winter;81 regional scope;84 length25–33cm vs span47–63cm;113 burrows;143 feeding;152–153 threats"
+            }
+          ],
+          "findings": "Species, length, season-dependent distribution and underwater feeding supported. Summer bill/colour simplified in own picture explicitly limited; no image reuse/population number/status transfer.",
+          "pedagogyCountercheck": "Evidence labels correct; nesting versus feeding and seasonal observation limits progress reasonably; individual feedback addresses both wrong choices.",
+          "remaining": "Actual current illustration, relevant old-context verification and full target integration proof.",
+          "actualArticleCountercheck": "Current full runtime facts, habitat/diet/measurement/protection and mini-question/hint/each wrong reason additionally read after initial dossier/inquiry pass. No question/answer/position change proposed."
         }
       },
-      "previousTeachingContentSHA256": "128eddf2a026e58a7e1ec2db8d84cdc08f04d7e8a61d75709d0c4c1854e66889"
+      "previousTeachingContentSHA256": "128eddf2a026e58a7e1ec2db8d84cdc08f04d7e8a61d75709d0c4c1854e66889",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "4d003f28830ba565fa7de6753a8c8986f3f24cc6ce58db4ebe9d6cbd7f72ba46",
+      "preCountercheckTeachingContentSHA256": "f21b32891860bae20fb6c5106f17f7365be6e927a23631762f0efa7eb34aaa93",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Papageitaucher brüten an Küsten und auf Inseln im Nordatlantik. Sie nutzen unter anderem Erdhöhlen als Nistplätze.",
+          "sourceUrls": [
+            "https://www.audubon.org/field-guide/bird/atlantic-puffin"
+          ],
+          "anchor": "Identification; Conservation; IUCN Status"
+        },
+        {
+          "statement": "Nahrung suchen sie schwimmend unter Wasser. Außerhalb der Brutzeit verbringen sie viel Zeit weit draußen auf dem Meer.",
+          "sourceUrls": [
+            "https://www.audubon.org/field-guide/bird/atlantic-puffin"
+          ],
+          "anchor": "Identification; Conservation; IUCN Status"
+        },
+        {
+          "statement": "Etwa 25–33 cm; die Spannweite ist ein anderes Maß.",
+          "sourceUrls": [
+            "https://www.audubon.org/field-guide/bird/atlantic-puffin"
+          ],
+          "anchor": "Identification; Conservation; IUCN Status"
+        }
+      ]
     },
     {
       "id": "animal-common-chameleon",
@@ -1903,9 +2594,9 @@
       },
       "limits": "Kein lebendes Tier für Farbexperimente reizen; Messpunkt der Größenangabe und heutige Schutzdaten extra prüfen.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "previousConnectionProposal": [
         {
@@ -1958,8 +2649,8 @@
           "anchor": "Physical Description; Communication and Perception"
         }
       ],
-      "articleSHA256": "671dac3f4e7ac0903fa6f4a51cd7e77471df7df81c261abf645aa20bb69a9bf8",
-      "runtimeTeachingContentSHA256": "547050e5bfe811ae30c5d2e9451dd976ff7656e0d894633ac5393e47c0c2d811",
+      "articleSHA256": "43e81408e1e0d0d26c1eb45f6c5dd435c425285c559b6523e1ccc9f7415fa149",
+      "runtimeTeachingContentSHA256": "00cfee711526100e0b8273dbf160586d6f01bc0f20f1ef118ef2160e25d9a4c8",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -1969,9 +2660,54 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-common-chameleon",
+          "sourceReads": [
+            {
+              "url": "https://animaldiversity.org/accounts/Chamaeleo_chamaeleon/",
+              "anchors": "41–52 range/arboreal habitat;68–72 colour, grip, eyes and female21–56g;200–207 insect feeding actually read"
+            }
+          ],
+          "findings": "Species, gripping tail/feet and independent eyes supported; limited colour changes respond to conditions/state, not arbitrary background copying. Female weight deliberate rather than ambiguous length; do not conflate full species range with European common name.",
+          "pedagogyCountercheck": "Actual labels match; thought comparison separates confounded variables and explicitly prohibits animal manipulation; no guaranteed visual identification.",
+          "remaining": "Actual current illustration, relevant old-context verification and full target integration proof.",
+          "actualArticleCountercheck": "Current full runtime facts, habitat/diet/measurement/protection and mini-question/hint/each wrong reason additionally read after initial dossier/inquiry pass. No question/answer/position change proposed."
         }
       },
-      "previousTeachingContentSHA256": "40e8334e293fd97d98509e2d72e5af3b9e14d6713a8471b8e1a3698eaeaf1fd8"
+      "previousTeachingContentSHA256": "40e8334e293fd97d98509e2d72e5af3b9e14d6713a8471b8e1a3698eaeaf1fd8",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "671dac3f4e7ac0903fa6f4a51cd7e77471df7df81c261abf645aa20bb69a9bf8",
+      "preCountercheckTeachingContentSHA256": "547050e5bfe811ae30c5d2e9451dd976ff7656e0d894633ac5393e47c0c2d811",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Das Europäische Chamäleon greift mit Füßen und Schwanz an Zweigen. Seine Augen können sich unabhängig bewegen.",
+          "sourceUrls": [
+            "https://animaldiversity.org/accounts/Chamaeleo_chamaeleon/"
+          ],
+          "anchor": "Physical Description; Communication and Perception"
+        },
+        {
+          "statement": "Seine Färbung kann sich verändern. Temperatur und innerer Zustand spielen dabei eine Rolle; es kopiert nicht beliebige Hintergrundmuster.",
+          "sourceUrls": [
+            "https://animaldiversity.org/accounts/Chamaeleo_chamaeleon/"
+          ],
+          "anchor": "Physical Description; Communication and Perception"
+        },
+        {
+          "statement": "Erwachsene Weibchen wiegen nach dieser Artenbeschreibung etwa 21–56 g; dies ist keine Länge und keine Angabe für alle Geschlechter.",
+          "sourceUrls": [
+            "https://animaldiversity.org/accounts/Chamaeleo_chamaeleon/"
+          ],
+          "anchor": "Physical Description; Communication and Perception"
+        }
+      ]
     },
     {
       "id": "animal-fire-salamander",
@@ -2039,9 +2775,9 @@
       },
       "limits": "Fortpflanzung variiert regional/unterartlich; keine Verallgemeinerung aller Populationen. Tiere nicht umsetzen oder anfassen.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Feuersalamander leben in feuchten, strukturreichen Wäldern. Viele mitteleuropäische Weibchen setzen Larven in Gewässern ab.",
@@ -2091,8 +2827,8 @@
           "anchor": "Körperbau und Besonderheiten; Lebensraum; Fortpflanzung; Bedrohungen"
         }
       ],
-      "articleSHA256": "b10fabbdbfc92f45a6b04368c544632c1a067be42bf5c0d724704a1c3ff3787b",
-      "runtimeTeachingContentSHA256": "e8d277241673ae29793e307870bec972ffc4c30a311d9659dbad62a4598ae88b",
+      "articleSHA256": "1af7d2a3f9c860a45448aab98de7287ecf3aaf0b9a852e37a2ff3b637afedd3c",
+      "runtimeTeachingContentSHA256": "260df2bc83316b8270a2bcb46b4452aa68387aac68e3a56e2aeb32bb13b3fdd5",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -2102,9 +2838,61 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-fire-salamander",
+          "sourceReads": [
+            {
+              "url": "https://nabu-lfa-feldherpetologie.jimdoweb.com/tiergruppen/amphibien/feuersalamander/",
+              "anchors": "67 species;73–78 historical legal/date scope;96–101 woodland/larval waters, German regional life cycle"
+            },
+            {
+              "url": "https://www.nabu-euskirchen.de/2026/06/03/feuersalamander-ein-portrait/",
+              "anchors": "103 habitat;120 adult length;168–183 larvae/outer gills;legal assertion250 excluded after countercheck"
+            }
+          ],
+          "findings": "Regional larval deposition/forest and water needs supported; do not reuse historical Red List as current/global. Secondary NABU Euskirchen03June2026 actually read103 habitat,120 adult15–25cm,168–183 larvae/external gills. Secondary FFH claim250 conflicts with LFA dash76 and is excluded.",
+          "pedagogyCountercheck": "Labels match; different life stages/linked habitats and regional generalisation are appropriately distinct; no handling or movement instruction.",
+          "remaining": "Actual current illustration, relevant old-context verification and full target integration proof.",
+          "actualArticleCountercheck": "Current full runtime facts, habitat/diet/measurement/protection and mini-question/hint/each wrong reason additionally read after initial dossier/inquiry pass. No question/answer/position change proposed."
         }
       },
-      "previousTeachingContentSHA256": "b0dfcc229f936c693284ba177b91226ab9aa38aa6a2df435a9fb81d4a791a725"
+      "previousTeachingContentSHA256": "b0dfcc229f936c693284ba177b91226ab9aa38aa6a2df435a9fb81d4a791a725",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "b10fabbdbfc92f45a6b04368c544632c1a067be42bf5c0d724704a1c3ff3787b",
+      "preCountercheckTeachingContentSHA256": "e8d277241673ae29793e307870bec972ffc4c30a311d9659dbad62a4598ae88b",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Feuersalamander leben in feuchten, strukturreichen Wäldern. Viele mitteleuropäische Weibchen setzen Larven in Gewässern ab.",
+          "sourceUrls": [
+            "https://nabu-lfa-feldherpetologie.jimdoweb.com/tiergruppen/amphibien/feuersalamander/",
+            "https://www.nabu-euskirchen.de/2026/06/03/feuersalamander-ein-portrait/"
+          ],
+          "anchor": "Körperbau und Besonderheiten; Lebensraum; Fortpflanzung; Bedrohungen"
+        },
+        {
+          "statement": "Die Larven tragen äußere Kiemen. Die Bedingungen im Wald und im Larvengewässer sind deshalb beide wichtig.",
+          "sourceUrls": [
+            "https://nabu-lfa-feldherpetologie.jimdoweb.com/tiergruppen/amphibien/feuersalamander/",
+            "https://www.nabu-euskirchen.de/2026/06/03/feuersalamander-ein-portrait/"
+          ],
+          "anchor": "Körperbau und Besonderheiten; Lebensraum; Fortpflanzung; Bedrohungen"
+        },
+        {
+          "statement": "Die Artenbeschreibung nennt etwa 15–25 cm.",
+          "sourceUrls": [
+            "https://nabu-lfa-feldherpetologie.jimdoweb.com/tiergruppen/amphibien/feuersalamander/",
+            "https://www.nabu-euskirchen.de/2026/06/03/feuersalamander-ein-portrait/"
+          ],
+          "anchor": "Körperbau und Besonderheiten; Lebensraum; Fortpflanzung; Bedrohungen"
+        }
+      ]
     },
     {
       "id": "animal-common-frog",
@@ -2172,9 +2960,9 @@
       },
       "limits": "Britische Saisonzeiten und Schutzgesetze nicht als weltweit gültig darstellen; keine Entnahme von Laich.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Grasfrösche laichen in Gewässern. Aus dem Laich entwickeln sich Kaulquappen.",
@@ -2220,8 +3008,8 @@
           "anchor": "Statistics; About; How to identify"
         }
       ],
-      "articleSHA256": "9eb085854b51e551e5d4031d92eefd788a89d86878b616bb2fbe0bccaed87cd7",
-      "runtimeTeachingContentSHA256": "78f4317ed9570d9def7deaec8c35e42336c5693227a594ab0a0f3ebaa5e3d959",
+      "articleSHA256": "38d661537b84571c190d7d1469aa1a5361d2c02fee3ec61a7305599e8d1d050e",
+      "runtimeTeachingContentSHA256": "cfb562af02022c18f7e97e1798c8fec9acc4f1efe9c69d77467320906410c23b",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -2231,9 +3019,54 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-common-frog",
+          "sourceReads": [
+            {
+              "url": "https://www.wildlifetrusts.org/wildlife-explorer/amphibians/common-frog",
+              "anchors": "19 taxon;32 length8–13cm;49–53 spawn/tadpoles and land habitats;60 development"
+            }
+          ],
+          "findings": "British source supports species/life-stage habitat changes/size and invertebrate food. Do not universalize British season, legal protection, distribution or fixed developmental duration.",
+          "pedagogyCountercheck": "Actual evidence labels, prompts/hints/both feedback inspected; observed absence at one pond/time not absence from environment, no collecting spawn.",
+          "remaining": "Actual current illustration, relevant old-context verification and full target integration proof.",
+          "actualArticleCountercheck": "Current full runtime facts, habitat/diet/measurement/protection and mini-question/hint/each wrong reason additionally read after initial dossier/inquiry pass. No question/answer/position change proposed."
         }
       },
-      "previousTeachingContentSHA256": "742a297ea424ee0aaa6bf3df9be410e4908b9d006633c097a1097894b991278b"
+      "previousTeachingContentSHA256": "742a297ea424ee0aaa6bf3df9be410e4908b9d006633c097a1097894b991278b",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "9eb085854b51e551e5d4031d92eefd788a89d86878b616bb2fbe0bccaed87cd7",
+      "preCountercheckTeachingContentSHA256": "78f4317ed9570d9def7deaec8c35e42336c5693227a594ab0a0f3ebaa5e3d959",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Grasfrösche laichen in Gewässern. Aus dem Laich entwickeln sich Kaulquappen.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/wildlife-explorer/amphibians/common-frog"
+          ],
+          "anchor": "Statistics; About; How to identify"
+        },
+        {
+          "statement": "Erwachsene Tiere verbringen viel Zeit auch an Land, etwa in Gärten und Wäldern. Nicht jeder Frosch ist ständig im Wasser.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/wildlife-explorer/amphibians/common-frog"
+          ],
+          "anchor": "Statistics; About; How to identify"
+        },
+        {
+          "statement": "Die Artenbeschreibung nennt etwa 8–13 cm.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/wildlife-explorer/amphibians/common-frog"
+          ],
+          "anchor": "Statistics; About; How to identify"
+        }
+      ]
     },
     {
       "id": "animal-eastern-clown-anemonefish",
@@ -2301,16 +3134,16 @@
       },
       "limits": "Keine Nemo-Abbildung oder fremde Unterwasserfotos übernehmen; A.percula nicht mit A.ocellaris verwechseln.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Der Echte Clownfisch lebt zwischen den Tentakeln bestimmter Seeanemonen. Er nimmt unter anderem Algen und Zooplankton auf.",
         "Amphiprion percula und der ähnliche Amphiprion ocellaris sind verschiedene Arten. Nicht jedes orange-weiß gestreifte Tier darf automatisch gleich bestimmt werden."
       ],
       "runtimeArticleParagraphs": [
-        "Der Echte Clownfisch lebt zwischen den Tentakeln bestimmter Seeanemonen. Er nimmt unter anderem Algen und Zooplankton auf.",
+        "Der Echte Clownfisch lebt zwischen den Tentakeln bestimmter Seeanemonen. Seeanemonen sind ebenfalls Tiere, keine Pflanzen. Der Fisch nimmt unter anderem Algen und Zooplankton auf.",
         "Amphiprion percula und der ähnliche Amphiprion ocellaris sind verschiedene Arten. Nicht jedes orange-weiß gestreifte Tier darf automatisch gleich bestimmt werden."
       ],
       "runtimeMeasurement": {
@@ -2327,6 +3160,73 @@
         "review": "Individual listed source section read; no independent review."
       },
       "runtimeClaims": [
+        {
+          "statement": "Der Echte Clownfisch lebt zwischen den Tentakeln bestimmter Seeanemonen. Seeanemonen sind ebenfalls Tiere, keine Pflanzen. Der Fisch nimmt unter anderem Algen und Zooplankton auf.",
+          "sourceUrls": [
+            "https://australian.museum/learn/animals/fishes/eastern-clown-anemonefish-amphiprion-percula/",
+            "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/carpet-anemone"
+          ],
+          "anchor": "21 taxon;55–56 up to8cm;60,71 habitat;76–79 species-specific range and distinct ocellaris;88 diet; 337–347 Animaltype/Cnidaria/food,355–358 Heteractis group hosts/algal nutrition; no universal anemonefish species identity inferred",
+          "historicalStatement": "Der Echte Clownfisch lebt zwischen den Tentakeln bestimmter Seeanemonen. Er nimmt unter anderem Algen und Zooplankton auf."
+        },
+        {
+          "statement": "Amphiprion percula und der ähnliche Amphiprion ocellaris sind verschiedene Arten. Nicht jedes orange-weiß gestreifte Tier darf automatisch gleich bestimmt werden.",
+          "sourceUrls": [
+            "https://australian.museum/learn/animals/fishes/eastern-clown-anemonefish-amphiprion-percula/"
+          ],
+          "anchor": "Size Range; Habitat; Feeding and diet; Distribution"
+        },
+        {
+          "statement": "Die Museumsseite nennt eine Länge bis etwa 8 cm.",
+          "sourceUrls": [
+            "https://australian.museum/learn/animals/fishes/eastern-clown-anemonefish-amphiprion-percula/"
+          ],
+          "anchor": "Size Range; Habitat; Feeding and diet; Distribution"
+        }
+      ],
+      "articleSHA256": "93f187ff35993953d289e185b18351dbed9a584bdf7deb202ac255c32a3aa11f",
+      "runtimeTeachingContentSHA256": "7f975222f2dfd6ef39f0daffa0e5a7025db4081608fcb3b87f8f44a0b4b39ef8",
+      "selfReview": {
+        "implemented": true,
+        "structuralChromiumAtPriorF7": true,
+        "independent": false,
+        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
+        "didacticFollowup": {
+          "date": "2026-10-17",
+          "independent": false,
+          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-eastern-clown-anemonefish",
+          "sourceReads": [
+            {
+              "url": "https://australian.museum/learn/animals/fishes/eastern-clown-anemonefish-amphiprion-percula/",
+              "anchors": "21 taxon;55–56 up to8cm;60,71 habitat;76–79 species-specific range and distinct ocellaris;88 diet"
+            },
+            {
+              "url": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/carpet-anemone",
+              "anchors": "337–347 Animaltype/Cnidaria/food,355–358 Heteractis group hosts/algal nutrition; no universal anemonefish species identity inferred"
+            }
+          ],
+          "findings": "Percula/museum8cm upper bound, anemone association, algae/zooplankton and Queensland/Melanesia scope supported. Occurrence map not full-range census; no Nemo/photos reused. Site family metadata44 incorrectly repeats common name: not imported.",
+          "pedagogyCountercheck": "Evidence labels match actual paragraphs; exact-species-versus-group-label reasoning and individual wrong feedback sound. Upper stage repeats identification limitation with photographic context, useful but modest cognitive progression.",
+          "remaining": "Actual current illustration, relevant old-context verification and full target integration proof.",
+          "actualTeachingFinding": "Mini-question hint proposes food uptake and reactions as discriminators between anemone animal and flowering plant, but plants also take up nutrients and react; this criterion is misleading. Add explicit animal-group context supported by aquarium Cnidaria source and use a hint about classification versus flower-like shape. Preserve question/answers/correct position.",
+          "proposedCorrection": "First paragraph should explicitly explain sea anemone is an animal; mini hint should direct checking classification, not infer animal solely from eating/reacting. No new wild-animal experiment.",
+          "actualArticleCountercheck": "Current full runtime facts, habitat/diet/measurement/protection and mini-question/hint/each wrong reason additionally read after initial dossier/inquiry pass. No question/answer/position change proposed."
+        }
+      },
+      "previousTeachingContentSHA256": "a6e63c1780085ccdd3d8f2e5f8c614498abc02e629852c45c657c833c53c13ca",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "dc6e206d73a964d981f4e904db94c0f4d1b953d1fc324a6c892108f0f127bca5",
+      "preCountercheckTeachingContentSHA256": "a888bfb9647730d86058a56b59c3bace576369f318c43c43b0f3d86d7826ed66",
+      "historicalRuntimeClaims": [
         {
           "statement": "Der Echte Clownfisch lebt zwischen den Tentakeln bestimmter Seeanemonen. Er nimmt unter anderem Algen und Zooplankton auf.",
           "sourceUrls": [
@@ -2348,21 +3248,7 @@
           ],
           "anchor": "Size Range; Habitat; Feeding and diet; Distribution"
         }
-      ],
-      "articleSHA256": "dc6e206d73a964d981f4e904db94c0f4d1b953d1fc324a6c892108f0f127bca5",
-      "runtimeTeachingContentSHA256": "a888bfb9647730d86058a56b59c3bace576369f318c43c43b0f3d86d7826ed66",
-      "selfReview": {
-        "implemented": true,
-        "structuralChromiumAtPriorF7": true,
-        "independent": false,
-        "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required.",
-        "didacticFollowup": {
-          "date": "2026-10-17",
-          "independent": false,
-          "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
-        }
-      },
-      "previousTeachingContentSHA256": "a6e63c1780085ccdd3d8f2e5f8c614498abc02e629852c45c657c833c53c13ca"
+      ]
     },
     {
       "id": "animal-european-eel",
@@ -2423,16 +3309,27 @@
       "media": {
         "status": "own-vector-implemented-awaiting-visual-review",
         "file": "public/animals/european-eel.svg",
-        "sha256": "f4c902d7066aae5c69a6a4952893002d03d5a91cd584f4a33c91e5fcfadd5e61",
+        "sha256": "5155890a68c6a4466e08198fe55871224416e68dd6be8aebd5ad725ebabd2fe6",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
-        "alt": "Europäischer Aal · eigene schematische Zeichnung: Langgestreckter Körper, Flossensaum. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Eine Körperzeichnung ist keine Wanderkarte und kein Beleg für eine direkt beobachtete Eiablage."
+        "alt": "Europäischer Aal · eigene schematische Zeichnung: Langgestreckter Körper und Kopf mit Auge. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Der durchgehende Flossensaum ist hier nicht vollständig dargestellt. Die Körperkurve zeigt keine Wanderroute oder direkt beobachtete Eiablage.",
+        "beforeLabelCorrection20261018": {
+          "sha256": "f4c902d7066aae5c69a6a4952893002d03d5a91cd584f4a33c91e5fcfadd5e61",
+          "alt": "Europäischer Aal · eigene schematische Zeichnung: Langgestreckter Körper, Flossensaum. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+          "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Eine Körperzeichnung ist keine Wanderkarte und kein Beleg für eine direkt beobachtete Eiablage."
+        },
+        "labelCountercheck20261018": {
+          "finding": "Flossensaum was promised in alt/HTML label, but actual diagram lacks continuous dorsal/caudal/anal margin. Geometry unchanged; labels now name only actually visible traits, model explicitly states omitted fin margin.",
+          "source": "https://fish-commercial-names.ec.europa.eu/fish-names/species/anguilla-anguilla_en",
+          "anchor": "311–312 morphology credited to FishBase; continuous fin margin not a separate triangular fin.",
+          "remaining": "Current actual small/large/native/offline illustration/caption proof required; no complete anatomical depiction or identification guide claimed."
+        }
       },
       "limits": "Laichvorgang/Sargassosee nicht als direkt beobachtetes vollständiges Ereignis schildern; zusätzliche Primärstudie sowie aktuelle Gefährdungsdaten vor Integration nötig.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Die Lebensgeschichte des Europäischen Aals verbindet europäische Gewässer mit dem Atlantik. Junge Entwicklungsstadien gelangen mit Meeresströmungen an Küsten.",
@@ -2490,8 +3387,8 @@
           "anchor": "WWT species facts; Wright et al. 2022 Abstract/Discussion; Author Correction"
         }
       ],
-      "articleSHA256": "62981a51e7b5c272834147c8c4795edb0ea3ba38bfb64c21a8b7f46645db9c0d",
-      "runtimeTeachingContentSHA256": "4facde6aa29870d03d877f33666414970f9e9f0c527efb54d25247884575e956",
+      "articleSHA256": "c6475d84d15a8eb810261b3a28a1fe06ea1f914011b1124041b22608d1f1f72c",
+      "runtimeTeachingContentSHA256": "b4d109ea461f3585fb8f23d9f02d77ca7793bafb0f3c31f340e922fb11d820b8",
       "sourceAccessLimit": "Earlier canonical/PMC requests were blocked; access gap now resolved through the official DTU author repository. Independent scientific review remains open.",
       "selfReview": {
         "implemented": true,
@@ -2502,6 +3399,27 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-european-eel",
+          "sourceReads": [
+            {
+              "url": "https://www.wwt.org.uk/discover-wetlands/wetland-wildlife/species-factfiles/european-eel",
+              "anchors": "80 taxon;89 typical60–80cm and exceptional1.5m;96–117 stages/migration;135 barriers"
+            },
+            {
+              "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/291319540/s41598_022_19248_8.pdf",
+              "anchors": "Abstract39–50;Results113–121;Discussion122–149;primary study2022,26Azores females tagged, presumed breeding place not directly observed eggs/spawning"
+            },
+            {
+              "url": "https://backend.orbit.dtu.dk/ws/files/299778347/s41598_022_26117_x.pdf",
+              "anchors": "40–46 unit correction m/day to km/day; not copied erroneous speed"
+            }
+          ],
+          "findings": "Article already cautiously separates tracking/larvae from direct spawning observation. Correct measurement typical range not record or study female mean. WildlifeTrusts main page timeout and PMC recaptcha honestly unavailable; actual institutional DOI PDFs read instead. No undated decline/IUCN claim imported. WWT118–120 diet newly actually read; no land-excursion claim imported.",
+          "pedagogyCountercheck": "Actual labels, observation/causal barrier explanation/evidence-type comparison and both individual feedback inspected; no confusing directly tracked migration with direct egg observation.",
+          "remaining": "Actual current illustration, relevant old-context source check and complete target integration proof; not a finished release acceptance.",
+          "actualArticleCountercheck": "Current full runtime facts, habitat/diet/measurement/protection and mini-question/hint/each wrong reason additionally read after initial dossier/inquiry pass. No question/answer/position change proposed."
         }
       },
       "previousSourceAccessLimit": "Primary DOI and author-correction evidence found; full text/abstract reading blocked by site response. No spawning observation claimed. Complete primary-text reading remains open before scientific acceptance.",
@@ -2522,7 +3440,48 @@
         "rights": "Official author-repository research reading; only links and original German explanation used. No paper, image, map or copied passage distributed.",
         "independentReview": false
       },
-      "previousTeachingContentSHA256": "9f3d3739aee502f04ed8c51eb890d270bd7f494c0590e3dce64a69b210d88a37"
+      "previousTeachingContentSHA256": "9f3d3739aee502f04ed8c51eb890d270bd7f494c0590e3dce64a69b210d88a37",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "62981a51e7b5c272834147c8c4795edb0ea3ba38bfb64c21a8b7f46645db9c0d",
+      "preCountercheckTeachingContentSHA256": "4facde6aa29870d03d877f33666414970f9e9f0c527efb54d25247884575e956",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Die Lebensgeschichte des Europäischen Aals verbindet europäische Gewässer mit dem Atlantik. Junge Entwicklungsstadien gelangen mit Meeresströmungen an Küsten. Forschende verfolgten auch erwachsene Aale mit Sendern. Das ist keine Aufnahme der Eiablage.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/national-marine-week/incredible-journeys",
+            "https://www.wwt.org.uk/discover-wetlands/wetland-wildlife/species-factfiles/european-eel",
+            "https://backend.orbit.dtu.dk/ws/portalfiles/portal/291319540/s41598_022_19248_8.pdf",
+            "https://backend.orbit.dtu.dk/ws/files/299778347/s41598_022_26117_x.pdf"
+          ],
+          "anchor": "WWT species facts; Wright et al. 2022 Abstract/Discussion; Author Correction"
+        },
+        {
+          "statement": "Barrieren in Flüssen können Wanderwege unterbrechen. Eine offene Verbindung gehört deshalb zur Betrachtung des Lebensraums.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/national-marine-week/incredible-journeys",
+            "https://www.wwt.org.uk/discover-wetlands/wetland-wildlife/species-factfiles/european-eel",
+            "https://backend.orbit.dtu.dk/ws/portalfiles/portal/291319540/s41598_022_19248_8.pdf",
+            "https://backend.orbit.dtu.dk/ws/files/299778347/s41598_022_26117_x.pdf"
+          ],
+          "anchor": "WWT species facts; Wright et al. 2022 Abstract/Discussion; Author Correction"
+        },
+        {
+          "statement": "Häufig etwa 60–80 cm; die Quelle nennt ausnahmsweise bis 1,5 m. Der Balken zeigt den häufigen Bereich, keinen Rekord.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/national-marine-week/incredible-journeys",
+            "https://www.wwt.org.uk/discover-wetlands/wetland-wildlife/species-factfiles/european-eel",
+            "https://backend.orbit.dtu.dk/ws/portalfiles/portal/291319540/s41598_022_19248_8.pdf",
+            "https://backend.orbit.dtu.dk/ws/files/299778347/s41598_022_26117_x.pdf"
+          ],
+          "anchor": "WWT species facts; Wright et al. 2022 Abstract/Discussion; Author Correction"
+        }
+      ]
     },
     {
       "id": "animal-monarch-butterfly",
@@ -2568,9 +3527,9 @@
         },
         "12-14": {
           "kind": "assess-evidence",
-          "task": "Wenn Tiere einer Population wandern, darf diese Beobachtung auf alle Populationen weltweit übertragen werden?",
-          "hint": "Prüfe, für welche Population der beobachtete Weg tatsächlich belegt wurde.",
-          "feedback": "Artname allein legt nicht jedes Verhalten aller Populationen fest."
+          "task": "Ein Forschungsteam markiert Monarchfalter in Kanada und zeichnet deren Herbstwege auf. Eine Population in Florida wurde nicht untersucht. Darfst du ihr trotzdem dieselbe Route zuordnen?",
+          "hint": "Welche Tiere wurden tatsächlich beobachtet? Prüfe, ob die Karte auch Angaben über die nicht untersuchte Gruppe enthält.",
+          "feedback": "Für die Population in Florida brauchst du eigene passende Beobachtungen. Die gezeigte Karte allein belegt ihre Route nicht."
         }
       },
       "proposedConnections": [
@@ -2590,9 +3549,9 @@
       },
       "limits": "Vorgeschlagene US-Schutzregel ist keine bereits geltende weltweite Einstufung; keine giftigen Pflanzen anfassen oder Raupen füttern lassen.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Viele Monarchfalter in Nordamerika wandern. Es gibt aber auch Populationen, die nicht dieselbe lange Wanderung unternehmen.",
@@ -2636,10 +3595,18 @@
             "https://www.fws.gov/species/monarch-danaus-plexippus"
           ],
           "anchor": "Size & Shape; Habitat; Behavior"
+        },
+        {
+          "statement": "Blütenreiche Lebensräume und geeignete Raupenpflanzen erhalten. Falter und Raupen aus Abstand beobachten.",
+          "sourceUrls": [
+            "https://www.fws.gov/species/monarch-danaus-plexippus"
+          ],
+          "anchor": "191–195 migration populations/toxins;239 caterpillar milkweed vs adult nectar;301–304 generational journeys;316–320 span3–4in=7.62–10.16cm",
+          "scope": "Individually source-backed correction; no own global conservation assessment."
         }
       ],
-      "articleSHA256": "b7e871f2bd641d50da42ac093e150642d8a15c31a654c0ca60147834d304540d",
-      "runtimeTeachingContentSHA256": "964fa4c17560216a327938e619ee6247d6c44c27fce0ba597d32de86f662f5cd",
+      "articleSHA256": "f293c09eeceba14ea4ea909dbd1b505ec9bf5d80b9283841bd4f0f8f40bf8af0",
+      "runtimeTeachingContentSHA256": "b83df6df892366030304faa6d58197c134825f3e81973471b391a5c726172517",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -2649,9 +3616,56 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-monarch-butterfly",
+          "sourceReads": [
+            {
+              "url": "https://www.fws.gov/species/monarch-danaus-plexippus",
+              "anchors": "191–195 migration populations/toxins;239 caterpillar milkweed vs adult nectar;301–304 generational journeys;316–320 span3–4in=7.62–10.16cm"
+            }
+          ],
+          "findings": "Taxon, migratory/nonmigratory populations, larval plant defensive compounds and wingspan conversion supported. No claim each butterfly flies full multi-generation cycle, no proposed US protection treated as global law. Source rounded7–10cm not exact3–4inch; current explicit conversion appropriate.",
+          "actualTeachingFinding": "Evidence labels crossed: Entwicklungsstadien over migration-populations paragraph; Unterschiedliche Populationen over food/defence paragraph. Relabel to actual population and food/defence content. Observation asks caterpillar/adult differentiation but article barely supplies contrast; useful source-based adult nectar/larval host distinction. Transfer substantially repeats reason rather than requiring new evidence evaluation. Current fact table already supplies caterpillar milkweed/adult nectar, so beginner stage is supported; no extra paragraph required solely for that contrast.",
+          "proposedCorrection": "Meaningful third-level scenario contrasting two observed population reports; preserve answer positions/save IDs. Give beginner task actual stage evidence, not unexplained recall.",
+          "pedagogyCountercheck": "Feedback specific but third-level thinking needs progression as above.",
+          "remaining": "Actual current illustration, relevant old-context source check and complete target integration proof; not a finished release acceptance.",
+          "actualArticleCountercheck": "Current full runtime facts, habitat/diet/measurement/protection and mini-question/hint/each wrong reason additionally read after initial dossier/inquiry pass. No question/answer/position change proposed."
         }
       },
-      "previousTeachingContentSHA256": "4ca5c4d4b16f55a81b392bc8bc1e4aff39471016b629c93a0628c6102c19f46b"
+      "previousTeachingContentSHA256": "4ca5c4d4b16f55a81b392bc8bc1e4aff39471016b629c93a0628c6102c19f46b",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "b7e871f2bd641d50da42ac093e150642d8a15c31a654c0ca60147834d304540d",
+      "preCountercheckTeachingContentSHA256": "964fa4c17560216a327938e619ee6247d6c44c27fce0ba597d32de86f662f5cd",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Viele Monarchfalter in Nordamerika wandern. Es gibt aber auch Populationen, die nicht dieselbe lange Wanderung unternehmen.",
+          "sourceUrls": [
+            "https://www.fws.gov/species/monarch-danaus-plexippus"
+          ],
+          "anchor": "Size & Shape; Habitat; Behavior"
+        },
+        {
+          "statement": "Die Raupen nehmen mit Seidenpflanzen bestimmte Abwehrstoffe auf. Ihre auffällige Färbung gehört zur Beziehung zwischen Nahrung und Schutz.",
+          "sourceUrls": [
+            "https://www.fws.gov/species/monarch-danaus-plexippus"
+          ],
+          "anchor": "Size & Shape; Habitat; Behavior"
+        },
+        {
+          "statement": "Etwa 7,6–10,2 cm Spannweite; 3–4 Zoll wurden mit 2,54 cm je Zoll umgerechnet.",
+          "sourceUrls": [
+            "https://www.fws.gov/species/monarch-danaus-plexippus"
+          ],
+          "anchor": "Size & Shape; Habitat; Behavior"
+        }
+      ]
     },
     {
       "id": "animal-garden-snail",
@@ -2719,9 +3733,9 @@
       },
       "limits": "Gruppenweite Aussagen der Museumsseite nicht unbesehen artspezifisch übertragen; Größen-/Radula- und Schutzclaims zusätzlich prüfen.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Cornu aspersum ist eine Landschneckenart. Sie wird besonders bei feuchtem Wetter und nachts beobachtet.",
@@ -2771,8 +3785,8 @@
           "anchor": "Conchological Society Description; NHM snails and slugs"
         }
       ],
-      "articleSHA256": "4a122fe106b6b63af25dd3db2dfffe9692ef71c8c3fc4d98c2bf80ab93756546",
-      "runtimeTeachingContentSHA256": "eb5322611b13670270278ecb7897c6e4b082f837cb2f624bd58de69e0e0c8cb3",
+      "articleSHA256": "29aeb238dff55f31591879d738eff8a2332765e6032c2357e52785ee050a4bfe",
+      "runtimeTeachingContentSHA256": "f825d22485071c72343c4efe8be43bc552b381872e4ba27327f4283ad230640f",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -2782,9 +3796,65 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-garden-snail",
+          "sourceReads": [
+            {
+              "url": "https://www.nhm.ac.uk/discover/snails-and-slugs.html",
+              "anchors": "71 moisture;94–99 touch/chemosensing general gastropods;164 explicitly Cornuaspersum nighttime/rain"
+            },
+            {
+              "url": "https://conchsoc.org/aids_to_id/helasp.php",
+              "anchors": "11–14 scientificname/synonym/shell25–35 x25–40mm, habitat"
+            },
+            {
+              "url": "https://naturportal-suedwest.de/de/weichtiere/systematik/art/gehaeuseschnecken-land-gastropoda/helicidae-schnirkelschnecken/cornu/aspersum/",
+              "anchors": "2 taxon,25 explicitly25–40mm width independent of25–30mm height"
+            }
+          ],
+          "findings": "Species-specific nighttime/rain and broad mollusc senses separately scoped; no species-specific exact sensory threshold. Source shell dimensions not explicitly axis labelled, conventional second dimension interpreted width; should make that interpretation explicit or seek corroboration rather than overclaim measurement-point certainty. No photos copied. Measurement ambiguity resolved through actually read Naturportal Südwest explicit width25–40mm; add source to normal references when candidate can change. NatureSpot41 explicit shellheight25–35/width25–40;50 speciesnight/rain; no mating generalisation imported.",
+          "pedagogyCountercheck": "Actual labels/tasks/hints/individual feedback sound; distinguishes seeing more existing animals after rain from new births. No collecting/relocating instruction.",
+          "remaining": "Actual current illustration, relevant old-context source check and complete target integration proof; not a finished release acceptance.",
+          "actualArticleCountercheck": "Current full runtime facts, habitat/diet/measurement/protection and mini-question/hint/each wrong reason additionally read after initial dossier/inquiry pass. No question/answer/position change proposed."
         }
       },
-      "previousTeachingContentSHA256": "db96a22f450cc51913b4cdcdd4f1524839717752cf69ba31a066de9ac124150a"
+      "previousTeachingContentSHA256": "db96a22f450cc51913b4cdcdd4f1524839717752cf69ba31a066de9ac124150a",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "4a122fe106b6b63af25dd3db2dfffe9692ef71c8c3fc4d98c2bf80ab93756546",
+      "preCountercheckTeachingContentSHA256": "eb5322611b13670270278ecb7897c6e4b082f837cb2f624bd58de69e0e0c8cb3",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Cornu aspersum ist eine Landschneckenart. Sie wird besonders bei feuchtem Wetter und nachts beobachtet.",
+          "sourceUrls": [
+            "https://www.nhm.ac.uk/discover/snails-and-slugs.html",
+            "https://conchsoc.org/aids_to_id/helasp.php"
+          ],
+          "anchor": "Conchological Society Description; NHM snails and slugs"
+        },
+        {
+          "statement": "Schnecken nutzen unter anderem Berührung und chemische Signale zur Orientierung. Sie erleben ihre Umgebung nicht wie ein Mensch.",
+          "sourceUrls": [
+            "https://www.nhm.ac.uk/discover/snails-and-slugs.html",
+            "https://conchsoc.org/aids_to_id/helasp.php"
+          ],
+          "anchor": "Conchological Society Description; NHM snails and slugs"
+        },
+        {
+          "statement": "Die Schale ist etwa 25–40 mm breit; ihre Höhe ist ein anderes Maß.",
+          "sourceUrls": [
+            "https://www.nhm.ac.uk/discover/snails-and-slugs.html",
+            "https://conchsoc.org/aids_to_id/helasp.php"
+          ],
+          "anchor": "Conchological Society Description; NHM snails and slugs"
+        }
+      ]
     },
     {
       "id": "animal-european-lobster",
@@ -2852,9 +3922,9 @@
       },
       "limits": "Keine Gleichsetzung mit Languste oder Amerikanischem Hummer; Fotos und Größenmesspunkte vor Integration prüfen.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Der Europäische Hummer ist ein Krebstier. Seine beiden großen Scheren können verschiedene Aufgaben bei der Nahrungsaufnahme erfüllen.",
@@ -2900,8 +3970,8 @@
           "anchor": "Statistics; About; How to identify"
         }
       ],
-      "articleSHA256": "0f3264fb875f5629adaa4bee74608fdafc49914adef5414f62598d254eb772e4",
-      "runtimeTeachingContentSHA256": "59740ac8a2334d1a0f601f564aaf39d46a86f3051ff125d62ca08c1cacdacde2",
+      "articleSHA256": "43e2c6298bc0612017b4d4a851df3fedbc4e4433e731d845dddf78425980ee1a",
+      "runtimeTeachingContentSHA256": "50c6ea9a5bf150b50bf6a4431cd6fbc5d38d897ced07146e187c95e619129cfc",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -2911,9 +3981,54 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-european-lobster",
+          "sourceReads": [
+            {
+              "url": "https://www.wildlifetrusts.org/wildlife-explorer/marine/crustaceans/lobster",
+              "anchors": "19 taxon;15 exceptional60cm vs33 usualupper50cm;43 asymmetric feedingclaws;44 food/habitat;46 moulting;49 bluecolour"
+            }
+          ],
+          "findings": "Homarusgammarus/crustacean, differently used claws, moult growth and usual50cm vs larger60cm consistent. Distinguish upper bound from full range and from American lobster. Local common/overfishing statement not globalIUCN assessment.",
+          "pedagogyCountercheck": "Actual label/paraphrase and both levels/individual wrong reasons inspected: fixed exoskeleton limits growth, empty shell has more than one explanation. No death inferred from exuvia alone.",
+          "remaining": "Actual current illustration, relevant old-context source check and complete target integration proof; not a finished release acceptance.",
+          "actualArticleCountercheck": "Current full runtime facts, habitat/diet/measurement/protection and mini-question/hint/each wrong reason additionally read after initial dossier/inquiry pass. No question/answer/position change proposed."
         }
       },
-      "previousTeachingContentSHA256": "92e3169b4453e5a0b1fb3f79a1c2cd84d3fa07765b06a32955de799ff6881c08"
+      "previousTeachingContentSHA256": "92e3169b4453e5a0b1fb3f79a1c2cd84d3fa07765b06a32955de799ff6881c08",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "0f3264fb875f5629adaa4bee74608fdafc49914adef5414f62598d254eb772e4",
+      "preCountercheckTeachingContentSHA256": "59740ac8a2334d1a0f601f564aaf39d46a86f3051ff125d62ca08c1cacdacde2",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Der Europäische Hummer ist ein Krebstier. Seine beiden großen Scheren können verschiedene Aufgaben bei der Nahrungsaufnahme erfüllen.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/wildlife-explorer/marine/crustaceans/lobster"
+          ],
+          "anchor": "Statistics; About; How to identify"
+        },
+        {
+          "statement": "Zum Wachsen muss er seine feste Außenhülle abstreifen. Eine Häutung ist kein Wechsel zu einer anderen Tierart.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/wildlife-explorer/marine/crustaceans/lobster"
+          ],
+          "anchor": "Statistics; About; How to identify"
+        },
+        {
+          "statement": "Meist bis etwa 50 cm; dieselbe Quelle nennt auch größere Einzeltiere bis 60 cm.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/wildlife-explorer/marine/crustaceans/lobster"
+          ],
+          "anchor": "Statistics; About; How to identify"
+        }
+      ]
     },
     {
       "id": "animal-common-cuttlefish",
@@ -2981,9 +4096,9 @@
       },
       "limits": "Arm-/Tentakelzahl, Schulp und konkrete Farbzell-Erklärung vor Integration anhand weiterer Primärquelle absichern.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalManuscriptParagraphs": [
         "Sepia officinalis gehört zu den Kopffüßern. Sie besitzt einen anderen Körperbau als ein Krake.",
@@ -3033,8 +4148,8 @@
           "anchor": "MarLIN Description / Identifying features; Wildlife Trusts About"
         }
       ],
-      "articleSHA256": "e3ce98e97fad71eccf2c3747a0402fff0a1d53595dfbef418bbfeba33f99c124",
-      "runtimeTeachingContentSHA256": "d3a2b62968a26f323f13f64b18532f834d355f8f9a7c7cfd231392ab1b0041fc",
+      "articleSHA256": "84d295c77e2d30828367e4a75c5e11aeaf14c7cbcf303300f4c7a290be2faafd",
+      "runtimeTeachingContentSHA256": "349431cff5cd4cdd9b0a113f3b8d4347c20035fbcf5dfc526d1b44ea3698e463",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -3044,9 +4159,61 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-common-cuttlefish",
+          "sourceReads": [
+            {
+              "url": "https://www.marlin.ac.uk/species/detail/1098",
+              "anchors": "189–192 explicit mantle45cm/eightarms+twoelongatedtentacles/lateral fins/rapidcolour;199range"
+            },
+            {
+              "url": "https://www.wildlifetrusts.org/wildlife-explorer/marine/squids-octopuses-and-cuttlefish/common-cuttlefish",
+              "anchors": "18 species;46 anatomy;52 colour/texture camouflage and courtship"
+            }
+          ],
+          "findings": "Current own prose supports exact45cm mantle not arms,8+2 appendages, fins and changing appearance. Source MarLIN explicitly not refereed180, retained honestly; agreement with WT, no unsupported specific chromatic mechanism imported. UK common status not global category.",
+          "pedagogyCountercheck": "Actual label/task and individual feedback correctly distinguish momentary appearance from whole repertoire and species identity. Related old octopus anatomy still needs actual relevant source and illustration comparison.",
+          "remaining": "Actual current illustration, relevant old-context source check and complete target integration proof; not a finished release acceptance.",
+          "actualArticleCountercheck": "Current full runtime facts, habitat/diet/measurement/protection and mini-question/hint/each wrong reason additionally read after initial dossier/inquiry pass. No question/answer/position change proposed."
         }
       },
-      "previousTeachingContentSHA256": "44ad5b3d3ac42296d417765f3a0609d15f1ace23f8c5dd9b984df6b0bb7a9e1e"
+      "previousTeachingContentSHA256": "44ad5b3d3ac42296d417765f3a0609d15f1ace23f8c5dd9b984df6b0bb7a9e1e",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "e3ce98e97fad71eccf2c3747a0402fff0a1d53595dfbef418bbfeba33f99c124",
+      "preCountercheckTeachingContentSHA256": "d3a2b62968a26f323f13f64b18532f834d355f8f9a7c7cfd231392ab1b0041fc",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Die Gewöhnliche Sepia besitzt acht Arme und zusätzlich zwei längere Fangtentakel. Ihr breiter Mantel trägt seitliche Flossen. Damit unterscheidet sie sich vom Gewöhnlichen Kraken.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/wildlife-explorer/marine/squids-octopuses-and-cuttlefish/common-cuttlefish",
+            "https://www.marlin.ac.uk/species/detail/1098"
+          ],
+          "anchor": "MarLIN Description / Identifying features; Wildlife Trusts About"
+        },
+        {
+          "statement": "Ihre Färbung und ihr Muster können sich rasch verändern. Das hilft unter anderem bei Tarnung und Verständigung. Ein Foto hält nur einen Augenblick fest und zeigt nicht alle möglichen Zustände.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/wildlife-explorer/marine/squids-octopuses-and-cuttlefish/common-cuttlefish",
+            "https://www.marlin.ac.uk/species/detail/1098"
+          ],
+          "anchor": "MarLIN Description / Identifying features; Wildlife Trusts About"
+        },
+        {
+          "statement": "Bis etwa 45 cm Mantellänge; Arme und Fangtentakel sind darin nicht enthalten.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/wildlife-explorer/marine/squids-octopuses-and-cuttlefish/common-cuttlefish",
+            "https://www.marlin.ac.uk/species/detail/1098"
+          ],
+          "anchor": "MarLIN Description / Identifying features; Wildlife Trusts About"
+        }
+      ]
     },
     {
       "id": "animal-short-snouted-seahorse",
@@ -3114,9 +4281,9 @@
       },
       "limits": "Quellenseite enthält problematische Fortpflanzungs-/DD-Formulierungen. Diese ausdrücklich NICHT übernehmen; unabhängige Fachquelle vor Fortpflanzungs- oder IUCN-Angabe nötig.",
       "openBeforeRuntime": [
-        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
-        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
-        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+        "Aktuellen gebauten Stand nach diesen konkreten Korrekturen tatsächlich mit Suche, Rückweg, Schrift, Zoom und kaltem Offline-Neustart prüfen.",
+        "Vollständige aktuelle technische Schlussabnahme und tatsächliche Engine-Nachweise vor regulärer Übernahme erforderlich.",
+        "Exakten geschützten Abschnittsmerge und tatsächlichen Vercel-Build mit Funktionsnachtest belegen; externer historischer Akzeptanzzähler ist kein Abschlussgate."
       ],
       "originalTransferTask": {
         "kind": "assess-evidence",
@@ -3170,10 +4337,19 @@
             "https://www.marlin.ac.uk/species/detail/1788"
           ],
           "anchor": "MarLIN Description / Identifying features; Wildlife Trusts Distribution"
+        },
+        {
+          "statement": "Seepferdchen nicht fangen und keine getrockneten Meerestiere als Souvenirs kaufen. Geeignete Küstenlebensräume erhalten.",
+          "sourceUrls": [
+            "https://www.marlin.ac.uk/species/detail/1788",
+            "https://www.wildlifetrusts.org/wildlife-explorer/marine/fish-including-sharks-skates-and-rays/short-snouted-seahorse"
+          ],
+          "anchor": "133 lengthup15cm/prehensiletail;144habitat;173–178fish;209–212anchor/prey;161scope historical/general reviewed biology; 19 species;41–45tail/food/fish,49UKrange only;36DD-unlisted and52self-fertilisation explicitly excluded",
+          "scope": "Individually source-backed correction; no own global conservation assessment."
         }
       ],
-      "articleSHA256": "06d81691da3f92301c4dcc1bd982400c80fd2d3255767d0b535a1ff805aff04d",
-      "runtimeTeachingContentSHA256": "63e250abd8c71405f71391c0bc33ab3c18d170f7307ebaf1459f27f45273830c",
+      "articleSHA256": "fd8a9e3c70ca2e99487cba4f5dd2ecae20d9bbfd1f10dc3210c60aa6f115b260",
+      "runtimeTeachingContentSHA256": "6541da8567443b7820b9b760a1c93efec61fba6fa2d7301be06ce4aacd65cef7",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -3183,9 +4359,61 @@
           "date": "2026-10-17",
           "independent": false,
           "scope": "Alle48 falschantwortbezogenen Begründungs-/Transferrückmeldungen anhand der jeweiligen Fehlvorstellung redigiert; vier zu direkte Hinweise durch offene Vergleichsfragen ersetzt. Aufgaben, Antworten, Antwortreihenfolgen, richtige Begründungen und Speicherschlüssel unverändert. Quellenlektüre und technische Vorabnahme107 nicht als neue unabhängige Fach-/Kinderabnahme ausgegeben."
+        },
+        "aiCountercheck20261018": {
+          "id": "animal-short-snouted-seahorse",
+          "sourceReads": [
+            {
+              "url": "https://www.marlin.ac.uk/species/detail/1788",
+              "anchors": "133 lengthup15cm/prehensiletail;144habitat;173–178fish;209–212anchor/prey;161scope historical/general reviewed biology"
+            },
+            {
+              "url": "https://www.wildlifetrusts.org/wildlife-explorer/marine/fish-including-sharks-skates-and-rays/short-snouted-seahorse",
+              "anchors": "19 species;41–45tail/food/fish,49UKrange only;36DD-unlisted and52self-fertilisation explicitly excluded"
+            }
+          ],
+          "findings": "Fish identity, tail grip, small prey,15cm upper bound without stated measurement point supported. Current content explicitly excludes suspect DD-unlisted/self-fertilisation source statements. No reproductive/status claim or dubious pet survival statistic54 imported.",
+          "pedagogyCountercheck": "Actual labels/tasks/hints/individual feedback inspected, specific habitat description useful. Third-level generic source checking is abstract but linked directly to actual source contradiction; does not teach the erroneous claim.",
+          "remaining": "Actual current illustration, relevant old-context source check and complete target integration proof; not a finished release acceptance.",
+          "actualArticleCountercheck": "Current full runtime facts, habitat/diet/measurement/protection and mini-question/hint/each wrong reason additionally read after initial dossier/inquiry pass. No question/answer/position change proposed."
         }
       },
-      "previousTeachingContentSHA256": "fc6c53373a3fd6d517574c6b2623127762f2c9a9a9cafd515fb2acfec7c0c151"
+      "previousTeachingContentSHA256": "fc6c53373a3fd6d517574c6b2623127762f2c9a9a9cafd515fb2acfec7c0c151",
+      "historicalSourceNote": "Quellen und Messangaben am 17.10.2026 durch Codex zusammengestellt. Ortsmarke: Beispielregion, keine vollständige Verbreitungskarte. Schutztext: Rücksicht und Quellenbeschreibung, keine eigene weltweite Gefährdungseinstufung. Eine unabhängige Fach- und Kinderabnahme ist nicht erfolgt.",
+      "historicalInquiryStatus": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
+      "historicalOpenBeforeRuntime": [
+        "Frühe tatsächliche neue Tier-/Medien-/Such-/Rückwegprüfung und vollständige Abschnittsabnahme stehen noch aus.",
+        "Unabhängige fachliche/pädagogische und reale Geräteabnahme fehlen; kein endgültiges GO.",
+        "Tatsächlichen geschützten Abschnittsmerge und Vercel-Nachtest gesondert nachweisen."
+      ],
+      "preCountercheckArticleSHA256": "06d81691da3f92301c4dcc1bd982400c80fd2d3255767d0b535a1ff805aff04d",
+      "preCountercheckTeachingContentSHA256": "63e250abd8c71405f71391c0bc33ab3c18d170f7307ebaf1459f27f45273830c",
+      "historicalRuntimeClaims": [
+        {
+          "statement": "Das Kurzschnäuzige Seepferdchen ist ein Fisch. Mit dem Greifschwanz kann es sich an Pflanzen oder anderen geeigneten Strukturen festhalten.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/wildlife-explorer/marine/fish-including-sharks-skates-and-rays/short-snouted-seahorse",
+            "https://www.marlin.ac.uk/species/detail/1788"
+          ],
+          "anchor": "MarLIN Description / Identifying features; Wildlife Trusts Distribution"
+        },
+        {
+          "statement": "Seine Nahrung besteht aus kleinen Beutetieren. Der Name „Seepferdchen“ bedeutet keine Verwandtschaft zu Pferden.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/wildlife-explorer/marine/fish-including-sharks-skates-and-rays/short-snouted-seahorse",
+            "https://www.marlin.ac.uk/species/detail/1788"
+          ],
+          "anchor": "MarLIN Description / Identifying features; Wildlife Trusts Distribution"
+        },
+        {
+          "statement": "Bis etwa 15 cm; die Quelle erläutert den Messpunkt nicht weiter.",
+          "sourceUrls": [
+            "https://www.wildlifetrusts.org/wildlife-explorer/marine/fish-including-sharks-skates-and-rays/short-snouted-seahorse",
+            "https://www.marlin.ac.uk/species/detail/1788"
+          ],
+          "anchor": "MarLIN Description / Identifying features; Wildlife Trusts Distribution"
+        }
+      ]
     }
   ],
   "newConnections": [
@@ -3257,17 +4485,17 @@
       "id": "animal-expansion-raccoon-red-fox",
       "fromId": "animal-raccoon",
       "toId": "animal-red-fox",
-      "why": "Zwei anpassungsfähige Säugetiere verbinden Tastsinn und veränderte Lebensräume.",
+      "why": "Zwei anpassungsfähige Säugetiere nach Nahrungssuche und Lebensräumen in Siedlungen vergleichen; die empfindlichen Vorderpfoten beschreibt hier die Waschbärkarte.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-10-18"
     },
     {
       "id": "animal-expansion-barn-owl-white-tailed-eagle",
       "fromId": "animal-barn-owl",
       "toId": "animal-white-tailed-eagle",
-      "why": "Zwei Greifvogelbeispiele unterscheiden; Jagdmethoden und Gehör erst nach Einzelbelegen vergleichen.",
+      "why": "Eine Eule und einen Adler als jagende Vögel aus unterschiedlichen Vogelgruppen vergleichen; Flügellänge und Spannweite unterscheiden.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-10-18"
     },
     {
       "id": "animal-expansion-kingfisher-shadows",

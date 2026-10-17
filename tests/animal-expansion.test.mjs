@@ -1,3 +1,5 @@
+import {historicalQuestionBank} from '../scripts/world-question-index.mjs';
+import correctionRegistry from '../content/editorial-reviews.json' with {type:'json'};
 import questions from '../app/world-question-index.json' with {type:'json'};
 import inquiries from '../app/animal-inquiries.json' with {type:'json'};
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {createHash} from 'node:crypto';
@@ -43,7 +45,7 @@ test('each addition has an explained reciprocal edge without unfinished external
  const eel=review.entries.find(e=>e.id==='animal-european-eel');assert.ok(eel.previousSourceAccessLimit.includes('blocked'));assert.equal(eel.primarySourceRead.access,'relevant-primary-passages-read');assert.equal(eel.primarySourceRead.independentReview,false);assert.match(eel.primarySourceRead.url,/^https:\/\/backend\.orbit\.dtu\.dk\//);assert.ok(eel.primarySourceRead.correction.doi);
 });
 
-test('all185 preceding questions and hints survive the24 additions without changing their identities or content',()=>{
- const old=review.retainedQuestionBank;assert.equal(old.count,185);assert.equal(questions.length,old.count+24+6);assert.equal(digest(questions.slice(0,old.count)),old.sha256);
+test('all185 historical questions and hints remain protected apart from exact individually recorded prompt/explanation corrections',()=>{
+ const old=review.retainedQuestionBank;assert.equal(old.count,185);assert.equal(questions.length,old.count+24+6);assert.equal(digest(historicalQuestionBank(questions,correctionRegistry.questionCorrections).slice(0,old.count)),old.sha256);
  for(const e of review.entries){const t=catalog.find(t=>t.id===e.id);assert.equal(t.questionFeedback.wrongReasons.length,3);assert.equal(t.questionFeedback.wrongReasons[t.question.correct],null);assert.equal(t.image,undefined);assert.ok(t.questionFeedback.hint.length>=45);}
 });

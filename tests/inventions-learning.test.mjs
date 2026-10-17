@@ -1,3 +1,5 @@
+import {historicalQuestionBank} from '../scripts/world-question-index.mjs';
+import correctionRegistry from '../content/editorial-reviews.json' with {type:'json'};
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -14,8 +16,8 @@ test('twelve distinct integrated inventions preserve all twelve retained questio
  const newIds=new Set(dossier.integratedManuscriptIds);assert.equal(newIds.size,12);assert.ok([...newIds].every(id=>inventions.some(t=>t.id===id)),'only actually integrated IDs replace the manuscript marker');
  assert.equal(validateWorldContent(inventions,metadata,index),inventions);
  for(const t of inventions){
-  if(!newIds.has(t.id)){const old=retained.questions.find(q=>q.id===t.id+':mini');assert.ok(old,t.id+' retained identity');
-   for(const key of ['prompt','answers','correct','why'])assert.deepEqual(t.question[key],old[key],t.id+' preserved '+key);
+  if(!newIds.has(t.id)){const old=retained.questions.find(q=>q.id===t.id+':mini'),baseline=historicalQuestionBank([{...t.question,id:t.id+':mini',topic:t.id}],correctionRegistry.questionCorrections)[0];assert.ok(old,t.id+' retained identity');
+   for(const key of ['prompt','answers','correct','why'])assert.deepEqual(baseline[key],old[key],t.id+' historical original or exact documented correction '+key);
    assert.deepEqual(t.invention,mechanics[t.id],t.id+' retains all six stages, dates, parts and blueprint identity');
   }else{assert.equal(t.invention.walkthrough,true);assert.equal(retained.questions.some(q=>q.id===t.id+':mini'),false,'new concept is not an alias of a retained question');}
   const d=dossier.topics.find(d=>d.id===t.id);assert.ok(d);assert.equal(d.contentHash,fingerprint(t));assert.equal(d.independentReview,false);assert.equal(d.acceptedForDoubling,false);

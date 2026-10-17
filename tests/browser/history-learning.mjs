@@ -10,7 +10,7 @@ async function explore(p,t,{touch=false}={}){
  const activity=p.getByRole('region',{name:'Geschichtsdetektiv'});
  await p.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
  for(let level=0;level<3;level++){
-  const tier=activity.getByRole('group',{name:'Freiwillige Denkstufe'}).getByRole('button').nth(level);if(level===2){await tier.focus();await p.keyboard.press('Enter');assert.equal(await tier.evaluate(el=>el===document.activeElement&&el.matches(':focus-visible')),true);}else if(touch)await tier.tap();else await tier.click();assert.equal(await tier.getAttribute('aria-pressed'),'true');
+  const tier=activity.getByRole('group',{name:'Freiwillige Denkstufe'}).getByRole('button').nth(level);if(level===2){const previousTier=activity.getByRole('group',{name:'Freiwillige Denkstufe'}).getByRole('button').nth(level-1);await previousTier.focus();await p.keyboard.press('Tab');assert.equal(await tier.evaluate(el=>el===document.activeElement&&el.matches(':focus-visible')),true,'real Tab reaches the third level with a visible keyboard focus');await p.keyboard.press('Enter');assert.equal(await tier.evaluate(el=>el===document.activeElement&&el.matches(':focus-visible')),true,'keyboard activation retains its visible focus');}else if(touch)await tier.tap();else await tier.click();assert.equal(await tier.getAttribute('aria-pressed'),'true');
   if(t.id==='history-khipu'){
    await activity.getByRole('combobox',{name:'Erste Menge',exact:true}).selectOption('2');await activity.getByRole('combobox',{name:'Zweite Menge',exact:true}).selectOption('6');await activity.getByRole('img',{name:'Erfundene Zählschnüre: erste Menge 2, zweite Menge 6.'}).waitFor();
    const toggle=activity.getByRole('button',{name:/Bedeutung ausblenden|Unsere Vereinbarung zeigen/});await toggle.click();assert.equal(await toggle.getAttribute('aria-pressed'),String(level%2===0));
@@ -62,7 +62,14 @@ export async function historyLearningEngine(browser,base,{engine,shots}){
  const observed=[];
  for(const width of [320,1440]){
   const c=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'}),p=await c.newPage();
-  try{for(const t of topics){await p.goto(base+'#world/topic/'+t.id);await p.locator('.world-mini-question').waitFor();await explore(p,t);await p.getByRole('region',{name:'Geschichtsdetektiv'}).screenshot({path:path.join(shots,'journey-engine-'+engine+'-history-'+t.id+'-'+width+'.png')});observed.push({id:t.id,width,levels:3});}}finally{await c.close();}
+  let currentTopic;
+  try{for(const t of topics){currentTopic=t.id;await p.goto(base+'#world/topic/'+t.id);await p.locator('.world-mini-question').waitFor();await explore(p,t);await p.getByRole('region',{name:'Geschichtsdetektiv'}).screenshot({path:path.join(shots,'journey-engine-'+engine+'-history-'+t.id+'-'+width+'.png')});observed.push({id:t.id,width,levels:3});}}
+  catch(error){
+   const prefix='journey-engine-'+engine+'-history-failure-'+width;
+   const witness=await p.evaluate(()=>({activeTag:document.activeElement?.tagName,activeText:document.activeElement?.textContent,focusVisible:document.activeElement?.matches(':focus-visible'),pressed:document.activeElement?.getAttribute('aria-pressed')})).catch(()=>null);
+   await p.screenshot({path:path.join(shots,prefix+'.png'),fullPage:true}).catch(()=>{});
+   await fs.writeFile(path.join(shots,prefix+'.json'),JSON.stringify({engine,width,topic:currentTopic,route:p.url(),witness,error:error.stack},null,2)+'\n');throw error;
+  }finally{await c.close();}
  }
  return observed;
 }

@@ -44,10 +44,47 @@
       "limits": "Ein einzelner beobachteter Einsatz schließt andere belegte Fähigkeiten nicht aus.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "2807e8f93e4009dd7882639a0d2ab46862eb8e88011dbbcdfb114b8bbcb075a7",
+      "teachingContentSHA256": "8ec64e5fa63cf2a82b1f175f7388c9f07c2b4e3bb885c24d13dc36f8e9111dc2",
       "originalRelated": [
         "animal-honey-bee"
-      ]
+      ],
+      "entryQuestionCountercheck20261018": {
+        "decision": "Einfache6–8-Einstiegsfrage vorerst begründet erhalten; keine Neuzählung oder pauschale semantischeFreigabe.",
+        "finding": "Fliegenistoffensichtlichabsurd;derEinstiegfragt bewusstnachRüssel-Grundfunktion.Mini-FragealleinwärekeineweiterführendeVerständnisprüfung. BereitsvorhandeneWerkstattbegründungtrenntWasserinsMaulbringenvonAtmung;TransferfragtobFamilienbeobachtungfüralleElefantengilt. DiesehöherenStufentrennendieFehlvorstellungenkonkret.",
+        "sources": "AktuellgelesenTokyo165/177undWWF155–159/216;Rüssel/Familie/WasserinsMaul.BeidebestehendenWerkstattstufenundAntwortfeedbackgelesen.",
+        "remaining": "AktuelleUI-WiederaufnahmeundBild-/Rechteabnahmebleibengetrenntnachzuweisen;EinsteigerfragekannspätermitpädagogischbegründeterSaveverträglicherKorrekturwiederaufgenommenwerden."
+      },
+      "preCountercheckTeachingContentSHA256": "2807e8f93e4009dd7882639a0d2ab46862eb8e88011dbbcdfb114b8bbcb075a7",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-african-savanna-elephant",
+        "sourceReads": [
+          {
+            "url": "https://www.tokyo-zoo.net/tama/encyclopedia/african-bush-elephant/index.html",
+            "anchors": "163savanna,165shoulder2.5–4m,168EN;175–177trunk smell/grip"
+          },
+          {
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/afrikanischer-savannenelefant",
+            "anchors": "91twoAfrican species,95femalefamilies;98/195life60–70years;101diet;131–132trunk;199country examples;211–216diet/waterintomouth;155–159matriarch/experience actually read"
+          }
+        ],
+        "findings": "Actual full old article facts/question/inquiry read. Measurements/life/diet/trunk functions supported, no copying source fossil-taxonomy typo or combined2016count. Matriarch-specific passage and source EN/currentdating still to finish. Full WWF155–159 leadership/experience confirmed; Tokyo168 IUCN EN explicitly current displayedcategory.",
+        "pedagogyCountercheck": "Evidence labels match. Reason/transfer share same hint but relevant to multiple-functions limit; no misleading water-through-trunk-to-lungs claim. Entry generic compare wording, distinct enough inference from one observed use.",
+        "remaining": "Actual current media credit/rights and final UI/offline proof."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-african-savanna-elephant",
+        "image": "african-elephant",
+        "path": "public/world/african-elephant.webp",
+        "fileSHA256": "dacaa94f231bae85901a2ec7aa38e40ba864cdb087b9a6e3ee01249c865d3256",
+        "alt": "Ein Afrikanischer Savannenelefant mit Stoßzähnen steht im hohen Gras.",
+        "credit": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:African_elephant_(Loxodonta_africana).jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      }
     },
     {
       "id": "animal-lion",
@@ -84,11 +121,48 @@
       "limits": "Eine gut belegte Lebensweise einer Art ist noch keine Regel für alle verwandten Tiere.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "3220299ddcfd1a194e49c44eef6da3472ff9c52a2343f127bc017133c665a59e",
+      "teachingContentSHA256": "1d5ca1121a4c27271c7689f51053877acec344b0e490b64f0351f74b7684f6a3",
       "originalRelated": [
         "animal-cheetah",
         "animal-giraffe"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "3220299ddcfd1a194e49c44eef6da3472ff9c52a2343f127bc017133c665a59e",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "reasonHintCorrection20261018": {
+        "originalHint": "Achte darauf, ob die Aussage eine Art oder eine ganze Tiergruppe betrifft.",
+        "finding": "Der bisherige Hinweis zielte auf die Transferfrage. Neuer Hinweis bezieht sich konkret auf die bestehende Begründungsfrage; Antworten und gespeicherte Auswahlwerte unverändert.",
+        "hint": "Stelle dir mehrere Wege zur Beute vor. Müssen die Tiere dabei alle dieselbe Strecke nehmen?"
+      },
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-lion",
+        "sourceReads": [
+          {
+            "url": "https://www.nationalzoo.si.edu/animals/lion",
+            "anchors": "36shoulder1–1.2m;39Africa/India;42female16yearsmales12;45diet;49–52pride/cubcare/angledstalking"
+          },
+          {
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/loewe/",
+            "anchors": "83date06May2025,94–102roles/distribution/diet/speciesVUvsnorthernEN"
+          }
+        ],
+        "findings": "All current full article facts and mini-question supported. Use species VU, not northern-subspecies EN or donation headline says at risk of extinction. Do not assert all cats alike or every male hunts identically.",
+        "actualTeachingFinding": "Reason asks cooperation in hunting but hint asks species vs whole group, which belongs to transfer. Needs individual reason hint about different approach directions rather than taxonomic scope.",
+        "proposedCorrection": "Reason hint: Stelle dir mehrere Wege zur Beute vor. Müssen die Tiere dabei alle dieselbe Strecke nehmen? Preserve answer strings/positions.",
+        "remaining": "Actual current media/rights and final UI/offline proof."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-lion",
+        "image": "lion",
+        "path": "public/world/lion.webp",
+        "fileSHA256": "4c6cbc021834115da2e5c7aee76503799e2db98efe42e1efeb9bd339b355dde9",
+        "alt": "Ein männlicher Löwe mit großer Mähne liegt im Gras und gähnt.",
+        "credit": "Byrdyak",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Lion_male.jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      }
     },
     {
       "id": "animal-cheetah",
@@ -125,11 +199,42 @@
       "limits": "Aus einem kurzen Sprint folgt kein unbegrenzter Ausdauervorteil.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "91c77469bc008a5157d9091220924206a1eb80fe18a5a7034007e5e36a64637f",
+      "teachingContentSHA256": "38b3f24fa4a3aff9d1c02aced630e51eb8cf68bebb04c79fddfce53ac3a0707c",
       "originalRelated": [
         "animal-african-savanna-elephant",
         "animal-honey-bee"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "91c77469bc008a5157d9091220924206a1eb80fe18a5a7034007e5e36a64637f",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-cheetah",
+        "sourceReads": [
+          {
+            "url": "https://nationalzoo.si.edu/animals/cheetah",
+            "anchors": "35shortsprint;43headbody112–142cm/tailseparate;45–49countryexamples/life8–10wild;61–62diet;70–73female cubcare/malecoalitions"
+          },
+          {
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/gepard/",
+            "anchors": "83dated11Apr2023;95–99range/food/VU;stale2017populationexcluded"
+          }
+        ],
+        "findings": "Current112–142cm and8–10wildmean deliberately Smithsonian, not WWF121–145cm or maximum14yearslifespan. Female/cubs vs malescoalition scope valid; no exactpeak speed adopted.",
+        "pedagogyCountercheck": "Actual full article/mini-question/evidence/individual feedback read; sprint vs endurance comparison sound. Same hint relevant to both stages; conclusion left open on long-distance performance.",
+        "remaining": "Actual current media/rights and final UI/offline proof."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-cheetah",
+        "image": "cheetah",
+        "path": "public/world/cheetah.webp",
+        "fileSHA256": "579481fd88872c396fe62670c949d988e5e0e9db8e6893df9599b6a738f7b3b9",
+        "alt": "Ein Gepard mit schwarzem Fleckenmuster steht zwischen Gräsern und Büschen.",
+        "credit": "Hobbyfotowiki",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Cheetah_(Acinonyx_jubatus),_Maasai_Mara.jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      }
     },
     {
       "id": "animal-bengal-tiger",
@@ -164,11 +269,51 @@
       "limits": "„Meist“ und „immer“ sind unterschiedliche Aussagen. Die Karte nennt die Mutter mit Jungen ausdrücklich.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "7bab4c59d7d48108c30ff141d228c3c7576ef9e0f3f096e276a833745039bfc0",
+      "teachingContentSHA256": "f70faab5f2a7cc5ff21c459c8fc84b1e074ecdacde4ddb2ec78c75919c6dd663",
       "originalRelated": [
         "animal-african-savanna-elephant",
         "animal-honey-bee"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "7bab4c59d7d48108c30ff141d228c3c7576ef9e0f3f096e276a833745039bfc0",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "reasonHintCorrection20261018": {
+        "originalHint": "Lies das kleine Wort vor „allein“ und suche die genannte Ausnahme.",
+        "finding": "Der bisherige Hinweis zielte auf die Transferfrage. Neuer Hinweis bezieht sich konkret auf die bestehende Begründungsfrage; Antworten und gespeicherte Auswahlwerte unverändert.",
+        "hint": "Verfolge die Annäherung an die Beute. Was verändert sich an der Entfernung, wenn der Tiger unauffällig näherkommt?"
+      },
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-bengal-tiger",
+        "sourceReads": [
+          {
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/bengal-tiger",
+            "anchors": "81–10523Jan2024populationofmainlandsubspecies,146–290cmheadbody,10yearswild,fourcountries,habitats,diet,IUCNEN;113/121–125 motherwithcubs;139–143 stalkundercover toshortsprint"
+          }
+        ],
+        "findings": "Full actual article/mini-question/inquiry read. Bengal is retained population identity, not counted as a newly described species. Source supports numbers/habitat/diet/solitaryscope; specific silent-approach/mothercub passage needs finish.",
+        "actualTeachingFinding": "Reason asks why stalking helps hunting but hint about word meist/solitary is unrelated. Transfer hint about meist is appropriate; preserve it.",
+        "proposedCorrection": "Reason hint should ask about how the tiger approaches prey and changes its distance rather than social organization. Do not change saved answer strings/correct positions.",
+        "remaining": "Actual current media/rights and final UI/offline proof."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-bengal-tiger",
+        "image": "bengal-tiger",
+        "path": "public/world/bengal-tiger.webp",
+        "fileSHA256": "a6d659cb8bf88fd700c7dbba30380afe5dd93d4c5acbb070d0bdfabb8520d1aa",
+        "alt": "Ein orangefarbener Bengaltiger mit schwarzen Streifen läuft durch trockenes Gras.",
+        "credit": "Paul Mannix",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Bengal_Tiger_Karnataka.jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      },
+      "postCreationHintCountercheck20261018": {
+        "stage": "reason",
+        "before": "Verfolge die Annäherung an die Beute. Was verändert sich an der Entfernung, wenn der Tiger unauffällig näherkommt?",
+        "after": "Vergleiche einen Tiger, der Abstand zur Beute hält, mit einem, der den Abstand verkleinert. Welche Rolle könnte es spielen, ob die Beute ihn bemerkt?",
+        "finding": "Separate critical reread after correction: prior hint was relevant but too close to the choice wording; now asks for a comparison or missing information without copying the correct choice. Answers, solution and save identity unchanged.",
+        "remaining": "Current targeted UI/coldoffline proof and final full technical acceptance required."
+      }
     },
     {
       "id": "animal-giraffe",
@@ -207,11 +352,51 @@
       "limits": "Körperlänge und Höhe sind unterschiedliche Strecken; Einheit und Messrichtung gehören zur Zahl.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "e64460ec62fef54c18022ed453d88b018bd5dc1e56dd8bd6695b4815641ac1af",
+      "teachingContentSHA256": "6b443a70a1dcee2e12c931bab81545b5bfdf86946933484006ff1041541bdb44",
       "originalRelated": [
         "animal-african-savanna-elephant",
         "animal-honey-bee"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "e64460ec62fef54c18022ed453d88b018bd5dc1e56dd8bd6695b4815641ac1af",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "reasonHintCorrection20261018": {
+        "originalHint": "Frage zuerst: Von wo bis wo wurde gemessen?",
+        "finding": "Der bisherige Hinweis zielte auf die Transferfrage. Neuer Hinweis bezieht sich konkret auf die bestehende Begründungsfrage; Antworten und gespeicherte Auswahlwerte unverändert.",
+        "hint": "Vergleiche die Höhe des Tiers mit dem Greifen eines Blatts zwischen Zweigen. Welche Körperteile erfüllen dabei welche Aufgabe?"
+      },
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-giraffe",
+        "sourceReads": [
+          {
+            "url": "https://www.columbuszoo.org/animals/giraffe",
+            "anchors": "25height14–19ft=4.27–5.79m;35–36food;46habitat;56tongue;oldtaxon21andVU23notcurrentgenericclaim"
+          },
+          {
+            "url": "https://iucn.org/press-release/202508/four-giraffe-species-officially-recognised-major-conservation-reclassification",
+            "anchors": "42date21Aug2025;83–100fourdistinctspecies insteadofsinglespecies"
+          },
+          {
+            "url": "https://animals.sandiegozoo.org/animals/giraffe?qt-animals_page_content_tabs=1",
+            "anchors": "47okapirelation;65tongue;68waterguard;80life15–20"
+          }
+        ],
+        "findings": "Actual old full article/miniquestion/inquiry read. Roundedheight4.3–5.8mfromColumbus distinctfromSanDiegomax5.5m. FourtaxacurrentIUCN; no reusingColumbuslegacyflatVUorossiconecartilage53. Kenyaexample andplantfood valid.",
+        "pedagogyCountercheck": "Evidence labels fit. Reasonhint measurementdirection belongs totransfer, replacewithbodypartfunctioncomparison; numerictransfer correctlyrequiresmatchingmeasurement.",
+        "remaining": "Actual current media/rights and final current UI/search/back/native/offline proof."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-giraffe",
+        "image": "giraffe",
+        "path": "public/world/giraffe.webp",
+        "fileSHA256": "3c09d6d8c02e1269f37bdc7719576934296ad4aaa8bbe36b23ecf91c93ba78c9",
+        "alt": "Eine Giraffe steht mit ihrem ganzen Körper auf einer offenen, trockenen Ebene.",
+        "credit": "safaritravelplus",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Adult_Giraffe.jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      }
     },
     {
       "id": "animal-giant-panda",
@@ -248,11 +433,47 @@
       "limits": "Die zoologische Verwandtschaftsgruppe und die überwiegende Nahrung sind zwei verschiedene Informationen.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "0ba4dc32d3a46165810c6f5c442cb58a7bcc7ac7a8cfbe4a10cb8a8f45a3568c",
+      "teachingContentSHA256": "e9cbecb6665f9a00c30d8bb68540ba99303596238d18a986396108119a2ea24e",
       "originalRelated": [
         "animal-african-savanna-elephant",
         "animal-honey-bee"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "0ba4dc32d3a46165810c6f5c442cb58a7bcc7ac7a8cfbe4a10cb8a8f45a3568c",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "reasonHintCorrection20261018": {
+        "originalHint": "Prüfe den Speiseplan direkt, statt ihn nur aus einem Namen abzuleiten.",
+        "finding": "Der bisherige Hinweis zielte auf die Transferfrage. Neuer Hinweis bezieht sich konkret auf die bestehende Begründungsfrage; Antworten und gespeicherte Auswahlwerte unverändert.",
+        "hint": "Vergleiche einen harten Bambusstängel mit weicher Nahrung. Was muss beim Abbeißen und Zerkleinern geleistet werden?"
+      },
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-giant-panda",
+        "sourceReads": [
+          {
+            "url": "https://www.nationalzoo.si.edu/animals/giant-panda",
+            "anchors": "34,37length1.2–1.8m,40–45China/lifeestimated15–20wild,49scent,53jaw"
+          },
+          {
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/grosser-panda/",
+            "anchors": "83date24Jan2024;84bamboo99percent;87Carnivora;88headbody120–180cm;100IUCNVUexplicitassessment2016"
+          }
+        ],
+        "findings": "Current old full article/miniquestion/inquiry read: bamboo jaw/scent, qualified estimatedlifespan andbodylength supported; do not copy uncertain coat theories or pound/kg typo. WWF speciesVU/currentdate still pending.",
+        "pedagogyCountercheck": "Reason asks hard-bamboo tools but hint about speciesname and diet is transfer-focused, needs one specific hint on material hardness and chewing. Transfer group-vs-diet useful.",
+        "remaining": "Actual current media/rights and final UI/offline proof."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-giant-panda",
+        "image": "giant-panda",
+        "path": "public/world/giant-panda.webp",
+        "fileSHA256": "810c49dd57bbcdfd4968b43a64afeb6c75cb4988e62de17f733339d7b6a36b56",
+        "alt": "Ein schwarz-weißer Großer Panda sitzt zwischen Felsen und hält Bambus.",
+        "credit": "Clément Bardot",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Panda_Géant.jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      }
     },
     {
       "id": "animal-western-lowland-gorilla",
@@ -289,11 +510,42 @@
       "limits": "„Wald“ ist eine grobe Lebensraumbeschreibung, keine vollständige Prüfung eines bestimmten Ortes.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "1cd043bfde43959862529c739e51dc7c4a7ac8c3999570f0cbc3341e0cc4e008",
+      "teachingContentSHA256": "0cda6d39bd71ba183fcb134391125c8a7d7a3fb350b62fe4c99067e2c1c94b24",
       "originalRelated": [
         "animal-african-savanna-elephant",
         "animal-honey-bee"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "1cd043bfde43959862529c739e51dc7c4a7ac8c3999570f0cbc3341e0cc4e008",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-western-lowland-gorilla",
+        "sourceReads": [
+          {
+            "url": "https://www.nationalzoo.si.edu/animals/western-lowland-gorilla",
+            "anchors": "36knuckles;40female150–200lb=68.04–90.72kg,ignorewrong113.4kgparenthesis;43range;49wild30–40;52–54communication;57food;69group"
+          },
+          {
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/westlicher-gorilla",
+            "anchors": "83date22Feb2024;86–87group/swamp;100–103habitat/food/IUCNCR;108outdated7greatapesexcluded"
+          }
+        ],
+        "findings": "Actual old full article/miniquestion/inquiry read. Species/subspeciesscopeexplicit; convertpoundrangeinsteadcopyingincorrectkgparenthesis. No outdatedgreatapecountorundateddeclinepercent imported.",
+        "pedagogyCountercheck": "Actual food/habitat versus genericforest distinction sensible; sharedhint relevant, keep. No baretreecover=guaranteed suitablehabitat.",
+        "remaining": "Actual current media/rights and final current UI/search/back/native/offline proof."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-western-lowland-gorilla",
+        "image": "western-lowland-gorilla",
+        "path": "public/world/western-lowland-gorilla.webp",
+        "fileSHA256": "70008c7cb9aeca0064c36745cbf770267a6df71f3f0923ac373b9af782f5361a",
+        "alt": "Ein Westlicher Flachlandgorilla mit dunklem Fell steht in grüner Vegetation.",
+        "credit": "Mira Meijer, Burgers’ Zoo",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Western_lowland_gorilla_(Gorilla_gorilla_gorilla).jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      }
     },
     {
       "id": "animal-bornean-orangutan",
@@ -328,11 +580,67 @@
       "limits": "Ein kurzer sichtbarer Ausschnitt belegt nicht den ganzen Entwicklungsweg.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "8f72c43f291c73a2ed8490c8c14261460730c9c33abc644c0703d9981afea78f",
+      "teachingContentSHA256": "15b0117a367ed0db5496c65e0c5b96ac43541a2b268124cf4b90e4e9919f6e11",
       "originalRelated": [
         "animal-african-savanna-elephant",
         "animal-honey-bee"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "8f72c43f291c73a2ed8490c8c14261460730c9c33abc644c0703d9981afea78f",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "reasonHintCorrection20261018": {
+        "originalHint": "Vergleiche den Zeitraum eines Fotos mit dem Zeitraum des Lernens.",
+        "finding": "Der bisherige Hinweis zielte auf die Transferfrage. Neuer Hinweis bezieht sich konkret auf die bestehende Begründungsfrage; Antworten und gespeicherte Auswahlwerte unverändert.",
+        "hint": "Stelle dir den Weg von einem Ast zum nächsten vor. Wo braucht der Körper Halt, während sich eine Hand weiterbewegt?"
+      },
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-bornean-orangutan",
+        "sourceReads": [
+          {
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/borneo-orang-utan",
+            "anchors": "89female30–45kg;94upperlife50;95–99range/habitat/food/CR;110–117armgrip/arboreal;143–145longmaternaldependency;157swamp/peatforest;181CR"
+          },
+          {
+            "url": "https://animals.sandiegozoo.org/animals/orangutan",
+            "anchors": "65arms/arboreal;81–84motherteachesfruit/nests/survivalover7years;genericorangutangroupusedonlysharedbehaviour,notBorneanmeasure/taxonscope."
+          }
+        ],
+        "findings": "Actual old full article/miniquestion/inquiry read; species-specific numbers/diet/CR and arborealgrip supported. Maternal long learning and swampforest exact passage pending. Source table94upper50yearsvsbody146about40 not directly contradictory, currentup-to50deliberate. Maternal dependency supported, explicit learning passage still needed. Further specific source gap resolved by actually read passage recorded above.",
+        "pedagogyCountercheck": "Reason asks arm/grip function but hint about singlephoto vs yearsoflearning addresses transfer. Replace reason hint with how hand holds branch while moving; retain transfer hint.",
+        "remaining": "Explicit maternal learning passage, actual current media/rights and UI/offline proof."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-bornean-orangutan",
+        "image": "bornean-orangutan",
+        "path": "public/world/bornean-orangutan.webp",
+        "fileSHA256": "73660372479f3889563190fabcb2029728c244626d3b731d7531a47adf8f1a4e",
+        "alt": "Nahaufnahme eines männlichen Borneo-Orang-Utans mit rotbraunem Fell und großen Wangenwülsten.",
+        "credit": "Eric Kilby",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Male_Bornean_Orangutan_-_Big_Cheeks.jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      },
+      "sourceAddition20261018": {
+        "before": [
+          {
+            "label": "Borneo-Orang-Utan – WWF Deutschland",
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/borneo-orang-utan"
+          }
+        ],
+        "after": [
+          {
+            "label": "Borneo-Orang-Utan – WWF Deutschland",
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/borneo-orang-utan"
+          },
+          {
+            "label": "San Diego Zoo · Jungtiere lernen von ihrer Mutter",
+            "url": "https://animals.sandiegozoo.org/animals/orangutan"
+          }
+        ],
+        "reason": "Zusätzliche tatsächlich gelesene passende Quelle für eine bestehende Aussage; Artikeltext, Maß, Grundfrage, Antworten, Medien-ID und alle alten Quellen erhalten.",
+        "readAnchor": "65arms/arboreal;81–84motherteachesfruit/nests/survivalover7years;genericorangutangroupusedonlysharedbehaviour,notBorneanmeasure/taxonscope."
+      }
     },
     {
       "id": "animal-polar-bear",
@@ -369,11 +677,42 @@
       "limits": "Eine beobachtete Fähigkeit ist kein Nachweis, dass alle Anforderungen an den Lebensraum erfüllt sind.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "3197988c2eb63be36e32353a543a49a83e9096bf5dd2702eb73e57dbd6e124c3",
+      "teachingContentSHA256": "a8d6f78b800eea80c086450d2bb61cdd839210f768e33bf53b94400de163950f",
       "originalRelated": [
         "animal-emperor-penguin",
         "animal-orca"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "3197988c2eb63be36e32353a543a49a83e9096bf5dd2702eb73e57dbd6e124c3",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-polar-bear",
+        "sourceReads": [
+          {
+            "url": "https://animals.sandiegozoo.org/animals/polar-bear",
+            "anchors": "51feet/ice,56–66Arctic/sealhunt/swim,74mother/solitary,106sexmeanlife20–25female15–18male,119headbody1.8–2.7m"
+          },
+          {
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/eisbaer/",
+            "anchors": "83date07Sep2021;95–99Arctic/food/globalVU;88different1.8–2.8msourcenotselected"
+          }
+        ],
+        "findings": "Actual old full article/miniquestion/inquiry read. Quantitiesexplicitlysource-specific/dimensions/lifeaverages; sea-ice essentialhunt despite swimming sourcevalid. No unsupported globalspeed/distance/population claims copied.",
+        "pedagogyCountercheck": "Bothhintsrelevant; correctdrawback fromonephoto supported. Keep hints/choices, no unnecessaryrewrite.",
+        "remaining": "Actual current media/rights and final current UI/search/back/native/offline proof."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-polar-bear",
+        "image": "polar-bear",
+        "path": "public/world/polar-bear.webp",
+        "fileSHA256": "353d3fa202b5192e9d9666336bb34dcb45ca84e2c343afede40b73a407496545",
+        "alt": "Ein Eisbär liegt am Boden und schaut nach vorn.",
+        "credit": "U.S. Fish and Wildlife Service; laut Quellenseite Susanne Miller oder Donna Dewhurst",
+        "license": "Public domain — U.S. Fish and Wildlife Service",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Polar_Bear.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Polar_Bear.jpg",
+        "recordedRightsEvidence": "Die Quellenseite bestätigt ein Werk eines USFWS-Beschäftigten im Rahmen seiner dienstlichen Aufgaben.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      }
     },
     {
       "id": "animal-emperor-penguin",
@@ -412,11 +751,51 @@
       "limits": "Ähnliche Umweltbedingungen beweisen keine gemeinsame geografische Verbreitung.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "b224c5b2cb1849ee4661f364b9f03ea461e7fbbf3ff8d80ea9ef826ee686b764",
+      "teachingContentSHA256": "4cda6eefe64d0f43e8fa6780d5ddde6f5f0b21fe5b209503ee65eb5b5f87753e",
       "originalRelated": [
         "animal-african-savanna-elephant",
         "animal-honey-bee"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "b224c5b2cb1849ee4661f364b9f03ea461e7fbbf3ff8d80ea9ef826ee686b764",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "reasonHintCorrection20261018": {
+        "originalHint": "Vergleiche Arktis und Antarktis auf der Weltkugel.",
+        "finding": "Der bisherige Hinweis zielte auf die Transferfrage. Neuer Hinweis bezieht sich konkret auf die bestehende Begründungsfrage; Antworten und gespeicherte Auswahlwerte unverändert.",
+        "hint": "Vergleiche die Bewegung eines Flügels in Luft und Wasser. Flugunfähigkeit schließt eine andere Aufgabe nicht aus."
+      },
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-emperor-penguin",
+        "sourceReads": [
+          {
+            "url": "https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/",
+            "anchors": "310–329: Antarctic fastice, flightless, huddle;343–347food;317some40years nottypical"
+          },
+          {
+            "url": "https://iucn.org/press-release/202604/emperor-penguin-and-antarctic-fur-seal-now-endangered-due-climate-change-iucn",
+            "anchors": "42date09Apr2026;44–45/70–71ENfromNT, earlyicebreak affects chicks"
+          },
+          {
+            "url": "https://www.penguinsinternational.org/penguin-record-breakers/",
+            "anchors": "61:100–130cm length, notexplicitstandingheight;76wingpropulsion"
+          }
+        ],
+        "findings": "Whole existing article/miniquestion/inquiry read. Current measurement note explicitly calls the source bodylength comparedasheight; no proof of exact standing height. EN current primary source verified; do not use stale NT.",
+        "pedagogyCountercheck": "Reason hint refers to poles instead of propulsion: prepared actual wing-function hint. Stage3 natural Antarctica vs arbitrary zoo location is a separate valid source-scope task.",
+        "remaining": "Actual current media/rights and final current UI/search/back/native/offline proof; limited source gaps explicitly described above remain open."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-emperor-penguin",
+        "image": "emperor-penguin",
+        "path": "public/world/emperor-penguin.webp",
+        "fileSHA256": "05da6e4b57ef36941affb35c579094719dd6ba6c3ee0fa66787b784540d62160",
+        "alt": "Zwei Kaiserpinguine stehen auf einer Eisfläche in der Antarktis.",
+        "credit": "Michael Van Woert / NOAA",
+        "license": "Public domain — NOAA",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Emperor_penguin.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Emperor_penguin.jpg",
+        "recordedRightsEvidence": "Die Quellenseite bestätigt NOAA-Material; Fotograf Michael Van Woert, Rossmeer, 1999.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      }
     },
     {
       "id": "animal-blue-whale",
@@ -453,11 +832,47 @@
       "limits": "Eine große Nahrungsmenge kann aus vielen kleinen Tieren bestehen. Die Größe eines einzelnen Beutetiers ist eine andere Größe.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "1c36a6c0b81d0e567c98e60ad32835aeadadc8c2d2d8d3d80d05d5c972211e18",
+      "teachingContentSHA256": "688b067a4843b2fb7f29739d35eff36c5c10a8f5a8b12eb2ca92d7feb068e7aa",
       "originalRelated": [
         "animal-orca",
         "animal-common-bottlenose-dolphin"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "1c36a6c0b81d0e567c98e60ad32835aeadadc8c2d2d8d3d80d05d5c972211e18",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "reasonHintCorrection20261018": {
+        "originalHint": "Unterscheide die Größe eines einzelnen Nahrungstiers von der gesamten Nahrungsmenge.",
+        "finding": "Der bisherige Hinweis zielte auf die Transferfrage. Neuer Hinweis bezieht sich konkret auf die bestehende Begründungsfrage; Antworten und gespeicherte Auswahlwerte unverändert.",
+        "hint": "Verfolge Nahrung und Wasser getrennt: Was soll im Maul bleiben, und was muss nach außen gelangen?"
+      },
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-blue-whale",
+        "sourceReads": [
+          {
+            "url": "https://www.fisheries.noaa.gov/species/blue-whale",
+            "anchors": "480grouping;483krillretained/waterout;486–490oceanrange/California;497estimated80–90life;503–506ship/gear"
+          },
+          {
+            "url": "https://www.worldwildlife.org/species/whale/blue-whale/",
+            "anchors": "195–208 global profileEndangered/bodylength80–100ft=24.384–30.48m rounded24–30"
+          }
+        ],
+        "findings": "Actual old full article/miniquestion/inquiry read; qualifiedlifespan, physicalfilterdirection,range/threats supported. NOAA ESA Endangered not automatically IUCNEN: WWFglobalEN/body80–100ft actualmainpassage still pending.",
+        "pedagogyCountercheck": "Reason hint discusses foodsize/quantity instead of filtering direction. Correctfeedback includes DieRichtungistvertauscht immediately after correct choice; wrong-oriented copy misleading in success state. Fix only relevant hint and correct feedback, preserve choices/positions.",
+        "remaining": "Actual current media/rights and final UI/offline proof."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-blue-whale",
+        "image": "blue-whale",
+        "path": "public/world/blue-whale.webp",
+        "fileSHA256": "69689772df3b8d20858660462f827bc9086c6710611a65d2432ad3919c9cd88d",
+        "alt": "Der dunkle Rücken eines Blauwals taucht an der Meeresoberfläche auf; eine Wasserfontäne steigt über ihm auf.",
+        "credit": "Fred Benko / NOAA",
+        "license": "Public domain — NOAA",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Bluewhale_300.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Bluewhale_300.jpg",
+        "recordedRightsEvidence": "Die Quellenseite bestätigt NOAA-Material, das im Rahmen dienstlicher Aufgaben entstanden ist.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      }
     },
     {
       "id": "animal-common-bottlenose-dolphin",
@@ -496,11 +911,91 @@
       "limits": "Ähnliche Körperformen können zu ähnlicher Fortbewegung passen, ohne dieselbe Verwandtschaftsgruppe zu bedeuten.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "cafc727a4abe3778a462d314f84682defb6c66840258c29d1f3151b1817e5085",
+      "teachingContentSHA256": "8fe29265947020c1279bc071e23f72807ca4fd3b2a17386fd73f67c84827a743",
       "originalRelated": [
         "animal-african-savanna-elephant",
         "animal-honey-bee"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "cafc727a4abe3778a462d314f84682defb6c66840258c29d1f3151b1817e5085",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "reasonHintCorrection20261018": {
+        "originalHint": "Suche ein Merkmal, das mehr als den Umriss beschreibt.",
+        "finding": "Der bisherige Hinweis zielte auf die Transferfrage. Neuer Hinweis bezieht sich konkret auf die bestehende Begründungsfrage; Antworten und gespeicherte Auswahlwerte unverändert.",
+        "hint": "Unterscheide den ausgesendeten Laut vom zurückkehrenden Echo. Welcher Schritt liefert eine zusätzliche Information?"
+      },
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-common-bottlenose-dolphin",
+        "sourceReads": [
+          {
+            "url": "https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin",
+            "anchors": "412taxon;4446–13ft;448/48940–60years;479fluidgroups;481–482diet/echo;485–486range"
+          },
+          {
+            "url": "https://www.worldwildlife.org/species/dolphin-and-porpoise/common-bottlenose-dolphin/",
+            "anchors": "181range;193–194LC;typoTursiopstruncates200explicitlynotcopied"
+          },
+          {
+            "url": "https://iucn-csg.org/red-list-updates-published-for-sperm-whales-and-lahilles-bottlenose-dolphins/",
+            "anchors": "84–87 dated13Nov2025/Lahille subspeciesENnotglobalwhole-speciesEN"
+          },
+          {
+            "url": "https://www.fisheries.noaa.gov/feature-story/scientists-analyze-dolphin-breaths-better-understand-risks-surface-oil",
+            "anchors": "424:actualairbreathing/lungs/surface respiratory study. No spotted-dolphin tissue facts transferred."
+          }
+        ],
+        "findings": "Actual full old article/miniquestion/inquiry read; lengths/sex-qualifiedmaxlife,grouping/food/echo supported. GlobalLC/subspeciescaveat sources and explicit lungbreathing still pending; NOAA MMPA stockdesignation not globalIUCN. Further specific source gap resolved by actually read passage recorded above.",
+        "pedagogyCountercheck": "Reason asks echo info but hint about featurebeyondoutline addresses transfer. Replace reason hint with emittedsound versus returningecho; preserve transferhint and choices.",
+        "remaining": "Explicit lung/air-breathing passage, actual current media/rights and UI/offline proof."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-common-bottlenose-dolphin",
+        "image": "bottlenose-dolphin",
+        "path": "public/world/bottlenose-dolphin.webp",
+        "fileSHA256": "9d5e79835ce2be6b9ec662bab6ddbce6417eb96d386ba8cec07145aea168aae6",
+        "alt": "Ein Großer Tümmler schwimmt in einer schäumenden Bootswelle an der Wasseroberfläche.",
+        "credit": "NASA",
+        "license": "Public domain — NASA",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg",
+        "recordedRightsEvidence": "Die Quellenseite nennt NASA als Urheber und bestätigt den gemeinfreien Status des Fotos.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      },
+      "sourceAddition20261018": {
+        "before": [
+          {
+            "label": "Common Bottlenose Dolphin – NOAA Fisheries",
+            "url": "https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin"
+          },
+          {
+            "label": "Common bottlenose dolphins – WWF US",
+            "url": "https://www.worldwildlife.org/species/dolphin-and-porpoise/common-bottlenose-dolphin/"
+          },
+          {
+            "label": "Red List Updates … Lahille’s Bottlenose Dolphins – IUCN SSC CSG",
+            "url": "https://iucn-csg.org/red-list-updates-published-for-sperm-whales-and-lahilles-bottlenose-dolphins/"
+          }
+        ],
+        "after": [
+          {
+            "label": "Common Bottlenose Dolphin – NOAA Fisheries",
+            "url": "https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin"
+          },
+          {
+            "label": "Common bottlenose dolphins – WWF US",
+            "url": "https://www.worldwildlife.org/species/dolphin-and-porpoise/common-bottlenose-dolphin/"
+          },
+          {
+            "label": "Red List Updates … Lahille’s Bottlenose Dolphins – IUCN SSC CSG",
+            "url": "https://iucn-csg.org/red-list-updates-published-for-sperm-whales-and-lahilles-bottlenose-dolphins/"
+          },
+          {
+            "label": "NOAA · Delfine atmen Luft",
+            "url": "https://www.fisheries.noaa.gov/feature-story/scientists-analyze-dolphin-breaths-better-understand-risks-surface-oil"
+          }
+        ],
+        "reason": "Zusätzliche tatsächlich gelesene passende Quelle für eine bestehende Aussage; Artikeltext, Maß, Grundfrage, Antworten, Medien-ID und alle alten Quellen erhalten.",
+        "readAnchor": "424:actualairbreathing/lungs/surface respiratory study. No spotted-dolphin tissue facts transferred."
+      }
     },
     {
       "id": "animal-orca",
@@ -537,11 +1032,47 @@
       "limits": "Eine Beobachtung an einer Population lässt sich nicht ohne weitere Belege auf alle Populationen übertragen.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "16432717cf864a03785d55009a6bdca6d11dcaeccde9b360f15d6b8490386e90",
+      "teachingContentSHA256": "ffffa7688698b36a3bf49f15eef7e19c490167e3623027d70b5ff7a6b6852923",
       "originalRelated": [
         "animal-african-savanna-elephant",
         "animal-honey-bee"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "16432717cf864a03785d55009a6bdca6d11dcaeccde9b360f15d6b8490386e90",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "reasonHintCorrection20261018": {
+        "originalHint": "Prüfe, ob von einer Familie, einer Population oder der ganzen Art gesprochen wird.",
+        "finding": "Der bisherige Hinweis zielte auf die Transferfrage. Neuer Hinweis bezieht sich konkret auf die bestehende Begründungsfrage; Antworten und gespeicherte Auswahlwerte unverändert.",
+        "hint": "Unterscheide Schutz vor einer Gefahr vom Erwerb einer Fähigkeit. Was könnte ein Jungtier bei einer gemeinsamen Tätigkeit beobachten?"
+      },
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-orca",
+        "sourceReads": [
+          {
+            "url": "https://www.fisheries.noaa.gov/species/killer-whale",
+            "anchors": "471–480largestdolphin/population-specificSouthernResidentprotection;497–502matrilinegroups,culturallylearnedcalls/hunting,ecotypediet;507wildmeansmale30female50"
+          },
+          {
+            "url": "https://www.wwf.org.uk/learn/fascinating-facts/orcas",
+            "anchors": "21Delphinidae;28length5.5–9.8m;50max90differentfrommeans;78varieddiet"
+          }
+        ],
+        "findings": "Actual old full article/miniquestion/inquiry read. Species group/length/sex-qualifiedmeanage/populationscope supported, no all-orcas-endangered claim or uniformdiet. No counts or newtaxonomychange imported.",
+        "pedagogyCountercheck": "Labels match. Reason hint must explain learning in group, not only population scope. Transfer explicitly restricts generalising one population diet; choice strings/indices stay.",
+        "remaining": "Actual current media credit/rights and final UI/search/back/native/offline proof; not full acceptance from source URL alone."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-orca",
+        "image": "orca",
+        "path": "public/world/orca.webp",
+        "fileSHA256": "cc4aec240f21eb36e79ccde7efa775e12c4d5da5d7f2b04594aaa8c90b9e9630",
+        "alt": "Ein schwarz-weißer Orca springt vor einer bergigen Küste aus dem Meer.",
+        "credit": "The Modern Polymath",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Orca_breaching.jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      }
     },
     {
       "id": "animal-common-octopus",
@@ -578,12 +1109,52 @@
       "limits": "Die beobachtete Greifbewegung zeigt nur eine von mehreren belegten Leistungen der Arme.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "2f67c935e53293517f9fe9429ebf7b7df757e491965eb78ee70b46ff6c894a56",
+      "teachingContentSHA256": "9f7fa95f5c87fab894696dc21f4b16a320dd7bc344502ed3d1a1cad127d3b5b0",
       "originalRelated": [
         "animal-african-savanna-elephant",
         "animal-honey-bee",
         "science-coral-reef"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "2f67c935e53293517f9fe9429ebf7b7df757e491965eb78ee70b46ff6c894a56",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "reasonHintCorrection20261018": {
+        "originalHint": "Lies den Überraschungsfakt und vergleiche ihn mit dem Greifen.",
+        "finding": "Der bisherige Hinweis zielte auf die Transferfrage. Neuer Hinweis bezieht sich konkret auf die bestehende Begründungsfrage; Antworten und gespeicherte Auswahlwerte unverändert.",
+        "hint": "Verfolge, was der Krake mit dem Wasser tut. Unterscheide den Wasserstrahl von dem Ort, an dem er sich versteckt."
+      },
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-common-octopus",
+        "sourceReads": [
+          {
+            "url": "https://www.aquarium-larochelle.com/en/species/octopus/",
+            "anchors": "115Octopusvulgaris;127coast;134LC accordingtoaquarium;139solitary;145–148food, arm chemical/tactile andjet"
+          },
+          {
+            "url": "https://animaldiversity.org/accounts/Octopus_vulgaris/",
+            "anchors": "61eightarms; currentcardeasternAtlanticdoesnotclaim datedJapanworldwiderange"
+          },
+          {
+            "url": "https://www.devonandsevernifca.gov.uk/wp-content/uploads/2025/06/Agenda-Item-11-Influx-of-Octopus-into-Devon-and-the-South-West.pdf",
+            "anchors": "page0 lines7–29: mantle15–25cmwithoutarms,eightlimbs,jet,life1–2years,food;page1 lines48–52 solitaryden"
+          }
+        ],
+        "findings": "Whole existing article/miniquestion/inquiry read. Mantle measure explicitly excludes arms. Current LC wording attributes aquarium; no new universal conservation assessment. Adjacent Eledone species and Octopusvariabilis beak-ratiofigure not transferred.",
+        "pedagogyCountercheck": "Reason hint wrongly uses arm senses for jet propulsion: prepared water-jet hint. Transfer chemical/tactile arms has actual LaRochelle support.",
+        "remaining": "Actual current media/rights and final current UI/search/back/native/offline proof; limited source gaps explicitly described above remain open."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-common-octopus",
+        "image": "common-octopus",
+        "path": "public/world/common-octopus.webp",
+        "fileSHA256": "014e76f52f68e52aedec2d34eee467f6de0b2467451c5819f3b86c0a4cc3a560",
+        "alt": "Ein Gewöhnlicher Krake im Aquarium breitet seine hellen Arme über Steine aus.",
+        "credit": "MartinThoma",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Octopus-vulgaris.jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      }
     },
     {
       "id": "animal-green-sea-turtle",
@@ -622,11 +1193,51 @@
       "limits": "Der Lebensraum allein bestimmt nicht die Atmungsorgane eines Tiers.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "54b5b509dccdeb0ffb07fc934160409f8aa2df0ddf21ae78b75af98a6e0a2fc1",
+      "teachingContentSHA256": "1293a46d77db0de9c9922d241dd4fdc32ef5c4e4373796fdc34fe036653ad92b",
       "originalRelated": [
         "animal-african-savanna-elephant",
         "animal-honey-bee"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "54b5b509dccdeb0ffb07fc934160409f8aa2df0ddf21ae78b75af98a6e0a2fc1",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "reasonHintCorrection20261018": {
+        "originalHint": "Vergleiche die Atmung mit der des Delfins und des Walhais.",
+        "finding": "Der bisherige Hinweis zielte auf die Transferfrage. Neuer Hinweis bezieht sich konkret auf die bestehende Begründungsfrage; Antworten und gespeicherte Auswahlwerte unverändert.",
+        "hint": "Überlege, ob Nahrungssuche und Eiablage dieselben Bedingungen brauchen. Was fehlt, wenn nur einer der beiden Orte erhalten bleibt?"
+      },
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-green-sea-turtle",
+        "sourceReads": [
+          {
+            "url": "https://www.fisheries.noaa.gov/species/green-turtle",
+            "anchors": "497airbreathing/natalregionreturn/migration;500adultjuvenilediet;506Hawaii;512estimated70plus;519–531threats"
+          },
+          {
+            "url": "https://turtle-foundation.org/de/meeresschildkroeten/arten/",
+            "anchors": "66species;80–82explicitcarapace90–120cm;90diet;97LC"
+          },
+          {
+            "url": "https://iucn.org/press-release/202510/arctic-seals-threatened-climate-change-birds-decline-globally-iucn-red-list",
+            "anchors": "42date10Oct2025;90–97explicitglobalENtoLCwithremaininglocalthreats"
+          }
+        ],
+        "findings": "Actual full old article/miniquestion/inquiry read. Correct scopeglobalLCsinceOct2025 distinctfromNOAAregionalESA; specifiedcarapace notwholebody; lifeuncertaintyandnatalregionreturn notexactbeachGPS guarantee.",
+        "pedagogyCountercheck": "Reason habitatfunctionneedsitsownhint; currentlungbreathinghintbelongs totransfer. Transfer swimmingvsbreathinggovernedbyreptilephysiology, source497explicit.",
+        "remaining": "Actual current media credit/rights and final UI/search/back/native/offline proof; not full acceptance from source URL alone."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-green-sea-turtle",
+        "image": "green-sea-turtle",
+        "path": "public/world/green-sea-turtle.webp",
+        "fileSHA256": "2ec67cd00ef5b759cfc3af4894518d74774974d94327fa99fca0138991b1b712",
+        "alt": "Eine Grüne Meeresschildkröte schwimmt über einem Korallenriff.",
+        "credit": "Rickard Zerpe",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas).jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      }
     },
     {
       "id": "animal-red-kangaroo",
@@ -661,10 +1272,46 @@
       "limits": "Eine Messung muss zusammen mit ihrer Bezugsgruppe gelesen werden; die Karte nennt diese ausdrücklich.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "91f5593511e5bc6aa9ab24c93b451a7c775b78c78eda1fe41b672d08c24e7365",
+      "teachingContentSHA256": "9fd395949a6eebd851d4d6893e807a851d101e8043df762f8bc3aca9a37a4b53",
       "originalRelated": [
         "animal-koala"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "91f5593511e5bc6aa9ab24c93b451a7c775b78c78eda1fe41b672d08c24e7365",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "reasonHintCorrection20261018": {
+        "originalHint": "Lies nicht nur die Zahl, sondern auch die Beschreibung direkt davor.",
+        "finding": "Der bisherige Hinweis zielte auf die Transferfrage. Neuer Hinweis bezieht sich konkret auf die bestehende Begründungsfrage; Antworten und gespeicherte Auswahlwerte unverändert.",
+        "hint": "Vergleiche das Abstoßen vom Boden mit dem Festhalten einer Pflanze. Welche Körperteile tragen zur beschriebenen Bewegung bei?"
+      },
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-red-kangaroo",
+        "sourceReads": [
+          {
+            "url": "https://taronga.org.au/animals/red-kangaroo",
+            "anchors": "45life20wild23care;51habitat;57male65–92kg/female25–35;60grass;66centralAustralia"
+          },
+          {
+            "url": "https://museumsvictoria.com.au/melbournemuseum/resources/wild/biogeographic-regions/australasia/red-kangaroo/",
+            "anchors": "81–85marsupial/livebirth/pouch/group/native;137IUCNLC"
+          }
+        ],
+        "findings": "Whole existing article/miniquestion/inquiry read. Current weight explicitly adult male, not entire species/female. Taxon and Australian/example region distinguished.",
+        "pedagogyCountercheck": "Reason hint refers to male weight instead of hopping: prepared hindleg/bodyfunction hint. Transfer referencegroup/weight is relevant and answer strings retained.",
+        "remaining": "Actual current media/rights and final current UI/search/back/native/offline proof; limited source gaps explicitly described above remain open."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-red-kangaroo",
+        "image": "red-kangaroo",
+        "path": "public/world/red-kangaroo.webp",
+        "fileSHA256": "c3c599fb206e66f08fa09623d2bb52d09169ae3f0822a301aa35bfa14fc72737",
+        "alt": "Ein Rotes Riesenkänguru steht hinter einem zweiten Känguru, das auf dem Boden liegt.",
+        "credit": "Namoroka",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Osphranter_rufus,_Perth_Zoo,_20220427_3.jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      }
     },
     {
       "id": "animal-koala",
@@ -701,11 +1348,47 @@
       "limits": "Eine große Menge ungeeigneter Pflanzen ersetzt die passende Nahrung nicht.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "b607f0da4910b5784281ef7cf0b3a35d825c19d7aab30ce70e83ba7c1b3febab",
+      "teachingContentSHA256": "683f57ba0471afe4b8d6ebe9452365c4aed63ec9bef667da71e4a6dc5bd79620",
       "originalRelated": [
         "animal-african-savanna-elephant",
         "animal-honey-bee"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "b607f0da4910b5784281ef7cf0b3a35d825c19d7aab30ce70e83ba7c1b3febab",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "reasonHintCorrection20261018": {
+        "originalHint": "Achte auf das Wort „bestimmter“ in der Nahrungsbeschreibung.",
+        "finding": "Der bisherige Hinweis zielte auf die Transferfrage. Neuer Hinweis bezieht sich konkret auf die bestehende Begründungsfrage; Antworten und gespeicherte Auswahlwerte unverändert.",
+        "hint": "Vergleiche Nahrung im Baum mit Halt am Ast. Welche Aufgabe lösen Hände beim Klettern, die ein passendes Blatt allein nicht löst?"
+      },
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-koala",
+        "sourceReads": [
+          {
+            "url": "https://animals.sandiegozoo.org/animals/koala",
+            "anchors": "46marsupialnotbear,49range,53–57grip/food/rest,91usually10–15years,103headbody60–80cm"
+          },
+          {
+            "url": "https://www.dcceew.gov.au/environment/biodiversity/threatened/species/koalas/listing-under-national-environmental-law",
+            "anchors": "11updated28Apr2026;13combinedQLD/NSW/ACTendangered12Feb2022"
+          }
+        ],
+        "findings": "Actual full old article/miniquestion/inquiry read. Regionallegalstatementcorrect scoped, notglobalIUCN. Dietmainlyeucalypt andselectedspecies supported; no exactweightfromsource105whosepounds/kginconsistent.",
+        "pedagogyCountercheck": "Evidence labels right; reasonhintaboutcertainfoodplantsbelongs totransfer andneedsgrip/holdingmethodprompt. No harmlesspet/invitationtoapproachclaim.",
+        "remaining": "Actual current media credit/rights and final UI/search/back/native/offline proof; not full acceptance from source URL alone."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-koala",
+        "image": "koala",
+        "path": "public/world/koala.webp",
+        "fileSHA256": "d35b2caf122a949266effd2e6d33f2545556d28091c4e8e506fe3e1a56583f94",
+        "alt": "Ein grauer Koala sitzt auf einem Ast neben grünen Blättern.",
+        "credit": "Gzen92",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Koala_(Phascolarctos_cinereus)_(3).jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      }
     },
     {
       "id": "animal-jaguar",
@@ -742,11 +1425,42 @@
       "limits": "Eine Bewegung, eine Tiergruppe und ein typischer Lebensraum sind drei verschiedene Beschreibungen.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "fe9b94039a29dadb3fec7f1c1f05ce710f129973edf90ab51d11ee1850f80843",
+      "teachingContentSHA256": "7820bd8c1853d769978498810d6297f7f2a0e084a6e6d27a02e2bdb86dc5cd75",
       "originalRelated": [
         "animal-bornean-orangutan",
         "animal-western-lowland-gorilla"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "fe9b94039a29dadb3fec7f1c1f05ce710f129973edf90ab51d11ee1850f80843",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-jaguar",
+        "sourceReads": [
+          {
+            "url": "https://www.wwf.ch/de/tierarten/jaguar-der-im-fliegen-jagt",
+            "anchors": "61movement/diet,62range;70NT;78explicitheadbody1.1–1.7m;85Pantanalspeciesexample"
+          },
+          {
+            "url": "https://animals.sandiegozoo.org/animals/jaguar",
+            "anchors": "52climb/swim;55diet;59–62solitary/mothercubs;72wild12–15years"
+          }
+        ],
+        "findings": "Actual full old article/miniquestion/inquiry read. Source-specificWWF1.1–1.7m deliberatelynotZoo1.1–1.8m. SourcecurrentNT andhabitatthreatsupported; no dubious10kglobalcount/copiedmythetymology.",
+        "pedagogyCountercheck": "Two locomotionfunctions vsanimalclassificationdistinctionvalid. Currenthintcomparesotheranimal, lessdirectbutrelevant; no needunrelatedrewrite.",
+        "remaining": "Actual current media credit/rights and final UI/search/back/native/offline proof; not full acceptance from source URL alone."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-jaguar",
+        "image": "jaguar",
+        "path": "public/world/jaguar.webp",
+        "fileSHA256": "906d2d9a94ebb5b8b4fbbdd5d058305551a29fe184d941cb1ba647a72df435cc",
+        "alt": "Ein Jaguar mit schwarzem Rosettenmuster steht vor grünen Pflanzen auf einem Felsen.",
+        "credit": "Giles Laurent",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:009_Female_jaguar_in_Encontro_das_Águas_State_Park_Photo_by_Giles_Laurent.jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      }
     },
     {
       "id": "animal-honey-bee",
@@ -785,11 +1499,46 @@
       "limits": "Ein sichtbarer Einzelvorgang ist kein Nachweis für die gesamte Fläche oder alle Pflanzenarten.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "ff6dc2f2608b2b8e15678d1f4513196441c478f9ddedddd758e85c082ce315a0",
+      "teachingContentSHA256": "453fc0239f8d007919a6cc63989c81f3da9e10f4db531604495f652511b83b3d",
       "originalRelated": [
         "animal-african-savanna-elephant",
         "science-pollination"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "ff6dc2f2608b2b8e15678d1f4513196441c478f9ddedddd758e85c082ce315a0",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-honey-bee",
+        "sourceReads": [
+          {
+            "url": "https://www.zoo-frankfurt.de/de/tiere-von-a-z-detailansicht/animal/tiere-von-a-z-detailansicht/honigbiene-europaeische-westliche",
+            "anchors": "40queen15–18mm/workers13max;43nativeEuropeAfricaWestAsia;45treeholes;47castes;52adultfood;55–56communication"
+          },
+          {
+            "url": "https://www.nczoo.org/wildlife/animals/honey-bee",
+            "anchors": "128–130castes;147queen3–5yearsdistinctworkers;148waggledance;150pollination; excludeheader1yearand0.25ozweight"
+          },
+          {
+            "url": "https://fmach.it/en/Communication/Press-releases/Wild-Honey-Bee-a-step-forward-for-its-protection",
+            "anchors": "55date14Oct2025;72–80 European wild/feral Apismellifera EN vs managedhives"
+          }
+        ],
+        "findings": "Whole existing article/miniquestion/inquiry read. Current 3–5 years is explicitly queen/can, supported NCZoo147; ADW2–3typical/5max is not contradictory fixed lifespan. EU wild status carefully excludes managed hives.",
+        "pedagogyCountercheck": "Reason and transfer hints both relevant. Pollen transfer does not guarantee immediate fruit or everyplantpollinated. No unnecessary answer changes.",
+        "remaining": "Actual current media/rights and final current UI/search/back/native/offline proof; limited source gaps explicitly described above remain open."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-honey-bee",
+        "image": "honey-bee",
+        "path": "public/world/honey-bee.webp",
+        "fileSHA256": "1fb1ee86a202affaeb94411946c8208d34bffd9df09f065051deefe332f5f3c7",
+        "alt": "Eine Honigbiene sitzt auf einer violetten Blüte; ihre durchsichtigen Flügel sind sichtbar.",
+        "credit": "Jasper Shide",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Apis_mellifera_-_Western_Honey_Bee.jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      }
     },
     {
       "id": "animal-axolotl",
@@ -826,11 +1575,54 @@
       "limits": "Der Axolotl ist ein besonderes Beispiel. Für andere Amphibien braucht man eigene Entwicklungsbelege.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "ad860460f0356a565b2cec50e707f693fcb98e7a62dbc9e99cd32b74713d398c",
+      "teachingContentSHA256": "39400f71ff69880bcf9c6f700f28e75e801332e9996f7444ea89eed33605cb06",
       "originalRelated": [
         "animal-african-savanna-elephant",
         "animal-honey-bee"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "ad860460f0356a565b2cec50e707f693fcb98e7a62dbc9e99cd32b74713d398c",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "reasonHintCorrection20261018": {
+        "originalHint": "Achte darauf, ob die Aussage die Art oder alle Amphibien betrifft.",
+        "finding": "Der bisherige Hinweis zielte auf die Transferfrage. Neuer Hinweis bezieht sich konkret auf die bestehende Begründungsfrage; Antworten und gespeicherte Auswahlwerte unverändert.",
+        "hint": "Welche Aufgabe haben Kiemen bei einem Wassertier? Unterscheide Atmung von Fortbewegung und Fressen."
+      },
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-axolotl",
+        "sourceReads": [
+          {
+            "url": "https://www.torontozoo.com/animals/Axolotl",
+            "anchors": "95–99neoteny/gills;97adultaverage25–30cmvs40–45exceptional;100average10–12life;107–115Xochimilco/canals/diet;120solitary;124explicitCR/threats"
+          },
+          {
+            "url": "https://animals.sandiegozoo.org/animals/axolotl",
+            "anchors": "45–46gills;49captiveknowledgelimits;57CR;58food;71Xochimilcorefugia"
+          }
+        ],
+        "findings": "Whole existing article/miniquestion/inquiry read. Current average size/life not exceptional records. Toronto124 actually says criticallyendangered in text despite category image103 inaccessible. Regrowing a leg supported Toronto121; no perfect/infinite regeneration claim.",
+        "pedagogyCountercheck": "Reason hint wrongly refers to allamphibians instead of oxygen function: prepared actual breathing hint. Transfer explicitly refuses generalizing single species to all Amphibia.",
+        "remaining": "Actual current media/rights and final current UI/search/back/native/offline proof; limited source gaps explicitly described above remain open."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-axolotl",
+        "image": "axolotl",
+        "path": "public/world/axolotl.webp",
+        "fileSHA256": "b35ee6975877bdbfb74479cf948e6a6eafc73115982b70132a2e3c2c0d033e23",
+        "alt": "Ein heller Axolotl mit roten, federartigen äußeren Kiemen sitzt auf Steinen im Aquarium.",
+        "credit": "Amandasofiarana",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Axolotl_ambystoma_mexicanum_anfibio_ASAG.jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+      },
+      "postCreationHintCountercheck20261018": {
+        "stage": "reason",
+        "before": "Welche Aufgabe haben Kiemen bei einem Wassertier? Unterscheide Atmung von Fortbewegung und Fressen.",
+        "after": "Ein Körperteil kann mehr sein als eine auffällige Form. Welche Stoffe müssen Tier und Wasser austauschen, damit das Tier leben kann?",
+        "finding": "Separate critical reread after correction: prior hint was relevant but too close to the choice wording; now asks for a comparison or missing information without copying the correct choice. Answers, solution and save identity unchanged.",
+        "remaining": "Current targeted UI/coldoffline proof and final full technical acceptance required."
+      }
     },
     {
       "id": "animal-whale-shark",
@@ -865,12 +1657,44 @@
       "limits": "Nahrung und Verwandtschaft sind verschiedene Fragen. Für die Einordnung werden weitere Merkmale betrachtet.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "679bf277b1e4b0dd15e73b3ad41fcbb0d1157af13655a254057013c1d3c608c9",
+      "teachingContentSHA256": "63b650a390d0e97300947f7aec0736fc82dc4ffdbad28fae12f1b0eaaa6a6dd8",
       "originalRelated": [
         "animal-blue-whale",
         "science-foodweb",
         "science-currents"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "679bf277b1e4b0dd15e73b3ad41fcbb0d1157af13655a254057013c1d3c608c9",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-whale-shark",
+        "sourceReads": [
+          {
+            "url": "https://www.georgiaaquarium.org/animal/whale-shark/",
+            "anchors": "492/508usual5.5–10mvs507record18.8m;514gills;522–523individualspots;543–556food/filter;566–570IUCNEN2016/boats/gear"
+          }
+        ],
+        "findings": "Actual old full article/miniquestion/inquiry read. Usual range notmaximum, fish/gills vswhalebreathing, patternindividualID andstatus supported. Do not copy source15mm-tootherror530 or all-history-largestfish506 as secure fact.",
+        "pedagogyCountercheck": "Actual evidence labels/tasks/feedback sound. Sharedhint about food/breathing/names relevant to both questions; no needgenericrewrite.",
+        "remaining": "Finish specifically noted unverified factual anchors, actual current media/rights and final UI/offline proof."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-whale-shark",
+        "image": "whale-shark",
+        "path": "public/images/animals/whale-shark.webp",
+        "fileSHA256": "1a56356d2cc4986311db48aae895533bfd030f75fbb701019fc3ad2fa2873d85",
+        "alt": "Walhai mit hellem Fleckenmuster im blauen Meerwasser.",
+        "credit": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Tibur%C3%B3n_ballena_(Rhincodon_typus),_La_Paz,_Baja_California,_M%C3%A9xico,_2024-12-20,_DD_01.jpg",
+        "recordedRightsEvidence": null,
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "anchor": "Commons122–143/161–173DiegoDelsoCCBY-SA4.0",
+          "finding": "Authorcredit/CC/canonicalsourcecurrent;author requests delso.photo attribution andoptionalnotification,nocommunicationauthorized. Need currentproductcreditreadbeforedecidingconcretechange.",
+          "checkedOn": "2026-10-18"
+        }
+      }
     },
     {
       "id": "animal-garden-cross-spider",
@@ -905,11 +1729,72 @@
       "limits": "Ein Foto kann Körperteile verdecken. Sichtbarkeit und tatsächliche Anzahl sind nicht dasselbe.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "95a7d5148fa29ff9b34e50181f45412f34e74fcb2c93f4db75f25479fdd0d493",
+      "teachingContentSHA256": "f108a6fe9f1a78f6cf989e83523adf45abaddfe32a237b172610144dcd35244e",
       "originalRelated": [
         "animal-honey-bee",
         "science-foodweb"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "95a7d5148fa29ff9b34e50181f45412f34e74fcb2c93f4db75f25479fdd0d493",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "reasonHintCorrection20261018": {
+        "originalHint": "Frage dich, ob das Bild wirklich den ganzen Körper zeigt.",
+        "finding": "Der bisherige Hinweis zielte auf die Transferfrage. Neuer Hinweis bezieht sich konkret auf die bestehende Begründungsfrage; Antworten und gespeicherte Auswahlwerte unverändert.",
+        "hint": "Überlege, welche Veränderung über einen gespannten Faden ankommen kann. Ist dafür schon ein Bild der Beute nötig?"
+      },
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-garden-cross-spider",
+        "sourceReads": [
+          {
+            "url": "https://www.wildlifetrusts.org/wildlife-explorer/invertebrates/spiders/garden-spider",
+            "anchors": "19taxon;33body0.9–1.8cm;36UKcommon;49netvibrations;52femaleslarger"
+          },
+          {
+            "url": "https://www.nhm.ac.uk/schools/teaching-resources/key-stage-2/life-cycles-habitats-and-classification/practical-activity-classification-exploration.html",
+            "anchors": "107–111/8legs classification;speciesmeasure sourceWildlifeTrustsindependent. Sixlegcountaloneisnotuniversalclassification foralldevelopmentalstages."
+          }
+        ],
+        "findings": "Actual old full article/miniquestion/inquiry read. Millimetre conversion9–18body notlegs, spiralingweb/preyinsect andqualifiedlocalcommon supported. Do not copy blanket harmlessness/silkstrength/newsnumbers. Explicit8-vs6 classification source not yet freshly opened. Further specific source gap resolved by actually read passage recorded above.",
+        "pedagogyCountercheck": "Evidence labels match; actual reasonhint about photo-hiddenlegs belongs totransfer. Newreasonhint asks motion transmittedbythread; photographiccountlimit valid.",
+        "remaining": "Finish specifically noted unverified factual anchors, actual current media/rights and final UI/offline proof."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-garden-cross-spider",
+        "image": "garden-cross-spider",
+        "path": "public/images/animals/garden-cross-spider.webp",
+        "fileSHA256": "2f124bf25d601d7bcbcba265541f96602602ca655af364f2db36902d444b521f",
+        "alt": "Weibliche Gartenkreuzspinne auf einem Blatt; helle Kreuzzeichnung auf dem Hinterleib.",
+        "credit": "Ivar Leidus",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Araneus_diadematus_-_Keila.jpg",
+        "recordedRightsEvidence": null,
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "anchor": "Commons121–125IvarLeidusfemaleAraneus/photo12-focus-stacked;144–157CCBY-SA4.0",
+          "finding": "Photographiccomposite disclosedbyoriginal;notunsupplementedrawsingleinstant. Existingowntransformdeclarationaboutresizeonlyisnotclaimsourceunedited;considerusefulcaptionclarification.",
+          "checkedOn": "2026-10-18"
+        }
+      },
+      "sourceAddition20261018": {
+        "before": [
+          {
+            "label": "The Wildlife Trusts · Garden spider",
+            "url": "https://www.wildlifetrusts.org/wildlife-explorer/invertebrates/spiders/garden-spider"
+          }
+        ],
+        "after": [
+          {
+            "label": "The Wildlife Trusts · Garden spider",
+            "url": "https://www.wildlifetrusts.org/wildlife-explorer/invertebrates/spiders/garden-spider"
+          },
+          {
+            "label": "Natural History Museum · Spinnen und Insekten unterscheiden",
+            "url": "https://www.nhm.ac.uk/schools/teaching-resources/key-stage-2/life-cycles-habitats-and-classification/practical-activity-classification-exploration.html"
+          }
+        ],
+        "reason": "Zusätzliche tatsächlich gelesene passende Quelle für eine bestehende Aussage; Artikeltext, Maß, Grundfrage, Antworten, Medien-ID und alle alten Quellen erhalten.",
+        "readAnchor": "107–111/8legs classification;speciesmeasure sourceWildlifeTrustsindependent. Sixlegcountaloneisnotuniversalclassification foralldevelopmentalstages."
+      }
     },
     {
       "id": "animal-dromedary",
@@ -944,11 +1829,72 @@
       "limits": "Der Vergleich verschiedener Kamelarten verhindert eine falsche Verallgemeinerung.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "45bb1da5a0b1bd9b7182a6e06be2120a5b83030e1d3597334a039c3c60bcb4a4",
+      "teachingContentSHA256": "8121853a93984002a53686bb5c592a645c958e0d8e1b118f4f9a36fbc6aa3126",
       "originalRelated": [
         "science-energy",
         "animal-african-savanna-elephant"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "45bb1da5a0b1bd9b7182a6e06be2120a5b83030e1d3597334a039c3c60bcb4a4",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "reasonHintCorrection20261018": {
+        "originalHint": "Suche das ausdrücklich genannte Gegenbeispiel im Überraschungsfakt.",
+        "finding": "Der bisherige Hinweis zielte auf die Transferfrage. Neuer Hinweis bezieht sich konkret auf die bestehende Begründungsfrage; Antworten und gespeicherte Auswahlwerte unverändert.",
+        "hint": "Vergleiche einen Energievorrat mit einem Behälter für Trinkwasser. Welche Art von Vorrat beschreibt die Karte?"
+      },
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-dromedary",
+        "sourceReads": [
+          {
+            "url": "https://animaldiversity.org/accounts/Camelus_dromedarius/",
+            "anchors": "40–42domestic/feralrange,52dryhabitat,62fatnotwater,63paddedfeet,64maleadultshoulder1.8–2m,65eyelashes"
+          },
+          {
+            "url": "https://animals.sandiegozoo.org/animals/camel",
+            "anchors": "51oneDromedary/twoBactrianhumps/fatnotwater;notdatedpopulation/physiology/ruminantclassificationcopied."
+          }
+        ],
+        "findings": "Actual old full article/miniquestion/inquiry read. Humpfat, legs/eyelashes, specificshoulderheight anddomesticcontext supported. Plantdiet and comparisonBactriantwohumps remain narrow fresh anchors to finish. No sweating/drinkingexperiment or extreme survival percentages imported. Further specific source gap resolved by actually read passage recorded above.",
+        "pedagogyCountercheck": "Reasonhint refers Bactrian counterexample fortransfer, nothumpcontents. Individualreasonhint separatesenergyreserve andwatercontainer; no changechoice/savedanswers.",
+        "remaining": "Finish specifically noted unverified factual anchors, actual current media/rights and final UI/offline proof."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-dromedary",
+        "image": "dromedary",
+        "path": "public/images/animals/dromedary.webp",
+        "fileSHA256": "ba1aab1ef0706bdb04f7ece74a7c3d432f1f058aba2b786e0df745da96fd4fcf",
+        "alt": "Junges Dromedar von der Seite mit einem Höcker und langen Beinen im Zoo Landau.",
+        "credit": "4028mdk09",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Seitenansicht_Dromedar_Zoo_Landau_Juni_2011.JPG",
+        "recordedRightsEvidence": null,
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "anchor": "Commons123/128–1414028mdk09CCBY-SA3.0",
+          "finding": "Currentfiletitlephotodateandhistoricaluploaddescriptioninconsistent;noappdateclaimadded.",
+          "checkedOn": "2026-10-18"
+        }
+      },
+      "sourceAddition20261018": {
+        "before": [
+          {
+            "label": "Animal Diversity Web · Dromedar",
+            "url": "https://animaldiversity.org/accounts/Camelus_dromedarius/"
+          }
+        ],
+        "after": [
+          {
+            "label": "Animal Diversity Web · Dromedar",
+            "url": "https://animaldiversity.org/accounts/Camelus_dromedarius/"
+          },
+          {
+            "label": "San Diego Zoo · Ein und zwei Höcker",
+            "url": "https://animals.sandiegozoo.org/animals/camel"
+          }
+        ],
+        "reason": "Zusätzliche tatsächlich gelesene passende Quelle für eine bestehende Aussage; Artikeltext, Maß, Grundfrage, Antworten, Medien-ID und alle alten Quellen erhalten.",
+        "readAnchor": "51oneDromedary/twoBactrianhumps/fatnotwater;notdatedpopulation/physiology/ruminantclassificationcopied."
+      }
     },
     {
       "id": "animal-white-tailed-eagle",
@@ -983,12 +1929,77 @@
       "limits": "Alter gehört zur Beschreibung eines Merkmals. Die Karte unterscheidet junge und ältere Tiere.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "ef36c999e0b45ccf5bd6d3b4bfaa723a9d40d6a1f5a139442802e00b4af9fd0c",
+      "teachingContentSHA256": "505944b58c7b1043d4da1d70452ef545540d5aa96057377a4ce73b1b9da4851d",
       "originalRelated": [
         "science-flight",
         "science-foodweb",
         "animal-emperor-penguin"
-      ]
+      ],
+      "preCountercheckTeachingContentSHA256": "ef36c999e0b45ccf5bd6d3b4bfaa723a9d40d6a1f5a139442802e00b4af9fd0c",
+      "historicalInquiryStatus": "Eigene Lernaufgabe auf Grundlage der verlinkten Bestandsquellen; unabhängige Fach- und Kinderprüfung offen.",
+      "reasonHintCorrection20261018": {
+        "originalHint": "Vergleiche die Altersangabe mit dem beobachteten Gefieder.",
+        "finding": "Der bisherige Hinweis zielte auf die Transferfrage. Neuer Hinweis bezieht sich konkret auf die bestehende Begründungsfrage; Antworten und gespeicherte Auswahlwerte unverändert.",
+        "hint": "Trenne die Bewegung des Vogels von der Zahl seiner Flügelschläge. Was kann zwischen zwei Schlägen geschehen?"
+      },
+      "sourceAndTeachingCountercheck20261018": {
+        "id": "animal-white-tailed-eagle",
+        "sourceReads": [
+          {
+            "url": "https://www.rspb.org.uk/birds-and-wildlife/birds-of-the-month/august-birds-of-the-month",
+            "anchors": "270–288: broad wings, fish/birds/carrion, maximum span2.4m, adultwhite/juveniledarkbeak, soaringflatwings"
+          },
+          {
+            "url": "https://www.rspb.org.uk/birds-and-wildlife/white-tailed-eagle",
+            "anchors": "27–32adultwhite/wingshape;44–45UKreintroduction;78–83food/nest; sourceUKnumbersnotglobal"
+          },
+          {
+            "url": "https://www.nabu.de/imperia/md/content/nabude/vogelschutz/27.pdf",
+            "anchors": "716–717page13 explicitlywhite-tailedeagle200–240cmspan. Text/OCRread; screenshotwrapperreturnednoactualimage, directPDF403. No claimpersonalviewofPDFpage; outdatedRLstatustextnotcopied."
+          }
+        ],
+        "findings": "Whole existing article/miniquestion/inquiry read. Current 2.4m upper span supported;2m lower range and northeastGerman regional occurrence still need distinct actual source. Source recovery describes UK; no fabricated global IUCN category. Further specific source gap resolved by actually read passage recorded above.",
+        "pedagogyCountercheck": "Reason hint wrongly refers to plumage age instead of gliding: prepared motion-vswingbeat hint. Stage3 ageplumage inference valid; keep answer positions.",
+        "remaining": "Actual current media/rights and final current UI/search/back/native/offline proof; limited source gaps explicitly described above remain open."
+      },
+      "retainedMediaCountercheck20261018": {
+        "id": "animal-white-tailed-eagle",
+        "image": "white-tailed-eagle",
+        "path": "public/images/animals/white-tailed-eagle.webp",
+        "fileSHA256": "0c666eac9af9ee9bab570bbb0652471d5140362b8b959308a80ddc75644decde",
+        "alt": "Erwachsener Seeadler im Flug mit ausgebreiteten Flügeln und hellem Schwanz.",
+        "credit": "Andreas Weith",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Adult_white-tailed_eagle_(Haliaeetus_albicilla)_of_central_Poland_in_flight_(2).jpg",
+        "recordedRightsEvidence": null,
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "anchor": "Commons119–122AndreasWeithadultPoland;128–141CCBY-SA4.0",
+          "finding": "Photoillustratesadultnotjuvenileandnotflightmeasurement.",
+          "checkedOn": "2026-10-18"
+        }
+      },
+      "sourceAddition20261018": {
+        "before": [
+          {
+            "label": "RSPB · Große Greifvögel",
+            "url": "https://www.rspb.org.uk/birds-and-wildlife/birds-of-the-month/august-birds-of-the-month"
+          }
+        ],
+        "after": [
+          {
+            "label": "RSPB · Große Greifvögel",
+            "url": "https://www.rspb.org.uk/birds-and-wildlife/birds-of-the-month/august-birds-of-the-month"
+          },
+          {
+            "label": "NABU · Greifvogel-Flugbilder: Spannweitenvergleich",
+            "url": "https://www.nabu.de/imperia/md/content/nabude/vogelschutz/27.pdf"
+          }
+        ],
+        "reason": "Zusätzliche tatsächlich gelesene passende Quelle für eine bestehende Aussage; Artikeltext, Maß, Grundfrage, Antworten, Medien-ID und alle alten Quellen erhalten.",
+        "readAnchor": "716–717page13 explicitlywhite-tailedeagle200–240cmspan. Text/OCRread; screenshotwrapperreturnednoactualimage, directPDF403. No claimpersonalviewofPDFpage; outdatedRLstatustextnotcopied."
+      }
     }
   ],
   "referenceCheck": [
@@ -1143,5 +2154,19 @@
     }
   ],
   "connectionReview": "Eigene kuratierte Vergleiche auf Grundlage der erhaltenen Karten;17.10.2026 Selbstprüfung, keine unabhängige Fachabnahme oder neue IUCN-Bewertung.",
-  "selfReview": "24 einzelne Belegpaare und48 Aufgaben gelesen; realistische Fehlannahmen statt beliebiger Unsinnsantworten nachgezogen. Richtige Antwortpositionen der neuen Aufgaben deterministisch verteilt, gespeicherte Antworttexte bleiben stabil. Keine Änderung der24 bisherigen Mini-Fragen. Externe Fach-/Kinderabnahme weiterhin offen."
+  "selfReview": "24 einzelne Belegpaare und48 Aufgaben gelesen; realistische Fehlannahmen statt beliebiger Unsinnsantworten nachgezogen. Richtige Antwortpositionen der neuen Aufgaben deterministisch verteilt, gespeicherte Antworttexte bleiben stabil. Keine Änderung der24 bisherigen Mini-Fragen. Externe Fach-/Kinderabnahme weiterhin offen.",
+  "retainedMediaCorrections20261018": {
+    "whale-shark": {
+      "field": "author",
+      "before": "Diego Delso",
+      "after": "Diego Delso · delso.photo",
+      "reason": "Commons143 includes preferred delso.photo attribution; name/license/source remain, no external notification sent."
+    },
+    "garden-cross-spider": {
+      "field": "caption",
+      "before": null,
+      "after": "Das Originalfoto wurde aus zwölf unterschiedlich fokussierten Aufnahmen zusammengesetzt. Es zeigt keine einzelne unveränderte Momentaufnahme.",
+      "reason": "Commons125 explicitly discloses12-image focus stack; distinguish original processing from own resize. No image pixels modified."
+    }
+  }
 }

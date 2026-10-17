@@ -516,5 +516,998 @@
       ],
       "reportSha256": "82ecfa3eaaafc84839b5d24fc56ee78f11dffb859fef18af11a2c99ce15eb03b"
     }
+  },
+  "legacyCountercheck20261018": {
+    "scope": "26bisheridentischeZusatztexte/26Antwortkettengelesen;18individuellunpassendeRichtigerklärungengezieltkorrigiert;andere8begründetbeibehalten. Keinepauschale26Ganzartikel-Fachabnahme.",
+    "cause": "HistorischeRichtigerklärungwarjeweilsderersteallgemeineMehrwissenabsatz;technischerKopiergleichheitstestbelegtekeinenFragebezug. NeueErklärungenwerdenkritischmitFrage/AntwortundtatsächlichgelesenenQuellengegengelesen.",
+    "checkedOn": "2026-10-18",
+    "entries": [
+      {
+        "id": "history-stone_tools",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Was verraten alte Werkzeuge?",
+            "answers": [
+              "Wie frühe Verwandte des Menschen Probleme lösten",
+              "Dass es damals schon Computer gab",
+              "Dass Menschen nie Werkzeuge brauchten"
+            ],
+            "correct": 0,
+            "why": "Werkzeuge halfen unseren Vorfahren, ihre Umgebung zu nutzen und neue Lösungen auszuprobieren."
+          }
+        },
+        "after": {
+          "surprise": "Ein Werkzeug und seine Hersteller sind zwei verschiedene Fragen. Ein Fund kann erhalten sein, obwohl wir nicht sicher wissen, wer ihn hergestellt hat.",
+          "question": {
+            "prompt": "Was verraten alte Werkzeuge?",
+            "answers": [
+              "Wie frühe Verwandte des Menschen Probleme lösten",
+              "Dass es damals schon Computer gab",
+              "Dass Menschen nie Werkzeuge brauchten"
+            ],
+            "correct": 0,
+            "why": "Werkzeuge halfen unseren Vorfahren, ihre Umgebung zu nutzen und neue Lösungen auszuprobieren."
+          }
+        },
+        "sourceCounterread": "NHM87Lomekwi3.3million;90makeruncertainty forOldowan not automaticallyidentifiesLomekwi;93–100use traces.",
+        "sourceUrls": [
+          "https://www.nhm.ac.uk/discover/news/2023/february/oldest-remains-ancient-human-relative-paranthropus-suggest-possible-tool-use.html"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-fire",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Was wissen wir über den allerersten Gebrauch von Feuer?",
+            "answers": [
+              "Den genauen Zeitpunkt kennen wir nicht",
+              "Er geschah sicher am 1. Januar",
+              "Das war erst nach der Mondlandung"
+            ],
+            "correct": 0,
+            "why": "Gekochte Nahrung veränderte das Essen; Menschen konnten an Feuerstellen zusammenkommen."
+          }
+        },
+        "after": {
+          "surprise": "Ein alter Feuerplatz belegt eine Nutzung zu dieser Zeit. Er verrät nicht automatisch, wann Menschen zum allerersten Mal Feuer nutzten.",
+          "question": {
+            "prompt": "Was wissen wir über den allerersten Gebrauch von Feuer?",
+            "answers": [
+              "Den genauen Zeitpunkt kennen wir nicht",
+              "Er geschah sicher am 1. Januar",
+              "Das war erst nach der Mondlandung"
+            ],
+            "correct": 0,
+            "why": "Erhaltene Feuerstellen zeigen, dass Menschen zu bestimmten Zeiten Feuer nutzten. Sie verraten nicht den genauen Zeitpunkt des allerersten Gebrauchs."
+          }
+        },
+        "sourceCounterread": "Smithsonian39earliesthearthsatleast790000,somecookingolderhypothesis;noexactfirstevent.",
+        "sourceUrls": [
+          "https://humanorigins.si.edu/evidence/behavior/hearths-shelters"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-writing",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Wofür nutzten Menschen in Uruk frühe Schrift?",
+            "answers": [
+              "Um Dinge wie Getreidemengen festzuhalten",
+              "Zum Versenden von E-Mails",
+              "Zum Bauen von Satelliten"
+            ],
+            "correct": 0,
+            "why": "Schrift konnte Informationen bewahren, auch wenn die Person, die sie wusste, gerade nicht da war."
+          }
+        },
+        "after": {
+          "surprise": "Eine Mengenliste erzählt nicht den gesamten Alltag ihrer Verfasser. Überlege, was sie festhält und welche Fragen sie offenlässt.",
+          "question": {
+            "prompt": "Wofür nutzten Menschen in Uruk frühe Schrift?",
+            "answers": [
+              "Um Dinge wie Getreidemengen festzuhalten",
+              "Zum Versenden von E-Mails",
+              "Zum Bauen von Satelliten"
+            ],
+            "correct": 0,
+            "why": "Auf frühen Tontafeln hielten Menschen wirtschaftliche Angaben fest, zum Beispiel Mengen von Getreide. Die Aufzeichnung bewahrte diese Information auch für später."
+          }
+        },
+        "sourceCounterread": "Met31/36economicaccounts;37abstractsigns;39rationcounting. Actual source reread.",
+        "sourceUrls": [
+          "https://www.metmuseum.org/essays/the-origins-of-writing"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-pyramids",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Wofür wurden die großen Pyramiden gebaut?",
+            "answers": [
+              "Als königliche Grabstätten",
+              "Als Flughäfen",
+              "Als Eisenbahnstationen"
+            ],
+            "correct": 0,
+            "why": "Sie zeigen, wie viel Menschen mit Wissen, Arbeit und guter Organisation gemeinsam schaffen konnten."
+          }
+        },
+        "after": {
+          "surprise": "Grabstätte und Baustelle führen zu verschiedenen Fragen: Wozu diente das Bauwerk, und wie organisierten Menschen seine Herstellung?",
+          "question": {
+            "prompt": "Wofür wurden die großen Pyramiden gebaut?",
+            "answers": [
+              "Als königliche Grabstätten",
+              "Als Flughäfen",
+              "Als Eisenbahnstationen"
+            ],
+            "correct": 0,
+            "why": "Die großen Pyramiden von Gizeh waren als Grabstätten für Könige bestimmt. Ihr Bau erforderte zusätzlich viel Planung und Zusammenarbeit."
+          }
+        },
+        "sourceCounterread": "DigitalGiza34–40Khufu/royalburial;source archaeologicalcontexts37.",
+        "sourceUrls": [
+          "https://giza.fas.harvard.edu/commontopics/"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-paper",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Was passt zu Cai Lun?",
+            "answers": [
+              "Er verbesserte ein bereits bekanntes Verfahren",
+              "Er erfand allein jede Art von Papier",
+              "Er erfand das Internet"
+            ],
+            "correct": 0,
+            "why": "Papier machte das Aufschreiben und Verbreiten von Wissen praktischer."
+          }
+        },
+        "after": {
+          "surprise": "Ein Verfahren zu verbessern ist etwas anderes, als es zum ersten Mal zu erfinden. Achte darauf, welchen Beitrag die Quelle Cai Lun zuschreibt.",
+          "question": {
+            "prompt": "Was passt zu Cai Lun?",
+            "answers": [
+              "Er verbesserte ein bereits bekanntes Verfahren",
+              "Er erfand allein jede Art von Papier",
+              "Er erfand das Internet"
+            ],
+            "correct": 0,
+            "why": "Cai Lun verbesserte Erfahrungen und Verfahren der Papierherstellung, die es bereits vor ihm gab. Verbesserung und erstmalige Erfindung sind unterschiedliche Beiträge."
+          }
+        },
+        "sourceCounterread": "Hunan88–91Cai summarizesandimprovesearlierexperience. Oxfordpage inaccessible; do not claim currentread.",
+        "sourceUrls": [
+          "https://www.cabinet.ox.ac.uk/origins-paper",
+          "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29",
+          "https://whhlyt.hunan.gov.cn/whhlyt/english/Culture/CulturalFigures/202207/t20220729_27570604.html"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-zero",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Was ergibt 8 + 0?",
+            "answers": [
+              "8",
+              "0",
+              "80"
+            ],
+            "correct": 0,
+            "why": "Mit der Null und dem Stellenwertsystem lassen sich Zahlen übersichtlich schreiben und berechnen."
+          }
+        },
+        "after": {
+          "surprise": "Bei 8 + 0 bleibt die Menge gleich. In der Zahl 80 verändert die Null dagegen die Schreibweise und den Stellenwert der 8. Das sind zwei verschiedene Aufgaben der Null.",
+          "question": {
+            "prompt": "Was ergibt 8 + 0?",
+            "answers": [
+              "8",
+              "0",
+              "80"
+            ],
+            "correct": 0,
+            "why": "Wenn zu acht Dingen nichts hinzukommt, bleiben es acht. Deshalb ist 8 + 0 = 8."
+          }
+        },
+        "sourceCounterread": "MacTutor30–31additionzero leavesnumberunchanged;45–50historicaldivisionzeroerror explicitlynotadopted. 8+0and80 independentlycalculated.",
+        "sourceUrls": [
+          "https://mathshistory.st-andrews.ac.uk/Biographies/Brahmagupta/"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-compass",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Wobei hilft ein Kompass?",
+            "answers": [
+              "Eine Richtung finden",
+              "Regen erzeugen",
+              "Briefe drucken"
+            ],
+            "correct": 0,
+            "why": "Seefahrer konnten Richtungen auch dann bestimmen, wenn sie Sonne und Sterne schlecht sahen."
+          }
+        },
+        "after": {
+          "surprise": "Eine Richtungsangabe zeigt noch nicht, wie weit dein Ziel entfernt ist. Welche weitere Information brauchst du für einen Reiseweg?",
+          "question": {
+            "prompt": "Wobei hilft ein Kompass?",
+            "answers": [
+              "Eine Richtung finden",
+              "Regen erzeugen",
+              "Briefe drucken"
+            ],
+            "correct": 0,
+            "why": "Seefahrer konnten Richtungen auch dann bestimmen, wenn sie Sonne und Sterne schlecht sahen."
+          }
+        },
+        "sourceCounterread": "New distance-vs-direction reflection is a logical comparison only; existinghistoricalSmithsoniansourcecurrentlyRequestRejected, historicaldate/fullarticlefreshverificationstillopen.",
+        "sourceUrls": [
+          "https://timeandnavigation.si.edu/timeline2/1000"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-medieval_cities",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Was traf man auf einem mittelalterlichen Markt?",
+            "answers": [
+              "Händler und Handwerker",
+              "Raumschiffe",
+              "WLAN-Router"
+            ],
+            "correct": 0,
+            "why": "Städte wurden wichtige Orte zum Tauschen, Arbeiten und Zusammenleben."
+          }
+        },
+        "after": {
+          "surprise": "Eine mittelalterliche Stadt bot besondere Rechte, aber nicht jede Person durfte dort jeden Beruf ausüben. Prüfe, für wen eine Freiheit tatsächlich galt.",
+          "question": {
+            "prompt": "Was traf man auf einem mittelalterlichen Markt?",
+            "answers": [
+              "Händler und Handwerker",
+              "Raumschiffe",
+              "WLAN-Router"
+            ],
+            "correct": 0,
+            "why": "Auf Märkten wurde gehandelt; Handwerker stellten Waren her und boten sie an. Handel und Handwerk gehörten zum Wirtschaftsleben der Städte."
+          }
+        },
+        "sourceCounterread": "DHM89marktsiedlungen;100–107craft/guilds;122notunlimitedfreedom. ExcludeunsupportedUr-oldestclaim73.",
+        "sourceUrls": [
+          "https://www.dhm.de/bildung/ida/mittelalter/stadt/"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-printing",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Wo gab es schon vor Gutenberg bewegliche Druckzeichen?",
+            "answers": [
+              "In China und Korea",
+              "Nirgends auf der Welt",
+              "Auf dem Mond"
+            ],
+            "correct": 0,
+            "why": "Mehr Bücher konnten hergestellt werden, und Texte erreichten mehr Menschen."
+          }
+        },
+        "after": {
+          "surprise": "Bewegliche Druckzeichen lassen sich neu zusammensetzen. Ein erhaltenes Druckwerk belegt diese Technik an einem bestimmten Ort und Zeitpunkt, nicht automatisch ihre allererste Nutzung.",
+          "question": {
+            "prompt": "Wo gab es schon vor Gutenberg bewegliche Druckzeichen?",
+            "answers": [
+              "In China und Korea",
+              "Nirgends auf der Welt",
+              "Auf dem Mond"
+            ],
+            "correct": 0,
+            "why": "Bewegliche Druckzeichen gab es in China und Korea bereits vor Gutenbergs europäischem Drucksystem. Ein koreanisches Beispiel mit Metalltypen ist das 1377 gedruckte Jikji."
+          }
+        },
+        "sourceCounterread": "Gutenberg.de32/41ChinaBiSheng;UNESCOJikji24–25Koreametaltype1377. Do not copy doubtfulall-writing5000BC/Unicodecounts.",
+        "sourceUrls": [
+          "https://www.gutenberg.de/zeit/zeitleiste_gutenberg",
+          "https://www.gutenberg.de/erfindung/",
+          "https://www.gutenberg.de/erfindung/vor_gutenberg",
+          "https://www.unesco.org/en/memory-world/baegun-hwasang-chorok-buljo-jikji-simche-yojeol-volii-second-volume-anthology-great-buddhist-priests?hub=915"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-voyages1492",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Was stimmt über die Karibik im Jahr 1492?",
+            "answers": [
+              "Dort lebten bereits Menschen und Kulturen",
+              "Dort lebte noch niemand",
+              "Es gab die Inseln vorher nicht"
+            ],
+            "correct": 0,
+            "why": "Die Begegnungen veränderten viele Weltregionen; dazu gehören auch die Erfahrungen und Rechte der indigenen Völker."
+          }
+        },
+        "after": {
+          "surprise": "Ein europäischer Reisebericht erzählt aus einer bestimmten Sicht. Was ändert sich, wenn du auch die Erfahrungen der bereits dort lebenden Menschen einbeziehst?",
+          "question": {
+            "prompt": "Was stimmt über die Karibik im Jahr 1492?",
+            "answers": [
+              "Dort lebten bereits Menschen und Kulturen",
+              "Dort lebte noch niemand",
+              "Es gab die Inseln vorher nicht"
+            ],
+            "correct": 0,
+            "why": "In der Karibik lebten schon vor der Ankunft der europäischen Schiffe Menschen mit eigenen Kulturen. Der Ausdruck „Entdeckung“ darf ihre Geschichte nicht ausblenden."
+          }
+        },
+        "sourceCounterread": "NMAI10–16priorIndigenousinhabitation,perspectives,currentcommunities;no95percentfigurecopied.",
+        "sourceUrls": [
+          "https://americanindian.si.edu/exhibitions/infinityofnations/mesoamerica-caribbean.html",
+          "https://americanindian.si.edu/nk360/informational/columbus-day-myths"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-steam",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Welche Arbeit übernahm Newcomens Maschine?",
+            "answers": [
+              "Wasser aus Bergwerken pumpen",
+              "E-Mails versenden",
+              "Fotos vom Mond machen"
+            ],
+            "correct": 0,
+            "why": "Dampfmaschinen wurden wichtige Antriebe für Industrie und später auch Verkehr."
+          }
+        },
+        "after": {
+          "surprise": "Eine Maschine im Museum kann ein Lehrmodell sein. Prüfe, ob du ein Modell oder eine ursprünglich eingesetzte Maschine betrachtest und was sich daran erkennen lässt.",
+          "question": {
+            "prompt": "Welche Arbeit übernahm Newcomens Maschine?",
+            "answers": [
+              "Wasser aus Bergwerken pumpen",
+              "E-Mails versenden",
+              "Fotos vom Mond machen"
+            ],
+            "correct": 0,
+            "why": "Newcomens Maschine bewegte eine Pumpe, die Wasser aus Bergwerken förderte. Das war ihre hier beschriebene konkrete Arbeit."
+          }
+        },
+        "sourceCounterread": "ScienceMuseum154–156actualteachingmodel/pump;notagenericclaimsteamcreatedallindustrialprogress.",
+        "sourceUrls": [
+          "https://collection.sciencemuseumgroup.org.uk/objects/co2000/demainbrays-newcomen-engine-model",
+          "https://collection.sciencemuseumgroup.org.uk/objects/co8404624/haydock-colliery-steam-engine"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-railway",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Was verbindet eine Eisenbahn?",
+            "answers": [
+              "Orte über Schienen",
+              "Kontinente mit WLAN",
+              "Sterne mit Seilen"
+            ],
+            "correct": 0,
+            "why": "Eisenbahnen veränderten den Transport von Menschen und Gütern."
+          }
+        },
+        "after": {
+          "surprise": "Schienenweg, Lokomotive und Transportaufgabe gehören zusammen. Eine neue Strecke kann wichtig sein, auch wenn die eingesetzte Technik schon vorher bekannt war.",
+          "question": {
+            "prompt": "Was verbindet eine Eisenbahn?",
+            "answers": [
+              "Orte über Schienen",
+              "Kontinente mit WLAN",
+              "Sterne mit Seilen"
+            ],
+            "correct": 0,
+            "why": "Eisenbahnen veränderten den Transport von Menschen und Gütern."
+          }
+        },
+        "sourceCounterread": "NationalRailwayMuseum17–22opening/route, locomotivewasnotfirst/newtechnology.",
+        "sourceUrls": [
+          "https://blog.railwaymuseum.org.uk/shildon-the-cradle-of-the-railways-and-locomotion-no-1/"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-electric_light",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Wie entwickelte sich elektrisches Licht?",
+            "answers": [
+              "Viele Menschen trugen dazu bei",
+              "Eine einzige Person erfand alles allein",
+              "Es entstand erst nach dem Internet"
+            ],
+            "correct": 0,
+            "why": "Elektrisches Licht veränderte den Alltag zu Hause, auf Straßen und bei der Arbeit."
+          }
+        },
+        "after": {
+          "surprise": "Eine Lampe allein versorgt noch keine Straße mit Licht. Auch Leitungen, Stromerzeugung und Schalter gehören zum System.",
+          "question": {
+            "prompt": "Wie entwickelte sich elektrisches Licht?",
+            "answers": [
+              "Viele Menschen trugen dazu bei",
+              "Eine einzige Person erfand alles allein",
+              "Es entstand erst nach dem Internet"
+            ],
+            "correct": 0,
+            "why": "An elektrischem Licht arbeiteten mehrere Menschen und Teams, darunter Joseph Swan sowie Thomas Edison und seine Mitarbeiter. Lampen und Versorgungssysteme wurden schrittweise verbessert."
+          }
+        },
+        "sourceCounterread": "NPS22–26parts/system/team;SmithsonianSwan6–10distinctcontribution. No one-day/soleinventorclaim.",
+        "sourceUrls": [
+          "https://home.nps.gov/edis/learn/kidsyouth/the-electric-light-system-phonograph-motion-pictures.htm",
+          "https://americanhistory.si.edu/collections/object/nmah_995925",
+          "https://americanhistory.si.edu/lighting/bios/swan.htm"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-flight",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Was war an den Flügen der Wright-Brüder 1903 wichtig?",
+            "answers": [
+              "Sie waren mit Motor und steuerbar",
+              "Sie waren die ersten Ballonfahrten",
+              "Sie führten zum Mond"
+            ],
+            "correct": 0,
+            "why": "Die Versuche waren ein wichtiger Schritt auf dem Weg zu steuerbaren Motorflugzeugen."
+          }
+        },
+        "after": {
+          "surprise": "Antrieb, tragende Flügel und Steuerung lösen verschiedene Aufgaben. Ein Motor allein erklärt noch nicht, wie ein Flugzeug getragen und gelenkt wird.",
+          "question": {
+            "prompt": "Was war an den Flügen der Wright-Brüder 1903 wichtig?",
+            "answers": [
+              "Sie waren mit Motor und steuerbar",
+              "Sie waren die ersten Ballonfahrten",
+              "Sie führten zum Mond"
+            ],
+            "correct": 0,
+            "why": "Die Versuche waren ein wichtiger Schritt auf dem Weg zu steuerbaren Motorflugzeugen."
+          }
+        },
+        "sourceCounterread": "NPSWrightBrothers25–32lift/control/engine17Dec1903;NASMoriginalpagecurrentlyunavailable. NewNPSsourceadded.",
+        "sourceUrls": [
+          "https://airandspace.si.edu/collection-objects/1903-wright-flyer/nasm_A19610048000",
+          "https://airandspace.si.edu/explore/stories/flight-airplane",
+          "https://www.nps.gov/wrbr/learn/historyculture/thefirstflight.htm"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-ww1",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Warum lernen wir über Krieg?",
+            "answers": [
+              "Um Leid zu verstehen und Frieden zu fördern",
+              "Um Gewalt zu feiern",
+              "Um andere Menschen zu hassen"
+            ],
+            "correct": 0,
+            "why": "Der Krieg veränderte das Leben vieler Menschen, und neue Staaten entstanden."
+          }
+        },
+        "after": {
+          "surprise": "Ein Kriegsdatum erzählt wenig über das Leben der betroffenen Menschen. Frage beim Lesen auch nach Leid, Alltag und den Folgen für Familien.",
+          "question": {
+            "prompt": "Warum lernen wir über Krieg?",
+            "answers": [
+              "Um Leid zu verstehen und Frieden zu fördern",
+              "Um Gewalt zu feiern",
+              "Um andere Menschen zu hassen"
+            ],
+            "correct": 0,
+            "why": "Beim Lernen über den Krieg betrachten wir das Leid und die Erfahrungen betroffener Menschen. Das hilft, die Bedeutung von Frieden und dem Schutz von Menschen zu verstehen."
+          }
+        },
+        "sourceCounterread": "LeMO5humanlosses,226survivortrauma;newethicallearningrationaleisownpedagogicalinterpretation,nofreshcasualtynumbercopied.",
+        "sourceUrls": [
+          "https://www.dhm.de/lemo/kapitel/erster-weltkrieg",
+          "https://www.iwm.org.uk/sites/default/files/press-release/4_August_1914_Factsheet.pdf"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-holocaust",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Was können wir aus dieser Geschichte lernen?",
+            "answers": [
+              "Menschen verdienen Schutz vor Hass und Ausgrenzung",
+              "Ausgrenzung ist in Ordnung",
+              "Nur manche Menschen haben Rechte"
+            ],
+            "correct": 0,
+            "why": "Erinnern hilft uns, jüdisches Leben zu achten, Menschenrechte zu schützen und Hass zu widersprechen."
+          }
+        },
+        "after": {
+          "surprise": "Menschenwürde hängt nicht von Herkunft oder Religion ab. Beim Erinnern achten wir die ermordeten Menschen und ihre Lebensgeschichten; wir widersprechen Hass und Ausgrenzung.",
+          "question": {
+            "prompt": "Was können wir aus dieser Geschichte lernen?",
+            "answers": [
+              "Menschen verdienen Schutz vor Hass und Ausgrenzung",
+              "Ausgrenzung ist in Ordnung",
+              "Nur manche Menschen haben Rechte"
+            ],
+            "correct": 0,
+            "why": "Erinnern hilft uns, jüdisches Leben zu achten, Menschenrechte zu schützen und Hass zu widersprechen."
+          }
+        },
+        "sourceCounterread": "USHMM100–112/156–174Jewishvictims,Nazis/alliescollaborators,antisemitism;ownrespectfulremembrancewithoutgraphicdetailornoinheritedguiltclaim.",
+        "sourceUrls": [
+          "https://encyclopedia.ushmm.org/content/en/article/introduction-to-the-holocaust",
+          "https://encyclopedia.ushmm.org/content/en/article/antisemitism-1"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-ww2",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Was hilft, Frieden zu bewahren?",
+            "answers": [
+              "Gespräche, Zusammenarbeit und Menschenrechte",
+              "Hass auf ganze Gruppen",
+              "Immer neue Drohungen"
+            ],
+            "correct": 0,
+            "why": "Der Krieg und die Verbrechen dieser Zeit machten den Schutz von Frieden und Menschenrechten besonders dringlich."
+          }
+        },
+        "after": {
+          "surprise": "Kriegsende und wiederhergestellter Alltag sind verschiedene Dinge. Überlege, welche Hilfe Menschen nach Zerstörung, Verfolgung und Verlust brauchten.",
+          "question": {
+            "prompt": "Was hilft, Frieden zu bewahren?",
+            "answers": [
+              "Gespräche, Zusammenarbeit und Menschenrechte",
+              "Hass auf ganze Gruppen",
+              "Immer neue Drohungen"
+            ],
+            "correct": 0,
+            "why": "Der Krieg und die Verbrechen dieser Zeit machten den Schutz von Frieden und Menschenrechten besonders dringlich."
+          }
+        },
+        "sourceCounterread": "LeMO216–220invasion/occupation/violence;newpostwarhelpprompt noadditionaldateclaim. Completefullarticlefact/mediareviewstillopen.",
+        "sourceUrls": [
+          "https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg",
+          "https://visit.archives.gov/whats-on/explore-exhibits/80th-anniversary-ve-day-end-wwii-europe",
+          "https://www.archives.gov/milestone-documents/surrender-of-japan"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-un",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Warum wurde die UNO gegründet?",
+            "answers": [
+              "Um Frieden und Zusammenarbeit zu fördern",
+              "Um neue Kriege zu beginnen",
+              "Um alle Sprachen abzuschaffen"
+            ],
+            "correct": 0,
+            "why": "Staaten bekamen einen gemeinsamen Ort, um Probleme zu besprechen und zusammenzuarbeiten."
+          }
+        },
+        "after": {
+          "surprise": "Ein Gespräch löst nicht automatisch jeden Streit. Überlege, warum Staaten trotzdem einen gemeinsamen Ort zum Verhandeln brauchen.",
+          "question": {
+            "prompt": "Warum wurde die UNO gegründet?",
+            "answers": [
+              "Um Frieden und Zusammenarbeit zu fördern",
+              "Um neue Kriege zu beginnen",
+              "Um alle Sprachen abzuschaffen"
+            ],
+            "correct": 0,
+            "why": "Staaten bekamen einen gemeinsamen Ort, um Probleme zu besprechen und zusammenzuarbeiten."
+          }
+        },
+        "sourceCounterread": "CurrentUNhistory/charterreadsfailed;newnegotiationreflectiondoesnotaddhistoricalfacts. Fullarticle/charterdatefreshverificationstillopen.",
+        "sourceUrls": [
+          "https://www.un.org/en/about-us/history-of-the-un",
+          "https://www.un.org/en/about-us/un-charter/",
+          "https://www.un.org/en/visit/about-us"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-berlin_wall_build",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Was geschah durch die Berliner Mauer?",
+            "answers": [
+              "Familien und Freunde wurden getrennt",
+              "Alle konnten leichter reisen",
+              "Berlin zog nach Amerika"
+            ],
+            "correct": 0,
+            "why": "Die Mauer zeigt, wie sehr fehlende Reisefreiheit das Leben von Menschen veränderte."
+          }
+        },
+        "after": {
+          "surprise": "Eine Grenzlinie auf einer Karte zeigt nicht, wie eine Trennung den Alltag verändert. Denke an einen Weg zu Freunden oder Verwandten auf der anderen Seite.",
+          "question": {
+            "prompt": "Was geschah durch die Berliner Mauer?",
+            "answers": [
+              "Familien und Freunde wurden getrennt",
+              "Alle konnten leichter reisen",
+              "Berlin zog nach Amerika"
+            ],
+            "correct": 0,
+            "why": "Die Grenzsperren unterbrachen Wege zwischen Ost- und West-Berlin. Viele Menschen konnten Freunde und Verwandte auf der anderen Seite nicht mehr frei besuchen."
+          }
+        },
+        "sourceCounterread": "StiftungBerlinerMauer340stricttravelbanformostGDRcitizens,399opening;newfamilyjourneyconnectionisanownpedagogicalexample.",
+        "sourceUrls": [
+          "https://www.stiftung-berliner-mauer.de/de/themen/die-berliner-mauer"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-apollo11",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Wer gehörte zum Apollo-11-Team im Raumschiff?",
+            "answers": [
+              "Armstrong, Aldrin und Collins",
+              "Nur Armstrong",
+              "Marie Curie und Gutenberg"
+            ],
+            "correct": 0,
+            "why": "Zum ersten Mal konnten Menschen einen anderen Himmelskörper betreten und dort Proben sammeln."
+          }
+        },
+        "after": {
+          "surprise": "Zum Team gehörten drei Astronauten mit unterschiedlichen Aufgaben. Nur auf die Menschen auf der Mondoberfläche zu schauen, würde einen Teil der Mission ausblenden.",
+          "question": {
+            "prompt": "Wer gehörte zum Apollo-11-Team im Raumschiff?",
+            "answers": [
+              "Armstrong, Aldrin und Collins",
+              "Nur Armstrong",
+              "Marie Curie und Gutenberg"
+            ],
+            "correct": 0,
+            "why": "Armstrong, Aldrin und Collins gehörten zur dreiköpfigen Besatzung. Armstrong und Aldrin gingen auf die Mondoberfläche; Collins blieb im Raumschiff in der Mondumlaufbahn."
+          }
+        },
+        "sourceCounterread": "NASA278allthreecrew,284CollinspilotsCSMinlunarorbit,286Armstrong/AldrinLM,290–295bothsurface/return. Actuallyreadcurrentmissionpassage;no surface-date/time claim beyondsource.",
+        "sourceUrls": [
+          "https://www.nasa.gov/history/apollo-11-mission-overview/",
+          "https://www.nasa.gov/wp-content/uploads/static/history/alsj/a11/a11.step.html"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-web",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Was stimmt über Web und Internet?",
+            "answers": [
+              "Das Web nutzt das ältere Internet",
+              "Beides ist genau dasselbe",
+              "Das Internet braucht Papierseiten"
+            ],
+            "correct": 0,
+            "why": "Über Links können Menschen Informationen auf vielen Computern einfacher finden und teilen."
+          }
+        },
+        "after": {
+          "surprise": "Eine verlinkte Webseite und das Netz, über das sie ankommt, sind verschiedene Dinge. Auch E-Mail nutzt das Internet, ohne selbst eine Webseite zu sein.",
+          "question": {
+            "prompt": "Was stimmt über Web und Internet?",
+            "answers": [
+              "Das Web nutzt das ältere Internet",
+              "Beides ist genau dasselbe",
+              "Das Internet braucht Papierseiten"
+            ],
+            "correct": 0,
+            "why": "Das Internet verband schon vorher Computernetze. Das spätere World Wide Web nutzt diese Verbindung, um verlinkte Seiten zu übertragen."
+          }
+        },
+        "sourceCounterread": "CERN100–107release1991overexistinginternetandemail/filetransfer;InternetSociety131–134/152priornetwork1983.",
+        "sourceUrls": [
+          "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/",
+          "https://home.cern/internet-prehistory-cern/"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-berlin_wall_fall",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Wann wurden die Berliner Grenzübergänge geöffnet?",
+            "answers": [
+              "1989",
+              "1961",
+              "1903"
+            ],
+            "correct": 0,
+            "why": "Die Öffnung war ein wichtiger Schritt zur Freiheit und zur späteren deutschen Einheit."
+          }
+        },
+        "after": {
+          "surprise": "Die Grenzöffnung im November 1989 und die deutsche Einheit im Oktober 1990 sind zwei Ereignisse. Eine Zeitleiste hilft, ihre Reihenfolge auseinanderzuhalten.",
+          "question": {
+            "prompt": "Wann wurden die Berliner Grenzübergänge geöffnet?",
+            "answers": [
+              "1989",
+              "1961",
+              "1903"
+            ],
+            "correct": 0,
+            "why": "Die Berliner Grenzübergänge wurden am 9. November 1989 geöffnet. Das war vor der deutschen Wiedervereinigung am 3. Oktober 1990."
+          }
+        },
+        "sourceCounterread": "Stiftung3999Nov1989;Bundesregierung1223Oct1990 distinctevents.",
+        "sourceUrls": [
+          "https://www.stiftung-berliner-mauer.de/de/themen/die-berliner-mauer",
+          "https://www.bundesregierung.de/breg-de/schwerpunkte/deutsche-einheit/deutsche-wiedervereinigung-fotostory-2338554"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-reunification",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Was wird am 3. Oktober gefeiert?",
+            "answers": [
+              "Die deutsche Wiedervereinigung",
+              "Die Erfindung des Kompasses",
+              "Die erste Mondlandung"
+            ],
+            "correct": 0,
+            "why": "Menschen in Ost und West lebten nun gemeinsam in einer Bundesrepublik mit derselben staatlichen Ordnung."
+          }
+        },
+        "after": {
+          "surprise": "Der gemeinsame Feiertag steht für einen bestimmten Schritt. Auf dem Weg zur Einheit gab es vorher Wahlen, Verhandlungen und Verträge.",
+          "question": {
+            "prompt": "Was wird am 3. Oktober gefeiert?",
+            "answers": [
+              "Die deutsche Wiedervereinigung",
+              "Die Erfindung des Kompasses",
+              "Die erste Mondlandung"
+            ],
+            "correct": 0,
+            "why": "Am 3. Oktober wird an die deutsche Wiedervereinigung von 1990 erinnert. Der Tag ist deshalb der Tag der Deutschen Einheit."
+          }
+        },
+        "sourceCounterread": "Bundesregierung122–126elections/unification;169treaty;fullarticleindividualsocialexperienceconfirmed195butnotrecounted.",
+        "sourceUrls": [
+          "https://www.bundesregierung.de/breg-de/schwerpunkte/deutsche-einheit/deutsche-wiedervereinigung-fotostory-2338554"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-iss",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Was ist die ISS?",
+            "answers": [
+              "Ein gemeinsames Forschungslabor im Weltraum",
+              "Ein Land auf der Erde",
+              "Eine Tierart"
+            ],
+            "correct": 0,
+            "why": "Gemeinsame Forschung kann Grenzen überwinden und Wissen für die Erde liefern."
+          }
+        },
+        "after": {
+          "surprise": "Ein Labor beschreibt eine Aufgabe, eine Umlaufbahn einen Ort. Die ISS verbindet beides: Forschung findet dort in einer Raumstation statt.",
+          "question": {
+            "prompt": "Was ist die ISS?",
+            "answers": [
+              "Ein gemeinsames Forschungslabor im Weltraum",
+              "Ein Land auf der Erde",
+              "Eine Tierart"
+            ],
+            "correct": 0,
+            "why": "Die Internationale Raumstation ist ein Ort, an dem Menschen aus verschiedenen Ländern gemeinsam leben, arbeiten und wissenschaftliche Versuche durchführen."
+          }
+        },
+        "sourceCounterread": "NASA255–264crew2Nov2000/internationallab/plasmaexperiment;nodetailedphysicalmicrogravitymechanismnewclaim.",
+        "sourceUrls": [
+          "https://www.nasa.gov/missions/station/iss-research/expedition-1-kicks-off-science-aboard-international-space-station/"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-september11",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Wozu dienen Gedenkstätten?",
+            "answers": [
+              "Um an Menschen zu erinnern und ihre Würde zu achten",
+              "Um Gewalt zu feiern",
+              "Um zu vergessen, was geschah"
+            ],
+            "correct": 0,
+            "why": "Das Ereignis veränderte viele Leben; Erinnern und gegenseitige Hilfe bleiben wichtig."
+          }
+        },
+        "after": {
+          "surprise": "Hinter einer Opferzahl stehen einzelne Menschen. Erinnern heißt, ihre Würde zu achten; Gewalt wird dadurch nicht gefeiert.",
+          "question": {
+            "prompt": "Wozu dienen Gedenkstätten?",
+            "answers": [
+              "Um an Menschen zu erinnern und ihre Würde zu achten",
+              "Um Gewalt zu feiern",
+              "Um zu vergessen, was geschah"
+            ],
+            "correct": 0,
+            "why": "Gedenkstätten erinnern an getötete Menschen und ihre Lebensgeschichten. Dabei geht es um Erinnerung und Menschenwürde, nicht darum, Gewalt zu feiern."
+          }
+        },
+        "sourceCounterread": "Memorialmodule5lines92–96purposehonoringvictims,236personalizedtributes;child-specificsourcecurrentlyinaccessible,notclaimedread.",
+        "sourceUrls": [
+          "https://www.911memorial.org/911-faqs",
+          "https://www.911memorial.org/learn/students-and-teachers/talk-to-young-learners-about-911",
+          "https://www.911memorial.org/learn/resources/911-primer/module-5-memorializing-911",
+          "https://www.tsa.gov/sites/default/files/9003_layout_mission_hall_exhibit_the_inception.pdf"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      },
+      {
+        "id": "history-webb",
+        "status": "individual-pedagogical-correction-current-ui-pending-full-article-scope-not-accepted",
+        "before": {
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "question": {
+            "prompt": "Wobei hilft das Webb-Teleskop?",
+            "answers": [
+              "Sterne und Galaxien erforschen",
+              "Eine Brücke bauen",
+              "Alle Tiergeräusche hören"
+            ],
+            "correct": 0,
+            "why": "Die Bilder und Messdaten helfen uns zu verstehen, wie Sterne, Planeten und Galaxien entstehen."
+          }
+        },
+        "after": {
+          "surprise": "Frage bei einem Weltraumbild: Welches Licht wurde gemessen, und was zeigen die Farben? Sichtbare Bildfarben bedeuten nicht, dass ein Mensch dort genauso sehen würde.",
+          "question": {
+            "prompt": "Wobei hilft das Webb-Teleskop?",
+            "answers": [
+              "Sterne und Galaxien erforschen",
+              "Eine Brücke bauen",
+              "Alle Tiergeräusche hören"
+            ],
+            "correct": 0,
+            "why": "Die Bilder und Messdaten helfen uns zu verstehen, wie Sterne, Planeten und Galaxien entstehen."
+          }
+        },
+        "sourceCounterread": "NASA310/323–328infrared/composite data andscience;avoidclaimJuly2022firsteverWebbimage.",
+        "sourceUrls": [
+          "https://science.nasa.gov/missions/webb/nasa-reveals-webb-telescopes-first-images-of-unseen-universe/",
+          "https://science.nasa.gov/mission/webb/webb-mission-timeline/"
+        ],
+        "decision": "Generische Quellenregel ist an sich korrekt, vermittelt an26Stellen jedoch keine eigene Themenvertiefung. Individuelle Beobachtungs-/Begriffs-/Perspektiv-/Quellengrenzen ergänzen.",
+        "criticalReread": "NeueErklärungmitFrage/RichtigantwortundvorhandenenAbsätzeneinzelnabgeglichen;keineerfundenenDaten/Personen/Medienhinzugefügt. FreiwilligeVertiefung undsachlicherTon;beiGewaltkeinegrafischenDetails/Gamifizierung.",
+        "remaining": "AktuellerBuild/Suche/Rückwege/Offline/gespeicherteAntworten;vollständigeArtikel-/Medien-/FaktenabnahmeaußerhalbderexplizitgeprüftenQuellenstellenbleibtoffen."
+      }
+    ]
   }
 }
