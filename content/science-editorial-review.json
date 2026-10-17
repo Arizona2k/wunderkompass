@@ -725,7 +725,7 @@
     {
       "id": "science-energy",
       "kind": "individually-extended-existing",
-      "contentHash": "e3211ddecacc5c9cf446146a798df1cd6b5a82af1a8f520d9aadcbaaafb7928a",
+      "contentHash": "354739d0ef84f551dd11d0a9822811ac95ab97100551403e1b255b33f342894f",
       "goal": "Du kannst Speicherung von Erzeugung unterscheiden und eine begrenzte Reserve erklären.",
       "ageLevels": {
         "6-8": "Sonnenlicht kann Strom liefern. Ein Akku kann einen Teil für später speichern.",
@@ -773,13 +773,20 @@
         "science-heat-transfer",
         "science-lever",
         "science-pendulum",
-        "science-fusion"
+        "science-fusion",
+        "invention-battery",
+        "invention-refrigerator",
+        "animal-dromedary"
       ],
       "reviewedBy": "Codex, source-reading and implementation self-review",
       "independentReview": false,
       "nextSourceReview": "2027-04-13",
       "UIAcceptance": "pending current real browser, search/direct/context/back/offline proof",
-      "acceptedForDoubling": false
+      "acceptedForDoubling": false,
+      "relationshipAmendment": {
+        "on": "2026-10-17",
+        "meaning": "Nur den erklärten gegenseitigen Verweis zum Dromedar ergänzt. Fachtext, Aufgaben, Modell, Werte und Quellen unverändert; keine neue unabhängige Abnahme."
+      }
     },
     {
       "id": "science-patterns",
