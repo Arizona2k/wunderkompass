@@ -3207,7 +3207,7 @@
     "answers": [
       "Es legt Eier und gibt seinen Jungen Milch.",
       "Es ist ein Vogel, weil es Eier legt.",
-      "Seine Jungen werden ausschließlich mit Blättern ernährt."
+      "Als Säugetier bringt es immer lebende Junge zur Welt."
     ],
     "correct": 0,
     "why": "Eierlegen und Milchgeben beschreiben zwei verschiedene Vorgänge desselben Säugetiers.",
@@ -3215,14 +3215,16 @@
     "topic": "animal-platypus",
     "topicTitle": "Schnabeltier",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Prüfe Fortpflanzung und Versorgung der geschlüpften Jungen getrennt. Ein einziges Merkmal genügt nicht zur Einordnung."
+    ]
   },
   {
     "prompt": "Wie nimmt der Kurzschnabeligel seine Nahrung auf?",
     "answers": [
-      "Er pflückt ausschließlich Blätter.",
+      "Er nimmt die Nahrung ausschließlich mit den Grabkrallen auf.",
       "Er nimmt kleine Beutetiere mit seiner Zunge auf.",
-      "Er filtert Meerwasser durch Kiemen."
+      "Die lange Schnauze ersetzt bei der Nahrungsaufnahme die Zunge vollständig."
     ],
     "correct": 1,
     "why": "Krallen öffnen Verstecke; die Zunge nimmt Nahrung auf.",
@@ -3230,13 +3232,15 @@
     "topic": "animal-short-beaked-echidna",
     "topicTitle": "Kurzschnabeligel",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Unterscheide das Öffnen eines Insektenverstecks von dem Körperteil, der die Nahrung anschließend aufnimmt."
+    ]
   },
   {
     "prompt": "Mit welchem Tier ist das Okapi nahe verwandt?",
     "answers": [
       "Mit dem Zebra, allein wegen der Streifen.",
-      "Mit einem Insekt.",
+      "Mit dem Pferd.",
       "Mit der Giraffe."
     ],
     "correct": 2,
@@ -3245,14 +3249,16 @@
     "topic": "animal-okapi",
     "topicTitle": "Okapi",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Ein Fellmuster allein ist noch kein Stammbaum. Suche in der Erklärung nach einem ausdrücklich genannten Verwandten."
+    ]
   },
   {
     "prompt": "Welche beiden Tätigkeiten können Erdmännchen in einer Gruppe ausüben?",
     "answers": [
       "Nahrung suchen und Ausschau halten.",
       "Alle müssen jederzeit dieselbe Tätigkeit ausüben.",
-      "Nur Pflanzen anbauen und ernten."
+      "Ohne jeden Gruppenkontakt ausschließlich allein leben."
     ],
     "correct": 0,
     "why": "Nahrung suchen und Ausschau halten sind zwei verschiedene Tätigkeiten.",
@@ -3260,14 +3266,16 @@
     "topic": "animal-meerkat",
     "topicTitle": "Erdmännchen",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Vergleiche, worauf sich die Aufmerksamkeit bei den verschiedenen Tätigkeiten in einer Erdmännchengruppe richtet."
+    ]
   },
   {
     "prompt": "Welcher Kommunikationsweg eines Kattas wird gerochen?",
     "answers": [
       "Ein aufgerichteter Schwanz.",
       "Eine Duftmarke.",
-      "Die Farbe des Himmels."
+      "Ein Ruf der Gruppe."
     ],
     "correct": 1,
     "why": "Schwanzhaltung ist sichtbar; Duftmarken werden gerochen.",
@@ -3275,7 +3283,9 @@
     "topic": "animal-ring-tailed-lemur",
     "topicTitle": "Katta",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Überlege, welche Mitteilung auch ohne Licht wahrgenommen werden könnte. Prüfe dabei die verschiedenen Sinneswege."
+    ]
   },
   {
     "prompt": "Was unterscheidet Biberdamm und Wohnburg?",
@@ -3290,13 +3300,15 @@
     "topic": "animal-north-american-beaver",
     "topicTitle": "Nordamerikanischer Biber",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Unterscheide eine Barriere in fließendem Wasser von einem geschützten Aufenthaltsraum für die Biberfamilie."
+    ]
   },
   {
     "prompt": "Womit ertastet ein Walross Nahrung am Meeresboden?",
     "answers": [
       "Mit empfindlichen Borsten am Maul.",
-      "Mit Vogelfedern.",
+      "Nur mit den Augen; andere Sinne nutzt es dabei nicht.",
       "Es muss mit seinen Stoßzähnen jedes Beutetier aufspießen."
     ],
     "correct": 0,
@@ -3305,14 +3317,16 @@
     "topic": "animal-walrus",
     "topicTitle": "Walross",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Unterscheide die auffälligen Zähne von den empfindlichen Strukturen rund um das Maul. Welche liefern Sinnesinformationen?"
+    ]
   },
   {
     "prompt": "Wo können Rotfüchse leben?",
     "answers": [
       "Ausschließlich in dichtem Wald.",
       "Unter anderem in Wäldern, offenem Land und Siedlungen.",
-      "Nur im offenen Meer."
+      "Nur dort, wo Menschen es als Haustier versorgen."
     ],
     "correct": 1,
     "why": "Rotfüchse nutzen Wälder, offene Landschaften und auch Siedlungen. Der Aufenthalt bei Menschen macht sie nicht zu Haustieren.",
@@ -3320,13 +3334,15 @@
     "topic": "animal-red-fox",
     "topicTitle": "Rotfuchs",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Prüfe, ob die Beschreibung ausdrücklich nur einen einzigen Ort oder verschiedene Landschaftsformen und ihre Nutzung nennt."
+    ]
   },
   {
     "prompt": "Welcher Sinn spielt bei den Vorderpfoten des Waschbären eine Rolle?",
     "answers": [
-      "Nur der Geschmackssinn.",
-      "Die Pfoten hören wie Ohren.",
+      "Vor allem der Sehsinn.",
+      "Vor allem der Geruchssinn.",
       "Der Tastsinn."
     ],
     "correct": 2,
@@ -3335,7 +3351,9 @@
     "topic": "animal-raccoon",
     "topicTitle": "Waschbär",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Welche Informationen können über unmittelbaren Kontakt entstehen, auch wenn man einen Gegenstand nicht genau sehen kann?"
+    ]
   },
   {
     "prompt": "Was bietet einem Igel einen geschützten Platz?",
@@ -3350,7 +3368,9 @@
     "topic": "animal-hedgehog",
     "topicTitle": "Braunbrustigel",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Stelle dir einen ungestörten Ruheplatz vor. Welche der genannten Strukturen könnte seitlich und von oben Deckung bieten?"
+    ]
   },
   {
     "prompt": "Welcher Name gehört zur hier beschriebenen Schleiereule?",
@@ -3365,7 +3385,9 @@
     "topic": "animal-barn-owl",
     "topicTitle": "Schleiereule",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Vergleiche die Antwortnamen mit der Angabe zum Artnamen in der Karte. Ähnlich klingende Namen können andere Tiere bezeichnen."
+    ]
   },
   {
     "prompt": "Wo sucht der Eisvogel unter anderem nach Nahrung?",
@@ -3380,7 +3402,9 @@
     "topic": "animal-kingfisher",
     "topicTitle": "Eisvogel",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Verbinde die Sitzwarte mit dem Ort, an dem die beschriebene Beute lebt. Der Lebensraum muss beides ermöglichen."
+    ]
   },
   {
     "prompt": "Was stimmt über den Strauß?",
@@ -3395,7 +3419,9 @@
     "topic": "animal-ostrich",
     "topicTitle": "Afrikanischer Strauß",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Prüfe, ob eine Tiergruppe nur durch eine einzige Fortbewegungsart bestimmt wird. Suche weitere Merkmale in der Karte."
+    ]
   },
   {
     "prompt": "Gehören Brutplatz und Nahrungsraum immer zum selben Ort?",
@@ -3410,13 +3436,15 @@
     "topic": "animal-atlantic-puffin",
     "topicTitle": "Papageitaucher",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Vergleiche die Aufgaben eines Nistplatzes und eines Beutegebiets. Müssen beide Aufgaben am selben Ort erfüllt werden?"
+    ]
   },
   {
     "prompt": "Was kann das Europäische Chamäleon?",
     "answers": [
       "Beliebige Fotomuster genau kopieren.",
-      "Seinen Schwanz wie ein Rad abwerfen und nach Wunsch neu bilden.",
+      "Seinen Schwanz nur als Gegengewicht nutzen, ohne damit greifen zu können.",
       "Mit dem Schwanz greifen und die Färbung begrenzt verändern."
     ],
     "correct": 2,
@@ -3425,14 +3453,16 @@
     "topic": "animal-common-chameleon",
     "topicTitle": "Europäisches Chamäleon",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Ordne Körperteile ihren Aufgaben zu und prüfe, ob die Behauptung über Farbänderung eine Grenze oder unbegrenzte Möglichkeiten nennt."
+    ]
   },
   {
     "prompt": "Was tragen Feuersalamanderlarven?",
     "answers": [
       "Äußere Kiemen.",
-      "Federn.",
-      "Eine Vogeleierschale als dauerhafte Körperhülle."
+      "Keine Kiemen; sie atmen schon genau wie die erwachsenen Landtiere.",
+      "Schon alle Merkmale der Erwachsenen, ohne spätere Verwandlung."
     ],
     "correct": 0,
     "why": "Die Larven tragen äußere Kiemen und leben im Wasser. Erwachsene Tiere nutzen überwiegend den Wald.",
@@ -3440,14 +3470,16 @@
     "topic": "animal-fire-salamander",
     "topicTitle": "Feuersalamander",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Achte auf das Entwicklungsstadium: Ein Merkmal der im Wasser lebenden Larve muss nicht auch beim erwachsenen Waldtier vorkommen."
+    ]
   },
   {
-    "prompt": "Welche Reihenfolge passt zum Grasfrosch?",
+    "prompt": "Wie entwickelt sich ein Grasfrosch vom Laich aus?",
     "answers": [
-      "Erwachsenes Tier, dann erst Kaulquappe.",
+      "Laich, sofort ein fertiger erwachsener Frosch.",
       "Laich, Kaulquappe, junger Frosch.",
-      "Blüte, Samen, erwachsener Frosch."
+      "Laich, kleiner Frosch, danach erst Kaulquappe."
     ],
     "correct": 1,
     "why": "Laich kommt vor Kaulquappen; danach folgen junge und erwachsene Frösche.",
@@ -3455,7 +3487,9 @@
     "topic": "animal-common-frog",
     "topicTitle": "Grasfrosch",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Suche den Anfang des Entwicklungsablaufs und verfolge dann, wie sich die Form des Tiers bis zum jungen Frosch ändert."
+    ]
   },
   {
     "prompt": "Was ist die Seeanemone beim Clownfisch?",
@@ -3470,7 +3504,9 @@
     "topic": "animal-eastern-clown-anemonefish",
     "topicTitle": "Echter Clownfisch",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Überlege, ob eine Seeanemone selbst Nahrung aufnimmt und auf ihre Umgebung reagiert, statt nur nach ihrem Aussehen zu urteilen."
+    ]
   },
   {
     "prompt": "Warum sind offene Wanderwege für den Aal wichtig?",
@@ -3485,7 +3521,9 @@
     "topic": "animal-european-eel",
     "topicTitle": "Europäischer Aal",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Verfolge den beschriebenen Lebensweg über mehrere Gewässer. Was ändert sich, wenn eine Verbindung unterwegs unterbrochen ist?"
+    ]
   },
   {
     "prompt": "Welche Aussage über Monarchfalter passt?",
@@ -3500,13 +3538,15 @@
     "topic": "animal-monarch-butterfly",
     "topicTitle": "Monarchfalter",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Achte darauf, ob die Beschreibung von jedem einzelnen Falter oder ausdrücklich von verschiedenen Populationen spricht."
+    ]
   },
   {
     "prompt": "Welches Maß beschreibt hier die 25–40 mm?",
     "answers": [
-      "Die Länge aller Fühler zusammen.",
-      "Die Länge jeder zurückgelegten Strecke.",
+      "Die Länge des ausgestreckten weichen Körpers.",
+      "Die Höhe des Gehäuses.",
       "Die Breite des Gehäuses."
     ],
     "correct": 2,
@@ -3515,14 +3555,16 @@
     "topic": "animal-garden-snail",
     "topicTitle": "Gefleckte Weinbergschnecke",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Stelle dir ein Maßband quer über das Haus der Schnecke vor. Unterscheide dieses Maß vom ausgestreckten weichen Körper."
+    ]
   },
   {
     "prompt": "Warum häutet sich ein Hummer?",
     "answers": [
       "Seine feste Außenhülle muss beim Wachsen ersetzt werden.",
       "Er verwandelt sich dadurch in eine andere Art.",
-      "Er legt damit Vogelfedern ab."
+      "Seine feste Hülle wächst ohne Häutung unbegrenzt mit."
     ],
     "correct": 0,
     "why": "Eine unverändert feste Außenhülle kann nicht unbegrenzt mitwachsen. Bei der Häutung wird sie abgestreift.",
@@ -3530,14 +3572,16 @@
     "topic": "animal-european-lobster",
     "topicTitle": "Europäischer Hummer",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Denke an eine feste Hülle mit unveränderten Maßen: Was wird nötig, wenn der Körper darin weiter an Größe zunimmt?"
+    ]
   },
   {
     "prompt": "Was unterscheidet Sepia und Krake?",
     "answers": [
       "Beide Namen bezeichnen zwingend dieselbe Art.",
       "Sepia besitzt acht Arme und zusätzlich zwei längere Fangtentakel.",
-      "Ein Krake besitzt ein Vogelskelett."
+      "Sepia besitzt acht Arme, aber keine zusätzlichen Fangtentakel."
     ],
     "correct": 1,
     "why": "Sepia besitzt acht Arme und zwei zusätzliche Fangtentakel. Der Krake hat acht Arme ohne diese beiden zusätzlichen Fangtentakel.",
@@ -3545,13 +3589,15 @@
     "topic": "animal-common-cuttlefish",
     "topicTitle": "Gewöhnliche Sepia",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Vergleiche die Fangwerkzeuge beider Kopffüßer genau. Ein gemeinsamer Sammelname bedeutet nicht denselben Körperbau."
+    ]
   },
   {
     "prompt": "Womit kann sich dieses Seepferdchen festhalten?",
     "answers": [
-      "Mit Pferdehufen.",
-      "Mit Vogelflügeln.",
+      "Nur mit dem Maul; sein Schwanz kann nicht greifen.",
+      "Mit den Brustflossen wie mit Händen.",
       "Mit seinem Greifschwanz."
     ],
     "correct": 2,
@@ -3560,6 +3606,8 @@
     "topic": "animal-short-snouted-seahorse",
     "topicTitle": "Kurzschnäuziges Seepferdchen",
     "difficulty": "easy",
-    "hints": []
+    "hints": [
+      "Welche Form des Körperendes könnte sich um eine geeignete Haltestruktur legen? Der Tiername allein erklärt keine Fähigkeit."
+    ]
   }
 ]

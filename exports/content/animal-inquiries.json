@@ -1392,7 +1392,7 @@
   },
   {
     "id": "animal-walrus",
-    "goal": "Art, Unterart und Schutzregel auseinanderhalten.",
+    "goal": "Tastborsten helfen, Nahrung zu finden.",
     "evidence": [
       {
         "label": "Tastborsten",
@@ -1404,16 +1404,16 @@
       }
     ],
     "reason": {
-      "prompt": "Warum sagt der Ort eines Schutzprogramms nicht die gesamte Verbreitung einer Art aus?",
+      "prompt": "Wie helfen die Borsten bei der Nahrungssuche am Meeresboden?",
       "answers": [
-        "Das Gebiet eines Programms zeigt immer die gesamte Weltverbreitung.",
-        "Ein Programmgebiet ist nicht die gesamte Verbreitung einer Tierart."
+        "Sie sind kleine Stoßzähne zum Aufspießen der Nahrung.",
+        "Sie liefern Tastinformationen beim Suchen nach Beute."
       ],
       "correct": 1,
-      "hint": "Unterscheide Zuständigkeitsgebiet und gesamte Tierverbreitung.",
+      "hint": "Prüfe, ob die Beschreibung ein Sinneswerkzeug oder ein Werkzeug zum Aufspießen nennt.",
       "feedback": [
-        "Die Aussage geht über die Belege hinaus. Ein Programm in Alaska belegt seinen eigenen Bereich, keine vollständige Weltkarte.",
-        "Ein Programm in Alaska belegt seinen eigenen Bereich, keine vollständige Weltkarte."
+        "Borsten und Zähne sind verschiedene Körperteile. Die empfindlichen Borsten liefern Tastinformationen bei der Beutesuche; sie sind keine Stoßzähne.",
+        "Die empfindlichen Borsten liefern Tastinformationen bei der Beutesuche; sie sind keine Stoßzähne."
       ]
     },
     "transfer": {
@@ -1436,8 +1436,8 @@
     ],
     "status": "Eigene Lernaufgaben auf Grundlage der verlinkten Artenbeschreibungen. Codex hat Texte und Umsetzung geprüft; eine unabhängige fachliche oder pädagogische Abnahme wird nicht behauptet.",
     "observation": {
-      "task": "Unterscheide die Wörter Art und Unterart in den beiden wissenschaftlichen Namen.",
-      "hint": "Vergleiche, welcher Name aus zwei und welcher aus drei Wörtern besteht."
+      "task": "Zeige in einer eigenen Skizze den Unterschied zwischen Tastborsten und Stoßzähnen. Welche Aufgabe der Borsten ist belegt?",
+      "hint": "Suche bei der Nahrungssuche nach Sinnesinformationen statt nach einem Werkzeug zum Aufspießen."
     }
   },
   {
@@ -1641,15 +1641,15 @@
         "text": "Eisvögel jagen an Gewässern nach Fischen. Häufig halten sie von einer Sitzwarte Ausschau."
       },
       {
-        "label": "Gewässer",
+        "label": "Strukturfarbe",
         "text": "Das leuchtende Blau wird durch die feine Struktur der Federn erzeugt. Blau aussehen heißt nicht immer, einen blauen Farbstoff zu besitzen."
       }
     ],
     "reason": {
       "prompt": "Erkläre den Unterschied zwischen einer blauen Farbe und einem blauen Farbstoff.",
       "answers": [
-        "Die Jagd verbindet einen geeigneten Sitzplatz und erreichbare Beute im Wasser.",
-        "Die Farbe allein erklärt, ob Nahrung erreichbar ist."
+        "Feine Federstrukturen können einen blauen Farbeindruck erzeugen, ohne blauen Farbstoff.",
+        "Jeder blaue Farbeindruck muss durch einen blauen Farbstoff entstehen."
       ],
       "correct": 0,
       "hint": "Eine beobachtete Farbe erklärt noch nicht, wie das Licht verändert wird.",
@@ -1661,8 +1661,8 @@
     "transfer": {
       "prompt": "Ein blauer Stoff und eine blaue Feder sehen ähnlich aus. Welche Untersuchung wäre nötig, um ihre Farbentstehung zu vergleichen?",
       "answers": [
-        "Ein einzelnes Foto genügt zur Bewertung aller Gewässer.",
-        "Für einen fairen Gewässervergleich müssen weitere Bedingungen geprüft werden."
+        "Eine ähnliche Farbe auf einem Foto beweist sicher dieselbe Farbursache.",
+        "Farbentstehung und Beleuchtungsbedingungen beider Proben untersuchen."
       ],
       "correct": 1,
       "hint": "Vergleiche Farbentstehung und Betrachtungsbedingungen statt nur einen Farbeindruck.",
@@ -1697,8 +1697,8 @@
     "reason": {
       "prompt": "Warum sind Flügel nicht automatisch nutzlos, wenn ein Vogel nicht fliegt?",
       "answers": [
-        "Ein Vogel, der nicht fliegt, wird dadurch zu einer anderen Tiergruppe.",
-        "Flugunfähigkeit verändert nicht die Zugehörigkeit zu den Vögeln."
+        "Was nicht zum Fliegen dient, kann überhaupt keine Funktion haben.",
+        "Die Flügel können etwa beim Gleichgewichthalten in einer Kurve helfen."
       ],
       "correct": 1,
       "hint": "Prüfe die beschriebene Aufgabe bei einem Richtungswechsel.",
@@ -1710,8 +1710,8 @@
     "transfer": {
       "prompt": "Jemand nennt jeden flugunfähigen Vogel einen Strauß. Welchen Gegenbeleg findest du im vorhandenen Bestand?",
       "answers": [
-        "Verschiedene Merkmale müssen zur Einordnung gemeinsam betrachtet werden.",
-        "Eine einzelne Fortbewegungsart bestimmt die ganze Verwandtschaft."
+        "Der Kaiserpinguin ist ebenfalls flugunfähig und trotzdem kein Strauß.",
+        "Alle flugunfähigen Vögel sind dieselbe Art wie der Strauß."
       ],
       "correct": 0,
       "hint": "Im Bestand gibt es einen weiteren flugunfähigen Vogel aus einem ganz anderen Lebensraum.",

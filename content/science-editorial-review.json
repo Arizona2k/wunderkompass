@@ -280,7 +280,7 @@
     {
       "id": "science-shadows",
       "kind": "individually-extended-existing",
-      "contentHash": "c0ca33c17435fce664d4957140f36d313290a589053a9c924644c53dacae99bb",
+      "contentHash": "7c80b89096d8d613027da873d428de1ab2bea6f1a9ab379c3bca6a7fa493f73c",
       "goal": "Du kannst aus einer Messidee eine begründete Schlussfolgerung ziehen und ihre Voraussetzungen nennen.",
       "ageLevels": {
         "6-8": "Gleich lange Stäbe können an verschiedenen Orten unterschiedliche Schatten werfen.",
@@ -322,13 +322,25 @@
       "related": [
         "history-pyramids",
         "science-gps",
-        "science-angle"
+        "science-angle",
+        "animal-kingfisher"
       ],
       "reviewedBy": "Codex, source-reading and implementation self-review",
       "independentReview": false,
       "nextSourceReview": "2027-04-13",
       "UIAcceptance": "pending current real browser, search/direct/context/back/offline proof",
-      "acceptedForDoubling": false
+      "acceptedForDoubling": false,
+      "priorRelationProvenance": [
+        {
+          "contentHash": "c0ca33c17435fce664d4957140f36d313290a589053a9c924644c53dacae99bb",
+          "related": [
+            "history-pyramids",
+            "science-gps",
+            "science-angle"
+          ],
+          "change": "Only reciprocal animal-wave context links appended; scientific text/questions unchanged; no independent approval."
+        }
+      ]
     },
     {
       "id": "science-atmosphere",
@@ -447,7 +459,7 @@
     {
       "id": "science-currents",
       "kind": "individually-extended-existing",
-      "contentHash": "9e0c8635af554a66b0fd062e3dbbc8e221217d5c7ef62099ebcbfcd254e7c85b",
+      "contentHash": "ff89803c84062d61b13f73be5e505400fc8c943496bf9389e9695d9d4e6ca347",
       "goal": "Du lernst, eine einzelne Ursache von einem ganzen komplexen Meeresstrom zu unterscheiden.",
       "ageLevels": {
         "6-8": "Wind und Dichteunterschiede können Wasser bewegen.",
@@ -491,13 +503,27 @@
         "animal-whale-shark",
         "science-coral-reef",
         "science-tides",
-        "science-buoyancy"
+        "science-buoyancy",
+        "animal-european-eel"
       ],
       "reviewedBy": "Codex, source-reading and implementation self-review",
       "independentReview": false,
       "nextSourceReview": "2027-04-13",
       "UIAcceptance": "pending current real browser, search/direct/context/back/offline proof",
-      "acceptedForDoubling": false
+      "acceptedForDoubling": false,
+      "priorRelationProvenance": [
+        {
+          "contentHash": "9e0c8635af554a66b0fd062e3dbbc8e221217d5c7ef62099ebcbfcd254e7c85b",
+          "related": [
+            "science-foodweb",
+            "animal-whale-shark",
+            "science-coral-reef",
+            "science-tides",
+            "science-buoyancy"
+          ],
+          "change": "Only reciprocal animal-wave context links appended; scientific text/questions unchanged; no independent approval."
+        }
+      ]
     },
     {
       "id": "science-motor",
@@ -555,7 +581,7 @@
     {
       "id": "science-foodweb",
       "kind": "individually-extended-existing",
-      "contentHash": "aea75cdfd2de4d0924d32bf06277048df4bdf569b7bf55303c1ed591ba7c0401",
+      "contentHash": "a597e8ce1d72c15df77fc7b76edb5d076c51bd5b4ee37348caf4674a8a4957db",
       "goal": "Du unterscheidest Pfeilrichtung, Stoffkreislauf und Energieübertragung.",
       "ageLevels": {
         "6-8": "Eine Nahrungskette zeigt, wie Energie mit Nahrung weitergegeben wird.",
@@ -599,13 +625,27 @@
         "animal-lion",
         "animal-honey-bee",
         "science-photosynthesis",
-        "science-fungi"
+        "science-fungi",
+        "animal-short-snouted-seahorse"
       ],
       "reviewedBy": "Codex, source-reading and implementation self-review",
       "independentReview": false,
       "nextSourceReview": "2027-04-13",
       "UIAcceptance": "pending current real browser, search/direct/context/back/offline proof",
-      "acceptedForDoubling": false
+      "acceptedForDoubling": false,
+      "priorRelationProvenance": [
+        {
+          "contentHash": "aea75cdfd2de4d0924d32bf06277048df4bdf569b7bf55303c1ed591ba7c0401",
+          "related": [
+            "animal-blue-whale",
+            "animal-lion",
+            "animal-honey-bee",
+            "science-photosynthesis",
+            "science-fungi"
+          ],
+          "change": "Only reciprocal animal-wave context links appended; scientific text/questions unchanged; no independent approval."
+        }
+      ]
     },
     {
       "id": "science-sound",
@@ -851,7 +891,7 @@
     {
       "id": "science-water-cycle",
       "kind": "individually-extended-existing",
-      "contentHash": "41afab1f51ab6ea61f338114f34c7a49bb1bb2dd5a4b9d8ca75be3359ec33a9a",
+      "contentHash": "17af636fae3fdcf7fcc11612cec42c100f41115eff521046216e71c9e8db9074",
       "goal": "Du beschreibst Speicher und Zustandswechsel ohne Wasser im Modell einfach verschwinden zu lassen.",
       "ageLevels": {
         "6-8": "Wasser kann als Flüssigkeit, Dampf oder Eis an verschiedenen Orten vorkommen.",
@@ -900,7 +940,11 @@
       "related": [
         "science-photosynthesis",
         "science-atmosphere",
-        "science-surface-tension"
+        "science-surface-tension",
+        "building-pont-du-gard",
+        "building-lalibela",
+        "building-angkor-wat",
+        "animal-north-american-beaver"
       ],
       "reviewedBy": "Codex, source-reading and implementation self-review",
       "independentReview": false,
@@ -911,6 +955,17 @@
         "building-pont-du-gard",
         "building-lalibela",
         "building-angkor-wat"
+      ],
+      "priorRelationProvenance": [
+        {
+          "contentHash": "41afab1f51ab6ea61f338114f34c7a49bb1bb2dd5a4b9d8ca75be3359ec33a9a",
+          "related": [
+            "science-photosynthesis",
+            "science-atmosphere",
+            "science-surface-tension"
+          ],
+          "change": "Only reciprocal animal-wave context links appended; scientific text/questions unchanged; no independent approval."
+        }
       ]
     },
     {
@@ -1098,7 +1153,7 @@
     {
       "id": "science-coral-reef",
       "kind": "individually-extended-existing",
-      "contentHash": "a162ea70baf7fbb1c885d6fba89af86b27d3859500e58f68c57d4a1e454574a9",
+      "contentHash": "3d1fe1025a09f01ea24a19816b7b90b2b93dccf9b79edb8f1be27c91159e51ee",
       "goal": "Du verstehst Zusammenarbeit und Stress, ohne alle Korallen auf eine Lebensweise zu reduzieren.",
       "ageLevels": {
         "6-8": "Korallenpolypen sind Tiere. Viele leben mit kleinen Algenpartnern zusammen.",
@@ -1147,13 +1202,25 @@
       "related": [
         "science-photosynthesis",
         "animal-common-octopus",
-        "science-currents"
+        "science-currents",
+        "animal-eastern-clown-anemonefish"
       ],
       "reviewedBy": "Codex, source-reading and implementation self-review",
       "independentReview": false,
       "nextSourceReview": "2027-04-13",
       "UIAcceptance": "pending current real browser, search/direct/context/back/offline proof",
-      "acceptedForDoubling": false
+      "acceptedForDoubling": false,
+      "priorRelationProvenance": [
+        {
+          "contentHash": "a162ea70baf7fbb1c885d6fba89af86b27d3859500e58f68c57d4a1e454574a9",
+          "related": [
+            "science-photosynthesis",
+            "animal-common-octopus",
+            "science-currents"
+          ],
+          "change": "Only reciprocal animal-wave context links appended; scientific text/questions unchanged; no independent approval."
+        }
+      ]
     },
     {
       "id": "science-moon-phases",

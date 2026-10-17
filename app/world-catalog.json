@@ -13953,6 +13953,10 @@
         "text": "Säugetiere"
       },
       {
+        "label": "Artname",
+        "text": "Ornithorhynchus anatinus"
+      },
+      {
         "label": "Lebensraum",
         "text": "Flüsse und Seen."
       },
@@ -14022,7 +14026,7 @@
       "answers": [
         "Es legt Eier und gibt seinen Jungen Milch.",
         "Es ist ein Vogel, weil es Eier legt.",
-        "Seine Jungen werden ausschließlich mit Blättern ernährt."
+        "Als Säugetier bringt es immer lebende Junge zur Welt."
       ],
       "correct": 0,
       "why": "Eierlegen und Milchgeben beschreiben zwei verschiedene Vorgänge desselben Säugetiers."
@@ -14038,6 +14042,14 @@
       "starter": "Eier und Milch passen zusammen.",
       "observe": "Ordne Eierlegen und Milchgeben der richtigen Aussage zu: Was erfährst du über die Fortpflanzung?",
       "benefit": "Eierlegen und Milchgeben beschreiben zwei verschiedene Vorgänge desselben Säugetiers."
+    },
+    "questionFeedback": {
+      "hint": "Prüfe Fortpflanzung und Versorgung der geschlüpften Jungen getrennt. Ein einziges Merkmal genügt nicht zur Einordnung.",
+      "wrongReasons": [
+        null,
+        "Eierlegen allein macht ein Tier nicht zum Vogel. Auch das Schnabeltier legt Eier und versorgt seine Jungen mit Milch.",
+        "Das ist bei den meisten Säugetieren so, aber nicht bei allen. Schnabeltiere gehören zu den eierlegenden Säugetieren."
+      ]
     }
   },
   {
@@ -14053,6 +14065,10 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
+      },
+      {
+        "label": "Artname",
+        "text": "Tachyglossus aculeatus"
       },
       {
         "label": "Lebensraum",
@@ -14121,9 +14137,9 @@
     "question": {
       "prompt": "Wie nimmt der Kurzschnabeligel seine Nahrung auf?",
       "answers": [
-        "Er pflückt ausschließlich Blätter.",
+        "Er nimmt die Nahrung ausschließlich mit den Grabkrallen auf.",
         "Er nimmt kleine Beutetiere mit seiner Zunge auf.",
-        "Er filtert Meerwasser durch Kiemen."
+        "Die lange Schnauze ersetzt bei der Nahrungsaufnahme die Zunge vollständig."
       ],
       "correct": 1,
       "why": "Krallen öffnen Verstecke; die Zunge nimmt Nahrung auf."
@@ -14139,6 +14155,14 @@
       "starter": "Ein Name verrät noch keine Verwandtschaft.",
       "observe": "Zeige auf einer eigenen Skizze, was Krallen und Zunge jeweils beitragen.",
       "benefit": "Krallen öffnen Verstecke; die Zunge nimmt Nahrung auf."
+    },
+    "questionFeedback": {
+      "hint": "Unterscheide das Öffnen eines Insektenverstecks von dem Körperteil, der die Nahrung anschließend aufnimmt.",
+      "wrongReasons": [
+        "Die Krallen helfen beim Öffnen eines Verstecks. Für das Aufnehmen der kleinen Beutetiere beschreibt die Karte die Zunge.",
+        null,
+        "Die Schnauze ersetzt die Zunge nicht. Verschiedene Körperteile übernehmen verschiedene Teilaufgaben bei der Nahrungssuche."
+      ]
     }
   },
   {
@@ -14154,6 +14178,10 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
+      },
+      {
+        "label": "Artname",
+        "text": "Okapia johnstoni"
       },
       {
         "label": "Lebensraum",
@@ -14223,7 +14251,7 @@
       "prompt": "Mit welchem Tier ist das Okapi nahe verwandt?",
       "answers": [
         "Mit dem Zebra, allein wegen der Streifen.",
-        "Mit einem Insekt.",
+        "Mit dem Pferd.",
         "Mit der Giraffe."
       ],
       "correct": 2,
@@ -14240,6 +14268,14 @@
       "starter": "Streifen allein erzählen keine ganze Familiengeschichte.",
       "observe": "Vergleiche die beschriebenen Beine und das Greifen mit der Zunge.",
       "benefit": "Streifen betreffen das Aussehen; die Zunge ist am Nahrungserwerb beteiligt."
+    },
+    "questionFeedback": {
+      "hint": "Ein Fellmuster allein ist noch kein Stammbaum. Suche in der Erklärung nach einem ausdrücklich genannten Verwandten.",
+      "wrongReasons": [
+        "Die Streifen ähneln denen eines Zebras, aber Ähnlichkeit eines Musters belegt keine nahe Verwandtschaft.",
+        "Das Okapi gehört zur Verwandtschaft der Giraffen. Seine Waldlebensweise und sein kurzer Hals ändern daran nichts.",
+        null
+      ]
     }
   },
   {
@@ -14255,6 +14291,10 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
+      },
+      {
+        "label": "Artname",
+        "text": "Suricata suricatta"
       },
       {
         "label": "Lebensraum",
@@ -14325,7 +14365,7 @@
       "answers": [
         "Nahrung suchen und Ausschau halten.",
         "Alle müssen jederzeit dieselbe Tätigkeit ausüben.",
-        "Nur Pflanzen anbauen und ernten."
+        "Ohne jeden Gruppenkontakt ausschließlich allein leben."
       ],
       "correct": 0,
       "why": "Nahrung suchen und Ausschau halten sind zwei verschiedene Tätigkeiten."
@@ -14341,6 +14381,14 @@
       "starter": "Gemeinsam leben heißt unterschiedliche Aufgaben beobachten.",
       "observe": "Beschreibe zwei unterschiedliche Tätigkeiten innerhalb einer Gruppe.",
       "benefit": "Nahrung suchen und Ausschau halten sind zwei verschiedene Tätigkeiten."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche, worauf sich die Aufmerksamkeit bei den verschiedenen Tätigkeiten in einer Erdmännchengruppe richtet.",
+      "wrongReasons": [
+        null,
+        "Zusammenleben bedeutet nicht, dass alle gleichzeitig dasselbe tun. Die Karte beschreibt unterschiedliche Tätigkeiten.",
+        "Die Karte beschreibt Gruppenleben. Ein einzelnes sichtbares Tier bedeutet nicht, dass die Art ausschließlich allein lebt."
+      ]
     }
   },
   {
@@ -14356,6 +14404,10 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
+      },
+      {
+        "label": "Artname",
+        "text": "Lemur catta"
       },
       {
         "label": "Lebensraum",
@@ -14426,7 +14478,7 @@
       "answers": [
         "Ein aufgerichteter Schwanz.",
         "Eine Duftmarke.",
-        "Die Farbe des Himmels."
+        "Ein Ruf der Gruppe."
       ],
       "correct": 1,
       "why": "Schwanzhaltung ist sichtbar; Duftmarken werden gerochen."
@@ -14442,6 +14494,14 @@
       "starter": "Nachrichten können über mehrere Sinne ankommen.",
       "observe": "Finde einen sichtbaren und einen nicht sichtbaren Kommunikationsweg.",
       "benefit": "Schwanzhaltung ist sichtbar; Duftmarken werden gerochen."
+    },
+    "questionFeedback": {
+      "hint": "Überlege, welche Mitteilung auch ohne Licht wahrgenommen werden könnte. Prüfe dabei die verschiedenen Sinneswege.",
+      "wrongReasons": [
+        "Ein aufgerichteter Schwanz ist ein sichtbares Signal. Der Geruchssinn benötigt andere Informationen.",
+        null,
+        "Ein Ruf wird gehört. Die Frage unterscheidet gerade Hören, Sehen und Riechen."
+      ]
     }
   },
   {
@@ -14457,6 +14517,10 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
+      },
+      {
+        "label": "Artname",
+        "text": "Castor canadensis"
       },
       {
         "label": "Lebensraum",
@@ -14543,13 +14607,21 @@
       "starter": "Bauen kann einen ganzen Lebensraum verändern.",
       "observe": "Ordne Damm und Wohnburg ihren unterschiedlichen Aufgaben zu.",
       "benefit": "Der Damm verändert das Wasser; die Wohnburg dient dem Wohnen."
+    },
+    "questionFeedback": {
+      "hint": "Unterscheide eine Barriere in fließendem Wasser von einem geschützten Aufenthaltsraum für die Biberfamilie.",
+      "wrongReasons": [
+        "Damm und Wohnburg erfüllen unterschiedliche Aufgaben. Der Damm verändert die Strömung; in der Burg liegt die Wohnkammer.",
+        "Hier sind die Aufgaben vertauscht: Der Damm bremst Wasser, die Wohnburg bietet einen Aufenthaltsraum.",
+        null
+      ]
     }
   },
   {
     "id": "animal-walrus",
     "category": "animals",
     "title": "Walross",
-    "intro": "Art, Unterart und Schutzregel auseinanderhalten.",
+    "intro": "Tastborsten helfen, Nahrung zu finden.",
     "paragraphs": [
       "Walrosse haben empfindliche Tastborsten am Maul. Damit finden sie unter anderem kleine Beutetiere am Meeresboden; ihre Stoßzähne sind keine Gabeln zum Aufspießen der Nahrung.",
       "Zum Ruhen nutzen Walrosse Küsten und Meereis. Pazifische Walrosse sind eine Unterart derselben Art. Ein Schutzprogramm für Alaska beschreibt nicht automatisch die ganze weltweite Gefährdung."
@@ -14558,6 +14630,10 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
+      },
+      {
+        "label": "Artname",
+        "text": "Odobenus rosmarus"
       },
       {
         "label": "Lebensraum",
@@ -14577,7 +14653,7 @@
       }
     ],
     "more": [
-      "Unterscheide die Wörter Art und Unterart in den beiden wissenschaftlichen Namen.",
+      "Zeige in einer eigenen Skizze den Unterschied zwischen Tastborsten und Stoßzähnen. Welche Aufgabe der Borsten ist belegt?",
       "Beobachte Wildtiere aus Abstand. Diese Karte ist keine Anleitung zum Fangen, Anfassen oder Versetzen."
     ],
     "surprise": "Ein Programm in Alaska belegt seinen eigenen Bereich, keine vollständige Weltkarte.",
@@ -14635,7 +14711,7 @@
       "prompt": "Womit ertastet ein Walross Nahrung am Meeresboden?",
       "answers": [
         "Mit empfindlichen Borsten am Maul.",
-        "Mit Vogelfedern.",
+        "Nur mit den Augen; andere Sinne nutzt es dabei nicht.",
         "Es muss mit seinen Stoßzähnen jedes Beutetier aufspießen."
       ],
       "correct": 0,
@@ -14649,9 +14725,17 @@
       }
     ],
     "learning": {
-      "starter": "Art, Unterart und Schutzregel auseinanderhalten.",
-      "observe": "Unterscheide die Wörter Art und Unterart in den beiden wissenschaftlichen Namen.",
-      "benefit": "Odobenus rosmarus ist der Artname; divergens bezeichnet hier die pazifische Unterart."
+      "starter": "Tastborsten helfen, Nahrung zu finden.",
+      "observe": "Zeige in einer eigenen Skizze den Unterschied zwischen Tastborsten und Stoßzähnen. Welche Aufgabe der Borsten ist belegt?",
+      "benefit": "Tastborsten liefern Informationen über Berührung. Die Stoßzähne sind andere Körperteile mit anderen Aufgaben."
+    },
+    "questionFeedback": {
+      "hint": "Unterscheide die auffälligen Zähne von den empfindlichen Strukturen rund um das Maul. Welche liefern Sinnesinformationen?",
+      "wrongReasons": [
+        null,
+        "Neben den Augen besitzt das Walross empfindliche Tastborsten. Die Frage richtet sich auf das Ertasten am Meeresboden.",
+        "Stoßzähne sind keine Fanggabeln. Die empfindlichen Borsten rund um das Maul liefern Tastinformationen."
+      ]
     }
   },
   {
@@ -14667,6 +14751,10 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
+      },
+      {
+        "label": "Artname",
+        "text": "Vulpes vulpes"
       },
       {
         "label": "Lebensraum",
@@ -14738,7 +14826,7 @@
       "answers": [
         "Ausschließlich in dichtem Wald.",
         "Unter anderem in Wäldern, offenem Land und Siedlungen.",
-        "Nur im offenen Meer."
+        "Nur dort, wo Menschen es als Haustier versorgen."
       ],
       "correct": 1,
       "why": "Rotfüchse nutzen Wälder, offene Landschaften und auch Siedlungen. Der Aufenthalt bei Menschen macht sie nicht zu Haustieren."
@@ -14754,6 +14842,14 @@
       "starter": "Ein Lebensraum ist mehr als ein einzelner Wald.",
       "observe": "Sortiere die genannten Lebensräume nach eigenen Vergleichsmerkmalen.",
       "benefit": "Ein Lebensraumvergleich braucht beschriebene Merkmale und keine Rangfolge gut/schlecht."
+    },
+    "questionFeedback": {
+      "hint": "Prüfe, ob die Beschreibung ausdrücklich nur einen einzigen Ort oder verschiedene Landschaftsformen und ihre Nutzung nennt.",
+      "wrongReasons": [
+        "Wald ist nur einer der genannten Lebensräume. Rotfüchse nutzen auch andere Landschaften.",
+        null,
+        "Ein Wildtier kann in einer Siedlung leben, ohne ein Haustier zu sein. Nähe zu Menschen beweist keine Haltung."
+      ]
     }
   },
   {
@@ -14771,6 +14867,10 @@
         "text": "Säugetiere"
       },
       {
+        "label": "Artname",
+        "text": "Procyon lotor"
+      },
+      {
         "label": "Lebensraum",
         "text": "Wälder und Siedlungsräume."
       },
@@ -14780,7 +14880,7 @@
       },
       {
         "label": "Maß und Messrichtung",
-        "text": "Etwa 60,3–95 cm einschließlich Schwanz; nicht mit einer reinen Kopf-Rumpf-Länge verwechseln."
+        "text": "Je nach Region etwa 1,8–10,4 kg. Dies ist ein Gewicht, keine Körperlänge."
       },
       {
         "label": "Schutz und Rücksicht",
@@ -14820,12 +14920,12 @@
       "diet": "Verschiedene tierische und pflanzliche Nahrung",
       "skill": "Empfindliche Vorderpfoten",
       "size": {
-        "min": 60.3,
-        "max": 95,
-        "unit": "cm",
-        "measurement_de": "Gesamtlänge einschließlich Schwanz nach ADW",
-        "text_de": "Etwa 60,3–95 cm einschließlich Schwanz; nicht mit einer reinen Kopf-Rumpf-Länge verwechseln.",
-        "kind": "range"
+        "min": 1.8,
+        "max": 10.4,
+        "unit": "kg",
+        "kind": "range",
+        "measurement_de": "Gewichtsspanne nach ADW, abhängig von Region und Lebensraum",
+        "text_de": "Je nach Region etwa 1,8–10,4 kg. Dies ist ein Gewicht, keine Körperlänge."
       },
       "protection": {
         "scope": "source_description_not_global_assessment",
@@ -14837,8 +14937,8 @@
     "question": {
       "prompt": "Welcher Sinn spielt bei den Vorderpfoten des Waschbären eine Rolle?",
       "answers": [
-        "Nur der Geschmackssinn.",
-        "Die Pfoten hören wie Ohren.",
+        "Vor allem der Sehsinn.",
+        "Vor allem der Geruchssinn.",
         "Der Tastsinn."
       ],
       "correct": 2,
@@ -14855,6 +14955,14 @@
       "starter": "Mit den Pfoten Informationen sammeln.",
       "observe": "Beschreibe den Unterschied zwischen Sehen und Tasten.",
       "benefit": "Sehen nutzt Lichtinformation, Tasten unmittelbaren Kontakt."
+    },
+    "questionFeedback": {
+      "hint": "Welche Informationen können über unmittelbaren Kontakt entstehen, auch wenn man einen Gegenstand nicht genau sehen kann?",
+      "wrongReasons": [
+        "Die Augen ermöglichen Sehen; die Frage betrifft die Informationen der empfindlichen Vorderpfoten.",
+        "Die Nase ermöglicht Riechen. Die empfindlichen Vorderpfoten liefern Informationen durch Kontakt.",
+        null
+      ]
     }
   },
   {
@@ -14870,6 +14978,10 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
+      },
+      {
+        "label": "Artname",
+        "text": "Erinaceus europaeus"
       },
       {
         "label": "Lebensraum",
@@ -14957,6 +15069,14 @@
       "starter": "Ein guter Garten braucht auch Verstecke.",
       "observe": "Zeichne Nahrungssuche und einen geschützten Ruheplatz getrennt ein.",
       "benefit": "Nahrung und Versteck sind unterschiedliche Bedürfnisse."
+    },
+    "questionFeedback": {
+      "hint": "Stelle dir einen ungestörten Ruheplatz vor. Welche der genannten Strukturen könnte seitlich und von oben Deckung bieten?",
+      "wrongReasons": [
+        null,
+        "Eine kahle Fläche bietet wenig Deckung. Ein geschützter Rückzugsplatz ist etwas anderes als eine freie Lauffläche.",
+        "Ein offener beleuchteter Platz bietet keinen versteckten Ruheort. Hecken und Laub erfüllen hier eine andere Aufgabe."
+      ]
     }
   },
   {
@@ -14972,6 +15092,10 @@
       {
         "label": "Tiergruppe",
         "text": "Vögel"
+      },
+      {
+        "label": "Artname",
+        "text": "Tyto alba"
       },
       {
         "label": "Lebensraum",
@@ -15058,6 +15182,14 @@
       "starter": "Artwissen benötigt mehr als ein bekanntes Gesicht.",
       "observe": "Unterscheide Alltagsnamen und wissenschaftlichen Namen.",
       "benefit": "Schleiereule und Tyto alba bezeichnen dieselbe hier untersuchte Art."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche die Antwortnamen mit der Angabe zum Artnamen in der Karte. Ähnlich klingende Namen können andere Tiere bezeichnen.",
+      "wrongReasons": [
+        "Alcedo atthis ist der Name des Eisvogels. Ein wissenschaftlicher Name muss zur tatsächlich beschriebenen Art passen.",
+        null,
+        "Amphiprion percula bezeichnet den Echten Clownfisch. Ein Name einer anderen Art beantwortet die Frage nicht."
+      ]
     }
   },
   {
@@ -15073,6 +15205,10 @@
       {
         "label": "Tiergruppe",
         "text": "Vögel"
+      },
+      {
+        "label": "Artname",
+        "text": "Alcedo atthis"
       },
       {
         "label": "Lebensraum",
@@ -15163,6 +15299,14 @@
       "starter": "Eine Farbe kann durch Struktur entstehen.",
       "observe": "Verbinde Sitzwarte, Wasser und Fisch zu einer einfachen Beobachtungsskizze.",
       "benefit": "Sitzwarte und Gewässer sind verschiedene Teile der Jagdsituation."
+    },
+    "questionFeedback": {
+      "hint": "Verbinde die Sitzwarte mit dem Ort, an dem die beschriebene Beute lebt. Der Lebensraum muss beides ermöglichen.",
+      "wrongReasons": [
+        "Die Karte verbindet den Eisvogel mit Gewässern und kleinen Fischen. Ein trockenes Feld allein erfüllt diesen Nahrungsbedarf nicht.",
+        "Bäume können Sitzplätze bieten, aber der Zugang zur beschriebenen Beute im Wasser gehört zur Betrachtung dazu.",
+        null
+      ]
     }
   },
   {
@@ -15178,6 +15322,10 @@
       {
         "label": "Tiergruppe",
         "text": "Vögel"
+      },
+      {
+        "label": "Artname",
+        "text": "Struthio camelus"
       },
       {
         "label": "Lebensraum",
@@ -15264,6 +15412,14 @@
       "starter": "Nicht fliegen heißt nicht nutzlos.",
       "observe": "Vergleiche Fliegen und Gleichgewichthalten als zwei Tätigkeiten.",
       "benefit": "Fliegen und Balance halten sind unterschiedliche Aufgaben."
+    },
+    "questionFeedback": {
+      "hint": "Prüfe, ob eine Tiergruppe nur durch eine einzige Fortbewegungsart bestimmt wird. Suche weitere Merkmale in der Karte.",
+      "wrongReasons": [
+        null,
+        "Flugunfähigkeit macht einen Vogel nicht zum Säugetier. Ein einzelnes Merkmal bestimmt nicht die ganze Tiergruppe.",
+        "Nicht alle Vögel können fliegen. Der Strauß ist ein Beispiel dafür, dass Vogelmerkmale und Flugfähigkeit verschiedene Fragen sind."
+      ]
     }
   },
   {
@@ -15279,6 +15435,10 @@
       {
         "label": "Tiergruppe",
         "text": "Vögel"
+      },
+      {
+        "label": "Artname",
+        "text": "Fratercula arctica"
       },
       {
         "label": "Lebensraum",
@@ -15365,6 +15525,14 @@
       "starter": "Zwischen Insel und offenem Meer wechseln.",
       "observe": "Ordne Nisten und Nahrungssuche den beschriebenen Orten zu.",
       "benefit": "Inseln bieten Nistplätze; Nahrung wird im Wasser gesucht."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche die Aufgaben eines Nistplatzes und eines Beutegebiets. Müssen beide Aufgaben am selben Ort erfüllt werden?",
+      "wrongReasons": [
+        "Das Nest dient dem Brüten. Zur Nahrungssuche nutzt der Papageitaucher auch das Meer.",
+        null,
+        "Das Meer gehört zum Nahrungsraum. Ein Brutplatz allein bietet nicht alle Bedingungen des Lebens."
+      ]
     }
   },
   {
@@ -15380,6 +15548,10 @@
       {
         "label": "Tiergruppe",
         "text": "Reptilien"
+      },
+      {
+        "label": "Artname",
+        "text": "Chamaeleo chamaeleon"
       },
       {
         "label": "Lebensraum",
@@ -15449,7 +15621,7 @@
       "prompt": "Was kann das Europäische Chamäleon?",
       "answers": [
         "Beliebige Fotomuster genau kopieren.",
-        "Seinen Schwanz wie ein Rad abwerfen und nach Wunsch neu bilden.",
+        "Seinen Schwanz nur als Gegengewicht nutzen, ohne damit greifen zu können.",
         "Mit dem Schwanz greifen und die Färbung begrenzt verändern."
       ],
       "correct": 2,
@@ -15466,6 +15638,14 @@
       "starter": "Farbwechsel ist keine beliebige Verkleidung.",
       "observe": "Finde Greifen, Schauen und Farbwechsel als verschiedene Fähigkeiten.",
       "benefit": "Greifen, Wahrnehmen und Farbänderung sind verschiedene Fähigkeiten."
+    },
+    "questionFeedback": {
+      "hint": "Ordne Körperteile ihren Aufgaben zu und prüfe, ob die Behauptung über Farbänderung eine Grenze oder unbegrenzte Möglichkeiten nennt.",
+      "wrongReasons": [
+        "Farbänderung ist begrenzt und von Bedingungen abhängig. Sie ist kein Kopieren beliebiger Bilder.",
+        "Der Schwanz kann tatsächlich greifen. Körperteile können mehrere Aufgaben erfüllen; die Aussage nur schließt diese belegte Fähigkeit aus.",
+        null
+      ]
     }
   },
   {
@@ -15481,6 +15661,10 @@
       {
         "label": "Tiergruppe",
         "text": "Amphibien"
+      },
+      {
+        "label": "Artname",
+        "text": "Salamandra salamandra"
       },
       {
         "label": "Lebensraum",
@@ -15555,8 +15739,8 @@
       "prompt": "Was tragen Feuersalamanderlarven?",
       "answers": [
         "Äußere Kiemen.",
-        "Federn.",
-        "Eine Vogeleierschale als dauerhafte Körperhülle."
+        "Keine Kiemen; sie atmen schon genau wie die erwachsenen Landtiere.",
+        "Schon alle Merkmale der Erwachsenen, ohne spätere Verwandlung."
       ],
       "correct": 0,
       "why": "Die Larven tragen äußere Kiemen und leben im Wasser. Erwachsene Tiere nutzen überwiegend den Wald."
@@ -15572,6 +15756,14 @@
       "starter": "Wald und Bach gehören zu einer Lebensgeschichte.",
       "observe": "Zeichne Wald und Larvengewässer als zwei verbundene Lebensorte.",
       "benefit": "Wald und Larvengewässer sind miteinander verbundene Lebensorte."
+    },
+    "questionFeedback": {
+      "hint": "Achte auf das Entwicklungsstadium: Ein Merkmal der im Wasser lebenden Larve muss nicht auch beim erwachsenen Waldtier vorkommen.",
+      "wrongReasons": [
+        null,
+        "Die beschriebenen Larven besitzen äußere Kiemen. Die späteren Landtiere und die Larven müssen unterschieden werden.",
+        "Bei der Entwicklung verändern sich Merkmale. Eine Larve ist nicht einfach ein vollständig fertiger Erwachsener in klein."
+      ]
     }
   },
   {
@@ -15587,6 +15779,10 @@
       {
         "label": "Tiergruppe",
         "text": "Amphibien"
+      },
+      {
+        "label": "Artname",
+        "text": "Rana temporaria"
       },
       {
         "label": "Lebensraum",
@@ -15653,11 +15849,11 @@
       }
     },
     "question": {
-      "prompt": "Welche Reihenfolge passt zum Grasfrosch?",
+      "prompt": "Wie entwickelt sich ein Grasfrosch vom Laich aus?",
       "answers": [
-        "Erwachsenes Tier, dann erst Kaulquappe.",
+        "Laich, sofort ein fertiger erwachsener Frosch.",
         "Laich, Kaulquappe, junger Frosch.",
-        "Blüte, Samen, erwachsener Frosch."
+        "Laich, kleiner Frosch, danach erst Kaulquappe."
       ],
       "correct": 1,
       "why": "Laich kommt vor Kaulquappen; danach folgen junge und erwachsene Frösche."
@@ -15673,6 +15869,14 @@
       "starter": "Ein Tier braucht im Laufe des Lebens verschiedene Orte.",
       "observe": "Lege eine einfache Reihenfolge aus Laich, Kaulquappe und erwachsenem Tier.",
       "benefit": "Laich kommt vor Kaulquappen; danach folgen junge und erwachsene Frösche."
+    },
+    "questionFeedback": {
+      "hint": "Suche den Anfang des Entwicklungsablaufs und verfolge dann, wie sich die Form des Tiers bis zum jungen Frosch ändert.",
+      "wrongReasons": [
+        "Zwischen Laich und jungem Frosch liegt das Kaulquappenstadium. Der Entwicklungsschritt darf nicht übersprungen werden.",
+        null,
+        "Hier sind die späteren Stadien vertauscht: Die Kaulquappe kommt vor dem jungen Frosch."
+      ]
     }
   },
   {
@@ -15688,6 +15892,10 @@
       {
         "label": "Tiergruppe",
         "text": "Fische"
+      },
+      {
+        "label": "Artname",
+        "text": "Amphiprion percula"
       },
       {
         "label": "Lebensraum",
@@ -15774,6 +15982,14 @@
       "starter": "Ein ähnliches Muster kann verschiedene Arten verdecken.",
       "observe": "Unterscheide den Fisch und seine Seeanemone als zwei Tiere.",
       "benefit": "Fisch und Seeanemone sind zwei unterschiedliche Tiere."
+    },
+    "questionFeedback": {
+      "hint": "Überlege, ob eine Seeanemone selbst Nahrung aufnimmt und auf ihre Umgebung reagiert, statt nur nach ihrem Aussehen zu urteilen.",
+      "wrongReasons": [
+        "Fisch und Seeanemone sind zwei Lebewesen. Die Anemone ist kein Körperteil des Fisches.",
+        "Das pflanzenähnliche Aussehen täuscht: Eine Seeanemone ist ein Tier und keine Blütenpflanze.",
+        null
+      ]
     }
   },
   {
@@ -15789,6 +16005,10 @@
       {
         "label": "Tiergruppe",
         "text": "Fische"
+      },
+      {
+        "label": "Artname",
+        "text": "Anguilla anguilla"
       },
       {
         "label": "Lebensraum",
@@ -15887,6 +16107,14 @@
       "starter": "Eine Wanderung verbindet Flüsse und Ozean.",
       "observe": "Verbinde Fluss, Küste und Meer auf einer eigenen Übersicht.",
       "benefit": "Fluss, Küste und Ozean gehören zur betrachteten Lebensgeschichte."
+    },
+    "questionFeedback": {
+      "hint": "Verfolge den beschriebenen Lebensweg über mehrere Gewässer. Was ändert sich, wenn eine Verbindung unterwegs unterbrochen ist?",
+      "wrongReasons": [
+        null,
+        "Die Lebensgeschichte verbindet unterschiedliche Gewässer. Ein einziger unveränderlicher Aufenthaltsort beschreibt sie nicht.",
+        "Aale sind Fische. Die Karte beschreibt verbundene Wasserlebensräume und keine ausschließliche Lebensweise an Land."
+      ]
     }
   },
   {
@@ -15902,6 +16130,10 @@
       {
         "label": "Tiergruppe",
         "text": "Insekten"
+      },
+      {
+        "label": "Artname",
+        "text": "Danaus plexippus"
       },
       {
         "label": "Lebensraum",
@@ -15988,6 +16220,14 @@
       "starter": "Eine Art kann verschiedene Wanderstrategien besitzen.",
       "observe": "Unterscheide Raupe und Falter als zwei Entwicklungsstadien.",
       "benefit": "Raupe und Falter sind Entwicklungsstadien; wandernde und nicht wandernde Populationen unterscheiden sich."
+    },
+    "questionFeedback": {
+      "hint": "Achte darauf, ob die Beschreibung von jedem einzelnen Falter oder ausdrücklich von verschiedenen Populationen spricht.",
+      "wrongReasons": [
+        "Eine bekannte Wanderstrategie gilt nicht automatisch für alle Populationen. Die Karte unterscheidet ausdrücklich verschiedene Wege.",
+        null,
+        "Raupe und Falter sind Entwicklungsstadien derselben Art. Ein anderer Körperbau in der Entwicklung ist kein Beweis für eine andere Art."
+      ]
     }
   },
   {
@@ -16003,6 +16243,10 @@
       {
         "label": "Tiergruppe",
         "text": "Weichtiere"
+      },
+      {
+        "label": "Artname",
+        "text": "Cornu aspersum"
       },
       {
         "label": "Lebensraum",
@@ -16054,7 +16298,7 @@
     "animal": {
       "group": "Weichtiere",
       "habitat": "Gärten, Hecken und andere Verstecke",
-      "continent": "Ursprünglich Mittelmeerraum",
+      "continent": "Europa und weitere Regionen",
       "diet": "Pflanzliches Material",
       "skill": "Orientierung mit mehreren Sinnen",
       "size": {
@@ -16075,8 +16319,8 @@
     "question": {
       "prompt": "Welches Maß beschreibt hier die 25–40 mm?",
       "answers": [
-        "Die Länge aller Fühler zusammen.",
-        "Die Länge jeder zurückgelegten Strecke.",
+        "Die Länge des ausgestreckten weichen Körpers.",
+        "Die Höhe des Gehäuses.",
         "Die Breite des Gehäuses."
       ],
       "correct": 2,
@@ -16093,6 +16337,14 @@
       "starter": "Ein vertrauter Gartenbewohner hat mehrere Sinne.",
       "observe": "Beschreibe eine Schneckenbeobachtung, ohne das Tier zu berühren.",
       "benefit": "Eine sichere Beobachtung benötigt kein Anfassen oder Versetzen der Schnecke."
+    },
+    "questionFeedback": {
+      "hint": "Stelle dir ein Maßband quer über das Haus der Schnecke vor. Unterscheide dieses Maß vom ausgestreckten weichen Körper.",
+      "wrongReasons": [
+        "Der weiche Körper kann ausgestreckt sein. Das zitierte Maß bezieht sich auf das Gehäuse und nicht auf die ganze ausgestreckte Schnecke.",
+        "Höhe und Breite sind verschiedene Messrichtungen. Hier ist die Breite des Gehäuses gemeint.",
+        null
+      ]
     }
   },
   {
@@ -16108,6 +16360,10 @@
       {
         "label": "Tiergruppe",
         "text": "Krebstiere"
+      },
+      {
+        "label": "Artname",
+        "text": "Homarus gammarus"
       },
       {
         "label": "Lebensraum",
@@ -16178,7 +16434,7 @@
       "answers": [
         "Seine feste Außenhülle muss beim Wachsen ersetzt werden.",
         "Er verwandelt sich dadurch in eine andere Art.",
-        "Er legt damit Vogelfedern ab."
+        "Seine feste Hülle wächst ohne Häutung unbegrenzt mit."
       ],
       "correct": 0,
       "why": "Eine unverändert feste Außenhülle kann nicht unbegrenzt mitwachsen. Bei der Häutung wird sie abgestreift."
@@ -16194,6 +16450,14 @@
       "starter": "Wachsen trotz harter Außenhülle.",
       "observe": "Unterscheide Greifwerkzeug und Außenhülle.",
       "benefit": "Greifwerkzeug und stützende Körperhülle haben verschiedene Aufgaben."
+    },
+    "questionFeedback": {
+      "hint": "Denke an eine feste Hülle mit unveränderten Maßen: Was wird nötig, wenn der Körper darin weiter an Größe zunimmt?",
+      "wrongReasons": [
+        null,
+        "Eine Häutung verändert nicht die Art. Das Tier ersetzt seine äußere Hülle, während es derselbe Hummer bleibt.",
+        "Die feste Hülle kann nicht unbegrenzt unverändert mitwachsen. Häutung ermöglicht weiteres Größenwachstum."
+      ]
     }
   },
   {
@@ -16209,6 +16473,10 @@
       {
         "label": "Tiergruppe",
         "text": "Weichtiere"
+      },
+      {
+        "label": "Artname",
+        "text": "Sepia officinalis"
       },
       {
         "label": "Lebensraum",
@@ -16285,7 +16553,7 @@
       "answers": [
         "Beide Namen bezeichnen zwingend dieselbe Art.",
         "Sepia besitzt acht Arme und zusätzlich zwei längere Fangtentakel.",
-        "Ein Krake besitzt ein Vogelskelett."
+        "Sepia besitzt acht Arme, aber keine zusätzlichen Fangtentakel."
       ],
       "correct": 1,
       "why": "Sepia besitzt acht Arme und zwei zusätzliche Fangtentakel. Der Krake hat acht Arme ohne diese beiden zusätzlichen Fangtentakel."
@@ -16301,6 +16569,14 @@
       "starter": "Tintenfisch ist kein einzelner Körperbau.",
       "observe": "Vergleiche die Karte mit dem Gewöhnlichen Kraken: Welche Beschreibung gehört zu welcher Art?",
       "benefit": "Krake und Sepia sind verwandte, aber unterschiedliche Kopffüßer."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche die Fangwerkzeuge beider Kopffüßer genau. Ein gemeinsamer Sammelname bedeutet nicht denselben Körperbau.",
+      "wrongReasons": [
+        "Sepia und Krake sind verschiedene Kopffüßer. Der gemeinsame Sammelname Tintenfische bedeutet nicht dieselbe Art.",
+        null,
+        "Zusätzlich zu den acht Armen besitzt Sepia zwei längere Fangtentakel. Diese fehlen in der Aussage."
+      ]
     }
   },
   {
@@ -16316,6 +16592,10 @@
       {
         "label": "Tiergruppe",
         "text": "Fische"
+      },
+      {
+        "label": "Artname",
+        "text": "Hippocampus hippocampus"
       },
       {
         "label": "Lebensraum",
@@ -16388,8 +16668,8 @@
     "question": {
       "prompt": "Womit kann sich dieses Seepferdchen festhalten?",
       "answers": [
-        "Mit Pferdehufen.",
-        "Mit Vogelflügeln.",
+        "Nur mit dem Maul; sein Schwanz kann nicht greifen.",
+        "Mit den Brustflossen wie mit Händen.",
         "Mit seinem Greifschwanz."
       ],
       "correct": 2,
@@ -16406,6 +16686,14 @@
       "starter": "Ein Greifschwanz kann im Wasser Halt geben.",
       "observe": "Vergleiche Festhalten und freies Schwimmen als zwei Tätigkeiten.",
       "benefit": "Festhalten sichert einen Ort; Schwimmen verändert den Aufenthaltsort."
+    },
+    "questionFeedback": {
+      "hint": "Welche Form des Körperendes könnte sich um eine geeignete Haltestruktur legen? Der Tiername allein erklärt keine Fähigkeit.",
+      "wrongReasons": [
+        "Der Schwanz kann greifen und sich um geeignete Strukturen legen. Der Mund ist hier nicht das beschriebene Halteorgan.",
+        "Flossen dienen der Fortbewegung und Steuerung. Zum beschriebenen Festhalten benutzt das Seepferdchen seinen Greifschwanz.",
+        null
+      ]
     }
   }
 ]

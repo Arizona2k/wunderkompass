@@ -1,3 +1,9 @@
+## Unveröffentlicht · Nachkorrektur neuer Tierkarten
+
+-Bei320px reproduziertes Abschneiden von Bildunterschriften am gerundeten Rahmen durch ausreichenden Innenabstand korrigiert; Regression prüft tatsächliche Textfragmente statt nur Seitenüberlauf.
+-24individuelle Quizhinweise und48falschantwortbezogene Erklärungen ergänzt. Antworten zu Eisvogelfarben und Straußenflügeln inhaltlich mit ihrer Frage abgestimmt; sichtbare Artnamen, klare Messrichtungen und Quellenlücken.
+-Bisherige24Tierfotos/Lizenzen und185Masterfragen unverändert geschützt; neue eigene Zeichnungen zusätzlich mit Herkunft/Hash/Alttext/Modellgrenzen geprüft. Keine Veröffentlichung und keine unabhängige Fachabnahme behauptet.
+
 ## Unveröffentlicht ·24 zusätzliche Tierarten im Master
 
 -24 eigenständige neue Artkarten aus vorhandenen Manuskripten: Erklärungen, präzise Maße/Quellen,24 Wissensfragen,24 Beobachtungsaufträge und48 Begründungs-/Transferfragen mit freiwilligen Hinweisen und konkretem Feedback.

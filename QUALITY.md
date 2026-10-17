@@ -1,3 +1,6 @@
+
+Ergänzung17.10.2026, neue Tiergrafiken: Auch HTML-Legenden können trotz fehlendem Seitenüberlauf am gerundeten `overflow:hidden`-Elternrand angeschnitten werden. Nach Bildsichtung tatsächliche Textfragmente einschließlich letzter Bildunterschriftszeile gegen den sicheren Innenraum prüfen und ausreichenden Innenabstand vorsehen. Nicht mit kleinerer Schrift oder verstecktem Text kaschieren. Bestehende Foto-/Lizenzprüfungen bleiben erhalten; eigene neue Zeichnungen benötigen zusätzlich konkrete Herkunft, Prüfsumme, Alternativtext und Modellgrenzen.
+
 # Verbindliche Qualität und Tests
 
 ## Vorrangige Präzisierung17.10.2026

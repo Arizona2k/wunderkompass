@@ -24,10 +24,16 @@ export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='n
  await root.getByRole('heading',{name:data.goal,exact:true}).waitFor();
  if(expansion.entries.some(e=>e.id===data.id)){
   const visual=p.locator('[data-animal-illustration="'+data.id+'"]:not(.compact)');await visual.waitFor();
+  await visual.locator('img').scrollIntoViewIfNeeded();
   await visual.locator('img').evaluate(async image=>{await image.decode();if(!image.complete||!image.naturalWidth)throw Error('Missing new animal illustration');});
   const labels=await visual.locator('.animal-illustration-labels span').evaluateAll(elements=>elements.map(e=>{const r=e.getBoundingClientRect();return {text:e.textContent,font:parseFloat(getComputedStyle(e).fontSize),left:r.left,right:r.right};}));
   assert.equal(labels.length,2);assert.ok(labels.every(l=>l.text&&l.font>=16&&l.left>=-2&&l.right<=width+2),'new illustration labels reflow');
   assert.ok((await visual.locator('img').getAttribute('alt')).includes('schematische'));
+  const captionEdges=await visual.evaluate(el=>{const box=el.getBoundingClientRect();return [...el.querySelectorAll('figcaption,.animal-illustration-labels span')].flatMap(e=>{const range=document.createRange();range.selectNodeContents(e);return [...range.getClientRects()].flatMap(r=>r.left<box.left+8||r.right>box.right-8||r.bottom>box.bottom-8?[{text:e.textContent,left:r.left-box.left,right:box.right-r.right,bottom:box.bottom-r.bottom}]:[]);});});
+  assert.deepEqual(captionEdges,[],'actual text ink stays clear of rounded clipping, including the last caption line');
+  const titleInk=await p.locator('#world-topic-title').evaluate(e=>{const range=document.createRange();range.selectNodeContents(e);return [...range.getClientRects()].map(r=>({left:r.left,right:r.right}));});
+  assert.ok(titleInk.every(r=>r.left>=-2&&r.right<=width+2),'new animal title remains fully visible');
+
   const topic=topics.find(t=>t.id===data.id),measure=p.locator('.animal-measure');
   const weight=['g','kg'].includes(topic.animal.size.unit);await measure.getByRole('heading',{name:weight?'Ein Gefühl für das Gewicht':'Ein Gefühl für die Größe',exact:true}).waitFor();
   const compare=measure.getByRole('button',{name:weight?'Einen Gewichtsvergleich zeigen':'Einen Größenvergleich zeigen',exact:true});if(await compare.getAttribute('aria-expanded')!=='true')await compare.click();
@@ -99,6 +105,22 @@ export async function animalNavigation(browser,base,ready,monitor,shots){
   stage='actual input focus';await p.waitForFunction(()=>document.activeElement?.matches('.search-dialog [role="combobox"]'));
   stage='type exact title with actual keyboard';await p.keyboard.type(t.title);assert.equal(await input.inputValue(),t.title,'complete title from actual keyboard, including accents and spaces');
   stage='select exact result';await p.getByRole('option').filter({has:p.getByText(t.title,{exact:true})}).click();await p.locator('[data-animal-inquiry="'+entry.id+'"]').waitFor({state:'attached'});stage='reload';await p.reload();await ready(p);
+  if(expansion.entries.some(e=>e.id===entry.id)){
+   const quiz=p.locator('.world-mini-question');
+   if(await quiz.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).count())await quiz.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();
+   const hint=quiz.locator('.world-game-hint');assert.equal(await hint.count(),1,'new mini-question has its own voluntary hint');
+   assert.equal(await hint.getByText(t.questionFeedback.hint,{exact:true}).isVisible(),false,'hint does not open itself');
+   await hint.locator('summary').focus();await p.keyboard.press('Enter');await hint.getByText(t.questionFeedback.hint,{exact:true}).waitFor();await hint.locator('summary').click();
+   for(const [index,answer] of t.question.answers.entries())if(index!==t.question.correct){
+    await quiz.locator('.quiz-answer').filter({has:p.getByText(answer,{exact:true})}).click();
+    await quiz.locator('.lab-feedback').getByText(t.questionFeedback.wrongReasons[index],{exact:true}).waitFor();
+    assert.equal(await quiz.locator('.lab-feedback').getByText(t.question.why,{exact:true}).count(),0,'wrong choice does not display the correct explanation');
+   }
+   await quiz.locator('.quiz-answer').filter({has:p.getByText(t.question.answers[t.question.correct],{exact:true})}).click();
+   await quiz.locator('.lab-feedback').getByText(t.question.why,{exact:true}).waitFor();
+   assert.ok(await quiz.locator('.quiz-answer').first().isDisabled(),'new quiz retains the existing earned-answer gate');
+   await quiz.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();
+  }
   const edge=[...review.newConnections,...expansion.newConnections].find(e=>e.fromId===entry.id||e.toId===entry.id);assert.ok(edge,'individual explained context '+entry.id);const otherId=edge.fromId===entry.id?edge.toId:edge.fromId;
   const selector='[data-route-focus="world-connection-'+entry.id+'-'+otherId+'"]';stage='explained connection';await p.locator(selector).click();await p.getByRole('heading',{name:catalog.find(t=>t.id===otherId).title,exact:true}).waitFor();
   stage='back and opener focus';await p.goBack();await p.locator('[data-animal-inquiry="'+entry.id+'"]').waitFor({state:'attached'});await p.waitForFunction(selector=>document.activeElement?.matches(selector),selector);
