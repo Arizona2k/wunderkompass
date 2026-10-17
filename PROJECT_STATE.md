@@ -1,5 +1,18 @@
 # Aktiver Projektstand – Paket 3.5 / PR #27
 
+## NutzermergePR33 kontrolliert übernommen · 17.10.2026
+
+Während der gesicherten Übergabe hat der Nutzer PR33 selbst gemergt: `8d05beb0bc9930cd18e6128477c090c9d97caf9a`,17.10.09:48:40Z. Offizieller Vercel-success56588633806 am exakten Merge um09:48:59Z, bestehendes Deployment Bddo78NaDx64KDtcViGm3pgdMsGQ, zuvor pending56588627612. Dies ist keine eigene Übernahme oder Veröffentlichung. Die ausgelieferten24Bestands-Tierwerkstätten/48Aufgaben/17Verbindungen, lesbaren Planetenlabels und Suchfokuskorrektur sind damit auf der Testwebsite belegt verfügbar. main unverändert.
+
+Vor Abgleich Master2c6b6d4 als eigener Git-Checkpoint gesichert; dessen vollständiges Quality98 grün (Chromium2008,721s/150Labels,14Gruppen, Firefox/WebKit/Collector). PR33-Head1dcaaff hatte alle lokalen142Unit/27Release/TS/Lint/Build/41Exporte und vollständigen lokalen1009,138s/119Browserlabels sowie Quality99 einschließlich aller drei tatsächlichen Engines bestanden.14Endbilder persönlich angesehen. Diese abgeschlossenen Originale bleiben unverändert; neue Nachweise nach dem Abgleich gesondert.
+
+Gezielter Fetch ohne fremde Tags, kontrollierter Merge in bestehenden Masterbranch.23 Überschneidungen geprüft:12 kritische Funktions-/Daten-/Prüfdateien zwischen Lieferung und Master byteidentisch, sämtliche22 ergänzten Artikelverweise im Master vorhanden (Energie enthält zusätzliche Masterverweise), alle17 neuen Graphkanten exakt vorhanden. Größere Masterkatalog-/Such-/Offline-/14-Gruppen-/axe-/Fachweltprüfungen erhalten, keine kleinere öffentliche Variante darüberkopiert. Nach Auflösung war der gesamte Arbeitsbaum gegenüber2c6b6d4 bytegleich, bevor die neue echte PR33-Quittung ergänzt wurde. Keine Resets, Überschreibungen, neue Entwicklung oder doppelte Zählung.
+
+Chronik führt dieselbe stabile ID jetzt anhand der tatsächlichen Übernahme/Bereitstellung:35 verfügbare Einträge, alle13 historischen Sites-Einträge erhalten; Tierwerkstatt/Planeten erreichbar, fünftes konkretes Detail zum behobenen Suchfokus. Öffentlicher Mastereintrag27 bleibt vorbereitet ohne erfundene Verfügbarkeit. Gegenproben für fehlende Vercelquittung/falsche Abstammung/fehlenden Merge bleiben fail-closed. Diese Nachführung liegt zunächst nur im Master und wird nicht eigenständig veröffentlicht.
+
+Neue exklusive Fortsetzungsreservierung `93e6bfa35a7549f11e380b2087060aaea24615c5`, Durchlauf package35-after-pr33-2026-10-17. Vorige90788 wurde nach korrekter PR33-Übergabe gelöst; neue Reservierung für den unvermeidlichen Nachabgleich desselben seriellen Durchlaufs beansprucht, kein anderer Agent/Branch/Backlog. Aktuelle Prüfungen am neuen Head folgen, PR27 bleibt Draft. Alle159Masterkarten,68Naturmanuskripte/Prototyp,43vorbereitete neue Fachkarten,80Kapitel, Spiele/Labore/Versuche/Missionen/Modelle/Originale/Quellen/Pass-/Testbestände und WK053–058 erhalten.24neueTiere/49weitere neueWeltkarten sowie vollständige Fach-/Kinder-/Geräteabnahmen offen; nächste Fachwelle24neueTierarten, Quellenlektüre für sieben gesichert. Pakete4–8 erhalten; News vollständig pausiert.
+
+
 ## Konkreten asynchronen Suchfokusfehler korrigiert · 17.10.2026
 
 Quality97 am Remote752b8ed läuft noch; kein Push bis zu seinem tatsächlichen Ende, damit kein cancel-in-progress ausgelöst wird. WebKit scheiterte bei einem Tier-Suchweg, während andere Gruppen weiterliefen. Derselbe Fehler war in Quality96 des unabhängigen Lieferabschnitts sichtbar. Der lokale Liefer-Volltest588c5c1 bestand davor vollständig (1011,808s), ersetzt jedoch keine echte WebKit-Abnahme.

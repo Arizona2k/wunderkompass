@@ -1,6 +1,8 @@
 # Änderungsverlauf
 
-## Tierforscher-Werkstatt und lesbarer Planetenvergleich (in Entwicklung, unveröffentlicht)
+## Tierforscher-Werkstatt und lesbarer Planetenvergleich (Vercel-Testwebsite,17.10.2026)
+
+NutzermergePR33 `8d05beb0bc9930cd18e6128477c090c9d97caf9a` am17.10.09:48:40Z, offizieller Vercel-Erfolg am selben Commit09:48:59Z (11:48UhrEurope/Berlin). Nachfolgende Chroniknachführung zunächst im erhaltenen Master, keine eigene Veröffentlichung. Suchfeld fokussiert auch nach verzögertem Laden tatsächlich das Eingabefeld; echtes Tippen mit Leerzeichen schließt den Dialog nicht mehr versehentlich.
 
 24 vorhandene Tierkarten erhalten individuelle Belegpaare, drei freiwillige Denkwege und 48 Begründungs-/Transferaufgaben mit konkreten Hinweisen und Feedback. 17 neue erklärte Gegenverbindungen unterstützen den Vergleich. Bestehende Artikel, Mini-Fragen, richtige Antworten, Bilder und Sitzungsfelder bleiben erhalten; keine neue Tierart oder unabhängige Fach-/Kinderabnahme gezählt.
 

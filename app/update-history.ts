@@ -403,9 +403,10 @@ export const ANIMAL_SOLAR_COPY:UpdateCopy={
   'Alle 24 bisherigen Tierkarten erhalten eine freiwillige Werkstatt mit drei Denkwegen. Zwei passende Belege und eigene Hinweise helfen beim Vergleichen; 48 Denkfragen erklären auch typische Fehlschlüsse.',
   '17 neue erklärte Verbindungen zeigen zum Beispiel, warum ein Walhai kein Wal ist und Eisbär und Kaiserpinguin keine natürlichen Nachbarn sind. Zurück führt wieder an den gewählten Verweis.',
   'Beim Planetenvergleich stehen Beschriftungen als umbrechbarer Text unter der Grafik. Auch die Abstandsangaben und Einheiten wachsen mit großer Schrift; die wissenschaftlichen Maßstäbe bleiben erhalten.',
-  'Begonnene Werkstattgedanken werden im bisherigen Entdeckerpass gespeichert. Alte Fragen, Spielrunden, Fotos, Favoriten und Sicherungen bleiben nutzbar.'
+  'Begonnene Werkstattgedanken werden im bisherigen Entdeckerpass gespeichert. Alte Fragen, Spielrunden, Fotos, Favoriten und Sicherungen bleiben nutzbar.',
+  'Auch wenn die Suche etwas länger lädt, kannst du danach direkt ins Suchfeld schreiben. Ein Leerzeichen im Suchwort schließt die Suche nicht mehr versehentlich.'
  ],
- benefit:'Kinder können Wissen mit Belegen begründen und Grenzen eines Bildes erkennen. Familien können die Karten und Planetenwerte mit großer Schrift gemeinsam lesen.',links:[]
+ benefit:'Kinder können Wissen mit Belegen begründen und Grenzen eines Bildes erkennen. Familien können die Karten und Planetenwerte mit großer Schrift gemeinsam lesen.',links:[{label:'Tierforscher-Werkstatt',hash:'world/topic/animal-whale-shark'},{label:'Planeten vergleichen',hash:'world/topic/science-solar-system'}]
 };
 const TEST_COPY:Record<number,UpdateCopy>={
  33:ANIMAL_SOLAR_COPY,
