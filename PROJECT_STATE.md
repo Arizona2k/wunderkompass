@@ -1,5 +1,18 @@
 # Aktiver Projektstand – Paket 3.5 / PR #27
 
+## Gesicherte Abschlusskorrekturen · 17.10.2026
+
+Der erste vollständige lokale Lauf am `37798b87a679879a9b981bc879d8741bc29c649d` ist beendet (2289,944s), ohne Abbruch. Foundation/Performance/Offline-Schutz, signierter News-Regressionslauf, vollständige Lern-/Natur-/Spiel-/Backup-/Hinweisgruppe und Wissensbuch/Erfindungen bestanden. Navigation scheiterte an einer alten Ein-Eintrag-Annahme bei inzwischen zwei vorbereiteten Chronikeinträgen; deshalb war die Gesamtabnahme ausdrücklich rot. Quality95 (`39015129199`) ebenfalls beendet/rot: Firefox und WebKit bestanden die frühen Planeten-/Tierbreiten, scheiterten anschließend beide am falschen Startseiten-Ready-Locator des neuen Suchtests. Alle Originale unverändert unter `work/p35-animals/master-full-37798b8-originals`; keine laufenden Vollprüfungen unterbrochen oder alten Erfolge umetikettiert.
+
+Ursachen jetzt im erhaltenen Master korrigiert: alle vorbereiteten IDs/Reihenfolgen statt eines einzelnen Elements prüfen; Suchstart wartet auf die tatsächlich vorhandene Pass-Schaltfläche. Zusätzlich nach echter Bildkritik Fokusaufnahme mit Tab/Umschalt+Tab, aktivem Element, `:focus-visible` und mindestens2px-Umrandung statt bloßer Mausklick-Auswahl. Derselbe korrigierte320px-Fall hat im unabhängigen Lieferaufbau mit allen24 Tieren normal/groß und24 Such-/Rückwegen bestanden (83,342s, tatsächlicher3px-Fokus persönlich angesehen). Abschließende Masterprüfung am neuen Head bleibt erforderlich.
+
+Der eigenständig nutzbare Lieferabschnitt ist tatsächlich **PR33 gegen test-live**, Remote-Head zunächst `a0f4b611103d2dde7ee7ad6dc83d754509a36aa0`, Quality96 separat laufend. Die weitere Fokuskorrektur ist lokal im identischen seriellen Durchlauf gesichert; erst nach dessen Ende nachschieben, kein cancel-in-progress auslösen. Vor Ready alle lokalen und GitHub-Pflichtprüfungen am endgültigen Lieferhead. Master PR27 bleibt Draft/offen, kein Paket3.5-Gesamtabschluss. Reservierung `90788e84996c2c468d62e87a80da684600c561eb` weiterhin aktiv.
+
+Kleiner belegter Ladefix aus demselben Abschnitt übernommen: Startseite erhält nur ihre acht kanonischen Wissensspuren, der vollständige wachsende Graph bleibt im nachgeladenen Artikelmodul. Bestehender Export prüft die Ableitung, fehlende oder veraltete Daten schlagen fehl. Keine neue Architektur oder veränderten Budgets. Alle Masterartikel/Modelle/Manuskripte/Tests bleiben erhalten. Chronik-ID `animal-evidence-solar-labels-3-5` jetzt PR33 zugeordnet, weiterhin vorbereitet; nur echte spätere Merge-/Vercelquittung darf sie verfügbar machen.
+
+Neue Quellenlektüre für sieben Kandidaten der weiterhin offenen24 neuen Tierarten in `content/animal-next-source-notes.json` gesichert: keine fertigen Artikel, Medienfreigabe, neue Artenzählung oder unabhängige Abnahme. Besonders Arten-/Unterart-/Gruppenbezug und individuelle Bildrechte unterscheiden; keine pauschale Gefährdungs- oder Behörden-Bildfreigabe. Übrige49 neuen Weltkarten, vollständige Bestands-/80-Kapitel-/Fach-/Kinder-/Geräteredaktion und WK053–058 bleiben unverändert offen. News bleibt vollständig pausiert, Pakete4–8 erhalten. Endgültige Head-/CI-/Bildquittung im PR statt Statuscommit-Schleife.
+
+
 ## Aktiver Durchlauf · Tierwerkstatt und Planetenbeschriftung · 17.10.2026
 
 - **Aufgaben:** WK053/056/057. Bearbeiter Codex; Durchlauf `package35-animals-2026-10-17`, Start 09:11 Uhr Europe/Berlin. Exklusive Reservierung `90788e84996c2c468d62e87a80da684600c561eb`, Eigentümerdatei `work/p35-animals/reservation-owner.txt`. Noch aktiv; nur nach gesicherter Übergabe eigentümergeprüft lösen.

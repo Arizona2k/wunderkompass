@@ -146,6 +146,7 @@ test('unconfirmed journey reading support still has no availability date or func
 
 test('actual PR32 receipt promotes its stable identity once and keeps the open Master unpublished',()=>{
  const receipt=TEST_HISTORY_EVIDENCE.pullRequests.find(e=>e.number===32),entry=UPDATE_HISTORY.find(e=>e.id===JOURNEY_SUPPORT_COPY.id);
+ const animals=PREPARED_UPDATES.find(e=>e.id==='animal-evidence-solar-labels-3-5');assert.ok(animals);assert.equal(animals.evidence.pullRequest,33);assert.equal(animals.availableOn,null);assert.equal(animals.occurredAt,null);assert.deepEqual(animals.links,[]);assert.ok(!publicUpdates().some(e=>e.id===animals.id));
  assert.equal(receipt.mergedAt,'2026-10-16T23:51:12Z');assert.equal(entry.evidence.revision,'0c0ebcb55fc9e81bbe55ae9aa100100df098c0a5');assert.equal(entry.occurredAt,'2026-10-16T23:51:27Z');assert.equal(entry.availableOn,'2026-10-17');assert.equal(entry.publishedOn,null);assert.equal(entry.status,'test-available');assert.equal(publicUpdates().filter(e=>e.id===entry.id).length,1);assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));assert.ok(!publicUpdates().some(e=>e.evidence.pullRequest===27));
  const unrelated={...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(c=>c!==receipt.mergeCommit)};assert.equal(confirmedTestDeployment(receipt,unrelated),null);
  const missing=structuredClone(receipt);missing.deploymentStatuses=[];assert.equal(confirmedTestDeployment(missing),null);

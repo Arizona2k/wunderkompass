@@ -1,0 +1,66 @@
+[
+  {
+    "id": "science-moon-phases--science-tides",
+    "fromId": "science-moon-phases",
+    "toId": "science-tides",
+    "kind": "cause",
+    "why": "Der Mond reflektiert Sonnenlicht und beeinflusst zugleich durch seine Anziehung die Gezeiten: zwei verschiedene Wirkungen.",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "id": "science-photosynthesis--science-fungi",
+    "fromId": "science-photosynthesis",
+    "toId": "science-fungi",
+    "kind": "partnership",
+    "why": "Bei Mykorrhiza versorgt die Pflanze ihren Pilzpartner mit energiereichen Stoffen.",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "id": "science-tides--science-currents",
+    "fromId": "science-tides",
+    "toId": "science-currents",
+    "kind": "cause",
+    "why": "Gezeiten können Strömungen antreiben; Wind und Dichteunterschiede sind weitere Ursachen für Meerwasserbewegung.",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "id": "science-pollination--animal-honey-bee",
+    "fromId": "science-pollination",
+    "toId": "animal-honey-bee",
+    "kind": "transport",
+    "why": "Honigbienen können beim Blütenbesuch Pollen zu einer passenden Narbe transportieren.",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "id": "science-moon-phases--history-apollo11",
+    "fromId": "science-moon-phases",
+    "toId": "history-apollo11",
+    "kind": "exploration",
+    "why": "Die Apollo-11-Mission erforschte den Mond aus der Nähe; Mondphasen lassen sich von der Erde beobachten.",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "id": "science-water-cycle--science-atmosphere",
+    "fromId": "science-water-cycle",
+    "toId": "science-atmosphere",
+    "kind": "transport",
+    "why": "Wasser wechselt zwischen Erdoberfläche und Atmosphäre; dort entstehen Wolken und Niederschlag.",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "id": "science-seasons--science-solar-system",
+    "fromId": "science-seasons",
+    "toId": "science-solar-system",
+    "kind": "cause",
+    "why": "Die geneigte Erdachse und der Umlauf um die Sonne erklären die Jahreszeiten.",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "id": "science-coral-reef--animal-common-octopus",
+    "fromId": "science-coral-reef",
+    "toId": "animal-common-octopus",
+    "kind": "habitat",
+    "why": "Oktopusse können in strukturreichen Meereslebensräumen wie felsigen Küsten und Riffen Unterschlupf finden; nicht jede Art lebt in Korallenriffen.",
+    "checkedAt": "2026-10-09"
+  }
+]

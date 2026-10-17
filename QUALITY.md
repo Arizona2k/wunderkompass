@@ -1,5 +1,7 @@
 # Verbindliche Qualität und Tests
 
+Fokusaufnahmen mit tatsächlicher Tastaturnavigation erzeugen und vor der Aufnahme aktives Element, `:focus-visible` und sichtbare Umrandung prüfen. Eine Auswahlmarkierung nach einem Mausklick ist kein Nachweis sichtbaren Tastaturfokus. Alle bisherigen Fokus-/Touch-/Breitenprüfungen bleiben erhalten. Der Tierwerkstatt-Test vom17.10. wurde nach genau diesem visuellen Befund korrigiert; ältere Nachweise bleiben als Originale erhalten.
+
 ## Dauerhaft: frühe gezielte Browserprüfung vor der vollständigen Abnahme
 
 Neue/geänderte Funktionen und besonders neue Browserassertionen früh im tatsächlichen betroffenen Browser ausführen, mit vorhandenen Produktionsbrowsermodulen. Chromium, Firefox und WebKit anhand des betroffenen Verhaltens tatsächlich prüfen; Emulation nicht als andere Engine ausgeben. Fehler vor der großen Schlussprüfung ursächlich korrigieren und gezielt retesten. Teilberichte mit Scope/Engine/Build/Quelldigest bleiben Teilnachweise. Die vollständige unveränderte Schlussprüfung am endgültigen Stand einschließlich aller erforderlichen Browser, Breiten, Offline-, Pass-, Accessibility- und Sicherheitsfälle ist vor Übergabe weiterhin Pflicht. Keine zusätzliche Testplattform, schwächeren Assertions oder gestrichenen Tests. Diese Nutzerentscheidung vom17.10.2026 gilt auch für spätere Pakete und GO-Runden.

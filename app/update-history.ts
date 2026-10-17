@@ -395,7 +395,20 @@ export const JOURNEY_SUPPORT_COPY:UpdateCopy={
  benefit:'Kinder können sich gezielt Hilfe holen und Bilder auch mit großer Schrift untersuchen. Familien können ihre bisherigen Reisen und Merkzettel weiterverwenden.',
  links:[{label:'Lernreisen',hash:'journeys'}]
 };
+export const ANIMAL_SOLAR_COPY:UpdateCopy={
+ id:'animal-evidence-solar-labels-3-5',icon:'🔎',category:'Spielen und Lernen',
+ title:'Tiere genauer erforschen und Planeten gut lesen',
+ summary:'Auf den Tierkarten kannst du Belege aufdecken, Zusammenhänge erklären und vorsichtige Schlussfolgerungen üben. Im Planetenvergleich bleiben Namen, Zahlen und Einheiten auch auf kleinen Bildschirmen lesbar.',
+ details:[
+  'Alle 24 bisherigen Tierkarten erhalten eine freiwillige Werkstatt mit drei Denkwegen. Zwei passende Belege und eigene Hinweise helfen beim Vergleichen; 48 Denkfragen erklären auch typische Fehlschlüsse.',
+  '17 neue erklärte Verbindungen zeigen zum Beispiel, warum ein Walhai kein Wal ist und Eisbär und Kaiserpinguin keine natürlichen Nachbarn sind. Zurück führt wieder an den gewählten Verweis.',
+  'Beim Planetenvergleich stehen Beschriftungen als umbrechbarer Text unter der Grafik. Auch die Abstandsangaben und Einheiten wachsen mit großer Schrift; die wissenschaftlichen Maßstäbe bleiben erhalten.',
+  'Begonnene Werkstattgedanken werden im bisherigen Entdeckerpass gespeichert. Alte Fragen, Spielrunden, Fotos, Favoriten und Sicherungen bleiben nutzbar.'
+ ],
+ benefit:'Kinder können Wissen mit Belegen begründen und Grenzen eines Bildes erkennen. Familien können die Karten und Planetenwerte mit großer Schrift gemeinsam lesen.',links:[]
+};
 const TEST_COPY:Record<number,UpdateCopy>={
+ 33:ANIMAL_SOLAR_COPY,
  32:JOURNEY_SUPPORT_COPY,
  30:OFFLINE_COPY,
  27:CONTENT_COPY,
@@ -794,19 +807,8 @@ const TEST_COPY:Record<number,UpdateCopy>={
   "category": "Einfachere Bedienung"
  }
 };
-export const ANIMAL_SOLAR_COPY:UpdateCopy={
- id:'animal-evidence-solar-labels-3-5',icon:'🔎',category:'Spielen und Lernen',
- title:'Tiere genauer erforschen und Planeten gut lesen',
- summary:'Auf den Tierkarten kannst du Belege aufdecken, Zusammenhänge erklären und vorsichtige Schlussfolgerungen üben. Im Planetenvergleich bleiben Namen, Zahlen und Einheiten auch auf kleinen Bildschirmen lesbar.',
- details:[
-  'Alle 24 bisherigen Tierkarten erhalten eine freiwillige Werkstatt mit drei Denkwegen. Zwei passende Belege und eigene Hinweise helfen beim Vergleichen; 48 Denkfragen erklären auch typische Fehlschlüsse.',
-  '17 neue erklärte Verbindungen zeigen zum Beispiel, warum ein Walhai kein Wal ist und Eisbär und Kaiserpinguin keine natürlichen Nachbarn sind. Zurück führt wieder an den gewählten Verweis.',
-  'Beim Planetenvergleich stehen Beschriftungen als umbrechbarer Text unter der Grafik. Auch die Abstandsangaben und Einheiten wachsen mit großer Schrift; die wissenschaftlichen Maßstäbe bleiben erhalten.',
-  'Begonnene Werkstattgedanken werden im bisherigen Entdeckerpass gespeichert. Alte Fragen, Spielrunden, Fotos, Favoriten und Sicherungen bleiben nutzbar.'
- ],
- benefit:'Kinder können Wissen mit Belegen begründen und Grenzen eines Bildes erkennen. Familien können die Karten und Planetenwerte mit großer Schrift gemeinsam lesen.',links:[]
-};
-const PREPARED_ANIMAL_SOLAR:UpdateEntry={...ANIMAL_SOLAR_COPY,version:'Tierwerkstatt und Planetenvergleich',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{file:'content/animal-editorial-review.json',revision:'prepared',quote:'Implementierter Lieferabschnitt; noch keine bestätigte Übernahme oder Bereitstellung.'}};
+
+const PREPARED_ANIMAL_SOLAR:UpdateEntry={...ANIMAL_SOLAR_COPY,version:'Tierwerkstatt und Planetenvergleich',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{pullRequest:33,file:'content/animal-editorial-review.json',revision:'prepared',quote:'Implementierter Lieferabschnitt; noch keine bestätigte Übernahme oder Bereitstellung.'}};
 const TEST_UPDATES=TEST_EVIDENCE.pullRequests.flatMap(record=>TEST_COPY[record.number]?[testUpdate(record,TEST_COPY[record.number])]:[]);
 const PREPARED_JOURNEY_SUPPORT:UpdateEntry={...JOURNEY_SUPPORT_COPY,version:'Lernhilfen',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{file:'content/journey-task-review.json',revision:'prepared',quote:'Individuelle Reise-Lernhilfen, noch ohne bestätigte Übernahme und Testbereitstellung.'}};
 export const UPDATE_HISTORY:UpdateEntry[]=[...SITES_HISTORY,...TEST_UPDATES.filter(e=>e.status==='test-available')];

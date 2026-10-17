@@ -1,5 +1,7 @@
 # Gemeinsamer Entwicklungsbestand
 
+Die erhaltene Tier-/Planeten-Welle wird nach den vollständig beendeten roten Abnahmen37798/Quality95 ursächlich korrigiert: mehrere vorbereitete Chronikeinträge, korrekter Suchstart und echter sichtbarer Tastaturfokus statt bloßer Auswahl. Keine Fälle gestrichen, keine Gesamtprüfung abgebrochen. Acht kanonische Startseitenspuren als geprüfte Ableitung entlasten den Einstieg, der ganze Graph bleibt erhalten. Unabhängiger Liefer-PR33 bleibt bis finalen grünen Pflichtprüfungen Draft. Masterrest und Reservierung erhalten; tatsächliche Quittung im PROJECT_STATE/PR. Sieben künftige Tierquellen samt konkreten Arten-/Rechtefallen nur als Quellenlektüre gesichert, Zählstand neuer Tierarten weiterhin0; alle24 Neuanlagen bleiben offen.
+
 ## Laufende Tierwelt und konkreter Darstellungsfehler · 17.10.2026 (WK053/056/057)
 
 Die Fachwelle mit 24 neuen und 24 bisherigen Tierkarten bleibt vollständig beauftragt. Zuerst wird ein unabhängig nutzbarer Abschnitt für die 24 vorhandenen Tiere geliefert: drei freiwillige Denkwege, individuell aufdeckbare Belegpaare, 48 Begründungs-/Transferaufgaben und 17 erklärte gegenseitige Verbindungen. Alte Artikel, Fragen, Antworten, Fotos, Schutzdaten und gespeicherte Runden bleiben erhalten. Dies sind **keine neuen Tierarten und keine vollständige Fach- oder Kinderabnahme**. Alle 24 neuen Tierarten und die übrigen 49 neuen Weltkarten bleiben ebenso offen wie die Quellenredaktion und der weitere Masterumfang.
