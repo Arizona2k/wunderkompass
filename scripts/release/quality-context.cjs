@@ -9,7 +9,7 @@ function context(env, event, commit, parents) {
   if (env.GITHUB_REPOSITORY !== REPO || !SHA.test(commit) || env.GITHUB_SHA !== commit ||
       !/^\d+$/.test(env.GITHUB_RUN_ID) || !/^[1-9]\d*$/.test(env.GITHUB_RUN_ATTEMPT || '') ||
       env.GITHUB_WORKFLOW_REF !== `${REPO}/.github/workflows/quality.yml@${env.GITHUB_REF}` ||
-      !SHA.test(env.GITHUB_WORKFLOW_SHA || '')) throw Error('Unexpected Quality workflow origin');
+      !SHA.test(env.GITHUB_WORKFLOW_SHA || '') || env.GITHUB_WORKFLOW_SHA !== commit) throw Error('Unexpected Quality workflow origin');
   const common = {event: env.GITHUB_EVENT_NAME, repository: REPO, runId: env.GITHUB_RUN_ID,
     attempt: env.GITHUB_RUN_ATTEMPT, testedCommit: commit, workflowRef: env.GITHUB_WORKFLOW_REF,
     workflowSha: env.GITHUB_WORKFLOW_SHA};
@@ -21,7 +21,9 @@ function context(env, event, commit, parents) {
       !SHA.test(pr.head?.sha || '') || !SHA.test(pr.base?.sha || '') ||
       !isDeepStrictEqual(parents, [pr.base.sha, pr.head.sha])) throw Error('PR integration context missing or mismatched');
   return {...common, pr: pr.number, head: pr.head.sha, base: pr.base.sha, target: pr.base.ref,
-    automatic: pr.base.ref === 'test-live' && pr.head.repo?.full_name === REPO && !pr.draft};
+    // Eligibility of the target/source, not permission to merge a draft.
+    // Current draft state is checked freshly by readiness, so Ready alone needs no identical rerun.
+    automatic: pr.base.ref === 'test-live' && pr.head.repo?.full_name === REPO};
 }
 function currentContext(env = process.env) {
   if (!env.GITHUB_RUN_ID) return {event: 'local', automatic: false};
@@ -61,6 +63,6 @@ module.exports = {context, currentContext, assertContext, validateLive, verifyLi
 if (require.main === module) (async () => {
   const file = '.qa-output/ci-context.json', mode = process.argv[2];
   if (mode === 'capture') {fs.mkdirSync('.qa-output', {recursive:true}); fs.writeFileSync(file, JSON.stringify(currentContext(), null, 2)+'\n');}
-  else if (mode === 'verify') {await verifyLive(JSON.parse(fs.readFileSync(file, 'utf8'))); console.log('QUALITY_PR_CONTEXT '+JSON.stringify(JSON.parse(fs.readFileSync(file, 'utf8')))); console.log('Current PR, target base, integration commit and expected Quality workflow verified.');}
+  else if (mode === 'verify') {const saved=JSON.parse(fs.readFileSync(file, 'utf8'));await verifyLive(saved);console.log('QUALITY_PR_CONTEXT '+JSON.stringify(saved));console.log('Current PR, target base, integration commit and expected Quality workflow verified.');}
   else throw Error('Use capture or verify');
 })().catch(error => {console.error(error.message); process.exitCode = 1;});

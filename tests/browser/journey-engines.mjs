@@ -1,5 +1,6 @@
+import {preserveEngineDiagnostics} from './engine-diagnostics.mjs';
 import {solarFlow} from './solar-comparison.mjs';
-import {animalFlow} from './animal-learning.mjs';
+import {animalFlow,animalNavigation} from './animal-learning.mjs';
 import {journeySupportView} from './journeys.mjs';
 import {offlineResilience} from './offline-resilience.mjs';
 import {offlineRetention} from './offline-retention.mjs';
@@ -9,12 +10,19 @@ import JOURNEYS from '../../exports/content/journeys.json' with {type:'json'};
 import DATA from '../../app/journey-inquiries.json' with {type:'json'};
 import {sourceDigest} from '../../scripts/handoff.mjs';
 import {chromium,firefox,webkit} from '../../qa/node_modules/playwright/index.mjs';
-const engines=process.argv.includes('--chromium-only')?['chromium']:['firefox','webkit'],port=4480,base='http://127.0.0.1:'+port,report={build:(await fs.readFile('dist/index.html','utf8')).match(/name="learning-build" content="([^"]+)"/)?.[1],sourceDigest:await sourceDigest(),status:'running',scope:engines.join('+'),engines:[],errors:[]};
-const server=spawn(process.execPath,['tests/browser/preview-server.mjs'],{env:{...process.env,QA_PORT:String(port)},stdio:['ignore','pipe','pipe']});let log='';server.stdout.on('data',b=>log+=b);server.stderr.on('data',b=>log+=b);let browser;
+const searchOnly=process.argv.includes('--search-only');
+const engines=process.argv.includes('--chromium-only')?['chromium']:['firefox','webkit'],port=4480,base='http://127.0.0.1:'+port,report={build:(await fs.readFile('dist/index.html','utf8')).match(/name="learning-build" content="([^"]+)"/)?.[1],sourceDigest:await sourceDigest(),status:'running',scope:searchOnly?'partial actual-engine keyboard search':engines.join('+'),engines:[],errors:[]};
+const server=spawn(process.execPath,['tests/browser/preview-server.mjs'],{env:{...process.env,QA_PORT:String(port)},stdio:['ignore','pipe','pipe']});let currentEngine=null;let log='';server.stdout.on('data',b=>log+=b);server.stderr.on('data',b=>log+=b);let browser;
 try{
  for(let n=0;n<40&&!log.includes('WK_PREVIEW_READY');n++){if(server.exitCode!==null)throw Error(log);await new Promise(r=>setTimeout(r,100));}assert.ok(log.includes('WK_PREVIEW_READY'),log);
- for(const name of engines){const started=performance.now(),checked=[],historyViews=[];browser=await {chromium,firefox,webkit}[name].launch({headless:true,...(name==='chromium'&&process.env.QA_BROWSER_EXECUTABLE?{executablePath:process.env.QA_BROWSER_EXECUTABLE}:{}),args:name==='chromium'?['--enable-unsafe-swiftshader']:[]});
+ for(const name of engines){currentEngine=name;const started=performance.now(),checked=[],historyViews=[];browser=await {chromium,firefox,webkit}[name].launch({headless:true,...(name==='chromium'&&process.env.QA_BROWSER_EXECUTABLE?{executablePath:process.env.QA_BROWSER_EXECUTABLE}:{}),args:name==='chromium'?['--enable-unsafe-swiftshader']:[]});
   const context=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await context.newPage();p.on('pageerror',e=>report.errors.push(e.message));p.setDefaultTimeout(20000);await p.goto(base+'/#journeys');await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor();
+  if(searchOnly){
+   const shots='.qa-output';await fs.mkdir(shots,{recursive:true});
+   const coveredAnimalIds=await animalNavigation(browser,base,page=>page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor(),page=>page.on('pageerror',e=>report.errors.push(e.message)),shots);
+   report.engines.push({name,version:browser.version(),scope:'partial actual-engine keyboard search',keyboardNavigation:true,coveredAnimalIds,seconds:(performance.now()-started)/1000});
+   await browser.close();browser=null;continue;
+  }
   const solarReport={checks:[]};await solarFlow(browser,base,p=>p.locator('.model-solar-system').waitFor(),p=>p.on('pageerror',e=>report.errors.push(e.message)),solarReport,'.qa-output',{widths:[320,390,768,1440]});for(const file of await fs.readdir('.qa-output'))if(/^solar-caption-.*\.png$/.test(file))await fs.rename(path.join('.qa-output',file),path.join('.qa-output','journey-engine-'+name+'-'+file));
   const animalReport={checks:[]};await animalFlow(browser,base,p=>p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor(),p=>p.on('pageerror',e=>report.errors.push(e.message)),animalReport,'.qa-output',{matrix:[320,390,768,1440]});for(const file of await fs.readdir('.qa-output'))if(/^animal-.*\.png$/.test(file))await fs.rename(path.join('.qa-output',file),path.join('.qa-output','journey-engine-'+name+'-'+file));
   const journeySupport=await journeySupportView(p,{widths:[320,390,768,1440],shots:'.qa-output',engine:name});
@@ -28,4 +36,4 @@ try{
  }
  assert.deepEqual(report.errors,[]);report.status='passed';
 }catch(error){report.status='failed';report.failure=error.stack;throw error;}
-finally{await browser?.close();server.kill('SIGTERM');await fs.mkdir('.qa-output',{recursive:true});await fs.writeFile('.qa-output/engine-report.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));}
+finally{await browser?.close();server.kill('SIGTERM');await fs.mkdir('.qa-output',{recursive:true});if(currentEngine)await preserveEngineDiagnostics('.qa-output',currentEngine);await fs.writeFile('.qa-output/'+(searchOnly?'early-search-report.json':'engine-report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));}
