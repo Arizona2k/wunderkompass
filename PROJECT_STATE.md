@@ -1,3 +1,20 @@
+## Neueste Lieferergänzung17.10.2026 – vollständiger Masterabgleich, loginfreie Testwebsite
+
+Nutzer verlangt: eigenständige Entwicklung/GitHub-Sicherung und automatische vollständige Prüfungen, ausschließlich eigener manueller Merge, danach automatische vorhandene Vercel-Bereitstellung nach `test-live`; auch bislang nicht übertragene implementierte Masterfortschritte vollständig berücksichtigen. Bestehende Testwebsite ausdrücklich wieder ohne Vercel-Login. Reguläre begrenzte Vercel-Testzugangsänderung autorisiert; keine main-/anderen Website-/Branchschutz-/News-/Tarifänderungen. Zustimmung zur Loginentfernung liegt vor, tatsächlicher Vercel-Verwaltungszugang fehlt. Konkreter einmaliger Kontoschritt und verifizierbarer Folgeablauf in TEST-LIVE. Frische HTTP-Probe19:24:47Europe/Berlin weiterhin302→Vercel-SSO; kein App-/Buildnachtest behauptet.
+
+Frisch aus tatsächlichen Exporten verglichen: `test-live`8e5012ed5deadee3d88aada0cdffd0b05eaacc5c gegen Produktstand19f227ec79f9e4747e104aa2a6e5f0b8e5a69b93. Dies beschreibt implementierte Datenunterschiede, keine Abnahmequote oder Veröffentlichung:
+
+| Familie | Test-live | Master | Zusätzliche Einträge | Bestehende Einträge geändert |
+| --- | ---: | ---: | ---: | ---: |
+| Weltkarten | 116 | 183 | 67 | 56 |
+| Tierwerkstätten | 24 | 48 | 24 | 0 |
+| Wissenswörter | 90 | 180 | 90 | 90 |
+| Warum-Fragen | 30 | 60 | 30 | 30 |
+| Naturorte | 40 | 74 | 34 | 4 |
+| Lernreisen | 16 | 16 | 0 | 16 |
+
+Die67noch fehlenden Weltkarten sind24Tiere,23Wissenschafts-,12Erfindungs- und8Bauwerkskarten. Die31Geschichts- und18Personenkarten sind bereits im aktuellen Testzweig vorhanden und werden nicht erneut als ausstehend gezählt. Zusätzlich im Master: neues optionales Natur-Lernmodul mit68Vertiefungsdatensätzen; das sind nicht68neue Naturorte. Keine Bestands-ID in den sechs verglichenen Familien entfernt. Vollständiger Code-/Inhalts-/Medien-/Prüfungsunterschied bleibt im vorhandenen PR27, nicht auf die Kartentabelle reduziert. Unfertige Aufgaben oder unabhängige Abnahmen dadurch nicht als fertig erklären; Nutzermerge und tatsächliche Bereitstellung bleiben erforderlich.
+
 ## Vorrangige Nutzerentscheidung im laufenden Auftrag ·17.10.2026
 
 Der Nutzer hat die automatische Übernahme ausdrücklich zurückgestellt: „auto merge erstmal zurückstellen … ich merge dann selber wenn du mir das go gibst“. Bestehende Prüfungen und fachliche/technische Entwicklung weiterführen und gesichert übergeben. **Keine eigene oder automatische PR-Übernahme und keine wartende Auto-Merge-Aktivierung. Der Nutzer mergt selbst.** Eine konkrete GO-Empfehlung erst nach sämtlichen tatsächlich erforderlichen aktuellen Prüf- und Abnahmenachweisen des bezeichneten PRs; fehlende oder rote Nachweise offen nennen. PR27 bleibt Draft, bis seine eigenen Voraussetzungen vollständig erfüllt sind. Diese neueste Entscheidung hat Vorrang vor den nachfolgenden älteren Routine-Automatikfreigaben; keine Schutz-, Kosten-, main- oder Newsänderung.

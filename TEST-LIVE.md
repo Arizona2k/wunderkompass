@@ -1,3 +1,21 @@
+## Neueste Vorgabe17.10.2026 – automatisch bis auf den Nutzermerge, Testseite ohne Login
+
+Verbindlicher gewünschter Ablauf:
+
+1. Entwicklung einschließlich bereits implementierter, noch nicht übertragener Masterfortschritte auf GitHub sichern. Aktuellen Unterschied zu `test-live` prüfen; keine alten lokalen Stände übernehmen oder bereits übertragene Karten erneut als fehlend zählen.
+2. Die bestehende Quality am exakten PR-/Integrationsstand automatisch ausführen. Nur tatsächliche vollständige Ergebnisse und einschlägige Abnahmen als erfüllt melden; aktuelle rote oder fehlende Belege offen nennen.
+3. Der Nutzer mergt selbst nach einer konkreten belegten GO-Empfehlung. Keine Agentenmerges, Auto-Merge-Warteschlangen, Branchschutzumgehungen oder Direktpushes nach `test-live`/`main`.
+4. Die vorhandene Vercel-Gitintegration stellt den tatsächlichen Nutzermerge nach `test-live` automatisch bereit. Diese Kette ist durch PR35/8e5012ed und Vercel-success56598435114 bereits beobachtet; sie wird nicht durch eine zweite Pipeline ersetzt. Entwicklungszweig-Vorschauen bleiben aus.
+5. Aktuellen Merge, dessen konkretes Vercel-Deployment und die ausgelieferte App auf der tatsächlich zugeordneten dauerhaften Testadresse prüfen. Der Nutzer möchte diese Testwebsite ausdrücklich **ohne Vercel-Login**. Diese begrenzte Freigabe ersetzt ältere Verbote öffentlichen Testzugangs; main/andere Websites und übrige Schutz-/Kosten-/Newsgrenzen bleiben erhalten.
+
+### Konkreter noch fehlender Vercel-Kontoschritt
+
+Frisch beobachtet17.10.2026 um19:24:47Europe/Berlin: die freigegebene Testdomain liefert302 an `vercel.com/sso-api`. Die Weiterleitung wurde dabei nicht verfolgt; früherer realer Chromiumversuch endete nach dem SSO-Verweis am CONNECT403. Eine erfolgreiche aktuelle App-/Buildabnahme liegt weiterhin nicht vor. Die Anmeldesperre ist damit eine Vercel-Zugangseinstellung und kein fehlgeschlagener GitHub-Upload. Es ist hier kein Vercel-Verwaltungszugang/keine entsprechende Credentialbindung vorhanden; keine Änderung dieser Einstellung behaupten.
+
+Im bestehenden [Vercel-Projekt](https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass) unter **Settings → Deployment Protection → Vercel Authentication** den Login für die autorisierte bestehende Testwebsite regulär abschalten und speichern, soweit die vorhandene Oberfläche dies für dieses Testziel erlaubt. Keine neue kostenpflichtige Ausnahme, Domain oder anderes Projekt anlegen. Gleichzeitig die bereits vorhandene dauerhaft dem Branch `test-live` zugeordnete Testadresse feststellen; die bisher genannte deploymentspezifisch wirkende URL erst nach Zuordnungsprüfung als aktuelle Testadresse bestätigen. Wenn eine andere bereits vorhandene Testdomain erforderlich ist, deren Freigabe über die normale Cloudkonfiguration vornehmen lassen, nicht den Proxy umgehen. Dieser Kontoschritt ist mangels angebundener Vercel-Verwaltung noch vom Kontoinhaber auszuführen; die Zustimmung zur loginfreien Testwebsite ist bereits erteilt und muss nicht erneut erfragt werden.
+
+Danach normalen HTTP-/Browserzugriff, tatsächlichen Build und betroffene Funktionen prüfen. Einen200-Status allein nicht mit dem richtigen aktuellen Build gleichsetzen. Keine erfundene Vercel-Änderung oder automatische dauernde Browserüberwachung versprechen. Vorhandene ereignisgesteuerte GitHub-Prüfungen und Vercel-Deployments laufen regulär; keine zusätzlichen Agenten/Scheduler.
+
 ## Vorrangige Nutzerentscheidung im laufenden Auftrag ·17.10.2026
 
 Der Nutzer hat die automatische Übernahme ausdrücklich zurückgestellt: „auto merge erstmal zurückstellen … ich merge dann selber wenn du mir das go gibst“. Bestehende Prüfungen und fachliche/technische Entwicklung weiterführen und gesichert übergeben. **Keine eigene oder automatische PR-Übernahme und keine wartende Auto-Merge-Aktivierung. Der Nutzer mergt selbst.** Eine konkrete GO-Empfehlung erst nach sämtlichen tatsächlich erforderlichen aktuellen Prüf- und Abnahmenachweisen des bezeichneten PRs; fehlende oder rote Nachweise offen nennen. PR27 bleibt Draft, bis seine eigenen Voraussetzungen vollständig erfüllt sind. Diese neueste Entscheidung hat Vorrang vor den nachfolgenden älteren Routine-Automatikfreigaben; keine Schutz-, Kosten-, main- oder Newsänderung.
