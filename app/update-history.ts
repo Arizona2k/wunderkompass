@@ -777,7 +777,16 @@ const PREPARED_JOURNEY_SUPPORT:UpdateEntry={...JOURNEY_SUPPORT_COPY,version:'Ler
 export const UPDATE_HISTORY:UpdateEntry[]=[...SITES_HISTORY,...TEST_UPDATES.filter(e=>e.status==='test-available')];
 const PREPARED_JOURNEYS:UpdateEntry={...JOURNEY_COPY,version:'Paket 3',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-12',publishedOn:null,availableOn:null,occurredAt:null,summary:'Die Lernreise-Verbesserungen sind vorbereitet; ihre Bereitstellung ist noch unbestätigt.',links:[],evidence:{file:'BACKLOG.md',revision:'d6945c8',quote:'WK-048: Lernreisen 2.0 – alle 16 Reisen/80 Kapitel ganzheitlich modernisieren.'}};
 
-export const PREPARED_UPDATES:UpdateEntry[]=[...(!TEST_UPDATES.some(e=>e.id===PREPARED_ANIMAL_SOLAR.id)?[PREPARED_ANIMAL_SOLAR]:[]),...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SUPPORT.id)?[PREPARED_JOURNEY_SUPPORT]:[])];
+export const JOURNEY_SOURCE_COPY:HistoryCopy&{id:string}={
+ id:'journey-readable-sources-3-5',icon:'📖',category:'Einfachere Bedienung',
+ title:'Quellen in den Lernreisen leichter öffnen',
+ summary:'Die Quellenangaben aller 16 Lernreisen werden größer und leichter antippbar. Du kannst die ursprünglichen Belege weiterhin freiwillig im Quellenabschnitt öffnen.',
+ details:['Quellenlinks verwenden die normale Leseschrift statt kleiner Fußnotenschrift und wachsen bei großer Schrift mit.','Mindestens 48 Pixel hohe Linkflächen erleichtern das Antippen; lange Bezeichnungen dürfen umbrechen.','Unterstreichung und sichtbarer Tastaturfokus machen die Verweise auch ohne Farberkennung erkennbar.'],
+ benefit:'Kinder und Eltern können Belege auf kleinen Bildschirmen und mit großer Schrift leichter lesen und erreichen. Reiseinhalte und gespeicherte Fortschritte bleiben erhalten.',
+ links:[{label:'Lernreisen',hash:'journeys'}]
+};
+const PREPARED_JOURNEY_SOURCES:UpdateEntry={...JOURNEY_SOURCE_COPY,version:'Lesbare Quellen',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{file:'CHANGELOG.md',revision:'prepared',quote:'Lesbare und leichter antippbare Quellenlinks; noch kein bestätigter Merge oder Vercel-Erfolg.'}};
+export const PREPARED_UPDATES:UpdateEntry[]=[PREPARED_JOURNEY_SOURCES,...(!TEST_UPDATES.some(e=>e.id===PREPARED_ANIMAL_SOLAR.id)?[PREPARED_ANIMAL_SOLAR]:[]),...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SUPPORT.id)?[PREPARED_JOURNEY_SUPPORT]:[])];
 export const updateLabel=(entry:UpdateEntry)=>entry.channel==='sites'?`Frühere Website · Version ${entry.version}`:entry.status==='prepared'?'In Vorbereitung · noch nicht verfügbar':'Testversion · verfügbar';
 const updateDay=(entry:UpdateEntry)=>entry.availableOn??entry.publishedOn??entry.confirmedOn;
 export function publicUpdates(entries:readonly UpdateEntry[]=UPDATE_HISTORY){
