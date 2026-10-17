@@ -2331,7 +2331,7 @@
         "Barrieren in Flüssen können Wanderwege unterbrechen. Eine offene Verbindung gehört deshalb zur Betrachtung des Lebensraums."
       ],
       "runtimeArticleParagraphs": [
-        "Die Lebensgeschichte des Europäischen Aals verbindet europäische Gewässer mit dem Atlantik. Junge Entwicklungsstadien gelangen mit Meeresströmungen an Küsten.",
+        "Die Lebensgeschichte des Europäischen Aals verbindet europäische Gewässer mit dem Atlantik. Junge Entwicklungsstadien gelangen mit Meeresströmungen an Küsten. Forschende verfolgten auch erwachsene Aale mit Sendern. Das ist keine Aufnahme der Eiablage.",
         "Barrieren in Flüssen können Wanderwege unterbrechen. Eine offene Verbindung gehört deshalb zur Betrachtung des Lebensraums."
       ],
       "runtimeMeasurement": {
@@ -2348,16 +2348,16 @@
           "https://pmc.ncbi.nlm.nih.gov/articles/PMC9755116/"
         ],
         "anchor": "WWT species facts; Wright et al. 2022 Abstract/Discussion; Author Correction",
-        "review": "Listed source sections read; no independent review. Eel primary full text inaccessible, title/correction only; remains an explicit acceptance gap."
+        "review": "WWT size entry and relevant primary-study/correction sections read. No independent review; study does not establish observed spawning."
       },
       "runtimeClaims": [
         {
-          "statement": "Die Lebensgeschichte des Europäischen Aals verbindet europäische Gewässer mit dem Atlantik. Junge Entwicklungsstadien gelangen mit Meeresströmungen an Küsten.",
+          "statement": "Die Lebensgeschichte des Europäischen Aals verbindet europäische Gewässer mit dem Atlantik. Junge Entwicklungsstadien gelangen mit Meeresströmungen an Küsten. Forschende verfolgten auch erwachsene Aale mit Sendern. Das ist keine Aufnahme der Eiablage.",
           "sourceUrls": [
             "https://www.wildlifetrusts.org/national-marine-week/incredible-journeys",
             "https://www.wwt.org.uk/discover-wetlands/wetland-wildlife/species-factfiles/european-eel",
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9562336/",
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9755116/"
+            "https://backend.orbit.dtu.dk/ws/portalfiles/portal/291319540/s41598_022_19248_8.pdf",
+            "https://backend.orbit.dtu.dk/ws/files/299778347/s41598_022_26117_x.pdf"
           ],
           "anchor": "WWT species facts; Wright et al. 2022 Abstract/Discussion; Author Correction"
         },
@@ -2366,8 +2366,8 @@
           "sourceUrls": [
             "https://www.wildlifetrusts.org/national-marine-week/incredible-journeys",
             "https://www.wwt.org.uk/discover-wetlands/wetland-wildlife/species-factfiles/european-eel",
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9562336/",
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9755116/"
+            "https://backend.orbit.dtu.dk/ws/portalfiles/portal/291319540/s41598_022_19248_8.pdf",
+            "https://backend.orbit.dtu.dk/ws/files/299778347/s41598_022_26117_x.pdf"
           ],
           "anchor": "WWT species facts; Wright et al. 2022 Abstract/Discussion; Author Correction"
         },
@@ -2376,20 +2376,38 @@
           "sourceUrls": [
             "https://www.wildlifetrusts.org/national-marine-week/incredible-journeys",
             "https://www.wwt.org.uk/discover-wetlands/wetland-wildlife/species-factfiles/european-eel",
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9562336/",
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9755116/"
+            "https://backend.orbit.dtu.dk/ws/portalfiles/portal/291319540/s41598_022_19248_8.pdf",
+            "https://backend.orbit.dtu.dk/ws/files/299778347/s41598_022_26117_x.pdf"
           ],
           "anchor": "WWT species facts; Wright et al. 2022 Abstract/Discussion; Author Correction"
         }
       ],
-      "articleSHA256": "9a3c577f220aec101d3d359c9093c6e40cc363c83a450511bfa0fdd7ae9cc988",
-      "runtimeTeachingContentSHA256": "8ce00b789de8ec59a8a06d1298255aeeca0b6f99e5ea86b288a76cc74ac344a7",
-      "sourceAccessLimit": "Primary DOI and author-correction evidence found; full text/abstract reading blocked by site response. No spawning observation claimed. Complete primary-text reading remains open before scientific acceptance.",
+      "articleSHA256": "62981a51e7b5c272834147c8c4795edb0ea3ba38bfb64c21a8b7f46645db9c0d",
+      "runtimeTeachingContentSHA256": "9f3d3739aee502f04ed8c51eb890d270bd7f494c0590e3dce64a69b210d88a37",
+      "sourceAccessLimit": "Earlier canonical/PMC requests were blocked; access gap now resolved through the official DTU author repository. Independent scientific review remains open.",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
         "independent": false,
         "notes": "Prior f7 matrix672 plus native48 passed. Personal picture review found caption clipping; padding and actual text-fragment regression added. Quiz distractors and answer-specific explanations individually revised; final current tests still required."
+      },
+      "previousSourceAccessLimit": "Primary DOI and author-correction evidence found; full text/abstract reading blocked by site response. No spawning observation claimed. Complete primary-text reading remains open before scientific acceptance.",
+      "primarySourceRead": {
+        "access": "relevant-primary-passages-read",
+        "accessedOn": "2026-10-17",
+        "doi": "10.1038/s41598-022-19248-8",
+        "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/291319540/s41598_022_19248_8.pdf",
+        "anchors": [
+          "PDF page2: Abstract and larval-survey inference",
+          "PDF page3: Results and Discussion; tagged adults, not observed eggs or spawning"
+        ],
+        "correction": {
+          "doi": "10.1038/s41598-022-26117-x",
+          "url": "https://backend.orbit.dtu.dk/ws/files/299778347/s41598_022_26117_x.pdf",
+          "anchor": "PDF page2: units corrected from m/day to km/day"
+        },
+        "rights": "Official author-repository research reading; only links and original German explanation used. No paper, image, map or copied passage distributed.",
+        "independentReview": false
       }
     },
     {

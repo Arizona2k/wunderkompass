@@ -1,3 +1,9 @@
+## Unveröffentlicht · kompaktere vollständige Wissenskarten
+
+-Nur automatisch erzeugte Kategorie-Auslieferungen ohne Einrückungs-Leerraum: gleicher Inhalt mit126445Byte weniger Rohdaten und5743Byte weniger gzip. Lesbarer kanonischer Katalog, alle Quellen/Lernfunktionen und vollständige Offline-Inhalte erhalten; keine Budgeterhöhung oder Architekturänderung.
+-Aalwanderung durch tatsächlich gelesene einschlägige Originalpassagen im offiziellen Hochschularchiv und veröffentlichte Einheitenkorrektur belegt. Keine beobachtete Eiablage behauptet; unabhängige Abnahme weiter offen.
+-Neuer Mini-Fragentest wartet auf den tatsächlichen Karteninhalt nach Reload; keine schwächeren fachlichen/Fokus-/Speicherassertionen.
+
 ## Unveröffentlicht · Nachkorrektur neuer Tierkarten
 
 -Bei320px reproduziertes Abschneiden von Bildunterschriften am gerundeten Rahmen durch ausreichenden Innenabstand korrigiert; Regression prüft tatsächliche Textfragmente statt nur Seitenüberlauf.

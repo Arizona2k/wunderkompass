@@ -106,7 +106,7 @@ export async function animalNavigation(browser,base,ready,monitor,shots){
   stage='type exact title with actual keyboard';await p.keyboard.type(t.title);assert.equal(await input.inputValue(),t.title,'complete title from actual keyboard, including accents and spaces');
   stage='select exact result';await p.getByRole('option').filter({has:p.getByText(t.title,{exact:true})}).click();await p.locator('[data-animal-inquiry="'+entry.id+'"]').waitFor({state:'attached'});stage='reload';await p.reload();await ready(p);
   if(expansion.entries.some(e=>e.id===entry.id)){
-   const quiz=p.locator('.world-mini-question');
+   const quiz=p.locator('.world-mini-question');await quiz.getByRole('heading',{name:t.question.prompt,exact:true}).waitFor();
    if(await quiz.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).count())await quiz.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();
    const hint=quiz.locator('.world-game-hint');assert.equal(await hint.count(),1,'new mini-question has its own voluntary hint');
    assert.equal(await hint.getByText(t.questionFeedback.hint,{exact:true}).isVisible(),false,'hint does not open itself');

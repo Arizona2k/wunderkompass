@@ -29,7 +29,7 @@ test('each addition has an explained reciprocal edge without unfinished external
  for(const edge of review.newConnections){assert.ok(edge.why.length>35);assert.ok(graph.connections.some(c=>c.id===edge.id&&c.why===edge.why));const pair=[edge.fromId,edge.toId].sort().join('|');assert.ok(!pairs.has(pair));pairs.add(pair);for(const [from,to] of [[edge.fromId,edge.toId],[edge.toId,edge.fromId]])assert.ok(catalog.find(t=>t.id===from).related.includes(to));}
  for(const entry of review.entries)assert.ok(review.newConnections.some(c=>c.fromId===entry.id||c.toId===entry.id));
  assert.ok(!review.newConnections.some(e=>[e.fromId,e.toId].includes('science-heat-transfer')));
- const eel=review.entries.find(e=>e.id==='animal-european-eel');assert.ok(eel.sourceAccessLimit.includes('inaccessible')||eel.sourceAccessLimit.includes('blocked'));
+ const eel=review.entries.find(e=>e.id==='animal-european-eel');assert.ok(eel.previousSourceAccessLimit.includes('blocked'));assert.equal(eel.primarySourceRead.access,'relevant-primary-passages-read');assert.equal(eel.primarySourceRead.independentReview,false);assert.match(eel.primarySourceRead.url,/^https:\/\/backend\.orbit\.dtu\.dk\//);assert.ok(eel.primarySourceRead.correction.doi);
 });
 
 test('all185 preceding questions and hints survive the24 additions without changing their identities or content',()=>{

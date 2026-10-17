@@ -1,3 +1,4 @@
+import {gzipSync} from 'node:zlib';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -26,4 +27,10 @@ test('new science records remain distinct, dossier hashes stay current and prior
  const dossier=JSON.parse(fs.readFileSync('content/science-editorial-review.json','utf8'));const science=catalog.filter(t=>t.category==='science');assert.equal(science.length,46);assert.equal(dossier.topics.length,46);assert.equal(dossier.topics.filter(t=>t.kind==='new').length,23);assert.equal(dossier.independentReview,false);
  const old=JSON.parse(fs.readFileSync('tests/fixtures/baseline-topics.json','utf8'));for(const t of old){const current=catalog.find(x=>x.id===t.id);assert.ok(current);}
  for(const item of dossier.topics){const t=catalog.find(t=>t.id===item.id);assert.equal(item.contentHash,fingerprint(t),item.id+' stale editorial dossier');assert.equal(item.independentReview,false);assert.equal(item.acceptedForDoubling,false);assert.equal(item.ageLevels['6-8'],t.learning.starter);assert.equal(item.observation,t.learning.observe);assert.ok(item.sources.every(s=>s.url.startsWith('https://')));assert.ok(item.claims.length>=2);if(item.kind==='new'){assert.ok(item.semanticDecision);assert.ok(t.related.length>=2);for(const id of t.related)assert.ok(catalog.find(x=>x.id===id).related.includes(t.id),'reciprocal '+t.id+' '+id);}}
+});
+
+test('generated category delivery retains every canonical field while removing measurable transfer-only whitespace',()=>{
+ let raw=0,pretty=0,compressed=0,prettyCompressed=0;
+ for(const category of ['animals','history','people','inventions','buildings','science']){const bytes=fs.readFileSync('app/world-content-parts/world-content-'+category+'.json'),value=JSON.parse(bytes),readable=Buffer.from(JSON.stringify(value,null,2)+'\n');assert.deepEqual(value,catalog.filter(t=>t.category===category));raw+=bytes.length;pretty+=readable.length;compressed+=gzipSync(bytes).length;prettyCompressed+=gzipSync(readable).length;}
+ assert.ok(raw<pretty,'actual category delivery has fewer bytes than readable source');assert.ok(compressed<prettyCompressed,'combined gzip transfer also improves, without omitting content');
 });
