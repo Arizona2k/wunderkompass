@@ -1,3 +1,8 @@
+## Unveröffentlicht · präzisere Diagnose der verzögerten Suche
+
+-Exakte Tastatureingaben im tatsächlichen Vordergrunddokument prüfen; verzögertes Nachladen, zwei vollständige deutsche Tiernamen, erneutes Öffnen und Schließen vor Ladeende bleiben unverändert abgesichert.
+-Diesen vorhandenen Fall vor der großen Engineprüfung ausführen und bei Fehlern tatsächliche Eingabe-/Fokusereignisse vor dem Schließen sichern. Keine Produktänderung oder bereits bestätigte WebKit-Ursache behauptet.
+
 ## Unveröffentlicht · verständlichere Denkaufgaben zu24neuen Tierarten
 
 -48Rückmeldungen zu falschen Antworten erklären jetzt die jeweilige Fehlvorstellung, statt nur die richtige Erklärung mit derselben allgemeinen Einleitung zu wiederholen.
