@@ -1,6 +1,6 @@
 # Gemeinsamer Entwicklungsbestand
 
-Messbarer Begleitfix im selben Abschnitt: Startseite lädt nur ihre acht kanonischen Wissensspuren statt den gesamten wachsenden Graphen. Vollständiger Graph bleibt für Artikel erhalten, Ableitung mit Export-/Negativtests gegen veraltete oder fehlende Daten gesichert. Erstabruf278.004Byte Gzip, bisherige PR32-Basis278.476Byte; ursprüngliches280.000Byte-Gate bleibt erhalten. Kein neuer Optimierungsdurchlauf.
+Messbarer Begleitfix im selben Abschnitt: Startseite lädt nur ihre acht kanonischen Wissensspuren statt den gesamten wachsenden Graphen. Vollständiger Graph bleibt für Artikel erhalten, Ableitung mit Export-/Negativtests gegen veraltete oder fehlende Daten gesichert. Erstabruf278.005Byte Gzip, bisherige PR32-Basis278.476Byte; ursprüngliches280.000Byte-Gate bleibt erhalten. Kein neuer Optimierungsdurchlauf.
 
 ## Aktueller Tier-/Planeten-Lieferabschnitt · WK053/056/057 · in Prüfung
 

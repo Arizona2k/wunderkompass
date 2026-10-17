@@ -39,7 +39,7 @@ export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='n
  return {id:data.id,width,state,levels:[0,1,2],bothEvidence:true,wrongAndCorrect:true,keyboard,geometry:true};
 }
 export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix=widths}={}){
- const observed=[],start=performance.now();
+ const observed=[],focusChecks=[],start=performance.now();
  for(const width of matrix){
   const c=await browser.newContext({viewport:{width,height:900},hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
   const pass=createSave();pass.progress.favorites=['topic:animal-polar-bear'];pass.progress.notes=[{id:'animal-test-note',text:'Synthetische alte Notiz',at:'2026-10-17T07:00:00.000Z'}];pass.progress.gameSessions['world:animal-detective']={items:['animal-lion','animal-polar-bear'],index:1,roundAnswer:'alte Antwort'};
@@ -56,12 +56,15 @@ export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix
    await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));
    for(const data of DATA.entries)observed.push(await exerciseAnimal(p,data,{width,shots,keyboard:true,state:'large'}));
    const audit=p.locator('.animal-inquiry');for(let i=0;i<3;i++){await audit.locator('.animal-inquiry-levels button').nth(i).click();await prepareAxe(p);assert.deepEqual(await p.evaluate(async()=>(await window.axe.run('.animal-inquiry',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[],'workshop axe level'+i);}
-   await audit.locator('.animal-inquiry-levels button').nth(2).focus();await audit.screenshot({path:path.join(shots,'animal-workshop-focus-'+width+'.png'),animations:'disabled'});
+   const focusTarget=audit.locator('.animal-inquiry-levels button').nth(2);await focusTarget.focus();await p.keyboard.press('Tab');await p.keyboard.press('Shift+Tab');
+   const focus=await focusTarget.evaluate(e=>{const style=getComputedStyle(e);return {active:document.activeElement===e,visible:e.matches(':focus-visible'),outlineWidth:parseFloat(style.outlineWidth),outlineStyle:style.outlineStyle};});
+   assert.equal(focus.active,true,'real Tab/Shift+Tab returns to the selected thinking path');assert.equal(focus.visible,true,'keyboard focus, not just a pointer selection');assert.ok(focus.outlineWidth>=2&&focus.outlineStyle!=='none','visible keyboard outline');focusChecks.push({width,state:'large',tabNavigation:true,...focus});
+   await audit.screenshot({path:path.join(shots,'animal-workshop-focus-'+width+'.png'),animations:'disabled'});
    console.log('Animal workshop',width,DATA.entries.length,'cards passed');
   }catch(error){await p.screenshot({path:path.join(shots,'animal-failure-'+width+'.png'),fullPage:true,timeout:5000}).catch(()=>{});throw error;}finally{await c.close();}
  }
  await animalNavigation(browser,base,ready,monitor);
- report.animalCoverage={observed,seconds:(performance.now()-start)/1000,oldSessionsPreserved:true,largeText:true,axe:true,independentAcceptance:false,navigation:true};
+ report.animalCoverage={observed,focusChecks,seconds:(performance.now()-start)/1000,oldSessionsPreserved:true,largeText:true,axe:true,independentAcceptance:false,navigation:true};
  report.checks.push('24 existing animal cards: individual evidence, three voluntary thinking paths,48 reasoning tasks, wrong/correct feedback, keyboard, large text, axe and old/new session reload at'+matrix.join('/'));
 }
 export async function animalNativeZoom(chromium,options,base,report,shots){

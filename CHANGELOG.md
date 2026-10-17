@@ -1,6 +1,6 @@
 # Änderungsverlauf
 
-- Die Startseite lädt nur ihre acht tatsächlich gezeigten kanonischen Wissensspuren. Der vollständige Graph bleibt für Wissenskarten erhalten. Gemessener Einstieg278.004Byte Gzip statt278.476Byte auf der unveränderten PR32-Basis; alle Spuren und Erstabrufbudgets erhalten, Ableitung gegen Quellenabweichung geprüft.
+- Die Startseite lädt nur ihre acht tatsächlich gezeigten kanonischen Wissensspuren. Der vollständige Graph bleibt für Wissenskarten erhalten. Gemessener Einstieg278.005Byte Gzip statt278.476Byte auf der unveränderten PR32-Basis; alle Spuren und Erstabrufbudgets erhalten, Ableitung gegen Quellenabweichung geprüft.
 
 ## In Entwicklung · Tierwerkstätten und Planetenbeschriftung · 17.10.2026
 

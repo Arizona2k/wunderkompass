@@ -28,7 +28,7 @@ test('source biological article data and old related links are preserved while e
 
 test('complete animal evidence rejects absent/duplicate widths, levels, large text, keyboard, saves and native/offline states',()=>{
  const widths=[320,360,390,768,1024,1440,1920];assert.equal(animalCoverageComplete(animalProof(),widths),true);
- for(const mutate of [p=>p.observed.pop(),p=>p.observed.push(p.observed[0]),p=>p.observed[0].levels.pop(),p=>p.observed[1].state='normal',p=>p.observed[0].keyboard=false,p=>p.observed[0].geometry=false,p=>p.oldSessionsPreserved=false,p=>p.axe=false,p=>p.navigation=false,p=>p.independentAcceptance=true]){const proof=animalProof();mutate(proof);assert.equal(animalCoverageComplete(proof,widths),false);}
+ for(const mutate of [p=>p.focusChecks.pop(),p=>p.focusChecks[0].visible=false,p=>p.focusChecks[0].outlineWidth=0,p=>p.focusChecks[0].tabNavigation=false,p=>p.observed.pop(),p=>p.observed.push(p.observed[0]),p=>p.observed[0].levels.pop(),p=>p.observed[1].state='normal',p=>p.observed[0].keyboard=false,p=>p.observed[0].geometry=false,p=>p.oldSessionsPreserved=false,p=>p.axe=false,p=>p.navigation=false,p=>p.independentAcceptance=true]){const proof=animalProof();mutate(proof);assert.equal(animalCoverageComplete(proof,widths),false);}
  assert.equal(animalCasesComplete(animalCases([320]),[320,390]),false);assert.equal(animalNativeComplete(animalNativeProof()),true);assert.equal(animalNativeComplete({...animalNativeProof(),scale:1}),false);assert.equal(animalNativeComplete({...animalNativeProof(),observed:[]}),false);assert.equal(animalOfflineComplete(animalOfflineProof()),true);assert.equal(animalOfflineComplete({...animalOfflineProof(),coldRestart:false}),false);
 });
 
