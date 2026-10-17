@@ -1,4 +1,4 @@
-import {journeySourceView} from './journey-sources.mjs';
+import {journeySourceView,sourceRouteInputFlow} from './journey-sources.mjs';
 import {exerciseSolar} from './solar-comparison.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -91,6 +91,7 @@ export async function animalNavigation(browser,base,ready,monitor,shots){
  // Extend the existing early keyboard-navigation path with the changed source
  // controls. The complete later journey matrix remains unchanged.
  if(process.argv.includes('--search-only')){const sourceProof=await journeySourceView(p,{widths:[320,390,768,1440],shots,engine});console.log('EARLY_JOURNEY_SOURCES',JSON.stringify({engine,views:sourceProof.views.length,chapters:sourceProof.chapters}));}
+ await sourceRouteInputFlow(browser,base,shots,engine);
  return topics.map(t=>t.id);
  }catch(error){const state=await p.evaluate(()=>({url:location.href,active:document.activeElement?.outerHTML.slice(0,700),query:document.querySelector('.search-dialog [role="combobox"]')?.value??null,queryAttribute:document.querySelector('.search-dialog [role="combobox"]')?.getAttribute('value')??null,dialog:document.querySelector('.search-dialog')?.getAttribute('data-state')??null,options:[...document.querySelectorAll('[role="option"]')].map(e=>({value:e.getAttribute('data-value'),text:e.textContent?.slice(0,180)})),trace:window.__animalSearchTrace??[]})).catch(()=>({unavailable:true}));const failure={engine,current,stage,error:error.message,...state};console.error('ANIMAL_SEARCH_FAILURE',JSON.stringify(failure));if(shots){await fs.writeFile(path.join(shots,'animal-search-failure-'+engine+'.json'),JSON.stringify(failure,null,2));await p.screenshot({path:path.join(shots,'animal-search-failure-'+engine+'.png'),fullPage:true,animations:'disabled'}).catch(()=>{});}throw new Error('Animal navigation '+engine+' '+current+' '+stage+': '+error.message,{cause:error});}finally{await c.close();}
 }
