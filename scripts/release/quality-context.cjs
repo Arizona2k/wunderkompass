@@ -61,6 +61,6 @@ module.exports = {context, currentContext, assertContext, validateLive, verifyLi
 if (require.main === module) (async () => {
   const file = '.qa-output/ci-context.json', mode = process.argv[2];
   if (mode === 'capture') {fs.mkdirSync('.qa-output', {recursive:true}); fs.writeFileSync(file, JSON.stringify(currentContext(), null, 2)+'\n');}
-  else if (mode === 'verify') {await verifyLive(JSON.parse(fs.readFileSync(file, 'utf8'))); console.log('Current PR, target base, integration commit and expected Quality workflow verified.');}
+  else if (mode === 'verify') {await verifyLive(JSON.parse(fs.readFileSync(file, 'utf8'))); console.log('QUALITY_PR_CONTEXT '+JSON.stringify(JSON.parse(fs.readFileSync(file, 'utf8')))); console.log('Current PR, target base, integration commit and expected Quality workflow verified.');}
   else throw Error('Use capture or verify');
 })().catch(error => {console.error(error.message); process.exitCode = 1;});

@@ -61,4 +61,28 @@ test('actual depth-1 checkout retains integration parents through raw commit hea
   const output=execFileSync(process.execPath,['-e',`console.log(JSON.stringify(require(${JSON.stringify(modulePath)}).currentContext()))`],{
     cwd:shallow,encoding:'utf8',env:{...process.env,...f.env,GITHUB_EVENT_PATH:eventFile}});
   const result=JSON.parse(output);assert.equal(result.testedCommit,merge);assert.equal(result.base,base);assert.equal(result.head,head);
+  f.pr.merge_commit_sha=merge;f.run.head_sha=head;
+  const program=`
+    const assert=require('node:assert/strict');
+    const {currentContext,verifyLive}=require(${JSON.stringify(modulePath)});
+    const saved=currentContext(),pr=${JSON.stringify(f.pr)},run=${JSON.stringify(f.run)};
+    (async()=>{
+      for(const mode of ['valid','forbidden','unavailable','changed-base']){
+        const calls=[];
+        const request=async(url,options)=>{
+          calls.push(url);assert.equal(options.redirect,'error');assert.ok(options.signal);
+          assert.equal(options.method,undefined); // fetch defaults to GET, no mutation.
+          assert.ok(url.startsWith('https://api.github.com/repos/Arizona2k/wunderkompass/'));
+          if(mode==='unavailable')throw Error('synthetic network failure');
+          if(mode==='forbidden')return {ok:false,status:403};
+          return {ok:true,json:async()=>url.includes('/pulls/')?{...pr,...(mode==='changed-base'?{base:{...pr.base,sha:pr.head.sha}}:{})}:run};
+        };
+        if(mode==='valid'){await verifyLive(saved,process.env,request);assert.equal(calls.length,2);}
+        else await assert.rejects(verifyLive(saved,process.env,request));
+      }
+      await assert.rejects(verifyLive(saved,{...process.env,GITHUB_TOKEN:''}),/token required/);
+      console.log('actual shallow context and read-only API recovery/denial guards passed');
+    })().catch(e=>{console.error(e.message);process.exitCode=1;});`;
+  const apiOutput=execFileSync(process.execPath,['-e',program],{cwd:shallow,encoding:'utf8',env:{...process.env,...f.env,GITHUB_EVENT_PATH:eventFile,GITHUB_TOKEN:'synthetic-qa-token'}});
+  assert.match(apiOutput,/guards passed/);
 });

@@ -25,6 +25,12 @@ for(const [name,change] of [
   ['fork',f=>{f.pr.head.repo.full_name='other/repo';}],['unresolved mergeability',f=>{f.pr.mergeable=null;}],
   ['stale base',f=>{f.targetSha=B;}],['truncated files',f=>{f.pr.changed_files=3;}],
   ['protected workflow',f=>{f.files[0].filename='.github/workflows/quality.yml';}],
+  ['test loader foundation',f=>{f.files[0].filename='scripts/test-runtime.mjs';}],
+  ['QA dependency foundation',f=>{f.files[0].filename='qa/pnpm-lock.yaml';}],
+  ['typecheck foundation',f=>{f.files[0].filename='tsconfig.json';}],
+  ['frozen subject baseline',f=>{f.files[0].filename='content/excellence-baseline.json';}],
+  ['missing filename',f=>{delete f.files[0].filename;}],
+  ['unsafe filename',f=>{f.files[0].filename='app/../AGENTS.md';}],
   ['renamed security file',f=>{f.files[0].previous_filename='scripts/release/policy.cjs';}],
   ['weakened quality gate',f=>{f.productReview.noGateWeakening=false;}],['old diff review',f=>{f.productReview.head=A;}],
   ['unconfirmed deployment',f=>{f.deploymentHealthy=false;}],['change request',f=>{f.changesRequested=true;}],
@@ -44,8 +50,8 @@ for(const [name,change] of [
   ['local evidence',f=>{f.receipt.automatic=false;}],['another PR receipt',f=>{f.receipt.pr=36;}]
 ])test('blocks '+name,()=>{const f=fixture();change(f);assert.throws(()=>readiness(f,now,config));});
 test('operating permit expires before Pro day begins; no silent extension or invalid date',()=>{
-  assert.equal(readiness(fixture(),new Date('2026-11-15T22:59:59Z'),config).eligible,true);
-  for(const time of ['2026-11-15T23:00:00Z','2026-11-16T12:00:00Z','2027-01-01','invalid'])assert.throws(()=>readiness(fixture(),new Date(time),config),/expired/);
+  assert.equal(readiness(fixture(),new Date('2026-11-15T22:54:59Z'),config).eligible,true);
+  for(const time of ['2026-11-15T22:55:00Z','2026-11-15T23:00:00Z','2026-11-16T12:00:00Z','2027-01-01','invalid'])assert.throws(()=>readiness(fixture(),new Date(time),config),/expired/);
   assert.throws(()=>readiness(fixture(),now,{...config,setupHeadRef:null}),/setup/);
   assert.throws(()=>readiness(fixture(),now,{...config,validBefore:'unknown'}),/expired/);
 });

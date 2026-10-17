@@ -1,5 +1,7 @@
 # Aktueller Lieferabschnitt – verständliche Update-Chronik,16.10.2026
 
+Einrichtungs-PR34: erste vollständige lokale Chromiumprobe am unveränderten f029e028f1ebc485618c1478d059a46ab04470dc erfolgreich1013,580s/118Berichtseinträge/alle10Pflichtgruppen. Originale unverändert unter work/p35-test-setup/first-f029-full-proof, keine neue Snapshotbindung. Zwei aktuelle320-/390px-Bilder persönlich angesehen. Endgültige Korrektur ergänzt notwendiges Actions-read, frühe schreibfreie GitHub-Zugriffsprüfung vor den teuren Tests, sichere Metadatenquittung auch im bestehenden Joblog, zusätzliche kritische Konfigurationspfade und fünfminütige Reserve vor Pro-Ende. Keine neue Pipeline, keine Schreibrechte oder Aktivierung. Alle endgültigen lokalen/GitHub-Pflichtnachweise folgen gesondert im PR; vorherige Läufe nicht umetikettieren.
+
 ## Laufende Fortsetzung17.10.2026 · Setup und Tierwelt
 
 Aktuell verifiziert: Master PR27 da3c1d4, einzig offener Draft; test-live8d05beb entspricht tatsächlichem NutzermergePR33, offizieller Vercel-Erfolg56588633806 bestätigt. Voriger Master Quality100 vollständig grün an genau da3c1d4; keine Übertragung dieses Grüns auf neue Änderungen. Beide vorhandenen Worktrees waren sauber, keine aktiven Actions. Vollständiges Gitbundle vor Fortsetzung unter work/p35-test-setup/pre-continuation.bundle. Neue exklusive Reservierung06e1c9b87fa358b2ded3a1fc1ce714819ab0d2dd, Run package35-test-setup-2026-10-17; ältere unten genannte Eigentümer sind historische abgeschlossene Läufe.

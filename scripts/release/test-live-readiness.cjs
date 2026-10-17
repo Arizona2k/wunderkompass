@@ -2,12 +2,14 @@
 // NOT a substitute for GitHub's enforced rules. No git push, merge or API writes.
 const {isDeepStrictEqual} = require('node:util');
 const permit = require('./test-live-permit.json');
-const critical = name => /^(\.github\/|scripts\/release\/|build\/)/.test(name) ||
-  /^(AGENTS\.md|QUALITY\.md|VISION\.md|TEST-LIVE\.md|package\.json|pnpm-lock\.yaml|pnpm-workspace\.yaml|performance-budgets\.json|vite\.config\.ts|vercel\.json)$/.test(name) ||
-  /^scripts\/(quality-|handoff|review-evidence|test-command|test-selection|performance-budget)/.test(name) ||
+const critical = name => typeof name !== 'string' || name.startsWith('/') || name.split('/').includes('..') || /[\0\r\n\\]/.test(name) ||
+  /^(\.github\/|scripts\/release\/|build\/|qa\/|content\/excellence-baseline\.json$)/.test(name) ||
+  /^(AGENTS\.md|QUALITY\.md|VISION\.md|TEST-LIVE\.md|package\.json|pnpm-lock\.yaml|pnpm-workspace\.yaml|performance-budgets\.json|vite\.config\.ts|vercel\.json|tsconfig\.json|eslint\.config\.mjs|\.npmrc|\.gitattributes)$/.test(name) ||
+  /^scripts\/(quality-|handoff|review-evidence|test-command|test-selection|test-runtime|performance-budget|verify-content|export-integrity|editorial-contract|inventory-provenance)/.test(name) ||
   /^tests\/(release\/|browser\/(quality-runner|portable-smoke|journey-engines)\.mjs|quality-artifacts\.test\.mjs)/.test(name);
 function readiness(f, now = new Date(), config = permit) {
-  if (!Number.isFinite(+now) || !Number.isFinite(+new Date(config.validBefore)) || +now >= +new Date(config.validBefore)) throw Error('Pro operating window expired; cancel any pending auto-merges');
+  // No queued merges; reserve five minutes for the bounded immediate API operation.
+  if (!Number.isFinite(+now) || !Number.isFinite(+new Date(config.validBefore)) || +now + 300000 >= +new Date(config.validBefore)) throw Error('Pro operating window expired; cancel any pending auto-merges');
   if (!config.setupHeadRef || !Number.isSafeInteger(f.setup?.number) || f.setup.number < 1 ||
       f.setup.head?.ref !== config.setupHeadRef || f.setup.head.repo?.full_name !== config.repository ||
       !f.setup.merged || f.setup.base?.ref !== 'test-live' ||

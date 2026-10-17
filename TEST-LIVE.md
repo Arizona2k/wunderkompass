@@ -8,7 +8,7 @@ Aktueller Auftrag: [vollständiges Original17.10.2026](content/auftrag-2026-10-1
 
 test-live meldet **protected:false**, RulesetsAPI liefert **[]**, Repository allow_auto_merge ist **false**. Die Verbindung meldet Repository-admin, aber die Schutz-API antwortet403 „Resource not accessible by integration“. Es gibt kein unterstütztes Admin-Schreibwerkzeug für Rulesets/Repositorysettings. Ein bekannter Betreiber mit Adminrechten muss die unten benannte Einstellung selbst vornehmen. Kein anderer Token, kein Umweg, keine Behauptung aktiven Schutzes aus einer JSON-Datei.
 
-Nutzer bestätigt GitHub Pro bis **16.11.2026**. Konservative Betriebsgrenze: **16.11.2026,00:00Europe/Berlin** =15.11.23:00Z. Ab dieser Grenze sperrt die Readinessentscheidung; kein Tarifkauf und keine automatische Verlängerung. Nicht einsehbar bleiben exakte Abrechnungs-/Actions-Restbudgets sowie Vercel-Vertragseinstellungen; kein kostenloses Restkontingent erfinden.
+Nutzer bestätigt GitHub Pro bis **16.11.2026**. Konservative Betriebsgrenze: **16.11.2026,00:00Europe/Berlin** =15.11.23:00Z. Die Readinessentscheidung sperrt neue unmittelbare Merges schon fünf Minuten vor dieser Grenze als Ausführungsreserve; kein Tarifkauf und keine automatische Verlängerung. Nicht einsehbar bleiben exakte Abrechnungs-/Actions-Restbudgets sowie Vercel-Vertragseinstellungen; kein kostenloses Restkontingent erfinden.
 
 ## Einmalige Einrichtung – Nutzer übernimmt den Setup-PR
 
