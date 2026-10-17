@@ -17,6 +17,7 @@ export async function journeySourceView(p,{widths,shots,engine}){
    for(const large of [false,true]){
     await p.locator('.earth-app').evaluate((e,large)=>e.classList.toggle('large-reading',large),large);
     for(const journey of JOURNEYS){
+     witness={engine,journey:journey.id,width,large,stage:'opening'};
      await open(p,journey.id,0);await reveal(p,'Für Erwachsene: Quellen');
      const source=p.locator('a.journey-source');
      assert.equal(await source.count(),1,'one unchanged original source per journey');
@@ -24,13 +25,21 @@ export async function journeySourceView(p,{widths,shots,engine}){
      assert.equal(await source.innerText(),journey.sourceName,'original source credit');
      assert.equal(await source.getAttribute('target'),'_blank');
      assert.ok((await source.getAttribute('rel')).split(/\s+/).includes('noreferrer'));
+     // Observe the requested actual style state across engines, rather than
+     // assuming immediate readiness; never retry the action or relax its minimum.
+     witness={...witness,stage:'waiting-for-requested-font',fontBefore:await source.evaluate(e=>getComputedStyle(e).fontSize)};
+     await p.waitForFunction(({large})=>{const e=document.querySelector('a.journey-source');return e&&Math.abs(parseFloat(getComputedStyle(e).fontSize)-(large?18.4:16))<.01;},{large});
+     if(Math.abs(parseFloat(witness.fontBefore)-(large?18.4:16))>=.01)console.log('SOURCE_FONT_SETTLED',JSON.stringify({...witness,fontAfter:await source.evaluate(e=>getComputedStyle(e).fontSize)}));
      const metric=await source.evaluate(e=>{const r=e.getBoundingClientRect(),range=document.createRange();range.selectNodeContents(e);const ink=range.getBoundingClientRect();return {height:r.height,font:parseFloat(getComputedStyle(e).fontSize),left:r.left,right:r.right,inkLeft:ink.left,inkRight:ink.right};});
      assert.ok(metric.height>=44,'source link touch target: '+journey.id+' '+width+' '+large);
      assert.ok(metric.font>=(large?18.3:16),'source credit follows the large-reading setting');
      assert.ok(metric.left>=-2&&metric.right<=width+2&&metric.inkLeft>=metric.left-2&&metric.inkRight<=metric.right+2,'source text stays visible');
      const focusState=()=>p.evaluate(()=>{const e=document.activeElement,s=e&&getComputedStyle(e);return {element:e?.outerHTML.slice(0,600),tag:e?.tagName,href:e?.getAttribute('href'),focusVisible:e?.matches(':focus-visible'),outlineWidth:s?.outlineWidth,outlineStyle:s?.outlineStyle,hasDocumentFocus:document.hasFocus()};});
      await source.focus();const before=await focusState();await p.keyboard.press('Tab');const next=await focusState();await p.keyboard.press('Shift+Tab');const returned=await focusState();
-     witness={engine,journey:journey.id,width,large,expectedHref:journey.source,expectedElement:await source.evaluate(e=>e.outerHTML),before,next,returned,route:p.url()};
+     witness={engine,journey:journey.id,width,large,stage:'keyboard-result',expectedHref:journey.source,expectedElement:await source.evaluate(e=>e.outerHTML),before,next,returned,route:p.url()};
+     // Wait for the actual browser result, without another key press or focus call.
+     await p.waitForFunction(()=>{const e=document.querySelector('a.journey-source');return e===document.activeElement&&e.matches(':focus-visible');});
+     if(returned.element!==before.element||!returned.focusVisible)console.log('SOURCE_FOCUS_SETTLED',JSON.stringify({...witness,settled:await focusState()}));
      assert.ok(await source.evaluate(e=>e===document.activeElement&&e.matches(':focus-visible')),'source keyboard focus stays visible '+JSON.stringify(witness));
      views.push({journey:journey.id,width,large,...metric,keyboard:true});
      if(journey.id==='navigation'&&[320,1440].includes(width))await source.locator('..').screenshot({path:path.join(shots,'journey-engine-'+engine+'-sources-'+(large?'large':'normal')+'-'+width+'.png'),animations:'disabled'});
@@ -45,7 +54,8 @@ export async function journeySourceView(p,{widths,shots,engine}){
   assert.equal(views.length,JOURNEYS.length*widths.length*2);
   return {views,chapters:80,scope:'source credit readability, touch, keyboard and unchanged original links'};
  }catch(error){
-  const failure={scope:'actual source-keyboard failure',witness,error:error.stack};console.error('JOURNEY_SOURCE_FOCUS_FAILURE',JSON.stringify(failure));
+  const current=await p.evaluate(()=>{const e=document.querySelector('a.journey-source');return {font:e&&getComputedStyle(e).fontSize,large:document.querySelector('.earth-app')?.classList.contains('large-reading'),active:document.activeElement?.outerHTML.slice(0,600)};}).catch(()=>null);
+  const failure={scope:'actual source-state failure',witness,current,error:error.stack};console.error('JOURNEY_SOURCE_FOCUS_FAILURE',JSON.stringify(failure));
   await fs.writeFile(path.join(shots,'journey-engine-'+engine+'-source-keyboard-failure.json'),JSON.stringify(failure,null,2));
   await p.screenshot({path:path.join(shots,'journey-engine-'+engine+'-source-keyboard-failure.png'),fullPage:true,animations:'disabled'}).catch(()=>{});throw error;
  }finally{

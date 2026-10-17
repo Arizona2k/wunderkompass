@@ -1,3 +1,7 @@
+## Früher tatsächlicher WebKit-Nachbefund vor Vollabnahme
+
+Quality106 am e2c95d2: frühe vollständige Quell-/Tastaturprobe in Firefox bestanden; WebKit hält vor dem teuren Volltest an einer Schriftmessung unter dem erwarteten Mindestwert an. Der alte Nachweis enthält noch keinen aktuellen Font-/Klassenwert; eine bestimmte CSS-Animation ist nicht belegt. Aufgezeichnete vorherige Tabfolge, aktives Quellenziel, sichtbarer3px-Fokus und Dokumentfokus waren korrekt; keine nachträglich behauptete Ursache des älteren Fokusbefunds. Test wartet jetzt zustandsbasiert auf die tatsächlich angeforderte16/18,4px-Schrift und den wirklichen Tastatur-Fokuszustand, ohne erneute Aktionen, blinde Retries oder schwächere Erwartungen. Fehlerdiagnose nennt den aktuellen Fall schon vor der Messung und erhält dessen tatsächlichen aktuellen DOM-Zustand. Neue vollständige exakte Abnahme erforderlich; PR35 bleibt Draft.
+
 ## Quellenzugang · tatsächlicher WebKit-Befund in Quality105
 
 Headb266d11: vollständiger lokaler Chromiumlauf1510,016s/alle10Gruppen/119Berichtseinträge bestanden, finale320/360/390/1440- und native200%-Bilder persönlich angesehen. GitHub105 hat Chromium und den vollständigen Firefoxteil bestanden, scheitert danach im neuen WebKit-Quellentest an der unveränderten Fokusassertion. Kein Ready/Merge und kein als grün ausgegebener Lauf. Originale Logs und Artefakt12104040699 bleiben erhalten.
