@@ -1,3 +1,15 @@
+<!-- CONTINUATION36-CURRENT-START -->
+## Tatsächlich aktualisierter Testzugang17.10.2026 und begrenzte Fortsetzung36
+
+Der aktuelle Chat beauftragt die Fortführung der vorhandenen Arbeit und dasMergen unabhängig fertig geprüfter Änderungen. Dieser Durchlauf liefert ausschließlich den bereits imMaster vorhandenen technischenSuchabschnitt PR36; GesamtPR27 und nicht fachlich abgenommene Inhalte bleibenDraft. Keine wartendeAuto-Merge-Aktivierung, keine Änderung der bestehendenFreigabe-/Kosten-/Schutzgrundlagen.
+
+Aktueller Testhost: https://wunderkompass-git-c76589-interaktive-wissens-und-lernplattform.vercel.app/ . NormalerHTTPS-Abruf tatsächlichHTTP200 ohneRedirect/Login, Build5f8ca0bd6bb18f90 passend zum gegenwärtigen test-live8e5012ed. Erfolgreiche zusätzliche Browserbedienung am17.10.21:25:46Europe/Berlin: Chromium154, echteSuche/Tastatur/Rückwege,128Quellenansichten/80Kapitel,320/390/768/1440ohneSeitenüberlauf,0App-/Transportfehler, finalerProzessExit0. Die nachfolgenden alten302-/SSO-/Domainblocker sind historischeBefunde; keinen erneut notwendigen Vercel-Kontoschritt allein daraus ableiten. Es wurde keine eigeneVercel-Einstellung geändert.
+
+Exakte Transportgrenze dieserCloudprobe: DirekterChromium-TLS-Zugriff vertraut derSession-Proxy-CA im vorhandenenNSS nicht. Der Browser rendert deshalb frisch über zertifikatsgeprüftes Playwright-Node-HTTPS am bestehendenProxy vom tatsächlichenOrigin geladeneBytes, mit unverändertemOrigin und echtenInteraktionen. Keine deaktivierteTLS-Prüfung, keine Home-/Proxy-/Netzwerkumgehung und kein behaupteter direkterChromium-Transporterfolg. Das belegt konkrete Liveinhalte/Funktionen, keine physischeGeräteabnahme, dauerhafteAliasverwaltung oder aktuelleMasterveröffentlichung. Vorherige roteDirekt-/Testabbauproben und finaler erfolgreicherOriginalnachweis getrennt unterwork/continue-20261017.
+
+PR36 befindet sich noch in vollerGitHub-Abnahme39061968549. Bestehende nativeRegeln25304083 tatsächlichActive/strict/PR-Pflicht/Required quality checks ausApp15368/keineBypässe frisch gelesen. Erst nach vollständig erfolgreicher exakterAbnahme regulär mergen; anschließend tatsächlichenMerge/Vercel und neuenBuild01f5ee4aa7e78830 auf diesemTestziel erneut bestätigen. Bis dahin keineBehauptung, dieSuchänderung sei bereits ausgeliefert.
+<!-- CONTINUATION36-CURRENT-END -->
+
 ## Neueste Vorgabe17.10.2026 – automatisch bis auf den Nutzermerge, Testseite ohne Login
 
 Verbindlicher gewünschter Ablauf:
