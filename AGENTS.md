@@ -1,3 +1,7 @@
+## Vorrangige Nutzerentscheidung im laufenden Auftrag ·17.10.2026
+
+Der Nutzer hat die automatische Übernahme ausdrücklich zurückgestellt: „auto merge erstmal zurückstellen … ich merge dann selber wenn du mir das go gibst“. Bestehende Prüfungen und fachliche/technische Entwicklung weiterführen und gesichert übergeben. **Keine eigene oder automatische PR-Übernahme und keine wartende Auto-Merge-Aktivierung. Der Nutzer mergt selbst.** Eine konkrete GO-Empfehlung erst nach sämtlichen tatsächlich erforderlichen aktuellen Prüf- und Abnahmenachweisen des bezeichneten PRs; fehlende oder rote Nachweise offen nennen. PR27 bleibt Draft, bis seine eigenen Voraussetzungen vollständig erfüllt sind. Diese neueste Entscheidung hat Vorrang vor den nachfolgenden älteren Routine-Automatikfreigaben; keine Schutz-, Kosten-, main- oder Newsänderung.
+
 
 Ergänzung17.10.2026, neue Tiergrafiken: Auch HTML-Legenden können trotz fehlendem Seitenüberlauf am gerundeten `overflow:hidden`-Elternrand angeschnitten werden. Nach Bildsichtung tatsächliche Textfragmente einschließlich letzter Bildunterschriftszeile gegen den sicheren Innenraum prüfen und ausreichenden Innenabstand vorsehen. Nicht mit kleinerer Schrift oder verstecktem Text kaschieren. Bestehende Foto-/Lizenzprüfungen bleiben erhalten; eigene neue Zeichnungen benötigen zusätzlich konkrete Herkunft, Prüfsumme, Alternativtext und Modellgrenzen.
 
