@@ -2726,7 +2726,7 @@
       },
       {
         "id": "person-jane_goodall",
-        "contentHash": "574607afb5ecc47ed4c466ed3834592ae2b6d829d2e97b8accbeaf3ed96f6b53"
+        "contentHash": "8e8d1bc09af52027a479cccf141995c02ba11c339ce3c29f1fd3ae99200881ae"
       },
       {
         "id": "person-albert_einstein",
@@ -2750,7 +2750,7 @@
       },
       {
         "id": "person-johannes_gutenberg",
-        "contentHash": "90da34241067beb0ec6e9d50984dbd54e48d0ec3dc61de98f4e4c17d66f85c58"
+        "contentHash": "7969e71e28d2117deb96d2fdae5dc272aaf71e4a1f7ae1c7edf848c11e211318"
       },
       {
         "id": "person-wangari_maathai",
@@ -2758,7 +2758,7 @@
       },
       {
         "id": "person-charles_darwin",
-        "contentHash": "2ddf3a8ab1e3b51419eb0eeba59afe1c785238d93f7a3c7399b024b63885e7df"
+        "contentHash": "4fdf1d87bcf0dc18329407e236fcad98bf435978931aeba9ca78f274d92ac172"
       },
       {
         "id": "person-alexander_humboldt",
@@ -2848,6 +2848,180 @@
       "existingAffectedContentTests": 6,
       "originalQuestionObjects": "All catalog question objects byte-equivalent as parsed JSON to prior commit;215 derived questions unchanged. Hints, media, IDs and pass schema3 unchanged.",
       "firstProbeFailure": "Original separate probe preserved: unscoped exact text matched both original article paragraph and correct-answer feedback after solving. Work-only v2 scopes each text assertion to its actual original UI section; no product/QA gate change needed."
+    }
+  },
+  "reciprocalReferenceFollowup20261018": {
+    "status": "Three missing canonical reciprocal directions corrected and current scoped320/1440 UI/back-focus, real native200%/large and previously-unvisited cold edge-direction proof passed; no fresh whole18article acceptance claim.",
+    "originalFailedTest": "/workspace/work/wk-continuation/science-integrated-new23-units.log: existing tests/challenge.test.mjs explained relationships;50/51passed, reciprocal from.related failed. No QA edits.",
+    "scope": "Gutenberg→printing,Humboldt↔Darwin,Maathai↔Goodall existing reviewed explanations. No new edge/why/topic/question or substantive article edit. Other source/fact/teaching reviews remain historical at prior hashes.",
+    "changes": [
+      {
+        "id": "person-johannes_gutenberg",
+        "field": "related",
+        "before": [
+          "invention-printing",
+          "history-paper"
+        ],
+        "after": [
+          "invention-printing",
+          "history-paper",
+          "history-printing"
+        ],
+        "reason": "Existing unchanged challenge relationship test proves missing reciprocal canonical reference. Explained edge and other endpoint already present; add only missing direction, preserving article/question/media/model and existing order."
+      },
+      {
+        "id": "person-charles_darwin",
+        "field": "related",
+        "before": [
+          "person-jane_goodall",
+          "animal-green-sea-turtle"
+        ],
+        "after": [
+          "person-jane_goodall",
+          "animal-green-sea-turtle",
+          "person-alexander_humboldt"
+        ],
+        "reason": "Existing unchanged challenge relationship test proves missing reciprocal canonical reference. Explained edge and other endpoint already present; add only missing direction, preserving article/question/media/model and existing order."
+      },
+      {
+        "id": "person-jane_goodall",
+        "field": "related",
+        "before": [
+          "animal-western-lowland-gorilla",
+          "person-charles_darwin"
+        ],
+        "after": [
+          "animal-western-lowland-gorilla",
+          "person-charles_darwin",
+          "person-wangari_maathai"
+        ],
+        "reason": "Existing unchanged challenge relationship test proves missing reciprocal canonical reference. Explained edge and other endpoint already present; add only missing direction, preserving article/question/media/model and existing order."
+      }
+    ],
+    "historicalContentHashesBeforeFollowup": [
+      {
+        "id": "person-marie_curie",
+        "contentHash": "2138993f11776d8bfce8127d02a2bbc5cc943858ca773d6c7b834515b936f01e"
+      },
+      {
+        "id": "person-ada_lovelace",
+        "contentHash": "3c3bd9603f9ab56624397e922e055a80925014bbf18ad79500a07e25831d8b02"
+      },
+      {
+        "id": "person-grace_hopper",
+        "contentHash": "f80a37486e99db14fadc304641fa7427272ae89a44c79881a91d09c551f85fa2"
+      },
+      {
+        "id": "person-katherine_johnson",
+        "contentHash": "782e253b6fb3179c9bc82dd38a624ddbe94b27f7b9ded07893c02146c556c503"
+      },
+      {
+        "id": "person-tim_berners_lee",
+        "contentHash": "83968dc04419577fa635c01de53eefe10258c0803970554cddb17a814e9e7c9c"
+      },
+      {
+        "id": "person-karl_benz",
+        "contentHash": "675eba76c22504505ee3901b81076b0ddf26371352b7e4253b066af545607911"
+      },
+      {
+        "id": "person-bertha_benz",
+        "contentHash": "bcb9d4737690b9c2452493a0029a29f01279ffa9b899fef2b2e4586189c28865"
+      },
+      {
+        "id": "person-jane_goodall",
+        "contentHash": "574607afb5ecc47ed4c466ed3834592ae2b6d829d2e97b8accbeaf3ed96f6b53"
+      },
+      {
+        "id": "person-albert_einstein",
+        "contentHash": "0af0c0c38b1129121e99fadc020b1670f0069ee3674fbaa8af8b0eee8716bd45"
+      },
+      {
+        "id": "person-al_khwarizmi",
+        "contentHash": "c5d4e4fc67f8f2cd3f46055e8178a74bfa4f142569f399005e162e0393edfc53"
+      },
+      {
+        "id": "person-tu_youyou",
+        "contentHash": "f86201a28ec1b77939f79739749e36d95da4a3286a92bb2c9451ffe2c7816ca4"
+      },
+      {
+        "id": "person-cai_lun",
+        "contentHash": "da59248145d16dd2e2db378221a2e7550cb54fd4dbc2e0ef31d3349420c5bf61"
+      },
+      {
+        "id": "person-mae_jemison",
+        "contentHash": "0408f764012612ce51177edf247a8fce162eedf09121b49ca109e5ae4e7d3563"
+      },
+      {
+        "id": "person-johannes_gutenberg",
+        "contentHash": "90da34241067beb0ec6e9d50984dbd54e48d0ec3dc61de98f4e4c17d66f85c58"
+      },
+      {
+        "id": "person-wangari_maathai",
+        "contentHash": "d9a6b272dfef818882733f6e501499a9a7b2376c15cbd3106c5f9cf1e5a5384a"
+      },
+      {
+        "id": "person-charles_darwin",
+        "contentHash": "2ddf3a8ab1e3b51419eb0eeba59afe1c785238d93f7a3c7399b024b63885e7df"
+      },
+      {
+        "id": "person-alexander_humboldt",
+        "contentHash": "a8b1b252eb69d9b5686dafc8055508ebbf9a5ac45f1e0fec48f771373aaa15a9"
+      },
+      {
+        "id": "person-neil_armstrong",
+        "contentHash": "fed82c6e13e0ca905dabc650a5b2c5d2ccfce6a7a37b6925f3c5a279a8a063b6"
+      }
+    ],
+    "currentChangedArticleHashes": {
+      "person-jane_goodall": "8e8d1bc09af52027a479cccf141995c02ba11c339ce3c29f1fd3ae99200881ae",
+      "person-johannes_gutenberg": "7969e71e28d2117deb96d2fdae5dc272aaf71e4a1f7ae1c7edf848c11e211318",
+      "person-charles_darwin": "4fdf1d87bcf0dc18329407e236fcad98bf435978931aeba9ca78f274d92ac172"
+    },
+    "fullAcceptance": "Central editorial registry binding still awaits explicit maintenance approval; no automatic update or full Quality claim.",
+    "currentTargetedUI": {
+      "proofs": {
+        "science-integrated23-early-v3": {
+          "path": "/workspace/work/wk-continuation/science-integrated23-early-v3/report.json",
+          "sha256": "c8356a9ea43716649ef0a313cf1a211df7712fffe81edc2d4c0cc3c7dc49dee7",
+          "build": "57b44471761dcd1a",
+          "sourceDigest": "adfcbb1dcd63ee22c61eab453fb8ce106b360f4137620c52f6d7fb31ca3b085b",
+          "browser": "154.0.8037.57",
+          "scope": "Actual scoped Chromium154 only, not complete Quality or release acceptance"
+        },
+        "saved-model-fractional-regression": {
+          "path": "/workspace/work/wk-continuation/saved-model-fractional-regression/report.json",
+          "sha256": "050f6959035fa936600ca26e6e1da6e27cc643aea759b23c032f1d75b730ac94",
+          "build": "57b44471761dcd1a",
+          "sourceDigest": "adfcbb1dcd63ee22c61eab453fb8ce106b360f4137620c52f6d7fb31ca3b085b",
+          "browser": "154.0.8037.57",
+          "scope": "Actual scoped Chromium154 only, not complete Quality or release acceptance"
+        },
+        "science-integrated23-built": {
+          "path": "/workspace/work/wk-continuation/science-integrated23-built/report.json",
+          "sha256": "3851f6d0e5b4d6d053c667013c4690fb8d302741b4e55531d85a116f5423cf59",
+          "build": "dd3967641d4ffe9e",
+          "sourceDigest": "057dc7d2205c98c184cc1f0479fb9c25702afa02fc5e5cb312ea0b8b2f7ed99b",
+          "browser": "154.0.8037.57",
+          "scope": "Remaining23 already integrated science plus exactly3missing people reciprocal references; actual local Chromium partial proof, not full Quality."
+        },
+        "science-integrated23-native-offline": {
+          "path": "/workspace/work/wk-continuation/science-integrated23-native-offline/report.json",
+          "sha256": "a06e7000778c80eb57550fcfd2cafae1c9419a0cf22ce8727a94c9d7bd5ecd29",
+          "build": "dd3967641d4ffe9e",
+          "sourceDigest": "057dc7d2205c98c184cc1f0479fb9c25702afa02fc5e5cb312ea0b8b2f7ed99b",
+          "browser": "154.0.8037.57",
+          "scope": "Actual native200%+large and separate home-prepared previously-unvisited23 science cold profile. Exact3people reciprocity and fractal edge cold routes. Local Chromium154 only; no full Quality."
+        },
+        "people-reciprocity-native-followup": {
+          "path": "/workspace/work/wk-continuation/people-reciprocity-native-followup/report.json",
+          "sha256": "cb792aa6a09d1e77087bfe868454710abe4fa402f9481cb9523b281444a8b6e1",
+          "build": "dd3967641d4ffe9e",
+          "sourceDigest": "057dc7d2205c98c184cc1f0479fb9c25702afa02fc5e5cb312ea0b8b2f7ed99b",
+          "browser": "154.0.8037.57",
+          "scope": "Actual scoped Chromium154 only, not complete Quality or release acceptance"
+        }
+      },
+      "scope": "Only three existing pairs:12normal320/1440directions,6additional native200%/large directions and6cold directions among8total. Prior whole18article source/UI proof retained at historical hashes; this followup changes only related lists."
     }
   }
 }

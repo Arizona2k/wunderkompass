@@ -24,7 +24,8 @@ export function useSavedGame<T>(key:string,initial:T|(()=>T),restore?:(value:unk
  return [state,set];
 }
 export function useSavedModel<T extends string|number|boolean>(key:string,initial:T,limits?:readonly T[]|{min:number;max:number;integer?:boolean}):[T,Dispatch<SetStateAction<T>>]{
- const [value,set]=useSavedGame(key,initial);
+ const fractional=typeof initial==='number'&&limits&&!Array.isArray(limits)&&(limits as {integer?:boolean}).integer===false;
+ const [value,set]=useSavedGame(key,initial,fractional?(value,fallback)=>compatible(value,fallback)?value as T:fallback:undefined);
  const normalize=(v:T):T=>{if(Array.isArray(limits))return limits.includes(v)?v:initial;if(limits&&typeof v==='number'){const range=limits as {min:number;max:number;integer?:boolean};return Math.max(range.min,Math.min(range.max,range.integer===false?v:Math.round(v))) as T;}return v;};
  const current=normalize(value);
  return [current,next=>set(normalize(typeof next==='function'?(next as (v:T)=>T)(current):next))];

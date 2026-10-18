@@ -5,3 +5,5 @@
 .topic-illustration .photosynthesis-flow svg{width:28px;height:28px;flex-shrink:0;justify-self:center}
 .photosynthesis-diagram figcaption{font-size:16px;line-height:1.65;padding:16px 24px}
 @container(max-width:640px){.photosynthesis-flow{grid-template-columns:minmax(0,1fr)}.photosynthesis-arrow{transform:rotate(90deg)}}
+.science-explanation-diagram:not([data-science-diagram="photosynthesis"])>svg{background:#edf4f7}
+.science-explanation-diagram:not(.compact) figcaption{font-size:16px;line-height:1.65;padding:16px 24px}
