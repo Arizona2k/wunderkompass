@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-17T21:50:59.891Z",
+  "generatedAt": "2026-10-18T00:14:20.227Z",
   "personalProgressIncluded": false,
-  "topics": 116,
+  "topics": 140,
   "categories": {
-    "animals": 24,
+    "animals": 48,
     "history": 31,
     "people": 18,
     "inventions": 12,
@@ -22,9 +22,9 @@
       "sources": [
         "app/animal-inquiries.json"
       ],
-      "entries": 24,
-      "bytes": 53003,
-      "sha256": "129bfe0e8c3b3f991df282c29501272cb840e6655d47061f796798534989aca0"
+      "entries": 48,
+      "bytes": 115162,
+      "sha256": "d96f85534517058f5edca8386ef8484e5b5d5004ee1b185aae80149091027054"
     },
     {
       "file": "continents.json",
@@ -247,9 +247,9 @@
       "sources": [
         "app/challenge-hints.json"
       ],
-      "entries": 142,
-      "bytes": 33117,
-      "sha256": "d46f879f6c2e58ebd66066e83f7dbb4d2c2a8b8c505aebd8b43c00b648d7dac4"
+      "entries": 166,
+      "bytes": 37645,
+      "sha256": "77a0ad9a13494fa39d89419bdf97ebca43946f5722cb39b0dc37f940c37bbeb8"
     },
     {
       "file": "world-connections.json",
@@ -259,26 +259,26 @@
         "app/discovery-connections.json"
       ],
       "entries": 2,
-      "bytes": 11540,
-      "sha256": "bd6d97978454b2b8e389fa42917732c3025ee047c1ebe9eeca54f367685208c3"
+      "bytes": 18850,
+      "sha256": "dfb7d69353a69c65735b452a5fed428ae2d4e8c94d21988f3bc7ed73cf2bedf2"
     },
     {
       "file": "world-topics.json",
       "sources": [
         "app/world-catalog.json"
       ],
-      "entries": 116,
-      "bytes": 340013,
-      "sha256": "9177a6bc9a3f5a3c48389477a57567716d852f8bd707f85d8f37b8323e3a3484"
+      "entries": 140,
+      "bytes": 450538,
+      "sha256": "c2ea3205b68ebe3a1272355ba1c4be03fff1b7a2b9988bea5297e9d87abeb00c"
     },
     {
       "file": "world-index.json",
       "sources": [
         "app/world-index.json"
       ],
-      "entries": 116,
-      "bytes": 54618,
-      "sha256": "2c7de30e3a25fade4df8a8ff5d0b4a3cce651e2ae33818deee763b5e6442d5d6"
+      "entries": 140,
+      "bytes": 66095,
+      "sha256": "fc238b162cc08cbae865585badf53164dbf03b05a27485be45c2731984e59742"
     },
     {
       "file": "games.json",
@@ -295,8 +295,8 @@
         "app/world-photos.json"
       ],
       "entries": 49,
-      "bytes": 33677,
-      "sha256": "4820679413973446f565edef1d80ec288def1a44e26d1e929f2b6a4f1b63336e"
+      "bytes": 33910,
+      "sha256": "2ee2ee920dc167a2fcb777a493a4d10635a753478f9fe6b79785250f3fb74d12"
     },
     {
       "file": "journey-photo-metadata.json",
@@ -405,6 +405,15 @@
       "entries": 18,
       "bytes": 4661,
       "sha256": "07613e7857398c7571147d6eada81608284486290c06567200e3965d77eb66ca"
+    },
+    {
+      "file": "animal-illustrations.json",
+      "sources": [
+        "app/animal-illustrations.json"
+      ],
+      "entries": 24,
+      "bytes": 12971,
+      "sha256": "6f05d5abc07da05cb5eb6938da48b727d6406f8bc212c6636f42bca5491a176f"
     },
     {
       "file": "science-model-index.json",
