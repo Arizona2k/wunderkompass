@@ -1,3 +1,9 @@
+## Nutzerpräzisierung 18.10.2026 – häufig sichern, passende Teilabschnitte ausliefern
+
+Der [unveränderte aktuelle Nachtrag](content/auftrag-2026-10-13/Nutzerpraezisierung_Zwischensicherung_Teilabschnitte_2026-10-18.txt) ergänzt den laufenden Auftrag: Fragen und Zwischenaufgaben brechen Entwicklung oder laufende Prüfungen nicht ab. An sinnvollen sicheren Zwischenständen häufiger Git-Checkpoints und wiederherstellbare Sicherungen samt konkreter Übergabe erzeugen, besonders vor Abschnitts-/Chatwechseln. Bestehende Arbeit, Nutzerdaten, Prüfstände, Reservierungen und historische Nachweise erhalten; lokale Dateien werden nicht automatisch in einen neuen Chat übertragen.
+
+Kleinere kohärente, eigenständig nutzbare Teilabschnitte bevorzugen, wenn sie fachlich und technisch sinnvoll isolierbar sind und Updates dadurch früher ankommen. Die bestehende Freigabe ihrer selbstständigen regulären Übernahme nach test-live bleibt bestehen; vollständige aktuelle Pflichtprüfungen, exakte SHA-/Baumbindung und wirklicher Auslieferungsnachtest bleiben Pflicht. Keine künstlichen Mikro-PRs, schwächeren Gates oder Gesamtübernahme von PR27. „Was ist neu?“ konkret am tatsächlich ausgelieferten Stand prüfen; bestätigte Produktänderungen verständlich nachführen, Vorbereitung und Verfügbarkeit sauber unterscheiden. Konkrete Arbeit ausschließlich im bestehenden BACKLOG.
+
 ## Ergänzender Inhaltsauftrag · 18.10.2026
 
 [Originalnachtrag](content/auftrag-2026-10-13/Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt), vollständig gelesen und am sicheren Zwischenstand übernommen. Bestehendes Inhalts-/Routen-/Funktionsinventar verwenden: veröffentlichte, bereits überarbeitete und unverändert übernommene Inhalte samt altem Grundartikel weiterverantworten. Neue Themen ziehen fachlich/technisch betroffene ältere Inhalte erneut in die begründete Prüfung. Nicht bei jeder Änderung alles erneut prüfen; vollständige Abschlussabnahme bleibt erhalten.

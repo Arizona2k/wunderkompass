@@ -21,3 +21,20 @@ test('Gestein accepts its specific glassy-rock reference and rejects other BGS p
   assert.throws(()=>validateBookData(changed),/Wortquellennachweis/);
  }
 });
+
+test('specific added polar, tropical, mineral and rainbow references do not admit unrelated URLs',()=>{
+ for(const [term,url] of [
+  ['Nordpol','https://nsidc.org/learn/ask-scientist/how-does-antarctic-sea-ice-differ-arctic-sea-ice'],
+  ['Wendekreis','https://science.nasa.gov/solar-system/skywatching/night-sky-network/tropical-solstice-shadows/'],
+  ['Mineral','https://www.usgs.gov/news/science-snippet/earthword-rock-vs-mineral'],
+  ['Regenbogen','https://www.nesdis.noaa.gov/about/k-12-education/optical-phenomena/what-causes-rainbow'],
+ ]){
+  const index=book.learning[term].sources.findIndex(s=>s.url===url);assert.ok(index>=0,term);
+  assert.doesNotThrow(()=>validateBookData(book));
+  const parsed=new URL(url);
+  for(const bad of [url.replace('https:','http:'),url+'?unrelated=1',url+'other',url.replace(parsed.hostname,parsed.hostname+'.example')]){
+   const changed=structuredClone(book);changed.learning[term].sources[index].url=bad;
+   assert.throws(()=>validateBookData(changed),/Wortquellennachweis/,term+' '+bad);
+  }
+ }
+});

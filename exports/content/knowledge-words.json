@@ -1447,7 +1447,7 @@
       "deeper": "Die Tröpfchen außen an einem kalten Gefäß können aus Wasser in der umgebenden Luft entstehen. Sie müssen nicht durch eine intakte Gefäßwand gewandert sein. Die genaue Bildung hängt von den Bedingungen der Luft und Oberfläche ab.",
       "observe": "Vergleiche auf Papier ein kaltes und ein weniger kaltes geschlossenes Gefäß. Markiere mögliche Tröpfchen außen und Wasser innen getrennt. Das erfundene Bild ist keine echte Feuchtemessung und belegt keinen undichten Behälter.",
       "benefit": "Du erklärst sichtbare Tröpfchen und trennst Wasser aus der Luft von einem vermeintlichen Wanddurchgang.",
-      "connection": "Kondensation ist ein Zustandswechsel im Wasserkreislauf. Der praktische Vergleich am kalten Gefäß verbindet das große Schema mit einer begrenzten Beobachtung.",
+      "connection": "Kondensation ist ein Zustandswechsel im Wasserkreislauf. Deine Papierskizze des kalten Gefäßes verbindet das große Schema mit einem gedachten Beispiel für Tröpfchen aus der Luft.",
       "topic": "science-water-cycle",
       "sources": [
         {
@@ -1495,7 +1495,7 @@
       "deeper": "Geografische Einteilungen und bewegliche geologische Platten beantworten unterschiedliche Fragen. Eine Platte kann Land und Meeresboden tragen. Die Zahl sieben beschreibt unsere gewählte Kontinenteinteilung, nicht ein Experiment zur Plattenzahl.",
       "observe": "Zeichne zwei gedachte Landflächen auf einem gemeinsam markierten Plattenbereich. Beschrifte Landform und Platte getrennt. Die Fantasieskizze ist keine tatsächliche Grenze oder Zählung der Erdplatten.",
       "benefit": "Du unterscheidest geografische Einteilung und geologischen Bewegungsbereich.",
-      "connection": "Das Plattenlabor vergleicht geologische Bewegungen. Die Kontinenteinteilung des Globus bleibt eine andere Betrachtung und ändert keine gespeicherten Kartenstände.",
+      "connection": "Das Plattenlabor vergleicht geologische Bewegungen. Ordne in deiner Skizze Landfläche und Plattenbereich getrennt zu: Ein Kontinent ist eine geografische Einteilung, eine Platte ein beweglicher Teil der äußeren Erde.",
       "lab": "plates",
       "sources": [
         {
@@ -1880,7 +1880,7 @@
       "deeper": "Verschiedene verbundene Bereiche und Risse können am System beteiligt sein. Ein runder Speicher im Schulbild ist eine Vereinfachung. Die gezeichnete Form beweist weder die reale Tiefe noch Menge oder Zeitpunkt eines Ausbruchs.",
       "observe": "Vergleiche eine runde gedachte Speicherskizze mit einem eigenen Netz aus zwei verbundenen Bereichen. Beschrifte beide als vereinfachte Möglichkeiten, nicht als Messbilder. Erhitze keine Stoffe für diesen Vergleich.",
       "benefit": "Du hinterfragst, welche Vereinfachung hinter einem bekannten Vulkanbild steckt.",
-      "connection": "Das Labor benutzt eine übersichtliche Darstellung. Die ergänzende Netzskizze zeigt eine Grenze dieses Bildes und lässt die bisherigen Modellregler unverändert.",
+      "connection": "Das Labor benutzt eine übersichtliche Darstellung. Vergleiche sie mit deiner Netzskizze: Ein einfacher runder Speicher zeigt nicht alle möglichen Verbindungen im Inneren eines wirklichen Vulkans.",
       "lab": "volcano",
       "sources": [
         {
@@ -2104,8 +2104,8 @@
     "short": "Erdinneres",
     "more": "Ein natürlich vorkommender fester Stoff mit bestimmter Zusammensetzung und innerem Aufbau, zum Beispiel Quarz.",
     "learning": {
-      "starter": "Ein Mineral ist ein natürlich entstandener fester Stoff mit charakteristischem Aufbau und Zusammensetzung. Quarz ist ein Beispiel für ein Mineral.",
-      "deeper": "Form und Farbe allein reichen nicht immer zur Bestimmung. Mineral und Gestein bezeichnen unterschiedliche Ebenen; ein Gestein kann mehrere Minerale enthalten. Ein regelmäßiges Punktmuster ist eine Lernzeichnung und keine vollständige atomare Struktur.",
+      "starter": "Ein Mineral ist ein natürlich entstandener fester Stoff mit charakteristischer Zusammensetzung und geordnetem innerem Aufbau. Quarz ist ein Beispiel.",
+      "deeper": "Die Bausteine eines Minerals sind im Inneren geordnet. Glas besitzt diesen regelmäßigen Aufbau nicht; glasiges Vulkangestein wie Obsidian ist deshalb nicht einfach ein einzelnes Mineral. Ein Gestein kann verschiedene Bestandteile enthalten. Form und Farbe allein reichen nicht immer zur Bestimmung. Das selbst gezeichnete Punktmuster ist keine vollständige atomare Struktur.",
       "observe": "Zeichne ein wiederholtes eigenes Punktmuster und daneben einen gedachten Stein aus mehreren Mustern. Beschrifte Ordnung und Mischung. Die Symbole zeigen keine echte Kristallstruktur und bestimmen kein gefundenes Material.",
       "benefit": "Du kannst den Unterschied zwischen Mineral und Gestein erklären, ohne aus einer Farbe eine Stoffart zu erraten.",
       "connection": "Der Unterschied ergänzt die Materialseite des Erdschichtenlabors. Die Schichtfarbe ist kein einzelnes Mineral und kein chemischer Messwert.",
@@ -2117,6 +2117,13 @@
           "anchor": "Actual original5–7: natural inorganic characteristiccomposition/order, quartzexample. Own point pattern not real crystal lattice or diagnostic.",
           "updatedOn": null,
           "checkedOn": "2026-10-14"
+        },
+        {
+          "url": "https://www.usgs.gov/news/science-snippet/earthword-rock-vs-mineral",
+          "title": "USGS · Gestein und Mineral",
+          "anchor": "Begriffsabschnitt: natürliche Minerale mit charakteristischer Zusammensetzung und geordnetem innerem Aufbau. Öffentlich indexierter Originaltext gelesen; keine vollständige Seiten- oder Probenbestimmung behauptet.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-18"
         }
       ],
       "relatedWords": [
@@ -2397,7 +2404,7 @@
   {
     "term": "Nordpol",
     "short": "Weltkugel",
-    "more": "Das nördliche Ende der Erdachse. Er liegt im Arktischen Ozean auf Meereis.",
+    "more": "Das nördliche Ende der Erdachse. Er liegt über dem Arktischen Ozean.",
     "learning": {
       "starter": "Der geografische Nordpol ist das nördliche Ende der gedachten Erdachse. Er ist kein Ort, den jedes Kompassbild genau angibt.",
       "deeper": "Geografische Pole und magnetische Pole sind verschiedene Begriffe. Der geografische Nordpol liegt über dem Arktischen Ozean; das Meereis verändert sich und ist kein fester Kontinent. Eine Karte mit Eisfläche muss ihren tatsächlichen Stand nennen.",
@@ -2419,6 +2426,13 @@
           "anchor": "Actual selected11/30/35–39: rotation axis and magnetic poles distinct; no obsolete WMM2020coordinates, offsetangle, magneticstormpredictions or images.",
           "updatedOn": null,
           "checkedOn": "2026-10-14"
+        },
+        {
+          "url": "https://nsidc.org/learn/ask-scientist/how-does-antarctic-sea-ice-differ-arctic-sea-ice",
+          "title": "NSIDC · Arktis und Antarktis",
+          "anchor": "Abschnitte zu den Polargebieten: Arktischer Ozean und antarktischer Kontinent, jahreszeitliches Meereis. Textstand 2022; keine aktuellen Eisflächen, Rekorde oder heutigen Trends daraus abgeleitet.",
+          "updatedOn": "2022-01-07",
+          "checkedOn": "2026-10-18"
         }
       ],
       "relatedWords": [],
@@ -2722,6 +2736,13 @@
           "anchor": "Actual scientificreflection/refraction andwavelength-dependentdirection concepts; baseline waterdroplet explanation retained. Own beam sketch no sourceimage or exact42degreevisibility claim.",
           "updatedOn": null,
           "checkedOn": "2026-10-14"
+        },
+        {
+          "url": "https://www.nesdis.noaa.gov/about/k-12-education/optical-phenomena/what-causes-rainbow",
+          "title": "NOAA NESDIS · Wie ein Regenbogen entsteht",
+          "anchor": "Abschnitte zu Wassertropfen und Beobachterposition: Brechung, innere Reflexion und austretendes Licht. Die Zeichnung ist kein begehbarer Gegenstand; keine Fotos, festen Winkel oder Sichtvorhersagen übernommen.",
+          "updatedOn": "2025-09-02",
+          "checkedOn": "2026-10-18"
         }
       ],
       "relatedWords": [],
@@ -3038,7 +3059,7 @@
         ],
         "correct": 1,
         "hint": "Vergleiche die Abstände der oberen und unteren Zahlen, nicht den Namen einer Jahreszeit.",
-        "why": "0–4 hat einen Bereich von4, 1–3 einen von2 Zentimetern. Der Vergleich erklärt einen Unterschied, aber keine Jahreszeit oder Sicherheit.",
+        "why": "0–4 hat einen Bereich von 4, 1–3 einen von 2 Zentimetern. Der Vergleich erklärt einen Unterschied, aber keine Jahreszeit oder Sicherheit.",
         "wrongReasons": [
           "Der Begriff Springtide bedeutet nicht die Jahreszeit Frühling.",
           "",
@@ -3182,6 +3203,13 @@
           "anchor": "Previously actually fulllatitude: southernpolar90 andgeographical reference. Own axiscomparison, no iceconditions/currentclimate or magnetic coincidence asserted.",
           "updatedOn": "2026-09-23",
           "checkedOn": "2026-10-14"
+        },
+        {
+          "url": "https://nsidc.org/learn/ask-scientist/how-does-antarctic-sea-ice-differ-arctic-sea-ice",
+          "title": "NSIDC · Arktis und Antarktis",
+          "anchor": "Abschnitte zu den Polargebieten: Arktischer Ozean und antarktischer Kontinent, jahreszeitliches Meereis. Textstand 2022; keine aktuellen Eisflächen, Rekorde oder heutigen Trends daraus abgeleitet.",
+          "updatedOn": "2022-01-07",
+          "checkedOn": "2026-10-18"
         }
       ],
       "relatedWords": [],
@@ -3212,7 +3240,7 @@
       "deeper": "Viel Süßwasser ist in Eis oder unter der Erde gespeichert. Salzgehalt und sichere Trinkbarkeit sind verschiedene Fragen. Ein Wasserstandsymbol beschreibt keinen vollständigen Gehalt an Keimen oder anderen Stoffen.",
       "observe": "Erstelle eine Papierübersicht mit den getrennten Spalten wenig Salz und zum Trinken geprüft. Markiere ausdrücklich erfundene Beispiele. Keine unbekannten Wasserproben kosten, sammeln oder aufgrund der Zeichnung trinken.",
       "benefit": "Du trennst die Stoffbeschreibung von einer geprüften gesundheitlichen Eignung.",
-      "connection": "Das Wasserlabor benennt Speicher. Die Ergänzung unterscheidet eine Wassereigenschaft von einer Prüfung und verändert keine gespeicherten Forschungsstände.",
+      "connection": "Das Wasserlabor benennt Speicher wie Eis und Grundwasser. Ergänze in deiner Papierübersicht den Salzgehalt als eigene Eigenschaft: Der Speicherort allein belegt keine sichere Trinkbarkeit.",
       "lab": "water",
       "sources": [
         {
@@ -3353,6 +3381,13 @@
           "anchor": "Actually full selected axis/seasonssource, original geographicbelt retained. Own beltversuslocalweather distinction; no universalrainforest/temperature/constantdaylength claim.",
           "updatedOn": "2025-07-29",
           "checkedOn": "2026-10-14"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/skywatching/night-sky-network/tropical-solstice-shadows/",
+          "title": "NASA · Sonnenstand zwischen den Wendekreisen",
+          "anchor": "Abschnitt zur Sonne über den Tropen: geografischer Gürtel und Zusammenhang mit der Achsneigung. Keine exakten ewigen Breitengrade, Terminvorhersage oder gleiche Wetterbedingungen für alle Orte übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-18"
         }
       ],
       "relatedWords": [],
@@ -3724,9 +3759,9 @@
   {
     "term": "Vulkanasche",
     "short": "Erdinneres",
-    "more": "Winzige Gesteins- und Glasstücke aus einem Vulkan, keine Asche von verbranntem Holz.",
+    "more": "Winzige Gesteins-, Mineral- und Glasstücke aus einem Vulkan, keine Asche von verbranntem Holz.",
     "learning": {
-      "starter": "Vulkanasche besteht aus sehr kleinen Gesteins- und Glasstücken. Sie entsteht nicht wie Holzasche beim Verbrennen.",
+      "starter": "Vulkanasche besteht aus sehr kleinen Gesteins-, Mineral- und Glasstücken. Sie entsteht nicht wie Holzasche beim Verbrennen.",
       "deeper": "Bei explosiven Vorgängen kann Gesteinsmaterial zerteilt und herausgeschleudert werden. Wind kann die kleinen Teilchen weitertragen. Ein Aschezeichen im Modell ist weder ungefährlicher Staub noch eine genaue Vorhersage für einen Ort.",
       "observe": "Beschrifte auf Papier zwei getrennte gedachte Proben: Holzverbrennungsreste und vulkanische Gesteinsfragmente. Keine Asche sammeln, berühren, verbrennen oder einatmen; der sichere Vergleich verwendet ausschließlich Wörter und Zeichnungen.",
       "benefit": "Du unterscheidest zwei sehr verschieden entstandene Materialien trotz ähnlicher Alltagsbezeichnung.",
@@ -3879,6 +3914,13 @@
           "anchor": "Actually read full selected14October: Earth axis tilt andhemispheres. Original approximate23.4degrees retained; own latitude-bandgeometry not climateforecast/exactpermanenttilt.",
           "updatedOn": "2025-07-29",
           "checkedOn": "2026-10-14"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/skywatching/night-sky-network/tropical-solstice-shadows/",
+          "title": "NASA · Sonnenstand zwischen den Wendekreisen",
+          "anchor": "Abschnitt zur Sonne über den Tropen: geografischer Gürtel und Zusammenhang mit der Achsneigung. Keine exakten ewigen Breitengrade, Terminvorhersage oder gleiche Wetterbedingungen für alle Orte übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-18"
         }
       ],
       "relatedWords": [],
