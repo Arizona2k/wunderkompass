@@ -3,6 +3,15 @@ import assert from 'node:assert/strict';
 import book from '../app/book-content.json' with {type:'json'};
 import {validateBookData} from '../app/book-validation.mjs';
 
+test('optional reader-source visibility is a boolean and never accepts arbitrary payloads',()=>{
+ for(const value of ['yes',1,{},null]){
+  const changed=structuredClone(book);changed.learning.Gestein.sources[0].showAnchor=value;
+  assert.throws(()=>validateBookData(changed),/Wortquellennachweis/);
+ }
+ const hidden=structuredClone(book);hidden.learning.Gestein.sources[0].showAnchor=false;
+ assert.doesNotThrow(()=>validateBookData(hidden));
+});
+
 test('Delta accepts the specific inland source while unrelated or lookalike source URLs remain invalid',()=>{
  assert.doesNotThrow(()=>validateBookData(book));
  const sourceIndex=book.learning.Delta.sources.findIndex(s=>s.url==='https://whc.unesco.org/en/list/1432/');
@@ -22,8 +31,9 @@ test('Gestein accepts its specific glassy-rock reference and rejects other BGS p
  }
 });
 
-test('specific added polar, tropical, mineral and rainbow references do not admit unrelated URLs',()=>{
+test('specific added earth, polar, tropical, mineral and rainbow references do not admit unrelated URLs',()=>{
  for(const [term,url] of [
+  ['Erdkern','https://science.nasa.gov/earth/facts/'],
   ['Nordpol','https://nsidc.org/learn/ask-scientist/how-does-antarctic-sea-ice-differ-arctic-sea-ice'],
   ['Wendekreis','https://science.nasa.gov/solar-system/skywatching/night-sky-network/tropical-solstice-shadows/'],
   ['Mineral','https://www.usgs.gov/news/science-snippet/earthword-rock-vs-mineral'],

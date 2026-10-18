@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "term": "Sediment",
   "learning": {
-    "starter": "Sediment ist abgelagertes Material wie Sand oder Schlamm. Die Ablagerung kann aus einem Transportweg hervorgehen.",
+    "starter": "Sediment ist Material wie Sand oder Schlamm, das transportiert oder abgelagert sein kann. Transport und Ablagerung sind verschiedene Zustände.",
     "deeper": "Bewegung und Ablagerung sind verschiedene Zustände einer Materialgeschichte. Ein Gletscher kann Material verschieben; andere Wege können es ebenfalls transportieren. Eine gezeichnete Körnung bestimmt nicht die genaue Herkunft oder Zusammensetzung einer echten Probe.",
     "observe": "Zeichne drei gedachte Teilchen auf einem Transportpfeil und anschließend in einem markierten Ablagerungsbereich. Beschrifte beide Zustände. Die Symbolpunkte sind keine gemessenen Korngrößen und kein echtes Materialexperiment.",
     "benefit": "Du unterscheidest einen Materialtransport von einer Ablagerung und hinterfragst deren Herkunft.",
@@ -12,9 +12,18 @@
       {
         "url": "https://www.usgs.gov/water-science-school/science/glaciers-and-icecaps",
         "title": "USGS · Sediment (Englisch)",
-        "anchor": "Actual36: glaciers grind/drag sediments; own bounded transport/deposition distinction. No grain-size universaldefinition, realanalysis or copieddiagram.",
+        "anchor": "Gletscher entstehen an Land, bewegen sich unter ihrem Eigengewicht und speichern Süßwasser. Keine aktuellen Eisflächen oder Wasservorräte übernommen.",
         "updatedOn": "2026-09-17",
-        "checkedOn": "2026-10-14"
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      },
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/water-science-glossary",
+        "title": "USGS · Wasserbegriffe",
+        "anchor": "Begriffsstellen zu geringem Gehalt gelöster Stoffe und zu transportiertem oder abgelagertem Sediment. Keine Schwellenwerte als Trinkfreigabe übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
       }
     ],
     "relatedWords": [
