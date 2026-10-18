@@ -5,7 +5,7 @@
   "independentReview": false,
   "newSpecies": 0,
   "acceptedNew": 0,
-  "meaning": "Individuelle pädagogische Werkstätten für die24 vorhandenen Tiere. Keine vollständige 2x-Tierwelt-/Fach-/Kinderabnahme. Alle24 neuen Arten und weitere Fachredaktion bleiben WK053 offen. Technische Endabnahme separat im tatsächlichen PR.",
+  "meaning": "Alle24 vorhandenen Tierartikel und Werkstätten individuell fachlich/pädagogisch durch die KI gegengeprüft, bekannte Quellen-/Hinweis-/Maß-/Urheberbefunde gezielt korrigiert und mit aktuellen Teilbelegen gebunden. Keine neuen Arten durch Altredaktion; kein vollständiges Release oder Paket3.5-Grün.",
   "entries": [
     {
       "id": "animal-african-savanna-elephant",
@@ -83,13 +83,50 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:African_elephant_(Loxodonta_africana).jpg",
         "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:African_elephant_(Loxodonta_africana).jpg",
+          "anchors": "118/120/122/140–147",
+          "finding": "CharlesJSharp/CCBY-SA4; original sourceURI retained"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "currentReviewStatus20261018": {
         "status": "teilgeprüft-und-gezielt-korrigiert",
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-african-savanna-elephant",
+        "articleSHA256": "a2b448e09faaad762cbec492d61aa6595a79333b8f538f4fc91e16b9b5f91884",
+        "teachingSHA256": "8ec64e5fa63cf2a82b1f175f7388c9f07c2b4e3bb885c24d13dc36f8e9111dc2",
+        "currentFindings": "Schulterhöhe aus Tokyo; Pflanzenkost, Familienleitung, Lebenserwartung und weltweites EN sind vom Waldelefanten getrennt belegt. WWF131/146 bestätigt zwei Greiffortsätze. Wasser ins Maul bringen und Atmung mit Luft sind von Fischkiemen zu unterscheiden.",
+        "extraActualSourceReads": [
+          {
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/afrikanischer-savannenelefant",
+            "anchors": "131–132/146, erneut gelesen18Oct; zweiGreiffinger/Rüsselfunktionen"
+          }
+        ],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -127,7 +164,7 @@
       "limits": "Eine gut belegte Lebensweise einer Art ist noch keine Regel für alle verwandten Tiere.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "1d5ca1121a4c27271c7689f51053877acec344b0e490b64f0351f74b7684f6a3",
+      "teachingContentSHA256": "89b00881fb60bfc9e21847419692252dc0af23ca122c3413619da2dc6d975ea0",
       "originalRelated": [
         "animal-cheetah",
         "animal-giraffe"
@@ -167,13 +204,91 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Lion_male.jpg",
         "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Lion_male.jpg",
+          "anchors": "163/166/195–212",
+          "finding": "Byrdyak/CCBY-SA4; same yawning male/park identity"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "currentReviewStatus20261018": {
         "status": "teilgeprüft-und-gezielt-korrigiert",
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "sourceAddition20261018": {
+        "before": [
+          {
+            "label": "Lion – Smithsonian National Zoo",
+            "url": "https://www.nationalzoo.si.edu/animals/lion"
+          },
+          {
+            "label": "Löwe – WWF Deutschland",
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/loewe/"
+          }
+        ],
+        "after": [
+          {
+            "label": "Lion – Smithsonian National Zoo",
+            "url": "https://www.nationalzoo.si.edu/animals/lion"
+          },
+          {
+            "label": "Löwe – WWF Deutschland",
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/loewe/"
+          },
+          {
+            "label": "Taronga Zoo · Löwenrufe und Lebensweise",
+            "url": "https://www.taronga.org.au/wildlife-and-conservation/animals/detail/african-lion"
+          }
+        ],
+        "reason": "Gezielte tatsächlich gelesene Quellenzusätze für vorhandene Aussagen; alle ursprünglichen Quellen und Artikelwerte erhalten.",
+        "readAnchor": "172–174: explicitly up-to8km roar; other profile measurements not mixed with current Smithsonian measurement",
+        "sourcesAddedWithEvidence": [
+          {
+            "url": "https://www.taronga.org.au/wildlife-and-conservation/animals/detail/african-lion",
+            "readAnchor": "172–174: explicitly up-to8km roar; other profile measurements not mixed with current Smithsonian measurement",
+            "reason": "Der vorhandene ungefähre8km-Zusatz braucht seinen tatsächlich gelesenen passenden Beleg. Unterschiedliche Reichweiten hängen auch von Umgebung ab."
+          }
+        ]
+      },
+      "historicalSourceAdditionBeforeFinalCountercheck20261018": null,
+      "teachingContentBeforeFinalSourceCountercheckSHA256": "1d5ca1121a4c27271c7689f51053877acec344b0e490b64f0351f74b7684f6a3",
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-lion",
+        "articleSHA256": "bd734c48b79d7c674f9fae0e9771373bc516cbeb51c131b6beefca9c06ffe7f4",
+        "teachingSHA256": "89b00881fb60bfc9e21847419692252dc0af23ca122c3413619da2dc6d975ea0",
+        "currentFindings": "Smithsonian belegt Weibchen bis16Jahre, Schulterhöhe, Rudel und Jagd aus verschiedenen Richtungen. Dort52 nennt fünf Meilen Rufweite, also rund acht Kilometer; Taronga172–174 bestätigt8km zusätzlich. WWF205/210–213/221 trennt das VU der Art von Unterarten und beschreibt Lebensraumverlust, Beutetiermangel, Nutztierkonflikte und Schutzgebiete. Alte undatierte Zoopopulationszahlen bleiben ausgeschlossen.",
+        "extraActualSourceReads": [
+          {
+            "url": "https://www.nationalzoo.si.edu/animals/lion",
+            "anchors": "42/45/49–52/61–65: Alter,Nahrung,Rudel,Jagd,5MeilenRuf; keine aktuellenBestandszahlen abgeleitet"
+          },
+          {
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/loewe/",
+            "anchors": "205/210–213/221; Schutz/Nutztierkonflikte, keineWerbeslogans alsIUCN"
+          }
+        ],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -245,13 +360,54 @@
         "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Cheetah_(Acinonyx_jubatus),_Maasai_Mara.jpg",
         "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Cheetah_(Acinonyx_jubatus),_Maasai_Mara.jpg",
+          "anchors": "120/123/129–130",
+          "finding": "Hobbyfotowiki/CC0; present visible subject"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "currentReviewStatus20261018": {
         "status": "teilgeprüft-und-gezielt-korrigiert",
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-cheetah",
+        "articleSHA256": "cfc6720d410dba400befca8100fdbb83802fa307e7349424a43de76be1bd108f",
+        "teachingSHA256": "38b3f24fa4a3aff9d1c02aced630e51eb8cf68bebb04c79fddfce53ac3a0707c",
+        "currentFindings": "112–142cm Kopf-Rumpf-Länge und8–10Jahre Wilddurchschnitt stammen bewusst aus Smithsonian; keine Mischung mit einer anderen maximalen Lebensdauer. Weibchenaufzucht, Männchenkoalitionen und kurzer Sprint sind belegt. Smithsonian51–54 bestätigt vogelähnliches Zirpen. WWF171–176 belegt VU, Lebensraumverlust und Verfolgung; der Barrierenhinweis ist eine vorsichtige eigene Veranschaulichung fehlender Lebensraumverbindungen, kein behauptetes Datenergebnis.",
+        "extraActualSourceReads": [
+          {
+            "url": "https://nationalzoo.si.edu/animals/cheetah",
+            "anchors": "51–54: VogelähnlichesZirpen, tatsächlicherText gelesen"
+          },
+          {
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/gepard/",
+            "anchors": "171–176:Artenschutz, Lebensraumverlust, Beutemangel undMensch-Tier-Konflikte"
+          }
+        ],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -323,7 +479,14 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Bengal_Tiger_Karnataka.jpg",
         "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Bengal_Tiger_Karnataka.jpg",
+          "anchors": "121/124/132–142/150",
+          "finding": "PaulMannix/CCBY2; source already cropped in2017; local transformations describe own resize only"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "postCreationHintCountercheck20261018": {
         "stage": "reason",
@@ -337,6 +500,36 @@
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-bengal-tiger",
+        "articleSHA256": "4d0341b336d58577cedc7bbb27862a59b4ecb1d99ea15cc07132a10ddf4742ee",
+        "teachingSHA256": "f70faab5f2a7cc5ff21c459c8fc84b1e074ecdacde4ddb2ec78c75919c6dd663",
+        "currentFindings": "Bengal ist als Population der Festlandtiger beschrieben und wird nicht als neue Art gezählt. WWF88/95–100/105–106 stützt Maße, Wildalter, Länder und EN.110 bestätigt Schwimmen in Feuchtgebieten,113 und139–143 Mutter mit Jungen und die Annäherung vor einem kurzen Sprint. Der korrigierte Hinweis zur Beuteannäherung passt zur Begründungsfrage; das transferbezogene „meist“ bleibt separat.",
+        "extraActualSourceReads": [
+          {
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/bengal-tiger",
+            "anchors": "110/113: guteSchwimmer/Feuchtgebiete und MuttermitJungen"
+          }
+        ],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -419,13 +612,50 @@
         "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Adult_Giraffe.jpg",
         "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Adult_Giraffe.jpg",
+          "anchors": "119/122/126–128",
+          "finding": "safaritravelplus/CC0 and explicit2021 source-license confirmation"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "currentReviewStatus20261018": {
         "status": "teilgeprüft-und-gezielt-korrigiert",
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-giraffe",
+        "articleSHA256": "f7969eee783dfef99ee1612294a76437016f85bf50493d7e4f56d95aae58c593",
+        "teachingSHA256": "6b443a70a1dcee2e12c931bab81545b5bfdf86946933484006ff1041541bdb44",
+        "currentFindings": "Columbus14–19ft ergibt ungefähr4,3–5,8m Gesamthöhe; die IUCN-Quelle2025 trägt vier Arten anstelle einer veralteten pauschalen VU-Angabe. Zunge und Blätter, Gruppenwarnung und15–20Jahre sind getrennt belegt. Columbus53 bestätigt sieben Halswirbel; dessen Knorpelbehauptung und alte Taxonomie werden nicht kopiert.",
+        "extraActualSourceReads": [
+          {
+            "url": "https://www.columbuszoo.org/animals/giraffe",
+            "anchors": "25/36/42/46/53/56: Höhe, Nahrung, Beispielregion, siebenHalswirbel; alteTaxonomie nicht übernommen"
+          }
+        ],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -502,13 +732,50 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Panda_Géant.jpg",
         "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Panda_Géant.jpg",
+          "anchors": "120/123/133–140",
+          "finding": "ClémentBardot/CCBY-SA4"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "currentReviewStatus20261018": {
         "status": "teilgeprüft-und-gezielt-korrigiert",
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-giant-panda",
+        "articleSHA256": "172ff0deecee114371721bd7d5830e9328c4dcd078cc0769828ca669836eb290",
+        "teachingSHA256": "e9cbecb6665f9a00c30d8bb68540ba99303596238d18a986396108119a2ea24e",
+        "currentFindings": "120–180cm, lediglich geschätzte15–20Wildjahre, Bambusdiät trotz Raubtierordnung, Gebirgswald, Duftmarken und VU mit Bewertung2016 sind belegt. Smithsonian53 erklärt den vergrößerten Handgelenkknochen als Pseudodaumen und den starken Kiefer;60 erlaubt „oft allein“, ohne ein absolutes Verbot sozialen Verhaltens zu behaupten.",
+        "extraActualSourceReads": [
+          {
+            "url": "https://www.nationalzoo.si.edu/animals/giant-panda",
+            "anchors": "45/49/53/60/71–72: Alterunsicherheit, Duft, Pseudodaumen/Kiefer, Sozialverhalten undFragmentierung"
+          }
+        ],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -575,6 +842,32 @@
         "path": "public/world/western-lowland-gorilla.webp",
         "fileSHA256": "70008c7cb9aeca0064c36745cbf770267a6df71f3f0923ac373b9af782f5361a",
         "alt": "Ein Westlicher Flachlandgorilla mit dunklem Fell steht in grüner Vegetation.",
+        "credit": "Mira Meijer, Burgers’ Zoo · https://www.burgerszoo.nl/gorilla",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Western_lowland_gorilla_(Gorilla_gorilla_gorilla).jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Western_lowland_gorilla_(Gorilla_gorilla_gorilla).jpg",
+          "anchors": "123–126/136–143",
+          "finding": "MiraMeijer/BurgersZoo/CCBY-SA4; explicitly requested sourceURI https://www.burgerszoo.nl/gorilla should be added to visible credit"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
+      },
+      "currentReviewStatus20261018": {
+        "status": "teilgeprüft-und-gezielt-korrigiert",
+        "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
+        "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
+        "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "retainedMediaCountercheckBeforeFinalRead20261018": {
+        "id": "animal-western-lowland-gorilla",
+        "image": "western-lowland-gorilla",
+        "path": "public/world/western-lowland-gorilla.webp",
+        "fileSHA256": "70008c7cb9aeca0064c36745cbf770267a6df71f3f0923ac373b9af782f5361a",
+        "alt": "Ein Westlicher Flachlandgorilla mit dunklem Fell steht in grüner Vegetation.",
         "credit": "Mira Meijer, Burgers’ Zoo",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
@@ -582,11 +875,35 @@
         "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
         "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
       },
-      "currentReviewStatus20261018": {
-        "status": "teilgeprüft-und-gezielt-korrigiert",
-        "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
-        "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
-        "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-western-lowland-gorilla",
+        "articleSHA256": "e9b53eb88f4f8e60301d2591e0b13938ccda1648235cbedaa61496871a7c3f2c",
+        "teachingSHA256": "0cda6d39bd71ba183fcb134391125c8a7d7a3fb350b62fe4c99067e2c1c94b24",
+        "currentFindings": "150–200lb ist korrekt als68–91kg für erwachsene Weibchen umgerechnet; die falsche kg-Klammer der Quelle wird nicht kopiert. Kongobecken, Regen- und Sumpfwald, überwiegend Pflanzen plus Wirbellose, Knöchelgang, Gruppen und30–40Wildjahre sind belegt. Smithsonian35/114 nennt individuelle Nasenabdrücke. Westliche Art, Flachlandunterart und CR werden nicht pauschal allen Gorillas zugeschrieben.",
+        "extraActualSourceReads": [
+          {
+            "url": "https://www.nationalzoo.si.edu/animals/western-lowland-gorilla",
+            "anchors": "35/39/42/48/56/68/114: Knöchelgang,Nasenabdruck,fehlerhaftekgKlammer nichtübernommen"
+          }
+        ],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -661,7 +978,14 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Male_Bornean_Orangutan_-_Big_Cheeks.jpg",
         "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Male_Bornean_Orangutan_-_Big_Cheeks.jpg",
+          "anchors": "124–127/137–148",
+          "finding": "EricKilby/CCBY-SA2/Flickr license confirmation; male Bornean scope"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "sourceAddition20261018": {
         "before": [
@@ -688,6 +1012,36 @@
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-bornean-orangutan",
+        "articleSHA256": "07ff0dcde6138ec2f5bef7e76fb586c54c1e66e4f8c4d65b4077aba7cff02dec",
+        "teachingSHA256": "15b0117a367ed0db5496c65e0c5b96ac43541a2b268124cf4b90e4e9919f6e11",
+        "currentFindings": "Borneo-Art, Weibchengewicht30–45kg, überwiegend Früchte mit weiterer Nahrung, CR sowie Tiefland- und Sumpfwald sind belegt. Junge lernen lange bei der Mutter. Bis50Jahre bleibt ein qualifizierter oberer Wert, kein Wilddurchschnitt. WWF133/135 bestätigt jeden Abend ein Schlafnest und Äste sowie Blätter; Klettern und die Beleggrenze beim Lernen bleiben getrennt.",
+        "extraActualSourceReads": [
+          {
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/borneo-orang-utan",
+            "anchors": "130/133–135/143–145: Junge/Mutter, neuesNest, ÄsteundBlätter; keineanderenWerkzeug-/Sexualitätsdetails übertragen"
+          }
+        ],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -759,13 +1113,50 @@
         "licenseUrl": "https://commons.wikimedia.org/wiki/File:Polar_Bear.jpg",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Polar_Bear.jpg",
         "recordedRightsEvidence": "Die Quellenseite bestätigt ein Werk eines USFWS-Beschäftigten im Rahmen seiner dienstlichen Aufgaben.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Polar_Bear.jpg",
+          "anchors": "121–137",
+          "finding": "USFWS employee federal public domain; author SusanneMiller orDonnaDewhurst remains uncertain and explicitly attributed as such, not invented"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "currentReviewStatus20261018": {
         "status": "teilgeprüft-und-gezielt-korrigiert",
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-polar-bear",
+        "articleSHA256": "55d1d79ea76423481a69fe63bb162d63a89ab32d7c26e7409442951ba1b377d8",
+        "teachingSHA256": "a8d6f78b800eea80c086450d2bb61cdd839210f768e33bf53b94400de163950f",
+        "currentFindings": "SanDiego1,8–2,7m Kopf-Rumpf-Länge und geschlechtsspezifische mittlere Lebensspannen bleiben erhalten. Arktische Robbenjagd auf Meereis trotz Schwimmfähigkeit und VU sind belegt.47 bestätigt klare Haare bei weißem Felleindruck. Extreme Geruchs- oder Schwimmdistanzen und genaue globale Zahlen werden nicht übernommen.",
+        "extraActualSourceReads": [
+          {
+            "url": "https://animals.sandiegozoo.org/animals/polar-bear",
+            "anchors": "47/51/56–65: klareHaare, Tatzen, Meereisjagd, Schwimmfähigkeit; Source-Übertreibungen nichtkopiert"
+          }
+        ],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -848,7 +1239,14 @@
         "licenseUrl": "https://commons.wikimedia.org/wiki/File:Emperor_penguin.jpg",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Emperor_penguin.jpg",
         "recordedRightsEvidence": "Die Quellenseite bestätigt NOAA-Material; Fotograf Michael Van Woert, Rossmeer, 1999.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Emperor_penguin.jpg",
+          "anchors": "117–121",
+          "finding": "MichaelVanWoert/NOAA1999RossSea/publicdomain; existing actual two adults match"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "currentReviewStatus20261018": {
         "status": "teilgeprüft-und-gezielt-korrigiert",
@@ -856,6 +1254,43 @@
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten.",
         "specificOpenFinding": "Messrichtung erneut prüfen: gelesene Rekordseite nennt Länge, bestehender Vergleich bezeichnet sie als Standhöhe. Keine eigenständige Standhöhenmessung damit behaupten; nächste gezielte Altartikelkorrektur."
+      },
+      "currentAdditionalSourceCountercheck20261018": {
+        "dimensionFollowup20261018": {
+          "source": "https://www.penguinsinternational.org/penguin-record-breakers/",
+          "anchor": "61 full paragraph, not just first clause;76; article2019/updated2025",
+          "finding": "Source itself gives100–130cm long and immediately compares human height142cm, then calls Emperor height/weight advantages. Current app explicitly labels bodylength accordingto source and explains it is compared as size/height. Actual AnimalMeasure is a horizontal numeric range-bar with same-unit/different-direction warning, not a standing-height reconstruction. Existing qualified measurement is defensible; retain without inventing a correction or merging SeaWorld112cm of unspecified measurement protocol. Record claims from later sport-performance paragraphs are not adopted.",
+          "status": "concrete measurement wording uncertainty resolved by full-context reread; no assertion of exact standing-height protocol"
+        }
+      },
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-emperor-penguin",
+        "articleSHA256": "635fe6dbba06b3363d12a05f850672ab3cad98b13f30c73952872b298733ae41",
+        "teachingSHA256": "4cda6eefe64d0f43e8fa6780d5ddde6f5f0b21fe5b209503ee65eb5b5f87753e",
+        "currentFindings": "Antarktisches Meereis, Huddling, Nahrung und Männchenbrut sind belegt; AAD339/357 bestätigt das Ei auf den Füßen. Die Größenquelle nennt100–130cm Länge und vergleicht selbst Höhe. Die aktuelle Messnotiz macht diese Grenze sichtbar; ein genaues Stehhöhenprotokoll wird nicht behauptet. Über40Jahre gilt nur für einzelne Tiere. EN seitApril2026 folgt IUCN, kein altes NT.",
+        "extraActualSourceReads": [
+          {
+            "url": "https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/",
+            "anchors": "329/331/339/343–347/354–357: Verbreitung, aktuelleKategorie, Männchenbrut, NahrungundEi-auf-Füßen"
+          }
+        ],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -932,13 +1367,50 @@
         "licenseUrl": "https://commons.wikimedia.org/wiki/File:Bluewhale_300.jpg",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Bluewhale_300.jpg",
         "recordedRightsEvidence": "Die Quellenseite bestätigt NOAA-Material, das im Rahmen dienstlicher Aufgaben entstanden ist.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Bluewhale_300.jpg",
+          "anchors": "120–134/144–145",
+          "finding": "FredBenko/NOAA/publicdomain; source contrast/color correction and earlier watermark removal are original-source processing; source population/record prose not imported"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "currentReviewStatus20261018": {
         "status": "teilgeprüft-und-gezielt-korrigiert",
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-blue-whale",
+        "articleSHA256": "fc88d8ad4cbbc617e114f36e057795e50fb98a419b3668140048f42542350d1d",
+        "teachingSHA256": "688b067a4843b2fb7f29739d35eff36c5c10a8f5a8b12eb2ca92d7feb068e7aa",
+        "currentFindings": "WWF80–100ft stützt ungefähr24–30m. NOAA schätzt80–90Jahre und beschreibt das Zurückhalten von Krill bei herausgedrücktem Wasser. NOAA466/467/480/483 bestätigt größtes Tier, Ozeane außer Arktis sowie meist allein oder zu zweit. Die weltweite Einordnung wird getrennt von ESA belegt. Die falsche Erfolgsrückmeldung ist durch eine positive Filtererklärung ersetzt.",
+        "extraActualSourceReads": [
+          {
+            "url": "https://www.fisheries.noaa.gov/species/blue-whale",
+            "anchors": "466–470/480/483: größtesTier, Verbreitung, Gruppen/Filterrichtung, SchiffundFischereigerät"
+          }
+        ],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -1025,7 +1497,14 @@
         "licenseUrl": "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg",
         "recordedRightsEvidence": "Die Quellenseite nennt NASA als Urheber und bestätigt den gemeinfreien Status des Fotos.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg",
+          "anchors": "113–128",
+          "finding": "NASA/publicdomain; Medium69 source crop explicitly retained in provenance, not a new own crop; boatwake alternative text fits"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "sourceAddition20261018": {
         "before": [
@@ -1068,6 +1547,36 @@
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-common-bottlenose-dolphin",
+        "articleSHA256": "05a67a060c0f15530f26a61f81bb6440dca68525477871a6c4b8a2868d766b39",
+        "teachingSHA256": "8fe29265947020c1279bc071e23f72807ca4fd3b2a17386fd73f67c84827a743",
+        "currentFindings": "1,8–4m, lange Lebensspanne mit höheren Werten bei Weibchen, tropische bis gemäßigte Meere und wechselnde Gruppen sind belegt. NOAA481–483 bestätigt Echo zur Nahrungssuche, Greifen von Fischen und Ganzschlucken. Luftatmung folgt zusätzlich einer gelesenen NOAA-Quelle; weltweites LC wird von bedrohten Gruppen und Unterarten sowie US-MMPA getrennt.",
+        "extraActualSourceReads": [
+          {
+            "url": "https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin",
+            "anchors": "479–489: Gruppen, Echo, ganzgeschluckteFische, Raumbezug/Alter; keineMenopausehypothese übernommen"
+          }
+        ],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -1144,13 +1653,50 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Orca_breaching.jpg",
         "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Orca_breaching.jpg",
+          "anchors": "120–140",
+          "finding": "TheModernPolymath/CCBY-SA4; Alaska/ResurrectionBay not claimed universal habitat"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "currentReviewStatus20261018": {
         "status": "teilgeprüft-und-gezielt-korrigiert",
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-orca",
+        "articleSHA256": "8c706c39eb0a7127965fe0784eae94dd5e94146d11cc1017b31508a78a8966cd",
+        "teachingSHA256": "ffffa7688698b36a3bf49f15eef7e19c490167e3623027d70b5ff7a6b6852923",
+        "currentFindings": "Größte Delfinart,5,5–9,8m und unterschiedliche mittlere Wildalter für Männchen und Weibchen sind belegt. NOAA497–500 bestätigt mütterliche Familiengruppen, gelernte Rufe als Familienzeichen, Teamjagd und populationsabhängige Nahrung. Besonders bedrohte Southern Residents werden nicht zu einem EN für alle Orcas oder zu einer neuen Arttrennung verallgemeinert.",
+        "extraActualSourceReads": [
+          {
+            "url": "https://www.fisheries.noaa.gov/species/killer-whale",
+            "anchors": "471–480/497–507:Familie,Dialektfunktion, Jagd/Populationen, Alter; aktuelleBestandszahlen nichtkopiert"
+          }
+        ],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -1232,13 +1778,45 @@
         "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Octopus-vulgaris.jpg",
         "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Octopus-vulgaris.jpg",
+          "anchors": "119–131",
+          "finding": "MartinThoma/CC0; aquarium identity; invalid EXIF coordinates not copied"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "currentReviewStatus20261018": {
         "status": "teilgeprüft-und-gezielt-korrigiert",
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-common-octopus",
+        "articleSHA256": "9399e049d35eae7481554b78dccd973164d642ef1fe7ecbc53efd46373954c36",
+        "teachingSHA256": "9f7fa95f5c87fab894696dc21f4b16a320dd7bc344502ed3d1a1cad127d3b5b0",
+        "currentFindings": "Octopus vulgaris bleibt von anderen Krakenarten getrennt.15–25cm betrifft den Mantel ohne Arme.1–2Jahre, acht Arme, Einzelversteck und Rückstoß sind belegt. LaRochelle erklärt taktil-chemische Armsinne und Wasserstrahl; LC bleibt ausdrücklich diesem Aquarium zugeschrieben, keine eigene globale Neubewertung.",
+        "extraActualSourceReads": [],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -1321,13 +1899,45 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas).jpg",
         "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas).jpg",
+          "anchors": "119–142",
+          "finding": "RickardZerpe/CCBY2/Flickr license confirmation"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "currentReviewStatus20261018": {
         "status": "teilgeprüft-und-gezielt-korrigiert",
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-green-sea-turtle",
+        "articleSHA256": "f0c471a97a269893286e96e23cca1447e03f3d24c6daa2d22170803bfd687903",
+        "teachingSHA256": "1293a46d77db0de9c9922d241dd4fdc32ef5c4e4373796fdc34fe036653ad92b",
+        "currentFindings": "90–120cm bezeichnet den Panzer,70Jahre oder mehr bleibt eine Schätzung. Wanderungen und Natalregion statt eines garantiert genauen Geburtsstrands, unterschiedliche Jungtier- und Erwachsenenkost sowie Luftatmung sind belegt. Weltweites LC seitOktober2025 folgt IUCN und wird von regionaler NOAA-ESA-Einstufung getrennt.",
+        "extraActualSourceReads": [],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -1401,13 +2011,50 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Osphranter_rufus,_Perth_Zoo,_20220427_3.jpg",
         "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Osphranter_rufus,_Perth_Zoo,_20220427_3.jpg",
+          "anchors": "120–140",
+          "finding": "Namoroka/CCBY-SA4/PerthZoo; no wild-location inference from photo"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "currentReviewStatus20261018": {
         "status": "teilgeprüft-und-gezielt-korrigiert",
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-red-kangaroo",
+        "articleSHA256": "255d562bf23fa3c669d038e4edbeef5c9ad4c27fe3addb950731e86838dec53f",
+        "teachingSHA256": "9fd395949a6eebd851d4d6893e807a851d101e8043df762f8bc3aca9a37a4b53",
+        "currentFindings": "65–92kg betrifft ausdrücklich erwachsene Männchen, weder Weibchen noch Körperhöhe. Taronga45/57/60/66/128/139 bestätigt obere Wild- und Haltungsalter, Nahrung, Zentralaustralien, blaugraue Weibchen und Gruppen. Die neu gelesene Tarongapassage schließt die zuvor nicht frisch belegte Fellfarbangabe ohne Zusatzquelle.",
+        "extraActualSourceReads": [
+          {
+            "url": "https://taronga.org.au/animals/red-kangaroo",
+            "anchors": "45/57/60/66/126–139, tatsächlichesRedirect-Zielwww.taronga.org.au/wildlife-and-conservation/animals/detail/red-kangaroo; graublaueWeibchen undGruppen"
+          }
+        ],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -1484,13 +2131,50 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Koala_(Phascolarctos_cinereus)_(3).jpg",
         "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Koala_(Phascolarctos_cinereus)_(3).jpg",
+          "anchors": "119–145",
+          "finding": "Gzen92/CCBY-SA4/BeauvalZoo; no Australian photo-location claim"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "currentReviewStatus20261018": {
         "status": "teilgeprüft-und-gezielt-korrigiert",
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-koala",
+        "articleSHA256": "119d09a1820154fbdd7d3634091f0b389231b9fd41c3abdeaa0dfe5ce0b1ae94",
+        "teachingSHA256": "683f57ba0471afe4b8d6ebe9452365c4aed63ec9bef667da71e4a6dc5bd79620",
+        "currentFindings": "Kopf-Rumpf60–80cm, ungefähr10–15Jahre, Eukalyptusspezialisierung und Ruhe in Bäumen sind belegt. SanDiego53 beschreibt zwei gegenüberstehende Finger an jeder Hand;55–56 erklärt die begrenzte Nahrungsauswahl. Regionale EPBC-Bedrohung bleibt auf QLD/NSW/ACT begrenzt, kein pauschales globales IUCN-EN.",
+        "extraActualSourceReads": [
+          {
+            "url": "https://animals.sandiegozoo.org/animals/koala",
+            "anchors": "49–57:Lebensraum, GreifhandmitzweiDaumen, ausgewählteNahrungspflanzen/Bewegung; keinHaustier-/Medizinvorschlag"
+          }
+        ],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -1556,6 +2240,32 @@
         "image": "jaguar",
         "path": "public/world/jaguar.webp",
         "fileSHA256": "906d2d9a94ebb5b8b4fbbdd5d058305551a29fe184d941cb1ba647a72df435cc",
+        "alt": "Ein Jaguar mit schwarzem Rosettenmuster blickt zwischen grünen Pflanzen hervor.",
+        "credit": "© Giles Laurent · gileslaurent.com",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:009_Female_jaguar_in_Encontro_das_Águas_State_Park_Photo_by_Giles_Laurent.jpg",
+        "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:009_Female_jaguar_in_Encontro_das_Águas_State_Park_Photo_by_Giles_Laurent.jpg",
+          "anchors": "115/127–130/151–157/179–190",
+          "finding": "GilesLaurent/CCBY-SA4; requested visible credit includes gileslaurent.com. Current image inspected full-size; replace unsupported rock description by visible subject/plants only. Optional notification is not sent"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
+      },
+      "currentReviewStatus20261018": {
+        "status": "teilgeprüft-und-gezielt-korrigiert",
+        "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
+        "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
+        "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "retainedMediaCountercheckBeforeFinalRead20261018": {
+        "id": "animal-jaguar",
+        "image": "jaguar",
+        "path": "public/world/jaguar.webp",
+        "fileSHA256": "906d2d9a94ebb5b8b4fbbdd5d058305551a29fe184d941cb1ba647a72df435cc",
         "alt": "Ein Jaguar mit schwarzem Rosettenmuster steht vor grünen Pflanzen auf einem Felsen.",
         "credit": "Giles Laurent",
         "license": "CC BY-SA 4.0",
@@ -1564,11 +2274,78 @@
         "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
         "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
       },
-      "currentReviewStatus20261018": {
-        "status": "teilgeprüft-und-gezielt-korrigiert",
-        "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
-        "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
-        "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      "currentAdditionalSourceCountercheck20261018": {},
+      "rejectedMeasurementChange20261018": {
+        "before": {
+          "measurement_de": "Kopf-Rumpf-Länge ohne Schwanz",
+          "min": 1.1,
+          "max": 1.7,
+          "unit": "m",
+          "text_de": "Ohne Schwanz etwa 1,1–1,7 Meter lang.",
+          "source_ids": [
+            "jaguar_wwf"
+          ]
+        },
+        "after": {
+          "measurement_de": "Kopf-Rumpf-Länge ohne Schwanz",
+          "min": 116,
+          "max": 170,
+          "unit": "cm",
+          "text_de": "Ohne Schwanz etwa 116–170 Zentimeter lang.",
+          "source_ids": [
+            "jaguar_wwf"
+          ]
+        },
+        "factLabel": "Wie groß?",
+        "source": "https://www.wwf.de/themen-projekte/artenlexikon/jaguar",
+        "sourceAnchor": "WWF89/108: Kopf-Rumpf-Länge116–170cm, am18.10.2026 tatsächlich vollständig gelesen. Tabelle und Fließtext stimmen überein.",
+        "reason": "Vorherige1,1m-Untergrenze nicht aus der zugeordnetenWWF-Spanne ableitbar. Zahlen unvermischt direkt inZentimetern darstellen; SanDiego1,1–1,8m ist ein andererBelegbereich.",
+        "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitt6: notwendige begründeteAlttextkorrektur mit originalemVorher/Nachherbeleg.",
+        "compatibility": "Alle Frage-/Antwort-/Themen-/Medien-IDs und gespeichertenAntworttexte unverändert; Größenvergleich speichert nurcompareAnimal:boolean. Originalhash durch exakteRekonstruktion dieses einzigenMaßfeldes und zugehörigenFaktentextes erhalten. Neue tatsächliche gebauteDarstellung/Offlineprüfung noch erforderlich.",
+        "status": "verworfen: ursprünglicheAngabeaus tatsächlichverlinkterQuellebelegt",
+        "resolution": "WWF Schweiz, imArtikel tatsächlichverlinkt, nennt am18.10.2026 inZeile78 ausdrücklich1,1–1,7mKopf-Rumpf-Länge. Dieversuchte116–170cmÄnderungbezog sichauf eineandereWWF-Seite(Deutschland). Kein nachgewiesenerArtikelFehler. VorhandeneGröße/Einheit/Faktentext erhalten; Variantengetrenntdokumentieren, keineunnötigeBestandskorrektur.",
+        "actualOriginalSource": {
+          "url": "https://www.wwf.ch/de/tierarten/jaguar-der-im-fliegen-jagt",
+          "anchor": "61–62/70/76–81, erneut18.10.2026gelesen"
+        },
+        "attemptedBuiltProofs": "Erhaltene Teilproben an9604bcafb75a4701 zeigen den verworfenen Versuch; keine fachlicheFreigabe dieserÄnderung."
+      },
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-jaguar",
+        "articleSHA256": "b830ae0609b5da54b4d928fc42d7bff12fadbd53f1e7d39571a1e35e6dd93227",
+        "teachingSHA256": "7820bd8c1853d769978498810d6297f7f2a0e084a6e6d27a02e2bdb86dc5cd75",
+        "currentFindings": "Die tatsächlich verlinkte Quelle WWF Schweiz nennt in78 ausdrücklich1,1–1,7m Kopf-Rumpf-Länge; der ursprüngliche Artikelwert bleibt erhalten. Die zunächst versuchte116–170cm-Änderung beruhte auf WWF Deutschland, einer anderen Quelle, und wurde verworfen. SanDiego72 trägt12–15Wildjahre; dessen andere Größenspanne1,1–1,8m wird ebenfalls nicht gemischt. WWF Schweiz61 und SanDiego52/98 belegen Klettern, Schwimmen und individuelles Fleckenmuster. Mutteraufzucht und Beispielorte sind belegt.",
+        "extraActualSourceReads": [
+          {
+            "url": "https://www.wwf.de/themen-projekte/artenlexikon/jaguar",
+            "anchors": "89/108/111/113/117/124–134:116–170cm,Muster, Schwimmen, Gruppe/Junge/Raum; alte9-Unterartenzahl nichtkopiert"
+          },
+          {
+            "url": "https://animals.sandiegozoo.org/animals/jaguar",
+            "anchors": "61–62/72/84/98: Mutter/Junge,12–15Wildjahre, abweichendeGrößenspanne undindividuellesMuster"
+          },
+          {
+            "url": "https://www.wwf.ch/de/tierarten/jaguar-der-im-fliegen-jagt",
+            "anchors": "61–62/70/76–81: ausdrücklich1,1–1,7mKopf-Rumpf-Länge, tatsächlicheverlinkteQuelle erneutgelesen. AbweichendenWWF-Deutschland-Bereich nichtalsOriginalfehlerausgeben."
+          }
+        ],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -1646,13 +2423,45 @@
         "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Apis_mellifera_-_Western_Honey_Bee.jpg",
         "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Apis_mellifera_-_Western_Honey_Bee.jpg",
+          "anchors": "114–133",
+          "finding": "JasperShide/CC0/Apismellifera; violetflower visible, no universal pollination claim from image"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "currentReviewStatus20261018": {
         "status": "teilgeprüft-und-gezielt-korrigiert",
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-honey-bee",
+        "articleSHA256": "fb96aa9bd52244b1274006e57e0b655843efb5f4bf8dc1425fa472a558203cae",
+        "teachingSHA256": "453fc0239f8d007919a6cc63989c81f3da9e10f4db531604495f652511b83b3d",
+        "currentFindings": "15–18mm betrifft die Königin;3–5Jahre ist nur deren mögliche Lebensdauer, Arbeiterinnen leben kürzer. Apis mellifera, Herkunft, erwachsene Pollen- und Nektarkost, Kasten und Tanz sind belegt. Pollenübertragung bewirkt nicht an jeder Blüte automatisch eine Frucht. Die EU-Gefährdung freier Völker2025 wird von Honigbienenhaltung und übrigen Wildbienen getrennt.",
+        "extraActualSourceReads": [],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -1729,7 +2538,14 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Axolotl_ambystoma_mexicanum_anfibio_ASAG.jpg",
         "recordedRightsEvidence": "Dateibeschreibungsseite und dort genannte Fotolizenz geprüft.",
-        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified."
+        "scope": "Actual current retained file/credit/license/alternative text inspected. No source photo changed or fetched; historic license verification retained, not claimed freshly externally reverified.",
+        "freshSourceRead20261018": {
+          "checkedOn": "2026-10-18",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Axolotl_ambystoma_mexicanum_anfibio_ASAG.jpg",
+          "anchors": "121–141",
+          "finding": "Amandasofiarana/CCBY-SA4; pale aquarium morph not claimed universal wild color"
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "postCreationHintCountercheck20261018": {
         "stage": "reason",
@@ -1743,6 +2559,31 @@
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-axolotl",
+        "articleSHA256": "e8ac0a9450fd0fd21c369e82e07d087cd9bb7fc54e553075978bfccafe0e5460",
+        "teachingSHA256": "39400f71ff69880bcf9c6f700f28e75e801332e9996f7444ea89eed33605cb06",
+        "currentFindings": "25–30cm typische Erwachsenenlänge und10–12Jahre folgen Toronto;40–45cm Ausnahmegröße wird nicht als normal ausgegeben. Außenkiemen, Larvenmerkmale, Xochimilco-Gewässer, Nahrung, meist allein und Beinregeneration sind belegt. Keine perfekte unbegrenzte Regeneration oder Aquarienhaltung als Ersatz für den CR-Wildbestand.",
+        "extraActualSourceReads": [],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -1814,13 +2655,39 @@
           "anchor": "Commons122–143/161–173DiegoDelsoCCBY-SA4.0",
           "finding": "Authorcredit/CC/canonicalsourcecurrent;author requests delso.photo attribution andoptionalnotification,nocommunicationauthorized. Need currentproductcreditreadbeforedecidingconcretechange.",
           "checkedOn": "2026-10-18"
-        }
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "currentReviewStatus20261018": {
         "status": "teilgeprüft-und-gezielt-korrigiert",
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-whale-shark",
+        "articleSHA256": "625d4c6369aad8821ed5bb91638d3a9b6359789b17ec3aadace79c577c9ca4c8",
+        "teachingSHA256": "63b650a390d0e97300947f7aec0736fc82dc4ffdbad28fae12f1b0eaaa6a6dd8",
+        "currentFindings": "5,5–10m ist typische Länge statt18,8m Rekord. Fisch mit Kiemen, Planktonfiltern, Flecken-ID sowie weltweites EN und Gefahr durch Boote oder Gerät sind belegt. Fehler der GeorgiaAquarium-Seite zur Zahngröße oder zum größten Fisch aller Zeiten werden nicht kopiert. Das Urheberlabel ist vervollständigt; das Foto bleibt unverändert.",
+        "extraActualSourceReads": [],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -1856,7 +2723,7 @@
       "limits": "Ein Foto kann Körperteile verdecken. Sichtbarkeit und tatsächliche Anzahl sind nicht dasselbe.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "f108a6fe9f1a78f6cf989e83523adf45abaddfe32a237b172610144dcd35244e",
+      "teachingContentSHA256": "1018f4f2c619c13670aa98fe78af74caab3a26b97aa0cf4bdb042af9917bffcc",
       "originalRelated": [
         "animal-honey-bee",
         "science-foodweb"
@@ -1900,9 +2767,52 @@
           "anchor": "Commons121–125IvarLeidusfemaleAraneus/photo12-focus-stacked;144–157CCBY-SA4.0",
           "finding": "Photographiccomposite disclosedbyoriginal;notunsupplementedrawsingleinstant. Existingowntransformdeclarationaboutresizeonlyisnotclaimsourceunedited;considerusefulcaptionclarification.",
           "checkedOn": "2026-10-18"
-        }
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "sourceAddition20261018": {
+        "before": [
+          {
+            "label": "The Wildlife Trusts · Garden spider",
+            "url": "https://www.wildlifetrusts.org/wildlife-explorer/invertebrates/spiders/garden-spider"
+          }
+        ],
+        "after": [
+          {
+            "label": "The Wildlife Trusts · Garden spider",
+            "url": "https://www.wildlifetrusts.org/wildlife-explorer/invertebrates/spiders/garden-spider"
+          },
+          {
+            "label": "Natural History Museum · Spinnen und Insekten unterscheiden",
+            "url": "https://www.nhm.ac.uk/schools/teaching-resources/key-stage-2/life-cycles-habitats-and-classification/practical-activity-classification-exploration.html"
+          },
+          {
+            "label": "Natural History Museum · Wie Spinnseide entsteht",
+            "url": "https://www.nhm.ac.uk/discover/what-are-spider-webs-made-of.html"
+          }
+        ],
+        "reason": "Gezielte tatsächlich gelesene Quellenzusätze für vorhandene Aussagen; alle ursprünglichen Quellen und Artikelwerte erhalten.",
+        "readAnchor": "107–111/8legs classification;speciesmeasure sourceWildlifeTrustsindependent. Sixlegcountaloneisnotuniversalclassification foralldevelopmentalstages.; 69/74–78/98–101; silk insidebody, spinnerets and different uses; no every-spider-web claim",
+        "sourcesAddedWithEvidence": [
+          {
+            "url": "https://www.nhm.ac.uk/schools/teaching-resources/key-stage-2/life-cycles-habitats-and-classification/practical-activity-classification-exploration.html",
+            "readAnchor": "107–111/8legs classification;speciesmeasure sourceWildlifeTrustsindependent. Sixlegcountaloneisnotuniversalclassification foralldevelopmentalstages.",
+            "reason": "Zusätzliche tatsächlich gelesene passende Quelle für eine bestehende Aussage; Artikeltext, Maß, Grundfrage, Antworten, Medien-ID und alle alten Quellen erhalten."
+          },
+          {
+            "url": "https://www.nhm.ac.uk/discover/what-are-spider-webs-made-of.html",
+            "readAnchor": "69/74–78/98–101; silk insidebody, spinnerets and different uses; no every-spider-web claim",
+            "reason": "Vorhandene Aussage zu Spinnwarzen und verschiedene Fadenaufgaben durch konkrete Museumserklärung ergänzen."
+          }
+        ]
+      },
+      "currentReviewStatus20261018": {
+        "status": "teilgeprüft-und-gezielt-korrigiert",
+        "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
+        "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
+        "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "historicalSourceAdditionBeforeFinalCountercheck20261018": {
         "before": [
           {
             "label": "The Wildlife Trusts · Garden spider",
@@ -1922,11 +2832,31 @@
         "reason": "Zusätzliche tatsächlich gelesene passende Quelle für eine bestehende Aussage; Artikeltext, Maß, Grundfrage, Antworten, Medien-ID und alle alten Quellen erhalten.",
         "readAnchor": "107–111/8legs classification;speciesmeasure sourceWildlifeTrustsindependent. Sixlegcountaloneisnotuniversalclassification foralldevelopmentalstages."
       },
-      "currentReviewStatus20261018": {
-        "status": "teilgeprüft-und-gezielt-korrigiert",
-        "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
-        "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
-        "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      "teachingContentBeforeFinalSourceCountercheckSHA256": "f108a6fe9f1a78f6cf989e83523adf45abaddfe32a237b172610144dcd35244e",
+      "currentAdditionalSourceCountercheck20261018": {},
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-garden-cross-spider",
+        "articleSHA256": "8e7892dfbda7efa55b5eec5e13e7e1badcc266cc1a575a5cc61075742efcd4dc",
+        "teachingSHA256": "1018f4f2c619c13670aa98fe78af74caab3a26b97aa0cf4bdb042af9917bffcc",
+        "currentFindings": "9–18mm ohne Beine ist korrekt umgerechnet. Araneus diadematus ist kein Insekt; acht gegenüber sechs Beinen und Insektenfang über Vibrationen sind belegt. Der Schutztext ist keine globale Einstufung. Zusätzlich gelesene NHM-Erklärungen belegen Seidenentstehung, Spinnwarzen und verschiedene Fadentypen. Die Fotocaption benennt den12-Fokusbildstapel anstelle einer ungesicherten Lebensraumbehauptung.",
+        "extraActualSourceReads": [],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -2006,7 +2936,8 @@
           "anchor": "Commons123/128–1414028mdk09CCBY-SA3.0",
           "finding": "Currentfiletitlephotodateandhistoricaluploaddescriptioninconsistent;noappdateclaimadded.",
           "checkedOn": "2026-10-18"
-        }
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "sourceAddition20261018": {
         "before": [
@@ -2033,6 +2964,37 @@
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "currentAdditionalSourceCountercheck20261018": {
+        "foodFollowup20261018": {
+          "source": "https://animaldiversity.org/accounts/Camelus_dromedarius/",
+          "anchor": "172–175",
+          "finding": "Explicitly herbivorous, thorny plants/dry grasses/saltbush; existing plantfood claim supported. Earlier concerns were narrow source-reading gaps, not shown factual contradictions."
+        }
+      },
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-dromedary",
+        "articleSHA256": "804741fdb2a2e58d81cb581672080563c418b151cebc0a6dc0ab5781b3afc0a4",
+        "teachingSHA256": "8121853a93984002a53686bb5c592a645c958e0d8e1b118f4f9a36fbc6aa3126",
+        "currentFindings": "Schulterhöhe1,8–2m für Männchen, Fett im Höcker statt Wassertank, gepolsterte Füße, Wimpern und Pflanzennahrung folgen den gelesenen ADW-Stellen. SanDiego51 trennt Dromedar mit einem Höcker und Trampeltier mit zwei. Überwiegend Haustier und verwildert in Australien; keine Wildkamel-IUCN-Kategorie wird übertragen. Wasser bleibt nötig.",
+        "extraActualSourceReads": [],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     },
     {
@@ -2068,7 +3030,7 @@
       "limits": "Alter gehört zur Beschreibung eines Merkmals. Die Karte unterscheidet junge und ältere Tiere.",
       "rights": "Neue eigene deutsche Lernaufgaben. Keine fremden Texte, Fotos, Logos oder Modelle übernommen. Bestehende Bildrechte unverändert.",
       "nextReview": "Vor fachlicher Gesamtfreigabe sowie bei Änderungen der zugrundeliegenden Tierkarte.",
-      "teachingContentSHA256": "505944b58c7b1043d4da1d70452ef545540d5aa96057377a4ce73b1b9da4851d",
+      "teachingContentSHA256": "6b3d31b77b248ebe9f763444cecc4cbededa730c596bf64cf3012006db4c47ce",
       "originalRelated": [
         "science-flight",
         "science-foodweb",
@@ -2117,7 +3079,8 @@
           "anchor": "Commons119–122AndreasWeithadultPoland;128–141CCBY-SA4.0",
           "finding": "Photoillustratesadultnotjuvenileandnotflightmeasurement.",
           "checkedOn": "2026-10-18"
-        }
+        },
+        "visualCountercheck": "18Oct2026 actual current local file personally viewed in24-photo contact sheets; Dromedary/Jaguar additionally opened full-size. Existing alt/visible traits checked; Jaguar wording corrected. This step is not an actual complete article screenshot or physical-device review."
       },
       "sourceAddition20261018": {
         "before": [
@@ -2134,10 +3097,35 @@
           {
             "label": "NABU · Greifvogel-Flugbilder: Spannweitenvergleich",
             "url": "https://www.nabu.de/imperia/md/content/nabude/vogelschutz/27.pdf"
+          },
+          {
+            "label": "NABU · Seeadler: Lebensraum und Gefieder",
+            "url": "https://www.nabu.de/tiere-und-pflanzen/voegel/portraets/seeadler/"
+          },
+          {
+            "label": "Nationalpark Donau-Auen · Seeadler, Thermik und Altersmerkmale",
+            "url": "https://www.donauauen.at/aktuelles/blog/seeadler-in-den-donau-auen-beobachten"
           }
         ],
-        "reason": "Zusätzliche tatsächlich gelesene passende Quelle für eine bestehende Aussage; Artikeltext, Maß, Grundfrage, Antworten, Medien-ID und alle alten Quellen erhalten.",
-        "readAnchor": "716–717page13 explicitlywhite-tailedeagle200–240cmspan. Text/OCRread; screenshotwrapperreturnednoactualimage, directPDF403. No claimpersonalviewofPDFpage; outdatedRLstatustextnotcopied."
+        "reason": "Gezielte tatsächlich gelesene Quellenzusätze für vorhandene Aussagen; alle ursprünglichen Quellen und Artikelwerte erhalten.",
+        "readAnchor": "716–717page13 explicitlywhite-tailedeagle200–240cmspan. Text/OCRread; screenshotwrapperreturnednoactualimage, directPDF403. No claimpersonalviewofPDFpage; outdatedRLstatustextnotcopied.; 28/76/82/86/93; northGermany/coast/lakes/rivers;4mphoto not measurement; 200date12Feb2024;206risingwarm air/soaring;219–223adultjuvenile/tail/fish/carrion. Confused Kaiseradler age sentence not copied.",
+        "sourcesAddedWithEvidence": [
+          {
+            "url": "https://www.nabu.de/imperia/md/content/nabude/vogelschutz/27.pdf",
+            "readAnchor": "716–717page13 explicitlywhite-tailedeagle200–240cmspan. Text/OCRread; screenshotwrapperreturnednoactualimage, directPDF403. No claimpersonalviewofPDFpage; outdatedRLstatustextnotcopied.",
+            "reason": "Zusätzliche tatsächlich gelesene passende Quelle für eine bestehende Aussage; Artikeltext, Maß, Grundfrage, Antworten, Medien-ID und alle alten Quellen erhalten."
+          },
+          {
+            "url": "https://www.nabu.de/tiere-und-pflanzen/voegel/portraets/seeadler/",
+            "readAnchor": "28/76/82/86/93; northGermany/coast/lakes/rivers;4mphoto not measurement",
+            "reason": "Vorhandene norddeutsche Beispielregion und Lebensraum-/Gefiederabgrenzung direkt belegen."
+          },
+          {
+            "url": "https://www.donauauen.at/aktuelles/blog/seeadler-in-den-donau-auen-beobachten",
+            "readAnchor": "200date12Feb2024;206risingwarm air/soaring;219–223adultjuvenile/tail/fish/carrion. Confused Kaiseradler age sentence not copied.",
+            "reason": "Vorhandenen Zusatz über aufsteigende Luft und einzelne Altersmerkmale mit gelesener Beobachtungserklärung belegen."
+          }
+        ]
       },
       "currentReviewStatus20261018": {
         "status": "teilgeprüft-und-gezielt-korrigiert",
@@ -2168,6 +3156,58 @@
         },
         "reason": "Only wrong-answer grammar; actual answer-code/restore compatibility must be checked before acceptance.",
         "historicalOriginalArticleSHA256Retained": "097dd69415e373e4d564abf333604fbab62c22407abc233249e33a8d8065cfbb"
+      },
+      "historicalSourceAdditionBeforeFinalCountercheck20261018": {
+        "before": [
+          {
+            "label": "RSPB · Große Greifvögel",
+            "url": "https://www.rspb.org.uk/birds-and-wildlife/birds-of-the-month/august-birds-of-the-month"
+          }
+        ],
+        "after": [
+          {
+            "label": "RSPB · Große Greifvögel",
+            "url": "https://www.rspb.org.uk/birds-and-wildlife/birds-of-the-month/august-birds-of-the-month"
+          },
+          {
+            "label": "NABU · Greifvogel-Flugbilder: Spannweitenvergleich",
+            "url": "https://www.nabu.de/imperia/md/content/nabude/vogelschutz/27.pdf"
+          }
+        ],
+        "reason": "Zusätzliche tatsächlich gelesene passende Quelle für eine bestehende Aussage; Artikeltext, Maß, Grundfrage, Antworten, Medien-ID und alle alten Quellen erhalten.",
+        "readAnchor": "716–717page13 explicitlywhite-tailedeagle200–240cmspan. Text/OCRread; screenshotwrapperreturnednoactualimage, directPDF403. No claimpersonalviewofPDFpage; outdatedRLstatustextnotcopied."
+      },
+      "teachingContentBeforeFinalSourceCountercheckSHA256": "505944b58c7b1043d4da1d70452ef545540d5aa96057377a4ce73b1b9da4851d",
+      "currentAdditionalSourceCountercheck20261018": {
+        "locationFollowup20261018": {
+          "source": "https://www.nabu.de/tiere-und-pflanzen/voegel/portraets/seeadler/",
+          "anchor": "28,63,76,82,86,93",
+          "finding": "Northern German states; northGermany with old nesting trees and nearby coasts/lakes/rivers. Northeast-lakes example is within stated broad region; no exact nesting coordinate guaranteed. Current2–2.4m source-specific span comes from separately read NABUPDF, not this profiles1.8–2.4m alternative. No country count or genericthreat category copied."
+        }
+      },
+      "completeIndividualAICountercheck20261018": {
+        "registryId": "topics-animals:animal-white-tailed-eagle",
+        "articleSHA256": "9d313926ad4764007951d610624e61e1b08ec0ee1b690a465304afe8da4ed4a9",
+        "teachingSHA256": "6b3d31b77b248ebe9f763444cecc4cbededa730c596bf64cf3012006db4c47ce",
+        "currentFindings": "2–2,4m Spannweite folgt NABU-PDF-Text/OCR13/716–717; keine erfundene Bildsichtung oder Übernahme der alten PDF-Roten-Liste. NABU belegt Norddeutschland und Gewässer, RSPB Altersgefieder und Nahrung, Donau-Auen206/219–223 die Thermik. Die grammatisch falsche Antwort ist mit erhaltener Lösung, Position und Altpasszuordnung korrigiert. Kein genauer Brutpunkt oder pauschales globales Statusurteil.",
+        "extraActualSourceReads": [],
+        "currentBuiltProofs": {
+          "master-retained-animals-final-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json",
+            "sha256": "f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-retained-animals-final-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json",
+            "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "status": "einzeln fachlich und pädagogisch KI-geprüft; technische Endabnahme offen"
       }
     }
   ],
@@ -2336,7 +3376,70 @@
       "before": null,
       "after": "Das Originalfoto wurde aus zwölf unterschiedlich fokussierten Aufnahmen zusammengesetzt. Es zeigt keine einzelne unveränderte Momentaufnahme.",
       "reason": "Commons125 explicitly discloses12-image focus stack; distinguish original processing from own resize. No image pixels modified."
+    },
+    "jaguar": {
+      "changes": [
+        {
+          "field": "author",
+          "before": "Giles Laurent",
+          "after": "© Giles Laurent · gileslaurent.com"
+        },
+        {
+          "field": "alt_de",
+          "before": "Ein Jaguar mit schwarzem Rosettenmuster steht vor grünen Pflanzen auf einem Felsen.",
+          "after": "Ein Jaguar mit schwarzem Rosettenmuster blickt zwischen grünen Pflanzen hervor."
+        }
+      ],
+      "reason": "18Oct2026 actual original-source attribution paragraph plus personally viewed current photo; no asset pixels modified. Optional external notifications not sent."
+    },
+    "western-lowland-gorilla": {
+      "changes": [
+        {
+          "field": "author",
+          "before": "Mira Meijer, Burgers’ Zoo",
+          "after": "Mira Meijer, Burgers’ Zoo · https://www.burgerszoo.nl/gorilla"
+        }
+      ],
+      "reason": "18Oct2026 actual original-source attribution paragraph plus personally viewed current photo; no asset pixels modified. Optional external notifications not sent."
     }
   },
-  "currentCountercheckScope20261018": "Aktuelle kanonische24Altartikel/Werkstätten und passende Quellen gelesen, konkrete Korrekturen/Quellenzusätze/Medienbefunde einzeln festgehalten. Aktuelle funktionale48-Karten-Matrix liegt vor; keine pauschale abgeschlossene Ganzartikel-Fachfreigabe aller24altenKarten. Insbesondere Maßrichtung Kaiserpinguin und verbleibende einzelne Quellen-/Medienabdeckungen weiterverfolgen, nicht aus alter Veröffentlichung als fertig ableiten."
+  "currentCountercheckScope20261018": "Aktuelle kanonische24Altartikel/Werkstätten und passende Quellen gelesen, konkrete Korrekturen/Quellenzusätze/Medienbefunde einzeln festgehalten. Aktuelle funktionale48-Karten-Matrix liegt vor; keine pauschale abgeschlossene Ganzartikel-Fachfreigabe aller24altenKarten. Insbesondere Maßrichtung Kaiserpinguin und verbleibende einzelne Quellen-/Medienabdeckungen weiterverfolgen, nicht aus alter Veröffentlichung als fertig ableiten.",
+  "currentSourceMediaFollowup20261018": {
+    "fromCandidate": "408315a1d1c6bef1f4ceba4cf74952d5315b4cad",
+    "meaning": "Quellen-/Urheberbefunde des noch unveröffentlichten eingefrorenen Kandidaten39 kontrolliert in Master zurückgeführt. Kein Merge/Bereitstellungsbeleg; engeMaster-Seeadlerantwortkorrektur erhalten. Neue tatsächliche UI-/Endabnahme separat erforderlich."
+  },
+  "completeIndividualAIReviewStatus": {
+    "reviewedOn": "2026-10-18",
+    "retainedSpecies": 24,
+    "registeredIds": [
+      "topics-animals:animal-african-savanna-elephant",
+      "topics-animals:animal-lion",
+      "topics-animals:animal-cheetah",
+      "topics-animals:animal-bengal-tiger",
+      "topics-animals:animal-giraffe",
+      "topics-animals:animal-giant-panda",
+      "topics-animals:animal-western-lowland-gorilla",
+      "topics-animals:animal-bornean-orangutan",
+      "topics-animals:animal-polar-bear",
+      "topics-animals:animal-emperor-penguin",
+      "topics-animals:animal-blue-whale",
+      "topics-animals:animal-common-bottlenose-dolphin",
+      "topics-animals:animal-orca",
+      "topics-animals:animal-common-octopus",
+      "topics-animals:animal-green-sea-turtle",
+      "topics-animals:animal-red-kangaroo",
+      "topics-animals:animal-koala",
+      "topics-animals:animal-jaguar",
+      "topics-animals:animal-honey-bee",
+      "topics-animals:animal-axolotl",
+      "topics-animals:animal-whale-shark",
+      "topics-animals:animal-garden-cross-spider",
+      "topics-animals:animal-dromedary",
+      "topics-animals:animal-white-tailed-eagle"
+    ],
+    "build": "a3b58eb6e952a2db",
+    "externalHumanGate": false,
+    "fullTechnicalAcceptance": false,
+    "remaining": "Neue tatsächliche vollständige Pflichtabnahme am endgültigen Master-/Lieferstand; lokale News-Kaltstartgrenze bleibt separat offen."
+  }
 }

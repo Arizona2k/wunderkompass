@@ -35,14 +35,19 @@ export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='n
   const titleInk=await p.locator('#world-topic-title').evaluate(e=>{const range=document.createRange();range.selectNodeContents(e);return [...range.getClientRects()].map(r=>({left:r.left,right:r.right}));});
   assert.ok(titleInk.every(r=>r.left>=-2&&r.right<=width+2),'new animal title remains fully visible');
 
-  const topic=topics.find(t=>t.id===data.id),measure=p.locator('.animal-measure');
-  const weight=['g','kg'].includes(topic.animal.size.unit);await measure.getByRole('heading',{name:weight?'Ein Gefühl für das Gewicht':'Ein Gefühl für die Größe',exact:true}).waitFor();
-  const compare=measure.getByRole('button',{name:weight?'Einen Gewichtsvergleich zeigen':'Einen Größenvergleich zeigen',exact:true});if(await compare.getAttribute('aria-expanded')!=='true')await compare.click();
-  assert.ok((await measure.innerText()).includes(topic.animal.size.measurement_de));await geometry(measure,data.id+' exact measurement direction '+width);
-  if(topic.animal.size.kind==='upper-bound')assert.ok((await measure.innerText()).includes('keinen Mindestwert'));
+
 
   if(shots&&[320,390,1440].includes(width)&&state==='normal')await visual.screenshot({path:path.join(shots,'animal-new-'+data.id.slice(7)+'-'+width+'.png'),animations:'disabled'});
  }
+
+ const topic=topics.find(t=>t.id===data.id),measure=p.locator('.animal-measure');
+ const weight=['g','kg'].includes(topic.animal.size.unit);await measure.getByRole('heading',{name:weight?'Ein Gefühl für das Gewicht':'Ein Gefühl für die Größe',exact:true}).waitFor();
+ const compare=measure.getByRole('button',{name:weight?'Einen Gewichtsvergleich zeigen':'Einen Größenvergleich zeigen',exact:true});if(await compare.getAttribute('aria-expanded')!=='true')await compare.click();
+ assert.ok((await measure.innerText()).includes(topic.animal.size.measurement_de));await geometry(measure,data.id+' exact measurement direction '+width);
+ if(topic.animal.size.kind==='upper-bound')assert.ok((await measure.innerText()).includes('keinen Mindestwert'));
+ await measure.getByText(topic.animal.size.measurement_de+': '+topic.animal.size.text_de,{exact:true}).waitFor();assert.equal(await measure.locator('.measure-bars strong').first().innerText(),(topic.animal.size.kind==='typical'?'etwa':'bis etwa')+' '+topic.animal.size.max.toLocaleString('de-DE',{maximumFractionDigits:3})+' '+topic.animal.size.unit);
+ const sources=p.locator('.world-sources');if(!await sources.evaluate(e=>e.open))await sources.locator('summary').click();await sources.getByRole('link').first().waitFor();assert.deepEqual(await sources.getByRole('link').evaluateAll(links=>links.map(a=>a.getAttribute('href'))),data.sourceUrls,'all actual old/new article sources remain exact');
+ if(shots&&data.id==='animal-jaguar'&&[320,1440].includes(width)&&state==='normal')await measure.screenshot({path:path.join(shots,'animal-jaguar-corrected-measure-'+width+'.png'),animations:'disabled'});
 
  const levels=root.locator('.animal-inquiry-levels button');
  for(let level=0;level<3;level++){
@@ -59,7 +64,7 @@ export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='n
   await geometry(root,data.id+' '+width+' level'+level);
   if(shots&&data.id==='animal-whale-shark')await root.screenshot({path:path.join(shots,'animal-workshop-'+state+'-'+level+'-'+width+'.png'),animations:'disabled'});
  }
- return {id:data.id,width,state,levels:[0,1,2],bothEvidence:true,wrongAndCorrect:true,keyboard,geometry:true};
+ return {id:data.id,width,state,levels:[0,1,2],bothEvidence:true,wrongAndCorrect:true,keyboard,geometry:true,measurement:true,sourceLinks:true};
 }
 export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix=widths}={}){
  const observed=[],focusChecks=[],start=performance.now(),searchFocus=await delayedSearchFocus(browser,base,monitor,shots);

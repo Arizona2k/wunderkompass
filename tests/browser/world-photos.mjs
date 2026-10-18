@@ -23,7 +23,7 @@ export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
   page.on('request',request=>{if(/world-photos-.*\.json/.test(request.url()))requests++;});
   try{
    await page.goto(base);await ready(page);assert.equal(requests,0,'Home has immediate complete credits without the deferred catalog');
-   for(const id of Object.keys(photos)){const figure=await inspect(page,id);observed.push({id,width});if(id==='whale-shark')await figure.screenshot({path:shots+'/world-photo-rights-'+width+'.png'});}
+   for(const id of Object.keys(photos)){const figure=await inspect(page,id);observed.push({id,width});if(['jaguar','western-lowland-gorilla'].includes(id))await figure.screenshot({path:shots+'/world-photo-retained-'+id+'-'+width+'.png'});if(id==='whale-shark')await figure.screenshot({path:shots+'/world-photo-rights-'+width+'.png'});}
    assert.equal(requests,1,'One verified metadata request shared by all49 pictures');
   }finally{await context.close();}
  }
