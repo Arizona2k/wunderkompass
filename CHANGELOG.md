@@ -1,3 +1,7 @@
+## In Vorbereitung · Quellen und Lernaufträge im Naturatlas, 18.10.2026
+
+34 bisherige Naturerklärungen mit ihren Grundtexten und Begriffsverbindungen gegengelesen. 21 Quellenbelege ergänzt und Belegstellen verständlicher beschriftet. Borneos Kalimantan-Erklärung und Frage auf den tatsächlichen NASA-Kontext begrenzt; Antworten, Lösungen und Lernkennungen erhalten. Einen Grammatikfehler beim Schildvulkan korrigiert. Lokale Breiten-/Schrift-, Rückweg-, native Vergrößerungs- und kalte Offlineprüfungen bestanden; vollständige Pflichtabnahme und Bereitstellung bleiben offen.
+
 ## In Vorbereitung · gemeinsame Übersichtskarten, 18.10.2026
 
 Eigene unbeschriftete Kartenunterlage, lesbare Ortsmarkierungen und einzeln erreichbare nahe Orte; ursprüngliche Reisegrafiken erhalten. Wostok-Stationslage quellenbezogen korrigiert, Lufttemperaturrekord getrennt belegt. Veralteten Hinweis auf ausstehende externe Fachabnahme aus Buch und Naturatlas entfernt; begrenzte Quellenprüfung weiter erklärt. Lokal gezielt einschließlich nativer Vergrößerung, kaltem Offline und Pass-Sicherung geprüft; vollständige Pflichtabnahme und tatsächliche Bereitstellung offen.

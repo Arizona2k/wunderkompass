@@ -12085,5 +12085,84 @@
       "checkedOn": "2026-10-14",
       "basis": "NRICH material remains protected. Only factual mathematical concepts used to create distinct own rectangle/arrow activities. No source task, interactivity, card tool, 3x3 puzzle, solution, worksheet, illustration, wording or logo reproduced; no public-domain, unrestricted licence or endorsement claimed."
     }
-  ]
+  ],
+  "natureCrossreadFollowup20261018": {
+    "status": "25actual linked word definitions/learning/questions/feedback read in related nature context; all25real UI destinations at320/1440 and native200Large640/320 plus cold passed. One observe-only grammar correction complete; not fresh full factual acceptance of all180words.",
+    "words": [
+      "Biodiversität",
+      "Delta",
+      "Einzugsgebiet",
+      "Erosion",
+      "Gletscher",
+      "Jahreszeiten",
+      "Kartenprojektion",
+      "Kelvin",
+      "Klima",
+      "Korallen",
+      "Kraft",
+      "Lava",
+      "Lebensraum",
+      "Maßstab",
+      "Meter",
+      "Mittelwert",
+      "Niederschlag",
+      "Plattentektonik",
+      "Schildvulkan",
+      "Sediment",
+      "Tundra",
+      "Verdunstung",
+      "Verwitterung",
+      "Vulkan",
+      "Vulkanasche"
+    ],
+    "correction": {
+      "term": "Schildvulkan",
+      "field": "observe",
+      "before": "Zeichne ein breites Profil aus mehreren gedachte Schichten. Schreibe langsamer Aufbau aus vielen Vorgängen daneben. Das Papier enthält keine realen Höhen, Datierungen oder Sicherheitsgrenzen.",
+      "after": "Zeichne ein breites Profil aus mehreren gedachten Schichten. Schreibe langsamer Aufbau aus vielen Vorgängen daneben. Das Papier enthält keine realen Höhen, Datierungen oder Sicherheitsgrenzen."
+    },
+    "questionObjectsAndModels": "Unchanged; no central registry mutation.",
+    "currentCanonicalWordLearningSHA256": "4dab0e903d387dbfe100de61244c04407f2fa1436eae706085cb4dd2ff08bb4e",
+    "actualProofs": {
+      "nature-existing34-early": {
+        "path": "/workspace/work/wk-continuation/nature-existing34-early/report.json",
+        "sha256": "e66f34b4419047ae474230f7b12bc1dde69266a34f6876c3fbfb3720ee0ee5e1",
+        "build": "1bb71577df6ea787",
+        "sourceDigest": "474b76eb9fddbc2479bde15bca4a1e99369daaf892fd029770d5ecffb5622fa6",
+        "browser": "154.0.8037.57"
+      },
+      "nature-existing34-built": {
+        "path": "/workspace/work/wk-continuation/nature-existing34-built/report.json",
+        "sha256": "d99255665dfb138267a70548901295af4fd697cac9865f4d8aed8f5622e193c2",
+        "build": "1bb71577df6ea787",
+        "sourceDigest": "474b76eb9fddbc2479bde15bca4a1e99369daaf892fd029770d5ecffb5622fa6",
+        "browser": "154.0.8037.57"
+      },
+      "nature-existing34-native-offline": {
+        "path": "/workspace/work/wk-continuation/nature-existing34-native-offline/report.json",
+        "sha256": "9ca38652f24153d5bec9d57322605b7122ea3381c2f217fcd7a717b9c4dd0364",
+        "build": "1bb71577df6ea787",
+        "sourceDigest": "474b76eb9fddbc2479bde15bca4a1e99369daaf892fd029770d5ecffb5622fa6",
+        "browser": "154.0.8037.57"
+      }
+    },
+    "unchangedBookPartScopeAfterSourceOnlyFollowup": {
+      "priorSourceDigest": "474b76eb9fddbc2479bde15bca4a1e99369daaf892fd029770d5ecffb5622fa6",
+      "currentSourceDigest": "180b00cc07f380be02dd7284d8c191948d33475589f994fba833fb0a26c73c62",
+      "only11AllowedFilesChanged": [
+        "app/nature-content.json",
+        "app/nature-studies/nature-study-30ea7d4de23783d1.json",
+        "app/nature-studies/nature-study-3297cb78604badb2.json",
+        "app/nature-studies/nature-study-3b96c2072e1d9bc4.json",
+        "app/nature-studies/nature-study-4c52180f5ced5d98.json",
+        "app/nature-studies/nature-study-ed7206a009fdb955.json",
+        "app/nature-studies/nature-study-f2bda0e1459059f8.json",
+        "app/nature-study-index-integrity.json",
+        "app/nature-study-index.json",
+        "exports/content/index.json",
+        "exports/content/nature-learning.json"
+      ],
+      "all68QuestionObjectsAndOtherLearningFieldsUnchanged": true
+    }
+  }
 }

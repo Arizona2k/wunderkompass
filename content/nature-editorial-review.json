@@ -3592,5 +3592,981 @@
       "twoOrdinaryBrowserAssertions": "Only updated actual source provenance copy plus rejecting obsolete pending-human wording; no matrix, engine, test selection or release-gate scope change.",
       "knownReleaseDeficits": "Historical fullQuality123 red in foundation fault test; no fresh full3engine/complete150MB/release proof, no push, merge or delivery of this local cohort."
     }
+  },
+  "individualExistingCountercheckRound20261018": {
+    "status": "34retained nature explanations individually factually and pedagogically self-counterchecked; narrowly corrected and actual scoped UI/native/cold proofs complete. Remaining34integrated nature explanations and full required release gates stay open.",
+    "originalEntriesSnapshot": "work/wk-continuation/nature-existing34-before-current-source-edit.json",
+    "factCorrections": [
+      {
+        "id": "borneo",
+        "reason": "An unqualified assertion that Kalimantan is never the whole island conflicts with official UK PCGN Indonesia Factfile footnote5: Indonesian name for Borneo. NASA uses Indonesian portion in this specific scene. Qualify exposition, question context and correct feedback; all answer choices, correct index0, hint and wrong reasons remain identical.",
+        "sourceURLs": [
+          "https://science.nasa.gov/earth/earth-observatory/kalimantan-borneo-indonesia-78461/",
+          "https://assets.publishing.service.gov.uk/media/67852932c6428e0131881700/Indonesia_Toponymic_Factfile.pdf"
+        ],
+        "actualReadAnchors": "NASA selected267,269–272; PCGN PDFpage1line57 footnote5. PDF text actually read, no PDF screenshot claim.",
+        "fields": {
+          "deeper": {
+            "before": "Die NASA beschreibt für eine historische Aufnahme aus Kalimantan Rodungsflächen und Flüsse mit mitgeführtem Material. Kalimantan ist der indonesische Teil Borneos, nicht ein anderer Name für die ganze Insel. Eine Aufnahme von 2000 ist keine aktuelle Karte sämtlicher Wälder Borneos.",
+            "after": "Die NASA beschreibt für eine historische Aufnahme Rodungsflächen und Flüsse mit mitgeführtem Material. Mit Kalimantan meint sie hier den indonesischen Teil Borneos. Im Indonesischen kann Kalimantan auch die ganze Insel bezeichnen; deshalb ist der Zusammenhang wichtig. Eine Aufnahme von 2000 ist keine aktuelle Karte sämtlicher Wälder Borneos."
+          }
+        },
+        "questionFields": {
+          "prompt": {
+            "before": "Eine Quelle beschreibt eine Fläche in Kalimantan. Welche räumliche Einordnung ist richtig?",
+            "after": "Die NASA-Quelle beschreibt eine Fläche in Kalimantan. Welche räumliche Einordnung ist richtig?"
+          },
+          "why": {
+            "before": "Kalimantan bezeichnet den indonesischen Teil Borneos. Die Beobachtung eines Beispiels darf nicht ungeprüft auf alle Wälder übertragen werden.",
+            "after": "In dieser NASA-Quelle meint Kalimantan den indonesischen Teil Borneos. Die Beobachtung eines Beispiels darf nicht ungeprüft auf alle Wälder übertragen werden."
+          }
+        },
+        "scopeProtection": "QUALITY.md necessary factual correction exception; original baseline retained. Same stable nature identity/route, same choices/order/correct answer/hint/wrong feedback. NatureStudy answer state is local useState, no new persisted answer identity or schema."
+      }
+    ],
+    "protectedQuestionScope": "All68choices/correct-indices/order/hints/wrong-reasons unchanged. Only Borneo prompt and correct explanation narrowly source-qualified under QUALITY correction exception; other67nature question objects and all185world questions unchanged. Original fixed baseline untouched.",
+    "sources": "Actually read selected publisher text/dated tables archived in existing work source receipts; GVP current direct page timed out, indexed actual publisher excerpt and directly read JMA distinguished. Some tool internal references misrouted to other source titles; those responses are not evidence for the intended source. Stable-URL read receipts used.",
+    "relatedWordFollowup": {
+      "term": "Schildvulkan",
+      "field": "observe",
+      "before": "Zeichne ein breites Profil aus mehreren gedachte Schichten. Schreibe langsamer Aufbau aus vielen Vorgängen daneben. Das Papier enthält keine realen Höhen, Datierungen oder Sicherheitsgrenzen.",
+      "after": "Zeichne ein breites Profil aus mehreren gedachten Schichten. Schreibe langsamer Aufbau aus vielen Vorgängen daneben. Das Papier enthält keine realen Höhen, Datierungen oder Sicherheitsgrenzen.",
+      "reason": "Necessary grammatical agreement: mehreren gedachten Schichten. No question/choice/model/connection change.",
+      "originalSHA256": "2fea3a723d973447b19e8ef7ee247142f57d1aa999ec913f61e6d4158021fe9e"
+    },
+    "all34SourceAnchors": "Readable German selected passages, checkedOn18October only after actual individual reading. Historical exact values, current conditions, media reuse and source shortcomings bounded explicitly.",
+    "UIProof": {
+      "proofs": {
+        "nature-existing34-early": {
+          "path": "/workspace/work/wk-continuation/nature-existing34-early/report.json",
+          "sha256": "e66f34b4419047ae474230f7b12bc1dde69266a34f6876c3fbfb3720ee0ee5e1",
+          "build": "1bb71577df6ea787",
+          "sourceDigest": "474b76eb9fddbc2479bde15bca4a1e99369daaf892fd029770d5ecffb5622fa6",
+          "browser": "154.0.8037.57"
+        },
+        "nature-existing34-built": {
+          "path": "/workspace/work/wk-continuation/nature-existing34-built/report.json",
+          "sha256": "d99255665dfb138267a70548901295af4fd697cac9865f4d8aed8f5622e193c2",
+          "build": "1bb71577df6ea787",
+          "sourceDigest": "474b76eb9fddbc2479bde15bca4a1e99369daaf892fd029770d5ecffb5622fa6",
+          "browser": "154.0.8037.57"
+        },
+        "nature-existing34-native-offline": {
+          "path": "/workspace/work/wk-continuation/nature-existing34-native-offline/report.json",
+          "sha256": "9ca38652f24153d5bec9d57322605b7122ea3381c2f217fcd7a717b9c4dd0364",
+          "build": "1bb71577df6ea787",
+          "sourceDigest": "474b76eb9fddbc2479bde15bca4a1e99369daaf892fd029770d5ecffb5622fa6",
+          "browser": "154.0.8037.57"
+        },
+        "nature-existing34-source-followup-built": {
+          "path": "/workspace/work/wk-continuation/nature-existing34-source-followup-built/report.json",
+          "sha256": "2536b70d5a41e45eb2e6ddf720975c76750c1337c9c6aaf23700c14c30f5df1c",
+          "build": "cff216741a9e6edc",
+          "sourceDigest": "180b00cc07f380be02dd7284d8c191948d33475589f994fba833fb0a26c73c62",
+          "browser": "154.0.8037.57"
+        },
+        "nature-existing34-source-followup-native-offline": {
+          "path": "/workspace/work/wk-continuation/nature-existing34-source-followup-native-offline/report.json",
+          "sha256": "283ea35476393172c74242913eeb7385bb2b183dcd67f834ba6f96358a6ad912",
+          "build": "cff216741a9e6edc",
+          "sourceDigest": "180b00cc07f380be02dd7284d8c191948d33475589f994fba833fb0a26c73c62",
+          "browser": "154.0.8037.57"
+        },
+        "nature-existing34-native-viewport-followup": {
+          "path": "/workspace/work/wk-continuation/nature-existing34-native-viewport-followup/report.json",
+          "sha256": "fef2a79c4338192542c3e6abceaa92434ee2276bc4eeb5228191ef718ebc5aa0",
+          "build": "cff216741a9e6edc",
+          "sourceDigest": "180b00cc07f380be02dd7284d8c191948d33475589f994fba833fb0a26c73c62",
+          "browser": "Same system Chromium154; actual native viewport/DPR recorded, not another engine"
+        }
+      },
+      "actualBrowser": "Chromium154.0.8037.57 only; not currentCI156/Firefox/WebKit or physical devices.",
+      "priorBuild": "1bb71577df6ea787",
+      "priorSourceDigest": "474b76eb9fddbc2479bde15bca4a1e99369daaf892fd029770d5ecffb5622fa6",
+      "articleWidthFontCases": 544,
+      "relatedWordCases": 50,
+      "globalSearchReciprocalAndHistoryFocusCases": 68,
+      "native200LargeAt640CSS": {
+        "articles": 34,
+        "words": 25,
+        "everyChoiceSourcesAndReload": true
+      },
+      "native200LargeAt320CSS": {
+        "articles": 34,
+        "words": 25,
+        "everyChoiceSourcesAndReload": true
+      },
+      "separateHomePreparedPreviouslyUnvisitedCold": {
+        "articles": 34,
+        "words": 25,
+        "actualServerStoppedConnectionRefusedNativeOffline": true,
+        "everyChoiceSourcesAndReload": true
+      },
+      "currentFinalBuild": "cff216741a9e6edc",
+      "currentFinalSourceDigest": "180b00cc07f380be02dd7284d8c191948d33475589f994fba833fb0a26c73c62",
+      "soleLaterChange": "Six actually missing citations appended; Mariana pressure citation already present, not duplicated. Atomically rejected duplicate draft never wrote root data.",
+      "currentSupplementarySourceCases": 96,
+      "currentSupplementaryNative640And320AndColdCasesEach": 6,
+      "exactSourceReuseBoundary": {
+        "priorSourceDigest": "474b76eb9fddbc2479bde15bca4a1e99369daaf892fd029770d5ecffb5622fa6",
+        "currentSourceDigest": "180b00cc07f380be02dd7284d8c191948d33475589f994fba833fb0a26c73c62",
+        "only11AllowedFilesChanged": [
+          "app/nature-content.json",
+          "app/nature-studies/nature-study-30ea7d4de23783d1.json",
+          "app/nature-studies/nature-study-3297cb78604badb2.json",
+          "app/nature-studies/nature-study-3b96c2072e1d9bc4.json",
+          "app/nature-studies/nature-study-4c52180f5ced5d98.json",
+          "app/nature-studies/nature-study-ed7206a009fdb955.json",
+          "app/nature-studies/nature-study-f2bda0e1459059f8.json",
+          "app/nature-study-index-integrity.json",
+          "app/nature-study-index.json",
+          "exports/content/index.json",
+          "exports/content/nature-learning.json"
+        ],
+        "all68QuestionObjectsAndOtherLearningFieldsUnchanged": true
+      },
+      "actualNativeViewportFollowup": {
+        "sourcePanes": 12,
+        "reefBeforeAfterViews": 4,
+        "newViewportPNGs": 28,
+        "allHaveRenderedContent": true,
+        "selectedCriticalViewsPersonallyInspected": true
+      },
+      "captureLimit": "14native locator PNGs were single-colour blank clipping captures, not empty product UI. Preserved and excluded from visual proof; real viewport captures via existing helper show current content. Normal/cold locator captures and DOM/actual native geometry assertions remain valid.",
+      "originalPNGCount": 80,
+      "originalPNGBytes": 8368720,
+      "excludedBlankOriginals": 14,
+      "usableContentPNGs": 66,
+      "notAComplete150MBOr3EngineProof": true,
+      "bindingBoundary": "Dossier binding changes sourceDigest, not the tested app build or the actual scope of earlier proofs."
+    },
+    "supplementarySourceRecords": 21,
+    "individualRecords": [
+      {
+        "id": "sahara",
+        "actualSourceCounterread": "NASA selected mesas/dry riverbeds/erosion plus actual Guinness hot-versus-largest-desert distinction.",
+        "criticalTeachingCounterread": "Rock or gravel does not exclude desert. Correct answer and both wrong reasons separate material, colour and aridity; the observation classifies described evidence, not a photograph colour alone.",
+        "limitsAndRejectedSourceClaims": "No historical dimensions or current travel/surface conditions inferred; no NASA picture reused.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Verwitterung",
+          "reason": "Verwitterung verändert Gestein an Ort und Stelle. Zusammen mit der Abtragung durch Wasser und Wind hilft sie, auch felsige Wüstenlandschaften zu erklären."
+        },
+        "actualCurrentLearningSHA256": "e20c93ddbd9710c81fa41e4a9b763f2a4b5032ab472454da0ac73ff48604e428",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": "cff216741a9e6edc",
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": true,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "00a53f46e7c4d0b173a00b5904ede7b77fb1bf9ed0bee02babe3998b20385815",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "antarctic-desert",
+        "actualSourceCounterread": "BAS selected coastal snowfall versus dry continental interior and accumulation.",
+        "criticalTeachingCounterread": "Large stored ice and low new precipitation can coexist. Stock-versus-input drawing gives a concrete comparison; hint and feedback keep water phase, heat and aridity separate.",
+        "limitsAndRejectedSourceClaims": "Coastal snowfall is not generalized to the interior; no universal annual amount or current ice balance.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Niederschlag",
+          "reason": "Niederschlag umfasst auch Schnee. Für eine Kältewüste ist wichtig, wie wenig neu ankommt, nicht wie viel altes Eis bereits gespeichert ist."
+        },
+        "actualCurrentLearningSHA256": "48a1398df052510fd2c22885fccdf91122ad32856af5183a59759fc02cdc68a0",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": "cff216741a9e6edc",
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": true,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "85233f66892d8fc75701ce62e49dd6e082b051a06f02ea6d746b024e3ad9a1e7",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "atacama",
+        "actualSourceCounterread": "NASA Salar de Atacama selected springs/floods/evaporation/salt, plus Atacama Greening cold current/Andes/high pressure.",
+        "criticalTeachingCounterread": "Evaporation and dissolved salts are distinguished. Correct salt-crust choice and wrong reasons do not turn an isolated water event into a permanently wet desert.",
+        "limitsAndRejectedSourceClaims": "Dated false-colour scenes are not current rainfall maps. Do not copy the simplified air-holds-water phrase as a complete physical cause.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Verdunstung",
+          "reason": "Verdunstung erklärt, wie Wasser das eingeschlossene Salzbecken verlassen kann, während Salze zurückbleiben. Trockenheit bedeutet nicht, dass Wasser nie eine Rolle spielt."
+        },
+        "actualCurrentLearningSHA256": "b8894a6b963b05c7b9aef74b36571fa471c60c89504e1e47ebc910677ab6f784",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": "cff216741a9e6edc",
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": true,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "51ba9fb5463b5a9630fffdd565d06456f1c8c00506bcbe096f6c8a4ed06112d2",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "gobi",
+        "actualSourceCounterread": "NASA Gobi Dust Storm selected26April2012 rock/steppe/China-Mongolia; MODIS22August2017 selected winter-cold geography.",
+        "criticalTeachingCounterread": "Dated dust plume supports the recorded event, not current air quality or a wind-blocking political boundary. Date question/hint and individual feedback align.",
+        "limitsAndRejectedSourceClaims": "MODIS source has a faulty square-mile→km² conversion; no source area or temperature extremes copied.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Erosion",
+          "reason": "Erosion schließt das Abtragen und Fortführen von Material ein. Die Staubfahnen der Gobi zeigen ein Beispiel für Transport durch Wind."
+        },
+        "actualCurrentLearningSHA256": "43e5bfe41bf774d1587f0e8c7c38c7f27a3e89b4d21808e8f4544876c104f740",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": "cff216741a9e6edc",
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": true,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "17a8b7efbf8fb0171fe4ca8fdb32f1de70ae0ac4abe627d4775dd5f8cf4d933f",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "amazon-forest",
+        "actualSourceCounterread": "NASA Mapping the Amazon selected largest forest, mapping, transpiration and optical cloud limits.",
+        "criticalTeachingCounterread": "A green satellite surface is not a complete species inventory. Biodiversity connection and optional drawing make the inference limit understandable; clouds do not solve the identification problem.",
+        "limitsAndRejectedSourceClaims": "No old carbon/people proportions, current deforestation total or source imagery copied.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Biodiversität",
+          "reason": "Biodiversität umfasst die Vielfalt des Lebens. Eine bewaldete Fläche allein sagt noch nicht, welche Arten dort vorkommen und wie sie miteinander verbunden sind."
+        },
+        "actualCurrentLearningSHA256": "33f4885cfb6b96bee6056880582c43a004378418ca248de306d5203fa40fe370",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "b40e025044767d00a42c95b57ed060d4c42cbdb6172b93cb74be780642d1f5d5",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "congo-forest",
+        "actualSourceCounterread": "NASA Kisangani selected2001–2024 forest changes versus permanent deforestation; additional directly read NASA carbon study selected living vegetation/variable stocks.",
+        "criticalTeachingCounterread": "Visible cover change is distinct from cause and duration. Question and both wrong reasons separate observation, explanation and filename; forest–water–carbon connection remains bounded.",
+        "limitsAndRejectedSourceClaims": "NASA Kisangani compares74500km² with NorthDakota incorrectly. Do not copy that comparison, old carbon amounts or hectare/acre mistakes.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Lebensraum",
+          "reason": "Ein Lebensraum wird durch seine Bedingungen und Lebewesen geprägt. Änderungen der Baumdecke können solche Bedingungen verändern; ein einzelner Kartenwert erklärt noch nicht alle Folgen."
+        },
+        "actualCurrentLearningSHA256": "d83fe95ba4d3cd5ba9d632ada99ce6dab8e1877726934fa1ba42bde30e981c19",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "83a976ccdd241dfd42f4721d2c01db6047aa7428314f6225c775baa537801c7e",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "borneo",
+        "actualSourceCounterread": "NASA Kalimantan selected Indonesian portion and16July2000 scene; PCGN Indonesia Factfile page2footnote5 identifies Kalimantan as Indonesian name of Borneo; WWF actual orangutan/countries evidence.",
+        "criticalTeachingCounterread": "Necessary source-context correction: exposition, question prompt and correct feedback now explicitly mean the NASA usage. Same answer texts/index0/hint/wrong reasons; spatial inference remains the learning objective.",
+        "limitsAndRejectedSourceClaims": "Regional forest image is not the present whole-island map. Both names can apply to whole island in another linguistic context; no invented universal naming rule.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": "Only source-qualified prompt/why",
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Erosion",
+          "reason": "Erosion beschreibt Abtragung und Weitertransport. Am Beispiel einer veränderten Waldfläche wird deutlich, warum der Zustand des Bodens auch für Wasserwege wichtig ist."
+        },
+        "actualCurrentLearningSHA256": "9e7bf62cf3932c92e2d7afb6fb11b11351973a82a7708474bbd9149e9e9ce101",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": "cff216741a9e6edc",
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": true,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "0ca5aa58d3ab2f750bd79d297e0734d9f12b2a5ce549d08ca6eb54232c9393dc",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "reef",
+        "actualSourceCounterread": "NOAA actual coral polyps/limestone/algal symbiosis and bleaching survival; UNESCO English GBR northeastAustralia/largest-system passage.",
+        "criticalTeachingCounterread": "Distinguish animal, algal partners and skeleton. Three actual process states remove green symbiont symbols and lighten coral; bleaching is not automatically death. Individual answer feedback avoids plant/rock confusion.",
+        "limitsAndRejectedSourceClaims": "Symbol drawing is not microscopy or a recovery forecast. UNESCO Spanish northwest wording conflicts with English northeast; no erroneous direction, species counts or current reef condition copied.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Korallen",
+          "reason": "Die Begriffserklärung hilft dir, Korallen als Tiere zu erkennen. Das Great Barrier Reef zeigt, wie viele solcher Lebewesen gemeinsam eine große Riffstruktur aufbauen können."
+        },
+        "actualCurrentLearningSHA256": "39903e07cc896976de3b8bde9587b07579bcc750fa6ca36846f70c96a9a7a1fa",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": "cff216741a9e6edc",
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": true,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "d3696dfd69170e379de778d903a10d83c641f20ce1e837811dc361871c8fa92d",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "mariana",
+        "actualSourceCounterread": "NOAA Marianas selected ChallengerDeep about36kft/11km and NOAA hydrostatic-pressure selected depth and force/area.",
+        "criticalTeachingCounterread": "Greater water column under the same surface explains higher pressure in the bounded comparison. Kraft destination concerns force, not an invented new pressure measurement.",
+        "limitsAndRejectedSourceClaims": "No exact universal deepest metre, GrandCanyon comparison, marine-mammal bone generalization or diving guidance copied.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Kraft",
+          "reason": "Zum Verstehen von Druck brauchst du die Größe Kraft: Druck beschreibt Kraft pro Fläche. Im Meer trägt die darüberliegende Wassersäule zur Belastung bei; der Begriffslink berechnet keinen echten Tiefseedruck."
+        },
+        "actualCurrentLearningSHA256": "beea23587d90a832238aece82bfb0b5ae2282e0f5056d762361c7c2cc36f343d",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "60cc6e10662a4be5d2c7b884966198315c8c8b144122fb2054b26c177c83b208",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "tundra",
+        "actualSourceCounterread": "NPS Arctic selected low vegetation/short growing period and comparison with alpine tundra.",
+        "criticalTeachingCounterread": "Similar low plants do not imply identical ground, elevation, water or climate. Task asks comparison of conditions; correct choice and wrong reasons stay aligned.",
+        "limitsAndRejectedSourceClaims": "Do not universalize permafrost or growing-season day counts to every tundra; linked Tundra word read as contextual destination.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Tundra",
+          "reason": "Der Begriff hilft dir, eine niedrige, baumfreie Vegetation mit kurzer Wachstumszeit zu beschreiben. Der Kartenpunkt ist ein Beispiel, nicht die gesamte Ausdehnung dieser Lebensräume."
+        },
+        "actualCurrentLearningSHA256": "789fc307a5d2fee4743fea8c919e2981b59592b14df31f8df15b520827683d8d",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "323d3266c29db859e59204aa8330034cf48580c314318d6ad1eeaa7259da55d7",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "temperate-forest",
+        "actualSourceCounterread": "NPS selected fall leaf changes driven by light/temperature/water.",
+        "criticalTeachingCounterread": "Two observations of one tree support only those times and that tree. Individual wrong feedback rejects universal synchronized leaf fall; Jahreszeiten link adds light conditions rather than weather prediction.",
+        "limitsAndRejectedSourceClaims": "Source wording that chlorophyll dies is not a living-organism claim in the app; questionable extra-water-insulation explanation not copied.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Jahreszeiten",
+          "reason": "Jahreszeiten verändern Licht- und Temperaturbedingungen. Der jährliche Blattwechsel vieler Laubbäume macht einen Teil dieser Veränderungen in deiner Umgebung beobachtbar."
+        },
+        "actualCurrentLearningSHA256": "8086222f65dc57ceb2e241aa201c54072fa76c13ed38b044167f6027c7c26c0e",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "fad9f59424c10b1238dc14b16a4491fc5a9add4a3ac2e6cb0a548f6a9651b7e0",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "victoria",
+        "actualSourceCounterread": "NASA selected actual shared Uganda/Kenya/Tanzania lake geography in historical falling-water report.",
+        "criticalTeachingCounterread": "Shared lake water and administrative borders are separate information; question/hint/feedback explicitly reject boundaries as physical walls. Kartenprojektion destination explains representational limits.",
+        "limitsAndRejectedSourceClaims": "2006water levels and historical population/rank or colonial discovery claims are not current facts.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Kartenprojektion",
+          "reason": "Eine Kartenprojektion bildet die gekrümmte Erdoberfläche auf einer Ebene ab. Auch auf einer solchen Karte musst du Wasserfläche und eingezeichnete politische Grenzen auseinanderhalten."
+        },
+        "actualCurrentLearningSHA256": "307620afd9efcfb8b4e2ba0062b5489e5f411ce5d9370da912e52a7db5155a12",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "040345171cafb9c987cb29c6ecb47783a0266db0486cab60c11fd3bc7f62d230",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "baikal",
+        "actualSourceCounterread": "NASA selected deepest freshwater/rift/heat storage; LIN27March2026 selected1642m survey history and recommendation; NASA Night selected freshwater Baikal seal.",
+        "criticalTeachingCounterread": "Same surface area does not establish same volume: depth and basin shape matter. Meter destination is appropriate to distinguish length from area/volume; no area-as-volume illustration.",
+        "limitsAndRejectedSourceClaims": "LIN actual historical measurements differ, not a new sounder run. UNESCO rounded1700m not silently substituted for1642; animal origin not invented.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Plattentektonik",
+          "reason": "Plattentektonik hilft dir, eine Riftzone zu verstehen. Beim Baikal ist die Bewegung im Untergrund mit der Entstehung eines tiefen Seebeckens verbunden."
+        },
+        "actualCurrentLearningSHA256": "c1c57ad57b27f8f31d256b043ac197c452f13dd43b6b4fe679f6e0987d23c15c",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "7bcb8512f30d1fe79798fe112c45c067fca6322c1445caa671f3d40c7570edcd",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "caspian",
+        "actualSourceCounterread": "NASA selected enclosed largest-by-area lake, inflowing rivers, evaporation and salinity gradients.",
+        "criticalTeachingCounterread": "Salt remains as water evaporates. Learning and feedback distinguish water, dissolved material and place name; no claim each water molecule exits only by evaporation.",
+        "limitsAndRejectedSourceClaims": "Largest enclosed body is qualified geographically, not a claim it is ocean-connected. No complete hydrological budget or universal salinity.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Verdunstung",
+          "reason": "Verdunstung beschreibt den Übergang flüssigen Wassers in Wasserdampf. In einem eingeschlossenen See ist sie ein wichtiger Weg, auf dem Wasser das Becken verlassen kann."
+        },
+        "actualCurrentLearningSHA256": "1c2e052bd3751a59fd16e65e839744fe347c08c25d8ca0221465a7d357ff3231",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "4ce67417198999a4b03145cbd5c8bd018fb23238015ba75e0a8fa465cace7b83",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "russia-size",
+        "actualSourceCounterread": "UNData actual area/population fields; NatGeoKids actual largest-country sentence; NASA Ural westernRussia/Europe–Asia boundary; UNGEGN actual regional classification includingNorthernAsia.",
+        "criticalTeachingCounterread": "Area and population are different quantities. Same answer/index and hint retained; projection link explains why the map must not substitute for a stated area comparison.",
+        "limitsAndRejectedSourceClaims": "NatGeo old population, alternative area, one-tenth phrase and political descriptions are not copied. UN grouping is not itself an assertion that every point is in Europe.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Kartenprojektion",
+          "reason": "Kartenprojektionen übertragen die gekrümmte Erde auf eine Ebene und verändern dabei Eigenschaften. Sichtbare Flächengröße auf einer Karte und statistisch gemessene Landesfläche sind deshalb auseinanderzuhalten."
+        },
+        "actualCurrentLearningSHA256": "5d4a4e872b0979dbf1780f6161eecbb0d448b15d7fea19f15416f9db6cfe9de1",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "6db5f09425366de237fb3ecc6bc3a833df44425f5a3946bace504d5ef2116756",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "vatican-size",
+        "actualSourceCounterread": "Vatican French official geography actual Rome/Tiber and44ha/0.44km² text.",
+        "criticalTeachingCounterread": "A large orientation marker identifies approximate location, not the land area or population. This directly matches the now more legible shared map and Maßstab destination.",
+        "limitsAndRejectedSourceClaims": "Do not substitute remembered0.49 for the explicitly cited French0.44; reported area is source-qualified. Marker does not trace a surveyed border.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Maßstab",
+          "reason": "Der Maßstab verbindet eine Kartenstrecke mit einer wirklichen Strecke. Ein vereinfachtes Suchsymbol ist dagegen oft absichtlich größer als die maßstäbliche Fläche eines sehr kleinen Staates."
+        },
+        "actualCurrentLearningSHA256": "187b0a24536024f4f5e6b72aff0a342ee68ad0fb18bd121e82f9deeef48519c2",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "c5cc490b3fd5303bcc1e3dc8776c2ef3fd94aaf1b157d8a2cca2463ee52ec157",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "vostok",
+        "actualSourceCounterread": "Actual WMO31July2025 table air−89.2°C/21July1983; NASA actual satellite surface report; SCAR actual station78°28′S106°48′E, precision unknown.",
+        "criticalTeachingCounterread": "Air and snow-surface temperatures are different measured quantities. Kelvin destination separates scales; source/method/time are explicit, correct/wrong feedback remains unchanged.",
+        "limitsAndRejectedSourceClaims": "2013surface estimate is not a new current air record. SCAR/WMO coordinates disagree; prior targeted marker correction is separately documented, no cause or GPS accuracy invented.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Kelvin",
+          "reason": "Kelvin ist eine Temperatureinheit. Neben der verwendeten Skala musst du weiterhin wissen, welche Temperatur wo und wie gemessen wurde; eine Umrechnung ersetzt diese Angaben nicht."
+        },
+        "actualCurrentLearningSHA256": "4be0d63b4385caedfd7c24d579ac94a55e1d744f87b79f4e724d02d9006fb685",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "cfd83d69b86330d2a20ec0692e9fe66f31936b04b169a3f94acdfe7db18979d9",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "furnace-creek",
+        "actualSourceCounterread": "Actual WMO31July2025 table56.7°C/10July1913.",
+        "criticalTeachingCounterread": "Maximum is not a typical day; hint distinguishes an extreme from distribution. Mittelwert destination is a separate summary statistic, not a claim one arithmetic mean represents every day.",
+        "limitsAndRejectedSourceClaims": "No2026record update or later WMO archive status invented; original source date retained explicitly.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Mittelwert",
+          "reason": "Ein Mittelwert fasst mehrere Zahlen zusammen. Ein einzelner Höchstwert beantwortet eine andere Frage und darf nicht als typischer Durchschnitt ausgegeben werden."
+        },
+        "actualCurrentLearningSHA256": "212f905f1541adaeb3a978e0e7b5d5c36cc727a6f96d120a3718a9edcaa488a5",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "7d512f362c2c5b752c6d2de19d2056345965cda6ad0f5b88ddedd0ccc79ea59b",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "everest",
+        "actualSourceCounterread": "NOAA actual three altitude-reference comparisons; China–Nepal8December2020 announcement8848.86m; NASA actual China–Nepal border passage.",
+        "criticalTeachingCounterread": "Shared sea-level reference is required for that particular height comparison. Mountain-foot and Earth-centre comparisons are deliberately distinguished; all feedback follows the declared question.",
+        "limitsAndRejectedSourceClaims": "Older NOAA8848/NASA8850 values not substituted for rounded8849. No fixed uplift rate, trip advice or closer-to-stars claim copied.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Meter",
+          "reason": "Meter ist die Längeneinheit. Für eine Höhenangabe brauchst du zusätzlich einen Bezugspunkt; die Einheit allein legt den Beginn deiner Messung nicht fest."
+        },
+        "actualCurrentLearningSHA256": "463fe7bc6e6b25cd4c36cbf3889b488bffa537cad86d0fd7114740d68c246058",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "be152e5c1a47f5574e4a28fd97d866e918fc8de497e40ee86eb4ade2b14d9755",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "alps",
+        "actualSourceCounterread": "NASA Clear View selected simultaneous uplift/erosion/glacial valley shaping; ESA2012actual Germany among Alpine countries and MontBlanc highest chain peak.",
+        "criticalTeachingCounterread": "Uplift and surface material loss can act together. Hint locates processes; feedback does not require a mountain to be ice before glacial erosion can occur.",
+        "limitsAndRejectedSourceClaims": "No current MontBlanc snow height, fixed rise/erosion equilibrium or glacier-wide rate copied from dated source.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Erosion",
+          "reason": "Erosion erklärt, wie Material abgetragen und transportiert wird. In den Alpen wirken diese Vorgänge gleichzeitig mit der Hebung des Gesteins."
+        },
+        "actualCurrentLearningSHA256": "efd279e445abb9db36da435642185b5702f35d70d102c02f672ec462e1c469db",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "86c96b0c33391d18208aca439c66c9b0d07192d4b57788ae8c9892096eded304",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "himalaya",
+        "actualSourceCounterread": "USGS2013actual selected India–Eurasia collision and broad deformation footprint.",
+        "criticalTeachingCounterread": "Question identifies deformation/uplift, not exact earthquake day or every high mountain as volcano. Paper strips show compression but do not model geological time or depth.",
+        "limitsAndRejectedSourceClaims": "USGS follow-up transient timeout retained; successful selected publisher paragraph8–10 actually read. No new convergence speed or seismic forecast.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Plattentektonik",
+          "reason": "Plattentektonik erklärt Bewegungen großer Erdplatten. Die Kollision im Himalaya ist ein Beispiel für Zusammenstoßen statt Auseinanderdriften."
+        },
+        "actualCurrentLearningSHA256": "02a921c3d5f9d9741fd8783e70992befcf681770c6ac7de50987f790fbe5d74b",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "ec54efbd9432ea36585aec3d07a13a5592eda5d80620c14c3cbeebd7c71bfb7e",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "andes",
+        "actualSourceCounterread": "NASA Looking Down actual eastern moist slopes and rain-shadow contrast.",
+        "criticalTeachingCounterread": "Wind direction and moisture source are required in addition to mountain location. Change-direction paper task is coherent; never-rain alternative and feedback reject absolute weather claims.",
+        "limitsAndRejectedSourceClaims": "Source Atacama rain-frequency extremes not copied; one Andes point does not characterize the full chain.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Niederschlag",
+          "reason": "Niederschlag erklärt, wie Wasser aus der Atmosphäre an die Oberfläche gelangt. Die Anden zeigen, warum sich seine Verteilung räumlich unterscheiden kann."
+        },
+        "actualCurrentLearningSHA256": "8484084f3e0f75d2fb0a5705be6e65f226304d71107343d7755f585f6fdbd571",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "0ea0fd5f6f74e54ee708818023ce8f708afcc0b72b7157bc59dad9783001b1ad",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "rockies",
+        "actualSourceCounterread": "NPS actual park geology23/39–43 riverV-valleys→glacialU-valleys, transport and moraines.",
+        "criticalTeachingCounterread": "Correct deposition choice refers to transported rock left after melting. Task separately labels erosion, transport and deposition; Gletscher destination matches ice movement.",
+        "limitsAndRejectedSourceClaims": "Actual park is one subset of the much longer Rockies. Gesteinsalter and present valley form are not treated as identical or all mountains equal age.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Gletscher",
+          "reason": "Ein Gletscher ist bewegtes Eis. An ihm kannst du verstehen, wie Eis Gestein mitführt und nach dem Schmelzen Ablagerungen hinterlässt."
+        },
+        "actualCurrentLearningSHA256": "b4bca65a027ad7ceda4b82128254324c61268e1a425946b85913847ec2ca9cd5",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "993ee47eaa691de63b604cd3017f4d03b0c3138d04a1352453a9d07a4a3db10d",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "kilimanjaro",
+        "actualSourceCounterread": "NASA Zones2017actual foothills/forest/moorland/higher scarce vegetation; UNESCO actual5895m/highestAfrica/volcanicmassif.",
+        "criticalTeachingCounterread": "Same latitude can have distinct altitude-related conditions. Question and wrong reasons retain relevance of latitude without treating it as the only influence.",
+        "limitsAndRejectedSourceClaims": "Dated2017scene and qualitative vegetation bands are not current ice area or sharp universal zone boundaries; no climbing route.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Klima",
+          "reason": "Klima beschreibt längerfristige Wetterverhältnisse. Am Kilimandscharo zeigt die Höhe, warum ein grober Breitengrad-Gürtel lokale Bedingungen nicht vollständig erklärt."
+        },
+        "actualCurrentLearningSHA256": "02d4ef4e2eaf02f58d6d20baf68f2d7eb8f44d545a679d17ab84fdf23fa0a2e4",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "ffe2e9daefcdcfc181800c30bbcdc18968e7de3d24290233f2d056e61341d06f",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "amazon",
+        "actualSourceCounterread": "NASA2006actual merging streams/material/nutrients/chlorophyll plume.",
+        "criticalTeachingCounterread": "Catchment includes surrounding areas and tributaries, not only the thin river line or mouth. Drawn droplet path supports Einzugsgebiet destination and individual feedback.",
+        "limitsAndRejectedSourceClaims": "Source labels chlorophyll energy-producing; do not copy that mechanistic simplification. No exact historical length/discharge or water-quality/animal-inventory inference.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Einzugsgebiet",
+          "reason": "Einzugsgebiet bezeichnet nicht nur die sichtbare Flusslinie. Es verbindet die Flächen und Nebenflüsse, aus denen Wasser in das gemeinsame System gelangt."
+        },
+        "actualCurrentLearningSHA256": "926b9b4def365d0e0da7d6d3a8e51666d173cb14add26ebb7d5d18cc2224faa1",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "2cfd26876a08d601d3cd845b11497aa52aff996b73924dc83e013db36f369b6e",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "nile",
+        "actualSourceCounterread": "NASA2013actual White/BlueNile at Khartum and dry surroundings; ESA actual northeastAfrica→Mediterranean geography.",
+        "criticalTeachingCounterread": "Local rainfall alone does not establish flow; upstream tributaries matter. Names are not a universal photo colour rule. Einzugsgebiet connection is concrete and reciprocal.",
+        "limitsAndRejectedSourceClaims": "No dated inhabitants/water-use totals or absolute longest-river claim copied from the sources.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Einzugsgebiet",
+          "reason": "Das Einzugsgebiet hilft dir, den Nil als verbundenes Flusssystem zu sehen. Eine Beobachtung am Ufer allein beschreibt noch nicht alle Zuflüsse."
+        },
+        "actualCurrentLearningSHA256": "5bdfb50dc2d1d5a1ba4a0c1eea0d4da61f38dff83335a174829c082dc4f985f5",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "4aaf25c04d1fe17e5fba1352918e0b700d437c1d834ce4fc7222d2e650ff329d",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "rhine",
+        "actualSourceCounterread": "NASA actual Rhine–Meuse–Scheldt Netherlands/23April2020 scene; IKSR actual Alps–NorthSea interconnected water network.",
+        "criticalTeachingCounterread": "Downstream splitting differs from two tributaries joining. Delta destination explains deposition and possible branches without drawing a fictitious real Rhine route.",
+        "limitsAndRejectedSourceClaims": "World orientation point is not all delta channels or a measured boundary; no current drinking-water or population inference.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Delta",
+          "reason": "Ein Delta erklärt eine Mündungslandschaft mit Ablagerungen und oft mehreren Wasserwegen. Das Rhein-Maas-Schelde-System bietet dafür eine konkrete Region."
+        },
+        "actualCurrentLearningSHA256": "ba1cb8d83a6a2cd61fff928b9c91b801930371c6cc156397c51cc7086b614698",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "261177cb6e6eb3c7505187dcd1ab00ca645dd911553d4c6ca39780ca0c8523e6",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "yangtze",
+        "actualSourceCounterread": "NASA12April2002actual brown sediment plume/EastChinaSea; NASA ThreeGorges introductory actual longestAsia geography.",
+        "criticalTeachingCounterread": "Visible brown colour alone cannot establish safe/toxic water. Correct feedback requires suitable tests; drawing is a material-transport observation, not sampling instructions.",
+        "limitsAndRejectedSourceClaims": "Historical event is explicitly dated. No dam death/cost/weather totals or current pollution diagnosis copied.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Sediment",
+          "reason": "Sediment bezeichnet abgelagertes Material. Flüsse können solche Teilchen vorher transportieren; eine Mündungsfahne macht einen Teil dieses Transports sichtbar."
+        },
+        "actualCurrentLearningSHA256": "10043ae2f77ba316c7c4ec9d7644fe7279ca29df636886fb18aeb9f704bf0a4f",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "2a3bc6be9f9e9fcdf31851dcaabf6089e0df3a52bebc29fadabd94abf42b6fb1",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "mississippi",
+        "actualSourceCounterread": "NASA2020actual migrating channels and Arkansas/Mississippi boundary; NPS actual north→southGulfofMexico river description.",
+        "criticalTeachingCounterread": "Natural watercourse and administrative boundary remain separate. Transparent-paper task and both wrong reasons explain different line meanings without an all-borders legal rule.",
+        "limitsAndRejectedSourceClaims": "No current basin population, acre conversion, route guarantee or political renaming imposed on German geographic wording.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Erosion",
+          "reason": "Erosion und Ablagerung tragen zur Veränderung von Flusslandschaften bei. Ein heutiger Wasserweg muss deshalb nicht mit dem historischen Verlauf übereinstimmen."
+        },
+        "actualCurrentLearningSHA256": "0279ec8af6199e7cfefd7be697225cb9ca6434171b5c05878f59cf88018bbc07",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "101b853147626c5a5c9fc8fac0016d3e8dc6090bedc2ec26b58f4bb81678e40a",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "etna",
+        "actualSourceCounterread": "INGV actual lava flows13,explosive gas/ash14–16, Italy/Sicily context.",
+        "criticalTeachingCounterread": "Question compares lava, gas and ash rather than a single red strip. Three paper symbols are appropriate; no hot material/experiment or predicted eruption. Lava destination matches melt at surface.",
+        "limitsAndRejectedSourceClaims": "INGV dated summit heights/crater counts and old statement lava not direct threat are not current safety claims and are not copied.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Lava",
+          "reason": "Lava ist an die Oberfläche gelangtes geschmolzenes Gestein. Die Begriffserklärung hilft, einen Lavastrom von Gasen und einer Aschewolke zu unterscheiden."
+        },
+        "actualCurrentLearningSHA256": "388e8c72690234ae27186d185a73155d8e9d66e21cd4ce2bb4e0c889e83910db",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "0df0c590c42d1360c88ab014e51e3d6a0d8e87253375195c47ee4df659950479",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "fuji",
+        "actualSourceCounterread": "Actual indexed GVP publisher excerpts stratovolcano/1707–1708 lastknown; direct GVP follow-up timed out. JMA direct overview21actual composite volcano/highestJapan/Hoei1707.",
+        "criticalTeachingCounterread": "Photo shape differs from inner structure and activity history. Correct answer rejects forever-extinct/safe interpretation; an expressly invented cross-section avoids falsely measured layers.",
+        "limitsAndRejectedSourceClaims": "Do not claim current GVP main page fully read. App says eruption began1707 rather than forcing1707 versus1708 into contradictory single-year records. No current warning/travel advice.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Vulkan",
+          "reason": "Ein Vulkan ist mehr als seine Bergsilhouette. Die Begriffserklärung verknüpft den sichtbaren Berg mit dem Austritt von Material aus dem Erdinneren."
+        },
+        "actualCurrentLearningSHA256": "d5f14d8197f44916ef2c73df724365671818c88d4d7d4049934a5cad06379245",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "98c363e28cc71bb80675d2db8517f81e16c77fe327045938b849b77cc7a3d3b4",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "kilauea",
+        "actualSourceCounterread": "USGS actual29November2023shield-form and historical explosive/effusive cycles9,14–36; hotspot FAQ actualHawaii example4–6.",
+        "criticalTeachingCounterread": "Shield shape does not imply every phase is safe or identical. Separate form/process paper labels and all answers follow that distinction. Schildvulkan related-word agreement corrected only in observe.",
+        "limitsAndRejectedSourceClaims": "No present caldera depth, current activity phase or exact mantle-origin certainty copied from older source.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Schildvulkan",
+          "reason": "Schildvulkan beschreibt eine typische breite Vulkanform. Kīlaueas Geschichte zeigt, dass die Form allein noch nicht jeden Ausbruchsstil festlegt."
+        },
+        "actualCurrentLearningSHA256": "d88dbb259b3ee2f6af6bab283cf734ad0e4e1b9954744b8bb8dfebe3744ba9f0",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "2a6df6eedc3b6d22756a091cca3054c686bbc15163b0d2ee7c61c82bae497888",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "vesuvius",
+        "actualSourceCounterread": "USGS actual volcanic ash32–34rock/mineral/glass versus wood combustion; Pompeii park actualAD79burial2/7.",
+        "criticalTeachingCounterread": "Correct composition and individual wrong feedback distinguish fixed particles from gas and ordinary ash. Paper comparison uses no ash handling or inhalation.",
+        "limitsAndRejectedSourceClaims": "Historical year79 supported without selecting disputed day/month; no contemporary risk warning or copied microphotographs.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Vulkanasche",
+          "reason": "Vulkanasche erklärt die kleinen festen Teilchen eines vulkanischen Auswurfs. Der Begriff verhindert die Verwechslung mit der Asche von verbranntem Holz."
+        },
+        "actualCurrentLearningSHA256": "9c4a69fe057fa042f8bdd9114856b55d6305a86a9db3a14a3f4e97231f52be78",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "cdb1ef7008cfe846c49e86213baf4e6a20c43fbc4f53ca2ff2a36890197baea8",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      },
+      {
+        "id": "iceland",
+        "actualSourceCounterread": "USGS actual hotspotFAQ4–7Hawaii, Iceland at diverging boundary and unresolved hotspot origins.",
+        "criticalTeachingCounterread": "Hotspot and plate boundary are not mutually exclusive concepts. Paper strips plus separate hotspot marker distinguish plate motion from mantle heat; choices/hint/feedback stay coherent.",
+        "limitsAndRejectedSourceClaims": "Do not portray the mantle as a global molten ocean, predict next vent or pretend hotspot causes are fully settled.",
+        "originalQuestionAnswerOrderAndCorrectIndexPreserved": true,
+        "questionScopeException": null,
+        "connectionActuallyRead": {
+          "kind": "word",
+          "target": "Plattentektonik",
+          "reason": "Plattentektonik erklärt die Bewegung der Erdplatten. Island zeigt, dass eine auseinanderdriftende Grenze und ein Hotspot im selben Gebiet zusammenwirken können."
+        },
+        "actualCurrentLearningSHA256": "306c497d0dafd87f4848a61984db2174ce13763d3fa7717f0e2d01b32965eec4",
+        "UIProof": {
+          "all16WidthFontContextsAtPriorBuild": "1bb71577df6ea787",
+          "priorActualNative200Large640And320PlusColdAndReload": true,
+          "sourceOnlyFollowupCurrentBuild": null,
+          "currentSourceFollowup16ContextsAndBothNativePlusCold": false,
+          "unchangedExecutableCodeAllOtherFieldsAndOther62RecordsBound": true
+        },
+        "currentQuestionSHA256": "dd36d40ea3d85c2f05cbc9992931b85f131ff28f8bfe0197ded64194b320a645",
+        "status": "Actual individual source/factual/critical teaching counterread completed, with scoped local UI proof and explicit source limits; not full release approval."
+      }
+    ],
+    "actualSourceReceipts": {
+      "nature-first8-source-read-receipts.json": {
+        "path": "/workspace/work/wk-continuation/nature-first8-source-read-receipts.json",
+        "sha256": "cf7a6d3beb4ca2673aeb569c125fa3df584b43676665f001843de743a515d97c"
+      },
+      "nature-existing8-20-actual-source-receipts.json": {
+        "path": "/workspace/work/wk-continuation/nature-existing8-20-actual-source-receipts.json",
+        "sha256": "c53669e902140e6dab7c920c2b4c885c7cf35067e695234607fe5667b97a5c93"
+      },
+      "nature-existing21-34-and-source-gaps-actual-receipts.json": {
+        "path": "/workspace/work/wk-continuation/nature-existing21-34-and-source-gaps-actual-receipts.json",
+        "sha256": "03f150dbec49c5e71006bf2db950a9996aa9baaf4d035021c2a40a01dbe018d0"
+      },
+      "nature-existing34-supplemental-source-receipts.json": {
+        "path": "/workspace/work/wk-continuation/nature-existing34-supplemental-source-receipts.json",
+        "sha256": "b714e2021232ceb29202fcac637523dfc40e69fa8a0371a8bcbefd0dde173900"
+      },
+      "nature-existing34-additional-retained-source-receipts.json": {
+        "path": "/workspace/work/wk-continuation/nature-existing34-additional-retained-source-receipts.json",
+        "sha256": "3a3c8e5e3686740b80c9a9cce7ef525635a2929430c32f1ba68bd27d05155924"
+      },
+      "map-source-vostok-coordinate-raw.json": {
+        "path": "/workspace/work/wk-continuation/map-source-vostok-coordinate-raw.json",
+        "sha256": "54f1149a6aba9793edee3d978441e0930cedfa125f2d6e4c5cf7a4cf23f16497"
+      },
+      "map-source-wmo-temperature-raw.json": {
+        "path": "/workspace/work/wk-continuation/map-source-wmo-temperature-raw.json",
+        "sha256": "62bbbd8302e62cbbd428e3d4eb4ed83ff307b131911425c5d5ac0eefbd8f21f6"
+      }
+    },
+    "verification": {
+      "affectedExistingUnitsBeforeSourceOnlyAppend": 36,
+      "additionalCurrentNatureIntegrityUnits": 4,
+      "typecheckLintAndBuildBeforeSourceOnlyAppend": "passed",
+      "finalSourceOnlyBuildBudgets": "passed with unchanged thresholds",
+      "exports": "43canonical files current; full verify then fails at unchanged stale central individual dossier gate. Initial parallel-build verification lacked dist/index.html; preserved and repeated sequentially only after build completed. No successful full export/Quality gate claimed.",
+      "immutableRuns": "All started runs completed naturally before product changes or proof binding. No stopped tests or lease release.",
+      "progress": "Browser schema3/favorites/memory/notes retained; strict actual serialized-state restore performed in native/cold contexts. No nature answer IDs or storage keys added; answer state stays local.",
+      "protectedMaintenance": "Four previously rejected core QA changes and central editorial registry unchanged pending explicit maintenance answer; separate News exception still unanswered. Two ordinary provenance-copy assertions were committed in preceding map checkpoint only, matrices/gates unchanged.",
+      "remaining": "Other34already integrated nature records, all remaining3.5families/full gates; no extra topic count or whole-project completion.",
+      "finalTypecheckLintAfterDossierBinding": "passed",
+      "postBindingExistingBookNatureWorldUnits": 16
+    }
   }
 }
