@@ -18,7 +18,13 @@ import {journeyIndex} from '../scripts/learning-index.mjs';
 const baseline=JSON.parse(fs.readFileSync('tests/fixtures/learning.json','utf8'));
 const frozen=JSON.parse(fs.readFileSync('content/excellence-baseline.json','utf8'));
 test('lazy book payload retains every old term, answer and ordering; compact index is complete',()=>{
- assert.equal(validateBookData(book),book);assert.deepEqual(book.words.slice(0,baseline.GLOSSARY.length),baseline.GLOSSARY);assert.deepEqual(book.why.slice(0,baseline.WHY_QUESTIONS.length),baseline.WHY_QUESTIONS);assert.deepEqual(wordIndex,book.words.map(w=>w[0]));
+ const expectedWords=structuredClone(baseline.GLOSSARY);
+ // Two documented factual corrections, not a regenerated historical baseline.
+ for(const [name,before,after] of [
+  ['Gestein','Festes Material aus einem oder mehreren Mineralen. Gestein baut große Teile der Erde auf.','Natürliches festes Material, das meist aus Mineralen besteht. Manche Gesteine enthalten auch Glas.'],
+  ['Grundwasser','Wasser im Boden und Gestein unter der Erdoberfläche.','Wasser unter der Erdoberfläche in einer gesättigten Zone: Dort sind die Hohlräume mit Wasser gefüllt.'],
+ ]){const word=expectedWords.find(w=>w[0]===name);assert.equal(word[2],before,'original frozen definition '+name);word[2]=after;}
+ assert.equal(validateBookData(book),book);assert.deepEqual(book.words.slice(0,baseline.GLOSSARY.length),expectedWords);assert.deepEqual(book.why.slice(0,baseline.WHY_QUESTIONS.length),baseline.WHY_QUESTIONS);assert.deepEqual(wordIndex,book.words.map(w=>w[0]));
  for(const mutate of [b=>b.words.push(b.words[0]),b=>b.why[0][1]='<script>',b=>b.words[0].pop(),b=>b.schemaVersion=2]){const broken=structuredClone(book);mutate(broken);assert.throws(()=>validateBookData(broken));}
 });
 test('80 full chapters preserve old identities and final gates, expose distinct editorial levels, and match lightweight metadata',()=>{

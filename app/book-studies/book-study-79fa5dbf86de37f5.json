@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "term": "Grundwasser",
   "learning": {
-    "starter": "Unter der Oberfläche kann Wasser Zwischenräume im Boden oder Gestein füllen. Es liegt nicht überall als großer offener unterirdischer See vor.",
-    "deeper": "Grundwasser hängt mit dem Untergrund, seiner Durchlässigkeit, Nachlieferung und Entnahme zusammen. Eine gezeichnete blaue Fläche erklärt einen Speicher vereinfacht; sie ist keine Bohrung, Trinkwasserprüfung oder überall gleiche Tiefenangabe.",
-    "observe": "Zeichne Körnchen mit ausdrücklich erfundenen Zwischenräumen und Wasserzeichen darin. Vergleiche mit einem offenen Hohlraum. Das Schema zeigt zwei verschiedene Vorstellungen, keine echte Probe und keine sichere Trinkwasserquelle.",
+    "starter": "Unter der Oberfläche gibt es Bereiche, deren Poren und Spalten mit Wasser gefüllt sind. Dieses Wasser heißt Grundwasser. Es liegt nicht überall als großer offener unterirdischer See vor.",
+    "deeper": "Darüber kann der Boden ebenfalls feucht sein, obwohl seine Hohlräume auch Luft enthalten. Diese ungesättigte Zone ist vom Grundwasserbereich zu unterscheiden. Nachlieferung, Durchlässigkeit und Entnahme beeinflussen den Grundwasserspiegel. Eine Skizze misst weder Tiefe noch Trinkwasserqualität.",
+    "observe": "Vergleiche die beiden Symbolbilder. Zeichne dann selbst Zwischenräume: einmal mit Luft und Wasser, einmal mit Wasser gefüllt. Woran erkennst du den Unterschied? Deine Zeichnung ist keine echte Bodenprobe.",
     "benefit": "Du erkennst Wasser in Zwischenräumen und trennst ein Speichermodell von einer echten Wasserprüfung.",
     "connection": "Die Wasserkreislaufkarte enthält Speicher unter der Oberfläche. Ein Speicherzeichen beschreibt keinen exakten Wasserstand oder eine geprüfte Trinkwasserquelle.",
     "topic": "science-water-cycle",
@@ -15,6 +15,13 @@
         "anchor": "Selected scientific storage/flux/state body: evaporation, condensation, atmospheric water, precipitation, groundwater and infiltration. Own fictitious observations, no diagrams or current percentage records copied.",
         "updatedOn": null,
         "checkedOn": "2026-10-14"
+      },
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/groundwater-storage-and-water-cycle",
+        "title": "USGS · Grundwasserspeicher",
+        "anchor": "Gesättigte und ungesättigte Zone · Wasser beziehungsweise Luft und Wasser in den Hohlräumen des Untergrunds. Keine heutige Tiefe, Entnahmemenge oder Trinkwasserfreigabe.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18"
       }
     ],
     "relatedWords": [
@@ -42,6 +49,7 @@
         "Zwischenräume zwischen Körnchen sind keine überall offene unterirdische Höhle.",
         "Ein Schema enthält keine Wasseranalyse. Versuchswasser oder unbekanntes Wasser wird nicht als trinkbar eingestuft."
       ]
-    }
+    },
+    "illustration": "groundwater"
   }
 }

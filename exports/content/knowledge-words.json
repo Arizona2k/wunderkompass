@@ -218,7 +218,7 @@
     "short": "Meere",
     "more": "Ein Teil eines Meeres oder Sees, der weit ins Land hineinragt.",
     "learning": {
-      "starter": "In einer Bucht reicht Wasser in das Land hinein. Eine Bucht ist nicht automatisch ein See ohne Verbindung zum Meer.",
+      "starter": "Eine Bucht ist ein teilweise von Land umgebener Teil eines Meeres oder Sees.",
       "deeper": "Der Umriss beschreibt eine Wasser-Land-Anordnung. Entstehung, Tiefe und Salzgehalt sind weitere Fragen. Auch eine lange Bucht ist nicht ohne zusätzliche Belege ein von Gletschern geformter Fjord.",
       "observe": "Zeichne einen Gedanken-Küstenumriss mit einer Einbuchtung und offenem Wasserzugang. Markiere Wasser und Land verschieden. Die Fantasiekarte misst keine reale Tiefe.",
       "benefit": "Du liest einen Küstenumriss, ohne daraus unbelegte Eigenschaften abzuleiten.",
@@ -226,11 +226,11 @@
       "lab": "water",
       "sources": [
         {
-          "url": "https://pubs.usgs.gov/circ/1983/0895f/report.pdf",
-          "title": "USGS · Bucht, historische Begriffsdefinition",
-          "anchor": "Actual selected primary search excerpt of historical GNIS appendix Bay definition: partly enclosed water and shoreline indentation. Original PDF403, not claimed fully accessed/current taxonomy; own geometric example, no source text or media copied.",
+          "url": "https://www.usgs.gov/us-board-on-geographic-names/gnis-domestic-names-feature-classes",
+          "title": "USGS · Bucht im geografischen Namenssystem",
+          "anchor": "Begriff Bay: Einbuchtung einer Küste oder Uferlinie, teilweise von Land umschlossenes Wasser. Keine genaue Tiefe oder einheitliche Entstehung abgeleitet.",
           "updatedOn": null,
-          "checkedOn": "2026-10-14"
+          "checkedOn": "2026-10-18"
         }
       ],
       "relatedWords": [],
@@ -895,10 +895,10 @@
   {
     "term": "Gestein",
     "short": "Erdinneres",
-    "more": "Festes Material aus einem oder mehreren Mineralen. Gestein baut große Teile der Erde auf.",
+    "more": "Natürliches festes Material, das meist aus Mineralen besteht. Manche Gesteine enthalten auch Glas.",
     "learning": {
-      "starter": "Gestein kann aus einem oder mehreren Mineralen bestehen. Ein sichtbarer Stein und seine Bestandteile sind verschiedene Betrachtungsebenen.",
-      "deeper": "Ein Farbpunkt beweist nicht, welches Mineral vorhanden ist. Fachliche Bestimmung braucht mehr als ein unscharfes Bild. Ein einzelnes Gestein kann verschiedene Bestandteile enthalten; eine Zeichnung stellt diese nur gedacht dar.",
+      "starter": "Viele Gesteine bestehen aus einem oder mehreren Mineralen. Manche Gesteine enthalten auch Glas. Ein sichtbarer Stein und seine Bestandteile sind verschiedene Betrachtungsebenen.",
+      "deeper": "Gesteine können unterschiedliche Bestandteile enthalten. Obsidian ist zum Beispiel ein glasiges vulkanisches Gestein. Ein Farbpunkt im Schema beweist nicht, welches Mineral oder andere Material wirklich vorhanden ist. Eine echte Bestimmung braucht mehr als ein unscharfes Bild.",
       "observe": "Zeichne einen erfundenen Gesteinsquerschnitt mit zwei Sorten Punktzeichen. Beschrifte Zeichen A und B als gedachte Bestandteile. Keine echten Proben zerschlagen, anritzen oder kosten; die Zeichen bestimmen keine realen Minerale.",
       "benefit": "Du unterscheidest eine Materialmischung von den einzelnen gedachten Bestandteilen.",
       "connection": "Das Erdschichtenlabor ordnet große Bereiche. Ein eigenes Gesteinsmuster ergänzt die kleinere Materialebene und ist kein Blick durch eine echte Erdschicht.",
@@ -907,9 +907,16 @@
         {
           "url": "https://www.usgs.gov/faqs/what-difference-between-a-rock-and-a-mineral",
           "title": "USGS · Gestein (Englisch)",
-          "anchor": "Actual original scientific5–7: mineral definition and rock aggregate oneormoreminerals. No copiedphoto, inventorymineralvalue or tooltest.",
+          "anchor": "Unterschied zwischen Gestein und Mineral · Gestein als Mineralgemenge oder anderes mineralisches Material; keine Bestimmung allein aus Farbe.",
           "updatedOn": null,
-          "checkedOn": "2026-10-14"
+          "checkedOn": "2026-10-18"
+        },
+        {
+          "url": "https://webapps.bgs.ac.uk/bgsrcs/rcs_details.cfm?code=OBS",
+          "title": "British Geological Survey · Obsidian",
+          "anchor": "Gesteinsklassifikation: Obsidian als glasiges vulkanisches Gestein. Keine Prozentwerte, Korngrößen oder Bestimmung anhand eines Fotos übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-18"
         }
       ],
       "relatedWords": [
@@ -947,7 +954,7 @@
     "learning": {
       "starter": "Blitz und Donner gehören zum Gewitter. Der Blitz ist eine elektrische Entladung, keine Lampenfarbe in einer Wolke.",
       "deeper": "Ein Wolkenbild und eine Lufttemperatur allein beweisen kein vollständiges Gewittergeschehen. Das Wetterlabor beschreibt nur ausgewählte Bedingungen. Echte Gewitter beobachtest du nicht draußen als Experiment.",
-      "observe": "Ordne auf Papier drei gedachte Karten: Wolkenbild, elektrische Entladung, zugehöriger Donner. Markiere, welche Angaben fehlen. Die Karten sind keine aktuelle Vorhersage oder Sicherheitsfreigabe.",
+      "observe": "Schreibe auf Papier vier Karten: Wolkenbild, erfundene Temperatur von 20 °C, elektrische Entladung und zugehöriger Donner. Welche Angaben beschreiben nur einen Teil des Wetters? Erkläre, warum die Temperaturkarte allein kein echtes Gewitter vorhersagt.",
       "benefit": "Du verbindest Blitz und Donner und begrenzt Aussagen einer einzelnen Wetterangabe.",
       "connection": "Das Wetterlabor zeigt gedachte Luftbedingungen. Die drei Karten ergänzen Blitz und Donner und machen die Grenze einer vollständigen Wetterprognose deutlich.",
       "lab": "weather",
@@ -1036,11 +1043,11 @@
   {
     "term": "Grundwasser",
     "short": "Wasser",
-    "more": "Wasser im Boden und Gestein unter der Erdoberfläche.",
+    "more": "Wasser unter der Erdoberfläche in einer gesättigten Zone: Dort sind die Hohlräume mit Wasser gefüllt.",
     "learning": {
-      "starter": "Unter der Oberfläche kann Wasser Zwischenräume im Boden oder Gestein füllen. Es liegt nicht überall als großer offener unterirdischer See vor.",
-      "deeper": "Grundwasser hängt mit dem Untergrund, seiner Durchlässigkeit, Nachlieferung und Entnahme zusammen. Eine gezeichnete blaue Fläche erklärt einen Speicher vereinfacht; sie ist keine Bohrung, Trinkwasserprüfung oder überall gleiche Tiefenangabe.",
-      "observe": "Zeichne Körnchen mit ausdrücklich erfundenen Zwischenräumen und Wasserzeichen darin. Vergleiche mit einem offenen Hohlraum. Das Schema zeigt zwei verschiedene Vorstellungen, keine echte Probe und keine sichere Trinkwasserquelle.",
+      "starter": "Unter der Oberfläche gibt es Bereiche, deren Poren und Spalten mit Wasser gefüllt sind. Dieses Wasser heißt Grundwasser. Es liegt nicht überall als großer offener unterirdischer See vor.",
+      "deeper": "Darüber kann der Boden ebenfalls feucht sein, obwohl seine Hohlräume auch Luft enthalten. Diese ungesättigte Zone ist vom Grundwasserbereich zu unterscheiden. Nachlieferung, Durchlässigkeit und Entnahme beeinflussen den Grundwasserspiegel. Eine Skizze misst weder Tiefe noch Trinkwasserqualität.",
+      "observe": "Vergleiche die beiden Symbolbilder. Zeichne dann selbst Zwischenräume: einmal mit Luft und Wasser, einmal mit Wasser gefüllt. Woran erkennst du den Unterschied? Deine Zeichnung ist keine echte Bodenprobe.",
       "benefit": "Du erkennst Wasser in Zwischenräumen und trennst ein Speichermodell von einer echten Wasserprüfung.",
       "connection": "Die Wasserkreislaufkarte enthält Speicher unter der Oberfläche. Ein Speicherzeichen beschreibt keinen exakten Wasserstand oder eine geprüfte Trinkwasserquelle.",
       "topic": "science-water-cycle",
@@ -1051,6 +1058,13 @@
           "anchor": "Selected scientific storage/flux/state body: evaporation, condensation, atmospheric water, precipitation, groundwater and infiltration. Own fictitious observations, no diagrams or current percentage records copied.",
           "updatedOn": null,
           "checkedOn": "2026-10-14"
+        },
+        {
+          "url": "https://www.usgs.gov/water-science-school/science/groundwater-storage-and-water-cycle",
+          "title": "USGS · Grundwasserspeicher",
+          "anchor": "Gesättigte und ungesättigte Zone · Wasser beziehungsweise Luft und Wasser in den Hohlräumen des Untergrunds. Keine heutige Tiefe, Entnahmemenge oder Trinkwasserfreigabe.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-18"
         }
       ],
       "relatedWords": [
@@ -1078,7 +1092,8 @@
           "Zwischenräume zwischen Körnchen sind keine überall offene unterirdische Höhle.",
           "Ein Schema enthält keine Wasseranalyse. Versuchswasser oder unbekanntes Wasser wird nicht als trinkbar eingestuft."
         ]
-      }
+      },
+      "illustration": "groundwater"
     }
   },
   {

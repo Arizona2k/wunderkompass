@@ -22,6 +22,15 @@
 .book-entities{margin:18px 0;padding-top:12px;border-top:1px solid #dce7eb}
 .book-entities svg{display:block;width:100%;height:auto}
 .book-entities figcaption{font-size:1em;line-height:1.7;overflow-wrap:anywhere}
+.book-groundwater{container-type:inline-size;width:100%;margin:1.25rem 0;padding:1rem;border:1px solid #ccdcdf;border-radius:1rem;background:#f7faf8}
+.book-groundwater h4{font-size:1.2rem;line-height:1.5}
+.book-groundwater-panels{display:grid;gap:1rem}
+.book-groundwater-panels>div{min-width:0}
+.book-groundwater-panels p{font-size:1rem;line-height:1.6}
+.book-groundwater svg{display:block;width:100%;height:auto;max-width:24rem;margin-inline:auto}
+.book-groundwater figcaption{font-size:1rem;line-height:1.7;margin-top:1rem}
+.large-reading .book-groundwater figcaption{font-size:1.15rem}
+@container(min-width:640px){.book-groundwater-panels{grid-template-columns:1fr 1fr}}
 
 .word-grid:has(>.word-card:only-child){grid-template-columns:minmax(0,1fr);max-width:42rem}
 .book-measure input{accent-color:#245d70}

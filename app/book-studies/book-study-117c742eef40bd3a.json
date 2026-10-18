@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "term": "Gestein",
   "learning": {
-    "starter": "Gestein kann aus einem oder mehreren Mineralen bestehen. Ein sichtbarer Stein und seine Bestandteile sind verschiedene Betrachtungsebenen.",
-    "deeper": "Ein Farbpunkt beweist nicht, welches Mineral vorhanden ist. Fachliche Bestimmung braucht mehr als ein unscharfes Bild. Ein einzelnes Gestein kann verschiedene Bestandteile enthalten; eine Zeichnung stellt diese nur gedacht dar.",
+    "starter": "Viele Gesteine bestehen aus einem oder mehreren Mineralen. Manche Gesteine enthalten auch Glas. Ein sichtbarer Stein und seine Bestandteile sind verschiedene Betrachtungsebenen.",
+    "deeper": "Gesteine können unterschiedliche Bestandteile enthalten. Obsidian ist zum Beispiel ein glasiges vulkanisches Gestein. Ein Farbpunkt im Schema beweist nicht, welches Mineral oder andere Material wirklich vorhanden ist. Eine echte Bestimmung braucht mehr als ein unscharfes Bild.",
     "observe": "Zeichne einen erfundenen Gesteinsquerschnitt mit zwei Sorten Punktzeichen. Beschrifte Zeichen A und B als gedachte Bestandteile. Keine echten Proben zerschlagen, anritzen oder kosten; die Zeichen bestimmen keine realen Minerale.",
     "benefit": "Du unterscheidest eine Materialmischung von den einzelnen gedachten Bestandteilen.",
     "connection": "Das Erdschichtenlabor ordnet große Bereiche. Ein eigenes Gesteinsmuster ergänzt die kleinere Materialebene und ist kein Blick durch eine echte Erdschicht.",
@@ -12,9 +12,16 @@
       {
         "url": "https://www.usgs.gov/faqs/what-difference-between-a-rock-and-a-mineral",
         "title": "USGS · Gestein (Englisch)",
-        "anchor": "Actual original scientific5–7: mineral definition and rock aggregate oneormoreminerals. No copiedphoto, inventorymineralvalue or tooltest.",
+        "anchor": "Unterschied zwischen Gestein und Mineral · Gestein als Mineralgemenge oder anderes mineralisches Material; keine Bestimmung allein aus Farbe.",
         "updatedOn": null,
-        "checkedOn": "2026-10-14"
+        "checkedOn": "2026-10-18"
+      },
+      {
+        "url": "https://webapps.bgs.ac.uk/bgsrcs/rcs_details.cfm?code=OBS",
+        "title": "British Geological Survey · Obsidian",
+        "anchor": "Gesteinsklassifikation: Obsidian als glasiges vulkanisches Gestein. Keine Prozentwerte, Korngrößen oder Bestimmung anhand eines Fotos übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18"
       }
     ],
     "relatedWords": [
