@@ -1,3 +1,10 @@
+## Integrierte Naturthemen und ältere Begriffe · 18.10.2026, in Vorbereitung
+
+- 34 bereits integrierte Naturartikel individuell gegen Quellen gegengelesen und Lernaufträge an tatsächlich vorhandene Bilder/Handlungen angepasst. Deutsche Quellenstellen, Daintrees heutiger kultureller Bezug und präzise Abgrenzung im Ross-Beispiel.
+- Vier eigene Dreischrittmodelle zu Dünenwasser, Waldlicht, Strömungsgrenzen und Deltaablagerung; früh gesehene zu kleine Deltaflächen vergrößert. Zehn bisherige Zeichnungen erhalten. Ältere Delta-Erklärung um den Okavango als Binnenlandbeispiel ergänzt.
+- Alle Antwortmöglichkeiten, Lösungen, Reihenfolgen, IDs und gespeicherten Daten erhalten. Lokale breite Artikel-, Tastatur-, echte Zoom- und Kaltstartprüfung abgeschlossen; 228 Unit-Tests, Typ/Lint/Build grün. Vorbereitete Chronik sichtbar geprüft, keine neue Bereitstellung behauptet.
+- Vollständige Freigabeprüfung und zentrale Registerbindung bleiben offen; Quellen-/Baseline-/Technikpflichten unverändert. Fortsetzung des vorhandenen Buch-/Warum-/Reisebestands im selben Gesamtauftrag.
+
 ## In Vorbereitung · Quellen und Lernaufträge im Naturatlas, 18.10.2026
 
 34 bisherige Naturerklärungen mit ihren Grundtexten und Begriffsverbindungen gegengelesen. 21 Quellenbelege ergänzt und Belegstellen verständlicher beschriftet. Borneos Kalimantan-Erklärung und Frage auf den tatsächlichen NASA-Kontext begrenzt; Antworten, Lösungen und Lernkennungen erhalten. Einen Grammatikfehler beim Schildvulkan korrigiert. Lokale Breiten-/Schrift-, Rückweg-, native Vergrößerungs- und kalte Offlineprüfungen bestanden; vollständige Pflichtabnahme und Bereitstellung bleiben offen.

@@ -8778,14 +8778,14 @@
       "id": "words:Schildvulkan",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "e54830774a055b86eaef6620965ce4e1bb42950e9f9f76c5913f2b4463bda4cf",
+      "contentHash": "232b7987a6b651caaf8fbb0aa76571249844793b634017bc7047ff949bc8f64c",
       "ageLevels": {
         "6-8": "Ein Schildvulkan besitzt oft ein breites, flaches Profil. Viele Lavaflüsse können diesen Körper aufbauen.",
         "9-11": "Ein meist breiter, flacher Vulkan, der oft aus vielen dünnflüssigen Lavaflüssen aufgebaut ist.",
         "12-14": "Die Form hängt mit dem langfristigen Aufbau zusammen. Breiter und flacher bedeutet nicht ungefährlich oder dass jeder Vorgang sanft sein muss. Ein einzelner Modelllauf erklärt nicht die gesamte Entstehung eines realen Vulkans."
       },
       "goal": "Du verbindest Vulkanform mit einem Aufbauprozess und vermeidest eine falsche Sicherheitsfolgerung.",
-      "observe": "Zeichne ein breites Profil aus mehreren gedachte Schichten. Schreibe langsamer Aufbau aus vielen Vorgängen daneben. Das Papier enthält keine realen Höhen, Datierungen oder Sicherheitsgrenzen.",
+      "observe": "Zeichne ein breites Profil aus mehreren gedachten Schichten. Schreibe langsamer Aufbau aus vielen Vorgängen daneben. Das Papier enthält keine realen Höhen, Datierungen oder Sicherheitsgrenzen.",
       "sources": [
         {
           "url": "https://www.usgs.gov/programs/VHP/about-volcanoes",
@@ -8821,17 +8821,17 @@
           "reason": "Ein Schildvulkan ist eine besondere Vulkanform. Breite und flache Form ist keine Sicherheitsfreigabe für einen realen Ort."
         }
       ],
-      "reviewedBy": "Codex self-review from documented actual selected primary facts; own German explanations and paper examples. Specific fresh source retrieval failures remain disclosed in anchors.",
-      "reviewedOn": "2026-10-14",
+      "reviewedBy": "Entwickelnde KI/Codex; enge individuelle Nachprüfung gemäß datierter Naturfolge, keine externe Fachabnahme.",
+      "reviewedOn": "2026-10-18",
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Vorhandene gebundene Natur-/Buch-Teilnachweise: alte34Runde/25Wortziele",
       "rightsBasisId": "usgs-own-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Zeichne ein breites Profil aus mehreren gedachte Schichten. Schreibe langsamer Aufbau aus vielen Vorgängen daneben. Das Papier enthält keine realen Höhen, Datierungen oder Sicherheitsgrenzen.",
       "claims": [
         {
-          "field": "learning.deeper",
+          "field": "learning.observe",
           "sourceUrl": "https://www.usgs.gov/programs/VHP/about-volcanoes",
           "anchor": "Actual AboutVolcanoes68–75: broadshieldshape andfluidlava-built body. No inference safe volcano or everyeruption mild."
         }
@@ -11538,11 +11538,11 @@
       "id": "words:Delta",
       "kind": "old-vocabulary-redaction",
       "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
-      "contentHash": "f6325148837c11933fa89db8315a0c3a64700100409608a6a3f360365ec85444",
+      "contentHash": "2bd42b7dddd506e3dac228d665c570d8c3503f45bf5561374dd1d0f3d22b21d2",
       "ageLevels": {
         "6-8": "Ein Delta kann entstehen, wenn an einer Flussmündung mehr Material abgelagert als wieder entfernt wird. Nicht jede Mündung bildet eines.",
         "9-11": "Eine Landschaft aus abgelagertem Material an manchen Flussmündungen. Der Fluss kann sich in mehrere Arme teilen.",
-        "12-14": "Fluss, Wellen und Gezeiten wirken zusammen. Ein Delta muss nicht dreieckig sein oder immer gleich viele Arme besitzen. Eine Zeichnung zeigt eine gedachte Ablagerung und sagt keine künftige Küstenlinie voraus."
+        "12-14": "An Meeresküsten wirken Fluss, Wellen und Gezeiten zusammen. Es gibt auch Binnenlanddeltas: Der Okavango verteilt sein Wasser im Landesinneren und hat keinen Abfluss ins Meer. Ein Delta muss nicht dreieckig sein oder immer gleich viele Arme besitzen. Eine Zeichnung zeigt eine gedachte Ablagerung und sagt keine künftige Küstenlinie voraus."
       },
       "goal": "Du erklärst Ablagerung und Abtransport statt nur eine Dreiecksform zu erkennen.",
       "observe": "Zeichne eine gedachte Mündung mit drei Materialzeichen, von denen zwei liegen bleiben und eines weitergetragen wird. Beschrifte dies als erfundene Bilanz, nicht als echte Sedimentmessung.",
@@ -11550,9 +11550,16 @@
         {
           "url": "https://www.nps.gov/articles/delta-landforms.htm",
           "title": "NPS · Delta",
-          "anchor": "Actual24–26: sedimentaccumulationatmouth wheninput exceedsremoval; not alltriangles, wave/tide effects. Exclude copiedmaps andactualmouthchangeforecast.",
+          "anchor": "Ablagerung an Küstenmündungen bei überwiegender Materialzufuhr · Unterschiedliche Formen und Wirkung von Wellen und Gezeiten; keine Abtragsrate oder Küstenprognose.",
           "updatedOn": "2019-03-20",
-          "checkedOn": "2026-10-14"
+          "checkedOn": "2026-10-18"
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/1432/",
+          "title": "UNESCO · Okavangodelta",
+          "anchor": "Beschreibung und Kurzüberblick: Binnenlanddelta im Nordwesten Botswanas ohne Abfluss ins Meer; kein Küstendelta. Keine alten Flächen-, Arten- oder Nutzungszahlen übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-18"
         }
       ],
       "question": {
@@ -11576,19 +11583,24 @@
         "lab": "water"
       },
       "relatedWords": [],
-      "reviewedBy": "Codex self-review from documented actual selected primary facts; own German explanations and paper examples. Specific fresh source retrieval failures remain disclosed in anchors.",
-      "reviewedOn": "2026-10-14",
+      "reviewedBy": "Entwickelnde KI/Codex; enge individuelle Nachprüfung gemäß datierter Naturfolge, keine externe Fachabnahme.",
+      "reviewedOn": "2026-10-18",
       "nextReview": "2027-04-14",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+      "uiEvidence": "Vorhandene gebundene Natur-/Buch-Teilnachweise: integrierte34Runde/Delta, nativ640/320 und echterKaltstart",
       "rightsBasisId": "nps-own-2026-10-14",
       "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Zeichne eine gedachte Mündung mit drei Materialzeichen, von denen zwei liegen bleiben und eines weitergetragen wird. Beschrifte dies als erfundene Bilanz, nicht als echte Sedimentmessung.",
       "claims": [
         {
           "field": "learning.deeper",
           "sourceUrl": "https://www.nps.gov/articles/delta-landforms.htm",
-          "anchor": "Actual24–26: sedimentaccumulationatmouth wheninput exceedsremoval; not alltriangles, wave/tide effects. Exclude copiedmaps andactualmouthchangeforecast."
+          "anchor": "Ablagerung an Küstenmündungen bei überwiegender Materialzufuhr · Unterschiedliche Formen und Wirkung von Wellen und Gezeiten; keine Abtragsrate oder Küstenprognose."
+        },
+        {
+          "field": "learning.deeper",
+          "sourceUrl": "https://whc.unesco.org/en/list/1432/",
+          "anchor": "Beschreibung und Kurzüberblick: Binnenlanddelta im Nordwesten Botswanas ohne Abfluss ins Meer; kein Küstendelta. Keine alten Flächen-, Arten- oder Nutzungszahlen übernommen."
         }
       ]
     },
@@ -12164,5 +12176,211 @@
       ],
       "all68QuestionObjectsAndOtherLearningFieldsUnchanged": true
     }
+  },
+  "integratedNatureCrossreadFollowup20261018": {
+    "status": "11verknüpfte alte Wörter tatsächlich im Naturkontext gegengelesen; Delta-Vertiefung korrigiert, Grundwasser gezielt frisch nativ/kalt geprüft. Keine globale180Fachabnahme.",
+    "terms": [
+      "Biodiversität",
+      "Delta",
+      "Erosion",
+      "Gletscher",
+      "Grundwasser",
+      "Lava",
+      "Lebensraum",
+      "Niederschlag",
+      "Sediment",
+      "Verdunstung",
+      "Verwitterung"
+    ],
+    "specificDossierUpdates": [
+      {
+        "id": "words:Schildvulkan",
+        "oldDossierEntryPreserved": {
+          "id": "words:Schildvulkan",
+          "kind": "old-vocabulary-redaction",
+          "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
+          "contentHash": "e54830774a055b86eaef6620965ce4e1bb42950e9f9f76c5913f2b4463bda4cf",
+          "ageLevels": {
+            "6-8": "Ein Schildvulkan besitzt oft ein breites, flaches Profil. Viele Lavaflüsse können diesen Körper aufbauen.",
+            "9-11": "Ein meist breiter, flacher Vulkan, der oft aus vielen dünnflüssigen Lavaflüssen aufgebaut ist.",
+            "12-14": "Die Form hängt mit dem langfristigen Aufbau zusammen. Breiter und flacher bedeutet nicht ungefährlich oder dass jeder Vorgang sanft sein muss. Ein einzelner Modelllauf erklärt nicht die gesamte Entstehung eines realen Vulkans."
+          },
+          "goal": "Du verbindest Vulkanform mit einem Aufbauprozess und vermeidest eine falsche Sicherheitsfolgerung.",
+          "observe": "Zeichne ein breites Profil aus mehreren gedachte Schichten. Schreibe langsamer Aufbau aus vielen Vorgängen daneben. Das Papier enthält keine realen Höhen, Datierungen oder Sicherheitsgrenzen.",
+          "sources": [
+            {
+              "url": "https://www.usgs.gov/programs/VHP/about-volcanoes",
+              "title": "USGS · Schildvulkan (Englisch)",
+              "anchor": "Actual AboutVolcanoes68–75: broadshieldshape andfluidlava-built body. No inference safe volcano or everyeruption mild.",
+              "updatedOn": null,
+              "checkedOn": "2026-10-14"
+            }
+          ],
+          "question": {
+            "prompt": "Welche Aussage folgt nicht aus dem breiten Schildprofil?",
+            "answers": [
+              "Dass ein breites Profil gezeichnet wurde",
+              "Dass mehrere gedachte Schichten unterschieden werden",
+              "Dass ein echter Vulkan deshalb ungefährlich ist"
+            ],
+            "correct": 2,
+            "hint": "Form und geprüfte Sicherheit eines realen Orts sind verschiedene Fragen.",
+            "why": "Ein breites Profil ist keine Sicherheitsfreigabe. Das Modell enthält keine aktuellen Daten über einen echten Vulkan oder seine Umgebung.",
+            "wrongReasons": [
+              "Das eigene Profil darf als breite gedachte Form beschrieben werden.",
+              "Die selbst eingezeichneten Schichten sind erkennbare Modellbestandteile.",
+              ""
+            ]
+          },
+          "connection": "Die Zähigkeit im Vulkanlabor beeinflusst das begrenzte Fließbild. Der Begriff ergänzt langfristigen Aufbau, ohne daraus einen sicheren Reiseort abzuleiten.",
+          "destination": {
+            "lab": "volcano"
+          },
+          "relatedWords": [
+            {
+              "term": "Vulkan",
+              "reason": "Ein Schildvulkan ist eine besondere Vulkanform. Breite und flache Form ist keine Sicherheitsfreigabe für einen realen Ort."
+            }
+          ],
+          "reviewedBy": "Codex self-review from documented actual selected primary facts; own German explanations and paper examples. Specific fresh source retrieval failures remain disclosed in anchors.",
+          "reviewedOn": "2026-10-14",
+          "nextReview": "2027-04-14",
+          "independentReview": false,
+          "acceptedForDoubling": false,
+          "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+          "rightsBasisId": "usgs-own-2026-10-14",
+          "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Zeichne ein breites Profil aus mehreren gedachte Schichten. Schreibe langsamer Aufbau aus vielen Vorgängen daneben. Das Papier enthält keine realen Höhen, Datierungen oder Sicherheitsgrenzen.",
+          "claims": [
+            {
+              "field": "learning.deeper",
+              "sourceUrl": "https://www.usgs.gov/programs/VHP/about-volcanoes",
+              "anchor": "Actual AboutVolcanoes68–75: broadshieldshape andfluidlava-built body. No inference safe volcano or everyeruption mild."
+            }
+          ]
+        },
+        "newContentHash": "232b7987a6b651caaf8fbb0aa76571249844793b634017bc7047ff949bc8f64c",
+        "reason": "Nur gebeugte Adjektivform mehreren gedachten Schichten, unveränderte Fachfrage; tatsächlich geprüfter vorigerNaturabschnitt.",
+        "currentSources": [
+          {
+            "url": "https://www.usgs.gov/programs/VHP/about-volcanoes",
+            "title": "USGS · Schildvulkan (Englisch)",
+            "anchor": "Actual AboutVolcanoes68–75: broadshieldshape andfluidlava-built body. No inference safe volcano or everyeruption mild.",
+            "updatedOn": null,
+            "checkedOn": "2026-10-14"
+          }
+        ]
+      },
+      {
+        "id": "words:Delta",
+        "oldDossierEntryPreserved": {
+          "id": "words:Delta",
+          "kind": "old-vocabulary-redaction",
+          "baselineComparison": "Original tuple/order/ID preserved; own functional explanation added, not a new term.",
+          "contentHash": "f6325148837c11933fa89db8315a0c3a64700100409608a6a3f360365ec85444",
+          "ageLevels": {
+            "6-8": "Ein Delta kann entstehen, wenn an einer Flussmündung mehr Material abgelagert als wieder entfernt wird. Nicht jede Mündung bildet eines.",
+            "9-11": "Eine Landschaft aus abgelagertem Material an manchen Flussmündungen. Der Fluss kann sich in mehrere Arme teilen.",
+            "12-14": "Fluss, Wellen und Gezeiten wirken zusammen. Ein Delta muss nicht dreieckig sein oder immer gleich viele Arme besitzen. Eine Zeichnung zeigt eine gedachte Ablagerung und sagt keine künftige Küstenlinie voraus."
+          },
+          "goal": "Du erklärst Ablagerung und Abtransport statt nur eine Dreiecksform zu erkennen.",
+          "observe": "Zeichne eine gedachte Mündung mit drei Materialzeichen, von denen zwei liegen bleiben und eines weitergetragen wird. Beschrifte dies als erfundene Bilanz, nicht als echte Sedimentmessung.",
+          "sources": [
+            {
+              "url": "https://www.nps.gov/articles/delta-landforms.htm",
+              "title": "NPS · Delta",
+              "anchor": "Actual24–26: sedimentaccumulationatmouth wheninput exceedsremoval; not alltriangles, wave/tide effects. Exclude copiedmaps andactualmouthchangeforecast.",
+              "updatedOn": "2019-03-20",
+              "checkedOn": "2026-10-14"
+            }
+          ],
+          "question": {
+            "prompt": "Welche Angabe ist für eine Ablagerungsbilanz wichtig?",
+            "answers": [
+              "Nur der Name des Flusses",
+              "Zugeführtes und wieder entferntes Material",
+              "Eine immer gleiche dreieckige Form"
+            ],
+            "correct": 1,
+            "hint": "Vergleiche, was ankommt und was wieder wegtransportiert wird.",
+            "why": "Die Materialwege bestimmen die gedachte Bilanz. Eine Form allein enthält diese Mengenangaben nicht.",
+            "wrongReasons": [
+              "Ein Name beschreibt keine zugeführten oder entfernten Mengen.",
+              "",
+              "Nicht jedes Delta hat dieselbe Form; Form ist keine vollständige Bilanz."
+            ]
+          },
+          "connection": "Das Wasserlabor verfolgt Wasserwege. Die Mündungsaufgabe ergänzt einen getrennten Materialfluss; Wasser- und Sedimentmenge sind nicht identisch.",
+          "destination": {
+            "lab": "water"
+          },
+          "relatedWords": [],
+          "reviewedBy": "Codex self-review from documented actual selected primary facts; own German explanations and paper examples. Specific fresh source retrieval failures remain disclosed in anchors.",
+          "reviewedOn": "2026-10-14",
+          "nextReview": "2027-04-14",
+          "independentReview": false,
+          "acceptedForDoubling": false,
+          "uiEvidence": "Pending current browser/search/context/Back/offline proof",
+          "rightsBasisId": "nps-own-2026-10-14",
+          "mediaDecision": "Own bounded paper activity; no source worksheet, puzzle, source wording, photo, diagram or logo copied. Zeichne eine gedachte Mündung mit drei Materialzeichen, von denen zwei liegen bleiben und eines weitergetragen wird. Beschrifte dies als erfundene Bilanz, nicht als echte Sedimentmessung.",
+          "claims": [
+            {
+              "field": "learning.deeper",
+              "sourceUrl": "https://www.nps.gov/articles/delta-landforms.htm",
+              "anchor": "Actual24–26: sedimentaccumulationatmouth wheninput exceedsremoval; not alltriangles, wave/tide effects. Exclude copiedmaps andactualmouthchangeforecast."
+            }
+          ]
+        },
+        "newContentHash": "2bd42b7dddd506e3dac228d665c570d8c3503f45bf5561374dd1d0f3d22b21d2",
+        "reason": "Gezielte fachliche Erweiterung um belegtes Binnenlanddelta; Küstenprozesse räumlich eingegrenzt. Wortdefinition, Frage, Antworten, Lösung und Reihenfolge unverändert.",
+        "currentSources": [
+          {
+            "url": "https://www.nps.gov/articles/delta-landforms.htm",
+            "title": "NPS · Delta",
+            "anchor": "Ablagerung an Küstenmündungen bei überwiegender Materialzufuhr · Unterschiedliche Formen und Wirkung von Wellen und Gezeiten; keine Abtragsrate oder Küstenprognose.",
+            "updatedOn": "2019-03-20",
+            "checkedOn": "2026-10-18"
+          },
+          {
+            "url": "https://whc.unesco.org/en/list/1432/",
+            "title": "UNESCO · Okavangodelta",
+            "anchor": "Beschreibung und Kurzüberblick: Binnenlanddelta im Nordwesten Botswanas ohne Abfluss ins Meer; kein Küstendelta. Keine alten Flächen-, Arten- oder Nutzungszahlen übernommen.",
+            "updatedOn": null,
+            "checkedOn": "2026-10-18"
+          }
+        ]
+      }
+    ],
+    "actualProofs": {
+      "nature-integrated34-model-early-v2": {
+        "path": "/workspace/work/wk-continuation/nature-integrated34-model-early-v2/report.json",
+        "sha256": "7f5d2000f432f8b79187bf74eccc1eb11bebc16ff7f1414ff975a3178788afb0",
+        "build": "bc116ee8d05f9b64",
+        "sourceDigest": "5476ce6819c8c6804ae0971409791a477d47d1fda931b5f62848be5cf9b9616a",
+        "browser": "154.0.8037.57"
+      },
+      "nature-integrated34-retained-model-visual": {
+        "path": "/workspace/work/wk-continuation/nature-integrated34-retained-model-visual/report.json",
+        "sha256": "be3371034efbd5ce0882d9d7d99b19d5109b18d759e2ca00d465577bc0971b7d",
+        "build": "bc116ee8d05f9b64",
+        "sourceDigest": "5476ce6819c8c6804ae0971409791a477d47d1fda931b5f62848be5cf9b9616a",
+        "browser": "154.0.8037.57"
+      },
+      "nature-integrated34-built": {
+        "path": "/workspace/work/wk-continuation/nature-integrated34-built/report.json",
+        "sha256": "a058ca7b1e4677ebbc2313fd06cd9553235ddfaae8e666a1b98633967a2b6db7",
+        "build": "bc116ee8d05f9b64",
+        "sourceDigest": "5476ce6819c8c6804ae0971409791a477d47d1fda931b5f62848be5cf9b9616a",
+        "browser": "154.0.8037.57"
+      },
+      "nature-integrated34-native-offline": {
+        "path": "/workspace/work/wk-continuation/nature-integrated34-native-offline/report.json",
+        "sha256": "f764fdfed15028ff9a5f6a9fff065e6ac09622344f3bc308acc7c415911d68a7",
+        "build": "bc116ee8d05f9b64",
+        "sourceDigest": "5476ce6819c8c6804ae0971409791a477d47d1fda931b5f62848be5cf9b9616a",
+        "browser": "154.0.8037.57"
+      }
+    },
+    "sourceRights": "Für Delta zusätzlich tatsächlich gelesene UNESCO-/NPS-Fakten selbst formuliert; keine UNESCO-/NPS-Texte, Bilder oder Logos kopiert, keine Freigabe durch Quellengeber behauptet.",
+    "historicalBaseline": "content/excellence-baseline.json unverändert; nur zwei heutige thematische Einzelhashes anhand dokumentierter Korrekturen aktualisiert, alle Assertions unverändert."
   }
 }
