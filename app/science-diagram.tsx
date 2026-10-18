@@ -1,4 +1,7 @@
+import {ArrowRight,Leaf} from 'lucide-react';
+import './science-diagram.css';
 const diagrams:{[id:string]:{title:string;labels:string[];limit:string}}={
+ photosynthesis:{title:'Fotosynthese: Lichtenergie, Wasser und Kohlendioxid helfen einem grünen Blatt beim Aufbau von Zucker; Sauerstoff wird frei.',labels:['Lichtenergie','Wasser','Kohlendioxid','Zucker','Sauerstoff'],limit:'Vereinfachte Prozessübersicht ohne Mengenverhältnisse oder einzelne Reaktionsschritte. Licht liefert Energie; Wasser und Kohlendioxid sind Stoffe. Zellatmung ist ein anderer Vorgang.'},
  friction:{title:'Gleiten und entgegenwirkende Reibung',labels:['Gleitbewegung nach rechts','Reibung am Klotz nach links'],limit:'Schematischer Klotz; Pfeile ohne Kraftmaßstab. Haftreibung ist ein anderer Fall.'},
  'surface-tension':{title:'Kleiner Tropfen an einer Wassergrenze',labels:['Wassergrenze','Anziehung zwischen Wasserteilchen'],limit:'Eigenes vereinfachtes Bild, keine feste Haut und keine Moleküle in echter Größe.'},
  capillarity:{title:'Wasser in zwei benetzbaren Röhrchen',labels:['Enger: höherer Wasserstand','Breiter: niedrigerer Wasserstand'],limit:'Gleiches Material und gleiche Flüssigkeit; die Steighöhe ist begrenzt. Keine Erklärung des gesamten Wasserwegs hoher Bäume.'},
@@ -17,7 +20,15 @@ export const hasScienceDiagram=(id:string)=>!!diagrams[id.replace('science-','')
 export default function ScienceDiagram({id,compact=false}:{id:string;compact?:boolean}){
  const kind=id.replace('science-',''),d=diagrams[kind];if(!d)return null;
  const stroke='#245d70',fill='#bfdbe9';
+ if(kind==='photosynthesis'&&!compact)return <figure className="topic-illustration photosynthesis-diagram"><div className="photosynthesis-flow" role="img" aria-label={d.title}>
+  <ul aria-label="Für die Fotosynthese">{d.labels.slice(0,3).map(label=><li data-photosynthesis-role="input" key={label}>{label}</li>)}</ul>
+  <ArrowRight className="photosynthesis-arrow" aria-hidden="true"/>
+  <div className="photosynthesis-leaf"><Leaf aria-hidden="true"/><strong>Grünes Blatt</strong><span>Chlorophyll nimmt Licht auf.</span></div>
+  <ArrowRight className="photosynthesis-arrow" aria-hidden="true"/>
+  <ul aria-label="Dabei entstehen">{d.labels.slice(3).map(label=><li data-photosynthesis-role="output" key={label}>{label}</li>)}</ul>
+ </div><figcaption>{d.limit} Eigene WunderKompass-Übersicht mit KI-Unterstützung.</figcaption></figure>;
  return <figure className={'topic-illustration science-explanation-diagram'+(compact?' compact':'')}><svg viewBox="0 0 320 200" role={compact?undefined:'img'} aria-label={compact?undefined:d.title} aria-hidden={compact||undefined}>
+ {kind==='photosynthesis'&&<><circle cx="60" cy="50" r="22" fill="#ecd0a3"/><path d="M145 160Q90 95 200 35Q235 125 145 160ZM145 160L194 58" fill="#bfd8b0" stroke={stroke} strokeWidth="5"/><path d="M55 110H110M99 99L110 110L99 121M225 100H280M269 89L280 100L269 111" fill="none" stroke={stroke} strokeWidth="5"/></>}
  {kind==='friction'&&<><path d="M25 150H290" stroke={stroke} strokeWidth={4}/><rect x={95} y={90} width={85} height={60} fill={fill}/><path d="M165 60H250L238 50M250 60L238 70" stroke={stroke} strokeWidth={4} fill="none"/><path d="M130 130H45L58 120M45 130L58 140" stroke="#8b463d" strokeWidth={4} fill="none"/></>}
  {kind==='surface-tension'&&<><path d="M95 125Q100 50 160 45Q220 50 225 125Z" fill={fill} stroke={stroke} strokeWidth={3}/><path d="M60 128H260" stroke={stroke} strokeWidth={3}/>{[120,150,180,210].map((x,i)=><circle key={x} cx={x} cy={i%2?95:110} r={6} fill={stroke}/>)}</>}
  {kind==='capillarity'&&<><rect x={25} y={140} width={270} height={40} fill={fill}/><path d="M95 35V170 M115 35V170 M200 35V170 M250 35V170" stroke={stroke} strokeWidth={3}/><rect x={97} y={70} width={16} height={100} fill={fill}/><rect x={202} y={112} width={46} height={58} fill={fill}/><path d="M25 140H295" stroke={stroke} strokeWidth={2}/></>}

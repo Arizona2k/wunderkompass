@@ -334,8 +334,8 @@
       "fromId": "invention-computer",
       "toId": "science-computer",
       "kind": "partnership",
-      "why": "Die Erfindungskarte zeigt die Aufgaben der Bauteile. Die Wissenschaftskarte erklärt, wie Daten und Anweisungen bei der Verarbeitung zusammenarbeiten.",
-      "checkedAt": "2026-10-15"
+      "why": "Die Erfindungskarte zeigt die Aufgaben der Bauteile. Die Wissenschaftskarte erklärt binäre Stellenwerte und wie acht Bits 256 verschiedene Zahlenmuster darstellen können.",
+      "checkedAt": "2026-10-18"
     },
     {
       "id": "invention-internet--science-network",
@@ -962,12 +962,12 @@
       "checkedAt": "2026-10-18"
     },
     {
-      "id": "animal-expansion-kingfisher-shadows",
+      "id": "animal-expansion-kingfisher-foodweb",
       "fromId": "animal-kingfisher",
-      "toId": "science-shadows",
-      "why": "Licht und Wahrnehmung verbinden Vogelmerkmale mit der Wirkung von Licht.",
+      "toId": "science-foodweb",
+      "why": "Der Eisvogel frisst Fische. An dieser Beziehung kannst du einen Nahrungspfeil vom Fisch zum Vogel begründen. Die zwei Modellketten zeigen andere Lebensräume; sie sind kein vollständiges Netz seines Gewässers.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-10-18"
     },
     {
       "id": "animal-expansion-ostrich-emperor-penguin",
@@ -1013,9 +1013,9 @@
       "id": "animal-expansion-eastern-clown-anemonefish-coral-reef",
       "fromId": "animal-eastern-clown-anemonefish",
       "toId": "science-coral-reef",
-      "why": "Rifflebensraum und Beziehungen zwischen unterschiedlichen Lebewesen untersuchen.",
+      "why": "Die Seeanemone des Fisches ist ein anderes Tier als eine Koralle. Beide gehören zu den Nesseltieren; an ihnen lassen sich verschiedene Partnerbeziehungen vergleichen.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-10-18"
     },
     {
       "id": "animal-expansion-european-eel-currents",

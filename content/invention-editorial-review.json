@@ -1779,7 +1779,7 @@
     {
       "from": "invention-computer",
       "to": "science-computer",
-      "why": "Die Erfindungskarte zeigt die Aufgaben der Bauteile. Die Wissenschaftskarte erklärt, wie Daten und Anweisungen bei der Verarbeitung zusammenarbeiten.",
+      "why": "Die Erfindungskarte zeigt die Aufgaben der Bauteile. Die Wissenschaftskarte erklärt binäre Stellenwerte und wie acht Bits 256 verschiedene Zahlenmuster darstellen können.",
       "reciprocal": true
     },
     {
@@ -6059,6 +6059,68 @@
       "originalQuestions": 24,
       "originalRetainedMechanics": 12,
       "qaOrReleaseChanges": 0
+    }
+  },
+  "relationshipTargetCounterread20261018": {
+    "status": "Exact binary representation explanation source/target counterread and current reciprocal route/back-focus proof passed, including cold offline; invention article/mechanics/question unchanged.",
+    "change": {
+      "before": {
+        "id": "invention-computer--science-computer",
+        "fromId": "invention-computer",
+        "toId": "science-computer",
+        "kind": "partnership",
+        "why": "Die Erfindungskarte zeigt die Aufgaben der Bauteile. Die Wissenschaftskarte erklärt, wie Daten und Anweisungen bei der Verarbeitung zusammenarbeiten.",
+        "checkedAt": "2026-10-15"
+      },
+      "after": {
+        "id": "invention-computer--science-computer",
+        "fromId": "invention-computer",
+        "toId": "science-computer",
+        "kind": "partnership",
+        "why": "Die Erfindungskarte zeigt die Aufgaben der Bauteile. Die Wissenschaftskarte erklärt binäre Stellenwerte und wie acht Bits 256 verschiedene Zahlenmuster darstellen können.",
+        "checkedAt": "2026-10-18"
+      },
+      "reason": "Target article explains binary representation, not a detailed instruction-processing sequence."
+    },
+    "currentTargetedUI": {
+      "proofs": {
+        "science-three-corrections-early-v2": {
+          "path": "/workspace/work/wk-continuation/science-three-corrections-early-v2/report.json",
+          "sha256": "bb0409444bf734a72ec08c6912737ca03319991f675782b002762fea64802190",
+          "build": "a932e84996d8db17",
+          "sourceDigest": "f4aac0585ac44375c79ea97714eb47d7f34705869bb8e393490aa088266ef2d0",
+          "scope": "Actual local Chromium154 targeted proof; not full Quality or release acceptance"
+        },
+        "science-model-driver-early-v3": {
+          "path": "/workspace/work/wk-continuation/science-model-driver-early-v3/report.json",
+          "sha256": "6671945bd5fff0a255bec9ada1a0d992326ce287fe7a4b21d9a6a05169d843c2",
+          "build": "f603dd7a87fd28dd",
+          "sourceDigest": "49e159b8926715147cace9bbb06a9db6097d6bffa7f13240cb93cd617fae71d9",
+          "scope": "Actual local Chromium154 targeted proof; not full Quality or release acceptance"
+        },
+        "science-existing23-built-v2": {
+          "path": "/workspace/work/wk-continuation/science-existing23-built-v2/report.json",
+          "sha256": "cbb445bad970366c4987a121defb01cd871ce2a6610afe47971d758ca6228013",
+          "build": "f603dd7a87fd28dd",
+          "sourceDigest": "49e159b8926715147cace9bbb06a9db6097d6bffa7f13240cb93cd617fae71d9",
+          "scope": "Actual local Chromium only, existing23 science plus exactly related kingfisher card; no full Quality/release acceptance"
+        },
+        "science-existing23-native-offline-v2": {
+          "path": "/workspace/work/wk-continuation/science-existing23-native-offline-v2/report.json",
+          "sha256": "efd719498173f14c21dd831a46890791c62366ddf93840e03586e92ee5b17fb6",
+          "build": "f603dd7a87fd28dd",
+          "sourceDigest": "49e159b8926715147cace9bbb06a9db6097d6bffa7f13240cb93cd617fae71d9",
+          "scope": "Actual native browser200%/large plus separate home-prepared previously-unvisited24 cold profile. Local Chromium154 only; not full Quality."
+        },
+        "science-photosynthesis-wrap-check": {
+          "path": "/workspace/work/wk-continuation/science-photosynthesis-wrap-check/report.json",
+          "sha256": "f2f20727319382c123d1127178669da96b6aea4a4091bc71691e212405d9d313",
+          "build": "07e524ff9e527fee",
+          "sourceDigest": "2ab570abfcc952ef146cb1c89ff53133aa44cbc427ef54b204dac3953e7c5289",
+          "scope": "Actual local Chromium154 targeted proof; not full Quality or release acceptance"
+        }
+      },
+      "scope": "208 broad edge-direction cases include this exact pair at320/1440; six cold corrected directions include this pair. No whole-invention regression claim on this science build."
     }
   }
 }

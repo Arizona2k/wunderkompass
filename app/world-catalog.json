@@ -8491,7 +8491,7 @@
       "Strom aus der Steckdose ist gefährlich. Unser Modell bleibt vollständig auf dem Bildschirm. Für echte Versuche benutzen Erwachsene geeignete sichere Lernmaterialien.",
       "Im Alltag versorgt elektrische Energie Lampen und Geräte. Der Schalter unterbricht einen Stromweg. Unser Modell verwendet eine Batterie: Steckdosen, Netzkabel und echte elektrische Anlagen sind keine Kinderexperimente."
     ],
-    "surprise": "Eine gute Forscherfrage beginnt mit: Was passiert, wenn ich etwas ändere?",
+    "surprise": "Ein geschlossener Schalter reicht nicht: Auch der Rückweg muss verbunden sein.",
     "locations": [],
     "related": [
       "invention-light",
@@ -8526,7 +8526,15 @@
     },
     "revision": 1,
     "checkedAt": "2026-10-13",
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen."
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. EIA erklärt den geschlossenen Stromkreis und den Schalter. Unser Batteriemodell zeigt zwei Unterbrechungsstellen; es ist kein Versuch an einer echten elektrischen Anlage.",
+    "questionFeedback": {
+      "hint": "Verfolge gedanklich den Weg von der Batterie zur Lampe und zurück. Was geschieht, wenn dieser Weg an einer Stelle unterbrochen ist?",
+      "wrongReasons": [
+        null,
+        "Eine unterbrochene Leitung verhindert den durchgehenden Stromweg. Auch ein geschlossener Schalter an einer anderen Stelle kann die Lücke nicht schließen.",
+        "Die Sonne im Bildschirm ist hier keine angeschlossene Energiequelle. Das Lampenmodell braucht die Batterie und einen vollständigen Leitungsweg."
+      ]
+    }
   },
   {
     "id": "science-network",
@@ -8546,7 +8554,7 @@
       "Das Netzbild zeigt wenige Stationen und vereinfachte Wege. Im echten Internet entscheiden viele Geräte und Regeln gemeinsam.",
       "Eine Nachricht kann in kleinere Datenpakete zerlegt werden. Zwischenstationen leiten sie weiter. In echten Netzen gibt es viel mehr Wege und Regeln als in diesem Modell. Das Web ist nur einer der Dienste des Internets."
     ],
-    "surprise": "Eine gute Forscherfrage beginnt mit: Was passiert, wenn ich etwas ändere?",
+    "surprise": "Dasselbe Ziel kann über verschiedene Wege erreichbar sein.",
     "locations": [],
     "related": [
       "invention-internet",
@@ -8579,7 +8587,15 @@
     },
     "revision": 1,
     "checkedAt": "2026-10-13",
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen."
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. Die Internet Society beschreibt Paketvermittlung und Router als Verbindungen zwischen Netzen. Das Bild zeigt nur wenige mögliche Wege und keine vollständige Internetarchitektur.",
+    "questionFeedback": {
+      "hint": "Stell dir Daten wie kleine Sendungen mit einem Ziel vor. Welche Aufgabe braucht es an einer Kreuzung im Computernetz?",
+      "wrongReasons": [
+        null,
+        "Ein Router ist eine Zwischenstation. Viele Geräte, Leitungen und gemeinsame Regeln bilden zusammen das Internet.",
+        "Ein Router verarbeitet Datenpakete. Er verändert weder Papier noch Wasser; gesucht ist seine Aufgabe im Datennetz."
+      ]
+    }
   },
   {
     "id": "science-flight",
@@ -8597,9 +8613,9 @@
     ],
     "more": [
       "Unser Kräftebild vergleicht Pfeile. Es ist keine Flugsimulation. Form, Geschwindigkeit und Luftströmung wirken im echten Flug gemeinsam.",
-      "Steigt das Flugzeug, sind die Kräfte für diesen Bewegungszustand nicht genauso ausgeglichen wie bei einem gleichmäßigen geraden Flug. Ein Regler erklärt nur eine vereinfachte Kraftbilanz und ist keine Flugvorhersage."
+      "Gleichgewicht heißt: Die Kräfte heben sich insgesamt auf. Ein Flugzeug kann sich dabei gleichmäßig geradeaus bewegen, auch auf einer ansteigenden Flugbahn. Ändern sich Tempo oder Richtung, ist dafür eine unausgeglichene Gesamtkraft nötig. Unser Bild hält die Pfeilrichtungen fest; es zeigt keinen geneigten Steigflug und sagt keinen echten Flugverlauf voraus."
     ],
-    "surprise": "Eine gute Forscherfrage beginnt mit: Was passiert, wenn ich etwas ändere?",
+    "surprise": "Gleichgewicht der Kräfte bedeutet nicht Stillstand: Ein Flugzeug kann sich dabei gleichmäßig weiterbewegen.",
     "locations": [],
     "related": [
       "invention-airplane",
@@ -8609,6 +8625,10 @@
       {
         "label": "Fachquelle zum Lernmodell",
         "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/"
+      },
+      {
+        "label": "NASA · Kräfte auf einer ansteigenden Flugbahn",
+        "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/forces-in-a-climb/"
       }
     ],
     "aliases": [],
@@ -8631,7 +8651,15 @@
     },
     "revision": 1,
     "checkedAt": "2026-10-13",
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen."
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. NASA unterscheidet vier Kräfte und ihre Richtungen. Unser Bild hält diese Richtungen fest. Ein gleichmäßiger Steigflug braucht eine andere Betrachtung als eine Beschleunigung; das Bild ist keine Flugsimulation.",
+    "questionFeedback": {
+      "hint": "Achte auf die Richtung der gesuchten Kraft: Sie soll das Flugzeug nach oben tragen, nicht seine Vorwärtsbewegung bremsen.",
+      "wrongReasons": [
+        null,
+        "Luftwiderstand bremst die Bewegung durch die Luft. Im gezeigten waagerechten Kräftevergleich ist der Auftrieb die nach oben gerichtete Kraft.",
+        "Schall ist eine Druckschwingung. In diesem Kräftebild heißt die dem Gewicht entgegengerichtete Kraft Auftrieb."
+      ]
+    }
   },
   {
     "id": "science-gps",
@@ -8651,7 +8679,7 @@
       "Hier siehst du ein vereinfachtes flaches Entfernungsrätsel. Echtes GPS arbeitet im dreidimensionalen Raum mit mindestens vier Satelliten und genauen Uhren. Wir fragen deinen eigenen Standort nicht ab.",
       "Navigationsgeräte vergleichen die Laufzeiten von Satellitensignalen. Dafür müssen die Uhren sehr genau sein. In der wirklichen räumlichen Ortung werden normalerweise mindestens vier Satelliten verwendet, auch um den Uhrenfehler zu bestimmen. Diese Seite fragt deinen Standort nicht ab."
     ],
-    "surprise": "Eine gute Forscherfrage beginnt mit: Was passiert, wenn ich etwas ändere?",
+    "surprise": "Der Empfänger muss neben seinem Ort auch den Fehler seiner Uhr bestimmen.",
     "locations": [],
     "related": [
       "invention-satellite",
@@ -8661,6 +8689,10 @@
       {
         "label": "Fachquelle zum Lernmodell",
         "url": "https://spaceplace.nasa.gov/gps/en/"
+      },
+      {
+        "label": "NASA · Laufzeitmessung und Uhrenfehler bei GPS",
+        "url": "https://www.nasa.gov/smallsat-institute/sst-soa/guidance-navigation-and-control/"
       }
     ],
     "aliases": [],
@@ -8683,7 +8715,15 @@
     },
     "revision": 1,
     "checkedAt": "2026-10-13",
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen."
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. NASA erklärt vier oder mehr Satellitensignale und die Berücksichtigung des Uhrenfehlers. Die gezeichneten Entfernungskreise sind ein flaches Rätsel; sie zeigen keine echten Satellitenbahnen und verwenden nicht deinen Standort.",
+    "questionFeedback": {
+      "hint": "Ein GPS-Empfänger muss außer seinem Ort auch einen Fehler seiner Uhr berücksichtigen. Reicht dafür dieselbe Anzahl Signale wie für nur drei Ortsangaben?",
+      "wrongReasons": [
+        null,
+        "Ein einzelnes Signal liefert noch keinen eindeutigen räumlichen Ort samt Uhrenfehler. Gewöhnliche Empfänger verbinden mehrere unabhängige Satellitensignale.",
+        "Zwei Signale reichen dafür nicht. Der gewöhnliche Empfänger muss drei Ortsangaben und den Fehler seiner Uhr gemeinsam bestimmen."
+      ]
+    }
   },
   {
     "id": "science-computer",
@@ -8703,7 +8743,7 @@
       "Ein Computer folgt Programmen. Unser Zahlenspiel zeigt binäre Stellenwerte; es erklärt nicht alle Vorgänge in einem Prozessor.",
       "Eine Datei kann Bilder, Texte oder Töne darstellen. Welche Bedeutung eine Folge von Bits hat, hängt von vereinbarten Regeln ab. Unser Acht-Bit-Modell zeigt Zahlen; echte Rechner verarbeiten viel längere Folgen und viele verschiedene Datenformen."
     ],
-    "surprise": "Eine gute Forscherfrage beginnt mit: Was passiert, wenn ich etwas ändere?",
+    "surprise": "Ein Bit mit dem Stellenwert 128 ist mehr wert als sieben eingeschaltete Bits mit den kleineren Stellenwerten zusammen.",
     "locations": [],
     "related": [
       "invention-computer",
@@ -8741,7 +8781,15 @@
     },
     "revision": 1,
     "checkedAt": "2026-10-13",
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen."
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. MDN beschreibt acht Bit breite vorzeichenlose Zahlen. Acht unabhängige Zweierentscheidungen ergeben 2 hoch 8, also 256 Muster. Unser Modell liest sie als Zahlen von 0 bis 255; andere Daten brauchen andere Regeln.",
+    "questionFeedback": {
+      "hint": "Ein Bit hat zwei mögliche Zustände. Wie wächst die Zahl der Kombinationen, wenn du weitere Bits hinzufügst?",
+      "wrongReasons": [
+        null,
+        "Acht ist die Zahl der Bits. Jedes Bit kann zwei Zustände haben; dadurch entstehen viel mehr Kombinationen als nur acht.",
+        "Zehn gehört zur Zahl unserer üblichen Dezimalziffern. Bei acht Bits zählt jede Stelle zwei Möglichkeiten: zusammen 256 Kombinationen."
+      ]
+    }
   },
   {
     "id": "science-shadows",
@@ -8761,7 +8809,7 @@
       "Es gab schon lange vor Kolumbus gute Gründe für eine runde Erde. Schatten sind ein Hinweis; heute haben wir zusätzlich Messungen, Raumfahrt und Bilder. Das Modell zeigt parallele Sonnenstrahlen und zwei Orte auf demselben Längengrad.",
       "Gleichzeitige Schattenmessungen an weit entfernten Orten können helfen, die Erdkrümmung zu untersuchen. Dafür muss man die Sonnenrichtung und die Lage der Orte beachten. Dieses vereinfachte Modell zeigt die Idee; es ersetzt keine vollständige Messung."
     ],
-    "surprise": "Eine gute Forscherfrage beginnt mit: Was passiert, wenn ich etwas ändere?",
+    "surprise": "Aus einem Schattenwinkel und einer Entfernung lässt sich ein Erdumfang schätzen. Dafür müssen die Annahmen zur Messung passen.",
     "locations": [
       {
         "label": "Alexandria – mit Eratosthenes verbunden",
@@ -8773,8 +8821,7 @@
     "related": [
       "history-pyramids",
       "science-gps",
-      "science-angle",
-      "animal-kingfisher"
+      "science-angle"
     ],
     "sources": [
       {
@@ -8802,7 +8849,15 @@
     },
     "revision": 1,
     "checkedAt": "2026-10-13",
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen."
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. NASA beschreibt Eratosthenes’ Umfangsschätzung aus Schatten und Entfernung. Unser Vergleich setzt gleichzeitige Messungen, gleich hohe Stäbe und paralleles Sonnenlicht voraus. Er ersetzt keine vollständige Messreihe.",
+    "questionFeedback": {
+      "hint": "Stell dir gleiche Stäbe an zwei weit entfernten Orten vor. Was könnte bewirken, dass Sonnenstrahlen dort unterschiedlich auf den Boden treffen?",
+      "wrongReasons": [
+        null,
+        "Ein Stab hat kein Gedächtnis. Vergleiche die Richtung des Sonnenlichts mit der örtlichen senkrechten Richtung.",
+        "Die Erde wird nicht täglich flach. Im Modell verändert die gekrümmte Oberfläche die Ausrichtung der gleich hohen Stäbe zum parallelen Licht."
+      ]
+    }
   },
   {
     "id": "animal-whale-shark",
@@ -9719,14 +9774,22 @@
     "locations": [],
     "links": [],
     "model": "atmosphere",
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. NASA und UCAR ordnen die Atmosphäre nach dem Temperaturverlauf. Die gezeichneten Schichten haben keinen gemeinsamen Höhenmaßstab und keine festen Decken. Die meisten Wettervorgänge liegen in der Troposphäre.",
     "learning": {
       "starter": "Die Erde besitzt eine Lufthülle. Nahe dem Boden ist sie dichter.",
       "observe": "Wähle zwei Luftschichten. Vergleiche Höhe und Dichte, ohne die gezeichneten Grenzen als feste Decken auszugeben.",
       "benefit": "Du trennst eine hilfreiche Einteilung von echten starren Grenzen."
     },
     "revision": 1,
-    "checkedAt": "2026-10-13"
+    "checkedAt": "2026-10-13",
+    "questionFeedback": {
+      "hint": "Wetter beobachten wir in der Luft nahe der Erdoberfläche. Vergleiche die Lage der genannten Schichten mit diesem Bereich.",
+      "wrongReasons": [
+        null,
+        "Die Exosphäre liegt sehr weit außen und ist sehr dünn. Die meisten Wetterwolken entstehen in der viel tieferen Troposphäre.",
+        "Der innere Erdkern ist keine Luftschicht. Gesucht ist der bodennahe Teil der Atmosphäre."
+      ]
+    }
   },
   {
     "id": "science-magnetism",
@@ -9782,14 +9845,22 @@
     "locations": [],
     "links": [],
     "model": "magnetism",
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. NASA beschreibt den Ursprung im äußeren Kern und die Verformung durch Sonnenwind. Das Feld ist keine feste Wand. „Ohne Magnetfeld“ ist ein Gedankenvergleich, kein Schalter an der wirklichen Erde.",
     "learning": {
       "starter": "Das Erdmagnetfeld beeinflusst viele geladene Teilchen aus dem Weltraum.",
       "observe": "Vergleiche im Modell ruhigen und stärkeren Sonnenwind. Beschreibe die Formänderung, ohne eine feste undurchdringliche Wand zu behaupten.",
       "benefit": "Du kannst eine Schutzwirkung erklären und zugleich ihre Grenze beachten."
     },
     "revision": 1,
-    "checkedAt": "2026-10-13"
+    "checkedAt": "2026-10-13",
+    "questionFeedback": {
+      "hint": "Denk an den Aufbau der Erde. Wo könnte bewegtes, elektrisch leitfähiges Material eine Rolle spielen, statt eines fertigen Magneten?",
+      "wrongReasons": [
+        null,
+        "Die Erde hat keinen eingebauten Stabmagneten. Bewegungen im leitfähigen flüssigen äußeren Kern sind für ihr Magnetfeld wichtig.",
+        "Wolken liegen in der Atmosphäre. Der wichtigste Ursprung des Erdmagnetfelds liegt viel tiefer im äußeren Kern."
+      ]
+    }
   },
   {
     "id": "science-currents",
@@ -9827,7 +9898,7 @@
       "science-buoyancy",
       "animal-european-eel"
     ],
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. NOAA unterscheidet Wind, Gezeiten und Dichteunterschiede als Antriebe. Das Modell vergleicht nur ein Paket mit seiner Umgebung bei gleichem Druck. Bei gegenläufigen Änderungen bleibt die Richtung unbestimmt.",
     "sources": [
       {
         "label": "NOAA · Meeresströmungen",
@@ -9854,7 +9925,15 @@
       "benefit": "Du lernst, eine einzelne Ursache von einem ganzen komplexen Meeresstrom zu unterscheiden."
     },
     "revision": 1,
-    "checkedAt": "2026-10-13"
+    "checkedAt": "2026-10-13",
+    "questionFeedback": {
+      "hint": "Vergleiche zwei gleich große Wasserpakete. Wie könnten Temperatur und Salzgehalt verändern, welches im Modell eher nach unten sinkt?",
+      "wrongReasons": [
+        null,
+        "Wärmeres, weniger salziges Wasser ist im vereinfachten Vergleich weniger dicht. Das kältere, salzigere Paket kann darunter sinken.",
+        "Wasser besitzt Masse. Vergleiche Temperatur und Salzgehalt bei gleichem Druck, statt eine masselose Flüssigkeit anzunehmen."
+      ]
+    }
   },
   {
     "id": "science-motor",
@@ -9911,14 +9990,22 @@
     "locations": [],
     "links": [],
     "model": "motor",
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. Das National MagLab erläutert Spule, Magnet und Stromwender eines einfachen Gleichstrommotors. Das Modell erklärt diesen Aufbau; Motoren können auch elektronisch und ohne Bürsten gesteuert werden.",
     "learning": {
       "starter": "Strom in einer Spule kann im Magnetfeld eine Drehbewegung antreiben.",
       "observe": "Schalte im Bildschirmmotor den Stromwender aus und wieder ein. Beschreibe, warum die passende Umschaltung beim Weiterdrehen hilft.",
       "benefit": "Du verbindest Stromrichtung, Kraft und Drehbewegung statt nur eine Animation anzusehen."
     },
     "revision": 1,
-    "checkedAt": "2026-10-13"
+    "checkedAt": "2026-10-13",
+    "questionFeedback": {
+      "hint": "Stell dir die Spule nach einer halben Drehung vor. Was müsste an der elektrischen Ansteuerung angepasst werden, damit sie weiterdreht?",
+      "wrongReasons": [
+        null,
+        "Ein Stromwender lädt die Batterie nicht auf. Er wechselt die Verbindung zur drehenden Spule; der Motor braucht weiterhin zugeführte Energie.",
+        "Festgehaltene Räder würden eine Bewegung behindern. Hier geht es um die passende Stromrichtung in der Spule."
+      ]
+    }
   },
   {
     "id": "science-foodweb",
@@ -9932,7 +10019,7 @@
     "facts": [
       {
         "label": "Produzenten",
-        "text": "Lebewesen, die mit Licht energiereiche Stoffe aufbauen."
+        "text": "Zum Beispiel Pflanzen und Algen: Sie bauen mit Licht energiereiche Stoffe auf."
       },
       {
         "label": "Konsumenten",
@@ -9954,7 +10041,8 @@
       "animal-honey-bee",
       "science-photosynthesis",
       "science-fungi",
-      "animal-short-snouted-seahorse"
+      "animal-short-snouted-seahorse",
+      "animal-kingfisher"
     ],
     "sources": [
       {
@@ -9976,14 +10064,22 @@
     "locations": [],
     "links": [],
     "model": "foodweb",
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. NOAA erklärt Pfeile vom Futter zum Fresser und mehrere verbundene Nahrungsketten. Das Modell baut zwei ausgewählte Ketten. Energie wird übertragen und umgewandelt; Stoffkreisläufe sind eine andere Betrachtung.",
     "learning": {
       "starter": "Eine Nahrungskette zeigt, wie Energie mit Nahrung weitergegeben wird.",
-      "observe": "Folge im Nahrungsnetz einem Pfeil vom Futter zum Fresser. Suche einen zweiten Weg und erkläre, weshalb eine einzelne Kette nicht alles zeigt.",
+      "observe": "Baue im Modell beide Nahrungsketten und folge ihren Pfeilen. Was müsstest du für einen Lebensraum ergänzen, damit aus einer einzelnen Kette ein ganzes Nahrungsnetz wird?",
       "benefit": "Du unterscheidest Pfeilrichtung, Stoffkreislauf und Energieübertragung."
     },
     "revision": 1,
-    "checkedAt": "2026-10-13"
+    "checkedAt": "2026-10-13",
+    "questionFeedback": {
+      "hint": "Ein Nahrungspfeil soll eine Weitergabe von Energie darstellen. Von welchem Lebewesen kommt die Nahrung, bei welchem landet sie?",
+      "wrongReasons": [
+        null,
+        "Die Größe eines Tieres bestimmt die Pfeilrichtung nicht. Der Pfeil folgt der Nahrung und der mit ihr übertragenen Energie.",
+        "Norden ist eine Kartenrichtung. Ein Nahrungspfeil zeigt hier eine Beziehung zwischen Futter und Fresser."
+      ]
+    }
   },
   {
     "id": "science-sound",
@@ -10039,14 +10135,22 @@
     "locations": [],
     "links": [],
     "model": "sound",
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. NASA unterscheidet Frequenz und Stärke einer Schallwelle. Unser stummes Bild zeigt Druckabweichung an einem Ort über die Zeit. Die Luftteilchen fliegen nicht entlang der gezeichneten Kurve durch das Zimmer.",
     "learning": {
       "starter": "Schwingungen können einen Ton erzeugen. Ihr Takt beeinflusst seine Höhe.",
       "observe": "Ändere im stummen Tonmodell zuerst die Frequenz, dann die Auslenkung. Erkläre Tonhöhe und Stärke als verschiedene Vergleiche.",
       "benefit": "Du verwechselst eine Druckkurve nicht mit einem fliegenden Luftteilchen oder mit hörbar geprüftem Ton."
     },
     "revision": 1,
-    "checkedAt": "2026-10-13"
+    "checkedAt": "2026-10-13",
+    "questionFeedback": {
+      "hint": "Vergleiche einen langsam und einen schnell schwingenden Gegenstand. Welche Eigenschaft der Schwingung könnte die Tonhöhe bestimmen?",
+      "wrongReasons": [
+        null,
+        "Weniger Schwingungen pro Sekunde bedeuten eine niedrigere Frequenz und beim verglichenen Ton eine tiefere Tonhöhe.",
+        "Die Farbe verändert die Schwingungszahl nicht. Für die Tonhöhe vergleichen wir die Frequenz."
+      ]
+    }
   },
   {
     "id": "science-solar-system",
@@ -10107,14 +10211,22 @@
     "locations": [],
     "links": [],
     "model": "solar-system",
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. Die NASA-Tabelle gibt Durchmesser und mittlere Sonnenabstände relativ zur Erde an. Beide Ansichten haben einen jeweils eigenen linearen Maßstab. Das Größenbild zeigt keine echten Planetenabstände oder aktuellen Positionen.",
     "learning": {
       "starter": "Planeten unterscheiden sich in ihrer Größe und Entfernung von der Sonne.",
       "observe": "Vergleiche dieselben beiden Planeten in Größen- und Abstandssicht. Sage vor dem Wechsel, welches Verhältnis du gerade untersuchst.",
       "benefit": "Du liest zwei Maßstäbe bewusst und erkennst, weshalb ein hübsches Bild nicht automatisch maßstäblich ist."
     },
     "revision": 1,
-    "checkedAt": "2026-10-13"
+    "checkedAt": "2026-10-13",
+    "questionFeedback": {
+      "hint": "Vergleiche den Durchmesser eines Planeten mit der Strecke zum nächsten Planeten. Wäre beides auf derselben kleinen Zeichnung gut erkennbar?",
+      "wrongReasons": [
+        null,
+        "Die Planeten sind unterschiedlich groß. Die getrennten Bilder machen sowohl Durchmesser als auch mittlere Abstände vergleichbar.",
+        "Entfernungen sind wichtig. Gerade weil sie so groß gegenüber den Planetendurchmessern sind, verwenden wir dafür eine eigene Darstellung."
+      ]
+    }
   },
   {
     "id": "science-energy",
@@ -10178,14 +10290,22 @@
     "locations": [],
     "links": [],
     "model": "energy",
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. Das US-Energieministerium erklärt die Umwandlung von Licht in elektrische Energie. Die Speicheridee ist zusätzlich mit dem Batteriethema verbunden. Das Hausmodell nutzt Spiel-Energiepunkte und lässt Verluste sowie das Stromnetz weg.",
     "learning": {
       "starter": "Sonnenlicht kann Strom liefern. Ein Akku kann einen Teil für später speichern.",
       "observe": "Vergleiche im Sonnenstrommodell einen hellen Tag mit einer Nacht bei leerem Akku. Prüfe Produktion und Verbrauch getrennt.",
       "benefit": "Du kannst Speicherung von Erzeugung unterscheiden und eine begrenzte Reserve erklären."
     },
     "revision": 1,
-    "checkedAt": "2026-10-13"
+    "checkedAt": "2026-10-13",
+    "questionFeedback": {
+      "hint": "Prüfe zwei Dinge im Modell: die Lichtquelle und den gespeicherten Vorrat. Woher könnte das Haus nachts Energie bekommen?",
+      "wrongReasons": [
+        null,
+        "Ohne Licht liefert die Solarzelle im Modell nichts. Ein leerer Akku enthält auch keinen Vorrat, den das Haus nutzen könnte.",
+        "Ein Akku füllt sich nicht von allein. Er muss zuvor Energie aufnehmen; im Modell bleibt seine Speichermenge begrenzt."
+      ]
+    }
   },
   {
     "id": "science-patterns",
@@ -10244,14 +10364,22 @@
     "locations": [],
     "links": [],
     "model": "patterns",
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. Google erläutert Lernen aus Daten und die Rolle von Beispielen. Unsere Übung verwendet ausdrücklich feste Sortierregeln. Sie ist kein trainiertes KI-System und sendet keine Bilder an einen Dienst.",
     "learning": {
       "starter": "Ein Computer kann nach einer gewählten Regel ähnliche Merkmale sortieren.",
       "observe": "Sortiere dieselben Figuren zuerst nach Farbe und dann nach Form. Erkläre einen Fall, der beim Regelwechsel anders eingeordnet wird.",
       "benefit": "Du verstehst, warum eine Sortierregel und gute Beispiele wichtig sind und Fehler möglich bleiben."
     },
     "revision": 1,
-    "checkedAt": "2026-10-13"
+    "checkedAt": "2026-10-13",
+    "questionFeedback": {
+      "hint": "Ein Bild kann eine Farbe und eine Form zugleich haben. Welches Merkmal soll die jeweilige Sortierregel beachten?",
+      "wrongReasons": [
+        null,
+        "Computer können Fehler machen. Dieselbe Form kann zu einer Farbregel passen und zu einer Formregel nicht passen.",
+        "Die Beispiele haben unterschiedliche Formen und Farben. Entscheidend ist, welches Merkmal die gewählte Regel prüft."
+      ]
+    }
   },
   {
     "id": "science-water-cycle",
@@ -10303,7 +10431,7 @@
         "url": "https://www.usgs.gov/water-science-school/science/evapotranspiration-and-water-cycle?page=0"
       }
     ],
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. USGS beschreibt Wasserspeicher, Zustandswechsel und die Abgabe von Wasser durch Pflanzen. Unser vierstufiger Weg ist nur ein Beispiel: Wasser kann abzweigen und unterschiedlich lange gespeichert bleiben.",
     "question": {
       "prompt": "Woraus besteht eine Wolke?",
       "answers": [
@@ -10372,13 +10500,21 @@
       "starter": "Wasser kann als Flüssigkeit, Dampf oder Eis an verschiedenen Orten vorkommen.",
       "observe": "Verfolge im Wassermodell einen möglichen Weg. Suche eine Abzweigung und erkläre, warum es keinen vorgeschriebenen Start gibt.",
       "benefit": "Du beschreibst Speicher und Zustandswechsel ohne Wasser im Modell einfach verschwinden zu lassen."
+    },
+    "questionFeedback": {
+      "hint": "Wasserdampf ist unsichtbar, die Wolke kannst du sehen. Überlege, welche Form von Wasser Licht sichtbar streuen könnte.",
+      "wrongReasons": [
+        null,
+        "Unsichtbarer Wasserdampf allein bildet keine sichtbare Wolke. Kleine Tropfen oder Eiskristalle streuen das Licht.",
+        "Eine gewöhnliche Wolke ist kein Rauch. Sie besteht aus Wassertröpfchen, Eiskristallen oder beidem."
+      ]
     }
   },
   {
     "id": "science-photosynthesis",
     "category": "science",
     "title": "Wie Blätter Sonnenlicht nutzen",
-    "intro": "Pflanzen stellen mit Licht, Wasser und Kohlendioxid Zucker her.",
+    "intro": "Grüne Pflanzen stellen mit Licht, Wasser und Kohlendioxid Zucker her.",
     "aliases": [
       "Fotosynthese",
       "Photosynthese",
@@ -10421,7 +10557,7 @@
         "url": "https://endeavour.kew.org/taster-resources/what-is-photosynthesis"
       }
     ],
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. Kew erläutert Licht, Wasser, Kohlendioxid, Zucker und Sauerstoff. Viele grüne Pflanzen und Algen betreiben Fotosynthese. Die Zellatmung bleibt ein anderer Vorgang; nicht alle Lebensgemeinschaften beginnen mit Sonnenlicht.",
     "question": {
       "prompt": "Welche Energie nutzt die Fotosynthese?",
       "answers": [
@@ -10489,6 +10625,14 @@
       "starter": "Grüne Pflanzen können Lichtenergie zum Aufbau energiereicher Stoffe nutzen.",
       "observe": "Verbinde im Bild Licht, Wasser und Kohlendioxid mit dem Aufbau energiereicher Stoffe. Unterscheide diesen Prozess von der Zellatmung.",
       "benefit": "Du verstehst eine Energiequelle vieler Nahrungsnetze und vermeidest die Idee, Pflanzen würden nicht atmen."
+    },
+    "questionFeedback": {
+      "hint": "Was erreicht ein Blatt, wenn es im Sonnenlicht steht? Vergleiche das mit Geräuschen und Wärme aus dem Erdinneren.",
+      "wrongReasons": [
+        null,
+        "Schall liefert nicht die Energie der hier erklärten Fotosynthese. Grüne Pflanzen nutzen dafür Licht.",
+        "Erdwärme ist nicht die Energiequelle der Fotosynthese. Licht treibt diesen Vorgang an; andere Lebensgemeinschaften können chemische Energie nutzen."
+      ]
     }
   },
   {
@@ -10537,7 +10681,7 @@
         "url": "https://australian.museum/learn/species-identification/ask-an-expert/what-is-pollination/"
       }
     ],
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. Das Australian Museum erklärt Pollentransport, Selbst- und Fremdbestäubung. Ein Blütenbesuch allein belegt keine erfolgreiche Übertragung oder Befruchtung. Die Smithsonian-Seite war beim aktuellen Abruf nicht erreichbar.",
     "question": {
       "prompt": "Was wird bei der Bestäubung übertragen?",
       "answers": [
@@ -10605,6 +10749,14 @@
       "starter": "Bestäubung bringt Pollen auf eine passende Narbe einer Blüte.",
       "observe": "Beobachte eine Blüte mit Abstand und ohne Insekten anzufassen. Trenne den sichtbaren Besuch von dem nicht sicher bewiesenen Pollentransport.",
       "benefit": "Du unterscheidest Beobachtung, Bestäubung und spätere Befruchtung."
+    },
+    "questionFeedback": {
+      "hint": "Stell dir den Weg von einer Blüte zur nächsten vor. Welche kleinen Teilchen aus der Blüte können dabei mitreisen?",
+      "wrongReasons": [
+        null,
+        "Eine fertige Frucht wird nicht als Bestäubungspaket übertragen. Pollen müssen die passende Narbe erreichen; zur Fruchtbildung sind weitere Schritte nötig.",
+        "Wurzeln transportieren keine Pollen zwischen den Blüten. Bestäubung betrifft Pollen und die aufnehmende Stelle der Blüte."
+      ]
     }
   },
   {
@@ -10657,7 +10809,7 @@
         "url": "https://research.fs.usda.gov/treesearch/41353"
       }
     ],
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. Kew und der US Forest Service beschreiben Pilzfäden und Pilz-Wurzel-Beziehungen. Manche Pilze zersetzen, andere leben mit Pflanzen oder parasitisch. Eine gezeichnete Verbindung belegt kein menschliches Gespräch zwischen Bäumen.",
     "question": {
       "prompt": "Wie heißt das Geflecht vieler Pilze?",
       "answers": [
@@ -10725,6 +10877,14 @@
       "starter": "Viele Pilze bilden feine Fäden. Ein Pilzhut ist oft nur ein Teil davon.",
       "observe": "Unterscheide in der Erklärung Myzel und Fruchtkörper. Betrachte Pilze draußen nur; keine sammeln, berühren oder essen.",
       "benefit": "Du erkennst verschiedene Pilzrollen und behauptest nicht allein aus einem Bild, Bäume würden wie Menschen sprechen."
+    },
+    "questionFeedback": {
+      "hint": "Gesucht ist der Name des Pilzgeflechts, nicht eines Blütenstoffs. Erinnere dich an die feinen Fäden unter dem Pilzhut.",
+      "wrongReasons": [
+        null,
+        "Nektar ist eine zuckerhaltige Flüssigkeit vieler Blüten. Das Geflecht eines Pilzes heißt Myzel.",
+        "Chlorophyll ist ein lichtaufnehmender Farbstoff. Pilze bilden ihr Myzel aus Fäden und betreiben keine Fotosynthese."
+      ]
     }
   },
   {
@@ -10775,7 +10935,7 @@
         "url": "https://oceanservice.noaa.gov/facts/coral_bleach.html"
       }
     ],
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. NOAA beschreibt Korallenpolypen, Kalkskelette und Algenpartner. Bleiche bedeutet Verlust dieser Partner, nicht automatisch sofortigen Tod. Die Erklärung grenzt tropische Riffkorallen von anderen Korallen ab.",
     "question": {
       "prompt": "Zu welcher Gruppe gehören Korallenpolypen?",
       "answers": [
@@ -10843,6 +11003,14 @@
       "starter": "Korallenpolypen sind Tiere. Viele leben mit kleinen Algenpartnern zusammen.",
       "observe": "Vergleiche eine Koralle mit Algenpartnern und eine gebleichte Koralle. Erkläre, weshalb Bleiche nicht automatisch sofortigen Tod bedeutet.",
       "benefit": "Du verstehst Zusammenarbeit und Stress, ohne alle Korallen auf eine Lebensweise zu reduzieren."
+    },
+    "questionFeedback": {
+      "hint": "Ein hartes Skelett allein verrät noch nicht, was lebt. Betrachte den Polypen mit seinen Tentakeln und überlege, wie er Nahrung aufnimmt.",
+      "wrongReasons": [
+        null,
+        "Pilze sind eine andere Lebewesengruppe. Ein Korallenpolyp ist ein Tier, auch wenn er fest an einem Ort lebt.",
+        "Das Kalkskelett ist ein Material. Der lebende Polyp ist ein Tier; Skelett und Lebewesen müssen unterschieden werden."
+      ]
     }
   },
   {
@@ -10892,7 +11060,7 @@
         "url": "https://science.nasa.gov/moon/top-moon-questions/"
       }
     ],
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. NASA unterscheidet reflektiertes Licht, Mondphasen und Finsternisse. Das Modell zeigt vier ausgewählte Positionen und die Ansicht der Mondscheibe für die Nordhalbkugel. Größen und Abstände sind nicht maßstabsgetreu.",
     "question": {
       "prompt": "Woher kommt das Licht des Mondes?",
       "answers": [
@@ -10961,6 +11129,14 @@
       "starter": "Die Sonne beleuchtet den Mond. Unser Blick auf seine helle Seite verändert sich.",
       "observe": "Wähle im Modell zwei Mondpositionen. Vergleiche beleuchtete Hälfte und von der Erde sichtbaren Teil; trenne Phase und Finsternis.",
       "benefit": "Du erklärst Mondphasen ohne die falsche pauschale Idee eines Erdschattens."
+    },
+    "questionFeedback": {
+      "hint": "Der Mond ist auch dann sichtbar, wenn bei dir Nacht ist. Welche Lichtquelle könnte seine Oberfläche trotzdem beleuchten?",
+      "wrongReasons": [
+        null,
+        "Im Mond steckt keine Lampe. Seine Oberfläche reflektiert Sonnenlicht; unsere Sicht auf die helle Seite verändert sich.",
+        "Brennende Wolken beleuchten den Mond nicht. Das Mondlicht stammt hauptsächlich vom reflektierten Sonnenlicht."
+      ]
     }
   },
   {
@@ -11010,7 +11186,7 @@
         "url": "https://science.nasa.gov/helio-and-you-seasons-on-earth-mars-and-beyond/"
       }
     ],
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. NASA erklärt die Achsneigung und entgegengesetzte Jahreszeiten auf den Halbkugeln. Der veränderliche Sonnenabstand ist nicht die Hauptursache. Das Schema sagt weder örtliches Wetter noch einheitliche Jahreszeiten in jedem Klima voraus.",
     "question": {
       "prompt": "Was verursacht hauptsächlich die Jahreszeiten auf der Erde?",
       "answers": [
@@ -11078,6 +11254,14 @@
       "starter": "Die geneigte Erdachse verändert Sonnenstand und Tageslänge im Jahreslauf.",
       "observe": "Vergleiche Nord- und Südhalbkugel zur gleichen Jahreszeit. Halte den Tag fest und erkläre die unterschiedliche Neigung zur Sonne.",
       "benefit": "Du unterscheidest Achsneigung, Sonnenstand und Entfernung statt eine einzige einfache Abstandsregel zu übernehmen."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche Sonnenstand und Tageslänge im Sommer und Winter. Welche Eigenschaft der Erde könnte beide im Jahreslauf verändern?",
+      "wrongReasons": [
+        null,
+        "Die Sonne wird für unsere Jahreszeiten nicht ein- und ausgeschaltet. Die Achsneigung verändert Einfallswinkel und Tageslänge.",
+        "Mondphasen erklären den wechselnden Anblick des Mondes. Die irdischen Jahreszeiten hängen hauptsächlich mit der geneigten Erdachse zusammen."
+      ]
     }
   },
   {
@@ -11128,9 +11312,13 @@
       {
         "label": "NOAA: Frequency of Tides",
         "url": "https://oceanservice.noaa.gov/facts/tidefrequency.html"
+      },
+      {
+        "label": "NOAA · Springtiden bei Neu- und Vollmond",
+        "url": "https://oceanservice.noaa.gov/facts/springtide.html"
       }
     ],
-    "sourceNote": "Eigene WunderKompass-Erklärung mit KI-Unterstützung, nachredigiert am 13. Oktober 2026. Die verlinkten Stellen dienen als fachliche Quellen; ihre Organisationen haben diese Erklärung oder Zeichnung nicht freigegeben und verantworten sie nicht. Eine unabhängige menschliche Fachabnahme steht noch aus. Modelle und Beobachtungen zeigen begrenzte Ausschnitte, keine Alltagsvorhersagen.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. NOAA beschreibt unterschiedliche Anziehung sowie den Einfluss der Meeresbecken. Springtiden gehören zu Neu- und Vollmond. Der Küstenvergleich ist keine örtliche Zeit- oder Sicherheitsvorhersage; nicht alle Küsten haben denselben Rhythmus.",
     "question": {
       "prompt": "Welche Himmelskörper beeinflussen die Gezeiten?",
       "answers": [
@@ -11198,6 +11386,14 @@
       "starter": "Mond und Sonne beeinflussen den wechselnden Wasserstand am Meer.",
       "observe": "Wechsle in der Küstenskizze zwischen Hoch- und Niedrigwasser. Trenne Wasserstand und den Zeitraum steigenden oder fallenden Wassers.",
       "benefit": "Du verwendest Ebbe, Flut, Hoch- und Niedrigwasser präzise und beachtest örtliche Vorhersagen."
+    },
+    "questionFeedback": {
+      "hint": "Denke an die Anziehung zwischen Erde und anderen Himmelskörpern. Welche Nachbarn könnten dabei für das Meer eine Rolle spielen?",
+      "wrongReasons": [
+        null,
+        "Der Mars ist für die hier beschriebenen Gezeiten nicht der maßgebliche Nachbar. Mond und Sonne liefern die wichtigen Gezeiteneinflüsse.",
+        "Sternschnuppen sind kurze Leuchterscheinungen. Den regelmäßigen Gezeitenrhythmus erklären wir mit den Einflüssen von Mond und Sonne."
+      ]
     }
   },
   {
@@ -16121,7 +16317,7 @@
       }
     ],
     "related": [
-      "science-shadows"
+      "science-foodweb"
     ],
     "aliases": [
       "kingfisher",

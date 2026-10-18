@@ -1,0 +1,7 @@
+.photosynthesis-flow{display:grid;grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr) 28px minmax(0,1fr);align-items:center;gap:12px;padding:24px;min-width:0}
+.photosynthesis-flow ul{list-style:none;margin:0;padding:0;display:grid;gap:12px;min-width:0}
+.photosynthesis-flow li,.photosynthesis-leaf{padding:12px;background:#edf5ed;color:#264b46;border:1px solid #b8d1c4;border-radius:12px;font-size:16px;line-height:1.6;text-align:center;overflow-wrap:anywhere;min-width:0}
+.photosynthesis-leaf{display:flex;flex-direction:column;align-items:center;gap:8px}
+.topic-illustration .photosynthesis-flow svg{width:28px;height:28px;flex-shrink:0;justify-self:center}
+.photosynthesis-diagram figcaption{font-size:16px;line-height:1.65;padding:16px 24px}
+@container(max-width:640px){.photosynthesis-flow{grid-template-columns:minmax(0,1fr)}.photosynthesis-arrow{transform:rotate(90deg)}}

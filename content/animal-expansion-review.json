@@ -2953,7 +2953,7 @@
           "anchor": "Biometrics / Wing length / All adults; RSPB How to identify"
         }
       ],
-      "articleSHA256": "306d2b18ee5adc46c62816df33b2e98a91264c60c21914515e06fb9c5f9b8b6b",
+      "articleSHA256": "40cecb9d9cd4daa214290810e085efc914eb2ff7f9f3fee637596ff54f187bce",
       "runtimeTeachingContentSHA256": "39eba201c4cb5e0cbffafda22ee73f4b9c31e9c7b0db7041076bde7a88a7e407",
       "selfReview": {
         "implemented": true,
@@ -3102,6 +3102,236 @@
             }
           }
         }
+      },
+      "currentConnectionFollowup20261018": {
+        "status": "Specific source-backed replacement relationship and its actual article/source/answer/search/back/native/cold UI proof complete; full central registry/Quality acceptance open.",
+        "originalRuntimeArticleSHA256": "306d2b18ee5adc46c62816df33b2e98a91264c60c21914515e06fb9c5f9b8b6b",
+        "originalProposalRetained": [
+          {
+            "target": "science-shadows",
+            "reason": "Licht und Wahrnehmung verbinden Vogelmerkmale mit der Wirkung von Licht.",
+            "targetStage": "existing-runtime"
+          }
+        ],
+        "changes": [
+          {
+            "before": {
+              "id": "animal-expansion-kingfisher-shadows",
+              "fromId": "animal-kingfisher",
+              "toId": "science-shadows",
+              "why": "Licht und Wahrnehmung verbinden Vogelmerkmale mit der Wirkung von Licht.",
+              "kind": "context",
+              "checkedAt": "2026-10-17"
+            },
+            "after": {
+              "id": "animal-expansion-kingfisher-foodweb",
+              "fromId": "animal-kingfisher",
+              "toId": "science-foodweb",
+              "why": "Der Eisvogel frisst Fische. An dieser Beziehung kannst du einen Nahrungspfeil vom Fisch zum Vogel begründen. Die zwei Modellketten zeigen andere Lebensräume; sie sind kein vollständiges Netz seines Gewässers.",
+              "kind": "context",
+              "checkedAt": "2026-10-18"
+            },
+            "reason": "RSPB17 actually read: fish hunted from waterside perches. The old light/perception wording did not explain a relationship to Earth-curvature shadow geometry. Replace the ungrounded association with a specific feeding/energy-transfer relationship; preserve all topic IDs and questions."
+          },
+          {
+            "id": "animal-kingfisher",
+            "field": "related",
+            "before": [
+              "science-shadows"
+            ],
+            "after": [
+              "science-foodweb"
+            ],
+            "reason": "Exact reciprocal update for the corrected kingfisher relation; old article, question, media, learning and progress keys unchanged."
+          },
+          {
+            "id": "science-shadows",
+            "field": "related",
+            "before": [
+              "history-pyramids",
+              "science-gps",
+              "science-angle",
+              "animal-kingfisher"
+            ],
+            "after": [
+              "history-pyramids",
+              "science-gps",
+              "science-angle"
+            ],
+            "reason": "Exact reciprocal update for the corrected kingfisher relation; old article, question, media, learning and progress keys unchanged."
+          },
+          {
+            "id": "science-foodweb",
+            "field": "related",
+            "before": [
+              "animal-blue-whale",
+              "animal-lion",
+              "animal-honey-bee",
+              "science-photosynthesis",
+              "science-fungi",
+              "animal-short-snouted-seahorse"
+            ],
+            "after": [
+              "animal-blue-whale",
+              "animal-lion",
+              "animal-honey-bee",
+              "science-photosynthesis",
+              "science-fungi",
+              "animal-short-snouted-seahorse",
+              "animal-kingfisher"
+            ],
+            "reason": "Exact reciprocal update for the corrected kingfisher relation; old article, question, media, learning and progress keys unchanged."
+          },
+          {
+            "before": {
+              "id": "invention-computer--science-computer",
+              "fromId": "invention-computer",
+              "toId": "science-computer",
+              "kind": "partnership",
+              "why": "Die Erfindungskarte zeigt die Aufgaben der Bauteile. Die Wissenschaftskarte erklärt, wie Daten und Anweisungen bei der Verarbeitung zusammenarbeiten.",
+              "checkedAt": "2026-10-15"
+            },
+            "after": {
+              "id": "invention-computer--science-computer",
+              "fromId": "invention-computer",
+              "toId": "science-computer",
+              "kind": "partnership",
+              "why": "Die Erfindungskarte zeigt die Aufgaben der Bauteile. Die Wissenschaftskarte erklärt binäre Stellenwerte und wie acht Bits 256 verschiedene Zahlenmuster darstellen können.",
+              "checkedAt": "2026-10-18"
+            },
+            "reason": "Target article explains binary representation, not a detailed instruction-processing sequence."
+          },
+          {
+            "before": {
+              "id": "animal-expansion-eastern-clown-anemonefish-coral-reef",
+              "fromId": "animal-eastern-clown-anemonefish",
+              "toId": "science-coral-reef",
+              "why": "Rifflebensraum und Beziehungen zwischen unterschiedlichen Lebewesen untersuchen.",
+              "kind": "context",
+              "checkedAt": "2026-10-17"
+            },
+            "after": {
+              "id": "animal-expansion-eastern-clown-anemonefish-coral-reef",
+              "fromId": "animal-eastern-clown-anemonefish",
+              "toId": "science-coral-reef",
+              "why": "Die Seeanemone des Fisches ist ein anderes Tier als eine Koralle. Beide gehören zu den Nesseltieren; an ihnen lassen sich verschiedene Partnerbeziehungen vergleichen.",
+              "kind": "context",
+              "checkedAt": "2026-10-18"
+            },
+            "reason": "Monterey Bay344–358 actually read: anemones/corals both cnidarians and distinct animals/partners. Do not imply fish lives in coral."
+          }
+        ],
+        "source": "https://www.rspb.org.uk/birds-and-wildlife/kingfisher",
+        "readAnchor": "17: hunt fish from riverside perches;26 structural blue not a shadow-geometry explanation.",
+        "currentArticleSHA256": "40cecb9d9cd4daa214290810e085efc914eb2ff7f9f3fee637596ff54f187bce",
+        "currentTargetedUI": {
+          "proofs": {
+            "science-three-corrections-early-v2": {
+              "path": "/workspace/work/wk-continuation/science-three-corrections-early-v2/report.json",
+              "sha256": "bb0409444bf734a72ec08c6912737ca03319991f675782b002762fea64802190",
+              "build": "a932e84996d8db17",
+              "sourceDigest": "f4aac0585ac44375c79ea97714eb47d7f34705869bb8e393490aa088266ef2d0",
+              "scope": "Actual local Chromium154 targeted proof; not full Quality or release acceptance"
+            },
+            "science-model-driver-early-v3": {
+              "path": "/workspace/work/wk-continuation/science-model-driver-early-v3/report.json",
+              "sha256": "6671945bd5fff0a255bec9ada1a0d992326ce287fe7a4b21d9a6a05169d843c2",
+              "build": "f603dd7a87fd28dd",
+              "sourceDigest": "49e159b8926715147cace9bbb06a9db6097d6bffa7f13240cb93cd617fae71d9",
+              "scope": "Actual local Chromium154 targeted proof; not full Quality or release acceptance"
+            },
+            "science-existing23-built-v2": {
+              "path": "/workspace/work/wk-continuation/science-existing23-built-v2/report.json",
+              "sha256": "cbb445bad970366c4987a121defb01cd871ce2a6610afe47971d758ca6228013",
+              "build": "f603dd7a87fd28dd",
+              "sourceDigest": "49e159b8926715147cace9bbb06a9db6097d6bffa7f13240cb93cd617fae71d9",
+              "scope": "Actual local Chromium only, existing23 science plus exactly related kingfisher card; no full Quality/release acceptance"
+            },
+            "science-existing23-native-offline-v2": {
+              "path": "/workspace/work/wk-continuation/science-existing23-native-offline-v2/report.json",
+              "sha256": "efd719498173f14c21dd831a46890791c62366ddf93840e03586e92ee5b17fb6",
+              "build": "f603dd7a87fd28dd",
+              "sourceDigest": "49e159b8926715147cace9bbb06a9db6097d6bffa7f13240cb93cd617fae71d9",
+              "scope": "Actual native browser200%/large plus separate home-prepared previously-unvisited24 cold profile. Local Chromium154 only; not full Quality."
+            },
+            "science-photosynthesis-wrap-check": {
+              "path": "/workspace/work/wk-continuation/science-photosynthesis-wrap-check/report.json",
+              "sha256": "f2f20727319382c123d1127178669da96b6aea4a4091bc71691e212405d9d313",
+              "build": "07e524ff9e527fee",
+              "sourceDigest": "2ab570abfcc952ef146cb1c89ff53133aa44cbc427ef54b204dac3953e7c5289",
+              "scope": "Actual local Chromium154 targeted proof; not full Quality or release acceptance"
+            }
+          },
+          "scope": "Current kingfisher article24-cohort cases plus corrected edge in both directions; no claim of fresh current UI for all48 animals."
+        },
+        "historicalSourceAndLearningAIReview": {
+          "mode": "ai-self-review",
+          "registryId": "topics-animals:animal-kingfisher",
+          "articleSHA256": "306d2b18ee5adc46c62816df33b2e98a91264c60c21914515e06fb9c5f9b8b6b",
+          "teachingSHA256": "39eba201c4cb5e0cbffafda22ee73f4b9c31e9c7b0db7041076bde7a88a7e407",
+          "reviewedOn": "2026-10-18",
+          "currentTargetedUI": {
+            "build": "5e132945395575cc",
+            "proofs": {
+              "master-all-history-animals-v3": {
+                "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+                "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+                "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+                "build": "5e132945395575cc",
+                "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+              },
+              "master-all-history-animals-native-offline-v3": {
+                "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+                "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+                "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+                "build": "5e132945395575cc",
+                "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+              }
+            }
+          },
+          "meaning": "Tatsächlicher individueller KI-Gegenprüfschritt; historischer acceptedNew0-/independentfalse-Zähler unverändert. Gesamte technische Endabnahme/Bereitstellung noch nicht aus diesen Einzelbelegen ableiten.",
+          "targetedUIBeforeAnswerWordingCorrection": {
+            "build": "b92d7a70954a64bd",
+            "proofs": {
+              "history-targeted": {
+                "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+                "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+                "build": "b92d7a70954a64bd",
+                "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+                "scope": "actual Chromium history partial proof; not full regression"
+              },
+              "history-native-offline": {
+                "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+                "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+                "build": "b92d7a70954a64bd",
+                "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+                "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+              },
+              "animal-targeted": {
+                "path": "/workspace/work/wk-continuation/animal-targeted/report.json",
+                "sha256": "27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab",
+                "build": "b92d7a70954a64bd",
+                "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+                "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
+              },
+              "animal-native-offline": {
+                "path": "/workspace/work/wk-continuation/animal-native-offline/report.json",
+                "sha256": "1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47",
+                "build": "b92d7a70954a64bd",
+                "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+                "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
+              },
+              "content-corrections-targeted": {
+                "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+                "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+                "build": "b92d7a70954a64bd",
+                "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+                "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+              }
+            }
+          }
+        },
+        "meaning": "Earlier sourceAndLearningAIReview stays unchanged and explicitly historical at its old article hash; this followup binds the exact changed article hash and current targeted UI. Central registry remains pending authorized binding."
       }
     },
     {
@@ -6346,12 +6576,12 @@
       "checkedAt": "2026-10-18"
     },
     {
-      "id": "animal-expansion-kingfisher-shadows",
+      "id": "animal-expansion-kingfisher-foodweb",
       "fromId": "animal-kingfisher",
-      "toId": "science-shadows",
-      "why": "Licht und Wahrnehmung verbinden Vogelmerkmale mit der Wirkung von Licht.",
+      "toId": "science-foodweb",
+      "why": "Der Eisvogel frisst Fische. An dieser Beziehung kannst du einen Nahrungspfeil vom Fisch zum Vogel begründen. Die zwei Modellketten zeigen andere Lebensräume; sie sind kein vollständiges Netz seines Gewässers.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-10-18"
     },
     {
       "id": "animal-expansion-ostrich-emperor-penguin",
@@ -6397,9 +6627,9 @@
       "id": "animal-expansion-eastern-clown-anemonefish-coral-reef",
       "fromId": "animal-eastern-clown-anemonefish",
       "toId": "science-coral-reef",
-      "why": "Rifflebensraum und Beziehungen zwischen unterschiedlichen Lebewesen untersuchen.",
+      "why": "Die Seeanemone des Fisches ist ein anderes Tier als eine Koralle. Beide gehören zu den Nesseltieren; an ihnen lassen sich verschiedene Partnerbeziehungen vergleichen.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-10-18"
     },
     {
       "id": "animal-expansion-european-eel-currents",
