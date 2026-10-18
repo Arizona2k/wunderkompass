@@ -75,13 +75,13 @@
         "topics-animals:animal-short-beaked-echidna"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-platypus",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -113,6 +113,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-platypus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -173,13 +182,13 @@
         "topics-animals:animal-platypus"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-short-beaked-echidna",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -211,6 +220,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-short-beaked-echidna",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -271,13 +289,13 @@
         "topics-animals:animal-giraffe"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-okapi",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -309,6 +327,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-okapi",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -369,13 +396,13 @@
         "topics-animals:animal-honey-bee"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-meerkat",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -407,6 +434,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-meerkat",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -467,13 +503,13 @@
         "topics-animals:animal-western-lowland-gorilla"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-ring-tailed-lemur",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -505,6 +541,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-ring-tailed-lemur",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -565,13 +610,13 @@
         "topics-science:science-water-cycle"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-north-american-beaver",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -603,6 +648,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-north-american-beaver",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -677,13 +731,13 @@
         "topics-animals:animal-polar-bear"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-walrus",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -715,6 +769,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-walrus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -776,13 +839,13 @@
         "topics-animals:animal-raccoon"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-red-fox",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -814,6 +877,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-red-fox",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -874,13 +946,13 @@
         "topics-animals:animal-red-fox"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-raccoon",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -912,6 +984,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-raccoon",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -973,13 +1054,13 @@
         "topics-animals:animal-garden-snail"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-hedgehog",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1011,6 +1092,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-hedgehog",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -1078,13 +1168,13 @@
         "topics-animals:animal-white-tailed-eagle"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-barn-owl",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1116,6 +1206,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-barn-owl",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -1183,13 +1282,13 @@
         "topics-science:science-shadows"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-kingfisher",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1221,6 +1320,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-kingfisher",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -1281,13 +1389,13 @@
         "topics-animals:animal-emperor-penguin"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-ostrich",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1319,6 +1427,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-ostrich",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -1379,13 +1496,13 @@
         "topics-animals:animal-emperor-penguin"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-atlantic-puffin",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1417,6 +1534,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-atlantic-puffin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -1477,13 +1603,13 @@
         "topics-animals:animal-common-cuttlefish"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-common-chameleon",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1515,6 +1641,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-common-chameleon",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -1583,13 +1718,13 @@
         "topics-animals:animal-common-frog"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-fire-salamander",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1621,6 +1756,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-fire-salamander",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -1681,13 +1825,13 @@
         "topics-animals:animal-fire-salamander"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-common-frog",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1719,6 +1863,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-common-frog",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -1786,13 +1939,13 @@
         "topics-science:science-coral-reef"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-eastern-clown-anemonefish",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1824,6 +1977,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-eastern-clown-anemonefish",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -1898,13 +2060,13 @@
         "topics-science:science-currents"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-european-eel",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1936,6 +2098,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-european-eel",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -1996,13 +2167,13 @@
         "topics-animals:animal-honey-bee"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-monarch-butterfly",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2034,6 +2205,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-monarch-butterfly",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -2108,13 +2288,13 @@
         "topics-animals:animal-hedgehog"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-garden-snail",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2146,6 +2326,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-garden-snail",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -2206,13 +2395,13 @@
         "topics-animals:animal-common-octopus"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-european-lobster",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2244,6 +2433,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-european-lobster",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -2312,13 +2510,13 @@
         "topics-animals:animal-common-chameleon"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-common-cuttlefish",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2350,6 +2548,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-common-cuttlefish",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -2417,13 +2624,13 @@
         "topics-science:science-foodweb"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-short-snouted-seahorse",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2455,6 +2662,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-short-snouted-seahorse",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -2520,13 +2736,13 @@
         "topics-animals:animal-giant-panda"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-african-savanna-elephant",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2549,6 +2765,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-african-savanna-elephant",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -2622,13 +2847,13 @@
         "topics-animals:animal-bengal-tiger"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-lion",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2651,6 +2876,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-lion",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -2717,13 +2951,13 @@
         "topics-animals:animal-lion"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-cheetah",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2746,6 +2980,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-cheetah",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -2806,13 +3049,13 @@
         "topics-animals:animal-jaguar"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-bengal-tiger",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2835,6 +3078,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-bengal-tiger",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -2909,13 +3161,13 @@
         "topics-animals:animal-okapi"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-giraffe",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2938,6 +3190,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-giraffe",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -3004,13 +3265,13 @@
         "topics-animals:animal-koala"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-giant-panda",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3033,6 +3294,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-giant-panda",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -3100,13 +3370,13 @@
         "topics-animals:animal-ring-tailed-lemur"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-western-lowland-gorilla",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3129,6 +3399,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-western-lowland-gorilla",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -3195,13 +3474,13 @@
         "topics-animals:animal-western-lowland-gorilla"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-bornean-orangutan",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3224,6 +3503,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-bornean-orangutan",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -3290,13 +3578,13 @@
         "topics-animals:animal-walrus"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-polar-bear",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3319,6 +3607,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-polar-bear",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -3395,13 +3692,13 @@
         "topics-animals:animal-atlantic-puffin"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-emperor-penguin",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3424,6 +3721,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-emperor-penguin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -3490,13 +3796,13 @@
         "topics-animals:animal-whale-shark"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-blue-whale",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3519,6 +3825,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-blue-whale",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -3601,13 +3916,13 @@
         "topics-animals:animal-green-sea-turtle"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-common-bottlenose-dolphin",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3630,6 +3945,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-common-bottlenose-dolphin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -3696,13 +4020,13 @@
         "topics-animals:animal-common-bottlenose-dolphin"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-orca",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3725,6 +4049,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-orca",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -3801,13 +4134,13 @@
         "topics-animals:animal-common-cuttlefish"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-common-octopus",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3830,6 +4163,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-common-octopus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -3903,13 +4245,13 @@
         "topics-animals:animal-common-bottlenose-dolphin"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-green-sea-turtle",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3932,6 +4274,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-green-sea-turtle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -3998,13 +4349,13 @@
         "topics-animals:animal-platypus"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-red-kangaroo",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4027,6 +4378,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-red-kangaroo",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -4093,13 +4453,13 @@
         "topics-animals:animal-giant-panda"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-koala",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4122,6 +4482,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-koala",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -4195,13 +4564,13 @@
         "topics-animals:animal-bengal-tiger"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-jaguar",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4224,6 +4593,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-jaguar",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -4299,13 +4677,13 @@
         "topics-animals:animal-monarch-butterfly"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-honey-bee",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4328,6 +4706,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-honey-bee",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -4395,13 +4782,13 @@
         "topics-animals:animal-fire-salamander"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-axolotl",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4424,6 +4811,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-axolotl",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -4485,13 +4881,13 @@
         "topics-animals:animal-axolotl"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-whale-shark",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4514,6 +4910,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-whale-shark",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -4587,13 +4992,13 @@
         "topics-animals:animal-common-octopus"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-garden-cross-spider",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4616,6 +5021,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-garden-cross-spider",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -4681,13 +5095,13 @@
         "topics-animals:animal-african-savanna-elephant"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-dromedary",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4710,6 +5124,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-dromedary",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     },
     {
@@ -4798,13 +5221,13 @@
         "topics-animals:animal-barn-owl"
       ],
       "ui": {
-        "build": "8a7cce4aa87693b1",
+        "build": "717a19311eef594c",
         "route": "world/topic/animal-white-tailed-eagle",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
+        "report": "animal-backup-focus-animals: /workspace/work/wk-continuation/animal-backup-focus-animals/report.json sha256=749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b; animal-backup-focus-animals-native-offline: /workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json sha256=12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4827,6 +5250,15 @@
         "back": true,
         "offline": true,
         "report": "master-retained-animals-final-targeted: /workspace/work/wk-continuation/master-retained-animals-final-targeted/report.json sha256=f9a6d724e4856ff2031e3c5805bbf79b86ece18e0ea14e35b59a6ee50672c5ac; master-retained-animals-final-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-native-offline/report.json sha256=a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849"
+      },
+      "historicalTargetProofBeforeStableBackupHeading": {
+        "build": "8a7cce4aa87693b1",
+        "route": "world/topic/animal-white-tailed-eagle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-followup-final-targeted: /workspace/work/wk-continuation/animal-followup-final-targeted/report.json sha256=f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6; animal-followup-final-native-offline: /workspace/work/wk-continuation/animal-followup-final-native-offline/report.json sha256=de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618"
       }
     }
   ],
@@ -4864,18 +5296,18 @@
       "unaffectedConsumers": "Die übrigen Weltspiele erzeugen eigene Identitäts-/Nahrungs-/Lebensraumfragen; die betroffene Antwortzeichenfolge gehört dort nicht zurFrage. Nicht ohne tatsächlicheAbhängigkeit zusätzlicheMigrationen einbauen.",
       "stateCompatibilityBeforeActualUI": "Exakte bekannteFalschantwort-Aliaszuordnung; richtigeAntwort/Index/Fragen-/Themen-/Runden-IDs undSchema3 unverändert. Gezielte negative/Altpass-/gemischteRunden-/Richtigabschluss-/UI-Neustartnachweise nochauszuführen; bisdahin keine fertigeAbnahme behaupten.",
       "actualCompatibilityProofs": {
-        "animal-followup-final-targeted": {
-          "path": "/workspace/work/wk-continuation/animal-followup-final-targeted/report.json",
-          "sha256": "f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6",
-          "build": "8a7cce4aa87693b1",
-          "sourceDigest": "e5665e69c1ba4dd3731deb1ab79edda616bd1ff4295d803358352f8f9666a344",
+        "animal-backup-focus-animals": {
+          "path": "/workspace/work/wk-continuation/animal-backup-focus-animals/report.json",
+          "sha256": "749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b",
+          "build": "717a19311eef594c",
+          "sourceDigest": "fddafe2820879be8b395a8f55b07758be5bb9bfb85c69ed11ba30ba6de39714f",
           "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
         },
-        "animal-followup-final-native-offline": {
-          "path": "/workspace/work/wk-continuation/animal-followup-final-native-offline/report.json",
-          "sha256": "de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618",
-          "build": "8a7cce4aa87693b1",
-          "sourceDigest": "e5665e69c1ba4dd3731deb1ab79edda616bd1ff4295d803358352f8f9666a344",
+        "animal-backup-focus-animals-native-offline": {
+          "path": "/workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json",
+          "sha256": "12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a",
+          "build": "717a19311eef594c",
+          "sourceDigest": "fddafe2820879be8b395a8f55b07758be5bb9bfb85c69ed11ba30ba6de39714f",
           "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
         }
       },
@@ -4900,21 +5332,21 @@
         "fixture": "Imported mini order contains both old and new known wrong-answer text plus the correct choice.",
         "before": "Alias interpretation produced two identical wrong choices, hiding the other canonical distractor.",
         "fix": "Require exact three unique canonical choices after alias interpretation; otherwise display canonical choices while retaining original saved/import data and known wrong selection.",
-        "proof": "Tatsächlicher roter Vorbeleg bleibt erhalten. Korrigierter Build8a7cce4aa87693b1: vier Online-Minifehlerfälle und zusätzlicher echter kalter Offline-Doppelaliasfall erfolgreich; gültige alte Reihenfolge und falsche Auswahl erhalten.",
+        "proof": "Tatsächlicher roter Vorbeleg bleibt erhalten. Korrigierter Build717a19311eef594c: vier Online-Minifehlerfälle und zusätzlicher echter kalter Offline-Doppelaliasfall erfolgreich; gültige alte Reihenfolge und falsche Auswahl erhalten.",
         "masterFollowup": "Frozen Mastera268/Quality120 kept unchanged; transfer this correction at next safe write, not during its running checks.",
         "targetProofs": {
-          "animal-followup-final-targeted": {
-            "path": "/workspace/work/wk-continuation/animal-followup-final-targeted/report.json",
-            "sha256": "f6ec5e6bbfc26768210d19a4421a53a819c923c971423ae8953ad4c72c61e7f6",
-            "build": "8a7cce4aa87693b1",
-            "sourceDigest": "e5665e69c1ba4dd3731deb1ab79edda616bd1ff4295d803358352f8f9666a344",
+          "animal-backup-focus-animals": {
+            "path": "/workspace/work/wk-continuation/animal-backup-focus-animals/report.json",
+            "sha256": "749dbf85ea00d30de53a56f88355f9d69eb21a2da13aeb981112648a414da56b",
+            "build": "717a19311eef594c",
+            "sourceDigest": "fddafe2820879be8b395a8f55b07758be5bb9bfb85c69ed11ba30ba6de39714f",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; not full regression"
           },
-          "animal-followup-final-native-offline": {
-            "path": "/workspace/work/wk-continuation/animal-followup-final-native-offline/report.json",
-            "sha256": "de0dd8944f1866cef2d77c9516f2c6856936622376a8f687f03ab71a1b8a9618",
-            "build": "8a7cce4aa87693b1",
-            "sourceDigest": "e5665e69c1ba4dd3731deb1ab79edda616bd1ff4295d803358352f8f9666a344",
+          "animal-backup-focus-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/animal-backup-focus-animals-native-offline/report.json",
+            "sha256": "12c56661a19164b902f9a1b43887e34dc3460c4b91051eae1e871c5047311f9a",
+            "build": "717a19311eef594c",
+            "sourceDigest": "fddafe2820879be8b395a8f55b07758be5bb9bfb85c69ed11ba30ba6de39714f",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
           }
         }

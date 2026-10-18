@@ -43,6 +43,10 @@ async function textContrast(control,name){
 }
 
 export async function passDesign(page,report,width,shots){
+ const delayed=width===360;let resumeBackup,heldBackup=false;const backupReady=new Promise(resolve=>resumeBackup=resolve);
+ const holdBackup=async route=>{heldBackup=true;await backupReady;await route.continue();};
+ if(delayed)await page.route('**/progress-panel-*.js',holdBackup);
+ try{
  const opener=page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true});await opener.click();
  const pass=page.getByRole('dialog',{name:'Entdeckerpass',exact:true}),nav=pass.getByRole('navigation',{name:'Im Entdeckerpass'});
  await pass.waitFor();const hash=new URL(page.url()).hash,activate=control=>width<=390?control.tap():control.click();
@@ -60,6 +64,7 @@ export async function passDesign(page,report,width,shots){
   const button=nav.getByRole('button',{name,exact:true});if(width===390)await button.tap();else {await button.focus();await page.keyboard.press('Enter')}
   const section=pass.locator(`[data-pass-section="${id}"]`),heading=section.locator('h3').first();
   assert.equal(await heading.evaluate(el=>el===document.activeElement),true,'pass jump focuses the named heading '+id);
+  if(id==='backup'&&delayed){assert.equal(heldBackup,true,'actual delayed backup module was intercepted');await pass.getByText('Deine Sicherung kommt gleich …',{exact:true}).waitFor();resumeBackup();await pass.getByRole('button',{name:'Entdeckerpass sichern',exact:true}).waitFor();assert.equal(await heading.evaluate(el=>el===document.activeElement),true,'stable backup heading retains focus after the delayed controls mount');report.checks.push('Delayed backup module: named heading immediately focused and same focus retained after actual chunk arrival');}
   assert.equal(await section.evaluate(el=>getComputedStyle(el).outlineStyle==='none'),true,'no dominant whole-section outline');
   if(width!==390)await keyboardRing(heading,'section heading '+id);
   assert.equal(new URL(page.url()).hash,hash,'pass jumps preserve current activity');await frame();
@@ -95,4 +100,5 @@ export async function passDesign(page,report,width,shots){
  await page.keyboard.press('Escape');await page.locator('.passport-atlas').waitFor({state:'detached'});assert.equal(await opener.evaluate(el=>el===document.activeElement),true,'Escape returns focus to pass opener');
  await opener.click();const footer=pass.getByRole('button',{name:'Weiter entdecken',exact:true});await textContrast(footer,'footer normal');await footer.hover();await textContrast(footer,'footer hover');await footer.click();await page.locator('.passport-atlas').waitFor({state:'detached'});assert.equal(await opener.evaluate(el=>el===document.activeElement),true,'footer returns focus to pass opener');
  report.checks.push('Pass '+width+': heading focus without whole-section frames, keyboard/system-color focus and contrast, normal/hover action text contrast, touch-sized controls/label activation, all badges and extra stats, no label clipping/overlays, both backup actions immediately reachable with normal/large text, reduced dialog motion, hash and focus return preserved');
+ }finally{resumeBackup();if(delayed)await page.unroute('**/progress-panel-*.js',holdBackup);}
 }
