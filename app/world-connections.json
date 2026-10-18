@@ -1120,6 +1120,62 @@
       "kind": "context",
       "why": "Die Null und das Stellenwertsystem helfen beim Rechnen. Die Biografie von al-Chwarizmi zeigt einen anderen zeitlichen Zusammenhang der Rechen- und Algorithmengeschichte; das sind keine zeitgleichen Personen.",
       "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-steam--history-railway",
+      "fromId": "history-steam",
+      "toId": "history-railway",
+      "kind": "context",
+      "why": "Eine frühe Dampfmaschine bewegte eine Pumpe; später nutzten Lokomotiven Dampfkraft für den Verkehr. Gleiche Energiequelle bedeutet nicht dieselbe Aufgabe.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-ww1--history-ww2",
+      "fromId": "history-ww1",
+      "toId": "history-ww2",
+      "kind": "context",
+      "why": "Die beiden Weltkriege gehören zu verschiedenen Zeitabschnitten. Vergleiche ihre Daten und Folgen, ohne den zweiten Krieg als unvermeidliche Fortsetzung zu erklären.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-ww2--history-un",
+      "fromId": "history-ww2",
+      "toId": "history-un",
+      "kind": "context",
+      "why": "Die UNO entstand nach dem Zweiten Weltkrieg mit dem Ziel von Frieden und Zusammenarbeit. Das Kriegsende allein bewirkte noch keinen dauerhaften Frieden.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-holocaust--history-un",
+      "fromId": "history-holocaust",
+      "toId": "history-un",
+      "kind": "context",
+      "why": "Hier geht es um die Verletzung der Menschenwürde; bei der UNO um gemeinsame Ziele zum Schutz von Menschenrechten. Dieser Vergleich erklärt nicht alle Ursachen ihrer Gründung.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-berlin_wall_build--history-berlin_wall_fall",
+      "fromId": "history-berlin_wall_build",
+      "toId": "history-berlin_wall_fall",
+      "kind": "context",
+      "why": "1961 wurden Grenzsperren errichtet; 1989 wurden Übergänge geöffnet. Vergleiche, was sich jeweils für Wege und Besuche änderte.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-berlin_wall_fall--history-reunification",
+      "fromId": "history-berlin_wall_fall",
+      "toId": "history-reunification",
+      "kind": "context",
+      "why": "Die Grenzöffnung am 9. November 1989 und die staatliche Wiedervereinigung am 3. Oktober 1990 sind zwei verbundene, verschiedene Ereignisse.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-apollo11--history-iss",
+      "fromId": "history-apollo11",
+      "toId": "history-iss",
+      "kind": "context",
+      "why": "Eine Mondlandung und ein Forschungslabor in der Erdumlaufbahn haben unterschiedliche Aufgaben. Beide zeigen, wie wichtig verschiedene Rollen im Team sind.",
+      "checkedAt": "2026-10-18"
     }
   ]
 }

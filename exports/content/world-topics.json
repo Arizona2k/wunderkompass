@@ -3331,7 +3331,8 @@
     "related": [
       "history-writing",
       "history-web",
-      "invention-railway"
+      "invention-railway",
+      "history-railway"
     ],
     "sources": [
       {
@@ -3362,6 +3363,19 @@
       ],
       "correct": 0,
       "why": "Newcomens Maschine bewegte eine Pumpe, die Wasser aus Bergwerken förderte. Das war ihre hier beschriebene konkrete Arbeit."
+    },
+    "learning": {
+      "starter": "Eine frühe Dampfmaschine bewegte eine Pumpe. Damit konnte Wasser aus einem Bergwerk gefördert werden.",
+      "observe": "Ein Museum zeigt ein Modell einer Maschine. Trenne zwei Fragen: Welche Arbeit soll das Modell erklären? Und war genau dieses kleine Modell selbst im Bergwerk im Einsatz? Welche zusätzliche Information brauchst du?",
+      "benefit": "Du unterscheidest eine technische Funktion vom Verwendungszweck eines Museumsmodells."
+    },
+    "questionFeedback": {
+      "hint": "Stell dir ein Bergwerk vor, in dem sich Wasser sammelt. Welche Maschinenarbeit könnte den Menschen dort besonders helfen?",
+      "wrongReasons": [
+        null,
+        "Newcomens Maschine bewegte eine Wasserpumpe. E-Mails gehören zu Computernetzen und sind keine Aufgabe dieser frühen Maschine.",
+        "Fotos vom Mond benötigen andere Geräte. Der hier belegte Einsatz war das Fördern von Wasser aus Bergwerken."
+      ]
     }
   },
   {
@@ -3398,7 +3412,8 @@
     ],
     "related": [
       "history-writing",
-      "history-web"
+      "history-web",
+      "history-steam"
     ],
     "sources": [
       {
@@ -3425,6 +3440,19 @@
       ],
       "correct": 0,
       "why": "Eisenbahnen veränderten den Transport von Menschen und Gütern."
+    },
+    "learning": {
+      "starter": "Ein Zug fährt auf einem Schienenweg zwischen Orten. Zur Bahn gehören Gleise, Fahrzeuge und Menschen, die den Verkehr organisieren.",
+      "observe": "Stell dir eine neue Bahnstrecke mit einer schon bekannten Lokomotive vor. Was ist an der Verbindung neu, und was war bereits bekannt? Warum kann die neue Strecke trotzdem wichtig für Waren und Reisende sein?",
+      "benefit": "Du unterscheidest neue technische Geräte von der neuen Nutzung und Vernetzung bekannter Technik."
+    },
+    "questionFeedback": {
+      "hint": "Folge einer Bahnstrecke auf einer Karte. Welche Orte oder Menschen kann diese Verbindung näher zusammenbringen?",
+      "wrongReasons": [
+        null,
+        "WLAN ist eine Funkverbindung zwischen Geräten. Die Eisenbahn verbindet Orte über befahrbare Gleise und transportiert Wagen.",
+        "Die beschriebene Strecke lag auf der Erde. Schienen verbinden keine Sterne mit Seilen."
+      ]
     }
   },
   {
@@ -3475,6 +3503,10 @@
       {
         "label": "Smithsonian National Museum of American History",
         "url": "https://americanhistory.si.edu/lighting/bios/swan.htm"
+      },
+      {
+        "label": "Rutgers Edison Papers · Chronology1879",
+        "url": "https://edison.rutgers.edu/life-of-edison/chronology/1871-1880"
       }
     ],
     "aliases": [
@@ -3496,6 +3528,19 @@
       ],
       "correct": 0,
       "why": "An elektrischem Licht arbeiteten mehrere Menschen und Teams, darunter Joseph Swan sowie Thomas Edison und seine Mitarbeiter. Lampen und Versorgungssysteme wurden schrittweise verbessert."
+    },
+    "learning": {
+      "starter": "Eine Lampe braucht Strom. Für elektrisches Licht in vielen Häusern mussten Menschen auch Leitungen und eine Stromversorgung entwickeln.",
+      "observe": "Vergleiche eine einzelne Lampe mit einem beleuchteten Stadtviertel. Welche weiteren Teile nennt der Artikel? Warum erklärt eine Lampenprobe noch nicht, wie alle Häuser versorgt werden? Zeichne nur einen Plan; untersuche keine Steckdosen oder Leitungen.",
+      "benefit": "Du unterscheidest ein einzelnes Gerät von dem System, das seine Nutzung ermöglicht."
+    },
+    "questionFeedback": {
+      "hint": "Denke an alles, was für eine zuverlässige Beleuchtung gebraucht wird: Lampe, Strom und Versorgung. Passt dazu die Arbeit nur eines Menschen?",
+      "wrongReasons": [
+        null,
+        "Edison arbeitete mit einem Team; auch Swan und andere entwickelten Lampen. Eine alleinige Erfindung aller Teile durch eine Person beschreibt diese Geschichte nicht.",
+        "Die beschriebenen Lampenversuche fanden 1879 statt. Das Web und das Internet entstanden viel später."
+      ]
     }
   },
   {
@@ -3567,6 +3612,19 @@
       ],
       "correct": 0,
       "why": "Die Versuche waren ein wichtiger Schritt auf dem Weg zu steuerbaren Motorflugzeugen."
+    },
+    "learning": {
+      "starter": "Ein Flugzeug braucht nicht nur einen Antrieb. Es muss auch getragen und gesteuert werden können.",
+      "observe": "Vergleiche zwei gedachte Versuche: Ein Motor läuft am Boden; ein Flugzeug fliegt und kann seine Richtung ändern. Was zeigt jeder Versuch? Welcher belegt noch keinen gesteuerten Flug? Erkläre es ohne eigenen Flugversuch.",
+      "benefit": "Du prüfst, ob eine Beobachtung wirklich alle Teile einer technischen Behauptung belegt."
+    },
+    "questionFeedback": {
+      "hint": "Motor, Flügel und Steuerung erfüllen verschiedene Aufgaben. Welche Kombination machte den Flug der Wright-Brüder besonders?",
+      "wrongReasons": [
+        null,
+        "Ein Ballon und ein Motorflugzeug nutzen unterschiedliche Bauweisen. Die hier beschriebenen Versuche betrafen ein steuerbares Flugzeug mit Motor.",
+        "Die Versuche fanden 1903 bei Kill Devil Hills auf der Erde statt. Eine Mondreise war das nicht."
+      ]
     }
   },
   {
@@ -3602,7 +3660,8 @@
     ],
     "related": [
       "history-writing",
-      "history-web"
+      "history-web",
+      "history-ww2"
     ],
     "sources": [
       {
@@ -3633,6 +3692,19 @@
       ],
       "correct": 0,
       "why": "Beim Lernen über den Krieg betrachten wir das Leid und die Erfahrungen betroffener Menschen. Das hilft, die Bedeutung von Frieden und dem Schutz von Menschen zu verstehen."
+    },
+    "learning": {
+      "starter": "Der Erste Weltkrieg dauerte von 1914 bis 1918. Viele Menschen litten unter Gewalt, Hunger und Trennungen.",
+      "observe": "Unterscheide zwei Fragen: Wann begann und endete der Krieg? Und wie veränderte er das Leben von Menschen? Warum reichen zwei Jahreszahlen nicht aus, um die zweite Frage zu beantworten? Du brauchst keine Gewaltszenen zu beschreiben.",
+      "benefit": "Du unterscheidest Zeitangaben von den Erfahrungen und Folgen für Menschen."
+    },
+    "questionFeedback": {
+      "hint": "Denke daran, was Krieg für Menschen bedeutet und warum ihr Schutz wichtig ist.",
+      "wrongReasons": [
+        null,
+        "Gewalt zu feiern widerspricht dem Schutz der Menschen, über deren Leid wir hier lernen.",
+        "Die Geschichte von Krieg rechtfertigt keinen Hass auf ganze Gruppen. Einzelne Menschen haben unterschiedliche Erfahrungen und Verantwortung."
+      ]
     }
   },
   {
@@ -3656,7 +3728,7 @@
     ],
     "more": [
       "Erinnern hilft uns, jüdisches Leben zu achten, Menschenrechte zu schützen und Hass zu widersprechen.",
-      "Jüdische Menschen hatten und haben sehr verschiedene Lebensweisen. Sie wurden wegen ihrer zugeschriebenen Herkunft oder Religion verfolgt. Niemand darf wegen seiner Herkunft, Religion oder einer Behinderung weniger Rechte haben."
+      "Jüdische Menschen hatten und haben sehr verschiedene Lebensweisen. Die Nationalsozialisten verfolgten sie aufgrund ihrer antisemitischen Vorstellung von Abstammung – unabhängig davon, ob und wie sie ihre Religion ausübten. Niemand darf wegen seiner Herkunft, Religion oder einer Behinderung weniger Rechte haben."
     ],
     "surprise": "Menschenwürde hängt nicht von Herkunft oder Religion ab. Beim Erinnern achten wir die ermordeten Menschen und ihre Lebensgeschichten; wir widersprechen Hass und Ausgrenzung.",
     "locations": [
@@ -3669,7 +3741,8 @@
     ],
     "related": [
       "history-writing",
-      "history-web"
+      "history-web",
+      "history-un"
     ],
     "sources": [
       {
@@ -3679,6 +3752,10 @@
       {
         "label": "United States Holocaust Memorial Museum",
         "url": "https://encyclopedia.ushmm.org/content/en/article/antisemitism-1"
+      },
+      {
+        "label": "USHMM · Age-appropriate teaching",
+        "url": "https://www.ushmm.org/teach/fundamentals/age-appropriateness"
       }
     ],
     "aliases": [
@@ -3700,6 +3777,19 @@
       ],
       "correct": 0,
       "why": "Erinnern hilft uns, jüdisches Leben zu achten, Menschenrechte zu schützen und Hass zu widersprechen."
+    },
+    "learning": {
+      "starter": "Die Nationalsozialisten verfolgten jüdische Menschen und ermordeten etwa sechs Millionen von ihnen. Ihre antisemitischen Behauptungen waren falsch.",
+      "observe": "Vergleiche zwei Aussagen: „Jüdische Menschen leben auf verschiedene Weise“ und „Die Verfolger behaupteten, alle seien gleich“. Warum beschreibt eine falsche Behauptung der Täter nicht die wirklichen Menschen? Du musst keine Rolle nachspielen.",
+      "benefit": "Du unterscheidest das Leben von Menschen von Vorurteilen, die andere über sie verbreiten."
+    },
+    "questionFeedback": {
+      "hint": "Überlege, ob Menschenrechte von Herkunft oder Religion abhängen dürfen.",
+      "wrongReasons": [
+        null,
+        "Ausgrenzung verletzt Menschen. Die Verfolgung wird durch die falschen Behauptungen der Täter nicht gerechtfertigt.",
+        "Menschenrechte gelten für alle Menschen. Die Behauptung, nur manche hätten Rechte, ist selbst eine Form von Ausgrenzung."
+      ]
     }
   },
   {
@@ -3736,7 +3826,9 @@
     ],
     "related": [
       "history-writing",
-      "history-web"
+      "history-web",
+      "history-ww1",
+      "history-un"
     ],
     "sources": [
       {
@@ -3771,6 +3863,19 @@
       ],
       "correct": 0,
       "why": "Der Krieg und die Verbrechen dieser Zeit machten den Schutz von Frieden und Menschenrechten besonders dringlich."
+    },
+    "learning": {
+      "starter": "Der Zweite Weltkrieg begann 1939 in Europa. In verschiedenen Teilen der Welt endeten die Kämpfe zu unterschiedlichen Zeiten.",
+      "observe": "Ordne zwei Aussagen zu: „Der Krieg in Europa endet im Mai 1945“ und „Die formelle Kapitulation Japans folgt im September 1945“. Warum kann eine Zeitangabe für Europa nicht allein das Ende des Krieges auf der ganzen Welt beschreiben?",
+      "benefit": "Du achtest darauf, für welchen Ort und welchen Vorgang eine historische Zeitangabe gilt."
+    },
+    "questionFeedback": {
+      "hint": "Suche nach Wegen, die Menschen schützen und Zusammenarbeit möglich machen.",
+      "wrongReasons": [
+        null,
+        "Hass auf ganze Gruppen bedroht Menschen und hilft nicht, Konflikte friedlich zu bearbeiten.",
+        "Immer neue Drohungen können Konflikte verschärfen. Sie ersetzen keine Zusammenarbeit und keinen Schutz von Menschenrechten."
+      ]
     }
   },
   {
@@ -3806,7 +3911,8 @@
       }
     ],
     "related": [
-      "history-ww2"
+      "history-ww2",
+      "history-holocaust"
     ],
     "sources": [
       {
@@ -3820,6 +3926,14 @@
       {
         "label": "United Nations Visitors Services",
         "url": "https://www.un.org/en/visit/about-us"
+      },
+      {
+        "label": "UN Library · Founding members",
+        "url": "https://research.un.org/en/unmembers/founders"
+      },
+      {
+        "label": "UN · Charter original document",
+        "url": "https://treaties.un.org/doc/publication/ctc/uncharter.pdf"
       }
     ],
     "aliases": [
@@ -3841,6 +3955,19 @@
       ],
       "correct": 0,
       "why": "Staaten bekamen einen gemeinsamen Ort, um Probleme zu besprechen und zusammenzuarbeiten."
+    },
+    "learning": {
+      "starter": "In der UNO sprechen Staaten miteinander und arbeiten zusammen. Ihre gemeinsamen Ziele sind unter anderem Frieden und Menschenrechte.",
+      "observe": "Vergleiche einen gemeinsamen Besprechungsort mit einer Regierung für die ganze Erde. Warum macht die Möglichkeit, zusammen Regeln zu beraten, aus den beteiligten Ländern nicht ein einziges Land? Nutze die Erklärung im Artikel.",
+      "benefit": "Du unterscheidest Zusammenarbeit zwischen Staaten von einer gemeinsamen Weltregierung."
+    },
+    "questionFeedback": {
+      "hint": "Stell dir Staaten mit einem gemeinsamen Problem vor. Welchen Zweck hätte ein Ort, an dem sie miteinander beraten können?",
+      "wrongReasons": [
+        null,
+        "Die Charta nennt Frieden als Ziel. Neue Kriege zu beginnen wäre nicht der hier beschriebene Gründungszweck.",
+        "Die Zusammenarbeit richtet sich nicht gegen die Vielfalt von Sprachen. Die Abschaffung aller Sprachen ist kein Gründungsziel der UNO."
+      ]
     }
   },
   {
@@ -3904,6 +4031,19 @@
       ],
       "correct": 0,
       "why": "Die Grenzsperren unterbrachen Wege zwischen Ost- und West-Berlin. Viele Menschen konnten Freunde und Verwandte auf der anderen Seite nicht mehr frei besuchen."
+    },
+    "learning": {
+      "starter": "Die DDR-Regierung sperrte 1961 die Grenze um West-Berlin. Viele Menschen konnten Familie und Freunde nicht mehr frei besuchen.",
+      "observe": "Unterscheide eine Grenze auf einer Karte von der Frage, ob Menschen sie frei überqueren dürfen. Welche Information brauchst du zusätzlich zur gezeichneten Linie, um die Folgen für Familien zu verstehen? Spiele keine Trennung von Menschen nach.",
+      "benefit": "Du verbindest eine Kartendarstellung mit den Regeln und Folgen für Menschen."
+    },
+    "questionFeedback": {
+      "hint": "Lies, wie die Grenzsperren die Besuche zwischen Familien veränderten.",
+      "wrongReasons": [
+        null,
+        "Die Sperren verhinderten viele bisher mögliche Wege. Sie machten das freie Reisen gerade schwieriger.",
+        "Der Ort Berlin blieb derselbe. Verändert wurden die Grenzsperren und die Möglichkeiten, sie zu überqueren."
+      ]
     }
   },
   {
@@ -3941,7 +4081,8 @@
     "related": [
       "person-neil_armstrong",
       "invention-rocket",
-      "science-moon-phases"
+      "science-moon-phases",
+      "history-iss"
     ],
     "sources": [
       {
@@ -3978,6 +4119,19 @@
       ],
       "correct": 0,
       "why": "Armstrong, Aldrin und Collins gehörten zur dreiköpfigen Besatzung. Armstrong und Aldrin gingen auf die Mondoberfläche; Collins blieb im Raumschiff in der Mondumlaufbahn."
+    },
+    "learning": {
+      "starter": "Drei Astronauten flogen mit Apollo 11 zum Mond. Zwei landeten dort; einer blieb im Raumschiff in der Mondumlaufbahn.",
+      "observe": "Ordne die Aufgaben zu: auf der Mondoberfläche arbeiten und das Raumschiff in der Umlaufbahn betreuen. Warum bedeutet „nicht auf der Oberfläche“, dass Collins eine andere Aufgabe hatte, und nicht, dass er nicht zur Besatzung gehörte?",
+      "benefit": "Du erkennst unterschiedliche Aufgaben innerhalb einer gemeinsamen Leistung."
+    },
+    "questionFeedback": {
+      "hint": "Verwechsle die Mannschaft im Raumschiff nicht mit den Menschen, die auf dem Mond liefen. Welche Aufgabe könnte jemand währenddessen in der Umlaufbahn haben?",
+      "wrongReasons": [
+        null,
+        "Armstrong war nicht allein: Aldrin und Collins gehörten ebenfalls zur dreiköpfigen Besatzung.",
+        "Curie und Gutenberg lebten in anderen Zeiten und hatten andere Arbeitsgebiete. Sie gehörten nicht zur Apollo-11-Besatzung."
+      ]
     }
   },
   {
@@ -4045,6 +4199,19 @@
       ],
       "correct": 0,
       "why": "Das Internet verband schon vorher Computernetze. Das spätere World Wide Web nutzt diese Verbindung, um verlinkte Seiten zu übertragen."
+    },
+    "learning": {
+      "starter": "Das Internet verbindet Computernetze. Das Web nutzt diese Verbindung für Seiten mit Links.",
+      "observe": "Stell dir einen Weg und eine Nachricht vor, die auf diesem Weg transportiert wird. Was hilft dieser Vergleich über Internet und Web zu erklären? Warum beweist er trotzdem nicht, dass das Internet aus echten Straßen besteht?",
+      "benefit": "Du unterscheidest ein Netz von einer Nutzung darauf und prüfst die Grenze eines Vergleichs."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche ein Verkehrsnetz mit einem Dienst, der dieses Netz benutzt. Müssen Netz und Dienst dasselbe sein?",
+      "wrongReasons": [
+        null,
+        "Das Web ist ein Dienst auf dem Internet. Netzverbindung und verlinkte Seiten sind deshalb nicht genau dasselbe.",
+        "Das Internet verbindet Computernetze. Papierseiten sind dafür keine technische Voraussetzung."
+      ]
     }
   },
   {
@@ -4112,6 +4279,19 @@
       ],
       "correct": 0,
       "why": "Die Berliner Grenzübergänge wurden am 9. November 1989 geöffnet. Das war vor der deutschen Wiedervereinigung am 3. Oktober 1990."
+    },
+    "learning": {
+      "starter": "Am 9. November 1989 wurden Berliner Grenzübergänge geöffnet. Die deutsche Wiedervereinigung folgte später.",
+      "observe": "Lege zwei gedachte Zeitkarten nebeneinander: Grenzöffnung 1989 und Wiedervereinigung 1990. Was veränderte sich jeweils? Warum belegt ein offener Grenzübergang noch nicht, dass alle staatlichen Regeln schon gemeinsam waren?",
+      "benefit": "Du unterscheidest zwei verbundene Ereignisse und ihre unterschiedlichen Folgen."
+    },
+    "questionFeedback": {
+      "hint": "Unterscheide die Öffnung der Grenzübergänge von der späteren staatlichen Wiedervereinigung. Welches Ereignis wird in der Frage gesucht?",
+      "wrongReasons": [
+        null,
+        "1961 wurden die Grenzsperren errichtet. Die hier gefragte Öffnung geschah 1989.",
+        "1903 gehört hier zu den Motorflugversuchen der Wright-Brüder. Die Berliner Grenzöffnung folgte 1989."
+      ]
     }
   },
   {
@@ -4148,7 +4328,8 @@
     ],
     "related": [
       "history-writing",
-      "history-web"
+      "history-web",
+      "history-berlin_wall_fall"
     ],
     "sources": [
       {
@@ -4175,6 +4356,19 @@
       ],
       "correct": 0,
       "why": "Am 3. Oktober wird an die deutsche Wiedervereinigung von 1990 erinnert. Der Tag ist deshalb der Tag der Deutschen Einheit."
+    },
+    "learning": {
+      "starter": "Am 3. Oktober 1990 trat die DDR der Bundesrepublik Deutschland bei. Seitdem gibt es wieder einen gemeinsamen deutschen Staat.",
+      "observe": "Vergleiche den Beginn einer gemeinsamen staatlichen Ordnung mit dem Alltag verschiedener Menschen. Warum folgt aus einem gemeinsamen Feiertag nicht, dass alle Menschen den Wandel genau gleich erlebten?",
+      "benefit": "Du unterscheidest eine gemeinsame Rechtsänderung von unterschiedlichen persönlichen Erfahrungen."
+    },
+    "questionFeedback": {
+      "hint": "Frage nach dem Feiertag der staatlichen Einheit, nicht nach der Nacht, in der die Grenzübergänge geöffnet wurden.",
+      "wrongReasons": [
+        null,
+        "Der Kompass hilft beim Orientieren. Seine Erfindung ist nicht das Ereignis, an das dieser Feiertag erinnert.",
+        "Die erste Mondlandung von Menschen fand 1969 statt. Am 3. Oktober wird die deutsche Wiedervereinigung von 1990 gefeiert."
+      ]
     }
   },
   {
@@ -4204,12 +4398,17 @@
     "locations": [],
     "related": [
       "history-writing",
-      "history-web"
+      "history-web",
+      "history-apollo11"
     ],
     "sources": [
       {
         "label": "NASA",
         "url": "https://www.nasa.gov/missions/station/iss-research/expedition-1-kicks-off-science-aboard-international-space-station/"
+      },
+      {
+        "label": "NASA Glenn · Microgravity and free fall",
+        "url": "https://www.nasa.gov/glenn/glenn-expertise-space-exploration/physical-sciences-program/"
       }
     ],
     "aliases": [
@@ -4237,6 +4436,19 @@
       ],
       "correct": 0,
       "why": "Die Internationale Raumstation ist ein Ort, an dem Menschen aus verschiedenen Ländern gemeinsam leben, arbeiten und wissenschaftliche Versuche durchführen."
+    },
+    "learning": {
+      "starter": "Die ISS ist ein Forschungslabor in der Umlaufbahn. Menschen aus verschiedenen Ländern haben dort zusammen gearbeitet.",
+      "observe": "Vergleiche zwei Erklärungen: „In der Umlaufbahn gibt es keine Schwerkraft“ und „Station und Besatzung fallen gemeinsam um die Erde“. Welche nennt der Artikel? Warum darf das Schweben allein nicht als Beweis für verschwundene Schwerkraft gelten? Bleibe beim Lesen und Vergleichen.",
+      "benefit": "Du prüfst, ob eine sichtbare Wirkung auch die vorgeschlagene Ursache beweist."
+    },
+    "questionFeedback": {
+      "hint": "Überlege, was Astronautinnen und Astronauten gemeinsam auf einer Station in der Erdumlaufbahn tun können.",
+      "wrongReasons": [
+        null,
+        "Die ISS umkreist die Erde. Sie ist eine Raumstation und kein Land auf der Erdoberfläche.",
+        "ISS ist der Name einer Raumstation. Die Abkürzung bezeichnet keine Tierart."
+      ]
     }
   },
   {
@@ -4291,6 +4503,14 @@
       {
         "label": "Transportation Security Administration",
         "url": "https://www.tsa.gov/sites/default/files/9003_layout_mission_hall_exhibit_the_inception.pdf"
+      },
+      {
+        "label": "9/11 Memorial · Events of the day",
+        "url": "https://www.911memorial.org/learn/resources/911-primer/module-1-events-day?stream=top"
+      },
+      {
+        "label": "U.S. Government Publishing Office · Aviation security act2001",
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-107publ71/pdf/PLAW-107publ71.pdf"
       }
     ],
     "aliases": [
@@ -4314,6 +4534,19 @@
       ],
       "correct": 0,
       "why": "Gedenkstätten erinnern an getötete Menschen und ihre Lebensgeschichten. Dabei geht es um Erinnerung und Menschenwürde, nicht darum, Gewalt zu feiern."
+    },
+    "learning": {
+      "starter": "Am 11. September 2001 wurden viele Menschen durch Terroranschläge getötet. Gedenkstätten erinnern an diese Menschen und ihre Lebensgeschichten.",
+      "observe": "Unterscheide zwei Fragen: Was geschah an diesem Tag? Und wie können Menschen würdevoll daran erinnern? Warum kann das Lesen eines Namens an einer Gedenkstätte eine andere Aufgabe haben als eine Erklärung des Ereignisses? Du brauchst keine belastenden Bilder anzusehen.",
+      "benefit": "Du unterscheidest historische Erklärung von respektvollem Erinnern an einzelne Menschen."
+    },
+    "questionFeedback": {
+      "hint": "Denke an die Namen und Lebensgeschichten der Menschen, an die erinnert wird.",
+      "wrongReasons": [
+        null,
+        "Gewalt zu feiern widerspricht der Erinnerung an getötete Menschen und der Achtung ihrer Würde.",
+        "Eine Gedenkstätte soll die Menschen und ihre Geschichten im Gedächtnis halten. Ihr Zweck ist deshalb nicht das Vergessen."
+      ]
     }
   },
   {
@@ -4353,6 +4586,10 @@
       {
         "label": "NASA",
         "url": "https://science.nasa.gov/mission/webb/webb-mission-timeline/"
+      },
+      {
+        "label": "NASA/STScI · How Webb images receive visible colors",
+        "url": "https://science.nasa.gov/mission/webb/science-overview/science-explainers/how-are-webbs-full-color-images-made/"
       }
     ],
     "aliases": [
@@ -4380,6 +4617,19 @@
       ],
       "correct": 0,
       "why": "Die Bilder und Messdaten helfen uns zu verstehen, wie Sterne, Planeten und Galaxien entstehen."
+    },
+    "learning": {
+      "starter": "Webb misst unter anderem Infrarotlicht, das unsere Augen nicht sehen. Teams machen aus den Messdaten untersuchbare Bilder.",
+      "observe": "Vergleiche ein Bild aus mehreren gemessenen Wellenlängen mit einem Blick durch deine Augen. Warum helfen zugeordnete Farben beim Unterscheiden von Daten? Warum wäre die Behauptung „genau so sieht es ein Mensch dort“ zu stark?",
+      "benefit": "Du unterscheidest gemessene Daten, ihre sichtbare Darstellung und einen direkten Seheindruck."
+    },
+    "questionFeedback": {
+      "hint": "Was könnte man mit einem Teleskop im Weltraum beobachten? Vergleiche seine Aufgabe mit der eines Fahrzeugs oder einer Telefonanlage.",
+      "wrongReasons": [
+        null,
+        "Ein Teleskop sammelt Daten aus dem All. Eine Brücke zu bauen ist eine andere Aufgabe mit anderen Werkzeugen.",
+        "Das Teleskop untersucht Licht aus dem All. Es ist kein Aufnahmegerät für sämtliche Tiergeräusche."
+      ]
     }
   },
   {
@@ -8695,6 +8945,10 @@
       {
         "label": "Smithsonian · Klassische Zeit",
         "url": "https://americanindian.si.edu/collections-search/object/NMAI_176567"
+      },
+      {
+        "label": "NMAI · Maya people today, transcript",
+        "url": "https://maya.nmai.si.edu/sites/default/files/transcripts/the_maya_people.pdf"
       }
     ],
     "question": {
@@ -8722,7 +8976,20 @@
       "era": "Frühe Kulturen",
       "sensitive": false
     },
-    "sourceNote": "Der Zeitanker ordnet das Thema ein. Er ist weder ein genauer Beginn noch ein Ende einer ganzen Kultur. Heutige Küsten auf der Karte zeigen keine historischen Grenzen."
+    "sourceNote": "Der Zeitanker ordnet das Thema ein. Er ist weder ein genauer Beginn noch ein Ende einer ganzen Kultur. Heutige Küsten auf der Karte zeigen keine historischen Grenzen.",
+    "learning": {
+      "starter": "Maya-Gemeinschaften und ihre Sprachen gibt es bis heute. Alte Städte, Schriftzeichen und Kalender erzählen von verschiedenen Teilen ihrer Geschichte.",
+      "observe": "Vergleiche zwei Fragen: Was verrät ein altes Gebäude über die Menschen damals? Und wie erfährst du, wie Maya heute leben? Warum brauchst du dafür nicht nur dieselbe Art von Quelle?",
+      "benefit": "Du unterscheidest archäologische Spuren von den Stimmen heute lebender Menschen."
+    },
+    "questionFeedback": {
+      "hint": "Ein Ende einer historischen Epoche ist nicht automatisch das Ende aller Menschen dieser Kultur. Welche Antwort berücksichtigt auch die Gegenwart?",
+      "wrongReasons": [
+        null,
+        "Die hier beschriebenen Städte und heutigen Gemeinschaften gehören zu Mesoamerika. Die Aussage, die Maya hätten nur in Europa gelebt, passt nicht dazu.",
+        "Um 900 endete in vielen Darstellungen ein historischer Zeitabschnitt. Ein Zeitanker lässt nicht alle Menschen und ihre Sprachen verschwinden."
+      ]
+    }
   },
   {
     "id": "history-polynesia",
@@ -8761,6 +9028,14 @@
       {
         "label": "Te Ara · Traditionelle Navigation",
         "url": "https://teara.govt.nz/en/canoe-navigation/page-2"
+      },
+      {
+        "label": "Te Ara · Canoes and continuing navigation knowledge",
+        "url": "https://teara.govt.nz/en/canoe-navigation/page-1"
+      },
+      {
+        "label": "Te Ara · Navigation revival",
+        "url": "https://teara.govt.nz/en/canoe-navigation/page-4"
       }
     ],
     "question": {
@@ -8788,7 +9063,20 @@
       "era": "Forschungsreisen",
       "sensitive": false
     },
-    "sourceNote": "Der Zeitanker ordnet das Thema ein. Er ist weder ein genauer Beginn noch ein Ende einer ganzen Kultur. Heutige Küsten auf der Karte zeigen keine historischen Grenzen."
+    "sourceNote": "Der Zeitanker ordnet das Thema ein. Er ist weder ein genauer Beginn noch ein Ende einer ganzen Kultur. Heutige Küsten auf der Karte zeigen keine historischen Grenzen.",
+    "learning": {
+      "starter": "Erfahrene Menschen fanden über den Pazifik, indem sie Himmel und Meer genau beobachteten. Dieses Wissen wurde über viele Generationen gelernt.",
+      "observe": "Stell dir eine Reise vor, bei der Wolken die Sterne verdecken. Welche andere Beobachtung nennt der Artikel? Warum reicht es nicht, nur einmal zufällig eine Welle anzusehen? Bleibe bei einer gedachten Reise.",
+      "benefit": "Du verbindest mehrere Hinweise und erkennst, warum geübtes Wissen etwas anderes als Raten ist."
+    },
+    "questionFeedback": {
+      "hint": "Stell dir eine Fahrt ohne elektronische Geräte vor. Welche beobachtbaren Hinweise könnten Himmel und Meer liefern?",
+      "wrongReasons": [
+        null,
+        "Die Quelle beschreibt gelernte Sternrichtungen und regelmäßige Dünung. Das ist sorgfältige Orientierung und kein bloßes Hoffen auf Zufall.",
+        "Die beschriebene traditionelle Navigation ist viel älter als Smartphones. Ihre Hinweise kommen aus Beobachtungen von Himmel und Meer."
+      ]
+    }
   },
   {
     "id": "history-timbuktu",
@@ -8856,7 +9144,20 @@
       "era": "Frühe Neuzeit",
       "sensitive": false
     },
-    "sourceNote": "Der Zeitanker ordnet das Thema ein. Er ist weder ein genauer Beginn noch ein Ende einer ganzen Kultur. Heutige Küsten auf der Karte zeigen keine historischen Grenzen."
+    "sourceNote": "Der Zeitanker ordnet das Thema ein. Er ist weder ein genauer Beginn noch ein Ende einer ganzen Kultur. Heutige Küsten auf der Karte zeigen keine historischen Grenzen.",
+    "learning": {
+      "starter": "In Timbuktu trafen Reisende, Handel und Lernen zusammen. Handschriften konnten Wissen bewahren und weitergeben.",
+      "observe": "Unterscheide drei Aufgaben: einen Text schreiben, ihn mitnehmen und ihn an einem anderen Ort lesen. Warum kann ein Handelsweg auch Wissen verbinden? Was zeigt eine Handschrift allein noch nicht über alle Menschen einer Stadt?",
+      "benefit": "Du erklärst den Zusammenhang zwischen Wissensspeicherung, Transport und Lernen."
+    },
+    "questionFeedback": {
+      "hint": "Welche Rolle könnten Bücher, gelehrte Menschen und Handelswege für eine Stadt spielen? Prüfe den Bezug zur Wissensgeschichte.",
+      "wrongReasons": [
+        null,
+        "Eine Mondreise gehört zur Raumfahrt. Timbuktus hier beschriebene Bedeutung liegt bei Lernen, Handschriften und Handel.",
+        "Die Quelle nennt ausdrücklich einen Markt für Handschriften. Die Behauptung, dort habe es nie Bücher gegeben, widerspricht diesem Beleg."
+      ]
+    }
   },
   {
     "id": "history-greece",
@@ -8865,7 +9166,7 @@
     "intro": "Menschen beschäftigten sich mit Mathematik, Theater, Kunst und politischen Regeln.",
     "paragraphs": [
       "Griechenland bestand aus vielen Stadtstaaten mit unterschiedlichen Regeln. Athen und Sparta waren zwei davon.",
-      "In Athen durften männliche Bürger über manche Entscheidungen abstimmen. Frauen, versklavte Menschen und viele andere waren ausgeschlossen."
+      "In Athen durften erwachsene männliche Bürger über manche Entscheidungen abstimmen. Frauen, versklavte Menschen und viele andere waren ausgeschlossen."
     ],
     "facts": [
       {
@@ -8895,6 +9196,10 @@
       {
         "label": "Metropolitan Museum · Klassisches Griechenland",
         "url": "https://www.metmuseum.org/essays/the-art-of-classical-greece-ca-480-323-b-c"
+      },
+      {
+        "label": "University of St Andrews · Hippocrates of Chios",
+        "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Hippocrates/"
       }
     ],
     "question": {
@@ -8922,7 +9227,20 @@
       "era": "Antike",
       "sensitive": false
     },
-    "sourceNote": "Der Zeitanker ordnet das Thema ein. Er ist weder ein genauer Beginn noch ein Ende einer ganzen Kultur. Heutige Küsten auf der Karte zeigen keine historischen Grenzen."
+    "sourceNote": "Der Zeitanker ordnet das Thema ein. Er ist weder ein genauer Beginn noch ein Ende einer ganzen Kultur. Heutige Küsten auf der Karte zeigen keine historischen Grenzen.",
+    "learning": {
+      "starter": "Im antiken Athen konnten erwachsene männliche Bürger politisch mitbestimmen. Viele andere Menschen waren davon ausgeschlossen.",
+      "observe": "Vergleiche zwei Aussagen: „Ein Teil der Menschen darf abstimmen“ und „Alle Menschen haben die gleichen politischen Rechte“. Warum bedeuten diese Sätze nicht dasselbe? Vergleiche nur die beschriebenen Regeln, ohne jemanden aus einer heutigen Gruppe auszuschließen.",
+      "benefit": "Du prüfst, für wen eine Regel gilt, und unterscheidest Beteiligung von gleichen Rechten für alle."
+    },
+    "questionFeedback": {
+      "hint": "Unterscheide das Wort „Demokratie“ von der Frage, wer damals tatsächlich mitentscheiden durfte. Waren alle Bevölkerungsgruppen gleichberechtigt?",
+      "wrongReasons": [
+        null,
+        "In der Quelle nehmen erwachsene männliche Bürger teil. Daraus folgt keine Mitbestimmung aller Kinder und Erwachsenen.",
+        "Besucher aus anderen Ländern waren nicht die einzige entscheidende Gruppe. Die politische Teilnahme war an den damaligen Bürgerstatus und weitere Einschränkungen gebunden."
+      ]
+    }
   },
   {
     "id": "history-rome",
@@ -8962,6 +9280,14 @@
       {
         "label": "Metropolitan Museum · Römisches Reich",
         "url": "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d"
+      },
+      {
+        "label": "Pont du Gard · Water and gradient",
+        "url": "https://pontdugard.fr/en/discover/monument"
+      },
+      {
+        "label": "PBS Building Big · Arch forces",
+        "url": "https://www.pbs.org/wgbh/buildingbig/bridge/arch_forces.html"
       }
     ],
     "question": {
@@ -8989,7 +9315,20 @@
       "era": "Antike",
       "sensitive": false
     },
-    "sourceNote": "Der Zeitanker ordnet das Thema ein. Er ist weder ein genauer Beginn noch ein Ende einer ganzen Kultur. Heutige Küsten auf der Karte zeigen keine historischen Grenzen."
+    "sourceNote": "Der Zeitanker ordnet das Thema ein. Er ist weder ein genauer Beginn noch ein Ende einer ganzen Kultur. Heutige Küsten auf der Karte zeigen keine historischen Grenzen.",
+    "learning": {
+      "starter": "Aquädukte brachten Wasser zu Siedlungen. Das Wasser konnte durch eine Leitung mit leichtem Gefälle fließen.",
+      "observe": "Zeichne einen erdachten Weg vom höher gelegenen Wasseranfang zu einem tiefer gelegenen Ziel. Warum muss nicht die ganze Leitung auf einer hohen Brücke liegen? Was kann eine solche Zeichnung nicht über die tatsächliche Versorgung aller Menschen beweisen?",
+      "benefit": "Du erklärst eine technische Funktion und beachtest die Grenze eines vereinfachten Plans."
+    },
+    "questionFeedback": {
+      "hint": "Betrachte den Namen des Bauwerks zusammen mit den römischen Wasserwegen. Was könnte eine lange Leitung in eine Siedlung bringen?",
+      "wrongReasons": [
+        null,
+        "Ein Aquädukt leitete Wasser. Elektrische Nachrichten benötigen eine andere Technik; ein alter Wasserkanal ist dafür kein Beleg.",
+        "Die beschriebene Leitung transportierte Wasser durch Gefälle. Raketenstarts gehören zu einem anderen technischen Zusammenhang."
+      ]
+    }
   },
   {
     "id": "science-atmosphere",

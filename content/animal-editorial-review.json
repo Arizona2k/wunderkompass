@@ -95,7 +95,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {},
@@ -111,18 +111,18 @@
           }
         ],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -140,6 +140,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -238,7 +254,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "sourceAddition20261018": {
@@ -295,18 +311,18 @@
           }
         ],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -324,6 +340,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -416,7 +448,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {},
@@ -436,18 +468,18 @@
           }
         ],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -465,6 +497,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -564,7 +612,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {},
@@ -580,18 +628,18 @@
           }
         ],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -609,6 +657,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -712,7 +776,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {},
@@ -728,18 +792,18 @@
           }
         ],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -757,6 +821,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -854,7 +934,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {},
@@ -870,18 +950,18 @@
           }
         ],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -899,6 +979,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -991,7 +1087,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "retainedMediaCountercheckBeforeFinalRead20261018": {
@@ -1020,18 +1116,18 @@
           }
         ],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -1049,6 +1145,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -1164,7 +1276,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {},
@@ -1180,18 +1292,18 @@
           }
         ],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -1209,6 +1321,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -1301,7 +1429,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {},
@@ -1317,18 +1445,18 @@
           }
         ],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -1346,6 +1474,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -1449,7 +1593,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {
@@ -1472,18 +1616,18 @@
           }
         ],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -1501,6 +1645,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -1599,7 +1759,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {},
@@ -1615,18 +1775,18 @@
           }
         ],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -1644,6 +1804,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -1787,7 +1963,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {},
@@ -1803,18 +1979,18 @@
           }
         ],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -1832,6 +2008,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -1929,7 +2121,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {},
@@ -1945,18 +2137,18 @@
           }
         ],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -1974,6 +2166,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -2076,7 +2284,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {},
@@ -2087,18 +2295,18 @@
         "currentFindings": "Octopus vulgaris bleibt von anderen Krakenarten getrennt.15–25cm betrifft den Mantel ohne Arme.1–2Jahre, acht Arme, Einzelversteck und Rückstoß sind belegt. LaRochelle erklärt taktil-chemische Armsinne und Wasserstrahl; LC bleibt ausdrücklich diesem Aquarium zugeschrieben, keine eigene globale Neubewertung.",
         "extraActualSourceReads": [],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -2116,6 +2324,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -2219,7 +2443,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {},
@@ -2230,18 +2454,18 @@
         "currentFindings": "90–120cm bezeichnet den Panzer,70Jahre oder mehr bleibt eine Schätzung. Wanderungen und Natalregion statt eines garantiert genauen Geburtsstrands, unterschiedliche Jungtier- und Erwachsenenkost sowie Luftatmung sind belegt. Weltweites LC seitOktober2025 folgt IUCN und wird von regionaler NOAA-ESA-Einstufung getrennt.",
         "extraActualSourceReads": [],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -2259,6 +2483,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -2353,7 +2593,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {},
@@ -2369,18 +2609,18 @@
           }
         ],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -2398,6 +2638,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -2495,7 +2751,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {},
@@ -2511,18 +2767,18 @@
           }
         ],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -2540,6 +2796,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -2632,7 +2904,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "retainedMediaCountercheckBeforeFinalRead20261018": {
@@ -2704,18 +2976,18 @@
           }
         ],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -2733,6 +3005,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -2831,7 +3119,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {},
@@ -2842,18 +3130,18 @@
         "currentFindings": "15–18mm betrifft die Königin;3–5Jahre ist nur deren mögliche Lebensdauer, Arbeiterinnen leben kürzer. Apis mellifera, Herkunft, erwachsene Pollen- und Nektarkost, Kasten und Tanz sind belegt. Pollenübertragung bewirkt nicht an jeder Blüte automatisch eine Frucht. Die EU-Gefährdung freier Völker2025 wird von Honigbienenhaltung und übrigen Wildbienen getrennt.",
         "extraActualSourceReads": [],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -2871,6 +3159,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -2975,7 +3279,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {},
@@ -2986,18 +3290,18 @@
         "currentFindings": "25–30cm typische Erwachsenenlänge und10–12Jahre folgen Toronto;40–45cm Ausnahmegröße wird nicht als normal ausgegeben. Außenkiemen, Larvenmerkmale, Xochimilco-Gewässer, Nahrung, meist allein und Beinregeneration sind belegt. Keine perfekte unbegrenzte Regeneration oder Aquarienhaltung als Ersatz für den CR-Wildbestand.",
         "extraActualSourceReads": [],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -3015,6 +3319,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -3101,7 +3421,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {},
@@ -3112,18 +3432,18 @@
         "currentFindings": "5,5–10m ist typische Länge statt18,8m Rekord. Fisch mit Kiemen, Planktonfiltern, Flecken-ID sowie weltweites EN und Gefahr durch Boote oder Gerät sind belegt. Fehler der GeorgiaAquarium-Seite zur Zahngröße oder zum größten Fisch aller Zeiten werden nicht kopiert. Das Urheberlabel ist vervollständigt; das Foto bleibt unverändert.",
         "extraActualSourceReads": [],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -3141,6 +3461,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -3271,7 +3607,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "historicalSourceAdditionBeforeFinalCountercheck20261018": {
@@ -3303,18 +3639,18 @@
         "currentFindings": "9–18mm ohne Beine ist korrekt umgerechnet. Araneus diadematus ist kein Insekt; acht gegenüber sechs Beinen und Insektenfang über Vibrationen sind belegt. Der Schutztext ist keine globale Einstufung. Zusätzlich gelesene NHM-Erklärungen belegen Seidenentstehung, Spinnwarzen und verschiedene Fadentypen. Die Fotocaption benennt den12-Fokusbildstapel anstelle einer ungesicherten Lebensraumbehauptung.",
         "extraActualSourceReads": [],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -3332,6 +3668,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -3446,7 +3798,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "currentAdditionalSourceCountercheck20261018": {
@@ -3463,18 +3815,18 @@
         "currentFindings": "Schulterhöhe1,8–2m für Männchen, Fett im Höcker statt Wassertank, gepolsterte Füße, Wimpern und Pflanzennahrung folgen den gelesenen ADW-Stellen. SanDiego51 trennt Dromedar mit einem Höcker und Trampeltier mit zwei. Überwiegend Haustier und verwildert in Australien; keine Wildkamel-IUCN-Kategorie wird übertragen. Wasser bleibt nötig.",
         "extraActualSourceReads": [],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -3492,6 +3844,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -3636,7 +4004,7 @@
       "currentReviewStatus20261018": {
         "status": "einzeln-fachlich-pädagogisch-ki-geprüft-zieltechnik-offen",
         "factualScope": "Konkreter aktueller Einzelfund, Quellenstellen, Änderungen/Restgrenzen und Hashbindung in completeIndividualAICountercheck20261018 und zugeordnetemEinzeldossier. Frühere Erstbefunde als solche erhalten.",
-        "technicalScope": "Tatsächliche neue Master-Tierproben einschließlich aller48Karten/49Bildrechte, Suche/Rückweg/Reload, nativ200% und kaltOffline amBuild267fae29861b3ab0 bestanden; volle neue Endabnahme separat offen.",
+        "technicalScope": "Current targeted actual48animal/49photo/native/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
         "next": "Aktuelle Mini-Frage samt beschädigten Alt-Reihenfolgen/kaltOffline prüfen. Quality120Chromium-Navigatorzustand und separate lokaleNewsgrenze weiterklären; keine falsche Freigabe."
       },
       "questionWordingCountercheck20261018": {
@@ -3698,18 +4066,18 @@
         "currentFindings": "2–2,4m Spannweite folgt NABU-PDF-Text/OCR13/716–717; keine erfundene Bildsichtung oder Übernahme der alten PDF-Roten-Liste. NABU belegt Norddeutschland und Gewässer, RSPB Altersgefieder und Nahrung, Donau-Auen206/219–223 die Thermik. Die grammatisch falsche Antwort ist mit erhaltener Lösung, Position und Altpasszuordnung korrigiert. Kein genauer Brutpunkt oder pauschales globales Statusurteil.",
         "extraActualSourceReads": [],
         "currentBuiltProofs": {
-          "master-history-final-animals": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
-            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-v3/report.json",
+            "sha256": "765bb8748644744c5ebf4b6a38926854545f9e56a5784c55f4c51edb5eab7a17",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
           },
-          "master-history-final-animals-native-offline": {
-            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
-            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
-            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
-            "build": "267fae29861b3ab0",
+          "master-all-history-animals-native-offline-v3": {
+            "path": "/workspace/work/wk-continuation/master-all-history-animals-native-offline-v3/report.json",
+            "sha256": "825e1bf048311ef28450daa299fa326bc0684b6434d8e5ae4d05e1eb466c8a73",
+            "sourceDigest": "5586427c25c9f66e461d758d52189cdf0631ac13ff9abda2bd0bf5d31a66981b",
+            "build": "5e132945395575cc",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         },
@@ -3727,6 +4095,22 @@
             "sha256": "a18370ecbe7a65f1b49d53dd5a2955bf4a7032aa52f04640e9b1b78dc9b31849",
             "build": "a3b58eb6e952a2db",
             "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
+          }
+        },
+        "proofsBeforeRemainingHistoryRound": {
+          "master-history-final-animals": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals/report.json",
+            "sha256": "0093e3747dc5836003d6b7d6594833af74a4fd76b1b44c041271ac36c1e6b0a1",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
+            "scope": "actual Chromium animal partial proof, all48 cards at320/1440 normal+large, three levels and all48 search/back/reload; all49 actual photo/rights/tamper/retry cases included; not full regression"
+          },
+          "master-history-final-animals-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-history-final-animals-native-offline/report.json",
+            "sha256": "1e24a5cdf89b3ad034a8cd98ca1db743e07bf4e8c9728ab8af9327a0b3865366",
+            "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+            "build": "267fae29861b3ab0",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards and all49 photo rights; not full regression"
           }
         }
@@ -3965,7 +4349,7 @@
       "topics-animals:animal-dromedary",
       "topics-animals:animal-white-tailed-eagle"
     ],
-    "build": "267fae29861b3ab0",
+    "build": "5e132945395575cc",
     "externalHumanGate": false,
     "fullTechnicalAcceptance": false,
     "remaining": "Neue tatsächliche vollständige Pflichtabnahme am endgültigen Master-/Lieferstand; lokale News-Kaltstartgrenze bleibt separat offen."
