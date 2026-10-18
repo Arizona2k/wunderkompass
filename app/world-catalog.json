@@ -4685,6 +4685,10 @@
       {
         "label": "Nobel Prize",
         "url": "https://www.nobelprize.org/prizes/physics/1903/marie-curie/questions-and-answers/?print=1"
+      },
+      {
+        "label": "National Park Service: Forschung und Lebensdaten",
+        "url": "https://www.nps.gov/people/manhattan-project-pioneers-marie-curie.htm"
       }
     ],
     "aliases": [
@@ -4707,6 +4711,19 @@
       ],
       "correct": 0,
       "why": "Manche Stoffe senden von selbst unsichtbare Strahlung aus. Das heißt Radioaktivität. Solche Stoffe untersucht man nur in geeigneten Fachlaboren."
+    },
+    "learning": {
+      "starter": "Marie Curie untersuchte, welche Strahlung Stoffe abgeben. Messgeräte halfen ihr bei der Forschung.",
+      "observe": "Eine Notiz nennt einen untersuchten Stoff und das Ergebnis einer Messung. Warum brauchst du beide Angaben? Was würde eine Auszeichnung allein noch nicht über die Messung verraten? Vergleiche nur die Aussagen auf dem Papier.",
+      "benefit": "Du unterscheidest den Namen einer Person, eine Auszeichnung und einen überprüfbaren Beleg."
+    },
+    "questionFeedback": {
+      "hint": "Denke an Curies Untersuchungen von Stoffen im Labor. Welches Forschungsgebiet beschäftigt sich mit Strahlung, die von Stoffen ausgeht?",
+      "wrongReasons": [
+        null,
+        "Die Anleitung für Babbages geplante Maschine gehört zu Ada Lovelaces Beitrag. Hier geht es um Curies Untersuchung radioaktiver Stoffe.",
+        "Frühe Compiler und leichter verständliche Programmiersprachen gehören zur Karte über Grace Hopper. Curie ist hier wegen ihrer Strahlungsforschung gefragt."
+      ]
     }
   },
   {
@@ -4778,6 +4795,19 @@
       ],
       "correct": 0,
       "why": "Ein Algorithmus ist eine genaue Schrittfolge. Babbages große Maschine wurde zu ihren Lebzeiten nicht fertig gebaut."
+    },
+    "learning": {
+      "starter": "Ada Lovelace schrieb eine genaue Rechenanleitung für eine geplante Maschine auf. Die Maschine war damals noch nicht fertig gebaut.",
+      "observe": "Vergleiche zwei heutige Anweisungen: Addiere zwei und drei und verdopple das Ergebnis. Oder: Verdopple drei und addiere zwei. Warum unterscheiden sich die Ergebnisse? Beweist deine Rechnung auch schon, dass Babbages Maschine 1843 genau so lief?",
+      "benefit": "Du prüfst genaue Schrittfolgen und trennst einen heutigen Rechenvergleich von einem historischen Nachweis."
+    },
+    "questionFeedback": {
+      "hint": "Stell dir eine geplante Rechenmaschine vor. Welche Art genauer Anweisungen könnte sie benötigen, um eine Rechnung auszuführen?",
+      "wrongReasons": [
+        null,
+        "Radioaktivität ist das hier beschriebene Forschungsfeld von Marie Curie. Lovelaces Beitrag betrifft eine geplante Rechenmaschine.",
+        "Grace Hopper arbeitete später an Programmierwerkzeugen für Computer. Bei Lovelace geht es um die veröffentlichte Anleitung für die Analytical Engine."
+      ]
     }
   },
   {
@@ -4827,6 +4857,14 @@
       {
         "label": "Naval History and Heritage Command",
         "url": "https://www.history.navy.mil/research/library/biographical-files/modern-biographical-files-ndl/modern-bios-h/hopper-grace-murray-text.html"
+      },
+      {
+        "label": "Computer History Museum: Compiler und Zusammenarbeit",
+        "url": "https://www.computerhistory.org/revolution/story/117"
+      },
+      {
+        "label": "Yale University: Biografie und Programmiersprachen",
+        "url": "https://president.yale.edu/biography-grace-murray-hopper"
       }
     ],
     "aliases": [
@@ -4849,7 +4887,20 @@
       "correct": 0,
       "why": "Ein Compiler übersetzt ein Computerprogramm in eine Form, mit der ein Computer arbeiten kann."
     },
-    "image": "grace-hopper"
+    "image": "grace-hopper",
+    "learning": {
+      "starter": "Grace Hopper arbeitete daran, Computerprogramme verständlicher aufzuschreiben und zu übersetzen. Dabei waren viele Menschen beteiligt.",
+      "observe": "Ein gedachtes Programm berechnet fehlerfrei drei plus vier. Die Aufgabe verlangte aber drei mal vier. Warum kann eine Übersetzung funktionieren, obwohl der Auftrag zur Aufgabe nicht passt? Dies ist ein heutiger Denkvergleich.",
+      "benefit": "Du unterscheidest eine gelungene Übersetzung von einem inhaltlich richtigen Auftrag."
+    },
+    "questionFeedback": {
+      "hint": "Menschen und Computer können Programme unterschiedlich lesen. Welche Arbeit könnte zwischen einer verständlichen Programmsprache und der Maschine vermitteln?",
+      "wrongReasons": [
+        null,
+        "Curie untersuchte radioaktive Stoffe. Hoppers hier beschriebene Arbeit betraf das Programmieren und Übersetzen von Computeranweisungen.",
+        "Die Anleitung für eine noch geplante Rechenmaschine gehört zu Ada Lovelace. Hopper arbeitete viel später an frühen Compilern und Programmiersprachen."
+      ]
+    }
   },
   {
     "id": "person-katherine_johnson",
@@ -4916,6 +4967,19 @@
       ],
       "correct": 0,
       "why": "Eine Flugbahn beschreibt, welchen Weg ein Raumschiff durch den Raum nimmt."
+    },
+    "learning": {
+      "starter": "Katherine Johnson berechnete Wege für Raumfahrzeuge und überprüfte wichtige Rechnungen. Raumfahrt brauchte sorgfältige Kontrollen.",
+      "observe": "Zwei Rechnungen liefern dieselbe Zahl. Warum reicht das noch nicht als unabhängige Prüfung, wenn beide dieselbe falsche Eingabe benutzen? Überlege, warum man außer dem Ergebnis auch Eingaben und Rechenschritte anschauen muss.",
+      "benefit": "Du erklärst, was eine unabhängige Kontrolle zusätzlich zum Vergleichen zweier Ergebnisse braucht."
+    },
+    "questionFeedback": {
+      "hint": "Ein Raumschiff soll sicher ankommen. Welche Berechnungen braucht man für seinen Weg und seine Rückkehr?",
+      "wrongReasons": [
+        null,
+        "Die Untersuchung radioaktiver Stoffe beschreibt die Karte zu Marie Curie. Johnsons Beitrag lag bei Mathematik und Flugbahnen.",
+        "Die veröffentlichte Anleitung für Babbages geplante Maschine ist Lovelaces Beitrag. Johnson prüfte konkrete Raumfahrtrechnungen in einer anderen Zeit."
+      ]
     }
   },
   {
@@ -4964,6 +5028,10 @@
       {
         "label": "CERN",
         "url": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
+      },
+      {
+        "label": "Computer History Museum: Biografie und Webentwicklung",
+        "url": "https://computerhistory.org/profile/tim-berners-lee/"
       }
     ],
     "aliases": [
@@ -4986,7 +5054,20 @@
       "correct": 0,
       "why": "Das Web und das Internet sind verwandt: Das Web ist eine Anwendung des viel größeren Internet-Netzes."
     },
-    "image": "tim-berners-lee"
+    "image": "tim-berners-lee",
+    "learning": {
+      "starter": "Tim Berners-Lee entwickelte Seiten mit Links für das Web. Das Web nutzt das bereits ältere Internet.",
+      "observe": "Stell dir eine Seite mit einem Link zu einer Behauptung vor. Warum beweist der Link allein noch nicht, dass die Behauptung richtig oder aktuell ist? Welche Fragen zu Inhalt, Quelle und Datum würdest du stellen?",
+      "benefit": "Du unterscheidest den Weg zu einer Information von einem Beleg für ihre Richtigkeit."
+    },
+    "questionFeedback": {
+      "hint": "Denke an anklickbare Verbindungen zwischen Seiten. Welcher Beitrag könnte das Auffinden und Teilen von Informationen erleichtern?",
+      "wrongReasons": [
+        null,
+        "Radioaktivitätsforschung gehört hier zu Marie Curie. Berners-Lees Beitrag war die Entwicklung des Webs.",
+        "Lovelaces Anleitung bezog sich auf eine geplante Rechenmaschine. Berners-Lee verband viel später Seiten durch Webtechnik; das ist ein anderer Beitrag."
+      ]
+    }
   },
   {
     "id": "person-karl_benz",
@@ -5057,7 +5138,20 @@
       "correct": 0,
       "why": "Das Patent von 1886 war ein wichtiger Schritt. Andere Menschen entwickelten ebenfalls Fahrzeuge, darunter Dampf- und Elektrofahrzeuge."
     },
-    "image": "karl-benz"
+    "image": "karl-benz",
+    "learning": {
+      "starter": "Carl Benz entwickelte einen frühen Wagen mit Benzinmotor. Zu einem nutzbaren Fahrzeug gehören auch Räder, Lenkung und Bremsen.",
+      "observe": "Ein gedachter Werkstatttest zeigt: Der Motor läuft. Ein anderer soll zeigen: Der Wagen kann kontrolliert anhalten. Warum beweist das erste Ergebnis noch nicht das zweite? Zeichne nur einen Plan der verschiedenen Aufgaben.",
+      "benefit": "Du prüfst ein technisches System nach mehreren Aufgaben statt nach einem einzigen erfolgreichen Teil."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche Benz mit einer Person, die ein Fahrzeug nur benutzt. Was könnte ein Konstrukteur an Motor und Fahrzeug entwickeln?",
+      "wrongReasons": [
+        null,
+        "Curies Strahlungsforschung erklärt nicht die Entwicklung des Motorwagens. Benz verband Bauteile zu einem frühen Fahrzeug.",
+        "Die Anleitung für Babbages geplante Maschine gehört zu Lovelace. Benz arbeitete an einem Fahrzeug mit Motor."
+      ]
+    }
   },
   {
     "id": "person-bertha_benz",
@@ -5134,7 +5228,20 @@
       "correct": 0,
       "why": "Erfindungen brauchen Menschen, die sie testen, finanzieren und im Alltag verbessern."
     },
-    "image": "bertha-benz"
+    "image": "bertha-benz",
+    "learning": {
+      "starter": "Bertha Benz unterstützte den Motorwagen mit Geld, Ideen und praktischer Arbeit. Ihre lange Fahrt zeigte, wie er unterwegs funktionierte.",
+      "observe": "Vergleiche eine kurze Werkstattprobe mit einer gedachten langen Reise und ihren Stopps. Welche zusätzliche Frage zur Versorgung stellt die Reise? Warum beweist eine gelungene Fahrt nicht, dass jeder Weg bei jedem Wetter genauso funktioniert?",
+      "benefit": "Du unterscheidest eine erfolgreiche einzelne Erprobung von einer Aussage über alle Bedingungen."
+    },
+    "questionFeedback": {
+      "hint": "Überlege, wie man eine neue Fahrzeugidee im Alltag erproben kann. Welche Rolle könnte eine längere Fahrt dabei spielen?",
+      "wrongReasons": [
+        null,
+        "Radioaktive Stoffe untersuchte Marie Curie. Bertha Benz erprobte und unterstützte einen Motorwagen.",
+        "Die Rechenanleitung für eine geplante Maschine gehört zu Ada Lovelace. Bertha Benz zeigte praktische Eigenschaften eines Fahrzeugs auf einer Reise."
+      ]
+    }
   },
   {
     "id": "person-jane_goodall",
@@ -5201,7 +5308,20 @@
       "correct": 0,
       "why": "Schimpansen können Werkzeuge benutzen und sogar passend vorbereiten."
     },
-    "image": "jane-goodall"
+    "image": "jane-goodall",
+    "learning": {
+      "starter": "Jane Goodall beobachtete Schimpansen lange und genau. Sie beschrieb, wie diese Tiere Werkzeuge herstellten und benutzten.",
+      "observe": "Vergleiche: Ein beobachteter Schimpanse stellt ein Werkzeug her. Alle Menschenaffen machen immer dasselbe. Welche Aussage geht weiter als der einzelne Beleg? Welche zusätzlichen Beobachtungen bräuchtest du?",
+      "benefit": "Du unterscheidest ein beobachtetes Verhalten von einer Behauptung über alle Tiere einer Gruppe."
+    },
+    "questionFeedback": {
+      "hint": "Wie könnte man herausfinden, was Schimpansen in ihrer natürlichen Umgebung tun? Denke an aufmerksames Beobachten über längere Zeit.",
+      "wrongReasons": [
+        null,
+        "Curie untersuchte Strahlung in Stoffen. Goodall erforschte das Verhalten wilder Schimpansen.",
+        "Die veröffentlichte Anleitung für Babbages geplante Maschine gehört zu Lovelace. Goodalls Belege stammen aus langen Tierbeobachtungen."
+      ]
+    }
   },
   {
     "id": "person-albert_einstein",
@@ -5260,6 +5380,10 @@
       {
         "label": "Max-Planck-Institut für Gravitationsphysik · Spezielle Relativität",
         "url": "https://www.einstein-online.info/en/category/elementary/special-relativity-elementary/"
+      },
+      {
+        "label": "Max-Planck-Institut: Biografie und Forschung",
+        "url": "https://www.einstein-online.info/en/about-einstein-online/about-albert-einstein/"
       }
     ],
     "aliases": [
@@ -5282,7 +5406,20 @@
       "correct": 0,
       "why": "Einstein untersuchte, wie Raum und Zeit zusammenhängen und welche Rolle Licht dabei spielt. Seine Relativitätstheorien gehören zu diesen Arbeiten."
     },
-    "image": "albert-einstein"
+    "image": "albert-einstein",
+    "learning": {
+      "starter": "Einstein untersuchte Licht, Raum und Zeit. Er verband Gedankenexperimente und Mathematik mit überprüfbaren Vorhersagen.",
+      "observe": "Eine ausgedachte Situation führt zu einer überraschenden Vermutung. Warum ist die Vermutung selbst noch kein Messwert? Erkläre, warum eine Vorhersage zu Beobachtungen passen muss, statt nur spannend zu klingen.",
+      "benefit": "Du unterscheidest eine Idee von ihrer überprüfbaren Vorhersage und einem Messergebnis."
+    },
+    "questionFeedback": {
+      "hint": "Stell dir vor, du untersuchst gedanklich eine Reise mit sehr hoher Geschwindigkeit. Zu welchen Fragen über die Natur könnte das führen?",
+      "wrongReasons": [
+        null,
+        "Radioaktivitätsforschung beschreibt hier Curies Beitrag. Einsteins Karte fragt nach seinen Arbeiten zu Licht, Raum und Zeit; das sind unterschiedliche Schwerpunkte.",
+        "Die Anleitung für Babbages geplante Maschine gehört zu Lovelace. Einsteins hier beschriebene Vorhersagen betreffen physikalische Zusammenhänge."
+      ]
+    }
   },
   {
     "id": "person-al_khwarizmi",
@@ -5349,7 +5486,20 @@
       "correct": 0,
       "why": "Algebra hilft, mit unbekannten Zahlen zu rechnen. Wissen aus Indien und anderen Regionen wurde weitergegeben und weiterentwickelt."
     },
-    "image": "al-khwarizmi"
+    "image": "al-khwarizmi",
+    "learning": {
+      "starter": "Al-Chwarizmi schrieb über klare Rechenregeln und unbekannte Zahlen. Wissen aus verschiedenen Regionen wurde weiterentwickelt.",
+      "observe": "Eine Zahl plus drei ist acht. Wie findest du die Zahl, und wie prüfst du sie anschließend? Warum belegt deine heutige Schreibweise noch nicht, welche Zeichen Al-Chwarizmi in seinem Buch verwendete?",
+      "benefit": "Du prüfst eine Lösung und unterscheidest moderne Rechenzeichen von einer historischen Quelle."
+    },
+    "questionFeedback": {
+      "hint": "Überlege, wie man eine Rechnung lösen kann, wenn eine Zahl noch unbekannt ist. Welches mathematische Gebiet hilft dabei?",
+      "wrongReasons": [
+        null,
+        "Curie untersuchte radioaktive Stoffe. Al-Chwarizmi schrieb mathematische Bücher über Rechnen und Algebra.",
+        "Die Anleitung für Babbages geplante Maschine stammt aus Lovelaces Zeit. Al-Chwarizmis viel ältere Bücher handeln von Rechenregeln und Algebra."
+      ]
+    }
   },
   {
     "id": "person-tu_youyou",
@@ -5398,6 +5548,10 @@
       {
         "label": "Tu Youyou / Nobel Prize",
         "url": "https://www.nobelprize.org/prizes/medicine/2015/tu/biographical/"
+      },
+      {
+        "label": "Lasker Foundation: Forschung an Artemisinin im Team",
+        "url": "https://laskerfoundation.org/winners/artemisinin-therapy-for-malaria/"
       }
     ],
     "aliases": [
@@ -5420,7 +5574,20 @@
       "correct": 0,
       "why": "Medikamente entstehen durch viele Prüfungen. Pflanzen oder Medikamente selbst zu testen wäre gefährlich; Erwachsene und Fachleute kümmern sich darum."
     },
-    "image": "tu-youyou"
+    "image": "tu-youyou",
+    "learning": {
+      "starter": "Tu Youyou erforschte mit einem Team einen Stoff für Medikamente gegen Malaria. Ein Hinweis auf eine Pflanze war ein Anfang und noch kein fertiges Medikament.",
+      "observe": "Unterscheide drei Forschungsstufen: Ein alter Text nennt eine Pflanze. Ein Labor untersucht einen Stoff. Studien prüfen ein Medikament. Warum beweist die erste Stufe allein nicht, dass jede Zubereitung wirksam und sicher ist? Vergleiche nur die Aussagen.",
+      "benefit": "Du unterscheidest einen Hinweis von wissenschaftlicher Prüfung und vermeidest einen voreiligen Gesundheitsschluss."
+    },
+    "questionFeedback": {
+      "hint": "Denke an die Suche nach einem Wirkstoff gegen eine Krankheit. Eine heilkundliche Überlieferung und ein geprüftes Medikament sind dabei nicht dasselbe.",
+      "wrongReasons": [
+        null,
+        "Radioaktivität ist hier Curies Forschungsgebiet. Tu Youyous Team untersuchte einen Wirkstoff gegen Malaria.",
+        "Die Anleitung für Babbages geplante Maschine gehört zu Lovelace. Tu Youyous Forschung betraf Arzneistoffe und ihre Prüfung."
+      ]
+    }
   },
   {
     "id": "person-cai_lun",
@@ -5473,6 +5640,10 @@
       {
         "label": "Journal of the Royal Asiatic Society / Cambridge University Press",
         "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29"
+      },
+      {
+        "label": "Deutsches Technikmuseum: Fasern, Wasser und Papierherstellung",
+        "url": "https://technikmuseum.berlin/en/program/permanent-exhibitions/papermaking"
       }
     ],
     "aliases": [
@@ -5495,7 +5666,20 @@
       "correct": 0,
       "why": "Eine Verbesserung kann genauso wichtig sein wie eine völlig neue Idee."
     },
-    "image": "cai-lun"
+    "image": "cai-lun",
+    "learning": {
+      "starter": "Cai Lun sammelte Wissen über Papier und verbesserte seine Herstellung. Eine wichtige Verbesserung braucht nicht die allererste Erfindung zu sein.",
+      "observe": "Ein altes Verfahren wird verändert. Welche Frage zeigt, ob die Veränderung nützlich ist: ob der Name neu klingt oder wie das Ergebnis im Vergleich funktioniert? Warum verrät ein besseres Ergebnis allein noch nicht das Datum der ersten Erfindung?",
+      "benefit": "Du unterscheidest einen Verbesserungsnachweis von einer Aussage über den allerersten Ursprung."
+    },
+    "questionFeedback": {
+      "hint": "Was kann an der Herstellung eines Schreibmaterials verbessert werden? Prüfe, ob ein Beitrag unbedingt eine völlig neue Erfindung sein muss.",
+      "wrongReasons": [
+        null,
+        "Curie untersuchte radioaktive Stoffe. Cai Luns hier beschriebener Beitrag liegt bei der Papierherstellung.",
+        "Die Anleitung für Babbages geplante Maschine gehört zu Lovelace. Cai Lun verbesserte ein bereits bekanntes Herstellungsverfahren."
+      ]
+    }
   },
   {
     "id": "person-mae_jemison",
@@ -5566,6 +5750,19 @@
       ],
       "correct": 0,
       "why": "Raumfahrt braucht viele Berufe: Mathematik, Medizin, Technik und zahlreiche weitere."
+    },
+    "learning": {
+      "starter": "Mae Jemison lernte Medizin und Technik und forschte mit einem Raumfahrtteam. Unterschiedliches Wissen kann sich bei einer Aufgabe ergänzen.",
+      "observe": "Eine gedachte Forschungsgruppe hat eine Frage zur Gesundheit und eine zum Material eines Geräts. Welche Fachkenntnisse könnten jeweils helfen? Warum kann eine Person mehrere Fachgebiete verbinden, ohne dass eine Gruppe auf Zusammenarbeit verzichten kann?",
+      "benefit": "Du ordnest Fachwissen Aufgaben zu und erkennst den Nutzen verschiedener Fähigkeiten im Team."
+    },
+    "questionFeedback": {
+      "hint": "Raumfahrt braucht unterschiedliche Berufe. Welche Antwort passt zu einer Frau, die Medizin und eine Reise ins All miteinander verband?",
+      "wrongReasons": [
+        null,
+        "Curie untersuchte radioaktive Stoffe. Jemisons Karte handelt von Medizin, Technik und ihrer Forschung als Astronautin.",
+        "Die Anleitung für Babbages geplante Maschine gehört zu Lovelace. Jemison arbeitete in einem späteren Raumfahrtteam."
+      ]
     }
   },
   {
@@ -5645,7 +5842,20 @@
       "correct": 0,
       "why": "Bewegliche Zeichen können neu angeordnet werden. So entstehen viele verschiedene Buchseiten."
     },
-    "image": "johannes-gutenberg"
+    "image": "johannes-gutenberg",
+    "learning": {
+      "starter": "Gutenbergs Drucksystem verband bewegliche Metallbuchstaben, Farbe und eine Presse. Viele Teile mussten zusammenpassen.",
+      "observe": "In einem gedachten Drucksystem sind die Buchstaben genau geformt, aber die Farbe verschmiert. Warum reicht ein gutes Einzelteil nicht? Welche weitere Prüfung würde helfen, statt einfach mehr Buchstaben herzustellen?",
+      "benefit": "Du untersuchst, wie Teile zusammenwirken, und wählst eine zur Störung passende Prüfung."
+    },
+    "questionFeedback": {
+      "hint": "Stell dir eine Werkstatt vor, die viele gleiche Textseiten herstellen möchte. Welche Erfindungsarbeit könnte ihr dabei helfen?",
+      "wrongReasons": [
+        null,
+        "Radioaktive Stoffe untersuchte Marie Curie. Gutenberg entwickelte ein Drucksystem mit beweglichen Metallzeichen, Farbe und Presse.",
+        "Die Anleitung für Babbages geplante Maschine gehört zu Ada Lovelace. Gutenbergs Beitrag war ein Drucksystem für Buchseiten."
+      ]
+    }
   },
   {
     "id": "person-wangari_maathai",
@@ -5686,6 +5896,14 @@
       {
         "label": "Offizielle Biografie / Forschungsinstitution",
         "url": "https://www.nobelprize.org/prizes/peace/2004/maathai/facts/"
+      },
+      {
+        "label": "Green Belt Movement: Leben und gemeinsames Engagement",
+        "url": "https://www.greenbeltmovement.org/wangari-maathai/"
+      },
+      {
+        "label": "Green Belt Movement: Bäume pflegen und Überleben prüfen",
+        "url": "https://www.greenbeltmovement.org/restoration-of-ecosystems-and-forest-conservation-reviving-ecosystems-building-climate-resilience/"
       }
     ],
     "aliases": [],
@@ -5705,7 +5923,20 @@
       "correct": 0,
       "why": "Die Green-Belt-Bewegung verband Umweltschutz mit der Arbeit örtlicher Gemeinschaften. 2004 erhielt sie den Friedensnobelpreis."
     },
-    "image": "wangari-maathai"
+    "image": "wangari-maathai",
+    "learning": {
+      "starter": "Wangari Maathai setzte sich mit vielen Menschen in Kenia für Bäume und bessere Lebensbedingungen ein. Nach dem Pflanzen bleibt Pflege wichtig.",
+      "observe": "Zwei gedachte Projekte beginnen mit gleich vielen Setzlingen. Nach einem Jahr leben unterschiedlich viele Bäume. Warum beweist die gleiche Anfangszahl noch keinen gleichen Erfolg? Welche Fragen zu Pflege und Menschen vor Ort würdest du stellen?",
+      "benefit": "Du unterscheidest eine Anfangszahl vom längerfristigen Ergebnis gemeinsamer Arbeit."
+    },
+    "questionFeedback": {
+      "hint": "Denke an eine Bewegung, bei der Menschen ihre Umgebung gemeinsam grüner machen. Welcher Beitrag passt zu diesem Ziel?",
+      "wrongReasons": [
+        null,
+        "Ein europäisches Drucksystem ist Gutenbergs Beitrag. Maathai verband das Pflanzen und Pflegen von Bäumen mit der Arbeit von Gemeinschaften.",
+        "Den ersten Webbrowser entwickelte Berners-Lee. Maathais Arbeit betraf Umwelt, Menschenrechte und Beteiligung."
+      ]
+    }
   },
   {
     "id": "person-charles_darwin",
@@ -5727,7 +5958,7 @@
     ],
     "more": [
       "Bei Forschungsreisen wurden Orte besucht, an denen bereits Menschen und Kulturen lebten. Auch das Wissen örtlicher Menschen ist wichtig.",
-      "Lebewesen einer Art unterscheiden sich. Wenn einige Unterschiede beim Überleben und bei der Fortpflanzung helfen, können sie über viele Generationen häufiger werden. Das heißt natürliche Selektion; ein einzelnes Tier verändert sich dabei nicht auf Wunsch."
+      "Lebewesen einer Art unterscheiden sich. Wenn einige vererbbare Unterschiede beim Überleben und bei der Fortpflanzung helfen, können sie über viele Generationen häufiger werden. Das heißt natürliche Selektion; ein einzelnes Tier verändert sich dabei nicht auf Wunsch."
     ],
     "surprise": "Eine wichtige Leistung hat oft viele Beteiligte. Frage auch: Wer half mit?",
     "locations": [
@@ -5746,6 +5977,10 @@
       {
         "label": "Offizielle Biografie / Forschungsinstitution",
         "url": "https://www.nhm.ac.uk/discover/charles-darwin-most-famous-biologist.html"
+      },
+      {
+        "label": "Natural History Museum: Vererbung und natürliche Selektion",
+        "url": "https://www.nhm.ac.uk/discover/what-is-natural-selection.html"
       }
     ],
     "aliases": [],
@@ -5765,7 +6000,20 @@
       "correct": 0,
       "why": "Die Reise mit der Beagle dauerte von 1831 bis 1836. Seine Beobachtungen halfen ihm später, die Entwicklung von Lebewesen zu erklären."
     },
-    "image": "charles-darwin"
+    "image": "charles-darwin",
+    "learning": {
+      "starter": "Darwin verglich viele Beobachtungen von Lebewesen. Er fragte, wie sich Arten über lange Zeiträume verändern.",
+      "observe": "Ein einzelnes Tier lernt heute einen Trick. Warum belegt das allein noch keinen Wandel vererbbarer Merkmale über viele Generationen? Unterscheide das Lernen dieses Tiers von Veränderungen in einer Gruppe über lange Zeit.",
+      "benefit": "Du unterscheidest individuelles Lernen von der Veränderung vererbbarer Merkmale über Generationen."
+    },
+    "questionFeedback": {
+      "hint": "Wie könnte der Vergleich verschiedener Lebewesen helfen, ihre Entwicklung zu erklären? Suche nach dem passenden Forschungsbeitrag.",
+      "wrongReasons": [
+        null,
+        "Gutenberg arbeitete an einem Drucksystem. Darwins hier beschriebene Forschung betrifft Lebewesen, ihre Vielfalt und Veränderung.",
+        "Der erste Webbrowser gehört zu Berners-Lees Beitrag. Darwins Beobachtungen und Vergleiche betreffen die Natur."
+      ]
+    }
   },
   {
     "id": "person-alexander_humboldt",
@@ -5806,6 +6054,10 @@
       {
         "label": "Offizielle Biografie / Forschungsinstitution",
         "url": "https://www.humboldt-foundation.de/entdecken/alexander-von-humboldt/mit-humboldt-unterwegs"
+      },
+      {
+        "label": "Alexander von Humboldt-Stiftung: Lebensdaten und Forschungsreise",
+        "url": "https://www.humboldt-foundation.de/entdecken/alexander-von-humboldt"
       }
     ],
     "aliases": [],
@@ -5825,7 +6077,20 @@
       "correct": 0,
       "why": "Von 1799 bis 1804 reiste er mit Aimé Bonpland durch Teile Amerikas. Er wollte verstehen, wie verschiedene Teile der Natur zusammenhängen."
     },
-    "image": "alexander-von-humboldt"
+    "image": "alexander-von-humboldt",
+    "learning": {
+      "starter": "Humboldt und Bonpland beobachteten und vermaßen Natur an verschiedenen Orten. Sie suchten Zusammenhänge zwischen Pflanzen, Bergen und Klima.",
+      "observe": "Zwei gedachte Pflanzenstandorte unterscheiden sich in Höhe, Temperatur und Boden. Warum beweisen zwei Beobachtungen allein noch nicht, welcher Unterschied das Wachstum verursacht? Welche zusätzlichen Vergleiche könnten die Frage genauer machen?",
+      "benefit": "Du unterscheidest einen beobachteten Zusammenhang von einem sicheren Nachweis seiner Ursache."
+    },
+    "questionFeedback": {
+      "hint": "Stell dir eine Forschungsreise mit Messungen und Naturbeobachtungen vor. Welche Antwort untersucht Beziehungen zwischen Teilen der Natur?",
+      "wrongReasons": [
+        null,
+        "Das europäische Drucksystem beschreibt Gutenbergs Beitrag. Humboldt verglich Naturbeobachtungen und Messungen auf Reisen.",
+        "Den ersten Webbrowser entwickelte Berners-Lee. Humboldts Beitrag lag bei Naturforschung und dem Vergleichen von Zusammenhängen."
+      ]
+    }
   },
   {
     "id": "person-neil_armstrong",
@@ -5866,6 +6131,10 @@
       {
         "label": "Offizielle Biografie / Forschungsinstitution",
         "url": "https://www.nasa.gov/people/neil-a-armstrong/"
+      },
+      {
+        "label": "NASA: Apollo 11 und die Aufgaben der Besatzung",
+        "url": "https://www.nasa.gov/mission/apollo-11/"
       }
     ],
     "aliases": [],
@@ -5885,7 +6154,20 @@
       "correct": 0,
       "why": "Apollo 11 landete am 20. Juli 1969. Armstrong und Buzz Aldrin gingen auf dem Mond, während Michael Collins ihn im Raumschiff umkreiste. Das ganze Team machte die Reise möglich."
     },
-    "image": "neil-armstrong"
+    "image": "neil-armstrong",
+    "learning": {
+      "starter": "Neil Armstrong betrat als Teil von Apollo 11 den Mond. Die Mission gelang durch unterschiedliche Aufgaben vieler Menschen.",
+      "observe": "Stell dir eine Abbildung vor, die Armstrong allein zeigt. Warum beweist sie nicht, dass er allein zum Mond flog? Nenne zwei weitere Aufgaben der Besatzung. Vergleiche die Angaben mit der verlinkten NASA-Seite zur Mission.",
+      "benefit": "Du unterscheidest den Ausschnitt einer Darstellung von einer Aussage über das ganze Team."
+    },
+    "questionFeedback": {
+      "hint": "Unterscheide eine Reise um die Erde von einer Landung auf einem anderen Himmelskörper. Welches Ereignis gehört zu Apollo 11?",
+      "wrongReasons": [
+        null,
+        "Das europäische Drucksystem beschreibt Gutenbergs Beitrag. Armstrong war Teil einer Raumfahrtmission.",
+        "Den ersten Webbrowser entwickelte Berners-Lee. Armstrongs hier beschriebener Beitrag gehört zu Apollo 11."
+      ]
+    }
   },
   {
     "id": "invention-light",
@@ -9238,7 +9520,7 @@
       "wrongReasons": [
         null,
         "In der Quelle nehmen erwachsene männliche Bürger teil. Daraus folgt keine Mitbestimmung aller Kinder und Erwachsenen.",
-        "Besucher aus anderen Ländern waren nicht die einzige entscheidende Gruppe. Die politische Teilnahme war an den damaligen Bürgerstatus und weitere Einschränkungen gebunden."
+        "Ein Besuch in Athen verlieh kein Stimmrecht. An politischen Entscheidungen durften erwachsene männliche Bürger teilnehmen; viele andere Menschen waren ausgeschlossen."
       ]
     }
   },

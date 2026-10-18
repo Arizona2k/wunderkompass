@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "18 existing people: source/media/learning preparation only; no application changes, accepted new topics or completed dossiers. Individual final counterchecks and current UI evidence remain open.",
+  "status": "18 existing people individually counterread and implemented with successful current local built UI/media/answer-order/navigation/native/cold-offline evidence; no new topics. Full Quality and release remain open.",
   "preparedOn": "2026-10-18",
   "base": "90916791c2755c5fa36e39b070706485c75f4306",
   "notNewTopics": true,
@@ -2408,5 +2408,446 @@
       "Humboldt LHaaseCo is sourcecreditedpublisher, not invented photographer."
     ]
   },
-  "remainingWork": "Resolve named source details, critically reread every drafted choice/help/feedback, meaningful reciprocal relationships and imagecontext, then normal implementation and actual built UI/search/back/offline/compatibility checks. Existing protected QA approval is a separate issue; this file changes no QA or release criteria."
+  "remainingWork": "Current full immutable Quality/registry binding/release still open under existing technical conditions. Protected QA integration was automatically rejected; explicit question remains unanswered. No protected QA/registry or News change made here. Continue implemented invention/building/science cohorts in the existing BACKLOG.",
+  "implementationRound20261018": {
+    "status": "All18 individually fact/media/teaching-counterread and current targeted built-product proof passed. Full immutable Quality, affected registry binding and actual release still open.",
+    "notNewTopics": true,
+    "ids": [
+      "person-marie_curie",
+      "person-ada_lovelace",
+      "person-grace_hopper",
+      "person-katherine_johnson",
+      "person-tim_berners_lee",
+      "person-karl_benz",
+      "person-bertha_benz",
+      "person-jane_goodall",
+      "person-albert_einstein",
+      "person-al_khwarizmi",
+      "person-tu_youyou",
+      "person-cai_lun",
+      "person-mae_jemison",
+      "person-johannes_gutenberg",
+      "person-wangari_maathai",
+      "person-charles_darwin",
+      "person-alexander_humboldt",
+      "person-neil_armstrong"
+    ],
+    "addedSourceLinks": 12,
+    "specificConnections": [
+      {
+        "id": "person-ada_lovelace--person-grace_hopper",
+        "fromId": "person-ada_lovelace",
+        "toId": "person-grace_hopper",
+        "kind": "context",
+        "why": "Eine genaue Rechenanleitung und ein Übersetzungswerkzeug beantworten verschiedene Fragen beim Programmieren. Lovelace und Hopper arbeiteten in unterschiedlichen Jahrhunderten; dies ist ein Vergleich ihrer Beiträge.",
+        "checkedAt": "2026-10-18"
+      },
+      {
+        "id": "person-karl_benz--person-bertha_benz",
+        "fromId": "person-karl_benz",
+        "toId": "person-bertha_benz",
+        "kind": "context",
+        "why": "Ein Fahrzeug zu entwickeln und es unterwegs zu erproben sind verschiedene Aufgaben. Carl und Bertha Benz trugen mit technischen Ideen, Geld und praktischer Arbeit zur Entwicklung des Motorwagens bei.",
+        "checkedAt": "2026-10-18"
+      },
+      {
+        "id": "person-katherine_johnson--person-mae_jemison",
+        "fromId": "person-katherine_johnson",
+        "toId": "person-mae_jemison",
+        "kind": "context",
+        "why": "Berechnungen von Flugbahnen und Forschung während eines Raumflugs brauchen unterschiedliche Fachkenntnisse. Johnson und Jemison zeigen verschiedene Beiträge zur Raumfahrt; sie flogen nicht gemeinsam auf einer Mission.",
+        "checkedAt": "2026-10-18"
+      },
+      {
+        "id": "person-tim_berners_lee--history-web",
+        "fromId": "person-tim_berners_lee",
+        "toId": "history-web",
+        "kind": "context",
+        "why": "Die Biografie beschreibt einen Entwickler. Die Geschichte des Webs unterscheidet Vorschlag, erste Programme und spätere Freigabe. Das Web nutzt das bereits ältere Internet.",
+        "checkedAt": "2026-10-18"
+      },
+      {
+        "id": "person-neil_armstrong--history-apollo11",
+        "fromId": "person-neil_armstrong",
+        "toId": "history-apollo11",
+        "kind": "context",
+        "why": "Armstrongs erster Schritt war ein Beitrag innerhalb einer Mission. Apollo 11 zeigt auch die Aufgaben von Aldrin, Collins und der Teams auf der Erde; ein Einzelporträt bildet diese Zusammenarbeit nicht vollständig ab.",
+        "checkedAt": "2026-10-18"
+      },
+      {
+        "id": "person-cai_lun--history-paper",
+        "fromId": "person-cai_lun",
+        "toId": "history-paper",
+        "kind": "context",
+        "why": "Cai Luns Biografie erklärt einen Beitrag zur Verbesserung der Papierherstellung. Die Geschichte des Papiers reicht weiter zurück: Verbesserung und allererster Ursprung sind verschiedene Fragen.",
+        "checkedAt": "2026-10-18"
+      },
+      {
+        "id": "person-johannes_gutenberg--history-printing",
+        "fromId": "person-johannes_gutenberg",
+        "toId": "history-printing",
+        "kind": "context",
+        "why": "Gutenbergs Biografie erklärt sein Drucksystem in Europa. Die Geschichte des Druckens bezieht auch frühere Verfahren in Ostasien ein; Gutenbergs Beitrag war nicht der Anfang allen Druckens.",
+        "checkedAt": "2026-10-18"
+      },
+      {
+        "id": "person-marie_curie--person-tu_youyou",
+        "fromId": "person-marie_curie",
+        "toId": "person-tu_youyou",
+        "kind": "context",
+        "why": "Beide Biografien zeigen Forschung mit Messungen und Prüfungen im Team. Strahlungsforschung und ein Wirkstoff gegen Malaria sind verschiedene Forschungsgebiete; ihre Ergebnisse sind nicht austauschbar.",
+        "checkedAt": "2026-10-18"
+      },
+      {
+        "id": "person-jane_goodall--person-charles_darwin",
+        "fromId": "person-jane_goodall",
+        "toId": "person-charles_darwin",
+        "kind": "context",
+        "why": "Lange Verhaltensbeobachtungen und der Vergleich von Lebewesen liefern Belege für unterschiedliche Fragen. Was ein einzelner Schimpanse lernt, ist noch kein Nachweis einer vererbbaren Veränderung über Generationen.",
+        "checkedAt": "2026-10-18"
+      },
+      {
+        "id": "person-alexander_humboldt--person-charles_darwin",
+        "fromId": "person-alexander_humboldt",
+        "toId": "person-charles_darwin",
+        "kind": "context",
+        "why": "Beide verglichen Naturbeobachtungen auf Reisen und darüber hinaus. Ein Zusammenhang zwischen Umwelt und Lebewesen erklärt für sich allein noch nicht die Veränderung vererbbarer Merkmale über Generationen.",
+        "checkedAt": "2026-10-18"
+      },
+      {
+        "id": "person-wangari_maathai--person-jane_goodall",
+        "fromId": "person-wangari_maathai",
+        "toId": "person-jane_goodall",
+        "kind": "context",
+        "why": "Beide verbanden Naturschutz mit dem Engagement vieler Menschen. Bäume zu pflegen und Schimpansen zu erforschen sind unterschiedliche Aufgaben; der Vergleich macht aus ihnen kein gemeinsames Forschungsprojekt.",
+        "checkedAt": "2026-10-18"
+      }
+    ],
+    "necessaryWordingCorrections": [
+      {
+        "topic": "person-charles_darwin",
+        "field": "more[1]",
+        "before": "Lebewesen einer Art unterscheiden sich. Wenn einige Unterschiede beim Überleben und bei der Fortpflanzung helfen, können sie über viele Generationen häufiger werden. Das heißt natürliche Selektion; ein einzelnes Tier verändert sich dabei nicht auf Wunsch.",
+        "after": "Lebewesen einer Art unterscheiden sich. Wenn einige vererbbare Unterschiede beim Überleben und bei der Fortpflanzung helfen, können sie über viele Generationen häufiger werden. Das heißt natürliche Selektion; ein einzelnes Tier verändert sich dabei nicht auf Wunsch.",
+        "reason": "Natürliche Selektion betrifft vererbbare Unterschiede; individuelles Lernen ist nicht dasselbe. Tatsächlich gelesener NHM-Abschnitt79–99.",
+        "compatibility": "Question, answers, solution/order, ID, progress/schema3 and original other paragraphs unchanged."
+      },
+      {
+        "topic": "history-greece",
+        "field": "questionFeedback.wrongReasons[2]",
+        "before": "Besucher aus anderen Ländern waren nicht die einzige entscheidende Gruppe. Die politische Teilnahme war an den damaligen Bürgerstatus und weitere Einschränkungen gebunden.",
+        "after": "Ein Besuch in Athen verlieh kein Stimmrecht. An politischen Entscheidungen durften erwachsene männliche Bürger teilnehmen; viele andere Menschen waren ausgeschlossen.",
+        "reason": "Die vorherige Verneinung konnte Besuchern ein Stimmrecht nahelegen. Bereits gelesene Quelle zur Teilnahme erwachsener männlicher Bürger ausdrücklich klarstellen.",
+        "compatibility": "Original question, answer texts, correct index, explanation, ID and saved-answer restoration unchanged."
+      }
+    ],
+    "compatibility": "All18 original question objects, hint sequences, IDs, media binaries, routes, related lists and pass schema3 preserved; added reciprocal context uses existing graph renderer. No QA/release/News changes.",
+    "additionalActuallyReadPassages": [
+      {
+        "url": "https://computerhistory.org/profile/tim-berners-lee/",
+        "anchor": "57–60",
+        "finding": "1955/London ausdrücklich bestätigt; 1989 Vorschlag/1991 Website/1994 W3C nicht miteinander verwechseln."
+      },
+      {
+        "url": "https://www.humboldt-foundation.de/entdecken/alexander-von-humboldt",
+        "anchor": "67–69",
+        "finding": "1769–1859 und Reise1799–1804 bestätigt. Wertende Entdeckungs-/Alleingründer-Superlative der Institution nicht als eigenen Sachtext übernehmen."
+      },
+      {
+        "url": "https://www.greenbeltmovement.org/restoration-of-ecosystems-and-forest-conservation-reviving-ecosystems-building-climate-resilience/",
+        "anchor": "135/188–197/202",
+        "finding": "Bodenstabilisierung, Pflege und Überlebenskontrolle nach dem Pflanzen ausdrücklich beschrieben; keine aktuellen Millionen-/Gruppenzahlen übernehmen."
+      },
+      {
+        "url": "https://technikmuseum.berlin/en/program/permanent-exhibitions/papermaking",
+        "anchor": "114/119/161",
+        "finding": "Pflanzenfasern/Wasser/Sieb/Pressen/Trocknen belegen Herstellungsprinzip, nicht die historische Erstpriorität Cai Luns."
+      },
+      {
+        "url": "https://www.gutenberg.de/zeit/zeitleiste_gutenberg",
+        "anchor": "32/59–60/68",
+        "finding": "Um1400 bleibt qualifiziert; Bibeldruck1452–1454/Arbeit im Team/Tod1468. Keine aus Erinnerung vorgenommene1455-Korrektur."
+      },
+      {
+        "url": "https://www.einstein-online.info/en/about-einstein-online/about-albert-einstein/",
+        "anchor": "31–61/134–135",
+        "finding": "Lebensdaten1879–1955, Ulm/Bern/Berlin/Princeton, photoelektrischer Effekt und Preis1921/verliehen1922 tatsächlich gelesen. Nobel-Direktzugang403 bleibt als Zugriffsgrenze dokumentiert."
+      },
+      {
+        "url": "https://www.nasa.gov/mission/apollo-11/",
+        "anchor": "275/292/307–336/373",
+        "finding": "Drei Besatzungsmitglieder und unterschiedliche Rollen; Collins im Kommandomodul, Armstrong/Aldrin auf dem Mond, StartFlorida. Keine Verwechslung eines Studio-Porträts mit Mondbeweis."
+      },
+      {
+        "url": "https://www.nhm.ac.uk/discover/what-is-natural-selection.html",
+        "anchor": "79–99, tatsächlich bereits gelesen",
+        "finding": "Vererbbare Unterschiede/Fortpflanzung über Generationen; Lernen eines einzelnen Tieres ist nicht dasselbe und natürliche Selektion nicht einziger Evolutionsmechanismus."
+      }
+    ],
+    "individualCriticalReread": [
+      {
+        "id": "person-marie_curie",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "Keine Strahlenexperimente. Auszeichnung und Messbeleg trennen; nicht behaupten, sie habe Radioaktivität allein entdeckt oder am späteren Manhattan-Projekt teilgenommen.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      },
+      {
+        "id": "person-ada_lovelace",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "Schrittvergleich ergibt10 beziehungsweise8. Heutige Beispielrechnung beweist keinen Lauf der damals ungebauten Maschine. Veröffentlichten Algorithmus qualifiziert lassen.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      },
+      {
+        "id": "person-grace_hopper",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "3+4=7 statt verlangtem3×4=12: Übersetzung und fachlicher Auftrag sind verschiedene Fehlerquellen. Kein Alleinanspruch auf COBOL oder umstrittenen allerersten Compiler.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      },
+      {
+        "id": "person-katherine_johnson",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "Gleiche falsche Eingaben können zwei Ergebnisse verfälschen. Unabhängige Prüfung braucht Eingaben/Verfahren; kein Mensch-ist-unfehlbar- oder bleistiftallein-Mythos.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      },
+      {
+        "id": "person-tim_berners_lee",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "Web ist Anwendung des älteren Internets. Verlinkung belegt Erreichbarkeit einer Angabe, nicht deren Wahrheit. Geburtsangabe jetzt am CHM-Text bestätigt.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      },
+      {
+        "id": "person-karl_benz",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "Laufender Motor belegt keine Bremsleistung. Nur gezeichneter Systemvergleich, kein Fahr-/Motorversuch; frühes Benzinfahrzeug statt erste Erfindung aller Fahrzeuge.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      },
+      {
+        "id": "person-bertha_benz",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "Erprobung einer Fahrt ist kein Beleg für jedes Wetter/jede Strecke. Geld, Ideen, praktische Hilfe und Söhne im Alttext erhalten; keine Alleinheldin oder Treibstoffversuche.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      },
+      {
+        "id": "person-jane_goodall",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "Einzelbeobachtung nicht auf alle Menschenaffen übertragen; Schimpansen und vorhandener Gorilla-Verweis sind verschiedene Arten.1934–2025 korrekt erhalten; kein Tierkontaktauftrag.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      },
+      {
+        "id": "person-albert_einstein",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "Gedankenexperiment, Vorhersage und Messwert unterscheiden. Preis für photoelektrischen Effekt, nicht für Relativität. Falsche Curie-Wahl als Schwerpunktvergleich, nicht Behauptung, Einstein habe sich nie mit Radioaktivität befasst.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      },
+      {
+        "id": "person-al_khwarizmi",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "Unbekannte Zahl5 durch5+3=8 prüfen. Moderne Rechenzeichen nicht als historische Buchnotation ausgeben. Ungefähre Lebensdaten/unsichere Herkunft nicht national vereindeutigen.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      },
+      {
+        "id": "person-tu_youyou",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "Überlieferung, Labor und klinische Prüfung unterscheiden. Keine Dosis, Extraktionsanleitung, Heilversprechen oder Selbstversuche.1930/2015 aus tatsächlich gelesenem indexiertem Nobel-Faktenabschnitt, direkter Volltext403 transparent.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      },
+      {
+        "id": "person-cai_lun",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "Verbesserung und allererster Ursprung trennen.1.Jahrhundert qualifiziert lassen, keine unbegründete genaue Geburt; Papierprozess separat durch Museum belegt. Bild ist spätere Darstellung.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      },
+      {
+        "id": "person-mae_jemison",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "Gesundheit/Material als gedachtes Aufgabenbeispiel, keine erfundenen konkreten1992-Experimente. Raumflug1992 nicht ISS-Aufenthalt; damalige NASA-Rolle nicht gegenwärtig behaupten.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      },
+      {
+        "id": "person-johannes_gutenberg",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "Schmierfarbe als erdachtes Systemproblem gekennzeichnet. Frühere ostasiatische Verfahren erhalten; nicht früheste erhaltene Jikji-Ausgabe mit erster Metalltypennutzung überhaupt gleichsetzen. Falschauswahl tatsächlich Curie/Ada, nicht Gutenberg/Web.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      },
+      {
+        "id": "person-wangari_maathai",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "Setzlingszahl ist kein langfristiger Überlebensnachweis. Gemeinschaft/Pflege/Umwelt und Rechte erhalten. Sichtbare Preisverleihung nicht zur Nobelpreiszeremonie umdeuten.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      },
+      {
+        "id": "person-charles_darwin",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "Erlernter Trick ist kein Nachweis vererbbarer Veränderung. Vererbbar ausdrücklich ergänzt.1882 bleibt trotz falschem1881-Quellenalt; grüne Meeresschildkröte nicht zur Galápagos-Riesenschildkröte machen.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      },
+      {
+        "id": "person-alexander_humboldt",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "Zwei Standorte mit mehreren Unterschieden beweisen keine einzelne Ursache. Ortskenntnis lokaler Menschen und Bonpland erhalten; Jaguar-Link kein behaupteter Sichtungs-/Entdeckungsbeleg.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      },
+      {
+        "id": "person-neil_armstrong",
+        "scope": "Own written learning/hints and every wrong-choice explanation critically reread against the original article, canonical choices and actually read source passages. Media individually viewed earlier. Actual current UI proof still pending.",
+        "finding": "Einzelporträt ist kein Nachweis einer Alleinmission. Rollen auf tatsächlicher NASA-Missionsseite nachlesen; neuer Lerntext trennt Abbildung und Information. Studiofotografie nicht als EVA-Foto ausgeben.",
+        "result": "Text accepted for targeted built-product verification; no claim of full QA/release completion."
+      }
+    ],
+    "historicalPreparationNotes": "Earlier open/prepared statements are historical; the explicitly recorded additional passages and actual media inspection resolve those specific items. Current UI and registry binding remain open.",
+    "currentContentHashes": [
+      {
+        "id": "person-marie_curie",
+        "contentHash": "2138993f11776d8bfce8127d02a2bbc5cc943858ca773d6c7b834515b936f01e"
+      },
+      {
+        "id": "person-ada_lovelace",
+        "contentHash": "3c3bd9603f9ab56624397e922e055a80925014bbf18ad79500a07e25831d8b02"
+      },
+      {
+        "id": "person-grace_hopper",
+        "contentHash": "f80a37486e99db14fadc304641fa7427272ae89a44c79881a91d09c551f85fa2"
+      },
+      {
+        "id": "person-katherine_johnson",
+        "contentHash": "782e253b6fb3179c9bc82dd38a624ddbe94b27f7b9ded07893c02146c556c503"
+      },
+      {
+        "id": "person-tim_berners_lee",
+        "contentHash": "83968dc04419577fa635c01de53eefe10258c0803970554cddb17a814e9e7c9c"
+      },
+      {
+        "id": "person-karl_benz",
+        "contentHash": "675eba76c22504505ee3901b81076b0ddf26371352b7e4253b066af545607911"
+      },
+      {
+        "id": "person-bertha_benz",
+        "contentHash": "bcb9d4737690b9c2452493a0029a29f01279ffa9b899fef2b2e4586189c28865"
+      },
+      {
+        "id": "person-jane_goodall",
+        "contentHash": "574607afb5ecc47ed4c466ed3834592ae2b6d829d2e97b8accbeaf3ed96f6b53"
+      },
+      {
+        "id": "person-albert_einstein",
+        "contentHash": "0af0c0c38b1129121e99fadc020b1670f0069ee3674fbaa8af8b0eee8716bd45"
+      },
+      {
+        "id": "person-al_khwarizmi",
+        "contentHash": "c5d4e4fc67f8f2cd3f46055e8178a74bfa4f142569f399005e162e0393edfc53"
+      },
+      {
+        "id": "person-tu_youyou",
+        "contentHash": "f86201a28ec1b77939f79739749e36d95da4a3286a92bb2c9451ffe2c7816ca4"
+      },
+      {
+        "id": "person-cai_lun",
+        "contentHash": "da59248145d16dd2e2db378221a2e7550cb54fd4dbc2e0ef31d3349420c5bf61"
+      },
+      {
+        "id": "person-mae_jemison",
+        "contentHash": "0408f764012612ce51177edf247a8fce162eedf09121b49ca109e5ae4e7d3563"
+      },
+      {
+        "id": "person-johannes_gutenberg",
+        "contentHash": "90da34241067beb0ec6e9d50984dbd54e48d0ec3dc61de98f4e4c17d66f85c58"
+      },
+      {
+        "id": "person-wangari_maathai",
+        "contentHash": "d9a6b272dfef818882733f6e501499a9a7b2376c15cbd3106c5f9cf1e5a5384a"
+      },
+      {
+        "id": "person-charles_darwin",
+        "contentHash": "2ddf3a8ab1e3b51419eb0eeba59afe1c785238d93f7a3c7399b024b63885e7df"
+      },
+      {
+        "id": "person-alexander_humboldt",
+        "contentHash": "a8b1b252eb69d9b5686dafc8055508ebbf9a5ac45f1e0fec48f771373aaa15a9"
+      },
+      {
+        "id": "person-neil_armstrong",
+        "contentHash": "fed82c6e13e0ca905dabc650a5b2c5d2ccfce6a7a37b6925f3c5a279a8a063b6"
+      }
+    ],
+    "currentBuiltProof": {
+      "build": "43f3c24d1176c667",
+      "sourceDigest": "8cfffdb746cde7040cee9eb72529c8ab89ea30abdc148df15165535419ef5868",
+      "browser": "154.0.8037.57",
+      "status": "passed",
+      "proofFile": "existing-people-built-probe-v2/report.json",
+      "reportSHA256": "4eb335b4293ce25f5e51c883337944d01cda056707b9d1dbb29532c8438bf923",
+      "widths": [
+        320,
+        360,
+        390,
+        768,
+        1024,
+        1280,
+        1440
+      ],
+      "normalAndLargeStates": 252,
+      "savedAnswerPermutations": 108,
+      "actualSearchAndBackChains": 36,
+      "reciprocalConnectionDirectionsAndWidths": 44,
+      "native200AndLargeIds": [
+        "person-marie_curie",
+        "person-ada_lovelace",
+        "person-grace_hopper",
+        "person-katherine_johnson",
+        "person-tim_berners_lee",
+        "person-karl_benz",
+        "person-bertha_benz",
+        "person-jane_goodall",
+        "person-albert_einstein",
+        "person-al_khwarizmi",
+        "person-tu_youyou",
+        "person-cai_lun",
+        "person-mae_jemison",
+        "person-johannes_gutenberg",
+        "person-wangari_maathai",
+        "person-charles_darwin",
+        "person-alexander_humboldt",
+        "person-neil_armstrong"
+      ],
+      "coldOfflineIds": [
+        "person-marie_curie",
+        "person-ada_lovelace",
+        "person-grace_hopper",
+        "person-katherine_johnson",
+        "person-tim_berners_lee",
+        "person-karl_benz",
+        "person-bertha_benz",
+        "person-jane_goodall",
+        "person-albert_einstein",
+        "person-al_khwarizmi",
+        "person-tu_youyou",
+        "person-cai_lun",
+        "person-mae_jemison",
+        "person-johannes_gutenberg",
+        "person-wangari_maathai",
+        "person-charles_darwin",
+        "person-alexander_humboldt",
+        "person-neil_armstrong"
+      ],
+      "offlineGreece": true,
+      "coldConditions": "Fresh separate persistent profile prepared on home before visiting these18 articles; original local preview server actually stopped and connection refused; new browser context native navigator.onLine false checked at start. Every article/image/source-credit/answer chain and reload exercised, no News flow invoked.",
+      "pageErrors": [],
+      "pngCount": 41,
+      "pngBytes": 16679962,
+      "scope": "Targeted actual system Chromium154 proof only. Not actual156,Firefox/WebKit or full QA/image-budget/release proof."
+    },
+    "visualCountercheck": {
+      "viewed": "Six private contact sheets made from all18 actual320px article captures: titles, portraits, source/rights context and short/learning areas personally viewed. Two actual native200% viewport captures personally viewed; these show image/rights region, not full article pixels.",
+      "finding": "No observed horizontal clipping or overlapping text in viewed regions. Full original article captures retained; automated all-text bounds and actual content assertions cover seven widths/normal/large/native200%. Cropped contact-sheet boundaries are inspection crops, not product clipping.",
+      "originalMediaUnchanged": true
+    },
+    "localChecks": {
+      "typecheck": "passed",
+      "lint": "passed",
+      "buildAndExistingBudgets": "passed",
+      "existingAffectedContentTests": 6,
+      "originalQuestionObjects": "All catalog question objects byte-equivalent as parsed JSON to prior commit;215 derived questions unchanged. Hints, media, IDs and pass schema3 unchanged.",
+      "firstProbeFailure": "Original separate probe preserved: unscoped exact text matched both original article paragraph and correct-answer feedback after solving. Work-only v2 scopes each text assertion to its actual original UI section; no product/QA gate change needed."
+    }
+  }
 }
