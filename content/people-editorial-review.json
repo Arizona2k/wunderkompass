@@ -1,0 +1,2412 @@
+{
+  "schemaVersion": 1,
+  "status": "18 existing people: source/media/learning preparation only; no application changes, accepted new topics or completed dossiers. Individual final counterchecks and current UI evidence remain open.",
+  "preparedOn": "2026-10-18",
+  "base": "90916791c2755c5fa36e39b070706485c75f4306",
+  "notNewTopics": true,
+  "originalsBeforeThisRound": [
+    {
+      "id": "person-marie_curie",
+      "category": "people",
+      "title": "Marie Curie",
+      "intro": "Marie Curie erforschte die Radioaktivität.",
+      "paragraphs": [
+        "Gemeinsam mit Pierre Curie entdeckte sie 1898 die Elemente Polonium und Radium."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "1867–1934"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Physikerin und Chemikerin"
+        },
+        {
+          "label": "Verbunden mit",
+          "text": "Polen: geboren in Warschau, damals im Russischen Reich; Frankreich: Studium und Forschung"
+        }
+      ],
+      "more": [
+        "Manche Stoffe senden von selbst unsichtbare Strahlung aus. Das heißt Radioaktivität. Solche Stoffe untersucht man nur in geeigneten Fachlaboren.",
+        "Radioaktivität bedeutet, dass bestimmte Atomkerne von selbst Strahlung abgeben. Curie untersuchte diese Vorgänge mit Messgeräten. Strahlung kann schaden; heute braucht solche Forschung besonders sorgfältigen Schutz."
+      ],
+      "surprise": "Radioaktivitätsforschung; Entdeckung von Polonium und Radium im Team; Nobelpreise für Physik 1903 und Chemie 1911.",
+      "locations": [
+        {
+          "label": "Paris – Forschungsort",
+          "lat": 48.85,
+          "lon": 2.35,
+          "iso": "FR"
+        },
+        {
+          "label": "Warschau – Geburtsort, heute Polen",
+          "lat": 52.23,
+          "lon": 21.01,
+          "iso": "PL"
+        }
+      ],
+      "related": [
+        "person-tu_youyou",
+        "science-computer"
+      ],
+      "sources": [
+        {
+          "label": "Nobel Prize",
+          "url": "https://www.nobelprize.org/prizes/physics/1903/marie-curie/facts/"
+        },
+        {
+          "label": "Nobel Prize",
+          "url": "https://www.nobelprize.org/prizes/physics/1903/marie-curie/questions-and-answers/?print=1"
+        }
+      ],
+      "aliases": [
+        "Marie Curie",
+        "marie_curie"
+      ],
+      "links": [],
+      "person": {
+        "lifespan": "1867–1934",
+        "field": "Physikerin und Chemikerin",
+        "method": "Messen und untersuchen, welche Strahlung Stoffe abgeben."
+      },
+      "image": "marie-curie",
+      "question": {
+        "prompt": "Wofür ist Marie Curie besonders bekannt?",
+        "answers": [
+          "Radioaktivität erforschen",
+          "Eine Rechenanleitung für eine geplante Maschine veröffentlichen",
+          "Das Programmieren einfacher machen"
+        ],
+        "correct": 0,
+        "why": "Manche Stoffe senden von selbst unsichtbare Strahlung aus. Das heißt Radioaktivität. Solche Stoffe untersucht man nur in geeigneten Fachlaboren."
+      }
+    },
+    {
+      "id": "person-ada_lovelace",
+      "category": "people",
+      "title": "Ada Lovelace",
+      "intro": "Ada Lovelace schrieb 1843 eine Rechenanleitung für Charles Babbages geplante Maschine auf.",
+      "paragraphs": [
+        "Sie erkannte, dass solche Maschinen eines Tages auch mit Zeichen oder Musik arbeiten könnten."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "1815–1852"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Mathematikerin und Autorin"
+        },
+        {
+          "label": "Verbunden mit",
+          "text": "Vereinigtes Königreich: geboren und tätig in England"
+        }
+      ],
+      "more": [
+        "Ein Algorithmus ist eine genaue Schrittfolge. Babbages große Maschine wurde zu ihren Lebzeiten nicht fertig gebaut.",
+        "Ein Algorithmus ist eine genaue Folge von Schritten. Lovelaces Anleitung bezog sich auf eine geplante Rechenmaschine. Sie konnte nicht einfach einen heutigen Computer einschalten und ihr Programm ausprobieren."
+      ],
+      "surprise": "Veröffentlichter Algorithmus für die Analytical Engine; Vorstellung allgemein nutzbarer Informationsverarbeitung.",
+      "locations": [
+        {
+          "label": "England – Beispielregion ihrer Arbeit",
+          "lat": 51.5,
+          "lon": -0.13,
+          "iso": "GB"
+        }
+      ],
+      "related": [
+        "invention-computer",
+        "person-grace_hopper"
+      ],
+      "sources": [
+        {
+          "label": "Science Museum",
+          "url": "https://blog.sciencemuseum.org.uk/ada-lovelace-visionary-of-the-computer-age/"
+        },
+        {
+          "label": "University of St Andrews, MacTutor",
+          "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Lovelace/"
+        }
+      ],
+      "aliases": [
+        "Ada Lovelace",
+        "ada_lovelace"
+      ],
+      "links": [],
+      "person": {
+        "lifespan": "1815–1852",
+        "field": "Mathematikerin und Autorin",
+        "method": "Rechenschritte so genau aufschreiben, dass eine Maschine sie ausführen könnte."
+      },
+      "image": "ada-lovelace",
+      "question": {
+        "prompt": "Wofür ist Ada Lovelace besonders bekannt?",
+        "answers": [
+          "Eine Rechenanleitung für eine geplante Maschine veröffentlichen",
+          "Radioaktivität erforschen",
+          "Das Programmieren einfacher machen"
+        ],
+        "correct": 0,
+        "why": "Ein Algorithmus ist eine genaue Schrittfolge. Babbages große Maschine wurde zu ihren Lebzeiten nicht fertig gebaut."
+      }
+    },
+    {
+      "id": "person-grace_hopper",
+      "category": "people",
+      "title": "Grace Hopper",
+      "intro": "Grace Hopper half, das Programmieren von Computern einfacher zu machen.",
+      "paragraphs": [
+        "Sie entwickelte frühe Compiler und FLOW-MATIC; ihre Arbeit beeinflusste die Computersprache COBOL."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "1906–1992"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Mathematikerin, Informatikpionierin und Marineoffizierin"
+        },
+        {
+          "label": "Verbunden mit",
+          "text": "USA: geboren und tätig"
+        }
+      ],
+      "more": [
+        "Ein Compiler übersetzt ein Computerprogramm in eine Form, mit der ein Computer arbeiten kann.",
+        "Ein Compiler übersetzt ein Programm in eine Form, die ein Computer verarbeiten kann. Das hilft Menschen, Anweisungen verständlicher aufzuschreiben. Trotzdem müssen Programme sorgfältig geprüft werden."
+      ],
+      "surprise": "Frühe automatische Programmierübersetzung/Compiler, FLOW-MATIC, wichtige Beiträge zur Entstehung und Nutzung von COBOL.",
+      "locations": [
+        {
+          "label": "USA – Beispielregion ihrer Computerarbeit",
+          "lat": 42.38,
+          "lon": -71.12,
+          "iso": "US"
+        }
+      ],
+      "related": [
+        "person-ada_lovelace",
+        "science-computer"
+      ],
+      "sources": [
+        {
+          "label": "Smithsonian National Museum of American History",
+          "url": "https://americanhistory.si.edu/explore/stories/grace-under-pressure"
+        },
+        {
+          "label": "Naval History and Heritage Command",
+          "url": "https://www.history.navy.mil/research/library/biographical-files/modern-biographical-files-ndl/modern-bios-h/hopper-grace-murray-text.html"
+        }
+      ],
+      "aliases": [
+        "Grace Hopper",
+        "grace_hopper"
+      ],
+      "links": [],
+      "person": {
+        "lifespan": "1906–1992",
+        "field": "Mathematikerin, Informatikpionierin und Marineoffizierin",
+        "method": "Anleitungen von Menschen in Anweisungen für Computer übersetzen."
+      },
+      "question": {
+        "prompt": "Wofür ist Grace Hopper besonders bekannt?",
+        "answers": [
+          "Das Programmieren einfacher machen",
+          "Radioaktivität erforschen",
+          "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+        ],
+        "correct": 0,
+        "why": "Ein Compiler übersetzt ein Computerprogramm in eine Form, mit der ein Computer arbeiten kann."
+      },
+      "image": "grace-hopper"
+    },
+    {
+      "id": "person-katherine_johnson",
+      "category": "people",
+      "title": "Katherine Johnson",
+      "intro": "Katherine Johnson berechnete Flugbahnen für die Raumfahrt.",
+      "paragraphs": [
+        "Vor John Glenns Weltraumflug 1962 überprüfte sie die Ergebnisse der elektronischen Computer."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "1918–2020"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Mathematikerin"
+        },
+        {
+          "label": "Verbunden mit",
+          "text": "USA: geboren in West Virginia; Arbeit bei NACA und NASA"
+        }
+      ],
+      "more": [
+        "Eine Flugbahn beschreibt, welchen Weg ein Raumschiff durch den Raum nimmt.",
+        "Eine Flugbahn beschreibt, wo ein Raumfahrzeug zu verschiedenen Zeiten sein soll. Schon ein kleiner Rechenfehler kann große Folgen haben. Deshalb wurden Rechnungen unabhängig überprüft."
+      ],
+      "surprise": "Flugbahnberechnungen für Shepard und Glenn, Beiträge zu Apollo und weiteren Raumfahrtprogrammen.",
+      "locations": [
+        {
+          "label": "Langley, Virginia – NASA-Forschungsort",
+          "lat": 37.1,
+          "lon": -76.4,
+          "iso": "US"
+        }
+      ],
+      "related": [
+        "history-apollo11",
+        "person-mae_jemison"
+      ],
+      "sources": [
+        {
+          "label": "NASA",
+          "url": "https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/"
+        }
+      ],
+      "aliases": [
+        "Katherine Johnson",
+        "katherine_johnson"
+      ],
+      "links": [],
+      "person": {
+        "lifespan": "1918–2020",
+        "field": "Mathematikerin",
+        "method": "Mathematik anwenden und die Ergebnisse sorgfältig überprüfen."
+      },
+      "image": "katherine-johnson",
+      "question": {
+        "prompt": "Wofür ist Katherine Johnson besonders bekannt?",
+        "answers": [
+          "Flugbahnen für die Raumfahrt berechnen",
+          "Radioaktivität erforschen",
+          "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+        ],
+        "correct": 0,
+        "why": "Eine Flugbahn beschreibt, welchen Weg ein Raumschiff durch den Raum nimmt."
+      }
+    },
+    {
+      "id": "person-tim_berners_lee",
+      "category": "people",
+      "title": "Tim Berners-Lee",
+      "intro": "Tim Berners-Lee entwickelte am CERN die Idee für das World Wide Web.",
+      "paragraphs": [
+        "Er baute den ersten Webbrowser und Webserver; andere Menschen halfen, das Web weiterzuentwickeln."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "geboren 1955"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Informatiker"
+        },
+        {
+          "label": "Verbunden mit",
+          "text": "Vereinigtes Königreich: geboren in London, britischer Wissenschaftler; Schweiz: entwickelte das WWW am CERN bei Genf; USA: spätere Arbeit am MIT"
+        }
+      ],
+      "more": [
+        "Das Web und das Internet sind verwandt: Das Web ist eine Anwendung des viel größeren Internet-Netzes.",
+        "Ein Link verbindet eine Webseite mit einer anderen. Gemeinsame Regeln machen das Web auf unterschiedlichen Computern nutzbar. Berners-Lee entwickelte das Web; das Internet gab es bereits vorher."
+      ],
+      "surprise": "WWW-Vorschlag 1989; frühe Websoftware 1990/1991; Förderung offener Standards.",
+      "locations": [
+        {
+          "label": "CERN – Schweiz und Frankreich",
+          "lat": 46.23,
+          "lon": 6.05
+        }
+      ],
+      "related": [
+        "history-web",
+        "invention-internet"
+      ],
+      "sources": [
+        {
+          "label": "Tim Berners-Lee / W3C",
+          "url": "https://www.w3.org/People/Berners-Lee/Longer.html"
+        },
+        {
+          "label": "CERN",
+          "url": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
+        }
+      ],
+      "aliases": [
+        "Tim Berners-Lee",
+        "tim_berners_lee"
+      ],
+      "links": [],
+      "person": {
+        "lifespan": "geboren 1955",
+        "field": "Informatiker",
+        "method": "Informationen so verbinden, dass andere sie finden können."
+      },
+      "question": {
+        "prompt": "Wofür ist Tim Berners-Lee besonders bekannt?",
+        "answers": [
+          "Verlinkte Webseiten entwickeln",
+          "Radioaktivität erforschen",
+          "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+        ],
+        "correct": 0,
+        "why": "Das Web und das Internet sind verwandt: Das Web ist eine Anwendung des viel größeren Internet-Netzes."
+      },
+      "image": "tim-berners-lee"
+    },
+    {
+      "id": "person-karl_benz",
+      "category": "people",
+      "title": "Karl (Carl) Benz",
+      "intro": "Karl Benz entwickelte einen Wagen mit Benzinmotor.",
+      "paragraphs": [
+        "1886 erhielt er ein Patent für seinen Motorwagen; Bertha Benz half bei der Arbeit und mit Geld."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "1844–1929"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Ingenieur und Automobilpionier"
+        },
+        {
+          "label": "Verbunden mit",
+          "text": "Deutschland: geboren in Karlsruhe; tätig in Mannheim und Ladenburg"
+        }
+      ],
+      "more": [
+        "Das Patent von 1886 war ein wichtiger Schritt. Andere Menschen entwickelten ebenfalls Fahrzeuge, darunter Dampf- und Elektrofahrzeuge.",
+        "Ein Fahrzeug braucht ein ganzes System: Antrieb, Räder, Lenkung und Bremsen. Andere Menschen arbeiteten ebenfalls an Fahrzeugen, auch mit Dampf oder elektrischer Energie. Automobilgeschichte hat viele Beteiligte."
+      ],
+      "surprise": "Benz Patent-Motorwagen, Patent 1886; frühe Automobilentwicklung und Produktion.",
+      "locations": [
+        {
+          "label": "Mannheim – Entwicklung des Motorwagens",
+          "lat": 49.49,
+          "lon": 8.47,
+          "iso": "DE"
+        }
+      ],
+      "related": [
+        "person-bertha_benz",
+        "invention-car"
+      ],
+      "sources": [
+        {
+          "label": "Mercedes-Benz Group, Unternehmensarchiv/Tradition",
+          "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/carl-benz.html"
+        },
+        {
+          "label": "Mercedes-Benz Group, Unternehmensarchiv/Tradition",
+          "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html"
+        }
+      ],
+      "aliases": [
+        "Karl (Carl) Benz",
+        "karl_benz"
+      ],
+      "links": [],
+      "person": {
+        "lifespan": "1844–1929",
+        "field": "Ingenieur und Automobilpionier",
+        "method": "Bauteile zu einem funktionierenden Fahrzeug verbinden."
+      },
+      "question": {
+        "prompt": "Wofür ist Karl (Carl) Benz besonders bekannt?",
+        "answers": [
+          "Einen frühen Wagen mit Benzinmotor entwickeln",
+          "Radioaktivität erforschen",
+          "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+        ],
+        "correct": 0,
+        "why": "Das Patent von 1886 war ein wichtiger Schritt. Andere Menschen entwickelten ebenfalls Fahrzeuge, darunter Dampf- und Elektrofahrzeuge."
+      },
+      "image": "karl-benz"
+    },
+    {
+      "id": "person-bertha_benz",
+      "category": "people",
+      "title": "Bertha Benz",
+      "intro": "Bertha Benz unterstützte die Entwicklung des Motorwagens mit Geld, Ideen und praktischer Arbeit.",
+      "paragraphs": [
+        "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "1849–1944"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Automobilpionierin"
+        },
+        {
+          "label": "Verbunden mit",
+          "text": "Deutschland: Leben und Tätigkeit in Baden; Fahrt Mannheim–Pforzheim"
+        }
+      ],
+      "more": [
+        "Erfindungen brauchen Menschen, die sie testen, finanzieren und im Alltag verbessern.",
+        "Eine Erfindung muss im Alltag bestehen. Unterwegs merkt man andere Schwierigkeiten als in einer Werkstatt. Bertha Benz machte mit ihrer Reise sichtbar, wo das Fahrzeug und seine Versorgung verbessert werden mussten."
+      ],
+      "surprise": "Finanzielle und technische Mitarbeit; bekannte erste Automobilfernfahrt im August 1888, über 100 km.",
+      "locations": [
+        {
+          "label": "Mannheim – Beginn der bekannten Fahrt",
+          "lat": 49.49,
+          "lon": 8.47,
+          "iso": "DE"
+        },
+        {
+          "label": "Pforzheim – Ziel der Fahrt 1888",
+          "lat": 48.89,
+          "lon": 8.7,
+          "iso": "DE"
+        }
+      ],
+      "related": [
+        "person-karl_benz",
+        "invention-car"
+      ],
+      "sources": [
+        {
+          "label": "Mercedes-Benz Group, Unternehmensarchiv/Tradition",
+          "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html"
+        },
+        {
+          "label": "Mercedes-Benz Group, Unternehmensarchiv/Tradition",
+          "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/carl-benz.html"
+        }
+      ],
+      "aliases": [
+        "Bertha Benz",
+        "bertha_benz"
+      ],
+      "links": [],
+      "person": {
+        "lifespan": "1849–1944",
+        "field": "Automobilpionierin",
+        "method": "Eine wirkliche Reise machen und Verbesserungsmöglichkeiten erkennen."
+      },
+      "question": {
+        "prompt": "Wofür ist Bertha Benz besonders bekannt?",
+        "answers": [
+          "Einen Motorwagen praktisch erproben und seine Entwicklung unterstützen",
+          "Radioaktivität erforschen",
+          "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+        ],
+        "correct": 0,
+        "why": "Erfindungen brauchen Menschen, die sie testen, finanzieren und im Alltag verbessern."
+      },
+      "image": "bertha-benz"
+    },
+    {
+      "id": "person-jane_goodall",
+      "category": "people",
+      "title": "Jane Goodall",
+      "intro": "Jane Goodall beobachtete wilde Schimpansen in Tansania.",
+      "paragraphs": [
+        "1960 sah sie, dass diese Tiere Werkzeuge herstellen und benutzen; später setzte sie sich weltweit für Tiere und Natur ein."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "1934–2025"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Verhaltensforscherin und Naturschützerin"
+        },
+        {
+          "label": "Verbunden mit",
+          "text": "Vereinigtes Königreich: geboren in London; Tansania: Schimpansenforschung in Gombe"
+        }
+      ],
+      "more": [
+        "Schimpansen können Werkzeuge benutzen und sogar passend vorbereiten.",
+        "Geduldige Beobachtung kann eine erste Vermutung verändern. Goodall dokumentierte Verhalten einzelner Schimpansen über lange Zeit. Tiere in freier Natur lassen sich nicht wie Maschinen an- und ausschalten."
+      ],
+      "surprise": "Langjährige Gombe-Forschung, Werkzeugherstellung/-gebrauch von Schimpansen, Naturschutz mit örtlichen Gemeinschaften, Roots & Shoots.",
+      "locations": [
+        {
+          "label": "Gombe, Tansania – Forschungsregion",
+          "lat": -4.68,
+          "lon": 29.63,
+          "iso": "TZ"
+        }
+      ],
+      "related": [
+        "animal-western-lowland-gorilla",
+        "person-charles_darwin"
+      ],
+      "sources": [
+        {
+          "label": "Jane Goodall Institute",
+          "url": "https://janegoodall.org/press-room-item/jane-goodall-renowned-ethologist-conservationist-and-animal-behavior-expert-passes-away-at-age-91/"
+        }
+      ],
+      "aliases": [
+        "Jane Goodall",
+        "jane_goodall"
+      ],
+      "links": [],
+      "person": {
+        "lifespan": "1934–2025",
+        "field": "Verhaltensforscherin und Naturschützerin",
+        "method": "Lange und geduldig beobachten, ohne die Antworten vorher festzulegen."
+      },
+      "question": {
+        "prompt": "Wofür ist Jane Goodall besonders bekannt?",
+        "answers": [
+          "Wilde Schimpansen beobachten",
+          "Radioaktivität erforschen",
+          "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+        ],
+        "correct": 0,
+        "why": "Schimpansen können Werkzeuge benutzen und sogar passend vorbereiten."
+      },
+      "image": "jane-goodall"
+    },
+    {
+      "id": "person-albert_einstein",
+      "category": "people",
+      "title": "Albert Einstein",
+      "intro": "Albert Einstein erforschte Licht, Raum und Zeit.",
+      "paragraphs": [
+        "Seine Relativitätstheorien veränderten die Physik; seinen Nobelpreis bekam er für seine Erklärung, wie Licht Elektronen aus einem Stoff lösen kann."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "1879–1955"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Physiker"
+        },
+        {
+          "label": "Verbunden mit",
+          "text": "Deutschland: geboren in Ulm; spätere Forschung in Berlin; Schweiz: Ausbildung und Forschung; USA: nach Emigration Arbeit in Princeton"
+        }
+      ],
+      "more": [
+        "Ein Gedankenexperiment bedeutet: Du stellst dir eine Situation genau vor und überlegst, was daraus folgt.",
+        "Bei einem Gedankenexperiment stellt man sich eine Situation genau vor. Dann fragt man, welche Folgen die bekannten Regeln hätten. Eine spannende Idee genügt aber nicht: Ihre Vorhersagen müssen zu Messungen passen."
+      ],
+      "surprise": "Spezielle und allgemeine Relativitätstheorie; Erklärung des photoelektrischen Effekts, Nobelpreis Physik 1921.",
+      "locations": [
+        {
+          "label": "Bern – ein Ort seiner Arbeit",
+          "lat": 46.95,
+          "lon": 7.45,
+          "iso": "CH"
+        },
+        {
+          "label": "Princeton – späterer Forschungsort",
+          "lat": 40.36,
+          "lon": -74.67,
+          "iso": "US"
+        }
+      ],
+      "related": [
+        "science-gps",
+        "science-shadows"
+      ],
+      "sources": [
+        {
+          "label": "Nobel Prize",
+          "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/facts/"
+        },
+        {
+          "label": "Nobel Prize",
+          "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/"
+        },
+        {
+          "label": "Max-Planck-Institut für Gravitationsphysik · Spezielle Relativität",
+          "url": "https://www.einstein-online.info/en/category/elementary/special-relativity-elementary/"
+        }
+      ],
+      "aliases": [
+        "Albert Einstein",
+        "albert_einstein"
+      ],
+      "links": [],
+      "person": {
+        "lifespan": "1879–1955",
+        "field": "Physiker",
+        "method": "Gedankenexperimente mit Mathematik und überprüfbaren Vorhersagen verbinden."
+      },
+      "question": {
+        "prompt": "Wofür ist Albert Einstein besonders bekannt?",
+        "answers": [
+          "Licht, Raum und Zeit erforschen",
+          "Radioaktivität erforschen",
+          "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+        ],
+        "correct": 0,
+        "why": "Einstein untersuchte, wie Raum und Zeit zusammenhängen und welche Rolle Licht dabei spielt. Seine Relativitätstheorien gehören zu diesen Arbeiten."
+      },
+      "image": "albert-einstein"
+    },
+    {
+      "id": "person-al_khwarizmi",
+      "category": "people",
+      "title": "al-Chwarizmi (al-Khwarizmi)",
+      "intro": "Al-Chwarizmi schrieb in Bagdad wichtige Bücher über das Rechnen und die Algebra.",
+      "paragraphs": [
+        "Das Wort Algorithmus, also eine genaue Schrittfolge, geht auf seinen Namen zurück."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "etwa 780–850"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Mathematiker und Astronom"
+        },
+        {
+          "label": "Verbunden mit",
+          "text": "heutiger Irak: wirkte in Bagdad im Abbasidenreich; Region Choresmien: mögliche familiäre Herkunft; heute vor allem Usbekistan/Turkmenistan, unsicher"
+        }
+      ],
+      "more": [
+        "Algebra hilft, mit unbekannten Zahlen zu rechnen. Wissen aus Indien und anderen Regionen wurde weitergegeben und weiterentwickelt.",
+        "Algebra hilft, eine unbekannte Zahl zu finden. „Eine Zahl plus drei ist acht“ lässt sich Schritt für Schritt lösen. Gelehrte übernahmen und verbesserten Wissen aus verschiedenen Regionen; Mathematik ist eine gemeinsame Geschichte."
+      ],
+      "surprise": "Systematische Algebra, Vermittlung des Rechnens mit indischen/hindu-arabischen Zahlen; Wortgeschichte von Algebra und Algorithmus.",
+      "locations": [
+        {
+          "label": "Bagdad – Wirkungsort im Abbasidenreich",
+          "lat": 33.32,
+          "lon": 44.37,
+          "iso": "IQ"
+        }
+      ],
+      "related": [
+        "history-zero",
+        "science-computer"
+      ],
+      "sources": [
+        {
+          "label": "University of St Andrews, MacTutor",
+          "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Khwarizmi/"
+        }
+      ],
+      "aliases": [
+        "al-Chwarizmi (al-Khwarizmi)",
+        "al_khwarizmi"
+      ],
+      "links": [],
+      "person": {
+        "lifespan": "etwa 780–850",
+        "field": "Mathematiker und Astronom",
+        "method": "Rechenaufgaben mit klaren Regeln und Schritten lösen."
+      },
+      "question": {
+        "prompt": "Wofür ist al-Chwarizmi (al-Khwarizmi) besonders bekannt?",
+        "answers": [
+          "Bücher über Rechnen und Algebra schreiben",
+          "Radioaktivität erforschen",
+          "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+        ],
+        "correct": 0,
+        "why": "Algebra hilft, mit unbekannten Zahlen zu rechnen. Wissen aus Indien und anderen Regionen wurde weitergegeben und weiterentwickelt."
+      },
+      "image": "al-khwarizmi"
+    },
+    {
+      "id": "person-tu_youyou",
+      "category": "people",
+      "title": "Tu Youyou",
+      "intro": "Tu Youyou suchte mit einem Team nach besseren Mitteln gegen Malaria.",
+      "paragraphs": [
+        "In den 1970er-Jahren gewann sie Artemisinin aus einer Pflanze; die Forschung half, wirksame Medikamente zu entwickeln."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "geboren 1930"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Pharmawissenschaftlerin"
+        },
+        {
+          "label": "Verbunden mit",
+          "text": "China: geboren in Ningbo; Ausbildung und Forschung in China"
+        }
+      ],
+      "more": [
+        "Medikamente entstehen durch viele Prüfungen. Pflanzen oder Medikamente selbst zu testen wäre gefährlich; Erwachsene und Fachleute kümmern sich darum.",
+        "Ein Hinweis aus einem alten Text ist noch kein fertiges Medikament. Stoffe müssen untersucht, dosiert und in wissenschaftlichen Studien geprüft werden. Pflanzen oder Arzneien probiert man deshalb nicht selbst als Experiment aus."
+      ],
+      "surprise": "Entdeckung von Artemisinin für die Malariabehandlung; Nobelpreis Medizin 2015.",
+      "locations": [
+        {
+          "label": "China – Beispielregion ihrer Forschung",
+          "lat": 39.9,
+          "lon": 116.4,
+          "iso": "CN"
+        }
+      ],
+      "related": [
+        "person-marie_curie",
+        "person-wangari_maathai"
+      ],
+      "sources": [
+        {
+          "label": "Nobel Prize",
+          "url": "https://www.nobelprize.org/prizes/medicine/2015/tu/facts/"
+        },
+        {
+          "label": "Tu Youyou / Nobel Prize",
+          "url": "https://www.nobelprize.org/prizes/medicine/2015/tu/biographical/"
+        }
+      ],
+      "aliases": [
+        "Tu Youyou",
+        "tu_youyou"
+      ],
+      "links": [],
+      "person": {
+        "lifespan": "geboren 1930",
+        "field": "Pharmawissenschaftlerin",
+        "method": "Alte Hinweise prüfen und Stoffe wissenschaftlich untersuchen."
+      },
+      "question": {
+        "prompt": "Wofür ist Tu Youyou besonders bekannt?",
+        "answers": [
+          "Mit einem Team Artemisinin erforschen",
+          "Radioaktivität erforschen",
+          "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+        ],
+        "correct": 0,
+        "why": "Medikamente entstehen durch viele Prüfungen. Pflanzen oder Medikamente selbst zu testen wäre gefährlich; Erwachsene und Fachleute kümmern sich darum."
+      },
+      "image": "tu-youyou"
+    },
+    {
+      "id": "person-cai_lun",
+      "category": "people",
+      "title": "Cai Lun",
+      "intro": "Cai Lun sammelte Erfahrungen früherer Papiermacher und verbesserte die Herstellung.",
+      "paragraphs": [
+        "Für 105 ist überliefert, dass er sein Verfahren dem Kaiser vorstellte; Papier gab es schon vorher."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "1. Jahrhundert–121 n. Chr. (Geburtsjahr unsicher)"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Hofbeamter und Verbesserer der Papierherstellung"
+        },
+        {
+          "label": "Verbunden mit",
+          "text": "China: Han-Reich; Herkunft Guiyang in der Region des heutigen Hunan"
+        }
+      ],
+      "more": [
+        "Eine Verbesserung kann genauso wichtig sein wie eine völlig neue Idee.",
+        "Papier entsteht aus Fasern, die in Wasser verteilt, zu einer dünnen Schicht gesammelt und getrocknet werden. Verfahren wurden über lange Zeit verbessert. Cai Lun gilt als wichtiger Verbesserer, nicht als einziger Ursprung des Papiers."
+      ],
+      "surprise": "Wichtige Verbesserung und Förderung der chinesischen Papierherstellung.",
+      "locations": [
+        {
+          "label": "China – Region der Han-Hauptstadt Luoyang",
+          "lat": 34.6,
+          "lon": 112.5,
+          "iso": "CN"
+        }
+      ],
+      "related": [
+        "history-paper",
+        "invention-printing"
+      ],
+      "sources": [
+        {
+          "label": "Hunan Provincial Department of Culture & Tourism",
+          "url": "https://whhlyt.hunan.gov.cn/whhlyt/english/Culture/CulturalFigures/202207/t20220729_27570604.html"
+        },
+        {
+          "label": "University of Oxford, Cabinet",
+          "url": "https://www.cabinet.ox.ac.uk/origins-paper"
+        },
+        {
+          "label": "Journal of the Royal Asiatic Society / Cambridge University Press",
+          "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29"
+        }
+      ],
+      "aliases": [
+        "Cai Lun",
+        "cai_lun"
+      ],
+      "links": [],
+      "person": {
+        "lifespan": "1. Jahrhundert–121 n. Chr. (Geburtsjahr unsicher)",
+        "field": "Hofbeamter und Verbesserer der Papierherstellung",
+        "method": "Erfahrungen von Papiermachern sammeln und ein Verfahren verbessern."
+      },
+      "question": {
+        "prompt": "Wofür ist Cai Lun besonders bekannt?",
+        "answers": [
+          "Die Papierherstellung verbessern",
+          "Radioaktivität erforschen",
+          "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+        ],
+        "correct": 0,
+        "why": "Eine Verbesserung kann genauso wichtig sein wie eine völlig neue Idee."
+      },
+      "image": "cai-lun"
+    },
+    {
+      "id": "person-mae_jemison",
+      "category": "people",
+      "title": "Mae Jemison",
+      "intro": "Mae Jemison ist Ärztin und war NASA-Astronautin.",
+      "paragraphs": [
+        "1992 flog sie mit der Raumfähre Endeavour als erste Schwarze Frau in den Weltraum."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "geboren 1956"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Ärztin, Ingenieurin und Astronautin"
+        },
+        {
+          "label": "Verbunden mit",
+          "text": "USA: geboren in Alabama; aufgewachsen in Chicago; NASA-Astronautin"
+        }
+      ],
+      "more": [
+        "Raumfahrt braucht viele Berufe: Mathematik, Medizin, Technik und zahlreiche weitere.",
+        "Für Raumfahrt braucht es viele Fachrichtungen: Medizin, Technik, Mathematik und Naturwissenschaften. Jemisons verschiedene Ausbildungen zeigen, dass Fragen oft über die Grenzen eines einzelnen Faches hinausgehen."
+      ],
+      "surprise": "STS-47, Start 12. September 1992; Wissenschafts-Missionsspezialistin; erste afroamerikanische Frau im Weltraum.",
+      "locations": [
+        {
+          "label": "Florida – Startregion ihrer Raumfahrtmission",
+          "lat": 28.57,
+          "lon": -80.65,
+          "iso": "US"
+        }
+      ],
+      "related": [
+        "person-katherine_johnson",
+        "history-iss"
+      ],
+      "sources": [
+        {
+          "label": "NASA StarChild",
+          "url": "https://starchild.gsfc.nasa.gov/docs/StarChild/whos_who_level1/jemison.html"
+        },
+        {
+          "label": "NASA",
+          "url": "https://www.nasa.gov/mission/sts-47/"
+        }
+      ],
+      "aliases": [
+        "Mae Jemison",
+        "mae_jemison"
+      ],
+      "links": [],
+      "person": {
+        "lifespan": "geboren 1956",
+        "field": "Ärztin, Ingenieurin und Astronautin",
+        "method": "Mit einem Team wissenschaftliche Versuche vorbereiten und durchführen."
+      },
+      "image": "mae-jemison",
+      "question": {
+        "prompt": "Wofür ist Mae Jemison besonders bekannt?",
+        "answers": [
+          "Als Ärztin und Astronautin im Weltraum forschen",
+          "Radioaktivität erforschen",
+          "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+        ],
+        "correct": 0,
+        "why": "Raumfahrt braucht viele Berufe: Mathematik, Medizin, Technik und zahlreiche weitere."
+      }
+    },
+    {
+      "id": "person-johannes_gutenberg",
+      "category": "people",
+      "title": "Johannes Gutenberg",
+      "intro": "Johannes Gutenberg entwickelte in Mainz ein wirksames System zum Drucken mit beweglichen Metallbuchstaben.",
+      "paragraphs": [
+        "So konnte eine Werkstatt viele Buchseiten herstellen; ähnliche Druckideen gab es in Ostasien schon viel früher."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "um 1400–1468"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Handwerker, Erfinder und Druckpionier"
+        },
+        {
+          "label": "Verbunden mit",
+          "text": "heutiges Deutschland: Mainz; damals Heiliges Römisches Reich; heutiges Frankreich: Tätigkeit in Straßburg; damals andere staatliche Zuordnung"
+        }
+      ],
+      "more": [
+        "Bewegliche Zeichen können neu angeordnet werden. So entstehen viele verschiedene Buchseiten.",
+        "Ein Drucksystem muss viele Teile zusammenbringen: passende Metallzeichen, Farbe, Papier und eine Presse. In Ostasien gab es bereits früher Druck und bewegliche Zeichen. Gutenbergs Beitrag war eine besondere Weiterentwicklung in Europa."
+      ],
+      "surprise": "Europäisches System aus gegossenen Metalltypen, geeignetem Farbauftrag und Presse; Gutenberg-Bibel in den frühen 1450ern.",
+      "locations": [
+        {
+          "label": "Mainz – Druckwerkstatt",
+          "lat": 50,
+          "lon": 8.27,
+          "iso": "DE"
+        }
+      ],
+      "related": [
+        "invention-printing",
+        "history-paper"
+      ],
+      "sources": [
+        {
+          "label": "Stadt Mainz / Gutenberg.de",
+          "url": "https://www.gutenberg.de/zeit/zeitleiste_gutenberg"
+        },
+        {
+          "label": "Stadt Mainz / Gutenberg.de",
+          "url": "https://www.gutenberg.de/erfindung/"
+        },
+        {
+          "label": "Stadt Mainz / Gutenberg.de",
+          "url": "https://www.gutenberg.de/erfindung/vor_gutenberg"
+        },
+        {
+          "label": "UNESCO, Memory of the World",
+          "url": "https://www.unesco.org/en/memory-world/baegun-hwasang-chorok-buljo-jikji-simche-yojeol-volii-second-volume-anthology-great-buddhist-priests?hub=915"
+        }
+      ],
+      "aliases": [
+        "Johannes Gutenberg",
+        "johannes_gutenberg"
+      ],
+      "links": [],
+      "person": {
+        "lifespan": "um 1400–1468",
+        "field": "Handwerker, Erfinder und Druckpionier",
+        "method": "Metallbuchstaben, Druckfarbe und eine Presse gemeinsam verbessern."
+      },
+      "question": {
+        "prompt": "Wofür ist Johannes Gutenberg besonders bekannt?",
+        "answers": [
+          "Ein praktisches europäisches Drucksystem entwickeln",
+          "Radioaktivität erforschen",
+          "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+        ],
+        "correct": 0,
+        "why": "Bewegliche Zeichen können neu angeordnet werden. So entstehen viele verschiedene Buchseiten."
+      },
+      "image": "johannes-gutenberg"
+    },
+    {
+      "id": "person-wangari_maathai",
+      "category": "people",
+      "title": "Wangari Maathai",
+      "intro": "Sie setzte sich in Kenia gemeinsam mit vielen Frauen für Bäume und eine gesunde Umwelt ein.",
+      "paragraphs": [
+        "Die Green-Belt-Bewegung verband Umweltschutz mit der Arbeit örtlicher Gemeinschaften. 2004 erhielt sie den Friedensnobelpreis."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "1940–2011"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Natur- und Friedensarbeit"
+        }
+      ],
+      "more": [
+        "Mit dem Green Belt Movement verband Maathai das Pflanzen von Bäumen mit gemeinsamer Arbeit und besseren Lebensbedingungen. Bäume schützen Boden und bieten Lebensräume. Die Pflege nach dem Pflanzen ist genauso wichtig wie das Setzen des Baumes.",
+        "2004 erhielt sie den Friedensnobelpreis. Ihre Arbeit verband Umweltschutz mit Rechten, friedlichem Zusammenleben und der Beteiligung vieler Menschen."
+      ],
+      "surprise": "Eine wichtige Leistung hat oft viele Beteiligte. Frage auch: Wer half mit?",
+      "locations": [
+        {
+          "label": "Kenia – Land ihrer Umweltarbeit",
+          "lat": -1.29,
+          "lon": 36.82,
+          "iso": "KE"
+        }
+      ],
+      "related": [
+        "animal-african-savanna-elephant",
+        "person-jane_goodall"
+      ],
+      "sources": [
+        {
+          "label": "Offizielle Biografie / Forschungsinstitution",
+          "url": "https://www.nobelprize.org/prizes/peace/2004/maathai/facts/"
+        }
+      ],
+      "aliases": [],
+      "links": [],
+      "person": {
+        "lifespan": "1940–2011",
+        "field": "Natur- und Friedensarbeit",
+        "method": "Gemeinsam handeln und die Umgebung pflegen."
+      },
+      "question": {
+        "prompt": "Welcher Beitrag gehört zu Wangari Maathai?",
+        "answers": [
+          "Bäume pflanzen und Gemeinschaften stärken",
+          "Das europäische Drucksystem verbessern",
+          "Den ersten Webbrowser entwickeln"
+        ],
+        "correct": 0,
+        "why": "Die Green-Belt-Bewegung verband Umweltschutz mit der Arbeit örtlicher Gemeinschaften. 2004 erhielt sie den Friedensnobelpreis."
+      },
+      "image": "wangari-maathai"
+    },
+    {
+      "id": "person-charles_darwin",
+      "category": "people",
+      "title": "Charles Darwin",
+      "intro": "Er beobachtete Tiere, Pflanzen und Gesteine auf einer langen Forschungsreise.",
+      "paragraphs": [
+        "Die Reise mit der Beagle dauerte von 1831 bis 1836. Seine Beobachtungen halfen ihm später, die Entwicklung von Lebewesen zu erklären."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "1809–1882"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Naturforschung"
+        }
+      ],
+      "more": [
+        "Bei Forschungsreisen wurden Orte besucht, an denen bereits Menschen und Kulturen lebten. Auch das Wissen örtlicher Menschen ist wichtig.",
+        "Lebewesen einer Art unterscheiden sich. Wenn einige Unterschiede beim Überleben und bei der Fortpflanzung helfen, können sie über viele Generationen häufiger werden. Das heißt natürliche Selektion; ein einzelnes Tier verändert sich dabei nicht auf Wunsch."
+      ],
+      "surprise": "Eine wichtige Leistung hat oft viele Beteiligte. Frage auch: Wer half mit?",
+      "locations": [
+        {
+          "label": "Galápagos – eine Station seiner Reise",
+          "lat": -0.6,
+          "lon": -90.5,
+          "iso": "EC"
+        }
+      ],
+      "related": [
+        "person-jane_goodall",
+        "animal-green-sea-turtle"
+      ],
+      "sources": [
+        {
+          "label": "Offizielle Biografie / Forschungsinstitution",
+          "url": "https://www.nhm.ac.uk/discover/charles-darwin-most-famous-biologist.html"
+        }
+      ],
+      "aliases": [],
+      "links": [],
+      "person": {
+        "lifespan": "1809–1882",
+        "field": "Naturforschung",
+        "method": "Beobachtungen aus verschiedenen Orten vergleichen."
+      },
+      "question": {
+        "prompt": "Welcher Beitrag gehört zu Charles Darwin?",
+        "answers": [
+          "Die Entwicklung und Vielfalt von Lebewesen untersuchen",
+          "Das europäische Drucksystem verbessern",
+          "Den ersten Webbrowser entwickeln"
+        ],
+        "correct": 0,
+        "why": "Die Reise mit der Beagle dauerte von 1831 bis 1836. Seine Beobachtungen halfen ihm später, die Entwicklung von Lebewesen zu erklären."
+      },
+      "image": "charles-darwin"
+    },
+    {
+      "id": "person-alexander_humboldt",
+      "category": "people",
+      "title": "Alexander von Humboldt",
+      "intro": "Er verglich auf Reisen Pflanzen, Berge und Klima miteinander.",
+      "paragraphs": [
+        "Von 1799 bis 1804 reiste er mit Aimé Bonpland durch Teile Amerikas. Er wollte verstehen, wie verschiedene Teile der Natur zusammenhängen."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "1769–1859"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Naturforschung und Forschungsreisen"
+        }
+      ],
+      "more": [
+        "Bei Forschungsreisen wurden Orte besucht, an denen bereits Menschen und Kulturen lebten. Auch das Wissen örtlicher Menschen ist wichtig.",
+        "Temperatur, Höhe, Pflanzen und Boden hängen zusammen. Humboldt verglich Messungen an verschiedenen Orten. Forschungsreisen trafen auf bereits vorhandenes Wissen; lokale Menschen halfen wesentlich beim Reisen und Verstehen."
+      ],
+      "surprise": "Eine wichtige Leistung hat oft viele Beteiligte. Frage auch: Wer half mit?",
+      "locations": [
+        {
+          "label": "Anden – Beispielregion seiner Forschung",
+          "lat": -1.47,
+          "lon": -78.82,
+          "iso": "EC"
+        }
+      ],
+      "related": [
+        "animal-jaguar",
+        "person-charles_darwin"
+      ],
+      "sources": [
+        {
+          "label": "Offizielle Biografie / Forschungsinstitution",
+          "url": "https://www.humboldt-foundation.de/entdecken/alexander-von-humboldt/mit-humboldt-unterwegs"
+        }
+      ],
+      "aliases": [],
+      "links": [],
+      "person": {
+        "lifespan": "1769–1859",
+        "field": "Naturforschung und Forschungsreisen",
+        "method": "Messen, vergleichen und Zusammenhänge suchen."
+      },
+      "question": {
+        "prompt": "Welcher Beitrag gehört zu Alexander von Humboldt?",
+        "answers": [
+          "Natur und Klima zusammen untersuchen",
+          "Das europäische Drucksystem verbessern",
+          "Den ersten Webbrowser entwickeln"
+        ],
+        "correct": 0,
+        "why": "Von 1799 bis 1804 reiste er mit Aimé Bonpland durch Teile Amerikas. Er wollte verstehen, wie verschiedene Teile der Natur zusammenhängen."
+      },
+      "image": "alexander-von-humboldt"
+    },
+    {
+      "id": "person-neil_armstrong",
+      "category": "people",
+      "title": "Neil Armstrong",
+      "intro": "Er war der erste Mensch, der die Mondoberfläche betrat.",
+      "paragraphs": [
+        "Apollo 11 landete am 20. Juli 1969. Armstrong und Buzz Aldrin gingen auf dem Mond, während Michael Collins ihn im Raumschiff umkreiste. Das ganze Team machte die Reise möglich."
+      ],
+      "facts": [
+        {
+          "label": "Lebenszeit",
+          "text": "1930–2012"
+        },
+        {
+          "label": "Arbeitsgebiet",
+          "text": "Flugtechnik und Raumfahrt"
+        }
+      ],
+      "more": [
+        "Neil Armstrong und Buzz Aldrin gingen auf dem Mond umher, während Michael Collins in der Mondumlaufbahn blieb. Eine Mission braucht unterschiedliche Aufgaben. Der erste Schritt eines Menschen war das Ergebnis der Arbeit eines großen Teams.",
+        "Armstrong war Ingenieur und Testpilot. Berühmt wurde er durch einen ersten Schritt; das Gelingen einer Raumfahrtmission hing jedoch von sehr vielen Beteiligten ab."
+      ],
+      "surprise": "Eine wichtige Leistung hat oft viele Beteiligte. Frage auch: Wer half mit?",
+      "locations": [
+        {
+          "label": "Florida – Startregion von Apollo 11",
+          "lat": 28.57,
+          "lon": -80.65,
+          "iso": "US"
+        }
+      ],
+      "related": [
+        "history-apollo11",
+        "invention-rocket"
+      ],
+      "sources": [
+        {
+          "label": "Offizielle Biografie / Forschungsinstitution",
+          "url": "https://www.nasa.gov/people/neil-a-armstrong/"
+        }
+      ],
+      "aliases": [],
+      "links": [],
+      "person": {
+        "lifespan": "1930–2012",
+        "field": "Flugtechnik und Raumfahrt",
+        "method": "Trainieren, rechnen und im Team arbeiten."
+      },
+      "question": {
+        "prompt": "Welcher Beitrag gehört zu Neil Armstrong?",
+        "answers": [
+          "Als Teil von Apollo 11 auf dem Mond landen",
+          "Das europäische Drucksystem verbessern",
+          "Den ersten Webbrowser entwickeln"
+        ],
+        "correct": 0,
+        "why": "Apollo 11 landete am 20. Juli 1969. Armstrong und Buzz Aldrin gingen auf dem Mond, während Michael Collins ihn im Raumschiff umkreiste. Das ganze Team machte die Reise möglich."
+      },
+      "image": "neil-armstrong"
+    }
+  ],
+  "sourceCounterchecks": {
+    "status": "All18 existing people articles fully read; selected actual source passages and individual counterchecks prepared only. Specific factual/media/UI/learning gaps remain explicit; no implementation, full approval, newtopics or completion count.",
+    "checkedOn": "2026-10-18",
+    "entries": [
+      {
+        "id": "person-marie_curie",
+        "actualReads": [
+          {
+            "url": "https://collection.sciencemuseumgroup.org.uk/people/cp37187/marie-curie",
+            "anchor": "33/44–50",
+            "finding": "Museum entry contradicts itself:1888at44 versus1898at45. Preserve actual canonical1898, corroboratedNPS55. No disease-cause detail added."
+          },
+          {
+            "url": "https://www.nps.gov/people/manhattan-project-pioneers-marie-curie.htm",
+            "anchor": "37/45/54–57",
+            "finding": "1867–1934,WarsawthenRussianEmpire,Paris,1898elements,1903/1911prizes. Page framing ManhattanProject does not imply personal participation after her death."
+          }
+        ],
+        "failedOriginalAccess": [
+          "Both original Nobel URLs403; not newly verified as complete source bodies."
+        ],
+        "countercheck": "Canonical already says researched, not discovered radioactivity. Preserve team credit; do not claim physics prize solely Marie/Pierre, exact radiation-disease diagnosis or erroneous1888. Do not propose radioactive experiments. Existing photo/media rights and next individual teaching/feedback remain open."
+      },
+      {
+        "id": "person-ada_lovelace",
+        "actualReads": [
+          {
+            "url": "https://blog.sciencemuseum.org.uk/ada-lovelace-visionary-of-the-computer-age/",
+            "anchor": "12/16/25–28",
+            "finding": "Published algorithm/earlierBabbagenotebooks, more than number crunching. Exhibition2015/2016 not current event."
+          },
+          {
+            "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Lovelace/",
+            "anchor": "8–12/52–64/74",
+            "finding": "1815–1852,1843Notes; programmed plan and abstract symbols/music. Age37at74 inconsistent with10Dec1815to27Nov1852; do not adopt that age."
+          }
+        ],
+        "countercheck": "Original canonical qualifies planned machine and published algorithm correctly. No claim first human ever thought of algorithm, no inference real fully-built machine ran program. No adopting speculative gendered personal-life commentary at65–73. Actual photo rights, current UI, own differentiated learning/feedback remain open."
+      },
+      {
+        "id": "person-grace_hopper",
+        "actualReads": [
+          {
+            "url": "https://www.computerhistory.org/revolution/story/117",
+            "anchor": "25–38",
+            "finding": "A-0 often considered compiler, COBOL committee and team. Throughout-life Navy phrasing not exact continuous active-duty chronology."
+          },
+          {
+            "url": "https://president.yale.edu/biography-grace-murray-hopper",
+            "anchor": "29–49",
+            "finding": "1906–1992,mathematics,Navy,1952A0,1956teamFLOWMATIC,1959CODASYL and many contributors."
+          }
+        ],
+        "partlyOpenedNotFullRead": [
+          {
+            "url": "https://archive.computerhistory.org/resources/access/text/2015/06/102702026-05-01-acc.pdf",
+            "scope": "OnlyPDFfirstpageandcontentsread;54pages not fully read, do not use later FLOW passages until actual reading."
+          }
+        ],
+        "failedOriginalAccess": [
+          "Smithsonian InternalError; originalNavyURL timeout400, not declared dead or newly fully verified."
+        ],
+        "countercheck": "Canonical early compilers/FLOW-MATIC/contributions COBOL avoids sole-inventor claim. Modern compiler explanation can remain as functional overview, distinguish historical A0 debate if adding detailed first-ever claim. No invented first-debugger story. Actual photo rights/current UI/own learning/feedback remain open."
+      },
+      {
+        "id": "person-jane_goodall",
+        "actualReads": [
+          {
+            "url": "https://janegoodall.org/press-room-item/jane-goodall-renowned-ethologist-conservationist-and-animal-behavior-expert-passes-away-at-age-91/",
+            "anchor": "8/98–103/116–127",
+            "finding": "Official1Oct2025notice supports1934–2025,1960Gombe/toolmaking/tooluse,Tanzania,communityconservation andRoots&Shoots. Existing dates correct, retain."
+          }
+        ],
+        "countercheck": "No claim she discovered all animal tool use first, no treating gorillas and chimpanzees as same species. Existing gorilla/Darwin comparisons require explicit species/method distinction. Do not copy current75-country counts as2026verified or invite approach/wild feeding. Photo/currentUI/individuallearning/feedback not yet reviewed."
+      },
+      {
+        "id": "person-tu_youyou",
+        "actualReads": [
+          {
+            "url": "https://laskerfoundation.org/winners/artemisinin-therapy-for-malaria/",
+            "anchor": "71–91",
+            "finding": "Historical2011award account describes1971team extraction,1972followups, research on artemisinin. No copying extraction recipe or doses into product."
+          }
+        ],
+        "failedOriginalAccess": [
+          "OriginalNobel facts/biography403; direct public Nobel lecturePDFalso403. This is access limitation, not source-body review. WHO-restricted query returned no actualWHOsource; not evidence."
+        ],
+        "countercheck": "Canonical1970s/team/research/safe-nonexperiment distinction supported. Birth1930/Ningbo and2015Nobel date not yet freshly supported by read source body; remain pending for full review. Source2011 treatment-regimen/malaria-statistics language not adopted as2026medical advice. Do not romanticize historical self-testing or give preparation instructions. Photo/currentUI/learning/feedback remain open.",
+        "indexedOriginalPassage": {
+          "url": "https://www.nobelprize.org/prizes/medicine/2015/tu/facts/",
+          "mode": "ActualpublisherindexedFactblock read in search results; directHTTPbody remains403, not claimed fully accessed.",
+          "verifiedNarrowClaims": "Born30Dec1930ZhejiangNingbo, MedicinePrize2015 and researchaffiliation. SupplementaryLaskerbody alreadyread supports actualresearchstory; no currentmedicalrecommendation inferred."
+        }
+      },
+      {
+        "id": "person-wangari_maathai",
+        "actualReads": [
+          {
+            "url": "https://www.greenbeltmovement.org/wangari-maathai/",
+            "anchor": "133–135",
+            "finding": "Official own organization supports1940–2011,2004NobelPeacePrize,founder andscientificeducation."
+          },
+          {
+            "url": "https://www.greenbeltmovement.org/history/",
+            "anchor": "134–154",
+            "finding": "1977founding underNCWK,needs ofruralKenyanwomen,community/environment/rights/democracy; not lonehero plantingalltrees."
+          }
+        ],
+        "failedOriginalAccess": [
+          "OriginalNobel facts403, not claimed fresh source-body verification."
+        ],
+        "countercheck": "Retain existing dates and community credit. Soilprotection and care-after-planting statements still need targeted supporting source in later full countercheck; organization history alone is not enough for every ecology claim. No volatile total tree counts, copied hummingbird story or uncontrolled planting instruction. Photo/currentUI/learning/feedback remain open."
+      },
+      {
+        "id": "person-katherine_johnson",
+        "actualReads": [
+          {
+            "url": "https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/",
+            "anchor": "254–277",
+            "finding": "1918–2020, WestVirginia/NACA/NASA,1961Shepard trajectory,1962Glenn independent checking, Apollo rendezvous work."
+          }
+        ],
+        "countercheck": "Manual verification used a desktop mechanical calculating machine; do not retell as device-free pencil arithmetic or humans infallible/computers always wrong. Shepard suborbital1961 and Glenn USorbital1962 are different flights; neither first-ever person worldwide. Historical discriminatory quotation and invented film scenes not adopted. Canonical dates and team-method focus supported; photo/currentUI/own teaching/feedback remain open."
+      },
+      {
+        "id": "person-tim_berners_lee",
+        "actualReads": [
+          {
+            "url": "https://www.w3.org/People/Berners-Lee/Longer.html",
+            "anchor": "6–18",
+            "finding": "1989proposal,1990server/browser,1991wideravailability,W3C/MIT, nowEmeritus. Historical teaching contributions, not firstinventorofInternet."
+          },
+          {
+            "url": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/",
+            "anchor": "79–100, actual read earlier in same ongoing history review",
+            "finding": "Reused actual primary reading, not a dossier-only truth claim; distinguishes1989/1990/1991/1993."
+          }
+        ],
+        "countercheck": "Do not confuse Web and olderInternet or proposal/browser/announcement/publicdomain release. Birth1955/London not in actually read Longer biography passages; requires targeted body source before full approval. Current affiliations not copied as timeless. Photo/currentUI/own teaching/feedback remain open."
+      },
+      {
+        "id": "person-neil_armstrong",
+        "actualReads": [
+          {
+            "url": "https://www.nasa.gov/people/neil-a-armstrong/",
+            "anchor": "247–267",
+            "finding": "NASAoriginal supports1930–2012,testpilot/engineering,1962astronaut,1969Apollo11, firstpersononMoon. Source249 usesUSlocalJuly20footstep date."
+          },
+          {
+            "url": "https://www.nasa.gov/history/apollo-11-mission-overview/",
+            "anchor": "278–304/338, actual read earlier in same ongoing history review",
+            "finding": "Crewroles and20Jul landing, Florida launch; separate from Houston control."
+          },
+          {
+            "url": "https://www.nasa.gov/wp-content/uploads/static/history/alsj/a11/a11.step.html",
+            "anchor": "268–286, actual read earlier in same ongoing history review",
+            "finding": "21JulUTC firststeps; correctedmissionseconds uncertain, notcopied."
+          }
+        ],
+        "countercheck": "Preserve current20July LANDING date; do not silently convert sourceUSlocalfirststep date intoUTC20July. Armstrong/Aldrin surface versusCollins orbiter. No singlehero/onlyonecrewmember or duplicatecount fromhistoryApolloarticle. Photo/currentUI/own teaching/feedback remain open."
+      },
+      {
+        "id": "person-al_khwarizmi",
+        "actualReads": [
+          {
+            "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Khwarizmi/",
+            "anchor": "8–17/24–35/36–55",
+            "finding": "Bodyabout780/about850, algorithm etymology, Baghdad/uncertainancestry, algebraandastronomy. Algebra describedinwords; modernxnotation is author explanatory addition."
+          }
+        ],
+        "countercheck": "Title790 conflicts withbody780; retain qualified canonicalabout780, no title-only rewrite. Khwarazm/Qutrubbull and possibly differentpeople are disputed, so do not fix exactbirthplace/religion or modernnationality. No soleinventionofallalgebra or zero; contemporarynotation/model would be labelledmodern. Photo(currentlikelylaterrepresentation)/UI/teaching/feedback stillopen."
+      },
+      {
+        "id": "person-cai_lun",
+        "actualReads": [
+          {
+            "url": "https://whhlyt.hunan.gov.cn/whhlyt/english/Culture/CulturalFigures/202207/t20220729_27570604.html",
+            "anchor": "82–96, especially88–91",
+            "finding": "ActualHunanbody nowread:61or63–121, ancientGuiyang inSEHunan, court andimprovedpriorpapermaking. Canonicalunsure1stcentury retained."
+          }
+        ],
+        "countercheck": "URLJuly2022isnotarticleMay20publicationdate. Guiyang isancientHunanregion, notmodernGuizhoucity. HeritageGodofPaper/rankings and broadSilkRoadclaims are not new factual proof. Prior Cambridgepaper reading supportsimprovementversusfirstinvention; originalOxfordbody unavailable remainsnotfreshverified. Originalportraitlikelylaterdepiction; photo/UI/ownteaching/feedback remainopen."
+      },
+      {
+        "id": "person-johannes_gutenberg",
+        "actualReads": [
+          {
+            "url": "https://www.gutenberg.de/zeit/zeitleiste_gutenberg",
+            "anchor": "55–68, especially59–60/68",
+            "finding": "ActualMainztimeline datesBibleprinting1452–1454 withlooseparts1454, team/Fust, death1468. Do not replace canonicalearly1450s simply from recollected1455."
+          }
+        ],
+        "countercheck": "Qualifiedbirtharound1400 still needs earlieractualtimelinebody. Otherprinting/eastasian/UNESCOsourcepassages already actually read in ongoinghistoryprinting review canbe reused with exactanchors. Do not attributeallprintingfirstever toGutenberg or earliestSURVIVINGJikjitoearliest-evermetaltypeuse. No copy ofhistoricalrhetoric1504worldfirstclaim. Portraitmaybelater; photo/UI/ownteaching/feedback stillopen."
+      },
+      {
+        "id": "person-karl_benz",
+        "actualReads": [
+          {
+            "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/carl-benz.html",
+            "anchor": "294–307",
+            "finding": "1844–1929,Karlsruhe/Mannheim/Ladenburg,1886patent37435. Marketingphrasebirthcertificateofautomobile notadopted asabsolutepriority."
+          },
+          {
+            "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html",
+            "anchor": "294–320",
+            "finding": "Bertha financial/technical/ideacontributions; pre-marriage funds,1888journey andfamilywork."
+          }
+        ],
+        "countercheck": "Retain qualified early petrolvehicle, do not soleinventallmotortransport or erase steam/electric vehicles. Distinguish1879two-strokeengine from1886motorcar/patent, filingdayfromgrant. Companyarchive isinterestedsource, independentDPMApatentpassage useful before final priority wording. No engine/fuel repair experiments. Photo/currentUI/ownteaching/feedback open."
+      },
+      {
+        "id": "person-bertha_benz",
+        "actualReads": [
+          {
+            "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html",
+            "anchor": "294–320, especially299–300/318/320",
+            "finding": "1849–1944, financial/technical practicalhelp,1888withsonsMannheimtoPforzheim over100km."
+          }
+        ],
+        "countercheck": "Journey ispracticaltesting notclaim sheinventedallcarparts. No unnecessary exactroute/firstworldrecordextrapolation or copying triumphalistbrandrhetoric. Historicalfuel/apothecary anecdote isnot medicine/fuel DIY instruction. Canonicaldates/route/teamcredit supported; media/currentUI/ownteaching/feedback open."
+      },
+      {
+        "id": "person-albert_einstein",
+        "actualReads": [
+          {
+            "url": "https://www.einstein-online.info/en/category/elementary/special-relativity-elementary/",
+            "anchor": "29–33",
+            "finding": "MaxPlanckintro explicitly time/space/motion, experiment support andrelativeversusabsolute, not vagueclaim onlydaydreaming."
+          }
+        ],
+        "countercheck": "OriginalNobelfacts direct403; mainrelativitybody read, but1879–1955/1921photoelectricprize/geobiography still require targetedreadpassages. Existing corrected Miniwhy preserved. No claim Nobelwasforrelativity, allthingsrelative, mentalpicturealoneprovesphysics or radioactivityneverinterestedEinstein. Lightcones/GPS/roundEarth relationships need specificlimits ratherthan claimingEinsteininventedGPS or firstprovedroundEarth. Photo/currentUI/ownteaching/feedback open."
+      },
+      {
+        "id": "person-mae_jemison",
+        "actualReads": [
+          {
+            "url": "https://starchild.gsfc.nasa.gov/docs/StarChild/whos_who_level1/jemison.html",
+            "anchor": "6–7",
+            "finding": "Born1956Alabama,Chicagoupbringing,chemicalengineering1977,MD1981,1987selection,1992Endeavour,firstAfricanAmericanwoman;1993NASAresignation."
+          },
+          {
+            "url": "https://www.nasa.gov/mission/sts-47/",
+            "anchor": "244–263",
+            "finding": "NASAmission12Sep1992launch/20Sepreturn,Endeavour,Science/Microgravity/SpacelabJ."
+          }
+        ],
+        "countercheck": "HistoryISS link isthematic researchcomparison, no falseclaim shelivedonISS in1992 beforeISS existed. HistoricalNASArole not currentastronautstatus, birthdayno volatile2026age. MainarticlefirstBlackwoman versusmorefirstAfricanAmericanwoman shouldbesourcewordingcrosschecked; NASAmissiontextsupports both. No unsupportedmedicalexperiments forchildren. Photo/currentUI/ownteaching/feedback open."
+      },
+      {
+        "id": "person-charles_darwin",
+        "actualReads": [
+          {
+            "url": "https://www.nhm.ac.uk/discover/charles-darwin-most-famous-biologist.html",
+            "anchor": "65/75/84–100/101–140",
+            "finding": "1809–1882body,1831–1836Beagle, yearscomparing, natural/artificialselection andWallace."
+          }
+        ],
+        "countercheck": "Picturealt69incorrect1881 conflictswithbody1882; preserve correctcanonical1882. Do not adopt finchinstantEureka or volatile13speciescount as2026taxonomy, no soleoriginallEvolution. Canonicalselection explanation should explicitly qualify differences as heritable at next safe coherent rewrite; no individualwish/linearprogress/strongest-only reading. Source1859/fullWallacepublicationdate furtherbodyneedsreading; existingarticlehasnobookyearclaim. GalapagosmarineGreenSeaTurtle isnotgianttortoise, relatedreadinglinkdoesnotproveDarwinstudiedthat exactspecies. Media/currentUI/ownteaching/feedback open."
+      },
+      {
+        "id": "person-alexander_humboldt",
+        "actualReads": [
+          {
+            "url": "https://www.humboldt-foundation.de/entdecken/alexander-von-humboldt/mit-humboldt-unterwegs",
+            "anchor": "68–95",
+            "finding": "1799–1804Americas,Bonpland,measurements/instruments,interactions; textadaptedfrom2018licensedanecdotebook."
+          }
+        ],
+        "countercheck": "Do not copy literaturepassages, superlativenumberinstruments, questionablePortuguesePizarrolabel or firstdiscoveredHumboldtcurrentclaim—localpeoplealreadyknew. Canonicalsharedwork/measurement/localknowledge broadlyfits;1769–1859andsoil/climate/methoddetails needappropriatesupplement. No unsupportedJaguar-sightingclaim simplyfromrelatedanimal. Photo/currentUI/ownteaching/feedback open."
+      }
+    ]
+  },
+  "learningDrafts": {
+    "status": "18 existing people: own learning/help/every-wrong-choice drafts, original first hints and all questions/solutions/IDs preserved. Not applied; source/media/graph/UI and critical countercheck remain open. No new topics.",
+    "base": "90916791c2755c5fa36e39b070706485c75f4306",
+    "entries": [
+      {
+        "id": "person-marie_curie",
+        "learning": {
+          "starter": "Marie Curie untersuchte, welche Strahlung Stoffe abgeben. Messgeräte halfen ihr bei der Forschung.",
+          "observe": "Eine Notiz nennt einen untersuchten Stoff und das Ergebnis einer Messung. Warum brauchst du beide Angaben? Was würde eine Auszeichnung allein noch nicht über die Messung verraten? Vergleiche nur die Aussagen auf dem Papier.",
+          "benefit": "Du unterscheidest den Namen einer Person, eine Auszeichnung und einen überprüfbaren Beleg."
+        },
+        "questionFeedback": {
+          "hint": "Denke an Curies Untersuchungen von Stoffen im Labor. Welches Forschungsgebiet beschäftigt sich mit Strahlung, die von Stoffen ausgeht?",
+          "wrongReasons": [
+            null,
+            "Die Anleitung für Babbages geplante Maschine gehört zu Ada Lovelaces Beitrag. Hier geht es um Curies Untersuchung radioaktiver Stoffe.",
+            "Frühe Compiler und leichter verständliche Programmiersprachen gehören zur Karte über Grace Hopper. Curie ist hier wegen ihrer Strahlungsforschung gefragt."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-marie_curie",
+          "actualReads": [
+            {
+              "url": "https://collection.sciencemuseumgroup.org.uk/people/cp37187/marie-curie",
+              "anchor": "33/44–50",
+              "finding": "Museum entry contradicts itself:1888at44 versus1898at45. Preserve actual canonical1898, corroboratedNPS55. No disease-cause detail added."
+            },
+            {
+              "url": "https://www.nps.gov/people/manhattan-project-pioneers-marie-curie.htm",
+              "anchor": "37/45/54–57",
+              "finding": "1867–1934,WarsawthenRussianEmpire,Paris,1898elements,1903/1911prizes. Page framing ManhattanProject does not imply personal participation after her death."
+            }
+          ],
+          "failedOriginalAccess": [
+            "Both original Nobel URLs403; not newly verified as complete source bodies."
+          ],
+          "countercheck": "Canonical already says researched, not discovered radioactivity. Preserve team credit; do not claim physics prize solely Marie/Pierre, exact radiation-disease diagnosis or erroneous1888. Do not propose radioactive experiments. Existing photo/media rights and next individual teaching/feedback remain open."
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      },
+      {
+        "id": "person-ada_lovelace",
+        "learning": {
+          "starter": "Ada Lovelace schrieb eine genaue Rechenanleitung für eine geplante Maschine auf. Die Maschine war damals noch nicht fertig gebaut.",
+          "observe": "Vergleiche zwei heutige Anweisungen: Addiere zwei und drei und verdopple das Ergebnis. Oder: Verdopple drei und addiere zwei. Warum unterscheiden sich die Ergebnisse? Beweist deine Rechnung auch schon, dass Babbages Maschine 1843 genau so lief?",
+          "benefit": "Du prüfst genaue Schrittfolgen und trennst einen heutigen Rechenvergleich von einem historischen Nachweis."
+        },
+        "questionFeedback": {
+          "hint": "Stell dir eine geplante Rechenmaschine vor. Welche Art genauer Anweisungen könnte sie benötigen, um eine Rechnung auszuführen?",
+          "wrongReasons": [
+            null,
+            "Radioaktivität ist das hier beschriebene Forschungsfeld von Marie Curie. Lovelaces Beitrag betrifft eine geplante Rechenmaschine.",
+            "Grace Hopper arbeitete später an Programmierwerkzeugen für Computer. Bei Lovelace geht es um die veröffentlichte Anleitung für die Analytical Engine."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-ada_lovelace",
+          "actualReads": [
+            {
+              "url": "https://blog.sciencemuseum.org.uk/ada-lovelace-visionary-of-the-computer-age/",
+              "anchor": "12/16/25–28",
+              "finding": "Published algorithm/earlierBabbagenotebooks, more than number crunching. Exhibition2015/2016 not current event."
+            },
+            {
+              "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Lovelace/",
+              "anchor": "8–12/52–64/74",
+              "finding": "1815–1852,1843Notes; programmed plan and abstract symbols/music. Age37at74 inconsistent with10Dec1815to27Nov1852; do not adopt that age."
+            }
+          ],
+          "countercheck": "Original canonical qualifies planned machine and published algorithm correctly. No claim first human ever thought of algorithm, no inference real fully-built machine ran program. No adopting speculative gendered personal-life commentary at65–73. Actual photo rights, current UI, own differentiated learning/feedback remain open."
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      },
+      {
+        "id": "person-grace_hopper",
+        "learning": {
+          "starter": "Grace Hopper arbeitete daran, Computerprogramme verständlicher aufzuschreiben und zu übersetzen. Dabei waren viele Menschen beteiligt.",
+          "observe": "Ein gedachtes Programm berechnet fehlerfrei drei plus vier. Die Aufgabe verlangte aber drei mal vier. Warum kann eine Übersetzung funktionieren, obwohl der Auftrag zur Aufgabe nicht passt? Dies ist ein heutiger Denkvergleich.",
+          "benefit": "Du unterscheidest eine gelungene Übersetzung von einem inhaltlich richtigen Auftrag."
+        },
+        "questionFeedback": {
+          "hint": "Menschen und Computer können Programme unterschiedlich lesen. Welche Arbeit könnte zwischen einer verständlichen Programmsprache und der Maschine vermitteln?",
+          "wrongReasons": [
+            null,
+            "Curie untersuchte radioaktive Stoffe. Hoppers hier beschriebene Arbeit betraf das Programmieren und Übersetzen von Computeranweisungen.",
+            "Die Anleitung für eine noch geplante Rechenmaschine gehört zu Ada Lovelace. Hopper arbeitete viel später an frühen Compilern und Programmiersprachen."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-grace_hopper",
+          "actualReads": [
+            {
+              "url": "https://www.computerhistory.org/revolution/story/117",
+              "anchor": "25–38",
+              "finding": "A-0 often considered compiler, COBOL committee and team. Throughout-life Navy phrasing not exact continuous active-duty chronology."
+            },
+            {
+              "url": "https://president.yale.edu/biography-grace-murray-hopper",
+              "anchor": "29–49",
+              "finding": "1906–1992,mathematics,Navy,1952A0,1956teamFLOWMATIC,1959CODASYL and many contributors."
+            }
+          ],
+          "partlyOpenedNotFullRead": [
+            {
+              "url": "https://archive.computerhistory.org/resources/access/text/2015/06/102702026-05-01-acc.pdf",
+              "scope": "OnlyPDFfirstpageandcontentsread;54pages not fully read, do not use later FLOW passages until actual reading."
+            }
+          ],
+          "failedOriginalAccess": [
+            "Smithsonian InternalError; originalNavyURL timeout400, not declared dead or newly fully verified."
+          ],
+          "countercheck": "Canonical early compilers/FLOW-MATIC/contributions COBOL avoids sole-inventor claim. Modern compiler explanation can remain as functional overview, distinguish historical A0 debate if adding detailed first-ever claim. No invented first-debugger story. Actual photo rights/current UI/own learning/feedback remain open."
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      },
+      {
+        "id": "person-katherine_johnson",
+        "learning": {
+          "starter": "Katherine Johnson berechnete Wege für Raumfahrzeuge und überprüfte wichtige Rechnungen. Raumfahrt brauchte sorgfältige Kontrollen.",
+          "observe": "Zwei Rechnungen liefern dieselbe Zahl. Warum reicht das noch nicht als unabhängige Prüfung, wenn beide dieselbe falsche Eingabe benutzen? Überlege, warum man außer dem Ergebnis auch Eingaben und Rechenschritte anschauen muss.",
+          "benefit": "Du erklärst, was eine unabhängige Kontrolle zusätzlich zum Vergleichen zweier Ergebnisse braucht."
+        },
+        "questionFeedback": {
+          "hint": "Ein Raumschiff soll sicher ankommen. Welche Berechnungen braucht man für seinen Weg und seine Rückkehr?",
+          "wrongReasons": [
+            null,
+            "Die Untersuchung radioaktiver Stoffe beschreibt die Karte zu Marie Curie. Johnsons Beitrag lag bei Mathematik und Flugbahnen.",
+            "Die veröffentlichte Anleitung für Babbages geplante Maschine ist Lovelaces Beitrag. Johnson prüfte konkrete Raumfahrtrechnungen in einer anderen Zeit."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-katherine_johnson",
+          "actualReads": [
+            {
+              "url": "https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/",
+              "anchor": "254–277",
+              "finding": "1918–2020, WestVirginia/NACA/NASA,1961Shepard trajectory,1962Glenn independent checking, Apollo rendezvous work."
+            }
+          ],
+          "countercheck": "Manual verification used a desktop mechanical calculating machine; do not retell as device-free pencil arithmetic or humans infallible/computers always wrong. Shepard suborbital1961 and Glenn USorbital1962 are different flights; neither first-ever person worldwide. Historical discriminatory quotation and invented film scenes not adopted. Canonical dates and team-method focus supported; photo/currentUI/own teaching/feedback remain open."
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      },
+      {
+        "id": "person-tim_berners_lee",
+        "learning": {
+          "starter": "Tim Berners-Lee entwickelte Seiten mit Links für das Web. Das Web nutzt das bereits ältere Internet.",
+          "observe": "Stell dir eine Seite mit einem Link zu einer Behauptung vor. Warum beweist der Link allein noch nicht, dass die Behauptung richtig oder aktuell ist? Welche Fragen zu Inhalt, Quelle und Datum würdest du stellen?",
+          "benefit": "Du unterscheidest den Weg zu einer Information von einem Beleg für ihre Richtigkeit."
+        },
+        "questionFeedback": {
+          "hint": "Denke an anklickbare Verbindungen zwischen Seiten. Welcher Beitrag könnte das Auffinden und Teilen von Informationen erleichtern?",
+          "wrongReasons": [
+            null,
+            "Radioaktivitätsforschung gehört hier zu Marie Curie. Berners-Lees Beitrag war die Entwicklung des Webs.",
+            "Lovelaces Anleitung bezog sich auf eine geplante Rechenmaschine. Berners-Lee verband viel später Seiten durch Webtechnik; das ist ein anderer Beitrag."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-tim_berners_lee",
+          "actualReads": [
+            {
+              "url": "https://www.w3.org/People/Berners-Lee/Longer.html",
+              "anchor": "6–18",
+              "finding": "1989proposal,1990server/browser,1991wideravailability,W3C/MIT, nowEmeritus. Historical teaching contributions, not firstinventorofInternet."
+            },
+            {
+              "url": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/",
+              "anchor": "79–100, actual read earlier in same ongoing history review",
+              "finding": "Reused actual primary reading, not a dossier-only truth claim; distinguishes1989/1990/1991/1993."
+            }
+          ],
+          "countercheck": "Do not confuse Web and olderInternet or proposal/browser/announcement/publicdomain release. Birth1955/London not in actually read Longer biography passages; requires targeted body source before full approval. Current affiliations not copied as timeless. Photo/currentUI/own teaching/feedback remain open."
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      },
+      {
+        "id": "person-karl_benz",
+        "learning": {
+          "starter": "Carl Benz entwickelte einen frühen Wagen mit Benzinmotor. Zu einem nutzbaren Fahrzeug gehören auch Räder, Lenkung und Bremsen.",
+          "observe": "Ein gedachter Werkstatttest zeigt: Der Motor läuft. Ein anderer soll zeigen: Der Wagen kann kontrolliert anhalten. Warum beweist das erste Ergebnis noch nicht das zweite? Zeichne nur einen Plan der verschiedenen Aufgaben.",
+          "benefit": "Du prüfst ein technisches System nach mehreren Aufgaben statt nach einem einzigen erfolgreichen Teil."
+        },
+        "questionFeedback": {
+          "hint": "Vergleiche Benz mit einer Person, die ein Fahrzeug nur benutzt. Was könnte ein Konstrukteur an Motor und Fahrzeug entwickeln?",
+          "wrongReasons": [
+            null,
+            "Curies Strahlungsforschung erklärt nicht die Entwicklung des Motorwagens. Benz verband Bauteile zu einem frühen Fahrzeug.",
+            "Die Anleitung für Babbages geplante Maschine gehört zu Lovelace. Benz arbeitete an einem Fahrzeug mit Motor."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-karl_benz",
+          "actualReads": [
+            {
+              "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/carl-benz.html",
+              "anchor": "294–307",
+              "finding": "1844–1929,Karlsruhe/Mannheim/Ladenburg,1886patent37435. Marketingphrasebirthcertificateofautomobile notadopted asabsolutepriority."
+            },
+            {
+              "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html",
+              "anchor": "294–320",
+              "finding": "Bertha financial/technical/ideacontributions; pre-marriage funds,1888journey andfamilywork."
+            }
+          ],
+          "countercheck": "Retain qualified early petrolvehicle, do not soleinventallmotortransport or erase steam/electric vehicles. Distinguish1879two-strokeengine from1886motorcar/patent, filingdayfromgrant. Companyarchive isinterestedsource, independentDPMApatentpassage useful before final priority wording. No engine/fuel repair experiments. Photo/currentUI/ownteaching/feedback open."
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      },
+      {
+        "id": "person-bertha_benz",
+        "learning": {
+          "starter": "Bertha Benz unterstützte den Motorwagen mit Geld, Ideen und praktischer Arbeit. Ihre lange Fahrt zeigte, wie er unterwegs funktionierte.",
+          "observe": "Vergleiche eine kurze Werkstattprobe mit einer gedachten langen Reise und ihren Stopps. Welche zusätzliche Frage zur Versorgung stellt die Reise? Warum beweist eine gelungene Fahrt nicht, dass jeder Weg bei jedem Wetter genauso funktioniert?",
+          "benefit": "Du unterscheidest eine erfolgreiche einzelne Erprobung von einer Aussage über alle Bedingungen."
+        },
+        "questionFeedback": {
+          "hint": "Überlege, wie man eine neue Fahrzeugidee im Alltag erproben kann. Welche Rolle könnte eine längere Fahrt dabei spielen?",
+          "wrongReasons": [
+            null,
+            "Radioaktive Stoffe untersuchte Marie Curie. Bertha Benz erprobte und unterstützte einen Motorwagen.",
+            "Die Rechenanleitung für eine geplante Maschine gehört zu Ada Lovelace. Bertha Benz zeigte praktische Eigenschaften eines Fahrzeugs auf einer Reise."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-bertha_benz",
+          "actualReads": [
+            {
+              "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html",
+              "anchor": "294–320, especially299–300/318/320",
+              "finding": "1849–1944, financial/technical practicalhelp,1888withsonsMannheimtoPforzheim over100km."
+            }
+          ],
+          "countercheck": "Journey ispracticaltesting notclaim sheinventedallcarparts. No unnecessary exactroute/firstworldrecordextrapolation or copying triumphalistbrandrhetoric. Historicalfuel/apothecary anecdote isnot medicine/fuel DIY instruction. Canonicaldates/route/teamcredit supported; media/currentUI/ownteaching/feedback open."
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      },
+      {
+        "id": "person-jane_goodall",
+        "learning": {
+          "starter": "Jane Goodall beobachtete Schimpansen lange und genau. Sie beschrieb, wie diese Tiere Werkzeuge herstellten und benutzten.",
+          "observe": "Vergleiche: Ein beobachteter Schimpanse stellt ein Werkzeug her. Alle Menschenaffen machen immer dasselbe. Welche Aussage geht weiter als der einzelne Beleg? Welche zusätzlichen Beobachtungen bräuchtest du?",
+          "benefit": "Du unterscheidest ein beobachtetes Verhalten von einer Behauptung über alle Tiere einer Gruppe."
+        },
+        "questionFeedback": {
+          "hint": "Wie könnte man herausfinden, was Schimpansen in ihrer natürlichen Umgebung tun? Denke an aufmerksames Beobachten über längere Zeit.",
+          "wrongReasons": [
+            null,
+            "Curie untersuchte Strahlung in Stoffen. Goodall erforschte das Verhalten wilder Schimpansen.",
+            "Die veröffentlichte Anleitung für Babbages geplante Maschine gehört zu Lovelace. Goodalls Belege stammen aus langen Tierbeobachtungen."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-jane_goodall",
+          "actualReads": [
+            {
+              "url": "https://janegoodall.org/press-room-item/jane-goodall-renowned-ethologist-conservationist-and-animal-behavior-expert-passes-away-at-age-91/",
+              "anchor": "8/98–103/116–127",
+              "finding": "Official1Oct2025notice supports1934–2025,1960Gombe/toolmaking/tooluse,Tanzania,communityconservation andRoots&Shoots. Existing dates correct, retain."
+            }
+          ],
+          "countercheck": "No claim she discovered all animal tool use first, no treating gorillas and chimpanzees as same species. Existing gorilla/Darwin comparisons require explicit species/method distinction. Do not copy current75-country counts as2026verified or invite approach/wild feeding. Photo/currentUI/individuallearning/feedback not yet reviewed."
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      },
+      {
+        "id": "person-albert_einstein",
+        "learning": {
+          "starter": "Einstein untersuchte Licht, Raum und Zeit. Er verband Gedankenexperimente und Mathematik mit überprüfbaren Vorhersagen.",
+          "observe": "Eine ausgedachte Situation führt zu einer überraschenden Vermutung. Warum ist die Vermutung selbst noch kein Messwert? Erkläre, warum eine Vorhersage zu Beobachtungen passen muss, statt nur spannend zu klingen.",
+          "benefit": "Du unterscheidest eine Idee von ihrer überprüfbaren Vorhersage und einem Messergebnis."
+        },
+        "questionFeedback": {
+          "hint": "Stell dir vor, du untersuchst gedanklich eine Reise mit sehr hoher Geschwindigkeit. Zu welchen Fragen über die Natur könnte das führen?",
+          "wrongReasons": [
+            null,
+            "Radioaktivitätsforschung beschreibt hier Curies Beitrag. Einsteins Karte fragt nach seinen Arbeiten zu Licht, Raum und Zeit; das sind unterschiedliche Schwerpunkte.",
+            "Die Anleitung für Babbages geplante Maschine gehört zu Lovelace. Einsteins hier beschriebene Vorhersagen betreffen physikalische Zusammenhänge."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-albert_einstein",
+          "actualReads": [
+            {
+              "url": "https://www.einstein-online.info/en/category/elementary/special-relativity-elementary/",
+              "anchor": "29–33",
+              "finding": "MaxPlanckintro explicitly time/space/motion, experiment support andrelativeversusabsolute, not vagueclaim onlydaydreaming."
+            }
+          ],
+          "countercheck": "OriginalNobelfacts direct403; mainrelativitybody read, but1879–1955/1921photoelectricprize/geobiography still require targetedreadpassages. Existing corrected Miniwhy preserved. No claim Nobelwasforrelativity, allthingsrelative, mentalpicturealoneprovesphysics or radioactivityneverinterestedEinstein. Lightcones/GPS/roundEarth relationships need specificlimits ratherthan claimingEinsteininventedGPS or firstprovedroundEarth. Photo/currentUI/ownteaching/feedback open."
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      },
+      {
+        "id": "person-al_khwarizmi",
+        "learning": {
+          "starter": "Al-Chwarizmi schrieb über klare Rechenregeln und unbekannte Zahlen. Wissen aus verschiedenen Regionen wurde weiterentwickelt.",
+          "observe": "Eine Zahl plus drei ist acht. Wie findest du die Zahl, und wie prüfst du sie anschließend? Warum belegt deine heutige Schreibweise noch nicht, welche Zeichen Al-Chwarizmi in seinem Buch verwendete?",
+          "benefit": "Du prüfst eine Lösung und unterscheidest moderne Rechenzeichen von einer historischen Quelle."
+        },
+        "questionFeedback": {
+          "hint": "Überlege, wie man eine Rechnung lösen kann, wenn eine Zahl noch unbekannt ist. Welches mathematische Gebiet hilft dabei?",
+          "wrongReasons": [
+            null,
+            "Curie untersuchte radioaktive Stoffe. Al-Chwarizmi schrieb mathematische Bücher über Rechnen und Algebra.",
+            "Die Anleitung für Babbages geplante Maschine stammt aus Lovelaces Zeit. Al-Chwarizmis viel ältere Bücher handeln von Rechenregeln und Algebra."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-al_khwarizmi",
+          "actualReads": [
+            {
+              "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Khwarizmi/",
+              "anchor": "8–17/24–35/36–55",
+              "finding": "Bodyabout780/about850, algorithm etymology, Baghdad/uncertainancestry, algebraandastronomy. Algebra describedinwords; modernxnotation is author explanatory addition."
+            }
+          ],
+          "countercheck": "Title790 conflicts withbody780; retain qualified canonicalabout780, no title-only rewrite. Khwarazm/Qutrubbull and possibly differentpeople are disputed, so do not fix exactbirthplace/religion or modernnationality. No soleinventionofallalgebra or zero; contemporarynotation/model would be labelledmodern. Photo(currentlikelylaterrepresentation)/UI/teaching/feedback stillopen."
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      },
+      {
+        "id": "person-tu_youyou",
+        "learning": {
+          "starter": "Tu Youyou erforschte mit einem Team einen Stoff für Medikamente gegen Malaria. Ein Hinweis auf eine Pflanze war ein Anfang und noch kein fertiges Medikament.",
+          "observe": "Unterscheide drei Forschungsstufen: Ein alter Text nennt eine Pflanze. Ein Labor untersucht einen Stoff. Studien prüfen ein Medikament. Warum beweist die erste Stufe allein nicht, dass jede Zubereitung wirksam und sicher ist? Vergleiche nur die Aussagen.",
+          "benefit": "Du unterscheidest einen Hinweis von wissenschaftlicher Prüfung und vermeidest einen voreiligen Gesundheitsschluss."
+        },
+        "questionFeedback": {
+          "hint": "Denke an die Suche nach einem Wirkstoff gegen eine Krankheit. Eine heilkundliche Überlieferung und ein geprüftes Medikament sind dabei nicht dasselbe.",
+          "wrongReasons": [
+            null,
+            "Radioaktivität ist hier Curies Forschungsgebiet. Tu Youyous Team untersuchte einen Wirkstoff gegen Malaria.",
+            "Die Anleitung für Babbages geplante Maschine gehört zu Lovelace. Tu Youyous Forschung betraf Arzneistoffe und ihre Prüfung."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-tu_youyou",
+          "actualReads": [
+            {
+              "url": "https://laskerfoundation.org/winners/artemisinin-therapy-for-malaria/",
+              "anchor": "71–91",
+              "finding": "Historical2011award account describes1971team extraction,1972followups, research on artemisinin. No copying extraction recipe or doses into product."
+            }
+          ],
+          "failedOriginalAccess": [
+            "OriginalNobel facts/biography403; direct public Nobel lecturePDFalso403. This is access limitation, not source-body review. WHO-restricted query returned no actualWHOsource; not evidence."
+          ],
+          "countercheck": "Canonical1970s/team/research/safe-nonexperiment distinction supported. Birth1930/Ningbo and2015Nobel date not yet freshly supported by read source body; remain pending for full review. Source2011 treatment-regimen/malaria-statistics language not adopted as2026medical advice. Do not romanticize historical self-testing or give preparation instructions. Photo/currentUI/learning/feedback remain open.",
+          "indexedOriginalPassage": {
+            "url": "https://www.nobelprize.org/prizes/medicine/2015/tu/facts/",
+            "mode": "ActualpublisherindexedFactblock read in search results; directHTTPbody remains403, not claimed fully accessed.",
+            "verifiedNarrowClaims": "Born30Dec1930ZhejiangNingbo, MedicinePrize2015 and researchaffiliation. SupplementaryLaskerbody alreadyread supports actualresearchstory; no currentmedicalrecommendation inferred."
+          }
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      },
+      {
+        "id": "person-cai_lun",
+        "learning": {
+          "starter": "Cai Lun sammelte Wissen über Papier und verbesserte seine Herstellung. Eine wichtige Verbesserung braucht nicht die allererste Erfindung zu sein.",
+          "observe": "Ein altes Verfahren wird verändert. Welche Frage zeigt, ob die Veränderung nützlich ist: ob der Name neu klingt oder wie das Ergebnis im Vergleich funktioniert? Warum verrät ein besseres Ergebnis allein noch nicht das Datum der ersten Erfindung?",
+          "benefit": "Du unterscheidest einen Verbesserungsnachweis von einer Aussage über den allerersten Ursprung."
+        },
+        "questionFeedback": {
+          "hint": "Was kann an der Herstellung eines Schreibmaterials verbessert werden? Prüfe, ob ein Beitrag unbedingt eine völlig neue Erfindung sein muss.",
+          "wrongReasons": [
+            null,
+            "Curie untersuchte radioaktive Stoffe. Cai Luns hier beschriebener Beitrag liegt bei der Papierherstellung.",
+            "Die Anleitung für Babbages geplante Maschine gehört zu Lovelace. Cai Lun verbesserte ein bereits bekanntes Herstellungsverfahren."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-cai_lun",
+          "actualReads": [
+            {
+              "url": "https://whhlyt.hunan.gov.cn/whhlyt/english/Culture/CulturalFigures/202207/t20220729_27570604.html",
+              "anchor": "82–96, especially88–91",
+              "finding": "ActualHunanbody nowread:61or63–121, ancientGuiyang inSEHunan, court andimprovedpriorpapermaking. Canonicalunsure1stcentury retained."
+            }
+          ],
+          "countercheck": "URLJuly2022isnotarticleMay20publicationdate. Guiyang isancientHunanregion, notmodernGuizhoucity. HeritageGodofPaper/rankings and broadSilkRoadclaims are not new factual proof. Prior Cambridgepaper reading supportsimprovementversusfirstinvention; originalOxfordbody unavailable remainsnotfreshverified. Originalportraitlikelylaterdepiction; photo/UI/ownteaching/feedback remainopen."
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      },
+      {
+        "id": "person-mae_jemison",
+        "learning": {
+          "starter": "Mae Jemison lernte Medizin und Technik und forschte mit einem Raumfahrtteam. Unterschiedliches Wissen kann sich bei einer Aufgabe ergänzen.",
+          "observe": "Eine gedachte Forschungsgruppe hat eine Frage zur Gesundheit und eine zum Material eines Geräts. Welche Fachkenntnisse könnten jeweils helfen? Warum kann eine Person mehrere Fachgebiete verbinden, ohne dass eine Gruppe auf Zusammenarbeit verzichten kann?",
+          "benefit": "Du ordnest Fachwissen Aufgaben zu und erkennst den Nutzen verschiedener Fähigkeiten im Team."
+        },
+        "questionFeedback": {
+          "hint": "Raumfahrt braucht unterschiedliche Berufe. Welche Antwort passt zu einer Frau, die Medizin und eine Reise ins All miteinander verband?",
+          "wrongReasons": [
+            null,
+            "Curie untersuchte radioaktive Stoffe. Jemisons Karte handelt von Medizin, Technik und ihrer Forschung als Astronautin.",
+            "Die Anleitung für Babbages geplante Maschine gehört zu Lovelace. Jemison arbeitete in einem späteren Raumfahrtteam."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-mae_jemison",
+          "actualReads": [
+            {
+              "url": "https://starchild.gsfc.nasa.gov/docs/StarChild/whos_who_level1/jemison.html",
+              "anchor": "6–7",
+              "finding": "Born1956Alabama,Chicagoupbringing,chemicalengineering1977,MD1981,1987selection,1992Endeavour,firstAfricanAmericanwoman;1993NASAresignation."
+            },
+            {
+              "url": "https://www.nasa.gov/mission/sts-47/",
+              "anchor": "244–263",
+              "finding": "NASAmission12Sep1992launch/20Sepreturn,Endeavour,Science/Microgravity/SpacelabJ."
+            }
+          ],
+          "countercheck": "HistoryISS link isthematic researchcomparison, no falseclaim shelivedonISS in1992 beforeISS existed. HistoricalNASArole not currentastronautstatus, birthdayno volatile2026age. MainarticlefirstBlackwoman versusmorefirstAfricanAmericanwoman shouldbesourcewordingcrosschecked; NASAmissiontextsupports both. No unsupportedmedicalexperiments forchildren. Photo/currentUI/ownteaching/feedback open."
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      },
+      {
+        "id": "person-johannes_gutenberg",
+        "learning": {
+          "starter": "Gutenbergs Drucksystem verband bewegliche Metallbuchstaben, Farbe und eine Presse. Viele Teile mussten zusammenpassen.",
+          "observe": "In einem gedachten Drucksystem sind die Buchstaben genau geformt, aber die Farbe verschmiert. Warum reicht ein gutes Einzelteil nicht? Welche weitere Prüfung würde helfen, statt einfach mehr Buchstaben herzustellen?",
+          "benefit": "Du untersuchst, wie Teile zusammenwirken, und wählst eine zur Störung passende Prüfung."
+        },
+        "questionFeedback": {
+          "hint": "Stell dir eine Werkstatt vor, die viele gleiche Textseiten herstellen möchte. Welche Erfindungsarbeit könnte ihr dabei helfen?",
+          "wrongReasons": [
+            null,
+            "Radioaktive Stoffe untersuchte Marie Curie. Gutenberg entwickelte ein Drucksystem mit beweglichen Metallzeichen, Farbe und Presse.",
+            "Die Anleitung für Babbages geplante Maschine gehört zu Ada Lovelace. Gutenbergs Beitrag war ein Drucksystem für Buchseiten."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-johannes_gutenberg",
+          "actualReads": [
+            {
+              "url": "https://www.gutenberg.de/zeit/zeitleiste_gutenberg",
+              "anchor": "55–68, especially59–60/68",
+              "finding": "ActualMainztimeline datesBibleprinting1452–1454 withlooseparts1454, team/Fust, death1468. Do not replace canonicalearly1450s simply from recollected1455."
+            }
+          ],
+          "countercheck": "Qualifiedbirtharound1400 still needs earlieractualtimelinebody. Otherprinting/eastasian/UNESCOsourcepassages already actually read in ongoinghistoryprinting review canbe reused with exactanchors. Do not attributeallprintingfirstever toGutenberg or earliestSURVIVINGJikjitoearliest-evermetaltypeuse. No copy ofhistoricalrhetoric1504worldfirstclaim. Portraitmaybelater; photo/UI/ownteaching/feedback stillopen."
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      },
+      {
+        "id": "person-wangari_maathai",
+        "learning": {
+          "starter": "Wangari Maathai setzte sich mit vielen Menschen in Kenia für Bäume und bessere Lebensbedingungen ein. Nach dem Pflanzen bleibt Pflege wichtig.",
+          "observe": "Zwei gedachte Projekte beginnen mit gleich vielen Setzlingen. Nach einem Jahr leben unterschiedlich viele Bäume. Warum beweist die gleiche Anfangszahl noch keinen gleichen Erfolg? Welche Fragen zu Pflege und Menschen vor Ort würdest du stellen?",
+          "benefit": "Du unterscheidest eine Anfangszahl vom längerfristigen Ergebnis gemeinsamer Arbeit."
+        },
+        "questionFeedback": {
+          "hint": "Denke an eine Bewegung, bei der Menschen ihre Umgebung gemeinsam grüner machen. Welcher Beitrag passt zu diesem Ziel?",
+          "wrongReasons": [
+            null,
+            "Ein europäisches Drucksystem ist Gutenbergs Beitrag. Maathai verband das Pflanzen und Pflegen von Bäumen mit der Arbeit von Gemeinschaften.",
+            "Den ersten Webbrowser entwickelte Berners-Lee. Maathais Arbeit betraf Umwelt, Menschenrechte und Beteiligung."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-wangari_maathai",
+          "actualReads": [
+            {
+              "url": "https://www.greenbeltmovement.org/wangari-maathai/",
+              "anchor": "133–135",
+              "finding": "Official own organization supports1940–2011,2004NobelPeacePrize,founder andscientificeducation."
+            },
+            {
+              "url": "https://www.greenbeltmovement.org/history/",
+              "anchor": "134–154",
+              "finding": "1977founding underNCWK,needs ofruralKenyanwomen,community/environment/rights/democracy; not lonehero plantingalltrees."
+            }
+          ],
+          "failedOriginalAccess": [
+            "OriginalNobel facts403, not claimed fresh source-body verification."
+          ],
+          "countercheck": "Retain existing dates and community credit. Soilprotection and care-after-planting statements still need targeted supporting source in later full countercheck; organization history alone is not enough for every ecology claim. No volatile total tree counts, copied hummingbird story or uncontrolled planting instruction. Photo/currentUI/learning/feedback remain open."
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      },
+      {
+        "id": "person-charles_darwin",
+        "learning": {
+          "starter": "Darwin verglich viele Beobachtungen von Lebewesen. Er fragte, wie sich Arten über lange Zeiträume verändern.",
+          "observe": "Ein einzelnes Tier lernt heute einen Trick. Warum belegt das allein noch keinen Wandel vererbbarer Merkmale über viele Generationen? Unterscheide das Lernen dieses Tiers von Veränderungen in einer Gruppe über lange Zeit.",
+          "benefit": "Du unterscheidest individuelles Lernen von der Veränderung vererbbarer Merkmale über Generationen."
+        },
+        "questionFeedback": {
+          "hint": "Wie könnte der Vergleich verschiedener Lebewesen helfen, ihre Entwicklung zu erklären? Suche nach dem passenden Forschungsbeitrag.",
+          "wrongReasons": [
+            null,
+            "Gutenberg arbeitete an einem Drucksystem. Darwins hier beschriebene Forschung betrifft Lebewesen, ihre Vielfalt und Veränderung.",
+            "Der erste Webbrowser gehört zu Berners-Lees Beitrag. Darwins Beobachtungen und Vergleiche betreffen die Natur."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-charles_darwin",
+          "actualReads": [
+            {
+              "url": "https://www.nhm.ac.uk/discover/charles-darwin-most-famous-biologist.html",
+              "anchor": "65/75/84–100/101–140",
+              "finding": "1809–1882body,1831–1836Beagle, yearscomparing, natural/artificialselection andWallace."
+            }
+          ],
+          "countercheck": "Picturealt69incorrect1881 conflictswithbody1882; preserve correctcanonical1882. Do not adopt finchinstantEureka or volatile13speciescount as2026taxonomy, no soleoriginallEvolution. Canonicalselection explanation should explicitly qualify differences as heritable at next safe coherent rewrite; no individualwish/linearprogress/strongest-only reading. Source1859/fullWallacepublicationdate furtherbodyneedsreading; existingarticlehasnobookyearclaim. GalapagosmarineGreenSeaTurtle isnotgianttortoise, relatedreadinglinkdoesnotproveDarwinstudiedthat exactspecies. Media/currentUI/ownteaching/feedback open."
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      },
+      {
+        "id": "person-alexander_humboldt",
+        "learning": {
+          "starter": "Humboldt und Bonpland beobachteten und vermaßen Natur an verschiedenen Orten. Sie suchten Zusammenhänge zwischen Pflanzen, Bergen und Klima.",
+          "observe": "Zwei gedachte Pflanzenstandorte unterscheiden sich in Höhe, Temperatur und Boden. Warum beweisen zwei Beobachtungen allein noch nicht, welcher Unterschied das Wachstum verursacht? Welche zusätzlichen Vergleiche könnten die Frage genauer machen?",
+          "benefit": "Du unterscheidest einen beobachteten Zusammenhang von einem sicheren Nachweis seiner Ursache."
+        },
+        "questionFeedback": {
+          "hint": "Stell dir eine Forschungsreise mit Messungen und Naturbeobachtungen vor. Welche Antwort untersucht Beziehungen zwischen Teilen der Natur?",
+          "wrongReasons": [
+            null,
+            "Das europäische Drucksystem beschreibt Gutenbergs Beitrag. Humboldt verglich Naturbeobachtungen und Messungen auf Reisen.",
+            "Den ersten Webbrowser entwickelte Berners-Lee. Humboldts Beitrag lag bei Naturforschung und dem Vergleichen von Zusammenhängen."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-alexander_humboldt",
+          "actualReads": [
+            {
+              "url": "https://www.humboldt-foundation.de/entdecken/alexander-von-humboldt/mit-humboldt-unterwegs",
+              "anchor": "68–95",
+              "finding": "1799–1804Americas,Bonpland,measurements/instruments,interactions; textadaptedfrom2018licensedanecdotebook."
+            }
+          ],
+          "countercheck": "Do not copy literaturepassages, superlativenumberinstruments, questionablePortuguesePizarrolabel or firstdiscoveredHumboldtcurrentclaim—localpeoplealreadyknew. Canonicalsharedwork/measurement/localknowledge broadlyfits;1769–1859andsoil/climate/methoddetails needappropriatesupplement. No unsupportedJaguar-sightingclaim simplyfromrelatedanimal. Photo/currentUI/ownteaching/feedback open."
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      },
+      {
+        "id": "person-neil_armstrong",
+        "learning": {
+          "starter": "Neil Armstrong betrat als Teil von Apollo11 den Mond. Die Mission gelang durch unterschiedliche Aufgaben vieler Menschen.",
+          "observe": "Stell dir eine Abbildung vor, die Armstrong allein zeigt. Warum beweist sie nicht, dass er allein zum Mond flog? Nenne zwei weitere Aufgaben der Mission und den zusätzlichen Beleg, den der Artikel dafür nennt.",
+          "benefit": "Du unterscheidest den Ausschnitt einer Darstellung von einer Aussage über das ganze Team."
+        },
+        "questionFeedback": {
+          "hint": "Unterscheide eine Reise um die Erde von einer Landung auf einem anderen Himmelskörper. Welches Ereignis gehört zu Apollo 11?",
+          "wrongReasons": [
+            null,
+            "Das europäische Drucksystem beschreibt Gutenbergs Beitrag. Armstrong war Teil einer Raumfahrtmission.",
+            "Den ersten Webbrowser entwickelte Berners-Lee. Armstrongs hier beschriebener Beitrag gehört zu Apollo11."
+          ]
+        },
+        "hintCountercheck": "Vorhandene erste individuelle Hilfe unverändert auch als Mini-Hinweis; alle weiteren Schritte bleiben erhalten.",
+        "sourceCountercheck": {
+          "id": "person-neil_armstrong",
+          "actualReads": [
+            {
+              "url": "https://www.nasa.gov/people/neil-a-armstrong/",
+              "anchor": "247–267",
+              "finding": "NASAoriginal supports1930–2012,testpilot/engineering,1962astronaut,1969Apollo11, firstpersononMoon. Source249 usesUSlocalJuly20footstep date."
+            },
+            {
+              "url": "https://www.nasa.gov/history/apollo-11-mission-overview/",
+              "anchor": "278–304/338, actual read earlier in same ongoing history review",
+              "finding": "Crewroles and20Jul landing, Florida launch; separate from Houston control."
+            },
+            {
+              "url": "https://www.nasa.gov/wp-content/uploads/static/history/alsj/a11/a11.step.html",
+              "anchor": "268–286, actual read earlier in same ongoing history review",
+              "finding": "21JulUTC firststeps; correctedmissionseconds uncertain, notcopied."
+            }
+          ],
+          "countercheck": "Preserve current20July LANDING date; do not silently convert sourceUSlocalfirststep date intoUTC20July. Armstrong/Aldrin surface versusCollins orbiter. No singlehero/onlyonecrewmember or duplicatecount fromhistoryApolloarticle. Photo/currentUI/own teaching/feedback remain open."
+        },
+        "status": "Prepared own teaching only; factual/media/relationship/currentUI gaps must be resolved before implementation and final review."
+      }
+    ],
+    "necessaryPrecisionToReview": {
+      "topic": "person-charles_darwin",
+      "field": "more[1]",
+      "proposal": "vererbbare Unterschiede ausdrücklich nennen",
+      "source": "https://www.nhm.ac.uk/discover/what-is-natural-selection.html",
+      "anchor": "79–99: reproduction/inheritedgeneticdifferences, probability/generations, selectionnotsoleevolutionmechanism."
+    },
+    "existingBacklogFollowup": "At next safe content cohort, make Greece visitor-voting wrong feedback explicit; original source/answer/ID remain unchanged."
+  },
+  "mediaInspection": {
+    "status": "rendered-for-personal-inspection",
+    "meaning": "Two private inspection sheets render the actual18 unchanged source assets with current labels/rights. Not an app UI or independent rights/identity approval.",
+    "sourceDigest": "209397802e4866685f5262f588425a0ebf89ad34bddd29e3d993c9624e564bbc",
+    "records": [
+      {
+        "topic": "person-marie_curie",
+        "image": "marie-curie",
+        "src": "/world/marie-curie.webp",
+        "sha256": "4bb121859c6cf7e66c045375b3592e7d0f4ac594fec4e27cc2372a8e65ee4527",
+        "dimensions": {
+          "width": 872,
+          "height": 1200
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:Marie_Curie_c._1920s_-_original.jpg",
+        "author": "Henri Manuel (1874–1947)",
+        "license": "Public domain — expired copyright",
+        "alt": "Historisches Schwarz-Weiß-Porträt von Marie Curie mit zurückgebundenem Haar und dunkler Jacke."
+      },
+      {
+        "topic": "person-ada_lovelace",
+        "image": "ada-lovelace",
+        "src": "/world/ada-lovelace.webp",
+        "sha256": "ada64c4a961742ebd747aa546aa388c62b809c3e24e19d1feb24aa421b463bb1",
+        "dimensions": {
+          "width": 1100,
+          "height": 1200
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:Ada_Lovelace_daguerreotype_by_Antoine_Claudet_1843.jpg",
+        "author": "Antoine Claudet (1797–1867)",
+        "license": "Public domain — expired copyright",
+        "alt": "Historisches Foto von Ada Lovelace in einem ovalen goldfarbenen Rahmen; sie sitzt seitlich und hält ihre Hände vor sich."
+      },
+      {
+        "topic": "person-grace_hopper",
+        "image": "grace-hopper",
+        "src": "/images/portraits/grace-hopper.webp",
+        "sha256": "8ebcc276e0961b813d9dbb334d769a052125364efb0c66bcbafadd052f0ac61b",
+        "dimensions": {
+          "width": 517,
+          "height": 606
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:Grace_Hopper.jpg",
+        "author": "James S. Davis / U.S. Navy",
+        "license": "Public Domain (U.S. Navy)",
+        "alt": "Grace Hopper in Marineuniform neben der Flagge der USA."
+      },
+      {
+        "topic": "person-katherine_johnson",
+        "image": "katherine-johnson",
+        "src": "/world/katherine-johnson.webp",
+        "sha256": "c4c6d9cb5e58c7239364a661008cb406b7e5284d742bc38928693c604ecc6004",
+        "dimensions": {
+          "width": 952,
+          "height": 1200
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:Katherine_Johnson_at_NASA,_in_1966_-_Original.jpg",
+        "author": "NASA",
+        "license": "Public domain — NASA",
+        "alt": "Katherine Johnson sitzt mit Brille an einem Schreibtisch mit Rechenmaschine und Papieren und schaut lächelnd zur Kamera."
+      },
+      {
+        "topic": "person-tim_berners_lee",
+        "image": "tim-berners-lee",
+        "src": "/images/portraits/tim-berners-lee.webp",
+        "sha256": "09b7556b557dfe6bf4b829a9bf36b6e8f516aa986933ab4919c144068e769eba",
+        "dimensions": {
+          "width": 800,
+          "height": 533
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:Sir_Tim_Berners-Lee.jpg",
+        "author": "Paul Clarke",
+        "license": "CC BY-SA 4.0",
+        "alt": "Tim Berners-Lee in dunklem Anzug mit blauer Krawatte vor einem Torbogen."
+      },
+      {
+        "topic": "person-karl_benz",
+        "image": "karl-benz",
+        "src": "/images/portraits/karl-benz.webp",
+        "sha256": "18896a60909ef62a69b4816ccb4f9ec5514900bed56f633793daa2316247f7c5",
+        "dimensions": {
+          "width": 600,
+          "height": 800
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:Carl_Benz_circa_1920.jpg",
+        "author": "Unbekannter Fotograf",
+        "license": "Public Domain (laut Commons: USA und Deutschland)",
+        "alt": "Historisches Porträtfoto von Karl Benz mit Schnurrbart und dunklem Anzug."
+      },
+      {
+        "topic": "person-bertha_benz",
+        "image": "bertha-benz",
+        "src": "/images/portraits/bertha-benz.webp",
+        "sha256": "e7dd25a55492f89bd570d4190597b6e779e1debf4d250d2f2687a46eefe464ea",
+        "dimensions": {
+          "width": 601,
+          "height": 800
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:Berthabenzportrait.jpg",
+        "author": "Bühler, Mannheim",
+        "license": "Public Domain",
+        "alt": "Historisches Porträtfoto der jungen Bertha Benz in einem dunklen Kleid."
+      },
+      {
+        "topic": "person-jane_goodall",
+        "image": "jane-goodall",
+        "src": "/images/portraits/jane-goodall.webp",
+        "sha256": "6132261417997fc5d719838bdaca3d6a64e28e21155b89c44f91388b1bebaa28",
+        "dimensions": {
+          "width": 550,
+          "height": 800
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:Jane_Goodall_2015.jpg",
+        "author": "U.S. Department of State; Ausschnitt von Commons-Nutzer Stemoc",
+        "license": "Public Domain (U.S. Department of State)",
+        "alt": "Jane Goodall mit zurückgebundenen grauen Haaren im Porträt."
+      },
+      {
+        "topic": "person-albert_einstein",
+        "image": "albert-einstein",
+        "src": "/images/portraits/albert-einstein.webp",
+        "sha256": "a6589f5917feffcbbc77539b3697dc85f5a84790f01f80da0f96b66a96bc6ed2",
+        "dimensions": {
+          "width": 609,
+          "height": 800
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_1921_by_F_Schmutzer.jpg",
+        "author": "Ferdinand Schmutzer",
+        "license": "Public Domain",
+        "alt": "Albert Einstein mit Schnurrbart und dunklem Anzug auf einem Schwarzweißfoto."
+      },
+      {
+        "topic": "person-al_khwarizmi",
+        "image": "al-khwarizmi",
+        "src": "/images/portraits/al-khwarizmi.webp",
+        "sha256": "a888ea0fcf73273a0e4a3057b286c4ae954cd89684df3cc1ceb22acdd86b6f81",
+        "dimensions": {
+          "width": 597,
+          "height": 800
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:1983_CPA_5426.jpg",
+        "author": "А. Адашев (A. Adaschew), laut Commons",
+        "license": "Public Domain (PD-RU-exempt; vollständige Briefmarke)",
+        "alt": "Sowjetische Briefmarke von 1983 mit einer späteren Fantasiedarstellung von al-Khwarizmi."
+      },
+      {
+        "topic": "person-tu_youyou",
+        "image": "tu-youyou",
+        "src": "/images/portraits/tu-youyou.webp",
+        "sha256": "54556d814146c3807570f85d1a1f1b2b1a488878bb3532a6be3d43601dde2e53",
+        "dimensions": {
+          "width": 800,
+          "height": 800
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:Tu_Youyou_5012-1-2015.jpg",
+        "author": "Bengt Nyman",
+        "license": "CC BY-SA 4.0",
+        "alt": "Tu Youyou mit Brille bei einem Termin in Stockholm 2015."
+      },
+      {
+        "topic": "person-cai_lun",
+        "image": "cai-lun",
+        "src": "/images/portraits/cai-lun.webp",
+        "sha256": "26ff0c6b507677b0e3c39d90d13207f18a5383625f84a9f3078dea13505cbc37",
+        "dimensions": {
+          "width": 375,
+          "height": 469
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:Cai-lun.jpg",
+        "author": "Unbekannter Künstler",
+        "license": "Public Domain (PD-old-100-expired / PD-Art)",
+        "alt": "Spätere Druckgrafik aus dem 18. Jahrhundert, die Cai Lun als Schutzpatron der Papierherstellung zeigt."
+      },
+      {
+        "topic": "person-mae_jemison",
+        "image": "mae-jemison",
+        "src": "/world/mae-jemison.webp",
+        "sha256": "2da14cb4a580a2b8a0d2b84819e3433423190d7f454ff6545153604b44f8488e",
+        "dimensions": {
+          "width": 960,
+          "height": 1200
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:Mae_Jemison_-_Official_portrait_of_1987_astronaut_candidate.jpg",
+        "author": "NASA / Johnson Space Center",
+        "license": "Public domain — NASA",
+        "alt": "Mae Jemison lächelt im blauen NASA-Fluganzug und hält ein Space-Shuttle-Modell; neben ihr steht die US-Flagge."
+      },
+      {
+        "topic": "person-johannes_gutenberg",
+        "image": "johannes-gutenberg",
+        "src": "/images/portraits/johannes-gutenberg.webp",
+        "sha256": "d52107f02d77d622af4e6e90b6740a93458d28c5efe6df5efa537d203ad74485",
+        "dimensions": {
+          "width": 615,
+          "height": 800
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:Johannes_Gutenberg_ca._1400-1468_uitvinder_van_de_boekdrukkunst,_1584_-_BBB-1437.jpg",
+        "author": "André Thevet (Zeichnung); De Larmessin (Kupferstich), laut Sammlungskatalog der Koninklijke Bibliotheek",
+        "license": "Public Domain",
+        "alt": "Späterer Kupferstich von 1584, der Johannes Gutenberg mit Bart und Mütze zeigt."
+      },
+      {
+        "topic": "person-wangari_maathai",
+        "image": "wangari-maathai",
+        "src": "/images/portraits/wangari-maathai.webp",
+        "sha256": "6aea3da924638c2b68abb51244c59a6774f9acef6b191331089358eb9ac86db6",
+        "dimensions": {
+          "width": 495,
+          "height": 800
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:Wangari_Maathai.jpg",
+        "author": "Demosh",
+        "license": "CC BY 2.0",
+        "alt": "Wangari Maathai mit gemusterter Kopfbedeckung hält eine Auszeichnung."
+      },
+      {
+        "topic": "person-charles_darwin",
+        "image": "charles-darwin",
+        "src": "/images/portraits/charles-darwin.webp",
+        "sha256": "34162f657b20ee3a1ae22f7952be54a04995ae166b00d7e25a15e7301edb2e95",
+        "dimensions": {
+          "width": 569,
+          "height": 800
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:Charles_Darwin_portrait.jpg",
+        "author": "Herbert Rose Barraud",
+        "license": "Public Domain",
+        "alt": "Charles Darwin mit langem weißem Bart auf einem historischen Porträtfoto."
+      },
+      {
+        "topic": "person-alexander_humboldt",
+        "image": "alexander-von-humboldt",
+        "src": "/images/portraits/alexander-von-humboldt.webp",
+        "sha256": "86f12f13731f7d238aaff7fe85b6e0f995f9bf5e6e440344f04319d3616f47c5",
+        "dimensions": {
+          "width": 500,
+          "height": 607
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:Alexander_von_Humboldt_photo_1857.jpg",
+        "author": "Verlag von L. Haase & Co., Berlin; Fotograf nicht benannt",
+        "license": "Public Domain",
+        "alt": "Historisches Porträtfoto von Alexander von Humboldt in einem dunklen Mantel."
+      },
+      {
+        "topic": "person-neil_armstrong",
+        "image": "neil-armstrong",
+        "src": "/images/portraits/neil-armstrong.webp",
+        "sha256": "7bb1789202670c4b0499bba00b0783b2e0512583ee3d32ba1f0dbdc4cfc8ffea",
+        "dimensions": {
+          "width": 640,
+          "height": 800
+        },
+        "source": "https://commons.wikimedia.org/wiki/File:Neil_Armstrong_pose.jpg",
+        "author": "NASA; Fotograf nicht benannt",
+        "license": "Public Domain (NASA)",
+        "alt": "Neil Armstrong im Raumanzug mit seinem Helm auf dem Tisch vor ihm."
+      }
+    ]
+  },
+  "mediaCountercheck": {
+    "status": "All18 exact existing images personally viewed; source authors/declaredlicensing checked against actual Commons descriptions. No binary change or independent physical authentication claimed.",
+    "specificLimits": [
+      "1983stamp complete and date visibly printed; conflicting1989shortcaption not copied.",
+      "CaiLun18thcentury/Gutenberg1584cataloguedprint are laterdepictions, no lifetimeportrait claim.",
+      "Wangari image trophy is not evidence ofNobelceremony. HistoricalCCBY2 source review remains referenced.",
+      "Ada source claimsClaudet1843, with Xpost provenance; no museumplateauthentication invented.",
+      "Einstein source explicitly explains no pre2003publication and author1928 forUSPD; do not inferpublicationfrom2001discovery.",
+      "NASA/Navy/State specific source licenses checked, not all agency images assumedPD.",
+      "Humboldt LHaaseCo is sourcecreditedpublisher, not invented photographer."
+    ]
+  },
+  "remainingWork": "Resolve named source details, critically reread every drafted choice/help/feedback, meaningful reciprocal relationships and imagecontext, then normal implementation and actual built UI/search/back/offline/compatibility checks. Existing protected QA approval is a separate issue; this file changes no QA or release criteria."
+}
