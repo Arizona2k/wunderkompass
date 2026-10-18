@@ -2546,6 +2546,10 @@
       {
         "label": "Natural History Museum, London",
         "url": "https://www.nhm.ac.uk/discover/news/2023/february/oldest-remains-ancient-human-relative-paranthropus-suggest-possible-tool-use.html"
+      },
+      {
+        "label": "Stony Brook University · Lomekwi tool research",
+        "url": "https://news.stonybrook.edu/newsroom/press-release/general/150520stonetools"
       }
     ],
     "aliases": [
@@ -2567,6 +2571,19 @@
       ],
       "correct": 0,
       "why": "Werkzeuge halfen unseren Vorfahren, ihre Umgebung zu nutzen und neue Lösungen auszuprobieren."
+    },
+    "learning": {
+      "starter": "Ein Stein kann eine nützliche Kante bekommen. Sehr alte Werkzeuge zeigen, dass Verwandte des Menschen solche Kanten herstellen konnten.",
+      "observe": "Zeichne ein erdachtes Werkzeug mit einer Kante. Deine Zeichnung ist kein Fundstück. Woran könnte man bei einem echten Fund eine Bearbeitung erkennen? Würde diese Beobachtung allein den Namen seiner Hersteller verraten?",
+      "benefit": "Du unterscheidest einen erhaltenen Gegenstand von einer Vermutung über seine Hersteller."
+    },
+    "questionFeedback": {
+      "hint": "Betrachte einen bearbeiteten Stein wie eine Detektivin oder ein Detektiv. Was lässt sich aus seiner Form und möglichen Benutzung über Menschen lernen?",
+      "wrongReasons": [
+        null,
+        "Eine bearbeitete Steinkante ist kein Beleg für einen Computer. Der Fund zeigt eine viel ältere Form von Werkzeugherstellung.",
+        "Die erhaltenen, bearbeiteten Steine belegen eine Werkzeugherstellung. Offen bleibt, wer die Stücke herstellte und welche einzelnen Arbeiten damit erledigt wurden."
+      ]
     }
   },
   {
@@ -2623,6 +2640,19 @@
       ],
       "correct": 0,
       "why": "Erhaltene Feuerstellen zeigen, dass Menschen zu bestimmten Zeiten Feuer nutzten. Sie verraten nicht den genauen Zeitpunkt des allerersten Gebrauchs."
+    },
+    "learning": {
+      "starter": "Feuer gab frühen Menschen Wärme. Sie konnten damit Nahrung kochen. Alte Feuerstellen sind Spuren dieser Nutzung.",
+      "observe": "Zeichne eine Zeitlinie und markiere eine sehr alte bekannte Feuerstelle. Könnte Feuer auch schon vor diesem erhaltenen Fund genutzt worden sein? Erkläre, was ein Fund beweist und was offenbleibt.",
+      "benefit": "Du erkennst den Unterschied zwischen dem Alter eines Belegs und dem allerersten Ereignis."
+    },
+    "questionFeedback": {
+      "hint": "Wie könnte man einen sehr frühen Gebrauch von Feuer nachweisen? Überlege, ob solche Spuren einen ganz genauen ersten Tag verraten können.",
+      "wrongReasons": [
+        null,
+        "Ein so alter archäologischer Fund nennt keinen genauen Kalendertag. Die Quelle gibt einen ungefähren Mindestzeitraum an.",
+        "Die Quelle beschreibt Feuerstellen aus der sehr fernen Vorzeit. Sie sind viel älter als die Raumfahrt; der erste Gebrauch lässt sich daraus trotzdem nicht genau datieren."
+      ]
     }
   },
   {
@@ -2763,6 +2793,19 @@
       ],
       "correct": 0,
       "why": "Die großen Pyramiden von Gizeh waren als Grabstätten für Könige bestimmt. Ihr Bau erforderte zusätzlich viel Planung und Zusammenarbeit."
+    },
+    "learning": {
+      "starter": "Die große Pyramide von Gizeh wurde als Grab für König Cheops gebaut. Viele Menschen arbeiteten an diesem großen Bauwerk.",
+      "observe": "Wähle zwei Arbeiten: einen Stein bearbeiten und ihn zum Bauplatz bringen. Warum müssen Menschen diese Arbeiten aufeinander abstimmen? Trenne diese Baufrage davon, wofür die fertige Pyramide bestimmt war.",
+      "benefit": "Du unterscheidest den Zweck eines Bauwerks von den Arbeitsschritten seiner Herstellung."
+    },
+    "questionFeedback": {
+      "hint": "Frage nach dem Zweck der Pyramiden, nicht nur nach ihrer Form. Welcher Teil des Lebens eines ägyptischen Herrschers könnte damit verbunden sein?",
+      "wrongReasons": [
+        null,
+        "Ein Flughafen dient Flugzeugen. Die Quelle beschreibt hier königliche Grabstätten, keine Anlage für den Flugverkehr.",
+        "Eine Eisenbahnstation gehört zum Bahnverkehr. Die Pyramiden von Gizeh waren für Bestattungen von Königen und Angehörigen ihrer Familien bestimmt."
+      ]
     }
   },
   {
@@ -2834,7 +2877,20 @@
         "Er erfand das Internet"
       ],
       "correct": 0,
-      "why": "Cai Lun verbesserte Erfahrungen und Verfahren der Papierherstellung, die es bereits vor ihm gab. Verbesserung und erstmalige Erfindung sind unterschiedliche Beiträge."
+      "why": "Cai Lun verbesserte ein bereits bekanntes Verfahren zur Papierherstellung. Eine Verbesserung und eine erstmalige Erfindung sind unterschiedliche Beiträge."
+    },
+    "learning": {
+      "starter": "Papier kann Schrift tragen und Informationen bewahren. Cai Lun stellte am Kaiserhof eine verbesserte Herstellung vor. Papier gab es schon vorher.",
+      "observe": "Schreibe auf zwei Zettel: 'Papier ist schon bekannt' und '105 n. Chr.: Cai Lun stellt ein verbessertes Verfahren vor'. Ordne sie auf einer Zeitlinie. Warum ist eine Verbesserung ein anderer Beitrag als eine allererste Erfindung?",
+      "benefit": "Du prüfst, welchen Beitrag eine Quelle einer Person wirklich zuschreibt."
+    },
+    "questionFeedback": {
+      "hint": "Unterscheide „etwas verbessern“ von „als Erster überhaupt erfinden“. Welche Formulierung lässt auch frühere Entwicklungen zu?",
+      "wrongReasons": [
+        null,
+        "Papier gab es schon vor Cai Luns überlieferter Vorstellung. Daraus folgt keine alleinige Erfindung aller Papierarten durch eine Person.",
+        "Die Quelle behandelt Papierherstellung. Das Internet verbindet Computer in Netzen und gehört zu einer anderen Technikgeschichte."
+      ]
     }
   },
   {
@@ -2898,6 +2954,19 @@
       ],
       "correct": 0,
       "why": "Wenn zu acht Dingen nichts hinzukommt, bleiben es acht. Deshalb ist 8 + 0 = 8."
+    },
+    "learning": {
+      "starter": "Die Null kann bedeuten, dass nichts hinzukommt. In einer geschriebenen Zahl kann sie außerdem eine unbesetzte Stelle markieren.",
+      "observe": "Vergleiche im Lernbild erst 8 + 0 und dann die Zahlen 205 und 25. Was bleibt bei der Rechnung gleich? Warum verändert das Weglassen der Null in 205 die Bedeutung der 2?",
+      "benefit": "Du unterscheidest die Null als Zahl beim Rechnen von ihrer Aufgabe im Stellenwertsystem."
+    },
+    "questionFeedback": {
+      "hint": "Lege gedanklich acht Steine vor dich. Was verändert sich, wenn du keinen weiteren Stein dazulegst?",
+      "wrongReasons": [
+        null,
+        "Wenn zu acht Dingen nichts hinzukommt, verschwinden die acht Dinge nicht. Die Menge bleibt acht.",
+        "80 ist die Schreibweise für acht Zehner. Bei 8 + 0 wird nichts dazugelegt; das ist eine andere Handlung."
+      ]
     }
   },
   {
@@ -2906,7 +2975,7 @@
     "title": "Der Kompass hilft auf See",
     "intro": "In China nutzten Seefahrer vermutlich nach dem Jahr 1000 einen Kompass zur Orientierung.",
     "paragraphs": [
-      "Seine magnetische Nadel zeigt eine feste Richtung an.",
+      "Seine frei bewegliche magnetische Nadel richtet sich nach dem Magnetfeld der Erde aus. Störungen in der Nähe können die Anzeige verändern.",
       "Das Wissen verbreitete sich später in andere Teile der Welt."
     ],
     "facts": [
@@ -2916,7 +2985,7 @@
       },
       {
         "label": "Wo?",
-        "text": "China; spätere Weitergabe über die islamische Welt nach Europa"
+        "text": "Frühe Navigation in China; der genaue Weg der Verbreitung nach Europa ist nicht sicher geklärt."
       }
     ],
     "more": [
@@ -2939,6 +3008,14 @@
       {
         "label": "Smithsonian National Air and Space Museum, Time and Navigation",
         "url": "https://timeandnavigation.si.edu/timeline2/1000"
+      },
+      {
+        "label": "National Geographic Education · Compass",
+        "url": "https://education.nationalgeographic.org/resource/compass/"
+      },
+      {
+        "label": "USGS · How does a compass work?",
+        "url": "https://www.usgs.gov/media/audio/how-does-compass-work"
       }
     ],
     "aliases": [
@@ -2960,6 +3037,19 @@
       ],
       "correct": 0,
       "why": "Seefahrer konnten Richtungen auch dann bestimmen, wenn sie Sonne und Sterne schlecht sahen."
+    },
+    "learning": {
+      "starter": "Eine frei bewegliche magnetische Nadel richtet sich nach dem Magnetfeld aus. Das hilft bei der Richtung, auch wenn Sterne verdeckt sind.",
+      "observe": "Zeichne ein Schiff und ein Ziel. Markiere eine Nordrichtung. Warum sagt dir diese eine Richtung noch nicht, wie weit das Ziel entfernt ist oder welche Hindernisse auf dem Weg liegen?",
+      "benefit": "Du unterscheidest Richtung, Entfernung und Reiseweg und kannst die Grenze einer einzelnen Orientierungshilfe erklären."
+    },
+    "questionFeedback": {
+      "hint": "Stell dir ein Schiff vor, dessen Besatzung keine Sterne sehen kann. Welche Art von Orientierung könnte ein Kompass liefern?",
+      "wrongReasons": [
+        null,
+        "Eine magnetische Nadel zeigt eine Richtung an. Sie verändert weder die Wolken noch erzeugt sie Regen.",
+        "Beim Drucken werden Zeichen auf einen Untergrund übertragen. Eine Kompassnadel tut das nicht; ihre Bewegung liefert eine Richtungsinformation."
+      ]
     }
   },
   {
@@ -3023,6 +3113,19 @@
       ],
       "correct": 0,
       "why": "Auf Märkten wurde gehandelt; Handwerker stellten Waren her und boten sie an. Handel und Handwerk gehörten zum Wirtschaftsleben der Städte."
+    },
+    "learning": {
+      "starter": "Auf einem mittelalterlichen Markt wurden Waren angeboten und gekauft. Handwerker stellten zum Beispiel Brot, Werkzeuge oder Gefäße her.",
+      "observe": "Überlege an einem Beispiel: Wer stellt eine Ware her, wer bringt sie zum Markt und wer kauft sie? Warum bedeutet ein Stadtrecht noch nicht, dass jede Person jeden Beruf ausüben durfte?",
+      "benefit": "Du verknüpfst Herstellung und Handel und prüfst, für wen ein Recht tatsächlich galt."
+    },
+    "questionFeedback": {
+      "hint": "Ein Markt ist ein Treffpunkt für Käufer und Verkäufer. Welche Dinge oder Tätigkeiten passen in eine Stadt des Mittelalters?",
+      "wrongReasons": [
+        null,
+        "Raumschiffe gehören zur modernen Raumfahrt. Die Frage betrifft Handel und Handwerk in einer Stadt des Mittelalters.",
+        "Ein WLAN-Router verbindet Geräte in einem Funknetz. Auf dem hier beschriebenen Markt begegneten Menschen dagegen Händlern und Handwerkern."
+      ]
     }
   },
   {
@@ -3098,6 +3201,19 @@
       ],
       "correct": 0,
       "why": "Bewegliche Druckzeichen gab es in China und Korea bereits vor Gutenbergs europäischem Drucksystem. Ein koreanisches Beispiel mit Metalltypen ist das 1377 gedruckte Jikji."
+    },
+    "learning": {
+      "starter": "Bewegliche Druckzeichen können nach einer Seite wieder neu zusammengesetzt werden. Schon vor Gutenberg wurden solche Zeichen in Ostasien verwendet.",
+      "observe": "Schreibe die Buchstaben A, M, A und L auf vier Zettel und ordne sie zu MALA und LAMA. Welche Zeichen kannst du erneut verwenden? Warum zeigt das Beispiel weder eine historische Druckmaschine noch den allerersten Druck?",
+      "benefit": "Du erklärst das Wiederverwenden von Zeichen und unterscheidest ein heutiges Lernbeispiel vom historischen Beleg."
+    },
+    "questionFeedback": {
+      "hint": "Gutenbergs Werkstatt war nicht der Anfang jeder Drucktechnik. Suche nach einer Region mit älteren Drucktraditionen.",
+      "wrongReasons": [
+        null,
+        "Gutenbergs Drucksystem war ein wichtiger europäischer Entwicklungsschritt. Frühere bewegliche Druckzeichen in China und Korea sind dadurch nicht ausgeschlossen.",
+        "Die gelesenen historischen Belege betreffen Werkstätten auf der Erde, unter anderem in China und Korea. Sie beschreiben keinen Buchdruck auf dem Mond."
+      ]
     }
   },
   {
@@ -3165,6 +3281,19 @@
       ],
       "correct": 0,
       "why": "In der Karibik lebten schon vor der Ankunft der europäischen Schiffe Menschen mit eigenen Kulturen. Der Ausdruck „Entdeckung“ darf ihre Geschichte nicht ausblenden."
+    },
+    "learning": {
+      "starter": "Als europäische Schiffe 1492 die Karibik erreichten, lebten dort bereits Menschen mit eigenen Sprachen und Kulturen. Ihre Geschichte begann nicht mit dieser Ankunft.",
+      "observe": "Vergleiche zwei Sätze: „Für die Besatzung war die Insel neu“ und „Auf der Insel lebten schon Menschen“. Können beide stimmen? Welche Informationen fehlen, wenn ein Bericht nur die Sicht der Besatzung erzählt?",
+      "benefit": "Du erkennst die Perspektive eines Berichts und berücksichtigst die bereits dort lebenden Menschen."
+    },
+    "questionFeedback": {
+      "hint": "Überlege, ob die Ankunft einer Reisegruppe etwas über die ganze frühere Geschichte eines Ortes aussagt.",
+      "wrongReasons": [
+        null,
+        "Die Quelle beschreibt bereits bewohnte Inseln und bestehende Gemeinschaften. Dass die Besatzung einen Ort erstmals erreichte, bedeutet nicht, dass er vorher unbewohnt war.",
+        "Die Inseln und ihre Bewohner waren schon vorher da. Eine Ankunft von Schiffen lässt keine Insel entstehen."
+      ]
     }
   },
   {

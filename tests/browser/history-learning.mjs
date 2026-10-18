@@ -1,3 +1,4 @@
+import {retainedHistoryLearningFlow,offlineRetainedHistoryLearning,nativeRetainedHistoryLearning} from './retained-history-learning.mjs';
 import assert from 'node:assert/strict';
 import path from 'node:path';
 import fs from 'node:fs/promises';
@@ -21,6 +22,7 @@ async function explore(p,t,{touch=false}={}){
  }
 }
 export async function historyLearningFlow(browser,base,ready,monitor,report,shots){
+ await retainedHistoryLearningFlow(browser,base,ready,monitor,report,shots);
  const observed=[],oldWriting=[];
  for(const width of [320,360,390,768,1024,1440,1920]){
   const c=await browser.newContext({viewport:{width,height:width<768?844:1000},reducedMotion:'reduce',hasTouch:width<768}),p=await c.newPage();monitor(p);
@@ -51,6 +53,7 @@ export async function historyLearningFlow(browser,base,ready,monitor,report,shot
  report.historyLearning={observed,oldWriting};report.checks.push('Two new historical sources at seven widths: three distinct observation/compare/limits tasks, actual vector controls, wrong/right/reload, global search and reciprocal Back focus; large text/axe');
 }
 export async function offlineHistoryLearning(p,report){
+ await offlineRetainedHistoryLearning(p,report);
  for(const t of topics){await p.evaluate(id=>location.hash='world/topic/'+id,t.id);await p.locator('.world-mini-question').waitFor();await explore(p,t);}
  const old=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8')).find(t=>t.id==='history-writing');
  await p.evaluate(()=>location.hash='world/topic/history-writing');await p.locator('.world-mini-question').waitFor();for(const summary of await p.locator('.world-short details summary').all())await summary.click();await p.getByText(old.learning.starter,{exact:true}).waitFor();await p.getByText(old.learning.observe,{exact:true}).waitFor();
@@ -71,9 +74,11 @@ export async function historyLearningEngine(browser,base,{engine,shots}){
    await fs.writeFile(path.join(shots,prefix+'.json'),JSON.stringify({engine,width,topic:currentTopic,route:p.url(),witness,error:error.stack},null,2)+'\n');throw error;
   }finally{await c.close();}
  }
+ const retained={checks:[]},errors=[];await retainedHistoryLearningFlow(browser,base,p=>p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor(),p=>p.on('pageerror',e=>errors.push(e.message)),retained,shots,{widths:[320,1440]});assert.deepEqual(errors,[]);observed.push(...retained.retainedHistoryLearning.observed.map(e=>({...e,retainedOldArticle:true})));
  return observed;
 }
 export async function nativeHistoryLearning(p,base,report,capture){
+ await nativeRetainedHistoryLearning(p,base,report,capture);
  const observed=[];
  for(const t of topics){await p.goto(base+'#world/topic/'+t.id);await p.locator('.world-mini-question').waitFor();assert.deepEqual(await p.evaluate(()=>({width:innerWidth,scale:devicePixelRatio})),{width:640,scale:2});await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));await explore(p,t);const activity=p.getByRole('region',{name:'Geschichtsdetektiv'});await activity.locator('h3').evaluate(el=>el.scrollIntoView({block:'start'}));await capture('history-learning-native-'+t.id+'-top.png');await activity.locator('figure').evaluate(el=>el.scrollIntoView({block:'start'}));await capture('history-learning-native-'+t.id+'-diagram.png');await activity.locator('.model-buttons').last().evaluate(el=>el.scrollIntoView({block:'start'}));await capture('history-learning-native-'+t.id+'-controls.png');observed.push(t.id);}
  report.historyLearningNative={percent:200,scale:2,largeText:true,observed};report.checks.push('Both historical learning pictures at actual native200% plus large text: all three levels and real controls');

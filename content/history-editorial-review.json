@@ -48,7 +48,7 @@
       "contentHash": "a0d489a9be636313d03953188e8b6d1e208f3f9dfd607e27a0d98504dfa1e85f",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Actual current targeted history keyboard/touch/search/back/reload/large/native/coldoffline proof at build b92d7a70954a64bd; complete final regression remains separate.",
+      "uiEvidence": "Aktuelle sieben Breiten, Tastatur/Touch, native200%, kaltesOffline, Suche/Back/Reload amBuild267fae29861b3ab0; vollständige neue Endabnahme separat offen.",
       "claims": [
         {
           "statement": "A main cord carries pendant cords whose knots, arrangement and colors can encode quantities.",
@@ -150,7 +150,7 @@
       "contentHash": "f3ae48be26eb58fed0f9e11e8853f468c0715d77fe5445bb0ff3c17315a32ba5",
       "independentReview": false,
       "acceptedForDoubling": false,
-      "uiEvidence": "Actual current targeted history keyboard/touch/search/back/reload/large/native/coldoffline proof at build b92d7a70954a64bd; complete final regression remains separate.",
+      "uiEvidence": "Aktuelle sieben Breiten, Tastatur/Touch, native200%, kaltesOffline, Suche/Back/Reload amBuild267fae29861b3ab0; vollständige neue Endabnahme separat offen.",
       "claims": [
         {
           "statement": "Mohenjo-Daro lies in Sindh/Pakistan; excavated streets and drainage provide evidence of city planning.",
@@ -413,31 +413,31 @@
     "status": "Personally inspected320px normal/large and actual native200% top/diagram/controls; no label cropping or button collision in final observed views. Native diagrams captured separately to avoid partial viewport evidence."
   },
   "earlyTechnicalProof": {
-    "build": "a3b58eb6e952a2db",
+    "build": "267fae29861b3ab0",
     "proofs": {
-      "master-retained-animals-final-history-targeted": {
-        "path": "/workspace/work/wk-continuation/master-retained-animals-final-history-targeted/report.json",
-        "sha256": "4b3d4693afa7d2d53acc70b006d9ec5385785d5fd41ae7f12da891fdddef4734",
-        "build": "a3b58eb6e952a2db",
-        "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+      "master-retained-history-with-navigation": {
+        "path": "/workspace/work/wk-continuation/master-retained-history-with-navigation/report.json",
+        "sha256": "ea2f16ad69ae25286641e33fcd85abe564420ae46a24918507a9d376f6c7d40f",
+        "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+        "build": "267fae29861b3ab0",
         "scope": "actual Chromium history partial proof; not full regression"
       },
-      "master-retained-animals-final-history-native-offline": {
-        "path": "/workspace/work/wk-continuation/master-retained-animals-final-history-native-offline/report.json",
-        "sha256": "19a0a89d55c347e5695721515565f404f450b171b2dca61699a3665decc8fc1b",
-        "build": "a3b58eb6e952a2db",
-        "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+      "master-retained-history-native-offline": {
+        "path": "/workspace/work/wk-continuation/master-retained-history-native-offline/report.json",
+        "sha256": "2adbaeb4a5e05026b8dd9327b526a5af19ff7f0beb261a8b41cff73b54d428d2",
+        "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+        "build": "267fae29861b3ab0",
         "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
       },
-      "master-retained-animals-final-corrections": {
-        "path": "/workspace/work/wk-continuation/master-retained-animals-final-corrections/report.json",
-        "sha256": "ab7e8cd258ec13e94ab8e0fa6d0139a6812435dc760dec37d5b52043a9eae978",
-        "build": "a3b58eb6e952a2db",
-        "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+      "master-history-final-corrections": {
+        "path": "/workspace/work/wk-continuation/master-history-final-corrections/report.json",
+        "sha256": "cdadaeb9d5cb8b739acf2dd159d278ef57fd5fa1f78b3000f89fbbeb6257eb64",
+        "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+        "build": "267fae29861b3ab0",
         "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
       }
     },
-    "scope": "Tatsächliche neue Teilbelege, keine vollständige Endabnahme."
+    "scope": "Aktuelle tatsächliche neue Teilproben, keine vollständige Endabnahme."
   },
   "legacyCountercheck20261018": {
     "scope": "26bisheridentischeZusatztexte/26Antwortkettengelesen;18individuellunpassendeRichtigerklärungengezieltkorrigiert;andere8begründetbeibehalten. Keinepauschale26Ganzartikel-Fachabnahme.",
@@ -1471,5 +1471,1144 @@
       }
     },
     "scope": "Actual completed current targeted UI evidence; not full regression. All preceding reports retained under their original build archives."
+  },
+  "retainedLearningRound20261018": {
+    "status": "Nine retained articles individually source/fact/pedagogy AI-counterchecked; actual current targeted seven-width/normal-large/search/Back/every-answer/reload/native/cold-offline proof passed. Full final Master acceptance separate.",
+    "notNewTopics": true,
+    "originalsBeforeThisRound": {
+      "history-stone_tools": {
+        "id": "history-stone_tools",
+        "category": "history",
+        "title": "Werkzeuge aus Stein",
+        "intro": "Bei Lomekwi in Kenia wurden sehr alte Werkzeuge aus Stein gefunden.",
+        "paragraphs": [
+          "Frühe Verwandte des Menschen konnten Steine so bearbeiten, dass sie nützliche Kanten bekamen.",
+          "Wer diese Werkzeuge machte, wissen wir noch nicht sicher."
+        ],
+        "facts": [
+          {
+            "label": "Wann?",
+            "text": "vor etwa 3,3 Millionen Jahren"
+          },
+          {
+            "label": "Wo?",
+            "text": "Lomekwi, Kenia"
+          }
+        ],
+        "more": [
+          "Werkzeuge halfen unseren Vorfahren, ihre Umgebung zu nutzen und neue Lösungen auszuprobieren.",
+          "Ein Werkzeug verlängert die Möglichkeiten des Körpers: Mit einer scharfen Steinkante lässt sich etwas schneiden, das die Hand allein nicht durchtrennen kann. Aus Gebrauchsspuren lernen Forschende, wofür alte Werkzeuge benutzt wurden."
+        ],
+        "surprise": "Ein Werkzeug und seine Hersteller sind zwei verschiedene Fragen. Ein Fund kann erhalten sein, obwohl wir nicht sicher wissen, wer ihn hergestellt hat.",
+        "locations": [
+          {
+            "label": "Lomekwi in Kenia – Fundregion",
+            "lat": 3.9,
+            "lon": 35.9,
+            "iso": "KE"
+          }
+        ],
+        "related": [
+          "history-writing",
+          "history-web"
+        ],
+        "sources": [
+          {
+            "label": "Natural History Museum, London",
+            "url": "https://www.nhm.ac.uk/discover/news/2023/february/oldest-remains-ancient-human-relative-paranthropus-suggest-possible-tool-use.html"
+          }
+        ],
+        "aliases": [
+          "stone_tools"
+        ],
+        "links": [],
+        "history": {
+          "year": -3300000,
+          "date": "vor etwa 3,3 Millionen Jahren",
+          "era": "Frühe Spuren",
+          "sensitive": false
+        },
+        "question": {
+          "prompt": "Was verraten alte Werkzeuge?",
+          "answers": [
+            "Wie frühe Verwandte des Menschen Probleme lösten",
+            "Dass es damals schon Computer gab",
+            "Dass Menschen nie Werkzeuge brauchten"
+          ],
+          "correct": 0,
+          "why": "Werkzeuge halfen unseren Vorfahren, ihre Umgebung zu nutzen und neue Lösungen auszuprobieren."
+        }
+      },
+      "history-fire": {
+        "id": "history-fire",
+        "category": "history",
+        "title": "Menschen nutzen Feuer",
+        "intro": "Sehr alte Feuerstellen zeigen, dass frühe Menschen Feuer nutzen konnten.",
+        "paragraphs": [
+          "Es wärmte sie und half beim Kochen.",
+          "Wann Menschen zum ersten Mal Feuer beherrschten, ist noch nicht genau geklärt."
+        ],
+        "facts": [
+          {
+            "label": "Wann?",
+            "text": "mindestens vor etwa 790.000 Jahren"
+          },
+          {
+            "label": "Wo?",
+            "text": "frühe Feuerstellen; Fundorte in mehreren Weltregionen"
+          }
+        ],
+        "more": [
+          "Gekochte Nahrung veränderte das Essen; Menschen konnten an Feuerstellen zusammenkommen.",
+          "Feuer machte Wärme und gekochte Nahrung möglich. Es konnte aber auch gefährlich sein. Zu lernen, ein Feuer zu erhalten, war etwas anderes als zu lernen, es selbst zu entzünden."
+        ],
+        "surprise": "Ein alter Feuerplatz belegt eine Nutzung zu dieser Zeit. Er verrät nicht automatisch, wann Menschen zum allerersten Mal Feuer nutzten.",
+        "locations": [],
+        "related": [
+          "history-writing",
+          "history-web"
+        ],
+        "sources": [
+          {
+            "label": "Smithsonian Human Origins Program",
+            "url": "https://humanorigins.si.edu/evidence/behavior/hearths-shelters"
+          }
+        ],
+        "aliases": [
+          "fire"
+        ],
+        "links": [],
+        "history": {
+          "year": -790000,
+          "date": "mindestens vor etwa 790.000 Jahren",
+          "era": "Frühe Spuren",
+          "sensitive": false
+        },
+        "question": {
+          "prompt": "Was wissen wir über den allerersten Gebrauch von Feuer?",
+          "answers": [
+            "Den genauen Zeitpunkt kennen wir nicht",
+            "Er geschah sicher am 1. Januar",
+            "Das war erst nach der Mondlandung"
+          ],
+          "correct": 0,
+          "why": "Erhaltene Feuerstellen zeigen, dass Menschen zu bestimmten Zeiten Feuer nutzten. Sie verraten nicht den genauen Zeitpunkt des allerersten Gebrauchs."
+        }
+      },
+      "history-pyramids": {
+        "id": "history-pyramids",
+        "category": "history",
+        "title": "Pyramiden im alten Ägypten",
+        "intro": "Im alten Ägypten entstand die große Pyramide für König Cheops.",
+        "paragraphs": [
+          "Viele Menschen mussten planen, Steine bearbeiten und zusammen bauen.",
+          "Die Pyramiden waren Grabstätten der königlichen Familien."
+        ],
+        "facts": [
+          {
+            "label": "Wann?",
+            "text": "um 2550 v. Chr."
+          },
+          {
+            "label": "Wo?",
+            "text": "Gizeh, Ägypten"
+          }
+        ],
+        "more": [
+          "Sie zeigen, wie viel Menschen mit Wissen, Arbeit und guter Organisation gemeinsam schaffen konnten.",
+          "Eine Pyramide brauchte viele verschiedene Arbeiten: Steine gewinnen, transportieren, bearbeiten und genau setzen. Ein solches Bauwerk erzählt deshalb auch von Organisation, Versorgung und Handwerk."
+        ],
+        "surprise": "Grabstätte und Baustelle führen zu verschiedenen Fragen: Wozu diente das Bauwerk, und wie organisierten Menschen seine Herstellung?",
+        "locations": [
+          {
+            "label": "Gizeh, Ägypten",
+            "lat": 29.979,
+            "lon": 31.134,
+            "iso": "EG"
+          }
+        ],
+        "related": [
+          "building-giza-pyramids"
+        ],
+        "sources": [
+          {
+            "label": "Harvard University, Digital Giza",
+            "url": "https://giza.fas.harvard.edu/commontopics/"
+          }
+        ],
+        "aliases": [
+          "pyramids"
+        ],
+        "links": [],
+        "history": {
+          "year": -2550,
+          "date": "um 2550 v. Chr.",
+          "era": "Frühe Spuren",
+          "sensitive": false
+        },
+        "question": {
+          "prompt": "Wofür wurden die großen Pyramiden gebaut?",
+          "answers": [
+            "Als königliche Grabstätten",
+            "Als Flughäfen",
+            "Als Eisenbahnstationen"
+          ],
+          "correct": 0,
+          "why": "Die großen Pyramiden von Gizeh waren als Grabstätten für Könige bestimmt. Ihr Bau erforderte zusätzlich viel Planung und Zusammenarbeit."
+        }
+      },
+      "history-paper": {
+        "id": "history-paper",
+        "category": "history",
+        "title": "Papier aus China",
+        "intro": "Papier entstand in China schon vor über 2.000 Jahren.",
+        "paragraphs": [
+          "Für das Jahr 105 ist überliefert, dass Cai Lun die Herstellung verbesserte und sein Verfahren am Kaiserhof vorstellte.",
+          "Auf Papier ließen sich Texte leichter aufschreiben und weitergeben."
+        ],
+        "facts": [
+          {
+            "label": "Wann?",
+            "text": "105 n. Chr. (überlieferte Verbesserung; Papier ist älter)"
+          },
+          {
+            "label": "Wo?",
+            "text": "China, Kaiserhof der Han-Zeit"
+          }
+        ],
+        "more": [
+          "Papier machte das Aufschreiben und Verbreiten von Wissen praktischer.",
+          "Dünne Papierblätter lassen sich zusammenlegen, beschriften und zu Büchern verbinden. Papierherstellung, Schrift und Druck ergänzen einander; jede Entwicklung hatte ihre eigene Geschichte."
+        ],
+        "surprise": "Ein Verfahren zu verbessern ist etwas anderes, als es zum ersten Mal zu erfinden. Achte darauf, welchen Beitrag die Quelle Cai Lun zuschreibt.",
+        "locations": [
+          {
+            "label": "China – Ursprungsregion",
+            "lat": 34.6,
+            "lon": 112.5,
+            "iso": "CN"
+          }
+        ],
+        "related": [
+          "person-cai_lun",
+          "history-writing",
+          "invention-printing"
+        ],
+        "sources": [
+          {
+            "label": "University of Oxford, Cabinet",
+            "url": "https://www.cabinet.ox.ac.uk/origins-paper"
+          },
+          {
+            "label": "Journal of the Royal Asiatic Society / Cambridge University Press",
+            "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29"
+          },
+          {
+            "label": "Hunan Provincial Department of Culture & Tourism",
+            "url": "https://whhlyt.hunan.gov.cn/whhlyt/english/Culture/CulturalFigures/202207/t20220729_27570604.html"
+          }
+        ],
+        "aliases": [
+          "paper"
+        ],
+        "links": [],
+        "history": {
+          "year": 105,
+          "date": "105 n. Chr. (überlieferte Verbesserung; Papier ist älter)",
+          "era": "Wissen & Städte",
+          "sensitive": false
+        },
+        "question": {
+          "prompt": "Was passt zu Cai Lun?",
+          "answers": [
+            "Er verbesserte ein bereits bekanntes Verfahren",
+            "Er erfand allein jede Art von Papier",
+            "Er erfand das Internet"
+          ],
+          "correct": 0,
+          "why": "Cai Lun verbesserte Erfahrungen und Verfahren der Papierherstellung, die es bereits vor ihm gab. Verbesserung und erstmalige Erfindung sind unterschiedliche Beiträge."
+        }
+      },
+      "history-zero": {
+        "id": "history-zero",
+        "category": "history",
+        "title": "Rechnen mit der Null",
+        "intro": "Der Mathematiker Brahmagupta schrieb in Indien Regeln zum Rechnen mit der Null auf.",
+        "paragraphs": [
+          "Zum Beispiel verändert sich eine Zahl nicht, wenn man Null dazuzählt.",
+          "Die Null bekam damit eine wichtige Rolle als eigene Zahl."
+        ],
+        "facts": [
+          {
+            "label": "Wann?",
+            "text": "628 n. Chr."
+          },
+          {
+            "label": "Wo?",
+            "text": "Bhinmal, Indien"
+          }
+        ],
+        "more": [
+          "Mit der Null und dem Stellenwertsystem lassen sich Zahlen übersichtlich schreiben und berechnen.",
+          "Vergleiche 25 und 205: Die Null zeigt, dass an einer Stelle kein Zehner steht. Als Zahl und als Platzhalter macht sie unterschiedliche Aufgaben möglich. Zahlzeichen und Rechenweisen verbreiteten sich durch Austausch."
+        ],
+        "surprise": "Bei 8 + 0 bleibt die Menge gleich. In der Zahl 80 verändert die Null dagegen die Schreibweise und den Stellenwert der 8. Das sind zwei verschiedene Aufgaben der Null.",
+        "locations": [
+          {
+            "label": "Bhinmal in Indien",
+            "lat": 25,
+            "lon": 72.3,
+            "iso": "IN"
+          }
+        ],
+        "related": [
+          "person-al_khwarizmi",
+          "science-computer"
+        ],
+        "sources": [
+          {
+            "label": "University of St Andrews, MacTutor History of Mathematics",
+            "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Brahmagupta/"
+          }
+        ],
+        "aliases": [
+          "zero"
+        ],
+        "links": [],
+        "history": {
+          "year": 628,
+          "date": "628 n. Chr.",
+          "era": "Wissen & Städte",
+          "sensitive": false
+        },
+        "question": {
+          "prompt": "Was ergibt 8 + 0?",
+          "answers": [
+            "8",
+            "0",
+            "80"
+          ],
+          "correct": 0,
+          "why": "Wenn zu acht Dingen nichts hinzukommt, bleiben es acht. Deshalb ist 8 + 0 = 8."
+        }
+      },
+      "history-compass": {
+        "id": "history-compass",
+        "category": "history",
+        "title": "Der Kompass hilft auf See",
+        "intro": "In China nutzten Seefahrer vermutlich nach dem Jahr 1000 einen Kompass zur Orientierung.",
+        "paragraphs": [
+          "Seine magnetische Nadel zeigt eine feste Richtung an.",
+          "Das Wissen verbreitete sich später in andere Teile der Welt."
+        ],
+        "facts": [
+          {
+            "label": "Wann?",
+            "text": "nach 1000 n. Chr. (ungefähre Zeit)"
+          },
+          {
+            "label": "Wo?",
+            "text": "China; spätere Weitergabe über die islamische Welt nach Europa"
+          }
+        ],
+        "more": [
+          "Seefahrer konnten Richtungen auch dann bestimmen, wenn sie Sonne und Sterne schlecht sahen.",
+          "Ein Kompass zeigt eine Richtung auch dann, wenn Wolken die Sterne verdecken. Eine Karte sagt dagegen, wo Wege, Küsten und Berge liegen. Für eine Reise braucht man oft beides."
+        ],
+        "surprise": "Eine Richtungsangabe zeigt noch nicht, wie weit dein Ziel entfernt ist. Welche weitere Information brauchst du für einen Reiseweg?",
+        "locations": [
+          {
+            "label": "China – ein frühes Zentrum der Navigation",
+            "lat": 30,
+            "lon": 120,
+            "iso": "CN"
+          }
+        ],
+        "related": [
+          "invention-compass"
+        ],
+        "sources": [
+          {
+            "label": "Smithsonian National Air and Space Museum, Time and Navigation",
+            "url": "https://timeandnavigation.si.edu/timeline2/1000"
+          }
+        ],
+        "aliases": [
+          "compass"
+        ],
+        "links": [],
+        "history": {
+          "year": 1050,
+          "date": "nach 1000 n. Chr. (ungefähre Zeit)",
+          "era": "Wissen & Städte",
+          "sensitive": false
+        },
+        "question": {
+          "prompt": "Wobei hilft ein Kompass?",
+          "answers": [
+            "Eine Richtung finden",
+            "Regen erzeugen",
+            "Briefe drucken"
+          ],
+          "correct": 0,
+          "why": "Seefahrer konnten Richtungen auch dann bestimmen, wenn sie Sonne und Sterne schlecht sahen."
+        }
+      },
+      "history-medieval_cities": {
+        "id": "history-medieval_cities",
+        "category": "history",
+        "title": "Märkte und Handwerk in Städten",
+        "intro": "Im Mittelalter wuchsen viele Städte durch Handel und Handwerk.",
+        "paragraphs": [
+          "Lübeck erhielt 1160 besondere Rechte als Stadt.",
+          "Auf Märkten trafen sich Händler; Handwerker arbeiteten zum Beispiel als Bäcker, Schmiede oder Töpfer."
+        ],
+        "facts": [
+          {
+            "label": "Wann?",
+            "text": "1160 (Lübecker Stadtrecht als Beispiel)"
+          },
+          {
+            "label": "Wo?",
+            "text": "Lübeck, heute Deutschland"
+          }
+        ],
+        "more": [
+          "Städte wurden wichtige Orte zum Tauschen, Arbeiten und Zusammenleben.",
+          "Mittelalterliche Städte waren auch Orte für Handwerk und Handel. Nicht alle Menschen lebten in Burgen. Bauern, Händlerinnen und viele andere versorgten die Gemeinschaften."
+        ],
+        "surprise": "Eine mittelalterliche Stadt bot besondere Rechte, aber nicht jede Person durfte dort jeden Beruf ausüben. Prüfe, für wen eine Freiheit tatsächlich galt.",
+        "locations": [
+          {
+            "label": "Lübeck, Deutschland",
+            "lat": 53.87,
+            "lon": 10.69,
+            "iso": "DE"
+          }
+        ],
+        "related": [
+          "history-writing",
+          "history-web"
+        ],
+        "sources": [
+          {
+            "label": "Deutsches Historisches Museum",
+            "url": "https://www.dhm.de/bildung/ida/mittelalter/stadt/"
+          }
+        ],
+        "aliases": [
+          "medieval_cities"
+        ],
+        "links": [],
+        "history": {
+          "year": 1160,
+          "date": "1160 (Lübecker Stadtrecht als Beispiel)",
+          "era": "Wissen & Städte",
+          "sensitive": false
+        },
+        "question": {
+          "prompt": "Was traf man auf einem mittelalterlichen Markt?",
+          "answers": [
+            "Händler und Handwerker",
+            "Raumschiffe",
+            "WLAN-Router"
+          ],
+          "correct": 0,
+          "why": "Auf Märkten wurde gehandelt; Handwerker stellten Waren her und boten sie an. Handel und Handwerk gehörten zum Wirtschaftsleben der Städte."
+        }
+      },
+      "history-printing": {
+        "id": "history-printing",
+        "category": "history",
+        "title": "Viele Bücher aus einer Druckwerkstatt",
+        "intro": "Johannes Gutenberg entwickelte in Mainz ein Drucksystem mit beweglichen Buchstaben aus Metall.",
+        "paragraphs": [
+          "Damit konnten viele ähnliche Buchseiten schneller hergestellt werden.",
+          "In China und Korea hatte man schon früher mit beweglichen Zeichen gedruckt."
+        ],
+        "facts": [
+          {
+            "label": "Wann?",
+            "text": "um 1450 (europäisches Drucksystem)"
+          },
+          {
+            "label": "Wo?",
+            "text": "Mainz, heute Deutschland; ältere Vorbilder in China und Korea"
+          }
+        ],
+        "more": [
+          "Mehr Bücher konnten hergestellt werden, und Texte erreichten mehr Menschen.",
+          "Bewegliche Zeichen werden nach dem Drucken wieder auseinandergenommen. Für die nächste Seite können dieselben Zeichen in einer anderen Reihenfolge benutzt werden. Das spart Arbeit gegenüber einer komplett neu geschnitzten Seite."
+        ],
+        "surprise": "Bewegliche Druckzeichen lassen sich neu zusammensetzen. Ein erhaltenes Druckwerk belegt diese Technik an einem bestimmten Ort und Zeitpunkt, nicht automatisch ihre allererste Nutzung.",
+        "locations": [
+          {
+            "label": "Mainz, Deutschland",
+            "lat": 50,
+            "lon": 8.27,
+            "iso": "DE"
+          }
+        ],
+        "related": [
+          "person-johannes_gutenberg",
+          "invention-printing"
+        ],
+        "sources": [
+          {
+            "label": "Stadt Mainz / Gutenberg.de",
+            "url": "https://www.gutenberg.de/zeit/zeitleiste_gutenberg"
+          },
+          {
+            "label": "Stadt Mainz / Gutenberg.de",
+            "url": "https://www.gutenberg.de/erfindung/"
+          },
+          {
+            "label": "Stadt Mainz / Gutenberg.de",
+            "url": "https://www.gutenberg.de/erfindung/vor_gutenberg"
+          },
+          {
+            "label": "UNESCO, Memory of the World",
+            "url": "https://www.unesco.org/en/memory-world/baegun-hwasang-chorok-buljo-jikji-simche-yojeol-volii-second-volume-anthology-great-buddhist-priests?hub=915"
+          }
+        ],
+        "aliases": [
+          "printing"
+        ],
+        "links": [],
+        "history": {
+          "year": 1450,
+          "date": "um 1450 (europäisches Drucksystem)",
+          "era": "Wissen & Städte",
+          "sensitive": false
+        },
+        "question": {
+          "prompt": "Wo gab es schon vor Gutenberg bewegliche Druckzeichen?",
+          "answers": [
+            "In China und Korea",
+            "Nirgends auf der Welt",
+            "Auf dem Mond"
+          ],
+          "correct": 0,
+          "why": "Bewegliche Druckzeichen gab es in China und Korea bereits vor Gutenbergs europäischem Drucksystem. Ein koreanisches Beispiel mit Metalltypen ist das 1377 gedruckte Jikji."
+        }
+      },
+      "history-voyages1492": {
+        "id": "history-voyages1492",
+        "category": "history",
+        "title": "Europäische Schiffe erreichen die Karibik",
+        "intro": "Kolumbus erreichte mit Schiffen aus Spanien eine Insel in der Karibik.",
+        "paragraphs": [
+          "Dort lebten bereits indigene Menschen, also die ursprünglichen Bewohner dieser Region.",
+          "Europäische Eroberung und Kolonisierung brachten ihnen später Gewalt, Versklavung und den Verlust von Land."
+        ],
+        "facts": [
+          {
+            "label": "Wann?",
+            "text": "12. Oktober 1492"
+          },
+          {
+            "label": "Wo?",
+            "text": "Guanahani, Bahamas; Karibik"
+          }
+        ],
+        "more": [
+          "Die Begegnungen veränderten viele Weltregionen; dazu gehören auch die Erfahrungen und Rechte der indigenen Völker.",
+          "Eine Reise ist kein Beginn der Geschichte eines Landes. In Amerika lebten bereits sehr viele Menschen mit eigenen Sprachen, Städten und Wissenssystemen. Die folgenden europäischen Eroberungen hatten für sie schwere Folgen."
+        ],
+        "surprise": "Ein europäischer Reisebericht erzählt aus einer bestimmten Sicht. Was ändert sich, wenn du auch die Erfahrungen der bereits dort lebenden Menschen einbeziehst?",
+        "locations": [
+          {
+            "label": "Bahamas – Region der Begegnung",
+            "lat": 24,
+            "lon": -74.5,
+            "iso": "BS"
+          }
+        ],
+        "related": [
+          "history-writing",
+          "history-web"
+        ],
+        "sources": [
+          {
+            "label": "Smithsonian National Museum of the American Indian",
+            "url": "https://americanindian.si.edu/exhibitions/infinityofnations/mesoamerica-caribbean.html"
+          },
+          {
+            "label": "Smithsonian National Museum of the American Indian",
+            "url": "https://americanindian.si.edu/nk360/informational/columbus-day-myths"
+          }
+        ],
+        "aliases": [
+          "voyages1492"
+        ],
+        "links": [],
+        "history": {
+          "year": 1492,
+          "date": "12. Oktober 1492",
+          "era": "Wissen & Städte",
+          "sensitive": true
+        },
+        "question": {
+          "prompt": "Was stimmt über die Karibik im Jahr 1492?",
+          "answers": [
+            "Dort lebten bereits Menschen und Kulturen",
+            "Dort lebte noch niemand",
+            "Es gab die Inseln vorher nicht"
+          ],
+          "correct": 0,
+          "why": "In der Karibik lebten schon vor der Ankunft der europäischen Schiffe Menschen mit eigenen Kulturen. Der Ausdruck „Entdeckung“ darf ihre Geschichte nicht ausblenden."
+        }
+      }
+    },
+    "originalsSHA256": "b5e8c7c83d19ff917aa8c9a0a3499c72f0e8343fcb1f396679addf1fa1f31a46",
+    "preparedReviews": [
+      {
+        "id": "history-stone_tools",
+        "learning": {
+          "starter": "Ein Stein kann eine nützliche Kante bekommen. Sehr alte Werkzeuge zeigen, dass Verwandte des Menschen solche Kanten herstellen konnten.",
+          "observe": "Zeichne ein erdachtes Werkzeug mit einer Kante. Deine Zeichnung ist kein Fundstück. Woran könnte man bei einem echten Fund eine Bearbeitung erkennen? Würde diese Beobachtung allein den Namen seiner Hersteller verraten?",
+          "benefit": "Du unterscheidest einen erhaltenen Gegenstand von einer Vermutung über seine Hersteller."
+        },
+        "questionFeedback": {
+          "hint": "Betrachte einen bearbeiteten Stein wie eine Detektivin oder ein Detektiv. Was lässt sich aus seiner Form und möglichen Benutzung über Menschen lernen?",
+          "wrongReasons": [
+            null,
+            "Eine bearbeitete Steinkante ist kein Beleg für einen Computer. Der Fund zeigt eine viel ältere Form von Werkzeugherstellung.",
+            "Die erhaltenen, bearbeiteten Steine belegen eine Werkzeugherstellung. Offen bleibt, wer die Stücke herstellte und welche einzelnen Arbeiten damit erledigt wurden."
+          ]
+        },
+        "countercheck": "Die sichere Antwort betrifft Problemlösen, nicht eine bestimmte Herstellerspezies. Beobachtung als Zeichnen/Deuten, kein Abschlagen scharferSteine. Vorwissen 'Kante' einfach erklären.",
+        "hintCountercheck": "Vorhandener individueller Hinweis passt weiterhin; nach tatsächlicher Prüfung unverändert fürMini-Frage undWissens-Challenge erhalten, keine142er-Baseline neu erzeugen.",
+        "actualDataHash": "66ef14b0c162004b21ce018a0c1cb7f3daf7bd47f4e86b23b6b95e0d8357716b",
+        "currentAIReview": {
+          "registryId": "topics-history:history-stone_tools",
+          "reviewedOn": "2026-10-18",
+          "status": "individually AI-counterchecked with actual current partial UI proof",
+          "proofs": {
+            "master-retained-history-with-navigation": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-with-navigation/report.json",
+              "sha256": "ea2f16ad69ae25286641e33fcd85abe564420ae46a24918507a9d376f6c7d40f",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "master-retained-history-native-offline": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-native-offline/report.json",
+              "sha256": "2adbaeb4a5e05026b8dd9327b526a5af19ff7f0beb261a8b41cff73b54d428d2",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            }
+          }
+        }
+      },
+      {
+        "id": "history-fire",
+        "learning": {
+          "starter": "Feuer gab frühen Menschen Wärme. Sie konnten damit Nahrung kochen. Alte Feuerstellen sind Spuren dieser Nutzung.",
+          "observe": "Zeichne eine Zeitlinie und markiere eine sehr alte bekannte Feuerstelle. Könnte Feuer auch schon vor diesem erhaltenen Fund genutzt worden sein? Erkläre, was ein Fund beweist und was offenbleibt.",
+          "benefit": "Du erkennst den Unterschied zwischen dem Alter eines Belegs und dem allerersten Ereignis."
+        },
+        "questionFeedback": {
+          "hint": "Wie könnte man einen sehr frühen Gebrauch von Feuer nachweisen? Überlege, ob solche Spuren einen ganz genauen ersten Tag verraten können.",
+          "wrongReasons": [
+            null,
+            "Ein so alter archäologischer Fund nennt keinen genauen Kalendertag. Die Quelle gibt einen ungefähren Mindestzeitraum an.",
+            "Die Quelle beschreibt Feuerstellen aus der sehr fernen Vorzeit. Sie sind viel älter als die Raumfahrt; der erste Gebrauch lässt sich daraus trotzdem nicht genau datieren."
+          ]
+        },
+        "countercheck": "Mindestalter ausdrücklich erhalten; Datum statt neuesZeitrekord behaupten. Frage fordert Beleggrenze und keine gefährliche Handlung.",
+        "hintCountercheck": "Vorhandener individueller Hinweis passt weiterhin; nach tatsächlicher Prüfung unverändert fürMini-Frage undWissens-Challenge erhalten, keine142er-Baseline neu erzeugen.",
+        "actualDataHash": "468d39e08da3788dfccd68809fc814dbb268b260f77c2fadc9349d3d5db420f8",
+        "currentAIReview": {
+          "registryId": "topics-history:history-fire",
+          "reviewedOn": "2026-10-18",
+          "status": "individually AI-counterchecked with actual current partial UI proof",
+          "proofs": {
+            "master-retained-history-with-navigation": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-with-navigation/report.json",
+              "sha256": "ea2f16ad69ae25286641e33fcd85abe564420ae46a24918507a9d376f6c7d40f",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "master-retained-history-native-offline": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-native-offline/report.json",
+              "sha256": "2adbaeb4a5e05026b8dd9327b526a5af19ff7f0beb261a8b41cff73b54d428d2",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            }
+          }
+        }
+      },
+      {
+        "id": "history-pyramids",
+        "learning": {
+          "starter": "Die große Pyramide von Gizeh wurde als Grab für König Cheops gebaut. Viele Menschen arbeiteten an diesem großen Bauwerk.",
+          "observe": "Wähle zwei Arbeiten: einen Stein bearbeiten und ihn zum Bauplatz bringen. Warum müssen Menschen diese Arbeiten aufeinander abstimmen? Trenne diese Baufrage davon, wofür die fertige Pyramide bestimmt war.",
+          "benefit": "Du unterscheidest den Zweck eines Bauwerks von den Arbeitsschritten seiner Herstellung."
+        },
+        "questionFeedback": {
+          "hint": "Frage nach dem Zweck der Pyramiden, nicht nur nach ihrer Form. Welcher Teil des Lebens eines ägyptischen Herrschers könnte damit verbunden sein?",
+          "wrongReasons": [
+            null,
+            "Ein Flughafen dient Flugzeugen. Die Quelle beschreibt hier königliche Grabstätten, keine Anlage für den Flugverkehr.",
+            "Eine Eisenbahnstation gehört zum Bahnverkehr. Die Pyramiden von Gizeh waren für Bestattungen von Königen und Angehörigen ihrer Familien bestimmt."
+          ]
+        },
+        "countercheck": "Königsgrab und Grabstätten kleinererFamilienpyramiden unterscheiden; Zweck nicht aus heutigerTouristennutzung ableiten. Passender bestehenderRückverweis aufBauwerkskarte bleibt.",
+        "hintCountercheck": "Vorhandener individueller Hinweis passt weiterhin; nach tatsächlicher Prüfung unverändert fürMini-Frage undWissens-Challenge erhalten, keine142er-Baseline neu erzeugen.",
+        "actualDataHash": "25d811580676b0859215716793399580e800e71a8c99ede42ec9cc8f381a4fff",
+        "currentAIReview": {
+          "registryId": "topics-history:history-pyramids",
+          "reviewedOn": "2026-10-18",
+          "status": "individually AI-counterchecked with actual current partial UI proof",
+          "proofs": {
+            "master-retained-history-with-navigation": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-with-navigation/report.json",
+              "sha256": "ea2f16ad69ae25286641e33fcd85abe564420ae46a24918507a9d376f6c7d40f",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "master-retained-history-native-offline": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-native-offline/report.json",
+              "sha256": "2adbaeb4a5e05026b8dd9327b526a5af19ff7f0beb261a8b41cff73b54d428d2",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            }
+          }
+        }
+      },
+      {
+        "id": "history-paper",
+        "learning": {
+          "starter": "Papier kann Schrift tragen und Informationen bewahren. Cai Lun stellte am Kaiserhof eine verbesserte Herstellung vor. Papier gab es schon vorher.",
+          "observe": "Schreibe auf zwei Zettel: 'Papier ist schon bekannt' und '105 n. Chr.: Cai Lun stellt ein verbessertes Verfahren vor'. Ordne sie auf einer Zeitlinie. Warum ist eine Verbesserung ein anderer Beitrag als eine allererste Erfindung?",
+          "benefit": "Du prüfst, welchen Beitrag eine Quelle einer Person wirklich zuschreibt."
+        },
+        "questionFeedback": {
+          "hint": "Unterscheide „etwas verbessern“ von „als Erster überhaupt erfinden“. Welche Formulierung lässt auch frühere Entwicklungen zu?",
+          "wrongReasons": [
+            null,
+            "Papier gab es schon vor Cai Luns überlieferter Vorstellung. Daraus folgt keine alleinige Erfindung aller Papierarten durch eine Person.",
+            "Die Quelle behandelt Papierherstellung. Das Internet verbindet Computer in Netzen und gehört zu einer anderen Technikgeschichte."
+          ]
+        },
+        "proposedWhy": "Cai Lun verbesserte ein bereits bekanntes Verfahren zur Papierherstellung. Eine Verbesserung und eine erstmalige Erfindung sind unterschiedliche Beiträge.",
+        "countercheck": "105 als überlieferteVorstellung kennzeichnen, nicht als erstenPapierfund. Über2000Jahre folgt denälterenFunden, nicht allein derVorstellung105. BestehendeFrage/Antworten/Lösung/IDs unverändert; nur warum-Text im bestehendenKorrekturregister weiterpräzisieren.",
+        "hintCountercheck": "Vorhandener individueller Hinweis passt weiterhin; nach tatsächlicher Prüfung unverändert fürMini-Frage undWissens-Challenge erhalten, keine142er-Baseline neu erzeugen.",
+        "actualDataHash": "4a65bbe0712de782ada02ef69606805d2dd4402cb5518ee8dba06972c1c9d2af",
+        "currentAIReview": {
+          "registryId": "topics-history:history-paper",
+          "reviewedOn": "2026-10-18",
+          "status": "individually AI-counterchecked with actual current partial UI proof",
+          "proofs": {
+            "master-retained-history-with-navigation": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-with-navigation/report.json",
+              "sha256": "ea2f16ad69ae25286641e33fcd85abe564420ae46a24918507a9d376f6c7d40f",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "master-retained-history-native-offline": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-native-offline/report.json",
+              "sha256": "2adbaeb4a5e05026b8dd9327b526a5af19ff7f0beb261a8b41cff73b54d428d2",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            }
+          }
+        }
+      },
+      {
+        "id": "history-zero",
+        "learning": {
+          "starter": "Die Null kann bedeuten, dass nichts hinzukommt. In einer geschriebenen Zahl kann sie außerdem eine unbesetzte Stelle markieren.",
+          "observe": "Vergleiche im Lernbild erst 8 + 0 und dann die Zahlen 205 und 25. Was bleibt bei der Rechnung gleich? Warum verändert das Weglassen der Null in 205 die Bedeutung der 2?",
+          "benefit": "Du unterscheidest die Null als Zahl beim Rechnen von ihrer Aufgabe im Stellenwertsystem."
+        },
+        "questionFeedback": {
+          "hint": "Lege gedanklich acht Steine vor dich. Was verändert sich, wenn du keinen weiteren Stein dazulegst?",
+          "wrongReasons": [
+            null,
+            "Wenn zu acht Dingen nichts hinzukommt, verschwinden die acht Dinge nicht. Die Menge bleibt acht.",
+            "80 ist die Schreibweise für acht Zehner. Bei 8 + 0 wird nichts dazugelegt; das ist eine andere Handlung."
+          ]
+        },
+        "countercheck": "Addition und Stellenwert nicht gleichsetzen. Die heutigen Ziffern sind keine Handschrift von628. MacTutor24 belegt Jahr/Ort,30–31 die Additionsregel; historische falsche Division-durch-null-Aussagen45–50 ausdrücklich nicht übernommen. Freiwilliges Modell soll diese Unterscheidung bedienen; noch nicht integriert oder browsergeprüft.",
+        "hintCountercheck": "Vorhandenen individuellen Hinweis und alle weiteren Schritte unverändert behalten.",
+        "actualDataHash": "a410b562af753b505f4b1e01d6a2237a0956c3d8927b8f61b2db19e6cee1375a",
+        "currentAIReview": {
+          "registryId": "topics-history:history-zero",
+          "reviewedOn": "2026-10-18",
+          "status": "individually AI-counterchecked with actual current partial UI proof",
+          "proofs": {
+            "master-retained-history-with-navigation": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-with-navigation/report.json",
+              "sha256": "ea2f16ad69ae25286641e33fcd85abe564420ae46a24918507a9d376f6c7d40f",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "master-retained-history-native-offline": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-native-offline/report.json",
+              "sha256": "2adbaeb4a5e05026b8dd9327b526a5af19ff7f0beb261a8b41cff73b54d428d2",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            }
+          }
+        }
+      },
+      {
+        "id": "history-compass",
+        "learning": {
+          "starter": "Eine frei bewegliche magnetische Nadel richtet sich nach dem Magnetfeld aus. Das hilft bei der Richtung, auch wenn Sterne verdeckt sind.",
+          "observe": "Zeichne ein Schiff und ein Ziel. Markiere eine Nordrichtung. Warum sagt dir diese eine Richtung noch nicht, wie weit das Ziel entfernt ist oder welche Hindernisse auf dem Weg liegen?",
+          "benefit": "Du unterscheidest Richtung, Entfernung und Reiseweg und kannst die Grenze einer einzelnen Orientierungshilfe erklären."
+        },
+        "questionFeedback": {
+          "hint": "Stell dir ein Schiff vor, dessen Besatzung keine Sterne sehen kann. Welche Art von Orientierung könnte ein Kompass liefern?",
+          "wrongReasons": [
+            null,
+            "Eine magnetische Nadel zeigt eine Richtung an. Sie verändert weder die Wolken noch erzeugt sie Regen.",
+            "Beim Drucken werden Zeichen auf einen Untergrund übertragen. Eine Kompassnadel tut das nicht; ihre Bewegung liefert eine Richtungsinformation."
+          ]
+        },
+        "countercheck": "Den zu sicheren Übertragungsweg in der alten Ortsangabe qualifizieren; NGS34 nennt konkurrierende Deutungen. Feste Richtung an das Erdmagnetfeld und mögliche Störungen binden. Die bestehende Erfindungskarte und Buchbeziehungen wurden mitgelesen; dort bereits keine sichere Weitergaberoute. Nicht die2Karten als ein neues Thema zählen.",
+        "hintCountercheck": "Vorhandenen individuellen Hinweis und alle weiteren Schritte unverändert behalten.",
+        "proposedArticleCorrection": {
+          "paragraph0": "Seine frei bewegliche magnetische Nadel richtet sich nach dem Magnetfeld der Erde aus. Störungen in der Nähe können die Anzeige verändern.",
+          "where": "Frühe Navigation in China; der genaue Weg der Verbreitung nach Europa ist nicht sicher geklärt.",
+          "reason": "Tatsächlich geleseneZusatzquellen unterscheidenmagnetischeRichtung vonunveränderlicherRichtung undmehrerehistorischeÜbertragungsdeutungen. OriginaleForschungstexte alsfrühereBelege erhalten, aktuelleEinordnung separat ergänzen."
+        },
+        "actualDataHash": "3083cc039cc542dbb364f3e15dd9badffd2fd8de5453adda34ac10d63e152b7f",
+        "currentAIReview": {
+          "registryId": "topics-history:history-compass",
+          "reviewedOn": "2026-10-18",
+          "status": "individually AI-counterchecked with actual current partial UI proof",
+          "proofs": {
+            "master-retained-history-with-navigation": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-with-navigation/report.json",
+              "sha256": "ea2f16ad69ae25286641e33fcd85abe564420ae46a24918507a9d376f6c7d40f",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "master-retained-history-native-offline": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-native-offline/report.json",
+              "sha256": "2adbaeb4a5e05026b8dd9327b526a5af19ff7f0beb261a8b41cff73b54d428d2",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            }
+          }
+        }
+      },
+      {
+        "id": "history-medieval_cities",
+        "learning": {
+          "starter": "Auf einem mittelalterlichen Markt wurden Waren angeboten und gekauft. Handwerker stellten zum Beispiel Brot, Werkzeuge oder Gefäße her.",
+          "observe": "Überlege an einem Beispiel: Wer stellt eine Ware her, wer bringt sie zum Markt und wer kauft sie? Warum bedeutet ein Stadtrecht noch nicht, dass jede Person jeden Beruf ausüben durfte?",
+          "benefit": "Du verknüpfst Herstellung und Handel und prüfst, für wen ein Recht tatsächlich galt."
+        },
+        "questionFeedback": {
+          "hint": "Ein Markt ist ein Treffpunkt für Käufer und Verkäufer. Welche Dinge oder Tätigkeiten passen in eine Stadt des Mittelalters?",
+          "wrongReasons": [
+            null,
+            "Raumschiffe gehören zur modernen Raumfahrt. Die Frage betrifft Handel und Handwerk in einer Stadt des Mittelalters.",
+            "Ein WLAN-Router verbindet Geräte in einem Funknetz. Auf dem hier beschriebenen Markt begegneten Menschen dagegen Händlern und Handwerkern."
+          ]
+        },
+        "countercheck": "DHM89–92 bestätigt1160/Lübeck,100–107 erklären eingeschränkte Berufsrechte,121–124 Stadt/Hanse. Kein freier Zugang für alle oder jedes Handwerk an jeder Marktstelle behauptet. Grundartikel und konkrete alte Frage fachlich beibehalten; einfache Einstiegswahlen durch anspruchsvollere freie Begründung ergänzen.",
+        "hintCountercheck": "Vorhandenen individuellen Hinweis und alle weiteren Schritte unverändert behalten.",
+        "actualDataHash": "d1fb1aef5ad0d39c2b538f1c1a29cb0dd10c1592a1d910a1ab1d823a2347e4ab",
+        "currentAIReview": {
+          "registryId": "topics-history:history-medieval_cities",
+          "reviewedOn": "2026-10-18",
+          "status": "individually AI-counterchecked with actual current partial UI proof",
+          "proofs": {
+            "master-retained-history-with-navigation": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-with-navigation/report.json",
+              "sha256": "ea2f16ad69ae25286641e33fcd85abe564420ae46a24918507a9d376f6c7d40f",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "master-retained-history-native-offline": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-native-offline/report.json",
+              "sha256": "2adbaeb4a5e05026b8dd9327b526a5af19ff7f0beb261a8b41cff73b54d428d2",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            }
+          }
+        }
+      },
+      {
+        "id": "history-printing",
+        "learning": {
+          "starter": "Bewegliche Druckzeichen können nach einer Seite wieder neu zusammengesetzt werden. Schon vor Gutenberg wurden solche Zeichen in Ostasien verwendet.",
+          "observe": "Schreibe die Buchstaben A, M, A und L auf vier Zettel und ordne sie zu MALA und LAMA. Welche Zeichen kannst du erneut verwenden? Warum zeigt das Beispiel weder eine historische Druckmaschine noch den allerersten Druck?",
+          "benefit": "Du erklärst das Wiederverwenden von Zeichen und unterscheidest ein heutiges Lernbeispiel vom historischen Beleg."
+        },
+        "questionFeedback": {
+          "hint": "Gutenbergs Werkstatt war nicht der Anfang jeder Drucktechnik. Suche nach einer Region mit älteren Drucktraditionen.",
+          "wrongReasons": [
+            null,
+            "Gutenbergs Drucksystem war ein wichtiger europäischer Entwicklungsschritt. Frühere bewegliche Druckzeichen in China und Korea sind dadurch nicht ausgeschlossen.",
+            "Die gelesenen historischen Belege betreffen Werkstätten auf der Erde, unter anderem in China und Korea. Sie beschreiben keinen Buchdruck auf dem Mond."
+          ]
+        },
+        "countercheck": "Vier vorhandene Quellen tatsächlich gelesen: GutenbergErfindung31–41 erklärt wiederverwendbare Metalllettern/System,Zeitleiste55–63 Entwicklungum1450; vorGutenberg31–41 frühereAsienformen. UNESCO23–25:Jikji1377 ältester erhaltener Metalltypennachweis, nicht sicher ersteNutzung. Zeichenzettel sind nur eigenes Lernmodell, kein echterDruck und keine fremdeSchriftrekonstruktion. Die hier bewusst erfundenen Zeichenfolgen sind keine historischen Wörter.",
+        "hintCountercheck": "Vorhandenen individuellen Hinweis und alle weiteren Schritte unverändert behalten.",
+        "actualDataHash": "ea19ce4b7f753f4a160081de3e5bab2798e16133060902a35b81f6ce7d10a815",
+        "currentAIReview": {
+          "registryId": "topics-history:history-printing",
+          "reviewedOn": "2026-10-18",
+          "status": "individually AI-counterchecked with actual current partial UI proof",
+          "proofs": {
+            "master-retained-history-with-navigation": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-with-navigation/report.json",
+              "sha256": "ea2f16ad69ae25286641e33fcd85abe564420ae46a24918507a9d376f6c7d40f",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "master-retained-history-native-offline": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-native-offline/report.json",
+              "sha256": "2adbaeb4a5e05026b8dd9327b526a5af19ff7f0beb261a8b41cff73b54d428d2",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            }
+          }
+        }
+      },
+      {
+        "id": "history-voyages1492",
+        "learning": {
+          "starter": "Als europäische Schiffe 1492 die Karibik erreichten, lebten dort bereits Menschen mit eigenen Sprachen und Kulturen. Ihre Geschichte begann nicht mit dieser Ankunft.",
+          "observe": "Vergleiche zwei Sätze: „Für die Besatzung war die Insel neu“ und „Auf der Insel lebten schon Menschen“. Können beide stimmen? Welche Informationen fehlen, wenn ein Bericht nur die Sicht der Besatzung erzählt?",
+          "benefit": "Du erkennst die Perspektive eines Berichts und berücksichtigst die bereits dort lebenden Menschen."
+        },
+        "questionFeedback": {
+          "hint": "Überlege, ob die Ankunft einer Reisegruppe etwas über die ganze frühere Geschichte eines Ortes aussagt.",
+          "wrongReasons": [
+            null,
+            "Die Quelle beschreibt bereits bewohnte Inseln und bestehende Gemeinschaften. Dass die Besatzung einen Ort erstmals erreichte, bedeutet nicht, dass er vorher unbewohnt war.",
+            "Die Inseln und ihre Bewohner waren schon vorher da. Eine Ankunft von Schiffen lässt keine Insel entstehen."
+          ]
+        },
+        "countercheck": "NMAIInfinity9–11 bestätigt12Oktober1492/Guanahani und bestehendeGemeinschaften. NK3609–19 Folgen und fortbestehendeTaínoKulturen. Keine unnötige Gewaltbeschreibung, politische Forderung oder ungeprüfte Bevölkerungszahl übernehmen. Vorhandene sensitive:true und dadurch Challengeausschluss unbedingt erhalten. Ortsmarke bezeichnet ausdrücklichBahamasregion, keine sichere exakteLandestelle behauptet.",
+        "hintCountercheck": "Keine bestehendeChallengehilfe für dieses ausdrücklichsensibleThema. NeuerMini-Hinweis unterstützt Perspektivvergleich, sensibleMarkierung undChallengeausschluss bleiben erhalten.",
+        "actualDataHash": "b40b6aed67148ea0bfb40e6b55cca7b10cd8a135c86d6ef11289b7ce8b076a94",
+        "currentAIReview": {
+          "registryId": "topics-history:history-voyages1492",
+          "reviewedOn": "2026-10-18",
+          "status": "individually AI-counterchecked with actual current partial UI proof",
+          "proofs": {
+            "master-retained-history-with-navigation": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-with-navigation/report.json",
+              "sha256": "ea2f16ad69ae25286641e33fcd85abe564420ae46a24918507a9d376f6c7d40f",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "actual Chromium history partial proof; not full regression"
+            },
+            "master-retained-history-native-offline": {
+              "path": "/workspace/work/wk-continuation/master-retained-history-native-offline/report.json",
+              "sha256": "2adbaeb4a5e05026b8dd9327b526a5af19ff7f0beb261a8b41cff73b54d428d2",
+              "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+              "build": "267fae29861b3ab0",
+              "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+            }
+          }
+        }
+      }
+    ],
+    "actualSourceReads": [
+      {
+        "topic": "history-stone_tools",
+        "url": "https://www.nhm.ac.uk/discover/news/2023/february/oldest-remains-ancient-human-relative-paranthropus-suggest-possible-tool-use.html",
+        "anchor": "67–94, insbesondere87: Lomekwi/3,3Millionen; Oldowan/Nyayanga getrennt. Erster Abruf Timeout, anschließende tatsächliche Seite gelesen.",
+        "finding": "Der alte Datierungs-/Fundortbezug ist belegt. Kein Homo-sapiens-Hersteller oder genau bestimmter Erfindungstag ableiten."
+      },
+      {
+        "topic": "history-stone_tools",
+        "url": "https://news.stonybrook.edu/newsroom/press-release/general/150520stonetools",
+        "anchor": "52–56/64–69/74/80: Lomekwi3/nördlichesKenia, Herstellung scharferKanten, Datierung/Ungewissheit des Herstellers.",
+        "finding": "Primäre Darstellung des beteiligten Forschungsteams gelesen, keine Bilder oder Formulierungen kopieren. Benachbarter Homininenfund ist kein sicher identifizierter Werkzeughersteller."
+      },
+      {
+        "topic": "history-fire",
+        "url": "https://humanorigins.si.edu/evidence/behavior/hearths-shelters",
+        "anchor": "39: mindestens790000Jahre, Kochen/Nahrung und Zusammenkommen; weitergehende1,5Millionen ausdrücklich nur Forschungsannahme.",
+        "finding": "Mindestbeleg und erste Nutzung bleiben verschieden. Keine eigene Feuerherstellungsanleitung nötig; die Lernhandlung betrifft Zeitbelege."
+      },
+      {
+        "topic": "history-pyramids",
+        "url": "https://giza.fas.harvard.edu/commontopics/",
+        "anchor": "34–40/49: um2550v.Chr., Cheops/Khufu und königlicheGrabstätten; umgebendeGräber und Siedlung als weitereQuellen.",
+        "finding": "Zweck und Organisation des Baus als verschiedene Fragen erklären; keine ungeprüfte Arbeitersklaven- oder Außerirdischenbehauptung hinzufügen."
+      },
+      {
+        "topic": "history-paper",
+        "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29",
+        "anchor": "481–486, insbesondere482: Formen vonPapier bereits3.Jahrhundertv.Chr.;105n.Chr. Vorlage verbesserterSchreibpapierform amHof.484 Nutzung/Preis gegenüberSeide. DieseAbsätze tatsächlich gelesen, nicht den gesamtenFachartikel als gelesen ausgeben.",
+        "finding": "Alter Grundartikel mit überlieferterVerbesserung statt Alleinerfindung ist sachlich passend. Aktuelle richtigeErklärung 'verbesserte Erfahrungen und Verfahren' sprachlich präzisieren: Verfahren kann man verbessern, nicht hier die Erfahrungen.",
+        "limits": "Oxford-Cabinet-Abruf aktuell InternalError; Hunan-Seite wurde geladen, aber105 durch Find nicht bestätigt. Diese beiden URLs nicht als frisch erfolgreich nachgelesene Tatsachenbelege zählen."
+      },
+      {
+        "topic": "history-zero",
+        "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Brahmagupta/",
+        "anchor": "24:Jahr628/Bhillamala=Bhinmal;30–31:Additionnull;51:Stellenwert. Tatsächlich gelesen.",
+        "finding": "Historische Divisiondurchnull45–50 ist keine heutige Regel und wird ausdrücklich nicht übernommen."
+      },
+      {
+        "topic": "history-compass",
+        "url": "https://education.nationalgeographic.org/resource/compass/",
+        "anchor": "28–44 tatsächlich gelesen;34 verschiedeneDeutungen derWeitergabe/Unabhängigkeit;43 magnetisch≠geografisch.",
+        "finding": "Erhaltene alte Route als eineDeutung kennzeichnen, keine exakteÜbertragungslinie behaupten. Keine aktuellenPolgeschwindigkeiten übernehmen."
+      },
+      {
+        "topic": "history-compass",
+        "url": "https://www.usgs.gov/media/audio/how-does-compass-work",
+        "anchor": "Transkript31–34 tatsächlich gelesen.",
+        "finding": "Frei beweglicher Magnet richtet sich nachFeld, lokaleStörungen möglich. BestehendeErfindungskarte erklärt es bereits richtig."
+      },
+      {
+        "topic": "history-medieval_cities",
+        "url": "https://www.dhm.de/bildung/ida/mittelalter/stadt/",
+        "anchor": "89–92 Stadtrecht1160;100–107 Zunft-/Berufsbeschränkungen;121–124Hanse.",
+        "finding": "Grundartikelbezug richtig; unzulässige Verallgemeinerung zu ältesterStadt/Ur73 nichtübernehmen."
+      },
+      {
+        "topic": "history-printing",
+        "url": "https://www.gutenberg.de/erfindung/",
+        "anchor": "31–41 tatsächlicherSystem-/Guss-/Wiederverwendungstext gelesen.",
+        "finding": "BeweglicheMetalllettern undPresse alszusammenhängendesSystem, keine sichereweltweiteAlleinerfindung."
+      },
+      {
+        "topic": "history-printing",
+        "url": "https://www.gutenberg.de/zeit/zeitleiste_gutenberg",
+        "anchor": "55–63 tatsächlich gelesen.",
+        "finding": "Entwicklung undWerkstattum1450; keine exakteErfindungstagbehauptung."
+      },
+      {
+        "topic": "history-printing",
+        "url": "https://www.gutenberg.de/erfindung/vor_gutenberg",
+        "anchor": "31–41 tatsächlich gelesen.",
+        "finding": "ÄltereDrucktraditionenChina/Korea; sachfremdebreiteSchriftdatenbehauptungen derSeite nichtübernehmen."
+      },
+      {
+        "topic": "history-printing",
+        "url": "https://www.unesco.org/en/memory-world/baegun-hwasang-chorok-buljo-jikji-simche-yojeol-volii-second-volume-anthology-great-buddhist-priests?hub=915",
+        "anchor": "23–25 tatsächlich gelesen.",
+        "finding": "JikjiCheongju1377 ältester erhaltener Metalltypendruckbeleg, nicht identischmitgesichertallerersterNutzung."
+      },
+      {
+        "topic": "history-voyages1492",
+        "url": "https://americanindian.si.edu/exhibitions/infinityofnations/mesoamerica-caribbean.html",
+        "anchor": "9–11 tatsächlich gelesen.",
+        "finding": "12Oktober1492/Guanahani/Besiedlung undregionaleNetzwerke belegt."
+      },
+      {
+        "topic": "history-voyages1492",
+        "url": "https://americanindian.si.edu/nk360/informational/columbus-day-myths",
+        "anchor": "9–19 tatsächlich gelesen.",
+        "finding": "Perspektive/Versklavung/Landverlust undfortbestehendeKulturen; keine95Prozentbehauptung übernommen."
+      }
+    ],
+    "mediaReview": {
+      "nineExistingTopics": "Keine der neun Karten hat ein zugeordnetes Dritt-Foto im aktuellen world-photos-Bestand; vorhandene Kontext-/Quellenansichten erhalten. Nicht daraus eine allgemeine Medienfreigabe anderer Geschichte ableiten.",
+      "zeroLearningPicture": "Eigene heutige Punkte/Ziffern im vorbereiteten React-Lernbild, keine Manuskriptkopie; sichtbare Modellgrenze. Isolierte14Breiten/Schriftfälle und tatsächliches natives200% plus großeSchrift bestanden; noch keine integrierteProdukt-/Offline-/Passabnahme.",
+      "fixtureReport": "zero-preparation-fixture/report.json",
+      "nativeFixtureReport": "zero-preparation-fixture/native-report.json"
+    },
+    "specificConnections": [
+      {
+        "fromId": "history-compass",
+        "toId": "invention-compass",
+        "kind": "context",
+        "why": "Die historische Karte fragt nach früher Navigation; der Bauplan erklärt, wie eine magnetische Nadel heute eine Richtung liefern kann. Ein heutiger Bauplan belegt keinen bestimmten historischen Übertragungsweg.",
+        "existingRelatedBothDirections": true
+      },
+      {
+        "fromId": "history-pyramids",
+        "toId": "building-giza-pyramids",
+        "kind": "context",
+        "why": "Die historische Karte erklärt den Zweck als Königsgrab. Die Bauwerkskarte lässt dich die großen Anlagen und die Aufgaben ihrer Herstellung näher betrachten. Zweck und Bauorganisation sind verschiedene Fragen.",
+        "existingRelatedBothDirections": true
+      },
+      {
+        "fromId": "history-zero",
+        "toId": "person-al_khwarizmi",
+        "kind": "context",
+        "why": "Die Null und das Stellenwertsystem helfen beim Rechnen. Die Biografie von al-Chwarizmi zeigt einen anderen zeitlichen Zusammenhang der Rechen- und Algorithmengeschichte; das sind keine zeitgleichen Personen.",
+        "existingRelatedBothDirections": true
+      }
+    ],
+    "limits": "Unveränderte142/185/209Originalbanken, Lösungen, IDs/Positionen, sensible1492Markierung und ursprünglicheHinweise erhalten. Kein strukturelles oder fachliches Gesamtgrün aus dieserImplementierung.",
+    "proofs": {
+      "master-retained-history-with-navigation": {
+        "path": "/workspace/work/wk-continuation/master-retained-history-with-navigation/report.json",
+        "sha256": "ea2f16ad69ae25286641e33fcd85abe564420ae46a24918507a9d376f6c7d40f",
+        "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+        "build": "267fae29861b3ab0",
+        "scope": "actual Chromium history partial proof; not full regression"
+      },
+      "master-retained-history-native-offline": {
+        "path": "/workspace/work/wk-continuation/master-retained-history-native-offline/report.json",
+        "sha256": "2adbaeb4a5e05026b8dd9327b526a5af19ff7f0beb261a8b41cff73b54d428d2",
+        "sourceDigest": "44da939cddc1184e9d4191b51551f286f7fbc963b7b9c65c8a7181fa4b48b209",
+        "build": "267fae29861b3ab0",
+        "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+      }
+    },
+    "articleCorrections": [
+      {
+        "topic": "history-compass",
+        "before": {
+          "paragraph0": "Seine magnetische Nadel zeigt eine feste Richtung an.",
+          "where": "China; spätere Weitergabe über die islamische Welt nach Europa"
+        },
+        "after": {
+          "paragraph0": "Seine frei bewegliche magnetische Nadel richtet sich nach dem Magnetfeld der Erde aus. Störungen in der Nähe können die Anzeige verändern.",
+          "where": "Frühe Navigation in China; der genaue Weg der Verbreitung nach Europa ist nicht sicher geklärt."
+        },
+        "reason": "Actually readNGS34/43 andUSGS31–34 qualify the transmission route and physical needle direction; preserve original research/history records as historical evidence.",
+        "compatibility": "IDs, questions, solutions/positions, history date fields, location coordinates and passSchema3 unchanged."
+      }
+    ]
+  },
+  "earlyTechnicalProofBeforeRetainedHistoryRound20261018": {
+    "build": "a3b58eb6e952a2db",
+    "proofs": {
+      "master-retained-animals-final-history-targeted": {
+        "path": "/workspace/work/wk-continuation/master-retained-animals-final-history-targeted/report.json",
+        "sha256": "4b3d4693afa7d2d53acc70b006d9ec5385785d5fd41ae7f12da891fdddef4734",
+        "build": "a3b58eb6e952a2db",
+        "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+        "scope": "actual Chromium history partial proof; not full regression"
+      },
+      "master-retained-animals-final-history-native-offline": {
+        "path": "/workspace/work/wk-continuation/master-retained-animals-final-history-native-offline/report.json",
+        "sha256": "19a0a89d55c347e5695721515565f404f450b171b2dca61699a3665decc8fc1b",
+        "build": "a3b58eb6e952a2db",
+        "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+        "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+      },
+      "master-retained-animals-final-corrections": {
+        "path": "/workspace/work/wk-continuation/master-retained-animals-final-corrections/report.json",
+        "sha256": "ab7e8cd258ec13e94ab8e0fa6d0139a6812435dc760dec37d5b52043a9eae978",
+        "build": "a3b58eb6e952a2db",
+        "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+        "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+      }
+    },
+    "scope": "Tatsächliche neue Teilbelege, keine vollständige Endabnahme."
   }
 }

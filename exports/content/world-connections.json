@@ -1096,6 +1096,30 @@
       "why": "Baureste und Schrift sind unterschiedliche historische Quellen. Beide müssen im Zusammenhang gedeutet werden.",
       "kind": "context",
       "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "history-compass--invention-compass",
+      "fromId": "history-compass",
+      "toId": "invention-compass",
+      "kind": "context",
+      "why": "Die historische Karte fragt nach früher Navigation; der Bauplan erklärt, wie eine magnetische Nadel heute eine Richtung liefern kann. Ein heutiger Bauplan belegt keinen bestimmten historischen Übertragungsweg.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-pyramids--building-giza-pyramids",
+      "fromId": "history-pyramids",
+      "toId": "building-giza-pyramids",
+      "kind": "context",
+      "why": "Die historische Karte erklärt den Zweck als Königsgrab. Die Bauwerkskarte lässt dich die großen Anlagen und die Aufgaben ihrer Herstellung näher betrachten. Zweck und Bauorganisation sind verschiedene Fragen.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-zero--person-al_khwarizmi",
+      "fromId": "history-zero",
+      "toId": "person-al_khwarizmi",
+      "kind": "context",
+      "why": "Die Null und das Stellenwertsystem helfen beim Rechnen. Die Biografie von al-Chwarizmi zeigt einen anderen zeitlichen Zusammenhang der Rechen- und Algorithmengeschichte; das sind keine zeitgleichen Personen.",
+      "checkedAt": "2026-10-18"
     }
   ]
 }
