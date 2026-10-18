@@ -1,3 +1,4 @@
+import {retainedAnswerWordingFlow,offlineRetainedAnswerWording} from './retained-answer-wording.mjs';
 import {worldPhotoFlow,offlineWorldPhotos} from './world-photos.mjs';
 import {journeySourceView,sourceRouteInputFlow} from './journey-sources.mjs';
 import {exerciseSolar} from './solar-comparison.mjs';
@@ -36,14 +37,19 @@ export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='n
   const titleInk=await p.locator('#world-topic-title').evaluate(e=>{const range=document.createRange();range.selectNodeContents(e);return [...range.getClientRects()].map(r=>({left:r.left,right:r.right}));});
   assert.ok(titleInk.every(r=>r.left>=-2&&r.right<=width+2),'new animal title remains fully visible');
 
-  const topic=topics.find(t=>t.id===data.id),measure=p.locator('.animal-measure');
-  const weight=['g','kg'].includes(topic.animal.size.unit);await measure.getByRole('heading',{name:weight?'Ein Gefühl für das Gewicht':'Ein Gefühl für die Größe',exact:true}).waitFor();
-  const compare=measure.getByRole('button',{name:weight?'Einen Gewichtsvergleich zeigen':'Einen Größenvergleich zeigen',exact:true});if(await compare.getAttribute('aria-expanded')!=='true')await compare.click();
-  assert.ok((await measure.innerText()).includes(topic.animal.size.measurement_de));await geometry(measure,data.id+' exact measurement direction '+width);
-  if(topic.animal.size.kind==='upper-bound')assert.ok((await measure.innerText()).includes('keinen Mindestwert'));
+
 
   if(shots&&[320,390,1440].includes(width)&&state==='normal')await visual.screenshot({path:path.join(shots,'animal-new-'+data.id.slice(7)+'-'+width+'.png'),animations:'disabled'});
  }
+
+ const topic=topics.find(t=>t.id===data.id),measure=p.locator('.animal-measure');
+ const weight=['g','kg'].includes(topic.animal.size.unit);await measure.getByRole('heading',{name:weight?'Ein Gefühl für das Gewicht':'Ein Gefühl für die Größe',exact:true}).waitFor();
+ const compare=measure.getByRole('button',{name:weight?'Einen Gewichtsvergleich zeigen':'Einen Größenvergleich zeigen',exact:true});if(await compare.getAttribute('aria-expanded')!=='true')await compare.click();
+ assert.ok((await measure.innerText()).includes(topic.animal.size.measurement_de));await geometry(measure,data.id+' exact measurement direction '+width);
+ if(topic.animal.size.kind==='upper-bound')assert.ok((await measure.innerText()).includes('keinen Mindestwert'));
+ await measure.getByText(topic.animal.size.measurement_de+': '+topic.animal.size.text_de,{exact:true}).waitFor();assert.equal(await measure.locator('.measure-bars strong').first().innerText(),(topic.animal.size.kind==='typical'?'etwa':'bis etwa')+' '+topic.animal.size.max.toLocaleString('de-DE',{maximumFractionDigits:3})+' '+topic.animal.size.unit);
+ const sources=p.locator('.world-sources');if(!await sources.evaluate(e=>e.open))await sources.locator('summary').click();await sources.getByRole('link').first().waitFor();assert.deepEqual(await sources.getByRole('link').evaluateAll(links=>links.map(a=>a.getAttribute('href'))),data.sourceUrls,'all actual old/new article sources remain exact');
+ if(shots&&data.id==='animal-jaguar'&&[320,1440].includes(width)&&state==='normal')await measure.screenshot({path:path.join(shots,'animal-jaguar-corrected-measure-'+width+'.png'),animations:'disabled'});
 
  const levels=root.locator('.animal-inquiry-levels button');
  for(let level=0;level<3;level++){
@@ -60,7 +66,7 @@ export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='n
   await geometry(root,data.id+' '+width+' level'+level);
   if(shots&&data.id==='animal-whale-shark')await root.screenshot({path:path.join(shots,'animal-workshop-'+state+'-'+level+'-'+width+'.png'),animations:'disabled'});
  }
- return {id:data.id,width,state,levels:[0,1,2],bothEvidence:true,wrongAndCorrect:true,keyboard,geometry:true};
+ return {id:data.id,width,state,levels:[0,1,2],bothEvidence:true,wrongAndCorrect:true,keyboard,geometry:true,measurement:true,sourceLinks:true};
 }
 export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix=widths}={}){
  const observed=[],focusChecks=[],start=performance.now(),searchFocus=await delayedSearchFocus(browser,base,monitor,shots);
@@ -90,6 +96,9 @@ export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix
  await animalNavigation(browser,base,ready,monitor,shots);
  report.animalCoverage={observed,focusChecks,searchFocus,seconds:(performance.now()-start)/1000,oldSessionsPreserved:true,largeText:true,axe:true,independentAcceptance:false,navigation:true};
  await worldPhotoFlow(browser,base,ready,monitor,report,shots);
+ report.animalCoverage.photoMetadata=report.photoMetadata;
+ await retainedAnswerWordingFlow(browser,base,ready,monitor,report,shots);
+ report.animalCoverage.answerWordingCompatibility=report.answerWordingCompatibility;
  report.checks.push('48 animal cards (24 retained and24 new): individual evidence, three voluntary thinking paths,96 reasoning tasks, wrong/correct feedback, keyboard, large text, axe and old/new session reload at'+matrix.join('/'));
 }
 export async function animalNativeZoom(chromium,options,base,report,shots){
@@ -97,7 +106,7 @@ export async function animalNativeZoom(chromium,options,base,report,shots){
  const c=await chromium.launchPersistentContext(profile,{...options,...(!options.executablePath?{channel:'chromium'}:{}),viewport:{width:1280,height:900},deviceScaleFactor:1,reducedMotion:'reduce'}),p=c.pages()[0];
  try{await p.bringToFront();await p.goto(base+'#world/topic/'+DATA.entries[0].id);await p.locator('.world-mini-question').waitFor();const dimensions=await p.evaluate(()=>({cssWidth:innerWidth,scale:devicePixelRatio}));assert.deepEqual(dimensions,{cssWidth:640,scale:2});await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));const observed=[];for(const data of DATA.entries)observed.push(await exerciseAnimal(p,data,{width:640,keyboard:true,state:'large'}));const solarCaptures=[];report.solarNativeCoverage={observed:await exerciseSolar(p,{width:640,state:'large',shots,capture:async file=>{const shot=await captureNativeViewport(p,file);solarCaptures.push(shot);return shot;}}),percent:200,cssWidth:640,scale:2,captures:solarCaptures};await p.evaluate(id=>location.hash='world/topic/'+id,DATA.entries.at(-1).id);await p.locator('.animal-inquiry').locator(':scope > summary').click();await p.locator('.animal-inquiry').scrollIntoViewIfNeeded();const screenshot=await captureNativeViewport(p,shots+'/animal-native-200-large-640.png');report.animalNativeZoom={...dimensions,percent:200,screenshot,cards:DATA.entries.length,observed};}finally{await c.close();}
 }
-export async function offlineAnimals(p,report){const observed=[];for(const data of DATA.entries)observed.push(await exerciseAnimal(p,data,{width:1280,keyboard:true,state:'offline'}));await offlineWorldPhotos(p,report);report.animalOffline={cards:DATA.entries.length,coldRestart:true,observed};report.checks.push('All48 animal workshops usable after real server shutdown and cold offline browser restart');}
+export async function offlineAnimals(p,report){const observed=[];for(const data of DATA.entries)observed.push(await exerciseAnimal(p,data,{width:1280,keyboard:true,state:'offline'}));await offlineWorldPhotos(p,report);await offlineRetainedAnswerWording(p,report);report.animalOffline={cards:DATA.entries.length,coldRestart:true,observed};report.checks.push('All48 animal workshops usable after real server shutdown and cold offline browser restart');}
 
 export async function animalNavigation(browser,base,ready,monitor,shots){
  const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await c.newPage(),engine=browser.browserType().name();monitor(p);let current='initial',stage='home';

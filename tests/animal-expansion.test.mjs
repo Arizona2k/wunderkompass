@@ -1,3 +1,5 @@
+import {historicalQuestionBank} from '../scripts/world-question-index.mjs';
+import corrections from '../content/editorial-reviews.json' with {type:'json'};
 import {CHALLENGE_BANK as questions} from '../app/knowledge-challenge.ts';
 import inquiries from '../app/animal-inquiries.json' with {type:'json'};
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {createHash} from 'node:crypto';
@@ -41,7 +43,7 @@ test('each addition has an explained reciprocal edge without unfinished external
  const eel=review.entries.find(e=>e.id==='animal-european-eel');assert.ok(eel.previousSourceAccessLimit.includes('blocked'));assert.equal(eel.primarySourceRead.access,'relevant-primary-passages-read');assert.equal(eel.primarySourceRead.independentReview,false);assert.match(eel.primarySourceRead.url,/^https:\/\/backend\.orbit\.dtu\.dk\//);assert.ok(eel.primarySourceRead.correction.doi);
 });
 
-test('the exact142 original target questions/choices/hints stay unchanged;24 actual new species add24 questions',()=>{
- const old=JSON.parse(fs.readFileSync('tests/fixtures/retained-challenge-bank.json','utf8'));assert.equal(old.questions.length,142);assert.equal(questions.length,166);assert.deepEqual(questions.slice(0,142),old.questions);assert.equal(review.retainedQuestionBank.count,185,'historic master bank retained under its original scope');
+test('the original142 target questions/hints remain exact except one explicitly compatible wrong-answer grammar alias;24 actual new species add24 questions',()=>{
+ const old=JSON.parse(fs.readFileSync('tests/fixtures/retained-challenge-bank.json','utf8'));assert.equal(old.questions.length,142);assert.equal(questions.length,166);assert.equal(corrections.questionCorrections.length,1);assert.deepEqual(historicalQuestionBank(questions.slice(0,142),corrections.questionCorrections),old.questions);assert.equal(review.retainedQuestionBank.count,185,'historic master bank retained under its original scope');
  for(const e of review.entries){const t=catalog.find(t=>t.id===e.id);assert.equal(t.questionFeedback.wrongReasons.length,3);assert.equal(t.questionFeedback.wrongReasons[t.question.correct],null);assert.equal(t.image,undefined);assert.ok(t.questionFeedback.hint.length>=45);}
 });
