@@ -383,6 +383,7 @@ export const LAB_FEEDBACK_COPY:UpdateCopy={
  benefit:'Du bekommst einen konkreten Anhaltspunkt zum Weiterdenken. Familien können Missverständnisse gemeinsam am vertrauten Modell untersuchen.',links:[{label:'Forscherlabor',hash:'labs'}]
 };
 const TEST_COPY:Record<number,UpdateCopy> = {
+ 38:LAB_FEEDBACK_COPY,
  35:JOURNEY_SOURCE_COPY,
  33:ANIMAL_SOLAR_COPY,
  32:JOURNEY_SUPPORT_COPY,
@@ -794,7 +795,7 @@ const PREPARED_JOURNEYS:UpdateEntry={...JOURNEY_COPY,version:'Paket 3',channel:'
 
 const PREPARED_LAB_FEEDBACK:UpdateEntry={...LAB_FEEDBACK_COPY,version:'Labor-Rückmeldungen',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{file:'content/research-editorial-review.json',revision:'prepared',quote:'Eigener Labor-Lieferabschnitt; noch kein bestätigter Merge oder Bereitstellungsnachweis.'}};
 const PREPARED_JOURNEY_SOURCES:UpdateEntry={...JOURNEY_SOURCE_COPY,version:'Lesbare Quellen',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{file:'CHANGELOG.md',revision:'prepared',quote:'Lesbare und leichter antippbare Quellenlinks; noch kein bestätigter Merge oder Vercel-Erfolg.'}};
-export const PREPARED_UPDATES:UpdateEntry[]=[PREPARED_LAB_FEEDBACK,...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SOURCES.id)?[PREPARED_JOURNEY_SOURCES]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_ANIMAL_SOLAR.id)?[PREPARED_ANIMAL_SOLAR]:[]),...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SUPPORT.id)?[PREPARED_JOURNEY_SUPPORT]:[])];
+export const PREPARED_UPDATES:UpdateEntry[]=[...(!TEST_UPDATES.some(e=>e.id===PREPARED_LAB_FEEDBACK.id)?[PREPARED_LAB_FEEDBACK]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SOURCES.id)?[PREPARED_JOURNEY_SOURCES]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_ANIMAL_SOLAR.id)?[PREPARED_ANIMAL_SOLAR]:[]),...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SUPPORT.id)?[PREPARED_JOURNEY_SUPPORT]:[])];
 export const updateLabel=(entry:UpdateEntry)=>entry.channel==='sites'?`Frühere Website · Version ${entry.version}`:entry.status==='prepared'?'In Vorbereitung · noch nicht verfügbar':'Testversion · verfügbar';
 const updateDay=(entry:UpdateEntry)=>entry.availableOn??entry.publishedOn??entry.confirmedOn;
 export function publicUpdates(entries:readonly UpdateEntry[]=UPDATE_HISTORY){
