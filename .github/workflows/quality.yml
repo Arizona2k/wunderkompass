@@ -73,8 +73,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/release/quality-context.cjs verify
-      - name: Read-only original news-source readiness report
-        run: node scripts/news/readiness.mjs --ci-report
       - name: Prepare bounded review evidence
         if: always()
         run: node scripts/review-evidence.mjs

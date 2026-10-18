@@ -28,3 +28,10 @@ test('dossiers reject unsupported claims, unknown rights, stale UI and duplicate
  for(const change of [x=>x.claims[0].sourceId='missing',x=>x.sources[0].rightsBasis='',x=>x.sources[0].checkedOn='2026-02-31',x=>x.reviewedOn='invalid',x=>x.ui.build='old',x=>x.ui.offline=false,x=>x.dataHash='old',x=>x.ageLevels['6-8']='',x=>x.links=['missing']]){const bad=structuredClone(d);change(bad);assert.equal(validateDossier(bad,record,options).structurallyReady,false);}
  assert.throws(()=>editorialReport(inventory,[d,d],options),/Duplicate/);
 });
+
+test('user removal retires only the six exact frozen news identities; every remaining legacy identity stays required',()=>{
+ const retired=baseline.records.filter(r=>r.id.startsWith('news:')||r.id==='surfaces:news'||r.id==='updates:news-engineering-2c');assert.equal(retired.length,6);
+ for(const r of retired)assert.equal(inventory.records.some(x=>x.id===r.id),false);
+ assert.doesNotThrow(()=>compareBaseline(inventory,baseline));
+ for(const id of ['journeys:ocean',baseline.records.find(r=>r.family==='words').id,'surfaces:home'])assert.throws(()=>compareBaseline({...inventory,records:inventory.records.filter(r=>r.id!==id)},baseline),/Lost legacy/);
+});

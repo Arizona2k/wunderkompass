@@ -1,6 +1,6 @@
 /** Sites publications and deployed test updates have distinct evidence and labels.
  * A merge alone never establishes availability; prepared work stays separate. */
-export type UpdateCategory='Neue Inhalte'|'Spielen und Lernen'|'Einfachere Bedienung'|'Fehler behoben'|'Anschaulicher erklärt'|'Bereitstellung'|'Nachrichten verstehen';
+export type UpdateCategory='Neue Inhalte'|'Spielen und Lernen'|'Einfachere Bedienung'|'Fehler behoben'|'Anschaulicher erklärt'|'Bereitstellung';
 export type UpdateEntry = {
  category:UpdateCategory;
  id:string; version:string; channel:'sites'|'vercel-test'; status:'publication-confirmed'|'test-available'|'prepared';
@@ -702,8 +702,8 @@ const TEST_COPY:Record<number,UpdateCopy> = {
    "In allen elf Laboren lassen sich zwei Beobachtungen festhalten, Bedingungen vergleichen und eigene Erklärungen im vorhandenen Entdeckerpass sichern.",
    "Jahreszeiten zeigen Tageslänge und Sonnenstand; das Mondmodell erklärt Bahnknoten und Finsternis-Ausrichtungen, Gezeitenkurven vergleichen Mond- und Sonnenbeiträge. Alle drei benennen ihre Modellgrenzen.",
    "Sechs praktische Versuche erhalten sichere Vergleichsaufgaben; bestehende Globusmissionen führen auf Wunsch in ein passendes Labor.",
-   "Die Suche öffnet sofort und findet auch Labore, praktische Versuche und Nachrichten. Acht erklärte Wissensspuren bieten passende konkrete Aktivitäten und Rückwege.",
-   "Die Nachrichten zeigen Quellen, ihren tatsächlichen Stand und ältere Ausgaben im Archiv. Der tägliche automatische Nachrichtenbetrieb ist damit noch nicht eingeschaltet."
+   "Die Suche öffnet sofort und findet auch Labore und praktische Versuche. Acht erklärte Wissensspuren bieten passende konkrete Aktivitäten und Rückwege.",
+   "Die sicheren Vergleichsaufgaben und erklärten Wissenswege lassen sich zusammen mit den vorhandenen Lernständen weiter nutzen."
   ],
   "benefit": "Du kannst eine Vermutung selbst prüfen und dein Ergebnis erklären. Familien finden passende gemeinsame Versuche und behalten ihre bisherigen Lernstände; Sicherheitshinweise gehören zu jedem praktischen Versuch.",
   "links": [
@@ -711,31 +711,7 @@ const TEST_COPY:Record<number,UpdateCopy> = {
     "label": "Forscherlabor",
     "hash": "labs"
    },
-   {
-    "label": "Nachrichten & Quellen",
-    "hash": "news"
-   }
-  ]
- },
- "24": {
-  "id": "news-engineering-2c",
-  "icon": "📰",
-  "category": "Nachrichten verstehen",
-  "title": "Nachrichten mit nachvollziehbarem Prüfstand",
-  "summary": "Bei Nachrichten erkennst du, ob sie automatisch mit Quelldaten abgeglichen wurden oder eine quellenbasierte Erklärung sind. Neue signierte Ausgaben lassen sich nachladen; der tägliche automatische Betrieb ist noch nicht aktiv.",
-  "details": [
-   "Wenn du zum Nachrichtenbereich zurückkehrst, wieder online bist oder die Lernwelt länger geöffnet lässt, kann sie nach neuen Ausgaben suchen.",
-   "Nur Ausgaben mit gültigem Herkunftsnachweis werden übernommen. Ohne Internet bleibt die letzte gültige Ausgabe lesbar.",
-   "Ein neues eigenständiges Ereignis darf ausgewählt werden. Dieselbe Meldung mit einem anderen Datum zählt nicht als neue Nachricht.",
-   "Die Vorbereitung nutzt Daten zur Erdbeobachtung und zu Planeten außerhalb unseres Sonnensystems. Andere Themen benötigen weitere geeignete Quellen.",
-   "Die automatische tägliche Veröffentlichung braucht noch einen vollständig eingerichteten und geprüften Betrieb. Bis dahin bleibt sie ausgeschaltet."
-  ],
-  "benefit": "Du kannst die Herkunft einer Meldung und ihren Prüfstand nachvollziehen. Automatischer Quellenabgleich bedeutet keine menschliche Einzelprüfung; bei einer Verbindungsunterbrechung bleibt die letzte gültige Ausgabe verfügbar.",
-  "links": [
-   {
-    "label": "Kindernachrichten",
-    "hash": "news"
-   }
+
   ]
  },
  "25": {
