@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Dürre",
+  "learning": {
+    "starter": "Eine Dürre ist mehr als ein Tag ohne Regen. Über längere Zeit fehlt Wasser im Vergleich zu den üblichen Bedingungen einer Gegend.",
+    "deeper": "Wenig Niederschlag kann Böden austrocknen und Abfluss oder Wasserstände verringern. Für eine Bewertung müssen Ort, Zeitraum und Vergleich betrachtet werden. Es gibt keine einzige Zahl von Regentagen, die überall jede Form von Dürre bestimmt.",
+    "observe": "Zeichne zwei gedachte Monatslisten: normalerweise vier Regentage, diesmal zwei. Welche Angaben fehlen, bevor du die Wasserlage beurteilen kannst? Frage nach Regenmengen, Boden und Zeitraum. Die erfundenen Listen sind keine Wetterdaten oder Warnung für deinen Wohnort.",
+    "benefit": "Du unterscheidest einen trockenen Tag von einer längerfristigen Wasserknappheit und fragst nach dem passenden Vergleich.",
+    "topic": "science-water-cycle",
+    "connection": "Die Wasserkreislaufkarte verbindet Speicher und Austausch. Vergleiche mehr als einen Regentag: Boden, Wasserstände und längere Zeiträume gehören zur Wasserlage.",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/faqs/what-causes-drought",
+        "title": "U.S. Geological Survey · Dürre (Englisch)",
+        "anchor": "USGS FAQ opening definition and soil/stream/reservoir effects. Source old regional precipitation totals and stable-mean claim not adopted; own fictitious incomplete-rain-count exercise.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Ökosystem",
+        "reason": "Längerfristige Wasserknappheit betrifft Bedingungen für Lebewesen und ihre Umgebung. Eine Wasserlage lässt sich nicht aus einem einzelnen trockenen Tag ableiten."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Beobachtung beschreibt nur das Wetter eines einzelnen Tages?",
+      "answers": [
+        "Messungen über mehrere Monate",
+        "Ein einzelner Tag ohne Regen",
+        "Ein Vergleich mehrjähriger Bedingungen"
+      ],
+      "correct": 1,
+      "hint": "Der Zeitraum und die örtliche Wasserlage gehören zur Bewertung.",
+      "why": "Ein Tag ohne Regen beschreibt nur diesen einen Tag. Für eine Dürrebewertung sind längerfristige Bedingungen und Wasserprobleme im örtlichen Vergleich wichtig.",
+      "wrongReasons": [
+        "Eine mehrmonatige Messreihe beschreibt einen längeren Zeitraum als einen einzelnen Tag.",
+        "",
+        "Der Vergleich mehrjähriger Bedingungen geht über das Wetter eines einzelnen Tages hinaus."
+      ]
+    }
+  }
+}

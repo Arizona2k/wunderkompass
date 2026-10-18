@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "term": "Hotspot",
+  "learning": {
+    "starter": "Ein Hotspot kann mit Vulkanen über einem besonders heißen Mantelbereich zusammenhängen. Er ist nicht dasselbe wie jede Plattengrenze.",
+    "deeper": "Vulkanismus kann auch innerhalb einer Platte auftreten. Ein markierter heißer Bereich und die Bewegung einer Platte sind unterschiedliche Modellteile. Das Gedankenbild beweist weder einen echten Schmelzort noch einen sicheren kommenden Ausbruch.",
+    "observe": "Zeichne eine gedachte Platte mit Bewegungsrichtung und eine getrennte Markierung für einen heißen Bereich darunter. Beschrifte beide als vereinfachte Annahmen, nicht als aktuelle Vulkanüberwachung.",
+    "benefit": "Du trennst Plattenbewegung und einen örtlichen Vulkanismus-Zusammenhang.",
+    "connection": "Das Plattenlabor untersucht gedachte Bewegungen. Die zusätzliche Hotspotmarkierung ergänzt Vulkanismus innerhalb einer Platte und ist keine echte Ortsvorhersage.",
+    "lab": "plates",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/faqs/how-hot-yellowstone",
+        "title": "USGS · Hotspot",
+        "anchor": "Abschnitt zum heißen Material unter Yellowstone. Das Beispiel ist keine allgemeine Regel für jede Plattengrenze oder eine Ausbruchsvorhersage.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was ist eine falsche Gleichsetzung?",
+      "answers": [
+        "Jeder Hotspot ist automatisch jede Plattengrenze",
+        "Die Zeichnung enthält verschiedene Modellteile",
+        "Die gezeichnete Platte hat eine gedachte Bewegungsrichtung"
+      ],
+      "correct": 0,
+      "hint": "Ein örtlich markierter Bereich definiert nicht die Grenzen aller Platten.",
+      "why": "Hotspot und Plattengrenze sind verschiedene Begriffe. Ein Gebiet kann innerhalb einer Platte liegen.",
+      "wrongReasons": [
+        "",
+        "Die beschrifteten Teile dürfen im Modell getrennt werden.",
+        "Ein Bewegungspfeil darf eine gedachte Richtung angeben, solange er keine Messung vortäuscht."
+      ]
+    }
+  }
+}

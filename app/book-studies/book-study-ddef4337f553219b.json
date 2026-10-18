@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "term": "Streuung",
+  "learning": {
+    "starter": "Licht kann nach einer Begegnung mit Teilchen in viele Richtungen weiterlaufen. Darum kommt Himmelslicht nicht nur direkt von der Sonne.",
+    "deeper": "Kurzwelliges sichtbares Licht wird an kleinen Luftteilchen stärker gestreut als langwelliges. Für die wahrgenommene Himmelsfarbe gehören auch das Sonnenlicht und unsere Augen zur Erklärung; Wolken sind kein blaues Farbpulver.",
+    "observe": "Zeichne einen ankommenden Pfeil und mehrere abgehende Pfeile an einem gedachten Punkt. Vergleiche mit nur einem zurückgehenden Spiegelpfeil. Diese eigene Skizze zeigt Richtungen, keine wirklichen Luftmoleküle oder Anteile.",
+    "benefit": "Du kannst Licht in viele Richtungen von einer geordneten Spiegelung unterscheiden.",
+    "connection": "Die Atmosphärenkarte erklärt die Gashülle. Lichtstreuung beschreibt eine Wechselwirkung darin, nicht die Farbe eines festen Anstrichs.",
+    "topic": "science-atmosphere",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/ems/03_behaviors/",
+        "title": "NASA · Licht und Materie",
+        "anchor": "Reflection, Absorption, Scatter, Refraction selected scientific paragraphs; no source illustrations, city-temperature numbers or universal absorption-to-heat claims.",
+        "updatedOn": "2023-08-03",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was veranschaulichen mehrere abgehende Pfeile in der Streuskizze?",
+      "answers": [
+        "Verschiedene Ausbreitungsrichtungen",
+        "Die Zahl echter Luftmoleküle",
+        "Einen Beweis, dass Luft blaues Farbpulver enthält"
+      ],
+      "correct": 0,
+      "hint": "Die Pfeile stehen für Wege; sie sind keine gezählten Teilchen.",
+      "why": "Die Skizze zeigt verteilte Richtungen. Sie misst weder die Zahl von Molekülen noch die wirkliche Lichtstärke.",
+      "wrongReasons": [
+        "",
+        "Pfeile und Moleküle sind verschiedene Modellzeichen. Die Skizze zählt keine echten Teilchen.",
+        "Die Himmelsfarbe entsteht durch Licht und seine Wechselwirkung, nicht durch blaues Farbpulver in der Luft."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum ist der Himmel blau?",
+        "reason": "Die Atmosphärenkarte zeigt die Lufthülle und ihre Schichten. Wie Licht darin seine Richtung ändert, kannst du zusätzlich bei „Streuung“ nachlesen."
+      },
+      {
+        "question": "Warum ist ein Sonnenuntergang oft rot?",
+        "reason": "Die Atmosphärenkarte ordnet die Luft um die Erde ein. Vergleiche zusätzlich bei „Streuung“ den direkten Weg des Sonnenlichts mit seitlich abgelenktem Licht."
+      }
+    ]
+  }
+}

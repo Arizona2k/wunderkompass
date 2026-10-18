@@ -1,0 +1,41 @@
+.book-study{margin:16px 0;border-top:1px solid #dce7eb;padding-top:10px;color:#294e5d;min-width:0}
+.book-study>.learning-details,.book-study>.book-connection{margin-top:16px;padding-top:10px;border-top:1px solid #e2eaed}
+.book-study summary{padding:9px 0;line-height:1.55;font-weight:650;cursor:pointer;min-height:44px;overflow-wrap:anywhere}
+.book-study p,.book-study li{font-size:1em;line-height:1.7;overflow-wrap:anywhere;margin:12px 0}
+.book-study h4{font-size:1.08em;font-weight:700;line-height:1.55;overflow-wrap:anywhere;margin-bottom:12px}
+.book-study .quiz-answers{display:grid;gap:10px;margin-top:12px}
+.book-study .quiz-answer{min-height:44px;white-space:normal;font-size:1em;line-height:1.55;text-align:left;overflow-wrap:anywhere}
+.book-study p.book-feedback{background:#edf4f7;border-radius:10px;padding:12px;color:#244b5b}
+.book-thinking,.book-measure{margin:20px 0;padding-top:16px;border-top:1px solid #dce7eb;min-width:0}
+.book-measure label{display:block;font-size:1em;line-height:1.65;overflow-wrap:anywhere}
+.book-measure input{display:block;width:100%;min-height:44px;margin:8px 0}
+.book-measure svg{display:block;width:100%;height:auto;margin-top:12px}
+.book-measure-start{display:flex;gap:8px;flex-wrap:wrap}
+.book-model-key{font-size:1em;line-height:1.65;padding:10px 0;overflow-wrap:anywhere}
+.book-topic-link{display:flex;align-items:center;min-height:44px;padding:8px 0;line-height:1.65;white-space:normal;overflow-wrap:anywhere}
+.book-study ul{padding-left:20px}
+.book-study li a{display:inline-block;min-height:44px;padding:8px 0}
+.book-study [aria-pressed=true]{border-color:#496b7b;background:#e7f0f4}
+.word-card:has(.book-study) h3{overflow-wrap:anywhere;hyphens:auto}
+.book-word-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;padding-top:10px;border-top:1px solid #e2eaed}
+.book-word-actions .speech-button{min-height:44px;white-space:normal;text-align:left}
+.book-entities{margin:18px 0;padding-top:12px;border-top:1px solid #dce7eb}
+.book-entities svg{display:block;width:100%;height:auto}
+.book-entities figcaption{font-size:1em;line-height:1.7;overflow-wrap:anywhere}
+.book-groundwater{container-type:inline-size;width:100%;margin:1.25rem 0;padding:1rem;border:1px solid #ccdcdf;border-radius:1rem;background:#f7faf8}
+.book-groundwater h4{font-size:1.2rem;line-height:1.5}
+.book-groundwater-panels{display:grid;gap:1rem}
+.book-groundwater-panels>div{min-width:0}
+.book-groundwater-panels p{font-size:1rem;line-height:1.6}
+.book-groundwater svg{display:block;width:100%;height:auto;max-width:24rem;margin-inline:auto}
+.book-groundwater figcaption{font-size:1rem;line-height:1.7;margin-top:1rem}
+.large-reading .book-groundwater figcaption{font-size:1.15rem}
+@container(min-width:640px){.book-groundwater-panels{grid-template-columns:1fr 1fr}}
+
+.word-grid:has(>.word-card:only-child){grid-template-columns:minmax(0,1fr);max-width:42rem}
+.book-measure input{accent-color:#245d70}
+.book-world-links{margin-top:20px;padding-top:12px;border-top:1px solid #dce7eb}
+.book-world-links summary{min-height:44px;padding:10px 0;line-height:1.6;cursor:pointer}
+.book-world-links ul{list-style:none;padding:0;margin:12px 0}
+.book-world-links li{padding:14px 0;border-top:1px solid #e2eaed}
+.book-world-links p{font-size:1em;line-height:1.7}

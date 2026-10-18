@@ -1,9 +1,35 @@
+import retainedReviewRequirements from './fixtures/retained-review-requirements.json' with {type:'json'};
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import os from 'node:os';import path from 'node:path';
-import {REVIEW_LIMIT,reviewStorage,retainScreenshot,requiredScreenshots,prepareReview} from '../scripts/review-evidence.mjs';
+import {retainScreenshot,requiredScreenshots,prepareReview,REVIEW_LIMIT,reviewStorage} from '../scripts/review-evidence.mjs';
+import {sourceDigest} from '../scripts/handoff.mjs';
+import {createHash} from 'node:crypto';
+test('review-only ceiling is decimal150MB, inclusive, fail-closed and never a storage target',()=>{
+ assert.equal(REVIEW_LIMIT,150_000_000);
+ assert.equal(reviewStorage([],150_000_000).withinBudget,true);
+ assert.equal(reviewStorage([],150_000_001).withinBudget,false);
+ for(const bytes of [NaN,Infinity,-1,1.5])assert.equal(reviewStorage([],bytes).withinBudget,false);
+ const small=reviewStorage([],50_000_000);assert.equal(small.retainedBytes,50_000_000);assert.equal(small.reserveBytes,100_000_000);
+});
+test('byte-identical states keep their filenames/checksums; comparisons require the same full capture matrix',()=>{
+ const captures=[{file:'quality-focus-320.png',sha256:'a'.repeat(64),bytes:100,retained:true},{file:'quality-offline-320.png',sha256:'a'.repeat(64),bytes:100,retained:true},{file:'quality-ordinary-390.png',sha256:'a'.repeat(64),bytes:100,retained:false},{file:'quality-error-1440.png',sha256:'b'.repeat(64),bytes:200,retained:true}];
+ const before=structuredClone(captures),previous={status:'passed',build:'old',sourceDigest:'c'.repeat(64),screenshots:[...captures].reverse(),retainedBytes:450};
+ const result=reviewStorage(captures,400,{previous});assert.deepEqual(captures,before);
+ assert.deepEqual([result.generatedImages,result.retainedImages,result.omittedImages,result.reserveBytes],[4,3,1,149_999_600]);
+ assert.equal(result.exactDuplicates.extraCaptures,2);assert.equal(result.exactDuplicates.retainedExtraCopies,1);assert.equal(result.exactDuplicates.retainedExtraBytes,100);assert.equal(result.exactDuplicates.alreadyOmittedCopiesWithRetainedOriginal,1);assert.equal(result.exactDuplicates.alreadyOmittedBytesWithRetainedOriginal,100);assert.equal(result.exactDuplicates.automaticDuplicateRemovals,0);assert.equal(result.exactDuplicates.groups[0].files.length,3);
+ assert.equal(result.comparison.retainedBytesDelta,-50);assert.equal(result.comparison.retainedImagesDelta,0);
+ for(const changed of [{...previous,status:'failed'},{...previous,screenshots:captures.slice(1)},{...previous,retainedBytes:NaN}])assert.equal('retainedBytesDelta' in reviewStorage(captures,400,{previous:changed}).comparison,false);
+ assert.equal('retainedBytesDelta' in reviewStorage(captures,400).comparison,false);
+});
 test('critical states are always retained while interchangeable intermediate binaries can be reproduced',()=>{
- assert.ok(requiredScreenshots.every(retainScreenshot));
- for(const f of ['journey-engine-webkit-390.png','quality-learning-journey-native-zoom-200.png','quality-navigation-offline-start.png','quality-navigation-updates-archive-320-full.png','quality-learning-journey-water-390.png'])assert.equal(retainScreenshot(f),true,f);
- assert.equal(retainScreenshot('quality-navigation-home-first-360-full.png'),false);
+ for(const width of [320,1440])for(const id of ['phone','printing','railway'])assert.equal(retainScreenshot('quality-navigation-invention-model-invention-'+id+'-'+width+'.png'),true);assert.equal(retainScreenshot('quality-navigation-invention-native-200-large.png'),true);assert.equal(requiredScreenshots.filter(f=>f.startsWith('quality-navigation-invention-model-')).length,48,'all individually changed models/labels have durable mobile+desktop review value');
+ for(const file of ['quality-navigation-invention-steps-large-320.png','quality-navigation-invention-labels-fridge-768.png'])assert.ok(requiredScreenshots.includes(file)&&retainScreenshot(file),'retain the actual enlarged-text and tablet wrapping regressions');
+ assert.ok(requiredScreenshots.every(retainScreenshot));assert.equal(retainScreenshot('quality-book-why-59-1440.png'),true);assert.equal(retainScreenshot('quality-book-why-source-25-320.png'),true);assert.equal(retainScreenshot('quality-book-why-starter-35-320.png'),true);assert.equal(retainScreenshot('quality-book-why-0-320.png'),false,'full Why card remains captured/hashed; readable critical crops retained');
+ for(const model of ['length','duration','temperature'])for(const width of [320,1440])assert.equal(retainScreenshot('quality-learning-book-model-'+model+'-'+width+'.png'),true);
+ for(const prefix of ['quality-learning','quality-book']){for(const model of ['length','duration','temperature'])for(const width of [320,1440])assert.equal(retainScreenshot(prefix+'-book-model-'+model+'-'+width+'.png'),true);assert.equal(retainScreenshot(prefix+'-book-native-200-large.png'),true);assert.equal(retainScreenshot(prefix+'-book-photon-320.png'),false);}
+ assert.equal(retainScreenshot('quality-learning-book-native-200-large.png'),true);assert.equal(retainScreenshot('quality-learning-book-temperature-large-320.png'),true);assert.equal(retainScreenshot('quality-learning-book-meter-320.png'),false,'long full word card remains captured/hashed, readable close-up retained');
+ for(const f of ['quality-research-science-cell-hero-320.png','quality-research-science-native-200-large.png','quality-research-science-surface-tension-large-320.png','quality-research-science-encryption-large-320.png','journey-engine-webkit-320.png','quality-learning-journey-native-zoom-200.png','quality-navigation-offline-start.png','quality-navigation-updates-all-details-320-full.png','quality-learning-journey-water-390.png'])assert.equal(retainScreenshot(f),true,f);
+ for(const f of ['quality-learning-journey-large-focus-768.png','quality-navigation-updates-archive-320-full.png','quality-navigation-home-first-360-full.png'])assert.equal(retainScreenshot(f),false,f);
+ for(const engine of ['chromium','firefox','webkit'])for(const width of [320,390,768,1440])assert.equal(retainScreenshot('journey-engine-'+engine+'-'+width+'.png'),true,'count every actually uploaded engine original');
 });
 test('failed runs retain every actual image; corrupted image evidence fails closed',async()=>{
  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-evidence-'));try{
@@ -17,6 +43,32 @@ test('failed runs retain every actual image; corrupted image evidence fails clos
 test('a successful browser report without current handoff or critical images cannot pass upload acceptance',async()=>{
  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-evidence-'));try{await fs.writeFile(path.join(dir,'portable-report.json'),JSON.stringify({status:'passed',scope:'complete mandatory regression',build:'synthetic'}));await assert.rejects(prepareReview(dir),/handoff/);}finally{await fs.rm(dir,{recursive:true,force:true});}
 });
+test('final collection preserves hashes for every omitted original and rejects missing or changed sealed retained images',async()=>{
+ const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-ledger-'));
+ try{
+  const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aYJkAAAAASUVORK5CYII=','base64'),sha=createHash('sha256').update(png).digest('hex'),digest=await sourceDigest();
+  await fs.writeFile(path.join(dir,'portable-report.json'),JSON.stringify({status:'passed',scope:'complete mandatory regression',build:'same-build'}));await fs.writeFile(path.join(dir,'handoff.json'),JSON.stringify({sourceDigest:digest,build:'same-build'}));
+  for(const name of requiredScreenshots)await fs.writeFile(path.join(dir,name),png);
+  const omitted={file:'quality-book-why-0-320.png',bytes:9876,width:320,height:1400,sha256:'a'.repeat(64),retained:false};
+  const ledger={status:'passed',build:'same-build',sourceDigest:digest,screenshots:[omitted,...requiredScreenshots.map(file=>({file,bytes:png.length,width:1,height:1,sha256:sha,retained:true}))]};await fs.writeFile(path.join(dir,'review-manifest.json'),JSON.stringify(ledger));
+  const result=await prepareReview(dir,{sealedCaptureLedger:ledger,previousStorageReport:{...ledger,retainedBytes:png.length*requiredScreenshots.length}});assert.equal(result.status,'passed');assert.deepEqual(result.screenshots.find(s=>s.file===omitted.file),omitted);assert.equal(result.screenshots.length,requiredScreenshots.length+1);assert.equal(result.generatedBytes,result.retainedBytes+9876);assert.equal(result.limit,150_000_000);assert.equal(result.storage.exactDuplicates.retainedExtraCopies,requiredScreenshots.length-1,'even identical mandatory originals remain stored separately');assert.equal(result.storage.comparison.retainedBytesDelta,0);assert.equal(result.storage.reserveBytes,150_000_000-result.retainedBytes);
+  await fs.writeFile(path.join(dir,requiredScreenshots[0]),Buffer.concat([png,Buffer.from('changed')]));await assert.rejects(prepareReview(dir,{sealedCaptureLedger:ledger}),/Changed sealed screenshot/);
+  await fs.unlink(path.join(dir,requiredScreenshots[0]));await assert.rejects(prepareReview(dir,{sealedCaptureLedger:ledger}),/Missing sealed screenshot/);
+  await assert.rejects(prepareReview(dir,{sealedCaptureLedger:{...ledger,sourceDigest:'c'.repeat(64)}}),/Mixed sealed/);
+  await assert.rejects(prepareReview(dir,{sealedCaptureLedger:{...ledger,screenshots:[...ledger.screenshots,ledger.screenshots[0]]}}),/Invalid sealed/);
+ }finally{await fs.rm(dir,{recursive:true,force:true});}
+});
+
+
+test('all58 sealed historical required roles survive the expanded invention review matrix',()=>{
+ assert.equal(retainedReviewRequirements.length,58);assert.equal(new Set(requiredScreenshots).size,requiredScreenshots.length);
+ for(const file of retainedReviewRequirements){assert.ok(requiredScreenshots.includes(file),file+' required role retained');assert.equal(retainScreenshot(file),true);}
+ for(const id of ['invention-generator','invention-transistor','invention-microscope','invention-telescope','invention-seismograph','invention-3d-printing']){
+  for(const width of[320,1440])assert.ok(requiredScreenshots.includes('quality-navigation-invention-experiment-'+id+'-'+width+'.png'));
+  assert.ok(requiredScreenshots.includes('quality-navigation-invention-experiment-native-'+id+'.png'));
+ }
+});
+
 
  test('review budget is exactly 150 decimal MB and storage accounting never deletes identical evidence',()=>{
  assert.equal(REVIEW_LIMIT,150_000_000);const a={file:'focus-320.png',bytes:100,sha256:'same',retained:true},b={...a,file:'focus-390.png'},c={...a,file:'already-omitted.png',retained:false};

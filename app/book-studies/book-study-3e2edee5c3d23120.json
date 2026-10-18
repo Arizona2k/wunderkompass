@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Mitochondrium",
+  "learning": {
+    "starter": "Manche Zellstrukturen helfen, gespeicherte chemische Energie für andere Zellvorgänge nutzbar zu machen.",
+    "deeper": "Die Zahl und Tätigkeit von Mitochondrien unterscheiden sich zwischen Zelltypen. Sie sind keine kleinen Batterien mit überall gleichem Aufbau, und nicht jede Zelle besitzt sie. Diese Erklärung ist keine Beurteilung von Krankheiten.",
+    "observe": "Zeichne ein erfundenes Zellkästchen mit einem Pfeil für chemische Ausgangsstoffe und einem für nutzbar gemachte Energie. Beschrifte die Begrenzung: keine echte Mengenbilanz, keine vollständige Reaktionskette und kein medizinischer Test.",
+    "benefit": "Du erkennst Energieumwandlung in einer Zellstruktur und vermeidest die Idee einer Energiequelle aus dem Nichts.",
+    "connection": "Die Zellkarte liefert den Bauplan-Kontext. Mitochondrien sind ein Beispiel für eine besondere Zellstruktur, nicht ein Bestandteil jedes denkbaren Zelltyps.",
+    "topic": "science-cell",
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Mitochondria",
+        "title": "NHGRI · Mitochondrien",
+        "anchor": "Full definition: chemical energy transfer to ATP and own chromosomes. No energy-from-nothing, medical inference or universal maternal inheritance.",
+        "updatedOn": "2026-10-14",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Zellkern",
+        "reason": "Der Kern ist nicht der einzige mögliche DNA-Ort einer eukaryotischen Zelle. Mitochondrien besitzen eigene DNA und dienen einer anderen Zellaufgabe."
+      },
+      {
+        "term": "Energie",
+        "reason": "Chemische Energie kann durch Zellvorgänge umgewandelt und verfügbar gemacht werden. Eine Zellstruktur erschafft keine Energie aus dem Nichts."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Aussage passt zum vereinfachten Mitochondrienbeispiel?",
+      "answers": [
+        "Energie wird aus dem Nichts erzeugt",
+        "Jede Zelle enthält gleich viele Mitochondrien",
+        "Chemische Energie wird umgewandelt und nutzbar gemacht"
+      ],
+      "correct": 2,
+      "hint": "Achte auf die Eingangs- und Ausgangsseite des gedachten Vorgangs.",
+      "why": "Die Erklärung behandelt eine Umwandlung chemischer Energie. Sie sagt weder Erzeugung aus dem Nichts noch gleiche Zellzahl aus.",
+      "wrongReasons": [
+        "Umwandlung braucht Ausgangsbedingungen. Sie ist keine Energieerzeugung aus dem Nichts.",
+        "Zelltypen und ihr Energiebedarf unterscheiden sich. Eine gleiche Anzahl in jeder Zelle folgt daraus nicht.",
+        ""
+      ]
+    }
+  }
+}

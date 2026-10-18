@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "term": "Candela",
+  "learning": {
+    "symbol": "cd",
+    "quantity": "Lichtstärke in einer Richtung",
+    "starter": "Für sichtbares Licht gibt es eine eigene Messgröße. Auch die Richtung gehört zur Beschreibung.",
+    "deeper": "Die Candela-Definition verbindet eine festgelegte Lichtfrequenz mit einer Lichtausbeute. Die Wahrnehmung des menschlichen Auges wird dabei berücksichtigt. Für den gesamten Lichtstrom wird dagegen Lumen verwendet. Keine dieser Angaben ist eine Aufforderung, direkt in eine helle Lichtquelle zu schauen.",
+    "observe": "Vergleiche drei erfundene Schilder: 2 cd, 2 K und 2 A. Die gleiche Zahl steht für verschiedene Messgrößen. Ordne sie den Erklärungen zu, ohne echte Lampen oder elektrische Geräte zu untersuchen.",
+    "benefit": "Du unterscheidest eine Lichtangabe von Temperatur und Stromstärke und beachtest die Richtung der Beschreibung.",
+    "topic": "science-photosynthesis",
+    "question": {
+      "prompt": "Welche Information gehört zu einer Lichtstärkeangabe in Candela?",
+      "answers": [
+        "Die Temperatur des Lampengehäuses",
+        "Das Gewicht einer Batterie",
+        "Sichtbares Licht in einer bestimmten Richtung"
+      ],
+      "correct": 2,
+      "hint": "Erinnere dich daran, welche Wahrnehmung und welche Richtung bei der Definition berücksichtigt werden.",
+      "why": "Candela gehört zur Lichtstärke in einer bestimmten Richtung. Temperatur und Masse sind andere Größen; die gesamte Lichtabgabe wird nicht einfach mit derselben Größe beschrieben.",
+      "wrongReasons": [
+        "Die Temperatur eines Gehäuses ist keine Lichtstärke. Dafür braucht man eine Temperatureinheit.",
+        "Die Masse einer Batterie ist keine Beschreibung sichtbaren Lichts. Sie wird zum Beispiel in Kilogramm angegeben.",
+        ""
+      ]
+    },
+    "connection": "Blätter nutzen Lichtenergie. Lichtenergie und die fürs menschliche Auge beschriebene Lichtstärke sind unterschiedliche Größen.",
+    "sources": [
+      {
+        "url": "https://www.nist.gov/si-redefinition/candela",
+        "title": "NIST · Candela",
+        "anchor": "Photometry; direction; distinction from lumen and radiant power",
+        "updatedOn": null,
+        "checkedOn": "2026-10-13"
+      }
+    ]
+  }
+}

@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "checkedOn": "2026-10-17",
+  "checkedOn": "2026-10-18",
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "68cb0bd9e2d5de329c64e6f8c18da0b3e6f8bc90",
+    "commit": "0e5e4d4ece35d4a80dc79764c690c1633b2e0988",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -32,7 +32,8 @@
       "0c0ebcb55fc9e81bbe55ae9aa100100df098c0a5",
       "8d05beb0bc9930cd18e6128477c090c9d97caf9a",
       "8e5012ed5deadee3d88aada0cdffd0b05eaacc5c",
-      "68cb0bd9e2d5de329c64e6f8c18da0b3e6f8bc90"
+      "68cb0bd9e2d5de329c64e6f8c18da0b3e6f8bc90",
+      "0e5e4d4ece35d4a80dc79764c690c1633b2e0988"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -710,6 +711,16 @@
       ]
     },
     {
+      "number": 27,
+      "title": "Paket 3.5 · Lernreisen, Wissenschaft und Wissensbuch vertiefen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/27",
+      "base": "test-live",
+      "mergedAt": null,
+      "mergeCommit": null,
+      "statusesUrl": null,
+      "deploymentStatuses": []
+    },
+    {
       "number": 31,
       "title": "Offline-Update korrekt in der Chronik zeigen und Syntaxfehler früh erkennen",
       "url": "https://github.com/Arizona2k/wunderkompass/pull/31",
@@ -830,6 +841,68 @@
           "createdAt": "2026-10-17T15:59:35Z",
           "updatedAt": "2026-10-17T15:59:35Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/4S4xyEXZXgbmT5MLY1gbTvfuJRWr"
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "title": "Suche: vorhandene Texte einmal vorberechnen, Treffer beibehalten",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/36",
+      "base": "test-live",
+      "mergedAt": "2026-10-17T19:58:22Z",
+      "mergeCommit": "68cb0bd9e2d5de329c64e6f8c18da0b3e6f8bc90",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/68cb0bd9e2d5de329c64e6f8c18da0b3e6f8bc90/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56605414823,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-17T19:58:35Z",
+          "updatedAt": "2026-10-17T19:58:35Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/FQk7n1AvkuigvmyK38Zgx2ABJT4S"
+        },
+        {
+          "id": 56605410400,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-17T19:58:25Z",
+          "updatedAt": "2026-10-17T19:58:25Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/FQk7n1AvkuigvmyK38Zgx2ABJT4S"
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "title": "Forscherlabor: aus falschen Antworten gezielt weiterlernen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/38",
+      "base": "test-live",
+      "mergedAt": "2026-10-17T22:20:07Z",
+      "mergeCommit": "0e5e4d4ece35d4a80dc79764c690c1633b2e0988",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/0e5e4d4ece35d4a80dc79764c690c1633b2e0988/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56609375980,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-17T22:20:23Z",
+          "updatedAt": "2026-10-17T22:20:23Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/Bae5ueTfrJhr7xoJ1D4LUGWepQVx"
+        },
+        {
+          "id": 56609370061,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-17T22:20:10Z",
+          "updatedAt": "2026-10-17T22:20:10Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/Bae5ueTfrJhr7xoJ1D4LUGWepQVx"
         }
       ]
     }

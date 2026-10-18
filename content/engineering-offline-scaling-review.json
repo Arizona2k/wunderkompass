@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "status": "All12 controlled scaling runs and targeted worker/real Chromium retention/progress/failure probes passed; full new current-snapshot regression and actual engines pending",
+  "build": "4bac37a99f354f40",
+  "method": "Two fresh actual Chromium contexts for each complete app +0/+1000/+3000 synthetic2KB JSON assets; local uncompressed HTTP,10ms synthetic latency. Update adds one new payload and retains all old content. Metadata/HTML release changes are explicit fixtures, not a production deployment. Browser storage estimate is not a real weak-device or disk-quota guarantee.",
+  "rows": [
+    {
+      "extra": 0,
+      "sample": 0,
+      "assets": 379,
+      "before": {
+        "initialSeconds": 0.907560154,
+        "updateSeconds": 2.058067927,
+        "updateBytes": 18642937,
+        "updateRequests": 382,
+        "updatedStorageEstimate": 37559820
+      },
+      "after": {
+        "initialSeconds": 1.4437547480000001,
+        "updateSeconds": 1.426543272,
+        "updateBytes": 75689,
+        "updateRequests": 3,
+        "updatedStorageEstimate": 37560848,
+        "reused": 379
+      }
+    },
+    {
+      "extra": 0,
+      "sample": 1,
+      "assets": 379,
+      "before": {
+        "initialSeconds": 0.9189592189999994,
+        "updateSeconds": 0.8031592989999999,
+        "updateBytes": 18642937,
+        "updateRequests": 382,
+        "updatedStorageEstimate": 37559820
+      },
+      "after": {
+        "initialSeconds": 1.4030842549999998,
+        "updateSeconds": 0.6394800940000005,
+        "updateBytes": 75689,
+        "updateRequests": 3,
+        "updatedStorageEstimate": 37560849,
+        "reused": 379
+      }
+    },
+    {
+      "extra": 1000,
+      "sample": 0,
+      "assets": 1379,
+      "before": {
+        "initialSeconds": 5.450340521999999,
+        "updateSeconds": 5.417117452999999,
+        "updateBytes": 20688827,
+        "updateRequests": 1382,
+        "updatedStorageEstimate": 42301270
+      },
+      "after": {
+        "initialSeconds": 5.474915340000001,
+        "updateSeconds": 1.4259177759999984,
+        "updateBytes": 202469,
+        "updateRequests": 3,
+        "updatedStorageEstimate": 42321410,
+        "reused": 1379
+      }
+    },
+    {
+      "extra": 1000,
+      "sample": 1,
+      "assets": 1379,
+      "before": {
+        "initialSeconds": 5.975023911,
+        "updateSeconds": 5.211657597999998,
+        "updateBytes": 20688827,
+        "updateRequests": 1382,
+        "updatedStorageEstimate": 42301270
+      },
+      "after": {
+        "initialSeconds": 5.453607581999998,
+        "updateSeconds": 1.4069092380000001,
+        "updateBytes": 202469,
+        "updateRequests": 3,
+        "updatedStorageEstimate": 42321411,
+        "reused": 1379
+      }
+    },
+    {
+      "extra": 3000,
+      "sample": 0,
+      "assets": 3379,
+      "before": {
+        "initialSeconds": 14.626587954000003,
+        "updateSeconds": 14.391973979000003,
+        "updateBytes": 24782827,
+        "updateRequests": 3382,
+        "updatedStorageEstimate": 51795270
+      },
+      "after": {
+        "initialSeconds": 13.524650932,
+        "updateSeconds": 3.4411119980000002,
+        "updateBytes": 460469,
+        "updateRequests": 3,
+        "updatedStorageEstimate": 51851400,
+        "reused": 3379
+      }
+    },
+    {
+      "extra": 3000,
+      "sample": 1,
+      "assets": 3379,
+      "before": {
+        "initialSeconds": 14.597547574000004,
+        "updateSeconds": 14.184657910999988,
+        "updateBytes": 24782827,
+        "updateRequests": 3382,
+        "updatedStorageEstimate": 51795270
+      },
+      "after": {
+        "initialSeconds": 14.071627412000002,
+        "updateSeconds": 3.4222312659999954,
+        "updateBytes": 460469,
+        "updateRequests": 3,
+        "updatedStorageEstimate": 51851412,
+        "reused": 3379
+      }
+    }
+  ],
+  "adopted": [
+    "All final build assets enumerated after final chunk elimination; missing/extra/unsafe/symlinked assets fail the build.",
+    "All asset bodies checked against exact manifest length and SHA before ready.",
+    "At most six in-flight asset bodies/writes; unchanged verified old bodies copied, altered/missing bodies fetched and checked.",
+    "A complete ready marker is written last; any failure drains writers and removes only the partial new release.",
+    "Actual worker metrics remain observable; no global offline MB cap."
+  ],
+  "tradeoffs": [
+    "Current379-asset first preparation: bulk0.908–0.919s vs verified1.403–1.444s, roughly0.5s more locally.",
+    "At3379 assets first preparation did not regress in this sample; update improved14.185–14.392s→3.422–3.441s.",
+    "Two release caches still need storage; cache reuse saves network, not a guaranteed disk-memory reduction.",
+    "Two samples per size are not a field p95 or real weak-device guarantee.",
+    "Quota currently covered by injected actual worker-function tests, browser quota/network/update/old-tab/cold restart still required."
+  ],
+  "failureProbes": [
+    "network",
+    "http503",
+    "same-size tamper",
+    "oversize despite misleading header",
+    "truncated body",
+    "synthetic quota",
+    "HTML release changed"
+  ],
+  "comparisonEvidence": [
+    "scripts/measure-offline-scaling.mjs",
+    "tests/fixtures/offline-worker-bulk.js",
+    "tests/offline-worker.test.mjs",
+    "tests/offline-assets.test.mjs"
+  ],
+  "independentAcceptance": false,
+  "retentionFollowup": {
+    "before": "Three new regression cases fail the former creation-order cleanup: unfinished cache can displace rollback, needed multi-tab releases are deleted, unknown legacy tabs lose complete fallback.",
+    "afterWorkerTests": "12 real Node cases passed, including all9 former install/integrity/failure cases",
+    "realChromiumLifecycle": {
+      "multipleTabs": true,
+      "partialNeverReplacesFallback": true,
+      "unknownLegacyProtected": true,
+      "orphanCleanup": true,
+      "stoppedServerOldChunk": true,
+      "canaryPreserved": true,
+      "storage": [
+        {
+          "phase": "one complete release",
+          "quota": 2147493762,
+          "usage": 10114,
+          "usageDetails": {
+            "caches": 1633,
+            "serviceWorkerRegistrations": 8481
+          }
+        },
+        {
+          "phase": "three releases protected by known open tabs",
+          "quota": 2147499006,
+          "usage": 15358,
+          "usageDetails": {
+            "caches": 6877,
+            "serviceWorkerRegistrations": 8481
+          }
+        },
+        {
+          "phase": "two releases after old tabs close",
+          "quota": 2147499475,
+          "usage": 15827,
+          "usageDetails": {
+            "caches": 7346,
+            "serviceWorkerRegistrations": 8481
+          }
+        }
+      ]
+    },
+    "scope": "Six isolated synthetic release lifecycles with actual browser CacheStorage/workers/clients and actual server shutdown; synthetic storage canary is not a real user pass. Complete real-app/pass regression additionally required.",
+    "legacyTradeoff": "Unknown old clients protect all complete fallbacks; activation can wait up to1s in parallel for legacy replies. Storage can temporarily exceed two releases until old tabs close and a later activation prunes them. Not a storage-reduction claim."
+  },
+  "progressFollowup": {
+    "implementation": "Count only assets after byte/SHA verification and successful cache.put; a separate checking phase precedes the atomic ready marker. UI samples only installing workers at750ms and stops/cleans channels on completion/failure/unmount. No time-derived percentage.",
+    "actualAppProbe": {
+      "kind": "chromium",
+      "networkRecovery": true,
+      "quotaRecovery": true,
+      "completeAssets": true,
+      "offlineReload": true,
+      "passPreserved": true,
+      "assetCount": 453,
+      "realProgress": true,
+      "metrics": {
+        "assets": 453,
+        "reused": 0,
+        "reusedBytes": 0,
+        "downloaded": 453,
+        "downloadedBytes": 18938715,
+        "seconds": 1.3707999999970197,
+        "completedAt": 1792086436234
+      },
+      "serverStopped": true
+    },
+    "strongerAcceptance": "Passed: hold a required asset, observe a strictly positive persisted count below total, then release and require complete ready, unchanged actual pass and stopped-server offline reload. Full cold-browser/Nature/engine coverage still requires final root/CI.",
+    "actualAppProbeBuild": "4188881b794c5cb0"
+  }
+}

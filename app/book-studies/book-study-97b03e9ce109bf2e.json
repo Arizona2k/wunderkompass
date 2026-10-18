@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "term": "Gewitter",
+  "learning": {
+    "starter": "Blitz und Donner gehören zum Gewitter. Der Blitz ist eine elektrische Entladung, keine Lampenfarbe in einer Wolke.",
+    "deeper": "Ein Wolkenbild und eine Lufttemperatur allein beweisen kein vollständiges Gewittergeschehen. Das Wetterlabor beschreibt nur ausgewählte Bedingungen. Echte Gewitter beobachtest du nicht draußen als Experiment.",
+    "observe": "Schreibe auf Papier vier Karten: Wolkenbild, erfundene Temperatur von 20 °C, elektrische Entladung und zugehöriger Donner. Welche Angaben beschreiben nur einen Teil des Wetters? Erkläre, warum die Temperaturkarte allein kein echtes Gewitter vorhersagt.",
+    "benefit": "Du verbindest Blitz und Donner und begrenzt Aussagen einer einzelnen Wetterangabe.",
+    "connection": "Das Wetterlabor zeigt gedachte Luftbedingungen. Die drei Karten ergänzen Blitz und Donner und machen die Grenze einer vollständigen Wetterprognose deutlich.",
+    "lab": "weather",
+    "sources": [
+      {
+        "url": "https://www.noaa.gov/jetstream/lightning",
+        "title": "NOAA · Gewitter",
+        "anchor": "Abschnitt über elektrische Entladung und Donner bei Gewittern. Ein einzelner Temperaturwert reicht nicht zur sicheren Gewittervorhersage.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was belegt eine einzelne erfundene Temperaturkarte nicht?",
+      "answers": [
+        "Die vollständige sichere Vorhersage eines echten Gewitters",
+        "Dass sie einen gewählten Gedankenwert enthält",
+        "Dass weitere Angaben nötig wären"
+      ],
+      "correct": 0,
+      "hint": "Ein Wert beschreibt nur eine Größe und wurde hier nicht einmal wirklich gemessen.",
+      "why": "Für ein wirkliches Gewittergeschehen fehlen Messungen und weitere Angaben. Ein Lernwert ist keine sichere Vorhersage.",
+      "wrongReasons": [
+        "",
+        "Die Karte darf als erfundener Wert beschriftet werden.",
+        "Weitere Informationen zu nennen begrenzt das Modell sinnvoll."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum kommt der Donner nach dem Blitz?",
+        "reason": "Das Wetterlabor verändert ausgewählte Luftbedingungen. Die Erklärung zu Blitz und Donner ergänzt ein anderes Merkmal eines Gewitters; aus dem Lernmodell folgt keine Entwarnung."
+      }
+    ]
+  }
+}

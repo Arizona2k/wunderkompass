@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "term": "Algorithmus",
+  "learning": {
+    "starter": "Ein Algorithmus ist eine genaue Folge ausführbarer Schritte. Sie hilft, eine Aufgabe nachvollziehbar zu lösen.",
+    "deeper": "Verschiedene Algorithmen können dieselbe Aufgabe lösen und unterschiedlich viel Arbeit benötigen. Eine eindeutige Anleitung ist nicht automatisch sachlich richtig: Auch ihre Annahmen und das Ergebnis müssen geprüft werden.",
+    "observe": "Lege zwei Zahlenkarten aus. Schreibe eine Anleitung: Vergleiche beide; wenn links die größere Zahl liegt, tausche sie. Teste zwei verschiedene Anfangsreihenfolgen. Erkläre, warum diese Anleitung nur die kleine Zwei-Karten-Aufgabe beschreibt.",
+    "benefit": "Du kannst eine ausführbare Schrittfolge von einem unklaren Ziel unterscheiden.",
+    "topic": "science-encryption",
+    "connection": "Beim Verschlüsseln werden klare Regeln auf Zeichen angewendet. Unterscheide ausführbare Schritte, ihr Ziel und die Frage, ob das Verfahren tatsächlich sicher ist.",
+    "sources": [
+      {
+        "url": "https://xlinux.nist.gov/dads/HTML/algorithm.html",
+        "title": "NIST · Algorithmus (Englisch)",
+        "anchor": "Computable steps towards a desired result; own two-card algorithm and examples. Author PEB/NIST, no CRC Press entry or implementation reused.",
+        "updatedOn": "2020-11-09",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Hypothese",
+        "reason": "Eine Schrittfolge führt eine Aufgabe aus; eine Hypothese ist eine prüfbare Aussage. Ausführung und Begründung sind verschiedene Fragen."
+      },
+      {
+        "term": "Bit",
+        "reason": "Ein Algorithmus beschreibt Schritte. Binäre Werte können Daten dieser Schritte darstellen, legen aber nicht allein den Ablauf fest."
+      },
+      {
+        "term": "Datenstruktur",
+        "reason": "Datenordnung und Verarbeitungsschritte wirken zusammen. Eine Liste benennt noch nicht jedes Verfahren, das mit ihr ausgeführt werden kann."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Anweisung ist für die Zwei-Karten-Aufgabe ausreichend genau?",
+      "answers": [
+        "Vergleiche die Zahlen und tausche, wenn links die größere liegt",
+        "Ordne irgendwie schön",
+        "Mach einfach das Richtige"
+      ],
+      "correct": 0,
+      "hint": "Eine andere Person soll dieselben Schritte nachvollziehen können.",
+      "why": "Vergleich und Tauschbedingung sind ausdrücklich beschrieben. Die beiden anderen Wünsche legen keine eindeutigen Schritte fest.",
+      "wrongReasons": [
+        "",
+        "„Schön“ legt nicht fest, welche Zahlen verglichen oder wann Karten getauscht werden.",
+        "„Das Richtige“ beschreibt ein Ziel, aber keine überprüfbare Schrittfolge."
+      ]
+    }
+  }
+}

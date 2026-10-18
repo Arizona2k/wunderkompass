@@ -329,6 +329,43 @@ const JOURNEY_COPY:UpdateCopy = {
   }
  ]
 };
+const CONTENT_COPY:UpdateCopy={
+ "id": "excellence-chapters-3-5",
+ "icon": "🧭",
+ "category": "Neue Inhalte",
+ "title": "Natur und Technik genauer entdecken",
+ "summary": "Lernreisen, Wissenswörter und Naturorte erhalten freiwillige Denkaufgaben und verständliche Vertiefungen. Eigene Technikmodelle und erklärte Wissensverbindungen laden zum Vergleichen ein.",
+ "details": [
+  "Alle 80 Kapitel bieten zusätzliche Einstiege, Vertiefungen und Beobachtungsideen; die fünf Meereskapitel verweisen auf passende Originalbelege. Die bereits verfügbaren Denkhinweise und Grafikbeschriftungen sind im eigenen Lernhilfen-Update beschrieben.",
+  "23 neue und 23 vorhandene Wissenschaftskarten erklären ihre Zusammenhänge genauer. Zehn freiwillige Bildschirmversuche machen eigene Vergleiche möglich und nennen ihre Modellgrenzen.",
+  "180 Wissenswörter und 60 Warum-Antworten verbinden einfache Einstiege, genauere Erklärungen und sichere Beobachtungsideen. Drei Messmodelle helfen beim Vergleichen.",
+  "34 neue und 34 überarbeitete Naturerklärungen bieten eigene Fragen, Quellen und erklärte Rückverweise. Zehn bedienbare Schrittgrafiken zeigen etwa Schluchtbildung und schwimmendes Eis; Filter und Suche helfen beim Wiederfinden.",
+  "Zwölf neue Erfindungen und acht neue Bauwerke ergänzen den Bestand. Auch die bisherigen Karten erhalten Beobachtungsaufgaben und konkrete Rückmeldungen; sechs Technikmodelle und drei Bauwerksvergleiche lassen sich freiwillig untersuchen."
+ ],
+ "benefit": "Kinder können Zusammenhänge im eigenen Tempo erkunden und gezielt wiederfinden. Eltern sehen Quellenverweise und den tatsächlichen Prüfstand; bisherige Sicherungen bleiben nutzbar.",
+ "links": [
+  {
+   "label": "Lernreisen",
+   "hash": "journeys"
+  },
+  {
+   "label": "Wissenschaft & Weltall",
+   "hash": "world/science"
+  },
+  {
+   "label": "Erfindungen",
+   "hash": "world/inventions"
+  },
+  {
+   "label": "Messen im Wissensbuch",
+   "hash": "book/words/Meter"
+  },
+  {
+   "label": "Naturatlas",
+   "hash": "book/nature"
+  }
+ ]
+};
 const OFFLINE_COPY:UpdateCopy={
  "id": "offline-learning-3-5",
  "icon": "🧭",
@@ -344,6 +381,8 @@ const OFFLINE_COPY:UpdateCopy={
  "benefit": "Du kannst erkennen, wie die Vorbereitung vorankommt, und nach einem Fehler sicher neu versuchen. Eltern können die Lernwelt für unterwegs vollständig vorbereiten.",
  "links": []
 };
+// The actual PR number is assigned by GitHub, never guessed before creating it.
+// Reconcile this same stable identity with its real merge/deployment on the next GO.
 export const JOURNEY_SUPPORT_COPY:UpdateCopy={
  id:'journey-reading-support-3-5',icon:'🧭',category:'Spielen und Lernen',
  title:'Weiterdenken mit lesbaren Bildern und passenden Hinweisen',
@@ -364,9 +403,10 @@ export const ANIMAL_SOLAR_COPY:UpdateCopy={
   'Alle 24 bisherigen Tierkarten erhalten eine freiwillige Werkstatt mit drei Denkwegen. Zwei passende Belege und eigene Hinweise helfen beim Vergleichen; 48 Denkfragen erklären auch typische Fehlschlüsse.',
   '17 neue erklärte Verbindungen zeigen zum Beispiel, warum ein Walhai kein Wal ist und Eisbär und Kaiserpinguin keine natürlichen Nachbarn sind. Zurück führt wieder an den gewählten Verweis.',
   'Beim Planetenvergleich stehen Beschriftungen als umbrechbarer Text unter der Grafik. Auch die Abstandsangaben und Einheiten wachsen mit großer Schrift; die wissenschaftlichen Maßstäbe bleiben erhalten.',
-  'Begonnene Werkstattgedanken werden im bisherigen Entdeckerpass gespeichert. Alte Fragen, Spielrunden, Fotos, Favoriten und Sicherungen bleiben nutzbar.'
+  'Begonnene Werkstattgedanken werden im bisherigen Entdeckerpass gespeichert. Alte Fragen, Spielrunden, Fotos, Favoriten und Sicherungen bleiben nutzbar.',
+  'Auch wenn die Suche etwas länger lädt, kannst du danach direkt ins Suchfeld schreiben. Ein Leerzeichen im Suchwort schließt die Suche nicht mehr versehentlich.'
  ],
- benefit:'Kinder können Wissen mit Belegen begründen und Grenzen eines Bildes erkennen. Familien können die Karten und Planetenwerte mit großer Schrift gemeinsam lesen.',links:[]
+ benefit:'Kinder können Wissen mit Belegen begründen und Grenzen eines Bildes erkennen. Familien können die Karten und Planetenwerte mit großer Schrift gemeinsam lesen.',links:[{label:'Tierforscher-Werkstatt',hash:'world/topic/animal-whale-shark'},{label:'Planeten vergleichen',hash:'world/topic/science-solar-system'}]
 };
 export const JOURNEY_SOURCE_COPY:HistoryCopy&{id:string}={
  id:'journey-readable-sources-3-5',icon:'📖',category:'Einfachere Bedienung',
@@ -383,10 +423,13 @@ export const LAB_FEEDBACK_COPY:UpdateCopy={
  benefit:'Du bekommst einen konkreten Anhaltspunkt zum Weiterdenken. Familien können Missverständnisse gemeinsam am vertrauten Modell untersuchen.',links:[{label:'Forscherlabor',hash:'labs'}]
 };
 const TEST_COPY:Record<number,UpdateCopy> = {
+ 38:LAB_FEEDBACK_COPY,
+ 36:{id:'prepared-search-3-5',icon:'🔎',category:'Einfachere Bedienung',title:'Die Suche bereitet bekannte Begriffe vor',summary:'Namen und Suchhinweise werden einmal vorbereitet. Beim Tippen muss die Suche dieselben Wörter dadurch seltener erneut bearbeiten.',details:['Die Suche bereitet Namen, Vorschautexte und Schreibvarianten einmal vor, statt sie bei jedem Tastendruck erneut zu bearbeiten.','Ändert sich der geladene Katalog, wird auch die Vorbereitung erneuert.','Die bisherige Bewertung der Treffer, die Hilfe bei kleinen Tippfehlern und die vertrauten Rückwege bleiben erhalten.'],benefit:'Die Suche erledigt beim wiederholten Tippen weniger unnötige Arbeit. Deine bisherigen Suchwege und Lernstände bleiben erhalten.',links:[{label:'Wissenswelten durchsuchen',hash:'world'}]},
  35:JOURNEY_SOURCE_COPY,
  33:ANIMAL_SOLAR_COPY,
  32:JOURNEY_SUPPORT_COPY,
  30:OFFLINE_COPY,
+ 27:CONTENT_COPY,
  29:{
  "id": "clear-update-chronicle",
  "icon": "🧭",
@@ -785,16 +828,44 @@ const TEST_COPY:Record<number,UpdateCopy> = {
 
 const PREPARED_ANIMAL_SOLAR:UpdateEntry={...ANIMAL_SOLAR_COPY,version:'Tierwerkstatt und Planetenvergleich',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{pullRequest:33,file:'content/animal-editorial-review.json',revision:'prepared',quote:'Implementierter Lieferabschnitt; noch keine bestätigte Übernahme oder Bereitstellung.'}};
 const TEST_UPDATES=TEST_EVIDENCE.pullRequests.flatMap(record=>TEST_COPY[record.number]?[testUpdate(record,TEST_COPY[record.number])]:[]);
-// The actual PR number is assigned by GitHub, never guessed before creating it.
-// Reconcile this same stable identity with its real merge/deployment on the next GO.
-
 const PREPARED_JOURNEY_SUPPORT:UpdateEntry={...JOURNEY_SUPPORT_COPY,version:'Lernhilfen',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{file:'content/journey-task-review.json',revision:'prepared',quote:'Individuelle Reise-Lernhilfen, noch ohne bestätigte Übernahme und Testbereitstellung.'}};
 export const UPDATE_HISTORY:UpdateEntry[]=[...SITES_HISTORY,...TEST_UPDATES.filter(e=>e.status==='test-available')];
 const PREPARED_JOURNEYS:UpdateEntry={...JOURNEY_COPY,version:'Paket 3',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-12',publishedOn:null,availableOn:null,occurredAt:null,summary:'Die Lernreise-Verbesserungen sind vorbereitet; ihre Bereitstellung ist noch unbestätigt.',links:[],evidence:{file:'BACKLOG.md',revision:'d6945c8',quote:'WK-048: Lernreisen 2.0 – alle 16 Reisen/80 Kapitel ganzheitlich modernisieren.'}};
 
+export const ANIMAL_EXPANSION_COPY:HistoryCopy&{id:string}={
+ id:'animal-new-species-3-5',icon:'🦉',category:'Neue Inhalte',title:'24 neue Tiere und ihre besonderen Lebensweisen',
+ summary:'Vom Schnabeltier bis zur Sepia: 24 zusätzliche Arten laden zum Beobachten, Vergleichen und Erklären ein. Eigene Merkmalszeichnungen und freiwillige Denkwege ergänzen jede Karte.',
+ details:['Jede neue Art erhält eigene Erklärungen, Quellen, ein Quiz und einen als Beispiel gekennzeichneten Kartenort.','24 eigene kleine Zeichnungen zeigen Merkmale mit lesbaren HTML-Beschriftungen und klaren Grenzen.','Belege aufdecken, Zusammenhänge erklären und Schlussfolgerungen prüfen: jede Karte bietet drei freiwillige Denkwege mit Hinweisen und konkretem Feedback.','23 erklärte gegenseitige Wissensverbindungen führen zu passenden neuen und bisherigen Themen.','Messrichtung und Angaben für obere oder typische Vergleichswerte bleiben unterscheidbar; die bisherigen Tierkarten und Spielstände bleiben erhalten.'],
+ benefit:'Kinder können neue Arten kennenlernen und zugleich lernen, Beobachtung und Schlussfolgerung zu unterscheiden. Eltern finden nachvollziehbare Originalquellen und transparente Prüfgrenzen.',links:[{label:'Tierwelt',hash:'world/animals'}]
+};
+const PREPARED_ANIMAL_EXPANSION:UpdateEntry={...ANIMAL_EXPANSION_COPY,version:'Neue Tierarten',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{pullRequest:27,file:'content/animal-expansion-review.json',revision:'prepared',quote:'Im Master implementiert; aktuelle vollständige technische Schlussabnahme und tatsächliche Bereitstellung noch offen.'}};
 const PREPARED_LAB_FEEDBACK:UpdateEntry={...LAB_FEEDBACK_COPY,version:'Labor-Rückmeldungen',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{file:'content/research-editorial-review.json',revision:'prepared',quote:'Eigener Labor-Lieferabschnitt; noch kein bestätigter Merge oder Bereitstellungsnachweis.'}};
 const PREPARED_JOURNEY_SOURCES:UpdateEntry={...JOURNEY_SOURCE_COPY,version:'Lesbare Quellen',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-17',publishedOn:null,availableOn:null,occurredAt:null,links:[],evidence:{file:'CHANGELOG.md',revision:'prepared',quote:'Lesbare und leichter antippbare Quellenlinks; noch kein bestätigter Merge oder Vercel-Erfolg.'}};
-export const PREPARED_UPDATES:UpdateEntry[]=[PREPARED_LAB_FEEDBACK,...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SOURCES.id)?[PREPARED_JOURNEY_SOURCES]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_ANIMAL_SOLAR.id)?[PREPARED_ANIMAL_SOLAR]:[]),...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SUPPORT.id)?[PREPARED_JOURNEY_SUPPORT]:[])];
+const PREPARED_CONTENT_CORRECTIONS:UpdateEntry={
+ id:'content-answer-corrections-3-5',icon:'💡',category:'Fehler behoben',title:'Erklärungen, die wirklich zur Frage passen',
+ version:'Fragen und Lernhilfen',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-18',publishedOn:null,availableOn:null,occurredAt:null,
+ summary:'Rückmeldungen und Hinweise greifen die jeweilige Frage genauer auf. Eigene Geschichtsvertiefungen helfen beim Vergleichen und beim Nachdenken über Quellen.',
+ details:['Beim Internet unterscheidet die Rückmeldung ein Smartphone von verbundenen Computernetzen. Bei Einstein erklärt sie das erfragte Forschungsgebiet.','Zwölf Erfindungsfragen sind verständlicher formuliert; 18 Geschichtsantworten erhalten eine unmittelbar passende Erklärung.','26 individuelle Geschichtsvertiefungen ersetzen den immer gleichen Zusatztext: etwa zum Unterschied zwischen einer Grenzöffnung und der späteren Wiedervereinigung.','Hinweise in 17 bisherigen Tierwerkstätten beziehen sich jetzt auf die jeweilige Begründungsfrage. Auch die richtige Blauwalantwort erhält eine passende Bestätigung.','Fragen- und Fortschrittskennungen, Antwortmöglichkeiten und Lösungen bleiben erhalten. Du kannst mit bisherigen Lernständen weitermachen.'],
+ benefit:'Kinder können ihre Antworten gezielter überdenken. Eltern finden passendere Erklärungen und nachvollziehbare Quellen, ohne vorhandene Lernstände neu beginnen zu müssen.',
+ links:[],evidence:{pullRequest:27,file:'content/editorial-reviews.json',revision:'prepared',quote:'Konkrete Inhaltskorrekturen im bestehenden Master; keine bestätigte Übernahme oder Bereitstellung.'}
+};
+const PREPARED_TOPIC_MAPS:UpdateEntry={
+ id:'clear-topic-maps-3-5',icon:'🗺️',category:'Einfachere Bedienung',title:'Orte auf der Karte leichter zuordnen',
+ version:'Übersichtskarten',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-18',publishedOn:null,availableOn:null,occurredAt:null,
+ summary:'Die kleinen Übersichtskarten zeigen Orte deutlicher. Zusammenliegende Markierungen behalten ihre einzeln auswählbaren Ortsnamen.',
+ details:['Eine eigene Kartenunterlage vermeidet die zusätzlichen Kontinentnummern der bisherigen Reisegrafik.','Größere Markierungen bleiben auch auf schmalen Karten und mit großer Schrift lesbar. Nahe Orte teilen eine Markierung; die Liste öffnet weiterhin jeden Ort einzeln auf der Weltkugel.','Der Wostok-Marker folgt der Stationslage im antarktischen Ortsverzeichnis. Der datierte Temperaturrekord bleibt getrennt mit seiner Wetterquelle belegt.'],
+ benefit:'Kinder können Kartenzeichen und Ortsnamen leichter verbinden. Die Erklärung macht deutlich, dass ein Punkt weder eine Gebietsgrenze noch eine genaue Vermessung zeigt.',
+ links:[],evidence:{pullRequest:27,file:'content/nature-editorial-review.json',revision:'prepared',quote:'Gemeinsame Kartenansicht lokal geprüft; vollständige Pflichtabnahme und tatsächliche Bereitstellung weiterhin offen.'}
+};
+const PREPARED_NATURE_MODELS:UpdateEntry={
+ id:'nature-process-comparisons-3-5',icon:'🌿',category:'Anschaulicher erklärt',title:'Landschaften Schritt für Schritt vergleichen',
+ version:'Naturmodelle',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-18',publishedOn:null,availableOn:null,occurredAt:null,
+ summary:'Eigene Schrittbilder machen Wasser zwischen Dünen, Licht im Wald, bewegliche Meeresgrenzen und Ablagerungen an einer Flussmündung vergleichbar.',
+ details:['Wähle jeweils einen Schritt und erkläre, was sich verändert. Eine feste Dünenform hilft etwa beim Vergleich verschiedener Wasserstände.','Die Bilder zeigen gedachte Zusammenhänge. Verständliche Beschreibungen benennen, was sie erklären und welche Messwerte oder Vorhersagen sie nicht liefern.','Überarbeitete Lernaufträge passen zu den gezeigten Bildern. Die Delta-Erklärung unterscheidet Küsten- und Binnenlandbeispiele; Quellenstellen sind auf Deutsch erläutert.'],
+ benefit:'Kinder können Veränderungen selbst vergleichen und ihre Erklärung begründen. Die Grenzen der Bilder bleiben sichtbar.',
+ links:[],evidence:{pullRequest:27,file:'content/nature-editorial-review.json',revision:'prepared',quote:'Vier eigene Naturmodelle und gezielte Altredaktion lokal geprüft; vollständige Pflichtabnahme und tatsächliche Bereitstellung bleiben offen.'}
+};
+export const PREPARED_UPDATES:UpdateEntry[]=[PREPARED_NATURE_MODELS,PREPARED_TOPIC_MAPS,PREPARED_CONTENT_CORRECTIONS,PREPARED_ANIMAL_EXPANSION,...(!TEST_UPDATES.some(e=>e.id===PREPARED_LAB_FEEDBACK.id)?[PREPARED_LAB_FEEDBACK]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SOURCES.id)?[PREPARED_JOURNEY_SOURCES]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_ANIMAL_SOLAR.id)?[PREPARED_ANIMAL_SOLAR]:[]),...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SUPPORT.id)?[PREPARED_JOURNEY_SUPPORT]:[])];
 export const updateLabel=(entry:UpdateEntry)=>entry.channel==='sites'?`Frühere Website · Version ${entry.version}`:entry.status==='prepared'?'In Vorbereitung · noch nicht verfügbar':'Testversion · verfügbar';
 const updateDay=(entry:UpdateEntry)=>entry.availableOn??entry.publishedOn??entry.confirmedOn;
 export function publicUpdates(entries:readonly UpdateEntry[]=UPDATE_HISTORY){

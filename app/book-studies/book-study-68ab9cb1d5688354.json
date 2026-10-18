@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "term": "Nipptide",
+  "learning": {
+    "starter": "Um die Viertelmondphasen ist der Unterschied zwischen Hoch- und Niedrigwasser häufig kleiner als bei Springtide. Die Mondwirkung ist dabei nicht ausgeschaltet.",
+    "deeper": "Sonne und Mond sind aus Erdsicht ungefähr rechtwinklig angeordnet; ihre Gezeitenwirkungen überlagern sich anders. Ein kleinerer Höhenunterschied bedeutet weder null Gezeiten noch an jedem Ort denselben Verlauf.",
+    "observe": "Zeichne einen größeren und einen kleineren erfundenen Wasserstandsbereich. Beschrifte beide mit unbekanntem wirklichem Ort. Die Skizze zeigt einen Vergleich und enthält keinen örtlichen Gezeitenkalender.",
+    "benefit": "Du trennst eine schwächere Differenz von einer fehlenden Gezeitenwirkung.",
+    "connection": "Die Gezeitenkarte hilft, Überlagerung und Unterschied zu lesen. Eine Nipptide ist kein Ausschalter der Mondanziehung oder Sicherheitsnachweis.",
+    "topic": "science-tides",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/springtide.html",
+        "title": "NOAA · Spring- und Nipptiden",
+        "anchor": "Ausrichtung um Neu- und Vollmond sowie kleinerer Wasserstandsunterschied um die Viertelphasen. Keine Jahreszeit oder sichere Küstenaktivität abgeleitet.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Ebbe und Flut",
+        "reason": "Nipptide beschreibt eine anders überlagerte Gezeitenwirkung mit kleinerem Unterschied. Kleiner bedeutet nicht ausgeschaltete Mondanziehung oder überall null Gezeiten."
+      }
+    ],
+    "question": {
+      "prompt": "Was bedeutet der kleinere Bereich im vereinfachten Nipptidenvergleich?",
+      "answers": [
+        "Die Mondanziehung ist ganz verschwunden",
+        "Es gibt an jeder Küste genau null Unterschied",
+        "Die Wirkungen überlagern sich anders; ein Unterschied kann bleiben"
+      ],
+      "correct": 2,
+      "hint": "Kleiner ist nicht automatisch gleich null oder vollständig ausgeschaltet.",
+      "why": "Ein kleinerer Bereich kann bestehen bleiben. Die Mondwirkung verschwindet nicht einfach während einer Viertelmondphase.",
+      "wrongReasons": [
+        "Der Mond verliert bei einer Viertelmondphase nicht seine Anziehung.",
+        "Kleinerer Bereich und null Unterschied sind verschiedene Aussagen; die örtlichen Verläufe unterscheiden sich.",
+        ""
+      ]
+    }
+  }
+}

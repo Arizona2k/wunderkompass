@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "term": "Ampere",
+  "learning": {
+    "symbol": "A",
+    "quantity": "Elektrische Stromstärke",
+    "starter": "Ampere gehört zu elektrischem Strom. Stromstärke und Spannung sind verschiedene Angaben.",
+    "deeper": "Seit 2019 ist das Ampere über die festgelegte Elementarladung und die Sekunde definiert. Eine Stromstärke von 1 A entspricht einem Ladungsdurchsatz von 1 Coulomb je Sekunde. Ladungsmenge und Ladung je Zeit sind verschieden – ähnlich wie die Gesamtzahl von Karten und die Zahl pro Runde.",
+    "observe": "Ordne nur auf dem Bildschirm die Schilder 2 A, 2 kg und 2 s den passenden Messgrößen zu. Keine Steckdosen, Kabel oder echten elektrischen Anlagen untersuchen.",
+    "benefit": "Du liest eine Stromstärkeangabe, ohne sie mit Masse, Zeitdauer oder einer Sicherheitsfreigabe zu verwechseln.",
+    "topic": "science-circuit",
+    "question": {
+      "prompt": "Welches Schild beschreibt eine elektrische Stromstärke?",
+      "answers": [
+        "2 kg",
+        "2 A",
+        "2 s"
+      ],
+      "correct": 1,
+      "hint": "Die Zahlen sind hier absichtlich gleich. Entscheidend ist die Einheit dahinter.",
+      "why": "A ist das Einheitenzeichen für Ampere und damit für die Stromstärke. Gleiche Zahlen können mit verschiedenen Einheiten völlig verschiedene Größen beschreiben.",
+      "wrongReasons": [
+        "kg ist eine Masseeinheit. Die gleiche Zahl macht daraus keine Stromstärke.",
+        "",
+        "s gehört zur Zeit. Eine Dauer allein beschreibt noch keinen elektrischen Ladungsdurchsatz."
+      ]
+    },
+    "connection": "Die Stromkarte zeigt, weshalb ein geschlossener Stromweg wichtig ist. Sie ersetzt keinen echten Elektroversuch.",
+    "sources": [
+      {
+        "url": "https://www.nist.gov/si-redefinition/ampere-introduction",
+        "title": "NIST · Ampere: Introduction",
+        "anchor": "Definition since 20 May 2019; charge passing a point per unit time; one coulomb per second",
+        "updatedOn": "2026-05-28",
+        "checkedOn": "2026-10-13"
+      }
+    ]
+  }
+}

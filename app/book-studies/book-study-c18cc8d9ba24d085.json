@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "term": "Mineral",
+  "learning": {
+    "starter": "Ein Mineral ist ein natürlich entstandener fester Stoff mit charakteristischer Zusammensetzung und geordnetem innerem Aufbau. Quarz ist ein Beispiel.",
+    "deeper": "Die Bausteine eines Minerals sind im Inneren geordnet. Glas besitzt diesen regelmäßigen Aufbau nicht; glasiges Vulkangestein wie Obsidian ist deshalb nicht einfach ein einzelnes Mineral. Ein Gestein kann verschiedene Bestandteile enthalten. Form und Farbe allein reichen nicht immer zur Bestimmung. Das selbst gezeichnete Punktmuster ist keine vollständige atomare Struktur.",
+    "observe": "Zeichne ein wiederholtes eigenes Punktmuster und daneben einen gedachten Stein aus mehreren Mustern. Beschrifte Ordnung und Mischung. Die Symbole zeigen keine echte Kristallstruktur und bestimmen kein gefundenes Material.",
+    "benefit": "Du kannst den Unterschied zwischen Mineral und Gestein erklären, ohne aus einer Farbe eine Stoffart zu erraten.",
+    "connection": "Der Unterschied ergänzt die Materialseite des Erdschichtenlabors. Die Schichtfarbe ist kein einzelnes Mineral und kein chemischer Messwert.",
+    "lab": "depth",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/faqs/what-difference-between-a-rock-and-a-mineral",
+        "title": "USGS · Mineral (Englisch)",
+        "anchor": "Unterschied zwischen Gestein und Mineral: charakteristische Zusammensetzung und geordneter Aufbau. Farbe allein ist keine sichere Materialbestimmung.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      },
+      {
+        "url": "https://www.usgs.gov/news/science-snippet/earthword-rock-vs-mineral",
+        "title": "USGS · Gestein und Mineral",
+        "anchor": "Begriffsabschnitt: natürliche Minerale mit charakteristischer Zusammensetzung und geordnetem innerem Aufbau. Öffentlich indexierter Originaltext gelesen; keine vollständige Seiten- oder Probenbestimmung behauptet.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Gestein",
+        "reason": "Ein Gestein kann mehrere Mineralbestandteile enthalten. Ein Farbpunkt im eigenen Schema ist kein Nachweis einer realen Stoffart."
+      }
+    ],
+    "question": {
+      "prompt": "Wie hängen Mineral und Gestein zusammen?",
+      "answers": [
+        "Ein Gestein kann aus mehreren Mineralen bestehen",
+        "Jede Farbe ist automatisch ein anderes Mineral",
+        "Mineral ist nur ein anderes Wort für jeden beliebigen Stein"
+      ],
+      "correct": 0,
+      "hint": "Vergleiche den einzelnen charakteristischen Stoff mit einer möglichen Zusammenstellung.",
+      "why": "Gestein kann Mineralbestandteile enthalten. Die begriffliche Unterscheidung ist keine Bestimmung anhand bloßer Farben.",
+      "wrongReasons": [
+        "",
+        "Farbe allein beweist weder eine Mineralart noch eine eindeutige Zusammensetzung.",
+        "Beide Begriffe betrachten verschiedene Materialebenen und sind nicht beliebig austauschbar."
+      ]
+    }
+  }
+}

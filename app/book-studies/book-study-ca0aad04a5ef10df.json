@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "term": "Gen",
+  "learning": {
+    "starter": "Ein Gen ist ein bestimmter Abschnitt der DNA. Zellen können seine Information nutzen.",
+    "deeper": "Viele Gene enthalten Informationen für Proteine. Andere liefern RNA, die selbst eine Aufgabe erfüllt. Gene sind deshalb nicht einfach fertige Körperteile. Ihre Nutzung gehört zu vielen miteinander verbundenen Vorgängen in Zellen.",
+    "observe": "Schreibe eine kurze Anleitung mit drei Abschnitten und markiere einen davon. Vergleiche Abschnitt und ganze Anleitung. Diese Papierhilfe erklärt nur die Begriffe Teil und Ganzes, keine echten Gene oder Merkmale.",
+    "benefit": "Du erklärst, warum ein Gen ein Abschnitt und kein vollständiges Lebewesen ist.",
+    "topic": "science-cell",
+    "connection": "Die Zellkarte zeigt verschiedene Aufgaben in einer lebenden Einheit. Gene liefern unter anderem Informationen für Proteine, die an dieser Zellarbeit beteiligt sind.",
+    "relatedWords": [
+      {
+        "term": "DNA",
+        "reason": "Ein Gen ist ein bestimmter Informationsabschnitt; DNA ist der molekulare Informationsträger."
+      },
+      {
+        "term": "Genom",
+        "reason": "Ein Gen ist ein Abschnitt; zum Genom gehört die gesamte Erbinformation, auch weitere Bereiche."
+      },
+      {
+        "term": "Protein",
+        "reason": "Viele Gene enthalten Information für Proteine. Ein Informationsabschnitt ist nicht das daraus gebildete Molekül."
+      },
+      {
+        "term": "RNA",
+        "reason": "Manche Gene enthalten Information für eine RNA, die selbst eine Aufgabe erfüllt. Nicht jede RNA dient nur als Protein-Nachricht."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Gene",
+        "title": "NIH/NHGRI · Gen (Englisch)",
+        "anchor": "Definition plus narration: protein-coding genes and functional RNA genes",
+        "updatedOn": "2026-10-13",
+        "checkedOn": "2026-10-14"
+      },
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Genetic-Code",
+        "title": "NIH/NHGRI · Gene legen deine Zukunft nicht fest (Englisch)",
+        "anchor": "Narration: neither genes nor DNA determine who you are or what you shall do",
+        "updatedOn": "2026-10-13",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "question": {
+      "prompt": "Was beschreibt ein Gen am besten?",
+      "answers": [
+        "Ein fertiges Körperteil",
+        "Einen bestimmten Informationsabschnitt",
+        "Die gesamte DNA eines Lebewesens"
+      ],
+      "correct": 1,
+      "hint": "Vergleiche einen Abschnitt mit einer ganzen Sammlung.",
+      "why": "Ein Gen ist ein bestimmter Abschnitt mit biologischer Information. Die gesamte DNA wird als Genom bezeichnet.",
+      "wrongReasons": [
+        "Ein Körperteil besteht aus Zellen und vielen Stoffen. Ein Gen ist ein Informationsabschnitt.",
+        "",
+        "Die Gesamtheit der DNA heißt Genom. Ein Gen ist nur ein bestimmter Abschnitt."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum verrät ein einzelnes Gen nicht automatisch alle Eigenschaften?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Gen“: Du vermeidest genetische Festlegungen und trennst verschiedene Einflussebenen."
+      }
+    ]
+  }
+}

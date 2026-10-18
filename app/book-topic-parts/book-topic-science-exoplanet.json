@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "topic": "science-exoplanet",
+  "links": [
+    {
+      "term": "Exoplanet",
+      "reason": "Die Exoplanetenkarte zeigt eine begrenzte Helligkeitsmessidee. Prüfe die Blickrichtung und die Aussagegrenze, statt jeden Kurvenknick sofort für einen Lebensnachweis zu halten."
+    },
+    {
+      "term": "Transit",
+      "reason": "Die Exoplanetenkarte verknüpft die passende Blickrichtung mit einer kleinen Lichtänderung. Ein Transit ist ein Beobachtungsvorgang und nicht dasselbe wie die ganze Planetendefinition."
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum können wir nicht jeden Exoplaneten durch einen Transit finden?",
+      "reason": "Im Transitschema der Exoplanetenkarte vergleichst du Blickrichtung und einen möglichen Helligkeitseinbruch. Ein Planet kann vorhanden sein, ohne aus unserer Richtung vor dem Stern vorbeizuziehen."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "term": "Bucht",
+  "learning": {
+    "starter": "Eine Bucht ist ein teilweise von Land umgebener Teil eines Meeres oder Sees.",
+    "deeper": "Der Umriss beschreibt eine Wasser-Land-Anordnung. Entstehung, Tiefe und Salzgehalt sind weitere Fragen. Auch eine lange Bucht ist nicht ohne zusätzliche Belege ein von Gletschern geformter Fjord.",
+    "observe": "Zeichne einen Gedanken-Küstenumriss mit einer Einbuchtung und offenem Wasserzugang. Markiere Wasser und Land verschieden. Die Fantasiekarte misst keine reale Tiefe.",
+    "benefit": "Du liest einen Küstenumriss, ohne daraus unbelegte Eigenschaften abzuleiten.",
+    "connection": "Das Wasserlabor beschreibt Speicher und Wege. Der Buchtenumriss ergänzt einen gedachten Wasserort und berechnet keinen echten Wasserspeicher.",
+    "lab": "water",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/us-board-on-geographic-names/gnis-domestic-names-feature-classes",
+        "title": "USGS · Bucht im geografischen Namenssystem",
+        "anchor": "Begriffstabelle zu Buchten, vorspringendem Land und Wasserpassagen. Eigene Umrisse erklären Formen; sie sind keine aktuelle Navigationskarte.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was fehlt für eine tatsächliche Tiefenangabe?",
+      "answers": [
+        "Echte Tiefenmessungen; der Umriss allein genügt nicht",
+        "Nur eine andere Farbe für dieselbe Zeichnung",
+        "Ein beliebiger Name für die Bucht"
+      ],
+      "correct": 0,
+      "hint": "Eine Ansicht von oben enthält nicht automatisch die Höhe des Bodens.",
+      "why": "Tiefenangaben benötigen passende Messdaten. Farbe und Name ersetzen sie nicht.",
+      "wrongReasons": [
+        "",
+        "Eine andere Farbe liefert keine tatsächliche Bodenmessung.",
+        "Ein Name bestimmt keine gemessene Wassertiefe."
+      ]
+    }
+  }
+}

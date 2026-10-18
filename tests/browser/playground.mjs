@@ -1,3 +1,4 @@
+import {prepareAxe} from './axe-loader.mjs';
 import assert from 'node:assert/strict';
 await import('../../scripts/test-runtime.mjs');
 const {PLAYGROUND_GAMES}=await import('../../app/playground-catalog.ts');
@@ -15,7 +16,7 @@ async function geometry(p,selector){
  assert.deepEqual(bad,[],'game text must wrap');
 }
 async function axe(p,selector){
- await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
+ await prepareAxe(p);
  const result=await p.evaluate(async s=>(await window.axe.run(s,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)})),selector);
  assert.deepEqual(result,[],'playground WCAG checks');
 }

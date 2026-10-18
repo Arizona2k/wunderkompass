@@ -1,31 +1,22 @@
 {
-  "generatedAt": "2026-10-17T21:50:59.891Z",
+  "generatedAt": "2026-10-18T08:27:31.230Z",
   "personalProgressIncluded": false,
-  "topics": 116,
+  "topics": 185,
   "categories": {
-    "animals": 24,
-    "history": 31,
+    "animals": 48,
+    "history": 33,
     "people": 18,
-    "inventions": 12,
-    "buildings": 8,
-    "science": 23
+    "inventions": 24,
+    "buildings": 16,
+    "science": 46
   },
   "journeys": 16,
   "chapters": 80,
   "quizQuestions": 76,
-  "knowledgeWords": 90,
-  "whyQuestions": 30,
+  "knowledgeWords": 180,
+  "whyQuestions": 60,
   "routes": 8,
   "files": [
-    {
-      "file": "animal-inquiries.json",
-      "sources": [
-        "app/animal-inquiries.json"
-      ],
-      "entries": 24,
-      "bytes": 53003,
-      "sha256": "129bfe0e8c3b3f991df282c29501272cb840e6655d47061f796798534989aca0"
-    },
     {
       "file": "continents.json",
       "sources": [
@@ -82,6 +73,15 @@
       "sha256": "0d92523ed27720467e08d4c74d3cbe3c0eb69591d70f3fec71bc19aedeb58f7d"
     },
     {
+      "file": "animal-inquiries.json",
+      "sources": [
+        "app/animal-inquiries.json"
+      ],
+      "entries": 48,
+      "bytes": 115162,
+      "sha256": "d96f85534517058f5edca8386ef8484e5b5d5004ee1b185aae80149091027054"
+    },
+    {
       "file": "journey-inquiries.json",
       "sources": [
         "app/journey-inquiries.json"
@@ -93,32 +93,32 @@
     {
       "file": "journeys.json",
       "sources": [
-        "app/learning-data.ts",
-        "app/expanded-learning-data.ts"
+        "app/journey-content.json",
+        "app/journey-index.json"
       ],
       "entries": 16,
-      "bytes": 44741,
-      "sha256": "d2f5c290c8069f8a4fb0b8403ec78b822fe2c48b16375785bebde455cc8e6ca0"
+      "bytes": 106688,
+      "sha256": "17903b27404d01e3cb0e7cc242f8bf98fee0855e5ae8f88c57cb9090c391a729"
     },
     {
       "file": "knowledge-words.json",
       "sources": [
-        "app/learning-data.ts",
-        "app/expanded-learning-data.ts"
+        "app/book-content.json",
+        "app/book-word-index.json"
       ],
-      "entries": 90,
-      "bytes": 14909,
-      "sha256": "696126ab6b5c81531c9e5f33d66ffa9221f69ca227e970d4d4558aefc4f6eb98"
+      "entries": 180,
+      "bytes": 527508,
+      "sha256": "3928ce024490efedf1e5e58ef2d0d895d3a2b0d18770dcfb5053efa64f5586de"
     },
     {
       "file": "why-questions.json",
       "sources": [
-        "app/learning-data.ts",
-        "app/expanded-learning-data.ts"
+        "app/book-content.json",
+        "app/book-why-index.json"
       ],
-      "entries": 30,
-      "bytes": 7428,
-      "sha256": "0a471fc504c3ed58e79909c6a9565749b5ba8fa496154b21741a95c823391eef"
+      "entries": 60,
+      "bytes": 113405,
+      "sha256": "e8adde11e0a5a6ecc7de77c097792c08e5594935018be4a8773ec08a0a328e05"
     },
     {
       "file": "earth-badges.json",
@@ -135,9 +135,9 @@
         "app/nature-data.ts",
         "app/plate-points.json"
       ],
-      "entries": 40,
-      "bytes": 14032,
-      "sha256": "ed14a96da03eb11d99391cae795733d695962125cccc2f6b2b19f300164358e0"
+      "entries": 74,
+      "bytes": 29447,
+      "sha256": "778034d9602a9c075e184890ea93225f7cec21edf77b0323ce6b426c62193f70"
     },
     {
       "file": "plate-locations.json",
@@ -155,9 +155,9 @@
         "app/nature-data.ts",
         "app/plate-points.json"
       ],
-      "entries": 15,
-      "bytes": 2222,
-      "sha256": "f2acf0cf226655ab023a0fa63720e1db2b1a4f9e1eefb4af559f7718ee6463d9"
+      "entries": 16,
+      "bytes": 2440,
+      "sha256": "5b739de21604e8e60b813207084f9a715a4187e0546e46f6b0bdf456b6105ae0"
     },
     {
       "file": "climate-zones.json",
@@ -234,6 +234,15 @@
       "sha256": "b1445a3e3d48ecc73fa488db69db3d8025e55744625873382dff4288695dcc37"
     },
     {
+      "file": "nature-learning.json",
+      "sources": [
+        "app/nature-content.json"
+      ],
+      "entries": 2,
+      "bytes": 217975,
+      "sha256": "eb80babb4593d5a70592e86e57b3a0e6551534828d8f1fb34235067a51b373cd"
+    },
+    {
       "file": "research-feedback.json",
       "sources": [
         "app/research-feedback.json"
@@ -247,9 +256,9 @@
       "sources": [
         "app/challenge-hints.json"
       ],
-      "entries": 142,
-      "bytes": 33117,
-      "sha256": "d46f879f6c2e58ebd66066e83f7dbb4d2c2a8b8c505aebd8b43c00b648d7dac4"
+      "entries": 215,
+      "bytes": 49186,
+      "sha256": "b09d3e0a710d514e850e9715922bd1814b519c650bad9c324086550ae37ece82"
     },
     {
       "file": "world-connections.json",
@@ -259,26 +268,26 @@
         "app/discovery-connections.json"
       ],
       "entries": 2,
-      "bytes": 11540,
-      "sha256": "bd6d97978454b2b8e389fa42917732c3025ee047c1ebe9eeca54f367685208c3"
+      "bytes": 55135,
+      "sha256": "5a9fec9ab2e85f37faac5d19bf3ca743d955aafb80b8de93ab3a2ef84095823f"
     },
     {
       "file": "world-topics.json",
       "sources": [
         "app/world-catalog.json"
       ],
-      "entries": 116,
-      "bytes": 340013,
-      "sha256": "9177a6bc9a3f5a3c48389477a57567716d852f8bd707f85d8f37b8323e3a3484"
+      "entries": 185,
+      "bytes": 790653,
+      "sha256": "d79a11160f61d21d439fd85341b40ed857daa9c6a23d931d1102204dfe664296"
     },
     {
       "file": "world-index.json",
       "sources": [
         "app/world-index.json"
       ],
-      "entries": 116,
-      "bytes": 54618,
-      "sha256": "2c7de30e3a25fade4df8a8ff5d0b4a3cce651e2ae33818deee763b5e6442d5d6"
+      "entries": 185,
+      "bytes": 82293,
+      "sha256": "6894f8466418e9077607fd447a6d0b3cf0c55b29d5ff91dc2a4173864a157542"
     },
     {
       "file": "games.json",
@@ -295,8 +304,8 @@
         "app/world-photos.json"
       ],
       "entries": 49,
-      "bytes": 33677,
-      "sha256": "4820679413973446f565edef1d80ec288def1a44e26d1e929f2b6a4f1b63336e"
+      "bytes": 33910,
+      "sha256": "2ee2ee920dc167a2fcb777a493a4d10635a753478f9fe6b79785250f3fb74d12"
     },
     {
       "file": "journey-photo-metadata.json",
@@ -411,9 +420,9 @@
       "sources": [
         "app/world-catalog.json"
       ],
-      "entries": 26,
-      "bytes": 2732,
-      "sha256": "fa3de4e5c8bc7a43a0ee6e16e38213bf7bc6d59c732681e062ff4e17ea4db4aa"
+      "entries": 36,
+      "bytes": 4021,
+      "sha256": "e8e22bd197756b905f6be2c8c438188c8e131c2b11680af6f26cba8b5121db5e"
     }
   ]
 }

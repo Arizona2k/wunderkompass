@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "term": "DNA",
+  "learning": {
+    "starter": "Zellen bewahren Informationen in einem Stoff namens DNA auf. Die Reihenfolge kleiner Bausteine macht dabei einen Unterschied.",
+    "deeper": "DNA besteht gewöhnlich aus zwei verbundenen Strängen. Ihre vier Basen heißen A, T, C und G; A passt zu T und C zu G. Die Reihenfolge enthält unter anderem Information für Proteine oder RNA.",
+    "observe": "Schreibe AATT und ATAT auf. Beide enthalten dieselben Buchstaben, aber in anderer Reihenfolge. Erkläre, warum bloßes Zählen die Anordnung nicht beschreibt. Das ist eine Zeichenhilfe, keine echte DNA.",
+    "benefit": "Du unterscheidest den Informationsträger von der Reihenfolge seiner Bausteine.",
+    "topic": "science-cell",
+    "connection": "Auf der Zellkarte erkennst du verschiedene Bereiche einer Zelle. Die DNA erklärt, wie Zellen Informationen bewahren; die grobe Zellzeichnung zeigt diese Moleküle nicht einzeln.",
+    "relatedWords": [
+      {
+        "term": "Gen",
+        "reason": "Ein Gen ist ein bestimmter Informationsabschnitt; DNA ist der molekulare Informationsträger."
+      },
+      {
+        "term": "Chromosom",
+        "reason": "Chromosomen ordnen lange DNA zusammen mit Proteinen. Verpackung und Informationsträger sind verschiedene Begriffe."
+      },
+      {
+        "term": "Nukleotid",
+        "reason": "Viele verbundene Nukleotide bilden die DNA-Kette. Vergleiche einzelnen Baustein und gesamten Aufbau."
+      },
+      {
+        "term": "Mutation",
+        "reason": "Eine Mutation verändert die DNA-Reihenfolge. Die Beschreibung einer Veränderung erklärt noch nicht ihre Wirkung."
+      },
+      {
+        "term": "RNA",
+        "reason": "RNA und DNA sind verwandte, aber verschiedene Moleküle. Vergleiche ihre Bausteine und Aufgaben."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid-DNA",
+        "title": "NIH/NHGRI · DNA (Englisch)",
+        "anchor": "Definition: two linked strands; A–T and C–G pairing; sequence encodes information for protein or RNA",
+        "updatedOn": "2026-10-13",
+        "checkedOn": "2026-10-14"
+      },
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Genetic-Code",
+        "title": "NIH/NHGRI · Gene legen deine Zukunft nicht fest (Englisch)",
+        "anchor": "Narration: neither genes nor DNA determine who you are or what you shall do",
+        "updatedOn": "2026-10-13",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "question": {
+      "prompt": "AATT und ATAT enthalten gleich viele A und T. Was ist trotzdem verschieden?",
+      "answers": [
+        "Die Reihenfolge",
+        "Die Gesamtzahl der Zeichen",
+        "Die verwendeten Zeichenarten"
+      ],
+      "correct": 0,
+      "hint": "Lies beide Folgen von links nach rechts.",
+      "why": "Dieselben Zeichen können verschieden angeordnet sein. Bei DNA ist die Reihenfolge wichtig für die enthaltene Information.",
+      "wrongReasons": [
+        "",
+        "Beide Folgen enthalten vier Zeichen. Die Gesamtzahl erklärt den Unterschied nicht.",
+        "Beide verwenden A und T. Unterschiedlich ist ihre Anordnung."
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "topic": "science-encryption",
+  "links": [
+    {
+      "term": "Algorithmus",
+      "reason": "Beim Verschlüsseln werden klare Regeln auf Zeichen angewendet. Unterscheide ausführbare Schritte, ihr Ziel und die Frage, ob das Verfahren tatsächlich sicher ist."
+    },
+    {
+      "term": "Verschlüsselung",
+      "reason": "Die Verschlüsselungskarte lässt dich ein begrenztes Buchstabenspiel erkunden. Erkläre dabei ausdrücklich die Grenze zwischen Lernregel und echter Datensicherheit."
+    },
+    {
+      "term": "Schlüssel",
+      "reason": "Die Verschlüsselungskarte zeigt Regel und Verschiebung getrennt. Der konkrete Schlüssel einer echten Anwendung braucht andere Verfahren und Prüfungen als dieses Lernspiel."
+    },
+    {
+      "term": "Klartext",
+      "reason": "Die Verschlüsselungskarte zeigt einen Ausgangstext und eine veränderte Form. Verwende nur die erfundenen Spielwörter und trenne den Lernvergleich von echten privaten Daten."
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum ist eine leicht lesbar zurückdrehbare Geheimregel kein sicherer Schutz?",
+      "reason": "Die Verschlüsselungskarte erklärt einen Schutzgedanken und seine Modellgrenzen. Eine sichtbare Rückdrehregel kann das Prinzip zeigen, liefert aber noch keinen geprüften sicheren Schutz."
+    }
+  ]
+}

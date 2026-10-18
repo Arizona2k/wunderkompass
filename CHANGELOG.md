@@ -1,8 +1,61 @@
+## Integrierte Naturthemen und ältere Begriffe · 18.10.2026, in Vorbereitung
+
+- 34 bereits integrierte Naturartikel individuell gegen Quellen gegengelesen und Lernaufträge an tatsächlich vorhandene Bilder/Handlungen angepasst. Deutsche Quellenstellen, Daintrees heutiger kultureller Bezug und präzise Abgrenzung im Ross-Beispiel.
+- Vier eigene Dreischrittmodelle zu Dünenwasser, Waldlicht, Strömungsgrenzen und Deltaablagerung; früh gesehene zu kleine Deltaflächen vergrößert. Zehn bisherige Zeichnungen erhalten. Ältere Delta-Erklärung um den Okavango als Binnenlandbeispiel ergänzt.
+- Alle Antwortmöglichkeiten, Lösungen, Reihenfolgen, IDs und gespeicherten Daten erhalten. Lokale breite Artikel-, Tastatur-, echte Zoom- und Kaltstartprüfung abgeschlossen; 228 Unit-Tests, Typ/Lint/Build grün. Vorbereitete Chronik sichtbar geprüft, keine neue Bereitstellung behauptet.
+- Vollständige Freigabeprüfung und zentrale Registerbindung bleiben offen; Quellen-/Baseline-/Technikpflichten unverändert. Fortsetzung des vorhandenen Buch-/Warum-/Reisebestands im selben Gesamtauftrag.
+
+## In Vorbereitung · Quellen und Lernaufträge im Naturatlas, 18.10.2026
+
+34 bisherige Naturerklärungen mit ihren Grundtexten und Begriffsverbindungen gegengelesen. 21 Quellenbelege ergänzt und Belegstellen verständlicher beschriftet. Borneos Kalimantan-Erklärung und Frage auf den tatsächlichen NASA-Kontext begrenzt; Antworten, Lösungen und Lernkennungen erhalten. Einen Grammatikfehler beim Schildvulkan korrigiert. Lokale Breiten-/Schrift-, Rückweg-, native Vergrößerungs- und kalte Offlineprüfungen bestanden; vollständige Pflichtabnahme und Bereitstellung bleiben offen.
+
+## In Vorbereitung · gemeinsame Übersichtskarten, 18.10.2026
+
+Eigene unbeschriftete Kartenunterlage, lesbare Ortsmarkierungen und einzeln erreichbare nahe Orte; ursprüngliche Reisegrafiken erhalten. Wostok-Stationslage quellenbezogen korrigiert, Lufttemperaturrekord getrennt belegt. Veralteten Hinweis auf ausstehende externe Fachabnahme aus Buch und Naturatlas entfernt; begrenzte Quellenprüfung weiter erklärt. Lokal gezielt einschließlich nativer Vergrößerung, kaltem Offline und Pass-Sicherung geprüft; vollständige Pflichtabnahme und tatsächliche Bereitstellung offen.
+
+## 2026-10-18 · Inhaltskorrekturen im bestehenden Master vorbereitet
+
+Internet-Rückmeldung der konkreten Smartphone-Antwort zugeordnet; Einstein-Erklärung auf Licht/Raum/Zeit bezogen. Zwölf Erfindungsfragen,26 individuelle Geschichtsvertiefungen und18 unmittelbare Richtigerklärungen redigiert. Historische Originalbanken mit31 engen dokumentierten Ausnahmen und unveränderten IDs/Antworten/Lösungen geschützt; aktuelle gemischte Auswahl/Altpass/Offline-Proben ergänzt.
+
+Bestehende Tierwelle samt Altwerkstätten fachlich und pädagogisch nachgearbeitet: falsche Hinweise, Belegzuordnungen und Blauwal-Bestätigung korrigiert; konkrete Quellen-/Mess-/Schutz-/Mediengrenzen präzisiert. Vorhandene Geschichtsvollroutine in Chromium-Abnahme eingebunden; Fokusprüfung nutzt echteTab-Bedienung, sensible Einführung bleibt freiwillig. Neuer Originalnachtrag bytegleich archiviert und tatsächliche Lücken in vier vorhandenen Regeldokumenten ergänzt. Vollständige aktuelle Abnahme/Bereitstellung noch offen; PR27Draft und Paket3.5 in Arbeit.
+
+## 18. Oktober2026 · Labor-Rückmeldungen auf der Testwebsite
+
+Die elf bestehenden Labore erklären alle66falschenAntwortmöglichkeiten individuell. PR38 ist nach vollständigerQuality samt tatsächlichemFirefox/WebKit übernommen und unter unverändertemTestzugang mit Buildab9a25f99ae5aaaf nachgeprüft. Fragen, Modelle und gespeicherteLernstände bleiben erhalten. Der größereMaster mit neuenGeschichtsartikeln, Altredaktion und Design bleibt inArbeit; neue Inhalte dadurch nicht pauschal veröffentlicht.
+
+## In Entwicklung: Geschichtsquellen untersuchen
+
+Zwei neue Artikel zu Khipus und Mohenjo-Daro, eigene ausdrücklich erfundene bedienbare Lernbilder und sechs Aufgaben zu Beobachten, Vergleichen und Schlussgrenzen. Frühe Schrift erklärt Bildzeichen, abstrakte Markierungen und spätere Lautverwendungen genauer, mit individuellem Fehlfeedback; vier gegenseitige Wissenswege ergänzt. Mobile Knopfabstände, Modell-Sprung und Grafik-Kontrast geprüft und verbessert. Fachliche/pädagogische KI-Gegenprüfung gemäß aktueller Nutzerklarstellung dokumentiert; externe Menschenabnahmen kein Abschlussgate. Keine Veröffentlichung oder vollständiger Paketabschluss aus den frühen Teilprüfungen ableiten.
+
+## 17. Oktober2026 · unabhängig geprüfte Suchvorbereitung auf test-live
+
+PR36 wurde nach vollständiger Quality und identischer geprüfter Integration am17.10.21:58:22Europe/Berlin übernommen (68cb0bd). Die bestehende Suche bereitet Namen, Vorschautexte und Aliase einmal je Katalogänderung vor; Inhalte, Trefferbewertung, Schreibvariantentoleranz, Reihenfolge und Pass bleiben erhalten. Tatsächlicher Vercel-Erfolg und neuer Testbuild01f5ee4aa7e78830 samt Such-/Quellen-/Rückwegen nachgeprüft. Keine zusätzlichen Lernartikel durch diesen technischen Abschnitt veröffentlicht; der größere Master bleibt in Arbeit. Exakte Nachweise und Grenzen inPR36/PROJECT_STATE.
+
+## Unveröffentlicht · vollständige Prüfbelege erhalten
+
+- Frühe und vollständige Engineprüfungen sichern Such-/Quellenbelege unter getrennten Namen. Originalbilder und Diagnosewerte bleiben unverändert; der Schutz gegen tatsächliches Überschreiben bleibt aktiv.
+- Diagnose-JSONs auch im bestehenden Erfolgsartefakt und Collector erhalten. Keine Produktänderung oder vorzeitige technische/fachliche Freigabe.
+
+## Unveröffentlicht · präzisere Diagnose der verzögerten Suche
+
+-Exakte Tastatureingaben im tatsächlichen Vordergrunddokument prüfen; verzögertes Nachladen, zwei vollständige deutsche Tiernamen, erneutes Öffnen und Schließen vor Ladeende bleiben unverändert abgesichert.
+-Diesen vorhandenen Fall vor der großen Engineprüfung ausführen und bei Fehlern tatsächliche Eingabe-/Fokusereignisse vor dem Schließen sichern. Keine Produktänderung oder bereits bestätigte WebKit-Ursache behauptet.
+
+## Unveröffentlicht · verständlichere Denkaufgaben zu24neuen Tierarten
+
+-48Rückmeldungen zu falschen Antworten erklären jetzt die jeweilige Fehlvorstellung, statt nur die richtige Erklärung mit derselben allgemeinen Einleitung zu wiederholen.
+-Vier freiwillige Hinweise regen zum Prüfen und Vergleichen an; der Monarchfalter-Hinweis kopiert die richtige Antwort nicht mehr. Aufgaben, Antwortreihenfolge, richtige Begründungen und gespeicherte Antworten bleiben erhalten.
+-PR35-Quellenzugang im Master mit dessen vollständigen Kapitelquellmengen und nativer200%-Mehrfachlinkprüfung zusammengeführt. Große Quellenschrift in vorhandener Reise-CSS, ohne Einstieg-CSS-Budget zu erhöhen. Keine Veröffentlichung oder unabhängige Abnahme behauptet.
+
+<details><summary>Historische Vorbereitung des inzwischen übernommenen Laborabschnitts38</summary>
+
 ## 17.10.2026 · implementierter Labor-Lieferabschnitt, Bereitstellung noch unbestätigt
 
 -66 konkrete Erklärungen zu falschen Antworten in11bestehendenLaboren statt allgemeiner Rückmeldung; bestehende33Fragen/Antwortpositionen und Schema3-Fortschritte erhalten.
 - Antwortbindung und tatsächliche Rückmeldungen in bestehender Unit-/Browserprobe geprüft; öffentlicheInhaltsexporte schließen die neuen Texte ein.
 - VorhandeneChronikidentitäten für die belegtenTierwerkstätten(PR33) und lesbarenReisequellen(PR35) nachgeführt. NeuerLaborabschnitt bleibt bis tatsächlichemNachweis vorbereitet.
+
+</details>
 
 ## Unveröffentlicht · Quellen leichter lesen und antippen
 
@@ -10,23 +63,51 @@
 - Vorhandene echte Browsermatrix prüft Quellenzugang normal/groß, Touchgeometrie, Tastatur und alle80 ursprünglichen Kapitelziele; zusätzlich nativen200%-Zoom. Keine Texte, Quellenadressen, Reiseabschlüsse, Passfelder oder Freigabeschranken geändert.
 - Chronikeintrag bleibt bis zum nachgewiesenen Merge und Vercel-Erfolg ausdrücklich in Vorbereitung; endgültige Prüfquittung im Liefer-PR. Nachrichten bleiben pausiert.
 
+## Unveröffentlicht · kompaktere vollständige Wissenskarten
+
+-Nur automatisch erzeugte Kategorie-Auslieferungen ohne Einrückungs-Leerraum: gleicher Inhalt mit126445Byte weniger Rohdaten und5743Byte weniger gzip. Lesbarer kanonischer Katalog, alle Quellen/Lernfunktionen und vollständige Offline-Inhalte erhalten; keine Budgeterhöhung oder Architekturänderung.
+-Aalwanderung durch tatsächlich gelesene einschlägige Originalpassagen im offiziellen Hochschularchiv und veröffentlichte Einheitenkorrektur belegt. Keine beobachtete Eiablage behauptet; unabhängige Abnahme weiter offen.
+-Neuer Mini-Fragentest wartet auf den tatsächlichen Karteninhalt nach Reload; keine schwächeren fachlichen/Fokus-/Speicherassertionen.
+
+## Unveröffentlicht · Nachkorrektur neuer Tierkarten
+
+-Bei320px reproduziertes Abschneiden von Bildunterschriften am gerundeten Rahmen durch ausreichenden Innenabstand korrigiert; Regression prüft tatsächliche Textfragmente statt nur Seitenüberlauf.
+-24individuelle Quizhinweise und48falschantwortbezogene Erklärungen ergänzt. Antworten zu Eisvogelfarben und Straußenflügeln inhaltlich mit ihrer Frage abgestimmt; sichtbare Artnamen, klare Messrichtungen und Quellenlücken.
+-Bisherige24Tierfotos/Lizenzen und185Masterfragen unverändert geschützt; neue eigene Zeichnungen zusätzlich mit Herkunft/Hash/Alttext/Modellgrenzen geprüft. Keine Veröffentlichung und keine unabhängige Fachabnahme behauptet.
+
+## Unveröffentlicht ·24 zusätzliche Tierarten im Master
+
+-24 eigenständige neue Artkarten aus vorhandenen Manuskripten: Erklärungen, präzise Maße/Quellen,24 Wissensfragen,24 Beobachtungsaufträge und48 Begründungs-/Transferfragen mit freiwilligen Hinweisen und konkretem Feedback.
+-24 eigene leichte Merkmalszeichnungen mit lesbaren HTML-Legenden, Alternativtexten und Modellgrenzen; keine kopierten Bilder.23 erklärte gegenseitige Verbindungen, bestehende Artikel/Spielstände erhalten.
+-Grammvergleich, Unterscheidung oberer/typischer Vergleichswerte und deutsche Zahlendarstellung. Keine neue globale Gefährdungseinstufung erfunden; wissenschaftliche und unabhängige Abnahmen bleiben getrennt offen, besonders Primärvolltext zur Aalwanderung. Technische Endabnahme folgt gesondert; Chronik vorbereitet, nicht verfügbar. News pausiert.
+
+## Unveröffentlichter Master-Rückabgleich17.10.2026
+
+PR34 nach tatsächlichem Nutzermerge/Vercel-Erfolg und aktivem nativen strikten Pflichtcheck kontrolliert integrieren; alle umfangreicheren Masterprüfungen und Inhalte erhalten. Keine Produktveröffentlichung aus diesem Rückabgleich behauptet. Nachrichten pausiert,24Tierarten/WK053 prioritär; tatsächliche Schlussprüfungen am endgültigen Stand folgen.
+
 # Änderungsverlauf
+
+WK053:24neue Artmanuskripte mit eigenständigen Lernzielen und72individuellen Denkaufträgen/Hinweisen gesichert. Konkrete Quellenfallen, vorgeschlagene fachliche Beziehungen und fehlende Integrations-/Prüfvoraussetzungen einzeln dokumentiert. Dies ist abgeschlossene redaktionelle Vorbereitung, **keine neue öffentliche Tierwelt**, keine Medien-/Fachabnahme. Veröffentlichter24erBestand unverändert.
 
 ## Vorbereitete Testübernahme und aktuelle Quality-Bindung ·17.10.2026
 
 Bestehenden Quality-Abschluss beider Workflowvarianten schreibfrei an aktuellen PR/Head/Zielbasis/Integrationscommit/Run/Attempt/Workflow gebunden; negative Tests für veraltete/gemischte/unvollständige Herkunft. Begrenzte Readinessentscheidung mit strikter nativer Pflichtcheck-Voraussetzung, manueller Setupübernahme und konservativem Pro-Ende16.11.00:00Europe/Berlin. Originalauftrag vollständig archiviert, fachübergreifende Pflege und ausdrücklich sinnvolle Optimierung in bestehenden Regeln präzisiert. Keine neue volle Pipeline, kein Publisher, keine Aktivierung; tatsächlicher Branchschutz mangels Adminschnittstelle noch offen. Lernfunktionen/IDs/Pass/Offline und sämtliche Pflichtprüfungen erhalten; News pausiert.
 
-- Suchfeld fokussiert beim Erscheinen auch nach verzögertem Modulabruf. Verhindert, dass Tastatureingaben am Schließen-Knopf landen. Kontrollierte Lade-, echte Tastatur-, Wiederöffnungs- und frühe Schließprüfung mit Rückfokus; konkrete Fehlerdiagnostik für alle24 Tier-Suchwege.
+## Tierforscher-Werkstatt und lesbarer Planetenvergleich (Vercel-Testwebsite,17.10.2026)
 
-- Die Startseite lädt nur ihre acht tatsächlich gezeigten kanonischen Wissensspuren. Der vollständige Graph bleibt für Wissenskarten erhalten. Gemessener Einstieg278.005Byte Gzip statt278.476Byte auf der unveränderten PR32-Basis; alle Spuren und Erstabrufbudgets erhalten, Ableitung gegen Quellenabweichung geprüft.
+NutzermergePR33 `8d05beb0bc9930cd18e6128477c090c9d97caf9a` am17.10.09:48:40Z, offizieller Vercel-Erfolg am selben Commit09:48:59Z (11:48UhrEurope/Berlin). Nachfolgende Chroniknachführung zunächst im erhaltenen Master, keine eigene Veröffentlichung. Suchfeld fokussiert auch nach verzögertem Laden tatsächlich das Eingabefeld; echtes Tippen mit Leerzeichen schließt den Dialog nicht mehr versehentlich.
 
-## In Entwicklung · Tierwerkstätten und Planetenbeschriftung · 17.10.2026
+24 vorhandene Tierkarten erhalten individuelle Belegpaare, drei freiwillige Denkwege und 48 Begründungs-/Transferaufgaben mit konkreten Hinweisen und Feedback. 17 neue erklärte Gegenverbindungen unterstützen den Vergleich. Bestehende Artikel, Mini-Fragen, richtige Antworten, Bilder und Sitzungsfelder bleiben erhalten; keine neue Tierart oder unabhängige Fach-/Kinderabnahme gezählt.
 
-- Alle24 vorhandenen Tierkarten um freiwillige Belegarbeit, drei Denkwege und48 individuelle Begründungs-/Transferfragen ergänzt; Hinweise, konkrete Fehlerrückmeldungen und Speicherung im vorhandenen Entdeckerpass.
--17 erklärte gegenseitige Wissensverbindungen und zugehörige Themenverweise ergänzt; ursprüngliche Verweise, Fachtexte, Antworten und Medien erhalten. Keine neue Tierart und keine unabhängige Fach-/Kinderfreigabe behauptet.
-- Abgeschnittene Planeteneinheit auf kleinen Geräten durch lesbares umbrechbares HTML ersetzt; Abstandswerte/Großschrift verbessert. Zahlen, Skalen und Alternativtexte erhalten. Positive und absichtlich negative Browserfälle, nativerZoom, Offline-/Altstand-/Such-/Rückfokusprüfungen in vorhandene Abnahme integriert.
-- Tatsächliche PR32-Merge-/Vercelquittung in Chronik nachgeführt; neuer Lieferabschnitt bleibt vorbereitet. Kein eigener Merge, Deployment oder Newsbetrieb. Bestehender kombinierter Browserjob erhält50Minuten statt20, ohne entfallene Tests oder neue Runner.
+Den vom Nutzer gezeigten abgeschnittenen Planetenhinweis auf 320/360/390/402 px im unveränderten Browserbuild reproduziert. Planetennamen, Verhältnisse und Einheit als lesbares HTML unter dem Größenbild; lesbare Abstandswerte und Hinweise auch bei großer Schrift. Acht Planetenverhältnisse, lineare Abstandsskala, Alternativtexte und Abschluss-/Speicherlogik unverändert. Zusätzliche tatsächliche Textgrenzen-/Schrift-/Geometrieprüfungen in vorhandenen Browsergruppen, alle früheren Pflichtprüfungen erhalten. Finale technische Abnahme und tatsächliche Bereitstellung gesondert im PR; kein Merge/Deployment durch Codex. News bleibt pausiert.
 
+## Paket3.5 – bestätigte Lernhilfen aus PR32 kontrolliert zurückgeführt
+
+Die vom Nutzer übernommene und am bestehendenVercel-Testprojekt bestätigte Lernhilfe(240Hinweise/64lesbareGrafiken/32Aufgabenrückmeldungen) erhält im Entwicklungsstand ihren belegtenChronikstatus unter derselbenID. Alle33bisherigenEinträge und der volle unveröffentlichteMasterumfang bleiben. Individuell geprüfter Entwicklungsmerge ohne doppelteHinweisentwicklung oder Verlust der umfangreicherenMastertests; neuevolleSchlussprüfung erforderlich. DieChroniknachführung und Quellenlinkverbesserung desMasters sind noch nicht veröffentlicht. Nachrichtenthema bleibt vollständigpausiert.
+
+## Paket3.5 – größere Quellen-Touchflächen und frühere Engineprüfung (noch unveröffentlicht)
+
+Quellenlinks der Meereskapitel erhalten48px Mindesthöhe und begrenzten Wortumbruch. Unveränderte20Quelle-/Breiten-/Fokus-/axe-Fälle laufen in vorhandenen Engineprüfungen zuerst; numerische Fehlerdaten und Originalbilder vor Kontextschluss sichern. Strenges44px-Gate und allevollständigenTests bleiben. Lokale20-/35-Fälle bestanden; tatsächlicheFirefox-/FinalCI-Abnahme noch erforderlich.
 
 ## Paket3.5 – Reise-Lernhilfen und lesbare Kapitelgrafiken (noch unveröffentlicht)
 
@@ -36,19 +117,116 @@ Bestehenden Quality-Abschluss beider Workflowvarianten schreibfrei an aktuellen 
 
 PR30 anhanddes tatsächlichen Nutzermerges undVercel-Erfolgs inklusiveaktuellerAbstammung alsverfügbar nachgeführt; gleicherChronikeintrag undallealtenNachweise erhalten. Vorhandene lokaleTestauswahl prüftgeänderte nativeNode-Module frühaufSyntax undbeziehtbreiteBrowserauswahl ausdem bestehendenPflichtvertrag. KeinePrüfung reduziert, keineunfertigenFachinhalte oderNewsfunktionen übernommen. AktuelleAbnahme imPR.
 
-## Paket3.5 – vollständige Offline-Vorbereitung mit sichtbarem Fortschritt (noch unveröffentlicht)
+## Paket3.5 – vollständige Offline-Vorbereitung: Testbereitstellung PR30 bestätigt
+
+Nutzermerge71255ec55833fa1c4056a5c95310fa4fb78b8a30 am16.10.2026 um21:23:32Z, Vercel-Erfolg56564217841 um21:23:51Z belegen dieTestbereitstellung.
 
 Vorhandene geprüfte Offline-Verbesserungen ausPR27 als unabhängigen Abschnitt aufdem tatsächlichübernommenenPR29-Stand integriert. EchterDateifortschritt; genaueIntegritätsprüfung beiAbruf/Wiederverwendung, vollständigeEndassetliste, begrenzteDateiverarbeitung undsichereFehlerwiederholung. LetztevollständigeVersion undbenötigteAlt-Tab-Dateien behalten; unvollständigeVersionen nichtalsFallback verwenden. Entdeckerpass/IDs/Spielstände unverändert. PR29 anhandtatsächlichemMerge/Vercelbeleg nachgeführt, eigenerChroniktext vorbereitet. News-Pause/Paket3.5-Priorität inbestehendenRegeln; sämtlichegrößere3.5-Inhalte bleibeninPR27gesichert. TatsächlichePrüfquittungimPR.
 
 
-## Vorbereitet – verständliche Update-Chronik,16.10.2026
+## Paket 3.5 – konkrete Quellen für die Meeres-Lernreise (noch unveröffentlicht)
 
-- Alle31 belegten verfügbaren Einträge verständlicher zusammengefasst und mit passenden Kategorien ergänzt. Auch ältere Veröffentlichungen erklären konkrete Entdeckungen, Bedienwege und Familiennutzen. Technische Test-/Implementierungsdetails aus Lesertexten entfernt; gleiche Wiederbereitstellung weiterhin ehrlich ohne neue Funktionen.
-- Hauptansicht zeigt ruhige Datumszeilen; belegte sekundengenaue Uhrzeiten stehen zusätzlich in den freiwilligen Einzelheiten. Historische IDs/Quellen/Daten bleiben erhalten. PR26 nur anhand tatsächlichem Merge und erneut geprüftem Vercel-Erfolg in der Testversion bestätigt; eigene Chronikänderung bleibt unveröffentlicht vorbereitet.
-- Bestehende siebenbreite Browserprüfung um lesbare Kategorien/kurze Datumszeilen ergänzt. Lange offene Chronik mit großer Schrift zusätzlich in Firefox/WebKit an vier Breiten und bei echtem200%-Chromiumzoom; fehlende/duplizierte/unvollständige Chroniknachweise werden abgewiesen. Originalaufnahmen/Pflichtbilder erhalten, zwei nativeNachweise zusätzlich. Vorhandene150-MB-Reviewregel mit Speicher-/Duplikat-/Reservebericht in diesen unabhängigen Abschnitt übernommen, keine Produktion-/Offlinebudgetänderung.
-- Bekannten Fokusfehler gezielt aus bestehendem PR27 übernommen: Schneller Wechsel zum Spielplatz darf die begonnene Tastatur-/Touchbedienung der Spielhilfe nicht überschreiben. Vier reproduzierbare Fälle und ihre Originalbilder ergänzen die unveränderten Tests. Vorab abgewiesene Browserarbeiter behalten künftig aktuelle Diagnosen.
-- Bereits beschlossene künstliche JavaScript-/Aufgabendaten-Gesamtkappen entfernt; beobachtete Roh-/gzip-Trends und sämtliche Einstiegs-/Einzel-/Browserleistungsprüfungen bleiben. Tatsächlicher Wechsel vom alten vorbereiteten Build mit vollständig unverändertem synthetischem Pass, erhaltenen Cacheversionen und kaltem Offline-Neustart geprüft.
-- Neues abschnittsweises Liefermodell und ausdrücklich beauftragter autonomer Newsbetrieb nach geprüftem Setupmerge dauerhaft verankert. Noch fehlende Modell-/Quellen-/Hosting-/Schlüssel-/Rechtevoraussetzungen konkret dokumentiert; weder News noch Website eigenständig aktiviert. Gesamter übriger Paket3.5-Stand bleibt in PR27 gesichert.
+Fünf vorhandene Kapitel erhalten passende, tatsächlich gelesene NOAA-Originalbelege zu zusammenhängenden Ozeanbecken, Salz, Korallen, Licht, Druck, Tiefe, Gezeiten und Wellen. Die Beobachtung zu Ozeangrenzen vermeidet eine missverständliche politische Ländergrenze; die freiwillige Korallenvertiefung unterscheidet warme Flachwasserriffe von kalten Tiefseeriffen. Bestehende Absätze, Kapitel-/Fragen-/Antwortidentitäten, Modelle, Bilder und Fortschritte erhalten. Die bisherigen Quellenakten bleiben erhalten; neue Selbstprüfung ausdrücklich keine unabhängige Fach-/Kinderabnahme. Aktuelle Kapitelquellen und schmale Quellansichten im vorhandenen Browserpfad zusätzlich geprüft; tatsächlicher Endstatus im PR. Kein neues Kapitel gezählt, keine Veröffentlichung oder Newsentwicklung.
+
+
+Die tatsächlich geöffneten Quellenkarten deckten zusätzlich einen altenKontrastfehler auf: Quellenlinks jetzt gut lesbar, unterstrichen undmitmindestens44px-Touchfläche. BestehendeBrowser-/FFWK-Pfade prüfen die konkretenQuellenziele, Fokus undZugänglichkeit ohne neueSuite. VorhandeneslokalesTestauswahlwerkzeug erkennt geänderteJS-Syntax einschließlichdoppelterImports vor teurenBrowserläufen; vollständigeSchlussregression unverändert.
+
+## Paket3.5 – Integration der übernommenen Chronik,16.10.2026 (noch unveröffentlicht)
+
+PR29 tatsächlich durch den Nutzer übernommen und am exakten test-live-Merge erfolgreich vonVercel bereitgestellt. Verbesserte historische Texte/Kategorien/Fokus- und nativeBildnachweise kontrolliert in den bestehenden PR27-Stand integriert; dessen Welt-/Buch-/Natur-/Erfindungs-/Bauwerks-/Reise-/Offline-/Browserbestand erhalten. Dieselbe vorbereitete Chronik-ID anhand wirklicher Merge-/Bereitstellungsquittung als verfügbar nachgeführt; PR27 bleibt unbestätigt. Die neue vollständige News-Pause und Paket3.5-Priorität in den bestehenden Regeln festgehalten. Keine weitere Newsentwicklung, Aktivierung, neuen Kosten oder eigene Veröffentlichung. Aktuelle tatsächliche Abnahme und Restumfang im PR/PROJECT_STATE.
+
+
+## Paket3.5 · zwölf neue Erfindungen erkunden (unveröffentlicht)
+
+- Batterie, Generator, Transistor, Kamera, Teleskop, Mikroskop, Kühlschrank, Fahrrad, Aufzug, Seismograph, 3D-Druck und Nähmaschine mit eigenen Funktionsplänen, auswählbaren Teilen, verständlichen Erklärungen, freiwilligen Vertiefungen, individuellen Fragen/Hilfen und 29 erklärten gegenseitigen Wissensverbindungen ergänzt. Historische Zeitanker ausdrücklich von Ersterfindungsbehauptungen getrennt.
+- Sechs freiwillige, tatsächlich bedienbare Modelle für Induktion, Steuerung/Versorgung, Schichten, Bildgröße/erkennbare Details, Sammelfläche und relative Bodenbewegung. Modellgrenzen sichtbar; bestehende zwölf Erfindungsmechaniken, Originalfragen und Schema-3-Spielstände bleiben erhalten.
+- Echte mobile Umbruchfehler bei großer Schrift und Tablet-Bauteilbeschriftungen behoben. Browsermatrizen und fehlerschließende Nachweise um alle neuen Themen/Modellzustände erweitert; sämtliche alten Pflichtrollen erhalten. Vorbereiteter Chronikeintrag ergänzt; keine Veröffentlichung oder unabhängige Fachfreigabe daraus ableiten.
+
+## Paket3.5 · autorisierte Chromium-Zeitreserve (unveröffentlicht)
+
+- Nur das Chromium-Joblimit von35auf50Minuten erhöht; Firefox/WebKit bleiben35Minuten. Bestehende Matrix mit einem Ausdruck erhalten. Quality78 hatte Browserlauf und Nachweiserstellung bestanden und wurde unmittelbar vor erfolgreicher Nachweisübergabe abgebrochen. Vollständige Tests, Laufzeitmessungen und Freigabegrenzen bleiben erhalten; künftige Laufzeiten weiter vergleichen.
+
+## Paket3.5 · Dauerauftrag und vollständige Prüfgruppen (unveröffentlicht)
+
+- Vollständigen neuen47-Abschnitt-Dauerauftrag16.10. bytegleich gesichert und Issue28 samt Ergänzung gelesen. Zehn vernetzte Erlebnisfelder innerhalb der sechs vorhandenen Hauptbereiche, kontrollierte vollständig abgenommene Teilrelease-Kandidaten und dauerhafte Folgenprüfung älterer veröffentlichter Inhalte in den bestehenden Regeln verankert. Keine zweite Roadmap oder vorzeitige Veröffentlichung; Pakete3.5/4–8 und alle offenen Sollziele erhalten.
+- Ungleich lange Chromiumgruppen anhand tatsächlicher Phasenzeiten ausbalanciert: vollständige Warum-/nativeZoom-Prüfung zuNavigation, Erfindungen/nativeZoom zuBuch; dieselben drei isoliertenArbeiter, alle21Leistungssamples/Basis/News zuerstallein. Alle bisherigenAssertions/Matrizen/axe/Pflichtbilder bleiben. CanonicalDateizuordnung und fehlerschließende vollständigeGruppenaggregation ergänzt. Quality77am11f-Head vollständig grün, Chromium26:30min statt vorheriger35minAbbrüche; lokalevolleEinzelprobe62.412s kürzer als7f. Keine neuenCI-Jobs, längerenTimeouts oder Kostenversprechen.
+- Frühstart-Überlappungsversuch7f brachte keinen messbarenGesamtnutzen und wurde zurückgenommen; kein Erfolg daraus behauptet. Konservativen lokalenTestselektor gegen fehlende neu ausgegliederteWarum-/Erfindungsgruppen abgesichert: vorhandenenPflichtvertrag wiederverwenden, engerIterationsumfang bleibteng. Neue lokalePrüfung und exakteHead-CI nötig; keinealtenBelege umetikettieren.
+
+## Paket3.5 · Fokus behalten und alle Reviewbilder zählen (unveröffentlicht)
+
+- Tatsächlich reproduzierte Fokus-/Scrollübernahme nach frischer Tastatur-/Touch-/Mausbedienung behoben. Zwei ausstehende Navigationsframes dürfen eine gerade geöffnete Spielhilfe nicht mehr verlassen; Enter-Schließen und reguläre Rückkehrwege bleiben erhalten. Vier reale320/1440-Regressionsfälle, Fehlerscreenshot mit Kontext/SHA und fehlerschließende Aggregation ergänzt.
+- Reviewbericht zählt künftig sämtliche tatsächlich hochgeladenenPNG-Dateilisten einschließlich390/768-Enginebilder. Korrigierte CI73-Referenz401 Bilder/50327955Byte; alter397er-Ledger unverändert archiviert. Fehlende Breiten-/Byte-/Dateizuordnung scheitert. Alle24 individuellen Erfindungspläne behalten: insgesamt607211Byte, nur510513Byte mehr als die frühere Vierer-Auswahl;58Chromium-Pflichtbilder insgesamt. Kein Budgetauffüllen und keine alten Bilder entfernt.
+
+
+- QA-Reviewbudget auf exakt150.000.000Byte geändert, ausschließlich aufbewahrte Prüfbilder. Bestehendes Manifest berichtet Anzahl/Reserve/SHA-Dubletten und optionalen Vergleich gleicher Matrizen;0 Pflichtbilder entfernt, keine Produktions-/Offlinebudgetänderung. Zwei veraltete geschlossene native Testprofile gezielt bereinigt(7642821Byte); Originalbilder/Prüfberichte unverändert. Noch unveröffentlicht.
+
+## Paket3.5 · Erfindungen genauer verstehen (unveröffentlicht)
+
+- Alle zwölf bestehenden Erfindungskarten um individuelle einfache Erklärungen, Beobachtungsaufgaben, Nutzen und Hinweise ergänzt.24 spezifische Rückmeldungen erklären falsche Antworten; alte Fragen, richtige Antworten und Spielstände erhalten.
+- Zwölf Wissenswege verständlich erklärt und gegenseitig geöffnet, etwa Kompass/GPS und Rakete/Satellit. Beziehungen werden als Verbindungen gezählt, nicht als neue Wissensartikel. Zwölf zusätzliche Erfindungsmanuskripte bleiben ausdrücklich vorbereitet.
+- Zug-, Flugzeug- und Internetmarkierungen korrigiert; Auto, Rakete und Druckplan präzisiert. Telefon zeigt einen eigenen Schall–Signal–Schall-Funktionsweg. Lesbare HTML-Namen und Nummern bleiben auch nach Erkunden sichtbar, mit getrennten Haken und44px-Bedienflächen.
+- Quellen-/Prüfstand verständlicher und ohne pauschale neue menschliche Fachfreigabe. Wiederaufnahme-Checkpoint stark verdichtet; vollständige frühere Nachweiskette bleibt in Git erhalten, Originalaufträge unverändert.
+
+## Paket3.5 · Reproduzierbares Abschalten der Offline-Prüfserver (unveröffentlicht)
+
+- Echte ungenutzte Browser-TCP-Verbindung als Ursache eines hängenden Testserverendes nachgewiesen. Isolierte Offline-Fixtures schließen ihre Verbindungen jetzt nach dem Listener; Browser und sämtliche echten Offline-/Altchunk-/Passprüfungen bleiben erhalten.
+- RealeTCP-Regression, drei vollständige6-Versionen-Browserproben und echte HTTP503-/Quota-/Fortschritts-/Pass-/Offlinewiederherstellung bestanden. Kein gelockerter Timeout, Skip oder Retry. Vollständige unveränderte neue lokale/GitHub-Abnahme gesondert erforderlich.
+
+## Paket3.5 · Naturorte verstehen und Offline-Updates absichern (unveröffentlicht, Gesamtpaket weiter in Arbeit)
+
+- Naturatlas um34 eigenständige Erklärungen erweitert und34 alte Einträge individuell nachredigiert: freiwillige Alters-/Beobachtungsebenen,68 Denkfragen mit Hinweisen und antwortspezifischen Rückmeldungen sowie transparente Quellen- und Prüfstände. Sechs Tierprojektionen bleiben getrennt gezählt.
+- Zwölfer-Pagination, Filter, Suche in Vertiefungstexten, genaue Direktadressen, Notizbuch und erklärte Gegenverweise; Übersicht und Öffnerfokus beim Zurückkehren erhalten. Zehn eigene schrittweise bedienbare Erklärgrafiken mit Modellgrenzen, große Schrift und lesbare Beschriftungen. Keine unabhängige Fachabnahme behauptet.
+- Offline-Aufräumlogik behält vollständige Rückfallversionen und die Dateien offener alter Tabs. Echte Dateizähler zeigen nur geprüfte, gespeicherte Assets; vollständige Versionsprüfung bleibt Voraussetzung für Bereit. Der finale Bildnachweis erhält auch die Hashes nicht hochgeladener Originale.
+- Suchtexte werden für den Katalog einmal statt je Tasteneingabe aufbereitet; bisherige Rangfolge und Tippfehlertoleranz bleiben erhalten. Isolierter Vergleich mit6000 synthetischen Dokumenten/4×CPU: fünf Anfragen im Median2340.8→1032.2ms, einmalige Vorbereitung214.4ms. Kein Feld-/Hardware- oder vollständiger UI-Geschwindigkeitsbeleg.
+- Gezielte Naturmatrix272Breitenfälle plus native200%, Such-/Rückwege und162Unitfälle bestanden; volle neueWebsite-/Offline-/Engine-/GitHub-Abnahme und sämtliche übrigen Masteranforderungen bleiben gesondert erforderlich.
+
+## Paket3.5 · Geografie und spezifisches Laborfeedback (unveröffentlicht)
+
+- Fünf eigene Geografie-Erklärungen und drei alte Begriffe mit freiwilligen Altersstufen, Papierbeispielen, individuellen Denkfragen, Quellen und erklärten gegenseitigen Wissenswegen. AlteDefinitionen/IDs bleiben erhalten.
+- Alle elf Labore erhalten66 jeweils passende Erklärungen zu falschen Antworten in den33 vorhandenen Aufgaben. Richtige Antworten, Stempel, gespeicherte Einstellungen und Modelle bleiben erhalten.
+- Browserprüfung erkennt Textüberläufe nach jeder falschen Antwort. Portable Exporte und Inventur erfassen den echten Rückmeldungstext samt Herkunft, ohne Aufgaben künstlich neu zu zählen.
+- Implementierte Zwischenwelle; vollständige neue GitHub- und unabhängige Gesamtfachabnahme bleiben offen.
+
+
+## Paket3.5 – Messen verstehen und Wissensbuch zuverlässiger bedienen (unveröffentlicht)
+
+- Sieben eigene SI-Begriffserklärungen mit freiwilligen Altersstufen, Beobachtungen, individuellen Denkfragen/Hilfen/Falschbegründungen und Quellen: Buch90→97 roh, alle90 Alttexte/30 Warum-Antworten und Pass-IDs erhalten. Drei begrenzte Zahlenmodelle und genaue6-Kugel-/3-Paar-Zählskizze; keine unabhängige Fachfreigabe behauptet.
+- Kontrast in Rückmeldungen nach echtemaxe-Befund korrigiert. Buchaktionen mitAbstand, Alphabet passend zumgewähltenThema; exakteWorttreffer bevorzugt, direkteWörter fokussiert und offeneDetails/Linkfokus beimBack erhalten.
+- Vollständige Buch-/Warum-/Vertiefungsidentitäten vorAnzeige/Cache geprüft: gut geformte aber verkürzte Daten werden zurückgehalten, ausdrücklichesRetry stellt vollständigeDaten wiederher. Keine Passmigration oder zweite Datenquelle.
+- Vollständige lokale Pflichtabnahme124 Unitfälle/27 Releasefälle/zehn Chromium-Gruppen789,55s, alterPass/Backup/Worker/Offline, alle siebenBreiten, native200% und Buchfavorit erhalten.998 Originalbilder,344 kuratiert45.857.223Byte; Grenzen unverändert. Engine-Abnahme umalle7 Wörter×4 Breiten erweitert; neuer exakter GitHub-Lauf erforderlich. Ganzer3.5-Auftrag bleibt inArbeit.
+
+## Paket3.5 – Lernfragen, Kapitelgrafiken und effizientere Abnahme (unveröffentlicht)
+
+- 32 Reiseaufgaben erhalten plausible fachbezogene Fehlantworten und passende Begründungen; zwei Jahreszeitenfragen ausdrücklich für Deutschland. Alle240 richtigen Antworten, Indizes und Aufgabenidentitäten bleiben erhalten.
+- Wörter in allen64 Kapitelgrafiken als lesbareHTML-Beschriftungen; sinnvolle großeZiffern. Mondscheiben/ersterViertelzyklus und eine bisher leere Nachbarschaftsgrafik gezielt korrigiert. Individuelle fachlicheGesamtabnahme bleibt offen.
+- Weltspiele laden nur die tatsächlich benötigteWissenskategorie, Challenge keineKartentexte. Bei Datenfehler bleiben „Alle Spiele“ und vorhandeneRunde erreichbar; gezielte320/1440-Prüfung bestanden.
+- Forschung als eigener isolierterBrowserarbeiter in bestehenderAbnahme: gleicherBuild/Prüfumfang im Einzelvergleich846,62→654,19s. Kein zusätzlichesCI-Jobbudget und keine Timeout-Erhöhung. Aktuelle vollständige lokale Abnahme nach gefundener/korrigierter Nachbarschafts-Verzweigung bestanden:121 Unitfälle/27 Releasefälle/zehn Browsergruppen702,21s. Neuer exakter GitHub-Lauf erforderlich.
+- Nach tatsächlichemQuality57-Bildlimitfehler redundanteZwischenbreiten/Archivkopien ausUploadauswahl genommen; alleAufnahmen/Hashes/Reports und Pflichtbilder bleiben. Keine Budgeterhöhung oder entferntenTests.
+
+## Paket 3.5 – vernetzte Wissenschaftswelle (noch unveröffentlicht)
+
+- 23 eigene Wissenschaftskarten ergänzt, von Druck und Diffusion bis zu Prüfsummen und Exoplaneten. Bestehende 23 Karten mit individuell verfassten einfachen Erklärungen, Beobachtungsaufträgen und Lernnutzen erweitert. Freiwillige Vertiefungen, tatsächliche Quellen und Modellgrenzen bleiben sichtbar.
+- Zehn Bildschirmversuche und 13 eigene erklärende Schemata ergänzt. Hinweise und Mini-Fragen geben bei falschen Antworten keine fertige Lösung frei. Alle 142 bisherigen Challenge-Fragen bleiben unverändert; 23 neue kommen hinzu.
+- Jede neue Karte mit bestehenden Begriffen beidseitig verknüpft; tatsächliche Such-, Direkt-, Reload- und Zurückwege an allen neuen Karten geprüft.
+- Nach eigener Bildsichtung einen abgeschnittenen langen Titel bei 320 px korrigiert; neue Prüfung erkennt auch innerhalb einer Karte verdeckten Text. Doppelte Beobachtungs-/Nutzentexte durch kurze spezifische Fakten ersetzt. Prüfstand und KI-Unterstützung transparent; unabhängige Fachabnahme weiterhin offen.
+- Kompakte Grafikvorschauen halten den Katalog ruhig; vollständige Erklärungen stehen in der geöffneten Karte. Pagination wird mit allen tatsächlichen Katalog-IDs auf allen vier Seiten abgeglichen.
+- Neue Browserregression öffnet alle 46 Karten an sieben Breiten und mit großer Appschrift; alle 23 neuen Karten zusätzlich bei echtem nativen 200-%-Zoom, steuert Modelle, prüft freiwillige Ebenen/Antworten/axe und sämtliche neuen Suchwege. Kalte Offline-Abnahme aller neuen Karten ist Bestandteil der vollständigen Schlussprüfung.
+
+## Paket 3.5 – Wissensdaten nach Bedarf (noch unveröffentlicht)
+
+- Wissenskarten in sechs aus der unveränderten Hauptquelle erzeugte Themenpakete aufgeteilt; Routen laden ihre benötigten Bereiche. Fehlerhafte oder unvollständige Daten werden vor der Anzeige gesperrt und können ausdrücklich erneut geladen werden.
+- Alle 142 Challenge-Fragen samt individuellen Hinweisen in einen geprüften, kompakten Index übernommen. Keine Änderung an IDs, Passschema oder vorhandenen Spielständen.
+- Eigene Größenbudgets für ausgelagerte Kartentexte ergänzt; vorhandene JavaScript-/CSS-Budgets beibehalten. Tatsächlich gemessen: gesamtes JavaScript gzip um 39.141 Byte gegenüber dem Kapitelcheckpoint gesenkt; neue Textdateien separat ausgewiesen.
+- Browsernachweise für Kategoriebedarf, Datenfehler, Wiederholen, Wiederverwendung und Back ergänzt; Detailtest in Firefox/WebKit auf vollständige Öffnen-/Schließen-Folge korrigiert. Vollständige lokale Pflichtabnahme mit 119 Unitfällen, 27 Releasefällen und zehn Chromium-Gruppen (846,62 s / 126 Prüfbezeichnungen) bestanden; exakter neuer GitHub-Quality-Lauf bleibt erforderlich. Nach tatsächlicher Reload-Regression erfolgt die Wiederherstellung offener Kapitelverzeichnisse erst am fertig geladenen Artikel.
+
+
+## 13. Oktober 2026 · Paket3.5, vernetzte Kapitel-Inhaltswelle (noch nicht bereitgestellt)
+
+- Alle80 bestehenden Kapitel erhalten individuell verfasste zusätzliche Erklärungen, einfache Einstiege, freiwillige Vertiefungen, konkreteNutzen- undBeobachtungstexte. Keine neuenKapitelidentitäten oder pauschaleFach-/Kinderabnahme.
+- GlobaleSuche führt auch zu allen80 einzelnenKapiteladressen statt lediglichdergespeichertenReisestation.
+- VollständigeReise-/Buchtexte als bedarfsweiseversionierteJSON-Assets; kompakteIndices, strikteValidierung, sharedFetch, Timeout/Retry, separateTextbudgets beiunverändertenJS-/CSS-Grenzen.
+- UngekürzteOriginalaufträge mitbytegleichemQuellnachweis; alte3.5-Baseline erhalten. PR26 anhand tatsächlicherMerge-/Vercel-Quittung nachgeführt, aktuelleKapitelwelle getrenntunbestätigt.
+- Ausgewählte fachlicheBelege und Quellenwidersprüche dokumentiert; vollständige80/80-Claim-/Grafik-/240-Aufgabenabnahme undalle9Verdopplungen bleibenoffen. News-Livebetrieb unverändertausgeschaltet.
 
 
 ## 13. Oktober 2026 – Paket 3.5, Grundlagenwelle 0–1 (PR-Vorbereitung, unveröffentlicht)
@@ -241,3 +419,19 @@ Masterauftrag strukturiert in vorhandenes Projektgedächtnis integriert: Bestand
 ## 2026-10-09 – Dauerhafter Ready-for-review-Ablauf (WK-027, in Review)
 
 Bestehende Projektregeln/PR-Vorlage auf selbstständige prüfbereite PRs nach lokalen Pflichtprüfungen abgestimmt; fertige Draft-Zwischenstände werden selbstständig umgestellt. Aktuellen GitHub-Prüfstatus transparent melden, Fehler nach Möglichkeit beheben; grüne Tests und Ready ersetzen keine Nutzerbestätigung zur Übernahme. Bestehende Quality-CI und deaktivierte Release-Workflows unverändert, keine neue Automatisierung oder Kostenpflicht. Reiner Regel-/Übergabeauftrag; nur eigener Branch vor Deployment geschützt, kein Merge/main-/test-live-Schreiben oder Produktumbau. Tatsächliche Nachweise in PROJECT_STATE.md.
+
+### Paket 3.5 – Wortvertiefungen und zuverlässiger Retryfokus (PR27, unveröffentlicht)
+
+Die gleichen 97 Definitionen und 30 Warum-Antworten kommen als kleiner vollständiger Buchkern; sieben freiwillige Vertiefungen erst beim Öffnen. Hash-, Byte-, Identitäts- und Strukturprüfung, begrenzter Abruf und sichere Wiederholung. Die Suche erhält Vertiefungstexte und erschließt zusätzlich Beobachtungen und Hinweise, auch lokal im Buch. Der erste Buchabruf sinkt bei identischem Inhalt von 39.559 auf 22.834 Byte; alle ausgelagerten Daten bleiben im Gesamtbudget.
+
+Ein manuell reproduzierter Fokusverlust nach Retry wurde korrigiert: Die Tastatur kehrt zur Zusammenfassung zurück und überschreibt keinen inzwischen gewählten Fokus. Die Firefox-Mindestgrößenprüfung nutzt die tatsächliche DOM-Höhe statt gerundeter Protokollkanten; 44 px bleiben Pflicht. Der ganze 3.5-Auftrag und unabhängige Abnahmen sind weiter offen. Keine Veröffentlichung oder News-Aktivierung.
+
+### Paket 3.5 · Wissensbuch und erklärte Rückwege (Implementierungswelle, unveröffentlicht)
+
+- 30 zusätzliche Wörter nach dem 97er-Zwischenstand: DNA, Gen, Genom, Chromosom, Protein, Enzym, Mutation, Nukleotid, Bakterium, Evolution; Atom, Isotop, Proton, Elektron, Neutron; Mittelwert, Median, RNA, Algorithmus, Hypothese; Kraft, Trägheit, Geschwindigkeit, Beschleunigung, Frequenz, Wellenlänge; Mikroorganismus, Ökosystem, Zersetzung, Kohlenstoffkreislauf. Eigene altersgestaffelte Erklärungen, Papierbeobachtungen, Fragen/Hilfen und spezifische Fehlbegründungen mit ausgewählten Primärbelegen und transparent offenem unabhängigem Prüfstand.
+- Bestehende Einträge Biodiversität, Lebensraum und Nahrungsnetz um individuell passende Vertiefungen ergänzt; als Altredaktionen und nicht als neue Wörter gezählt.
+- Erklärte gegenseitige Wortverbindungen und freiwillige Rückverweise aus passenden Wissenskarten; einzelne Texte vor Anzeige auf Identität, tatsächliche Bytezahl und SHA256 geprüft. Fehler lassen Kernansicht bestehen und bleiben erneut ladbar; Tastaturfokus nach erfolgreicher Wiederholung erhalten.
+- Exakte Wortroute zeigt eine Definition in passender Lesebreite. Manuelle Suche, Alphabet und Kategorien bleiben bedienbar; Zurück stellt Ausgangslink und offene Details wieder her. Quellenansicht unterscheidet ausdrücklich KI/Codex-Abgleich von unabhängiger Fachfreigabe.
+- Keine Veröffentlichung, unabhängige Fach-/Kinderabnahme oder News-Liveaktivierung durch diese Implementierung. Tatsächliche Tests und Budgetdefinitionsänderung im aktuellen PROJECT_STATE/QUALITY dokumentiert.
+
+Unveröffentlichte technische Nacharbeit PR27: kompletter kalter Natur-Nutzentext statt ungeeignetem Teiltextselektor; unveränderte180 Buch-Navigationsfälle in vorhandenen Arbeiter verlagert, fehlende/verkürzte/duplizierte Nachweise werden zurückgewiesen. Bestehende Änderungsfolgen-/Testauswahl erkennt explizite Inhalts-/Index-/Export-/Fortschrittsrisiken und nimmt Naturtests konservativ mit. Neuer vollständiger Dauerauftrag sowie24 **vorbereitete** Erfindungsmanuskripte dauerhaft gesichert; keine neuen Erfindungsartikel als integriert behauptet. Volle aktuelle Abnahme vor Freigabe weiterhin erforderlich.

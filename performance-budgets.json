@@ -6,7 +6,22 @@
     "entryCssBytes": 325000,
     "entryCssGzipBytes": 56000,
     "largestJsBytes": 1750000,
-    "worldGeometryBytes": 1800000
+    "worldGeometryBytes": 1800000,
+    "worldTextBytes": 700000,
+    "worldTextGzipBytes": 200000,
+    "largestWorldTextBytes": 200000,
+    "initialLearningTextBytes": 200000,
+    "initialLearningTextGzipBytes": 50000,
+    "largestBookStudyBytes": 8000,
+    "largestBookStudyGzipBytes": 3000,
+    "bookSearchBytes": 200000,
+    "bookSearchGzipBytes": 50000,
+    "bookStudyIndexBytes": 40000,
+    "bookStudyIndexGzipBytes": 12000,
+    "largestBookTopicBytes": 40000,
+    "largestBookTopicGzipBytes": 12000,
+    "bookWhyBytes": 200000,
+    "bookWhyGzipBytes": 50000
   },
   "browser": {
     "homeJsBytes": 1050000,

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "term": "Zersetzung",
+  "learning": {
+    "starter": "Abgestorbene Pflanzenreste können von Lebewesen abgebaut werden. Dabei verändert sich das Material.",
+    "deeper": "Zersetzung trägt dazu bei, dass Nährstoffe erneut verfügbar werden. Die Geschwindigkeit hängt unter anderem von Material und Umweltbedingungen ab. Ein abgefallenes Blatt wird deshalb nicht überall gleich schnell abgebaut.",
+    "observe": "Vergleiche zwei gezeichnete Szenen: viele frische Blätter und stärker zerfallene Blattreste. Welche Veränderung würdest du untersuchen? Die Bilder wären Momentaufnahmen und zeigen noch keine gemessene Geschwindigkeit.",
+    "benefit": "Du erklärst Abbau und Stoffweitergabe, ohne das Material für verschwunden zu halten.",
+    "topic": "science-fungi",
+    "connection": "Die Pilzkarte zeigt auch den Abbau abgestorbenen Materials. Vergleiche diese Aufgabe mit anderen Rollen von Pilzen: Nicht jeder Pilz wirkt gleich.",
+    "sources": [
+      {
+        "url": "https://www.nps.gov/subjects/biodiversity/services-provided-by-biodiversity.htm",
+        "title": "National Park Service · Zersetzung (Englisch)",
+        "anchor": "Decomposition section, microbial/fungal/invertebrate participation and nutrient recycling. No medicinal examples, energy creation or unsupported percentages adopted.",
+        "updatedOn": "2016-03-15",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Mikroorganismus",
+        "reason": "Manche Mikroorganismen bauen abgestorbenes Material ab. Größe und ökologische Aufgabe sind verschiedene Eigenschaften."
+      },
+      {
+        "term": "Kohlenstoffkreislauf",
+        "reason": "Der Abbau abgestorbenen Materials kann Kohlenstoff zwischen Speichern bewegen. Ein Stoffkreislauf ist nicht dasselbe wie unverändert kreisende Energie."
+      },
+      {
+        "term": "Nahrungsnetz",
+        "reason": "Abgestorbenes Material wird ebenfalls genutzt und abgebaut. Eine einfache Kette lebender Modelltiere zeigt nicht alle diese Wege."
+      }
+    ],
+    "question": {
+      "prompt": "Was ist eine sinnvolle Beschreibung der Zersetzung?",
+      "answers": [
+        "Organisches Material wird verändert und weiter abgebaut",
+        "Alle beteiligten Stoffe hören auf zu existieren",
+        "Jedes Blatt wird überall gleich schnell abgebaut"
+      ],
+      "correct": 0,
+      "hint": "Trenne Stoffveränderung von bloßem Verschwinden.",
+      "why": "Beim Abbau verändern Lebewesen organisches Material. Seine Stoffe werden weitergegeben oder in andere Formen überführt.",
+      "wrongReasons": [
+        "",
+        "Die beteiligten Stoffe verschwinden nicht einfach aus der Welt; sie werden verändert und weitergegeben.",
+        "Material und Umweltbedingungen unterscheiden sich. Daraus können unterschiedliche Abbaugeschwindigkeiten folgen."
+      ]
+    }
+  }
+}

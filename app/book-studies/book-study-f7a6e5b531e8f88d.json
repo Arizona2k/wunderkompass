@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "term": "Klima",
+  "learning": {
+    "starter": "Klima beschreibt typische Wetterbedingungen über lange Zeit. Ein einzelner Tag beschreibt noch kein ganzes Klima.",
+    "deeper": "Langjährige Auswertungen können Mittelwerte, Unterschiede und jahreszeitliche Muster zeigen. Eine Abweichung an einem Tag ist kein Beweis gegen einen langfristigen Trend. Umgekehrt ersetzt ein Mittelwert nicht die Beschreibung jedes einzelnen Tags.",
+    "observe": "Zeichne zwei erfundene Reihen: drei Tageswerte und eine beschriftete langjährige Zusammenfassung. Vergleiche die Fragestellungen, nicht eine echte Region. Drei Papierzahlen ersetzen keine tatsächliche Klimareihe.",
+    "benefit": "Du trennst eine Momentaufnahme von einem langfristig ausgewerteten Muster.",
+    "connection": "Das Wetterlabor ist eine begrenzte Momentdarstellung. Die Klimafrage ergänzt die notwendige lange Zeitskala, ohne seine Regler als Klimavorhersage auszugeben.",
+    "lab": "weather",
+    "sources": [
+      {
+        "url": "https://www.noaa.gov/jetstream/global/climate-vs-weather",
+        "title": "NOAA · Klima (Englisch)",
+        "anchor": "Unterscheidung von Tageswetter und längerfristigen typischen Bedingungen. Ein einzelner warmer oder kalter Tag belegt keinen allgemeinen Klimatrend.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Ein Tag ist kalt. Was belegt dieser Einzelwert allein?",
+      "answers": [
+        "Dass jeder langfristige Erwärmungstrend falsch sein muss",
+        "Das gesamte Klima über Jahrzehnte",
+        "Eine Tagesbedingung, nicht die vollständige langfristige Entwicklung"
+      ],
+      "correct": 2,
+      "hint": "Die Zeitskala der Beobachtung ist kürzer als die einer langjährigen Auswertung.",
+      "why": "Ein Tageswert beschreibt den Tag. Langfristige Entwicklungen brauchen passende Reihen und Auswertungen; ein Einzelwert entscheidet sie nicht.",
+      "wrongReasons": [
+        "Ein einzelner kalter Tag widerlegt keine langjährige Auswertung.",
+        "Eine Momentaufnahme enthält keine vollständige Beobachtung über Jahrzehnte.",
+        ""
+      ]
+    }
+  }
+}

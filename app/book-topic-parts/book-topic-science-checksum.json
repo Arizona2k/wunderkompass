@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "topic": "science-checksum",
+  "links": [
+    {
+      "term": "Prüfsumme",
+      "reason": "Die Prüfsummenkarte zeigt einen begrenzten Zahlenvergleich. Erkläre gleiche Kontrollzahl, gleiche Daten und vertrauenswürdige Herkunft als verschiedene Aussagen."
+    },
+    {
+      "term": "Hashfunktion",
+      "reason": "Die Prüfsummenkarte erklärt den ersten Vergleichsschritt. Eine kryptografische Hashfunktion und eine geprüfte Herkunft sind zusätzliche, getrennte Anforderungen."
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum beweist eine passende Prüfsumme nicht automatisch Echtheit?",
+      "reason": "Die Prüfsummenkarte zeigt, wie eine Veränderung auffallen kann. Trenne das Prüfergebnis von der Frage, wer die Nachricht geschickt hat und ob du diesem Absender vertrauen kannst."
+    }
+  ]
+}

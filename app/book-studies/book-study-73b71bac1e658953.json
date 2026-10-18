@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "term": "Oberflächenspannung",
+  "learning": {
+    "starter": "Ein Wassertropfen kann eine gekrümmte Oberfläche bilden. Diese Fläche verhält sich anders als eine beliebig dehnbare Papierzeichnung.",
+    "deeper": "Form und Verhalten hängen auch von Schwerkraft, Benetzung und Störungen ab. Dass ein kleines Objekt an der Oberfläche gehalten wird, ist kein Beweis, dass es weniger dicht als Wasser ist oder eine feste Haut darauf liegt.",
+    "observe": "Vergleiche zwei eigene Tropfenskizzen mit glatter und stark vergrößerter Grenzlinie. Beschrifte sie als Formvergleich, nicht als Energiemessung. Verwende keine Nadeln oder zerbrechlichen Gefäße für dieses Papierbeispiel.",
+    "benefit": "Du erklärst ein Oberflächenverhalten und trennst es von Dichte und einer vermeintlichen festen Haut.",
+    "connection": "Die Karte zeigt den begrenzten Oberflächenvergleich mit gut lesbaren Erklärungen. Eine gezeichnete Grenze ist keine echte Molekülaufnahme.",
+    "topic": "science-surface-tension",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/surface-tension-and-water",
+        "title": "USGS · Oberflächenspannung",
+        "anchor": "Selected scientific lines34–57: cohesion and resistance to increasing interface. Excluded claim of water greatest except mercury, simplistic stronger surface bonds, unsupported membrane-as-real-skin and third-party images.",
+        "updatedOn": "2026-08-24",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Kohäsion",
+        "reason": "Wechselwirkungen innerhalb des Wassers tragen zum Verhalten seiner Grenzfläche bei. Oberflächenspannung ist keine zusätzliche feste Haut."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Aussage über die Wasseroberfläche ist hier passend?",
+      "answers": [
+        "Sie hat ein Verhalten durch Wechselwirkungen, aber keine echte feste Haut",
+        "Sie besteht aus einer zusätzlichen Plastikschicht",
+        "Jeder gehaltene Gegenstand muss weniger dicht als Wasser sein"
+      ],
+      "correct": 0,
+      "hint": "Trenne die Erklärung einer Grenzfläche von der Beschreibung eines festen Deckels.",
+      "why": "Die Grenzfläche verhält sich durch die Wechselwirkungen der Flüssigkeit. Das ist keine zusätzliche feste Schicht und kein alleiniger Dichtenachweis.",
+      "wrongReasons": [
+        "",
+        "Es wird keine Plastikschicht hinzugefügt. Das Verhalten gehört zur Flüssigkeit und ihrer Grenzfläche.",
+        "Ein kleines dichtes Objekt kann unter passenden Bedingungen an der Oberfläche gehalten werden. Das beweist keine geringere Dichte."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum kann eine Nadel anders auf Wasser liegen als untertauchen?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Oberflächenspannung“: Du unterscheidest Grenzflächenwirkung von einem allgemeinen Schwimmversprechen."
+      }
+    ]
+  }
+}

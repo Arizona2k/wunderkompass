@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "term": "Treibhauseffekt",
+  "learning": {
+    "starter": "Bestimmte Gase beeinflussen, wie die Erde Wärme an den Weltraum abgibt. Der natürliche Treibhauseffekt hilft, die Oberfläche warm zu halten.",
+    "deeper": "Zusätzliche Treibhausgase verändern die Energiebilanz und verstärken die Erwärmung. Eine Glasdecke oder ein verschlossener Behälter ist nicht derselbe physikalische Vorgang. Nicht jeder einzelne Tag muss wärmer als sein Vorgänger sein, damit ein langfristiger Trend besteht.",
+    "observe": "Zeichne getrennte Pfeile für einfallende Sonnenenergie und abgegebene Energie. Schreibe ausdrücklich vereinfachte Energiebilanz daneben. Keine Behälter erhitzen; die Skizze berechnet keine tatsächliche Erwärmungszahl.",
+    "benefit": "Du erklärst natürliche und verstärkte Wirkung, ohne Tageswetter mit langfristiger Entwicklung zu verwechseln.",
+    "connection": "Das Wetterlabor stellt einen Tageszustand dar und simuliert keinen vollständigen globalen Energiehaushalt. Die Pfeile helfen, genau diese Grenze zu erklären.",
+    "lab": "weather",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/climate-change/faq/what-is-the-greenhouse-effect/",
+        "title": "NASA · Treibhauseffekt (Englisch)",
+        "anchor": "Natürliche Treibhauswirkung und Veränderung der Energiebilanz durch zusätzliche Treibhausgase. Keine exakten Temperaturzahlen oder Gleichsetzung mit einem Glasbehälter.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Welcher Schluss aus einem kalten Tag ist unzulässig?",
+      "answers": [
+        "Dass an diesem Tag Kälte beobachtet werden kann",
+        "Dass Tageswetter und langfristige Entwicklung getrennt sind",
+        "Dass der Treibhauseffekt deshalb nicht existiert"
+      ],
+      "correct": 2,
+      "hint": "Ein Tagesereignis ersetzt keine Prüfung des Energiehaushalts oder einer langfristigen Reihe.",
+      "why": "Ein kalter Tag kann in einem längerfristig wärmer werdenden Klima auftreten. Ein Einzelwert widerlegt den beschriebenen Energieprozess nicht.",
+      "wrongReasons": [
+        "Eine tatsächlich beobachtete Tageskälte darf als Wetterbeschreibung benannt werden.",
+        "Die unterschiedlichen Zeitskalen getrennt zu halten ist gerade die nötige Einordnung.",
+        ""
+      ]
+    }
+  }
+}

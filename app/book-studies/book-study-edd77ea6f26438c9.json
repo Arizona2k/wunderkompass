@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "term": "Korallen",
+  "learning": {
+    "starter": "Korallen sind Tiere. Viele riffbildende Korallen leben mit kleinen Algen zusammen.",
+    "deeper": "Ein Korallenpolyp kann Nahrung mit Tentakeln aufnehmen. Bei vielen Steinkorallen tragen Kalkskelette zum Riff bei; nicht jede Korallenart baut dasselbe harte Gerüst. Ähnlichkeit mit einer Pflanze im Foto entscheidet die Tiergruppe nicht.",
+    "observe": "Zeichne einen gedachten Polypen mit Nahrungspfeil und einen separat beschrifteten Algenpartner. Markiere die Zusammenarbeit. Das Papier ist kein vollständiger Stoffwechselplan; echte Korallen werden weder angefasst noch gesammelt.",
+    "benefit": "Du unterscheidest Korallentier, Algenpartner und Riffgerüst statt alle sichtbaren Teile als Pflanze einzuordnen.",
+    "connection": "Die Riffkarte erklärt Zusammenarbeit. Der Polypenvergleich vertieft Tier, Partner und Gerüst, ohne alle Korallen auf dasselbe Schema zu reduzieren.",
+    "topic": "science-coral-reef",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/coral.html",
+        "title": "NOAA · Korallen (Englisch)",
+        "anchor": "Korallen sind Tiere; viele riffbildende Korallen leben mit Algen zusammen. Nicht jede Korallenart oder Skelettbildung ist gleich.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was bleibt beim gedachten Zusammenleben richtig?",
+      "answers": [
+        "Der Algenpartner verwandelt die Koralle in eine Pflanze",
+        "Die Koralle ist ein Tier; der Algenpartner ist ein anderer Teil der Zusammenarbeit",
+        "Jede Koralle muss genau dasselbe Riffgerüst bilden"
+      ],
+      "correct": 1,
+      "hint": "Zusammenleben macht die beiden Partner nicht zu derselben Organismengruppe.",
+      "why": "Korallentier und Algenpartner erfüllen unterschiedliche Rollen. Die Zusammenarbeit hebt die Unterscheidung nicht auf.",
+      "wrongReasons": [
+        "Ein Partner ändert nicht automatisch die biologische Einordnung des anderen.",
+        "",
+        "Verschiedene Korallenarten bilden nicht alle dasselbe harte Riffgerüst."
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "term": "Stern",
+  "learning": {
+    "starter": "Unsere Sonne ist ein Stern und sendet eigenes Licht aus. Ein heller Mond ist deshalb noch kein Stern.",
+    "deeper": "Sterne verändern sich im Lauf ihrer Entwicklung. In der Hauptreihenphase setzt die Fusion von Wasserstoffkernen Energie frei. Nicht jede Entwicklungsphase eines Sterns hat genau denselben Energieablauf; ein Lichtpunkt im Foto verrät allein noch nicht alle Eigenschaften.",
+    "observe": "Zeichne eine gedachte Sternquelle und einen getrennten Mond, der Licht weitergibt. Verwende Pfeile und Beschriftungen statt eines Blicks zur Sonne. Das Schema ist keine reale Helligkeits- oder Temperaturmessung.",
+    "benefit": "Du unterscheidest eine Lichtquelle von einem beleuchteten Körper und vermeidest eine zu einfache Aussage über alle Sternphasen.",
+    "connection": "Das Sonnensystemlabor ordnet Stern und Planeten. Die Lichtpfeile ergänzen Quelle und beleuchteten Körper, ohne echte Temperaturen oder Energiemengen aus der Zeichnung abzuleiten.",
+    "lab": "solar",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/universe/stars/",
+        "title": "NASA · Stern (Englisch)",
+        "anchor": "Abschnitte zu Sternen und Wasserstofffusion während der Hauptreihe. Nicht jede Entwicklungsphase besitzt denselben Energieablauf; keine Sternzahlen oder Bilder übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Warum ist der beleuchtete Mond in der Skizze nicht dieselbe Art von Lichtquelle wie die Sonne?",
+      "answers": [
+        "Weil der Mond gar nicht existiert",
+        "Weil jede helle Scheibe ein Stern ist",
+        "Weil er Sonnenlicht reflektiert statt dieselbe stellare Energiequelle darzustellen"
+      ],
+      "correct": 2,
+      "hint": "Folge dem Pfeil von der Quelle zum beleuchteten Körper.",
+      "why": "Die Sonne sendet eigenes Licht aus; der Mond reflektiert Sonnenlicht. Helligkeit allein macht den Mond nicht zu einem Stern.",
+      "wrongReasons": [
+        "Eine beleuchtete Scheibe bedeutet nicht fehlenden Körper.",
+        "Sichtbares helles Licht kann auch reflektiert sein; nicht jeder helle Körper ist ein Stern.",
+        ""
+      ]
+    }
+  }
+}

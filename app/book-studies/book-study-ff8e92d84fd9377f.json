@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "term": "Versickerung",
+  "learning": {
+    "starter": "Wasser kann von der Oberfläche in den Boden eindringen. Wie gut dies gelingt, hängt vom Untergrund und von den Bedingungen ab.",
+    "deeper": "Versickerung ist nicht automatisch gleich schnell und nicht bei jedem Untergrund gleich möglich. Wasser muss danach nicht sofort an einer Quelle auftauchen; es kann gespeichert werden oder verschiedene weitere Wege nehmen.",
+    "observe": "Zeichne zwei erfundene Untergründe: einen mit verbundenen und einen mit wenigen gedachten Zwischenräumen. Markiere mögliche Wege vorsichtig. Die Skizze enthält keine Messwerte und beweist keine wirkliche Bodenqualität oder Abflusszeit.",
+    "benefit": "Du beachtest Bedingungen des Untergrunds und trennst einen möglichen Weg von einer sicheren Vorhersage.",
+    "connection": "Die Wasserkreislaufkarte verbindet Oberfläche und Untergrund. Versickerung ist einer der Wege; ein Bodenpfeil ist keine sichere Wasserstandsprognose.",
+    "topic": "science-water-cycle",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/water-cycle",
+        "title": "USGS · Wasserkreislauf",
+        "anchor": "Wasserspeicher, Transportwege und Zustandswechsel. Die eigene Skizze zeigt Möglichkeiten und keine Pflichtreihenfolge, festen Aufenthaltszeiten oder Wasserqualitätsprüfung.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      },
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/infiltration-and-water-cycle",
+        "title": "USGS · Versickerung im Wasserkreislauf",
+        "anchor": "Abschnitt zu möglichen Wegen von Wasser im Boden: Speicherung, Aufnahme durch Pflanzen und Rückkehr in die Atmosphäre. Nicht alles erreicht sofort Grundwasser.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Grundwasser",
+        "reason": "Versickerung ist ein Weg in den Untergrund, Grundwasser ein dortiger Speicher. Der Weg beweist keine sofortige Ankunft an einer Quelle oder Trinkwasserqualität."
+      }
+    ],
+    "question": {
+      "prompt": "Was fehlt für eine echte Versickerungsgeschwindigkeit in der Papierzeichnung?",
+      "answers": [
+        "Eine möglichst dunkle Zeichenfarbe",
+        "Ein beliebig großer Pfeil",
+        "Messdaten und tatsächliche Untergrundbedingungen"
+      ],
+      "correct": 2,
+      "hint": "Die Länge des gezeichneten Pfeils ist noch keine gemessene Strecke pro Zeit.",
+      "why": "Die Geschwindigkeit benötigt passende reale Daten. Ein erfundener Pfeil kann nur einen möglichen Weg veranschaulichen.",
+      "wrongReasons": [
+        "Eine Zeichenfarbe liefert keine reale Geschwindigkeit oder Durchlässigkeit.",
+        "Ein größerer Pfeil ist ohne Skala und Messung kein Nachweis schnellerer Versickerung.",
+        ""
+      ]
+    }
+  }
+}

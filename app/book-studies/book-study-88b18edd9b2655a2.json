@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Wärmestrahlung",
+  "learning": {
+    "starter": "Energie kann als Strahlung von einem Gegenstand zu einem anderen gelangen, auch ohne Berührung.",
+    "deeper": "Strahlung und ihre Aufnahme hängen unter anderem von Temperatur und Oberflächen ab. Eine warme Oberfläche sendet nicht nur dann Strahlung aus, wenn sie sichtbar glüht. Unsere Skizze berechnet keine wirklichen Strahlungsmengen.",
+    "observe": "Zeichne zwei getrennte gedachte Flächen und einen Strahlungspfeil dazwischen. Vergleiche mit einem Berührungspfeil. Die Skizze ist ohne Messwerte und fordert nicht zum Anfassen heißer Gegenstände oder Blick in die Sonne auf.",
+    "benefit": "Du unterscheidest Strahlung von Berührung und einer Energieübertragung durch Luftstrom.",
+    "connection": "Die Wärmewegekarte trennt Strahlung von Leitung und Strömung. Sichtbares Glühen ist keine Voraussetzung für Wärmestrahlung.",
+    "topic": "science-heat-transfer",
+    "sources": [
+      {
+        "url": "https://bsesc.energy.gov/energy-basics/heat-flow",
+        "title": "U.S. Department of Energy · Wärmeübertragung",
+        "anchor": "Full body lines11–22: conduction, convection, radiation. Natural warm-to-cool direction; own safe hypothetical comparisons, no building-efficiency guarantees.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Konvektion",
+        "reason": "Ein bewegter Stoffstrom und elektromagnetische Strahlung sind verschiedene Wärmewege. Strahlung benötigt keinen solchen Luftstrom oder direkten Kontakt."
+      },
+      {
+        "term": "Infrarot",
+        "reason": "Warme Gegenstände senden unter anderem Infrarotstrahlung aus. Ein Wärmebild zeigt gewählte Darstellungsfarben und ist keine unmittelbare sichtbare Oberflächenfarbe."
+      }
+    ],
+    "question": {
+      "prompt": "Was ist für den beschriebenen Strahlungsweg nicht zwingend nötig?",
+      "answers": [
+        "Direkter Kontakt beider Gegenstände",
+        "Ein Energieaustausch",
+        "Ein Gegenstand, der Strahlung aussendet"
+      ],
+      "correct": 0,
+      "hint": "Vergleiche getrennte Flächen mit zwei berührenden Flächen.",
+      "why": "Strahlung kann den Abstand überbrücken. Direkter Kontakt ist dafür nicht zwingend notwendig.",
+      "wrongReasons": [
+        "",
+        "Auch dieser Strahlungsweg beschreibt einen Energieaustausch. Ohne Energie würde die Erklärung nicht passen.",
+        "Für diesen ausgesandten Strahlungsweg braucht es eine Quelle. Fehlender Kontakt ersetzt sie nicht."
+      ]
+    }
+  }
+}

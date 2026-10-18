@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "term": "Klimazone",
+  "learning": {
+    "starter": "Klimazonen fassen große Gebiete mit ähnlichen langfristigen Bedingungen zusammen. Ein Gürtelbild ist ein vereinfachtes Modell.",
+    "deeper": "Eine einzelne Breite beschreibt nicht jedes örtliche Klima. Lage, Höhe und weitere Bedingungen können wichtig sein. Verschiedene Klassifikationen beantworten unterschiedliche Fragen; eine farbige Grenze auf Papier ist keine plötzlich wechselnde Wetterwand.",
+    "observe": "Zeichne zwei gedachte Orte im selben Breitengürtel, einen höher und einen tiefer. Notiere, welche zusätzlichen Informationen fehlen. Das eigene Gürtelbild enthält keine echten Temperaturen oder vollständige Klimaklassifikation.",
+    "benefit": "Du erkennst den Nutzen einer Gruppierung und begrenzt Aussagen zu einem einzelnen Ort.",
+    "connection": "Das Jahreszeitenlabor zeigt geometrische Lichtbedingungen. Es ist keine vollständige Klimakarte; die zwei Orte ergänzen die Frage nach weiteren örtlichen Faktoren.",
+    "lab": "seasons",
+    "sources": [
+      {
+        "url": "https://www.noaa.gov/jetstream/global/climate-vs-weather",
+        "title": "NOAA · Klimazone (Englisch)",
+        "anchor": "Unterscheidung von Tageswetter und längerfristigen typischen Bedingungen. Ein einzelner warmer oder kalter Tag belegt keinen allgemeinen Klimatrend.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Zwei Orte liegen im selben gezeichneten Gürtel. Was folgt daraus nicht automatisch?",
+      "answers": [
+        "Dass sie in diesem Modell zusammen gruppiert wurden",
+        "Dass ihr örtliches Wetter immer gleich ist",
+        "Dass weitere Ortsangaben für einen Vergleich helfen können"
+      ],
+      "correct": 1,
+      "hint": "Eine Gruppierung fasst zusammen und ersetzt keine vollständige örtliche Beschreibung.",
+      "why": "Der Gürtel ist eine Vereinfachung. Örtliche Messungen und weitere Bedingungen können unterschiedlich sein.",
+      "wrongReasons": [
+        "Die Zuordnung im gewählten Modell ist eine zulässige Beschreibung seiner Darstellung.",
+        "",
+        "Zusätzliche Informationen können Unterschiede erklären und machen die Gruppierung nicht falsch."
+      ]
+    }
+  }
+}

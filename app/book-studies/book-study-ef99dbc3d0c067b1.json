@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "term": "Mondphase",
+  "learning": {
+    "starter": "Der Mond wird von der Sonne beleuchtet. Während er die Erde umrundet, sehen wir unterschiedliche Teile seiner beleuchteten Seite.",
+    "deeper": "Die sichtbare Form ist überwiegend eine Beobachteransicht, keine Veränderung der Mondgestalt. Das erste Viertel zeigt eine halb helle Scheibe. Eine Mondfinsternis ist ein eigener Schattenvorgang und nicht die gewöhnliche Erklärung jeder Phase.",
+    "observe": "Zeichne eine gedachte Sonne, Erde und vier Mondpositionen von oben. Ergänze daneben getrennte Scheibenansichten von der Erde. Die Skizze ist weder maßstabsgetreu noch eine Berechnung echter Sichtbarkeitszeiten.",
+    "benefit": "Du unterscheidest Position, beleuchteten Teil und beobachtete Scheibe statt eine Formänderung des Mondes anzunehmen.",
+    "connection": "Die Mondphasenkarte zeigt die Beobachteransicht. Vergleiche sie mit dem räumlichen Labor, statt Draufsicht und sichtbare Scheibe gleichzusetzen.",
+    "topic": "science-moon-phases",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/moon/moon-phases/",
+        "title": "NASA · Mondphasen",
+        "anchor": "Sonnenbeleuchtung und wechselnde Beobachteransicht erklären die gewöhnlichen Mondphasen. Ein Viertelname und eine halb helle Scheibe beschreiben verschiedene Aspekte.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Neumond",
+        "reason": "Neumond ist eine Beobachterphase mit wenig sichtbarem sonnenbeleuchtetem Anteil. Die Mondkugel bleibt vorhanden; eine Finsternis ist ein eigener Vorgang."
+      },
+      {
+        "term": "Vollmond",
+        "reason": "Vollmond beschreibt die meist ganz helle Beobachterscheibe. Auch sie zeigt reflektiertes Sonnenlicht, keine neu entstandene Sternquelle."
+      }
+    ],
+    "question": {
+      "prompt": "Was ändert sich bei den gewöhnlichen Mondphasen vor allem?",
+      "answers": [
+        "Unser Blick auf den beleuchteten Anteil",
+        "Die Mondkugel wird jeden Monat zerschnitten",
+        "Jede Phase entsteht im Erdschatten"
+      ],
+      "correct": 0,
+      "hint": "Trenne die Kugel im Positionsmodell von der sichtbaren Scheibe aus Erdsicht.",
+      "why": "Die Mondkugel bleibt bestehen. Wir sehen unterschiedliche Anteile der beleuchteten Seite; eine Finsternis ist nicht die normale Phasenursache.",
+      "wrongReasons": [
+        "",
+        "Der Mond wird bei einer Phase nicht zerschnitten. Die sichtbare Lichtfläche ändert sich.",
+        "Gewöhnliche Phasen werden nicht alle durch den Erdschatten verursacht. Dieser gehört zur Finsterniserklärung."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum leuchtet der Mond?",
+        "reason": "Das Mondphasenmodell auf der Karte zeigt die beleuchtete Hälfte und unseren Blick darauf. Verfolge das Sonnenlicht, ohne gewöhnliche Phasen mit dem Erdschatten zu verwechseln."
+      }
+    ]
+  }
+}

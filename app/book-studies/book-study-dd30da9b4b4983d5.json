@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "term": "Verwitterung",
+  "learning": {
+    "starter": "Verwitterung verändert oder zerkleinert Gestein am Ort. Abtransport ist eine eigene Frage.",
+    "deeper": "Physikalische und chemische Vorgänge können Gestein verändern. Erosion bezeichnet die Abtragung; beide können zusammenwirken. Eine Papiergeschichte sagt nicht, wie lange ein echtes Gestein dafür braucht.",
+    "observe": "Zeichne einen gedachten Block zunächst mit einem Riss und dann mit einem Transportpfeil für ein Stück. Beschrifte die beiden Vorgänge getrennt. Keine Proben zerbrechen, erhitzen oder mit Chemikalien behandeln.",
+    "benefit": "Du trennst Veränderung am Ort und anschließende Abtragung.",
+    "connection": "Das Wasserlabor ordnet Wasserwege. Die Gesteinsgeschichte ergänzt, dass Materialveränderung und Materialtransport getrennt erklärt werden müssen.",
+    "lab": "water",
+    "sources": [
+      {
+        "url": "https://www.nps.gov/articles/000/weathering-erosion.htm",
+        "title": "NPS · Verwitterung",
+        "anchor": "Verwitterung verändert Material am Ort, Erosion trägt es ab. Ein Gedankenschema ist keine gemessene Geschwindigkeit oder Altersbestimmung.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Erosion",
+        "reason": "Materialveränderung am Ort und Abtragung sind verschiedene Vorgänge. Beide können zusammenwirken, dürfen aber nicht allein aus einer Farbe abgelesen werden."
+      }
+    ],
+    "question": {
+      "prompt": "Welcher Teil zeigt zunächst Verwitterung statt bereits Transport?",
+      "answers": [
+        "Der neu gezeichnete Riss im noch am Ort liegenden Block",
+        "Nur der Zielort nach dem Transport",
+        "Ein unbelegter genauer Zeitwert für jeden Stein"
+      ],
+      "correct": 0,
+      "hint": "Achte darauf, ob das Material bereits seinen Ort wechselt.",
+      "why": "Der Riss zeigt eine gedachte Veränderung am Ort. Ein Transportpfeil erklärt danach einen anderen Vorgang.",
+      "wrongReasons": [
+        "",
+        "Der Zielort beschreibt eine Ablagerung nach dem gedachten Transport.",
+        "Eine frei gewählte Zahl ist kein Nachweis einer realen Dauer."
+      ]
+    }
+  }
+}

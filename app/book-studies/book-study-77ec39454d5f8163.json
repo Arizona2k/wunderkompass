@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Hypothese",
+  "learning": {
+    "starter": "Formuliere zuerst eine prüfbare Vermutung. Dann untersuche, ob deine Beobachtung dazu passt.",
+    "deeper": "Bei einer fairen Prüfung werden mögliche Einflüsse bedacht und Ergebnisse festgehalten. Widersprechende Beobachtungen sind nützlich: Sie können zeigen, dass eine Vermutung oder die Versuchsgestaltung geändert werden muss.",
+    "observe": "Vermute, welche von zwei verschieden gefalteten Papierformen auf derselben Tischfläche länger stehen bleibt. Lege vorher fest, was du vergleichst, und wiederhole die Beobachtung. Welche Einflüsse könnten dein Ergebnis verändern?",
+    "benefit": "Du trennst überprüfbare Vermutung, Beobachtung und vorsichtige Schlussfolgerung.",
+    "topic": "science-probability",
+    "connection": "Im Wahrscheinlichkeitsmodell kannst du zunächst eine Erwartung formulieren und dann Ergebnisse sammeln. Einzelne Ergebnisse beweisen noch keine allgemeine Vermutung.",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/review/science-fair/scientific-method.html",
+        "title": "NASA · Hypothese (Englisch)",
+        "anchor": "Scientific-method steps: testable hypothesis, variables/controls, record observations, evaluate support and errors, further research; no one-test-becomes-theory claim.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Mittelwert",
+        "reason": "Eine Kennzahl kann Beobachtungen zusammenfassen. Ob sie eine Hypothese unterstützt, hängt auch von Frage und Versuchsbedingungen ab."
+      },
+      {
+        "term": "Algorithmus",
+        "reason": "Eine Schrittfolge führt eine Aufgabe aus; eine Hypothese ist eine prüfbare Aussage. Ausführung und Begründung sind verschiedene Fragen."
+      }
+    ],
+    "question": {
+      "prompt": "Deine kleine Beobachtung passt zu deiner Hypothese. Was folgt daraus?",
+      "answers": [
+        "Sie ist für alle Situationen endgültig bewiesen",
+        "Das Ergebnis unterstützt sie unter diesen Bedingungen",
+        "Andere Einflüsse müssen nicht mehr bedacht werden"
+      ],
+      "correct": 1,
+      "hint": "Unterscheide Unterstützung durch eine Beobachtung von einem allgemeinen Beweis.",
+      "why": "Ein passendes Ergebnis kann eine Hypothese unterstützen. Bedingungen, Wiederholungen und mögliche andere Einflüsse bleiben wichtig.",
+      "wrongReasons": [
+        "Eine einzelne kleine Untersuchung prüft nicht automatisch alle Situationen.",
+        "",
+        "Andere Einflüsse können das Ergebnis mitverursachen. Eine faire Auswertung betrachtet sie weiterhin."
+      ]
+    }
+  }
+}

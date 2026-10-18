@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "term": "Krater",
+  "learning": {
+    "starter": "Ein Krater ist eine Vertiefung. Bei einem Vulkan kann sie an einer Austrittsstelle liegen.",
+    "deeper": "Ähnlich aussehende Vertiefungen müssen nicht gleich entstanden sein. Ein runder Umriss allein beweist weder einen aktiven Vulkan noch einen Einschlag. Für einen echten Ort braucht die Entstehungserklärung weitere Belege.",
+    "observe": "Zeichne eine gedachte Vertiefung im Profil und von oben. Notiere getrennt Form und unbekannte Entstehung. Die zwei Ansichten sind keine Fotos eines echten Fundorts und erlauben keine Sicherheitsentscheidung.",
+    "benefit": "Du unterscheidest sichtbare Form und belegte Entstehung.",
+    "connection": "Das Vulkanlabor enthält eine vereinfachte Öffnung. Die zweite Ansicht ergänzt den Formvergleich und erklärt die Grenze einer bloßen Kraterskizze.",
+    "lab": "volcano",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/programs/VHP/about-volcanoes",
+        "title": "USGS · Krater",
+        "anchor": "Abschnitte zu Magma, Förderwegen, verbundenen Speichern und Vulkanformen. Das eigene Schema bildet keine reale Tiefe oder Ausbruchsgefahr ab.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was beweist ein gezeichneter runder Umriss allein nicht?",
+      "answers": [
+        "Dass ein runder Umriss dargestellt ist",
+        "Dass das Profil eine gedachte Vertiefung zeigt",
+        "Dass dort heute ein echter Vulkan aktiv ist"
+      ],
+      "correct": 2,
+      "hint": "Eine Form enthält noch keine aktuelle Überwachungs- oder Entstehungsgeschichte.",
+      "why": "Aktivität und Entstehung brauchen andere Belege als den bloßen Umriss einer gedachten Vertiefung.",
+      "wrongReasons": [
+        "Die selbst gezeichnete Form darf als rund beschrieben werden.",
+        "Ein beschriftetes Profil kann eine gedachte Vertiefung darstellen.",
+        ""
+      ]
+    }
+  }
+}

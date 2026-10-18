@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Skala",
+  "learning": {
+    "starter": "Striche helfen beim Ablesen. Die Zahlen sagen, wie groß ein Schritt ist.",
+    "deeper": "Zwischen 0 und 10 können fünf gleiche Abschnitte jeweils den Schritt 2 darstellen. Gleich große Striche bedeuten nicht ohne Beschriftung immer den Schritt 1. Eine feinere Zeichnung macht ein echtes Messgerät nicht automatisch genauer.",
+    "observe": "Zeichne sechs gleich weit entfernte Striche und beschrifte sie 0, 2, 4, 6, 8, 10. Zähle fünf Zwischenräume. Die Zeichnung ist eine selbst gewählte Zahlenskala, kein geprüftes Messgerät.",
+    "benefit": "Du liest Zwischenräume und Zahlenschritte, statt nur Striche zu zählen.",
+    "connection": "Temperatureingaben brauchen eine beschriftete Skala und Einheit. Zahlenschritte auf einer Anzeige und tatsächlich übertragene Wärme sind verschiedene Größen.",
+    "topic": "science-heat-transfer",
+    "sources": [
+      {
+        "url": "https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-2-classification-components-uncertainty",
+        "title": "NIST · Skala (Englisch)",
+        "anchor": "Actual measurement estimate statement; own numerical ruler representation and arithmetic. No copied device image, no implication finer printed ticks guarantee accuracy.",
+        "updatedOn": "2023-03-01",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Maßstab",
+        "reason": "Eine Skala ordnet beschriftete Werte; ein Maßstab vergleicht Strecken in Darstellung und Wirklichkeit. Gleich aussehende Striche erklären nicht beide Beziehungen."
+      }
+    ],
+    "question": {
+      "prompt": "Fünf gleich große Abschnitte reichen von 0 bis 10. Wie groß ist ein Zahlenschritt?",
+      "answers": [
+        "1, weil es Striche gibt",
+        "5, weil fünf Abschnitte vorhanden sind",
+        "2, weil 10 durch 5 geteilt wird"
+      ],
+      "correct": 2,
+      "hint": "Teile den gesamten Zahlenunterschied durch die Zahl der gleich großen Abschnitte.",
+      "why": "10 ÷ 5 = 2. Sechs Randstriche begrenzen fünf Abschnitte; Strichzahl und Abschnittszahl sind verschieden.",
+      "wrongReasons": [
+        "Ein Strich legt ohne Zahlenbeschriftung keinen Schritt von 1 fest.",
+        "Fünf ist die Anzahl der Abschnitte, nicht der Zahlenunterschied pro Abschnitt.",
+        ""
+      ]
+    }
+  }
+}

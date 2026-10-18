@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "term": "Vollmond",
+  "learning": {
+    "starter": "Bei Vollmond sehen wir normalerweise die sonnenbeleuchtete Mondseite fast als ganze helle Scheibe.",
+    "deeper": "Auch Vollmondlicht ist reflektiertes Sonnenlicht. Der Phasenname bedeutet nicht, dass der Mond selbst zum Stern wird oder in jedem Monat im Erdschatten liegen muss. Die räumliche Bahnausrichtung gehört zur Finsterniserklärung.",
+    "observe": "Zeichne neben einer Vollmondscheibe einen Pfeil von einer gedachten Sonne zur Mondoberfläche. Markiere die Reflexion. Die Skizze misst weder Helligkeit noch Finsterniszeit und ist keine Beobachtung eines echten Monats.",
+    "benefit": "Du erklärst die Lichtquelle auch beim Vollmond und vermeidest eine automatische monatliche Finsternisannahme.",
+    "connection": "Die helle Beobachterscheibe bleibt eine Ansicht des reflektierten Lichts. Die Karte und das Labor trennen gewöhnliche Phase von einer Mondfinsternis.",
+    "topic": "science-moon-phases",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/moon/moon-phases/",
+        "title": "NASA · Mondphasen",
+        "anchor": "Sonnenbeleuchtung und wechselnde Beobachteransicht erklären die gewöhnlichen Mondphasen. Ein Viertelname und eine halb helle Scheibe beschreiben verschiedene Aspekte.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Reflexion",
+        "reason": "Die helle Vollmondscheibe zeigt reflektiertes Sonnenlicht. Lichtquelle, zurückgeworfenes Licht und beobachtete Phase sind verschiedene Angaben."
+      },
+      {
+        "term": "Mondphase",
+        "reason": "Vollmond beschreibt die meist ganz helle Beobachterscheibe. Auch sie zeigt reflektiertes Sonnenlicht, keine neu entstandene Sternquelle."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Lichtquelle erklärt auch die gewöhnliche Vollmondscheibe?",
+      "answers": [
+        "Eine neu eingeschaltete Lampe im Mond",
+        "Ein neuer Stern aus der Mondkugel",
+        "Sonnenlicht, das die Mondoberfläche reflektiert"
+      ],
+      "correct": 2,
+      "hint": "Die Phase verändert unseren Blick, nicht die grundlegende Quelle des reflektierten Lichts.",
+      "why": "Die helle Scheibe zeigt reflektiertes Sonnenlicht. Der Mond wird durch Vollmond nicht zur selbst leuchtenden Sternquelle.",
+      "wrongReasons": [
+        "In der Phasenerklärung wird keine Lampe im Mond eingeschaltet.",
+        "Die Mondkugel wird nicht jeden Monat in einen Stern umgewandelt.",
+        ""
+      ]
+    }
+  }
+}

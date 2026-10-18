@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "term": "Winkel",
+  "learning": {
+    "starter": "Ein Pfeil kann sich drehen. Eine Vierteldrehung zeigt einen rechten Winkel.",
+    "deeper": "Für einen Vergleich müssen Start- und Endrichtung sowie der gemeinte Drehsinn klar sein. Eine längere Pfeilzeichnung ändert den Winkel nicht. Ein rechter Winkel ist nicht einfach jede Ecke, die auf einem Foto ungefähr rechtwinklig aussieht.",
+    "observe": "Zeichne einen Pfeil nach oben und einen nach rechts, beide vom selben Punkt aus. Markiere eine Vierteldrehung im Uhrzeigersinn. Zeichne einen Pfeil länger: Die Richtungen und ihr Winkel bleiben gleich.",
+    "benefit": "Du unterscheidest die Richtungsänderung von der Länge einer Zeichnung.",
+    "connection": "Im Winkelmodell veränderst du eine Richtung. Die eigene Pfeilzeichnung erklärt, warum Winkelgröße und Länge einer Linie getrennt betrachtet werden.",
+    "topic": "science-angle",
+    "sources": [
+      {
+        "url": "https://nrich.maths.org/problems/turning",
+        "title": "NRICH · University of Cambridge · Winkel (Englisch)",
+        "anchor": "Actual turning conceptual teaching: angles measure turns; own quarter-turn arrow example only, no NRICH activity/tool/template/worksheet or wording copied.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Symmetrie",
+        "reason": "Winkel vergleichen Richtungen. Eine behauptete Symmetrie muss zusätzlich prüfen, ob die gesamte Form nach einer bestimmten Veränderung passt."
+      }
+    ],
+    "question": {
+      "prompt": "Ein Pfeil wird länger gezeichnet, behält aber dieselbe Richtung. Was geschieht mit dem Winkel zur unveränderten zweiten Richtung?",
+      "answers": [
+        "Er wird allein dadurch doppelt so groß",
+        "Er bleibt gleich",
+        "Er verschwindet, weil der Pfeil länger ist"
+      ],
+      "correct": 1,
+      "hint": "Vergleiche die Richtungen, nicht die Endpunkte oder Pfeillängen.",
+      "why": "Die Winkelgröße hängt hier von den beiden Richtungen ab. Das Verlängern eines Pfeils ändert diese nicht.",
+      "wrongReasons": [
+        "Die Pfeillänge verdoppelt nicht die Richtungsänderung.",
+        "",
+        "Die zweite Richtung und die Öffnung bleiben erhalten."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum ändert ein längerer gezeichneter Pfeil nicht den Winkel?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Winkel“: Du unterscheidest Richtungsänderung von Streckenlänge."
+      }
+    ]
+  }
+}

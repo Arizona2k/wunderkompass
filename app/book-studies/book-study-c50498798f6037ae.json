@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "term": "Breitengrad",
+  "learning": {
+    "starter": "Der Breitengrad sagt, wie weit nördlich oder südlich des Äquators ein Ort liegt. Die Zahl wird als Winkel angegeben.",
+    "deeper": "0 Grad Breite liegt am Äquator; die Pole haben 90 Grad nördliche oder südliche Breite. Ein Breitengrad allein bestimmt noch keinen einzelnen Ort. Die Zeichnung einer perfekten Kugel ist ein Lernmodell; genaue Messungen berücksichtigen die abgeplattete Form der Erde.",
+    "observe": "Zeichne auf einer gedachten Kugel zwei Punkte auf demselben Breitenkreis, aber an verschiedenen Stellen rundherum. Welche Angabe teilen sie, und welche zweite Angabe würde sie unterscheiden? Die Skizze ist kein vermessener Globus.",
+    "benefit": "Du unterscheidest eine Nord-Süd-Winkelangabe von einer vollständigen Position.",
+    "topic": "invention-satellite",
+    "connection": "Eine Satellitenpositionierung kann mehrere Angaben liefern. Ein Breitengrad allein grenzt die Nord-Süd-Lage ein, nennt aber noch keinen einzelnen Ort.",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/latitude.html",
+        "title": "NOAA · Breitengrad (Englisch)",
+        "anchor": "Breitengrade, Äquator und geografische Pole: gedachte Linien zur Lagebeschreibung. Die Einteilung ist keine Messung des örtlichen Klimas.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Koordinate",
+        "reason": "Geografische Breite kann ein Teil einer Positionsangabe sein. Ein Breitengrad allein bestimmt noch keinen einzelnen Ort."
+      },
+      {
+        "term": "Längengrad",
+        "reason": "Breite und Länge beschreiben verschiedene Winkelangaben. Zusammen helfen sie, Positionen im vereinbarten System zu unterscheiden."
+      }
+    ],
+    "question": {
+      "prompt": "Zwei gedachte Orte liegen beide bei 30 Grad nördlicher Breite. Was folgt daraus?",
+      "answers": [
+        "Sie haben denselben Breitengrad, können aber verschiedene Längengrade haben",
+        "Sie müssen derselbe Ort sein",
+        "Sie liegen beide am Nordpol"
+      ],
+      "correct": 0,
+      "hint": "Ein Breitenkreis enthält mehr als einen Punkt.",
+      "why": "Der gleiche Breitengrad legt eine Nord-Süd-Angabe fest. Die Längengrade können verschieden sein; 30 Grad ist nicht die Polbreite von 90 Grad.",
+      "wrongReasons": [
+        "",
+        "Ein Breitengrad allein legt keinen einzigen Ort fest.",
+        "Der Nordpol liegt bei 90 Grad nördlicher Breite, nicht bei 30 Grad."
+      ]
+    }
+  }
+}

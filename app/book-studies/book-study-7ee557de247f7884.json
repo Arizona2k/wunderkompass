@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "term": "Prokaryot",
+  "learning": {
+    "starter": "Manche Zellen haben keinen umhüllten Kern. Trotzdem besitzen sie Erbinformation und können leben.",
+    "deeper": "Prokaryotische Zellen unterscheiden sich von eukaryotischen Zellen unter anderem durch die Organisation der Erbinformation. Eine einfache Ringskizze ist kein Beleg, dass im Inneren sonst nichts vorhanden ist.",
+    "observe": "Zeichne ein erfundenes Zellschema ohne Kernhülle und markiere darin einen Bereich mit DNA. Schreibe darunter: nicht maßstäblich, keine echte Aufnahme. Unbekannte Mikroorganismen werden dafür weder gesammelt noch gezüchtet.",
+    "benefit": "Du unterscheidest fehlende Kernhülle von fehlender Erbinformation oder einem vermeintlich leeren Zellinneren.",
+    "connection": "Vergleiche dieses Schema mit dem anderen Zellbauplan. Eine fehlende Kernhülle lässt sich nicht als fehlende Erbinformation lesen.",
+    "topic": "science-cell",
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Cell",
+        "title": "NHGRI · Zellen",
+        "anchor": "Full definition and narration: unicellular/multicellular, eukaryotic/prokaryotic groups. No adult cell-count range or nanobot agency copied.",
+        "updatedOn": "2026-10-14",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Zelle",
+        "reason": "Prokaryotische Zellen besitzen keinen membranumhüllten Kern. Dies bedeutet nicht fehlende Erbinformation oder einen leeren Zellinhalt."
+      }
+    ],
+    "question": {
+      "prompt": "Was bedeutet ohne membranumhüllten Zellkern in diesem Beispiel?",
+      "answers": [
+        "Es gibt überhaupt keine DNA",
+        "Die DNA liegt nicht in einem solchen umhüllten Kern",
+        "Die Zelle kann grundsätzlich nicht leben"
+      ],
+      "correct": 1,
+      "hint": "Prüfe, ob Kernhülle und Erbinformation wirklich derselbe Begriff sind.",
+      "why": "Fehlende Kernhülle bedeutet nicht fehlende DNA. Bakterien sind lebende Beispiele für diesen Zelltyp.",
+      "wrongReasons": [
+        "Erbinformation kann auch ohne membranumhüllten Kern vorliegen.",
+        "",
+        "Lebende Bakterienzellen zeigen, dass dieser Zelltyp nicht grundsätzlich lebensunfähig ist."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum kann eine Zelle Erbinformation ohne Zellkern besitzen?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Prokaryot“: Du unterscheidest den Aufbewahrungsbereich von der enthaltenen Information."
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Schlüssel",
+  "learning": {
+    "starter": "Die Spielregel sagt, was zu tun ist. Eine zusätzliche Angabe kann festlegen, wie weit du verschiebst.",
+    "deeper": "Verschlüsselung, Signieren und Prüfen können unterschiedliche Schlüssel verwenden. Das Wort bezeichnet eine Rolle im Verfahren, nicht einen echten Metallgegenstand. Die einfache Verschiebezahl ist nur ein Lernvergleich.",
+    "observe": "Schreibe auf Papier die feste Spielregel Buchstaben vorwärts verschieben. Vergleiche die erfundenen Angaben1 und2. Benutze keine echten Zugangsdaten: Die Zahlen zeigen nur, wie eine zusätzliche Angabe das Spielergebnis verändert.",
+    "benefit": "Du unterscheidest ein Verfahren von seiner konkreten Angabe und hältst nicht jeden Schlüssel für ein Passwort.",
+    "connection": "Die Verschlüsselungskarte zeigt Regel und Verschiebung getrennt. Der konkrete Schlüssel einer echten Anwendung braucht andere Verfahren und Prüfungen als dieses Lernspiel.",
+    "topic": "science-encryption",
+    "sources": [
+      {
+        "url": "https://csrc.nist.gov/glossary/term/cryptographic_key",
+        "title": "NIST · Schlüssel (Englisch)",
+        "anchor": "Actual selected Definitions122–144: parameter determining operation, FIPS186-5/201-3 andNIST SP800-135; no assumption all keys must be secret.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Verschlüsselung",
+        "reason": "Der Schlüssel ist eine Eingabe für ein kryptografisches Verfahren. Ein beliebiger Ersatzbuchstabe ist noch kein sicheres System."
+      },
+      {
+        "term": "Klartext",
+        "reason": "Schlüssel und zu verarbeitende Nachricht erfüllen unterschiedliche Rollen. Nicht jeder Schlüssel ist eine geheime Nachricht oder ein Passwort."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Rolle hat die1 im einfachen Verschiebespiel?",
+      "answers": [
+        "Sie legt die konkrete Verschiebung fest",
+        "Sie ist die ganze Alphabetregel",
+        "Sie beweist die Sicherheit echter Daten"
+      ],
+      "correct": 0,
+      "hint": "Vergleiche die allgemeine Regel mit der Angabe, die ihr konkretes Ergebnis bestimmt.",
+      "why": "Die1 bestimmt hier die konkrete Spielverschiebung. Sie ersetzt weder die allgemeine Regel noch eine Prüfung echter Kryptografie.",
+      "wrongReasons": [
+        "",
+        "Die Zahl benennt eine Angabe zur Regel; sie beschreibt nicht allein das ganze Alphabetverfahren.",
+        "Eine Spielzahl liefert keine Sicherheitsprüfung echter Daten oder Zugangsdaten."
+      ]
+    }
+  }
+}

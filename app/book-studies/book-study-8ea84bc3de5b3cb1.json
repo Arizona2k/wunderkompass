@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Geschwindigkeit",
+  "learning": {
+    "starter": "Vergleiche Strecke und Zeit. Dieselbe Strecke in weniger Zeit bedeutet bei diesem Vergleich eine größere mittlere Schnelligkeit.",
+    "deeper": "Schnelligkeit ist der Betrag der Geschwindigkeit; die physikalische Geschwindigkeit hat zusätzlich eine Richtung. Zwei Bewegungen können gleich schnell sein und trotzdem in entgegengesetzte Richtungen führen.",
+    "observe": "Zeichne zwei gleich lange Pfeile, einen nach links und einen nach rechts. Welche Angabe ist gleich, welche verschieden? Das sind gedachte Bewegungen, keine Messung eines echten Fahrzeugs.",
+    "benefit": "Du berücksichtigst Zeit und Richtung statt nur die Länge einer Strecke.",
+    "topic": "science-pendulum",
+    "connection": "Beim Pendel ändern sich Schnelligkeit und Richtung während einer Schwingung. Eine Fadenlänge ist noch keine Geschwindigkeit: Zeit und Bewegung gehören dazu.",
+    "sources": [
+      {
+        "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/equations-of-motion/",
+        "title": "NASA · Geschwindigkeit (Englisch)",
+        "anchor": "Vector velocity, location/time and initial velocity in one-dimensional constant-force model; own arrows and examples.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Beschleunigung",
+        "reason": "Geschwindigkeit umfasst Betrag und Richtung; Beschleunigung beschreibt eine Änderung davon mit der Zeit."
+      }
+    ],
+    "question": {
+      "prompt": "Zwei gleich schnelle Bewegungen führen in entgegengesetzte Richtungen. Was gilt?",
+      "answers": [
+        "Ihre Richtungen sind gleich",
+        "Sie haben automatisch dieselbe physikalische Geschwindigkeit",
+        "Ihre Schnelligkeit ist gleich, die Richtung verschieden"
+      ],
+      "correct": 2,
+      "hint": "Unterscheide Betrag und Richtung.",
+      "why": "Gleiche Schnelligkeit beschreibt den Betrag. Entgegengesetzte Richtungen bedeuten unterschiedliche Geschwindigkeitsvektoren.",
+      "wrongReasons": [
+        "Die Pfeile zeigen ausdrücklich in unterschiedliche Richtungen.",
+        "Zur physikalischen Geschwindigkeit gehört auch die Richtung; gleiche Schnelligkeit allein reicht nicht.",
+        ""
+      ]
+    }
+  }
+}

@@ -2,6 +2,8 @@ import assert from 'node:assert/strict';
 import path from 'node:path';
 import fs from 'node:fs/promises';
 import JOURNEYS from '../../exports/content/journeys.json' with {type:'json'};
+import SOURCES from '../../app/journey-sources.json' with {type:'json'};
+const chapterSources=(journey,index)=>journey.steps[index].sourceIds.map(id=>SOURCES[id]);
 async function open(p,id,index){await p.evaluate(route=>location.hash=route,'journeys/'+id+'/'+(index+1));await p.locator('[data-chapter-inquiry="'+id+':'+index+'"]').waitFor();}
 const settleSourceView=p=>p.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
 async function reveal(p,text){const summary=p.locator('summary').filter({hasText:text});if(!await summary.evaluate(el=>el.parentElement.open))await summary.click();}
@@ -20,16 +22,16 @@ export async function journeySourceView(p,{widths,shots,engine}){
     for(const journey of JOURNEYS){
      witness={engine,journey:journey.id,width,large,stage:'opening'};
      await open(p,journey.id,0);await reveal(p,'Für Erwachsene: Quellen');
-     const source=p.locator('a.journey-source');
-     assert.equal(await source.count(),1,'one unchanged original source per journey');
-     assert.equal(await source.getAttribute('href'),journey.source,'original source destination');
-     assert.equal(await source.innerText(),journey.sourceName,'original source credit');
+     const sources=p.locator('a.journey-source'),expected=chapterSources(journey,0);
+     assert.deepEqual(await sources.evaluateAll(links=>links.map(e=>({url:e.getAttribute('href'),title:e.textContent}))),expected.map(s=>({url:s.url,title:s.title})),'all original chapter-specific source destinations and credits');
+     for(const [sourceIndex,credit] of expected.entries()){
+     const source=sources.nth(sourceIndex);
      assert.equal(await source.getAttribute('target'),'_blank');
      assert.ok((await source.getAttribute('rel')).split(/\s+/).includes('noreferrer'));
      // Observe the requested actual style state across engines, rather than
      // assuming immediate readiness; never retry the action or relax its minimum.
      witness={...witness,stage:'waiting-for-requested-font',fontBefore:await source.evaluate(e=>getComputedStyle(e).fontSize)};
-     await p.waitForFunction(({large})=>{const e=document.querySelector('a.journey-source');return e&&Math.abs(parseFloat(getComputedStyle(e).fontSize)-(large?18.4:16))<.01;},{large});
+     await p.waitForFunction(({large,sourceIndex})=>{const e=document.querySelectorAll('a.journey-source')[sourceIndex];return e&&Math.abs(parseFloat(getComputedStyle(e).fontSize)-(large?18.4:16))<.01;},{large,sourceIndex});
      if(Math.abs(parseFloat(witness.fontBefore)-(large?18.4:16))>=.01)console.log('SOURCE_FONT_SETTLED',JSON.stringify({...witness,fontAfter:await source.evaluate(e=>getComputedStyle(e).fontSize)}));
      const metric=await source.evaluate(e=>{const r=e.getBoundingClientRect(),range=document.createRange();range.selectNodeContents(e);const ink=range.getBoundingClientRect();return {height:r.height,font:parseFloat(getComputedStyle(e).fontSize),left:r.left,right:r.right,inkLeft:ink.left,inkRight:ink.right};});
      assert.ok(metric.height>=44,'source link touch target: '+journey.id+' '+width+' '+large);
@@ -42,22 +44,24 @@ export async function journeySourceView(p,{widths,shots,engine}){
      // pending-frame/trusted-input regression remains unchanged. No action retry.
      await settleSourceView(p);
      await source.focus();const before=await focusState();await p.keyboard.press('Tab');const next=await focusState();await p.keyboard.press('Shift+Tab');const returned=await focusState();
-     witness={engine,journey:journey.id,width,large,stage:'keyboard-result',expectedHref:journey.source,expectedElement:await source.evaluate(e=>e.outerHTML),before,next,returned,route:p.url()};
+     witness={engine,journey:journey.id,sourceIndex,width,large,stage:'keyboard-result',expectedHref:credit.url,expectedElement:await source.evaluate(e=>e.outerHTML),before,next,returned,route:p.url()};
      // Wait for the actual browser result, without another key press or focus call.
-     await p.waitForFunction(()=>{const e=document.querySelector('a.journey-source');return e===document.activeElement&&e.matches(':focus-visible');});
+     await p.waitForFunction(sourceIndex=>{const e=document.querySelectorAll('a.journey-source')[sourceIndex];return e===document.activeElement&&e.matches(':focus-visible');},sourceIndex);
      if(returned.element!==before.element||!returned.focusVisible)console.log('SOURCE_FOCUS_SETTLED',JSON.stringify({...witness,settled:await focusState()}));
      assert.ok(await source.evaluate(e=>e===document.activeElement&&e.matches(':focus-visible')),'source keyboard focus stays visible '+JSON.stringify(witness));
-     views.push({journey:journey.id,width,large,...metric,keyboard:true});
+     views.push({journey:journey.id,sourceIndex,href:credit.url,width,large,...metric,keyboard:true});
      if(journey.id==='navigation'&&[320,1440].includes(width))await source.locator('..').screenshot({path:path.join(shots,'journey-engine-'+engine+'-sources-'+(large?'large':'normal')+'-'+width+'.png'),animations:'disabled'});
+     }
     }
    }
   }
-  // Every chapter keeps the same original source, including completed/resumed paths.
+  // Every chapter retains its complete original set, including the ocean's
+  // distinct multi-source explanations and completed/resumed paths.
   for(const journey of JOURNEYS)for(let index=0;index<journey.steps.length;index++){
    await open(p,journey.id,index);await reveal(p,'Für Erwachsene: Quellen');
-   assert.equal(await p.locator('a.journey-source').getAttribute('href'),journey.source);
+   assert.deepEqual(await p.locator('a.journey-source').evaluateAll(links=>links.map(e=>({url:e.getAttribute('href'),title:e.textContent}))),chapterSources(journey,index).map(s=>({url:s.url,title:s.title})));
   }
-  assert.equal(views.length,JOURNEYS.length*widths.length*2);
+  assert.equal(views.length,JOURNEYS.reduce((n,j)=>n+chapterSources(j,0).length,0)*widths.length*2);
   return {views,chapters:80,scope:'source credit readability, touch, keyboard and unchanged original links'};
  }catch(error){
   const current=await p.evaluate(()=>{const e=document.querySelector('a.journey-source');return {font:e&&getComputedStyle(e).fontSize,large:document.querySelector('.earth-app')?.classList.contains('large-reading'),active:document.activeElement?.outerHTML.slice(0,600)};}).catch(()=>null);

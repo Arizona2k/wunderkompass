@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "topic": "science-computer",
+  "links": [
+    {
+      "term": "Bit",
+      "reason": "Die Computerkarte erklärt Datenverarbeitung. Ein Bit benennt eine Stelle; viele Stellen und vereinbarte Regeln erlauben unterschiedliche Darstellungen."
+    },
+    {
+      "term": "Byte",
+      "reason": "Die Computerkarte trennt Daten von ihrer Verarbeitung. Ein Byte ist eine Größenangabe der Bitgruppe, keine Aussage, was diese Gruppe in einem Programm bedeutet."
+    },
+    {
+      "term": "Datenstruktur",
+      "reason": "Die Computerkarte erklärt Datenverarbeitung. Die Datenstruktur ergänzt, wie Informationen für bestimmte Vorgänge organisiert werden, ohne eine echte Laufzeit aus Papierformen abzuleiten."
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum sind acht Bits nicht dasselbe wie die Zahl acht?",
+      "reason": "Die Computerkarte zeigt Darstellungen mit Nullen und Einsen. Unterscheide die Anzahl der Bitstellen von der Zahl oder Bedeutung, die eine bestimmte Folge darstellen soll."
+    }
+  ]
+}

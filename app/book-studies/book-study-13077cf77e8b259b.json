@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "term": "Infrarot",
+  "learning": {
+    "starter": "Wärmebilder zeigen etwas, das unsere Augen nicht direkt sehen. Ihre Farben werden für uns als Darstellung gewählt.",
+    "deeper": "Eine Infrarotkamera kann empfangene Strahlung messen und mit einer Farbskala darstellen. Die sichtbaren Bildfarben sind nicht die gewöhnliche Farbe des Gegenstands. Oberflächen und reflektierte Strahlung können die Auswertung beeinflussen.",
+    "observe": "Erfinde drei Messwerte und eine Farbzuordnung auf Papier: niedrig blau, mittel gelb, hoch rot. Beschrifte sie ausdrücklich als erfundenes Beispiel. Diese Farbtabelle ist keine Messung deiner Haut oder eines echten Raumes.",
+    "benefit": "Du erkennst ausgewählte Bildfarben und hältst eine Darstellung nicht für die gewöhnliche Objektfarbe.",
+    "connection": "Manche Satelliten messen Infrarotstrahlung. Eine ausgewählte Bildfarbe muss mit der Skala erklärt werden; sie ist keine unmittelbare sichtbare Landschaftsfarbe.",
+    "topic": "invention-satellite",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/ems/07_infraredwaves/",
+        "title": "NASA · Infrarot",
+        "anchor": "Selected thermal imaging / emitted infrared / false colour interpretation; no human only-infrared assertion or old instrument counts.",
+        "updatedOn": "2023-08-03",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Spektrum",
+        "reason": "Infrarot ist ein Teil des elektromagnetischen Spektrums außerhalb des für uns sichtbaren Bereichs. Gewählte Bildfarben machen es als Darstellung lesbar."
+      },
+      {
+        "term": "Wärmestrahlung",
+        "reason": "Warme Gegenstände senden unter anderem Infrarotstrahlung aus. Ein Wärmebild zeigt gewählte Darstellungsfarben und ist keine unmittelbare sichtbare Oberflächenfarbe."
+      }
+    ],
+    "question": {
+      "prompt": "Was bedeutet Rot in deiner erfundenen Wärmebildskala?",
+      "answers": [
+        "Der Gegenstand ist wirklich rot gestrichen",
+        "Die gewählte Zuordnung zu einem höheren Beispielwert",
+        "Dass jede Infrarotstrahlung sichtbar rot ist"
+      ],
+      "correct": 1,
+      "hint": "Lies die Skalenlegende statt die Farbe wie einen Anstrich zu behandeln.",
+      "why": "Rot ist hier eine gewählte Darstellung für den höheren Beispielwert. Infrarot selbst ist für unsere Augen nicht sichtbar.",
+      "wrongReasons": [
+        "Die Skalenfarbe sagt nicht, welche sichtbare Oberflächenfarbe der Gegenstand hat.",
+        "",
+        "Infrarot liegt außerhalb unseres sichtbaren Bereichs. Die Kamera fügt sichtbare Darstellungsfarben hinzu."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum haben Wärmebilder Farben, die wir am Gegenstand nicht sehen?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Infrarot“: Du liest eine Messdarstellung mit ihrer Legende statt Farben als unmittelbare Wirklichkeit zu behandeln."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "term": "Vulkan",
+  "learning": {
+    "starter": "An einem Vulkan können Gesteinsmaterial und Gase aus dem Erdinneren austreten. Nicht jeder Vulkan sieht wie ein hoher Kegel aus.",
+    "deeper": "Vulkane besitzen unterschiedliche Formen und Förderwege. Manche Vorgänge liefern Lavaflüsse, andere werfen Fragmente aus. Das Labormodell zeigt nur einen Ausschnitt; es berechnet keinen tatsächlichen kommenden Ausbruch.",
+    "observe": "Zeichne zwei erfundene Profile mit einem Ausgang: eines breit, eines steiler. Beschrifte sie ausdrücklich als Modelle. Suche keine echten Ausbruchsorte auf und leite aus der Form keine sichere Gefahrenprognose ab.",
+    "benefit": "Du erkennst verschiedene Vulkanformen und begrenzt Aussagen eines einfachen Modells.",
+    "connection": "Das bestehende Vulkanlabor vergleicht Gas und Zähigkeit. Die Profile ergänzen die Formfrage, ohne die zwei Modellregler als vollständige Geologie auszugeben.",
+    "lab": "volcano",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/programs/VHP/about-volcanoes",
+        "title": "USGS · Vulkan (Englisch)",
+        "anchor": "Abschnitte zu Magma, Förderwegen, verbundenen Speichern und Vulkanformen. Das eigene Schema bildet keine reale Tiefe oder Ausbruchsgefahr ab.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Schildvulkan",
+        "reason": "Ein Schildvulkan ist eine besondere Vulkanform. Breite und flache Form ist keine Sicherheitsfreigabe für einen realen Ort."
+      }
+    ],
+    "question": {
+      "prompt": "Was darfst du aus einer selbst gezeichneten Vulkanform nicht schließen?",
+      "answers": [
+        "Dass die Form als Modell beschriftet werden kann",
+        "Dass die Skizze den nächsten realen Ausbruch sicher vorhersagt",
+        "Dass unterschiedliche gedachte Profile vergleichbar sind"
+      ],
+      "correct": 1,
+      "hint": "Eine erfundene Form enthält keine aktuellen Messdaten eines echten Vulkans.",
+      "why": "Eine Profilskizze kann Formen vergleichen. Eine Vorhersage des realen Verhaltens erfordert andere Daten und fachliche Verfahren.",
+      "wrongReasons": [
+        "Ein Modell darf als solches klar beschriftet werden; gerade das hält seine Grenzen sichtbar.",
+        "",
+        "Verschiedene gedachte Profile lassen sich vergleichen, solange keine reale Vorhersage behauptet wird."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum bricht ein Vulkan aus?",
+        "reason": "Das Vulkanlabor vergleicht Einflussgrößen. Benenne dabei ausdrücklich, welche echten Messdaten keine Bildschirmdarstellung ersetzt."
+      }
+    ]
+  }
+}

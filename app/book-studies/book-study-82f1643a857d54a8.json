@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "term": "Insel",
+  "learning": {
+    "starter": "Eine Insel ist an ihrer Landfläche rundum von Wasser umgeben. Ein Land kann mehrere Inseln umfassen.",
+    "deeper": "Landform und Staatsgebiet sind verschiedene Begriffe. Eine Insel kann zu einer größeren Gruppe gehören. Die gezeichnete Küstenlinie ist nicht immer dieselbe wie eine politische Grenze und zeigt keine vollständige geologische Entstehung.",
+    "observe": "Zeichne zwei getrennte Landflächen in einem gedachten See und eine dritte, die über einen Landsteg mit dem Rand verbunden ist. Prüfe die Umrandung. Die Papierformen sind keine echte Karte und enthalten keine Wasserstandsprognose.",
+    "benefit": "Du begründest den Unterschied zwischen rundum umgebener Landfläche und einer Landverbindung.",
+    "connection": "Die Wasserspeicher des Labors erklären keine Landesgrenzen. Die zusätzliche Umrissaufgabe trennt Wasserlage, Landverbindung und politische Einteilung.",
+    "lab": "water",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/archipelago.html",
+        "title": "NOAA · Insel (Englisch)",
+        "anchor": "Abschnitt zu Inselgruppen und ihrer Entstehung. Politische Zugehörigkeit, Inselzahl und heutiger Wasserstand sind damit nicht festgelegt.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Archipel",
+        "reason": "Eine Inselgruppe umfasst mehrere Inseln. Gruppe, einzelne Landform und politische Grenze sind verschiedene Beschreibungsebenen."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Papierform ist im gezeichneten Zustand keine Insel?",
+      "answers": [
+        "Die vollständig vom gedachten Wasser umgebene erste Fläche",
+        "Die über einen Landsteg mit dem größeren Land verbundene Fläche",
+        "Die zweite vollständig vom gedachten Wasser umgebene Fläche"
+      ],
+      "correct": 1,
+      "hint": "Verfolge, ob ein Weg auf Land zum Rand bestehen bleibt.",
+      "why": "Der Landsteg verbindet die Fläche mit dem größeren Land. Im gedachten Kartenstand ist sie deshalb nicht rundum von Wasser getrennt.",
+      "wrongReasons": [
+        "Diese Fläche ist rundum von Wasser umgeben und passt damit zur gezeichneten Inseldefinition.",
+        "",
+        "Auch diese getrennte Fläche besitzt keine eingezeichnete Landverbindung."
+      ]
+    }
+  }
+}

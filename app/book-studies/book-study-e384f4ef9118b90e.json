@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "term": "Atmosphäre",
+  "learning": {
+    "starter": "Die Atmosphäre ist die Gashülle der Erde. Luft besteht aus Teilchen, auch wenn wir sie nicht einzeln sehen.",
+    "deeper": "Teilchenbewegung und Wechselwirkungen helfen, den Luftdruck zu erklären. Eine Reihe Punktzeichen zeigt weder die echte Teilchengröße noch alle Schichten der Atmosphäre. Die untere Luft und die gesamte Gashülle sind verschiedene Betrachtungsebenen.",
+    "observe": "Zeichne einen Gedankenraum mit Punkten und verschieden gerichteten Pfeilen. Beschrifte Teilchenmodell, nicht echte Teilchengröße. Das Papier ist keine Messung von Luftzusammensetzung, Wind oder atmosphärischer Höhe.",
+    "benefit": "Du unterscheidest eine unsichtbare Gashülle von einem frei gewählten sichtbaren Teilchenmodell.",
+    "connection": "Das Wetterlabor vereinfacht Luftbedingungen. Das Teilchenbild ergänzt eine Erklärungsebene, ohne seine gewählten Punkte zu tatsächlichen Wetterdaten zu machen.",
+    "lab": "weather",
+    "sources": [
+      {
+        "url": "https://www.noaa.gov/jetstream/atmosphere/air-pressure",
+        "title": "NOAA · Atmosphäre (Englisch)",
+        "anchor": "Fachabschnitt zum Luftdruck: Luft übt Druck in verschiedene Richtungen aus. Keine Wetterprognose aus einem einzelnen Symbolwert.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was bedeutet ein Punkt im Papiermodell der Luft?",
+      "answers": [
+        "Ein gewähltes Zeichen für ein Teilchen, keine echte Größenaufnahme",
+        "Ein auf dem Foto sicher erkanntes vollständiges Luftmolekül",
+        "Dass die Atmosphäre nur aus vier sichtbaren Punkten besteht"
+      ],
+      "correct": 0,
+      "hint": "Die Zeichen wurden zur Erklärung erfunden und nicht mikroskopisch aufgenommen.",
+      "why": "Das Punktzeichen dient dem Modell. Seine Größe und Anzahl entsprechen keiner vollständigen Messung der echten Luft.",
+      "wrongReasons": [
+        "",
+        "Eine Papierzeichnung ist keine mikroskopische Beobachtung eines bestimmten Moleküls.",
+        "Die wenigen Modellpunkte sind keine vollständige Zählung der Gashülle."
+      ]
+    }
+  }
+}

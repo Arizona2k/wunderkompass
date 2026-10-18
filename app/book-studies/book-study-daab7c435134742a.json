@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Median",
+  "learning": {
+    "starter": "Sortiere die Zahlen. Der Median beschreibt ihre Mitte, nicht die Summe aller Zahlen.",
+    "deeper": "Bei 1, 2 und 30 ist der Median 2, der arithmetische Mittelwert aber 11. Beide Kennzahlen beantworten verschiedene Fragen. Wiederholte gleiche Zahlen sind erlaubt; es müssen nicht genau gleich viele Werte streng kleiner und größer sein.",
+    "observe": "Sortiere Zettel mit 8, 1, 3 und 12. Finde die beiden mittleren Zahlen und bilde daraus den Mittelwert. Warum ist das Ergebnis 5,5 und nicht 8? Es geht nur um diese erfundene Reihe.",
+    "benefit": "Du unterscheidest sortierte Mitte und arithmetischen Mittelwert, auch bei einer geraden Anzahl.",
+    "topic": "science-probability",
+    "connection": "Eine Ergebnisreihe kann verschieden zusammengefasst werden. Vergleiche ihre sortierte Mitte mit Häufigkeiten im Wahrscheinlichkeitsmodell, statt alle Kennzahlen gleichzusetzen.",
+    "sources": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+        "title": "NIST · Median (Englisch)",
+        "anchor": "Median formulas for odd/even sorted samples; mean/median differ. Own examples and ties caveat, no source chart or data copied.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Mittelwert",
+        "reason": "Mittelwert verwendet Summe und Anzahl; Median die sortierte Mitte. Dieselben Zahlen können unterschiedliche Kennzahlen ergeben."
+      }
+    ],
+    "question": {
+      "prompt": "Was ist der Median der sortierten Beispielreihe 1, 3, 8 und 12?",
+      "answers": [
+        "3, weil links begonnen wird",
+        "8, weil das die größere mittlere Zahl ist",
+        "5,5 als Mittelwert von 3 und 8"
+      ],
+      "correct": 2,
+      "hint": "Bei vier Zahlen gibt es zwei mittlere Plätze.",
+      "why": "Die beiden mittleren Zahlen sind 3 und 8. Ihr Mittelwert ist (3 + 8) ÷ 2 = 5,5.",
+      "wrongReasons": [
+        "3 ist eine der beiden mittleren Zahlen. Bei einer geraden Anzahl wird auch die andere berücksichtigt.",
+        "Nur die größere mittlere Zahl auszuwählen überspringt die 3. Beide mittleren Werte gehören zur Berechnung.",
+        ""
+      ]
+    }
+  }
+}

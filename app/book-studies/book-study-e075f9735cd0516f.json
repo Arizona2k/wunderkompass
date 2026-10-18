@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "term": "Subtropen",
+  "learning": {
+    "starter": "Die Subtropen verbinden in vereinfachten Gürtelmodellen Tropen und gemäßigte Gebiete. Dort gibt es trockene und feuchte Landschaften.",
+    "deeper": "Gürtelnamen und temperatur- oder niederschlagsbasierte Klimagruppen müssen mit ihrem Modell erklärt werden. Eine einzelne Farbe auf der Karte beweist nicht dieselben Bedingungen an jedem Ort oder zu jeder Jahreszeit.",
+    "observe": "Zeichne zwei gedachte Orte im Übergangsgürtel und gib ihnen unterschiedliche Regenbeschriftungen. Markiere den Modellcharakter. Die Fantasiekarte enthält keine realen Durchschnittswerte.",
+    "benefit": "Du nutzt eine grobe Orientierung, ohne sie als vollständige Ortsbeschreibung auszugeben.",
+    "connection": "Das Jahreszeitenlabor erklärt Lichtbedingungen, nicht jedes regionale Klima. Die zwei Regenangaben ergänzen diese Grenze des Breitengürtelmodells.",
+    "lab": "seasons",
+    "sources": [
+      {
+        "url": "https://www.noaa.gov/jetstream/global/climate-zones",
+        "title": "NOAA · Subtropen",
+        "anchor": "Klimagruppen und örtliche Unterschiede. Ein grober Gürtel legt weder überall gleichen Regen noch ausschließlich heiße oder trockene Bedingungen fest.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Welche Aussage ist eine unbegründete Verallgemeinerung?",
+      "answers": [
+        "Jeder Ort in den Subtropen ist eine trockene heiße Wüste",
+        "Die zwei gedachten Regenangaben sind unterschiedlich",
+        "Der Gürtel dient hier einer groben Lagebeschreibung"
+      ],
+      "correct": 0,
+      "hint": "Ein grober Bereich umfasst verschiedene örtliche Bedingungen.",
+      "why": "Trockene und feuchte Landschaften sind möglich. Der Gürtel allein legt nicht überall dieselbe Wüstenlandschaft fest.",
+      "wrongReasons": [
+        "",
+        "Die angegebenen Gedankenwerte können verschieden sein, ohne eine echte Klimamessung zu behaupten.",
+        "Eine ausdrücklich grobe Lagebeschreibung darf als Modell benutzt werden."
+      ]
+    }
+  }
+}

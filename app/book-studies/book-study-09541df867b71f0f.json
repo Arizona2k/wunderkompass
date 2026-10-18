@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "term": "Lava",
+  "learning": {
+    "starter": "Tritt geschmolzenes Gestein an die Erdoberfläche, nennen wir es Lava. Unter der Oberfläche heißt es Magma.",
+    "deeper": "Lava kann beim Abkühlen fest werden. Im Alltag kann auch von erstarrter Lava gesprochen werden. Der Name für den Austritt sagt allein noch nichts über Fließgeschwindigkeit, Gasmenge oder Gefährlichkeit aus.",
+    "observe": "Zeichne einen Gedankenweg vom Untergrund durch eine markierte Oberfläche nach außen. Beschrifte beide Abschnitte verschieden. Die Pfeile erklären den Begriffswechsel und sind keine Anleitung, echte Lava aufzusuchen.",
+    "benefit": "Du verwendest Magma und Lava an der passenden Stelle einer Erklärung.",
+    "connection": "Die Modellfläche im Vulkanlabor zeigt einen vereinfachten Austritt. Die neue Beschriftung trennt diesen Oberflächenabschnitt vom Material unter der Oberfläche.",
+    "lab": "volcano",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/faqs/what-difference-between-magma-and-lava",
+        "title": "USGS · Lava (Englisch)",
+        "anchor": "Begriffsunterschied: unterirdisches Magma und an der Oberfläche ausgetretene Lava. Die Benennung allein bestimmt weder Temperatur noch Sicherheit.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Magma",
+        "reason": "Unter der Oberfläche und nach dem Austritt an die Oberfläche werden geschmolzene Gesteinsmaterialien unterschiedlich benannt."
+      }
+    ],
+    "question": {
+      "prompt": "Welcher Teil des Gedankenwegs erhält die Beschriftung Lava?",
+      "answers": [
+        "Das Meerwasser neben einem Vulkan",
+        "Das geschmolzene Gestein nach dem Austritt an die Oberfläche",
+        "Jede feste Schicht des gesamten Mantels"
+      ],
+      "correct": 1,
+      "hint": "Verfolge den Weg bis jenseits der klar markierten Oberfläche.",
+      "why": "Lava bezeichnet das ausgetretene geschmolzene Gestein. Meerwasser und der überwiegend feste Mantel sind keine solchen Austrittsabschnitte.",
+      "wrongReasons": [
+        "Meerwasser ist kein geschmolzenes Gestein.",
+        "",
+        "Der Mantel ist überwiegend fest und nicht insgesamt ausgetretenes Gestein."
+      ]
+    }
+  }
+}

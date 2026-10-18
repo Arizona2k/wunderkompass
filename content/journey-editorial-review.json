@@ -1,0 +1,2113 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "c9d7ab0336ddcc89653241433dd06dc020688b39",
+  "reviewedOn": "2026-10-13",
+  "reviewer": "Codex",
+  "independentReview": false,
+  "chapters": [
+    {
+      "id": "planet:0",
+      "title": "Ein Zuhause im Weltall",
+      "baselineText": "Die Erde ist ein Planet. Sie reist um die Sonne, zusammen mit sieben anderen Planeten. Die Sonne ist ein Stern und gibt uns Licht und Wärme. Die Erde ist der dritte Planet von der Sonne aus.",
+      "baselineHash": "fd8b6ba9ba1b62bf039512a05df526afab0755fa5dc6b089140c1350151e2680",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Ein Planet und ein Stern haben verschiedene Aufgaben: Die Sonne liefert Licht; die Erde empfängt es. So kannst du die beiden im Modell unterscheiden.",
+      "ages": {
+        "6-8": "Die Erde ist unser Zuhause im Weltall. Sie zieht um die Sonne.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Die gezeichneten Abstände sind stark verkürzt. Eine Bahn zeigt einen Weg, keine Schiene im Weltall."
+      },
+      "observation": "Zeige im Sonnensystemmodell Sonne und Erde. Erkläre einer anderen Person, welches Objekt Licht aussendet.",
+      "whyItMatters": "Du erkennst, weshalb eine leuchtende Sonne und eine beleuchtete Erde verschieden sind.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "planet-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "064248f74cbb3f631ddf24b97669acd2006ef8b0d0be21f78afb4d236aef5026"
+    },
+    {
+      "id": "planet:1",
+      "title": "Land und Wasser",
+      "baselineText": "Etwa 71 von 100 Teilen der Erdoberfläche sind vom Ozean bedeckt. Darum sieht die Erde aus dem Weltall überwiegend blau aus. Die großen Landflächen heißen Kontinente. Inseln sind kleinere Landflächen, die ringsum von Wasser umgeben sind.",
+      "baselineHash": "a8ec1f493d4483e26ec0ddd75b488f84fff653163c14f79e61075d43eb681fd9",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Stell dir hundert gleich große Felder vor: Etwa 71 wären Meer. Das beschreibt eine Fläche, nicht die Menge des Wassers oder die Zahl der Inseln.",
+      "ages": {
+        "6-8": "Auf der Erde gibt es viel Meer und auch Land.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Eine Landfläche kann aus der Ferne klein wirken. Maßstab und Blickwinkel entscheiden mit, was du auf der Kugel erkennst."
+      },
+      "observation": "Zeichne zehn gleich große Felder und färbe ungefähr sieben blau. Beschreibe, was dein kleines Modell vereinfacht.",
+      "whyItMatters": "Du kannst die Zahl 71 Prozent mit einem anschaulichen Flächenvergleich verbinden.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "planet-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "41dafa8c8236c107c909551c18f4c8fb3c58f33753f51667c412f27398e7cb21"
+    },
+    {
+      "id": "planet:2",
+      "title": "Eine unsichtbare Hülle",
+      "baselineText": "Um die Erde liegt die Atmosphäre. Das ist eine Hülle aus Gasen. Wir nennen das Gasgemisch um uns herum Luft. Luft ist unsichtbar, aber du kannst bewegte Luft als Wind spüren. Sie enthält den Sauerstoff, den wir zum Atmen brauchen.",
+      "baselineHash": "5214345c6f6537d35049d1db207b66ea41199ce94191e9d81417717b090648fb",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Ein Luftballon macht die unsichtbare Luft bemerkbar: Beim Aufblasen nimmt sie Platz ein. Luft besteht aus mehreren Gasen, nicht nur aus Sauerstoff.",
+      "ages": {
+        "6-8": "Luft umgibt die Erde. Wind ist bewegte Luft.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Eine Hülle aus Gas hat keine feste Wand. Unsere Zeichnung gibt der Atmosphäre einen sichtbaren Rand, damit du sie erkennen kannst."
+      },
+      "observation": "Fächere dir mit einem Blatt Papier sanft Luft zu. Was spürst du, obwohl du den bewegten Stoff nicht siehst?",
+      "whyItMatters": "Du unterscheidest Luft als Stoffgemisch von Wind als Bewegung.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "planet-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "3d89b6e5588e580e08e8b52fc649f046a9a202a4ae81aabb4a50c06b12a1f0b9"
+    },
+    {
+      "id": "planet:3",
+      "title": "Warum fallen wir nicht herunter?",
+      "baselineText": "Die Schwerkraft zieht Dinge zur Mitte der Erde. Deshalb bleiben wir auf dem Boden. Für Menschen auf der anderen Seite der Erde ist unten ebenfalls die Richtung zur Erdmitte. Es gibt im Weltall kein gemeinsames Oben und Unten für alle.",
+      "baselineHash": "d55dd0dfed61fa2c9f3742025b945e76525f61101b150fa02f2ea39afbd2787e",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Stell dir drei Kinder an verschiedenen Stellen eines Balls vor. Für jedes zeigt der Pfeil nach unten zur Ballmitte; ihre Pfeile zeigen trotzdem nicht alle in dieselbe Richtung.",
+      "ages": {
+        "6-8": "Unten zeigt zur Mitte der Erde. Das gilt überall auf ihr.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Die Kugelzeichnung betrachtet die Erde von außen. Dein örtliches Oben und Unten richtet sich nach deinem Standort, nicht nach dem oberen Bildrand."
+      },
+      "observation": "Male drei Pfeile zur Mitte eines Kreises. Drehe das Blatt und prüfe, ob die Erklärung noch stimmt.",
+      "whyItMatters": "Du kannst erklären, warum auch Menschen auf der anderen Erdseite auf dem Boden bleiben.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "planet-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "08bb8d4f50dc2f3e09003ad0430f5f2c9eaab32214f063b75b0a35fe662c3606"
+    },
+    {
+      "id": "planet:4",
+      "title": "Zwei Bewegungen, zwei Zeiten",
+      "baselineText": "Die Erde dreht sich um ihre Achse. Eine Umdrehung dauert ungefähr einen Tag. Gleichzeitig reist sie um die Sonne. Für eine ganze Reise braucht sie ungefähr ein Jahr. Tag und Jahr sind also zwei verschiedene Bewegungen.",
+      "baselineHash": "029fbebcba0e14982ede632e54e8f6d74ec44606074e5fb910b7764ac043b340",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine Drehung und ein Umlauf lassen sich getrennt beobachten: Drehst du einen Ball am selben Platz, zeigt das den Tag. Sein Weg um eine Lampe steht für das Jahr.",
+      "ages": {
+        "6-8": "Die Erde dreht sich und reist um die Sonne. Tag und Jahr sind verschieden.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Ein Sonnentag und eine Drehung gegenüber fernen Sternen werden unterschiedlich gemessen. Unsere Angabe ungefähr ein Tag ist eine bewusste Vereinfachung."
+      },
+      "observation": "Bewege einen Ball langsam im Kreis und drehe ihn zugleich. Beschreibe beide Bewegungen getrennt; Zahlen und Geschwindigkeiten sind im Versuch nicht maßstabsgetreu.",
+      "whyItMatters": "Du verwechselst eine schnelle Drehung nicht mit dem langen jährlichen Umlauf.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "planet-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "27892e32b4f94fc0100664cc35d413ff2afd0d9dd94b2560e29cc10e17507962"
+    },
+    {
+      "id": "inside:0",
+      "title": "Vier Schichten",
+      "baselineText": "Von außen nach innen finden wir Erdkruste, Erdmantel, äußeren Kern und inneren Kern. Die Kruste ist eine sehr dünne Gesteinshaut. Der Mantel darunter ist viel dicker. Die beiden Kernschichten bestehen vor allem aus Metall.",
+      "baselineHash": "6754db1d8c3a732b7d1eef4d36174ca16577c369c95badb2e21f20c5063e98f4",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Die vier Namen helfen beim Ordnen, aber die Schichten sind nicht gleich dick. Eine dünne Schale ist ein Vergleich für die Kruste, keine genaue Nachbildung der Erde.",
+      "ages": {
+        "6-8": "Die Erde hat Schichten. Ihre dünne Kruste liegt ganz außen.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Das Wissen über tiefe Schichten ist indirekt: Messungen an der Oberfläche und das Verhalten von Erdbebenwellen müssen zusammenpassen."
+      },
+      "observation": "Vergleiche im Erdschichtenmodell die Kruste mit dem Mantel. Beschreibe, was eine Zeichnung mit vier gleich breiten Ringen falsch nahelegen würde.",
+      "whyItMatters": "Du erkennst, weshalb ein Erdmodell sowohl Schichtnamen als auch Unterschiede zeigen muss.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "inside-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "4b1935b338bd575eb86c1eaf31f205182429b696e1b810aa9d41d3d6cdf8fc1a"
+    },
+    {
+      "id": "inside:1",
+      "title": "Heiß heißt nicht immer flüssig",
+      "baselineText": "Der Mantel ist sehr heiß, besteht aber überwiegend aus festem Gestein. Über sehr lange Zeit kann es sich langsam verformen. Der äußere Kern ist flüssig. Der innere Kern ist trotz großer Hitze fest, weil dort ein gewaltiger Druck herrscht.",
+      "baselineHash": "3f68c5591f3da5f6cc6e46bbae5b8f78eaa3f2f5669a07aa6b8f01d0abe21a75",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Temperatur allein verrät nicht, ob ein Stoff fest oder flüssig ist. Auch der Druck spielt eine Rolle. Deshalb können zwei heiße Schichten unterschiedliche Zustände haben.",
+      "ages": {
+        "6-8": "Heißes Gestein kann fest sein. Nicht alles im Erdinneren ist flüssig.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Langsame Verformung ist etwas anderes als frei fließende Lava. Im Mantel geht es um geologische Zeiträume, nicht um Sekunden im Labor."
+      },
+      "observation": "Ordne Mantel, äußeren Kern und inneren Kern nach überwiegend fest oder flüssig. Begründe, warum die Farbe Rot im Modell keine Flüssigkeit beweist.",
+      "whyItMatters": "Du vermeidest die Vorstellung von Kontinenten auf einem unterirdischen Lavasee.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "inside-base",
+        "mantle"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "7ca866466c4732d6cdc076397ce0eb2e00c26ce62303774cf7b7d6f81ca8f798"
+    },
+    {
+      "id": "inside:2",
+      "title": "Die Erde hat ein Plattenpuzzle",
+      "baselineText": "Die feste äußere Hülle ist in große Platten geteilt. Sie bestehen aus der Kruste und dem obersten festen Teil des Mantels. Die Platten bewegen sich meistens nur wenige Zentimeter im Jahr. Darauf reisen auch die Kontinente ganz langsam mit.",
+      "baselineHash": "8db06bbff7887147d723548afdc4cad9696ea5af2ede5b862bf9d9a0c9c78f6e",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Ein Puzzle ist ein hilfreicher Vergleich für die Aufteilung, doch echte Platten haben keine überall sichtbaren Ränder. Ländergrenzen wurden von Menschen festgelegt und erzählen etwas anderes.",
+      "ages": {
+        "6-8": "Große feste Platten tragen Land und Meeresboden. Sie bewegen sich langsam.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Kruste und oberster fester Mantel bilden zusammen die Lithosphäre. Die Platten gehören zu dieser festen äußeren Hülle."
+      },
+      "observation": "Wähle auf der Plattenebene eine Platte. Prüfe, ob sie mehrere Länder oder auch einen Teil des Ozeans trägt.",
+      "whyItMatters": "Du kannst eine politische Karte und eine Plattenkarte mit verschiedenen Fragen lesen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "inside-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "f3d763ef846a8068b020b60ba3b72e4f2b9d9bfee79c25e7ff77d5921dc47fbd"
+    },
+    {
+      "id": "inside:3",
+      "title": "Zusammen, auseinander, vorbei",
+      "baselineText": "Platten können auseinanderdriften, zusammenstoßen oder aneinander vorbeigleiten. Wo Kontinente zusammenstoßen, können hohe Gebirge entstehen. Wo eine Platte unter eine andere taucht, entstehen oft Vulkane. Bei allen drei Arten von Grenzen können Erdbeben auftreten.",
+      "baselineHash": "5ea148d0099d21dbe3af764b8ba9fb267d0d16ff1fd3844beb73e111d945d279",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Die Bewegungsrichtung ist entscheidend: Zusammenschieben kann Gestein heben, Auseinandergehen schafft Platz, seitliches Gleiten verschiebt Nachbarn. Das Modell zeigt nur typische Möglichkeiten.",
+      "ages": {
+        "6-8": "Platten können zusammenstoßen, auseinandergehen oder aneinander vorbeigleiten.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Nicht jede Plattengrenze sieht gleich aus. Eine Skizze beschreibt einen Grundfall; die wirkliche Form und Geschichte einer Grenze können komplizierter sein."
+      },
+      "observation": "Stelle im Plattenlabor nacheinander drei Bewegungen ein. Sage jeweils zuerst eine mögliche Folge voraus und vergleiche sie mit dem Modell.",
+      "whyItMatters": "Du verbindest Bewegungen mit ihren möglichen Folgen, statt alle Grenzen gleich zu behandeln.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "inside-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "dc74c91ac30a9208041dae978413ca0f369eca2fbeaa3703e6b7da0c585dba2b"
+    },
+    {
+      "id": "inside:4",
+      "title": "Magma oder Lava?",
+      "baselineText": "Geschmolzenes Gestein unter der Erdoberfläche heißt Magma. Erreicht es die Oberfläche, nennen wir es Lava. Bei einem Ausbruch können auch Asche und Gase austreten. Manche Vulkane liegen an Plattengrenzen; andere, wie auf Hawaii, über heißen Stellen im Erdinneren.",
+      "baselineHash": "dee0ec4c48ef45dd519366b9499386b46409672ffe5bfc73dbda8f6b1aaf38fa",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Es ist der Ort, der die Bezeichnung ändert. Zusätzlich können Gas und feste Teilchen austreten. Ein Lavastrom und eine Aschewolke sind deshalb verschiedene Teile eines Ausbruchs.",
+      "ages": {
+        "6-8": "Unter der Erde heißt geschmolzenes Gestein Magma, an der Oberfläche Lava.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Vulkane sind nicht nur Berge mit roter Spitze. Lage, Gestein und Gas beeinflussen ihr Verhalten; das Lernmodell ist keine Gefahrenvorhersage."
+      },
+      "observation": "Zeige in der Vulkanzeichnung einen Ort unter und einen über der Oberfläche. Beschrifte beide und erkläre, warum der Name wechselt.",
+      "whyItMatters": "Du kannst einen Ausbruch genauer beschreiben als mit dem Wort Feuer.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "inside-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "af8fecaf46ce9c3e9f78b94bb604b7c61f8b70274743b51b9daaf4c63c23922e"
+    },
+    {
+      "id": "water:0",
+      "title": "Drei Formen von Wasser",
+      "baselineText": "Wasser kann fest, flüssig oder gasförmig sein. Festes Wasser heißt Eis. Flüssiges Wasser fließt. Gasförmiges Wasser heißt Wasserdampf und ist unsichtbar. Die weiße Wolke über einem heißen Getränk besteht dagegen aus kleinen Wassertröpfchen.",
+      "baselineHash": "adbf30f0f57dcd79e9db041908d5800a3a7a1d91d8c838950d119c3af8af55ef",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Ein nasses Tuch muss nicht kochen, um trocken zu werden. Wasser kann an seiner Oberfläche in die Luft gelangen. Dabei verschwinden die Wasserteilchen nicht einfach.",
+      "ages": {
+        "6-8": "Eis, Wasser und unsichtbarer Wasserdampf sind Formen desselben Stoffes.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Verdunsten geschieht an der Oberfläche; Kochen ist ein anderer Vorgang. Eine sichtbare weiße Wolke besteht aus Tröpfchen, nicht aus dem unsichtbaren Gas."
+      },
+      "observation": "Beobachte ein nasses Tuch beim Trocknen. Vermute, wohin das Wasser gelangt. Nutze kein heißes Wasser und keine Herdplatte.",
+      "whyItMatters": "Du unterscheidest Zustandsänderung vom Verschwinden eines Stoffes.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "water-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "52f2db4efa24b555691e30c84f147d04640c2d61e8a291e556cd132206eb1713"
+    },
+    {
+      "id": "water:1",
+      "title": "Ab in die Luft",
+      "baselineText": "Die Sonne erwärmt Meere, Seen und den Boden. Ein Teil des Wassers verdunstet und gelangt als Wasserdampf in die Luft. Auch Pflanzen geben Wasser ab. Bei Wärme, Wind und trockener Luft kann Wasser schneller verdunsten.",
+      "baselineHash": "ccb2635cba43b5df0fa0cb844f0ae2a6213d4032d0d1a459af9bfa5ad052be9c",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Beim Trocknen spielt die Umgebung mit: Bewegt sich die Luft, kann sie feuchte Luft am Tuch ersetzen. Deshalb ist nicht allein die Temperatur wichtig.",
+      "ages": {
+        "6-8": "Wasser gelangt aus Pfützen, Meeren und Pflanzen in die Luft.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Mehrere Bedingungen wirken gleichzeitig. Im Wassermodell veränderst du möglichst nur einen Regler, damit du eine Ursache besser vergleichen kannst."
+      },
+      "observation": "Vergleiche im Wasserkreislauflabor zwei Einstellungen mit nur einem veränderten Regler. Beschreibe eine Beobachtung und eine Vermutung getrennt.",
+      "whyItMatters": "Du lernst, einen fairen Vergleich von mehreren gleichzeitig veränderten Dingen zu unterscheiden.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "water-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "518a167ac455d6fac6e9f838a6d62557bdbf9231d249942ab2cb9a53f52e6e62"
+    },
+    {
+      "id": "water:2",
+      "title": "Wie entstehen Wolken?",
+      "baselineText": "Wenn feuchte Luft abkühlt, kann sich Wasserdampf in winzige Tröpfchen verwandeln. Das heißt Kondensation. Viele Tröpfchen oder Eiskristalle zusammen bilden eine Wolke. Erst wenn sie groß genug werden, fällt Niederschlag.",
+      "baselineHash": "fba2bb9d9abfcba17cabc9d63185e6a400c90cb22f76cf32e1bf041af5051a2e",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Kondensation macht Wasser sichtbar, das vorher als Gas in der Luft war. Die Tropfen außen am kalten Glas kommen deshalb aus der Luft und nicht durch die Glaswand.",
+      "ages": {
+        "6-8": "Kühlt feuchte Luft ab, können Tröpfchen entstehen. Viele bilden eine Wolke.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Nicht jede Abkühlung erzeugt sofort eine Wolke. Die vorhandene Feuchtigkeit und die Bedingungen der Luft entscheiden mit."
+      },
+      "observation": "Beobachte mit einem Erwachsenen ein kaltes Wasserglas. Vermute zuerst, woher Tropfen außen kommen, und vergleiche deine Erklärung mit dem Kapitel.",
+      "whyItMatters": "Du erkennst einen unsichtbaren Stoff an seiner sichtbaren Veränderung.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "water-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "3d6330f678fc1c147697b7ee5d9364802b7cf1027ef0b91b23fffdbd238aa6be"
+    },
+    {
+      "id": "water:3",
+      "title": "Zurück auf die Erde",
+      "baselineText": "Niederschlag kann Regen, Schnee oder Hagel sein. Wasser sammelt sich in Bächen, Flüssen und Seen. Ein Teil versickert im Boden und wird zu Grundwasser. Flüsse bringen viel Wasser zurück ins Meer. Dort kann seine Reise von Neuem beginnen.",
+      "baselineHash": "950cbc6f608c19a04ce02f9438722e02381f8baf1df44934b0a121ead54745d5",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Zwei Regentropfen müssen nicht denselben Weg nehmen. Einer fließt über den Boden, ein anderer versickert. Manche bleiben lange gespeichert, bevor sie weiterwandern.",
+      "ages": {
+        "6-8": "Wasser fällt als Niederschlag und findet viele Wege durch Land und Meer.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Ein Kreislauf bedeutet keine überall gleich schnelle Rundreise. Pfeile zeigen Verbindungen zwischen Speichern, nicht die Reise jedes einzelnen Tropfens."
+      },
+      "observation": "Zeichne zwei mögliche Wege vom Regen zum Meer. Markiere, wo Wasser auf seinem Weg länger gespeichert sein könnte.",
+      "whyItMatters": "Du kannst in einer einfachen Grafik mehrere echte Wasserwege erkennen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "water-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "80a82287eea98e9860cfd6f83a9031e086b880efbcf07dda8297de6e4523626e"
+    },
+    {
+      "id": "water:4",
+      "title": "Trinkwasser ist kostbar",
+      "baselineText": "Das meiste Wasser auf der Erde ist salzig. Süßwasser enthält viel weniger Salz. Ein großer Teil des Süßwassers steckt in Eis oder im Boden. Sauberes Trinkwasser muss deshalb gut geschützt und aufbereitet werden.",
+      "baselineHash": "d5fc56baf0e2ab101c2dd6ec115e620b4d0aecc6794cdb786c2f62539a4d50f3",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Salzgehalt und Sauberkeit sind verschiedene Fragen. Auch Süßwasser kann ungeeignet zum Trinken sein. Wasseraufbereitung und Schutz der Wasserquellen gehören deshalb zusammen.",
+      "ages": {
+        "6-8": "Sauberes Trinkwasser ist wertvoll. Klares Wasser ist nicht automatisch sicher.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Ein Lernversuch ersetzt keine Prüfung der Trinkwasserqualität. Farbe und Geruch allein sind keine sichere Freigabe."
+      },
+      "observation": "Suche mit einem Erwachsenen den Weg eures Trinkwassers heraus. Nutzt Informationen des Wasserversorgers; probiert kein Wasser aus Bächen oder Seen.",
+      "whyItMatters": "Du verstehst, warum wir unbekanntes Wasser nicht einfach probieren.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "water-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "ea7a6454ebe27cb92d095f689df4b717bab38684385c6f61a13c2ac9e45af258"
+    },
+    {
+      "id": "weather:0",
+      "title": "Was ist heute draußen los?",
+      "baselineText": "Wetter ist, was gerade in der Luft um uns herum passiert: Ist es warm oder kalt? Regnet es? Weht Wind? Wetter kann sich schon innerhalb eines Tages ändern. Forschende messen Temperatur, Luftdruck, Wind und Niederschlag.",
+      "baselineHash": "f5e4613d227035538bc4fb11f48f6c1a5c89b00ccc9f49f9bcfafb64649a2fdf",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Warm fühlen und Temperatur messen sind nicht dasselbe. Ein Messgerät hilft, Beobachtungen verschiedener Tage zu vergleichen. Dabei sollte man ähnliche Bedingungen wählen.",
+      "ages": {
+        "6-8": "Wetter beschreibt, was gerade draußen passiert. Wir können es beobachten und messen.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Eine Einzelmessung gilt für ihren Ort und Zeitpunkt. Sie beschreibt nicht automatisch eine ganze Stadt oder einen langen Zeitraum."
+      },
+      "observation": "Beschreibe das Wetter ohne Zahlen und mit einem vorhandenen Thermometer. Notiere auch Ort und Zeit und vergleiche beide Beschreibungen.",
+      "whyItMatters": "Du trennst einen persönlichen Eindruck von einem vergleichbaren Messwert.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "weather-base",
+        "weather-climate"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "30715519d3a928a3f67cac8987cb112af1d205ffdf3cab1ee3b8c34ed4b288c8"
+    },
+    {
+      "id": "weather:1",
+      "title": "Wind ist Luft in Bewegung",
+      "baselineText": "Die Sonne erwärmt die Erde nicht überall gleich. Dadurch entstehen Unterschiede in Temperatur und Luftdruck. Luft setzt sich in Bewegung: Es weht Wind. Auch die Drehung der Erde beeinflusst große Windsysteme.",
+      "baselineHash": "7295e40e3dcd6c4335acbfd5f2db1c1820556c1c8081fa90377ab3e0863ce8fe",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Unterschiede im Luftdruck helfen, Luft anzutreiben. Wind bewegt Wolken oder Blätter; sie sind Hinweise auf seine Wirkung, nicht die Luft selbst.",
+      "ages": {
+        "6-8": "Wind ist Luft, die sich bewegt. Er kann schwach oder stark sein.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Das Wetterstationsmodell vereinfacht viele gleichzeitig wirkende Vorgänge. Ein einzelner Regler bildet keine vollständige Wettervorhersage ab."
+      },
+      "observation": "Beobachte Blätter sicher durch ein Fenster. Trenne die Beobachtung Blatt bewegt sich von der Erklärung Luft bewegt das Blatt.",
+      "whyItMatters": "Du kannst Bewegung als Hinweis auf einen unsichtbaren Vorgang nutzen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "weather-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "b052465eb9c9fae5ffc6209108f8684ae6d462d201e467e9436173401454448c"
+    },
+    {
+      "id": "weather:2",
+      "title": "Wolken beobachten",
+      "baselineText": "Wolken können wie Watte, wie dünne Federn oder wie eine graue Decke aussehen. Ihre Form verrät etwas über die Vorgänge in der Luft. Aus manchen Wolken fällt Regen. Nicht jede Wolke regnet: Ihre Tröpfchen sind oft noch sehr klein.",
+      "baselineHash": "1fc8bd2c844e35b42e5626c1b602bdecbabc241c79939836fcb24efa5b82db91",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine Wolkenzeichnung hält einen Moment fest. Wenn du später erneut schaust, können Form und Lage anders sein. Eine Beobachtungsreihe verrät mehr als ein einzelnes Bild.",
+      "ages": {
+        "6-8": "Wolken sehen verschieden aus. Nicht jede Wolke bringt Regen.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Aus der Form allein folgt keine sichere lokale Vorhersage. Wolkenbeobachtung ist ein Hinweis unter mehreren Wetterdaten."
+      },
+      "observation": "Skizziere vom Fenster aus dieselbe Himmelsstelle zweimal. Notiere die Zeit und beschreibe, was sich verändert hat, ohne direkt in die Sonne zu schauen.",
+      "whyItMatters": "Du bemerkst Veränderungen, statt Wolken nur nach ihrem Aussehen zu benennen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "weather-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "6dbf4f45f715b25f446c0267497a8feabca6b8fc2515f7e7ea8ee76fd3a5d372"
+    },
+    {
+      "id": "weather:3",
+      "title": "Wetter ist kurz, Klima ist lang",
+      "baselineText": "Wetter beschreibt einzelne Stunden und Tage. Klima beschreibt, welches Wetter in einer Gegend über viele Jahre typisch ist. Für Klimavergleiche betrachten Forschende oft mindestens 30 Jahre. Ein kalter Tag allein sagt deshalb wenig über die Erwärmung des Klimas aus.",
+      "baselineHash": "07a2cd1a28e5b9531d33d652a319dd64bc64e9554a8e968a2846c4b0936d3239",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine Reihe von drei Tagen ist noch kein Klimabeleg. Für einen langfristigen Vergleich müssen viele Beobachtungen aus vergleichbaren Zeiträumen betrachtet werden.",
+      "ages": {
+        "6-8": "Wetter ist heute. Klima beschreibt typische Bedingungen über viele Jahre.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Ein Mittelwert fasst viele Daten zusammen, verschweigt aber die einzelnen Unterschiede. Klima umfasst auch Muster und Schwankungen, nicht nur eine Zahl."
+      },
+      "observation": "Erfinde keine Messwerte: Vergleiche dein Wetterblatt mit einer datierten Klimabeschreibung. Erkläre, welche unterschiedliche Frage beide beantworten.",
+      "whyItMatters": "Du erkennst, warum ein kalter Tag einer langfristigen Erwärmung nicht widerspricht.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "weather-base",
+        "weather-climate"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "8dbdf49a23c29fcc6f0fdc7edc1f1a2a977f60d1b99501f7b4df7e150997571c"
+    },
+    {
+      "id": "weather:4",
+      "title": "Wie wissen wir das Wetter von morgen?",
+      "baselineText": "Wetterstationen, Satelliten und andere Messgeräte sammeln Daten. Computer berechnen daraus Vorhersagen. Weil die Luft ständig in Bewegung ist, bleiben Vorhersagen unsicher. Je weiter der Blick in die Zukunft geht, desto größer ist diese Unsicherheit meistens.",
+      "baselineHash": "6e9b47739313a2940ee721f664fff5ddf0b3eb604852a7bec9aca9557e42542e",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine Vorhersage ist ein begründeter Blick nach vorn, keine bereits gemachte Beobachtung. Werden neue Daten verfügbar, kann sie angepasst werden. Das ist kein Zeichen von willkürlichem Raten.",
+      "ages": {
+        "6-8": "Messgeräte und Computer helfen beim Wetterbericht. Trotzdem kann er sich ändern.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Unsicherheit wächst häufig mit dem Vorhersageabstand. Auch Ort und Wetterlage beeinflussen, wie genau eine Aussage sein kann."
+      },
+      "observation": "Notiere einen Wetterbericht und vergleiche ihn später mit dem beobachteten Wetter. Markiere, was passte und wo die Aussage unsicher war.",
+      "whyItMatters": "Du kannst eine veränderte Vorhersage als neue Einschätzung verstehen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "weather-base",
+        "weather-climate"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "ea09043e3c9da2484d0f841885e3828197d27f9a578bbaa8b82febae88233b80"
+    },
+    {
+      "id": "seasons:0",
+      "title": "Die Erde steht schief",
+      "baselineText": "Die gedachte Erdachse ist gegenüber einer senkrechten Linie zur Umlaufbahn um etwa 23,4 Grad geneigt. Während die Erde um die Sonne reist, zeigt ihre Achse ungefähr in dieselbe Richtung. Das verändert im Lauf des Jahres den Sonnenstand und die Tageslänge.",
+      "baselineHash": "5dae0e89249fd2326ed714ef07e1b8ba3d30ec429e60b04e99c4630da0ef22fb",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Schräg bedeutet hier: im Vergleich zur Umlaufbahn um die Sonne. Die Achse kippt nicht alle sechs Monate zur anderen Seite; die Erde erreicht einen anderen Ort auf ihrer Bahn.",
+      "ages": {
+        "6-8": "Die Erde dreht sich um eine gedachte, schräg stehende Achse.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Richtung und Neigungswinkel sind zwei verschiedene Dinge. Im Jahreszeitenmodell bleiben beide während eines vereinfachten Umlaufs ungefähr gleich."
+      },
+      "observation": "Lass im Jahreszeitenlabor ein ganzes Jahr ablaufen. Beobachte die Achse und die Lage zur Sonne getrennt.",
+      "whyItMatters": "Du kannst den jährlichen Wechsel erklären, ohne die Erdachse ständig neu zu kippen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "seasons-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "8b16b453e47a5784f8a185f287ee52d80873773b06a4fb49a8208f8d6059d034"
+    },
+    {
+      "id": "seasons:1",
+      "title": "Sommer auf der Nordhalbkugel",
+      "baselineText": "Um den Juni ist die Nordhalbkugel zur Sonne geneigt. Bei uns in Deutschland steht die Sonne dann höher und die Tage sind länger. So erreicht uns pro Tag mehr Sonnenenergie. Auf der Südhalbkugel ist zur gleichen Zeit Winter.",
+      "baselineHash": "24b5e37e894895b22354c0577904c16bbe4b619e41d71c9514d11c87cc52f01b",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Beide Wirkungen helfen zusammen: Sonnenlicht trifft steiler auf und scheint länger am Tag. Deshalb kann insgesamt mehr Sonnenenergie ankommen, auch wenn ein einzelner Sommertag kühl ist.",
+      "ages": {
+        "6-8": "Im nördlichen Sommer sind unsere Tage länger und die Sonne steht höher.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Sommer bedeutet eine Jahreszeit, nicht eine Temperaturgarantie. Wetter, Standort und Sonnenenergie dürfen nicht zu einer einzigen Aussage vermischt werden."
+      },
+      "observation": "Vergleiche im Modell einen Ort im Norden und einen im Süden zur selben Jahreszeit. Was ändert sich, was bleibt gleich?",
+      "whyItMatters": "Du verstehst den Unterschied zwischen einer Jahreszeit und ihrem heutigen Wetter.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "seasons-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "3c0629bf4d348596f0ef41cf57af6e3718c1b49f4923868091932f44a4490e15"
+    },
+    {
+      "id": "seasons:2",
+      "title": "Winter auf der Nordhalbkugel",
+      "baselineText": "Um den Dezember ist die Nordhalbkugel von der Sonne weg geneigt. Bei uns steht die Sonne niedriger, und die Tage sind kürzer. In Australien ist gleichzeitig Sommer. Die Jahreszeiten der beiden Halbkugeln sind also gegensätzlich.",
+      "baselineHash": "e7b924b0cdfc01528e7ccc8889df44775f024fe74960468f161590eceeff50da",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Die zwei Halbkugeln erleben denselben Umlauf gleichzeitig, aber mit entgegengesetzter Neigung zur Sonne. Eine Erklärung nur durch wechselnde Entfernung könnte diesen Gegensatz nicht erklären.",
+      "ages": {
+        "6-8": "Im nördlichen Winter sind die Tage kürzer. In Australien ist dann Sommer.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Die Erdbahn ist nicht genau kreisrund. Das hebt die entscheidende Wirkung der Achsneigung auf Sonnenstand und Tageslänge aber nicht auf."
+      },
+      "observation": "Stelle im Modell Dezember ein. Erkläre mit den beiden Halbkugeln, weshalb Entfernung allein nicht für Sommer und Winter ausreicht.",
+      "whyItMatters": "Du kannst zwei Erklärungen daran prüfen, ob sie dieselbe Beobachtung erklären.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "seasons-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "4d348065931cb7f05bc957853496399075286e9f1595c4f63fe51273c8a8fd77"
+    },
+    {
+      "id": "seasons:3",
+      "title": "Frühling und Herbst",
+      "baselineText": "Um März und September sind Tag und Nacht fast überall ungefähr gleich lang. Die Sonne steht dann über dem Äquator. Welche Jahreszeit beginnt, hängt von der Halbkugel ab: Frühling im Norden bedeutet Herbst im Süden und umgekehrt.",
+      "baselineHash": "c1413529cbf76040b0f65347d9486127acdbad745daf101a8497122bd7292921",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Ungefähr ist wichtig: Das einfache Modell zeigt einen Grundzusammenhang. Wirkliche Sonnenauf- und Sonnenuntergänge hängen auch davon ab, wie die Sonne am Horizont betrachtet wird.",
+      "ages": {
+        "6-8": "Im März und September sind Tag und Nacht ungefähr gleich lang.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Vier gleich benannte Jahreszeiten beschreiben nicht jeden Lebensraum gut. In tropischen Regionen können Niederschlagszeiten für Pflanzen und Tiere wichtiger sein."
+      },
+      "observation": "Vergleiche im Modell März und September. Benenne die Jahreszeiten jeweils aus Sicht der Nord- und Südhalbkugel.",
+      "whyItMatters": "Du lernst, ein nützliches Modell zu verwenden und seine Grenzen mitzusagen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "seasons-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "5a2f97cc67cd43878b6f97c85f756900f0868e87688d77665cc3ff6677bf93ba"
+    },
+    {
+      "id": "seasons:4",
+      "title": "Ein Tag ist kein Jahr",
+      "baselineText": "Drehen um die eigene Achse macht Tag und Nacht. Reisen um die Sonne mit geneigter Achse macht den jährlichen Wechsel der Jahreszeiten. Ein sonniger Wintertag bleibt trotzdem ein Wintertag. Wetter und Jahreszeit sind nicht dasselbe.",
+      "baselineHash": "f4181984ff20a77c50c42d3dcfbb630f5b4120c9f3b50a89eb73dafea36cdac1",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Du kannst dieselbe Landschaft nachts und tagsüber sehen, ohne dass dabei eine andere Jahreszeit beginnt. Die beiden Veränderungen haben verschiedene Zeiträume und Ursachen.",
+      "ages": {
+        "6-8": "Die Erddrehung macht Tag und Nacht. Der Umlauf mit geneigter Achse macht Jahreszeiten.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Ein Modell kann Drehung und Umlauf zum Beobachten beschleunigen. Das ist eine Darstellungshilfe, keine Aussage über die wirklichen Geschwindigkeiten."
+      },
+      "observation": "Erkläre mit zwei verschiedenen Handbewegungen Tag und Jahr. Sage dazu, welche Bewegung du zeigst und welche du gerade auslässt.",
+      "whyItMatters": "Du ordnest Beobachtungen der passenden Bewegung zu.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "seasons-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "f0152bfe471f1ff1e0fa585d2fdade6c07ff9ebc706711f815efe65abe46a6c4"
+    },
+    {
+      "id": "ocean:0",
+      "title": "Fünf Namen, ein Weltmeer",
+      "baselineText": "Wir unterscheiden Pazifik, Atlantik, Indischen, Arktischen und Südlichen Ozean. Die Grenzen sind Vereinbarungen: Das Wasser bleibt verbunden. Kleinere Meere wie Nordsee und Mittelmeer gehören ebenfalls zum großen Weltmeer.",
+      "baselineHash": "9d8011f3f469c94c1eacc4653ccb1dc166cefbca35df2755058f0a73e441ce26",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Ein Name setzt keine Wand ins Wasser. Meere und Ozeane werden für die Orientierung gegliedert, während Wasser und Lebewesen über viele dieser gedachten Grenzen hinwegkommen können.",
+      "ages": {
+        "6-8": "Fünf Ozeane haben eigene Namen. Ihr Wasser ist miteinander verbunden.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Benennungen und Abgrenzungen sind Vereinbarungen. Unser Fünf-Ozeane-Modell ist eine Orientierungshilfe, keine Trennung in fünf geschlossene Behälter."
+      },
+      "observation": "Verfolge auf der Kugel einen möglichen Wasserweg zwischen Atlantik und Pazifik. Kannst du einen Weg finden, der nur über Wasser führt? Die gedachten Ozeangrenzen sind keine Wände.",
+      "whyItMatters": "Du liest Meeresnamen auf einer Karte, ohne das Weltmeer in getrennte Seen zu verwandeln.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "ocean-basins",
+        "ocean-sizes"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "16.10.2026: konkrete unten benannte NOAA-Originalabschnitte selbst gegengeprüft; Quellen direkt diesem Kapitel zugeordnet. Keine unabhängige vollständige Fach-/Kinder-/Grafikabnahme.",
+      "currentTextHash": "097d0f1e3c887207edb8372ec3048aef30d6aca9039203a20716ee20a3e43e2b"
+    },
+    {
+      "id": "ocean:1",
+      "title": "Warum ist das Meer salzig?",
+      "baselineText": "Regen und Flüsse lösen winzige Mengen von Mineralien aus Gestein und bringen sie ins Meer. Auch am Meeresboden gelangen Stoffe ins Wasser. Wenn Wasser verdunstet, bleibt das Salz zurück. Über lange Zeit haben sich so Salze im Meer angesammelt.",
+      "baselineHash": "1ffe63e1c35fb13e9df6c5f1ecf8d7f9384fd13a0b55420975e1e8c84a7c4c54",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Der Kreislauf von Wasser und der Transport gelöster Stoffe sind verschiedene Vorgänge. Ein Fluss kann Mineralien mitbringen, obwohl er nicht so salzig schmeckt wie Meerwasser.",
+      "ages": {
+        "6-8": "Meerwasser enthält Salz. Wenn Wasser verdunstet, bleibt das Salz zurück.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Salzgehalt ist nicht überall gleich. Verdunstung, Regen und einströmendes Süßwasser beeinflussen örtliche Unterschiede."
+      },
+      "observation": "Zeichne zwei Pfeile: Wasser ins Meer und Wasser in die Luft. Beschrifte, bei welchem Pfeil gelöste Salze mitreisen können. Kein Meerwasser probieren.",
+      "whyItMatters": "Du kannst Wassertransport und Stofftransport auseinanderhalten.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "ocean-salt"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "16.10.2026: konkrete unten benannte NOAA-Originalabschnitte selbst gegengeprüft; Quellen direkt diesem Kapitel zugeordnet. Keine unabhängige vollständige Fach-/Kinder-/Grafikabnahme.",
+      "currentTextHash": "bbcf758ef73fff3e3b1d4215cfcc2358fbc63f2a3b0d5b5d15be5c60d865dbb4"
+    },
+    {
+      "id": "ocean:2",
+      "title": "Korallen sind Tiere",
+      "baselineText": "Ein Korallenriff wird von vielen winzigen Korallentieren aufgebaut. Viele riffbildende Korallen leben mit kleinen Algen zusammen. Die Algen brauchen Sonnenlicht. Deshalb wachsen solche Riffe meistens in flachem, warmem, klarem Meerwasser.",
+      "baselineHash": "a4da5e1a5b2e425fceeb6c4538c6b02001c7767728c5ebdf8c9d203fb2d3be46",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Ein Korallentier ist klein; sein gemeinsam gebauter Lebensraum kann groß sein. Kalkskelett und lebendes Tier sind nicht dasselbe. Viele andere Arten nutzen das Riff als Zuhause.",
+      "ages": {
+        "6-8": "Korallen sind Tiere. Viele kleine Polypen bauen zusammen ein Riff.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Auch im kalten, dunklen Meer können manche Steinkorallen Riffe aufbauen. Unser Bild zeigt warme Flachwasserriffe mit Algenpartnern und beschreibt nicht alle Korallen."
+      },
+      "observation": "Betrachte die Korallenkarte. Zeige das Tier, sein Skelett und Tiere, die im Riff leben, als drei verschiedene Teile deiner Erklärung.",
+      "whyItMatters": "Du erkennst die Zusammenarbeit und den Unterschied zwischen Organismus und Lebensraum.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "ocean-base",
+        "ocean-coral-symbiosis",
+        "ocean-coral-range"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "16.10.2026: konkrete unten benannte NOAA-Originalabschnitte selbst gegengeprüft; Quellen direkt diesem Kapitel zugeordnet. Keine unabhängige vollständige Fach-/Kinder-/Grafikabnahme.",
+      "currentTextHash": "3389e71c57405ea00d99ef8df825fb375138e4a460bbda0bbc1c9535226e9294"
+    },
+    {
+      "id": "ocean:3",
+      "title": "Immer tiefer, immer dunkler",
+      "baselineText": "Sonnenlicht erreicht nur die oberen Bereiche des Meeres. Weiter unten wird es dunkel, kalt und der Druck nimmt zu. Dort leben Tiere mit besonderen Anpassungen. Manche erzeugen eigenes Licht. Auch in der Tiefsee gibt es also Leben.",
+      "baselineHash": "bcb0e94c76e81b4ef683ac67222dd8c24457fed0d5b4bb8e020d369a9c8550d0",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Licht von oben erreicht nicht jede Tiefe. Dunkelheit bedeutet daher nicht automatisch, dass kein Leben möglich ist. Anpassungen müssen zu den Bedingungen des Lebensraums passen.",
+      "ages": {
+        "6-8": "In der Tiefsee ist es dunkel. Trotzdem leben dort Tiere.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Das dunkle Bild zeigt einen ausgewählten Lebensraum, nicht alle Tiefseetiere. Auch der Tiefenrekord braucht die Messregel unter der Meeresoberfläche."
+      },
+      "observation": "Vergleiche im Schaubild Oberfläche und Tiefe. Welche Bedingungen ändern sich? Erkläre, warum ein Tier nicht überall dieselben Bedingungen vorfindet.",
+      "whyItMatters": "Du vermeidest den Schluss dunkel gleich unbewohnt.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "ocean-light",
+        "ocean-pressure",
+        "ocean-depth",
+        "ocean-bioluminescence"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "16.10.2026: konkrete unten benannte NOAA-Originalabschnitte selbst gegengeprüft; Quellen direkt diesem Kapitel zugeordnet. Keine unabhängige vollständige Fach-/Kinder-/Grafikabnahme.",
+      "currentTextHash": "0d77357065929e2234e499845ee080fc383b0dbf3192c0a26634271673cdc936"
+    },
+    {
+      "id": "ocean:4",
+      "title": "Wasser in Bewegung",
+      "baselineText": "Wind, Temperaturunterschiede und Unterschiede im Salzgehalt helfen, Meeresströmungen anzutreiben. Sie transportieren Wärme und Nährstoffe. Ebbe und Flut entstehen vor allem durch die Schwerkraft des Mondes und auch der Sonne.",
+      "baselineHash": "035d86b33d6aeb14101f9a66b7c7ea4f8890811aa7777cf483b0dfe0eb193e80",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Ein Wasserstand und ein Wasserstrom sind nicht dasselbe. Gezeiten können zwar Strömungen erzeugen, doch auch Wind und Dichteunterschiede treiben Strömungen an. Eine einzelne Welle ist wieder ein anderer Vorgang.",
+      "ages": {
+        "6-8": "Strömungen bewegen Wasser. Gezeiten lassen den Meeresspiegel steigen und sinken.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Die Gezeitenhöhe hängt vom Ort ab. Ein einfaches Modell ohne Küstenform kann keinen örtlichen Gezeitenkalender ersetzen."
+      },
+      "observation": "Vergleiche Strömungs- und Gezeitenmodell. Beschreibe einmal eine Bewegung entlang einer Strecke und einmal eine Änderung der Wasserhöhe.",
+      "whyItMatters": "Du beschreibst Meerwasser genauer als mit alles bewegt sich.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "ocean-currents",
+        "ocean-tides",
+        "ocean-waves"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "16.10.2026: konkrete unten benannte NOAA-Originalabschnitte selbst gegengeprüft; Quellen direkt diesem Kapitel zugeordnet. Keine unabhängige vollständige Fach-/Kinder-/Grafikabnahme.",
+      "currentTextHash": "c1f31dd2e4d807689b93afc76745aa83d90603969a4811d458333283817f9ec5"
+    },
+    {
+      "id": "nature:0",
+      "title": "Ein Zuhause für jedes Lebewesen",
+      "baselineText": "Ein Lebensraum ist ein Ort, an dem ein Lebewesen Nahrung, Wasser und Schutz findet. Ein Wald ist ein Lebensraum, ein Teich ebenfalls. Tiere und Pflanzen sind an ihre Umgebung angepasst. Ein Fisch und ein Kaktus brauchen deshalb ganz unterschiedliche Bedingungen.",
+      "baselineHash": "47d33fdb30ef0961c5fb4c514a33d4bbad29fe086ab438b1198a28bdbb48c57e",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Passend hängt vom Lebewesen ab: Ein Teich ist für einen Fisch ein Zuhause, für einen Kaktus kein geeigneter Ort. Ein Lebensraum ist also mehr als nur eine Adresse.",
+      "ages": {
+        "6-8": "Lebewesen brauchen einen passenden Lebensraum mit Nahrung, Wasser und Schutz.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Eine Karte mit einem Beispielpunkt zeigt nicht die gesamte Verbreitung einer Art. Auch innerhalb einer Landschaft sind die Bedingungen unterschiedlich."
+      },
+      "observation": "Wähle ein Tier aus der Tierwelt. Nenne Nahrung, Wasser und Schutz und suche, welche dieser Bedürfnisse seine Karte erklärt.",
+      "whyItMatters": "Du erklärst einen Lebensraum aus Sicht eines Lebewesens.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "nature-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "a1129a881524c144aff414444f2a4fbf5fdda374709d71e66a71942b4a7c5741"
+    },
+    {
+      "id": "nature:1",
+      "title": "Regenwald und Savanne",
+      "baselineText": "Tropische Regenwälder sind meist warm und feucht. Dort wachsen viele verschiedene Pflanzen. In Savannen wechseln häufig Regen- und Trockenzeiten. Zwischen Gräsern stehen einzelne Bäume. In afrikanischen Savannen leben zum Beispiel Giraffen und viele Antilopen.",
+      "baselineHash": "6f0b46e668087cc4bbfea7c620ac76a32e6d9fe395cd0ec40938325d610bd8d5",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Nicht nur die Menge, auch die Verteilung des Regens zählt. Lange trockene Abschnitte stellen andere Anforderungen als häufige Niederschläge. Das hilft, verschiedene Pflanzenwelten zu verstehen.",
+      "ages": {
+        "6-8": "Regenwald und Savanne können warm sein. Ihr Wasserangebot ist verschieden.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Tropisch bezeichnet eine Weltregion, nicht eine einzige Landschaft. Savannen und Regenwälder sind Beispiele, keine vollständige Liste der Tropen."
+      },
+      "observation": "Vergleiche zwei Lebensraumkarten. Beschreibe zuerst Wasser und Pflanzen; ordne dann ein Tier mit einer passenden Begründung zu.",
+      "whyItMatters": "Du vergleichst Lebensräume anhand ihrer Bedingungen statt allein an einem Tierbild.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "nature-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "7fbaebacc4b33cd834260141975a6edfc754bfbaa1522f18d3f5d5a4c63a9adc"
+    },
+    {
+      "id": "nature:2",
+      "title": "Wüste heißt trocken",
+      "baselineText": "Eine Wüste bekommt sehr wenig Niederschlag. Manche Wüsten sind heiß, andere kalt. Die Antarktis ist trotz ihres Eises sehr trocken und gilt als Kältewüste. Wüstentiere und Pflanzen haben besondere Wege, mit wenig Wasser auszukommen.",
+      "baselineHash": "7796824bc43d7b3bccaa6ec55163def325257a1b0fb4e7bd8e93a7c330db6109",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine Sanddüne ist kein Beweis für alle Wüsten. Entscheidend ist der geringe Niederschlag. Deshalb kann eine eisige Gegend zu derselben Landschaftsgruppe gehören wie eine heiße.",
+      "ages": {
+        "6-8": "Eine Wüste ist sehr trocken. Sie kann heiß oder kalt sein.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Trockenheit und Temperatur sind verschiedene Größen. Die Bezeichnung Kältewüste verbindet beide, ohne sie gleichzusetzen."
+      },
+      "observation": "Vergleiche Sahara und Antarktika auf der Karte. Nenne das gemeinsame Merkmal und einen wichtigen Unterschied.",
+      "whyItMatters": "Du kannst eine Kategorie an ihrem Merkmal erkennen, statt an einem typischen Bild.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "nature-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "37363685eb12ed66f5e7b8d717fb74e640869907b831d297ea47a63941d28227"
+    },
+    {
+      "id": "nature:3",
+      "title": "Norden und Süden unterscheiden",
+      "baselineText": "Eisbären leben in der Arktis im Norden. Viele Pinguinarten leben im Süden, einige sogar nahe am Äquator. Pinguine und Eisbären treffen sich in der freien Natur nicht. Am Südpol liegt Land unter dem Eis; am Nordpol liegt Meer.",
+      "baselineHash": "d73de69cd2479e24b9d02bac177525914df24eb1e37dd8cad60762f2083b306a",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Norden und Süden sind keine austauschbaren Eiswelten. Der Nordpol liegt über Meer, der Südpol auf einem Kontinent. Auch Pinguinarten leben in unterschiedlichen Regionen.",
+      "ages": {
+        "6-8": "Eisbären und Pinguine leben nicht gemeinsam in der freien Natur.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Ein Tier auf einer Illustration muss nicht dort leben, wo die Dekoration Schnee zeigt. Prüfe die Verbreitungsangabe der jeweiligen Art."
+      },
+      "observation": "Finde Eisbär und Kaiserpinguin in der Tierwelt. Vergleiche ihre Beispielorte und prüfe, ob beide Punkte dieselbe Region zeigen.",
+      "whyItMatters": "Du kannst ein schönes Bild von einer richtigen Verbreitungskarte unterscheiden.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "nature-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "1dc360db730c064e33a99768da54ecc45cb51f01b0a97ac7687759912d718633"
+    },
+    {
+      "id": "nature:4",
+      "title": "Alle hängen zusammen",
+      "baselineText": "Pflanzen nutzen Sonnenlicht, um Nahrung aufzubauen. Manche Tiere fressen Pflanzen, andere Tiere fressen Tiere. Pilze und kleine Lebewesen bauen abgestorbene Reste ab. Solche Beziehungen bilden Nahrungsnetze. Verschwindet eine Art, kann das andere Arten beeinflussen.",
+      "baselineHash": "a3336df91d33ab240a7d78fca7e51133624473b16b90f134fb4c7885c12d4bf5",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine Kette zeigt einen Weg; ein Netz zeigt mehrere Beziehungen. Ein Tier kann verschiedene Nahrung nutzen und selbst Nahrung für mehrere andere Arten sein.",
+      "ages": {
+        "6-8": "Pflanzen, Tiere, Pilze und kleine Lebewesen hängen in Nahrungsnetzen zusammen.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Zersetzer bauen Reste ab; das ist kein überflüssiger Abfallweg. Eine vereinfachte Zeichnung enthält trotzdem nicht jedes Lebewesen eines Lebensraums."
+      },
+      "observation": "Zeichne ein kleines Nahrungsnetz aus passenden Arten der Tierwelt. Benenne, ob dein Pfeil Nahrung oder den Esser anzeigen soll, und bleibe dabei.",
+      "whyItMatters": "Du erkennst, weshalb eine Veränderung mehrere Arten betreffen kann.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "nature-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "f8f95c5220d4f23f60c3ddd91eff4ee074b355d28d7e5e8344ae1c73a7ed65a0"
+    },
+    {
+      "id": "protect:0",
+      "title": "Eine hilfreiche Wärmedecke",
+      "baselineText": "Bestimmte Gase in der Atmosphäre halten einen Teil der Wärme zurück, die die Erde ins Weltall abgibt. Das nennt man Treibhauseffekt. Ohne den natürlichen Treibhauseffekt wäre unsere Erde viel kälter. Die Lufthülle ist dabei keine echte Decke.",
+      "baselineHash": "bec65157d396b67987926c7422098374277dce73fd7395001cbd815955433b3c",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Sonnenlicht und die von der Erde abgegebene Wärme sind nicht derselbe Vorgang. Das Deckenbild hilft beim ersten Verstehen, erklärt aber nicht alles, was Strahlung und Gase tun.",
+      "ages": {
+        "6-8": "Treibhausgase halten einen Teil der abgegebenen Wärme zurück. Die Luft ist keine echte Decke.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Ein Vergleich muss Grenzen haben. Die Atmosphäre hat keine Stoffdecke und hält auch nicht sämtliche Wärme fest."
+      },
+      "observation": "Zeichne Licht zur Erde und Wärme von der Erde weg als verschiedene Pfeile. Beschreibe, welchen Teil der zweite Pfeil vereinfacht.",
+      "whyItMatters": "Du erkennst eine hilfreiche Erklärung, ohne ihren Vergleich wörtlich zu nehmen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "protect-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "3b92f983bc3897b113caf075f32804aebcd8e5d39d01a729050113d674c79f10"
+    },
+    {
+      "id": "protect:1",
+      "title": "Die zusätzliche Erwärmung",
+      "baselineText": "Menschen verbrennen Kohle, Erdöl und Erdgas. Dabei kommt zusätzliches Kohlendioxid in die Luft. Auch andere Tätigkeiten verstärken den Treibhauseffekt. Die Erde wird im Durchschnitt wärmer. Das verändert unter anderem Eis, Meere und Lebensräume.",
+      "baselineHash": "dfb9c116417586cf70f9d1d2f28a2e5a3bb7974b2332cc6afdfb19b28d66c3db",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Durchschnittlich wärmer bedeutet nicht an jedem Ort jeden Tag wärmer. Wetter bleibt wechselhaft, während sich langfristige Bedingungen verändern. Erwachsene und Einrichtungen müssen dafür Verantwortung übernehmen.",
+      "ages": {
+        "6-8": "Zusätzliche Treibhausgase erwärmen die Erde. Lösungen sind eine gemeinsame Aufgabe.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Eine einzelne Handlung erklärt nicht den gesamten Klimawandel. Energieversorgung, Verkehr und weitere Tätigkeiten hängen in großen Systemen zusammen."
+      },
+      "observation": "Vergleiche die Erklärung mit dem Wetter-Kapitel. Formuliere eine Frage, die du Erwachsenen zum Umgang mit Energie stellen möchtest.",
+      "whyItMatters": "Du verstehst einen globalen Zusammenhang, ohne dir allein die ganze Verantwortung aufzubürden.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "protect-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "bace60fb8c8aff020165569e859fb8cf1e59cb45513245a9938d2f299b8f9566"
+    },
+    {
+      "id": "protect:2",
+      "title": "Weniger verschwenden",
+      "baselineText": "Dinge herstellen, transportieren und wegwerfen braucht Material und Energie. Etwas länger benutzen, reparieren, ausleihen oder weitergeben kann Ressourcen sparen. Mehrwegflaschen sind dafür ein Beispiel. Recycling hilft auch, kann aber nicht jede Art von Abfall lösen.",
+      "baselineHash": "72988d768074680e7cc15c89b3f1e67b7181f4a08774f7d82f77bb40a4a9d319",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine Sache länger zu nutzen kann verhindern, dass gleich eine neue hergestellt werden muss. Recycling beginnt erst später und ist nicht für jedes Material gleich gut möglich.",
+      "ages": {
+        "6-8": "Reparieren, ausleihen und weitergeben können Materialien sparen.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Vergleiche müssen den ganzen Weg betrachten: Herstellung, Nutzung, Transport und Entsorgung. Ein einzelnes grünes Zeichen beantwortet nicht alle Fragen."
+      },
+      "observation": "Wähle gemeinsam eine ungenutzte heile Sache. Vergleicht Weitergeben, Ausleihen und Aufbewahren anhand eurer wirklichen Situation.",
+      "whyItMatters": "Du findest konkrete Möglichkeiten, ohne jede Sache sofort durch etwas Neues zu ersetzen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "protect-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "90e5385fffaf3260a5a7ee923762c59b8af6956edf17391f68842e63a95755a2"
+    },
+    {
+      "id": "protect:3",
+      "title": "Natur Platz geben",
+      "baselineText": "Pflanzen und Tiere brauchen passende Lebensräume. Müll gehört nicht in die Natur. Blüten können Insekten Nahrung bieten. Wilde Tiere beobachten wir mit Abstand. Schon ein kleiner Garten oder Balkon kann zusammen mit Erwachsenen etwas für die Natur bieten.",
+      "baselineHash": "b45f2e00df9d7a9518f7e16108f3715f946d41efd3453942fd55489e040c506a",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine Blüte kann Nahrung bieten; ein ruhiger Platz kann Schutz geben. Hilfe heißt deshalb nicht immer anfassen oder mitnehmen. Manche Tiere brauchen vor allem Abstand.",
+      "ages": {
+        "6-8": "Pflanzen und Tiere brauchen Platz. Wir können sie beobachten, ohne sie zu stören.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Ein Balkon ersetzt keinen ganzen Lebensraum. Kleine Beiträge können dennoch nützlich sein, wenn sie zu den örtlichen Arten und Bedingungen passen."
+      },
+      "observation": "Beobachte mit Abstand eine Blüte oder einen Baum. Welche Nutzung kannst du tatsächlich sehen? Stelle keine unbekannten Pflanzen oder Tiere um.",
+      "whyItMatters": "Du verbindest Naturschutz mit den Bedürfnissen von Lebewesen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "protect-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "cdb38c9587340951d36fae45d6557e8aec9b1a70212089d32eb67fd18a4ae925"
+    },
+    {
+      "id": "protect:4",
+      "title": "Gemeinsam etwas bewegen",
+      "baselineText": "Du kannst Ideen sammeln, Fragen stellen und mit Erwachsenen kleine Vorhaben ausprobieren. Zum Beispiel Wege zu Fuß zurücklegen, unnötiges Licht ausschalten oder Lebensmittel gut nutzen. Welche Lösung sinnvoll ist, hängt von der Situation ab.",
+      "baselineHash": "bb4a2f69d6eeb4f7fc42ead7067c0c2b2f7f28eca7e03a0fdf662c7ff58c479d",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine Lösung passt zu einem konkreten Problem. Zu Fuß gehen kann für einen kurzen sicheren Weg sinnvoll sein; eine andere Strecke braucht eine andere Entscheidung. Fragen helfen mehr als pauschale Vorwürfe.",
+      "ages": {
+        "6-8": "Gute Ideen entstehen gemeinsam. Niemand muss alles perfekt machen.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Ein persönliches Beispiel ist keine vollständige Lösung für Gesellschaft und Wirtschaft. Es kann zeigen, welche Bedingungen eine gute Entscheidung braucht."
+      },
+      "observation": "Überlegt mit einem Erwachsenen eine kleine machbare Änderung. Notiert den Nutzen und eine Bedingung, unter der eure Idee nicht passen würde.",
+      "whyItMatters": "Du kannst Verantwortung gemeinsam und ohne Schuldgefühl besprechen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "protect-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "dd1fc05a54a5b5f8e6a5fc8b43afaf0f603fd7c9cbad1fc03d00ab3a4ae9254d"
+    },
+    {
+      "id": "continents:0",
+      "title": "Kontinent oder Land?",
+      "baselineText": "Ein Kontinent ist eine sehr große Landregion. Ein Land ist ein von Menschen festgelegtes Gebiet. Auf einem Kontinent können viele Länder liegen. Afrika ist ein Kontinent, Kenia ist ein Land in Afrika.",
+      "baselineHash": "ac58fb4a267183f9d7c4cee639b2efac8c199204e5428612bb28709420ecc205",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Ein Land und ein Kontinent beantworten verschiedene Fragen zur Orientierung. Wenn du Kenia in Afrika findest, ist das kein Widerspruch: Ein kleineres Gebiet gehört zu einer größeren Landregion.",
+      "ages": {
+        "6-8": "Afrika ist ein Kontinent. Kenia ist ein Land darin.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Kontinentgrenzen sind nicht überall natürlich eindeutig. Unterschiedliche Einteilungen müssen ihren Zweck und ihre Regeln nennen."
+      },
+      "observation": "Finde Kenia auf dem Globus, zoome heraus und nenne den Kontinent. Beschreibe, was bei beiden Blicken derselbe Ort bleibt.",
+      "whyItMatters": "Du kannst Länder und größere Weltregionen richtig zuordnen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "continents-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "a244fcbae0a4470a71ea04571135e632db826e00584b9802df3f5d421959768f"
+    },
+    {
+      "id": "continents:1",
+      "title": "Europa und Asien",
+      "baselineText": "Europa und Asien hängen als Landfläche zusammen. Wir unterscheiden sie im Sieben-Kontinente-Modell trotzdem. Russland und die Türkei liegen in beiden Regionen.",
+      "baselineHash": "5e7bb4478a29f01e70dddc212f4640cb1ffb868adeaea53c627e39e408be1af6",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine politische Grenze und die Einteilung in Kontinente fallen nicht immer zusammen. Deshalb kann ein Land in mehr als einer Weltregion liegen, ohne dass seine Landfläche getrennt sein muss.",
+      "ages": {
+        "6-8": "Europa und Asien sind verbunden. Wir unterscheiden sie in unserem Kontinentmodell.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Eurasien benennt die zusammenhängende Landmasse. Europa und Asien sind in unserem Sieben-Kontinente-Modell getrennte Regionen derselben Landmasse."
+      },
+      "observation": "Betrachte Europa und Asien ohne Länderfarben. Vergleiche danach die politische Karte und beschreibe, welche Frage jede Ansicht beantwortet.",
+      "whyItMatters": "Du erkennst, weshalb mehrere Beschreibungen derselben Landfläche sinnvoll sein können.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "continents-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "f329ee6f1b15292a369992be87976551a34b02313ae3f84b6b65bbecac738cdd"
+    },
+    {
+      "id": "continents:2",
+      "title": "Afrika und Amerika",
+      "baselineText": "Afrika liegt beiderseits des Äquators. Nordamerika und Südamerika hängen an einer schmalen Landbrücke zusammen. Zwischen hohen Bergen, Küsten und Regenwäldern leben ganz verschiedene Tiere.",
+      "baselineHash": "ab164d03433a582e4538a7daaa9b4bbc4209a83d1861db19638dd72a5db7d61e",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Der Äquator ist eine Orientierungslinie, keine Grenze zwischen Ländern. Eine Landbrücke verbindet dagegen wirkliche Landflächen. Die beiden Begriffe beschreiben unterschiedliche Dinge auf derselben Erde.",
+      "ages": {
+        "6-8": "Afrika liegt an beiden Seiten des Äquators. Amerika hat einen nördlichen und einen südlichen Teil.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Ein Kontinent enthält viele Landschaften und Klimabedingungen. Eine einzelne Tierart oder ein einzelner Beispielort vertritt nicht die gesamte Region."
+      },
+      "observation": "Verfolge den Äquator durch Afrika und finde die Verbindung zwischen Nord- und Südamerika. Nenne Linie und Landfläche getrennt.",
+      "whyItMatters": "Du kannst Lage und Landschaft beschreiben, ohne einen ganzen Kontinent auf ein Beispiel zu reduzieren.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "continents-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "b11a0522dafef12e47f4eb721dd27db942541c96695083a16bd92f4339e6f3af"
+    },
+    {
+      "id": "continents:3",
+      "title": "Australien, Inseln und Eis",
+      "baselineText": "Australien ist ein Land und der kleinste Kontinent in diesem Modell. Ozeanien ist die größere Weltregion mit vielen Inseln. Antarktika ist ein eisbedeckter Kontinent am Südpol.",
+      "baselineHash": "3c7cabbaf0652d355871c5ddf6171217336f8d6f0542a994d58a888797031074",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Das Wort Australien wird hier auf zwei Ebenen benutzt: für ein Land und für einen Kontinent. Ozeanien beschreibt eine größere Region. Achte deshalb bei jeder Karte auf die erklärte Einteilung.",
+      "ages": {
+        "6-8": "Australien ist Land und Kontinent. Antarktika liegt am Südpol.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Nicht jeder geografische Begriff hat dieselbe Art von Grenze. Eine Weltregion, ein Land und ein Kontinent sind keine austauschbaren Namen."
+      },
+      "observation": "Vergleiche Australien, Ozeanien und Antarktika. Notiere, welcher Begriff in unserem Modell ein Land und welcher eine größere Region bezeichnet.",
+      "whyItMatters": "Du kannst mit mehrdeutigen Namen sorgfältig umgehen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "continents-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "0909d9efc8688bc3eb92b55f0ca85109a70560dd220993731a07541bbec44c3c"
+    },
+    {
+      "id": "continents:4",
+      "title": "Eine Karte ist ein Modell",
+      "baselineText": "Auf der Kugel sehen wir die Erde von außen. Eine flache Karte muss die runde Oberfläche verzerren. Auch Farben und Grenzen sind Zeichen: Kontinente sind draußen nicht in unseren Kartenfarben bemalt.",
+      "baselineHash": "fbcbde8bbeca332271ede0e6175d50450423bfdb7e37145cd50021f0016b7ea0",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Um eine Kugeloberfläche flach zu zeigen, müssen Eigenschaften verändert werden. Deshalb kann eine Karte für eine Frage gut und für eine andere weniger geeignet sein.",
+      "ages": {
+        "6-8": "Ein Globus ist rund. Eine flache Karte verändert die Darstellung.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Groß dargestellt bedeutet nicht automatisch große wirkliche Fläche. Vergleiche Länderflächen mit einem geeigneten Maßstab und nicht nur nach Bildschirmbreite."
+      },
+      "observation": "Vergleiche ein polnahes Land und ein äquatornahes Land auf Kugel und flacher Karte. Beschreibe einen Unterschied der Darstellung.",
+      "whyItMatters": "Du kannst Karten lesen, ohne ihre Darstellung mit der Erde selbst zu verwechseln.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "continents-base",
+        "maps"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "32a09947c2f8394af502aef1747c5a3fe1a34e82a0d6b819240409a2cdbd1be1"
+    },
+    {
+      "id": "countries:0",
+      "title": "Viele Länder, viele Menschen",
+      "baselineText": "In einem Land wohnen Menschen mit unterschiedlichen Sprachen, Gewohnheiten und Ideen. Ein Beispielgericht oder Tier beschreibt nie alle Menschen oder Orte des Landes.",
+      "baselineHash": "c836613ce9d2bcc422d6ff1dd55e36c2883e06a8f40e24173e67510c9c1ea0f7",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Ein Länderbeispiel ist eine Einladung zum Entdecken, keine Regel über jeden Menschen. Ein Lieblingsgericht oder eine Landschaft sagt nichts über alle Einwohnerinnen und Einwohner aus.",
+      "ages": {
+        "6-8": "Menschen in einem Land können verschieden leben und sprechen.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Länderporträts wählen Informationen aus. Gute Beschreibungen nennen diese Auswahl und vermeiden Eigenschaften, die angeblich für alle Menschen gelten."
+      },
+      "observation": "Lies ein Länderporträt. Finde eine Aussage über einen Ort und überlege, warum sie nicht jeden Menschen im Land beschreibt.",
+      "whyItMatters": "Du lernst neue Orte kennen, ohne Menschen in feste Schubladen zu stecken.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "countries-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "e0aefb503d8c291a144225f46987793d43e2ddcf41a9b7bd5c1352b288d88172"
+    },
+    {
+      "id": "countries:1",
+      "title": "Die Hauptstadt",
+      "baselineText": "In der Hauptstadt werden wichtige Aufgaben eines Landes erledigt. Berlin ist Deutschlands Hauptstadt. Eine Hauptstadt ist nicht automatisch die größte oder bekannteste Stadt.",
+      "baselineHash": "7e4ef307973bdf14fadbe1b6ffada14365448b4b1779d40f2af4fe1e78b32912",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Bekanntheit, Einwohnerzahl und Regierungsaufgaben sind verschiedene Merkmale. Canberra und Sydney zeigen, warum die Frage Hauptstadt anders beantwortet wird als größte Stadt.",
+      "ages": {
+        "6-8": "Eine Hauptstadt hat wichtige Aufgaben für ein Land. Sie muss nicht die größte Stadt sein.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Die Aufgaben können auf mehrere Städte verteilt sein. Die genaue Länderangabe zählt mehr als eine einfache weltweite Faustregel."
+      },
+      "observation": "Suche Australien und Deutschland im Atlas. Nenne die Hauptstädte und prüfe, welche Zusatzangaben du für einen Städtevergleich brauchen würdest.",
+      "whyItMatters": "Du beantwortest geografische Fragen nach ihrem tatsächlichen Merkmal.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "countries-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "55a591b05fea832e84cd65aa9887b219f5fe1ff5c97db0b68fd5ee52ec278d2d"
+    },
+    {
+      "id": "countries:2",
+      "title": "Zeichen auf einer Flagge",
+      "baselineText": "Eine Flagge ist ein Zeichen für ein Land oder Gebiet. Farben, Streifen und Symbole helfen beim Erkennen. Manche Flaggen sehen sich sehr ähnlich.",
+      "baselineHash": "a348cb50fe90509eb11015b494803707b114cb3df37907614d7ac2a26f570ce4",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Zwei Flaggen können ähnliche Farben haben und trotzdem unterschiedliche Länder bezeichnen. Vergleiche deshalb auch Reihenfolge, Anordnung und Zeichen statt nur die erste Farbe.",
+      "ages": {
+        "6-8": "Flaggen sind Zeichen. Form, Farbe und Symbole helfen beim Erkennen.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Eine Flagge ist ein vereinbartes Symbol. Sie ist kein Beleg für Fähigkeiten oder Eigenschaften der Menschen eines Landes."
+      },
+      "observation": "Vergleiche zwei ähnliche Flaggen im bestehenden Spiel oder Atlas. Beschreibe einen Unterschied in Worten, ohne nur den Ländernamen zu nennen.",
+      "whyItMatters": "Du übst genaues Vergleichen und unterscheidest Symbol von Mensch.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "countries-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "a2190500c6dcfa3ad77f7b61d2595b37f6eb1c6b0ad59283ad069cd4475c6665"
+    },
+    {
+      "id": "countries:3",
+      "title": "Nachbarn auf der Landkarte",
+      "baselineText": "Länder können eine gemeinsame Landgrenze haben oder durch ein Meer getrennt sein. Deutschland hat neun Nachbarländer an Land. Flüsse und Gebirge überqueren oft Grenzen.",
+      "baselineHash": "11b0b2545f85b2ef8d62167c88b9795ca491bad24f83ba322d041beb0af2a598",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine Landesgrenze erklärt Zuständigkeiten, hält aber einen Fluss nicht automatisch an. Die politische und die natürliche Karte zeigen daher zusammen mehr als jede allein.",
+      "ages": {
+        "6-8": "Nachbarländer können eine gemeinsame Landgrenze haben. Wasser kennt solche Linien nicht.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Landnachbarn und Nachbarn über ein Meer sind verschiedene Vergleichsgruppen. Sage bei einer Anzahl dazu, welche Gruppe du meinst."
+      },
+      "observation": "Finde Deutschland und einen seiner Landnachbarn. Suche eine natürliche Verbindung wie einen Fluss oder ein Gebirge zwischen ihren Karten.",
+      "whyItMatters": "Du kannst eine Zahl wie neun Nachbarländer mit ihrer Zählregel erklären.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "countries-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "6fc89aecf65d9295635fe66222aafc6f8cf707be27ded9f6c5af665198da5ea1"
+    },
+    {
+      "id": "countries:4",
+      "title": "Größe und Bevölkerung",
+      "baselineText": "Die Fläche sagt, wie viel Platz ein Land auf der Erde einnimmt. Die Bevölkerung sagt, wie viele Menschen dort leben. Ein großes Land muss nicht sehr viele Menschen haben.",
+      "baselineHash": "62129d67386bf65812ce8c3795e7001cdede7811b4f1cacd2cb5b592c6474c3c",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Zum Vergleichen müssen gleiche Messregeln verwendet werden. Eine ältere Bevölkerungsschätzung und eine jüngere sind nicht ohne Weiteres ein gleichzeitiger Vergleich.",
+      "ages": {
+        "6-8": "Fläche misst Platz. Bevölkerung zählt Menschen. Das sind verschiedene Größen.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Bevölkerungsdichte setzt Einwohnerzahl zur Fläche ins Verhältnis. Sie beschreibt einen Durchschnitt und verrät nicht, wie Menschen innerhalb eines Landes verteilt sind."
+      },
+      "observation": "Vergleiche zwei Länderporträts. Notiere Fläche und Datenjahr; trenne sichere Angaben von Fragen, die mit diesen Daten nicht beantwortet werden.",
+      "whyItMatters": "Du liest Zahlen zusammen mit Einheit und Datenjahr.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "countries-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "d191a2548668a5c0da98333f502bd18e14244654fd5bb997cbdbfd84967fca98"
+    },
+    {
+      "id": "volcanoes:0",
+      "title": "Unter und über der Oberfläche",
+      "baselineText": "Magma ist geschmolzenes Gestein unter der Oberfläche. Es kann feste Kristalle und gelöste Gase enthalten. An der Oberfläche nennen wir es Lava.",
+      "baselineHash": "79819b97cff7d9045606efefa186fdfa900ccf684006f0f6636f7076a8b3c083",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Magma kann mehrere Bestandteile enthalten: Schmelze, Kristalle und Gas. Das Wort geschmolzen beschreibt deshalb ein Gemisch nicht vollständig wie reines flüssiges Wasser.",
+      "ages": {
+        "6-8": "Geschmolzenes Gestein heißt unter der Erde Magma und draußen Lava.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Die Bezeichnung hängt vom Ort ab, das Ausbruchsverhalten auch von Eigenschaften des Gemischs. Beides sollte nicht verwechselt werden."
+      },
+      "observation": "Beschrifte im Modell Magma und Lava. Suche zusätzlich die dargestellten Gase und erkläre, weshalb sie zur Beschreibung gehören.",
+      "whyItMatters": "Du unterscheidest Namen, Bestandteile und Eigenschaften eines Stoffes.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "volcanoes-base",
+        "volcano-detail"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "70cd2f995bea20644382cf4ba19bf8effb55f789d2074736f3b671287d042bee"
+    },
+    {
+      "id": "volcanoes:1",
+      "title": "Wege nach oben",
+      "baselineText": "Magma kann sich sammeln und durch Risse oder Schlote aufsteigen. Oben kann es durch eine Öffnung austreten. Ein Krater ist eine Vertiefung am Vulkan.",
+      "baselineHash": "d526002a342bc9767c1fa6b71da1ea048f4ca018214b927cf1da4411fdb4cce8",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine Magmakammer ist im Lernbild übersichtlich gezeichnet. In der Wirklichkeit können mehrere Bereiche und Risse zusammenwirken. Ein Schlot und ein Krater bezeichnen verschiedene Teile des Weges.",
+      "ages": {
+        "6-8": "Magma kann durch Wege im Gestein nach oben gelangen.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Ein Querschnitt ist eine gedachte Schnittansicht. Er zeigt verborgene Vorgänge, die wir nicht so von außen beobachten können."
+      },
+      "observation": "Verfolge im Schaubild den Weg nach oben. Benenne Sammlung, Durchgang und Öffnung, ohne alle drei als dasselbe Loch zu bezeichnen.",
+      "whyItMatters": "Du kannst ein vereinfachtes Schnittbild mit passenden Begriffen lesen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "volcanoes-base",
+        "volcano-detail"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "30760513b097b7b6fab2b406c1e89d29da7be5eba56f4ed089f5a943693d31cb"
+    },
+    {
+      "id": "volcanoes:2",
+      "title": "Fließen oder explodieren",
+      "baselineText": "Dünnflüssiges Magma lässt Gas leichter entweichen. Zähes, gasreiches Magma kann explosive Ausbrüche begünstigen. Dabei werden kleine Gesteins- und Glasstücke als Asche ausgestoßen.",
+      "baselineHash": "9d6e2408bfb4e333743211629034b20a8a794c871f678d116486fa40ffb3a5f6",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Das Zusammenspiel ist wichtig: Gasgehalt allein oder Zähigkeit allein erklärt nicht jeden Ausbruch. Vergleiche deshalb im Labor zwei Zustände und benenne genau den veränderten Regler.",
+      "ages": {
+        "6-8": "Zähes Magma kann Gas schlechter entweichen lassen als dünnflüssiges.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Vulkanasche besteht aus Gesteins- und Glasstückchen. Sie ist keine Asche aus verbranntem Holz und auch keine Wolke nur aus Wasserdampf."
+      },
+      "observation": "Lass den Gasregler im Vulkanlabor gleich und verändere nur die Zähigkeit. Beschreibe den Unterschied und sage dazu, dass dies keine Vorhersage ist.",
+      "whyItMatters": "Du kannst eine Vermutung an einem kontrollierten Modellvergleich prüfen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "volcanoes-base",
+        "volcano-detail"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "9e2b136d07d9e8e6ae0f5feea4fb1c5bafc459e276c633499da4a0d5cbf8931f"
+    },
+    {
+      "id": "volcanoes:3",
+      "title": "Formen erzählen Geschichten",
+      "baselineText": "Breite Schildvulkane entstehen oft durch viele dünnflüssige Lavaflüsse. Schichtvulkane sind häufig steiler und aus verschiedenen Ablagerungen aufgebaut. Die Form allein sagt nicht genau voraus, was beim nächsten Ausbruch passiert.",
+      "baselineHash": "f1bf641800f961d6b2242464bfd06fb8d51ae5d1ab32b630415e07b7f4853bf0",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Viele Ablagerungen bilden nach und nach eine Form. Ein einzelnes Standbild zeigt daher auch eine Geschichte. Die Form verrät aber nicht sicher, wie der nächste Ausbruch ablaufen wird.",
+      "ages": {
+        "6-8": "Breite und steile Vulkanformen entstehen auf unterschiedliche Weise.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Eine Formbeschreibung ist kein Gefahrenurteil. Forschende brauchen Messungen und die Geschichte des einzelnen Vulkans."
+      },
+      "observation": "Vergleiche Schild- und Schichtvulkan im Bild. Trenne zwei sichtbare Unterschiede von einer Aussage, die das Bild allein nicht belegen kann.",
+      "whyItMatters": "Du lernst, aus einem Bild Hinweise zu gewinnen, ohne zu viel daraus zu schließen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "volcanoes-base",
+        "volcano-detail"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "b4e0de4180a808402c9695c3359a7d58097118f4297b806bd3063e9acb04bc1f"
+    },
+    {
+      "id": "volcanoes:4",
+      "title": "Ein Vulkan schläft nicht wie du",
+      "baselineText": "Ein Vulkan kann lange ruhig bleiben und trotzdem noch aktiv sein. Forschende beobachten Bodenbewegungen, Gase und kleine Beben. Ein einfaches Lernmodell kann keine Ausbrüche vorhersagen.",
+      "baselineHash": "3fdac45b53fdccc51cfa0227e4b6f93d72673f48a9494637f16d1dbd875c52ab",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Ruhig ist eine Beobachtung für einen Zeitraum, kein Beweis für nie wieder. Messungen an Gasen, Boden und Beben helfen, Veränderungen zu erkennen. Warnungen kommen von zuständigen Fachstellen.",
+      "ages": {
+        "6-8": "Ein ruhiger Vulkan kann weiter aktiv sein. Forschende beobachten ihn.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Ein Lernregler bildet keine reale Überwachung ab. Eine Ausgabe des Modells darf nicht für Reise- oder Sicherheitsentscheidungen verwendet werden."
+      },
+      "observation": "Nenne drei beobachtbare Messarten aus dem Kapitel. Erkläre dann, weshalb unser Modell keinen Ausbruch eines echten Vulkans vorhersagt.",
+      "whyItMatters": "Du unterscheidest Lernen über einen Vulkan von einer wirklichen Gefahrenbewertung.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "volcanoes-base",
+        "volcano-detail"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "635eb196ce9a5f599dc8443e3e3a3d41bdf4c90270fbd2dfaea00ef5c613fa44"
+    },
+    {
+      "id": "quakes:0",
+      "title": "Verhakt und plötzlich bewegt",
+      "baselineText": "Gesteinsflächen können sich an einer Störung verhaken. Obwohl Platten sich weiter bewegen, geht es dort nicht glatt weiter. Irgendwann rutscht das Gestein plötzlich: Ein Erdbeben entsteht.",
+      "baselineHash": "b499df4bd8a147ee845f129dd22df3d0ee73c6fe579cfec51fe195069472921c",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Die langsame Bewegung und das plötzliche Rutschen sind verschiedene Teile des Vorgangs. Ein langes Aufbauen von Spannung kann einer kurzen Bewegung vorausgehen.",
+      "ages": {
+        "6-8": "Verhaktes Gestein kann plötzlich rutschen. Dann bebt die Erde.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Unser Modell verkürzt die Zeit und vereinfacht die Bruchfläche. Es berechnet keinen Zeitpunkt für das nächste wirkliche Beben."
+      },
+      "observation": "Vergleiche im Erdbebenlabor Spannung vor und Bewegung nach dem Rutschen. Sage voraus, welche Veränderung du erwartest, bevor du sie auslöst.",
+      "whyItMatters": "Du verbindest einen kurzen beobachteten Vorgang mit seiner längeren Vorgeschichte.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "quakes-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "668ef5f8a7156aee18b20c9b16788e5b1a7bde14ad3de869bbc942e7e0ae5aa9"
+    },
+    {
+      "id": "quakes:1",
+      "title": "Herd und Epizentrum",
+      "baselineText": "Der Ort, an dem das Rutschen beginnt, heißt Erdbebenherd. Er liegt meist unter der Erdoberfläche. Direkt darüber liegt das Epizentrum an der Oberfläche.",
+      "baselineHash": "679ab7d00b623322d444f133596b6dcc87348d60573dfa79633024cb930cb3da",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Direkt darüber beschreibt die Verbindung zur Oberfläche. Es bedeutet nicht, dass der Herd oben oder im Erdkern liegt. Beide Begriffe benennen verschiedene Orte desselben Ereignisses.",
+      "ages": {
+        "6-8": "Der Herd liegt dort, wo das Beben beginnt. Das Epizentrum liegt direkt darüber.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Der Ausgangspunkt und die gesamte Bruchfläche sind nicht identisch. Ein vereinfachtes Punktbild zeigt den Beginn, nicht jeden Teil des Bruchs."
+      },
+      "observation": "Zeichne einen Punkt unter einer Linie für die Oberfläche. Markiere den zweiten Punkt direkt darüber und beschrifte beide verschieden.",
+      "whyItMatters": "Du kannst Nachrichten über einen Bebenort genauer verstehen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "quakes-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "d13126db78d2f6bec46d86ba5e732c96083323b1873aa9532b065a3972573a93"
+    },
+    {
+      "id": "quakes:2",
+      "title": "Wellen statt Löcher",
+      "baselineText": "Vom Herd breiten sich Wellen aus. Sie bewegen den Boden. Verschiedene Wellen reisen unterschiedlich schnell durch Gestein. Forschende messen sie mit Seismometern.",
+      "baselineHash": "442b9c5985d6f59a7ad918dbca394dac649d4d915866a6c4f4480c43c6bdac33",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine Welle überträgt eine Bewegung, nicht ein Loch durch die Erde. Unterschiedliche Ankunftszeiten können Forschenden Hinweise geben, die ein einzelnes Bild nicht zeigt.",
+      "ages": {
+        "6-8": "Erdbebenwellen bewegen den Boden. Messgeräte zeichnen die Bewegungen auf.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Die verschiedenen Wellenarten verhalten sich in unterschiedlichen Materialien verschieden. Deshalb helfen sie beim Erforschen des verborgenen Erdinneren."
+      },
+      "observation": "Vergleiche im Wellenmodell zwei Ankunftszeiten. Beschreibe, was gemessen wurde, und trenne davon deine Erklärung für den Unterschied.",
+      "whyItMatters": "Du erkennst, weshalb Messungen auch etwas über nicht sichtbare Bereiche verraten.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "quakes-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "b1b30a9dc62254a3760d159d00fd6e1cd84033a79ebcfb46b63a5235b9bbb9d1"
+    },
+    {
+      "id": "quakes:3",
+      "title": "Größe und Wirkung",
+      "baselineText": "Die Magnitude beschreibt die Größe eines Bebens. Wie stark es an einem Ort wirkt, hängt auch vom Abstand, der Tiefe, dem Untergrund und von Gebäuden ab.",
+      "baselineHash": "95a49b42f43f7e7566a188385b66c4d9930053e6c9e8f4333b7bab4e0c8d8125",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Zwei Orte können dasselbe Beben unterschiedlich stark spüren. Abstand und Untergrund spielen mit. Deshalb ist eine einzige Zahl keine vollständige Beschreibung aller Folgen.",
+      "ages": {
+        "6-8": "Die Größe eines Bebens und seine Wirkung an einem Ort sind nicht dasselbe.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Magnitude beschreibt das Ereignis; Intensität beschreibt beobachtete Wirkungen an einem Ort. Zu einem Beben können verschiedene Intensitäten gehören."
+      },
+      "observation": "Halte im Modell die Magnitude gleich und verändere den Abstand. Beschreibe, welche örtliche Wirkung sich verändert und welche Eingabe gleich blieb.",
+      "whyItMatters": "Du kannst zwei Berichte über dasselbe Beben vergleichen, ohne sie vorschnell widersprüchlich zu nennen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "quakes-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "ff984e7331dd76f65738f4640c99a376bd98bd6540e4cd132ecfecd3ec3b84e7"
+    },
+    {
+      "id": "quakes:4",
+      "title": "Unter dem Meer",
+      "baselineText": "Wird bei einem starken Seebeben der Meeresboden plötzlich angehoben oder abgesenkt, kann ein Tsunami entstehen. Das sind lange Wellen, die viel Wasser bewegen.",
+      "baselineHash": "5aabd4764940b81f19d93c78ad5557d611424b3549026abafbfe65a4da2ba655",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Nicht jedes Beben unter dem Meer verschiebt genügend Wasser auf die passende Weise. Der Ort unter Wasser allein reicht deshalb nicht als Erklärung für einen Tsunami.",
+      "ages": {
+        "6-8": "Ein stark bewegter Meeresboden kann lange Wasserwellen auslösen.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Tsunamis unterscheiden sich von gewöhnlichen Windwellen. Ein Lehrbild erklärt einen Mechanismus, ersetzt aber keine offiziellen Warnungen oder Schutzanweisungen."
+      },
+      "observation": "Zeichne eine gedachte Meeresbodenbewegung und ihre Wirkung auf das Wasser. Erkläre, welche Bedingung zusätzlich zu unter dem Meer nötig ist.",
+      "whyItMatters": "Du vermeidest eine falsche automatische Folgerung aus einem einzelnen Merkmal.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "quakes-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "901e263e1303929fb892c667bcbb474e7a6a62dd26fc13ecf9971e2a27f47244"
+    },
+    {
+      "id": "moon:0",
+      "title": "Kein eigener Scheinwerfer",
+      "baselineText": "Der Mond umkreist die Erde. Er ist kein Stern und leuchtet nicht aus eigener Kraft. Seine Oberfläche reflektiert Sonnenlicht.",
+      "baselineHash": "2136c893559a310ad15cb62a2c97b3780cdf2dcf3a35bb31e87109402ee0e707",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Reflektieren heißt Licht zurückwerfen. Eine beleuchtete Wand kann ebenfalls hell aussehen, ohne selbst Licht zu erzeugen. Dieser Vergleich erklärt das Leuchten, nicht die Größe oder Entfernung des Mondes.",
+      "ages": {
+        "6-8": "Der Mond leuchtet, weil Sonnenlicht auf ihn fällt. Er ist keine eigene Lampe.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Die Rückseite des Mondes ist nicht immer dunkel. Auch sie hat beleuchtete Zeiten, obwohl wir sie von der Erde nicht direkt sehen."
+      },
+      "observation": "Beleuchte mit einem Erwachsenen einen Ball mit einer Taschenlampe. Beschreibe, wo das Licht herkommt. Schaue niemals direkt in die Sonne.",
+      "whyItMatters": "Du unterscheidest Lichtquelle und beleuchtete Oberfläche.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "moon-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "8fc0172becbffedbb2ef8e80b9a5e568c39096c853bc674f02f7711eb8e34788"
+    },
+    {
+      "id": "moon:1",
+      "title": "Die Form verändert sich scheinbar",
+      "baselineText": "Der Mond selbst bleibt rund. Während er um die Erde läuft, sehen wir verschieden viel von seiner beleuchteten Hälfte: Neumond, Halbmond und Vollmond sind Mondphasen.",
+      "baselineHash": "33090484c3b0d4e6aa0e019cdbfa4c3b674e2d8725b17bca896d5fabee69c897",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Unser Blick auf die beleuchtete Fläche verändert sich. Die dunkle Stelle ist deshalb kein fehlendes Stück Gestein. Erde, Sonne und Mond müssen gemeinsam betrachtet werden.",
+      "ages": {
+        "6-8": "Der Mond bleibt rund. Wir sehen unterschiedlich viel seiner hellen Hälfte.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Umlaufzeit und Phasenzyklus sind nicht gleich lang: Während der Mond umläuft, bewegt sich auch die Erde auf ihrer Bahn um die Sonne weiter."
+      },
+      "observation": "Stelle drei Mondphasen im Labor ein. Sage zu jeder, welcher Anteil sichtbar hell ist und welcher Körper das Licht liefert.",
+      "whyItMatters": "Du erklärst eine veränderte Ansicht, ohne eine veränderte Form des Körpers zu erfinden.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "moon-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "442d3a1cdec742cefc62a62c68a04a57b52c4021fa06ecc949b0f4b6cbcdb66f"
+    },
+    {
+      "id": "moon:2",
+      "title": "Ein Viertel zeigt einen Halbmond",
+      "baselineText": "Beim ersten Viertel sehen wir die rechte Hälfte der Scheibe hell, wie üblich von der Nordhalbkugel betrachtet. Der Name meint ein Viertel des Weges durch den Phasenzyklus.",
+      "baselineHash": "58366cc6e2d6837c750025b7baad89970433edca1b2f75f7769ba0d1a88b5213",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Die Namen beschreiben zwei verschiedene Anteile: Ein Viertel des Phasenwegs kann eine halb beleuchtete sichtbare Scheibe ergeben. Rechts oder links hängt außerdem von der Betrachtung ab.",
+      "ages": {
+        "6-8": "Beim ersten Viertel sieht die Scheibe halb hell aus. Viertel meint den Zyklus.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Unsere übliche Darstellung entspricht dem Blick von der Nordhalbkugel. Eine gedrehte Zeichnung verändert die Richtung im Bild, nicht den Beleuchtungsmechanismus."
+      },
+      "observation": "Zeichne einen Zyklus mit vier Stationen. Markiere erstes Viertel und daneben die halb helle Mondscheibe; benenne beide Bruchteile verschieden.",
+      "whyItMatters": "Du kannst scheinbar widersprüchliche Brüche auf ihre unterschiedlichen Bezugsgrößen prüfen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "moon-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "6783dee0442f4b358eab06a407934fa3e68e9e0e93ac9e0dc427f0e48b2e79c4"
+    },
+    {
+      "id": "moon:3",
+      "title": "Krater und kleine Sprünge",
+      "baselineText": "Viele Mondkrater entstanden durch Einschläge. Die Schwerkraft ist auf dem Mond etwa ein Sechstel so stark wie auf der Erde. Menschen wiegen dort weniger, haben aber noch dieselbe Masse.",
+      "baselineHash": "79411c51f4f2cddd363b393ff5e66719cfdad29774c27bf194f085b1898b37cb",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Masse beschreibt, wie viel Materie ein Körper enthält; Gewichtskraft beschreibt die Anziehung auf ihn. Ein Mensch verliert beim Reisen zum Mond keine Körperteile, obwohl seine Gewichtskraft kleiner wird.",
+      "ages": {
+        "6-8": "Der Mond hat Krater. Seine Schwerkraft ist schwächer als die auf der Erde.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Eine Waage und eine Masseangabe sind nicht jede Art derselben Messung. Im Vergleich gilt die schwächere Anziehung an der Mondoberfläche."
+      },
+      "observation": "Beschreibe einen gedachten Sprung auf Erde und Mond. Sage, was am Menschen gleich bleibt und welche Umgebungsbedingung sich ändert. Springe nicht von erhöhten Flächen.",
+      "whyItMatters": "Du kannst weniger Gewicht erklären, ohne weniger Masse zu behaupten.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "moon-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "4f9aa6520c65fe0595ca96c3ba6bbe3fd15e19a845569fcc771942e02ecf073a"
+    },
+    {
+      "id": "moon:4",
+      "title": "Menschen auf dem Mond",
+      "baselineText": "1969 landete Apollo 11. Neil Armstrong und Buzz Aldrin gingen auf die Mondoberfläche. Michael Collins blieb im Raumschiff in der Mondumlaufbahn.",
+      "baselineHash": "a7595622e22494f8906d5d4058502659f17268cd2c41d7eaa8a7e56f9c616497",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine gemeinsame Mission enthält verschiedene Aufgaben. Auf dem Mond gehen und in der Mondumlaufbahn arbeiten waren beides Teile derselben Reise. Deshalb nennt eine vollständige Erklärung alle drei Beteiligten.",
+      "ages": {
+        "6-8": "1969 betraten zwei Apollo-11-Astronauten den Mond. Ein dritter blieb in der Umlaufbahn.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Eine frühere Landung und ein heutiges Forschungsvorhaben sind unterschiedliche Ereignisse. Ein historisches Datum darf nicht wie eine aktuelle Meldung dargestellt werden."
+      },
+      "observation": "Ordne Armstrong, Aldrin und Collins ihren Aufgaben bei Apollo 11 zu. Erkläre, weshalb zwei Oberflächenbesuche nicht bedeuten, dass nur zwei Menschen beteiligt waren.",
+      "whyItMatters": "Du beschreibst Zusammenarbeit, ohne nur die sichtbarste Person zu nennen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "moon-base",
+        "apollo"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "118d8ba7458a95b5c4b3ff13bd799807cbe5dfd217de258cd9212a681bfdd993"
+    },
+    {
+      "id": "navigation:0",
+      "title": "Zwei Halbkugeln",
+      "baselineText": "Der Äquator teilt die Erde in Nord- und Südhalbkugel. Sein Breitengrad ist null. Die Pole liegen an den beiden Enden der gedachten Erdachse.",
+      "baselineHash": "a6df9ee336846634c07cd7784cdd9c8113f23055894f271598230716408cd1fb",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine gedachte Linie hilft beim Beschreiben eines Ortes, auch wenn sie draußen nicht aufgemalt ist. Der Äquator ist zugleich die Bezugslinie für null Grad geografischer Breite.",
+      "ages": {
+        "6-8": "Der Äquator trennt Nord- und Südhalbkugel. Er ist eine gedachte Linie.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Breite beschreibt einen Winkel, keine Entfernung in Metern. Die Karte nutzt ihn zur Lagebeschreibung."
+      },
+      "observation": "Suche einen Ort nördlich und einen südlich des Äquators. Beschreibe ihre Lage, ohne oben und unten am Bildschirm als Begründung zu verwenden.",
+      "whyItMatters": "Du kannst ein Zeichen auf einer Karte mit seiner geografischen Bedeutung verbinden.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "navigation-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "e628b67320cc993fd7f5cc9e61542f836001ef3dea301b720ee4855330aeb28b"
+    },
+    {
+      "id": "navigation:1",
+      "title": "Breite und Länge",
+      "baselineText": "Breitengrade zeigen, wie weit nördlich oder südlich vom Äquator ein Ort liegt. Längengrade zeigen, wie weit östlich oder westlich vom Nullmeridian ein Ort liegt. Zusammen helfen sie, Orte genau zu finden.",
+      "baselineHash": "6363c99bce722812d2c85c1d8d8f4007e65eab53d8a1182047840bbb86a40725",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Nur nördlich reicht nicht für einen eindeutigen Ort. Erst die zweite Richtung ergänzt die Lage. Das ähnelt Zeile und Spalte in einem Raster, ist auf der Kugel aber ein Winkelnetz.",
+      "ages": {
+        "6-8": "Breite und Länge helfen zusammen, einen Ort auf der Erde zu finden.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Die Längenkreise kommen an den Polen zusammen. Deshalb sind Strecken zwischen gleichen Längenunterschieden nicht auf jeder Breite gleich groß."
+      },
+      "observation": "Wähle zwei Orte mit ähnlicher Breite und verschiedener Länge. Erkläre, welche der beiden Angaben sie unterscheidet.",
+      "whyItMatters": "Du lernst, warum ein Ort zwei Koordinaten braucht.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "navigation-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "cc50d2ca3760289c239aae170bc7eb8313db46ecdaf6a6ba5ec143f41ac634f9"
+    },
+    {
+      "id": "navigation:2",
+      "title": "Der Nullmeridian",
+      "baselineText": "Der Nullmeridian ist die vereinbarte Linie für null Grad Länge. Er läuft durch Greenwich in London. Anders als beim Äquator gibt es dafür keine besondere natürliche Lage.",
+      "baselineHash": "24f2960a2b1a2da3c1c701bccfd9a454b3054b23fe1f26a4a093e26b34f60217",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Für den Beginn der Längenzählung brauchte es eine Vereinbarung. Der Äquator hat dagegen eine geometrische Lage zwischen den Polen. Beide heißen null Grad, aber nicht in derselben Richtung.",
+      "ages": {
+        "6-8": "Der Nullmeridian ist der vereinbarte Anfang für geografische Länge.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Historischer Greenwich-Meridian und moderner geodätischer Nullmeridian sind nicht exakt dieselbe Linie. Unser einfaches Weltmodell unterscheidet diese kleine Abweichung nicht."
+      },
+      "observation": "Finde den Nullmeridian und den Äquator. Beschrifte null Grad Länge und null Grad Breite und erkläre den Unterschied.",
+      "whyItMatters": "Du erkennst, dass eine gemeinsame Regel nicht automatisch ein Naturgesetz ist.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "navigation-base",
+        "meridian"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "5d966695a9a25f30aecc3d00029fce8a7b7c133eaf22eec19c464252bb9c8d0e"
+    },
+    {
+      "id": "navigation:3",
+      "title": "Die Wendekreise",
+      "baselineText": "Die Wendekreise liegen etwa 23,4 Grad nördlich und südlich des Äquators. Zwischen ihnen kann die Sonne zu bestimmten Zeiten mittags genau über einem Ort stehen.",
+      "baselineHash": "3d0b4cb8f80ab2a82351e155a4b9c024c2ea5b066693ef39335d3de4b17e719b",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Die Achsneigung erklärt, warum es einen begrenzten Bereich dafür gibt. Außerhalb der Tropen erreicht die Sonne dieses Genau-über-uns nicht, auch wenn ein Sommertag hell und warm ist.",
+      "ages": {
+        "6-8": "Zwischen den Wendekreisen kann die Sonne mittags genau über einem Ort stehen.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Zenit bedeutet direkt über dem Beobachtungsort. Höher als im Winter bedeutet noch nicht automatisch im Zenit."
+      },
+      "observation": "Vergleiche im Jahreszeitenmodell einen tropischen Ort mit Deutschland. Beschreibe den Sonnenstand; schaue zur Prüfung nie direkt in die Sonne.",
+      "whyItMatters": "Du kannst Sonnenhöhe und Wärme als unterschiedliche Aussagen behandeln.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "navigation-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "1eb410bd8832ed5d5926278abc51bf7ae3c4cb2d5a13b8f23c2f4ea8746b4acd"
+    },
+    {
+      "id": "navigation:4",
+      "title": "Wie spät ist es woanders?",
+      "baselineText": "Die Erde dreht sich. Deshalb haben Orte im Osten und Westen nicht gleichzeitig Mittag nach der Sonne. Menschen nutzen Zeitzonen. Echte Grenzen sind viel unregelmäßiger als gleich breite Streifen.",
+      "baselineHash": "85685cc2984bc749792cf7960afb318d8b72a89ec7c57c814062655243932fbd",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Die Erddrehung erklärt den zeitlichen Unterschied; vereinbarte Zeitzonen machen Uhren alltagstauglich. Ihre Grenzen folgen deshalb nicht einfach einem gleichmäßigen Linienmuster.",
+      "ages": {
+        "6-8": "Menschen haben Uhrzeiten vereinbart. Nicht überall ist zugleich Mittag nach der Sonne.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Sommerzeit und politische Regeln können den Uhrunterschied ändern. Eine geografische Skizze ist deshalb kein vollständiger aktueller Fahrplan."
+      },
+      "observation": "Vergleiche zwei Städte im Welt-Uhren-Labor. Notiere auch das Datum und erkläre, warum eine feste ganzjährige Differenz nicht immer passt.",
+      "whyItMatters": "Du verstehst, weshalb eine Stadtzeit zusätzliche Regeln braucht.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "navigation-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "3bc78ac0c6d3a0e005de66517105bb37e845d5a71d28fdf74d36bcfa964e6145"
+    },
+    {
+      "id": "landscapes:0",
+      "title": "Berge wachsen langsam",
+      "baselineText": "Wenn Platten zusammenstoßen, kann Gestein gefaltet und gehoben werden. So entstand etwa der Himalaya. Manche Berge sind Vulkane, aber längst nicht alle.",
+      "baselineHash": "29e3aeee23eb2ef1269a5ca338544dca3ae3499f3d99c528f6b01dcb5333c2df",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Aufbauen und Abtragen wirken zusammen. Während sich Gestein hebt, können Wasser, Wind und Eis Material entfernen. Die heutige Form ist das Ergebnis einer langen Geschichte.",
+      "ages": {
+        "6-8": "Plattenbewegungen können Berge heben. Nicht jeder Berg ist ein Vulkan.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Höchster Berg braucht eine Messregel. Höhe über dem Meer und Höhe vom Fuß bis zum Gipfel können unterschiedliche Vergleiche ergeben."
+      },
+      "observation": "Vergleiche ein Gebirge und einen Vulkan auf der Naturkarte. Nenne einen möglichen Bildungsprozess und sage, welche Information das Bild allein nicht beweist.",
+      "whyItMatters": "Du beschreibst Landschaft als Ergebnis von Vorgängen, statt nur als fertiges Bild.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "landscapes-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "74b32d263e6c2120eefedc93ae4f64aecf56534364974c5022729ad34f30bb61"
+    },
+    {
+      "id": "landscapes:1",
+      "title": "Wasser trägt Gestein ab",
+      "baselineText": "Flüsse fließen durch die Landschaft. Sie transportieren Sand, Steine und gelöste Stoffe. Über lange Zeit können sie tiefe Täler formen.",
+      "baselineHash": "44f8ef6f87b7458d60558db6cab3796ee5ff6c92289490dd010a23a416265d18",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Wasser kann Material abtragen, mitnehmen und an anderer Stelle ablagern. Das ist nicht nur ein Weg zum Meer, sondern auch ein Umbauen der Landschaft.",
+      "ages": {
+        "6-8": "Flüsse transportieren Wasser und Material. Über lange Zeit verändern sie Täler.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Länge und Wassermenge sind unterschiedliche Merkmale eines Flusses. Ein Rekord ohne Merkmal beantwortet keine eindeutige Frage."
+      },
+      "observation": "Zeichne an einem gedachten Fluss je eine Stelle für Abtragen und Ablagern. Erkläre, warum beide Vorgänge zur selben Landschaftsgeschichte gehören können.",
+      "whyItMatters": "Du kannst Wasserbewegung mit einer Veränderung der Landschaft verbinden.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "landscapes-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "f49a0372d33e6c283d6f2eb75ef8bd5d8598d4bd0ea70cab24380b9558a1c4e4"
+    },
+    {
+      "id": "landscapes:2",
+      "title": "Ein See bleibt im Land",
+      "baselineText": "Seen sammeln Wasser in Vertiefungen. Einige haben Zu- und Abflüsse; andere haben keinen Abfluss zum Meer. Der große Baikalsee liegt in Asien.",
+      "baselineHash": "43002fec8ab346de9bc82d50fa855a25c0816ad959937226814e6bcc2b320e25",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Der Name allein entscheidet nicht über die Gewässerart. Das Kaspische Meer heißt Meer, ist aber ein Binnengewässer. Schau auf Lage und Verbindung statt nur auf das Wort im Namen.",
+      "ages": {
+        "6-8": "Ein See liegt in einer Vertiefung an Land. Manche Seen haben keinen Abfluss zum Meer.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Zu- und Abfluss, Verdunstung und Niederschlag gehören zur Wasserbilanz. Ein See muss deshalb nicht unverändert voll bleiben."
+      },
+      "observation": "Finde einen See und ein mit dem Ozean verbundenes Meer auf der Karte. Beschreibe die Wasserverbindungen beider, statt nur ihre Namen abzulesen.",
+      "whyItMatters": "Du lernst, Bezeichnungen an Merkmalen zu überprüfen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "landscapes-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "5301ef3f56947d8a061c087b0a199d03468dc7fd059e1ad28f6733e04ae19460"
+    },
+    {
+      "id": "landscapes:3",
+      "title": "Trocken, nicht immer heiß",
+      "baselineText": "Eine Wüste bekommt sehr wenig Niederschlag. Die Sahara ist die größte heiße Wüste. Antarktika ist eine noch größere, kalte Wüste.",
+      "baselineHash": "4281be6776be75dc62f0efcfe23472bc3a3edd0da9798086f7b258b0f5e059ce",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine Rekordfrage braucht ihre Gruppe: heiße Wüsten meint etwas anderes als alle Wüsten. Temperatur und geringe Niederschläge müssen getrennt genannt werden.",
+      "ages": {
+        "6-8": "Wüsten sind trocken. Die größte heiße Wüste und eine Kältewüste sind verschiedene Vergleiche.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Eine dicke Eisschicht ist kein Beweis für viel heutigen Niederschlag. Gespeichertes Wasser und neu fallender Niederschlag sind verschiedene Größen."
+      },
+      "observation": "Vergleiche Sahara und Antarktika. Stelle zwei verschiedene Rekordfragen und erkläre, weshalb ihre Antworten unterschiedlich sein können.",
+      "whyItMatters": "Du kannst eine überraschende Einordnung mit einer klaren Zähl- oder Messregel begründen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "landscapes-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "768de07aa69852bf34819667499e01b1466f30c054c91f2b4faa1b6ca3e4fd24"
+    },
+    {
+      "id": "landscapes:4",
+      "title": "Eis als Landschaftsformer",
+      "baselineText": "Ein Gletscher ist langsam fließendes Eis. Er kann Gestein abschleifen und große Täler formen. Ein Eisberg ist dagegen ein abgebrochenes Stück Eis im Wasser.",
+      "baselineHash": "03001959c90d930a2c0146968a8c586a721b0018e818db60c585eb7501980018",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eis kann Material abschleifen und mitnehmen. Wenn es sich zurückzieht, bleiben geformte Täler und abgelagerte Reste zurück. Bewegung und Form gehören daher zur Erklärung eines Gletschers.",
+      "ages": {
+        "6-8": "Gletscher bewegen sich langsam an Land. Eisberge schwimmen als abgebrochene Eisstücke.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Ein Gletscher kann zugleich fließen und sich verkürzen, wenn mehr Eis verloren geht als nachkommt. Fließrichtung und Änderung seiner Länge sind nicht dasselbe."
+      },
+      "observation": "Vergleiche Gletscher und Eisberg im Schaubild. Zeichne ihre Lage zu Land und Wasser und sage, welche Darstellung eine gedachte Vereinfachung ist.",
+      "whyItMatters": "Du unterscheidest Eisbewegung von Wachstum oder Rückzug.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "landscapes-base",
+        "glaciers"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "cbe2e85b80dd21810d8dff444da92a50d6ed3901d5614995a300a45b41d66a8f"
+    },
+    {
+      "id": "climate:0",
+      "title": "Wetter ist heute, Klima ist lange",
+      "baselineText": "Wetter beschreibt, was die Luft gerade macht. Klima beschreibt typische Bedingungen über viele Jahre. Ein kalter Tag allein sagt wenig darüber, wie sich das Klima langfristig verändert.",
+      "baselineHash": "91ae924f5e7349d10a5ae0e7bc99e2c4f3b9eecf31272108560dc97df6c420a4",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine Wetterbeobachtung ist ein Baustein für spätere Vergleiche. Erst viele passende Daten helfen, typische Bedingungen und Veränderungen zu erkennen. Drei Tage ersetzen keine lange Beobachtungsreihe.",
+      "ages": {
+        "6-8": "Klima beschreibt lange Zeiträume. Ein einzelner Tag ist Wetter.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Ein Mittelwert zeigt nicht die gesamte Verteilung. Für Klima interessieren auch Unterschiede und wiederkehrende Muster."
+      },
+      "observation": "Notiere einen Wetterzustand und eine Klimaaussage. Erkläre für beide, welchen Zeitraum du zum Überprüfen brauchen würdest.",
+      "whyItMatters": "Du kannst kurzfristige Beobachtungen und langfristige Aussagen passend einordnen.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "climate-base",
+        "weather-climate"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "cb2d76383ff5daba4a25f484d1edf81b53df3eff73ea142e79bd377fd90047eb"
+    },
+    {
+      "id": "climate:1",
+      "title": "Sonnenenergie auf der Kugel",
+      "baselineText": "Nahe dem Äquator trifft Sonnenlicht im Jahreslauf steiler auf. In polaren Gebieten trifft es flacher auf und verteilt sich auf größere Flächen. Deshalb gibt es breite Klimagürtel.",
+      "baselineHash": "9cff7b96f03b191667af66edfa9bab0f02252e79cd2fb61f1da78fdd45d1bf07",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Dieselbe Lichtmenge kann auf eine kleine oder große Fläche fallen. Für die Erwärmung eines Flächenstücks macht das einen Unterschied. So hilft der Sonnenwinkel beim Erklären breiter Klimagürtel.",
+      "ages": {
+        "6-8": "Flach auftreffendes Sonnenlicht verteilt sich auf mehr Fläche.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Breitengrad allein bestimmt nicht das vollständige örtliche Klima. Höhe, Strömungen und weitere Bedingungen können ähnliche Breiten unterschiedlich machen."
+      },
+      "observation": "Vergleiche im Jahreszeitenmodell einen steilen und einen flachen Lichteinfall. Beschreibe Fläche und Tagesdauer getrennt.",
+      "whyItMatters": "Du verbindest ein einfaches Flächenmodell mit einer Erklärung für die Erde.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "climate-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "21a73f533a6efb2f7c6cc0d964d746dbe2f1374b6ba1c8323530f9c92793f585"
+    },
+    {
+      "id": "climate:2",
+      "title": "Regenwald oder Savanne?",
+      "baselineText": "In warmen, sehr feuchten Gebieten können tropische Regenwälder wachsen. Wo sich Regen- und Trockenzeiten stärker abwechseln, finden wir etwa Savannen. Beide können in den Tropen liegen.",
+      "baselineHash": "02a49a1c82f3f82479f15729f56e4b668a0d37b76389ea1a823f12ef2cb93bd6",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Wenn du nur warm notierst, fehlen wichtige Bedingungen für Pflanzen. Wie viel Regen fällt und wann er fällt, verändert das Wasserangebot während des Jahres.",
+      "ages": {
+        "6-8": "Regenwald und Savanne können in den Tropen liegen. Wasser und Regenzeiten unterscheiden sie.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Eine Grenze auf einer einfachen Vegetationskarte ist nicht überall ein scharfer Wechsel in der Natur. Übergänge und örtliche Bedingungen bleiben wichtig."
+      },
+      "observation": "Vergleiche zwei tropische Beispielorte auf der Vegetationskarte. Nenne eine Gemeinsamkeit und eine begründete Unterschiedsfrage zum Wasserangebot.",
+      "whyItMatters": "Du kannst Pflanzenwelten mit mehreren Bedingungen statt nur einem Merkmal erklären.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "climate-base"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "acd4e89dd3561b676660f89169196ac1ebed99b541ade28ff3664bc0bdb1c3b6"
+    },
+    {
+      "id": "climate:3",
+      "title": "Wald und Tundra",
+      "baselineText": "In vielen gemäßigten Regionen wachsen Wälder. In sehr kalten Gebieten mit kurzem Sommer bleiben Pflanzen oft niedrig: Moose, Flechten und Sträucher gehören zur Tundra.",
+      "baselineHash": "2e27d67b1a73d277c1d2d1ec105aab7eabf6a255c3ad314c89fdfcaea335fedc",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Bäume, Sträucher und Moose brauchen nicht alle dieselben Bedingungen. Wasser, Wärme und Boden wirken zusammen. Eine Landschaftsbezeichnung ist deshalb eine Orientierung, keine Beschreibung jeder einzelnen Pflanze.",
+      "ages": {
+        "6-8": "Ein kurzer kalter Sommer begrenzt das Pflanzenwachstum. In der Tundra bleiben viele Pflanzen niedrig.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Menschliche Nutzung kann eine Pflanzenwelt ebenfalls verändern. Klima und Vegetation hängen zusammen, sind aber keine austauschbaren Begriffe."
+      },
+      "observation": "Vergleiche Wald und Tundra auf der Karte. Beschreibe sichtbare Pflanzenformen und markiere, welche weiteren Bedingungen die Karte nicht zeigt.",
+      "whyItMatters": "Du lernst, eine Pflanzenkarte zu erklären und weitere Einflussgrößen mitzudenken.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "climate-base",
+        "weather-climate"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "ee046b5c422661daf0869ff1cbe76e7a2457be00689addc1c35025c37969b75f"
+    },
+    {
+      "id": "climate:4",
+      "title": "Lebensräume schützen",
+      "baselineText": "Tiere brauchen Nahrung, Wasser und Schutz. Wird ein Lebensraum stark verändert, kann es schwer werden, all das zu finden. Eine Vielfalt von Arten kann einen Lebensraum widerstandsfähiger machen. Welche Beziehungen dabei helfen, hängt vom Lebensraum ab.",
+      "baselineHash": "8d71689c21fc26395bb099277811aa050fe68906c3304f151f8ac0ccb0fa90db",
+      "assessment": "Grundfakten und alte Identität bewahrt; bisher fehlende eigenständige Vergleichs-/Ursachen-/Modellgrenzen-Erklärung ergänzt.",
+      "addedExplanation": "Eine Art zu schützen heißt auch, Nahrung, Wasser und Schutzmöglichkeiten zu beachten. Ein schönes Bild eines Tiers reicht nicht, wenn sein Lebensraum die nötigen Bedingungen verliert.",
+      "ages": {
+        "6-8": "Lebewesen brauchen passende Bedingungen. Schutz betrifft ihre Beziehungen und ihren Lebensraum.",
+        "9-11": "Grundtext und zusätzliche Erklärung",
+        "12-14": "Vielfalt ist kein pauschaler Schutz vor jeder Veränderung. Entscheidend sind auch konkrete Beziehungen und die Art der Belastung."
+      },
+      "observation": "Wähle eine Art aus der Tierwelt. Erkläre eine passende Schutzidee mit einem Bedürfnis der Art; beobachte Tiere nur mit Abstand.",
+      "whyItMatters": "Du erkennst einen Zusammenhang zwischen einer Art und ihrem ganzen Umfeld.",
+      "graphics": "Vorhandenes Kapitelschaubild/Einführungsmodell erhalten; individuelle grafische Fachabnahme bleibt offen.",
+      "existingTasks": {
+        "count": 3,
+        "status": "Alle drei freiwilligen Hinweise individuell nachredigiert; vorhandene richtige Antworten und Indizes erhalten. 32 frühere gezielte Distraktoren-/Feedbackkorrekturen bewahrt. Unabhängige Fach-/Kinderabnahme und vollständiger Einzelquellenabgleich weiterhin offen."
+      },
+      "sources": [
+        "climate-base",
+        "weather-climate"
+      ],
+      "editorialStatus": "Codex-Nachredaktion; keine unabhängige Fach-/Kinderabnahme",
+      "sourceStatus": "Alt-/Neubelege kapitelweise weiter abgleichen; keine pauschale Quellenfreigabe",
+      "currentTextHash": "5f5fda09bdc51fc21670052d9ea19e121728f82a550aa38c28e1644a35c66850"
+    }
+  ]
+}

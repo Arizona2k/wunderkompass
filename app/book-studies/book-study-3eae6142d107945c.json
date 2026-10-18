@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "term": "Wasserkreislauf",
+  "learning": {
+    "starter": "Wasser hat verschiedene Wege und Speicher. Es kann in die Luft gelangen, kondensieren, niedergehen oder im Boden und Eis gespeichert bleiben.",
+    "deeper": "Es gibt keinen festen Fahrplan, den jedes Wasserteilchen in derselben Reihenfolge durchläuft. Sonne und Schwerkraft treiben verschiedene Vorgänge an. Ein einfaches Kreisschema lässt lange Speicherung und manche Nebenwege aus.",
+    "observe": "Zeichne neben einem gedachten Kreis einen seitlichen Bodenspeicher und einen Eisspeicher. Markiere, dass Wasser auch dort bleiben kann. Das eigene Schema gibt keine weltweit gleiche Umlaufzeit und zählt keine echten Wasserteilchen.",
+    "benefit": "Du verstehst unterschiedliche Wege und Speicher statt eines für jedes Teilchen gleichen Rundkurses.",
+    "connection": "Die Karte und das Labor zeigen begrenzte Wege. Ergänze im Journal einen möglichen Speicher, statt dem Kreisschema eine vollständige globale Messung zuzuschreiben.",
+    "topic": "science-water-cycle",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/water-cycle",
+        "title": "USGS · Wasserkreislauf",
+        "anchor": "Wasserspeicher, Transportwege und Zustandswechsel. Die eigene Skizze zeigt Möglichkeiten und keine Pflichtreihenfolge, festen Aufenthaltszeiten oder Wasserqualitätsprüfung.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Niederschlag",
+        "reason": "Wasser aus der Atmosphäre ist ein Weg im Kreislauf. Ein gezeichneter Tropfen ist keine gemessene Niederschlagsmenge oder ein vollständiger Rundkurs."
+      },
+      {
+        "term": "Grundwasser",
+        "reason": "Unterirdische Speicherung ergänzt die dargestellten Wasserwege. Eine einfache Kreiszeichnung enthält keine überall gleiche Aufenthaltsdauer."
+      },
+      {
+        "term": "Einzugsgebiet",
+        "reason": "Ein gemeinsamer Abfluss ordnet Wasserwege räumlich. Verdunstung und Speicherung verhindern, dass jeder Tropfen sofort am Ausgang ankommt."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Ergänzung zeigt eine wichtige Grenze des einfachen Kreises?",
+      "answers": [
+        "Die Behauptung, jeder Umlauf dauert einen Tag",
+        "Ein seitlicher Speicher mit anderer Aufenthaltsdauer",
+        "Die Behauptung, jeder Tropfen besucht jede Station"
+      ],
+      "correct": 1,
+      "hint": "Prüfe, ob das Wasser nur unterwegs sein kann oder auch gespeichert bleibt.",
+      "why": "Ein seitlicher Speicher zeigt, dass unterschiedliche Wege und Aufenthaltszeiten möglich sind. Der Kreis ist nur eine vereinfachte Auswahl.",
+      "wrongReasons": [
+        "Eine überall gleiche Tagesdauer wird durch das Schema nicht gemessen oder belegt.",
+        "",
+        "Wasser kann gespeichert sein oder andere Wege nehmen. Jede Station ist kein Pflichtbesuch."
+      ]
+    }
+  }
+}

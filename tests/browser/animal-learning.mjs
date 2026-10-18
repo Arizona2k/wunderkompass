@@ -3,6 +3,7 @@ import {exerciseSolar} from './solar-comparison.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import expansion from '../../content/animal-expansion-review.json' with {type:'json'};
 import review from '../../content/animal-editorial-review.json' with {type:'json'};
 import DATA from '../../app/animal-inquiries.json' with {type:'json'};
 import catalog from '../../app/world-catalog.json' with {type:'json'};
@@ -22,6 +23,32 @@ export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='n
  const root=p.locator('[data-animal-inquiry="'+data.id+'"]');await root.waitFor({state:'attached'});
  if(!await root.evaluate(e=>e.open))await root.locator(':scope > summary').click();
  await root.getByRole('heading',{name:data.goal,exact:true}).waitFor();
+ if(expansion.entries.some(e=>e.id===data.id)){
+  const visual=p.locator('[data-animal-illustration="'+data.id+'"]:not(.compact)');await visual.waitFor();
+  await visual.locator('img').scrollIntoViewIfNeeded();
+  await visual.locator('img').evaluate(async image=>{await image.decode();if(!image.complete||!image.naturalWidth)throw Error('Missing new animal illustration');});
+  const labels=await visual.locator('.animal-illustration-labels span').evaluateAll(elements=>elements.map(e=>{const r=e.getBoundingClientRect();return {text:e.textContent,font:parseFloat(getComputedStyle(e).fontSize),left:r.left,right:r.right};}));
+  assert.equal(labels.length,2);assert.ok(labels.every(l=>l.text&&l.font>=16&&l.left>=-2&&l.right<=width+2),'new illustration labels reflow');
+  assert.ok((await visual.locator('img').getAttribute('alt')).includes('schematische'));
+  const captionEdges=await visual.evaluate(el=>{const box=el.getBoundingClientRect();return [...el.querySelectorAll('figcaption,.animal-illustration-labels span')].flatMap(e=>{const range=document.createRange();range.selectNodeContents(e);return [...range.getClientRects()].flatMap(r=>r.left<box.left+8||r.right>box.right-8||r.bottom>box.bottom-8?[{text:e.textContent,left:r.left-box.left,right:box.right-r.right,bottom:box.bottom-r.bottom}]:[]);});});
+  assert.deepEqual(captionEdges,[],'actual text ink stays clear of rounded clipping, including the last caption line');
+  const titleInk=await p.locator('#world-topic-title').evaluate(e=>{const range=document.createRange();range.selectNodeContents(e);return [...range.getClientRects()].map(r=>({left:r.left,right:r.right}));});
+  assert.ok(titleInk.every(r=>r.left>=-2&&r.right<=width+2),'new animal title remains fully visible');
+
+
+
+  if(shots&&[320,390,1440].includes(width)&&state==='normal')await visual.screenshot({path:path.join(shots,'animal-new-'+data.id.slice(7)+'-'+width+'.png'),animations:'disabled'});
+ }
+
+ const topic=topics.find(t=>t.id===data.id),measure=p.locator('.animal-measure');
+ const weight=['g','kg'].includes(topic.animal.size.unit);await measure.getByRole('heading',{name:weight?'Ein Gefühl für das Gewicht':'Ein Gefühl für die Größe',exact:true}).waitFor();
+ const compare=measure.getByRole('button',{name:weight?'Einen Gewichtsvergleich zeigen':'Einen Größenvergleich zeigen',exact:true});if(await compare.getAttribute('aria-expanded')!=='true')await compare.click();
+ assert.ok((await measure.innerText()).includes(topic.animal.size.measurement_de));await geometry(measure,data.id+' exact measurement direction '+width);
+ if(topic.animal.size.kind==='upper-bound')assert.ok((await measure.innerText()).includes('keinen Mindestwert'));
+ await measure.getByText(topic.animal.size.measurement_de+': '+topic.animal.size.text_de,{exact:true}).waitFor();assert.equal(await measure.locator('.measure-bars strong').first().innerText(),(topic.animal.size.kind==='typical'?'etwa':'bis etwa')+' '+topic.animal.size.max.toLocaleString('de-DE',{maximumFractionDigits:3})+' '+topic.animal.size.unit);
+ const sources=p.locator('.world-sources');if(!await sources.evaluate(e=>e.open))await sources.locator('summary').click();await sources.getByRole('link').first().waitFor();assert.deepEqual(await sources.getByRole('link').evaluateAll(links=>links.map(a=>a.getAttribute('href'))),data.sourceUrls,'all actual old/new article sources remain exact');
+ if(shots&&data.id==='animal-jaguar'&&[320,1440].includes(width)&&state==='normal')await measure.screenshot({path:path.join(shots,'animal-jaguar-corrected-measure-'+width+'.png'),animations:'disabled'});
+
  const levels=root.locator('.animal-inquiry-levels button');
  for(let level=0;level<3;level++){
   if(keyboard){await levels.nth(level).focus();await p.keyboard.press('Enter');}else await levels.nth(level).click();
@@ -37,7 +64,7 @@ export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='n
   await geometry(root,data.id+' '+width+' level'+level);
   if(shots&&data.id==='animal-whale-shark')await root.screenshot({path:path.join(shots,'animal-workshop-'+state+'-'+level+'-'+width+'.png'),animations:'disabled'});
  }
- return {id:data.id,width,state,levels:[0,1,2],bothEvidence:true,wrongAndCorrect:true,keyboard,geometry:true};
+ return {id:data.id,width,state,levels:[0,1,2],bothEvidence:true,wrongAndCorrect:true,keyboard,geometry:true,measurement:true,sourceLinks:true};
 }
 export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix=widths}={}){
  const observed=[],focusChecks=[],start=performance.now(),searchFocus=await delayedSearchFocus(browser,base,monitor,shots);
@@ -66,14 +93,14 @@ export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix
  }
  await animalNavigation(browser,base,ready,monitor,shots);
  report.animalCoverage={observed,focusChecks,searchFocus,seconds:(performance.now()-start)/1000,oldSessionsPreserved:true,largeText:true,axe:true,independentAcceptance:false,navigation:true};
- report.checks.push('24 existing animal cards: individual evidence, three voluntary thinking paths,48 reasoning tasks, wrong/correct feedback, keyboard, large text, axe and old/new session reload at'+matrix.join('/'));
+ report.checks.push('48 animal cards (24 retained and24 new): individual evidence, three voluntary thinking paths,96 reasoning tasks, wrong/correct feedback, keyboard, large text, axe and old/new session reload at'+matrix.join('/'));
 }
 export async function animalNativeZoom(chromium,options,base,report,shots){
  const profile=path.join(shots,'animal-native-profile');await fs.mkdir(path.join(profile,'Default'),{recursive:true});await fs.writeFile(path.join(profile,'Default','Preferences'),JSON.stringify({partition:{default_zoom_level:{x:Math.log(2)/Math.log(1.2)}}}));
  const c=await chromium.launchPersistentContext(profile,{...options,...(!options.executablePath?{channel:'chromium'}:{}),viewport:{width:1280,height:900},deviceScaleFactor:1,reducedMotion:'reduce'}),p=c.pages()[0];
  try{await p.bringToFront();await p.goto(base+'#world/topic/'+DATA.entries[0].id);await p.locator('.world-mini-question').waitFor();const dimensions=await p.evaluate(()=>({cssWidth:innerWidth,scale:devicePixelRatio}));assert.deepEqual(dimensions,{cssWidth:640,scale:2});await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));const observed=[];for(const data of DATA.entries)observed.push(await exerciseAnimal(p,data,{width:640,keyboard:true,state:'large'}));const solarCaptures=[];report.solarNativeCoverage={observed:await exerciseSolar(p,{width:640,state:'large',shots,capture:async file=>{const shot=await captureNativeViewport(p,file);solarCaptures.push(shot);return shot;}}),percent:200,cssWidth:640,scale:2,captures:solarCaptures};await p.evaluate(id=>location.hash='world/topic/'+id,DATA.entries.at(-1).id);await p.locator('.animal-inquiry').locator(':scope > summary').click();await p.locator('.animal-inquiry').scrollIntoViewIfNeeded();const screenshot=await captureNativeViewport(p,shots+'/animal-native-200-large-640.png');report.animalNativeZoom={...dimensions,percent:200,screenshot,cards:DATA.entries.length,observed};}finally{await c.close();}
 }
-export async function offlineAnimals(p,report){const observed=[];for(const data of DATA.entries)observed.push(await exerciseAnimal(p,data,{width:1280,keyboard:true,state:'offline'}));report.animalOffline={cards:DATA.entries.length,coldRestart:true,observed};report.checks.push('All24 animal workshops usable after real server shutdown and cold offline browser restart');}
+export async function offlineAnimals(p,report){const observed=[];for(const data of DATA.entries)observed.push(await exerciseAnimal(p,data,{width:1280,keyboard:true,state:'offline'}));report.animalOffline={cards:DATA.entries.length,coldRestart:true,observed};report.checks.push('All48 animal workshops usable after real server shutdown and cold offline browser restart');}
 
 export async function animalNavigation(browser,base,ready,monitor,shots){
  const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await c.newPage(),engine=browser.browserType().name();monitor(p);let current='initial',stage='home';
@@ -84,7 +111,23 @@ export async function animalNavigation(browser,base,ready,monitor,shots){
   stage='actual input focus';await p.waitForFunction(()=>document.activeElement?.matches('.search-dialog [role="combobox"]'));
   stage='type exact title with actual keyboard';await p.keyboard.type(t.title);assert.equal(await input.inputValue(),t.title,'complete title from actual keyboard, including accents and spaces');
   stage='select exact result';await p.getByRole('option').filter({has:p.getByText(t.title,{exact:true})}).click();await p.locator('[data-animal-inquiry="'+entry.id+'"]').waitFor({state:'attached'});stage='reload';await p.reload();await ready(p);
-  const edge=review.newConnections.find(e=>e.fromId===entry.id||e.toId===entry.id);assert.ok(edge,'individual explained context '+entry.id);const otherId=edge.fromId===entry.id?edge.toId:edge.fromId;
+  if(expansion.entries.some(e=>e.id===entry.id)){
+   const quiz=p.locator('.world-mini-question');await quiz.getByRole('heading',{name:t.question.prompt,exact:true}).waitFor();
+   if(await quiz.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).count())await quiz.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();
+   const hint=quiz.locator('.world-game-hint');assert.equal(await hint.count(),1,'new mini-question has its own voluntary hint');
+   assert.equal(await hint.getByText(t.questionFeedback.hint,{exact:true}).isVisible(),false,'hint does not open itself');
+   await hint.locator('summary').focus();await p.keyboard.press('Enter');await hint.getByText(t.questionFeedback.hint,{exact:true}).waitFor();await hint.locator('summary').click();
+   for(const [index,answer] of t.question.answers.entries())if(index!==t.question.correct){
+    await quiz.locator('.quiz-answer').filter({has:p.getByText(answer,{exact:true})}).click();
+    await quiz.locator('.lab-feedback').getByText(t.questionFeedback.wrongReasons[index],{exact:true}).waitFor();
+    assert.equal(await quiz.locator('.lab-feedback').getByText(t.question.why,{exact:true}).count(),0,'wrong choice does not display the correct explanation');
+   }
+   await quiz.locator('.quiz-answer').filter({has:p.getByText(t.question.answers[t.question.correct],{exact:true})}).click();
+   await quiz.locator('.lab-feedback').getByText(t.question.why,{exact:true}).waitFor();
+   assert.ok(await quiz.locator('.quiz-answer').first().isDisabled(),'new quiz retains the existing earned-answer gate');
+   await quiz.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();
+  }
+  const edge=[...review.newConnections,...expansion.newConnections].find(e=>e.fromId===entry.id||e.toId===entry.id);assert.ok(edge,'individual explained context '+entry.id);const otherId=edge.fromId===entry.id?edge.toId:edge.fromId;
   const selector='[data-route-focus="world-connection-'+entry.id+'-'+otherId+'"]';stage='explained connection';await p.locator(selector).click();await p.getByRole('heading',{name:catalog.find(t=>t.id===otherId).title,exact:true}).waitFor();
   stage='back and opener focus';await p.goBack();await p.locator('[data-animal-inquiry="'+entry.id+'"]').waitFor({state:'attached'});await p.waitForFunction(selector=>document.activeElement?.matches(selector),selector);
  }
@@ -92,6 +135,7 @@ export async function animalNavigation(browser,base,ready,monitor,shots){
  // controls. The complete later journey matrix remains unchanged.
  if(process.argv.includes('--search-only')){const sourceProof=await journeySourceView(p,{widths:[320,390,768,1440],shots,engine});console.log('EARLY_JOURNEY_SOURCES',JSON.stringify({engine,views:sourceProof.views.length,chapters:sourceProof.chapters}));}
  await sourceRouteInputFlow(browser,base,shots,engine);
+ if(process.argv.includes('--search-only'))await delayedSearchFocus(browser,base,monitor,shots);
  return topics.map(t=>t.id);
  }catch(error){const state=await p.evaluate(()=>({url:location.href,active:document.activeElement?.outerHTML.slice(0,700),query:document.querySelector('.search-dialog [role="combobox"]')?.value??null,queryAttribute:document.querySelector('.search-dialog [role="combobox"]')?.getAttribute('value')??null,dialog:document.querySelector('.search-dialog')?.getAttribute('data-state')??null,options:[...document.querySelectorAll('[role="option"]')].map(e=>({value:e.getAttribute('data-value'),text:e.textContent?.slice(0,180)})),trace:window.__animalSearchTrace??[]})).catch(()=>({unavailable:true}));const failure={engine,current,stage,error:error.message,...state};console.error('ANIMAL_SEARCH_FAILURE',JSON.stringify(failure));if(shots){await fs.writeFile(path.join(shots,'animal-search-failure-'+engine+'.json'),JSON.stringify(failure,null,2));await p.screenshot({path:path.join(shots,'animal-search-failure-'+engine+'.png'),fullPage:true,animations:'disabled'}).catch(()=>{});}throw new Error('Animal navigation '+engine+' '+current+' '+stage+': '+error.message,{cause:error});}finally{await c.close();}
 }
@@ -99,22 +143,25 @@ export async function animalNavigation(browser,base,ready,monitor,shots){
 // A lazy search must focus its real input even if the dialog initially contains
 // only the loading state and close button. No sleep or request retry is used.
 export async function delayedSearchFocus(browser,base,monitor,shots){
- const engine=browser.browserType().name();
+ const engine=browser.browserType().name(),proof={engine,scope:'delayed search input; real foreground keyboard, no action retries',stages:[]};
+ const state=p=>p.evaluate(()=>({documentFocus:document.hasFocus(),active:document.activeElement?.outerHTML.slice(0,600),query:document.querySelector('.search-dialog [role="combobox"]')?.value??null,trace:window.__delayedSearchTrace??[]}));
  async function setup(){
   const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await c.newPage();monitor(p);let release;const gate=new Promise(resolve=>release=resolve);
+  await p.addInitScript(()=>{window.__delayedSearchTrace=[];for(const type of ['keydown','keyup','beforeinput','input','change','focusin','focusout'])window.addEventListener(type,event=>{const target=event.target;if(target?.matches?.('.search-dialog [role="combobox"]')){window.__delayedSearchTrace.push({type,key:event.key??null,data:event.data??null,value:target.value,attribute:target.getAttribute('value'),documentFocus:document.hasFocus(),trusted:event.isTrusted,inputType:event.inputType??null,composing:event.isComposing??null,at:performance.now()});if(window.__delayedSearchTrace.length>96)window.__delayedSearchTrace.shift();}},true);});
   await p.route('**/assets/global-search-*.js',async route=>{await gate;await route.continue();});
-  await p.goto(base+'#world/topic/animal-whale-shark');await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor();const requested=p.waitForRequest(r=>/\/assets\/global-search-.*\.js/.test(r.url()));const opener=p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true});await opener.focus();await p.keyboard.press('Enter');await requested;await p.waitForFunction(()=>!!document.activeElement?.closest('.search-dialog'));return {c,p,release,opener};
+  await p.goto(base+'#world/topic/animal-whale-shark');await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor();const previouslyFocused=await p.evaluate(()=>document.hasFocus());await p.bringToFront();await p.waitForFunction(()=>document.hasFocus());proof.stages.push({stage:'foreground preparation',previouslyFocused,...await state(p)});const requested=p.waitForRequest(r=>/\/assets\/global-search-.*\.js/.test(r.url()));const opener=p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true});await opener.focus();await p.keyboard.press('Enter');await requested;await p.waitForFunction(()=>!!document.activeElement?.closest('.search-dialog'));return {c,p,release,opener};
  }
  let a=await setup();
  try{
-  a.release();const input=a.p.getByRole('combobox',{name:'Lernwelt durchsuchen',exact:true});await input.waitFor();await a.p.waitForFunction(()=>document.activeElement?.matches('.search-dialog [role="combobox"]'));
-  await a.p.keyboard.type('Großer Tümmler');assert.equal(await input.inputValue(),'Großer Tümmler');const result=a.p.getByRole('option').filter({has:a.p.getByText('Großer Tümmler',{exact:true})});await result.waitFor();if(shots)await a.p.locator('.search-dialog').screenshot({path:path.join(shots,'animal-search-delayed-390.png'),animations:'disabled'});await result.click();await a.p.locator('[data-animal-inquiry="animal-common-bottlenose-dolphin"]').waitFor({state:'attached'});
-  await a.p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await a.p.waitForFunction(()=>document.activeElement?.matches('.search-dialog [role="combobox"]'));await a.p.keyboard.type('Grüne Meeresschildkröte');assert.equal(await input.inputValue(),'Grüne Meeresschildkröte');await a.p.getByRole('option').filter({has:a.p.getByText('Grüne Meeresschildkröte',{exact:true})}).click();await a.p.locator('[data-animal-inquiry="animal-green-sea-turtle"]').waitFor({state:'attached'});await a.p.waitForLoadState('networkidle');
- }catch(error){if(shots)await a.p.screenshot({path:path.join(shots,'animal-search-delayed-failure-'+engine+'.png'),fullPage:true,animations:'disabled'}).catch(()=>{});throw error;}finally{a.release();await a.c.close();}
+  a.release();const input=a.p.getByRole('combobox',{name:'Lernwelt durchsuchen',exact:true});await input.waitFor();await a.p.waitForFunction(()=>document.hasFocus()&&document.activeElement?.matches('.search-dialog [role="combobox"]'));proof.stages.push({stage:'before first actual keyboard input',...await state(a.p)});
+  await a.p.keyboard.type('Großer Tümmler');assert.equal(await input.inputValue(),'Großer Tümmler');proof.stages.push({stage:'first complete title entered',...await state(a.p)});const result=a.p.getByRole('option').filter({has:a.p.getByText('Großer Tümmler',{exact:true})});await result.waitFor();if(shots)await a.p.locator('.search-dialog').screenshot({path:path.join(shots,'animal-search-delayed-390.png'),animations:'disabled'});await result.click();await a.p.locator('[data-animal-inquiry="animal-common-bottlenose-dolphin"]').waitFor({state:'attached'});
+  await a.p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await a.p.waitForFunction(()=>document.activeElement?.matches('.search-dialog [role="combobox"]'));await a.p.keyboard.type('Grüne Meeresschildkröte');assert.equal(await input.inputValue(),'Grüne Meeresschildkröte');proof.stages.push({stage:'second complete title entered',...await state(a.p)});await a.p.getByRole('option').filter({has:a.p.getByText('Grüne Meeresschildkröte',{exact:true})}).click();await a.p.locator('[data-animal-inquiry="animal-green-sea-turtle"]').waitFor({state:'attached'});await a.p.waitForLoadState('networkidle');
+ }catch(error){proof.error=error.stack;throw error;}finally{proof.stages.push({stage:'after first context',...await state(a.p).catch(()=>({unavailable:true}))});if(shots){await fs.writeFile(path.join(shots,'animal-search-delayed-proof-'+engine+'.json'),JSON.stringify(proof,null,2));if(proof.error)await a.p.screenshot({path:path.join(shots,'animal-search-delayed-failure-'+engine+'.png'),fullPage:true,animations:'disabled'}).catch(()=>{});}a.release();await a.c.close();}
  a=await setup();
  try{
   await a.p.keyboard.press('Escape');await a.p.locator('.search-dialog').waitFor({state:'hidden'});await a.p.waitForFunction(()=>document.activeElement?.getAttribute('aria-label')==='Lernwelt durchsuchen');const response=a.p.waitForResponse(r=>/\/assets\/global-search-.*\.js/.test(r.url()));a.release();await (await response).finished();await a.p.waitForLoadState('networkidle');assert.equal(await a.p.locator('.search-dialog').count(),0,'late module cannot reopen a closed dialog');assert.equal(await a.opener.evaluate(e=>document.activeElement===e),true,'late module cannot steal restored opener focus');
  }finally{a.release();await a.c.close();}
+ proof.stages.push({stage:'early close and restored opener passed'});if(shots)await fs.writeFile(path.join(shots,'animal-search-delayed-proof-'+engine+'.json'),JSON.stringify(proof,null,2));console.log('DELAYED_SEARCH_DOCUMENT',JSON.stringify({engine,preparation:proof.stages.filter(s=>s.stage==='foreground preparation').map(s=>({previouslyFocused:s.previouslyFocused,focused:s.documentFocus})),status:'passed'}));
  console.log('Delayed search input',engine,'real keyboard, two accented full titles, reopen and early close passed');
  return {delayedModule:true,keyboardQuery:true,reopenReady:true,closedBeforeReady:true,openerRestored:true};
 }

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Halbinsel",
+  "learning": {
+    "starter": "Eine Halbinsel ist an mehreren Seiten von Wasser umgeben und bleibt mit größerem Land verbunden.",
+    "deeper": "Die Landverbindung unterscheidet den gedachten Umriss von einer Insel. Politische Grenzen sind wieder eine andere Beschreibung. Eine vereinfachte Karte enthält keinen geprüften heutigen Wasserstand oder sichere Zugänglichkeit.",
+    "observe": "Zeichne eine Landfläche mit schmaler Verbindung zum Kartenrand und eine getrennte Insel daneben. Verfolge beide Umrisse. Das Papier ist keine echte Navigations- oder Gezeitenkarte.",
+    "benefit": "Du begründest die Unterscheidung anhand einer Landverbindung.",
+    "connection": "Das Wasserlabor ordnet Übergänge und Speicher. Die Umrissaufgabe ergänzt die räumliche Landverbindung, ohne reale Wasserstände zu berechnen.",
+    "lab": "water",
+    "sources": [
+      {
+        "url": "https://www.nps.gov/subjects/geology/coastal-landforms.htm",
+        "title": "NPS · Halbinsel",
+        "anchor": "Küste als Übergangsbereich zwischen Land und Wasser mit unterschiedlichen Formen und Prozessen. Keine aktuelle Küstenlinie oder sichere Zugänglichkeit abgeleitet.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      },
+      {
+        "url": "https://www.usgs.gov/us-board-on-geographic-names/gnis-domestic-names-feature-classes",
+        "title": "USGS · Geografische Formen",
+        "anchor": "Begriffstabelle zu Buchten, vorspringendem Land und Wasserpassagen. Eigene Umrisse erklären Formen; sie sind keine aktuelle Navigationskarte.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Welches Zeichnungsmerkmal unterscheidet hier die Halbinsel von der Insel?",
+      "answers": [
+        "Eine garantierte staatliche Grenze",
+        "Ein frei gewählter schöner Name",
+        "Die Verbindung auf Land zum größeren Landbereich"
+      ],
+      "correct": 2,
+      "hint": "Prüfe, ob im Modell ein Landweg zum Rand erhalten bleibt.",
+      "why": "Die Verbindung trennt die beiden gezeichneten Fälle. Name und Staatsgrenze definieren diese Landform nicht.",
+      "wrongReasons": [
+        "Politische Grenzen und Landverbindungen sind unterschiedliche Angaben.",
+        "Ein Name baut keine Landverbindung.",
+        ""
+      ]
+    }
+  }
+}

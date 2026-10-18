@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "term": "Kelvin",
+  "learning": {
+    "symbol": "K",
+    "quantity": "Temperatur",
+    "starter": "Temperaturen können auf verschiedenen Skalen stehen. Lies die Zahl und die Einheit zusammen.",
+    "deeper": "0 K entspricht −273,15 °C. Die heutige Definition der thermodynamischen Temperatur verwendet die Boltzmannkonstante. Der absolute Nullpunkt bedeutet in der Quantenphysik nicht, dass jede Bewegung verschwindet. Unser Umrechner zeigt nur die Beziehung der beiden Skalen, keine echte Temperaturmessung.",
+    "observe": "Vergleiche im Bildschirmmodell 0 °C mit 10 °C. Wie verändern sich die Kelvinzahlen? Zeige getrennt auf den Nullpunkt der Skala und den Größenunterschied.",
+    "benefit": "Du erkennst, warum dieselben Ziffern mit verschiedenen Temperatureinheiten nicht denselben Zustand bedeuten.",
+    "topic": "science-heat-transfer",
+    "question": {
+      "prompt": "Was stimmt beim Vergleich von Kelvin und Grad Celsius?",
+      "answers": [
+        "20 K und 20 °C bedeuten immer dasselbe",
+        "Ein Unterschied von 1 K ist größer als einer von 1 °C",
+        "Ein Unterschied von 1 K und 1 °C ist gleich groß"
+      ],
+      "correct": 2,
+      "hint": "Unterscheide die Stelle, an der eine Skala beginnt, von der Größe eines einzelnen Schritts.",
+      "why": "Die Schritte sind gleich groß, die Nullpunkte verschieden. Daher bleibt eine Änderung um 1 gleich groß, obwohl die Temperaturzahlen auf den beiden Skalen unterschiedlich sind.",
+      "wrongReasons": [
+        "Die Skalen haben verschiedene Nullpunkte. Gleiche Ziffern allein ergeben deshalb keine gleiche Temperatur.",
+        "Die Nullpunkte sind verschieden, nicht die Größe eines Temperaturschritts. Ein Unterschied von 1 ist auf beiden Skalen gleich groß.",
+        ""
+      ]
+    },
+    "connection": "Bei Wärmeübertragung unterscheiden wir Temperatur und übertragene Energie. Die Temperatureinheit gehört zur Angabe.",
+    "model": "temperature",
+    "sources": [
+      {
+        "url": "https://www.nist.gov/si-redefinition/kelvin-introduction",
+        "title": "NIST · Kelvin: Introduction",
+        "anchor": "Equal increments; 0 K = −273.15 °C; quantum zero-point motion; Boltzmann constant",
+        "updatedOn": "2026-01-05",
+        "checkedOn": "2026-10-13"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Wärme",
+        "reason": "Wärme ist eine Energieübertragung aufgrund eines Temperaturunterschieds. Kelvin benennt eine Temperatureinheit und ist keine übertragene Energiemenge."
+      }
+    ]
+  }
+}

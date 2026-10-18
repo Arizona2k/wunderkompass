@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "topic": "invention-satellite",
+  "links": [
+    {
+      "term": "Koordinate",
+      "reason": "Satelliten können bei der Positionsbestimmung helfen. Eine Position braucht ein erklärtes Bezugssystem; unser Papiergitter misst keine Satellitensignale."
+    },
+    {
+      "term": "Breitengrad",
+      "reason": "Eine Satellitenpositionierung kann mehrere Angaben liefern. Ein Breitengrad allein grenzt die Nord-Süd-Lage ein, nennt aber noch keinen einzelnen Ort."
+    },
+    {
+      "term": "Strahlung",
+      "reason": "Satelliten können Informationen mit elektromagnetischen Signalen austauschen. Dies ist etwas anderes als Schallübertragung durch leeren Weltraum."
+    },
+    {
+      "term": "Infrarot",
+      "reason": "Manche Satelliten messen Infrarotstrahlung. Eine ausgewählte Bildfarbe muss mit der Skala erklärt werden; sie ist keine unmittelbare sichtbare Landschaftsfarbe."
+    }
+  ],
+  "questions": []
+}

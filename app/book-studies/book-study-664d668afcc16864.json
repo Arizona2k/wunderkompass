@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "term": "Kraft",
+  "learning": {
+    "starter": "Beim Ziehen oder Schieben wirken Kräfte. Sie können etwas schneller, langsamer oder anders geformt machen.",
+    "deeper": "Für eine gleichbleibende Masse gilt im einfachen Bewegungsmodell: resultierende Kraft = Masse mal Beschleunigung. Richtung und Zusammenwirken sind wichtig. Eine Kraft allein beweist nicht, dass ein Körper sich schon bewegt.",
+    "observe": "Drücke einen weichen Papierknäuel vorsichtig zwischen beiden Händen. Beschreibe Bewegung und Verformung getrennt. Überlege, welche Kräfte wirken, auch wenn der Knäuel insgesamt an derselben Stelle bleibt.",
+    "benefit": "Du unterscheidest einzelne Kräfte, ihr Zusammenwirken und die daraus folgende Veränderung.",
+    "topic": "science-lever",
+    "connection": "Am Hebel wirken Kräfte mit unterschiedlichen Hebelarmen. Vergleiche einzelne Kräfte und ihre Drehwirkung, statt nur die größere Zahl zu wählen.",
+    "sources": [
+      {
+        "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/equations-of-motion/",
+        "title": "NASA · Kraft (Englisch)",
+        "anchor": "Equilibrium and net opposing force; constant-mass F=m·a; own paper observation, no flight calculation or source illustration copied.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Beschleunigung",
+        "reason": "Bei konstanter Masse verändert eine resultierende Kraft die Geschwindigkeit. Beschleunigung beschreibt diese Veränderung mit der Zeit."
+      },
+      {
+        "term": "Trägheit",
+        "reason": "Trägheit beschreibt den unveränderten Bewegungszustand ohne resultierende Kraft. Kräfteausgleich und völlige Abwesenheit von Kräften sind verschieden."
+      }
+    ],
+    "question": {
+      "prompt": "Zwei entgegengesetzte Kräfte gleichen sich an einem Körper aus. Was folgt daraus?",
+      "answers": [
+        "Es gibt überhaupt keine Kräfte",
+        "Die resultierende Kraft ist null",
+        "Der Körper muss verschwinden"
+      ],
+      "correct": 1,
+      "hint": "Einzelne Kräfte und ihre gemeinsame Wirkung sind verschieden.",
+      "why": "Die Kräfte können vorhanden sein und sich trotzdem ausgleichen. Ihre resultierende Kraft ist dann null.",
+      "wrongReasons": [
+        "Ausgleich bedeutet nicht Abwesenheit: Die einzelnen Kräfte können weiterhin wirken.",
+        "",
+        "Kräfteausgleich lässt einen Körper nicht verschwinden; er beschreibt das Zusammenwirken der Kräfte."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum helfen raue Schuhsohlen beim Gehen?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Kraft“: Du erkennst, warum eine bremsende Wechselwirkung beim Gehen nützlich sein kann."
+      },
+      {
+        "question": "Warum hilft ein langer Hebelarm beim Drehen?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Kraft“: Du verbindest Kraft, Drehpunkt und Weg statt nur die Länge eines Stabs zu vergleichen."
+      },
+      {
+        "question": "Warum kehrt eine Feder nicht nach jeder Belastung ganz zurück?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Kraft“: Du erkennst den Geltungsbereich eines Materialmodells."
+      }
+    ]
+  }
+}

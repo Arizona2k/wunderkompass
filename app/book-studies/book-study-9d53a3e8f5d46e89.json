@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "term": "Kilogramm",
+  "learning": {
+    "symbol": "kg",
+    "quantity": "Masse",
+    "starter": "Mit Kilogramm beschreiben wir die Masse eines Gegenstands. Das ist nicht dasselbe wie die Kraft, mit der ein Himmelskörper ihn anzieht.",
+    "deeper": "Seit 2019 beruht die Definition des Kilogramms auf dem festgelegten Wert der Planckkonstante. Früher war ein besonderer Metallkörper die Referenz. Naturkonstanten als Grundlage ermöglichen Messvergleiche, ohne dieses eine Originalstück überallhin zu bringen.",
+    "observe": "Stell dir zwei verschlossene, gleich große Kisten vor. Auf einer steht 1 kg, auf der anderen 3 kg. Die gleiche Größe der Kisten beweist noch keine gleiche Masse. Erkläre, welche Information die Schilder ergänzen.",
+    "benefit": "Du verwechselst die Größe einer Verpackung und die Masse ihres Inhalts weniger leicht.",
+    "topic": "science-buoyancy",
+    "question": {
+      "prompt": "Zwei gleich große Kisten sind mit 1 kg und 3 kg beschriftet. Was sagen diese Angaben?",
+      "answers": [
+        "Die Kisten haben dieselbe Masse, weil sie gleich groß sind",
+        "Die Angaben beschreiben die Temperatur",
+        "Die angegebene Masse der zweiten Kiste ist dreimal so groß"
+      ],
+      "correct": 2,
+      "hint": "Lies erst das Zeichen hinter den Zahlen. Welche Messgröße gehört dazu?",
+      "why": "Beide Zahlen verwenden dieselbe Masseeinheit. 3 kg ist das Dreifache von 1 kg; gleiche Außenmaße beweisen keine gleiche Masse.",
+      "wrongReasons": [
+        "Gleich große Kisten können unterschiedlich viel Material enthalten. Aus ihren Außenmaßen allein folgt keine gleiche Masse.",
+        "kg gehört zur Masse. Eine Temperaturangabe braucht eine passende Temperatureinheit.",
+        ""
+      ]
+    },
+    "connection": "Im Auftriebsmodell vergleichst du die Masse eines Körpers mit dem von ihm verdrängten Wasser.",
+    "sources": [
+      {
+        "url": "https://www.nist.gov/si-redefinition/kilogram-introduction",
+        "title": "NIST · Kilogram: Introduction",
+        "anchor": "November 2018 decision; fixed Planck constant replaces the artifact-based definition",
+        "updatedOn": "2023-02-22",
+        "checkedOn": "2026-10-13"
+      },
+      {
+        "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+        "title": "NIST · Definitions of SI Base Units",
+        "anchor": "Kilogram – Unit of Mass",
+        "updatedOn": "2025-08-13",
+        "checkedOn": "2026-10-13"
+      }
+    ]
+  }
+}

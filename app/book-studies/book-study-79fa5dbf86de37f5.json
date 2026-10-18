@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "term": "Grundwasser",
+  "learning": {
+    "starter": "Unter der Oberfläche gibt es Bereiche, deren Poren und Spalten mit Wasser gefüllt sind. Dieses Wasser heißt Grundwasser. Es liegt nicht überall als großer offener unterirdischer See vor.",
+    "deeper": "Darüber kann der Boden ebenfalls feucht sein, obwohl seine Hohlräume auch Luft enthalten. Diese ungesättigte Zone ist vom Grundwasserbereich zu unterscheiden. Nachlieferung, Durchlässigkeit und Entnahme beeinflussen den Grundwasserspiegel. Eine Skizze misst weder Tiefe noch Trinkwasserqualität.",
+    "observe": "Vergleiche die beiden Symbolbilder. Zeichne dann selbst Zwischenräume: einmal mit Luft und Wasser, einmal mit Wasser gefüllt. Woran erkennst du den Unterschied? Deine Zeichnung ist keine echte Bodenprobe.",
+    "benefit": "Du erkennst Wasser in Zwischenräumen und trennst ein Speichermodell von einer echten Wasserprüfung.",
+    "connection": "Die Wasserkreislaufkarte enthält Speicher unter der Oberfläche. Ein Speicherzeichen beschreibt keinen exakten Wasserstand oder eine geprüfte Trinkwasserquelle.",
+    "topic": "science-water-cycle",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/water-cycle",
+        "title": "USGS · Wasserkreislauf",
+        "anchor": "Wasserspeicher, Transportwege und Zustandswechsel. Die eigene Skizze zeigt Möglichkeiten und keine Pflichtreihenfolge, festen Aufenthaltszeiten oder Wasserqualitätsprüfung.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      },
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/groundwater-storage-and-water-cycle",
+        "title": "USGS · Grundwasserspeicher",
+        "anchor": "Unterscheidung zwischen ungesättigtem Boden und gesättigter Zone mit wassergefüllten Hohlräumen. Keine Trinkfreigabe oder Wasserstandsprognose.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Versickerung",
+        "reason": "Versickerung ist ein Weg in den Untergrund, Grundwasser ein dortiger Speicher. Der Weg beweist keine sofortige Ankunft an einer Quelle oder Trinkwasserqualität."
+      },
+      {
+        "term": "Wasserkreislauf",
+        "reason": "Unterirdische Speicherung ergänzt die dargestellten Wasserwege. Eine einfache Kreiszeichnung enthält keine überall gleiche Aufenthaltsdauer."
+      }
+    ],
+    "question": {
+      "prompt": "Was veranschaulicht die Körnchenskizze?",
+      "answers": [
+        "Wasser in gedachten Zwischenräumen",
+        "Den Beweis eines überall offenen unterirdischen Sees",
+        "Eine sichere Trinkwasserfreigabe"
+      ],
+      "correct": 0,
+      "hint": "Betrachte die Räume zwischen den Körnchen und die ausdrücklich genannte Modellgrenze.",
+      "why": "Die Zeichnung zeigt Wasser in gedachten Zwischenräumen. Sie beweist weder einen riesigen Hohlraum noch Trinkwasserqualität.",
+      "wrongReasons": [
+        "",
+        "Zwischenräume zwischen Körnchen sind keine überall offene unterirdische Höhle.",
+        "Ein Schema enthält keine Wasseranalyse. Versuchswasser oder unbekanntes Wasser wird nicht als trinkbar eingestuft."
+      ]
+    },
+    "illustration": "groundwater"
+  }
+}

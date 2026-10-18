@@ -13,3 +13,19 @@ test('failed engine diagnostics keep exact original bytes, existing other snapsh
  await assert.rejects(preserveEngineDiagnostics(dir,'../other'),/Unknown/);
  assert.equal(hash(await fs.readFile(path.join(dir,'journey-engine-webkit-animal-search-failure-webkit.png'))),hash(original));
 });
+test('early and complete checks retain both original search and source proofs without collisions',async t=>{
+ const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-engine-phases-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));
+ const names=['animal-search-delayed-390.png','animal-search-delayed-proof-webkit.json','journey-engine-webkit-source-route-proof.json','journey-engine-webkit-source-route-trusted-input-before-frame-320.png'];
+ const early=Buffer.from('early actual-engine evidence fixture'),full=Buffer.from('complete actual-engine evidence fixture');
+ for(const name of names)await fs.writeFile(path.join(dir,name),early);
+ await fs.writeFile(path.join(dir,'journey-engine-firefox-source-route-proof.json'),early);
+ const moved=await preserveEngineDiagnostics(dir,'webkit',{phase:'early-search'});assert.equal(moved.length,names.length);
+ for(const name of names){const suffix=name.replace(/^journey-engine-webkit-/,'');assert.deepEqual(await fs.readFile(path.join(dir,'journey-engine-webkit-early-'+suffix)),early);}
+ for(const name of names)await fs.writeFile(path.join(dir,name),full);
+ await preserveEngineDiagnostics(dir,'webkit');
+ for(const name of names){const suffix=name.replace(/^journey-engine-webkit-/,'');assert.deepEqual(await fs.readFile(path.join(dir,'journey-engine-webkit-'+suffix)),full);assert.deepEqual(await fs.readFile(path.join(dir,'journey-engine-webkit-early-'+suffix)),early);}
+ assert.deepEqual(await fs.readFile(path.join(dir,'journey-engine-firefox-source-route-proof.json')),early);
+ await fs.writeFile(path.join(dir,'animal-search-delayed-proof-webkit.json'),Buffer.from('a second full run may not overwrite the first'));
+ await assert.rejects(preserveEngineDiagnostics(dir,'webkit'),/cannot be overwritten/);
+ await assert.rejects(preserveEngineDiagnostics(dir,'webkit',{phase:'unknown'}),/Unknown evidence phase/);
+});

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "term": "Erdkruste",
+  "learning": {
+    "starter": "Die Kruste ist die äußere feste Schicht der Erde. Auch unter dem Meer liegt Erdkruste.",
+    "deeper": "Kontinentale und ozeanische Kruste sind nicht überall gleich dick. Eine tektonische Platte enthält neben Kruste auch den festen obersten Mantel. Deshalb sind Erdkruste und Platte keine austauschbaren Wörter.",
+    "observe": "Markiere auf einer Ringskizze eine dünne äußere Linie unter Land und Wasser. Schreibe Kruste daran. Zeichne für eine gedachte Platte zusätzlich einen Anteil des obersten Mantels ein; die Breiten sind nicht maßstäblich.",
+    "benefit": "Du unterscheidest eine Erdschicht von einer beweglichen tektonischen Platte.",
+    "connection": "Im Erdschichtenlabor ist die äußere Lage eine Schicht, keine Wasseroberfläche. Vergleiche sie zusätzlich mit dem Plattenbegriff und dessen Mantelanteil.",
+    "lab": "depth",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/programs/earthquake-hazards/science-earthquakes",
+        "title": "USGS · Erdkruste (Englisch)",
+        "anchor": "Grundbegriffe zu Bruchbewegung, Erdbebenherd und Epizentrum. Eine gedachte Zeichnung ersetzt weder Ortung noch eine örtliche Gefahrenbewertung.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      },
+      {
+        "url": "https://science.nasa.gov/earth/facts/",
+        "title": "NASA · Aufbau der Erde",
+        "anchor": "Abschnitte zum inneren und äußeren Kern sowie zur Lithosphäre. Nur diese ausgewählten Aussagen verwendet; keine pauschale Gleichsetzung des Mantels mit geschmolzenem Gestein.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Plattentektonik",
+        "reason": "Die Kruste ist eine Erdschicht; tektonische Platten enthalten zusätzlich festen obersten Mantel. Schichtname und beweglicher Bereich sind keine Synonyme."
+      }
+    ],
+    "question": {
+      "prompt": "Was ist an der Aussage „Unter dem Ozean fehlt jede Erdkruste“ falsch?",
+      "answers": [
+        "Nur trockene Erde besitzt Gestein",
+        "Auch unter dem Ozean liegt Kruste",
+        "Meerwasser ist selbst die komplette Erdkruste"
+      ],
+      "correct": 1,
+      "hint": "Wasser liegt über dem Meeresboden; es ersetzt nicht die feste äußere Erdschicht.",
+      "why": "Der Ozean bedeckt einen Teil der Kruste. Land und Meeresboden haben beide darunterliegende feste Erdmaterialien.",
+      "wrongReasons": [
+        "Gestein existiert auch unter Wasser; Trockenheit ist kein Kriterium für Kruste.",
+        "",
+        "Meerwasser ist keine feste Gesteinsschicht. Wasser und Kruste müssen getrennt beschriftet werden."
+      ]
+    }
+  }
+}

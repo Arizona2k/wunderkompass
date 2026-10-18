@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "term": "Mittelwert",
+  "learning": {
+    "starter": "Addiere die Zahlen und teile durch ihre Anzahl. So erhältst du den arithmetischen Mittelwert.",
+    "deeper": "Ein sehr großer oder kleiner Wert kann den Mittelwert deutlich verschieben. Darum erzählt er nicht die ganze Geschichte einer Datenreihe. Reihenfolge, Streuung und andere Kennzahlen können zusätzlich wichtig sein.",
+    "observe": "Lege drei Zettel mit 2, 4 und 9 aus. Berechne ihren Mittelwert. Ersetze dann 9 durch 24 und rechne erneut. Was verändert sich, obwohl zwei Zettel gleich geblieben sind? Das sind erfundene Zahlen, keine echte Untersuchung.",
+    "benefit": "Du kannst einen Mittelwert berechnen und erklären, warum ein einzelner Extremwert ihn verschieben kann.",
+    "topic": "science-probability",
+    "connection": "Im Wahrscheinlichkeitsmodell sammelst du Ergebnisse. Ein Mittelwert fasst Zahlen anders zusammen als eine Häufigkeit; prüfe, welche Frage du beantworten möchtest.",
+    "sources": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+        "title": "NIST · Mittelwert (Englisch)",
+        "anchor": "Definition of location, mean=sum/number; extremes influence the mean. Own numerical examples, no source data or chart copied.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Median",
+        "reason": "Mittelwert verwendet Summe und Anzahl; Median die sortierte Mitte. Dieselben Zahlen können unterschiedliche Kennzahlen ergeben."
+      },
+      {
+        "term": "Hypothese",
+        "reason": "Eine Kennzahl kann Beobachtungen zusammenfassen. Ob sie eine Hypothese unterstützt, hängt auch von Frage und Versuchsbedingungen ab."
+      },
+      {
+        "term": "Meeresspiegel",
+        "reason": "Mehrere Höhenwerte lassen sich unter einem gemeinsamen Bezug mitteln. Ein einzelner Wert ist noch kein langjähriger weltweiter Trend."
+      },
+      {
+        "term": "Stichprobe",
+        "reason": "Ein Mittelwert fasst die ausgewählten Zahlen zusammen. Er behebt nicht automatisch fehlende oder einseitig ausgewählte Teile einer größeren Gruppe."
+      }
+    ],
+    "question": {
+      "prompt": "Welcher arithmetische Mittelwert gehört zu 2, 4 und 9?",
+      "answers": [
+        "4, weil die Zahl in der Mitte steht",
+        "5, weil 15 durch drei geteilt wird",
+        "15, weil das die Summe ist"
+      ],
+      "correct": 1,
+      "hint": "Nach dem Addieren fehlt noch ein Rechenschritt.",
+      "why": "2 + 4 + 9 = 15. Drei Zahlen wurden addiert, also wird durch drei geteilt: 15 ÷ 3 = 5.",
+      "wrongReasons": [
+        "Die mittlere sortierte Zahl gehört zum Median. Beim Mittelwert wird die Summe durch die Anzahl geteilt.",
+        "",
+        "15 ist nur die Summe. Für den arithmetischen Mittelwert wird noch durch drei geteilt."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum kann ein einzelner sehr großer Wert einen Durchschnitt verschieben?",
+        "reason": "Beim Mittelwert kannst du dieselbe Zahlenliste mit einem veränderten großen Wert vergleichen. Prüfe, warum sich der Mittelwert anders verhalten kann als der mittlere Listenwert."
+      }
+    ]
+  }
+}

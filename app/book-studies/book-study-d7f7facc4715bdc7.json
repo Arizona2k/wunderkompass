@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "term": "Biodiversität",
+  "learning": {
+    "starter": "Vielfalt gibt es zwischen Arten, innerhalb einer Art und zwischen Lebensgemeinschaften. Nur große Tiere zu zählen, zeigt deshalb nicht alles.",
+    "deeper": "Biodiversität umfasst verschiedene Ebenen. Eine Artenliste beschreibt eine davon. Genetische Unterschiede innerhalb von Arten und unterschiedliche Ökosysteme sind weitere Ebenen. Viele einzelne Lebewesen sind nicht automatisch viele verschiedene Arten.",
+    "observe": "Zeichne sechs erfundene Blätter: erst sechs gleiche, dann zwei unterschiedliche Formen mit je drei Beispielen. Erkläre den Unterschied zwischen Anzahl und Vielfalt. Die Zeichnung bestimmt keine echte Art und misst nicht die gesamte Biodiversität eines Ortes.",
+    "benefit": "Du unterscheidest die Menge von Lebewesen von unterschiedlichen Formen und Ebenen der Vielfalt.",
+    "topic": "science-fungi",
+    "connection": "Die Pilzkarte ergänzt häufig übersehene Lebensformen. Sichtbare Tiere allein bilden nicht die gesamte biologische Vielfalt ab.",
+    "sources": [
+      {
+        "url": "https://www.nps.gov/subjects/biodiversity/what-is-biodiversity.htm",
+        "title": "National Park Service · Biodiversität (Englisch)",
+        "anchor": "Biologische Vielfalt umfasst Gene, Arten und Ökosysteme. Ein gezeichnetes Artenbeispiel misst noch nicht die gesamte Vielfalt eines Lebensraums.",
+        "updatedOn": "2019-03-04",
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Ökosystem",
+        "reason": "Vielfalt umfasst auch die Ebene unterschiedlicher Ökosysteme. Eine einzelne Tieranzahl beschreibt noch nicht diese Vielfalt."
+      }
+    ],
+    "question": {
+      "prompt": "Zwei gedachte Listen enthalten je sechs Lebewesen. Was kannst du aus der Zahl allein schließen?",
+      "answers": [
+        "Beide Orte haben dieselbe Biodiversität",
+        "Nur die Anzahl der gelisteten Lebewesen ist gleich",
+        "Beide Orte enthalten sechs verschiedene Arten"
+      ],
+      "correct": 1,
+      "hint": "Anzahl und Verschiedenheit beantworten verschiedene Fragen.",
+      "why": "Die Zahl sechs beschreibt die Anzahl. Für Artenvielfalt und andere Ebenen brauchst du zusätzliche Informationen darüber, was verschieden ist.",
+      "wrongReasons": [
+        "Eine gleiche Anzahl belegt weder gleiche Artenvielfalt noch gleiche genetische oder ökologische Vielfalt.",
+        "",
+        "Mehrere Beispiele können zur selben Art gehören. Eine Anzahl nennt noch keine Artenzahl."
+      ]
+    }
+  }
+}

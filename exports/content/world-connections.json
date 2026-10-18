@@ -130,6 +130,622 @@
       "checkedAt": "2026-10-09"
     },
     {
+      "id": "science-pressure--science-atmosphere",
+      "fromId": "science-pressure",
+      "toId": "science-atmosphere",
+      "kind": "context",
+      "why": "Druck ist Kraft pro Fläche. Der Vergleich erklärt, weshalb eine Lufthülle Druck ausüben kann, ohne eine feste Decke zu bilden.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-friction--science-energy",
+      "fromId": "science-friction",
+      "toId": "science-energy",
+      "kind": "context",
+      "why": "Reibung kann Bewegungsenergie in innere Energie überführen. Das verbindet den Kraftvergleich mit dem Erhalten und Umwandeln von Energie.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-buoyancy--science-pressure",
+      "fromId": "science-buoyancy",
+      "toId": "science-pressure",
+      "kind": "context",
+      "why": "Wasserdruck ist weiter unten größer. Diese Druckverteilung verbindet die Kraft-pro-Fläche-Idee mit der resultierenden Auftriebskraft.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-surface-tension--science-capillarity",
+      "fromId": "science-surface-tension",
+      "toId": "science-capillarity",
+      "kind": "context",
+      "why": "Die Wechselwirkung von Wasserteilchen prägt eine Grenzfläche und spielt beim Wandern in schmalen Zwischenräumen mit.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-diffusion--science-cell",
+      "fromId": "science-diffusion",
+      "toId": "science-cell",
+      "kind": "context",
+      "why": "Zellen tauschen Stoffe durch ihre Membran aus. Zufällige Teilchenbewegung ist ein möglicher Transportweg, aber nicht der einzige.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-chromatography--science-capillarity",
+      "fromId": "science-chromatography",
+      "toId": "science-capillarity",
+      "kind": "context",
+      "why": "Das Wasser kann durch enge Papierzwischenräume wandern. Farbstoffe werden dabei unterschiedlich mitgenommen und festgehalten.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-heat-transfer--science-energy",
+      "fromId": "science-heat-transfer",
+      "toId": "science-energy",
+      "kind": "context",
+      "why": "Wärmeübertragung verändert, wo Energie verfügbar ist. Eine Dämmung verlangsamt Übertragung und ist selbst keine Energiequelle.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-lever--science-pressure",
+      "fromId": "science-lever",
+      "toId": "science-pressure",
+      "kind": "context",
+      "why": "Beim Hebel zählt Kraft mal Abstand, beim Druck Kraft pro Fläche. Dieselbe Kraft kann deshalb in zwei verschiedenen Vergleichen unterschiedlich wirken.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-elasticity--science-friction",
+      "fromId": "science-elasticity",
+      "toId": "science-friction",
+      "kind": "context",
+      "why": "Ein Material kann sich verformen und Energie abgeben. Bei Bewegung kann Reibung einen Teil in innere Energie überführen.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-pendulum--science-resonance",
+      "fromId": "science-pendulum",
+      "toId": "science-resonance",
+      "kind": "context",
+      "why": "Die Pendellänge beeinflusst die Eigenfrequenz. Ein äußerer Antrieb kann bei passendem Takt besonders stark auf eine solche Schwingung wirken.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-probability--science-patterns",
+      "fromId": "science-probability",
+      "toId": "science-patterns",
+      "kind": "context",
+      "why": "Ein Computer kann in Beispielen Muster finden. Bei zufälligen Serien beweist ein auffälliges Muster allein aber noch keine feste Ursache.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-symmetry--science-angle",
+      "fromId": "science-symmetry",
+      "toId": "science-angle",
+      "kind": "context",
+      "why": "Eine Drehung wird mit einem Winkel beschrieben. Spiegeln und Drehen sind verschiedene Möglichkeiten, eine Figur auf sich abzubilden.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-fractals--science-symmetry",
+      "fromId": "science-fractals",
+      "toId": "science-symmetry",
+      "kind": "context",
+      "why": "Die Fraktalregel verkleinert die Teil-Dreiecke. Spiegeln und Drehen bewahren dagegen die Größe einer Figur. So kannst du ähnliche Teilformen von gleich großen symmetrischen Gegenstücken unterscheiden.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "science-angle--science-shadows",
+      "fromId": "science-angle",
+      "toId": "science-shadows",
+      "kind": "context",
+      "why": "Bei Schattenmessungen zählen Winkel zur Oberfläche und zur Sonnenrichtung. Längere gezeichnete Linien verändern nicht automatisch diesen Winkel.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-encryption--science-network",
+      "fromId": "science-encryption",
+      "toId": "science-network",
+      "kind": "context",
+      "why": "Netzwerke übertragen Daten. Verschlüsselung kann den Inhalt vor Mitlesen schützen, ohne den Übertragungsweg oder die Wahrheit zu garantieren.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-checksum--science-computer",
+      "fromId": "science-checksum",
+      "toId": "science-computer",
+      "kind": "context",
+      "why": "Ein Computer stellt Daten als Folgen dar. Ein zusammengefasster Prüfwert verliert Informationen und kann deshalb Kollisionen besitzen.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-fusion--science-energy",
+      "fromId": "science-fusion",
+      "toId": "science-energy",
+      "kind": "context",
+      "why": "Die Sonne liefert Energie; in ihrem Inneren wird diese durch Kernreaktionen freigesetzt. Das ist ein anderer Vorgang als Solarstrom in einer Zelle.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-galaxy--science-solar-system",
+      "fromId": "science-galaxy",
+      "toId": "science-solar-system",
+      "kind": "context",
+      "why": "Das Sonnensystem ist eine räumliche Gruppe um einen Stern. Eine Galaxie umfasst sehr viel mehr Sterne und weitere Materie.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-comet--science-solar-system",
+      "fromId": "science-comet",
+      "toId": "science-solar-system",
+      "kind": "context",
+      "why": "Kometen gehören zum Sonnensystem, sind aber keine der acht großen Planeten. Sonnenlicht und Sonnenwind beeinflussen ihre Schweife.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "science-exoplanet--science-galaxy",
+      "fromId": "science-exoplanet",
+      "toId": "science-galaxy",
+      "kind": "context",
+      "why": "Die Milchstraße enthält viele Sterne. Planeten um andere Sterne erweitern die Frage über unser eigenes Sonnensystem hinaus.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "invention-light--science-circuit",
+      "fromId": "invention-light",
+      "toId": "science-circuit",
+      "kind": "needs",
+      "why": "Eine Lampe braucht elektrische Energie und einen geschlossenen Stromweg. Der Stromkreis erklärt das Zusammenspiel mit Leitung und Schalter.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-car--invention-railway",
+      "fromId": "invention-car",
+      "toId": "invention-railway",
+      "kind": "transport",
+      "why": "Auto und Eisenbahn transportieren Menschen und Lasten. Beim Zug führen Schienen die Räder; beim Auto wird die Fahrtrichtung anders gesteuert.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-railway--history-steam",
+      "fromId": "invention-railway",
+      "toId": "history-steam",
+      "kind": "context",
+      "why": "Dampfmaschinen trieben frühe Lokomotiven an. Die Technikgeschichte zeigt, warum Antrieb, Gleise und Betrieb schrittweise zusammenwuchsen.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-airplane--science-flight",
+      "fromId": "invention-airplane",
+      "toId": "science-flight",
+      "kind": "cause",
+      "why": "Die Erfindungskarte ordnet Flügel, Triebwerk und Steuerung zu. Die Flugkarte erklärt die dabei wirkenden Kräfte genauer.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-phone--invention-smartphone",
+      "fromId": "invention-phone",
+      "toId": "invention-smartphone",
+      "kind": "context",
+      "why": "Beide übertragen Gespräche. Ein Smartphone verbindet diese Aufgabe zusätzlich mit Computerfunktionen; ein Bildschirm allein stellt noch keine Verbindung her.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-computer--science-computer",
+      "fromId": "invention-computer",
+      "toId": "science-computer",
+      "kind": "partnership",
+      "why": "Die Erfindungskarte zeigt die Aufgaben der Bauteile. Die Wissenschaftskarte erklärt binäre Stellenwerte und wie acht Bits 256 verschiedene Zahlenmuster darstellen können.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "invention-internet--science-network",
+      "fromId": "invention-internet",
+      "toId": "science-network",
+      "kind": "partnership",
+      "why": "Einzelne Netze sind Teile eines größeren Verbunds. Die Netzwerkkarte vertieft den Weg von Daten und die dafür nötigen gemeinsamen Regeln.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-compass--science-gps",
+      "fromId": "invention-compass",
+      "toId": "science-gps",
+      "kind": "exploration",
+      "why": "Ein Kompass liefert eine magnetische Richtung. Satellitennavigation kann zusätzlich einen Standort bestimmen; Richtung und Standort sind verschiedene Informationen.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-printing--history-paper",
+      "fromId": "invention-printing",
+      "toId": "history-paper",
+      "kind": "needs",
+      "why": "Die Druckform überträgt Zeichen auf ein Material. Die Papiergeschichte erklärt die Entwicklung eines wichtigen Trägers für gedruckte Nachrichten.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-rocket--invention-satellite",
+      "fromId": "invention-rocket",
+      "toId": "invention-satellite",
+      "kind": "transport",
+      "why": "Eine Rakete kann einen Satelliten starten. Der Satellit erfüllt danach andere Aufgaben, etwa Messen oder Übertragen von Signalen.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-satellite--science-gps",
+      "fromId": "invention-satellite",
+      "toId": "science-gps",
+      "kind": "exploration",
+      "why": "Navigationssatelliten senden Signale. Die GPS-Karte erklärt, wie ein Empfangsgerät mehrere solcher Signale für eine Standortbestimmung nutzt.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-smartphone--invention-computer",
+      "fromId": "invention-smartphone",
+      "toId": "invention-computer",
+      "kind": "partnership",
+      "why": "Ein Smartphone verarbeitet Programme und Daten wie ein Computer. Funk, Akku und die mobile Bauform ergänzen diese Aufgabe.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "invention-battery--science-circuit",
+      "fromId": "invention-battery",
+      "toId": "science-circuit",
+      "kind": "exploration",
+      "why": "Die Batterie liefert Energie; der geschlossene Stromkreis erklärt den Weg durch die Lampe.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-battery--science-energy",
+      "fromId": "invention-battery",
+      "toId": "science-energy",
+      "kind": "exploration",
+      "why": "Ein Akku kann Energie für später bereitstellen; die chemische Funktionsweise erklärt diese Karte.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-battery--invention-smartphone",
+      "fromId": "invention-battery",
+      "toId": "invention-smartphone",
+      "kind": "exploration",
+      "why": "Ein Smartphone braucht einen passenden wiederaufladbaren Akku.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-generator--science-motor",
+      "fromId": "invention-generator",
+      "toId": "science-motor",
+      "kind": "exploration",
+      "why": "Motor und Generator verbinden Bewegung und elektrische Energie in unterschiedlicher Nutzrichtung.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-generator--science-magnetism",
+      "fromId": "invention-generator",
+      "toId": "science-magnetism",
+      "kind": "exploration",
+      "why": "Das sich ändernde Magnetfeld erklärt die Induktion.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-generator--science-circuit",
+      "fromId": "invention-generator",
+      "toId": "science-circuit",
+      "kind": "exploration",
+      "why": "Strom zur angeschlossenen Lampe braucht zusätzlich einen geschlossenen Weg.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-transistor--invention-computer",
+      "fromId": "invention-transistor",
+      "toId": "invention-computer",
+      "kind": "exploration",
+      "why": "Viele Transistoren können zu Schaltungen für Rechnen und Speichern verbunden werden.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-transistor--invention-smartphone",
+      "fromId": "invention-transistor",
+      "toId": "invention-smartphone",
+      "kind": "exploration",
+      "why": "Chips im Smartphone enthalten viele solche elektronischen Bausteine.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-transistor--science-circuit",
+      "fromId": "invention-transistor",
+      "toId": "science-circuit",
+      "kind": "exploration",
+      "why": "Auch ein elektronischer Schalter gehört zu einer versorgten Schaltung.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-camera--invention-smartphone",
+      "fromId": "invention-camera",
+      "toId": "invention-smartphone",
+      "kind": "exploration",
+      "why": "Das Smartphone verbindet Kamerasensor, Verarbeitung und Speicherung.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-camera--invention-telescope",
+      "fromId": "invention-camera",
+      "toId": "invention-telescope",
+      "kind": "exploration",
+      "why": "Beide nutzen Optik; ein Fernrohr muss das betrachtete Bild nicht selbst speichern.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-telescope--invention-satellite",
+      "fromId": "invention-telescope",
+      "toId": "invention-satellite",
+      "kind": "exploration",
+      "why": "Weltraumteleskope können als künstliche Satelliten die Erde umkreisen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-telescope--science-solar-system",
+      "fromId": "invention-telescope",
+      "toId": "science-solar-system",
+      "kind": "exploration",
+      "why": "Fernrohre helfen, Körper im Sonnensystem zu beobachten.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-microscope--invention-telescope",
+      "fromId": "invention-microscope",
+      "toId": "invention-telescope",
+      "kind": "exploration",
+      "why": "Beide nutzen Optik; Mikroskope untersuchen kleine nahe Strukturen statt ferne Himmelskörper.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-refrigerator--science-heat-transfer",
+      "fromId": "invention-refrigerator",
+      "toId": "science-heat-transfer",
+      "kind": "exploration",
+      "why": "Wärmeübertragung und Dämmung erklären die zwei Seiten des Kühlschranks.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-refrigerator--science-energy",
+      "fromId": "invention-refrigerator",
+      "toId": "science-energy",
+      "kind": "exploration",
+      "why": "Der Betrieb benötigt Energie; der Stromverbrauch ist von der transportierten Wärme zu unterscheiden.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-bicycle--science-friction",
+      "fromId": "invention-bicycle",
+      "toId": "science-friction",
+      "kind": "exploration",
+      "why": "Reifen brauchen Halt am Boden, während Reibung an anderer Stelle bremst.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-bicycle--science-lever",
+      "fromId": "invention-bicycle",
+      "toId": "science-lever",
+      "kind": "exploration",
+      "why": "Eine Übersetzung tauscht Kraftbedarf gegen Drehweg: Bei einem leichteren Gang drehst du die Pedale häufiger. Die Hebelkarte hilft, mechanischen Vorteil von zusätzlichem Energiegewinn zu unterscheiden.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-bicycle--invention-car",
+      "fromId": "invention-bicycle",
+      "toId": "invention-car",
+      "kind": "exploration",
+      "why": "Beide benötigen Antrieb, Steuerung und sichere Bremsen; die Energiequellen unterscheiden sich.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-elevator--science-friction",
+      "fromId": "invention-elevator",
+      "toId": "science-friction",
+      "kind": "exploration",
+      "why": "Bremsende Kräfte sind für das Sicherheitsprinzip wichtig.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-elevator--science-motor",
+      "fromId": "invention-elevator",
+      "toId": "science-motor",
+      "kind": "exploration",
+      "why": "Ein Antrieb kann elektrische Energie in Bewegung umsetzen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-elevator--building-eiffel-tower",
+      "fromId": "invention-elevator",
+      "toId": "building-eiffel-tower",
+      "kind": "exploration",
+      "why": "Der Eiffelturm besitzt Aufzüge; seine geneigten Pfeiler stellen besondere Anforderungen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-seismograph--science-pendulum",
+      "fromId": "invention-seismograph",
+      "toId": "science-pendulum",
+      "kind": "exploration",
+      "why": "Eine träge aufgehängte Masse kann für ein vereinfachtes Messprinzip genutzt werden.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-seismograph--science-resonance",
+      "fromId": "invention-seismograph",
+      "toId": "science-resonance",
+      "kind": "exploration",
+      "why": "Ein Messgerät reagiert selbst auf Bewegung; sein Verhalten muss bei der Auswertung berücksichtigt werden.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-3d-printing--invention-computer",
+      "fromId": "invention-3d-printing",
+      "toId": "invention-computer",
+      "kind": "exploration",
+      "why": "Ein digitaler Entwurf enthält die Vorgaben für den Aufbau.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-3d-printing--invention-printing",
+      "fromId": "invention-3d-printing",
+      "toId": "invention-printing",
+      "kind": "exploration",
+      "why": "Beide folgen einem Entwurf, aber räumlicher Materialaufbau unterscheidet sich vom Buchdruck.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-3d-printing--science-angle",
+      "fromId": "invention-3d-printing",
+      "toId": "science-angle",
+      "kind": "exploration",
+      "why": "Ansichten und Winkel helfen, einen räumlichen Entwurf zu beschreiben.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-sewing-machine--invention-computer",
+      "fromId": "invention-sewing-machine",
+      "toId": "invention-computer",
+      "kind": "exploration",
+      "why": "Ein verlässlich wiederholter Ablauf lässt sich in einzelne Schritte zerlegen; das macht ihn noch nicht zu einem Computer.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-sewing-machine--invention-printing",
+      "fromId": "invention-sewing-machine",
+      "toId": "invention-printing",
+      "kind": "exploration",
+      "why": "Beide mechanisieren wiederholte Arbeit, verarbeiten aber andere Materialien mit anderer Wirkung.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-pont-du-gard--science-water-cycle",
+      "fromId": "building-pont-du-gard",
+      "toId": "science-water-cycle",
+      "kind": "exploration",
+      "why": "Die Quelle liefert Wasser aus dem natürlichen Wasserkreislauf. Die Wasserbrücke verändert dessen Weg zur Stadt, erzeugt aber kein neues Wasser.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-pont-du-gard--building-colosseum",
+      "fromId": "building-pont-du-gard",
+      "toId": "building-colosseum",
+      "kind": "exploration",
+      "why": "Beide römischen Bauwerke nutzen Bögen. Beim Pont du Gard tragen sie eine Wasserrinne, beim Kolosseum Teile eines ganz anders genutzten Gebäudes.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-great-zimbabwe--building-great-wall",
+      "fromId": "building-great-zimbabwe",
+      "toId": "building-great-wall",
+      "kind": "exploration",
+      "why": "Mauern erfüllen an verschiedenen Orten unterschiedliche Aufgaben und nutzen unterschiedliche Materialien. Ihre bloße Größe beweist weder dieselbe Nutzung noch dieselbe Bauweise.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-great-zimbabwe--history-timbuktu",
+      "fromId": "building-great-zimbabwe",
+      "toId": "history-timbuktu",
+      "kind": "exploration",
+      "why": "Groß-Simbabwe und Timbuktu zeigen eigenständige afrikanische Stadt- und Handelsgeschichten. Ein Vergleich macht Unterschiede sichtbar; er belegt keine direkte Route zwischen beiden Orten.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-horyu-ji--science-patterns",
+      "fromId": "building-horyu-ji",
+      "toId": "science-patterns",
+      "kind": "exploration",
+      "why": "Wiederholte Stützenfelder und Bauteile helfen, eine Konstruktion zu ordnen. Das Erkennen eines Musters ersetzt aber keine Prüfung, wie Kräfte tatsächlich weitergeleitet werden.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-horyu-ji--building-eiffel-tower",
+      "fromId": "building-horyu-ji",
+      "toId": "building-eiffel-tower",
+      "kind": "exploration",
+      "why": "Holztempel und Eisenturm nutzen unterschiedliche Materialien und Formen. Bei beiden kannst du nach einem zusammenhängenden Lastweg zum Untergrund fragen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-djenne-mosque--history-timbuktu",
+      "fromId": "building-djenne-mosque",
+      "toId": "history-timbuktu",
+      "kind": "exploration",
+      "why": "Djenné und Timbuktu sind unterschiedliche malische Stadtgeschichten mit eigener Architektur und überliefertem Wissen. Der Vergleich verbindet Handwerk und kulturelle Nutzung, ohne beide Orte gleichzusetzen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-djenne-mosque--building-horyu-ji",
+      "fromId": "building-djenne-mosque",
+      "toId": "building-horyu-ji",
+      "kind": "exploration",
+      "why": "Lehmbau und Holzbau verlangen unterschiedliche Erhaltung. Gemeinsam ist die Frage, wie überliefertes Handwerk vorhandene Bauteile fachkundig bewahren kann.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-lalibela--invention-3d-printing",
+      "fromId": "building-lalibela",
+      "toId": "invention-3d-printing",
+      "kind": "exploration",
+      "why": "Die Felsbearbeitung nimmt Material weg, während viele additive Druckverfahren Material aufbauen. Der Vergleich verbindet räumliche Form und Herstellungsweg, ohne historische Werkzeuge gleichzusetzen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-lalibela--science-water-cycle",
+      "fromId": "building-lalibela",
+      "toId": "science-water-cycle",
+      "kind": "exploration",
+      "why": "Niederschlag ist Teil des Wasserkreislaufs; ein Bauwerk muss mit diesem Wasser umgehen. Die Entwässerung in Lalibela verbindet natürlichen Wasserweg und Schutz der gebauten Formen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-angkor-wat--science-water-cycle",
+      "fromId": "building-angkor-wat",
+      "toId": "science-water-cycle",
+      "kind": "exploration",
+      "why": "Natürlicher Niederschlag und gebaute Becken oder Kanäle beeinflussen Wasserwege. Das erklärt noch nicht jeden historischen Zweck, hilft aber, Landschaft und Bauwerk gemeinsam zu betrachten.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-angkor-wat--building-panama-canal",
+      "fromId": "building-angkor-wat",
+      "toId": "building-panama-canal",
+      "kind": "exploration",
+      "why": "Beide Anlagen machen Wasserbau sichtbar, haben aber andere Aufgaben und Geschichten. Die Schleusen des Panamakanals dürfen nicht als Erklärung für jeden Wassergraben übertragen werden.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-palenque--history-maya",
+      "fromId": "building-palenque",
+      "toId": "history-maya",
+      "kind": "exploration",
+      "why": "Die Geschichte der Maya erschließt kulturelle und zeitliche Zusammenhänge. Palenques konkrete Bauten ergänzen diesen Überblick, ersetzen aber keine Aussagen über alle Maya-Städte oder heutige Gemeinschaften.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-palenque--building-colosseum",
+      "fromId": "building-palenque",
+      "toId": "building-colosseum",
+      "kind": "exploration",
+      "why": "Ein Kraggewölbe und ein Keilsteinbogen schließen Räume mit unterschiedlichen Anordnungen. Der Vergleich hilft, ähnliche Umrisse nicht vorschnell als dieselbe Konstruktion zu lesen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-sydney-opera--science-angle",
+      "fromId": "building-sydney-opera",
+      "toId": "science-angle",
+      "kind": "exploration",
+      "why": "Ein Winkel kann beschreiben, welcher Ausschnitt einer Kreislinie markiert wird. Der Radius bleibt dabei eine andere Größe; so lassen sich Form und Maß getrennt untersuchen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "building-sydney-opera--science-sound",
+      "fromId": "building-sydney-opera",
+      "toId": "science-sound",
+      "kind": "exploration",
+      "why": "Ein Aufführungshaus verbindet Architektur und Schall. Seine markante Außenform allein beweist aber noch keine bestimmte Akustik im Innenraum.",
+      "checkedAt": "2026-10-16"
+    },
+    {
       "id": "animal-inquiry-lion-bengal-tiger",
       "fromId": "animal-lion",
       "toId": "animal-bengal-tiger",
@@ -264,6 +880,390 @@
       "kind": "context",
       "why": "Vergleiche den kurzen Sprint eines Gepards mit dem Anschleichen und Zusammenwirken von Löwen. Schnellster Sprint und eine erfolgreiche gemeinsame Jagd sind verschiedene Vergleiche.",
       "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-platypus-red-kangaroo",
+      "fromId": "animal-platypus",
+      "toId": "animal-red-kangaroo",
+      "why": "Säugetiere können ihre Jungen auf unterschiedliche Weise zur Welt bringen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-short-beaked-echidna-platypus",
+      "fromId": "animal-short-beaked-echidna",
+      "toId": "animal-platypus",
+      "why": "Zwei eierlegende Säugetiere zeigen eine gemeinsame Fortpflanzungsbesonderheit und unterschiedliche Nahrungssuche.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-okapi-giraffe",
+      "fromId": "animal-okapi",
+      "toId": "animal-giraffe",
+      "why": "Wald- und Savannenverwandte lassen sich nach Lebensraum und Nahrungserwerb vergleichen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-meerkat-honey-bee",
+      "fromId": "animal-meerkat",
+      "toId": "animal-honey-bee",
+      "why": "Gruppenleben kann unterschiedliche Formen der Zusammenarbeit hervorbringen; Insektenstaat und Säugetiergruppe unterscheiden.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-ring-tailed-lemur-western-lowland-gorilla",
+      "fromId": "animal-ring-tailed-lemur",
+      "toId": "animal-western-lowland-gorilla",
+      "why": "Zwei Primaten zeigen unterschiedliche Kommunikationsmittel; keine menschlichen Sätze unterstellen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-north-american-beaver-water-cycle",
+      "fromId": "animal-north-american-beaver",
+      "toId": "science-water-cycle",
+      "why": "Biberbau und Wasserwege verbinden ein Tierverhalten mit einer Landschaftsveränderung.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-walrus-polar-bear",
+      "fromId": "animal-walrus",
+      "toId": "animal-polar-bear",
+      "why": "Arktische Lebensräume und unterschiedliche Schutzbewertungen anhand derselben Region vergleichen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-red-fox-hedgehog",
+      "fromId": "animal-red-fox",
+      "toId": "animal-hedgehog",
+      "why": "Lebensraumstrukturen in Siedlungen aus Sicht verschiedener Wildtiere vergleichen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-raccoon-red-fox",
+      "fromId": "animal-raccoon",
+      "toId": "animal-red-fox",
+      "why": "Zwei anpassungsfähige Säugetiere nach Nahrungssuche und Lebensräumen in Siedlungen vergleichen; die empfindlichen Vorderpfoten beschreibt hier die Waschbärkarte.",
+      "kind": "context",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "animal-expansion-barn-owl-white-tailed-eagle",
+      "fromId": "animal-barn-owl",
+      "toId": "animal-white-tailed-eagle",
+      "why": "Eine Eule und einen Adler als jagende Vögel aus unterschiedlichen Vogelgruppen vergleichen; Flügellänge und Spannweite unterscheiden.",
+      "kind": "context",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "animal-expansion-kingfisher-foodweb",
+      "fromId": "animal-kingfisher",
+      "toId": "science-foodweb",
+      "why": "Der Eisvogel frisst Fische. An dieser Beziehung kannst du einen Nahrungspfeil vom Fisch zum Vogel begründen. Die zwei Modellketten zeigen andere Lebensräume; sie sind kein vollständiges Netz seines Gewässers.",
+      "kind": "context",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "animal-expansion-ostrich-emperor-penguin",
+      "fromId": "animal-ostrich",
+      "toId": "animal-emperor-penguin",
+      "why": "Zwei flugunfähige Vögel nutzen Körperteile in sehr unterschiedlichen Lebensräumen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-atlantic-puffin-emperor-penguin",
+      "fromId": "animal-atlantic-puffin",
+      "toId": "animal-emperor-penguin",
+      "why": "Brutgebiet und Nahrungsraum zweier Meeresvögel sachlich vergleichen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-common-chameleon-common-cuttlefish",
+      "fromId": "animal-common-chameleon",
+      "toId": "animal-common-cuttlefish",
+      "why": "Beide Tiere können ihre Färbung ändern. Vergleiche die Funktionen und Grenzen, ohne eine beliebige Musterkopie anzunehmen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-fire-salamander-axolotl",
+      "fromId": "animal-fire-salamander",
+      "toId": "animal-axolotl",
+      "why": "Äußere Kiemen und unterschiedliche Entwicklungsverläufe zweier Amphibien vergleichen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-common-frog-fire-salamander",
+      "fromId": "animal-common-frog",
+      "toId": "animal-fire-salamander",
+      "why": "Zwei Amphibien verbinden Wasser- und Landlebensräume auf unterschiedliche Weise.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-eastern-clown-anemonefish-coral-reef",
+      "fromId": "animal-eastern-clown-anemonefish",
+      "toId": "science-coral-reef",
+      "why": "Die Seeanemone des Fisches ist ein anderes Tier als eine Koralle. Beide gehören zu den Nesseltieren; an ihnen lassen sich verschiedene Partnerbeziehungen vergleichen.",
+      "kind": "context",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "animal-expansion-european-eel-currents",
+      "fromId": "animal-european-eel",
+      "toId": "science-currents",
+      "why": "Ozeanströmungen und durchgängige Wanderwege verbinden mehrere Lebensabschnitte.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-monarch-butterfly-honey-bee",
+      "fromId": "animal-monarch-butterfly",
+      "toId": "animal-honey-bee",
+      "why": "Zwei Insekten zeigen unterschiedliche Lebenszyklen und Beziehungen zu Pflanzen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-garden-snail-hedgehog",
+      "fromId": "animal-garden-snail",
+      "toId": "animal-hedgehog",
+      "why": "Feuchtigkeit, Verstecke und unterschiedliche Gartenbeobachtungen vergleichen; keine sichere konkrete Beutebeziehung behaupten.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-european-lobster-common-octopus",
+      "fromId": "animal-european-lobster",
+      "toId": "animal-common-octopus",
+      "why": "Zwei wirbellose Meerestiere mit sehr unterschiedlicher Körperstütze vergleichen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-common-cuttlefish-common-octopus",
+      "fromId": "animal-common-cuttlefish",
+      "toId": "animal-common-octopus",
+      "why": "Verwandte Kopffüßer nach tatsächlichen Körpermerkmalen statt Sammelnamen vergleichen.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "animal-expansion-short-snouted-seahorse-foodweb",
+      "fromId": "animal-short-snouted-seahorse",
+      "toId": "science-foodweb",
+      "why": "Kleine Beutetiere, Verstecke und Räuber als Teil eines Nahrungsnetzes erklären.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "history-evidence-20261017-0",
+      "fromId": "history-khipu",
+      "toId": "history-writing",
+      "why": "Beide Themen erklären, wie Menschen Informationen aufbewahren. Material und Zeichenregeln unterscheiden sich.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "history-evidence-20261017-1",
+      "fromId": "history-khipu",
+      "toId": "history-web",
+      "why": "Eine Nachricht braucht Regeln und einen Zusammenhang. Geknotete Schnüre und vernetzte Computer sind unterschiedliche Verfahren.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "history-evidence-20261017-2",
+      "fromId": "history-mohenjo-daro",
+      "toId": "history-rome",
+      "why": "Alte Wasseranlagen zeigen verschiedene Lösungen für das Leben in Städten. Der Vergleich behauptet keine direkte Übernahme.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "history-evidence-20261017-3",
+      "fromId": "history-mohenjo-daro",
+      "toId": "history-writing",
+      "why": "Baureste und Schrift sind unterschiedliche historische Quellen. Beide müssen im Zusammenhang gedeutet werden.",
+      "kind": "context",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "history-compass--invention-compass",
+      "fromId": "history-compass",
+      "toId": "invention-compass",
+      "kind": "context",
+      "why": "Die historische Karte fragt nach früher Navigation; der Bauplan erklärt, wie eine magnetische Nadel heute eine Richtung liefern kann. Ein heutiger Bauplan belegt keinen bestimmten historischen Übertragungsweg.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-pyramids--building-giza-pyramids",
+      "fromId": "history-pyramids",
+      "toId": "building-giza-pyramids",
+      "kind": "context",
+      "why": "Die historische Karte erklärt den Zweck als Königsgrab. Die Bauwerkskarte lässt dich die großen Anlagen und die Aufgaben ihrer Herstellung näher betrachten. Zweck und Bauorganisation sind verschiedene Fragen.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-zero--person-al_khwarizmi",
+      "fromId": "history-zero",
+      "toId": "person-al_khwarizmi",
+      "kind": "context",
+      "why": "Die Null und das Stellenwertsystem helfen beim Rechnen. Die Biografie von al-Chwarizmi zeigt einen anderen zeitlichen Zusammenhang der Rechen- und Algorithmengeschichte; das sind keine zeitgleichen Personen.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-steam--history-railway",
+      "fromId": "history-steam",
+      "toId": "history-railway",
+      "kind": "context",
+      "why": "Eine frühe Dampfmaschine bewegte eine Pumpe; später nutzten Lokomotiven Dampfkraft für den Verkehr. Gleiche Energiequelle bedeutet nicht dieselbe Aufgabe.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-ww1--history-ww2",
+      "fromId": "history-ww1",
+      "toId": "history-ww2",
+      "kind": "context",
+      "why": "Die beiden Weltkriege gehören zu verschiedenen Zeitabschnitten. Vergleiche ihre Daten und Folgen, ohne den zweiten Krieg als unvermeidliche Fortsetzung zu erklären.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-ww2--history-un",
+      "fromId": "history-ww2",
+      "toId": "history-un",
+      "kind": "context",
+      "why": "Die UNO entstand nach dem Zweiten Weltkrieg mit dem Ziel von Frieden und Zusammenarbeit. Das Kriegsende allein bewirkte noch keinen dauerhaften Frieden.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-holocaust--history-un",
+      "fromId": "history-holocaust",
+      "toId": "history-un",
+      "kind": "context",
+      "why": "Hier geht es um die Verletzung der Menschenwürde; bei der UNO um gemeinsame Ziele zum Schutz von Menschenrechten. Dieser Vergleich erklärt nicht alle Ursachen ihrer Gründung.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-berlin_wall_build--history-berlin_wall_fall",
+      "fromId": "history-berlin_wall_build",
+      "toId": "history-berlin_wall_fall",
+      "kind": "context",
+      "why": "1961 wurden Grenzsperren errichtet; 1989 wurden Übergänge geöffnet. Vergleiche, was sich jeweils für Wege und Besuche änderte.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-berlin_wall_fall--history-reunification",
+      "fromId": "history-berlin_wall_fall",
+      "toId": "history-reunification",
+      "kind": "context",
+      "why": "Die Grenzöffnung am 9. November 1989 und die staatliche Wiedervereinigung am 3. Oktober 1990 sind zwei verbundene, verschiedene Ereignisse.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "history-apollo11--history-iss",
+      "fromId": "history-apollo11",
+      "toId": "history-iss",
+      "kind": "context",
+      "why": "Eine Mondlandung und ein Forschungslabor in der Erdumlaufbahn haben unterschiedliche Aufgaben. Beide zeigen, wie wichtig verschiedene Rollen im Team sind.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-ada_lovelace--person-grace_hopper",
+      "fromId": "person-ada_lovelace",
+      "toId": "person-grace_hopper",
+      "kind": "context",
+      "why": "Eine genaue Rechenanleitung und ein Übersetzungswerkzeug beantworten verschiedene Fragen beim Programmieren. Lovelace und Hopper arbeiteten in unterschiedlichen Jahrhunderten; dies ist ein Vergleich ihrer Beiträge.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-karl_benz--person-bertha_benz",
+      "fromId": "person-karl_benz",
+      "toId": "person-bertha_benz",
+      "kind": "context",
+      "why": "Ein Fahrzeug zu entwickeln und es unterwegs zu erproben sind verschiedene Aufgaben. Carl und Bertha Benz trugen mit technischen Ideen, Geld und praktischer Arbeit zur Entwicklung des Motorwagens bei.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-katherine_johnson--person-mae_jemison",
+      "fromId": "person-katherine_johnson",
+      "toId": "person-mae_jemison",
+      "kind": "context",
+      "why": "Berechnungen von Flugbahnen und Forschung während eines Raumflugs brauchen unterschiedliche Fachkenntnisse. Johnson und Jemison zeigen verschiedene Beiträge zur Raumfahrt; sie flogen nicht gemeinsam auf einer Mission.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-tim_berners_lee--history-web",
+      "fromId": "person-tim_berners_lee",
+      "toId": "history-web",
+      "kind": "context",
+      "why": "Die Biografie beschreibt einen Entwickler. Die Geschichte des Webs unterscheidet Vorschlag, erste Programme und spätere Freigabe. Das Web nutzt das bereits ältere Internet.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-neil_armstrong--history-apollo11",
+      "fromId": "person-neil_armstrong",
+      "toId": "history-apollo11",
+      "kind": "context",
+      "why": "Armstrongs erster Schritt war ein Beitrag innerhalb einer Mission. Apollo 11 zeigt auch die Aufgaben von Aldrin, Collins und der Teams auf der Erde; ein Einzelporträt bildet diese Zusammenarbeit nicht vollständig ab.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-cai_lun--history-paper",
+      "fromId": "person-cai_lun",
+      "toId": "history-paper",
+      "kind": "context",
+      "why": "Cai Luns Biografie erklärt einen Beitrag zur Verbesserung der Papierherstellung. Die Geschichte des Papiers reicht weiter zurück: Verbesserung und allererster Ursprung sind verschiedene Fragen.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-johannes_gutenberg--history-printing",
+      "fromId": "person-johannes_gutenberg",
+      "toId": "history-printing",
+      "kind": "context",
+      "why": "Gutenbergs Biografie erklärt sein Drucksystem in Europa. Die Geschichte des Druckens bezieht auch frühere Verfahren in Ostasien ein; Gutenbergs Beitrag war nicht der Anfang allen Druckens.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-marie_curie--person-tu_youyou",
+      "fromId": "person-marie_curie",
+      "toId": "person-tu_youyou",
+      "kind": "context",
+      "why": "Beide Biografien zeigen Forschung mit Messungen und Prüfungen im Team. Strahlungsforschung und ein Wirkstoff gegen Malaria sind verschiedene Forschungsgebiete; ihre Ergebnisse sind nicht austauschbar.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-jane_goodall--person-charles_darwin",
+      "fromId": "person-jane_goodall",
+      "toId": "person-charles_darwin",
+      "kind": "context",
+      "why": "Lange Verhaltensbeobachtungen und der Vergleich von Lebewesen liefern Belege für unterschiedliche Fragen. Was ein einzelner Schimpanse lernt, ist noch kein Nachweis einer vererbbaren Veränderung über Generationen.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-alexander_humboldt--person-charles_darwin",
+      "fromId": "person-alexander_humboldt",
+      "toId": "person-charles_darwin",
+      "kind": "context",
+      "why": "Beide verglichen Naturbeobachtungen auf Reisen und darüber hinaus. Ein Zusammenhang zwischen Umwelt und Lebewesen erklärt für sich allein noch nicht die Veränderung vererbbarer Merkmale über Generationen.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-wangari_maathai--person-jane_goodall",
+      "fromId": "person-wangari_maathai",
+      "toId": "person-jane_goodall",
+      "kind": "context",
+      "why": "Beide verbanden Naturschutz mit dem Engagement vieler Menschen. Bäume zu pflegen und Schimpansen zu erforschen sind unterschiedliche Aufgaben; der Vergleich macht aus ihnen kein gemeinsames Forschungsprojekt.",
+      "checkedAt": "2026-10-18"
     }
   ]
 }

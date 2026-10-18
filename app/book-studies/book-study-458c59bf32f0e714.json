@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "term": "Halbkugel",
+  "learning": {
+    "starter": "Eine Halbkugel ist eine Hälfte der gedachten Erdkugel. Der Äquator teilt sie in Nord- und Südhalbkugel.",
+    "deeper": "Andere vereinbarte Teilungen können westliche und östliche Hälften beschreiben. Eine geografische Hälfte ist keine politische Gruppe und enthält nicht nur ein einziges Klima. Die Erdkugel ist dabei ein Modell der wirklichen Erdform.",
+    "observe": "Zeichne eine Kugel als Kreis mit Mittellinie. Ordne vier erfundene Punkte oberhalb und unterhalb ein. Punkte genau auf der Linie liegen am Äquator; sie müssen nicht willkürlich einer Seite zugeordnet werden.",
+    "benefit": "Du ordnest Punkte nach einem erklärten Bezug, statt Weltregionen politisch zusammenzufassen.",
+    "connection": "Das Jahreszeitenlabor stellt gegenüberliegende Hemisphären gegenüber. Die Punktaufgabe trennt ihre Lage von einer Aussage über jedes örtliche Wetter.",
+    "lab": "seasons",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/latitude.html",
+        "title": "NOAA · Halbkugel (Englisch)",
+        "anchor": "Breitengrade, Äquator und geografische Pole: gedachte Linien zur Lagebeschreibung. Die Einteilung ist keine Messung des örtlichen Klimas.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was trennt Nord- und Südhalbkugel im Modell?",
+      "answers": [
+        "Die größte Stadt eines Landes",
+        "Der Äquator",
+        "Eine beliebige Küstenlinie"
+      ],
+      "correct": 1,
+      "hint": "Gesucht ist die gedachte Mittellinie der nördlichen und südlichen Breiten.",
+      "why": "Der Äquator ist die gemeinsame Bezugslinie. Stadtgröße oder Küstenformen definieren diese geografische Teilung nicht.",
+      "wrongReasons": [
+        "Eine Stadt definiert keine hemisphärische Mittellinie.",
+        "",
+        "Eine Küste trennt Land und Wasser, nicht die zwei Breitenhälften."
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Nukleotid",
+  "learning": {
+    "starter": "DNA und RNA bestehen aus vielen verbundenen Bausteinen. Ein solcher Baustein heißt Nukleotid.",
+    "deeper": "Bei DNA heißt der Zucker Desoxyribose, bei RNA Ribose. DNA verwendet die Basen A, T, C und G; RNA verwendet U anstelle von T. Viele verbundene Nukleotide bilden lange Ketten.",
+    "observe": "Zeichne drei verschieden geformte Teile in einem Rahmen und wiederhole den Rahmen als Kette. Welche drei Teile gehören zu einem Baustein? Die Zeichnung zeigt nur eine Gliederung, keine echte Molekülform oder Größen.",
+    "benefit": "Du ordnest Baustein, Kette und Informationsabschnitt auseinander.",
+    "topic": "science-cell",
+    "connection": "Die Zellkarte zeigt eine lebende Einheit, Nukleotide sind einzelne Bausteine ihrer DNA oder RNA. Vergleiche die Ebenen, ohne ihre Zeichnungsgrößen gleichzusetzen.",
+    "relatedWords": [
+      {
+        "term": "DNA",
+        "reason": "Viele verbundene Nukleotide bilden die DNA-Kette. Vergleiche einzelnen Baustein und gesamten Aufbau."
+      },
+      {
+        "term": "RNA",
+        "reason": "Nukleotide sind Bausteine von RNA. In RNA gehören Ribose und U statt T zu den grundlegenden Unterschieden gegenüber DNA."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Nucleotide",
+        "title": "NIH/NHGRI · Nukleotid (Englisch)",
+        "anchor": "Definition: sugar, phosphate and base; ribose/deoxyribose; RNA U versus DNA T",
+        "updatedOn": "2026-10-13",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "question": {
+      "prompt": "Welche Aussage beschreibt ein Nukleotid?",
+      "answers": [
+        "Es ist das vollständige Genom",
+        "Es enthält Zucker, Phosphat und eine Base",
+        "Es ist immer eine ganze Zelle"
+      ],
+      "correct": 1,
+      "hint": "Suche die drei Bestandteile eines einzelnen Bausteins.",
+      "why": "Zucker, Phosphatgruppe und Base bilden zusammen einen Nukleotid-Baustein. Viele davon gehören zu DNA oder RNA.",
+      "wrongReasons": [
+        "Das Genom bezeichnet die ganze Erbinformation. Ein Nukleotid ist ein einzelner Baustein.",
+        "",
+        "Eine Zelle besteht aus vielen verschiedenen Stoffen und Strukturen. Ein Nukleotid ist viel kleiner als dieses Ganze."
+      ]
+    }
+  }
+}

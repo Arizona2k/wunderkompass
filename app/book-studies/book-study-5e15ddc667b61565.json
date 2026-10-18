@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "term": "Komet",
+  "learning": {
+    "starter": "Ein eisreicher Körper kann in Sonnennähe Material abgeben. Dadurch kann ein Schweif sichtbar werden.",
+    "deeper": "Ein Schweif ist nicht bei jedem Kometen immer gleich sichtbar. Staub und Gas reagieren unterschiedlich auf Sonnenlicht und Sonnenwind. Die Schweifrichtung ist deshalb nicht einfach die Spur einer Bewegung wie hinter einem Auto.",
+    "observe": "Zeichne eine gedachte Sonne und einen Kometenkern getrennt von einer Materialhülle. Schreibe ausdrücklich keine echte Beobachtung daneben. Das Schema berechnet weder eine reale Bahn noch eine sichere Schweifform.",
+    "benefit": "Du trennst Kometenkern, abgegebenes Material und eine nur gezeichnete Bewegungsbahn.",
+    "connection": "Die Kometenkarte unterscheidet Kern, Hülle und Schweife. Die eigene Skizze zeigt eine begrenzte Anordnung und keine vollständige Flug- oder Schweifvorhersage.",
+    "topic": "science-comet",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/solar-system/comets/facts/",
+        "title": "NASA · Komet (Englisch)",
+        "anchor": "Actual selected264–265: nucleus ice/dust, coma fromwarming, dust/ion tails. No all-comets-visible-tail or surewaterorigin, impactrisk or sourceimage.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Asteroid",
+        "reason": "Eisreiche Körper mit möglicher Materialhülle und überwiegend felsige Körper sind verschiedene Einordnungen. Ein gezeichneter Schweif bestimmt kein echtes Objekt."
+      }
+    ],
+    "question": {
+      "prompt": "Was ist die Materialhülle in der vereinfachten Kometenskizze?",
+      "answers": [
+        "Die gesamte feste Kometenkugel",
+        "Abgegebenes Material um den Kern",
+        "Ein Beweis für eine immer gleiche Schweifrichtung hinter der Bewegung"
+      ],
+      "correct": 1,
+      "hint": "Unterscheide den Körperkern von Material, das ihn umgibt.",
+      "why": "Die Hülle besteht aus abgegebenem Material. Sie ist kein gleichbleibender fester Kern und keine sichere Spur hinter der Flugrichtung.",
+      "wrongReasons": [
+        "Kern und abgegebenes Material sind verschiedene Bestandteile der Erklärung.",
+        "",
+        "Schweife reagieren auch auf Sonnenlicht und Sonnenwind. Die Bewegungsspur allein erklärt sie nicht."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum zeigt ein Kometenschweif nicht einfach die Flugrichtung an?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Komet“: Du unterscheidest Körperbewegung und Wirkung auf abgegebenes Material."
+      }
+    ]
+  }
+}

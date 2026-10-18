@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "term": "Sediment",
+  "learning": {
+    "starter": "Sediment ist Material wie Sand oder Schlamm, das transportiert oder abgelagert sein kann. Transport und Ablagerung sind verschiedene Zustände.",
+    "deeper": "Bewegung und Ablagerung sind verschiedene Zustände einer Materialgeschichte. Ein Gletscher kann Material verschieben; andere Wege können es ebenfalls transportieren. Eine gezeichnete Körnung bestimmt nicht die genaue Herkunft oder Zusammensetzung einer echten Probe.",
+    "observe": "Zeichne drei gedachte Teilchen auf einem Transportpfeil und anschließend in einem markierten Ablagerungsbereich. Beschrifte beide Zustände. Die Symbolpunkte sind keine gemessenen Korngrößen und kein echtes Materialexperiment.",
+    "benefit": "Du unterscheidest einen Materialtransport von einer Ablagerung und hinterfragst deren Herkunft.",
+    "connection": "Das Wasserlabor zeigt Übergänge und Speicher für Wasser. Der zusätzliche Materialweg ergänzt Ablagerung, ohne Wasser- und Sedimentmenge gleichzusetzen.",
+    "lab": "water",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/glaciers-and-icecaps",
+        "title": "USGS · Sediment (Englisch)",
+        "anchor": "Gletscher entstehen an Land, bewegen sich unter ihrem Eigengewicht und speichern Süßwasser. Keine aktuellen Eisflächen oder Wasservorräte übernommen.",
+        "updatedOn": "2026-09-17",
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      },
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/water-science-glossary",
+        "title": "USGS · Wasserbegriffe",
+        "anchor": "Begriffsstellen zu geringem Gehalt gelöster Stoffe und zu transportiertem oder abgelagertem Sediment. Keine Schwellenwerte als Trinkfreigabe übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Erosion",
+        "reason": "Abgetragenes Material kann an anderer Stelle abgelagert werden. Transportweg und Ablagerung sind unterschiedliche Teile einer Materialgeschichte."
+      }
+    ],
+    "question": {
+      "prompt": "Was zeigt der markierte Ablagerungsbereich im Papiermodell?",
+      "answers": [
+        "Dass jede echte Probe dieselbe Herkunft hat",
+        "Dass die gedachten Teilchen an diesem Ort abgelegt sind",
+        "Die genaue chemische Zusammensetzung eines realen Sediments"
+      ],
+      "correct": 1,
+      "hint": "Die Zeichnung legt einen Zustand und Ort fest, keine echten Materialmessungen.",
+      "why": "Der Bereich zeigt eine gedachte Ablagerung. Die frei gewählten Punkte belegen weder universelle Herkunft noch chemische Eigenschaften.",
+      "wrongReasons": [
+        "Ein Modellweg kann nicht die Herkunft aller wirklichen Sedimente festlegen.",
+        "",
+        "Ohne eine Analyse enthält das Punktmuster keine chemischen Messwerte."
+      ]
+    }
+  }
+}

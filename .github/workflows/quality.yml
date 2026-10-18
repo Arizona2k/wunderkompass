@@ -15,20 +15,19 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  checks:
-    name: Required quality checks
+  standards:
+    name: Standard checks and single production build
     runs-on: ubuntu-24.04
-    # Existing combined browser job: user-authorised 50-minute ceiling, all steps retained.
-    timeout-minutes: 50
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1; Node 24
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1; Node24
         with:
           persist-credentials: false
-      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0; Node 24
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0; Node24
         with:
           version: 11.25.0
           run_install: false
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0; Node 24
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0; Node24
         with:
           node-version: '24'
           cache: pnpm
@@ -55,36 +54,143 @@ jobs:
         run: pnpm run build
       - name: Content integrity
         run: pnpm run verify
-      - name: Install browser tools with frozen lockfile
+      - name: Read-only original news-source readiness report
+        run: node scripts/news/readiness.mjs --ci-report
+      - name: Package exact build and standard proofs
+        run: node scripts/quality-artifacts.mjs pack
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2; Node24
+        with:
+          name: quality-build-${{ github.run_id }}-${{ github.run_attempt }}
+          path: work/quality-build/
+          if-no-files-found: error
+          retention-days: 1
+
+  browsers:
+    name: Browser ${{ matrix.engine }}
+    needs: standards
+    runs-on: ubuntu-24.04
+    # Separate runners, ports, profiles and worker caches. Same immutable build.
+    # No shared-process concurrency experiment; every existing matrix remains.
+    # User-approved margin for Chromium regression plus evidence sealing/upload.
+    # Other engines keep their existing limit; phase timings remain mandatory.
+    timeout-minutes: ${{ matrix.engine == 'chromium' && 50 || 35 }}
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        engine: [chromium, firefox, webkit]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1; Node24
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0; Node24
+        with:
+          version: 11.25.0
+          run_install: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0; Node24
+        with:
+          node-version: '24'
+          cache: pnpm
+          cache-dependency-path: |
+            pnpm-lock.yaml
+            qa/pnpm-lock.yaml
+      - name: Install application with frozen lockfile
+        run: pnpm install --frozen-lockfile
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8; Node24; digest mismatch fails
+        with:
+          name: quality-build-${{ github.run_id }}-${{ github.run_attempt }}
+          path: work/quality-build/
+          digest-mismatch: error
+      - name: Verify same commit, source digest and production build
+        run: node scripts/quality-artifacts.mjs restore
+      - name: Install frozen browser tools
         run: pnpm --dir qa install --frozen-lockfile
-      - name: Install Chromium and system dependencies
-        run: pnpm --dir qa exec playwright install --with-deps chromium
-      - name: Install additional browser engines
-        run: pnpm --dir qa exec playwright install --with-deps firefox webkit
-      - name: Early actual-engine keyboard search before the complete regression
-        run: node tests/browser/journey-engines.mjs --search-only
-      - name: Production browser regression
+      - name: Install actual engine and dependencies
+        run: pnpm --dir qa exec playwright install --with-deps ${{ matrix.engine }}
+      - name: Early actual-engine keyboard search
+        if: matrix.engine != 'chromium'
+        run: node tests/browser/journey-engines.mjs --engine=${{ matrix.engine }} --search-only
+      - name: Complete Chromium regression
+        if: matrix.engine == 'chromium'
         run: pnpm run test:browser
-      - name: Actual Firefox and WebKit journey checks
-        run: node tests/browser/journey-engines.mjs
-      - name: Handoff with actual engine evidence
-        run: node scripts/handoff.mjs --require-engines
+      - name: Actual independent engine matrices
+        if: matrix.engine != 'chromium'
+        run: node tests/browser/journey-engines.mjs --engine=${{ matrix.engine }}
+      - name: Seal complete browser-job evidence
+        run: node scripts/quality-artifacts.mjs job ${{ matrix.engine }}
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2; Node24
+        with:
+          name: quality-evidence-${{ matrix.engine }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: work/quality-${{ matrix.engine }}/
+          if-no-files-found: error
+          retention-days: 7
+      - name: Preserve failed diagnostics
+        if: failure() || cancelled()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: quality-failure-${{ matrix.engine }}-${{ github.run_id }}-${{ github.run_attempt }}
+          include-hidden-files: true
+          path: |
+            .qa-output/*.json
+            .qa-output/quality-*/*.json
+            .qa-output/*failure*.png
+            .qa-output/quality-*/*failure*.png
+          if-no-files-found: error
+          retention-days: 7
+
+  checks:
+    name: Required quality checks
+    if: always()
+    needs: [standards, browsers]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Require every upstream job
+        env:
+          STANDARDS_RESULT: ${{ needs.standards.result }}
+          BROWSERS_RESULT: ${{ needs.browsers.result }}
+        run: test "$STANDARDS_RESULT" = success && test "$BROWSERS_RESULT" = success
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+        with:
+          name: quality-build-${{ github.run_id }}-${{ github.run_attempt }}
+          path: work/quality-build/
+          digest-mismatch: error
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+        with:
+          name: quality-evidence-chromium-${{ github.run_id }}-${{ github.run_attempt }}
+          path: work/quality-chromium/
+          digest-mismatch: error
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+        with:
+          name: quality-evidence-firefox-${{ github.run_id }}-${{ github.run_attempt }}
+          path: work/quality-firefox/
+          digest-mismatch: error
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+        with:
+          name: quality-evidence-webkit-${{ github.run_id }}-${{ github.run_attempt }}
+          path: work/quality-webkit/
+          digest-mismatch: error
+      - name: Bind final collector to this PR and integration base
+        run: node scripts/release/quality-context.cjs capture
+      - name: Fail-closed same-snapshot aggregation and required handoff
+        run: node scripts/quality-artifacts.mjs collect
       - name: Reject stale PR head, base or unexpected workflow origin
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/release/quality-context.cjs verify
-      - name: Read-only original news-source readiness report
-        run: node scripts/news/readiness.mjs --ci-report
-      - name: Prepare bounded review evidence
-        if: always()
-        run: node scripts/review-evidence.mjs
-      - name: Upload browser evidence
-        if: always()
-        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2; Node 24
+      - name: Upload final reports without duplicating screenshot storage
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: browser-evidence-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
-            .qa-output/review/
+            .qa-output/review/*.json
+            .qa-output/review/*.xml
+            .qa-output/ci-context.json
           if-no-files-found: error
-          include-hidden-files: true
           retention-days: 7

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "term": "Verdunstung",
+  "learning": {
+    "starter": "Flüssiges Wasser kann in die Luft übergehen. Es muss dafür nicht erst kochen.",
+    "deeper": "Verdunstung findet an der Flüssigkeitsoberfläche statt. Das Wasser ist danach gasförmig vorhanden, nicht einfach verschwunden. Temperatur, Luftbewegung und weitere Bedingungen können beeinflussen, wie schnell dies geschieht.",
+    "observe": "Zeichne eine gedachte flache Wasserschale vor und nach einem niedrigeren Wasserstand. Nenne neben Verdunstung auch Auslaufen als mögliche Erklärung: Ein einzelnes Bild beweist die Ursache nicht. Erhitze oder trinke dafür kein Versuchswasser.",
+    "benefit": "Du beschreibst die Zustandsänderung und erkennst, dass weniger Wasser nicht automatisch seine Ursache beweist.",
+    "connection": "Die Wasserkreislaufkarte zeigt Verdunstung als einen Weg. Die Laborbeobachtung hilft beim Trennen von beobachtetem Unterschied und vermuteter Ursache.",
+    "topic": "science-water-cycle",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/water-cycle",
+        "title": "USGS · Wasserkreislauf",
+        "anchor": "Wasserspeicher, Transportwege und Zustandswechsel. Die eigene Skizze zeigt Möglichkeiten und keine Pflichtreihenfolge, festen Aufenthaltszeiten oder Wasserqualitätsprüfung.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Kondensation",
+        "reason": "Flüssig-zu-gasförmig und gasförmig-zu-flüssig sind unterschiedliche Zustandswechsel. Wasser wird dabei nicht vernichtet oder aus neuen Atomen erzeugt."
+      }
+    ],
+    "question": {
+      "prompt": "Eine gezeichnete Schale enthält später weniger Wasser. Was weißt du allein aus den zwei Bildern?",
+      "answers": [
+        "Das Wasser wurde sicher vernichtet",
+        "Es muss immer gekocht haben",
+        "Nur der gezeichnete Stand ist niedriger; die Ursache braucht weitere Angaben"
+      ],
+      "correct": 2,
+      "hint": "Ein Unterschied ist eine Beobachtung. Die Ursache ist eine zusätzliche Erklärung.",
+      "why": "Die Bilder zeigen nur den veränderten Stand. Ohne weitere Bedingungen unterscheiden sie Verdunstung nicht sicher von Auslaufen.",
+      "wrongReasons": [
+        "Bei Verdunstung wird Wasser nicht vernichtet. Die Zeichnung zeigt auch keine Stoffbilanz.",
+        "Verdunstung kann ohne Kochen geschehen. Ein niedrigerer Stand belegt keine Kochtemperatur.",
+        ""
+      ]
+    }
+  }
+}

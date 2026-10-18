@@ -4,3 +4,6 @@
 .journey-diagram-labels{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;font-size:1rem;color:#203c47}.journey-diagram-labels li{display:flex;align-items:center;gap:.5rem}.journey-diagram-labels li span{width:1rem;height:1rem;border:1px solid #526773;border-radius:50%;flex-shrink:0}.journey-topic-links a{display:flex;align-items:center;justify-content:space-between;min-height:44px}
 
 .chapter-diagram-key{display:flex;flex-wrap:wrap;gap:8px 18px;padding:8px 0 12px;margin-bottom:12px;border-bottom:1px solid #c8dde2}.chapter-diagram-key span{font-size:max(1rem,1em);line-height:1.55;overflow-wrap:anywhere;max-width:100%;color:#285664}
+
+/* Source credits follow the voluntary large-reading setting. */
+.large-reading .journey-source{font-size:1.15rem!important;line-height:1.65}

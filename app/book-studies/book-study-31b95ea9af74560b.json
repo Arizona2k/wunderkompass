@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "term": "Messunsicherheit",
+  "learning": {
+    "starter": "Ein Messgerät zeigt nicht jedes winzige Stück. Deshalb ist Messen nicht grenzenlos genau.",
+    "deeper": "Wiederholungen können Unterschiede zeigen, erfassen aber nicht automatisch alle Einflüsse. Eine falsch angesetzte Nullmarke kann mehrere Ergebnisse ähnlich verschieben. Ein behaupteter Unsicherheitsbereich ist kein Versprechen, jede denkbare Abweichung abzudecken.",
+    "observe": "Vergleiche gedachte Lineale mit Zentimeter- und Millimeterstrichen auf Papier. Welche kleineren Schritte lassen sich ablesen? Die Zeichnung ist keine Kalibrierung und liefert keinen berechneten Unsicherheitswert für ein echtes Gerät.",
+    "benefit": "Du erkennst, warum Genauigkeit begründet werden muss und nicht bloß aus vielen Ziffern folgt.",
+    "connection": "Häufigkeiten und Messunsicherheit beantworten verschiedene Fragen. Eine lange Ergebnisliste ist noch keine vollständige Begründung der Genauigkeit eines Geräts.",
+    "topic": "science-probability",
+    "sources": [
+      {
+        "url": "https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-2-classification-components-uncertainty",
+        "title": "NIST · Messunsicherheit (Englisch)",
+        "anchor": "Actual2.1 andnote148: uncertainty accompanies result, not same as actual error; no universal95percent or guaranteed interval.",
+        "updatedOn": "2023-03-01",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Messwert",
+        "reason": "Ein Ergebnis und die Einschätzung seiner Verlässlichkeit gehören zusammen. Viele Nachkommastellen allein belegen keine grenzenlose Genauigkeit."
+      }
+    ],
+    "question": {
+      "prompt": "Drei Messungen ergeben dieselbe Zahl. Was folgt daraus?",
+      "answers": [
+        "Dass jede Unsicherheit verschwunden ist",
+        "Dass die Größe unendlich genau bekannt ist",
+        "Nur Übereinstimmung dieser Ergebnisse, nicht grenzenlose Genauigkeit"
+      ],
+      "correct": 2,
+      "hint": "Ein gleicher Einfluss kann bei allen Wiederholungen auftreten.",
+      "why": "Gleiche Ergebnisse zeigen Übereinstimmung. Sie schließen gemeinsame Geräteeinflüsse oder ein gleichbleibendes Vorgehensproblem nicht aus.",
+      "wrongReasons": [
+        "Wiederholung allein erfasst nicht jeden Einfluss auf eine Messung.",
+        "Gleiche Zahlen machen die Ableseschritte eines Geräts nicht beliebig klein.",
+        ""
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum machen zusätzliche Nachkommastellen eine Messung nicht automatisch genauer?",
+        "reason": "Bei der Messunsicherheit vergleichst du Zahlen mit den Bedingungen ihrer Ermittlung. Zusätzliche Stellen hinter dem Komma ersetzen keine genauere Messung."
+      }
+    ]
+  }
+}

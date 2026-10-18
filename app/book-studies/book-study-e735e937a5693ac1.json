@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "term": "Wärmeleitung",
+  "learning": {
+    "starter": "An einer Stelle wird ein Gegenstand wärmer; Energie kann durch das Material zu anderen Stellen gelangen.",
+    "deeper": "Leitung ist von Konvektion zu unterscheiden, bei der bewegte Flüssigkeit oder bewegtes Gas Energie mitführt. Eine einfache Leitungsskizze sagt noch nicht, wie schnell eine wirkliche Stelle warm wird.",
+    "observe": "Zeichne einen gedachten festen Stab mit einem wärmeren und einem kühleren Ende. Markiere den Energiepfad im Material. Der Stab ist nur ein Papiermodell: Verwende dafür kein Feuer und erhitze keine echten Gegenstände.",
+    "benefit": "Du unterscheidest die Übertragung in einem festen Material von einem bewegten Stoffstrom.",
+    "connection": "Leitung ist einer der drei dargestellten Wärmewege. Vergleiche im Modell Materialübertragung, Strömung und Strahlung.",
+    "topic": "science-heat-transfer",
+    "sources": [
+      {
+        "url": "https://bsesc.energy.gov/energy-basics/heat-flow",
+        "title": "U.S. Department of Energy · Wärmeübertragung",
+        "anchor": "Full body lines11–22: conduction, convection, radiation. Natural warm-to-cool direction; own safe hypothetical comparisons, no building-efficiency guarantees.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Wärme",
+        "reason": "Leitung ist ein möglicher Wärmeweg durch Material oder Berührung. Wärme beschreibt die Energieübertragung; der Weg muss zusätzlich erklärt werden."
+      },
+      {
+        "term": "Konvektion",
+        "reason": "Leitung durch Material und Energie, die ein bewegtes Gas oder eine Flüssigkeit mitführt, sind verschiedene Übertragungswege."
+      }
+    ],
+    "question": {
+      "prompt": "Was gehört zur Wärmeleitung im gedachten festen Stab?",
+      "answers": [
+        "Der ganze Stab muss durch den Raum fliegen",
+        "Energieübertragung durch das Material",
+        "Der Stab erzeugt Energie aus nichts"
+      ],
+      "correct": 1,
+      "hint": "Folge dem Weg innerhalb des Materials, nicht einer Bewegung des gesamten Stabs.",
+      "why": "Beim Leitungsvorgang wird Energie im Material übertragen. Ein großer bewegter Stoffstrom ist dazu nicht erforderlich.",
+      "wrongReasons": [
+        "Eine Bewegung des ganzen Stabs beschreibt nicht den hier gemeinten Leitungsvorgang.",
+        "",
+        "Der Energiepfad beschreibt eine Übertragung, keine Erzeugung aus dem Nichts."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum fühlen sich gleich warme Materialien manchmal verschieden an?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Wärmeleitung“: Du trennst Temperatureigenschaft und Energieübertragung."
+      }
+    ]
+  }
+}

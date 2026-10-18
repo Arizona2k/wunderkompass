@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "term": "Energie",
+  "learning": {
+    "starter": "Etwas kann sich bewegen, wärmer werden oder Licht aussenden. Energie verbindet solche Veränderungen.",
+    "deeper": "Eine Energiebetrachtung beschreibt, was übertragen oder umgewandelt wird. In einem abgegrenzten Vorgang muss man die beteiligten Körper und die Umgebung beachten. Eine Maschine erschafft nicht ohne Zufuhr immer neue nutzbare Energie.",
+    "observe": "Zeichne eine gedachte Lampe mit einem Pfeil hinein und Licht sowie Wärme hinaus. Beschrifte die Skizze als vereinfachte Energiewe­ge. Sie berechnet keine Wirkungsgrade und ist keine Anleitung zum Arbeiten an Stromleitungen.",
+    "benefit": "Du kannst Energieübertragung beschreiben und erkennst, dass eine Skizze noch keine Mengenbilanz ist.",
+    "connection": "Die Solarzellenkarte zeigt Licht-zu-elektrisch als einen Übertragungsweg. Beachte auch die Grenzen des dargestellten Modells, statt jede Energieübertragung für verlustfrei zu halten.",
+    "topic": "science-energy",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/ems/02_anatomy/",
+        "title": "NASA · Elektromagnetische Wellen",
+        "anchor": "Selected Energy / Electromagnetic waves / Waves or particles / Describing electromagnetic energy; rest mass and vacuum qualifiers retained.",
+        "updatedOn": "2023-08-03",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Photon",
+        "reason": "Photonen beschreiben einzelne elektromagnetische Energiequanten. Ein Zählsymbol ist keine schwere sichtbare Kugel und keine vollständige Darstellung des Lichts."
+      },
+      {
+        "term": "Mitochondrium",
+        "reason": "Chemische Energie kann durch Zellvorgänge umgewandelt und verfügbar gemacht werden. Eine Zellstruktur erschafft keine Energie aus dem Nichts."
+      },
+      {
+        "term": "Kernfusion",
+        "reason": "Bestimmte Kernvorgänge können Energie freisetzen. Ein Papierpfeil misst keinen realen Energieertrag und gibt keine Betriebsgarantie."
+      }
+    ],
+    "question": {
+      "prompt": "Was fehlt einer Energiezeichnung mit Pfeilen ohne Zahlen?",
+      "answers": [
+        "Jede Möglichkeit, einen Weg darzustellen",
+        "Die Notwendigkeit einer Umgebung",
+        "Eine genaue quantitative Energiebilanz"
+      ],
+      "correct": 2,
+      "hint": "Richtung und Menge sind verschiedene Aussagen eines Modells.",
+      "why": "Pfeile können Wege erklären, ohne genaue Mengen zu nennen. Für eine quantitative Bilanz braucht es passende Größen und Daten.",
+      "wrongReasons": [
+        "Ein Weg lässt sich auch ohne gemessene Mengen veranschaulichen. Er ist dann nur qualitativ.",
+        "Die Umgebung kann Energie aufnehmen oder abgeben. Sie wird nicht durch fehlende Zahlen unwichtig.",
+        ""
+      ]
+    }
+  }
+}

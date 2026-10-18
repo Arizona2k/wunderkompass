@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Wärme",
+  "learning": {
+    "starter": "Wenn etwas Warmes neben etwas Kühlerem liegt, kann Energie übertragen werden. Das nennen wir Wärmeübertragung.",
+    "deeper": "Eine Temperatur beschreibt einen Zustand, Wärme hingegen einen Übertragungsvorgang. Wärme kann durch Leitung, Strömung oder Strahlung übertragen werden. Eine Zahl in Grad Celsius ist keine Wärmemenge.",
+    "observe": "Zeichne zwei gedachte Körper bei 20 und 30 Grad Celsius. Zeichne die natürliche Übertragungsrichtung ein. Die Zahlen sind erfunden; die Zeichnung sagt ohne weitere Angaben nichts über eine übertragene Energiemenge.",
+    "benefit": "Du kannst eine Temperaturangabe von einer Wärmeübertragung unterscheiden.",
+    "connection": "Die Wärmeübertragungskarte vergleicht verschiedene Übertragungswege. Kelvin und Celsius beschreiben dagegen Temperaturskalen.",
+    "topic": "science-heat-transfer",
+    "sources": [
+      {
+        "url": "https://bsesc.energy.gov/energy-basics/heat-flow",
+        "title": "U.S. Department of Energy · Wärmeübertragung",
+        "anchor": "Full body lines11–22: conduction, convection, radiation. Natural warm-to-cool direction; own safe hypothetical comparisons, no building-efficiency guarantees.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Kelvin",
+        "reason": "Wärme ist eine Energieübertragung aufgrund eines Temperaturunterschieds. Kelvin benennt eine Temperatureinheit und ist keine übertragene Energiemenge."
+      },
+      {
+        "term": "Wärmeleitung",
+        "reason": "Leitung ist ein möglicher Wärmeweg durch Material oder Berührung. Wärme beschreibt die Energieübertragung; der Weg muss zusätzlich erklärt werden."
+      }
+    ],
+    "question": {
+      "prompt": "Was beschreibt 30 Grad Celsius im Papierbeispiel?",
+      "answers": [
+        "Eine Temperatur, keine übertragene Wärmemenge",
+        "Genau 30 Portionen Wärme",
+        "Die vollständige Energiemenge beider Körper"
+      ],
+      "correct": 0,
+      "hint": "Prüfe, ob die Zahl einen Zustand oder eine Übertragung beschreibt.",
+      "why": "Grad Celsius benennt hier die Temperatur eines Körpers. Die übertragene Energie ist damit nicht vollständig bestimmt.",
+      "wrongReasons": [
+        "",
+        "Eine Celsiuszahl zählt keine Wärmeportionen. Temperatur und übertragene Energie sind verschiedene Größen.",
+        "Zwei Temperaturen allein geben ohne weitere Daten keine vollständige Energie der Körper an."
+      ]
+    }
+  }
+}

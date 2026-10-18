@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Enzym",
+  "learning": {
+    "starter": "Ein Enzym hilft einer passenden chemischen Reaktion, schneller abzulaufen. Es kann mehrmals helfen.",
+    "deeper": "Enzyme sind biologische Katalysatoren. Verschiedene Enzyme passen zu unterschiedlichen Reaktionen. „Nicht verbraucht“ heißt nicht unzerstörbar: Es beschreibt ihre Rolle bei der jeweiligen Reaktion.",
+    "observe": "Stell dir eine Person vor, die nacheinander mehrere passende Kartenpaare zusammenlegt. Sie gehört nicht zu den fertigen Paaren. Wo hilft dieser Vergleich beim Wiederverwenden, und wo erklärt er noch keine echte Chemie?",
+    "benefit": "Du unterscheidest einen wiederverwendbaren Reaktionshelfer von einem verbrauchten Ausgangsstoff.",
+    "topic": "science-cell",
+    "connection": "Eine Zelle führt viele chemische Reaktionen aus. Die Zellkarte erklärt die lebende Einheit, Enzyme helfen beim Verständnis ihrer Reaktionsabläufe.",
+    "relatedWords": [
+      {
+        "term": "Protein",
+        "reason": "Viele Enzyme sind Proteine, aber nicht jedes Protein ist ein Enzym. Vergleiche Stoffgruppe und besondere Aufgabe."
+      },
+      {
+        "term": "RNA",
+        "reason": "Die meisten Enzyme sind Proteine, einige bestehen aus RNA. Stoffart und biologische Aufgabe müssen unterschieden werden."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Enzyme",
+        "title": "NIH/NHGRI · Enzym (Englisch)",
+        "anchor": "Definition and narration: specific reusable biological catalyst; usually protein, sometimes RNA",
+        "updatedOn": "2026-10-13",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "question": {
+      "prompt": "Was ist typisch für ein Enzym bei seiner Reaktion?",
+      "answers": [
+        "Es ist immer der verbrauchte Ausgangsstoff",
+        "Es verwandelt jede beliebige Sache",
+        "Es kann die passende Reaktion wiederholt beschleunigen"
+      ],
+      "correct": 2,
+      "hint": "Achte auf passende Reaktion und Wiederverwendung.",
+      "why": "Ein Enzym beschleunigt eine bestimmte Reaktion und kann dabei wiederverwendet werden.",
+      "wrongReasons": [
+        "Das Enzym wirkt als Katalysator. Es wird bei seiner Reaktion nicht wie ein Ausgangsstoff verbraucht.",
+        "Verschiedene Enzyme helfen unterschiedlichen Reaktionen. Sie sind keine beliebigen Zauberwerkzeuge.",
+        ""
+      ]
+    }
+  }
+}

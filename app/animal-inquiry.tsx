@@ -15,7 +15,7 @@ export default function AnimalInquiry({id,onRead}:{id:string;onRead:(text:string
  const [level,setLevel]=useSavedModel<number>('animalInquiryLevel',0,{min:0,max:2});
  const [seen,setSeen]=useSavedGame<number[]>('animalInquiryEvidence',[],value=>Array.isArray(value)?[...new Set(value.filter(v=>v===0||v===1))]:[]);
  if(!data)return null;
- const icons=[Eye,GitBranch,Search];
+ const icons=[Eye,GitBranch,Search],observation='observation' in data?data.observation:null;
  return <details className="animal-inquiry" data-animal-inquiry={id}>
   <summary>Deine Tierforscher-Werkstatt · freiwillig</summary>
   <div className="animal-inquiry-body">
@@ -27,6 +27,7 @@ export default function AnimalInquiry({id,onRead}:{id:string;onRead:(text:string
    {level===0?<section className="animal-evidence" aria-label="Belege aus der Tierkarte">
     <h4>Was wissen wir aus der Karte?</h4><p>Öffne die beiden Belege und vergleiche sie. Ein Foto allein zeigt nicht alle Fähigkeiten oder die ganze Lebensweise eines Tiers.</p>
     {data.evidence.map((e,index)=><div className="animal-evidence-row" key={e.label}><button className="knowledge-link" aria-expanded={seen.includes(index)} onClick={()=>setSeen(current=>current.includes(index)?current.filter(v=>v!==index):[...current,index])}><span>{index+1}. {e.label}</span><span aria-hidden="true">{seen.includes(index)?'−':'+'}</span></button>{seen.includes(index)&&<p>{e.text}</p>}</div>)}
+    {observation&&<section className="animal-observation"><h4>{observation.task}</h4><details className="learning-details"><summary>Ein Beobachtungshinweis · freiwillig</summary><p>{observation.hint}</p></details><p className="small-note">Du kannst zeichnen oder mit eigenen Worten erklären. Dafür musst du kein Tier anfassen oder stören.</p></section>}
     <p className="small-note">Erkläre mit eigenen Worten: Welche zwei verschiedenen Dinge erfährst du? Beim nächsten Denkweg prüfst du einen Zusammenhang.</p>
    </section>:<ReasonTask key={id+':'+level} task={level===1?data.reason:data.transfer} level={level} onRead={onRead}/>}
    <details className="learning-details animal-inquiry-sources"><summary>Wie wird diese Aufgabe geprüft?</summary><p>{data.status}</p><p>Die Belege findest du in „Kurz erklärt“, die Originalverweise unter „Für Erwachsene: Quellen &amp; Modellgrenzen“. Diese Werkstatt simuliert kein Tier und trifft keine neue Gefährdungsbewertung.</p></details>

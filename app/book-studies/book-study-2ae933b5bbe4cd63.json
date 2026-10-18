@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "term": "Wahrscheinlichkeit",
+  "learning": {
+    "starter": "Manche Ergebnisse sind möglich, aber nicht sicher. Ein Modell hilft, ihre Chancen zu vergleichen.",
+    "deeper": "In einem Modell mit zwei gleich wahrscheinlichen Ergebnissen hat jedes die Wahrscheinlichkeit 1/2. Eine kurze Versuchsreihe muss trotzdem nicht gleich viele von beiden liefern. Gleiche Wahrscheinlichkeit ist eine Annahme, die bei echten Gegenständen geprüft werden muss.",
+    "observe": "Schreibe A und B als die beiden Möglichkeiten eines ausdrücklich gedachten fairen Versuchs auf. Notiere eine erfundene Folge A, A, B. Vergleiche mögliche Chancen mit dieser kurzen Ergebnisliste; sie ist keine echte Zufallsmessung.",
+    "benefit": "Du trennst Chancen im Modell von Ergebnissen eines einzelnen Versuchs.",
+    "connection": "Die Wissenskarte zeigt Versuchsergebnisse und Häufigkeiten. Das eigene faire Modell erklärt, warum kurze Folgen die theoretischen Chancen nicht exakt abbilden müssen.",
+    "topic": "science-probability",
+    "sources": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm",
+        "title": "NIST · Wahrscheinlichkeit (Englisch)",
+        "anchor": "Actual NIST binomial definition8: exactly two mutually exclusive outcomes, fixed single-trial probability. Explicit independence in own hypothetical model, no assertion of real coin fairness or copied formulas/data.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Stichprobe",
+        "reason": "Die beobachtete Auswahl und theoretische Chancen im Modell sind verschieden. Eine einseitige Auswahl wird nicht allein durch größere Zahl repräsentativ."
+      }
+    ],
+    "question": {
+      "prompt": "Im fairen Zwei-Ergebnis-Modell kam zweimal A. Was ist für den nächsten unabhängigen Versuch richtig?",
+      "answers": [
+        "B ist nun sicher",
+        "A und B bleiben jeweils möglich mit gleicher Wahrscheinlichkeit",
+        "A ist ab jetzt unmöglich"
+      ],
+      "correct": 1,
+      "hint": "Der gedachte neue Versuch hat dieselben Bedingungen und ist unabhängig.",
+      "why": "Unter diesen ausdrücklich gesetzten Modellbedingungen bleiben die Wahrscheinlichkeiten unverändert. Die bisherige Folge erzwingt kein Ausgleichsergebnis.",
+      "wrongReasons": [
+        "Unabhängige Versuche schulden keinen sofortigen Ausgleich der bisherigen Folge.",
+        "",
+        "Frühere A-Ergebnisse entfernen A nicht aus den möglichen Ergebnissen des Modells."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum muss nach mehreren gleichen Zufallsergebnissen kein Ausgleich kommen?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Wahrscheinlichkeit“: Du vermeidest den Fehlschluss, ein zufälliger Ausgleich sei sofort fällig."
+      }
+    ]
+  }
+}

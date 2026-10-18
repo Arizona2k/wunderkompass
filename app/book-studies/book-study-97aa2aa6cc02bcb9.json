@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "term": "Erdbebenherd",
+  "learning": {
+    "starter": "Der Erdbebenherd ist der Ort im Gestein, an dem die Bruchbewegung eines Bebens beginnt.",
+    "deeper": "Er wird auch Hypozentrum genannt. Das Epizentrum liegt an der Oberfläche darüber; beide Begriffe beschreiben deshalb nicht denselben Punkt. Ein schematischer Kreis zeigt keine komplette Bruchfläche oder zuverlässige Schadensvorhersage.",
+    "observe": "Zeichne einen erfundenen Querschnitt mit einem Herdpunkt im Inneren und einem Oberflächenpunkt darüber. Markiere beide verschieden. Die Zeichnung ist nicht maßstäblich und enthält keine echten Bebendaten oder Prognose.",
+    "benefit": "Du kannst den Beginn im Inneren von seiner zugeordneten Oberflächenposition unterscheiden.",
+    "connection": "Im Erdbebenlabor kannst du die gedachte Herdtiefe verändern. Vergleiche den Beginn im Inneren mit dem Punkt an der Oberfläche darüber. Der Regler zeigt ein Schema, keine echte Bruchfläche oder Bebenvorhersage.",
+    "lab": "quake",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/programs/earthquake-hazards/science-earthquakes",
+        "title": "USGS · Erdbeben erklären",
+        "anchor": "Grundbegriffe zu Bruchbewegung, Erdbebenherd und Epizentrum. Eine gedachte Zeichnung ersetzt weder Ortung noch eine örtliche Gefahrenbewertung.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Epizentrum",
+        "reason": "Der Beginn im Gestein und der Oberflächenpunkt darüber sind verschiedene Positionen. Keine der beiden Angaben allein sagt sämtliche örtlichen Wirkungen voraus."
+      },
+      {
+        "term": "Erdbeben",
+        "reason": "Ein Beginnpunkt erklärt einen Teil des Bebenvorgangs. Die auslösbare schematische Welle ist kein Zeitpunkt eines zukünftigen realen Bebens."
+      }
+    ],
+    "question": {
+      "prompt": "Welcher Punkt ist in der Skizze der Herd?",
+      "answers": [
+        "Der markierte Beginn im Gestein",
+        "Immer der Erdmittelpunkt",
+        "Jeder Punkt des Meeresspiegels"
+      ],
+      "correct": 0,
+      "hint": "Suche den als Beginn beschrifteten Punkt unter der Oberfläche.",
+      "why": "Der Herd beschreibt den Beginn der Bruchbewegung im Inneren, nicht automatisch den Erdmittelpunkt oder eine Meeresfläche.",
+      "wrongReasons": [
+        "",
+        "Ein Beben beginnt nicht definitionsgemäß im Erdmittelpunkt. Die Herdposition kann unterschiedlich sein.",
+        "Der Meeresspiegel ist keine Definition des Beginns einer Bruchbewegung."
+      ]
+    }
+  }
+}

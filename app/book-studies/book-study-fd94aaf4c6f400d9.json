@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "term": "Tsunami",
+  "learning": {
+    "starter": "Ein Tsunami ist eine Folge langer Wasserwellen, etwa nach plötzlicher Bewegung des Meeresbodens. Er ist nicht einfach normale Ebbe und Flut.",
+    "deeper": "Eine Welle im tiefen Ozean muss nicht hoch aussehen. Form und Bewegung ändern sich mit den Bedingungen. Eine Küstenzeichnung oder ein Gezeitenmodell ist keine Warnung oder Entwarnung für einen wirklichen Ort.",
+    "observe": "Zeichne getrennte Symbole für gedachte plötzliche Bodenbewegung und regelmäßige Gezeiten. Bleibe bei Papier, statt Wellen an einer Küste zu beobachten. Bei echten Warnungen gelten die örtlichen offiziellen Anweisungen.",
+    "benefit": "Du unterscheidest Ereigniswellen von Gezeiten und erkennst die Grenze eines Lernmodells.",
+    "connection": "Das Gezeitenlabor erklärt ein regelmäßiges Anziehungsmodell. Es simuliert keinen Tsunami und liefert weder aktuelle Küstenwarnungen noch sichere Wanderzeiten.",
+    "lab": "tides",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/tsunami.html",
+        "title": "NOAA · Tsunami",
+        "anchor": "Tsunami als Wellenfolge mit anderer Ursache als Gezeiten. Keine einheitliche Wellenhöhe, Ankunftszeit oder Sicherheitsvorhersage.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Welche Gleichsetzung ist falsch?",
+      "answers": [
+        "Die Zeichnung beschreibt zwei gedachte Vorgänge",
+        "Tsunami bedeutet dasselbe wie gewöhnliche Ebbe und Flut",
+        "Für echte Warnungen sind offizielle Angaben nötig"
+      ],
+      "correct": 1,
+      "hint": "Der Ursprung der Wellen und der regelmäßige Gezeitenvorgang sind verschieden.",
+      "why": "Tsunami und Gezeiten sind unterschiedliche Vorgänge. Das Labormodell ersetzt keine tatsächliche Warninformation.",
+      "wrongReasons": [
+        "Die zwei Symbole dürfen ausdrücklich gedachte Vorgänge unterscheiden.",
+        "",
+        "Offizielle aktuelle Angaben sind wichtig; eine Papierskizze kann sie nicht ersetzen."
+      ]
+    }
+  }
+}

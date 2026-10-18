@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "term": "Tundra",
+  "learning": {
+    "starter": "In der Tundra wachsen häufig niedrige Pflanzen. Es gibt Tundra nicht nur weit im Norden, sondern auch hoch im Gebirge.",
+    "deeper": "Kälte, Wind und eine kurze Wachstumszeit können große Bäume begrenzen. Niedrig bedeutet nicht leer oder unempfindlich: Auch kleine Pflanzen können durch Tritte beschädigt werden. Ein grüner Punkt verrät noch nicht die tatsächliche Pflanzenart.",
+    "observe": "Zeichne niedrige gedachte Pflanzensymbole neben eine hohe Baumform. Markiere die beschriebenen Bedingungen, ohne echte Pflanzen zu betreten, zu pflücken oder zu sammeln. Das Modell bestimmt keinen tatsächlichen Standort.",
+    "benefit": "Du erkennst niedrige Vegetation als Lebensraum und trennst Größe von Widerstandsfähigkeit.",
+    "connection": "Das Jahreszeitenlabor erklärt Licht und Jahresablauf. Die Pflanzenaufgabe ergänzt Wachstum unter begrenzten Bedingungen, ohne eine vollständige Tundrasimulation zu behaupten.",
+    "lab": "seasons",
+    "sources": [
+      {
+        "url": "https://www.nps.gov/romo/learn/nature/alpine_tundra_ecosystem.htm",
+        "title": "NPS · Tundra",
+        "anchor": "Alpine Tundra mit niedrigen Pflanzen und kurzer Wachstumszeit. Das Ortsbeispiel beschreibt nicht alle Tundren oder eine universelle Höhengrenze.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Welche Schlussfolgerung wäre falsch?",
+      "answers": [
+        "Kleine Pflanzen können empfindlich sein",
+        "Eine Zeichnung zeigt keine tatsächliche Artenbestimmung",
+        "Niedrige Pflanzen dürfen deshalb bedenkenlos zertreten werden"
+      ],
+      "correct": 2,
+      "hint": "Die Höhe einer Pflanze ist keine Erlaubnis, sie zu beschädigen.",
+      "why": "Auch niedrige Tundrapflanzen können empfindlich sein. Größe allein begründet keine sichere Belastbarkeit.",
+      "wrongReasons": [
+        "Empfindlichkeit ist nicht automatisch an große Wuchshöhe gebunden.",
+        "Ein Symbol enthält keine tatsächlichen Bestimmungsmerkmale oder Messdaten.",
+        ""
+      ]
+    }
+  }
+}

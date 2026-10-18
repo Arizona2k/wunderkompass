@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "topic": "science-pendulum",
+  "links": [
+    {
+      "term": "Meter",
+      "reason": "Beim Pendel verändert die Fadenlänge die Schwingungszeit. Achte auf die Längeneinheit im Modell."
+    },
+    {
+      "term": "Sekunde",
+      "reason": "Das Pendelmodell zeigt eine Schwingungsdauer. Diese Dauer ist keine Uhrzeit."
+    },
+    {
+      "term": "Geschwindigkeit",
+      "reason": "Beim Pendel ändern sich Schnelligkeit und Richtung während einer Schwingung. Eine Fadenlänge ist noch keine Geschwindigkeit: Zeit und Bewegung gehören dazu."
+    },
+    {
+      "term": "Beschleunigung",
+      "reason": "Das Pendel wechselt seine Bewegungsrichtung. Vergleiche die Änderung seiner Geschwindigkeit mit der bloßen Zeit für eine ganze Schwingung."
+    },
+    {
+      "term": "Messwert",
+      "reason": "Beim Pendelmodell ist die Fadenlänge eine Eingabe. Ein Modellwert ist keine automatisch gemessene reale Länge; prüfe Einheit und Messweg getrennt."
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum beeinflusst die Länge eines Pendels seinen Takt?",
+      "reason": "Das Pendelmodell lässt die Länge verändern. Vergleiche die Zeit für eine ganze Hin-und-zurück-Bewegung, statt nur die gezeichnete Pendelgröße zu betrachten."
+    }
+  ]
+}

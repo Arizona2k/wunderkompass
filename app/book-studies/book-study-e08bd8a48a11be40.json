@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Kohäsion",
+  "learning": {
+    "starter": "Wasserteilchen wirken auf andere Wasserteilchen. So lässt sich ein Teil des Verhaltens von Tropfen erklären.",
+    "deeper": "Kohäsion ist keine bewusst gewählte Verbindung und kein Klebstoff mit Absichten. Für eine Tropfenform sind auch Umgebung, Schwerkraft und Oberfläche wichtig; Kohäsion allein erklärt nicht jede Form.",
+    "observe": "Zeichne mehrere Wassersymbole und Verbindungslinien nur zwischen ihnen. Ergänze daneben eine gedachte Gefäßwand in einer anderen Farbe. Die Linien sind Beziehungszeichen, keine Fotos oder Kräfte in gemessenen Größen.",
+    "benefit": "Du unterscheidest Wechselwirkungen innerhalb eines Stoffes von denen mit einem anderen Material.",
+    "connection": "Die Oberflächenspannungskarte zeigt eine Folge von Wechselwirkungen an der Wasseroberfläche. Die Oberfläche ist dabei keine echte feste Haut.",
+    "topic": "science-surface-tension",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/surface-tension-and-water",
+        "title": "USGS · Oberflächenspannung",
+        "anchor": "Selected scientific lines34–57: cohesion and resistance to increasing interface. Excluded claim of water greatest except mercury, simplistic stronger surface bonds, unsupported membrane-as-real-skin and third-party images.",
+        "updatedOn": "2026-08-24",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Adhäsion",
+        "reason": "Teilchen desselben Stoffes und die Wechselwirkung verschiedener Materialien sind verschiedene Paarungen. Zeichne Wasser-zu-Wasser und Wasser-zu-Wand getrennt."
+      },
+      {
+        "term": "Oberflächenspannung",
+        "reason": "Wechselwirkungen innerhalb des Wassers tragen zum Verhalten seiner Grenzfläche bei. Oberflächenspannung ist keine zusätzliche feste Haut."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Linie steht in dieser Skizze für Kohäsion?",
+      "answers": [
+        "Eine Wasser-zu-Gefäßwand-Linie",
+        "Eine Wasser-zu-Wasser-Linie",
+        "Jeder Pfeil auf einer Landkarte"
+      ],
+      "correct": 1,
+      "hint": "Prüfe, ob beide verbundenen Symbole denselben Stoff meinen.",
+      "why": "Wasser-zu-Wasser zeigt hier eine Wechselwirkung desselben Stoffes. Wasser-zu-Wand wäre eine andere Art der Zuordnung.",
+      "wrongReasons": [
+        "Die Wechselwirkung mit der andersartigen Wand wird hier Adhäsion genannt.",
+        "",
+        "Eine Landkartenrichtung erklärt keine Anziehung zwischen den dargestellten Stoffteilchen."
+      ]
+    }
+  }
+}

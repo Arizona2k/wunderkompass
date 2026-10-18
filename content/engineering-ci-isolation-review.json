@@ -1,0 +1,1610 @@
+{
+  "schemaVersion": 1,
+  "status": "Same-snapshot isolated Quality69 passed on7a86053; subsequent Nature/retention/progress/search changes require their own complete exact-head acceptance",
+  "decisionComments": [
+    6189174371,
+    6191114862,
+    6191886451,
+    6193186292
+  ],
+  "baseline": {
+    "commit": "2d651bc5bc78816c4c9d042d5f0bb4e2b2da7953",
+    "run": 38702172666,
+    "job": 116312732337,
+    "conclusion": "cancelled after total job timeout; not a passing comparison",
+    "jobElapsedSeconds": 3025,
+    "chromiumSeconds": 1866.463083582,
+    "additionalEngineStepElapsedSeconds": 992,
+    "standardChecks": "passed",
+    "actualFirefoxWebKit": "incomplete",
+    "handoff": "skipped",
+    "newsReadiness": "skipped",
+    "reviewBytes": 50901901,
+    "reviewLimitBytes": 50331648,
+    "reviewStatus": "failed"
+  },
+  "implementation": {
+    "singleVerifiedProductionBuild": true,
+    "separateBrowserRunners": [
+      "chromium",
+      "firefox",
+      "webkit"
+    ],
+    "sameSnapshotFields": [
+      "testedCommit",
+      "runId",
+      "attempt",
+      "sourceDigest",
+      "build"
+    ],
+    "artifactFileHashes": "SHA256 and exact byte lengths; action download digest mismatch fails",
+    "maximumConcurrentBrowserJobs": 3,
+    "failFast": false,
+    "runner": "unchanged ubuntu-24.04 standard GitHub runner",
+    "permission": "contents:read only",
+    "individualAssertionTimeoutsChanged": false,
+    "coverageRemoved": false,
+    "automaticRetriesAdded": false,
+    "engineProgress": "each30 cases and real phase seconds",
+    "newMandatoryOfflineChecks": "actual HTTP failure/recovery, all assets, pass preservation and offline reload in every engine; emulated browser quota/recovery additionally in Chromium",
+    "finalAggregation": "all successful required jobs, same run/attempt/commit/build/source; full existing matrices and actual engine proof required",
+    "artifactRetentionDays": {
+      "build": 1,
+      "browserEvidence": 7,
+      "finalReports": 7
+    },
+    "duplicateScreenshotUpload": false,
+    "paidServicesOrBillingSettingsChanged": false
+  },
+  "limits": [
+    "No completed equivalent baseline exists for the old serial job; do not claim reduced total runner minutes from a cancelled50-minute run.",
+    "Actual job elapsed/billed minutes and setup/upload overhead must be reported from the new run; billable account quota is not readable through the current connector.",
+    "The private repository uses existing standard runners; no new paid provider, tariff or spending setting has been introduced.",
+    "Thirty-five minutes per browser job, ten for standards and five for aggregation bound the configured work; a timeout remains a failed acceptance.",
+    "Local actual Firefox/WebKit installation remains blocked by permitted download-host403; Chromium is not a substitute.",
+    "All27 critical screenshots retained. Long Chromium evidence stays; engine four-width captures are bounded original viewports plus actual model/offline closeups. Duplicate desktop return/full selection views omitted from upload, still captured/hashed.48MiB review limit unchanged."
+  ],
+  "firstIsolatedRun": {
+    "run": 38734155494,
+    "head": "1e1108a804685f34e48e4b58184ef05a1010a6d9",
+    "testedMergeCommit": "9877a74a4354e26127671c200c50977714345fc8",
+    "conclusion": "failure; not a complete performance acceptance",
+    "jobElapsedSeconds": {
+      "standards": 74,
+      "firefox": 724,
+      "chromium": 1483,
+      "webkit": 111,
+      "requiredCollector": 4
+    },
+    "totalElapsedRunnerSeconds": 2396,
+    "billing": "Observed elapsed time, not account billed/free quota evidence",
+    "actualFirefoxSeconds": 654.873622609,
+    "actualFirefoxCoverage": "16 original first chapters,180 words x4 widths,60 Why x4 widths,actual offline recovery passed",
+    "chromium": "same actual category photograph Back-focus failure as local; remaining complete book/research/journeys/play/backup/challenge groups finished",
+    "webkit": "actual browser internal error with context offline emulation during reload; no pass",
+    "diagnostics": "Hidden .qa-output reports were excluded from failure upload; fix scoped inclusion and capture failed pages before browser closes",
+    "correctionStatus": "card photograph focus and real stopped-server offline fixture proven locally in isolated current-product build; final current-commit full regression/engines pending"
+  },
+  "acceptedReference": {
+    "head": "7a86053da848cdaa59d3905a0472e4ab76af8490",
+    "run": 38738747719,
+    "testedMergeCommit": "c885e8cd9793fb91c853abcbdf74e3289593edd3",
+    "conclusion": "success",
+    "jobElapsedSeconds": {
+      "standards": 100,
+      "chromium": 2027,
+      "firefox": 775,
+      "webkit": 602,
+      "requiredCollector": 21
+    },
+    "totalObservedRunnerSeconds": 3525,
+    "billingEvidence": "Not available; observed elapsed time is not billed/free quota proof",
+    "chromiumSeconds": 1953.752338038,
+    "chromiumBookSeconds": 1834.836832695,
+    "chromiumJobMarginSeconds": 73,
+    "review": {
+      "capturedImages": 1491,
+      "retainedImages": 362,
+      "bytes": 48492089,
+      "limit": 50331648,
+      "all27CriticalImagesPreserved": true
+    }
+  },
+  "followupCandidates": {
+    "chromium": "No extra shard/job/timeout adopted without a positive cost/stability comparison. Added actual per-width book matrix/navigation timings; immutable same-snapshot aggregation retained.",
+    "screenshots": {
+      "adopted": "Preserve same-snapshot capture hashes across the final collector, including omitted originals; reject missing/altered/malformed sealed evidence. Original binaries unchanged.27 old plus2 new Nature critical images,48MiB gate unchanged. Historical budget; superseded16Oct by150000000Byte for review images only.",
+      "rejectedExperiment": {
+        "method": "PNG DEFLATE9 only, identical filtered pixels/dimensions/metadata",
+        "images": 362,
+        "beforeBytes": 45523126,
+        "afterBytes": 45465588,
+        "seconds": 40.223820435,
+        "decision": "Rejected:57538bytes saved for40.224s worsens CI margin; no new codec/library adopted"
+      }
+    },
+    "offline": "Targeted verified-complete/active-tab retention and genuine persisted-file progress. Original SHA/byte incremental reuse and all-asset atomic install retained.",
+    "interaction": "Reproducible real UI Event Timing/long-task/frame/heap observation plus equal-result ranking comparison at467/3000/6000 documents; see script and isolated sample below. Physical device/full large-product/field-INP acceptance remains open."
+  },
+  "interactionExperiment": {
+    "build": "a1c8b7fe1bf8c2ec",
+    "sourceHashes": {
+      "legacy": "3be54d6cb60cfe7abf083faf6145777cbbe26ef0f775dea082cf342c24b18792",
+      "current": "8b3c4d34ed061b7599959ca70cf6a0bce80f81ec3db3d181b403c0715d93f5aa"
+    },
+    "method": "Actual headless Chromium;390x844 touch viewport;CPU1x/4x via CDP;3 fresh contexts each. Real UI actions + Event Timing, long tasks, requestAnimationFrame and JS heap. Then actual ranking functions on current catalog and3000/6000 synthetic distinct IDs/text markers, identical queries/results. Synthetic ranking is not a full6000-card product/device/field-INP test;heap includes allocation/GC noise. No physical hardware or production traffic.",
+    "status": "passed",
+    "isolatedLocalBrowserRun": true,
+    "ranking": [
+      {
+        "count": 467,
+        "cpuRate": 1,
+        "sample": 0,
+        "prepareMs": 4,
+        "beforeMs": 57.5,
+        "afterMs": 26.299999997019768,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 3000,
+        "cpuRate": 1,
+        "sample": 0,
+        "prepareMs": 23.30000000447035,
+        "beforeMs": 270.19999999552965,
+        "afterMs": 107.20000000298023,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 6000,
+        "cpuRate": 1,
+        "sample": 0,
+        "prepareMs": 62,
+        "beforeMs": 506.90000000596046,
+        "afterMs": 208.69999999552965,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 467,
+        "cpuRate": 1,
+        "sample": 1,
+        "prepareMs": 4,
+        "beforeMs": 42.5,
+        "afterMs": 20.200000002980232,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "after",
+          "before"
+        ]
+      },
+      {
+        "count": 3000,
+        "cpuRate": 1,
+        "sample": 1,
+        "prepareMs": 19.100000001490116,
+        "beforeMs": 243.29999999701977,
+        "afterMs": 108.89999999850988,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "after",
+          "before"
+        ]
+      },
+      {
+        "count": 6000,
+        "cpuRate": 1,
+        "sample": 1,
+        "prepareMs": 43.600000001490116,
+        "beforeMs": 483.90000000596046,
+        "afterMs": 223.29999999701977,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "after",
+          "before"
+        ]
+      },
+      {
+        "count": 467,
+        "cpuRate": 1,
+        "sample": 2,
+        "prepareMs": 3.7000000029802322,
+        "beforeMs": 44.100000001490116,
+        "afterMs": 27,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 3000,
+        "cpuRate": 1,
+        "sample": 2,
+        "prepareMs": 19.69999999552965,
+        "beforeMs": 256.70000000298023,
+        "afterMs": 117.69999999552965,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 6000,
+        "cpuRate": 1,
+        "sample": 2,
+        "prepareMs": 44.399999998509884,
+        "beforeMs": 522.5,
+        "afterMs": 213.79999999701977,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 467,
+        "cpuRate": 4,
+        "sample": 0,
+        "prepareMs": 21.399999998509884,
+        "beforeMs": 223.60000000149012,
+        "afterMs": 127,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 3000,
+        "cpuRate": 4,
+        "sample": 0,
+        "prepareMs": 112.60000000149012,
+        "beforeMs": 1248.2999999970198,
+        "afterMs": 494,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 6000,
+        "cpuRate": 4,
+        "sample": 0,
+        "prepareMs": 211,
+        "beforeMs": 2340.7999999970198,
+        "afterMs": 1032.2000000029802,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 467,
+        "cpuRate": 4,
+        "sample": 1,
+        "prepareMs": 17.900000005960464,
+        "beforeMs": 232.19999999552965,
+        "afterMs": 99.20000000298023,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "after",
+          "before"
+        ]
+      },
+      {
+        "count": 3000,
+        "cpuRate": 4,
+        "sample": 1,
+        "prepareMs": 97.29999999701977,
+        "beforeMs": 1171.8000000044703,
+        "afterMs": 533.7999999970198,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "after",
+          "before"
+        ]
+      },
+      {
+        "count": 6000,
+        "cpuRate": 4,
+        "sample": 1,
+        "prepareMs": 243.19999999552965,
+        "beforeMs": 2323.6999999955297,
+        "afterMs": 1021.8000000044703,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "after",
+          "before"
+        ]
+      },
+      {
+        "count": 467,
+        "cpuRate": 4,
+        "sample": 2,
+        "prepareMs": 18.5,
+        "beforeMs": 200.79999999701977,
+        "afterMs": 89.20000000298023,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 3000,
+        "cpuRate": 4,
+        "sample": 2,
+        "prepareMs": 112.90000000596046,
+        "beforeMs": 1247.8999999985099,
+        "afterMs": 535.0999999940395,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      },
+      {
+        "count": 6000,
+        "cpuRate": 4,
+        "sample": 2,
+        "prepareMs": 214.39999999850988,
+        "beforeMs": 2477.60000000149,
+        "afterMs": 1173,
+        "equalScores": true,
+        "queries": [
+          "Gletscher",
+          "Colorado",
+          "Elefamt",
+          "fotosyntese",
+          "Wasser"
+        ],
+        "ordering": [
+          "before",
+          "after"
+        ]
+      }
+    ],
+    "uiObservations": [
+      {
+        "cpuRate": 1,
+        "sample": 0,
+        "readyMs": 588.4936250000001,
+        "searchInputToPaintMs": 902.260741,
+        "searchNavigationMs": 933.0782960000001,
+        "gameNavigationAndFlipMs": 1016.7735580000003,
+        "heapUsedAfterSearchAndGame": 26968208,
+        "globeReadyMs": 972.9137840000003,
+        "heapAfterGlobe": 22614632,
+        "globeElement": "CANVAS",
+        "observedMaxEventDurationMs": 96,
+        "uiLongTaskCount": 4,
+        "uiLongestTaskMs": 196,
+        "globeObservedFrameP95Ms": 16.800000000000182
+      },
+      {
+        "cpuRate": 1,
+        "sample": 1,
+        "readyMs": 601.8902300000009,
+        "searchInputToPaintMs": 939.7203360000003,
+        "searchNavigationMs": 933.6664829999991,
+        "gameNavigationAndFlipMs": 1016.4623879999999,
+        "heapUsedAfterSearchAndGame": 36925600,
+        "globeReadyMs": 964.3650529999995,
+        "heapAfterGlobe": 22623944,
+        "globeElement": "CANVAS",
+        "observedMaxEventDurationMs": 88,
+        "uiLongTaskCount": 4,
+        "uiLongestTaskMs": 226,
+        "globeObservedFrameP95Ms": 33.30000000000007
+      },
+      {
+        "cpuRate": 1,
+        "sample": 2,
+        "readyMs": 543.1150469999993,
+        "searchInputToPaintMs": 908.531946000001,
+        "searchNavigationMs": 933.5514349999994,
+        "gameNavigationAndFlipMs": 983.0284169999977,
+        "heapUsedAfterSearchAndGame": 32016720,
+        "globeReadyMs": 931.8881610000026,
+        "heapAfterGlobe": 22610656,
+        "globeElement": "CANVAS",
+        "observedMaxEventDurationMs": 80,
+        "uiLongTaskCount": 5,
+        "uiLongestTaskMs": 182,
+        "globeObservedFrameP95Ms": 16.799999999999955
+      },
+      {
+        "cpuRate": 4,
+        "sample": 0,
+        "readyMs": 1324.6650760000011,
+        "searchInputToPaintMs": 2363.6541700000016,
+        "searchNavigationMs": 1335.7971519999992,
+        "gameNavigationAndFlipMs": 981.0026550000002,
+        "heapUsedAfterSearchAndGame": 27482392,
+        "globeReadyMs": 1999.3652810000021,
+        "heapAfterGlobe": 21721696,
+        "globeElement": "CANVAS",
+        "observedMaxEventDurationMs": 288,
+        "uiLongTaskCount": 24,
+        "uiLongestTaskMs": 585,
+        "globeObservedFrameP95Ms": 100
+      },
+      {
+        "cpuRate": 4,
+        "sample": 1,
+        "readyMs": 1468.456600999998,
+        "searchInputToPaintMs": 2356.544692999996,
+        "searchNavigationMs": 1331.978559999996,
+        "gameNavigationAndFlipMs": 901.0936689999944,
+        "heapUsedAfterSearchAndGame": 32069072,
+        "globeReadyMs": 1865.7073890000029,
+        "heapAfterGlobe": 21739676,
+        "globeElement": "CANVAS",
+        "observedMaxEventDurationMs": 312,
+        "uiLongTaskCount": 25,
+        "uiLongestTaskMs": 585,
+        "globeObservedFrameP95Ms": 100
+      },
+      {
+        "cpuRate": 4,
+        "sample": 2,
+        "readyMs": 1512.3128949999955,
+        "searchInputToPaintMs": 2303.531784999999,
+        "searchNavigationMs": 1266.8358730000036,
+        "gameNavigationAndFlipMs": 865.4194169999973,
+        "heapUsedAfterSearchAndGame": 27963692,
+        "globeReadyMs": 1930.7285540000012,
+        "heapAfterGlobe": 21719880,
+        "globeElement": "CANVAS",
+        "observedMaxEventDurationMs": 272,
+        "uiLongTaskCount": 27,
+        "uiLongestTaskMs": 698,
+        "globeObservedFrameP95Ms": 83.40000000000009
+      }
+    ],
+    "decision": "Adopt prepared normalization: identical ranking across all18 measured cases and actual-catalog regression. At6000/4x median five-query total2340.8→1032.2ms; one-time preparation214.4ms. This comparison is scoring only, not a before/after UI or physical-device guarantee. Current UI heap and event timing separately observed; real modern GPU/device and retained-memory baseline remain open.",
+    "retainedMemory": {
+      "method": "JSHeapUsedSize after explicit CDP garbage collection at each stage, one fresh context per467/3000/6000 repeated unique-marker source documents. Raw documents remain rooted while prepared index is added and released. Retained fixture JS heap, not total browser RAM/GPU/device evidence. Current467 comprise words/Nature/world/chapter documents; no new product articles are claimed.",
+      "rows": [
+        {
+          "count": 467,
+          "baseline": 6646588,
+          "rawHeap": 6933128,
+          "preparedHeap": 7668956,
+          "additionalRetainedPreparedBytes": 735828,
+          "releasedHeap": 6934368,
+          "releasedPreparedBytes": 734588
+        },
+        {
+          "count": 3000,
+          "baseline": 6639224,
+          "rawHeap": 7342548,
+          "preparedHeap": 12876232,
+          "additionalRetainedPreparedBytes": 5533684,
+          "releasedHeap": 8233920,
+          "releasedPreparedBytes": 4642312
+        },
+        {
+          "count": 6000,
+          "baseline": 6645188,
+          "rawHeap": 7842048,
+          "preparedHeap": 19253348,
+          "additionalRetainedPreparedBytes": 11411300,
+          "releasedHeap": 9844476,
+          "releasedPreparedBytes": 9408872
+        }
+      ],
+      "status": "passed",
+      "decision": "Measured cost accepted for the current catalog: additional retained735828bytes at467 source documents. At6000 synthetic documents11411300bytes additional,9408872bytes released when prepared index is removed; remaining flattened raw strings are not claimed to disappear. No total browser RAM/device guarantee."
+    }
+  },
+  "secondIsolatedRun": {
+    "run": 38781764690,
+    "head": "ce36cd8434879ffa3997740968631a65ef810c0b",
+    "currentStatus": "Completed failure: standards and actualFirefox passed;Chromium lifecycle observer failed;WebKit optional navigator.storage.estimate assumption failed;Required gate failed",
+    "rootCauseEvidence": "Waiting worker received ACTIVATE_LEARNING_RELEASE, while observer repeatedly requested LEARNING_STATUS from incumbent. State trace retained waiting/installing; repeated incumbent message lifetimes prevented reliable transition. No activation exceptions reported.",
+    "correction": "Observe actual waiting/installing completion before sending new active-version/readiness query. All original deadlines and version/cache/multi-tab/legacy/rollback/server-stop assertions unchanged; no production workaround or retries. Restore actual visible engine reader after the isolated fixture.",
+    "repeatedRealChromiumProof": {
+      "status": "passed",
+      "method": "Three full real Chromium six-release/multi-tab lifecycles. Wait for actual waiting/installing transition before querying new active version; original version/readiness/cache/rollback/unknown-legacy/server-stop/canary assertions unchanged; original deadlines unchanged. No actual game/user profile claimed.",
+      "runs": [
+        {
+          "multipleTabs": true,
+          "partialNeverReplacesFallback": true,
+          "unknownLegacyProtected": true,
+          "orphanCleanup": true,
+          "stoppedServerOldChunk": true,
+          "canaryPreserved": true,
+          "storage": [
+            {
+              "phase": "one complete release",
+              "quota": 2147494061,
+              "usage": 10413,
+              "usageDetails": {
+                "caches": 1633,
+                "serviceWorkerRegistrations": 8780
+              }
+            },
+            {
+              "phase": "three releases protected by known open tabs",
+              "quota": 2147499305,
+              "usage": 15657,
+              "usageDetails": {
+                "caches": 6877,
+                "serviceWorkerRegistrations": 8780
+              }
+            },
+            {
+              "phase": "two releases after old tabs close",
+              "quota": 2147499731,
+              "usage": 16083,
+              "usageDetails": {
+                "caches": 7303,
+                "serviceWorkerRegistrations": 8780
+              }
+            }
+          ]
+        },
+        {
+          "multipleTabs": true,
+          "partialNeverReplacesFallback": true,
+          "unknownLegacyProtected": true,
+          "orphanCleanup": true,
+          "stoppedServerOldChunk": true,
+          "canaryPreserved": true,
+          "storage": [
+            {
+              "phase": "one complete release",
+              "quota": 2147494061,
+              "usage": 10413,
+              "usageDetails": {
+                "caches": 1633,
+                "serviceWorkerRegistrations": 8780
+              }
+            },
+            {
+              "phase": "three releases protected by known open tabs",
+              "quota": 2147499318,
+              "usage": 15670,
+              "usageDetails": {
+                "caches": 6890,
+                "serviceWorkerRegistrations": 8780
+              }
+            },
+            {
+              "phase": "two releases after old tabs close",
+              "quota": 2147499774,
+              "usage": 16126,
+              "usageDetails": {
+                "caches": 7346,
+                "serviceWorkerRegistrations": 8780
+              }
+            }
+          ]
+        },
+        {
+          "multipleTabs": true,
+          "partialNeverReplacesFallback": true,
+          "unknownLegacyProtected": true,
+          "orphanCleanup": true,
+          "stoppedServerOldChunk": true,
+          "canaryPreserved": true,
+          "storage": [
+            {
+              "phase": "one complete release",
+              "quota": 2147494062,
+              "usage": 10414,
+              "usageDetails": {
+                "caches": 1634,
+                "serviceWorkerRegistrations": 8780
+              }
+            },
+            {
+              "phase": "three releases protected by known open tabs",
+              "quota": 2147499318,
+              "usage": 15670,
+              "usageDetails": {
+                "caches": 6890,
+                "serviceWorkerRegistrations": 8780
+              }
+            },
+            {
+              "phase": "two releases after old tabs close",
+              "quota": 2147499773,
+              "usage": 16125,
+              "usageDetails": {
+                "caches": 7345,
+                "serviceWorkerRegistrations": 8780
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "fullNewAcceptance": "Required at next exact head; Quality70 cannot be reported green",
+    "jobElapsedSeconds": {
+      "standards": 110,
+      "chromium": 177,
+      "firefox": 767,
+      "webkit": 699,
+      "requiredCollector": 7
+    },
+    "totalObservedRunnerSeconds": 1760,
+    "timeComparisonLimit": "Failed partial Chromium run;29.33 observed runner minutes are not a successful/cost-equivalent improvement over69. Billing/quota still unavailable.",
+    "firefox": {
+      "executionSeconds": 701.979908536,
+      "journeysSeconds": 11.436964506999999,
+      "bookSeconds": 463.935091694,
+      "whySeconds": 66.91915053699998,
+      "natureSeconds": 144.93981374899997,
+      "coverage": "16 original first chapters;180 words×4;60 Why×4;68 Nature×4 including individual levels/hints/wrong/right/sources/10 actual keyboard model drawings;full real offline recovery and synthetic retention passed on this actual engine. No independent pedagogy or hardware approval."
+    },
+    "webkit": {
+      "journeysSeconds": 14.851674073000002,
+      "offlineSeconds": 4.203173687000002,
+      "bookSeconds": 456.17572557500006,
+      "whySeconds": 64.18874717600004,
+      "failure": "Optional navigator.storage.estimate unavailable; real CacheStorage/offline proof before that passed. No completed Nature/retention acceptance."
+    },
+    "storageCompatibilityCorrection": {
+      "code": "Always measure exact cached response body bytes/count/version names; native quota estimate is additional only when actually available. No CacheStorage/retention assertion skipped, no invented disk/RAM usage.",
+      "localActualBrowserEvidence": {
+        "status": "passed",
+        "normal": {
+          "multipleTabs": true,
+          "partialNeverReplacesFallback": true,
+          "unknownLegacyProtected": true,
+          "orphanCleanup": true,
+          "stoppedServerOldChunk": true,
+          "canaryPreserved": true,
+          "storage": [
+            {
+              "phase": "one complete release",
+              "estimateAvailable": true,
+              "quota": 2147494061,
+              "usage": 10413,
+              "usageDetails": {
+                "caches": 1633,
+                "serviceWorkerRegistrations": 8780
+              },
+              "cachedBodyBytes": 689,
+              "cachedResponses": 4,
+              "cacheVersions": [
+                "earth-learning-aaaaaaaaaaaaaaaa"
+              ]
+            },
+            {
+              "phase": "three releases protected by known open tabs",
+              "estimateAvailable": true,
+              "quota": 2147499317,
+              "usage": 15669,
+              "usageDetails": {
+                "caches": 6889,
+                "serviceWorkerRegistrations": 8780
+              },
+              "cachedBodyBytes": 2067,
+              "cachedResponses": 12,
+              "cacheVersions": [
+                "earth-learning-aaaaaaaaaaaaaaaa",
+                "earth-learning-bbbbbbbbbbbbbbbb",
+                "earth-learning-cccccccccccccccc"
+              ]
+            },
+            {
+              "phase": "two releases after old tabs close",
+              "estimateAvailable": true,
+              "quota": 2147499757,
+              "usage": 16109,
+              "usageDetails": {
+                "caches": 7329,
+                "serviceWorkerRegistrations": 8780
+              },
+              "cachedBodyBytes": 1378,
+              "cachedResponses": 8,
+              "cacheVersions": [
+                "earth-learning-eeeeeeeeeeeeeeee",
+                "earth-learning-ffffffffffffffff"
+              ]
+            }
+          ],
+          "storageMeaning": "Exact cached response body bytes in the isolated fixture, not CacheStorage overhead/total browser RAM/disk guarantee. Optional native quota estimate is reported only where actually available."
+        },
+        "missingEstimateAPI": {
+          "multipleTabs": true,
+          "partialNeverReplacesFallback": true,
+          "unknownLegacyProtected": true,
+          "orphanCleanup": true,
+          "stoppedServerOldChunk": true,
+          "canaryPreserved": true,
+          "storage": [
+            {
+              "phase": "one complete release",
+              "estimateAvailable": false,
+              "cachedBodyBytes": 689,
+              "cachedResponses": 4,
+              "cacheVersions": [
+                "earth-learning-aaaaaaaaaaaaaaaa"
+              ]
+            },
+            {
+              "phase": "three releases protected by known open tabs",
+              "estimateAvailable": false,
+              "cachedBodyBytes": 2068,
+              "cachedResponses": 12,
+              "cacheVersions": [
+                "earth-learning-aaaaaaaaaaaaaaaa",
+                "earth-learning-bbbbbbbbbbbbbbbb",
+                "earth-learning-cccccccccccccccc"
+              ]
+            },
+            {
+              "phase": "two releases after old tabs close",
+              "estimateAvailable": false,
+              "cachedBodyBytes": 1379,
+              "cachedResponses": 8,
+              "cacheVersions": [
+                "earth-learning-eeeeeeeeeeeeeeee",
+                "earth-learning-ffffffffffffffff"
+              ]
+            }
+          ],
+          "storageMeaning": "Exact cached response body bytes in the isolated fixture, not CacheStorage overhead/total browser RAM/disk guarantee. Optional native quota estimate is reported only where actually available."
+        },
+        "meaning": "Same full six-release assertions run with actual API and deliberately absent optional estimate API; exact cached response bytes measured in both. Actual WebKit still requires GitHub acceptance."
+      },
+      "actualWebKitAcceptance": "Pending next full exact-head GitHub run"
+    }
+  },
+  "quality71Followup": {
+    "head": "77f1841e2f6ac18a1e44c8a183daba108ff283e9",
+    "run": 38785608343,
+    "status": "failed, not a passing cost/performance baseline",
+    "standardChecks": "passed",
+    "firefox": "passed real engine,845.827s execution",
+    "webkit": "passed real engine,586.583s execution; optional storage estimate absent, all exact body/cache cases passed",
+    "chromium": "cancelled; job started18:28:09Z, cancellation log19:03:26Z, completed19:03:32Z; configured35-minute limit. Exact check annotation/cancellation actor is unavailable through this connector; timing is consistent with exhaustion, not proof of a product fault.",
+    "required": "failed",
+    "localRootSeconds": 2203.8842200329996,
+    "localBookSeconds": 2060.35250951,
+    "localBookNavigationSeconds": 508.50787004399996,
+    "localLearningSeconds": 1667.006508352,
+    "localNavigationFailure": "Exact getByText ignored semantic prefix inside the visible benefit paragraph; all68 original cached benefits directly verified with actual stopped server/offline browser. Correct helper repeated with all68 geometry checks.",
+    "experiment": "Move exactly the same180 search/reload/reciprocal/Back/focus checks, same390x900 viewport, from book to existing navigation worker. Seven180-word matrices, native zoom, all Why checks, current3 workers/ports/jobs,35-minute limit and all assertions retained. New complete exact180 navigation field/timing required by aggregator and handoff.",
+    "predictedOnly": "Book critical phase could shrink by508.508s; whole duration and runner-minute benefit require new full measured acceptance. No billed/free-tier or cost-reduction claim from cancelled run.",
+    "nextAcceptance": "pending corrected full same-snapshot local/GitHub checks"
+  },
+  "fixtureShutdownFollowup": {
+    "headBeforeFix": "8094826cf173b7dc38163554537e97691f493cce",
+    "localPrevious": "failed632.946s; six-release fixture blocked in server.close at generation5 with one accepted unused TCP socket (bytesRead0/bytesWritten0), no listening server. Inspector cleanup attempt then failed ERR_VM_DYNAMIC_IMPORT_CALLBACK_MISSING and ended the own test; this is no passing proof.",
+    "evidence": "work/p35-8094826-failed-proof; read-only socket inspection recorded before own diagnostic cleanup failure",
+    "change": "Stop isolated fixture listener then closeAllConnections. Browser stays open for unchanged real offline/old-chunk/pass assertions. Applied to retention and resilience, no production/runtime changes.",
+    "realTcpRegression": "passed; actual zero-byte accepted socket proves old close waits, new helper closes it and origin is unreachable; repeated cleanup safe",
+    "targetedBrowser": {
+      "status": "passed",
+      "retentionCycles": 3,
+      "allComplete": true,
+      "resilience": {
+        "kind": "chromium",
+        "networkRecovery": true,
+        "quotaRecovery": true,
+        "completeAssets": true,
+        "offlineReload": true,
+        "passPreserved": true,
+        "assetCount": 453,
+        "realProgress": true,
+        "metrics": {
+          "assets": 453,
+          "reused": 0,
+          "reusedBytes": 0,
+          "downloaded": 453,
+          "downloadedBytes": 18938735,
+          "seconds": 1.26060000000149,
+          "completedAt": 1792102660913
+        },
+        "serverStopped": true
+      }
+    },
+    "fullCurrentAcceptance": "pending new immutable full local and GitHub run; do not infer full success or timing/cost improvement from targeted probes"
+  },
+  "quality72Acceptance": {
+    "head": "8094826cf173b7dc38163554537e97691f493cce",
+    "run": 38814533914,
+    "ciMerge": "b2cf34073a92be61fb74a27fe587ac8607380582",
+    "sourceDigest": "2db1300089eb07bfef7cb2fda74d522be9a4f677d54d4d15a03fe8c9fae9b79e",
+    "build": "cf0ec3172193801e",
+    "status": "all standard/chromium/firefox/webkit/required jobs passed",
+    "chromiumSeconds": 1993.205433592,
+    "checks": 140,
+    "timings": [
+      {
+        "suite": "performance",
+        "seconds": 38.771792608
+      },
+      {
+        "suite": "components",
+        "seconds": 21.558453096000004
+      },
+      {
+        "suite": "news-feed",
+        "seconds": 29.697482519
+      },
+      {
+        "suite": "home",
+        "seconds": 419.74389967099995
+      },
+      {
+        "suite": "core",
+        "seconds": 343.97030776599996
+      },
+      {
+        "suite": "book-navigation",
+        "seconds": 526.153404481
+      },
+      {
+        "suite": "offline",
+        "seconds": 294.2867947510001
+      },
+      {
+        "suite": "research",
+        "seconds": 523.434381273
+      },
+      {
+        "suite": "journeys",
+        "seconds": 253.34077286600007
+      },
+      {
+        "suite": "nature",
+        "seconds": 659.940303766
+      },
+      {
+        "suite": "playground",
+        "seconds": 119.099541219
+      },
+      {
+        "suite": "backup",
+        "seconds": 20.030409058999968
+      },
+      {
+        "suite": "challenge",
+        "seconds": 126.85539598200005
+      },
+      {
+        "suite": "book",
+        "seconds": 1860.0654858859998
+      }
+    ],
+    "review": {
+      "captures": 1530,
+      "retained": 397,
+      "retainedBytes": 50057413,
+      "limitBytes": 50331648
+    },
+    "meaning": "Passing expanded same-snapshot regression; not an independent scientific/visual approval, nor proof of reduced cost compared with an older smaller scope."
+  },
+  "local73Acceptance": {
+    "head": "73f5df2f2aec50b735001f0e87a71f32b2934418",
+    "sourceDigest": "3d265353b23c90f83afc56cb4cabb7170f482de1bed0b9981d2843aafeecdc40",
+    "build": "cf0ec3172193801e",
+    "status": "passed",
+    "seconds": 1935.587378917,
+    "checks": 139,
+    "workers": [
+      {
+        "name": "quality-foundation",
+        "suites": [
+          "foundation"
+        ],
+        "seconds": 107.19042963700001,
+        "report": "quality-foundation/portable-report.json"
+      },
+      {
+        "name": "quality-news-feed",
+        "suites": [
+          "news-feed"
+        ],
+        "seconds": 30.303892853999997,
+        "report": "quality-news-feed/portable-report.json",
+        "fixtureConfiguration": true
+      },
+      {
+        "name": "quality-navigation",
+        "suites": [
+          "home",
+          "core",
+          "offline"
+        ],
+        "seconds": 1379.8661409420001,
+        "report": "quality-navigation/portable-report.json"
+      },
+      {
+        "name": "quality-learning",
+        "suites": [
+          "journeys",
+          "playground",
+          "backup",
+          "challenge",
+          "research",
+          "nature"
+        ],
+        "seconds": 1678.0845408730002,
+        "report": "quality-learning/portable-report.json"
+      },
+      {
+        "name": "quality-book",
+        "suites": [
+          "book"
+        ],
+        "seconds": 1796.710340138,
+        "report": "quality-book/portable-report.json"
+      }
+    ],
+    "bookPhaseTimings": [
+      {
+        "phase": "full word matrix with screenshot/axe",
+        "width": 320,
+        "seconds": 277.979995786
+      },
+      {
+        "phase": "full word matrix with screenshot/axe",
+        "width": 360,
+        "seconds": 178.75044339299998
+      },
+      {
+        "phase": "full word matrix with screenshot/axe",
+        "width": 390,
+        "seconds": 158.36261592900001
+      },
+      {
+        "phase": "full word matrix with screenshot/axe",
+        "width": 768,
+        "seconds": 173.88632851800008
+      },
+      {
+        "phase": "full word matrix with screenshot/axe",
+        "width": 1024,
+        "seconds": 182.77757203399995
+      },
+      {
+        "phase": "full word matrix with screenshot/axe",
+        "width": 1440,
+        "seconds": 291.64585278299995
+      },
+      {
+        "phase": "full word matrix with screenshot/axe",
+        "width": 1920,
+        "seconds": 148.34595294800005
+      }
+    ],
+    "meaning": "Single full local passing repetition; immutable proof archived before next product wave. Brief read-only synchronous own-process URL/module inspection, no debugger pause/page mutation/assertion change; no p50/p95/billed-cost or production hardware inference."
+  },
+  "quality73Acceptance": {
+    "head": "73f5df2f2aec50b735001f0e87a71f32b2934418",
+    "runId": 38818861035,
+    "status": "success",
+    "jobs": "Standards, Chromium, actual Firefox/WebKit and Required all completed successfully; GitHub API rechecked16Oct2026.",
+    "chromiumSeconds": 1658.699835755,
+    "sourceDigest": "3d265353b23c90f83afc56cb4cabb7170f482de1bed0b9981d2843aafeecdc40",
+    "build": "cf0ec3172193801e",
+    "meaning": "Previous immutable milestone only; not acceptance of the uncommitted invention/image-budget wave. Single-run timing variance is not p50/p95, billing or a causal optimization guarantee."
+  },
+  "reviewStorageDecision": {
+    "decidedOn": "2026-10-16",
+    "status": "Implemented in existing curator/collector; exact-head immutable completion evidence is in CI artifacts and PR27. Historical measurements below retain their own commit scope.",
+    "limitBytes": 150000000,
+    "scope": "Retained QA/review PNGs exclusively; production, initial-load, single-request and offline budgets unchanged.",
+    "productionBudgetSha256": "4a2e4990bbf3da83068122d8220d30d1e390dc99a51dbbee57378a335e971466",
+    "localChromiumBaseline": {
+      "sourceDigest": "3d265353b23c90f83afc56cb4cabb7170f482de1bed0b9981d2843aafeecdc40",
+      "build": "cf0ec3172193801e",
+      "generatedBytes": 262123457,
+      "generatedImages": 1508,
+      "retainedImages": 379,
+      "omittedImages": 1129,
+      "retainedBytes": 45943901,
+      "limitBytes": 150000000,
+      "reserveBytes": 104056099,
+      "withinBudget": true,
+      "matrixSha256": "1e5b013772bac5b8779eeb21b37150ef5a6c99c604516956c16ee2918122e26d",
+      "exactDuplicates": {
+        "groups": [
+          {
+            "sha256": "10d777e861436250bd49d177ceac5bded908698c90b80f65ea958a27395ae56d",
+            "files": [
+              {
+                "file": "quality-foundation-foundation-switch-before-1440.png",
+                "retained": true
+              },
+              {
+                "file": "quality-foundation-foundation-switch-before-320.png",
+                "retained": true
+              },
+              {
+                "file": "quality-foundation-foundation-switch-restored-1440.png",
+                "retained": true
+              },
+              {
+                "file": "quality-foundation-foundation-switch-restored-320.png",
+                "retained": true
+              }
+            ]
+          },
+          {
+            "sha256": "405715980596b0c30d1ac0b9ef1883a165ea73e195b355cc1763fa40225c4a41",
+            "files": [
+              {
+                "file": "quality-foundation-foundation-switch-changed-1440.png",
+                "retained": true
+              },
+              {
+                "file": "quality-foundation-foundation-switch-changed-320.png",
+                "retained": true
+              }
+            ]
+          },
+          {
+            "sha256": "70443947ec3bff89e4c0f1a0b846d21a83edea9ca89d198e2f54c3ff9013d888",
+            "files": [
+              {
+                "file": "quality-foundation-offline-resilience-chromium-quota-error-320.png",
+                "retained": true
+              },
+              {
+                "file": "quality-foundation-offline-resilience-chromium-source-error-320.png",
+                "retained": true
+              }
+            ]
+          },
+          {
+            "sha256": "ed6a324a938624bd6516296fd8a65cbe0b6fa3abc79bb73e5da40b86bc71afc0",
+            "files": [
+              {
+                "file": "quality-foundation-world-content-identity-320.png",
+                "retained": true
+              },
+              {
+                "file": "quality-foundation-world-content-partial-320.png",
+                "retained": true
+              }
+            ]
+          },
+          {
+            "sha256": "115c1c1b626223f4ed08af6d50594fdd3716851f4ce1d57e8af51a364b78bb07",
+            "files": [
+              {
+                "file": "quality-navigation-discovery-pathways-390.png",
+                "retained": false
+              },
+              {
+                "file": "quality-navigation-home-next-390.png",
+                "retained": false
+              }
+            ]
+          },
+          {
+            "sha256": "475bbd0ffa31bffa57998e7977c46a6a56f561b550ea754ce26c88947166defd",
+            "files": [
+              {
+                "file": "quality-navigation-home-credits-1440.png",
+                "retained": true
+              },
+              {
+                "file": "quality-navigation-home-credits-1920.png",
+                "retained": false
+              }
+            ]
+          },
+          {
+            "sha256": "ac0f43ca597ea6eb02b143735ca6886c56eef7765a33f2f56c7f63c6fe1089db",
+            "files": [
+              {
+                "file": "quality-navigation-navigation-knowledge-routes-1440.png",
+                "retained": true
+              },
+              {
+                "file": "quality-navigation-navigation-knowledge-routes-1920.png",
+                "retained": false
+              }
+            ]
+          },
+          {
+            "sha256": "83703164e2896ca33685e24599c55e0872d0fa2760b895e1fd1ca63ee90fba9c",
+            "files": [
+              {
+                "file": "quality-navigation-pass-backup-large-1440.png",
+                "retained": true
+              },
+              {
+                "file": "quality-navigation-pass-display-large-1440.png",
+                "retained": true
+              }
+            ]
+          },
+          {
+            "sha256": "9c0c17ffb69dcb9155a621df58ed4e7b87bc7e58e1db0c8e0d984b2e6a015713",
+            "files": [
+              {
+                "file": "quality-navigation-pass-backup-large-768.png",
+                "retained": false
+              },
+              {
+                "file": "quality-navigation-pass-display-large-768.png",
+                "retained": false
+              }
+            ]
+          },
+          {
+            "sha256": "98efd0d29a0616a4e7847140093cba9a6986cf9c79db211d273b46e8185f85de",
+            "files": [
+              {
+                "file": "quality-navigation-updates-prepared-1440.png",
+                "retained": true
+              },
+              {
+                "file": "quality-navigation-updates-prepared-1920.png",
+                "retained": false
+              }
+            ]
+          }
+        ],
+        "extraCaptures": 12,
+        "retainedExtraCopies": 7,
+        "retainedExtraBytes": 196894,
+        "alreadyOmittedCopiesWithRetainedOriginal": 3,
+        "alreadyOmittedBytesWithRetainedOriginal": 128562,
+        "automaticDuplicateRemovals": 0,
+        "meaning": "Byte identity alone never removes a distinct state, width, focus, failure or mandatory image. Omitted copies describe existing explicit curation, not new deduplication savings."
+      },
+      "comparison": {
+        "status": "previous comparable run not supplied"
+      }
+    },
+    "previousComparableFullCiRuns": [
+      {
+        "run": 72,
+        "generatedImages": 1530,
+        "retainedImages": 397,
+        "generatedBytes": 286766391,
+        "retainedBytes": 50057413,
+        "reserveUnderNewLimit": 99942587
+      },
+      {
+        "run": 73,
+        "generatedImages": 1530,
+        "retainedImages": 397,
+        "generatedBytes": 286731403,
+        "retainedBytes": 50025849,
+        "reserveUnderNewLimit": 99974151
+      }
+    ],
+    "comparison": {
+      "retainedImagesDelta": 0,
+      "retainedBytesDelta": -31564,
+      "meaning": "Quality72 versus73: same1530 captures/397 retained, including Firefox/WebKit. Tiny byte difference is capture variance, not newly achieved savings. Local Chromium-only379 images are not comparable to397 final-engine images."
+    },
+    "decision": "Existing curation already avoids unnecessary long cards/overview binaries and uploads final collector JSON/XML only, without duplicating PNG artifacts. Ten byte-identical groups in local full proof include different width, restored switch state, quota versus source errors, partial versus identity failure and backup/display sections. Keep those contexts; no hash-based removal or new image store. Three omitted identical copies already have retained originals; no newly removed review image. No DEFLATE9 micro-optimization. Original curated397 count was not total actual stored401; see audited actualUploadedReference. This discrepancy is now fail-closed in the existing collector; do not compare397 to future actual count as if all additional images were newly stored.",
+    "cleanup": {
+      "scope": "Two closed profiles from completed superseded targeted native capture probe only; no sealed evidence, capture, report or source removed. Both helpers create fresh profiles before every run. Latest invention/cold-offline and all full-run profiles remain.",
+      "removed": [
+        {
+          "path": ".qa-output/native-capture-selected/invention-native-zoom-profile",
+          "files": 208,
+          "bytes": 3427270
+        },
+        {
+          "path": ".qa-output/native-capture-selected/nature-native-zoom-profile",
+          "files": 271,
+          "bytes": 4215551
+        }
+      ],
+      "preservedProofHashes": {
+        "report.json": "491d3d91fb307295d418813243e95e56aee150162ddbb1198128a06f290caed9",
+        "nature-native-200-large.png": "7f33050440a2517244ada6cba011b51561a040054cf08d4f0e0b0745db9fda5e",
+        "invention-native-200-large.png": "6b67eac4275108a6bf586e6e65c083176bb51608e1aacc87caa28dedf765e695"
+      },
+      "removedBytes": 7642821
+    },
+    "unchanged": "All existing mandatory captures and full matrices, PNG bytes/hashes, source/commit/build sealing, failure captures and all tests remain; new invention images add five mandatory captures. Historical sealed proofs and raw original instructions unchanged.",
+    "next": "Stop image optimization after acceptance; resume prepared invention and other open product waves in sole BACKLOG.",
+    "actualUploadedReference": {
+      "runId": 38818861035,
+      "head": "73f5df2f2aec50b735001f0e87a71f32b2934418",
+      "testedCommit": "d9ef7db3bde96a836991b021428b5c78213eb1f9",
+      "sourceDigest": "3d265353b23c90f83afc56cb4cabb7170f482de1bed0b9981d2843aafeecdc40",
+      "build": "cf0ec3172193801e",
+      "generatedImages": 1530,
+      "actuallyUploadedImages": 401,
+      "actuallyUploadedPngBytes": 50327955,
+      "reserveUnder150MB": 99672045,
+      "chromium": {
+        "count": 379,
+        "bytes": 48975238
+      },
+      "firefox": {
+        "count": 11,
+        "bytes": 664108
+      },
+      "webkit": {
+        "count": 11,
+        "bytes": 688609
+      },
+      "previousCuratedLedger": {
+        "images": 397,
+        "bytes": 50025849,
+        "originalSha256": "4ab38838da613952f679beeee1be904f8a7bfd80422d1a17ed5b6f397f3249c3"
+      },
+      "accountingGap": {
+        "images": 4,
+        "bytes": 302106,
+        "reason": "Engine390/768 PNGs were already uploaded in the separate browser artifacts but omitted from the final curated count. Future collector counts all four widths and verifies total count/bytes against all actually uploaded job-file lists. No new engine storage or retrospective change of sealed evidence."
+      },
+      "verification": "Original Firefox/WebKit artifact file bytes/SHA256 match their sealed job-proof lists and same run/commit/source/build; Chromium retained bytes match the original CI73 log. Final collector ledger extracted unchanged from artifact12013916501."
+    },
+    "criticalNewEvidence": {
+      "inventionDiagrams": 24,
+      "distinctSha256": 24,
+      "candidateBytes": 607211,
+      "additionalBytesVersusFourRepresentativeDiagrams": 510513,
+      "reason": "Individually corrected models and labels/line breaks justify all12 mobile+desktop originals; no extra capture/render, only retain already generated originals. Adds20 critical originals, not an attempt to fill150MB.",
+      "pendingRouteFocus": 4,
+      "mandatoryChromiumImages": 58,
+      "allExistingMandatoryImagesPreserved": true
+    },
+    "newChecks": "Exact decimal ceiling inclusive; corrupt/missing/changed sealed evidence still rejected; no automatic hash deduplication. Missing engine320/390/768/1440 originals or count/byte disagreement between final manifest and actual uploads reject collection."
+  },
+  "local74Acceptance": {
+    "head": "86388249ede1d12aede6d9e33e25e92a93f30f35",
+    "sourceDigest": "cf2eafd4cbdc423f8ffd2f813c5e5ab7b0e45c30543a9ae68cc8b067c87e6972",
+    "build": "ec38e9431c0a8abc",
+    "status": "passed",
+    "seconds": 1886.573765729,
+    "checks": 141,
+    "unitCases": 168,
+    "releaseCases": 27,
+    "exports": 42,
+    "inventoryRecords": 2200,
+    "generatedImages": 1534,
+    "curatedImages": 384,
+    "curatedBytes": 45907999,
+    "scope": "Complete local Chromium only, before the subsequent route-focus guard and final storage-accounting refinements; not acceptance of the next source/commit. Curated originals/reports saved separately without profiles/build duplication."
+  },
+  "quality74Followup": {
+    "runId": 38858257342,
+    "head": "86388249ede1d12aede6d9e33e25e92a93f30f35",
+    "testedCommit": "02af7d9efbf0585dfabcf471d2c647dab8bd69a9",
+    "status": "failure",
+    "standards": "success",
+    "chromium": "failure at foundation.mjs55: Enter did not close the native game guide; completed widths320/360/390/768/1024, failure on1440. Original failure artifact had JSON but no failure PNG.",
+    "firefox": {
+      "status": "success",
+      "seconds": 933.615220007,
+      "inventionCases": 48
+    },
+    "webkit": {
+      "status": "success",
+      "seconds": 751.578696021,
+      "inventionCases": 48
+    },
+    "required": "failure",
+    "reproduction": {
+      "before": [
+        {
+          "width": 320,
+          "pending": 2,
+          "before": true,
+          "after": {
+            "tag": "MAIN",
+            "id": "learning-main",
+            "className": "learning-main"
+          },
+          "focused": false,
+          "closed": false
+        },
+        {
+          "width": 1440,
+          "pending": 2,
+          "before": true,
+          "after": {
+            "tag": "MAIN",
+            "id": "learning-main",
+            "className": "learning-main"
+          },
+          "focused": false,
+          "closed": false
+        }
+      ],
+      "after": [
+        {
+          "width": 320,
+          "input": "keyboard",
+          "pendingFrames": 2,
+          "trustedInput": true,
+          "focused": true,
+          "closed": true,
+          "scrollKept": true,
+          "beforeY": 7666,
+          "afterY": 7666,
+          "active": {
+            "tag": "SUMMARY",
+            "id": ""
+          }
+        },
+        {
+          "width": 320,
+          "input": "pointer",
+          "pendingFrames": 2,
+          "trustedInput": true,
+          "focused": true,
+          "closed": true,
+          "scrollKept": true,
+          "beforeY": 7666,
+          "afterY": 7666,
+          "active": {
+            "tag": "SUMMARY",
+            "id": ""
+          }
+        },
+        {
+          "width": 1440,
+          "input": "keyboard",
+          "pendingFrames": 2,
+          "trustedInput": true,
+          "focused": true,
+          "closed": true,
+          "scrollKept": true,
+          "beforeY": 2511,
+          "afterY": 2511,
+          "active": {
+            "tag": "SUMMARY",
+            "id": ""
+          }
+        },
+        {
+          "width": 1440,
+          "input": "pointer",
+          "pendingFrames": 2,
+          "trustedInput": true,
+          "focused": true,
+          "closed": true,
+          "scrollKept": true,
+          "beforeY": 2511,
+          "afterY": 2511,
+          "active": {
+            "tag": "SUMMARY",
+            "id": ""
+          }
+        }
+      ]
+    },
+    "fix": "Two real pending navigation frames stole focus and scroll after fresh input. Deferred restores now cancel on trusted key/pointer input and remove temporary listeners. Normal routing/Back restore remains. Permanent four-case320/1440 keyboard/touch/mouse browser regression with unchanged scroll, focus and second-Enter closure; fail-closed aggregation. Original seven-width disclosure assertions kept and strengthened; unexpected component failures additionally save context and original PNG checksum.",
+    "visualReview": "Actual old/new320 screenshots inspected: old jumps to top/MAIN; new preserves open guide and visible focus. Actual CI74 Firefox/WebKit phone320 originals inspected after verifying every artifact file hash.",
+    "acceptance": "Targeted reproduction/fix checks pass, new complete immutable local/GitHub acceptance still required; no retries/skips/timeout increases."
+  },
+  "local75Acceptance": {
+    "head": "5487989121408cd38a98dcea6a2efa9c4af9c11e",
+    "sourceDigest": "8df6da20b7231ddab851ef74c2d942ac32900f72ecfdd29cfadd1a34e61fbfde",
+    "build": "243c8f771702c317",
+    "status": "passed",
+    "seconds": 2030.392671805,
+    "checks": 143,
+    "unitCases": 170,
+    "releaseCases": 27,
+    "exports": 42,
+    "inventoryRecords": 2200,
+    "generatedImages": 1538,
+    "curatedImages": 408,
+    "curatedBytes": 46804557,
+    "reserveUnder150MB": 103195443,
+    "scope": "Complete local Chromium before subsequent test-scheduling change; no Firefox/WebKit PNGs in this local-only total. All curated original files/reports preserved in separate complete-proof folder."
+  },
+  "quality75Followup": {
+    "runId": 38863379272,
+    "head": "5487989121408cd38a98dcea6a2efa9c4af9c11e",
+    "testedCommit": "7220fabd69e802cfc19d5d843554961bb53e2b5a",
+    "status": "failure",
+    "standards": "success",
+    "firefox": {
+      "status": "success",
+      "seconds": 792.5832761380001,
+      "inventionCases": 48
+    },
+    "webkit": {
+      "status": "success",
+      "seconds": 870.965499217,
+      "inventionCases": 48
+    },
+    "chromium": {
+      "status": "cancelled",
+      "jobStartedAt": "2026-10-16T06:51:08Z",
+      "browserStepStartedAt": "2026-10-16T06:52:16Z",
+      "cancellationAt": "2026-10-16T07:26:12.6565358Z",
+      "limitMinutes": 35,
+      "lastWordMatrixAt": "2026-10-16T07:18:06.8352546Z",
+      "meaning": "35-minute job cancellation; not a passed browser run. Full word matrices completed, later native/Why work still pending. Learning and navigation logs continue through real hint/offline cases. No cause/actor beyond actual log asserted."
+    },
+    "required": "failure",
+    "visualReview": "All12 final local320 diagrams, printing/rocket1440 and corrected1280 native invention/nature viewports personally inspected; exact final Firefox/WebKit phone320 artifacts inspected after all file SHA/snapshot verification. Concern about rocket first label checked in real320 DOM:24px number,16px text,11px gap, no overlap."
+  },
+  "earlyBookScheduling": {
+    "status": "Implemented in same existing launcher; final immutable local/CI comparison required before adoption. No guaranteed p50/p95/billing saving.",
+    "problem": "Longest book worker starts after all foundation and signed-news work although it already owns an isolated port/output/browser profile/cache. CI75 hits35min despite a successful complete local run.",
+    "baseline": {
+      "head": "5487989121408cd38a98dcea6a2efa9c4af9c11e",
+      "sameAppBuild": "243c8f771702c317",
+      "completeRootSeconds": 2030.392671805,
+      "performanceSeconds": 42.778276423,
+      "foundationSeconds": 110.541445735,
+      "newsSeconds": 29.534639677999998,
+      "bookPreviouslyWaitedUntilSeconds": 140.076085413,
+      "avoidablePostPerformanceWaitSeconds": 97.29780899,
+      "bookWorkerSeconds": 1888.3993867309998,
+      "navigationWorkerSeconds": 1588.683,
+      "learningWorkerSeconds": 1746.257
+    },
+    "change": "After successful completion of all21 isolated performance samples, the existing book worker starts through private parent/child IPC, alongside later foundation/component checks. Foundation must finish before news/navigation/learning; peak remains at most3 workers. Same book functions, all7x180 matrices/axe/native/Why, every other suite and screenshots unchanged. No width splitting, retries, skips, job/port count or35min increase.",
+    "isolation": "Book keeps basePort+5 and own outputs/profile/cache. Foundation failure/recovery uses basePort+1; cache-retention fixture randomport0. No offline server shared. Performance contexts all closed and successful before signal.",
+    "evidence": "Measured performance/book/foundation/news ordering and peak worker count saved in portable report; full handoff fails if signal/sample count/order/overlap/worker bound absent. Original component and accessibility assertions retained. Source digest distinguishes this QA change even with unchanged app build.",
+    "acceptance": "Compare actual final full wall time and exact-head Quality, preserve coverage and record variance; do not call a cancelled previous run green or claim savings from forecasts."
+  },
+  "chromiumTimeoutDecision20261016": {
+    "authorization": "Latest explicit user instruction: Chromium 35 to 50 minutes only; all other job limits and full coverage unchanged.",
+    "reason": {
+      "run": 38896189146,
+      "number": 78,
+      "head": "e707db585b36e0363ff4dc3cc8037337589c065c",
+      "chromiumBrowserSeconds": 2035.12680962,
+      "checks": 142,
+      "browserResult": "passed",
+      "curationResult": "passed",
+      "jobProofLoggedAt": "2026-10-16T12:25:05.9669177Z",
+      "cancellationLoggedAt": "2026-10-16T12:25:05.9919312Z",
+      "completeJobAcceptance": false,
+      "note": "Browser and curation passed; timeout prevented successful evidence handoff. Required remained failed."
+    },
+    "limitsMinutes": {
+      "standards": 10,
+      "chromium": 50,
+      "firefox": 35,
+      "webkit": 35,
+      "required": 5
+    },
+    "implementation": "Existing matrix expression only: matrix.engine == 'chromium' && 50 || 35",
+    "sameCoverageAndTiming": true,
+    "existingRunsInterrupted": false,
+    "nextComparison": "Compare actual complete Chromium regression, sealing/upload and total job time against successful Quality77 (1589.568337232 seconds browser) and Quality78. Investigate persistent growth; never automatically raise the limit again.",
+    "newCostsServicesRunners": false,
+    "operationalActivation": false
+  }
+}

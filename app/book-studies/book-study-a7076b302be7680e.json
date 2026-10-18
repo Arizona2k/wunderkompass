@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Regenbogen",
+  "learning": {
+    "starter": "Sonnenlicht kann in Wassertröpfchen gebrochen und reflektiert werden. Dabei können verschiedene Farben als Regenbogen sichtbar werden.",
+    "deeper": "Ein Regenbogen ist keine feste farbige Brücke am Himmel. Blickrichtung, Licht und Tröpfchen gehören zur Erklärung. Die Strahlskizze zeigt ausgewählte Wege und ist keine vollständige Berechnung der sichtbaren Farben oder der Lage eines echten Bogens.",
+    "observe": "Zeichne einen gedachten Tropfen mit eintreffendem und austretendem Lichtpfeil. Markiere Richtungsänderungen. Schaue nie direkt zur Sonne und verwende keine Laser; der Vergleich bleibt eine sichere Papierzeichnung.",
+    "benefit": "Du unterscheidest eine Lichtwirkung von einem festen Gegenstand und liest eine begrenzte Strahlskizze.",
+    "connection": "Das Wetterlabor beschreibt vereinfachte Wolken- und Regenbedingungen. Die Lichtskizze ergänzt eine optische Frage und ist keine Regenbogen-Vorhersage.",
+    "lab": "weather",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/ems/03_behaviors/",
+        "title": "NASA · Regenbogen (Englisch)",
+        "anchor": "Grundlagen von Reflexion, Brechung und Lichtfarben. Die eigene Strahlskizze übernimmt keine Bilder und berechnet keinen vollständigen Regenbogen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      },
+      {
+        "url": "https://www.nesdis.noaa.gov/about/k-12-education/optical-phenomena/what-causes-rainbow",
+        "title": "NOAA NESDIS · Wie ein Regenbogen entsteht",
+        "anchor": "Abschnitte zu Wassertropfen und Beobachterposition: Brechung, innere Reflexion und austretendes Licht. Die Zeichnung ist kein begehbarer Gegenstand; keine Fotos, festen Winkel oder Sichtvorhersagen übernommen.",
+        "updatedOn": "2025-09-02",
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Was stellt der gezeichnete Regenbogen nicht dar?",
+      "answers": [
+        "Eine feste begehbare Brücke zwischen Wolken",
+        "Eine Erklärung für ausgewählte Lichtwege",
+        "Eine gedachte Anordnung aus Licht und Tröpfchen"
+      ],
+      "correct": 0,
+      "hint": "Farbig sichtbares Licht ist kein tragfähiges Material am Himmel.",
+      "why": "Ein Regenbogen ist eine Lichtwirkung, keine feste Brücke. Die gezeichneten Pfeile dienen nur der Erklärung ausgewählter Wege.",
+      "wrongReasons": [
+        "",
+        "Eine ausdrücklich begrenzte Lichtwegskizze darf einen Teil der Erklärung veranschaulichen.",
+        "Licht und Tröpfchen sind Bestandteile der gedachten Anordnung, kein Festkörper."
+      ]
+    }
+  }
+}

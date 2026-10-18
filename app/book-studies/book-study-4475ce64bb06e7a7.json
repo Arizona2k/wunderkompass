@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "term": "Magma",
+  "learning": {
+    "starter": "Unter der Erdoberfläche heißt geschmolzenes Gesteinsmaterial Magma. Es kann auch Kristalle und gelöste Gase enthalten.",
+    "deeper": "Magma ist nicht dasselbe wie der gesamte Mantel. Sammelbereiche und Wege können kompliziert sein. Eine Magmaskizze beweist weder einen bevorstehenden Ausbruch noch dessen Verlauf; reale Vorhersagen brauchen geologische Messungen und Fachleute.",
+    "observe": "Markiere in einer erfundenen Vulkanschnittzeichnung Material unterhalb einer klaren Oberfläche als Magma. Füge kleine getrennte Zeichen für gedachte Kristalle und Gase hinzu. Keine echten Stoffe erhitzen oder mischen.",
+    "benefit": "Du ordnest den Begriff nach Lage und unterscheidest ein Schema von einer Ausbruchsvorhersage.",
+    "connection": "Im Vulkanlabor verändern Gas und Zähigkeit das begrenzte Modell. Diese Regler sind keine vollständige Darstellung echten Magmas oder sichere Ausbruchsvorhersage.",
+    "lab": "volcano",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/programs/VHP/about-volcanoes",
+        "title": "USGS · Magma (Englisch)",
+        "anchor": "Abschnitte zu Magma, Förderwegen, verbundenen Speichern und Vulkanformen. Das eigene Schema bildet keine reale Tiefe oder Ausbruchsgefahr ab.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Lava",
+        "reason": "Unter der Oberfläche und nach dem Austritt an die Oberfläche werden geschmolzene Gesteinsmaterialien unterschiedlich benannt."
+      },
+      {
+        "term": "Magmakammer",
+        "reason": "Material und Sammelbereich erfüllen unterschiedliche Rollen. Magma bezeichnet nicht automatisch eine einfache kreisrunde Höhle."
+      }
+    ],
+    "question": {
+      "prompt": "Wie heißt das geschmolzene Gesteinsmaterial in der Zeichnung noch unter der Oberfläche?",
+      "answers": [
+        "Magma",
+        "Lava unabhängig von jeder Lage",
+        "Verbranntes Holz"
+      ],
+      "correct": 0,
+      "hint": "Die gezeichnete Oberfläche ist die entscheidende Grenze dieses Begriffsvergleichs.",
+      "why": "Unter der Oberfläche wird das Material Magma genannt. Beim Austritt an die Oberfläche wird geschmolzenes Gestein als Lava bezeichnet.",
+      "wrongReasons": [
+        "",
+        "Für den Vergleich mit Lava ist die Lage zur Oberfläche entscheidend; beide Wörter sind nicht beliebig austauschbar.",
+        "Magma bezeichnet Gesteinsmaterial, keine Holzverbrennung."
+      ]
+    }
+  }
+}

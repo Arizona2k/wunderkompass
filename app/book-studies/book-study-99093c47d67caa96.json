@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "term": "Epizentrum",
+  "learning": {
+    "starter": "Das Epizentrum liegt an der Erdoberfläche über dem Erdbebenherd. Es ist ein anderer Punkt als der Herd im Inneren.",
+    "deeper": "Der Ort an der Oberfläche sagt allein nicht, wo sämtliche Schäden auftreten oder wie stark jeder Ort erschüttert wird. Untergrund, Tiefe und weitere Bebenbedingungen gehören dazu. Ein Kartensymbol ist keine Vorhersage.",
+    "observe": "Zeichne über einem erfundenen Herdpunkt einen Oberflächenpunkt. Vergleiche zwei gedachte Orte mit gleicher Entfernung zu ihm. Die Zeichnung liefert keine Intensitätsmessung und beweist keine überall gleiche Erschütterung.",
+    "benefit": "Du unterscheidest eine Oberflächenposition von einer pauschalen Schadens- oder Wirkungsprognose.",
+    "connection": "Das Erdbebenlabor ordnet den Oberflächenpunkt dem Herd im Inneren zu. Ein gleicher Abstand zum Epizentrum erklärt nicht jede örtliche Erschütterung: Tiefe, Untergrund und weitere Bedingungen fehlen im einfachen Bild.",
+    "lab": "quake",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/programs/earthquake-hazards/science-earthquakes",
+        "title": "USGS · Erdbeben erklären",
+        "anchor": "Grundbegriffe zu Bruchbewegung, Erdbebenherd und Epizentrum. Eine gedachte Zeichnung ersetzt weder Ortung noch eine örtliche Gefahrenbewertung.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      },
+      {
+        "url": "https://earthquake.usgs.gov/research/eqproc/grdshaking.php",
+        "title": "USGS · Örtliche Erschütterung",
+        "anchor": "Abschnitt über Ausbreitungswege und örtliche Bodenbedingungen. Entfernung allein legt die Stärke des Schüttelns nicht überall eindeutig fest.",
+        "checkedOn": "2026-10-18",
+        "updatedOn": null,
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Erdbebenherd",
+        "reason": "Der Beginn im Gestein und der Oberflächenpunkt darüber sind verschiedene Positionen. Keine der beiden Angaben allein sagt sämtliche örtlichen Wirkungen voraus."
+      },
+      {
+        "term": "Magnitude",
+        "reason": "Quellgröße und Oberflächenlage sind unterschiedliche Angaben. Ein Punkt auf einer Karte ist kein ortsgenauer Schadenswert."
+      }
+    ],
+    "question": {
+      "prompt": "Was kannst du allein aus zwei gleich weit entfernten Papierorten nicht ableiten?",
+      "answers": [
+        "Eine gleiche gezeichnete Entfernung",
+        "Eine garantiert gleiche echte Erschütterung",
+        "Dass beide nur gedachte Orte sind"
+      ],
+      "correct": 1,
+      "hint": "Die Zeichnung gibt nicht alle Bedingungen des Bodens und Bebens an.",
+      "why": "Gleicher Abstand allein garantiert keine gleiche Wirkung. Tatsächlicher Untergrund und weitere Bedingungen fehlen.",
+      "wrongReasons": [
+        "Eine gezeichnete gleiche Entfernung darf als solche beschrieben werden. Sie ist nur nicht die ganze Wirkungs­erklärung.",
+        "",
+        "Die ausdrücklich erfundenen Orte dürfen als Beispiele bezeichnet werden; sie sind keine echten Messstationen."
+      ]
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "term": "Dichte",
+  "learning": {
+    "starter": "Dichte vergleicht Masse und Volumen. Zwei gleich große gedachte Körper können verschieden viel Masse haben.",
+    "deeper": "Eine große Form ist nicht automatisch dichter. Für den Vergleich brauchst du beide Größen. Dichte allein beschreibt bei einem hohlen Gegenstand auch nicht alle Bedingungen des Schwimmens; verdrängtes Wasser und Gesamtform zählen ebenfalls.",
+    "observe": "Zeichne zwei gleich große gedachte Kästchen und gib ihnen 2 beziehungsweise 4 Masseneinheiten. Vergleiche nur dieses Zahlenmodell, ohne echte Stoffeigenschaften oder ein Schwimmergebnis zu erfinden.",
+    "benefit": "Du vergleichst Masse pro gleichem Volumen statt bloße Größe.",
+    "connection": "Die Wasserspeicher im Labor messen keine Stoffdichte. Das eigene Kästchenmodell ergänzt eine Materialeigenschaft und erklärt keinen universellen Schwimmversuch.",
+    "lab": "water",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/water-density",
+        "title": "USGS · Dichte",
+        "anchor": "Definition der Dichte als Masse je Volumen. Eine Stoffart, ein Gefäßsymbol oder die Größe allein ersetzt keine Dichtemessung.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Die Kästchen haben dasselbe gedachte Volumen. Welches hat mit 4 statt 2 Masseneinheiten die größere Dichte?",
+      "answers": [
+        "Beide immer gleich, weil die Zeichnung gleich groß ist",
+        "Das mit 2 Masseneinheiten",
+        "Das mit 4 Masseneinheiten"
+      ],
+      "correct": 2,
+      "hint": "Das Volumen wurde gleich gehalten; vergleiche nun die Masse.",
+      "why": "Bei gleichem Volumen bedeutet mehr Masse die größere Dichte. Das ist eine Aussage über das Zahlenmodell.",
+      "wrongReasons": [
+        "Gleiche Zeichnungsgröße ersetzt nicht die unterschiedlich angegebenen Massen.",
+        "Die kleinere Masse bei gleichem Volumen führt hier zur kleineren Dichte.",
+        ""
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum schwimmt Eis?",
+        "reason": "Das Wasserkreislauflabor zeigt Eis als Wasserspeicher. Warum gewöhnliches Eis schwimmt, ergänzt der Dichtebegriff: Vergleiche Masse und Volumen, statt nur die Temperatur zu betrachten."
+      },
+      {
+        "question": "Warum kann ein Schiff aus schwerem Material schwimmen?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Dichte“: Du prüfst Form und Größen, statt aus dem Materialnamen allein auf Schwimmen zu schließen."
+      }
+    ]
+  }
+}

@@ -6,7 +6,7 @@ const hints=JSON.parse(await fs.readFile(new URL('../../app/challenge-hints.json
 const questionBank=topics.flatMap(t=>[{...t.question,id:t.id+':mini'},...(t.challenges??[])]);
 export async function connectedDiscoveries(page,ready,report,width){
  const pass=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
- for(const t of topics.filter(t=>t.checkedAt==='2026-10-09')){
+ for(const t of ['science-water-cycle','science-photosynthesis','science-pollination','science-fungi','science-coral-reef','science-moon-phases','science-seasons','science-tides'].map(id=>{const topic=topics.find(t=>t.id===id);assert.ok(topic,'retained connected topic '+id);return topic;})){
   await page.evaluate(id=>location.hash='world/topic/'+id,t.id);
   await page.getByRole('heading',{name:t.title,exact:true}).waitFor();
   assert.ok(await page.locator('.connection-card').count());
@@ -30,10 +30,17 @@ export async function connectedDiscoveries(page,ready,report,width){
  assert.equal(await page.locator('.world-topic-tile').count(),12);
  await page.getByRole('button',{name:'Nächste Seite',exact:true}).click();
  assert.equal(new URL(page.url()).hash,'#world/science/page/2');
- assert.equal(await page.locator('.world-topic-tile').count(),11);
+ assert.equal(await page.locator('.world-topic-tile').count(),Math.min(12,topics.filter(t=>t.category==='science').length-12));
  await page.goBack();await page.waitForFunction(()=>location.hash==='#world/science');
  assert.equal(await page.locator('.world-topic-tile').count(),12);
  await page.goForward();await page.waitForFunction(()=>location.hash==='#world/science/page/2');
+ const science=topics.filter(t=>t.category==='science'),seen=[];
+ await page.evaluate(()=>location.hash='world/science');await page.locator('#world-results').filter({hasText:'Seite 1 von'}).waitFor();
+ for(let n=0;n<Math.ceil(science.length/12);n++){
+  const ids=await page.locator('.world-topic-tile').evaluateAll(nodes=>nodes.map(el=>el.dataset.routeFocus.replace('world-topic-','')));assert.deepEqual(ids,science.slice(n*12,(n+1)*12).map(t=>t.id),'actual page '+(n+1));seen.push(...ids);
+  if(n+1<Math.ceil(science.length/12)){await page.getByRole('button',{name:'Nächste Seite',exact:true}).click();await page.locator('#world-results').filter({hasText:'Seite '+(n+2)+' von'}).waitFor();}
+ }
+ assert.equal(new Set(seen).size,science.length,'complete unique paginated catalog');
  await page.getByRole('textbox',{name:'Entdeckerkarten durchsuchen'}).fill('Mondphasen');
  assert.equal(await page.locator('.world-topic-tile').count(),1);
  await page.locator('.world-topic-tile').click();await page.locator('.moon-phase-3').waitFor();

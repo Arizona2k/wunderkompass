@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Asteroid",
+  "learning": {
+    "starter": "Kleine felsige Himmelskörper können die Sonne umkreisen. Sie sind nicht alle gleich rund oder am selben Ort.",
+    "deeper": "Die Gruppe umfasst unterschiedliche Körper. Eine Skizze eines Gürtels ist keine vollständige Bahnkarte und kein Nachweis einer Gefahr für die Erde. Verteilung, Form und gemessene Bahn eines bestimmten Objekts sind getrennte Angaben.",
+    "observe": "Zeichne einen ausdrücklich erfundenen Gürtel mit unterschiedlich geformten Symbolen und eines außerhalb davon. Die Symbole sind keine echte Zählung, Bahnrechnung oder Einschlagprognose und ersetzen keine astronomischen Messdaten.",
+    "benefit": "Du erkennst eine typische Lage, ohne sie fälschlich auf jedes einzelne Objekt zu übertragen.",
+    "connection": "Die Sonnensystemkarte zeigt die größeren Planeten. Asteroiden ergänzen kleine Körper auf einer anderen Ebene; ein vereinfachtes Planetenbild ist keine vollständige Inventarliste.",
+    "topic": "science-solar-system",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/solar-system/asteroids/facts/",
+        "title": "NASA · Asteroid (Englisch)",
+        "anchor": "Actual scientific243/261–263 and302–307: rocky bodies, mainbelt majority, shape/composition variety. Exclude65mya claim, impactforecast, disastercounts and photos.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Komet",
+        "reason": "Eisreiche Körper mit möglicher Materialhülle und überwiegend felsige Körper sind verschiedene Einordnungen. Ein gezeichneter Schweif bestimmt kein echtes Objekt."
+      },
+      {
+        "term": "Planet",
+        "reason": "Asteroiden und Planeten sind verschiedene Gruppen von Körpern. Eine vereinfachte Planetenkarte zählt nicht jedes kleinere Objekt im Sonnensystem."
+      }
+    ],
+    "question": {
+      "prompt": "Was darfst du aus der schematischen Gürtelzeichnung nicht schließen?",
+      "answers": [
+        "Dass sie eine gedachte Lage veranschaulicht",
+        "Dass verschiedene Formen dargestellt sind",
+        "Dass jeder echte Asteroid dort liegt"
+      ],
+      "correct": 2,
+      "hint": "Typisch und ausnahmslos sind verschiedene Aussagen.",
+      "why": "Viele Asteroiden liegen im Hauptgürtel. Eine schematische Zeichnung belegt nicht, dass alle bekannten oder unbekannten Körper dort liegen.",
+      "wrongReasons": [
+        "Eine ausdrücklich beschriftete gedachte Lage darf als Modellinhalt beschrieben werden.",
+        "Verschiedene Symbole dürfen verschiedene gedachte Formen veranschaulichen; sie zählen keine realen Objekte.",
+        ""
+      ]
+    }
+  }
+}

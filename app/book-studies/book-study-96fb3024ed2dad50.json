@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "term": "Elektron",
+  "learning": {
+    "starter": "Elektronen tragen eine negative Ladung. In einem Atom gehören sie zur Hülle um den Kern.",
+    "deeper": "In einem elektrisch neutralen Atom gleichen sich die Ladungen der Protonen und Elektronen aus. Elektronen besitzen eine kleine, aber nicht null große Masse. Für ihren Aufenthaltsort verwendet die Physik Wahrscheinlichkeiten, keine fest eingezeichneten Planetenbahnen.",
+    "observe": "Markiere in einer eigenen Zeichnung den Kern und einen Hüllenbereich, ohne Kreisbahnen als Fahrspuren einzuzeichnen. Beschreibe, warum eine Zeichnung nur ein Modell ist. Du beobachtest damit keine echten Elektronen.",
+    "benefit": "Du kannst elektrische Ladung von einer vereinfachten Bewegungsskizze unterscheiden.",
+    "topic": "science-circuit",
+    "connection": "Auf der Elektrizitätskarte geht es um bewegte Ladungen. Elektronen sind negativ geladene Teilchen; eine Stromskizze ist keine genaue Darstellung ihrer mikroskopischen Bewegung.",
+    "sources": [
+      {
+        "url": "https://www.energy.gov/science/doe-explainselectrons",
+        "title": "U.S. Department of Energy · Elektron (Englisch)",
+        "anchor": "Negative charge, neutral atom and cloud description; misleading essentially-no-mass simplification excluded. Nonzero mass additionally requires NIST electron-mass constant anchor before adoption.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      },
+      {
+        "url": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+        "title": "NIST · Elektronenmasse, CODATA2022 (Englisch)",
+        "anchor": "Complete listing, electron mass: positive nonzero value; no exact number copied into the child explanation",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Atom",
+        "reason": "Elektronen gehören zur Atomhülle. Vergleiche das ganze Atom mit einem negativ geladenen Teilchen."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Aussage über Elektronen ist zutreffend?",
+      "answers": [
+        "Sie haben eine negative elektrische Ladung",
+        "Sie sind immer kleine Planeten",
+        "Sie haben exakt keine Masse"
+      ],
+      "correct": 0,
+      "hint": "Ein Ladungszeichen beschreibt eine Eigenschaft, keine Kreisbahn.",
+      "why": "Elektronen tragen negative Ladung. Ihre Masse ist klein, aber nicht null; feste Planetenbahnen sind kein korrektes Bild.",
+      "wrongReasons": [
+        "",
+        "Eine Elektronenhülle wird nicht durch feste Kreisbahnen kleiner Planeten beschrieben.",
+        "Die Elektronenmasse ist nicht null. „Sehr klein“ und „gar nicht vorhanden“ sind verschieden."
+      ]
+    }
+  }
+}

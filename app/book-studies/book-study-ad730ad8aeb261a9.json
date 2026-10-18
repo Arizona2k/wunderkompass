@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "term": "Erdachse",
+  "learning": {
+    "starter": "Die Erdachse ist eine gedachte Linie, um die sich die Erde dreht. Sie ist kein wirklicher Stab durch den Planeten.",
+    "deeper": "Im Jahreszeitenmodell ist die Drehachse gegen die Bahnebene geneigt. Die tägliche Drehung und der jährliche Umlauf sind verschiedene Bewegungen. Eine Skizze zeigt eine vereinfachte Orientierung, keine mechanisch eingebaute Stange.",
+    "observe": "Zeichne eine gedachte Kugel mit Achslinie und einem getrennten Umlaufpfeil. Beschrifte Drehung und Umlauf verschieden. Die Papierzeichnung enthält keine genaue Himmelsmechanik oder Wetterberechnung.",
+    "benefit": "Du trennst Achse, tägliche Drehung und Jahresumlauf in einer verständlichen Modellzeichnung.",
+    "connection": "Im Jahreszeitenmodell kannst du die Achsneigung vergleichen. Der Schalter verändert eine Modellannahme, nicht die echte Drehachse der Erde.",
+    "topic": "science-seasons",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/seasons/en/",
+        "title": "NASA Space Place · Jahreszeiten",
+        "anchor": "Achsneigung, Lichtverteilung und entgegengesetzte Jahreszeiten. Tägliche Drehung und Jahresumlauf sind verschieden; keine örtliche Temperaturvorhersage.",
+        "updatedOn": "2025-07-29",
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Jahreszeiten",
+        "reason": "Die Achsneigung beeinflusst jahreszeitliche Lichtbedingungen. Tägliche Rotation und Jahresumlauf bleiben verschiedene Bewegungen; eine Temperaturprognose ist dies nicht."
+      }
+    ],
+    "question": {
+      "prompt": "Was ist die Achslinie in deinem Erdschema?",
+      "answers": [
+        "Ein wirklicher Metallstab im Erdkern",
+        "Eine gedachte Beschreibung der Drehachse",
+        "Eine Grenze zwischen zwei Ländern"
+      ],
+      "correct": 1,
+      "hint": "Gezeichnete Hilfslinien müssen keine wirklichen Gegenstände sein.",
+      "why": "Die Linie beschreibt die Drehachse. Sie ist kein Metallstab und keine politische Grenze.",
+      "wrongReasons": [
+        "Eine Achslinie im Schema beweist keinen eingebauten Metallstab.",
+        "",
+        "Ländergrenzen und eine Drehachse beschreiben völlig verschiedene Eigenschaften."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum merken wir die Erddrehung nicht?",
+        "reason": "Die Jahreszeitenkarte zeigt die geneigte Erdachse im Jahreslauf. Unterscheide dabei die tägliche Drehung von der Reise um die Sonne; der Zugvergleich erklärt nur einen Teil der gemeinsamen Bewegung."
+      },
+      {
+        "question": "Warum gibt es Tag und Nacht?",
+        "reason": "Auf der Jahreszeitenkarte bleibt die Erde ein drehender Planet. Trenne die tägliche Drehung für Tag und Nacht vom Jahresumlauf und der geneigten Achse."
+      }
+    ]
+  }
+}

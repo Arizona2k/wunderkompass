@@ -23,7 +23,13 @@ export function validateDossier(dossier, record, {build, knownIds} = {}) {
  if(!dossier.links?.length&&!text(dossier.isolationReason))errors.push('justify missing meaningful connections');
  const ui=dossier.ui;
  if(!ui||ui.build!==build||ui.route!==record.route||!['visible','search','back','offline'].every(key=>ui[key]===true)||!text(ui.report))errors.push('current built UI/search/back/offline proof required');
- return {id:record.id,structurallyReady:errors.length===0,errors,scientificApproval:false};
+ // User decision17Oct2026: factual/pedagogical counterchecking is the AI's task.
+ // Presence of a source or a structurally valid dossier alone still proves nothing.
+ const review=dossier.aiSelfReview,reviewErrors=[];
+ if(!review||review.mode!=='ai-self-review'||review.dataHash!==record.dataHash||!day(review.reviewedOn))reviewErrors.push('current dated AI self-review required');
+ for(const field of ['sourceFindings','factualFindings','pedagogicalFindings','conceptAndLinkFindings','countercheck','corrections','remainingUncertainty'])if(!text(review?.[field]))reviewErrors.push(field+' missing');
+ if(!Array.isArray(review?.unresolvedBlockingClaims)||review.unresolvedBlockingClaims.length)reviewErrors.push('unresolved factual/pedagogical blockers');
+ return {id:record.id,dataHash:record.dataHash,structurallyReady:errors.length===0,errors,scientificApproval:false,externalHumanReviewRequired:false,aiSelfReviewComplete:errors.length===0&&reviewErrors.length===0,reviewErrors};
 }
 
 export function editorialReport(inventory, dossiers=[], options={}) {
@@ -38,5 +44,5 @@ export function editorialReport(inventory, dossiers=[], options={}) {
   if(seen.has(dossier.id)||!ids.has(dossier.id))throw Error('Duplicate or unknown editorial dossier '+dossier.id);
   seen.add(dossier.id);return validateDossier(dossier,inventory.records.find(r=>r.id===dossier.id),{...options,knownIds:ids});
  });
- return {schemaVersion:1,inventoryFingerprint:fingerprint(inventory.records.map(r=>[r.id,r.dataHash])),results,missingDossiers:inventory.records.filter(r=>!seen.has(r.id)).map(r=>r.id),duplicateConceptCandidates:duplicates,scientificApproval:false,acceptedNew:0,meaning:'Only structural evidence. Missing dossiers remain open. Semantic duplicates, claims, rights and child suitability still need actual individual review; no automatic human acceptance.'};
+ return {schemaVersion:1,inventoryFingerprint:fingerprint(inventory.records.map(r=>[r.id,r.dataHash])),results,missingDossiers:inventory.records.filter(r=>!seen.has(r.id)).map(r=>r.id),duplicateConceptCandidates:duplicates,scientificApproval:false,acceptedNew:0,externalHumanReviewRequired:false,aiSelfReviewed:results.filter(r=>r.aiSelfReviewComplete).map(r=>({id:r.id,dataHash:r.dataHash})),meaning:'acceptedNew/scientificApproval retain historical external-acceptance meaning and are not completion gates. AI self-review requires actual source/fact/pedagogy countercheck records plus current UI/search/back/offline proof. The validator checks evidence completeness, never guarantees truth or fabricates human acceptance.'};
 }

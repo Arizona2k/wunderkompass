@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "term": "Einzugsgebiet",
+  "learning": {
+    "starter": "Zu einem Einzugsgebiet gehören Flächen, deren Wasser zu einem gemeinsamen Ausgang gelangt. Ein Bergkamm kann Wasserwege trennen.",
+    "deeper": "Kleinere Einzugsgebiete können in einem größeren liegen. Nicht jeder Niederschlag fließt sofort zum Ausgang: Wasser kann verdunsten, gespeichert werden oder in den Boden gelangen. Eine Landesgrenze ist keine automatische Wasserscheide.",
+    "observe": "Zeichne zwei gedachte Hänge mit einem Kamm dazwischen und je einem Abfluss. Verfolge nur die eingezeichneten Oberflächenpfeile. Das Schema lässt Untergrundwege und Wetterdaten offen und ist keine tatsächliche Hochwasservorhersage.",
+    "benefit": "Du erklärst, warum Wasserwege nach Gelände und Ausgang statt nach Landesgrenzen geordnet werden.",
+    "connection": "Im Wasserlabor vergleichst du Speicher und Übergänge. Das Einzugsgebiet ergänzt den gemeinsamen räumlichen Ausgang; nicht jedes Stationszeichen kommt sofort dort an.",
+    "lab": "water",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/watersheds-and-drainage-basins",
+        "title": "USGS · Einzugsgebiet (Englisch)",
+        "anchor": "Gemeinsamer Abflusspunkt und ineinanderliegende Einzugsgebiete. Speicherung, Verdunstung und Wassernutzung verhindern eine einfache Vorhersage der Abflusszeit.",
+        "updatedOn": "2026-09-17",
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Wasserkreislauf",
+        "reason": "Ein gemeinsamer Abfluss ordnet Wasserwege räumlich. Verdunstung und Speicherung verhindern, dass jeder Tropfen sofort am Ausgang ankommt."
+      }
+    ],
+    "question": {
+      "prompt": "Was legt das gedachte Einzugsgebiet für den einen Ausgang fest?",
+      "answers": [
+        "Dass jeder Tropfen überall gleich schnell ankommt",
+        "Welche eingezeichneten Flächen zu diesem Ausgang entwässern",
+        "Dass die Landesgrenze jeden Abfluss stoppt"
+      ],
+      "correct": 1,
+      "hint": "Folge den Wasserpfeilen bis zu ihrem gemeinsamen Ausgang.",
+      "why": "Der Ausgang verbindet die eingezeichneten Abflussflächen. Die Skizze misst weder Ankunftszeit noch politische Sperren für Wasser.",
+      "wrongReasons": [
+        "Speicherung und andere Wege können die Ankunft beeinflussen; gleiche Geschwindigkeit wurde nicht gemessen.",
+        "",
+        "Politische Grenzen ersetzen keine Geländehöhen oder Wasserwege."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum hört ein Fluss nicht an einer Grenze auf?",
+        "reason": "Im Wasserkreislauflabor verfolgst du Wege des Wassers. Vergleiche diese Wege mit einem Einzugsgebiet: Staatsgrenzen bestimmen nicht, wohin Wasser bergab abfließt."
+      }
+    ]
+  }
+}

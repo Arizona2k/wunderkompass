@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "term": "Subduktion",
+  "learning": {
+    "starter": "Bei Subduktion taucht eine Platte unter eine andere in den Mantel. Nicht jede Plattengrenze zeigt diesen Vorgang.",
+    "deeper": "Auseinanderbewegen, Aneinandervorbeigleiten und Subduktion beschreiben verschiedene Bewegungen. Eine Schnittzeichnung kann den abtauchenden Bereich ordnen, aber keinen echten Bebenzeitpunkt oder die Wirkung an einem Haus bestimmen.",
+    "observe": "Zeichne zwei gedachte Platten im Schnitt. Lasse eine Linie unter die andere abbiegen und kennzeichne die Blickrichtung. Das Papiermodell besitzt keine echte Tiefe, Geschwindigkeit oder Ausbruchsvorhersage.",
+    "benefit": "Du erklärst einen bestimmten Grenzvorgang und unterscheidest ihn von anderen Plattenbewegungen.",
+    "connection": "Das Plattenlabor vergleicht Grenzbewegungen. Die Schnittzeichnung erklärt einen möglichen Untertauchvorgang, ohne geologische Zeit und Tiefe maßstabsgetreu darzustellen.",
+    "lab": "plates",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/faqs/what-depth-do-earthquakes-occur-what-significance-depth",
+        "title": "USGS · Subduktion",
+        "anchor": "Abschnitt zu tiefen Beben in abtauchenden Platten. Eine mögliche Tiefe ist keine Vorhersage für ein bestimmtes Beben.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Welche Skizzenbewegung stellt Subduktion dar?",
+      "answers": [
+        "Beide Linien bleiben getrennt ohne Bewegung",
+        "Eine Platte bewegt sich unter die andere",
+        "Jede Küstenwelle hebt das Land an"
+      ],
+      "correct": 1,
+      "hint": "Verfolge die Linie, die unter den anderen Bereich abtaucht.",
+      "why": "Das Abtauchen einer Platte ist der gemeinte Vorgang. Es ist weder eine bloße unbewegte Lücke noch eine Küstenwelle.",
+      "wrongReasons": [
+        "Eine unbewegte Lücke zeigt kein Abtauchen.",
+        "",
+        "Eine Welle und eine Plattenbewegung liegen auf verschiedenen Prozessebenen."
+      ]
+    }
+  }
+}

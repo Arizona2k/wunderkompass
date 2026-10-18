@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "term": "Küste",
+  "learning": {
+    "starter": "An der Küste treffen Land und Meer aufeinander. Dort muss nicht überall ein Sandstrand liegen.",
+    "deeper": "Felsige und sandige Abschnitte können unterschiedlich aussehen. Wellen, Gezeiten und Materialtransport wirken auf Küsten ein. Ein gezeichneter Linienrand ist nur eine Vereinfachung dieser veränderlichen Übergangszone.",
+    "observe": "Zeichne zwei erfundene Küstenprofile: eines mit Fels, eines mit Sandzeichen. Beschrifte die gemeinsamen Land-Wasser-Übergänge. Die Profile sind keine reale Gefahren- oder Erosionskarte.",
+    "benefit": "Du erkennst gemeinsame Lage und unterschiedliche Küstenformen.",
+    "connection": "Das Gezeitenlabor vereinfacht Wasserstandsunterschiede. Die Profile ergänzen die Küstenform, ohne eine ortsgenaue Höhe oder sichere Strandzeit zu versprechen.",
+    "lab": "tides",
+    "sources": [
+      {
+        "url": "https://www.nps.gov/subjects/geology/coastal-landforms.htm",
+        "title": "NPS · Küste",
+        "anchor": "Küste als Übergangsbereich zwischen Land und Wasser mit unterschiedlichen Formen und Prozessen. Keine aktuelle Küstenlinie oder sichere Zugänglichkeit abgeleitet.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Welche Behauptung ist zu eng?",
+      "answers": [
+        "Jede Küste besteht ausschließlich aus einem Sandstrand",
+        "Die Profile zeigen gedachte Übergänge",
+        "Fels und Sand sind verschiedene Modellbeschriftungen"
+      ],
+      "correct": 0,
+      "hint": "Vergleiche die beiden ausdrücklich verschieden gezeichneten Küsten.",
+      "why": "Auch felsige Abschnitte gehören zu Küsten. Ein Sandstrand ist nur eine mögliche Form.",
+      "wrongReasons": [
+        "",
+        "Die gezeichneten Land-Wasser-Übergänge dürfen als Modellinhalt beschrieben werden.",
+        "Die unterschiedlichen Materialzeichen sind sinnvolle Modellunterscheidungen."
+      ]
+    }
+  }
+}

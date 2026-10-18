@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "term": "Mikroorganismus",
+  "learning": {
+    "starter": "Viele Lebewesen sind so klein, dass wir für ihre Einzelheiten eine Vergrößerung brauchen. Sie können unterschiedliche Aufgaben erfüllen.",
+    "deeper": "Mikroorganismus beschreibt vor allem die kleine Größe, nicht eine einzige Verwandtschaftsgruppe. Unterschiedliche Mikroorganismen können zum Stoffabbau oder anderen Vorgängen beitragen. Eine ähnliche Form beweist weder dieselbe Art noch dieselbe Wirkung.",
+    "observe": "Zeichne eine kleine Form und eine vergrößerte Ansicht mit zusätzlichen Einzelheiten. Erkläre, was eine Vergrößerung sichtbar machen könnte. Diese Papierzeichnung ist keine Aufnahme oder Bestimmung eines echten Mikroorganismus.",
+    "benefit": "Du unterscheidest kleine Größe, biologische Gruppe und mögliche Aufgabe.",
+    "topic": "science-fungi",
+    "connection": "Die Pilzkarte unterscheidet sichtbare Fruchtkörper vom übrigen Pilz. Nicht jeder Pilz ist ein Mikroorganismus; die Begriffe beschreiben verschiedene Eigenschaften.",
+    "sources": [
+      {
+        "url": "https://www.nps.gov/teachers/classrooms/microorganisms-in-the-utah-desert.htm",
+        "title": "National Park Service · Mikroorganismus (Englisch)",
+        "anchor": "Operational small-organism/details definition, selected ecological roles; deprecated kingdom taxonomy, ten-to-one ratio and pH/oxygen claims excluded.",
+        "updatedOn": "2025-04-29",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Bakterium",
+        "reason": "Bakterien sind eine Gruppe sehr kleiner Lebewesen. Mikroorganismus ist ein weiter gefasster Größenbegriff und keine einzelne Verwandtschaftsgruppe."
+      },
+      {
+        "term": "Zersetzung",
+        "reason": "Manche Mikroorganismen bauen abgestorbenes Material ab. Größe und ökologische Aufgabe sind verschiedene Eigenschaften."
+      }
+    ],
+    "question": {
+      "prompt": "Was weißt du aus dem Wort Mikroorganismus allein?",
+      "answers": [
+        "Dass jedes Beispiel gefährlich ist",
+        "Dass es ein sehr kleines Lebewesen ist",
+        "Dass alle Beispiele dieselbe Art sind"
+      ],
+      "correct": 1,
+      "hint": "Der Begriff grenzt keine einzige Art oder Wirkung ein.",
+      "why": "Mikroorganismus beschreibt sehr kleine Lebewesen verschiedener Gruppen. Wirkung und genaue Zugehörigkeit müssen gesondert untersucht werden.",
+      "wrongReasons": [
+        "Kleine Größe beweist keine Gefahr; viele Mikroorganismen erfüllen nützliche ökologische Aufgaben.",
+        "",
+        "Der Sammelbegriff umfasst verschiedene Gruppen und Arten, nicht eine einzige Art."
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "term": "Wellenlänge",
+  "learning": {
+    "starter": "Suche zwei benachbarte gleiche Stellen eines Wellenmusters. Ihr Abstand ist die Wellenlänge.",
+    "deeper": "Bei einer regelmäßigen Welle gehören Ausbreitungsgeschwindigkeit, Frequenz und Wellenlänge zusammen. Ein Abstand auf einer Zeichnung muss eine erklärte Skala haben; verschiedene Zeichnungsgrößen beweisen keine unterschiedlichen echten Wellenlängen.",
+    "observe": "Zeichne zwei Wellenlinien: gleiche Höhe, aber einmal breite und einmal enge Wiederholung. Markiere jeweils den Abstand von Berg zu Berg. Welche Größe hast du verändert, obwohl die Höhe gleich bleibt?",
+    "benefit": "Du trennst Wiederholungsabstand, Ausschlag und Zeitangaben einer Welle.",
+    "topic": "science-photosynthesis",
+    "connection": "Blätter nehmen Lichtenergie auf. Wellenlänge beschreibt eine Eigenschaft dieses Lichts; eine grobe Blattzeichnung ist noch kein gemessenes Lichtspektrum.",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/ems/02_anatomy/",
+        "title": "NASA · Wellenlänge (Englisch)",
+        "anchor": "Wavelength section: distance between crests; frequency/wavelength relation. Own paper wave, no NASA images or absolute no-matter-transport generalization used.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Meter",
+        "reason": "Wellenlänge ist ein räumlicher Wiederholungsabstand. Eine Längeneinheit wie Meter macht seine Zahl vergleichbar."
+      },
+      {
+        "term": "Frequenz",
+        "reason": "Wellenlänge beschreibt räumliche Wiederholung, Frequenz Wiederholung in der Zeit. Ausbreitungsgeschwindigkeit verbindet die Angaben."
+      },
+      {
+        "term": "Spektrum",
+        "reason": "Wellenlänge kann als Ordnungsgröße eines Spektrums dienen. Ein räumlicher Wiederholungsabstand und eine ganze spektrale Verteilung sind verschiedene Begriffe."
+      },
+      {
+        "term": "Polarisation",
+        "reason": "Schwingungsausrichtung und räumlicher Wiederholungsabstand beschreiben verschiedene Wellenmerkmale. Ein Richtungspfeil allein misst keine Wellenlänge."
+      }
+    ],
+    "question": {
+      "prompt": "Was beschreibt die Wellenlänge in deiner gleichmäßig wiederholten Zeichnung?",
+      "answers": [
+        "Die Dauer eines Versuchs",
+        "Die Höhe vom Mittelpunkt zum Berg",
+        "Den Abstand zwischen benachbarten Bergen"
+      ],
+      "correct": 2,
+      "hint": "Es geht um einen räumlichen Wiederholungsabstand.",
+      "why": "Benachbarte Wellenberge sind gleiche Stellen im Muster. Ihr räumlicher Abstand beschreibt hier die Wellenlänge.",
+      "wrongReasons": [
+        "Eine Dauer ist eine Zeitangabe. Wellenlänge ist eine Länge.",
+        "Die Höhe des Ausschlags ist eine andere Eigenschaft als der Wiederholungsabstand.",
+        ""
+      ]
+    }
+  }
+}

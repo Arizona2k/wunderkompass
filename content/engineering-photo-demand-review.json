@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "status": "targeted checks passed; complete root/engine checks for adopted snapshot pending",
+  "baseCommit": "2d651bc5bc78816c4c9d042d5f0bb4e2b2da7953",
+  "scope": "49 canonical media records; immediate four gateway and two journey credits; remaining catalog once on demand. No new images/licenses, provider, costs or budget increases.",
+  "buildComparison": {
+    "entryJsBytes": {
+      "before": 900182,
+      "after": 877209,
+      "difference": -22973
+    },
+    "entryJsGzipBytes": {
+      "before": 270136,
+      "after": 265514,
+      "difference": -4622
+    },
+    "totalJsBytes": {
+      "before": 3347157,
+      "after": 3323526,
+      "difference": -23631
+    },
+    "totalJsGzipBytes": {
+      "before": 1097175,
+      "after": 1092207,
+      "difference": -4968
+    },
+    "entryCssBytes": {
+      "before": 321285,
+      "after": 321285,
+      "difference": 0
+    },
+    "entryCssGzipBytes": {
+      "before": 54526,
+      "after": 54526,
+      "difference": 0
+    }
+  },
+  "limitsUnchanged": true,
+  "comparisonCases": 98,
+  "currentBrowser": "151.0.7922.173",
+  "currentCases": 98,
+  "corruptionAndNetworkRetry": true,
+  "retryFocus": true,
+  "coldOfflineImages": 49,
+  "coldOfflineProof": "All49 exact image/alt/author/license records after real browser close, preview stop, network offline and cold persistent restart",
+  "ownVisualReview": {
+    "date": "2026-10-15",
+    "images": [
+      "world-photo-rights-320.png",
+      "world-photo-rights-1440.png"
+    ],
+    "assessment": "Original images inspected: complete natural image, legible copyright/caption/expanded original-source details, no visible clipping."
+  },
+  "limits": [
+    "One reproducible content-build comparison, not a page-loading p50/p95 guarantee.",
+    "Other pictures need one additional same-origin verified JSON request; offline preparation includes that asset.",
+    "All source-media rights remain those of the unchanged canonical49 records, no blanket external license guarantee.",
+    "Full mandatory current-snapshot and actual Firefox/WebKit proof still required."
+  ],
+  "evidence": [
+    "tests/world-photo-demand.test.mjs",
+    "tests/browser/world-photos.mjs",
+    "scripts/world-photo-index.mjs",
+    "work/p35-photo-demand-baseline-metrics.json",
+    "work/p35-photo-adoption-build.log",
+    ".qa-output/p35-photo-selected/report.json",
+    ".qa-output/p35-photo-adopted/offline-report.json"
+  ]
+}

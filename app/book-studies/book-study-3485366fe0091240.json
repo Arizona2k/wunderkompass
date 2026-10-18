@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "term": "Polarisation",
+  "learning": {
+    "starter": "Bei Licht lässt sich eine bestimmte Ausrichtung unterscheiden. Eine gezeichnete Richtung ist nicht einfach eine Farbe.",
+    "deeper": "Für linear polarisiertes Licht wird eine feste Schwingungsrichtung dargestellt. Unsere Papierskizze zeigt nur diesen vereinfachten Fall, keine vollständige Beschreibung jeder Polarisation oder Lichtintensität.",
+    "observe": "Zeichne drei gleich lange Richtungspfeile: zwei waagerecht und einen senkrecht. Frage, welche zwei die gleiche Ausrichtung zeigen. Die Pfeile sind Zähl- und Richtungszeichen, keine wirklichen Lichtstrahlen oder Messungen eines Filters.",
+    "benefit": "Du unterscheidest die Ausrichtung einer Schwingung von der Farbe und der Helligkeit eines Lichts.",
+    "connection": "Die Winkelkarte hilft, gezeichnete Richtungen zu vergleichen. Der Polarisationsvergleich handelt von einer Schwingungsausrichtung und misst keine wirklichen Lichtwinkel oder Filterwirkung.",
+    "topic": "science-angle",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/ems/02_anatomy/",
+        "title": "NASA · Elektromagnetische Wellen",
+        "anchor": "Selected Energy / Electromagnetic waves / Waves or particles / Describing electromagnetic energy; rest mass and vacuum qualifiers retained.",
+        "updatedOn": "2023-08-03",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Wellenlänge",
+        "reason": "Schwingungsausrichtung und räumlicher Wiederholungsabstand beschreiben verschiedene Wellenmerkmale. Ein Richtungspfeil allein misst keine Wellenlänge."
+      }
+    ],
+    "question": {
+      "prompt": "Was haben die zwei waagerechten gleichartigen Modellpfeile gemeinsam?",
+      "answers": [
+        "Sie beweisen eine gleiche wirkliche Lichtfarbe",
+        "Sie beweisen eine gleiche gemessene Lichtenergie",
+        "Sie zeigen dieselbe gezeichnete Ausrichtung"
+      ],
+      "correct": 2,
+      "hint": "Lies das Richtungszeichen; die Zeichnung enthält keine Farb- oder Energiemessung.",
+      "why": "Die beiden waagerechten Pfeile zeigen dieselbe Ausrichtung im begrenzten Modell. Farbe und wirkliche Energie sind damit nicht gemessen.",
+      "wrongReasons": [
+        "Die Richtung eines Papiersymbols bestimmt keine wirkliche Lichtfarbe.",
+        "Gleich lange Symbole sind keine quantitative Energiemessung.",
+        ""
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "term": "Gestein",
+  "learning": {
+    "starter": "Viele Gesteine bestehen aus einem oder mehreren Mineralen. Manche Gesteine enthalten auch Glas. Ein sichtbarer Stein und seine Bestandteile sind verschiedene Betrachtungsebenen.",
+    "deeper": "Gesteine können unterschiedliche Bestandteile enthalten. Obsidian ist zum Beispiel ein glasiges vulkanisches Gestein. Ein Farbpunkt im Schema beweist nicht, welches Mineral oder andere Material wirklich vorhanden ist. Eine echte Bestimmung braucht mehr als ein unscharfes Bild.",
+    "observe": "Zeichne einen erfundenen Gesteinsquerschnitt mit zwei Sorten Punktzeichen. Beschrifte Zeichen A und B als gedachte Bestandteile. Keine echten Proben zerschlagen, anritzen oder kosten; die Zeichen bestimmen keine realen Minerale.",
+    "benefit": "Du unterscheidest eine Materialmischung von den einzelnen gedachten Bestandteilen.",
+    "connection": "Das Erdschichtenlabor ordnet große Bereiche. Ein eigenes Gesteinsmuster ergänzt die kleinere Materialebene und ist kein Blick durch eine echte Erdschicht.",
+    "lab": "depth",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/faqs/what-difference-between-a-rock-and-a-mineral",
+        "title": "USGS · Gestein (Englisch)",
+        "anchor": "Unterschied zwischen Gestein und Mineral: charakteristische Zusammensetzung und geordneter Aufbau. Farbe allein ist keine sichere Materialbestimmung.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      },
+      {
+        "url": "https://webapps.bgs.ac.uk/bgsrcs/rcs_details.cfm?code=OBS",
+        "title": "British Geological Survey · Obsidian",
+        "anchor": "Klassifikation von Obsidian als glasiges vulkanisches Gestein. Keine Prozentangaben, Materialprüfung oder Bestimmung allein anhand eines Fotos übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Vulkanasche",
+        "reason": "Vulkanasche besteht aus kleinen vulkanischen Materialfragmenten. Die Bezeichnung Asche bedeutet hier keine Holzverbrennung."
+      },
+      {
+        "term": "Mineral",
+        "reason": "Ein Gestein kann mehrere Mineralbestandteile enthalten. Ein Farbpunkt im eigenen Schema ist kein Nachweis einer realen Stoffart."
+      }
+    ],
+    "question": {
+      "prompt": "Was kann das selbst gezeichnete Muster mit A und B sicher zeigen?",
+      "answers": [
+        "Den genauen Namen jedes echten Minerals",
+        "Den Verkaufspreis eines gefundenen Steins",
+        "Zwei gedachte Bestandteile eines Modells"
+      ],
+      "correct": 2,
+      "hint": "Die Zeichen wurden selbst festgelegt und sind keine Materialanalyse.",
+      "why": "A und B ordnen Modellbestandteile. Sie enthalten keine Messdaten zur chemischen Zusammensetzung oder zum Wert eines realen Fundes.",
+      "wrongReasons": [
+        "Ein gewähltes Symbol ist kein Nachweis einer realen Mineralart.",
+        "Das Modell enthält keine Angaben, aus denen ein echter Fundpreis folgt.",
+        ""
+      ]
+    }
+  }
+}

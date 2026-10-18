@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "term": "Kartenprojektion",
+  "learning": {
+    "starter": "Die Erde ist rund, Papier ist flach. Eine Weltkarte muss deshalb bei der Darstellung Kompromisse machen.",
+    "deeper": "Welche Darstellung geeignet ist, hängt von der Frage ab. Eine Karte für einen Weg und eine Karte für den Vergleich von Gebieten brauchen nicht dieselbe Darstellung. Große Flächen auf dem Papier müssen nicht im gleichen Verhältnis große Flächen auf der Erde sein.",
+    "observe": "Vergleiche eine vorhandene Weltkarte mit dem WunderKompass-Globus. Achte auf die Form der Gebiete nahe den Polen. Prüfe die Kartenerklärung, bevor du aus der Darstellung auf ihre wirkliche Größe schließt.",
+    "benefit": "Du fragst nach dem Darstellungsverfahren, bevor du Größen aus einer flachen Weltkarte vergleichst.",
+    "topic": "invention-compass",
+    "connection": "Kompassrichtung und Kartendarstellung beantworten verschiedene Fragen. Prüfe bei einer flachen Karte die Erklärung, bevor du Richtungen oder Größen vergleichst.",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/science/science-explorer/maps-and-mapping/mapping-101",
+        "title": "U.S. Geological Survey · Kartenprojektion (Englisch)",
+        "anchor": "Actual Mapping101 selected FAQ excerpt atlines561–567: definition and unavoidable distortion. Linked fullFAQ timed out, not asserted read; own globe/map comparison, no source maps copied.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Koordinate",
+        "reason": "Eine Position und ihre Darstellung auf einer flachen Karte sind verschiedene Schritte. Bezugssystem und Projektionsverfahren brauchen jeweils eine Erklärung."
+      },
+      {
+        "term": "Maßstab",
+        "reason": "Ein Streckenverhältnis beschreibt einen gewählten Plan. Eine Weltkartenprojektion kann zusätzlich Verzerrungen enthalten; Maßstab allein behebt diese nicht."
+      }
+    ],
+    "question": {
+      "prompt": "Was ist ein sinnvoller erster Schritt beim Größenvergleich auf einer Weltkarte?",
+      "answers": [
+        "Das Darstellungsverfahren und die Kartenerklärung prüfen",
+        "Jede Papierfläche ohne Prüfung gleichsetzen mit der wirklichen Fläche",
+        "Annehmen, dass jede flache Weltkarte alles unverzerrt zeigt"
+      ],
+      "correct": 0,
+      "hint": "Die Karte ist eine Darstellung mit bestimmten Eigenschaften.",
+      "why": "Das Verfahren beeinflusst, wie Eigenschaften der Erdoberfläche auf dem Papier erscheinen. Die Kartenerklärung hilft, passende Vergleiche zu wählen.",
+      "wrongReasons": [
+        "",
+        "Nicht jede Weltkarte bewahrt die Flächenverhältnisse. Ein ungeprüfter Vergleich kann irreführen.",
+        "Die gekrümmte ganze Erdoberfläche lässt sich nicht in jeder Hinsicht unverzerrt auf eine flache Karte übertragen."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum passt eine runde Erde nicht genau auf eine flache Karte?",
+        "reason": "Die Kartenprojektion erklärt, welche Eigenschaften beim Übertragen einer Kugel auf eine Fläche verändert werden können."
+      }
+    ]
+  }
+}

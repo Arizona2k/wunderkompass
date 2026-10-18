@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "term": "Schildvulkan",
+  "learning": {
+    "starter": "Ein Schildvulkan besitzt oft ein breites, flaches Profil. Viele Lavaflüsse können diesen Körper aufbauen.",
+    "deeper": "Die Form hängt mit dem langfristigen Aufbau zusammen. Breiter und flacher bedeutet nicht ungefährlich oder dass jeder Vorgang sanft sein muss. Ein einzelner Modelllauf erklärt nicht die gesamte Entstehung eines realen Vulkans.",
+    "observe": "Zeichne ein breites Profil aus mehreren gedachten Schichten. Schreibe langsamer Aufbau aus vielen Vorgängen daneben. Das Papier enthält keine realen Höhen, Datierungen oder Sicherheitsgrenzen.",
+    "benefit": "Du verbindest Vulkanform mit einem Aufbauprozess und vermeidest eine falsche Sicherheitsfolgerung.",
+    "connection": "Die Zähigkeit im Vulkanlabor beeinflusst das begrenzte Fließbild. Der Begriff ergänzt langfristigen Aufbau, ohne daraus einen sicheren Reiseort abzuleiten.",
+    "lab": "volcano",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/programs/VHP/about-volcanoes",
+        "title": "USGS · Schildvulkan (Englisch)",
+        "anchor": "Abschnitte zu Magma, Förderwegen, verbundenen Speichern und Vulkanformen. Das eigene Schema bildet keine reale Tiefe oder Ausbruchsgefahr ab.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Vulkan",
+        "reason": "Ein Schildvulkan ist eine besondere Vulkanform. Breite und flache Form ist keine Sicherheitsfreigabe für einen realen Ort."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Aussage folgt nicht aus dem breiten Schildprofil?",
+      "answers": [
+        "Dass ein breites Profil gezeichnet wurde",
+        "Dass mehrere gedachte Schichten unterschieden werden",
+        "Dass ein echter Vulkan deshalb ungefährlich ist"
+      ],
+      "correct": 2,
+      "hint": "Form und geprüfte Sicherheit eines realen Orts sind verschiedene Fragen.",
+      "why": "Ein breites Profil ist keine Sicherheitsfreigabe. Das Modell enthält keine aktuellen Daten über einen echten Vulkan oder seine Umgebung.",
+      "wrongReasons": [
+        "Das eigene Profil darf als breite gedachte Form beschrieben werden.",
+        "Die selbst eingezeichneten Schichten sind erkennbare Modellbestandteile.",
+        ""
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "term": "Wüste",
+  "learning": {
+    "starter": "Eine Wüste ist sehr trocken. Trockenheit bedeutet nicht automatisch große Hitze.",
+    "deeper": "Wasserangebot und Temperatur sind verschiedene Angaben. Kalte Gebiete können ebenfalls sehr trocken sein. Ein einzelner warmer Tag oder ein Sandfoto reicht nicht, um das Klima einer ganzen Landschaft zu bestimmen.",
+    "observe": "Zeichne zwei erfundene Klimakarten mit wenig Niederschlag: eine als warm, die andere als kalt beschriftet. Die Werte sind Gedankenangaben, keine Messreihe oder aktuelle Wettermeldung.",
+    "benefit": "Du trennst Trockenheit von Temperatur und hinterfragst ein einzelnes Landschaftsbild.",
+    "connection": "Das Wetterlabor beschreibt einen gedachten Tageszustand. Die zwei Klimakarten ergänzen Trockenheit über längere Zeit und dürfen nicht als aktuelle Wüstenvorhersage gelesen werden.",
+    "lab": "weather",
+    "sources": [
+      {
+        "url": "https://www.noaa.gov/jetstream/global/climate-zones",
+        "title": "NOAA · Wüste",
+        "anchor": "Klimagruppen und örtliche Unterschiede. Ein grober Gürtel legt weder überall gleichen Regen noch ausschließlich heiße oder trockene Bedingungen fest.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-18",
+        "showAnchor": true
+      }
+    ],
+    "relatedWords": [],
+    "question": {
+      "prompt": "Welche Aussage ist zu einfach?",
+      "answers": [
+        "Trockenheit und Wärme sind verschiedene Angaben",
+        "Eine einzelne Temperatur ist keine ganze Klimareihe",
+        "Jede Wüste muss immer heiß sein"
+      ],
+      "correct": 2,
+      "hint": "Der Begriff wird nicht allein durch einen warmen Einzelwert bestimmt.",
+      "why": "Wüsten können unterschiedliche Temperaturen besitzen. Die bloße Gleichsetzung mit immer heiß ist falsch.",
+      "wrongReasons": [
+        "Die Größen getrennt zu betrachten ist für den Vergleich nötig.",
+        "Ein einzelner Wert enthält keine vollständige langjährige Auswertung.",
+        ""
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum ist eine Wüste nicht immer heiß?",
+        "reason": "Der Wüstenbegriff trennt Trockenheit von Temperatur und Sandbildern. Prüfe damit auch eine kalte Landschaft."
+      }
+    ]
+  }
+}

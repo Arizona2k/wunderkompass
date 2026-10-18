@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "term": "Kapillarwirkung",
+  "learning": {
+    "starter": "Wasser kann in kleinen Zwischenräumen wandern. Darum lässt sich eine feuchte Stelle in einem passenden Tuch ausbreiten.",
+    "deeper": "Die Wirkung hängt von Flüssigkeit, Material und Weite der Räume ab. Sie hebt Wasser nicht beliebig hoch und erklärt den Transport bis zur Spitze eines großen Baumes nicht allein.",
+    "observe": "Zeichne ein gedachtes Tuch mit kleinen Zwischenräumen und eine begrenzte feuchte Zone. Kennzeichne, dass Pfeile nur eine mögliche Ausbreitung zeigen. Sie geben keine gemessene Geschwindigkeit oder unbegrenzte Steighöhe an.",
+    "benefit": "Du erkennst enge Räume und benetzbares Material, ohne einen unbegrenzten Wasseraufzug zu behaupten.",
+    "connection": "Die Kapillarkarte zeigt einen schematischen Verlauf. Erkläre Material und Modellgrenze statt eine reale Pflanzenpumpe oder Messung daraus abzuleiten.",
+    "topic": "science-capillarity",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/capillary-action-and-water",
+        "title": "USGS · Kapillarwirkung",
+        "anchor": "Selected lines19–23: wetting, adhesion/cohesion, narrow spaces and limited rise. Excluded entire-tree ascent explained only by capillarity and borrowed figure.",
+        "updatedOn": "2026-08-24",
+        "checkedOn": "2026-10-14"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Adhäsion",
+        "reason": "Benetzung eines passenden Materials kann zur Flüssigkeitsbewegung in engen Räumen beitragen. Sie allein erzeugt keinen unbegrenzten Wasseraufzug."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Grenze gehört zum Kapillarbeispiel?",
+      "answers": [
+        "Wasser steigt immer unbegrenzt hoch",
+        "Material und Schwerkraft begrenzen die Wirkung",
+        "Eine Zeichnung bestimmt die echte Geschwindigkeit"
+      ],
+      "correct": 1,
+      "hint": "Prüfe, ob dein Modell überhaupt Maße und reale Materialdaten enthält.",
+      "why": "Die Wirkung bleibt material- und situationsabhängig. Schwerkraft und weitere Bedingungen begrenzen das einfache Steigbild.",
+      "wrongReasons": [
+        "Kapillarwirkung ist kein unbegrenzter Aufzug; Bedingungen und Schwerkraft gehören zur Erklärung.",
+        "",
+        "Ohne echte Messwerte liefert eine Pfeilskizze keine wirkliche Transportgeschwindigkeit."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum zieht Wasser in einem Papiertuch nach oben?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Kapillarwirkung“: Du erklärst einen Alltagsweg des Wassers mit mehreren zusammenwirkenden Bedingungen."
+      },
+      {
+        "question": "Warum kann ein schwarzer Stift mehrere Farben enthalten?",
+        "reason": "Das flüssige Trägermittel kann sich auf engen Wegen im Papier bewegen. Unterschiedliche Stoffwanderung und Stoffbestimmung brauchen darüber hinaus weitere Bedingungen; Kapillarwirkung allein identifiziert keinen Farbstoff."
+      }
+    ]
+  }
+}

@@ -38,6 +38,15 @@ const text = (x, y, value, size = 28, fill = '#244653', anchor = 'start') => `<t
 const svg = body => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450"><rect width="800" height="450" fill="#edf6f6"/><g font-family="system-ui, sans-serif">${body}</g></svg>`;
 const save = (name, body) => fs.writeFile(new URL(name + '.svg', folder), svg(body));
 
+// Unlabelled context for article/nature location markers. Keep the seven
+// continent labels in the learning-journey image itself unchanged.
+await fs.mkdir(new URL('public/maps/', root), { recursive: true });
+const contextProjection = geoEqualEarth().fitExtent([[48, 48], [752, 370]], { type: 'Sphere' });
+const contextPath = geoPath(contextProjection).digits(1);
+const contextLand = countries.map(f => `<path d="${contextPath(f)}" fill="#8bb9a7"/>`).join('');
+await fs.writeFile(new URL('public/maps/world-context.svg', root), svg(`<path d="${contextPath({ type: 'Sphere' })}" fill="#d7eaf2"/>` + contextLand));
+if (process.argv.includes('--context-map-only')) process.exit(0);
+
 await save('inside', `<g transform="translate(235 213)"><circle r="169" fill="#3fb5a0"/><circle r="159" fill="#ed8241"/><circle r="92" fill="#f4bc43"/><circle r="32" fill="#fff1a2"/></g>` +
   ['Erdkruste', 'Erdmantel', 'Äußerer Kern', 'Innerer Kern'].map((name, i) => `<circle cx="456" cy="${112 + i * 62}" r="10" fill="${['#3fb5a0', '#ed8241', '#f4bc43', '#fff1a2'][i]}" stroke="#244653" stroke-width="1"/>` + text(478, 122 + i * 62, name, 28)).join('') + text(400, 422, 'Querschnitt · Kruste vergrößert', 24, '#476675', 'middle'));
 
