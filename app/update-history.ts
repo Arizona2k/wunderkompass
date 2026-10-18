@@ -849,7 +849,15 @@ const PREPARED_CONTENT_CORRECTIONS:UpdateEntry={
  benefit:'Kinder können ihre Antworten gezielter überdenken. Eltern finden passendere Erklärungen und nachvollziehbare Quellen, ohne vorhandene Lernstände neu beginnen zu müssen.',
  links:[],evidence:{pullRequest:27,file:'content/editorial-reviews.json',revision:'prepared',quote:'Konkrete Inhaltskorrekturen im bestehenden Master; keine bestätigte Übernahme oder Bereitstellung.'}
 };
-export const PREPARED_UPDATES:UpdateEntry[]=[PREPARED_CONTENT_CORRECTIONS,PREPARED_ANIMAL_EXPANSION,...(!TEST_UPDATES.some(e=>e.id===PREPARED_LAB_FEEDBACK.id)?[PREPARED_LAB_FEEDBACK]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SOURCES.id)?[PREPARED_JOURNEY_SOURCES]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_ANIMAL_SOLAR.id)?[PREPARED_ANIMAL_SOLAR]:[]),...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SUPPORT.id)?[PREPARED_JOURNEY_SUPPORT]:[])];
+const PREPARED_TOPIC_MAPS:UpdateEntry={
+ id:'clear-topic-maps-3-5',icon:'🗺️',category:'Einfachere Bedienung',title:'Orte auf der Karte leichter zuordnen',
+ version:'Übersichtskarten',channel:'vercel-test',status:'prepared',confirmedOn:'2026-10-18',publishedOn:null,availableOn:null,occurredAt:null,
+ summary:'Die kleinen Übersichtskarten zeigen Orte deutlicher. Zusammenliegende Markierungen behalten ihre einzeln auswählbaren Ortsnamen.',
+ details:['Eine eigene Kartenunterlage vermeidet die zusätzlichen Kontinentnummern der bisherigen Reisegrafik.','Größere Markierungen bleiben auch auf schmalen Karten und mit großer Schrift lesbar. Nahe Orte teilen eine Markierung; die Liste öffnet weiterhin jeden Ort einzeln auf der Weltkugel.','Der Wostok-Marker folgt der Stationslage im antarktischen Ortsverzeichnis. Der datierte Temperaturrekord bleibt getrennt mit seiner Wetterquelle belegt.'],
+ benefit:'Kinder können Kartenzeichen und Ortsnamen leichter verbinden. Die Erklärung macht deutlich, dass ein Punkt weder eine Gebietsgrenze noch eine genaue Vermessung zeigt.',
+ links:[],evidence:{pullRequest:27,file:'content/nature-editorial-review.json',revision:'prepared',quote:'Gemeinsame Kartenansicht lokal geprüft; vollständige Pflichtabnahme und tatsächliche Bereitstellung weiterhin offen.'}
+};
+export const PREPARED_UPDATES:UpdateEntry[]=[PREPARED_TOPIC_MAPS,PREPARED_CONTENT_CORRECTIONS,PREPARED_ANIMAL_EXPANSION,...(!TEST_UPDATES.some(e=>e.id===PREPARED_LAB_FEEDBACK.id)?[PREPARED_LAB_FEEDBACK]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SOURCES.id)?[PREPARED_JOURNEY_SOURCES]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_ANIMAL_SOLAR.id)?[PREPARED_ANIMAL_SOLAR]:[]),...TEST_UPDATES.filter(e=>e.status==='prepared'),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEYS.id)?[PREPARED_JOURNEYS]:[]),...(!TEST_UPDATES.some(e=>e.id===PREPARED_JOURNEY_SUPPORT.id)?[PREPARED_JOURNEY_SUPPORT]:[])];
 export const updateLabel=(entry:UpdateEntry)=>entry.channel==='sites'?`Frühere Website · Version ${entry.version}`:entry.status==='prepared'?'In Vorbereitung · noch nicht verfügbar':'Testversion · verfügbar';
 const updateDay=(entry:UpdateEntry)=>entry.availableOn??entry.publishedOn??entry.confirmedOn;
 export function publicUpdates(entries:readonly UpdateEntry[]=UPDATE_HISTORY){

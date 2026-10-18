@@ -230,8 +230,8 @@
       "fromId": "science-fractals",
       "toId": "science-symmetry",
       "kind": "context",
-      "why": "Wiederholte geometrische Regeln können ähnliche Teilformen erzeugen. Das ist etwas anderes als eine Sortierung nach Farbe oder Form.",
-      "checkedAt": "2026-10-13"
+      "why": "Die Fraktalregel verkleinert die Teil-Dreiecke. Spiegeln und Drehen bewahren dagegen die Größe einer Figur. So kannst du ähnliche Teilformen von gleich großen symmetrischen Gegenstücken unterscheiden.",
+      "checkedAt": "2026-10-18"
     },
     {
       "id": "science-angle--science-shadows",
@@ -334,8 +334,8 @@
       "fromId": "invention-computer",
       "toId": "science-computer",
       "kind": "partnership",
-      "why": "Die Erfindungskarte zeigt die Aufgaben der Bauteile. Die Wissenschaftskarte erklärt, wie Daten und Anweisungen bei der Verarbeitung zusammenarbeiten.",
-      "checkedAt": "2026-10-15"
+      "why": "Die Erfindungskarte zeigt die Aufgaben der Bauteile. Die Wissenschaftskarte erklärt binäre Stellenwerte und wie acht Bits 256 verschiedene Zahlenmuster darstellen können.",
+      "checkedAt": "2026-10-18"
     },
     {
       "id": "invention-internet--science-network",
@@ -962,12 +962,12 @@
       "checkedAt": "2026-10-18"
     },
     {
-      "id": "animal-expansion-kingfisher-shadows",
+      "id": "animal-expansion-kingfisher-foodweb",
       "fromId": "animal-kingfisher",
-      "toId": "science-shadows",
-      "why": "Licht und Wahrnehmung verbinden Vogelmerkmale mit der Wirkung von Licht.",
+      "toId": "science-foodweb",
+      "why": "Der Eisvogel frisst Fische. An dieser Beziehung kannst du einen Nahrungspfeil vom Fisch zum Vogel begründen. Die zwei Modellketten zeigen andere Lebensräume; sie sind kein vollständiges Netz seines Gewässers.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-10-18"
     },
     {
       "id": "animal-expansion-ostrich-emperor-penguin",
@@ -1013,9 +1013,9 @@
       "id": "animal-expansion-eastern-clown-anemonefish-coral-reef",
       "fromId": "animal-eastern-clown-anemonefish",
       "toId": "science-coral-reef",
-      "why": "Rifflebensraum und Beziehungen zwischen unterschiedlichen Lebewesen untersuchen.",
+      "why": "Die Seeanemone des Fisches ist ein anderes Tier als eine Koralle. Beide gehören zu den Nesseltieren; an ihnen lassen sich verschiedene Partnerbeziehungen vergleichen.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-10-18"
     },
     {
       "id": "animal-expansion-european-eel-currents",
@@ -1175,6 +1175,94 @@
       "toId": "history-iss",
       "kind": "context",
       "why": "Eine Mondlandung und ein Forschungslabor in der Erdumlaufbahn haben unterschiedliche Aufgaben. Beide zeigen, wie wichtig verschiedene Rollen im Team sind.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-ada_lovelace--person-grace_hopper",
+      "fromId": "person-ada_lovelace",
+      "toId": "person-grace_hopper",
+      "kind": "context",
+      "why": "Eine genaue Rechenanleitung und ein Übersetzungswerkzeug beantworten verschiedene Fragen beim Programmieren. Lovelace und Hopper arbeiteten in unterschiedlichen Jahrhunderten; dies ist ein Vergleich ihrer Beiträge.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-karl_benz--person-bertha_benz",
+      "fromId": "person-karl_benz",
+      "toId": "person-bertha_benz",
+      "kind": "context",
+      "why": "Ein Fahrzeug zu entwickeln und es unterwegs zu erproben sind verschiedene Aufgaben. Carl und Bertha Benz trugen mit technischen Ideen, Geld und praktischer Arbeit zur Entwicklung des Motorwagens bei.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-katherine_johnson--person-mae_jemison",
+      "fromId": "person-katherine_johnson",
+      "toId": "person-mae_jemison",
+      "kind": "context",
+      "why": "Berechnungen von Flugbahnen und Forschung während eines Raumflugs brauchen unterschiedliche Fachkenntnisse. Johnson und Jemison zeigen verschiedene Beiträge zur Raumfahrt; sie flogen nicht gemeinsam auf einer Mission.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-tim_berners_lee--history-web",
+      "fromId": "person-tim_berners_lee",
+      "toId": "history-web",
+      "kind": "context",
+      "why": "Die Biografie beschreibt einen Entwickler. Die Geschichte des Webs unterscheidet Vorschlag, erste Programme und spätere Freigabe. Das Web nutzt das bereits ältere Internet.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-neil_armstrong--history-apollo11",
+      "fromId": "person-neil_armstrong",
+      "toId": "history-apollo11",
+      "kind": "context",
+      "why": "Armstrongs erster Schritt war ein Beitrag innerhalb einer Mission. Apollo 11 zeigt auch die Aufgaben von Aldrin, Collins und der Teams auf der Erde; ein Einzelporträt bildet diese Zusammenarbeit nicht vollständig ab.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-cai_lun--history-paper",
+      "fromId": "person-cai_lun",
+      "toId": "history-paper",
+      "kind": "context",
+      "why": "Cai Luns Biografie erklärt einen Beitrag zur Verbesserung der Papierherstellung. Die Geschichte des Papiers reicht weiter zurück: Verbesserung und allererster Ursprung sind verschiedene Fragen.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-johannes_gutenberg--history-printing",
+      "fromId": "person-johannes_gutenberg",
+      "toId": "history-printing",
+      "kind": "context",
+      "why": "Gutenbergs Biografie erklärt sein Drucksystem in Europa. Die Geschichte des Druckens bezieht auch frühere Verfahren in Ostasien ein; Gutenbergs Beitrag war nicht der Anfang allen Druckens.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-marie_curie--person-tu_youyou",
+      "fromId": "person-marie_curie",
+      "toId": "person-tu_youyou",
+      "kind": "context",
+      "why": "Beide Biografien zeigen Forschung mit Messungen und Prüfungen im Team. Strahlungsforschung und ein Wirkstoff gegen Malaria sind verschiedene Forschungsgebiete; ihre Ergebnisse sind nicht austauschbar.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-jane_goodall--person-charles_darwin",
+      "fromId": "person-jane_goodall",
+      "toId": "person-charles_darwin",
+      "kind": "context",
+      "why": "Lange Verhaltensbeobachtungen und der Vergleich von Lebewesen liefern Belege für unterschiedliche Fragen. Was ein einzelner Schimpanse lernt, ist noch kein Nachweis einer vererbbaren Veränderung über Generationen.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-alexander_humboldt--person-charles_darwin",
+      "fromId": "person-alexander_humboldt",
+      "toId": "person-charles_darwin",
+      "kind": "context",
+      "why": "Beide verglichen Naturbeobachtungen auf Reisen und darüber hinaus. Ein Zusammenhang zwischen Umwelt und Lebewesen erklärt für sich allein noch nicht die Veränderung vererbbarer Merkmale über Generationen.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "id": "person-wangari_maathai--person-jane_goodall",
+      "fromId": "person-wangari_maathai",
+      "toId": "person-jane_goodall",
+      "kind": "context",
+      "why": "Beide verbanden Naturschutz mit dem Engagement vieler Menschen. Bäume zu pflegen und Schimpansen zu erforschen sind unterschiedliche Aufgaben; der Vergleich macht aus ihnen kein gemeinsames Forschungsprojekt.",
       "checkedAt": "2026-10-18"
     }
   ]

@@ -1,3 +1,7 @@
+## In Vorbereitung · gemeinsame Übersichtskarten, 18.10.2026
+
+Eigene unbeschriftete Kartenunterlage, lesbare Ortsmarkierungen und einzeln erreichbare nahe Orte; ursprüngliche Reisegrafiken erhalten. Wostok-Stationslage quellenbezogen korrigiert, Lufttemperaturrekord getrennt belegt. Veralteten Hinweis auf ausstehende externe Fachabnahme aus Buch und Naturatlas entfernt; begrenzte Quellenprüfung weiter erklärt. Lokal gezielt einschließlich nativer Vergrößerung, kaltem Offline und Pass-Sicherung geprüft; vollständige Pflichtabnahme und tatsächliche Bereitstellung offen.
+
 ## 2026-10-18 · Inhaltskorrekturen im bestehenden Master vorbereitet
 
 Internet-Rückmeldung der konkreten Smartphone-Antwort zugeordnet; Einstein-Erklärung auf Licht/Raum/Zeit bezogen. Zwölf Erfindungsfragen,26 individuelle Geschichtsvertiefungen und18 unmittelbare Richtigerklärungen redigiert. Historische Originalbanken mit31 engen dokumentierten Ausnahmen und unveränderten IDs/Antworten/Lösungen geschützt; aktuelle gemischte Auswahl/Altpass/Offline-Proben ergänzt.

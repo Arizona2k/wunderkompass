@@ -3375,5 +3375,222 @@
       "tests/browser/nature-learning.mjs"
     ],
     "acceptance": "Not independently accepted. All68 media/model decisions, source claim review, full new browser/offline/engine proof and whole3.5 acceptance remain required."
+  },
+  "sharedMapFollowup20261018": {
+    "status": "Scoped shared-map and specific station coordinate/copy follow-up passed locally; broader individual nature factual counterreview still ongoing.",
+    "coordinateCorrection": {
+      "id": "vostok",
+      "field": "canonical orientation latitude",
+      "before": -77.5,
+      "after": -78.47,
+      "longitudeUnchanged": 106.8,
+      "reason": "Card identifies Vostok station. Actual SCAR US Gazetteer136400 and Russian Gazetteer121262 both identify station at78°28′S106°48′E with unknown precision. Round appropriately for approximate orientation. WMO2025temperature table has77°32′S106°40′E; record-data/location discrepancy retained without inventing a cause or modifying the temperature event.",
+      "sourceUrls": [
+        "https://data.aad.gov.au/aadc/gaz/display_name.cfm?gaz_id=136400",
+        "https://data.aad.gov.au/aadc/gaz/display_name.cfm?gaz_id=121262",
+        "https://wmo.int/sites/default/files/2025-07/Table_Records_25Jul2025.pdf"
+      ],
+      "readAnchors": "SCAR US35–47/Russia34–44; WMO PDFpage0lines29–30. Table text actually read; no claim of successful PDF screenshot inspection.",
+      "sourceLimit": "Gazetteer declares unknown precision; no modern GPS accuracy, field survey or proved explanation for the WMO discrepancy claimed. Old app coordinate source derivation not proved merely by similarity.",
+      "originalLearningBeforeThisCorrection": {
+        "starter": "Ein Temperaturrekord braucht Ort, Datum und eine Messregel. Bei Wostok geht es um gemessene Lufttemperatur. Die Temperatur der Schneeoberfläche ist eine andere Messgröße.",
+        "deeper": "Die WMO-Tabelle mit Stand 31. Juli 2025 führt −89,2 °C am 21. Juli 1983 an der Station Wostok. Satellitenuntersuchungen der Oberfläche beantworten eine andere Frage. Ein kälterer Oberflächenwert widerlegt deshalb nicht allein einen Lufttemperaturrekord. Quellenstand und Ereignisdatum sind getrennt anzugeben.",
+        "observe": "Schreibe zwei Beschriftungen: Luft über dem Boden und Oberfläche des Bodens. Welche Zusatzangaben braucht ein Vergleich? Stelle kein Kälteexperiment an; die Aufgabe benötigt nur Papier und die dokumentierten Messbeschreibungen.",
+        "benefit": "Du prüfst, ob Rekordwerte dieselbe Größe und Methode vergleichen.",
+        "question": {
+          "prompt": "Kannst du eine Lufttemperatur und eine Schneeoberflächentemperatur ohne Erläuterung als denselben Rekord vergleichen?",
+          "answers": [
+            "Nein, die Messgrößen müssen unterschieden werden",
+            "Ja, jede negative Zahl misst automatisch dasselbe",
+            "Ja, das Datum ist bei einem Rekord grundsätzlich unwichtig"
+          ],
+          "correct": 0,
+          "hint": "Frage, was der Sensor jeweils erfasst.",
+          "why": "Luft und Oberfläche können unterschiedliche Temperaturen besitzen. Ein sinnvoller Vergleich nennt Messgröße, Methode, Ort und Zeit.",
+          "wrongReasons": [
+            null,
+            "Ein Minuszeichen bezeichnet nur die Lage auf einer Skala. Es macht zwei verschiedene Messgrößen nicht gleich.",
+            "Das Datum ordnet das gemessene Ereignis ein. Ohne Zeitangabe fehlt eine wichtige Information zum Rekord."
+          ]
+        },
+        "connection": {
+          "kind": "word",
+          "target": "Kelvin",
+          "reason": "Kelvin ist eine Temperatureinheit. Neben der verwendeten Skala musst du weiterhin wissen, welche Temperatur wo und wie gemessen wurde; eine Umrechnung ersetzt diese Angaben nicht."
+        },
+        "sources": [
+          {
+            "title": "WMO: Records of Weather and Climate Extremes, as of 31 July 2025",
+            "url": "https://wmo.int/sites/default/files/2025-07/Table_Records_25Jul2025.pdf",
+            "anchor": "Lowest temperature · Vostok · 21/July/1983",
+            "scope": "Belegter Tabellenstand, keine unbelegte Behauptung eines neu abgefragten 2026-Rekordarchivs.",
+            "checkedOn": "2026-10-15",
+            "updatedOn": "2025-07-31"
+          },
+          {
+            "title": "NASA: The Coldest Place in the World",
+            "url": "https://science.nasa.gov/science-research/earth-science/09dec_coldspot/",
+            "anchor": "surface temperature · satellites",
+            "scope": "Unterschied Oberflächenbeobachtung/Lufttemperatur, keine neue Rekordzahl übernommen.",
+            "checkedOn": "2026-10-15",
+            "updatedOn": null
+          }
+        ]
+      },
+      "currentLearningSHA256": "c1968638c76046931afa935f477c1206439fc7397cf228aef7827f2d70cf0270"
+    },
+    "sharedRendering": "Original continent-lesson asset includes7numbers and its own caption. Shared context map now uses its own unlabelled original NaturalEarth-based image at exactly matching separately inset projection. Compact nature dots have no redundant1; article numbers are readable, nearby destinations retain individual original callbacks under a shared marker. Sixteen original journey media hashes retained unchanged.",
+    "sourceCopyCorrection": "Common nature/book UI drops only the outdated pending-human-review sentence. Selected-source-check and no-source-institution-endorsement wording remains. Two existing product browser assertions follow this exact copy plus additionally reject the obsolete sentence; full matrices/selection/gates unchanged. Four previously rejected core QA/early-scope mutations and central registry remain untouched.",
+    "originalQuestionObjects": "All68nature question objects and all185world question objects unchanged; IDs, labels, coordinate order and all other nature location tuples retained.",
+    "currentProof": {
+      "testedBuild": "722601410e7227a1",
+      "testedSourceDigest": "f12469d75c3cf9df2281fb8b5a9e9d9405460bd1f045ae0fadf23d86f6d374ee",
+      "actualBrowser": "154.0.8037.57",
+      "family": {
+        "articleWidthFontCases": 764,
+        "additionalMultiplePlaceResponsiveCases": 84,
+        "all68NatureSourcePanes": 68,
+        "overviewWidths": [
+          320,
+          768,
+          1440,
+          1920
+        ],
+        "overviewAll74Identities": true,
+        "overviewActualMapCount": 69,
+        "extraMapIdentity": "Existing sloth/Faultier projection; other five old animal projections display photographs, not six."
+      },
+      "nativeAndCold": {
+        "nativePhysical1280Css640Large": 17,
+        "nativePhysical640Css320Large": 17,
+        "separateHomePreparedPreviouslyUnvisitedColdMaps": 17,
+        "bookSourcePanesEachOf3Contexts": 8,
+        "realServerStoppedConnectionRefusedNativeOffline": true
+      },
+      "coordinateSelection": {
+        "widths": [
+          320,
+          1440
+        ],
+        "actualNatureActionToGlobeFavorite": true,
+        "storedLatitude": -78.47,
+        "storedLongitude": 106.8,
+        "actualSchema3DownloadConfirmedImport": true,
+        "unrelatedMemoryNotesFavoriteRetained": true,
+        "noAutomaticOldFavoriteSnapshotRewrite": true
+      },
+      "proofs": {
+        "topic-map-family-built-v4": {
+          "path": "/workspace/work/wk-continuation/topic-map-family-built-v4/report.json",
+          "sha256": "e03e5940b6d702696f9dccef7833ffabec13d0b4fb63f0241aba5a7e1b421b67",
+          "build": "722601410e7227a1",
+          "sourceDigest": "f12469d75c3cf9df2281fb8b5a9e9d9405460bd1f045ae0fadf23d86f6d374ee",
+          "browser": "154.0.8037.57"
+        },
+        "topic-map-native-offline-v2": {
+          "path": "/workspace/work/wk-continuation/topic-map-native-offline-v2/report.json",
+          "sha256": "6df9ca7238452a16236f5e975ced3f23c5e126803cb2c5f1b1bd4c61735f0f62",
+          "build": "722601410e7227a1",
+          "sourceDigest": "f12469d75c3cf9df2281fb8b5a9e9d9405460bd1f045ae0fadf23d86f6d374ee",
+          "browser": "154.0.8037.57"
+        },
+        "vostok-canonical-selection": {
+          "path": "/workspace/work/wk-continuation/vostok-canonical-selection/report.json",
+          "sha256": "6c16676d8235c88d8526f052afa1ee3ec1a4b0fab4d4b88cf41ea7632cf10fdb",
+          "build": "722601410e7227a1",
+          "sourceDigest": "f12469d75c3cf9df2281fb8b5a9e9d9405460bd1f045ae0fadf23d86f6d374ee",
+          "browser": "154.0.8037.57"
+        },
+        "topic-map-prepared-chronicle": {
+          "path": "/workspace/work/wk-continuation/topic-map-prepared-chronicle/report.json",
+          "sha256": "49b6ba01e3c5b63b934bde250ebf579f4dcab58d892ec93b2d536fb4cf389a3a",
+          "build": "ef69a8a0f219060c",
+          "sourceDigest": "6251d6cd68ff5c443663e35bdf0b3c2bf29dd200b225895368733d839356491c",
+          "browser": "154.0.8037.57"
+        }
+      },
+      "all185WorldAnd68NatureQuestionObjectsUnchanged": true,
+      "allOriginal16JourneyMediaSHA256Unchanged": {
+        "public/journeys/climate.svg": "9f4d606c5c64a89f0c071654ecb59c25ad8e07bb37b23995520af726808e4e53",
+        "public/journeys/continents.svg": "3c0647a516b3e464490f14075aadf2fa7d519a89b1444b824b1e1fb7a3c5e682",
+        "public/journeys/countries.svg": "0cbdfd28bd6a33235a97ef9827a636433af20a5a4d802a7fc3c25ec7f3fead0d",
+        "public/journeys/inside.svg": "18d64305fb6b065abcedc8245b10d1c5ab09d1cbc7c4c2658270841495ee7d78",
+        "public/journeys/landscapes-preview.webp": "68e5490eb595ef2eb08695a64aacb7f658f0f5ff7999c79f170453a250a0588e",
+        "public/journeys/landscapes.webp": "cc2a09cd76be5e945c2f0f3714ebd0ae4686711ff9426b4e4b2929b194ff1d60",
+        "public/journeys/moon-preview.webp": "b0dd999c2d67d9dbccf59f554db183e71075a4b671ea3165b81735f5382b0f56",
+        "public/journeys/moon.webp": "f96038a0d7330bfd3ccaa4ac406d663b97a9c733d28b5154684baf331e94e51f",
+        "public/journeys/navigation.svg": "1f112ae37b977479e2ecb76364c25fefbd98797b676283eecad2fad2b39aacff",
+        "public/journeys/quakes.svg": "c841636a43d193d28fc9fa7b68be822981d4ce44f539414ab33e445874a6d6ee",
+        "public/journeys/seasons-preview.webp": "ed667abb0a04f3f46d8668b24ff2d5cac4feb81f18d387867be574002ea78df7",
+        "public/journeys/seasons.webp": "e1570d0cc8c705db824efc3f08cf359ae6c8b18fc0c4aa54c27dc04c085be586",
+        "public/journeys/water-preview.webp": "2d5908a19b083870934e2e38786a8918d3f6880fc0aa093e35c550c0d3f9753c",
+        "public/journeys/water.webp": "ab233ea8a0ab933e58db3dae0453ce64651da7fb3319eba11fc2ffeea117fc09",
+        "public/journeys/weather-preview.webp": "b3e95e538261d0f86195cd2899e6cd023a779bf52122e650c9f194e598dbabfd",
+        "public/journeys/weather.webp": "c1a446ed935113af5193db7adf705d26454a2c4212a4b46003766a2f31189627"
+      },
+      "productCodeDataMediaSHA256": {
+        "app/topic-map.tsx": "62a0616e69b37117491cd89a405fc02623d5624c935310fc9235edadf07ef562",
+        "app/topic-map.css": "e6de695e2ff9d2026cb6d017c42d5540be59f31c2c7231b3769ebf0f206eda3c",
+        "app/topic-map-layout.mjs": "8ac72b718beabee1c30dea6bad518ced14de5f3de4ea8523c5ebd4c7d922d464",
+        "public/maps/world-context.svg": "0afae717c2380a6a7ac84dbf76f01dc962de94d722cbda16e5aa7e0572c7d523",
+        "app/nature-data.ts": "2de8c95042432d8da3e88df3100b44bd4efabe39276375ffc8aae2bf227d872d",
+        "app/nature-content.json": "bd8d71f1a9265beed4ee9277a628cdc5acaca6527a6592566e9b88ed4dfa8caa",
+        "app/nature-study.tsx": "ff4c2b4012ea7141477c4c85d0204ec640b0b3372c291a645b3b57e5b3f52853",
+        "app/book-study.tsx": "1362c9dfeeb3df5c64b00d6098a87c5ddc1d9411f7ee9db0459ed33fb4d94cad",
+        "app/nature-atlas.tsx": "db45d68ea4f43e25dc306074d6fa37fbb8e229ef45b41269abf906d45e8bdb02"
+      },
+      "sources": {
+        "map-source-vostok-coordinate-raw.json": {
+          "path": "/workspace/work/wk-continuation/map-source-vostok-coordinate-raw.json",
+          "sha256": "54f1149a6aba9793edee3d978441e0930cedfa125f2d6e4c5cf7a4cf23f16497"
+        },
+        "map-source-wmo-temperature-raw.json": {
+          "path": "/workspace/work/wk-continuation/map-source-wmo-temperature-raw.json",
+          "sha256": "62bbbd8302e62cbbd428e3d4eb4ed83ff307b131911425c5d5ac0eefbd8f21f6"
+        },
+        "map-source-natural-earth-rights-raw.json": {
+          "path": "/workspace/work/wk-continuation/map-source-natural-earth-rights-raw.json",
+          "sha256": "85d0f3093ee38abe45eb79be4a56a89395dacea57fe634927d82c5431fb7da2b"
+        }
+      },
+      "originalScreenshotCount": 23,
+      "originalScreenshotBytes": 5251217,
+      "scopeBoundary": "After map proofs, only a separate prepared chronicle entry changed app source. It was separately tested on ef69a8a0f219060c; common map/article data/media hashes remained identical. Dossier binding subsequently changes sourceDigest, never rebrands an earlier proof as full final-source Quality."
+    },
+    "mediaRights": {
+      "path": "public/maps/world-context.svg",
+      "sha256": "0afae717c2380a6a7ac84dbf76f01dc962de94d722cbda16e5aa7e0572c7d523",
+      "bytes": 433009,
+      "provenance": "Own reproducible map drawing from retained public/world.json NaturalEarth geometry, using existing content/build-journey-diagrams.mjs --context-map-only. Independently matching inset EqualEarth projection; original journey projection and sixteen original files remain unchanged.",
+      "sourceGeometrySHA256": "3f55f07fb1ef33dc887e62128e0feb9828a4b1b46f770f9d512c0a052f066f52",
+      "license": "Natural Earth public domain",
+      "actualRightsURL": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "actuallyRead": "Terms19–20 permit use/modification/distribution without permission; not a claim to accuracy or endorsement.",
+      "alternatives": "SVG role/img accessible name lists every original place, legend keeps every original separate destination; compact nature map names its example place.",
+      "modelLimits": "Approximate modern world context, no measured borders or full animal range; shared near-place marker is an overview simplification, not shared coordinates."
+    },
+    "criticalPedagogicalCounterread": [
+      "Original journey illustration carried unrelated7continent numbers plus its own caption; use separate clean geography rather than removing or renumbering the old lesson.",
+      "Small labels and nearby overlapping places impede matching the individual destination. Readable grouped labels and all original legend callbacks preserve the learning action; generalization is stated explicitly.",
+      "Critical final320multiple-place examples, actual native200Benz and small-native200WW1 plus coldSahara inspected as real images. No physical device or other engine claim.",
+      "Selected source review is distinguished from source institution endorsement. Only obsolete pending external-human sentence removed; no new all-content factual acceptance invented.",
+      "WMO and SCAR station coordinates disagree. Use station gazetteer for approximate location and dated WMO table for air-temperature event; no cause of discrepancy or modern GPS precision invented."
+    ],
+    "preservedEarlyFindings": [
+      "First map draft collapsed in nature flex layout; width100% fixed actual app issue.",
+      "Sensitive articles require explicit voluntary explanation opener; initial work navigation failure preserved and fixed only in work helper.",
+      "Very narrow202px sensitive article maps had10.1CSSpx labels; narrow container rule enlarged actual text and map-only projection inset protects enlarged markers.",
+      "Overview work counter incorrectly assumed68maps, but all74original identities include one additional existing Faultier map. Corrected work verifier checks every actual expected map ID; completed764+84 exact-source prefix retained with explicit provenance.",
+      "Prepared chronicle typecheck rejected invented category; changed to existing Einfachere Bedienung, retained failure and reran required affected checks."
+    ],
+    "verificationBoundary": {
+      "typecheckLintBuildBudgets": "Passed current map and separately after prepared chronicle copy",
+      "affectedExistingAndNewProductUnits": 40,
+      "additionalExistingChronicleUnits": 17,
+      "canonicalExport": "43 files verified for hashes/projections/freshness; full verify:export then correctly fails at stale central individual dossier gate, which remains unchanged pending explicit maintenance approval.",
+      "centralRegistry": "Unchanged; no acceptance rewrite. Four previously rejected core QA coverage/fault changes not applied.",
+      "twoOrdinaryBrowserAssertions": "Only updated actual source provenance copy plus rejecting obsolete pending-human wording; no matrix, engine, test selection or release-gate scope change.",
+      "knownReleaseDeficits": "Historical fullQuality123 red in foundation fault test; no fresh full3engine/complete150MB/release proof, no push, merge or delivery of this local cohort."
+    }
   }
 }
