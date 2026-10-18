@@ -57,13 +57,13 @@
         "topics-history:history-web"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/history-khipu",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "history-targeted: /workspace/work/wk-continuation/history-targeted/report.json sha256=a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a; history-native-offline: /workspace/work/wk-continuation/history-native-offline/report.json sha256=e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99; content-corrections-targeted: /workspace/work/wk-continuation/content-corrections-targeted/report.json sha256=1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d"
+        "report": "master-wording-history-targeted: /workspace/work/wk-continuation/master-wording-history-targeted/report.json sha256=4d40a8d652b8bebf788b3327955570df3c389b12a3317cd65052ffa923d1759b; master-wording-history-native-offline: /workspace/work/wk-continuation/master-wording-history-native-offline/report.json sha256=6bd912d2dcfce614fe543ddd9b1dae41cf7734c5d70db10015288fc48448df18; master-wording-corrections-resume-fixed: /workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json sha256=955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -111,6 +111,15 @@
           "remainingUncertainty": "Fachliche Grenzen bleiben die offene Bedeutung einzelner Quellenmerkmale beziehungsweise der ausgegrabene Ausschnitt. Gezielte aktuelle UI-/Offlineprüfung bestanden; komplette neue Master-Abnahme bleibt separat erforderlich.",
           "unresolvedBlockingClaims": []
         }
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/history-khipu",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "history-targeted: /workspace/work/wk-continuation/history-targeted/report.json sha256=a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a; history-native-offline: /workspace/work/wk-continuation/history-native-offline/report.json sha256=e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99; content-corrections-targeted: /workspace/work/wk-continuation/content-corrections-targeted/report.json sha256=1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d"
       }
     },
     {
@@ -156,13 +165,13 @@
         "topics-history:history-writing"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/history-mohenjo-daro",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "history-targeted: /workspace/work/wk-continuation/history-targeted/report.json sha256=a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a; history-native-offline: /workspace/work/wk-continuation/history-native-offline/report.json sha256=e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99; content-corrections-targeted: /workspace/work/wk-continuation/content-corrections-targeted/report.json sha256=1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d"
+        "report": "master-wording-history-targeted: /workspace/work/wk-continuation/master-wording-history-targeted/report.json sha256=4d40a8d652b8bebf788b3327955570df3c389b12a3317cd65052ffa923d1759b; master-wording-history-native-offline: /workspace/work/wk-continuation/master-wording-history-native-offline/report.json sha256=6bd912d2dcfce614fe543ddd9b1dae41cf7734c5d70db10015288fc48448df18; master-wording-corrections-resume-fixed: /workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json sha256=955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -210,6 +219,15 @@
           "remainingUncertainty": "Fachliche Grenzen bleiben die offene Bedeutung einzelner Quellenmerkmale beziehungsweise der ausgegrabene Ausschnitt. Gezielte aktuelle UI-/Offlineprüfung bestanden; komplette neue Master-Abnahme bleibt separat erforderlich.",
           "unresolvedBlockingClaims": []
         }
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/history-mohenjo-daro",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "history-targeted: /workspace/work/wk-continuation/history-targeted/report.json sha256=a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a; history-native-offline: /workspace/work/wk-continuation/history-native-offline/report.json sha256=e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99; content-corrections-targeted: /workspace/work/wk-continuation/content-corrections-targeted/report.json sha256=1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d"
       }
     },
     {
@@ -251,13 +269,13 @@
         "topics-history:history-mohenjo-daro"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/history-writing",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "history-targeted: /workspace/work/wk-continuation/history-targeted/report.json sha256=a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a; history-native-offline: /workspace/work/wk-continuation/history-native-offline/report.json sha256=e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99; content-corrections-targeted: /workspace/work/wk-continuation/content-corrections-targeted/report.json sha256=1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d"
+        "report": "master-wording-history-targeted: /workspace/work/wk-continuation/master-wording-history-targeted/report.json sha256=4d40a8d652b8bebf788b3327955570df3c389b12a3317cd65052ffa923d1759b; master-wording-history-native-offline: /workspace/work/wk-continuation/master-wording-history-native-offline/report.json sha256=6bd912d2dcfce614fe543ddd9b1dae41cf7734c5d70db10015288fc48448df18; master-wording-corrections-resume-fixed: /workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json sha256=955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -297,6 +315,15 @@
           "remainingUncertainty": "Approximate dates; evidence does not prove a single inventor or one-day origin.",
           "unresolvedBlockingClaims": []
         }
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/history-writing",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "history-targeted: /workspace/work/wk-continuation/history-targeted/report.json sha256=a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a; history-native-offline: /workspace/work/wk-continuation/history-native-offline/report.json sha256=e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99; content-corrections-targeted: /workspace/work/wk-continuation/content-corrections-targeted/report.json sha256=1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d"
       }
     },
     {
@@ -372,13 +399,13 @@
         "topics-animals:animal-short-beaked-echidna"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-platypus",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -392,6 +419,15 @@
         "corrections": "Add actually read NSW protection source; use precise discarded fishing line/crayfish traps rather than unsupported specific net wording. Do not change stable question/answer/order/storage IDs. Actual inquiry has swapped evidence labels: Schnabel und Sinne labels the eggs/milk paragraph, Fortpflanzung labels the receptor paragraph. Swap the two labels after frozen checks finish; do not change choices, answers or save IDs. Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Die Längenspanne fasst unterschiedliche Angaben für Weibchen und Männchen zusammen. Eierlegen und Milchgeben sind verschiedene Vorgänge. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-platypus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -452,13 +488,13 @@
         "topics-animals:animal-platypus"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-short-beaked-echidna",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -472,6 +508,15 @@
         "corrections": " Actual observation/reason/transfer inspected, labels Graben / Nahrung aufnehmen match their respective paragraphs; original question/correct positions retained. Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Diese Karte beschreibt den Kurzschnabeligel. Aussagen über andere Schnabeligelarten gelten nicht automatisch für ihn. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-short-beaked-echidna",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -532,13 +577,13 @@
         "topics-animals:animal-giraffe"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-okapi",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -552,6 +597,15 @@
         "corrections": " Actual inquiry has crossed labels: Gestreifte Beine labels location/tongue paragraph, Greifzunge labels stripes/relationship paragraph. Replace labels with matching tongue/habitat and stripes/relationship meanings after frozen checks finish. Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Die Größenangabe ist eine Höhe, keine Körperlänge. Beinstreifen allein beweisen keine Verwandtschaft mit Zebras. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-okapi",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -612,13 +666,13 @@
         "topics-animals:animal-honey-bee"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-meerkat",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -632,6 +686,15 @@
         "corrections": " Actual observation/reason/transfer inspected: roles/source limitations correctly represented; evidence labels match paragraphs. Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Die Kalahari ist eine Beispielregion. Eine einzelne Beobachtung zeigt nicht alle Rollen und Tätigkeiten einer Gruppe. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-meerkat",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -692,13 +755,13 @@
         "topics-animals:animal-western-lowland-gorilla"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-ring-tailed-lemur",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -712,6 +775,15 @@
         "corrections": "Clarify food as fruit/leaves and also insects rather than suggesting an exclusively plant diet.  Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Das Maß gilt für den Schwanz, nicht für das ganze Tier. Duft, Rufe und sichtbare Signale nutzen unterschiedliche Sinne. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-ring-tailed-lemur",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -772,13 +844,13 @@
         "topics-science:science-water-cycle"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-north-american-beaver",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -792,6 +864,15 @@
         "corrections": "  Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Die Karte beschreibt den Nordamerikanischen Biber, nicht den Eurasischen Biber. Dammbau kann je nach Ort unterschiedliche Folgen haben. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-north-american-beaver",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -866,13 +947,13 @@
         "topics-animals:animal-polar-bear"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-walrus",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -886,6 +967,15 @@
         "corrections": "  Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Die obere Längenangabe betrifft Männchen. Aussagen zum US-Recht und zum Pazifischen Walross sind keine weltweite Bewertung der gesamten Art. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-walrus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -947,13 +1037,13 @@
         "topics-animals:animal-raccoon"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-red-fox",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -967,6 +1057,15 @@
         "corrections": "  Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Die Länge umfasst Kopf und Rumpf, ohne Schwanz. Ein einzelner Aufenthaltsort erklärt nicht die ganze Lebensweise. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-red-fox",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -1027,13 +1126,13 @@
         "topics-animals:animal-red-fox"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-raccoon",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1047,6 +1146,15 @@
         "corrections": "  Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Die Gewichtsspanne unterscheidet sich je nach Region. Heutiges Vorkommen und ursprüngliche Verbreitung sind verschiedene Angaben. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-raccoon",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -1108,13 +1216,13 @@
         "topics-animals:animal-garden-snail"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-hedgehog",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1128,6 +1236,15 @@
         "corrections": "Current size copy says short tail is additionally stated although UI does not give its value; clarify head/body length without short tail or say tail comes in addition.  Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Die Körperlänge wird ohne den kurzen Schwanz verglichen. Ein einzelner Gartenbesuch liefert noch keine vollständige Bestandszählung. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-hedgehog",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -1195,13 +1312,13 @@
         "topics-animals:animal-white-tailed-eagle"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-barn-owl",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1215,6 +1332,15 @@
         "corrections": "Name adult sample in size explanation; preserve original mini answer positions. Evidence labels crossed: Name und Merkmale labels feeding paragraph; Nahrungssuche labels facial appearance/identification. Relabel to match each actual paragraph. Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Die Flügellänge stammt aus einer BTO-Stichprobe erwachsener Vögel. Sie ist weder Körperlänge noch Spannweite. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-barn-owl",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -1282,13 +1408,13 @@
         "topics-science:science-shadows"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-kingfisher",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1302,6 +1428,15 @@
         "corrections": " Transfer wrong-choice feedback explains different photo colors and no species change, whereas the wrong choice asserts same blue appearance proves same physical cause. Feedback addresses a different misconception; correct specifically after frozen tests finish. Separate critical reread after correction: prior hint was relevant but too close to the choice wording; now asks for a comparison or missing information without copying the correct choice. Answers, solution and save identity unchanged. Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Flügellänge und Spannweite sind verschiedene Maße. Ähnlich blaues Aussehen allein erklärt noch nicht die Entstehung der Farbe. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-kingfisher",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -1362,13 +1497,13 @@
         "topics-animals:animal-emperor-penguin"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-ostrich",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1382,6 +1517,15 @@
         "corrections": "  Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Das Gewicht unterscheidet Weibchen und Männchen. Die Zeichnung zeigt keine messbare Körpergröße oder Bewegung. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-ostrich",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -1442,13 +1586,13 @@
         "topics-animals:animal-emperor-penguin"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-atlantic-puffin",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1462,6 +1606,15 @@
         "corrections": "  Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Die Körperlänge ist keine Spannweite. Die Zeichnung vereinfacht das Sommerkleid; Aussehen und Aufenthaltsort ändern sich im Jahreslauf. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-atlantic-puffin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -1522,13 +1675,13 @@
         "topics-animals:animal-common-cuttlefish"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-common-chameleon",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1542,6 +1695,15 @@
         "corrections": "  Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Die Gewichtsangabe gilt für erwachsene Weibchen. Die Zeichnung zeigt nur einen Farbzustand und keine beliebige Musterkopie. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-common-chameleon",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -1610,13 +1772,13 @@
         "topics-animals:animal-common-frog"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-fire-salamander",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1630,6 +1792,15 @@
         "corrections": "  Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Die beschriebene Fortpflanzung bezieht sich auf mitteleuropäische Populationen. Wald und Larvengewässer sind verbundene Lebensorte. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-fire-salamander",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -1690,13 +1861,13 @@
         "topics-animals:animal-fire-salamander"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-common-frog",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1710,6 +1881,15 @@
         "corrections": "  Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Britische Beobachtungszeiten gelten nicht überall. Laich, Kaulquappe und erwachsenes Tier nutzen ihre Umgebung unterschiedlich. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-common-frog",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -1777,13 +1957,13 @@
         "topics-science:science-coral-reef"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-eastern-clown-anemonefish",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1797,6 +1977,15 @@
         "corrections": "First paragraph should explicitly explain sea anemone is an animal; mini hint should direct checking classification, not infer animal solely from eating/reacting. No new wild-animal experiment. Mini-question hint proposes food uptake and reactions as discriminators between anemone animal and flowering plant, but plants also take up nutrients and react; this criterion is misleading. Add explicit animal-group context supported by aquarium Cnidaria source and use a hint about classification versus flower-like shape. Preserve question/answers/correct position. Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Die Karte beschreibt Amphiprion percula. Der ähnlich gefärbte Amphiprion ocellaris ist eine andere Art; ein Gruppenname ersetzt keinen Artbeleg. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-eastern-clown-anemonefish",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -1871,13 +2060,13 @@
         "topics-science:science-currents"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-european-eel",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1891,6 +2080,15 @@
         "corrections": "  Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. 60–80 cm ist der häufig genannte Bereich, kein Rekord. Senderdaten und Larvenfunde sind keine direkt beobachtete Eiablage. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-european-eel",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -1951,13 +2149,13 @@
         "topics-animals:animal-honey-bee"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-monarch-butterfly",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1971,6 +2169,15 @@
         "corrections": "Meaningful third-level scenario contrasting two observed population reports; preserve answer positions/save IDs. Give beginner task actual stage evidence, not unexplained recall. Evidence labels crossed: Entwicklungsstadien over migration-populations paragraph; Unterschiedliche Populationen over food/defence paragraph. Relabel to actual population and food/defence content. Observation asks caterpillar/adult differentiation but article barely supplies contrast; useful source-based adult nectar/larval host distinction. Transfer substantially repeats reason rather than requiring new evidence evaluation. Current fact table already supplies caterpillar milkweed/adult nectar, so beginner stage is supported; no extra paragraph required solely for that contrast. Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Die Spannweite wurde aus Zoll umgerechnet. Eine untersuchte Wanderroute gilt nicht automatisch für andere Populationen. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-monarch-butterfly",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -2045,13 +2252,13 @@
         "topics-animals:animal-hedgehog"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-garden-snail",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2065,6 +2272,15 @@
         "corrections": "  Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Das Maß ist die Gehäusebreite, nicht die Höhe oder die Länge des ausgestreckten Tiers. Mehr sichtbare Schnecken bedeuten nicht automatisch mehr Tiere. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-garden-snail",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -2125,13 +2341,13 @@
         "topics-animals:animal-common-octopus"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-european-lobster",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2145,6 +2361,15 @@
         "corrections": "  Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. 50 cm ist eine übliche obere Angabe; dieselbe Quelle nennt größere Einzeltiere. Die Zeichnung zeigt keinen vollständigen Häutungsablauf. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-european-lobster",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -2213,13 +2438,13 @@
         "topics-animals:animal-common-chameleon"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-common-cuttlefish",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2233,6 +2458,15 @@
         "corrections": "  Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Die Mantellänge schließt Arme und Fangtentakel aus. Die Zeichnung zeigt acht Arme und zwei zusätzliche Fangtentakel, aber keinen Farbwechsel. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-common-cuttlefish",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     },
     {
@@ -2300,13 +2534,13 @@
         "topics-science:science-foodweb"
       ],
       "ui": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "route": "world/topic/animal-short-snouted-seahorse",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
+        "report": "master-wording-animal-targeted: /workspace/work/wk-continuation/master-wording-animal-targeted/report.json sha256=0f97a8dbdc6feb21517e2c3b0f4a112b1a3b985b174095424cf8eb777f07287a; master-wording-animal-native-offline: /workspace/work/wk-continuation/master-wording-animal-native-offline/report.json sha256=89b8e1cdeb36025bdee84271b49c956d896f5d3563609e4c206c360b4ac88f6d"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2320,6 +2554,15 @@
         "corrections": "  Aktuelle Umsetzung konkret im bestehenden animal-expansion-review mit historischen Werten, Korrekturhinweisen und aktuellen Inhaltshashes festgehalten.",
         "remainingUncertainty": "Quellenstand 18.10.2026. Die Quelle erläutert den Messpunkt der Länge nicht weiter. Die Zeichnung ist keine vollständige Darstellung der Fortpflanzung. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe. Historische/regionale Quellenangaben und vereinfachte eigene Bilder sind keine universelle Bestimmung oder neue weltweite Gefährdungsbewertung. Vollständige endgültige technische Master-Abnahme bleibt separat erforderlich.",
         "unresolvedBlockingClaims": []
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/animal-short-snouted-seahorse",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "animal-targeted: /workspace/work/wk-continuation/animal-targeted/report.json sha256=27bee4ed0ec292dc63be35b856666f06dcd8b43c92717e6bd57676d9056511ab; animal-native-offline: /workspace/work/wk-continuation/animal-native-offline/report.json sha256=1c23ec32e18cc269233cf7626c27533dee302f7eb0d8129f5b98c0fe93ebda47"
       }
     }
   ],
@@ -2353,7 +2596,17 @@
       "reason": "Grammatik und konkrete Aufgabenstellung individuell berichtigt; bisherige Lösungen, alle Antworttexte und Auswahlpositionen erhalten.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitt6",
-      "stateCompatibility": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "invention-car:mini",
@@ -2384,7 +2637,17 @@
       "reason": "Grammatik und konkrete Aufgabenstellung individuell berichtigt; bisherige Lösungen, alle Antworttexte und Auswahlpositionen erhalten.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitt6",
-      "stateCompatibility": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "invention-railway:mini",
@@ -2415,7 +2678,17 @@
       "reason": "Grammatik und konkrete Aufgabenstellung individuell berichtigt; bisherige Lösungen, alle Antworttexte und Auswahlpositionen erhalten.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitt6",
-      "stateCompatibility": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "invention-airplane:mini",
@@ -2446,7 +2719,17 @@
       "reason": "Grammatik und konkrete Aufgabenstellung individuell berichtigt; bisherige Lösungen, alle Antworttexte und Auswahlpositionen erhalten.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitt6",
-      "stateCompatibility": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "invention-phone:mini",
@@ -2477,7 +2760,17 @@
       "reason": "Grammatik und konkrete Aufgabenstellung individuell berichtigt; bisherige Lösungen, alle Antworttexte und Auswahlpositionen erhalten.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitt6",
-      "stateCompatibility": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "invention-computer:mini",
@@ -2508,7 +2801,17 @@
       "reason": "Grammatik und konkrete Aufgabenstellung individuell berichtigt; bisherige Lösungen, alle Antworttexte und Auswahlpositionen erhalten.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitt6",
-      "stateCompatibility": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "invention-internet:mini",
@@ -2539,7 +2842,17 @@
       "reason": "Grammatik und konkrete Aufgabenstellung individuell berichtigt; bisherige Lösungen, alle Antworttexte und Auswahlpositionen erhalten.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitt6",
-      "stateCompatibility": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "invention-compass:mini",
@@ -2570,7 +2883,17 @@
       "reason": "Grammatik und konkrete Aufgabenstellung individuell berichtigt; bisherige Lösungen, alle Antworttexte und Auswahlpositionen erhalten.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitt6",
-      "stateCompatibility": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "invention-printing:mini",
@@ -2601,7 +2924,17 @@
       "reason": "Grammatik und konkrete Aufgabenstellung individuell berichtigt; bisherige Lösungen, alle Antworttexte und Auswahlpositionen erhalten.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitt6",
-      "stateCompatibility": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "invention-rocket:mini",
@@ -2632,7 +2965,17 @@
       "reason": "Grammatik und konkrete Aufgabenstellung individuell berichtigt; bisherige Lösungen, alle Antworttexte und Auswahlpositionen erhalten.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitt6",
-      "stateCompatibility": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "invention-satellite:mini",
@@ -2663,7 +3006,17 @@
       "reason": "Grammatik und konkrete Aufgabenstellung individuell berichtigt; bisherige Lösungen, alle Antworttexte und Auswahlpositionen erhalten.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitt6",
-      "stateCompatibility": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "invention-smartphone:mini",
@@ -2694,7 +3047,17 @@
       "reason": "Grammatik und konkrete Aufgabenstellung individuell berichtigt; bisherige Lösungen, alle Antworttexte und Auswahlpositionen erhalten.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitt6",
-      "stateCompatibility": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "person-albert_einstein:mini",
@@ -2725,7 +3088,17 @@
       "reason": "Die richtige Erklärung bezog sich auf die Forschungsmethode statt das erfragte Forschungsgebiet; jetzt Raum/Zeit/Licht direkt erklärt.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitt6",
-      "stateCompatibility": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "Frage-/Themen-ID, Antwortzeichenfolgen, Lösung, Reihenfolge und Schema3 unverändert; alte Antwortwerte und gemischte Auswahlwerte weiter gültig. Tatsächliche UI-Wiederaufnahmeprobe noch offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-fire:mini",
@@ -2756,7 +3129,17 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-writing:mini",
@@ -2787,7 +3170,17 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-pyramids:mini",
@@ -2818,7 +3211,17 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-paper:mini",
@@ -2849,7 +3252,17 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-zero:mini",
@@ -2880,7 +3293,17 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-medieval_cities:mini",
@@ -2911,7 +3334,17 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-printing:mini",
@@ -2942,7 +3375,17 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-voyages1492:mini",
@@ -2973,7 +3416,17 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-steam:mini",
@@ -3004,7 +3457,17 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-electric_light:mini",
@@ -3035,7 +3498,17 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-ww1:mini",
@@ -3066,7 +3539,17 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-berlin_wall_build:mini",
@@ -3097,7 +3580,17 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-apollo11:mini",
@@ -3128,7 +3621,17 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-web:mini",
@@ -3159,7 +3662,17 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-berlin_wall_fall:mini",
@@ -3190,7 +3703,17 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-reunification:mini",
@@ -3221,7 +3744,17 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-iss:mini",
@@ -3252,7 +3785,17 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
     },
     {
       "id": "history-september11:mini",
@@ -3283,8 +3826,67 @@
       "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
       "reviewedOn": "2026-10-18",
       "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
-      "stateCompatibility": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen."
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      }
+    },
+    {
+      "id": "animal-white-tailed-eagle:mini",
+      "topic": "animal-white-tailed-eagle",
+      "changedFields": [
+        "answers"
+      ],
+      "before": {
+        "prompt": "Was bedeutet eine Spannweite von zwei Metern?",
+        "answers": [
+          "Der Abstand zwischen den ausgebreiteten Flügelspitzen.",
+          "Die Höhe des Vogels im Stehen.",
+          "Die Länge eines einzelnen Schwanzfeder."
+        ],
+        "correct": 0,
+        "why": "Spannweite wird von Flügelspitze zu Flügelspitze gemessen."
+      },
+      "after": {
+        "prompt": "Was bedeutet eine Spannweite von zwei Metern?",
+        "answers": [
+          "Der Abstand zwischen den ausgebreiteten Flügelspitzen.",
+          "Die Höhe des Vogels im Stehen.",
+          "Die Länge einer einzelnen Schwanzfeder."
+        ],
+        "correct": 0,
+        "why": "Spannweite wird von Flügelspitze zu Flügelspitze gemessen."
+      },
+      "reason": "Genitiv-/Genuskongruenz einer falschen Antwort berichtigt; Bedeutung bleibt Schwanzfederlänge, richtigeAntwort/Index und alle anderenWerte bleiben erhalten. BekannteAltantwort gezielt inMiniFrage/Wissens-Challenge wiedererkennen, damit gemischtegespeicherteRunden erhalten bleiben.",
+      "reviewedOn": "2026-10-18",
+      "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitt6: dokumentierte notwendigeAlttextkorrektur mit zusätzlichem Nachweis beiAntwortänderungen.",
+      "stateCompatibility": "Gezielte Unit-Negativ-/Schema3-Import-/gemischteSechserrunden-/Abschlussprüfungen bestanden. Tatsächlicher Chromium154 am Buildde9b13f736ae7126: Mini-Frage32Korrekturen bei320/1440 mit alterumgekehrterReihenfolge/allenfalschenundrichtigenAntworten/Reload; vier alteSechserrunden mit falscherAuswahl oderbereitsverdientemAbschluss bleiben nach Fortsetzen/Reload identisch fortsetzbar. Separat real navigator.onLine=false/Kaltstart: altefalscheSeeadlerauswahl/Reihenfolge/Reload und übrigerPass erhalten. Keine vollständigeBrowser-/Firefox-/WebKit-Endabnahme daraus behaupten.",
+      "unaffectedConsumers": "Die übrigen Weltspiele erzeugen eigene Identitäts-/Nahrungs-/Lebensraumfragen; die betroffene Antwortzeichenfolge gehört dort nicht zurFrage. Nicht ohne tatsächlicheAbhängigkeit zusätzlicheMigrationen einbauen.",
+      "stateCompatibilityBeforeActualUI": "Exakte bekannteFalschantwort-Aliaszuordnung; richtigeAntwort/Index/Fragen-/Themen-/Runden-IDs undSchema3 unverändert. Gezielte negative/Altpass-/gemischteRunden-/Richtigabschluss-/UI-Neustartnachweise nochauszuführen; bisdahin keine fertigeAbnahme behaupten.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        },
+        "master-wording-history-native-offline": {
+          "path": "/workspace/work/wk-continuation/master-wording-history-native-offline/report.json",
+          "sha256": "6bd912d2dcfce614fe543ddd9b1dae41cf7734c5d70db10015288fc48448df18",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "821765fe8334952f9806f95a5c6f139db1be997cb2b224fa372e8c3adc2adc98",
+          "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+        }
+      }
     }
   ],
-  "questionCorrectionScope": "Genau zwölf Erfindungsprompts sowie eine Einstein- und18Geschichtsbegründungen gezielt korrigiert; nur prompt/why, alle Antworttexte/Lösungen/IDs unverändert. Historische Baselines unverändert, keine pauschale Altbestandsfreigabe."
+  "questionCorrectionScope": "32 exakt dokumentierteKorrekturen: bisherige31 ausschließlichPrompt/Erklärung, dazu ein grammatischerFalschantworttext beimSeeadler mit engerbekannterAlias-Kompatibilität. RichtigeAntworten/Indizes/IDs unverändert; ursprüngliche142/185/209-Baselines erhalten und außerhalbderexplizitenAusnahmen weiterhin strikt geprüft. Keine pauschaleAltbestandsfreigabe."
 }

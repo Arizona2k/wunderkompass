@@ -1,4 +1,5 @@
 'use client';
+import './history-evidence.css';
 import {useState} from 'react';
 
 const ACTIVITIES={

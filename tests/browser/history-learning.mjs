@@ -17,7 +17,7 @@ async function explore(p,t,{touch=false}={}){
   }else{
    const toggle=activity.getByRole('button',{name:/Vergleichsplan öffnen|Plan mit Verbindung öffnen/});await toggle.click();await activity.getByRole('img',{name:level%2===0?'Erfundener Vergleichsplan: Der Wasserweg endet vor dem Kanal.':'Erfundener Plan mit eingezeichnetem Ablauf vom Haus in den Kanal.'}).waitFor();
   }
-  await activity.getByRole('button',{name:'Meine Überlegung vergleichen',exact:true}).click();await activity.getByRole('status').waitFor();await checkGeometry(p);for(const control of await activity.locator('button,select').all()){const box=await control.boundingBox();assert.ok(box&&box.width>=44&&box.height>=44,'history control has a real44px touch target');}
+  await activity.getByRole('button',{name:'Meine Überlegung vergleichen',exact:true}).click();await activity.getByRole('status').waitFor();await checkGeometry(p);for(const control of await activity.locator('button,select').all()){const box=await control.boundingBox();const witness=await control.evaluate(el=>{const css=getComputedStyle(el);return {tag:el.tagName,label:el.getAttribute('aria-label')??el.textContent,fontSize:css.fontSize,minWidth:css.minWidth,minHeight:css.minHeight,appearance:css.appearance};});assert.ok(box&&box.width>=44&&box.height>=44,'history control has a real44px touch target: '+JSON.stringify({topic:t.id,level,box,...witness}));}
  }
 }
 export async function historyLearningFlow(browser,base,ready,monitor,report,shots){
@@ -66,7 +66,7 @@ export async function historyLearningEngine(browser,base,{engine,shots}){
   try{for(const t of topics){currentTopic=t.id;await p.goto(base+'#world/topic/'+t.id);await p.locator('.world-mini-question').waitFor();await explore(p,t);await p.getByRole('region',{name:'Geschichtsdetektiv'}).screenshot({path:path.join(shots,'journey-engine-'+engine+'-history-'+t.id+'-'+width+'.png')});observed.push({id:t.id,width,levels:3});}}
   catch(error){
    const prefix='journey-engine-'+engine+'-history-failure-'+width;
-   const witness=await p.evaluate(()=>({activeTag:document.activeElement?.tagName,activeText:document.activeElement?.textContent,focusVisible:document.activeElement?.matches(':focus-visible'),pressed:document.activeElement?.getAttribute('aria-pressed')})).catch(()=>null);
+   const witness=await p.evaluate(()=>({activeTag:document.activeElement?.tagName,activeText:document.activeElement?.textContent,focusVisible:document.activeElement?.matches(':focus-visible'),pressed:document.activeElement?.getAttribute('aria-pressed'),controls:[...document.querySelectorAll('.history-evidence button,.history-evidence select')].map(el=>{const r=el.getBoundingClientRect(),css=getComputedStyle(el);return {tag:el.tagName,label:el.getAttribute('aria-label')??el.textContent,box:{x:r.x,y:r.y,width:r.width,height:r.height},fontSize:css.fontSize,minWidth:css.minWidth,minHeight:css.minHeight,appearance:css.appearance};})})).catch(()=>null);
    await p.screenshot({path:path.join(shots,prefix+'.png'),fullPage:true}).catch(()=>{});
    await fs.writeFile(path.join(shots,prefix+'.json'),JSON.stringify({engine,width,topic:currentTopic,route:p.url(),witness,error:error.stack},null,2)+'\n');throw error;
   }finally{await c.close();}

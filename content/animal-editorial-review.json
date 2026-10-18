@@ -2144,6 +2144,30 @@
         "factualScope": "Konkrete tatsächlich gelesene Stellen und Restgrenzen im sourceAndTeachingCountercheck20261018; vollständige Ganzartikelabdeckung daraus nicht pauschal bestätigt.",
         "technicalScope": "Aktuelle gezielte48Karten-Prüfungen an Buildb92d7a70954a64bd bestanden; vollständige Endabnahme des Lieferstands folgt.",
         "next": "Verbleibende Quellendeckung/Medienkontext und jede bekannte Inhaltsunsicherheit im bestehenden WK053 weiterbearbeiten."
+      },
+      "questionWordingCountercheck20261018": {
+        "before": {
+          "prompt": "Was bedeutet eine Spannweite von zwei Metern?",
+          "answers": [
+            "Der Abstand zwischen den ausgebreiteten Flügelspitzen.",
+            "Die Höhe des Vogels im Stehen.",
+            "Die Länge eines einzelnen Schwanzfeder."
+          ],
+          "correct": 0,
+          "why": "Spannweite wird von Flügelspitze zu Flügelspitze gemessen."
+        },
+        "after": {
+          "prompt": "Was bedeutet eine Spannweite von zwei Metern?",
+          "answers": [
+            "Der Abstand zwischen den ausgebreiteten Flügelspitzen.",
+            "Die Höhe des Vogels im Stehen.",
+            "Die Länge einer einzelnen Schwanzfeder."
+          ],
+          "correct": 0,
+          "why": "Spannweite wird von Flügelspitze zu Flügelspitze gemessen."
+        },
+        "reason": "Only wrong-answer grammar; actual answer-code/restore compatibility must be checked before acceptance.",
+        "historicalOriginalArticleSHA256Retained": "097dd69415e373e4d564abf333604fbab62c22407abc233249e33a8d8065cfbb"
       }
     }
   ],

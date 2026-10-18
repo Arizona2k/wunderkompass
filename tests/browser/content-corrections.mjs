@@ -1,3 +1,4 @@
+import {retainedAnswerWordingFlow,offlineRetainedAnswerWording} from './retained-answer-wording.mjs';
 import photos from '../../app/world-photos.json' with {type:'json'};
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -32,20 +33,22 @@ export async function contentCorrectionsFlow(browser,base,ready,monitor,report,s
  for(const width of [320,1440]){
   const c=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'}),p=await c.newPage();monitor(p);
   const pass=createSave();pass.progress.favorites=['topic:person-albert_einstein'];pass.progress.gameSessions.memory={cards:[1,2],flipped:[0]};
-  for(const t of corrected)pass.progress.gameSessions['topic:'+t.id]={items:[...t.question.answers].reverse(),topicAnswer:t.question.answers.at(-1)};
+  for(const t of corrected){const before=registry.questionCorrections.find(c=>c.topic===t.id).before;pass.progress.gameSessions['topic:'+t.id]={items:[...before.answers].reverse(),topicAnswer:before.answers.at(-1)};}
   await c.addInitScript(({pass,key})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(pass));},{pass,key:SAVE_KEY});
   try{
    await p.goto(base);await ready(p);
-   for(const t of corrected){const q=await open(p,t.id);assert.deepEqual(await q.locator('.quiz-answer > span:last-of-type').allTextContents(),[...t.question.answers].reverse(),'saved shuffled answer order retained');await answerChain(p,t);if(['invention-internet','person-albert_einstein'].includes(t.id))await p.locator('.world-mini-question').screenshot({path:path.join(shots,'content-corrected-'+t.id+'-'+width+'.png')});observed.push({id:t.id,width,oldSave:true,allChoices:true,reload:true});}
+   for(const t of corrected){const q=await open(p,t.id);if(t.id==='animal-white-tailed-eagle'){assert.equal(await q.locator('.quiz-answer.is-incorrect > span:last-of-type').innerText(),t.question.answers[2],'old wrong grammar answer remains the same wrong choice');}assert.deepEqual(await q.locator('.quiz-answer > span:last-of-type').allTextContents(),[...t.question.answers].reverse(),'saved shuffled answer order retained');await answerChain(p,t);if(['invention-internet','person-albert_einstein'].includes(t.id))await p.locator('.world-mini-question').screenshot({path:path.join(shots,'content-corrected-'+t.id+'-'+width+'.png')});observed.push({id:t.id,width,oldSave:true,allChoices:true,reload:true});}
    for(const t of reflections){await open(p,t.id);await p.locator('.world-surprise').getByText(t.surprise,{exact:true}).waitFor();await bounds(p,p.locator('.world-surprise'));}
    for(const id of ['whale-shark','garden-cross-spider']){await correctedPhoto(p,id);await p.screenshot({path:path.join(shots,'content-media-'+id+'-'+width+'.png')});}
    const saved=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);assert.deepEqual(saved.favorites,pass.progress.favorites);assert.deepEqual(saved.gameSessions.memory,pass.progress.gameSessions.memory);
   }catch(error){await p.screenshot({path:path.join(shots,'content-correction-failure-'+width+'.png'),fullPage:true}).catch(()=>{});await fs.writeFile(path.join(shots,'content-correction-failure-'+width+'.json'),JSON.stringify({route:p.url(),error:error.stack},null,2));throw error;}finally{await c.close();}
  }
- report.contentCorrections={observed,reflectionIds:reflections.map(t=>t.id),scope:'Actual served prompts/explanations/all answer feedback, historical saves and reverse order; semantic/source counterreading remains documentary.'};report.checks.push('31 specifically corrected question chains at320/1440 with saved reverse choices, every wrong/right/reload and unrelated progress retained;26 individual history reflections reflow');
+ await retainedAnswerWordingFlow(browser,base,ready,monitor,report,shots);
+ report.contentCorrections={observed,reflectionIds:reflections.map(t=>t.id),scope:'Actual served prompts/explanations/all answer feedback, historical saves and reverse order; semantic/source counterreading remains documentary.'};report.checks.push('32 specifically corrected question chains at320/1440 with saved reverse choices, every wrong/right/reload and unrelated progress retained;26 individual history reflections reflow');
 }
 export async function offlineContentCorrections(p,report){
- for(const id of ['invention-internet','person-albert_einstein','history-fire','history-apollo11']){const t=catalog.find(t=>t.id===id),q=await open(p,id);const reset=q.getByRole('button',{name:'Später noch einmal prüfen',exact:true});if(await reset.count())await reset.click();await answerChain(p,t);}
+ await offlineRetainedAnswerWording(p,report);
+ for(const id of ['invention-internet','person-albert_einstein','history-fire','history-apollo11','animal-white-tailed-eagle']){const t=catalog.find(t=>t.id===id),q=await open(p,id);const reset=q.getByRole('button',{name:'Später noch einmal prüfen',exact:true});if(await reset.count())await reset.click();await answerChain(p,t);}
  for(const id of ['whale-shark','garden-cross-spider'])await correctedPhoto(p,id);
- report.contentCorrectionsOffline={ids:['invention-internet','person-albert_einstein','history-fire','history-apollo11'],actualReload:true};
+ report.contentCorrectionsOffline={ids:['invention-internet','person-albert_einstein','history-fire','history-apollo11','animal-white-tailed-eagle'],actualReload:true};
 }

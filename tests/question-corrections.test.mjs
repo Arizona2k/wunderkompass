@@ -9,9 +9,9 @@ import {historicalQuestionBank} from '../scripts/world-question-index.mjs';
 const corrections=registry.questionCorrections;
 const changedHistory=['fire','writing','pyramids','paper','zero','medieval_cities','printing','voyages1492','steam','electric_light','ww1','berlin_wall_build','apollo11','web','berlin_wall_fall','reunification','iss','september11'].map(id=>'history-'+id);
 const old=JSON.parse(fs.readFileSync('tests/fixtures/retained-challenge-bank.json','utf8'));
-test('only named invention prompts and individually documented Einstein/history explanations have question exceptions',()=>{
- assert.deepEqual(corrections.map(c=>c.topic).sort(),['light','car','railway','airplane','phone','computer','internet','compass','printing','rocket','satellite','smartphone'].map(id=>'invention-'+id).concat('person-albert_einstein',changedHistory).sort());
- for(const c of corrections){assert.deepEqual(c.changedFields,[c.topic.startsWith('invention-')?'prompt':'why']);const prior=old.questions.find(q=>q.id===c.id);if(prior)assert.deepEqual(c.before,Object.fromEntries(Object.keys(c.before).map(k=>[k,prior[k]])));else assert.equal(catalog.find(t=>t.id===c.topic).history?.sensitive,true,'only sensitive historical cards are absent from the game bank');}
+test('only named invention prompts and individually documented Einstein/history explanations and one wrong-answer grammar alias have question exceptions',()=>{
+ assert.deepEqual(corrections.map(c=>c.topic).sort(),['light','car','railway','airplane','phone','computer','internet','compass','printing','rocket','satellite','smartphone'].map(id=>'invention-'+id).concat('person-albert_einstein','animal-white-tailed-eagle',changedHistory).sort());
+ for(const c of corrections){assert.deepEqual(c.changedFields,[c.topic==='animal-white-tailed-eagle'?'answers':c.topic.startsWith('invention-')?'prompt':'why']);const prior=old.questions.find(q=>q.id===c.id);if(prior)assert.deepEqual(c.before,Object.fromEntries(Object.keys(c.before).map(k=>[k,prior[k]])));else assert.equal(catalog.find(t=>t.id===c.topic).history?.sensitive,true,'only sensitive historical cards are absent from the game bank');}
  const historical=historicalQuestionBank(questions,corrections);for(const prior of old.questions)assert.deepEqual(historical.find(q=>q.id===prior.id),prior);
 });
 test('historical comparison rejects undocumented current edits and solution/choice/order changes',()=>{

@@ -102,31 +102,31 @@
       },
       "historicalUIEvidenceBeforeLatestCorrection": "Actual targeted14 topic-width cases/3levels/search/Back/reload/large text/axe plus native200% and previously-unopened cold offline passed; see exact earlyTechnicalProof. Complete final regression still required.",
       "currentTargetedUIEvidence": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "proofs": {
-          "history-targeted": {
-            "path": "/workspace/work/wk-continuation/history-targeted/report.json",
-            "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
-            "build": "b92d7a70954a64bd",
-            "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+          "master-wording-history-targeted": {
+            "path": "/workspace/work/wk-continuation/master-wording-history-targeted/report.json",
+            "sha256": "4d40a8d652b8bebf788b3327955570df3c389b12a3317cd65052ffa923d1759b",
+            "build": "de9b13f736ae7126",
+            "sourceDigest": "821765fe8334952f9806f95a5c6f139db1be997cb2b224fa372e8c3adc2adc98",
             "scope": "actual Chromium history partial proof; not full regression"
           },
-          "history-native-offline": {
-            "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
-            "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
-            "build": "b92d7a70954a64bd",
-            "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+          "master-wording-history-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-wording-history-native-offline/report.json",
+            "sha256": "6bd912d2dcfce614fe543ddd9b1dae41cf7734c5d70db10015288fc48448df18",
+            "build": "de9b13f736ae7126",
+            "sourceDigest": "821765fe8334952f9806f95a5c6f139db1be997cb2b224fa372e8c3adc2adc98",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
           },
-          "content-corrections-targeted": {
-            "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
-            "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
-            "build": "b92d7a70954a64bd",
-            "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+          "master-wording-corrections-resume-fixed": {
+            "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+            "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+            "build": "de9b13f736ae7126",
+            "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
             "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
           }
         },
-        "scope": "Actual completed current targeted UI evidence; not full regression. All preceding reports retained under their original build archives."
+        "scope": "Current actual targeted history/UI/answer/offline proofs; full new actual-engine acceptance remains separate."
       }
     },
     {
@@ -193,31 +193,31 @@
       },
       "historicalUIEvidenceBeforeLatestCorrection": "Actual targeted14 topic-width cases/3levels/search/Back/reload/large text/axe plus native200% and previously-unopened cold offline passed; see exact earlyTechnicalProof. Complete final regression still required.",
       "currentTargetedUIEvidence": {
-        "build": "b92d7a70954a64bd",
+        "build": "de9b13f736ae7126",
         "proofs": {
-          "history-targeted": {
-            "path": "/workspace/work/wk-continuation/history-targeted/report.json",
-            "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
-            "build": "b92d7a70954a64bd",
-            "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+          "master-wording-history-targeted": {
+            "path": "/workspace/work/wk-continuation/master-wording-history-targeted/report.json",
+            "sha256": "4d40a8d652b8bebf788b3327955570df3c389b12a3317cd65052ffa923d1759b",
+            "build": "de9b13f736ae7126",
+            "sourceDigest": "821765fe8334952f9806f95a5c6f139db1be997cb2b224fa372e8c3adc2adc98",
             "scope": "actual Chromium history partial proof; not full regression"
           },
-          "history-native-offline": {
-            "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
-            "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
-            "build": "b92d7a70954a64bd",
-            "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+          "master-wording-history-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-wording-history-native-offline/report.json",
+            "sha256": "6bd912d2dcfce614fe543ddd9b1dae41cf7734c5d70db10015288fc48448df18",
+            "build": "de9b13f736ae7126",
+            "sourceDigest": "821765fe8334952f9806f95a5c6f139db1be997cb2b224fa372e8c3adc2adc98",
             "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
           },
-          "content-corrections-targeted": {
-            "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
-            "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
-            "build": "b92d7a70954a64bd",
-            "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+          "master-wording-corrections-resume-fixed": {
+            "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+            "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+            "build": "de9b13f736ae7126",
+            "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
             "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
           }
         },
-        "scope": "Actual completed current targeted UI evidence; not full regression. All preceding reports retained under their original build archives."
+        "scope": "Current actual targeted history/UI/answer/offline proofs; full new actual-engine acceptance remains separate."
       }
     }
   ],
@@ -379,31 +379,31 @@
     "remainingUncertainty": "Approximate dates; evidence does not prove a single inventor or one-day origin.",
     "unresolvedBlockingClaims": [],
     "currentTargetedUI": {
-      "build": "b92d7a70954a64bd",
+      "build": "de9b13f736ae7126",
       "proofs": {
-        "history-targeted": {
-          "path": "/workspace/work/wk-continuation/history-targeted/report.json",
-          "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
-          "build": "b92d7a70954a64bd",
-          "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+        "master-wording-history-targeted": {
+          "path": "/workspace/work/wk-continuation/master-wording-history-targeted/report.json",
+          "sha256": "4d40a8d652b8bebf788b3327955570df3c389b12a3317cd65052ffa923d1759b",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "821765fe8334952f9806f95a5c6f139db1be997cb2b224fa372e8c3adc2adc98",
           "scope": "actual Chromium history partial proof; not full regression"
         },
-        "history-native-offline": {
-          "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
-          "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
-          "build": "b92d7a70954a64bd",
-          "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+        "master-wording-history-native-offline": {
+          "path": "/workspace/work/wk-continuation/master-wording-history-native-offline/report.json",
+          "sha256": "6bd912d2dcfce614fe543ddd9b1dae41cf7734c5d70db10015288fc48448df18",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "821765fe8334952f9806f95a5c6f139db1be997cb2b224fa372e8c3adc2adc98",
           "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
         },
-        "content-corrections-targeted": {
-          "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
-          "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
-          "build": "b92d7a70954a64bd",
-          "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
           "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
         }
       },
-      "scope": "Actual completed current targeted UI evidence; not full regression. All preceding reports retained under their original build archives."
+      "scope": "Current actual targeted history/UI/answer/offline proofs; full new actual-engine acceptance remains separate."
     }
   },
   "visualCountercheck": {
@@ -413,31 +413,31 @@
     "status": "Personally inspected320px normal/large and actual native200% top/diagram/controls; no label cropping or button collision in final observed views. Native diagrams captured separately to avoid partial viewport evidence."
   },
   "earlyTechnicalProof": {
-    "build": "b92d7a70954a64bd",
+    "build": "de9b13f736ae7126",
     "proofs": {
-      "history-targeted": {
-        "path": "/workspace/work/wk-continuation/history-targeted/report.json",
-        "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
-        "build": "b92d7a70954a64bd",
-        "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+      "master-wording-history-targeted": {
+        "path": "/workspace/work/wk-continuation/master-wording-history-targeted/report.json",
+        "sha256": "4d40a8d652b8bebf788b3327955570df3c389b12a3317cd65052ffa923d1759b",
+        "build": "de9b13f736ae7126",
+        "sourceDigest": "821765fe8334952f9806f95a5c6f139db1be997cb2b224fa372e8c3adc2adc98",
         "scope": "actual Chromium history partial proof; not full regression"
       },
-      "history-native-offline": {
-        "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
-        "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
-        "build": "b92d7a70954a64bd",
-        "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+      "master-wording-history-native-offline": {
+        "path": "/workspace/work/wk-continuation/master-wording-history-native-offline/report.json",
+        "sha256": "6bd912d2dcfce614fe543ddd9b1dae41cf7734c5d70db10015288fc48448df18",
+        "build": "de9b13f736ae7126",
+        "sourceDigest": "821765fe8334952f9806f95a5c6f139db1be997cb2b224fa372e8c3adc2adc98",
         "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
       },
-      "content-corrections-targeted": {
-        "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
-        "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
-        "build": "b92d7a70954a64bd",
-        "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+      "master-wording-corrections-resume-fixed": {
+        "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+        "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+        "build": "de9b13f736ae7126",
+        "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
         "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
       }
     },
-    "scope": "Actual completed current targeted UI evidence; not full regression. All preceding reports retained under their original build archives."
+    "scope": "Current actual targeted history/UI/answer/offline proofs; full new actual-engine acceptance remains separate."
   },
   "legacyCountercheck20261018": {
     "scope": "26bisheridentischeZusatztexte/26Antwortkettengelesen;18individuellunpassendeRichtigerklärungengezieltkorrigiert;andere8begründetbeibehalten. Keinepauschale26Ganzartikel-Fachabnahme.",
@@ -1444,5 +1444,32 @@
     "corrections": "Pictographs-only simplification corrected; concrete starter/observation/benefit and wrong reasons added; original question/title/date/location remain.",
     "remainingUncertainty": "Approximate dates; evidence does not prove a single inventor or one-day origin.",
     "unresolvedBlockingClaims": []
+  },
+  "earlyTechnicalProofBeforeAnswerWordingCorrection": {
+    "build": "b92d7a70954a64bd",
+    "proofs": {
+      "history-targeted": {
+        "path": "/workspace/work/wk-continuation/history-targeted/report.json",
+        "sha256": "a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a",
+        "build": "b92d7a70954a64bd",
+        "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+        "scope": "actual Chromium history partial proof; not full regression"
+      },
+      "history-native-offline": {
+        "path": "/workspace/work/wk-continuation/history-native-offline/report.json",
+        "sha256": "e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99",
+        "build": "b92d7a70954a64bd",
+        "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+        "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+      },
+      "content-corrections-targeted": {
+        "path": "/workspace/work/wk-continuation/content-corrections-targeted/report.json",
+        "sha256": "1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d",
+        "build": "b92d7a70954a64bd",
+        "sourceDigest": "370d8606d67ab2304e60107cff786c877b3c7e658eab3584a6db274a6a7a1227",
+        "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+      }
+    },
+    "scope": "Actual completed current targeted UI evidence; not full regression. All preceding reports retained under their original build archives."
   }
 }

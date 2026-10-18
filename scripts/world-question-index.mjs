@@ -1,16 +1,18 @@
+import {isRetainedAnswerWordingCorrection} from '../app/retained-answer-wording.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 export function challengeIndex(catalog,hints){return catalog.filter(t=>!t.history?.sensitive).flatMap(t=>[{...t.question,id:t.id+':mini',topic:t.id,topicTitle:t.title,difficulty:'easy'},...(t.challenges??[]).map(q=>({...q,topic:t.id,topicTitle:t.title}))]).map(q=>({...q,hints:hints[q.id]?.steps??[]}));}
 // Reconstruct only explicitly reviewed prompt/explanation corrections when
 // checking an immutable historical bank. Validate the current text first;
-// answers, solutions and every unrecorded field remain protected verbatim.
+// One exact wrong-answer grammar alias is additionally reviewed and migrated;
+// solutions, answer positions and every unrecorded value remain protected.
 export function historicalQuestionBank(questions,corrections){
  const records=new Map();
  for(const c of corrections){
-  if(records.has(c.id)||c.id!==c.topic+':mini'||!c.reason||!c.authority||!c.reviewedOn||!Array.isArray(c.changedFields)||!c.changedFields.length||new Set(c.changedFields).size!==c.changedFields.length||c.changedFields.some(k=>!['prompt','why'].includes(k)))throw Error('Invalid documented question correction');
+  if(records.has(c.id)||c.id!==c.topic+':mini'||!c.reason||!c.authority||!c.reviewedOn||!Array.isArray(c.changedFields)||!c.changedFields.length||new Set(c.changedFields).size!==c.changedFields.length||c.changedFields.some(k=>!['prompt','why','answers'].includes(k)))throw Error('Invalid documented question correction');
   const keys=['prompt','answers','correct','why'];
-  if([c.before,c.after].some(q=>!q||Object.keys(q).sort().join()!==[...keys].sort().join())||JSON.stringify(c.before.answers)!==JSON.stringify(c.after.answers)||c.before.correct!==c.after.correct||keys.filter(k=>JSON.stringify(c.before[k])!==JSON.stringify(c.after[k])).sort().join()!==[...c.changedFields].sort().join())throw Error('Correction changes protected answers or undocumented fields');
+  if([c.before,c.after].some(q=>!q||Object.keys(q).sort().join()!==[...keys].sort().join())||(JSON.stringify(c.before.answers)!==JSON.stringify(c.after.answers)&&!isRetainedAnswerWordingCorrection(c))||c.before.correct!==c.after.correct||keys.filter(k=>JSON.stringify(c.before[k])!==JSON.stringify(c.after[k])).sort().join()!==[...c.changedFields].sort().join())throw Error('Correction changes protected answers or undocumented fields');
   records.set(c.id,c);
  }
  return questions.map(q=>{
