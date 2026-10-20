@@ -480,6 +480,46 @@
       "why": "Baureste und Schrift sind unterschiedliche historische Quellen. Beide müssen im Zusammenhang gedeutet werden.",
       "kind": "context",
       "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "invention-camera--invention-smartphone",
+      "fromId": "invention-camera",
+      "toId": "invention-smartphone",
+      "kind": "exploration",
+      "why": "Das Smartphone verbindet Kamerasensor, Verarbeitung und Speicherung.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-camera--invention-telescope",
+      "fromId": "invention-camera",
+      "toId": "invention-telescope",
+      "kind": "exploration",
+      "why": "Beide nutzen Optik; ein Fernrohr muss das betrachtete Bild nicht selbst speichern.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-telescope--invention-satellite",
+      "fromId": "invention-telescope",
+      "toId": "invention-satellite",
+      "kind": "exploration",
+      "why": "Weltraumteleskope können als künstliche Satelliten die Erde umkreisen.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-telescope--science-solar-system",
+      "fromId": "invention-telescope",
+      "toId": "science-solar-system",
+      "kind": "exploration",
+      "why": "Fernrohre helfen, Körper im Sonnensystem zu beobachten.",
+      "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "invention-microscope--invention-telescope",
+      "fromId": "invention-microscope",
+      "toId": "invention-telescope",
+      "kind": "exploration",
+      "why": "Beide nutzen Optik; Mikroskope untersuchen kleine nahe Strukturen statt ferne Himmelskörper.",
+      "checkedAt": "2026-10-16"
     }
   ]
 }

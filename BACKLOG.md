@@ -1,3 +1,23 @@
+## WK055/057 · Offline-Challenge-Annahme gezielt repariert ·20.10.2026
+
+Optiklieferumfang unverändert. Nach tatsächlich rotem lokalen Volltest die gültigen Ein-/Zweihinweisformen mit erhaltenem Zufallsfall und zusätzlichem zwingendem Mischspielstand im bestehenden normalen Test prüfen. Originaler Khipu-Kaltstartzustand bestätigt, korrigierter ganzer Offlinehelper bei beendetem Server gezielt grün. Nun neue unveränderte volle lokale Pflichtprüfung; Quality135 vorher natürlich fertig werden lassen, dann erst begrenzten Korrekturstand auf bestehendenPR45 aktualisieren und exakte strikte CI abnehmen. Danach reguläre test-live-/Vercel-/Browserauslieferung und vorhandene Tier-/Kapitelarbeit fortführen. Keine Daten-/Testabschwächung oder neueRoadmap.
+
+## WK055/057 · PR45 nach belegtem Dialog-Testfehler fertigstellen ·20.10.2026
+
+Den bestehenden Optikumfang erhalten und ausschließlich die tatsächlich reproduzierte Escape-Synchronisierung im normalen Backup-Test korrigieren. Ursprünglicher negativer Kontrollfall und beide erfolgreichen ganzen Backup-Teilprüfungen bleiben belegt. Keine Testabschwächung oder geschützte Änderung. Aktuelle vollständige lokale Pflichtprüfung, exakte strikte CI und tatsächliche test-live-/Vercel-/Browserauslieferung bleiben vor Abschluss erforderlich. Danach den bereits gezielt geprüften Tier-Spielstandserhalt und die bestehende Kapitelarbeit innerhalb3.5 fortführen; keine neue Roadmap oder News.
+
+## WK053/055/057 · Optik lokal vollständig, reguläre Auslieferung offen ·20.10.2026
+
+123aktuelle vollständige lokalePrüfmeldungen erfolgreich; Originale erhalten,54Dossiers nach tatsächlicherFach-/UIprüfung gebunden. Noch aktueller finalerIntegritäts-/Unitnachweis, exakte strikteGitHubQuality, regulärer test-live-Merge und wirklicheVercel-/Browserbestätigung. Danach vorgemerkten eigenständigen Erhalt ältererTierdetektiv-Auswahlen vor weiterer Inhaltswelle fertigstellen; aktuellen Optikumfang dafür nicht erneut ausweiten. Kapitelarbeit und übrigerMasterbestand bleiben im bestehenden Paket3.5 erhalten.
+
+## WK-051/055/057 · Optik einschließlich alter Spielrunden gezielt geprüft ·20.10.2026
+
+Kamera/Fernrohr/Mikroskop bleiben derselbe vorbereitete Lieferabschnitt. Notwendige Spielintegration korrigiert: zwölf alte Technikfragen und24alte Früher-/Heute-Aufgaben vollständig unverändert; drei passende Technikfragen ergänzen nur die neuen Optikkarten. Vorhandene Antwortreihenfolgen/alte Fehlversuche bleiben beim Wachsen des Katalogs erhalten; Schema3 und globale Speicherung unverändert. Vier direkte Produktionsregressionen, fünf tatsächliche alte Runden, echte Optik-Sicherung/Dateiimport und20gerenderte gegenseitige Wissenswege grün. Der ursprüngliche122erVollnachweis bleibt archiviert; neue aktuelle vollständige Schlussabnahme, strikte CI und tatsächliche Auslieferung weiterhin Pflicht.
+
+## WK-051/052 · vorhandener Optik-Teilabschnitt in Prüfung ·20.10.2026
+
+Drei bereits entwickelte Masterkarten (Kamera/Fernrohr/Mikroskop) auf tatsächlich ausgeliefertem PR44 isoliert:145Karten/175Fragen, fünf erklärte beidseitige Beziehungen. Alte142Karten/172Fragen vollständig erhalten; nur die drei betroffenen Altziele um passende Rückwege ergänzt. Quellen/Fakten/Lernhandlungen/Fehlfeedback und eigene Modelle gegengelesen, Lochstrahlen und Objektiv/Brennpunkt/Okular im Linsenbeispiel präzisiert. Aktuelle gezielte Browserprüfung grün; vollständige aktuelle Schlussprüfung/strikte CI/tatsächliche Auslieferung noch offen. Die übrige vorbereitete Masterarbeit und Kapitelüberarbeitung als Teil von3.5 bleiben erhalten. Keine neuen Themen zusätzlich erstellt, kein Vorziehen späterer Pakete.
+
 ## WK053/055/057 · vorhandene historische Spurensuche fertigstellen
 
 Die bereits vorbereiteten Khipu-/Mohenjo-Daro-Karten mit tatsächlichen notwendigen Altrückwegen als normalen eigenständigen Abschnitt abschließen. Beide Themen haben keine unveröffentlichten Kartenabhängigkeiten. Quellen-/Fach-/Medienbelege und alte Gesamtarbeit erhalten, frühe UI-/Zoom-/Offline-/Altpassnachweise bestehen; vollständiger lokaler121erPflichtlauf und nachfolgende51UI-Bindungen erfolgreich; abschließende Integrität/Units, exaktes CI und reale Auslieferung bleiben erforderlich. Der bestehende Masterrest wird dadurch weder ersetzt noch blockiert; Kapitelüberarbeitung gehört zu3.5. Aktueller Umfang/Belege ausschließlich PROJECT_STATE und vorhandene Dossiers, keine zweite Roadmap.

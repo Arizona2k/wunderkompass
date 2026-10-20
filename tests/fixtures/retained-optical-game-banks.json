@@ -1,0 +1,439 @@
+{
+  "sourceCommit": "64d45a3c0e73b5fba79e0746b91089f741aae457",
+  "technology": [
+    {
+      "prompt": "Welche Erfindung hilft bei diesem Problem? Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
+      "answers": [
+        "Elektrisches Licht",
+        "Das Flugzeug",
+        "Der Computer"
+      ],
+      "correct": 0,
+      "why": "Viele Menschen arbeiteten daran, darunter Joseph Swan sowie Thomas Edison und sein Team. Sie verbesserten Lampen und Stromversorgung.",
+      "id": "invention-light",
+      "topic": "invention-light"
+    },
+    {
+      "prompt": "Welche Erfindung hilft bei diesem Problem? Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
+      "answers": [
+        "Das Auto",
+        "Das Telefon",
+        "Das Internet"
+      ],
+      "correct": 0,
+      "why": "Es gab schon Dampf- und Elektrofahrzeuge. Karl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos.",
+      "id": "invention-car",
+      "topic": "invention-car"
+    },
+    {
+      "prompt": "Welche Erfindung hilft bei diesem Problem? Viele Waren und Reisende mussten über Land transportiert werden.",
+      "answers": [
+        "Die Eisenbahn",
+        "Der Computer",
+        "Der Kompass"
+      ],
+      "correct": 0,
+      "why": "Schienenwege und Lokomotiven entstanden schrittweise. 1825 eröffnete die Bahn Stockton–Darlington. Viele Menschen verbesserten danach Strecken und Züge.",
+      "id": "invention-railway",
+      "topic": "invention-railway"
+    },
+    {
+      "prompt": "Welche Erfindung hilft bei diesem Problem? Menschen wollten durch die Luft reisen.",
+      "answers": [
+        "Das Flugzeug",
+        "Das Internet",
+        "Der Buchdruck"
+      ],
+      "correct": 0,
+      "why": "Ballons und Gleiter gab es schon. Die Wright-Brüder erprobten Steuerung und Flügel, bevor ihnen 1903 ein angetriebener, gesteuerter Flug gelang.",
+      "id": "invention-airplane",
+      "topic": "invention-airplane"
+    },
+    {
+      "prompt": "Welche Erfindung hilft bei diesem Problem? Eine Stimme war normalerweise nur in der Nähe hörbar.",
+      "answers": [
+        "Das Telefon",
+        "Der Kompass",
+        "Die Rakete"
+      ],
+      "correct": 0,
+      "why": "Viele Menschen experimentierten damit. Alexander Graham Bell erhielt 1876 ein wichtiges Patent. Auch Elisha Gray und andere arbeiteten an Telefontechnik.",
+      "id": "invention-phone",
+      "topic": "invention-phone"
+    },
+    {
+      "prompt": "Welche Erfindung hilft bei diesem Problem? Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
+      "answers": [
+        "Der Computer",
+        "Der Buchdruck",
+        "Der Satellit"
+      ],
+      "correct": 0,
+      "why": "Rechenmaschinen, mechanische Pläne und elektronische Computer hatten viele Beteiligte in mehreren Ländern. Es gibt nicht einen einzigen Erfinder des Computers.",
+      "id": "invention-computer",
+      "topic": "invention-computer"
+    },
+    {
+      "prompt": "Welche Erfindung hilft bei diesem Problem? Computer an verschiedenen Orten sollten Informationen austauschen.",
+      "answers": [
+        "Das Internet",
+        "Die Rakete",
+        "Das Smartphone"
+      ],
+      "correct": 0,
+      "why": "Viele Teams entwickelten Paketübertragung und gemeinsame Regeln. Das ARPANET verband 1969 erste Rechner. Forschende aus mehreren Ländern trugen zur Entwicklung des Internets bei.",
+      "id": "invention-internet",
+      "topic": "invention-internet"
+    },
+    {
+      "prompt": "Welche Erfindung hilft bei diesem Problem? Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
+      "answers": [
+        "Der Kompass",
+        "Der Satellit",
+        "Elektrisches Licht"
+      ],
+      "correct": 0,
+      "why": "Menschen kannten magnetische Steine schon früher. Seefahrer in China nutzten später magnetische Richtungsanzeigen; das Wissen verbreitete sich weiter.",
+      "id": "invention-compass",
+      "topic": "invention-compass"
+    },
+    {
+      "prompt": "Welche Erfindung hilft bei diesem Problem? Ein Buch von Hand abzuschreiben dauerte lange.",
+      "answers": [
+        "Der Buchdruck",
+        "Das Smartphone",
+        "Das Auto"
+      ],
+      "correct": 0,
+      "why": "In China und Korea gab es bewegliche Druckzeichen vor Gutenberg. Seine Werkstatt verband Metalltypen, geeignete Farbe und eine Presse zu einem wirksamen europäischen System.",
+      "id": "invention-printing",
+      "topic": "invention-printing"
+    },
+    {
+      "prompt": "Welche Erfindung hilft bei diesem Problem? Menschen wollten Geräte und später Menschen ins Weltall bringen.",
+      "answers": [
+        "Die Rakete",
+        "Elektrisches Licht",
+        "Die Eisenbahn"
+      ],
+      "correct": 0,
+      "why": "Raketen gab es lange vor der Raumfahrt. Robert Goddard startete 1926 eine Rakete mit flüssigen Treibstoffen. Später entwickelten große Teams leistungsfähigere Systeme.",
+      "id": "invention-rocket",
+      "topic": "invention-rocket"
+    },
+    {
+      "prompt": "Welche Erfindung hilft bei diesem Problem? Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
+      "answers": [
+        "Der Satellit",
+        "Das Auto",
+        "Das Flugzeug"
+      ],
+      "correct": 0,
+      "why": "Teams in der Sowjetunion brachten 1957 Sputnik 1 in eine Erdumlaufbahn. Weitere Länder und internationale Teams entwickelten viele unterschiedliche Satelliten.",
+      "id": "invention-satellite",
+      "topic": "invention-satellite"
+    },
+    {
+      "prompt": "Welche Erfindung hilft bei diesem Problem? Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
+      "answers": [
+        "Das Smartphone",
+        "Die Eisenbahn",
+        "Das Telefon"
+      ],
+      "correct": 0,
+      "why": "Viele Entwicklungen kamen zusammen: Mobilfunk, Chips, Akkus, Bildschirme und Programme. IBM und BellSouth kombinierten beim Simon in den 1990er-Jahren mehrere Funktionen.",
+      "id": "invention-smartphone",
+      "topic": "invention-smartphone"
+    }
+  ],
+  "thenNow": [
+    {
+      "prompt": "Früher oder heute? In einer Glühlampe wurde ein dünner Draht so heiß, dass er leuchtete.",
+      "answers": [
+        "Früher",
+        "Heute",
+        "Noch keine wirkliche Entwicklung"
+      ],
+      "correct": 0,
+      "why": "LED-Lampen erzeugen Licht auf andere Weise und brauchen meist weniger Energie.",
+      "id": "invention-light",
+      "topic": "invention-light"
+    },
+    {
+      "prompt": "Früher oder heute? LED-Lampen erzeugen Licht auf andere Weise und brauchen meist weniger Energie.",
+      "answers": [
+        "Heute",
+        "Früher",
+        "Nur ein Zukunftswunsch"
+      ],
+      "correct": 0,
+      "why": "In einer Glühlampe wurde ein dünner Draht so heiß, dass er leuchtete.",
+      "id": "invention-light-today",
+      "topic": "invention-light"
+    },
+    {
+      "prompt": "Früher oder heute? Der Benz-Motorwagen hatte drei Räder und keinen geschlossenen Innenraum.",
+      "answers": [
+        "Früher",
+        "Heute",
+        "Noch keine wirkliche Entwicklung"
+      ],
+      "correct": 0,
+      "why": "Es gibt Autos mit Verbrennungsmotor, Elektromotor oder beiden. Bremsen und Sicherheitsgurte helfen, Menschen zu schützen.",
+      "id": "invention-car",
+      "topic": "invention-car"
+    },
+    {
+      "prompt": "Früher oder heute? Es gibt Autos mit Verbrennungsmotor, Elektromotor oder beiden. Bremsen und Sicherheitsgurte helfen, Menschen zu schützen.",
+      "answers": [
+        "Heute",
+        "Früher",
+        "Nur ein Zukunftswunsch"
+      ],
+      "correct": 0,
+      "why": "Der Benz-Motorwagen hatte drei Räder und keinen geschlossenen Innenraum.",
+      "id": "invention-car-today",
+      "topic": "invention-car"
+    },
+    {
+      "prompt": "Früher oder heute? Dampflokomotiven nutzten erhitztes Wasser. Der Dampf bewegte Kolben und Räder.",
+      "answers": [
+        "Früher",
+        "Heute",
+        "Noch keine wirkliche Entwicklung"
+      ],
+      "correct": 0,
+      "why": "Viele Züge fahren mit Elektromotoren. Gleise, Signale und Teams verbinden die Orte.",
+      "id": "invention-railway",
+      "topic": "invention-railway"
+    },
+    {
+      "prompt": "Früher oder heute? Viele Züge fahren mit Elektromotoren. Gleise, Signale und Teams verbinden die Orte.",
+      "answers": [
+        "Heute",
+        "Früher",
+        "Nur ein Zukunftswunsch"
+      ],
+      "correct": 0,
+      "why": "Dampflokomotiven nutzten erhitztes Wasser. Der Dampf bewegte Kolben und Räder.",
+      "id": "invention-railway-today",
+      "topic": "invention-railway"
+    },
+    {
+      "prompt": "Früher oder heute? Frühe Flugzeuge waren leicht, offen und hatten Propeller.",
+      "answers": [
+        "Früher",
+        "Heute",
+        "Noch keine wirkliche Entwicklung"
+      ],
+      "correct": 0,
+      "why": "Passagierflugzeuge verbinden weit entfernte Orte. Auch Gleitflugzeuge ohne eigenen Motor können fliegen.",
+      "id": "invention-airplane",
+      "topic": "invention-airplane"
+    },
+    {
+      "prompt": "Früher oder heute? Passagierflugzeuge verbinden weit entfernte Orte. Auch Gleitflugzeuge ohne eigenen Motor können fliegen.",
+      "answers": [
+        "Heute",
+        "Früher",
+        "Nur ein Zukunftswunsch"
+      ],
+      "correct": 0,
+      "why": "Frühe Flugzeuge waren leicht, offen und hatten Propeller.",
+      "id": "invention-airplane-today",
+      "topic": "invention-airplane"
+    },
+    {
+      "prompt": "Früher oder heute? Ein frühes Telefon verband Geräte über Leitungen.",
+      "answers": [
+        "Früher",
+        "Heute",
+        "Noch keine wirkliche Entwicklung"
+      ],
+      "correct": 0,
+      "why": "Gespräche können über Kabel, Funk und Datennetze übertragen werden.",
+      "id": "invention-phone",
+      "topic": "invention-phone"
+    },
+    {
+      "prompt": "Früher oder heute? Gespräche können über Kabel, Funk und Datennetze übertragen werden.",
+      "answers": [
+        "Heute",
+        "Früher",
+        "Nur ein Zukunftswunsch"
+      ],
+      "correct": 0,
+      "why": "Ein frühes Telefon verband Geräte über Leitungen.",
+      "id": "invention-phone-today",
+      "topic": "invention-phone"
+    },
+    {
+      "prompt": "Früher oder heute? Frühe elektronische Rechner füllten große Räume.",
+      "answers": [
+        "Früher",
+        "Heute",
+        "Noch keine wirkliche Entwicklung"
+      ],
+      "correct": 0,
+      "why": "Kleine Chips stecken in Laptops, Autos und vielen weiteren Geräten. Programme geben die Anweisungen.",
+      "id": "invention-computer",
+      "topic": "invention-computer"
+    },
+    {
+      "prompt": "Früher oder heute? Kleine Chips stecken in Laptops, Autos und vielen weiteren Geräten. Programme geben die Anweisungen.",
+      "answers": [
+        "Heute",
+        "Früher",
+        "Nur ein Zukunftswunsch"
+      ],
+      "correct": 0,
+      "why": "Frühe elektronische Rechner füllten große Räume.",
+      "id": "invention-computer-today",
+      "topic": "invention-computer"
+    },
+    {
+      "prompt": "Früher oder heute? Einige Forschungsrechner waren über Leitungen verbunden.",
+      "answers": [
+        "Früher",
+        "Heute",
+        "Noch keine wirkliche Entwicklung"
+      ],
+      "correct": 0,
+      "why": "Das Internet verbindet viele Netze. Das Web mit seinen verlinkten Seiten ist eine Anwendung darauf.",
+      "id": "invention-internet",
+      "topic": "invention-internet"
+    },
+    {
+      "prompt": "Früher oder heute? Das Internet verbindet viele Netze. Das Web mit seinen verlinkten Seiten ist eine Anwendung darauf.",
+      "answers": [
+        "Heute",
+        "Früher",
+        "Nur ein Zukunftswunsch"
+      ],
+      "correct": 0,
+      "why": "Einige Forschungsrechner waren über Leitungen verbunden.",
+      "id": "invention-internet-today",
+      "topic": "invention-internet"
+    },
+    {
+      "prompt": "Früher oder heute? Frühe Formen unterschieden sich vom heutigen Taschenkompass.",
+      "answers": [
+        "Früher",
+        "Heute",
+        "Noch keine wirkliche Entwicklung"
+      ],
+      "correct": 0,
+      "why": "Eine Kompassnadel richtet sich ungefähr nach dem Erdmagnetfeld. Magnetisch Nord und geografisch Nord sind nicht genau dasselbe.",
+      "id": "invention-compass",
+      "topic": "invention-compass"
+    },
+    {
+      "prompt": "Früher oder heute? Eine Kompassnadel richtet sich ungefähr nach dem Erdmagnetfeld. Magnetisch Nord und geografisch Nord sind nicht genau dasselbe.",
+      "answers": [
+        "Heute",
+        "Früher",
+        "Nur ein Zukunftswunsch"
+      ],
+      "correct": 0,
+      "why": "Frühe Formen unterschieden sich vom heutigen Taschenkompass.",
+      "id": "invention-compass-today",
+      "topic": "invention-compass"
+    },
+    {
+      "prompt": "Früher oder heute? Eine Druckwerkstatt setzte jede Seite aus einzelnen Buchstaben zusammen.",
+      "answers": [
+        "Früher",
+        "Heute",
+        "Noch keine wirkliche Entwicklung"
+      ],
+      "correct": 0,
+      "why": "Druckmaschinen und digitale Medien geben Texte an viele Menschen weiter.",
+      "id": "invention-printing",
+      "topic": "invention-printing"
+    },
+    {
+      "prompt": "Früher oder heute? Druckmaschinen und digitale Medien geben Texte an viele Menschen weiter.",
+      "answers": [
+        "Heute",
+        "Früher",
+        "Nur ein Zukunftswunsch"
+      ],
+      "correct": 0,
+      "why": "Eine Druckwerkstatt setzte jede Seite aus einzelnen Buchstaben zusammen.",
+      "id": "invention-printing-today",
+      "topic": "invention-printing"
+    },
+    {
+      "prompt": "Früher oder heute? Goddards Versuchsrakete war klein und flog nur kurz.",
+      "answers": [
+        "Früher",
+        "Heute",
+        "Noch keine wirkliche Entwicklung"
+      ],
+      "correct": 0,
+      "why": "Raketen bringen Satelliten und Raumfahrzeuge auf ihren Weg. Manche Teile können erneut benutzt werden.",
+      "id": "invention-rocket",
+      "topic": "invention-rocket"
+    },
+    {
+      "prompt": "Früher oder heute? Raketen bringen Satelliten und Raumfahrzeuge auf ihren Weg. Manche Teile können erneut benutzt werden.",
+      "answers": [
+        "Heute",
+        "Früher",
+        "Nur ein Zukunftswunsch"
+      ],
+      "correct": 0,
+      "why": "Goddards Versuchsrakete war klein und flog nur kurz.",
+      "id": "invention-rocket-today",
+      "topic": "invention-rocket"
+    },
+    {
+      "prompt": "Früher oder heute? Sputnik 1 sendete Funksignale.",
+      "answers": [
+        "Früher",
+        "Heute",
+        "Noch keine wirkliche Entwicklung"
+      ],
+      "correct": 0,
+      "why": "Satelliten helfen bei Wetterbeobachtung, Kommunikation, Navigation und Forschung. Sie bleiben nicht einfach unbeweglich über der Erde.",
+      "id": "invention-satellite",
+      "topic": "invention-satellite"
+    },
+    {
+      "prompt": "Früher oder heute? Satelliten helfen bei Wetterbeobachtung, Kommunikation, Navigation und Forschung. Sie bleiben nicht einfach unbeweglich über der Erde.",
+      "answers": [
+        "Heute",
+        "Früher",
+        "Nur ein Zukunftswunsch"
+      ],
+      "correct": 0,
+      "why": "Sputnik 1 sendete Funksignale.",
+      "id": "invention-satellite-today",
+      "topic": "invention-satellite"
+    },
+    {
+      "prompt": "Früher oder heute? Frühe Kombinationsgeräte waren groß und konnten viel weniger als heutige Geräte.",
+      "answers": [
+        "Früher",
+        "Heute",
+        "Noch keine wirkliche Entwicklung"
+      ],
+      "correct": 0,
+      "why": "Ein Smartphone kann telefonieren, fotografieren, Karten anzeigen und Programme ausführen.",
+      "id": "invention-smartphone",
+      "topic": "invention-smartphone"
+    },
+    {
+      "prompt": "Früher oder heute? Ein Smartphone kann telefonieren, fotografieren, Karten anzeigen und Programme ausführen.",
+      "answers": [
+        "Heute",
+        "Früher",
+        "Nur ein Zukunftswunsch"
+      ],
+      "correct": 0,
+      "why": "Frühe Kombinationsgeräte waren groß und konnten viel weniger als heutige Geräte.",
+      "id": "invention-smartphone-today",
+      "topic": "invention-smartphone"
+    }
+  ]
+}

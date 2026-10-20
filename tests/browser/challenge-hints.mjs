@@ -3,25 +3,51 @@ import {CHALLENGE_BANK, emptyChallenge, restoreChallenge} from '../../app/knowle
 import {createSave, emptyProgress, SAVE_KEY} from '../../app/progress-storage.ts';
 
 export async function offlineChallengeHints(page,report){
- await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();
- await page.getByRole('dialog').locator('input').fill('Wissens-Challenge');
- await page.getByRole('option').filter({hasText:'Wissens-Challenge'}).click();
- await page.locator('.challenge-levels').getByRole('button').filter({hasText:'Mittel'}).click();
- const state=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['world:knowledge-challenge'].challenge,SAVE_KEY);
- const q=CHALLENGE_BANK.find(q=>q.id===state.ids[0]),room=page.locator('.knowledge-challenge'),hint=room.locator('.world-game-hint');
- await hint.locator('summary').click();await hint.getByText(q.hints[0],{exact:true}).waitFor();
- assert.equal(await hint.getByText(q.hints[1],{exact:true}).count(),0);
- await hint.getByRole('button',{name:'Noch ein Hinweis',exact:true}).click();
- await hint.getByText(q.hints[1],{exact:true}).waitFor();
- const answers=room.locator('.quiz-answer');
- await answers.filter({has:page.getByText(q.answers.find((_,i)=>i!==q.correct),{exact:true})}).click();
- await room.getByText('Noch einmal nachdenken.',{exact:true}).waitFor();
- assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
- await answers.filter({has:page.getByText(q.answers[q.correct],{exact:true})}).click();
- await room.getByText(q.why,{exact:true}).waitFor();
- await room.getByRole('button',{name:'Nächste Aufgabe',exact:true}).click();
- assert.equal(await hint.getAttribute('open'),null);
- report.checks.push('Cold offline challenge with server stopped: both individual hint steps, wrong/right, explanation and next question');
+ const room=page.locator('.knowledge-challenge'),hint=room.locator('.world-game-hint');
+ const open=async()=>{await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('dialog').locator('input').fill('Wissens-Challenge');await page.getByRole('option').filter({hasText:'Wissens-Challenge'}).click();};
+ const saved=()=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)),SAVE_KEY);
+ async function exercise(q,next){
+  assert.ok(q&&[1,2].includes(q.hints.length),'actual authored one- or two-step hint question');
+  await room.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
+  await hint.locator('summary').click();await hint.getByText(q.hints[0],{exact:true}).waitFor();
+  if(q.hints.length===2){
+   assert.equal(await hint.getByText(q.hints[1],{exact:true}).count(),0);
+   await hint.getByRole('button',{name:'Noch ein Hinweis',exact:true}).click();
+   await hint.getByText(q.hints[1],{exact:true}).waitFor();
+  }else{assert.equal(await hint.getByRole('button',{name:'Noch ein Hinweis',exact:true}).count(),0);assert.equal(await hint.locator('.challenge-second-hint').count(),0);}
+  const answers=room.locator('.quiz-answer');
+  await answers.filter({has:page.getByText(q.answers.find((_,i)=>i!==q.correct),{exact:true})}).click();
+  await room.getByText('Noch einmal nachdenken.',{exact:true}).waitFor();
+  assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
+  await answers.filter({has:page.getByText(q.answers[q.correct],{exact:true})}).click();
+  await room.getByText(q.why,{exact:true}).waitFor();
+  await room.getByRole('button',{name:'Nächste Aufgabe',exact:true}).click();
+  await room.getByRole('heading',{name:next.prompt,exact:true}).waitFor();
+  assert.equal(await hint.getAttribute('open'),null);
+  return {id:q.id,steps:q.hints.length,wrongRightExplanationAndNextReset:true};
+ }
+ await open();await page.locator('.challenge-levels').getByRole('button').filter({hasText:'Mittel'}).click();
+ await page.waitForFunction(key=>{const s=JSON.parse(localStorage.getItem(key)).progress.gameSessions['world:knowledge-challenge']?.challenge;return s?.difficulty==='medium'&&s.index===0&&s.ids.length===6;},SAVE_KEY);
+ const state=(await saved()).progress.gameSessions['world:knowledge-challenge'].challenge;
+ const random=await exercise(CHALLENGE_BANK.find(q=>q.id===state.ids[0]),CHALLENGE_BANK.find(q=>q.id===state.ids[1]));
+ // Retain the real random round above. A valid saved mixed round additionally
+ // makes both authored hint shapes mandatory, independent of future pool growth.
+ const pool=CHALLENGE_BANK.filter(q=>q.difficulty==='medium'),one=pool.find(q=>q.hints.length===1),two=pool.find(q=>q.hints.length===2);assert.ok(one&&two,'both real authored medium hint shapes exist');
+ const questions=[one,two,...pool.filter(q=>q!==one&&q!==two)].slice(0,6);assert.equal(questions.length,6);
+ const session={difficulty:'medium',ids:questions.map(q=>q.id),orders:Object.fromEntries(questions.map(q=>[q.id,[...q.answers].reverse()])),index:0,answer:null,done:false};assert.deepEqual(restoreChallenge(session,emptyChallenge()),session);
+ const before=await saved(),fixture=structuredClone(before);fixture.progress.gameSessions['world:knowledge-challenge']={...fixture.progress.gameSessions['world:knowledge-challenge'],challenge:session};
+ await page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();
+ await page.locator('input[type=file]').setInputFiles({name:'synthetic-offline-mixed-hints.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(fixture))});
+ await page.getByRole('button',{name:'Pass wiederherstellen',exact:true}).click();await page.locator('.passport-dialog').waitFor({state:'hidden'});
+ await page.waitForFunction(({key,ids})=>JSON.stringify(JSON.parse(localStorage.getItem(key)).progress.gameSessions['world:knowledge-challenge'].challenge.ids)===JSON.stringify(ids),{key:SAVE_KEY,ids:session.ids});
+ const imported=await saved();assert.equal(imported.schemaVersion,3);
+ for(const key of Object.keys(before.progress).filter(k=>!['gameSessions','lastActivity'].includes(k)))assert.deepEqual(imported.progress[key],before.progress[key],'other actual cold progress retained '+key);
+ for(const[key,value]of Object.entries(before.progress.gameSessions))if(key!=='world:knowledge-challenge')assert.deepEqual(imported.progress.gameSessions[key],value,'other actual cold game retained '+key);
+ await open();
+ const deterministic=[];for(let i=0;i<2;i++)deterministic.push(await exercise(questions[i],questions[i+1]));
+ assert.deepEqual(deterministic.map(q=>q.steps),[1,2],'both single and second-step offline behavior remain mandatory');
+ report.offlineHintShapes={random,deterministic,actualSyntheticPassImport:true,allOtherProgressRetained:true};
+ report.checks.push('Cold offline challenge with server stopped: actual random medium question plus mandatory saved single/two-step cases, wrong/right, explanation, next-question reset and all other pass progress retained');
 }
 
 // Synthetic Schema-3 rounds use the same fields as the version before hints.
