@@ -536,7 +536,6 @@
     },
     {
       "number": 23,
-      "title": "2B: Forscherlabor 2.0, vernetzte Startseite und geprüfte Kindernachrichten",
       "url": "https://github.com/Arizona2k/wunderkompass/pull/23",
       "base": "test-live",
       "mergedAt": "2026-10-12T08:14:36Z",
@@ -566,39 +565,7 @@
       ]
     },
     {
-      "number": 24,
-      "title": "Paket 2C: Engineering, signierte Kinder-News und Themenrotation",
-      "url": "https://github.com/Arizona2k/wunderkompass/pull/24",
-      "base": "test-live",
-      "mergedAt": "2026-10-12T14:27:37Z",
-      "mergeCommit": "2de46220f602ce7ac6124afb59db0aed50dfc8e4",
-      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/2de46220f602ce7ac6124afb59db0aed50dfc8e4/statuses",
-      "deploymentStatuses": [
-        {
-          "id": 56148063672,
-          "context": "Vercel",
-          "state": "success",
-          "creator": "vercel[bot]",
-          "description": "Deployment has completed",
-          "createdAt": "2026-10-12T14:30:41Z",
-          "updatedAt": "2026-10-12T14:30:41Z",
-          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/857HqwbPXKkx3x97wNzoeCa4TdpV"
-        },
-        {
-          "id": 56147833283,
-          "context": "Vercel",
-          "state": "pending",
-          "creator": "vercel[bot]",
-          "description": "Vercel is deploying your app",
-          "createdAt": "2026-10-12T14:27:40Z",
-          "updatedAt": "2026-10-12T14:27:40Z",
-          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/857HqwbPXKkx3x97wNzoeCa4TdpV"
-        }
-      ]
-    },
-    {
       "number": 25,
-      "title": "Paket 3: Lernreisen 2.0 und belegter Nachrichten-Betriebsstand",
       "url": "https://github.com/Arizona2k/wunderkompass/pull/25",
       "base": "test-live",
       "mergedAt": "2026-10-12T23:52:06Z",

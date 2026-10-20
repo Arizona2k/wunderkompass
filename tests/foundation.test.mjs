@@ -26,9 +26,8 @@ test('local selection follows real transitive unit dependencies and retains cons
  for(const file of ['vite.config.ts','app/foundation.css','app/world-reader.tsx','unknown-runtime.js']){const p=selectTests([file]);assert.ok(p.browser.includes('foundation'),file);assert.ok(p.browser.includes('core'),file);}
  assert.deepEqual(selectTests(['README.md']).browser,[]);assert.deepEqual(selectTests(['README.md']).unitTests,[]);
  assert.equal(selectTests(['scripts/release/policy.cjs']).release,true);assert.ok(selectTests(['package.json']).unitTests.includes('tests/playground.test.mjs'));
- const news=selectTests(['scripts/news/engine.mjs']);assert.ok(news.unitTests.includes('tests/news.test.mjs'));assert.deepEqual(news.browser,[]);assert.equal(news.release,false);
  const removed=selectTests(['app/deleted-runtime-dependency.mjs']);assert.ok(removed.unitTests.includes('tests/progress.test.mjs'));assert.ok(removed.browser.includes('backup'));
- assert.ok(selectTests(['app/news-content.json']).browser.includes('research'),'published news is browser content');
+ assert.ok(selectTests(['app/global-search.tsx']).browser.includes('no-news'),'shared UI changes retain the news-removal regression');
 });
 test('offline fingerprint covers entry/config/package changes, ignores local evidence and is content-based',()=>{
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'wk-inputs-'));
@@ -36,7 +35,7 @@ test('offline fingerprint covers entry/config/package changes, ignores local evi
  const initial=learningFingerprint(root);fs.writeFileSync(path.join(root,'work/proof.json'),'not runtime');assert.equal(learningFingerprint(root),initial);
  fs.writeFileSync(path.join(root,'vite.config.ts'),'after');const config=learningFingerprint(root);assert.notEqual(config,initial);assert.equal(learningFingerprint(root),config);
  fs.writeFileSync(path.join(root,'migration/main.tsx'),'other');assert.notEqual(learningFingerprint(root),config);for(const file of ['index.html','tsconfig.json','pnpm-workspace.yaml']){const before=learningFingerprint(root);fs.writeFileSync(path.join(root,file),'changed');assert.notEqual(learningFingerprint(root),before,file+' must invalidate the offline version');}
- fs.mkdirSync(path.join(root,'content'));const before=learningFingerprint(root);fs.writeFileSync(path.join(root,'content/news-source-policy.json'),'{"hosts":[]}');assert.notEqual(learningFingerprint(root),before,'active news validation policy must renew offline build');
+ fs.mkdirSync(path.join(root,'content'));const before=learningFingerprint(root);fs.writeFileSync(path.join(root,'content/news-source-policy.json'),'{"hosts":[]}');assert.equal(learningFingerprint(root),before,'removed news policy is no longer an active build input');
  }finally{fs.rmSync(root,{recursive:true,force:true});}
 });
 test('compact world index preserves every catalog identity and all overview/timeline fields without embedding full articles',()=>{
@@ -58,4 +57,4 @@ test('local changed-module syntax rejects the actual duplicate-import failure be
  try{const file=path.join(dir,'browser-module.mjs');fs.writeFileSync(file,"import {createHash} from 'node:crypto';\nimport {createHash} from 'node:crypto';\n");assert.throws(()=>checkSyntaxFiles([file]),/Node syntax check failed/);fs.writeFileSync(file,"import {createHash} from 'node:crypto';\nexport const hash = createHash;\n");assert.deepEqual(checkSyntaxFiles([file]).checked,[file]);assert.ok(selectTests(['tests/browser/foundation.mjs']).syntaxFiles.includes('tests/browser/foundation.mjs'));assert.deepEqual(selectTests(['README.md']).syntaxFiles,[]);assert.deepEqual(selectTests(['app/deleted-runtime-dependency.mjs']).syntaxFiles,[]);}finally{fs.rmSync(dir,{recursive:true,force:true});}
 });
 
-test('local conservative selection uses the same required UI groups as full acceptance',()=>{for(const file of ['unknown-runtime-input.js','scripts/quality-evidence.mjs','app/learning-data.ts'])assert.deepEqual(new Set(selectTests([file]).browser),new Set(REQUIRED_SUITES.filter(s=>s!=='news-feed')));assert.deepEqual(selectTests(['app/challenge-hints.json']).browser,['challenge','offline']);});
+test('local conservative selection uses the same required UI groups as full acceptance',()=>{for(const file of ['unknown-runtime-input.js','scripts/quality-evidence.mjs','app/learning-data.ts'])assert.deepEqual(new Set(selectTests([file]).browser),new Set(REQUIRED_SUITES));assert.deepEqual(selectTests(['app/challenge-hints.json']).browser,['challenge','offline']);});

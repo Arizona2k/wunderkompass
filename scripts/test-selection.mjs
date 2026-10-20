@@ -37,9 +37,8 @@ export function selectTests(changed){
  const files=[...new Set(changed.map(f=>f.replaceAll('\\','/')))];
  const runtime=files.filter(f=>!/^work\/|^\.qa-output\//.test(f)&&!/\.md$/.test(f));
  const syntaxFiles=runtime.filter(f=>/\.(?:mjs|cjs|js)$/.test(f)&&fs.existsSync(f)&&fs.statSync(f).isFile()).sort();
- const newsOnly=runtime.length>0&&runtime.every(f=>/^(scripts\/news\/|tests\/news.*\.test\.mjs$|content\/news-source-policy\.json$)/.test(f));
- const infrastructure=!newsOnly&&runtime.some(f=>/^(package\.json|pnpm-lock|qa\/|vite\.|tsconfig|eslint|build\/|scripts\/|\.github\/|performance-budgets)/.test(f));
- const unknown=!newsOnly&&runtime.some(f=>! /^(app\/|components\/|hooks\/|lib\/|migration\/|public\/|exports\/|tests\/)/.test(f));
+ const infrastructure=runtime.some(f=>/^(package\.json|pnpm-lock|qa\/|vite\.|tsconfig|eslint|build\/|scripts\/|\.github\/|performance-budgets)/.test(f));
+ const unknown=runtime.some(f=>! /^(app\/|components\/|hooks\/|lib\/|migration\/|public\/|exports\/|tests\/)/.test(f));
  // A deleted dependency cannot be resolved by the current graph: fail broad.
  const deleted=runtime.some(f=>!fs.existsSync(f));
  const allUnits=fs.readdirSync('tests').filter(f=>f.endsWith('.test.mjs')).map(f=>'tests/'+f);
@@ -48,14 +47,13 @@ export function selectTests(changed){
  const unitTests=infrastructure||unknown||deleted?allUnits:allUnits.filter(f=>[...dependencies(f,new Set(),graph)].some(d=>absolute.has(d))||runtime.includes(f));
  let browser=[];
  if(runtime.length){
-  if(newsOnly&&!deleted)browser=[];
-  else if(!infrastructure&&!unknown&&runtime.every(f=>/^(app\/challenge-hints\.json|tests\/challenge\.test\.mjs|exports\/content\/challenge-hints\.json)$/.test(f)))browser=['challenge','offline'];
+  if(!infrastructure&&!unknown&&runtime.every(f=>/^(app\/challenge-hints\.json|tests\/challenge\.test\.mjs|exports\/content\/challenge-hints\.json)$/.test(f)))browser=['challenge','offline'];
   else if(!infrastructure&&!unknown&&runtime.every(f=>/^(app\/update-history|tests\/update-history\.test\.mjs)/.test(f)))browser=['home','offline'];
   else if(!infrastructure&&!unknown&&runtime.every(f=>/^(app\/journey-inquir|tests\/journeys\.test\.mjs|exports\/content\/journey-inquiries\.json)/.test(f)))browser=['journeys','backup','offline'];
   else if(runtime.every(f=>/^tests\/.*\.test\.mjs$/.test(f)))browser=[];
-  else browser=REQUIRED_SUITES.filter(s=>s!=='news-feed');
+  else browser=[...REQUIRED_SUITES];
  }
- return {scope:'local iteration only',fullRequiredBeforeReady:true,changed:files,syntaxFiles,unitTests,release:infrastructure||unknown||runtime.some(f=>f.startsWith('tests/release/')),browser,reason:infrastructure||unknown||deleted?'Unknown/shared/deleted input: conservative full selection':newsOnly?'News preparation server code only; no browser content changed':'Transitive unit dependencies and explicit browser-risk mapping; unknown UI changes select the full browser path'};
+ return {scope:'local iteration only',fullRequiredBeforeReady:true,changed:files,syntaxFiles,unitTests,release:infrastructure||unknown||runtime.some(f=>f.startsWith('tests/release/')),browser,reason:infrastructure||unknown||deleted?'Unknown/shared/deleted input: conservative full selection':'Transitive unit dependencies and explicit browser-risk mapping; unknown UI changes select the full browser path'};
 }
 function changedFiles(base){
  const git=(...a)=>execFileSync('git',a,{encoding:'utf8'}).trim().split('\n').filter(Boolean);

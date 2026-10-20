@@ -3,6 +3,24 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {UPDATE_HISTORY,PREPARED_UPDATES,HISTORY_EVIDENCE,TEST_HISTORY_EVIDENCE,JOURNEY_SUPPORT_COPY,confirmedTestDeployment,testUpdate,publicUpdates,updateDate,updateLabel,berlinDay,formatHistoryInstant} from '../app/update-history.ts';
 
+test('actual deployed PR38 lab feedback is newest once and no longer falsely prepared',()=>{
+ const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===38);
+ const entries=publicUpdates(),entry=entries.find(e=>e.id==='lab-feedback-3-5');
+ assert.ok(record);assert.ok(entry);assert.equal(entries[0].id,entry.id);
+ assert.equal(entry.evidence.revision,'0e5e4d4ece35d4a80dc79764c690c1633b2e0988');
+ assert.equal(entry.status,'test-available');assert.equal(entry.availableOn,'2026-10-18');
+ assert.equal(entry.occurredAt,'2026-10-17T22:20:23Z');assert.equal(entry.publishedOn,null);
+ assert.equal(entries.filter(e=>e.id===entry.id).length,1);
+ assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));
+ assert.ok(entry.links.some(l=>l.hash==='labs'));
+ const missing=structuredClone(record);missing.deploymentStatuses=[];
+ const pending=testUpdate(missing,entry);assert.equal(pending.status,'prepared');
+ assert.equal(pending.availableOn,null);assert.deepEqual(pending.links,[]);
+ assert.equal(publicUpdates([pending]).length,0);
+ const unrelated={...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(x=>x!==record.mergeCommit)};
+ assert.equal(confirmedTestDeployment(record,unrelated),null);
+});
+
 test('public chronicle excludes unpublished work and preserves the complete confirmed publication history',()=>{
  const entries=publicUpdates([...PREPARED_UPDATES,...UPDATE_HISTORY]);
  assert.equal(entries.length,UPDATE_HISTORY.length);
@@ -24,7 +42,7 @@ test('publication entries match successful deployments, source provenance and Be
   if(entry.evidence.publicationVersion!==undefined){
    const source=HISTORY_EVIDENCE.versions.find(v=>v.number===entry.evidence.publicationVersion);assert.equal(source.publication.status,'succeeded');assert.equal(source.publication.type,'publish');assert.equal(source.sourceCommit,entry.evidence.revision);assert.equal(entry.publishedOn,berlinDay(source.publication.completedAt));
   }
-  for(const link of entry.links)assert.ok(['globe','world','labs','games','journeys','book','news','world/topic/science-moon-phases','updates'].includes(link.hash));
+  for(const link of entry.links)assert.ok(['globe','world','labs','games','journeys','book','world/topic/science-moon-phases','updates'].includes(link.hash));
  }
  assert.equal(HISTORY_EVIDENCE.versions.find(v=>v.number===6).publication,null);
  assert.equal(berlinDay(HISTORY_EVIDENCE.site.createdAt),'2026-10-06','project began after Berlin midnight');
@@ -38,8 +56,8 @@ test('publication entries match successful deployments, source provenance and Be
 
 test('test website chronology retains the merged and deployed product rounds, with truthful channel dates',()=>{
  const entries=publicUpdates(),testEntries=entries.filter(e=>e.channel==='vercel-test');
- assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[38,35,33,32,30,29,26,25,24,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
- assert.equal(entries.length,37);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
+ assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[38,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
+ assert.equal(entries.length,36);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
  assert.ok(!PREPARED_UPDATES.some(e=>e.id==='foundation-2a'));
  assert.ok(UPDATE_HISTORY.some(e=>e.evidence.pullRequest===22));
@@ -109,7 +127,7 @@ test('unconfirmed product work stays unavailable even if an observation date is 
  test('known timestamps use actual Berlin DST; missing times remain date-only',()=>{assert.equal(formatHistoryInstant('2026-10-25T00:30:00Z'),'25. Oktober 2026 um 02:30:00 MESZ');assert.equal(formatHistoryInstant('2026-10-25T01:30:00Z'),'25. Oktober 2026 um 02:30:00 MEZ');assert.equal(updateDate({...UPDATE_HISTORY[0],occurredAt:null,publishedOn:'2026-10-11',availableOn:null}),'11. Oktober 2026');});
 
 test('actual PR 23 appears only with its exact merged and deployed receipt; earlier missing proof stays prepared',()=>{
- const entry=UPDATE_HISTORY.find(e=>e.id==='research-2b');assert.ok(entry);assert.equal(entry.evidence.pullRequest,23);assert.equal(entry.status,'test-available');assert.equal(entry.occurredAt,'2026-10-12T08:15:03Z');assert.equal(entry.evidence.revision,'9f2328ab73c9a142bd023668046310f1661958e9');assert.equal(entry.details.length,5);assert.ok(entry.links.some(l=>l.hash==='news'));
+ const entry=UPDATE_HISTORY.find(e=>e.id==='research-2b');assert.ok(entry);assert.equal(entry.evidence.pullRequest,23);assert.equal(entry.status,'test-available');assert.equal(entry.occurredAt,'2026-10-12T08:15:03Z');assert.equal(entry.evidence.revision,'9f2328ab73c9a142bd023668046310f1661958e9');assert.equal(entry.details.length,5);assert.ok(entry.links.some(l=>l.hash==='labs'));assert.ok(entry.links.every(l=>!l.hash.startsWith('news')),'retired news links must not be offered in historical rows');
  const record=structuredClone(TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===23));record.mergedAt=null;record.mergeCommit=null;record.deploymentStatuses=[];const prepared=testUpdate(record,entry);assert.equal(prepared.status,'prepared');assert.deepEqual(prepared.links,[]);assert.equal(publicUpdates([prepared]).length,0);
 });
 
@@ -119,9 +137,10 @@ test('PR25 and PR26 require their exact real deployment receipts',()=>{const ent
 
 
 test('every old and new update has a concise reader category, with technical handoff details kept outside its main copy',()=>{
- const categories=['Neue Inhalte','Spielen und Lernen','Einfachere Bedienung','Fehler behoben','Anschaulicher erklärt','Bereitstellung','Nachrichten verstehen'];
+ const categories=['Neue Inhalte','Spielen und Lernen','Einfachere Bedienung','Fehler behoben','Anschaulicher erklärt','Bereitstellung'];
  for(const entry of [...UPDATE_HISTORY,...PREPARED_UPDATES]){
   assert.ok(categories.includes(entry.category),entry.id+' explicit editorial category');
+  assert.doesNotMatch([entry.category,entry.title,entry.summary,...entry.details,...entry.links.map(l=>l.label)].join(' '),/Nachrichten|Kindernachrichten/,entry.id+' removed feature is not advertised in the chronicle');
   assert.ok(entry.summary.length<=400,entry.id+' short readable summary');
   for(const text of [entry.title,entry.summary,...entry.details])assert.doesNotMatch(text,/\b(?:Commit|SHA|CI|Schema.?3|PR #|test-live|Unit|axe|Runner|Paket [234])\b|[a-f0-9]{40}/,entry.id+' visitor copy does not expose developer handoff terms');
  }
@@ -150,3 +169,7 @@ test('actual PR32 receipt promotes its stable identity once and keeps the open M
  const unrelated={...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(c=>c!==receipt.mergeCommit)};assert.equal(confirmedTestDeployment(receipt,unrelated),null);
  const missing=structuredClone(receipt);missing.deploymentStatuses=[];assert.equal(confirmedTestDeployment(missing),null);
 });
+
+test('the explicitly removed former News release24 has no active chronicle entry or runtime receipt',()=>{assert.equal(UPDATE_HISTORY.some(e=>e.evidence.pullRequest===24),false);assert.equal(PREPARED_UPDATES.some(e=>e.evidence.pullRequest===24),false);assert.equal(TEST_HISTORY_EVIDENCE.pullRequests.some(e=>e.number===24),false);});
+
+test('runtime chronology evidence contains no removed-feature title while retained learning release25 remains visible',()=>{assert.doesNotMatch(JSON.stringify(TEST_HISTORY_EVIDENCE),/nachrichten|news-engineering/i);assert.equal(UPDATE_HISTORY.find(e=>e.evidence.pullRequest===25).id,'journeys-3');assert.equal(UPDATE_HISTORY.find(e=>e.evidence.pullRequest===23).id,'research-2b');});

@@ -1,3 +1,9 @@
+## Fachliche und pädagogische Präzisierung ·20.10.2026
+
+Die KI prüft Fakten, Einheiten, Zeitbezug, Quellen, Medienrechte, Modellgrenzen, alle Antwortzuordnungen, Hilfen und individuelles Fehlerfeedback nach Erstellung kritisch gegen. Tatsächlich gelesene Quelle, Befund, Korrektur und Restunsicherheit knapp im bestehenden Dossier belegen; URL, Textgleichheit und grüner Strukturtest sind kein Wahrheitsbeweis. Keine verpflichtende externe Menschenabnahme erfinden. Auch bereits richtige Alttexte dürfen mit konkretem Lernnutzen verständlicher oder hilfreicher werden. Fachlich passende gegenseitige Wege zwischen alten und neuen Inhalten mitpflegen. Prüfumfang nach Änderung und Folgen; systematische Zuordnungs-/Generatorfehler in der betroffenen Familie beheben. Vollständige Paketabnahmen bleiben offen, bis tatsächlich erfüllt.
+
+Stabile IDs, Direktlinks, Schema3, verdiente Fortschritte, gespeicherte Antworten, Favoriten/Notizen/Spielstände, Import/Export und Offline erhalten. Begründete notwendige Altwortlautkorrekturen mit Vorher/Nachher und Zustandsverträglichkeit nach bestehendem Verfahren prüfen; keine pauschale Neugenerierung eingefrorener Referenzen. Früh gezielt, endgültig alle bestehenden Pflichtprüfungen; fehlgeschlagene Volltests erst nach einschlägiger Korrektur oder veränderter Infrastruktur wiederholen. Keine schwächeren Assertions, Skips oder neuen Abnahmeplattformen. Dauerhafte News-Entfernung ersetzt ausschließlich konkret genehmigte News-Pflichten; alle anderen Schutzanforderungen bleiben.
+
 # Verbindliche Qualität und Tests
 
 ## Vorrangige Präzisierung17.10.2026

@@ -21,13 +21,12 @@ export function focusLearningMain(){
 }
 export function restoreRouteView(path:string,focus=true){
  const state=history.state;
- if((path==='globe'||path==='updates'||path.startsWith('news')||path.startsWith('world/topic/'))&&Array.isArray(state?.wunderOpen))for(const el of document.querySelectorAll<HTMLDetailsElement>('details[data-history-disclosure]'))el.open=state.wunderOpen.includes(el.dataset.historyDisclosure);
+ if((path==='globe'||path==='updates'||path.startsWith('world/topic/'))&&Array.isArray(state?.wunderOpen))for(const el of document.querySelectorAll<HTMLDetailsElement>('details[data-history-disclosure]'))el.open=state.wunderOpen.includes(el.dataset.historyDisclosure);
  window.scrollTo({top:typeof state?.wunderScroll==='number'?state.wunderScroll:0,behavior:'instant'});
  if(!focus)return;
  const opener=Array.from(document.querySelectorAll<HTMLElement>('[data-route-focus]')).find(el=>el.dataset.routeFocus===state?.wunderFocus&&el.getClientRects().length);
  if(opener){opener.focus({preventScroll:true});const r=opener.getBoundingClientRect();if(r.top<8||r.bottom>innerHeight-8)opener.scrollIntoView({block:'center',behavior:'instant'});return;}
- if(path.startsWith('news'))document.getElementById('news-title')?.focus({preventScroll:true});
- else if(path.startsWith('labs/'))document.getElementById('lab-heading')?.focus({preventScroll:true});
+ if(path.startsWith('labs/'))document.getElementById('lab-heading')?.focus({preventScroll:true});
  else if(path==='journeys'||path.startsWith('journeys/')){const heading=document.getElementById('journey-title')??document.getElementById('journey-hub-title');if(heading){heading.focus({preventScroll:true});const r=heading.getBoundingClientRect();if(r.top<8||r.bottom>innerHeight-8)heading.scrollIntoView({block:'center',behavior:'instant'});}}
  else if(path==='updates')document.getElementById('updates-title')?.focus({preventScroll:true});
  else if(path==='world'||path.startsWith('world/')){
@@ -48,4 +47,4 @@ export function scheduleRouteRestore(path:string,focus=true){
  window.addEventListener('keydown',interact,true);window.addEventListener('pointerdown',interact,true);
  return cancel;
 }
-export function useHashRoute(restore=true){const first=useRef(true);const path=useSyncExternalStore(subscribe,read,()=> 'globe');useEffect(()=>{const initial=first.current;first.current=false;if(!restore||path==='globe'||path==='updates'||path.startsWith('news'))return;return scheduleRouteRestore(path,!initial||!!history.state?.wunderRoute);},[path,restore]);return path;}
+export function useHashRoute(restore=true){const first=useRef(true);const path=useSyncExternalStore(subscribe,read,()=> 'globe');useEffect(()=>{if(/^news(?:\/|$)/.test(path)){replaceHash('globe');return;}const initial=first.current;first.current=false;if(!restore||path==='globe'||path==='updates')return;return scheduleRouteRestore(path,!initial||!!history.state?.wunderRoute);},[path,restore]);return path;}

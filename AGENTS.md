@@ -1,3 +1,15 @@
+## Maßgebliche punktuelle Nutzerklärung ·20.10.2026
+
+Der laufende Auftrag und [Issue28](https://github.com/Arizona2k/wunderkompass/issues/28) gelten für bestehende und kommende Arbeit. Nach dem belegten begrenzten Reparaturabschnitt die bereits entwickelte Paket-3.5-Arbeit fertigstellen, danach die bestehenden Pakete4–8. Master27/Nachtarbeit und stabile IDs/Schema3 erhalten, keine Doppelentwicklung oder zweite Aufgabenliste. BACKLOG ist die einzige operative Liste, PROJECT_STATE der belegte Stand. Ein konkreter Blocker hält nur seine abhängigen riskanten Schritte an.
+
+Fachliche und pädagogische Gegenprüfung führt die KI selbst anhand tatsächlich zugänglicher belastbarer Quellen durch; externe Menschenabnahmen sind kein allgemeines Abschlussgate. Alte Fehler auch nach früherer Prüfung korrigieren. Auch richtige ältere Inhalte für konkreten Lernnutzen verbessern, ohne vorherigen Fehler oder technische Abhängigkeit vorauszusetzen. Betroffene Altstellen und sinnvolle erklärte Links/Rückwege mitpflegen; keine künstlichen Verbindungen oder vollständige neue Bestandsabnahme bei jeder Einzeländerung. Bestehende vollständige Paketabnahmen bleiben erforderlich.
+
+News ist dauerhaft entfernt: keine Oberfläche, Suche, alten News-Routen, Laufzeit oder ausschließlich News betreffende Betriebsaufgaben reaktivieren. Alte Links sinnvoll auffangen. „Was ist neu?“ bleibt Produktchronik; nur ausdrücklich genehmigte reine News-Einträge entfallen. Frühere Pausen und News-Aufträge darunter sind historisch ersetzt. Wiederaufnahme nur durch neue ausdrückliche Nutzerentscheidung. Die sechs genau genehmigten Inventarentnahmen erlauben keine weiteren Baselineänderungen.
+
+Normale fertige Teilabschnitte bleiben unter TEST-LIVE selbstständig regulär übernehmbar; ältere Einzelmergeverbote sind insoweit historisch. Die genau beauftragten punktuellen Regeltextänderungen sind konkrete Wartung, keine technische Schutzfreigabe und keine Routineausnahme. Native Pflichtchecks, Readiness-Schutzliste, Berechtigungen, Kosten und Betriebsende bleiben unverändert. Kein Gesamtmerge27, Direktpush, Auto-Merge-Warteschlange, main oder Produktion. Nach Merge tatsächlichen Baum, Vercel und Testseite prüfen; Chronikbestätigung im nächsten sinnvollen Produktabschnitt, keine Bestätigungsreleaseschleife.
+
+Schlanke fortsetzbare Checkpoints an sinnvollen Abschnitten und vor Risiko-/Kontext-/Limitwechseln: Git, notwendige unversionierte Arbeit, neue Nachweise und kurze Wiederaufnahmehilfe. Keine ständigen Vollarchive mit Abhängigkeiten/Caches, alte Backups behalten. Normale autorisierte Projektänderungen nach Datenschutzprüfung im bestehenden GitHub-Weg sichern; private Aufzeichnungen und vertrauliche Backups bleiben lokal. Cloudpfade garantieren keine Erreichbarkeit im nächsten Chat. Fehlende notwendige Sicherungsmöglichkeit einmal konkret klären; ein optionales Archiv blockiert vorhandene Arbeit nicht. Bei entscheidungsrelevanter Unsicherheit vor dem riskanten Schritt gezielt fragen, bestehende Freigaben ohne Wiederholungsfrage nutzen.
+
 # Anleitung für Codex
 
 ## Aktueller Arbeits- und Freigabevertrag ·17.10.2026

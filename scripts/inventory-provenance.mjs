@@ -16,7 +16,6 @@ export const surfaceStates=[
  ['labs',['11-models','three-levels','hint','measurement','comparison','note','model-limits','six-home-experiments','mission-entry']],
  ['book',['words','word-filter','why-open','notebook','nature-atlas','country-atlas','more-results','no-results']],
  ['updates',['latest','old-archive','all-details','prepared','source-evidence','back-focus']],
- ['news',['editorial','automatic','sources','archive','valid-refresh','rejected-signature','stale','offline','retry']],
  ['pass',['overview','badges','statistics','display','speech-settings','backup-export','backup-import-valid','backup-import-invalid','reset-confirmation','two-tabs']],
  ['cross-cutting',['320','360','390','768','1024','1440','1920','large-text','native-200-percent','reduced-motion','keyboard-focus','cold-offline','worker-upgrade','error-recovery','help','privacy']]
 ].flatMap(([surface,states])=>states.map(state=>({id:surface+':'+state,surface,state,visualAcceptance:'individual current screenshot review still required',humanAcceptance:false})));
