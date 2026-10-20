@@ -1,3 +1,7 @@
+## WK055/057 · PR45 nach belegtem Dialog-Testfehler fertigstellen ·20.10.2026
+
+Den bestehenden Optikumfang erhalten und ausschließlich die tatsächlich reproduzierte Escape-Synchronisierung im normalen Backup-Test korrigieren. Ursprünglicher negativer Kontrollfall und beide erfolgreichen ganzen Backup-Teilprüfungen bleiben belegt. Keine Testabschwächung oder geschützte Änderung. Aktuelle vollständige lokale Pflichtprüfung, exakte strikte CI und tatsächliche test-live-/Vercel-/Browserauslieferung bleiben vor Abschluss erforderlich. Danach den bereits gezielt geprüften Tier-Spielstandserhalt und die bestehende Kapitelarbeit innerhalb3.5 fortführen; keine neue Roadmap oder News.
+
 ## WK053/055/057 · Optik lokal vollständig, reguläre Auslieferung offen ·20.10.2026
 
 123aktuelle vollständige lokalePrüfmeldungen erfolgreich; Originale erhalten,54Dossiers nach tatsächlicherFach-/UIprüfung gebunden. Noch aktueller finalerIntegritäts-/Unitnachweis, exakte strikteGitHubQuality, regulärer test-live-Merge und wirklicheVercel-/Browserbestätigung. Danach vorgemerkten eigenständigen Erhalt ältererTierdetektiv-Auswahlen vor weiterer Inhaltswelle fertigstellen; aktuellen Optikumfang dafür nicht erneut ausweiten. Kapitelarbeit und übrigerMasterbestand bleiben im bestehenden Paket3.5 erhalten.
