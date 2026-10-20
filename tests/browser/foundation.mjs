@@ -19,6 +19,8 @@ export async function performanceFlow(browser,base,ready,monitor,report){
    const metrics=await p.evaluate(()=>{const resources=performance.getEntriesByType('resource').map(r=>({file:new URL(r.name).pathname,bytes:r.decodedBodySize}));return {...window.__wkPerf,jsBytes:resources.filter(r=>r.file.endsWith('.js')).reduce((n,r)=>n+r.bytes,0),globe:resources.some(r=>/\/globe-/.test(r.file)),geometry:resources.some(r=>r.file==='/world.json'),resources,scrollY};});
    report.performance.samples.push({area:name,sample,readyMs,...metrics});
    assert.equal(metrics.globe,false,name+' must not preload the 3D globe');
+   if(['home','world','updates','journeys'].includes(name)){assert.ok(!metrics.resources.some(r=>/(book-core|book-study|book-search|journey-content)-.*\.json$/.test(r.file)),name+' does not eagerly load learning text payloads');}
+   if(['home','world','updates','journeys'].includes(name))assert.ok(!metrics.resources.some(r=>/world-content-(animals|history|people|inventions|buildings|science)-.*\.json$/.test(r.file)),name+' does not eagerly load full card data');
    if(['home','world','updates'].includes(name))assert.equal(metrics.geometry,false,name+' does not need country polygons');
    assert.ok(metrics.jsBytes<=(name==='home'?budgets.homeJsBytes:budgets.areaJsBytes),name+' initial JS budget');
    assert.ok(metrics.cls<=(name==='home'?budgets.homeCls:budgets.areaCls),name+' layout shift budget: '+metrics.cls);
@@ -72,9 +74,12 @@ export async function componentFlow(browser,base,ready,monitor,report,shots){
  // Exercise actual production loading/error/reload states by delaying/failing a
  // real lazy chunk. Intentional network rejection is isolated and documented.
  for(const fault of ['delay','error']){
-  const c=await browser.newContext({viewport:{width:320,height:720},reducedMotion:'reduce'}),p=await c.newPage();let release;const gate=new Promise(r=>release=r);let first=true;
-  await p.route('**/research-labs-*.js',async route=>{if(first){first=false;if(fault==='error'){await route.abort('failed');return;}await gate;}await route.continue();});
-  try{await p.goto(base+'#labs');await ready(p);const status=p.locator('.learning-status[data-tone='+ (fault==='error'?'error':'loading')+']');await status.waitFor();assert.equal(await status.getAttribute('role'),fault==='error'?'alert':'status');await contracts(p);await p.screenshot({path:shots+'/foundation-'+fault+'-320.png'});if(fault==='delay')release();else await p.getByRole('button',{name:'Seite neu laden',exact:true}).click();await p.locator('.research-tile').first().waitFor();await contracts(p);}finally{release();await c.close();}
+  const c=await browser.newContext({viewport:{width:320,height:720},reducedMotion:'reduce'}),p=await c.newPage();let release,blocked=true;const gate=new Promise(r=>release=r);
+  const witness={fault,requests:[],shown:false,recovered:false};(report.componentFaults??=[]).push(witness);
+  // Hold/fail the actual module transport until the state is observed. A failed
+  // speculative request alone does not guarantee that the later import fails.
+  await c.route('**/research-labs-*.js',async route=>{const request=route.request();witness.requests.push({url:request.url(),resource:request.resourceType(),serviceWorker:!!request.serviceWorker(),blocked});if(blocked){if(fault==='error'){await route.abort('failed');return;}await gate;}await route.continue();});
+  try{await p.goto(base+'#labs');await ready(p);const status=p.locator('.learning-status[data-tone='+ (fault==='error'?'error':'loading')+']');await status.waitFor();assert.equal(await status.getAttribute('role'),fault==='error'?'alert':'status');assert(witness.requests.some(r=>r.blocked),'the real module transport must have been intercepted');witness.shown=true;await contracts(p);await p.screenshot({path:shots+'/foundation-'+fault+'-320.png'});blocked=false;if(fault==='delay')release();else await p.getByRole('button',{name:'Seite neu laden',exact:true}).click();await p.locator('.research-tile').first().waitFor();await contracts(p);witness.recovered=true;}catch(error){witness.failure={message:error.message,state:await p.evaluate(()=>({error:!!document.querySelector('.learning-status[data-tone=error]'),loading:!!document.querySelector('.learning-status[data-tone=loading]'),labs:!!document.querySelector('.research-tile'),serviceWorker:!!navigator.serviceWorker?.controller})).catch(()=>null)};await p.screenshot({path:shots+'/foundation-'+fault+'-failure-320.png'}).catch(()=>{});throw error;}finally{blocked=false;release();await c.close();}
  }
  report.checks.push('Shared production component visual contracts at seven widths: responsive grids and no collisions, 44px controls, native details keyboard/open/closed, empty/reset, large text/system focus, real lazy loading/error/reload states; screenshots require separate human review');
 }

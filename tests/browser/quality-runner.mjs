@@ -9,7 +9,7 @@ const root=fileURLToPath(new URL('../..',import.meta.url)),started=performance.n
 if(!Number.isInteger(basePort)||basePort<1024||basePort>65530)throw Error('Invalid isolated browser port');
 process.once('SIGTERM',()=>{for(const child of children)child.kill('SIGTERM');process.exit(143);});
 const launch=(name,suites,offset)=>new Promise((resolve,reject)=>{
- const child=spawn(process.execPath,[suites[0]==='news-feed'?'tests/browser/news-feed-runner.mjs':'tests/browser/portable-smoke.mjs'],{cwd:root,env:{...process.env,QA_SUITE:suites.join(','),QA_PORT:String(basePort+offset),QA_OUTPUT_DIR:'.qa-output/'+name},stdio:['ignore','pipe','pipe']});children.add(child);
+ const child=spawn(process.execPath,['tests/browser/portable-smoke.mjs'],{cwd:root,env:{...process.env,QA_SUITE:suites.join(','),QA_PORT:String(basePort+offset),QA_OUTPUT_DIR:'.qa-output/'+name},stdio:['ignore','pipe','pipe']});children.add(child);
  child.stdout.on('data',b=>process.stdout.write('['+name+'] '+b));child.stderr.on('data',b=>process.stderr.write('['+name+'] '+b));
  child.once('error',reject);child.once('exit',code=>{children.delete(child);resolve({name,suites,code});});
 });
@@ -23,7 +23,7 @@ else{
  try{
   // Never run another browser beside the reproducible performance sample phase.
   const foundation=await launch('quality-foundation',['foundation'],0);outcomes.push(foundation);if(foundation.code!==0)throw Error('Foundation phase failed');
-  const news=await launch('quality-news-feed',['news-feed'],3);outcomes.push(news);if(news.code!==0)throw Error('Signed news phase failed');
+  const news=await launch('quality-no-news',['no-news'],3);outcomes.push(news);if(news.code!==0)throw Error('News removal phase failed');
   outcomes.push(...await Promise.all([launch('quality-navigation',['home','core','offline'],1),launch('quality-learning',['research','journeys','playground','backup','challenge'],2)]));
   const reports=await Promise.all(outcomes.map(async result=>({...result,report:JSON.parse(await fs.readFile(path.join(root,'.qa-output',result.name,'portable-report.json'),'utf8'))})));
   const report=aggregateQuality(reports);report.seconds=(performance.now()-started)/1000;

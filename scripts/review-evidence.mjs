@@ -19,7 +19,7 @@ export function reviewStorage(screenshots,retainedBytes,{previous=null}={}){
   comparison:comparable?{status:'same capture matrix; informational only',previousBuild:previous.build??null,previousSourceDigest:previous.sourceDigest??null,retainedImagesDelta:screenshots.filter(capture=>capture.retained).length-previous.screenshots.filter(capture=>capture.retained).length,retainedBytesDelta:retainedBytes-previous.retainedBytes}:{status:previous?'different or invalid matrix; no savings claim':'previous comparable run not supplied'},
  };
 }
-export const requiredScreenshots=['quality-learning-journey-engine-chromium-native-history-first-640.png','quality-learning-journey-engine-chromium-native-history-oldest-640.png',...['320','360','390','768','1024','1440','1920'].flatMap(w=>['quality-foundation-foundation-labs-'+w+'.png','quality-learning-journey-links-'+w+'.png']),...['320','1440'].flatMap(w=>['quality-news-feed-signed-news-rejected-'+w+'.png','quality-navigation-updates-all-details-'+w+'-full.png'])];
+export const requiredScreenshots=['quality-learning-journey-engine-chromium-native-history-first-640.png','quality-learning-journey-engine-chromium-native-history-oldest-640.png',...['320','360','390','768','1024','1440','1920'].flatMap(w=>['quality-foundation-foundation-labs-'+w+'.png','quality-learning-journey-links-'+w+'.png']),...['320','1440'].flatMap(w=>['quality-no-news-news-removed-'+w+'.png','quality-navigation-updates-all-details-'+w+'-full.png'])];
 requiredScreenshots.push(...[320,1440].flatMap(w=>['keyboard','pointer'].map(input=>'quality-foundation-foundation-route-focus-'+input+'-'+w+'.png')));
 requiredScreenshots.push('quality-foundation-offline-resilience-chromium-source-error-320.png','quality-foundation-offline-resilience-chromium-quota-error-320.png','quality-learning-offline-resilience-native-progress-640.png',...[320,360,390,768,1024,1440,1920].map(w=>'quality-foundation-offline-resilience-chromium-progress-'+w+'.png'));
 requiredScreenshots.push(...[320,1440].flatMap(w=>['moon-1','moon-2','water-2','inside-2','countries-3'].map(id=>'quality-learning-journey-engine-chromium-support-'+id+'-'+w+'.png')));
@@ -29,7 +29,7 @@ requiredScreenshots.push(...[320,360,390,768,1024,1440,1920].flatMap(w=>[...[0,1
 requiredScreenshots.push('quality-navigation-animal-search-delayed-390.png');
 export function retainScreenshot(name){
  if(requiredScreenshots.includes(name))return true;
- if(name.startsWith('journey-engine-')||name.startsWith('quality-foundation-')||name.startsWith('quality-news-feed-'))return true;
+ if(name.startsWith('journey-engine-')||name.startsWith('quality-foundation-')||name.startsWith('quality-no-news-'))return true;
  if(/quality-learning-(journey-links-|journey-large-focus-|journey-native|journey-[a-z]+-390\.png)/.test(name))return true;
  // Full long-history and zoom/failure screenshots are useful, not interchangeable thumbnails.
  if(/(?:200|zoom|offline|error|failure)/.test(name))return true;
