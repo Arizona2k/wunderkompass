@@ -1,0 +1,12 @@
+/* Scoped to the three prepared optical walkthroughs; existing diagrams retain their styles. */
+.invention-story[data-walkthrough] .story-stations button{display:grid;grid-template-columns:22px minmax(0,1fr);align-items:start;gap:8px;min-width:0;white-space:normal;text-align:left;min-height:44px}
+.invention-story[data-walkthrough] .story-step-label{display:block;width:auto;height:auto;border-radius:0;background:transparent;font-size:inherit;min-width:0;overflow-wrap:anywhere;hyphens:auto;line-height:1.4}
+.invention-story[data-walkthrough] .part-number{display:grid;place-items:center;flex-shrink:0;width:24px;height:24px;border-radius:50%;background:#eaf3f6}
+.invention-story[data-walkthrough] .part-name{display:block;width:auto;height:auto;border-radius:0;background:transparent;flex-shrink:1;flex:1;min-width:0;overflow-wrap:anywhere;hyphens:auto;font-size:16px}
+.invention-story[data-walkthrough] .part-button>svg{flex-shrink:0}
+.invention-story[data-walkthrough] .blueprint-center{min-width:0}
+.invention-story[data-walkthrough] .blueprint-center .blueprint-svg{width:100%;height:auto;max-width:600px}
+.invention-story[data-walkthrough] .blueprint-center small{display:block;font-size:14px;line-height:1.55;text-align:center}
+.invention-story[data-walkthrough] .technology-picture{min-width:0}
+.invention-story[data-walkthrough] .technology-picture svg{width:100%;height:auto}
+@media(max-width:720px){.large-reading .invention-story[data-walkthrough] .story-stations{grid-template-columns:1fr}}

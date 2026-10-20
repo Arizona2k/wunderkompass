@@ -2668,5 +2668,42 @@
     "era": "Frühe Städte",
     "date": "3. Jahrtausend v. Chr. · ungefährer Zeitanker",
     "sensitive": false
+  },
+  {
+    "id": "invention-camera",
+    "category": "inventions",
+    "title": "Die Kamera",
+    "intro": "Warum kann Licht ein Bild hinterlassen?",
+    "aliases": [],
+    "locations": [],
+    "model": null,
+    "year": 1839,
+    "date": "1839 · öffentliche Vorstellung der Daguerreotypie, Kameravorläufer sind älter"
+  },
+  {
+    "id": "invention-telescope",
+    "category": "inventions",
+    "title": "Das Fernrohr",
+    "intro": "Wie sammelt ein Fernrohr mehr Licht als dein Auge?",
+    "aliases": [
+      "Teleskop"
+    ],
+    "locations": [],
+    "model": null,
+    "year": 1608,
+    "date": "1608 · belegter Patentantrag; keine gesicherte Alleinerfindung",
+    "inventionModel": "aperture"
+  },
+  {
+    "id": "invention-microscope",
+    "category": "inventions",
+    "title": "Das Mikroskop",
+    "intro": "Wie werden kleine Strukturen unterscheidbar?",
+    "aliases": [],
+    "locations": [],
+    "model": null,
+    "year": 1665,
+    "date": "1665 · Hookes Micrographia, nicht Erfindungsjahr aller Mikroskope",
+    "inventionModel": "resolution"
   }
 ]

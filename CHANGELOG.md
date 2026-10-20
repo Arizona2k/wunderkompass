@@ -1,3 +1,21 @@
+## 20.10.2026 · Optik und bisherige Spielstände lokal vollständig geprüft
+
+Vollständiger unveränderter lokalerPflichtlauf erfolgreich(123Prüfmeldungen);15Online-/3Kaltoffline-/12Cached-/6Native-Optikfälle mit tatsächlichen Verbindungszielen und Rückfokus. Alte Technik-/Zeitfragen, wirklicher Passdownload/Import sowie sämtliche bisherigen Pflichtgruppen erhalten. Originalnachweise separat gesichert;51alteUIbelege erst danach erneuert und3quellengegengeleseneOptikdossiers hinzugefügt. Aktuelle strikteGitHubQuality und tatsächlicheTestbereitstellung bleiben offen; kein Produktionsrelease.
+
+## Im selben Optikabschnitt · alte Spielrunden erhalten ·20.10.2026
+
+- Technik-Detektiv erweitert sich um passende Optikfragen und behält dabei alle zwölf früheren Fragen und Antwortmöglichkeiten.
+- Früher-/Heute-Spiel bleibt bei seinen24historischen Aufgaben; nichtchronologische Modellschritte werden nicht als Geschichte ausgegeben.
+- Alte gespeicherte Antwortreihenfolgen bleiben bei zusätzlichen Themen erhalten. Auch die neuen Modelle und Erklärschritte überstehen Pass-Download und Dateiimport; Notizen und frühere Sitzungen bleiben erhalten.
+- Noch keine Optikveröffentlichung: vollständige aktuelle Schlussprüfungen bleiben offen.
+
+## In Entwicklung · Lichtbilder und kleine Strukturen verstehen ·20.10.2026
+
+- Bereits vorbereitete Kamera-, Fernrohr- und Mikroskopkarten mit je sechs freiwilligen Erklärschritten, drei anwählbaren Bauteilen, Quellen und antwortbezogenen Rückmeldungen integriert.
+- Zwei eigene qualitative Modelle vergleichen Sammelfläche sowie Bildgröße und erkennbare Einzelheiten. Lichtwege bleiben bei der Lochkamera gerade; das ausdrücklich vereinfachte Linsenfernrohr trennt Objektiv, Brennpunkt und Okular.
+- Fünf erklärte Wissenswege führen auch zu Smartphone, Satellit und Sonnensystem zurück. Bisherige Fragen und Lernstände erhalten.
+- Chronik ergänzt den tatsächlich ausgelieferten PR44; Optik selbst bleibt bis vollständiger Prüfung und bestätigter Bereitstellung in Entwicklung.
+
 ## In Entwicklung · Geschichtliche Spuren untersuchen
 
 Zwei vorhandene neue Karten Khipu und Mohenjo-Daro in den regulären Lieferstand integriert. Eigene Lernbilder unterscheiden Menge und Bedeutung sowie sichtbaren Bauweg und weitergehende Vermutung. Vier erklärte Wissensverbindungen mit Rückwegen; bestehende Schriftquelle und passendes Antwortfeedback präzisiert. Ursprüngliche142Fragen und24Tierzugaben sowie bisherigeAntworten/IDs bleiben gegen ihre Originale geprüft; sechs neue Fragen kommen hinzu. Chronik führt ausschließlich den bereits ausgelieferten PR43 nach. Vollständige aktuelle Quality und Veröffentlichung dieses Geschichtsabschnitts noch offen.
