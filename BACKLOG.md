@@ -1,3 +1,7 @@
+## WK055/057 · Offline-Challenge-Annahme gezielt repariert ·20.10.2026
+
+Optiklieferumfang unverändert. Nach tatsächlich rotem lokalen Volltest die gültigen Ein-/Zweihinweisformen mit erhaltenem Zufallsfall und zusätzlichem zwingendem Mischspielstand im bestehenden normalen Test prüfen. Originaler Khipu-Kaltstartzustand bestätigt, korrigierter ganzer Offlinehelper bei beendetem Server gezielt grün. Nun neue unveränderte volle lokale Pflichtprüfung; Quality135 vorher natürlich fertig werden lassen, dann erst begrenzten Korrekturstand auf bestehendenPR45 aktualisieren und exakte strikte CI abnehmen. Danach reguläre test-live-/Vercel-/Browserauslieferung und vorhandene Tier-/Kapitelarbeit fortführen. Keine Daten-/Testabschwächung oder neueRoadmap.
+
 ## WK055/057 · PR45 nach belegtem Dialog-Testfehler fertigstellen ·20.10.2026
 
 Den bestehenden Optikumfang erhalten und ausschließlich die tatsächlich reproduzierte Escape-Synchronisierung im normalen Backup-Test korrigieren. Ursprünglicher negativer Kontrollfall und beide erfolgreichen ganzen Backup-Teilprüfungen bleiben belegt. Keine Testabschwächung oder geschützte Änderung. Aktuelle vollständige lokale Pflichtprüfung, exakte strikte CI und tatsächliche test-live-/Vercel-/Browserauslieferung bleiben vor Abschluss erforderlich. Danach den bereits gezielt geprüften Tier-Spielstandserhalt und die bestehende Kapitelarbeit innerhalb3.5 fortführen; keine neue Roadmap oder News.
