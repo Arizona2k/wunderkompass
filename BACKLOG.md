@@ -1,3 +1,7 @@
+## WK053/055/057 · vorhandene historische Spurensuche fertigstellen
+
+Die bereits vorbereiteten Khipu-/Mohenjo-Daro-Karten mit tatsächlichen notwendigen Altrückwegen als normalen eigenständigen Abschnitt abschließen. Beide Themen haben keine unveröffentlichten Kartenabhängigkeiten. Quellen-/Fach-/Medienbelege und alte Gesamtarbeit erhalten, frühe UI-/Zoom-/Offline-/Altpassnachweise bestehen; vollständiger lokaler121erPflichtlauf und nachfolgende51UI-Bindungen erfolgreich; abschließende Integrität/Units, exaktes CI und reale Auslieferung bleiben erforderlich. Der bestehende Masterrest wird dadurch weder ersetzt noch blockiert; Kapitelüberarbeitung gehört zu3.5. Aktueller Umfang/Belege ausschließlich PROJECT_STATE und vorhandene Dossiers, keine zweite Roadmap.
+
 ## Laufender Teilabschnitt20.10.2026
 
 Im bestehenden Paket3.5: bereits gegengeprüfte fünf Lernreiseschaubilder und drei Aufgaben als unabhängig nutzbaren Abschnitt vollständig abnehmen. Alle alten Identitäten/Lösungen/Fortschritte erhalten, reale Quellen und ChronikbelegPR36 nachführen. Danach aktuelle Quality, reguläre test-live-Übernahme und tatsächlichen Vercel-/Browsernachtest durchführen. Große vorhandene Kapitelredaktion und alle übrigen bestehenden Aufgaben bleiben erhalten und werden anschließend weitergeführt; keine neue Roadmap.

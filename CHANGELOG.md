@@ -1,3 +1,7 @@
+## In Entwicklung · Geschichtliche Spuren untersuchen
+
+Zwei vorhandene neue Karten Khipu und Mohenjo-Daro in den regulären Lieferstand integriert. Eigene Lernbilder unterscheiden Menge und Bedeutung sowie sichtbaren Bauweg und weitergehende Vermutung. Vier erklärte Wissensverbindungen mit Rückwegen; bestehende Schriftquelle und passendes Antwortfeedback präzisiert. Ursprüngliche142Fragen und24Tierzugaben sowie bisherigeAntworten/IDs bleiben gegen ihre Originale geprüft; sechs neue Fragen kommen hinzu. Chronik führt ausschließlich den bereits ausgelieferten PR43 nach. Vollständige aktuelle Quality und Veröffentlichung dieses Geschichtsabschnitts noch offen.
+
 ## 20.10.2026 · Lernreisegrafiken und Denkaufgaben · lokal
 
 Plattengrenzen unterscheiden seitliches Vorbeigleiten nun durch parallele gegenläufige Pfeile; Schwerkraft und Tag/Jahr besitzen jeweils zwei eigene Pfeilspitzen. Kruste und starrer oberster Mantel werden zusammen als Platte gezeigt. Zustandsfelder erfinden keine Mengen- oder Temperaturskala. Zwei plausible Fehlalternativen mit individuellem Feedback und ein gezielter Hinweis verbessern drei bestehende Aufgaben; richtige Lösungen und gespeicherte Antwortindizes bleiben erhalten. Erwachsenenquelle aktualisiert, ursprünglicher Beleg bewahrt. Chronik ergänzt die tatsächlich schon ausgelieferte Suche aus PR36. Dieser neue Abschnitt ist noch nicht veröffentlicht.

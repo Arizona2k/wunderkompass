@@ -2627,5 +2627,46 @@
     "group": "Fische",
     "habitat": "Küsten mit Haltestrukturen",
     "continent": "Ostatlantik und Mittelmeer"
+  },
+  {
+    "id": "history-khipu",
+    "category": "history",
+    "title": "Khipus: Informationen in Schnüren",
+    "intro": "Im Inka-Reich hielten Menschen Mengen und Verwaltungsinformationen mit geknoteten Schnüren fest.",
+    "aliases": [
+      "Khipu",
+      "Quipu",
+      "Knotenschnüre",
+      "Inka Aufzeichnungen"
+    ],
+    "locations": [],
+    "year": 1500,
+    "era": "Wissen bewahren",
+    "date": "etwa 15.–16. Jahrhundert · Inka-Zeit",
+    "sensitive": false
+  },
+  {
+    "id": "history-mohenjo-daro",
+    "category": "history",
+    "title": "Mohenjo-Daro: Spuren einer geplanten Stadt",
+    "intro": "Im heutigen Pakistan zeigen alte Straßen, Gebäude und Wasserwege, wie Menschen ihre Stadt organisierten.",
+    "aliases": [
+      "Mohenjo Daro",
+      "Moenjodaro",
+      "Induskultur",
+      "Indus Stadtplanung"
+    ],
+    "locations": [
+      {
+        "label": "Ausgrabungsstätte im heutigen Pakistan",
+        "lat": 27.32917,
+        "lon": 68.13889,
+        "iso": "PK"
+      }
+    ],
+    "year": -2500,
+    "era": "Frühe Städte",
+    "date": "3. Jahrtausend v. Chr. · ungefährer Zeitanker",
+    "sensitive": false
   }
 ]
