@@ -390,6 +390,7 @@ export const ANIMAL_EXPANSION_COPY:HistoryCopy&{id:string}={
 };
 
 const TEST_COPY:Record<number,UpdateCopy> = {
+ 36:{id:'prepared-search-3-5',icon:'🔎',category:'Einfachere Bedienung',title:'Die Suche bereitet bekannte Begriffe vor',summary:'Namen und Suchhinweise werden einmal vorbereitet. Beim Tippen muss die Suche dieselben Wörter dadurch seltener erneut bearbeiten.',details:['Die Suche bereitet Namen, Vorschautexte und Schreibvarianten einmal vor, statt sie bei jedem Tastendruck erneut zu bearbeiten.','Ändert sich der geladene Katalog, wird auch die Vorbereitung erneuert.','Die bisherige Bewertung der Treffer, die Hilfe bei kleinen Tippfehlern und die vertrauten Rückwege bleiben erhalten.'],benefit:'Die Suche erledigt beim wiederholten Tippen weniger unnötige Arbeit. Deine bisherigen Suchwege und Lernstände bleiben erhalten.',links:[{label:'Wissenswelten durchsuchen',hash:'world'}]},
  "39": ANIMAL_EXPANSION_COPY,
  38:LAB_FEEDBACK_COPY,
  35:JOURNEY_SOURCE_COPY,

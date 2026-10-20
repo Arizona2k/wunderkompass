@@ -889,6 +889,31 @@
         "prompt": "Ein schneller Gummiversuch veranschaulicht Verformung. Was zeigt er nicht?",
         "answers": [
           "Die wirkliche Dauer und Zusammensetzung des Mantels",
+          "Wie ein Körper beim Biegen seine Form ändert",
+          "Dass sich ein Körper verformen kann, ohne flüssig zu werden"
+        ],
+        "correct": 0,
+        "hint": "Notiere, was der Versuch tatsächlich verändert und was er nicht nachbildet: Material, Temperatur, Druck und Zeit sind verschiedene Eigenschaften.",
+        "why": "Ein Modell kann Verformung zeigen, ohne Material und geologische Dauer nachzubilden.",
+        "wrong": [
+          "Ein Modell kann Verformung zeigen, ohne Material und geologische Dauer nachzubilden.",
+          "Die Formänderung kannst du im Vergleich beobachten. Die wirklichen Materialien, Temperaturen, Drücke und langen Zeiträume des Mantels bildet der Gummivergleich dagegen nicht nach.",
+          "Gerade das kann der Vergleich veranschaulichen: Formänderung ohne Schmelzen. Er zeigt aber nicht die tatsächliche Zusammensetzung und Dauer der Vorgänge im Mantel."
+        ]
+      },
+      "beforeHash": "6f3933b37908e1f014fd716106ba657a13a488c08dc82eb1960bbd93de9e75e6",
+      "afterHash": "63b7a05534e9648c8d395b7e251ab308e0d0463c3df72090a4db245fadaf703b",
+      "decision": "Gezielte KI-Gegenlese20.10.: passende Denkstütze beziehungsweise plausible Fehlalternative mit individueller Begründung; richtige Antwort und gespeicherter Lösungsindex unverändert.",
+      "sourceIds": [
+        "mantle",
+        "inside-interior"
+      ],
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "previousAfter20261020": {
+        "prompt": "Ein schneller Gummiversuch veranschaulicht Verformung. Was zeigt er nicht?",
+        "answers": [
+          "Die wirkliche Dauer und Zusammensetzung des Mantels",
           "Dass Modelle immer die echte Erde sind",
           "Dass jeder Mantelteil Gummi ist"
         ],
@@ -901,15 +926,21 @@
           "Gummi ist hier eine Lernhilfe, kein Erdgestein."
         ]
       },
-      "beforeHash": "6f3933b37908e1f014fd716106ba657a13a488c08dc82eb1960bbd93de9e75e6",
-      "afterHash": "b4172af20cfb7bd02ad91812de5cec0e61ebf1e7c64b91e2abe16a2bc0017f31",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Notiere, was der Versuch tatsächlich verändert und was er nicht nachbildet: Material, Temperatur, Druck und Zeit sind verschiedene Eigenschaften.",
-      "sourceIds": [
-        "inside-base",
-        "mantle"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "inside:1",
+        "level": "Übertragen: neue Situation/Modellgrenze",
+        "prompt": "Ein schneller Gummiversuch veranschaulicht Verformung. Was zeigt er nicht?",
+        "correctIndex": 0,
+        "correctAnswer": "Die wirkliche Dauer und Zusammensetzung des Mantels",
+        "sourceIds": [
+          "mantle",
+          "inside-interior"
+        ],
+        "countercheck": "USGS überwiegend fester, langfristig verformbarer Mantel versus flüssiger äußerer und unter Druck fester innerer Kern. Zustandsfelder jetzt gleich groß, ohne erfundene Mengen-/Temperaturskala. Gummianalogie veranschaulicht Formänderung, nicht Material oder geologische Dauer; zwei plausible Fehlalternativen einzeln begründet.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "Current isolated product build c4766794d0548e82, original full-local report /workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60; additional 30 native/cold cases and six old wrong-index cases passed. No CI/deployment claim."
+      }
     },
     {
       "id": "inside:2:0",
@@ -937,7 +968,7 @@
           "Der gesamte Mantel bis zum äußeren Kern"
         ],
         "correct": 1,
-        "hint": "Verfolge im Querschnitt die feste äußere Hülle. Prüfe, ob eine Platte nur Land umfasst oder auch unter einem Meer liegen kann.",
+        "hint": "Verfolge im Querschnitt die starre äußere Hülle von außen nach innen. Wo endet sie, bevor darunter Gestein über lange Zeit leichter verformbar ist?",
         "why": "Eine Platte ist ein Teil der festen äußeren Erdhülle.",
         "wrong": [
           "Zur starren Platte gehört auch ein oberster fester Teil des Mantels.",
@@ -946,13 +977,45 @@
         ]
       },
       "beforeHash": "0bcc92dc7a0c4d543658e5f59b7fda505418391572198434e12b8ded3774ee5d",
-      "afterHash": "bff05314fb0866bb6ef9ab8afb7eb7306b99806c718c83082dd36a2de0deb60e",
-      "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Verfolge im Querschnitt die feste äußere Hülle. Prüfe, ob eine Platte nur Land umfasst oder auch unter einem Meer liegen kann.",
+      "afterHash": "5863f341f8507bd1a7d550548395d91b49a69b2200ed19022ed006a90468b419",
+      "decision": "Gezielte KI-Gegenlese20.10.: passende Denkstütze beziehungsweise plausible Fehlalternative mit individueller Begründung; richtige Antwort und gespeicherter Lösungsindex unverändert.",
       "sourceIds": [
-        "inside-base"
+        "inside-plate-overview",
+        "inside-rigid-shell"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "previousAfter20261020": {
+        "prompt": "Woraus besteht eine tektonische Platte?",
+        "answers": [
+          "Nur die Erdkruste, ohne Mantelanteil",
+          "Kruste und oberster fester Mantelteil",
+          "Der gesamte Mantel bis zum äußeren Kern"
+        ],
+        "correct": 1,
+        "hint": "Verfolge im Querschnitt die feste äußere Hülle. Prüfe, ob eine Platte nur Land umfasst oder auch unter einem Meer liegen kann.",
+        "why": "Eine Platte ist ein Teil der festen äußeren Erdhülle.",
+        "wrong": [
+          "Zur starren Platte gehört auch ein oberster fester Teil des Mantels.",
+          "Eine Platte ist ein Teil der festen äußeren Erdhülle.",
+          "Nicht der gesamte Mantel gehört zur starren Platte; darunter kann heißes Gestein langsam verformt werden."
+        ]
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "inside:2",
+        "level": "Entdecken: erkennen/beobachten",
+        "prompt": "Woraus besteht eine tektonische Platte?",
+        "correctIndex": 1,
+        "correctAnswer": "Kruste und oberster fester Mantelteil",
+        "sourceIds": [
+          "inside-plate-overview",
+          "inside-rigid-shell"
+        ],
+        "countercheck": "NPS Lithosphäre umfasst Kruste und starren obersten Mantel. Ausgewählte Bandschicht/ganze Platte richtig hervorgehoben; darunter überwiegend festes verformbares Gestein, kein Magmameer. Hinweis zur Zusammensetzung statt nur Land/Meer. Vorhandene echte Plattenebene/Eurasische-Platte-Auswahl bei320/390tatsächlich bedient.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "Current isolated product build c4766794d0548e82, original full-local report /workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60; additional 30 native/cold cases and six old wrong-index cases passed. No CI/deployment claim."
+      }
     },
     {
       "id": "inside:2:1",
@@ -1278,6 +1341,31 @@
         "answers": [
           "Nein, etwa Hotspots können anders liegen",
           "Ja, ohne Ausnahme",
+          "Nein, Vulkane entstehen nur am Rand von Kontinenten"
+        ],
+        "correct": 0,
+        "hint": "Eine Aussage mit „jeder“ muss auch zu den genannten Ausnahmen passen. Suche einen Vulkanismus-Beispielort, der die einfache Regel erweitert.",
+        "why": "Hawaii veranschaulicht Vulkanismus über einem Hotspot.",
+        "wrong": [
+          "Hawaii veranschaulicht Vulkanismus über einem Hotspot.",
+          "Das Kapitel nennt eine Ausnahme von dieser absoluten Aussage.",
+          "Auch der Rand eines Kontinents ist keine allgemeine Vulkanregel. Hawaii ist eine Inselgruppe über einem Hotspot; nicht jeder Vulkan liegt an einer Plattengrenze."
+        ]
+      },
+      "beforeHash": "250c08d01de406880a09de285dda5e6641d746173a6753ecf870aca706b8aa2c",
+      "afterHash": "f4bda4ddbc80309e174faa5d7bc6439ed7862e77552da1f82367c906f1f8ebfe",
+      "decision": "Gezielte KI-Gegenlese20.10.: passende Denkstütze beziehungsweise plausible Fehlalternative mit individueller Begründung; richtige Antwort und gespeicherter Lösungsindex unverändert.",
+      "sourceIds": [
+        "volcano-detail",
+        "inside-volcanic-ash"
+      ],
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "previousAfter20261020": {
+        "prompt": "Liegt jeder Vulkan genau an einer Plattengrenze?",
+        "answers": [
+          "Nein, etwa Hotspots können anders liegen",
+          "Ja, ohne Ausnahme",
           "Nein, Vulkane bestehen aus Holz"
         ],
         "correct": 0,
@@ -1289,14 +1377,21 @@
           "Vulkanasche besteht aus kleinen Gesteins- und Glasstücken, nicht Holz."
         ]
       },
-      "beforeHash": "250c08d01de406880a09de285dda5e6641d746173a6753ecf870aca706b8aa2c",
-      "afterHash": "9702e71d957a2b56ca6cb81c3a0b3a99dfdfa536963815eb482ec88597ebc505",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Eine Aussage mit „jeder“ muss auch zu den genannten Ausnahmen passen. Suche einen Vulkanismus-Beispielort, der die einfache Regel erweitert.",
-      "sourceIds": [
-        "inside-base"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "inside:4",
+        "level": "Übertragen: neue Situation/Modellgrenze",
+        "prompt": "Liegt jeder Vulkan genau an einer Plattengrenze?",
+        "correctIndex": 0,
+        "correctAnswer": "Nein, etwa Hotspots können anders liegen",
+        "sourceIds": [
+          "volcano-detail",
+          "inside-volcanic-ash"
+        ],
+        "countercheck": "USGS Magma/Lava nach Lage, Asche aus Gestein/Mineralen/Glas und Hawaii-Hotspot konkret gelesen. Keine vollständige Erd-Magma-Schicht, keine Verbrennungsasche. Holz-Distraktor durch plausible falsche Kontinentrand-Regel samt passendem Feedback ersetzt; alte falsche Auswahl2 bleibt falsch.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "Current isolated product build c4766794d0548e82, original full-local report /workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60; additional 30 native/cold cases and six old wrong-index cases passed. No CI/deployment claim."
+      }
     },
     {
       "id": "water:0:0",
@@ -10505,6 +10600,26 @@
       "title": "Royal Museums Greenwich · Nullmeridian",
       "url": "https://www.rmg.co.uk/stories/time/what-prime-meridian-why-it-greenwich",
       "scope": "Ergänzende Themenquelle"
+    },
+    "inside-volcanic-ash": {
+      "title": "USGS · Woraus Vulkanasche besteht",
+      "url": "https://volcanoes.usgs.gov/volcanic_ash/ash.html",
+      "scope": "Kleine Gesteins-, Mineral- und Glasstücke; keine Verbrennungsasche und keine Anleitung für eigene Ausbruchsversuche."
+    },
+    "inside-interior": {
+      "title": "USGS · Was wir über das Erdinnere wissen",
+      "url": "https://www.usgs.gov/media/audio/what-do-we-know-about-interior-earth",
+      "scope": "Gelesenes Transkript: vier Schichten, überwiegend fester Mantel, flüssiger äußerer und fester innerer Kern. Veraltete Altersangabe nicht übernommen."
+    },
+    "inside-rigid-shell": {
+      "title": "NPS · Erdschichten und starre Platten",
+      "url": "https://www.nps.gov/subjects/geology/plate-tectonics-inner-earth-model.htm",
+      "scope": "Kruste plus starrer oberster Mantel bilden die Lithosphäre. Keine Buchgrafiken oder Versuchsvorlagen übernommen."
+    },
+    "inside-plate-overview": {
+      "title": "NPS · Bewegliche Erdplatten",
+      "url": "https://www.nps.gov/subjects/geology/plate-tectonics.htm",
+      "scope": "Lithosphäre und Plattengrenzen; keine unveränderliche überall gleiche Geschwindigkeit."
     }
   },
   "sectionReview": {
@@ -10525,6 +10640,52 @@
         "independentHumanReview": false
       }
     ],
-    "boundaries": "Keine vollständige Quellen-/Fach-/Kinder-/Geräteabnahme aller80 Basistexte/240 Aufgaben behauptet. Historische Quellenverweise sind keine erneute aktuelle Originalprüfung. Kein neuerArtikel/Modell/Angebot gezählt."
+    "boundaries": "Keine vollständige Quellen-/Fach-/Kinder-/Geräteabnahme aller80 Basistexte/240 Aufgaben behauptet. Historische Quellenverweise sind keine erneute aktuelle Originalprüfung. Kein neuerArtikel/Modell/Angebot gezählt.",
+    "diagramCounterreview20261020": {
+      "reviewer": "Codex; fachliche und pädagogische KI-Selbstprüfung",
+      "checkedOn": "2026-10-20",
+      "scope": [
+        "planet:3 gravity",
+        "planet:4 orbit",
+        "inside:1 material states",
+        "inside:2 crust and rigid upper mantle",
+        "inside:3 three plate boundary motions"
+      ],
+      "findings": [
+        "Separate arrowheads for both directions; gravity arrows point toward the centre.",
+        "Equal state fields compare solid/liquid states, with no invented thickness, quantity or temperature scale.",
+        "Crust and rigid uppermost mantle together form a plate; the deeper mantle remains predominantly solid and slowly deformable.",
+        "Apart and together are opposing cross-section directions; sliding past is shown by opposite parallel arrows in a labelled top view."
+      ],
+      "sources": [
+        {
+          "title": "NASA · Was Schwerkraft bewirkt",
+          "url": "https://spaceplace.nasa.gov/what-is-gravity/en/",
+          "scope": "Anziehung und das Festhalten der Atmosphäre; lokale Fallrichtung zur Erdmitte als Näherung.",
+          "id": "planet-gravity"
+        },
+        {
+          "title": "USGS · Was wir über das Erdinnere wissen",
+          "url": "https://www.usgs.gov/media/audio/what-do-we-know-about-interior-earth",
+          "scope": "Gelesenes Transkript: vier Schichten, überwiegend fester Mantel, flüssiger äußerer und fester innerer Kern. Veraltete Altersangabe nicht übernommen.",
+          "id": "inside-interior"
+        },
+        {
+          "title": "NPS · Erdschichten und starre Platten",
+          "url": "https://www.nps.gov/subjects/geology/plate-tectonics-inner-earth-model.htm",
+          "scope": "Kruste plus starrer oberster Mantel bilden die Lithosphäre. Keine Buchgrafiken oder Versuchsvorlagen übernommen.",
+          "id": "inside-rigid-shell"
+        },
+        {
+          "title": "NPS · Drei Arten von Plattengrenzen",
+          "url": "https://www.nps.gov/subjects/geology/plate-tectonics-types-of-plate-boundaries.htm",
+          "scope": "Auseinander, zusammen und seitlich vorbei; alle können beben. Zusammenstoßen bedeutet nicht immer Subduktion.",
+          "id": "inside-boundary-types"
+        }
+      ],
+      "criticalCountercheck": "No ocean of magma, no inference from heat alone to liquid, no claim that all convergent boundaries subduct. Own diagrams and paraphrases; no third-party media copied.",
+      "retention": "All 240 task identities, correct answer indices and correct answer wording remain unchanged. Old wrong indices remain wrong, old notes/resumes/stamps retain Schema3.",
+      "technicalStatus": "Current isolated candidate: full unchanged local Chromium154 regression passed; exact original report sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60. Additional first-ten native640/320, genuine stopped-server cold offline and six old wrong-index cases passed. Current CI/Firefox/WebKit and delivery still pending."
+    }
   }
 }
