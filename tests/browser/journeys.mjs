@@ -17,6 +17,30 @@ async function geometry(p,label){
   const r=el.getBoundingClientRect();return r.left< -2||r.right>innerWidth+2?[el.tagName+': '+el.textContent.slice(0,50)]:[];
  }));assert.deepEqual(escaped,[],label+' readable controls and text within viewport');
 }
+export async function assertJourneyDiagram(visual,id,selected){
+ if(['inside:3','planet:3','planet:4'].includes(id)){
+  // React must paint the selected scene before SVG measurements are taken.
+  await visual.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done))));
+  const arrows=await visual.locator('svg path[marker-end]').evaluateAll(paths=>paths.map(path=>{const start=path.getPointAtLength(0),end=path.getPointAtLength(path.getTotalLength());return {x:start.x,y:start.y,dx:end.x-start.x,dy:end.y-start.y};}));
+  assert.equal(arrows.length,2,'both indicated motions have their own arrowhead: '+id);
+  if(id==='inside:3'){
+   if(selected===2){assert.ok(arrows.every(a=>Math.abs(a.dx)<1));assert.ok(arrows[0].dy*arrows[1].dy<0,'past arrows are parallel and opposite');await visual.getByText('Blick von oben: seitlich aneinander vorbei',{exact:true}).waitFor();}
+   else{arrows.sort((a,b)=>a.x-b.x);assert.ok(selected===0?arrows[0].dx<0&&arrows[1].dx>0:arrows[0].dx>0&&arrows[1].dx<0,'apart and together differ in their actual directions');}
+  }
+  if(id==='planet:3'){arrows.sort((a,b)=>a.x-b.x);assert.ok(arrows[0].dx>0&&arrows[1].dx<0,'gravity points inward from both sides');}
+ }
+ if(id==='inside:1'){
+  const fields=await visual.locator('svg rect').evaluateAll(es=>es.map(e=>({width:e.getAttribute('width'),height:e.getAttribute('height')})));
+  assert.equal(fields.length,3);assert.equal(new Set(fields.map(f=>f.width+':'+f.height)).size,1,'solid/liquid state comparison has no invented quantity scale');
+  await visual.getByText(/keine Schichtdicken, Mengen oder Temperaturen/).waitFor();
+ }
+ if(id==='inside:2'){
+  const layers=await visual.locator('svg rect').evaluateAll(es=>es.map(e=>({y:Number(e.getAttribute('y')),h:Number(e.getAttribute('height')),fill:e.getAttribute('fill')})));
+  const outline=layers.find(e=>e.fill==='none'),bands=layers.filter(e=>e!==outline&&e.y<outline.y+outline.h);
+  assert.equal(bands.length,2,'plate contains both crust and uppermost mantle');assert.equal(bands[0].y,outline.y);assert.equal(bands[0].y+bands[0].h,bands[1].y);assert.equal(bands[1].y+bands[1].h,outline.y+outline.h);
+  await visual.getByText(/Eine Platte umfasst Kruste und starren obersten Mantel/).waitFor();
+ }
+}
 async function axe(p,selector){await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});const violations=await p.evaluate(async selector=>(await window.axe.run(selector,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']}})).violations.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)})),selector);assert.deepEqual(violations,[],'journey accessibility');}
 export async function journeysFlow(browser,base,ready,monitor,report,shots,nativeBrowser){
  const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce',acceptDownloads:true}),p=await context.newPage();monitor(p);p.setDefaultTimeout(20000);
@@ -101,6 +125,7 @@ export async function journeySupportView(p,{widths,shots,engine}){
     const choices=await visual.locator('.visual-choice button').all();
     for(const [selected,choice] of choices.entries()){
      await choice.click();assert.equal(await choice.getAttribute('aria-pressed'),'true');
+     await assertJourneyDiagram(visual,c.id,selected);
      const labels=await visual.locator('.chapter-diagram-key span').evaluateAll(nodes=>nodes.map(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {text:e.textContent,size:parseFloat(s.fontSize),left:r.left,right:r.right};}));
      assert.ok(labels.every(l=>l.text&&l.size>=16&&l.left>=-2&&l.right<=width+2),'readable unclipped HTML labels');
      if(c.id==='countries:3'){

@@ -47,3 +47,14 @@ test('all240 stored correct choices and individual hint-review coverage keep the
  const reviews=JSON.parse(fs.readFileSync('content/journey-task-review.json','utf8'));assert.equal(reviews.independentReview,false);assert.equal(reviews.tasks.length,240);assert.equal(new Set(reviews.tasks.map(r=>r.id)).size,240);assert.deepEqual(new Set(reviews.tasks.map(r=>r.id)),new Set(retained.map(r=>r.id)));assert.equal(new Set(data.chapters.flatMap(c=>c.tasks.map(q=>q.hint))).size,240);
  for(const review of reviews.tasks){const split=review.id.lastIndexOf(':'),id=review.id.slice(0,split),level=Number(review.id.slice(split+1)),q=data.chapters.find(c=>c.id===id).tasks[level];assert.deepEqual(q,review.after);assert.equal(createHash('sha256').update(JSON.stringify(q)).digest('hex'),review.afterHash);assert.equal(q.correct,review.before.correct);for(let i=0;i<3;i++)if(i!==q.correct){assert.notEqual(q.answers[i],q.answers[q.correct]);assert.notEqual(q.wrong[i],q.why);}}
 });
+
+test('individually corrected plate tasks retain recorded originals and resolvable primary references',()=>{
+ const review=JSON.parse(fs.readFileSync('content/journey-task-review.json','utf8'));
+ for(const id of ['inside:1:2','inside:2:0','inside:4:2']){
+  const row=review.tasks.find(r=>r.id===id);assert.ok(row.previousAfter20261020);assert.ok(row.aiCounterreview20261020);
+  assert.equal(row.after.correct,row.previousAfter20261020.correct);assert.equal(row.after.answers[row.after.correct],row.previousAfter20261020.answers[row.after.correct]);
+  for(const source of row.sourceIds)assert.match(review.sourceReferences[source]?.url??'',/^https:\/\//,id+' concrete source '+source);
+ }
+ const inside=JOURNEYS.find(j=>j.id==='inside');assert.equal(inside.source,'https://www.nps.gov/subjects/geology/plate-tectonics.htm');
+ assert.equal(review.sourceReferences['inside-base'].url,'https://pubs.usgs.gov/gip/dynamic/understanding.html','original inaccessible source remains recorded');
+});

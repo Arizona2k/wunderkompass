@@ -56,8 +56,8 @@ test('publication entries match successful deployments, source provenance and Be
 
 test('test website chronology retains the merged and deployed product rounds, with truthful channel dates',()=>{
  const entries=publicUpdates(),testEntries=entries.filter(e=>e.channel==='vercel-test');
- assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[39,38,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
- assert.equal(entries.length,37);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
+ assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[39,38,36,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
+ assert.equal(entries.length,38);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
  assert.ok(!PREPARED_UPDATES.some(e=>e.id==='foundation-2a'));
  assert.ok(UPDATE_HISTORY.some(e=>e.evidence.pullRequest===22));
@@ -192,3 +192,12 @@ test('actual PR39 promotes the existing animal identity once with its exact merg
   const wrong=structuredClone(record);mutate(wrong);assert.equal(confirmedTestDeployment(wrong),null);
  }
 });
+
+ test('PR36 search improvement appears once only with its real Vercel receipt',()=>{
+ const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===36),entry=publicUpdates().find(e=>e.id==='prepared-search-3-5');
+ assert.ok(record);assert.ok(entry);assert.equal(record.mergeCommit,'68cb0bd9e2d5de329c64e6f8c18da0b3e6f8bc90');
+ assert.equal(entry.evidence.pullRequest,36);assert.equal(entry.occurredAt,'2026-10-17T19:58:35Z');assert.equal(entry.status,'test-available');
+ assert.equal(publicUpdates().filter(e=>e.id===entry.id).length,1);assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));
+ const missing=structuredClone(record);missing.deploymentStatuses=[];assert.equal(testUpdate(missing,entry).status,'prepared');
+ const unrelated={...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(x=>x!==record.mergeCommit)};assert.equal(confirmedTestDeployment(record,unrelated),null);
+ });

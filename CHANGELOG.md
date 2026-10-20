@@ -1,3 +1,7 @@
+## 20.10.2026 · Lernreisegrafiken und Denkaufgaben · lokal
+
+Plattengrenzen unterscheiden seitliches Vorbeigleiten nun durch parallele gegenläufige Pfeile; Schwerkraft und Tag/Jahr besitzen jeweils zwei eigene Pfeilspitzen. Kruste und starrer oberster Mantel werden zusammen als Platte gezeigt. Zustandsfelder erfinden keine Mengen- oder Temperaturskala. Zwei plausible Fehlalternativen mit individuellem Feedback und ein gezielter Hinweis verbessern drei bestehende Aufgaben; richtige Lösungen und gespeicherte Antwortindizes bleiben erhalten. Erwachsenenquelle aktualisiert, ursprünglicher Beleg bewahrt. Chronik ergänzt die tatsächlich schon ausgelieferte Suche aus PR36. Dieser neue Abschnitt ist noch nicht veröffentlicht.
+
 ## 20.10.2026 · bestätigte Tierwelle in der Produktchronik nachgeführt
 
 Der bestehende Eintrag zu24zusätzlichenTierarten verwendet jetzt die tatsächlichen Merge-/Vercel-Belege vonPR39 und zeigt20.Oktober11:39:23MESZ statt „In Vorbereitung“. Alle36früherenEinträge und ihr Datum bleiben erhalten; keine Produktionsveröffentlichung behauptet. Regresse prüfen die genaue Identität, Zeit und Artverknüpfung sowie weiterhin fehlende/rote/fremde Belege. Dauerhafte Foto-Präferenz und angeforderte Browserlehren in vorhandene Regeln integriert. Diese Chronikkorrektur ist lokal implementiert; ihre Auslieferung folgt erst nach vollständigem aktuellem Pflichtgrün.

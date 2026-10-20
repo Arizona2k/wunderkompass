@@ -392,16 +392,16 @@
           "prompt": "Ein schneller Gummiversuch veranschaulicht Verformung. Was zeigt er nicht?",
           "answers": [
             "Die wirkliche Dauer und Zusammensetzung des Mantels",
-            "Dass Modelle immer die echte Erde sind",
-            "Dass jeder Mantelteil Gummi ist"
+            "Wie ein Körper beim Biegen seine Form ändert",
+            "Dass sich ein Körper verformen kann, ohne flüssig zu werden"
           ],
           "correct": 0,
           "hint": "Notiere, was der Versuch tatsächlich verändert und was er nicht nachbildet: Material, Temperatur, Druck und Zeit sind verschiedene Eigenschaften.",
           "why": "Ein Modell kann Verformung zeigen, ohne Material und geologische Dauer nachzubilden.",
           "wrong": [
             "Ein Modell kann Verformung zeigen, ohne Material und geologische Dauer nachzubilden.",
-            "Ein Modell ist eine begrenzte Darstellung.",
-            "Gummi ist hier eine Lernhilfe, kein Erdgestein."
+            "Die Formänderung kannst du im Vergleich beobachten. Die wirklichen Materialien, Temperaturen, Drücke und langen Zeiträume des Mantels bildet der Gummivergleich dagegen nicht nach.",
+            "Gerade das kann der Vergleich veranschaulichen: Formänderung ohne Schmelzen. Er zeigt aber nicht die tatsächliche Zusammensetzung und Dauer der Vorgänge im Mantel."
           ]
         }
       ]
@@ -421,7 +421,7 @@
             "Der gesamte Mantel bis zum äußeren Kern"
           ],
           "correct": 1,
-          "hint": "Verfolge im Querschnitt die feste äußere Hülle. Prüfe, ob eine Platte nur Land umfasst oder auch unter einem Meer liegen kann.",
+          "hint": "Verfolge im Querschnitt die starre äußere Hülle von außen nach innen. Wo endet sie, bevor darunter Gestein über lange Zeit leichter verformbar ist?",
           "why": "Eine Platte ist ein Teil der festen äußeren Erdhülle.",
           "wrong": [
             "Zur starren Platte gehört auch ein oberster fester Teil des Mantels.",
@@ -564,7 +564,7 @@
           "answers": [
             "Nein, etwa Hotspots können anders liegen",
             "Ja, ohne Ausnahme",
-            "Nein, Vulkane bestehen aus Holz"
+            "Nein, Vulkane entstehen nur am Rand von Kontinenten"
           ],
           "correct": 0,
           "hint": "Eine Aussage mit „jeder“ muss auch zu den genannten Ausnahmen passen. Suche einen Vulkanismus-Beispielort, der die einfache Regel erweitert.",
@@ -572,7 +572,7 @@
           "wrong": [
             "Hawaii veranschaulicht Vulkanismus über einem Hotspot.",
             "Das Kapitel nennt eine Ausnahme von dieser absoluten Aussage.",
-            "Vulkanasche besteht aus kleinen Gesteins- und Glasstücken, nicht Holz."
+            "Auch der Rand eines Kontinents ist keine allgemeine Vulkanregel. Hawaii ist eine Inselgruppe über einem Hotspot; nicht jeder Vulkan liegt an einer Plattengrenze."
           ]
         }
       ]

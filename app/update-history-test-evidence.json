@@ -865,6 +865,37 @@
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/BNWkSW8fqgwKYGndppToJcQb4U7f"
         }
       ]
+    },
+    {
+      "number": 36,
+      "title": "Suche: vorhandene Texte einmal vorberechnen, Treffer beibehalten",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/36",
+      "base": "test-live",
+      "mergedAt": "2026-10-17T19:58:22Z",
+      "mergeCommit": "68cb0bd9e2d5de329c64e6f8c18da0b3e6f8bc90",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/68cb0bd9e2d5de329c64e6f8c18da0b3e6f8bc90/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56605414823,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-17T19:58:35Z",
+          "updatedAt": "2026-10-17T19:58:35Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/FQk7n1AvkuigvmyK38Zgx2ABJT4S"
+        },
+        {
+          "id": 56605410400,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-17T19:58:25Z",
+          "updatedAt": "2026-10-17T19:58:25Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/FQk7n1AvkuigvmyK38Zgx2ABJT4S"
+        }
+      ]
     }
   ]
 }

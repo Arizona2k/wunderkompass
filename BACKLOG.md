@@ -1,3 +1,7 @@
+## Laufender Teilabschnitt20.10.2026
+
+Im bestehenden Paket3.5: bereits gegengeprüfte fünf Lernreiseschaubilder und drei Aufgaben als unabhängig nutzbaren Abschnitt vollständig abnehmen. Alle alten Identitäten/Lösungen/Fortschritte erhalten, reale Quellen und ChronikbelegPR36 nachführen. Danach aktuelle Quality, reguläre test-live-Übernahme und tatsächlichen Vercel-/Browsernachtest durchführen. Große vorhandene Kapitelredaktion und alle übrigen bestehenden Aufgaben bleiben erhalten und werden anschließend weitergeführt; keine neue Roadmap.
+
 ## Aktueller Abgleich WK053/057 ·20.10.2026
 
 Tier-PR39 vollständig geprüft, regulär nach test-live6ed2ecf übernommen und Vercel/echter Browser bestätigt. Jetzt die fehlende belegte Tierwelle in „Was ist neu?“ nachführen, vorhandene stabile Identität bewahren und falschen Vorbereitungsstatus entfernen. Alle historischen Einträge und nicht bestätigten Masterarbeiten erhalten. Vollständige aktuelle Pflichtprüfungen für diesen Folgestand, keine neue Freigabehürde. Ausdrückliche dauerhafte Präferenz für geeignete echte Fotos in bestehende Medienregeln übernehmen; neue24Fotos nach Art-/Quellen-/Rechteprüfung über vorhandene Pipeline bearbeiten, tatsächlichen403-Dateiabrufblocker offenlegen. Zeichnungen und übrige Nachtarbeit erhalten. Gewünschte schlanke Browser-/Versionslehre integrieren; keine neue Pipeline oder weicheren Tests. Danach vorhandene3.5-Arbeit weiter,4–8inReihenfolge, keinNews/main/Produktion.
