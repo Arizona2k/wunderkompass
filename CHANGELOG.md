@@ -1,3 +1,7 @@
+## 20.10.2026 · bestätigte Tierwelle in der Produktchronik nachgeführt
+
+Der bestehende Eintrag zu24zusätzlichenTierarten verwendet jetzt die tatsächlichen Merge-/Vercel-Belege vonPR39 und zeigt20.Oktober11:39:23MESZ statt „In Vorbereitung“. Alle36früherenEinträge und ihr Datum bleiben erhalten; keine Produktionsveröffentlichung behauptet. Regresse prüfen die genaue Identität, Zeit und Artverknüpfung sowie weiterhin fehlende/rote/fremde Belege. Dauerhafte Foto-Präferenz und angeforderte Browserlehren in vorhandene Regeln integriert. Diese Chronikkorrektur ist lokal implementiert; ihre Auslieferung folgt erst nach vollständigem aktuellem Pflichtgrün.
+
 ## 17.10.2026 · implementierter Labor-Lieferabschnitt, Bereitstellung noch unbestätigt
 
 -66 konkrete Erklärungen zu falschen Antworten in11bestehendenLaboren statt allgemeiner Rückmeldung; bestehende33Fragen/Antwortpositionen und Schema3-Fortschritte erhalten.
