@@ -1,3 +1,7 @@
+## Dauerhafte Produktpräzisierung ·20.10.2026
+
+News dauerhaft aus Anwendung und späteren Betriebsplänen entfernen; „Was ist neu?“ als Produktchronik erhalten. Die sechs Hauptbereiche und Zielgruppe6–14 bleiben. Neue Inhalte, auch bereits korrekte alte Inhalte, Design/Medien und Lernhandlungen mit konkretem Lernnutzen gemeinsam verbessern und sinnvoll gegenseitig verlinken. KI-Gegenprüfung statt pauschalem externem Menschen-Abschlussgate; echte Quellen-/Rechte-/Technikpflichten erhalten. Vorhandenes Paket3.5 fertigstellen, danach bestehende Pakete4–8; keine zusätzliche Roadmap. Widersprechende ältere Prozess- und News-Formulierungen darunter sind historisch ersetzt.
+
 # Produktvision WunderKompass
 
 Aktuelle dauerhafte Präzisierung17.10.2026: [Originalauftrag](content/auftrag-2026-10-13/WunderKompass_Fortsetzungsauftrag_2026-10-17.md). Die elf fachübergreifenden Perspektiven von Strategie/UX/Design bis Didaktik/Sicherheit/Betrieb wirken am gleichen Lernprodukt zusammen; keine zusätzlichen Rollensysteme. Neue Inhalte, relevante Altredaktion, Medien/Design, Lernmechaniken und Wissensnetz gemeinsam entwickeln. Sinnvolle Technik-/Gestaltungs-/Prozessoptimierung ist ausdrücklich beauftragt, einschließlich größerer nachgewiesen vorteilhafter Änderungen; Aufwand und Risiken berücksichtigen. Alte „keine Optimierungsrunde“-Kurzregeln sind kein allgemeines Verbesserungsverbot.

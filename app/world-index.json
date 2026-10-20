@@ -2146,5 +2146,486 @@
       "Tiden"
     ],
     "locations": []
+  },
+  {
+    "id": "animal-platypus",
+    "category": "animals",
+    "title": "Schnabeltier",
+    "intro": "Eier und Milch passen zusammen.",
+    "aliases": [
+      "platypus",
+      "Ornithorhynchus anatinus"
+    ],
+    "locations": [
+      {
+        "label": "Südostaustralien · Beispielregion",
+        "lat": -37.5,
+        "lon": 145
+      }
+    ],
+    "group": "Säugetiere",
+    "habitat": "Flüsse und Seen",
+    "continent": "Australien"
+  },
+  {
+    "id": "animal-short-beaked-echidna",
+    "category": "animals",
+    "title": "Kurzschnabeligel",
+    "intro": "Ein Name verrät noch keine Verwandtschaft.",
+    "aliases": [
+      "short-beaked-echidna",
+      "Tachyglossus aculeatus"
+    ],
+    "locations": [
+      {
+        "label": "Südostaustralien · Beispielregion",
+        "lat": -34.2,
+        "lon": 149.1
+      }
+    ],
+    "group": "Säugetiere",
+    "habitat": "Wälder und offene Landschaften",
+    "continent": "Australien"
+  },
+  {
+    "id": "animal-okapi",
+    "category": "animals",
+    "title": "Okapi",
+    "intro": "Streifen allein erzählen keine ganze Familiengeschichte.",
+    "aliases": [
+      "okapi",
+      "Okapia johnstoni"
+    ],
+    "locations": [
+      {
+        "label": "Ituriwald · Beispielregion",
+        "lat": 1.5,
+        "lon": 28.5
+      }
+    ],
+    "group": "Säugetiere",
+    "habitat": "Regenwald",
+    "continent": "Afrika"
+  },
+  {
+    "id": "animal-meerkat",
+    "category": "animals",
+    "title": "Erdmännchen",
+    "intro": "Gemeinsam leben heißt unterschiedliche Aufgaben beobachten.",
+    "aliases": [
+      "meerkat",
+      "Suricata suricatta"
+    ],
+    "locations": [
+      {
+        "label": "Kalahari · Beispielregion",
+        "lat": -26,
+        "lon": 21
+      }
+    ],
+    "group": "Säugetiere",
+    "habitat": "Trockene offene Landschaften",
+    "continent": "Afrika"
+  },
+  {
+    "id": "animal-ring-tailed-lemur",
+    "category": "animals",
+    "title": "Katta",
+    "intro": "Nachrichten können über mehrere Sinne ankommen.",
+    "aliases": [
+      "ring-tailed-lemur",
+      "Lemur catta"
+    ],
+    "locations": [
+      {
+        "label": "Südwestmadagaskar · Beispielregion",
+        "lat": -23,
+        "lon": 44.5
+      }
+    ],
+    "group": "Säugetiere",
+    "habitat": "Offene Wälder und trockene Landschaften",
+    "continent": "Afrika"
+  },
+  {
+    "id": "animal-north-american-beaver",
+    "category": "animals",
+    "title": "Nordamerikanischer Biber",
+    "intro": "Bauen kann einen ganzen Lebensraum verändern.",
+    "aliases": [
+      "north-american-beaver",
+      "Castor canadensis"
+    ],
+    "locations": [
+      {
+        "label": "Montana · Beispielregion",
+        "lat": 46,
+        "lon": -110
+      }
+    ],
+    "group": "Säugetiere",
+    "habitat": "Flüsse und Feuchtgebiete",
+    "continent": "Nordamerika"
+  },
+  {
+    "id": "animal-walrus",
+    "category": "animals",
+    "title": "Walross",
+    "intro": "Tastborsten helfen, Nahrung zu finden.",
+    "aliases": [
+      "walrus",
+      "Odobenus rosmarus"
+    ],
+    "locations": [
+      {
+        "label": "Beringstraße · Beispielregion",
+        "lat": 66,
+        "lon": -169
+      }
+    ],
+    "group": "Säugetiere",
+    "habitat": "Arktische Küsten und Meere",
+    "continent": "Arktis"
+  },
+  {
+    "id": "animal-red-fox",
+    "category": "animals",
+    "title": "Rotfuchs",
+    "intro": "Ein Lebensraum ist mehr als ein einzelner Wald.",
+    "aliases": [
+      "red-fox",
+      "Vulpes vulpes"
+    ],
+    "locations": [
+      {
+        "label": "Mitteleuropa · Beispielregion",
+        "lat": 51,
+        "lon": 10
+      }
+    ],
+    "group": "Säugetiere",
+    "habitat": "Wälder, Offenland und Siedlungen",
+    "continent": "Mehrere Kontinente"
+  },
+  {
+    "id": "animal-raccoon",
+    "category": "animals",
+    "title": "Waschbär",
+    "intro": "Mit den Pfoten Informationen sammeln.",
+    "aliases": [
+      "raccoon",
+      "Procyon lotor"
+    ],
+    "locations": [
+      {
+        "label": "Östliches Nordamerika · Beispielregion",
+        "lat": 40,
+        "lon": -85
+      }
+    ],
+    "group": "Säugetiere",
+    "habitat": "Wälder und Siedlungsräume",
+    "continent": "Ursprünglich Nordamerika"
+  },
+  {
+    "id": "animal-hedgehog",
+    "category": "animals",
+    "title": "Braunbrustigel",
+    "intro": "Ein guter Garten braucht auch Verstecke.",
+    "aliases": [
+      "hedgehog",
+      "Erinaceus europaeus"
+    ],
+    "locations": [
+      {
+        "label": "Südengland · Beispielregion",
+        "lat": 51,
+        "lon": 0
+      }
+    ],
+    "group": "Säugetiere",
+    "habitat": "Hecken, Gärten und Waldränder",
+    "continent": "Europa"
+  },
+  {
+    "id": "animal-barn-owl",
+    "category": "animals",
+    "title": "Schleiereule",
+    "intro": "Artwissen benötigt mehr als ein bekanntes Gesicht.",
+    "aliases": [
+      "barn-owl",
+      "Tyto alba"
+    ],
+    "locations": [
+      {
+        "label": "Großbritannien · Beispielregion",
+        "lat": 52,
+        "lon": 0
+      }
+    ],
+    "group": "Vögel",
+    "habitat": "Offene Landschaften",
+    "continent": "Europa"
+  },
+  {
+    "id": "animal-kingfisher",
+    "category": "animals",
+    "title": "Eisvogel",
+    "intro": "Eine Farbe kann durch Struktur entstehen.",
+    "aliases": [
+      "kingfisher",
+      "Alcedo atthis"
+    ],
+    "locations": [
+      {
+        "label": "Mitteleuropa · Beispielregion",
+        "lat": 52,
+        "lon": 10
+      }
+    ],
+    "group": "Vögel",
+    "habitat": "Flussufer und Stillgewässer",
+    "continent": "Europa und Asien"
+  },
+  {
+    "id": "animal-ostrich",
+    "category": "animals",
+    "title": "Afrikanischer Strauß",
+    "intro": "Nicht fliegen heißt nicht nutzlos.",
+    "aliases": [
+      "ostrich",
+      "Struthio camelus"
+    ],
+    "locations": [
+      {
+        "label": "Südliches Afrika · Beispielregion",
+        "lat": -22,
+        "lon": 18
+      }
+    ],
+    "group": "Vögel",
+    "habitat": "Savannen und trockene offene Landschaften",
+    "continent": "Afrika"
+  },
+  {
+    "id": "animal-atlantic-puffin",
+    "category": "animals",
+    "title": "Papageitaucher",
+    "intro": "Zwischen Insel und offenem Meer wechseln.",
+    "aliases": [
+      "atlantic-puffin",
+      "Fratercula arctica"
+    ],
+    "locations": [
+      {
+        "label": "Island · Beispielregion",
+        "lat": 64,
+        "lon": -20
+      }
+    ],
+    "group": "Vögel",
+    "habitat": "Küsten und offenes Meer",
+    "continent": "Nordatlantik"
+  },
+  {
+    "id": "animal-common-chameleon",
+    "category": "animals",
+    "title": "Europäisches Chamäleon",
+    "intro": "Farbwechsel ist keine beliebige Verkleidung.",
+    "aliases": [
+      "common-chameleon",
+      "Chamaeleo chamaeleon"
+    ],
+    "locations": [
+      {
+        "label": "Südliche Iberische Halbinsel · Beispielregion",
+        "lat": 37,
+        "lon": -5
+      }
+    ],
+    "group": "Reptilien",
+    "habitat": "Büsche und Bäume",
+    "continent": "Mittelmeerraum"
+  },
+  {
+    "id": "animal-fire-salamander",
+    "category": "animals",
+    "title": "Feuersalamander",
+    "intro": "Wald und Bach gehören zu einer Lebensgeschichte.",
+    "aliases": [
+      "fire-salamander",
+      "Salamandra salamandra"
+    ],
+    "locations": [
+      {
+        "label": "Eifel · Beispielregion",
+        "lat": 50.6,
+        "lon": 6.7
+      }
+    ],
+    "group": "Amphibien",
+    "habitat": "Feuchte Wälder und Larvengewässer",
+    "continent": "Europa"
+  },
+  {
+    "id": "animal-common-frog",
+    "category": "animals",
+    "title": "Grasfrosch",
+    "intro": "Ein Tier braucht im Laufe des Lebens verschiedene Orte.",
+    "aliases": [
+      "common-frog",
+      "Rana temporaria"
+    ],
+    "locations": [
+      {
+        "label": "Großbritannien · Beispielregion",
+        "lat": 54,
+        "lon": -2
+      }
+    ],
+    "group": "Amphibien",
+    "habitat": "Gewässer, Wälder und Gärten",
+    "continent": "Europa"
+  },
+  {
+    "id": "animal-eastern-clown-anemonefish",
+    "category": "animals",
+    "title": "Echter Clownfisch",
+    "intro": "Ein ähnliches Muster kann verschiedene Arten verdecken.",
+    "aliases": [
+      "eastern-clown-anemonefish",
+      "Amphiprion percula"
+    ],
+    "locations": [
+      {
+        "label": "Great Barrier Reef · Beispielregion",
+        "lat": -16.5,
+        "lon": 146
+      }
+    ],
+    "group": "Fische",
+    "habitat": "Korallenriffe mit Seeanemonen",
+    "continent": "Westlicher Pazifik"
+  },
+  {
+    "id": "animal-european-eel",
+    "category": "animals",
+    "title": "Europäischer Aal",
+    "intro": "Eine Wanderung verbindet Flüsse und Ozean.",
+    "aliases": [
+      "european-eel",
+      "Anguilla anguilla"
+    ],
+    "locations": [
+      {
+        "label": "Flüsse Südenglands · Beispielregion",
+        "lat": 51,
+        "lon": 0
+      }
+    ],
+    "group": "Fische",
+    "habitat": "Flüsse, Küsten und Atlantik",
+    "continent": "Europa und Nordatlantik"
+  },
+  {
+    "id": "animal-monarch-butterfly",
+    "category": "animals",
+    "title": "Monarchfalter",
+    "intro": "Eine Art kann verschiedene Wanderstrategien besitzen.",
+    "aliases": [
+      "monarch-butterfly",
+      "Danaus plexippus"
+    ],
+    "locations": [
+      {
+        "label": "Zentralmexiko · Beispielregion",
+        "lat": 19.6,
+        "lon": -100.2
+      }
+    ],
+    "group": "Insekten",
+    "habitat": "Blütenreiche Landschaften",
+    "continent": "Vor allem Nordamerika"
+  },
+  {
+    "id": "animal-garden-snail",
+    "category": "animals",
+    "title": "Gefleckte Weinbergschnecke",
+    "intro": "Ein vertrauter Gartenbewohner hat mehrere Sinne.",
+    "aliases": [
+      "garden-snail",
+      "Cornu aspersum"
+    ],
+    "locations": [
+      {
+        "label": "Westfrankreich · Beispielregion",
+        "lat": 48,
+        "lon": -1.5
+      }
+    ],
+    "group": "Weichtiere",
+    "habitat": "Gärten, Hecken und andere Verstecke",
+    "continent": "Europa und weitere Regionen"
+  },
+  {
+    "id": "animal-european-lobster",
+    "category": "animals",
+    "title": "Europäischer Hummer",
+    "intro": "Wachsen trotz harter Außenhülle.",
+    "aliases": [
+      "european-lobster",
+      "Homarus gammarus"
+    ],
+    "locations": [
+      {
+        "label": "Küste Cornwalls · Beispielregion",
+        "lat": 50,
+        "lon": -5
+      }
+    ],
+    "group": "Krebstiere",
+    "habitat": "Felsiger Meeresboden",
+    "continent": "Europa und Ostatlantik"
+  },
+  {
+    "id": "animal-common-cuttlefish",
+    "category": "animals",
+    "title": "Gewöhnliche Sepia",
+    "intro": "Tintenfisch ist kein einzelner Körperbau.",
+    "aliases": [
+      "common-cuttlefish",
+      "Sepia officinalis",
+      "Gewöhnlicher Tintenfisch"
+    ],
+    "locations": [
+      {
+        "label": "Ärmelkanalküste · Beispielregion",
+        "lat": 50,
+        "lon": -2
+      }
+    ],
+    "group": "Weichtiere",
+    "habitat": "Küstennaher Meeresboden",
+    "continent": "Ostatlantik und Mittelmeer"
+  },
+  {
+    "id": "animal-short-snouted-seahorse",
+    "category": "animals",
+    "title": "Kurzschnäuziges Seepferdchen",
+    "intro": "Ein Greifschwanz kann im Wasser Halt geben.",
+    "aliases": [
+      "short-snouted-seahorse",
+      "Hippocampus hippocampus"
+    ],
+    "locations": [
+      {
+        "label": "Südenglische Küste · Beispielregion",
+        "lat": 50,
+        "lon": -3
+      }
+    ],
+    "group": "Fische",
+    "habitat": "Küsten mit Haltestrukturen",
+    "continent": "Ostatlantik und Mittelmeer"
   }
 ]

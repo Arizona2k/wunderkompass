@@ -1,3 +1,9 @@
+## Aktueller bestätigter Betrieb ·20.10.2026
+
+PR41 ist regulär nach test-live übernommen: Commit76eb8ce851563b804bcbeb5c8051b362e912e611 und Baum55780be24497f3a4e429a739fe3f8c741c902d59 entsprechen der vollständigen erfolgreichen Quality39118916818. Vercel-success56764828017 und Browsernachtest320/groß,390,1440 bestätigen Build3b1d81df97ace554 an der bestehenden Testadresse. News entfernt, Produktchronik und Schema3 erhalten. Ältere Setup-/Zugangssperren unten sind historische Beobachtungen. Ruleset25304083 tatsächlich active/strict/PR-Pflicht/App15368/ohneBypass; Setup34 durch Arizona2k übernommen und im Ziel enthalten.
+
+Normale fertige geprüfte Teilabschnitte bleiben regulär autorisiert. Die ausdrücklich beauftragten punktuellen Änderungen in AGENTS/QUALITY/VISION/TEST-LIVE werden als konkret genehmigte Wartung geprüft; Readiness-Helper und Schutzliste unverändert. Vor jeder Übernahme aktuelle Head-/Basis-/Integrationsbindung, native Regeln, Reservierung und Betriebsgrenzen prüfen. Ende16.11.2026,00:00Europe/Berlin samt5Minuten Reserve unverändert. Tatsächlichen Mergebaum, passendes Vercel-Deployment und reale Testseite bestätigen; bei ungeklärter Auslieferung abhängige Releases anhalten. Chronikquittung im nächsten sinnvollen Produktabschnitt, keine rekursiven Bestätigungsreleases. Kein main, Produktion, Direktpush oder Gesamtmerge27.
+
 # Verbindliche, begrenzte Testübernahme
 
 Aktueller Auftrag: [vollständiges Original17.10.2026](content/auftrag-2026-10-13/WunderKompass_Fortsetzungsauftrag_2026-10-17.md). Diese aktuelle Anleitung ersetzt die historische manuelle Einzelmerge-Regel und das alte hypothetische direkte Pushverfahren. Historie bleibt in Git und Originalquellen erhalten. Technische Qualitäts-, Daten-, Zugangs- und Kostenschutzregeln bleiben verbindlich. main und Nachrichtenentwicklung/-betrieb sind ausgeschlossen.
