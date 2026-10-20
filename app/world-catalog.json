@@ -2632,7 +2632,7 @@
     "intro": "In Mesopotamien, im heutigen Irak, schrieben Menschen Zeichen auf Tontafeln.",
     "paragraphs": [
       "Zuerst hielten sie damit zum Beispiel fest, wie viel Getreide es gab.",
-      "Aus Bildzeichen entwickelte sich nach und nach die Keilschrift."
+      "Frühe Zeichen waren nicht nur Bilder, sondern auch abstrakte Markierungen. Später wurden keilförmige Zeichen mit einem Schreibgriffel in Ton gedrückt."
     ],
     "facts": [
       {
@@ -2646,9 +2646,9 @@
     ],
     "more": [
       "Schrift konnte Informationen bewahren, auch wenn die Person, die sie wusste, gerade nicht da war.",
-      "Schrift kann eine Nachricht bewahren, auch wenn die Person, die sie geschrieben hat, längst gegangen ist. Frühe Schreiber hielten zum Beispiel Vorräte und Lieferungen fest. Später wurden auch Geschichten aufgeschrieben."
+      "Nicht jedes frühe Zeichen lässt sich als Gegenstand erkennen. Später konnten Zeichen auch Laute und Silben bezeichnen. Schrift entstand nicht auf einmal als fertiges Alphabet."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Eine Mengenliste erzählt nicht den gesamten Alltag ihrer Verfasser. Überlege, was sie festhält und welche Fragen sie offenlässt.",
     "locations": [
       {
         "label": "Uruk – im heutigen Irak",
@@ -2658,12 +2658,14 @@
       }
     ],
     "related": [
-      "history-web"
+      "history-web",
+      "history-khipu",
+      "history-mohenjo-daro"
     ],
     "sources": [
       {
-        "label": "The Metropolitan Museum of Art",
-        "url": "https://www.metmuseum.org/es/essays/the-origins-of-writing"
+        "label": "The Metropolitan Museum of Art · The Origins of Writing",
+        "url": "https://www.metmuseum.org/essays/the-origins-of-writing"
       }
     ],
     "aliases": [
@@ -2684,8 +2686,22 @@
         "Zum Bauen von Satelliten"
       ],
       "correct": 0,
-      "why": "Schrift konnte Informationen bewahren, auch wenn die Person, die sie wusste, gerade nicht da war."
-    }
+      "why": "Auf frühen Tontafeln hielten Menschen wirtschaftliche Angaben fest, zum Beispiel Mengen von Getreide. Die Aufzeichnung bewahrte diese Information auch für später."
+    },
+    "learning": {
+      "starter": "Eine Nachricht kann bleiben, auch wenn niemand sie gerade erzählt. Zeichen auf Ton halfen dabei.",
+      "observe": "Stell dir drei abgegebene Körbe vor. Welche Information könntest du zählen, und welche gemeinsame Regel brauchst du zum Verstehen deiner Zeichen?",
+      "benefit": "Du erkennst, warum eine gespeicherte Menge und eine verständliche Nachricht nicht dasselbe sind."
+    },
+    "questionFeedback": {
+      "hint": "Stell dir einen Händler vor, der sich viele Lieferungen merken muss. Wofür könnten aufgeschriebene Zeichen nützlich sein?",
+      "wrongReasons": [
+        null,
+        "E-Mails brauchen elektronische Geräte und ein Datennetz. Frühe Tontafeln bewahrten Zeichen direkt im Material.",
+        "Eine Tontafel ist keine Bauanleitung für Satelliten. Die Quelle beschreibt frühe Aufzeichnungen etwa über Güter und Mengen."
+      ]
+    },
+    "sourceNote": "Der Met-Artikel erklärt frühe Bildzeichen und abstrakte Markierungen sowie spätere Lautverwendungen. Der Zeitanker ist ungefähr und bezeichnet keinen einzelnen Erfindungstag. Khipus zeigen eine andere Form von Aufzeichnung; ihre Verbindung hier ist ein Vergleich, keine behauptete direkte historische Übertragung."
   },
   {
     "id": "history-pyramids",
@@ -3862,7 +3878,8 @@
     ],
     "related": [
       "person-tim_berners_lee",
-      "invention-internet"
+      "invention-internet",
+      "history-khipu"
     ],
     "sources": [
       {
@@ -8396,7 +8413,8 @@
     "related": [
       "building-colosseum",
       "history-greece",
-      "building-golden-gate-bridge"
+      "building-golden-gate-bridge",
+      "history-mohenjo-daro"
     ],
     "sources": [
       {
@@ -12614,5 +12632,214 @@
         null
       ]
     }
+  },
+  {
+    "id": "history-khipu",
+    "category": "history",
+    "title": "Khipus: Informationen in Schnüren",
+    "intro": "Im Inka-Reich hielten Menschen Mengen und Verwaltungsinformationen mit geknoteten Schnüren fest.",
+    "aliases": [
+      "Khipu",
+      "Quipu",
+      "Knotenschnüre",
+      "Inka Aufzeichnungen"
+    ],
+    "paragraphs": [
+      "Ein Khipu besitzt eine Hauptschnur und weitere daran befestigte Schnüre. Knoten, Farben und die Anordnung konnten Informationen tragen. Fachkundige Menschen stellten solche Aufzeichnungen her und lasen sie.",
+      "Damit ließen sich zum Beispiel Vorräte und Arbeitsleistungen festhalten. Die Schnüre waren ein Werkzeug zur Verwaltung eines großen Reiches, keine bloße Verzierung."
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "Inka-Zeit, etwa 15.–16. Jahrhundert; das verlinkte Museumsstück wird auf 1425–1532 datiert."
+      },
+      {
+        "label": "Material",
+        "text": "Schnüre, zum Beispiel aus Baumwolle; Merkmale und Anordnung sind wichtig."
+      }
+    ],
+    "more": [
+      "Bei vielen zahlenbezogenen Khipus ordneten Stellenwerte Mengen im Zehnersystem. Ein Lernbild mit einem Zeichen pro Korb zeigt nur das Grundproblem des Aufzeichnens und ersetzt dieses historische Verfahren nicht.",
+      "Welche weiteren Inhalte Khipus bewahren konnten, ist eine Forschungsfrage. Eine sichtbare Menge ist nicht automatisch eine vollständig verstandene Nachricht."
+    ],
+    "surprise": "Eine Aufzeichnung muss nicht wie ein Buch aussehen. Zum Verstehen gehören Material, gemeinsame Regeln und der Zusammenhang.",
+    "locations": [],
+    "related": [
+      "history-writing",
+      "history-web"
+    ],
+    "sources": [
+      {
+        "label": "Smithsonian NMAI · Inka khipu, Museumsobjekt und Erklärung",
+        "url": "https://americanindian.si.edu/exhibitions/infinityofnations/andes/143866.html"
+      },
+      {
+        "label": "NIST Museum · Standardizing an Empire",
+        "url": "https://www.nist.gov/nist-museum/standardizing-empire"
+      }
+    ],
+    "sourceNote": "Quellenpassagen zu Aufbau, Mengen, Stellenwerten und Verwaltung am 17.10.2026 selbst gelesen. Eigene Texte und ein ausdrücklich erfundenes Zählschnur-Lernbild; keine kopierten Museumsmedien. Keine gemeinsame Fundkoordinate für alle Khipus erfunden.",
+    "links": [],
+    "history": {
+      "year": 1500,
+      "date": "etwa 15.–16. Jahrhundert · Inka-Zeit",
+      "era": "Wissen bewahren",
+      "sensitive": false
+    },
+    "learning": {
+      "starter": "Menschen können eine Menge festhalten, auch wenn sie keine Buchstaben dafür benutzen. Hier helfen Schnüre und Knoten.",
+      "observe": "Verändere zwei Mengen im Lernbild. Blende dann die Bedeutung aus: Was weißt du noch, und welche Information fehlt?",
+      "benefit": "Du unterscheidest eine Zahl von der Bedeutung dieser Zahl und erkennst die Grenzen einer Quelle."
+    },
+    "question": {
+      "prompt": "Wofür wurden Khipus im Inka-Reich unter anderem verwendet?",
+      "answers": [
+        "Zum Festhalten von Vorräten und anderen Mengen",
+        "Als elektrisches Telefonnetz",
+        "Als Beweis, dass jeder Knoten einen Buchstaben bedeutet"
+      ],
+      "correct": 0,
+      "why": "Khipus konnten Mengen und Verwaltungsinformationen festhalten. Ihre Bedeutung hängt von mehreren Merkmalen und dem Zusammenhang ab."
+    },
+    "questionFeedback": {
+      "hint": "Überlege, welche Informationen Menschen beim Verteilen von Vorräten aufbewahren müssen.",
+      "wrongReasons": [
+        null,
+        "Die Schnüre übertragen hier keine elektrischen Telefonsignale. Sie bewahren angeordnete Merkmale.",
+        "Ein Knoten darf nicht pauschal mit einem Buchstaben gleichgesetzt werden. Zahlen und weitere Merkmale gehören zur Deutung."
+      ]
+    },
+    "challenges": [
+      {
+        "id": "history-khipu:compare",
+        "difficulty": "medium",
+        "prompt": "Du erkennst in unserem erfundenen Lernbild drei und fünf Zeichen. Was fehlt ohne Vereinbarung?",
+        "answers": [
+          "Ob die Zeichen etwa Körbe oder Personen zählen",
+          "Dass fünf mehr als drei ist",
+          "Die Möglichkeit, beide gezeichneten Mengen zu vergleichen"
+        ],
+        "correct": 0,
+        "why": "Eine Anzahl lässt sich vergleichen, ohne zu wissen, was gezählt wird. Die Bedeutung braucht eine vereinbarte Zuordnung."
+      },
+      {
+        "id": "history-khipu:limits",
+        "difficulty": "hard",
+        "prompt": "Ein Khipu enthält erkennbare Zahlen. Welche Schlussfolgerung geht über diesen Befund hinaus?",
+        "answers": [
+          "Dass damit jede weitere Bedeutung des Khipus vollständig geklärt ist",
+          "Dass bestimmte Mengen aufgezeichnet sein können",
+          "Dass Knoten und Anordnung untersucht werden können"
+        ],
+        "correct": 0,
+        "why": "Erkennbare Zahlen beweisen keine vollständige Entschlüsselung aller weiteren Merkmale oder Bedeutungen."
+      }
+    ]
+  },
+  {
+    "id": "history-mohenjo-daro",
+    "category": "history",
+    "title": "Mohenjo-Daro: Spuren einer geplanten Stadt",
+    "intro": "Im heutigen Pakistan zeigen alte Straßen, Gebäude und Wasserwege, wie Menschen ihre Stadt organisierten.",
+    "aliases": [
+      "Mohenjo Daro",
+      "Moenjodaro",
+      "Induskultur",
+      "Indus Stadtplanung"
+    ],
+    "paragraphs": [
+      "Mohenjo-Daro liegt im Indusgebiet. Die Stadt bestand im dritten Jahrtausend vor Christus. In ausgegrabenen Bereichen verlaufen Straßen rechtwinklig zueinander; Brunnen, Bäder und Abläufe gehören zu den erhaltenen Spuren.",
+      "Aus solchen Funden lässt sich etwas über Planung und Wassernutzung lernen. Ein Grundriss erzählt aber nicht von allein, wie jeder Mensch lebte. Forschende müssen Beobachtung und Deutung unterscheiden."
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "3. Jahrtausend v. Chr. · keine genaue Gründung an einem einzelnen Tag"
+      },
+      {
+        "label": "Wo?",
+        "text": "Sindh, im heutigen Pakistan"
+      }
+    ],
+    "more": [
+      "Nur ein Teil des Ortes ist ausgegraben. Aussagen über einen untersuchten Bereich gelten deshalb nicht automatisch für jedes Haus der damaligen Stadt.",
+      "Die Erhaltung ist selbst eine Forschungsaufgabe: Feuchtigkeit und Salze können die alten Reste schädigen. Schutzarbeit soll die noch vorhandenen Spuren bewahren."
+    ],
+    "surprise": "Ein Wasserweg ist ein wichtiger Fund. Dass alle Bewohner gesund waren oder gleich lebten, lässt sich daraus allein nicht ablesen.",
+    "locations": [
+      {
+        "label": "Ausgrabungsstätte im heutigen Pakistan",
+        "lat": 27.32917,
+        "lon": 68.13889,
+        "iso": "PK"
+      }
+    ],
+    "related": [
+      "history-rome",
+      "history-writing"
+    ],
+    "sources": [
+      {
+        "label": "UNESCO World Heritage Centre · Archaeological Ruins at Moenjodaro",
+        "url": "https://whc.unesco.org/en/list/138/"
+      }
+    ],
+    "sourceNote": "UNESCO-Abschnitte Brief synthesis, Integrity und Protection am 17.10.2026 selbst gelesen. Die Kurzbeschreibung und die ausführliche Beschreibung verwenden unterschiedliche Ziegelangaben; daraus wird hier keine pauschale Materialbehauptung übernommen. Eigenes ausdrücklich erfundenes Planmodell, kein originaler Ausgrabungsplan, keine kopierten UNESCO-Fotos.",
+    "links": [],
+    "history": {
+      "year": -2500,
+      "date": "3. Jahrtausend v. Chr. · ungefährer Zeitanker",
+      "era": "Frühe Städte",
+      "sensitive": false
+    },
+    "learning": {
+      "starter": "Alte Straßen und Wasserwege sind Spuren. Sie helfen uns zu verstehen, wie Menschen eine Stadt planten.",
+      "observe": "Vergleiche die zwei erfundenen Pläne: Wo endet der Wasserweg? Welche Aussage kannst du direkt am Bild prüfen?",
+      "benefit": "Du lernst, einen sichtbaren Befund von einer weitergehenden Vermutung zu unterscheiden."
+    },
+    "question": {
+      "prompt": "Welche Spur nennt die UNESCO für die Stadtplanung von Mohenjo-Daro?",
+      "answers": [
+        "Straßen und ein System von Abläufen",
+        "Ein modernes elektrisches U-Bahn-Netz",
+        "Satellitenaufnahmen aus der Bauzeit"
+      ],
+      "correct": 0,
+      "why": "Ausgegrabene Straßen und Wasseranlagen sind materielle Spuren. Ihre Untersuchung erlaubt begrenzte Aussagen über die Stadtplanung."
+    },
+    "questionFeedback": {
+      "hint": "Suche nach Spuren, die als Baureste erhalten sein können.",
+      "wrongReasons": [
+        null,
+        "Eine moderne elektrische U-Bahn gehört nicht zu den beschriebenen antiken Bauresten.",
+        "Satelliten gab es in der Bauzeit nicht. Heutige Aufnahmen sind keine damaligen Augenzeugenbilder."
+      ]
+    },
+    "challenges": [
+      {
+        "id": "history-mohenjo-daro:compare",
+        "difficulty": "medium",
+        "prompt": "In einem Haus wird ein Ablauf gefunden. Was ist damit direkt belegt?",
+        "answers": [
+          "An dieser Stelle gab es eine bauliche Einrichtung für einen Wasserweg",
+          "Dass alle Bewohner der Stadt dasselbe Einkommen hatten",
+          "Dass das Wasser immer keimfrei war"
+        ],
+        "correct": 0,
+        "why": "Der Fund belegt zunächst die bauliche Einrichtung. Einkommen oder Keimfreiheit benötigen andere Belege."
+      },
+      {
+        "id": "history-mohenjo-daro:limits",
+        "difficulty": "hard",
+        "prompt": "Warum reicht ein ausgegrabener Stadtteil nicht für jede Aussage über die gesamte Stadt?",
+        "answers": [
+          "Untersuchter Ausschnitt und Gesamtstadt sind nicht automatisch gleich",
+          "Weil Baureste grundsätzlich nichts über Menschen verraten",
+          "Weil nur schriftliche Quellen wissenschaftlich zählen"
+        ],
+        "correct": 0,
+        "why": "Materielle Quellen sind wertvoll, aber ihr räumlicher und zeitlicher Ausschnitt begrenzt die Schlüsse. Weitere Funde können sie ergänzen."
+      }
+    ]
   }
 ]

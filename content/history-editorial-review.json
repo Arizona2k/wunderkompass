@@ -1,0 +1,566 @@
+{
+  "schemaVersion": 1,
+  "status": "Implemented with documented AI countercheck and actual targeted built UI/native/cold-offline proof; complete final master regression and actual Firefox/WebKit pending.",
+  "runtimeNewTopics": 2,
+  "acceptedNew": 0,
+  "independentReview": false,
+  "newTopicIds": [
+    "history-khipu",
+    "history-mohenjo-daro"
+  ],
+  "scope": "Part of existingWK053 history31→62, not a new roadmap. Two new distinct concepts, no counting diagrams or question variants as articles.",
+  "sourcesReadOn": "2026-10-17",
+  "sourceReadEvidence": {
+    "khipu": [
+      "NMAI Infinity of Nations object14/3866, paragraphs15–16 and object date1425–1532",
+      "NIST Standardizing an Empire paragraphs132–157,194–196, only knot structure, base10, records/context; no modern SI-replica history conflation"
+    ],
+    "mohenjoDaro": [
+      "UNESCO property138: Brief synthesis51–54, Integrity59–60, conservation64–71; initial unbaked versus synthesis baked brick discrepancy explicitly excluded"
+    ],
+    "writing": [
+      "Metropolitan Museum of Art, Ira Spar, The Origins of Writing, paragraphs30–43: pictographic AND abstract signs, wedge marks, later sound/rebus development"
+    ]
+  },
+  "entries": [
+    {
+      "id": "history-khipu",
+      "kind": "new",
+      "goal": "Du unterscheidest eine Zahl von der Bedeutung dieser Zahl und erkennst die Grenzen einer Quelle.",
+      "ageLevels": {
+        "6-8": "Menschen können eine Menge festhalten, auch wenn sie keine Buchstaben dafür benutzen. Hier helfen Schnüre und Knoten.",
+        "9-11": "Verändere zwei Mengen im Lernbild. Blende dann die Bedeutung aus: Was weißt du noch, und welche Information fehlt?",
+        "12-14": "Welche weiteren Inhalte Khipus bewahren konnten, ist eine Forschungsfrage. Eine sichtbare Menge ist nicht automatisch eine vollständig verstandene Nachricht."
+      },
+      "conceptDecision": "Distinct historical source and learning object, not a synonym of an existing article.",
+      "sources": [
+        {
+          "label": "Smithsonian NMAI · Inka khipu, Museumsobjekt und Erklärung",
+          "url": "https://americanindian.si.edu/exhibitions/infinityofnations/andes/143866.html"
+        },
+        {
+          "label": "NIST Museum · Standardizing an Empire",
+          "url": "https://www.nist.gov/nist-museum/standardizing-empire"
+        }
+      ],
+      "claimAnchors": "Quellenpassagen zu Aufbau, Mengen, Stellenwerten und Verwaltung am 17.10.2026 selbst gelesen. Eigene Texte und ein ausdrücklich erfundenes Zählschnur-Lernbild; keine kopierten Museumsmedien. Keine gemeinsame Fundkoordinate für alle Khipus erfunden. KI-Gegenprüfung separat dokumentieren; keine externe Menschenabnahme behauptet.",
+      "mediaDecision": "Own responsive vector learning model in app/history-evidence.tsx, explicitly invented and non-metric; visible HTML labels, accessible description. No copied photos or source illustrations.",
+      "contentHash": "a0d489a9be636313d03953188e8b6d1e208f3f9dfd607e27a0d98504dfa1e85f",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Current seven widths/normal-large, source/search/Back/reload/native200%/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
+      "claims": [
+        {
+          "statement": "A main cord carries pendant cords whose knots, arrangement and colors can encode quantities.",
+          "sourceUrl": "https://americanindian.si.edu/exhibitions/infinityofnations/andes/143866.html",
+          "anchor": "About This Object, paragraph15"
+        },
+        {
+          "statement": "Numerical khipu can use base10 place values; full meaning requires more than counting simple marks.",
+          "sourceUrl": "https://www.nist.gov/nist-museum/standardizing-empire",
+          "anchor": "What is a khipu, paragraphs142–157"
+        },
+        {
+          "statement": "Additional non-numeric meaning is a research interpretation, not universal decipherment claimed here.",
+          "sourceUrl": "https://americanindian.si.edu/exhibitions/infinityofnations/andes/143866.html",
+          "anchor": "paragraph16: explicitly tentative interpretation"
+        }
+      ],
+      "sourceReview": [
+        {
+          "label": "Smithsonian NMAI · Inka khipu, Museumsobjekt und Erklärung",
+          "url": "https://americanindian.si.edu/exhibitions/infinityofnations/andes/143866.html",
+          "checkedOn": "2026-10-17",
+          "rightsBasis": "Own original German explanation of source facts; no source prose, photographs, diagram or logo copied."
+        },
+        {
+          "label": "NIST Museum · Standardizing an Empire",
+          "url": "https://www.nist.gov/nist-museum/standardizing-empire",
+          "checkedOn": "2026-10-17",
+          "rightsBasis": "Own original German explanation of source facts; no source prose, photographs, diagram or logo copied."
+        }
+      ],
+      "media": {
+        "path": "app/history-evidence.tsx",
+        "sha256": "69c0f0944d1eefe6ce49f2171f1ca8c304f6c445089266dca76c5c0f1b49b374",
+        "origin": "Own project vector code; no third-party media",
+        "limits": "Invented training diagram, neither original artifact nor excavated plan; no scale claim",
+        "labels": "Visible responsive HTML and accessible dynamic SVG description"
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "reviewedBy": "Codex",
+        "reviewedOn": "2026-10-18",
+        "dataHash": "a0d489a9be636313d03953188e8b6d1e208f3f9dfd607e27a0d98504dfa1e85f",
+        "sourceFindings": "Quellenpassagen zu Aufbau, Mengen, Stellenwerten und Verwaltung am 17.10.2026 selbst gelesen. Eigene Texte und ein ausdrücklich erfundenes Zählschnur-Lernbild; keine kopierten Museumsmedien. Keine gemeinsame Fundkoordinate für alle Khipus erfunden. KI-Gegenprüfung separat dokumentieren; keine externe Menschenabnahme behauptet.",
+        "factualFindings": "Every factual paragraph, source note, correct answer and individual wrong reason compared against the source-anchored claims above; no source image copied. Time anchors explicitly approximate; model explicitly invented.",
+        "pedagogicalFindings": "Entry uses concrete quantities or water paths; voluntary second level compares states; third level questions inference. Help explains the reason; no diagnosis, risky experiment or score from the picture.",
+        "countercheck": "Separate rereading after creation: distinguish historical evidence from invented diagram; re-evaluate each distractor and each inference; check known and unknown conclusions. Human review is not assumed.",
+        "corrections": "Khipu opening narrowed to quantities and administrative information to avoid implying universal decipherment; city comparison says before the canal to match the visible endpoint. Existing writing corrected pictographs-only simplification.",
+        "remainingUncertainty": "Khipu additional meanings remain a research question; excavated city subset cannot establish universal health or equality. Actual UI/native/offline proof remains pending and prevents full technical completion.",
+        "unresolvedBlockingClaims": []
+      },
+      "historicalUIEvidenceBeforeLatestCorrection": "Actual targeted14 topic-width cases/3levels/search/Back/reload/large text/axe plus native200% and previously-unopened cold offline passed; see exact earlyTechnicalProof. Complete final regression still required.",
+      "masterTargetedUIEvidenceBeforeIsolation": {
+        "build": "a3b58eb6e952a2db",
+        "proofs": {
+          "master-retained-animals-final-history-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-history-targeted/report.json",
+            "sha256": "4b3d4693afa7d2d53acc70b006d9ec5385785d5fd41ae7f12da891fdddef4734",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium history partial proof; not full regression"
+          },
+          "master-retained-animals-final-history-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-history-native-offline/report.json",
+            "sha256": "19a0a89d55c347e5695721515565f404f450b171b2dca61699a3665decc8fc1b",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+          },
+          "master-retained-animals-final-corrections": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-corrections/report.json",
+            "sha256": "ab7e8cd258ec13e94ab8e0fa6d0139a6812435dc760dec37d5b52043a9eae978",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+          }
+        },
+        "scope": "Tatsächliche neue Teilbelege, keine vollständige Endabnahme."
+      },
+      "currentIsolatedPreparationProof20261020": {
+        "status": "Actual early source-learning/mobile/large/native/server-stopped offline and old-save/reciprocal-link probes passed. Complete local/CI/exact-head/delivery still pending. Source claims and original Master proofs preserved, no human/physical-device acceptance invented.",
+        "proofs": {
+          "sourceView": {
+            "path": "/workspace/work/wk-continuation/history-small-release-early-source-view-v2-20261020/report.json",
+            "sha256": "53cb02e98d9c626958418b09813ee3a04f4c3e97dc478b96c347057771521772",
+            "build": "24ce615e2190379c",
+            "sourceDigest": "a8e5fc0f92041ba3d4e2ba5deac9c7acdf3ec47c945d9a48ca41eba44015e577",
+            "scope": "passed early scoped Chromium"
+          },
+          "realOfflineAndNative": {
+            "path": "/workspace/work/wk-continuation/history-small-release-real-offline-early-20261020/report.json",
+            "sha256": "04dd7ced9eb58bde19596e5498debc030729025da23e43750ff828ac6a8cd5ce",
+            "build": "24ce615e2190379c",
+            "sourceDigest": "a8e5fc0f92041ba3d4e2ba5deac9c7acdf3ec47c945d9a48ca41eba44015e577",
+            "scope": "passed early real offline/source/native checks"
+          },
+          "oldSaveAndLinks": {
+            "path": "/workspace/work/wk-continuation/history-small-release-old-save-links-20261020/report.json",
+            "sha256": "91e9b49e47bbe64b7f026ec9e1af24c9bcbc5ccb27994f287af09de29678b034",
+            "build": "24ce615e2190379c",
+            "sourceDigest": "cfca36b20e97c55bc2e9e18260fe80c19d8ee0e34811e70dc40a7f65ab9d98fc",
+            "scope": "passed scoped old-save/link/chronicle regression"
+          }
+        }
+      }
+    },
+    {
+      "id": "history-mohenjo-daro",
+      "kind": "new",
+      "goal": "Du lernst, einen sichtbaren Befund von einer weitergehenden Vermutung zu unterscheiden.",
+      "ageLevels": {
+        "6-8": "Alte Straßen und Wasserwege sind Spuren. Sie helfen uns zu verstehen, wie Menschen eine Stadt planten.",
+        "9-11": "Vergleiche die zwei erfundenen Pläne: Wo endet der Wasserweg? Welche Aussage kannst du direkt am Bild prüfen?",
+        "12-14": "Die Erhaltung ist selbst eine Forschungsaufgabe: Feuchtigkeit und Salze können die alten Reste schädigen. Schutzarbeit soll die noch vorhandenen Spuren bewahren."
+      },
+      "conceptDecision": "Distinct historical source and learning object, not a synonym of an existing article.",
+      "sources": [
+        {
+          "label": "UNESCO World Heritage Centre · Archaeological Ruins at Moenjodaro",
+          "url": "https://whc.unesco.org/en/list/138/"
+        }
+      ],
+      "claimAnchors": "UNESCO-Abschnitte Brief synthesis, Integrity und Protection am 17.10.2026 selbst gelesen. Die Kurzbeschreibung und die ausführliche Beschreibung verwenden unterschiedliche Ziegelangaben; daraus wird hier keine pauschale Materialbehauptung übernommen. Eigenes ausdrücklich erfundenes Planmodell, kein originaler Ausgrabungsplan, keine kopierten UNESCO-Fotos. KI-Gegenprüfung separat dokumentieren; keine externe Menschenabnahme behauptet.",
+      "mediaDecision": "Own responsive vector learning model in app/history-evidence.tsx, explicitly invented and non-metric; visible HTML labels, accessible description. No copied photos or source illustrations.",
+      "contentHash": "f3ae48be26eb58fed0f9e11e8853f468c0715d77fe5445bb0ff3c17315a32ba5",
+      "independentReview": false,
+      "acceptedForDoubling": false,
+      "uiEvidence": "Current seven widths/normal-large, source/search/Back/reload/native200%/cold-offline atBuild5e132945395575cc; full Master acceptance separate.",
+      "claims": [
+        {
+          "statement": "Mohenjo-Daro lies in Sindh/Pakistan; excavated streets and drainage provide evidence of city planning.",
+          "sourceUrl": "https://whc.unesco.org/en/list/138/",
+          "anchor": "Brief synthesis51–54 and coordinate124"
+        },
+        {
+          "statement": "Only part has been excavated; salts/moisture affect conservation.",
+          "sourceUrl": "https://whc.unesco.org/en/list/138/",
+          "anchor": "Integrity59–60 and conservation64–71"
+        }
+      ],
+      "sourceReview": [
+        {
+          "label": "UNESCO World Heritage Centre · Archaeological Ruins at Moenjodaro",
+          "url": "https://whc.unesco.org/en/list/138/",
+          "checkedOn": "2026-10-17",
+          "rightsBasis": "Own original German explanation of source facts; no source prose, photographs, diagram or logo copied."
+        }
+      ],
+      "media": {
+        "path": "app/history-evidence.tsx",
+        "sha256": "69c0f0944d1eefe6ce49f2171f1ca8c304f6c445089266dca76c5c0f1b49b374",
+        "origin": "Own project vector code; no third-party media",
+        "limits": "Invented training diagram, neither original artifact nor excavated plan; no scale claim",
+        "labels": "Visible responsive HTML and accessible dynamic SVG description"
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "reviewedBy": "Codex",
+        "reviewedOn": "2026-10-18",
+        "dataHash": "f3ae48be26eb58fed0f9e11e8853f468c0715d77fe5445bb0ff3c17315a32ba5",
+        "sourceFindings": "UNESCO-Abschnitte Brief synthesis, Integrity und Protection am 17.10.2026 selbst gelesen. Die Kurzbeschreibung und die ausführliche Beschreibung verwenden unterschiedliche Ziegelangaben; daraus wird hier keine pauschale Materialbehauptung übernommen. Eigenes ausdrücklich erfundenes Planmodell, kein originaler Ausgrabungsplan, keine kopierten UNESCO-Fotos. KI-Gegenprüfung separat dokumentieren; keine externe Menschenabnahme behauptet.",
+        "factualFindings": "Every factual paragraph, source note, correct answer and individual wrong reason compared against the source-anchored claims above; no source image copied. Time anchors explicitly approximate; model explicitly invented.",
+        "pedagogicalFindings": "Entry uses concrete quantities or water paths; voluntary second level compares states; third level questions inference. Help explains the reason; no diagnosis, risky experiment or score from the picture.",
+        "countercheck": "Separate rereading after creation: distinguish historical evidence from invented diagram; re-evaluate each distractor and each inference; check known and unknown conclusions. Human review is not assumed.",
+        "corrections": "Khipu opening narrowed to quantities and administrative information to avoid implying universal decipherment; city comparison says before the canal to match the visible endpoint. Existing writing corrected pictographs-only simplification.",
+        "remainingUncertainty": "Khipu additional meanings remain a research question; excavated city subset cannot establish universal health or equality. Actual UI/native/offline proof remains pending and prevents full technical completion.",
+        "unresolvedBlockingClaims": []
+      },
+      "historicalUIEvidenceBeforeLatestCorrection": "Actual targeted14 topic-width cases/3levels/search/Back/reload/large text/axe plus native200% and previously-unopened cold offline passed; see exact earlyTechnicalProof. Complete final regression still required.",
+      "masterTargetedUIEvidenceBeforeIsolation": {
+        "build": "a3b58eb6e952a2db",
+        "proofs": {
+          "master-retained-animals-final-history-targeted": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-history-targeted/report.json",
+            "sha256": "4b3d4693afa7d2d53acc70b006d9ec5385785d5fd41ae7f12da891fdddef4734",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium history partial proof; not full regression"
+          },
+          "master-retained-animals-final-history-native-offline": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-history-native-offline/report.json",
+            "sha256": "19a0a89d55c347e5695721515565f404f450b171b2dca61699a3665decc8fc1b",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+          },
+          "master-retained-animals-final-corrections": {
+            "path": "/workspace/work/wk-continuation/master-retained-animals-final-corrections/report.json",
+            "sha256": "ab7e8cd258ec13e94ab8e0fa6d0139a6812435dc760dec37d5b52043a9eae978",
+            "build": "a3b58eb6e952a2db",
+            "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+            "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+          }
+        },
+        "scope": "Tatsächliche neue Teilbelege, keine vollständige Endabnahme."
+      },
+      "currentIsolatedPreparationProof20261020": {
+        "status": "Actual early source-learning/mobile/large/native/server-stopped offline and old-save/reciprocal-link probes passed. Complete local/CI/exact-head/delivery still pending. Source claims and original Master proofs preserved, no human/physical-device acceptance invented.",
+        "proofs": {
+          "sourceView": {
+            "path": "/workspace/work/wk-continuation/history-small-release-early-source-view-v2-20261020/report.json",
+            "sha256": "53cb02e98d9c626958418b09813ee3a04f4c3e97dc478b96c347057771521772",
+            "build": "24ce615e2190379c",
+            "sourceDigest": "a8e5fc0f92041ba3d4e2ba5deac9c7acdf3ec47c945d9a48ca41eba44015e577",
+            "scope": "passed early scoped Chromium"
+          },
+          "realOfflineAndNative": {
+            "path": "/workspace/work/wk-continuation/history-small-release-real-offline-early-20261020/report.json",
+            "sha256": "04dd7ced9eb58bde19596e5498debc030729025da23e43750ff828ac6a8cd5ce",
+            "build": "24ce615e2190379c",
+            "sourceDigest": "a8e5fc0f92041ba3d4e2ba5deac9c7acdf3ec47c945d9a48ca41eba44015e577",
+            "scope": "passed early real offline/source/native checks"
+          },
+          "oldSaveAndLinks": {
+            "path": "/workspace/work/wk-continuation/history-small-release-old-save-links-20261020/report.json",
+            "sha256": "91e9b49e47bbe64b7f026ec9e1af24c9bcbc5ccb27994f287af09de29678b034",
+            "build": "24ce615e2190379c",
+            "sourceDigest": "cfca36b20e97c55bc2e9e18260fe80c19d8ee0e34811e70dc40a7f65ab9d98fc",
+            "scope": "passed scoped old-save/link/chronicle regression"
+          }
+        }
+      }
+    }
+  ],
+  "oldImprovement": "Met-based writing correction retained; current individual reflection and immediate quantity-answer explanation added. Original answer strings, solution, title, chronology and locations retained; exact question explanation delta documented in editorial-reviews, original comparison bank unchanged.",
+  "reviewedBy": "Codex self-review of actual source passages, no independent human review",
+  "revisit": {
+    "date": "2027-10-17",
+    "earlierIf": "new archaeological evidence, changed museum interpretation or changed UNESCO source; no automatic factual rewrite"
+  },
+  "reviewPolicy": "AI critical factual/pedagogical self-review under user clarification17Oct2026; historical acceptedNew and independentReview describe external human acceptance only, not a completion gate.",
+  "aiSelfReviewStatus": "Factual and pedagogical post-creation countercheck documented for2new topics; old writing correction source-checked; actual final UI/native/offline verification remains pending.",
+  "oldWritingSelfReview": {
+    "mode": "ai-self-review",
+    "reviewedOn": "2026-10-18",
+    "dataHash": "7a24011db51fdd27eef162efe8f702fece57a36ff48cfadf05f888859d4d4bdb",
+    "scope": "Current old writing article including its individually revised source-limit reflection and directly appropriate correct explanation; all original question/answer identities and positions retained.",
+    "source": "Met31/36–39 actually reread18Oct2026; earlier17Octread retained in original record.",
+    "countercheck": "After initial writing, re-read distinction between pictographs and abstract marks, later wedge and sound development; no alphabet-at-once or transmission-to-Inka claim. Distractors remain the old stable choices; new feedback explains technology/context without giving an unrelated answer.",
+    "corrections": "Earlier pictograph-only correction retained. Now individual source reflection and direct grain-count explanation; original answer strings/solution/title/date/location unchanged.",
+    "remainingUncertainty": "Approximate dates; evidence does not prove a single inventor or one-day origin.",
+    "unresolvedBlockingClaims": [],
+    "currentTargetedUI": {
+      "build": "a3b58eb6e952a2db",
+      "proofs": {
+        "master-retained-animals-final-history-targeted": {
+          "path": "/workspace/work/wk-continuation/master-retained-animals-final-history-targeted/report.json",
+          "sha256": "4b3d4693afa7d2d53acc70b006d9ec5385785d5fd41ae7f12da891fdddef4734",
+          "build": "a3b58eb6e952a2db",
+          "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+          "scope": "actual Chromium history partial proof; not full regression"
+        },
+        "master-retained-animals-final-history-native-offline": {
+          "path": "/workspace/work/wk-continuation/master-retained-animals-final-history-native-offline/report.json",
+          "sha256": "19a0a89d55c347e5695721515565f404f450b171b2dca61699a3665decc8fc1b",
+          "build": "a3b58eb6e952a2db",
+          "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+          "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+        },
+        "master-retained-animals-final-corrections": {
+          "path": "/workspace/work/wk-continuation/master-retained-animals-final-corrections/report.json",
+          "sha256": "ab7e8cd258ec13e94ab8e0fa6d0139a6812435dc760dec37d5b52043a9eae978",
+          "build": "a3b58eb6e952a2db",
+          "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      },
+      "scope": "Tatsächliche neue Teilbelege, keine vollständige Endabnahme."
+    }
+  },
+  "visualCountercheck": {
+    "reviewedOn": "2026-10-18",
+    "finding": "Initial mobile views readable; controls adjacent without spacing and diagram strokes below3:1 against night background.",
+    "correction": "Existing model-buttons spacing and keyboard jump used; cord lightened, dark outline distinguishes knots; blue water line chosen to exceed3:1 against both night background and pale house.",
+    "status": "Personally inspected320px normal/large and actual native200% top/diagram/controls; no label cropping or button collision in final observed views. Native diagrams captured separately to avoid partial viewport evidence."
+  },
+  "retained": {
+    "history-writing": {
+      "id": "history-writing",
+      "category": "history",
+      "title": "Zeichen bewahren Nachrichten",
+      "intro": "In Mesopotamien, im heutigen Irak, schrieben Menschen Zeichen auf Tontafeln.",
+      "paragraphs": [
+        "Zuerst hielten sie damit zum Beispiel fest, wie viel Getreide es gab.",
+        "Aus Bildzeichen entwickelte sich nach und nach die Keilschrift."
+      ],
+      "facts": [
+        {
+          "label": "Wann?",
+          "text": "etwa 3200–3000 v. Chr."
+        },
+        {
+          "label": "Wo?",
+          "text": "Uruk, Mesopotamien, heute Irak"
+        }
+      ],
+      "more": [
+        "Schrift konnte Informationen bewahren, auch wenn die Person, die sie wusste, gerade nicht da war.",
+        "Schrift kann eine Nachricht bewahren, auch wenn die Person, die sie geschrieben hat, längst gegangen ist. Frühe Schreiber hielten zum Beispiel Vorräte und Lieferungen fest. Später wurden auch Geschichten aufgeschrieben."
+      ],
+      "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+      "locations": [
+        {
+          "label": "Uruk – im heutigen Irak",
+          "lat": 31.3,
+          "lon": 45.6,
+          "iso": "IQ"
+        }
+      ],
+      "related": [
+        "history-web"
+      ],
+      "sources": [
+        {
+          "label": "The Metropolitan Museum of Art",
+          "url": "https://www.metmuseum.org/es/essays/the-origins-of-writing"
+        }
+      ],
+      "aliases": [
+        "writing"
+      ],
+      "links": [],
+      "history": {
+        "year": -3200,
+        "date": "etwa 3200–3000 v. Chr.",
+        "era": "Frühe Spuren",
+        "sensitive": false
+      },
+      "question": {
+        "prompt": "Wofür nutzten Menschen in Uruk frühe Schrift?",
+        "answers": [
+          "Um Dinge wie Getreidemengen festzuhalten",
+          "Zum Versenden von E-Mails",
+          "Zum Bauen von Satelliten"
+        ],
+        "correct": 0,
+        "why": "Schrift konnte Informationen bewahren, auch wenn die Person, die sie wusste, gerade nicht da war."
+      }
+    },
+    "history-web": {
+      "id": "history-web",
+      "category": "history",
+      "title": "Das World Wide Web entsteht",
+      "intro": "1989 schlug Tim Berners-Lee am CERN ein System für verlinkte Seiten vor.",
+      "paragraphs": [
+        "1991 machte er die Web-Software auch außerhalb des CERN bekannt.",
+        "Das World Wide Web nutzt das Internet, das es bereits vorher gab."
+      ],
+      "facts": [
+        {
+          "label": "Wann?",
+          "text": "1989 / 1991"
+        },
+        {
+          "label": "Wo?",
+          "text": "CERN bei Genf, Schweiz/Frankreich"
+        }
+      ],
+      "more": [
+        "Über Links können Menschen Informationen auf vielen Computern einfacher finden und teilen.",
+        "Internet und Web sind verschieden: Das Internet verbindet Computer-Netze. Das World Wide Web ist ein Dienst darauf, der Seiten durch Links verbindet. E-Mail ist ein anderer Internetdienst."
+      ],
+      "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+      "locations": [
+        {
+          "label": "CERN bei Genf – am Rand von Schweiz und Frankreich",
+          "lat": 46.23,
+          "lon": 6.05
+        }
+      ],
+      "related": [
+        "person-tim_berners_lee",
+        "invention-internet"
+      ],
+      "sources": [
+        {
+          "label": "CERN",
+          "url": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
+        },
+        {
+          "label": "CERN",
+          "url": "https://home.cern/internet-prehistory-cern/"
+        }
+      ],
+      "aliases": [
+        "web"
+      ],
+      "links": [],
+      "history": {
+        "year": 1989,
+        "date": "1989 / 1991",
+        "era": "Unsere jüngere Welt",
+        "sensitive": false
+      },
+      "question": {
+        "prompt": "Was stimmt über Web und Internet?",
+        "answers": [
+          "Das Web nutzt das ältere Internet",
+          "Beides ist genau dasselbe",
+          "Das Internet braucht Papierseiten"
+        ],
+        "correct": 0,
+        "why": "Über Links können Menschen Informationen auf vielen Computern einfacher finden und teilen."
+      }
+    },
+    "history-rome": {
+      "id": "history-rome",
+      "category": "history",
+      "title": "Römische Straßen und Wasserwege",
+      "intro": "Ein großes Reich verband Orte durch Straßen, Handel und gemeinsame Verwaltung.",
+      "paragraphs": [
+        "Das Römische Reich umfasste zeitweise Gebiete in Europa, Nordafrika und Westasien. Seine Grenzen veränderten sich.",
+        "Straßen verbanden Städte. Aquädukte führten Wasser mit leichtem Gefälle zu Siedlungen."
+      ],
+      "facts": [
+        {
+          "label": "Zeitanker",
+          "text": "27 v. Chr.: Beginn der Kaiserzeit unter Augustus."
+        },
+        {
+          "label": "Technik",
+          "text": "Straßen, Wasserleitungen, Bögen und Gewölbe."
+        },
+        {
+          "label": "Zusammenleben",
+          "text": "Eroberung und Versklavung waren ebenfalls Teil dieser Geschichte."
+        }
+      ],
+      "more": [
+        "Ein Aquädukt ist eine Wasserleitung. Nicht jeder Abschnitt ist eine hohe Brücke; vieles verläuft nahe am Boden oder durch Tunnel.",
+        "Große Bauwerke erzählen auch von harter Arbeit und ungleichen Rechten. Technische Leistungen machen diese Ungerechtigkeiten nicht richtig."
+      ],
+      "surprise": "Ein Steinbogen verteilt Gewicht seitlich zu seinen Stützen. Dies kannst du bei den Bauwerken untersuchen.",
+      "related": [
+        "building-colosseum",
+        "history-greece",
+        "building-golden-gate-bridge"
+      ],
+      "sources": [
+        {
+          "label": "Metropolitan Museum · Römisches Reich",
+          "url": "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d"
+        }
+      ],
+      "question": {
+        "prompt": "Wozu diente ein Aquädukt?",
+        "answers": [
+          "Wasser zu Siedlungen leiten",
+          "Elektrische Nachrichten senden",
+          "Raketen starten"
+        ],
+        "correct": 0,
+        "why": "Wasser floss durch eine Leitung mit leichtem Gefälle."
+      },
+      "aliases": [],
+      "locations": [
+        {
+          "label": "Rom im heutigen Italien",
+          "lat": 41.9,
+          "lon": 12.49
+        }
+      ],
+      "links": [],
+      "history": {
+        "year": -27,
+        "date": "Beginn der Kaiserzeit: 27 v. Chr.",
+        "era": "Antike",
+        "sensitive": false
+      },
+      "sourceNote": "Der Zeitanker ordnet das Thema ein. Er ist weder ein genauer Beginn noch ein Ende einer ganzen Kultur. Heutige Küsten auf der Karte zeigen keine historischen Grenzen."
+    }
+  },
+  "publication": "Prepared isolated normal section from actual test-live762a183; current complete local/CI and actual deployment checks pending. Other Master topics and their proofs remain preserved separately.",
+  "openGates": [
+    "Current complete strict Quality for this exact isolated candidate",
+    "Current scoped mobile/native/cold/retained-history compatibility and source-evidence UI",
+    "Actual test-live merge/Vercel/browser verification"
+  ],
+  "retainedQuestionBank": {
+    "count": 166,
+    "sha256": "cbe93ed04a4536a94a32854e7278bce6ab1b9c1c73fc63211c443165c613bbdd",
+    "sourceCommit": "762a18332e9e05b3e87d554e2219d257ea2ee33c",
+    "scope": "Exact actual public bank before this isolated2-topic release, with existing individually documented corrections reconstructed. Historical Master209bank remains unchanged separately; no original snapshot or frozen baseline regenerated."
+  },
+  "currentWritingContentHash": "7a24011db51fdd27eef162efe8f702fece57a36ff48cfadf05f888859d4d4bdb",
+  "isolatedPreparationProof20261020": {
+    "build": "24ce615e2190379c",
+    "base": "762a18332e9e05b3e87d554e2219d257ea2ee33c",
+    "proofs": {
+      "sourceView": {
+        "path": "/workspace/work/wk-continuation/history-small-release-early-source-view-v2-20261020/report.json",
+        "sha256": "53cb02e98d9c626958418b09813ee3a04f4c3e97dc478b96c347057771521772",
+        "build": "24ce615e2190379c",
+        "sourceDigest": "a8e5fc0f92041ba3d4e2ba5deac9c7acdf3ec47c945d9a48ca41eba44015e577",
+        "scope": "passed early scoped Chromium"
+      },
+      "realOfflineAndNative": {
+        "path": "/workspace/work/wk-continuation/history-small-release-real-offline-early-20261020/report.json",
+        "sha256": "04dd7ced9eb58bde19596e5498debc030729025da23e43750ff828ac6a8cd5ce",
+        "build": "24ce615e2190379c",
+        "sourceDigest": "a8e5fc0f92041ba3d4e2ba5deac9c7acdf3ec47c945d9a48ca41eba44015e577",
+        "scope": "passed early real offline/source/native checks"
+      },
+      "oldSaveAndLinks": {
+        "path": "/workspace/work/wk-continuation/history-small-release-old-save-links-20261020/report.json",
+        "sha256": "91e9b49e47bbe64b7f026ec9e1af24c9bcbc5ccb27994f287af09de29678b034",
+        "build": "24ce615e2190379c",
+        "sourceDigest": "cfca36b20e97c55bc2e9e18260fe80c19d8ee0e34811e70dc40a7f65ab9d98fc",
+        "scope": "passed scoped old-save/link/chronicle regression"
+      }
+    },
+    "sourceReuse": "Same two already implemented topic objects and directly source-reviewed writing article from preserved Mastera37a096. Original selected source readings17Oct kept; not claimed as newly read source bodies. Existing source claims critically compared with these unchanged texts and own actual rendered models.",
+    "proofReuse": "The later source-helper edits only require foreground activation and exact case counts; no runtime product file changed. Earlier partial proofs keep their original sourceDigest. Full final strict checks remain required."
+  }
+}

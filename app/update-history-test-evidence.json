@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "6ed2ecfde4680789123905de476bc59b45824857",
+    "commit": "762a18332e9e05b3e87d554e2219d257ea2ee33c",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -36,7 +36,9 @@
       "0e5e4d4ece35d4a80dc79764c690c1633b2e0988",
       "3a075cc3e0cb1ab1e00ec2765fe6144a9efe0af6",
       "76eb8ce851563b804bcbeb5c8051b362e912e611",
-      "6ed2ecfde4680789123905de476bc59b45824857"
+      "6ed2ecfde4680789123905de476bc59b45824857",
+      "2ee8e88ceb8d3449fe193e1b282d5fcb21d4d9f8",
+      "762a18332e9e05b3e87d554e2219d257ea2ee33c"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -894,6 +896,37 @@
           "createdAt": "2026-10-17T19:58:25Z",
           "updatedAt": "2026-10-17T19:58:25Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/FQk7n1AvkuigvmyK38Zgx2ABJT4S"
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "title": "Lernreisen: Plattenbewegungen und Denkaufgaben verständlich zeigen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/43",
+      "base": "test-live",
+      "mergedAt": "2026-10-20T15:32:11Z",
+      "mergeCommit": "762a18332e9e05b3e87d554e2219d257ea2ee33c",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/762a18332e9e05b3e87d554e2219d257ea2ee33c/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56801316044,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-20T15:32:15Z",
+          "updatedAt": "2026-10-20T15:32:15Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/4s2c8RVSw3P3Gci1JJoFh1vkSSBT"
+        },
+        {
+          "id": 56801344089,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-20T15:32:32Z",
+          "updatedAt": "2026-10-20T15:32:32Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/4s2c8RVSw3P3Gci1JJoFh1vkSSBT"
         }
       ]
     }

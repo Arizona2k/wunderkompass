@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "meaning": "48 tatsächlich individuell fachlich/pädagogisch KI-geprüfte Tierartikel mit aktuellen eigenen Ziel-UI-/Such-/Rückweg-/Reload-/Native-/Offlinebelegen. Alte externe Zähler sind kein Menschen-Gate. Vollständige neue Pflichtabnahme, aktuelles GitHub-Grün und Auslieferung stehen separat aus.",
+  "meaning": "51 fachlich/pädagogisch KI-geprüfte Einträge:48 bestehende Tierartikel, zwei bereits entwickelte historische Themen und der direkt betroffene Schriftartikel. Ursprüngliche Quellen-/Fachbelege und alte UI-Belege bleiben erhalten; aktuelle frühe Teilproben stehen im Geschichtsdossier. Die vollständige aktuelle Browser-/Offline-/CI-Abnahme und Auslieferung dieses isolierten Stands sind noch offen. Keine externe Menschenprüfung wird behauptet.",
   "dossiers": [
     {
       "id": "topics-animals:animal-platypus",
@@ -75,13 +75,13 @@
         "topics-animals:animal-short-beaked-echidna"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-platypus",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -140,6 +140,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-platypus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -200,13 +209,13 @@
         "topics-animals:animal-platypus"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-short-beaked-echidna",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -265,6 +274,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-short-beaked-echidna",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -325,13 +343,13 @@
         "topics-animals:animal-giraffe"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-okapi",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -390,6 +408,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-okapi",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -450,13 +477,13 @@
         "topics-animals:animal-honey-bee"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-meerkat",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -515,6 +542,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-meerkat",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -575,13 +611,13 @@
         "topics-animals:animal-western-lowland-gorilla"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-ring-tailed-lemur",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -640,6 +676,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-ring-tailed-lemur",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -700,13 +745,13 @@
         "topics-science:science-water-cycle"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-north-american-beaver",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -765,6 +810,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-north-american-beaver",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -839,13 +893,13 @@
         "topics-animals:animal-polar-bear"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-walrus",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -904,6 +958,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-walrus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -965,13 +1028,13 @@
         "topics-animals:animal-raccoon"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-red-fox",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1030,6 +1093,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-red-fox",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -1090,13 +1162,13 @@
         "topics-animals:animal-red-fox"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-raccoon",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1155,6 +1227,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-raccoon",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -1216,13 +1297,13 @@
         "topics-animals:animal-garden-snail"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-hedgehog",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1281,6 +1362,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-hedgehog",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -1348,13 +1438,13 @@
         "topics-animals:animal-white-tailed-eagle"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-barn-owl",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1413,6 +1503,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-barn-owl",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -1480,13 +1579,13 @@
         "topics-science:science-shadows"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-kingfisher",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1545,6 +1644,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-kingfisher",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -1605,13 +1713,13 @@
         "topics-animals:animal-emperor-penguin"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-ostrich",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1670,6 +1778,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-ostrich",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -1730,13 +1847,13 @@
         "topics-animals:animal-emperor-penguin"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-atlantic-puffin",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1795,6 +1912,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-atlantic-puffin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -1855,13 +1981,13 @@
         "topics-animals:animal-common-cuttlefish"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-common-chameleon",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1920,6 +2046,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-common-chameleon",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -1988,13 +2123,13 @@
         "topics-animals:animal-common-frog"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-fire-salamander",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2053,6 +2188,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-fire-salamander",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -2113,13 +2257,13 @@
         "topics-animals:animal-fire-salamander"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-common-frog",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2178,6 +2322,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-common-frog",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -2245,13 +2398,13 @@
         "topics-science:science-coral-reef"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-eastern-clown-anemonefish",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2310,6 +2463,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-eastern-clown-anemonefish",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -2384,13 +2546,13 @@
         "topics-science:science-currents"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-european-eel",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2449,6 +2611,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-european-eel",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -2509,13 +2680,13 @@
         "topics-animals:animal-honey-bee"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-monarch-butterfly",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2574,6 +2745,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-monarch-butterfly",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -2648,13 +2828,13 @@
         "topics-animals:animal-hedgehog"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-garden-snail",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2713,6 +2893,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-garden-snail",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -2773,13 +2962,13 @@
         "topics-animals:animal-common-octopus"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-european-lobster",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2838,6 +3027,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-european-lobster",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -2906,13 +3104,13 @@
         "topics-animals:animal-common-chameleon"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-common-cuttlefish",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2971,6 +3169,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-common-cuttlefish",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -3038,13 +3245,13 @@
         "topics-science:science-foodweb"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-short-snouted-seahorse",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3103,6 +3310,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-short-snouted-seahorse",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -3168,13 +3384,13 @@
         "topics-animals:animal-giant-panda"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-african-savanna-elephant",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3224,6 +3440,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-african-savanna-elephant",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -3297,13 +3522,13 @@
         "topics-animals:animal-bengal-tiger"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-lion",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3353,6 +3578,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-lion",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -3419,13 +3653,13 @@
         "topics-animals:animal-lion"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-cheetah",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3475,6 +3709,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-cheetah",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -3535,13 +3778,13 @@
         "topics-animals:animal-jaguar"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-bengal-tiger",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3591,6 +3834,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-bengal-tiger",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -3665,13 +3917,13 @@
         "topics-animals:animal-okapi"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-giraffe",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3721,6 +3973,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-giraffe",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -3787,13 +4048,13 @@
         "topics-animals:animal-koala"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-giant-panda",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3843,6 +4104,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-giant-panda",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -3910,13 +4180,13 @@
         "topics-animals:animal-ring-tailed-lemur"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-western-lowland-gorilla",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3966,6 +4236,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-western-lowland-gorilla",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -4032,13 +4311,13 @@
         "topics-animals:animal-western-lowland-gorilla"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-bornean-orangutan",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4088,6 +4367,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-bornean-orangutan",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -4154,13 +4442,13 @@
         "topics-animals:animal-walrus"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-polar-bear",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4210,6 +4498,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-polar-bear",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -4286,13 +4583,13 @@
         "topics-animals:animal-atlantic-puffin"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-emperor-penguin",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4342,6 +4639,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-emperor-penguin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -4408,13 +4714,13 @@
         "topics-animals:animal-whale-shark"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-blue-whale",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4464,6 +4770,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-blue-whale",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -4546,13 +4861,13 @@
         "topics-animals:animal-green-sea-turtle"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-common-bottlenose-dolphin",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4602,6 +4917,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-common-bottlenose-dolphin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -4668,13 +4992,13 @@
         "topics-animals:animal-common-bottlenose-dolphin"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-orca",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4724,6 +5048,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-orca",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -4800,13 +5133,13 @@
         "topics-animals:animal-common-cuttlefish"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-common-octopus",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4856,6 +5189,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-common-octopus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -4929,13 +5271,13 @@
         "topics-animals:animal-common-bottlenose-dolphin"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-green-sea-turtle",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4985,6 +5327,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-green-sea-turtle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -5051,13 +5402,13 @@
         "topics-animals:animal-platypus"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-red-kangaroo",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5107,6 +5458,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-red-kangaroo",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -5173,13 +5533,13 @@
         "topics-animals:animal-giant-panda"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-koala",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5229,6 +5589,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-koala",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -5302,13 +5671,13 @@
         "topics-animals:animal-bengal-tiger"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-jaguar",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5358,6 +5727,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-jaguar",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -5433,13 +5811,13 @@
         "topics-animals:animal-monarch-butterfly"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-honey-bee",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5489,6 +5867,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-honey-bee",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -5556,13 +5943,13 @@
         "topics-animals:animal-fire-salamander"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-axolotl",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5612,6 +5999,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-axolotl",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -5673,13 +6069,13 @@
         "topics-animals:animal-axolotl"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-whale-shark",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5729,6 +6125,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-whale-shark",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -5802,13 +6207,13 @@
         "topics-animals:animal-common-octopus"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-garden-cross-spider",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5858,6 +6263,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-garden-cross-spider",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -5923,13 +6337,13 @@
         "topics-animals:animal-african-savanna-elephant"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-dromedary",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5979,6 +6393,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-dromedary",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
       }
     },
     {
@@ -6067,13 +6490,13 @@
         "topics-animals:animal-barn-owl"
       ],
       "ui": {
-        "build": "c4766794d0548e82",
+        "build": "24ce615e2190379c",
         "route": "world/topic/animal-white-tailed-eagle",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -6123,6 +6546,447 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/animal-current-base-ui-20261020/report.json sha256=d8b71b7395ee6a83c75e8389c35484f49825d7727deddd80370d3764cf6c734f; /workspace/work/wk-continuation/animal-current-base-native-offline-20261020/report.json sha256=10a84a7cbd4b3891b97819f228cf33c9ffde892b556f8ab4e80b86d918e497a0"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "c4766794d0548e82",
+        "route": "world/topic/animal-white-tailed-eagle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60"
+      }
+    },
+    {
+      "id": "topics-history:history-khipu",
+      "dataHash": "a0d489a9be636313d03953188e8b6d1e208f3f9dfd607e27a0d98504dfa1e85f",
+      "goal": "Du unterscheidest eine Zahl von der Bedeutung dieser Zahl und erkennst die Grenzen einer Quelle.",
+      "explanation": "Konkrete Artikelabsätze, Fakten und Vertiefungen unter dem gebundenen Inhalts-Hash geprüft.",
+      "example": "Verändere zwei Mengen im Lernbild. Blende dann die Bedeutung aus: Was weißt du noch, und welche Information fehlt?",
+      "whyItMatters": "Du unterscheidest eine Zahl von der Bedeutung dieser Zahl und erkennst die Grenzen einer Quelle.",
+      "hint": "Überlege, welche Informationen Menschen beim Verteilen von Vorräten aufbewahren müssen.",
+      "feedback": "Beide konkreten Falschbegründungen und richtige Erklärung des gebundenen Artikels einzeln geprüft.",
+      "modelLimits": "Quellenpassagen zu Aufbau, Mengen, Stellenwerten und Verwaltung am 17.10.2026 selbst gelesen. Eigene Texte und ein ausdrücklich erfundenes Zählschnur-Lernbild; keine kopierten Museumsmedien. Keine gemeinsame Fundkoordinate für alle Khipus erfunden.",
+      "reviewedBy": "Codex KI-Selbstprüfung mit separater Gegenlese nach Erstellung; keine Menschenprüfung",
+      "reviewedOn": "2026-10-18",
+      "ageLevels": {
+        "6-8": "Menschen können eine Menge festhalten, auch wenn sie keine Buchstaben dafür benutzen. Hier helfen Schnüre und Knoten.",
+        "9-11": "Verändere zwei Mengen im Lernbild. Blende dann die Bedeutung aus: Was weißt du noch, und welche Information fehlt?",
+        "12-14": "Welche weiteren Inhalte Khipus bewahren konnten, ist eine Forschungsfrage. Eine sichtbare Menge ist nicht automatisch eine vollständig verstandene Nachricht."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "Smithsonian NMAI",
+          "url": "https://americanindian.si.edu/exhibitions/infinityofnations/andes/143866.html",
+          "checkedOn": "2026-10-17",
+          "rightsBasis": "Eigene deutsche Erklärung geprüfter Fakten; keine Quelltexte/Bilder/Logos übernommen."
+        },
+        {
+          "id": "source-1",
+          "organisation": "NIST Museum",
+          "url": "https://www.nist.gov/nist-museum/standardizing-empire",
+          "checkedOn": "2026-10-17",
+          "rightsBasis": "Eigene deutsche Erklärung geprüfter Fakten; keine Quelltexte/Bilder/Logos übernommen."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "A main cord carries pendant cords whose knots, arrangement and colors can encode quantities.",
+          "sourceId": "source-0",
+          "anchor": "About This Object, paragraph15"
+        },
+        {
+          "statement": "Numerical khipu can use base10 place values; full meaning requires more than counting simple marks.",
+          "sourceId": "source-1",
+          "anchor": "What is a khipu, paragraphs142–157"
+        },
+        {
+          "statement": "Additional non-numeric meaning is a research interpretation, not universal decipherment claimed here.",
+          "sourceId": "source-0",
+          "anchor": "paragraph16: explicitly tentative interpretation"
+        }
+      ],
+      "links": [
+        "topics-history:history-writing",
+        "topics-history:history-web"
+      ],
+      "ui": {
+        "build": "24ce615e2190379c",
+        "route": "world/topic/history-khipu",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "dataHash": "a0d489a9be636313d03953188e8b6d1e208f3f9dfd607e27a0d98504dfa1e85f",
+        "reviewedOn": "2026-10-18",
+        "sourceFindings": "Quellenpassagen zu Aufbau, Mengen, Stellenwerten und Verwaltung am 17.10.2026 selbst gelesen. Eigene Texte und ein ausdrücklich erfundenes Zählschnur-Lernbild; keine kopierten Museumsmedien. Keine gemeinsame Fundkoordinate für alle Khipus erfunden. KI-Gegenprüfung separat dokumentieren; keine externe Menschenabnahme behauptet.",
+        "factualFindings": "Every factual paragraph, source note, correct answer and individual wrong reason compared against the source-anchored claims above; no source image copied. Time anchors explicitly approximate; model explicitly invented.",
+        "pedagogicalFindings": "Entry uses concrete quantities or water paths; voluntary second level compares states; third level questions inference. Help explains the reason; no diagnosis, risky experiment or score from the picture.",
+        "conceptAndLinkFindings": "Eigenständiger Lerngegenstand, kein Synonym-/Varianten-Doppelzählen. Distinct historical source and learning object, not a synonym of an existing article. Gegenseitige Kontextwege geprüft; kein Beleg für direkte historische Übertragung zwischen den Kulturen behauptet.",
+        "countercheck": "Separate rereading after creation: distinguish historical evidence from invented diagram; re-evaluate each distractor and each inference; check known and unknown conclusions. Human review is not assumed.",
+        "corrections": "Khipu opening narrowed to quantities and administrative information to avoid implying universal decipherment; city comparison says before the canal to match the visible endpoint. Existing writing corrected pictographs-only simplification.",
+        "remainingUncertainty": "Die im Artikel erklärten historischen Quellen- und Modellgrenzen bleiben bestehen. Aktuelle gezielte UI/Suche/Rückwege/Zoom/kalteOffline-Proben sind tatsächlich ausgeführt; vollständige finale Master-Abnahme separat erforderlich.",
+        "unresolvedBlockingClaims": []
+      },
+      "media": [
+        {
+          "path": "app/history-evidence.tsx",
+          "license": "Eigener Projektcode; keine Drittmedien",
+          "credit": "WunderKompass, eigene erfundene Lernzeichnung",
+          "alt": "Dynamische SVG-Beschreibung und sichtbare responsive HTML-Legende im gebundenen Artikel",
+          "learningPurpose": "Du unterscheidest eine Zahl von der Bedeutung dieser Zahl und erkennst die Grenzen einer Quelle."
+        }
+      ],
+      "historicalBeforeContentCorrection20261018": {
+        "dataHash": "a0d489a9be636313d03953188e8b6d1e208f3f9dfd607e27a0d98504dfa1e85f",
+        "ui": {
+          "build": "52fea67953fbe003",
+          "route": "world/topic/history-khipu",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Gezielte tatsächliche Chromiumprüfung siebenBreiten, Suche/Back/Reload und Großschrift/axe; separater tatsächlicher kalter Offline-Neustart einschließlich altem Schriftartikel. Build52fea67953fbe003. Einzelreport-SHA256 f9db19d1e7f728b546ea87268f955fa6e701013e0958b78a4f2b91fd302e73ef; Offline-SHA256 7bca8f757ae3d4d207d3d004aaff340860d8410a521f2083dc40d47a63bf4a31. Keine volle Master-/Menschenprüfung behauptet."
+        },
+        "aiSelfReview": {
+          "mode": "ai-self-review",
+          "dataHash": "a0d489a9be636313d03953188e8b6d1e208f3f9dfd607e27a0d98504dfa1e85f",
+          "reviewedOn": "2026-10-18",
+          "sourceFindings": "Quellenpassagen zu Aufbau, Mengen, Stellenwerten und Verwaltung am 17.10.2026 selbst gelesen. Eigene Texte und ein ausdrücklich erfundenes Zählschnur-Lernbild; keine kopierten Museumsmedien. Keine gemeinsame Fundkoordinate für alle Khipus erfunden. KI-Gegenprüfung separat dokumentieren; keine externe Menschenabnahme behauptet.",
+          "factualFindings": "Every factual paragraph, source note, correct answer and individual wrong reason compared against the source-anchored claims above; no source image copied. Time anchors explicitly approximate; model explicitly invented.",
+          "pedagogicalFindings": "Entry uses concrete quantities or water paths; voluntary second level compares states; third level questions inference. Help explains the reason; no diagnosis, risky experiment or score from the picture.",
+          "conceptAndLinkFindings": "Eigenständiger Lerngegenstand, kein Synonym-/Varianten-Doppelzählen. Distinct historical source and learning object, not a synonym of an existing article. Gegenseitige Kontextwege geprüft; kein Beleg für direkte historische Übertragung zwischen den Kulturen behauptet.",
+          "countercheck": "Separate rereading after creation: distinguish historical evidence from invented diagram; re-evaluate each distractor and each inference; check known and unknown conclusions. Human review is not assumed.",
+          "corrections": "Khipu opening narrowed to quantities and administrative information to avoid implying universal decipherment; city comparison says before the canal to match the visible endpoint. Existing writing corrected pictographs-only simplification.",
+          "remainingUncertainty": "Fachliche Grenzen bleiben die offene Bedeutung einzelner Quellenmerkmale beziehungsweise der ausgegrabene Ausschnitt. Gezielte aktuelle UI-/Offlineprüfung bestanden; komplette neue Master-Abnahme bleibt separat erforderlich.",
+          "unresolvedBlockingClaims": []
+        }
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/history-khipu",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "history-targeted: /workspace/work/wk-continuation/history-targeted/report.json sha256=a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a; history-native-offline: /workspace/work/wk-continuation/history-native-offline/report.json sha256=e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99; content-corrections-targeted: /workspace/work/wk-continuation/content-corrections-targeted/report.json sha256=1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d"
+      },
+      "historicalUIBeforeRetainedHistoryRound20261018": {
+        "build": "a3b58eb6e952a2db",
+        "route": "world/topic/history-khipu",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "master-retained-animals-final-history-targeted: /workspace/work/wk-continuation/master-retained-animals-final-history-targeted/report.json sha256=4b3d4693afa7d2d53acc70b006d9ec5385785d5fd41ae7f12da891fdddef4734; master-retained-animals-final-history-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-history-native-offline/report.json sha256=19a0a89d55c347e5695721515565f404f450b171b2dca61699a3665decc8fc1b; master-retained-animals-final-corrections: /workspace/work/wk-continuation/master-retained-animals-final-corrections/report.json sha256=ab7e8cd258ec13e94ab8e0fa6d0139a6812435dc760dec37d5b52043a9eae978"
+      },
+      "historicalUIBeforeRemainingHistoryRound20261018": {
+        "build": "267fae29861b3ab0",
+        "route": "world/topic/history-khipu",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "master-retained-history-with-navigation: /workspace/work/wk-continuation/master-retained-history-with-navigation/report.json sha256=ea2f16ad69ae25286641e33fcd85abe564420ae46a24918507a9d376f6c7d40f; master-retained-history-native-offline: /workspace/work/wk-continuation/master-retained-history-native-offline/report.json sha256=2adbaeb4a5e05026b8dd9327b526a5af19ff7f0beb261a8b41cff73b54d428d2"
+      },
+      "historicalUIBeforeReleaseRepair20261018": {
+        "build": "5e132945395575cc",
+        "route": "world/topic/history-khipu",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "master-all-history-with-navigation-v3: /workspace/work/wk-continuation/master-all-history-with-navigation-v3/report.json sha256=d7527002e790db2483dedefe92ce37d3884e05491ec2881feda4ddf3b1616015; master-all-history-native-offline-v3: /workspace/work/wk-continuation/master-all-history-native-offline-v3/report.json sha256=51df0aa0df37d37930473a4a6cf0d5d52ca733a6d14063bc9d885d0361b3e850"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "9d79672e863f3dec",
+        "route": "world/topic/history-khipu",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/master-ed0f65a-full-browser-complete-20261020/portable-report.json sha256=9c802f8aa44f8aa3544d5976308b7e3faa92589dfed117e8dea1102c44dd3d1c; original current-head Chromium154 full regression, actual stopped-server cold restart; no CI/Firefox/WebKit/deployment claim"
+      }
+    },
+    {
+      "id": "topics-history:history-mohenjo-daro",
+      "dataHash": "f3ae48be26eb58fed0f9e11e8853f468c0715d77fe5445bb0ff3c17315a32ba5",
+      "goal": "Du lernst, einen sichtbaren Befund von einer weitergehenden Vermutung zu unterscheiden.",
+      "explanation": "Konkrete Artikelabsätze, Fakten und Vertiefungen unter dem gebundenen Inhalts-Hash geprüft.",
+      "example": "Vergleiche die zwei erfundenen Pläne: Wo endet der Wasserweg? Welche Aussage kannst du direkt am Bild prüfen?",
+      "whyItMatters": "Du lernst, einen sichtbaren Befund von einer weitergehenden Vermutung zu unterscheiden.",
+      "hint": "Suche nach Spuren, die als Baureste erhalten sein können.",
+      "feedback": "Beide konkreten Falschbegründungen und richtige Erklärung des gebundenen Artikels einzeln geprüft.",
+      "modelLimits": "UNESCO-Abschnitte Brief synthesis, Integrity und Protection am 17.10.2026 selbst gelesen. Die Kurzbeschreibung und die ausführliche Beschreibung verwenden unterschiedliche Ziegelangaben; daraus wird hier keine pauschale Materialbehauptung übernommen. Eigenes ausdrücklich erfundenes Planmodell, kein originaler Ausgrabungsplan, keine kopierten UNESCO-Fotos.",
+      "reviewedBy": "Codex KI-Selbstprüfung mit separater Gegenlese nach Erstellung; keine Menschenprüfung",
+      "reviewedOn": "2026-10-18",
+      "ageLevels": {
+        "6-8": "Alte Straßen und Wasserwege sind Spuren. Sie helfen uns zu verstehen, wie Menschen eine Stadt planten.",
+        "9-11": "Vergleiche die zwei erfundenen Pläne: Wo endet der Wasserweg? Welche Aussage kannst du direkt am Bild prüfen?",
+        "12-14": "Die Erhaltung ist selbst eine Forschungsaufgabe: Feuchtigkeit und Salze können die alten Reste schädigen. Schutzarbeit soll die noch vorhandenen Spuren bewahren."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "UNESCO World Heritage Centre",
+          "url": "https://whc.unesco.org/en/list/138/",
+          "checkedOn": "2026-10-17",
+          "rightsBasis": "Eigene deutsche Erklärung geprüfter Fakten; keine Quelltexte/Bilder/Logos übernommen."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Mohenjo-Daro lies in Sindh/Pakistan; excavated streets and drainage provide evidence of city planning.",
+          "sourceId": "source-0",
+          "anchor": "Brief synthesis51–54 and coordinate124"
+        },
+        {
+          "statement": "Only part has been excavated; salts/moisture affect conservation.",
+          "sourceId": "source-0",
+          "anchor": "Integrity59–60 and conservation64–71"
+        }
+      ],
+      "links": [
+        "topics-history:history-rome",
+        "topics-history:history-writing"
+      ],
+      "ui": {
+        "build": "24ce615e2190379c",
+        "route": "world/topic/history-mohenjo-daro",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "dataHash": "f3ae48be26eb58fed0f9e11e8853f468c0715d77fe5445bb0ff3c17315a32ba5",
+        "reviewedOn": "2026-10-18",
+        "sourceFindings": "UNESCO-Abschnitte Brief synthesis, Integrity und Protection am 17.10.2026 selbst gelesen. Die Kurzbeschreibung und die ausführliche Beschreibung verwenden unterschiedliche Ziegelangaben; daraus wird hier keine pauschale Materialbehauptung übernommen. Eigenes ausdrücklich erfundenes Planmodell, kein originaler Ausgrabungsplan, keine kopierten UNESCO-Fotos. KI-Gegenprüfung separat dokumentieren; keine externe Menschenabnahme behauptet.",
+        "factualFindings": "Every factual paragraph, source note, correct answer and individual wrong reason compared against the source-anchored claims above; no source image copied. Time anchors explicitly approximate; model explicitly invented.",
+        "pedagogicalFindings": "Entry uses concrete quantities or water paths; voluntary second level compares states; third level questions inference. Help explains the reason; no diagnosis, risky experiment or score from the picture.",
+        "conceptAndLinkFindings": "Eigenständiger Lerngegenstand, kein Synonym-/Varianten-Doppelzählen. Distinct historical source and learning object, not a synonym of an existing article. Gegenseitige Kontextwege geprüft; kein Beleg für direkte historische Übertragung zwischen den Kulturen behauptet.",
+        "countercheck": "Separate rereading after creation: distinguish historical evidence from invented diagram; re-evaluate each distractor and each inference; check known and unknown conclusions. Human review is not assumed.",
+        "corrections": "Khipu opening narrowed to quantities and administrative information to avoid implying universal decipherment; city comparison says before the canal to match the visible endpoint. Existing writing corrected pictographs-only simplification.",
+        "remainingUncertainty": "Die im Artikel erklärten historischen Quellen- und Modellgrenzen bleiben bestehen. Aktuelle gezielte UI/Suche/Rückwege/Zoom/kalteOffline-Proben sind tatsächlich ausgeführt; vollständige finale Master-Abnahme separat erforderlich.",
+        "unresolvedBlockingClaims": []
+      },
+      "media": [
+        {
+          "path": "app/history-evidence.tsx",
+          "license": "Eigener Projektcode; keine Drittmedien",
+          "credit": "WunderKompass, eigene erfundene Lernzeichnung",
+          "alt": "Dynamische SVG-Beschreibung und sichtbare responsive HTML-Legende im gebundenen Artikel",
+          "learningPurpose": "Du lernst, einen sichtbaren Befund von einer weitergehenden Vermutung zu unterscheiden."
+        }
+      ],
+      "historicalBeforeContentCorrection20261018": {
+        "dataHash": "f3ae48be26eb58fed0f9e11e8853f468c0715d77fe5445bb0ff3c17315a32ba5",
+        "ui": {
+          "build": "52fea67953fbe003",
+          "route": "world/topic/history-mohenjo-daro",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Gezielte tatsächliche Chromiumprüfung siebenBreiten, Suche/Back/Reload und Großschrift/axe; separater tatsächlicher kalter Offline-Neustart einschließlich altem Schriftartikel. Build52fea67953fbe003. Einzelreport-SHA256 f9db19d1e7f728b546ea87268f955fa6e701013e0958b78a4f2b91fd302e73ef; Offline-SHA256 7bca8f757ae3d4d207d3d004aaff340860d8410a521f2083dc40d47a63bf4a31. Keine volle Master-/Menschenprüfung behauptet."
+        },
+        "aiSelfReview": {
+          "mode": "ai-self-review",
+          "dataHash": "f3ae48be26eb58fed0f9e11e8853f468c0715d77fe5445bb0ff3c17315a32ba5",
+          "reviewedOn": "2026-10-18",
+          "sourceFindings": "UNESCO-Abschnitte Brief synthesis, Integrity und Protection am 17.10.2026 selbst gelesen. Die Kurzbeschreibung und die ausführliche Beschreibung verwenden unterschiedliche Ziegelangaben; daraus wird hier keine pauschale Materialbehauptung übernommen. Eigenes ausdrücklich erfundenes Planmodell, kein originaler Ausgrabungsplan, keine kopierten UNESCO-Fotos. KI-Gegenprüfung separat dokumentieren; keine externe Menschenabnahme behauptet.",
+          "factualFindings": "Every factual paragraph, source note, correct answer and individual wrong reason compared against the source-anchored claims above; no source image copied. Time anchors explicitly approximate; model explicitly invented.",
+          "pedagogicalFindings": "Entry uses concrete quantities or water paths; voluntary second level compares states; third level questions inference. Help explains the reason; no diagnosis, risky experiment or score from the picture.",
+          "conceptAndLinkFindings": "Eigenständiger Lerngegenstand, kein Synonym-/Varianten-Doppelzählen. Distinct historical source and learning object, not a synonym of an existing article. Gegenseitige Kontextwege geprüft; kein Beleg für direkte historische Übertragung zwischen den Kulturen behauptet.",
+          "countercheck": "Separate rereading after creation: distinguish historical evidence from invented diagram; re-evaluate each distractor and each inference; check known and unknown conclusions. Human review is not assumed.",
+          "corrections": "Khipu opening narrowed to quantities and administrative information to avoid implying universal decipherment; city comparison says before the canal to match the visible endpoint. Existing writing corrected pictographs-only simplification.",
+          "remainingUncertainty": "Fachliche Grenzen bleiben die offene Bedeutung einzelner Quellenmerkmale beziehungsweise der ausgegrabene Ausschnitt. Gezielte aktuelle UI-/Offlineprüfung bestanden; komplette neue Master-Abnahme bleibt separat erforderlich.",
+          "unresolvedBlockingClaims": []
+        }
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/history-mohenjo-daro",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "history-targeted: /workspace/work/wk-continuation/history-targeted/report.json sha256=a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a; history-native-offline: /workspace/work/wk-continuation/history-native-offline/report.json sha256=e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99; content-corrections-targeted: /workspace/work/wk-continuation/content-corrections-targeted/report.json sha256=1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d"
+      },
+      "historicalUIBeforeRetainedHistoryRound20261018": {
+        "build": "a3b58eb6e952a2db",
+        "route": "world/topic/history-mohenjo-daro",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "master-retained-animals-final-history-targeted: /workspace/work/wk-continuation/master-retained-animals-final-history-targeted/report.json sha256=4b3d4693afa7d2d53acc70b006d9ec5385785d5fd41ae7f12da891fdddef4734; master-retained-animals-final-history-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-history-native-offline/report.json sha256=19a0a89d55c347e5695721515565f404f450b171b2dca61699a3665decc8fc1b; master-retained-animals-final-corrections: /workspace/work/wk-continuation/master-retained-animals-final-corrections/report.json sha256=ab7e8cd258ec13e94ab8e0fa6d0139a6812435dc760dec37d5b52043a9eae978"
+      },
+      "historicalUIBeforeRemainingHistoryRound20261018": {
+        "build": "267fae29861b3ab0",
+        "route": "world/topic/history-mohenjo-daro",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "master-retained-history-with-navigation: /workspace/work/wk-continuation/master-retained-history-with-navigation/report.json sha256=ea2f16ad69ae25286641e33fcd85abe564420ae46a24918507a9d376f6c7d40f; master-retained-history-native-offline: /workspace/work/wk-continuation/master-retained-history-native-offline/report.json sha256=2adbaeb4a5e05026b8dd9327b526a5af19ff7f0beb261a8b41cff73b54d428d2"
+      },
+      "historicalUIBeforeReleaseRepair20261018": {
+        "build": "5e132945395575cc",
+        "route": "world/topic/history-mohenjo-daro",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "master-all-history-with-navigation-v3: /workspace/work/wk-continuation/master-all-history-with-navigation-v3/report.json sha256=d7527002e790db2483dedefe92ce37d3884e05491ec2881feda4ddf3b1616015; master-all-history-native-offline-v3: /workspace/work/wk-continuation/master-all-history-native-offline-v3/report.json sha256=51df0aa0df37d37930473a4a6cf0d5d52ca733a6d14063bc9d885d0361b3e850"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "9d79672e863f3dec",
+        "route": "world/topic/history-mohenjo-daro",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/master-ed0f65a-full-browser-complete-20261020/portable-report.json sha256=9c802f8aa44f8aa3544d5976308b7e3faa92589dfed117e8dea1102c44dd3d1c; original current-head Chromium154 full regression, actual stopped-server cold restart; no CI/Firefox/WebKit/deployment claim"
+      }
+    },
+    {
+      "id": "topics-history:history-writing",
+      "dataHash": "7a24011db51fdd27eef162efe8f702fece57a36ff48cfadf05f888859d4d4bdb",
+      "goal": "Du erkennst, warum eine gespeicherte Menge und eine verständliche Nachricht nicht dasselbe sind.",
+      "explanation": "Konkrete Artikelabsätze, Fakten und Vertiefungen unter dem gebundenen Inhalts-Hash geprüft.",
+      "example": "Stell dir drei abgegebene Körbe vor. Welche Information könntest du zählen, und welche gemeinsame Regel brauchst du zum Verstehen deiner Zeichen?",
+      "whyItMatters": "Du erkennst, warum eine gespeicherte Menge und eine verständliche Nachricht nicht dasselbe sind.",
+      "hint": "Stell dir einen Händler vor, der sich viele Lieferungen merken muss. Wofür könnten aufgeschriebene Zeichen nützlich sein?",
+      "feedback": "Beide konkreten Falschbegründungen und richtige Erklärung des gebundenen Artikels einzeln geprüft.",
+      "modelLimits": "Der Met-Artikel erklärt frühe Bildzeichen und abstrakte Markierungen sowie spätere Lautverwendungen. Der Zeitanker ist ungefähr und bezeichnet keinen einzelnen Erfindungstag. Khipus zeigen eine andere Form von Aufzeichnung; ihre Verbindung hier ist ein Vergleich, keine behauptete direkte historische Übertragung.",
+      "reviewedBy": "Codex KI-Selbstprüfung mit separater Gegenlese nach Erstellung; keine Menschenprüfung",
+      "reviewedOn": "2026-10-18",
+      "ageLevels": {
+        "6-8": "Eine Nachricht kann bleiben, auch wenn niemand sie gerade erzählt. Zeichen auf Ton halfen dabei.",
+        "9-11": "Stell dir drei abgegebene Körbe vor. Welche Information könntest du zählen, und welche gemeinsame Regel brauchst du zum Verstehen deiner Zeichen?",
+        "12-14": "Unterscheide frühe Zeichenarten, spätere Lautverwendung und die Grenzen eines ungefähren Zeitankers."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "The Metropolitan Museum of Art",
+          "url": "https://www.metmuseum.org/essays/the-origins-of-writing",
+          "checkedOn": "2026-10-18",
+          "rightsBasis": "Eigene deutsche Erklärung geprüfter Fakten; keine Quelltexte/Bilder/Logos übernommen."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Frühe Zeichen waren bildlich und abstrakt; Lautverwendungen entwickelten sich später.",
+          "sourceId": "source-0",
+          "anchor": "Met The Origins of Writing paragraphs30–43"
+        }
+      ],
+      "links": [
+        "topics-history:history-web",
+        "topics-history:history-khipu",
+        "topics-history:history-mohenjo-daro"
+      ],
+      "ui": {
+        "build": "24ce615e2190379c",
+        "route": "world/topic/history-writing",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json sha256=7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270; full unchanged local Chromium154 regression with10source views and2actual cold-browser source views; source/error/quota/native640+320 and old-save/16reciprocal links additionally proven in scoped reports; no CI/Firefox/WebKit/deployment claim"
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "dataHash": "7a24011db51fdd27eef162efe8f702fece57a36ff48cfadf05f888859d4d4bdb",
+        "reviewedOn": "2026-10-18",
+        "sourceFindings": "Met31/36–39 am18.10.2026 erneut gelesen: Wirtschaftsaufzeichnungen, Bildzeichen und abstrakte Zeichen. Mengenaufzeichnung, Quellenumfang und neue unmittelbar passende richtige Antwort separat gegengelesen.",
+        "factualFindings": "Zeichenarten, spätere Entwicklung, ungefähre Zeitanker und unveränderte richtige Antwort gegen die benannte Met-Passage gegengeprüft.",
+        "pedagogicalFindings": "Konkreter Einstieg, freiwillige eigene Beobachtung, genauere Vertiefung und beide individuell erklärten Fehlvorstellungen geprüft.",
+        "conceptAndLinkFindings": "Eigenständiger Lerngegenstand, kein Synonym-/Varianten-Doppelzählen. Altartikel, nicht als neue Karte gezählt.  Gegenseitige Kontextwege geprüft; kein Beleg für direkte historische Übertragung zwischen den Kulturen behauptet.",
+        "countercheck": "After initial writing, re-read distinction between pictographs and abstract marks, later wedge and sound development; no alphabet-at-once or transmission-to-Inka claim. Distractors remain the old stable choices; new feedback explains technology/context without giving an unrelated answer.",
+        "corrections": "Pictographs-only simplification corrected; concrete starter/observation/benefit and wrong reasons added; original question/title/date/location remain. Im neuen Inhaltsnachtrag: individuelle Quellenvertiefung statt generischem Zusatz und konkrete Getreidemengen-Erklärung zur bestehenden richtigen Antwort; sämtliche Antworten und Lösung erhalten.",
+        "remainingUncertainty": "Die im Artikel erklärten historischen Quellen- und Modellgrenzen bleiben bestehen. Aktuelle gezielte UI/Suche/Rückwege/Zoom/kalteOffline-Proben sind tatsächlich ausgeführt; vollständige finale Master-Abnahme separat erforderlich.",
+        "unresolvedBlockingClaims": []
+      },
+      "mediaDecision": "Bewusst kein neues Fundbild: eigenes Mengenbeispiel und der verknüpfte Khipu-Vergleich vermitteln die Aufzeichnungsidee; keine geschützte Abbildung nötig.",
+      "historicalBeforeContentCorrection20261018": {
+        "dataHash": "7ada62f2e707f233157698cdb2d41e9533aae74f9c4acbd78de12c4bbf806f7b",
+        "ui": {
+          "build": "52fea67953fbe003",
+          "route": "world/topic/history-writing",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Gezielte tatsächliche Chromiumprüfung siebenBreiten, Suche/Back/Reload und Großschrift/axe; separater tatsächlicher kalter Offline-Neustart einschließlich altem Schriftartikel. Build52fea67953fbe003. Einzelreport-SHA256 f9db19d1e7f728b546ea87268f955fa6e701013e0958b78a4f2b91fd302e73ef; Offline-SHA256 7bca8f757ae3d4d207d3d004aaff340860d8410a521f2083dc40d47a63bf4a31. Keine volle Master-/Menschenprüfung behauptet."
+        },
+        "aiSelfReview": {
+          "mode": "ai-self-review",
+          "dataHash": "7ada62f2e707f233157698cdb2d41e9533aae74f9c4acbd78de12c4bbf806f7b",
+          "reviewedOn": "2026-10-18",
+          "sourceFindings": "Met The Origins of Writing, actual paragraphs30–43 read17Oct2026.",
+          "factualFindings": "Zeichenarten, spätere Entwicklung, ungefähre Zeitanker und unveränderte richtige Antwort gegen die benannte Met-Passage gegengeprüft.",
+          "pedagogicalFindings": "Konkreter Einstieg, freiwillige eigene Beobachtung, genauere Vertiefung und beide individuell erklärten Fehlvorstellungen geprüft.",
+          "conceptAndLinkFindings": "Eigenständiger Lerngegenstand, kein Synonym-/Varianten-Doppelzählen. Altartikel, nicht als neue Karte gezählt.  Gegenseitige Kontextwege geprüft; kein Beleg für direkte historische Übertragung zwischen den Kulturen behauptet.",
+          "countercheck": "After initial writing, re-read distinction between pictographs and abstract marks, later wedge and sound development; no alphabet-at-once or transmission-to-Inka claim. Distractors remain the old stable choices; new feedback explains technology/context without giving an unrelated answer.",
+          "corrections": "Pictographs-only simplification corrected; concrete starter/observation/benefit and wrong reasons added; original question/title/date/location remain.",
+          "remainingUncertainty": "Approximate dates; evidence does not prove a single inventor or one-day origin.",
+          "unresolvedBlockingClaims": []
+        }
+      },
+      "uiBeforeAnswerWordingCorrection": {
+        "build": "b92d7a70954a64bd",
+        "route": "world/topic/history-writing",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "history-targeted: /workspace/work/wk-continuation/history-targeted/report.json sha256=a61e4bee039bf6ab712df9a6fb385cdff09a3d9ab4baa110cf51781ff0d0a05a; history-native-offline: /workspace/work/wk-continuation/history-native-offline/report.json sha256=e24f326917aff69b82613612f21d9cf7d04b3615ef63fbbf6dce869609bdbe99; content-corrections-targeted: /workspace/work/wk-continuation/content-corrections-targeted/report.json sha256=1a59e9de242c3ef92b96387f18a487d035c05824c3ac7a623158fdb4658b192d"
+      },
+      "historicalUIBeforeRetainedHistoryRound20261018": {
+        "build": "a3b58eb6e952a2db",
+        "route": "world/topic/history-writing",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "master-retained-animals-final-history-targeted: /workspace/work/wk-continuation/master-retained-animals-final-history-targeted/report.json sha256=4b3d4693afa7d2d53acc70b006d9ec5385785d5fd41ae7f12da891fdddef4734; master-retained-animals-final-history-native-offline: /workspace/work/wk-continuation/master-retained-animals-final-history-native-offline/report.json sha256=19a0a89d55c347e5695721515565f404f450b171b2dca61699a3665decc8fc1b; master-retained-animals-final-corrections: /workspace/work/wk-continuation/master-retained-animals-final-corrections/report.json sha256=ab7e8cd258ec13e94ab8e0fa6d0139a6812435dc760dec37d5b52043a9eae978"
+      },
+      "historicalUIBeforeRemainingHistoryRound20261018": {
+        "build": "267fae29861b3ab0",
+        "route": "world/topic/history-writing",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "master-retained-history-with-navigation: /workspace/work/wk-continuation/master-retained-history-with-navigation/report.json sha256=ea2f16ad69ae25286641e33fcd85abe564420ae46a24918507a9d376f6c7d40f; master-retained-history-native-offline: /workspace/work/wk-continuation/master-retained-history-native-offline/report.json sha256=2adbaeb4a5e05026b8dd9327b526a5af19ff7f0beb261a8b41cff73b54d428d2"
+      },
+      "historicalUIBeforeReleaseRepair20261018": {
+        "build": "5e132945395575cc",
+        "route": "world/topic/history-writing",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "master-all-history-with-navigation-v3: /workspace/work/wk-continuation/master-all-history-with-navigation-v3/report.json sha256=d7527002e790db2483dedefe92ce37d3884e05491ec2881feda4ddf3b1616015; master-all-history-native-offline-v3: /workspace/work/wk-continuation/master-all-history-native-offline-v3/report.json sha256=51df0aa0df37d37930473a4a6cf0d5d52ca733a6d14063bc9d885d0361b3e850"
+      },
+      "historicalUIBeforeIsolatedSourceDiscovery20261020": {
+        "build": "9d79672e863f3dec",
+        "route": "world/topic/history-writing",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/master-ed0f65a-full-browser-complete-20261020/portable-report.json sha256=9c802f8aa44f8aa3544d5976308b7e3faa92589dfed117e8dea1102c44dd3d1c; original current-head Chromium154 full regression, actual stopped-server cold restart; no CI/Firefox/WebKit/deployment claim"
       }
     }
   ],
@@ -6215,9 +7079,66 @@
           }
         }
       }
+    },
+    {
+      "id": "history-writing:mini",
+      "topic": "history-writing",
+      "changedFields": [
+        "why"
+      ],
+      "before": {
+        "prompt": "Wofür nutzten Menschen in Uruk frühe Schrift?",
+        "answers": [
+          "Um Dinge wie Getreidemengen festzuhalten",
+          "Zum Versenden von E-Mails",
+          "Zum Bauen von Satelliten"
+        ],
+        "correct": 0,
+        "why": "Schrift konnte Informationen bewahren, auch wenn die Person, die sie wusste, gerade nicht da war."
+      },
+      "after": {
+        "prompt": "Wofür nutzten Menschen in Uruk frühe Schrift?",
+        "answers": [
+          "Um Dinge wie Getreidemengen festzuhalten",
+          "Zum Versenden von E-Mails",
+          "Zum Bauen von Satelliten"
+        ],
+        "correct": 0,
+        "why": "Auf frühen Tontafeln hielten Menschen wirtschaftliche Angaben fest, zum Beispiel Mengen von Getreide. Die Aufzeichnung bewahrte diese Information auch für später."
+      },
+      "reason": "Allgemeinen Nutzensatz durch direkt zur Frage und richtigen Antwort passende Erklärung ersetzt; keine Antwort-/Lösungs-/IDänderung.",
+      "reviewedOn": "2026-10-18",
+      "authority": "Nutzerauftrag_Inhaltskorrektur_2026-10-18.txt Abschnitte4–6",
+      "stateCompatibility": "IDs/Antworttexte/Lösung/Schema3 unverändert; tatsächlich gespeicherteumgekehrteAntwortreihenfolge, sämtlichefalschenundrichtigenAntworten, Rückmeldungen undReload bei320/1440 am Buildde9b13f736ae7126 erfolgreich. NurgezielterChromiumbeleg, vollständigeEndabnahme bleibtseparat. Neue gezielte Probe am Builda3b58eb6e952a2db erneut bestanden; vorherige Originalnachweise erhalten.",
+      "stateCompatibilityBeforeActualUI": "IDs, alle Antworttexte, Reihenfolge, Lösung und Schema3 unverändert; tatsächliche UI/Saveprüfung nach Änderung offen.",
+      "actualCompatibilityProofs": {
+        "master-wording-corrections-resume-fixed": {
+          "path": "/workspace/work/wk-continuation/master-wording-corrections-resume-fixed/report.json",
+          "sha256": "955286664b1413f2fd112b360c291cfe2ff31608cb3a32c0e8cc5dc38fe8e7a1",
+          "build": "de9b13f736ae7126",
+          "sourceDigest": "d6e71d2f47c0e12d381b0cae5d0d31d791acd70243f70f9ed9245cd1b18b6df6",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        }
+      },
+      "currentCompatibilityProofs": {
+        "master-retained-animals-final-corrections": {
+          "path": "/workspace/work/wk-continuation/master-retained-animals-final-corrections/report.json",
+          "sha256": "ab7e8cd258ec13e94ab8e0fa6d0139a6812435dc760dec37d5b52043a9eae978",
+          "build": "a3b58eb6e952a2db",
+          "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+          "scope": "actual Chromium corrected question/save/reflection partial proof; not full regression"
+        },
+        "master-retained-animals-final-history-native-offline": {
+          "path": "/workspace/work/wk-continuation/master-retained-animals-final-history-native-offline/report.json",
+          "sha256": "19a0a89d55c347e5695721515565f404f450b171b2dca61699a3665decc8fc1b",
+          "build": "a3b58eb6e952a2db",
+          "sourceDigest": "300be73aa22b6fc5138cf0c8c94cfab6f80a9af7952e4579ec0c93969587329b",
+          "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline history proof; not full regression"
+        }
+      }
     }
   ],
-  "questionCorrectionScope": "Genau eine grammatische falsche Antwort beimSeeadler mit engerAlttextalias-Kompatibilität; ursprüngliche142Fragen/Hinweise und alle richtigenAntworten/Indizes/IDs unverändert. Andere31Master-Fragenkorrekturen gehören nicht zu diesem Abschnitt.",
+  "questionCorrectionScope": "Die vorhandene enge grammatische Seeadler-Ausnahme mit Alttextalias bleibt unverändert. Zusätzlich ersetzt genau history-writing:mini seine allgemeine richtige Erklärung durch eine zur Getreidemengenfrage passende Erklärung; alle Antworttexte, Lösungsindizes und Identitäten bleiben erhalten. Die ursprünglichen142Fragen sowie alle166bisher öffentlichen Fragen sind anhand der einzeln dokumentierten Vorherfassungen und ihrer unveränderten Vergleichsdaten geschützt. Weitere Masterkorrekturen gehören nicht zu diesem Abschnitt.",
   "currentBaseProof20261020": {
     "headBeforeBinding": "7fe7a0ab54d67f29887347b73a4eaa965d536682",
     "build": "b45a7f8674fc3e53",
@@ -6260,5 +7181,56 @@
     "sha256": "01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60",
     "dossiers": 48,
     "scope": "Actual complete current local Chromium154 regression: all48 unchanged animals at seven widths normal/large, native200%, search/reload/back, original saved sessions and genuine cold offline. Original UI bindings retained in Git and private before-file. No other engines, CI or deployment claim."
+  },
+  "historySourceDiscoveryPreparation20261020": {
+    "meaning": "Two already implemented historical concepts and one directly related retained writing correction, isolated from existing Master work. All51current UI bindings await actual current full/local/browser/offline evidence; prior source readings retained with their original dates.",
+    "newTopicIds": [
+      "history-khipu",
+      "history-mohenjo-daro"
+    ],
+    "retainedTopicChanges": [
+      "history-writing",
+      "history-web",
+      "history-rome"
+    ],
+    "base": "762a18332e9e05b3e87d554e2219d257ea2ee33c",
+    "sourceMaster": "a37a09690682ffe1f1027c36270549853189dc4b"
+  },
+  "meaningBeforeIsolatedHistory20261020": "48 tatsächlich individuell fachlich/pädagogisch KI-geprüfte Tierartikel mit aktuellen eigenen Ziel-UI-/Such-/Rückweg-/Reload-/Native-/Offlinebelegen. Alte externe Zähler sind kein Menschen-Gate. Vollständige neue Pflichtabnahme, aktuelles GitHub-Grün und Auslieferung stehen separat aus.",
+  "questionCorrectionScopeBeforeIsolatedHistory20261020": "Genau eine grammatische falsche Antwort beimSeeadler mit engerAlttextalias-Kompatibilität; ursprüngliche142Fragen/Hinweise und alle richtigenAntworten/Indizes/IDs unverändert. Andere31Master-Fragenkorrekturen gehören nicht zu diesem Abschnitt.",
+  "historySourceCurrentBuiltProof20261020": {
+    "meaning": "Actual unchanged local complete mandatory run for isolated142topic/172question candidate. The51existing factual dossiers and original source readings stay unchanged. UI-only follow-up changes metadata after the immutable run; current strict CI still required for final head.",
+    "full": {
+      "path": "/workspace/work/wk-continuation/history-small-release-769583d-full-local-originals-20261020/portable-report.json",
+      "sha256": "7d36060866725f7bbaefba24d5436c403ad625a2a76e9fc719094dec71102270",
+      "head": "769583dc3320447d2a107c6f112b4054d03e0104",
+      "build": "24ce615e2190379c",
+      "sourceDigest": "08dac390eb24706fed41a4630d25a3af5bd0a6e10b96492328ac98d56610dd60",
+      "localUnitGitHead": null,
+      "gitBinding": "Actual frozen driver head/tree and unchanged current Git head separately checked; unit-generated head may be null",
+      "seconds": 1073.423256105,
+      "browser": "154.0.8037.57"
+    },
+    "early": {
+      "early-source-view-v2": {
+        "path": "/workspace/work/wk-continuation/history-small-release-early-source-view-v2-20261020/report.json",
+        "sha256": "53cb02e98d9c626958418b09813ee3a04f4c3e97dc478b96c347057771521772",
+        "status": "passed early scoped Chromium"
+      },
+      "real-offline-early": {
+        "path": "/workspace/work/wk-continuation/history-small-release-real-offline-early-20261020/report.json",
+        "sha256": "04dd7ced9eb58bde19596e5498debc030729025da23e43750ff828ac6a8cd5ce",
+        "status": "passed early real offline/source/native checks"
+      },
+      "old-save-links": {
+        "path": "/workspace/work/wk-continuation/history-small-release-old-save-links-20261020/report.json",
+        "sha256": "91e9b49e47bbe64b7f026ec9e1af24c9bcbc5ccb27994f287af09de29678b034",
+        "status": "passed scoped old-save/link/chronicle regression"
+      }
+    },
+    "views": 10,
+    "coldViews": 2,
+    "offlineSourceCases": 8,
+    "nativeSourceCases": 4
   }
 }
