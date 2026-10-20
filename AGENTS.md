@@ -1,3 +1,7 @@
+## Neueste Nutzerpräzisierung ·20.10.2026 · aktuelle Chronik und echte Fotos
+
+Die bestehende Entwicklung, laufende Prüfstände und gesicherte Arbeit fortsetzen. „Was ist neu?“ bei jedem sinnvollen Releaseabgleich mit den tatsächlich ausgelieferten sichtbaren Produktänderungen aktuell halten: vorhandene stabile Einträge anhand echter Merge-/Vercel-Nachweise nachführen und bestätigte Pakete aus „In Vorbereitung“ entfernen. Keine Veröffentlichung erfinden, keine Einträge rein für interne Prüfschritte ergänzen; nach bestätigter Bereitstellung den nächsten regulären Abschnitt zur Nachführung nutzen. Geeignete echte Fotos für alte und neue Inhalte sowie spätere Projekte bevorzugen; genaue Art/Motiv, Quelle, Urheber und Nutzungsrechte nach QUALITY prüfen. Eigene Bilder sind Ersatz bei fehlenden geeigneten Fotos; bestehende Arbeit und Erklärgrafiken erhalten. Diese Präzisierung ergänzt denselben Gesamtauftrag, keine neue Roadmap oder zusätzliche Freigabehürde.
+
 ## Maßgebliche punktuelle Nutzerklärung ·20.10.2026
 
 Der laufende Auftrag und [Issue28](https://github.com/Arizona2k/wunderkompass/issues/28) gelten für bestehende und kommende Arbeit. Nach dem belegten begrenzten Reparaturabschnitt die bereits entwickelte Paket-3.5-Arbeit fertigstellen, danach die bestehenden Pakete4–8. Master27/Nachtarbeit und stabile IDs/Schema3 erhalten, keine Doppelentwicklung oder zweite Aufgabenliste. BACKLOG ist die einzige operative Liste, PROJECT_STATE der belegte Stand. Ein konkreter Blocker hält nur seine abhängigen riskanten Schritte an.

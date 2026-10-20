@@ -3,10 +3,10 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {UPDATE_HISTORY,PREPARED_UPDATES,HISTORY_EVIDENCE,TEST_HISTORY_EVIDENCE,JOURNEY_SUPPORT_COPY,confirmedTestDeployment,testUpdate,publicUpdates,updateDate,updateLabel,berlinDay,formatHistoryInstant} from '../app/update-history.ts';
 
-test('actual deployed PR38 lab feedback is newest once and no longer falsely prepared',()=>{
+test('actual deployed PR38 lab feedback retains its historical time once and stays confirmed',()=>{
  const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===38);
  const entries=publicUpdates(),entry=entries.find(e=>e.id==='lab-feedback-3-5');
- assert.ok(record);assert.ok(entry);assert.equal(entries[0].id,entry.id);
+ assert.ok(record);assert.ok(entry);assert.equal(entries[1].id,entry.id);
  assert.equal(entry.evidence.revision,'0e5e4d4ece35d4a80dc79764c690c1633b2e0988');
  assert.equal(entry.status,'test-available');assert.equal(entry.availableOn,'2026-10-18');
  assert.equal(entry.occurredAt,'2026-10-17T22:20:23Z');assert.equal(entry.publishedOn,null);
@@ -42,7 +42,7 @@ test('publication entries match successful deployments, source provenance and Be
   if(entry.evidence.publicationVersion!==undefined){
    const source=HISTORY_EVIDENCE.versions.find(v=>v.number===entry.evidence.publicationVersion);assert.equal(source.publication.status,'succeeded');assert.equal(source.publication.type,'publish');assert.equal(source.sourceCommit,entry.evidence.revision);assert.equal(entry.publishedOn,berlinDay(source.publication.completedAt));
   }
-  for(const link of entry.links)assert.ok(['globe','world','labs','games','journeys','book','world/topic/science-moon-phases','updates'].includes(link.hash));
+  for(const link of entry.links)assert.ok(['globe','world','labs','games','journeys','book','world/topic/science-moon-phases','world/animals','updates'].includes(link.hash));
  }
  assert.equal(HISTORY_EVIDENCE.versions.find(v=>v.number===6).publication,null);
  assert.equal(berlinDay(HISTORY_EVIDENCE.site.createdAt),'2026-10-06','project began after Berlin midnight');
@@ -56,8 +56,8 @@ test('publication entries match successful deployments, source provenance and Be
 
 test('test website chronology retains the merged and deployed product rounds, with truthful channel dates',()=>{
  const entries=publicUpdates(),testEntries=entries.filter(e=>e.channel==='vercel-test');
- assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[38,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
- assert.equal(entries.length,36);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
+ assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[39,38,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
+ assert.equal(entries.length,37);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
  assert.ok(!PREPARED_UPDATES.some(e=>e.id==='foundation-2a'));
  assert.ok(UPDATE_HISTORY.some(e=>e.evidence.pullRequest===22));
@@ -68,10 +68,10 @@ test('test website chronology retains the merged and deployed product rounds, wi
   assert.ok(Date.parse(deployment.createdAt)>=Date.parse(record.mergedAt));assert.ok(TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.includes(record.mergeCommit));
  }
  // Confirmation date differs from observation date and from the merge instant.
- assert.equal(updateDate(testEntries.find(e=>e.evidence.pullRequest===35)),'17. Oktober 2026 um 17:59:46 MESZ');assert.equal(updateDate(testEntries[0]),'18. Oktober 2026 um 00:20:23 MESZ');assert.equal(testEntries[0].confirmedOn,TEST_HISTORY_EVIDENCE.checkedOn);
+ assert.equal(updateDate(testEntries.find(e=>e.evidence.pullRequest===35)),'17. Oktober 2026 um 17:59:46 MESZ');assert.equal(updateDate(testEntries[0]),'20. Oktober 2026 um 11:39:23 MESZ');assert.equal(testEntries[0].confirmedOn,TEST_HISTORY_EVIDENCE.checkedOn);
  const foundation=testEntries.find(e=>e.evidence.pullRequest===26);assert.equal(updateDate(foundation),'13. Oktober 2026 um 10:55:40 MESZ');
- assert.equal(testEntries.find(e=>e.evidence.pullRequest===35).occurredAt,'2026-10-17T15:59:46Z');assert.equal(testEntries[0].occurredAt,'2026-10-17T22:20:23Z');
- assert.equal(testEntries[0].id,'lab-feedback-3-5','latest actual PR38 receipt promotes the same prepared laboratory identity');assert.equal(testEntries.find(e=>e.evidence.pullRequest===35).id,'journey-readable-sources-3-5','PR35 stable identity retained');assert.equal(testEntries.find(e=>e.evidence.pullRequest===32).id,'journey-reading-support-3-5','PR32 identity retained');assert.equal(testEntries.find(e=>e.evidence.pullRequest===30).id,'offline-learning-3-5');assert.equal(testEntries.find(e=>e.evidence.pullRequest===29).id,'clear-update-chronicle');assert.equal(testEntries.find(e=>e.evidence.pullRequest===29).occurredAt,'2026-10-16T19:33:21Z');assert.equal(foundation.id,'excellence-foundation-3-5');
+ assert.equal(testEntries.find(e=>e.evidence.pullRequest===35).occurredAt,'2026-10-17T15:59:46Z');assert.equal(testEntries[0].occurredAt,'2026-10-20T09:39:23Z');
+ assert.equal(testEntries[0].id,'animal-new-species-3-5','latest actual PR39 receipt promotes the same prepared animal identity');assert.equal(testEntries.find(e=>e.evidence.pullRequest===38).id,'lab-feedback-3-5','historical laboratory identity retained');assert.equal(testEntries.find(e=>e.evidence.pullRequest===35).id,'journey-readable-sources-3-5','PR35 stable identity retained');assert.equal(testEntries.find(e=>e.evidence.pullRequest===32).id,'journey-reading-support-3-5','PR32 identity retained');assert.equal(testEntries.find(e=>e.evidence.pullRequest===30).id,'offline-learning-3-5');assert.equal(testEntries.find(e=>e.evidence.pullRequest===29).id,'clear-update-chronicle');assert.equal(testEntries.find(e=>e.evidence.pullRequest===29).occurredAt,'2026-10-16T19:33:21Z');assert.equal(foundation.id,'excellence-foundation-3-5');
  assert.equal(testEntries.find(e=>e.evidence.pullRequest===17).occurredAt,'2026-10-10T11:40:50Z','old availability remains unchanged');
  assert.ok(!testEntries.some(e=>[4,13].includes(e.evidence.pullRequest)),'internal workflow-only PRs excluded');
 });
@@ -173,3 +173,22 @@ test('actual PR32 receipt promotes its stable identity once and keeps the open M
 test('the explicitly removed former News release24 has no active chronicle entry or runtime receipt',()=>{assert.equal(UPDATE_HISTORY.some(e=>e.evidence.pullRequest===24),false);assert.equal(PREPARED_UPDATES.some(e=>e.evidence.pullRequest===24),false);assert.equal(TEST_HISTORY_EVIDENCE.pullRequests.some(e=>e.number===24),false);});
 
 test('runtime chronology evidence contains no removed-feature title while retained learning release25 remains visible',()=>{assert.doesNotMatch(JSON.stringify(TEST_HISTORY_EVIDENCE),/nachrichten|news-engineering/i);assert.equal(UPDATE_HISTORY.find(e=>e.evidence.pullRequest===25).id,'journeys-3');assert.equal(UPDATE_HISTORY.find(e=>e.evidence.pullRequest===23).id,'research-2b');});
+
+
+test('actual PR39 promotes the existing animal identity once with its exact merge and Vercel timestamp',()=>{
+ const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===39),entry=publicUpdates()[0];
+ assert.ok(record);assert.equal(record.mergedAt,'2026-10-20T09:39:04Z');
+ assert.equal(record.mergeCommit,'6ed2ecfde4680789123905de476bc59b45824857');
+ assert.equal(entry.id,'animal-new-species-3-5');assert.equal(entry.evidence.pullRequest,39);
+ assert.equal(entry.evidence.revision,record.mergeCommit);assert.equal(entry.status,'test-available');
+ assert.equal(entry.occurredAt,'2026-10-20T09:39:23Z');assert.equal(entry.availableOn,'2026-10-20');assert.equal(entry.publishedOn,null);
+ assert.equal(publicUpdates().filter(e=>e.id===entry.id).length,1);assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));
+ assert.deepEqual(entry.links,[{label:'Tierwelt',hash:'world/animals'}]);
+ const missing=structuredClone(record);missing.deploymentStatuses=[];const pending=testUpdate(missing,entry);
+ assert.equal(pending.status,'prepared');assert.equal(pending.availableOn,null);assert.equal(pending.occurredAt,null);assert.deepEqual(pending.links,[]);assert.deepEqual(publicUpdates([pending]),[]);
+ const unrelated={...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(c=>c!==record.mergeCommit)};
+ assert.equal(confirmedTestDeployment(record,unrelated),null);
+ for(const mutate of [r=>{r.deploymentStatuses[0].state='pending';},r=>{r.deploymentStatuses[0].state='failure';},r=>{r.deploymentStatuses[0].creator='untrusted-user';}]){
+  const wrong=structuredClone(record);mutate(wrong);assert.equal(confirmedTestDeployment(wrong),null);
+ }
+});

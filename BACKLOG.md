@@ -1,3 +1,7 @@
+## Aktueller Abgleich WK053/057 ·20.10.2026
+
+Tier-PR39 vollständig geprüft, regulär nach test-live6ed2ecf übernommen und Vercel/echter Browser bestätigt. Jetzt die fehlende belegte Tierwelle in „Was ist neu?“ nachführen, vorhandene stabile Identität bewahren und falschen Vorbereitungsstatus entfernen. Alle historischen Einträge und nicht bestätigten Masterarbeiten erhalten. Vollständige aktuelle Pflichtprüfungen für diesen Folgestand, keine neue Freigabehürde. Ausdrückliche dauerhafte Präferenz für geeignete echte Fotos in bestehende Medienregeln übernehmen; neue24Fotos nach Art-/Quellen-/Rechteprüfung über vorhandene Pipeline bearbeiten, tatsächlichen403-Dateiabrufblocker offenlegen. Zeichnungen und übrige Nachtarbeit erhalten. Gewünschte schlanke Browser-/Versionslehre integrieren; keine neue Pipeline oder weicheren Tests. Danach vorhandene3.5-Arbeit weiter,4–8inReihenfolge, keinNews/main/Produktion.
+
 ## Nutzerentscheidung18.10.2026: Nachrichtenbereich vollständig entfernt
 
 Der Nachrichtenbereich samt Vorschau, Suche, alten Routen und zugehörigen Betriebswegen wird auf ausdrücklichen Nutzerwunsch entfernt. Die früheren Anforderungen B1–B9 und P3A sind damit entfallen; ihre Zeilen bleiben als historische Zuordnung erhalten und verweisen auf den verpflichtenden Entfernungsnachweis. Keine Einrichtung, Aktivierung oder Weiterentwicklung dieses Bereichs. Alle anderen Anforderungen, Lernidentitäten und Prüfungen bleiben erhalten. Dies ergänzt die bestehende öffentliche Aufgabenliste; keine zweite Liste.
