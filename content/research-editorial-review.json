@@ -37,21 +37,21 @@
           ]
         },
         "hard": {
-          "prompt": "Kann die gezeichnete Krustendicke für jeden Ort stimmen?",
+          "prompt": "Eine Skizze zeichnet die Erdkruste überall gleich breit. Kann sie damit die genaue Krustendicke unter einem Ozean und unter einem Kontinent wiedergeben?",
           "answers": [
             "Nein, sie ist ein vereinfachter Richtwert; die Kruste ist unterschiedlich dick",
-            "Ja, die Kruste ist überall gleich dick",
-            "Die Zeichnung ersetzt eine Bohrung bis zum Kern"
+            "Ja, weil eine gemeinsame Skala auch überall die gleiche Krustendicke bedeutet",
+            "Ja, wenn beide Orte gleich weit vom Erdmittelpunkt entfernt sind"
           ],
           "correct": 0,
           "newWrongReasons": [
             "",
-            "Die Kruste hat unter Ozeanen und Kontinenten unterschiedliche Dicken. Eine einzige Schemazahl gilt nicht überall.",
-            "Eine Zeichnung ist keine Bohrung oder direkte Aufnahme aus dem Erdkern. Ihre Grenzen bleiben wichtig."
+            "Eine gemeinsame Skala sagt, wie Längen dargestellt werden. Sie macht unterschiedliche echte Schichtdicken nicht gleich.",
+            "Die Lage der Oberfläche allein bestimmt die Krustendicke nicht. Unter Ozeanen und Kontinenten ist die Kruste unterschiedlich aufgebaut."
           ]
         }
       },
-      "feedbackHash": "1b813627d608f9c0d2a35cbd6bba330184242c92b3f9cb4909936cfb6dd96407",
+      "feedbackHash": "7ce08c8525c8383ca40034dc6054aef15c5a8acfa25e0ea1b73a46ce800a4b9e",
       "existingFunctionalScopeRetained": "Existing controls, model, A/B, three levels, hints, journal, research links and schema3 fields from2B retained. This feedback wave is not a new simulation or full3.5 lab acceptance.",
       "newSimulationDecision": "No additional numerical model needed for this correction: the actual gap was generic failure feedback, now individually explained. Remaining comprehensive3.5 review stays open.",
       "sources": [
@@ -67,7 +67,32 @@
       "reviewedOn": "2026-10-14",
       "independentReview": false,
       "completePackageAcceptance": false,
-      "uiEvidence": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required."
+      "uiEvidence": "Existing full research group passed with immutable source5f4648396b4128fa412ec9ce3a7aea31344e9086c2a61482295606c76b56e399 / build0d0b5b04323aa7fc: all11 labs/seven widths, all33 questions with both wrong choices and correct choice at320/1440, model/mission/journal reload, Touch/keyboard/large text/axe and six experiments; additional44 old-state cases/two real pass downloads passed. This is an affected-group check, not all10 mandatory groups, final actual-engine/offline/CI or delivery approval.",
+      "historicalHardBeforeTransfer20261021": {
+        "prompt": "Kann die gezeichnete Krustendicke für jeden Ort stimmen?",
+        "answers": [
+          "Nein, sie ist ein vereinfachter Richtwert; die Kruste ist unterschiedlich dick",
+          "Ja, die Kruste ist überall gleich dick",
+          "Die Zeichnung ersetzt eine Bohrung bis zum Kern"
+        ],
+        "correct": 0,
+        "newWrongReasons": [
+          "",
+          "Die Kruste hat unter Ozeanen und Kontinenten unterschiedliche Dicken. Eine einzige Schemazahl gilt nicht überall.",
+          "Eine Zeichnung ist keine Bohrung oder direkte Aufnahme aus dem Erdkern. Ihre Grenzen bleiben wichtig."
+        ]
+      },
+      "transferUpdate20261021": {
+        "scope": "One existing hard question: concrete comparison/application and plausible misconceptions; correct canonical string/index retained. Existing easy/medium questions and sources retained.",
+        "sourceAccess": "Previously recorded selected official source readings reused; no fresh source visit or independent human acceptance claimed.",
+        "uiStatus": "targeted44 and existing full research group passed; complete final ten groups/current engines/offline/CI/delivery pending",
+        "conceptCountercheck": "A drawing scale is not a claim that oceanic and continental crust have equal physical thickness; no new numerical thickness asserted.",
+        "checkedOn": "2026-10-21",
+        "targetedReportSHA256": "9979fb9c6ce6eca35a5525034d5d0b76bf37dddc5a43954bc5a93766f80eb692",
+        "fullResearchGroupReportSHA256": "4645d9c1bf293f31f11dfc35576c3e444e2f3fafc069b9670a282a0ff0599461"
+      },
+      "historicalUIBeforeTransfer20261021": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required.",
+      "targeted44BeforeFullResearchGroup20261021": "Targeted Chromium154 at320large/1440: all11 old-wrong and all11 old-correct tasks,44cases total, old canonical indices/prior texts, no stamp on load, current wrong/right feedback, real reload/two pass downloads and other pass fields retained. Complete current existing66-choice research regression and final cross-engine/offline/CI/delivery still pending. Older UI claim preserved as history."
     },
     {
       "id": "labs:volcano",
@@ -103,21 +128,21 @@
           ]
         },
         "hard": {
-          "prompt": "Das Modell zeigt Lavafluss. Was darfst du daraus schließen?",
+          "prompt": "Du hältst im Modell die Gasmenge gleich und vergleichst dünnflüssigeres mit zäherem Magma. Danach siehst du ein Foto von einem echten Vulkan. Welche Aussage trägt dein Modellvergleich?",
           "answers": [
-            "Ein echter Vulkan ist deshalb ungefährlich",
-            "Der Ausbruch wird genauso aussehen",
+            "Aus der ähnlichen Lavaform im Foto folgt dieselbe Gefahr wie im Modell",
+            "Bei gleicher Gasmenge muss der echte Vulkan genau den Modellausbruch zeigen",
             "Nur wie die gewählten Bedingungen im vereinfachten Modell wirken"
           ],
           "correct": 2,
           "newWrongReasons": [
-            "Eine Modellanzeige kann keine Sicherheit für einen echten Vulkan bescheinigen. Bleibe bei der dargestellten Modellwirkung.",
-            "Echte Ausbrüche hängen von weiteren Bedingungen ab. Die vereinfachte Anzeige ist keine genaue Vorhersage.",
+            "Ähnlich aussehende Lava verrät nicht alle Bedingungen eines echten Vulkans. Das Modell kann keine örtliche Gefahr feststellen.",
+            "Gleiche Gasmenge allein macht Modell und echten Vulkan nicht gleich. Zusammensetzung, Temperatur und weitere Bedingungen fehlen.",
             ""
           ]
         }
       },
-      "feedbackHash": "3310c5c89b8049022f7c4921fc4e5e63048627ea7149001bde00ff002363f666",
+      "feedbackHash": "b83451d55fd1b4c81229feb5acdd65003f4db7cf71f9e088a13fd4b8acad308d",
       "existingFunctionalScopeRetained": "Existing controls, model, A/B, three levels, hints, journal, research links and schema3 fields from2B retained. This feedback wave is not a new simulation or full3.5 lab acceptance.",
       "newSimulationDecision": "No additional numerical model needed for this correction: the actual gap was generic failure feedback, now individually explained. Remaining comprehensive3.5 review stays open.",
       "sources": [
@@ -133,7 +158,32 @@
       "reviewedOn": "2026-10-14",
       "independentReview": false,
       "completePackageAcceptance": false,
-      "uiEvidence": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required."
+      "uiEvidence": "Existing full research group passed with immutable source5f4648396b4128fa412ec9ce3a7aea31344e9086c2a61482295606c76b56e399 / build0d0b5b04323aa7fc: all11 labs/seven widths, all33 questions with both wrong choices and correct choice at320/1440, model/mission/journal reload, Touch/keyboard/large text/axe and six experiments; additional44 old-state cases/two real pass downloads passed. This is an affected-group check, not all10 mandatory groups, final actual-engine/offline/CI or delivery approval.",
+      "historicalHardBeforeTransfer20261021": {
+        "prompt": "Das Modell zeigt Lavafluss. Was darfst du daraus schließen?",
+        "answers": [
+          "Ein echter Vulkan ist deshalb ungefährlich",
+          "Der Ausbruch wird genauso aussehen",
+          "Nur wie die gewählten Bedingungen im vereinfachten Modell wirken"
+        ],
+        "correct": 2,
+        "newWrongReasons": [
+          "Eine Modellanzeige kann keine Sicherheit für einen echten Vulkan bescheinigen. Bleibe bei der dargestellten Modellwirkung.",
+          "Echte Ausbrüche hängen von weiteren Bedingungen ab. Die vereinfachte Anzeige ist keine genaue Vorhersage.",
+          ""
+        ]
+      },
+      "transferUpdate20261021": {
+        "scope": "One existing hard question: concrete comparison/application and plausible misconceptions; correct canonical string/index retained. Existing easy/medium questions and sources retained.",
+        "sourceAccess": "Previously recorded selected official source readings reused; no fresh source visit or independent human acceptance claimed.",
+        "uiStatus": "targeted44 and existing full research group passed; complete final ten groups/current engines/offline/CI/delivery pending",
+        "conceptCountercheck": "One changed model condition supports a within-model comparison, not a hazard estimate or a matching real eruption inferred from an image.",
+        "checkedOn": "2026-10-21",
+        "targetedReportSHA256": "9979fb9c6ce6eca35a5525034d5d0b76bf37dddc5a43954bc5a93766f80eb692",
+        "fullResearchGroupReportSHA256": "4645d9c1bf293f31f11dfc35576c3e444e2f3fafc069b9670a282a0ff0599461"
+      },
+      "historicalUIBeforeTransfer20261021": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required.",
+      "targeted44BeforeFullResearchGroup20261021": "Targeted Chromium154 at320large/1440: all11 old-wrong and all11 old-correct tasks,44cases total, old canonical indices/prior texts, no stamp on load, current wrong/right feedback, real reload/two pass downloads and other pass fields retained. Complete current existing66-choice research regression and final cross-engine/offline/CI/delivery still pending. Older UI claim preserved as history."
     },
     {
       "id": "labs:quake",
@@ -169,21 +219,21 @@
           ]
         },
         "hard": {
-          "prompt": "Zwei Orte sind gleich weit vom Beben entfernt. Müssen sie gleich stark erschüttert werden?",
+          "prompt": "Zwei Orte liegen gleich weit vom selben Erdbebenherd entfernt. Einer liegt auf festem Fels, der andere auf lockerem Boden. Müssen beide gleich stark erschüttert werden?",
           "answers": [
-            "Ja, Abstand ist die einzige Bedingung",
+            "Ja, denn der gleiche Abstand gleicht den unterschiedlichen Untergrund aus",
             "Nein, auch Untergrund und weitere Bedingungen wirken mit",
-            "Nur die Uhrzeit entscheidet"
+            "Ja, denn beim selben Beben sind die Erschütterungen an allen Orten gleich"
           ],
           "correct": 1,
           "newWrongReasons": [
-            "Der Abstand allein beschreibt nicht alle Bedingungen. Auch Tiefe und Untergrund können die Wirkung beeinflussen.",
+            "Gleicher Abstand hebt den Einfluss des Untergrunds nicht auf. Gestein und lockere Ablagerungen können Erdbebenwellen unterschiedlich beeinflussen.",
             "",
-            "Eine Uhrzeit allein erklärt keine Erschütterungsstärke. Prüfe die tatsächlichen Bedingungen des Bebens und Ortes."
+            "Ein gemeinsames Beben erzeugt keine überall gleiche Wirkung. Abstand, Untergrund und weitere Bedingungen unterscheiden sich."
           ]
         }
       },
-      "feedbackHash": "8fc95bec6777fb9ac896930e0a0aa624a5fc0321725f531258f3a225cedab75e",
+      "feedbackHash": "8d4b15455f5343cbb291455020341beda0d1a6f8f136330abaaa8f6cf0dd37af",
       "existingFunctionalScopeRetained": "Existing controls, model, A/B, three levels, hints, journal, research links and schema3 fields from2B retained. This feedback wave is not a new simulation or full3.5 lab acceptance.",
       "newSimulationDecision": "No additional numerical model needed for this correction: the actual gap was generic failure feedback, now individually explained. Remaining comprehensive3.5 review stays open.",
       "sources": [
@@ -199,7 +249,32 @@
       "reviewedOn": "2026-10-14",
       "independentReview": false,
       "completePackageAcceptance": false,
-      "uiEvidence": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required."
+      "uiEvidence": "Existing full research group passed with immutable source5f4648396b4128fa412ec9ce3a7aea31344e9086c2a61482295606c76b56e399 / build0d0b5b04323aa7fc: all11 labs/seven widths, all33 questions with both wrong choices and correct choice at320/1440, model/mission/journal reload, Touch/keyboard/large text/axe and six experiments; additional44 old-state cases/two real pass downloads passed. This is an affected-group check, not all10 mandatory groups, final actual-engine/offline/CI or delivery approval.",
+      "historicalHardBeforeTransfer20261021": {
+        "prompt": "Zwei Orte sind gleich weit vom Beben entfernt. Müssen sie gleich stark erschüttert werden?",
+        "answers": [
+          "Ja, Abstand ist die einzige Bedingung",
+          "Nein, auch Untergrund und weitere Bedingungen wirken mit",
+          "Nur die Uhrzeit entscheidet"
+        ],
+        "correct": 1,
+        "newWrongReasons": [
+          "Der Abstand allein beschreibt nicht alle Bedingungen. Auch Tiefe und Untergrund können die Wirkung beeinflussen.",
+          "",
+          "Eine Uhrzeit allein erklärt keine Erschütterungsstärke. Prüfe die tatsächlichen Bedingungen des Bebens und Ortes."
+        ]
+      },
+      "transferUpdate20261021": {
+        "scope": "One existing hard question: concrete comparison/application and plausible misconceptions; correct canonical string/index retained. Existing easy/medium questions and sources retained.",
+        "sourceAccess": "Previously recorded selected official source readings reused; no fresh source visit or independent human acceptance claimed.",
+        "uiStatus": "targeted44 and existing full research group passed; complete final ten groups/current engines/offline/CI/delivery pending",
+        "conceptCountercheck": "Distance is explicitly held equal; distinct ground conditions can change local effects, without claiming loose ground always amplifies every wave.",
+        "checkedOn": "2026-10-21",
+        "targetedReportSHA256": "9979fb9c6ce6eca35a5525034d5d0b76bf37dddc5a43954bc5a93766f80eb692",
+        "fullResearchGroupReportSHA256": "4645d9c1bf293f31f11dfc35576c3e444e2f3fafc069b9670a282a0ff0599461"
+      },
+      "historicalUIBeforeTransfer20261021": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required.",
+      "targeted44BeforeFullResearchGroup20261021": "Targeted Chromium154 at320large/1440: all11 old-wrong and all11 old-correct tasks,44cases total, old canonical indices/prior texts, no stamp on load, current wrong/right feedback, real reload/two pass downloads and other pass fields retained. Complete current existing66-choice research regression and final cross-engine/offline/CI/delivery still pending. Older UI claim preserved as history."
     },
     {
       "id": "labs:weather",
@@ -235,21 +310,21 @@
           ]
         },
         "hard": {
-          "prompt": "Zeigt eine größere Zahl gezeichneter Tröpfchen, wie viel es morgen regnet?",
+          "prompt": "Du kühlst dieselbe feuchte Luft im Modell stärker ab und siehst mehr Tröpfchen. Zeigt diese Beobachtung schon, wie viel es morgen an deinem Wohnort regnet?",
           "answers": [
-            "Ja, jeder Punkt bedeutet einen Liter",
+            "Ja, denn mehr sichtbare Tröpfchen ergeben schon eine gemessene Regenmenge",
             "Nein, das Modell zeigt einen Zusammenhang, keine Vorhersage",
-            "Ja, solange es windstill ist"
+            "Ja, wenn die Temperatur draußen genauso niedrig ist wie im Modell"
           ],
           "correct": 1,
           "newWrongReasons": [
-            "Die gezeichneten Punkte sind nicht in Litern geeicht. Ihre Anzahl ist keine gemessene Regenmenge.",
+            "Die Punkte zeigen einen Zusammenhang, keine geeichte Wassermenge. Außerdem sind Wolkentröpfchen noch keine örtliche Regenvorhersage.",
             "",
-            "Windstille macht eine vereinfachte Zeichnung nicht zur Wetterprognose. Weitere Bedingungen und echte Daten fehlen."
+            "Eine passende Temperatur allein genügt nicht. Feuchte, Luftbewegung und weitere tatsächliche Wetterbedingungen fehlen."
           ]
         }
       },
-      "feedbackHash": "00ef34c908f16e4e9783fdc1b8859a8a810a928344a3a7c723fddd66df12dad5",
+      "feedbackHash": "62afaf8a0c250b041d5a0206098cb708c1642e2636be3c70ca04066ab45fe6c8",
       "existingFunctionalScopeRetained": "Existing controls, model, A/B, three levels, hints, journal, research links and schema3 fields from2B retained. This feedback wave is not a new simulation or full3.5 lab acceptance.",
       "newSimulationDecision": "No additional numerical model needed for this correction: the actual gap was generic failure feedback, now individually explained. Remaining comprehensive3.5 review stays open.",
       "sources": [
@@ -265,7 +340,32 @@
       "reviewedOn": "2026-10-14",
       "independentReview": false,
       "completePackageAcceptance": false,
-      "uiEvidence": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required."
+      "uiEvidence": "Existing full research group passed with immutable source5f4648396b4128fa412ec9ce3a7aea31344e9086c2a61482295606c76b56e399 / build0d0b5b04323aa7fc: all11 labs/seven widths, all33 questions with both wrong choices and correct choice at320/1440, model/mission/journal reload, Touch/keyboard/large text/axe and six experiments; additional44 old-state cases/two real pass downloads passed. This is an affected-group check, not all10 mandatory groups, final actual-engine/offline/CI or delivery approval.",
+      "historicalHardBeforeTransfer20261021": {
+        "prompt": "Zeigt eine größere Zahl gezeichneter Tröpfchen, wie viel es morgen regnet?",
+        "answers": [
+          "Ja, jeder Punkt bedeutet einen Liter",
+          "Nein, das Modell zeigt einen Zusammenhang, keine Vorhersage",
+          "Ja, solange es windstill ist"
+        ],
+        "correct": 1,
+        "newWrongReasons": [
+          "Die gezeichneten Punkte sind nicht in Litern geeicht. Ihre Anzahl ist keine gemessene Regenmenge.",
+          "",
+          "Windstille macht eine vereinfachte Zeichnung nicht zur Wetterprognose. Weitere Bedingungen und echte Daten fehlen."
+        ]
+      },
+      "transferUpdate20261021": {
+        "scope": "One existing hard question: concrete comparison/application and plausible misconceptions; correct canonical string/index retained. Existing easy/medium questions and sources retained.",
+        "sourceAccess": "Previously recorded selected official source readings reused; no fresh source visit or independent human acceptance claimed.",
+        "uiStatus": "targeted44 and existing full research group passed; complete final ten groups/current engines/offline/CI/delivery pending",
+        "conceptCountercheck": "Cooling/condensation observation distinguished from calibrated rain quantity and a forecast based on current measurements.",
+        "checkedOn": "2026-10-21",
+        "targetedReportSHA256": "9979fb9c6ce6eca35a5525034d5d0b76bf37dddc5a43954bc5a93766f80eb692",
+        "fullResearchGroupReportSHA256": "4645d9c1bf293f31f11dfc35576c3e444e2f3fafc069b9670a282a0ff0599461"
+      },
+      "historicalUIBeforeTransfer20261021": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required.",
+      "targeted44BeforeFullResearchGroup20261021": "Targeted Chromium154 at320large/1440: all11 old-wrong and all11 old-correct tasks,44cases total, old canonical indices/prior texts, no stamp on load, current wrong/right feedback, real reload/two pass downloads and other pass fields retained. Complete current existing66-choice research regression and final cross-engine/offline/CI/delivery still pending. Older UI claim preserved as history."
     },
     {
       "id": "labs:water",
@@ -301,21 +401,21 @@
           ]
         },
         "hard": {
-          "prompt": "Muss jedes Wasserteilchen alle vier Modellstationen in derselben Reihenfolge durchlaufen?",
+          "prompt": "Ein Regentropfen landet auf einer Wiese, ein anderer auf einer Straße daneben. Müssen beide sofort alle vier gezeichneten Modellstationen nacheinander durchlaufen?",
           "answers": [
-            "Ja, der Kreislauf ist ein Fahrplan",
+            "Ja, nach dem Niederschlag muss Wasser zuerst vollständig ins Meer gelangen",
             "Nein, Wasser kann auch im Boden, in Eis oder in Pflanzen bleiben",
-            "Ja, ein Umlauf dauert immer einen Tag"
+            "Ja, weil alle gezeichneten Pfeile auch dieselbe Aufenthaltsdauer bedeuten"
           ],
           "correct": 1,
           "newWrongReasons": [
-            "Die vier Stationen sind eine Auswahl, kein verpflichtender Fahrplan für jedes Wasserteilchen.",
+            "Wasser kann nach dem Niederschlag gespeichert werden oder andere Wege nehmen. Es muss nicht zuerst vollständig ins Meer fließen.",
             "",
-            "Ein Wasserkreislauf hat keine überall gleiche Umlaufdauer. Speicherung und verschiedene Wege können unterschiedlich lange dauern."
+            "Pfeile zeigen mögliche Übergänge. Sie legen keine überall gleiche Aufenthaltsdauer in Schnee, Boden oder anderen Speichern fest."
           ]
         }
       },
-      "feedbackHash": "9c80bb31dfcee23377dffeab7c625e46a89757e44471db62929ef938b035223e",
+      "feedbackHash": "45a6063554514a082ceaca13b33eb1ca66986c6b89866b3661f2099e1af92127",
       "existingFunctionalScopeRetained": "Existing controls, model, A/B, three levels, hints, journal, research links and schema3 fields from2B retained. This feedback wave is not a new simulation or full3.5 lab acceptance.",
       "newSimulationDecision": "No additional numerical model needed for this correction: the actual gap was generic failure feedback, now individually explained. Remaining comprehensive3.5 review stays open.",
       "sources": [
@@ -331,7 +431,32 @@
       "reviewedOn": "2026-10-14",
       "independentReview": false,
       "completePackageAcceptance": false,
-      "uiEvidence": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required."
+      "uiEvidence": "Existing full research group passed with immutable source5f4648396b4128fa412ec9ce3a7aea31344e9086c2a61482295606c76b56e399 / build0d0b5b04323aa7fc: all11 labs/seven widths, all33 questions with both wrong choices and correct choice at320/1440, model/mission/journal reload, Touch/keyboard/large text/axe and six experiments; additional44 old-state cases/two real pass downloads passed. This is an affected-group check, not all10 mandatory groups, final actual-engine/offline/CI or delivery approval.",
+      "historicalHardBeforeTransfer20261021": {
+        "prompt": "Muss jedes Wasserteilchen alle vier Modellstationen in derselben Reihenfolge durchlaufen?",
+        "answers": [
+          "Ja, der Kreislauf ist ein Fahrplan",
+          "Nein, Wasser kann auch im Boden, in Eis oder in Pflanzen bleiben",
+          "Ja, ein Umlauf dauert immer einen Tag"
+        ],
+        "correct": 1,
+        "newWrongReasons": [
+          "Die vier Stationen sind eine Auswahl, kein verpflichtender Fahrplan für jedes Wasserteilchen.",
+          "",
+          "Ein Wasserkreislauf hat keine überall gleiche Umlaufdauer. Speicherung und verschiedene Wege können unterschiedlich lange dauern."
+        ]
+      },
+      "transferUpdate20261021": {
+        "scope": "One existing hard question: concrete comparison/application and plausible misconceptions; correct canonical string/index retained. Existing easy/medium questions and sources retained.",
+        "sourceAccess": "Previously recorded selected official source readings reused; no fresh source visit or independent human acceptance claimed.",
+        "uiStatus": "targeted44 and existing full research group passed; complete final ten groups/current engines/offline/CI/delivery pending",
+        "conceptCountercheck": "Different landing surfaces are a transfer setting; no compulsory route or universal residence time is inferred from the four-stage model.",
+        "checkedOn": "2026-10-21",
+        "targetedReportSHA256": "9979fb9c6ce6eca35a5525034d5d0b76bf37dddc5a43954bc5a93766f80eb692",
+        "fullResearchGroupReportSHA256": "4645d9c1bf293f31f11dfc35576c3e444e2f3fafc069b9670a282a0ff0599461"
+      },
+      "historicalUIBeforeTransfer20261021": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required.",
+      "targeted44BeforeFullResearchGroup20261021": "Targeted Chromium154 at320large/1440: all11 old-wrong and all11 old-correct tasks,44cases total, old canonical indices/prior texts, no stamp on load, current wrong/right feedback, real reload/two pass downloads and other pass fields retained. Complete current existing66-choice research regression and final cross-engine/offline/CI/delivery still pending. Older UI claim preserved as history."
     },
     {
       "id": "labs:seasons",
@@ -367,21 +492,21 @@
           ]
         },
         "hard": {
-          "prompt": "Was bleibt im kreisförmigen Modell ohne Achsneigung?",
+          "prompt": "Vergleiche Juni und Dezember bei 52 Grad Nord. Schalte dann im kreisförmigen Modell nur die Achsneigung aus. Welche Änderung erwartest du beim Vergleich der Tageslängen?",
           "answers": [
             "Der hier gezeigte jährliche Wechsel der Tageslänge entfällt",
-            "Es gibt auf der ganzen Erde keine Temperaturunterschiede mehr",
-            "Tag und Nacht hören auf"
+            "Die beiden Tageslängen bleiben verschieden, weil die Erde sich weiter täglich dreht",
+            "Die Tageslängen wechseln weiter, weil sich im kreisförmigen Modell der Abstand zur Sonne jährlich ändert"
           ],
           "correct": 0,
           "newWrongReasons": [
             "",
-            "Ohne Achsneigung werden nicht alle Orte gleich warm. Breitengrad und andere Bedingungen bleiben verschieden.",
-            "Die Erde rotiert im Modell weiterhin. Das Entfernen der Achsneigung beendet nicht den täglichen Wechsel von Tag und Nacht."
+            "Die tägliche Drehung erzeugt weiter Tag und Nacht. Sie erklärt ohne Achsneigung aber nicht den hier gezeigten jährlichen Unterschied der Tageslängen.",
+            "Im kreisförmigen Modell bleibt der Sonnenabstand gleich. Die hier gezeigte jährliche Tageslängenänderung entsteht durch die Achsneigung, nicht durch einen wechselnden Abstand."
           ]
         }
       },
-      "feedbackHash": "90703a9dd13b3a6e768423d2862e7c1b365eaef9d7b75267caa4d3680ae54490",
+      "feedbackHash": "31816602a1b2267c9464224c688876d323713060989d4e2b25b273182be7a4d7",
       "existingFunctionalScopeRetained": "Existing controls, model, A/B, three levels, hints, journal, research links and schema3 fields from2B retained. This feedback wave is not a new simulation or full3.5 lab acceptance.",
       "newSimulationDecision": "No additional numerical model needed for this correction: the actual gap was generic failure feedback, now individually explained. Remaining comprehensive3.5 review stays open.",
       "sources": [
@@ -397,7 +522,32 @@
       "reviewedOn": "2026-10-14",
       "independentReview": false,
       "completePackageAcceptance": false,
-      "uiEvidence": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required."
+      "uiEvidence": "Existing full research group passed with immutable source5f4648396b4128fa412ec9ce3a7aea31344e9086c2a61482295606c76b56e399 / build0d0b5b04323aa7fc: all11 labs/seven widths, all33 questions with both wrong choices and correct choice at320/1440, model/mission/journal reload, Touch/keyboard/large text/axe and six experiments; additional44 old-state cases/two real pass downloads passed. This is an affected-group check, not all10 mandatory groups, final actual-engine/offline/CI or delivery approval.",
+      "historicalHardBeforeTransfer20261021": {
+        "prompt": "Was bleibt im kreisförmigen Modell ohne Achsneigung?",
+        "answers": [
+          "Der hier gezeigte jährliche Wechsel der Tageslänge entfällt",
+          "Es gibt auf der ganzen Erde keine Temperaturunterschiede mehr",
+          "Tag und Nacht hören auf"
+        ],
+        "correct": 0,
+        "newWrongReasons": [
+          "",
+          "Ohne Achsneigung werden nicht alle Orte gleich warm. Breitengrad und andere Bedingungen bleiben verschieden.",
+          "Die Erde rotiert im Modell weiterhin. Das Entfernen der Achsneigung beendet nicht den täglichen Wechsel von Tag und Nacht."
+        ]
+      },
+      "transferUpdate20261021": {
+        "scope": "One existing hard question: concrete comparison/application and plausible misconceptions; correct canonical string/index retained. Existing easy/medium questions and sources retained.",
+        "sourceAccess": "Previously recorded selected official source readings reused; no fresh source visit or independent human acceptance claimed.",
+        "uiStatus": "targeted44 and existing full research group passed; complete final ten groups/current engines/offline/CI/delivery pending",
+        "conceptCountercheck": "At52North in the existing circular model, disabling tilt removes this annual day-length effect but preserves daily rotation; no claim to remove all climate differences.",
+        "checkedOn": "2026-10-21",
+        "targetedReportSHA256": "9979fb9c6ce6eca35a5525034d5d0b76bf37dddc5a43954bc5a93766f80eb692",
+        "fullResearchGroupReportSHA256": "4645d9c1bf293f31f11dfc35576c3e444e2f3fafc069b9670a282a0ff0599461"
+      },
+      "historicalUIBeforeTransfer20261021": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required.",
+      "targeted44BeforeFullResearchGroup20261021": "Targeted Chromium154 at320large/1440: all11 old-wrong and all11 old-correct tasks,44cases total, old canonical indices/prior texts, no stamp on load, current wrong/right feedback, real reload/two pass downloads and other pass fields retained. Complete current existing66-choice research regression and final cross-engine/offline/CI/delivery still pending. Older UI claim preserved as history."
     },
     {
       "id": "labs:plates",
@@ -433,21 +583,21 @@
           ]
         },
         "hard": {
-          "prompt": "Zeigen zwei zusammengedrückte Tücher alle Arten von Plattengrenzen?",
+          "prompt": "Du schiebst zwei Tücher aufeinander zu und beobachtest Falten. Kannst du mit genau diesem Versuch auch seitliches Vorbeigleiten, Subduktion und deren echte Geschwindigkeit vollständig erklären?",
           "answers": [
-            "Ja, auch jede Subduktion und alle Gesteine",
+            "Ja, denn jede sichtbare Falte beweist, dass eine Platte vollständig abtaucht",
             "Nein, sie veranschaulichen vor allem Faltung beim Zusammendrücken",
-            "Ja, und die echte Geschwindigkeit"
+            "Ja, wenn wir die Tücher genauso schnell bewegen wie beim ersten Versuch"
           ],
           "correct": 1,
           "newWrongReasons": [
-            "Tücher können nicht jede Subduktion und alle Gesteinseigenschaften darstellen. Ihre Falten sind ein begrenzter Vergleich.",
+            "Falten und das Abtauchen einer Platte sind verschiedene Vorgänge. Ein gefaltetes Tuch bildet nicht jede Subduktion und die Gesteinsbedingungen ab.",
             "",
-            "Die Bewegung der Tücher liefert keine echte geologische Geschwindigkeit. Material und Zeitmaßstab unterscheiden sich."
+            "Die Handbewegung besitzt keinen festgelegten geologischen Zeitmaßstab. Gleiche Versuchsgeschwindigkeit liefert keine echte Plattengeschwindigkeit."
           ]
         }
       },
-      "feedbackHash": "048803007f9effca4a528bc8f46faef2019cf3bd085f6173514c6c3b18df9969",
+      "feedbackHash": "1e6c56e2e92610b11c8013d2d63c02e5413ca45b6e4ab8b3b766731d6c2c3e9a",
       "existingFunctionalScopeRetained": "Existing controls, model, A/B, three levels, hints, journal, research links and schema3 fields from2B retained. This feedback wave is not a new simulation or full3.5 lab acceptance.",
       "newSimulationDecision": "No additional numerical model needed for this correction: the actual gap was generic failure feedback, now individually explained. Remaining comprehensive3.5 review stays open.",
       "sources": [
@@ -463,7 +613,32 @@
       "reviewedOn": "2026-10-14",
       "independentReview": false,
       "completePackageAcceptance": false,
-      "uiEvidence": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required."
+      "uiEvidence": "Existing full research group passed with immutable source5f4648396b4128fa412ec9ce3a7aea31344e9086c2a61482295606c76b56e399 / build0d0b5b04323aa7fc: all11 labs/seven widths, all33 questions with both wrong choices and correct choice at320/1440, model/mission/journal reload, Touch/keyboard/large text/axe and six experiments; additional44 old-state cases/two real pass downloads passed. This is an affected-group check, not all10 mandatory groups, final actual-engine/offline/CI or delivery approval.",
+      "historicalHardBeforeTransfer20261021": {
+        "prompt": "Zeigen zwei zusammengedrückte Tücher alle Arten von Plattengrenzen?",
+        "answers": [
+          "Ja, auch jede Subduktion und alle Gesteine",
+          "Nein, sie veranschaulichen vor allem Faltung beim Zusammendrücken",
+          "Ja, und die echte Geschwindigkeit"
+        ],
+        "correct": 1,
+        "newWrongReasons": [
+          "Tücher können nicht jede Subduktion und alle Gesteinseigenschaften darstellen. Ihre Falten sind ein begrenzter Vergleich.",
+          "",
+          "Die Bewegung der Tücher liefert keine echte geologische Geschwindigkeit. Material und Zeitmaßstab unterscheiden sich."
+        ]
+      },
+      "transferUpdate20261021": {
+        "scope": "One existing hard question: concrete comparison/application and plausible misconceptions; correct canonical string/index retained. Existing easy/medium questions and sources retained.",
+        "sourceAccess": "Previously recorded selected official source readings reused; no fresh source visit or independent human acceptance claimed.",
+        "uiStatus": "targeted44 and existing full research group passed; complete final ten groups/current engines/offline/CI/delivery pending",
+        "conceptCountercheck": "Folding cloths cannot infer lateral motion, every subduction process or true geological speed.",
+        "checkedOn": "2026-10-21",
+        "targetedReportSHA256": "9979fb9c6ce6eca35a5525034d5d0b76bf37dddc5a43954bc5a93766f80eb692",
+        "fullResearchGroupReportSHA256": "4645d9c1bf293f31f11dfc35576c3e444e2f3fafc069b9670a282a0ff0599461"
+      },
+      "historicalUIBeforeTransfer20261021": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required.",
+      "targeted44BeforeFullResearchGroup20261021": "Targeted Chromium154 at320large/1440: all11 old-wrong and all11 old-correct tasks,44cases total, old canonical indices/prior texts, no stamp on load, current wrong/right feedback, real reload/two pass downloads and other pass fields retained. Complete current existing66-choice research regression and final cross-engine/offline/CI/delivery still pending. Older UI claim preserved as history."
     },
     {
       "id": "labs:moon",
@@ -499,21 +674,21 @@
           ]
         },
         "hard": {
-          "prompt": "Warum entsteht nicht bei jedem Vollmond eine Mondfinsternis?",
+          "prompt": "Im flachen Modell steht die Erde bei Vollmond zwischen Sonne und Mond. Am echten Himmel bleibt der Mond trotzdem meist hell. Welche Erklärung passt zu diesem Unterschied?",
           "answers": [
-            "Weil der Mond dann kein Licht reflektiert",
+            "Weil bei Vollmond grundsätzlich kein Erdschatten in Richtung des Mondes liegt",
             "Weil seine Bahn geneigt ist und er meistens am Erdschatten vorbeizieht",
-            "Weil die Sonne jeden Monat ausgeht"
+            "Weil ein größerer Abstand des Mondes allein bei jedem Vollmond den Erdschatten verhindert"
           ],
           "correct": 1,
           "newWrongReasons": [
-            "Der Mond reflektiert auch beim Vollmond Sonnenlicht. Fehlende Reflexion erklärt nicht, warum eine Finsternis ausbleibt.",
+            "Auch bei Vollmond kann der Erdschatten in Richtung der Mondbahn liegen. Für eine Finsternis muss der Mond ihn aber tatsächlich durchqueren.",
             "",
-            "Die Sonne geht nicht monatlich aus. Für eine Finsternis zählt die passende räumliche Ausrichtung."
+            "Der Abstand allein erklärt die fehlenden monatlichen Finsternisse nicht. Entscheidend ist auch die räumliche Ausrichtung der geneigten Bahn."
           ]
         }
       },
-      "feedbackHash": "c4a6b3fc99f4e937c2921d89821089c7074e5d4ac3b693a4a9aee91c657518a5",
+      "feedbackHash": "1da177c487644b3ab27e2971a6ab2db8116fb061ca9fa11123a36ae27a8e17ba",
       "existingFunctionalScopeRetained": "Existing controls, model, A/B, three levels, hints, journal, research links and schema3 fields from2B retained. This feedback wave is not a new simulation or full3.5 lab acceptance.",
       "newSimulationDecision": "No additional numerical model needed for this correction: the actual gap was generic failure feedback, now individually explained. Remaining comprehensive3.5 review stays open.",
       "sources": [
@@ -529,7 +704,32 @@
       "reviewedOn": "2026-10-14",
       "independentReview": false,
       "completePackageAcceptance": false,
-      "uiEvidence": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required."
+      "uiEvidence": "Existing full research group passed with immutable source5f4648396b4128fa412ec9ce3a7aea31344e9086c2a61482295606c76b56e399 / build0d0b5b04323aa7fc: all11 labs/seven widths, all33 questions with both wrong choices and correct choice at320/1440, model/mission/journal reload, Touch/keyboard/large text/axe and six experiments; additional44 old-state cases/two real pass downloads passed. This is an affected-group check, not all10 mandatory groups, final actual-engine/offline/CI or delivery approval.",
+      "historicalHardBeforeTransfer20261021": {
+        "prompt": "Warum entsteht nicht bei jedem Vollmond eine Mondfinsternis?",
+        "answers": [
+          "Weil der Mond dann kein Licht reflektiert",
+          "Weil seine Bahn geneigt ist und er meistens am Erdschatten vorbeizieht",
+          "Weil die Sonne jeden Monat ausgeht"
+        ],
+        "correct": 1,
+        "newWrongReasons": [
+          "Der Mond reflektiert auch beim Vollmond Sonnenlicht. Fehlende Reflexion erklärt nicht, warum eine Finsternis ausbleibt.",
+          "",
+          "Die Sonne geht nicht monatlich aus. Für eine Finsternis zählt die passende räumliche Ausrichtung."
+        ]
+      },
+      "transferUpdate20261021": {
+        "scope": "One existing hard question: concrete comparison/application and plausible misconceptions; correct canonical string/index retained. Existing easy/medium questions and sources retained.",
+        "sourceAccess": "Previously recorded selected official source readings reused; no fresh source visit or independent human acceptance claimed.",
+        "uiStatus": "targeted44 and existing full research group passed; complete final ten groups/current engines/offline/CI/delivery pending",
+        "conceptCountercheck": "Reflected light and full phase preserved; actual inclined orbit explains why the full Moon usually misses Earth shadow.",
+        "checkedOn": "2026-10-21",
+        "targetedReportSHA256": "9979fb9c6ce6eca35a5525034d5d0b76bf37dddc5a43954bc5a93766f80eb692",
+        "fullResearchGroupReportSHA256": "4645d9c1bf293f31f11dfc35576c3e444e2f3fafc069b9670a282a0ff0599461"
+      },
+      "historicalUIBeforeTransfer20261021": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required.",
+      "targeted44BeforeFullResearchGroup20261021": "Targeted Chromium154 at320large/1440: all11 old-wrong and all11 old-correct tasks,44cases total, old canonical indices/prior texts, no stamp on load, current wrong/right feedback, real reload/two pass downloads and other pass fields retained. Complete current existing66-choice research regression and final cross-engine/offline/CI/delivery still pending. Older UI claim preserved as history."
     },
     {
       "id": "labs:clocks",
@@ -565,21 +765,21 @@
           ]
         },
         "hard": {
-          "prompt": "Kann eine Uhrzeit allein ohne Datum jeden internationalen Vergleich eindeutig machen?",
+          "prompt": "Ein Kind meldet 23:30 Uhr, ein anderes 00:30 Uhr in einer anderen Stadt. Kannst du ohne Datum und die örtlichen Zeitregeln eindeutig entscheiden, ob beide denselben Moment meinen?",
           "answers": [
-            "Ja, Datumsgrenzen und Sommerzeit spielen nie mit",
+            "Ja, die größere Stundenzahl gehört immer zum späteren Moment",
             "Nein, Datum und Zeitzonenregeln gehören dazu",
-            "Ja, jede Stadt hat dieselbe Zeit"
+            "Ja, der Unterschied der angezeigten Stunden bleibt zwischen zwei Städten das ganze Jahr gleich"
           ],
           "correct": 1,
           "newWrongReasons": [
-            "Datum und Sommerzeit können zum Vergleich gehören. Eine Uhrzeit ohne diese Angaben bleibt mehrdeutig.",
+            "23:30 kann zu einem anderen Kalendertag gehören als 00:30. Die größere Stundenzahl allein ordnet verschiedene Ortszeiten nicht eindeutig.",
             "",
-            "Die dargestellten Städte haben nicht immer dieselbe Ortszeit. Denselben Moment beschreiben unterschiedliche Uhr- und Datumsanzeigen."
+            "Sommerzeitregeln können sich je nach Ort und Datum unterscheiden. Ein fester Stundenunterschied darf nicht ohne diese Angaben angenommen werden."
           ]
         }
       },
-      "feedbackHash": "1d842a10a3da63d815869ff7ebb825bfb44a65be5c49b68e30e60d875d72416b",
+      "feedbackHash": "11971334348b77c8e8129c4f3bc2bef21b32b0a85dee71fdcac5cdfb4ee9353d",
       "existingFunctionalScopeRetained": "Existing controls, model, A/B, three levels, hints, journal, research links and schema3 fields from2B retained. This feedback wave is not a new simulation or full3.5 lab acceptance.",
       "newSimulationDecision": "No additional numerical model needed for this correction: the actual gap was generic failure feedback, now individually explained. Remaining comprehensive3.5 review stays open.",
       "sources": [
@@ -595,7 +795,32 @@
       "reviewedOn": "2026-10-14",
       "independentReview": false,
       "completePackageAcceptance": false,
-      "uiEvidence": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required."
+      "uiEvidence": "Existing full research group passed with immutable source5f4648396b4128fa412ec9ce3a7aea31344e9086c2a61482295606c76b56e399 / build0d0b5b04323aa7fc: all11 labs/seven widths, all33 questions with both wrong choices and correct choice at320/1440, model/mission/journal reload, Touch/keyboard/large text/axe and six experiments; additional44 old-state cases/two real pass downloads passed. This is an affected-group check, not all10 mandatory groups, final actual-engine/offline/CI or delivery approval.",
+      "historicalHardBeforeTransfer20261021": {
+        "prompt": "Kann eine Uhrzeit allein ohne Datum jeden internationalen Vergleich eindeutig machen?",
+        "answers": [
+          "Ja, Datumsgrenzen und Sommerzeit spielen nie mit",
+          "Nein, Datum und Zeitzonenregeln gehören dazu",
+          "Ja, jede Stadt hat dieselbe Zeit"
+        ],
+        "correct": 1,
+        "newWrongReasons": [
+          "Datum und Sommerzeit können zum Vergleich gehören. Eine Uhrzeit ohne diese Angaben bleibt mehrdeutig.",
+          "",
+          "Die dargestellten Städte haben nicht immer dieselbe Ortszeit. Denselben Moment beschreiben unterschiedliche Uhr- und Datumsanzeigen."
+        ]
+      },
+      "transferUpdate20261021": {
+        "scope": "One existing hard question: concrete comparison/application and plausible misconceptions; correct canonical string/index retained. Existing easy/medium questions and sources retained.",
+        "sourceAccess": "Previously recorded selected official source readings reused; no fresh source visit or independent human acceptance claimed.",
+        "uiStatus": "targeted44 and existing full research group passed; complete final ten groups/current engines/offline/CI/delivery pending",
+        "conceptCountercheck": "Calendar date and applicable UTC offsets needed to compare clock displays; no universal daylight-saving schedule or newly asserted city offset.",
+        "checkedOn": "2026-10-21",
+        "targetedReportSHA256": "9979fb9c6ce6eca35a5525034d5d0b76bf37dddc5a43954bc5a93766f80eb692",
+        "fullResearchGroupReportSHA256": "4645d9c1bf293f31f11dfc35576c3e444e2f3fafc069b9670a282a0ff0599461"
+      },
+      "historicalUIBeforeTransfer20261021": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required.",
+      "targeted44BeforeFullResearchGroup20261021": "Targeted Chromium154 at320large/1440: all11 old-wrong and all11 old-correct tasks,44cases total, old canonical indices/prior texts, no stamp on load, current wrong/right feedback, real reload/two pass downloads and other pass fields retained. Complete current existing66-choice research regression and final cross-engine/offline/CI/delivery still pending. Older UI claim preserved as history."
     },
     {
       "id": "labs:tides",
@@ -631,21 +856,21 @@
           ]
         },
         "hard": {
-          "prompt": "Kann die Modellkurve dir eine sichere Wattwanderzeit nennen?",
+          "prompt": "Eine vereinfachte Modellkurve zeigt Niedrigwasser. Eine Familie möchte daraus eine Uhrzeit für eine Wattwanderung an einer anderen Küste ableiten. Kann die Modellkurve eine sichere Zeit nennen?",
           "answers": [
-            "Ja, alle Küsten haben dieselbe Kurve",
+            "Ja, dieselbe Mondstellung bedeutet an jeder Küste dieselbe Niedrigwasserzeit",
             "Nein, dafür brauchst du aktuelle örtliche Angaben und Sicherheitsregeln",
-            "Ja, bei Vollmond ist das Meer sicher"
+            "Ja, eine Verschiebung der Modellkurve genügt auch ohne aktuelle örtliche Angaben"
           ],
           "correct": 1,
           "newWrongReasons": [
-            "Küsten haben unterschiedliche örtliche Gezeiten. Diese Modellkurve gilt nicht als sichere Angabe für jede Küste.",
+            "Küstenform, Tiefe und örtliche Verzögerungen unterscheiden sich. Dieselbe Mondstellung liefert keine überall gleiche Uhrzeit.",
             "",
-            "Vollmond ist kein Sicherheitsnachweis für einen Aufenthalt im Watt. Aktuelle örtliche Angaben und Sicherheitsregeln bleiben nötig."
+            "Eine selbst verschobene Kurve ersetzt keine aktuellen örtlichen Gezeitenangaben und Sicherheitsregeln. Auch Wetter und Bedingungen vor Ort zählen."
           ]
         }
       },
-      "feedbackHash": "a62b54c387e57dae55d1344bf8946eb3fb90ad277f758ca8a5a67800b210d3ff",
+      "feedbackHash": "3f49e2d9473c4d35df9f1d389b142b9f149cf348562655c195108ab9dcfb8355",
       "existingFunctionalScopeRetained": "Existing controls, model, A/B, three levels, hints, journal, research links and schema3 fields from2B retained. This feedback wave is not a new simulation or full3.5 lab acceptance.",
       "newSimulationDecision": "No additional numerical model needed for this correction: the actual gap was generic failure feedback, now individually explained. Remaining comprehensive3.5 review stays open.",
       "sources": [
@@ -661,7 +886,32 @@
       "reviewedOn": "2026-10-14",
       "independentReview": false,
       "completePackageAcceptance": false,
-      "uiEvidence": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required."
+      "uiEvidence": "Existing full research group passed with immutable source5f4648396b4128fa412ec9ce3a7aea31344e9086c2a61482295606c76b56e399 / build0d0b5b04323aa7fc: all11 labs/seven widths, all33 questions with both wrong choices and correct choice at320/1440, model/mission/journal reload, Touch/keyboard/large text/axe and six experiments; additional44 old-state cases/two real pass downloads passed. This is an affected-group check, not all10 mandatory groups, final actual-engine/offline/CI or delivery approval.",
+      "historicalHardBeforeTransfer20261021": {
+        "prompt": "Kann die Modellkurve dir eine sichere Wattwanderzeit nennen?",
+        "answers": [
+          "Ja, alle Küsten haben dieselbe Kurve",
+          "Nein, dafür brauchst du aktuelle örtliche Angaben und Sicherheitsregeln",
+          "Ja, bei Vollmond ist das Meer sicher"
+        ],
+        "correct": 1,
+        "newWrongReasons": [
+          "Küsten haben unterschiedliche örtliche Gezeiten. Diese Modellkurve gilt nicht als sichere Angabe für jede Küste.",
+          "",
+          "Vollmond ist kein Sicherheitsnachweis für einen Aufenthalt im Watt. Aktuelle örtliche Angaben und Sicherheitsregeln bleiben nötig."
+        ]
+      },
+      "transferUpdate20261021": {
+        "scope": "One existing hard question: concrete comparison/application and plausible misconceptions; correct canonical string/index retained. Existing easy/medium questions and sources retained.",
+        "sourceAccess": "Previously recorded selected official source readings reused; no fresh source visit or independent human acceptance claimed.",
+        "uiStatus": "targeted44 and existing full research group passed; complete final ten groups/current engines/offline/CI/delivery pending",
+        "conceptCountercheck": "Current local conditions/safety guidance required; no safe time or route derived from a qualitative curve.",
+        "checkedOn": "2026-10-21",
+        "targetedReportSHA256": "9979fb9c6ce6eca35a5525034d5d0b76bf37dddc5a43954bc5a93766f80eb692",
+        "fullResearchGroupReportSHA256": "4645d9c1bf293f31f11dfc35576c3e444e2f3fafc069b9670a282a0ff0599461"
+      },
+      "historicalUIBeforeTransfer20261021": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required.",
+      "targeted44BeforeFullResearchGroup20261021": "Targeted Chromium154 at320large/1440: all11 old-wrong and all11 old-correct tasks,44cases total, old canonical indices/prior texts, no stamp on load, current wrong/right feedback, real reload/two pass downloads and other pass fields retained. Complete current existing66-choice research regression and final cross-engine/offline/CI/delivery still pending. Older UI claim preserved as history."
     },
     {
       "id": "labs:solar",
@@ -697,21 +947,21 @@
           ]
         },
         "hard": {
-          "prompt": "Warum braucht das Sonnensystem verschiedene Darstellungen für Größen und Entfernungen?",
+          "prompt": "In einer Zeichnung willst du die Erde deutlich sichtbar und zugleich alle Planetenabstände im selben Maßstab zeigen. Warum wird das auf einem kleinen Bildschirm schwierig?",
           "answers": [
-            "Weil es nur vier Planeten gibt",
+            "Weil sich die Planetenabstände mit jedem Wechsel der Bildschirmgröße wirklich ändern",
             "Weil Planeten gegenüber den Abständen sehr klein sind",
-            "Weil alle Planeten gleich groß sind"
+            "Weil der Abstand zur Sonne für alle Planeten gleich ist, ihre Symbole aber verschieden groß sein müssen"
           ],
           "correct": 1,
           "newWrongReasons": [
-            "Im Modell sind acht Planeten dargestellt. Die Schwierigkeit des Maßstabs hängt nicht an einer Zahl von vier.",
+            "Ein Bildschirmwechsel verändert die Darstellung, nicht die echten Planetenabstände. Entscheidend ist das Verhältnis von Planetendurchmessern und Abständen.",
             "",
-            "Die Planeten haben unterschiedliche Größen. Gleiche gezeichnete Symbolgrößen wären eine Darstellungsentscheidung, kein Beweis gleicher echter Größen."
+            "Die Planetenbahnen besitzen unterschiedliche Abstände zur Sonne. Gleiche Abstände wären eine falsche Vereinfachung, keine Lösung des Maßstabsproblems."
           ]
         }
       },
-      "feedbackHash": "3b558a95a21cf5176c547500ba3770c9f891e4771f618148f92e06ffa990c6ed",
+      "feedbackHash": "2167dcaf4bf6f6e741d4a9f0856fe6974a9b7506fd50bc9949d710065188fc9d",
       "existingFunctionalScopeRetained": "Existing controls, model, A/B, three levels, hints, journal, research links and schema3 fields from2B retained. This feedback wave is not a new simulation or full3.5 lab acceptance.",
       "newSimulationDecision": "No additional numerical model needed for this correction: the actual gap was generic failure feedback, now individually explained. Remaining comprehensive3.5 review stays open.",
       "sources": [
@@ -727,7 +977,32 @@
       "reviewedOn": "2026-10-14",
       "independentReview": false,
       "completePackageAcceptance": false,
-      "uiEvidence": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required."
+      "uiEvidence": "Existing full research group passed with immutable source5f4648396b4128fa412ec9ce3a7aea31344e9086c2a61482295606c76b56e399 / build0d0b5b04323aa7fc: all11 labs/seven widths, all33 questions with both wrong choices and correct choice at320/1440, model/mission/journal reload, Touch/keyboard/large text/axe and six experiments; additional44 old-state cases/two real pass downloads passed. This is an affected-group check, not all10 mandatory groups, final actual-engine/offline/CI or delivery approval.",
+      "historicalHardBeforeTransfer20261021": {
+        "prompt": "Warum braucht das Sonnensystem verschiedene Darstellungen für Größen und Entfernungen?",
+        "answers": [
+          "Weil es nur vier Planeten gibt",
+          "Weil Planeten gegenüber den Abständen sehr klein sind",
+          "Weil alle Planeten gleich groß sind"
+        ],
+        "correct": 1,
+        "newWrongReasons": [
+          "Im Modell sind acht Planeten dargestellt. Die Schwierigkeit des Maßstabs hängt nicht an einer Zahl von vier.",
+          "",
+          "Die Planeten haben unterschiedliche Größen. Gleiche gezeichnete Symbolgrößen wären eine Darstellungsentscheidung, kein Beweis gleicher echter Größen."
+        ]
+      },
+      "transferUpdate20261021": {
+        "scope": "One existing hard question: concrete comparison/application and plausible misconceptions; correct canonical string/index retained. Existing easy/medium questions and sources retained.",
+        "sourceAccess": "Previously recorded selected official source readings reused; no fresh source visit or independent human acceptance claimed.",
+        "uiStatus": "targeted44 and existing full research group passed; complete final ten groups/current engines/offline/CI/delivery pending",
+        "conceptCountercheck": "Compare diameters and interplanetary distances under one scale; no new numerical astronomical value.",
+        "checkedOn": "2026-10-21",
+        "targetedReportSHA256": "9979fb9c6ce6eca35a5525034d5d0b76bf37dddc5a43954bc5a93766f80eb692",
+        "fullResearchGroupReportSHA256": "4645d9c1bf293f31f11dfc35576c3e444e2f3fafc069b9670a282a0ff0599461"
+      },
+      "historicalUIBeforeTransfer20261021": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required.",
+      "targeted44BeforeFullResearchGroup20261021": "Targeted Chromium154 at320large/1440: all11 old-wrong and all11 old-correct tasks,44cases total, old canonical indices/prior texts, no stamp on load, current wrong/right feedback, real reload/two pass downloads and other pass fields retained. Complete current existing66-choice research regression and final cross-engine/offline/CI/delivery still pending. Older UI claim preserved as history."
     }
   ],
   "rightsBasis": "Own German factual explanations and fictitious model comparisons with named sources. USGS/NOAA/NASA government information exceptions, third-party assets, marks and endorsement excluded. PTB is not assumed public domain; only own factual explanations/citation, no copied source prose/media. No News-feed rights inferred.",
@@ -768,5 +1043,31 @@
     "finalLocal": "pending",
     "GitHub": "pending",
     "deployment": "pending"
+  },
+  "transferUpdate20261021": {
+    "scope": "Eleven existing hard lab questions only, canonical correct indices and correct strings retained. Stable displayed order uses canonical answer identities, not a new score store. Historical originals retained per entry.",
+    "status": "affected full research group and44 old-state cases passed; complete final package acceptance pending",
+    "independentReview": false
+  },
+  "coordinatedLearningCompleteLocalEvidence20261021": {
+    "status": "passed complete immutable local mandatory browser and offline regression",
+    "originalFullHead": "c84402e8d4234573a8fdfacb247101dc2b843fe0",
+    "originalTree": "ccfcf320a4357c3cbdeffa7b7bd65dd6f3398007",
+    "originalSourceDigest": "0c3140d003a841ef8b2fa3a507f071bff16d00fd8289c22f336ba799759ccf00",
+    "build": "46bf3f41cd006644",
+    "originalReport": "/workspace/work/wk-continuation/coordinated-learning-c84402e-full-local-originals-20261021/portable-report.json",
+    "originalReportSHA256": "13aa0fc480ae7f7e544735c06576671a37cc185f8c5223fa1762e9cd81987a7d",
+    "mandatoryGroups": 10,
+    "informationalChecks": 140,
+    "browser": "154.0.8037.57",
+    "seconds": 1694.4642386720002,
+    "readingCases": 2,
+    "loaderCases": 2,
+    "journeyTransferCases": 16,
+    "researchTransferCases": 44,
+    "bookCases": 4,
+    "stoppedServerLearningCases": 8,
+    "nativeStoppedServerLearningCases": 8,
+    "boundaries": "Actual speech text/voice/rate handoff only, no hearing or physical-device claim. Exact final complete GitHub CI/fresh native admission/test-live/Vercel/browser still required."
   }
 }

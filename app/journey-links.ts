@@ -15,7 +15,7 @@ export const CHAPTER_LINKS:Record<string,string[]>={
  volcanoes:['labs/volcano','labs/volcano','labs/volcano','labs/plates','labs/volcano'],
  quakes:['labs/quake','labs/quake','layers','labs/quake','book/words/Tsunami'],
  moon:['world/topic/science-moon-phases','labs/moon','labs/moon','world/topic/invention-rocket','world/topic/history-apollo11'],
- navigation:['globe','world/topic/science-gps','world/topic/invention-compass','world/topic/science-seasons','labs/time'],
+ navigation:['globe','world/topic/science-gps','world/topic/invention-compass','world/topic/science-seasons','labs/clocks'],
  landscapes:['labs/plates','world/topic/science-water-cycle','globe','world/topic/animal-dromedary','world/topic/science-water-cycle'],
  climate:['world/topic/science-atmosphere','world/topic/science-seasons','world/topic/animal-giraffe','world/topic/science-photosynthesis','world/topic/science-foodweb']
 };
@@ -54,11 +54,11 @@ const TOOLS:Record<string,[string,string]>={
  water:['Wasserformen im Modell','Ändere die Temperatur und beobachte Übergänge zwischen fest, flüssig und gasförmig.'],
  plates:['Plattenbewegungen untersuchen','Vergleiche Zusammenstoßen, Auseinanderdriften und seitliches Vorbeigleiten.'],
  volcano:['Vulkanbedingungen vergleichen','Verändere Bedingungen im vereinfachten Modell, ohne reale Ausbrüche vorherzusagen.'],
- quake:['Erdbeben im Modell','Vergleiche Entfernung und Stärke und beachte die Grenzen des Modells.'],
+ quake:['Erdbeben im Modell','Verändere die Herdtiefe und löse eine Bewegung aus. Das Lernmodell sagt keine wirklichen Beben voraus.'],
  weather:['Wetterbedingungen vergleichen','Ändere einzelne Bedingungen und vergleiche ihre Auswirkungen im Lernmodell.'],
  wind:['Wind untersuchen','Vergleiche Druckunterschiede und die daraus entstehende Luftbewegung.'],
  seasons:['Die Erdachse ausprobieren','Vergleiche geneigte und nicht geneigte Erdachse und die beiden Halbkugeln.'],
  moon:['Mond und Beleuchtung vergleichen','Ändere die Position und untersuche, welcher beleuchtete Teil sichtbar ist.'],
- time:['Zeitzonen erkunden','Vergleiche Ortszeiten und unterscheide Zeitzonengrenzen von Längengraden.']
+ clocks:['Zeitzonen erkunden','Vergleiche Ortszeiten und unterscheide Zeitzonengrenzen von Längengraden.']
 };
 export function chapterDestination(path:string){const parts=path.split('/');const pair=parts[0]==='world'?DESTINATIONS[parts[2]]:parts[0]==='book'?[parts[2]+' nachschlagen','Kläre die Bedeutung von „'+parts[2]+'“, bevor du das Kapitel erklärst.']:TOOLS[parts.at(-1)!];if(!pair)throw Error('Unknown journey destination '+path);return {title:pair[0],why:pair[1]};}

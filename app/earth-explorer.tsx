@@ -134,6 +134,9 @@ export default function EarthExplorer(){
   // eslint-disable-next-line react-hooks/set-state-in-effect -- Apply external browser navigation.
   useEffect(()=>{const value=routePath.split('/')[0];if(MODES.includes(value)){setMode(value as Mode);setVisited(p=>new Set([...p,value]));setSpin(false);setTouchActive(false);}},[routePath]);
   useEffect(()=>{if(routePath!=='games'||mode!=='games'||!/^game-knowledge-|^order-knowledge-|^game-route-/.test(history.state?.wunderFocus??''))return;return scheduleRouteRestore('games');},[routePath,mode]);
+  // A book return can render before its parent tab is visible. Restore the
+  // originating word link once that tab is shown, using the existing input guard.
+  useEffect(()=>{if(mode==='book'&&(routePath==='book'||routePath.startsWith('book/'))&&/^book-word-/.test(history.state?.wunderFocus??''))return scheduleRouteRestore(routePath);},[routePath,mode]);
   // Restore after the parent tab becomes visible, including a journey reached
   // with Back from the globe; its still-hidden heading cannot receive focus.
   useEffect(()=>{if(mode==='world'&&routePath.startsWith('world/')||mode==='journeys'&&(routePath==='journeys'||routePath.startsWith('journeys/')))return scheduleRouteRestore(routePath);},[routePath,mode]);

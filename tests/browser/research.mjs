@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';import fs from 'node:fs/promises';import path from 'node:path';
 import FEEDBACK from '../../app/research-feedback.json' with {type:'json'};
 import {RESEARCH_QUESTIONS} from '../../app/research-catalog.ts';
+import {researchTransferFlow} from './research-transfer.mjs';
 const labs=JSON.parse(await fs.readFile(new URL('../../exports/content/laboratories.json',import.meta.url),'utf8'));
 const experiments=JSON.parse(await fs.readFile(new URL('../../exports/content/home-experiments.json',import.meta.url),'utf8'));
 const saveKey='erde-entdecken:save:v3';
@@ -21,6 +22,7 @@ async function axe(p,selector,label){
  const errors=await p.evaluate(async selector=>{const result=await window.axe.run({include:[[selector]]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return result.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));},selector);assert.deepEqual(errors,[],label+' WCAG axe');
 }
 export async function researchFlow(browser,base,ready,monitor,report,shots){
+ await researchTransferFlow(browser,base,ready,monitor,report,shots);
  for(const width of [320,360,390,768,1024,1440,1920]){
   const context=await browser.newContext({viewport:{width,height:width<768?844:1000},hasTouch:width<768,isMobile:width<768,reducedMotion:'reduce',acceptDownloads:true}),p=await context.newPage();monitor(p);p.setDefaultTimeout(20000);await p.clock.setFixedTime(new Date('2026-10-11T19:00:00Z'));await p.goto(base+'/#labs');await ready(p);await p.locator('.research-tile').first().waitFor();
   assert.equal(await p.locator('.research-tile').count(),11);assert.equal(await p.locator('.experiment-card').count(),6);
@@ -43,8 +45,8 @@ export async function researchFlow(browser,base,ready,monitor,report,shots){
     for(const level of ['easy','medium','hard']){
      await p.locator('.research-levels button').nth(['easy','medium','hard'].indexOf(level)).click();const q=level==='easy'?{prompt:lab.q,...lab}:RESEARCH_QUESTIONS[lab.id][level],question=p.locator('.research-question');
      await question.locator('summary').click();assert.ok((await question.innerText()).includes(level==='easy'?'Ein Denkhinweis':q.hint));
-     const answers=question.locator('.quiz-answer');for(let wrong=0;wrong<q.answers.length;wrong++)if(wrong!==q.correct){await answers.nth(wrong).click();await question.getByText('Schau noch einmal genau hin',{exact:true}).waitFor();await question.getByText(FEEDBACK[lab.id][level][wrong],{exact:true}).waitFor();assert.equal(await question.getByText(q.why,{exact:true}).count(),0,'wrong answer does not reveal full explanation');await geometry(p,lab.id+' '+level+' wrong '+wrong+' '+width);if(level==='hard'&&wrong===q.answers.findIndex((_answer,index)=>index!==q.correct)&&width===320)await question.screenshot({path:path.join(shots,'research-'+lab.id+'-wrong-320.png'),animations:'disabled'});}
-     await answers.nth(q.correct).click();await question.getByText('Gut erklärt · Forscherstempel verdient',{exact:true}).waitFor();await question.getByText(q.why,{exact:true}).waitFor();
+     const answers=question.locator('.quiz-answer');assert.equal(await answers.count(),q.answers.length);for(let wrong=0;wrong<q.answers.length;wrong++)if(wrong!==q.correct){await question.getByRole('button',{name:q.answers[wrong],exact:true}).click();await question.getByText('Schau noch einmal genau hin',{exact:true}).waitFor();await question.getByText(FEEDBACK[lab.id][level][wrong],{exact:true}).waitFor();assert.equal(await question.getByText(q.why,{exact:true}).count(),0,'wrong answer does not reveal full explanation');await geometry(p,lab.id+' '+level+' wrong '+wrong+' '+width);if(level==='hard'&&wrong===q.answers.findIndex((_answer,index)=>index!==q.correct)&&width===320)await question.screenshot({path:path.join(shots,'research-'+lab.id+'-wrong-320.png'),animations:'disabled'});}
+     await question.getByRole('button',{name:q.answers[q.correct],exact:true}).click();await question.getByText('Gut erklärt · Forscherstempel verdient',{exact:true}).waitFor();await question.getByText(q.why,{exact:true}).waitFor();
     }
     await p.locator('.research-next details').first().locator('summary').click();await p.locator('.research-mission-checks input').first().check();await p.locator('.research-next details').nth(1).locator('summary').click();await p.locator('.research-next textarea').fill('Synthetische Erklärung für die Prüfung.');
     await p.waitForFunction(([key,id])=>JSON.parse(localStorage.getItem(key))?.progress.gameSessions['lab:'+id]?.researchJournal==='Synthetische Erklärung für die Prüfung.',[saveKey,lab.id]);

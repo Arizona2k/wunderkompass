@@ -1311,19 +1311,19 @@
           ]
         },
         {
-          "prompt": "Zwei Halbkugeln haben gleichzeitig gegensätzliche Jahreszeiten. Passt die Entfernung als alleinige Erklärung?",
+          "prompt": "Im Juni sind die Tage im Norden lang und im Süden kurz. Beide Halbkugeln gehören zur selben Erde. Passt die Entfernung zur Sonne als alleinige Erklärung für diesen Gegensatz?",
           "answers": [
-            "Ja, Australien hat eine eigene Sonne",
+            "Ja, die zur Sonne geneigte Halbkugel ist dafür viel näher an der Sonne",
             "Nein, beide sind fast gleich weit von der Sonne entfernt",
-            "Ja, nur der Norden bewegt sich im All"
+            "Ja, ein anderer Abstand der ganzen Erde erklärt gleichzeitig entgegengesetzte Tageslängen"
           ],
           "correct": 1,
-          "hint": "Beide Halbkugeln gehören zur selben Erde auf derselben Bahn. Welche Erklärung kann trotzdem ihre unterschiedliche Besonnung berücksichtigen?",
-          "why": "Die entgegengesetzte Besonnung lässt sich durch die Achsneigung erklären.",
+          "hint": "Eine Erklärung muss beide Beobachtungen gleichzeitig erklären können. Prüfe, was für beide Halbkugeln gemeinsam ist und was sich unterscheidet.",
+          "why": "Beide Halbkugeln sind fast gleich weit von der Sonne entfernt. Durch die Achsneigung unterscheiden sich im selben Monat Sonnenstand und Tageslänge. So lassen sich die gegensätzlichen Jahreszeiten erklären.",
           "wrong": [
-            "Australien bekommt Licht von derselben Sonne.",
-            "Die entgegengesetzte Besonnung lässt sich durch die Achsneigung erklären.",
-            "Die ganze Erde bewegt sich gemeinsam."
+            "Eine zur Sonne geneigte Halbkugel ist nicht so viel näher, dass dies den Gegensatz erklärt. Vergleiche Sonnenstand und Dauer der Beleuchtung.",
+            "Beide Halbkugeln sind fast gleich weit von der Sonne entfernt. Durch die Achsneigung unterscheiden sich im selben Monat Sonnenstand und Tageslänge. So lassen sich die gegensätzlichen Jahreszeiten erklären.",
+            "Ein anderer Abstand der ganzen Erde betrifft beide Halbkugeln gemeinsam. Er erklärt ihren gleichzeitigen Gegensatz nicht."
           ]
         }
       ]
@@ -1772,19 +1772,19 @@
           ]
         },
         {
-          "prompt": "Ein kleiner Gartenteich ist kleiner als ein Parkplatz. Kann er trotzdem Lebensraum sein?",
+          "prompt": "Ein kleiner Gartenteich bietet Wasser, Pflanzen und Verstecke. Daneben liegt ein viel größerer befestigter Parkplatz. Kann der kleine Teich trotzdem ein Lebensraum sein?",
           "answers": [
-            "Nein, nur Wälder sind Lebensräume",
+            "Nein, neben einer größeren Fläche kann eine kleinere kein Lebensraum sein",
             "Ja, geeignete Bedingungen sind entscheidend",
-            "Nein, Lebensräume müssen riesig sein"
+            "Nein, ein Lebensraum müsste für jedes Tier gleich gut geeignet sein"
           ],
           "correct": 1,
-          "hint": "Beurteile den Ort aus Sicht seiner Bewohner. Die Größe einer Fläche allein entscheidet nicht, ob sie Nahrung oder Schutz bietet.",
-          "why": "Auch kleine Orte können Nahrung, Wasser und Schutz bieten.",
+          "hint": "Wähle gedanklich einen Bewohner und prüfe, was er braucht. Vergleiche dann die Bedingungen statt nur die Flächengröße.",
+          "why": "Ein geeigneter Ort kann auch klein sein. Wasser, Nahrung und Schutz sind je nach Bewohner entscheidend; ein Lebensraum muss nicht für alle Arten gleich gut passen.",
           "wrong": [
-            "Viele verschiedene Umgebungen können Lebensräume sein.",
-            "Auch kleine Orte können Nahrung, Wasser und Schutz bieten.",
-            "Die Größe allein schließt einen Lebensraum nicht aus."
+            "Die Größe der Nachbarfläche bestimmt nicht, ob der Teich Nahrung, Wasser oder Schutz bieten kann. Prüfe seine Bedingungen.",
+            "Ein geeigneter Ort kann auch klein sein. Wasser, Nahrung und Schutz sind je nach Bewohner entscheidend; ein Lebensraum muss nicht für alle Arten gleich gut passen.",
+            "Verschiedene Arten brauchen unterschiedliche Bedingungen. Ein Ort muss nicht zu allen Tieren passen, um Lebensraum zu sein."
           ]
         }
       ]
@@ -2352,19 +2352,19 @@
           ]
         },
         {
-          "prompt": "Ein anderes Buch zählt sechs Kontinente. Ist damit jede seiner Karten falsch?",
+          "prompt": "Ein Atlas fasst Nord- und Südamerika als Amerika zusammen, ein anderer zählt sie getrennt. Sind dadurch automatisch die Küsten oder Ortsangaben eines der beiden Atlanten falsch?",
           "answers": [
             "Nicht automatisch; erst das Einteilungsmodell prüfen",
-            "Ja, jede andere Einteilung ist unmöglich",
-            "Ja, dann existiert kein Land"
+            "Ja, nur dieselbe Kontinentzahl kann richtige Ortsangaben ermöglichen",
+            "Ja, Staatsgrenzen und Kontinentgrenzen müssen immer zusammenfallen"
           ],
           "correct": 0,
-          "hint": "Lies zuerst, welche Zählweise das andere Buch verwendet. Unterschiedliche vereinbarte Gruppierungen sind nicht automatisch fehlerhafte Ortsangaben.",
-          "why": "Es gibt verschiedene Kontinentmodelle; hier verwenden wir sieben.",
+          "hint": "Trenne das Gruppieren und Benennen großer Regionen von den gezeigten Küsten und einzelnen Orten.",
+          "why": "Kontinentmodelle können Regionen unterschiedlich zusammenfassen. Hier verwenden wir sieben Kontinente; eine andere erklärte Gruppierung macht die gezeigten Orte nicht automatisch falsch.",
           "wrong": [
-            "Es gibt verschiedene Kontinentmodelle; hier verwenden wir sieben.",
-            "Eine andere Konvention ist nicht automatisch eine falsche Landschaft.",
-            "Die Modellwahl lässt Länder nicht verschwinden."
+            "Kontinentmodelle können Regionen unterschiedlich zusammenfassen. Hier verwenden wir sieben Kontinente; eine andere erklärte Gruppierung macht die gezeigten Orte nicht automatisch falsch.",
+            "Eine andere Gruppierung kann dieselben Küsten und Orte zeigen. Prüfe die erklärte Einteilung und die tatsächlichen Angaben getrennt.",
+            "Staaten und Kontinente sind verschiedene Einteilungen. Ihre Grenzlinien müssen nicht überall zusammenfallen."
           ]
         }
       ]
@@ -2865,19 +2865,19 @@
           ]
         },
         {
-          "prompt": "Zwei Einwohnerzahlen stammen aus verschiedenen Jahren. Was brauchst du für einen fairen Vergleich?",
+          "prompt": "Lernbeispiel: Für Land A stehen fünf Millionen Einwohner im Jahr 2020, für Land B sechs Millionen im Jahr 2024. Was brauchst du, bevor du daraus einen fairen Vergleich ableitest?",
           "answers": [
             "Datenjahr und möglichst passende Messweise prüfen",
-            "Die Jahre ignorieren",
-            "Die kleinere Zahl automatisch für falsch erklären"
+            "Die größere Zahl direkt als Beweis nehmen, dass dort auch 2020 mehr Menschen lebten",
+            "Die ältere Zahl ohne weitere Angaben um jedes vergangene Jahr gleich stark erhöhen"
           ],
           "correct": 0,
-          "hint": "Schreibe zu beiden Zahlen Jahr, Gebiet und Erhebungsmethode. Welche Unterschiede könnten den scheinbaren Vergleich beeinflussen?",
-          "why": "Bevölkerungszahlen verändern sich; vergleichbare Daten brauchen Kontext.",
+          "hint": "Notiere zu jeder Zahl, wann und für welches Gebiet sie erhoben wurde. Welche zusätzliche Annahme würde eine Hochrechnung benötigen?",
+          "why": "Die Zahlen im Lernbeispiel gehören zu verschiedenen Zeitpunkten. Vergleichbare Bevölkerungsangaben brauchen passende Datenjahre, Gebiete und Messweisen. Die Änderungsrate ist hier nicht angegeben.",
           "wrong": [
-            "Bevölkerungszahlen verändern sich; vergleichbare Daten brauchen Kontext.",
-            "Unterschiedliche Zeitpunkte können Unterschiede erklären.",
-            "Größe einer Zahl allein beweist keinen Fehler."
+            "Die Zahlen im Lernbeispiel gehören zu verschiedenen Zeitpunkten. Vergleichbare Bevölkerungsangaben brauchen passende Datenjahre, Gebiete und Messweisen. Die Änderungsrate ist hier nicht angegeben.",
+            "Die Zahlen stammen aus verschiedenen Jahren. Sie beweisen nicht, wie die beiden Bevölkerungen zum selben früheren Zeitpunkt aussahen.",
+            "Eine gleichmäßige Zunahme ist ohne passende Daten eine Annahme. Prüfe zuerst Jahr, Bezugsgebiet und Messweise."
           ]
         }
       ]

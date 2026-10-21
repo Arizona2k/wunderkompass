@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "meaning": "Exactly four earlier hard chapter tasks, preserving selected canonical indices and original texts; no protected reference regeneration or whole-pass migration.",
+  "entries": {
+    "seasons:2:2": {
+      "prompt": "Zwei Halbkugeln haben gleichzeitig gegensätzliche Jahreszeiten. Passt die Entfernung als alleinige Erklärung?",
+      "answers": [
+        "Ja, Australien hat eine eigene Sonne",
+        "Nein, beide sind fast gleich weit von der Sonne entfernt",
+        "Ja, nur der Norden bewegt sich im All"
+      ],
+      "correct": 1,
+      "hint": "Beide Halbkugeln gehören zur selben Erde auf derselben Bahn. Welche Erklärung kann trotzdem ihre unterschiedliche Besonnung berücksichtigen?",
+      "why": "Die entgegengesetzte Besonnung lässt sich durch die Achsneigung erklären.",
+      "wrong": [
+        "Australien bekommt Licht von derselben Sonne.",
+        "Die entgegengesetzte Besonnung lässt sich durch die Achsneigung erklären.",
+        "Die ganze Erde bewegt sich gemeinsam."
+      ]
+    },
+    "continents:0:2": {
+      "prompt": "Ein anderes Buch zählt sechs Kontinente. Ist damit jede seiner Karten falsch?",
+      "answers": [
+        "Nicht automatisch; erst das Einteilungsmodell prüfen",
+        "Ja, jede andere Einteilung ist unmöglich",
+        "Ja, dann existiert kein Land"
+      ],
+      "correct": 0,
+      "hint": "Lies zuerst, welche Zählweise das andere Buch verwendet. Unterschiedliche vereinbarte Gruppierungen sind nicht automatisch fehlerhafte Ortsangaben.",
+      "why": "Es gibt verschiedene Kontinentmodelle; hier verwenden wir sieben.",
+      "wrong": [
+        "Es gibt verschiedene Kontinentmodelle; hier verwenden wir sieben.",
+        "Eine andere Konvention ist nicht automatisch eine falsche Landschaft.",
+        "Die Modellwahl lässt Länder nicht verschwinden."
+      ]
+    },
+    "nature:0:2": {
+      "prompt": "Ein kleiner Gartenteich ist kleiner als ein Parkplatz. Kann er trotzdem Lebensraum sein?",
+      "answers": [
+        "Nein, nur Wälder sind Lebensräume",
+        "Ja, geeignete Bedingungen sind entscheidend",
+        "Nein, Lebensräume müssen riesig sein"
+      ],
+      "correct": 1,
+      "hint": "Beurteile den Ort aus Sicht seiner Bewohner. Die Größe einer Fläche allein entscheidet nicht, ob sie Nahrung oder Schutz bietet.",
+      "why": "Auch kleine Orte können Nahrung, Wasser und Schutz bieten.",
+      "wrong": [
+        "Viele verschiedene Umgebungen können Lebensräume sein.",
+        "Auch kleine Orte können Nahrung, Wasser und Schutz bieten.",
+        "Die Größe allein schließt einen Lebensraum nicht aus."
+      ]
+    },
+    "countries:4:2": {
+      "prompt": "Zwei Einwohnerzahlen stammen aus verschiedenen Jahren. Was brauchst du für einen fairen Vergleich?",
+      "answers": [
+        "Datenjahr und möglichst passende Messweise prüfen",
+        "Die Jahre ignorieren",
+        "Die kleinere Zahl automatisch für falsch erklären"
+      ],
+      "correct": 0,
+      "hint": "Schreibe zu beiden Zahlen Jahr, Gebiet und Erhebungsmethode. Welche Unterschiede könnten den scheinbaren Vergleich beeinflussen?",
+      "why": "Bevölkerungszahlen verändern sich; vergleichbare Daten brauchen Kontext.",
+      "wrong": [
+        "Bevölkerungszahlen verändern sich; vergleichbare Daten brauchen Kontext.",
+        "Unterschiedliche Zeitpunkte können Unterschiede erklären.",
+        "Größe einer Zahl allein beweist keinen Fehler."
+      ]
+    }
+  }
+}

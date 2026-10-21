@@ -1,3 +1,49 @@
+## Aktuelle vollständige technische Lokalabnahme · 22.10.2026
+
+Die im vorhandenen Lernabschnitt geänderten 20 Kapitel und gemeinsamen Funktionen haben die vollständige unveränderte lokale Pflichtregression bestanden. Originalbericht /workspace/work/wk-continuation/coordinated-learning-c84402e-full-local-originals-20261021/portable-report.json SHA256 13aa0fc480ae7f7e544735c06576671a37cc185f8c5223fa1762e9cd81987a7d. Alle zehn Gruppen sowie alte Speicher-, Offline-, Quellen-, Such-/Rückweg- und Zugänglichkeitsprüfungen erhalten; UI-Bindung erst danach. Frühere einzelne Quellen-/Fachgegenlesen bleiben an ihren tatsächlichen Lesungen/Builds; keine neue wissenschaftliche Garantie, Hör- oder physische Geräteprüfung. Aktuelles exaktes finales CI, frische Freigabe und tatsächliche Testauslieferung weiterhin erforderlich.
+
+## Lokale koordinierte Vorbereitung ·21.10.2026
+
+Die folgenden früheren Einzelabschnittsbelege bleiben mit ihrem damaligen Quellstand erhalten. Vulkan/Erdbeben und Mond/Orientierung werden mit den schon vorbereiteten Lernhilfen/Übungen/Buchkorrekturen zusammengeführt. Die endgültige vollständige Integrationsabnahme, aktuelle Engine-/Offlineprüfung und tatsächliche Auslieferung sind noch offen; keine historische Teilprüfung wird als neue Gesamtprüfung ausgegeben.
+
+## Enger Erdbeben-Rückwegtext ·21.10.2026
+
+Beim gezielten Abgleich der vorhandenen Kapitelverknüpfung festgestellt: Die Linkerklärung versprach Entfernungs-/Stärkeregler, das echte Labor besitzt Herdtiefe und einen Auslöseknopf. Die Erklärung jetzt an die tatsächlich zuvor bedienten Funktionen angepasst. Kein Routen-, Labor-, Speicher- oder Aufgaben-ID-Wechsel. Gültige frühe80Ansichten/152Modellzustände und30native/kalte Ansichten bleiben Originalnachweise des59e75da725951067-Builds; enger aktueller Rückwegtext-Nachtest und endgültige vollständige Abnahme separat erforderlich. PR53/Quality145 unverändert.
+
+## Mond und Orientierung · aktuelle frühe Abnahme mit Uhrenkorrektur ·21.10.2026
+
+Unveränderter7de512e/Buildf2a1b872e97fbff5/Quelldigest8808c31efb03672248d3a175ff4a40d9decc535e1a41f0712a1971c124cfdebe:80Ansichten bei320/390/768/1440 normal/groß,192Modellzustände, zehn echte Such-/Reload-/Ziel-/Rückfokuswege,16Abschlusskontexte und sieben tatsächliche Laboraktionen grün. Dazu30native/kalte Ansichten,90alte falsche Antworten, private Notizen/Favoriten/Memory unddrei echte Passdownloads erhalten. Uhrenlabor zusätzlich in allen drei Modi tatsächlich mit Datum/UTC und Tastatur-/Rückfokus erreicht, auch nach Browserneustart mit gestopptemServer/Verbindungsablehnung/navigator.onLine=false.165Units/Typ/Lint/Build/43Exporte grün.
+
+Der vorherige echte Fehlerlabs/time bleibt im Originalbericht/PNG erhalten; die bereits vorhandene Masterkorrektur aufclocks wurde gezielt übernommen. Neue gewöhnliche Regression gleicht alle Kapitel-Laborziele mit dem tatsächlichen Laborkatalog ab und besucht das echte Uhrenlabor. Keine abgeschwächte Assertion, geschützte Runner-/Workflowänderung oder blinder Retry. Alle240Aufgaben, richtigen Indizes undübrigen14Reisen erhalten. Historische8355c01b-Masterbelege und aktuellef2a1b872-Belege nicht vermischen.
+
+Keine vollständige Schlussabnahme/CI/Auslieferung dieses isolierten Folgestands behauptet. Aktuelle Basis und tatsächliche Vorgängerchronik vor endgültiger Abnahme kontrolliert integrieren. PR53/Quality145 unverändert; vorhandener Vulkan-/Erdbebenstand und neue eng eingeordnete WK054–057-Befunde bleiben erhalten.56Topic-UI-Belege erst nach vollständigem aktuellem Vollgrün erneuern.
+
+## Vorhandene Welt-Uhren-Verknüpfung gezielt korrigiert ·21.10.2026
+
+Die frühe aktuelle Prüfung zeigte am30.Kapitelkontext: Der alte Linklabs/time öffnet nur die Laborübersicht. Der gesicherte Master enthält bereits die richtige registrierte Kennungclocks. Genau diese bestehende Zweizeilenkorrektur übernommen; Labor-IDclocks und alle gespeicherten Daten bleiben unverändert. Neue gewöhnliche Regression prüft sämtliche Kapitel-Laborziele gegen den tatsächlichen vorhandenen Laborkatalog; die bestehende Browserreise prüft zusätzlich das echte Uhrenlabor mit Datum/UTC und Tastatur-/Rückfokus. Keine Assertion, Matrix, Zeitgrenze oder geschützte Prüfgrundlage entfällt.
+
+Originalfehlerbericht/PNG und30erfolgte Ansichten/neun fertige Rückwege am altenBuild bleiben unverändert erhalten. Der neue Produktstand wird gezielt erneut geprüft, kein Fehler durch blinden Retry verdeckt. Die unabhängig belegte Erdbeben-Linkerklärung aus059c033 ebenfalls eng übernommen: Herdtiefe/Auslöseknopf statt erfundener Entfernungs-/Stärkeregler. PR53/Quality145 unverändert; bereits abgegrenzter Vulkan-/Erdbebenstand bleibt separat.
+
+## Mond und Orientierung · getrennte vorhandene Vorbereitung ·21.10.2026
+
+Zehn erhaltene Manuskripte in einem isolierten Anschlussstand vorbereitet. Sechs bereits entwickelte eigene Modelle gezielt übernommen: Gewichtskraft bei gleicher Masse, Apollo11-Rollen, Breite/Länge mit zwei Beispielorten, einzelner Nullmeridian-Halbkreis, Wendekreise und vereinbarte Uhrenzeiten. Zwei passende vorhandene Phasenbilder erhalten; eine missverständliche Halbmond-Beschreibung präzisiert zu „Eine Hälfte der sichtbaren Mondscheibe ist hell.“ Alle240Aufgaben und ihre richtigen Antworten/Indizes, übrigen14Reisen einschließlich Vulkan-/Erdbebenverbesserungen, Personenbilder und56Sach-/UI-Dossiers unverändert.
+
+Individuelle ursprüngliche Quellen-/Gegenlese aus dem gesicherten Master gezielt wiederverwendet; ursprüngliche technische Belege bleiben am tatsächlichen8355c01b401402ad-Build. Keine neue vollständige Quellenlektüre, aktuelle Browserabnahme oder Veröffentlichung behauptet. Frühe aktuelle Prüfung noch erforderlich; UI-Belege nicht vorzeitig erneuern. Im bestehenden Paket3.5 und seiner Kapitelreihenfolge bleiben; finales aktuelles Basis-/Chronikabgleichen und vollständiger Freigabeweg nach bestätigten Vorgängern. PR53/Quality145 sowie der separat früh geprüfte Vulkan-/Erdbebenstand bleiben unverändert; keine Umfangsausweitung dieser Kandidaten, zusätzliche Roadmap, News oder Produktion.
+
+## Vulkan-/Erdbebenkapitel · aktuelle frühe Prüfung bestanden ·21.10.2026
+
+Build59e75da725951067/Quelldigestd79386885679beddbb63f77e0a75655589ac964325e7f954275577adc6eabb2d:80Kapitelansichten bei320/390/768/1440, normal/groß, alle30Aufgaben/152Modellzustände, zehn echte Such-/Reload-/Ziel-/Rückfokuswege,16Abschlusskontexte und drei tatsächliche Laboraktionen grün. Zusätzlich je zehn native640-/native320-/echte kalte320-Ansichten: Browser geschlossen, Server gestoppt, Verbindung verweigert undnavigator.onLine=false.90alte falsche Antwortauswahlen, Merkzettel, Favoriten, Notizen und drei echte Passdownloads erhalten. Typ/Lint/164Units/Build und43Exporte grün; keine vollständige Schlussabnahme oder Veröffentlichung behauptet.
+
+Tatsächlich angesehen: parallele Vulkanmessungen und Tsunami-Ausbreitung bei320groß sowie Wellenankunft unter echtem200Prozentzoom. Alle Beschriftungen als lesbares HTML und ausdrückliche Modellgrenzen erhalten. Originale broad/native-Berichte mit SHA256 gesichert; alte20.10.-Quellen-/Gegenlesenachweise bleiben ihrem damaligen Masterstand zugeordnet.56Topic-UI-Belege bleiben bis aktueller vollständiger Schlussabnahme historisch gebunden. PR53/Quality145 unverändert; endgültige tatsächliche Basis/Chronik53, vollständige Schlussprüfungen und reguläre test-live-Auslieferung erst nach bestätigtem53-Abschluss.
+
+## Vulkan-/Erdbebenkapitel · getrennte Vorbereitung aus erhaltener Nachtarbeit ·21.10.2026
+
+Die zehn vorhandenen Manuskripte und acht Kapitelschemata in einem isolierten Folgestand vorbereitet, während PR53 am unveränderten Kandidaten geprüft wird. Sechs vorhandene verbesserte Erklärgrafiken gezielt übernommen: verzweigte Magmawege, Ausbruchsbeispiele, drei parallele Messmethoden, Wellenankunft mit Zeitachse, ein Beben/zwei Beobachtungsorte und Tsunamimechanismus. Zwei bereits geeignete Darstellungen erhalten. Alle240Aufgaben, richtigen Antworten/Indizes, übrigen14Reisen, aktuellen Biografien und56Sach-/UI-Dossiers unverändert; keine neue Themenzählung.
+
+Quellen und individuelle Gegenlese aus der tatsächlich belegten20.10.-Lektüre gezielt wiederverwendet: NPS Vulkanaufbau/Ausbrüche/Formen/Messmethoden, USGS Bruchbeginn/Wellen/Magnitude versus örtliche Intensität, NOAA nötige Tsunamibedingungen. Eigene erklärende Zeichnungen, keine fremden Medien. Historische Nachweise bleiben ausdrücklich am277894527be120e8-Masterbuild; keine neue vollständige Quellenlektüre, aktuelle Browser-/Offlineabnahme oder Auslieferung daraus behauptet. Aktuelle frühe Prüfungen stehen noch aus.
+
+Dies ist ausschließlich sichere getrennte Vorbereitung im bestehenden Paket3.5; endgültige Integration, Chronik53 und Freigabe erst nach tatsächlich vollständiger53-Auslieferung auf der dann aktuellen test-live-Basis. Alle vorgeschriebenen Schlussprüfungen, geschützten Grundlagen und Sicherheits-/Datenschutzregeln bleiben unverändert.
+
 ## Aktueller Planet-/Erdinneres-Lieferabschnitt ·21.10.2026
 
 Die zehn bereits vorhandenen Kapiteltexte sind nach tatsächlich vollständig bestätigter PR52-Auslieferung kontrolliert auf deren Basis übernommen. Die zwei neuen Biografien, alle18alten Personenbilder/-Spielidentitäten, sämtliche übrigen Texte/Modelle und56öffentlichen Dossiers bleiben erhalten. Der isolierte Planet174-Stand und alle bisherigen frühen Nachweise sind unverändert gesichert. Keine neue Themenzählung und keine Wiederholung der Nachtentwicklung.

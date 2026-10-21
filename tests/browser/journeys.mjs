@@ -1,4 +1,7 @@
 import {journeyContentFlow} from './journey-content.mjs';
+import {journeyReadingFlow} from './journey-reading.mjs';
+import {journeyInquiryLoadFlow} from './journey-inquiry-loader.mjs';
+import {journeyTransferFlow} from './journey-transfer.mjs';
 import {journeySourceView} from './journey-sources.mjs';
 export {journeySourceView} from './journey-sources.mjs';
 import {nativeJourneyZoom} from './journey-zoom.mjs';
@@ -19,6 +22,8 @@ async function geometry(p,label){
  }));assert.deepEqual(escaped,[],label+' readable controls and text within viewport');
 }
 export async function assertJourneyDiagram(visual,id,selected){
+ await assertMoonNavigationDiagram(visual,id);
+ await assertVolcanoesQuakesDiagram(visual,id);
  await assertWaterWeatherDiagram(visual,id,selected);
  await assertSeasonsOceanDiagram(visual,id,selected);
  await assertNatureProtectDiagram(visual,id,selected);
@@ -46,6 +51,25 @@ export async function assertJourneyDiagram(visual,id,selected){
   await visual.getByText(/Eine Platte umfasst Kruste und starren obersten Mantel/).waitFor();
  }
 }
+export async function assertVolcanoesQuakesDiagram(visual,id){
+ if(!['volcanoes:1','volcanoes:2','volcanoes:4','quakes:2','quakes:3','quakes:4'].includes(id))return;
+ await visual.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done))));
+ if(id==='volcanoes:1'){assert.equal(await visual.locator('svg [data-volcano-path]').count(),3);const conduit=await visual.locator('[data-volcano-path="conduit"]').getAttribute('d');assert.equal((conduit.match(/M/g)||[]).length,3,'actual branched example, not a single universal pipe');await visual.getByText(/kein Maßstab/).waitFor();}
+ if(id==='volcanoes:2'||id==='volcanoes:4'){const selector=id==='volcanoes:2'?'[data-eruption-example]':'[data-volcano-monitor]';const boxes=await visual.locator(selector).evaluateAll(es=>es.map(e=>({width:e.getBBox().width,height:e.getBBox().height})));assert.equal(boxes.length,id==='volcanoes:2'?2:3);assert.equal(new Set(boxes.map(b=>b.width+':'+b.height)).size,1,'qualitative examples do not imply measured amounts');await visual.getByText(id==='volcanoes:2'?/Auch fließende Lava und Gase können gefährlich sein|Zähigkeit und Gasgehalt/:/keine zeitliche Schrittfolge/).waitFor();}
+ if(id==='quakes:2'){const starts=await visual.locator('[data-seismic-arrival]').evaluateAll(es=>es.map(e=>e.getPointAtLength(0).x));assert.equal(starts.length,2);assert.ok(starts[1]>starts[0],'two distinct actual arrival positions on time axis');const axis=await visual.locator('[data-seismic-time-axis]').evaluate(e=>e.getPointAtLength(e.getTotalLength()).x-e.getPointAtLength(0).x);assert.ok(axis>0,'time axis actually points to the right');assert.equal(await visual.locator('[data-wave-front]').count(),3);await visual.getByText(/erfundene Messkurve/).first().waitFor();}
+ if(id==='quakes:3'){assert.equal(await visual.locator('[data-quake-event]').count(),1);assert.equal(await visual.locator('[data-quake-observation]').count(),2);assert.equal(await visual.locator('[data-event-observation-link][marker-end]').count(),2);await visual.getByText(/keine Vergleichsbalken/).waitFor();}
+ if(id==='quakes:4'){assert.equal(await visual.locator('[data-tsunami-stage]').count(),3);const water=await visual.locator('[data-tsunami-water]').evaluateAll(es=>es.map(e=>e.getAttribute('d')));assert.equal(new Set(water).size,3,'actual water geometry changes with bottom movement and propagation');const directions=await visual.locator('[data-tsunami-direction]').evaluateAll(es=>es.map(e=>e.getPointAtLength(e.getTotalLength()).x-e.getPointAtLength(0).x));assert.equal(directions.length,2);assert.ok(directions[0]<0&&directions[1]>0,'independent outward propagation arrows');await visual.getByText(/keine gleichen Zeitabstände/).waitFor();}
+}
+export async function assertMoonNavigationDiagram(visual,id){
+ if(!['moon:3','moon:4','navigation:1','navigation:2','navigation:3','navigation:4'].includes(id))return;
+ await visual.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done))));
+ if(id==='moon:3'){const earth=visual.locator('[data-force-example="earth"]'),moon=visual.locator('[data-force-example="moon"]');assert.equal(await earth.locator('[data-force-filled="true"]').count(),6);assert.equal(await moon.locator('[data-force-filled="true"]').count(),1);const bodies=await visual.locator('[data-same-mass]').evaluateAll(es=>es.map(e=>e.getAttribute('r')));assert.equal(bodies.length,2);assert.equal(bodies[0],bodies[1]);await visual.getByText(/keine Körpermassen/).waitFor();}
+ if(id==='moon:4'){assert.equal(await visual.locator('[data-apollo-role="surface"]').count(),2);assert.equal(await visual.locator('[data-apollo-role="orbit"]').count(),1);const positions=await visual.locator('svg').evaluate(svg=>{const moon=svg.querySelector('[data-apollo-moon]'),orbit=svg.querySelector('[data-apollo-orbit]'),n=(e,k)=>Number(e.getAttribute(k)),cx=n(moon,'cx'),cy=n(moon,'cy'),r=n(moon,'r');return {surface:[...svg.querySelectorAll('[data-apollo-role="surface"]')].map(e=>Math.hypot(n(e,'cx')-cx,n(e,'cy')-cy)-r),orbit:[...svg.querySelectorAll('[data-apollo-role="orbit"]')].map(e=>((n(e,'cx')-n(orbit,'cx'))/n(orbit,'rx'))**2+((n(e,'cy')-n(orbit,'cy'))/n(orbit,'ry'))**2)};});assert.ok(positions.surface.every(d=>Math.abs(d)<.001));assert.ok(positions.orbit.every(v=>Math.abs(v-1)<.001));assert.equal(await visual.locator('svg path[marker-end]').count(),0,'roles do not become a compulsory temporal sequence');}
+ if(id==='navigation:1'){await visual.getByText('Links Ort A, rechts Ort B: gleiche Breite, verschiedene Länge',{exact:true}).waitFor();const points=await visual.locator('[data-navigation-place]').evaluateAll(es=>es.map(e=>({x:Number(e.getAttribute('cx')),y:Number(e.getAttribute('cy'))})));assert.equal(points.length,2);assert.equal(points[0].y,points[1].y);assert.notEqual(points[0].x,points[1].x);const distances=await visual.locator('svg').evaluate(svg=>[...svg.querySelectorAll('[data-navigation-place]')].map((point,i)=>{const line=svg.querySelectorAll('[data-navigation-meridian]')[i],x=Number(point.getAttribute('cx')),y=Number(point.getAttribute('cy'));return Math.min(...Array.from({length:201},(_,n)=>{const p=line.getPointAtLength(line.getTotalLength()*n/200);return Math.hypot(x-p.x,y-p.y);}));}));assert.ok(distances.every(d=>d<2),'both actual points lie on their separate drawn meridian and shared latitude');}
+ if(id==='navigation:2'){const b=await visual.locator('[data-navigation-zero-longitude]').evaluate(e=>({x:e.getBBox().x,width:e.getBBox().width,height:e.getBBox().height}));assert.ok(b.x>=319.9&&b.width<=45.1&&Math.abs(b.height-224)<.1,'only one pole-to-pole half ellipse marks zero longitude, not its rear antimeridian');await visual.getByText(/nicht auch seine Rückseite/).waitFor();}
+ if(id==='navigation:3'){const y=await visual.locator('[data-navigation-tropic]').evaluateAll(es=>es.map(e=>e.getPointAtLength(0).y));assert.equal(y.length,3);assert.ok(y[0]<y[1]&&y[1]<y[2]);for(const value of [y[0],y[2]])assert.ok(Math.abs(Math.asin(Math.abs(value-145)/112)*180/Math.PI-23.4)<.0001,'actual spherical section agrees with stated approximate latitude');}
+ if(id==='navigation:4'){const hands=await visual.locator('[data-navigation-clock]').evaluateAll(es=>es.map(e=>e.querySelectorAll('path')[1].getAttribute('d')));assert.equal(hands.length,2);assert.notEqual(hands[0],hands[1]);await visual.getByText(/Zwei erfundene Orte/).waitFor();}
+}
 async function axe(p,selector){await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});const violations=await p.evaluate(async selector=>(await window.axe.run(selector,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']}})).violations.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)})),selector);assert.deepEqual(violations,[],'journey accessibility');}
 export async function journeysFlow(browser,base,ready,monitor,report,shots,nativeBrowser){
  const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce',acceptDownloads:true}),p=await context.newPage();monitor(p);p.setDefaultTimeout(20000);
@@ -63,6 +87,7 @@ export async function journeysFlow(browser,base,ready,monitor,report,shots,nativ
   }
   if(c.index>0){const visual=p.locator('[data-chapter-visual="'+c.id+'"]');await visual.waitFor();for(const choice of await visual.locator('button').all()){await choice.click();assert.equal(await choice.getAttribute('aria-pressed'),'true');}}
   assert.equal(await p.locator('.journey-chapter-link a').getAttribute('href'),'#'+CHAPTER_LINKS[c.journeyId][c.index]);
+  if(c.id==='navigation:4'){const link=p.locator('.journey-chapter-link a');await link.focus();await p.keyboard.press('Enter');await p.waitForURL('**/#labs/clocks');await p.locator('#lab-heading').getByText('Welt-Uhren',{exact:true}).waitFor();const clock=p.locator('#active-research-lab .model-content');await clock.locator('input[type=date]').waitFor();await clock.getByRole('slider',{name:/UTC:/}).waitFor();await p.goBack();await inquiry.waitFor();await p.waitForFunction(()=>document.activeElement?.getAttribute('data-route-focus')==='navigation-related-4');report.journeyClockDestination={actualLab:'clocks',heading:'Welt-Uhren',dateControl:true,UTCControl:true,keyboard:true,backFocus:true};}
   if(c.index===0){await reveal(inquiry,'Dein Forschermerkzettel · freiwillig');await inquiry.locator('textarea').fill('Synthetischer Prüfmerkzettel für '+c.journeyId);await p.screenshot({path:path.join(shots,'journey-'+c.journeyId+'-390.png'),fullPage:true,animations:'disabled'});}
  }
  report.checks.push('All 80 chapters: 240 distinct levels, voluntary hints, individual wrong/correct feedback and all 64 existing interactive diagrams');
@@ -94,6 +119,9 @@ export async function journeysFlow(browser,base,ready,monitor,report,shots,nativ
  const broken=await browser.newContext({viewport:{width:390,height:844}}),retryPage=await broken.newPage();monitor(retryPage);let requests=0;const malformed=structuredClone(data);malformed.chapters[0].tasks[0].correct=99;await retryPage.route('**/journey-inquiries-*.json',async route=>{requests++;if(requests===1)await route.fulfill({json:malformed});else await route.continue();});
  await retryPage.goto(base+'/#journeys/water/3');await ready(retryPage);await retryPage.getByRole('button',{name:'Aufgaben erneut laden',exact:true}).waitFor();assert.equal(await retryPage.locator('.journey-inquiry').count(),0);assert.ok((await retryPage.locator('.chapter-text').innerText()).includes('Kondensation'));await retryPage.getByRole('button',{name:'Aufgaben erneut laden',exact:true}).click();await retryPage.locator('[data-chapter-inquiry="water:2"]').waitFor();assert.equal(requests,2);await broken.close();report.checks.push('Malformed chapter payload fails closed while the old reading text remains; explicit retry loads valid tasks once');
  await journeyContentFlow(browser,base,report);
+ await journeyReadingFlow(browser,base,ready,monitor,report,shots);
+ await journeyInquiryLoadFlow(browser,base,report,shots);
+ await journeyTransferFlow(browser,base,ready,monitor,report,shots);
  await nativeJourneyZoom(nativeBrowser.chromium,nativeBrowser.options,base,report,shots);
 }
 export async function prepareOfflineJourneys(p){await open(p,'water',2);const inquiry=p.locator('.journey-inquiry');await inquiry.locator('.journey-levels button').nth(2).click();await reveal(inquiry,'Dein Forschermerkzettel · freiwillig');await inquiry.locator('textarea').fill('Offline-Sicherung: Wasser kann seinen Zustand ändern.');await p.waitForFunction(key=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['journey:water']['chapter:2:note']==='Offline-Sicherung: Wasser kann seinen Zustand ändern.',saveKey);}
@@ -160,7 +188,19 @@ export async function journeySupportView(p,{widths,shots,engine}){
   }
   assert.equal(hints.length,240);assert.equal(new Set(hints).size,240);
   assert.equal(diagrams.length,64*widths.length);assert.equal(new Set(diagrams.map(d=>d.id+':'+d.width)).size,diagrams.length);
-  return {hints,diagrams,sources,widths,seconds:(performance.now()-started)/1000};
+  let learningHelp;
+  if(engine==='firefox'||engine==='webkit'){
+   const browser=p.context().browser();assert(browser,'existing engine browser for changed journey helpers');
+   const base=new URL(p.url()).origin,helpShots=path.join(shots,'journey-help-'+engine);await fs.mkdir(helpShots,{recursive:true});
+   learningHelp={checks:[],errors:[],consoleErrors:[]};
+   const monitor=page=>{page.on('pageerror',e=>learningHelp.errors.push(e.message));page.on('console',m=>{if(m.type()==='error')learningHelp.consoleErrors.push(m.text());});};
+   const ready=page=>page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor();
+   await journeyReadingFlow(browser,base,ready,monitor,learningHelp,helpShots);
+   await journeyInquiryLoadFlow(browser,base,learningHelp,helpShots);
+   await journeyTransferFlow(browser,base,ready,monitor,learningHelp,helpShots);
+   assert.deepEqual(learningHelp.errors,[]);assert.deepEqual(learningHelp.consoleErrors,[]);
+  }
+  return {hints,diagrams,sources,widths,...(learningHelp?{learningHelp}:{}),seconds:(performance.now()-started)/1000};
  }catch(error){await p.screenshot({path:path.join(shots,'journey-engine-'+engine+'-support'+'-failure.png'),fullPage:true}).catch(()=>{});throw error;}finally{if(!wasLarge)await p.evaluate(()=>document.querySelector('.earth-app')?.classList.remove('large-reading'));await p.setViewportSize({width:390,height:844});await p.evaluate(hash=>location.hash=hash,initialRoute);if(initialRoute==='#journeys')await p.locator('.journey-filters input').waitFor();}
 }
 export async function offlineJourneys(p,report){await open(p,'water',2);await reveal(p.locator('.journey-inquiry'),'Dein Forschermerkzettel · freiwillig');assert.equal(await p.locator('.journey-inquiry textarea').inputValue(),'Offline-Sicherung: Wasser kann seinen Zustand ändern.');assert.equal(await p.locator('.journey-levels button').nth(2).getAttribute('aria-pressed'),'true');for(const j of JOURNEYS){await open(p,j.id,4);assert.equal(await p.locator('.journey-task .quiz-answer').count(),3);}await p.evaluate(()=>location.hash='world/topic/science-water-cycle');await p.locator('.journey-topic-links').waitFor();const disclosure=p.locator('details[data-history-disclosure="journey-links-science-water-cycle-water"]');await disclosure.locator('summary').click();await p.locator('.journey-topic-links a[href="#journeys/water/5"]').click();await p.locator('[data-chapter-inquiry="water:4"]').waitFor();report.checks.push('Cold restart without server: complete reciprocal chapter links and all 16 journey inquiries and private notebook/level restore from the same schema-3 pass');}

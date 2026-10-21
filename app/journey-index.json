@@ -970,27 +970,76 @@
       {
         "title": "Unter und über der Oberfläche",
         "text": "Magma ist geschmolzenes Gestein unter der Oberfläche.",
-        "textFields": []
+        "sourceIds": [
+          "volcano-detail",
+          "volcano-anatomy",
+          "volcano-eruption-processes"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Wege nach oben",
         "text": "Magma kann sich sammeln und durch Risse oder Schlote aufsteigen.",
-        "textFields": []
+        "sourceIds": [
+          "volcano-detail",
+          "volcano-anatomy",
+          "volcano-eruption-processes"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Fließen oder explodieren",
         "text": "Dünnflüssiges Magma lässt Gas leichter entweichen.",
-        "textFields": []
+        "sourceIds": [
+          "volcano-detail",
+          "volcano-eruption-processes"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Formen erzählen Geschichten",
         "text": "Breite Schildvulkane entstehen oft durch viele dünnflüssige Lavaflüsse.",
-        "textFields": []
+        "sourceIds": [
+          "volcano-detail",
+          "volcano-form-types",
+          "volcano-eruption-processes"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Ein Vulkan schläft nicht wie du",
         "text": "Ein Vulkan kann lange ruhig bleiben und trotzdem noch aktiv sein.",
-        "textFields": []
+        "sourceIds": [
+          "volcano-detail",
+          "volcano-measurement-methods",
+          "volcano-eruption-processes"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       }
     ],
     "question": {
@@ -1013,34 +1062,77 @@
     "icon": "layers",
     "color": "orange",
     "minutes": 7,
-    "source": "https://www.usgs.gov/programs/earthquake-hazards/science/science-earthquakes",
+    "source": "https://www.usgs.gov/programs/earthquake-hazards/science-earthquakes",
     "sourceName": "USGS · Erdbeben",
     "activity": "Lege eine Hand flach auf den Tisch. Klopfe mit der anderen ganz leicht daneben. Spürst du die Bewegung? Das ist nur ein Vergleich für Wellen.",
     "steps": [
       {
         "title": "Verhakt und plötzlich bewegt",
         "text": "Gesteinsflächen können sich an einer Störung verhaken.",
-        "textFields": []
+        "sourceIds": [
+          "quakes-base",
+          "quake-tsunami-process"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Herd und Epizentrum",
         "text": "Der Ort, an dem das Rutschen beginnt, heißt Erdbebenherd.",
-        "textFields": []
+        "sourceIds": [
+          "quakes-base"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Wellen statt Löcher",
         "text": "Vom Herd breiten sich Wellen aus.",
-        "textFields": []
+        "sourceIds": [
+          "quakes-base"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Größe und Wirkung",
         "text": "Die Magnitude beschreibt die Größe eines Bebens.",
-        "textFields": []
+        "sourceIds": [
+          "quakes-base",
+          "quake-event-and-site"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Unter dem Meer",
         "text": "Wird bei einem starken Seebeben der Meeresboden plötzlich angehoben oder abgesenkt, kann ein Tsunami entstehen.",
-        "textFields": []
+        "sourceIds": [
+          "quakes-base",
+          "quake-tsunami-process"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       }
     ],
     "question": {
@@ -1063,34 +1155,76 @@
     "icon": "sun",
     "color": "blue",
     "minutes": 8,
-    "source": "https://science.nasa.gov/moon/",
+    "source": "https://science.nasa.gov/moon/facts/",
     "sourceName": "NASA · Mond",
     "activity": "Beobachtet gemeinsam den Mond an mehreren Abenden. Zeichnet die Form und notiert das Datum.",
     "steps": [
       {
         "title": "Kein eigener Scheinwerfer",
         "text": "Der Mond umkreist die Erde.",
-        "textFields": []
+        "sourceIds": [
+          "moon-base",
+          "moon-phase-geometry"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Die Form verändert sich scheinbar",
         "text": "Der Mond selbst bleibt rund.",
-        "textFields": []
+        "sourceIds": [
+          "moon-phase-geometry"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Ein Viertel zeigt einen Halbmond",
         "text": "Beim ersten Viertel sehen wir die rechte Hälfte der Scheibe hell, wie üblich von der Nordhalbkugel betrachtet.",
-        "textFields": []
+        "sourceIds": [
+          "moon-phase-geometry"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Krater und kleine Sprünge",
         "text": "Viele Mondkrater entstanden durch Einschläge.",
-        "textFields": []
+        "sourceIds": [
+          "moon-surface-facts"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Menschen auf dem Mond",
         "text": "1969 landete Apollo 11.",
-        "textFields": []
+        "sourceIds": [
+          "apollo",
+          "moon-phase-geometry"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       }
     ],
     "question": {
@@ -1120,27 +1254,71 @@
       {
         "title": "Zwei Halbkugeln",
         "text": "Der Äquator teilt die Erde in Nord- und Südhalbkugel.",
-        "textFields": []
+        "sourceIds": [
+          "navigation-latitude-reference"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Breite und Länge",
         "text": "Breitengrade zeigen, wie weit nördlich oder südlich vom Äquator ein Ort liegt.",
-        "textFields": []
+        "sourceIds": [
+          "navigation-latitude-reference",
+          "navigation-longitude-reference"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Der Nullmeridian",
         "text": "Der Nullmeridian ist die vereinbarte Linie für null Grad Länge.",
-        "textFields": []
+        "sourceIds": [
+          "meridian",
+          "navigation-longitude-reference"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Die Wendekreise",
         "text": "Die Wendekreise liegen etwa 23,4 Grad nördlich und südlich des Äquators.",
-        "textFields": []
+        "sourceIds": [
+          "navigation-latitude-reference",
+          "seasons-base"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Wie spät ist es woanders?",
         "text": "Die Erde dreht sich.",
-        "textFields": []
+        "sourceIds": [
+          "navigation-longitude-reference",
+          "navigation-civil-time"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       }
     ],
     "question": {

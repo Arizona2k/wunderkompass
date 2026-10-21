@@ -12,8 +12,8 @@
     ],
     "hard": [
       "",
-      "Die Kruste hat unter Ozeanen und Kontinenten unterschiedliche Dicken. Eine einzige Schemazahl gilt nicht überall.",
-      "Eine Zeichnung ist keine Bohrung oder direkte Aufnahme aus dem Erdkern. Ihre Grenzen bleiben wichtig."
+      "Eine gemeinsame Skala sagt, wie Längen dargestellt werden. Sie macht unterschiedliche echte Schichtdicken nicht gleich.",
+      "Die Lage der Oberfläche allein bestimmt die Krustendicke nicht. Unter Ozeanen und Kontinenten ist die Kruste unterschiedlich aufgebaut."
     ]
   },
   "volcano": {
@@ -28,8 +28,8 @@
       "Zähigkeit kann beeinflussen, wie gut Gas entweicht. Deshalb darf sie beim Vergleich nicht unbeachtet wechseln."
     ],
     "hard": [
-      "Eine Modellanzeige kann keine Sicherheit für einen echten Vulkan bescheinigen. Bleibe bei der dargestellten Modellwirkung.",
-      "Echte Ausbrüche hängen von weiteren Bedingungen ab. Die vereinfachte Anzeige ist keine genaue Vorhersage.",
+      "Ähnlich aussehende Lava verrät nicht alle Bedingungen eines echten Vulkans. Das Modell kann keine örtliche Gefahr feststellen.",
+      "Gleiche Gasmenge allein macht Modell und echten Vulkan nicht gleich. Zusammensetzung, Temperatur und weitere Bedingungen fehlen.",
       ""
     ]
   },
@@ -45,9 +45,9 @@
       "Das Epizentrum liegt an der Oberfläche und damit nicht im Erdkern."
     ],
     "hard": [
-      "Der Abstand allein beschreibt nicht alle Bedingungen. Auch Tiefe und Untergrund können die Wirkung beeinflussen.",
+      "Gleicher Abstand hebt den Einfluss des Untergrunds nicht auf. Gestein und lockere Ablagerungen können Erdbebenwellen unterschiedlich beeinflussen.",
       "",
-      "Eine Uhrzeit allein erklärt keine Erschütterungsstärke. Prüfe die tatsächlichen Bedingungen des Bebens und Ortes."
+      "Ein gemeinsames Beben erzeugt keine überall gleiche Wirkung. Abstand, Untergrund und weitere Bedingungen unterscheiden sich."
     ]
   },
   "weather": {
@@ -62,9 +62,9 @@
       "Die Tröpfchen sind flüssiges Wasser, keine Rauchpartikel. Vergleiche die kalte Fläche mit der Raumluft."
     ],
     "hard": [
-      "Die gezeichneten Punkte sind nicht in Litern geeicht. Ihre Anzahl ist keine gemessene Regenmenge.",
+      "Die Punkte zeigen einen Zusammenhang, keine geeichte Wassermenge. Außerdem sind Wolkentröpfchen noch keine örtliche Regenvorhersage.",
       "",
-      "Windstille macht eine vereinfachte Zeichnung nicht zur Wetterprognose. Weitere Bedingungen und echte Daten fehlen."
+      "Eine passende Temperatur allein genügt nicht. Feuchte, Luftbewegung und weitere tatsächliche Wetterbedingungen fehlen."
     ]
   },
   "water": {
@@ -79,9 +79,9 @@
       "Die Schalengröße lässt Wasser nicht automatisch kochen. Im Versuch verwenden wir Wasser ohne Erhitzen."
     ],
     "hard": [
-      "Die vier Stationen sind eine Auswahl, kein verpflichtender Fahrplan für jedes Wasserteilchen.",
+      "Wasser kann nach dem Niederschlag gespeichert werden oder andere Wege nehmen. Es muss nicht zuerst vollständig ins Meer fließen.",
       "",
-      "Ein Wasserkreislauf hat keine überall gleiche Umlaufdauer. Speicherung und verschiedene Wege können unterschiedlich lange dauern."
+      "Pfeile zeigen mögliche Übergänge. Sie legen keine überall gleiche Aufenthaltsdauer in Schnee, Boden oder anderen Speichern fest."
     ]
   },
   "seasons": {
@@ -97,8 +97,8 @@
     ],
     "hard": [
       "",
-      "Ohne Achsneigung werden nicht alle Orte gleich warm. Breitengrad und andere Bedingungen bleiben verschieden.",
-      "Die Erde rotiert im Modell weiterhin. Das Entfernen der Achsneigung beendet nicht den täglichen Wechsel von Tag und Nacht."
+      "Die tägliche Drehung erzeugt weiter Tag und Nacht. Sie erklärt ohne Achsneigung aber nicht den hier gezeigten jährlichen Unterschied der Tageslängen.",
+      "Im kreisförmigen Modell bleibt der Sonnenabstand gleich. Die hier gezeigte jährliche Tageslängenänderung entsteht durch die Achsneigung, nicht durch einen wechselnden Abstand."
     ]
   },
   "plates": {
@@ -113,9 +113,9 @@
       "Plattenbewegungen sind nicht auf Länder oder Landflächen beschränkt. Meeresboden gehört ebenfalls zu Platten."
     ],
     "hard": [
-      "Tücher können nicht jede Subduktion und alle Gesteinseigenschaften darstellen. Ihre Falten sind ein begrenzter Vergleich.",
+      "Falten und das Abtauchen einer Platte sind verschiedene Vorgänge. Ein gefaltetes Tuch bildet nicht jede Subduktion und die Gesteinsbedingungen ab.",
       "",
-      "Die Bewegung der Tücher liefert keine echte geologische Geschwindigkeit. Material und Zeitmaßstab unterscheiden sich."
+      "Die Handbewegung besitzt keinen festgelegten geologischen Zeitmaßstab. Gleiche Versuchsgeschwindigkeit liefert keine echte Plattengeschwindigkeit."
     ]
   },
   "moon": {
@@ -130,9 +130,9 @@
       "Beim ersten Viertel ist die sichtbare Scheibe nicht ganz hell. Vergleiche Phasennamen und beobachtete Lichtfläche."
     ],
     "hard": [
-      "Der Mond reflektiert auch beim Vollmond Sonnenlicht. Fehlende Reflexion erklärt nicht, warum eine Finsternis ausbleibt.",
+      "Auch bei Vollmond kann der Erdschatten in Richtung der Mondbahn liegen. Für eine Finsternis muss der Mond ihn aber tatsächlich durchqueren.",
       "",
-      "Die Sonne geht nicht monatlich aus. Für eine Finsternis zählt die passende räumliche Ausrichtung."
+      "Der Abstand allein erklärt die fehlenden monatlichen Finsternisse nicht. Entscheidend ist auch die räumliche Ausrichtung der geneigten Bahn."
     ]
   },
   "clocks": {
@@ -147,9 +147,9 @@
       "Eine gesetzliche Zeitumstellung kehrt die Erdrotation nicht um. Uhrzeitregel und Erdbewegung sind verschieden."
     ],
     "hard": [
-      "Datum und Sommerzeit können zum Vergleich gehören. Eine Uhrzeit ohne diese Angaben bleibt mehrdeutig.",
+      "23:30 kann zu einem anderen Kalendertag gehören als 00:30. Die größere Stundenzahl allein ordnet verschiedene Ortszeiten nicht eindeutig.",
       "",
-      "Die dargestellten Städte haben nicht immer dieselbe Ortszeit. Denselben Moment beschreiben unterschiedliche Uhr- und Datumsanzeigen."
+      "Sommerzeitregeln können sich je nach Ort und Datum unterscheiden. Ein fester Stundenunterschied darf nicht ohne diese Angaben angenommen werden."
     ]
   },
   "tides": {
@@ -164,9 +164,9 @@
       "Ein kleinerer Unterschied ist nicht automatisch null. Im Modell bleibt Gezeitenwirkung bestehen."
     ],
     "hard": [
-      "Küsten haben unterschiedliche örtliche Gezeiten. Diese Modellkurve gilt nicht als sichere Angabe für jede Küste.",
+      "Küstenform, Tiefe und örtliche Verzögerungen unterscheiden sich. Dieselbe Mondstellung liefert keine überall gleiche Uhrzeit.",
       "",
-      "Vollmond ist kein Sicherheitsnachweis für einen Aufenthalt im Watt. Aktuelle örtliche Angaben und Sicherheitsregeln bleiben nötig."
+      "Eine selbst verschobene Kurve ersetzt keine aktuellen örtlichen Gezeitenangaben und Sicherheitsregeln. Auch Wetter und Bedingungen vor Ort zählen."
     ]
   },
   "solar": {
@@ -181,9 +181,9 @@
       "Die äußeren Planeten sind keine Monde der Erde. Im dargestellten Planetensystem umlaufen sie die Sonne."
     ],
     "hard": [
-      "Im Modell sind acht Planeten dargestellt. Die Schwierigkeit des Maßstabs hängt nicht an einer Zahl von vier.",
+      "Ein Bildschirmwechsel verändert die Darstellung, nicht die echten Planetenabstände. Entscheidend ist das Verhältnis von Planetendurchmessern und Abständen.",
       "",
-      "Die Planeten haben unterschiedliche Größen. Gleiche gezeichnete Symbolgrößen wären eine Darstellungsentscheidung, kein Beweis gleicher echter Größen."
+      "Die Planetenbahnen besitzen unterschiedliche Abstände zur Sonne. Gleiche Abstände wären eine falsche Vereinfachung, keine Lösung des Maßstabsproblems."
     ]
   }
 }
