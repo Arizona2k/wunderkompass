@@ -1696,8 +1696,15 @@
     "category": "capitals",
     "lat": -3.376087,
     "lon": 29.360006,
-    "text": "Bujumbura ist eine Hauptstadt von Burundi.",
-    "fact": "Eine Hauptstadt ist nicht immer die größte Stadt des Landes. Einige Länder haben mehrere Hauptstädte."
+    "text": "Bujumbura ist ein wichtiges Wirtschaftszentrum Burundis. Die politische Hauptstadt heißt Gitega.",
+    "fact": "Die politische Hauptstadt und das größte Wirtschaftszentrum können verschiedene Städte sein.",
+    "geographySources": [
+      {
+        "title": "Burundisches Außenministerium · Geografie",
+        "url": "https://www.mae.gov.bi/geographie/"
+      }
+    ],
+    "geographyCheckedOn": "2026-10-21"
   },
   {
     "id": "capital-1159151173",
@@ -1796,8 +1803,15 @@
     "category": "capitals",
     "lat": 6.36298,
     "lon": 2.404355,
-    "text": "Cotonou ist eine Hauptstadt von Benin.",
-    "fact": "Eine Hauptstadt ist nicht immer die größte Stadt des Landes. Einige Länder haben mehrere Hauptstädte."
+    "text": "Cotonou ist der Regierungssitz von Benin. Die offizielle Hauptstadt heißt Porto-Novo.",
+    "fact": "Hauptstadt und Regierungssitz müssen nicht dieselbe Stadt sein.",
+    "geographySources": [
+      {
+        "title": "Australisches Außenministerium · Benin",
+        "url": "https://www.dfat.gov.au/geo/benin"
+      }
+    ],
+    "geographyCheckedOn": "2026-10-21"
   },
   {
     "id": "capital-1159151109",
@@ -1998,5 +2012,47 @@
     "lon": 10.83,
     "text": "Ciudad de la Paz ist seit Januar 2026 die Hauptstadt von Äquatorialguinea.",
     "fact": "Hauptstädte können sich ändern. Malabo war die frühere Hauptstadt."
+  },
+  {
+    "id": "capital-1159146001",
+    "name": "Gitega",
+    "kind": "nature",
+    "category": "capitals",
+    "lat": -3.426007,
+    "lon": 29.843594,
+    "text": "Gitega ist die politische Hauptstadt von Burundi. Bujumbura ist ein wichtiges Wirtschaftszentrum.",
+    "fact": "Eine Hauptstadt muss nicht die größte oder wirtschaftlich wichtigste Stadt eines Landes sein.",
+    "geographySources": [
+      {
+        "title": "Burundisches Außenministerium · Geografie",
+        "url": "https://www.mae.gov.bi/geographie/"
+      },
+      {
+        "title": "Natural Earth · Ortslagen",
+        "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/"
+      }
+    ],
+    "geographyCheckedOn": "2026-10-21"
+  },
+  {
+    "id": "capital-1159150345",
+    "name": "Porto-Novo",
+    "kind": "nature",
+    "category": "capitals",
+    "lat": 6.483311,
+    "lon": 2.616626,
+    "text": "Porto-Novo ist die offizielle Hauptstadt von Benin. Der Regierungssitz liegt in Cotonou.",
+    "fact": "Eine Hauptstadt muss nicht die größte oder wirtschaftlich wichtigste Stadt eines Landes sein.",
+    "geographySources": [
+      {
+        "title": "Australisches Außenministerium · Benin",
+        "url": "https://www.dfat.gov.au/geo/benin"
+      },
+      {
+        "title": "Natural Earth · Ortslagen",
+        "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/"
+      }
+    ],
+    "geographyCheckedOn": "2026-10-21"
   }
 ]
