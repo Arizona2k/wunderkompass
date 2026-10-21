@@ -1,0 +1,44 @@
+{
+  "source": "87a1504edef02c537adca2efefbb18938b539fa5",
+  "meaning": "Three exact original pre-correction questions, not regenerated protected baseline",
+  "questions": [
+    {
+      "prompt": "Welcher Lebensraum passt zu Blauwal?",
+      "answers": [
+        "Ozean",
+        "Arktis",
+        "Antarktis"
+      ],
+      "correct": 0,
+      "why": "Blauwale leben in allen Ozeanen außer dem Arktischen Ozean, zum Beispiel vor Kalifornien.",
+      "id": "animal-blue-whale",
+      "topic": "animal-blue-whale",
+      "image": "blue-whale"
+    },
+    {
+      "prompt": "Welcher Lebensraum passt zu Orca?",
+      "answers": [
+        "Ozean",
+        "Arktis",
+        "Antarktis"
+      ],
+      "correct": 0,
+      "why": "Orcas kommen in allen Ozeanen vor, besonders häufig in kühleren Meeren.",
+      "id": "animal-orca",
+      "topic": "animal-orca",
+      "image": "orca"
+    },
+    {
+      "prompt": "Welcher Lebensraum passt zu Walross?",
+      "answers": [
+        "Arktische Küsten und Meere",
+        "Arktis",
+        "Antarktis"
+      ],
+      "correct": 0,
+      "why": "Tastborsten helfen, Nahrung zu finden.",
+      "id": "animal-walrus",
+      "topic": "animal-walrus"
+    }
+  ]
+}

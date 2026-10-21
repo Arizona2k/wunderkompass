@@ -1,0 +1,880 @@
+{
+  "status": "implemented and complete current local browser/offline passed; exact final CI and actual test-live release pending",
+  "scope": "Explicit comparison of complete diet descriptions; no regex inference from a word in the correct answer. Existing48IDs and canonical descriptions preserved. Wrong alternatives make exclusive claims to avoid a possible food item becoming a false complete diet. Monarch stages and adult green-turtle wording retained.",
+  "sourceAccess": "Existing reviewed catalog/source evidence reused, no fresh whole-source or independent human review claim.",
+  "entries": [
+    {
+      "id": "animal-african-savanna-elephant",
+      "comparison": "plant",
+      "correctDescription": "Pflanzen",
+      "existingFoodEvidence": [
+        "Er frisst Gras, Blätter, Zweige, Früchte und Rinde."
+      ],
+      "sourceLinks": [
+        {
+          "label": "African Bush Elephant – Tama Zoological Park / Tokyo Zoological Park Society",
+          "url": "https://www.tokyo-zoo.net/tama/encyclopedia/african-bush-elephant/index.html"
+        },
+        {
+          "label": "Afrikanischer Savannenelefant – WWF Deutschland",
+          "url": "https://www.wwf.de/themen-projekte/artenlexikon/afrikanischer-savannenelefant"
+        },
+        {
+          "label": "African savanna elephants – WWF US",
+          "url": "https://www.worldwildlife.org/species/elephant/african-elephant/african-savanna-elephant/"
+        }
+      ]
+    },
+    {
+      "id": "animal-lion",
+      "comparison": "animal",
+      "correctDescription": "Fleisch",
+      "existingFoodEvidence": [
+        "Sie fressen zum Beispiel Zebras, Gnus und andere größere Tiere."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Lion – Smithsonian National Zoo",
+          "url": "https://www.nationalzoo.si.edu/animals/lion"
+        },
+        {
+          "label": "Löwe – WWF Deutschland",
+          "url": "https://www.wwf.de/themen-projekte/artenlexikon/loewe/"
+        },
+        {
+          "label": "Taronga Zoo · Löwenrufe und Lebensweise",
+          "url": "https://www.taronga.org.au/wildlife-and-conservation/animals/detail/african-lion"
+        }
+      ]
+    },
+    {
+      "id": "animal-cheetah",
+      "comparison": "animal",
+      "correctDescription": "Fleisch",
+      "existingFoodEvidence": [
+        "Sie fressen vor allem kleinere Antilopen, außerdem Hasen und Vögel."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Cheetah – Smithsonian National Zoo",
+          "url": "https://nationalzoo.si.edu/animals/cheetah"
+        },
+        {
+          "label": "Gepard – WWF Deutschland",
+          "url": "https://www.wwf.de/themen-projekte/artenlexikon/gepard/"
+        }
+      ]
+    },
+    {
+      "id": "animal-bengal-tiger",
+      "comparison": "animal",
+      "correctDescription": "Fleisch",
+      "existingFoodEvidence": [
+        "Sie jagen vor allem mittelgroße und große Tiere, zum Beispiel Hirsche und Wildschweine."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Bengal-Tiger – WWF Deutschland",
+          "url": "https://www.wwf.de/themen-projekte/artenlexikon/bengal-tiger"
+        }
+      ]
+    },
+    {
+      "id": "animal-giraffe",
+      "comparison": "plant",
+      "correctDescription": "Pflanzen",
+      "existingFoodEvidence": [
+        "Sie fressen Blätter und Triebe, oft von Akazien."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Giraffe – San Diego Zoo Wildlife Alliance",
+          "url": "https://animals.sandiegozoo.org/animals/giraffe?qt-animals_page_content_tabs=1"
+        },
+        {
+          "label": "Giraffe – Columbus Zoo",
+          "url": "https://www.columbuszoo.org/animals/giraffe"
+        },
+        {
+          "label": "Four giraffe species officially recognised – IUCN",
+          "url": "https://iucn.org/press-release/202508/four-giraffe-species-officially-recognised-major-conservation-reclassification"
+        }
+      ]
+    },
+    {
+      "id": "animal-giant-panda",
+      "comparison": "plant",
+      "correctDescription": "Bambus",
+      "existingFoodEvidence": [
+        "Sie fressen fast nur Bambus."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Giant panda – Smithsonian National Zoo",
+          "url": "https://www.nationalzoo.si.edu/animals/giant-panda"
+        },
+        {
+          "label": "Großer Panda – WWF Deutschland",
+          "url": "https://www.wwf.de/themen-projekte/artenlexikon/grosser-panda/"
+        }
+      ]
+    },
+    {
+      "id": "animal-western-lowland-gorilla",
+      "comparison": "mixed",
+      "correctDescription": "Vorwiegend Pflanzen",
+      "existingFoodEvidence": [
+        "Er frisst vor allem Blätter, Stängel und Früchte, gelegentlich auch kleine Wirbellose."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Western lowland gorilla – Smithsonian National Zoo",
+          "url": "https://www.nationalzoo.si.edu/animals/western-lowland-gorilla"
+        },
+        {
+          "label": "Westlicher Gorilla – WWF Deutschland",
+          "url": "https://www.wwf.de/themen-projekte/artenlexikon/westlicher-gorilla"
+        }
+      ]
+    },
+    {
+      "id": "animal-bornean-orangutan",
+      "comparison": "mixed",
+      "correctDescription": "Vorwiegend Pflanzen",
+      "existingFoodEvidence": [
+        "Er frisst vor allem Früchte, außerdem Blätter, Rinde und Insekten."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Borneo-Orang-Utan – WWF Deutschland",
+          "url": "https://www.wwf.de/themen-projekte/artenlexikon/borneo-orang-utan"
+        },
+        {
+          "label": "San Diego Zoo · Jungtiere lernen von ihrer Mutter",
+          "url": "https://animals.sandiegozoo.org/animals/orangutan"
+        }
+      ]
+    },
+    {
+      "id": "animal-polar-bear",
+      "comparison": "animal",
+      "correctDescription": "Fleisch",
+      "existingFoodEvidence": [
+        "Sie jagen vor allem Robben."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Polar Bear – San Diego Zoo Wildlife Alliance",
+          "url": "https://animals.sandiegozoo.org/animals/polar-bear"
+        },
+        {
+          "label": "Eisbär – WWF Deutschland",
+          "url": "https://www.wwf.de/themen-projekte/artenlexikon/eisbaer/"
+        }
+      ]
+    },
+    {
+      "id": "animal-emperor-penguin",
+      "comparison": "animal",
+      "correctDescription": "Fisch und Meerestiere",
+      "existingFoodEvidence": [
+        "Er frisst Fische, Krill und Tintenfische."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Emperor penguin – Australian Antarctic Program",
+          "url": "https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/"
+        },
+        {
+          "label": "Penguin Record Breakers – Penguins International",
+          "url": "https://www.penguinsinternational.org/penguin-record-breakers/"
+        },
+        {
+          "label": "Emperor penguin and Antarctic fur seal now Endangered – IUCN",
+          "url": "https://iucn.org/press-release/202604/emperor-penguin-and-antarctic-fur-seal-now-endangered-due-climate-change-iucn"
+        }
+      ]
+    },
+    {
+      "id": "animal-blue-whale",
+      "comparison": "animal",
+      "correctDescription": "Krill",
+      "existingFoodEvidence": [
+        "Sie fressen fast nur Krill – kleine garnelenähnliche Krebstiere."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Blue Whale – NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/blue-whale"
+        },
+        {
+          "label": "Blue whales – WWF US",
+          "url": "https://www.worldwildlife.org/species/whale/blue-whale/"
+        }
+      ]
+    },
+    {
+      "id": "animal-common-bottlenose-dolphin",
+      "comparison": "animal",
+      "correctDescription": "Fisch und Meerestiere",
+      "existingFoodEvidence": [
+        "Er frisst Fische, Tintenfische und Krebstiere."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Common Bottlenose Dolphin – NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin"
+        },
+        {
+          "label": "Common bottlenose dolphins – WWF US",
+          "url": "https://www.worldwildlife.org/species/dolphin-and-porpoise/common-bottlenose-dolphin/"
+        },
+        {
+          "label": "Red List Updates … Lahille’s Bottlenose Dolphins – IUCN SSC CSG",
+          "url": "https://iucn-csg.org/red-list-updates-published-for-sperm-whales-and-lahilles-bottlenose-dolphins/"
+        },
+        {
+          "label": "NOAA · Delfine atmen Luft",
+          "url": "https://www.fisheries.noaa.gov/feature-story/scientists-analyze-dolphin-breaths-better-understand-risks-surface-oil"
+        }
+      ]
+    },
+    {
+      "id": "animal-orca",
+      "comparison": "animal",
+      "correctDescription": "Je nach Gruppe verschiedene Beutetiere",
+      "existingFoodEvidence": [
+        "Manche Gruppen fressen vor allem Fische. Andere jagen Meeressäuger wie Robben."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Killer Whale – NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/killer-whale"
+        },
+        {
+          "label": "Top 10 facts about Orcas – WWF UK",
+          "url": "https://www.wwf.org.uk/learn/fascinating-facts/orcas"
+        }
+      ]
+    },
+    {
+      "id": "animal-common-octopus",
+      "comparison": "animal",
+      "correctDescription": "Meerestiere",
+      "existingFoodEvidence": [
+        "Er frisst zum Beispiel Krebse, Muscheln, Schnecken und Fische."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Common Octopus – Aquarium La Rochelle",
+          "url": "https://www.aquarium-larochelle.com/en/species-encyclopedia/common-octopus/"
+        },
+        {
+          "label": "Influx of Octopus … – Devon and Severn IFCA",
+          "url": "https://www.devonandsevernifca.gov.uk/wp-content/uploads/2025/06/Agenda-Item-11-Influx-of-Octopus-into-Devon-and-the-South-West.pdf"
+        }
+      ]
+    },
+    {
+      "id": "animal-green-sea-turtle",
+      "comparison": "plant",
+      "correctDescription": "Als erwachsenes Tier vor allem Pflanzen",
+      "existingFoodEvidence": [
+        "Erwachsene fressen vor allem Seegras und Algen. Junge Tiere fressen auch kleine Tiere."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Green Turtle – NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/green-turtle"
+        },
+        {
+          "label": "Meeresschildkrötenarten – Turtle Foundation",
+          "url": "https://turtle-foundation.org/de/meeresschildkroeten/arten/"
+        },
+        {
+          "label": "Arctic seals … global green turtle recovery – IUCN",
+          "url": "https://iucn.org/press-release/202510/arctic-seals-threatened-climate-change-birds-decline-globally-iucn-red-list"
+        }
+      ]
+    },
+    {
+      "id": "animal-red-kangaroo",
+      "comparison": "plant",
+      "correctDescription": "Pflanzen",
+      "existingFoodEvidence": [
+        "Es frisst Gräser und andere kleine grüne Pflanzen."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Red Kangaroo – Taronga Conservation Society Australia",
+          "url": "https://www.taronga.org.au/wildlife-and-conservation/animals/detail/red-kangaroo"
+        }
+      ]
+    },
+    {
+      "id": "animal-koala",
+      "comparison": "plant",
+      "correctDescription": "Eukalyptusblätter",
+      "existingFoodEvidence": [
+        "Sie fressen hauptsächlich Eukalyptusblätter."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Koala – San Diego Zoo Wildlife Alliance",
+          "url": "https://animals.sandiegozoo.org/animals/koala"
+        },
+        {
+          "label": "Koala listing under national environmental law – Australian DCCEEW",
+          "url": "https://www.dcceew.gov.au/environment/biodiversity/threatened/species/koalas/listing-under-national-environmental-law"
+        }
+      ]
+    },
+    {
+      "id": "animal-jaguar",
+      "comparison": "animal",
+      "correctDescription": "Fleisch",
+      "existingFoodEvidence": [
+        "Sie fressen viele verschiedene Tiere, zum Beispiel Hirsche, Tapire und Gürteltiere."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Jaguar – WWF Schweiz",
+          "url": "https://www.wwf.ch/de/tierarten/jaguar-der-im-fliegen-jagt"
+        },
+        {
+          "label": "Jaguar – San Diego Zoo Wildlife Alliance",
+          "url": "https://animals.sandiegozoo.org/animals/jaguar"
+        }
+      ]
+    },
+    {
+      "id": "animal-honey-bee",
+      "comparison": "plant",
+      "correctDescription": "Nektar und Pollen",
+      "existingFoodEvidence": [
+        "Erwachsene Bienen fressen Nektar und Pollen."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Honigbiene, Europäische (Westliche) – Zoo Frankfurt",
+          "url": "https://www.zoo-frankfurt.de/de/tiere-von-a-z-detailansicht/animal/tiere-von-a-z-detailansicht/honigbiene-europaeische-westliche"
+        },
+        {
+          "label": "Honey Bee – North Carolina Zoo",
+          "url": "https://www.nczoo.org/wildlife/animals/honey-bee"
+        },
+        {
+          "label": "Wild Honey Bee: a step forward for its protection – Fondazione Edmund Mach",
+          "url": "https://fmach.it/en/Communication/Press-releases/Wild-Honey-Bee-a-step-forward-for-its-protection"
+        }
+      ]
+    },
+    {
+      "id": "animal-axolotl",
+      "comparison": "animal",
+      "correctDescription": "Kleine Wassertiere",
+      "existingFoodEvidence": [
+        "Sie fressen Würmer, Insekten, kleine Krebstiere und kleine Fische."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Axolotl – Toronto Zoo",
+          "url": "https://www.torontozoo.com/animals/Axolotl"
+        },
+        {
+          "label": "Axolotl – San Diego Zoo Wildlife Alliance",
+          "url": "https://animals.sandiegozoo.org/animals/axolotl"
+        }
+      ]
+    },
+    {
+      "id": "animal-whale-shark",
+      "comparison": "animal",
+      "correctDescription": "Kleine Tiere im Plankton",
+      "existingFoodEvidence": [
+        "Kleine Tiere im Plankton"
+      ],
+      "sourceLinks": [
+        {
+          "label": "Georgia Aquarium · Walhai",
+          "url": "https://www.georgiaaquarium.org/animal/whale-shark/"
+        }
+      ]
+    },
+    {
+      "id": "animal-garden-cross-spider",
+      "comparison": "animal",
+      "correctDescription": "Insekten",
+      "existingFoodEvidence": [
+        "Insekten"
+      ],
+      "sourceLinks": [
+        {
+          "label": "The Wildlife Trusts · Garden spider",
+          "url": "https://www.wildlifetrusts.org/wildlife-explorer/invertebrates/spiders/garden-spider"
+        },
+        {
+          "label": "Natural History Museum · Spinnen und Insekten unterscheiden",
+          "url": "https://www.nhm.ac.uk/schools/teaching-resources/key-stage-2/life-cycles-habitats-and-classification/practical-activity-classification-exploration.html"
+        },
+        {
+          "label": "Natural History Museum · Wie Spinnseide entsteht",
+          "url": "https://www.nhm.ac.uk/discover/what-are-spider-webs-made-of.html"
+        }
+      ]
+    },
+    {
+      "id": "animal-dromedary",
+      "comparison": "plant",
+      "correctDescription": "Gräser und andere Pflanzen",
+      "existingFoodEvidence": [
+        "Gräser und andere Pflanzen"
+      ],
+      "sourceLinks": [
+        {
+          "label": "Animal Diversity Web · Dromedar",
+          "url": "https://animaldiversity.org/accounts/Camelus_dromedarius/"
+        },
+        {
+          "label": "San Diego Zoo · Ein und zwei Höcker",
+          "url": "https://animals.sandiegozoo.org/animals/camel"
+        }
+      ]
+    },
+    {
+      "id": "animal-white-tailed-eagle",
+      "comparison": "animal",
+      "correctDescription": "Fische, Vögel und auch tote Tiere",
+      "existingFoodEvidence": [
+        "Fische, Vögel und auch tote Tiere"
+      ],
+      "sourceLinks": [
+        {
+          "label": "RSPB · Große Greifvögel",
+          "url": "https://www.rspb.org.uk/birds-and-wildlife/birds-of-the-month/august-birds-of-the-month"
+        },
+        {
+          "label": "NABU · Greifvogel-Flugbilder: Spannweitenvergleich",
+          "url": "https://www.nabu.de/imperia/md/content/nabude/vogelschutz/27.pdf"
+        },
+        {
+          "label": "NABU · Seeadler: Lebensraum und Gefieder",
+          "url": "https://www.nabu.de/tiere-und-pflanzen/voegel/portraets/seeadler/"
+        },
+        {
+          "label": "Nationalpark Donau-Auen · Seeadler, Thermik und Altersmerkmale",
+          "url": "https://www.donauauen.at/aktuelles/blog/seeadler-in-den-donau-auen-beobachten"
+        }
+      ]
+    },
+    {
+      "id": "animal-platypus",
+      "comparison": "animal",
+      "correctDescription": "Kleine Wassertiere",
+      "existingFoodEvidence": [
+        "Kleine Wassertiere."
+      ],
+      "sourceLinks": [
+        {
+          "label": "San Diego Zoo Wildlife Alliance · Schnabeltier",
+          "url": "https://animals.sandiegozoo.org/animals/platypus"
+        },
+        {
+          "label": "NSW Environment · Schnabeltier und Gewässerschutz",
+          "url": "https://www.environment.nsw.gov.au/topics/animals-and-plants/native-animals/native-animal-facts/land-mammals/platypus"
+        }
+      ]
+    },
+    {
+      "id": "animal-short-beaked-echidna",
+      "comparison": "animal",
+      "correctDescription": "Ameisen und Termiten",
+      "existingFoodEvidence": [
+        "Ameisen und Termiten."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Australian Museum · Kurzschnabeligel",
+          "url": "https://australian.museum/learn/animals/mammals/short-beaked-echidna/"
+        }
+      ]
+    },
+    {
+      "id": "animal-okapi",
+      "comparison": "plant",
+      "correctDescription": "Blätter und andere Pflanzenteile",
+      "existingFoodEvidence": [
+        "Blätter und andere Pflanzenteile."
+      ],
+      "sourceLinks": [
+        {
+          "label": "San Diego Zoo Wildlife Alliance · Okapi",
+          "url": "https://animals.sandiegozoo.org/animals/okapi"
+        }
+      ]
+    },
+    {
+      "id": "animal-meerkat",
+      "comparison": "animal",
+      "correctDescription": "Vor allem kleine Tiere",
+      "existingFoodEvidence": [
+        "Vor allem kleine Tiere."
+      ],
+      "sourceLinks": [
+        {
+          "label": "San Diego Zoo Wildlife Alliance · Erdmännchen",
+          "url": "https://animals.sandiegozoo.org/animals/meerkat"
+        }
+      ]
+    },
+    {
+      "id": "animal-ring-tailed-lemur",
+      "comparison": "mixed",
+      "correctDescription": "Früchte, Blätter und auch Insekten",
+      "existingFoodEvidence": [
+        "Früchte, Blätter und auch Insekten."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Smithsonian National Zoo · Katta",
+          "url": "https://www.nationalzoo.si.edu/animals/ring-tailed-lemur"
+        }
+      ]
+    },
+    {
+      "id": "animal-north-american-beaver",
+      "comparison": "plant",
+      "correctDescription": "Pflanzen und Rinde",
+      "existingFoodEvidence": [
+        "Pflanzen und Rinde."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Smithsonian National Zoo · Nordamerikanischer Biber",
+          "url": "https://www.nationalzoo.si.edu/animals/beaver"
+        }
+      ]
+    },
+    {
+      "id": "animal-walrus",
+      "comparison": "animal",
+      "correctDescription": "Vor allem wirbellose Bodentiere",
+      "existingFoodEvidence": [
+        "Vor allem wirbellose Bodentiere."
+      ],
+      "sourceLinks": [
+        {
+          "label": "US Fish & Wildlife Service · Walross",
+          "url": "https://www.fws.gov/program/alaska-marine-mammals-management-office/alaska-walrus-program"
+        },
+        {
+          "label": "OBIS-SEAMAP · Walrus: Artprofil und Körpermaße",
+          "url": "https://seamap.env.duke.edu/species/180639/html"
+        },
+        {
+          "label": "Marine Mammal Commission · Pacific Walrus",
+          "url": "https://www.mmc.gov/priority-topics/species-of-concern/pacific-walrus/"
+        }
+      ]
+    },
+    {
+      "id": "animal-red-fox",
+      "comparison": "mixed",
+      "correctDescription": "Verschiedene tierische und pflanzliche Nahrung",
+      "existingFoodEvidence": [
+        "Verschiedene tierische und pflanzliche Nahrung."
+      ],
+      "sourceLinks": [
+        {
+          "label": "University of Michigan · Animal Diversity Web · Rotfuchs",
+          "url": "https://animaldiversity.org/accounts/Vulpes_vulpes/"
+        }
+      ]
+    },
+    {
+      "id": "animal-raccoon",
+      "comparison": "mixed",
+      "correctDescription": "Verschiedene tierische und pflanzliche Nahrung",
+      "existingFoodEvidence": [
+        "Verschiedene tierische und pflanzliche Nahrung."
+      ],
+      "sourceLinks": [
+        {
+          "label": "University of Michigan · Animal Diversity Web · Waschbär",
+          "url": "https://animaldiversity.org/accounts/Procyon_lotor/"
+        }
+      ]
+    },
+    {
+      "id": "animal-hedgehog",
+      "comparison": "animal",
+      "correctDescription": "Kleine wirbellose Tiere",
+      "existingFoodEvidence": [
+        "Kleine wirbellose Tiere."
+      ],
+      "sourceLinks": [
+        {
+          "label": "The Wildlife Trusts · Braunbrustigel",
+          "url": "https://www.wildlifetrusts.org/wildlife-explorer/mammals/european-hedgehog"
+        }
+      ]
+    },
+    {
+      "id": "animal-barn-owl",
+      "comparison": "animal",
+      "correctDescription": "Vor allem kleine Säugetiere",
+      "existingFoodEvidence": [
+        "Vor allem kleine Säugetiere."
+      ],
+      "sourceLinks": [
+        {
+          "label": "British Trust for Ornithology · Schleiereule",
+          "url": "https://www.bto.org/learn/about-birds/birdfacts/barn-owl"
+        },
+        {
+          "label": "RSPB · Schleiereule: Gesicht und Lebensraum",
+          "url": "https://www.rspb.org.uk/birds-and-wildlife/barn-owl"
+        }
+      ]
+    },
+    {
+      "id": "animal-kingfisher",
+      "comparison": "animal",
+      "correctDescription": "Vor allem kleine Fische",
+      "existingFoodEvidence": [
+        "Vor allem kleine Fische."
+      ],
+      "sourceLinks": [
+        {
+          "label": "RSPB · Eisvogel",
+          "url": "https://www.rspb.org.uk/birds-and-wildlife/kingfisher"
+        },
+        {
+          "label": "BTO · Kingfisher: gemessene Flügellängen",
+          "url": "https://www.bto.org/learn/about-birds/birdfacts/kingfisher"
+        }
+      ]
+    },
+    {
+      "id": "animal-ostrich",
+      "comparison": "mixed",
+      "correctDescription": "Vor allem Pflanzen, auch kleine Tiere",
+      "existingFoodEvidence": [
+        "Vor allem Pflanzen, auch kleine Tiere."
+      ],
+      "sourceLinks": [
+        {
+          "label": "San Diego Zoo Wildlife Alliance · Afrikanischer Strauß",
+          "url": "https://animals.sandiegozoo.org/animals/ostrich"
+        }
+      ]
+    },
+    {
+      "id": "animal-atlantic-puffin",
+      "comparison": "animal",
+      "correctDescription": "Vor allem kleine Fische",
+      "existingFoodEvidence": [
+        "Vor allem kleine Fische."
+      ],
+      "sourceLinks": [
+        {
+          "label": "National Audubon Society · Papageitaucher",
+          "url": "https://www.audubon.org/field-guide/bird/atlantic-puffin"
+        }
+      ]
+    },
+    {
+      "id": "animal-common-chameleon",
+      "comparison": "animal",
+      "correctDescription": "Vor allem Insekten",
+      "existingFoodEvidence": [
+        "Vor allem Insekten."
+      ],
+      "sourceLinks": [
+        {
+          "label": "University of Michigan · Animal Diversity Web · Europäisches Chamäleon",
+          "url": "https://animaldiversity.org/accounts/Chamaeleo_chamaeleon/"
+        }
+      ]
+    },
+    {
+      "id": "animal-fire-salamander",
+      "comparison": "animal",
+      "correctDescription": "Kleine wirbellose Tiere",
+      "existingFoodEvidence": [
+        "Kleine wirbellose Tiere."
+      ],
+      "sourceLinks": [
+        {
+          "label": "NABU · Feldherpetologie · Feuersalamander",
+          "url": "https://nabu-lfa-feldherpetologie.jimdoweb.com/tiergruppen/amphibien/feuersalamander/"
+        },
+        {
+          "label": "NABU Euskirchen · Feuersalamander-Portrait",
+          "url": "https://www.nabu-euskirchen.de/2026/06/03/feuersalamander-ein-portrait/"
+        }
+      ]
+    },
+    {
+      "id": "animal-common-frog",
+      "comparison": "animal",
+      "correctDescription": "Kleine Tiere",
+      "existingFoodEvidence": [
+        "Kleine Tiere."
+      ],
+      "sourceLinks": [
+        {
+          "label": "The Wildlife Trusts · Grasfrosch",
+          "url": "https://www.wildlifetrusts.org/wildlife-explorer/amphibians/common-frog"
+        }
+      ]
+    },
+    {
+      "id": "animal-eastern-clown-anemonefish",
+      "comparison": "mixed",
+      "correctDescription": "Algen und Zooplankton",
+      "existingFoodEvidence": [
+        "Algen und Zooplankton."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Australian Museum · Echter Clownfisch",
+          "url": "https://australian.museum/learn/animals/fishes/eastern-clown-anemonefish-amphiprion-percula/"
+        },
+        {
+          "label": "Monterey Bay Aquarium · Seeanemonen als Nesseltiere",
+          "url": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/carpet-anemone"
+        }
+      ]
+    },
+    {
+      "id": "animal-european-eel",
+      "comparison": "animal",
+      "correctDescription": "Kleine Wassertiere",
+      "existingFoodEvidence": [
+        "Kleine Wassertiere."
+      ],
+      "sourceLinks": [
+        {
+          "label": "The Wildlife Trusts · Europäischer Aal",
+          "url": "https://www.wildlifetrusts.org/national-marine-week/incredible-journeys"
+        },
+        {
+          "label": "WWT · European Eel",
+          "url": "https://www.wwt.org.uk/discover-wetlands/wetland-wildlife/species-factfiles/european-eel"
+        },
+        {
+          "label": "Wright et al.2022 · Aalwanderung mit Sendern, Originalstudie (PDF)",
+          "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/291319540/s41598_022_19248_8.pdf"
+        },
+        {
+          "label": "Wright et al.2022 · Korrektur der Geschwindigkeitseinheit (PDF)",
+          "url": "https://backend.orbit.dtu.dk/ws/files/299778347/s41598_022_26117_x.pdf"
+        }
+      ]
+    },
+    {
+      "id": "animal-monarch-butterfly",
+      "comparison": "stages",
+      "correctDescription": "Raupen: Seidenpflanzen; Falter: Nektar",
+      "existingFoodEvidence": [
+        "Raupen: Seidenpflanzen; Falter: Nektar."
+      ],
+      "sourceLinks": [
+        {
+          "label": "US Fish & Wildlife Service · Monarchfalter",
+          "url": "https://www.fws.gov/species/monarch-danaus-plexippus"
+        }
+      ]
+    },
+    {
+      "id": "animal-garden-snail",
+      "comparison": "plant",
+      "correctDescription": "Pflanzliches Material",
+      "existingFoodEvidence": [
+        "Pflanzliches Material."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Natural History Museum · Gefleckte Weinbergschnecke",
+          "url": "https://www.nhm.ac.uk/discover/snails-and-slugs.html"
+        },
+        {
+          "label": "Conchological Society · Cornu aspersum: Gehäusemaße",
+          "url": "https://conchsoc.org/aids_to_id/helasp.php"
+        },
+        {
+          "label": "Naturportal Südwest · Cornu aspersum und Gehäusemaße",
+          "url": "https://naturportal-suedwest.de/de/weichtiere/systematik/art/gehaeuseschnecken-land-gastropoda/helicidae-schnirkelschnecken/cornu/aspersum/"
+        }
+      ]
+    },
+    {
+      "id": "animal-european-lobster",
+      "comparison": "animal",
+      "correctDescription": "Verschiedene wirbellose Meerestiere",
+      "existingFoodEvidence": [
+        "Verschiedene wirbellose Meerestiere."
+      ],
+      "sourceLinks": [
+        {
+          "label": "The Wildlife Trusts · Europäischer Hummer",
+          "url": "https://www.wildlifetrusts.org/wildlife-explorer/marine/crustaceans/lobster"
+        }
+      ]
+    },
+    {
+      "id": "animal-common-cuttlefish",
+      "comparison": "animal",
+      "correctDescription": "Krebse, Fische und andere kleine Meerestiere",
+      "existingFoodEvidence": [
+        "Krebse, Fische und andere kleine Meerestiere."
+      ],
+      "sourceLinks": [
+        {
+          "label": "The Wildlife Trusts · Gewöhnlicher Tintenfisch",
+          "url": "https://www.wildlifetrusts.org/wildlife-explorer/marine/squids-octopuses-and-cuttlefish/common-cuttlefish"
+        },
+        {
+          "label": "MarLIN · Sepia officinalis: Körperbau und Mantellänge",
+          "url": "https://www.marlin.ac.uk/species/detail/1098"
+        }
+      ]
+    },
+    {
+      "id": "animal-short-snouted-seahorse",
+      "comparison": "animal",
+      "correctDescription": "Kleine Beutetiere",
+      "existingFoodEvidence": [
+        "Kleine Beutetiere."
+      ],
+      "sourceLinks": [
+        {
+          "label": "The Wildlife Trusts · Kurzschnäuziges Seepferdchen",
+          "url": "https://www.wildlifetrusts.org/wildlife-explorer/marine/fish-including-sharks-skates-and-rays/short-snouted-seahorse"
+        },
+        {
+          "label": "MarLIN · Hippocampus hippocampus: Merkmale und Länge",
+          "url": "https://www.marlin.ac.uk/species/detail/1788"
+        }
+      ]
+    }
+  ],
+  "completeLocalEvidence": {
+    "status": "passed complete unchanged local mandatory browser and offline run",
+    "build": "d70c992140b599c3",
+    "originalFullHead": "c60f51fdbfe20ffa6d33d2c5d9eaf2a239390957",
+    "originalSourceDigest": "7d9438f8e1bde188d34a33b5f44b20110e21bca1be1e5bff10966b4d179b3b2a",
+    "originalReport": "/workspace/work/wk-continuation/world-games-c60f51f-full-local-originals-20261021/portable-report.json",
+    "originalReportSHA256": "dc7d23d7f2573cb51cbfd13729913f1962086a30c0b6fbaa3821179ba51ddbd5",
+    "mandatoryGroups": 10,
+    "informationalChecks": 133,
+    "habitatCompatibilityCases": 2,
+    "learningCopyCases": 48,
+    "serverStoppedCases": 6,
+    "nativeOfflineCases": 6,
+    "browser": "154.0.8037.57",
+    "speechScope": "Actual text/selected voice/rate handoff checked; no hearing or physical-device claim.",
+    "finalCIAndDeployment": "Pending exact final GitHub engines, fresh native readiness and actual test-live delivery/browser check."
+  }
+}

@@ -1,3 +1,7 @@
+## Lokal vollständig geprüft · eindeutige Weltspiele und verständliche Lernhilfen
+
+48Habitat- und48Nahrungsvergleiche fachlich abgegrenzt,48Tierdetektivrätsel ohne Namensverräter sowie getrennte freiwillige Denkhinweise, antwortbezogene Rückmeldungen und Erklärungen. Alte Antworten/Spielrunden und verdiente Erfolge erhalten. Vollständige aktuelle lokale Browser-/Offlineabnahme mit133Prüfmeldungen erfolgreich;174Units und130Releasefälle vor dem Volltest grün.56UI-Nachweise erst danach erneuert. Die tatsächlich ausgelieferte53 ist als49.Chronikeintrag für diesen regulären Folgestand belegt. Aktuelles finales GitHub-CI und Veröffentlichung dieses Spielabschnitts noch offen. Frühere Einträge darunter dokumentieren ihren damaligen Stand; PR52/53 sind inzwischen erfolgreich ausgeliefert.
+
 ## Lokal vollständig geprüft · Planet und Erdinneres
 
 Zehn vorhandene Kapiteltexte verständlicher erklärt, Quellen zugeordnet und Insel-/Kontinentbegriff präzisiert.30Aufgaben und achtModelle sowie alle übrigen Inhalte/Spielstände erhalten. Vollständige lokale Browser-/Offlineabnahme bestanden; bestätigte Biografien-Veröffentlichung52 in der regulären Chronik nachgeführt. Aktuelles finales GitHub-CI und tatsächliche Veröffentlichung dieses Folgestands noch offen.

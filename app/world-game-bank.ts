@@ -1,3 +1,6 @@
+import {habitatDistractors} from './world-game-habitats.mjs';
+import {animalDetectiveClue} from './world-game-support.mjs';
+import {foodDistractors} from './world-game-food.mjs';
 import CATALOG from './world-catalog.json' with {type:'json'};
 import type {WorldTopic,WorldQuestion} from './world-types';
 const TOPICS=CATALOG as WorldTopic[];
@@ -34,7 +37,7 @@ export function worldGameBank(id:string):GameItem[]{const animals=TOPICS.filter(
   return q(t,question(prompt,t.title,[historicalInventions[(index+3)%historicalInventions.length].title,historicalInventions[(index+5)%historicalInventions.length].title],t.invention!.stages[2].text));
  });
  if(id==='then-now')return historicalInventions.flatMap(t=>[q(t,{...question('Früher oder heute? '+t.invention!.stages[3].text,'Früher',['Heute','Noch keine wirkliche Entwicklung'],t.invention!.stages[4].text),prompt:'Früher oder heute? '+t.invention!.stages[3].text}),{...q(t,question('Früher oder heute? '+t.invention!.stages[4].text,'Heute',['Früher','Nur ein Zukunftswunsch'],t.invention!.stages[3].text)),id:t.id+'-today'}]);
- if(id==='food')return animals.map(t=>{const food=t.animal!.diet;const wrong=(/Fleisch|Fisch|Krill|Beute|Meerestiere|Wassertiere/.test(food)?['Blätter und Gras','Nektar und Pollen']:['Robben','Fische und Tintenfische']).filter(x=>x!==food).slice(0,2);return q(t,question('Welche Nahrung passt besonders zu '+t.title+'?',food,wrong,t.facts.find(f=>f.label==='Was frisst es?'||f.label==='Nahrung')?.text??food),t.image);});
- if(id==='habitats')return animals.map(t=>q(t,question('Welcher Lebensraum passt zu '+t.title+'?',t.animal!.habitat,['Arktis','Antarktis','Savanne','Regenwald','Ozean','Wald'].filter(s=>s!==t.animal!.habitat).slice(0,2),t.intro),t.image));
- return animals.map((t,i)=>q(t,question('Wer bin ich? '+t.paragraphs[t.paragraphs.length-1]+' '+t.surprise,t.title,[animals[(i+5)%animals.length].title,animals[(i+9)%animals.length].title],t.intro)));
+ if(id==='food')return animals.map(t=>q(t,question('Welche Beschreibung passt zur Nahrung? Tier: '+t.title+'.',t.animal!.diet,foodDistractors(t.id),t.facts.find(f=>f.label==='Was frisst es?'||f.label==='Nahrung')?.text??t.animal!.diet),t.image));
+ if(id==='habitats')return animals.map(t=>q(t,question('Welcher Lebensraum passt in freier Natur? Tier: '+t.title+'.',t.animal!.habitat,habitatDistractors(t.id),t.title+': '+(t.facts.find(f=>f.label==='Lebensraum')?.text??t.animal!.habitat)),t.image));
+ return animals.map((t,i)=>{const clue=animalDetectiveClue(t.id).clue;return q(t,question('Wer bin ich? '+clue,t.title,[animals[(i+5)%animals.length].title,animals[(i+9)%animals.length].title],'Gesucht ist '+t.title+'. So beschreibt sich das Tier: „'+clue+'“'));});
 }

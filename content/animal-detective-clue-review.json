@@ -1,0 +1,1168 @@
+{
+  "status": "implemented and complete current local browser/offline passed; exact final CI and actual test-live release pending",
+  "scope": "48 existing animal recognition questions only; existing correct names, distractors, identities and saved rounds preserved. Two or more existing sourced observations per clue where suitable; uniqueness required within actual three choices, not a complete taxonomic identification claim. Optional hint adds a comparison strategy, never the full answer. Existing illustrations/media untouched.",
+  "sourceAccess": "Uses existing reviewed catalog facts and source links, not a newly performed source visit or independent human review.",
+  "entries": [
+    {
+      "id": "animal-african-savanna-elephant",
+      "topicSHA256": "a2b448e09faaad762cbec492d61aa6595a79333b8f538f4fc91e16b9b5f91884",
+      "sources": [
+        {
+          "label": "African Bush Elephant – Tama Zoological Park / Tokyo Zoological Park Society",
+          "url": "https://www.tokyo-zoo.net/tama/encyclopedia/african-bush-elephant/index.html"
+        },
+        {
+          "label": "Afrikanischer Savannenelefant – WWF Deutschland",
+          "url": "https://www.wwf.de/themen-projekte/artenlexikon/afrikanischer-savannenelefant"
+        },
+        {
+          "label": "African savanna elephants – WWF US",
+          "url": "https://www.worldwildlife.org/species/elephant/african-elephant/african-savanna-elephant/"
+        }
+      ],
+      "clue": "Ich kann mit meinem langen Rüssel riechen, greifen und Wasser ins Maul bringen. An seiner Spitze sitzen zwei kleine Fortsätze.",
+      "hint": "Vergleiche, welches Körperteil die beschriebenen Aufgaben übernehmen kann.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Afrikanischer Savannenelefant"
+    },
+    {
+      "id": "animal-lion",
+      "topicSHA256": "bd734c48b79d7c674f9fae0e9771373bc516cbeb51c131b6beefca9c06ffe7f4",
+      "sources": [
+        {
+          "label": "Lion – Smithsonian National Zoo",
+          "url": "https://www.nationalzoo.si.edu/animals/lion"
+        },
+        {
+          "label": "Löwe – WWF Deutschland",
+          "url": "https://www.wwf.de/themen-projekte/artenlexikon/loewe/"
+        },
+        {
+          "label": "Taronga Zoo · Löwenrufe und Lebensweise",
+          "url": "https://www.taronga.org.au/wildlife-and-conservation/animals/detail/african-lion"
+        }
+      ],
+      "clue": "Wir leben in Rudeln. Weibchen jagen oft zusammen und betreuen gemeinsam die Jungen. Unsere lauten Rufe sind weithin zu hören.",
+      "hint": "Denke an das Zusammenleben: Ein Rudel ist eine Gruppe von Tieren.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Löwe"
+    },
+    {
+      "id": "animal-cheetah",
+      "topicSHA256": "cfc6720d410dba400befca8100fdbb83802fa307e7349424a43de76be1bd108f",
+      "sources": [
+        {
+          "label": "Cheetah – Smithsonian National Zoo",
+          "url": "https://nationalzoo.si.edu/animals/cheetah"
+        },
+        {
+          "label": "Gepard – WWF Deutschland",
+          "url": "https://www.wwf.de/themen-projekte/artenlexikon/gepard/"
+        }
+      ],
+      "clue": "Ich kann für kurze Zeit besonders schnell sprinten. Manche meiner Laute klingen wie das Zirpen eines Vogels.",
+      "hint": "Unterscheide einen kurzen Sprint von einer langen ausdauernden Wanderung.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Gepard"
+    },
+    {
+      "id": "animal-bengal-tiger",
+      "topicSHA256": "4d0341b336d58577cedc7bbb27862a59b4ecb1d99ea15cc07132a10ddf4742ee",
+      "sources": [
+        {
+          "label": "Bengal-Tiger – WWF Deutschland",
+          "url": "https://www.wwf.de/themen-projekte/artenlexikon/bengal-tiger"
+        }
+      ],
+      "clue": "Ich lebe zum Beispiel in Indien und Nepal. Als erwachsenes Tier bin ich meist allein unterwegs, schleiche mich an Beute an und kann gut schwimmen.",
+      "hint": "Vergleiche den genannten Teil der Erde mit dem Lebensraum der angebotenen Tiere.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Bengaltiger"
+    },
+    {
+      "id": "animal-giraffe",
+      "topicSHA256": "f7969eee783dfef99ee1612294a76437016f85bf50493d7e4f56d95aae58c593",
+      "sources": [
+        {
+          "label": "Giraffe – San Diego Zoo Wildlife Alliance",
+          "url": "https://animals.sandiegozoo.org/animals/giraffe?qt-animals_page_content_tabs=1"
+        },
+        {
+          "label": "Giraffe – Columbus Zoo",
+          "url": "https://www.columbuszoo.org/animals/giraffe"
+        },
+        {
+          "label": "Four giraffe species officially recognised – IUCN",
+          "url": "https://iucn.org/press-release/202508/four-giraffe-species-officially-recognised-major-conservation-reclassification"
+        }
+      ],
+      "clue": "Mit meiner langen Zunge erreiche ich Blätter zwischen dornigen Zweigen. Mein sehr langer Hals hat trotzdem sieben Halswirbel.",
+      "hint": "Überlege, wie man Nahrung an hohen Zweigen erreichen kann.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Giraffe"
+    },
+    {
+      "id": "animal-giant-panda",
+      "topicSHA256": "172ff0deecee114371721bd7d5830e9328c4dcd078cc0769828ca669836eb290",
+      "sources": [
+        {
+          "label": "Giant panda – Smithsonian National Zoo",
+          "url": "https://www.nationalzoo.si.edu/animals/giant-panda"
+        },
+        {
+          "label": "Großer Panda – WWF Deutschland",
+          "url": "https://www.wwf.de/themen-projekte/artenlexikon/grosser-panda/"
+        }
+      ],
+      "clue": "Ich lebe in kühlen Bergwäldern Chinas und zerbeiße mit kräftigen Kiefern harten Bambus. Ein besonderer Handgelenkknochen hilft beim Festhalten.",
+      "hint": "Suche nach einem Tier, dessen Körper besonders zu dieser Nahrung passt.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Großer Panda"
+    },
+    {
+      "id": "animal-western-lowland-gorilla",
+      "topicSHA256": "e9b53eb88f4f8e60301d2591e0b13938ccda1648235cbedaa61496871a7c3f2c",
+      "sources": [
+        {
+          "label": "Western lowland gorilla – Smithsonian National Zoo",
+          "url": "https://www.nationalzoo.si.edu/animals/western-lowland-gorilla"
+        },
+        {
+          "label": "Westlicher Gorilla – WWF Deutschland",
+          "url": "https://www.wwf.de/themen-projekte/artenlexikon/westlicher-gorilla"
+        }
+      ],
+      "clue": "Beim Gehen auf allen vieren stütze ich mich auf die Fingerknöchel. In meiner Gruppe leben meist ein erwachsenes Männchen, mehrere Weibchen und ihre Jungen.",
+      "hint": "Vergleiche, wie die Tiere Hände oder Füße beim Fortbewegen einsetzen.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Westlicher Flachlandgorilla"
+    },
+    {
+      "id": "animal-bornean-orangutan",
+      "topicSHA256": "07ff0dcde6138ec2f5bef7e76fb586c54c1e66e4f8c4d65b4077aba7cff02dec",
+      "sources": [
+        {
+          "label": "Borneo-Orang-Utan – WWF Deutschland",
+          "url": "https://www.wwf.de/themen-projekte/artenlexikon/borneo-orang-utan"
+        },
+        {
+          "label": "San Diego Zoo · Jungtiere lernen von ihrer Mutter",
+          "url": "https://animals.sandiegozoo.org/animals/orangutan"
+        }
+      ],
+      "clue": "Ich lebe nur auf Borneo. Lange Arme und Greifhände helfen beim Klettern. Zum Schlafen baue ich meist ein neues Nest aus Ästen und Blättern.",
+      "hint": "Die Insel und der Schlafplatz liefern zusammen eine stärkere Spur als ein Hinweis allein.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Borneo-Orang-Utan"
+    },
+    {
+      "id": "animal-polar-bear",
+      "topicSHA256": "55d1d79ea76423481a69fe63bb162d63a89ab32d7c26e7409442951ba1b377d8",
+      "sources": [
+        {
+          "label": "Polar Bear – San Diego Zoo Wildlife Alliance",
+          "url": "https://animals.sandiegozoo.org/animals/polar-bear"
+        },
+        {
+          "label": "Eisbär – WWF Deutschland",
+          "url": "https://www.wwf.de/themen-projekte/artenlexikon/eisbaer/"
+        }
+      ],
+      "clue": "Ich laufe mit großen Tatzen über das Meereis der Arktis und kann schwimmen. Meine Beute sind vor allem Robben.",
+      "hint": "Achte darauf, von welcher Polarregion die Rede ist.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Eisbär"
+    },
+    {
+      "id": "animal-emperor-penguin",
+      "topicSHA256": "635fe6dbba06b3363d12a05f850672ab3cad98b13f30c73952872b298733ae41",
+      "sources": [
+        {
+          "label": "Emperor penguin – Australian Antarctic Program",
+          "url": "https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/"
+        },
+        {
+          "label": "Penguin Record Breakers – Penguins International",
+          "url": "https://www.penguinsinternational.org/penguin-record-breakers/"
+        },
+        {
+          "label": "Emperor penguin and Antarctic fur seal now Endangered – IUCN",
+          "url": "https://iucn.org/press-release/202604/emperor-penguin-and-antarctic-fur-seal-now-endangered-due-climate-change-iucn"
+        }
+      ],
+      "clue": "Ich lebe an den Küsten der Antarktis und tauche nach Nahrung. Der Vater wärmt das Ei auf seinen Füßen. Bei Kälte rücken viele von uns eng zusammen.",
+      "hint": "Verbinde den Ort mit der besonderen Art, das Ei warm zu halten.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Kaiserpinguin"
+    },
+    {
+      "id": "animal-blue-whale",
+      "topicSHA256": "fc88d8ad4cbbc617e114f36e057795e50fb98a419b3668140048f42542350d1d",
+      "sources": [
+        {
+          "label": "Blue Whale – NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/blue-whale"
+        },
+        {
+          "label": "Blue whales – WWF US",
+          "url": "https://www.worldwildlife.org/species/whale/blue-whale/"
+        }
+      ],
+      "clue": "Ich bin das größte heute lebende Tier. Barten in meinem Maul halten winzige Krebstiere zurück, während ich Wasser herausdrücke.",
+      "hint": "Großes Tier bedeutet nicht automatisch große Beute. Denke an das Filtern.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Blauwal"
+    },
+    {
+      "id": "animal-common-bottlenose-dolphin",
+      "topicSHA256": "05a67a060c0f15530f26a61f81bb6440dca68525477871a6c4b8a2868d766b39",
+      "sources": [
+        {
+          "label": "Common Bottlenose Dolphin – NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin"
+        },
+        {
+          "label": "Common bottlenose dolphins – WWF US",
+          "url": "https://www.worldwildlife.org/species/dolphin-and-porpoise/common-bottlenose-dolphin/"
+        },
+        {
+          "label": "Red List Updates … Lahille’s Bottlenose Dolphins – IUCN SSC CSG",
+          "url": "https://iucn-csg.org/red-list-updates-published-for-sperm-whales-and-lahilles-bottlenose-dolphins/"
+        },
+        {
+          "label": "NOAA · Delfine atmen Luft",
+          "url": "https://www.fisheries.noaa.gov/feature-story/scientists-analyze-dolphin-breaths-better-understand-risks-surface-oil"
+        }
+      ],
+      "clue": "Ich lebe im Meer und kann mit Klicklauten und deren Echo Nahrung orten. Meine Gruppe kann sich trennen und später neu zusammenfinden.",
+      "hint": "Ein Echo ist ein zurückgeworfener Laut. Welche Tiere nutzen Schall im Wasser?",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Großer Tümmler"
+    },
+    {
+      "id": "animal-orca",
+      "topicSHA256": "8c706c39eb0a7127965fe0784eae94dd5e94146d11cc1017b31508a78a8966cd",
+      "sources": [
+        {
+          "label": "Killer Whale – NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/killer-whale"
+        },
+        {
+          "label": "Top 10 facts about Orcas – WWF UK",
+          "url": "https://www.wwf.org.uk/learn/fascinating-facts/orcas"
+        }
+      ],
+      "clue": "Wir leben oft in Familiengruppen und lernen voneinander. Manche Gruppen fressen vor allem Fische, andere jagen Meeressäuger. Beim Jagen arbeiten wir zusammen.",
+      "hint": "Prüfe die Kombination aus Meer, Familiengruppe und unterschiedlicher Nahrung.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Orca"
+    },
+    {
+      "id": "animal-common-octopus",
+      "topicSHA256": "9399e049d35eae7481554b78dccd973164d642ef1fe7ecbc53efd46373954c36",
+      "sources": [
+        {
+          "label": "Common Octopus – Aquarium La Rochelle",
+          "url": "https://www.aquarium-larochelle.com/en/species-encyclopedia/common-octopus/"
+        },
+        {
+          "label": "Influx of Octopus … – Devon and Severn IFCA",
+          "url": "https://www.devonandsevernifca.gov.uk/wp-content/uploads/2025/06/Agenda-Item-11-Influx-of-Octopus-into-Devon-and-the-South-West.pdf"
+        }
+      ],
+      "clue": "Ich besitze acht Arme und verstecke mich oft allein in einer Felsspalte. Stoße ich Wasser aus, kann ich mich schnell fortbewegen.",
+      "hint": "Zähle die beschriebenen Arme und vergleiche die Fortbewegung.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Gewöhnlicher Krake"
+    },
+    {
+      "id": "animal-green-sea-turtle",
+      "topicSHA256": "f0c471a97a269893286e96e23cca1447e03f3d24c6daa2d22170803bfd687903",
+      "sources": [
+        {
+          "label": "Green Turtle – NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/green-turtle"
+        },
+        {
+          "label": "Meeresschildkrötenarten – Turtle Foundation",
+          "url": "https://turtle-foundation.org/de/meeresschildkroeten/arten/"
+        },
+        {
+          "label": "Arctic seals … global green turtle recovery – IUCN",
+          "url": "https://iucn.org/press-release/202510/arctic-seals-threatened-climate-change-birds-decline-globally-iucn-red-list"
+        }
+      ],
+      "clue": "Ich schwimme zwischen Futterplätzen und Niststränden. Zum Atmen muss ich an die Oberfläche. Als erwachsenes Tier fresse ich vor allem Seegras und Algen.",
+      "hint": "Überlege, welches Meerestier zur Eiablage einen Strand braucht.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Grüne Meeresschildkröte"
+    },
+    {
+      "id": "animal-red-kangaroo",
+      "topicSHA256": "255d562bf23fa3c669d038e4edbeef5c9ad4c27fe3addb950731e86838dec53f",
+      "sources": [
+        {
+          "label": "Red Kangaroo – Taronga Conservation Society Australia",
+          "url": "https://www.taronga.org.au/wildlife-and-conservation/animals/detail/red-kangaroo"
+        }
+      ],
+      "clue": "Ich lebe im trockenen Inneren Australiens. Mit meinen kräftigen Hinterbeinen hüpfe ich schnell. Weibchen sind häufig blaugrau.",
+      "hint": "Der Kontinent und die Art der Fortbewegung gehören zusammen.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Rotes Riesenkänguru"
+    },
+    {
+      "id": "animal-koala",
+      "topicSHA256": "119d09a1820154fbdd7d3634091f0b389231b9fd41c3abdeaa0dfe5ce0b1ae94",
+      "sources": [
+        {
+          "label": "Koala – San Diego Zoo Wildlife Alliance",
+          "url": "https://animals.sandiegozoo.org/animals/koala"
+        },
+        {
+          "label": "Koala listing under national environmental law – Australian DCCEEW",
+          "url": "https://www.dcceew.gov.au/environment/biodiversity/threatened/species/koalas/listing-under-national-environmental-law"
+        }
+      ],
+      "clue": "Ich lebe in Eukalyptuswäldern Australiens und fresse hauptsächlich ihre Blätter. Kräftige Hände halten mich an Ästen fest; ich ruhe viel in Bäumen.",
+      "hint": "Suche nach einem Tier mit einer besonders eng gewählten pflanzlichen Nahrung.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Koala"
+    },
+    {
+      "id": "animal-jaguar",
+      "topicSHA256": "b830ae0609b5da54b4d928fc42d7bff12fadbd53f1e7d39571a1e35e6dd93227",
+      "sources": [
+        {
+          "label": "Jaguar – WWF Schweiz",
+          "url": "https://www.wwf.ch/de/tierarten/jaguar-der-im-fliegen-jagt"
+        },
+        {
+          "label": "Jaguar – San Diego Zoo Wildlife Alliance",
+          "url": "https://animals.sandiegozoo.org/animals/jaguar"
+        }
+      ],
+      "clue": "Ich lebe in Mittel- und Südamerika, zum Beispiel im Amazonasgebiet. Ich kann gut klettern und schwimmen. Mein Fell trägt ein eigenes Fleckenmuster.",
+      "hint": "Vergleiche zuerst die Region und dann die beschriebenen Fähigkeiten.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Jaguar"
+    },
+    {
+      "id": "animal-honey-bee",
+      "topicSHA256": "fb96aa9bd52244b1274006e57e0b655843efb5f4bf8dc1425fa472a558203cae",
+      "sources": [
+        {
+          "label": "Honigbiene, Europäische (Westliche) – Zoo Frankfurt",
+          "url": "https://www.zoo-frankfurt.de/de/tiere-von-a-z-detailansicht/animal/tiere-von-a-z-detailansicht/honigbiene-europaeische-westliche"
+        },
+        {
+          "label": "Honey Bee – North Carolina Zoo",
+          "url": "https://www.nczoo.org/wildlife/animals/honey-bee"
+        },
+        {
+          "label": "Wild Honey Bee: a step forward for its protection – Fondazione Edmund Mach",
+          "url": "https://fmach.it/en/Communication/Press-releases/Wild-Honey-Bee-a-step-forward-for-its-protection"
+        }
+      ],
+      "clue": "Wir leben mit einer Königin, Arbeiterinnen und männlichen Drohnen zusammen. Wenn wir Blüten besuchen, tragen wir Pollen weiter.",
+      "hint": "Achte auf die Aufgabenverteilung in der Gruppe und auf den Blütenbesuch.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Westliche Honigbiene"
+    },
+    {
+      "id": "animal-axolotl",
+      "topicSHA256": "e8ac0a9450fd0fd21c369e82e07d087cd9bb7fc54e553075978bfccafe0e5460",
+      "sources": [
+        {
+          "label": "Axolotl – Toronto Zoo",
+          "url": "https://www.torontozoo.com/animals/Axolotl"
+        },
+        {
+          "label": "Axolotl – San Diego Zoo Wildlife Alliance",
+          "url": "https://animals.sandiegozoo.org/animals/axolotl"
+        }
+      ],
+      "clue": "Meine federartigen äußeren Kiemen nehmen Sauerstoff aus dem Wasser auf. Meist lebe ich allein und fresse kleine Wassertiere.",
+      "hint": "Unterscheide äußere Kiemen von Federn: Hier geht es um das Atmen im Wasser.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Axolotl"
+    },
+    {
+      "id": "animal-whale-shark",
+      "topicSHA256": "625d4c6369aad8821ed5bb91638d3a9b6359789b17ec3aadace79c577c9ca4c8",
+      "sources": [
+        {
+          "label": "Georgia Aquarium · Walhai",
+          "url": "https://www.georgiaaquarium.org/animal/whale-shark/"
+        }
+      ],
+      "clue": "Ich bin der größte lebende Fisch und atme mit Kiemen. Mein großes Maul sammelt winzige Nahrungsteilchen; mein Körper trägt helle Flecken.",
+      "hint": "Prüfe zuerst die Tiergruppe. Nicht jedes große Meerestier atmet Luft.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Walhai"
+    },
+    {
+      "id": "animal-garden-cross-spider",
+      "topicSHA256": "8e7892dfbda7efa55b5eec5e13e7e1badcc266cc1a575a5cc61075742efcd4dc",
+      "sources": [
+        {
+          "label": "The Wildlife Trusts · Garden spider",
+          "url": "https://www.wildlifetrusts.org/wildlife-explorer/invertebrates/spiders/garden-spider"
+        },
+        {
+          "label": "Natural History Museum · Spinnen und Insekten unterscheiden",
+          "url": "https://www.nhm.ac.uk/schools/teaching-resources/key-stage-2/life-cycles-habitats-and-classification/practical-activity-classification-exploration.html"
+        },
+        {
+          "label": "Natural History Museum · Wie Spinnseide entsteht",
+          "url": "https://www.nhm.ac.uk/discover/what-are-spider-webs-made-of.html"
+        }
+      ],
+      "clue": "Ich habe acht Beine und baue ein Radnetz aus Seide. Bewegt sich ein Insekt darin, spüre ich die Erschütterung der Fäden. Helle Rückenflecken bilden oft ein Kreuz.",
+      "hint": "Vergleiche die Zahl der Beine und die Art, Beute wahrzunehmen.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Gartenkreuzspinne"
+    },
+    {
+      "id": "animal-dromedary",
+      "topicSHA256": "804741fdb2a2e58d81cb581672080563c418b151cebc0a6dc0ab5781b3afc0a4",
+      "sources": [
+        {
+          "label": "Animal Diversity Web · Dromedar",
+          "url": "https://animaldiversity.org/accounts/Camelus_dromedarius/"
+        },
+        {
+          "label": "San Diego Zoo · Ein und zwei Höcker",
+          "url": "https://animals.sandiegozoo.org/animals/camel"
+        }
+      ],
+      "clue": "Im Höcker speichere ich Fett als Energievorrat, kein Wasser. Breite gepolsterte Füße helfen mir auf Sand.",
+      "hint": "Überlege, wie Füße und Vorrat zum beschriebenen Lebensraum passen.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Dromedar"
+    },
+    {
+      "id": "animal-white-tailed-eagle",
+      "topicSHA256": "9d313926ad4764007951d610624e61e1b08ec0ee1b690a465304afe8da4ed4a9",
+      "sources": [
+        {
+          "label": "RSPB · Große Greifvögel",
+          "url": "https://www.rspb.org.uk/birds-and-wildlife/birds-of-the-month/august-birds-of-the-month"
+        },
+        {
+          "label": "NABU · Greifvogel-Flugbilder: Spannweitenvergleich",
+          "url": "https://www.nabu.de/imperia/md/content/nabude/vogelschutz/27.pdf"
+        },
+        {
+          "label": "NABU · Seeadler: Lebensraum und Gefieder",
+          "url": "https://www.nabu.de/tiere-und-pflanzen/voegel/portraets/seeadler/"
+        },
+        {
+          "label": "Nationalpark Donau-Auen · Seeadler, Thermik und Altersmerkmale",
+          "url": "https://www.donauauen.at/aktuelles/blog/seeadler-in-den-donau-auen-beobachten"
+        }
+      ],
+      "clue": "Ich bin ein großer Greifvogel und gleite mit breiten Flügeln über Gewässern. Erst als erwachsenes Tier habe ich weiße Schwanzfedern.",
+      "hint": "Ein Merkmal kann sich mit dem Alter verändern. Beachte auch den Ort der Nahrungssuche.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Seeadler"
+    },
+    {
+      "id": "animal-platypus",
+      "topicSHA256": "a8343374f1564bf8261a19bbb6cde992966b11bc0581666907b4d10ececd3ed4",
+      "sources": [
+        {
+          "label": "San Diego Zoo Wildlife Alliance · Schnabeltier",
+          "url": "https://animals.sandiegozoo.org/animals/platypus"
+        },
+        {
+          "label": "NSW Environment · Schnabeltier und Gewässerschutz",
+          "url": "https://www.environment.nsw.gov.au/topics/animals-and-plants/native-animals/native-animal-facts/land-mammals/platypus"
+        }
+      ],
+      "clue": "Ich lege Eier und versorge geschlüpfte Junge mit Milch. Mit meinem weichen Schnabel kann ich im Wasser nahe Beutetiere aufspüren.",
+      "hint": "Eier allein entscheiden die Tiergruppe nicht. Beachte auch die Milch.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Schnabeltier"
+    },
+    {
+      "id": "animal-short-beaked-echidna",
+      "topicSHA256": "2cc2f7045ae2a84a422267e4d854c61d5753e730ac73a119dfd89996a42c69fd",
+      "sources": [
+        {
+          "label": "Australian Museum · Kurzschnabeligel",
+          "url": "https://australian.museum/learn/animals/mammals/short-beaked-echidna/"
+        }
+      ],
+      "clue": "Ich bin ein eierlegendes Säugetier mit Stacheln. Mit kräftigen Krallen grabe ich Verstecke auf und nehme mit einer klebrigen Zunge Ameisen und Termiten auf.",
+      "hint": "Vergleiche die Werkzeuge zum Graben und zur Nahrungsaufnahme.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Kurzschnabeligel"
+    },
+    {
+      "id": "animal-okapi",
+      "topicSHA256": "f67662ec65b7de647c1bc011106788b3b5690f59b5fb65d8f0177e635e0b61f1",
+      "sources": [
+        {
+          "label": "San Diego Zoo Wildlife Alliance · Okapi",
+          "url": "https://animals.sandiegozoo.org/animals/okapi"
+        }
+      ],
+      "clue": "Ich lebe im Wald der Demokratischen Republik Kongo. Meine Beine sind hell gestreift; mit einer langen Zunge greife ich Blätter.",
+      "hint": "Ein ähnliches Muster bedeutet nicht automatisch die gleiche Verwandtschaft.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Okapi"
+    },
+    {
+      "id": "animal-meerkat",
+      "topicSHA256": "e29a5b9acd94ee7d996ea28615f5e5592a4514eaa09bcd4a99211bc20e59ad05",
+      "sources": [
+        {
+          "label": "San Diego Zoo Wildlife Alliance · Erdmännchen",
+          "url": "https://animals.sandiegozoo.org/animals/meerkat"
+        }
+      ],
+      "clue": "Wir gehören zu den Mangusten und leben in Gruppen. Während einige Nahrung suchen, halten andere Ausschau und warnen mit Rufen vor Gefahren.",
+      "hint": "Denke darüber nach, wie eine Gruppe verschiedene Aufgaben aufteilen kann.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Erdmännchen"
+    },
+    {
+      "id": "animal-ring-tailed-lemur",
+      "topicSHA256": "a60ade6188ef742167a6a7d1063f8d9c26cd438541a1dd680e46c1800c23989e",
+      "sources": [
+        {
+          "label": "Smithsonian National Zoo · Katta",
+          "url": "https://www.nationalzoo.si.edu/animals/ring-tailed-lemur"
+        }
+      ],
+      "clue": "Wir leben auf Madagaskar. Aufgerichtete Schwänze können uns beim Zusammenbleiben helfen. Wir verständigen uns auch durch Duftmarken und Rufe.",
+      "hint": "Mehrere Sinne können in derselben Gruppe unterschiedliche Nachrichten übertragen.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Katta"
+    },
+    {
+      "id": "animal-north-american-beaver",
+      "topicSHA256": "be546e3e74f54bef85ad148eac9ddc781fd4fe2a92937374360756ba96cb00b2",
+      "sources": [
+        {
+          "label": "Smithsonian National Zoo · Nordamerikanischer Biber",
+          "url": "https://www.nationalzoo.si.edu/animals/beaver"
+        }
+      ],
+      "clue": "Ich baue Dämme, die Wasser bremsen und einen Teich entstehen lassen können. Meine Wohnburg ist ein anderes Bauwerk: Ihre Wohnkammer liegt über dem Wasser.",
+      "hint": "Unterscheide die Aufgabe eines Damms von der eines Wohnplatzes.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Nordamerikanischer Biber"
+    },
+    {
+      "id": "animal-walrus",
+      "topicSHA256": "5cb6fa739576b1283a171254f86a78f028739e797675c4289efed065fe131b82",
+      "sources": [
+        {
+          "label": "US Fish & Wildlife Service · Walross",
+          "url": "https://www.fws.gov/program/alaska-marine-mammals-management-office/alaska-walrus-program"
+        },
+        {
+          "label": "OBIS-SEAMAP · Walrus: Artprofil und Körpermaße",
+          "url": "https://seamap.env.duke.edu/species/180639/html"
+        },
+        {
+          "label": "Marine Mammal Commission · Pacific Walrus",
+          "url": "https://www.mmc.gov/priority-topics/species-of-concern/pacific-walrus/"
+        }
+      ],
+      "clue": "Ich suche mit empfindlichen Tastborsten am Maul kleine Beutetiere am Meeresboden. Zum Ruhen nutze ich Küsten und Meereis. Meine Stoßzähne sind keine Gabeln zum Aufspießen der Nahrung.",
+      "hint": "Vergleiche, mit welchem Sinn Nahrung entdeckt wird und welches Körperteil dabei hilft.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Walross"
+    },
+    {
+      "id": "animal-red-fox",
+      "topicSHA256": "534a747ba8ee69ad6585e205c9bcd6022c89096f64526f64360eeb40fa8da91b",
+      "sources": [
+        {
+          "label": "University of Michigan · Animal Diversity Web · Rotfuchs",
+          "url": "https://animaldiversity.org/accounts/Vulpes_vulpes/"
+        }
+      ],
+      "clue": "Ich nutze Wälder, offenes Land und auch Siedlungen. Meine Nahrung kann tierisch oder pflanzlich sein. Rufe und Duftmarken gehören zu meiner Verständigung.",
+      "hint": "Suche nach einem Tier, das verschiedene Lebensräume und Nahrungsangebote nutzen kann.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Rotfuchs"
+    },
+    {
+      "id": "animal-raccoon",
+      "topicSHA256": "88f0b21efb874e854ac9707f3cfe35ad7eb81e297d5c1802d63ef5238a8a968c",
+      "sources": [
+        {
+          "label": "University of Michigan · Animal Diversity Web · Waschbär",
+          "url": "https://animaldiversity.org/accounts/Procyon_lotor/"
+        }
+      ],
+      "clue": "Meine empfindlichen Vorderpfoten helfen mir, Gegenstände zu ertasten und zu bearbeiten. Ich nutze Wälder und Siedlungen und verschiedene tierische und pflanzliche Nahrung.",
+      "hint": "Hier ist Tasten die wichtige Spur. Vergleiche, wie die Tiere ihre Vordergliedmaßen einsetzen.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Waschbär"
+    },
+    {
+      "id": "animal-hedgehog",
+      "topicSHA256": "e838432b1a85e21bc3fd1f20c9b7012c2eaeb071df457d7a88d6c519aaa83db1",
+      "sources": [
+        {
+          "label": "The Wildlife Trusts · Braunbrustigel",
+          "url": "https://www.wildlifetrusts.org/wildlife-explorer/mammals/european-hedgehog"
+        }
+      ],
+      "clue": "Ich suche vor allem nachts nach Käfern und Regenwürmern. Hecken und Laub bieten mir Verstecke. Im Winter kann ich meinen Stoffwechsel absenken und Energie sparen.",
+      "hint": "Verbinde Nahrungssuche, Versteck und Verhalten im Winter.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Braunbrustigel"
+    },
+    {
+      "id": "animal-barn-owl",
+      "topicSHA256": "32ea2c471fee742343bcb3a4b6b09b6ebf780329353ab87649b8076a56aab025",
+      "sources": [
+        {
+          "label": "British Trust for Ornithology · Schleiereule",
+          "url": "https://www.bto.org/learn/about-birds/birdfacts/barn-owl"
+        },
+        {
+          "label": "RSPB · Schleiereule: Gesicht und Lebensraum",
+          "url": "https://www.rspb.org.uk/birds-and-wildlife/barn-owl"
+        }
+      ],
+      "clue": "Ich jage vor allem kleine Säugetiere wie Mäuse. Mein heller Gesichtsschleier hilft beim Wiedererkennen; grasreiche Flächen bieten meinen Beutetieren Lebensraum.",
+      "hint": "Achte auf Nahrung und Gesicht. Ein unscharfes Foto allein würde für eine Bestimmung nicht reichen.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Schleiereule"
+    },
+    {
+      "id": "animal-kingfisher",
+      "topicSHA256": "306d2b18ee5adc46c62816df33b2e98a91264c60c21914515e06fb9c5f9b8b6b",
+      "sources": [
+        {
+          "label": "RSPB · Eisvogel",
+          "url": "https://www.rspb.org.uk/birds-and-wildlife/kingfisher"
+        },
+        {
+          "label": "BTO · Kingfisher: gemessene Flügellängen",
+          "url": "https://www.bto.org/learn/about-birds/birdfacts/kingfisher"
+        }
+      ],
+      "clue": "Von einer Sitzwarte am Gewässer halte ich nach Fischen Ausschau. Mein leuchtendes Blau entsteht durch die feine Struktur der Federn.",
+      "hint": "Verbinde Nahrungssuche am Wasser mit der beschriebenen Federfarbe.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Eisvogel"
+    },
+    {
+      "id": "animal-ostrich",
+      "topicSHA256": "24712706e814b269614fdb9b21e357a66b7915822fa5ba4f38824ade8f7a0030",
+      "sources": [
+        {
+          "label": "San Diego Zoo Wildlife Alliance · Afrikanischer Strauß",
+          "url": "https://animals.sandiegozoo.org/animals/ostrich"
+        }
+      ],
+      "clue": "Ich bin ein großer laufender Vogel. Bei Richtungswechseln helfen meine Flügel beim Halten des Gleichgewichts.",
+      "hint": "Ein Körperteil kann auch eine andere Aufgabe haben als bei fliegenden Vögeln.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Afrikanischer Strauß"
+    },
+    {
+      "id": "animal-atlantic-puffin",
+      "topicSHA256": "e39854eca5783ff508b8226bb45d7d0090299485a352e73ab022d3d5ba0827f9",
+      "sources": [
+        {
+          "label": "National Audubon Society · Papageitaucher",
+          "url": "https://www.audubon.org/field-guide/bird/atlantic-puffin"
+        }
+      ],
+      "clue": "Ich brüte an Küsten und auf Inseln im Nordatlantik, unter anderem in Erdhöhlen. Meine Nahrung suche ich schwimmend unter Wasser; außerhalb der Brutzeit bin ich viel auf dem offenen Meer.",
+      "hint": "Unterscheide Brutplatz und Ort der Nahrungssuche. Beide gehören zum Leben dieses Tieres.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Papageitaucher"
+    },
+    {
+      "id": "animal-common-chameleon",
+      "topicSHA256": "43e81408e1e0d0d26c1eb45f6c5dd435c425285c559b6523e1ccc9f7415fa149",
+      "sources": [
+        {
+          "label": "University of Michigan · Animal Diversity Web · Europäisches Chamäleon",
+          "url": "https://animaldiversity.org/accounts/Chamaeleo_chamaeleon/"
+        }
+      ],
+      "clue": "Ich halte mich mit Füßen und Greifschwanz an Zweigen fest. Meine Augen können sich unabhängig bewegen. Meine Farbe kann sich ändern, aber ich kopiere nicht jedes Hintergrundmuster.",
+      "hint": "Vergleiche die beschriebenen Körperteile. Ein Farbwechsel allein ist noch keine vollständige Spur.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Europäisches Chamäleon"
+    },
+    {
+      "id": "animal-fire-salamander",
+      "topicSHA256": "1af7d2a3f9c860a45448aab98de7287ecf3aaf0b9a852e37a2ff3b637afedd3c",
+      "sources": [
+        {
+          "label": "NABU · Feldherpetologie · Feuersalamander",
+          "url": "https://nabu-lfa-feldherpetologie.jimdoweb.com/tiergruppen/amphibien/feuersalamander/"
+        },
+        {
+          "label": "NABU Euskirchen · Feuersalamander-Portrait",
+          "url": "https://www.nabu-euskirchen.de/2026/06/03/feuersalamander-ein-portrait/"
+        }
+      ],
+      "clue": "Ich lebe in feuchten Wäldern. Viele Weibchen in Mitteleuropa setzen Larven in Gewässern ab; die Larven tragen äußere Kiemen.",
+      "hint": "Denke an die unterschiedlichen Lebensorte von erwachsenem Tier und Larve.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Feuersalamander"
+    },
+    {
+      "id": "animal-common-frog",
+      "topicSHA256": "38d661537b84571c190d7d1469aa1a5361d2c02fee3ec61a7305599e8d1d050e",
+      "sources": [
+        {
+          "label": "The Wildlife Trusts · Grasfrosch",
+          "url": "https://www.wildlifetrusts.org/wildlife-explorer/amphibians/common-frog"
+        }
+      ],
+      "clue": "Aus meinem Laich im Gewässer entwickeln sich Kaulquappen. Als erwachsenes Tier bin ich auch viel an Land, etwa in Gärten und Wäldern.",
+      "hint": "Achte auf das beschriebene Entwicklungsstadium statt nur auf das Wort Wasser.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Grasfrosch"
+    },
+    {
+      "id": "animal-eastern-clown-anemonefish",
+      "topicSHA256": "93f187ff35993953d289e185b18351dbed9a584bdf7deb202ac255c32a3aa11f",
+      "sources": [
+        {
+          "label": "Australian Museum · Echter Clownfisch",
+          "url": "https://australian.museum/learn/animals/fishes/eastern-clown-anemonefish-amphiprion-percula/"
+        },
+        {
+          "label": "Monterey Bay Aquarium · Seeanemonen als Nesseltiere",
+          "url": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/carpet-anemone"
+        }
+      ],
+      "clue": "Ich bin ein orange-weiß gestreifter Fisch und lebe zwischen den Tentakeln bestimmter Seeanemonen. Ich nehme Algen und Zooplankton auf.",
+      "hint": "Verbinde das Muster mit dem besonderen Mitbewohner. Seeanemonen sind Tiere.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Echter Clownfisch"
+    },
+    {
+      "id": "animal-european-eel",
+      "topicSHA256": "c6475d84d15a8eb810261b3a28a1fe06ea1f914011b1124041b22608d1f1f72c",
+      "sources": [
+        {
+          "label": "The Wildlife Trusts · Europäischer Aal",
+          "url": "https://www.wildlifetrusts.org/national-marine-week/incredible-journeys"
+        },
+        {
+          "label": "WWT · European Eel",
+          "url": "https://www.wwt.org.uk/discover-wetlands/wetland-wildlife/species-factfiles/european-eel"
+        },
+        {
+          "label": "Wright et al.2022 · Aalwanderung mit Sendern, Originalstudie (PDF)",
+          "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/291319540/s41598_022_19248_8.pdf"
+        },
+        {
+          "label": "Wright et al.2022 · Korrektur der Geschwindigkeitseinheit (PDF)",
+          "url": "https://backend.orbit.dtu.dk/ws/files/299778347/s41598_022_26117_x.pdf"
+        }
+      ],
+      "clue": "Meine Lebensgeschichte verbindet europäische Gewässer und den Atlantik. Junge Entwicklungsstadien gelangen mit Meeresströmungen an Küsten. Barrieren in Flüssen können meine Wanderwege unterbrechen.",
+      "hint": "Betrachte den ganzen Wanderweg statt nur einen einzelnen Fundort.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Europäischer Aal"
+    },
+    {
+      "id": "animal-monarch-butterfly",
+      "topicSHA256": "f293c09eeceba14ea4ea909dbd1b505ec9bf5d80b9283841bd4f0f8f40bf8af0",
+      "sources": [
+        {
+          "label": "US Fish & Wildlife Service · Monarchfalter",
+          "url": "https://www.fws.gov/species/monarch-danaus-plexippus"
+        }
+      ],
+      "clue": "Als Raupe fresse ich Seidenpflanzen, als Falter trinke ich Nektar. Viele von uns wandern in Nordamerika weit; andere Populationen unternehmen nicht dieselbe lange Wanderung.",
+      "hint": "Nahrung und Bewegung können sich zwischen Entwicklungsstadien oder Gruppen unterscheiden.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Monarchfalter"
+    },
+    {
+      "id": "animal-garden-snail",
+      "topicSHA256": "29aeb238dff55f31591879d738eff8a2332765e6032c2357e52785ee050a4bfe",
+      "sources": [
+        {
+          "label": "Natural History Museum · Gefleckte Weinbergschnecke",
+          "url": "https://www.nhm.ac.uk/discover/snails-and-slugs.html"
+        },
+        {
+          "label": "Conchological Society · Cornu aspersum: Gehäusemaße",
+          "url": "https://conchsoc.org/aids_to_id/helasp.php"
+        },
+        {
+          "label": "Naturportal Südwest · Cornu aspersum und Gehäusemaße",
+          "url": "https://naturportal-suedwest.de/de/weichtiere/systematik/art/gehaeuseschnecken-land-gastropoda/helicidae-schnirkelschnecken/cornu/aspersum/"
+        }
+      ],
+      "clue": "Ich bin ein Landweichtier mit einer Schale. Häufig werde ich bei feuchtem Wetter und nachts beobachtet; Berührung und chemische Signale helfen mir bei der Orientierung.",
+      "hint": "Vergleiche die Körperhülle und die Bedingungen, unter denen das Tier aktiv ist.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Gefleckte Weinbergschnecke"
+    },
+    {
+      "id": "animal-european-lobster",
+      "topicSHA256": "43e2c6298bc0612017b4d4a851df3fedbc4e4433e731d845dddf78425980ee1a",
+      "sources": [
+        {
+          "label": "The Wildlife Trusts · Europäischer Hummer",
+          "url": "https://www.wildlifetrusts.org/wildlife-explorer/marine/crustaceans/lobster"
+        }
+      ],
+      "clue": "Ich bin ein Krebstier mit zwei großen Scheren, die unterschiedliche Aufgaben haben können. Zum Wachsen streife ich meine feste Außenhülle ab.",
+      "hint": "Überlege, wie ein Tier wachsen kann, wenn seine Hülle nicht mitwächst.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Europäischer Hummer"
+    },
+    {
+      "id": "animal-common-cuttlefish",
+      "topicSHA256": "84d295c77e2d30828367e4a75c5e11aeaf14c7cbcf303300f4c7a290be2faafd",
+      "sources": [
+        {
+          "label": "The Wildlife Trusts · Gewöhnlicher Tintenfisch",
+          "url": "https://www.wildlifetrusts.org/wildlife-explorer/marine/squids-octopuses-and-cuttlefish/common-cuttlefish"
+        },
+        {
+          "label": "MarLIN · Sepia officinalis: Körperbau und Mantellänge",
+          "url": "https://www.marlin.ac.uk/species/detail/1098"
+        }
+      ],
+      "clue": "Ich habe acht Arme und zusätzlich zwei längere Fangtentakel. Mein breiter Mantel trägt seitliche Flossen. Farbe und Muster können sich rasch verändern.",
+      "hint": "Zähle Arme und zusätzliche Fangtentakel getrennt und achte auf die seitlichen Flossen.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Gewöhnliche Sepia"
+    },
+    {
+      "id": "animal-short-snouted-seahorse",
+      "topicSHA256": "fd8a9e3c70ca2e99487cba4f5dd2ecae20d9bbfd1f10dc3210c60aa6f115b260",
+      "sources": [
+        {
+          "label": "The Wildlife Trusts · Kurzschnäuziges Seepferdchen",
+          "url": "https://www.wildlifetrusts.org/wildlife-explorer/marine/fish-including-sharks-skates-and-rays/short-snouted-seahorse"
+        },
+        {
+          "label": "MarLIN · Hippocampus hippocampus: Merkmale und Länge",
+          "url": "https://www.marlin.ac.uk/species/detail/1788"
+        }
+      ],
+      "clue": "Ich bin ein Fisch und kann mich mit einem Greifschwanz an Pflanzen oder anderen Strukturen festhalten. Ich fresse kleine Beutetiere.",
+      "hint": "Vergleiche die Aufgabe des Schwanzes und die Nahrung statt nach dem Namen zu raten.",
+      "sourceFields": [
+        "paragraphs",
+        "intro",
+        "facts",
+        "animal",
+        "surprise"
+      ],
+      "correctTitle": "Kurzschnäuziges Seepferdchen"
+    }
+  ],
+  "completeLocalEvidence": {
+    "status": "passed complete unchanged local mandatory browser and offline run",
+    "build": "d70c992140b599c3",
+    "originalFullHead": "c60f51fdbfe20ffa6d33d2c5d9eaf2a239390957",
+    "originalSourceDigest": "7d9438f8e1bde188d34a33b5f44b20110e21bca1be1e5bff10966b4d179b3b2a",
+    "originalReport": "/workspace/work/wk-continuation/world-games-c60f51f-full-local-originals-20261021/portable-report.json",
+    "originalReportSHA256": "dc7d23d7f2573cb51cbfd13729913f1962086a30c0b6fbaa3821179ba51ddbd5",
+    "mandatoryGroups": 10,
+    "informationalChecks": 133,
+    "habitatCompatibilityCases": 2,
+    "learningCopyCases": 48,
+    "serverStoppedCases": 6,
+    "nativeOfflineCases": 6,
+    "browser": "154.0.8037.57",
+    "speechScope": "Actual text/selected voice/rate handoff checked; no hearing or physical-device claim.",
+    "finalCIAndDeployment": "Pending exact final GitHub engines, fresh native readiness and actual test-live delivery/browser check."
+  }
+}
