@@ -1,3 +1,7 @@
+## 21.10.2026 · autorisierte begrenzte Quality-Reserve
+
+BestehendesJoblimitnachkonkreterNutzerfreigabevon50auf55Minutenerhöht; bisheriger142LaufhattealleProdukt-/Browser-/Handoff-/Commitprüfungenerfolgreichbeendet,aberGesamtstatuscancellednach50:09. KeineTests,Prüfgruppen,Prozesse,RechteoderübrigenBudgetsgeändert. KeineBeschleunigungoderAuslieferungbehauptet;vollständigeaktuellePflichtprüfungenbleibenerforderlich.
+
 ## Lokal vollständig geprüft · Kontinente und Länder
 
 Zehn bestehende Kapitel mit Quellen, Erklärschichten und Modellen weitergeführt; vollständige Kapiteltexte bei Bedarf geladen, Suche/Notizen/Rückfokus und alte Spielstände geschützt. Alle vorgeschriebenen lokalen Schlussprüfungen bestanden; aktuelle CI und tatsächliche Auslieferung noch offen. Chronik bestätigt Natur50 mit echtem Vercelbeleg und erhält alle45älterenEinträge.
