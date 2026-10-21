@@ -663,28 +663,67 @@
     "steps": [
       {
         "title": "Kontinent oder Land?",
-        "text": "Ein Kontinent ist eine sehr große Landregion. Ein Land ist ein von Menschen festgelegtes Gebiet. Auf einem Kontinent können viele Länder liegen. Afrika ist ein Kontinent, Kenia ist ein Land in Afrika.",
-        "fact": "Kontinente werden je nach Modell unterschiedlich eingeteilt. Hier nutzen wir sieben."
+        "text": "Ein Kontinent ist eine sehr große Landregion. Ein Land ist ein von Menschen festgelegtes Gebiet. Auf einem Kontinent können viele Länder liegen. Afrika ist ein Kontinent, Kenia ist ein Land in Afrika.\n\nEin Land und ein Kontinent beantworten verschiedene Fragen zur Orientierung. Wenn du Kenia in Afrika findest, ist das kein Widerspruch: Ein kleineres Gebiet gehört zu einer größeren Landregion.",
+        "fact": "Kontinente werden je nach Modell unterschiedlich eingeteilt. Hier nutzen wir sieben.",
+        "starter": "Afrika ist ein Kontinent. Kenia ist ein Land darin.",
+        "deeper": "Kontinentgrenzen sind nicht überall natürlich eindeutig. Unterschiedliche Einteilungen müssen ihren Zweck und ihre Regeln nennen.",
+        "whyItMatters": "Du kannst Länder und größere Weltregionen richtig zuordnen.",
+        "observe": "Wähle auf der Weltkugel Länder und suche Kenia. Wechsle danach die Beschriftung zu Kontinente. Erkläre, warum Kenia und Afrika denselben Ort auf verschiedenen Ebenen beschreiben.",
+        "sourceIds": [
+          "continents-convention",
+          "continents-land-connections"
+        ]
       },
       {
         "title": "Europa und Asien",
-        "text": "Europa und Asien hängen als Landfläche zusammen. Wir unterscheiden sie im Sieben-Kontinente-Modell trotzdem. Russland und die Türkei liegen in beiden Regionen.",
-        "fact": "Eurasien heißt die gemeinsame Landmasse von Europa und Asien."
+        "text": "Europa und Asien hängen als Landfläche zusammen. Wir unterscheiden sie im Sieben-Kontinente-Modell trotzdem. Russland und die Türkei liegen in beiden Regionen.\n\nEine politische Grenze und die Einteilung in Kontinente fallen nicht immer zusammen. Deshalb kann ein Land in mehr als einer Weltregion liegen, ohne dass seine Landfläche getrennt sein muss.",
+        "fact": "Eurasien heißt die gemeinsame Landmasse von Europa und Asien.",
+        "starter": "Europa und Asien sind verbunden. Wir unterscheiden sie in unserem Kontinentmodell.",
+        "deeper": "Eurasien benennt die zusammenhängende Landmasse. Europa und Asien sind in unserem Sieben-Kontinente-Modell getrennte Regionen derselben Landmasse.",
+        "whyItMatters": "Du erkennst, weshalb mehrere Beschreibungen derselben Landfläche sinnvoll sein können.",
+        "observe": "Vergleiche im Schaubild die zusammenhängende Landfläche mit den beiden benannten Regionen. Schalte auf der Weltkugel die Ländergrenzen aus und wieder ein. Erkläre, warum eine Ländergrenze nicht automatisch eine Kontinentgrenze ist.",
+        "sourceIds": [
+          "continents-land-connections",
+          "continents-convention"
+        ]
       },
       {
         "title": "Afrika und Amerika",
-        "text": "Afrika liegt beiderseits des Äquators. Nordamerika und Südamerika hängen an einer schmalen Landbrücke zusammen. Zwischen hohen Bergen, Küsten und Regenwäldern leben ganz verschiedene Tiere.",
-        "fact": "Panama ist ein Land auf der Verbindung zwischen den amerikanischen Kontinenten."
+        "text": "Afrika liegt beiderseits des Äquators. Nordamerika und Südamerika hängen an einer schmalen Landbrücke zusammen. Zwischen hohen Bergen, Küsten und Regenwäldern leben ganz verschiedene Tiere.\n\nDer Äquator ist eine Orientierungslinie, keine Grenze zwischen Ländern. Eine Landbrücke verbindet dagegen wirkliche Landflächen. Die beiden Begriffe beschreiben unterschiedliche Dinge auf derselben Erde.",
+        "fact": "Panama ist ein Land auf der Verbindung zwischen den amerikanischen Kontinenten.",
+        "starter": "Afrika liegt an beiden Seiten des Äquators. Amerika hat einen nördlichen und einen südlichen Teil.",
+        "deeper": "Ein Kontinent enthält viele Landschaften und Klimabedingungen. Eine einzelne Tierart oder ein einzelner Beispielort vertritt nicht die gesamte Region.",
+        "whyItMatters": "Du kannst Lage und Landschaft beschreiben, ohne einen ganzen Kontinent auf ein Beispiel zu reduzieren.",
+        "observe": "Unterscheide im Schaubild die gestrichelte Äquatorlinie durch Afrika von der festen Landverbindung zwischen Nord- und Südamerika. Suche danach Afrika auf der Weltkugel. Die Kästen im Schaubild sind keine echten Küstenumrisse.",
+        "sourceIds": [
+          "continents-land-connections"
+        ]
       },
       {
         "title": "Australien, Inseln und Eis",
-        "text": "Australien ist ein Land und der kleinste Kontinent in diesem Modell. Ozeanien ist die größere Weltregion mit vielen Inseln. Antarktika ist ein eisbedeckter Kontinent am Südpol.",
-        "fact": "Am Nordpol liegt kein Kontinent, sondern Meer unter dem Eis."
+        "text": "Australien ist ein Land und der kleinste Kontinent in diesem Modell. Ozeanien ist die größere Weltregion mit vielen Inseln. Antarktika ist ein eisbedeckter Kontinent am Südpol.\n\nDas Wort Australien wird hier auf zwei Ebenen benutzt: für ein Land und für einen Kontinent. Ozeanien beschreibt eine größere Region. Achte deshalb bei jeder Karte auf die erklärte Einteilung.",
+        "fact": "Am Nordpol liegt kein Kontinent, sondern Meer unter dem Eis.",
+        "starter": "Australien ist Land und Kontinent. Antarktika liegt am Südpol.",
+        "deeper": "Nicht jeder geografische Begriff hat dieselbe Art von Grenze. Eine Weltregion, ein Land und ein Kontinent sind keine austauschbaren Namen.",
+        "whyItMatters": "Du kannst mit mehrdeutigen Namen sorgfältig umgehen.",
+        "observe": "Zeige im Schaubild Australien innerhalb der größeren Region Ozeanien und daneben Land unter der antarktischen Eisdecke. Erkläre, warum der Nordpol nicht einfach ein weiterer eisbedeckter Kontinent ist.",
+        "sourceIds": [
+          "continents-convention",
+          "oceania-region",
+          "polar-land-ocean-reference"
+        ]
       },
       {
         "title": "Eine Karte ist ein Modell",
-        "text": "Auf der Kugel sehen wir die Erde von außen. Eine flache Karte muss die runde Oberfläche verzerren. Auch Farben und Grenzen sind Zeichen: Kontinente sind draußen nicht in unseren Kartenfarben bemalt.",
-        "fact": "Große polnahe Länder sehen auf manchen flachen Karten viel größer aus, als sie im Vergleich wirklich sind."
+        "text": "Auf der Kugel sehen wir die Erde von außen. Eine flache Karte muss die runde Oberfläche verzerren. Auch Farben und Grenzen sind Zeichen: Kontinente sind draußen nicht in unseren Kartenfarben bemalt.\n\nUm eine Kugeloberfläche flach zu zeigen, müssen Eigenschaften verändert werden. Deshalb kann eine Karte für eine Frage gut und für eine andere weniger geeignet sein.",
+        "fact": "Große polnahe Länder sehen auf manchen flachen Karten viel größer aus, als sie im Vergleich wirklich sind.",
+        "starter": "Ein Globus ist rund. Eine flache Karte verändert die Darstellung.",
+        "deeper": "Groß dargestellt bedeutet nicht automatisch große wirkliche Fläche. Vergleiche Länderflächen mit einem geeigneten Maßstab und nicht nur nach Bildschirmbreite.",
+        "whyItMatters": "Du kannst Karten lesen, ohne ihre Darstellung mit der Erde selbst zu verwechseln.",
+        "observe": "Vergleiche die gedachten Breiten- und Längenlinien auf der Kugel und im flachen Schaubild. Erkläre, welche Linienform sich verändert. Die erfundene Insel ist in beiden Ansichten dieselbe; es gibt hier keine Messskala für echte Länderflächen.",
+        "sourceIds": [
+          "map-projection-limits"
+        ]
       }
     ],
     "question": {
@@ -713,29 +752,66 @@
     "steps": [
       {
         "title": "Viele Länder, viele Menschen",
-        "text": "In einem Land wohnen Menschen mit unterschiedlichen Sprachen, Gewohnheiten und Ideen. Ein Beispielgericht oder Tier beschreibt nie alle Menschen oder Orte des Landes.",
-        "fact": "Auch große Länder können sehr verschiedene Landschaften haben."
+        "text": "In einem Land wohnen Menschen mit unterschiedlichen Sprachen, Gewohnheiten und Ideen. Ein Beispielgericht oder Tier beschreibt nie alle Menschen oder Orte des Landes.\n\nEin Länderbeispiel ist eine Einladung zum Entdecken, keine Regel über jeden Menschen. Ein Lieblingsgericht oder eine Landschaft sagt nichts über alle Einwohnerinnen und Einwohner aus.",
+        "fact": "Auch große Länder können sehr verschiedene Landschaften haben.",
+        "starter": "Menschen in einem Land können verschieden leben und sprechen.",
+        "deeper": "Länderporträts wählen Informationen aus. Gute Beschreibungen nennen diese Auswahl und vermeiden Eigenschaften, die angeblich für alle Menschen gelten.",
+        "whyItMatters": "Du lernst neue Orte kennen, ohne Menschen in feste Schubladen zu stecken.",
+        "observe": "Suche Kenia auf der Weltkugel und öffne Mehr über Kenia. Wähle das Tier- oder Essensbeispiel. Formuliere dazu einen Satz mit zum Beispiel und erkläre, warum er nicht alle Menschen im Land beschreibt.",
+        "sourceIds": [
+          "country-cultural-diversity"
+        ]
       },
       {
         "title": "Die Hauptstadt",
-        "text": "In der Hauptstadt werden wichtige Aufgaben eines Landes erledigt. Berlin ist Deutschlands Hauptstadt. Eine Hauptstadt ist nicht automatisch die größte oder bekannteste Stadt.",
-        "fact": "Australiens Hauptstadt ist Canberra, nicht Sydney."
+        "text": "In der Hauptstadt werden wichtige Aufgaben eines Landes erledigt. Berlin ist Deutschlands Hauptstadt. Eine Hauptstadt ist nicht automatisch die größte oder bekannteste Stadt.\n\nBekanntheit, Einwohnerzahl und Regierungsaufgaben sind verschiedene Merkmale. Canberra und Sydney zeigen, warum die Frage Hauptstadt anders beantwortet wird als größte Stadt.",
+        "fact": "Australiens Hauptstadt ist Canberra, nicht Sydney.",
+        "starter": "Eine Hauptstadt hat wichtige Aufgaben für ein Land. Sie muss nicht die größte Stadt sein.",
+        "deeper": "Die Aufgaben können auf mehrere Städte verteilt sein. Die genaue Länderangabe zählt mehr als eine einfache weltweite Faustregel.",
+        "whyItMatters": "Du beantwortest geografische Fragen nach ihrem tatsächlichen Merkmal.",
+        "observe": "Suche Australien und Deutschland auf der Weltkugel. Lies jeweils die Hauptstadt. Vergleiche im Schaubild das Hauptstadtzeichen mit den anderen Stadtzeichen: Kannst du daraus die Einwohnerzahlen ablesen?",
+        "sourceIds": [
+          "canberra-capital-reference",
+          "germany-capital-flag-reference"
+        ]
       },
       {
         "title": "Zeichen auf einer Flagge",
-        "text": "Eine Flagge ist ein Zeichen für ein Land oder Gebiet. Farben, Streifen und Symbole helfen beim Erkennen. Manche Flaggen sehen sich sehr ähnlich.",
-        "fact": "Flaggen sagen nichts darüber aus, ob ein Mensch besser oder schlechter ist."
+        "text": "Eine Flagge ist ein Zeichen für ein Land oder Gebiet. Farben, Streifen und Symbole helfen beim Erkennen. Manche Flaggen sehen sich sehr ähnlich.\n\nZwei Flaggen können ähnliche Farben haben und trotzdem unterschiedliche Länder bezeichnen. Vergleiche deshalb auch Reihenfolge, Anordnung und Zeichen statt nur die erste Farbe.",
+        "fact": "Flaggen sagen nichts darüber aus, ob ein Mensch besser oder schlechter ist.",
+        "starter": "Flaggen sind Zeichen. Form, Farbe und Symbole helfen beim Erkennen.",
+        "deeper": "Eine Flagge ist ein vereinbartes Symbol. Sie ist kein Beleg für Fähigkeiten oder Eigenschaften der Menschen eines Landes.",
+        "whyItMatters": "Du übst genaues Vergleichen und unterscheidest Symbol von Mensch.",
+        "observe": "Untersuche die erfundene Flagge im Schaubild und die deutsche Flagge im Länderporträt. Beschreibe Farben, Anordnung und ein zusätzliches Zeichen oder dessen Fehlen. Hierfür brauchst du kein neues Flaggen-Spiel.",
+        "sourceIds": [
+          "germany-capital-flag-reference",
+          "country-cultural-diversity"
+        ]
       },
       {
         "title": "Nachbarn auf der Landkarte",
-        "text": "Länder können eine gemeinsame Landgrenze haben oder durch ein Meer getrennt sein. Deutschland hat neun Nachbarländer an Land. Flüsse und Gebirge überqueren oft Grenzen.",
+        "text": "Länder können eine gemeinsame Landgrenze haben oder durch ein Meer getrennt sein. Deutschland hat neun Nachbarländer an Land. Flüsse und Gebirge überqueren oft Grenzen.\n\nEine Landesgrenze erklärt Zuständigkeiten, hält aber einen Fluss nicht automatisch an. Die politische und die natürliche Karte zeigen daher zusammen mehr als jede allein.",
         "fact": "Eine Ländergrenze ist meistens keine sichtbare Linie wie auf unserer Karte.",
-        "tryIt": "Welches deutsche Nachbarland beginnt mit P?"
+        "tryIt": "Welches deutsche Nachbarland beginnt mit P?",
+        "starter": "Nachbarländer können eine gemeinsame Landgrenze haben. Wasser kennt solche Linien nicht.",
+        "deeper": "Landnachbarn und Nachbarn über ein Meer sind verschiedene Vergleichsgruppen. Sage bei einer Anzahl dazu, welche Gruppe du meinst.",
+        "whyItMatters": "Du kannst eine Zahl wie neun Nachbarländer mit ihrer Zählregel erklären.",
+        "observe": "Suche Deutschland und Polen auf der Weltkugel. Vergleiche im Schaubild gemeinsame Landgrenze, Meer dazwischen und einen grenzüberschreitenden Fluss. Sage ausdrücklich, welche Nachbarart bei der Zahl neun gemeint ist.",
+        "sourceIds": [
+          "germany-neighbors-reference"
+        ]
       },
       {
         "title": "Größe und Bevölkerung",
-        "text": "Die Fläche sagt, wie viel Platz ein Land auf der Erde einnimmt. Die Bevölkerung sagt, wie viele Menschen dort leben. Ein großes Land muss nicht sehr viele Menschen haben.",
-        "fact": "Bevölkerungszahlen ändern sich. Im Atlas steht deshalb auch das Jahr zur Schätzung."
+        "text": "Die Fläche sagt, wie viel Platz ein Land auf der Erde einnimmt. Die Bevölkerung sagt, wie viele Menschen dort leben. Ein großes Land muss nicht sehr viele Menschen haben.\n\nZum Vergleichen müssen gleiche Messregeln verwendet werden. Eine ältere Bevölkerungsschätzung und eine jüngere sind nicht ohne Weiteres ein gleichzeitiger Vergleich.",
+        "fact": "Bevölkerungszahlen ändern sich. Im Atlas steht deshalb auch das Jahr zur Schätzung.",
+        "starter": "Fläche misst Platz. Bevölkerung zählt Menschen. Das sind verschiedene Größen.",
+        "deeper": "Bevölkerungsdichte setzt Einwohnerzahl zur Fläche ins Verhältnis. Sie beschreibt einen Durchschnitt und verrät nicht, wie Menschen innerhalb eines Landes verteilt sind.",
+        "whyItMatters": "Du liest Zahlen zusammen mit Einheit und Datenjahr.",
+        "observe": "Vergleiche im Schaubild die gleich großen Flächenkästchen und die Menschenzeichen. Suche danach Deutschland und Australien und öffne die Länderporträts. Notiere bei Fläche und Bevölkerung jeweils Einheit und Bezugsjahr. Die Beispielzeichen sind keine aktuellen Länderzahlen.",
+        "sourceIds": [
+          "population-density-reference"
+        ]
       }
     ],
     "question": {

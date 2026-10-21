@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "a67e52390c7ef6cfac3857bdd1cfa954e968cd3a",
+    "commit": "73e1a265d02cc7c5b0e4b02d4f8ab68d34d69a3e",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -44,7 +44,8 @@
       "3bd78b4b803a235791b045732abe423d2f8820eb",
       "0b7bd3b7cf787e154e917343caa7f9be9ecff666",
       "bca35334954676078d3fa45b1563979507c4f2c4",
-      "a67e52390c7ef6cfac3857bdd1cfa954e968cd3a"
+      "a67e52390c7ef6cfac3857bdd1cfa954e968cd3a",
+      "73e1a265d02cc7c5b0e4b02d4f8ab68d34d69a3e"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -1109,6 +1110,37 @@
           "createdAt": "2026-10-21T12:18:17Z",
           "updatedAt": "2026-10-21T12:18:17Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/8ZxGvZpX7imxkvdktVGdetiWJU6j"
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "title": "Natur und Schutz: bestehende Kapitel und Modelle verständlich vertiefen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/50",
+      "base": "test-live",
+      "mergedAt": "2026-10-21T13:27:02Z",
+      "mergeCommit": "73e1a265d02cc7c5b0e4b02d4f8ab68d34d69a3e",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/73e1a265d02cc7c5b0e4b02d4f8ab68d34d69a3e/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56890671002,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-21T13:27:21Z",
+          "updatedAt": "2026-10-21T13:27:21Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/9y8K9ZaCyAJrgpmuibApqE7nwEA3"
+        },
+        {
+          "id": 56890649339,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-21T13:27:06Z",
+          "updatedAt": "2026-10-21T13:27:06Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/9y8K9ZaCyAJrgpmuibApqE7nwEA3"
         }
       ]
     }

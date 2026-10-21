@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T12:22:49.183Z",
+  "generatedAt": "2026-10-21T13:31:46.516Z",
   "personalProgressIncluded": false,
   "topics": 145,
   "categories": {
@@ -93,12 +93,15 @@
     {
       "file": "journeys.json",
       "sources": [
-        "app/learning-data.ts",
-        "app/expanded-learning-data.ts"
+        "app/journey-content.json",
+        "app/journey-index.json",
+        "app/journey-sources.json",
+        "app/journey-content-validation.mjs",
+        "scripts/journey-content-index.mjs"
       ],
       "entries": 16,
-      "bytes": 69704,
-      "sha256": "07cb7f46dde6229e30431a7fd7f2e00fb7aca822bb164c65a7c7be4933c8ca01"
+      "bytes": 78639,
+      "sha256": "f23b3171b09af03699cac15319a35f61521e5a96d88f51d9e5d2cef97db60701"
     },
     {
       "file": "knowledge-words.json",
