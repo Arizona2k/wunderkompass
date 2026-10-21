@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "012721ae938ac786cb0bf86f42e481403202f31b",
+    "commit": "4b5299abe130892a19d94654562a3bf3ce361188",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -47,7 +47,8 @@
       "a67e52390c7ef6cfac3857bdd1cfa954e968cd3a",
       "73e1a265d02cc7c5b0e4b02d4f8ab68d34d69a3e",
       "02d143d7aa3c35a9d5277c183cee8478538c0bd0",
-      "012721ae938ac786cb0bf86f42e481403202f31b"
+      "012721ae938ac786cb0bf86f42e481403202f31b",
+      "4b5299abe130892a19d94654562a3bf3ce361188"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -1205,6 +1206,37 @@
           "createdAt": "2026-10-21T18:02:33Z",
           "updatedAt": "2026-10-21T18:02:33Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/EYbXfu9zcea7UV9cMb6m5HEbqVcV"
+        }
+      ]
+    },
+    {
+      "number": 53,
+      "title": "Planet und Erdinneres verständlich erklären, Quellen und Chronik pflegen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/53",
+      "base": "test-live",
+      "mergedAt": "2026-10-21T19:36:43Z",
+      "mergeCommit": "4b5299abe130892a19d94654562a3bf3ce361188",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/4b5299abe130892a19d94654562a3bf3ce361188/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56924713852,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-21T19:36:56Z",
+          "updatedAt": "2026-10-21T19:36:56Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/8M6yU21CaLeHip96EuXkuoYsdyAP"
+        },
+        {
+          "id": 56924698735,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-21T19:36:47Z",
+          "updatedAt": "2026-10-21T19:36:47Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/8M6yU21CaLeHip96EuXkuoYsdyAP"
         }
       ]
     }
