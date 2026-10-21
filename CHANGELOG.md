@@ -1,3 +1,7 @@
+## Lokal vollständig geprüft · Planet und Erdinneres
+
+Zehn vorhandene Kapiteltexte verständlicher erklärt, Quellen zugeordnet und Insel-/Kontinentbegriff präzisiert.30Aufgaben und achtModelle sowie alle übrigen Inhalte/Spielstände erhalten. Vollständige lokale Browser-/Offlineabnahme bestanden; bestätigte Biografien-Veröffentlichung52 in der regulären Chronik nachgeführt. Aktuelles finales GitHub-CI und tatsächliche Veröffentlichung dieses Folgestands noch offen.
+
 ## Lokal geprüft · Biografien und belegte Kontinentchronik
 
 Zwei vorhandene Biografien mit sechs freiwilligen Denkaufgaben, eigenen gekennzeichneten Modellen, erklärten Darwin-/Kamera-Rückwegen und erhaltenen alten Spielrunden integriert. Vollständige aktuelle lokale Browser-/Offlineabnahme grün, danach56UI-Belege gebunden. Chronik47 enthält den tatsächlich bestätigten Kontinentabschnitt51 und alle46alten Einträge. Endgültiges GitHub-CI und tatsächliche Veröffentlichung dieses Folgestands noch offen.

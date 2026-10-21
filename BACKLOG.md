@@ -1,3 +1,17 @@
+## WK055/057 · Planet und Erdinneres lokal vollständig geprüft ·21.10.2026
+
+Zehn vorbereitete Kapiteltexte auf tatsächlich bestätigter PR52-Basis vollständig lokal abgenommen:998,44Sekunden, zehn unveränderte Pflichtgruppen,240Hinweise/448Diagrammansichten, echte Browser-/Offline-/Altpassprüfung.56UI-Belege erst nach natürlichem Vollgrün erneuert; individuelle Fakten- und Quellenprüfungen unverändert. Chronik48 enthält die echte52-Bereitstellung und alle47Vorgänger. Jetzt abschließende Standards, exaktes GitHub-CI, frische native Freigabe und tatsächliche test-live-Auslieferung abschließen. Vorbereitete Vulkan-/Erdbebenkapitel anschließend aus vorhandener Nachtarbeit weiterführen; keine neuen Nebenpakete. Frühere Statusabsätze darunter sind historische Zwischenstände.
+
+## WK-055/057 · vorbereitete Planet-/Erdinneres-Texte fertigstellen · 21.10.2026
+
+PR52 ist tatsächlich nach test-live012721a übernommen, per Vercel und echtem Browser bestätigt; vollständige Quality144 erfolgreich. Nicht wieder öffnen. Die zwei Biografien und alten18Personenbilder/-Spielstände sind erhalten. Erst nach diesem Abschluss den vorhandenen Planet174-Stand kontrolliert auf dieselbe Codebasis übernommen.
+
+Zusammenhängender Umfang: zehn vorhandene Kapiteltexte mit zwölf Quellzuordnungen und enger Inselbegriff-Präzisierung;30Aufgaben, achtModelle und alle übrigen Inhalte erhalten. Gültige frühe Nachweise behalten ihre tatsächlichen Builds. Bestätigte52-Chronik lokal als48.Eintrag ergänzt, alle47Vorgänger exakt. Endgültigen Stand vollständig prüfen;56UI-Belege erst nach natürlichem Vollgrün erneuern, danach finales CI, frische Routineprüfung, regulärer test-live-Weg und tatsächliche Auslieferung. Ganze3.5-Abnahme und übrige vorbereitete Kapitel-/Inhaltswellen bleiben offen; danach bestehende4–8-Reihenfolge. Kein neuer Umfang im laufenden Abschnitt, keine News/main/Produktion/Gesamtübernahme27.
+
+## WK055/057 · vorhandene Planet-/Erdinneres-Kapitel weitergeführt ·21.10.2026
+
+Zehn vorbereitete Texte mit zwölf Quellzuordnungen und30Gegenprüfungen getrennt lokal integriert und früh im Browser geprüft; Aufgaben, Modelle und die14anderen Reisen erhalten. Nach bestätigter51- und Biografien-Auslieferung die aktuelle Basis und Chronik kontrolliert übernehmen und den bestehenden vollständigen Freigabeweg abschließen. Die54alten UI-Belege bleiben bis zur aktuellen Vollabnahme offen. Lernbefunde und Nachweise stehen im vorhandenen Kapitelreview und PROJECT_STATE; übrige vorbereitete Kapitel bleiben Teil desselben3.5-Auftrags.
+
 ## WK053/057 · vorbereitete Biografien lokal vollständig geprüft ·21.10.2026
 
 Zwei vorhandene Manuskripte mit sechs Altersaufgaben auf tatsächlich ausgeliefertem PR51 vollständig lokal geprüft;131Prüfmeldungen, alte Personen-/Spielidentitäten und echte Offline-/Altpassnachweise grün.56UI-Belege ausschließlich nach natürlichem Vollgrün gebunden. Jetzt finale Integrität/Standards, exaktes GitHub-CI, frische normale Freigabe und test-live-Auslieferung abschließen; keine neue Umfangsausweitung. Der getrennte Planet-/Erdinneres-Abschnitt folgt im bestehenden3.5-Auftrag.
