@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "02d143d7aa3c35a9d5277c183cee8478538c0bd0",
+    "commit": "012721ae938ac786cb0bf86f42e481403202f31b",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -46,7 +46,8 @@
       "bca35334954676078d3fa45b1563979507c4f2c4",
       "a67e52390c7ef6cfac3857bdd1cfa954e968cd3a",
       "73e1a265d02cc7c5b0e4b02d4f8ab68d34d69a3e",
-      "02d143d7aa3c35a9d5277c183cee8478538c0bd0"
+      "02d143d7aa3c35a9d5277c183cee8478538c0bd0",
+      "012721ae938ac786cb0bf86f42e481403202f31b"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -1173,6 +1174,37 @@
           "createdAt": "2026-10-21T16:33:41Z",
           "updatedAt": "2026-10-21T16:33:41Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/9oeRWeGVqmE9ub3Nr37ofU7TS9U6"
+        }
+      ]
+    },
+    {
+      "number": 52,
+      "title": "Mary Anning und Ibn al-Haytham entdecken, alte Personen-Spielstände erhalten",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/52",
+      "base": "test-live",
+      "mergedAt": "2026-10-21T18:02:29Z",
+      "mergeCommit": "012721ae938ac786cb0bf86f42e481403202f31b",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/012721ae938ac786cb0bf86f42e481403202f31b/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56916084926,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-21T18:02:49Z",
+          "updatedAt": "2026-10-21T18:02:49Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/EYbXfu9zcea7UV9cMb6m5HEbqVcV"
+        },
+        {
+          "id": 56916059409,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-21T18:02:33Z",
+          "updatedAt": "2026-10-21T18:02:33Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/EYbXfu9zcea7UV9cMb6m5HEbqVcV"
         }
       ]
     }

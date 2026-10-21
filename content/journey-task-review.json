@@ -45,8 +45,24 @@
       "sourceIds": [
         "planet-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "planet:0",
+        "level": "Entdecken: erkennen/beobachten",
+        "prompt": "Wer ist der Stern in unserem Sonnensystem?",
+        "correctIndex": 0,
+        "correctAnswer": "Die Sonne",
+        "sourceIds": [
+          "planet-base",
+          "planet-sun-light",
+          "planet-light-reflection"
+        ],
+        "countercheck": "NASA Sonnenlicht und bereits individuell geprüfte Reflexionsquelle stützen Stern/Planet und Lichtweg. Nicht vorhandenes eingebettetes Sonnensystem durch eigene sichere Papierskizze ersetzt. Falscher Bezug auf einen Sonne-Erde-Größenvergleich auf der Weltkugel eng dokumentiert korrigiert; Originalbaseline erhalten.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "planet:0:1",
@@ -88,8 +104,24 @@
       "sourceIds": [
         "planet-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "planet:0",
+        "level": "Erklären: vergleichen/begründen",
+        "prompt": "Warum sehen wir die Erde im Sonnenlicht?",
+        "correctIndex": 2,
+        "correctAnswer": "Ihre Oberfläche reflektiert Licht",
+        "sourceIds": [
+          "planet-base",
+          "planet-sun-light",
+          "planet-light-reflection"
+        ],
+        "countercheck": "NASA Sonnenlicht und bereits individuell geprüfte Reflexionsquelle stützen Stern/Planet und Lichtweg. Nicht vorhandenes eingebettetes Sonnensystem durch eigene sichere Papierskizze ersetzt. Falscher Bezug auf einen Sonne-Erde-Größenvergleich auf der Weltkugel eng dokumentiert korrigiert; Originalbaseline erhalten.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "planet:0:2",
@@ -131,8 +163,24 @@
       "sourceIds": [
         "planet-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "planet:0",
+        "level": "Übertragen: neue Situation/Modellgrenze",
+        "prompt": "Eine Zeichnung zeigt Sonne und Erde gleich groß. Was folgerst du?",
+        "correctIndex": 1,
+        "correctAnswer": "Die Größen sind im Bild vereinfacht",
+        "sourceIds": [
+          "planet-base",
+          "planet-sun-light",
+          "planet-light-reflection"
+        ],
+        "countercheck": "NASA Sonnenlicht und bereits individuell geprüfte Reflexionsquelle stützen Stern/Planet und Lichtweg. Nicht vorhandenes eingebettetes Sonnensystem durch eigene sichere Papierskizze ersetzt. Falscher Bezug auf einen Sonne-Erde-Größenvergleich auf der Weltkugel eng dokumentiert korrigiert; Originalbaseline erhalten.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "planet:1:0",
@@ -174,8 +222,23 @@
       "sourceIds": [
         "planet-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "planet:1",
+        "level": "Entdecken: erkennen/beobachten",
+        "prompt": "Was bedeckt den größeren Teil der Erdoberfläche?",
+        "correctIndex": 2,
+        "correctAnswer": "Der Ozean",
+        "sourceIds": [
+          "planet-base",
+          "planet-earth-shape"
+        ],
+        "countercheck": "NASA71-Prozent-Angabe bezieht sich auf Oberfläche, nicht Wasservolumen. NOAA erklärt Kugelnäherung/Abplattung. Tatsächlich100gleich große Kästchen mit71/29Anteil; Orange kennzeichnet die Auswahl, nicht einen dritten Stoff.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "planet:1:1",
@@ -217,8 +280,23 @@
       "sourceIds": [
         "planet-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "planet:1",
+        "level": "Erklären: vergleichen/begründen",
+        "prompt": "Hundert gleich große Felder: Welche Aufteilung passt ungefähr?",
+        "correctIndex": 1,
+        "correctAnswer": "71 Wasser,29 Land",
+        "sourceIds": [
+          "planet-base",
+          "planet-earth-shape"
+        ],
+        "countercheck": "NASA71-Prozent-Angabe bezieht sich auf Oberfläche, nicht Wasservolumen. NOAA erklärt Kugelnäherung/Abplattung. Tatsächlich100gleich große Kästchen mit71/29Anteil; Orange kennzeichnet die Auswahl, nicht einen dritten Stoff.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "planet:1:2",
@@ -260,8 +338,23 @@
       "sourceIds": [
         "planet-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "planet:1",
+        "level": "Übertragen: neue Situation/Modellgrenze",
+        "prompt": "Eine Nahaufnahme zeigt fast nur Land. Ist die Erde überwiegend Land?",
+        "correctIndex": 0,
+        "correctAnswer": "Nein, der Bildausschnitt reicht nicht",
+        "sourceIds": [
+          "planet-base",
+          "planet-earth-shape"
+        ],
+        "countercheck": "NASA71-Prozent-Angabe bezieht sich auf Oberfläche, nicht Wasservolumen. NOAA erklärt Kugelnäherung/Abplattung. Tatsächlich100gleich große Kästchen mit71/29Anteil; Orange kennzeichnet die Auswahl, nicht einen dritten Stoff.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "planet:2:0",
@@ -303,8 +396,22 @@
       "sourceIds": [
         "planet-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "planet:2",
+        "level": "Entdecken: erkennen/beobachten",
+        "prompt": "Was ist in einer offenen leeren Flasche?",
+        "correctIndex": 1,
+        "correctAnswer": "Luft",
+        "sourceIds": [
+          "planet-base"
+        ],
+        "countercheck": "NASA beschreibt das Gasgemisch. Wind zeigt Bewegung, keine chemische Vollanalyse. Offene normale Flasche enthält Luft; keine Vakuum- oder Rein-Sauerstoff-Annahme. Gashülle im Modell ausdrücklich übertrieben dick, keine gemessene Dichtekurve.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "planet:2:1",
@@ -346,8 +453,22 @@
       "sourceIds": [
         "planet-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "planet:2",
+        "level": "Erklären: vergleichen/begründen",
+        "prompt": "Ein Blatt bewegt sich im Wind. Was kannst du daran erkennen?",
+        "correctIndex": 0,
+        "correctAnswer": "Luft ist in Bewegung",
+        "sourceIds": [
+          "planet-base"
+        ],
+        "countercheck": "NASA beschreibt das Gasgemisch. Wind zeigt Bewegung, keine chemische Vollanalyse. Offene normale Flasche enthält Luft; keine Vakuum- oder Rein-Sauerstoff-Annahme. Gashülle im Modell ausdrücklich übertrieben dick, keine gemessene Dichtekurve.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "planet:2:2",
@@ -389,8 +510,22 @@
       "sourceIds": [
         "planet-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "planet:2",
+        "level": "Übertragen: neue Situation/Modellgrenze",
+        "prompt": "Kannst du mit einer Windbeobachtung die ganze Zusammensetzung der Luft bestimmen?",
+        "correctIndex": 2,
+        "correctAnswer": "Nein, dafür braucht man weitere Messungen",
+        "sourceIds": [
+          "planet-base"
+        ],
+        "countercheck": "NASA beschreibt das Gasgemisch. Wind zeigt Bewegung, keine chemische Vollanalyse. Offene normale Flasche enthält Luft; keine Vakuum- oder Rein-Sauerstoff-Annahme. Gashülle im Modell ausdrücklich übertrieben dick, keine gemessene Dichtekurve.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "planet:3:0",
@@ -432,8 +567,23 @@
       "sourceIds": [
         "planet-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "planet:3",
+        "level": "Entdecken: erkennen/beobachten",
+        "prompt": "Wohin zeigt unten für Menschen auf der Erde?",
+        "correctIndex": 0,
+        "correctAnswer": "Zur Erdmitte",
+        "sourceIds": [
+          "planet-base",
+          "planet-gravity"
+        ],
+        "countercheck": "NASA Schwerkraft/Atmosphäre und eigenes Zentrenmodell gegengelesen. Lokal unten ungefähr zur Erdmitte; gedrehtes Papier ändert nur die Ansicht. Zwei tatsächlich gezeichnete Pfeilspitzen zeigen nach innen, nicht nur ein beschrifteter Strich.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "planet:3:1",
@@ -475,8 +625,23 @@
       "sourceIds": [
         "planet-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "planet:3",
+        "level": "Erklären: vergleichen/begründen",
+        "prompt": "Zwei Menschen stehen gegenüber auf der Erde. Wie zeigen ihre Unten-Pfeile?",
+        "correctIndex": 2,
+        "correctAnswer": "Beide zur Erdmitte",
+        "sourceIds": [
+          "planet-base",
+          "planet-gravity"
+        ],
+        "countercheck": "NASA Schwerkraft/Atmosphäre und eigenes Zentrenmodell gegengelesen. Lokal unten ungefähr zur Erdmitte; gedrehtes Papier ändert nur die Ansicht. Zwei tatsächlich gezeichnete Pfeilspitzen zeigen nach innen, nicht nur ein beschrifteter Strich.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "planet:3:2",
@@ -518,8 +683,23 @@
       "sourceIds": [
         "planet-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "planet:3",
+        "level": "Übertragen: neue Situation/Modellgrenze",
+        "prompt": "Drehst du die Erdkugel-Zeichnung um: Ändert sich die Schwerkraft?",
+        "correctIndex": 1,
+        "correctAnswer": "Nein, nur unsere Ansicht ändert sich",
+        "sourceIds": [
+          "planet-base",
+          "planet-gravity"
+        ],
+        "countercheck": "NASA Schwerkraft/Atmosphäre und eigenes Zentrenmodell gegengelesen. Lokal unten ungefähr zur Erdmitte; gedrehtes Papier ändert nur die Ansicht. Zwei tatsächlich gezeichnete Pfeilspitzen zeigen nach innen, nicht nur ein beschrifteter Strich.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "planet:4:0",
@@ -561,8 +741,22 @@
       "sourceIds": [
         "planet-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "planet:4",
+        "level": "Entdecken: erkennen/beobachten",
+        "prompt": "Welche Bewegung gehört ungefähr zu einem Tag?",
+        "correctIndex": 2,
+        "correctAnswer": "Drehung um die Erdachse",
+        "sourceIds": [
+          "planet-base"
+        ],
+        "countercheck": "NASA Erdrotation und Sonnenumlauf sind verschiedene Zeiträume; ungefähr24Stunden und365¼Tage sind gerundet. Kein ausnahmsloser Vierjahres-Kalenderzwang. Zwei unabhängige Pfeilspitzen; Größen, Abstände und Perspektive sind kein Messmodell.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "planet:4:1",
@@ -604,8 +798,22 @@
       "sourceIds": [
         "planet-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "planet:4",
+        "level": "Erklären: vergleichen/begründen",
+        "prompt": "Welche Zuordnung passt?",
+        "correctIndex": 1,
+        "correctAnswer": "Achsdrehung:Tag; Sonnenumlauf:Jahr",
+        "sourceIds": [
+          "planet-base"
+        ],
+        "countercheck": "NASA Erdrotation und Sonnenumlauf sind verschiedene Zeiträume; ungefähr24Stunden und365¼Tage sind gerundet. Kein ausnahmsloser Vierjahres-Kalenderzwang. Zwei unabhängige Pfeilspitzen; Größen, Abstände und Perspektive sind kein Messmodell.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "planet:4:2",
@@ -647,8 +855,22 @@
       "sourceIds": [
         "planet-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "planet:4",
+        "level": "Übertragen: neue Situation/Modellgrenze",
+        "prompt": "Warum ist ein Jahr nicht genau 365 Tage lang?",
+        "correctIndex": 0,
+        "correctAnswer": "Ein Sonnenumlauf dauert ungefähr 365¼ Tage",
+        "sourceIds": [
+          "planet-base"
+        ],
+        "countercheck": "NASA Erdrotation und Sonnenumlauf sind verschiedene Zeiträume; ungefähr24Stunden und365¼Tage sind gerundet. Kein ausnahmsloser Vierjahres-Kalenderzwang. Zwei unabhängige Pfeilspitzen; Größen, Abstände und Perspektive sind kein Messmodell.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "inside:0:0",
@@ -690,8 +912,23 @@
       "sourceIds": [
         "inside-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "inside:0",
+        "level": "Entdecken: erkennen/beobachten",
+        "prompt": "Welche Schicht liegt ganz außen?",
+        "correctIndex": 0,
+        "correctAnswer": "Die Erdkruste",
+        "sourceIds": [
+          "inside-interior",
+          "inside-rigid-shell"
+        ],
+        "countercheck": "USGS-Transkript33–34 und NPS unterscheiden Kruste/Mantel/Kern sowie flüssigen äußeren/festen inneren Kern; chemische Dreiteilung nicht mit vier Zustandsbereichen verwechselt. Veraltete fünfMilliarden-Altersangabe nicht übernommen. Vorhandenes Vier-Ring-Modell überzeichnet die Kruste ausdrücklich.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "inside:0:1",
@@ -733,8 +970,23 @@
       "sourceIds": [
         "inside-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "inside:0",
+        "level": "Erklären: vergleichen/begründen",
+        "prompt": "Warum zeichnen Lernbilder die Kruste oft dicker?",
+        "correctIndex": 2,
+        "correctAnswer": "Damit man sie erkennen kann",
+        "sourceIds": [
+          "inside-interior",
+          "inside-rigid-shell"
+        ],
+        "countercheck": "USGS-Transkript33–34 und NPS unterscheiden Kruste/Mantel/Kern sowie flüssigen äußeren/festen inneren Kern; chemische Dreiteilung nicht mit vier Zustandsbereichen verwechselt. Veraltete fünfMilliarden-Altersangabe nicht übernommen. Vorhandenes Vier-Ring-Modell überzeichnet die Kruste ausdrücklich.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "inside:0:2",
@@ -776,8 +1028,23 @@
       "sourceIds": [
         "inside-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "inside:0",
+        "level": "Übertragen: neue Situation/Modellgrenze",
+        "prompt": "Woher stammen Erkenntnisse über den Kern, obwohl niemand dort bohrt?",
+        "correctIndex": 1,
+        "correctAnswer": "Unter anderem aus Erdbebenwellen",
+        "sourceIds": [
+          "inside-interior",
+          "inside-rigid-shell"
+        ],
+        "countercheck": "USGS-Transkript33–34 und NPS unterscheiden Kruste/Mantel/Kern sowie flüssigen äußeren/festen inneren Kern; chemische Dreiteilung nicht mit vier Zustandsbereichen verwechselt. Veraltete fünfMilliarden-Altersangabe nicht übernommen. Vorhandenes Vier-Ring-Modell überzeichnet die Kruste ausdrücklich.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "inside:1:0",
@@ -820,8 +1087,23 @@
         "inside-base",
         "mantle"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "inside:1",
+        "level": "Entdecken: erkennen/beobachten",
+        "prompt": "Welche Kernschicht ist flüssig?",
+        "correctIndex": 2,
+        "correctAnswer": "Der äußere Kern",
+        "sourceIds": [
+          "mantle",
+          "inside-interior"
+        ],
+        "countercheck": "USGS überwiegend fester, langfristig verformbarer Mantel versus flüssiger äußerer und unter Druck fester innerer Kern. Zustandsfelder jetzt gleich groß, ohne erfundene Mengen-/Temperaturskala. Gummianalogie veranschaulicht Formänderung, nicht Material oder geologische Dauer; zwei plausible Fehlalternativen einzeln begründet.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "inside:1:1",
@@ -864,8 +1146,23 @@
         "inside-base",
         "mantle"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "inside:1",
+        "level": "Erklären: vergleichen/begründen",
+        "prompt": "Warum ist heißer Mantel nicht einfach ein Lavameer?",
+        "correctIndex": 1,
+        "correctAnswer": "Gestein bleibt überwiegend fest und verformt sich langsam",
+        "sourceIds": [
+          "mantle",
+          "inside-interior"
+        ],
+        "countercheck": "USGS überwiegend fester, langfristig verformbarer Mantel versus flüssiger äußerer und unter Druck fester innerer Kern. Zustandsfelder jetzt gleich groß, ohne erfundene Mengen-/Temperaturskala. Gummianalogie veranschaulicht Formänderung, nicht Material oder geologische Dauer; zwei plausible Fehlalternativen einzeln begründet.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "inside:1:2",
@@ -939,7 +1236,7 @@
         ],
         "countercheck": "USGS überwiegend fester, langfristig verformbarer Mantel versus flüssiger äußerer und unter Druck fester innerer Kern. Zustandsfelder jetzt gleich groß, ohne erfundene Mengen-/Temperaturskala. Gummianalogie veranschaulicht Formänderung, nicht Material oder geologische Dauer; zwei plausible Fehlalternativen einzeln begründet.",
         "allOptionFeedbackActuallyChecked": true,
-        "technicalProof": "Current isolated product build c4766794d0548e82, original full-local report /workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60; additional 30 native/cold cases and six old wrong-index cases passed. No CI/deployment claim."
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
       }
     },
     {
@@ -1014,7 +1311,7 @@
         ],
         "countercheck": "NPS Lithosphäre umfasst Kruste und starren obersten Mantel. Ausgewählte Bandschicht/ganze Platte richtig hervorgehoben; darunter überwiegend festes verformbares Gestein, kein Magmameer. Hinweis zur Zusammensetzung statt nur Land/Meer. Vorhandene echte Plattenebene/Eurasische-Platte-Auswahl bei320/390tatsächlich bedient.",
         "allOptionFeedbackActuallyChecked": true,
-        "technicalProof": "Current isolated product build c4766794d0548e82, original full-local report /workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60; additional 30 native/cold cases and six old wrong-index cases passed. No CI/deployment claim."
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
       }
     },
     {
@@ -1057,8 +1354,23 @@
       "sourceIds": [
         "inside-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "inside:2",
+        "level": "Erklären: vergleichen/begründen",
+        "prompt": "Eine Platte trägt Land und Meeresboden. Passt das?",
+        "correctIndex": 0,
+        "correctAnswer": "Ja, beide können auf einer Platte liegen",
+        "sourceIds": [
+          "inside-plate-overview",
+          "inside-rigid-shell"
+        ],
+        "countercheck": "NPS Lithosphäre umfasst Kruste und starren obersten Mantel. Ausgewählte Bandschicht/ganze Platte richtig hervorgehoben; darunter überwiegend festes verformbares Gestein, kein Magmameer. Hinweis zur Zusammensetzung statt nur Land/Meer. Vorhandene echte Plattenebene/Eurasische-Platte-Auswahl bei320/390tatsächlich bedient.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "inside:2:2",
@@ -1100,8 +1412,23 @@
       "sourceIds": [
         "inside-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "inside:2",
+        "level": "Übertragen: neue Situation/Modellgrenze",
+        "prompt": "Ein Modell verschiebt eine Platte schnell. Wie ordnest du das ein?",
+        "correctIndex": 2,
+        "correctAnswer": "Die Bewegung ist zeitlich stark beschleunigt",
+        "sourceIds": [
+          "inside-plate-overview",
+          "inside-rigid-shell"
+        ],
+        "countercheck": "NPS Lithosphäre umfasst Kruste und starren obersten Mantel. Ausgewählte Bandschicht/ganze Platte richtig hervorgehoben; darunter überwiegend festes verformbares Gestein, kein Magmameer. Hinweis zur Zusammensetzung statt nur Land/Meer. Vorhandene echte Plattenebene/Eurasische-Platte-Auswahl bei320/390tatsächlich bedient.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "inside:3:0",
@@ -1143,8 +1470,22 @@
       "sourceIds": [
         "inside-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "inside:3",
+        "level": "Entdecken: erkennen/beobachten",
+        "prompt": "Welche Bewegung kann Gebirge durch Kontinentkollision bilden?",
+        "correctIndex": 0,
+        "correctAnswer": "Platten stoßen zusammen",
+        "sourceIds": [
+          "inside-boundary-types"
+        ],
+        "countercheck": "NPS drei Grenzarten, Beben bei allen; Zusammenstoßen bedeutet nicht immer Subduktion. Seitliches Vorbeigleiten hat zwei entgegengesetzte parallele Pfeile in ausdrücklich benannter Draufsicht; andere Auswahlen Querschnitt. Alle drei vorhandenen Laborarten samt Regler tatsächlich bedient; Sekundenmodell keine reale Gebirgsdauer.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "inside:3:1",
@@ -1186,8 +1527,22 @@
       "sourceIds": [
         "inside-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "inside:3",
+        "level": "Erklären: vergleichen/begründen",
+        "prompt": "Wo können Erdbeben auftreten?",
+        "correctIndex": 2,
+        "correctAnswer": "Bei allen drei Bewegungsarten",
+        "sourceIds": [
+          "inside-boundary-types"
+        ],
+        "countercheck": "NPS drei Grenzarten, Beben bei allen; Zusammenstoßen bedeutet nicht immer Subduktion. Seitliches Vorbeigleiten hat zwei entgegengesetzte parallele Pfeile in ausdrücklich benannter Draufsicht; andere Auswahlen Querschnitt. Alle drei vorhandenen Laborarten samt Regler tatsächlich bedient; Sekundenmodell keine reale Gebirgsdauer.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "inside:3:2",
@@ -1229,8 +1584,22 @@
       "sourceIds": [
         "inside-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "inside:3",
+        "level": "Übertragen: neue Situation/Modellgrenze",
+        "prompt": "Ein Lernmodell baut in Sekunden einen Berg. Welche Grenze musst du nennen?",
+        "correctIndex": 1,
+        "correctAnswer": "Echte Gebirgsbildung dauert sehr viel länger",
+        "sourceIds": [
+          "inside-boundary-types"
+        ],
+        "countercheck": "NPS drei Grenzarten, Beben bei allen; Zusammenstoßen bedeutet nicht immer Subduktion. Seitliches Vorbeigleiten hat zwei entgegengesetzte parallele Pfeile in ausdrücklich benannter Draufsicht; andere Auswahlen Querschnitt. Alle drei vorhandenen Laborarten samt Regler tatsächlich bedient; Sekundenmodell keine reale Gebirgsdauer.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "inside:4:0",
@@ -1272,8 +1641,23 @@
       "sourceIds": [
         "inside-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "inside:4",
+        "level": "Entdecken: erkennen/beobachten",
+        "prompt": "Wie heißt geschmolzenes Gestein an der Oberfläche?",
+        "correctIndex": 2,
+        "correctAnswer": "Lava",
+        "sourceIds": [
+          "volcano-detail",
+          "inside-volcanic-ash"
+        ],
+        "countercheck": "USGS Magma/Lava nach Lage, Asche aus Gestein/Mineralen/Glas und Hawaii-Hotspot konkret gelesen. Keine vollständige Erd-Magma-Schicht, keine Verbrennungsasche. Holz-Distraktor durch plausible falsche Kontinentrand-Regel samt passendem Feedback ersetzt; alte falsche Auswahl2 bleibt falsch.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "inside:4:1",
@@ -1315,8 +1699,23 @@
       "sourceIds": [
         "inside-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "inside:4",
+        "level": "Erklären: vergleichen/begründen",
+        "prompt": "Was unterscheidet Magma und Lava in dieser Erklärung?",
+        "correctIndex": 1,
+        "correctAnswer": "Der Ort unter oder an der Oberfläche",
+        "sourceIds": [
+          "volcano-detail",
+          "inside-volcanic-ash"
+        ],
+        "countercheck": "USGS Magma/Lava nach Lage, Asche aus Gestein/Mineralen/Glas und Hawaii-Hotspot konkret gelesen. Keine vollständige Erd-Magma-Schicht, keine Verbrennungsasche. Holz-Distraktor durch plausible falsche Kontinentrand-Regel samt passendem Feedback ersetzt; alte falsche Auswahl2 bleibt falsch.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      }
     },
     {
       "id": "inside:4:2",
@@ -1390,7 +1789,7 @@
         ],
         "countercheck": "USGS Magma/Lava nach Lage, Asche aus Gestein/Mineralen/Glas und Hawaii-Hotspot konkret gelesen. Keine vollständige Erd-Magma-Schicht, keine Verbrennungsasche. Holz-Distraktor durch plausible falsche Kontinentrand-Regel samt passendem Feedback ersetzt; alte falsche Auswahl2 bleibt falsch.",
         "allOptionFeedbackActuallyChecked": true,
-        "technicalProof": "Current isolated product build c4766794d0548e82, original full-local report /workspace/work/wk-continuation/journey-small-release-bab06dd-full-originals-20261020/portable-report.json sha256=01e6d238f9e96e09c33ad78a836c867a156e9f1d5d3e69dcecc93d33f2399b60; additional 30 native/cold cases and six old wrong-index cases passed. No CI/deployment claim."
+        "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
       }
     },
     {

@@ -14,30 +14,70 @@
       "steps": [
         {
           "title": "Ein Zuhause im Weltall",
-          "text": "Die Erde ist ein Planet. Sie reist um die Sonne, zusammen mit sieben anderen Planeten. Die Sonne ist ein Stern und gibt uns Licht und Wärme. Die Erde ist der dritte Planet von der Sonne aus.",
-          "fact": "Die Sonne ist viel größer als die Erde. Auf unserer Weltkugel sind beide Größen nicht maßstabsgetreu dargestellt."
+          "text": "Die Erde ist ein Planet. Sie reist um die Sonne, zusammen mit sieben anderen Planeten. Die Sonne ist ein Stern und gibt uns Licht und Wärme. Die Erde ist der dritte Planet von der Sonne aus.\n\nEin Planet und ein Stern haben verschiedene Aufgaben: Die Sonne liefert Licht; die Erde empfängt es. So kannst du die beiden im Modell unterscheiden.",
+          "fact": "Die Sonne ist viel größer als die Erde. Eine Skizze mit gleich großen Kreisen zeigt ihre Größen nicht maßstabsgetreu.",
+          "starter": "Die Erde ist unser Zuhause im Weltall. Sie zieht um die Sonne.",
+          "deeper": "Die gezeichneten Abstände sind stark verkürzt. Eine Bahn zeigt einen Weg, keine Schiene im Weltall.",
+          "whyItMatters": "Du erkennst, weshalb eine leuchtende Sonne und eine beleuchtete Erde verschieden sind.",
+          "observe": "Zeichne Sonne, Erde und ein Auge auf Papier. Verbinde sie mit zwei Lichtpfeilen: von der Sonne zur Erde und von der Erde zum Auge. Erkläre, welcher Körper das Licht erzeugt und welcher es zurückwirft. Die Skizze ist nicht maßstäblich.",
+          "sourceIds": [
+            "planet-base",
+            "planet-sun-light",
+            "planet-light-reflection"
+          ]
         },
         {
           "title": "Land und Wasser",
-          "text": "Etwa 71 von 100 Teilen der Erdoberfläche sind vom Ozean bedeckt. Darum sieht die Erde aus dem Weltall überwiegend blau aus. Die großen Landflächen heißen Kontinente. Inseln sind kleinere Landflächen, die ringsum von Wasser umgeben sind.",
+          "text": "Etwa 71 von 100 Teilen der Erdoberfläche sind vom Ozean bedeckt. Darum sieht die Erde aus dem Weltall überwiegend blau aus. In unserem Modell unterscheiden wir sieben Kontinente. Inseln sind ringsum von Wasser umgeben.\n\nStell dir hundert gleich große Felder vor: Etwa 71 wären Meer. Das beschreibt eine Fläche, nicht die Menge des Wassers oder die Zahl der Inseln.",
           "fact": "Die Erde ist keine perfekte Kugel. An den Polen ist sie ein kleines bisschen abgeflacht.",
-          "tryIt": "Finde auf der Weltkugel eine Insel und einen Kontinent."
+          "tryIt": "Finde auf der Weltkugel eine Insel und einen Kontinent.",
+          "starter": "Auf der Erde gibt es viel Meer und auch Land.",
+          "deeper": "Eine Landfläche kann aus der Ferne klein wirken. Maßstab und Blickwinkel entscheiden mit, was du auf der Kugel erkennst. Auch Australien ist von Wasser umgeben; in unserem Sieben-Kontinente-Modell zählt es als Kontinent. Die Einteilung hängt also nicht allein von der Größe oder vom Wasser ringsum ab.",
+          "whyItMatters": "Du kannst die Zahl 71 Prozent mit einem anschaulichen Flächenvergleich verbinden.",
+          "observe": "Zeichne zehn gleich große Felder und färbe ungefähr sieben blau. Beschreibe, was dein kleines Modell vereinfacht.",
+          "sourceIds": [
+            "planet-base",
+            "planet-earth-shape",
+            "continents-convention"
+          ]
         },
         {
           "title": "Eine unsichtbare Hülle",
-          "text": "Um die Erde liegt die Atmosphäre. Das ist eine Hülle aus Gasen. Wir nennen das Gasgemisch um uns herum Luft. Luft ist unsichtbar, aber du kannst bewegte Luft als Wind spüren. Sie enthält den Sauerstoff, den wir zum Atmen brauchen.",
-          "fact": "Auch eine leere Flasche ist nicht wirklich leer: In ihr ist Luft."
+          "text": "Um die Erde liegt die Atmosphäre. Das ist eine Hülle aus Gasen. Wir nennen das Gasgemisch um uns herum Luft. Luft ist unsichtbar, aber du kannst bewegte Luft als Wind spüren. Sie enthält den Sauerstoff, den wir zum Atmen brauchen.\n\nEin Luftballon macht die unsichtbare Luft bemerkbar: Beim Aufblasen nimmt sie Platz ein. Luft besteht aus mehreren Gasen, nicht nur aus Sauerstoff.",
+          "fact": "Auch eine leere Flasche ist nicht wirklich leer: In ihr ist Luft.",
+          "starter": "Luft umgibt die Erde. Wind ist bewegte Luft.",
+          "deeper": "Eine Hülle aus Gas hat keine feste Wand. Unsere Zeichnung gibt der Atmosphäre einen sichtbaren Rand, damit du sie erkennen kannst.",
+          "whyItMatters": "Du unterscheidest Luft als Stoffgemisch von Wind als Bewegung.",
+          "observe": "Fächere dir mit einem Blatt Papier sanft Luft zu. Was spürst du, obwohl du den bewegten Stoff nicht siehst?",
+          "sourceIds": [
+            "planet-base"
+          ]
         },
         {
           "title": "Warum fallen wir nicht herunter?",
-          "text": "Die Schwerkraft zieht Dinge zur Mitte der Erde. Deshalb bleiben wir auf dem Boden. Für Menschen auf der anderen Seite der Erde ist unten ebenfalls die Richtung zur Erdmitte. Es gibt im Weltall kein gemeinsames Oben und Unten für alle.",
+          "text": "Die Schwerkraft zieht Dinge zur Mitte der Erde. Deshalb bleiben wir auf dem Boden. Für Menschen auf der anderen Seite der Erde ist unten ebenfalls die Richtung zur Erdmitte. Es gibt im Weltall kein gemeinsames Oben und Unten für alle.\n\nStell dir drei Kinder an verschiedenen Stellen eines Balls vor. Für jedes zeigt der Pfeil nach unten zur Ballmitte; ihre Pfeile zeigen trotzdem nicht alle in dieselbe Richtung.",
           "fact": "Die Schwerkraft hält auch die Atmosphäre an der Erde fest.",
-          "tryIt": "Zeige an drei Stellen der Weltkugel, in welche Richtung dort unten ist."
+          "tryIt": "Zeige an drei Stellen der Weltkugel, in welche Richtung dort unten ist.",
+          "starter": "Unten zeigt zur Mitte der Erde. Das gilt überall auf ihr.",
+          "deeper": "Die Kugelzeichnung betrachtet die Erde von außen. Dein örtliches Oben und Unten richtet sich nach deinem Standort, nicht nach dem oberen Bildrand.",
+          "whyItMatters": "Du kannst erklären, warum auch Menschen auf der anderen Erdseite auf dem Boden bleiben.",
+          "observe": "Male drei Pfeile zur Mitte eines Kreises. Drehe das Blatt und prüfe, ob die Erklärung noch stimmt.",
+          "sourceIds": [
+            "planet-base",
+            "planet-gravity"
+          ]
         },
         {
           "title": "Zwei Bewegungen, zwei Zeiten",
-          "text": "Die Erde dreht sich um ihre Achse. Eine Umdrehung dauert ungefähr einen Tag. Gleichzeitig reist sie um die Sonne. Für eine ganze Reise braucht sie ungefähr ein Jahr. Tag und Jahr sind also zwei verschiedene Bewegungen.",
-          "fact": "Ein Jahr dauert ungefähr 365¼ Tage. Schaltjahre helfen unserem Kalender, dazu zu passen."
+          "text": "Die Erde dreht sich um ihre Achse. Eine Umdrehung dauert ungefähr einen Tag. Gleichzeitig reist sie um die Sonne. Für eine ganze Reise braucht sie ungefähr ein Jahr. Tag und Jahr sind also zwei verschiedene Bewegungen.\n\nEine Drehung und ein Umlauf lassen sich getrennt beobachten: Drehst du einen Ball am selben Platz, zeigt das den Tag. Sein Weg um eine Lampe steht für das Jahr.",
+          "fact": "Ein Jahr dauert ungefähr 365¼ Tage. Schaltjahre helfen unserem Kalender, dazu zu passen.",
+          "starter": "Die Erde dreht sich und reist um die Sonne. Tag und Jahr sind verschieden.",
+          "deeper": "Ein Sonnentag und eine Drehung gegenüber fernen Sternen werden unterschiedlich gemessen. Unsere Angabe ungefähr ein Tag ist eine bewusste Vereinfachung.",
+          "whyItMatters": "Du verwechselst eine schnelle Drehung nicht mit dem langen jährlichen Umlauf.",
+          "observe": "Bewege einen Ball langsam im Kreis und drehe ihn zugleich. Beschreibe beide Bewegungen getrennt; Zahlen und Geschwindigkeiten sind im Versuch nicht maßstabsgetreu.",
+          "sourceIds": [
+            "planet-base"
+          ]
         }
       ],
       "question": {
@@ -68,28 +108,67 @@
       "steps": [
         {
           "title": "Vier Schichten",
-          "text": "Von außen nach innen finden wir Erdkruste, Erdmantel, äußeren Kern und inneren Kern. Die Kruste ist eine sehr dünne Gesteinshaut. Der Mantel darunter ist viel dicker. Die beiden Kernschichten bestehen vor allem aus Metall.",
-          "fact": "Niemand kann bis zum Erdkern bohren. Forschende untersuchen unter anderem, wie Erdbebenwellen durch die Erde wandern."
+          "text": "Von außen nach innen finden wir Erdkruste, Erdmantel, äußeren Kern und inneren Kern. Die Kruste ist eine sehr dünne Gesteinshaut. Der Mantel darunter ist viel dicker. Die beiden Kernschichten bestehen vor allem aus Metall.\n\nDie vier Namen helfen beim Ordnen, aber die Schichten sind nicht gleich dick. Eine dünne Schale ist ein Vergleich für die Kruste, keine genaue Nachbildung der Erde.",
+          "fact": "Niemand kann bis zum Erdkern bohren. Forschende untersuchen unter anderem, wie Erdbebenwellen durch die Erde wandern.",
+          "starter": "Die Erde hat Schichten. Ihre dünne Kruste liegt ganz außen.",
+          "deeper": "Das Wissen über tiefe Schichten ist indirekt: Messungen an der Oberfläche und das Verhalten von Erdbebenwellen müssen zusammenpassen.",
+          "whyItMatters": "Du erkennst, weshalb ein Erdmodell sowohl Schichtnamen als auch Unterschiede zeigen muss.",
+          "observe": "Vergleiche im Erdschichtenmodell die Kruste mit dem Mantel. Beschreibe, was eine Zeichnung mit vier gleich breiten Ringen falsch nahelegen würde.",
+          "sourceIds": [
+            "inside-interior",
+            "inside-rigid-shell"
+          ]
         },
         {
           "title": "Heiß heißt nicht immer flüssig",
-          "text": "Der Mantel ist sehr heiß, besteht aber überwiegend aus festem Gestein. Über sehr lange Zeit kann es sich langsam verformen. Der äußere Kern ist flüssig. Der innere Kern ist trotz großer Hitze fest, weil dort ein gewaltiger Druck herrscht.",
-          "fact": "Die Erde ist innen kein riesiger Hohlraum voller Lava."
+          "text": "Der Mantel ist sehr heiß, besteht aber überwiegend aus festem Gestein. Über sehr lange Zeit kann es sich langsam verformen. Der äußere Kern ist flüssig. Der innere Kern ist trotz großer Hitze fest, weil dort ein gewaltiger Druck herrscht.\n\nTemperatur allein verrät nicht, ob ein Stoff fest oder flüssig ist. Auch der Druck spielt eine Rolle. Deshalb können zwei heiße Schichten unterschiedliche Zustände haben.",
+          "fact": "Die Erde ist innen kein riesiger Hohlraum voller Lava.",
+          "starter": "Heißes Gestein kann fest sein. Nicht alles im Erdinneren ist flüssig.",
+          "deeper": "Langsame Verformung ist etwas anderes als frei fließende Lava. Im Mantel geht es um geologische Zeiträume, nicht um Sekunden im Labor.",
+          "whyItMatters": "Du vermeidest die Vorstellung von Kontinenten auf einem unterirdischen Lavasee.",
+          "observe": "Ordne Mantel, äußeren Kern und inneren Kern nach überwiegend fest oder flüssig. Begründe, warum die Farbe Rot im Modell keine Flüssigkeit beweist.",
+          "sourceIds": [
+            "mantle",
+            "inside-interior"
+          ]
         },
         {
           "title": "Die Erde hat ein Plattenpuzzle",
-          "text": "Die feste äußere Hülle ist in große Platten geteilt. Sie bestehen aus der Kruste und dem obersten festen Teil des Mantels. Die Platten bewegen sich meistens nur wenige Zentimeter im Jahr. Darauf reisen auch die Kontinente ganz langsam mit.",
-          "fact": "Eine Platte kann Land und Meeresboden tragen. Die Plattengrenzen sind nicht die Ländergrenzen."
+          "text": "Die feste äußere Hülle ist in große Platten geteilt. Sie bestehen aus der Kruste und dem obersten festen Teil des Mantels. Die Platten bewegen sich meistens nur wenige Zentimeter im Jahr. Darauf reisen auch die Kontinente ganz langsam mit.\n\nEin Puzzle ist ein hilfreicher Vergleich für die Aufteilung, doch echte Platten haben keine überall sichtbaren Ränder. Ländergrenzen wurden von Menschen festgelegt und erzählen etwas anderes.",
+          "fact": "Eine Platte kann Land und Meeresboden tragen. Die Plattengrenzen sind nicht die Ländergrenzen.",
+          "starter": "Große feste Platten tragen Land und Meeresboden. Sie bewegen sich langsam.",
+          "deeper": "Kruste und oberster fester Mantel bilden zusammen die Lithosphäre. Die Platten gehören zu dieser festen äußeren Hülle.",
+          "whyItMatters": "Du kannst eine politische Karte und eine Plattenkarte mit verschiedenen Fragen lesen.",
+          "observe": "Wähle auf der Plattenebene eine Platte. Prüfe, ob sie mehrere Länder oder auch einen Teil des Ozeans trägt.",
+          "sourceIds": [
+            "inside-plate-overview",
+            "inside-rigid-shell"
+          ]
         },
         {
           "title": "Zusammen, auseinander, vorbei",
-          "text": "Platten können auseinanderdriften, zusammenstoßen oder aneinander vorbeigleiten. Wo Kontinente zusammenstoßen, können hohe Gebirge entstehen. Wo eine Platte unter eine andere taucht, entstehen oft Vulkane. Bei allen drei Arten von Grenzen können Erdbeben auftreten.",
-          "fact": "Die Entstehung eines Gebirges dauert viele Millionen Jahre. Das passiert nicht in wenigen Sekunden wie im Modell."
+          "text": "Platten können auseinanderdriften, zusammenstoßen oder aneinander vorbeigleiten. Wo Kontinente zusammenstoßen, können hohe Gebirge entstehen. Wo eine Platte unter eine andere taucht, entstehen oft Vulkane. Bei allen drei Arten von Grenzen können Erdbeben auftreten.\n\nDie Bewegungsrichtung ist entscheidend: Zusammenschieben kann Gestein heben, Auseinandergehen schafft Platz, seitliches Gleiten verschiebt Nachbarn. Das Modell zeigt nur typische Möglichkeiten.",
+          "fact": "Die Entstehung eines Gebirges dauert viele Millionen Jahre. Das passiert nicht in wenigen Sekunden wie im Modell.",
+          "starter": "Platten können zusammenstoßen, auseinandergehen oder aneinander vorbeigleiten.",
+          "deeper": "Nicht jede Plattengrenze sieht gleich aus. Eine Skizze beschreibt einen Grundfall; die wirkliche Form und Geschichte einer Grenze können komplizierter sein.",
+          "whyItMatters": "Du verbindest Bewegungen mit ihren möglichen Folgen, statt alle Grenzen gleich zu behandeln.",
+          "observe": "Stelle im Plattenlabor nacheinander drei Bewegungen ein. Sage jeweils zuerst eine mögliche Folge voraus und vergleiche sie mit dem Modell.",
+          "sourceIds": [
+            "inside-boundary-types"
+          ]
         },
         {
           "title": "Magma oder Lava?",
-          "text": "Geschmolzenes Gestein unter der Erdoberfläche heißt Magma. Erreicht es die Oberfläche, nennen wir es Lava. Bei einem Ausbruch können auch Asche und Gase austreten. Manche Vulkane liegen an Plattengrenzen; andere, wie auf Hawaii, über heißen Stellen im Erdinneren.",
-          "fact": "Vulkanasche ist kein verbranntes Holz, sondern besteht aus winzigen Gesteins- und Glasstückchen."
+          "text": "Geschmolzenes Gestein unter der Erdoberfläche heißt Magma. Erreicht es die Oberfläche, nennen wir es Lava. Bei einem Ausbruch können auch Asche und Gase austreten. Manche Vulkane liegen an Plattengrenzen; andere, wie auf Hawaii, über heißen Stellen im Erdinneren.\n\nEs ist der Ort, der die Bezeichnung ändert. Zusätzlich können Gas und feste Teilchen austreten. Ein Lavastrom und eine Aschewolke sind deshalb verschiedene Teile eines Ausbruchs.",
+          "fact": "Vulkanasche ist kein verbranntes Holz, sondern besteht aus winzigen Gesteins- und Glasstückchen.",
+          "starter": "Unter der Erde heißt geschmolzenes Gestein Magma, an der Oberfläche Lava.",
+          "deeper": "Vulkane sind nicht nur Berge mit roter Spitze. Lage, Gestein und Gas beeinflussen ihr Verhalten; das Lernmodell ist keine Gefahrenvorhersage.",
+          "whyItMatters": "Du kannst einen Ausbruch genauer beschreiben als mit dem Wort Feuer.",
+          "observe": "Zeige in der Vulkanzeichnung einen Ort unter und einen über der Oberfläche. Beschrifte beide und erkläre, warum der Name wechselt.",
+          "sourceIds": [
+            "volcano-detail",
+            "inside-volcanic-ash"
+          ]
         }
       ],
       "question": {

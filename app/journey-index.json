@@ -13,29 +13,74 @@
       {
         "title": "Ein Zuhause im Weltall",
         "text": "Die Erde ist ein Planet.",
-        "textFields": []
+        "sourceIds": [
+          "planet-base",
+          "planet-sun-light",
+          "planet-light-reflection"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Land und Wasser",
         "text": "Etwa 71 von 100 Teilen der Erdoberfläche sind vom Ozean bedeckt.",
         "tryIt": "Finde auf der Weltkugel eine Insel und einen Kontinent.",
-        "textFields": []
+        "sourceIds": [
+          "planet-base",
+          "planet-earth-shape",
+          "continents-convention"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Eine unsichtbare Hülle",
         "text": "Um die Erde liegt die Atmosphäre.",
-        "textFields": []
+        "sourceIds": [
+          "planet-base"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Warum fallen wir nicht herunter?",
         "text": "Die Schwerkraft zieht Dinge zur Mitte der Erde.",
         "tryIt": "Zeige an drei Stellen der Weltkugel, in welche Richtung dort unten ist.",
-        "textFields": []
+        "sourceIds": [
+          "planet-base",
+          "planet-gravity"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Zwei Bewegungen, zwei Zeiten",
         "text": "Die Erde dreht sich um ihre Achse.",
-        "textFields": []
+        "sourceIds": [
+          "planet-base"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       }
     ],
     "question": {
@@ -67,27 +112,71 @@
       {
         "title": "Vier Schichten",
         "text": "Von außen nach innen finden wir Erdkruste, Erdmantel, äußeren Kern und inneren Kern.",
-        "textFields": []
+        "sourceIds": [
+          "inside-interior",
+          "inside-rigid-shell"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Heiß heißt nicht immer flüssig",
         "text": "Der Mantel ist sehr heiß, besteht aber überwiegend aus festem Gestein.",
-        "textFields": []
+        "sourceIds": [
+          "mantle",
+          "inside-interior"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Die Erde hat ein Plattenpuzzle",
         "text": "Die feste äußere Hülle ist in große Platten geteilt.",
-        "textFields": []
+        "sourceIds": [
+          "inside-plate-overview",
+          "inside-rigid-shell"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Zusammen, auseinander, vorbei",
         "text": "Platten können auseinanderdriften, zusammenstoßen oder aneinander vorbeigleiten.",
-        "textFields": []
+        "sourceIds": [
+          "inside-boundary-types"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Magma oder Lava?",
         "text": "Geschmolzenes Gestein unter der Erdoberfläche heißt Magma.",
-        "textFields": []
+        "sourceIds": [
+          "volcano-detail",
+          "inside-volcanic-ash"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       }
     ],
     "question": {
