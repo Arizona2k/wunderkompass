@@ -1,6 +1,6 @@
 ## Dauerhafte Produktpräzisierung ·20.10.2026
 
-News dauerhaft aus Anwendung und späteren Betriebsplänen entfernen; „Was ist neu?“ als Produktchronik erhalten. Die sechs Hauptbereiche und Zielgruppe6–14 bleiben. Neue Inhalte, auch bereits korrekte alte Inhalte, Design/Medien und Lernhandlungen mit konkretem Lernnutzen gemeinsam verbessern und sinnvoll gegenseitig verlinken. KI-Gegenprüfung statt pauschalem externem Menschen-Abschlussgate; echte Quellen-/Rechte-/Technikpflichten erhalten. Vorhandenes Paket3.5 fertigstellen, danach bestehende Pakete4–8; keine zusätzliche Roadmap. Widersprechende ältere Prozess- und News-Formulierungen darunter sind historisch ersetzt.
+News dauerhaft aus Anwendung und späteren Betriebsplänen entfernen; „Was ist neu?“ als Produktchronik erhalten. Die sechs Hauptbereiche und Zielgruppe6–14 bleiben. Die langfristigen Themen- und Erlebnisideen aus [Issue28 einschließlich Kommentar](https://github.com/Arizona2k/wunderkompass/issues/28#issuecomment-6213818577) sind im einzigen BACKLOG den vorhandenen Paketen4–8 zugeordnet; keine zusätzlichen Hauptbereiche oder Erweiterung des laufenden Pakets. Neue Inhalte, auch bereits korrekte alte Inhalte, Design/Medien und Lernhandlungen mit konkretem Lernnutzen gemeinsam verbessern und sinnvoll gegenseitig verlinken. KI-Gegenprüfung statt pauschalem externem Menschen-Abschlussgate; echte Quellen-/Rechte-/Technikpflichten erhalten. Vorhandenes Paket3.5 fertigstellen, danach bestehende Pakete4–8; keine zusätzliche Roadmap. Widersprechende ältere Prozess- und News-Formulierungen darunter sind historisch ersetzt.
 
 # Produktvision WunderKompass
 
@@ -10,7 +10,9 @@ Nach einmaliger manueller Setupübernahme sind normale vollständig geprüfte Fo
 
 Dauerhafter Arbeitsgrundsatz17.10.2026: sichtbare Lernverbesserungen in zusammenhängenden Abschnitten entwickeln; neue/geänderte Funktionen und neue Browsertests früh mit der vorhandenen Umgebung in den betroffenen tatsächlichen Browsern prüfen. Fehler vor der vollständigen Schlussabnahme korrigieren, sämtliche Endtests erhalten. Nutzermerge und tatsächliche Testbereitstellung kontrolliert abgleichen; ein fertiger Teilabschnitt beendet nicht Paket3.5. News bleibt pausiert, Pakete4–8 und spätere Ideen bleiben erhalten.
 
-## Aktuelle Nutzerentscheidung16.10.2026 – Paket3.5 fortsetzen, News pausiert
+## Historische Nutzerentscheidung16.10.2026 – damaliger Stand
+
+> Originalfassung erhalten. Ihre News-Pause und pauschalen Einzelmergeverbote sind durch die vorrangigen Nutzerklärungen vom17.–20.10.2026 ersetzt: News dauerhaft entfernt; normale vollständig geprüfte test-live-Teilabschnitte nach TEST-LIVE freigegeben. Fortbestehende Qualitäts-, Schutz-, Datenschutz- und Kostenregeln bleiben verbindlich.
 
 Paket3.5 bleibt vor allen Paketen4–8 und neuen Themenideen die aktuelle Priorität. Nach tatsächlichem Nutzermerge von PR29 dessen exakten test-live-/Vercel-Erfolg prüfen und Verbesserungen kontrolliert in den gesicherten PR27-Stand integrieren; keine Resets, Überschreibungen, Doppelentwicklung oder neue Gesamtplanung. Alle vorbereiteten und entwickelten Inhalte/Erfindungen/Bauwerke/Reisen/Modelle/Funktionen/Tests und Aufgaben erhalten. Große zusammenhängende, eigenständig nutzbare Abschnitte implementieren, korrigieren, vollständig prüfen und mit exaktem grünem Quality als mergebereite PRs übergeben; nur der Nutzer gibt den Merge frei. Fertige Kandidaten stabil halten, unabhängige Arbeit im selben seriellen Durchlauf fortsetzen, abhängige Änderungen nach Basismerge erneut abgleichen.
 

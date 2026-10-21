@@ -30,7 +30,9 @@ Neue/geänderte Funktionen und besonders neue Browserassertionen früh im tatsä
 
 Lokale Iteration: vorhandenes `test:affected --run` prüft betroffene vorhandene native `.mjs`/`.cjs`/`.js` zuerst mit `node --check`, ohne Modulcode auszuführen. Doppelte Imports wie im tatsächlich roten Quality85 werden so früh erkannt. Unbekannte/gelöschte Eingaben bleiben konservativ; breite Browserauswahl folgt dem bestehenden REQUIRED_SUITES-Vertrag. Alle bisherigen Schlussprüfungen unverändert, keine neuen Jobs oder Browsergruppen.
 
-## Aktuelle Nutzerentscheidung16.10.2026 – Paket3.5 fortsetzen, News pausiert
+## Historische Nutzerentscheidung16.10.2026 – damaliger Stand
+
+> Originalfassung erhalten. Ihre News-Pause und pauschalen Einzelmergeverbote sind durch die vorrangigen Nutzerklärungen vom17.–20.10.2026 ersetzt: News dauerhaft entfernt; normale vollständig geprüfte test-live-Teilabschnitte nach TEST-LIVE freigegeben. Fortbestehende Qualitäts-, Schutz-, Datenschutz- und Kostenregeln bleiben verbindlich.
 
 Paket3.5 bleibt vor allen Paketen4–8 und neuen Themenideen die aktuelle Priorität. Nach tatsächlichem Nutzermerge von PR29 dessen exakten test-live-/Vercel-Erfolg prüfen und Verbesserungen kontrolliert in den gesicherten PR27-Stand integrieren; keine Resets, Überschreibungen, Doppelentwicklung oder neue Gesamtplanung. Alle vorbereiteten und entwickelten Inhalte/Erfindungen/Bauwerke/Reisen/Modelle/Funktionen/Tests und Aufgaben erhalten. Große zusammenhängende, eigenständig nutzbare Abschnitte implementieren, korrigieren, vollständig prüfen und mit exaktem grünem Quality als mergebereite PRs übergeben; nur der Nutzer gibt den Merge frei. Fertige Kandidaten stabil halten, unabhängige Arbeit im selben seriellen Durchlauf fortsetzen, abhängige Änderungen nach Basismerge erneut abgleichen.
 
@@ -132,7 +134,9 @@ Ready for review bezeichnet ausschließlich Prüfbereitschaft. Bestehende Qualit
 
 main nicht ändern; kein automatisches Merge/Auto-Merge oder direkte test-live-Übertragung, keine automatische Produktionsveröffentlichung. Deaktivierte Release-Workflows, false-Sperren, Releasevariable und -label bleiben unverändert/inaktiv. Unabhängige Websiteänderungen nicht in einen Dokumentations-/Einrichtungsauftrag mischen.
 
-## Vorbereitete automatische Testpersonen-Freigabe – ausgeschaltet
+## Historischer Einrichtungsstand: vorbereitete Testpersonen-Freigabe
+
+> Die folgenden ursprünglichen Angaben zu privatem Repository, fehlendem nativem Schutz und allgemeiner Einzelbestätigung beschreiben den damaligen Einrichtungsstand. Maßgeblich sind heute der tatsächliche native test-live-Schutz und TEST-LIVE. Die zusätzliche hier beschriebene Publisher-Kette bleibt ausgeschaltet; dies aktiviert sie nicht und ändert keine Schutzanforderung.
 
 Der folgende technische Ablauf beschreibt ausschließlich eine hypothetische spätere, separat beauftragte Aktivierung. Aktuell gilt die manuelle Nutzerbestätigung aus AGENTS.md: Ready for review und grüne Quality-CI aktivieren nichts und ersetzen keine Übernahme-/Veröffentlichungsfreigabe.
 

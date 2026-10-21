@@ -39,7 +39,12 @@ try{
  if(runSuite('foundation')){await timed('performance',()=>performanceFlow(browser,base,ready,monitor,report));await timed('components',()=>componentFlow(browser,base,ready,monitor,report,shots));report.offlineResilience=await offlineResilience(browser,{port:Number(port)+1,shots});report.offlineRetention=await offlineRetention(browser,{shots});}
 if(runSuite('research'))await timed('research',()=>researchFlow(browser,base,ready,monitor,report,shots));
 if(runSuite('journeys'))await timed('journeys',()=>journeysFlow(browser,base,ready,monitor,report,shots,{chromium,options}));
-if(runSuite('home'))await timed('home',()=>homepageOverview(browser,base,ready,monitor,report,shots));
+if(runSuite('home')){
+  // Keep the existing capture namespace when balancing the same two workers.
+  const homeShots=path.basename(shots)==='quality-learning'?path.join(qaRoot,'quality-navigation'):shots;
+  await fs.mkdir(homeShots,{recursive:true});
+  await timed('home',()=>homepageOverview(browser,base,ready,monitor,report,homeShots));
+ }
  const coreStarted=performance.now();
  if(runSuite('core'))for(const [width,height] of [[1440,900],[768,1024],[390,844],[360,800]]){
   const c=await browser.newContext({viewport:{width,height},isMobile:width<=390,hasTouch:width<=390,reducedMotion:'reduce',acceptDownloads:true}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);await p.goto(base);await ready(p);await p.locator('#globe-observatory').scrollIntoViewIfNeeded();await p.locator('canvas').waitFor();assert.equal(await p.title(),'WunderKompass · Die große Abenteuerwelt des Wissens');

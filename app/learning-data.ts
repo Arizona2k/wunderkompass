@@ -1,7 +1,7 @@
 import { MORE_JOURNEYS, MORE_WORDS, MORE_WHY } from "./expanded-learning-data";
 import type { QuizQuestion } from "./earth-data";
 
-export type JourneyStep = { title: string; text: string; fact: string; tryIt?: string };
+export type JourneyStep = { title: string; text: string; fact: string; starter?:string; deeper?:string; whyItMatters?:string; observe?:string; sourceIds?:string[]; tryIt?: string };
 export type Journey = { id: string; title: string; intro: string; icon: string; color: string; minutes: number; photo?: string; steps: JourneyStep[]; question: QuizQuestion; activity: string; lab?: "water" | "seasons" | "plates"; source: string; sourceName: string };
 
 const BASE_JOURNEYS: Journey[] = [
@@ -19,20 +19,188 @@ const BASE_JOURNEYS: Journey[] = [
     {title:"Zusammen, auseinander, vorbei",text:"Platten können auseinanderdriften, zusammenstoßen oder aneinander vorbeigleiten. Wo Kontinente zusammenstoßen, können hohe Gebirge entstehen. Wo eine Platte unter eine andere taucht, entstehen oft Vulkane. Bei allen drei Arten von Grenzen können Erdbeben auftreten.",fact:"Die Entstehung eines Gebirges dauert viele Millionen Jahre. Das passiert nicht in wenigen Sekunden wie im Modell."},
     {title:"Magma oder Lava?",text:"Geschmolzenes Gestein unter der Erdoberfläche heißt Magma. Erreicht es die Oberfläche, nennen wir es Lava. Bei einem Ausbruch können auch Asche und Gase austreten. Manche Vulkane liegen an Plattengrenzen; andere, wie auf Hawaii, über heißen Stellen im Erdinneren.",fact:"Vulkanasche ist kein verbranntes Holz, sondern besteht aus winzigen Gesteins- und Glasstückchen."}
   ],question:{id:"journey-inside",category:"Erdschichten",question:"Wie heißt geschmolzenes Gestein an der Erdoberfläche?",answers:["Eis","Lava","Erdkern"],correct:1,why:"Unter der Erde heißt es Magma. Sobald es an die Oberfläche gelangt, heißt es Lava."},activity:"Lege zwei gefaltete Geschirrtücher nebeneinander. Schiebe sie langsam zusammen: Wie falten sie sich? Das ist nur ein Vergleich für die Entstehung von Gebirgen."},
-  { id:"water", title:"Die Reise eines Tropfens", intro:"Wasser verschwindet nicht einfach. Es reist!", icon:"water", color:"blue", minutes:8, lab:"water", source:"https://www.usgs.gov/water-science-school/water-cycle", sourceName:"USGS · Wasserkreislauf", steps:[
-    {title:"Drei Formen von Wasser",text:"Wasser kann fest, flüssig oder gasförmig sein. Festes Wasser heißt Eis. Flüssiges Wasser fließt. Gasförmiges Wasser heißt Wasserdampf und ist unsichtbar. Die weiße Wolke über einem heißen Getränk besteht dagegen aus kleinen Wassertröpfchen.",fact:"Wasser kann auch bei Zimmertemperatur verdunsten. Es muss dafür nicht kochen."},
-    {title:"Ab in die Luft",text:"Die Sonne erwärmt Meere, Seen und den Boden. Ein Teil des Wassers verdunstet und gelangt als Wasserdampf in die Luft. Auch Pflanzen geben Wasser ab. Bei Wärme, Wind und trockener Luft kann Wasser schneller verdunsten.",fact:"Eine Pfütze wird kleiner, obwohl niemand das Wasser weggeschöpft hat: Ein Teil ist in der Luft.",tryIt:"Was passiert mit einer nassen Socke, wenn sie zum Trocknen aufgehängt wird?"},
-    {title:"Wie entstehen Wolken?",text:"Wenn feuchte Luft abkühlt, kann sich Wasserdampf in winzige Tröpfchen verwandeln. Das heißt Kondensation. Viele Tröpfchen oder Eiskristalle zusammen bilden eine Wolke. Erst wenn sie groß genug werden, fällt Niederschlag.",fact:"Eine Wolke besteht nicht einfach aus unsichtbarem Wasserdampf. Wir sehen ihre Tröpfchen oder Eiskristalle."},
-    {title:"Zurück auf die Erde",text:"Niederschlag kann Regen, Schnee oder Hagel sein. Wasser sammelt sich in Bächen, Flüssen und Seen. Ein Teil versickert im Boden und wird zu Grundwasser. Flüsse bringen viel Wasser zurück ins Meer. Dort kann seine Reise von Neuem beginnen.",fact:"Der Wasserkreislauf hat keinen festen Startpunkt. Wasser kann auch lange im Eis oder im Boden bleiben."},
-    {title:"Trinkwasser ist kostbar",text:"Das meiste Wasser auf der Erde ist salzig. Süßwasser enthält viel weniger Salz. Ein großer Teil des Süßwassers steckt in Eis oder im Boden. Sauberes Trinkwasser muss deshalb gut geschützt und aufbereitet werden.",fact:"Klares Wasser ist nicht automatisch Trinkwasser. Aus Bächen und Seen trinken wir nicht einfach."}
-  ],question:{id:"journey-water",category:"Wasser & Wetter",question:"Was passiert bei Kondensation?",answers:["Steine werden zu Sand","Eis wird wärmer","Wasserdampf wird zu Wassertröpfchen"],correct:2,why:"Kühlt feuchte Luft ab, können kleine Tröpfchen entstehen. Viele Tröpfchen machen Wolken sichtbar."},activity:"Fülle mit einem Erwachsenen kaltes Wasser in ein Glas. Beobachte die Außenseite: Die Tröpfchen dort kommen aus der Luft, nicht durch das Glas!"},
-  { id:"weather", title:"Wetterforscher unterwegs", intro:"Wolken, Wind und der Unterschied zum Klima.", icon:"cloud", color:"purple", minutes:7, source:"https://science.nasa.gov/kids/videos/video-whats-the-difference-between-weather-and-climate/", sourceName:"NASA Kids · Wetter und Klima", steps:[
-    {title:"Was ist heute draußen los?",text:"Wetter ist, was gerade in der Luft um uns herum passiert: Ist es warm oder kalt? Regnet es? Weht Wind? Wetter kann sich schon innerhalb eines Tages ändern. Forschende messen Temperatur, Luftdruck, Wind und Niederschlag.",fact:"Ein Thermometer misst die Temperatur. Ein Regenmesser misst, wie viel Regen gefallen ist."},
-    {title:"Wind ist Luft in Bewegung",text:"Die Sonne erwärmt die Erde nicht überall gleich. Dadurch entstehen Unterschiede in Temperatur und Luftdruck. Luft setzt sich in Bewegung: Es weht Wind. Auch die Drehung der Erde beeinflusst große Windsysteme.",fact:"Wind kann Samen verteilen, Wolken verschieben und Windräder antreiben."},
-    {title:"Wolken beobachten",text:"Wolken können wie Watte, wie dünne Federn oder wie eine graue Decke aussehen. Ihre Form verrät etwas über die Vorgänge in der Luft. Aus manchen Wolken fällt Regen. Nicht jede Wolke regnet: Ihre Tröpfchen sind oft noch sehr klein.",fact:"Nebel ist eine Wolke direkt am Boden.",tryIt:"Sieh aus dem Fenster. Zeichne eine Wolkenform und beschreibe sie mit drei Wörtern."},
-    {title:"Wetter ist kurz, Klima ist lang",text:"Wetter beschreibt einzelne Stunden und Tage. Klima beschreibt, welches Wetter in einer Gegend über viele Jahre typisch ist. Für Klimavergleiche betrachten Forschende oft mindestens 30 Jahre. Ein kalter Tag allein sagt deshalb wenig über die Erwärmung des Klimas aus.",fact:"Deine Kleidung passt du an das heutige Wetter an. Die typischen Jahreszeiten deiner Gegend gehören zum Klima."},
-    {title:"Wie wissen wir das Wetter von morgen?",text:"Wetterstationen, Satelliten und andere Messgeräte sammeln Daten. Computer berechnen daraus Vorhersagen. Weil die Luft ständig in Bewegung ist, bleiben Vorhersagen unsicher. Je weiter der Blick in die Zukunft geht, desto größer ist diese Unsicherheit meistens.",fact:"Eine Vorhersage kann sehr hilfreich sein, auch wenn sie nicht auf die Minute stimmt."}
-  ],question:{id:"journey-weather",category:"Wasser & Wetter",question:"Was beschreibt Klima?",answers:["Typisches Wetter über viele Jahre","Nur den Regen von heute","Die Farbe einer Wolke"],correct:0,why:"Klima beschreibt langfristige Muster. Wetter beschreibt dagegen die Bedingungen zu einer bestimmten Zeit."},activity:"Führe drei Tage lang ein Wetterblatt: Wolken, Wind, Regen und Temperatur. Das ist eine Wetterbeobachtung – noch keine Klimamessung."},
+  {
+  "id": "water",
+  "title": "Die Reise eines Tropfens",
+  "intro": "Wasser verschwindet nicht einfach. Es reist!",
+  "icon": "water",
+  "color": "blue",
+  "minutes": 8,
+  "lab": "water",
+  "source": "https://www.usgs.gov/water-science-school/water-cycle",
+  "sourceName": "USGS · Wasserkreislauf",
+  "steps": [
+    {
+      "title": "Drei Formen von Wasser",
+      "text": "Wasser kann fest, flüssig oder gasförmig sein. Festes Wasser heißt Eis. Flüssiges Wasser fließt. Gasförmiges Wasser heißt Wasserdampf und ist unsichtbar. Die weiße Wolke über einem heißen Getränk besteht dagegen aus kleinen Wassertröpfchen.\n\nEin nasses Tuch muss nicht kochen, um trocken zu werden. Wasser kann an seiner Oberfläche in die Luft gelangen. Dabei verschwinden die Wasserteilchen nicht einfach.",
+      "fact": "Wasser kann auch bei Zimmertemperatur verdunsten. Es muss dafür nicht kochen.",
+      "starter": "Eis, Wasser und unsichtbarer Wasserdampf sind Formen desselben Stoffes.",
+      "deeper": "Verdunsten geschieht an der Oberfläche; Kochen ist ein anderer Vorgang. Eine sichtbare weiße Wolke besteht aus Tröpfchen, nicht aus dem unsichtbaren Gas.",
+      "whyItMatters": "Du unterscheidest Zustandsänderung vom Verschwinden eines Stoffes.",
+      "observe": "Beobachte ein nasses Tuch beim Trocknen. Vermute, wohin das Wasser gelangt. Nutze kein heißes Wasser und keine Herdplatte.",
+      "sourceIds": [
+        "water-base",
+        "water-evaporation"
+      ]
+    },
+    {
+      "title": "Ab in die Luft",
+      "text": "Die Sonne erwärmt Meere, Seen und den Boden. Ein Teil des Wassers verdunstet und gelangt als Wasserdampf in die Luft. Auch Pflanzen geben Wasser ab. Bei Wärme, Wind und trockener Luft kann Wasser schneller verdunsten.\n\nBeim Trocknen spielt die Umgebung mit: Bewegt sich die Luft, kann sie feuchte Luft am Tuch ersetzen. Deshalb ist nicht allein die Temperatur wichtig.",
+      "fact": "Eine Pfütze wird kleiner, obwohl niemand das Wasser weggeschöpft hat: Ein Teil ist in der Luft.",
+      "tryIt": "Was passiert mit einer nassen Socke, wenn sie zum Trocknen aufgehängt wird?",
+      "starter": "Wasser gelangt aus Pfützen, Meeren und Pflanzen in die Luft.",
+      "deeper": "Mehrere Bedingungen wirken gleichzeitig. Im Wassermodell veränderst du möglichst nur einen Regler, damit du eine Ursache besser vergleichen kannst.",
+      "whyItMatters": "Du lernst, einen fairen Vergleich von mehreren gleichzeitig veränderten Dingen zu unterscheiden.",
+      "observe": "Vergleiche im Wasserkreislauflabor zwei Einstellungen mit nur einem veränderten Regler. Beschreibe eine Beobachtung und eine Vermutung getrennt.",
+      "sourceIds": [
+        "water-base",
+        "water-evaporation"
+      ]
+    },
+    {
+      "title": "Wie entstehen Wolken?",
+      "text": "Wenn feuchte Luft abkühlt, kann sich Wasserdampf in winzige Tröpfchen verwandeln. Das heißt Kondensation. Viele Tröpfchen oder Eiskristalle zusammen bilden eine Wolke. Erst wenn sie groß genug werden, fällt Niederschlag.\n\nKondensation macht Wasser sichtbar, das vorher als Gas in der Luft war. Die Tropfen außen am kalten Glas kommen deshalb aus der Luft und nicht durch die Glaswand.",
+      "fact": "Eine Wolke besteht nicht einfach aus unsichtbarem Wasserdampf. Wir sehen ihre Tröpfchen oder Eiskristalle.",
+      "starter": "Kühlt feuchte Luft ab, können Tröpfchen entstehen. Viele bilden eine Wolke.",
+      "deeper": "Nicht jede Abkühlung erzeugt sofort eine Wolke. Die vorhandene Feuchtigkeit und die Bedingungen der Luft entscheiden mit.",
+      "whyItMatters": "Du erkennst einen unsichtbaren Stoff an seiner sichtbaren Veränderung.",
+      "observe": "Beobachte mit einem Erwachsenen ein kaltes Wasserglas. Vermute zuerst, woher Tropfen außen kommen, und vergleiche deine Erklärung mit dem Kapitel.",
+      "sourceIds": [
+        "water-condensation"
+      ]
+    },
+    {
+      "title": "Zurück auf die Erde",
+      "text": "Niederschlag kann Regen, Schnee oder Hagel sein. Wasser sammelt sich in Bächen, Flüssen und Seen. Ein Teil versickert im Boden und wird zu Grundwasser. Flüsse bringen viel Wasser zurück ins Meer. Dort kann seine Reise von Neuem beginnen.\n\nZwei Regentropfen müssen nicht denselben Weg nehmen. Einer fließt über den Boden, ein anderer versickert. Manche bleiben lange gespeichert, bevor sie weiterwandern.",
+      "fact": "Der Wasserkreislauf hat keinen festen Startpunkt. Wasser kann auch lange im Eis oder im Boden bleiben.",
+      "starter": "Wasser fällt als Niederschlag und findet viele Wege durch Land und Meer.",
+      "deeper": "Ein Kreislauf bedeutet keine überall gleich schnelle Rundreise. Pfeile zeigen Verbindungen zwischen Speichern, nicht die Reise jedes einzelnen Tropfens.",
+      "whyItMatters": "Du kannst in einer einfachen Grafik mehrere echte Wasserwege erkennen.",
+      "observe": "Zeichne zwei mögliche Wege vom Regen zum Meer. Markiere, wo Wasser auf seinem Weg länger gespeichert sein könnte.",
+      "sourceIds": [
+        "water-base",
+        "water-infiltration"
+      ]
+    },
+    {
+      "title": "Trinkwasser ist kostbar",
+      "text": "Das meiste Wasser auf der Erde ist salzig. Süßwasser enthält viel weniger Salz. Ein großer Teil des Süßwassers steckt in Eis oder im Boden. Sauberes Trinkwasser muss deshalb gut geschützt und aufbereitet werden.\n\nSalzgehalt und Sauberkeit sind verschiedene Fragen. Auch Süßwasser kann ungeeignet zum Trinken sein. Wasseraufbereitung und Schutz der Wasserquellen gehören deshalb zusammen.",
+      "fact": "Klares Wasser ist nicht automatisch Trinkwasser. Aus Bächen und Seen trinken wir nicht einfach.",
+      "starter": "Sauberes Trinkwasser ist wertvoll. Klares Wasser ist nicht automatisch sicher.",
+      "deeper": "Ein Lernversuch ersetzt keine Prüfung der Trinkwasserqualität. Farbe und Geruch allein sind keine sichere Freigabe.",
+      "whyItMatters": "Du verstehst, warum wir unbekanntes Wasser nicht einfach probieren.",
+      "observe": "Suche mit einem Erwachsenen den Weg eures Trinkwassers heraus. Nutzt Informationen des Wasserversorgers; probiert kein Wasser aus Bächen oder Seen.",
+      "sourceIds": [
+        "water-reserves",
+        "water-drinking-quality"
+      ]
+    }
+  ],
+  "question": {
+    "id": "journey-water",
+    "category": "Wasser & Wetter",
+    "question": "Was passiert bei Kondensation?",
+    "answers": [
+      "Steine werden zu Sand",
+      "Eis wird wärmer",
+      "Wasserdampf wird zu Wassertröpfchen"
+    ],
+    "correct": 2,
+    "why": "Kühlt feuchte Luft ab, können kleine Tröpfchen entstehen. Viele Tröpfchen machen Wolken sichtbar."
+  },
+  "activity": "Fülle mit einem Erwachsenen kaltes Wasser in ein Glas. Beobachte die Außenseite: Die Tröpfchen dort kommen aus der Luft, nicht durch das Glas!"
+},
+  {
+  "id": "weather",
+  "title": "Wetterforscher unterwegs",
+  "intro": "Wolken, Wind und der Unterschied zum Klima.",
+  "icon": "cloud",
+  "color": "purple",
+  "minutes": 7,
+  "source": "https://science.nasa.gov/kids/videos/video-whats-the-difference-between-weather-and-climate/",
+  "sourceName": "NASA Kids · Wetter und Klima",
+  "steps": [
+    {
+      "title": "Was ist heute draußen los?",
+      "text": "Wetter ist, was gerade in der Luft um uns herum passiert: Ist es warm oder kalt? Regnet es? Weht Wind? Wetter kann sich schon innerhalb eines Tages ändern. Forschende messen Temperatur, Luftdruck, Wind und Niederschlag.\n\nWarm fühlen und Temperatur messen sind nicht dasselbe. Ein Messgerät hilft, Beobachtungen verschiedener Tage zu vergleichen. Dabei sollte man ähnliche Bedingungen wählen.",
+      "fact": "Ein Thermometer misst die Temperatur. Ein Regenmesser misst, wie viel Regen gefallen ist.",
+      "starter": "Wetter beschreibt, was gerade draußen passiert. Wir können es beobachten und messen.",
+      "deeper": "Eine Einzelmessung gilt für ihren Ort und Zeitpunkt. Sie beschreibt nicht automatisch eine ganze Stadt oder einen langen Zeitraum.",
+      "whyItMatters": "Du trennst einen persönlichen Eindruck von einem vergleichbaren Messwert.",
+      "observe": "Beschreibe das Wetter ohne Zahlen und mit einem vorhandenen Thermometer. Notiere auch Ort und Zeit und vergleiche beide Beschreibungen.",
+      "sourceIds": [
+        "weather-base",
+        "weather-climate"
+      ]
+    },
+    {
+      "title": "Wind ist Luft in Bewegung",
+      "text": "Die Sonne erwärmt die Erde nicht überall gleich. Dadurch entstehen Unterschiede in Temperatur und Luftdruck. Luft setzt sich in Bewegung: Es weht Wind. Auch die Drehung der Erde beeinflusst große Windsysteme.\n\nUnterschiede im Luftdruck helfen, Luft anzutreiben. Wind bewegt Wolken oder Blätter; sie sind Hinweise auf seine Wirkung, nicht die Luft selbst.",
+      "fact": "Wind kann Samen verteilen, Wolken verschieben und Windräder antreiben.",
+      "starter": "Wind ist Luft, die sich bewegt. Er kann schwach oder stark sein.",
+      "deeper": "Das Wetterstationsmodell vereinfacht viele gleichzeitig wirkende Vorgänge. Ein einzelner Regler bildet keine vollständige Wettervorhersage ab.",
+      "whyItMatters": "Du kannst Bewegung als Hinweis auf einen unsichtbaren Vorgang nutzen.",
+      "observe": "Beobachte Blätter sicher durch ein Fenster. Trenne die Beobachtung Blatt bewegt sich von der Erklärung Luft bewegt das Blatt.",
+      "sourceIds": [
+        "weather-wind",
+        "weather-sea-breeze"
+      ]
+    },
+    {
+      "title": "Wolken beobachten",
+      "text": "Wolken können wie Watte, wie dünne Federn oder wie eine graue Decke aussehen. Ihre Form verrät etwas über die Vorgänge in der Luft. Aus manchen Wolken fällt Regen. Nicht jede Wolke regnet: Ihre Tröpfchen sind oft noch sehr klein.\n\nEine Wolkenzeichnung hält einen Moment fest. Wenn du später erneut schaust, können Form und Lage anders sein. Eine Beobachtungsreihe verrät mehr als ein einzelnes Bild.",
+      "fact": "Nebel ist eine Wolke direkt am Boden.",
+      "tryIt": "Sieh aus dem Fenster. Zeichne eine Wolkenform und beschreibe sie mit drei Wörtern.",
+      "starter": "Wolken sehen verschieden aus. Nicht jede Wolke bringt Regen.",
+      "deeper": "Aus der Form allein folgt keine sichere lokale Vorhersage. Wolkenbeobachtung ist ein Hinweis unter mehreren Wetterdaten.",
+      "whyItMatters": "Du bemerkst Veränderungen, statt Wolken nur nach ihrem Aussehen zu benennen.",
+      "observe": "Skizziere vom Fenster aus dieselbe Himmelsstelle zweimal. Notiere die Zeit und beschreibe, was sich verändert hat, ohne direkt in die Sonne zu schauen.",
+      "sourceIds": [
+        "weather-cloud-types",
+        "weather-fog"
+      ]
+    },
+    {
+      "title": "Wetter ist kurz, Klima ist lang",
+      "text": "Wetter beschreibt einzelne Stunden und Tage. Klima beschreibt, welches Wetter in einer Gegend über viele Jahre typisch ist. Für Klimavergleiche betrachten Forschende oft mindestens 30 Jahre. Ein kalter Tag allein sagt deshalb wenig über die Erwärmung des Klimas aus.\n\nEine Reihe von drei Tagen ist noch kein Klimabeleg. Für einen langfristigen Vergleich müssen viele Beobachtungen aus vergleichbaren Zeiträumen betrachtet werden.",
+      "fact": "Deine Kleidung passt du an das heutige Wetter an. Die typischen Jahreszeiten deiner Gegend gehören zum Klima.",
+      "starter": "Wetter ist heute. Klima beschreibt typische Bedingungen über viele Jahre.",
+      "deeper": "Ein Mittelwert fasst viele Daten zusammen, verschweigt aber die einzelnen Unterschiede. Klima umfasst auch Muster und Schwankungen, nicht nur eine Zahl.",
+      "whyItMatters": "Du erkennst, warum ein kalter Tag einer langfristigen Erwärmung nicht widerspricht.",
+      "observe": "Erfinde keine Messwerte: Vergleiche dein Wetterblatt mit einer datierten Klimabeschreibung. Erkläre, welche unterschiedliche Frage beide beantworten.",
+      "sourceIds": [
+        "weather-base",
+        "weather-climate"
+      ]
+    },
+    {
+      "title": "Wie wissen wir das Wetter von morgen?",
+      "text": "Wetterstationen, Satelliten und andere Messgeräte sammeln Daten. Computer berechnen daraus Vorhersagen. Weil die Luft ständig in Bewegung ist, bleiben Vorhersagen unsicher. Je weiter der Blick in die Zukunft geht, desto größer ist diese Unsicherheit meistens.\n\nEine Vorhersage ist ein begründeter Blick nach vorn, keine bereits gemachte Beobachtung. Werden neue Daten verfügbar, kann sie angepasst werden. Das ist kein Zeichen von willkürlichem Raten.",
+      "fact": "Eine Vorhersage kann sehr hilfreich sein, auch wenn sie nicht auf die Minute stimmt.",
+      "starter": "Messgeräte und Computer helfen beim Wetterbericht. Trotzdem kann er sich ändern.",
+      "deeper": "Unsicherheit wächst häufig mit dem Vorhersageabstand. Auch Ort und Wetterlage beeinflussen, wie genau eine Aussage sein kann.",
+      "whyItMatters": "Du kannst eine veränderte Vorhersage als neue Einschätzung verstehen.",
+      "observe": "Notiere einen Wetterbericht und vergleiche ihn später mit dem beobachteten Wetter. Markiere, was passte und wo die Aussage unsicher war.",
+      "sourceIds": [
+        "weather-climate",
+        "weather-forecast-range"
+      ]
+    }
+  ],
+  "question": {
+    "id": "journey-weather",
+    "category": "Wasser & Wetter",
+    "question": "Was beschreibt Klima?",
+    "answers": [
+      "Typisches Wetter über viele Jahre",
+      "Nur den Regen von heute",
+      "Die Farbe einer Wolke"
+    ],
+    "correct": 0,
+    "why": "Klima beschreibt langfristige Muster. Wetter beschreibt dagegen die Bedingungen zu einer bestimmten Zeit."
+  },
+  "activity": "Führe drei Tage lang ein Wetterblatt: Wolken, Wind, Regen und Temperatur. Das ist eine Wetterbeobachtung – noch keine Klimamessung."
+},
   { id:"seasons", title:"Die Jahreszeiten-Maschine", intro:"Warum ist in Australien Weihnachten im Sommer?", icon:"sun", color:"yellow", minutes:8, lab:"seasons", source:"https://spaceplace.nasa.gov/seasons/en/", sourceName:"NASA Space Place · Jahreszeiten", steps:[
     {title:"Die Erde steht schief",text:"Die gedachte Erdachse ist gegenüber einer senkrechten Linie zur Umlaufbahn um etwa 23,4 Grad geneigt. Während die Erde um die Sonne reist, zeigt ihre Achse ungefähr in dieselbe Richtung. Das verändert im Lauf des Jahres den Sonnenstand und die Tageslänge.",fact:"Die Achse ist keine echte Stange. Sie hilft uns, die Drehung zu beschreiben."},
     {title:"Sommer auf der Nordhalbkugel",text:"Um den Juni ist die Nordhalbkugel zur Sonne geneigt. Bei uns in Deutschland steht die Sonne dann höher und die Tage sind länger. So erreicht uns pro Tag mehr Sonnenenergie. Auf der Südhalbkugel ist zur gleichen Zeit Winter.",fact:"Am Nordpol geht die Sonne im Sommer für mehrere Monate nicht unter."},

@@ -5,7 +5,7 @@ export const CHAPTER_LINKS:Record<string,string[]>={
  planet:['world/topic/science-solar-system','world/topic/science-water-cycle','world/topic/science-atmosphere','world/topic/science-tides','world/topic/science-seasons'],
  inside:['layers','world/topic/science-magnetism','labs/plates','labs/plates','labs/volcano'],
  water:['labs/water','world/topic/science-water-cycle','world/topic/science-water-cycle','world/topic/science-water-cycle','world/topic/science-water-cycle'],
- weather:['labs/weather','labs/wind','labs/weather','world/topic/science-atmosphere','world/topic/invention-satellite'],
+ weather:['labs/weather','labs/weather','labs/weather','world/topic/science-atmosphere','world/topic/invention-satellite'],
  seasons:['labs/seasons','world/topic/science-seasons','world/topic/science-seasons','labs/seasons','day'],
  ocean:['globe','world/topic/science-water-cycle','world/topic/science-coral-reef','book/words/Ozean','world/topic/science-currents'],
  nature:['world/topic/animal-jaguar','world/topic/animal-giraffe','world/topic/animal-dromedary','world/topic/animal-polar-bear','world/topic/science-foodweb'],
