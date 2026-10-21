@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "status": "Two existing manuscripts individually AI-counterread; complete current immutable local browser/offline acceptance passed. Exact final CI/readiness/actual delivery still pending.",
+  "reviewedOn": "2026-10-21",
+  "independentHumanReview": false,
+  "actualNewTopics": 2,
+  "retainedPeople": 18,
+  "sourcesActuallyRead": [
+    {
+      "id": "nhm-anning",
+      "url": "https://www.nhm.ac.uk/discover/mary-anning-unsung-hero.html",
+      "actuallyRead": "Main biography lines65–80,98–117,150–164. Selected dates, work, Joseph/Mary roles and unequal recognition; no whole-page approval.",
+      "usedFor": "Anning1799–1847/LymeRegis/fossilpreparation, observed marine-reptile fossils, collaboration and recognition.",
+      "limits": "Do not claim sole discovery of first-ever ichthyosaur; later interpretations and reconstructions are not direct observations of live extinct animals."
+    },
+    {
+      "id": "mactutor-alhaytham",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Haytham/",
+      "actuallyRead": "Main biography lines8–18,25–29,44–59. University historical biography, not an original medieval manuscript.",
+      "usedFor": "Optics/mathematics, observations/experiments, light reaching eye, historical biographical uncertainty.",
+      "limits": "Heading says1039 while body1040; use circa965–1040. Reject first-person-ever-camera-obscura claim; no broad modern accuracy endorsement of historical eye/refraction model."
+    },
+    {
+      "id": "unesco-alhaytham",
+      "url": "https://www.unesco.org/en/articles/ibn-al-haythams-scientific-method",
+      "actuallyRead": "Authored2018/updated2023 historical account lines26–38,47–60 and65–68; selected direct main-page reading, not just search snippet.",
+      "usedFor": "Designed tests of hypotheses, relation between geometric representation and experiment.",
+      "limits": "Avoid sole inventor/father-of-allscience claims, sweeping European/Islamic civilizational comparisons, and treating one experiment as conclusive proof."
+    },
+    {
+      "id": "lyme-anning",
+      "url": "https://www.lymeregismuseum.co.uk/about-us/the-mary-anning-experts/",
+      "actuallyRead": "Direct main article lines190–216 and231–237 after different fossil-facts URL timedout. Not just search snippet.",
+      "usedFor": "Independent museum counterread of1799–1847, local fossil preparation, Joseph skull thenMary skeleton, unequal recognition.",
+      "limits": "Society admission date differs: NHM says1908, localmuseum1919. No membership-admission year is asserted in own draft; do not silently pick either source or globally approve a page. No lightning/transformation anecdote, money figures, or solo-first-discovery claim used."
+    }
+  ],
+  "sourceLimits": {
+    "url": "https://www.lymeregismuseum.co.uk/fossil-facts/ichthyosaurs/",
+    "actualOutcome": "Reader400Timeout; searchsnippet not relabelled directreading. No repeated request or media download."
+  },
+  "criticalCounterread": "Drafts reconsidered after writing: reject heroic sole-inventor narratives; keep Joseph/Mary roles; distinguish marine reptile from generic dinosaur label, physical evidence from reconstructed appearance, historical date uncertainty, entering-eye light from outgoing eye rays, designed test from conclusive universal proof. Own optional observation prompts, distinct hints and every wrong-answer explanation. No borrowed image/text passage. Independent local-museum main article now actually counterread; source conflict on society admission year explicitly excluded from manuscript rather than guessed. First timedout fossil-facts URL remains honestly unread.",
+  "entries": [
+    {
+      "id": "person-mary_anning",
+      "inventoryId": "topics-people:person-mary_anning",
+      "dataHash": "f16037781c5e2132420f5f21104fb830100e7cf2f6aeb82f859a9dc1975b7777",
+      "factualFindings": "Josephs Schädelfund1811 und Marys spätere Skelettarbeit getrennt; keine alleinige Erstentdeckung und kein lebender Dinosaurier behauptet. Meeressaurier sind nicht pauschal Dinosaurier. Der Unterschied zwischen Fund und Rekonstruktion wird nur auf die tatsächlich beschriebenen Knochenmerkmale bezogen.",
+      "pedagogicalFindings": "Sechs bereits entwickelte Aufgaben unverändert übernommen: je Person Beobachten6–8, Begründen9–11, Übertragen12–14. AlleStufen frei wählbar, gedachte Situationen und eigene Modelle ausdrücklich gekennzeichnet; Josephs und Marys historische Beiträge von der erfundenen Schildbehauptung getrennt, freiwilligerHinweis vor Antwort, jede Fehlantwort mit eigener Erklärung. Exploration vergibt keinen Mini-Fragenstempel. Neuladen bewahrt jede Aufgabenwahl; canonicalMini bleibt getrennt. Keine Aufforderung zu gefährlichen Versuchen oder unbekanntenFunden.",
+      "countercheck": "Beide Museen unabhängig in den ausgewählten tatsächlich gelesenen Hauptpassagen gegengelesen. Unterschiedliche Aufnahmejahre von Frauen in die GeologicalSociety1908/1919 nicht in den eigenen Text übernommen. Josephs Arbeit wird nicht Mary zugeschrieben und Marys Arbeit nicht durch Joseph ersetzt. Frei erfundener Knochenumriss ist in allen drei Darstellungen exakt gleich; beide Hautfarben erkennbar Ergänzungen.",
+      "actualSourceIds": [
+        "nhm-anning",
+        "lyme-anning"
+      ],
+      "ownedMedia": {
+        "id": "person-mary_anning",
+        "kind": "fossil-evidence",
+        "alt": "Eigener erfundener Knochenumriss als Beispiel zum Unterscheiden von Fund und Rekonstruktion.",
+        "caption": "Eigene Erklärzeichnung · erfundener Knochen, kein echtes Fossilienfoto.",
+        "author": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
+        "rightsState": "own",
+        "notPhotograph": true,
+        "renderer": "app/people-illustration.tsx",
+        "modelLimits": "Frei erfundene Knochenform und Tierumrisse, keine dokumentierte Rekonstruktion einer bestimmten Art. Eine gezeichnete Hautfarbe ist in diesem Beispiel kein am Knochen beobachteter Beleg.",
+        "sources": [
+          "https://www.nhm.ac.uk/discover/mary-anning-unsung-hero.html",
+          "https://www.lymeregismuseum.co.uk/about-us/the-mary-anning-experts/"
+        ],
+        "sourceUse": "Fachlicher und historischer Zusammenhang; keine Abbildung aus diesen Quellen übernommen."
+      },
+      "learningTasks": [
+        {
+          "age": "6-8",
+          "goal": "Eine beschriebene Spur von einer zusätzlichen Vermutung unterscheiden.",
+          "example": "Gedachtes Museumsbeispiel: Auf dem Schild steht: Ein versteinerter Knochen wurde gefunden. Daneben zeigt ein gemaltes Tier blaue Haut. Das Bild wurde heute als mögliche Rekonstruktion gezeichnet.",
+          "prompt": "Was ist in diesem Beispiel der erhaltene Fund?",
+          "answers": [
+            "Der versteinerte Knochen",
+            "Die blaue Hautfarbe auf dem heutigen Bild",
+            "Ein heute am Fundort lebendes Tier"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche, was gefunden wurde und was jemand später dazu gezeichnet hat.",
+          "why": "Der Knochen ist der im Beispiel gefundene Rest. Die heutige Zeichnung ergänzt eine mögliche Vorstellung; die blaue Hautfarbe ist dadurch nicht am Fossil beobachtet.",
+          "wrongReasons": [
+            null,
+            "Die blaue Haut ist auf der heutigen Zeichnung. Der Text nennt sie nicht als erhaltenen Fund.",
+            "Der Text beschreibt einen Fund aus der Vergangenheit und keinen Nachweis für ein heute dort lebendes Tier."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Beiträge verschiedener Menschen zu einer Entdeckung auseinanderhalten.",
+          "example": "Joseph fand 1811 einen Schädel. Mary fand später weitere Skelettteile und arbeitete sorgfältig an Fossilien. Ein für diese Aufgabe erfundenes Schild behauptet: Mary fand alles allein.",
+          "prompt": "Welche Änderung macht dieses erfundene Schild genauer?",
+          "answers": [
+            "Nur Joseph nennen und Mary weglassen",
+            "Josephs Schädelfund und Marys weitere Arbeit getrennt nennen",
+            "Aus dem Fossil auf die genaue Hautfarbe schließen"
+          ],
+          "correct": 1,
+          "hint": "Ordne zuerst jeden beschriebenen Arbeitsschritt einer Person zu.",
+          "why": "Eine Entdeckung kann mehrere Beiträge haben. Josephs Schädelfund und Marys weitere Funde und Untersuchungen sollen weder verwechselt noch gegeneinander ausgelöscht werden.",
+          "wrongReasons": [
+            "Auch Marys weitere Funde und ihre Arbeit gehören zur Beschreibung. Nur einen Beitrag zu nennen würde den anderen wieder auslassen.",
+            null,
+            "Eine Hautfarbe erklärt nicht, wer welche Arbeit geleistet hat. Außerdem nennt der Fundtext keinen Farbnachweis."
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Den Geltungsbereich eines Fossilbelegs und den Bedarf an zusätzlichen Daten begründen.",
+          "example": "Zwei gedankliche Rekonstruktionen zeigen dieselben fossilen Knochenformen, aber verschiedene Hautfarben. Für die Hautfarbe nennt die Aufgabe keine weiteren erhaltenen Spuren oder Untersuchungen.",
+          "prompt": "Welche begründete Einschätzung passt dazu?",
+          "answers": [
+            "Die schönere Zeichnung beweist die richtige Hautfarbe",
+            "Beide Bilder beweisen, dass das Tier zwei Hautfarben zugleich hatte",
+            "Die Knochenformen sind ein Beleg; die Hautfarbe bleibt hier ohne zusätzlichen Beleg offen"
+          ],
+          "correct": 2,
+          "hint": "Frage für jede gezeichnete Eigenschaft einzeln, welche erhaltene Spur sie stützt.",
+          "why": "Ein Beleg kann bestimmte Aussagen stützen, ohne alle Einzelheiten zu bestimmen. Hier helfen die Knochenformen bei Körpermerkmalen; für eine Entscheidung über Hautfarbe fehlen in der Aufgabe zusätzliche Belege.",
+          "wrongReasons": [
+            "Gefällige Gestaltung ersetzt keinen Beleg. Beide Bilder können dieselben Knochenformen unterschiedlich ergänzen.",
+            "Unterschiedliche Zeichnungen sind keine zwei Beobachtungen an der Haut desselben Tiers.",
+            null
+          ]
+        }
+      ],
+      "preparedIntegration": {
+        "status": "Historical manuscript-stage preparation retained. Two runtime topics and their own labeled media are now integrated locally; see latestEarlyChecks. Full current acceptance/CI/delivery remain pending.",
+        "currentPublicComparison": "PR48 actual released catalog145; Master185 may contain other unpublished backlinks and must not overwrite current public target wholesale.",
+        "targetEntry": {
+          "id": "person-charles_darwin",
+          "actualTitle": "Charles Darwin",
+          "currentRelated": [
+            "person-jane_goodall",
+            "animal-green-sea-turtle"
+          ]
+        },
+        "appendReciprocalRelatedId": "person-mary_anning",
+        "ownConnectionExplanation": "Anning beschrieb Fossilien früherer Tiere; Darwin verglich viele Belege zur Veränderung von Arten. Ein einzelnes Fossil erklärt nicht den ganzen Ablauf der Evolution.",
+        "sourceLinksResolvedFromActuallyReadRecords": [
+          {
+            "label": "nhm-anning",
+            "url": "https://www.nhm.ac.uk/discover/mary-anning-unsung-hero.html",
+            "recordedScope": "Main biography lines65–80,98–117,150–164. Selected dates, work, Joseph/Mary roles and unequal recognition; no whole-page approval."
+          },
+          {
+            "label": "lyme-anning",
+            "url": "https://www.lymeregismuseum.co.uk/about-us/the-mary-anning-experts/",
+            "recordedScope": "Direct main article lines190–216 and231–237 after different fossil-facts URL timedout. Not just search snippet."
+          }
+        ],
+        "publicSchemaProjection": {
+          "lifespan": "1799–1847",
+          "field": "Fossilienforscherin",
+          "personMethod": "Funde sorgfältig freilegen, beschreiben und mit anderen vergleichen."
+        },
+        "ownMediaConcept": "Eigene klar als erfunden markierte Gegenüberstellung: erhaltener Knochenumriss und zwei mögliche Rekonstruktionen mit denselben Knochenformen. Unterschiede der gezeichneten Hautfarbe sind kein am Knochen beobachteter Farbnachweis. Kein echtes Fossilienfoto oder historisches Porträt vortäuschen.",
+        "limits": "Keine gemeinsame Forschungsreise, keine Alleinentdeckung; Josephs und Marys Beiträge getrennt erhalten.",
+        "retentionRequirement": "Add stable newIDs; retain all18existingbiographies/questions/answerIDs/relatedLinks and saved people/challenge rounds. Actual current UI/search/reciprocalbackfocus/offline/import and full acceptance still required."
+      },
+      "earlyUI": "e400444da589ece6",
+      "earlyUIHistoricalScope": "Original early e400444da589ece6 proof retained; latest scoped local616 checks are recorded separately, without rebinding historical native/offline evidence."
+    },
+    {
+      "id": "person-ibn_al_haytham",
+      "inventoryId": "topics-people:person-ibn_al_haytham",
+      "dataHash": "b77a6b43564a675881dd21db07714f6dd54cbde886da03d62360536d161474af",
+      "factualFindings": "Biografische Jahreszahlen bewusst etwa965–1040: MacTutor nennt im Kopf1039 und im Text1040. Licht gelangt ins Auge; Beobachtung und gezielte Versuche unterstützen Erklärungen. Keine Alleinerfindung der Kamera, universelle Wissenschaftsgründung oder vollständige moderne Augenphysik zugesprochen.",
+      "pedagogicalFindings": "Sechs bereits entwickelte Aufgaben unverändert übernommen: je Person Beobachten6–8, Begründen9–11, Übertragen12–14. AlleStufen frei wählbar, gedachte Situationen und eigene Modelle ausdrücklich gekennzeichnet; Josephs und Marys historische Beiträge von der erfundenen Schildbehauptung getrennt, freiwilligerHinweis vor Antwort, jede Fehlantwort mit eigener Erklärung. Exploration vergibt keinen Mini-Fragenstempel. Neuladen bewahrt jede Aufgabenwahl; canonicalMini bleibt getrennt. Keine Aufforderung zu gefährlichen Versuchen oder unbekanntenFunden.",
+      "countercheck": "Universitätsbiografie und UNESCO-Haupttext ausgewählt tatsächlich gelesen. Der Doppelpfeilweg endet am Auge; im gesperrten Zustand am gezeichneten undurchlässigen Schirm. Keine Sehstrahlen vom Auge, keine historische Originalversuchsabbildung. Der Schirm im Bild sperrt den Gegenstand–Auge-Weg; die mittlere Aufgabe benennt ausdrücklich einen anderen Lampen–Fläche-Gedankenversuch, keinen identischen historischen Aufbau.",
+      "actualSourceIds": [
+        "mactutor-alhaytham",
+        "unesco-alhaytham"
+      ],
+      "ownedMedia": {
+        "id": "person-ibn_al_haytham",
+        "kind": "light-to-eye",
+        "alt": "Eigenes vereinfachtes Lichtwegschema von einer Lichtquelle über einen beleuchteten Gegenstand zum Auge.",
+        "caption": "Eigene Erklärzeichnung · Lichtweg, kein historisches Porträt oder Versuchsbild.",
+        "author": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
+        "rightsState": "own",
+        "notPhotograph": true,
+        "renderer": "app/people-illustration.tsx",
+        "modelLimits": "Qualitatives Schema ohne Mengen- oder Abstandsmaßstab. Kein Nachbau eines historischen Versuchs und kein vollständiges Augen- oder Gehirnmodell.",
+        "sources": [
+          "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Haytham/",
+          "https://www.unesco.org/en/articles/ibn-al-haythams-scientific-method"
+        ],
+        "sourceUse": "Fachlicher und historischer Zusammenhang; keine Abbildung aus diesen Quellen übernommen."
+      },
+      "learningTasks": [
+        {
+          "age": "6-8",
+          "goal": "Einen einfachen Lichtweg vom beleuchteten Gegenstand zum Auge verfolgen.",
+          "example": "Ein gedachtes Zimmer ist völlig dunkel. Ein roter Baustein leuchtet nicht selbst. Dann wird eine Lampe eingeschaltet und beleuchtet ihn.",
+          "prompt": "Welcher Lichtweg hilft dir, den Baustein zu sehen?",
+          "answers": [
+            "Auge–Baustein, ohne Lichtquelle",
+            "Lampe–Baustein–Auge",
+            "Baustein–Lampe, ohne Auge"
+          ],
+          "correct": 1,
+          "hint": "Beginne bei der Lichtquelle und ende beim Sehen. Der Baustein leuchtet nicht selbst.",
+          "why": "Licht von der Lampe trifft auf den Baustein. Ein Teil des zurückgestreuten Lichts gelangt ins Auge. Das ist ein vereinfachter Lichtweg, keine vollständige Erklärung des Sehens.",
+          "wrongReasons": [
+            "Die Augen müssen nicht erst Sehstrahlen zum Gegenstand senden. Im Beispiel braucht der nicht selbst leuchtende Baustein Licht von der Lampe.",
+            null,
+            "Der Weg endet ohne Auge und erklärt deshalb das Sehen des Bausteins nicht."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Eine prüfbare Vorhersage von einer bloßen Benennung unterscheiden.",
+          "example": "Gedankenversuch, keine Aufforderung zum Umbau: Ein vollständig lichtundurchlässiger Schirm würde genau den Weg der Lampe zu einer weißen Fläche sperren. Andere Lichtquellen und Lichtwege sind im Beispiel ausgeschlossen.",
+          "prompt": "Welche Vorhersage folgt aus diesem vereinfachten Modell?",
+          "answers": [
+            "Die Fläche wird immer heller, weil ihre Farbe gleich bleibt",
+            "Die Augen erzeugen hinter dem Schirm eine neue Lampe",
+            "Auf diesem gesperrten Weg erreicht kein Lampenlicht die Fläche"
+          ],
+          "correct": 2,
+          "hint": "Prüfe, was der Schirm im beschriebenen Lichtweg tatsächlich verändert.",
+          "why": "Das Modell sagt voraus, dass ein vollständig gesperrter Lichtweg kein Licht zu dieser Fläche überträgt. Die Einschränkung auf ausgeschlossene andere Wege ist wichtig; im echten Raum kann Licht auch aus anderen Richtungen kommen.",
+          "wrongReasons": [
+            "Eine weiße Fläche ist keine eigene Lichtquelle. Ihre Farbe allein liefert keine zusätzliche Beleuchtung.",
+            "Augen ersetzen die ausgesperrte Lichtquelle nicht durch eine neue Lampe.",
+            null
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Ein nachvollziehbares Prüfverfahren von einem universellen Wahrheitsbeweis unterscheiden.",
+          "example": "Eine Gruppe zeichnet einen vereinfachten Lichtweg und notiert vor einem Versuch eine Vorhersage. Ihre Beobachtung passt anschließend dazu. Dies ist ein heutiges Lernbeispiel, keine Rekonstruktion eines bestimmten historischen Versuchs.",
+          "prompt": "Welche Schlussfolgerung ist angemessen?",
+          "answers": [
+            "Die Beobachtung stützt diese Vorhersage unter den geprüften Bedingungen; weitere Fragen und Gegenprüfungen bleiben",
+            "Ein passender Versuch beweist jede Aussage über Auge und Gehirn für immer",
+            "Eine schöne Zeichnung macht Beobachten überflüssig"
+          ],
+          "correct": 0,
+          "hint": "Trenne die einzelne geprüfte Vorhersage vom viel größeren Gebiet des Sehens.",
+          "why": "Eine passende Beobachtung ist ein Beitrag zur Prüfung. Sie ersetzt weder die Kontrolle von Bedingungen und Alternativerklärungen noch Untersuchungen weiterer Fragen. Ein Lichtstrahlmodell stellt nur ausgewählte Zusammenhänge dar.",
+          "wrongReasons": [
+            null,
+            "Die Beobachtung betrifft den beschriebenen Aufbau. Sie prüft nicht automatisch alle Vorgänge des Auges und Gehirns.",
+            "Eine Zeichnung hilft beim Vorhersagen und Erklären; sie ist kein Ersatz für die Untersuchung."
+          ]
+        }
+      ],
+      "preparedIntegration": {
+        "status": "Historical manuscript-stage preparation retained. Two runtime topics and their own labeled media are now integrated locally; see latestEarlyChecks. Full current acceptance/CI/delivery remain pending.",
+        "currentPublicComparison": "PR48 actual released catalog145; Master185 may contain other unpublished backlinks and must not overwrite current public target wholesale.",
+        "targetEntry": {
+          "id": "invention-camera",
+          "actualTitle": "Die Kamera",
+          "currentRelated": [
+            "invention-smartphone",
+            "invention-telescope"
+          ]
+        },
+        "appendReciprocalRelatedId": "person-ibn_al_haytham",
+        "ownConnectionExplanation": "Die Kamerakarte zeigt Licht durch eine Öffnung auf eine Bildfläche; die Biografie erklärt das Prüfen von Lichtideen. Das ist eine erklärte Verbindung, keine Zuschreibung der modernen Kamera an einen einzigen mittelalterlichen Erfinder.",
+        "sourceLinksResolvedFromActuallyReadRecords": [
+          {
+            "label": "mactutor-alhaytham",
+            "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Haytham/",
+            "recordedScope": "Main biography lines8–18,25–29,44–59. University historical biography, not an original medieval manuscript."
+          },
+          {
+            "label": "unesco-alhaytham",
+            "url": "https://www.unesco.org/en/articles/ibn-al-haythams-scientific-method",
+            "recordedScope": "Authored2018/updated2023 historical account lines26–38,47–60 and65–68; selected direct main-page reading, not just search snippet."
+          }
+        ],
+        "publicSchemaProjection": {
+          "lifespan": "etwa 965–1040",
+          "field": "Lichtforscher und Mathematiker",
+          "personMethod": "Eine Erklärung mit gezielten Lichtversuchen und geometrischen Überlegungen prüfen."
+        },
+        "ownMediaConcept": "Eigenes qualitatives Lichtwegschema Lichtquelle → beleuchteter Gegenstand → Auge. Jeder Weg hat eine eigene Pfeilspitze. Ein Auge sendet im Modell keine Sehstrahlen aus. Nicht als Rekonstruktion eines echten historischen Versuchs oder vollständiges biologisches Augenmodell ausgeben.",
+        "limits": "Datierung weiterhin etwa965–1040; widersprüchliche exakte Quellenjahre nicht auflösen oder zur neuen Tatsache erheben.",
+        "retentionRequirement": "Add stable newIDs; retain all18existingbiographies/questions/answerIDs/relatedLinks and saved people/challenge rounds. Actual current UI/search/reciprocalbackfocus/offline/import and full acceptance still required."
+      },
+      "earlyUI": "e400444da589ece6",
+      "earlyUIHistoricalScope": "Original early e400444da589ece6 proof retained; latest scoped local616 checks are recorded separately, without rebinding historical native/offline evidence."
+    }
+  ],
+  "latestEarlyChecks": {
+    "build": "616a7cb89d57f862",
+    "sourceDigest": "12c47fc3f58af0e02c38e7b436013e7062688917cb190b8ccc029ce0f1c904c4",
+    "actualBrowser": "Local Playwright1.64.0 / System Chromium154, not CI Chromium156 or a physical device",
+    "cardBrowse": {
+      "report": "/workspace/work/wk-continuation/people-two-card-browse-early-v2-20261021/report.json",
+      "sha256": "699687a9555c63882223095ddeb8bb919d06e63a41e03fd02f3f22930dd004f4",
+      "views": 8,
+      "pagination": "All20 unique people across existing12+8 pages; all18 old photo assignments retained; search aliases, image click and return focus passed."
+    },
+    "permanentProductModule": {
+      "report": "/workspace/work/wk-continuation/people-two-current616-permanent-product-browser-20261021/report.json",
+      "sha256": "9f47008fde515e998e5cb03c329c67bbfd8dd213f3cfec89134d3579b45fad78",
+      "views": 8,
+      "checks": "Actual axe, all six age-specific tasks and wrong-feedbacks, model changes, source and reciprocal target/back links, canonical mini and imported old round/18 orders/reload/pass download passed."
+    },
+    "limits": "Targeted early checks only; current full acceptance and actual CI/delivery pending. Earlier native cold/zoom evidence retains original e400 build identity. No offline UI dossier renewal from these checks.",
+    "nativeCold": {
+      "report": "/workspace/work/wk-continuation/people-two-current616-native-cold-early-20261021/report.json",
+      "sha256": "4ac403603280ec5d6e376ce2277c0f0d3c1a3b8c10ac88c85f7c5160b63b0f85",
+      "sourceDigest": "45e238bc1c93bdb80c56f2a9a0e6da63f4f25673e32c509fe619d85b0ad891ae",
+      "scope": "Same current616 product after caption CSS change: actual native zoom CSS640/320 at DPR2; all six saved wrong age answers per mode, six topic views/18wrong selections/three actual pass downloads. Browser closed, preview server stopped, connection refused and new browser constructed offline; navigator.onLine false.",
+      "actualModelImagesPersonallyViewed": [
+        "people-native-early-native320-person-mary_anning-320-diagram1.png",
+        "people-native-early-native320-person-ibn_al_haytham-320-diagram0.png"
+      ],
+      "limits": "Early scoped check only; final target integration, complete current product acceptance and actual CI/delivery still required. No new UI dossier offline acceptance before complete full run."
+    }
+  }
+}

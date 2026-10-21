@@ -1,14 +1,14 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import {execFileSync} from 'node:child_process';
 import {verifyFreshExport} from '../scripts/export-integrity.mjs';
 const expected=JSON.parse(fs.readFileSync('exports/content/index.json','utf8'));
-test('actual forty-one-file without retired news exports extraction catches changed source despite an untouched internally consistent old export',()=>{
+test('actual complete without retired news exports extraction catches changed source despite an untouched internally consistent old export',()=>{
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'wk-source-export-'));try{
   const sources=new Set(['scripts/export-content.mjs','scripts/world-photo-index.mjs','app/world-photos.json','app/world-photo-core.json','app/world-photo-ids.json','app/world-photo-integrity.json',...expected.files.flatMap(f=>f.sources)]);
   for(const file of sources){const target=path.join(root,file);fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(file,target);}
   // TypeScript is the same installed parser; this fixture is not another development checkout.
   fs.symlinkSync(path.resolve('node_modules'),path.join(root,'node_modules'),'dir');fs.writeFileSync(path.join(root,'package.json'),'{"type":"module"}');
   const extract=()=>{execFileSync(process.execPath,['scripts/export-content.mjs','--check'],{cwd:root,stdio:'pipe'});return JSON.parse(fs.readFileSync(path.join(root,'.qa-output/content-check/index.json'),'utf8'));};
-  const original=extract();assert.equal(verifyFreshExport(expected,original),true);assert.equal(original.files.length,41);assert.ok(original.files.some(f=>f.file==='animal-inquiries.json'&&f.sources.includes('app/animal-inquiries.json')),'workshop data is part of the same checked export');
+  const original=extract();assert.equal(verifyFreshExport(expected,original),true);assert.equal(original.files.length,43);assert.ok(original.files.some(f=>f.file==='people-illustrations.json'&&f.sources.includes('app/people-illustrations.json')),'both authored people schemas and their rights/source evidence share the same checked export');assert.ok(original.files.some(f=>f.file==='people-inquiries.json'&&f.sources.includes('app/people-inquiries.json')),'all six optional people reasoning tasks participate in the same source/export integrity check');assert.ok(original.files.some(f=>f.file==='animal-inquiries.json'&&f.sources.includes('app/animal-inquiries.json')),'workshop data is part of the same checked export');
   assert.equal(original.files.some(f=>['children-news.json','news-source-policy.json'].includes(f.file)),false,'removed news must not be exported');
   assert.ok(original.files.some(f=>f.file==='research-feedback.json'&&f.sources.includes('app/research-feedback.json')),'all laboratory feedback is part of the same checked export');
   assert.ok(original.files.some(f=>f.file==='animal-illustrations.json'&&f.sources.includes('app/animal-illustrations.json')),'own animal media participates in the identical source/export integrity check');

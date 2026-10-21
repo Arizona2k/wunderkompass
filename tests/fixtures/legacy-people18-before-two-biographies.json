@@ -1,0 +1,347 @@
+{
+  "actualPublishedBase": "73e1a265d02cc7c5b0e4b02d4f8ab68d34d69a3e",
+  "catalogSHA256": "763e8a8e94fe9f13138e69ca0dad8c61fe70ac4a0368c08a784a71a34eccdad2",
+  "gameBankSHA256": "1faf3bcb0f8083a913079244ebfe3697af4bdcf6ae1006d7cc05259c5ac6d407",
+  "bank": [
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Diese Person erforschte die Radioaktivität.",
+      "answers": [
+        "Marie Curie",
+        "Katherine Johnson",
+        "Jane Goodall"
+      ],
+      "correct": 0,
+      "why": "Gemeinsam mit Pierre Curie entdeckte sie 1898 die Elemente Polonium und Radium.",
+      "id": "person-marie_curie",
+      "topic": "person-marie_curie"
+    },
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Diese Person schrieb 1843 eine Rechenanleitung für Charles Babbages geplante Maschine auf.",
+      "answers": [
+        "Ada Lovelace",
+        "Tim Berners-Lee",
+        "Albert Einstein"
+      ],
+      "correct": 0,
+      "why": "Sie erkannte, dass solche Maschinen eines Tages auch mit Zeichen oder Musik arbeiten könnten.",
+      "id": "person-ada_lovelace",
+      "topic": "person-ada_lovelace"
+    },
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Diese Person half, das Programmieren von Computern einfacher zu machen.",
+      "answers": [
+        "Grace Hopper",
+        "Karl (Carl) Benz",
+        "al-Chwarizmi (al-Khwarizmi)"
+      ],
+      "correct": 0,
+      "why": "Sie entwickelte frühe Compiler und FLOW-MATIC; ihre Arbeit beeinflusste die Computersprache COBOL.",
+      "id": "person-grace_hopper",
+      "topic": "person-grace_hopper"
+    },
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Diese Person berechnete Flugbahnen für die Raumfahrt.",
+      "answers": [
+        "Katherine Johnson",
+        "Bertha Benz",
+        "Tu Youyou"
+      ],
+      "correct": 0,
+      "why": "Vor John Glenns Weltraumflug 1962 überprüfte sie die Ergebnisse der elektronischen Computer.",
+      "id": "person-katherine_johnson",
+      "topic": "person-katherine_johnson"
+    },
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Diese Person entwickelte am CERN die Idee für das World Wide Web.",
+      "answers": [
+        "Tim Berners-Lee",
+        "Jane Goodall",
+        "Cai Lun"
+      ],
+      "correct": 0,
+      "why": "Er baute den ersten Webbrowser und Webserver; andere Menschen halfen, das Web weiterzuentwickeln.",
+      "id": "person-tim_berners_lee",
+      "topic": "person-tim_berners_lee"
+    },
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Karl Benz entwickelte einen Wagen mit Benzinmotor.",
+      "answers": [
+        "Karl (Carl) Benz",
+        "Albert Einstein",
+        "Mae Jemison"
+      ],
+      "correct": 0,
+      "why": "1886 erhielt er ein Patent für seinen Motorwagen; Bertha Benz half bei der Arbeit und mit Geld.",
+      "id": "person-karl_benz",
+      "topic": "person-karl_benz"
+    },
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Diese Person unterstützte die Entwicklung des Motorwagens mit Geld, Ideen und praktischer Arbeit.",
+      "answers": [
+        "Bertha Benz",
+        "al-Chwarizmi (al-Khwarizmi)",
+        "Johannes Gutenberg"
+      ],
+      "correct": 0,
+      "why": "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte.",
+      "id": "person-bertha_benz",
+      "topic": "person-bertha_benz"
+    },
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Diese Person beobachtete wilde Schimpansen in Tansania.",
+      "answers": [
+        "Jane Goodall",
+        "Tu Youyou",
+        "Wangari Maathai"
+      ],
+      "correct": 0,
+      "why": "1960 sah sie, dass diese Tiere Werkzeuge herstellen und benutzen; später setzte sie sich weltweit für Tiere und Natur ein.",
+      "id": "person-jane_goodall",
+      "topic": "person-jane_goodall"
+    },
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Diese Person erforschte Licht, Raum und Zeit.",
+      "answers": [
+        "Albert Einstein",
+        "Cai Lun",
+        "Charles Darwin"
+      ],
+      "correct": 0,
+      "why": "Seine Relativitätstheorien veränderten die Physik; seinen Nobelpreis bekam er für seine Erklärung, wie Licht Elektronen aus einem Stoff lösen kann.",
+      "id": "person-albert_einstein",
+      "topic": "person-albert_einstein"
+    },
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Al-Chwarizmi schrieb in Bagdad wichtige Bücher über das Rechnen und die Algebra.",
+      "answers": [
+        "al-Chwarizmi (al-Khwarizmi)",
+        "Mae Jemison",
+        "Alexander von Humboldt"
+      ],
+      "correct": 0,
+      "why": "Das Wort Algorithmus, also eine genaue Schrittfolge, geht auf seinen Namen zurück.",
+      "id": "person-al_khwarizmi",
+      "topic": "person-al_khwarizmi"
+    },
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Diese Person suchte mit einem Team nach besseren Mitteln gegen Malaria.",
+      "answers": [
+        "Tu Youyou",
+        "Johannes Gutenberg",
+        "Neil Armstrong"
+      ],
+      "correct": 0,
+      "why": "In den 1970er-Jahren gewann sie Artemisinin aus einer Pflanze; die Forschung half, wirksame Medikamente zu entwickeln.",
+      "id": "person-tu_youyou",
+      "topic": "person-tu_youyou"
+    },
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Diese Person sammelte Erfahrungen früherer Papiermacher und verbesserte die Herstellung.",
+      "answers": [
+        "Cai Lun",
+        "Wangari Maathai",
+        "Marie Curie"
+      ],
+      "correct": 0,
+      "why": "Für 105 ist überliefert, dass er sein Verfahren dem Kaiser vorstellte; Papier gab es schon vorher.",
+      "id": "person-cai_lun",
+      "topic": "person-cai_lun"
+    },
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Diese Person ist Ärztin und war NASA-Astronautin.",
+      "answers": [
+        "Mae Jemison",
+        "Charles Darwin",
+        "Ada Lovelace"
+      ],
+      "correct": 0,
+      "why": "1992 flog sie mit der Raumfähre Endeavour als erste Schwarze Frau in den Weltraum.",
+      "id": "person-mae_jemison",
+      "topic": "person-mae_jemison"
+    },
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Diese Person entwickelte in Mainz ein wirksames System zum Drucken mit beweglichen Metallbuchstaben.",
+      "answers": [
+        "Johannes Gutenberg",
+        "Alexander von Humboldt",
+        "Grace Hopper"
+      ],
+      "correct": 0,
+      "why": "So konnte eine Werkstatt viele Buchseiten herstellen; ähnliche Druckideen gab es in Ostasien schon viel früher.",
+      "id": "person-johannes_gutenberg",
+      "topic": "person-johannes_gutenberg"
+    },
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Sie setzte sich in Kenia gemeinsam mit vielen Frauen für Bäume und eine gesunde Umwelt ein.",
+      "answers": [
+        "Wangari Maathai",
+        "Neil Armstrong",
+        "Katherine Johnson"
+      ],
+      "correct": 0,
+      "why": "Die Green-Belt-Bewegung verband Umweltschutz mit der Arbeit örtlicher Gemeinschaften. 2004 erhielt sie den Friedensnobelpreis.",
+      "id": "person-wangari_maathai",
+      "topic": "person-wangari_maathai"
+    },
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Er beobachtete Tiere, Pflanzen und Gesteine auf einer langen Forschungsreise.",
+      "answers": [
+        "Charles Darwin",
+        "Marie Curie",
+        "Tim Berners-Lee"
+      ],
+      "correct": 0,
+      "why": "Die Reise mit der Beagle dauerte von 1831 bis 1836. Seine Beobachtungen halfen ihm später, die Entwicklung von Lebewesen zu erklären.",
+      "id": "person-charles_darwin",
+      "topic": "person-charles_darwin"
+    },
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Er verglich auf Reisen Pflanzen, Berge und Klima miteinander.",
+      "answers": [
+        "Alexander von Humboldt",
+        "Ada Lovelace",
+        "Karl (Carl) Benz"
+      ],
+      "correct": 0,
+      "why": "Von 1799 bis 1804 reiste er mit Aimé Bonpland durch Teile Amerikas. Er wollte verstehen, wie verschiedene Teile der Natur zusammenhängen.",
+      "id": "person-alexander_humboldt",
+      "topic": "person-alexander_humboldt"
+    },
+    {
+      "prompt": "Wer passt zu diesem Hinweis? Er war der erste Mensch, der die Mondoberfläche betrat.",
+      "answers": [
+        "Neil Armstrong",
+        "Grace Hopper",
+        "Bertha Benz"
+      ],
+      "correct": 0,
+      "why": "Apollo 11 landete am 20. Juli 1969. Armstrong und Buzz Aldrin gingen auf dem Mond, während Michael Collins ihn im Raumschiff umkreiste. Das ganze Team machte die Reise möglich.",
+      "id": "person-neil_armstrong",
+      "topic": "person-neil_armstrong"
+    }
+  ],
+  "round": {
+    "items": [
+      "person-cai_lun",
+      "person-mae_jemison",
+      "person-wangari_maathai",
+      "person-charles_darwin",
+      "person-neil_armstrong"
+    ],
+    "index": 2,
+    "roundAnswer": "Neil Armstrong",
+    "roundDone": false,
+    "orders": {
+      "person-marie_curie": [
+        "Jane Goodall",
+        "Katherine Johnson",
+        "Marie Curie"
+      ],
+      "person-ada_lovelace": [
+        "Albert Einstein",
+        "Tim Berners-Lee",
+        "Ada Lovelace"
+      ],
+      "person-grace_hopper": [
+        "al-Chwarizmi (al-Khwarizmi)",
+        "Karl (Carl) Benz",
+        "Grace Hopper"
+      ],
+      "person-katherine_johnson": [
+        "Tu Youyou",
+        "Bertha Benz",
+        "Katherine Johnson"
+      ],
+      "person-tim_berners_lee": [
+        "Cai Lun",
+        "Jane Goodall",
+        "Tim Berners-Lee"
+      ],
+      "person-karl_benz": [
+        "Mae Jemison",
+        "Albert Einstein",
+        "Karl (Carl) Benz"
+      ],
+      "person-bertha_benz": [
+        "Johannes Gutenberg",
+        "al-Chwarizmi (al-Khwarizmi)",
+        "Bertha Benz"
+      ],
+      "person-jane_goodall": [
+        "Wangari Maathai",
+        "Tu Youyou",
+        "Jane Goodall"
+      ],
+      "person-albert_einstein": [
+        "Charles Darwin",
+        "Cai Lun",
+        "Albert Einstein"
+      ],
+      "person-al_khwarizmi": [
+        "Alexander von Humboldt",
+        "Mae Jemison",
+        "al-Chwarizmi (al-Khwarizmi)"
+      ],
+      "person-tu_youyou": [
+        "Neil Armstrong",
+        "Johannes Gutenberg",
+        "Tu Youyou"
+      ],
+      "person-cai_lun": [
+        "Marie Curie",
+        "Wangari Maathai",
+        "Cai Lun"
+      ],
+      "person-mae_jemison": [
+        "Ada Lovelace",
+        "Charles Darwin",
+        "Mae Jemison"
+      ],
+      "person-johannes_gutenberg": [
+        "Grace Hopper",
+        "Alexander von Humboldt",
+        "Johannes Gutenberg"
+      ],
+      "person-wangari_maathai": [
+        "Katherine Johnson",
+        "Neil Armstrong",
+        "Wangari Maathai"
+      ],
+      "person-charles_darwin": [
+        "Tim Berners-Lee",
+        "Marie Curie",
+        "Charles Darwin"
+      ],
+      "person-alexander_humboldt": [
+        "Karl (Carl) Benz",
+        "Ada Lovelace",
+        "Alexander von Humboldt"
+      ],
+      "person-neil_armstrong": [
+        "Bertha Benz",
+        "Grace Hopper",
+        "Neil Armstrong"
+      ]
+    }
+  },
+  "photos": {
+    "person-marie_curie": "marie-curie",
+    "person-ada_lovelace": "ada-lovelace",
+    "person-grace_hopper": "grace-hopper",
+    "person-katherine_johnson": "katherine-johnson",
+    "person-tim_berners_lee": "tim-berners-lee",
+    "person-karl_benz": "karl-benz",
+    "person-bertha_benz": "bertha-benz",
+    "person-jane_goodall": "jane-goodall",
+    "person-albert_einstein": "albert-einstein",
+    "person-al_khwarizmi": "al-khwarizmi",
+    "person-tu_youyou": "tu-youyou",
+    "person-cai_lun": "cai-lun",
+    "person-mae_jemison": "mae-jemison",
+    "person-johannes_gutenberg": "johannes-gutenberg",
+    "person-wangari_maathai": "wangari-maathai",
+    "person-charles_darwin": "charles-darwin",
+    "person-alexander_humboldt": "alexander-von-humboldt",
+    "person-neil_armstrong": "neil-armstrong"
+  }
+}

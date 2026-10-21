@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "person-mary_anning",
+      "figure": "fossil-evidence",
+      "ownMediaConcept": "Eigene klar als erfunden markierte Gegenüberstellung: erhaltener Knochenumriss und zwei mögliche Rekonstruktionen mit denselben Knochenformen. Unterschiede der gezeichneten Hautfarbe sind kein am Knochen beobachteter Farbnachweis. Kein echtes Fossilienfoto oder historisches Porträt vortäuschen.",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "Eine beschriebene Spur von einer zusätzlichen Vermutung unterscheiden.",
+          "example": "Gedachtes Museumsbeispiel: Auf dem Schild steht: Ein versteinerter Knochen wurde gefunden. Daneben zeigt ein gemaltes Tier blaue Haut. Das Bild wurde heute als mögliche Rekonstruktion gezeichnet.",
+          "prompt": "Was ist in diesem Beispiel der erhaltene Fund?",
+          "answers": [
+            "Der versteinerte Knochen",
+            "Die blaue Hautfarbe auf dem heutigen Bild",
+            "Ein heute am Fundort lebendes Tier"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche, was gefunden wurde und was jemand später dazu gezeichnet hat.",
+          "why": "Der Knochen ist der im Beispiel gefundene Rest. Die heutige Zeichnung ergänzt eine mögliche Vorstellung; die blaue Hautfarbe ist dadurch nicht am Fossil beobachtet.",
+          "wrongReasons": [
+            null,
+            "Die blaue Haut ist auf der heutigen Zeichnung. Der Text nennt sie nicht als erhaltenen Fund.",
+            "Der Text beschreibt einen Fund aus der Vergangenheit und keinen Nachweis für ein heute dort lebendes Tier."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Beiträge verschiedener Menschen zu einer Entdeckung auseinanderhalten.",
+          "example": "Joseph fand 1811 einen Schädel. Mary fand später weitere Skelettteile und arbeitete sorgfältig an Fossilien. Ein für diese Aufgabe erfundenes Schild behauptet: Mary fand alles allein.",
+          "prompt": "Welche Änderung macht dieses erfundene Schild genauer?",
+          "answers": [
+            "Nur Joseph nennen und Mary weglassen",
+            "Josephs Schädelfund und Marys weitere Arbeit getrennt nennen",
+            "Aus dem Fossil auf die genaue Hautfarbe schließen"
+          ],
+          "correct": 1,
+          "hint": "Ordne zuerst jeden beschriebenen Arbeitsschritt einer Person zu.",
+          "why": "Eine Entdeckung kann mehrere Beiträge haben. Josephs Schädelfund und Marys weitere Funde und Untersuchungen sollen weder verwechselt noch gegeneinander ausgelöscht werden.",
+          "wrongReasons": [
+            "Auch Marys weitere Funde und ihre Arbeit gehören zur Beschreibung. Nur einen Beitrag zu nennen würde den anderen wieder auslassen.",
+            null,
+            "Eine Hautfarbe erklärt nicht, wer welche Arbeit geleistet hat. Außerdem nennt der Fundtext keinen Farbnachweis."
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Den Geltungsbereich eines Fossilbelegs und den Bedarf an zusätzlichen Daten begründen.",
+          "example": "Zwei gedankliche Rekonstruktionen zeigen dieselben fossilen Knochenformen, aber verschiedene Hautfarben. Für die Hautfarbe nennt die Aufgabe keine weiteren erhaltenen Spuren oder Untersuchungen.",
+          "prompt": "Welche begründete Einschätzung passt dazu?",
+          "answers": [
+            "Die schönere Zeichnung beweist die richtige Hautfarbe",
+            "Beide Bilder beweisen, dass das Tier zwei Hautfarben zugleich hatte",
+            "Die Knochenformen sind ein Beleg; die Hautfarbe bleibt hier ohne zusätzlichen Beleg offen"
+          ],
+          "correct": 2,
+          "hint": "Frage für jede gezeichnete Eigenschaft einzeln, welche erhaltene Spur sie stützt.",
+          "why": "Ein Beleg kann bestimmte Aussagen stützen, ohne alle Einzelheiten zu bestimmen. Hier helfen die Knochenformen bei Körpermerkmalen; für eine Entscheidung über Hautfarbe fehlen in der Aufgabe zusätzliche Belege.",
+          "wrongReasons": [
+            "Gefällige Gestaltung ersetzt keinen Beleg. Beide Bilder können dieselben Knochenformen unterschiedlich ergänzen.",
+            "Unterschiedliche Zeichnungen sind keine zwei Beobachtungen an der Haut desselben Tiers.",
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person-ibn_al_haytham",
+      "figure": "light-to-eye",
+      "ownMediaConcept": "Eigenes qualitatives Lichtwegschema Lichtquelle → beleuchteter Gegenstand → Auge. Jeder Weg hat eine eigene Pfeilspitze. Ein Auge sendet im Modell keine Sehstrahlen aus. Nicht als Rekonstruktion eines echten historischen Versuchs oder vollständiges biologisches Augenmodell ausgeben.",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "Einen einfachen Lichtweg vom beleuchteten Gegenstand zum Auge verfolgen.",
+          "example": "Ein gedachtes Zimmer ist völlig dunkel. Ein roter Baustein leuchtet nicht selbst. Dann wird eine Lampe eingeschaltet und beleuchtet ihn.",
+          "prompt": "Welcher Lichtweg hilft dir, den Baustein zu sehen?",
+          "answers": [
+            "Auge–Baustein, ohne Lichtquelle",
+            "Lampe–Baustein–Auge",
+            "Baustein–Lampe, ohne Auge"
+          ],
+          "correct": 1,
+          "hint": "Beginne bei der Lichtquelle und ende beim Sehen. Der Baustein leuchtet nicht selbst.",
+          "why": "Licht von der Lampe trifft auf den Baustein. Ein Teil des zurückgestreuten Lichts gelangt ins Auge. Das ist ein vereinfachter Lichtweg, keine vollständige Erklärung des Sehens.",
+          "wrongReasons": [
+            "Die Augen müssen nicht erst Sehstrahlen zum Gegenstand senden. Im Beispiel braucht der nicht selbst leuchtende Baustein Licht von der Lampe.",
+            null,
+            "Der Weg endet ohne Auge und erklärt deshalb das Sehen des Bausteins nicht."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Eine prüfbare Vorhersage von einer bloßen Benennung unterscheiden.",
+          "example": "Gedankenversuch, keine Aufforderung zum Umbau: Ein vollständig lichtundurchlässiger Schirm würde genau den Weg der Lampe zu einer weißen Fläche sperren. Andere Lichtquellen und Lichtwege sind im Beispiel ausgeschlossen.",
+          "prompt": "Welche Vorhersage folgt aus diesem vereinfachten Modell?",
+          "answers": [
+            "Die Fläche wird immer heller, weil ihre Farbe gleich bleibt",
+            "Die Augen erzeugen hinter dem Schirm eine neue Lampe",
+            "Auf diesem gesperrten Weg erreicht kein Lampenlicht die Fläche"
+          ],
+          "correct": 2,
+          "hint": "Prüfe, was der Schirm im beschriebenen Lichtweg tatsächlich verändert.",
+          "why": "Das Modell sagt voraus, dass ein vollständig gesperrter Lichtweg kein Licht zu dieser Fläche überträgt. Die Einschränkung auf ausgeschlossene andere Wege ist wichtig; im echten Raum kann Licht auch aus anderen Richtungen kommen.",
+          "wrongReasons": [
+            "Eine weiße Fläche ist keine eigene Lichtquelle. Ihre Farbe allein liefert keine zusätzliche Beleuchtung.",
+            "Augen ersetzen die ausgesperrte Lichtquelle nicht durch eine neue Lampe.",
+            null
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Ein nachvollziehbares Prüfverfahren von einem universellen Wahrheitsbeweis unterscheiden.",
+          "example": "Eine Gruppe zeichnet einen vereinfachten Lichtweg und notiert vor einem Versuch eine Vorhersage. Ihre Beobachtung passt anschließend dazu. Dies ist ein heutiges Lernbeispiel, keine Rekonstruktion eines bestimmten historischen Versuchs.",
+          "prompt": "Welche Schlussfolgerung ist angemessen?",
+          "answers": [
+            "Die Beobachtung stützt diese Vorhersage unter den geprüften Bedingungen; weitere Fragen und Gegenprüfungen bleiben",
+            "Ein passender Versuch beweist jede Aussage über Auge und Gehirn für immer",
+            "Eine schöne Zeichnung macht Beobachten überflüssig"
+          ],
+          "correct": 0,
+          "hint": "Trenne die einzelne geprüfte Vorhersage vom viel größeren Gebiet des Sehens.",
+          "why": "Eine passende Beobachtung ist ein Beitrag zur Prüfung. Sie ersetzt weder die Kontrolle von Bedingungen und Alternativerklärungen noch Untersuchungen weiterer Fragen. Ein Lichtstrahlmodell stellt nur ausgewählte Zusammenhänge dar.",
+          "wrongReasons": [
+            null,
+            "Die Beobachtung betrifft den beschriebenen Aufbau. Sie prüft nicht automatisch alle Vorgänge des Auges und Gehirns.",
+            "Eine Zeichnung hilft beim Vorhersagen und Erklären; sie ist kein Ersatz für die Untersuchung."
+          ]
+        }
+      ]
+    }
+  ]
+}

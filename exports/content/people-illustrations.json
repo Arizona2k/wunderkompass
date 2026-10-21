@@ -1,0 +1,34 @@
+[
+  {
+    "id": "person-mary_anning",
+    "kind": "fossil-evidence",
+    "alt": "Eigener erfundener Knochenumriss als Beispiel zum Unterscheiden von Fund und Rekonstruktion.",
+    "caption": "Eigene Erklärzeichnung · erfundener Knochen, kein echtes Fossilienfoto.",
+    "author": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
+    "rightsState": "own",
+    "notPhotograph": true,
+    "renderer": "app/people-illustration.tsx",
+    "modelLimits": "Frei erfundene Knochenform und Tierumrisse, keine dokumentierte Rekonstruktion einer bestimmten Art. Eine gezeichnete Hautfarbe ist in diesem Beispiel kein am Knochen beobachteter Beleg.",
+    "sources": [
+      "https://www.nhm.ac.uk/discover/mary-anning-unsung-hero.html",
+      "https://www.lymeregismuseum.co.uk/about-us/the-mary-anning-experts/"
+    ],
+    "sourceUse": "Fachlicher und historischer Zusammenhang; keine Abbildung aus diesen Quellen übernommen."
+  },
+  {
+    "id": "person-ibn_al_haytham",
+    "kind": "light-to-eye",
+    "alt": "Eigenes vereinfachtes Lichtwegschema von einer Lichtquelle über einen beleuchteten Gegenstand zum Auge.",
+    "caption": "Eigene Erklärzeichnung · Lichtweg, kein historisches Porträt oder Versuchsbild.",
+    "author": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
+    "rightsState": "own",
+    "notPhotograph": true,
+    "renderer": "app/people-illustration.tsx",
+    "modelLimits": "Qualitatives Schema ohne Mengen- oder Abstandsmaßstab. Kein Nachbau eines historischen Versuchs und kein vollständiges Augen- oder Gehirnmodell.",
+    "sources": [
+      "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Haytham/",
+      "https://www.unesco.org/en/articles/ibn-al-haythams-scientific-method"
+    ],
+    "sourceUse": "Fachlicher und historischer Zusammenhang; keine Abbildung aus diesen Quellen übernommen."
+  }
+]

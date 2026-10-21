@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "meaning": "51 fachlich/pädagogisch KI-geprüfte Einträge:48 bestehende Tierartikel, zwei bereits entwickelte historische Themen und der direkt betroffene Schriftartikel. Ursprüngliche Quellen-/Fachbelege und alte UI-Belege bleiben erhalten; aktuelle frühe Teilproben stehen im Geschichtsdossier. Die vollständige aktuelle Browser-/Offline-/CI-Abnahme und Auslieferung dieses isolierten Stands sind noch offen. Keine externe Menschenprüfung wird behauptet.",
+  "meaning": "56 individuelle Dossiers:48Tierartikel,3historischeArtikel,3Optikartikel und2vorbereiteteBiografien. Die neuenBiografien wurden fachlich/pädagogisch und hinsichtlich eigenerMedien gesondert KI-gegengelesen; unveränderteAltquellen und ursprünglicheUI-Belege bleiben erhalten. Die neue gegenseitigeKamera-Verbindung ist gezielt geprüft. Vollständige aktuelle Browser-/Offline-/CI-Abnahme und tatsächliche Auslieferung dieses lokalen Biografiestands stehen noch aus. Keine externe Menschenprüfung oder Gesamtfertigstellung.",
   "dossiers": [
     {
       "id": "topics-animals:animal-platypus",
@@ -75,13 +75,13 @@
         "topics-animals:animal-short-beaked-echidna"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-platypus",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -212,6 +212,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-platypus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -272,13 +281,13 @@
         "topics-animals:animal-platypus"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-short-beaked-echidna",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -409,6 +418,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-short-beaked-echidna",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -469,13 +487,13 @@
         "topics-animals:animal-giraffe"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-okapi",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -606,6 +624,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-okapi",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -666,13 +693,13 @@
         "topics-animals:animal-honey-bee"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-meerkat",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -803,6 +830,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-meerkat",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -863,13 +899,13 @@
         "topics-animals:animal-western-lowland-gorilla"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-ring-tailed-lemur",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1000,6 +1036,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-ring-tailed-lemur",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -1060,13 +1105,13 @@
         "topics-science:science-water-cycle"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-north-american-beaver",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1197,6 +1242,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-north-american-beaver",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -1271,13 +1325,13 @@
         "topics-animals:animal-polar-bear"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-walrus",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1408,6 +1462,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-walrus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -1469,13 +1532,13 @@
         "topics-animals:animal-raccoon"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-red-fox",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1606,6 +1669,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-red-fox",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -1666,13 +1738,13 @@
         "topics-animals:animal-red-fox"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-raccoon",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1803,6 +1875,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-raccoon",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -1864,13 +1945,13 @@
         "topics-animals:animal-garden-snail"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-hedgehog",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2001,6 +2082,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-hedgehog",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -2068,13 +2158,13 @@
         "topics-animals:animal-white-tailed-eagle"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-barn-owl",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2205,6 +2295,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-barn-owl",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -2272,13 +2371,13 @@
         "topics-science:science-shadows"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-kingfisher",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2409,6 +2508,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-kingfisher",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -2469,13 +2577,13 @@
         "topics-animals:animal-emperor-penguin"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-ostrich",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2606,6 +2714,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-ostrich",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -2666,13 +2783,13 @@
         "topics-animals:animal-emperor-penguin"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-atlantic-puffin",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2803,6 +2920,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-atlantic-puffin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -2863,13 +2989,13 @@
         "topics-animals:animal-common-cuttlefish"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-common-chameleon",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3000,6 +3126,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-common-chameleon",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -3068,13 +3203,13 @@
         "topics-animals:animal-common-frog"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-fire-salamander",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3205,6 +3340,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-fire-salamander",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -3265,13 +3409,13 @@
         "topics-animals:animal-fire-salamander"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-common-frog",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3402,6 +3546,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-common-frog",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -3469,13 +3622,13 @@
         "topics-science:science-coral-reef"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-eastern-clown-anemonefish",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3606,6 +3759,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-eastern-clown-anemonefish",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -3680,13 +3842,13 @@
         "topics-science:science-currents"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-european-eel",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3817,6 +3979,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-european-eel",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -3877,13 +4048,13 @@
         "topics-animals:animal-honey-bee"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-monarch-butterfly",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4014,6 +4185,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-monarch-butterfly",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -4088,13 +4268,13 @@
         "topics-animals:animal-hedgehog"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-garden-snail",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4225,6 +4405,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-garden-snail",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -4285,13 +4474,13 @@
         "topics-animals:animal-common-octopus"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-european-lobster",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4422,6 +4611,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-european-lobster",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -4490,13 +4688,13 @@
         "topics-animals:animal-common-chameleon"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-common-cuttlefish",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4627,6 +4825,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-common-cuttlefish",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -4694,13 +4901,13 @@
         "topics-science:science-foodweb"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-short-snouted-seahorse",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4831,6 +5038,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-short-snouted-seahorse",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -4896,13 +5112,13 @@
         "topics-animals:animal-giant-panda"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-african-savanna-elephant",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5024,6 +5240,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-african-savanna-elephant",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -5097,13 +5322,13 @@
         "topics-animals:animal-bengal-tiger"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-lion",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5225,6 +5450,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-lion",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -5291,13 +5525,13 @@
         "topics-animals:animal-lion"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-cheetah",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5419,6 +5653,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-cheetah",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -5479,13 +5722,13 @@
         "topics-animals:animal-jaguar"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-bengal-tiger",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5607,6 +5850,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-bengal-tiger",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -5681,13 +5933,13 @@
         "topics-animals:animal-okapi"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-giraffe",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5809,6 +6061,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-giraffe",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -5875,13 +6136,13 @@
         "topics-animals:animal-koala"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-giant-panda",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -6003,6 +6264,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-giant-panda",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -6070,13 +6340,13 @@
         "topics-animals:animal-ring-tailed-lemur"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-western-lowland-gorilla",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -6198,6 +6468,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-western-lowland-gorilla",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -6264,13 +6543,13 @@
         "topics-animals:animal-western-lowland-gorilla"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-bornean-orangutan",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -6392,6 +6671,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-bornean-orangutan",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -6458,13 +6746,13 @@
         "topics-animals:animal-walrus"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-polar-bear",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -6586,6 +6874,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-polar-bear",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -6662,13 +6959,13 @@
         "topics-animals:animal-atlantic-puffin"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-emperor-penguin",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -6790,6 +7087,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-emperor-penguin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -6856,13 +7162,13 @@
         "topics-animals:animal-whale-shark"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-blue-whale",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -6984,6 +7290,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-blue-whale",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -7066,13 +7381,13 @@
         "topics-animals:animal-green-sea-turtle"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-common-bottlenose-dolphin",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -7194,6 +7509,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-common-bottlenose-dolphin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -7260,13 +7584,13 @@
         "topics-animals:animal-common-bottlenose-dolphin"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-orca",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -7388,6 +7712,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-orca",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -7464,13 +7797,13 @@
         "topics-animals:animal-common-cuttlefish"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-common-octopus",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -7592,6 +7925,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-common-octopus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -7665,13 +8007,13 @@
         "topics-animals:animal-common-bottlenose-dolphin"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-green-sea-turtle",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -7793,6 +8135,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-green-sea-turtle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -7859,13 +8210,13 @@
         "topics-animals:animal-platypus"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-red-kangaroo",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -7987,6 +8338,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-red-kangaroo",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -8053,13 +8413,13 @@
         "topics-animals:animal-giant-panda"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-koala",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -8181,6 +8541,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-koala",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -8254,13 +8623,13 @@
         "topics-animals:animal-bengal-tiger"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-jaguar",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -8382,6 +8751,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-jaguar",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -8457,13 +8835,13 @@
         "topics-animals:animal-monarch-butterfly"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-honey-bee",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -8585,6 +8963,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-honey-bee",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -8652,13 +9039,13 @@
         "topics-animals:animal-fire-salamander"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-axolotl",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -8780,6 +9167,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-axolotl",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -8841,13 +9237,13 @@
         "topics-animals:animal-axolotl"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-whale-shark",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -8969,6 +9365,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-whale-shark",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -9042,13 +9447,13 @@
         "topics-animals:animal-common-octopus"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-garden-cross-spider",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -9170,6 +9575,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-garden-cross-spider",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -9235,13 +9649,13 @@
         "topics-animals:animal-african-savanna-elephant"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-dromedary",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -9363,6 +9777,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-dromedary",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -9451,13 +9874,13 @@
         "topics-animals:animal-barn-owl"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/animal-white-tailed-eagle",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -9579,6 +10002,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/animal-white-tailed-eagle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -9636,13 +10068,13 @@
         "topics-history:history-web"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/history-khipu",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -9798,6 +10230,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/history-khipu",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -9843,13 +10284,13 @@
         "topics-history:history-writing"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/history-mohenjo-daro",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -10005,6 +10446,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/history-mohenjo-daro",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -10046,13 +10496,13 @@
         "topics-history:history-mohenjo-daro"
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/history-writing",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -10200,11 +10650,20 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/history-writing",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
       "id": "topics-inventions:invention-camera",
-      "dataHash": "9e9730b89531f20a5502683d72af058da62d636bab1c6bf9c0e29fb85f532098",
+      "dataHash": "9c5b3e52ac6a5076becda6c9647302d7864a32347affa60b3e5e2a18f7172b8f",
       "goal": "Du unterscheidest das Entstehen eines Bildes von seiner Speicherung und kannst Fotos als ausgewählte Ansichten hinterfragen.",
       "explanation": "Schon eine kleine Öffnung in einem dunklen Kasten kann auf der gegenüberliegenden Wand ein umgekehrtes Bild erzeugen. Eine solche Camera obscura speichert das Bild noch nicht. Für ein Foto braucht es zusätzlich eine Aufzeichnung, früher mit lichtempfindlichen Stoffen, heute oft mit einem elektronischen Sensor.",
       "example": "Zeichne einen Pfeil, eine kleine Öffnung und eine gegenüberliegende Bildfläche. Verbinde Pfeilspitze und Pfeilfuß jeweils geradlinig durch die Öffnung mit der Fläche. Was passiert mit oben und unten? Niemals die Sonne durch eine Öffnung, Linse oder Kamera ansehen.",
@@ -10266,7 +10725,8 @@
       ],
       "links": [
         "topics-inventions:invention-smartphone",
-        "topics-inventions:invention-telescope"
+        "topics-inventions:invention-telescope",
+        "topics-people:person-ibn_al_haytham"
       ],
       "media": [
         {
@@ -10278,17 +10738,17 @@
         }
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/invention-camera",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
-        "dataHash": "9e9730b89531f20a5502683d72af058da62d636bab1c6bf9c0e29fb85f532098",
+        "dataHash": "9c5b3e52ac6a5076becda6c9647302d7864a32347affa60b3e5e2a18f7172b8f",
         "reviewedOn": "2026-10-20",
         "sourceFindings": "[{\"url\":\"https://blog.scienceandmediamuseum.org.uk/introduction-camera-obscura/\",\"anchor\":\"16–22\",\"finding\":\"Umgekehrtes Lochbild/Linse verbessertBild; früheKamera und Fotografien unterscheiden.\"},{\"url\":\"https://www.scienceandmediamuseum.org.uk/about-us/press-office/daguerreotypes-digital-celebrate-world-photography-day-national-science-and\",\"anchor\":\"94–101\",\"finding\":\"19Aug1839 Bekanntgabe;2025Veranstaltung nicht gegenwärtig ausgeben.\"},{\"url\":\"https://blog.scienceandmediamuseum.org.uk/why-do-we-collect-photography/\",\"anchor\":\"24–30/43–47\",\"finding\":\"Prozess/Praxis/Bildprodukt, digitaleSensoraufzeichnung.\"}]",
         "factualFindings": "Lichtwegkreuzung ohne Linse korrekt; nicht jedes Camera-obscura-System projiziert dieselbe Orientierung, deshalb einfacherLochkasten klar. Keine historischenChemikalienversuche/Quellenfotos kopiert. Vergrößern oder dunklerKasten ersetzt keineAufzeichnung.",
@@ -10344,6 +10804,21 @@
         "offline": true,
         "report": "/workspace/work/wk-continuation/seasons-ocean-fe693-full-local-originals-20261021/portable-report.json sha256=a1f32619209e466dc76fd73ab70bd63191e0136e2f7dc4ee6f0e144bed1b789a; actual complete immutable local regression 129 report entries; exact final strictCI and real delivery separately required"
       },
+      "historicalDataBeforePeopleRelatedUpdate20261021": {
+        "dataHash": "9e9730b89531f20a5502683d72af058da62d636bab1c6bf9c0e29fb85f532098",
+        "links": [
+          "topics-inventions:invention-smartphone",
+          "topics-inventions:invention-telescope"
+        ],
+        "aiSelfReviewDataHash": "9e9730b89531f20a5502683d72af058da62d636bab1c6bf9c0e29fb85f532098"
+      },
+      "targetedRelatedUpdate20261021": {
+        "scope": "Only appended reciprocal Ibn-al-Haytham relationship; all previous camera prose/questions/models/sources unchanged",
+        "reviewedOn": "2026-10-21",
+        "finding": "Licht und Bildentstehung fachlich sinnvoll erklärt verbunden; keine Zuschreibung einer vollständigen heutigenKamera an Ibn-al-Haytham. ExistierendesKameramodell bleibt eigenesLochkameraprinzip, das weder den vollständigen historischen Versuch noch alle modernenKameras darstellt.",
+        "actualTargetAndBack": "/workspace/work/wk-continuation/people-two-permanent-product-browser-20261021/report.json",
+        "wholeUnchangedSourceReviewRepeated": false
+      },
       "historicalUIBeforeContinentsCountries20261021": {
         "build": "baa8c3b3fdbdc441",
         "route": "world/topic/invention-camera",
@@ -10352,6 +10827,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/invention-camera",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -10427,13 +10911,13 @@
         }
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/invention-telescope",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -10501,6 +10985,15 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/invention-telescope",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
       }
     },
     {
@@ -10578,13 +11071,13 @@
         }
       ],
       "ui": {
-        "build": "c6d80139597dec1f",
+        "build": "84885e75c84b85b8",
         "route": "world/topic/invention-microscope",
         "visible": true,
         "search": true,
         "back": true,
         "offline": true,
-        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -10652,6 +11145,203 @@
         "back": true,
         "offline": true,
         "report": "/workspace/work/wk-continuation/nature-protect-05d268c-full-local-originals-20261021/portable-report.json sha256=2bb24a99ca82fa4f5f3936768349f3e45fcd660cb1e79b85f17e43d3a4a5f07b; actual complete immutable local regression 128 report entries; exact final strictCI and real delivery separately required"
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "c6d80139597dec1f",
+        "route": "world/topic/invention-microscope",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/continents-countries-efb6145-full-local-originals-20261021/portable-report.json sha256=157274ac3bb16cc74156e915fd139703afbe8818dbc446750bf0a9326b034497; actual complete immutable local regression 130 report entries; exact final strictCI and real delivery separately required"
+      }
+    },
+    {
+      "id": "topics-people:person-mary_anning",
+      "dataHash": "f16037781c5e2132420f5f21104fb830100e7cf2f6aeb82f859a9dc1975b7777",
+      "goal": "Den Geltungsbereich eines Fossilbelegs und den Bedarf an zusätzlichen Daten begründen.",
+      "explanation": "Fossilien sind erhaltene Reste oder Spuren früherer Lebewesen. Anning legte Funde sorgfältig frei, beschrieb sie und verglich ihre Formen. Ihr Bruder Joseph fand 1811 einen Schädel. Mary entdeckte später weitere Teile dieses Meerestiers. Forschung baut oft auf der Arbeit mehrerer Menschen auf.",
+      "example": "Gedachtes Museumsbeispiel: Auf dem Schild steht: Ein versteinerter Knochen wurde gefunden. Daneben zeigt ein gemaltes Tier blaue Haut. Das Bild wurde heute als mögliche Rekonstruktion gezeichnet.",
+      "whyItMatters": "Du unterscheidest einen erhaltenen Beleg von einer Rekonstruktion und achtest auf die Beiträge mehrerer Menschen.",
+      "hint": "Trenne eine erhaltene Spur von zusätzlichen Behauptungen über alle Tiere oder die Gegenwart.",
+      "feedback": "Ein Fossil bewahrt Reste oder Spuren früheren Lebens. Weitere Fragen brauchen zusätzliche Vergleiche und Belege. IndividuelleFehlrückmeldungen: Es gab unterschiedliche Gruppen früherer Tiere. Die von Anning untersuchten Meeresreptilien sind kein Beleg dafür, dass jedes alte Tier ein Dinosaurier war. Ein früheres Lebewesen kann ausgestorben sein. Ein Fossil belegt kein heute dort lebendes Tier.",
+      "modelLimits": "Frei erfundene Knochenform und Tierumrisse, keine dokumentierte Rekonstruktion einer bestimmten Art. Eine gezeichnete Hautfarbe ist in diesem Beispiel kein am Knochen beobachteter Beleg.",
+      "reviewedBy": "Codex KI-Selbstprüfung mit gesonderter kritischer Gegenlese; keine Menschenprüfung",
+      "reviewedOn": "2026-10-21",
+      "ageLevels": {
+        "6-8": "Eine beschriebene Spur von einer zusätzlichen Vermutung unterscheiden. Gedachtes Museumsbeispiel: Auf dem Schild steht: Ein versteinerter Knochen wurde gefunden. Daneben zeigt ein gemaltes Tier blaue Haut. Das Bild wurde heute als mögliche Rekonstruktion gezeichnet. Der Knochen ist der im Beispiel gefundene Rest. Die heutige Zeichnung ergänzt eine mögliche Vorstellung; die blaue Hautfarbe ist dadurch nicht am Fossil beobachtet.",
+        "9-11": "Beiträge verschiedener Menschen zu einer Entdeckung auseinanderhalten. Joseph fand 1811 einen Schädel. Mary fand später weitere Skelettteile und arbeitete sorgfältig an Fossilien. Ein für diese Aufgabe erfundenes Schild behauptet: Mary fand alles allein. Eine Entdeckung kann mehrere Beiträge haben. Josephs Schädelfund und Marys weitere Funde und Untersuchungen sollen weder verwechselt noch gegeneinander ausgelöscht werden.",
+        "12-14": "Den Geltungsbereich eines Fossilbelegs und den Bedarf an zusätzlichen Daten begründen. Zwei gedankliche Rekonstruktionen zeigen dieselben fossilen Knochenformen, aber verschiedene Hautfarben. Für die Hautfarbe nennt die Aufgabe keine weiteren erhaltenen Spuren oder Untersuchungen. Ein Beleg kann bestimmte Aussagen stützen, ohne alle Einzelheiten zu bestimmen. Hier helfen die Knochenformen bei Körpermerkmalen; für eine Entscheidung über Hautfarbe fehlen in der Aufgabe zusätzliche Belege."
+      },
+      "sources": [
+        {
+          "id": "nhm-anning",
+          "organisation": "Natural History Museum · Mary Anning",
+          "url": "https://www.nhm.ac.uk/discover/mary-anning-unsung-hero.html",
+          "checkedOn": "2026-10-21",
+          "rightsBasis": "Eigene deutsche Zusammenfassung ausgewählter tatsächlich gelesener institutioneller Hauptpassagen. Keine Quelltexte, fremden Bilder oder Logos übernommen."
+        },
+        {
+          "id": "lyme-anning",
+          "organisation": "Lyme Regis Museum · Mary Anning",
+          "url": "https://www.lymeregismuseum.co.uk/about-us/the-mary-anning-experts/",
+          "checkedOn": "2026-10-21",
+          "rightsBasis": "Eigene deutsche Zusammenfassung ausgewählter tatsächlich gelesener institutioneller Hauptpassagen. Keine Quelltexte, fremden Bilder oder Logos übernommen."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Mary Anning lebte1799–1847 und arbeitete in LymeRegis an Fossilien.",
+          "sourceId": "nhm-anning",
+          "anchor": "HauptbiografieZeilen65–80,98–117; Auswahlbeleg im erhaltenen Manuskript"
+        },
+        {
+          "statement": "Joseph fand1811 einen Schädel; Mary fand später weitere Skelettteile und arbeitete an Fossilien.",
+          "sourceId": "lyme-anning",
+          "anchor": "Direkter MuseumshaupttextZeilen190–216 und231–237, unabhängig gegengelesene Rollenverteilung"
+        },
+        {
+          "statement": "Fossile Meeresreptilien und die spätere Deutung ihrer Funde beschreiben keine Beobachtung lebender ausgestorbener Tiere.",
+          "sourceId": "nhm-anning",
+          "anchor": "Ausgewählte Fossil-/WissenschaftsabschnitteZeilen98–117 und150–164"
+        }
+      ],
+      "links": [
+        "topics-people:person-charles_darwin"
+      ],
+      "media": [
+        {
+          "path": "app/people-illustration.tsx",
+          "license": "Eigene Projektgrafik mit KI-Unterstützung; keine übernommenen Fremdmedien",
+          "credit": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
+          "alt": "Eigener erfundener Knochenumriss als Beispiel zum Unterscheiden von Fund und Rekonstruktion.",
+          "learningPurpose": "Frei erfundene Knochenform und Tierumrisse, keine dokumentierte Rekonstruktion einer bestimmten Art. Eine gezeichnete Hautfarbe ist in diesem Beispiel kein am Knochen beobachteter Beleg."
+        }
+      ],
+      "ui": {
+        "build": "84885e75c84b85b8",
+        "route": "world/topic/person-mary_anning",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "dataHash": "f16037781c5e2132420f5f21104fb830100e7cf2f6aeb82f859a9dc1975b7777",
+        "reviewedOn": "2026-10-21",
+        "sourceFindings": "[{\"id\":\"nhm-anning\",\"url\":\"https://www.nhm.ac.uk/discover/mary-anning-unsung-hero.html\",\"actuallyRead\":\"Main biography lines65–80,98–117,150–164. Selected dates, work, Joseph/Mary roles and unequal recognition; no whole-page approval.\",\"usedFor\":\"Anning1799–1847/LymeRegis/fossilpreparation, observed marine-reptile fossils, collaboration and recognition.\",\"limits\":\"Do not claim sole discovery of first-ever ichthyosaur; later interpretations and reconstructions are not direct observations of live extinct animals.\"},{\"id\":\"lyme-anning\",\"url\":\"https://www.lymeregismuseum.co.uk/about-us/the-mary-anning-experts/\",\"actuallyRead\":\"Direct main article lines190–216 and231–237 after different fossil-facts URL timedout. Not just search snippet.\",\"usedFor\":\"Independent museum counterread of1799–1847, local fossil preparation, Joseph skull thenMary skeleton, unequal recognition.\",\"limits\":\"Society admission date differs: NHM says1908, localmuseum1919. No membership-admission year is asserted in own draft; do not silently pick either source or globally approve a page. No lightning/transformation anecdote, money figures, or solo-first-discovery claim used.\"}]",
+        "factualFindings": "Josephs Schädelfund1811 und Marys spätere Skelettarbeit getrennt; keine alleinige Erstentdeckung und kein lebender Dinosaurier behauptet. Meeressaurier sind nicht pauschal Dinosaurier. Der Unterschied zwischen Fund und Rekonstruktion wird nur auf die tatsächlich beschriebenen Knochenmerkmale bezogen.",
+        "pedagogicalFindings": "Sechs bereits entwickelte Aufgaben unverändert übernommen: je Person Beobachten6–8, Begründen9–11, Übertragen12–14. AlleStufen frei wählbar, eigene Beispiele ausdrücklich erfunden, freiwilligerHinweis vor Antwort, jede Fehlantwort mit eigener Erklärung. Exploration vergibt keinen Mini-Fragenstempel. Neuladen bewahrt jede Aufgabenwahl; canonicalMini bleibt getrennt. Keine Aufforderung zu gefährlichen Versuchen oder unbekanntenFunden.",
+        "conceptAndLinkFindings": "Anning beschrieb Fossilien früherer Tiere; Darwin verglich viele Belege zur Veränderung von Arten. Ein einzelnes Fossil erklärt nicht den ganzen Ablauf der Evolution.",
+        "countercheck": "Beide Museen unabhängig in den ausgewählten tatsächlich gelesenen Hauptpassagen gegengelesen. Unterschiedliche Aufnahmejahre von Frauen in die GeologicalSociety1908/1919 nicht in den eigenen Text übernommen. Josephs Arbeit wird nicht Mary zugeschrieben und Marys Arbeit nicht durch Joseph ersetzt. Frei erfundener Knochenumriss ist in allen drei Darstellungen exakt gleich; beide Hautfarben erkennbar Ergänzungen.",
+        "corrections": "Vorbereitete Texte und sechs Lernentwürfe erhalten; Jahreszahl-/Alleinentdeckungs-/Bildgrenzen nicht ausgeweitet. Vorhandene18Porträtfotos und Spielantworten bleiben exakt. Navigationzur neuenForscherspur in das bestehendeDesignsystem integriert.",
+        "remainingUncertainty": "Keine externe Menschen-/Kinder- oder physischeGeräteprüfung. Keine Originalporträts/Fossilfotos hinzugefügt. Tatsächlicher aktueller Kaltstart, Schlussregression, nativeCI und Testauslieferung noch erforderlich.",
+        "unresolvedBlockingClaims": []
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "e400444da589ece6",
+        "route": "world/topic/person-mary_anning",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": false,
+        "report": "/workspace/work/wk-continuation/people-two-permanent-product-browser-20261021/report.json; early actual eight-view module/axe/search/reciprocalBack; actual cold/full acceptance pending"
+      }
+    },
+    {
+      "id": "topics-people:person-ibn_al_haytham",
+      "dataHash": "b77a6b43564a675881dd21db07714f6dd54cbde886da03d62360536d161474af",
+      "goal": "Ein nachvollziehbares Prüfverfahren von einem universellen Wahrheitsbeweis unterscheiden.",
+      "explanation": "Er lebte vor etwa tausend Jahren und arbeitete unter anderem in Kairo. In seinem Buch über Optik verband er Überlegungen mit gezielten Untersuchungen. Beim Sehen gelangt Licht von einer Lichtquelle oder einem beleuchteten Gegenstand in unsere Augen. Die Augen schicken keine Sehstrahlen zu den Dingen hinaus.",
+      "example": "Ein gedachtes Zimmer ist völlig dunkel. Ein roter Baustein leuchtet nicht selbst. Dann wird eine Lampe eingeschaltet und beleuchtet ihn.",
+      "whyItMatters": "Du verbindest eine Vermutung mit einer überprüfbaren Beobachtung und erkennst die Grenze einer einfachen Lichtzeichnung.",
+      "hint": "Überlege, wie sich eine Erklärung über Licht anhand einer Beobachtung prüfen lässt.",
+      "feedback": "Er verband Untersuchungen des Lichts mit mathematischen Überlegungen. Ein Bildschirmmodell hier ist keine Rekonstruktion seines echten Versuchsaufbaus. IndividuelleFehlrückmeldungen: Das Untersuchen von Fossilien passt zu Mary Annings Arbeit. Hier geht es um Licht und Sehen. Digitale Kamerasensoren gab es zu seiner Lebenszeit noch nicht. Der spätere Kameravergleich erklärt eine Verbindung, keine damalige Erfindung.",
+      "modelLimits": "Qualitatives Schema ohne Mengen- oder Abstandsmaßstab. Kein Nachbau eines historischen Versuchs und kein vollständiges Augen- oder Gehirnmodell.",
+      "reviewedBy": "Codex KI-Selbstprüfung mit gesonderter kritischer Gegenlese; keine Menschenprüfung",
+      "reviewedOn": "2026-10-21",
+      "ageLevels": {
+        "6-8": "Einen einfachen Lichtweg vom beleuchteten Gegenstand zum Auge verfolgen. Ein gedachtes Zimmer ist völlig dunkel. Ein roter Baustein leuchtet nicht selbst. Dann wird eine Lampe eingeschaltet und beleuchtet ihn. Licht von der Lampe trifft auf den Baustein. Ein Teil des zurückgestreuten Lichts gelangt ins Auge. Das ist ein vereinfachter Lichtweg, keine vollständige Erklärung des Sehens.",
+        "9-11": "Eine prüfbare Vorhersage von einer bloßen Benennung unterscheiden. Gedankenversuch, keine Aufforderung zum Umbau: Ein vollständig lichtundurchlässiger Schirm würde genau den Weg der Lampe zu einer weißen Fläche sperren. Andere Lichtquellen und Lichtwege sind im Beispiel ausgeschlossen. Das Modell sagt voraus, dass ein vollständig gesperrter Lichtweg kein Licht zu dieser Fläche überträgt. Die Einschränkung auf ausgeschlossene andere Wege ist wichtig; im echten Raum kann Licht auch aus anderen Richtungen kommen.",
+        "12-14": "Ein nachvollziehbares Prüfverfahren von einem universellen Wahrheitsbeweis unterscheiden. Eine Gruppe zeichnet einen vereinfachten Lichtweg und notiert vor einem Versuch eine Vorhersage. Ihre Beobachtung passt anschließend dazu. Dies ist ein heutiges Lernbeispiel, keine Rekonstruktion eines bestimmten historischen Versuchs. Eine passende Beobachtung ist ein Beitrag zur Prüfung. Sie ersetzt weder die Kontrolle von Bedingungen und Alternativerklärungen noch Untersuchungen weiterer Fragen. Ein Lichtstrahlmodell stellt nur ausgewählte Zusammenhänge dar."
+      },
+      "sources": [
+        {
+          "id": "mactutor-alhaytham",
+          "organisation": "Universität St Andrews · Ibn al-Haytham",
+          "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Haytham/",
+          "checkedOn": "2026-10-21",
+          "rightsBasis": "Eigene deutsche Zusammenfassung ausgewählter tatsächlich gelesener institutioneller Hauptpassagen. Keine Quelltexte, fremden Bilder oder Logos übernommen."
+        },
+        {
+          "id": "unesco-alhaytham",
+          "organisation": "UNESCO · Ibn al-Haythams wissenschaftliche Arbeit",
+          "url": "https://www.unesco.org/en/articles/ibn-al-haythams-scientific-method",
+          "checkedOn": "2026-10-21",
+          "rightsBasis": "Eigene deutsche Zusammenfassung ausgewählter tatsächlich gelesener institutioneller Hauptpassagen. Keine Quelltexte, fremden Bilder oder Logos übernommen."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Ibn al-Haytham arbeitete zu Optik und Mathematik; die Lebensdaten werden hier vorsichtig etwa965–1040 genannt.",
+          "sourceId": "mactutor-alhaytham",
+          "anchor": "HauptbiografieZeilen8–18/25–29; Kopf1039 und Fließtext1040 nicht scheinpräzise vereinheitlichen"
+        },
+        {
+          "statement": "Das Sehen wird durch Licht erklärt, das vom beleuchteten Gegenstand zum Auge gelangt.",
+          "sourceId": "mactutor-alhaytham",
+          "anchor": "Ausgewählte OptikabschnitteZeilen44–59; keine pauschale Bestätigung des ganzen historischen Augenmodells"
+        },
+        {
+          "statement": "Gezielte Experimente und die Prüfung von Vorhersagen können Erklärungen stützen, ohne durch einen Versuch alles endgültig zu beweisen.",
+          "sourceId": "unesco-alhaytham",
+          "anchor": "Eigener qualifizierter Lernschluss aus HaupttextZeilen26–38/47–60/65–68; historischeEinordnung2018/2023"
+        }
+      ],
+      "links": [
+        "topics-inventions:invention-camera"
+      ],
+      "media": [
+        {
+          "path": "app/people-illustration.tsx",
+          "license": "Eigene Projektgrafik mit KI-Unterstützung; keine übernommenen Fremdmedien",
+          "credit": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
+          "alt": "Eigenes vereinfachtes Lichtwegschema von einer Lichtquelle über einen beleuchteten Gegenstand zum Auge.",
+          "learningPurpose": "Qualitatives Schema ohne Mengen- oder Abstandsmaßstab. Kein Nachbau eines historischen Versuchs und kein vollständiges Augen- oder Gehirnmodell."
+        }
+      ],
+      "ui": {
+        "build": "84885e75c84b85b8",
+        "route": "world/topic/person-ibn_al_haytham",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json sha256=6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252; complete immutable current local regression; exact final strict CI and actual delivery separately required"
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "dataHash": "b77a6b43564a675881dd21db07714f6dd54cbde886da03d62360536d161474af",
+        "reviewedOn": "2026-10-21",
+        "sourceFindings": "[{\"id\":\"mactutor-alhaytham\",\"url\":\"https://mathshistory.st-andrews.ac.uk/Biographies/Al-Haytham/\",\"actuallyRead\":\"Main biography lines8–18,25–29,44–59. University historical biography, not an original medieval manuscript.\",\"usedFor\":\"Optics/mathematics, observations/experiments, light reaching eye, historical biographical uncertainty.\",\"limits\":\"Heading says1039 while body1040; use circa965–1040. Reject first-person-ever-camera-obscura claim; no broad modern accuracy endorsement of historical eye/refraction model.\"},{\"id\":\"unesco-alhaytham\",\"url\":\"https://www.unesco.org/en/articles/ibn-al-haythams-scientific-method\",\"actuallyRead\":\"Authored2018/updated2023 historical account lines26–38,47–60 and65–68; selected direct main-page reading, not just search snippet.\",\"usedFor\":\"Designed tests of hypotheses, relation between geometric representation and experiment.\",\"limits\":\"Avoid sole inventor/father-of-allscience claims, sweeping European/Islamic civilizational comparisons, and treating one experiment as conclusive proof.\"}]",
+        "factualFindings": "Biografische Jahreszahlen bewusst etwa965–1040: MacTutor nennt im Kopf1039 und im Text1040. Licht gelangt ins Auge; Beobachtung und gezielte Versuche unterstützen Erklärungen. Keine Alleinerfindung der Kamera, universelle Wissenschaftsgründung oder vollständige moderne Augenphysik zugesprochen.",
+        "pedagogicalFindings": "Sechs bereits entwickelte Aufgaben unverändert übernommen: je Person Beobachten6–8, Begründen9–11, Übertragen12–14. AlleStufen frei wählbar, eigene Beispiele ausdrücklich erfunden, freiwilligerHinweis vor Antwort, jede Fehlantwort mit eigener Erklärung. Exploration vergibt keinen Mini-Fragenstempel. Neuladen bewahrt jede Aufgabenwahl; canonicalMini bleibt getrennt. Keine Aufforderung zu gefährlichen Versuchen oder unbekanntenFunden.",
+        "conceptAndLinkFindings": "Die Kamerakarte zeigt Licht durch eine Öffnung auf eine Bildfläche; die Biografie erklärt das Prüfen von Lichtideen. Das ist eine erklärte Verbindung, keine Zuschreibung der modernen Kamera an einen einzigen mittelalterlichen Erfinder.",
+        "countercheck": "Universitätsbiografie und UNESCO-Haupttext ausgewählt tatsächlich gelesen. Der Doppelpfeilweg endet am Auge; im gesperrten Zustand am gezeichneten undurchlässigen Schirm. Keine Sehstrahlen vom Auge, keine historische Originalversuchsabbildung. Der Schirm im Bild sperrt den Gegenstand–Auge-Weg; die mittlere Aufgabe benennt ausdrücklich einen anderen Lampen–Fläche-Gedankenversuch, keinen identischen historischen Aufbau.",
+        "corrections": "Vorbereitete Texte und sechs Lernentwürfe erhalten; Jahreszahl-/Alleinentdeckungs-/Bildgrenzen nicht ausgeweitet. Vorhandene18Porträtfotos und Spielantworten bleiben exakt. Navigationzur neuenForscherspur in das bestehendeDesignsystem integriert.",
+        "remainingUncertainty": "Keine externe Menschen-/Kinder- oder physischeGeräteprüfung. Keine Originalporträts/Fossilfotos hinzugefügt. Tatsächlicher aktueller Kaltstart, Schlussregression, nativeCI und Testauslieferung noch erforderlich.",
+        "unresolvedBlockingClaims": []
+      },
+      "historicalUIBeforePeopleCurrentFull20261021": {
+        "build": "e400444da589ece6",
+        "route": "world/topic/person-ibn_al_haytham",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": false,
+        "report": "/workspace/work/wk-continuation/people-two-permanent-product-browser-20261021/report.json; early actual eight-view module/axe/search/reciprocalBack; actual cold/full acceptance pending"
       }
     }
   ],
@@ -11106,6 +11796,15 @@
     },
     "currentCIAndDeployment": "pending exact final current strictCI/freshreadiness/actualVercel+browser"
   },
+  "peopleTwoSourcePreparation20261021": {
+    "newPeople": 2,
+    "retainedPeople": 18,
+    "sourceReview": "content/people-continuation-review.json",
+    "localEarlyProof": "/workspace/work/wk-continuation/people-two-permanent-product-browser-20261021/report.json",
+    "completeCurrentAcceptance": false,
+    "meaning": "Two individual factual/pedagogical/rights counterreviews and targeted old camera link maintenance; previous54 dossiers preserved, existing54UI not renewed until complete current regression"
+  },
+  "meaningBeforeTwoBiographies20261021": "51 fachlich/pädagogisch KI-geprüfte Einträge:48 bestehende Tierartikel, zwei bereits entwickelte historische Themen und der direkt betroffene Schriftartikel. Ursprüngliche Quellen-/Fachbelege und alte UI-Belege bleiben erhalten; aktuelle frühe Teilproben stehen im Geschichtsdossier. Die vollständige aktuelle Browser-/Offline-/CI-Abnahme und Auslieferung dieses isolierten Stands sind noch offen. Keine externe Menschenprüfung wird behauptet.",
   "continentsCountriesCurrentBuiltProof20261021": {
     "meaning": "54 previously public dossiers retained exactly apart from UI-only renewal after actual full immutable local pass. No new topic/source/rights acceptance asserted.",
     "head": "efb6145ab0c6ed8edaf86b40e54bb7cb89f8dcba",
@@ -11133,5 +11832,45 @@
       "limit": 150000000
     },
     "currentCIAndDeployment": "pending exact final current strictCI/freshreadiness/actualVercel+browser"
+  },
+  "peopleTwoCurrentBuiltProof20261021": {
+    "meaning": "54 existing dossiers plus two individually sourced new biographies: current UI/search/back/offline evidence only after actual complete immutable local pass. Facts, source anchors, rights and previous histories preserved; no automatic independent scientific acceptance.",
+    "head": "0a280325648215bdd7c2b91c31bd1e6ca1fabb92",
+    "tree": "779fcc59c1bd1d7a0dc31c9175895a7d98d4d0cd",
+    "build": "84885e75c84b85b8",
+    "sourceDigest": "14c7ae7b7bb47ee6e3376830f1f458f6f8d402b0215d2fa07b530e30b28f3eae",
+    "actualBase": "02d143d7aa3c35a9d5277c183cee8478538c0bd0",
+    "full": {
+      "path": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/portable-report.json",
+      "sha256": "6cf2f7a1fa77d4917c50e3761d247473d55390a676d76026f146e0c2232f8252",
+      "checks": 131,
+      "seconds": 1004.836328062,
+      "browser": "154.0.8037.57"
+    },
+    "twoNewSourceActivities": {
+      "actualCoreViews": 10,
+      "coldViews": 2,
+      "stoppedServerCachedViews": 8,
+      "nativeCachedViews": 4,
+      "old18OrderAndFiveRoundImportReloadDownload": {
+        "oldPeople": 18,
+        "oldRound": 5,
+        "wrongAnswerRetained": true,
+        "actualImport": true,
+        "reload": true,
+        "actualDownload": true
+      },
+      "curatedNewPeopleImages": 26
+    },
+    "reviewManifest": {
+      "path": "/workspace/work/wk-continuation/people-0a28032-full-local-originals-20261021/review-manifest.json",
+      "sha256": "9e4f49b7f9346e8ea49e8d086de9e9cf256c339a58ebb5c6bb7cc6eaf72b1f99"
+    },
+    "curation": {
+      "generatedBytes": 163484935,
+      "retainedBytes": 62700573,
+      "limit": 150000000
+    },
+    "currentCIAndDeployment": "Exact final strict CI, fresh routine readiness and actual test-live/Vercel/browser remain pending; no physical-device or independent-human claim."
   }
 }

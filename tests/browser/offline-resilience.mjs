@@ -1,3 +1,4 @@
+import {peopleSourceView} from './people-learning.mjs';
 import {opticsSourceView} from './invention-optics.mjs';
 import {historySourceView} from './history-learning.mjs';
 import fs from 'node:fs/promises';import path from 'node:path';import http from 'node:http';import assert from 'node:assert/strict';
@@ -42,7 +43,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   // The real complete cached app must retain the new source-learning activities too.
   report.historySourceDiscovery=[];report.opticsDiscovery=[];
   for(const width of (native?[640,320]:[320,390,768,1440])){
-   await page.setViewportSize({width:width*(native?2:1),height:950});const measured=await page.evaluate(()=>({width:innerWidth,scale:devicePixelRatio}));assert.equal(measured.width,width);if(native)assert.equal(measured.scale,2);await page.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));report.historySourceDiscovery.push(...await historySourceView(page,{width,shots,engine:kind+'-offline'+(native?'-native':''),native}));report.opticsDiscovery.push(...await opticsSourceView(page,{width,shots,engine:kind+'-offline'+(native?'-native':''),native}));
+   await page.setViewportSize({width:width*(native?2:1),height:950});const measured=await page.evaluate(()=>({width:innerWidth,scale:devicePixelRatio}));assert.equal(measured.width,width);if(native)assert.equal(measured.scale,2);await page.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));(report.peopleSourceDiscovery??=[]).push(...await peopleSourceView(page,{width,shots,engine:kind+'-offline'+(native?'-native':''),native}));report.historySourceDiscovery.push(...await historySourceView(page,{width,shots,engine:kind+'-offline'+(native?'-native':''),native}));report.opticsDiscovery.push(...await opticsSourceView(page,{width,shots,engine:kind+'-offline'+(native?'-native':''),native}));
   }
   assert.equal(report.opticsDiscovery.length,native?6:12,'all three optical activities at every required cached-app width');
   assert.equal(report.historySourceDiscovery.length,native?4:8,'both source activities at every required cached-app width');
