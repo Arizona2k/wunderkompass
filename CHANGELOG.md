@@ -1,3 +1,11 @@
+## Wasser-/Wetterabnahme lokal bestätigt ·21.10.2026
+
+Wasser/Wetter ist lokal vollständig geprüft: 129 Browsermeldungen einschließlich 240 Hinweisen und 448 Diagrammansichten, alle Fehlerlisten leer. Die 54 vorhandenen Dossiers erhielten ausschließlich aktuelle UI-Belege nach der tatsächlichen Abnahme; Fakten, Quellen und Rechte bleiben erhalten. Die kalte Offlinephase war im Vergleich auffällig langsamer; Ursache offen, Messdaten gesichert. Keine Timeouts oder Budgets erhöht und keine Prüfungen entfernt. Dieser Abschnitt ist noch nicht veröffentlicht; aktuelle GitHub-Quality und tatsächliche Testbereitstellung bleiben Pflicht.
+
+## Vorbereiteter Wasser-/Wetterabschnitt ·21.10.2026
+
+Vorhandene zehn Reisekapitel und30 Denkaufgaben aus dem gesicherten Master übernommen: nachvollziehbare Quellen, freiwillige Erklärschichten, genauere Wasser-/Wettermodelle und direkte Kapitelsuche. Echte Geografieveröffentlichung PR47 als43. Chronikeintrag ergänzt; bisherige42 unverändert. Gezielte Online-/Modell-/Such-/native-/kalte Offlineprüfungen belegt; dieser Folgeabschnitt ist noch nicht veröffentlicht. Issue28-Regelabgleich ergänzt nur tatsächliche Lücken und ordnet Zukunftsideen in die bestehende Paketfolge ein. Genehmigte Prüf-Lastverteilung erhält sämtliche Abnahmen und Grenzen.
+
 ## Noch nicht veröffentlicht · Geografiekorrekturen ·21.10.2026
 
 - Kanada: korrekte Bezugsfläche für Land und Binnengewässer; Benin/Burundi: Porto-Novo beziehungsweise Gitega als Hauptstädte, Cotonou/Bujumbura mit ihrer tatsächlichen Rolle erhalten. Quellen und verständliche Länder-/Stadthinweise ergänzt.

@@ -18,6 +18,7 @@ async function geometry(p,label){
  }));assert.deepEqual(escaped,[],label+' readable controls and text within viewport');
 }
 export async function assertJourneyDiagram(visual,id,selected){
+ await assertWaterWeatherDiagram(visual,id,selected);
  if(['inside:3','planet:3','planet:4'].includes(id)){
   // React must paint the selected scene before SVG measurements are taken.
   await visual.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done))));
@@ -158,3 +159,29 @@ export async function journeySupportView(p,{widths,shots,engine}){
  }catch(error){await p.screenshot({path:path.join(shots,'journey-engine-'+engine+'-support'+'-failure.png'),fullPage:true}).catch(()=>{});throw error;}finally{if(!wasLarge)await p.evaluate(()=>document.querySelector('.earth-app')?.classList.remove('large-reading'));await p.setViewportSize({width:390,height:844});await p.evaluate(hash=>location.hash=hash,initialRoute);if(initialRoute==='#journeys')await p.locator('.journey-filters input').waitFor();}
 }
 export async function offlineJourneys(p,report){await open(p,'water',2);await reveal(p.locator('.journey-inquiry'),'Dein Forschermerkzettel · freiwillig');assert.equal(await p.locator('.journey-inquiry textarea').inputValue(),'Offline-Sicherung: Wasser kann seinen Zustand ändern.');assert.equal(await p.locator('.journey-levels button').nth(2).getAttribute('aria-pressed'),'true');for(const j of JOURNEYS){await open(p,j.id,4);assert.equal(await p.locator('.journey-task .quiz-answer').count(),3);}await p.evaluate(()=>location.hash='world/topic/science-water-cycle');await p.locator('.journey-topic-links').waitFor();const disclosure=p.locator('details[data-history-disclosure="journey-links-science-water-cycle-water"]');await disclosure.locator('summary').click();await p.locator('.journey-topic-links a[href="#journeys/water/5"]').click();await p.locator('[data-chapter-inquiry="water:4"]').waitFor();report.checks.push('Cold restart without server: complete reciprocal chapter links and all 16 journey inquiries and private notebook/level restore from the same schema-3 pass');}
+
+export async function assertWaterWeatherDiagram(visual,id,selected){
+ if(!['water:1','water:2','water:3','water:4','weather:1','weather:2','weather:3','weather:4'].includes(id))return;
+ await visual.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done))));
+ const vectors=await visual.locator('svg path[marker-end]').evaluateAll(paths=>paths.map(path=>{const a=path.getPointAtLength(0),b=path.getPointAtLength(path.getTotalLength());return {x:a.x,y:a.y,endY:b.y,dx:b.x-a.x,dy:b.y-a.y};}));
+ if(['water:1','water:2'].includes(id)){assert.ok(vectors.some(v=>v.dx===0&&v.dy<0),'water vapour path has an upward arrowhead');assert.ok(vectors.some(v=>v.dx===0&&v.dy>0),'returning water path has a separate downward arrowhead');}
+ if(id==='water:3'){
+  const regions=await visual.locator('svg rect').evaluateAll(es=>es.map(e=>({y:Number(e.getAttribute('y')),h:Number(e.getAttribute('height'))})));assert.equal(regions.length,2,'soil and groundwater have separate displayed regions');
+  const grains=await visual.locator('svg circle').evaluateAll(es=>es.map(e=>Number(e.getAttribute('cy'))));for(const r of regions)assert.ok(grains.some(y=>y>r.y&&y<r.y+r.h),'solid grains occur within both soil and groundwater regions');
+  assert.ok(vectors.some(v=>v.endY>regions[1].y&&v.dy>0),'a possible infiltration route actually enters groundwater');await visual.getByText(/Kein unterirdischer See/).waitFor();
+ }
+ if(id==='water:4'){
+  const fields=await visual.locator('svg rect').evaluateAll(es=>es.map(e=>e.getAttribute('width')+':'+e.getAttribute('height')));assert.equal(fields.length,3);assert.equal(new Set(fields).size,1,'protection action is not an invented measured water volume');await visual.getByText(/keine Wassermengen/).waitFor();
+ }
+ if(id==='weather:1'){
+  assert.equal(vectors.length,4,'each of the four circulation directions has its own arrowhead');const vertical=vectors.filter(v=>v.dx===0).sort((a,b)=>a.x-b.x),horizontal=vectors.filter(v=>v.dy===0).sort((a,b)=>a.y-b.y);assert.equal(vertical.length,2);assert.equal(horizontal.length,2);assert.ok(vertical[0].dy<0&&vertical[1].dy>0,'daytime sea-breeze example rises over warmer land and descends over cooler water');assert.ok(horizontal[0].dx>0&&horizontal[1].dx<0,'return above is opposite to surface flow');
+  const groundTop=await visual.locator('svg rect').evaluateAll(es=>Math.min(...es.map(e=>Number(e.getAttribute('y')))));assert.ok(vectors.every(v=>v.y<groundTop&&v.endY<groundTop),'air arrows stay above the ground');await visual.getByText(/Nicht jeder Wind bildet diesen Kreislauf/).waitFor();
+ }
+ if(id==='weather:2'){
+  if(selected===0)assert.ok(await visual.locator('svg path').evaluateAll(es=>es.some(e=>e.getAttribute('d')?.endsWith('Z')&&getComputedStyle(e).fill!=='none')),'cumulus has a filled rounded body');
+  if(selected===1){assert.ok(await visual.locator('svg g[fill="none"] path').count()>1,'cirrus is shown as separate unfilled wisps');assert.equal(await visual.locator('svg rect').count(),0,'cirrus does not reuse the solid sheet');}
+  if(selected===2)assert.ok(await visual.locator('svg rect').evaluateAll(es=>es.some(e=>Number(e.getAttribute('width'))>8*Number(e.getAttribute('height')))),'stratus is a broad flat sheet');
+ }
+ if(id==='weather:3')await visual.getByText(/ohne Zeitmaßstab/).waitFor();
+ if(id==='weather:4'&&selected===2)await visual.getByText('Neue Messungen können helfen, eine Vorhersage zu überarbeiten. Sie bleibt unsicher.',{exact:true}).waitFor();
+}

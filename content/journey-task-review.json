@@ -1431,10 +1431,52 @@
       "afterHash": "1e91f84df637f6b29fa62cab6f470483cbf9aff81a5f9df2275a8bb30ebd94d8",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Unterscheide eine sichtbare weiße Ansammlung kleiner Tropfen vom gasförmigen Wasser selbst. Sichtbar und gasförmig sind keine gleichbedeutenden Wörter.",
       "sourceIds": [
-        "water-base"
+        "water-base",
+        "water-evaporation"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "water:0",
+        "level": "Entdecken",
+        "prompt": "Welche Wasserform ist unsichtbar?",
+        "correctIndex": 1,
+        "correctAnswer": "Wasserdampf",
+        "sourceIds": [
+          "water-base",
+          "water-evaporation"
+        ],
+        "countercheck": "USGS Wasserzustände und Verdunstung tatsächlich gegengelesen: unsichtbares Gas versus sichtbare Tröpfchen/Eis. Nasses Tuch trocknet ohne Kochen, sicherer Auftrag ohne Erhitzen. Die24Punkte sind ein stark vereinfachtes Teilchenschema, kein Dichte-/Abstandsmaßstab. Originale richtigen Antworten erhalten.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "water:0:1",
@@ -1474,10 +1516,52 @@
       "afterHash": "e58b2e689d29a34da5aa54cc899b7b2a534db92b204cd06d2f0f07f45319c611",
       "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Frage, was du tatsächlich sehen kannst: einzelne Gasmoleküle oder viele kleine flüssige Tröpfchen, die Licht streuen.",
       "sourceIds": [
-        "water-base"
+        "water-base",
+        "water-evaporation"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "water:0",
+        "level": "Erklären",
+        "prompt": "Warum ist die weiße Wolke über einem Getränk nicht einfach Wasserdampf?",
+        "correctIndex": 0,
+        "correctAnswer": "Wir sehen viele kleine Tröpfchen",
+        "sourceIds": [
+          "water-base",
+          "water-evaporation"
+        ],
+        "countercheck": "USGS Wasserzustände und Verdunstung tatsächlich gegengelesen: unsichtbares Gas versus sichtbare Tröpfchen/Eis. Nasses Tuch trocknet ohne Kochen, sicherer Auftrag ohne Erhitzen. Die24Punkte sind ein stark vereinfachtes Teilchenschema, kein Dichte-/Abstandsmaßstab. Originale richtigen Antworten erhalten.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "water:0:2",
@@ -1517,10 +1601,52 @@
       "afterHash": "141c38c99165a74bd5ea0b9a03db756fe940a11a50e65c3963ccf194771a5ab5",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Denke an nasse Kleidung, die ohne sprudelndes Wasser trocknet. Muss Wasser zum Übergang in die Luft jedes Mal kochen?",
       "sourceIds": [
-        "water-base"
+        "water-base",
+        "water-evaporation"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "water:0",
+        "level": "Übertragen",
+        "prompt": "Eine Pfütze verschwindet ohne Kochen. Welche Erklärung passt?",
+        "correctIndex": 2,
+        "correctAnswer": "Wasser kann auch ohne Kochen verdunsten",
+        "sourceIds": [
+          "water-base",
+          "water-evaporation"
+        ],
+        "countercheck": "USGS Wasserzustände und Verdunstung tatsächlich gegengelesen: unsichtbares Gas versus sichtbare Tröpfchen/Eis. Nasses Tuch trocknet ohne Kochen, sicherer Auftrag ohne Erhitzen. Die24Punkte sind ein stark vereinfachtes Teilchenschema, kein Dichte-/Abstandsmaßstab. Originale richtigen Antworten erhalten.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "water:1:0",
@@ -1560,10 +1686,52 @@
       "afterHash": "bfa64a1bbbea025a9049dd3d06c775db597b5e19d20f92a9b1aed9a2a4c49ea9",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Verfolge dasselbe Wasser vor und nach dem Vorgang: zuerst als Flüssigkeit, danach verteilt in der Luft. Welcher Name gehört zu diesem Übergang?",
       "sourceIds": [
-        "water-base"
+        "water-base",
+        "water-evaporation"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "water:1",
+        "level": "Entdecken",
+        "prompt": "Wie nennt man den Übergang von flüssigem Wasser in die Luft?",
+        "correctIndex": 0,
+        "correctAnswer": "Verdunstung",
+        "sourceIds": [
+          "water-base",
+          "water-evaporation"
+        ],
+        "countercheck": "USGS Verdunstung9/23/26–27/55–57: Wärme und trockene bewegte Luft im jeweiligen Kontext, keine Wassermolekülspaltung. Hinweis passt nun zum Vergleich ganzer Umgebungen; die getrennte Ursachenisolation bleibt Ziel der dritten Aufgabe. Beide Wasserpfeile haben eigene Richtungen/Pfeilspitzen; falsche Farbangabe nach tatsächlicher Bildsichtung entfernt.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "water:1:1",
@@ -1591,7 +1759,7 @@
           "Warme, bewegte, trockene Luft"
         ],
         "correct": 2,
-        "hint": "Vergleiche zwei möglichst gleiche nasse Tücher und ändere nur eine Bedingung. Welche der genannten Bedingungen würde das Trocknen eher unterstützen?",
+        "hint": "Vergleiche die genannten Umgebungen. Wärme kann den Übergang in die Luft unterstützen; bewegte Luft kann feuchte Luft abführen. Überlege auch, was sehr feuchte Luft für das weitere Trocknen bedeutet.",
         "why": "Wärme, Wind und trockenere Luft können das Verdunsten beschleunigen.",
         "wrong": [
           "Die beschriebenen Bedingungen bremsen das Trocknen eher.",
@@ -1600,13 +1768,72 @@
         ]
       },
       "beforeHash": "1b9d01cf64575d39ef2365ea80d41da77e0889b7922d1874bb60c9f6b7f9adc4",
-      "afterHash": "73afa61c82044cf90f53adf51bf94ce548c9eb194c675be4ff8270ba572d9271",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche zwei möglichst gleiche nasse Tücher und ändere nur eine Bedingung. Welche der genannten Bedingungen würde das Trocknen eher unterstützen?",
+      "afterHash": "7062da38476eef0b11260421acdaa40f6098228e04e78132e6e2a6acff09b6c3",
+      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche zwei möglichst gleiche nasse Tücher und ändere nur eine Bedingung. Welche der genannten Bedingungen würde das Trocknen eher unterstützen? Gezielte Gegenkorrektur20.10.2026: The question compares joint environments; the old hint instead demands isolating one condition, a different level2 learning goal.",
       "sourceIds": [
-        "water-base"
+        "water-base",
+        "water-evaporation"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "previousAfter20261020": {
+        "prompt": "Was ist bei sonst gleichen Bedingungen günstiger zum Trocknen?",
+        "answers": [
+          "Kalte, sehr feuchte, unbewegte Luft",
+          "Eine völlig geschlossene nasse Schachtel",
+          "Warme, bewegte, trockene Luft"
+        ],
+        "correct": 2,
+        "hint": "Vergleiche zwei möglichst gleiche nasse Tücher und ändere nur eine Bedingung. Welche der genannten Bedingungen würde das Trocknen eher unterstützen?",
+        "why": "Wärme, Wind und trockenere Luft können das Verdunsten beschleunigen.",
+        "wrong": [
+          "Die beschriebenen Bedingungen bremsen das Trocknen eher.",
+          "In einer geschlossenen feuchten Schachtel kann wenig Feuchtigkeit abgeführt werden.",
+          "Wärme, Wind und trockenere Luft können das Verdunsten beschleunigen."
+        ]
+      },
+      "previousPendingFollowup20261020": "Konkrete Quellen-/Modell-/Lernzielgegenlese erfolgt; aktuelle individuelle Browser-/Zoom-/Kaltofflineprüfung dieses Abschnitts noch offen.",
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "water:1",
+        "level": "Erklären",
+        "prompt": "Was ist bei sonst gleichen Bedingungen günstiger zum Trocknen?",
+        "correctIndex": 2,
+        "correctAnswer": "Warme, bewegte, trockene Luft",
+        "sourceIds": [
+          "water-base",
+          "water-evaporation"
+        ],
+        "countercheck": "USGS Verdunstung9/23/26–27/55–57: Wärme und trockene bewegte Luft im jeweiligen Kontext, keine Wassermolekülspaltung. Hinweis passt nun zum Vergleich ganzer Umgebungen; die getrennte Ursachenisolation bleibt Ziel der dritten Aufgabe. Beide Wasserpfeile haben eigene Richtungen/Pfeilspitzen; falsche Farbangabe nach tatsächlicher Bildsichtung entfernt.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "water:1:2",
@@ -1646,10 +1873,52 @@
       "afterHash": "ba4dcfe186aa3409322f99a4cb18fe4cfab1ac7f11f77c93eb87fb58ebc4a439",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Stell dir zwei Änderungen als zwei mögliche Ursachen vor. Wenn beide zugleich wechseln, kannst du ihre einzelnen Beiträge nicht getrennt ablesen.",
       "sourceIds": [
-        "water-base"
+        "water-base",
+        "water-evaporation"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "water:1",
+        "level": "Übertragen",
+        "prompt": "Du änderst Wärme und Wind gleichzeitig. Kannst du den Unterschied eindeutig nur dem Wind zuschreiben?",
+        "correctIndex": 1,
+        "correctAnswer": "Nein, zwei Bedingungen wurden verändert",
+        "sourceIds": [
+          "water-base",
+          "water-evaporation"
+        ],
+        "countercheck": "USGS Verdunstung9/23/26–27/55–57: Wärme und trockene bewegte Luft im jeweiligen Kontext, keine Wassermolekülspaltung. Hinweis passt nun zum Vergleich ganzer Umgebungen; die getrennte Ursachenisolation bleibt Ziel der dritten Aufgabe. Beide Wasserpfeile haben eigene Richtungen/Pfeilspitzen; falsche Farbangabe nach tatsächlicher Bildsichtung entfernt.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "water:2:0",
@@ -1689,10 +1958,50 @@
       "afterHash": "7570229f3ba0b37ca631d59ebfcfcd2ba398a864cb909e36e7af52b22b5c076c",
       "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Zeichne einen Pfeil zwischen den Zuständen Gas und Flüssigkeit. Lies die Pfeilrichtung genau, bevor du den Namen auswählst.",
       "sourceIds": [
-        "water-base"
+        "water-condensation"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "water:2",
+        "level": "Entdecken",
+        "prompt": "Was bedeutet Kondensation?",
+        "correctIndex": 2,
+        "correctAnswer": "Wasserdampf wird zu Tröpfchen",
+        "sourceIds": [
+          "water-condensation"
+        ],
+        "countercheck": "USGS Kondensation14–18/25–27: Gas wird Flüssigkeit, kaltes Glas erzeugt kein neues Wasser. Nicht jede Wolke regnet. Unpassende alternative Wolkenbehauptung in der Fensterfrage durch plausible Glasdurchtritts-Verwechslung und individuelles Feedback ersetzt; alte falsche Auswahl2 bleibt falsch. Kein Pauschalurteil über undichte Fensterrahmen.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "water:2:1",
@@ -1732,10 +2041,50 @@
       "afterHash": "892688a251c26837e41d27ffe9abe86619ebac50db08ee94151c453e712f0d03",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ein sichtbares Gebilde kann aus sehr vielen winzigen Bestandteilen bestehen. Welche Wasserzustände passen zu einer Wolke?",
       "sourceIds": [
-        "water-base"
+        "water-condensation"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "water:2",
+        "level": "Erklären",
+        "prompt": "Welche Beschreibung einer Wolke passt?",
+        "correctIndex": 1,
+        "correctAnswer": "Viele Tröpfchen oder Eiskristalle",
+        "sourceIds": [
+          "water-condensation"
+        ],
+        "countercheck": "USGS Kondensation14–18/25–27: Gas wird Flüssigkeit, kaltes Glas erzeugt kein neues Wasser. Nicht jede Wolke regnet. Unpassende alternative Wolkenbehauptung in der Fensterfrage durch plausible Glasdurchtritts-Verwechslung und individuelles Feedback ersetzt; alte falsche Auswahl2 bleibt falsch. Kein Pauschalurteil über undichte Fensterrahmen.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "water:2:2",
@@ -1760,6 +2109,30 @@
         "answers": [
           "Wasserdampf der Raumluft kondensiert",
           "Das Glas stellt neues Wasser her",
+          "Flüssiger Regen ist durch die Glasscheibe nach innen gewandert"
+        ],
+        "correct": 0,
+        "hint": "Überlege, auf welcher Seite der Scheibe die Tropfen entstehen. Welche bereits vorhandene Wasserform in der Raumluft könnte sich dort verändern?",
+        "why": "Wasser aus der Luft kann sich an einer kühlen Oberfläche als Tröpfchen absetzen.",
+        "wrong": [
+          "Wasser aus der Luft kann sich an einer kühlen Oberfläche als Tröpfchen absetzen.",
+          "Glas erzeugt dabei kein neues Wasser.",
+          "Die Tröpfchen auf der Innenseite können aus der Raumluft kommen. Eine geschlossene, unbeschädigte Glasscheibe lässt Regenwasser nicht einfach durch ihr Glas hindurch."
+        ]
+      },
+      "beforeHash": "2e4518c296dedb182e23506af3239904b9edc54964665c4d0c59af7776dbc547",
+      "afterHash": "b03775199bb7de7ac4b1168427201ff1f0c954ffaf259da661566ff31c264977",
+      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Überlege, auf welcher Seite der Scheibe die Tropfen entstehen. Welche bereits vorhandene Wasserform in der Raumluft könnte sich dort verändern? Gezielte Gegenkorrektur20.10.2026: Current every-cloud-rains alternative is unrelated to a cool indoor window. The new wrong option examines source and barrier, stays wrong at old index2. No blanket claim about leaking frames.",
+      "sourceIds": [
+        "water-condensation"
+      ],
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "previousAfter20261020": {
+        "prompt": "An einer kühlen Fensterscheibe entstehen innen Tröpfchen. Welche Idee prüfst du zuerst?",
+        "answers": [
+          "Wasserdampf der Raumluft kondensiert",
+          "Das Glas stellt neues Wasser her",
           "Jede Wolke muss sofort regnen"
         ],
         "correct": 0,
@@ -1771,14 +2144,47 @@
           "Sichtbare Tröpfchen führen nicht überall sofort zu Regen."
         ]
       },
-      "beforeHash": "2e4518c296dedb182e23506af3239904b9edc54964665c4d0c59af7776dbc547",
-      "afterHash": "89ed8bd7c52cc06a0d008f89d21f5205d8cc5c02cd105b3e343304224e158c00",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Überlege, auf welcher Seite der Scheibe die Tropfen entstehen. Welche bereits vorhandene Wasserform in der Raumluft könnte sich dort verändern?",
-      "sourceIds": [
-        "water-base"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "previousPendingFollowup20261020": "Konkrete Quellen-/Modell-/Lernzielgegenlese erfolgt; aktuelle individuelle Browser-/Zoom-/Kaltofflineprüfung dieses Abschnitts noch offen.",
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "water:2",
+        "level": "Übertragen",
+        "prompt": "An einer kühlen Fensterscheibe entstehen innen Tröpfchen. Welche Idee prüfst du zuerst?",
+        "correctIndex": 0,
+        "correctAnswer": "Wasserdampf der Raumluft kondensiert",
+        "sourceIds": [
+          "water-condensation"
+        ],
+        "countercheck": "USGS Kondensation14–18/25–27: Gas wird Flüssigkeit, kaltes Glas erzeugt kein neues Wasser. Nicht jede Wolke regnet. Unpassende alternative Wolkenbehauptung in der Fensterfrage durch plausible Glasdurchtritts-Verwechslung und individuelles Feedback ersetzt; alte falsche Auswahl2 bleibt falsch. Kein Pauschalurteil über undichte Fensterrahmen.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "water:3:0",
@@ -1818,10 +2224,52 @@
       "afterHash": "61541c9073949865df2b1505f48c06d82ee591fc6ca5c2efbeb84219ead87dce",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche einen Wasserweg über die Oberfläche mit einem Weg zwischen Bodenteilchen hindurch. Welcher führt wirklich in den Boden?",
       "sourceIds": [
-        "water-base"
+        "water-base",
+        "water-infiltration"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "water:3",
+        "level": "Entdecken",
+        "prompt": "Welcher Weg führt Wasser in den Boden?",
+        "correctIndex": 1,
+        "correctAnswer": "Versickern",
+        "sourceIds": [
+          "water-base",
+          "water-infiltration"
+        ],
+        "countercheck": "USGS Infiltration33–44/48: Bodenfeuchte und gesättigte Grundwasserzone unterscheiden, Wege/Dauern variieren. Tatsächliche Grafik zeigt Körner und Hohlräume in Boden und Grundwasser sowie einen möglichen Versickerungsweg statt unterirdischem See. Keine allgemeine sofortige Neubildungs- oder Trinkwasserbehauptung.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "water:3:1",
@@ -1861,10 +2309,52 @@
       "afterHash": "a9b150dd6b82be0123f10725899df73cef441e668837e0aa8c2aadb4c35e1548",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Zeichne nach einem Regentropfen mehrere mögliche Pfeile. Müssen alle Tropfen sofort denselben Bach erreichen?",
       "sourceIds": [
-        "water-base"
+        "water-base",
+        "water-infiltration"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "water:3",
+        "level": "Erklären",
+        "prompt": "Welche zwei Wege sind nach Regen möglich?",
+        "correctIndex": 0,
+        "correctAnswer": "Wasser fließt oberirdisch oder versickert",
+        "sourceIds": [
+          "water-base",
+          "water-infiltration"
+        ],
+        "countercheck": "USGS Infiltration33–44/48: Bodenfeuchte und gesättigte Grundwasserzone unterscheiden, Wege/Dauern variieren. Tatsächliche Grafik zeigt Körner und Hohlräume in Boden und Grundwasser sowie einen möglichen Versickerungsweg statt unterirdischem See. Keine allgemeine sofortige Neubildungs- oder Trinkwasserbehauptung.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "water:3:2",
@@ -1904,10 +2394,52 @@
       "afterHash": "29a008c7cac960da175d353b5d837d7281c643a02a181e1ed0c2494ad6ddba21",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Versuche, auf einer Kreislinie einen einzig richtigen Startpunkt zu finden. Was sagt dir das über eine Darstellung mit vielen Speichern und Übergängen?",
       "sourceIds": [
-        "water-base"
+        "water-base",
+        "water-infiltration"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "water:3",
+        "level": "Übertragen",
+        "prompt": "Beginnt jeder Wasserkreislauf zwingend im Meer?",
+        "correctIndex": 2,
+        "correctAnswer": "Nein, ein Tropfen kann an vielen Stellen starten",
+        "sourceIds": [
+          "water-base",
+          "water-infiltration"
+        ],
+        "countercheck": "USGS Infiltration33–44/48: Bodenfeuchte und gesättigte Grundwasserzone unterscheiden, Wege/Dauern variieren. Tatsächliche Grafik zeigt Körner und Hohlräume in Boden und Grundwasser sowie einen möglichen Versickerungsweg statt unterirdischem See. Keine allgemeine sofortige Neubildungs- oder Trinkwasserbehauptung.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "water:4:0",
@@ -1947,10 +2479,52 @@
       "afterHash": "8c9dbc38c30eab4029830f31b05138cb942692cf185f0015b01d576efa0153fc",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Das Auge erkennt nicht jede Eigenschaft von Wasser. Welche Antwort verwechselt Durchsichtigkeit mit einer zuverlässigen Trinkwasserprüfung?",
       "sourceIds": [
-        "water-base"
+        "water-reserves",
+        "water-drinking-quality"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "water:4",
+        "level": "Entdecken",
+        "prompt": "Ist klares Bachwasser automatisch Trinkwasser?",
+        "correctIndex": 0,
+        "correctAnswer": "Nein",
+        "sourceIds": [
+          "water-reserves",
+          "water-drinking-quality"
+        ],
+        "countercheck": "USGS Wasservorräte37/43–50 und CDC57–62/70–72: Salzgehalt, Speicherung, Zugänglichkeit und Trinkqualität unterscheiden. Schutzaufgabe ist keine messbare Wassermenge; gleich große qualitative Felder ausdrücklich begrenzt. Plausible falsche Seen-/Flussmehrheit statt Meere-ohne-Wasser; alter falscher Index1 bleibt falsch. Keine Kinderaufbereitung, Filterkaufempfehlung oder globale US-Berichtspflicht.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "water:4:1",
@@ -1974,6 +2548,31 @@
         "prompt": "Warum ist nutzbares Süßwasser kostbar?",
         "answers": [
           "Alles Wasser ist sofort trinkbar",
+          "Die meisten Süßwasservorräte liegen in leicht erreichbaren Flüssen und Seen",
+          "Viel Wasser ist salzig oder in Eis und Boden gespeichert"
+        ],
+        "correct": 2,
+        "hint": "Unterscheide die gesamte Wassermenge der Erde von Wasser, das an einem Ort sauber und zugänglich bereitsteht.",
+        "why": "Nicht jede Wasserreserve steht als sicheres Trinkwasser zur Verfügung.",
+        "wrong": [
+          "Aufbereitung und Schutz bleiben nötig.",
+          "Ein großer Teil des Süßwassers ist in Eis oder im Untergrund gespeichert. Seen und Flüsse sind nur ein Teil; gespeichertes Süßwasser ist nicht automatisch leicht zugänglich.",
+          "Nicht jede Wasserreserve steht als sicheres Trinkwasser zur Verfügung."
+        ]
+      },
+      "beforeHash": "4acf71d6209a35532f7435f233490c9ef41e8dd8ad811bd0c4eb436b751ce2f5",
+      "afterHash": "fff7409a3ad516fd87ef52c23fdc59246c3b9c530e4428b0fdc7b60393dce2c6",
+      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Unterscheide die gesamte Wassermenge der Erde von Wasser, das an einem Ort sauber und zugänglich bereitsteht. Gezielte Gegenkorrektur20.10.2026: Replace absurd oceans-contain-no-water distraction by a plausible confusion about where freshwater is stored, preserving wrong index1 and correct index2.",
+      "sourceIds": [
+        "water-reserves",
+        "water-drinking-quality"
+      ],
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "previousAfter20261020": {
+        "prompt": "Warum ist nutzbares Süßwasser kostbar?",
+        "answers": [
+          "Alles Wasser ist sofort trinkbar",
           "Meere enthalten kein Wasser",
           "Viel Wasser ist salzig oder in Eis und Boden gespeichert"
         ],
@@ -1986,14 +2585,48 @@
           "Nicht jede Wasserreserve steht als sicheres Trinkwasser zur Verfügung."
         ]
       },
-      "beforeHash": "4acf71d6209a35532f7435f233490c9ef41e8dd8ad811bd0c4eb436b751ce2f5",
-      "afterHash": "39dff1a0d236fe1efa66a4c2688d9708ce453bf59f1c972e6cdf399be642b65d",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Unterscheide die gesamte Wassermenge der Erde von Wasser, das an einem Ort sauber und zugänglich bereitsteht.",
-      "sourceIds": [
-        "water-base"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "previousPendingFollowup20261020": "Konkrete Quellen-/Modell-/Lernzielgegenlese erfolgt; aktuelle individuelle Browser-/Zoom-/Kaltofflineprüfung dieses Abschnitts noch offen.",
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "water:4",
+        "level": "Erklären",
+        "prompt": "Warum ist nutzbares Süßwasser kostbar?",
+        "correctIndex": 2,
+        "correctAnswer": "Viel Wasser ist salzig oder in Eis und Boden gespeichert",
+        "sourceIds": [
+          "water-reserves",
+          "water-drinking-quality"
+        ],
+        "countercheck": "USGS Wasservorräte37/43–50 und CDC57–62/70–72: Salzgehalt, Speicherung, Zugänglichkeit und Trinkqualität unterscheiden. Schutzaufgabe ist keine messbare Wassermenge; gleich große qualitative Felder ausdrücklich begrenzt. Plausible falsche Seen-/Flussmehrheit statt Meere-ohne-Wasser; alter falscher Index1 bleibt falsch. Keine Kinderaufbereitung, Filterkaufempfehlung oder globale US-Berichtspflicht.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "water:4:2",
@@ -2033,10 +2666,52 @@
       "afterHash": "cb32a5eec8294fabd4980dcdb64aef57f2aa2706ebdaaa5400441f2514f20d1a",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Frage, welche unerwünschten Bestandteile ein sichtbarer Filter überhaupt erkennen oder zurückhalten kann. Ein klares Aussehen ist noch kein Prüfnachweis.",
       "sourceIds": [
-        "water-base"
+        "water-reserves",
+        "water-drinking-quality"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "water:4",
+        "level": "Übertragen",
+        "prompt": "Jemand schlägt vor, nur den sichtbaren Schmutz zu entfernen. Reicht das als Trinkwasserprüfung?",
+        "correctIndex": 1,
+        "correctAnswer": "Nein, auch Unsichtbares muss berücksichtigt werden",
+        "sourceIds": [
+          "water-reserves",
+          "water-drinking-quality"
+        ],
+        "countercheck": "USGS Wasservorräte37/43–50 und CDC57–62/70–72: Salzgehalt, Speicherung, Zugänglichkeit und Trinkqualität unterscheiden. Schutzaufgabe ist keine messbare Wassermenge; gleich große qualitative Felder ausdrücklich begrenzt. Plausible falsche Seen-/Flussmehrheit statt Meere-ohne-Wasser; alter falscher Index1 bleibt falsch. Keine Kinderaufbereitung, Filterkaufempfehlung oder globale US-Berichtspflicht.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "weather:0:0",
@@ -2079,8 +2754,49 @@
         "weather-base",
         "weather-climate"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "weather:0",
+        "level": "Entdecken",
+        "prompt": "Welches Gerät misst Temperatur?",
+        "correctIndex": 2,
+        "correctAnswer": "Ein Thermometer",
+        "sourceIds": [
+          "weather-base",
+          "weather-climate"
+        ],
+        "countercheck": "NASA tatsächlich gelesenes Wetter/Klima-Transkript254–279 und NOAA35–39/56/62: Instrument, aktuelle Messgröße, Ort und Zeit unterscheiden. Eine trockene örtliche Tagesmessung belegt weder Landeswetter noch Klima. Bestehende einfache Erkennungsfrage für jüngere Kinder sinnvoll erhalten; eigener Thermometervergleich ohne erfundene Messwerte.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "weather:0:1",
@@ -2123,8 +2839,49 @@
         "weather-base",
         "weather-climate"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "weather:0",
+        "level": "Erklären",
+        "prompt": "Was gehört zu einer Wetterbeobachtung?",
+        "correctIndex": 1,
+        "correctAnswer": "Temperatur, Wind und Niederschlag heute",
+        "sourceIds": [
+          "weather-base",
+          "weather-climate"
+        ],
+        "countercheck": "NASA tatsächlich gelesenes Wetter/Klima-Transkript254–279 und NOAA35–39/56/62: Instrument, aktuelle Messgröße, Ort und Zeit unterscheiden. Eine trockene örtliche Tagesmessung belegt weder Landeswetter noch Klima. Bestehende einfache Erkennungsfrage für jüngere Kinder sinnvoll erhalten; eigener Thermometervergleich ohne erfundene Messwerte.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "weather:0:2",
@@ -2167,8 +2924,49 @@
         "weather-base",
         "weather-climate"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "weather:0",
+        "level": "Übertragen",
+        "prompt": "Ein Regenmesser blieb einen Tag trocken. Was darfst du sagen?",
+        "correctIndex": 0,
+        "correctAnswer": "An diesem Messort wurde an diesem Tag kein Regen gesammelt",
+        "sourceIds": [
+          "weather-base",
+          "weather-climate"
+        ],
+        "countercheck": "NASA tatsächlich gelesenes Wetter/Klima-Transkript254–279 und NOAA35–39/56/62: Instrument, aktuelle Messgröße, Ort und Zeit unterscheiden. Eine trockene örtliche Tagesmessung belegt weder Landeswetter noch Klima. Bestehende einfache Erkennungsfrage für jüngere Kinder sinnvoll erhalten; eigener Thermometervergleich ohne erfundene Messwerte.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "weather:1:0",
@@ -2208,10 +3006,52 @@
       "afterHash": "8100c8494b4af173e5425a02125edcb12246281e0261f1054bb83ae3b65c912c",
       "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Du kannst Wind an Blättern oder einer Fahne bemerken. Welcher Stoff muss sich bewegen, damit diese Wirkung entsteht?",
       "sourceIds": [
-        "weather-base"
+        "weather-wind",
+        "weather-sea-breeze"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "weather:1",
+        "level": "Entdecken",
+        "prompt": "Was ist Wind?",
+        "correctIndex": 1,
+        "correctAnswer": "Luft in Bewegung",
+        "sourceIds": [
+          "weather-wind",
+          "weather-sea-breeze"
+        ],
+        "countercheck": "NOAA Wind39–43/50–52/64/78 und Seewind53/60/63–64/66–67/74: Druckantrieb plus weitere Einflüsse, kein universelles geradliniges Windsystem. Vier separat gerichtete Luftpfade über dem Boden zeigen ausdrücklich ein örtliches Seewindbeispiel am Tag. Tatsächlich gefolgter alter Link labs/wind war ungültig; jetzt reale Wetterstation mit bestehendem Windregler, Ziel und Rückfokus tatsächlich geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "weather:1:1",
@@ -2251,10 +3091,52 @@
       "afterHash": "c65b23d13ff7c3841b0b89e54ae10e23a676010bbba7aa44b8980a524718114d",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche zwei Bereiche der Atmosphäre. Suche eine unterschiedliche Größe, die eine Luftbewegung antreiben kann, statt Bewegung nur zu benennen.",
       "sourceIds": [
-        "weather-base"
+        "weather-wind",
+        "weather-sea-breeze"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "weather:1",
+        "level": "Erklären",
+        "prompt": "Was hilft, Wind entstehen zu lassen?",
+        "correctIndex": 0,
+        "correctAnswer": "Unterschiede in Erwärmung und Luftdruck",
+        "sourceIds": [
+          "weather-wind",
+          "weather-sea-breeze"
+        ],
+        "countercheck": "NOAA Wind39–43/50–52/64/78 und Seewind53/60/63–64/66–67/74: Druckantrieb plus weitere Einflüsse, kein universelles geradliniges Windsystem. Vier separat gerichtete Luftpfade über dem Boden zeigen ausdrücklich ein örtliches Seewindbeispiel am Tag. Tatsächlich gefolgter alter Link labs/wind war ungültig; jetzt reale Wetterstation mit bestehendem Windregler, Ziel und Rückfokus tatsächlich geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "weather:1:2",
@@ -2294,10 +3176,52 @@
       "afterHash": "fd09996564b7d4ad52490ec2be60db5f64079567e1a4fe4cadeafc4691ffd0d9",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ein sichtbares Zeichen und eine genaue Druckmessung liefern unterschiedliche Informationen. Was lässt sich aus der Fahne allein nicht ablesen?",
       "sourceIds": [
-        "weather-base"
+        "weather-wind",
+        "weather-sea-breeze"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "weather:1",
+        "level": "Übertragen",
+        "prompt": "Eine Fahne bewegt sich. Weißt du damit schon den Luftdruck an allen Orten?",
+        "correctIndex": 2,
+        "correctAnswer": "Nein, dafür braucht man weitere Messungen",
+        "sourceIds": [
+          "weather-wind",
+          "weather-sea-breeze"
+        ],
+        "countercheck": "NOAA Wind39–43/50–52/64/78 und Seewind53/60/63–64/66–67/74: Druckantrieb plus weitere Einflüsse, kein universelles geradliniges Windsystem. Vier separat gerichtete Luftpfade über dem Boden zeigen ausdrücklich ein örtliches Seewindbeispiel am Tag. Tatsächlich gefolgter alter Link labs/wind war ungültig; jetzt reale Wetterstation mit bestehendem Windregler, Ziel und Rückfokus tatsächlich geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "weather:2:0",
@@ -2337,10 +3261,52 @@
       "afterHash": "ab04175820d203eb5200c244e2363445dd6e79462876fe3761604ac2873eb226",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche eine Wolke über dir mit derselben Art kleiner Wassertröpfchen direkt in Bodennähe. Welcher Unterschied betrifft die Lage?",
       "sourceIds": [
-        "weather-base"
+        "weather-cloud-types",
+        "weather-fog"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "weather:2",
+        "level": "Entdecken",
+        "prompt": "Was ist Nebel?",
+        "correctIndex": 0,
+        "correctAnswer": "Eine Wolke am Boden",
+        "sourceIds": [
+          "weather-cloud-types",
+          "weather-fog"
+        ],
+        "countercheck": "NOAA Wolkentypen47–52/107–111/131–137 und NWS Nebel6–7/14–17: faserige hohe Eiswolken, gehäufte Cumulusform und Schichtwolke tatsächlich verschieden gezeichnet. Kein Höhenmaßstab, keine sichere Unwetterfolgerung aus Farbe/Form, kein Blick in die Sonne. Eigene Zeichnungen; keine fremden Wolkenfotos oder Poster übernommen.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "weather:2:1",
@@ -2380,10 +3346,52 @@
       "afterHash": "fce6314f39ff4443def6043b328c6cebc6f10de21e516cc8760e08880c5238a6",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Unterscheide kleine schwebende Wolkenteilchen von ausreichend großen fallenden Tropfen. Muss jede Wolke diesen zweiten Zustand erreichen?",
       "sourceIds": [
-        "weather-base"
+        "weather-cloud-types",
+        "weather-fog"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "weather:2",
+        "level": "Erklären",
+        "prompt": "Warum regnet nicht jede Wolke?",
+        "correctIndex": 2,
+        "correctAnswer": "Tröpfchen oder Kristalle sind nicht immer ausreichend gewachsen",
+        "sourceIds": [
+          "weather-cloud-types",
+          "weather-fog"
+        ],
+        "countercheck": "NOAA Wolkentypen47–52/107–111/131–137 und NWS Nebel6–7/14–17: faserige hohe Eiswolken, gehäufte Cumulusform und Schichtwolke tatsächlich verschieden gezeichnet. Kein Höhenmaßstab, keine sichere Unwetterfolgerung aus Farbe/Form, kein Blick in die Sonne. Eigene Zeichnungen; keine fremden Wolkenfotos oder Poster übernommen.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "weather:2:2",
@@ -2423,10 +3431,52 @@
       "afterHash": "80c1beafbe9e74501c7b72b2c6219b126149a1310b99891dd10cf354251f02eb",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Eine dunkle Erscheinung ist zunächst eine Beobachtung. Welche weiteren Messungen und fachlichen Warnungen fehlen für eine verlässliche Gefahrenbeurteilung?",
       "sourceIds": [
-        "weather-base"
+        "weather-cloud-types",
+        "weather-fog"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "weather:2",
+        "level": "Übertragen",
+        "prompt": "Eine Wolke sieht dunkel aus. Reicht das für eine sichere Unwettervorhersage?",
+        "correctIndex": 1,
+        "correctAnswer": "Nein, weitere Informationen sind nötig",
+        "sourceIds": [
+          "weather-cloud-types",
+          "weather-fog"
+        ],
+        "countercheck": "NOAA Wolkentypen47–52/107–111/131–137 und NWS Nebel6–7/14–17: faserige hohe Eiswolken, gehäufte Cumulusform und Schichtwolke tatsächlich verschieden gezeichnet. Kein Höhenmaßstab, keine sichere Unwetterfolgerung aus Farbe/Form, kein Blick in die Sonne. Eigene Zeichnungen; keine fremden Wolkenfotos oder Poster übernommen.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "weather:3:0",
@@ -2469,8 +3519,49 @@
         "weather-base",
         "weather-climate"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "weather:3",
+        "level": "Entdecken",
+        "prompt": "Welche Aussage beschreibt Wetter?",
+        "correctIndex": 2,
+        "correctAnswer": "Heute regnet es an unserem Messort",
+        "sourceIds": [
+          "weather-base",
+          "weather-climate"
+        ],
+        "countercheck": "NASA/NOAA kurze lokale Wetterzustände versus lange vergleichbare Klimareihen einschließlich Schwankungen.30Jahre als gebräuchlicher Vergleichszeitraum, keine starre Mindestlänge für jede Klimafrage. Schematische Balken besitzen ausdrücklich keinen gemessenen Zeitmaßstab. Einzelner kalter Tag widerlegt keinen langfristigen Verlauf; vorhandene Aufgaben und Quellen erhalten.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "weather:3:1",
@@ -2513,8 +3604,49 @@
         "weather-base",
         "weather-climate"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "weather:3",
+        "level": "Erklären",
+        "prompt": "Was ist für einen Klimavergleich hilfreicher?",
+        "correctIndex": 1,
+        "correctAnswer": "Viele vergleichbare Messungen über lange Zeit",
+        "sourceIds": [
+          "weather-base",
+          "weather-climate"
+        ],
+        "countercheck": "NASA/NOAA kurze lokale Wetterzustände versus lange vergleichbare Klimareihen einschließlich Schwankungen.30Jahre als gebräuchlicher Vergleichszeitraum, keine starre Mindestlänge für jede Klimafrage. Schematische Balken besitzen ausdrücklich keinen gemessenen Zeitmaßstab. Einzelner kalter Tag widerlegt keinen langfristigen Verlauf; vorhandene Aufgaben und Quellen erhalten.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "weather:3:2",
@@ -2557,8 +3689,49 @@
         "weather-base",
         "weather-climate"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "weather:3",
+        "level": "Übertragen",
+        "prompt": "Ein Wintertag ist besonders kalt. Widerlegt das allein eine langfristige Erwärmung?",
+        "correctIndex": 0,
+        "correctAnswer": "Nein, Einzelwetter und langfristiger Verlauf sind verschieden",
+        "sourceIds": [
+          "weather-base",
+          "weather-climate"
+        ],
+        "countercheck": "NASA/NOAA kurze lokale Wetterzustände versus lange vergleichbare Klimareihen einschließlich Schwankungen.30Jahre als gebräuchlicher Vergleichszeitraum, keine starre Mindestlänge für jede Klimafrage. Schematische Balken besitzen ausdrücklich keinen gemessenen Zeitmaßstab. Einzelner kalter Tag widerlegt keinen langfristigen Verlauf; vorhandene Aufgaben und Quellen erhalten.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "weather:4:0",
@@ -2598,11 +3771,52 @@
       "afterHash": "3f2e1ce2f27ce0ac0752e9dbf5b522030ba5c8abdef1e78284bda6fe894a7199",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ein Rechenmodell braucht Angaben über die aktuelle Atmosphäre. Welche Antwort liefert Messdaten, mit denen es tatsächlich rechnen kann?",
       "sourceIds": [
-        "weather-base",
-        "weather-climate"
+        "weather-climate",
+        "weather-forecast-range"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "weather:4",
+        "level": "Entdecken",
+        "prompt": "Woraus berechnen Computer Wettervorhersagen?",
+        "correctIndex": 1,
+        "correctAnswer": "Aus Messdaten und Modellen",
+        "sourceIds": [
+          "weather-climate",
+          "weather-forecast-range"
+        ],
+        "countercheck": "NOAA Messnetze/Modelle und Met-Office268/273–284 tatsächlich gelesen: Vorhersageabstand und kleine Anfangsunterschiede beeinflussen Unsicherheit. Neue Messungen können eine Einschätzung verbessern, keine garantierte Fehlerfreiheit oder automatische Verbesserung jeder Revision. Verbleibende unqualifizierte Diagrammformulierung nach Bildgegenlese gezielt präzisiert und aktuell erneut geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "weather:4:1",
@@ -2642,11 +3856,52 @@
       "afterHash": "8f28e4786a86842c1be0495df7aad26143f2647280bb8d50d5fcedab31870fcd",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche eine nahe Vorhersage mit einer weit entfernten. Wie viele weitere Veränderungen können bis zum späteren Zeitpunkt dazukommen?",
       "sourceIds": [
-        "weather-base",
-        "weather-climate"
+        "weather-climate",
+        "weather-forecast-range"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "weather:4",
+        "level": "Erklären",
+        "prompt": "Welche Vorhersage ist meistens unsicherer?",
+        "correctIndex": 0,
+        "correctAnswer": "Die weiter entfernte Zukunft",
+        "sourceIds": [
+          "weather-climate",
+          "weather-forecast-range"
+        ],
+        "countercheck": "NOAA Messnetze/Modelle und Met-Office268/273–284 tatsächlich gelesen: Vorhersageabstand und kleine Anfangsunterschiede beeinflussen Unsicherheit. Neue Messungen können eine Einschätzung verbessern, keine garantierte Fehlerfreiheit oder automatische Verbesserung jeder Revision. Verbleibende unqualifizierte Diagrammformulierung nach Bildgegenlese gezielt präzisiert und aktuell erneut geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "weather:4:2",
@@ -2686,11 +3941,52 @@
       "afterHash": "3858c3866d529e77362f1a030233bf14647fe589a9d6cc6cdbc709fb34a1de17",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Stell dir vor, eine neue Messung widerspricht einer alten Annahme. Ist die Anpassung ein vernünftiger Umgang mit zusätzlichem Wissen?",
       "sourceIds": [
-        "weather-base",
-        "weather-climate"
+        "weather-climate",
+        "weather-forecast-range"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese und gezielte tatsächliche UI/native/kalteOfflineprüfung; keine unabhängige Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "weather:4",
+        "level": "Übertragen",
+        "prompt": "Eine Prognose ändert sich nach neuen Messungen. Bedeutet das, Forschung sei wertlos?",
+        "correctIndex": 2,
+        "correctAnswer": "Nein, neue Daten können die Einschätzung verbessern",
+        "sourceIds": [
+          "weather-climate",
+          "weather-forecast-range"
+        ],
+        "countercheck": "NOAA Messnetze/Modelle und Met-Office268/273–284 tatsächlich gelesen: Vorhersageabstand und kleine Anfangsunterschiede beeinflussen Unsicherheit. Neue Messungen können eine Einschätzung verbessern, keine garantierte Fehlerfreiheit oder automatische Verbesserung jeder Revision. Verbleibende unqualifizierte Diagrammformulierung nach Bildgegenlese gezielt präzisiert und aktuell erneut geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-before/report.json",
+            "sha256": "a18c625bb641bbb1a1cde2e979a620efcea79f8a2809e06a4171b9c86ee29f5c",
+            "build": "1022c4eba078a14a"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-after-v4/report.json",
+            "sha256": "0d1ea47f1a58fc8620d77ba34e5d2bbc281d8d98d67024822eee14bd5fde28e4",
+            "build": "bb16a5d46868313b"
+          },
+          "nativeBroad": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather10-20261020-native-offline-completion/report.json",
+            "sha256": "b4b05cc7ea402d078b39c504ee4784c6ff25eaf06b5864617d49cc8778b49c07",
+            "build": "bb16a5d46868313b"
+          },
+          "caption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-after/report.json",
+            "sha256": "acd2233279a136c5a286f56907ce1061b2ac5b818541be2f867a2b798da437c9",
+            "build": "9ad03b0242d6d8e2"
+          },
+          "nativeCaption": {
+            "path": "/workspace/work/wk-continuation/journey-water-weather-two-captions-20261020-native-offline/report.json",
+            "sha256": "fa12f5e11ad5454f003e61a636bfd5048d5a526d9eed3d20dc66bd4e8a87a32b",
+            "build": "9ad03b0242d6d8e2"
+          }
+        }
+      }
     },
     {
       "id": "seasons:0:0",
@@ -10620,6 +11916,56 @@
       "title": "NPS · Bewegliche Erdplatten",
       "url": "https://www.nps.gov/subjects/geology/plate-tectonics.htm",
       "scope": "Lithosphäre und Plattengrenzen; keine unveränderliche überall gleiche Geschwindigkeit."
+    },
+    "water-drinking-quality": {
+      "title": "CDC · Wasserqualität und unsichtbare Bestandteile",
+      "url": "https://www.cdc.gov/drinking-water/prevention/about-choosing-home-water-filters.html",
+      "scope": "Aussehen, Geschmack oder Geruch beweisen keine Trinkwassersicherheit. Keine Filterkaufempfehlung, Kinderaufbereitung oder US-Berichtspflicht für alle behauptet."
+    },
+    "weather-fog": {
+      "title": "NWS · Was Nebel ist",
+      "url": "https://forecast.weather.gov/glossary.php?word=FOG",
+      "scope": "Wolkenteilchen nahe dem Boden; keine US-Warnschwellen als allgemeine Regel übernommen."
+    },
+    "water-reserves": {
+      "title": "USGS · Wo Wasser gespeichert ist",
+      "url": "https://www.usgs.gov/water-science-school/science/how-much-water-there-earth",
+      "scope": "Salzwasser sowie Eis und Untergrund als große Speicher; keine Trinkwassermenge aus Oberflächenanteilen ableiten."
+    },
+    "weather-forecast-range": {
+      "title": "Met Office · Grenzen weiter Vorhersagen",
+      "url": "https://weather.metoffice.gov.uk/learn-about/weather-forecasting-in-the-news/exact-date-weather-headlines",
+      "scope": "Vorhersageabstand, kleine Anfangsunterschiede und Unsicherheit; fachliche Quelle mit news im URL ist keine News-Funktion."
+    },
+    "weather-sea-breeze": {
+      "title": "NOAA · Seewind als örtliches Beispiel",
+      "url": "https://www.noaa.gov/jetstream/ocean/sea-breeze",
+      "scope": "Tagsüber bodennah vom kühleren Wasser zum wärmeren Land, darüber zurück; keine allgemeine Windregel oder kopierte Grafik."
+    },
+    "water-evaporation": {
+      "title": "USGS · Verdunstung und Wasserwege",
+      "url": "https://www.usgs.gov/water-science-school/science/evaporation-and-water-cycle",
+      "scope": "Flüssig zu gasförmig, auch unterhalb Siedetemperatur; keine Spaltung der Wassermoleküle oder universellen100°C unterstellt."
+    },
+    "weather-wind": {
+      "title": "NOAA · Wie Wind entsteht",
+      "url": "https://www.noaa.gov/jetstream/synoptic/origin-of-wind",
+      "scope": "Luftbewegung, Luftdruckunterschiede und zusätzliche Einflüsse. Keine universelle direkte Druckgradient-Geschwindigkeitsproportionalität."
+    },
+    "weather-cloud-types": {
+      "title": "NOAA · Grundformen von Wolken",
+      "url": "https://www.noaa.gov/jetstream/clouds/ten-basic-clouds",
+      "scope": "Ausgewählte Cirrus-, Cumulus- und Stratusmerkmale; kein Höhenmaßstab, keine sichere Unwettervorhersage oder Sonnenblickaufgabe."
+    },
+    "water-condensation": {
+      "title": "USGS · Kondensation",
+      "url": "https://www.usgs.gov/water-science-school/science/condensation-and-water-cycle",
+      "scope": "Gas zu Flüssigkeit, Tröpfchen an kalten Oberflächen; nicht jede Abkühlung führt sofort zu Wolken oder Regen."
+    },
+    "water-infiltration": {
+      "title": "USGS · Versickern und Grundwasser",
+      "url": "https://www.usgs.gov/water-science-school/science/infiltration-and-water-cycle",
+      "scope": "Bodenfeuchte und gesättigte Grundwasserzone unterscheiden; keine überall gleichen Fließ- oder Nachbildungszeiten."
     }
   },
   "sectionReview": {

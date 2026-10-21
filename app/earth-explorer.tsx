@@ -209,7 +209,7 @@ export default function EarthExplorer(){
   const openWorldGame=useCallback((id:string)=>{goMode("games");setGamePanel("world");setResumeGame({id:id.startsWith("world:")?id:"world:"+id,family:"world",nonce:Date.now()});},[goMode]);
   const searchGame=useCallback((id:string,family:"classic"|"extra"|"world")=>{if(id==='quiz'){quizAction();return;}if(id==='hunt'){huntAction();return;}goMode('games');setGamePanel(family);setResumeGame({id:family==='world'?'world:'+id:id,family,nonce:Date.now()});},[goMode,quizAction,huntAction]);
   const worldLearn=useCallback((id:string)=>{if(!actions.current.discoveries.has("learned:"+id))celebrate();addProgress("discoveries","learned:"+id);},[addProgress,celebrate]);
-  const searchJourney=useCallback((id:string)=>{goMode("journeys","journeys/"+id);},[goMode]);
+  const searchJourney=useCallback((id:string,index?:number)=>{goMode("journeys","journeys/"+id+(index===undefined?"":"/"+(index+1)));},[goMode]);
   const worldNavigate=useCallback((mode:Mode,id?:string,iso?:string)=>{if(mode==="journeys"&&id){searchJourney(id);}else if(mode==="labs"&&id){goMode("labs","labs/"+id);}else if(iso){const c=actions.current.countries.find((c:Country)=>c.properties.iso===iso);if(c)atlasAction(countryPlace(c));}else goMode(mode);},[goMode,atlasAction,searchJourney]);
   const worldActions:WorldActions={progress:local.progress,onActivity:rememberActivity,onVisit:discover,onLearn:worldLearn,onFavorite:local.favorite,onRead:voiceAction,onPlace:atlasAction,onNavigate:worldNavigate,onSave:local.worldState,onReview:local.review,onGame:openWorldGame,onClear:local.clearGame};
   const searchKnowledge=useCallback((tab:"words"|"why",term:string)=>{goMode("book","book/"+tab+"/"+encodeURIComponent(term));setBookLookup({tab,term});},[goMode]);
