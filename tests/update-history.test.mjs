@@ -6,7 +6,7 @@ import {UPDATE_HISTORY,PREPARED_UPDATES,HISTORY_EVIDENCE,TEST_HISTORY_EVIDENCE,J
 test('actual deployed PR38 lab feedback retains its historical time once and stays confirmed',()=>{
  const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===38);
  const entries=publicUpdates(),entry=entries.find(e=>e.id==='lab-feedback-3-5');
- assert.ok(record);assert.ok(entry);assert.equal(entries[7].id,entry.id);assert.equal(entries[3].id,'optics-learning-3-5');
+ assert.ok(record);assert.ok(entry);assert.equal(entries[8].id,entry.id);assert.equal(entries[4].id,'optics-learning-3-5');
  assert.equal(entry.evidence.revision,'0e5e4d4ece35d4a80dc79764c690c1633b2e0988');
  assert.equal(entry.status,'test-available');assert.equal(entry.availableOn,'2026-10-18');
  assert.equal(entry.occurredAt,'2026-10-17T22:20:23Z');assert.equal(entry.publishedOn,null);
@@ -56,8 +56,8 @@ test('publication entries match successful deployments, source provenance and Be
 
 test('test website chronology retains the merged and deployed product rounds, with truthful channel dates',()=>{
  const entries=publicUpdates(),testEntries=entries.filter(e=>e.channel==='vercel-test');
- assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[48,47,46,45,44,43,39,38,36,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
- assert.equal(entries.length,44);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
+ assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[49,48,47,46,45,44,43,39,38,36,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
+ assert.equal(entries.length,45);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
  assert.ok(!PREPARED_UPDATES.some(e=>e.id==='foundation-2a'));
  assert.ok(UPDATE_HISTORY.some(e=>e.evidence.pullRequest===22));
@@ -176,7 +176,7 @@ test('runtime chronology evidence contains no removed-feature title while retain
 
 
 test('actual PR39 promotes the existing animal identity once with its exact merge and Vercel timestamp',()=>{
- const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===39),entry=publicUpdates()[6];
+ const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===39),entry=publicUpdates()[7];
  assert.ok(record);assert.equal(record.mergedAt,'2026-10-20T09:39:04Z');
  assert.equal(record.mergeCommit,'6ed2ecfde4680789123905de476bc59b45824857');
  assert.equal(entry.id,'animal-new-species-3-5');assert.equal(entry.evidence.pullRequest,39);
@@ -204,25 +204,25 @@ test('actual PR39 promotes the existing animal identity once with its exact merg
 
 
 test('actual PR43 diagram release appears once only with its exact merge and trusted deployment',()=>{
- const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===43),entries=publicUpdates(),entry=entries.find(e=>e.id==='journey-diagram-clarity-3-5');assert.ok(record);assert.ok(entry);assert.equal(entries[5].id,entry.id);assert.equal(entries.filter(e=>e.id===entry.id).length,1);assert.equal(entry.evidence.revision,'762a18332e9e05b3e87d554e2219d257ea2ee33c');assert.equal(entry.occurredAt,'2026-10-20T15:32:32Z');assert.equal(entry.availableOn,'2026-10-20');assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));assert.ok(entry.links.some(l=>l.hash==='journeys'));
+ const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===43),entries=publicUpdates(),entry=entries.find(e=>e.id==='journey-diagram-clarity-3-5');assert.ok(record);assert.ok(entry);assert.equal(entries[6].id,entry.id);assert.equal(entries.filter(e=>e.id===entry.id).length,1);assert.equal(entry.evidence.revision,'762a18332e9e05b3e87d554e2219d257ea2ee33c');assert.equal(entry.occurredAt,'2026-10-20T15:32:32Z');assert.equal(entry.availableOn,'2026-10-20');assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));assert.ok(entry.links.some(l=>l.hash==='journeys'));
  const missing=structuredClone(record);missing.deploymentStatuses=[];assert.equal(testUpdate(missing,entry).status,'prepared');const pending=structuredClone(record);pending.deploymentStatuses=pending.deploymentStatuses.filter(s=>s.state==='pending');assert.equal(confirmedTestDeployment(pending),null);const excluded={...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(s=>s!==record.mergeCommit)};assert.equal(confirmedTestDeployment(record,excluded),null);
 });
 
 test('actual PR44 source discovery retains exact merge and Vercel evidence after optical delivery',()=>{
- const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===44),entries=publicUpdates(),entry=entries[4];
+ const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===44),entries=publicUpdates(),entry=entries[5];
  assert.equal(entry.id,'historical-source-discovery-3-5');assert.equal(entry.evidence.pullRequest,44);assert.equal(entry.evidence.revision,'64d45a3c0e73b5fba79e0746b91089f741aae457');assert.equal(entry.occurredAt,'2026-10-20T18:05:44Z');assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);assert.equal(entries.filter(e=>e.id===entry.id).length,1);assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));
  const changed=structuredClone(record);changed.deploymentStatuses=changed.deploymentStatuses.filter(s=>s.state!=='success');assert.equal(confirmedTestDeployment(changed),null);assert.equal(testUpdate(changed,entry).status,'prepared');
 });
 
 test('actual PR45 optical delivery remains confirmed with exact merged ancestry and trusted Vercel success',()=>{
- const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===45),entries=publicUpdates(),entry=entries[3];assert.ok(record);assert.equal(entries.length,44);assert.equal(entry.id,'optics-learning-3-5');assert.equal(entry.evidence.pullRequest,45);assert.equal(entry.availableOn,'2026-10-21');assert.equal(entry.confirmedOn,'2026-10-21');assert.equal(entry.evidence.revision,"9560760e114d9398f871c0f4033832df85df55df");assert.equal(entry.occurredAt,"2026-10-20T22:39:14Z");assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);assert.equal(entries.filter(e=>e.id===entry.id).length,1);assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));assert.ok(entry.links.some(l=>l.hash==='world'));
+ const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===45),entries=publicUpdates(),entry=entries[4];assert.ok(record);assert.equal(entries.length,45);assert.equal(entry.id,'optics-learning-3-5');assert.equal(entry.evidence.pullRequest,45);assert.equal(entry.availableOn,'2026-10-21');assert.equal(entry.confirmedOn,'2026-10-21');assert.equal(entry.evidence.revision,"9560760e114d9398f871c0f4033832df85df55df");assert.equal(entry.occurredAt,"2026-10-20T22:39:14Z");assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);assert.equal(entries.filter(e=>e.id===entry.id).length,1);assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));assert.ok(entry.links.some(l=>l.hash==='world'));
  const missing=structuredClone(record);missing.deploymentStatuses=[];assert.equal(confirmedTestDeployment(missing),null);assert.equal(testUpdate(missing,entry).status,'prepared');const pending=structuredClone(record);pending.deploymentStatuses=pending.deploymentStatuses.filter(s=>s.state==='pending');assert.equal(confirmedTestDeployment(pending),null);const excluded={...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(s=>s!==record.mergeCommit)};assert.equal(confirmedTestDeployment(record,excluded),null);
 });
 
 
 test('actual PR46 saved-round repair remains confirmed with its real merge and Vercel evidence',()=>{
- const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===46),entries=publicUpdates(),entry=entries[2];
- assert.ok(record);assert.equal(entries.length,44);assert.equal(entry.id,'animal-saved-rounds-3-5');assert.equal(entry.evidence.pullRequest,46);
+ const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===46),entries=publicUpdates(),entry=entries[3];
+ assert.ok(record);assert.equal(entries.length,45);assert.equal(entry.id,'animal-saved-rounds-3-5');assert.equal(entry.evidence.pullRequest,46);
  assert.equal(record.mergeCommit,'3bd78b4b803a235791b045732abe423d2f8820eb');assert.equal(entry.evidence.revision,record.mergeCommit);
  assert.equal(entry.occurredAt,'2026-10-21T06:37:35Z');assert.equal(entry.availableOn,'2026-10-21');assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);
  assert.equal(entries.filter(e=>e.id===entry.id).length,1);assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));assert.ok(entry.links.some(l=>l.hash==='games'));
@@ -233,14 +233,20 @@ test('actual PR46 saved-round repair remains confirmed with its real merge and V
 
 
 test('actual PR47 geography delivery is newest only with trusted success and exact target ancestry',()=>{
- const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===47),entries=publicUpdates(),entry=entries[1];assert.ok(record);assert.equal(entries.length,44);assert.equal(entry.id,'geography-country-facts-3-5');assert.equal(entry.evidence.pullRequest,47);assert.equal(record.mergeCommit,'0b7bd3b7cf787e154e917343caa7f9be9ecff666');assert.equal(entry.evidence.revision,record.mergeCommit);assert.equal(entry.occurredAt,'2026-10-21T08:56:30Z');assert.equal(updateDate(entry),'21. Oktober 2026 um 10:56:30 MESZ');assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);assert.ok(entry.links.some(l=>l.hash==='globe'));assert.ok(entry.links.some(l=>l.hash==='book'));assert.equal(entries.filter(e=>e.id===entry.id).length,1);
+ const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===47),entries=publicUpdates(),entry=entries[2];assert.ok(record);assert.equal(entries.length,45);assert.equal(entry.id,'geography-country-facts-3-5');assert.equal(entry.evidence.pullRequest,47);assert.equal(record.mergeCommit,'0b7bd3b7cf787e154e917343caa7f9be9ecff666');assert.equal(entry.evidence.revision,record.mergeCommit);assert.equal(entry.occurredAt,'2026-10-21T08:56:30Z');assert.equal(updateDate(entry),'21. Oktober 2026 um 10:56:30 MESZ');assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);assert.ok(entry.links.some(l=>l.hash==='globe'));assert.ok(entry.links.some(l=>l.hash==='book'));assert.equal(entries.filter(e=>e.id===entry.id).length,1);
  const missing=structuredClone(record);missing.deploymentStatuses=[];const pending=testUpdate(missing,entry);assert.equal(pending.status,'prepared');assert.equal(pending.occurredAt,null);assert.deepEqual(pending.links,[]);assert.equal(publicUpdates([pending]).length,0);
  const forged=structuredClone(record);forged.deploymentStatuses[0].creator='untrusted';assert.equal(confirmedTestDeployment(forged),null);const unrelated={...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(c=>c!==record.mergeCommit)};assert.equal(confirmedTestDeployment(record,unrelated),null);
 });
 
 
 test('actual water-weather48 receipt retains every old update and rejects unconfirmed delivery',()=>{
- const entries=publicUpdates(),record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===48),entry=entries[0];
- assert.ok(record);assert.equal(entries.length,44);assert.equal(entry.id,'water-weather-chapter-depth-3-5');assert.equal(entry.evidence.pullRequest,48);assert.equal(record.mergeCommit,'bca35334954676078d3fa45b1563979507c4f2c4');assert.equal(entry.evidence.revision,record.mergeCommit);assert.equal(entry.occurredAt,'2026-10-21T10:35:41Z');assert.equal(updateDate(entry),'21. Oktober 2026 um 12:35:41 MESZ');assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);assert.equal(entries.filter(e=>e.id===entry.id).length,1);assert.ok(entry.links.some(l=>l.hash==='journeys'));assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));
+ const entries=publicUpdates(),record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===48),entry=entries[1];
+ assert.ok(record);assert.equal(entries.length,45);assert.equal(entry.id,'water-weather-chapter-depth-3-5');assert.equal(entry.evidence.pullRequest,48);assert.equal(record.mergeCommit,'bca35334954676078d3fa45b1563979507c4f2c4');assert.equal(entry.evidence.revision,record.mergeCommit);assert.equal(entry.occurredAt,'2026-10-21T10:35:41Z');assert.equal(updateDate(entry),'21. Oktober 2026 um 12:35:41 MESZ');assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);assert.equal(entries.filter(e=>e.id===entry.id).length,1);assert.ok(entry.links.some(l=>l.hash==='journeys'));assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));
  for(const mutate of [r=>{r.mergedAt=null;},r=>{r.deploymentStatuses=[];},r=>{r.deploymentStatuses[0].state='pending';},r=>{r.deploymentStatuses[0].creator='untrusted-user';}]){const changed=structuredClone(record);mutate(changed);assert.equal(confirmedTestDeployment(changed),null);const unavailable=testUpdate(changed,entry);assert.equal(unavailable.status,'prepared');assert.deepEqual(unavailable.links,[]);}
+});
+
+
+test('actual PR49 seasons-ocean delivery preserves all prior updates and rejects incomplete evidence',()=>{
+ const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===49),entries=publicUpdates(),entry=entries[0];assert.ok(record);assert.equal(entries.length,45);assert.equal(entry.id,'seasons-ocean-chapter-depth-3-5');assert.equal(entry.evidence.pullRequest,49);assert.equal(record.mergeCommit,'a67e52390c7ef6cfac3857bdd1cfa954e968cd3a');assert.equal(entry.evidence.revision,record.mergeCommit);assert.equal(entry.occurredAt,'2026-10-21T12:18:38Z');assert.equal(updateDate(entry),'21. Oktober 2026 um 14:18:38 MESZ');assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);assert.equal(entries.filter(e=>e.id===entry.id).length,1);assert.ok(entry.links.some(l=>l.hash==='journeys'));assert.ok(!PREPARED_UPDATES.some(e=>e.id===entry.id));
+ for(const mutate of[r=>{r.mergedAt=null;},r=>{r.deploymentStatuses=[];},r=>{r.deploymentStatuses[0].state='pending';},r=>{r.deploymentStatuses[0].creator='untrusted-user';}]){const changed=structuredClone(record);mutate(changed);assert.equal(confirmedTestDeployment(changed),null);const unavailable=testUpdate(changed,entry);assert.equal(unavailable.status,'prepared');assert.deepEqual(unavailable.links,[]);}
 });

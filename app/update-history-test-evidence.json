@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "bca35334954676078d3fa45b1563979507c4f2c4",
+    "commit": "a67e52390c7ef6cfac3857bdd1cfa954e968cd3a",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -43,7 +43,8 @@
       "9560760e114d9398f871c0f4033832df85df55df",
       "3bd78b4b803a235791b045732abe423d2f8820eb",
       "0b7bd3b7cf787e154e917343caa7f9be9ecff666",
-      "bca35334954676078d3fa45b1563979507c4f2c4"
+      "bca35334954676078d3fa45b1563979507c4f2c4",
+      "a67e52390c7ef6cfac3857bdd1cfa954e968cd3a"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -1077,6 +1078,37 @@
           "createdAt": "2026-10-21T10:35:22Z",
           "updatedAt": "2026-10-21T10:35:22Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/2S1jeqPNhQq6iDUmnv7cA1n8CsBX"
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "title": "Jahreszeiten und Meere: Kapitel und Modelle verständlich vertiefen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/49",
+      "base": "test-live",
+      "mergedAt": "2026-10-21T12:18:14Z",
+      "mergeCommit": "a67e52390c7ef6cfac3857bdd1cfa954e968cd3a",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/a67e52390c7ef6cfac3857bdd1cfa954e968cd3a/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56885181776,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-21T12:18:38Z",
+          "updatedAt": "2026-10-21T12:18:38Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/8ZxGvZpX7imxkvdktVGdetiWJU6j"
+        },
+        {
+          "id": 56885155772,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-21T12:18:17Z",
+          "updatedAt": "2026-10-21T12:18:17Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/8ZxGvZpX7imxkvdktVGdetiWJU6j"
         }
       ]
     }
