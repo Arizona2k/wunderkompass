@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "checkedOn": "2026-10-20",
+  "checkedOn": "2026-10-21",
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "64d45a3c0e73b5fba79e0746b91089f741aae457",
+    "commit": "9560760e114d9398f871c0f4033832df85df55df",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -39,7 +39,8 @@
       "6ed2ecfde4680789123905de476bc59b45824857",
       "2ee8e88ceb8d3449fe193e1b282d5fcb21d4d9f8",
       "762a18332e9e05b3e87d554e2219d257ea2ee33c",
-      "64d45a3c0e73b5fba79e0746b91089f741aae457"
+      "64d45a3c0e73b5fba79e0746b91089f741aae457",
+      "9560760e114d9398f871c0f4033832df85df55df"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -959,6 +960,37 @@
           "createdAt": "2026-10-20T18:05:30Z",
           "updatedAt": "2026-10-20T18:05:30Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/CgYk15KWKLnusiXCjiPvHyd55JEp"
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "title": "Optik entdecken: Kamera, Fernrohr und Mikroskop mit erhaltenen Spielständen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/45",
+      "base": "test-live",
+      "mergedAt": "2026-10-20T22:39:00Z",
+      "mergeCommit": "9560760e114d9398f871c0f4033832df85df55df",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/9560760e114d9398f871c0f4033832df85df55df/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56838825602,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-20T22:39:14Z",
+          "updatedAt": "2026-10-20T22:39:14Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/Z9b8v48GnjqvpitcYjAK7n2ekVfW"
+        },
+        {
+          "id": 56838813627,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-20T22:39:04Z",
+          "updatedAt": "2026-10-20T22:39:04Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/Z9b8v48GnjqvpitcYjAK7n2ekVfW"
         }
       ]
     }

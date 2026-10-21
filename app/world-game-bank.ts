@@ -3,11 +3,20 @@ import type {WorldTopic,WorldQuestion} from './world-types';
 const TOPICS=CATALOG as WorldTopic[];
 type GameItem=WorldQuestion & {id:string;topic:string;image?:string};
 const question=(prompt:string,correct:string,wrong:string[],why:string):WorldQuestion=>({prompt,answers:[correct,...wrong],correct:0,why});
+// Recognition questions can keep older real topic names as distractors. Factual
+// choices in the other games remain tied to the current question's answer set.
+export function validWorldGameOrder(value:unknown,current:GameItem,pool:GameItem[],gameId?:string):value is string[]{
+ if(!Array.isArray(value)||value.length!==current.answers.length||new Set(value).size!==value.length||!value.every(answer=>typeof answer==='string'))return false;
+ if(value.every(answer=>current.answers.includes(answer)))return true;
+ if(!gameId||!['animal-detective','people','technology'].includes(gameId)||!value.includes(current.answers[current.correct]))return false;
+ const names=new Set(pool.map(question=>question.answers[question.correct]));
+ return value.every(answer=>names.has(answer));
+}
 // A growing pool must not invalidate the entire saved order map. Preserve
 // unrelated/future fields and repair only a current question's invalid order.
-export function restoreWorldGameOrders(value:unknown,fallback:Record<string,unknown>,pool:GameItem[]):Record<string,unknown>{
+export function restoreWorldGameOrders(value:unknown,fallback:Record<string,unknown>,pool:GameItem[],gameId?:string):Record<string,unknown>{
  const restored={...fallback,...(value&&typeof value==='object'&&!Array.isArray(value)?value as Record<string,unknown>:{})};
- for(const question of pool){const order=restored[question.id];if(!Array.isArray(order)||order.length!==question.answers.length||new Set(order).size!==question.answers.length||!order.every(answer=>typeof answer==='string'&&question.answers.includes(answer)))restored[question.id]=fallback[question.id];}
+ for(const question of pool)if(!validWorldGameOrder(restored[question.id],question,pool,gameId))restored[question.id]=fallback[question.id];
  return restored;
 }
 export function worldGameBank(id:string):GameItem[]{const animals=TOPICS.filter(t=>t.animal),people=TOPICS.filter(t=>t.person),invent=TOPICS.filter(t=>t.invention),historicalInventions=invent.filter(t=>!t.invention!.walkthrough);const q=(t:WorldTopic,q:WorldQuestion,image?:string):GameItem=>({...q,id:t.id,topic:t.id,...(image?{image}: {})});

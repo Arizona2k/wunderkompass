@@ -1,0 +1,293 @@
+{
+  "sourceCommit": "0e5e4d4ece35d4a80dc79764c690c1633b2e0988",
+  "animalDetective": [
+    {
+      "prompt": "Wer bin ich? Mit dem Rüssel kann er riechen, greifen und Wasser ins Maul bringen. An der Rüsselspitze sitzen zwei kleine Fortsätze wie Finger.",
+      "answers": [
+        "Afrikanischer Savannenelefant",
+        "Großer Panda",
+        "Kaiserpinguin"
+      ],
+      "correct": 0,
+      "why": "Er lebt in Savannen und offenen Wäldern Afrikas, zum Beispiel in Botswana, Tansania und Kenia.",
+      "id": "animal-african-savanna-elephant",
+      "topic": "animal-african-savanna-elephant"
+    },
+    {
+      "prompt": "Wer bin ich? Beim Jagen können sie ihre Beute von verschiedenen Seiten überraschen. Ein Löwenbrüllen kann man bis zu etwa 8 Kilometer weit hören.",
+      "answers": [
+        "Löwe",
+        "Westlicher Flachlandgorilla",
+        "Blauwal"
+      ],
+      "correct": 0,
+      "why": "Löwen leben vor allem in afrikanischen Savannen und offenen Wäldern. Eine kleine Population lebt in Indien.",
+      "id": "animal-lion",
+      "topic": "animal-lion"
+    },
+    {
+      "prompt": "Wer bin ich? Geparden können für kurze Zeit sehr schnell sprinten. Geparden können zirpen – das klingt ein bisschen wie ein Vogel.",
+      "answers": [
+        "Gepard",
+        "Borneo-Orang-Utan",
+        "Großer Tümmler"
+      ],
+      "correct": 0,
+      "why": "Geparden brauchen viel Platz. Sie leben zum Beispiel in Savannen und Grasländern Namibias, Botswanas, Kenias und Tansanias.",
+      "id": "animal-cheetah",
+      "topic": "animal-cheetah"
+    },
+    {
+      "prompt": "Wer bin ich? Ein Tiger kann sich leise an seine Beute anschleichen. Bengaltiger sind gute Schwimmer und kommen auch in Feuchtgebieten zurecht.",
+      "answers": [
+        "Bengaltiger",
+        "Eisbär",
+        "Orca"
+      ],
+      "correct": 0,
+      "why": "Bengaltiger leben in Indien, Nepal, Bhutan und Bangladesch – in Wäldern, Grasland und auch Mangroven.",
+      "id": "animal-bengal-tiger",
+      "topic": "animal-bengal-tiger"
+    },
+    {
+      "prompt": "Wer bin ich? Mit der langen Zunge erreichen sie Blätter zwischen dornigen Zweigen. Trotz des langen Halses haben Giraffen sieben Halswirbel – genau wie Menschen.",
+      "answers": [
+        "Giraffe",
+        "Kaiserpinguin",
+        "Gewöhnlicher Krake"
+      ],
+      "correct": 0,
+      "why": "Giraffen leben in afrikanischen Savannen und offenen Wäldern. Netzgiraffen leben zum Beispiel im Norden Kenias.",
+      "id": "animal-giraffe",
+      "topic": "animal-giraffe"
+    },
+    {
+      "prompt": "Wer bin ich? Starke Zähne und Kiefer helfen ihnen, harten Bambus zu zerbeißen. Ein besonderer Handgelenkknochen funktioniert wie ein extra Daumen und hält den Bambus fest.",
+      "answers": [
+        "Großer Panda",
+        "Blauwal",
+        "Grüne Meeresschildkröte"
+      ],
+      "correct": 0,
+      "why": "Pandas leben in kühlen Bergwäldern Chinas, zum Beispiel in Sichuan. Dort wächst viel Bambus.",
+      "id": "animal-giant-panda",
+      "topic": "animal-giant-panda"
+    },
+    {
+      "prompt": "Wer bin ich? Beim Gehen auf allen vieren stützt er sich auf die Fingerknöchel. Jeder Gorilla hat ein eigenes Nasenmuster – wie einen persönlichen Abdruck.",
+      "answers": [
+        "Westlicher Flachlandgorilla",
+        "Großer Tümmler",
+        "Rotes Riesenkänguru"
+      ],
+      "correct": 0,
+      "why": "Er lebt in Regen- und Sumpfwäldern im Kongobecken, zum Beispiel in Gabun und der Republik Kongo.",
+      "id": "animal-western-lowland-gorilla",
+      "topic": "animal-western-lowland-gorilla"
+    },
+    {
+      "prompt": "Wer bin ich? Ihre langen Arme und Greifhände helfen beim Klettern in den Bäumen. Zum Schlafen bauen sie sich meist ein neues Nest aus Ästen und Blättern.",
+      "answers": [
+        "Borneo-Orang-Utan",
+        "Orca",
+        "Koala"
+      ],
+      "correct": 0,
+      "why": "Er lebt nur auf Borneo, besonders in Tieflandregenwäldern und Sumpfwäldern.",
+      "id": "animal-bornean-orangutan",
+      "topic": "animal-bornean-orangutan"
+    },
+    {
+      "prompt": "Wer bin ich? Große Tatzen helfen beim Laufen auf Eis und beim Schwimmen. Sein Fell sieht weiß aus, aber die einzelnen Haare sind durchsichtig.",
+      "answers": [
+        "Eisbär",
+        "Gewöhnlicher Krake",
+        "Jaguar"
+      ],
+      "correct": 0,
+      "why": "Eisbären leben in der Arktis auf Meereis und an Küsten rund um den Nordpol.",
+      "id": "animal-polar-bear",
+      "topic": "animal-polar-bear"
+    },
+    {
+      "prompt": "Wer bin ich? Er kann tief tauchen, um im Meer Nahrung zu finden. Der Vater hält das Ei auf seinen Füßen warm, während er es ausbrütet.",
+      "answers": [
+        "Kaiserpinguin",
+        "Grüne Meeresschildkröte",
+        "Westliche Honigbiene"
+      ],
+      "correct": 0,
+      "why": "Er lebt an den Küsten der Antarktis. Viele Kolonien brüten auf festem Meereis.",
+      "id": "animal-emperor-penguin",
+      "topic": "animal-emperor-penguin"
+    },
+    {
+      "prompt": "Wer bin ich? Barten im Maul halten Krill zurück, während das Wasser herausgedrückt wird. Der Blauwal ist das größte Tier der Erde.",
+      "answers": [
+        "Blauwal",
+        "Rotes Riesenkänguru",
+        "Axolotl"
+      ],
+      "correct": 0,
+      "why": "Blauwale leben in allen Ozeanen außer dem Arktischen Ozean, zum Beispiel vor Kalifornien.",
+      "id": "animal-blue-whale",
+      "topic": "animal-blue-whale"
+    },
+    {
+      "prompt": "Wer bin ich? Mit Klicklauten und deren Echo können sie Nahrung im Wasser orten. Sie kauen ihre Fische meist nicht: Sie greifen sie mit den Zähnen und schlucken sie ganz.",
+      "answers": [
+        "Großer Tümmler",
+        "Koala",
+        "Walhai"
+      ],
+      "correct": 0,
+      "why": "Er lebt in tropischen und gemäßigten Meeren, an Küsten und auch weiter draußen – zum Beispiel bei Florida.",
+      "id": "animal-common-bottlenose-dolphin",
+      "topic": "animal-common-bottlenose-dolphin"
+    },
+    {
+      "prompt": "Wer bin ich? Beim Jagen können sie als Team zusammenarbeiten. Orcas gehören zur Delfinfamilie und haben besondere Rufe für ihre Familiengruppe.",
+      "answers": [
+        "Orca",
+        "Jaguar",
+        "Gartenkreuzspinne"
+      ],
+      "correct": 0,
+      "why": "Orcas kommen in allen Ozeanen vor, besonders häufig in kühleren Meeren.",
+      "id": "animal-orca",
+      "topic": "animal-orca"
+    },
+    {
+      "prompt": "Wer bin ich? Er kann Wasser ausstoßen und sich dadurch schnell fortbewegen. Mit seinen Armen kann er nicht nur fühlen, sondern auch chemische Spuren von Nahrung erkennen.",
+      "answers": [
+        "Gewöhnlicher Krake",
+        "Westliche Honigbiene",
+        "Dromedar"
+      ],
+      "correct": 0,
+      "why": "Er lebt an Küsten wärmerer und gemäßigter Meere, zum Beispiel im Mittelmeer und im östlichen Atlantik.",
+      "id": "animal-common-octopus",
+      "topic": "animal-common-octopus"
+    },
+    {
+      "prompt": "Wer bin ich? Weibchen finden zur Eiablage wieder in die Gegend ihres eigenen Geburtsstrands. Auch im Meer muss sie zum Atmen an die Oberfläche kommen.",
+      "answers": [
+        "Grüne Meeresschildkröte",
+        "Axolotl",
+        "Seeadler"
+      ],
+      "correct": 0,
+      "why": "Sie lebt in warmen Meeren, zum Beispiel bei Hawaii. Erwachsene Tiere suchen oft flache Küstengewässer mit Seegras auf.",
+      "id": "animal-green-sea-turtle",
+      "topic": "animal-green-sea-turtle"
+    },
+    {
+      "prompt": "Wer bin ich? Mit den starken Hinterbeinen kann es schnell hüpfen. Die Weibchen sind oft blaugrau, obwohl die Art Rotes Riesenkänguru heißt.",
+      "answers": [
+        "Rotes Riesenkänguru",
+        "Walhai",
+        "Afrikanischer Savannenelefant"
+      ],
+      "correct": 0,
+      "why": "Es lebt im trockenen Inneren Australiens, in Grasland, Buschland und offenen Wäldern.",
+      "id": "animal-red-kangaroo",
+      "topic": "animal-red-kangaroo"
+    },
+    {
+      "prompt": "Wer bin ich? Kräftige Arme und Hände halten sie sicher an Ästen fest. An jeder Hand haben Koalas zwei Finger, die den anderen gegenüberstehen – wie zwei Daumen.",
+      "answers": [
+        "Koala",
+        "Gartenkreuzspinne",
+        "Löwe"
+      ],
+      "correct": 0,
+      "why": "Koalas leben in Eukalyptuswäldern im Osten und Südosten Australiens.",
+      "id": "animal-koala",
+      "topic": "animal-koala"
+    },
+    {
+      "prompt": "Wer bin ich? Sie können gut klettern und schwimmen. Jeder Jaguar hat sein eigenes Fleckenmuster.",
+      "answers": [
+        "Jaguar",
+        "Dromedar",
+        "Gepard"
+      ],
+      "correct": 0,
+      "why": "Jaguare leben in Mittel- und Südamerika, zum Beispiel im Amazonasgebiet und im brasilianischen Pantanal.",
+      "id": "animal-jaguar",
+      "topic": "animal-jaguar"
+    },
+    {
+      "prompt": "Wer bin ich? Beim Blütenbesuch tragen sie Pollen weiter und bestäuben Pflanzen. Mit dem Schwänzeltanz zeigen Arbeiterinnen anderen Bienen den Weg zu guten Blüten.",
+      "answers": [
+        "Westliche Honigbiene",
+        "Seeadler",
+        "Bengaltiger"
+      ],
+      "correct": 0,
+      "why": "Sie stammt aus Europa, Afrika und Vorderasien und wird heute in vielen Ländern gehalten. Wilde Völker nisten oft in Baumhöhlen.",
+      "id": "animal-honey-bee",
+      "topic": "animal-honey-bee"
+    },
+    {
+      "prompt": "Wer bin ich? Mit ihren federartigen Außenkiemen können sie unter Wasser Sauerstoff aufnehmen. Ein verlorenes Bein kann wieder nachwachsen.",
+      "answers": [
+        "Axolotl",
+        "Afrikanischer Savannenelefant",
+        "Giraffe"
+      ],
+      "correct": 0,
+      "why": "Wilde Axolotl leben in den flachen Gewässern und Kanälen von Xochimilco in Mexiko-Stadt.",
+      "id": "animal-axolotl",
+      "topic": "animal-axolotl"
+    },
+    {
+      "prompt": "Wer bin ich? Sein helles Fleckenmuster hilft Forschenden, einzelne Walhaie wiederzuerkennen. Ein Blauwal ist ein Säugetier. Ein Walhai ist trotz seines Namens ein Fisch.",
+      "answers": [
+        "Walhai",
+        "Löwe",
+        "Großer Panda"
+      ],
+      "correct": 0,
+      "why": "Der größte lebende Fisch schwimmt in warmen Meeren. Er ist ein Hai und kein Wal.",
+      "id": "animal-whale-shark",
+      "topic": "animal-whale-shark"
+    },
+    {
+      "prompt": "Wer bin ich? Bewegt sich ein Insekt im Netz, spürt die Spinne die Erschütterung der Fäden. Spinnenseide entsteht im Körper und wird durch kleine Spinnwarzen abgegeben.",
+      "answers": [
+        "Gartenkreuzspinne",
+        "Gepard",
+        "Westlicher Flachlandgorilla"
+      ],
+      "correct": 0,
+      "why": "Du kannst sie auch in unserer Nähe entdecken. Helle Flecken auf dem Rücken bilden oft ein Kreuz.",
+      "id": "animal-garden-cross-spider",
+      "topic": "animal-garden-cross-spider"
+    },
+    {
+      "prompt": "Wer bin ich? Breite, gepolsterte Füße helfen auf Sand. Lange Wimpern schützen die Augen vor Staub. Das Trampeltier ist eine andere Kamelart mit zwei Höckern.",
+      "answers": [
+        "Dromedar",
+        "Bengaltiger",
+        "Borneo-Orang-Utan"
+      ],
+      "correct": 0,
+      "why": "Ein Dromedar besitzt einen Höcker. Menschen halten es in trockenen Regionen Afrikas und Asiens.",
+      "id": "animal-dromedary",
+      "topic": "animal-dromedary"
+    },
+    {
+      "prompt": "Wer bin ich? Junge Seeadler sehen dunkler aus. Das weiße Schwanzgefieder entwickelt sich später. Gleiten spart Flügelschläge. Aufsteigende Luft kann einem großen Vogel beim Höhengewinn helfen.",
+      "answers": [
+        "Seeadler",
+        "Giraffe",
+        "Eisbär"
+      ],
+      "correct": 0,
+      "why": "Dieser große Greifvogel lebt oft an Gewässern. Erwachsene Tiere haben einen weißen Schwanz.",
+      "id": "animal-white-tailed-eagle",
+      "topic": "animal-white-tailed-eagle"
+    }
+  ]
+}

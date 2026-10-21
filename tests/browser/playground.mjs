@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {retainedAnimalRounds} from './animal-game-saves.mjs';
 await import('../../scripts/test-runtime.mjs');
 const {PLAYGROUND_GAMES}=await import('../../app/playground-catalog.ts');
 const {CLASSIC_QUESTIONS,createReasonRound}=await import('../../app/classic-learning.ts');
@@ -20,6 +21,7 @@ async function axe(p,selector){
  assert.deepEqual(result,[],'playground WCAG checks');
 }
 export async function playgroundFlow(browser,base,ready,monitor,report,shots){
+ await retainedAnimalRounds(browser,base,ready,monitor,report,shots);
  for(const [width,height] of [[320,720],[360,800],[390,844],[768,1024],[1024,768],[1440,900],[1920,1080]]){
   const c=await browser.newContext({viewport:{width,height},hasTouch:width<=390,reducedMotion:'reduce',acceptDownloads:true}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
   try{
