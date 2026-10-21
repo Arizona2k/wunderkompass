@@ -4028,8 +4028,53 @@
       "sourceIds": [
         "seasons-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "seasons:0",
+        "level": "Entdecken",
+        "prompt": "Was bezeichnet die Erdachse?",
+        "correctIndex": 2,
+        "correctAnswer": "Eine gedachte Linie der Drehung",
+        "sourceIds": [
+          "seasons-base"
+        ],
+        "countercheck": "NASA SpacePlace tatsächlich ausgewählt gelesen:23,4Grad gegen Bahnsenkrechte, ungefähr gleichbleibende Raumrichtung, nicht jährlich umkippende Achse. Falschen Auftrag einer nicht existierenden Jahresanimation durch vier vorhandene Monatsknöpfe ersetzt. Tatsächliche eigene Modellbedienung zeigt an allen vier Positionen denselben Achswinkel sowie beide Halbkugeln und Gegenprobe ohne Neigung. Größen, Zeiten und Projektion nicht als reale Messung ausgeben.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "seasons:0:1",
@@ -4071,8 +4116,53 @@
       "sourceIds": [
         "seasons-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "seasons:0",
+        "level": "Erklären",
+        "prompt": "Wie bleibt die Achse während eines Jahres ungefähr ausgerichtet?",
+        "correctIndex": 1,
+        "correctAnswer": "In dieselbe Richtung im Raum",
+        "sourceIds": [
+          "seasons-base"
+        ],
+        "countercheck": "NASA SpacePlace tatsächlich ausgewählt gelesen:23,4Grad gegen Bahnsenkrechte, ungefähr gleichbleibende Raumrichtung, nicht jährlich umkippende Achse. Falschen Auftrag einer nicht existierenden Jahresanimation durch vier vorhandene Monatsknöpfe ersetzt. Tatsächliche eigene Modellbedienung zeigt an allen vier Positionen denselben Achswinkel sowie beide Halbkugeln und Gegenprobe ohne Neigung. Größen, Zeiten und Projektion nicht als reale Messung ausgeben.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "seasons:0:2",
@@ -4114,8 +4204,53 @@
       "sourceIds": [
         "seasons-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "seasons:0",
+        "level": "Übertragen",
+        "prompt": "Eine Zeichnung übertreibt die Neigung. Darfst du daraus den echten Winkel messen?",
+        "correctIndex": 0,
+        "correctAnswer": "Nein, dafür brauchst du den angegebenen Maßstab",
+        "sourceIds": [
+          "seasons-base"
+        ],
+        "countercheck": "NASA SpacePlace tatsächlich ausgewählt gelesen:23,4Grad gegen Bahnsenkrechte, ungefähr gleichbleibende Raumrichtung, nicht jährlich umkippende Achse. Falschen Auftrag einer nicht existierenden Jahresanimation durch vier vorhandene Monatsknöpfe ersetzt. Tatsächliche eigene Modellbedienung zeigt an allen vier Positionen denselben Achswinkel sowie beide Halbkugeln und Gegenprobe ohne Neigung. Größen, Zeiten und Projektion nicht als reale Messung ausgeben.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "seasons:1:0",
@@ -4155,10 +4290,57 @@
       "afterHash": "6547a783354e6ac4d6ca03e4013c6cfcc673e01553ba996519383bbb529f13b7",
       "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Suche Deutschland zuerst auf der Nordhalbkugel. Verfolge dann, wie diese Halbkugel in der Juni-Stellung zur Sonne ausgerichtet ist.",
       "sourceIds": [
-        "seasons-base"
+        "seasons-base",
+        "seasons-polar-day"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "seasons:1",
+        "level": "Entdecken",
+        "prompt": "Welche Jahreszeit beginnt in Deutschland um Juni?",
+        "correctIndex": 1,
+        "correctAnswer": "Sommer",
+        "sourceIds": [
+          "seasons-base",
+          "seasons-polar-day"
+        ],
+        "countercheck": "NASA und NOAA-NESDIS ausgewählte20Oct-Stellen: höherer Sonnenstand und längerer heller Tag tragen gemeinsam zur täglichen Energie bei; Deutschland/Nordhalbkugel, keine Temperaturgarantie. Polartagquelle konkret ergänzt, mehrere Monate statt pauschal jeder Ort/jeder Tag. Sachfremde zweite-Sonne-Alternative durch plausible Teilursachen-Verwechslung ersetzt; alter falscher Index2 bleibt falsch. Juniblick zeigt Nordpol zur links gezeichneten Sonne; andere Blickrichtung im Dezember ausdrücklich erklärt.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "seasons:1:1",
@@ -4183,6 +4365,31 @@
         "answers": [
           "Höherer Sonnenstand und längere Tage",
           "Nur weil die Erde dann am nächsten zur Sonne ist",
+          "Nur die Tageslänge zählt; der Sonnenstand ist egal"
+        ],
+        "correct": 0,
+        "hint": "Betrachte zwei Größen getrennt: Wie hoch steht die Sonne, und wie lange bleibt ein Ort am Tag beleuchtet?",
+        "why": "Steileres Sonnenlicht und mehr Tagesstunden tragen zur größeren Energiemenge bei.",
+        "wrong": [
+          "Steileres Sonnenlicht und mehr Tagesstunden tragen zur größeren Energiemenge bei.",
+          "Die Entfernung ist nicht der Hauptgrund der Jahreszeiten.",
+          "Die Tageslänge ist ein Teil der Erklärung. Auch der höhere Sonnenstand beeinflusst, wie viel Sonnenenergie dieselbe Bodenfläche erreicht."
+        ]
+      },
+      "beforeHash": "1804e8ef69b4fea61aba3a4a75548f19c9c31ec98abe5084ce04ca6c5c933550",
+      "afterHash": "6d620615b6e6d7ef46c88adb06188585c4068dac3b9aabecaf7d954f70418f18",
+      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Betrachte zwei Größen getrennt: Wie hoch steht die Sonne, und wie lange bleibt ein Ort am Tag beleuchtet? Unbrauchbare zweite-Sonne-Alternative durch plausible Teilursachen-Verwechslung ersetzt; alter falscher Index2 bleibt falsch.",
+      "sourceIds": [
+        "seasons-base",
+        "seasons-polar-day"
+      ],
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "beforeSeasonsOceanFollowup20261020": {
+        "prompt": "Warum kommt im nördlichen Sommer pro Tag mehr Sonnenenergie an?",
+        "answers": [
+          "Höherer Sonnenstand und längere Tage",
+          "Nur weil die Erde dann am nächsten zur Sonne ist",
           "Weil nachts eine zweite Sonne scheint"
         ],
         "correct": 0,
@@ -4194,14 +4401,53 @@
           "Es gibt keine zweite nächtliche Sonne."
         ]
       },
-      "beforeHash": "1804e8ef69b4fea61aba3a4a75548f19c9c31ec98abe5084ce04ca6c5c933550",
-      "afterHash": "a250be25d44a504a2bd7bb3b9f344ab88162917427683520fd904358ac07d56b",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Betrachte zwei Größen getrennt: Wie hoch steht die Sonne, und wie lange bleibt ein Ort am Tag beleuchtet?",
-      "sourceIds": [
-        "seasons-base"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "previousPendingFollowup20261020": "Current scoped browser/native/cold evidence and final factual/pedagogical countercheck still pending.",
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "seasons:1",
+        "level": "Erklären",
+        "prompt": "Warum kommt im nördlichen Sommer pro Tag mehr Sonnenenergie an?",
+        "correctIndex": 0,
+        "correctAnswer": "Höherer Sonnenstand und längere Tage",
+        "sourceIds": [
+          "seasons-base",
+          "seasons-polar-day"
+        ],
+        "countercheck": "NASA und NOAA-NESDIS ausgewählte20Oct-Stellen: höherer Sonnenstand und längerer heller Tag tragen gemeinsam zur täglichen Energie bei; Deutschland/Nordhalbkugel, keine Temperaturgarantie. Polartagquelle konkret ergänzt, mehrere Monate statt pauschal jeder Ort/jeder Tag. Sachfremde zweite-Sonne-Alternative durch plausible Teilursachen-Verwechslung ersetzt; alter falscher Index2 bleibt falsch. Juniblick zeigt Nordpol zur links gezeichneten Sonne; andere Blickrichtung im Dezember ausdrücklich erklärt.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "seasons:1:2",
@@ -4241,10 +4487,57 @@
       "afterHash": "2f09ae800a31595be843dc0c4ab8a95ee8bdff8ecf555c5062e1bf9f40d511da",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ordne Australien der richtigen Halbkugel zu. Die Jahreszeit ist ein erster Hinweis; konkrete Kleidung hängt zusätzlich vom Wetter am Zielort ab.",
       "sourceIds": [
-        "seasons-base"
+        "seasons-base",
+        "seasons-polar-day"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "seasons:1",
+        "level": "Übertragen",
+        "prompt": "Juni in Australien: Kannst du einfach Deutschlands Sommerkleidung einplanen?",
+        "correctIndex": 2,
+        "correctAnswer": "Nein, dort ist die andere Jahreszeit; Wetter zusätzlich prüfen",
+        "sourceIds": [
+          "seasons-base",
+          "seasons-polar-day"
+        ],
+        "countercheck": "NASA und NOAA-NESDIS ausgewählte20Oct-Stellen: höherer Sonnenstand und längerer heller Tag tragen gemeinsam zur täglichen Energie bei; Deutschland/Nordhalbkugel, keine Temperaturgarantie. Polartagquelle konkret ergänzt, mehrere Monate statt pauschal jeder Ort/jeder Tag. Sachfremde zweite-Sonne-Alternative durch plausible Teilursachen-Verwechslung ersetzt; alter falscher Index2 bleibt falsch. Juniblick zeigt Nordpol zur links gezeichneten Sonne; andere Blickrichtung im Dezember ausdrücklich erklärt.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "seasons:2:0",
@@ -4286,8 +4579,53 @@
       "sourceIds": [
         "seasons-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "seasons:2",
+        "level": "Entdecken",
+        "prompt": "Wie sind in Deutschland die hellen Tagesstunden im Winter gegenüber dem Sommer?",
+        "correctIndex": 0,
+        "correctAnswer": "Kürzer",
+        "sourceIds": [
+          "seasons-base"
+        ],
+        "countercheck": "NASA erklärt gegenläufige Jahreszeiten auf derselben Erde und wechselnden Abstand als nicht primäre Ursache. Dezemberblick zeigt Norden von der Sonne weg, keine Behauptung einer neu gekippten Achse. Zwei falsche Möglichkeiten prüfen nun Abstands- und Tagesdauerverwechslung mit individuell passendem Feedback; richtige Antwort und alte falsche Indizes0/1 unverändert. Dezemberknopf tatsächlich vorhanden, Tageswetter zusätzlich unterscheiden.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "seasons:2:1",
@@ -4310,6 +4648,30 @@
       "after": {
         "prompt": "Welche Erklärung passt zum nördlichen Winter?",
         "answers": [
+          "Nur der größere Sonnenabstand der ganzen Erde",
+          "Gleich langer Tag, nur weniger helles Sonnenlicht",
+          "Niedrigerer Sonnenstand und kürzere Tage"
+        ],
+        "correct": 2,
+        "hint": "Verfolge einen Ort auf der geneigten Kugel durch eine ganze Drehung. Wie lange bleibt er im Licht, und in welchem Winkel fällt es ein?",
+        "why": "Weniger steiles Licht und kürzere Tagesdauer vermindern die tägliche Energiezufuhr.",
+        "wrong": [
+          "Die Entfernung allein erklärt nicht den gleichzeitigen Sommer im Süden und Winter im Norden.",
+          "In Deutschland sind die hellen Wintertage kürzer und der Sonnenstand ist niedriger. Eine einzige veränderte Helligkeit erklärt den Vergleich nicht.",
+          "Weniger steiles Licht und kürzere Tagesdauer vermindern die tägliche Energiezufuhr."
+        ]
+      },
+      "beforeHash": "500c09040b37c9ea9b5368ead4143f431e1b73204e5ebf5bc07c02462aa2e54d",
+      "afterHash": "2b96588e41d6d157a7162245f165e89f895391f01243553665df0e9f0cbc7a73",
+      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Verfolge einen Ort auf der geneigten Kugel durch eine ganze Drehung. Wie lange bleibt er im Licht, und in welchem Winkel fällt es ein? Zwei unmögliche Ablenkungen durch plausible Abstands-/Tagesdauer-Verwechslungen ersetzt; beide alten falschen Indizes bleiben falsch.",
+      "sourceIds": [
+        "seasons-base"
+      ],
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "beforeSeasonsOceanFollowup20261020": {
+        "prompt": "Welche Erklärung passt zum nördlichen Winter?",
+        "answers": [
           "Die Sonne erlischt",
           "Die Erde hört auf sich zu drehen",
           "Niedrigerer Sonnenstand und kürzere Tage"
@@ -4323,14 +4685,52 @@
           "Weniger steiles Licht und kürzere Tagesdauer vermindern die tägliche Energiezufuhr."
         ]
       },
-      "beforeHash": "500c09040b37c9ea9b5368ead4143f431e1b73204e5ebf5bc07c02462aa2e54d",
-      "afterHash": "9f08639f340e82ea746bec8ee6b291cde1b1c808c7a45b89a6ffa13ea9a87d3b",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Verfolge einen Ort auf der geneigten Kugel durch eine ganze Drehung. Wie lange bleibt er im Licht, und in welchem Winkel fällt es ein?",
-      "sourceIds": [
-        "seasons-base"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "previousPendingFollowup20261020": "Current scoped browser/native/cold evidence and final factual/pedagogical countercheck still pending.",
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "seasons:2",
+        "level": "Erklären",
+        "prompt": "Welche Erklärung passt zum nördlichen Winter?",
+        "correctIndex": 2,
+        "correctAnswer": "Niedrigerer Sonnenstand und kürzere Tage",
+        "sourceIds": [
+          "seasons-base"
+        ],
+        "countercheck": "NASA erklärt gegenläufige Jahreszeiten auf derselben Erde und wechselnden Abstand als nicht primäre Ursache. Dezemberblick zeigt Norden von der Sonne weg, keine Behauptung einer neu gekippten Achse. Zwei falsche Möglichkeiten prüfen nun Abstands- und Tagesdauerverwechslung mit individuell passendem Feedback; richtige Antwort und alte falsche Indizes0/1 unverändert. Dezemberknopf tatsächlich vorhanden, Tageswetter zusätzlich unterscheiden.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "seasons:2:2",
@@ -4372,8 +4772,53 @@
       "sourceIds": [
         "seasons-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "seasons:2",
+        "level": "Übertragen",
+        "prompt": "Zwei Halbkugeln haben gleichzeitig gegensätzliche Jahreszeiten. Passt die Entfernung als alleinige Erklärung?",
+        "correctIndex": 1,
+        "correctAnswer": "Nein, beide sind fast gleich weit von der Sonne entfernt",
+        "sourceIds": [
+          "seasons-base"
+        ],
+        "countercheck": "NASA erklärt gegenläufige Jahreszeiten auf derselben Erde und wechselnden Abstand als nicht primäre Ursache. Dezemberblick zeigt Norden von der Sonne weg, keine Behauptung einer neu gekippten Achse. Zwei falsche Möglichkeiten prüfen nun Abstands- und Tagesdauerverwechslung mit individuell passendem Feedback; richtige Antwort und alte falsche Indizes0/1 unverändert. Dezemberknopf tatsächlich vorhanden, Tageswetter zusätzlich unterscheiden.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "seasons:3:0",
@@ -4413,10 +4858,59 @@
       "afterHash": "076853ca5b564fe6e7eaf75c725ca7a2bf96966ad236861302536b2230619776",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Suche die beiden Jahresstellungen, in denen keine Halbkugel besonders zur Sonne geneigt ist. Achte auf das Wort „ungefähr“.",
       "sourceIds": [
-        "seasons-base"
+        "seasons-base",
+        "seasons-equinox",
+        "seasons-climate-zones"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "seasons:3",
+        "level": "Entdecken",
+        "prompt": "Wann sind Tag und Nacht fast überall ungefähr gleich lang?",
+        "correctIndex": 2,
+        "correctAnswer": "Um März und September",
+        "sourceIds": [
+          "seasons-base",
+          "seasons-equinox",
+          "seasons-climate-zones"
+        ],
+        "countercheck": "NWS ausgewählte155–161: Tagundnachtgleiche ungefähr und nicht überall exakt12Stunden; Horizont/Brechung beeinflussen Auf-/Untergang. BOM ausgewählte92–104/114/116–120 stützt örtliche Regen-/Trockenmuster, kein weltweit genaues Zweierschema. Fehlerhafte BOM-Zeile113 (Äquator generell ganzjährig senkrechte Sonne) und NOAA falsche Neigungsreferenz/pauschale exakteTaglänge ausdrücklich nicht übernehmen. Gerade Achse ist nur Projektion, reale23,4Grad bleiben erklärt. Alle beiden Monats-/Halbkugelvergleiche tatsächlich ausführbar.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "seasons:3:1",
@@ -4456,10 +4950,59 @@
       "afterHash": "6d75332428a93e895e2f8a8e99c9bfceee442e2d06c7aaeafad812c91c524501",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche nicht zwei Monate, sondern die gleichzeitige Stellung beider Halbkugeln. Was folgt für ihre jahreszeitlichen Muster?",
       "sourceIds": [
-        "seasons-base"
+        "seasons-base",
+        "seasons-equinox",
+        "seasons-climate-zones"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "seasons:3",
+        "level": "Erklären",
+        "prompt": "März beginnt im Norden der Frühling. Was beginnt gleichzeitig im Süden?",
+        "correctIndex": 1,
+        "correctAnswer": "Herbst",
+        "sourceIds": [
+          "seasons-base",
+          "seasons-equinox",
+          "seasons-climate-zones"
+        ],
+        "countercheck": "NWS ausgewählte155–161: Tagundnachtgleiche ungefähr und nicht überall exakt12Stunden; Horizont/Brechung beeinflussen Auf-/Untergang. BOM ausgewählte92–104/114/116–120 stützt örtliche Regen-/Trockenmuster, kein weltweit genaues Zweierschema. Fehlerhafte BOM-Zeile113 (Äquator generell ganzjährig senkrechte Sonne) und NOAA falsche Neigungsreferenz/pauschale exakteTaglänge ausdrücklich nicht übernehmen. Gerade Achse ist nur Projektion, reale23,4Grad bleiben erklärt. Alle beiden Monats-/Halbkugelvergleiche tatsächlich ausführbar.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "seasons:3:2",
@@ -4499,10 +5042,59 @@
       "afterHash": "de565b005f3976fd52e8522a2e4c79ba1b0cf100f37bbd86e95dcb122dbf3363",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Eine bekannte Einteilung muss nicht jeden Ort gleich gut beschreiben. Welche örtliche Größe unterscheidet Regenzeit und Trockenzeit?",
       "sourceIds": [
-        "seasons-base"
+        "seasons-base",
+        "seasons-equinox",
+        "seasons-climate-zones"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "seasons:3",
+        "level": "Übertragen",
+        "prompt": "Eine tropische Region beschreibt Regen- und Trockenzeiten. Ist das automatisch falsch?",
+        "correctIndex": 0,
+        "correctAnswer": "Nein, passende örtliche Jahresmuster können anders aussehen",
+        "sourceIds": [
+          "seasons-base",
+          "seasons-equinox",
+          "seasons-climate-zones"
+        ],
+        "countercheck": "NWS ausgewählte155–161: Tagundnachtgleiche ungefähr und nicht überall exakt12Stunden; Horizont/Brechung beeinflussen Auf-/Untergang. BOM ausgewählte92–104/114/116–120 stützt örtliche Regen-/Trockenmuster, kein weltweit genaues Zweierschema. Fehlerhafte BOM-Zeile113 (Äquator generell ganzjährig senkrechte Sonne) und NOAA falsche Neigungsreferenz/pauschale exakteTaglänge ausdrücklich nicht übernehmen. Gerade Achse ist nur Projektion, reale23,4Grad bleiben erklärt. Alle beiden Monats-/Halbkugelvergleiche tatsächlich ausführbar.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "seasons:4:0",
@@ -4544,8 +5136,53 @@
       "sourceIds": [
         "seasons-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "seasons:4",
+        "level": "Entdecken",
+        "prompt": "Welche Bewegung erklärt Tag und Nacht?",
+        "correctIndex": 1,
+        "correctAnswer": "Drehung um die eigene Achse",
+        "sourceIds": [
+          "seasons-base"
+        ],
+        "countercheck": "Tägliche Drehung und jährlicher Umlauf samt Achsneigung als getrennte Ursachen und Handbewegungen erhalten. Schema besitzt jetzt tatsächlich eine geneigte Achse und je Bewegung eine eigene Pfeilspitze, ausdrücklich kein Winkelmaßstab. Letzte Gegenlese präzisiert unbedingte Energiebehauptung: Tageslänge, Sonnenstand und tatsächliches Wetter unterscheiden. Nur dieses letzte Faktenfeld nach breiter Abnahme geändert, acht aktuelle Fälle und aktuelles native640/320/echtesKaltoffline geprüft. Echten Backfokusverlust nach day entdeckt, vor Elternsichtbarkeit zu früher Restore; bestehender Sichtbarkeitseffekt eng für journeys ergänzt, aktuelle Rückwege grün, keine Router-/Speicherumschreibung.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "seasons:4:1",
@@ -4587,8 +5224,53 @@
       "sourceIds": [
         "seasons-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "seasons:4",
+        "level": "Erklären",
+        "prompt": "Was erklärt den jährlichen Jahreszeitenwechsel?",
+        "correctIndex": 0,
+        "correctAnswer": "Sonnenumlauf mit geneigter Achse",
+        "sourceIds": [
+          "seasons-base"
+        ],
+        "countercheck": "Tägliche Drehung und jährlicher Umlauf samt Achsneigung als getrennte Ursachen und Handbewegungen erhalten. Schema besitzt jetzt tatsächlich eine geneigte Achse und je Bewegung eine eigene Pfeilspitze, ausdrücklich kein Winkelmaßstab. Letzte Gegenlese präzisiert unbedingte Energiebehauptung: Tageslänge, Sonnenstand und tatsächliches Wetter unterscheiden. Nur dieses letzte Faktenfeld nach breiter Abnahme geändert, acht aktuelle Fälle und aktuelles native640/320/echtesKaltoffline geprüft. Echten Backfokusverlust nach day entdeckt, vor Elternsichtbarkeit zu früher Restore; bestehender Sichtbarkeitseffekt eng für journeys ergänzt, aktuelle Rückwege grün, keine Router-/Speicherumschreibung.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "seasons:4:2",
@@ -4630,8 +5312,53 @@
       "sourceIds": [
         "seasons-base"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "seasons:4",
+        "level": "Übertragen",
+        "prompt": "Ein Wintertag ist sonnig. Ist deshalb Sommer?",
+        "correctIndex": 2,
+        "correctAnswer": "Nein, Wetter und Jahreszeit sind verschieden",
+        "sourceIds": [
+          "seasons-base"
+        ],
+        "countercheck": "Tägliche Drehung und jährlicher Umlauf samt Achsneigung als getrennte Ursachen und Handbewegungen erhalten. Schema besitzt jetzt tatsächlich eine geneigte Achse und je Bewegung eine eigene Pfeilspitze, ausdrücklich kein Winkelmaßstab. Letzte Gegenlese präzisiert unbedingte Energiebehauptung: Tageslänge, Sonnenstand und tatsächliches Wetter unterscheiden. Nur dieses letzte Faktenfeld nach breiter Abnahme geändert, acht aktuelle Fälle und aktuelles native640/320/echtesKaltoffline geprüft. Echten Backfokusverlust nach day entdeckt, vor Elternsichtbarkeit zu früher Restore; bestehender Sichtbarkeitseffekt eng für journeys ergänzt, aktuelle Rückwege grün, keine Router-/Speicherumschreibung.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "ocean:0:0",
@@ -4659,7 +5386,7 @@
           "Der Arktische Ozean"
         ],
         "correct": 1,
-        "hint": "Vergleiche die benannten Ozeanflächen in der Übersicht. Verwechsle größte Fläche nicht mit größter Tiefe oder bekanntestem Namen.",
+        "hint": "Nutze die Größenangabe im Kapitel: Welcher Ozean wird dort als größter genannt? Unterscheide die größte Fläche von der größten Tiefe.",
         "why": "Der Pazifik ist der größte der fünf hier benannten Ozeane.",
         "wrong": [
           "Der Atlantik ist ein Ozean, aber der Pazifik ist in dieser Übersicht größer.",
@@ -4668,13 +5395,77 @@
         ]
       },
       "beforeHash": "c11380810922d8c3cf92e0197f0efe326783480c28d67efe2b1c1c1af37ff920",
-      "afterHash": "4b57a67783e7a818124cb3301b4272d040b19b2969ca92e729b2396cae7e0f89",
-      "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche die benannten Ozeanflächen in der Übersicht. Verwechsle größte Fläche nicht mit größter Tiefe oder bekanntestem Namen.",
+      "afterHash": "fd48647e5e323795bddb5d58aa32cf7b3d45366a3bbcf6f4707cd20c51db3eca",
+      "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche die benannten Ozeanflächen in der Übersicht. Verwechsle größte Fläche nicht mit größter Tiefe oder bekanntestem Namen. Hinweis fordert keine nicht vorhandene maßstäbliche Flächenübersicht mehr; vorhandene richtige Antwort erhalten.",
       "sourceIds": [
-        "ocean-base"
+        "ocean-basins",
+        "ocean-sizes"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "beforeSeasonsOceanFollowup20261020": {
+        "prompt": "Welcher benannte Ozean ist der größte?",
+        "answers": [
+          "Der Atlantik",
+          "Der Pazifik",
+          "Der Arktische Ozean"
+        ],
+        "correct": 1,
+        "hint": "Vergleiche die benannten Ozeanflächen in der Übersicht. Verwechsle größte Fläche nicht mit größter Tiefe oder bekanntestem Namen.",
+        "why": "Der Pazifik ist der größte der fünf hier benannten Ozeane.",
+        "wrong": [
+          "Der Atlantik ist ein Ozean, aber der Pazifik ist in dieser Übersicht größer.",
+          "Der Pazifik ist der größte der fünf hier benannten Ozeane.",
+          "Der Arktische Ozean ist in der Übersicht der kleinste, nicht der größte."
+        ]
+      },
+      "previousPendingFollowup20261020": "Current scoped browser/native/cold evidence and final factual/pedagogical countercheck still pending.",
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "ocean:0",
+        "level": "Entdecken",
+        "prompt": "Welcher benannte Ozean ist der größte?",
+        "correctIndex": 1,
+        "correctAnswer": "Der Pazifik",
+        "sourceIds": [
+          "ocean-basins",
+          "ocean-sizes"
+        ],
+        "countercheck": "Individuelle ausgewählte NOAA-Becken-/Größenbelege16Oct beibehalten und gelesen: verbundenes Weltmeer, fünf benannte Regionen als Konvention, Pazifik größter und Arktischer kleinster. Keine Größenschätzung aus dem Korallenfoto und keine nicht vorhandene Flächenübersicht im Hinweis verlangen. Tatsächlicher Globuseinstieg über vorhandenes Mit-der-Weltkugel-starten aktiviert die bedarfsweise Karte; echten Ziel-/Backfokus geprüft. Diese notwendige Nutzeraktion fehlte im ersten zusätzlichen Probe; Fehleroriginal erhalten, keine Produktladezeit erhöht.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "ocean:0:1",
@@ -4714,10 +5505,57 @@
       "afterHash": "8151c7e265461cc64666f6c1a4baf41b9f428d182bbf8df38fea99a2de2b702d",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Stell dir vor, du radierst die eingezeichnete Namensgrenze aus. Welche echte Eigenschaft würde das Wasser daran hindern, sie zu überqueren?",
       "sourceIds": [
-        "ocean-base"
+        "ocean-basins",
+        "ocean-sizes"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "ocean:0",
+        "level": "Erklären",
+        "prompt": "Was passiert an einer vereinbarten Ozeangrenze?",
+        "correctIndex": 0,
+        "correctAnswer": "Das Wasser bleibt verbunden",
+        "sourceIds": [
+          "ocean-basins",
+          "ocean-sizes"
+        ],
+        "countercheck": "Individuelle ausgewählte NOAA-Becken-/Größenbelege16Oct beibehalten und gelesen: verbundenes Weltmeer, fünf benannte Regionen als Konvention, Pazifik größter und Arktischer kleinster. Keine Größenschätzung aus dem Korallenfoto und keine nicht vorhandene Flächenübersicht im Hinweis verlangen. Tatsächlicher Globuseinstieg über vorhandenes Mit-der-Weltkugel-starten aktiviert die bedarfsweise Karte; echten Ziel-/Backfokus geprüft. Diese notwendige Nutzeraktion fehlte im ersten zusätzlichen Probe; Fehleroriginal erhalten, keine Produktladezeit erhöht.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "ocean:0:2",
@@ -4757,10 +5595,57 @@
       "afterHash": "59117d9d1a3e133ec73021cafe739bb4bac68e63b6a80c2bee7c0642a89cc0e7",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Lies die Farben als Legende einer Karte. Belegen unterschiedliche Bezeichnungen automatisch fünf voneinander abgeschlossene Becken?",
       "sourceIds": [
-        "ocean-base"
+        "ocean-basins",
+        "ocean-sizes"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "ocean:0",
+        "level": "Übertragen",
+        "prompt": "Eine Karte zeigt fünf verschiedene Blautöne. Gibt es dadurch fünf getrennte Wasserwelten?",
+        "correctIndex": 2,
+        "correctAnswer": "Nein, Farben helfen beim Benennen",
+        "sourceIds": [
+          "ocean-basins",
+          "ocean-sizes"
+        ],
+        "countercheck": "Individuelle ausgewählte NOAA-Becken-/Größenbelege16Oct beibehalten und gelesen: verbundenes Weltmeer, fünf benannte Regionen als Konvention, Pazifik größter und Arktischer kleinster. Keine Größenschätzung aus dem Korallenfoto und keine nicht vorhandene Flächenübersicht im Hinweis verlangen. Tatsächlicher Globuseinstieg über vorhandenes Mit-der-Weltkugel-starten aktiviert die bedarfsweise Karte; echten Ziel-/Backfokus geprüft. Diese notwendige Nutzeraktion fehlte im ersten zusätzlichen Probe; Fehleroriginal erhalten, keine Produktladezeit erhöht.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "ocean:1:0",
@@ -4800,11 +5685,55 @@
       "afterHash": "99bb4e90277101d5f712444bd7918519efc097f45d0d6ee55a1fd5ffead18da0",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Trenne gedanklich Wasser und die darin gelösten Stoffe. Welcher Bestandteil geht beim beschriebenen Verdunsten in die Luft über?",
       "sourceIds": [
-        "ocean-base",
         "ocean-salt"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "ocean:1",
+        "level": "Entdecken",
+        "prompt": "Was bleibt zurück, wenn salziges Wasser verdunstet?",
+        "correctIndex": 0,
+        "correctAnswer": "Das Salz",
+        "sourceIds": [
+          "ocean-salt"
+        ],
+        "countercheck": "Individuell ausgewählte NOAA-Salzbelege16Oct erhalten: gelöste Land-/Meeresbodenstoffe und Konzentrationsänderung unterscheiden. Eigene Grafik zeigt Flusstransport und getrennten nach oben gerichteten Wasserdampfpfeil; Salz bleibt zurück. Punkte sind ausdrücklich Symbole, keine sichtbaren Körner/Messkonzentrationen. Zwei sachfremde Alternativen durch plausible Dampf-/Stoffzufuhr-Verwechslung ersetzt, beide falschen Indizes erhalten. Keine Verkostung, kein pauschaler Satz über alle gelösten Gase, fehlerhafte alte Quellenstelle Magma-aus-Erdkern nicht übernehmen.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "ocean:1:1",
@@ -4827,6 +5756,30 @@
       "after": {
         "prompt": "Wie gelangen gelöste Stoffe ins Meer?",
         "answers": [
+          "Mit dem Wasserdampf, der Salz aus Flüssen mitnimmt",
+          "Nur durch Verdunstung, ohne dass Stoffe dazukommen",
+          "Unter anderem mit Flüssen aus Gestein"
+        ],
+        "correct": 2,
+        "hint": "Verfolge Wasser vom Land zum Meer. Welche Stoffe kann es unterwegs aus dem Gestein aufnehmen und mitführen?",
+        "why": "Flüsse bringen gelöste Mineralien; auch Meeresbodenprozesse tragen Stoffe bei.",
+        "wrong": [
+          "Bei der beschriebenen Verdunstung bleibt das Salz zurück. Fließendes Wasser kann dagegen gelöste Salze ins Meer bringen.",
+          "Verdunstung kann den Salzgehalt erhöhen, bringt aber bei diesem Vorgang kein neues Salz ins Meer. Gefragt ist der Weg gelöster Stoffe.",
+          "Flüsse bringen gelöste Mineralien; auch Meeresbodenprozesse tragen Stoffe bei."
+        ]
+      },
+      "beforeHash": "dc3a2fadbc2c825138b249f66febe0f199ca2bbe9c069836c3360bee0f615133",
+      "afterHash": "0be5c0f534a32e828ec1ce8004914acfd3c214be5f445126f7a18f39c6016fd2",
+      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Verfolge Wasser vom Land zum Meer. Welche Stoffe kann es unterwegs aus dem Gestein aufnehmen und mitführen? Zwei sachfremde Ablenkungen durch plausible Dampf-/Konzentrationsverwechslungen ersetzt; alte falsche Indizes bleiben falsch.",
+      "sourceIds": [
+        "ocean-salt"
+      ],
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "beforeSeasonsOceanFollowup20261020": {
+        "prompt": "Wie gelangen gelöste Stoffe ins Meer?",
+        "answers": [
           "Nur durch Flaggen auf Schiffen",
           "Weil Meere kein Wasser haben",
           "Unter anderem mit Flüssen aus Gestein"
@@ -4840,15 +5793,52 @@
           "Flüsse bringen gelöste Mineralien; auch Meeresbodenprozesse tragen Stoffe bei."
         ]
       },
-      "beforeHash": "dc3a2fadbc2c825138b249f66febe0f199ca2bbe9c069836c3360bee0f615133",
-      "afterHash": "888f2ff06f9710dcf3272850677b2e428281ccc22b8093296914847ff0cabf61",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Verfolge Wasser vom Land zum Meer. Welche Stoffe kann es unterwegs aus dem Gestein aufnehmen und mitführen?",
-      "sourceIds": [
-        "ocean-base",
-        "ocean-salt"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "previousPendingFollowup20261020": "Current scoped browser/native/cold evidence and final factual/pedagogical countercheck still pending.",
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "ocean:1",
+        "level": "Erklären",
+        "prompt": "Wie gelangen gelöste Stoffe ins Meer?",
+        "correctIndex": 2,
+        "correctAnswer": "Unter anderem mit Flüssen aus Gestein",
+        "sourceIds": [
+          "ocean-salt"
+        ],
+        "countercheck": "Individuell ausgewählte NOAA-Salzbelege16Oct erhalten: gelöste Land-/Meeresbodenstoffe und Konzentrationsänderung unterscheiden. Eigene Grafik zeigt Flusstransport und getrennten nach oben gerichteten Wasserdampfpfeil; Salz bleibt zurück. Punkte sind ausdrücklich Symbole, keine sichtbaren Körner/Messkonzentrationen. Zwei sachfremde Alternativen durch plausible Dampf-/Stoffzufuhr-Verwechslung ersetzt, beide falschen Indizes erhalten. Keine Verkostung, kein pauschaler Satz über alle gelösten Gase, fehlerhafte alte Quellenstelle Magma-aus-Erdkern nicht übernehmen.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "ocean:1:2",
@@ -4888,11 +5878,55 @@
       "afterHash": "66803b542e4f54b4e2836d1ec552dec7ddd7a76c9a4982b9998fd4283a48951c",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ein Stoff kann in einer kleinen Menge vorkommen, ohne sofort aufzufallen. Ist ein schwacher oder fehlender Geschmack ein Nachweis für vollständige Abwesenheit?",
       "sourceIds": [
-        "ocean-base",
         "ocean-salt"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "ocean:1",
+        "level": "Übertragen",
+        "prompt": "Ein Fluss schmeckt nicht wie Meerwasser. Heißt das, er enthält keine gelösten Stoffe?",
+        "correctIndex": 1,
+        "correctAnswer": "Nein, die Mengen können viel geringer sein",
+        "sourceIds": [
+          "ocean-salt"
+        ],
+        "countercheck": "Individuell ausgewählte NOAA-Salzbelege16Oct erhalten: gelöste Land-/Meeresbodenstoffe und Konzentrationsänderung unterscheiden. Eigene Grafik zeigt Flusstransport und getrennten nach oben gerichteten Wasserdampfpfeil; Salz bleibt zurück. Punkte sind ausdrücklich Symbole, keine sichtbaren Körner/Messkonzentrationen. Zwei sachfremde Alternativen durch plausible Dampf-/Stoffzufuhr-Verwechslung ersetzt, beide falschen Indizes erhalten. Keine Verkostung, kein pauschaler Satz über alle gelösten Gase, fehlerhafte alte Quellenstelle Magma-aus-Erdkern nicht übernehmen.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "ocean:2:0",
@@ -4932,10 +5966,59 @@
       "afterHash": "1ad09b3bdf11f6c5065d93581afa2e5100a9232fbfa9bcda09ec05c05d5d0716",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Der vertraute Vergleich mit einer Pflanze kann täuschen. Suche in der Erklärung nach den Lebewesen, aus denen die Koralle aufgebaut ist.",
       "sourceIds": [
-        "ocean-base"
+        "ocean-base",
+        "ocean-coral-symbiosis",
+        "ocean-coral-range"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "ocean:2",
+        "level": "Entdecken",
+        "prompt": "Was sind Korallen?",
+        "correctIndex": 2,
+        "correctAnswer": "Tiere",
+        "sourceIds": [
+          "ocean-base",
+          "ocean-coral-symbiosis",
+          "ocean-coral-range"
+        ],
+        "countercheck": "Ausgewählte NOAA-Polypen-/Algen-/Verbreitungsbelege16Oct erhalten: Tier, Kalkskelett und Algen im Gewebe unterscheiden. Vergrößertes eigenes Steinkorallenbeispiel mit vier eindeutig zugeordneten lesbaren Nummern; Fisch ist anderes Rifftier, keine falsche Gleichsetzung Tier/Skelett oder alleKorallen=warmhell. Lichtnutzung gehört zu Algenpartnern, zwei plausible falsche Verwechslungen erhalten alte falsche Indizes0/2. Freiwillige Handlung passt zum wirklichen neuen Schaubild. Betroffene alte Korallenkarte erhält machbaren Papiervergleich statt Aufforderung zu nicht bereitgestelltem Vergleichsfoto; tatsächlicher Rückweg und Beobachtung dreimal nativ/kalt geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "ocean:2:1",
@@ -4958,6 +6041,32 @@
       "after": {
         "prompt": "Warum benötigen viele riffbildende Korallen Licht?",
         "answers": [
+          "Weil Licht ihr Kalkskelett direkt in Nahrung verwandelt",
+          "Ihre mit ihnen lebenden Algen nutzen Sonnenlicht",
+          "Weil die Korallentiere selbst wie Pflanzen Fotosynthese betreiben"
+        ],
+        "correct": 1,
+        "hint": "Ordne das Licht dem richtigen Partner zu. Welche Rolle spielt die Zusammenarbeit zwischen Korallentieren und bestimmten Algen?",
+        "why": "Viele Korallen leben mit Algen zusammen, die Sonnenlicht nutzen.",
+        "wrong": [
+          "Das Kalkskelett ist nicht der lichtnutzende Partner. Kleine Algen im Gewebe betreiben Fotosynthese und liefern energiereiche Stoffe.",
+          "Viele Korallen leben mit Algen zusammen, die Sonnenlicht nutzen.",
+          "Die Korallentiere sind Tiere. Die mit ihnen lebenden Algen nutzen das Sonnenlicht; beide Partner dürfen nicht verwechselt werden."
+        ]
+      },
+      "beforeHash": "7790bd035edbeefd9296d435e6b057733a4a12ab94c30dfaf6c2edfe0f3e22ad",
+      "afterHash": "72a0b39fe767aa76e9039f51f28a43d607e8f724ccde450ad1c7bfcb08a3574f",
+      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ordne das Licht dem richtigen Partner zu. Welche Rolle spielt die Zusammenarbeit zwischen Korallentieren und bestimmten Algen? Zwei unsinnige Ablenkungen durch plausible Skelett-/Algenpartner-Verwechslungen ersetzt; alte falsche Indizes bleiben falsch.",
+      "sourceIds": [
+        "ocean-base",
+        "ocean-coral-symbiosis",
+        "ocean-coral-range"
+      ],
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "beforeSeasonsOceanFollowup20261020": {
+        "prompt": "Warum benötigen viele riffbildende Korallen Licht?",
+        "answers": [
           "Licht macht Meerwasser immer zu Trinkwasser",
           "Ihre mit ihnen lebenden Algen nutzen Sonnenlicht",
           "Alle Tiere sind Sterne"
@@ -4971,14 +6080,54 @@
           "Ein Tier erzeugt nicht wie ein Stern eigenes Sonnenlicht."
         ]
       },
-      "beforeHash": "7790bd035edbeefd9296d435e6b057733a4a12ab94c30dfaf6c2edfe0f3e22ad",
-      "afterHash": "874b78a3b6da8a771ceafc273af8a32cce912e3ed5d3166300c1d7373626d08b",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ordne das Licht dem richtigen Partner zu. Welche Rolle spielt die Zusammenarbeit zwischen Korallentieren und bestimmten Algen?",
-      "sourceIds": [
-        "ocean-base"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "previousPendingFollowup20261020": "Current scoped browser/native/cold evidence and final factual/pedagogical countercheck still pending.",
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "ocean:2",
+        "level": "Erklären",
+        "prompt": "Warum benötigen viele riffbildende Korallen Licht?",
+        "correctIndex": 1,
+        "correctAnswer": "Ihre mit ihnen lebenden Algen nutzen Sonnenlicht",
+        "sourceIds": [
+          "ocean-base",
+          "ocean-coral-symbiosis",
+          "ocean-coral-range"
+        ],
+        "countercheck": "Ausgewählte NOAA-Polypen-/Algen-/Verbreitungsbelege16Oct erhalten: Tier, Kalkskelett und Algen im Gewebe unterscheiden. Vergrößertes eigenes Steinkorallenbeispiel mit vier eindeutig zugeordneten lesbaren Nummern; Fisch ist anderes Rifftier, keine falsche Gleichsetzung Tier/Skelett oder alleKorallen=warmhell. Lichtnutzung gehört zu Algenpartnern, zwei plausible falsche Verwechslungen erhalten alte falsche Indizes0/2. Freiwillige Handlung passt zum wirklichen neuen Schaubild. Betroffene alte Korallenkarte erhält machbaren Papiervergleich statt Aufforderung zu nicht bereitgestelltem Vergleichsfoto; tatsächlicher Rückweg und Beobachtung dreimal nativ/kalt geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "ocean:2:2",
@@ -5018,10 +6167,59 @@
       "afterHash": "b1c1b0e7632b4ed75cbdcf7535dc1e2e4425b856aad2ab2250269619fcc9ae23",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Lies „viele riffbildende Korallen“ genau. Ist damit eine Eigenschaft ausnahmslos aller Korallen in jeder Meerestiefe behauptet?",
       "sourceIds": [
-        "ocean-base"
+        "ocean-base",
+        "ocean-coral-symbiosis",
+        "ocean-coral-range"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "ocean:2",
+        "level": "Übertragen",
+        "prompt": "Gilt flach, warm und hell für jede Koralle ohne Ausnahme?",
+        "correctIndex": 0,
+        "correctAnswer": "Nein, die Erklärung spricht über viele riffbildende Korallen",
+        "sourceIds": [
+          "ocean-base",
+          "ocean-coral-symbiosis",
+          "ocean-coral-range"
+        ],
+        "countercheck": "Ausgewählte NOAA-Polypen-/Algen-/Verbreitungsbelege16Oct erhalten: Tier, Kalkskelett und Algen im Gewebe unterscheiden. Vergrößertes eigenes Steinkorallenbeispiel mit vier eindeutig zugeordneten lesbaren Nummern; Fisch ist anderes Rifftier, keine falsche Gleichsetzung Tier/Skelett oder alleKorallen=warmhell. Lichtnutzung gehört zu Algenpartnern, zwei plausible falsche Verwechslungen erhalten alte falsche Indizes0/2. Freiwillige Handlung passt zum wirklichen neuen Schaubild. Betroffene alte Korallenkarte erhält machbaren Papiervergleich statt Aufforderung zu nicht bereitgestelltem Vergleichsfoto; tatsächlicher Rückweg und Beobachtung dreimal nativ/kalt geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "ocean:3:0",
@@ -5061,10 +6259,61 @@
       "afterHash": "c7f60fbf7ffd02c6f3f3e660be7825d23e1ff21c6d9e9ace3629b9e1fb9f5f8b",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Stell dir einen Messort weiter unter der Oberfläche vor. Wie verändert sich die Wassersäule, die sich über diesem Ort befindet?",
       "sourceIds": [
-        "ocean-base"
+        "ocean-light",
+        "ocean-pressure",
+        "ocean-depth",
+        "ocean-bioluminescence"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "ocean:3",
+        "level": "Entdecken",
+        "prompt": "Wie verändert sich der Druck mit zunehmender Meerestiefe?",
+        "correctIndex": 1,
+        "correctAnswer": "Er nimmt zu",
+        "sourceIds": [
+          "ocean-light",
+          "ocean-pressure",
+          "ocean-depth",
+          "ocean-bioluminescence"
+        ],
+        "countercheck": "Vier vorhandene konkrete NOAA-Belege16Oct zu Licht/Druck/Tiefe/Biolumineszenz erhalten. Generell lichtarme tiefe Bereiche und höherer Druck, manche Tiere erzeugen Licht, keine Behauptung alleTiereleuchten/allesTiefwasseristgleichkalt. ChallengerungefährelfKilometerunterMeeresoberfläche. Gleich breite qualitative Licht-/Tiefefelder ausdrücklich kein maßstabsgetreues Tiefenprofil. Gute bestehende drei Denkstufen und Rückmeldungen unverändert; tatsächliche Ozean-Wortziel-/Reload-/Backnavigation geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "ocean:3:1",
@@ -5104,10 +6353,61 @@
       "afterHash": "0cb5908c205cef821110cff433476984993752cf73e15cad0ef3d500e25223df",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche die beiden Eigenschaften einzeln: Wie viel Sonnenlicht kommt an, und wie viel Wasser liegt darüber?",
       "sourceIds": [
-        "ocean-base"
+        "ocean-light",
+        "ocean-pressure",
+        "ocean-depth",
+        "ocean-bioluminescence"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "ocean:3",
+        "level": "Erklären",
+        "prompt": "Welche Kombination passt zur Tiefsee?",
+        "correctIndex": 0,
+        "correctAnswer": "Wenig Sonnenlicht und hoher Druck",
+        "sourceIds": [
+          "ocean-light",
+          "ocean-pressure",
+          "ocean-depth",
+          "ocean-bioluminescence"
+        ],
+        "countercheck": "Vier vorhandene konkrete NOAA-Belege16Oct zu Licht/Druck/Tiefe/Biolumineszenz erhalten. Generell lichtarme tiefe Bereiche und höherer Druck, manche Tiere erzeugen Licht, keine Behauptung alleTiereleuchten/allesTiefwasseristgleichkalt. ChallengerungefährelfKilometerunterMeeresoberfläche. Gleich breite qualitative Licht-/Tiefefelder ausdrücklich kein maßstabsgetreues Tiefenprofil. Gute bestehende drei Denkstufen und Rückmeldungen unverändert; tatsächliche Ozean-Wortziel-/Reload-/Backnavigation geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "ocean:3:2",
@@ -5147,10 +6447,61 @@
       "afterHash": "f1bdedd43dd2c8eb719d5313af86c7c0be013639f9769cc98148384ee961b31f",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ein Leuchtkörper kann selbst Licht erzeugen. Muss jede beobachtete Helligkeit denselben Ursprung haben wie das Tageslicht an der Oberfläche?",
       "sourceIds": [
-        "ocean-base"
+        "ocean-light",
+        "ocean-pressure",
+        "ocean-depth",
+        "ocean-bioluminescence"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "ocean:3",
+        "level": "Übertragen",
+        "prompt": "Ein Tier in der Tiefsee erzeugt Licht. Muss dort Sonnenlicht ankommen?",
+        "correctIndex": 2,
+        "correctAnswer": "Nein, manche Lebewesen erzeugen eigenes Licht",
+        "sourceIds": [
+          "ocean-light",
+          "ocean-pressure",
+          "ocean-depth",
+          "ocean-bioluminescence"
+        ],
+        "countercheck": "Vier vorhandene konkrete NOAA-Belege16Oct zu Licht/Druck/Tiefe/Biolumineszenz erhalten. Generell lichtarme tiefe Bereiche und höherer Druck, manche Tiere erzeugen Licht, keine Behauptung alleTiereleuchten/allesTiefwasseristgleichkalt. ChallengerungefährelfKilometerunterMeeresoberfläche. Gleich breite qualitative Licht-/Tiefefelder ausdrücklich kein maßstabsgetreues Tiefenprofil. Gute bestehende drei Denkstufen und Rückmeldungen unverändert; tatsächliche Ozean-Wortziel-/Reload-/Backnavigation geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "ocean:4:0",
@@ -5190,11 +6541,59 @@
       "afterHash": "903abbc63e3a2918e4112ae2af84595937b07788579c8b69f65db3b8a6488d15",
       "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Suche eine Ursache, die auf Erde und Meerwasser wirkt. Der Name eines Ozeans verändert keine Anziehungskraft. Nachkontrolle17.10.: Hinweis an tatsächlich vorhandene Antwortoptionen angepasst beziehungsweise beide Jahresfehler unterschiedlich erklärt. Richtiger Antworttext und Index unverändert.",
       "sourceIds": [
-        "ocean-base",
-        "ocean-currents"
+        "ocean-currents",
+        "ocean-tides",
+        "ocean-waves"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "ocean:4",
+        "level": "Entdecken",
+        "prompt": "Was beeinflusst Ebbe und Flut besonders?",
+        "correctIndex": 0,
+        "correctAnswer": "Die Schwerkraft von Mond und Sonne",
+        "sourceIds": [
+          "ocean-currents",
+          "ocean-tides",
+          "ocean-waves"
+        ],
+        "countercheck": "Vorhandene ausgewählte NOAA-Strömungs-/Gezeiten-/Wellenbelege16Oct weiterverwenden: Wasserweg, Höhenänderung und Wellen-/Teilchenbewegung unterscheiden. Beide gezeichneten Strömungsrichtungen besitzen eigene Pfeilspitzen, keine behauptete vollständige Weltkarte. Beobachtung führt über echte vorhandene Meeresströmungs-zu-Gezeiten-Verbindung zu tatsächlichen Niedrig-/Hochwasserknöpfen; qualitativer Wasserpaketvergleich wird wirklich per Tastatur geändert, Modellgrenze gleicherDruck/keineglobaleStrömungsberechnung erhalten. Mond-/Sonneneinfluss und ortsabhängige Gezeiten bleiben, kein örtlicher Gezeitenkalender.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "ocean:4:1",
@@ -5234,11 +6633,59 @@
       "afterHash": "37cfa5a64361888f4f7fef4d1b5dbd0a49696035afbcdd875f1f26fda264a71a",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Strömung bedeutet bewegtes Wasser. Überlege, welche Eigenschaften und mitgeführten Stoffe sich dadurch ebenfalls verlagern können.",
       "sourceIds": [
-        "ocean-base",
-        "ocean-currents"
+        "ocean-currents",
+        "ocean-tides",
+        "ocean-waves"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "ocean:4",
+        "level": "Erklären",
+        "prompt": "Was transportieren Meeresströmungen unter anderem?",
+        "correctIndex": 2,
+        "correctAnswer": "Wärme und Nährstoffe",
+        "sourceIds": [
+          "ocean-currents",
+          "ocean-tides",
+          "ocean-waves"
+        ],
+        "countercheck": "Vorhandene ausgewählte NOAA-Strömungs-/Gezeiten-/Wellenbelege16Oct weiterverwenden: Wasserweg, Höhenänderung und Wellen-/Teilchenbewegung unterscheiden. Beide gezeichneten Strömungsrichtungen besitzen eigene Pfeilspitzen, keine behauptete vollständige Weltkarte. Beobachtung führt über echte vorhandene Meeresströmungs-zu-Gezeiten-Verbindung zu tatsächlichen Niedrig-/Hochwasserknöpfen; qualitativer Wasserpaketvergleich wird wirklich per Tastatur geändert, Modellgrenze gleicherDruck/keineglobaleStrömungsberechnung erhalten. Mond-/Sonneneinfluss und ortsabhängige Gezeiten bleiben, kein örtlicher Gezeitenkalender.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "ocean:4:2",
@@ -5278,11 +6725,59 @@
       "afterHash": "f140a522531dabfce3fbc13adea6a3ee978eec39f5e342415bc65bdac2d3ca01",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Beobachte im Gedankenmodell einen markierten Wasserpunkt und getrennt davon einen wandernden Wellenberg. Müssen beide denselben Weg zurücklegen?",
       "sourceIds": [
-        "ocean-base",
-        "ocean-currents"
+        "ocean-currents",
+        "ocean-tides",
+        "ocean-waves"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "ocean:4",
+        "level": "Übertragen",
+        "prompt": "Eine Welle wandert weit. Reist jedes Wasserteilchen deshalb dieselbe Strecke?",
+        "correctIndex": 1,
+        "correctAnswer": "Nein, Wellenbewegung und Teilchenweg sind verschieden",
+        "sourceIds": [
+          "ocean-currents",
+          "ocean-tides",
+          "ocean-waves"
+        ],
+        "countercheck": "Vorhandene ausgewählte NOAA-Strömungs-/Gezeiten-/Wellenbelege16Oct weiterverwenden: Wasserweg, Höhenänderung und Wellen-/Teilchenbewegung unterscheiden. Beide gezeichneten Strömungsrichtungen besitzen eigene Pfeilspitzen, keine behauptete vollständige Weltkarte. Beobachtung führt über echte vorhandene Meeresströmungs-zu-Gezeiten-Verbindung zu tatsächlichen Niedrig-/Hochwasserknöpfen; qualitativer Wasserpaketvergleich wird wirklich per Tastatur geändert, Modellgrenze gleicherDruck/keineglobaleStrömungsberechnung erhalten. Mond-/Sonneneinfluss und ortsabhängige Gezeiten bleiben, kein örtlicher Gezeitenkalender.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-before/report.json",
+            "sha256": "6c0ae65af527f7430ec22f6defb627d582281710b15c24343187ab3071d0f17c",
+            "build": "9ad03b0242d6d8e2",
+            "sourceDigest": "93ea60cb46a8bd26673e5b13fd841a5015b20d669ff0a47eda1697093f03996f"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-completion/report.json",
+            "sha256": "19c6be801ed50dce230cb1223caf150ca8b50dbf52d78604f94c45ce38333d91",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "5bbdbfba49e04cd2d1fbd5abf5823e45e5f46efca7ab12a55c366b0cef5e33b8"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-after-v2/failure.json",
+            "sha256": "4e78b64302b8acefd1b8c8c9881cd9bd34ddef516747ef822c51b0cbb7034dd5",
+            "build": "f4a6f2ecdd15125e",
+            "sourceDigest": "4da7d06648bb26f75f20f921112b223d7b2a76c3c07daa9dd09689221a44e267"
+          },
+          "finalFact": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-day-fact-20261020-after/report.json",
+            "sha256": "a4530417ad854fc734bf2efc061f93625747061c758fc15f79c49665203bf964",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-seasons-ocean10-20261020-native-offline-v5/report.json",
+            "sha256": "4e4c2f497af524bc96d278287426e15e20b4c5751e3a6aa9f97fcb1fd7cc3c1e",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "2853f6f3b98884e16376c3eac76cc23a89eccbf5a92c7448fd72875a07cbf0e5"
+          }
+        }
+      }
     },
     {
       "id": "nature:0:0",
@@ -11966,6 +13461,68 @@
       "title": "USGS · Versickern und Grundwasser",
       "url": "https://www.usgs.gov/water-science-school/science/infiltration-and-water-cycle",
       "scope": "Bodenfeuchte und gesättigte Grundwasserzone unterscheiden; keine überall gleichen Fließ- oder Nachbildungszeiten."
+    },
+    "seasons-polar-day": {
+      "title": "NOAA · Sonnenwenden und Polartag",
+      "url": "https://www.nesdis.noaa.gov/about/k-12-education/optical-phenomena/what-solstice"
+    },
+    "seasons-equinox": {
+      "title": "National Weather Service · Sonnenwenden und Tagundnachtgleichen",
+      "url": "https://www.weather.gov/cle/Seasons"
+    },
+    "seasons-climate-zones": {
+      "title": "Bureau of Meteorology · Klimazonen und Regenzeiten",
+      "url": "https://www.bom.gov.au/resources/learn-and-explore/climate-knowledge-centre/australian-climate-zones"
+    },
+    "ocean-basins": {
+      "title": "NOAA · Ein zusammenhängendes Weltmeer",
+      "url": "https://oceanservice.noaa.gov/facts/howmanyoceans.html",
+      "scope": "Ein verbundenes Weltmeer; fünf benannte Regionen und vereinbarte Grenzen."
+    },
+    "ocean-sizes": {
+      "title": "NOAA · Die Größen der Ozeanbecken",
+      "url": "https://oceanservice.noaa.gov/facts/biggestocean.html",
+      "scope": "Rangfolge der fünf Ozeanbecken; Pazifik am größten, Arktischer Ozean am kleinsten."
+    },
+    "ocean-coral-symbiosis": {
+      "title": "NOAA · Korallentiere und ihre Algenpartner",
+      "url": "https://oceanservice.noaa.gov/facts/coral.html",
+      "scope": "Polypen sind Tiere; Kalkskelett und Algenpartnerschaft, nicht alle Korallen sind Kolonien."
+    },
+    "ocean-coral-range": {
+      "title": "NOAA · Flache Riffe und Tiefseekorallen",
+      "url": "https://oceanservice.noaa.gov/education/tutorial_corals/coral05_distribution.html",
+      "scope": "Lichtabhängige warme Flachwasserriffe und langsam wachsende Riffe aus Steinkorallen im kalten dunklen Tiefwasser unterscheiden."
+    },
+    "ocean-light": {
+      "title": "NOAA · Licht im Meer",
+      "url": "https://oceanservice.noaa.gov/facts/light_travel.html",
+      "scope": "Abnehmendes Sonnenlicht mit der Tiefe; verschiedene Lichtzonen statt einer scharfen Grenze für alle Orte."
+    },
+    "ocean-pressure": {
+      "title": "NOAA · Wasserdruck in der Tiefe",
+      "url": "https://oceanservice.noaa.gov/facts/pressure.html",
+      "scope": "Zunehmender hydrostatischer Druck mit der Tiefe; keine Tauch- oder Sicherheitsanleitung."
+    },
+    "ocean-depth": {
+      "title": "NOAA · Wie tief ist das Meer?",
+      "url": "https://oceanservice.noaa.gov/facts/oceandepth.html",
+      "scope": "Challenger Deep im Marianengraben; ungefähr elf Kilometer unter der Meeresoberfläche, kein exakter ewiger Rekordwert."
+    },
+    "ocean-bioluminescence": {
+      "title": "NOAA · Lebewesen erzeugen Licht",
+      "url": "https://oceanservice.noaa.gov/facts/biolum.html",
+      "scope": "Biolumineszenz in verschiedenen marinen Lebensräumen; nicht alle Tiefseetiere leuchten."
+    },
+    "ocean-tides": {
+      "title": "NOAA · Was sind Gezeiten?",
+      "url": "https://oceanservice.noaa.gov/facts/tides.html",
+      "scope": "Schwerkraft von Mond und Sonne und periodische Wasserstandsänderung."
+    },
+    "ocean-waves": {
+      "title": "NOAA · Wellen transportieren Energie",
+      "url": "https://oceanservice.noaa.gov/facts/wavesinocean.html",
+      "scope": "Windwellen und Energieausbreitung; nicht mit Strömung oder einem Tsunami gleichsetzen."
     }
   },
   "sectionReview": {
