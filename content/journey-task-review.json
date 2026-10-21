@@ -10337,10 +10337,57 @@
       "afterHash": "d9e462ba2008105153244792bbee435139c537f73284c04e2d965fe9aeda9596",
       "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Frage bei jedem Namen: Bezeichnet er einen Staat mit politischen Grenzen oder eine große Landregion in unserer Einteilung?",
       "sourceIds": [
-        "continents-base"
+        "continents-convention",
+        "continents-land-connections"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "continents:0",
+        "level": "Entdecken",
+        "prompt": "Welche Zuordnung passt?",
+        "correctIndex": 2,
+        "correctAnswer": "Afrika:Kontinent; Kenia:Land",
+        "sourceIds": [
+          "continents-convention",
+          "continents-land-connections"
+        ],
+        "countercheck": "Actual National Geographic map-policy218–229 andcontinent4–6/42–43 support declaredsevenmodel andlandmass/region distinction. AdditionalAfricaPhysical34–35/60/64 actuallyread supportsAfricanregion/Kenya context, not generic NaturalEarthhomepage alone. Existing correctchaptertexts/3tasks retained. Actual search/reload/sources/threelevels andglobeBack checked; nointroductorygraphic or geopoliticalstatus judgment.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "continents:0:1",
@@ -10380,10 +10427,57 @@
       "afterHash": "7d0c76531650b9cd9fc24013717cd09cd266a73ddfa8a28086d0123ed00fdccc",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Zeichne eine große Landregion und mehrere darin liegende Staatsgebiete. Welche Antwort erlaubt diese beiden Ebenen gleichzeitig?",
       "sourceIds": [
-        "continents-base"
+        "continents-convention",
+        "continents-land-connections"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "continents:0",
+        "level": "Erklären",
+        "prompt": "Können viele Länder auf einem Kontinent liegen?",
+        "correctIndex": 1,
+        "correctAnswer": "Ja",
+        "sourceIds": [
+          "continents-convention",
+          "continents-land-connections"
+        ],
+        "countercheck": "Actual National Geographic map-policy218–229 andcontinent4–6/42–43 support declaredsevenmodel andlandmass/region distinction. AdditionalAfricaPhysical34–35/60/64 actuallyread supportsAfricanregion/Kenya context, not generic NaturalEarthhomepage alone. Existing correctchaptertexts/3tasks retained. Actual search/reload/sources/threelevels andglobeBack checked; nointroductorygraphic or geopoliticalstatus judgment.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "continents:0:2",
@@ -10423,10 +10517,57 @@
       "afterHash": "45c7f3e5cc041aa0fc563f06bd5a4ed8156ac2466c19b9dd8a1f20ddad218d46",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Lies zuerst, welche Zählweise das andere Buch verwendet. Unterschiedliche vereinbarte Gruppierungen sind nicht automatisch fehlerhafte Ortsangaben.",
       "sourceIds": [
-        "continents-base"
+        "continents-convention",
+        "continents-land-connections"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "continents:0",
+        "level": "Übertragen",
+        "prompt": "Ein anderes Buch zählt sechs Kontinente. Ist damit jede seiner Karten falsch?",
+        "correctIndex": 0,
+        "correctAnswer": "Nicht automatisch; erst das Einteilungsmodell prüfen",
+        "sourceIds": [
+          "continents-convention",
+          "continents-land-connections"
+        ],
+        "countercheck": "Actual National Geographic map-policy218–229 andcontinent4–6/42–43 support declaredsevenmodel andlandmass/region distinction. AdditionalAfricaPhysical34–35/60/64 actuallyread supportsAfricanregion/Kenya context, not generic NaturalEarthhomepage alone. Existing correctchaptertexts/3tasks retained. Actual search/reload/sources/threelevels andglobeBack checked; nointroductorygraphic or geopoliticalstatus judgment.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "continents:1:0",
@@ -10466,10 +10607,57 @@
       "afterHash": "1aae6031f14f541be1f2b290e3c4cd2dba85b96de2300163284638d4d3d56e93",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Betrachte Europa und Asien zunächst als zusammenhängende Landfläche. Suche danach den gemeinsamen Namen, statt zwei Staaten zu benennen.",
       "sourceIds": [
-        "continents-base"
+        "continents-land-connections",
+        "continents-convention"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "continents:1",
+        "level": "Entdecken",
+        "prompt": "Wie heißt die gemeinsame Landmasse von Europa und Asien?",
+        "correctIndex": 1,
+        "correctAnswer": "Eurasien",
+        "sourceIds": [
+          "continents-land-connections",
+          "continents-convention"
+        ],
+        "countercheck": "Actual NG mainpolicy226–229 distinguishes conventionalEurope-Asia separation, countries spanningboth andsinglecontinent catalogassignment. Eurasia main43 read. Ownoneconnectedlandregion anddasheddivision replaceunrelatedgenericblobs; no sea orfalsechronological arrows, truecoastline orscaledarea promised. All2states/oldtasks/individualfeedback, actualKontinentbooktarget andreturnfocus verified. Borderobservation usesexistingrealglobecontrols, no nonexistentcountrycolorselector.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "continents:1:1",
@@ -10509,10 +10697,57 @@
       "afterHash": "6a8d5fe0f47b6e15c948904ef16400aca94dac2c3f5fb19049774f6da5529786",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Eine durchgehende Landfläche und historisch verwendete Regionsnamen beantworten unterschiedliche Fragen. Müssen ihre Grenzen identisch begründet sein?",
       "sourceIds": [
-        "continents-base"
+        "continents-land-connections",
+        "continents-convention"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "continents:1",
+        "level": "Erklären",
+        "prompt": "Warum können Europa und Asien trotz Landverbindung getrennt benannt werden?",
+        "correctIndex": 0,
+        "correctAnswer": "Die Einteilung folgt auch Vereinbarungen",
+        "sourceIds": [
+          "continents-land-connections",
+          "continents-convention"
+        ],
+        "countercheck": "Actual NG mainpolicy226–229 distinguishes conventionalEurope-Asia separation, countries spanningboth andsinglecontinent catalogassignment. Eurasia main43 read. Ownoneconnectedlandregion anddasheddivision replaceunrelatedgenericblobs; no sea orfalsechronological arrows, truecoastline orscaledarea promised. All2states/oldtasks/individualfeedback, actualKontinentbooktarget andreturnfocus verified. Borderobservation usesexistingrealglobecontrols, no nonexistentcountrycolorselector.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "continents:1:2",
@@ -10552,10 +10787,57 @@
       "afterHash": "81e8014ddf5249b7cea30f76de65a3347a01e3dbf9e895af06269634fd63a852",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Lege eine politische und eine Kontinentkarte übereinander. Kann ein Staatsgebiet eine vereinbarte regionale Trennlinie überqueren?",
       "sourceIds": [
-        "continents-base"
+        "continents-land-connections",
+        "continents-convention"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "continents:1",
+        "level": "Übertragen",
+        "prompt": "Ein Land reicht nach Europa und Asien. Muss die Karte falsch sein?",
+        "correctIndex": 2,
+        "correctAnswer": "Nein, ein Land kann in beiden Regionen liegen",
+        "sourceIds": [
+          "continents-land-connections",
+          "continents-convention"
+        ],
+        "countercheck": "Actual NG mainpolicy226–229 distinguishes conventionalEurope-Asia separation, countries spanningboth andsinglecontinent catalogassignment. Eurasia main43 read. Ownoneconnectedlandregion anddasheddivision replaceunrelatedgenericblobs; no sea orfalsechronological arrows, truecoastline orscaledarea promised. All2states/oldtasks/individualfeedback, actualKontinentbooktarget andreturnfocus verified. Borderobservation usesexistingrealglobecontrols, no nonexistentcountrycolorselector.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "continents:2:0",
@@ -10595,10 +10877,55 @@
       "afterHash": "d2d737c60c3469923ae0c9c0f7ab2f8a81f9374b0d5475daf14d5a0ef051266c",
       "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Verfolge auf der Karte einen Weg an Land zwischen den beiden großen Landregionen. Welche schmale Verbindung liegt dazwischen?",
       "sourceIds": [
-        "continents-base"
+        "continents-land-connections"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "continents:2",
+        "level": "Entdecken",
+        "prompt": "Welche Region verbindet Nord- und Südamerika an Land?",
+        "correctIndex": 0,
+        "correctAnswer": "Eine schmale Landbrücke",
+        "sourceIds": [
+          "continents-land-connections"
+        ],
+        "countercheck": "NG actualcontinent65/68/74 andAfricaPhysical34–35 read: Panama landconnection andAfricaacrossequator, independentline versusland. Ownconceptboxes deliberatelynotcoastmaps; actualequatorintersectsleftregion andsolidbridge overlapsbothAmericaregions. No exactcontinentalarearatio, globalcountrycount, extremerecord orwildlifedistribution copiedfromquestionablegenerictext. Original3tasks/feedback retained andall3choices/actualglobeBack checked.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "continents:2:1",
@@ -10638,10 +10965,55 @@
       "afterHash": "9f17837dfd39859771a8d62b535e3cb71aa0de2975ddad2dd0fd0dc125026b1e",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Zeichne den Äquator durch Afrika. Welche Teile liegen nördlich und welche südlich dieser gedachten Linie?",
       "sourceIds": [
-        "continents-base"
+        "continents-land-connections"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "continents:2",
+        "level": "Erklären",
+        "prompt": "Was bedeutet, dass Afrika beiderseits des Äquators liegt?",
+        "correctIndex": 2,
+        "correctAnswer": "Ein Teil liegt nördlich, ein Teil südlich",
+        "sourceIds": [
+          "continents-land-connections"
+        ],
+        "countercheck": "NG actualcontinent65/68/74 andAfricaPhysical34–35 read: Panama landconnection andAfricaacrossequator, independentline versusland. Ownconceptboxes deliberatelynotcoastmaps; actualequatorintersectsleftregion andsolidbridge overlapsbothAmericaregions. No exactcontinentalarearatio, globalcountrycount, extremerecord orwildlifedistribution copiedfromquestionablegenerictext. Original3tasks/feedback retained andall3choices/actualglobeBack checked.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "continents:2:2",
@@ -10681,10 +11053,55 @@
       "afterHash": "0aeba60f531d953b48123e14cc20a2b3c54cc7d36d211d569b99c907610b38ad",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche die Größe eines Fotoausschnitts mit der Ausdehnung des gesamten Gebiets. Welche anderen Lebensräume könnten außerhalb des Bildes liegen?",
       "sourceIds": [
-        "continents-base"
+        "continents-land-connections"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "continents:2",
+        "level": "Übertragen",
+        "prompt": "Eine einzige Tieraufnahme soll ganz Amerika beschreiben. Was fehlt?",
+        "correctIndex": 1,
+        "correctAnswer": "Vergleiche verschiedener Landschaften und Lebensräume",
+        "sourceIds": [
+          "continents-land-connections"
+        ],
+        "countercheck": "NG actualcontinent65/68/74 andAfricaPhysical34–35 read: Panama landconnection andAfricaacrossequator, independentline versusland. Ownconceptboxes deliberatelynotcoastmaps; actualequatorintersectsleftregion andsolidbridge overlapsbothAmericaregions. No exactcontinentalarearatio, globalcountrycount, extremerecord orwildlifedistribution copiedfromquestionablegenerictext. Original3tasks/feedback retained andall3choices/actualglobeBack checked.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "continents:3:0",
@@ -10724,10 +11141,59 @@
       "afterHash": "bb929a42ce39b1480a5597f4ec7859ca8deae3d41f17ead08297d7e2e97c9d17",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Suche die Südpolregion und lies, ob dort eine Landmasse liegt. Ein kaltes Foto allein ersetzt die Ortsangabe nicht.",
       "sourceIds": [
-        "continents-base"
+        "continents-convention",
+        "oceania-region",
+        "polar-land-ocean-reference"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "continents:3",
+        "level": "Entdecken",
+        "prompt": "Wo liegt Antarktika?",
+        "correctIndex": 2,
+        "correctAnswer": "Am Südpol",
+        "sourceIds": [
+          "continents-convention",
+          "oceania-region",
+          "polar-land-ocean-reference"
+        ],
+        "countercheck": "NG policy222 andOceania34–35 read forAustraliawithinlargerOceania; NSIDC dated2022selected71–80 only forstableland/ocean geography, no2026icetrend/record imported orcoasttypoline82adopted. OwnnestedregionwithAustraliaand3islandexamples plusseparateAntarcticice-over-landsection replacewronggenericpolarblobs; sampledAustraliacontouractuallyinsideOceaniaellipse. No exactcoast,size,currenticeboundary orcompleteislandinventory claim. Actualemperor-penguindestination andBack checked, old3tasks retained.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "continents:3:1",
@@ -10767,10 +11233,59 @@
       "afterHash": "ade7fb1bccc4c83075aae2d9cdc481a954f351f542cff60db04d3c42888abc1b",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche einen Kontinentnamen mit einer weiter gefassten Region samt Inseln. Prüfe die in diesem Kapitel verwendete Einteilung.",
       "sourceIds": [
-        "continents-base"
+        "continents-convention",
+        "oceania-region",
+        "polar-land-ocean-reference"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "continents:3",
+        "level": "Erklären",
+        "prompt": "Wie hängen Australien und Ozeanien in dieser Erklärung zusammen?",
+        "correctIndex": 1,
+        "correctAnswer": "Ozeanien ist die größere Weltregion mit vielen Inseln",
+        "sourceIds": [
+          "continents-convention",
+          "oceania-region",
+          "polar-land-ocean-reference"
+        ],
+        "countercheck": "NG policy222 andOceania34–35 read forAustraliawithinlargerOceania; NSIDC dated2022selected71–80 only forstableland/ocean geography, no2026icetrend/record imported orcoasttypoline82adopted. OwnnestedregionwithAustraliaand3islandexamples plusseparateAntarcticice-over-landsection replacewronggenericpolarblobs; sampledAustraliacontouractuallyinsideOceaniaellipse. No exactcoast,size,currenticeboundary orcompleteislandinventory claim. Actualemperor-penguindestination andBack checked, old3tasks retained.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "continents:3:2",
@@ -10810,10 +11325,59 @@
       "afterHash": "0e9ad63e4f908166c1b631979b995a6979500077a1be0154a919ded6b4d3c52e",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Eis kann an verschiedenen Orten vorkommen. Welche zusätzliche Angabe zu Lage und Untergrund hilft, den Kontinent zu bestimmen?",
       "sourceIds": [
-        "continents-base"
+        "continents-convention",
+        "oceania-region",
+        "polar-land-ocean-reference"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "continents:3",
+        "level": "Übertragen",
+        "prompt": "Du siehst viel Eis auf einem Foto. Reicht das zum Bestimmen des Kontinents?",
+        "correctIndex": 0,
+        "correctAnswer": "Nein, Ort und Untergrund mitprüfen",
+        "sourceIds": [
+          "continents-convention",
+          "oceania-region",
+          "polar-land-ocean-reference"
+        ],
+        "countercheck": "NG policy222 andOceania34–35 read forAustraliawithinlargerOceania; NSIDC dated2022selected71–80 only forstableland/ocean geography, no2026icetrend/record imported orcoasttypoline82adopted. OwnnestedregionwithAustraliaand3islandexamples plusseparateAntarcticice-over-landsection replacewronggenericpolarblobs; sampledAustraliacontouractuallyinsideOceaniaellipse. No exactcoast,size,currenticeboundary orcompleteislandinventory claim. Actualemperor-penguindestination andBack checked, old3tasks retained.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "continents:4:0",
@@ -10853,11 +11417,55 @@
       "afterHash": "2c45a66d889e73b05ceb1a6c62703b7b05a297ea009b3730b3fe0793b17245fd",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Versuche gedanklich, eine Kugelschale ohne Dehnen oder Schneiden flach auszubreiten. Welche Eigenschaften müssen dabei verändert werden?",
       "sourceIds": [
-        "continents-base",
-        "maps"
+        "map-projection-limits"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "continents:4",
+        "level": "Entdecken",
+        "prompt": "Warum verzerren flache Weltkarten die Erde?",
+        "correctIndex": 1,
+        "correctAnswer": "Eine Kugeloberfläche wird auf eine Fläche übertragen",
+        "sourceIds": [
+          "map-projection-limits"
+        ],
+        "countercheck": "USGS actualmain3–14 read: flatteningcannotpreserveallareas/forms/directions/distances. Owngeometricroundviewandequirectangularraster useSAMEinventedangularisland anddifferentactualgridspacing; notrandomunrelatedlandshapes. Actual5parallelseach/invariantflatspacing/changingspherespacing verified. No flatmap UIbutton invented: observation useschapterdiagram andactualglobe. Existing all3tasks/why/hints retained, relatedshadowtopicBack checked.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "continents:4:1",
@@ -10897,11 +11505,55 @@
       "afterHash": "63fb1627367981b79e7921c2f79973efba906fc3d287057041cc92d7d5ff3ada",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche den polnahen Umriss auf der flachen Karte mit derselben Region auf einer Kugel. Größe im Bild muss kein gleicher Flächenmaßstab sein.",
       "sourceIds": [
-        "continents-base",
-        "maps"
+        "map-projection-limits"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "continents:4",
+        "level": "Erklären",
+        "prompt": "Was kann auf manchen Karten bei polnahen Ländern passieren?",
+        "correctIndex": 0,
+        "correctAnswer": "Sie wirken im Verhältnis besonders groß",
+        "sourceIds": [
+          "map-projection-limits"
+        ],
+        "countercheck": "USGS actualmain3–14 read: flatteningcannotpreserveallareas/forms/directions/distances. Owngeometricroundviewandequirectangularraster useSAMEinventedangularisland anddifferentactualgridspacing; notrandomunrelatedlandshapes. Actual5parallelseach/invariantflatspacing/changingspherespacing verified. No flatmap UIbutton invented: observation useschapterdiagram andactualglobe. Existing all3tasks/why/hints retained, relatedshadowtopicBack checked.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "continents:4:2",
@@ -10941,11 +11593,55 @@
       "afterHash": "2e00e9552878198158d27ed3a0409bf9ec43ef4eba924b3f981763a1003da045",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Lies, ob die Darstellung Flächen bewahrt oder andere Eigenschaften betont. Ein großer Umriss auf irgendeiner Weltkarte reicht als Flächenmessung nicht.",
       "sourceIds": [
-        "continents-base",
-        "maps"
+        "map-projection-limits"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "continents:4",
+        "level": "Übertragen",
+        "prompt": "Welche Prüfung hilft bei einem Flächenvergleich zweier Länder?",
+        "correctIndex": 2,
+        "correctAnswer": "Geeignete Projektion oder tatsächliche Flächenwerte nutzen",
+        "sourceIds": [
+          "map-projection-limits"
+        ],
+        "countercheck": "USGS actualmain3–14 read: flatteningcannotpreserveallareas/forms/directions/distances. Owngeometricroundviewandequirectangularraster useSAMEinventedangularisland anddifferentactualgridspacing; notrandomunrelatedlandshapes. Actual5parallelseach/invariantflatspacing/changingspherespacing verified. No flatmap UIbutton invented: observation useschapterdiagram andactualglobe. Existing all3tasks/why/hints retained, relatedshadowtopicBack checked.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "countries:0:0",
@@ -10985,10 +11681,55 @@
       "afterHash": "459ccb3edb1154574448670008331a78991c48324d62502c7a43fc02ff5ffbce",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ein Beispiel erzählt etwas über eine Auswahl. Welche zusätzliche Information wäre nötig, um eine Aussage über alle Menschen zu begründen?",
       "sourceIds": [
-        "countries-base"
+        "country-cultural-diversity"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "countries:0",
+        "level": "Entdecken",
+        "prompt": "Beschreibt ein Beispielgericht alle Menschen eines Landes?",
+        "correctIndex": 0,
+        "correctAnswer": "Nein",
+        "sourceIds": [
+          "country-cultural-diversity"
+        ],
+        "countercheck": "UNESCO actual108–127 read asnormativeplurality/dignity/individualculturalchoice principle, notempiricalclaimallcitizensshareoneculture. Goodexistinganti-stereotype explanation retained; concreteobservation usesactualMehrüberKenia portraitandqualifiesexample. FullUI/oldtaskchoices/individualfeedback/sourcecontrols andglobeBack checked, nointroductorygraphic ormanufacturednewFlaggenMemory. Existingportraitscope hasdatedroundedexamples, notallcountryfactacceptance.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "countries:0:1",
@@ -11028,10 +11769,55 @@
       "afterHash": "bd6bb32f4eb09deb503b1acb5e7892bbd06389db45278c813e135c8aba77c871",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Stelle mehrere Lebensweisen desselben Landes nebeneinander. Welche Beschreibung lässt diese Unterschiede bestehen, statt alle Menschen gleichzusetzen?",
       "sourceIds": [
-        "countries-base"
+        "country-cultural-diversity"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "countries:0",
+        "level": "Erklären",
+        "prompt": "Was verbessert eine Landesbeschreibung?",
+        "correctIndex": 2,
+        "correctAnswer": "Verschiedene Orte und Perspektiven vergleichen",
+        "sourceIds": [
+          "country-cultural-diversity"
+        ],
+        "countercheck": "UNESCO actual108–127 read asnormativeplurality/dignity/individualculturalchoice principle, notempiricalclaimallcitizensshareoneculture. Goodexistinganti-stereotype explanation retained; concreteobservation usesactualMehrüberKenia portraitandqualifiesexample. FullUI/oldtaskchoices/individualfeedback/sourcecontrols andglobeBack checked, nointroductorygraphic ormanufacturednewFlaggenMemory. Existingportraitscope hasdatedroundedexamples, notallcountryfactacceptance.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "countries:0:2",
@@ -11071,10 +11857,55 @@
       "afterHash": "5db471c84bd3a6101a9bf1446f1c5b51ec3896bca72127c329d7fa2d513a020f",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Frage nach dem Ort und dem Ausschnitt des Fotos. Aus einer Wüstenaufnahme allein ergibt sich noch keine Beschreibung der gesamten Landesfläche.",
       "sourceIds": [
-        "countries-base"
+        "country-cultural-diversity"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "countries:0",
+        "level": "Übertragen",
+        "prompt": "Ein Foto zeigt eine Wüste. Darfst du schreiben, das ganze Land sei Wüste?",
+        "correctIndex": 1,
+        "correctAnswer": "Nur mit weiteren passenden Belegen, nicht aus dem Foto allein",
+        "sourceIds": [
+          "country-cultural-diversity"
+        ],
+        "countercheck": "UNESCO actual108–127 read asnormativeplurality/dignity/individualculturalchoice principle, notempiricalclaimallcitizensshareoneculture. Goodexistinganti-stereotype explanation retained; concreteobservation usesactualMehrüberKenia portraitandqualifiesexample. FullUI/oldtaskchoices/individualfeedback/sourcecontrols andglobeBack checked, nointroductorygraphic ormanufacturednewFlaggenMemory. Existingportraitscope hasdatedroundedexamples, notallcountryfactacceptance.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "countries:1:0",
@@ -11114,10 +11945,57 @@
       "afterHash": "04b3acb3d93017adf4d8c3afabb212ac5e33cda1ec4623604d98b52d4e69b4b0",
       "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Suche in der Länderbeschreibung die Angabe mit der Funktion „Hauptstadt“. Verwechsle sie nicht mit irgendeiner großen deutschen Stadt.",
       "sourceIds": [
-        "countries-base"
+        "canberra-capital-reference",
+        "germany-capital-flag-reference"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "countries:1",
+        "level": "Entdecken",
+        "prompt": "Wie heißt Deutschlands Hauptstadt?",
+        "correctIndex": 2,
+        "correctAnswer": "Berlin",
+        "sourceIds": [
+          "canberra-capital-reference",
+          "germany-capital-flag-reference"
+        ],
+        "countercheck": "ActualNCA9–17/24–29 andGG22main8–13 read forCanberra/Berlin; additionalofficialABS2024–25main59–78 actuallyread withGCCSAdefinition corroboratesSydneyurbanregionlargerthanCanberra, no newpopulationnumbers copiedtoapp. Ownstarforcapitaland2circlecities replacesmisleadingstepsequence; no populationscale. ActualGermany/Australiaportraits showedBerlin/Canberra anddatedareapopulation/visibleflags; all3tasks andoriginalanswers retained.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "countries:1:1",
@@ -11157,10 +12035,57 @@
       "afterHash": "b5e010a5f8a9d1cf82b67847354dc53a7060c4062a416e046aba27779c8d3e64",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche zwei verschiedene Fragen: Wo befindet sich die Hauptstadt, und welche Stadt hat die meisten Einwohner? Müssen die Antworten zusammenfallen?",
       "sourceIds": [
-        "countries-base"
+        "canberra-capital-reference",
+        "germany-capital-flag-reference"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "countries:1",
+        "level": "Erklären",
+        "prompt": "Muss eine Hauptstadt die größte Stadt sein?",
+        "correctIndex": 1,
+        "correctAnswer": "Nein",
+        "sourceIds": [
+          "canberra-capital-reference",
+          "germany-capital-flag-reference"
+        ],
+        "countercheck": "ActualNCA9–17/24–29 andGG22main8–13 read forCanberra/Berlin; additionalofficialABS2024–25main59–78 actuallyread withGCCSAdefinition corroboratesSydneyurbanregionlargerthanCanberra, no newpopulationnumbers copiedtoapp. Ownstarforcapitaland2circlecities replacesmisleadingstepsequence; no populationscale. ActualGermany/Australiaportraits showedBerlin/Canberra anddatedareapopulation/visibleflags; all3tasks andoriginalanswers retained.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "countries:1:2",
@@ -11200,10 +12125,57 @@
       "afterHash": "a7147be8d28077b8059a776d1beffe1afea8f368364d73182e84dd3e78380437",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Bekanntheit ist ein Eindruck, ein Regierungssitz eine belegbare Funktion. Welche Information würde deine Vermutung tatsächlich überprüfen?",
       "sourceIds": [
-        "countries-base"
+        "canberra-capital-reference",
+        "germany-capital-flag-reference"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "countries:1",
+        "level": "Übertragen",
+        "prompt": "Sydney ist bekannt. Reicht Bekanntheit als Beweis, dass es Australiens Hauptstadt ist?",
+        "correctIndex": 0,
+        "correctAnswer": "Nein, Australiens Hauptstadt ist Canberra",
+        "sourceIds": [
+          "canberra-capital-reference",
+          "germany-capital-flag-reference"
+        ],
+        "countercheck": "ActualNCA9–17/24–29 andGG22main8–13 read forCanberra/Berlin; additionalofficialABS2024–25main59–78 actuallyread withGCCSAdefinition corroboratesSydneyurbanregionlargerthanCanberra, no newpopulationnumbers copiedtoapp. Ownstarforcapitaland2circlecities replacesmisleadingstepsequence; no populationscale. ActualGermany/Australiaportraits showedBerlin/Canberra anddatedareapopulation/visibleflags; all3tasks andoriginalanswers retained.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "countries:2:0",
@@ -11243,10 +12215,57 @@
       "afterHash": "02f73a4c4ebd34b039aa35f611f35eb4a63f3cec6144c14d029220ba55a30135",
       "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Frage, was die Flagge darstellt. Ein staatliches Zeichen ist keine Rangliste für die Menschen, die in diesem Land leben.",
       "sourceIds": [
-        "countries-base"
+        "germany-capital-flag-reference",
+        "country-cultural-diversity"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "countries:2",
+        "level": "Entdecken",
+        "prompt": "Was ist eine Flagge in dieser Reise?",
+        "correctIndex": 1,
+        "correctAnswer": "Ein Zeichen für ein Land oder Gebiet",
+        "sourceIds": [
+          "germany-capital-flag-reference",
+          "country-cultural-diversity"
+        ],
+        "countercheck": "GG22Abs2 actualblack-red-gold; UNESCO diversity/dignity usedfornon-rankingpedagogy. Goodexistingowninventedflag preserved andexplicitlylabellednotrealcountry, all3featurechoices/individualfeedback/sourcecontrols checked. ActualGermanflag inportrait availablewithoutnewgame; no implicitnewflagrecognitiontopic. All3oldtasks/answerindices retained; nohumanculturalqualities inferredfromsymbol.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "countries:2:1",
@@ -11286,10 +12305,57 @@
       "afterHash": "d3164e05f0d84fcf19550ba3a14af0d5c0093b1747cd6cfc0932c8fd9cdb39cd",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche neben den Farben auch ihre Reihenfolge, Formen und Zeichen. Eine einzelne übereinstimmende Farbe kann bei mehreren Flaggen vorkommen.",
       "sourceIds": [
-        "countries-base"
+        "germany-capital-flag-reference",
+        "country-cultural-diversity"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "countries:2",
+        "level": "Erklären",
+        "prompt": "Warum reicht eine einzelne Farbe oft nicht zum Erkennen?",
+        "correctIndex": 0,
+        "correctAnswer": "Manche Flaggen verwenden ähnliche Farben",
+        "sourceIds": [
+          "germany-capital-flag-reference",
+          "country-cultural-diversity"
+        ],
+        "countercheck": "GG22Abs2 actualblack-red-gold; UNESCO diversity/dignity usedfornon-rankingpedagogy. Goodexistingowninventedflag preserved andexplicitlylabellednotrealcountry, all3featurechoices/individualfeedback/sourcecontrols checked. ActualGermanflag inportrait availablewithoutnewgame; no implicitnewflagrecognitiontopic. All3oldtasks/answerindices retained; nohumanculturalqualities inferredfromsymbol.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "countries:2:2",
@@ -11329,10 +12395,57 @@
       "afterHash": "9ab468ec62f4cba589a0734b583265aa5114a52162523bc4e5178fcb3cbbac13",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ähnliche Symbole sind zunächst eine Ähnlichkeit der Darstellung. Welche Aussage über Alltag oder Menschen wäre damit noch nicht belegt?",
       "sourceIds": [
-        "countries-base"
+        "germany-capital-flag-reference",
+        "country-cultural-diversity"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "countries:2",
+        "level": "Übertragen",
+        "prompt": "Zwei Flaggen ähneln sich. Darf daraus folgen, dass die Menschen gleich leben?",
+        "correctIndex": 2,
+        "correctAnswer": "Nein, ein Symbol beweist keine einheitliche Lebensweise",
+        "sourceIds": [
+          "germany-capital-flag-reference",
+          "country-cultural-diversity"
+        ],
+        "countercheck": "GG22Abs2 actualblack-red-gold; UNESCO diversity/dignity usedfornon-rankingpedagogy. Goodexistingowninventedflag preserved andexplicitlylabellednotrealcountry, all3featurechoices/individualfeedback/sourcecontrols checked. ActualGermanflag inportrait availablewithoutnewgame; no implicitnewflagrecognitiontopic. All3oldtasks/answerindices retained; nohumanculturalqualities inferredfromsymbol.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "countries:3:0",
@@ -11372,10 +12485,55 @@
       "afterHash": "f9e5760bfd053355c1a83e1dc3f8818c4bde2948051656c70728fadb96c99a22",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Prüfe zwei Bedingungen gemeinsam: den Anfangsbuchstaben und eine tatsächlich gemeinsame Landgrenze. Ein passender Buchstabe allein genügt nicht.",
       "sourceIds": [
-        "countries-base"
+        "germany-neighbors-reference"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "countries:3",
+        "level": "Entdecken",
+        "prompt": "Welches Nachbarland Deutschlands beginnt mit P?",
+        "correctIndex": 0,
+        "correctAnswer": "Polen",
+        "sourceIds": [
+          "germany-neighbors-reference"
+        ],
+        "countercheck": "Tatsachenmain23–41/57–58 actuallyread:9Germanlandneighbors includingPoland andRhineborder/crossingexample. Rejectsamepage43nootherEuropeancountryhasmoreneighbors generalization, no currentclimateranking copied. Goodactual3changingA/Bland/sea/riverdiagram retained. Realborder/equatorswitches toggledbothways; all3oldtasks/feedback/sourceaccess andglobeBack verified. No genuinecountryborderdrawnfromschematic.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "countries:3:1",
@@ -11415,10 +12573,55 @@
       "afterHash": "3a2b850256ea363d7087a045d084d92ceede32f182c7f0c3607fe97eaf0a426b",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Verfolge den Flusslauf entlang von Gefälle und Gelände. Welche Art von Linie auf der Karte entsteht dagegen durch menschliche Vereinbarungen?",
       "sourceIds": [
-        "countries-base"
+        "germany-neighbors-reference"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "countries:3",
+        "level": "Erklären",
+        "prompt": "Muss ein Fluss an einer Ländergrenze aufhören?",
+        "correctIndex": 2,
+        "correctAnswer": "Nein, Flüsse können Grenzen überqueren",
+        "sourceIds": [
+          "germany-neighbors-reference"
+        ],
+        "countercheck": "Tatsachenmain23–41/57–58 actuallyread:9Germanlandneighbors includingPoland andRhineborder/crossingexample. Rejectsamepage43nootherEuropeancountryhasmoreneighbors generalization, no currentclimateranking copied. Goodactual3changingA/Bland/sea/riverdiagram retained. Realborder/equatorswitches toggledbothways; all3oldtasks/feedback/sourceaccess andglobeBack verified. No genuinecountryborderdrawnfromschematic.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "countries:3:2",
@@ -11458,10 +12661,55 @@
       "afterHash": "76060034a384bf0ee33fa36d05dc7fc6bbee07d6a4f18fb3814cc539c7209d4f",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Stell dir einen Weg zwischen den beiden Ländern vor. Führt die beschriebene Verbindung über gemeinsames Land oder über Wasser?",
       "sourceIds": [
-        "countries-base"
+        "germany-neighbors-reference"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "countries:3",
+        "level": "Übertragen",
+        "prompt": "Zwei Länder sind durch ein Meer getrennt. Haben sie damit eine gemeinsame Landgrenze?",
+        "correctIndex": 1,
+        "correctAnswer": "Nein, diese beiden Begriffe sind verschieden",
+        "sourceIds": [
+          "germany-neighbors-reference"
+        ],
+        "countercheck": "Tatsachenmain23–41/57–58 actuallyread:9Germanlandneighbors includingPoland andRhineborder/crossingexample. Rejectsamepage43nootherEuropeancountryhasmoreneighbors generalization, no currentclimateranking copied. Goodactual3changingA/Bland/sea/riverdiagram retained. Realborder/equatorswitches toggledbothways; all3oldtasks/feedback/sourceaccess andglobeBack verified. No genuinecountryborderdrawnfromschematic.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "countries:4:0",
@@ -11501,10 +12749,55 @@
       "afterHash": "4e3482be389a2b03598326f119eb5311ee13ace9ee9f85eefc31675d71b03e7e",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ordne der Bevölkerung ihre Einheit zu: Personen. Welche andere genannte Größe würde man stattdessen in Flächeneinheiten angeben?",
       "sourceIds": [
-        "countries-base"
+        "population-density-reference"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "countries:4",
+        "level": "Entdecken",
+        "prompt": "Was beschreibt die Bevölkerung?",
+        "correctIndex": 2,
+        "correctAnswer": "Wie viele Menschen dort leben",
+        "sourceIds": [
+          "population-density-reference"
+        ],
+        "countercheck": "WorldBankmetadataglossary57–75/77–80 actuallyread:population dividedbylandarea, datedestimates/definitions/comparabilitylimits. Own4versus8equalareacells with4persondotseach makesindependencevisible; no inventedcurrentcountrystatistics orwholearea-as-landarea density calculated. ActualGermany/Australia UI showeacharea/populationreferenceyearandunits; noallcountrydatacorrectnessclaim. RawCanadavalue/Benin-Burundicapitalquestions keptinexistingWK057forpropercountercheck. All3tasks/oldlabels/feedback/sourcecontrols retained.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "countries:4:1",
@@ -11544,10 +12837,55 @@
       "afterHash": "d49c965cb6eedd6d9651616c356740104a018f66e90f9347b0a5b88bb32e6998",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Zwei unterschiedlich große Gebiete können unterschiedlich dicht besiedelt sein. Lässt eine Flächenzahl allein schon die Menschenzahl erkennen?",
       "sourceIds": [
-        "countries-base"
+        "population-density-reference"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "countries:4",
+        "level": "Erklären",
+        "prompt": "Bedeutet mehr Fläche immer mehr Bevölkerung?",
+        "correctIndex": 1,
+        "correctAnswer": "Nein",
+        "sourceIds": [
+          "population-density-reference"
+        ],
+        "countercheck": "WorldBankmetadataglossary57–75/77–80 actuallyread:population dividedbylandarea, datedestimates/definitions/comparabilitylimits. Own4versus8equalareacells with4persondotseach makesindependencevisible; no inventedcurrentcountrystatistics orwholearea-as-landarea density calculated. ActualGermany/Australia UI showeacharea/populationreferenceyearandunits; noallcountrydatacorrectnessclaim. RawCanadavalue/Benin-Burundicapitalquestions keptinexistingWK057forpropercountercheck. All3tasks/oldlabels/feedback/sourcecontrols retained.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "countries:4:2",
@@ -11587,10 +12925,55 @@
       "afterHash": "f96742c550690621b51ccebece23889170d6f6733fa4d1a8715455245bf2b729",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Schreibe zu beiden Zahlen Jahr, Gebiet und Erhebungsmethode. Welche Unterschiede könnten den scheinbaren Vergleich beeinflussen?",
       "sourceIds": [
-        "countries-base"
+        "population-density-reference"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigeneQuellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielterUI/native/kalterOfflineprüfung; keine externeMenschenabnahme.",
+      "independentReview": false,
+      "previousContinentsCountriesPreparation20261021": {
+        "status": "ActualindividualUI/native/coldcounterreview pending",
+        "allOldTaskFieldsRetained": true
+      },
+      "aiCounterreview20261021": {
+        "mode": "ai-self-review",
+        "chapter": "countries:4",
+        "level": "Übertragen",
+        "prompt": "Zwei Einwohnerzahlen stammen aus verschiedenen Jahren. Was brauchst du für einen fairen Vergleich?",
+        "correctIndex": 0,
+        "correctAnswer": "Datenjahr und möglichst passende Messweise prüfen",
+        "sourceIds": [
+          "population-density-reference"
+        ],
+        "countercheck": "WorldBankmetadataglossary57–75/77–80 actuallyread:population dividedbylandarea, datedestimates/definitions/comparabilitylimits. Own4versus8equalareacells with4persondotseach makesindependencevisible; no inventedcurrentcountrystatistics orwholearea-as-landarea density calculated. ActualGermany/Australia UI showeacharea/populationreferenceyearandunits; noallcountrydatacorrectnessclaim. RawCanadavalue/Benin-Burundicapitalquestions keptinexistingWK057forpropercountercheck. All3tasks/oldlabels/feedback/sourcecontrols retained.",
+        "allOptionFeedbackActuallyChecked": true,
+        "allOldAnswerLabelsAndCorrectIndexRetained": true,
+        "actualRestoredIncorrectSelections": 3,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-before/report.json",
+            "sha256": "117ce457656dcba58662bfe06ba8a04f95b3ae993ae1b5246bb9156e8a7abd60",
+            "build": "8355c01b401402ad",
+            "sourceDigest": "29290ef369a58c106fc4ea94f30d8227711411da022afd40f619b131c4b1196e"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after-v2/report.json",
+            "sha256": "59d3b91ce9bff070bd3ceef90378973698507497025d86a20ebf74c32f690a02",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-native-cold/report.json",
+            "sha256": "d3d0398ab6a5e6af64c31a84277b2e7134d67acfc887950cb84f347a9a0d2035",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          },
+          "originalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-continents-countries10-20261020-after/failure.json",
+            "sha256": "4f4627ce35aa32717e14a6396c20a6b2d359dafcacbdc83c53b7e6995af74c54",
+            "build": "7cb5faf2e004a54d",
+            "sourceDigest": "c9b54135b65f832339cd2ea68f6dcfc51286fc3d5215f733927debdb931f48cb"
+          }
+        }
+      }
     },
     {
       "id": "volcanoes:0:0",
@@ -15833,6 +17216,56 @@
       "title": "NPS · Wildtiere mit Abstand beobachten",
       "url": "https://www.nps.gov/subjects/watchingwildlife/7ways.htm",
       "scope": "Ausgewählte25–31: Abstand, nicht stören oder anfassen, auf Wegen bleiben. Keine US-Abstands-/Rechtsregeln universell auf Deutschland übertragen."
+    },
+    "continents-convention": {
+      "title": "National Geographic · Kontinentmodell und Weltregionen",
+      "url": "https://www.nationalgeographic.org/national-geographic-map-policy",
+      "scope": "Ausgewählte Hauptstellen82–90/218–229 tatsächlich gelesen: siebenKontinente, Ozeanien alsRegion und konventionelleEuropa-AsienGrenze. Keine aktuellen Grenzkonflikte übernommen."
+    },
+    "continents-land-connections": {
+      "title": "National Geographic · Zusammenhängende Landflächen",
+      "url": "https://education.nationalgeographic.org/resource/Continent/5th-grade/",
+      "scope": "Ausgewählte4–6/42–43/63–67 tatsächlich gelesen: Eurasien/Panamaverbindung/Siebenmodell. Nicht die unzutreffende pauschaleMantel-ist-Schmelze-Aussage48 übernehmen; keine Medien kopiert."
+    },
+    "oceania-region": {
+      "title": "National Geographic · Australien und Ozeanien",
+      "url": "https://education.nationalgeographic.org/resource/oceania-physical-geography/",
+      "scope": "Ausgewählte2–4/34–42 tatsächlich gelesen: Australien in größererRegionOzeanien. Kein vollständigerGeologie-/Politikstand und keineüberbreiteUnterwasserbehauptung odergeschütztenKarten übernommen."
+    },
+    "polar-land-ocean-reference": {
+      "title": "NSIDC · Meer am Nordpol, Kontinent am Südpol",
+      "url": "https://nsidc.org/learn/ask-scientist/how-does-antarctic-sea-ice-differ-arctic-sea-ice",
+      "scope": "Ausgewählte71–80 tatsächlich gelesen: stabileGeografieArktis/Ozean undAntarktika/Kontinent. Datiert2022, daherkeineaktuellenEisrekorde/Trends oderfehlerhafteKüstenverwechslung82 übernommen; keineNSIDC-Karten kopiert."
+    },
+    "map-projection-limits": {
+      "title": "USGS · Was Kartenprojektionen erhalten und verändern",
+      "url": "https://www.usgs.gov/faqs/how-are-different-map-projections-used",
+      "scope": "Hauptstellen3–14 tatsächlich gelesen: Kartenprojektionen bewahrenunterschiedlicheEigenschaften. EigeneBeispielprojektion statt fremderKarte; keineuniverselleGleichflächen-/Richtungs-/Entfernungsgarantie."
+    },
+    "country-cultural-diversity": {
+      "title": "UNESCO · Kulturelle Vielfalt und Menschenwürde",
+      "url": "https://www.unesco.org/en/legal-affairs/unesco-universal-declaration-cultural-diversity",
+      "scope": "Ausgewählte108–127 tatsächlich gelesen: vielfältigeIdentitäten/Menschenwürde/individuellekulturelleWahl. Eigene kindgerechtepädagogischeÜbertragung, keinekopiertenFotos/Texte oderempirischenPauschalaussagen."
+    },
+    "canberra-capital-reference": {
+      "title": "National Capital Authority · Canberra als Hauptstadt",
+      "url": "https://www.nca.gov.au/education/canberras-history/canberra-seat-government",
+      "scope": "Ausgewählte9–17/24–29 tatsächlich gelesen: Hauptstadt-/Regierungssitzfunktion undhistorischeEntscheidung gegenSydney/Melbourne. KeineveraltetenBevölkerungs-/Parlamentszahlen übernommen."
+    },
+    "germany-capital-flag-reference": {
+      "title": "Grundgesetz · Hauptstadt und Bundesflagge",
+      "url": "https://www.gesetze-im-internet.de/gg/art_22.html",
+      "scope": "Art22Abs1–2 tatsächlich gelesen: Berlin undschwarz-rot-gold. Quellenbeleg fürbegrenztebestehendeGeografieangaben, keineRechtsberatung."
+    },
+    "germany-neighbors-reference": {
+      "title": "Tatsachen über Deutschland · Geografie und Nachbarländer",
+      "url": "https://www.tatsachen-ueber-deutschland.de/de/deutschland-auf-einen-blick/geografie-und-klima",
+      "scope": "Ausgewählte23–41/57–58 tatsächlich gelesen: neunLandnachbarn undgrenzüberschreitenderRhein. UngeprüfteSuperlative43/aktuelleKlima- undFlächenzahlen nichtübernommen."
+    },
+    "population-density-reference": {
+      "title": "Weltbank · Bevölkerung, Landfläche und Durchschnitt",
+      "url": "https://databank.worldbank.org/metadataglossary/world-development-indicators/series/EN.POP.DNST",
+      "scope": "Ausgewählte57–75/77–80 tatsächlich gelesen: Bevölkerung/Landfläche, Einheit undZeitbezug, Schätz- undVergleichsgrenzen. Keine aktuellenLänderzahlen oderausausgewiesenerGesamtfläche berechneteLandflächendichte übernommen."
     }
   },
   "sectionReview": {

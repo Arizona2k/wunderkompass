@@ -134,8 +134,9 @@ export default function EarthExplorer(){
   // eslint-disable-next-line react-hooks/set-state-in-effect -- Apply external browser navigation.
   useEffect(()=>{const value=routePath.split('/')[0];if(MODES.includes(value)){setMode(value as Mode);setVisited(p=>new Set([...p,value]));setSpin(false);setTouchActive(false);}},[routePath]);
   useEffect(()=>{if(routePath!=='games'||mode!=='games'||!/^game-knowledge-|^order-knowledge-|^game-route-/.test(history.state?.wunderFocus??''))return;return scheduleRouteRestore('games');},[routePath,mode]);
-  // Restore after the parent tab becomes visible, not while its article is hidden.
-  useEffect(()=>{if(mode!=='world'||!routePath.startsWith('world/'))return;return scheduleRouteRestore(routePath);},[routePath,mode]);
+  // Restore after the parent tab becomes visible, including a journey reached
+  // with Back from the globe; its still-hidden heading cannot receive focus.
+  useEffect(()=>{if(mode==='world'&&routePath.startsWith('world/')||mode==='journeys'&&(routePath==='journeys'||routePath.startsWith('journeys/')))return scheduleRouteRestore(routePath);},[routePath,mode]);
 
   useEffect(()=>{if(!local.ready||hydratedRevision===local.restoreRevision)return;
     // An imported/reset pass takes precedence over a reader's pre-import URL.

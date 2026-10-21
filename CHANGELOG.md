@@ -1,3 +1,11 @@
+## Lokal vollständig geprüft · Kontinente und Länder
+
+Zehn bestehende Kapitel mit Quellen, Erklärschichten und Modellen weitergeführt; vollständige Kapiteltexte bei Bedarf geladen, Suche/Notizen/Rückfokus und alte Spielstände geschützt. Alle vorgeschriebenen lokalen Schlussprüfungen bestanden; aktuelle CI und tatsächliche Auslieferung noch offen. Chronik bestätigt Natur50 mit echtem Vercelbeleg und erhält alle45älterenEinträge.
+
+## In Vorbereitung · Kontinente und Länder / bestätigte Naturchronik
+
+Zehn vorhandene Kapitel aus der gesicherten Arbeit verständlicher erklärt, Quellen und Modelle vertieft. Vollständige Kapiteltexte bedarfsgerecht geladen; alte Routen, Aufgaben, Passstände und Notizen erhalten. Suche, verzögerte Texte, Fehlabruf/Retry und Rückfokus geprüft. Bestätigter Naturabschnitt50 in derselben Chronik nachgeführt, alle45älteren Einträge erhalten. Vollständige aktuelle Abnahme und Auslieferung des Folgestands stehen noch aus.
+
 ## Natur/Schutz lokal vollständig abgenommen ·21.10.2026
 
 Vollständige lokale Browserabnahme am unveränderten Kandidaten erfolgreich;240Hinweise,448Diagrammansichten undalleFehlerlistenleer. Originale erhalten und54bestehendeDossierserstanschließend ausschließlichmitaktuellenUI-Belegenverbunden. Tatsächliche49Chronikquittungmit45EinträgenfürdiesenregulärenFolgeabschnittvorhanden. DieserNatur-/Schutzabschnittistnoch nichtausgeliefert;aktuellevollständigeCIundtatsächlicheTestbereitstellungbleibenPflicht.
