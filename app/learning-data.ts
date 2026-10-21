@@ -201,20 +201,189 @@ const BASE_JOURNEYS: Journey[] = [
   },
   "activity": "Führe drei Tage lang ein Wetterblatt: Wolken, Wind, Regen und Temperatur. Das ist eine Wetterbeobachtung – noch keine Klimamessung."
 },
-  { id:"seasons", title:"Die Jahreszeiten-Maschine", intro:"Warum ist in Australien Weihnachten im Sommer?", icon:"sun", color:"yellow", minutes:8, lab:"seasons", source:"https://spaceplace.nasa.gov/seasons/en/", sourceName:"NASA Space Place · Jahreszeiten", steps:[
-    {title:"Die Erde steht schief",text:"Die gedachte Erdachse ist gegenüber einer senkrechten Linie zur Umlaufbahn um etwa 23,4 Grad geneigt. Während die Erde um die Sonne reist, zeigt ihre Achse ungefähr in dieselbe Richtung. Das verändert im Lauf des Jahres den Sonnenstand und die Tageslänge.",fact:"Die Achse ist keine echte Stange. Sie hilft uns, die Drehung zu beschreiben."},
-    {title:"Sommer auf der Nordhalbkugel",text:"Um den Juni ist die Nordhalbkugel zur Sonne geneigt. Bei uns in Deutschland steht die Sonne dann höher und die Tage sind länger. So erreicht uns pro Tag mehr Sonnenenergie. Auf der Südhalbkugel ist zur gleichen Zeit Winter.",fact:"Am Nordpol geht die Sonne im Sommer für mehrere Monate nicht unter."},
-    {title:"Winter auf der Nordhalbkugel",text:"Um den Dezember ist die Nordhalbkugel von der Sonne weg geneigt. Bei uns steht die Sonne niedriger, und die Tage sind kürzer. In Australien ist gleichzeitig Sommer. Die Jahreszeiten der beiden Halbkugeln sind also gegensätzlich.",fact:"Die Entfernung zur Sonne ist nicht der Hauptgrund für unsere Jahreszeiten."},
-    {title:"Frühling und Herbst",text:"Um März und September sind Tag und Nacht fast überall ungefähr gleich lang. Die Sonne steht dann über dem Äquator. Welche Jahreszeit beginnt, hängt von der Halbkugel ab: Frühling im Norden bedeutet Herbst im Süden und umgekehrt.",fact:"In den Tropen unterscheidet man oft eher Regen- und Trockenzeiten als vier Jahreszeiten wie bei uns."},
-    {title:"Ein Tag ist kein Jahr",text:"Drehen um die eigene Achse macht Tag und Nacht. Reisen um die Sonne mit geneigter Achse macht den jährlichen Wechsel der Jahreszeiten. Ein sonniger Wintertag bleibt trotzdem ein Wintertag. Wetter und Jahreszeit sind nicht dasselbe.",fact:"Auch im Winter kann die Sonne hell scheinen. Ein kurzer Tag liefert insgesamt trotzdem weniger Sonnenenergie."}
-  ],question:{id:"journey-seasons",category:"Jahreszeiten",question:"Welche Jahreszeit ist in Australien, wenn in Deutschland Sommer ist?",answers:["Auch Sommer","Winter","Immer Frühling"],correct:1,why:"Deutschland liegt auf der Nordhalbkugel, Australien auf der Südhalbkugel. Ihre Jahreszeiten sind gegensätzlich."},activity:"Halte einen Ball schief neben eine Taschenlampe. Lass seine Achse gleich ausgerichtet und bewege ihn um die Lampe. Mach das gemeinsam und schau nicht in das Licht."},
-  { id:"ocean", title:"Tauchgang ins Weltmeer", intro:"Vom sonnigen Korallenriff in die dunkle Tiefsee.", icon:"waves", color:"blue", minutes:8, photo:"reef", source:"https://oceanservice.noaa.gov/education/tutorial_corals/coral01_intro.html", sourceName:"NOAA · Korallen und Meereswissen", steps:[
-    {title:"Fünf Namen, ein Weltmeer",text:"Wir unterscheiden Pazifik, Atlantik, Indischen, Arktischen und Südlichen Ozean. Die Grenzen sind Vereinbarungen: Das Wasser bleibt verbunden. Kleinere Meere wie Nordsee und Mittelmeer gehören ebenfalls zum großen Weltmeer.",fact:"Der Pazifik ist der größte, der Arktische Ozean der kleinste der fünf Ozeane."},
-    {title:"Warum ist das Meer salzig?",text:"Regen und Flüsse lösen winzige Mengen von Mineralien aus Gestein und bringen sie ins Meer. Auch am Meeresboden gelangen Stoffe ins Wasser. Wenn Wasser verdunstet, bleibt das Salz zurück. Über lange Zeit haben sich so Salze im Meer angesammelt.",fact:"Die meisten Flüsse enthalten ebenfalls gelöste Stoffe, aber viel weniger Salz als Meerwasser."},
-    {title:"Korallen sind Tiere",text:"Ein Korallenriff wird von vielen winzigen Korallentieren aufgebaut. Viele riffbildende Korallen leben mit kleinen Algen zusammen. Die Algen brauchen Sonnenlicht. Deshalb wachsen solche Riffe meistens in flachem, warmem, klarem Meerwasser.",fact:"Ein Riff bietet Fischen, Krebsen und vielen anderen Lebewesen Verstecke und Nahrung."},
-    {title:"Immer tiefer, immer dunkler",text:"Sonnenlicht erreicht nur die oberen Bereiche des Meeres. Weiter unten wird es dunkel, kalt und der Druck nimmt zu. Dort leben Tiere mit besonderen Anpassungen. Manche erzeugen eigenes Licht. Auch in der Tiefsee gibt es also Leben.",fact:"Der tiefste bekannte Bereich liegt im Marianengraben, fast elf Kilometer unter der Meeresoberfläche."},
-    {title:"Wasser in Bewegung",text:"Wind, Temperaturunterschiede und Unterschiede im Salzgehalt helfen, Meeresströmungen anzutreiben. Sie transportieren Wärme und Nährstoffe. Ebbe und Flut entstehen vor allem durch die Schwerkraft des Mondes und auch der Sonne.",fact:"Eine Welle kann sich fortbewegen, ohne dass jedes Wasserteilchen die ganze Strecke mitreist."}
-  ],question:{id:"journey-ocean",category:"Natur",question:"Was sind Korallen?",answers:["Bunte Steine","Unterwasserpflanzen","Tiere"],correct:2,why:"Korallen bestehen aus kleinen Tieren, den Polypen. Viele leben mit Algen zusammen."},activity:"Vergleiche auf der Weltkugel die Nordsee und den Pazifik. Welche ist ein kleineres Meer, welcher ein Ozean?"},
+  {
+  "id": "seasons",
+  "title": "Die Jahreszeiten-Maschine",
+  "intro": "Warum ist in Australien Weihnachten im Sommer?",
+  "icon": "sun",
+  "color": "yellow",
+  "minutes": 8,
+  "lab": "seasons",
+  "source": "https://spaceplace.nasa.gov/seasons/en/",
+  "sourceName": "NASA Space Place · Jahreszeiten",
+  "steps": [
+    {
+      "title": "Die Erde steht schief",
+      "text": "Die gedachte Erdachse ist gegenüber einer senkrechten Linie zur Umlaufbahn um etwa 23,4 Grad geneigt. Während die Erde um die Sonne reist, zeigt ihre Achse ungefähr in dieselbe Richtung. Das verändert im Lauf des Jahres den Sonnenstand und die Tageslänge.\n\nSchräg bedeutet hier: im Vergleich zur Umlaufbahn um die Sonne. Die Achse kippt nicht alle sechs Monate zur anderen Seite; die Erde erreicht einen anderen Ort auf ihrer Bahn.",
+      "fact": "Die Achse ist keine echte Stange. Sie hilft uns, die Drehung zu beschreiben.",
+      "starter": "Die Erde dreht sich um eine gedachte, schräg stehende Achse.",
+      "deeper": "Richtung und Neigungswinkel sind zwei verschiedene Dinge. Im Jahreszeitenmodell bleiben beide während eines vereinfachten Umlaufs ungefähr gleich.",
+      "whyItMatters": "Du kannst den jährlichen Wechsel erklären, ohne die Erdachse ständig neu zu kippen.",
+      "observe": "Wähle im Jahreszeitenlabor nacheinander März, Juni, September und Dezember. Vergleiche bei eingeschalteter Achsneigung die Richtung der Achse und die Position der Erde zur Sonne. Was bleibt gleich, was ändert sich?",
+      "sourceIds": [
+        "seasons-base"
+      ]
+    },
+    {
+      "title": "Sommer auf der Nordhalbkugel",
+      "text": "Um den Juni ist die Nordhalbkugel zur Sonne geneigt. Bei uns in Deutschland steht die Sonne dann höher und die Tage sind länger. So erreicht uns pro Tag mehr Sonnenenergie. Auf der Südhalbkugel ist zur gleichen Zeit Winter.\n\nBeide Wirkungen helfen zusammen: Sonnenlicht trifft steiler auf und scheint länger am Tag. Deshalb kann insgesamt mehr Sonnenenergie ankommen, auch wenn ein einzelner Sommertag kühl ist.",
+      "fact": "Am Nordpol geht die Sonne im Sommer für mehrere Monate nicht unter.",
+      "starter": "Im nördlichen Sommer sind unsere Tage länger und die Sonne steht höher.",
+      "deeper": "Sommer bedeutet eine Jahreszeit, nicht eine Temperaturgarantie. Wetter, Standort und Sonnenenergie dürfen nicht zu einer einzigen Aussage vermischt werden.",
+      "whyItMatters": "Du verstehst den Unterschied zwischen einer Jahreszeit und ihrem heutigen Wetter.",
+      "observe": "Wähle im Jahreszeitenlabor Juni. Vergleiche die Karten für Deutschland und Australien: Welche Jahreszeiten werden gleichzeitig angezeigt? Erkläre den Unterschied mit der Achsneigung. Prüfe das Tageswetter zusätzlich, bevor du Reisekleidung aussuchst.",
+      "sourceIds": [
+        "seasons-base",
+        "seasons-polar-day"
+      ]
+    },
+    {
+      "title": "Winter auf der Nordhalbkugel",
+      "text": "Um den Dezember ist die Nordhalbkugel von der Sonne weg geneigt. Bei uns steht die Sonne niedriger, und die Tage sind kürzer. In Australien ist gleichzeitig Sommer. Die Jahreszeiten der beiden Halbkugeln sind also gegensätzlich.\n\nDie zwei Halbkugeln erleben denselben Umlauf gleichzeitig, aber mit entgegengesetzter Neigung zur Sonne. Eine Erklärung nur durch wechselnde Entfernung könnte diesen Gegensatz nicht erklären.",
+      "fact": "Die Entfernung zur Sonne ist nicht der Hauptgrund für unsere Jahreszeiten.",
+      "starter": "Im nördlichen Winter sind die Tage kürzer. In Australien ist dann Sommer.",
+      "deeper": "Die Erdbahn ist nicht genau kreisrund. Das hebt die entscheidende Wirkung der Achsneigung auf Sonnenstand und Tageslänge aber nicht auf.",
+      "whyItMatters": "Du kannst zwei Erklärungen daran prüfen, ob sie dieselbe Beobachtung erklären.",
+      "observe": "Stelle im Modell Dezember ein. Erkläre mit den beiden Halbkugeln, weshalb Entfernung allein nicht für Sommer und Winter ausreicht.",
+      "sourceIds": [
+        "seasons-base"
+      ]
+    },
+    {
+      "title": "Frühling und Herbst",
+      "text": "Um März und September sind Tag und Nacht fast überall ungefähr gleich lang. Die Sonne steht dann über dem Äquator. Welche Jahreszeit beginnt, hängt von der Halbkugel ab: Frühling im Norden bedeutet Herbst im Süden und umgekehrt.\n\nUngefähr ist wichtig: Das einfache Modell zeigt einen Grundzusammenhang. Wirkliche Sonnenauf- und Sonnenuntergänge hängen auch davon ab, wie die Sonne am Horizont betrachtet wird.",
+      "fact": "In den Tropen unterscheidet man oft eher Regen- und Trockenzeiten als vier Jahreszeiten wie bei uns.",
+      "starter": "Im März und September sind Tag und Nacht ungefähr gleich lang.",
+      "deeper": "Vier gleich benannte Jahreszeiten beschreiben nicht jeden Lebensraum gut. In tropischen Regionen können Niederschlagszeiten für Pflanzen und Tiere wichtiger sein.",
+      "whyItMatters": "Du lernst, ein nützliches Modell zu verwenden und seine Grenzen mitzusagen.",
+      "observe": "Vergleiche im Modell März und September. Benenne die Jahreszeiten jeweils aus Sicht der Nord- und Südhalbkugel.",
+      "sourceIds": [
+        "seasons-base",
+        "seasons-equinox",
+        "seasons-climate-zones"
+      ]
+    },
+    {
+      "title": "Ein Tag ist kein Jahr",
+      "text": "Drehen um die eigene Achse macht Tag und Nacht. Reisen um die Sonne mit geneigter Achse macht den jährlichen Wechsel der Jahreszeiten. Ein sonniger Wintertag bleibt trotzdem ein Wintertag. Wetter und Jahreszeit sind nicht dasselbe.\n\nDu kannst dieselbe Landschaft nachts und tagsüber sehen, ohne dass dabei eine andere Jahreszeit beginnt. Die beiden Veränderungen haben verschiedene Zeiträume und Ursachen.",
+      "fact": "Auch im Winter kann die Sonne hell scheinen. Für die tägliche Sonnenenergie zählen neben der Tageslänge auch der Sonnenstand und das Wetter.",
+      "starter": "Die Erddrehung macht Tag und Nacht. Der Umlauf mit geneigter Achse macht Jahreszeiten.",
+      "deeper": "Ein Modell kann Drehung und Umlauf zum Beobachten beschleunigen. Das ist eine Darstellungshilfe, keine Aussage über die wirklichen Geschwindigkeiten.",
+      "whyItMatters": "Du ordnest Beobachtungen der passenden Bewegung zu.",
+      "observe": "Erkläre mit zwei verschiedenen Handbewegungen Tag und Jahr. Sage dazu, welche Bewegung du zeigst und welche du gerade auslässt.",
+      "sourceIds": [
+        "seasons-base"
+      ]
+    }
+  ],
+  "question": {
+    "id": "journey-seasons",
+    "category": "Jahreszeiten",
+    "question": "Welche Jahreszeit ist in Australien, wenn in Deutschland Sommer ist?",
+    "answers": [
+      "Auch Sommer",
+      "Winter",
+      "Immer Frühling"
+    ],
+    "correct": 1,
+    "why": "Deutschland liegt auf der Nordhalbkugel, Australien auf der Südhalbkugel. Ihre Jahreszeiten sind gegensätzlich."
+  },
+  "activity": "Halte einen Ball schief neben eine Taschenlampe. Lass seine Achse gleich ausgerichtet und bewege ihn um die Lampe. Mach das gemeinsam und schau nicht in das Licht."
+},
+  {
+  "id": "ocean",
+  "title": "Tauchgang ins Weltmeer",
+  "intro": "Vom sonnigen Korallenriff in die dunkle Tiefsee.",
+  "icon": "waves",
+  "color": "blue",
+  "minutes": 8,
+  "photo": "reef",
+  "source": "https://oceanservice.noaa.gov/education/tutorial_corals/coral01_intro.html",
+  "sourceName": "NOAA · Korallen und Meereswissen",
+  "steps": [
+    {
+      "title": "Fünf Namen, ein Weltmeer",
+      "text": "Wir unterscheiden Pazifik, Atlantik, Indischen, Arktischen und Südlichen Ozean. Die Grenzen sind Vereinbarungen: Das Wasser bleibt verbunden. Kleinere Meere wie Nordsee und Mittelmeer gehören ebenfalls zum großen Weltmeer.\n\nEin Name setzt keine Wand ins Wasser. Meere und Ozeane werden für die Orientierung gegliedert, während Wasser und Lebewesen über viele dieser gedachten Grenzen hinwegkommen können.",
+      "fact": "Der Pazifik ist der größte, der Arktische Ozean der kleinste der fünf Ozeane.",
+      "starter": "Fünf Ozeane haben eigene Namen. Ihr Wasser ist miteinander verbunden.",
+      "deeper": "Benennungen und Abgrenzungen sind Vereinbarungen. Unser Fünf-Ozeane-Modell ist eine Orientierungshilfe, keine Trennung in fünf geschlossene Behälter.",
+      "whyItMatters": "Du liest Meeresnamen auf einer Karte, ohne das Weltmeer in getrennte Seen zu verwandeln.",
+      "observe": "Verfolge auf der Kugel einen möglichen Wasserweg zwischen Atlantik und Pazifik. Kannst du einen Weg finden, der nur über Wasser führt? Die gedachten Ozeangrenzen sind keine Wände.",
+      "sourceIds": [
+        "ocean-basins",
+        "ocean-sizes"
+      ]
+    },
+    {
+      "title": "Warum ist das Meer salzig?",
+      "text": "Regen und Flüsse lösen winzige Mengen von Mineralien aus Gestein und bringen sie ins Meer. Auch am Meeresboden gelangen Stoffe ins Wasser. Wenn Wasser verdunstet, bleibt das Salz zurück. Über lange Zeit haben sich so Salze im Meer angesammelt.\n\nDer Kreislauf von Wasser und der Transport gelöster Stoffe sind verschiedene Vorgänge. Ein Fluss kann Mineralien mitbringen, obwohl er nicht so salzig schmeckt wie Meerwasser.",
+      "fact": "Die meisten Flüsse enthalten ebenfalls gelöste Stoffe, aber viel weniger Salz als Meerwasser.",
+      "starter": "Meerwasser enthält Salz. Wenn Wasser verdunstet, bleibt das Salz zurück.",
+      "deeper": "Salzgehalt ist nicht überall gleich. Verdunstung, Regen und einströmendes Süßwasser beeinflussen örtliche Unterschiede.",
+      "whyItMatters": "Du kannst Wassertransport und Stofftransport auseinanderhalten.",
+      "observe": "Zeichne zwei Pfeile: Wasser ins Meer und Wasser in die Luft. Beschrifte, bei welchem Pfeil gelöste Salze mitreisen können. Kein Meerwasser probieren.",
+      "sourceIds": [
+        "ocean-salt"
+      ]
+    },
+    {
+      "title": "Korallen sind Tiere",
+      "text": "Ein Korallenriff wird von vielen winzigen Korallentieren aufgebaut. Viele riffbildende Korallen leben mit kleinen Algen zusammen. Die Algen brauchen Sonnenlicht. Deshalb wachsen solche Riffe meistens in flachem, warmem, klarem Meerwasser.\n\nEin Korallentier ist klein; sein gemeinsam gebauter Lebensraum kann groß sein. Kalkskelett und lebendes Tier sind nicht dasselbe. Viele andere Arten nutzen das Riff als Zuhause.",
+      "fact": "Ein Riff bietet Fischen, Krebsen und vielen anderen Lebewesen Verstecke und Nahrung.",
+      "starter": "Korallen sind Tiere. Viele kleine Polypen bauen zusammen ein Riff.",
+      "deeper": "Auch im kalten, dunklen Meer können manche Steinkorallen Riffe aufbauen. Unser Bild zeigt warme Flachwasserriffe mit Algenpartnern und beschreibt nicht alle Korallen.",
+      "whyItMatters": "Du erkennst die Zusammenarbeit und den Unterschied zwischen Organismus und Lebensraum.",
+      "observe": "Untersuche im Schaubild den vergrößerten Steinkorallen-Polypen. Unterscheide lebendes Tier, kleine Algen im Gewebe und Kalkskelett. Erkläre danach, wie ein Riff anderen Tieren Lebensraum bietet. Der Fisch ist ein anderes Tier, kein Teil des Polypen.",
+      "sourceIds": [
+        "ocean-base",
+        "ocean-coral-symbiosis",
+        "ocean-coral-range"
+      ]
+    },
+    {
+      "title": "Immer tiefer, immer dunkler",
+      "text": "Sonnenlicht erreicht nur die oberen Bereiche des Meeres. Weiter unten wird es dunkel, kalt und der Druck nimmt zu. Dort leben Tiere mit besonderen Anpassungen. Manche erzeugen eigenes Licht. Auch in der Tiefsee gibt es also Leben.\n\nLicht von oben erreicht nicht jede Tiefe. Dunkelheit bedeutet daher nicht automatisch, dass kein Leben möglich ist. Anpassungen müssen zu den Bedingungen des Lebensraums passen.",
+      "fact": "Der tiefste bekannte Bereich liegt im Marianengraben, fast elf Kilometer unter der Meeresoberfläche.",
+      "starter": "In der Tiefsee ist es dunkel. Trotzdem leben dort Tiere.",
+      "deeper": "Das dunkle Bild zeigt einen ausgewählten Lebensraum, nicht alle Tiefseetiere. Auch der Tiefenrekord braucht die Messregel unter der Meeresoberfläche.",
+      "whyItMatters": "Du vermeidest den Schluss dunkel gleich unbewohnt.",
+      "observe": "Vergleiche im Schaubild Oberfläche und Tiefe. Welche Bedingungen ändern sich? Erkläre, warum ein Tier nicht überall dieselben Bedingungen vorfindet.",
+      "sourceIds": [
+        "ocean-light",
+        "ocean-pressure",
+        "ocean-depth",
+        "ocean-bioluminescence"
+      ]
+    },
+    {
+      "title": "Wasser in Bewegung",
+      "text": "Wind, Temperaturunterschiede und Unterschiede im Salzgehalt helfen, Meeresströmungen anzutreiben. Sie transportieren Wärme und Nährstoffe. Ebbe und Flut entstehen vor allem durch die Schwerkraft des Mondes und auch der Sonne.\n\nEin Wasserstand und ein Wasserstrom sind nicht dasselbe. Gezeiten können zwar Strömungen erzeugen, doch auch Wind und Dichteunterschiede treiben Strömungen an. Eine einzelne Welle ist wieder ein anderer Vorgang.",
+      "fact": "Eine Welle kann sich fortbewegen, ohne dass jedes Wasserteilchen die ganze Strecke mitreist.",
+      "starter": "Strömungen bewegen Wasser. Gezeiten lassen den Meeresspiegel steigen und sinken.",
+      "deeper": "Die Gezeitenhöhe hängt vom Ort ab. Ein einfaches Modell ohne Küstenform kann keinen örtlichen Gezeitenkalender ersetzen.",
+      "whyItMatters": "Du beschreibst Meerwasser genauer als mit alles bewegt sich.",
+      "observe": "Vergleiche die Pfeile im Strömungsschaubild. Folge dann über die Karte Meeresströmungen der Wissensverbindung zu Ebbe und Flut und wechsle dort zwischen Niedrigwasser und Hochwasser. Beschreibe einmal einen Wasserweg und einmal die Änderung der Wasserhöhe.",
+      "sourceIds": [
+        "ocean-currents",
+        "ocean-tides",
+        "ocean-waves"
+      ]
+    }
+  ],
+  "question": {
+    "id": "journey-ocean",
+    "category": "Natur",
+    "question": "Was sind Korallen?",
+    "answers": [
+      "Bunte Steine",
+      "Unterwasserpflanzen",
+      "Tiere"
+    ],
+    "correct": 2,
+    "why": "Korallen bestehen aus kleinen Tieren, den Polypen. Viele leben mit Algen zusammen."
+  },
+  "activity": "Vergleiche auf der Weltkugel die Nordsee und den Pazifik. Welche ist ein kleineres Meer, welcher ein Ozean?"
+},
   { id:"nature", title:"Lebensräume voller Leben", intro:"Wüste, Wald, Savanne und Eiswelten erkunden.", icon:"leaf", color:"green", minutes:8, source:"https://www.nps.gov/subjects/biodiversity/index.htm", sourceName:"National Park Service · Artenvielfalt", steps:[
     {title:"Ein Zuhause für jedes Lebewesen",text:"Ein Lebensraum ist ein Ort, an dem ein Lebewesen Nahrung, Wasser und Schutz findet. Ein Wald ist ein Lebensraum, ein Teich ebenfalls. Tiere und Pflanzen sind an ihre Umgebung angepasst. Ein Fisch und ein Kaktus brauchen deshalb ganz unterschiedliche Bedingungen.",fact:"Auch unter einem Stein und in einer Handvoll Erde gibt es Lebensräume."},
     {title:"Regenwald und Savanne",text:"Tropische Regenwälder sind meist warm und feucht. Dort wachsen viele verschiedene Pflanzen. In Savannen wechseln häufig Regen- und Trockenzeiten. Zwischen Gräsern stehen einzelne Bäume. In afrikanischen Savannen leben zum Beispiel Giraffen und viele Antilopen.",fact:"Nicht alle Regenwälder liegen in den Tropen. Es gibt auch kühlere Regenwälder."},

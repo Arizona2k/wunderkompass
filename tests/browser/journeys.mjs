@@ -19,6 +19,7 @@ async function geometry(p,label){
 }
 export async function assertJourneyDiagram(visual,id,selected){
  await assertWaterWeatherDiagram(visual,id,selected);
+ await assertSeasonsOceanDiagram(visual,id,selected);
  if(['inside:3','planet:3','planet:4'].includes(id)){
   // React must paint the selected scene before SVG measurements are taken.
   await visual.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done))));
@@ -184,4 +185,28 @@ export async function assertWaterWeatherDiagram(visual,id,selected){
  }
  if(id==='weather:3')await visual.getByText(/ohne Zeitmaßstab/).waitFor();
  if(id==='weather:4'&&selected===2)await visual.getByText('Neue Messungen können helfen, eine Vorhersage zu überarbeiten. Sie bleibt unsicher.',{exact:true}).waitFor();
+}
+
+export async function assertSeasonsOceanDiagram(visual,id,selected){
+ if(!['seasons:1','seasons:2','seasons:3','seasons:4','ocean:1','ocean:2','ocean:3','ocean:4'].includes(id))return;
+ await visual.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done))));
+ const vectors=await visual.locator('svg path[marker-end]').evaluateAll(paths=>paths.map(path=>{const a=path.getPointAtLength(0),b=path.getPointAtLength(path.getTotalLength());return {x:a.x,y:a.y,dx:b.x-a.x,dy:b.y-a.y};}));
+ if(['seasons:1','seasons:2'].includes(id)){
+  assert.equal(vectors.length,3,'all three depicted incoming rays have arrowheads');assert.ok(vectors.every(v=>v.dx>0&&v.dy===0),'sunlight reaches the Earth from the depicted Sun');
+  const rotation=await visual.locator('svg g[transform^="rotate("]').getAttribute('transform');assert.ok(id==='seasons:1'?rotation.startsWith('rotate(-'):!rotation.startsWith('rotate(-'),'northern pole faces toward the Sun in June and away in December in these two different views');await visual.getByText(/verschiedenen Blickrichtungen|anderen Richtung/).waitFor();
+ }
+ if(id==='seasons:3')await visual.getByText(/erscheint nur in dieser Blickrichtung gerade; sie bleibt um etwa 23,4 Grad/).waitFor();
+ if(id==='seasons:4'){
+  assert.equal(vectors.length,2,'rotation and revolution each retain a separate arrowhead');const axis=await visual.locator('svg path:not([marker-end])').evaluateAll(es=>es.some(e=>{const a=e.getPointAtLength(0),b=e.getPointAtLength(e.getTotalLength());return a.x<98&&b.x>98&&a.y<82&&b.y>150;}));assert.ok(axis,'the seasons orbit drawing actually includes the tilted rotation axis');await visual.getByText(/keinen maßstäblichen Winkel/).waitFor();
+ }
+ if(id==='ocean:1'){
+  assert.equal(vectors.length,2,'river transport and evaporation each have their own arrowhead');assert.ok(vectors.some(v=>v.dx>0&&v.dy>0),'river transport reaches the sea');assert.ok(vectors.some(v=>v.dx===0&&v.dy<0),'water evaporation points upward separately');await visual.getByText(/keine sichtbaren Salzkörner/).waitFor();await visual.getByText(/Salz zurücklässt/).waitFor();
+ }
+ if(id==='ocean:2'){
+  const labels=await visual.locator('.chapter-diagram-key span').allTextContents();for(const label of ['1 · Lebendes Korallentier','2 · Kleine Algen im Gewebe','3 · Kalkskelett unter dem Tier','4 · Anderes Rifftier'])assert.ok(labels.includes(label),'own readable labelled polyp/skeleton/partners/other animal '+label);
+  const pointers=await visual.locator('svg text').allTextContents();assert.deepEqual(pointers,['1','2','3','4'],'all four actual depicted parts have matching readable pointers');
+  const algae=await visual.locator('svg circle').evaluateAll(es=>es.filter(e=>Number(e.getAttribute('r'))===9).map(e=>({x:Number(e.getAttribute('cx')),y:Number(e.getAttribute('cy'))})));assert.equal(algae.length,4);assert.ok(algae.every(a=>a.x>116&&a.x<225&&a.y>94&&a.y<184),'algal partners are depicted within polyp tissue');await visual.getByText(/Vergrößertes Beispiel eines Steinkorallen-Polypen/).waitFor();await visual.getByText(/nicht alle Korallenarten/).waitFor();
+ }
+ if(id==='ocean:3')await visual.getByText(/kein maßstabsgetreues Tiefenprofil/).waitFor();
+ if(id==='ocean:4'){assert.equal(vectors.length,2,'both independently depicted current directions have arrowheads');assert.ok(vectors[0].dx*vectors[1].dx<0,'the two selected schematic flow directions are opposed');await visual.getByText(/keine vollständige Karte der Meeresströmungen/).waitFor();}
 }

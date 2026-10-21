@@ -1242,7 +1242,7 @@
           "answers": [
             "Höherer Sonnenstand und längere Tage",
             "Nur weil die Erde dann am nächsten zur Sonne ist",
-            "Weil nachts eine zweite Sonne scheint"
+            "Nur die Tageslänge zählt; der Sonnenstand ist egal"
           ],
           "correct": 0,
           "hint": "Betrachte zwei Größen getrennt: Wie hoch steht die Sonne, und wie lange bleibt ein Ort am Tag beleuchtet?",
@@ -1250,7 +1250,7 @@
           "wrong": [
             "Steileres Sonnenlicht und mehr Tagesstunden tragen zur größeren Energiemenge bei.",
             "Die Entfernung ist nicht der Hauptgrund der Jahreszeiten.",
-            "Es gibt keine zweite nächtliche Sonne."
+            "Die Tageslänge ist ein Teil der Erklärung. Auch der höhere Sonnenstand beeinflusst, wie viel Sonnenenergie dieselbe Bodenfläche erreicht."
           ]
         },
         {
@@ -1297,16 +1297,16 @@
         {
           "prompt": "Welche Erklärung passt zum nördlichen Winter?",
           "answers": [
-            "Die Sonne erlischt",
-            "Die Erde hört auf sich zu drehen",
+            "Nur der größere Sonnenabstand der ganzen Erde",
+            "Gleich langer Tag, nur weniger helles Sonnenlicht",
             "Niedrigerer Sonnenstand und kürzere Tage"
           ],
           "correct": 2,
           "hint": "Verfolge einen Ort auf der geneigten Kugel durch eine ganze Drehung. Wie lange bleibt er im Licht, und in welchem Winkel fällt es ein?",
           "why": "Weniger steiles Licht und kürzere Tagesdauer vermindern die tägliche Energiezufuhr.",
           "wrong": [
-            "Die Sonne leuchtet weiterhin.",
-            "Auch im Winter erzeugt die Drehung Tag und Nacht.",
+            "Die Entfernung allein erklärt nicht den gleichzeitigen Sommer im Süden und Winter im Norden.",
+            "In Deutschland sind die hellen Wintertage kürzer und der Sonnenstand ist niedriger. Eine einzige veränderte Helligkeit erklärt den Vergleich nicht.",
             "Weniger steiles Licht und kürzere Tagesdauer vermindern die tägliche Energiezufuhr."
           ]
         },
@@ -1457,7 +1457,7 @@
             "Der Arktische Ozean"
           ],
           "correct": 1,
-          "hint": "Vergleiche die benannten Ozeanflächen in der Übersicht. Verwechsle größte Fläche nicht mit größter Tiefe oder bekanntestem Namen.",
+          "hint": "Nutze die Größenangabe im Kapitel: Welcher Ozean wird dort als größter genannt? Unterscheide die größte Fläche von der größten Tiefe.",
           "why": "Der Pazifik ist der größte der fünf hier benannten Ozeane.",
           "wrong": [
             "Der Atlantik ist ein Ozean, aber der Pazifik ist in dieser Übersicht größer.",
@@ -1525,16 +1525,16 @@
         {
           "prompt": "Wie gelangen gelöste Stoffe ins Meer?",
           "answers": [
-            "Nur durch Flaggen auf Schiffen",
-            "Weil Meere kein Wasser haben",
+            "Mit dem Wasserdampf, der Salz aus Flüssen mitnimmt",
+            "Nur durch Verdunstung, ohne dass Stoffe dazukommen",
             "Unter anderem mit Flüssen aus Gestein"
           ],
           "correct": 2,
           "hint": "Verfolge Wasser vom Land zum Meer. Welche Stoffe kann es unterwegs aus dem Gestein aufnehmen und mitführen?",
           "why": "Flüsse bringen gelöste Mineralien; auch Meeresbodenprozesse tragen Stoffe bei.",
           "wrong": [
-            "Flaggen liefern keine Erklärung für den Salztransport.",
-            "Meere enthalten sehr viel Wasser mit gelösten Stoffen.",
+            "Bei der beschriebenen Verdunstung bleibt das Salz zurück. Fließendes Wasser kann dagegen gelöste Salze ins Meer bringen.",
+            "Verdunstung kann den Salzgehalt erhöhen, bringt aber bei diesem Vorgang kein neues Salz ins Meer. Gefragt ist der Weg gelöster Stoffe.",
             "Flüsse bringen gelöste Mineralien; auch Meeresbodenprozesse tragen Stoffe bei."
           ]
         },
@@ -1587,17 +1587,17 @@
         {
           "prompt": "Warum benötigen viele riffbildende Korallen Licht?",
           "answers": [
-            "Licht macht Meerwasser immer zu Trinkwasser",
+            "Weil Licht ihr Kalkskelett direkt in Nahrung verwandelt",
             "Ihre mit ihnen lebenden Algen nutzen Sonnenlicht",
-            "Alle Tiere sind Sterne"
+            "Weil die Korallentiere selbst wie Pflanzen Fotosynthese betreiben"
           ],
           "correct": 1,
           "hint": "Ordne das Licht dem richtigen Partner zu. Welche Rolle spielt die Zusammenarbeit zwischen Korallentieren und bestimmten Algen?",
           "why": "Viele Korallen leben mit Algen zusammen, die Sonnenlicht nutzen.",
           "wrong": [
-            "Sonnenlicht garantiert keine Trinkwasserqualität.",
+            "Das Kalkskelett ist nicht der lichtnutzende Partner. Kleine Algen im Gewebe betreiben Fotosynthese und liefern energiereiche Stoffe.",
             "Viele Korallen leben mit Algen zusammen, die Sonnenlicht nutzen.",
-            "Ein Tier erzeugt nicht wie ein Stern eigenes Sonnenlicht."
+            "Die Korallentiere sind Tiere. Die mit ihnen lebenden Algen nutzen das Sonnenlicht; beide Partner dürfen nicht verwechselt werden."
           ]
         },
         {

@@ -1,3 +1,11 @@
+## Jahreszeiten/Meere lokal vollständig geprüft ·21.10.2026
+
+Zehn bestehende Kapitel mit freiwilligen Erklärschichten, präziseren Modellen und individuellen Rückmeldungen weitergeführt. Vollständige lokale Browserabnahme am unveränderten Stand erfolgreich; Originalnachweise erhalten und anschließend ausschließlich aktuelle UI-Belege der 54 bestehenden Dossiers gebunden. Noch nicht veröffentlicht: endgültige GitHub-Prüfung und tatsächliche Testbereitstellung bleiben Pflicht. Der 44. Chronikeintrag bestätigt die bereits tatsächlich ausgelieferte Wasser-/Wetterüberarbeitung PR48.
+
+## In Entwicklung ·21.10.2026 · Jahreszeiten und Meere
+
+Zehn vorhandene Reisekapitel aus dem gesicherten Gesamtstand mit verständlichen Einstiegen, Vertiefungen, sicheren Beobachtungsaufträgen, individuellen Aufgabenrückmeldungen und präzisierten Modellen zusammengeführt. Quellen und Modellgrenzen stehen am Inhalt; bestehende IDs, richtige Antworten und Passstände erhalten. Bestätigten Wasser-/Wetterabschnitt48 mit tatsächlicher Vercel-Zeit für die nächste reguläre Chronik ergänzt. Gezielte Vorprüfungen bestanden; endgültige vollständige Abschnittsabnahme und Veröffentlichung noch offen.
+
 ## Wasser-/Wetterabnahme lokal bestätigt ·21.10.2026
 
 Wasser/Wetter ist lokal vollständig geprüft: 129 Browsermeldungen einschließlich 240 Hinweisen und 448 Diagrammansichten, alle Fehlerlisten leer. Die 54 vorhandenen Dossiers erhielten ausschließlich aktuelle UI-Belege nach der tatsächlichen Abnahme; Fakten, Quellen und Rechte bleiben erhalten. Die kalte Offlinephase war im Vergleich auffällig langsamer; Ursache offen, Messdaten gesichert. Keine Timeouts oder Budgets erhöht und keine Prüfungen entfernt. Dieser Abschnitt ist noch nicht veröffentlicht; aktuelle GitHub-Quality und tatsächliche Testbereitstellung bleiben Pflicht.
