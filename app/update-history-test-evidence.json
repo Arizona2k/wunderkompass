@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "9560760e114d9398f871c0f4033832df85df55df",
+    "commit": "3bd78b4b803a235791b045732abe423d2f8820eb",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -40,7 +40,8 @@
       "2ee8e88ceb8d3449fe193e1b282d5fcb21d4d9f8",
       "762a18332e9e05b3e87d554e2219d257ea2ee33c",
       "64d45a3c0e73b5fba79e0746b91089f741aae457",
-      "9560760e114d9398f871c0f4033832df85df55df"
+      "9560760e114d9398f871c0f4033832df85df55df",
+      "3bd78b4b803a235791b045732abe423d2f8820eb"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -991,6 +992,37 @@
           "createdAt": "2026-10-20T22:39:04Z",
           "updatedAt": "2026-10-20T22:39:04Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/Z9b8v48GnjqvpitcYjAK7n2ekVfW"
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "title": "Alte Tierdetektiv-Spielstände erhalten und bestätigte Optik-Chronik nachführen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/46",
+      "base": "test-live",
+      "mergedAt": "2026-10-21T06:37:18Z",
+      "mergeCommit": "3bd78b4b803a235791b045732abe423d2f8820eb",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/3bd78b4b803a235791b045732abe423d2f8820eb/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 56862819054,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-21T06:37:35Z",
+          "updatedAt": "2026-10-21T06:37:35Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/Gzf7uagaMQQhbeYZe4Z3WfdFS8UM"
+        },
+        {
+          "id": 56862807201,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-21T06:37:21Z",
+          "updatedAt": "2026-10-21T06:37:21Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/Gzf7uagaMQQhbeYZe4Z3WfdFS8UM"
         }
       ]
     }

@@ -3,7 +3,7 @@ import type { Place } from "./earth-data";
 export type MapLayer="plain"|"capitals"|"mountains"|"rivers"|"lakes"|"deserts"|"forests"|"volcanoes"|"animals"|"records"|"climate"|"vegetation"|"plates"|"orientation"|"timezones";
 export const MAP_LAYERS:[MapLayer,string,string][]=[
  ["plain","Länder & Meere","Dreh die Welt und entdecke Länder, Kontinente und Meere."],
- ["capitals","Hauptstädte","Städte, in denen wichtige Aufgaben eines Landes erledigt werden. Manche Länder haben mehrere Hauptstädte."],
+ ["capitals","Städte & Hauptstädte","Ausgewählte Hauptstädte und weitere Städte mit wichtigen Aufgaben. Die Stadtkarte erklärt den Unterschied. Manche Länder haben mehrere Hauptstädte."],
  ["orientation","Linien & Orientierung","Äquator, Wendekreise, Nullmeridian und ein Gradnetz. Diese Linien sind auf der Erde unsichtbar."],
  ["mountains","Berge & Gebirge","Tippe auf einen Namen. Die Markierung zeigt einen Ort im Gebirge, nicht seine ganze Ausdehnung."],
  ["rivers","Flüsse","Ausgewählte große Flüsse: blaue Linien zeigen ihren vereinfachten Verlauf."],

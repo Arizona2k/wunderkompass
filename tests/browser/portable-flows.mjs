@@ -30,6 +30,43 @@ export async function searchAndHistory(page, report) {
   await page.goForward();
   await page.locator('.model-energy').waitFor();
   report.checks.push('Search, typo, empty results, Escape, hash links, Back/Forward');
+  await geographyFacts(page, report);
+}
+
+async function geographyFacts(page, report) {
+  for (const [name, capital, note, language] of [
+    ['Kanada', 'Ottawa', 'Land und Binnengewässer', null],
+    ['Benin', 'Porto-Novo', 'Regierungssitz befindet sich in Cotonou', 'Französisch, Fon, Yoruba, Anii und weitere Sprachen'],
+    ['Burundi', 'Gitega', 'Bujumbura bleibt ein wichtiges Wirtschaftszentrum', 'Rundi, Französisch, Englisch, Suaheli und weitere Sprachen'],
+  ]) {
+    await page.getByRole('button', {name:'Lernwelt durchsuchen', exact:true}).click();
+    await page.getByRole('combobox', {name:'Lernwelt durchsuchen', exact:true}).fill(name);
+    await page.getByRole('option').getByText(name, {exact:true}).click();
+    await page.locator('.capital-line').getByText(capital, {exact:true}).waitFor();
+    const details=page.locator('.place-portrait-wide .portrait-details');
+    if (!await details.evaluate(e=>e.open)) await details.locator(':scope > summary').click();
+    await details.locator('.geography-notes > p.small-note').first().filter({hasText:note}).waitFor();
+    if (language) await details.getByText(language, {exact:true}).waitFor();
+    if (name==='Kanada') {
+      await details.getByText('Fläche · 2025', {exact:true}).waitFor();
+      await details.getByText('Rund 9.984.670 km²', {exact:true}).waitFor();
+    }
+    await details.getByRole('link').first().waitFor();
+    assert.ok(await details.getByRole('link').count()>0, name+' source remains visible');
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,name+' geography overflow');
+  }
+  for (const [name, meaning] of [
+    ['Bujumbura', 'Wirtschaftszentrum'], ['Cotonou', 'Regierungssitz'],
+    ['Gitega', 'politische Hauptstadt'], ['Porto-Novo', 'offizielle Hauptstadt'],
+  ]) {
+    await page.getByRole('button', {name:'Lernwelt durchsuchen', exact:true}).click();
+    await page.getByRole('combobox', {name:'Lernwelt durchsuchen', exact:true}).fill(name);
+    await page.getByRole('option').getByText(name, {exact:true}).click();
+    await page.locator('.info-card').getByRole('heading', {name,exact:true}).waitFor();
+    await page.locator('.info-card').getByText(meaning,{exact:false}).first().waitFor();
+  }
+  await page.getByRole('combobox',{name:'Was möchtest du sehen?',exact:true}).getByText('Städte & Hauptstädte',{exact:true}).waitFor();
+  report.checks.push('Geography: sourced Canada land/freshwater area, Benin/Burundi capitals, four retained/new cities and readable language names');
 }
 
 export async function memoryRound(page, ready, report) {

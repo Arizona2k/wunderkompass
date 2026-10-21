@@ -3425,8 +3425,8 @@
   "CAN": {
     "population": 41262329,
     "populationYear": 2024,
-    "area": 15634410,
-    "areaYear": 2023,
+    "area": 9984670,
+    "areaYear": 2025,
     "capital": "Ottawa",
     "languages": [
       "en",
@@ -3438,7 +3438,15 @@
       "CAD"
     ],
     "isState": true,
-    "ownIso": true
+    "ownIso": true,
+    "geographyNote": "Diese amtliche Bezugsfläche für 2025 umfasst Land und Binnengewässer. Meeresgebiete werden hier nicht mitgezählt.",
+    "geographySources": [
+      {
+        "title": "Kanadisches Umweltministerium · Land und Binnengewässer",
+        "url": "https://www.canada.ca/en/environment-climate-change/services/environmental-indicators/conserved-areas.html"
+      }
+    ],
+    "geographyCheckedOn": "2026-10-21"
   },
   "CMR": {
     "population": 29123744,
@@ -3498,7 +3506,7 @@
     "populationYear": 2024,
     "area": 27830,
     "areaYear": 2023,
-    "capital": "Bujumbura",
+    "capital": "Gitega",
     "languages": [
       "rn",
       "fr",
@@ -3509,7 +3517,15 @@
       "BIF"
     ],
     "isState": true,
-    "ownIso": true
+    "ownIso": true,
+    "geographyNote": "Gitega ist die politische Hauptstadt. Bujumbura bleibt ein wichtiges Wirtschaftszentrum.",
+    "geographySources": [
+      {
+        "title": "Burundisches Außenministerium · Geografie",
+        "url": "https://www.mae.gov.bi/geographie/"
+      }
+    ],
+    "geographyCheckedOn": "2026-10-21"
   },
   "BFA": {
     "population": 23548781,
@@ -3660,7 +3676,7 @@
     "populationYear": 2024,
     "area": 114760,
     "areaYear": 2023,
-    "capital": "Cotonou",
+    "capital": "Porto-Novo",
     "languages": [
       "fr",
       "fon",
@@ -3671,7 +3687,15 @@
       "XOF"
     ],
     "isState": true,
-    "ownIso": true
+    "ownIso": true,
+    "geographyNote": "Porto-Novo ist die offizielle Hauptstadt. Der Regierungssitz befindet sich in Cotonou. Hauptstadt und Regierungssitz müssen nicht derselbe Ort sein.",
+    "geographySources": [
+      {
+        "title": "Australisches Außenministerium · Benin",
+        "url": "https://www.dfat.gov.au/geo/benin"
+      }
+    ],
+    "geographyCheckedOn": "2026-10-21"
   },
   "BLZ": {
     "population": 417072,

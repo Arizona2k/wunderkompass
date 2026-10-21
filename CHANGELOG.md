@@ -1,3 +1,9 @@
+## Noch nicht veröffentlicht · Geografiekorrekturen ·21.10.2026
+
+- Kanada: korrekte Bezugsfläche für Land und Binnengewässer; Benin/Burundi: Porto-Novo beziehungsweise Gitega als Hauptstädte, Cotonou/Bujumbura mit ihrer tatsächlichen Rolle erhalten. Quellen und verständliche Länder-/Stadthinweise ergänzt.
+- Alle alten Ortskennungen/Koordinaten, Notizen, Favoriten und Spielstände erhalten; aktuelle Fakten beim Wiederbesuch bekannter Orte und verständliche Ebene „Städte & Hauptstädte“.
+- Tatsächlich ausgelieferte Tier-Spielstandskorrektur aus PR46 in „Was ist neu?“ nachgeführt. Veröffentlichung der Geografie erst nach vollständigem aktuellem Quality und tatsächlicher Auslieferungskontrolle.
+
 ## Vorbereiteter kompatibler Tier-Spielstandserhalt ·21.10.2026
 
 Alte gültigeTierdetektiv-Antwortreihenfolgen beimBestandsausbau wiederfortsetzbar; unbekannte/familienfremde/doppelteWerte weiterablehnen. EchteOptik-AuslieferungPR45 mitMerge-/Vercel-Nachweis in„Wasistneu?“ nachgeführt.146aktuelleUnits grün,volleaktuelleSchlussprüfung/weitereTestauslieferung nochoffen. KeineProduktionsveröffentlichung.

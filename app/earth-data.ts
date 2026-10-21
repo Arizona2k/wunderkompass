@@ -4,7 +4,8 @@ import { EXTRA_QUESTIONS } from "./quiz-data";
 export type Mode = "globe" | "layers" | "day" | "quiz" | "journeys" | "games" | "book" | "labs" | "world";
 export type MapProperties = { id: string; name: string; continent: string; iso: string; lat: number; lon: number; type: string };
 export type Country = { type: "Feature"; id?: string; properties: MapProperties; geometry: {type: "Polygon"; coordinates: number[][][]} | {type: "MultiPolygon"; coordinates: number[][][][]} };
-export type Place = { id: string; name: string; kind: "country" | "continent" | "ocean" | "line" | "nature"; lat: number; lon: number; text: string; fact: string; color?: string; capital?: string; iso?: string; label?: string; population?: number; populationYear?: number; area?: number; areaYear?: number; languages?:string[];currencies?:string[];isState?:boolean };
+export type GeographySource = {title:string;url:string};
+export type Place = { id: string; name: string; kind: "country" | "continent" | "ocean" | "line" | "nature"; lat: number; lon: number; text: string; fact: string; color?: string; capital?: string; iso?: string; label?: string; population?: number; populationYear?: number; area?: number; areaYear?: number; languages?:string[];currencies?:string[];isState?:boolean;geographyNote?:string;geographySources?:GeographySource[];geographyCheckedOn?:string };
 export type Layer = { id: string; name: string; color: string; tag: string; text: string; fact: string; depth: string; radius: number };
 
 export const CONTINENTS: Place[] = [
@@ -98,11 +99,20 @@ export function countryPlace(country: Country): Place {
   let minLat=90,maxLat=-90;
   if(!details){const polygons=country.geometry.type==="Polygon"?[country.geometry.coordinates]:country.geometry.coordinates;for(const polygon of polygons)for(const ring of polygon)for(const point of ring){minLat=Math.min(minLat,point[1]);maxLat=Math.max(maxLat,point[1]);}}
   const position=minLat<0&&maxLat>0?"auf beiden Seiten des Äquators":minLat>=0?"nördlich des Äquators":"südlich des Äquators";
-  const meta=(COUNTRY_META as Record<string,{capital:string;population:number;populationYear:number;area:number|null;areaYear:number;languages:string[];currencies:string[];isState:boolean;ownIso:boolean}>)[p.id];
-  const place:Place = { isState:meta?.isState,languages:meta?.languages,currencies:meta?.currencies,population:meta?.population,populationYear:meta?.populationYear,area:meta?.area??undefined,areaYear:meta?.areaYear, id: p.id, name: p.name, kind: "country", lat: p.lat, lon: p.lon, iso: meta?.ownIso?p.iso:undefined, capital: details?.capital||meta?.capital||undefined,
+  const meta=(COUNTRY_META as Record<string,{capital:string;population:number;populationYear:number;area:number|null;areaYear:number;languages:string[];currencies:string[];isState:boolean;ownIso:boolean;geographyNote?:string;geographySources?:GeographySource[];geographyCheckedOn?:string}>)[p.id];
+  const place:Place = { geographyNote:meta?.geographyNote,geographySources:meta?.geographySources,geographyCheckedOn:meta?.geographyCheckedOn,isState:meta?.isState,languages:meta?.languages,currencies:meta?.currencies,population:meta?.population,populationYear:meta?.populationYear,area:meta?.area??undefined,areaYear:meta?.areaYear, id: p.id, name: p.name, kind: "country", lat: p.lat, lon: p.lon, iso: meta?.ownIso?p.iso:undefined, capital: details?.capital||meta?.capital||undefined,
     text: details?.text ?? `${p.name} liegt ${regions.length>1?"in den Weltregionen "+regions.join(" und "):"in der Weltregion "+(continent?.name??p.continent)}. Die helle Umrandung auf der Kugel zeigt dir seine Lage.`,
     fact: details?.fact ?? `${p.name} liegt ${position}. Schau nach, welche Länder oder Meere in der Nähe liegen.` };
   countryCache.set(country,place);return place;
+}
+
+// Resolve the current view without rewriting or deleting historical pass snapshots.
+export function currentGeographyPlace(place:Place,countries:Country[],capitals:Place[]):Place{
+ if(place.kind==='country'){const country=countries.find(c=>c.properties.id===place.id);return country?countryPlace(country):place;}
+ return capitals.find(p=>p.id===place.id)??place;
+}
+export function currentGeographyPlaces(saved:Place[],canonical:Place[]):Place[]{
+ return [...new Map([...saved,...canonical].map(place=>[place.id,place] as const)).values()];
 }
 
 export type QuizQuestion = { id: string; category: "Weltkugel" | "Erdschichten" | "Länder" | "Wasser & Wetter" | "Jahreszeiten" | "Natur" | "Erde schützen"; question: string; answers: string[]; correct: number; why: string };
