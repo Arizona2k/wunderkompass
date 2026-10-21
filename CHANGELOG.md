@@ -1,3 +1,11 @@
+## Lokal geprüft · Biografien und belegte Kontinentchronik
+
+Zwei vorhandene Biografien mit sechs freiwilligen Denkaufgaben, eigenen gekennzeichneten Modellen, erklärten Darwin-/Kamera-Rückwegen und erhaltenen alten Spielrunden integriert. Vollständige aktuelle lokale Browser-/Offlineabnahme grün, danach56UI-Belege gebunden. Chronik47 enthält den tatsächlich bestätigten Kontinentabschnitt51 und alle46alten Einträge. Endgültiges GitHub-CI und tatsächliche Veröffentlichung dieses Folgestands noch offen.
+
+## In Vorbereitung · zwei Biografien und bestätigte Kontinentchronik
+
+Die vorhandenen Manuskripte zu MaryAnning und IbnAlHaytham mit sechs freiwilligen Altersaufgaben, eigenen gekennzeichneten Erklärmodellen und gegenseitigen Wissenswegen zu Darwin und Kamera integriert. Alte18Personenkarten, Bilder und gespeicherte Spielrunden erhalten. Echte bestätigte PR51-Bereitstellung in der regulären Folgechronik nachgeführt; vorherige46Einträge unverändert. Vollständige aktuelle Abnahme und tatsächliche Veröffentlichung der Biografien stehen noch aus.
+
 ## 21.10.2026 · autorisierte begrenzte Quality-Reserve
 
 BestehendesJoblimitnachkonkreterNutzerfreigabevon50auf55Minutenerhöht; bisheriger142LaufhattealleProdukt-/Browser-/Handoff-/Commitprüfungenerfolgreichbeendet,aberGesamtstatuscancellednach50:09. KeineTests,Prüfgruppen,Prozesse,RechteoderübrigenBudgetsgeändert. KeineBeschleunigungoderAuslieferungbehauptet;vollständigeaktuellePflichtprüfungenbleibenerforderlich.

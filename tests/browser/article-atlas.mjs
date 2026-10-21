@@ -1,3 +1,4 @@
+import {peopleSourceView,peopleLegacyRound} from './people-learning.mjs';
 import {opticsSourceView} from './invention-optics.mjs';
 import {historySourceView} from './history-learning.mjs';
 import assert from 'node:assert/strict';
@@ -83,6 +84,8 @@ export async function articleAtlas(page,ready,report,width,shots){
  if(width===320){
   await open('science-moon-phases');await page.locator('.earth-app').evaluate(el=>el.classList.add('large-reading'));assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'large reading 320');await page.locator('.article-wayfinder').getByRole('button',{name:/Mini-Frage$/}).click();await page.screenshot({path:shots+'/article-large-reading-320.png'});await page.locator('.earth-app').evaluate(el=>el.classList.remove('large-reading'));
  }
+ report.peopleViews??=[];report.peopleViews.push(...await peopleSourceView(page,{width,shots,questions:true}));
+ if(width===390)await peopleLegacyRound(page.context().browser(),new URL(page.url()).origin,ready,report,shots);
  report.opticsViews??=[];report.opticsViews.push(...await opticsSourceView(page,{width,shots,questions:true}));
  report.historySourceViews??=[];report.historySourceViews.push(...await historySourceView(page,{width,shots,questions:true}));
  report.checks.push('Article atlas '+width+': six categories and three scientific drawings with readable 16px HTML labels and original alternative texts, mobile two-column phases, clipped unfocused skip link and keyboard activation, keyboard/touch jumps and focus, unchanged hash, axe A/AA, wrong/right/reload mini question, coastal comparison, direct learning route and embedded focus');
@@ -91,6 +94,7 @@ export async function articleAtlas(page,ready,report,width,shots){
 export async function offlineArticleAtlas(page,report){
  await page.evaluate(()=>location.hash='world/topic/science-tides');await page.locator('.tide-comparison').waitFor();await page.locator('.article-wayfinder').getByRole('button',{name:/Ausprobieren$/}).click();assert.equal(await page.locator('.article-experiment').evaluate(el=>el===document.activeElement),true);await page.locator('.tide-comparison').getByRole('button',{name:'Hochwasser',exact:true}).click();await page.getByText('Der hohe Wasserstand bedeckt hier mehr Küstenfläche.',{exact:true}).waitFor();
  await page.evaluate(()=>location.hash='world/topic/science-moon-phases');await page.locator('.world-mini-question .world-game-hint').waitFor();await page.locator('.world-mini-question .world-game-hint summary').click();assert.ok(await page.locator('.world-mini-question .world-game-hint p').innerText());await page.getByRole('img',{name:drawingAlts['science-moon-phases'],exact:true}).waitFor();assert.equal(await page.locator('.topic-illustration svg').count(),4);await readableLabels(page.locator('.topic-diagram-label'));
+ report.peopleCold=await peopleSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.peopleCold.length,2);
  report.opticsCold=await opticsSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.opticsCold.length,3);
  report.historySourceCold=await historySourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.historySourceCold.length,2,'both new historical activities survive the actual cold browser restart');
  report.checks.push('New article drawings, wayfinder, individual mini hint and coastal comparison work after actual cold offline restart');

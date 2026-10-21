@@ -15,6 +15,8 @@ const discoveryIndexFile=path.join(root,'app/discovery-connections.json'),discov
 if(process.argv.includes('--check')){if(fs.readFileSync(discoveryIndexFile,'utf8')!==discoveryIndexText)throw Error('Stale discovery connection projection');}
 else fs.writeFileSync(discoveryIndexFile,discoveryIndexText);
 const files=[];function write(name,value,sources){const b=JSON.stringify(value,null,2)+'\n';fs.writeFileSync(path.join(out,name),b);files.push({file:name,sources,entries:Array.isArray(value)?value.length:Object.keys(value).length,bytes:Buffer.byteLength(b),sha256:crypto.createHash('sha256').update(b).digest('hex')});}
+write('people-illustrations.json',JSON.parse(fs.readFileSync('app/people-illustrations.json','utf8')).entries,['app/people-illustrations.json']);
+write('people-inquiries.json',JSON.parse(fs.readFileSync('app/people-inquiries.json','utf8')).entries,['app/people-inquiries.json']);
 write('animal-inquiries.json',JSON.parse(fs.readFileSync(path.join(root,'app/animal-inquiries.json'),'utf8')).entries,['app/animal-inquiries.json']);
 const e=load('app/earth-data.ts'),l=load('app/learning-data.ts'),n=load('app/nature-data.ts'),w=load('app/world-index.ts');
 for(const [f,k] of [['continents.json','CONTINENTS'],['oceans.json','OCEANS'],['orientation-lines.json','LINES'],['earth-layers.json','LAYERS'],['quiz-questions.json','QUESTIONS']])write(f,e[k],['app/earth-data.ts','app/learning-data.ts','app/quiz-data.ts']);

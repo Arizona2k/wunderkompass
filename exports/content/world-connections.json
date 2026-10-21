@@ -520,6 +520,22 @@
       "kind": "exploration",
       "why": "Beide nutzen Optik; Mikroskope untersuchen kleine nahe Strukturen statt ferne Himmelskörper.",
       "checkedAt": "2026-10-16"
+    },
+    {
+      "id": "person-mary_anning--person-charles_darwin",
+      "fromId": "person-mary_anning",
+      "toId": "person-charles_darwin",
+      "kind": "context",
+      "why": "Anning beschrieb Fossilien früherer Tiere; Darwin verglich viele Belege zur Veränderung von Arten. Ein einzelnes Fossil erklärt nicht den ganzen Ablauf der Evolution.",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "person-ibn_al_haytham--invention-camera",
+      "fromId": "person-ibn_al_haytham",
+      "toId": "invention-camera",
+      "kind": "context",
+      "why": "Die Kamerakarte zeigt Licht durch eine Öffnung auf eine Bildfläche; die Biografie erklärt das Prüfen von Lichtideen. Das ist eine erklärte Verbindung, keine Zuschreibung der modernen Kamera an einen einzigen mittelalterlichen Erfinder.",
+      "checkedAt": "2026-10-21"
     }
   ]
 }

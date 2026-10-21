@@ -5351,7 +5351,8 @@
     ],
     "related": [
       "person-jane_goodall",
-      "animal-green-sea-turtle"
+      "animal-green-sea-turtle",
+      "person-mary_anning"
     ],
     "sources": [
       {
@@ -12872,7 +12873,8 @@
     "locations": [],
     "related": [
       "invention-smartphone",
-      "invention-telescope"
+      "invention-telescope",
+      "person-ibn_al_haytham"
     ],
     "sources": [
       {
@@ -13206,5 +13208,157 @@
       "model": "resolution"
     },
     "sourceNote": "Das Museum unterscheidet Hookes Veröffentlichung von 1665 und die spätere Nachbildung des Geräts. Die Optikquellen erklären Zwischenbild und Grenzen bloßer Vergrößerung. Das Lernmuster vergleicht Größe und erkennbare Einzelheiten, ohne die Auflösung eines echten Geräts zu berechnen. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
+  },
+  {
+    "id": "person-mary_anning",
+    "category": "people",
+    "title": "Mary Anning",
+    "intro": "Mary Anning fand und untersuchte Fossilien an der Küste bei Lyme Regis.",
+    "paragraphs": [
+      "Fossilien sind erhaltene Reste oder Spuren früherer Lebewesen. Anning legte Funde sorgfältig frei, beschrieb sie und verglich ihre Formen.",
+      "Ihr Bruder Joseph fand 1811 einen Schädel. Mary entdeckte später weitere Teile dieses Meerestiers. Forschung baut oft auf der Arbeit mehrerer Menschen auf."
+    ],
+    "facts": [
+      {
+        "label": "Lebenszeit",
+        "text": "1799–1847"
+      },
+      {
+        "label": "Arbeitsgebiet",
+        "text": "Fossilien sammeln, vorbereiten und untersuchen"
+      }
+    ],
+    "more": [
+      "Ein Ichthyosaurier war ein ausgestorbenes Meeresreptil. Ein Fossil ist ein Beleg für ein früheres Lebewesen; sein Aussehen und Verhalten müssen Forschende daraus vorsichtig erschließen.",
+      "Anning kannte viele Funde sehr genau. Trotzdem wurde ihre Arbeit in damaligen wissenschaftlichen Veröffentlichungen oft nicht angemessen genannt. Frage bei einer Entdeckung auch: Wer fand, untersuchte und erklärte die Belege?"
+    ],
+    "learning": {
+      "starter": "Mary Anning untersuchte versteinerte Spuren früherer Tiere. So half sie, die Vergangenheit des Lebens besser zu verstehen.",
+      "observe": "Betrachte eine Fossilienabbildung im Museum: Was kannst du unmittelbar sehen? Was ist erst eine Erklärung dazu? Unterscheide etwa die sichtbare Knochenform von einer Vermutung über die Hautfarbe.",
+      "benefit": "Du unterscheidest einen erhaltenen Beleg von einer Rekonstruktion und achtest auf die Beiträge mehrerer Menschen."
+    },
+    "person": {
+      "lifespan": "1799–1847",
+      "field": "Fossilienforscherin",
+      "method": "Funde sorgfältig freilegen, beschreiben und mit anderen vergleichen."
+    },
+    "question": {
+      "prompt": "Was liefert ein sorgfältig untersuchtes Fossil?",
+      "answers": [
+        "Einen Beleg für ein früheres Lebewesen",
+        "Den Beweis, dass jedes alte Tier ein Dinosaurier war",
+        "Den Beweis, dass das Tier heute am Fundort lebt"
+      ],
+      "correct": 0,
+      "why": "Ein Fossil bewahrt Reste oder Spuren früheren Lebens. Weitere Fragen brauchen zusätzliche Vergleiche und Belege."
+    },
+    "questionFeedback": {
+      "hint": "Trenne eine erhaltene Spur von zusätzlichen Behauptungen über alle Tiere oder die Gegenwart.",
+      "wrongReasons": [
+        null,
+        "Es gab unterschiedliche Gruppen früherer Tiere. Die von Anning untersuchten Meeresreptilien sind kein Beleg dafür, dass jedes alte Tier ein Dinosaurier war.",
+        "Ein früheres Lebewesen kann ausgestorben sein. Ein Fossil belegt kein heute dort lebendes Tier."
+      ]
+    },
+    "related": [
+      "person-charles_darwin"
+    ],
+    "aliases": [
+      "Mary Anning",
+      "mary_anning",
+      "Anning"
+    ],
+    "surprise": "Eine Entdeckung kann auf den Beiträgen mehrerer Menschen beruhen.",
+    "locations": [],
+    "links": [],
+    "sources": [
+      {
+        "label": "Natural History Museum · Mary Anning",
+        "url": "https://www.nhm.ac.uk/discover/mary-anning-unsung-hero.html"
+      },
+      {
+        "label": "Lyme Regis Museum · Mary Anning",
+        "url": "https://www.lymeregismuseum.co.uk/about-us/the-mary-anning-experts/"
+      }
+    ],
+    "checkedAt": "2026-10-21",
+    "revision": 1,
+    "sourceNote": "Eigene Erklärung anhand zuvor gezielt gelesener Museumstexte. Historische Beiträge und Grenzen der Aussagen werden unterschieden. Kein authentisches Porträt oder übernommenes Foto behauptet."
+  },
+  {
+    "id": "person-ibn_al_haytham",
+    "category": "people",
+    "title": "Ibn al-Haytham",
+    "intro": "Ibn al-Haytham untersuchte Licht und Sehen mit Versuchen und Mathematik.",
+    "paragraphs": [
+      "Er lebte vor etwa tausend Jahren und arbeitete unter anderem in Kairo. In seinem Buch über Optik verband er Überlegungen mit gezielten Untersuchungen.",
+      "Beim Sehen gelangt Licht von einer Lichtquelle oder einem beleuchteten Gegenstand in unsere Augen. Die Augen schicken keine Sehstrahlen zu den Dingen hinaus."
+    ],
+    "facts": [
+      {
+        "label": "Lebenszeit",
+        "text": "etwa 965–1040"
+      },
+      {
+        "label": "Arbeitsgebiet",
+        "text": "Optik und Mathematik"
+      }
+    ],
+    "more": [
+      "Eine Vermutung lässt sich gezielter prüfen, wenn du vorher überlegst, welche Beobachtung für oder gegen sie sprechen würde. Ein einzelner Versuch beantwortet aber nicht alle Fragen.",
+      "Eine Zeichnung kann Lichtwege als Linien darstellen. Solche Linien sind ein Modell. Sie ersetzen weder Messungen noch eine vollständige Erklärung von Auge und Gehirn. Auch historische Forschende konnten richtige Einsichten und Irrtümer verbinden."
+    ],
+    "learning": {
+      "starter": "Er fragte nicht nur: Was steht in einem Buch? Er untersuchte auch, ob eine Erklärung zu gezielten Beobachtungen passt.",
+      "observe": "Stell dir einen roten, nicht selbst leuchtenden Baustein vor. Was fehlt in einem völlig dunklen Zimmer, damit du ihn sehen kannst? Verfolge gedanklich den Weg Lichtquelle–Baustein–Auge.",
+      "benefit": "Du verbindest eine Vermutung mit einer überprüfbaren Beobachtung und erkennst die Grenze einer einfachen Lichtzeichnung."
+    },
+    "person": {
+      "lifespan": "etwa 965–1040",
+      "field": "Lichtforscher und Mathematiker",
+      "method": "Eine Erklärung mit gezielten Lichtversuchen und geometrischen Überlegungen prüfen."
+    },
+    "question": {
+      "prompt": "Welche Vorgehensweise passt zu Ibn al-Haythams Lichtforschung?",
+      "answers": [
+        "Eine Vermutung mit gezielten Versuchen und Mathematik prüfen",
+        "Fossile Skelette freilegen und vergleichen",
+        "Einen heutigen digitalen Kamerasensor benutzen"
+      ],
+      "correct": 0,
+      "why": "Er verband Untersuchungen des Lichts mit mathematischen Überlegungen. Ein Bildschirmmodell hier ist keine Rekonstruktion seines echten Versuchsaufbaus."
+    },
+    "questionFeedback": {
+      "hint": "Überlege, wie sich eine Erklärung über Licht anhand einer Beobachtung prüfen lässt.",
+      "wrongReasons": [
+        null,
+        "Das Untersuchen von Fossilien passt zu Mary Annings Arbeit. Hier geht es um Licht und Sehen.",
+        "Digitale Kamerasensoren gab es zu seiner Lebenszeit noch nicht. Der spätere Kameravergleich erklärt eine Verbindung, keine damalige Erfindung."
+      ]
+    },
+    "related": [
+      "invention-camera"
+    ],
+    "aliases": [
+      "Ibn al-Haytham",
+      "ibn_al_haytham",
+      "Alhazen"
+    ],
+    "surprise": "Eine Beobachtung kann eine bestimmte Erklärung prüfen, ohne alle anderen Fragen zugleich zu beantworten.",
+    "locations": [],
+    "links": [],
+    "sources": [
+      {
+        "label": "Universität St Andrews · Ibn al-Haytham",
+        "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Haytham/"
+      },
+      {
+        "label": "UNESCO · Ibn al-Haythams wissenschaftliche Arbeit",
+        "url": "https://www.unesco.org/en/articles/ibn-al-haythams-scientific-method"
+      }
+    ],
+    "checkedAt": "2026-10-21",
+    "revision": 1,
+    "sourceNote": "Eigene Erklärung anhand zuvor gezielt gelesener Hochschul- und UNESCO-Texte. Historische Beiträge und Grenzen der Aussagen werden unterschieden. Kein authentisches Porträt oder übernommenes Foto behauptet."
   }
 ]
