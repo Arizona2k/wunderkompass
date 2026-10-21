@@ -1,3 +1,11 @@
+## Natur/Schutz lokal vollständig abgenommen ·21.10.2026
+
+Vollständige lokale Browserabnahme am unveränderten Kandidaten erfolgreich;240Hinweise,448Diagrammansichten undalleFehlerlistenleer. Originale erhalten und54bestehendeDossierserstanschließend ausschließlichmitaktuellenUI-Belegenverbunden. Tatsächliche49Chronikquittungmit45EinträgenfürdiesenregulärenFolgeabschnittvorhanden. DieserNatur-/Schutzabschnittistnoch nichtausgeliefert;aktuellevollständigeCIundtatsächlicheTestbereitstellungbleibenPflicht.
+
+## Natur/Schutz weitergeführt ·21.10.2026
+
+VorhandeneLebensraum-/Umweltschutzkapitel mitverständlichenErklärschichten,passendenAufgabenrückmeldungenundpräziserenModellen übernommen. Regenwald/Savanne,heiße/kalteWüsten,Polarregionen,Nahrungsbeziehungen,TreibhauseffektundsituationsabhängigeWiederverwendungunterscheidbar. AlteKapitel-/Antwort-/Passidentitäten erhalten. GezieltOnline,nativerZoomundechterKaltoffline geprüft;vollständigeaktuelleAbnahmeundVeröffentlichungdiesesFolgeabschnitts noch offen. Echte49Bereitstellungals45.ChronikeintragfürdennächstenregulärenAbschnittnachgeführt,alle44altenEinträge erhalten.
+
 ## Jahreszeiten/Meere lokal vollständig geprüft ·21.10.2026
 
 Zehn bestehende Kapitel mit freiwilligen Erklärschichten, präziseren Modellen und individuellen Rückmeldungen weitergeführt. Vollständige lokale Browserabnahme am unveränderten Stand erfolgreich; Originalnachweise erhalten und anschließend ausschließlich aktuelle UI-Belege der 54 bestehenden Dossiers gebunden. Noch nicht veröffentlicht: endgültige GitHub-Prüfung und tatsächliche Testbereitstellung bleiben Pflicht. Der 44. Chronikeintrag bestätigt die bereits tatsächlich ausgelieferte Wasser-/Wetterüberarbeitung PR48.

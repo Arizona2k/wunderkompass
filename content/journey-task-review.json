@@ -6817,10 +6817,82 @@
       "afterHash": "f7f81f9766b4364a28fa2edf72725a53dcea2f49ddbbcc9a8db4bf30b68f4dcb",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Wähle ein Lebewesen und frage nacheinander: Nahrung, Wasser, Schutz und passende Bedingungen. Ein schöner Ortsname allein erfüllt diese Bedürfnisse nicht.",
       "sourceIds": [
-        "nature-base"
+        "nature-habitat-needs"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Was gehört zu einem passenden Lebensraum?",
+          "answers": [
+            "Nahrung, Wasser und Schutz",
+            "Nur eine schöne Kartenfarbe",
+            "Nur die größte Fläche"
+          ],
+          "correct": 0,
+          "hint": "Wähle ein Lebewesen und frage nacheinander: Nahrung, Wasser, Schutz und passende Bedingungen. Ein schöner Ortsname allein erfüllt diese Bedürfnisse nicht.",
+          "why": "Ein Lebensraum muss zu den Bedürfnissen einer Art passen.",
+          "wrong": [
+            "Ein Lebensraum muss zu den Bedürfnissen einer Art passen.",
+            "Eine Farbe gibt keine Nahrung oder Schutz.",
+            "Fläche allein entscheidet nicht über geeignete Bedingungen."
+          ]
+        },
+        "previousAfterHash": "f7f81f9766b4364a28fa2edf72725a53dcea2f49ddbbcc9a8db4bf30b68f4dcb",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "nature:0",
+        "level": "Entdecken",
+        "prompt": "Was gehört zu einem passenden Lebensraum?",
+        "correctIndex": 0,
+        "correctAnswer": "Nahrung, Wasser und Schutz",
+        "sourceIds": [
+          "nature-habitat-needs"
+        ],
+        "countercheck": "NPS Basics of Habitat20Oct ausgewählte46–50/73–86: Bedürfnisse und geeignete räumliche Anordnung für bestimmte Tiere. Frühere pauschale Nahrung-finden-Definition eng korrigiert, ursprünglicher Basissatz/hash unverändert als Historie bewahrt. Pflanzen bauen energiereiche Stoffe mithilfe von Licht selbst auf; Wasser/weitere Bedingungen bleiben nötig. Gute Fisch/Kaktus-Gegenüberstellung, Gartenbeispiel und alle drei Denkstufen erhalten. Machbare Beobachtung anhand tatsächlicher Jaguar-/Tierkarten; keine universelle Verbreitung aus einem Beispielpunkt.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "nature:0:1",
@@ -6860,10 +6932,82 @@
       "afterHash": "25d6b114018ffce443fb0e4ebda9f10c5e4aa71a8929aa88c49a11f5f94def4e",
       "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche, wie die beiden Lebewesen Wasser nutzen und wo sie leben können. Gleiche Bedürfnisse sind nicht für jede Art gleich erfüllt.",
       "sourceIds": [
-        "nature-base"
+        "nature-habitat-needs"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Warum brauchen Fisch und Kaktus verschiedene Bedingungen?",
+          "answers": [
+            "Nur die Größe des Lebewesens legt seine Umgebung fest",
+            "Jeder warme Ort ist für beide gleichermaßen geeignet",
+            "Sie sind an unterschiedliche Umgebungen angepasst"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche, wie die beiden Lebewesen Wasser nutzen und wo sie leben können. Gleiche Bedürfnisse sind nicht für jede Art gleich erfüllt.",
+          "why": "Arten haben unterschiedliche Anpassungen und Bedürfnisse.",
+          "wrong": [
+            "Auch Nahrung, Wasser und weitere Bedürfnisse müssen zur Lebensweise passen.",
+            "Eine ähnliche Temperatur allein bedeutet noch nicht passende Wasser- und Lebensbedingungen für beide.",
+            "Arten haben unterschiedliche Anpassungen und Bedürfnisse."
+          ]
+        },
+        "previousAfterHash": "25d6b114018ffce443fb0e4ebda9f10c5e4aa71a8929aa88c49a11f5f94def4e",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "nature:0",
+        "level": "Erklären",
+        "prompt": "Warum brauchen Fisch und Kaktus verschiedene Bedingungen?",
+        "correctIndex": 2,
+        "correctAnswer": "Sie sind an unterschiedliche Umgebungen angepasst",
+        "sourceIds": [
+          "nature-habitat-needs"
+        ],
+        "countercheck": "NPS Basics of Habitat20Oct ausgewählte46–50/73–86: Bedürfnisse und geeignete räumliche Anordnung für bestimmte Tiere. Frühere pauschale Nahrung-finden-Definition eng korrigiert, ursprünglicher Basissatz/hash unverändert als Historie bewahrt. Pflanzen bauen energiereiche Stoffe mithilfe von Licht selbst auf; Wasser/weitere Bedingungen bleiben nötig. Gute Fisch/Kaktus-Gegenüberstellung, Gartenbeispiel und alle drei Denkstufen erhalten. Machbare Beobachtung anhand tatsächlicher Jaguar-/Tierkarten; keine universelle Verbreitung aus einem Beispielpunkt.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "nature:0:2",
@@ -6903,10 +7047,82 @@
       "afterHash": "8d0e6f014ba6ea66db8b8c260e2933ea5446f9e5b9a884d2a979012bbb96e031",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Beurteile den Ort aus Sicht seiner Bewohner. Die Größe einer Fläche allein entscheidet nicht, ob sie Nahrung oder Schutz bietet.",
       "sourceIds": [
-        "nature-base"
+        "nature-habitat-needs"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Ein kleiner Gartenteich ist kleiner als ein Parkplatz. Kann er trotzdem Lebensraum sein?",
+          "answers": [
+            "Nein, nur Wälder sind Lebensräume",
+            "Ja, geeignete Bedingungen sind entscheidend",
+            "Nein, Lebensräume müssen riesig sein"
+          ],
+          "correct": 1,
+          "hint": "Beurteile den Ort aus Sicht seiner Bewohner. Die Größe einer Fläche allein entscheidet nicht, ob sie Nahrung oder Schutz bietet.",
+          "why": "Auch kleine Orte können Nahrung, Wasser und Schutz bieten.",
+          "wrong": [
+            "Viele verschiedene Umgebungen können Lebensräume sein.",
+            "Auch kleine Orte können Nahrung, Wasser und Schutz bieten.",
+            "Die Größe allein schließt einen Lebensraum nicht aus."
+          ]
+        },
+        "previousAfterHash": "8d0e6f014ba6ea66db8b8c260e2933ea5446f9e5b9a884d2a979012bbb96e031",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "nature:0",
+        "level": "Übertragen",
+        "prompt": "Ein kleiner Gartenteich ist kleiner als ein Parkplatz. Kann er trotzdem Lebensraum sein?",
+        "correctIndex": 1,
+        "correctAnswer": "Ja, geeignete Bedingungen sind entscheidend",
+        "sourceIds": [
+          "nature-habitat-needs"
+        ],
+        "countercheck": "NPS Basics of Habitat20Oct ausgewählte46–50/73–86: Bedürfnisse und geeignete räumliche Anordnung für bestimmte Tiere. Frühere pauschale Nahrung-finden-Definition eng korrigiert, ursprünglicher Basissatz/hash unverändert als Historie bewahrt. Pflanzen bauen energiereiche Stoffe mithilfe von Licht selbst auf; Wasser/weitere Bedingungen bleiben nötig. Gute Fisch/Kaktus-Gegenüberstellung, Gartenbeispiel und alle drei Denkstufen erhalten. Machbare Beobachtung anhand tatsächlicher Jaguar-/Tierkarten; keine universelle Verbreitung aus einem Beispielpunkt.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "nature:1:0",
@@ -6929,27 +7145,102 @@
       "after": {
         "prompt": "Welche Beschreibung passt oft zur Savanne?",
         "answers": [
-          "Immer nur dichtes Eis",
-          "Kein einziges Lebewesen",
+          "Dichter Baumwald mit ganzjährig viel Regen",
+          "Jede warme Landschaft bleibt ohne Pflanzen",
           "Gräser, einzelne Bäume und Regen- und Trockenzeiten"
         ],
         "correct": 2,
         "hint": "Vergleiche das Wasserangebot im Jahreslauf, nicht nur ein einzelnes grünes oder trockenes Foto. Welche Beschreibung enthält einen Wechsel?",
         "why": "Viele Savannen haben ausgeprägte Regen- und Trockenzeiten.",
         "wrong": [
-          "Eis ist nicht die hier beschriebene typische Savannenlandschaft.",
-          "Savannen sind vielfältige Lebensräume.",
+          "Ein dichter, ganzjährig feuchter Baumwald passt hier zum tropischen Regenwald, nicht zur beschriebenen Savanne.",
+          "Wärme allein erklärt die Pflanzenwelt nicht. Auch Wasserangebot und Regenverlauf zählen.",
           "Viele Savannen haben ausgeprägte Regen- und Trockenzeiten."
         ]
       },
       "beforeHash": "398c6e3451404923be002d4316938c01f1023d4cd3a76e5d48cc4006951bf1d5",
-      "afterHash": "8f120541b4a63381a2bb927bf9dffb09630aa4244bcfeab7919eb34fa786b7c8",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche das Wasserangebot im Jahreslauf, nicht nur ein einzelnes grünes oder trockenes Foto. Welche Beschreibung enthält einen Wechsel?",
+      "afterHash": "ac421c3e8ae44f57ace36a60b679e3178fe9cf05ce8b48bc5c421d39db70e2da",
+      "decision": "Gezielt plausible Fehlalternativen und zugehöriges individuelles Feedback verbessert; richtige Antwort/Position und alte falsche Auswahlindizes erhalten. NASA MissionBiomes Rainforest/Grassland20Oct Description: tropischer Stockwerkwald versus offene Graslandschaft mit häufigen Regen-/Trockenzeiten. Gleiche Wärme erklärt nicht dasselbe Wasserangebot. Kühlere Regenwälder ausdrücklich erhalten, pauschale Warm-/Tropenüberschrift der Quelle nicht auf alle Regenwälder übertragen. Eigenes gleich großes Zweierbild mit tatsächlichen Stockwerken, Gräsern und Einzelbaum statt bloßem Dreibaum/Einbaum-Rätsel. Keine fiktiven Millimeter. Freiwilliger Vergleich nutzt echte Schaubildknöpfe und verknüpfte Giraffenkarte statt unbestimmter Lebensraumkarten. Zwei fachlich plausible Fehlalternativen ersetzen Eis/leblose Fläche; alte richtige Position und alte falsche Indizes bleiben.",
       "sourceIds": [
-        "nature-base"
+        "nature-rainforest-types",
+        "nature-savanna-seasons"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Welche Beschreibung passt oft zur Savanne?",
+          "answers": [
+            "Immer nur dichtes Eis",
+            "Kein einziges Lebewesen",
+            "Gräser, einzelne Bäume und Regen- und Trockenzeiten"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche das Wasserangebot im Jahreslauf, nicht nur ein einzelnes grünes oder trockenes Foto. Welche Beschreibung enthält einen Wechsel?",
+          "why": "Viele Savannen haben ausgeprägte Regen- und Trockenzeiten.",
+          "wrong": [
+            "Eis ist nicht die hier beschriebene typische Savannenlandschaft.",
+            "Savannen sind vielfältige Lebensräume.",
+            "Viele Savannen haben ausgeprägte Regen- und Trockenzeiten."
+          ]
+        },
+        "previousAfterHash": "8f120541b4a63381a2bb927bf9dffb09630aa4244bcfeab7919eb34fa786b7c8",
+        "correctPositionAndAnswerRetained": true
+      },
+      "decisionBeforeNatureProtectCounterreview20261020": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche das Wasserangebot im Jahreslauf, nicht nur ein einzelnes grünes oder trockenes Foto. Welche Beschreibung enthält einen Wechsel?",
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "nature:1",
+        "level": "Entdecken",
+        "prompt": "Welche Beschreibung passt oft zur Savanne?",
+        "correctIndex": 2,
+        "correctAnswer": "Gräser, einzelne Bäume und Regen- und Trockenzeiten",
+        "sourceIds": [
+          "nature-rainforest-types",
+          "nature-savanna-seasons"
+        ],
+        "countercheck": "NASA MissionBiomes Rainforest/Grassland20Oct Description: tropischer Stockwerkwald versus offene Graslandschaft mit häufigen Regen-/Trockenzeiten. Gleiche Wärme erklärt nicht dasselbe Wasserangebot. Kühlere Regenwälder ausdrücklich erhalten, pauschale Warm-/Tropenüberschrift der Quelle nicht auf alle Regenwälder übertragen. Eigenes gleich großes Zweierbild mit tatsächlichen Stockwerken, Gräsern und Einzelbaum statt bloßem Dreibaum/Einbaum-Rätsel. Keine fiktiven Millimeter. Freiwilliger Vergleich nutzt echte Schaubildknöpfe und verknüpfte Giraffenkarte statt unbestimmter Lebensraumkarten. Zwei fachlich plausible Fehlalternativen ersetzen Eis/leblose Fläche; alte richtige Position und alte falsche Indizes bleiben.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "nature:1:1",
@@ -6989,10 +7280,84 @@
       "afterHash": "7409e6870f14b4dd801fbe5b9aa7d111ca219207b4fca99abee6229675d9e5fe",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Stelle zwei Jahresverläufe nebeneinander: dauerhaft feucht und zeitweise trocken. Wie können diese Unterschiede verschiedene Lebensräume begünstigen?",
       "sourceIds": [
-        "nature-base"
+        "nature-rainforest-types",
+        "nature-savanna-seasons"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Warum sind tropischer Regenwald und Savanne nicht dasselbe?",
+          "answers": [
+            "Der Ländername allein bestimmt den Lebensraum",
+            "Ihre Niederschlagsbedingungen unterscheiden sich",
+            "Beide enthalten grundsätzlich keine Pflanzen"
+          ],
+          "correct": 1,
+          "hint": "Stelle zwei Jahresverläufe nebeneinander: dauerhaft feucht und zeitweise trocken. Wie können diese Unterschiede verschiedene Lebensräume begünstigen?",
+          "why": "Auch warme Regionen können sich im Regenverlauf und damit in der Vegetation unterscheiden.",
+          "wrong": [
+            "Grenzen und Namen ersetzen keine Umweltbedingungen.",
+            "Auch warme Regionen können sich im Regenverlauf und damit in der Vegetation unterscheiden.",
+            "In beiden können viele Pflanzen wachsen."
+          ]
+        },
+        "previousAfterHash": "7409e6870f14b4dd801fbe5b9aa7d111ca219207b4fca99abee6229675d9e5fe",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "nature:1",
+        "level": "Erklären",
+        "prompt": "Warum sind tropischer Regenwald und Savanne nicht dasselbe?",
+        "correctIndex": 1,
+        "correctAnswer": "Ihre Niederschlagsbedingungen unterscheiden sich",
+        "sourceIds": [
+          "nature-rainforest-types",
+          "nature-savanna-seasons"
+        ],
+        "countercheck": "NASA MissionBiomes Rainforest/Grassland20Oct Description: tropischer Stockwerkwald versus offene Graslandschaft mit häufigen Regen-/Trockenzeiten. Gleiche Wärme erklärt nicht dasselbe Wasserangebot. Kühlere Regenwälder ausdrücklich erhalten, pauschale Warm-/Tropenüberschrift der Quelle nicht auf alle Regenwälder übertragen. Eigenes gleich großes Zweierbild mit tatsächlichen Stockwerken, Gräsern und Einzelbaum statt bloßem Dreibaum/Einbaum-Rätsel. Keine fiktiven Millimeter. Freiwilliger Vergleich nutzt echte Schaubildknöpfe und verknüpfte Giraffenkarte statt unbestimmter Lebensraumkarten. Zwei fachlich plausible Fehlalternativen ersetzen Eis/leblose Fläche; alte richtige Position und alte falsche Indizes bleiben.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "nature:1:2",
@@ -7032,10 +7397,84 @@
       "afterHash": "bfbc2962b03315e1470b4c46506329bd9c84cc95cfd3eee03afa05312ca18550",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Das Wort „jeder“ lässt keine Ausnahme zu. Suche, ob ein feuchter Wald auch außerhalb einer tropischen Region vorkommen kann.",
       "sourceIds": [
-        "nature-base"
+        "nature-rainforest-types",
+        "nature-savanna-seasons"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Jemand behauptet, jeder Regenwald sei tropisch. Wie prüfst du das?",
+          "answers": [
+            "Auch kühlere Regenwälder als Gegenbeispiele betrachten",
+            "Nur das Wort Wald zählen",
+            "Alle Wälder für identisch erklären"
+          ],
+          "correct": 0,
+          "hint": "Das Wort „jeder“ lässt keine Ausnahme zu. Suche, ob ein feuchter Wald auch außerhalb einer tropischen Region vorkommen kann.",
+          "why": "Es gibt auch gemäßigte Regenwälder; Regenwald ist nicht gleichbedeutend mit tropisch.",
+          "wrong": [
+            "Es gibt auch gemäßigte Regenwälder; Regenwald ist nicht gleichbedeutend mit tropisch.",
+            "Ein einzelnes Wort ersetzt keinen Vergleich von Bedingungen.",
+            "Wälder haben unterschiedliche Klimabedingungen."
+          ]
+        },
+        "previousAfterHash": "bfbc2962b03315e1470b4c46506329bd9c84cc95cfd3eee03afa05312ca18550",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "nature:1",
+        "level": "Übertragen",
+        "prompt": "Jemand behauptet, jeder Regenwald sei tropisch. Wie prüfst du das?",
+        "correctIndex": 0,
+        "correctAnswer": "Auch kühlere Regenwälder als Gegenbeispiele betrachten",
+        "sourceIds": [
+          "nature-rainforest-types",
+          "nature-savanna-seasons"
+        ],
+        "countercheck": "NASA MissionBiomes Rainforest/Grassland20Oct Description: tropischer Stockwerkwald versus offene Graslandschaft mit häufigen Regen-/Trockenzeiten. Gleiche Wärme erklärt nicht dasselbe Wasserangebot. Kühlere Regenwälder ausdrücklich erhalten, pauschale Warm-/Tropenüberschrift der Quelle nicht auf alle Regenwälder übertragen. Eigenes gleich großes Zweierbild mit tatsächlichen Stockwerken, Gräsern und Einzelbaum statt bloßem Dreibaum/Einbaum-Rätsel. Keine fiktiven Millimeter. Freiwilliger Vergleich nutzt echte Schaubildknöpfe und verknüpfte Giraffenkarte statt unbestimmter Lebensraumkarten. Zwei fachlich plausible Fehlalternativen ersetzen Eis/leblose Fläche; alte richtige Position und alte falsche Indizes bleiben.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "nature:2:0",
@@ -7075,10 +7514,86 @@
       "afterHash": "139a860d1e69f408d7016427e44ccde2fc5150ac863ed3df36262710388e551f",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Suche ein Merkmal, das sowohl zu einer heißen als auch zu einer kalten Wüste passt. Sand und Hitze sind keine notwendigen Gemeinsamkeiten.",
       "sourceIds": [
-        "nature-base"
+        "nature-dry-deserts",
+        "nature-antarctic-precipitation",
+        "nature-camel-hump"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Was ist das entscheidende Wüstenmerkmal?",
+          "answers": [
+            "Immer Sanddünen",
+            "Sehr wenig Niederschlag",
+            "Immer Hitze"
+          ],
+          "correct": 1,
+          "hint": "Suche ein Merkmal, das sowohl zu einer heißen als auch zu einer kalten Wüste passt. Sand und Hitze sind keine notwendigen Gemeinsamkeiten.",
+          "why": "Wüsten sind sehr trockene Regionen.",
+          "wrong": [
+            "Nicht alle Wüsten bestehen aus Sand.",
+            "Wüsten sind sehr trockene Regionen.",
+            "Es gibt auch kalte Wüsten."
+          ]
+        },
+        "previousAfterHash": "139a860d1e69f408d7016427e44ccde2fc5150ac863ed3df36262710388e551f",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "nature:2",
+        "level": "Entdecken",
+        "prompt": "Was ist das entscheidende Wüstenmerkmal?",
+        "correctIndex": 1,
+        "correctAnswer": "Sehr wenig Niederschlag",
+        "sourceIds": [
+          "nature-dry-deserts",
+          "nature-antarctic-precipitation",
+          "nature-camel-hump"
+        ],
+        "countercheck": "NASA ausgewählte Description20Oct: wenig Niederschlag als Wüstenmerkmal; keine universellen heißen Tages-/Nachttemperaturen. AustralianAntarcticProgram Precipitation20Oct: sehr trockenes Inland, teils deutlich feuchtere Küsten und meist Schnee. Zwei getrennte eigene heiße/kalte Beispiele ersetzen überlagerte Sand/Eiswelt; Auswahl macht Gemeinsamkeit und Unterschied untersuchbar, ausdrücklich keine Messreihe. SanDiegoZoo ABOUT51–54 direkt gelesen: Höcker speichert Fett als Energie, kein Trinkwassertank. Bisherige gute drei Aufgaben/individuellen Hinweise/Rückmeldungen unverändert. Tatsächlicher Dromedarrückweg geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "nature:2:1",
@@ -7118,10 +7633,86 @@
       "afterHash": "a3e8830c8d8cf2445875e6c0b3f1abd7e9680392acd74bfda4f5821dadf065ba",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Eine große alte Eisdecke und neu hinzukommender Niederschlag sind verschiedene Größen. Welche davon beschreibt die Trockenheit eines Klimas?",
       "sourceIds": [
-        "nature-base"
+        "nature-dry-deserts",
+        "nature-antarctic-precipitation",
+        "nature-camel-hump"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Warum kann Antarktika als Wüste gelten?",
+          "answers": [
+            "Dort fällt sehr wenig Niederschlag",
+            "Weil dort keine Eisfläche existiert",
+            "Weil es dort überall heiß ist"
+          ],
+          "correct": 0,
+          "hint": "Eine große alte Eisdecke und neu hinzukommender Niederschlag sind verschiedene Größen. Welche davon beschreibt die Trockenheit eines Klimas?",
+          "why": "Trotz vieler Eisvorräte sind große antarktische Gebiete sehr niederschlagsarm.",
+          "wrong": [
+            "Trotz vieler Eisvorräte sind große antarktische Gebiete sehr niederschlagsarm.",
+            "Eis ist gerade ein wichtiges Merkmal der Antarktis.",
+            "Kälte und Trockenheit können zusammen vorkommen."
+          ]
+        },
+        "previousAfterHash": "a3e8830c8d8cf2445875e6c0b3f1abd7e9680392acd74bfda4f5821dadf065ba",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "nature:2",
+        "level": "Erklären",
+        "prompt": "Warum kann Antarktika als Wüste gelten?",
+        "correctIndex": 0,
+        "correctAnswer": "Dort fällt sehr wenig Niederschlag",
+        "sourceIds": [
+          "nature-dry-deserts",
+          "nature-antarctic-precipitation",
+          "nature-camel-hump"
+        ],
+        "countercheck": "NASA ausgewählte Description20Oct: wenig Niederschlag als Wüstenmerkmal; keine universellen heißen Tages-/Nachttemperaturen. AustralianAntarcticProgram Precipitation20Oct: sehr trockenes Inland, teils deutlich feuchtere Küsten und meist Schnee. Zwei getrennte eigene heiße/kalte Beispiele ersetzen überlagerte Sand/Eiswelt; Auswahl macht Gemeinsamkeit und Unterschied untersuchbar, ausdrücklich keine Messreihe. SanDiegoZoo ABOUT51–54 direkt gelesen: Höcker speichert Fett als Energie, kein Trinkwassertank. Bisherige gute drei Aufgaben/individuellen Hinweise/Rückmeldungen unverändert. Tatsächlicher Dromedarrückweg geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "nature:2:2",
@@ -7161,10 +7752,86 @@
       "afterHash": "b425f384d81390fb1d0f8237774b8bb0a52ccf03838a52dd68f4858b77fd2900",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Frage nach dem tatsächlich gespeicherten Stoff im Höcker. Eine nützliche Anpassung muss nicht der alltagssprachlichen Tank-Vorstellung entsprechen.",
       "sourceIds": [
-        "nature-base"
+        "nature-dry-deserts",
+        "nature-antarctic-precipitation",
+        "nature-camel-hump"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Ein Kamelhöcker wird als Wassertank beschrieben. Passt das?",
+          "answers": [
+            "Ja, er enthält nur Trinkwasser",
+            "Ja, alle Wüstentiere haben Höcker",
+            "Nein, im Höcker wird Fett gespeichert"
+          ],
+          "correct": 2,
+          "hint": "Frage nach dem tatsächlich gespeicherten Stoff im Höcker. Eine nützliche Anpassung muss nicht der alltagssprachlichen Tank-Vorstellung entsprechen.",
+          "why": "Kamele speichern Fett in ihren Höckern.",
+          "wrong": [
+            "Der Höcker ist kein Trinkwassertank.",
+            "Verschiedene Arten haben unterschiedliche Anpassungen.",
+            "Kamele speichern Fett in ihren Höckern."
+          ]
+        },
+        "previousAfterHash": "b425f384d81390fb1d0f8237774b8bb0a52ccf03838a52dd68f4858b77fd2900",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "nature:2",
+        "level": "Übertragen",
+        "prompt": "Ein Kamelhöcker wird als Wassertank beschrieben. Passt das?",
+        "correctIndex": 2,
+        "correctAnswer": "Nein, im Höcker wird Fett gespeichert",
+        "sourceIds": [
+          "nature-dry-deserts",
+          "nature-antarctic-precipitation",
+          "nature-camel-hump"
+        ],
+        "countercheck": "NASA ausgewählte Description20Oct: wenig Niederschlag als Wüstenmerkmal; keine universellen heißen Tages-/Nachttemperaturen. AustralianAntarcticProgram Precipitation20Oct: sehr trockenes Inland, teils deutlich feuchtere Küsten und meist Schnee. Zwei getrennte eigene heiße/kalte Beispiele ersetzen überlagerte Sand/Eiswelt; Auswahl macht Gemeinsamkeit und Unterschied untersuchbar, ausdrücklich keine Messreihe. SanDiegoZoo ABOUT51–54 direkt gelesen: Höcker speichert Fett als Energie, kein Trinkwassertank. Bisherige gute drei Aufgaben/individuellen Hinweise/Rückmeldungen unverändert. Tatsächlicher Dromedarrückweg geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "nature:3:0",
@@ -7204,10 +7871,88 @@
       "afterHash": "39bd58c37005db783685cad3014bde6a1be568e5fba40447c44551c574c7dc18",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Suche zuerst die Arktis und die Antarktis auf der Kugel. Ordne danach die natürliche Verbreitung des Eisbären zu.",
       "sourceIds": [
-        "nature-base"
+        "nature-polar-foundations",
+        "nature-emperor-coast",
+        "nature-polar-bear-range",
+        "nature-penguin-regions"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Wo leben Eisbären in freier Natur?",
+          "answers": [
+            "In der Arktis",
+            "Am Südpol",
+            "In jeder Eislandschaft"
+          ],
+          "correct": 0,
+          "hint": "Suche zuerst die Arktis und die Antarktis auf der Kugel. Ordne danach die natürliche Verbreitung des Eisbären zu.",
+          "why": "Eisbären leben in der Arktis im Norden.",
+          "wrong": [
+            "Eisbären leben in der Arktis im Norden.",
+            "Der Südpol gehört zur Antarktis.",
+            "Ein ähnliches Aussehen einer Landschaft beweist keine Tierverbreitung."
+          ]
+        },
+        "previousAfterHash": "39bd58c37005db783685cad3014bde6a1be568e5fba40447c44551c574c7dc18",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "nature:3",
+        "level": "Entdecken",
+        "prompt": "Wo leben Eisbären in freier Natur?",
+        "correctIndex": 0,
+        "correctAnswer": "In der Arktis",
+        "sourceIds": [
+          "nature-polar-foundations",
+          "nature-emperor-coast",
+          "nature-polar-bear-range",
+          "nature-penguin-regions"
+        ],
+        "countercheck": "NSIDC ausgewählte geografische Abschnitte72/75–83: Meer direkt am Nordpol, Kontinent am Südpol, nicht ganze Arktis=nurMeer. Alte2022-Meereistrends/Rekorde ausdrücklich nicht als aktuell übernehmen. AustralianAntarcticProgram Distribution327–329: Kaiserpinguinkolonien an antarktischen Küsten; kein Tier unmittelbar zum geografischen Südpol versetzen. Vorhandene tatsächlich20Octgelesene Buchquellen zu Eisbär/Pinguinverbreitung zusätzlich direkt gebunden, keine neue Ganzartikelabnahme erfinden. Eigene markierte Querschnitte statt zweier unklarer Globusse; keine aktuelle Eiskarte oder Maßstab. Gute drei Denkstufen und Eisbär-/Kaiserpinguinvergleich erhalten.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "nature:3:1",
@@ -7247,10 +7992,88 @@
       "afterHash": "4367cd513a1c9d091a00224cd5ef3ccb6f3fb3184f063c87780e1a77c5693b73",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Betrachte nicht nur das weiße Eis, sondern die Unterlage: Liegt darunter ein Ozean oder ein Kontinent?",
       "sourceIds": [
-        "nature-base"
+        "nature-polar-foundations",
+        "nature-emperor-coast",
+        "nature-polar-bear-range",
+        "nature-penguin-regions"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Welcher Vergleich passt zu den Polen?",
+          "answers": [
+            "Unter beiden Polen liegt nur Meer",
+            "Unter beiden Polen liegen Städte",
+            "Nordpol:Meer unter Eis; Südpol:Land unter Eis"
+          ],
+          "correct": 2,
+          "hint": "Betrachte nicht nur das weiße Eis, sondern die Unterlage: Liegt darunter ein Ozean oder ein Kontinent?",
+          "why": "Die geografische Lage der Pole unterscheidet sich grundlegend.",
+          "wrong": [
+            "Am Südpol liegt ein Kontinent unter dem Eis.",
+            "Die Pole sind keine gewöhnlichen Stadtstandorte.",
+            "Die geografische Lage der Pole unterscheidet sich grundlegend."
+          ]
+        },
+        "previousAfterHash": "4367cd513a1c9d091a00224cd5ef3ccb6f3fb3184f063c87780e1a77c5693b73",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "nature:3",
+        "level": "Erklären",
+        "prompt": "Welcher Vergleich passt zu den Polen?",
+        "correctIndex": 2,
+        "correctAnswer": "Nordpol:Meer unter Eis; Südpol:Land unter Eis",
+        "sourceIds": [
+          "nature-polar-foundations",
+          "nature-emperor-coast",
+          "nature-polar-bear-range",
+          "nature-penguin-regions"
+        ],
+        "countercheck": "NSIDC ausgewählte geografische Abschnitte72/75–83: Meer direkt am Nordpol, Kontinent am Südpol, nicht ganze Arktis=nurMeer. Alte2022-Meereistrends/Rekorde ausdrücklich nicht als aktuell übernehmen. AustralianAntarcticProgram Distribution327–329: Kaiserpinguinkolonien an antarktischen Küsten; kein Tier unmittelbar zum geografischen Südpol versetzen. Vorhandene tatsächlich20Octgelesene Buchquellen zu Eisbär/Pinguinverbreitung zusätzlich direkt gebunden, keine neue Ganzartikelabnahme erfinden. Eigene markierte Querschnitte statt zweier unklarer Globusse; keine aktuelle Eiskarte oder Maßstab. Gute drei Denkstufen und Eisbär-/Kaiserpinguinvergleich erhalten.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "nature:3:2",
@@ -7290,10 +8113,88 @@
       "afterHash": "0643ed818c0687b4dedfe627fdbbac767397f2e5f3efaf2f0b874c35016737b4",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ein Foto zeigt eine bestimmte Art an einem bestimmten Ort. Müssen alle Pinguinarten auf einer vereisten Landschaft leben?",
       "sourceIds": [
-        "nature-base"
+        "nature-polar-foundations",
+        "nature-emperor-coast",
+        "nature-polar-bear-range",
+        "nature-penguin-regions"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Ein Pinguinbild zeigt kein Eis. Muss es falsch sein?",
+          "answers": [
+            "Ja, alle Pinguine leben in der Arktis",
+            "Nein, nicht alle Pinguine leben im Eis",
+            "Ja, jeder Pinguin lebt am Südpol"
+          ],
+          "correct": 1,
+          "hint": "Ein Foto zeigt eine bestimmte Art an einem bestimmten Ort. Müssen alle Pinguinarten auf einer vereisten Landschaft leben?",
+          "why": "Einige Pinguinarten leben in milderen Regionen; ein Eisbild ist nicht erforderlich.",
+          "wrong": [
+            "Pinguine sind nicht typische arktische Tiere.",
+            "Einige Pinguinarten leben in milderen Regionen; ein Eisbild ist nicht erforderlich.",
+            "Pinguinarten haben unterschiedliche Verbreitungsgebiete."
+          ]
+        },
+        "previousAfterHash": "0643ed818c0687b4dedfe627fdbbac767397f2e5f3efaf2f0b874c35016737b4",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "nature:3",
+        "level": "Übertragen",
+        "prompt": "Ein Pinguinbild zeigt kein Eis. Muss es falsch sein?",
+        "correctIndex": 1,
+        "correctAnswer": "Nein, nicht alle Pinguine leben im Eis",
+        "sourceIds": [
+          "nature-polar-foundations",
+          "nature-emperor-coast",
+          "nature-polar-bear-range",
+          "nature-penguin-regions"
+        ],
+        "countercheck": "NSIDC ausgewählte geografische Abschnitte72/75–83: Meer direkt am Nordpol, Kontinent am Südpol, nicht ganze Arktis=nurMeer. Alte2022-Meereistrends/Rekorde ausdrücklich nicht als aktuell übernehmen. AustralianAntarcticProgram Distribution327–329: Kaiserpinguinkolonien an antarktischen Küsten; kein Tier unmittelbar zum geografischen Südpol versetzen. Vorhandene tatsächlich20Octgelesene Buchquellen zu Eisbär/Pinguinverbreitung zusätzlich direkt gebunden, keine neue Ganzartikelabnahme erfinden. Eigene markierte Querschnitte statt zweier unklarer Globusse; keine aktuelle Eiskarte oder Maßstab. Gute drei Denkstufen und Eisbär-/Kaiserpinguinvergleich erhalten.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "nature:4:0",
@@ -7333,10 +8234,84 @@
       "afterHash": "d4f20eb86f7ca4e016958775eadb73a9104a228615414139102914a2634fd5b7",
       "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Trenne eine Energiequelle von den Stoffen, die Pflanzen aufnehmen. Welche Antwort liefert die Energie für den beschriebenen Aufbau?",
       "sourceIds": [
-        "nature-base"
+        "nature-foodweb-energy",
+        "nature-biological-diversity"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Was nutzen Pflanzen zum Aufbau energiereicher Stoffe?",
+          "answers": [
+            "Wärme allein, ganz ohne Licht",
+            "Den Boden als alleinige Energiequelle",
+            "Sonnenlicht"
+          ],
+          "correct": 2,
+          "hint": "Trenne eine Energiequelle von den Stoffen, die Pflanzen aufnehmen. Welche Antwort liefert die Energie für den beschriebenen Aufbau?",
+          "why": "Pflanzen nutzen bei der Fotosynthese Sonnenenergie.",
+          "wrong": [
+            "Die Erklärung nennt Licht als Energiequelle; bloße Wärme ersetzt diesen Vorgang nicht.",
+            "Der Boden liefert nicht das Sonnenlicht für die im Kapitel erklärte Fotosynthese.",
+            "Pflanzen nutzen bei der Fotosynthese Sonnenenergie."
+          ]
+        },
+        "previousAfterHash": "d4f20eb86f7ca4e016958775eadb73a9104a228615414139102914a2634fd5b7",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "nature:4",
+        "level": "Entdecken",
+        "prompt": "Was nutzen Pflanzen zum Aufbau energiereicher Stoffe?",
+        "correctIndex": 2,
+        "correctAnswer": "Sonnenlicht",
+        "sourceIds": [
+          "nature-foodweb-energy",
+          "nature-biological-diversity"
+        ],
+        "countercheck": "NPS WhatIsBiodiversity20Oct28–33 unterscheidet Arten, genetische Unterschiede und Ökosysteme. Exakt falschen weiten Artenvielfalt-Satz korrigiert; unveränderte bereits richtige Biodiversität-Buchdefinition behalten und tatsächlich in drei nativen/kalten Kontexten geprüft. Nahrungsnetz-Wortquellenlektüre18OctSeiten1–3 ausdrücklich erhalten, kein neuer PDF-Vollabruf behauptet. Eigene Pflanze/Modelltiere plus gestricheltes Sonnenlicht unterscheiden Energiequelle von Nahrung-zum-Fresser-Pfeilen. Ein Beispielpfad, kein gesamtes Netz; Zersetzer und weitere Wege fehlen sichtbar erklärt, Energie nicht unverändert im Kreis. Zwei plausible Fehlbegründungen zu Zersetzung statt naturgesetzfrei/überhauptnichtvorhanden. Echter Foodweb-Karte→Kapitel→Backfokus dreimal geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "nature:4:1",
@@ -7359,27 +8334,102 @@
       "after": {
         "prompt": "Warum gehören Pilze und kleine Zersetzer zum Zusammenhang?",
         "answers": [
-          "Sie sind in keinem Lebensraum vorhanden",
+          "Abgestorbene Reste bleiben grundsätzlich unverändert",
           "Sie bauen abgestorbene Reste ab",
-          "Sie entfernen alle Naturgesetze"
+          "Sie ersetzen das Sonnenlicht als Energiequelle aller Pflanzen"
         ],
         "correct": 1,
         "hint": "Verfolge ein abgestorbenes Blatt weiter. Welche Lebewesen helfen beim Abbau, statt nur in einer einfachen Fressreihe zu stehen?",
         "why": "Zersetzer tragen dazu bei, Stoffe wieder verfügbar zu machen.",
         "wrong": [
-          "Viele Lebensräume enthalten Pilze und Mikroorganismen.",
+          "Reste können abgebaut werden. Gerade diesen Weg erklären Pilze und andere Zersetzer.",
           "Zersetzer tragen dazu bei, Stoffe wieder verfügbar zu machen.",
-          "Zersetzung ist selbst ein natürlicher Prozess."
+          "Zersetzer bauen Reste ab. Sie sind kein Ersatz für das Licht, das Pflanzen bei der Fotosynthese nutzen."
         ]
       },
       "beforeHash": "01d6d66fc6ed7395af81dbd8132f1749cbe9d7c03486a50dbda1c8b18b32f546",
-      "afterHash": "718e8857325c99e00af1d9c2968ffb057cec92dff1c29590eeda082b78555c80",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Verfolge ein abgestorbenes Blatt weiter. Welche Lebewesen helfen beim Abbau, statt nur in einer einfachen Fressreihe zu stehen?",
+      "afterHash": "6d3b402e339188bb981eb0a14b8000a2bb94c1e56c91a1b01795255833890985",
+      "decision": "Gezielt plausible Fehlalternativen und zugehöriges individuelles Feedback verbessert; richtige Antwort/Position und alte falsche Auswahlindizes erhalten. NPS WhatIsBiodiversity20Oct28–33 unterscheidet Arten, genetische Unterschiede und Ökosysteme. Exakt falschen weiten Artenvielfalt-Satz korrigiert; unveränderte bereits richtige Biodiversität-Buchdefinition behalten und tatsächlich in drei nativen/kalten Kontexten geprüft. Nahrungsnetz-Wortquellenlektüre18OctSeiten1–3 ausdrücklich erhalten, kein neuer PDF-Vollabruf behauptet. Eigene Pflanze/Modelltiere plus gestricheltes Sonnenlicht unterscheiden Energiequelle von Nahrung-zum-Fresser-Pfeilen. Ein Beispielpfad, kein gesamtes Netz; Zersetzer und weitere Wege fehlen sichtbar erklärt, Energie nicht unverändert im Kreis. Zwei plausible Fehlbegründungen zu Zersetzung statt naturgesetzfrei/überhauptnichtvorhanden. Echter Foodweb-Karte→Kapitel→Backfokus dreimal geprüft.",
       "sourceIds": [
-        "nature-base"
+        "nature-foodweb-energy",
+        "nature-biological-diversity"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Warum gehören Pilze und kleine Zersetzer zum Zusammenhang?",
+          "answers": [
+            "Sie sind in keinem Lebensraum vorhanden",
+            "Sie bauen abgestorbene Reste ab",
+            "Sie entfernen alle Naturgesetze"
+          ],
+          "correct": 1,
+          "hint": "Verfolge ein abgestorbenes Blatt weiter. Welche Lebewesen helfen beim Abbau, statt nur in einer einfachen Fressreihe zu stehen?",
+          "why": "Zersetzer tragen dazu bei, Stoffe wieder verfügbar zu machen.",
+          "wrong": [
+            "Viele Lebensräume enthalten Pilze und Mikroorganismen.",
+            "Zersetzer tragen dazu bei, Stoffe wieder verfügbar zu machen.",
+            "Zersetzung ist selbst ein natürlicher Prozess."
+          ]
+        },
+        "previousAfterHash": "718e8857325c99e00af1d9c2968ffb057cec92dff1c29590eeda082b78555c80",
+        "correctPositionAndAnswerRetained": true
+      },
+      "decisionBeforeNatureProtectCounterreview20261020": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Verfolge ein abgestorbenes Blatt weiter. Welche Lebewesen helfen beim Abbau, statt nur in einer einfachen Fressreihe zu stehen?",
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "nature:4",
+        "level": "Erklären",
+        "prompt": "Warum gehören Pilze und kleine Zersetzer zum Zusammenhang?",
+        "correctIndex": 1,
+        "correctAnswer": "Sie bauen abgestorbene Reste ab",
+        "sourceIds": [
+          "nature-foodweb-energy",
+          "nature-biological-diversity"
+        ],
+        "countercheck": "NPS WhatIsBiodiversity20Oct28–33 unterscheidet Arten, genetische Unterschiede und Ökosysteme. Exakt falschen weiten Artenvielfalt-Satz korrigiert; unveränderte bereits richtige Biodiversität-Buchdefinition behalten und tatsächlich in drei nativen/kalten Kontexten geprüft. Nahrungsnetz-Wortquellenlektüre18OctSeiten1–3 ausdrücklich erhalten, kein neuer PDF-Vollabruf behauptet. Eigene Pflanze/Modelltiere plus gestricheltes Sonnenlicht unterscheiden Energiequelle von Nahrung-zum-Fresser-Pfeilen. Ein Beispielpfad, kein gesamtes Netz; Zersetzer und weitere Wege fehlen sichtbar erklärt, Energie nicht unverändert im Kreis. Zwei plausible Fehlbegründungen zu Zersetzung statt naturgesetzfrei/überhauptnichtvorhanden. Echter Foodweb-Karte→Kapitel→Backfokus dreimal geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "nature:4:2",
@@ -7419,10 +8469,84 @@
       "afterHash": "03fe1610f04695b7ef53f0b5015bea9c004c765bb7fc9d1ba0983df2cf4b2cf4",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Zeichne von einer Art mehrere Verbindungen zu Nahrung, Feinden und gemeinsamen Ressourcen. Was könnte sich entlang dieser Verbindungen verändern?",
       "sourceIds": [
-        "nature-base"
+        "nature-foodweb-energy",
+        "nature-biological-diversity"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Eine Art verschwindet. Kann das andere Arten beeinflussen?",
+          "answers": [
+            "Ja, weil Beziehungen im Netz verändert werden",
+            "Nein, alle Arten sind völlig unabhängig",
+            "Nein, nur große Tiere zählen"
+          ],
+          "correct": 0,
+          "hint": "Zeichne von einer Art mehrere Verbindungen zu Nahrung, Feinden und gemeinsamen Ressourcen. Was könnte sich entlang dieser Verbindungen verändern?",
+          "why": "Nahrungs- und andere Beziehungen können Folgen im Netz weitergeben.",
+          "wrong": [
+            "Nahrungs- und andere Beziehungen können Folgen im Netz weitergeben.",
+            "Arten teilen viele Beziehungen und Ressourcen.",
+            "Auch unscheinbare Arten können wichtige Rollen haben."
+          ]
+        },
+        "previousAfterHash": "03fe1610f04695b7ef53f0b5015bea9c004c765bb7fc9d1ba0983df2cf4b2cf4",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "nature:4",
+        "level": "Übertragen",
+        "prompt": "Eine Art verschwindet. Kann das andere Arten beeinflussen?",
+        "correctIndex": 0,
+        "correctAnswer": "Ja, weil Beziehungen im Netz verändert werden",
+        "sourceIds": [
+          "nature-foodweb-energy",
+          "nature-biological-diversity"
+        ],
+        "countercheck": "NPS WhatIsBiodiversity20Oct28–33 unterscheidet Arten, genetische Unterschiede und Ökosysteme. Exakt falschen weiten Artenvielfalt-Satz korrigiert; unveränderte bereits richtige Biodiversität-Buchdefinition behalten und tatsächlich in drei nativen/kalten Kontexten geprüft. Nahrungsnetz-Wortquellenlektüre18OctSeiten1–3 ausdrücklich erhalten, kein neuer PDF-Vollabruf behauptet. Eigene Pflanze/Modelltiere plus gestricheltes Sonnenlicht unterscheiden Energiequelle von Nahrung-zum-Fresser-Pfeilen. Ein Beispielpfad, kein gesamtes Netz; Zersetzer und weitere Wege fehlen sichtbar erklärt, Energie nicht unverändert im Kreis. Zwei plausible Fehlbegründungen zu Zersetzung statt naturgesetzfrei/überhauptnichtvorhanden. Echter Foodweb-Karte→Kapitel→Backfokus dreimal geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "protect:0:0",
@@ -7462,10 +8586,84 @@
       "afterHash": "ba54b63777363e9f20f9631cb591ed1e86e1e32629bde79d78197b9cb1707347",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Die Erklärung betrifft einen Vorgang mit Strahlung in der Atmosphäre. Suche keine buchstäbliche Decke um den Planeten.",
       "sourceIds": [
-        "protect-base"
+        "protect-base",
+        "protect-energy-balance"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Was hält einen Teil abgegebener Wärme zurück?",
+          "answers": [
+            "Eine echte Wolldecke um die Erde",
+            "Nur der Mond",
+            "Bestimmte Gase der Atmosphäre"
+          ],
+          "correct": 2,
+          "hint": "Die Erklärung betrifft einen Vorgang mit Strahlung in der Atmosphäre. Suche keine buchstäbliche Decke um den Planeten.",
+          "why": "Treibhausgase beeinflussen die Wärmestrahlung der Erde.",
+          "wrong": [
+            "Die Erde hat keine echte Stoffdecke.",
+            "Der Mond ist nicht die genannte atmosphärische Ursache.",
+            "Treibhausgase beeinflussen die Wärmestrahlung der Erde."
+          ]
+        },
+        "previousAfterHash": "ba54b63777363e9f20f9631cb591ed1e86e1e32629bde79d78197b9cb1707347",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "protect:0",
+        "level": "Entdecken",
+        "prompt": "Was hält einen Teil abgegebener Wärme zurück?",
+        "correctIndex": 2,
+        "correctAnswer": "Bestimmte Gase der Atmosphäre",
+        "sourceIds": [
+          "protect-base",
+          "protect-energy-balance"
+        ],
+        "countercheck": "NASA FAQ20Oct239–247 stützt vorhandene natürliche Wärmehaushaltswirkung und Wasserdampf/CO2/Methan. Gute begrenzte Deckenanalogie und drei freiwillige Denkstufen erhalten; Glasbehälter oder Konvektion nicht als gleicher Mechanismus ausgeben. Unterschied Sonnenlicht/abgegebene Wärme bleibt erklärt; keine Wirkung nur nachts oder exakte Temperatur aus einem Schema. Papierauftrag ohne Erhitzen von Gefäßen, tatsächliche Atmosphärenkarte/Rücknavigation geprüft. Korrekte Antworten/alle ursprünglichen Optionen erhalten.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "protect:0:1",
@@ -7505,10 +8703,84 @@
       "afterHash": "d393d3e10c474961c9c29da4be88d029d0f1e9fc6e15d81afa828255fb0688b7",
       "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche den gleichen Planeten mit und ohne den beschriebenen Einfluss auf abgegebene Strahlung. Wie unterscheidet sich sein Wärmehaushalt?",
       "sourceIds": [
-        "protect-base"
+        "protect-base",
+        "protect-energy-balance"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Wie wäre die Erde ohne natürlichen Treibhauseffekt?",
+          "answers": [
+            "Im Durchschnitt wärmer",
+            "Im Durchschnitt deutlich kälter",
+            "Im Durchschnitt gleich warm"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche den gleichen Planeten mit und ohne den beschriebenen Einfluss auf abgegebene Strahlung. Wie unterscheidet sich sein Wärmehaushalt?",
+          "why": "Der natürliche Effekt trägt zu lebensfreundlicheren Temperaturen bei.",
+          "wrong": [
+            "Der natürliche Treibhauseffekt trägt zur Erwärmung bei; ohne ihn würde diese Wirkung fehlen.",
+            "Der natürliche Effekt trägt zu lebensfreundlicheren Temperaturen bei.",
+            "Der Strahlungszusammenhang wirkt auf den Wärmehaushalt; sein Wegfall wäre kein unveränderter Zustand."
+          ]
+        },
+        "previousAfterHash": "d393d3e10c474961c9c29da4be88d029d0f1e9fc6e15d81afa828255fb0688b7",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "protect:0",
+        "level": "Erklären",
+        "prompt": "Wie wäre die Erde ohne natürlichen Treibhauseffekt?",
+        "correctIndex": 1,
+        "correctAnswer": "Im Durchschnitt deutlich kälter",
+        "sourceIds": [
+          "protect-base",
+          "protect-energy-balance"
+        ],
+        "countercheck": "NASA FAQ20Oct239–247 stützt vorhandene natürliche Wärmehaushaltswirkung und Wasserdampf/CO2/Methan. Gute begrenzte Deckenanalogie und drei freiwillige Denkstufen erhalten; Glasbehälter oder Konvektion nicht als gleicher Mechanismus ausgeben. Unterschied Sonnenlicht/abgegebene Wärme bleibt erklärt; keine Wirkung nur nachts oder exakte Temperatur aus einem Schema. Papierauftrag ohne Erhitzen von Gefäßen, tatsächliche Atmosphärenkarte/Rücknavigation geprüft. Korrekte Antworten/alle ursprünglichen Optionen erhalten.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "protect:0:2",
@@ -7548,10 +8820,84 @@
       "afterHash": "dc97c14907647d481ac30edf726376fad1034ec2c14eb0eecbcc92dc103d6363",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Eine Decke macht einen Gedanken anschaulich, bildet aber nicht jeden physikalischen Vorgang ab. Welche Aussage nimmt das Bild zu wörtlich?",
       "sourceIds": [
-        "protect-base"
+        "protect-base",
+        "protect-energy-balance"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Ein Modell verwendet eine Decke. Was darfst du daraus nicht folgern?",
+          "answers": [
+            "Dass Gase genau wie Stofffasern funktionieren",
+            "Dass Modelle beim Erklären helfen können",
+            "Dass natürliche Prozesse untersucht werden können"
+          ],
+          "correct": 0,
+          "hint": "Eine Decke macht einen Gedanken anschaulich, bildet aber nicht jeden physikalischen Vorgang ab. Welche Aussage nimmt das Bild zu wörtlich?",
+          "why": "Die Decke ist eine begrenzte Analogie, nicht der tatsächliche Strahlungsmechanismus.",
+          "wrong": [
+            "Die Decke ist eine begrenzte Analogie, nicht der tatsächliche Strahlungsmechanismus.",
+            "Modelle können trotz Vereinfachung hilfreich sein.",
+            "Der Wärmehaushalt kann wissenschaftlich untersucht werden."
+          ]
+        },
+        "previousAfterHash": "dc97c14907647d481ac30edf726376fad1034ec2c14eb0eecbcc92dc103d6363",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "protect:0",
+        "level": "Übertragen",
+        "prompt": "Ein Modell verwendet eine Decke. Was darfst du daraus nicht folgern?",
+        "correctIndex": 0,
+        "correctAnswer": "Dass Gase genau wie Stofffasern funktionieren",
+        "sourceIds": [
+          "protect-base",
+          "protect-energy-balance"
+        ],
+        "countercheck": "NASA FAQ20Oct239–247 stützt vorhandene natürliche Wärmehaushaltswirkung und Wasserdampf/CO2/Methan. Gute begrenzte Deckenanalogie und drei freiwillige Denkstufen erhalten; Glasbehälter oder Konvektion nicht als gleicher Mechanismus ausgeben. Unterschied Sonnenlicht/abgegebene Wärme bleibt erklärt; keine Wirkung nur nachts oder exakte Temperatur aus einem Schema. Papierauftrag ohne Erhitzen von Gefäßen, tatsächliche Atmosphärenkarte/Rücknavigation geprüft. Korrekte Antworten/alle ursprünglichen Optionen erhalten.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "protect:1:0",
@@ -7574,27 +8920,102 @@
       "after": {
         "prompt": "Was entsteht beim Verbrennen von Kohle, Erdöl und Erdgas zusätzlich?",
         "answers": [
-          "Eine neue Erddrehung",
+          "Nur Wärme, ohne dass Stoffe in die Luft gelangen",
           "Kohlendioxid",
-          "Nur sauberes Wasser ohne andere Stoffe"
+          "Nur Wasserdampf, aber kein Kohlendioxid"
         ],
         "correct": 1,
         "hint": "Verfolge einen Stoff vom Brennstoff zur Atmosphäre. Welche zusätzliche Verbindung entsteht bei der beschriebenen Verbrennung?",
         "why": "Die Verbrennung fossiler Stoffe setzt zusätzliches Kohlendioxid frei.",
         "wrong": [
-          "Verbrennung verändert nicht so die tägliche Achsdrehung.",
+          "Beim Verbrennen entsteht nicht nur Wärme. Kohlenstoff aus dem Brennstoff kann als Kohlendioxid in die Luft gelangen.",
           "Die Verbrennung fossiler Stoffe setzt zusätzliches Kohlendioxid frei.",
-          "Die Aussage lässt wesentliche Verbrennungsprodukte weg."
+          "Auch Wasserdampf kann entstehen. Bei Kohle, Erdöl und Erdgas wird zusätzlich Kohlendioxid freigesetzt."
         ]
       },
       "beforeHash": "544f80731eb5cf950f14a07cd88b19cb2c94079aa9495e4c723d5ed7960d7686",
-      "afterHash": "0c1536a4f0a412f70b7e0d39dc8bcca0797657377dbb6d185e2fc445ac24db66",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Verfolge einen Stoff vom Brennstoff zur Atmosphäre. Welche zusätzliche Verbindung entsteht bei der beschriebenen Verbrennung?",
+      "afterHash": "dd0be89f1b3cb3ed81a8529fe341e77012b5261d45bfd37b7e903fd60f3761f7",
+      "decision": "Gezielt plausible Fehlalternativen und zugehöriges individuelles Feedback verbessert; richtige Antwort/Position und alte falsche Auswahlindizes erhalten. NASA FAQ239–247 und Kids ausgewählte245/259/265–266/278–27920Oct: natürliche Wirkung und zusätzliches fossilesCO2 unterscheiden, Wetter nicht mit globalem Trend gleichsetzen. Eigenes Modell besitzt je Licht-/ausgehenderWärme-/zurückgehenderWärmerichtung eine eigene Pfeilspitze; ausgehende Strahlung reicht tatsächlich über Atmosphärenschema hinaus. Durchgezogen/gestrichelt und lesbare HTML-Legende unterscheiden Licht von Wärmestrahlung, kein Mengenmaßstab oder Glasdecke. Zwei Teilprodukt-/Wärme-ohne-Stoffverwechslungen mit begründetem Feedback statt Erddrehung/sachfremder Alternative; richtige Position/alte Fehlindizes erhalten. Verantwortung nicht einem Kind aufbürden. Codelektüre korrigiert ursprüngliche Vermutung: greenhouse nurprotect1, nicht im Klimakapitel.",
       "sourceIds": [
-        "protect-base"
+        "protect-base",
+        "protect-energy-balance"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Was entsteht beim Verbrennen von Kohle, Erdöl und Erdgas zusätzlich?",
+          "answers": [
+            "Eine neue Erddrehung",
+            "Kohlendioxid",
+            "Nur sauberes Wasser ohne andere Stoffe"
+          ],
+          "correct": 1,
+          "hint": "Verfolge einen Stoff vom Brennstoff zur Atmosphäre. Welche zusätzliche Verbindung entsteht bei der beschriebenen Verbrennung?",
+          "why": "Die Verbrennung fossiler Stoffe setzt zusätzliches Kohlendioxid frei.",
+          "wrong": [
+            "Verbrennung verändert nicht so die tägliche Achsdrehung.",
+            "Die Verbrennung fossiler Stoffe setzt zusätzliches Kohlendioxid frei.",
+            "Die Aussage lässt wesentliche Verbrennungsprodukte weg."
+          ]
+        },
+        "previousAfterHash": "0c1536a4f0a412f70b7e0d39dc8bcca0797657377dbb6d185e2fc445ac24db66",
+        "correctPositionAndAnswerRetained": true
+      },
+      "decisionBeforeNatureProtectCounterreview20261020": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Verfolge einen Stoff vom Brennstoff zur Atmosphäre. Welche zusätzliche Verbindung entsteht bei der beschriebenen Verbrennung?",
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "protect:1",
+        "level": "Entdecken",
+        "prompt": "Was entsteht beim Verbrennen von Kohle, Erdöl und Erdgas zusätzlich?",
+        "correctIndex": 1,
+        "correctAnswer": "Kohlendioxid",
+        "sourceIds": [
+          "protect-base",
+          "protect-energy-balance"
+        ],
+        "countercheck": "NASA FAQ239–247 und Kids ausgewählte245/259/265–266/278–27920Oct: natürliche Wirkung und zusätzliches fossilesCO2 unterscheiden, Wetter nicht mit globalem Trend gleichsetzen. Eigenes Modell besitzt je Licht-/ausgehenderWärme-/zurückgehenderWärmerichtung eine eigene Pfeilspitze; ausgehende Strahlung reicht tatsächlich über Atmosphärenschema hinaus. Durchgezogen/gestrichelt und lesbare HTML-Legende unterscheiden Licht von Wärmestrahlung, kein Mengenmaßstab oder Glasdecke. Zwei Teilprodukt-/Wärme-ohne-Stoffverwechslungen mit begründetem Feedback statt Erddrehung/sachfremder Alternative; richtige Position/alte Fehlindizes erhalten. Verantwortung nicht einem Kind aufbürden. Codelektüre korrigiert ursprüngliche Vermutung: greenhouse nurprotect1, nicht im Klimakapitel.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "protect:1:1",
@@ -7634,10 +9055,84 @@
       "afterHash": "de00193f88e5a45652747f401ccfcc3f0c4a6704392014328a9495071bc045ab",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Frage nicht nur, ob ein Gas vorhanden ist, sondern wie es mit bestimmter Strahlung wechselwirkt. Welche Antwort verbindet beides?",
       "sourceIds": [
-        "protect-base"
+        "protect-base",
+        "protect-energy-balance"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Warum kann zusätzliches Kohlendioxid den Wärmehaushalt verändern?",
+          "answers": [
+            "Es verstärkt den Treibhauseffekt",
+            "Es ist eine Ländergrenze",
+            "Es stoppt das gesamte Sonnenlicht"
+          ],
+          "correct": 0,
+          "hint": "Frage nicht nur, ob ein Gas vorhanden ist, sondern wie es mit bestimmter Strahlung wechselwirkt. Welche Antwort verbindet beides?",
+          "why": "Mehr Treibhausgas verändert, wie Wärme zurückgehalten wird.",
+          "wrong": [
+            "Mehr Treibhausgas verändert, wie Wärme zurückgehalten wird.",
+            "Eine politische Grenze beschreibt keine Gaswirkung.",
+            "Die Erwärmung wird nicht durch völliges Abschalten des Lichts erklärt."
+          ]
+        },
+        "previousAfterHash": "de00193f88e5a45652747f401ccfcc3f0c4a6704392014328a9495071bc045ab",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "protect:1",
+        "level": "Erklären",
+        "prompt": "Warum kann zusätzliches Kohlendioxid den Wärmehaushalt verändern?",
+        "correctIndex": 0,
+        "correctAnswer": "Es verstärkt den Treibhauseffekt",
+        "sourceIds": [
+          "protect-base",
+          "protect-energy-balance"
+        ],
+        "countercheck": "NASA FAQ239–247 und Kids ausgewählte245/259/265–266/278–27920Oct: natürliche Wirkung und zusätzliches fossilesCO2 unterscheiden, Wetter nicht mit globalem Trend gleichsetzen. Eigenes Modell besitzt je Licht-/ausgehenderWärme-/zurückgehenderWärmerichtung eine eigene Pfeilspitze; ausgehende Strahlung reicht tatsächlich über Atmosphärenschema hinaus. Durchgezogen/gestrichelt und lesbare HTML-Legende unterscheiden Licht von Wärmestrahlung, kein Mengenmaßstab oder Glasdecke. Zwei Teilprodukt-/Wärme-ohne-Stoffverwechslungen mit begründetem Feedback statt Erddrehung/sachfremder Alternative; richtige Position/alte Fehlindizes erhalten. Verantwortung nicht einem Kind aufbürden. Codelektüre korrigiert ursprüngliche Vermutung: greenhouse nurprotect1, nicht im Klimakapitel.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "protect:1:2",
@@ -7677,10 +9172,84 @@
       "afterHash": "990ddbe251506a515ec12e507b367a54ab52fba8234940ac40adb9992b4d8a22",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche die Handlungsmöglichkeiten eines Kindes mit denen von Erwachsenen, Unternehmen und Politik. Wer kann welche Entscheidungen tatsächlich treffen?",
       "sourceIds": [
-        "protect-base"
+        "protect-base",
+        "protect-energy-balance"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Reicht es, einem Kind die ganze Verantwortung zu geben?",
+          "answers": [
+            "Ja, nur Kinder können etwas verändern",
+            "Ja, niemand sonst hat Verantwortung",
+            "Nein, Erwachsene, Unternehmen und Länder müssen gemeinsam handeln"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche die Handlungsmöglichkeiten eines Kindes mit denen von Erwachsenen, Unternehmen und Politik. Wer kann welche Entscheidungen tatsächlich treffen?",
+          "why": "Die Aufgabe umfasst viele gesellschaftliche Entscheidungen und Beteiligte.",
+          "wrong": [
+            "Kinder dürfen beitragen, sind aber nicht allein verantwortlich.",
+            "Die Verantwortung liegt bei vielen Beteiligten.",
+            "Die Aufgabe umfasst viele gesellschaftliche Entscheidungen und Beteiligte."
+          ]
+        },
+        "previousAfterHash": "990ddbe251506a515ec12e507b367a54ab52fba8234940ac40adb9992b4d8a22",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "protect:1",
+        "level": "Übertragen",
+        "prompt": "Reicht es, einem Kind die ganze Verantwortung zu geben?",
+        "correctIndex": 2,
+        "correctAnswer": "Nein, Erwachsene, Unternehmen und Länder müssen gemeinsam handeln",
+        "sourceIds": [
+          "protect-base",
+          "protect-energy-balance"
+        ],
+        "countercheck": "NASA FAQ239–247 und Kids ausgewählte245/259/265–266/278–27920Oct: natürliche Wirkung und zusätzliches fossilesCO2 unterscheiden, Wetter nicht mit globalem Trend gleichsetzen. Eigenes Modell besitzt je Licht-/ausgehenderWärme-/zurückgehenderWärmerichtung eine eigene Pfeilspitze; ausgehende Strahlung reicht tatsächlich über Atmosphärenschema hinaus. Durchgezogen/gestrichelt und lesbare HTML-Legende unterscheiden Licht von Wärmestrahlung, kein Mengenmaßstab oder Glasdecke. Zwei Teilprodukt-/Wärme-ohne-Stoffverwechslungen mit begründetem Feedback statt Erddrehung/sachfremder Alternative; richtige Position/alte Fehlindizes erhalten. Verantwortung nicht einem Kind aufbürden. Codelektüre korrigiert ursprüngliche Vermutung: greenhouse nurprotect1, nicht im Klimakapitel.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "protect:2:0",
@@ -7720,10 +9289,82 @@
       "afterHash": "6ca40872a78059715f06ac66f910b4bdcd93a8aa82768cae80e334e6b3b7475f",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Verfolge den Weg eines Gegenstands von der Herstellung bis zur Entsorgung. Welche Handlung kann seine nutzbare Lebenszeit verlängern?",
       "sourceIds": [
-        "protect-base"
+        "protect-reuse-resources"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Was kann Ressourcen sparen?",
+          "answers": [
+            "Dinge länger nutzen oder reparieren",
+            "Brauchbare Dinge sofort wegwerfen",
+            "Alles jeden Tag neu kaufen"
+          ],
+          "correct": 0,
+          "hint": "Verfolge den Weg eines Gegenstands von der Herstellung bis zur Entsorgung. Welche Handlung kann seine nutzbare Lebenszeit verlängern?",
+          "why": "Längere Nutzung kann neue Herstellung und Abfall vermeiden.",
+          "wrong": [
+            "Längere Nutzung kann neue Herstellung und Abfall vermeiden.",
+            "Wegwerfen beendet eine mögliche weitere Nutzung.",
+            "Neukauf braucht erneut Material und Energie."
+          ]
+        },
+        "previousAfterHash": "6ca40872a78059715f06ac66f910b4bdcd93a8aa82768cae80e334e6b3b7475f",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "protect:2",
+        "level": "Entdecken",
+        "prompt": "Was kann Ressourcen sparen?",
+        "correctIndex": 0,
+        "correctAnswer": "Dinge länger nutzen oder reparieren",
+        "sourceIds": [
+          "protect-reuse-resources"
+        ],
+        "countercheck": "UBA ProdukteLängerNutzen20Oct14/17–24: neue Herstellung braucht Energie/Rohstoffe; Wiederverwendung kann Abfall sparen und betrifft unterschiedliche Akteure. Drei gleichwertige eigene Symbole für Weiterbenutzen/fachkundigeReparatur/Weitergeben statt einer unbedingten Pfeilkette. Situationsabhängigkeit und Elektrogeräte nur fachkundigen Erwachsenen ausdrücklich; keine Reparatur-ohne-Aufwand- oder universelle Recyclinggarantie. Gute drei Denkstufen und individuellen Rückmeldungen erhalten. Bestehende korrekte Recycling-Buchdefinition/Quellen und tatsächlicher Kapitel→Buch→Backfokus dreimal nativ/kalt geprüft; keine lokale Entsorgungsregel erfunden.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "protect:2:1",
@@ -7763,10 +9404,82 @@
       "afterHash": "fa5f5a655118d86f0f7af0ba7f44abf887096d88680bf8bec87f66376c2e5322",
       "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche einen weiter genutzten Gegenstand mit dem Aufwand für Zerlegung und neue Materialverarbeitung. Prüfe dabei die konkrete Situation.",
       "sourceIds": [
-        "protect-base"
+        "protect-reuse-resources"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Warum hilft Reparieren manchmal mehr als sofortiges Recycling?",
+          "answers": [
+            "Recycling erhält immer die ganze Funktion des alten Gegenstands",
+            "Reparieren macht den Gegenstand automatisch ohne Material- und Energiebedarf",
+            "Der Gegenstand kann weiter genutzt werden"
+          ],
+          "correct": 2,
+          "hint": "Vergleiche einen weiter genutzten Gegenstand mit dem Aufwand für Zerlegung und neue Materialverarbeitung. Prüfe dabei die konkrete Situation.",
+          "why": "Weiterbenutzen erhält die Funktion; Recycling ist nicht immer die erste oder vollständige Lösung.",
+          "wrong": [
+            "Material wiederverarbeiten und einen funktionierenden Gegenstand weiterbenutzen sind verschiedene Wege.",
+            "Auch Reparatur kann Aufwand brauchen; die Erklärung spricht von einem möglichen Vorteil, nicht von einer Garantie ohne jeden Aufwand.",
+            "Weiterbenutzen erhält die Funktion; Recycling ist nicht immer die erste oder vollständige Lösung."
+          ]
+        },
+        "previousAfterHash": "fa5f5a655118d86f0f7af0ba7f44abf887096d88680bf8bec87f66376c2e5322",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "protect:2",
+        "level": "Erklären",
+        "prompt": "Warum hilft Reparieren manchmal mehr als sofortiges Recycling?",
+        "correctIndex": 2,
+        "correctAnswer": "Der Gegenstand kann weiter genutzt werden",
+        "sourceIds": [
+          "protect-reuse-resources"
+        ],
+        "countercheck": "UBA ProdukteLängerNutzen20Oct14/17–24: neue Herstellung braucht Energie/Rohstoffe; Wiederverwendung kann Abfall sparen und betrifft unterschiedliche Akteure. Drei gleichwertige eigene Symbole für Weiterbenutzen/fachkundigeReparatur/Weitergeben statt einer unbedingten Pfeilkette. Situationsabhängigkeit und Elektrogeräte nur fachkundigen Erwachsenen ausdrücklich; keine Reparatur-ohne-Aufwand- oder universelle Recyclinggarantie. Gute drei Denkstufen und individuellen Rückmeldungen erhalten. Bestehende korrekte Recycling-Buchdefinition/Quellen und tatsächlicher Kapitel→Buch→Backfokus dreimal nativ/kalt geprüft; keine lokale Entsorgungsregel erfunden.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "protect:2:2",
@@ -7806,10 +9519,82 @@
       "afterHash": "bf09baa6959c0939f253267af2846d3f7693c97ca647393e91ba435b48ad59fc",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Eine sinnvolle Reparaturidee und eine sichere Durchführung sind zwei Fragen. Bei Strom und unbekannten Schäden ist eigenständiges Ausprobieren keine Kinderaufgabe.",
       "sourceIds": [
-        "protect-base"
+        "protect-reuse-resources"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Ein defektes Elektrogerät soll repariert werden. Was ist eine passende Kinderentscheidung?",
+          "answers": [
+            "Jede Reparatur für immer verbieten",
+            "Eine zuständige erwachsene Person fragen",
+            "Gefährliche Teile selbst öffnen"
+          ],
+          "correct": 1,
+          "hint": "Eine sinnvolle Reparaturidee und eine sichere Durchführung sind zwei Fragen. Bei Strom und unbekannten Schäden ist eigenständiges Ausprobieren keine Kinderaufgabe.",
+          "why": "Reparaturen an elektrischen Geräten gehören in geeignete erwachsene beziehungsweise fachliche Hände.",
+          "wrong": [
+            "Sichere fachgerechte Reparatur bleibt eine sinnvolle Möglichkeit.",
+            "Reparaturen an elektrischen Geräten gehören in geeignete erwachsene beziehungsweise fachliche Hände.",
+            "Selbst öffnen kann gefährlich sein."
+          ]
+        },
+        "previousAfterHash": "bf09baa6959c0939f253267af2846d3f7693c97ca647393e91ba435b48ad59fc",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "protect:2",
+        "level": "Übertragen",
+        "prompt": "Ein defektes Elektrogerät soll repariert werden. Was ist eine passende Kinderentscheidung?",
+        "correctIndex": 1,
+        "correctAnswer": "Eine zuständige erwachsene Person fragen",
+        "sourceIds": [
+          "protect-reuse-resources"
+        ],
+        "countercheck": "UBA ProdukteLängerNutzen20Oct14/17–24: neue Herstellung braucht Energie/Rohstoffe; Wiederverwendung kann Abfall sparen und betrifft unterschiedliche Akteure. Drei gleichwertige eigene Symbole für Weiterbenutzen/fachkundigeReparatur/Weitergeben statt einer unbedingten Pfeilkette. Situationsabhängigkeit und Elektrogeräte nur fachkundigen Erwachsenen ausdrücklich; keine Reparatur-ohne-Aufwand- oder universelle Recyclinggarantie. Gute drei Denkstufen und individuellen Rückmeldungen erhalten. Bestehende korrekte Recycling-Buchdefinition/Quellen und tatsächlicher Kapitel→Buch→Backfokus dreimal nativ/kalt geprüft; keine lokale Entsorgungsregel erfunden.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "protect:3:0",
@@ -7849,10 +9634,84 @@
       "afterHash": "a2c573a44f550a3cc57975385ea25fb48450f759a7ea5a5f0065bdb5d0eefbfc",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Betrachte die Situation aus Sicht des wilden Tieres. Welche Handlung lässt Abstand, Fluchtweg und natürliches Verhalten bestehen?",
       "sourceIds": [
-        "protect-base"
+        "protect-pollinator-habitat",
+        "protect-wildlife-distance"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Welche Handlung passt zum Beobachten eines wilden Tieres?",
+          "answers": [
+            "Es verfolgen und anfassen",
+            "Sein Nest mitnehmen",
+            "Abstand halten"
+          ],
+          "correct": 2,
+          "hint": "Betrachte die Situation aus Sicht des wilden Tieres. Welche Handlung lässt Abstand, Fluchtweg und natürliches Verhalten bestehen?",
+          "why": "Ruhige Beobachtung mit Abstand schützt Tiere und Menschen.",
+          "wrong": [
+            "Verfolgen und Anfassen kann stören oder gefährlich sein.",
+            "Nester und Lebensräume dürfen nicht für die Beobachtung zerstört werden.",
+            "Ruhige Beobachtung mit Abstand schützt Tiere und Menschen."
+          ]
+        },
+        "previousAfterHash": "a2c573a44f550a3cc57975385ea25fb48450f759a7ea5a5f0065bdb5d0eefbfc",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "protect:3",
+        "level": "Entdecken",
+        "prompt": "Welche Handlung passt zum Beobachten eines wilden Tieres?",
+        "correctIndex": 2,
+        "correctAnswer": "Abstand halten",
+        "sourceIds": [
+          "protect-pollinator-habitat",
+          "protect-wildlife-distance"
+        ],
+        "countercheck": "NPS Pollinators20Oct ausgewählte21/26–31/36–48: unterschiedliche Arten brauchen geeignetes Nahrungsangebot/Wasser/Schutz; keine US-Pflanzliste/Pestizidhandlung als Kinderauftrag. NPS Wildlife25–31: Abstand und nicht stören, keine US-Abstandsmeter oder Rechtslage universal übernehmen. Drei wirkliche eigene Ansichten Blüte/Bestäuber, Gewässer/Fisch, Hecke/Rückzug ersetzen unpassenden Waldvergleich; ein Beispiel ist kein kompletter Lebensraum für alle Arten. Plausibler Fehlgedanke AnwesenheitErwachsener=AnfassenHilfreich erklärt; richtige Position und alter falscherIndex erhalten. Gute sichere Beobachtung und übrige Aufgaben unverändert.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "protect:3:1",
@@ -7892,10 +9751,84 @@
       "afterHash": "e6ab9a6027996694b15842165a191657e9c847e8583b6e3f570515e1e55e73c9",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Verbinde ein Blütenangebot mit Nahrung und der Vielfalt unterschiedlicher Besucher. Entscheidend ist mehr als nur eine hübsche Farbe.",
       "sourceIds": [
-        "protect-base"
+        "protect-pollinator-habitat",
+        "protect-wildlife-distance"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Was können passende Blüten beitragen?",
+          "answers": [
+            "Keine Verbindung zu Tieren",
+            "Nahrung für bestimmte Insekten",
+            "Garantiert Schutz für jede Art der Welt"
+          ],
+          "correct": 1,
+          "hint": "Verbinde ein Blütenangebot mit Nahrung und der Vielfalt unterschiedlicher Besucher. Entscheidend ist mehr als nur eine hübsche Farbe.",
+          "why": "Blüten können Insekten Nahrung bieten, aber nicht jede Pflanze passt zu jeder Art.",
+          "wrong": [
+            "Pflanzen und Tiere können eng verbunden sein.",
+            "Blüten können Insekten Nahrung bieten, aber nicht jede Pflanze passt zu jeder Art.",
+            "Ein einzelner Beitrag löst nicht alle Bedürfnisse aller Arten."
+          ]
+        },
+        "previousAfterHash": "e6ab9a6027996694b15842165a191657e9c847e8583b6e3f570515e1e55e73c9",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "protect:3",
+        "level": "Erklären",
+        "prompt": "Was können passende Blüten beitragen?",
+        "correctIndex": 1,
+        "correctAnswer": "Nahrung für bestimmte Insekten",
+        "sourceIds": [
+          "protect-pollinator-habitat",
+          "protect-wildlife-distance"
+        ],
+        "countercheck": "NPS Pollinators20Oct ausgewählte21/26–31/36–48: unterschiedliche Arten brauchen geeignetes Nahrungsangebot/Wasser/Schutz; keine US-Pflanzliste/Pestizidhandlung als Kinderauftrag. NPS Wildlife25–31: Abstand und nicht stören, keine US-Abstandsmeter oder Rechtslage universal übernehmen. Drei wirkliche eigene Ansichten Blüte/Bestäuber, Gewässer/Fisch, Hecke/Rückzug ersetzen unpassenden Waldvergleich; ein Beispiel ist kein kompletter Lebensraum für alle Arten. Plausibler Fehlgedanke AnwesenheitErwachsener=AnfassenHilfreich erklärt; richtige Position und alter falscherIndex erhalten. Gute sichere Beobachtung und übrige Aufgaben unverändert.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "protect:3:2",
@@ -7920,7 +9853,7 @@
         "answers": [
           "Nein, in Ruhe lassen ist oft die bessere Hilfe",
           "Ja, Ruhe bedeutet immer Zustimmung",
-          "Ja, wilde Tiere sind Spielzeug"
+          "Ja, solange eine erwachsene Person zuschaut"
         ],
         "correct": 0,
         "hint": "Ruhe verrät nicht sicher, dass ein Tier Berührung möchte oder Hilfe benötigt. Welche Antwort berücksichtigt Abstand und fachkundige Unterstützung?",
@@ -7928,17 +9861,92 @@
         "wrong": [
           "Ruhiges Verhalten ist keine Einladung zum Anfassen.",
           "Aus Ruhe kannst du keine solche Zustimmung ableiten.",
-          "Wilde Tiere sollen als Lebewesen respektiert werden."
+          "Erwachsene können beim Beobachten helfen. Ihre Anwesenheit macht das Anfassen eines wilden Tieres nicht automatisch hilfreich."
         ]
       },
       "beforeHash": "d3a70e5fa0dab6b1f5831b1c169f72326fc696fd2081ac997b5dc796566c1660",
-      "afterHash": "d19672b0bcc0cdf8c49ef145a2541ef6fb856cad305cc2c9cccb0d621069246b",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ruhe verrät nicht sicher, dass ein Tier Berührung möchte oder Hilfe benötigt. Welche Antwort berücksichtigt Abstand und fachkundige Unterstützung?",
+      "afterHash": "c3d43932ba5d7c910c2c3041258a95432ee2b243e768a9301c37a5ef11c09fa4",
+      "decision": "Gezielt plausible Fehlalternativen und zugehöriges individuelles Feedback verbessert; richtige Antwort/Position und alte falsche Auswahlindizes erhalten. NPS Pollinators20Oct ausgewählte21/26–31/36–48: unterschiedliche Arten brauchen geeignetes Nahrungsangebot/Wasser/Schutz; keine US-Pflanzliste/Pestizidhandlung als Kinderauftrag. NPS Wildlife25–31: Abstand und nicht stören, keine US-Abstandsmeter oder Rechtslage universal übernehmen. Drei wirkliche eigene Ansichten Blüte/Bestäuber, Gewässer/Fisch, Hecke/Rückzug ersetzen unpassenden Waldvergleich; ein Beispiel ist kein kompletter Lebensraum für alle Arten. Plausibler Fehlgedanke AnwesenheitErwachsener=AnfassenHilfreich erklärt; richtige Position und alter falscherIndex erhalten. Gute sichere Beobachtung und übrige Aufgaben unverändert.",
       "sourceIds": [
-        "protect-base"
+        "protect-pollinator-habitat",
+        "protect-wildlife-distance"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Ein Tier bleibt ruhig sitzen. Ist Anfassen automatisch hilfreich?",
+          "answers": [
+            "Nein, in Ruhe lassen ist oft die bessere Hilfe",
+            "Ja, Ruhe bedeutet immer Zustimmung",
+            "Ja, wilde Tiere sind Spielzeug"
+          ],
+          "correct": 0,
+          "hint": "Ruhe verrät nicht sicher, dass ein Tier Berührung möchte oder Hilfe benötigt. Welche Antwort berücksichtigt Abstand und fachkundige Unterstützung?",
+          "why": "Ruhiges Verhalten ist keine Einladung zum Anfassen.",
+          "wrong": [
+            "Ruhiges Verhalten ist keine Einladung zum Anfassen.",
+            "Aus Ruhe kannst du keine solche Zustimmung ableiten.",
+            "Wilde Tiere sollen als Lebewesen respektiert werden."
+          ]
+        },
+        "previousAfterHash": "d19672b0bcc0cdf8c49ef145a2541ef6fb856cad305cc2c9cccb0d621069246b",
+        "correctPositionAndAnswerRetained": true
+      },
+      "decisionBeforeNatureProtectCounterreview20261020": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ruhe verrät nicht sicher, dass ein Tier Berührung möchte oder Hilfe benötigt. Welche Antwort berücksichtigt Abstand und fachkundige Unterstützung?",
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "protect:3",
+        "level": "Übertragen",
+        "prompt": "Ein Tier bleibt ruhig sitzen. Ist Anfassen automatisch hilfreich?",
+        "correctIndex": 0,
+        "correctAnswer": "Nein, in Ruhe lassen ist oft die bessere Hilfe",
+        "sourceIds": [
+          "protect-pollinator-habitat",
+          "protect-wildlife-distance"
+        ],
+        "countercheck": "NPS Pollinators20Oct ausgewählte21/26–31/36–48: unterschiedliche Arten brauchen geeignetes Nahrungsangebot/Wasser/Schutz; keine US-Pflanzliste/Pestizidhandlung als Kinderauftrag. NPS Wildlife25–31: Abstand und nicht stören, keine US-Abstandsmeter oder Rechtslage universal übernehmen. Drei wirkliche eigene Ansichten Blüte/Bestäuber, Gewässer/Fisch, Hecke/Rückzug ersetzen unpassenden Waldvergleich; ein Beispiel ist kein kompletter Lebensraum für alle Arten. Plausibler Fehlgedanke AnwesenheitErwachsener=AnfassenHilfreich erklärt; richtige Position und alter falscherIndex erhalten. Gute sichere Beobachtung und übrige Aufgaben unverändert.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "protect:4:0",
@@ -7978,10 +9986,84 @@
       "afterHash": "24ea72a8f3ec9a06a62ae957282c313fce7d013dd3c6555f537890085a46e515",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Suche einen Einstieg, bei dem ihr eine Frage gemeinsam untersuchen könnt. Druck und Schuldzuweisung helfen nicht beim Prüfen einer Idee.",
       "sourceIds": [
-        "protect-base"
+        "protect-reuse-resources",
+        "protect-wildlife-distance"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Was ist ein sinnvoller Anfang für eine gemeinsame Idee?",
+          "answers": [
+            "Sofort eine perfekte Lösung verlangen",
+            "Fragen stellen und Möglichkeiten sammeln",
+            "Andere für jeden Fehler beschämen"
+          ],
+          "correct": 1,
+          "hint": "Suche einen Einstieg, bei dem ihr eine Frage gemeinsam untersuchen könnt. Druck und Schuldzuweisung helfen nicht beim Prüfen einer Idee.",
+          "why": "Gemeinsames Prüfen hilft, eine passende und umsetzbare Idee zu finden.",
+          "wrong": [
+            "Perfektion ist keine Voraussetzung zum Ausprobieren.",
+            "Gemeinsames Prüfen hilft, eine passende und umsetzbare Idee zu finden.",
+            "Beschämung hilft nicht beim sachlichen Lernen."
+          ]
+        },
+        "previousAfterHash": "24ea72a8f3ec9a06a62ae957282c313fce7d013dd3c6555f537890085a46e515",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "protect:4",
+        "level": "Entdecken",
+        "prompt": "Was ist ein sinnvoller Anfang für eine gemeinsame Idee?",
+        "correctIndex": 1,
+        "correctAnswer": "Fragen stellen und Möglichkeiten sammeln",
+        "sourceIds": [
+          "protect-reuse-resources",
+          "protect-wildlife-distance"
+        ],
+        "countercheck": "Eigene begrenzte Zusammenarbeit als Lernhandlung, keine universell gemessene Wirkgarantie. UBA14/17–24 gemeinsame Akteure/Ressourcen und NPS25–31 situationsabhängiger sicherer Umgang als passende Quellen statt nur Treibhauslink gebunden. Gute Idee→Plan→Ausprobieren-Kette bewusst erhalten: hier ist Reihenfolge nützlich, anders als alternative Reparaturwege. Drei vorhandene Stufen, individueller Hinweis/Feedback und machbare gemeinsame Beobachtung erhalten. Kind nicht beschämen oder allein verantwortlich machen; kurze sichere Wege und Begleitung bleiben Bedingungen, keine pauschale Pflicht. Wirklicher Wangari-Maathai-Ziel-/Rückfokus geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "protect:4:1",
@@ -8021,10 +10103,84 @@
       "afterHash": "d5cf14bd251c3f4c8526d7bbd78780ca9e660f47e3f955f6b18ea47c17ec3705",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche zwei Orte mit unterschiedlichen Wegen und Möglichkeiten. Muss dieselbe Lösung unter beiden Bedingungen gleich gut passen?",
       "sourceIds": [
-        "protect-base"
+        "protect-reuse-resources",
+        "protect-wildlife-distance"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Warum hängt eine gute Lösung von der Situation ab?",
+          "answers": [
+            "Möglichkeiten und Bedürfnisse unterscheiden sich",
+            "Alle Orte haben immer dieselben Bedingungen",
+            "Eine Idee ist ohne Prüfung immer richtig"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche zwei Orte mit unterschiedlichen Wegen und Möglichkeiten. Muss dieselbe Lösung unter beiden Bedingungen gleich gut passen?",
+          "why": "Eine passende Handlung muss die konkreten Bedingungen berücksichtigen.",
+          "wrong": [
+            "Eine passende Handlung muss die konkreten Bedingungen berücksichtigen.",
+            "Orte und Menschen haben unterschiedliche Voraussetzungen.",
+            "Eine Idee braucht eine nachvollziehbare Prüfung."
+          ]
+        },
+        "previousAfterHash": "d5cf14bd251c3f4c8526d7bbd78780ca9e660f47e3f955f6b18ea47c17ec3705",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "protect:4",
+        "level": "Erklären",
+        "prompt": "Warum hängt eine gute Lösung von der Situation ab?",
+        "correctIndex": 0,
+        "correctAnswer": "Möglichkeiten und Bedürfnisse unterscheiden sich",
+        "sourceIds": [
+          "protect-reuse-resources",
+          "protect-wildlife-distance"
+        ],
+        "countercheck": "Eigene begrenzte Zusammenarbeit als Lernhandlung, keine universell gemessene Wirkgarantie. UBA14/17–24 gemeinsame Akteure/Ressourcen und NPS25–31 situationsabhängiger sicherer Umgang als passende Quellen statt nur Treibhauslink gebunden. Gute Idee→Plan→Ausprobieren-Kette bewusst erhalten: hier ist Reihenfolge nützlich, anders als alternative Reparaturwege. Drei vorhandene Stufen, individueller Hinweis/Feedback und machbare gemeinsame Beobachtung erhalten. Kind nicht beschämen oder allein verantwortlich machen; kurze sichere Wege und Begleitung bleiben Bedingungen, keine pauschale Pflicht. Wirklicher Wangari-Maathai-Ziel-/Rückfokus geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "protect:4:2",
@@ -8064,10 +10220,84 @@
       "afterHash": "b5c1977cd1690fe1b7763b9041e329d4c231e40d749804da77c42df2b2965ebf",
       "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Prüfe zuerst, welcher Weg tatsächlich sicher ist und welche Begleitung nötig wäre. Ein Plan muss zu den realen Möglichkeiten passen.",
       "sourceIds": [
-        "protect-base"
+        "protect-reuse-resources",
+        "protect-wildlife-distance"
       ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "sourceStatus": "Individuelle eigene Quellen-/Fach-/Pädagogikgegenlese mit tatsächlicher gezielter UI/native/kalterOfflineprüfung; keine externe Menschenabnahme.",
+      "independentReview": false,
+      "previousPendingFollowup20261020": {
+        "status": "Selected source/pedagogy preparation; current after/native/cold still pending",
+        "previousAfter": {
+          "prompt": "Ein Weg kann sicher zu Fuß oder nur mit erwachsener Begleitung gegangen werden. Was zählt bei der Entscheidung?",
+          "answers": [
+            "Nur eine möglichst schnelle Entscheidung",
+            "Sicherheit grundsätzlich ignorieren",
+            "Umweltidee und Sicherheit gemeinsam prüfen"
+          ],
+          "correct": 2,
+          "hint": "Prüfe zuerst, welcher Weg tatsächlich sicher ist und welche Begleitung nötig wäre. Ein Plan muss zu den realen Möglichkeiten passen.",
+          "why": "Eine sinnvolle Lösung berücksichtigt mehrere Bedingungen, nicht nur einen Wunsch.",
+          "wrong": [
+            "Tempo ersetzt keine Prüfung.",
+            "Eine Umweltidee rechtfertigt keinen unsicheren Weg.",
+            "Eine sinnvolle Lösung berücksichtigt mehrere Bedingungen, nicht nur einen Wunsch."
+          ]
+        },
+        "previousAfterHash": "b5c1977cd1690fe1b7763b9041e329d4c231e40d749804da77c42df2b2965ebf",
+        "correctPositionAndAnswerRetained": true
+      },
+      "aiCounterreview20261020": {
+        "mode": "ai-self-review",
+        "chapter": "protect:4",
+        "level": "Übertragen",
+        "prompt": "Ein Weg kann sicher zu Fuß oder nur mit erwachsener Begleitung gegangen werden. Was zählt bei der Entscheidung?",
+        "correctIndex": 2,
+        "correctAnswer": "Umweltidee und Sicherheit gemeinsam prüfen",
+        "sourceIds": [
+          "protect-reuse-resources",
+          "protect-wildlife-distance"
+        ],
+        "countercheck": "Eigene begrenzte Zusammenarbeit als Lernhandlung, keine universell gemessene Wirkgarantie. UBA14/17–24 gemeinsame Akteure/Ressourcen und NPS25–31 situationsabhängiger sicherer Umgang als passende Quellen statt nur Treibhauslink gebunden. Gute Idee→Plan→Ausprobieren-Kette bewusst erhalten: hier ist Reihenfolge nützlich, anders als alternative Reparaturwege. Drei vorhandene Stufen, individueller Hinweis/Feedback und machbare gemeinsame Beobachtung erhalten. Kind nicht beschämen oder allein verantwortlich machen; kurze sichere Wege und Begleitung bleiben Bedingungen, keine pauschale Pflicht. Wirklicher Wangari-Maathai-Ziel-/Rückfokus geprüft.",
+        "allOptionFeedbackActuallyChecked": true,
+        "technicalProofs": {
+          "before": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-before/report.json",
+            "sha256": "e883dffcdd640b09fce99cd95a0eaefa554c44b3e3eaae49afc8bc6d282716e4",
+            "build": "86160c493cc3801e",
+            "sourceDigest": "98efa925b2d8ec6b260bc6174e41f20c70dc0d4f7b0c0d760c43eae8bc8dfba9"
+          },
+          "broad": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v4/report.json",
+            "sha256": "6ae41ca522c1a5692c42bda467c5f9e9ecb8a56f6fa4e2ad0dcc02b9a9bcb9a6",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "broadOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after-v2/failure.json",
+            "sha256": "c1fee15956fde344f042b5ddf3c6270c8701d4d6c1835bfeb3a6aff0b8dba1da",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "firstOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-after/failure.json",
+            "sha256": "af6cb34e30f17a60596704ee7fdc798d0f1044b6394d7eaeceea3b5e097b1394",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "3e3c1743ff1e3102a788c20a95c8222a33aab1f0445ea305ca256cf0681b53bc"
+          },
+          "native": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline-v2/report.json",
+            "sha256": "69a9a7989339f09268ffff109feff54110e7859189bb36802da3f8155f233833",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          },
+          "nativeOriginalPartial": {
+            "path": "/workspace/work/wk-continuation/journey-nature-protect10-20261020-native-offline/failure.json",
+            "sha256": "7fce6767c5b7c54643b158c168b0581e1f9b9b95830e014b70f9b8b2abad9f56",
+            "build": "d0e6eb8eb27d9223",
+            "sourceDigest": "46f5eee3aeba778bc6e7eb40e6f1edce767ad669b615b83ca3336668bf15f8ef"
+          }
+        }
+      }
     },
     {
       "id": "continents:0:0",
@@ -13523,6 +15753,86 @@
       "title": "NOAA · Wellen transportieren Energie",
       "url": "https://oceanservice.noaa.gov/facts/wavesinocean.html",
       "scope": "Windwellen und Energieausbreitung; nicht mit Strömung oder einem Tsunami gleichsetzen."
+    },
+    "nature-habitat-needs": {
+      "title": "NPS · Passender Lebensraum",
+      "url": "https://www.nps.gov/teachers/classrooms/basics-of-habitat.htm",
+      "scope": "Ausgewählte Tierbedürfnisse und passende Anordnung; Pflanzen brauchen andere Bedingungen. Keine universelle Tierliste."
+    },
+    "nature-rainforest-types": {
+      "title": "NASA · Tropischer und gemäßigter Regenwald",
+      "url": "https://science.nasa.gov/kids/earth/mission-biomes/biorainforest/",
+      "scope": "Ausgewählte Description: tropisches Stockwerk-Beispiel und kühlere Regenwälder; keine global einheitlichen Temperatur-/Niederschlagswerte."
+    },
+    "nature-savanna-seasons": {
+      "title": "NASA · Grasländer und ihre Jahreszeiten",
+      "url": "https://science.nasa.gov/kids/earth/mission-biomes/biograssland/",
+      "scope": "Tropische Regen-/Trockenzeiten und offene Graslandschaften; keine starre Niederschlagsgrenze."
+    },
+    "nature-dry-deserts": {
+      "title": "NASA · Wüsten sind trocken",
+      "url": "https://science.nasa.gov/kids/earth/mission-biomes/biodesert/",
+      "scope": "Ausgewählte Beschreibung geringer Niederschläge; keine universelle Tages-/Nachttemperatur aus dem heißen Beispiel übernehmen."
+    },
+    "nature-antarctic-precipitation": {
+      "title": "Australian Antarctic Program · Niederschläge in der Antarktis",
+      "url": "https://www.antarctica.gov.au/about-antarctica/weather-and-climate/weather/",
+      "scope": "Abschnitt Precipitation: trockenes Inland, feuchtere Küsten, meist Schnee. Kein überall identischer Niederschlagswert."
+    },
+    "nature-camel-hump": {
+      "title": "San Diego Zoo · Was im Kamelhöcker steckt",
+      "url": "https://animals.sandiegozoo.org/animals/camel",
+      "scope": "ABOUT: Fett und Energiereserve, kein Trinkwassertank; keine neue Größen-/Schutzstatusabnahme."
+    },
+    "nature-polar-foundations": {
+      "title": "NSIDC · Ozean und Kontinent an den Polen",
+      "url": "https://nsidc.org/learn/ask-scientist/how-does-antarctic-sea-ice-differ-arctic-sea-ice",
+      "scope": "Ausgewählte geografische Unterlage; keine aktuelle Meereis-Trend-/Rekordaussage aus der2022-Seite übernehmen."
+    },
+    "nature-emperor-coast": {
+      "title": "Australian Antarctic Program · Kaiserpinguine an der antarktischen Küste",
+      "url": "https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/",
+      "scope": "Distribution: Kolonien um den Kontinent meist auf küstennah gebundenem Meereis, nicht unmittelbar am geografischen Südpol."
+    },
+    "nature-polar-bear-range": {
+      "title": "San Diego Zoo Wildlife Alliance · Eisbären (Englisch)",
+      "url": "https://animals.sandiegozoo.org/animals/polar-bear",
+      "scope": "Vorhandene tatsächlich ausgewählte Buchquellenlektüre vom 2026-10-20 beibehalten: Der ausgewählte Abschnitt zum Lebensraum beschreibt das natürliche arktische Verbreitungsgebiet von Eisbären. Eine gemeinsame Schneeszene mit Pinguinen ist kein Beleg für eine gemeinsame wilde Population."
+    },
+    "nature-penguin-regions": {
+      "title": "Australian Antarctic Program · Pinguine (Englisch)",
+      "url": "https://www.antarctica.gov.au/about-antarctica/animals/penguins/",
+      "scope": "Vorhandene tatsächlich ausgewählte Buchquellenlektüre vom 2026-10-20 beibehalten: Die ausgewählten Beispiele umfassen antarktische, subantarktische und gemäßigte Regionen. Wilde Pinguine sind deshalb nicht mit Bewohnern der Antarktis gleichzusetzen. Die Formulierung überwiegend südlich lässt Ausnahmen zu."
+    },
+    "nature-foodweb-energy": {
+      "title": "NPS · Nahrungsketten und Nahrungsnetze",
+      "url": "https://www.nps.gov/common/uploads/teachers/lessonplans/Ecosystems%20Lesson%20Plan_5082.pdf",
+      "scope": "Vorhandene18Oct-Wortquellenlektüre auf Seiten1–3 beibehalten: Ketten als Ausschnitt, Netz und Energiefluss. Keine neue20Oct-PDF-Volllektüre."
+    },
+    "nature-biological-diversity": {
+      "title": "NPS · Biologische Vielfalt",
+      "url": "https://www.nps.gov/subjects/biodiversity/what-is-biodiversity.htm",
+      "scope": "Arten, genetische Unterschiede und Lebensräume zusammen; Artenvielfalt bezeichnet nur einen Teil."
+    },
+    "protect-energy-balance": {
+      "title": "NASA · Natürlicher und verstärkter Treibhauseffekt",
+      "url": "https://science.nasa.gov/climate-change/faq/what-is-the-greenhouse-effect/",
+      "scope": "Ausgewählte239–247: Gase/Strahlung/natürliche Wirkung und zusätzliches fossilesCO2; keine echte Decke oder exakte Temperaturberechnung."
+    },
+    "protect-reuse-resources": {
+      "title": "Umweltbundesamt · Produkte länger nutzen",
+      "url": "https://www.umweltbundesamt.de/themen/produkte-laenger-nutzen-0",
+      "scope": "Ausgewählte14/17–24: Wiederverwendung, Rohstoffe/Energie und gemeinsame Beteiligte; Reparatur/Weitergabe sind situationsabhängige Möglichkeiten, keine Pflichtkette."
+    },
+    "protect-pollinator-habitat": {
+      "title": "NPS · Nahrung und Schutz für Bestäuber",
+      "url": "https://www.nps.gov/subjects/pollinators/helping-in-our-own-backyards.htm",
+      "scope": "Ausgewählte21/26–31/36–48: Nahrung, Wasser und unterschiedliche Schutzorte. Keine US-Pflanzlisten oder Pestizidhandlungen als Kinderanweisung."
+    },
+    "protect-wildlife-distance": {
+      "title": "NPS · Wildtiere mit Abstand beobachten",
+      "url": "https://www.nps.gov/subjects/watchingwildlife/7ways.htm",
+      "scope": "Ausgewählte25–31: Abstand, nicht stören oder anfassen, auf Wegen bleiben. Keine US-Abstands-/Rechtsregeln universell auf Deutschland übertragen."
     }
   },
   "sectionReview": {

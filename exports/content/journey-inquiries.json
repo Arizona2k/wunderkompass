@@ -1799,16 +1799,16 @@
         {
           "prompt": "Welche Beschreibung passt oft zur Savanne?",
           "answers": [
-            "Immer nur dichtes Eis",
-            "Kein einziges Lebewesen",
+            "Dichter Baumwald mit ganzjährig viel Regen",
+            "Jede warme Landschaft bleibt ohne Pflanzen",
             "Gräser, einzelne Bäume und Regen- und Trockenzeiten"
           ],
           "correct": 2,
           "hint": "Vergleiche das Wasserangebot im Jahreslauf, nicht nur ein einzelnes grünes oder trockenes Foto. Welche Beschreibung enthält einen Wechsel?",
           "why": "Viele Savannen haben ausgeprägte Regen- und Trockenzeiten.",
           "wrong": [
-            "Eis ist nicht die hier beschriebene typische Savannenlandschaft.",
-            "Savannen sind vielfältige Lebensräume.",
+            "Ein dichter, ganzjährig feuchter Baumwald passt hier zum tropischen Regenwald, nicht zur beschriebenen Savanne.",
+            "Wärme allein erklärt die Pflanzenwelt nicht. Auch Wasserangebot und Regenverlauf zählen.",
             "Viele Savannen haben ausgeprägte Regen- und Trockenzeiten."
           ]
         },
@@ -1986,17 +1986,17 @@
         {
           "prompt": "Warum gehören Pilze und kleine Zersetzer zum Zusammenhang?",
           "answers": [
-            "Sie sind in keinem Lebensraum vorhanden",
+            "Abgestorbene Reste bleiben grundsätzlich unverändert",
             "Sie bauen abgestorbene Reste ab",
-            "Sie entfernen alle Naturgesetze"
+            "Sie ersetzen das Sonnenlicht als Energiequelle aller Pflanzen"
           ],
           "correct": 1,
           "hint": "Verfolge ein abgestorbenes Blatt weiter. Welche Lebewesen helfen beim Abbau, statt nur in einer einfachen Fressreihe zu stehen?",
           "why": "Zersetzer tragen dazu bei, Stoffe wieder verfügbar zu machen.",
           "wrong": [
-            "Viele Lebensräume enthalten Pilze und Mikroorganismen.",
+            "Reste können abgebaut werden. Gerade diesen Weg erklären Pilze und andere Zersetzer.",
             "Zersetzer tragen dazu bei, Stoffe wieder verfügbar zu machen.",
-            "Zersetzung ist selbst ein natürlicher Prozess."
+            "Zersetzer bauen Reste ab. Sie sind kein Ersatz für das Licht, das Pflanzen bei der Fotosynthese nutzen."
           ]
         },
         {
@@ -2089,17 +2089,17 @@
         {
           "prompt": "Was entsteht beim Verbrennen von Kohle, Erdöl und Erdgas zusätzlich?",
           "answers": [
-            "Eine neue Erddrehung",
+            "Nur Wärme, ohne dass Stoffe in die Luft gelangen",
             "Kohlendioxid",
-            "Nur sauberes Wasser ohne andere Stoffe"
+            "Nur Wasserdampf, aber kein Kohlendioxid"
           ],
           "correct": 1,
           "hint": "Verfolge einen Stoff vom Brennstoff zur Atmosphäre. Welche zusätzliche Verbindung entsteht bei der beschriebenen Verbrennung?",
           "why": "Die Verbrennung fossiler Stoffe setzt zusätzliches Kohlendioxid frei.",
           "wrong": [
-            "Verbrennung verändert nicht so die tägliche Achsdrehung.",
+            "Beim Verbrennen entsteht nicht nur Wärme. Kohlenstoff aus dem Brennstoff kann als Kohlendioxid in die Luft gelangen.",
             "Die Verbrennung fossiler Stoffe setzt zusätzliches Kohlendioxid frei.",
-            "Die Aussage lässt wesentliche Verbrennungsprodukte weg."
+            "Auch Wasserdampf kann entstehen. Bei Kohle, Erdöl und Erdgas wird zusätzlich Kohlendioxid freigesetzt."
           ]
         },
         {
@@ -2242,7 +2242,7 @@
           "answers": [
             "Nein, in Ruhe lassen ist oft die bessere Hilfe",
             "Ja, Ruhe bedeutet immer Zustimmung",
-            "Ja, wilde Tiere sind Spielzeug"
+            "Ja, solange eine erwachsene Person zuschaut"
           ],
           "correct": 0,
           "hint": "Ruhe verrät nicht sicher, dass ein Tier Berührung möchte oder Hilfe benötigt. Welche Antwort berücksichtigt Abstand und fachkundige Unterstützung?",
@@ -2250,7 +2250,7 @@
           "wrong": [
             "Ruhiges Verhalten ist keine Einladung zum Anfassen.",
             "Aus Ruhe kannst du keine solche Zustimmung ableiten.",
-            "Wilde Tiere sollen als Lebewesen respektiert werden."
+            "Erwachsene können beim Beobachten helfen. Ihre Anwesenheit macht das Anfassen eines wilden Tieres nicht automatisch hilfreich."
           ]
         }
       ]

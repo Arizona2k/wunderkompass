@@ -481,28 +481,70 @@
     "steps": [
       {
         "title": "Ein Zuhause für jedes Lebewesen",
-        "text": "Ein Lebensraum ist ein Ort, an dem ein Lebewesen Nahrung, Wasser und Schutz findet. Ein Wald ist ein Lebensraum, ein Teich ebenfalls. Tiere und Pflanzen sind an ihre Umgebung angepasst. Ein Fisch und ein Kaktus brauchen deshalb ganz unterschiedliche Bedingungen.",
-        "fact": "Auch unter einem Stein und in einer Handvoll Erde gibt es Lebensräume."
+        "text": "Ein Lebensraum bietet einem bestimmten Lebewesen passende Lebensbedingungen. Ein Wald ist ein Lebensraum, ein Teich ebenfalls. Tiere und Pflanzen sind an ihre Umgebung angepasst. Ein Fisch und ein Kaktus brauchen deshalb ganz unterschiedliche Bedingungen.\n\nPassend hängt vom Lebewesen ab: Ein Teich ist für einen Fisch ein Zuhause, für einen Kaktus kein geeigneter Ort. Ein Lebensraum ist also mehr als nur eine Adresse. Tiere brauchen passende Nahrung. Pflanzen stellen energiereiche Stoffe mithilfe von Licht selbst her; Wasser und weitere passende Bedingungen brauchen sie ebenfalls.",
+        "fact": "Auch unter einem Stein und in einer Handvoll Erde gibt es Lebensräume.",
+        "starter": "Ein Lebensraum muss zu den Bedürfnissen eines Lebewesens passen. Tiere brauchen dort auch Nahrung, Wasser und Schutz.",
+        "deeper": "Eine Karte mit einem Beispielpunkt zeigt nicht die gesamte Verbreitung einer Art. Auch innerhalb einer Landschaft sind die Bedingungen unterschiedlich.",
+        "whyItMatters": "Du erklärst einen Lebensraum aus Sicht eines Lebewesens.",
+        "observe": "Wähle ein Tier aus der Tierwelt. Nenne Nahrung, Wasser und Schutz und suche, welche dieser Bedürfnisse seine Karte erklärt.",
+        "sourceIds": [
+          "nature-habitat-needs"
+        ]
       },
       {
         "title": "Regenwald und Savanne",
-        "text": "Tropische Regenwälder sind meist warm und feucht. Dort wachsen viele verschiedene Pflanzen. In Savannen wechseln häufig Regen- und Trockenzeiten. Zwischen Gräsern stehen einzelne Bäume. In afrikanischen Savannen leben zum Beispiel Giraffen und viele Antilopen.",
-        "fact": "Nicht alle Regenwälder liegen in den Tropen. Es gibt auch kühlere Regenwälder."
+        "text": "Tropische Regenwälder sind meist warm und feucht. Dort wachsen viele verschiedene Pflanzen. In Savannen wechseln häufig Regen- und Trockenzeiten. Zwischen Gräsern stehen einzelne Bäume. In afrikanischen Savannen leben zum Beispiel Giraffen und viele Antilopen.\n\nNicht nur die Menge, auch die Verteilung des Regens zählt. Lange trockene Abschnitte stellen andere Anforderungen als häufige Niederschläge. Das hilft, verschiedene Pflanzenwelten zu verstehen.",
+        "fact": "Nicht alle Regenwälder liegen in den Tropen. Es gibt auch kühlere Regenwälder.",
+        "starter": "Regenwald und Savanne können warm sein. Ihr Wasserangebot ist verschieden.",
+        "deeper": "Tropisch bezeichnet eine Weltregion, nicht eine einzige Landschaft. Savannen und Regenwälder sind Beispiele, keine vollständige Liste der Tropen.",
+        "whyItMatters": "Du vergleichst Lebensräume anhand ihrer Bedingungen statt allein an einem Tierbild.",
+        "observe": "Wähle im Schaubild Regenwald und Savanne. Vergleiche Pflanzen und Wasserangebot. Öffne danach die verknüpfte Giraffenkarte: Welche dort beschriebene Bedingung passt zur Savanne?",
+        "sourceIds": [
+          "nature-rainforest-types",
+          "nature-savanna-seasons"
+        ]
       },
       {
         "title": "Wüste heißt trocken",
-        "text": "Eine Wüste bekommt sehr wenig Niederschlag. Manche Wüsten sind heiß, andere kalt. Die Antarktis ist trotz ihres Eises sehr trocken und gilt als Kältewüste. Wüstentiere und Pflanzen haben besondere Wege, mit wenig Wasser auszukommen.",
-        "fact": "Kamele lagern Fett in ihren Höckern, kein Trinkwasser."
+        "text": "Eine Wüste bekommt sehr wenig Niederschlag. Manche Wüsten sind heiß, andere kalt. Die Antarktis ist trotz ihres Eises sehr trocken und gilt als Kältewüste. Wüstentiere und Pflanzen haben besondere Wege, mit wenig Wasser auszukommen.\n\nEine Sanddüne ist kein Beweis für alle Wüsten. Entscheidend ist der geringe Niederschlag. Deshalb kann eine eisige Gegend zu derselben Landschaftsgruppe gehören wie eine heiße.",
+        "fact": "Kamele lagern Fett in ihren Höckern, kein Trinkwasser.",
+        "starter": "Eine Wüste ist sehr trocken. Sie kann heiß oder kalt sein.",
+        "deeper": "Trockenheit und Temperatur sind verschiedene Größen. Die Bezeichnung Kältewüste verbindet beide, ohne sie gleichzusetzen.",
+        "whyItMatters": "Du kannst eine Kategorie an ihrem Merkmal erkennen, statt an einem typischen Bild.",
+        "observe": "Wähle im Schaubild heiße Wüste und Kältewüste. Nenne das gemeinsame Merkmal und einen wichtigen Unterschied. Kannst du aus dem Bild allein die jährliche Niederschlagsmenge ablesen?",
+        "sourceIds": [
+          "nature-dry-deserts",
+          "nature-antarctic-precipitation",
+          "nature-camel-hump"
+        ]
       },
       {
         "title": "Norden und Süden unterscheiden",
-        "text": "Eisbären leben in der Arktis im Norden. Viele Pinguinarten leben im Süden, einige sogar nahe am Äquator. Pinguine und Eisbären treffen sich in der freien Natur nicht. Am Südpol liegt Land unter dem Eis; am Nordpol liegt Meer.",
-        "fact": "Nicht jeder Pinguin lebt in Schnee und Eis."
+        "text": "Eisbären leben in der Arktis im Norden. Viele Pinguinarten leben im Süden, einige sogar nahe am Äquator. Pinguine und Eisbären treffen sich in der freien Natur nicht. Am Südpol liegt Land unter dem Eis; am Nordpol liegt Meer.\n\nNorden und Süden sind keine austauschbaren Eiswelten. Der Nordpol liegt über Meer, der Südpol auf einem Kontinent. Auch Pinguinarten leben in unterschiedlichen Regionen.",
+        "fact": "Nicht jeder Pinguin lebt in Schnee und Eis.",
+        "starter": "Eisbären und Pinguine leben nicht gemeinsam in der freien Natur.",
+        "deeper": "Ein Tier auf einer Illustration muss nicht dort leben, wo die Dekoration Schnee zeigt. Prüfe die Verbreitungsangabe der jeweiligen Art.",
+        "whyItMatters": "Du kannst ein schönes Bild von einer richtigen Verbreitungskarte unterscheiden.",
+        "observe": "Finde Eisbär und Kaiserpinguin in der Tierwelt. Vergleiche ihre Beispielorte und prüfe, ob beide Punkte dieselbe Region zeigen.",
+        "sourceIds": [
+          "nature-polar-foundations",
+          "nature-emperor-coast",
+          "nature-polar-bear-range",
+          "nature-penguin-regions"
+        ]
       },
       {
         "title": "Alle hängen zusammen",
-        "text": "Pflanzen nutzen Sonnenlicht, um Nahrung aufzubauen. Manche Tiere fressen Pflanzen, andere Tiere fressen Tiere. Pilze und kleine Lebewesen bauen abgestorbene Reste ab. Solche Beziehungen bilden Nahrungsnetze. Verschwindet eine Art, kann das andere Arten beeinflussen.",
-        "fact": "Artenvielfalt bedeutet die Vielfalt des Lebens. Dazu gehören auch unscheinbare Käfer, Pilze und Mikroorganismen."
+        "text": "Pflanzen nutzen Sonnenlicht, um Nahrung aufzubauen. Manche Tiere fressen Pflanzen, andere Tiere fressen Tiere. Pilze und kleine Lebewesen bauen abgestorbene Reste ab. Solche Beziehungen bilden Nahrungsnetze. Verschwindet eine Art, kann das andere Arten beeinflussen.\n\nEine Kette zeigt einen Weg; ein Netz zeigt mehrere Beziehungen. Ein Tier kann verschiedene Nahrung nutzen und selbst Nahrung für mehrere andere Arten sein.",
+        "fact": "Artenvielfalt ist ein Teil der biologischen Vielfalt. Dazu gehören auch Unterschiede innerhalb von Arten und die Vielfalt der Lebensräume.",
+        "starter": "Pflanzen, Tiere, Pilze und kleine Lebewesen hängen in Nahrungsnetzen zusammen.",
+        "deeper": "Zersetzer bauen Reste ab; das ist kein überflüssiger Abfallweg. Eine vereinfachte Zeichnung enthält trotzdem nicht jedes Lebewesen eines Lebensraums.",
+        "whyItMatters": "Du erkennst, weshalb eine Veränderung mehrere Arten betreffen kann.",
+        "observe": "Zeichne ein kleines Nahrungsnetz aus passenden Arten der Tierwelt. Erkläre: Deine Pfeile zeigen von der Nahrung zum Fresser. Ergänze Sonnenlicht mit einem anders gezeichneten Pfeil zur Pflanze; Licht ist keine gefressene Nahrung.",
+        "sourceIds": [
+          "nature-foodweb-energy",
+          "nature-biological-diversity"
+        ]
       }
     ],
     "question": {
@@ -531,28 +573,67 @@
     "steps": [
       {
         "title": "Eine hilfreiche Wärmedecke",
-        "text": "Bestimmte Gase in der Atmosphäre halten einen Teil der Wärme zurück, die die Erde ins Weltall abgibt. Das nennt man Treibhauseffekt. Ohne den natürlichen Treibhauseffekt wäre unsere Erde viel kälter. Die Lufthülle ist dabei keine echte Decke.",
-        "fact": "Wasserdampf, Kohlendioxid und Methan gehören zu den Treibhausgasen."
+        "text": "Bestimmte Gase in der Atmosphäre halten einen Teil der Wärme zurück, die die Erde ins Weltall abgibt. Das nennt man Treibhauseffekt. Ohne den natürlichen Treibhauseffekt wäre unsere Erde viel kälter. Die Lufthülle ist dabei keine echte Decke.\n\nSonnenlicht und die von der Erde abgegebene Wärme sind nicht derselbe Vorgang. Das Deckenbild hilft beim ersten Verstehen, erklärt aber nicht alles, was Strahlung und Gase tun.",
+        "fact": "Wasserdampf, Kohlendioxid und Methan gehören zu den Treibhausgasen.",
+        "starter": "Treibhausgase halten einen Teil der abgegebenen Wärme zurück. Die Luft ist keine echte Decke.",
+        "deeper": "Ein Vergleich muss Grenzen haben. Die Atmosphäre hat keine Stoffdecke und hält auch nicht sämtliche Wärme fest.",
+        "whyItMatters": "Du erkennst eine hilfreiche Erklärung, ohne ihren Vergleich wörtlich zu nehmen.",
+        "observe": "Zeichne Licht zur Erde und Wärme von der Erde weg als verschiedene Pfeile. Beschreibe, welchen Teil der zweite Pfeil vereinfacht.",
+        "sourceIds": [
+          "protect-base",
+          "protect-energy-balance"
+        ]
       },
       {
         "title": "Die zusätzliche Erwärmung",
-        "text": "Menschen verbrennen Kohle, Erdöl und Erdgas. Dabei kommt zusätzliches Kohlendioxid in die Luft. Auch andere Tätigkeiten verstärken den Treibhauseffekt. Die Erde wird im Durchschnitt wärmer. Das verändert unter anderem Eis, Meere und Lebensräume.",
-        "fact": "Das ist eine Aufgabe für Erwachsene, Unternehmen und Länder gemeinsam. Du musst die Welt nicht allein retten."
+        "text": "Menschen verbrennen Kohle, Erdöl und Erdgas. Dabei kommt zusätzliches Kohlendioxid in die Luft. Auch andere Tätigkeiten verstärken den Treibhauseffekt. Die Erde wird im Durchschnitt wärmer. Das verändert unter anderem Eis, Meere und Lebensräume.\n\nDurchschnittlich wärmer bedeutet nicht an jedem Ort jeden Tag wärmer. Wetter bleibt wechselhaft, während sich langfristige Bedingungen verändern. Erwachsene und Einrichtungen müssen dafür Verantwortung übernehmen.",
+        "fact": "Das ist eine Aufgabe für Erwachsene, Unternehmen und Länder gemeinsam. Du musst die Welt nicht allein retten.",
+        "starter": "Zusätzliche Treibhausgase erwärmen die Erde. Lösungen sind eine gemeinsame Aufgabe.",
+        "deeper": "Eine einzelne Handlung erklärt nicht den gesamten Klimawandel. Energieversorgung, Verkehr und weitere Tätigkeiten hängen in großen Systemen zusammen.",
+        "whyItMatters": "Du verstehst einen globalen Zusammenhang, ohne dir allein die ganze Verantwortung aufzubürden.",
+        "observe": "Vergleiche die Erklärung mit dem Wetter-Kapitel. Formuliere eine Frage, die du Erwachsenen zum Umgang mit Energie stellen möchtest.",
+        "sourceIds": [
+          "protect-base",
+          "protect-energy-balance"
+        ]
       },
       {
         "title": "Weniger verschwenden",
-        "text": "Dinge herstellen, transportieren und wegwerfen braucht Material und Energie. Etwas länger benutzen, reparieren, ausleihen oder weitergeben kann Ressourcen sparen. Mehrwegflaschen sind dafür ein Beispiel. Recycling hilft auch, kann aber nicht jede Art von Abfall lösen.",
-        "fact": "Bevor etwas in den Müll kommt, kannst du fragen: Kann es jemand noch gebrauchen?"
+        "text": "Dinge herstellen, transportieren und wegwerfen braucht Material und Energie. Etwas länger benutzen, reparieren, ausleihen oder weitergeben kann Ressourcen sparen. Mehrwegflaschen sind dafür ein Beispiel. Recycling hilft auch, kann aber nicht jede Art von Abfall lösen.\n\nEine Sache länger zu nutzen kann verhindern, dass gleich eine neue hergestellt werden muss. Recycling beginnt erst später und ist nicht für jedes Material gleich gut möglich.",
+        "fact": "Bevor etwas in den Müll kommt, kannst du fragen: Kann es jemand noch gebrauchen?",
+        "starter": "Reparieren, ausleihen und weitergeben können Materialien sparen.",
+        "deeper": "Vergleiche müssen den ganzen Weg betrachten: Herstellung, Nutzung, Transport und Entsorgung. Ein einzelnes grünes Zeichen beantwortet nicht alle Fragen.",
+        "whyItMatters": "Du findest konkrete Möglichkeiten, ohne jede Sache sofort durch etwas Neues zu ersetzen.",
+        "observe": "Wähle gemeinsam eine ungenutzte heile Sache. Vergleicht Weitergeben, Ausleihen und Aufbewahren anhand eurer wirklichen Situation.",
+        "sourceIds": [
+          "protect-reuse-resources"
+        ]
       },
       {
         "title": "Natur Platz geben",
-        "text": "Pflanzen und Tiere brauchen passende Lebensräume. Müll gehört nicht in die Natur. Blüten können Insekten Nahrung bieten. Wilde Tiere beobachten wir mit Abstand. Schon ein kleiner Garten oder Balkon kann zusammen mit Erwachsenen etwas für die Natur bieten.",
-        "fact": "Ein Tier in Ruhe zu lassen, ist oft die beste Hilfe."
+        "text": "Pflanzen und Tiere brauchen passende Lebensräume. Müll gehört nicht in die Natur. Blüten können Insekten Nahrung bieten. Wilde Tiere beobachten wir mit Abstand. Schon ein kleiner Garten oder Balkon kann zusammen mit Erwachsenen etwas für die Natur bieten.\n\nEine Blüte kann Nahrung bieten; ein ruhiger Platz kann Schutz geben. Hilfe heißt deshalb nicht immer anfassen oder mitnehmen. Manche Tiere brauchen vor allem Abstand.",
+        "fact": "Ein Tier in Ruhe zu lassen, ist oft die beste Hilfe.",
+        "starter": "Pflanzen und Tiere brauchen Platz. Wir können sie beobachten, ohne sie zu stören.",
+        "deeper": "Ein Balkon ersetzt keinen ganzen Lebensraum. Kleine Beiträge können dennoch nützlich sein, wenn sie zu den örtlichen Arten und Bedingungen passen.",
+        "whyItMatters": "Du verbindest Naturschutz mit den Bedürfnissen von Lebewesen.",
+        "observe": "Beobachte mit Abstand eine Blüte oder einen Baum. Welche Nutzung kannst du tatsächlich sehen? Stelle keine unbekannten Pflanzen oder Tiere um.",
+        "sourceIds": [
+          "protect-pollinator-habitat",
+          "protect-wildlife-distance"
+        ]
       },
       {
         "title": "Gemeinsam etwas bewegen",
-        "text": "Du kannst Ideen sammeln, Fragen stellen und mit Erwachsenen kleine Vorhaben ausprobieren. Zum Beispiel Wege zu Fuß zurücklegen, unnötiges Licht ausschalten oder Lebensmittel gut nutzen. Welche Lösung sinnvoll ist, hängt von der Situation ab.",
-        "fact": "Niemand macht alles perfekt. Lernen und gemeinsam ausprobieren zählen."
+        "text": "Du kannst Ideen sammeln, Fragen stellen und mit Erwachsenen kleine Vorhaben ausprobieren. Zum Beispiel Wege zu Fuß zurücklegen, unnötiges Licht ausschalten oder Lebensmittel gut nutzen. Welche Lösung sinnvoll ist, hängt von der Situation ab.\n\nEine Lösung passt zu einem konkreten Problem. Zu Fuß gehen kann für einen kurzen sicheren Weg sinnvoll sein; eine andere Strecke braucht eine andere Entscheidung. Fragen helfen mehr als pauschale Vorwürfe.",
+        "fact": "Niemand macht alles perfekt. Lernen und gemeinsam ausprobieren zählen.",
+        "starter": "Gute Ideen entstehen gemeinsam. Niemand muss alles perfekt machen.",
+        "deeper": "Ein persönliches Beispiel ist keine vollständige Lösung für Gesellschaft und Wirtschaft. Es kann zeigen, welche Bedingungen eine gute Entscheidung braucht.",
+        "whyItMatters": "Du kannst Verantwortung gemeinsam und ohne Schuldgefühl besprechen.",
+        "observe": "Überlegt mit einem Erwachsenen eine kleine machbare Änderung. Notiert den Nutzen und eine Bedingung, unter der eure Idee nicht passen würde.",
+        "sourceIds": [
+          "protect-reuse-resources",
+          "protect-wildlife-distance"
+        ]
       }
     ],
     "question": {
