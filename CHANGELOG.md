@@ -1,3 +1,7 @@
+## Vorbereiteter kompatibler Tier-Spielstandserhalt ·21.10.2026
+
+Alte gültigeTierdetektiv-Antwortreihenfolgen beimBestandsausbau wiederfortsetzbar; unbekannte/familienfremde/doppelteWerte weiterablehnen. EchteOptik-AuslieferungPR45 mitMerge-/Vercel-Nachweis in„Wasistneu?“ nachgeführt.146aktuelleUnits grün,volleaktuelleSchlussprüfung/weitereTestauslieferung nochoffen. KeineProduktionsveröffentlichung.
+
 ## 20.10.2026 · Optik und bisherige Spielstände lokal vollständig geprüft
 
 Vollständiger unveränderter lokalerPflichtlauf erfolgreich(123Prüfmeldungen);15Online-/3Kaltoffline-/12Cached-/6Native-Optikfälle mit tatsächlichen Verbindungszielen und Rückfokus. Alte Technik-/Zeitfragen, wirklicher Passdownload/Import sowie sämtliche bisherigen Pflichtgruppen erhalten. Originalnachweise separat gesichert;51alteUIbelege erst danach erneuert und3quellengegengeleseneOptikdossiers hinzugefügt. Aktuelle strikteGitHubQuality und tatsächlicheTestbereitstellung bleiben offen; kein Produktionsrelease.

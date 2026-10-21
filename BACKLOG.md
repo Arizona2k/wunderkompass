@@ -1,3 +1,11 @@
+## Vorhandener Tierfolgeabschnitt lokal vollständig geprüft ·21.10.2026
+
+125vollständigeBrowserprüfungen/146Units undIntegrität grün;54UIbelege erstnachwirklicherVollabnahme erneuert. EchteOptikchronik41 plusErhaltallerneungeändertenAlttier-Auswahlmengen vollständigimvorhandenenFolgeabschnitt. JetztbestehenderGitHub-Weg mitexaktemaktuellenQuality,danachautorisierteTestübernahme/echteBereitstellung nachweisen. KeinweitererInhaltsausbauimgeprüftenKandidaten.
+
+## Vorhandener Folgeabschnitt: gespeicherte Tierdetektiv-Runden ·21.10.2026
+
+Neun frühereAntwortauswahlmengen beim24→48-Tierausbau erhalten,alle24altenReihenfolgen undkorrektenAntworten schützen; tatsächlicheAnzeige/Auswertung nutzt denselbenengenValidator.4bereitsgeprüfteTransferfälle/2echteKaltfälle erhalten. EchtePR45-Auslieferung inProduktchronik nachgeführt,41alte/neuebestätigteEinträge einschließlichallerhistorischenBelege.146aktuelleUnits grün;volleaktuellelokaleBrowser-/CI-/Testauslieferungsabnahme vor reguläremRelease. DanachbestehendesPaket3.5 ohnezusätzlicheInhaltswelle imgeprüftenKandidaten weiterführen.
+
 ## WK055/057 · Offline-Challenge-Annahme gezielt repariert ·20.10.2026
 
 Optiklieferumfang unverändert. Nach tatsächlich rotem lokalen Volltest die gültigen Ein-/Zweihinweisformen mit erhaltenem Zufallsfall und zusätzlichem zwingendem Mischspielstand im bestehenden normalen Test prüfen. Originaler Khipu-Kaltstartzustand bestätigt, korrigierter ganzer Offlinehelper bei beendetem Server gezielt grün. Nun neue unveränderte volle lokale Pflichtprüfung; Quality135 vorher natürlich fertig werden lassen, dann erst begrenzten Korrekturstand auf bestehendenPR45 aktualisieren und exakte strikte CI abnehmen. Danach reguläre test-live-/Vercel-/Browserauslieferung und vorhandene Tier-/Kapitelarbeit fortführen. Keine Daten-/Testabschwächung oder neueRoadmap.
