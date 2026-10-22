@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "meaning": "Exactly eleven original hard lab answer arrays and feedback. Canonical correct indices and strings retained; old selected indices remain stored. No general pass migration or protected baseline regeneration.",
+  "entries": {
+    "depth": {
+      "answers": [
+        "Nein, sie ist ein vereinfachter Richtwert; die Kruste ist unterschiedlich dick",
+        "Ja, die Kruste ist überall gleich dick",
+        "Die Zeichnung ersetzt eine Bohrung bis zum Kern"
+      ],
+      "correct": 0,
+      "why": "Die Kruste unter Ozeanen und Kontinenten ist unterschiedlich dick. Das Schema erklärt Schichten, keinen genauen Ort.",
+      "feedback": [
+        "",
+        "Eine gemeinsame Skala sagt, wie Längen dargestellt werden. Sie macht unterschiedliche echte Schichtdicken nicht gleich.",
+        "Die Lage der Oberfläche allein bestimmt die Krustendicke nicht. Unter Ozeanen und Kontinenten ist die Kruste unterschiedlich aufgebaut."
+      ]
+    },
+    "volcano": {
+      "answers": [
+        "Ein echter Vulkan ist deshalb ungefährlich",
+        "Der Ausbruch wird genauso aussehen",
+        "Nur wie die gewählten Bedingungen im vereinfachten Modell wirken"
+      ],
+      "correct": 2,
+      "why": "Temperatur, Zusammensetzung, Kristalle und Wasser beeinflussen echte Vulkane zusätzlich. Das Modell ist keine Gefahrprognose.",
+      "feedback": [
+        "Ähnlich aussehende Lava verrät nicht alle Bedingungen eines echten Vulkans. Das Modell kann keine örtliche Gefahr feststellen.",
+        "Gleiche Gasmenge allein macht Modell und echten Vulkan nicht gleich. Zusammensetzung, Temperatur und weitere Bedingungen fehlen.",
+        ""
+      ]
+    },
+    "quake": {
+      "answers": [
+        "Ja, Abstand ist die einzige Bedingung",
+        "Nein, auch Untergrund und weitere Bedingungen wirken mit",
+        "Nur die Uhrzeit entscheidet"
+      ],
+      "correct": 1,
+      "why": "Die Wirkung hängt unter anderem von Beben, Tiefe, Abstand und Untergrund ab. Das Schnittmodell berechnet keine örtliche Erschütterung.",
+      "feedback": [
+        "Gleicher Abstand hebt den Einfluss des Untergrunds nicht auf. Gestein und lockere Ablagerungen können Erdbebenwellen unterschiedlich beeinflussen.",
+        "",
+        "Ein gemeinsames Beben erzeugt keine überall gleiche Wirkung. Abstand, Untergrund und weitere Bedingungen unterscheiden sich."
+      ]
+    },
+    "weather": {
+      "answers": [
+        "Ja, jeder Punkt bedeutet einen Liter",
+        "Nein, das Modell zeigt einen Zusammenhang, keine Vorhersage",
+        "Ja, solange es windstill ist"
+      ],
+      "correct": 1,
+      "why": "Temperatur, Feuchte und Luftbewegung wirken zusammen. Punkte im qualitativen Modell sind keine Messmenge.",
+      "feedback": [
+        "Die Punkte zeigen einen Zusammenhang, keine geeichte Wassermenge. Außerdem sind Wolkentröpfchen noch keine örtliche Regenvorhersage.",
+        "",
+        "Eine passende Temperatur allein genügt nicht. Feuchte, Luftbewegung und weitere tatsächliche Wetterbedingungen fehlen."
+      ]
+    },
+    "water": {
+      "answers": [
+        "Ja, der Kreislauf ist ein Fahrplan",
+        "Nein, Wasser kann auch im Boden, in Eis oder in Pflanzen bleiben",
+        "Ja, ein Umlauf dauert immer einen Tag"
+      ],
+      "correct": 1,
+      "why": "Der Wasserkreislauf ist ein Netzwerk mit vielen Wegen und unterschiedlich langen Speicherzeiten.",
+      "feedback": [
+        "Wasser kann nach dem Niederschlag gespeichert werden oder andere Wege nehmen. Es muss nicht zuerst vollständig ins Meer fließen.",
+        "",
+        "Pfeile zeigen mögliche Übergänge. Sie legen keine überall gleiche Aufenthaltsdauer in Schnee, Boden oder anderen Speichern fest."
+      ]
+    },
+    "seasons": {
+      "answers": [
+        "Der hier gezeigte jährliche Wechsel der Tageslänge entfällt",
+        "Es gibt auf der ganzen Erde keine Temperaturunterschiede mehr",
+        "Tag und Nacht hören auf"
+      ],
+      "correct": 0,
+      "why": "Ohne Achsneigung verschwindet dieser jährliche Effekt. Breitengrad, Wetter und andere Einflüsse bleiben; Rotation erzeugt weiter Tag und Nacht.",
+      "feedback": [
+        "",
+        "Die tägliche Drehung erzeugt weiter Tag und Nacht. Sie erklärt ohne Achsneigung aber nicht den hier gezeigten jährlichen Unterschied der Tageslängen.",
+        "Der Monatsname wirkt nicht auf das Licht. Entscheidend sind die Ausrichtung der Erdachse und der Ort im vereinfachten Jahresmodell."
+      ]
+    },
+    "plates": {
+      "answers": [
+        "Ja, auch jede Subduktion und alle Gesteine",
+        "Nein, sie veranschaulichen vor allem Faltung beim Zusammendrücken",
+        "Ja, und die echte Geschwindigkeit"
+      ],
+      "correct": 1,
+      "why": "Tücher sind ein Vergleich für Falten. Material, Zeitmaßstab und das Abtauchen einer Platte bilden sie nicht vollständig ab.",
+      "feedback": [
+        "Falten und das Abtauchen einer Platte sind verschiedene Vorgänge. Ein gefaltetes Tuch bildet nicht jede Subduktion und die Gesteinsbedingungen ab.",
+        "",
+        "Die Handbewegung besitzt keinen festgelegten geologischen Zeitmaßstab. Gleiche Versuchsgeschwindigkeit liefert keine echte Plattengeschwindigkeit."
+      ]
+    },
+    "moon": {
+      "answers": [
+        "Weil der Mond dann kein Licht reflektiert",
+        "Weil seine Bahn geneigt ist und er meistens am Erdschatten vorbeizieht",
+        "Weil die Sonne jeden Monat ausgeht"
+      ],
+      "correct": 1,
+      "why": "Die geneigte Mondbahn führt meist oberhalb oder unterhalb des Erdschattens vorbei. Eine Finsternis braucht eine passende Ausrichtung.",
+      "feedback": [
+        "Auch bei Vollmond kann der Erdschatten in Richtung der Mondbahn liegen. Für eine Finsternis muss der Mond ihn aber tatsächlich durchqueren.",
+        "",
+        "Der Abstand allein erklärt die fehlenden monatlichen Finsternisse nicht. Entscheidend ist auch die räumliche Ausrichtung der geneigten Bahn."
+      ]
+    },
+    "clocks": {
+      "answers": [
+        "Ja, Datumsgrenzen und Sommerzeit spielen nie mit",
+        "Nein, Datum und Zeitzonenregeln gehören dazu",
+        "Ja, jede Stadt hat dieselbe Zeit"
+      ],
+      "correct": 1,
+      "why": "An verschiedenen Orten kann derselbe Moment zu verschiedenen Kalendertagen gehören. Sommerzeitregeln sind datumsabhängig.",
+      "feedback": [
+        "23:30 kann zu einem anderen Kalendertag gehören als00:30. Die größere Stundenzahl allein ordnet verschiedene Ortszeiten nicht eindeutig.",
+        "",
+        "Sommerzeitregeln können sich je nach Ort und Datum unterscheiden. Ein fester Stundenunterschied darf nicht ohne diese Angaben angenommen werden."
+      ]
+    },
+    "tides": {
+      "answers": [
+        "Ja, alle Küsten haben dieselbe Kurve",
+        "Nein, dafür brauchst du aktuelle örtliche Angaben und Sicherheitsregeln",
+        "Ja, bei Vollmond ist das Meer sicher"
+      ],
+      "correct": 1,
+      "why": "Meerestiefe, Küstenform, Wetter und Verzögerungen verändern örtliche Gezeiten. Das Modell ist keine Navigation oder Sicherheitsprognose.",
+      "feedback": [
+        "Küstenform, Tiefe und örtliche Verzögerungen unterscheiden sich. Dieselbe Mondstellung liefert keine überall gleiche Uhrzeit.",
+        "",
+        "Eine selbst verschobene Kurve ersetzt keine aktuellen örtlichen Gezeitenangaben und Sicherheitsregeln. Auch Wetter und Bedingungen vor Ort zählen."
+      ]
+    },
+    "solar": {
+      "answers": [
+        "Weil es nur vier Planeten gibt",
+        "Weil Planeten gegenüber den Abständen sehr klein sind",
+        "Weil alle Planeten gleich groß sind"
+      ],
+      "correct": 1,
+      "why": "Bei einer gut sichtbaren Planetengröße passen die echten Entfernungen nicht auf einen kleinen Bildschirm. Der Maßstab muss transparent bleiben.",
+      "feedback": [
+        "Ein Bildschirmwechsel verändert die Darstellung, nicht die echten Planetenabstände. Entscheidend ist das Verhältnis von Planetendurchmessern und Abständen.",
+        "",
+        "Die Planetenbahnen besitzen unterschiedliche Abstände zur Sonne. Gleiche Abstände wären eine falsche Vereinfachung, keine Lösung des Maßstabsproblems."
+      ]
+    }
+  }
+}

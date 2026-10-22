@@ -1,5 +1,7 @@
 import {peopleSourceView} from './people-learning.mjs';
 import {worldGameOfflineSemantics} from './world-game-offline-semantics.mjs';
+import {bookNormalizationView} from './book-normalization.mjs';
+import {learningTaskOfflineSemantics} from './learning-task-offline.mjs';
 import {opticsSourceView} from './invention-optics.mjs';
 import {historySourceView} from './history-learning.mjs';
 import fs from 'node:fs/promises';import path from 'node:path';import http from 'node:http';import assert from 'node:assert/strict';
@@ -50,6 +52,13 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   assert.equal(report.historySourceDiscovery.length,native?4:8,'both source activities at every required cached-app width');
   const afterLearning=await snapshot();for(const key of ['favorites','notes'])assert.deepEqual(afterLearning[key],saved[key]);for(const [key,value]of Object.entries(saved.gameSessions))assert.deepEqual(afterLearning.gameSessions[key],value,'old saved game remains after cached source exploration '+key);
   report.worldGameSemantics=await worldGameOfflineSemantics(page,{shots:shots??'.qa-output',kind,native});
+  report.bookLearning={checks:[]};
+  for(const width of[320,1440]){
+   await page.setViewportSize({width:width*(native?2:1),height:950});assert.equal(await page.evaluate(()=>innerWidth),width);
+   await bookNormalizationView(page,report.bookLearning,width);
+  }
+  assert.equal(report.bookLearning.bookNormalization.length,8);
+  report.learningTaskSemantics=await learningTaskOfflineSemantics(page,{shots:shots??'.qa-output',kind,native});
   return report;
  }catch(error){
   if(shots){await fs.writeFile(path.join(shots,shotName+'-failure.json'),JSON.stringify({...report,status:'failed',failure:error.stack},null,2));await page.screenshot({path:path.join(shots,shotName+'-failure-320.png'),animations:'disabled',timeout:5000}).catch(()=>{});}

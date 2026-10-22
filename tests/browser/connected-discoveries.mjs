@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {bookNormalizationView} from './book-normalization.mjs';
 import fs from 'node:fs/promises';
 const routes=JSON.parse(await fs.readFile(new URL('../../exports/content/world-routes.json',import.meta.url),'utf8'));
 const topics=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
@@ -119,5 +120,6 @@ export async function connectedDiscoveries(page,ready,report,width){
   assert.equal(new URL(page.url()).hash,'#world/route/moon-to-sea','completed route retains its finish state when resumed');
   report.checks.push('Completed learning route: keyboard entry/resume retains finish state and a focusable main fallback');
  }
+ if(width===320||width===1440)await bookNormalizationView(page,report,width);
  report.checks.push('Connected discoveries '+width+': eight articles, both models, reload, reciprocal link, search, pagination/history, three difficulties with non-revealing hints, explanation only after success, wrong/right/reload/finish and fresh follow-up rounds');
 }

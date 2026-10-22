@@ -1,3 +1,11 @@
+## Lokal vollständig geprüft · Lernreisen und anspruchsvolle Denkaufgaben
+
+20 vorhandene Vulkan-/Erdbeben-/Mond-/Orientierungskapitel und zwölf eigene Modelle verständlicher ausgearbeitet. Freiwillige Vorlesemöglichkeiten, begrenzter Aufgabenabruf mit manueller Wiederholung, elf schwere Labor- und vier schwere Reiseaufgaben sowie enge Buchsuch-/Anziehungslink-/Rückfokuskorrekturen integriert. Alte Lösungen, Originalantworten, IDs und Erfolge erhalten. Vollständige unveränderte lokale Browser-/Offlineabnahme mit 140 Prüfmeldungen bestanden; 56 UI-Belege erst danach erneuert. 183 Units und 130 Releaseprüfungen vor dem Volltest grün. Exaktes vollständiges finales GitHub-CI und reale Veröffentlichung noch offen. Bestätigte Spielveröffentlichung #54 als 50. Chronikeintrag im regulären Folgeabschnitt nachgeführt; alle 49 früheren Einträge erhalten.
+
+## Tatsächlich bestätigt · Weltspiele PR54
+
+Nach vollständiger Quality146 und frischer nativer Freigabe regulär nachtest-live übernommen; Vercel und tatsächlicher Browsernachtest erfolgreich. Eindeutigere Tier-/Nahrungsantworten, Rätsel ohne Namensverräter, getrennte freiwillige Hilfen und kompatible alte Runden sind verfügbar. main/Produktion unverändert. Die älteren Absätze darunter dokumentieren ihren damaligen Stand.
+
 ## Lokal vollständig geprüft · eindeutige Weltspiele und verständliche Lernhilfen
 
 48Habitat- und48Nahrungsvergleiche fachlich abgegrenzt,48Tierdetektivrätsel ohne Namensverräter sowie getrennte freiwillige Denkhinweise, antwortbezogene Rückmeldungen und Erklärungen. Alte Antworten/Spielrunden und verdiente Erfolge erhalten. Vollständige aktuelle lokale Browser-/Offlineabnahme mit133Prüfmeldungen erfolgreich;174Units und130Releasefälle vor dem Volltest grün.56UI-Nachweise erst danach erneuert. Die tatsächlich ausgelieferte53 ist als49.Chronikeintrag für diesen regulären Folgestand belegt. Aktuelles finales GitHub-CI und Veröffentlichung dieses Spielabschnitts noch offen. Frühere Einträge darunter dokumentieren ihren damaligen Stand; PR52/53 sind inzwischen erfolgreich ausgeliefert.

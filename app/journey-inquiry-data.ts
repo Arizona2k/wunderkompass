@@ -10,7 +10,7 @@ export function currentJourneyInquiries(){return saved;}
 export function loadJourneyInquiries(){
  if(saved)return Promise.resolve(saved);
  if(!pending)pending=(async()=>{
-  const response=await fetch(dataURL);if(!response.ok)throw Error('Kapitelaufgaben nicht erreichbar.');
+  const response=await fetch(dataURL,{signal:AbortSignal.timeout(12000)});if(!response.ok)throw Error('Kapitelaufgaben nicht erreichbar.');
   const data=await response.json();saved=validateJourneyInquiries(data,JOURNEYS) as ChapterInquiry[];finalHints=data.finalHints;return saved;
  })().catch(error=>{pending=null;throw error;});
  return pending;

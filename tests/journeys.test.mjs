@@ -7,6 +7,7 @@ import {JOURNEYS} from '../app/learning-data.ts';
 import {validateJourneyInquiries} from '../app/journey-inquiry-validation.mjs';
 import {journeyRoute,chapterPath} from '../app/journey-routing.mjs';
 import {CHAPTER_LINKS,chapterDestination,chapterLinksForTopic} from '../app/journey-links.ts';
+import LABORATORIES from '../exports/content/laboratories.json' with {type:'json'};
 import {restoreSave,createSave} from '../app/progress-storage.ts';
 import {mergeSaves} from '../app/progress-sync.ts';
 test('all legacy chapter identities have distinct complete inquiry levels and valid knowledge destinations',()=>{
@@ -57,4 +58,10 @@ test('individually corrected plate tasks retain recorded originals and resolvabl
  }
  const inside=JOURNEYS.find(j=>j.id==='inside');assert.equal(inside.source,'https://www.nps.gov/subjects/geology/plate-tectonics.htm');
  assert.equal(review.sourceReferences['inside-base'].url,'https://pubs.usgs.gov/gip/dynamic/understanding.html','original inaccessible source remains recorded');
+});
+
+
+test('every chapter laboratory destination names an actual registered laboratory',()=>{
+ const registered=new Set(LABORATORIES.map(lab=>lab.id));
+ for(const [journey,links]of Object.entries(CHAPTER_LINKS))for(const [index,link]of links.entries())if(link.startsWith('labs/')){assert.ok(registered.has(link.slice(5)),journey+':'+index+' must open a real laboratory: '+link);assert.ok(chapterDestination(link).why);}
 });

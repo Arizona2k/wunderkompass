@@ -72,12 +72,15 @@ const MISSIONS = [
 
 const MISSION_EXTRA_HINTS=["Deutschland hat unter anderem Frankreich und Polen als Nachbarn.","Die Linie hat den Breitengrad 0°.","Suche südöstlich von Asien. Das Land ist zugleich ein Kontinent.","Suche die riesige Wasserfläche westlich von Amerika.","Das Land reicht von den Alpen weit nach Süden ins Mittelmeer.","Suche beim südlichen Ende der Erdachse. Hier liegt Land unter dem Eis.","Auch zwischen Afrika und Südamerika liegt dieser Ozean.","Suche die Inselkette östlich des asiatischen Festlands.","Dieser Kontinent liegt östlich von Europa und nördlich des Indischen Ozeans.","Suche auf der Ostseite Südamerikas. Dort spricht man Portugiesisch.","Suche unter dem Meereis am Nordpol. Hier liegt kein Kontinent.","Dieses Land liegt westlich von Deutschland und nördlich von Spanien."];
 export default function EarthExplorer(){
-  const routePath=useHashRoute();const [touchActive,setTouchActive]=useState(false);const [mode,setMode]=useState<Mode>(()=>{const first=routePath.split("/")[0];return MODES.includes(first)?first as Mode:"globe";});const [resumeGame,setResumeGame]=useState<{id:string;nonce:number;family:"classic"|"extra"|"world"}>();const [hydratedRevision,setHydratedRevision]=useState(-1);const quizId=useRef(localId());const audio=useRef<AudioContext|null>(null);const gameOpener=useRef<string|null>(null);const gameActivation=useRef({classic:false,world:false,extra:false});const [gamePanel,setGamePanel]=useState<string|null>(null);const [kind,setKind]=useState("continents");
+  const routePath=useHashRoute();const [touchActive,setTouchActive]=useState(false);const [fallbackMode,setMode]=useState<Mode>(()=>{const first=routePath.split("/")[0];return MODES.includes(first)?first as Mode:"globe";});const [resumeGame,setResumeGame]=useState<{id:string;nonce:number;family:"classic"|"extra"|"world"}>();const [hydratedRevision,setHydratedRevision]=useState(-1);const quizId=useRef(localId());const audio=useRef<AudioContext|null>(null);const gameOpener=useRef<string|null>(null);const gameActivation=useRef({classic:false,world:false,extra:false});const [gamePanel,setGamePanel]=useState<string|null>(null);const [kind,setKind]=useState("continents");
   const [countries,setCountries]=useState<Country[]>([]);const [mapError,setMapError]=useState(false);const [mapAttempt,setMapAttempt]=useState(0);
   const [selected,setSelected]=useState<Place|null>(null);const [activeLayer,setActiveLayer]=useState("crust");
   const [equator,setEquator]=useState(true);const [labels,setLabels]=useState(true);const [spin,setSpin]=useState(false);
   const [zoom,setZoom]=useState(49);const [reset,setReset]=useState(0);const [focus,setFocus]=useState<FocusTarget|null>(null);
   const [dayHour,setDayHour]=useState(12);const [dayPlaying,setDayPlaying]=useState(false);
+  // A rapid hash return can supersede an imperative tab update before its route effect commits.
+  // For known routes the address is authoritative; retain the previous fallback for unknown hashes.
+  const routeMode=routePath.split('/')[0];const mode:Mode=MODES.includes(routeMode)?routeMode as Mode:fallbackMode;
   const local=useLocalProgress();const {add:addProgress,review:reviewAnswer,quiz:saveQuiz,activity:rememberActivity}=local;const soundEnabled=local.progress.settings.sound;const hydrated=hydratedRevision===local.restoreRevision;const [visited,setVisited]=useState<Set<string>>(new Set([mode]));
   const discoveries=useMemo(()=>new Set(local.progress.discoveries),[local.progress.discoveries]);
   const completedJourneys=useMemo(()=>new Set(local.progress.journeys),[local.progress.journeys]);
@@ -134,6 +137,9 @@ export default function EarthExplorer(){
   // eslint-disable-next-line react-hooks/set-state-in-effect -- Apply external browser navigation.
   useEffect(()=>{const value=routePath.split('/')[0];if(MODES.includes(value)){setMode(value as Mode);setVisited(p=>new Set([...p,value]));setSpin(false);setTouchActive(false);}},[routePath]);
   useEffect(()=>{if(routePath!=='games'||mode!=='games'||!/^game-knowledge-|^order-knowledge-|^game-route-/.test(history.state?.wunderFocus??''))return;return scheduleRouteRestore('games');},[routePath,mode]);
+  // A book return can render before its parent tab is visible. Restore the
+  // originating word link once that tab is shown, using the existing input guard.
+  useEffect(()=>{if(mode==='book'&&(routePath==='book'||routePath.startsWith('book/'))&&/^book-word-/.test(history.state?.wunderFocus??''))return scheduleRouteRestore(routePath);},[routePath,mode]);
   // Restore after the parent tab becomes visible, including a journey reached
   // with Back from the globe; its still-hidden heading cannot receive focus.
   useEffect(()=>{if(mode==='world'&&routePath.startsWith('world/')||mode==='journeys'&&(routePath==='journeys'||routePath.startsWith('journeys/')))return scheduleRouteRestore(routePath);},[routePath,mode]);

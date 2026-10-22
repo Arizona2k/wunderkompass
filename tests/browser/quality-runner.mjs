@@ -6,6 +6,10 @@ import {aggregateQuality} from '../../scripts/quality-evidence.mjs';
 import {createHandoff} from '../../scripts/handoff.mjs';
 
 const root=fileURLToPath(new URL('../..',import.meta.url)),started=performance.now(),basePort=Number(process.env.QA_PORT??4182),children=new Set();
+// Optional local resource diagnosis/acceptance: every existing worker and gate remains.
+const serialLocal=process.env.QA_SERIAL_LOCAL==='1';
+if(process.env.QA_SERIAL_LOCAL!==undefined&&!['0','1'].includes(process.env.QA_SERIAL_LOCAL))throw Error('Invalid local worker execution mode');
+if(serialLocal&&process.env.CI)throw Error('Serial local worker execution is forbidden in CI');
 if(!Number.isInteger(basePort)||basePort<1024||basePort>65530)throw Error('Invalid isolated browser port');
 process.once('SIGTERM',()=>{for(const child of children)child.kill('SIGTERM');process.exit(143);});
 const launch=(name,suites,offset)=>new Promise((resolve,reject)=>{
@@ -24,9 +28,11 @@ else{
   // Never run another browser beside the reproducible performance sample phase.
   const foundation=await launch('quality-foundation',['foundation'],0);outcomes.push(foundation);if(foundation.code!==0)throw Error('Foundation phase failed');
   const news=await launch('quality-no-news',['no-news'],3);outcomes.push(news);if(news.code!==0)throw Error('News removal phase failed');
-  outcomes.push(...await Promise.all([launch('quality-navigation',['core','offline'],1),launch('quality-learning',['home','research','journeys','playground','backup','challenge'],2)]));
+  const navigation=()=>launch('quality-navigation',['core','offline'],1),learning=()=>launch('quality-learning',['home','research','journeys','playground','backup','challenge'],2);
+  if(serialLocal){outcomes.push(await navigation());outcomes.push(await learning());}
+  else outcomes.push(...await Promise.all([navigation(),learning()]));
   const reports=await Promise.all(outcomes.map(async result=>({...result,report:JSON.parse(await fs.readFile(path.join(root,'.qa-output',result.name,'portable-report.json'),'utf8'))})));
-  const report=aggregateQuality(reports);report.seconds=(performance.now()-started)/1000;
+  const report=aggregateQuality(reports);if(serialLocal)report.localWorkerExecution='Same existing workers executed serially, local-only; complete assertions and scopes unchanged. CI must use the unchanged default parallel mode.';report.seconds=(performance.now()-started)/1000;
   for(const result of outcomes)for(const file of await fs.readdir(path.join(root,'.qa-output',result.name)))if(file.endsWith('.png'))await fs.copyFile(path.join(root,'.qa-output',result.name,file),path.join(root,'.qa-output',result.name+'-'+file));
   await fs.writeFile(path.join(root,'.qa-output/portable-report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,seconds:report.seconds,checks:report.checks.length,timings:report.timings}));
   await createHandoff(report);
