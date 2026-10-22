@@ -59,7 +59,7 @@ export async function assertLandscapeClimateDiagram(visual,id,selected){
   assert.equal(await visual.locator('[data-river-process]').count(),3);
   const d=await visual.locator('[data-river-direction]').evaluate(e=>{const a=e.getPointAtLength(0),b=e.getPointAtLength(e.getTotalLength());return {dx:b.x-a.x,dy:b.y-a.y};});
   assert.ok(d.dx>0&&d.dy>0,'transport follows the drawn downhill river');
-  assert.equal(await visual.locator('[data-river-process="'+selected+'"]').getAttribute('stroke-width'),'5');
+  assert.equal(await visual.locator('[data-river-process="'+selected+'"] circle').getAttribute('stroke-width'),'5');
  }
  if(id==='landscapes:2'){
   assert.match(await visual.locator('[data-lake-optional-outflow]').getAttribute('stroke-dasharray'),/\d/,'optional outlet is visibly distinct from the inlet');
