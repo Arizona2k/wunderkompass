@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "revision": 1,
-  "meaning": "Exactly four earlier hard chapter tasks, preserving selected canonical indices and original texts; no protected reference regeneration or whole-pass migration.",
+  "meaning": "Fourteen individually named earlier hard chapter tasks, preserving selected canonical indices and original texts; no protected reference regeneration or whole-pass migration.",
   "entries": {
     "seasons:2:2": {
       "prompt": "Zwei Halbkugeln haben gleichzeitig gegensätzliche Jahreszeiten. Passt die Entfernung als alleinige Erklärung?",
@@ -65,6 +65,166 @@
         "Bevölkerungszahlen verändern sich; vergleichbare Daten brauchen Kontext.",
         "Unterschiedliche Zeitpunkte können Unterschiede erklären.",
         "Größe einer Zahl allein beweist keinen Fehler."
+      ]
+    },
+    "landscapes:0:2": {
+      "prompt": "Zwei Bergrekorde benutzen Meeresspiegel und Fuß bis Gipfel. Sind die Zahlen direkt vergleichbar?",
+      "answers": [
+        "Nicht ohne dieselbe Messregel",
+        "Ja, Rekorde brauchen keine Definition",
+        "Ja, jede andere Regel ist Betrug"
+      ],
+      "correct": 0,
+      "hint": "Zeichne die beiden unterschiedlichen Ausgangspunkte der Messung ein. Können zwei Zahlen mit verschiedenen Bezugsniveaus dieselbe Frage beantworten?",
+      "why": "Eine Messregel gehört zum Rekord und muss beim Vergleich berücksichtigt werden.",
+      "wrong": [
+        "Eine Messregel gehört zum Rekord und muss beim Vergleich berücksichtigt werden.",
+        "Ohne Definition weißt du nicht, was genau gemessen wurde.",
+        "Verschiedene erklärte Messregeln können sinnvoll sein."
+      ]
+    },
+    "landscapes:1:2": {
+      "prompt": "Der längste und der wasserreichste Fluss müssen identisch sein. Stimmt das?",
+      "answers": [
+        "Ja, jeder Rekord meint dasselbe",
+        "Ja, Länge misst automatisch Wasser pro Zeit",
+        "Nein, Länge und Wassermenge sind verschiedene Größen"
+      ],
+      "correct": 2,
+      "hint": "Schreibe die Messgrößen neben die Rekorde: Weglänge und Wassermenge pro Zeit. Müssen sie beim selben Fluss am größten sein?",
+      "why": "Eine lange Strecke ist kein Beweis für den größten Wassertransport.",
+      "wrong": [
+        "Rekorde beziehen sich auf unterschiedliche Eigenschaften.",
+        "Strecke und Wassertransport haben verschiedene Messgrößen.",
+        "Eine lange Strecke ist kein Beweis für den größten Wassertransport."
+      ]
+    },
+    "landscapes:2:2": {
+      "prompt": "Das Kaspische Meer heißt Meer. Reicht der Name zur Einordnung?",
+      "answers": [
+        "Ja, es ist deshalb ein Ozean",
+        "Nein, Lage und Verbindungen zeigen ein Binnengewässer",
+        "Ja, jeder Name ersetzt die Geografie"
+      ],
+      "correct": 1,
+      "hint": "Ein Ortsname kann historisch geprägt sein. Welche Angaben zu Lage und Wasserverbindungen helfen bei einer sachlichen Einordnung?",
+      "why": "Ein Name kann historisch sein; die geografischen Eigenschaften müssen mitgelesen werden.",
+      "wrong": [
+        "Der Name allein macht kein Gewässer zum Ozean.",
+        "Ein Name kann historisch sein; die geografischen Eigenschaften müssen mitgelesen werden.",
+        "Namen können ohne weitere Prüfung missverständlich sein."
+      ]
+    },
+    "landscapes:3:2": {
+      "prompt": "Eine Fläche hat keine Sanddünen. Ist eine Wüste dort ausgeschlossen?",
+      "answers": [
+        "Nein, erst den Niederschlag untersuchen",
+        "Ja, Sand ist das einzige Wüstenmerkmal",
+        "Ja, ohne Sand muss es Regenwald sein"
+      ],
+      "correct": 0,
+      "hint": "Vergleiche die notwendige Bedingung mit einem häufigen Bildmerkmal. Muss wenig Niederschlag zwangsläufig Sanddünen erzeugen?",
+      "why": "Gesteins-, Kies- und Eislandschaften können ebenfalls sehr trocken sein.",
+      "wrong": [
+        "Gesteins-, Kies- und Eislandschaften können ebenfalls sehr trocken sein.",
+        "Sand allein ist nicht das entscheidende Merkmal.",
+        "Zwischen Sandwüste und Regenwald gibt es viele Möglichkeiten."
+      ]
+    },
+    "landscapes:4:2": {
+      "prompt": "Kann es Gletscher fern der Pole geben?",
+      "answers": [
+        "Nein, nur genau an den Polen",
+        "Nein, jedes Eisstück ist ein Ozean",
+        "Ja, etwa in hohen Gebirgen"
+      ],
+      "correct": 2,
+      "hint": "Vergleiche nicht nur die geografische Breite, sondern auch die Höhe und den Wärmehaushalt. Wo kann Schnee länger erhalten bleiben?",
+      "why": "Auch hohe Gebirge können Bedingungen für Gletscher bieten.",
+      "wrong": [
+        "Polnähe ist nicht die einzige mögliche kalte Lage.",
+        "Ein Material wird nicht zum Ozean durch seine Bezeichnung.",
+        "Auch hohe Gebirge können Bedingungen für Gletscher bieten."
+      ]
+    },
+    "climate:0:2": {
+      "prompt": "In einem warmen Klima tritt ein kühler Tag auf. Ist das ein Widerspruch?",
+      "answers": [
+        "Nein, Wetter kann um typische Bedingungen schwanken",
+        "Ja, jeder Tag muss gleich sein",
+        "Ja, Klima ist nur ein einzelner Wert"
+      ],
+      "correct": 0,
+      "hint": "Ein typisches Muster lässt verschiedene Einzelwerte zu. Prüfe, ob „warm im Mittel“ fälschlich zu „jeder Tag ist warm“ umgedeutet wird.",
+      "why": "Einzelne Abweichungen sind mit einem typischen langfristigen Muster vereinbar.",
+      "wrong": [
+        "Einzelne Abweichungen sind mit einem typischen langfristigen Muster vereinbar.",
+        "Wetter schwankt innerhalb einer Klimaregion.",
+        "Klima beschreibt mehr als einen einzigen Tag oder Wert."
+      ]
+    },
+    "climate:1:2": {
+      "prompt": "Reicht die geografische Breite, um das Klima jedes Ortes vollständig zu bestimmen?",
+      "answers": [
+        "Ja, alle Orte gleicher Breite sind identisch",
+        "Ja, Gebirge haben keinen Einfluss",
+        "Nein, Höhe, Meer und weitere Einflüsse zählen"
+      ],
+      "correct": 2,
+      "hint": "Lege neben die Breite weitere Angaben wie Höhe und Meeresnähe. Welche davon könnte zwei Orte derselben Breite unterscheiden?",
+      "why": "Breite erklärt einen wichtigen Grundzusammenhang, aber nicht alle örtlichen Unterschiede.",
+      "wrong": [
+        "Gleiche Breite schließt andere Bedingungen nicht aus.",
+        "Höhe kann das Klima zusätzlich beeinflussen.",
+        "Breite erklärt einen wichtigen Grundzusammenhang, aber nicht alle örtlichen Unterschiede."
+      ]
+    },
+    "climate:2:2": {
+      "prompt": "Eine Karte färbt die Tropen einheitlich. Gibt es dort nur einen Lebensraum?",
+      "answers": [
+        "Ja, alle Savannen liegen außerhalb der Tropen",
+        "Nein, die Farbe zeigt einen groben Gürtel",
+        "Ja, ein Farbton beweist überall dasselbe"
+      ],
+      "correct": 1,
+      "hint": "Eine einheitliche Kartenfarbe fasst eine Eigenschaft zusammen. Belegt sie, dass alle kleineren Gebiete dieselben Bedingungen und Lebewesen besitzen?",
+      "why": "Eine Klimagürtelkarte vereinfacht unterschiedliche örtliche Lebensräume.",
+      "wrong": [
+        "Savannen können ebenfalls in den Tropen liegen.",
+        "Eine Klimagürtelkarte vereinfacht unterschiedliche örtliche Lebensräume.",
+        "Darstellungsfarbe ist keine vollständige ökologische Beschreibung."
+      ]
+    },
+    "climate:3:2": {
+      "prompt": "Zwei Orte sind gleich warm. Müssen dort identische Pflanzen wachsen?",
+      "answers": [
+        "Nein, Wasser, Boden und Nutzung können verschieden sein",
+        "Ja, Wärme entscheidet allein alles",
+        "Ja, Menschen haben nirgends Einfluss"
+      ],
+      "correct": 0,
+      "hint": "Halte die Temperatur gedanklich gleich und verändere Wasser, Boden oder Wind. Welche Unterschiede könnten trotzdem andere Pflanzen begünstigen?",
+      "why": "Pflanzenbedingungen hängen von mehr als Temperatur allein ab.",
+      "wrong": [
+        "Pflanzenbedingungen hängen von mehr als Temperatur allein ab.",
+        "Wasser und Boden bleiben wichtig.",
+        "Menschliche Nutzung kann Lebensräume verändern."
+      ]
+    },
+    "climate:4:2": {
+      "prompt": "Macht mehr Artenvielfalt jeden Lebensraum garantiert gegen alles widerstandsfähig?",
+      "answers": [
+        "Ja, ohne jede Grenze",
+        "Ja, einzelne Arten und Bedingungen sind bedeutungslos",
+        "Nein, mögliche Vorteile hängen vom Zusammenhang ab"
+      ],
+      "correct": 2,
+      "hint": "Prüfe das Wort „garantiert“. Ein hilfreicher Zusammenhang ist noch kein Schutzversprechen gegen jede denkbare Störung.",
+      "why": "Vielfalt kann helfen, aber Zusammensetzung, Beziehungen und Bedingungen müssen betrachtet werden.",
+      "wrong": [
+        "Eine absolute Garantie wäre zu weitgehend.",
+        "Gerade konkrete Arten und Bedingungen sind für den Zusammenhang wichtig.",
+        "Vielfalt kann helfen, aber Zusammensetzung, Beziehungen und Bedingungen müssen betrachtet werden."
       ]
     }
   }
