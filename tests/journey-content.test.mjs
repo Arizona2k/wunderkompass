@@ -21,10 +21,15 @@ test('complete journey explanations retain the existing sixteen routes, eighty c
 });
 
 test('legacy explanations without optional depth and revised chapters with explicit depth both validate',()=>{
- const legacy=content.journeys.flatMap(j=>j.steps).find(s=>!Object.hasOwn(s,'deeper'));
+ const legacy={"title":"Berge wachsen langsam","text":"Wenn Platten zusammenstoßen, kann Gestein gefaltet und gehoben werden. So entstand etwa der Himalaya. Manche Berge sind Vulkane, aber längst nicht alle.","fact":"Der Everest ist der höchste Berg über dem Meeresspiegel. Die Messregel gehört zum Rekord."};
  const revised=content.journeys.flatMap(j=>j.steps).find(s=>Object.hasOwn(s,'deeper'));
- assert.ok(legacy);assert.ok(revised);assert.ok(revised.sourceIds.length);
+ assert.ok(!Object.hasOwn(legacy,'deeper'));assert.ok(revised);assert.ok(revised.sourceIds.length);
  assert.equal(validateJourneyContent(content,index,sources).length,16);
+ const legacyDocument=structuredClone(content);legacyDocument.journeys.find(j=>j.id==='landscapes').steps[0]=legacy;
+ const legacyIndex=journeyIndex(legacyDocument);
+ assert.equal(validateJourneyContent(legacyDocument,legacyIndex,sources).length,16);
+ const undeclared=structuredClone(legacyDocument);undeclared.journeys.find(j=>j.id==='landscapes').steps[0].deeper='Nicht im erhaltenen Altindex erklärte Vertiefung';
+ assert.throws(()=>validateJourneyContent(undeclared,legacyIndex,sources));
 });
 
 test('missing chapters, changed identities, source substitution, damaged depth and injected text fail closed',()=>{
