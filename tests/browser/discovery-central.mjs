@@ -7,7 +7,7 @@ const read=async p=>JSON.parse(await fs.readFile(new URL(p,import.meta.url),'utf
 const topics=await read('../../app/world-catalog.json'),categories=await read('../../exports/content/world-categories.json');
 
 export async function discoveryCentral(page,ready,report,width,shots){
- const home=async()=>{await page.evaluate(()=>location.hash='globe');await page.locator('.discovery-hero').waitFor();};
+ const home=async()=>{await page.evaluate(()=>location.hash='globe');try{await page.locator('.discovery-hero').waitFor();}catch(error){report.routeReturnFailure={width,...await page.evaluate(()=>({hash:location.hash,mode:document.querySelector('.earth-app')?.dataset.mode,selectedTabs:[...document.querySelectorAll('[role=tab][aria-selected=true]')].map(e=>e.textContent),heroPresent:!!document.querySelector('.discovery-hero')})).catch(e=>({diagnosticError:e.message}))};await page.screenshot({path:shots+'/route-return-failure-'+width+'.png',fullPage:true}).catch(()=>{});throw error;}};
  const inspect=async()=>assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'discovery overflow '+width);
  await home();await inspect();
  for(const image of await page.locator('.discovery-worlds img').all())await image.evaluate(async im=>{await im.decode();if(!im.naturalWidth)throw Error('Undecoded gateway image');});
@@ -53,7 +53,7 @@ export async function discoveryCentral(page,ready,report,width,shots){
   assert.equal(new URL(page.url()).hash,'#world/route/'+trail.routeId);
   await page.locator('.world-route-stations').waitFor();
  }
- await home();await page.locator('.discovery-pathways').screenshot({path:shots+'/discovery-pathways-'+width+'.png'});
+ await home();await rapidHashReturn(page,report,width);await page.locator('.discovery-pathways').screenshot({path:shots+'/discovery-pathways-'+width+'.png'});
  await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
  const axe=await page.evaluate(async()=>{
   const result=await window.axe.run({include:[['.discovery-hero'],['.discovery-worlds'],['.discovery-pathways']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}});
@@ -70,6 +70,24 @@ export async function discoveryCentral(page,ready,report,width,shots){
  await page.getByRole('button',{name:'Andere Stufe auswählen',exact:true}).click();
  await page.locator('.challenge-levels').waitFor();
  report.checks.push('Discovery centre '+width+': search/focus/globe, six shared gateways, eight reciprocal trails/routes, direct challenge/resume, WCAG axe');
+}
+
+// Exercise competing updates in one turn; normal awaited clicks can conceal
+// a separately stored tab mode that survives an already superseded route.
+export async function rapidHashReturn(page,report,width){
+ const before=await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
+ report.rapidHashReturns??=[];
+ for(const trigger of ['route-button','world-tab']){
+  await page.evaluate(trigger=>{
+   const button=trigger==='route-button'?[...document.querySelectorAll('.discovery-network button')].find(b=>b.textContent.startsWith('Lernroute:')):document.querySelector('[data-route-focus="home-nav-world"]');
+   if(!button)throw Error('Actual navigation control missing');button.click();location.hash='globe';
+  },trigger);
+  await page.waitForFunction(()=>location.hash==='#globe'&&document.querySelector('.earth-app')?.dataset.mode==='globe'&&!!document.querySelector('.discovery-hero')?.getClientRects().length,undefined,{timeout:20000});
+  assert.equal(await page.getByRole('tab',{name:'Entdecken',exact:true}).getAttribute('aria-selected'),'true');
+  const after=await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
+  for(const key of ['gameSessions','notes','favorites','games','journeys','labs','review','settings'])assert.deepEqual(after[key],before[key],'rapid return preserves '+key);
+  report.rapidHashReturns.push({width,trigger,controlledSameTurnInput:true,hashAndVisibleAreaAgree:true,storedProgressPreserved:true});
+ }
 }
 
 export async function offlineDiscoveryCentral(page,report){
