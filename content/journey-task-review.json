@@ -18987,6 +18987,30 @@
         ]
       },
       "after": {
+        "prompt": "Ein Bericht misst Berg A vom Meeresspiegel bis zum Gipfel, Berg B vom Bergfuß bis zum Gipfel. Darf die größere Zahl schon den Rekord entscheiden?",
+        "answers": [
+          "Nicht ohne dieselbe Messregel",
+          "Ja, die größere Zahl gewinnt auch bei verschiedenen Ausgangspunkten",
+          "Ja, der Fuß eines Berges liegt immer am Meeresspiegel"
+        ],
+        "correct": 0,
+        "hint": "Zeichne beide Ausgangspunkte ein. Was müsste gleich sein, damit die Höhen dieselbe Frage beantworten?",
+        "why": "Die beiden Höhen beantworten verschiedene Fragen. Für einen gemeinsamen Rekord brauchst du dieselbe Messregel.",
+        "wrong": [
+          "Die beiden Höhen beantworten verschiedene Fragen. Für einen gemeinsamen Rekord brauchst du dieselbe Messregel.",
+          "Die größere Zahl allein hilft nicht, wenn die Messungen an verschiedenen Höhen beginnen.",
+          "Ein Bergfuß kann über oder unter dem Meeresspiegel liegen."
+        ]
+      },
+      "beforeHash": "59767ddfcd401b8389244689a6c050eb56ec4be82ecb89918374fabef0b45dd4",
+      "afterHash": "06684276f9352bd76ec0f987613a71152e64947b17b25f07193f93d68500d353",
+      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Zeichne die beiden unterschiedlichen Ausgangspunkte der Messung ein. Können zwei Zahlen mit verschiedenen Bezugsniveaus dieselbe Frage beantworten?",
+      "sourceIds": [
+        "landscapes-base"
+      ],
+      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
+      "independentReview": false,
+      "historicalAfterBeforeRecoveryTransfer20261022": {
         "prompt": "Zwei Bergrekorde benutzen Meeresspiegel und Fuß bis Gipfel. Sind die Zahlen direkt vergleichbar?",
         "answers": [
           "Nicht ohne dieselbe Messregel",
@@ -19002,14 +19026,12 @@
           "Verschiedene erklärte Messregeln können sinnvoll sein."
         ]
       },
-      "beforeHash": "59767ddfcd401b8389244689a6c050eb56ec4be82ecb89918374fabef0b45dd4",
-      "afterHash": "74754d6df60128673903738138650ac4b40475265e2aa243a04f7ae419c102e2",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Zeichne die beiden unterschiedlichen Ausgangspunkte der Messung ein. Können zwei Zahlen mit verschiedenen Bezugsniveaus dieselbe Frage beantworten?",
-      "sourceIds": [
-        "landscapes-base"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "historicalAfterHashBeforeRecoveryTransfer20261022": "74754d6df60128673903738138650ac4b40475265e2aa243a04f7ae419c102e2",
+      "recoveryTransfer20261022": {
+        "scope": "Concrete observation or comparison and plausible misconception alternatives for this existing hard task only. Canonical correct text/index and all original selections retained through the existing compatibility mechanism.",
+        "sourceAccess": "Existing selected official references and recovered manuscripts reused. No fresh full source reading, independent human acceptance, actual hearing or physical-device check claimed.",
+        "status": "Reconstructed local preparation; targeted/current browser, offline and complete final acceptance still pending."
+      }
     },
     {
       "id": "landscapes:1:0",
@@ -19116,6 +19138,30 @@
         ]
       },
       "after": {
+        "prompt": "Zwei erfundene Flüsse: A ist 2.000 km lang und führt 600 Kubikmeter Wasser pro Sekunde. B ist 1.000 km lang und führt 900. Muss der längste auch der wasserreichste sein?",
+        "answers": [
+          "Ja, A führt mehr Wasser, weil 2.000 größer als 900 ist",
+          "Ja, eine doppelte Flusslänge bedeutet immer doppelt so viel Wasser",
+          "Nein, Länge und Wassermenge sind verschiedene Größen"
+        ],
+        "correct": 2,
+        "hint": "Ordne jeder Zahl ihre Einheit zu. Vergleiche zuerst die Längen miteinander und dann die Wassermengen pro Sekunde.",
+        "why": "A ist länger. B transportiert in diesem Beispiel mehr Wasser pro Sekunde. Länge und Wassertransport sind verschiedene Größen.",
+        "wrong": [
+          "Kilometer und Kubikmeter pro Sekunde messen Verschiedenes; ihre Zahlen lassen sich so nicht vergleichen.",
+          "Neben der Länge beeinflussen etwa Niederschlag und Zuflüsse den Wassertransport.",
+          "A ist länger. B transportiert in diesem Beispiel mehr Wasser pro Sekunde. Länge und Wassertransport sind verschiedene Größen."
+        ]
+      },
+      "beforeHash": "3b8f2653548dae89305a80cf903178002308bc862dedabd789fd596db59863b4",
+      "afterHash": "1451d38b549b2d6754eefaeee87d53a658a66f6383995a3a034ccc113ec91ea6",
+      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Schreibe die Messgrößen neben die Rekorde: Weglänge und Wassermenge pro Zeit. Müssen sie beim selben Fluss am größten sein?",
+      "sourceIds": [
+        "landscapes-base"
+      ],
+      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
+      "independentReview": false,
+      "historicalAfterBeforeRecoveryTransfer20261022": {
         "prompt": "Der längste und der wasserreichste Fluss müssen identisch sein. Stimmt das?",
         "answers": [
           "Ja, jeder Rekord meint dasselbe",
@@ -19131,14 +19177,12 @@
           "Eine lange Strecke ist kein Beweis für den größten Wassertransport."
         ]
       },
-      "beforeHash": "3b8f2653548dae89305a80cf903178002308bc862dedabd789fd596db59863b4",
-      "afterHash": "9e2cd560b5543cdd495d480c766fb9378e1ff929f300d1ef175c2dcd2b4bde3c",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Schreibe die Messgrößen neben die Rekorde: Weglänge und Wassermenge pro Zeit. Müssen sie beim selben Fluss am größten sein?",
-      "sourceIds": [
-        "landscapes-base"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "historicalAfterHashBeforeRecoveryTransfer20261022": "9e2cd560b5543cdd495d480c766fb9378e1ff929f300d1ef175c2dcd2b4bde3c",
+      "recoveryTransfer20261022": {
+        "scope": "Concrete observation or comparison and plausible misconception alternatives for this existing hard task only. Canonical correct text/index and all original selections retained through the existing compatibility mechanism.",
+        "sourceAccess": "Existing selected official references and recovered manuscripts reused. No fresh full source reading, independent human acceptance, actual hearing or physical-device check claimed.",
+        "status": "Reconstructed local preparation; targeted/current browser, offline and complete final acceptance still pending."
+      }
     },
     {
       "id": "landscapes:2:0",
@@ -19245,6 +19289,30 @@
         ]
       },
       "after": {
+        "prompt": "Auf einer Karte ist das Kaspische Meer von Land umgeben. Es hat keinen natürlichen Abfluss zum Ozean. Ein Kind nennt es wegen des Namens ein Stück Ozean. Reicht der Name?",
+        "answers": [
+          "Ja, auch ein von Land umgebenes Meer muss zum Ozean gehören",
+          "Nein, Lage und Verbindungen zeigen ein Binnengewässer",
+          "Ja, salziges Wasser beweist auch ohne Abfluss eine Ozeanverbindung"
+        ],
+        "correct": 1,
+        "hint": "Verfolge auf der Karte die Wasserwege. Unterscheide den Namen, den Salzgehalt und eine tatsächliche Verbindung zum Ozean.",
+        "why": "Das Kaspische Meer ist ein Binnengewässer. Seine Lage und die fehlende natürliche Ozeanverbindung erklären das besser als sein Name.",
+        "wrong": [
+          "Ein Gewässername allein weist keine Verbindung zum Ozean nach.",
+          "Das Kaspische Meer ist ein Binnengewässer. Seine Lage und die fehlende natürliche Ozeanverbindung erklären das besser als sein Name.",
+          "Auch Seen ohne Abfluss können salzig sein. Salz allein beweist keine Ozeanverbindung."
+        ]
+      },
+      "beforeHash": "6c5a3f16e1e65fad6a81ec3f43f51a55acc93b9a3d6e21ab4e5aa3e110564eed",
+      "afterHash": "0ddeb09a5ee92a0b137ffa566e64f0508e69420c9a1a4affcf463a40af2d1e91",
+      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ein Ortsname kann historisch geprägt sein. Welche Angaben zu Lage und Wasserverbindungen helfen bei einer sachlichen Einordnung?",
+      "sourceIds": [
+        "landscapes-base"
+      ],
+      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
+      "independentReview": false,
+      "historicalAfterBeforeRecoveryTransfer20261022": {
         "prompt": "Das Kaspische Meer heißt Meer. Reicht der Name zur Einordnung?",
         "answers": [
           "Ja, es ist deshalb ein Ozean",
@@ -19260,14 +19328,12 @@
           "Namen können ohne weitere Prüfung missverständlich sein."
         ]
       },
-      "beforeHash": "6c5a3f16e1e65fad6a81ec3f43f51a55acc93b9a3d6e21ab4e5aa3e110564eed",
-      "afterHash": "3621c5b5dac73109784009d9ecf5e678d7aeaefb26c55a98cfe5ad6e345127a1",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ein Ortsname kann historisch geprägt sein. Welche Angaben zu Lage und Wasserverbindungen helfen bei einer sachlichen Einordnung?",
-      "sourceIds": [
-        "landscapes-base"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "historicalAfterHashBeforeRecoveryTransfer20261022": "3621c5b5dac73109784009d9ecf5e678d7aeaefb26c55a98cfe5ad6e345127a1",
+      "recoveryTransfer20261022": {
+        "scope": "Concrete observation or comparison and plausible misconception alternatives for this existing hard task only. Canonical correct text/index and all original selections retained through the existing compatibility mechanism.",
+        "sourceAccess": "Existing selected official references and recovered manuscripts reused. No fresh full source reading, independent human acceptance, actual hearing or physical-device check claimed.",
+        "status": "Reconstructed local preparation; targeted/current browser, offline and complete final acceptance still pending."
+      }
     },
     {
       "id": "landscapes:3:0",
@@ -19374,6 +19440,30 @@
         ]
       },
       "after": {
+        "prompt": "Eine Expedition zeigt eine steinige Fläche ohne Sanddünen. Ist eine Wüste ausgeschlossen, und welche weitere Beobachtung wäre entscheidend?",
+        "answers": [
+          "Nein, erst den Niederschlag untersuchen",
+          "Ja, eine Wüste muss aus Sanddünen bestehen",
+          "Ja, fehlende Dünen beweisen, dass genug Wasser für Pflanzen vorhanden ist"
+        ],
+        "correct": 0,
+        "hint": "Welches Merkmal beschreibt die Wasserverhältnisse, welches nur die Form der Oberfläche?",
+        "why": "Auch Kies-, Fels- und Eislandschaften können Wüsten sein. Entscheidend für die Einordnung ist die große Trockenheit, nicht das Vorhandensein von Sanddünen.",
+        "wrong": [
+          "Auch Kies-, Fels- und Eislandschaften können Wüsten sein. Entscheidend für die Einordnung ist die große Trockenheit, nicht das Vorhandensein von Sanddünen.",
+          "Sanddünen kommen in manchen Wüsten vor, sind aber keine Voraussetzung.",
+          "Eine steinige Oberfläche verrät nicht, wie viel Niederschlag dort fällt."
+        ]
+      },
+      "beforeHash": "4333ee736fe438edaed3c3b3e8ec060d33d4ed95c2c52c62eb6c33d46126f546",
+      "afterHash": "d5e6595c21d8d54fceb18638ea7a7cca78a46d36818b5a0a8d89747a079ec9b2",
+      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche die notwendige Bedingung mit einem häufigen Bildmerkmal. Muss wenig Niederschlag zwangsläufig Sanddünen erzeugen?",
+      "sourceIds": [
+        "landscapes-base"
+      ],
+      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
+      "independentReview": false,
+      "historicalAfterBeforeRecoveryTransfer20261022": {
         "prompt": "Eine Fläche hat keine Sanddünen. Ist eine Wüste dort ausgeschlossen?",
         "answers": [
           "Nein, erst den Niederschlag untersuchen",
@@ -19389,14 +19479,12 @@
           "Zwischen Sandwüste und Regenwald gibt es viele Möglichkeiten."
         ]
       },
-      "beforeHash": "4333ee736fe438edaed3c3b3e8ec060d33d4ed95c2c52c62eb6c33d46126f546",
-      "afterHash": "aae1d5afbdbc336e4813cc3d263d26fbbe71088c1a2cc864856edceb849e7d4f",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche die notwendige Bedingung mit einem häufigen Bildmerkmal. Muss wenig Niederschlag zwangsläufig Sanddünen erzeugen?",
-      "sourceIds": [
-        "landscapes-base"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "historicalAfterHashBeforeRecoveryTransfer20261022": "aae1d5afbdbc336e4813cc3d263d26fbbe71088c1a2cc864856edceb849e7d4f",
+      "recoveryTransfer20261022": {
+        "scope": "Concrete observation or comparison and plausible misconception alternatives for this existing hard task only. Canonical correct text/index and all original selections retained through the existing compatibility mechanism.",
+        "sourceAccess": "Existing selected official references and recovered manuscripts reused. No fresh full source reading, independent human acceptance, actual hearing or physical-device check claimed.",
+        "status": "Reconstructed local preparation; targeted/current browser, offline and complete final acceptance still pending."
+      }
     },
     {
       "id": "landscapes:4:0",
@@ -19505,6 +19593,31 @@
         ]
       },
       "after": {
+        "prompt": "In einem Gebirge weit von den Polen schmilzt im Tal der Schnee. Weiter oben bleiben große Eismassen über Jahre liegen und fließen langsam talwärts. Kann dort ein Gletscher sein?",
+        "answers": [
+          "Nein, wenn der Schnee im Tal schmilzt, muss er auch auf den Gipfeln schmelzen",
+          "Nein, jedes bleibende Eis fern der Pole ist ein schwimmender Eisberg",
+          "Ja, etwa in hohen Gebirgen"
+        ],
+        "correct": 2,
+        "hint": "Vergleiche die Bedingungen im Tal und in großer Höhe. Prüfe außerdem, ob das Eis auf Land liegt oder im Wasser schwimmt.",
+        "why": "Auch in hohen Gebirgen fern der Pole können Gletscher entstehen. Im Beispiel liegen die langsam fließenden Eismassen auf Land.",
+        "wrong": [
+          "Mit der Höhe ändern sich die Bedingungen; schneefreie Täler schließen Gletscher weiter oben nicht aus.",
+          "Ein Eisberg schwimmt im Wasser. Bleibendes Eis auf einem Gebirgshang ist deshalb nicht automatisch ein Eisberg.",
+          "Auch in hohen Gebirgen fern der Pole können Gletscher entstehen. Im Beispiel liegen die langsam fließenden Eismassen auf Land."
+        ]
+      },
+      "beforeHash": "fbb7de9ad4b274798e053e0227e79398869c90fe14a776504830f34e719eb404",
+      "afterHash": "427a7eab4cc5b091c0df0188ed44a11df87a56c32810ff7fb6400ad3dafc59c1",
+      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche nicht nur die geografische Breite, sondern auch die Höhe und den Wärmehaushalt. Wo kann Schnee länger erhalten bleiben?",
+      "sourceIds": [
+        "landscapes-base",
+        "glaciers"
+      ],
+      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
+      "independentReview": false,
+      "historicalAfterBeforeRecoveryTransfer20261022": {
         "prompt": "Kann es Gletscher fern der Pole geben?",
         "answers": [
           "Nein, nur genau an den Polen",
@@ -19520,15 +19633,12 @@
           "Auch hohe Gebirge können Bedingungen für Gletscher bieten."
         ]
       },
-      "beforeHash": "fbb7de9ad4b274798e053e0227e79398869c90fe14a776504830f34e719eb404",
-      "afterHash": "862e0925a43d7501d4a95b0886aaf7c922b954939047bdc567455edef6ca79bc",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche nicht nur die geografische Breite, sondern auch die Höhe und den Wärmehaushalt. Wo kann Schnee länger erhalten bleiben?",
-      "sourceIds": [
-        "landscapes-base",
-        "glaciers"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "historicalAfterHashBeforeRecoveryTransfer20261022": "862e0925a43d7501d4a95b0886aaf7c922b954939047bdc567455edef6ca79bc",
+      "recoveryTransfer20261022": {
+        "scope": "Concrete observation or comparison and plausible misconception alternatives for this existing hard task only. Canonical correct text/index and all original selections retained through the existing compatibility mechanism.",
+        "sourceAccess": "Existing selected official references and recovered manuscripts reused. No fresh full source reading, independent human acceptance, actual hearing or physical-device check claimed.",
+        "status": "Reconstructed local preparation; targeted/current browser, offline and complete final acceptance still pending."
+      }
     },
     {
       "id": "climate:0:0",
@@ -19637,6 +19747,31 @@
         ]
       },
       "after": {
+        "prompt": "Ein Ort hat über viele Jahre warme Sommer. Nach einem Kälteeinbruch ist ein Julitag kühl. Widerspricht dieser einzelne Tag bereits der Klimaaussage?",
+        "answers": [
+          "Nein, Wetter kann um typische Bedingungen schwanken",
+          "Ja, ein Julitag beschreibt das Sommerklima genauer als viele Jahre",
+          "Ja, für den Klimavergleich reichen der heutige und der gestrige Tag"
+        ],
+        "correct": 0,
+        "hint": "Welche Zeiträume werden verglichen? Überlege, ob ein typisches Sommermuster unterschiedliche einzelne Tage zulässt.",
+        "why": "Ein kühler Tag ist mit einem im Mittel warmen Sommer vereinbar. Für eine langfristige Veränderung braucht man passende Beobachtungen über längere Zeit.",
+        "wrong": [
+          "Ein kühler Tag ist mit einem im Mittel warmen Sommer vereinbar. Für eine langfristige Veränderung braucht man passende Beobachtungen über längere Zeit.",
+          "Ein einzelner Tag ersetzt keine Beobachtungsreihe über viele Sommer.",
+          "Zwei Tage können einen Wetterwechsel zeigen, aber noch kein langfristiges Klimamuster."
+        ]
+      },
+      "beforeHash": "cb785c7aa0fac716bc7badb627035149b544cb9b50889cb573324bf615ed6c6d",
+      "afterHash": "1152387e2f7cc26ad1f02c5b6543fa2fd8d473ecdcbf884bda4e5c2aead62a14",
+      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ein typisches Muster lässt verschiedene Einzelwerte zu. Prüfe, ob „warm im Mittel“ fälschlich zu „jeder Tag ist warm“ umgedeutet wird.",
+      "sourceIds": [
+        "climate-base",
+        "weather-climate"
+      ],
+      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
+      "independentReview": false,
+      "historicalAfterBeforeRecoveryTransfer20261022": {
         "prompt": "In einem warmen Klima tritt ein kühler Tag auf. Ist das ein Widerspruch?",
         "answers": [
           "Nein, Wetter kann um typische Bedingungen schwanken",
@@ -19652,15 +19787,12 @@
           "Klima beschreibt mehr als einen einzigen Tag oder Wert."
         ]
       },
-      "beforeHash": "cb785c7aa0fac716bc7badb627035149b544cb9b50889cb573324bf615ed6c6d",
-      "afterHash": "4210fce6f3ad50e6b14c852e5237dfd953e545b65faf9ff10ef555fdc333ab31",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Ein typisches Muster lässt verschiedene Einzelwerte zu. Prüfe, ob „warm im Mittel“ fälschlich zu „jeder Tag ist warm“ umgedeutet wird.",
-      "sourceIds": [
-        "climate-base",
-        "weather-climate"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "historicalAfterHashBeforeRecoveryTransfer20261022": "4210fce6f3ad50e6b14c852e5237dfd953e545b65faf9ff10ef555fdc333ab31",
+      "recoveryTransfer20261022": {
+        "scope": "Concrete observation or comparison and plausible misconception alternatives for this existing hard task only. Canonical correct text/index and all original selections retained through the existing compatibility mechanism.",
+        "sourceAccess": "Existing selected official references and recovered manuscripts reused. No fresh full source reading, independent human acceptance, actual hearing or physical-device check claimed.",
+        "status": "Reconstructed local preparation; targeted/current browser, offline and complete final acceptance still pending."
+      }
     },
     {
       "id": "climate:1:0",
@@ -19767,6 +19899,30 @@
         ]
       },
       "after": {
+        "prompt": "Zwei Orte liegen auf derselben geografischen Breite: A an der Küste, B in 2.500 Metern Höhe im Gebirge. Reicht die gemeinsame Breite, um ihr Klima vollständig zu bestimmen?",
+        "answers": [
+          "Ja, dieselbe Breite gleicht den Höhenunterschied aus",
+          "Ja, die Meeresnähe verändert nur den Salzgehalt, aber niemals das Klima",
+          "Nein, Höhe, Meer und weitere Einflüsse zählen"
+        ],
+        "correct": 2,
+        "hint": "Halte die Breite gleich und verändere nur Höhe oder Meeresnähe. Welche Bedingungen könnten sich dadurch unterscheiden?",
+        "why": "Die Breite erklärt einen wichtigen Teil der Besonnung. Höhe und Meeresnähe können trotzdem unterschiedliche örtliche Klimabedingungen bewirken.",
+        "wrong": [
+          "Ein gleicher Breitengrad hebt den Einfluss der Höhe nicht auf.",
+          "Das Meer kann etwa Temperaturunterschiede zwischen Sommer und Winter beeinflussen.",
+          "Die Breite erklärt einen wichtigen Teil der Besonnung. Höhe und Meeresnähe können trotzdem unterschiedliche örtliche Klimabedingungen bewirken."
+        ]
+      },
+      "beforeHash": "0569f0961d27ffb061bb584cdb7fe22c369fc74e6610f18aae3477786776bc71",
+      "afterHash": "6304bd8090812ac73346c20758dd95deb6ecf7a9ffaf8b2184cd1934ea43cb64",
+      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Lege neben die Breite weitere Angaben wie Höhe und Meeresnähe. Welche davon könnte zwei Orte derselben Breite unterscheiden?",
+      "sourceIds": [
+        "climate-base"
+      ],
+      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
+      "independentReview": false,
+      "historicalAfterBeforeRecoveryTransfer20261022": {
         "prompt": "Reicht die geografische Breite, um das Klima jedes Ortes vollständig zu bestimmen?",
         "answers": [
           "Ja, alle Orte gleicher Breite sind identisch",
@@ -19782,14 +19938,12 @@
           "Breite erklärt einen wichtigen Grundzusammenhang, aber nicht alle örtlichen Unterschiede."
         ]
       },
-      "beforeHash": "0569f0961d27ffb061bb584cdb7fe22c369fc74e6610f18aae3477786776bc71",
-      "afterHash": "3ec8849c767b56ccfbf6d6ecca2908f65ae108f822c4ad0bb3f3a7f8cc589d83",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Lege neben die Breite weitere Angaben wie Höhe und Meeresnähe. Welche davon könnte zwei Orte derselben Breite unterscheiden?",
-      "sourceIds": [
-        "climate-base"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "historicalAfterHashBeforeRecoveryTransfer20261022": "3ec8849c767b56ccfbf6d6ecca2908f65ae108f822c4ad0bb3f3a7f8cc589d83",
+      "recoveryTransfer20261022": {
+        "scope": "Concrete observation or comparison and plausible misconception alternatives for this existing hard task only. Canonical correct text/index and all original selections retained through the existing compatibility mechanism.",
+        "sourceAccess": "Existing selected official references and recovered manuscripts reused. No fresh full source reading, independent human acceptance, actual hearing or physical-device check claimed.",
+        "status": "Reconstructed local preparation; targeted/current browser, offline and complete final acceptance still pending."
+      }
     },
     {
       "id": "climate:2:0",
@@ -19896,6 +20050,30 @@
         ]
       },
       "after": {
+        "prompt": "Eine Karte färbt die Tropen einheitlich. Ort A hat fast jeden Monat viel Regen; Ort B eine lange Trockenzeit. Beweist die gemeinsame Kartenfarbe, dass beide denselben Lebensraum haben?",
+        "answers": [
+          "Ja, die gemeinsame Tropenfarbe bedeutet auch denselben Jahresverlauf des Regens",
+          "Nein, die Farbe zeigt einen groben Gürtel",
+          "Ja, Wärme allein reicht aus, damit an beiden Orten dichter Regenwald wächst"
+        ],
+        "correct": 1,
+        "hint": "Vergleiche nicht nur die Wärme, sondern auch die Monate mit wenig Wasser. Welche dieser Angaben enthält die grobe Kartenfarbe überhaupt?",
+        "why": "Ein grober Klimagürtel umfasst unterschiedliche Lebensräume. Eine lange Trockenzeit verändert das Wasserangebot; die gemeinsame Tropenfarbe zeigt diesen Unterschied nicht.",
+        "wrong": [
+          "Die Kartenfarbe fasst einen großen Gürtel zusammen und zeigt nicht den Regenverlauf jedes Ortes.",
+          "Ein grober Klimagürtel umfasst unterschiedliche Lebensräume. Eine lange Trockenzeit verändert das Wasserangebot; die gemeinsame Tropenfarbe zeigt diesen Unterschied nicht.",
+          "Auch bei Wärme brauchen Pflanzen Wasser. Eine ausgeprägte Trockenzeit kann andere Pflanzenformen begünstigen."
+        ]
+      },
+      "beforeHash": "2e58aa62fd85775ea880f6a8be4896425bc2911eb0b0390bf46c7d0340e33eb7",
+      "afterHash": "a75fd39a9ca5298c5e55a50ff6d8ccd2ac4920a5b1e37e9b6ad3b06941c43d23",
+      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Eine einheitliche Kartenfarbe fasst eine Eigenschaft zusammen. Belegt sie, dass alle kleineren Gebiete dieselben Bedingungen und Lebewesen besitzen?",
+      "sourceIds": [
+        "climate-base"
+      ],
+      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
+      "independentReview": false,
+      "historicalAfterBeforeRecoveryTransfer20261022": {
         "prompt": "Eine Karte färbt die Tropen einheitlich. Gibt es dort nur einen Lebensraum?",
         "answers": [
           "Ja, alle Savannen liegen außerhalb der Tropen",
@@ -19911,14 +20089,12 @@
           "Darstellungsfarbe ist keine vollständige ökologische Beschreibung."
         ]
       },
-      "beforeHash": "2e58aa62fd85775ea880f6a8be4896425bc2911eb0b0390bf46c7d0340e33eb7",
-      "afterHash": "509c96727377a4fab3e7305cead18045d5eee6a685be22cbc34193912eb4a291",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Eine einheitliche Kartenfarbe fasst eine Eigenschaft zusammen. Belegt sie, dass alle kleineren Gebiete dieselben Bedingungen und Lebewesen besitzen?",
-      "sourceIds": [
-        "climate-base"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "historicalAfterHashBeforeRecoveryTransfer20261022": "509c96727377a4fab3e7305cead18045d5eee6a685be22cbc34193912eb4a291",
+      "recoveryTransfer20261022": {
+        "scope": "Concrete observation or comparison and plausible misconception alternatives for this existing hard task only. Canonical correct text/index and all original selections retained through the existing compatibility mechanism.",
+        "sourceAccess": "Existing selected official references and recovered manuscripts reused. No fresh full source reading, independent human acceptance, actual hearing or physical-device check claimed.",
+        "status": "Reconstructed local preparation; targeted/current browser, offline and complete final acceptance still pending."
+      }
     },
     {
       "id": "climate:3:0",
@@ -20027,6 +20203,31 @@
         ]
       },
       "after": {
+        "prompt": "Zwei Orte sind gleich warm. A hat feuchten tiefen Boden, B trockenen flachen Boden und wird beweidet. Müssen an beiden Orten dieselben Pflanzen wachsen?",
+        "answers": [
+          "Nein, Wasser, Boden und Nutzung können verschieden sein",
+          "Ja, die gleiche Temperatur gleicht Unterschiede im Boden aus",
+          "Ja, Beweidung verändert nur Tiere und hat keinen Einfluss auf Pflanzen"
+        ],
+        "correct": 0,
+        "hint": "Verändere gedanklich Wasser, Wurzelraum und Beweidung einzeln. Bleiben die Wachstumsbedingungen dabei gleich?",
+        "why": "Gleiche Temperatur bedeutet noch keine gleichen Wachstumsbedingungen. Wasser, Boden und menschliche Nutzung können unterschiedliche Pflanzen begünstigen.",
+        "wrong": [
+          "Gleiche Temperatur bedeutet noch keine gleichen Wachstumsbedingungen. Wasser, Boden und menschliche Nutzung können unterschiedliche Pflanzen begünstigen.",
+          "Boden und Wasser bleiben auch bei gleicher Temperatur wichtig für das Wachstum.",
+          "Weidetiere fressen und betreten Pflanzen; Nutzung kann die Vegetation verändern."
+        ]
+      },
+      "beforeHash": "330b4c17968330f26e83a353817754f94dbdac193fde0fac68456f2cd9481146",
+      "afterHash": "7b746698f251f8e316ad871dd9934837ebccff4132f4a69b56b31270ffb5acd1",
+      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Halte die Temperatur gedanklich gleich und verändere Wasser, Boden oder Wind. Welche Unterschiede könnten trotzdem andere Pflanzen begünstigen?",
+      "sourceIds": [
+        "climate-base",
+        "weather-climate"
+      ],
+      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
+      "independentReview": false,
+      "historicalAfterBeforeRecoveryTransfer20261022": {
         "prompt": "Zwei Orte sind gleich warm. Müssen dort identische Pflanzen wachsen?",
         "answers": [
           "Nein, Wasser, Boden und Nutzung können verschieden sein",
@@ -20042,15 +20243,12 @@
           "Menschliche Nutzung kann Lebensräume verändern."
         ]
       },
-      "beforeHash": "330b4c17968330f26e83a353817754f94dbdac193fde0fac68456f2cd9481146",
-      "afterHash": "93e2c887215c8f63e4e64745d52154e65471455d686a002cfd3cfa4c25f4087c",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Halte die Temperatur gedanklich gleich und verändere Wasser, Boden oder Wind. Welche Unterschiede könnten trotzdem andere Pflanzen begünstigen?",
-      "sourceIds": [
-        "climate-base",
-        "weather-climate"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "historicalAfterHashBeforeRecoveryTransfer20261022": "93e2c887215c8f63e4e64745d52154e65471455d686a002cfd3cfa4c25f4087c",
+      "recoveryTransfer20261022": {
+        "scope": "Concrete observation or comparison and plausible misconception alternatives for this existing hard task only. Canonical correct text/index and all original selections retained through the existing compatibility mechanism.",
+        "sourceAccess": "Existing selected official references and recovered manuscripts reused. No fresh full source reading, independent human acceptance, actual hearing or physical-device check claimed.",
+        "status": "Reconstructed local preparation; targeted/current browser, offline and complete final acceptance still pending."
+      }
     },
     {
       "id": "climate:4:0",
@@ -20159,6 +20357,31 @@
         ]
       },
       "after": {
+        "prompt": "In einem Teich leben viele Arten. Nach langer Trockenheit fehlt Wasser. Garantiert die hohe Artenzahl allein, dass dieser Lebensraum jede Veränderung übersteht?",
+        "answers": [
+          "Ja, eine hohe Artenzahl kann fehlendes Wasser immer ausgleichen",
+          "Ja, für Widerstandskraft zählt nur die Artenzahl, nicht welche Arten dort leben",
+          "Nein, mögliche Vorteile hängen vom Zusammenhang ab"
+        ],
+        "correct": 2,
+        "hint": "Betrachte die konkrete Belastung und die Bedürfnisse der Bewohner. Welche Information fehlt, wenn du nur die Artenzahl kennst?",
+        "why": "Vielfalt kann die Widerstandskraft fördern, ist aber keine Garantie. Bei Trockenheit zählen etwa Wasserbedarf, Anpassungen und Beziehungen der tatsächlich vorhandenen Arten.",
+        "wrong": [
+          "Artenvielfalt erzeugt kein fehlendes Wasser. Manche Veränderungen können auch artenreiche Lebensräume stark belasten.",
+          "Arten haben unterschiedliche Eigenschaften und Beziehungen. Die Anzahl allein beschreibt diese nicht.",
+          "Vielfalt kann die Widerstandskraft fördern, ist aber keine Garantie. Bei Trockenheit zählen etwa Wasserbedarf, Anpassungen und Beziehungen der tatsächlich vorhandenen Arten."
+        ]
+      },
+      "beforeHash": "c1e8d755bb0a132b40584dff6bec6bfe46d96b6ed36186db38b00b93adc9bf45",
+      "afterHash": "9917dfeb3484df00a4a3a4d1e988ab0348e5a55fb1a7be35fca02a569f9ba975",
+      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Prüfe das Wort „garantiert“. Ein hilfreicher Zusammenhang ist noch kein Schutzversprechen gegen jede denkbare Störung.",
+      "sourceIds": [
+        "climate-base",
+        "weather-climate"
+      ],
+      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
+      "independentReview": false,
+      "historicalAfterBeforeRecoveryTransfer20261022": {
         "prompt": "Macht mehr Artenvielfalt jeden Lebensraum garantiert gegen alles widerstandsfähig?",
         "answers": [
           "Ja, ohne jede Grenze",
@@ -20174,15 +20397,12 @@
           "Vielfalt kann helfen, aber Zusammensetzung, Beziehungen und Bedingungen müssen betrachtet werden."
         ]
       },
-      "beforeHash": "c1e8d755bb0a132b40584dff6bec6bfe46d96b6ed36186db38b00b93adc9bf45",
-      "afterHash": "ab11e4f2a73f458954c710130665625c605d32c619d6800af8f432c1c174353f",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Prüfe das Wort „garantiert“. Ein hilfreicher Zusammenhang ist noch kein Schutzversprechen gegen jede denkbare Störung.",
-      "sourceIds": [
-        "climate-base",
-        "weather-climate"
-      ],
-      "sourceStatus": "Hinweis führt durch vorhandene Kapitel-/Aufgabenangaben; keine neue Originalquellen- oder unabhängige Fachabnahme daraus ableiten.",
-      "independentReview": false
+      "historicalAfterHashBeforeRecoveryTransfer20261022": "ab11e4f2a73f458954c710130665625c605d32c619d6800af8f432c1c174353f",
+      "recoveryTransfer20261022": {
+        "scope": "Concrete observation or comparison and plausible misconception alternatives for this existing hard task only. Canonical correct text/index and all original selections retained through the existing compatibility mechanism.",
+        "sourceAccess": "Existing selected official references and recovered manuscripts reused. No fresh full source reading, independent human acceptance, actual hearing or physical-device check claimed.",
+        "status": "Reconstructed local preparation; targeted/current browser, offline and complete final acceptance still pending."
+      }
     }
   ],
   "sourceReferences": {
