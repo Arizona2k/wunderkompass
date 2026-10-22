@@ -1,3 +1,9 @@
+## Aktueller Status ·22.10.2026 · bestehendes Paket3.5
+
+PR55 ist mit enger Hash-Rückwegkorrektur und der genau freigegebenen lokalen Runner-Option erneut vollständig lokal geprüft, noch nicht ausgeliefert. Aktuelle echte Prüfbindung und offene finale CI-/Freigabe-/Vercel-/Browserprüfung stehen in PROJECT_STATE.md; ältere Statusmeldungen darunter sind historische Originale. Landschaft/Klima ist erhaltene unabhängige Folgearbeit; anschließend vorhandene elektrische Manuskripte und bestehende WK054–057 nach Priorität/Abhängigkeiten fertigstellen. BACKLOG bleibt die einzige operative Liste. Paket3.5 vor4–8, News dauerhaft entfernt, main/Produktion und Gesamtmerge27 ausgeschlossen.
+
+## Historischer Stand vor der aktuellen Wiederabnahme · Original erhalten
+
 ## Aktueller Stand · 22.10.2026 · Paket 3.5 fortführen
 
 PR #54 ist vollständig nach test-live ausgeliefert: Merge 016be6147ea2b7dc823c16e88648d63b5d8ab35a, Quality 146 mit Chromium 156/Firefox 157/WebKit 27.2, frische native Freigabe und tatsächlicher Vercel-/Browsernachtest bestätigt. CI-Job 47:34 bei genehmigten 55 Minuten; Reserve 7:26. Frühere Veröffentlichungen bleiben abgeschlossen. main und Produktion unverändert, Paket 3.5 insgesamt offen.
