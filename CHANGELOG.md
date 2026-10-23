@@ -1,3 +1,15 @@
+## Lokal vollständig geprüft · Batterie, Generator und Transistor
+
+Drei erhaltene Originalmanuskripte mit drei eigenen Funktionszeichnungen, zwei qualitativen Modellen, individuellen Lernhilfen und neun erklärten beidseitigen Wissenswegen integriert. Chemische Energiespeicherung, Induktion und getrennte Steuerung/Versorgung werden nachvollziehbar unterschieden. Die alten147Themen bisaufneun Rückverweise,177Weltfragen,15Technikspiel- und24Zeitspielaufgaben sowie gespeicherte Fortschritte erhalten. Keine neue Speicherstruktur. Eigene Darstellungen als solche gekennzeichnet; keine ungeprüften Fotos übernommen.
+
+Vollständige bestehende lokale Browser-/Offline-/Pass-/Zoomabnahme am Build1945360e83504fac bestanden, danach56alteUI-Belege erhaltend gebunden und drei individuelle elektrische Dossiers ergänzt. Exaktes finales GitHub-CI und tatsächliche elektrische Veröffentlichung bleiben offen. Bestätigte PR56 mit echter Vercelzeit im regulären Produktabschnitt als52.Chronikeintrag nachgeführt,51Vorgänger identisch.
+
+## Tatsächlich bestätigt · Landschafts- und Klimakapitel PR56
+
+PR56 ist nach vollständigem Quality150, frischer unveränderter Routinefreigabe und regulärem test-live-Merge34a0551 mit exakt gleichem Integrationsbaum ausgeliefert. Vercel57081578666 und tatsächlicher Online-Nachtest bestätigen Build8ab431cb1c101629:30Kapitelansichten/60Modellzustände/56Altantwortzustände/44Dateihashes, Fehlerlisten leer. Seeabfluss korrigiert und absichtlich bergauf veränderter Zustand verworfen. Der frühere Chronik-Timeout bleibt als ungeklärter Befund erhalten; neues Grün ist kein Ursachenbeweis.
+
+## Historischer Vorbereitungsstand · Original erhalten
+
 ## Lokal vollständig geprüft · Landschafts- und Klimakapitel
 
 Zehn vorhandene Kapitel verständlicher vertieft, acht rekonstruierte eigene Modelle integriert und zehn schwere Aufgaben auf passende Vergleiche und plausible Fehlvorstellungen ausgerichtet. Präzisere tatsächlich gelesene Quellen ergänzt; Seegeometrie nach visueller Fachprüfung so korrigiert, dass der mögliche Abfluss am Wasserspiegel beginnt und nicht bergauf führt. Die native Länderfeedbackaufnahme erfolgt vor der Navigation zu den zusätzlichen Landschafts-/Klimafällen. Alle16Reisen/80Kapitelidentitäten/240richtigen Antworttexte samt Indizes und bestehende Fortschritte erhalten;70übrige Kapitel/230übrige Aufgaben als Daten unverändert.

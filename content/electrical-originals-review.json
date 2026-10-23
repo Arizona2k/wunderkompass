@@ -238,7 +238,7 @@
       "finding": "Institutional collection image not copied; metadata alone does not establish reuse rights."
     }
   ],
-  "fullAcceptance": "Confirmed PR56 delivery and controlled base/status integration completed. Current full mandatory local browser/offline acceptance, truthful UI bindings, exact final three-engine CI and native readiness/deployment remain open.",
+  "fullAcceptance": "Complete mandatory local Chromium154 naturally passed at the recorded immutable a6075b8 source.56existing UI records renewed preserving histories/facts;3individually source-reviewed factual dossiers added with actual current UI/search/back/offline evidence. Final exact integration Chromium/Firefox/WebKit CI, fresh native readiness, regular merge, identical tree and actual Vercel/browser postflight remain required.",
   "targetedNativeUI": {
     "build": "3b5326fb29f51c11",
     "browser": "154.0.8037.57",
@@ -355,5 +355,37 @@
       "chronicleCases": 34
     },
     "uiDossiers": "Still historical. verify-content correctly rejects old UI build binding before full acceptance; do not renew flags prematurely. Full final checks remain required."
+  },
+  "localCompleteAcceptance": {
+    "build": "1945360e83504fac",
+    "head": "a6075b8542a3784cfbe3ef34ddc75863f692ec64",
+    "sourceDigest": "e824daa043735fd801a65608cdc4434faad5c4c0871ef0eddb35a9948455e490",
+    "originalReportSHA256": "eeb63539a4576b620dac50b82055d24143e8db19858f3b9310a8a5bd57382f38",
+    "seconds": 1866.2601584870001,
+    "checks": 139,
+    "mandatorySuites": [
+      "foundation",
+      "home",
+      "core",
+      "playground",
+      "backup",
+      "challenge",
+      "research",
+      "journeys",
+      "offline",
+      "no-news"
+    ],
+    "errors": [],
+    "electricalViews": 15,
+    "electricalCold": 3,
+    "electricalOffline": 12,
+    "electricalNativeOffline": 6,
+    "reportCountExplanation": "139 instead of previous landscape140 messages: only one fewer repeated Memory wrong pair rejected message in the randomized round; all other unique descriptions retained, with147→150article shell and139–141→139–144hint-bank extent updated. All required groups/assertions retained.",
+    "reviewImages": {
+      "generated": 1109,
+      "retained": 616,
+      "retainedBytes": 70062549,
+      "unchangedLimit": 150000000
+    }
   }
 }
