@@ -4,6 +4,23 @@ import {captureNativeViewport} from './native-screenshot.mjs';
 import catalog from '../../app/world-catalog.json' with {type:'json'};
 import review from '../../content/science-originals-review.json' with {type:'json'};
 const topics=review.topics.map(entry=>catalog.find(t=>t.id===entry.id));
+// Source-derived roles: OpenStax heat transfer, IOP elasticity, the geometric
+// reflection criterion, NHGRI cell structures and NASA comet-tail directions.
+const keyedLabels={
+ 'heat-transfer':['Leitung: durch Material','Strömung: mit bewegter Luft','Strahlung: ohne Kontakt'],
+ elasticity:['Vor der Belastung','Während der Belastung','Nach dem Entlasten'],
+ symmetry:['Linke Form','Spiegelachse','Gespiegelte Form'],
+ cell:['Außen: Zellwand','Innen angrenzend: Membran','Runder Bereich: Zellkern'],
+ comet:['Sonne links','Ionenschweif ungefähr weg von der Sonne','Staubschweif kann gekrümmt sein']
+};
+export async function assertScienceDiagramLegend(article,kind){
+ if(!keyedLabels[kind])return null;const figure=article.locator('[data-science-diagram="'+kind+'"]');
+ assert.deepEqual(await figure.locator('.science-keyed-labels li span').allTextContents(),keyedLabels[kind],'actual numbered legend has source-defined roles');
+ assert.deepEqual(await figure.locator('.science-keyed-labels li strong').allTextContents(),['1','2','3']);
+ assert.deepEqual(await figure.locator('[data-diagram-marker] text').allTextContents(),['1','2','3']);
+ const actual=await figure.evaluate(figure=>{const large=!!figure.closest('.large-reading'),svg=figure.querySelector('svg'),box=svg.getBoundingClientRect();return {large,labels:[...figure.querySelectorAll('.science-keyed-labels li')].map(e=>({font:parseFloat(getComputedStyle(e.querySelector('span')).fontSize),text:e.textContent,left:e.getBoundingClientRect().left,right:e.getBoundingClientRect().right})),markers:[...svg.querySelectorAll('[data-diagram-marker] text')].map(e=>{const b=e.getBoundingClientRect(),m=e.getScreenCTM();return {font:parseFloat(getComputedStyle(e).fontSize)*Math.hypot(m.a,m.b),inside:b.left>=box.left-1&&b.right<=box.right+1&&b.top>=box.top-1&&b.bottom<=box.bottom+1};})};});
+ assert.ok(actual.labels.every(e=>e.font>=(actual.large?18.3:16)),'keyed labels respect normal and large reading');assert.ok(actual.markers.every(e=>e.inside&&e.font>=(actual.large?18.3:16)),'actual drawn keys are fully visible and readable');return actual;
+}
 
 export async function assertPressureContact(model){
  const actual=await model.locator('svg').evaluate(svg=>{const contact=svg.querySelector('rect').getBBox(),arrow=svg.querySelector('path').getBBox();return {left:contact.x,right:contact.x+contact.width,top:contact.y,forceX:arrow.x+arrow.width/2,forceEnd:arrow.y+arrow.height};});
@@ -23,6 +40,7 @@ export async function scienceOriginalView(page,{width,shots,questions=true,nativ
   for(const detail of await article.locator('.world-short details,.world-more,.world-sources').all())if(!await detail.evaluate(e=>e.open))await detail.locator(':scope>summary').click();
   for(const text of [t.intro,...t.paragraphs,...t.more,t.learning.starter,t.learning.observe,t.learning.benefit,...t.facts.map(f=>f.text)])assert.ok((await article.innerText()).includes(text),t.id+' actual displayed explanation');
   for(const source of t.sources)assert.equal(await article.getByRole('link',{name:source.label,exact:true}).getAttribute('href'),source.url);
+  await assertScienceDiagramLegend(article,t.id.replace('science-',''));
   const states=[];
   if(t.investigation){
    const model=article.locator('[data-investigation="'+t.investigation+'"]'),slider=model.getByRole('slider').first();

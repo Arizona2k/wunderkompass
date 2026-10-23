@@ -19,6 +19,8 @@ const diagrams:{[id:string]:{title:string;labels:string[];limit:string}}={
 export const hasScienceDiagram=(id:string)=>!!diagrams[id.replace('science-','')];
 export default function ScienceDiagram({id,compact=false}:{id:string;compact?:boolean}){
  const kind=id.replace('science-',''),d=diagrams[kind];if(!d)return null;
+ const keyedMarkers:Record<string,[number,number][]>={'heat-transfer':[[55,165],[148,165],[263,165]],elasticity:[[35,178],[135,178],[235,178]],symmetry:[[100,170],[160,170],[220,170]],cell:[[20,100],[298,100],[105,100]],comet:[[45,150],[235,70],[235,175]]};
+ const markers=keyedMarkers[kind];
  const stroke='#245d70',fill='#bfdbe9';
  if(kind==='photosynthesis'&&!compact)return <figure className="topic-illustration photosynthesis-diagram"><div className="photosynthesis-flow" role="img" aria-label={d.title}>
   <ul aria-label="Für die Fotosynthese">{d.labels.slice(0,3).map(label=><li data-photosynthesis-role="input" key={label}>{label}</li>)}</ul>
@@ -42,5 +44,6 @@ export default function ScienceDiagram({id,compact=false}:{id:string;compact?:bo
  {kind==='galaxy'&&<><ellipse cx={160} cy={100} rx={125} ry={65} fill="#eef5f6"/>{Array.from({length:28},(_,i)=><circle key={i} cx={160+Math.cos(i*1.7)*(12+i*3.5)} cy={100+Math.sin(i*1.7)*(10+i*1.6)} r={i===20?7:3} fill={i===20?'#8b463d':stroke}/>)}<circle cx={160+Math.cos(34)*82} cy={100+Math.sin(34)*42} r={14} fill="none" stroke="#8b463d"/></>}
  {kind==='comet'&&<><circle cx={45} cy={100} r={24} fill="#ecd0a3" stroke={stroke}/><circle cx={145} cy={100} r={16} fill={fill} stroke={stroke}/><path d="M162 100H300" stroke="#245d70" strokeWidth={9}/><path d="M155 108Q210 155 295 145" fill="none" stroke="#8e5b35" strokeWidth={15}/></>}
  {kind==='exoplanet'&&<>{[70,235].map(x=><circle key={x} cx={x} cy={100} r={40} fill="#ecd0a3" stroke={stroke}/>)}<circle cx={70} cy={100} r={10} fill={stroke}/><circle cx={235} cy={35} r={10} fill={stroke}/></>}
- </svg>{!compact&&<><div className="science-diagram-labels">{d.labels.map(label=><span className="topic-diagram-label" key={label}>{label}</span>)}</div><figcaption>Modellgrenze: {d.limit} Eigene WunderKompass-Zeichnung, mit KI-Unterstützung erstellt.</figcaption></>}</figure>;
+ {markers&&<g className="science-diagram-markers" aria-hidden="true">{kind==='cell'&&<path d="M34 100H45 M264 100H284" stroke={stroke} strokeWidth={2}/>} {markers.map(([x,y],i)=><g key={i} data-diagram-marker={i+1} transform={'translate('+x+' '+y+')'}><circle r={14} fill="#fffaf0" stroke={stroke} strokeWidth={1.5}/><text y={0} dy=".35em" textAnchor="middle" fontSize={22} fill={stroke}>{i+1}</text></g>)}</g>}
+ </svg>{!compact&&<>{markers?<ol className="science-diagram-labels science-keyed-labels">{d.labels.map((label,i)=><li className="topic-diagram-label" key={label}><strong aria-hidden="true">{i+1}</strong><span>{label}</span></li>)}</ol>:<div className="science-diagram-labels">{d.labels.map(label=><span className="topic-diagram-label" key={label}>{label}</span>)}</div>}<figcaption>Modellgrenze: {d.limit} Eigene WunderKompass-Zeichnung, mit KI-Unterstützung erstellt.</figcaption></>}</figure>;
 }

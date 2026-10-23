@@ -1699,5 +1699,36 @@
     "fractals": "Master triangleParts defaultx20,y150,size180 produces upper vertex≈−5.88 while investigation SVGviewBoxis0 0 240 180. Check real SVG overflow/clip and projected states0–4 before accepting; do not treat triangle counts as sufficient.",
     "buoyancy": "Master picture uses a constant rectangle width/height for changing volume. Check whether the actual visual plus labels communicates a schematic volumetric comparison without implying measured geometry; distinguish fully submerged maximum from actual floating displacement."
   },
-  "learningBenefit": "Compare force with pressure and lever torque, actual displacement with maximum buoyancy, resonance amplitude with chosen damping, and collision with truth/authenticity. Predictions, visible changes and explanations remain voluntary. Current simple/main/deeper readings are not claimed as three distinct assessed task paths or empirically proven learning effectiveness."
+  "learningBenefit": "Compare force with pressure and lever torque, actual displacement with maximum buoyancy, resonance amplitude with chosen damping, and collision with truth/authenticity. Predictions, visible changes and explanations remain voluntary. Current simple/main/deeper readings are not claimed as three distinct assessed task paths or empirically proven learning effectiveness.",
+  "visualReadabilityCorrection": {
+    "meaning": "Five actual three-role figures now have readable numbered keys attached to the drawn parts. Original source content and previous build236 proofs retained; no general old-stock restyling or full acceptance.",
+    "affectedDiagrams": [
+      "heat-transfer",
+      "elasticity",
+      "symmetry",
+      "cell",
+      "comet"
+    ],
+    "titleChange": "Manual soft break only in rendered Oberflächenspannung title; canonical source/search title and accessible heading name retained. A real CSS-only prototype confirmed hyphens:auto was already active and did not improve the missing dictionary break, so no ineffective CSS rule was added.",
+    "normal": {
+      "report": ".qa-output/science-keyed-diagrams/report.json",
+      "sha256": "fa2a11a9d63c7ab5da4e2bdfd153b30bc545139e2383f19f76beec0d51f61bd7",
+      "build": "5b1d4c2be271c8dd",
+      "sourceDigest": "7186cab77fd1e65350c1992f3482f11d2f573717c3125b4a19d05c30f6a15892",
+      "status": "passed",
+      "views": 12,
+      "scope": "five diagrams plus one manual title break at two widths; actual labels, marker glyph sizes/bounds and unchanged accessible title checked"
+    },
+    "native200": {
+      "report": ".qa-output/science-keyed-diagrams-native200/report.json",
+      "sha256": "3fcdc7b555aebdce3c712fd787cefd7fe764ec14fc365801e00fff56f98be54e",
+      "build": "5b1d4c2be271c8dd",
+      "sourceDigest": "7186cab77fd1e65350c1992f3482f11d2f573717c3125b4a19d05c30f6a15892",
+      "status": "passed",
+      "views": 12,
+      "scope": "five diagrams plus one manual title break at two widths; actual labels, marker glyph sizes/bounds and unchanged accessible title checked"
+    },
+    "originalWrongLegendRejected": true,
+    "visualInspection": "All13 original new noninteractive hero drawings actually viewed, all five changed mobile keyed figures actually viewed, and native200 heat/cell/title samples viewed. No physical-device or independent human approval claimed."
+  }
 }

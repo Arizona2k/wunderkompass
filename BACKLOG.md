@@ -1,3 +1,15 @@
+## Gemeinsame Beschriftungszuordnung der neuen Diagramme verbessert ·23.10.2026
+
+Frühe tatsächliche Bildprüfung zeigte bei fünf der13neuen statischen Wissenschaftsgrafiken drei Beschriftungen unter einer Grafik, deren Zuordnung auf schmalen Bildschirmen nicht eindeutig war. Wärmewege, elastische Verformung, Spiegelung, Zellbauteile und Kometenschweife haben jetzt drei direkt zugeordnete Bildschlüssel und eine lesbare umbrechende Legende. Bei der Zelle zeigen zusätzliche Linien auf die verschiedenen äußeren/inneren Grenzen; keine willkürlichen fremden Kartennummern. Alle fachlichen Texte, Quellen, Diagrammformen und kanonischen Titel weiterverwendet.
+
+Den missverständlichen Umbruch „Oberflächenspannu / ng“ gezielt im dargestellten Titel durch „Oberflächen- / spannung“ verbessert. Daten, Suche und zugänglicher Überschriftenname bleiben kanonisch; keine kleinere Schrift. Ein tatsächlicherCSS-Prototyp belegte, dass bereits aktiveshyphens:auto im benutzten Browser nicht half; diese wirkungslose Regel wurde nicht zusätzlich eingeführt.
+
+Am Build5b1d4c2be271c8dd zwölf normale320groß/1440und zwölf echte200%-Ansichten640/320bestanden: alle fünf Legenden, lesbare vollständig sichtbare Bildziffern und Titel mit unverändertem zugänglichem Namen. Eine tatsächlich falsche Zuordnung absichtlich eingesetzt, vom selben vorhandenen Prüfschritt verworfen und korrekte Legende wiederhergestellt. Ursprüngliche236-Ansichten bleiben ausdrücklich ursprüngliche Nachweise; genaue verschiedene Originalhashes in content/science-originals-review.json. Kein neues Vollgrün oder Veröffentlichung behauptet. VormaligeLinterwarnung durch falsch vor dieuse-client-Direktive gesetzten Import ursächlich korrigiert, keine Regel abgeschwächt.
+
+Der unabhängige Folgestand bleibt Vorbereitung innerhalbWK053–057; aktuelle58-CI/Bauwerksabschnitt und tatsächlicher Basisabgleich weiter vorrangig. Keine zweite Freigabe-PR, Pipeline-, Timeout- oder Schutzänderung.
+
+## Historischer Stand vor dieser gezielten visuellen Nachbesserung · Original erhalten
+
 ## Erhaltene Wissenschaftsoriginale gezielt vorbereitet ·23.10.2026
 
 Nach Abgleich mit dem tatsächlichen164-Themen-Vorstand und Masterd97dddab die23 noch fehlenden Wissenschaftsoriginale selektiv weitergeführt: zehn erhaltene interaktive Zahlen-/Beobachtungsmodelle und13eigene Diagramme. Die bisherigen23Wissenschaftsthemen und alle übrigen alten Fachfelder bleiben erhalten;28begründete Verbindungen mit passenden Rückwegen und28plausiblere Fehlantworten ergänzt.29tatsächlich gelesene Quellenpassagen und Modellgrenzen im vorhandenen Nachweismuster belegt. Das rekonstruiert keine unbekannten privaten historischen Fassungen oder alten Prüfbelege.
