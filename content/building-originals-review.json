@@ -780,5 +780,96 @@
         "scope": "Targeted actual Lalibela dated source explanation, all current text/hints/answers, three model states, map and knowledge back links; existing map-family proofs remain separate"
       }
     ]
+  },
+  "continuedFromActualPR58": {
+    "mergeCommit": "36a849ebd289f7fb83b949e59761d17699e646a1",
+    "integrationCommit": "49f4331",
+    "existingFactualRecordsChecked": 156,
+    "mismatchesExceptExplainedRelationships": 0,
+    "retainedCurrentDossiers": 65,
+    "fullCurrentAcceptance": "pending",
+    "chronicle": "54th entry confirms actual PR58, all53 older entries unchanged"
+  },
+  "boundedWaitBatchMeasurement": {
+    "scope": "Paired local measurement of two independent strict visibility waits batched after each answer. All actions, assertions, locators, timeouts and cases retained. No CI timing claim.",
+    "build": "8a11928c4f2e800c",
+    "sourceDigest": "b92079d8d7863122b3fa054e758a5ca1d7802189fe54fcf22362736776740fd1",
+    "baselineSHA256": "c76f501844447b4c2eac5ce1017b41fe6c88220d8882d153a6b056769ce76735",
+    "candidateSHA256": "986c666fb3157a20d6cc4033072e6113042d10101fa2b93b561072479fe33bf9",
+    "browser": "154.0.8037.57",
+    "reportSHA256": "99de790e0119874c70fe050711ee8954870237da64a828f6d84dc4c69e708bdd",
+    "rounds": 4,
+    "widths": [
+      390,
+      1440
+    ],
+    "workshopsPerVariant": 32,
+    "baselineSeconds": 19.143554672,
+    "candidateSeconds": 18.547059271000002,
+    "relativeDifference": -0.031159072137864372,
+    "pairedSamples": [
+      {
+        "round": 0,
+        "variant": "baseline",
+        "width": 390,
+        "seconds": 4.705254537
+      },
+      {
+        "round": 0,
+        "variant": "candidate",
+        "width": 390,
+        "seconds": 4.599051554
+      },
+      {
+        "round": 1,
+        "variant": "candidate",
+        "width": 390,
+        "seconds": 4.729296430999999
+      },
+      {
+        "round": 1,
+        "variant": "baseline",
+        "width": 390,
+        "seconds": 4.776556625000001
+      },
+      {
+        "round": 2,
+        "variant": "baseline",
+        "width": 1440,
+        "seconds": 4.9625283530000015
+      },
+      {
+        "round": 2,
+        "variant": "candidate",
+        "width": 1440,
+        "seconds": 4.625243705000001
+      },
+      {
+        "round": 3,
+        "variant": "candidate",
+        "width": 1440,
+        "seconds": 4.593467581000004
+      },
+      {
+        "round": 3,
+        "variant": "baseline",
+        "width": 1440,
+        "seconds": 4.6992151569999985
+      }
+    ],
+    "limits": "Small local sample, no proof of original CI cause or future55-minute completion. Only two independent strict visibility waits run together; all individual assertions, actions, cases and timeouts retained. Actual full and native-engine CI remain required."
+  },
+  "integratedEarlyProduct20261023": {
+    "build": "8a11928c4f2e800c",
+    "reportSHA256": "74d35806cefbf70f197659f6431f72b3d980d37aae29e0f766026ac99efa1f50",
+    "views": 16,
+    "widths": [
+      320,
+      1440
+    ],
+    "largeReadingAt320": true,
+    "actualArticleSearchTextsHintsWrongRightSourcesModelsAndBack": true,
+    "actualMobileModelImagesRead": 8,
+    "scope": "Existing early source-view guard on actual integrated product before long full acceptance. All eight model screenshots read at original resolution via lossless paired boards; no new whole-stock reinspection or independent human review claimed. Earlier native/model negatives stay bound to their original builds."
   }
 }
