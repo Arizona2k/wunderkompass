@@ -238,7 +238,7 @@
       "finding": "Institutional collection image not copied; metadata alone does not establish reuse rights."
     }
   ],
-  "fullAcceptance": "Open: confirmed PR56 delivery/base reconciliation, current full mandatory local browser/offline, truthful UI bindings, exact final CI and native readiness/deployment.",
+  "fullAcceptance": "Confirmed PR56 delivery and controlled base/status integration completed. Current full mandatory local browser/offline acceptance, truthful UI bindings, exact final three-engine CI and native readiness/deployment remain open.",
   "targetedNativeUI": {
     "build": "3b5326fb29f51c11",
     "browser": "154.0.8037.57",
@@ -319,5 +319,41 @@
     "offlineActualSearchCases": 6,
     "offlineReportSha256": "139c3e2c03f47cc95ec86f0dc0b543b648833c1ba6b4176c7e8ea5e92b29a119",
     "scope": "Three real global-search results selected from world overview and canonical destinations verified at each tested width; repeated in the existing native server-stopped offline helper. All original direct-route/part/model/answer/back-focus/no-learning assertions retained. Final mandatory full proof and actual final Firefox/WebKit remain open."
+  },
+  "integratedBase": "34a0551fe965fc2f341740c8317678534ebf8f6d",
+  "photoPolicyAppliedOn": "2026-10-23",
+  "photoPolicy": "Bestehende Tierbild-Pipeline mit lokalen WebP, genauer Motivprüfung, Urheber/Lizenz/Bearbeitung, sichtbaren Nachweisen und Integritätsmetadaten geprüft. Für weitere Motive andere rechtssichere und technisch erreichbare Quellen verwenden. Keine weitere Wikimediarecherche, Downloads, Freigabe- oder Reparaturversuche; historische Quellen-/Rechtebelege erhalten. Geeignetes Foto bisher nicht zugleich mit geklärten Rechten und technisch verfügbarer Datei integriert; eigene hochwertige Zeichnungen und sinnvolle Funktionsmodelle bleiben. Eigene oder KI-Bilder niemals als echte Fotos bezeichnen.",
+  "postPR56EarlyReview": {
+    "build": "1945360e83504fac",
+    "base": "34a0551fe965fc2f341740c8317678534ebf8f6d",
+    "native": {
+      "status": "passed",
+      "views": 6,
+      "states": 16,
+      "reportSHA256": "d9a65fcbd88c46e73afdd3d22b72d45c74836d1dad7df2aa677a0e9ec703b42c",
+      "imageManifestSHA256": "e4cd9a1bfe36a5b73d28e942ab13157ceb829ddfaeab56deb93e5b998f931d14",
+      "visualReview": "All three current native diagrams at320CSS, both current native models and their320 controls/status actually seen; battery additionally at640CSS. Earlier unchanged diagrams at both widths are recorded separately."
+    },
+    "chronicle": {
+      "status": "passed",
+      "views": 2,
+      "reportSHA256": "9f9dc52e1f917facdb030dc785edc08f63fe96b70e7eff48846fe7a5ca1d9d96",
+      "old51EntriesExactlyPreserved": true
+    },
+    "electricalEarly": {
+      "completedObservedCases": 12,
+      "modelStates": 32,
+      "compositeStatus": "failed",
+      "reportSHA256": "1599ceeeda8b83dddfc94a4a3cd6b370b67847e9e1174b36fea824b05e5d7ca7",
+      "meaning": "All12electrical cases completed with original assertions. Subsequent newly added chronicle helper incorrectly waited for nonexistent journeys-overview selector after successful real navigation; original failed composite report retained. Narrow chronicle-only correction waits for actual journey-hub and passes both widths. No complete composite success or product cause claimed."
+    },
+    "standards": {
+      "unitCases": 188,
+      "releaseCases": 130,
+      "typecheck": true,
+      "lint": true,
+      "chronicleCases": 34
+    },
+    "uiDossiers": "Still historical. verify-content correctly rejects old UI build binding before full acceptance; do not renew flags prematurely. Full final checks remain required."
   }
 }
