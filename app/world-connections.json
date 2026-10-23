@@ -608,6 +608,78 @@
       "kind": "context",
       "why": "Ein Transistor wirkt innerhalb einer passenden Schaltung. Das Lernmodell trennt Steuerung, Versorgung und den gesteuerten Stromweg.",
       "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-refrigerator--science-motor",
+      "fromId": "invention-refrigerator",
+      "toId": "science-motor",
+      "kind": "energy",
+      "why": "Bei der beschriebenen Kompressoranlage liefert ein Elektromotor den Antrieb. Der Motor setzt elektrische Energie in Bewegung um; der Kühlkreislauf transportiert damit Wärme.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-bicycle--invention-car",
+      "fromId": "invention-bicycle",
+      "toId": "invention-car",
+      "kind": "compare",
+      "why": "Beim Kettenfahrrad gelangt Bewegung von den Pedalen zum Hinterrad, beim Auto vom Motor zu den angetriebenen Rädern. Vergleiche den Übertragungsweg und die Energiequelle.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-elevator--science-motor",
+      "fromId": "invention-elevator",
+      "toId": "science-motor",
+      "kind": "energy",
+      "why": "Bei vielen Seilaufzügen bewegt ein Elektromotor die Treibscheibe. Der Antrieb bewegt die Kabine im normalen Betrieb; die Fangvorrichtung hat eine eigene Sicherheitsaufgabe.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-elevator--building-eiffel-tower",
+      "fromId": "invention-elevator",
+      "toId": "building-eiffel-tower",
+      "kind": "uses",
+      "why": "Im Eiffelturm helfen Aufzüge beim Höhenwechsel. Seine unterschiedlichen historischen und heutigen Anlagen zeigen: Nicht jeder Aufzug entspricht dem einfachen Seilaufzugsplan.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-seismograph--science-sound",
+      "fromId": "invention-seismograph",
+      "toId": "science-sound",
+      "kind": "compare",
+      "why": "Beide Beispiele untersuchen Schwingungen. Das Klangmodell erklärt Tonhöhe in Luft; das Seismogramm zeichnet Bodenbewegung auf. Eine Bodenbewegungskurve ist nicht dasselbe wie ein hörbarer Ton.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-3d-printing--invention-computer",
+      "fromId": "invention-3d-printing",
+      "toId": "invention-computer",
+      "kind": "uses",
+      "why": "Ein Computer verarbeitet den digitalen Entwurf für den Aufbau. Die genaue Datei ersetzt weder ein geeignetes Druckverfahren noch eine Prüfung des fertigen Bauteils.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-3d-printing--invention-printing",
+      "fromId": "invention-3d-printing",
+      "toId": "invention-printing",
+      "kind": "compare",
+      "why": "Der Buchdruck überträgt Farbe auf eine Fläche. Additives Herstellen baut dagegen Material zu einem räumlichen Gegenstand auf. Der gemeinsame Name Druck bedeutet nicht dieselbe Technik.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-sewing-machine--invention-computer",
+      "fromId": "invention-sewing-machine",
+      "toId": "invention-computer",
+      "kind": "compare",
+      "why": "Eine historische Nähmaschine stimmt Bewegungen mechanisch aufeinander ab; ein Computer führt veränderbare Anweisungen aus. Wiederholung allein macht eine Maschine noch nicht zu einem Computer.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-sewing-machine--invention-printing",
+      "fromId": "invention-sewing-machine",
+      "toId": "invention-printing",
+      "kind": "compare",
+      "why": "Beide Techniken stimmen wiederholte mechanische Schritte aufeinander ab. Beim Nähen verschlingen sich Fäden, beim Buchdruck wird Farbe auf eine Fläche übertragen.",
+      "checkedAt": "2026-10-23"
     }
   ]
 }
