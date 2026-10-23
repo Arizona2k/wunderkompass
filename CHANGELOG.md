@@ -1,3 +1,9 @@
+## Lokal vollständig geprüft · korrigierter Bauwerksstand
+
+Acht erhaltene Bauwerksoriginale mit eigenen Modellen, lesbaren Beschriftungen, erklärten Wissenswegen und der erhaltenen unnummerierten Natural-Earth-Übersicht vollständig lokal geprüft. Neuer PR58-Chroniktext benennt die tatsächlich gelieferten sechs Erfindungen; ein Quellenabgleich im bestehenden Test weist den früheren falschen Text zurück.73Dossiers führen vollständige Fakten-/UI-Historien fort.
+
+Unveränderter4cce1dc/Buildcb1820f262c2be81 bestand allezehnPflichtgruppen in20:36Minuten; gezielter echter Pass-/Modell-/Karten-Liefernachtest als lokale Fixture erfolgreich. Finale native Integrations-CI und tatsächliche Bereitstellung sind noch offen. Frühere Prüfungen bleiben ihren ursprünglichen Ständen zugeordnet.
+
 ## Vorbereitet und lokal geprüft · acht erhaltene Bauwerksoriginale
 
 Pont du Gard, Great Zimbabwe, Hōryū-ji, Djenné, Lalibela, Palenque, Angkor Wat und Sydney Opera House erhalten eigene Erklärungen, lesbare beschriftete Modelle, plausible Fehlantworten und gegenseitige Wissenswege. Die erhaltene Natural-Earth-Karte ergänzt die Ortsübersicht. Geeignete Fotoquellen geprüft; technisch nicht verfügbare beziehungsweise nicht ausreichend rechtlich zugeordnete Aufnahmen bleiben unintegriert. Eigene Grafiken sind als solche gekennzeichnet.
