@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "016be6147ea2b7dc823c16e88648d63b5d8ab35a",
+    "commit": "32e3fa133bc84b17595aba2bad79815e2f31478c",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -49,7 +49,8 @@
       "02d143d7aa3c35a9d5277c183cee8478538c0bd0",
       "012721ae938ac786cb0bf86f42e481403202f31b",
       "4b5299abe130892a19d94654562a3bf3ce361188",
-      "016be6147ea2b7dc823c16e88648d63b5d8ab35a"
+      "016be6147ea2b7dc823c16e88648d63b5d8ab35a",
+      "32e3fa133bc84b17595aba2bad79815e2f31478c"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -1272,6 +1273,38 @@
         }
       ],
       "checkedOn": "2026-10-22"
+    },
+    {
+      "number": 55,
+      "title": "Lernreisen verständlicher erklären und Denkaufgaben kompatibel verbessern",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/55",
+      "base": "test-live",
+      "mergedAt": "2026-10-22T22:27:42Z",
+      "mergeCommit": "32e3fa133bc84b17595aba2bad79815e2f31478c",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/32e3fa133bc84b17595aba2bad79815e2f31478c/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57042256509,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-22T22:27:57Z",
+          "updatedAt": "2026-10-22T22:27:57Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/5yc87jfMmk4RZVWFAirB5WQJpAdh"
+        },
+        {
+          "id": 57042243476,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-22T22:27:46Z",
+          "updatedAt": "2026-10-22T22:27:46Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/5yc87jfMmk4RZVWFAirB5WQJpAdh"
+        }
+      ],
+      "checkedOn": "2026-10-23"
     }
   ]
 }

@@ -1,4 +1,14 @@
-## Lokal vollständig geprüft · Lernreisen und anspruchsvolle Denkaufgaben
+## Lokal vollständig geprüft · Landschafts- und Klimakapitel
+
+Zehn vorhandene Kapitel verständlicher vertieft, acht rekonstruierte eigene Modelle integriert und zehn schwere Aufgaben auf passende Vergleiche und plausible Fehlvorstellungen ausgerichtet. Präzisere tatsächlich gelesene Quellen ergänzt; Seegeometrie nach visueller Fachprüfung so korrigiert, dass der mögliche Abfluss am Wasserspiegel beginnt und nicht bergauf führt. Die native Länderfeedbackaufnahme erfolgt vor der Navigation zu den zusätzlichen Landschafts-/Klimafällen. Alle16Reisen/80Kapitelidentitäten/240richtigen Antworttexte samt Indizes und bestehende Fortschritte erhalten;70übrige Kapitel/230übrige Aufgaben als Daten unverändert.
+
+Vollständige unveränderte lokale Pflichtabnahme am Build8ab431cb1c101629 bestanden: zehn Gruppen,140Prüfmeldungen,240Hinweise/448Diagrammansichten, echte Offline-/Altpass-/Backup-/Zoomfälle.56UI-Belege ausschließlich danach erneuert; Fakten-/Quellen-/Rechtefelder und historische Belege erhalten.184Units,43Exporte, bestehende Budgets und150MB-Bildkuration grün. Bestätigte tatsächliche PR55-Auslieferung als51.Chronikeintrag im selben regulären Produktabschnitt nachgeführt, alle50Vorgänger erhalten. Endgültiges aktuelles GitHub-CI, native Freigabe und tatsächliche Veröffentlichung dieses Abschnitts noch offen.
+
+## Tatsächlich bestätigt · Lernreisen und Denkaufgaben PR55
+
+PR55 ist nach vollständiger Quality148 regulär auf test-live32e3fa133bc84b17595aba2bad79815e2f31478c übernommen; Vercel57042256509 und tatsächlicher Browsernachtest bestätigen Build9dcfd100ef9b3229. Kein erneuter offener Release. Die folgenden ursprünglichen Vorbereitungsangaben bleiben historisch erhalten.
+
+## Historischer Vorbereitungsstand · Lernreisen und anspruchsvolle Denkaufgaben
 
 20 vorhandene Vulkan-/Erdbeben-/Mond-/Orientierungskapitel und zwölf eigene Modelle verständlicher ausgearbeitet. Freiwillige Vorlesemöglichkeiten, begrenzter Aufgabenabruf mit manueller Wiederholung, elf schwere Labor- und vier schwere Reiseaufgaben sowie enge Buchsuch-/Anziehungslink-/Rückfokuskorrekturen integriert. Alte Lösungen, Originalantworten, IDs und Erfolge erhalten. Vollständige unveränderte lokale Browser-/Offlineabnahme mit 140 Prüfmeldungen bestanden; 56 UI-Belege erst danach erneuert. 183 Units und 130 Releaseprüfungen vor dem Volltest grün. Exaktes vollständiges finales GitHub-CI und reale Veröffentlichung noch offen. Bestätigte Spielveröffentlichung #54 als 50. Chronikeintrag im regulären Folgeabschnitt nachgeführt; alle 49 früheren Einträge erhalten.
 

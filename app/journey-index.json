@@ -1348,27 +1348,76 @@
       {
         "title": "Berge wachsen langsam",
         "text": "Wenn Platten zusammenstoßen, kann Gestein gefaltet und gehoben werden.",
-        "textFields": []
+        "sourceIds": [
+          "landscapes-base",
+          "landscapes-mountains",
+          "landscapes-height-rule"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Wasser trägt Gestein ab",
         "text": "Flüsse fließen durch die Landschaft.",
-        "textFields": []
+        "sourceIds": [
+          "landscapes-base",
+          "landscapes-erosion",
+          "landscapes-river-discharge"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Ein See bleibt im Land",
         "text": "Seen sammeln Wasser in Vertiefungen.",
-        "textFields": []
+        "sourceIds": [
+          "landscapes-base",
+          "landscapes-caspian"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Trocken, nicht immer heiß",
         "text": "Eine Wüste bekommt sehr wenig Niederschlag.",
-        "textFields": []
+        "sourceIds": [
+          "landscapes-base",
+          "nature-dry-deserts",
+          "nature-antarctic-precipitation",
+          "climate-biome-regions"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Eis als Landschaftsformer",
         "text": "Ein Gletscher ist langsam fließendes Eis.",
-        "textFields": []
+        "sourceIds": [
+          "landscapes-base",
+          "glaciers"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       }
     ],
     "question": {
@@ -1398,27 +1447,76 @@
       {
         "title": "Wetter ist heute, Klima ist lange",
         "text": "Wetter beschreibt, was die Luft gerade macht.",
-        "textFields": []
+        "sourceIds": [
+          "climate-base",
+          "weather-climate"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Sonnenenergie auf der Kugel",
         "text": "Nahe dem Äquator trifft Sonnenlicht im Jahreslauf steiler auf.",
-        "textFields": []
+        "sourceIds": [
+          "climate-base",
+          "seasons-base"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Regenwald oder Savanne?",
         "text": "In warmen, sehr feuchten Gebieten können tropische Regenwälder wachsen.",
-        "textFields": []
+        "sourceIds": [
+          "climate-base",
+          "nature-rainforest-types",
+          "climate-biome-regions"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Wald und Tundra",
         "text": "In vielen gemäßigten Regionen wachsen Wälder.",
-        "textFields": []
+        "sourceIds": [
+          "climate-base",
+          "weather-climate",
+          "climate-tundra",
+          "climate-biome-regions"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       },
       {
         "title": "Lebensräume schützen",
         "text": "Tiere brauchen Nahrung, Wasser und Schutz.",
-        "textFields": []
+        "sourceIds": [
+          "climate-base",
+          "weather-climate",
+          "nature-habitat-needs"
+        ],
+        "textFields": [
+          "starter",
+          "deeper",
+          "whyItMatters",
+          "observe"
+        ]
       }
     ],
     "question": {

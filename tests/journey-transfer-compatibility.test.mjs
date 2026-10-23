@@ -3,8 +3,8 @@ import data from'../app/journey-inquiries.json'with{type:'json'};
 import legacy from'../app/journey-task-compatibility.json'with{type:'json'};
 import{revisedJourneyTask,priorJourneySelection}from'../app/journey-task-answers.mjs';
 import{createSave,restoreSave}from'../app/progress-storage.ts';
-test('only four named existing hard tasks have a compatibility interpretation, all original correct identities remain',()=>{
- assert.deepEqual(Object.keys(legacy.entries).sort(),['continents:0:2','countries:4:2','nature:0:2','seasons:2:2']);
+test('only fourteen named existing hard tasks have a compatibility interpretation, all original correct identities remain',()=>{
+ assert.deepEqual(Object.keys(legacy.entries).sort(),['climate:0:2','climate:1:2','climate:2:2','climate:3:2','climate:4:2','continents:0:2','countries:4:2','landscapes:0:2','landscapes:1:2','landscapes:2:2','landscapes:3:2','landscapes:4:2','nature:0:2','seasons:2:2']);
  for(const[key,old]of Object.entries(legacy.entries)){
   const i=key.lastIndexOf(':'),id=key.slice(0,i),level=Number(key.slice(i+1)),q=data.chapters.find(c=>c.id===id).tasks[level];
   assert(revisedJourneyTask(id,level));assert.equal(q.correct,old.correct);assert.equal(q.answers[q.correct],old.answers[old.correct]);
@@ -17,7 +17,7 @@ test('current or unknown future task revisions and malformed choices are never t
  for(const choice of[-1,3,.5,'0',NaN,null,{},[0]])assert.equal(priorJourneySelection('seasons:2',2,choice,undefined),null);
  assert.equal(priorJourneySelection('seasons:2',0,0,undefined),null);
 });
-test('four old selected indices, private notes and already earned journeys roundtrip without a new migration',()=>{
+test('fourteen old selected indices, private notes and already earned journeys roundtrip without a new migration',()=>{
  const save=createSave();save.progress.settings.readVoice='';save.progress.journeys=['ocean'];save.progress.games=['memory'];save.progress.gameSessions.memory={matched:[0]};
  for(const[key,q]of Object.entries(legacy.entries)){
   const[chapter,index,level]=key.split(':');save.progress.gameSessions['journey:'+chapter]??={};Object.assign(save.progress.gameSessions['journey:'+chapter],{['chapter:'+index+':level']:Number(level),['chapter:'+index+':answer:'+level]:(q.correct+1)%3,['chapter:'+index+':note']:'Private synthetische Notiz.',future:{keep:true}});

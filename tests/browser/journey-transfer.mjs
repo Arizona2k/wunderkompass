@@ -22,5 +22,5 @@ export async function journeyTransferFlow(browser,base,ready,monitor,report,shot
    }
   }catch(error){await p.screenshot({path:shots+'/journey-transfer-failure-'+mode+'-'+width+'.png',fullPage:true}).catch(()=>{});throw error;}finally{await c.close();}
  }
- assert.equal(report.journeyTransfer.length,16);report.checks.push('Four existing hard chapter tasks at320large/1440:16 actual old-correct/wrong states, original choice text and canonical indices, no changes on load, current feedback after deliberate choice, reload/two real pass downloads and private states retained');
+ assert.equal(report.journeyTransfer.length,56);report.checks.push('Fourteen existing hard chapter tasks at320large/1440:56 actual old-correct/wrong states, original choice text and canonical indices, no changes on load, current feedback after deliberate choice, reload/two real pass downloads and private states retained');
 }

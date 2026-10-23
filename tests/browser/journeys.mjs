@@ -22,6 +22,7 @@ async function geometry(p,label){
  }));assert.deepEqual(escaped,[],label+' readable controls and text within viewport');
 }
 export async function assertJourneyDiagram(visual,id,selected){
+ await assertLandscapeClimateDiagram(visual,id,selected);
  await assertMoonNavigationDiagram(visual,id);
  await assertVolcanoesQuakesDiagram(visual,id);
  await assertWaterWeatherDiagram(visual,id,selected);
@@ -49,6 +50,56 @@ export async function assertJourneyDiagram(visual,id,selected){
   const outline=layers.find(e=>e.fill==='none'),bands=layers.filter(e=>e!==outline&&e.y<outline.y+outline.h);
   assert.equal(bands.length,2,'plate contains both crust and uppermost mantle');assert.equal(bands[0].y,outline.y);assert.equal(bands[0].y+bands[0].h,bands[1].y);assert.equal(bands[1].y+bands[1].h,outline.y+outline.h);
   await visual.getByText(/Eine Platte umfasst Kruste und starren obersten Mantel/).waitFor();
+ }
+}
+export async function assertLandscapeClimateDiagram(visual,id,selected){
+ if(!/^(landscapes|climate):[1-4]$/.test(id))return;
+ await visual.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done))));
+ if(id==='landscapes:1'){
+  assert.equal(await visual.locator('[data-river-process]').count(),3);
+  const d=await visual.locator('[data-river-direction]').evaluate(e=>{const a=e.getPointAtLength(0),b=e.getPointAtLength(e.getTotalLength());return {dx:b.x-a.x,dy:b.y-a.y};});
+  assert.ok(d.dx>0&&d.dy>0,'transport follows the drawn downhill river');
+  assert.equal(await visual.locator('[data-river-process="'+selected+'"] circle').getAttribute('stroke-width'),'5');
+ }
+ if(id==='landscapes:2'){
+  assert.match(await visual.locator('[data-lake-optional-outflow]').getAttribute('stroke-dasharray'),/\d/,'optional outlet is visibly distinct from the inlet');
+  assert.equal(await visual.locator('[data-lake-inflow]').getAttribute('stroke-dasharray'),null);
+  const outlet=await visual.locator('svg').evaluate(svg=>{const water=svg.querySelector('[data-lake-water]'),flow=svg.querySelector('[data-lake-optional-outflow]'),surface=water.getPointAtLength(0),start=flow.getPointAtLength(0),end=flow.getPointAtLength(flow.getTotalLength()),box=water.getBBox();return {surfaceY:surface.y,startX:start.x,startY:start.y,endX:end.x,endY:end.y,waterLeft:box.x,waterRight:box.x+box.width};});
+  assert.ok(outlet.startX>=outlet.waterLeft&&outlet.startX<=outlet.waterRight&&Math.abs(outlet.startY-outlet.surfaceY)<.01,'possible surface outlet starts at the actual drawn lake surface');
+  assert.ok(outlet.endX>outlet.startX&&outlet.endY>=outlet.startY,'unpowered lake outlet never climbs uphill in the drawn cross-section');
+  const water=await visual.locator('[data-lake-water]').evaluate(e=>{const b=e.getBBox();return {width:b.width,height:b.height};});assert.ok(water.width>water.height&&water.height>0,'water occupies a basin rather than a flat ocean strip');
+ }
+ if(id==='landscapes:3'){
+  const examples=await visual.locator('[data-desert-example]').evaluateAll(es=>es.map(e=>({w:e.getAttribute('width'),h:e.getAttribute('height')})));
+  assert.equal(examples.length,2);assert.deepEqual(examples[0],examples[1],'example size is not an invented desert-area comparison');
+  assert.equal(await visual.locator('[data-desert-inland-ice]').count(),1);
+ }
+ if(id==='landscapes:4'){
+  const b=await visual.locator('svg').evaluate(svg=>{const box=s=>{const b=svg.querySelector(s).getBBox();return {x:b.x,y:b.y,width:b.width,height:b.height};};return {land:box('[data-glacier-land]'),ice:box('[data-glacier-ice]'),berg:box('[data-glacier-iceberg]'),water:box('[data-glacier-water]')};});
+  assert.ok(b.ice.x+b.ice.width<=b.water.x,'glacier lies on the land side');
+  assert.ok(b.berg.x>b.water.x&&b.berg.x>b.ice.x+b.ice.width,'iceberg is separated from the land glacier');
+  assert.ok(b.berg.y<b.water.y&&b.berg.y+b.berg.height>b.water.y,'floating iceberg crosses the water surface');
+  assert.equal(await visual.locator('[data-glacier-debris]').count(),4);
+ }
+ if(id==='climate:1'){
+  const beams=await visual.locator('[data-sunlight-ray]').evaluateAll(es=>es.map(e=>{const a=e.getPointAtLength(0),b=e.getPointAtLength(e.getTotalLength());return {kind:e.dataset.sunlightRay,x:a.x,y:a.y,dx:b.x-a.x,dy:b.y-a.y};}));
+  const steep=beams.filter(b=>b.kind==='steep'),flat=beams.filter(b=>b.kind==='shallow');assert.equal(steep.length,3);assert.equal(flat.length,3);
+  const width=rows=>{const a=rows[0],b=rows.at(-1);return Math.abs((b.x-a.x)*a.dy-(b.y-a.y)*a.dx)/Math.hypot(a.dx,a.dy);};
+  assert.ok(Math.abs(width(steep)-width(flat))<.01,'both actual bundles have the same width perpendicular to their rays');
+  const spans=await visual.locator('[data-sunlight-footprint]').evaluateAll(es=>es.map(e=>e.getTotalLength()));assert.ok(Math.abs(spans[1]/spans[0]-2)<.001,'shallow equal bundle covers twice the ground in this deliberately chosen model');
+ }
+ if(id==='climate:2'){
+  const examples=await visual.locator('[data-climate-rain-example]').evaluateAll(es=>es.map(e=>[...e.querySelectorAll('[data-model-month]')].map(b=>Number(b.getAttribute('height')))));
+  assert.equal(examples.length,2);assert.ok(examples.every(e=>e.length===12));assert.equal(examples[0].reduce((a,b)=>a+b),examples[1].reduce((a,b)=>a+b),'same yearly amount');
+  assert.equal(new Set(examples[0]).size,1);assert.ok(new Set(examples[1]).size>1,'different actual monthly distribution despite the same yearly amount');
+ }
+ if(id==='climate:3'){
+  assert.equal(await visual.locator('[data-climate-forest-tree]').count(),3);assert.equal(await visual.locator('[data-climate-low-growth]').count(),4);
+  const height=selector=>visual.locator(selector).first().evaluate(e=>e.getBoundingClientRect().height);assert.ok(await height('[data-climate-forest-tree]')>await height('[data-climate-low-growth]'),'tundra growth is actually drawn lower');
+ }
+ if(id==='climate:4'){
+  assert.equal(await visual.locator('[data-habitat-species]').count(),1);assert.equal(await visual.locator('[data-habitat-need]').count(),3);assert.equal(await visual.locator('[data-habitat-connection]').count(),3);
+  assert.equal(await visual.locator('[data-habitat-connection="'+selected+'"]').getAttribute('stroke-width'),'7');assert.equal(await visual.locator('svg path[marker-end]').count(),0,'needs are not depicted as a compulsory chronological sequence');
  }
 }
 export async function assertVolcanoesQuakesDiagram(visual,id){
