@@ -523,5 +523,32 @@
     "mechanicsOffline": 24,
     "mechanicsNativeOffline": 12,
     "meaning": "Current UI bindings only after natural complete local success; all prior facts, source/rights/teaching fields and UI histories retained. No relabelling of original full reports, independent human/scientific approval or final CI claimed."
+  },
+  "wayfinderFocusCorrection": {
+    "status": "Targeted current real-product checks passed; new immutable complete mandatory acceptance and final CI still required.",
+    "ciBefore": {
+      "runId": 39970661569,
+      "attempt": 2,
+      "jobId": 120507441125,
+      "head": "02e287cf3a0d17c96a6a47acace094be8c6c3176",
+      "result": "failure in existing Chromium offline peopleSourceView focus assertion; subsequent full engines/handoff/final context skipped"
+    },
+    "separateEarlierTimeout": {
+      "attempt": 1,
+      "result": "cancelled after55minutes despite all functional/context steps passing; this focus change is not a proven timeout or runner-variance remedy"
+    },
+    "reproducedCause": "In the unchanged actual app, three pending navigation-restoration frames survive an explicit browser focus transition. If those frames run between focusing the wayfinder and pressing Enter, focus moves to the article heading; Enter no longer opens/focuses the research activity. The controlled original-build reproduction demonstrates this corresponding condition, not the exact unrecorded CI event schedule.",
+    "fix": "Existing shared pending-restoration guard also observes trusted focusin, detaches all its listeners on cancellation, and keeps rejecting synthetic events. No timeouts, assertions, candidate gates, workflows or storage schema changed.",
+    "oldOriginalBuild": "09ff0e92c786c038",
+    "oldPermanentTestNegativeReportSHA256": "f0437d8205173e05aca363d0b2035814e6a56945ddc461063243623a5d1b1ea0",
+    "originalSameAssertionNegativeReportSHA256": "6604fcefa031296f7cb7eeeb392c8e734b7776c683914507659d99a4146f09a5",
+    "currentBuild": "bc3ef31c087ad1c5",
+    "currentPermanentHelperReportSHA256": "719dc7ca7a657f1550984e0a04be444839d2b2e346f7fbe48d30eaed9e5f93a1",
+    "currentScope": "Four previous pending keyboard/pointer cases retained. Eight new actual focus-before-Enter cases cover both biographies and both historical activities at320/1440, with untouched-route and synthetic-focus-event controls. All current errors and console errors empty.",
+    "currentNativeReportSHA256": "65cb0751cca5e710c47b1f72380dc2165853e38b37e88e1583d719a363370aac",
+    "currentNativeScope": "Eight actual native200% views at640/320CSS pixels, DPR2, large reading, both complete biography and history helpers with texts/answers/hints/figures/model states/source links and back/focus.",
+    "visualReading": "Actual original failure image and current Mary320/history1440 focus destinations viewed, plus native Mary320 controls and Mohenjo320 heading. No physical device or independent human claim.",
+    "unchangedRepetitionsAreNotCauseEvidence": "Earlier80minimal normal cases, the complete instrumented old offline helper and two delayed-MessageChannel cases passed on the original build. These neither explain nor cure the CI failure; they are retained separately.",
+    "learnerBenefit": "An explicitly selected control keeps focus until the next keyboard action, so the wayfinder reaches its research activity instead of silently losing Enter. The bounded before/after fixture demonstrates this reliability improvement; no field failure-rate, learning-effectiveness or performance-speed claim."
   }
 }
