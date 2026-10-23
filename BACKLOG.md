@@ -1,3 +1,11 @@
+## PR57 · zwei unterschiedliche CI-Abbrüche erhalten, Diagnose gezielt ergänzt ·23.10.2026
+
+Quality151 am unverändertenf369b3a ist nicht vollständig grün: Versuch1 erreichte nach ungewöhnlich langsamen Ubuntu-Paketdownloads die bestehende55-Minuten-Grenze während Firefox; volle Chromiumprüfung war erfolgreich. Originalprotokoll und Artefakt erhalten. Genau eine unveränderte begründete Wiederholung installierte zügig, scheiterte dann beim frühen WebKit-Suchlauf an unerwartet geschlossener Seite/Browser bei common-cuttlefish. Ursache dieses zweiten Befunds ungeklärt; keine Behebung aus einem grünen Wiederholungslauf ableiten.
+
+Erst nach Ende beider Jobs im bestehenden Fehlerhelfer begrenzte Seiten-/Kontext-/Browserereignisse und lesbare Speicherindikatoren ergänzt. Aktionen, Assertions, Timeouts, Workflow und Freigabegrenzen unverändert.190Units/Typ/Lint und vorhandener tatsächlicher Chromium-Suchablauf48Tiere/128Quellenansichten/80Kapitel grün; synthetische Diagnosefälle sind kein reproduzierter WebKit-Absturz. Appbuild194 unverändert. Neue exakte vollständige Drei-Engine-Abnahme und alle bisherigen Freigabe-/Auslieferungsprüfungen bleiben vor jedem Merge erforderlich. Originale/Grenzen in content/electrical-originals-review.json, keine dritte unveränderte Wiederholung oder Veröffentlichung behauptet.
+
+## Historischer Stand vor dieser gezielten Diagnoseergänzung · Original erhalten
+
 ## Elektrische Originale · lokal vollständig abgenommen ·23.10.2026
 
 Kandidat a6075b8/Build1945360e83504fac hat alle zehn vorhandenen Pflichtgruppen natürlich bestanden:1866,260Sekunden/139Prüfmeldungen, sämtliche Fehlerlisten leer. Eine weniger wiederholte zufällige Memory-Meldung gegenüber vorher140, keine gestrichene Prüfung. Neue drei Originale mit15Quellen-/Such-/Teile-/Modellansichten,3Kalt-/12regulären/6nativen Offlinefällen belegt. Erst danach alte56UI-Belege unter vollständigem Fakten-/Rechte-/Historienerhalt erneuert und3individuell quellengeprüfte Dossiers ergänzt;43Exporte/2298Inventaridentitäten/59strukturelleDossiers geprüft, keine gesamte Fachabnahme. Genaue Originalquittungen in PROJECT_STATE/content/electrical-originals-review.json.

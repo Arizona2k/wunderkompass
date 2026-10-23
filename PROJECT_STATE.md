@@ -1,3 +1,11 @@
+## PR57 · zwei unterschiedliche CI-Abbrüche erhalten, Diagnose gezielt ergänzt ·23.10.2026
+
+Quality151 am unverändertenf369b3a ist nicht vollständig grün: Versuch1 erreichte nach ungewöhnlich langsamen Ubuntu-Paketdownloads die bestehende55-Minuten-Grenze während Firefox; volle Chromiumprüfung war erfolgreich. Originalprotokoll und Artefakt erhalten. Genau eine unveränderte begründete Wiederholung installierte zügig, scheiterte dann beim frühen WebKit-Suchlauf an unerwartet geschlossener Seite/Browser bei common-cuttlefish. Ursache dieses zweiten Befunds ungeklärt; keine Behebung aus einem grünen Wiederholungslauf ableiten.
+
+Erst nach Ende beider Jobs im bestehenden Fehlerhelfer begrenzte Seiten-/Kontext-/Browserereignisse und lesbare Speicherindikatoren ergänzt. Aktionen, Assertions, Timeouts, Workflow und Freigabegrenzen unverändert.190Units/Typ/Lint und vorhandener tatsächlicher Chromium-Suchablauf48Tiere/128Quellenansichten/80Kapitel grün; synthetische Diagnosefälle sind kein reproduzierter WebKit-Absturz. Appbuild194 unverändert. Neue exakte vollständige Drei-Engine-Abnahme und alle bisherigen Freigabe-/Auslieferungsprüfungen bleiben vor jedem Merge erforderlich. Originale/Grenzen in content/electrical-originals-review.json, keine dritte unveränderte Wiederholung oder Veröffentlichung behauptet.
+
+## Historischer Stand vor dieser gezielten Diagnoseergänzung · Original erhalten
+
 ## Elektrische Originale · vollständige lokale Abnahme erfolgreich ·23.10.2026
 
 Unveränderter Kandidat a6075b8542a3784cfbe3ef34ddc75863f692ec64, Quelle e824daa043735fd801a65608cdc4434faad5c4c0871ef0eddb35a9948455e490, Build1945360e83504fac: vollständige bestehende lokale Browserregression natürlich erfolgreich in1866,260Sekunden. Alle zehn Pflichtgruppen,139Prüfmeldungen; sämtliche Laufzeit-/Konsole-/Abruf-/HTTP-/Fremdnetzfehlerlisten leer. Gegenüber den140Landschaftsmeldungen nur eine zufällig weniger wiederholte Memory-Falschpaarmeldung; alle übrigen eindeutigen Beschreibungen erhalten, Artikelhüllen147→150 und leichte Hinweisbank139–141→139–144 fortgeschrieben. Keine gestrichene Assertion oder Ursachenbehauptung aus neuem Grün.
