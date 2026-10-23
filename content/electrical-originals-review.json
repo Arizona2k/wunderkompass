@@ -1,0 +1,434 @@
+{
+  "schemaVersion": 1,
+  "meaning": "Drei erhaltene elektrische Originalmanuskripte selektiv auf aktuellem Landschaftskandidaten vorbereitet. Kein Gesamtmastermerge, keine abgeschlossene Paket3.5-Abnahme oder Veröffentlichung.",
+  "sourceMaster": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+  "preparedBase": "bd816b2b2c62869520a02698be476db3cddd2746",
+  "integratedManuscriptIds": [
+    "invention-battery",
+    "invention-generator",
+    "invention-transistor"
+  ],
+  "independentReview": false,
+  "topics": [
+    {
+      "id": "invention-battery",
+      "originalManuscriptSha256": "8db7af9a52170c0bdc7b1668a5d8c8536d2df3b780dd692b911f98f3b4fe9ef9",
+      "currentContentHash": "3a33a2fb07f0d1ce22cbee8e545874ba3a0c4a92c17ef4894c864a0a7675b263",
+      "goal": "Du unterscheidest chemische Energiespeicherung vom Stromfluss und erkennst, warum ein leerer Akku und ein kaputtes Kabel verschiedene Fehler sind.",
+      "ageLevels": {
+        "6-8": "In einer Batterie können chemische Vorgänge elektrische Energie liefern. Dazu braucht die Lampe einen geschlossenen Stromweg.",
+        "9-11": "Eine Zelle enthält zwei unterschiedliche Elektroden und einen Stoff, durch den geladene Teilchen wandern können: den Elektrolyten. Beim Entladen fließen Elektronen außen durch die angeschlossene Lampe. Innen übernehmen Ionen einen anderen Teil des Weges. Eine Batterie ist kein Behälter voller fertig gespeicherten Stroms.",
+        "12-14": "Beim Fehlersuchen hilft es, zwei Fragen zu trennen: Kann die Zelle noch chemische Energie abgeben, und ist der äußere Weg geschlossen? Der Ladungsweg im Inneren ersetzt kein fehlendes Kabel. Das erklärt, warum eine volle Batterie eine unterbrochene Verbindung zur Lampe nicht repariert."
+      },
+      "sourceReads": [
+        {
+          "url": "https://www.energy.gov/science/doe-explainsbatteries",
+          "anchor": "Opening explanation: chemical potential, external electrons/internal ions, incomplete reversal when cycling",
+          "finding": "Chemische Speicherung von Ladungswegen unterscheiden; keine universelle Zellchemie aus dem Schema ableiten."
+        },
+        {
+          "url": "https://www.rigb.org/explore-science/our-collection/iconic-objects-ri-collection",
+          "anchor": "Alessandro Volta’s voltaic pile",
+          "finding": "1800 als historischer Erfindungsanker, keine Datierung heutiger Akkutypen."
+        },
+        {
+          "url": "https://www.rigb.org/explore-science/explore/collection/alessandro-voltas-voltaic-pile",
+          "anchor": "Description and Date pre-1814",
+          "finding": "Erhaltenes Exemplar und Übergabe1814 von der Erfindungsdatierung unterscheiden; keine Säurebauanleitung übernommen."
+        },
+        {
+          "url": "https://www.panasonic.com/global/energy/products/eneloop/en/faq.html",
+          "anchor": "Can dry batteries be charged?",
+          "finding": "Nicht wiederaufladbare Primärbatterien niemals aufladen; tatsächliches Lernen nur am Bildschirm/Papier."
+        }
+      ],
+      "criticalCounterread": "Beide Elektroden/Ladungswege erklärt; Chemie nicht als Strombehälter. Vier Bauteile statt dreiteiligem Optikmuster tatsächlich geprüft. Akkus nicht unbegrenzt oder verlustfrei; nur zeichnen.",
+      "mediaDecision": "Erhaltene eigene Funktionsgrafik mit nummerierten lesbaren HTML-Bauteilen; kein historisches Foto oder maßstäblicher Bauplan behauptet. Vorbereitete qualitative Modelle behalten ihren eigenen Lernzweck. Geeignete Fotos recherchiert; Binärzugriff derzeit eingeschränkt, siehe photoResearch.",
+      "reviewedBy": "Codex KI-Selbstprüfung anhand der tatsächlich gelesenen genannten Quellen; keine unabhängige Menschenabnahme",
+      "reviewedOn": "2026-10-23"
+    },
+    {
+      "id": "invention-generator",
+      "originalManuscriptSha256": "584f079bff3b949fffd0a98ed9ac144580eae560d81c8e71c793bb70fc9f3251",
+      "currentContentHash": "762afd808a90b6c119409487f62ef14dff6e9ad420a2900aee9168f10d0152a8",
+      "goal": "Du erkennst den gemeinsamen Schritt zwischen Windrad, Wasserkraft und vielen Kraftwerken und verwechselst Energieumwandlung nicht mit Energieerzeugung aus dem Nichts.",
+      "ageLevels": {
+        "6-8": "Ein Generator wandelt Bewegung in elektrische Energie um. In vielen Bauformen bewegen sich Magnet und Drahtspule gegeneinander.",
+        "9-11": "Ändert sich das Magnetfeld durch eine Spule, kann an ihren Anschlüssen eine Spannung entstehen. In einem geschlossenen Stromkreis kann dadurch Strom fließen. Der Antrieb liefert die Energie. Ein Magnet allein ist keine unerschöpfliche Energiequelle.",
+        "12-14": "Bewegung und Strom sind im gezeigten Versuch keine zwei unabhängigen Vorgänge: Erst die Änderung des Magnetfelds durch die Spule führt zur Induktion. Die drei Bildschirmzustände vergleichen nur Richtung und Stillstand. Sie berechnen weder eine genaue Spannung noch eine nutzbare Energiemenge."
+      },
+      "sourceReads": [
+        {
+          "url": "https://www.rigb.org/explore-science/explore/collection/michael-faradays-generator",
+          "anchor": "Description and October1831 object date",
+          "finding": "Bewegter Stabmagnet, ruhende Spule, Galvanometerausschlag; keine dauernde Energie aus ruhendem Magneten."
+        },
+        {
+          "url": "https://www.eia.gov/energyexplained/electricity/how-electricity-is-generated.php",
+          "anchor": "Electromagnetic generators and Turbine driven generators",
+          "finding": "Antrieb liefert mechanische Energie; verschiedene Kraftwerke nutzen den Umwandlungsschritt. Keine aktuelle Prozentstatistik übernommen."
+        },
+        {
+          "url": "https://www.computerhistory.org/storageengine/faraday-describes-electro-magnetic-induction/",
+          "anchor": "1831 lecture account and time-varying induction",
+          "finding": "Zeitweilige induzierte Spannung. Der Text dieser Quelle zum Spulenversuch wird nicht als Schaltplan übernommen."
+        }
+      ],
+      "criticalCounterread": "Hinein/Hinaus sind Momentaufnahmen während Änderung, kein nach Bewegung weiterfließender Strom. Spannung und Stromkreis getrennt; Solarzellen nicht als Generator erklärt.",
+      "mediaDecision": "Erhaltene eigene Funktionsgrafik mit nummerierten lesbaren HTML-Bauteilen; kein historisches Foto oder maßstäblicher Bauplan behauptet. Vorbereitete qualitative Modelle behalten ihren eigenen Lernzweck. Geeignete Fotos recherchiert; Binärzugriff derzeit eingeschränkt, siehe photoResearch.",
+      "reviewedBy": "Codex KI-Selbstprüfung anhand der tatsächlich gelesenen genannten Quellen; keine unabhängige Menschenabnahme",
+      "reviewedOn": "2026-10-23"
+    },
+    {
+      "id": "invention-transistor",
+      "originalManuscriptSha256": "ab1280fab10e4826daf5754aba15ed3ce59eb5673165dc56abe534f29431a482",
+      "currentContentHash": "9d2e8fb2fd397448d47ac91a9fed37e559f55d8cccf5b01d9c44cd38d172d91b",
+      "goal": "Du verstehst einen wichtigen Baustein von Computern, ohne Rechenprogramme mit dem Material des Chips zu verwechseln.",
+      "ageLevels": {
+        "6-8": "Ein Transistor kann als kleiner elektronischer Schalter arbeiten. Ein Signal steuert, ob ein anderer Stromweg stark oder schwach leitet.",
+        "9-11": "Transistoren bestehen aus besonderen Materialien, den Halbleitern. Sie können in passenden Schaltungen schalten oder Signale verstärken. Ihre Energie kommt aus der Versorgung der Schaltung. Ein schwaches Signal erzeugt nicht plötzlich zusätzliche Energie.",
+        "12-14": "Die zwei Schalter im Lernmodell stehen für unterschiedliche Aufgaben: Der eine stellt die Versorgung bereit, der andere das Steuersignal. Nur beide zusammen lassen hier die Lampe leuchten. Ein echter Transistor ist kein ganzes Zwei-Schalter-Gerät; die Darstellung grenzt Steuerung und Energiequelle bewusst voneinander ab."
+      },
+      "sourceReads": [
+        {
+          "url": "https://www.computerhistory.org/siliconengine/invention-of-the-point-contact-transistor/",
+          "anchor": "December16/23,1947 demonstration and Germanium/gold contacts",
+          "finding": "Bardeen/Brattain, Shockleys Forschungsgruppe und spätere Bauformen unterscheiden."
+        },
+        {
+          "url": "https://efficiencywins.nexperia.com/efficient-products/understanding-the-switching-characteristics-of-rets",
+          "anchor": "Introduction and on/off operating conditions",
+          "finding": "Passende Transistorschaltung zum Schalten; Symbolmodell behauptet keinen universellen Innenaufbau."
+        },
+        {
+          "url": "https://www.ti.com/lit/pdf/tidu002",
+          "anchor": "Considerations for High-Gain Multistage Designs, circuit implementation and supply schematics",
+          "finding": "Versorgte Verstärkerschaltungen; allgemeine Energiequellenaussage präziser durch Analog Devices belegt."
+        },
+        {
+          "url": "https://wiki.analog.com/university/courses/electronics/text/chapter-9",
+          "anchor": "9.1 Basic Amplifiers",
+          "finding": "Verstärker nehmen die zusätzliche Ausgangsenergie aus der Versorgung; das Eingangssignal steuert."
+        }
+      ],
+      "criticalCounterread": "Alle vier Versorgungs-/Steuerzustände: nur beide aktiv versorgen hier die Last. Nicht als Halbleiterinnenaufbau/Verstärkersimulation/ganzer Computer ausgegeben.",
+      "mediaDecision": "Erhaltene eigene Funktionsgrafik mit nummerierten lesbaren HTML-Bauteilen; kein historisches Foto oder maßstäblicher Bauplan behauptet. Vorbereitete qualitative Modelle behalten ihren eigenen Lernzweck. Geeignete Fotos recherchiert; Binärzugriff derzeit eingeschränkt, siehe photoResearch.",
+      "reviewedBy": "Codex KI-Selbstprüfung anhand der tatsächlich gelesenen genannten Quellen; keine unabhängige Menschenabnahme",
+      "reviewedOn": "2026-10-23"
+    }
+  ],
+  "newConnections": [
+    {
+      "id": "invention-battery--science-circuit",
+      "fromId": "invention-battery",
+      "toId": "science-circuit",
+      "kind": "energy",
+      "why": "Die Batterie kann chemische Energie abgeben; die Lampe braucht außerdem einen geschlossenen äußeren Stromkreis.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-battery--science-energy",
+      "fromId": "invention-battery",
+      "toId": "science-energy",
+      "kind": "energy",
+      "why": "Die chemische Speicherung in der Batterie ist ein Beispiel für Energieumwandlung; beim Entladen entsteht Energie nicht aus dem Nichts.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-battery--invention-smartphone",
+      "fromId": "invention-battery",
+      "toId": "invention-smartphone",
+      "kind": "needs",
+      "why": "Der Akku versorgt das Smartphone unterwegs. Speichern, Steuern und elektrische Energie liefern sind unterschiedliche Aufgaben.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-generator--science-motor",
+      "fromId": "invention-generator",
+      "toId": "science-motor",
+      "kind": "energy",
+      "why": "Ein Motor nutzt elektrische Energie für Bewegung; beim Generator treibt Bewegung die Umwandlung in elektrische Energie an.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-generator--science-magnetism",
+      "fromId": "invention-generator",
+      "toId": "science-magnetism",
+      "kind": "cause",
+      "why": "Das veränderte Magnetfeld durch die Spule erklärt den Ausschlag im Induktionsversuch; ein ruhender Magnet allein genügt hier nicht.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-generator--science-circuit",
+      "fromId": "invention-generator",
+      "toId": "science-circuit",
+      "kind": "energy",
+      "why": "Eine induzierte Spannung und ein Strom durch die angeschlossene Last sind zu unterscheiden; der äußere Kreis muss passend geschlossen sein.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-transistor--invention-computer",
+      "fromId": "invention-transistor",
+      "toId": "invention-computer",
+      "kind": "partnership",
+      "why": "Viele Transistoren arbeiten in einem Computer zusammen. Ein gesteuerter Schalter allein versteht noch keine Wörter oder Programme.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-transistor--invention-smartphone",
+      "fromId": "invention-transistor",
+      "toId": "invention-smartphone",
+      "kind": "partnership",
+      "why": "Smartphonechips nutzen viele Transistoren zur Signalverarbeitung; ihre Energie kommt aus der Versorgung, unterwegs meist aus einem Akku.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-transistor--science-circuit",
+      "fromId": "invention-transistor",
+      "toId": "science-circuit",
+      "kind": "context",
+      "why": "Ein Transistor wirkt innerhalb einer passenden Schaltung. Das Lernmodell trennt Steuerung, Versorgung und den gesteuerten Stromweg.",
+      "checkedAt": "2026-10-23"
+    }
+  ],
+  "preservation": {
+    "oldTopics": 147,
+    "oldTopicSha256": "5f224cfcb56f921aa153de2ec456ff57b800cc85b21e406b9c288c314b00a92c",
+    "exception": "Only the nine explicitly explained reciprocal related links; original content/question/order hashes remain checked.",
+    "oldQuestions": 177,
+    "oldQuestionSha256": "e586265776b9e65af96f4b4bf5221964dd97e3c57d1823563cf1d2110cc0f478",
+    "oldTechnologyTasks": 15,
+    "oldChronologicalTasks": 24,
+    "schemaMigration": false
+  },
+  "earlyUI": {
+    "build": "3c1f058413e58299",
+    "views": 12,
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "states": 32,
+    "reportSha256": "12d3597c7c3728aa88eadd6e7a7e9766fb225c47c74a37c3eea66f94ee86d343",
+    "scope": "Targeted Chromium154 only, before later appended Panasonic source/hint-bank entries. Three plans and two models actually viewed at320large and1440. Full current offline/native and actual final engines remain open.",
+    "helperCorrection": "Initial exact-benefit selector omitted the displayed label. Automatic review rejected removing that assertion; full exact text expectation corrected instead. Original failed report kept."
+  },
+  "photoResearch": [
+    {
+      "topic": "invention-battery",
+      "source": "https://digital.sciencehistory.org/works/cr56n2016",
+      "credit": "Courtesy of Science History Institute; reproduction by Adam Jenkins",
+      "license": "CC BY4.0",
+      "finding": "Modern reproduction, not Volta’s original object. Rights and object description read; download endpoint redirects to inaccessible binary host. Not integrated."
+    },
+    {
+      "topic": "invention-transistor",
+      "source": "https://commons.wikimedia.org/wiki/File:The_First_Transistor_ever_made,_built_in_1947_-_Bell_Labs.jpg",
+      "credit": "Windell Oskay",
+      "license": "CC BY2.0",
+      "finding": "Photo of a displayed point-contact arrangement, photographed2012. Rights/source metadata read and image seen; local binary request HTTP403. Not integrated; no claim of original-object authenticity."
+    },
+    {
+      "topic": "invention-generator",
+      "source": "https://www.rigb.org/explore-science/explore/collection/michael-faradays-generator",
+      "credit": "Paul Wilkinson",
+      "license": "No free photo reuse established",
+      "finding": "Institutional collection image not copied; metadata alone does not establish reuse rights."
+    }
+  ],
+  "fullAcceptance": "Original full local Chromium acceptance remains at a6075b8; incomplete exact CI151 attempts remain retained. Only bounded lifecycle diagnostics changed after those jobs ended. Current exact full Chromium/Firefox/WebKit CI, fresh native readiness, expected-head merge, identical merge tree and actual Vercel/browser postflight remain required.",
+  "targetedNativeUI": {
+    "build": "3b5326fb29f51c11",
+    "browser": "154.0.8037.57",
+    "views": 6,
+    "states": 16,
+    "cssWidths": [
+      640,
+      320
+    ],
+    "measuredDpr": 2,
+    "largeText": true,
+    "reportSha256": "f366989a1a49b08a967ca3d952c25b81ebd29d2ba253dccbe657339a99a27755",
+    "imageManifestSha256": "fc3f3010fd81cc290634498b138b9f44cead01a2310f45b76371e781f5f98cbc",
+    "images": 25,
+    "visualReview": "All three current blueprint figures at both native widths and both current model figures at both widths actually seen. Readable separate control/status captures at320 also seen. No physical device or heard voice claimed.",
+    "captureCorrection": "Initial functional native run exposed one shifted and one blank optional locator clip on visual review. Originals retained. Existing direct native viewport helper now captures actual diagrams and separate controls with measured dimensions/nonblank assertion. First correction strict-selector failure also retained; selector narrowed to actual diagram roles rather than decorative icons. Corrected full targeted native helper passed.",
+    "scope": "Targeted actual native proof only, not complete mandatory acceptance."
+  },
+  "targetedOfflineUI": {
+    "build": "3b5326fb29f51c11",
+    "sourceDigest": "904be5f2d3706a116ab0999e2f7a40d9db925052d33598b2eb075ec301dc7737",
+    "reportSha256": "54ea80937bf936bef58f1797e3cfd5febd98a8574ee21122e4a1186ef710fc9f",
+    "electricalCases": 6,
+    "learningTaskCases": 12,
+    "originalPassRestoredThroughActualUI": true,
+    "scope": "Existing native offline-resilience helper completed including actual fixture server stop/reload, old questions and actual UI pass restoration; final complete all-suite and actual Firefox/WebKit proof remain open."
+  },
+  "linkedExistingTopicCounterread20261023": [
+    {
+      "id": "science-circuit",
+      "url": "https://www.eia.gov/kids/energy-sources/electricity/science-of-electricity.php",
+      "anchor": "Electricity travels in circuits,197–200",
+      "finding": "Existing source paragraph on open/closed circuit supports the bridge. The adjacent battery-polarity simplification193 is questionable and is not imported; new battery polarity follows DOE instead. Existing article makes no corresponding polarity claim."
+    },
+    {
+      "id": "science-energy",
+      "url": "https://www.energy.gov/cmei/systems/solar-photovoltaic-cell-basics",
+      "anchor": "What Is a Solar Photovoltaic Cell? and How Do Photovoltaic Cells Work?",
+      "finding": "PV light conversion differs from a generator. Existing simplified model keeps other conditions fixed and explicitly states game energy units, storage reserve and real losses."
+    },
+    {
+      "id": "science-motor",
+      "url": "https://nationalmaglab.org/magnet-academy/watch-play/interactive-tutorials/dc-motor/",
+      "anchor": "DC Motor description78–89",
+      "finding": "Simple DC commutator/current reversal supports motor-generator comparison; not every modern motor has this construction."
+    },
+    {
+      "id": "science-magnetism",
+      "url": "https://science.nasa.gov/heliophysics/focus-areas/magnetosphere-ionosphere/",
+      "anchor": "Magnetospheres238–241",
+      "finding": "Existing target explains Earth’s dynamic field, outer core and solar wind. New generator model uses a bar magnet and changing field through a coil, not a reconstruction of Earth’s dynamo."
+    },
+    {
+      "id": "invention-smartphone",
+      "url": "https://www.computerhistory.org/revolution/artifact/1733",
+      "anchor": "Object metadata and Simon combined functions21",
+      "finding": "The related old article’s1990s wording distinguishes no specific prototype/market-year claim here. Phone/computing/other components supply the bridge; this is no complete twelve-card historical re-review."
+    },
+    {
+      "id": "invention-computer",
+      "url": "https://www.computerhistory.org/timeline/computers/",
+      "anchor": "TX-0,281–282 and subsequent transistorized computers",
+      "finding": "Programmable computers use many coordinated components/transistor circuits. A single symbol switch is not a computer. No whole-history priority claim or new statistical content imported."
+    }
+  ],
+  "currentSearchUI": {
+    "build": "3b5326fb29f51c11",
+    "browser": "154.0.8037.57",
+    "views": 12,
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "actualSearchCases": 12,
+    "reportSha256": "e44d25921695cc135396c4bac2bb67d607e6b67ce75327232c9650e2cd8aff41",
+    "offlineActualSearchCases": 6,
+    "offlineReportSha256": "139c3e2c03f47cc95ec86f0dc0b543b648833c1ba6b4176c7e8ea5e92b29a119",
+    "scope": "Three real global-search results selected from world overview and canonical destinations verified at each tested width; repeated in the existing native server-stopped offline helper. All original direct-route/part/model/answer/back-focus/no-learning assertions retained. Final mandatory full proof and actual final Firefox/WebKit remain open."
+  },
+  "integratedBase": "34a0551fe965fc2f341740c8317678534ebf8f6d",
+  "photoPolicyAppliedOn": "2026-10-23",
+  "photoPolicy": "Bestehende Tierbild-Pipeline mit lokalen WebP, genauer Motivprüfung, Urheber/Lizenz/Bearbeitung, sichtbaren Nachweisen und Integritätsmetadaten geprüft. Für weitere Motive andere rechtssichere und technisch erreichbare Quellen verwenden. Keine weitere Wikimediarecherche, Downloads, Freigabe- oder Reparaturversuche; historische Quellen-/Rechtebelege erhalten. Geeignetes Foto bisher nicht zugleich mit geklärten Rechten und technisch verfügbarer Datei integriert; eigene hochwertige Zeichnungen und sinnvolle Funktionsmodelle bleiben. Eigene oder KI-Bilder niemals als echte Fotos bezeichnen.",
+  "postPR56EarlyReview": {
+    "build": "1945360e83504fac",
+    "base": "34a0551fe965fc2f341740c8317678534ebf8f6d",
+    "native": {
+      "status": "passed",
+      "views": 6,
+      "states": 16,
+      "reportSHA256": "d9a65fcbd88c46e73afdd3d22b72d45c74836d1dad7df2aa677a0e9ec703b42c",
+      "imageManifestSHA256": "e4cd9a1bfe36a5b73d28e942ab13157ceb829ddfaeab56deb93e5b998f931d14",
+      "visualReview": "All three current native diagrams at320CSS, both current native models and their320 controls/status actually seen; battery additionally at640CSS. Earlier unchanged diagrams at both widths are recorded separately."
+    },
+    "chronicle": {
+      "status": "passed",
+      "views": 2,
+      "reportSHA256": "9f9dc52e1f917facdb030dc785edc08f63fe96b70e7eff48846fe7a5ca1d9d96",
+      "old51EntriesExactlyPreserved": true
+    },
+    "electricalEarly": {
+      "completedObservedCases": 12,
+      "modelStates": 32,
+      "compositeStatus": "failed",
+      "reportSHA256": "1599ceeeda8b83dddfc94a4a3cd6b370b67847e9e1174b36fea824b05e5d7ca7",
+      "meaning": "All12electrical cases completed with original assertions. Subsequent newly added chronicle helper incorrectly waited for nonexistent journeys-overview selector after successful real navigation; original failed composite report retained. Narrow chronicle-only correction waits for actual journey-hub and passes both widths. No complete composite success or product cause claimed."
+    },
+    "standards": {
+      "unitCases": 188,
+      "releaseCases": 130,
+      "typecheck": true,
+      "lint": true,
+      "chronicleCases": 34
+    },
+    "uiDossiers": "Still historical. verify-content correctly rejects old UI build binding before full acceptance; do not renew flags prematurely. Full final checks remain required."
+  },
+  "localCompleteAcceptance": {
+    "build": "1945360e83504fac",
+    "head": "a6075b8542a3784cfbe3ef34ddc75863f692ec64",
+    "sourceDigest": "e824daa043735fd801a65608cdc4434faad5c4c0871ef0eddb35a9948455e490",
+    "originalReportSHA256": "eeb63539a4576b620dac50b82055d24143e8db19858f3b9310a8a5bd57382f38",
+    "seconds": 1866.2601584870001,
+    "checks": 139,
+    "mandatorySuites": [
+      "foundation",
+      "home",
+      "core",
+      "playground",
+      "backup",
+      "challenge",
+      "research",
+      "journeys",
+      "offline",
+      "no-news"
+    ],
+    "errors": [],
+    "electricalViews": 15,
+    "electricalCold": 3,
+    "electricalOffline": 12,
+    "electricalNativeOffline": 6,
+    "reportCountExplanation": "139 instead of previous landscape140 messages: only one fewer repeated Memory wrong pair rejected message in the randomized round; all other unique descriptions retained, with147→150article shell and139–141→139–144hint-bank extent updated. All required groups/assertions retained.",
+    "reviewImages": {
+      "generated": 1109,
+      "retained": 616,
+      "retainedBytes": 70062549,
+      "unchangedLimit": 150000000
+    }
+  },
+  "ci151IncompleteEvidence": {
+    "originalHead": "f369b3a945b0a8cbc82300bbc67243f56b40b3e2",
+    "runId": 39945717089,
+    "attempt1": {
+      "jobId": 120387757007,
+      "conclusion": "cancelled",
+      "meaning": "55-minute ceiling exceeded during final Firefox phase. Complete Chromium succeeded, final Firefox/WebKit did not complete. No final Quality receipt.",
+      "originalJobLogSHA256": "f378f9fa3bfce529340017e7cb99c971570804bd69524af2ef1ced505913b56f",
+      "artifactId": 12500557516,
+      "systemPackageFetches": [
+        {
+          "megabytes": 25.9,
+          "seconds": 436,
+          "kBPerSecond": 59.5
+        },
+        {
+          "megabytes": 93.1,
+          "seconds": 1023,
+          "kBPerSecond": 91.0
+        }
+      ]
+    },
+    "attempt2": {
+      "jobId": 120411030980,
+      "conclusion": "failure",
+      "meaning": "One bounded unchanged retry after proven slow system package downloads. Failed early WebKit navigation at animal-common-cuttlefish/open search because page/context/browser was already closed. Root cause unproven; not classified as fixed or as necessarily external.",
+      "originalJobLogSHA256": "34d181769a01b18b750c3d158e0b0ac854c9b1332853d3175543cb037b63053a",
+      "artifactId": 12501191849
+    },
+    "next": "Existing failure helper now records bounded lifecycle and resource context. All original actions/assertions/timeouts/gates remain. New exact full CI required, no third unchanged retry."
+  },
+  "lifecycleDiagnosticsLocalOnly": {
+    "build": "1945360e83504fac",
+    "sourceDigestBeforeMetadata": "bdb7d364b7109447db25ddafee9c92a67c24de203fa25d8788ded9897425094e",
+    "earlySearchReportSHA256": "1703db30f8f2482bec752bcc44347b0354a7c2b2aff5a9a1d48288e76b135537",
+    "unitProofSHA256": "0dc477162f65052dc25d19b93ac43c9babd0a315469d9173918da11dd6687e2a",
+    "actualBrowser": "154.0.8037.57",
+    "coveredAnimalIds": 48,
+    "actualJourneySourceViews": 128,
+    "chapters": 80,
+    "unitTests": 190,
+    "meaning": "Local targeted Chromium path and lifecycle recorder regression only. Browser crashes and unavailable resource reads are synthetic unit cases, not reproduced product crashes. Product source and194 application build unchanged. No complete current WebKit or causal fix claimed."
+  }
+}

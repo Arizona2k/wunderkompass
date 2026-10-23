@@ -9,7 +9,7 @@ export type WorldTopic={revision?:number;checkedAt?:string;challenges?:(WorldQue
  animal?:{group:string;habitat:string;continent:string;diet:string;skill:string;size:{min:number;max:number;unit:string;measurement_de:string;text_de:string;kind?:'range'|'upper-bound'|'typical'};protection:{text_de:string;scope:string;checked_at:string}};
  history?:{year:number;date:string;era:string;sensitive:boolean};
  person?:{lifespan:string;field:string;method:string};
- invention?:{year:number;date:string;walkthrough?:boolean;model?:'resolution'|'aperture';stages:{label:string;text:string}[];parts:{id:string;name:string;description:string}[];blueprint:'car'|'plane'|'lamp'|'computer'|'phone'|'printer'|'compass'|'train'|'rocket'|'satellite'|'network'|import('./invention-discovery').DiscoveryKind};
+ invention?:{year:number;date:string;walkthrough?:boolean;model?:'resolution'|'aperture'|'generator'|'transistor';stages:{label:string;text:string}[];parts:{id:string;name:string;description:string}[];blueprint:'car'|'plane'|'lamp'|'computer'|'phone'|'printer'|'compass'|'train'|'rocket'|'satellite'|'network'|import('./invention-discovery').DiscoveryKind};
  building?:{date:string;size:string;height?:number};
 };
 export type WorldEntry=Pick<WorldTopic,'id'|'category'|'title'|'intro'|'aliases'|'locations'|'image'|'model'> & {group?:string;habitat?:string;continent?:string;year?:number;era?:string;date?:string;field?:string;lifespan?:string;sensitive?:boolean};
