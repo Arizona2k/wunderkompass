@@ -22,10 +22,12 @@ export async function learningTaskOfflineSemantics(page,{shots,kind,native=false
   }
   for(const id of journeyIds){
    const[journey,index]=id.split(':'),old=journeyLegacy.entries[id+':2'],q=journeyData.chapters.find(c=>c.id===id).tasks[2],chosen=(old.correct+1)%3;await page.evaluate(({journey,index})=>location.hash='journeys/'+journey+'/'+(Number(index)+1),{journey,index});const box=page.locator('[data-chapter-inquiry="'+id+'"]');await box.getByRole('heading',{name:q.prompt,exact:true}).waitFor();await box.getByText('Deine frühere Auswahl „'+old.answers[chosen]+'“ bleibt gespeichert.',{exact:false}).waitFor();assert.equal((await snapshot(page)).progress.gameSessions['journey:'+journey]['chapter:'+index+':answer:2'],chosen);assert.equal((await snapshot(page)).progress.gameSessions['journey:'+journey]['chapter:'+index+':taskRevision:2'],undefined);await box.getByRole('button',{name:q.answers[chosen],exact:true}).click();await box.locator('.lab-feedback').getByText(q.wrong[chosen],{exact:true}).waitFor();await box.getByRole('button',{name:q.answers[q.correct],exact:true}).click();await box.locator('.lab-feedback').getByText(q.why,{exact:true}).waitFor();await preserve();cases.push({width,kind,native,family:'journey',id,actualCachedAppAfterServerStop:true,oldChoicePreservedUntilExplicitAnswer:true,currentWrongAndCorrectFeedback:true,noRevisionOnLoad:true});
+   // Preserve the original country-feedback capture while that chapter is current.
+   // Additional landscape/climate cases deliberately navigate elsewhere afterward.
+   if(native&&id==='countries:4'){assert.equal(await page.evaluate(()=>location.hash),'#journeys/countries/5');await box.locator('.lab-feedback').scrollIntoViewIfNeeded();await captureNativeViewport(page,path.join(shots,prefix+'-'+width+'.png'));}
   }
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
-  if(native){await page.locator('[data-chapter-inquiry="countries:4"] .lab-feedback').scrollIntoViewIfNeeded();await captureNativeViewport(page,path.join(shots,prefix+'-'+width+'.png'));}
-  else await page.screenshot({path:path.join(shots,prefix+'-'+width+'.png'),fullPage:true});
+  if(!native)await page.screenshot({path:path.join(shots,prefix+'-'+width+'.png'),fullPage:true});
  }
  await page.evaluate(()=>location.hash='globe');await page.locator('.discovery-hero').waitFor();await importFile(page,originalFile);const restored=(await snapshot(page)).progress;for(const key of['gameSessions','notes','favorites','games','labs','journeys','review','settings'])assert.deepEqual(restored[key],original.progress[key],'original cached synthetic pass restored through actual UI: '+key);assert.equal(cases.length,12);return{cases,originalPassRestoredThroughActualUI:true,heardSpeechOrPhysicalDeviceClaim:false};
 }
