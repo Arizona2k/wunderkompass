@@ -1,3 +1,9 @@
+## Belegte lokale Optimierung des bestehenden Zwei-Tab-Passtests ·23.10.2026
+
+WK052: vier vollständige unveränderte Passlebenszyklen im kontrollierten Wechsel Original/aktiviert/aktiviert/Original am selben Appbuildf844379cd05e1174 und Chromium154. Original95,916/99,713Sekunden; ausdrücklich aktivierte Eingabeseite8,821/8,854Sekunden. Sämtliche ursprünglichen Aktionen, Assertions und25-Sekunden-Grenzen bleiben erhalten; vorhandene passive UI-Propagation wird weiterhin vor dem Aktivieren des anderen Tabs geprüft. Nach Entfernen ausschließlich der sieben ergänzten Seitenaktivierungsaufrufe ist der Originalquelltext exakt wiederhergestellt. Ein Kommentar erläutert den begrenzten Zweck.
+
+Diese Änderung verbessert den lokalen Prüfaufwand, keine behauptete App-Ladezeit oder bestimmte ursprüngliche CI-Ursache. Der entsprechende CI155-Teil war bereits in9,73Sekunden fertig; keine entsprechende große CI-Ersparnis extrapolieren. Nur der getrennte Wissenschaftsvorbereitungszweig wurde verändert, der laufende PR59-/Quality156-Kandidat bleibt unverändert. Wissenschafts-Gesamtabnahme und aktuelle tatsächliche Bauwerksbasis stehen weiterhin aus.
+
 ## Gezielter Nachkomma-Regressionstest jetzt tatsächlich abgeschlossen ·23.10.2026
 
 Am Buildf844379cd05e1174 dieselben permanenten Modellguards normal320/Großschrift und1440 sowie bei tatsächlichem200-Prozent-Zoom640/320 ausgeführt. Resonanz0,8 und Pendellänge2,5m behalten nach echtem Reload Eingabe, wissenschaftliche Erklärung, gezeichneten Zustand und gespeicherten Wert; sämtliche übrigen Fortschrittsfelder bleiben gleich. Entsprechender absichtlich auf Reload gekürzter Zustand wird vom selben Guard als0,5statt0,8 erkannt. Keine Wiederherstellung eines unbekannten zuvor verlorenen Bruchwerts behauptet.

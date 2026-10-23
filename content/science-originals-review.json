@@ -1975,5 +1975,42 @@
       ],
       "otherFractionalControls": "Read rate uses its own bounded settings serializer and is retained in the genuine pass comparison; dayHour is local useState, outside saved-game restoration. No blanket old-stock review."
     }
+  },
+  "localBackupTabActivationMeasurement": {
+    "scope": "Four complete existing two-tab backup lifecycle flows on the same local app. Only explicit page activation before real input changes. Inactive-tab UI propagation waits remain before activation; every original assertion, action and timeout retained. No original CI/host cause inferred.",
+    "build": "f844379cd05e1174",
+    "sourceDigest": "f30340c9990c0a6f116fb22efbe845608c9070bb50d05abbf98c10980ebc0234",
+    "browser": "154.0.8037.57",
+    "baselineSHA256": "f17a5ac6676db8b03a13418465e0ae6005b86b9e240c9defbb31313c7788ca3e",
+    "measuredCandidateSHA256": "da0dad96ce5d7bc8172d52cbfdaedfd1e950465cb018e727630b565f23224a34",
+    "finalSourceWithCommentSHA256": "dcf291e9ad310af298f2022e12cfcb171e2acf1cbbbc1322cf66196c757b9373",
+    "reportSHA256": "49f3182c4fcd062363aaaf7040304e97b07f7ce4a48e9e93da3a7aa8a3374c35",
+    "cases": [
+      {
+        "index": 0,
+        "variant": "baseline",
+        "seconds": 95.91618929900001
+      },
+      {
+        "index": 1,
+        "variant": "candidate",
+        "seconds": 8.821004010000005
+      },
+      {
+        "index": 2,
+        "variant": "candidate",
+        "seconds": 8.853806579000011
+      },
+      {
+        "index": 3,
+        "variant": "baseline",
+        "seconds": 99.71335936999999
+      }
+    ],
+    "averageBaselineSeconds": 97.8147743345,
+    "averageActivatedSeconds": 8.837405294500009,
+    "removedAssertionsActionsOrTimeouts": false,
+    "exactOriginalRecoveredAfterRemovingOnlyAddedPageActivationCalls": true,
+    "limits": "Strong local Chromium154 timing benefit, not evidence of the original hosted CI cause or future55-minute completion. Quality155 CI backup already took9.73seconds. Public science full/final native CI remain pending; immutable PR59 candidate unchanged."
   }
 }
