@@ -37,14 +37,16 @@ export function restoreRouteView(path:string,focus=true){
  else focusLearningMain();
 }
 // A user can already be operating the new view before its deferred navigation
-// frame runs. Never steal that focus or scroll position after fresh input.
+// frame runs. Explicit focus can precede the next key/pointer event (including
+// assistive focus and the wayfinder's focus/Enter sequence). Preserve it too.
 export function scheduleRouteRestore(path:string,focus=true){
  let pending=true;
- const detach=()=>{window.removeEventListener('keydown',interact,true);window.removeEventListener('pointerdown',interact,true);};
+ const events=['keydown','pointerdown','focusin'];
+ const detach=()=>{for(const type of events)window.removeEventListener(type,interact,true);};
  const cancel=()=>{if(!pending)return;pending=false;cancelAnimationFrame(frame);detach();};
  const interact=(event:Event)=>{if(event.isTrusted)cancel();};
  const frame=requestAnimationFrame(()=>{if(!pending)return;pending=false;detach();restoreRouteView(path,focus);});
- window.addEventListener('keydown',interact,true);window.addEventListener('pointerdown',interact,true);
+ for(const type of events)window.addEventListener(type,interact,true);
  return cancel;
 }
 export function useHashRoute(restore=true){const first=useRef(true);const path=useSyncExternalStore(subscribe,read,()=> 'globe');useEffect(()=>{if(/^news(?:\/|$)/.test(path)){replaceHash('globe');return;}const initial=first.current;first.current=false;if(!restore||path==='globe'||path==='updates')return;return scheduleRouteRestore(path,!initial||!!history.state?.wunderRoute);},[path,restore]);return path;}

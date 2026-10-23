@@ -14,3 +14,22 @@ export async function preserveEngineDiagnostics(directory,engine){
  }
  return moved;
 }
+
+// Read-only failure context. Missing host/cgroup information never replaces the
+// original browser failure, and these counters do not identify its cause alone.
+export async function readEngineResources(){
+ const os=await import('node:os');const memory={};
+ for(const name of ['memory.current','memory.max','memory.peak','memory.events']){
+  try{memory[name]=(await fs.readFile('/sys/fs/cgroup/'+name,'utf8')).trim();}catch(error){memory[name]={unavailable:error.code??'read-failed'};}
+ }
+ return{hostFreeBytes:os.freemem(),hostTotalBytes:os.totalmem(),nodeMemory:process.memoryUsage(),cgroup:memory};
+}
+export async function observeEngineLifecycle(browser,context,page,position,{readResources=readEngineResources}={}){
+ const events=[],initialResources=await readResources().catch(error=>({unavailable:error.code??'read-failed'}));let stopped=false;
+ const registrations=[[page,'crash','page-crash'],[page,'close','page-close'],[context,'close','context-close'],[browser,'disconnected','browser-disconnected']];
+ const listeners=registrations.map(([emitter,event,kind])=>{const listener=()=>{if(!stopped){events.push({kind,at:new Date().toISOString(),...position()});if(events.length>24)events.shift();}};emitter.on(event,listener);return[emitter,event,listener];});
+ return{
+  async snapshot(){return{events:[...events],lastKnownUrl:page.url(),pageClosed:page.isClosed(),browserConnected:browser.isConnected(),initialResources,resourcesAtFailure:await readResources().catch(error=>({unavailable:error.code??'read-failed'})),meaning:'Observed lifecycle and resource counters only; no automatic product/infrastructure/root-cause classification.'};},
+  stop(){stopped=true;for(const [emitter,event,listener]of listeners)emitter.off(event,listener);}
+ };
+}

@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "34a0551fe965fc2f341740c8317678534ebf8f6d",
+    "commit": "92f3591fb33c7f1109045b504079e41eb8e0fc9a",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -51,7 +51,8 @@
       "4b5299abe130892a19d94654562a3bf3ce361188",
       "016be6147ea2b7dc823c16e88648d63b5d8ab35a",
       "32e3fa133bc84b17595aba2bad79815e2f31478c",
-      "34a0551fe965fc2f341740c8317678534ebf8f6d"
+      "34a0551fe965fc2f341740c8317678534ebf8f6d",
+      "92f3591fb33c7f1109045b504079e41eb8e0fc9a"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -1335,6 +1336,38 @@
           "createdAt": "2026-10-23T10:33:56Z",
           "updatedAt": "2026-10-23T10:33:56Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/H4mC8tqs578CeFoTywfKsq2tLBS5"
+        }
+      ],
+      "checkedOn": "2026-10-23"
+    },
+    {
+      "number": 57,
+      "title": "Batterie, Generator und Transistor verständlich erkunden",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/57",
+      "base": "test-live",
+      "mergedAt": "2026-10-23T13:30:23Z",
+      "mergeCommit": "92f3591fb33c7f1109045b504079e41eb8e0fc9a",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/92f3591fb33c7f1109045b504079e41eb8e0fc9a/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57093790619,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-23T13:30:41Z",
+          "updatedAt": "2026-10-23T13:30:41Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/yaonwzkj6BP3KBBGKf7dn8nwGaUf"
+        },
+        {
+          "id": 57093772703,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-23T13:30:28Z",
+          "updatedAt": "2026-10-23T13:30:28Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/yaonwzkj6BP3KBBGKf7dn8nwGaUf"
         }
       ],
       "checkedOn": "2026-10-23"
