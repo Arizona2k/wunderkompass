@@ -9,8 +9,12 @@ const reveal=async d=>{if(!await d.evaluate(e=>e.open))await d.locator(':scope >
 export async function electricalSourceView(page,{width,shots,engine='chromium',native=false,questions=false}={}){
  const initial=await page.evaluate(()=>location.hash),observed=[];let complete=false;
  try{for(const t of electricalTopics){
-  await page.evaluate(id=>location.hash='world/topic/'+id,t.id);const article=page.locator('.article-inventions');await article.getByRole('heading',{name:t.title,exact:true}).waitFor();const question=article.locator('.world-mini-question');await question.waitFor();
   const learned=()=>page.evaluate(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),t.id),before=await learned();
+  await page.evaluate(id=>location.hash='world/topic/'+id,t.id);const article=page.locator('.article-inventions');await article.getByRole('heading',{name:t.title,exact:true}).waitFor();const question=article.locator('.world-mini-question');await question.waitFor();
+  await page.evaluate(()=>location.hash='world');await page.locator('.world-view .world-choice').first().waitFor();
+  await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('dialog').locator('input').fill(t.title);
+  await page.locator('[role="option"][data-value="topic:'+t.id+'"]').click();await page.getByRole('dialog').waitFor({state:'hidden'});
+  await article.getByRole('heading',{name:t.title,exact:true}).waitFor();await question.waitFor();assert.equal(new URL(page.url()).hash,'#world/topic/'+t.id,'actual new electrical search result opens its own canonical route');
   for(const d of await article.locator('.world-short details').all())await reveal(d);
   for(const text of [t.learning.starter,t.learning.observe,t.learning.benefit])await article.locator('.world-short').getByText(text===t.learning.benefit?'Warum hilft dir das? '+text:text,{exact:true}).waitFor();
   await reveal(article.locator('.world-more'));for(const text of t.more)await article.locator('.world-more').getByText(text,{exact:true}).waitFor();
@@ -44,6 +48,6 @@ export async function electricalSourceView(page,{width,shots,engine='chromium',n
    if(t.invention.model){const model=article.locator('[data-invention-experiment]');await model.locator('svg').scrollIntoViewIfNeeded();await captureNativeViewport(page,path.join(shots,'electrical-native-model-'+engine+'-'+t.id+'-'+width+'.png'));await model.locator('[data-invention-result]').scrollIntoViewIfNeeded();await captureNativeViewport(page,path.join(shots,'electrical-native-controls-'+engine+'-'+t.id+'-'+width+'.png'));}
   }
   for(const id of t.related){const target=catalog.find(topic=>topic.id===id);assert.ok(target);assert.ok(target.related.includes(t.id),'reciprocal target');const focus='world-connection-'+t.id+'-'+id,link=page.locator('[data-route-focus="'+focus+'"]');await link.focus();await page.keyboard.press('Enter');await page.locator('#world-topic-title').getByText(target.title,{exact:true}).waitFor();await page.locator('.world-mini-question').waitFor();assert.equal(new URL(page.url()).hash,'#world/topic/'+id);await page.goBack();await article.getByRole('heading',{name:t.title,exact:true}).waitFor();await page.waitForFunction(focus=>document.activeElement?.dataset.routeFocus===focus,focus);}
-  observed.push({id:t.id,width,native,readingLevels:true,sixStages:true,keyboardParts:t.invention.parts.length,realModelStates:states,questionsChecked:questions,sourceLinks:true,noAutomaticLearningMark:true,relatedTargetsAndBackFocus:t.related});
+  observed.push({id:t.id,width,native,readingLevels:true,sixStages:true,keyboardParts:t.invention.parts.length,realModelStates:states,questionsChecked:questions,sourceLinks:true,actualSearch:true,directRoute:true,noAutomaticLearningMark:true,relatedTargetsAndBackFocus:t.related});
  }assert.equal(observed.length,3);complete=true;return observed;}finally{if(complete)await page.evaluate(hash=>location.hash=hash,initial);}
 }

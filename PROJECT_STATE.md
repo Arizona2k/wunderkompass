@@ -1,3 +1,9 @@
+## Elektrische Folgearbeit · tatsächlicher Suchweg online und offline ·23.10.2026
+
+Am unveränderten Appbuild3b5326fb29f51c11 die echten globalen Suchtreffer der drei vorbereiteten Karten von der Weltübersicht aus geöffnet:12Fälle an320groß/390/768/1440 mit kanonischer Zielroute bestanden. Vorhandene Direktrouten-, Teile-, Modell-, Antwort-, Rückfokus- und Nicht-Lernstempelassertions vollständig erhalten. Neuer Suchweg danach im gesamten bestehenden nativen Offline-Resilienzhelfer nach tatsächlichem Serverstopp erneut bestanden: sechsElektrosuchfälle, zwölfalte Lernaufgabenfälle und vollständige Originalpasswiederherstellung. Diese gezielten Nachweise samt Hashes stehen in content/electrical-originals-review.json; sie ersetzen keine gesamte Pflichtabnahme.
+
+Drei fachliche Dossierentwürfe nur privat unter work/ vorbereitet, UI-Freigabefelder ausdrücklichfalse; bestehende56Dossiers weiterhinhistorisch am Landschaftsbuild. Erst nach tatsächlichem56Release/Basis-/Chronikabgleich und natürlichem Vollgrün aktuelleUI-Nachweise binden. PR56/Quality150 ist separat in abschließenderEngineprüfung; kein parallelerRelease-PR oder Gesamtmerge.
+
 ## Elektrische Folgearbeit · native Aufnahme und Offlinegegenprobe geprüft ·23.10.2026
 
 Unveränderter Appbuild3b5326fb29f51c11: korrigierte native200%-Gegenprobe mit großerAppschrift an640/320CSS-Pixeln und gemessenemDPR2 grün, sechsKartenansichten/16Modellzustände. DreiPläne und beideModelle anbeidenBreiten tatsächlich angesehen;25Originalbilder gehasht. Erster nativer Funktionslauf hatte zwei versetzte/leere zusätzliche Locatoraufnahmen; Originale erhalten, durch bestehende native Viewportaufnahme mit Nichtleerheitsprüfung und getrennten Diagramm-/Bedienbildern ursächlich korrigiert. Eine erste zu breiteSVG-Auswahl wurde anhand der tatsächlichen Dekoicons eingegrenzt; Fehlerbericht erhalten. Danach gleicher vollständiger gezielter Helfer grün.
