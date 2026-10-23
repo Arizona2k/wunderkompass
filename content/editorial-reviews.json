@@ -17192,7 +17192,7 @@
     },
     {
       "id": "topics-inventions:invention-3d-printing",
-      "dataHash": "b85a0787ee8c06ebff05ac53b2ade0df27fe0a0efdd8ffbb0a1029e14f332e21",
+      "dataHash": "c5e95699431a565e7799196b9b5f0d220611024aa7556e035b4bbd49e866b326",
       "goal": "Du verstehst räumliche Entwürfe, prüfst Modellgrenzen und erkennst den Unterschied zwischen einem Anschauungsmodell und einem geprüften Ersatzteil.",
       "explanation": "Beim additiven Herstellen wird Material gezielt aufgebaut. Eine Fräse arbeitet anders: Sie nimmt Material von einem Ausgangsstück weg. Verschiedene 3D-Druckverfahren nutzen beispielsweise Kunststoff, Metall oder Keramik. Nicht jedes Verfahren schmilzt einen Kunststofffaden.",
       "example": "Ordne drei selbst gezeichnete Querschnitte zu einem Stapel. Sage voraus, welche Form daraus entsteht, und vergleiche mit der Seitenansicht. Ändere eine mittlere Schicht. Keine heißen Düsen, Harze, Pulver oder Laser selbst bedienen.",
@@ -17266,7 +17266,8 @@
       "mediaDecision": "Geeignete echte Fotos bevorzugt; geprüfte institutionelle Kandidaten bisher technisch nicht vollständig verfügbar. Eigene gekennzeichnete Funktionsgrafik bleibt ergänzend erhalten. Historische Quellen-/Rechtebelege unverändert.",
       "links": [
         "topics-inventions:invention-computer",
-        "topics-inventions:invention-printing"
+        "topics-inventions:invention-printing",
+        "topics-buildings:building-lalibela"
       ],
       "ui": {
         "build": "8a11928c4f2e800c",
@@ -17303,7 +17304,12 @@
         "back": true,
         "offline": true,
         "report": ".qa-output/portable-report.json SHA256=cbb073546c406bc4c6cb42877e4858c1dbdc693351b1e1e6ef89697c94ba4204; complete mandatory local Chromium154 acceptance at immutable 4efaa81db3023114ac9fd89f36a49f726b2c5329 / source a803ee8616abdbaaac98f35d4fc7644d1b946b45e160eb850d32ce53353383bd. Includes all16 ordinary/controlled photo-category Back cases, all49 photographs/98rights views, the exact original people-source focus assertion,8explicit-focus-before-Enter cases with untouched and untrusted controls,4prior route-focus cases, full six-invention/cold/ordinary/native offline and original personal-pass regression. UI metadata binding only afterward; prior factual dossiers and every history retained. Exact final integration Firefox/WebKit/Chromium CI and deployment remain separate."
-      }
+      },
+      "dataHashBeforeBuildingLink20261023": "b85a0787ee8c06ebff05ac53b2ade0df27fe0a0efdd8ffbb0a1029e14f332e21",
+      "linksBeforeBuildingLink20261023": [
+        "topics-inventions:invention-computer",
+        "topics-inventions:invention-printing"
+      ]
     },
     {
       "id": "topics-inventions:invention-sewing-machine",
@@ -20975,5 +20981,22 @@
     "buildingNative200StoppedServerCachedViews": 16,
     "existingSixInventionColdViews": 6,
     "meaning": "Natural current complete local success. No cold-new-browser eight-building scope, original CI artifact, independent scientific/human approval or actual deployment invented. Exact final CI/release/actual postflight still open."
+  },
+  "buildingLinkDossierScope20261023": {
+    "id": "topics-inventions:invention-3d-printing",
+    "deliveredSourceCommit": "74ae838204d71857344e6fa6d00264b1537270f2",
+    "oldDataHash": "b85a0787ee8c06ebff05ac53b2ade0df27fe0a0efdd8ffbb0a1029e14f332e21",
+    "currentDataHash": "c5e95699431a565e7799196b9b5f0d220611024aa7556e035b4bbd49e866b326",
+    "oldRelated": [
+      "invention-computer",
+      "invention-printing"
+    ],
+    "related": [
+      "invention-computer",
+      "invention-printing",
+      "building-lalibela"
+    ],
+    "allOtherFactualFieldsDeepEqual": true,
+    "meaning": "Only the already reviewed reciprocal Lalibela/additive-versus-subtractive material connection changes the serialized topic hash. Original hash and dossier links preserved; no other factual statement or previous answer changed."
   }
 }
