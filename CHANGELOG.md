@@ -1,3 +1,15 @@
+## Lokal vollständig geprüft · sechs erhaltene Erfindungsoriginale
+
+Kühlschrank, Fahrrad, Aufzug, Seismograf,3D-Druck und Nähmaschine mit sechs eigenen Funktionsplänen, zwei qualitativen Modellen, passenden Hinweisen und neun erklärten beidseitigen Wissenswegen integriert. Zwölf plausible Fehlalternativen und unterscheidbare Denkhandlungen; gekoppelte Aufzugsgeometrie, präzise Gewichtskraft und lesbare Lastwegerklärung im betroffenen alten Bauwerksmodell. Vorherige150Themen bis auf neun benannte Rückverweise,180Weltfragen,18Technik-/24Zeitaufgaben und Passzustände erhalten. Eigene Darstellungen klar gekennzeichnet, keine ungeprüften Fotos.
+
+Vollständige lokale Pflichtabnahme am unveränderten2db3961/Build09ff0e92c786c038 erfolgreich:140Meldungen in zehn Pflichtgruppen mit30normalen/6kalten/24Offline-/12nativenOfflineansichten. Erst danach59alteUI-Belege mit Historie erhalten und sechs individuelle Fachdossiers ergänzt. Endgültige Drei-Engine-CI und tatsächliche Auslieferung dieses Sechserstands bleiben offen. Im gleichen regulären Abschnitt bestätigten PR57 als53.Chronikeintrag nachgeführt; alle52Vorgänger unverändert.
+
+## Tatsächlich bestätigt · elektrischer Abschnitt PR57
+
+Finaler6262073 bestand Quality152 mit echten Chromium-/Firefox-/WebKit-Prüfungen und frischer unveränderter Readiness. Normaler Merge92f3591 am23.10.13:30:23UTC mit exakt gleichem Integrationsbaum, Vercel57093790619 um13:30:41UTC und tatsächlicher Online-/Passnachtest erfolgreich. Zusätzlicher44Datei-Bytevergleich gegen späteren kontrollierten lokalen626-Nachbau mit Node24.19, ausdrücklich kein Bytevergleich mit gesichertem CI-Artefakt. Zuvor151am55-Minuten-Limit beziehungsweise unerwartet geschlossener WebKit-Seite fehlgeschlagen; deren Ursache bleibt ungeklärt, keine Dauerbehebung aus152grün behauptet.
+
+## Historischer Stand vor diesen bestätigten Ergebnissen · Original erhalten
+
 ## Lokal vollständig geprüft · Batterie, Generator und Transistor
 
 Drei erhaltene Originalmanuskripte mit drei eigenen Funktionszeichnungen, zwei qualitativen Modellen, individuellen Lernhilfen und neun erklärten beidseitigen Wissenswegen integriert. Chemische Energiespeicherung, Induktion und getrennte Steuerung/Versorgung werden nachvollziehbar unterschieden. Die alten147Themen bisaufneun Rückverweise,177Weltfragen,15Technikspiel- und24Zeitspielaufgaben sowie gespeicherte Fortschritte erhalten. Keine neue Speicherstruktur. Eigene Darstellungen als solche gekennzeichnet; keine ungeprüften Fotos übernommen.
