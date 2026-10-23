@@ -1284,7 +1284,9 @@
         "whyItMatters": "Du beschreibst Landschaft als Ergebnis von Vorgängen, statt nur als fertiges Bild.",
         "observe": "Vergleiche ein Gebirge und einen Vulkan auf der Naturkarte. Nenne einen möglichen Bildungsprozess und sage, welche Information das Bild allein nicht beweist.",
         "sourceIds": [
-          "landscapes-base"
+          "landscapes-base",
+          "landscapes-mountains",
+          "landscapes-height-rule"
         ]
       },
       {
@@ -1296,7 +1298,9 @@
         "whyItMatters": "Du kannst Wasserbewegung mit einer Veränderung der Landschaft verbinden.",
         "observe": "Zeichne an einem gedachten Fluss je eine Stelle für Abtragen und Ablagern. Erkläre, warum beide Vorgänge zur selben Landschaftsgeschichte gehören können.",
         "sourceIds": [
-          "landscapes-base"
+          "landscapes-base",
+          "landscapes-erosion",
+          "landscapes-river-discharge"
         ]
       },
       {
@@ -1308,7 +1312,8 @@
         "whyItMatters": "Du lernst, Bezeichnungen an Merkmalen zu überprüfen.",
         "observe": "Finde einen See und ein mit dem Ozean verbundenes Meer auf der Karte. Beschreibe die Wasserverbindungen beider, statt nur ihre Namen abzulesen.",
         "sourceIds": [
-          "landscapes-base"
+          "landscapes-base",
+          "landscapes-caspian"
         ]
       },
       {
@@ -1320,7 +1325,10 @@
         "whyItMatters": "Du kannst eine überraschende Einordnung mit einer klaren Zähl- oder Messregel begründen.",
         "observe": "Vergleiche Sahara und Antarktika. Stelle zwei verschiedene Rekordfragen und erkläre, weshalb ihre Antworten unterschiedlich sein können.",
         "sourceIds": [
-          "landscapes-base"
+          "landscapes-base",
+          "nature-dry-deserts",
+          "nature-antarctic-precipitation",
+          "climate-biome-regions"
         ]
       },
       {
@@ -1383,7 +1391,8 @@
         "whyItMatters": "Du verbindest ein einfaches Flächenmodell mit einer Erklärung für die Erde.",
         "observe": "Vergleiche im Jahreszeitenmodell einen steilen und einen flachen Lichteinfall. Beschreibe Fläche und Tagesdauer getrennt.",
         "sourceIds": [
-          "climate-base"
+          "climate-base",
+          "seasons-base"
         ]
       },
       {
@@ -1395,7 +1404,9 @@
         "whyItMatters": "Du kannst Pflanzenwelten mit mehreren Bedingungen statt nur einem Merkmal erklären.",
         "observe": "Vergleiche zwei tropische Beispielorte auf der Vegetationskarte. Nenne eine Gemeinsamkeit und eine begründete Unterschiedsfrage zum Wasserangebot.",
         "sourceIds": [
-          "climate-base"
+          "climate-base",
+          "nature-rainforest-types",
+          "climate-biome-regions"
         ]
       },
       {
@@ -1408,7 +1419,9 @@
         "observe": "Vergleiche Wald und Tundra auf der Karte. Beschreibe sichtbare Pflanzenformen und markiere, welche weiteren Bedingungen die Karte nicht zeigt.",
         "sourceIds": [
           "climate-base",
-          "weather-climate"
+          "weather-climate",
+          "climate-tundra",
+          "climate-biome-regions"
         ]
       },
       {
@@ -1421,7 +1434,8 @@
         "observe": "Wähle eine Art aus der Tierwelt. Erkläre eine passende Schutzidee mit einem Bedürfnis der Art; beobachte Tiere nur mit Abstand.",
         "sourceIds": [
           "climate-base",
-          "weather-climate"
+          "weather-climate",
+          "nature-habitat-needs"
         ]
       }
     ],

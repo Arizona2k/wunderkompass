@@ -1,4 +1,27 @@
-## Aktuelle vollständige technische Lokalabnahme · 22.10.2026
+## Landschaft/Klima · kontrollierte Integration und KI-Gegenprüfung ·23.10.2026
+
+Die drei erhaltenen Produktcommits18206bd/619fa69/47628cb wurden auf den tatsächlich ausgelieferten PR55-Merge32e3fa1 übernommen. Zehn vorhandene Originalkapitel, acht ausdrücklich rekonstruierte eigene Erklärgrafiken und zehn bessere schwere Aufgaben bleiben erhalten. Keine neuen Reisen oder Themen gezählt. Frühere50/48/56-Teilnachweise sind historische Dokumentation; ihre privaten Originalberichte waren in dieser Umgebung nicht auffindbar und werden nicht als neue Abnahme ausgegeben.
+
+Fachliche und pädagogische Gegenprüfung: Codex/KI, keine unabhängige menschliche Abnahme. Alle zehn Volltexte samt Einstieg/Vertiefung/Beobachtungsauftrag, Aufgabenoptionen, Hinweisen und individuellen Rückmeldungen kritisch gegengelesen. Die bereits richtigen Lösungsstrings/Indizes bleiben exakt; die230 übrigen Aufgaben und70 übrigen Kapitel bleiben als Daten unverändert. Die zehn neuen Kompatibilitätseinträge ergänzen die vier bereits ausgelieferten. Falsche frühere Auswahlen dürfen nicht nachträglich als andere Antwort ausgelegt werden, Laden darf keinen Erfolg erzeugen.
+
+Die folgenden Originalquellen wurden am23.10.2026 über den verfügbaren Webzugang tatsächlich gelesen. Die präzisen Links/Beleggrenzen stehen in `app/journey-sources.json`; allgemeine NASA-/NPS-Übersichten sind allein kein Beleg jeder Aussage. Quellenverweise ergänzt, vorhandene Manuskripttexte erhalten.
+
+| Kapitel | Fach-/Didaktikbefund und gelesener Beleg | Grafik-/Aufgabengrenze |
+| --- | --- | --- |
+| landscapes:0 | NPS Mountain Building unterscheidet tektonische/vulkanische Gebirge; NOAA highestpoint unterscheidet Messbezüge. Keine alte exakte Everest-Höhe oder pauschale Sternentfernung übernommen. | Gleiche Messregel statt bloßer Zahlenvergleich; ursprüngliche richtige Antwort erhalten. |
+| landscapes:1 | NPS Erosion/Rivers and Streams: Transport/Ablagern; NASA-Flussstudie trennt Speicherung und Abfluss. Keine Flusslängenrangliste oder aktuelle Abflusszahl behauptet. | Gefälle/Materialpunkte sind Schema; die zwei Zahlenreihen der Aufgabe sind ausdrücklich erfunden. |
+| landscapes:2 | NASA Caspian Sea, Absatz Zufluss/fehlender Abfluss/Verdunstung/Salz gelesen. Gewässername und Salz beweisen keine Ozeanverbindung. Historischer2010-Artikel belegt keine aktuelle Wasserstandsmessung. | Gestrichelter Abfluss ist eine Möglichkeit, kein notwendiger Bestandteil aller Seen. |
+| landscapes:3 | NASA Desert und USGS Saharan Region: geringe Niederschläge, auch Kies/Fels; Australian Antarctic Program Precipitation: trockenes Inland und feuchtere Küsten. | Zwei gleich große Beispielbilder sind kein Flächenvergleich; gespeichertes Eis ist kein heutiger Niederschlag. |
+| landscapes:4 | NPS Glaciers and Glacial Landforms: bewegtes Eis, Materialtransport/Talformung und Gebirgsgletscher. | Gletscher auf Land und schwimmender Eisberg getrennt; Fließen ist nicht dasselbe wie Wachstum. |
+| climate:0 | NOAA Wetter/Klima: unterschiedliche Zeiträume, langfristige Muster. | Ein kühler Tag widerlegt kein langfristiges Sommermuster; weder zwei Tage noch ein Mittelwert beschreiben alles. |
+| climate:1 | NASA Space Place Seasons: direkter/schräger Lichteinfall; bekanntes Modell mit eigenen geometrisch prüfbaren Bündeln. | Gleiche Bündelbreite senkrecht zu Strahlen; Tagesdauer/Atmosphäre nicht aus dem Flächenmodell ableiten. |
+| climate:2 | NASA Rainforest Description und USGS Sudanian Region: tropischer Regenwald, Trockenzeit, regionale Übergänge. | Zwölf erfundene Monatsbalken mit gleicher Jahressumme; weder Messdaten noch hinreichende Vegetationsklassifikation. |
+| climate:3 | NASA Tundra Vegetation/Description und USGS Regions: kurze Wachstumszeit, niedrige Pflanzen; Wasser/Boden/Nutzung wirken mit. | Gleiche Temperatur garantiert keine gleichen Pflanzen; keine universellen Grenzwerte übernommen. |
+| climate:4 | NPS Basics of Habitat: passende Nahrung/Wasser/Schutz und artspezifische Bedingungen. | Bedingte Vielfaltwirkung ist keine Garantie gegen jede Belastung; Trockenheitsbeispiel als logischer Gegenvergleich, keine quantitative Resilienzprognose. |
+
+Eigene SVG-Modelle mit lesbaren HTML-Schlüsseln, individuellen Modellgrenzen und bestehenden Original-Reisebildern erhalten. Keine fremden Fotos kopiert oder neue Medienrechte behauptet. Bestehende gegenseitige Karten-/Kapitelwege, Beobachtungsaufträge, Direktadressen und Schema3 wiederverwenden. Neue präzise Quellen ergänzen die vorhandenen Belege, ohne deren frühere Prüfzeitpunkte umzudatieren. Aktuelle tatsächliche Browser-/Offline-/Gesamtergebnisse werden erst nach den jeweiligen Läufen in PROJECT_STATE eingetragen.
+
+## Historische vollständige technische Lokalabnahme · 22.10.2026
 
 Die im vorhandenen Lernabschnitt geänderten 20 Kapitel und gemeinsamen Funktionen haben die vollständige unveränderte lokale Pflichtregression bestanden. Originalbericht /workspace/work/wk-continuation/coordinated-learning-c84402e-full-local-originals-20261021/portable-report.json SHA256 13aa0fc480ae7f7e544735c06576671a37cc185f8c5223fa1762e9cd81987a7d. Alle zehn Gruppen sowie alte Speicher-, Offline-, Quellen-, Such-/Rückweg- und Zugänglichkeitsprüfungen erhalten; UI-Bindung erst danach. Frühere einzelne Quellen-/Fachgegenlesen bleiben an ihren tatsächlichen Lesungen/Builds; keine neue wissenschaftliche Garantie, Hör- oder physische Geräteprüfung. Aktuelles exaktes finales CI, frische Freigabe und tatsächliche Testauslieferung weiterhin erforderlich.
 

@@ -1349,7 +1349,9 @@
         "title": "Berge wachsen langsam",
         "text": "Wenn Platten zusammenstoßen, kann Gestein gefaltet und gehoben werden.",
         "sourceIds": [
-          "landscapes-base"
+          "landscapes-base",
+          "landscapes-mountains",
+          "landscapes-height-rule"
         ],
         "textFields": [
           "starter",
@@ -1362,7 +1364,9 @@
         "title": "Wasser trägt Gestein ab",
         "text": "Flüsse fließen durch die Landschaft.",
         "sourceIds": [
-          "landscapes-base"
+          "landscapes-base",
+          "landscapes-erosion",
+          "landscapes-river-discharge"
         ],
         "textFields": [
           "starter",
@@ -1375,7 +1379,8 @@
         "title": "Ein See bleibt im Land",
         "text": "Seen sammeln Wasser in Vertiefungen.",
         "sourceIds": [
-          "landscapes-base"
+          "landscapes-base",
+          "landscapes-caspian"
         ],
         "textFields": [
           "starter",
@@ -1388,7 +1393,10 @@
         "title": "Trocken, nicht immer heiß",
         "text": "Eine Wüste bekommt sehr wenig Niederschlag.",
         "sourceIds": [
-          "landscapes-base"
+          "landscapes-base",
+          "nature-dry-deserts",
+          "nature-antarctic-precipitation",
+          "climate-biome-regions"
         ],
         "textFields": [
           "starter",
@@ -1454,7 +1462,8 @@
         "title": "Sonnenenergie auf der Kugel",
         "text": "Nahe dem Äquator trifft Sonnenlicht im Jahreslauf steiler auf.",
         "sourceIds": [
-          "climate-base"
+          "climate-base",
+          "seasons-base"
         ],
         "textFields": [
           "starter",
@@ -1467,7 +1476,9 @@
         "title": "Regenwald oder Savanne?",
         "text": "In warmen, sehr feuchten Gebieten können tropische Regenwälder wachsen.",
         "sourceIds": [
-          "climate-base"
+          "climate-base",
+          "nature-rainforest-types",
+          "climate-biome-regions"
         ],
         "textFields": [
           "starter",
@@ -1481,7 +1492,9 @@
         "text": "In vielen gemäßigten Regionen wachsen Wälder.",
         "sourceIds": [
           "climate-base",
-          "weather-climate"
+          "weather-climate",
+          "climate-tundra",
+          "climate-biome-regions"
         ],
         "textFields": [
           "starter",
@@ -1495,7 +1508,8 @@
         "text": "Tiere brauchen Nahrung, Wasser und Schutz.",
         "sourceIds": [
           "climate-base",
-          "weather-climate"
+          "weather-climate",
+          "nature-habitat-needs"
         ],
         "textFields": [
           "starter",
