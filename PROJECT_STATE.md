@@ -1,3 +1,13 @@
+## Erhaltungsabgleich WK054 und gezielter nativer Offlinebeleg ·23.10.2026
+
+Zusätzlich konkret im bereits erreichbaren Masterd97dddab erhalten: app/book-content.json mit180Wörtern/60Warum-Fragen und je180/60Lernteilen, app/nature-content.json mit68Naturerklärungen sowie die zugehörigen Warum-Lernteile. Alle90bisherigen Wortidentitäten und30bisherigen Frageidentitäten sind enthalten;34bisherige Naturidentitäten passen in die68Facherklärungen. Die sechs alten Tierprojektionen sind ein eigener Bestand und werden nicht zusätzlich als neue Tierarten oder Naturerklärungen gezählt. Alle drei genauen Originaldateien aus einer getrennt wiederhergestellten Quellsicherung gelesen und byteweise mit den Gitfassungen verglichen. Hashes/Umfang in content/invention-originals-review.json. Damit sind diese benannten öffentlichen Originalfassungen vollständig erreichbar; ihre aktuelle Integration/Fachabnahme und unbekannte frühere private Deltas sind dadurch nicht bewiesen. Vor WK054-Ausbau diese Originale mit dem tatsächlich ausgelieferten Stand abgleichen.
+
+Der vorbereitete Sechser-Erfindungsstand559c836 hat zudem am unveränderten Build5ce4666517fad155 den vollständigen bestehenden gezielten nativen Offline-Resilienzhelfer bestanden:12mechanische/6elektrische Inhaltsansichten,12alte Lernaufgabenfälle, tatsächlicher Serverstopp/Reload/Quota und vollständige Originalpasswiederherstellung über die Oberfläche. Originalquelle2f327436919deee069a6128764a609100e60f56a94fbb2fbc246901f57d6b6ff, Bericht SHA256f4d154f659318b8b72a9cb2a074f3e26fc2801d1d5c4c828867d47316625ee29. Dieser Teilnachweis ersetzt weder aktuelle gesamte Pflichtregression noch die tatsächlichen finalenFirefox/WebKit-Prüfungen. Nachträgliche Metadaten ändern nicht den Originalnachweis.
+
+PR57/Quality151 läuft am separaten f369b3a weiter unverändert; keine elektrische Veröffentlichung oder zweiter Release-PR. Source-/Rechte-/Bildentscheidung und offene frühere private Erhaltungsgrenze bleiben erhalten.
+
+## Historischer Stand vor diesem zusätzlichen Bestandsabgleich · Original erhalten
+
 ## Erhaltene weitere Erfindungsmanuskripte · getrennte Vorbereitung ·23.10.2026
 
 Die drei elektrischen Originale bleiben der vorrangige Lieferabschnitt: vollständige lokale Abnahme am unveränderten a6075b8 erfolgreich, nachträgliche UI-/Statusmetadaten unter f369b3a gesichert, PR57/Quality151 läuft unverändert. Kein zweiter Release-PR. Dieser getrennte Folgestand basiert noch auf dem vorherigen Codecheckpointa6075b8; nach tatsächlicher57-Auslieferung mit deren wirklichem Merge und den59Dossierbelegen kontrolliert abgleichen.
