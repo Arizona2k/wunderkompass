@@ -1,0 +1,60 @@
+{
+  "sourceCommit": "a6075b8542a3784cfbe3ef34ddc75863f692ec64",
+  "sourceMaster": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+  "newIds": [
+    "invention-refrigerator",
+    "invention-bicycle",
+    "invention-elevator",
+    "invention-seismograph",
+    "invention-3d-printing",
+    "invention-sewing-machine"
+  ],
+  "oldTopics": 150,
+  "oldCatalogSHA256": "a1a68aa0c33aae8e3ede1abbcc0d82a9eb9c98965b23cf325487dd63f1d7c504",
+  "originalCorrectAnswers": {
+    "invention-refrigerator": {
+      "correct": 0,
+      "answer": "Nein, das Gerät gibt die transportierte Wärme und seine Betriebsenergie an den Raum ab"
+    },
+    "invention-bicycle": {
+      "correct": 0,
+      "answer": "Kettenblatt, Kette und hinteres Zahnrad"
+    },
+    "invention-elevator": {
+      "correct": 0,
+      "answer": "Eine gefährliche Abwärtsbewegung im Störungsfall bremsen"
+    },
+    "invention-seismograph": {
+      "correct": 0,
+      "answer": "Die aufgezeichnete Bodenbewegung an einer Messstation"
+    },
+    "invention-3d-printing": {
+      "correct": 0,
+      "answer": "Material nach einem Entwurf aufbauen"
+    },
+    "invention-sewing-machine": {
+      "correct": 0,
+      "answer": "Nadel und Schiffchen verbinden zwei Fäden"
+    }
+  },
+  "originalManuscriptSHA256": {
+    "invention-refrigerator": "3c36acda0bddf1bb04bca4f9d5c7070995198c8bdb3ec77c175338b4024e3c53",
+    "invention-bicycle": "8f72f2eaa1c6084b25c720c00e5a9ec52f812b0bf76bfc7bc7a08ea9debf42c2",
+    "invention-elevator": "6751123127a54c08880573bb95140de7ff3648d84797708875effabcd15e318c",
+    "invention-seismograph": "0faba30feba6e7a2217144ece93b9c85c0f7b9ea2a4576a0faa3cf5139161a2e",
+    "invention-3d-printing": "5fda1264599ec1370a2f5334d238ff8c5c7085005e9a2b8025fd3964c364c523",
+    "invention-sewing-machine": "91f7ef2c2ce1b78728c55ebcd9563e939fc1b7ec747c13ebe49909207bfbc4dd"
+  },
+  "oldChallengeQuestions": {
+    "count": 180,
+    "sha256": "e6b9ce901214ddf9ab37e5617edc7fc3d5b6f76a8f5c107a6bb2c5d8fb71fb20"
+  },
+  "oldTechnologyTasks": {
+    "count": 18,
+    "sha256": "dc694c7309cb259c61d92c515d8cd2277368e77cc17333ee2733d5b7a62008a6"
+  },
+  "oldChronologyTasks": {
+    "count": 24,
+    "sha256": "619c3f691d061b48018e73f1085878f16a026e4c2e32bef8aee338abaabc16cb"
+  }
+}

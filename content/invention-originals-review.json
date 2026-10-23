@@ -1,0 +1,956 @@
+{
+  "schemaVersion": 1,
+  "meaning": "Selective preparation of six already retained manuscripts, six own diagrams and two models on the separately frozen electrical source. No release, full acceptance, complete invention-family review or recovery of inaccessible local work claimed.",
+  "sourceMaster": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+  "preparedBase": "a6075b8542a3784cfbe3ef34ddc75863f692ec64",
+  "independentReview": false,
+  "integratedManuscriptIds": [
+    "invention-refrigerator",
+    "invention-bicycle",
+    "invention-elevator",
+    "invention-seismograph",
+    "invention-3d-printing",
+    "invention-sewing-machine"
+  ],
+  "preservation": {
+    "sourceCommit": "a6075b8542a3784cfbe3ef34ddc75863f692ec64",
+    "sourceMaster": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+    "newIds": [
+      "invention-refrigerator",
+      "invention-bicycle",
+      "invention-elevator",
+      "invention-seismograph",
+      "invention-3d-printing",
+      "invention-sewing-machine"
+    ],
+    "oldTopics": 150,
+    "oldCatalogSHA256": "a1a68aa0c33aae8e3ede1abbcc0d82a9eb9c98965b23cf325487dd63f1d7c504",
+    "originalCorrectAnswers": {
+      "invention-refrigerator": {
+        "correct": 0,
+        "answer": "Nein, das Gerät gibt die transportierte Wärme und seine Betriebsenergie an den Raum ab"
+      },
+      "invention-bicycle": {
+        "correct": 0,
+        "answer": "Kettenblatt, Kette und hinteres Zahnrad"
+      },
+      "invention-elevator": {
+        "correct": 0,
+        "answer": "Eine gefährliche Abwärtsbewegung im Störungsfall bremsen"
+      },
+      "invention-seismograph": {
+        "correct": 0,
+        "answer": "Die aufgezeichnete Bodenbewegung an einer Messstation"
+      },
+      "invention-3d-printing": {
+        "correct": 0,
+        "answer": "Material nach einem Entwurf aufbauen"
+      },
+      "invention-sewing-machine": {
+        "correct": 0,
+        "answer": "Nadel und Schiffchen verbinden zwei Fäden"
+      }
+    },
+    "originalManuscriptSHA256": {
+      "invention-refrigerator": "3c36acda0bddf1bb04bca4f9d5c7070995198c8bdb3ec77c175338b4024e3c53",
+      "invention-bicycle": "8f72f2eaa1c6084b25c720c00e5a9ec52f812b0bf76bfc7bc7a08ea9debf42c2",
+      "invention-elevator": "6751123127a54c08880573bb95140de7ff3648d84797708875effabcd15e318c",
+      "invention-seismograph": "0faba30feba6e7a2217144ece93b9c85c0f7b9ea2a4576a0faa3cf5139161a2e",
+      "invention-3d-printing": "5fda1264599ec1370a2f5334d238ff8c5c7085005e9a2b8025fd3964c364c523",
+      "invention-sewing-machine": "91f7ef2c2ce1b78728c55ebcd9563e939fc1b7ec747c13ebe49909207bfbc4dd"
+    },
+    "oldChallengeQuestions": {
+      "count": 180,
+      "sha256": "e6b9ce901214ddf9ab37e5617edc7fc3d5b6f76a8f5c107a6bb2c5d8fb71fb20"
+    },
+    "oldTechnologyTasks": {
+      "count": 18,
+      "sha256": "dc694c7309cb259c61d92c515d8cd2277368e77cc17333ee2733d5b7a62008a6"
+    },
+    "oldChronologyTasks": {
+      "count": 24,
+      "sha256": "619c3f691d061b48018e73f1085878f16a026e4c2e32bef8aee338abaabc16cb"
+    }
+  },
+  "topics": [
+    {
+      "id": "invention-refrigerator",
+      "originalManuscriptSHA256": "3c36acda0bddf1bb04bca4f9d5c7070995198c8bdb3ec77c175338b4024e3c53",
+      "currentContentSHA256": "e8e25dd500fcf0c3ffae4b6a84d7ec97b4763aab492fde261c2074c9dcb3ed7f",
+      "goal": "Du verstehst, warum eine geschlossene Tür und gute Dämmung helfen und warum ein Kühlschrank kein Ersatz für eine Raumkühlung ist.",
+      "ageLevels": {
+        "6-8": "Ein Kühlschrank transportiert Wärme aus seinem Innenraum nach draußen. Dafür braucht er Energie.",
+        "9-11": "Bei einem üblichen Kompressorkühlschrank nimmt ein Kältemittel innen Wärme auf und gibt sie außen wieder ab. Ein Kompressor und weitere Bauteile halten den Kreislauf in Gang. Deshalb wird der Raum durch einen Kühlschrank nicht insgesamt kälter. Auch die zugeführte elektrische Energie landet am Ende überwiegend als Wärme im Raum.",
+        "12-14": "Betrachte den ganzen Kühlschrank statt nur das kalte Innere: Wärme wird innen aufgenommen und außen wieder abgegeben, während der Antrieb Energie benötigt. Die vier Rollen im Funktionsplan gehören zu einem Kreislauf. Die Zeichnung ist keine Anleitung zum Öffnen oder Reparieren der geschlossenen Anlage."
+      },
+      "sourceReads": [
+        {
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co64200/co2-refrigeration-plant-by-j-and-e-hall",
+          "anchor": "Made1906; compressor/motor and heat transfer,38–43",
+          "finding": "1906 is the linked object date. No claim that all refrigeration was invented then. The historical plant has a motor drive."
+        },
+        {
+          "url": "https://openstax.org/books/college-physics-2e/pages/15-5-applications-of-thermodynamics-heat-pumps-and-refrigerators",
+          "anchor": "Heat pumps/refrigerators,32–39",
+          "finding": "Heat delivered to the surroundings equals transported heat plus work input. No substance called cold or room cooling from an open refrigerator."
+        }
+      ],
+      "originalRelated": [
+        "science-heat-transfer",
+        "science-energy"
+      ],
+      "currentRelated": [
+        "science-motor"
+      ],
+      "linkDecision": "Original links to not-yet-integrated retained science/building manuscripts remain documented here and in sourceMaster. Current actual targets only, with nine explicit reciprocal explanations. No missing work removed from BACKLOG.",
+      "reviewedBy": "Codex KI-Selbstprüfung anhand der tatsächlich zugänglichen genannten Passagen; keine unabhängige Menschenabnahme",
+      "reviewedOn": "2026-10-23"
+    },
+    {
+      "id": "invention-bicycle",
+      "originalManuscriptSHA256": "8f72f2eaa1c6084b25c720c00e5a9ec52f812b0bf76bfc7bc7a08ea9debf42c2",
+      "currentContentSHA256": "1a385504defddcbf14d549c3f6e721aa6f4b96491b84e3a8df6fedcec52f19c9",
+      "goal": "Du kannst einen leichteren Gang mit mehr Pedalumdrehungen verbinden und vermeidest die Vorstellung kostenloser Energie durch Zahnräder.",
+      "ageLevels": {
+        "6-8": "Beim gewöhnlichen Kettenfahrrad bewegen die Pedale eine Kette. Sie treibt das Hinterrad an.",
+        "9-11": "Die Kette verbindet das Kettenblatt vorn mit einem Zahnrad am Hinterrad. Eine Übersetzung kann verändern, wie oft sich das Rad bei einer Pedalumdrehung dreht. Das tauscht Kraftbedarf gegen Weg, ohne zusätzliche Energie zu erfinden.",
+        "12-14": "Beim Vergleichen der Zahnzahlen solltest du dasselbe vordere Kettenblatt beibehalten. Erst dann zeigt der Wechsel des hinteren Zahnrads verständlich, warum ein leichterer Gang und mehr Pedalumdrehungen zusammengehören. Ein Übersetzungsverhältnis beschreibt Bewegung und Kraftbedarf; es ist keine zusätzliche Energiequelle."
+      },
+      "sourceReads": [
+        {
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co25833/rover-safety-bicycle-1885",
+          "anchor": "Object description86–90",
+          "finding": "Rear-wheel chain drive and solid rubber tyres;1885 object is not the first bicycle of every kind."
+        },
+        {
+          "url": "https://annex.exploratorium.edu/cycling/gears1.html",
+          "anchor": "Benefits of gears10–11 and Count your teeth15–17",
+          "finding": "Hold front chainring fixed when comparing rear sprockets. Ratio changes motion/force requirements, not available energy."
+        }
+      ],
+      "originalRelated": [
+        "science-friction",
+        "science-lever",
+        "invention-car"
+      ],
+      "currentRelated": [
+        "invention-car"
+      ],
+      "linkDecision": "Original links to not-yet-integrated retained science/building manuscripts remain documented here and in sourceMaster. Current actual targets only, with nine explicit reciprocal explanations. No missing work removed from BACKLOG.",
+      "reviewedBy": "Codex KI-Selbstprüfung anhand der tatsächlich zugänglichen genannten Passagen; keine unabhängige Menschenabnahme",
+      "reviewedOn": "2026-10-23"
+    },
+    {
+      "id": "invention-elevator",
+      "originalManuscriptSHA256": "6751123127a54c08880573bb95140de7ff3648d84797708875effabcd15e318c",
+      "currentContentSHA256": "398a9ed2568927686efe0bc3c1ce1f3e09a1a5be9be6158a0fa4624f68d2f4e0",
+      "goal": "Du erkennst, warum Barrierefreiheit und sichere Wartung ebenso zur Technik gehören wie schnelleres Hochfahren.",
+      "ageLevels": {
+        "6-8": "Ein Aufzug bewegt Menschen oder Lasten nach oben und unten. Antrieb und Sicherheitseinrichtungen haben dabei verschiedene Aufgaben.",
+        "9-11": "Bei einem typischen Seilaufzug bewegt ein Antrieb die Kabine über Seile und eine Treibscheibe. Ein Gegengewicht gleicht einen Teil der Gewichtskraft der Kabine aus. Sicherheit entsteht durch mehrere zusammenarbeitende Einrichtungen, nicht allein durch einen starken Motor. Andere Aufzüge arbeiten beispielsweise hydraulisch.",
+        "12-14": "Ordne jedem Teil eine Aufgabe zu: Kabine und Gegengewicht bewegen sich im normalen Betrieb über Seile und Treibscheibe, die Fangvorrichtung hat eine andere Aufgabe im Störungsfall. Diese Trennung hilft, Sicherheit nicht mit bloßer Antriebsstärke zu verwechseln. Der Plan zeigt keine vollständige Sicherheitsprüfung eines echten Aufzugs."
+      },
+      "sourceReads": [
+        {
+          "url": "https://www.otis.com/en/us/our-company/history",
+          "anchor": "1850s section273–289",
+          "finding": "1853 sale,1854 demonstration,1857 passenger installation distinguished. Corporate source, no independent priority claim."
+        },
+        {
+          "url": "https://www.otis.com/en/us/tools-resources/high-rise-safety-systems/",
+          "anchor": "Engineered for safety256–293",
+          "finding": "Drive, counterweight, brakes and safety devices have different roles; no historic demonstration as present-day certification."
+        },
+        {
+          "url": "https://npgallery.nps.gov/GetAsset/07a0f86d-5e38-4a69-96f7-45050d94f808",
+          "anchor": "National Register section8,p10,427–456; bibliographyp12",
+          "finding": "Historical dates corroborated in a registration document partly based on company material, not a wholly independent experiment."
+        },
+        {
+          "url": "https://www.toureiffel.paris/en/the-monument/lifts",
+          "anchor": "Historical/current lifts27–60 and mechanism82–89",
+          "finding": "Real linked building has several lift types, including hydraulic history. Do not equate all its lifts with the simplified traction drawing."
+        }
+      ],
+      "originalRelated": [
+        "science-friction",
+        "science-motor",
+        "building-eiffel-tower"
+      ],
+      "currentRelated": [
+        "science-motor",
+        "building-eiffel-tower"
+      ],
+      "linkDecision": "Original links to not-yet-integrated retained science/building manuscripts remain documented here and in sourceMaster. Current actual targets only, with nine explicit reciprocal explanations. No missing work removed from BACKLOG.",
+      "reviewedBy": "Codex KI-Selbstprüfung anhand der tatsächlich zugänglichen genannten Passagen; keine unabhängige Menschenabnahme",
+      "reviewedOn": "2026-10-23"
+    },
+    {
+      "id": "invention-seismograph",
+      "originalManuscriptSHA256": "0faba30feba6e7a2217144ece93b9c85c0f7b9ea2a4576a0faa3cf5139161a2e",
+      "currentContentSHA256": "afebd6bf85804912da6bc7711c7423bf89585e02ca84d56349d8876bc24d1e91",
+      "goal": "Du unterscheidest eine Messung nach Beginn von Erschütterungen von einer angeblich sicheren Vorhersage eines künftigen Erdbebens.",
+      "ageLevels": {
+        "6-8": "Ein Seismograf zeichnet Bodenbewegungen auf. Das hilft, bereits entstandene Erdbeben zu untersuchen.",
+        "9-11": "In einem einfachen Modell bewegt sich das am Boden befestigte Gehäuse mit dem Boden. Eine aufgehängte Masse folgt wegen ihrer Trägheit anders. Die relative Bewegung kann als Kurve aufgezeichnet werden. Diese Aufzeichnung heißt Seismogramm; ein Seismometer bezeichnet den messenden Teil, oft wird das Wort auch für das Gerät benutzt.",
+        "12-14": "Beschreibe eine Bewegung immer relativ zu etwas anderem: Das Gehäuse folgt dem Boden; die träge Masse folgt zunächst anders. Im Modell hältst du die Lage der Masse als vereinfachten Vergleich fest. Es ist eine Momentaufnahme, keine berechnete Schwingung und kein Verfahren zur Erdbebenvorhersage."
+      },
+      "sourceReads": [
+        {
+          "url": "https://www.usgs.gov/faqs/seismometers-seismographs-seismograms-whats-difference-how-do-they-work",
+          "anchor": "Definitions and inertia5–9",
+          "finding": "Instrument, measurement and trace differ. Generic1890-first sentence is not imported;1855 publication uses the specialist history."
+        },
+        {
+          "url": "https://earthquake.usgs.gov/education/eqscience-timeline.php",
+          "anchor": "1855 entry167–169",
+          "finding": "Early Kreil reference corroborated, but dated publication and uncertain construction are separated using HGSS."
+        },
+        {
+          "url": "https://hgss.copernicus.org/articles/12/11/2021/",
+          "anchor": "Section2.1,209–210 and bibliography352",
+          "finding": "Kreil1855 paper; design possibly1848–1850, whether completed uncertain. Do not claim1855 is a proven construction date."
+        },
+        {
+          "url": "https://www.usgs.gov/faqs/can-you-predict-earthquakes",
+          "anchor": "Main answer5–14",
+          "finding": "A record after motion begins is not a reliable date/place/magnitude prediction."
+        },
+        {
+          "url": "https://www3.nasa.gov/specials/Quesst/science-of-sound.html",
+          "anchor": "Waves41 and sound56–57",
+          "finding": "Related old sound model concerns airborne longitudinal sound and pitch. Ground-motion trace is compared as oscillation, not equated with an audible sound."
+        }
+      ],
+      "originalRelated": [
+        "science-pendulum",
+        "science-resonance"
+      ],
+      "currentRelated": [
+        "science-sound"
+      ],
+      "linkDecision": "Original links to not-yet-integrated retained science/building manuscripts remain documented here and in sourceMaster. Current actual targets only, with nine explicit reciprocal explanations. No missing work removed from BACKLOG.",
+      "reviewedBy": "Codex KI-Selbstprüfung anhand der tatsächlich zugänglichen genannten Passagen; keine unabhängige Menschenabnahme",
+      "reviewedOn": "2026-10-23"
+    },
+    {
+      "id": "invention-3d-printing",
+      "originalManuscriptSHA256": "5fda1264599ec1370a2f5334d238ff8c5c7085005e9a2b8025fd3964c364c523",
+      "currentContentSHA256": "b85a0787ee8c06ebff05ac53b2ade0df27fe0a0efdd8ffbb0a1029e14f332e21",
+      "goal": "Du verstehst räumliche Entwürfe, prüfst Modellgrenzen und erkennst den Unterschied zwischen einem Anschauungsmodell und einem geprüften Ersatzteil.",
+      "ageLevels": {
+        "6-8": "Ein 3D-Drucker baut einen Gegenstand nach digitalen Vorgaben auf. Häufig entsteht er Schicht für Schicht.",
+        "9-11": "Beim additiven Herstellen wird Material gezielt aufgebaut. Eine Fräse arbeitet anders: Sie nimmt Material von einem Ausgangsstück weg. Verschiedene 3D-Druckverfahren nutzen beispielsweise Kunststoff, Metall oder Keramik. Nicht jedes Verfahren schmilzt einen Kunststofffaden.",
+        "12-14": "Im Schichtenmodell kannst du erst einen Stapel aufbauen und anschließend die mittlere Schicht verändern. Vergleiche danach die Gesamtform mit deinem ursprünglichen Entwurf. Dieser Querschnittsvergleich hilft beim räumlichen Denken; er sagt noch nicht, ob ein echtes Material die Form tragen oder ein Drucker sie herstellen kann."
+      },
+      "sourceReads": [
+        {
+          "url": "https://www.nist.gov/additive-manufacturing/what-additive-manufacturing",
+          "anchor": "Summary151 and definitions155–171",
+          "finding": "Digital additive buildup differs from removing material or molding. Metal/plastic/ceramic possibilities, no assertion of one universal filament process."
+        },
+        {
+          "url": "https://www.invent.org/blog/inventors/3d-printing-chuck-hull",
+          "anchor": "Opening82 and light-vat account90–95",
+          "finding": "1986 patent anchor specifically for Hull stereolithography, not every additive method."
+        },
+        {
+          "url": "https://www.invent.org/inductees/charles-hull",
+          "anchor": "Biography115–116",
+          "finding": "UV-cured photopolymer resin and layer buildup, not material strength or printability approval."
+        }
+      ],
+      "originalRelated": [
+        "invention-computer",
+        "invention-printing",
+        "science-angle",
+        "building-lalibela"
+      ],
+      "currentRelated": [
+        "invention-computer",
+        "invention-printing"
+      ],
+      "linkDecision": "Original links to not-yet-integrated retained science/building manuscripts remain documented here and in sourceMaster. Current actual targets only, with nine explicit reciprocal explanations. No missing work removed from BACKLOG.",
+      "reviewedBy": "Codex KI-Selbstprüfung anhand der tatsächlich zugänglichen genannten Passagen; keine unabhängige Menschenabnahme",
+      "reviewedOn": "2026-10-23"
+    },
+    {
+      "id": "invention-sewing-machine",
+      "originalManuscriptSHA256": "91f7ef2c2ce1b78728c55ebcd9563e939fc1b7ec747c13ebe49909207bfbc4dd",
+      "currentContentSHA256": "27f0ac2411750ff6909d8e7db85a2464a04c2ad74bcea441943d6eac38d92de6",
+      "goal": "Du erkennst, wie ein technisches System eine Aufgabe mit einem eigenen Ablauf löst, statt eine menschliche Hand bloß nachzubauen.",
+      "ageLevels": {
+        "6-8": "Eine Nähmaschine bewegt Nadel und Faden in einer wiederholten Folge. Bei einem Doppelsteppstich greifen zwei Fäden ineinander.",
+        "9-11": "In Howes historischer Maschine arbeiteten eine Nadel und ein Schiffchen mit einem zweiten Faden zusammen. So entstand ein anderer Bewegungsablauf als beim Nähen von Hand. Das Patent wurde am 10. September 1846 erteilt. Es ist ein belegter Entwicklungsschritt, kein Beweis für einen alleinigen Erfinder sämtlicher Nähmaschinen.",
+        "12-14": "Verfolge die beiden Fäden einzeln, statt nur die fertige Naht anzusehen. Eine gezeichnete Kreuzung allein stellt noch nicht den vollständigen Ablauf des Verschlingens dar. Der Funktionsplan benennt die Rollen; wie Nadel, Schiffchen und Stofftransport zeitlich zusammenwirken, braucht darüber hinaus eine genauere Bewegungsdarstellung."
+      },
+      "sourceReads": [
+        {
+          "url": "https://collections.si.edu/search/detail/edanmdm:nmah_630930?print=yes",
+          "anchor": "Patent date47–55 and needle/shuttle description55–57",
+          "finding": "Patent004750 issued10September1846. Needle thread loops locked by shuttle thread; mechanism is not a simple hand-stitch imitation."
+        },
+        {
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co44744/sewing-machine-by-elias-howe",
+          "anchor": "Made circa1846,36; description68–70",
+          "finding": "Museum object approximate date and historical machine distinguishable from every sewing machine and other stitch types."
+        }
+      ],
+      "originalRelated": [
+        "invention-computer",
+        "invention-printing"
+      ],
+      "currentRelated": [
+        "invention-computer",
+        "invention-printing"
+      ],
+      "linkDecision": "Original links to not-yet-integrated retained science/building manuscripts remain documented here and in sourceMaster. Current actual targets only, with nine explicit reciprocal explanations. No missing work removed from BACKLOG.",
+      "reviewedBy": "Codex KI-Selbstprüfung anhand der tatsächlich zugänglichen genannten Passagen; keine unabhängige Menschenabnahme",
+      "reviewedOn": "2026-10-23"
+    }
+  ],
+  "changedDistractors": "Twelve wrong alternatives now compare real mechanisms or observation/interpretation confusions. All six original canonical correct strings and indices retained.",
+  "sourceAccessLimits": [
+    {
+      "url": "https://www.danfoss.com/en/about-danfoss/our-businesses/cooling/the-fridge-how-it-works/",
+      "result": "403; no new direct reading claimed. Original reference retained; current heat/work account checked through OpenStax and museum."
+    },
+    {
+      "url": "https://www.archives.gov/exhibits/designs_for_democracy/symbols_and_substance/articles/sewing_machine_2.html",
+      "result": "Redirect target unavailable. Original reference retained; current patent/date/two-thread account checked through the actual Smithsonian catalogue."
+    },
+    {
+      "url": "https://www.usgs.gov/programs/earthquake-hazards/seismographs-keeping-track-earthquakes",
+      "result": "JavaScript bot verification; no bypass. Original reference retained; actual accessible USGS FAQ/timeline plus HGSS checked."
+    }
+  ],
+  "photoDecision": {
+    "pipeline": "Existing animal pipeline inspected first: local proportionate WebP, precise motif/quality/author/license/transformation check, displayed attribution and integrity metadata. Historical media/source/rights evidence unchanged.",
+    "newWikimediaResearchOrDownload": false,
+    "findings": [
+      {
+        "url": "https://www.usgs.gov/media/images/seismograph",
+        "motif": "Official page identifies a seismograph photograph, Hawaiian Volcano Observatory",
+        "rights": "Public Domain explicitly displayed",
+        "binaryURL": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/Seismograph.jpg",
+        "access": "Local page and binary download403. Not integrated; final local visual-quality/motif inspection not claimed."
+      },
+      {
+        "url": "https://www.si.edu/object/1846-elias-howe-jrs-sewing-machine-patent-model%3Anmah_630930",
+        "motif": "Indexed official record identifies Howes patent model004750",
+        "rights": "Indexed official item marks image public domain; metadataCC0. Current source page not directly retrievable, local403; no fully completed image verification claimed.",
+        "access": "No image integrated."
+      },
+      {
+        "url": "https://collection.sciencemuseumgroup.org.uk/objects/co25833/rover-safety-bicycle-1885",
+        "rights": "CC BY-NC-SA4.0 image license displayed; separate commercial licensing. No photo integrated or broader rights assumed."
+      }
+    ],
+    "outcome": "Retain high-quality own drawings and useful models while a suitable photo lacks completed legal/technical/visual verification. Never label own/AI media as a true photograph. No permission or repair attempts for Wikimedia."
+  },
+  "corrections": [
+    {
+      "id": "invention-elevator",
+      "finding": "Original retained draft put the cabin rope near its edge and did not couple cabin/weight attachment and sheave geometry.",
+      "change": "Cabin and counterweight hang from their centres at opposite sheave tangents; sheave fits viewBox and both boxes clear it. Coupled actual SVG assertions and deliberately displaced rope negative probe.",
+      "semanticPrecision": "Counterweight balances part of the cabins gravitational force; it does not remove mass."
+    },
+    {
+      "id": "invention-seismograph",
+      "finding": "Original first hint below existing45-character contract.",
+      "change": "Individual strategy hint distinguishes apparatus, recorded observation and interpretation; existing minimum and no-answer-leak tests unchanged."
+    },
+    {
+      "id": "layers",
+      "finding": "Importing the old combined hook into every model would add an irrelevant cut flag to old topic sessions.",
+      "change": "Cut flag hook stays inside new LayerExperiment child; actual old electrical model visits and stored sessions verify no cut field on them."
+    }
+  ],
+  "earlyUI": {
+    "beforeLiftCorrection": {
+      "build": "1fb1f17b0547dee6",
+      "status": "passed",
+      "scope": "24observed cases/four widths, before later lift geometry and force-wording correction",
+      "reportSHA256": "2031256cf3a5a745a9f48e1b47dfa8d716e7a969bd12c1ad4051cb56609e2f17",
+      "imageManifestSHA256": "7effb5b6ec2ff8a8d746d913bebcc0bf4d784ef8dc2c3003d4638eea0706afaa",
+      "images": 16
+    },
+    "nativeAfterGeometry": {
+      "build": "5b0b41c234a29208",
+      "status": "passed",
+      "scope": "12native200% views/26model states, before later mass/weight wording precision",
+      "reportSHA256": "d24e11046bfab13f2c695df7efc04ff1ab8d699624658f0c5338472bd255a60b",
+      "imageManifestSHA256": "b7289c29525d9b7df41a44b82378fd485cb749685884f33f8ab8c621a4df4a28",
+      "images": 40
+    },
+    "currentLift": {
+      "build": "5ce4666517fad155",
+      "status": "passed",
+      "scope": "One current lift native200% view, parts/text and detached-rope negative probe",
+      "reportSHA256": "41ba0f9c6ba1666888bed0e6aac59a7e79cdea030485ff3d2e7d1eb5856569a2",
+      "imageManifestSHA256": "e9ca4cffeafa5ba1f53b06a203d7be6e91a59d75393329c4135f74f649c38f4a",
+      "images": 3
+    },
+    "currentModelStates": {
+      "build": "5ce4666517fad155",
+      "status": "passed",
+      "scope": "Current native200% three-layer opening, both seismo directions and unchanged old electrical cut-flag behavior",
+      "reportSHA256": "d35078a8e9af2d4c7615bcf5c0c35b6dd82b4507e90b1d8eb854c0e708c23f45",
+      "imageManifestSHA256": "065ea12eaefd3b2c22b4164254f68a1afe3b21ff59266c7e40075211353558c4",
+      "images": 6
+    },
+    "currentDesktopBeforeSharedCaption": {
+      "build": "5ce4666517fad155",
+      "originalHead": "cf8f654564d3c6e8745aaf0e51d77f04a56ebf27",
+      "scope": "Six current desktop views, all manuscript text/answers/hints/six stages/parts/model states/search/source links and backlinks. Six diagrams and two model images actually viewed. Before the subsequent shared retained-structure caption correction.",
+      "reportSHA256": "8af611e30f3ed21aaacbbfbe11c135fe1e7ecd1a0671c5a6619dd4b10c71f499"
+    }
+  },
+  "fullAcceptance": "Complete current mandatory local Chromium154 naturally passed at immutable 4efaa81db3023114ac9fd89f36a49f726b2c5329 / source a803ee8616abdbaaac98f35d4fc7644d1b946b45e160eb850d32ce53353383bd. All65UIbindings renewed only afterward, preserving every prior factual field/history and original report. Final exact three-engine CI/current readiness/protected maintenance review/expected-head test-live merge/identical tree/actual deployment postflight remain required.",
+  "standards": {
+    "unitCases": 191,
+    "typecheck": true,
+    "lint": "earlier preparation passed; final current run remains required",
+    "buildBudgets": "unchanged and passed",
+    "oldReferenceHashes": "All old fixture/reference hashes unchanged; historical projections exclude precisely the six named additions and nine explained backlinks. New preservation fixture obtained from actual earlier a6075b8 source."
+  },
+  "targetedCurrentOffline": {
+    "originalHead": "559c83653abe42e788fddc8127a657bb9f625e6a",
+    "build": "5ce4666517fad155",
+    "originalSourceDigest": "2f327436919deee069a6128764a609100e60f56a94fbb2fbc246901f57d6b6ff",
+    "reportSHA256": "f4d154f659318b8b72a9cb2a074f3e26fc2801d1d5c4c828867d47316625ee29",
+    "mechanicsViews": 12,
+    "electricalViews": 6,
+    "oldLearningTaskCases": 12,
+    "actualServerStop": true,
+    "actualReload": true,
+    "originalPassRestoredThroughUI": true,
+    "scope": "Complete existing targeted native offline-resilience helper, not full mandatory regression or three-engine acceptance."
+  },
+  "additionalVisualReview": "All six native640 blueprint captures actually viewed at original5b0b41c234a29208 build before later force-wording precision; current5ce three-layer cut and opposite seismograph state captures viewed. Viewport images may show scroll excerpts, not a proven product-clipping defect.",
+  "preservedRelatedMasterSources": {
+    "sourceCommit": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+    "scope": "Existing WK054 original source inventory only; no integration or scientific acceptance claimed.",
+    "book": {
+      "path": "app/book-content.json",
+      "bytes": 640032,
+      "sha256": "a2f27e191f4428a73863b8cbb23593023be925294df7fc06dbe9e26b3a623f67",
+      "words": 180,
+      "whyQuestions": 60,
+      "wordLearningEntries": 180,
+      "whyLearningEntries": 60,
+      "allOld90TermIdentitiesAnd30QuestionIdentitiesFound": true
+    },
+    "nature": {
+      "path": "app/nature-content.json",
+      "bytes": 217975,
+      "sha256": "eb80babb4593d5a70592e86e57b3a0e6551534828d8f1fb34235067a51b373cd",
+      "independentNatureExplanations": 68,
+      "matchingPriorNatureIds": 34,
+      "sixAnimalProjectionsAreSeparate": true
+    },
+    "whyStudy": {
+      "path": "app/book-study-why.json",
+      "bytes": 96083,
+      "sha256": "31d16d6c1e7a7fee336101abf03b33e2505da0648e0ad2eaee2ce99ddfc75b77"
+    },
+    "restorationCheck": "All three exact original Git blobs read from an independently restored source bundle and byte-compared successfully. This proves these named public source versions, not recovery of undocumented private local states."
+  },
+  "affectedRetainedStructureCaption": {
+    "trigger": "New lift backlink to the retained Eiffel topic exposed an old clipped load-path caption at native200%/320CSS/large text.",
+    "originalBuild": "5ce4666517fad155",
+    "originalReportSHA256": "feff17d0870b2cd83f6c763dc20e299114f71c80ac02bb8a5f336e42e492b3c9",
+    "actualOriginalLabelBounds": {
+      "bottom": 302.09092903137207,
+      "viewBoxBottom": 300
+    },
+    "retainedSolutionSource": "d97dddab0a5cc67172693a235d5ab12fa32bbc64:app/building-model.tsx",
+    "change": "Reuse the retained wrapping HTML load-path explanation, with the existing normal paragraph typography rather than small-note text. Original SVG geometry, controls, model save keys, all data and styles remain unchanged.",
+    "currentBuild": "6a37ae82f26d993d",
+    "sourceDigestBeforeReviewMetadata": "5a652a234fca7a80149781cbd5503fbaebf90666fad60adca46e1e1a2e16030b",
+    "evidenceScope": "Targeted checks on the working tree based on cf8f654, before this metadata record. Original reports stay unchanged; no full acceptance at this new source claimed.",
+    "modifiedCodeSHA256": {
+      "app/building-model.tsx": "3de711c5855b903515d25f430816b21416f94d7ed8ef40dde9953105a97c1f83",
+      "tests/browser/invention-electrical.mjs": "c2de6e3424667f5bb2a1dba15db85b66319958160ce83e5ee653fb89e3f17feb"
+    },
+    "native200Large": {
+      "reportSHA256": "8c90d1ba9be948bfbb2ab7b1c81a75f6454785cee3027bbc9aca938eae90ff45",
+      "sharedStructures": 6,
+      "actualStates": 18,
+      "reloadSelectionPreserved": true,
+      "allSixCaptionImagesActuallyViewed": true
+    },
+    "ordinaryResponsive": {
+      "reportSHA256": "cf647045937c86a5c84d5fef3a70996904f8ebcfd1af8a9cf662b21167dd06af",
+      "widths": [
+        320,
+        390,
+        1440
+      ],
+      "actualCaptionFontPx": [
+        16,
+        16,
+        16
+      ],
+      "allCaptionsFit": true
+    },
+    "permanentRegression": "Existing actual invention source/backlink helper checks wrapping HTML, >=16px text and unclipped SVG labels on the real Eiffel route. Current full/actual-engine checks will exercise this same helper. No old assertion removed.",
+    "standards": {
+      "unitTests": 191,
+      "unitProofSHA256": "fb1227d5df76b419b361294ea97b95903978f88c0b13d4c46563d0fd03e04893",
+      "unitSourceDigest": "5a652a234fca7a80149781cbd5503fbaebf90666fad60adca46e1e1a2e16030b",
+      "typecheck": true,
+      "lint": true,
+      "build": true
+    },
+    "partialHelperFailure": "A first additional shared-structure helper failed after reload. Its original report is retained; explicit reapplication of large text in the fixture and a separate normal-font measurement are recorded separately. No application assertion or threshold weakened."
+  },
+  "actualDeliveredBase": "92f3591fb33c7f1109045b504079e41eb8e0fc9a",
+  "localCompleteAcceptance": {
+    "build": "09ff0e92c786c038",
+    "originalTestedHead": "2db396163581406def39cf51b5261f1b4b855950",
+    "originalSourceDigest": "023025429e6eba6247b603139b72c8ee766a15efb1f860f96f8dcf6761588050",
+    "originalReportSHA256": "adf9dea8a71f32dd0cbecf4df4bf3e5e0aa6921cee541f9263511db91c929b3b",
+    "completeLocalMandatoryAcceptance": true,
+    "seconds": 1190.7096429980002,
+    "checks": 140,
+    "localBrowser": "154.0.8037.57",
+    "renewedExistingDossiers": 59,
+    "addedFactualDossiers": 6,
+    "existingFactualFieldsSHA256": "7da732a2d9081a507922bcf2edcd442c2480fe9f2aea6ecff1368cb597a80d10",
+    "mechanicsViews": 30,
+    "mechanicsCold": 6,
+    "mechanicsOffline": 24,
+    "mechanicsNativeOffline": 12,
+    "meaning": "Current UI bindings only after natural complete local success; all prior facts, source/rights/teaching fields and UI histories retained. No relabelling of original full reports, independent human/scientific approval or final CI claimed."
+  },
+  "wayfinderFocusCorrection": {
+    "status": "Targeted original-fault countercheck and complete current local mandatory regression passed; exact final integration CI and deployment remain open.",
+    "ciBefore": {
+      "runId": 39970661569,
+      "attempt": 2,
+      "jobId": 120507441125,
+      "head": "02e287cf3a0d17c96a6a47acace094be8c6c3176",
+      "result": "failure in existing Chromium offline peopleSourceView focus assertion; subsequent full engines/handoff/final context skipped"
+    },
+    "separateEarlierTimeout": {
+      "attempt": 1,
+      "result": "cancelled after55minutes despite all functional/context steps passing; this focus change is not a proven timeout or runner-variance remedy"
+    },
+    "reproducedCause": "In the unchanged actual app, three pending navigation-restoration frames survive an explicit browser focus transition. If those frames run between focusing the wayfinder and pressing Enter, focus moves to the article heading; Enter no longer opens/focuses the research activity. The controlled original-build reproduction demonstrates this corresponding condition, not the exact unrecorded CI event schedule.",
+    "fix": "Existing shared pending-restoration guard also observes trusted focusin, detaches all its listeners on cancellation, and keeps rejecting synthetic events. No timeouts, assertions, candidate gates, workflows or storage schema changed.",
+    "oldOriginalBuild": "09ff0e92c786c038",
+    "oldPermanentTestNegativeReportSHA256": "f0437d8205173e05aca363d0b2035814e6a56945ddc461063243623a5d1b1ea0",
+    "originalSameAssertionNegativeReportSHA256": "6604fcefa031296f7cb7eeeb392c8e734b7776c683914507659d99a4146f09a5",
+    "currentBuild": "bc3ef31c087ad1c5",
+    "currentPermanentHelperReportSHA256": "719dc7ca7a657f1550984e0a04be444839d2b2e346f7fbe48d30eaed9e5f93a1",
+    "currentScope": "Four previous pending keyboard/pointer cases retained. Eight new actual focus-before-Enter cases cover both biographies and both historical activities at320/1440, with untouched-route and synthetic-focus-event controls. All current errors and console errors empty.",
+    "currentNativeReportSHA256": "65cb0751cca5e710c47b1f72380dc2165853e38b37e88e1583d719a363370aac",
+    "currentNativeScope": "Eight actual native200% views at640/320CSS pixels, DPR2, large reading, both complete biography and history helpers with texts/answers/hints/figures/model states/source links and back/focus.",
+    "visualReading": "Actual original failure image and current Mary320/history1440 focus destinations viewed, plus native Mary320 controls and Mohenjo320 heading. No physical device or independent human claim.",
+    "unchangedRepetitionsAreNotCauseEvidence": "Earlier80minimal normal cases, the complete instrumented old offline helper and two delayed-MessageChannel cases passed on the original build. These neither explain nor cure the CI failure; they are retained separately.",
+    "learnerBenefit": "An explicitly selected control keeps focus until the next keyboard action, so the wayfinder reaches its research activity instead of silently losing Enter. The bounded before/after fixture demonstrates this reliability improvement; no field failure-rate, learning-effectiveness or performance-speed claim."
+  },
+  "fullAcceptanceBeforeWayfinderFocus20261023": "Complete mandatory local Chromium154 naturally passed at the recorded immutable2db3961 source.59 existing UI records renewed preserving every prior factual field and history; six individually source-anchored factual dossiers added with actual current UI/search/back/offline evidence. Final exact integration Chromium/Firefox/WebKit CI, fresh native readiness, regular expected-head merge, identical tree and actual Vercel/browser postflight remain required.",
+  "focusCorrectedCompleteAcceptance": {
+    "build": "bc3ef31c087ad1c5",
+    "originalUnitReportedHead": null,
+    "headBinding": "Independently read exact clean linked-worktree Git HEAD; original unit/handoff readers report null, all original source digests match. Original JSON remains unchanged.",
+    "originalTestedHead": "e0fd9b8527eb4bf6c047fbab121550a12af60587",
+    "originalSourceDigest": "ba17c9b328e6e226ebf7d7828f8eeb4599ec763985cc907c67a5e037b822c4b8",
+    "originalReportSHA256": "ea204827753f438e06513c49f1249f74575d384ef92bb594d4e42bf6397c7ded",
+    "seconds": 1187.264880365,
+    "checks": 142,
+    "localBrowser": "154.0.8037.57",
+    "completeLocalMandatoryAcceptance": true,
+    "renewedUIBindings": 65,
+    "addedFactualDossiers": 0,
+    "retainedFactualFieldsAndHistorySHA256": "59630278800f0d5bcd1e99a7b6788e8b885f12f28b95e5432da3e637284e4eaa",
+    "previousPendingRouteCases": 4,
+    "newWayfinderCases": 8,
+    "mechanicsViews": 30,
+    "mechanicsCold": 6,
+    "mechanicsOffline": 24,
+    "mechanicsNativeOffline": 12,
+    "meaning": "Only current UI bindings renewed after natural complete success. Original earlier acceptance and both failed CI attempts remain unchanged; this does not prove a remedy for the separate55minute runtime limit, field failure rate, independent human/scientific approval or final CI."
+  },
+  "fullAcceptanceBeforePhotoCardBack20261023": "Complete current mandatory local Chromium154 naturally passed at immutable e0fd9b8527eb4bf6c047fbab121550a12af60587 / source ba17c9b328e6e226ebf7d7828f8eeb4599ec763985cc907c67a5e037b822c4b8. All65UIbindings renewed only afterward, preserving every prior factual field/history and original report. Final exact three-engine CI/current readiness/normal test-live merge/identical tree/actual deployment postflight remain required.",
+  "photoCardBackCorrection": {
+    "meaning": "Actual corresponding missing-opener condition reproduced; not a reconstruction of unrecorded WebKit154 event order/width/category.",
+    "ci": {
+      "run": 39988180666,
+      "job": 120532727259,
+      "head": "af032b123d8e8840edd99a6afc1160ea7c994f48",
+      "conclusion": "failure before55minute ceiling",
+      "failure": "WebKit worldPhotoFlow original Back-focus wait20s, world-photos.mjs:40; complete final engine handoff/context skipped.",
+      "originalLogBytes": 2182392,
+      "originalLogSHA256": "c44feba3959e730a174077f88eb254bf1ec9dea9dbe8f9a8d2e203a42e146a59",
+      "artifact": 12518398814
+    },
+    "originalCauseCondition": "When native mouse behaviour does not focus a clicked category button, navigateHash reads the previously active heading and stores no clicked-card wunderFocus. BrowserBack then correctly follows that missing state to the heading, rather than the actual opener.",
+    "fix": "Shared gateway button explicitly focuses its actual currentTarget with preventScroll before invoking category navigation. Hash route, metadata/photos/rights, saved schema and earned progress unchanged.",
+    "originalRegressionGuard": "The same current permanent photoCardOpenerFlow rejects the actual frozenAF/bc3build when a real image click has native mousedown focus suppressed. Four preceding ordinary photo-card cases pass; controlled320animals fails the original20sBack wait with absent wunderFocus and activeH2.",
+    "referenceProvenance": "Original frozen later-localAFrebuild manifestSHA a30a385469aba020efe426493290b699ca36c22fa71962e9e2623ff93b59e5cb. Negative report sourceDigest describes the current checker; served reference isAF/bc3, not that checker source.",
+    "targetedProofs": [
+      {
+        "report": ".qa-output/photo-card-permanent-old-negative/report.json",
+        "sha256": "fd77961f381a3c1476c0d340762ff7477a29f23d1cd006ffbe39dde61e9b8408",
+        "build": "bc3ef31c087ad1c5",
+        "checkerSourceDigest": "30ad45262e636c23c5676cb5b25a11006cb3876202f9b05729d3a642906e9e7b",
+        "status": "failed",
+        "scope": "Actual originalAF/bc3reference rejected by same permanent guard; sourceDigest is checker only"
+      },
+      {
+        "report": ".qa-output/photo-card-current-full-review/report.json",
+        "sha256": "647bb326543173feeab64264c2b6cd8534de2185b84c945846f0c1e347e50c30",
+        "build": "0ed7c26168b026e4",
+        "checkerSourceDigest": "30ad45262e636c23c5676cb5b25a11006cb3876202f9b05729d3a642906e9e7b",
+        "status": "passed",
+        "scope": "All49pictures/98actual credit/source/rights views plus original8and controlled8category photo Back cases, safe tamper/network/retry original assertions"
+      },
+      {
+        "report": ".qa-output/photo-card-shared-home/report.json",
+        "sha256": "56b74ea9bb61473a4acf2c421c5be1bb7e7f92775b6c08522c07b1084cf81417",
+        "build": "0ed7c26168b026e4",
+        "checkerSourceDigest": "7ca2b01b6b12560c65db7f377ab140ec9ad2a9db9a67ad0751ac293daedf930f",
+        "status": "passed",
+        "scope": "All six shared home category media controls at320/1440 with native mouse focus suppressed,12cases"
+      },
+      {
+        "report": ".qa-output/photo-card-shared-native200/report.json",
+        "sha256": "70960175a2ce18954e1b4b45a83c555cbf6b205d86280a44399f346efef6cdf5",
+        "build": "0ed7c26168b026e4",
+        "checkerSourceDigest": "454ca4ff137666fd4f8f6c72ccb88716565f6e507844c33e1e62cd5a22c08abd",
+        "status": "passed",
+        "scope": "Actual native200%640/320CSS:16ordinary/controlled photo-card Back cases and12shared home category cases"
+      },
+      {
+        "report": ".qa-output/photo-card-affected-route-focus/report.json",
+        "sha256": "51028be433f8da56bbd83961c5bd086215ccb478028d01215a6c9fee0ea0dfc1",
+        "build": "0ed7c26168b026e4",
+        "checkerSourceDigest": null,
+        "status": "passed",
+        "scope": "All four prior pending keyboard/pointer and eight wayfinder-focus controls retained"
+      }
+    ],
+    "fullAcceptance": "Targeted corresponding original-product fault rejected, full current local mandatory regression passed. Exact recorded original CI event sequence remains unknown; final integration CI and actual deployment remain open."
+  },
+  "earlyPhotoBackPrecondition": {
+    "change": "Existing animalNavigation now invokes the same eight ordinary photo-card Back cases before its long48animal search. Existing search-only actual-engine stage therefore detects this failure before complete Chromium/animal/journey/offline runs. Later complete49photo checks and all original assertions remain.",
+    "meaning": "Fail-fast staging, not a measured successful-run speedup or removal of coverage. Actual new CI timings remain required."
+  },
+  "oneExecutionRuntimeReserve": {
+    "authorisation": "User23October allows one-time increase while requiring measured optimisation or precise55minute diagnosis.",
+    "workflowScope": {
+      "event": "pull_request",
+      "pr": 58,
+      "runNumber": 155,
+      "attempt": 1,
+      "maximumMinutes": 65,
+      "everyOtherExecutionMaximumMinutes": 55
+    },
+    "changes": "Only bounded timeout expression and explanatory comments; same workflow job, every step, permissions, pinned actions, context verification and all mandatory checks retained.",
+    "originalWorkflowSource": "92f3591fb33c7f1109045b504079e41eb8e0fc9a",
+    "originalWorkflowSHA256": "fa0c0d6b54997a490572b18e0f164bfd28d07c16f8e007f379dfa25287f7ce5d",
+    "protection": "Workflow remains a critical path in unchanged readiness helper. Do not report routine eligibility or silently bypass the protected maintenance path. No future automatic reservation renewal."
+  },
+  "runtimeDiagnosis": {
+    "quality153Attempt1": "About1:41setup,4:56early precondition,18:25Chromium,29:55Firefox/WebKit and seconds for final evidence. Every product/context step passed but complete job cancelled at55minutes. Extra24mechanics offline views per additional engine plus observed slowdown even in unchanged search; hardware/CPU cause not proved.",
+    "quality154": "1:49setup,4:50early,18:17Chromium; additional-engine phase failed after22:09 before completing WebKit.47:11failed job is not a successful-run speedup.",
+    "localMechanicsProbe": "Unchanged current12normal mechanics views:5.2678+5.6610seconds wall, .88166+.986045seconds browserScriptDuration. Bounded local diagnostic, not hosted-runner causality or a benchmark improvement.",
+    "quality153TimeBudget": {
+      "setupSeconds": 101,
+      "earlySeconds": 296,
+      "chromiumSeconds": 1105,
+      "additionalEnginesSeconds": 1795,
+      "roundedPhaseSumSeconds": 3297,
+      "jobLimitSeconds": 3300,
+      "remainingForFinalEvidenceAndUploadSeconds": 3,
+      "meaning": "Rounded original CI phase boundaries sum to54:57 before final handoff/context/artifact work. The55minute job leaves only3seconds, explaining the observed limit crossing; no underlying hosted-runner CPU cause or measured successful-run acceleration is inferred."
+    }
+  },
+  "runtimeForegroundOptimization20261023": {
+    "scope": "Existing actual animal-workshop helper activates its page before real keyboard/pointer work. All old assertions, cases, waits, input checks, content, geometry, sources, feedback and mandatory engines retained. No force clicks, new timeout, hard performance gate, workflow worker or pipeline.",
+    "comparison": "Identical private isolated cold-offline probe, four fresh copies of the same warmed profile, same built app/dependencies/Chromium; two complete original animal workshops per mode. Probe code byte-identical except separate output directory; only helper difference is page.bringToFront plus comments.",
+    "original": {
+      "sha256": "436f62fb3211a130772ac44a66d31932602a3b7fcea2664d35fafcb64598199f",
+      "sourceDigest": "058d3d982254a4412d1f4a9a3c7bf4da360349d41dd7b8aeaa766937337b4b3f",
+      "build": "0ed7c26168b026e4",
+      "browser": "154.0.8037.57",
+      "cases": [
+        {
+          "mode": "ordinary-first-page",
+          "seconds": 2.1090538099999994,
+          "completedAnimalWorkshops": 2,
+          "initial": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "actual": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "frame": {
+            "times": [
+              461.9,
+              478.6,
+              495.2,
+              845.2,
+              878.6,
+              895.2
+            ],
+            "seconds": 0.4333000000000001
+          }
+        },
+        {
+          "mode": "explicit-foreground",
+          "seconds": 2.184261649000001,
+          "completedAnimalWorkshops": 2,
+          "initial": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "actual": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "frame": {
+            "times": [
+              419.5,
+              436.1,
+              452.7,
+              469.4,
+              486.1,
+              502.8
+            ],
+            "seconds": 0.08330000000000001
+          }
+        },
+        {
+          "mode": "controlled-background",
+          "seconds": 44.311235947,
+          "completedAnimalWorkshops": 2,
+          "initial": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "actual": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "frame": {
+            "times": [
+              930.6,
+              947.3,
+              964,
+              980.7,
+              997.3,
+              1014
+            ],
+            "seconds": 0.08339999999999997
+          }
+        },
+        {
+          "mode": "controlled-background-then-foreground",
+          "seconds": 2.0392650490000013,
+          "completedAnimalWorkshops": 2,
+          "initial": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "actual": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "frame": {
+            "times": [
+              500.6,
+              517.3,
+              850.6,
+              900.6,
+              917.2,
+              933.9
+            ],
+            "seconds": 0.43329999999999996
+          }
+        }
+      ]
+    },
+    "corrected": {
+      "sha256": "1beaeca348a40d195c9ebe3da62466c580c1788c14e504924e12e4731f07c4d2",
+      "sourceDigest": "edb9078016bb01077c683d2055eb111916fee9f6de9bef81d3bf2f479c76aedd",
+      "build": "0ed7c26168b026e4",
+      "browser": "154.0.8037.57",
+      "cases": [
+        {
+          "mode": "ordinary-first-page",
+          "seconds": 1.6087709769999992,
+          "completedAnimalWorkshops": 2,
+          "initial": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "actual": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "frame": {
+            "limitSeconds": 4,
+            "completed": false
+          }
+        },
+        {
+          "mode": "explicit-foreground",
+          "seconds": 1.7678944519999986,
+          "completedAnimalWorkshops": 2,
+          "initial": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "actual": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "frame": {
+            "times": [
+              381.3,
+              397.9,
+              414.6,
+              431.3,
+              448,
+              464.6
+            ],
+            "seconds": 0.08330000000000001
+          }
+        },
+        {
+          "mode": "controlled-background",
+          "seconds": 2.0950941590000003,
+          "completedAnimalWorkshops": 2,
+          "initial": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "actual": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "frame": {
+            "limitSeconds": 4,
+            "completed": false
+          }
+        },
+        {
+          "mode": "controlled-background-then-foreground",
+          "seconds": 1.472505075000001,
+          "completedAnimalWorkshops": 2,
+          "initial": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "actual": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "frame": {
+            "times": [
+              523.9,
+              540.6,
+              557.1,
+              573.8,
+              590.5,
+              607.2
+            ],
+            "seconds": 0.08330000000000007
+          }
+        }
+      ]
+    },
+    "measuredBenefit": "Controlled additional active page:44.311235947seconds before,2.0950941590000003seconds after explicit page activation in the unchanged exercise helper. Ordinary case2.1090538099999994 vs1.6087709769999992seconds is a small local sample, not a general speedup claim.",
+    "limits": "Original CI and original a07 cold page activation were not recorded; do not assign this as proved original hosted-runner cause. document.visibilityState=visible and document.hasFocus=true occurred even in the slow control, so these booleans alone do not prove the page activation condition. Six-frame sample does not establish a1Hz animation cause. No underlying hardware/CPU diagnosis or successful whole-CI speedup is claimed.",
+    "completeCurrentAcceptance": {
+      "build": "0ed7c26168b026e4",
+      "originalUnitReportedHead": null,
+      "headBinding": "Independently read exact clean linked-worktree Git HEAD; original unit/handoff readers report null, all original source digests match. Original JSON remains unchanged.",
+      "originalTestedHead": "4efaa81db3023114ac9fd89f36a49f726b2c5329",
+      "originalSourceDigest": "a803ee8616abdbaaac98f35d4fc7644d1b946b45e160eb850d32ce53353383bd",
+      "originalReportSHA256": "cbb073546c406bc4c6cb42877e4858c1dbdc693351b1e1e6ef89697c94ba4204",
+      "seconds": 1185.4567058410003,
+      "checks": 142,
+      "localBrowser": "154.0.8037.57",
+      "completeLocalMandatoryAcceptance": true,
+      "renewedUIBindings": 65,
+      "addedFactualDossiers": 0,
+      "retainedFactualFieldsAndHistorySHA256": "c0cfbbdafb2b4c5b02a93378356fbd45d0637c56792c7e527cbfc7e55e3fd5af",
+      "photoCardBackCases": 16,
+      "photographs": 49,
+      "rightsViews": 98,
+      "previousPendingRouteCases": 4,
+      "newWayfinderCases": 8,
+      "mechanicsViews": 30,
+      "mechanicsCold": 6,
+      "mechanicsOffline": 24,
+      "mechanicsNativeOffline": 12,
+      "meaning": "Only current UI bindings renewed after natural complete success. Original earlier acceptance and both failed CI attempts remain unchanged; this does not prove a remedy for the separate55minute runtime limit, field failure rate, independent human/scientific approval or final CI."
+    },
+    "referenceRead": {
+      "url": "https://playwright.dev/docs/api/class-page#page-bring-to-front",
+      "anchor": "API lines472–488, actually read23October",
+      "finding": "bringToFront activates the page/tab; documented since before v1.9. Does not document a specific hosted-runner slowdown cause."
+    },
+    "fullLocalComparison": {
+      "sameBuiltApp": "0ed7c26168b026e4",
+      "originalTestedHead": "a07ce85b4e4d403fdfd25b409f98cc6dc115d58e",
+      "originalReportSHA256": "92bd850e59a7b5d99ce45836a58f20126a1302620a2b4c85877262e891167bdf",
+      "originalWholeSeconds": 1905.226759233,
+      "originalColdLearningSeconds": 856.4807015660001,
+      "currentTestedHead": "4efaa81db3023114ac9fd89f36a49f726b2c5329",
+      "currentWholeSeconds": 1185.4567058410003,
+      "currentColdLearningSeconds": 65.17525066000002,
+      "sameCompleteMandatorySuites": true,
+      "meaning": "Complete local before/after runs retain every original assertion and built app; informational message multiplicity is reported separately, not treated as coverage. Page activation controlled probe independently supports the observed slow-case remedy. Original full/CI page activation state and hardware cause were not recorded, so this is no exact original CI cause or CI runtime guarantee."
+    }
+  },
+  "localPhotoCardAcceptanceBeforeRuntimeOptimization20261023": {
+    "originalTestedHead": "a07ce85b4e4d403fdfd25b409f98cc6dc115d58e",
+    "build": "0ed7c26168b026e4",
+    "sourceDigest": "058d3d982254a4412d1f4a9a3c7bf4da360349d41dd7b8aeaa766937337b4b3f",
+    "reportSHA256": "92bd850e59a7b5d99ce45836a58f20126a1302620a2b4c85877262e891167bdf",
+    "checks": 141,
+    "seconds": 1905.226759233,
+    "coldOfflineSeconds": {
+      "prepare-complete": 2.339318374000024,
+      "prepared-browser-closed": 0.08158770499995444,
+      "preview-stopped-and-refused": 0.030860377000062725,
+      "cold-context-launched": 0.43321516599995086,
+      "cold-learning-complete": 856.4807015660001,
+      "cold-browser-closed": 0.12276408799993806
+    },
+    "scope": "All ten mandatory local suites passed naturally unchanged; all16photoBack cases,49pictures/98rights views,4+8focus and30/6/24/12mechanics views. Original reports and all696curated images restored/hash-verified before checker optimisation. UI bindings deliberately not renewed before current final checker proof."
+  },
+  "photoCardCorrectedCompleteAcceptance": {
+    "build": "0ed7c26168b026e4",
+    "originalUnitReportedHead": null,
+    "headBinding": "Independently read exact clean linked-worktree Git HEAD; original unit/handoff readers report null, all original source digests match. Original JSON remains unchanged.",
+    "originalTestedHead": "4efaa81db3023114ac9fd89f36a49f726b2c5329",
+    "originalSourceDigest": "a803ee8616abdbaaac98f35d4fc7644d1b946b45e160eb850d32ce53353383bd",
+    "originalReportSHA256": "cbb073546c406bc4c6cb42877e4858c1dbdc693351b1e1e6ef89697c94ba4204",
+    "seconds": 1185.4567058410003,
+    "checks": 142,
+    "localBrowser": "154.0.8037.57",
+    "completeLocalMandatoryAcceptance": true,
+    "renewedUIBindings": 65,
+    "addedFactualDossiers": 0,
+    "retainedFactualFieldsAndHistorySHA256": "c0cfbbdafb2b4c5b02a93378356fbd45d0637c56792c7e527cbfc7e55e3fd5af",
+    "photoCardBackCases": 16,
+    "photographs": 49,
+    "rightsViews": 98,
+    "previousPendingRouteCases": 4,
+    "newWayfinderCases": 8,
+    "mechanicsViews": 30,
+    "mechanicsCold": 6,
+    "mechanicsOffline": 24,
+    "mechanicsNativeOffline": 12,
+    "meaning": "Only current UI bindings renewed after natural complete success. Original earlier acceptance and both failed CI attempts remain unchanged; this does not prove a remedy for the separate55minute runtime limit, field failure rate, independent human/scientific approval or final CI."
+  }
+}

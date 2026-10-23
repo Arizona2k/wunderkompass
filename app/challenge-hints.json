@@ -944,5 +944,41 @@
       "Trenne die Frage nach dem Steuern von der Frage nach der Energiequelle.",
       "Stelle im Modell zuerst nur den Steuereingang und danach zusätzlich die Versorgung ein. Welche Aufgabe erfüllt jeweils der andere Eingang?"
     ]
+  },
+  "invention-refrigerator:mini": {
+    "steps": [
+      "Verfolge sowohl den Wärmepfeil als auch den Energiepfeil über die Grenze des ganzen Raumes.",
+      "Betrachte den ganzen Raum: Wo wird Wärme aufgenommen, wo wieder abgegeben, und wo kommt Betriebsenergie hinzu?"
+    ]
+  },
+  "invention-bicycle:mini": {
+    "steps": [
+      "Verfolge den mechanischen Weg vom Pedal zum Hinterrad.",
+      "Beginne an den Pedalen und folge nur den Bauteilen, die im beschriebenen Kettenantrieb miteinander verbunden sind."
+    ]
+  },
+  "invention-elevator:mini": {
+    "steps": [
+      "Trenne den normalen Antrieb von der Einrichtung für einen Störungsfall.",
+      "Frage bei jedem Bauteil: Arbeitet es beim gewöhnlichen Fahren oder greift es bei einer gefährlichen Störung ein?"
+    ]
+  },
+  "invention-seismograph:mini": {
+    "steps": [
+      "Überlege, ob nach dem Gerät, seiner aufgezeichneten Beobachtung oder dem Ergebnis der Auswertung gefragt ist.",
+      "Trenne das Gerät, die aufgezeichnete Kurve und die spätere Auswertung mehrerer Messungen."
+    ]
+  },
+  "invention-3d-printing:mini": {
+    "steps": [
+      "Vergleiche Aufbauen mit dem Wegnehmen eines Materials.",
+      "Achte auf den Materialweg: Wird etwas aufgebaut, aus einem Block entfernt oder mithilfe einer fertigen Form gegossen?"
+    ]
+  },
+  "invention-sewing-machine:mini": {
+    "steps": [
+      "Achte auf die zwei getrennten Fadenwege und ihre Verbindung.",
+      "Verfolge Oberfaden und Schiffchenfaden einzeln. Prüfe, wo sie sich beim beschriebenen Stich verbinden."
+    ]
   }
 }

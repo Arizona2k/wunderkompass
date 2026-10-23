@@ -1,7 +1,38 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {captureNativeViewport} from './native-screenshot.mjs';
 import assert from 'node:assert/strict';
 import photos from '../../app/world-photos.json' with {type:'json'};
 import topics from '../../app/world-catalog.json' with {type:'json'};
 import {prepareAxe} from './axe-loader.mjs';
+
+// A photo click is a real route opener even where native pointer behaviour
+// does not focus buttons. Keep the original Back wait and focus assertion.
+export async function photoCardOpenerFlow(browser,base,ready,monitor,shots,{controlled=false,context:providedContext=null,widths=[320,1440],native=false}={}){
+ const engine=browser?.browserType().name()??'chromium',cases=[],prefix=engine==='chromium'?'animal-photo-opener-chromium':'journey-engine-'+engine+'-photo-opener';
+ for(const width of widths)for(const suppress of controlled?[false,true]:[false]){
+  const context=providedContext??await browser.newContext({viewport:{width,height:900},hasTouch:width===320,reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);let category='initial';
+  try{
+   if(native){await page.setViewportSize({width:width*2,height:950});assert.equal(await page.evaluate(()=>innerWidth),width);assert.equal(await page.evaluate(()=>devicePixelRatio),2);}
+   if(suppress)await page.addInitScript(()=>document.addEventListener('mousedown',event=>{if(event.target?.closest?.('[data-route-focus^="world-category-"]'))event.preventDefault();},true));
+   await page.goto(base+'/#world');await ready(page);
+   for(category of ['animals','history','people','buildings']){
+    const key='world-category-'+category,card=page.locator('.world-view [data-route-focus="'+key+'"]');
+    assert.equal(await card.locator('.world-photo[tabindex],.world-photo [tabindex],.world-photo button,.world-photo a').count(),0,'compact photograph never creates an interactive child inside its card');
+    await card.locator('img').click();await page.waitForFunction(category=>location.hash==='#world/'+category,category);await page.locator('.world-topic-tile').first().waitFor();
+    await page.goBack();await page.waitForFunction(key=>document.activeElement?.dataset.routeFocus===key,key);
+    assert.equal(await card.evaluate(el=>el===document.activeElement),true,'photograph click restores its actual card opener');
+    const state=await page.evaluate(()=>({recordedOpener:history.state?.wunderFocus,actual:document.activeElement?.dataset.routeFocus}));assert.equal(state.recordedOpener,key,'the actual clicked card was saved before leaving');cases.push({width,category,suppressedNativeMouseFocus:suppress,native,...state});
+    if(shots&&native&&category==='buildings')await captureNativeViewport(page,path.join(shots,prefix+'-native200-'+width+'-'+(suppress?'controlled':'ordinary')+'.png'));
+   }
+  }catch(error){
+   const diagnostics={engine,width,category,suppressedNativeMouseFocus:suppress,native,completedCases:cases,actual:await page.evaluate(()=>({hash:location.hash,history:history.state,active:{tag:document.activeElement?.tagName,id:document.activeElement?.id,key:document.activeElement?.dataset.routeFocus}})).catch(()=>null),failure:error.stack};
+   if(shots){await fs.writeFile(path.join(shots,prefix+'-failure-'+width+'.json'),JSON.stringify(diagnostics,null,2)+'\n');await page.screenshot({path:path.join(shots,prefix+'-failure-'+width+'.png'),animations:'disabled',timeout:5000}).catch(()=>{});}console.error('PHOTO_CARD_OPENER_FAILURE',JSON.stringify(diagnostics));throw error;
+  }finally{if(providedContext)await page.close();else await context.close();}
+ }
+ if(shots)await fs.writeFile(path.join(shots,prefix+'-'+(controlled?'native-and-controlled':'native-only')+'.json'),JSON.stringify({engine,cases,meaning:'Original photo-card Back focus plus explicit no-native-pointer-focus cases; not a physical device or complete acceptance'},null,2)+'\n');
+ return cases;
+}
 
 export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
  const started=performance.now(),observed=[];
@@ -29,19 +60,7 @@ export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
  }
  // Clicking the photograph must keep the enclosing card as the history opener.
  // A tabindex on the decorative figure steals this focus and breaks real Back.
- for(const width of [320,1440]){
-  const context=await browser.newContext({viewport:{width,height:900},hasTouch:width===320,reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);
-  try{
-   await page.goto(base+'/#world');await ready(page);
-   for(const category of ['animals','history','people','buildings']){
-    const key='world-category-'+category,card=page.locator('.world-view [data-route-focus="'+key+'"]');
-    assert.equal(await card.locator('.world-photo[tabindex],.world-photo [tabindex],.world-photo button,.world-photo a').count(),0,'compact photograph never creates an interactive child inside its card');
-    await card.locator('img').click();await page.waitForFunction(category=>location.hash==='#world/'+category,category);await page.locator('.world-topic-tile').first().waitFor();
-    await page.goBack();await page.waitForFunction(key=>document.activeElement?.dataset.routeFocus===key,key);
-    assert.equal(await card.evaluate(el=>el===document.activeElement),true,'photograph click restores its actual card opener');
-   }
-  }finally{await context.close();}
- }
+ report.photoCardOpeners=await photoCardOpenerFlow(browser,base,ready,monitor,shots,{controlled:true});
  // A failed deferred catalog inside a clickable compact card must stay usable
  // without nesting another button. The article retains its explicit safe retry.
  {

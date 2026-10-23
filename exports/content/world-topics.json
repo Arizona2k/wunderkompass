@@ -5646,7 +5646,8 @@
     "related": [
       "person-karl_benz",
       "person-bertha_benz",
-      "invention-railway"
+      "invention-railway",
+      "invention-bicycle"
     ],
     "sources": [
       {
@@ -6102,7 +6103,9 @@
       "person-ada_lovelace",
       "person-grace_hopper",
       "science-computer",
-      "invention-transistor"
+      "invention-transistor",
+      "invention-3d-printing",
+      "invention-sewing-machine"
     ],
     "sources": [
       {
@@ -6446,7 +6449,9 @@
     "related": [
       "person-johannes_gutenberg",
       "history-paper",
-      "person-cai_lun"
+      "person-cai_lun",
+      "invention-3d-printing",
+      "invention-sewing-machine"
     ],
     "sources": [
       {
@@ -7173,7 +7178,8 @@
     ],
     "related": [
       "building-burj-khalifa",
-      "building-golden-gate-bridge"
+      "building-golden-gate-bridge",
+      "invention-elevator"
     ],
     "sources": [
       {
@@ -8661,7 +8667,9 @@
       "science-circuit",
       "science-energy",
       "invention-car",
-      "invention-generator"
+      "invention-generator",
+      "invention-refrigerator",
+      "invention-elevator"
     ],
     "sources": [
       {
@@ -8773,7 +8781,8 @@
     "surprise": "Licht kann durch leeren Raum reisen. Schall braucht ein Material wie Luft, Wasser oder Metall.",
     "related": [
       "invention-phone",
-      "science-atmosphere"
+      "science-atmosphere",
+      "invention-seismograph"
     ],
     "sources": [
       {
@@ -13746,5 +13755,745 @@
     "checkedAt": "2026-10-21",
     "revision": 1,
     "sourceNote": "Eigene Erklärung anhand zuvor gezielt gelesener Hochschul- und UNESCO-Texte. Historische Beiträge und Grenzen der Aussagen werden unterschieden. Kein authentisches Porträt oder übernommenes Foto behauptet."
+  },
+  {
+    "id": "invention-refrigerator",
+    "category": "inventions",
+    "title": "Der Kühlschrank",
+    "intro": "Wohin verschwindet die Wärme aus dem Inneren?",
+    "aliases": [
+      "Kompressorkühlschrank"
+    ],
+    "paragraphs": [
+      "Bei einem üblichen Kompressorkühlschrank nimmt ein Kältemittel innen Wärme auf und gibt sie außen wieder ab. Ein Kompressor und weitere Bauteile halten den Kreislauf in Gang. Deshalb wird der Raum durch einen Kühlschrank nicht insgesamt kälter. Auch die zugeführte elektrische Energie landet am Ende überwiegend als Wärme im Raum."
+    ],
+    "facts": [
+      {
+        "label": "Belegter Zeitanker",
+        "text": "1906 · verlinkte historische Kühlanlage, kein Erfindungsdatum"
+      },
+      {
+        "label": "Dein Forscherblick",
+        "text": "Wärme und Betriebsenergie über eine Systemgrenze verfolgen."
+      }
+    ],
+    "more": [
+      "Kälte ist kein Stoff, den das Gerät hineinfüllt. Wärmedämmung bremst den Wärmestrom von außen nach innen. Unterschiedliche Geräte nutzen unterschiedliche Kältemittel; sie gehören in geschlossene, fachgerecht gewartete Systeme. Die verlinkte große Kühlanlage stammt von 1906 und ist ein Beispiel aus der Entwicklung, keine erste Erfindung aller Kühlschränke.",
+      "Betrachte den ganzen Kühlschrank statt nur das kalte Innere: Wärme wird innen aufgenommen und außen wieder abgegeben, während der Antrieb Energie benötigt. Die vier Rollen im Funktionsplan gehören zu einem Kreislauf. Die Zeichnung ist keine Anleitung zum Öffnen oder Reparieren der geschlossenen Anlage."
+    ],
+    "surprise": "Der Innenraum kann kälter werden, während das Gerät Wärme an den Raum abgibt. Die Grenze des betrachteten Systems ist entscheidend für die Erklärung.",
+    "locations": [],
+    "related": [
+      "science-motor"
+    ],
+    "sources": [
+      {
+        "label": "Science Museum Group · 1: Objektdaten Made 1906 und Erklärung zum Wärmetransport",
+        "url": "https://collection.sciencemuseumgroup.org.uk/objects/co64200/co2-refrigeration-plant-by-j-and-e-hall"
+      },
+      {
+        "label": "Danfoss · 2: What a refrigerator does",
+        "url": "https://www.danfoss.com/en/about-danfoss/our-businesses/cooling/the-fridge-how-it-works/"
+      },
+      {
+        "label": "OpenStax · Wärmeabgabe als aufgenommene Wärme plus Antriebsarbeit",
+        "url": "https://openstax.org/books/college-physics-2e/pages/15-5-applications-of-thermodynamics-heat-pumps-and-refrigerators"
+      }
+    ],
+    "links": [],
+    "model": null,
+    "learning": {
+      "starter": "Ein Kühlschrank transportiert Wärme aus seinem Innenraum nach draußen. Dafür braucht er Energie.",
+      "observe": "Zeichne einen Kasten und zwei verschiedenfarbige Pfeile: Wärme innen nach außen, elektrische Energie zum Gerät. Was ändert sich, wenn die Tür offen bleibt? Nur zeichnen und überlegen; keine Geräteteile anfassen oder Rohre öffnen.",
+      "benefit": "Du verstehst, warum eine geschlossene Tür und gute Dämmung helfen und warum ein Kühlschrank kein Ersatz für eine Raumkühlung ist."
+    },
+    "question": {
+      "prompt": "Ein Kühlschrank läuft mit offener Tür im geschlossenen Raum. Wird der ganze Raum dadurch dauerhaft kühler?",
+      "answers": [
+        "Nein, das Gerät gibt die transportierte Wärme und seine Betriebsenergie an den Raum ab",
+        "Ja, der ganze Raum verliert Wärme, weil das kalte Innere Wärme aufnimmt",
+        "Die Raumtemperatur bleibt genau gleich, weil sich die zwei Wärmeströme immer ausgleichen"
+      ],
+      "correct": 0,
+      "why": "Ohne eine Wärmeabgabe außerhalb des Raums wird daraus keine Raumkühlung."
+    },
+    "questionFeedback": {
+      "hint": "Verfolge sowohl den Wärmepfeil als auch den Energiepfeil über die Grenze des ganzen Raumes.",
+      "wrongReasons": [
+        null,
+        "Das kalte Innere nimmt Wärme auf, aber außen wird sie wieder an denselben Raum abgegeben.",
+        "Außen wird zusätzlich zur transportierten Wärme auch die zugeführte Betriebsenergie abgegeben."
+      ]
+    },
+    "invention": {
+      "year": 1906,
+      "date": "1906 · verlinkte historische Kühlanlage, kein Erfindungsdatum",
+      "blueprint": "refrigerator",
+      "walkthrough": true,
+      "stages": [
+        {
+          "label": "Deine Frage",
+          "text": "Wohin verschwindet die Wärme aus dem Inneren?"
+        },
+        {
+          "label": "Das Prinzip",
+          "text": "Ein Kühlschrank transportiert Wärme aus seinem Innenraum nach draußen. Dafür braucht er Energie."
+        },
+        {
+          "label": "Teile verstehen",
+          "text": "Innenraum: Hier wird Wärme aufgenommen und nach außen transportiert. Kälte wird nicht als Stoff hineingefüllt. Wärmeabgabe außen: Außen gibt das System transportierte Wärme und die zum Betrieb zugeführte Energie an die Umgebung ab. Antrieb und Kreislauf: Im üblichen Kompressorsystem hält der Antrieb den geschlossenen Kältemittelkreislauf in Gang. Diese Grafik zeigt nur die Energieflüsse. Wärmedämmung: Die Dämmung bremst den Wärmestrom von außen nach innen. Sie ist kein Antrieb und verhindert den Wärmetransport nicht vollständig."
+        },
+        {
+          "label": "Genauer unterscheiden",
+          "text": "Kälte ist kein Stoff, den das Gerät hineinfüllt. Wärmedämmung bremst den Wärmestrom von außen nach innen. Unterschiedliche Geräte nutzen unterschiedliche Kältemittel; sie gehören in geschlossene, fachgerecht gewartete Systeme. Die verlinkte große Kühlanlage stammt von 1906 und ist ein Beispiel aus der Entwicklung, keine erste Erfindung aller Kühlschränke."
+        },
+        {
+          "label": "Selbst beobachten",
+          "text": "Zeichne einen Kasten und zwei verschiedenfarbige Pfeile: Wärme innen nach außen, elektrische Energie zum Gerät. Was ändert sich, wenn die Tür offen bleibt? Nur zeichnen und überlegen; keine Geräteteile anfassen oder Rohre öffnen."
+        },
+        {
+          "label": "Modellgrenzen",
+          "text": "Pfeile zeigen Energieflüsse, keinen vollständigen Kompressorzyklus. Gehäuse und Rohre bleiben geschlossen; nur am Bildschirm untersuchen."
+        }
+      ],
+      "parts": [
+        {
+          "id": "inside",
+          "name": "Innenraum",
+          "description": "Hier wird Wärme aufgenommen und nach außen transportiert. Kälte wird nicht als Stoff hineingefüllt."
+        },
+        {
+          "id": "outside",
+          "name": "Wärmeabgabe außen",
+          "description": "Außen gibt das System transportierte Wärme und die zum Betrieb zugeführte Energie an die Umgebung ab."
+        },
+        {
+          "id": "drive",
+          "name": "Antrieb und Kreislauf",
+          "description": "Im üblichen Kompressorsystem hält der Antrieb den geschlossenen Kältemittelkreislauf in Gang. Diese Grafik zeigt nur die Energieflüsse."
+        },
+        {
+          "id": "insulation",
+          "name": "Wärmedämmung",
+          "description": "Die Dämmung bremst den Wärmestrom von außen nach innen. Sie ist kein Antrieb und verhindert den Wärmetransport nicht vollständig."
+        }
+      ]
+    },
+    "sourceNote": "Das Museum beschreibt eine Kühlanlage von 1906 und Wärmetransport durch einen Kreislauf.1906 ist ein Objektdatum, kein Erfindungsjahr aller Kühlschränke. Die Pfeile unterscheiden transportierte Wärme und Betriebsenergie; sie zeigen keinen vollständigen Kältemittelzyklus und keine Wartungsanleitung. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
+  },
+  {
+    "id": "invention-bicycle",
+    "category": "inventions",
+    "title": "Das Fahrrad",
+    "intro": "Wie erreicht die Kraft deiner Beine das Hinterrad?",
+    "aliases": [],
+    "paragraphs": [
+      "Die Kette verbindet das Kettenblatt vorn mit einem Zahnrad am Hinterrad. Eine Übersetzung kann verändern, wie oft sich das Rad bei einer Pedalumdrehung dreht. Das tauscht Kraftbedarf gegen Weg, ohne zusätzliche Energie zu erfinden."
+    ],
+    "facts": [
+      {
+        "label": "Belegter Zeitanker",
+        "text": "1885 · Rover-Sicherheitsfahrrad, nicht das erste Fahrrad überhaupt"
+      },
+      {
+        "label": "Dein Forscherblick",
+        "text": "Den mechanischen Weg vom Pedal zum Hinterrad verfolgen."
+      }
+    ],
+    "more": [
+      "Das Rover-Sicherheitsfahrrad von 1885 hatte einen Hinterrad-Kettenantrieb und ähnlich große Räder. Gegenüber dem Hochrad saß man näher am Boden. Dieses Museumsobjekt hatte Vollgummireifen; heutige Luftreifen dürfen nicht in seine Zeichnung zurückdatiert werden. Fahrradgeschichte begann vor 1885 und hat viele Beteiligte.",
+      "Beim Vergleichen der Zahnzahlen solltest du dasselbe vordere Kettenblatt beibehalten. Erst dann zeigt der Wechsel des hinteren Zahnrads verständlich, warum ein leichterer Gang und mehr Pedalumdrehungen zusammengehören. Ein Übersetzungsverhältnis beschreibt Bewegung und Kraftbedarf; es ist keine zusätzliche Energiequelle."
+    ],
+    "surprise": "Ein leichterer Gang kann mehr Pedalumdrehungen für denselben Weg bedeuten. Zahnräder verändern die Übersetzung, sie schenken keine zusätzliche Energie.",
+    "locations": [],
+    "related": [
+      "invention-car"
+    ],
+    "sources": [
+      {
+        "label": "Science Museum Group · 1: Objektbeschreibung Kettenantrieb",
+        "url": "https://collection.sciencemuseumgroup.org.uk/objects/co25833/rover-safety-bicycle-1885"
+      },
+      {
+        "label": "Exploratorium · 2: The Benefits of Gears und Count your teeth",
+        "url": "https://annex.exploratorium.edu/cycling/gears1.html"
+      }
+    ],
+    "links": [],
+    "model": null,
+    "learning": {
+      "starter": "Beim gewöhnlichen Kettenfahrrad bewegen die Pedale eine Kette. Sie treibt das Hinterrad an.",
+      "observe": "Zeichne zwei gezahnte Kreise und markiere je einen Zahn. Vergleiche bei einer langsamen gedachten Kettenbewegung ein kleines und ein großes hinteres Zahnrad. Erkläre: Was ändert sich an Drehzahl und notwendiger Pedalkraft? Keinen echten Antrieb mit Fingern drehen.",
+      "benefit": "Du kannst einen leichteren Gang mit mehr Pedalumdrehungen verbinden und vermeidest die Vorstellung kostenloser Energie durch Zahnräder."
+    },
+    "question": {
+      "prompt": "Was verbindet beim beschriebenen Kettenfahrrad die Pedale mit dem Hinterrad?",
+      "answers": [
+        "Kettenblatt, Kette und hinteres Zahnrad",
+        "Die Pedale drehen das Vorderrad direkt, ohne Kette",
+        "Die Kette treibt das Vorderrad an, das das Hinterrad mitzieht"
+      ],
+      "correct": 0,
+      "why": "Die Kette überträgt die Bewegung zwischen dem vorderen und dem hinteren Zahnrad."
+    },
+    "questionFeedback": {
+      "hint": "Verfolge den mechanischen Weg vom Pedal zum Hinterrad.",
+      "wrongReasons": [
+        null,
+        "Ein direkter Pedalantrieb am Vorderrad gehört zu anderen Fahrradbauarten. Hier führt die Kette zum Hinterrad.",
+        "Im beschriebenen Kettenfahrrad sitzt das angetriebene Zahnrad am Hinterrad; das Vorderrad wird nicht von dieser Kette angetrieben."
+      ]
+    },
+    "invention": {
+      "year": 1885,
+      "date": "1885 · Rover-Sicherheitsfahrrad, nicht das erste Fahrrad überhaupt",
+      "blueprint": "bicycle",
+      "walkthrough": true,
+      "stages": [
+        {
+          "label": "Deine Frage",
+          "text": "Wie erreicht die Kraft deiner Beine das Hinterrad?"
+        },
+        {
+          "label": "Das Prinzip",
+          "text": "Beim gewöhnlichen Kettenfahrrad bewegen die Pedale eine Kette. Sie treibt das Hinterrad an."
+        },
+        {
+          "label": "Teile verstehen",
+          "text": "Pedal und Kettenblatt: Die Beine drehen über die Pedale das vordere Kettenblatt. Kette: Die Kette überträgt die Bewegung auf das hintere Zahnrad. Finger gehören niemals an einen bewegten echten Antrieb. Hinteres Zahnrad: Das Verhältnis der Zahnzahlen bestimmt, wie sich Pedal- und Hinterradumdrehungen zueinander verhalten. Hinterrad: Das angetriebene Hinterrad braucht Halt am Boden. Eine andere Übersetzung erzeugt keine zusätzliche Energie."
+        },
+        {
+          "label": "Genauer unterscheiden",
+          "text": "Das Rover-Sicherheitsfahrrad von 1885 hatte einen Hinterrad-Kettenantrieb und ähnlich große Räder. Gegenüber dem Hochrad saß man näher am Boden. Dieses Museumsobjekt hatte Vollgummireifen; heutige Luftreifen dürfen nicht in seine Zeichnung zurückdatiert werden. Fahrradgeschichte begann vor 1885 und hat viele Beteiligte."
+        },
+        {
+          "label": "Selbst beobachten",
+          "text": "Zeichne zwei gezahnte Kreise und markiere je einen Zahn. Vergleiche bei einer langsamen gedachten Kettenbewegung ein kleines und ein großes hinteres Zahnrad. Erkläre: Was ändert sich an Drehzahl und notwendiger Pedalkraft? Keinen echten Antrieb mit Fingern drehen."
+        },
+        {
+          "label": "Modellgrenzen",
+          "text": "Ein Kettenantrieb als Funktionsplan, keine genaue historische Rekonstruktion. Zahnzahlen und Kräfte sind hier nicht maßstäblich berechnet."
+        }
+      ],
+      "parts": [
+        {
+          "id": "pedal",
+          "name": "Pedal und Kettenblatt",
+          "description": "Die Beine drehen über die Pedale das vordere Kettenblatt."
+        },
+        {
+          "id": "chain",
+          "name": "Kette",
+          "description": "Die Kette überträgt die Bewegung auf das hintere Zahnrad. Finger gehören niemals an einen bewegten echten Antrieb."
+        },
+        {
+          "id": "rear",
+          "name": "Hinteres Zahnrad",
+          "description": "Das Verhältnis der Zahnzahlen bestimmt, wie sich Pedal- und Hinterradumdrehungen zueinander verhalten."
+        },
+        {
+          "id": "wheel",
+          "name": "Hinterrad",
+          "description": "Das angetriebene Hinterrad braucht Halt am Boden. Eine andere Übersetzung erzeugt keine zusätzliche Energie."
+        }
+      ]
+    },
+    "sourceNote": "Das Museum beschreibt das Rover-Fahrrad von 1885 mit Hinterrad-Kettenantrieb und Vollgummireifen. Das Exploratorium erklärt Zahnzahlen und Übersetzung. Die Zeichnung ist ein Funktionsplan, keine genaue Rekonstruktion; die Übersetzung tauscht Kraftbedarf gegen Weg und erzeugt keine zusätzliche Energie. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
+  },
+  {
+    "id": "invention-elevator",
+    "category": "inventions",
+    "title": "Der Aufzug",
+    "intro": "Was hilft einer Kabine sicher von Stockwerk zu Stockwerk?",
+    "aliases": [],
+    "paragraphs": [
+      "Bei einem typischen Seilaufzug bewegt ein Antrieb die Kabine über Seile und eine Treibscheibe. Ein Gegengewicht gleicht einen Teil der Gewichtskraft der Kabine aus. Sicherheit entsteht durch mehrere zusammenarbeitende Einrichtungen, nicht allein durch einen starken Motor. Andere Aufzüge arbeiten beispielsweise hydraulisch."
+    ],
+    "facts": [
+      {
+        "label": "Belegter Zeitanker",
+        "text": "1853/1854 · Otis-Sicherheitsbremse und öffentliche Vorführung"
+      },
+      {
+        "label": "Dein Forscherblick",
+        "text": "Normalen Antrieb und zusätzliche Sicherheit trennen."
+      }
+    ],
+    "more": [
+      "Elisha Otis verkaufte 1853 einen Aufzug mit einer Sicherheitsbremse. 1854 zeigte er eine Fangvorrichtung öffentlich; 1857 installierte sein Unternehmen einen Personenaufzug im New Yorker Haughwout-Gebäude. Das sind Entwicklungsschritte, keine Behauptung, vorher habe es keine Lastenaufzüge gegeben. Eine Last zu heben, eine gefährliche Bewegung zu bremsen und Menschen zu befördern sind verschiedene Aufgaben.",
+      "Ordne jedem Teil eine Aufgabe zu: Kabine und Gegengewicht bewegen sich im normalen Betrieb über Seile und Treibscheibe, die Fangvorrichtung hat eine andere Aufgabe im Störungsfall. Diese Trennung hilft, Sicherheit nicht mit bloßer Antriebsstärke zu verwechseln. Der Plan zeigt keine vollständige Sicherheitsprüfung eines echten Aufzugs."
+    ],
+    "surprise": "Ein starker Motor und eine Fangvorrichtung lösen unterschiedliche Aufgaben. Gute Technik unterscheidet den normalen Betrieb von einem Störungsfall.",
+    "locations": [],
+    "related": [
+      "science-motor",
+      "building-eiffel-tower"
+    ],
+    "sources": [
+      {
+        "label": "Otis · 1: 1850s: 1853",
+        "url": "https://www.otis.com/en/us/our-company/history"
+      },
+      {
+        "label": "Otis · 2: Engineered for safety",
+        "url": "https://www.otis.com/en/us/tools-resources/high-rise-safety-systems/"
+      },
+      {
+        "label": "National Register: Otis-Gebäude und historische Entwicklung, PDF, Abschnitt 8",
+        "url": "https://npgallery.nps.gov/GetAsset/07a0f86d-5e38-4a69-96f7-45050d94f808"
+      }
+    ],
+    "links": [],
+    "model": null,
+    "learning": {
+      "starter": "Ein Aufzug bewegt Menschen oder Lasten nach oben und unten. Antrieb und Sicherheitseinrichtungen haben dabei verschiedene Aufgaben.",
+      "observe": "Vergleiche im Bildschirmplan die Rollen: Was bewegt die Kabine, was hält sie im Störungsfall? Ordne die Aufgaben zunächst ohne Auflösung zu. Keine echten Türen blockieren, keinen Schacht betreten und keine Sicherheitseinrichtung ausprobieren.",
+      "benefit": "Du erkennst, warum Barrierefreiheit und sichere Wartung ebenso zur Technik gehören wie schnelleres Hochfahren."
+    },
+    "question": {
+      "prompt": "Welche Aufgabe hat die Fangvorrichtung im beschriebenen Sicherheitsmodell?",
+      "answers": [
+        "Eine gefährliche Abwärtsbewegung im Störungsfall bremsen",
+        "Die Kabine bei jeder normalen Fahrt antreiben",
+        "Den Gewichtsunterschied zwischen Kabine und Gegengewicht im Betrieb ausgleichen"
+      ],
+      "correct": 0,
+      "why": "Die Fangvorrichtung ist eine zusätzliche Sicherheitseinrichtung; sie ist nicht der gewöhnliche Antrieb."
+    },
+    "questionFeedback": {
+      "hint": "Trenne den normalen Antrieb von der Einrichtung für einen Störungsfall.",
+      "wrongReasons": [
+        null,
+        "Der Antrieb bewegt die Kabine im normalen Betrieb. Die Fangvorrichtung erfüllt eine zusätzliche Aufgabe im Störungsfall.",
+        "Das Gegengewicht gleicht einen Teil der Gewichtskraft der Kabine aus. Die Fangvorrichtung ist dagegen zum Bremsen einer gefährlichen Bewegung da."
+      ]
+    },
+    "invention": {
+      "year": 1854,
+      "date": "1853/1854 · Otis-Sicherheitsbremse und öffentliche Vorführung",
+      "blueprint": "elevator",
+      "walkthrough": true,
+      "stages": [
+        {
+          "label": "Deine Frage",
+          "text": "Was hilft einer Kabine sicher von Stockwerk zu Stockwerk?"
+        },
+        {
+          "label": "Das Prinzip",
+          "text": "Ein Aufzug bewegt Menschen oder Lasten nach oben und unten. Antrieb und Sicherheitseinrichtungen haben dabei verschiedene Aufgaben."
+        },
+        {
+          "label": "Teile verstehen",
+          "text": "Kabine: Die Kabine trägt Menschen oder Lasten. Die Zeichnung zeigt nur das Prinzip eines Seilaufzugs. Gegengewicht: Es gleicht einen Teil der Gewichtskraft der Kabine aus. Nicht alle Aufzüge verwenden diese Bauart. Antrieb und Treibscheibe: Die Treibscheibe bewegt die Seile an Kabine und Gegengewicht. Das ist die Aufgabe im normalen Betrieb. Fangvorrichtung: Eine zusätzliche Sicherheitseinrichtung bremst eine gefährliche Abwärtsbewegung im Störungsfall. Sie ersetzt nicht den gewöhnlichen Antrieb."
+        },
+        {
+          "label": "Genauer unterscheiden",
+          "text": "Elisha Otis verkaufte 1853 einen Aufzug mit einer Sicherheitsbremse. 1854 zeigte er eine Fangvorrichtung öffentlich; 1857 installierte sein Unternehmen einen Personenaufzug im New Yorker Haughwout-Gebäude. Das sind Entwicklungsschritte, keine Behauptung, vorher habe es keine Lastenaufzüge gegeben. Eine Last zu heben, eine gefährliche Bewegung zu bremsen und Menschen zu befördern sind verschiedene Aufgaben."
+        },
+        {
+          "label": "Selbst beobachten",
+          "text": "Vergleiche im Bildschirmplan die Rollen: Was bewegt die Kabine, was hält sie im Störungsfall? Ordne die Aufgaben zunächst ohne Auflösung zu. Keine echten Türen blockieren, keinen Schacht betreten und keine Sicherheitseinrichtung ausprobieren."
+        },
+        {
+          "label": "Modellgrenzen",
+          "text": "Ein qualitatives Seilaufzugsprinzip mit getrennten Aufgaben. Keine Bau-, Wartungs- oder Manipulationsanleitung; andere Bauarten funktionieren anders."
+        }
+      ],
+      "parts": [
+        {
+          "id": "car",
+          "name": "Kabine",
+          "description": "Die Kabine trägt Menschen oder Lasten. Die Zeichnung zeigt nur das Prinzip eines Seilaufzugs."
+        },
+        {
+          "id": "counterweight",
+          "name": "Gegengewicht",
+          "description": "Es gleicht einen Teil der Gewichtskraft der Kabine aus. Nicht alle Aufzüge verwenden diese Bauart."
+        },
+        {
+          "id": "drive",
+          "name": "Antrieb und Treibscheibe",
+          "description": "Die Treibscheibe bewegt die Seile an Kabine und Gegengewicht. Das ist die Aufgabe im normalen Betrieb."
+        },
+        {
+          "id": "safety",
+          "name": "Fangvorrichtung",
+          "description": "Eine zusätzliche Sicherheitseinrichtung bremst eine gefährliche Abwärtsbewegung im Störungsfall. Sie ersetzt nicht den gewöhnlichen Antrieb."
+        }
+      ]
+    },
+    "sourceNote": "Die Otis-Chronik ist eine Unternehmensquelle. Die verlinkte Denkmaldokumentation beschreibt ebenfalls 1853/1854/1857 und stützt sich teilweise auf Firmenunterlagen. Der Plan zeigt Aufgaben eines Seilaufzugs; weder die historische Vorführung noch die Zeichnung beweisen die Sicherheit eines heutigen Geräts. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
+  },
+  {
+    "id": "invention-seismograph",
+    "category": "inventions",
+    "title": "Der Seismograf",
+    "intro": "Wie lässt sich zitternder Boden aufzeichnen?",
+    "aliases": [
+      "Seismometer",
+      "Seismogramm"
+    ],
+    "paragraphs": [
+      "In einem einfachen Modell bewegt sich das am Boden befestigte Gehäuse mit dem Boden. Eine aufgehängte Masse folgt wegen ihrer Trägheit anders. Die relative Bewegung kann als Kurve aufgezeichnet werden. Diese Aufzeichnung heißt Seismogramm; ein Seismometer bezeichnet den messenden Teil, oft wird das Wort auch für das Gerät benutzt."
+    ],
+    "facts": [
+      {
+        "label": "Belegter Zeitanker",
+        "text": "1855 · Kreils Veröffentlichung zu einem frühen Seismografen; kein gesicherter Bauzeitpunkt"
+      },
+      {
+        "label": "Dein Forscherblick",
+        "text": "Bewegungen immer mit ihrem Bezugssystem beschreiben."
+      }
+    ],
+    "more": [
+      "1855 veröffentlichte Karl Kreil einen Entwurf für einen Seismografen. Ob sein Gerät vollständig gebaut wurde, ist nach der historischen Untersuchung unsicher. Eine einzelne heutige Messkurve nennt nicht von selbst den genauen Bebenort: Forschende vergleichen mehrere Stationen und Wellenankunftszeiten. Heutige Geräte speichern oft digital. Der Zeitanker bezeichnet hier eine Veröffentlichung und keinen sicheren Tag der Erfindung.",
+      "Beschreibe eine Bewegung immer relativ zu etwas anderem: Das Gehäuse folgt dem Boden; die träge Masse folgt zunächst anders. Im Modell hältst du die Lage der Masse als vereinfachten Vergleich fest. Es ist eine Momentaufnahme, keine berechnete Schwingung und kein Verfahren zur Erdbebenvorhersage."
+    ],
+    "surprise": "Das Gerät misst, die Kurve dokumentiert und Forschende werten aus. Mehrere Stationen helfen dabei, die bereits eingetroffenen Erschütterungen einzuordnen.",
+    "locations": [],
+    "related": [
+      "science-sound"
+    ],
+    "sources": [
+      {
+        "label": "USGS · 1: Abschnitte Seismographs sowie Digital Seismometers",
+        "url": "https://www.usgs.gov/programs/earthquake-hazards/seismographs-keeping-track-earthquakes"
+      },
+      {
+        "label": "USGS · 2: 1855",
+        "url": "https://earthquake.usgs.gov/education/eqscience-timeline.php"
+      },
+      {
+        "label": "USGS · 3: FAQ-Hauptabsätze zu Messgerät",
+        "url": "https://www.usgs.gov/faqs/seismometers-seismographs-seismograms-whats-difference-how-do-they-work"
+      },
+      {
+        "label": "USGS · 4: FAQ-Hauptabsätze1–16",
+        "url": "https://www.usgs.gov/faqs/can-you-predict-earthquakes"
+      },
+      {
+        "label": "Geschichte des österreichischen Geophysikalischen Dienstes, Abschnitt 2.1",
+        "url": "https://hgss.copernicus.org/articles/12/11/2021/"
+      }
+    ],
+    "links": [],
+    "model": null,
+    "learning": {
+      "starter": "Ein Seismograf zeichnet Bodenbewegungen auf. Das hilft, bereits entstandene Erdbeben zu untersuchen.",
+      "observe": "Vergleiche im Bildschirmmodell Boden, Gehäuse, Masse und Kurve. Sage voraus, was sich relativ wozu bewegt. Wiederhole nur mit einer anderen gedachten Bewegungsrichtung. Keine schweren Pendel oder wackligen Aufbauten bauen.",
+      "benefit": "Du unterscheidest eine Messung nach Beginn von Erschütterungen von einer angeblich sicheren Vorhersage eines künftigen Erdbebens."
+    },
+    "question": {
+      "prompt": "Was ist ein Seismogramm?",
+      "answers": [
+        "Die aufgezeichnete Bodenbewegung an einer Messstation",
+        "Das Messgerät, das die Bodenbewegung registriert",
+        "Die bereits berechnete Lage und Stärke des Erdbebens"
+      ],
+      "correct": 0,
+      "why": "Die Kurve dokumentiert gemessene Bewegung; weitere Stationen und Auswertung helfen bei der Einordnung."
+    },
+    "questionFeedback": {
+      "hint": "Überlege, ob nach dem Gerät, seiner aufgezeichneten Beobachtung oder dem Ergebnis der Auswertung gefragt ist.",
+      "wrongReasons": [
+        null,
+        "Das Gerät heißt Seismograf, sein messender Teil Seismometer. Das Seismogramm ist die Aufzeichnung.",
+        "Lage und Stärke sind Ergebnisse weiterer Auswertung; die einzelne Aufzeichnung ist zunächst eine Bewegungskurve an dieser Station."
+      ]
+    },
+    "invention": {
+      "year": 1855,
+      "date": "1855 · Kreils Veröffentlichung zu einem frühen Seismografen; kein gesicherter Bauzeitpunkt",
+      "blueprint": "seismograph",
+      "walkthrough": true,
+      "stages": [
+        {
+          "label": "Deine Frage",
+          "text": "Wie lässt sich zitternder Boden aufzeichnen?"
+        },
+        {
+          "label": "Das Prinzip",
+          "text": "Ein Seismograf zeichnet Bodenbewegungen auf. Das hilft, bereits entstandene Erdbeben zu untersuchen."
+        },
+        {
+          "label": "Teile verstehen",
+          "text": "Gehäuse am Boden: Das Gehäuse bewegt sich mit dem Boden. Es ist das Bezugssystem für die gezeigte relative Bewegung. Träge Masse: Eine aufgehängte Masse folgt anders als das Gehäuse. Das vereinfachte Modell macht diese relative Bewegung sichtbar. Aufzeichnung: Die Kurve dokumentiert Bewegung an dieser Station. Sie ist keine sichere Vorhersage eines künftigen Erdbebens."
+        },
+        {
+          "label": "Genauer unterscheiden",
+          "text": "1855 veröffentlichte Karl Kreil einen Entwurf für einen Seismografen. Ob sein Gerät vollständig gebaut wurde, ist nach der historischen Untersuchung unsicher. Eine einzelne heutige Messkurve nennt nicht von selbst den genauen Bebenort: Forschende vergleichen mehrere Stationen und Wellenankunftszeiten. Heutige Geräte speichern oft digital. Der Zeitanker bezeichnet hier eine Veröffentlichung und keinen sicheren Tag der Erfindung."
+        },
+        {
+          "label": "Selbst beobachten",
+          "text": "Vergleiche im Bildschirmmodell Boden, Gehäuse, Masse und Kurve. Sage voraus, was sich relativ wozu bewegt. Wiederhole nur mit einer anderen gedachten Bewegungsrichtung. Keine schweren Pendel oder wackligen Aufbauten bauen."
+        },
+        {
+          "label": "Modellgrenzen",
+          "text": "Ein einfaches relatives Messprinzip, keine Echtzeitdaten und keine Erdbebenprognose. Aus einer Kurve allein folgt noch kein genauer Bebenort."
+        }
+      ],
+      "parts": [
+        {
+          "id": "frame",
+          "name": "Gehäuse am Boden",
+          "description": "Das Gehäuse bewegt sich mit dem Boden. Es ist das Bezugssystem für die gezeigte relative Bewegung."
+        },
+        {
+          "id": "mass",
+          "name": "Träge Masse",
+          "description": "Eine aufgehängte Masse folgt anders als das Gehäuse. Das vereinfachte Modell macht diese relative Bewegung sichtbar."
+        },
+        {
+          "id": "record",
+          "name": "Aufzeichnung",
+          "description": "Die Kurve dokumentiert Bewegung an dieser Station. Sie ist keine sichere Vorhersage eines künftigen Erdbebens."
+        }
+      ],
+      "model": "seismograph"
+    },
+    "sourceNote": "1855 bezeichnet Kreils Veröffentlichung. Die historische Untersuchung lässt offen, ob sein Gerät vollständig gebaut wurde. USGS erklärt Messprinzip, Aufzeichnung und Auswertung mehrerer Stationen. Die träge Masse im Modell ist eine vereinfachte Momentaufnahme; daraus folgt keine sichere Vorhersage künftiger Erdbeben. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
+  },
+  {
+    "id": "invention-3d-printing",
+    "category": "inventions",
+    "title": "Der 3D-Druck",
+    "intro": "Wie wird aus einem digitalen Entwurf ein räumlicher Gegenstand?",
+    "aliases": [
+      "additive Fertigung",
+      "Stereolithografie"
+    ],
+    "paragraphs": [
+      "Beim additiven Herstellen wird Material gezielt aufgebaut. Eine Fräse arbeitet anders: Sie nimmt Material von einem Ausgangsstück weg. Verschiedene 3D-Druckverfahren nutzen beispielsweise Kunststoff, Metall oder Keramik. Nicht jedes Verfahren schmilzt einen Kunststofffaden."
+    ],
+    "facts": [
+      {
+        "label": "Belegter Zeitanker",
+        "text": "1986 · Patent auf Hulls Stereolithografie, nicht Beginn aller additiven Verfahren"
+      },
+      {
+        "label": "Dein Forscherblick",
+        "text": "Querschnitte und räumliche Form zusammen denken."
+      }
+    ],
+    "more": [
+      "Charles Hull entwickelte die Stereolithografie, bei der geeignetes flüssiges Material durch Licht schichtweise aushärtet. Für dieses Verfahren erhielt er 1986 ein Patent. Das Datum bezeichnet nicht die gemeinsame Erfindung sämtlicher additiven Verfahren. Ein fertiger Entwurf und ein gelungener Druck sind außerdem noch keine Freigabe für ein sicherheitskritisches Bauteil.",
+      "Im Schichtenmodell kannst du erst einen Stapel aufbauen und anschließend die mittlere Schicht verändern. Vergleiche danach die Gesamtform mit deinem ursprünglichen Entwurf. Dieser Querschnittsvergleich hilft beim räumlichen Denken; er sagt noch nicht, ob ein echtes Material die Form tragen oder ein Drucker sie herstellen kann."
+    ],
+    "surprise": "Nicht jedes 3D-Druckverfahren schmilzt einen Kunststofffaden. Bei der Stereolithografie härtet geeignetes flüssiges Material durch Licht aus.",
+    "locations": [],
+    "related": [
+      "invention-computer",
+      "invention-printing"
+    ],
+    "sources": [
+      {
+        "label": "NIST · 1: What is Additive Manufacturing? und Werkstoffbeispiele",
+        "url": "https://www.nist.gov/additive-manufacturing/what-additive-manufacturing"
+      },
+      {
+        "label": "National Inventors Hall of Fame · 2: 1986 patented stereolithography",
+        "url": "https://www.invent.org/blog/inventors/3d-printing-chuck-hull"
+      },
+      {
+        "label": "National Inventors Hall of Fame · 3: Method uses UV light",
+        "url": "https://www.invent.org/inductees/charles-hull"
+      }
+    ],
+    "links": [],
+    "model": null,
+    "learning": {
+      "starter": "Ein 3D-Drucker baut einen Gegenstand nach digitalen Vorgaben auf. Häufig entsteht er Schicht für Schicht.",
+      "observe": "Ordne drei selbst gezeichnete Querschnitte zu einem Stapel. Sage voraus, welche Form daraus entsteht, und vergleiche mit der Seitenansicht. Ändere eine mittlere Schicht. Keine heißen Düsen, Harze, Pulver oder Laser selbst bedienen.",
+      "benefit": "Du verstehst räumliche Entwürfe, prüfst Modellgrenzen und erkennst den Unterschied zwischen einem Anschauungsmodell und einem geprüften Ersatzteil."
+    },
+    "question": {
+      "prompt": "Was beschreibt additives Herstellen am besten?",
+      "answers": [
+        "Material nach einem Entwurf aufbauen",
+        "Immer nur Material von einem vollen Block wegnehmen",
+        "Material allein durch Gießen in eine fertige Form bringen"
+      ],
+      "correct": 0,
+      "why": "Additive Verfahren bauen Material gezielt auf; Material und genaue Technik unterscheiden sich."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche Aufbauen mit dem Wegnehmen eines Materials.",
+      "wrongReasons": [
+        null,
+        "Das beschreibt abtragende Bearbeitung und nicht den additiven Aufbau.",
+        "Gießen formt Material mithilfe einer fertigen Form. Additive Verfahren bauen Material gezielt nach einem Entwurf auf."
+      ]
+    },
+    "invention": {
+      "year": 1986,
+      "date": "1986 · Patent auf Hulls Stereolithografie, nicht Beginn aller additiven Verfahren",
+      "blueprint": "3d-printing",
+      "walkthrough": true,
+      "model": "layers",
+      "stages": [
+        {
+          "label": "Deine Frage",
+          "text": "Wie wird aus einem digitalen Entwurf ein räumlicher Gegenstand?"
+        },
+        {
+          "label": "Das Prinzip",
+          "text": "Ein 3D-Drucker baut einen Gegenstand nach digitalen Vorgaben auf. Häufig entsteht er Schicht für Schicht."
+        },
+        {
+          "label": "Teile verstehen",
+          "text": "Digitaler Entwurf: Der Entwurf legt fest, wo Material aufgebaut werden soll. Ein Foto allein ersetzt keinen räumlichen Entwurf. Querschnitt einer Schicht: Eine Schicht gehört an die richtige Stelle im Stapel. Unterschiedliche Verfahren und Werkstoffe setzen den Aufbau verschieden um. Aufgebautes Modell: Mehrere passende Querschnitte ergeben zusammen eine räumliche Form. Die Zeichnung prüft weder Festigkeit noch sichere Verwendung."
+        },
+        {
+          "label": "Genauer unterscheiden",
+          "text": "Charles Hull entwickelte die Stereolithografie, bei der geeignetes flüssiges Material durch Licht schichtweise aushärtet. Für dieses Verfahren erhielt er 1986 ein Patent. Das Datum bezeichnet nicht die gemeinsame Erfindung sämtlicher additiven Verfahren. Ein fertiger Entwurf und ein gelungener Druck sind außerdem noch keine Freigabe für ein sicherheitskritisches Bauteil."
+        },
+        {
+          "label": "Selbst beobachten",
+          "text": "Ordne drei selbst gezeichnete Querschnitte zu einem Stapel. Sage voraus, welche Form daraus entsteht, und vergleiche mit der Seitenansicht. Ändere eine mittlere Schicht. Keine heißen Düsen, Harze, Pulver oder Laser selbst bedienen."
+        },
+        {
+          "label": "Modellgrenzen",
+          "text": "Drei gezeichnete Querschnitte erklären Aufbau und Ansichten. Das Modell berechnet weder Druckbarkeit noch Stützen oder Bauteilfestigkeit."
+        }
+      ],
+      "parts": [
+        {
+          "id": "design",
+          "name": "Digitaler Entwurf",
+          "description": "Der Entwurf legt fest, wo Material aufgebaut werden soll. Ein Foto allein ersetzt keinen räumlichen Entwurf."
+        },
+        {
+          "id": "layer",
+          "name": "Querschnitt einer Schicht",
+          "description": "Eine Schicht gehört an die richtige Stelle im Stapel. Unterschiedliche Verfahren und Werkstoffe setzen den Aufbau verschieden um."
+        },
+        {
+          "id": "object",
+          "name": "Aufgebautes Modell",
+          "description": "Mehrere passende Querschnitte ergeben zusammen eine räumliche Form. Die Zeichnung prüft weder Festigkeit noch sichere Verwendung."
+        }
+      ]
+    },
+    "sourceNote": "NIST erklärt additiven Materialaufbau; die Erfinderbiografie beschreibt Hulls Stereolithografie und das Patent von 1986. Drei gezeichnete Querschnitte zeigen den Zusammenhang zwischen Schichten und Form. Sie prüfen weder Druckbarkeit noch Materialfestigkeit oder sichere Verwendung eines Bauteils. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
+  },
+  {
+    "id": "invention-sewing-machine",
+    "category": "inventions",
+    "title": "Die Nähmaschine",
+    "intro": "Wie kann eine Maschine zwei Fäden zu einer Naht verbinden?",
+    "aliases": [],
+    "paragraphs": [
+      "In Howes historischer Maschine arbeiteten eine Nadel und ein Schiffchen mit einem zweiten Faden zusammen. So entstand ein anderer Bewegungsablauf als beim Nähen von Hand. Das Patent wurde am 10. September 1846 erteilt. Es ist ein belegter Entwicklungsschritt, kein Beweis für einen alleinigen Erfinder sämtlicher Nähmaschinen."
+    ],
+    "facts": [
+      {
+        "label": "Belegter Zeitanker",
+        "text": "1846 · Howes belegtes Patent auf eine Doppelsteppstich-Maschine"
+      },
+      {
+        "label": "Dein Forscherblick",
+        "text": "Zwei Fadenwege und ihre gemeinsame Aufgabe erkennen."
+      }
+    ],
+    "more": [
+      "Nicht jede Nähmaschine erzeugt dieselbe Stichart. Auch der Transport des Stoffs und die Abstimmung der Bewegungen gehören zur Funktion. Maschinen erleichtern gleichmäßige Wiederholung; Stoffwahl, Planung, Reparatur und sichere Bedienung bleiben menschliche Aufgaben.",
+      "Verfolge die beiden Fäden einzeln, statt nur die fertige Naht anzusehen. Eine gezeichnete Kreuzung allein stellt noch nicht den vollständigen Ablauf des Verschlingens dar. Der Funktionsplan benennt die Rollen; wie Nadel, Schiffchen und Stofftransport zeitlich zusammenwirken, braucht darüber hinaus eine genauere Bewegungsdarstellung."
+    ],
+    "surprise": "Eine Nähmaschine muss die menschliche Handbewegung nicht einfach nachahmen. Beim beschriebenen Doppelsteppstich arbeiten zwei Fäden in einem eigenen Bewegungsablauf zusammen.",
+    "locations": [],
+    "related": [
+      "invention-computer",
+      "invention-printing"
+    ],
+    "sources": [
+      {
+        "label": "U.S. National Archives · 1: Patent granted September 10",
+        "url": "https://www.archives.gov/exhibits/designs_for_democracy/symbols_and_substance/articles/sewing_machine_2.html"
+      },
+      {
+        "label": "Science Museum Group · 2: Objekt circa 1846",
+        "url": "https://collection.sciencemuseumgroup.org.uk/objects/co44744/sewing-machine-by-elias-howe"
+      },
+      {
+        "label": "Smithsonian · Patentmodell 004750, Datum und zwei Fadenwege",
+        "url": "https://collections.si.edu/search/detail/edanmdm:nmah_630930?print=yes"
+      }
+    ],
+    "links": [],
+    "model": null,
+    "learning": {
+      "starter": "Eine Nähmaschine bewegt Nadel und Faden in einer wiederholten Folge. Bei einem Doppelsteppstich greifen zwei Fäden ineinander.",
+      "observe": "Lege auf Papier zwei verschiedenfarbige gezeichnete Fadenwege übereinander. Beschreibe, an welcher Stelle sie sich verschlingen sollen. Vergleiche eine lose Kreuzung mit einer Verbindung. Nur zeichnen; keine echte Nadel oder eingeschaltete Maschine verwenden.",
+      "benefit": "Du erkennst, wie ein technisches System eine Aufgabe mit einem eigenen Ablauf löst, statt eine menschliche Hand bloß nachzubauen."
+    },
+    "question": {
+      "prompt": "Welche Zusammenarbeit beschreibt die hier erklärte historische Doppelsteppstich-Maschine?",
+      "answers": [
+        "Nadel und Schiffchen verbinden zwei Fäden",
+        "Eine Nadel führt einen einzigen Faden durch eigene Schlingen",
+        "Die Nadel zieht wie beim Handnähen den ganzen Faden durch den Stoff"
+      ],
+      "correct": 0,
+      "why": "Die Quelle beschreibt Nadel und Schiffchenfaden als zusammenwirkende Teile der Stichbildung."
+    },
+    "questionFeedback": {
+      "hint": "Achte auf die zwei getrennten Fadenwege und ihre Verbindung.",
+      "wrongReasons": [
+        null,
+        "Das passt zu einer anderen Stichbildung. Beim beschriebenen Doppelsteppstich werden Nadel- und Schiffchenfaden miteinander verriegelt.",
+        "Die historische Maschine ahmt die Handbewegung nicht einfach nach: Ihre Nadel führt Fadenschlingen, durch die der zweite Faden geführt wird."
+      ]
+    },
+    "invention": {
+      "year": 1846,
+      "date": "1846 · Howes belegtes Patent auf eine Doppelsteppstich-Maschine",
+      "blueprint": "sewing-machine",
+      "walkthrough": true,
+      "stages": [
+        {
+          "label": "Deine Frage",
+          "text": "Wie kann eine Maschine zwei Fäden zu einer Naht verbinden?"
+        },
+        {
+          "label": "Das Prinzip",
+          "text": "Eine Nähmaschine bewegt Nadel und Faden in einer wiederholten Folge. Bei einem Doppelsteppstich greifen zwei Fäden ineinander."
+        },
+        {
+          "label": "Teile verstehen",
+          "text": "Nadel und Oberfaden: Die Nadel führt den oberen Faden durch den Stoff. Die Zeichnung ist kein Bauplan und keine Bedienanleitung. Schiffchenfaden: Beim beschriebenen Doppelsteppstich wird ein zweiter Faden mit dem oberen Faden verschlungen. Stoff und Transport: Der Stoff muss passend zu den wiederholten Stichbewegungen weiterbewegt werden. Verschiedene Nähmaschinen erzeugen unterschiedliche Sticharten."
+        },
+        {
+          "label": "Genauer unterscheiden",
+          "text": "Nicht jede Nähmaschine erzeugt dieselbe Stichart. Auch der Transport des Stoffs und die Abstimmung der Bewegungen gehören zur Funktion. Maschinen erleichtern gleichmäßige Wiederholung; Stoffwahl, Planung, Reparatur und sichere Bedienung bleiben menschliche Aufgaben."
+        },
+        {
+          "label": "Selbst beobachten",
+          "text": "Lege auf Papier zwei verschiedenfarbige gezeichnete Fadenwege übereinander. Beschreibe, an welcher Stelle sie sich verschlingen sollen. Vergleiche eine lose Kreuzung mit einer Verbindung. Nur zeichnen; keine echte Nadel oder eingeschaltete Maschine verwenden."
+        },
+        {
+          "label": "Modellgrenzen",
+          "text": "Die Übersicht zeigt zwei Fäden und beteiligte Teile, nicht die vollständige räumliche Stichbewegung. Sie darf nicht als Anleitung an einer echten Maschine benutzt werden."
+        }
+      ],
+      "parts": [
+        {
+          "id": "needle",
+          "name": "Nadel und Oberfaden",
+          "description": "Die Nadel führt den oberen Faden durch den Stoff. Die Zeichnung ist kein Bauplan und keine Bedienanleitung."
+        },
+        {
+          "id": "shuttle",
+          "name": "Schiffchenfaden",
+          "description": "Beim beschriebenen Doppelsteppstich wird ein zweiter Faden mit dem oberen Faden verschlungen."
+        },
+        {
+          "id": "fabric",
+          "name": "Stoff und Transport",
+          "description": "Der Stoff muss passend zu den wiederholten Stichbewegungen weiterbewegt werden. Verschiedene Nähmaschinen erzeugen unterschiedliche Sticharten."
+        }
+      ]
+    },
+    "sourceNote": "Der Smithsonian-Katalog belegt Howes Patent vom 10. September 1846 und die Zusammenarbeit zweier Fäden. Der Funktionsplan benennt Nadel, Schiffchenfaden und Stofftransport; eine gezeichnete Kreuzung bildet noch nicht die vollständige räumliche Stichbewegung ab. Andere Sticharten funktionieren anders. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
   }
 ]

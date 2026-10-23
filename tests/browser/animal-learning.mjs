@@ -1,6 +1,6 @@
 import {observeEngineLifecycle} from './engine-diagnostics.mjs';
 import {retainedAnswerWordingFlow,offlineRetainedAnswerWording} from './retained-answer-wording.mjs';
-import {worldPhotoFlow,offlineWorldPhotos} from './world-photos.mjs';
+import {worldPhotoFlow,offlineWorldPhotos,photoCardOpenerFlow} from './world-photos.mjs';
 import {journeySourceView,sourceRouteInputFlow} from './journey-sources.mjs';
 import {exerciseSolar} from './solar-comparison.mjs';
 import assert from 'node:assert/strict';
@@ -22,6 +22,10 @@ async function geometry(root,label){
  assert.equal(result.overflow,false,label+' page overflow');assert.deepEqual(result.bad,[],label+' readable text and44px controls');
 }
 export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='normal'}={}){
+ // A restored persistent context can retain another active page. Explicitly
+ // activate the page used for real keyboard/pointer work; do not force clicks
+ // or change any actionability, content, geometry or feedback assertion.
+ await p.bringToFront();
  await p.evaluate(id=>location.hash='world/topic/'+id,data.id);
  const root=p.locator('[data-animal-inquiry="'+data.id+'"]');await root.waitFor({state:'attached'});
  if(!await root.evaluate(e=>e.open))await root.locator(':scope > summary').click();
@@ -110,6 +114,9 @@ export async function animalNativeZoom(chromium,options,base,report,shots){
 export async function offlineAnimals(p,report){const observed=[];for(const data of DATA.entries)observed.push(await exerciseAnimal(p,data,{width:1280,keyboard:true,state:'offline'}));await offlineWorldPhotos(p,report);await offlineRetainedAnswerWording(p,report);report.animalOffline={cards:DATA.entries.length,coldRestart:true,observed};report.checks.push('All48 animal workshops usable after real server shutdown and cold offline browser restart');}
 
 export async function animalNavigation(browser,base,ready,monitor,shots){
+ // Existing actual-engine precondition: fail on broken photo-card Back before
+ // the long search, workshop and complete regression; every later check stays.
+ const photoOpeners=await photoCardOpenerFlow(browser,base,ready,monitor,shots);console.log('EARLY_PHOTO_CARD_OPENERS',JSON.stringify({engine:browser.browserType().name(),cases:photoOpeners}));
  const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await c.newPage(),engine=browser.browserType().name();monitor(p);let current='initial',stage='home';const lifecycle=await observeEngineLifecycle(browser,c,p,()=>({current,stage}));
  await p.addInitScript(()=>{window.__animalSearchTrace=[];for(const type of ['beforeinput','input','change','focusin','focusout','hashchange','popstate'])window.addEventListener(type,event=>{const target=event.target;if(target?.getAttribute?.('role')==='combobox'||type==='hashchange'||type==='popstate'){window.__animalSearchTrace.push({type,value:target?.value??null,hash:location.hash,at:performance.now(),trusted:event.isTrusted,inputType:event.inputType??null,composing:event.isComposing??null});if(window.__animalSearchTrace.length>32)window.__animalSearchTrace.shift();}},true);});
  try{await p.goto(base);await ready(p);for(const entry of DATA.entries){
