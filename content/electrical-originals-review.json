@@ -238,5 +238,70 @@
       "finding": "Institutional collection image not copied; metadata alone does not establish reuse rights."
     }
   ],
-  "fullAcceptance": "Open: confirmed PR56 delivery/base reconciliation, current full mandatory local browser/offline, truthful UI bindings, exact final CI and native readiness/deployment."
+  "fullAcceptance": "Open: confirmed PR56 delivery/base reconciliation, current full mandatory local browser/offline, truthful UI bindings, exact final CI and native readiness/deployment.",
+  "targetedNativeUI": {
+    "build": "3b5326fb29f51c11",
+    "browser": "154.0.8037.57",
+    "views": 6,
+    "states": 16,
+    "cssWidths": [
+      640,
+      320
+    ],
+    "measuredDpr": 2,
+    "largeText": true,
+    "reportSha256": "f366989a1a49b08a967ca3d952c25b81ebd29d2ba253dccbe657339a99a27755",
+    "imageManifestSha256": "fc3f3010fd81cc290634498b138b9f44cead01a2310f45b76371e781f5f98cbc",
+    "images": 25,
+    "visualReview": "All three current blueprint figures at both native widths and both current model figures at both widths actually seen. Readable separate control/status captures at320 also seen. No physical device or heard voice claimed.",
+    "captureCorrection": "Initial functional native run exposed one shifted and one blank optional locator clip on visual review. Originals retained. Existing direct native viewport helper now captures actual diagrams and separate controls with measured dimensions/nonblank assertion. First correction strict-selector failure also retained; selector narrowed to actual diagram roles rather than decorative icons. Corrected full targeted native helper passed.",
+    "scope": "Targeted actual native proof only, not complete mandatory acceptance."
+  },
+  "targetedOfflineUI": {
+    "build": "3b5326fb29f51c11",
+    "sourceDigest": "904be5f2d3706a116ab0999e2f7a40d9db925052d33598b2eb075ec301dc7737",
+    "reportSha256": "54ea80937bf936bef58f1797e3cfd5febd98a8574ee21122e4a1186ef710fc9f",
+    "electricalCases": 6,
+    "learningTaskCases": 12,
+    "originalPassRestoredThroughActualUI": true,
+    "scope": "Existing native offline-resilience helper completed including actual fixture server stop/reload, old questions and actual UI pass restoration; final complete all-suite and actual Firefox/WebKit proof remain open."
+  },
+  "linkedExistingTopicCounterread20261023": [
+    {
+      "id": "science-circuit",
+      "url": "https://www.eia.gov/kids/energy-sources/electricity/science-of-electricity.php",
+      "anchor": "Electricity travels in circuits,197–200",
+      "finding": "Existing source paragraph on open/closed circuit supports the bridge. The adjacent battery-polarity simplification193 is questionable and is not imported; new battery polarity follows DOE instead. Existing article makes no corresponding polarity claim."
+    },
+    {
+      "id": "science-energy",
+      "url": "https://www.energy.gov/cmei/systems/solar-photovoltaic-cell-basics",
+      "anchor": "What Is a Solar Photovoltaic Cell? and How Do Photovoltaic Cells Work?",
+      "finding": "PV light conversion differs from a generator. Existing simplified model keeps other conditions fixed and explicitly states game energy units, storage reserve and real losses."
+    },
+    {
+      "id": "science-motor",
+      "url": "https://nationalmaglab.org/magnet-academy/watch-play/interactive-tutorials/dc-motor/",
+      "anchor": "DC Motor description78–89",
+      "finding": "Simple DC commutator/current reversal supports motor-generator comparison; not every modern motor has this construction."
+    },
+    {
+      "id": "science-magnetism",
+      "url": "https://science.nasa.gov/heliophysics/focus-areas/magnetosphere-ionosphere/",
+      "anchor": "Magnetospheres238–241",
+      "finding": "Existing target explains Earth’s dynamic field, outer core and solar wind. New generator model uses a bar magnet and changing field through a coil, not a reconstruction of Earth’s dynamo."
+    },
+    {
+      "id": "invention-smartphone",
+      "url": "https://www.computerhistory.org/revolution/artifact/1733",
+      "anchor": "Object metadata and Simon combined functions21",
+      "finding": "The related old article’s1990s wording distinguishes no specific prototype/market-year claim here. Phone/computing/other components supply the bridge; this is no complete twelve-card historical re-review."
+    },
+    {
+      "id": "invention-computer",
+      "url": "https://www.computerhistory.org/timeline/computers/",
+      "anchor": "TX-0,281–282 and subsequent transistorized computers",
+      "finding": "Programmable computers use many coordinated components/transistor circuits. A single symbol switch is not a computer. No whole-history priority claim or new statistical content imported."
+    }
+  ]
 }
