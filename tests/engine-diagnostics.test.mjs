@@ -1,6 +1,6 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import os from 'node:os';import path from 'node:path';import {createHash} from 'node:crypto';
 import {EventEmitter} from 'node:events';
-import {preserveEngineDiagnostics,observeEngineLifecycle} from './browser/engine-diagnostics.mjs';
+import {preserveEngineDiagnostics,collectEngineEvidence,observeEngineLifecycle} from './browser/engine-diagnostics.mjs';
 test('failed engine diagnostics keep exact original bytes, existing other snapshots and curator-compatible names',async t=>{
  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-engine-proof-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));
  const original=Buffer.from('synthetic evidence fixture, never a product screenshot'),hash=bytes=>createHash('sha256').update(bytes).digest('hex');
@@ -22,4 +22,19 @@ test('unexpected page and browser loss preserves lifecycle order and resource sn
 });
 test('diagnostics detach before normal teardown and missing resource files cannot mask the original browser state',async()=>{
  const page=new EventEmitter(),context=new EventEmitter(),browser=new EventEmitter();page.url=()=> 'http://127.0.0.1/';page.isClosed=()=>false;browser.isConnected=()=>true;const probe=await observeEngineLifecycle(browser,context,page,()=>({stage:'complete'}),{readResources:async()=>{throw Object.assign(new Error('synthetic unavailable resource'),{code:'ENOENT'});}});probe.stop();for(const emitter of [page,context,browser])assert.equal(emitter.eventNames().length,0);page.emit('close');context.emit('close');browser.emit('disconnected');const proof=await probe.snapshot();assert.deepEqual(proof.events,[]);assert.deepEqual(proof.initialResources,{unavailable:'ENOENT'});assert.deepEqual(proof.resourcesAtFailure,{unavailable:'ENOENT'});assert.equal(proof.browserConnected,true);
+});
+
+test('isolated engine evidence reaches the existing review namespace with exact original bytes',async t=>{
+ const root=await fs.mkdtemp(path.join(os.tmpdir(),'wk-engine-collection-'));t.after(()=>fs.rm(root,{recursive:true,force:true}));
+ const files=[['firefox','journey-engine-firefox-proof.png',Buffer.from('first original'),'journey-engine-firefox-proof.png'],['webkit','journey-engine-webkit-proof.png',Buffer.from('second original'),'journey-engine-webkit-proof.png'],['webkit','offline-webkit.json',Buffer.from('{"synthetic":true}'),'journey-engine-webkit-offline-webkit.json'],['firefox','shared.png',Buffer.from('first generic original'),'journey-engine-firefox-shared.png'],['webkit','shared.png',Buffer.from('second generic original'),'journey-engine-webkit-shared.png']];
+ for(const [engine,file,bytes]of files){const directory=path.join(root,'journey-engine-work',engine);await fs.mkdir(directory,{recursive:true});await fs.writeFile(path.join(directory,file),bytes);}
+ assert.deepEqual(await collectEngineEvidence(root,['firefox','webkit']),[]);
+ for(const [engine,file,bytes,target]of files){assert.deepEqual(await fs.readFile(path.join(root,target)),bytes);await assert.rejects(fs.stat(path.join(root,'journey-engine-work',engine,file)),{code:'ENOENT'});}
+
+});
+
+test('conflicting engine evidence fails closed and preserves every colliding original',async t=>{
+ const root=await fs.mkdtemp(path.join(os.tmpdir(),'wk-engine-collision-'));t.after(()=>fs.rm(root,{recursive:true,force:true}));
+ const directory=path.join(root,'journey-engine-work','webkit');await fs.mkdir(directory,{recursive:true});const original=Buffer.from('existing independent proof'),conflict=Buffer.from('conflicting new proof');await fs.writeFile(path.join(root,'journey-engine-webkit-same.png'),original);await fs.writeFile(path.join(directory,'same.png'),conflict);await fs.writeFile(path.join(directory,'other.png'),Buffer.from('unrelated proof survives too'));
+ const failures=await collectEngineEvidence(root,['webkit']);assert.equal(failures.length,1);assert.match(failures[0].error,/must not be overwritten/);assert.deepEqual(await fs.readFile(path.join(root,'journey-engine-webkit-same.png')),original);assert.deepEqual(await fs.readFile(path.join(directory,'same.png')),conflict);assert.equal(await fs.readFile(path.join(root,'journey-engine-webkit-other.png'),'utf8'),'unrelated proof survives too');await assert.rejects(collectEngineEvidence(root,['../outside']),/Invalid evidence worker names/);
 });

@@ -18,6 +18,18 @@ test('a successful browser report without current handoff or critical images can
  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-evidence-'));try{await fs.writeFile(path.join(dir,'portable-report.json'),JSON.stringify({status:'passed',scope:'complete mandatory regression',build:'synthetic'}));await assert.rejects(prepareReview(dir),/handoff/);}finally{await fs.rm(dir,{recursive:true,force:true});}
 });
 
+test('interrupted isolated engines preserve separate partial originals and damaged partial PNGs fail closed',async t=>{
+ const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-partial-engine-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));
+ const png=Buffer.alloc(24);Buffer.from('89504e470d0a1a0a','hex').copy(png);png.writeUInt32BE(390,16);png.writeUInt32BE(844,20);
+ const originals=[];
+ for(const [index,engine]of ['firefox','webkit'].entries()){
+  const worker=path.join(dir,'journey-engine-work',engine);await fs.mkdir(worker,{recursive:true});const bytes=Buffer.concat([png,Buffer.from('synthetic fixture '+index)]);await fs.writeFile(path.join(worker,'same.png'),bytes);await fs.writeFile(path.join(worker,'failure.json'),JSON.stringify({synthetic:engine,status:'interrupted'}));originals.push({engine,worker,bytes});
+ }
+ await fs.writeFile(path.join(dir,'portable-report.json'),JSON.stringify({status:'failed',scope:'complete mandatory regression'}));const result=await prepareReview(dir);assert.equal(result.status,'diagnostic');assert.equal(result.screenshots.length,2);
+ for(const {engine,worker,bytes}of originals){const name='journey-engine-'+engine+'-partial-same.png',entry=result.screenshots.find(s=>s.file===name);assert.equal(entry.retained,true);assert.equal(entry.sourceFile,path.join('journey-engine-work',engine,'same.png'));assert.deepEqual(await fs.readFile(path.join(dir,'review',name)),bytes);assert.deepEqual(await fs.readFile(path.join(worker,'same.png')),bytes);assert.equal(JSON.parse(await fs.readFile(path.join(dir,'review','journey-engine-'+engine+'-partial-failure.json'),'utf8')).synthetic,engine);}
+ await fs.writeFile(path.join(originals[0].worker,'damaged.png'),'unfinished image');await assert.rejects(prepareReview(dir),/Invalid screenshot journey-engine-firefox-partial-damaged.png/);assert.equal(JSON.parse(await fs.readFile(path.join(dir,'review','journey-engine-firefox-partial-failure.json'),'utf8')).status,'interrupted');
+});
+
  test('review budget is exactly 150 decimal MB and storage accounting never deletes identical evidence',()=>{
  assert.equal(REVIEW_LIMIT,150_000_000);const a={file:'focus-320.png',bytes:100,sha256:'same',retained:true},b={...a,file:'focus-390.png'},c={...a,file:'already-omitted.png',retained:false};
  const r=reviewStorage([a,b,c],200);assert.equal(r.retainedImages,2);assert.equal(r.reserveBytes,149_999_800);assert.equal(r.exactDuplicates.retainedExtraBytes,100);assert.equal(r.exactDuplicates.alreadyOmittedCopiesWithRetainedOriginal,1);assert.equal(r.exactDuplicates.automaticDuplicateRemovals,0);

@@ -1071,5 +1071,140 @@
     "newUniqueMessages": [],
     "removedUniqueMessages": [],
     "meaning": "One additional repeated Memory wrong-pair message, identical unique check sets. Message counts do not demonstrate added coverage, learning effects or cause correction."
+  },
+  "engineIsolationMaintenance20261024": {
+    "scope": "WK052 existing Quality entry maintenance after naturally cancelled PR59/Quality156; no new workflow, dependency, cost window, timeout exception or reduced test matrix.",
+    "originalCancelledCI": {
+      "runId": 40031512045,
+      "jobId": 120680618483,
+      "head": "346879448164ed809d5d7a45d9c1ffb2cef6a179",
+      "base": "36a849ebd289f7fb83b949e59761d17699e646a1",
+      "testedCommit": "b1b05218f9a1b983c530e41cfd257aa3dedbfb14",
+      "conclusion": "cancelled",
+      "originalLogSHA256": "2699da6571b95c76a55b51a419c91969467aaab72a0c119191642c64a7ffce4e",
+      "node": "v24.21.0",
+      "phaseSecondsWholeTimestampPrecision": {
+        "setup": 112.0,
+        "earlySearchAndColdPrecondition": 303.0,
+        "chromium": 1164.0,
+        "cancelledActualFirefoxWebkitStep": 1737.0
+      },
+      "missingProof": [
+        "Complete actual Firefox/WebKit report",
+        "Final require-engines handoff",
+        "Final current head/base/workflow verification"
+      ]
+    },
+    "change": "Run the same complete actual Firefox/WebKit exercises concurrently inside the existing entry, with independent browser instances, worker evidence directories and offline fixture ports4778/4779. Early actual-engine search stays sequential. All-settled execution preserves the other engine result if one fails. Local serial comparison uses the existing QA_SERIAL_LOCAL convention and is forbidden in CI.",
+    "unchangedDirectEntryChecks": {
+      "originalSHA256": "515e647b154cb63ed9580c804a8324d430fff764f93d1116f698e0af295fd416",
+      "finalEntrySHA256": "4a6d6e66830571a8e69ed63063582e815888aa476186c40daed36ce769c5f86a",
+      "assertionExpressions": 6,
+      "importedExerciseCalls": 7,
+      "realInputCalls": 5,
+      "allOriginalExpressionsRetained": true,
+      "productionWidths": [
+        320,
+        390,
+        768,
+        1440
+      ],
+      "allExistingScopesTimeoutsAndAssertionsRetained": true
+    },
+    "localBeforeAfterPilot": {
+      "meaning": "One ordered serial-then-parallel pair of two actual Chromium processes at representative320px, with the same complete offline scenarios. Production matrices remain unchanged. This is a scheduling pilot before the final namespace refinement; it is not actual Firefox/WebKit or complete release acceptance.",
+      "sourceDigestBeforeFinalNamespaceRefinement": "bfb1effe98e19e8a8d84ba4bfb9d5305b42c21125bc17bde84064e183f0c58b6",
+      "probeEntrySHA256": "889dd1c3ab30982b85a0a5732ef4a54644858140c6d74fe5e01a2ed8b81b659b",
+      "originalReportSHA256": "ab494edf6217486ce78689fadbc3b9ec0bb13c72afb040edd46174bd7d7306bf",
+      "build": "cb1820f262c2be81",
+      "frozenBuiltFilesVerified": 163,
+      "referenceSourceCommit": "346879448164ed809d5d7a45d9c1ffb2cef6a179",
+      "referenceKind": "Independently sealed later local rebuild; not the original CI artifact",
+      "node": "v24.19.0",
+      "availableParallelism": 4,
+      "browser": "154.0.8037.57",
+      "cases": [
+        {
+          "mode": "serial",
+          "seconds": 582.691103068,
+          "engineSeconds": [
+            290.802173674,
+            290.77530630099994
+          ],
+          "actualChromiumProcesses": 2,
+          "animalCasesPerProcess": 96,
+          "mainWidths": [
+            320
+          ],
+          "retainedOriginalPNGs": 296,
+          "maxObservedWholeCgroupBytes": 10801324032
+        },
+        {
+          "mode": "parallel",
+          "seconds": 336.010042824,
+          "engineSeconds": [
+            335.02926476399995,
+            333.890556231
+          ],
+          "actualChromiumProcesses": 2,
+          "animalCasesPerProcess": 96,
+          "mainWidths": [
+            320
+          ],
+          "retainedOriginalPNGs": 296,
+          "maxObservedWholeCgroupBytes": 12139651072
+        }
+      ],
+      "measuredWallReductionPercent": 42.33479092870452,
+      "limits": [
+        "Single ordered pair: file-cache/order effects and host variation not isolated.",
+        "Whole-cgroup memory samples are not exclusive per-browser RSS; the observed maximum rose.",
+        "No measured actual Firefox/WebKit gain, guaranteed55-minute margin, application load-time improvement or original host/background root-cause correction claimed."
+      ]
+    },
+    "finalEvidenceNamespace": {
+      "meaning": "Already correct journey-engine-worker filenames remain unchanged. Other worker files acquire their worker prefix, preventing generic filename collisions and making actual source PNGs visible to the existing curator.",
+      "helperSHA256": "f80d6e66ca3e351cb27e628f7fe84c09d07c4c1357f2d37650ad1c183694241e",
+      "controlledOldAndNewReportSHA256": "246b57b069a9e28b9a6b30dfed6f5cfd0cb55124c806291d4872e7e6c8e5dc35",
+      "oldSameGenericFilenameConflictRecognized": true,
+      "newBothIndependentOriginalsPreserved": true,
+      "originalChromiumFilesReplayedWithExactHashes": 312,
+      "originalChromiumPNGsReplayedWithExactHashes": 296,
+      "pilotPerformanceNotRelabelledAsFinalCollectorMeasurement": true
+    },
+    "interruptedEvidenceRecovery": {
+      "meaning": "The existing curator also reads only flat PNG/JSON/XML outputs in the known isolated worker directories, clearly marks partial evidence, retains source-file provenance and never traverses profiles or caches. Existing required images, retention policy and150000000-byte budget remain unchanged.",
+      "controlledOriginalAndCorrectedReportSHA256": "4d82f12d4289092be0517cc545a0f88754246faa227974db8d9417c6a1dd4c81",
+      "sameDeliberateInterruptedWorkerFixture": [
+        {
+          "name": "original",
+          "capturedImageCount": 0,
+          "workerJSONPreserved": false,
+          "originalBytesUnchanged": true
+        },
+        {
+          "name": "corrected",
+          "capturedImageCount": 1,
+          "workerJSONPreserved": true,
+          "originalBytesUnchanged": true
+        }
+      ],
+      "partialCorruptPNGStillRejected": true,
+      "oldOriginalsRetained": true
+    },
+    "currentAcceptance": {
+      "unitTests": 206,
+      "status": "Frozen-source preparation before the mandatory current full browser run and actual final CI. Existing4cc content proof remains on its original source; no complete actual engines or new publication claimed.",
+      "manualMaintenanceAuthorisation": "Required before actual takeover for the protected engine entry and curator under existing AGENTS/readiness policy; no assumed routine eligibility.",
+      "staticPreflight": {
+        "typecheck": "passed",
+        "lint": "passed",
+        "releasePolicyTests": 130,
+        "productionBuild": "passed",
+        "appBuild": "cb1820f262c2be81",
+        "verifiedExports": 43,
+        "structurallyCurrentDossiers": 73
+      }
+    }
   }
 }

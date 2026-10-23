@@ -15,6 +15,25 @@ export async function preserveEngineDiagnostics(directory,engine){
  return moved;
 }
 
+// Move completed, isolated workers back into the existing curator namespace.
+// A collision retains both originals and makes the caller fail closed.
+export async function collectEngineEvidence(root,workers){
+ if(!Array.isArray(workers)||new Set(workers).size!==workers.length||workers.some(name=>typeof name!=='string'||!/^[a-z][a-z0-9-]*$/.test(name)))throw Error('Invalid evidence worker names');
+ const failures=[];
+ for(const name of workers){
+  const directory=path.join(root,'journey-engine-work',name);
+  for(const file of (await fs.readdir(directory).catch(error=>{if(error.code==='ENOENT')return [];throw error;})).sort()){
+   const targetName=file.startsWith('journey-engine-'+name+'-')?file:'journey-engine-'+name+'-'+file,source=path.join(directory,file),target=path.join(root,targetName);
+   try{
+    if(!(await fs.lstat(source)).isFile())throw Error('Unexpected engine evidence directory or link');
+    try{await fs.lstat(target);throw Error('Existing evidence must not be overwritten: '+file);}catch(error){if(error.code!=='ENOENT')throw error;}
+    await fs.rename(source,target);
+   }catch(error){failures.push({engine:name,file,error:error.stack});}
+  }
+ }
+ return failures;
+}
+
 // Read-only failure context. Missing host/cgroup information never replaces the
 // original browser failure, and these counters do not identify its cause alone.
 export async function readEngineResources(){

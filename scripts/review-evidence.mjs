@@ -38,16 +38,27 @@ export function retainScreenshot(name){
  return /-(320|1440)(?:-full|-model|-top)?\.png$/.test(name)&&!/-full\.png$/.test(name);
 }
 export async function prepareReview(directory='.qa-output'){
- const files=(await fs.readdir(directory)).sort(),destination=path.join(directory,'review');await fs.rm(destination,{recursive:true,force:true});await fs.mkdir(destination,{recursive:true});
+ const files=(await fs.readdir(directory)).sort().map(name=>({name,source:path.join(directory,name)})),destination=path.join(directory,'review');await fs.rm(destination,{recursive:true,force:true});await fs.mkdir(destination,{recursive:true});
+ // A runner timeout can interrupt an isolated engine before normal collection.
+ // Preserve those actual partial files in the same review, clearly distinguished
+ // from completed root evidence. No browser profile or recursive cache traversal.
+ for(const engine of ['chromium','firefox','webkit']){
+  const worker=path.join(directory,'journey-engine-work',engine);
+  for(const name of (await fs.readdir(worker).catch(error=>{if(error.code==='ENOENT')return [];throw error;})).sort()){
+   const source=path.join(worker,name);
+   if(/\.(png|json|xml)$/.test(name)&&(await fs.lstat(source)).isFile())files.push({name:'journey-engine-'+engine+'-partial-'+name,source,sourceFile:path.relative(directory,source)});
+  }
+ }
+ if(new Set(files.map(file=>file.name)).size!==files.length)throw Error('Conflicting review evidence names; originals retained');
  let report=null,handoff=null;
  try{report=JSON.parse(await fs.readFile(path.join(directory,'portable-report.json'),'utf8'));handoff=JSON.parse(await fs.readFile(path.join(directory,'handoff.json'),'utf8'));}catch{/* Diagnostic artifacts are still required on failed runs. */}
  const complete=report?.status==='passed'&&report.scope==='complete mandatory regression';
  const screenshots=[],copied=[];let generatedBytes=0,retainedBytes=0;
  // Preserve failure reports even if a damaged PNG aborts curation.
- for(const name of files.filter(f=>/\.(json|xml)$/.test(f))){await fs.copyFile(path.join(directory,name),path.join(destination,name));copied.push(name);}
- for(const name of files.filter(f=>/^(quality-|journey-engine-).*\.png$/.test(f))){
-  const data=await fs.readFile(path.join(directory,name));if(data.length<24||data.subarray(0,8).toString('hex')!=='89504e470d0a1a0a')throw Error('Invalid screenshot '+name);
-  const retained=!complete||retainScreenshot(name);screenshots.push({file:name,bytes:data.length,width:data.readUInt32BE(16),height:data.readUInt32BE(20),sha256:createHash('sha256').update(data).digest('hex'),retained});generatedBytes+=data.length;
+ for(const file of files.filter(f=>/\.(json|xml)$/.test(f.name))){await fs.copyFile(file.source,path.join(destination,file.name));copied.push(file.name);}
+ for(const file of files.filter(f=>/^(quality-|journey-engine-).*\.png$/.test(f.name))){
+  const {name,source,sourceFile}=file,data=await fs.readFile(source);if(data.length<24||data.subarray(0,8).toString('hex')!=='89504e470d0a1a0a')throw Error('Invalid screenshot '+name);
+  const retained=!complete||retainScreenshot(name);screenshots.push({file:name,...(sourceFile?{sourceFile}:{}),bytes:data.length,width:data.readUInt32BE(16),height:data.readUInt32BE(20),sha256:createHash('sha256').update(data).digest('hex'),retained});generatedBytes+=data.length;
   if(retained){await fs.writeFile(path.join(destination,name),data);retainedBytes+=data.length;}
  }
 
