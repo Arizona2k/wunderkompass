@@ -6101,7 +6101,8 @@
     "related": [
       "person-ada_lovelace",
       "person-grace_hopper",
-      "science-computer"
+      "science-computer",
+      "invention-transistor"
     ],
     "sources": [
       {
@@ -6766,7 +6767,9 @@
       "invention-phone",
       "invention-computer",
       "science-gps",
-      "invention-camera"
+      "invention-camera",
+      "invention-battery",
+      "invention-transistor"
     ],
     "sources": [
       {
@@ -7432,7 +7435,10 @@
     "locations": [],
     "related": [
       "invention-light",
-      "invention-car"
+      "invention-car",
+      "invention-battery",
+      "invention-generator",
+      "invention-transistor"
     ],
     "sources": [
       {
@@ -8541,7 +8547,8 @@
     "surprise": "Im Inneren der Erde steckt kein riesiger Stabmagnet.",
     "related": [
       "invention-compass",
-      "science-atmosphere"
+      "science-atmosphere",
+      "invention-generator"
     ],
     "sources": [
       {
@@ -8653,7 +8660,8 @@
     "related": [
       "science-circuit",
       "science-energy",
-      "invention-car"
+      "invention-car",
+      "invention-generator"
     ],
     "sources": [
       {
@@ -8880,7 +8888,8 @@
       "science-motor",
       "invention-light",
       "science-seasons",
-      "animal-dromedary"
+      "animal-dromedary",
+      "invention-battery"
     ],
     "sources": [
       {
@@ -13208,6 +13217,383 @@
       "model": "resolution"
     },
     "sourceNote": "Das Museum unterscheidet Hookes Veröffentlichung von 1665 und die spätere Nachbildung des Geräts. Die Optikquellen erklären Zwischenbild und Grenzen bloßer Vergrößerung. Das Lernmuster vergleicht Größe und erkennbare Einzelheiten, ohne die Auflösung eines echten Geräts zu berechnen. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
+  },
+  {
+    "id": "invention-battery",
+    "category": "inventions",
+    "title": "Die Batterie",
+    "intro": "Wie versorgt eine Taschenlampe ihren Lichtstrahl unterwegs?",
+    "aliases": [],
+    "paragraphs": [
+      "Eine Zelle enthält zwei unterschiedliche Elektroden und einen Stoff, durch den geladene Teilchen wandern können: den Elektrolyten. Beim Entladen fließen Elektronen außen durch die angeschlossene Lampe. Innen übernehmen Ionen einen anderen Teil des Weges. Eine Batterie ist kein Behälter voller fertig gespeicherten Stroms."
+    ],
+    "facts": [
+      {
+        "label": "Belegter Zeitanker",
+        "text": "1800 · Voltas Batterie; nicht die Erfindung heutiger Akkus"
+      },
+      {
+        "label": "Dein Forscherblick",
+        "text": "Innere Ladungswege und den äußeren Stromkreis unterscheiden."
+      }
+    ],
+    "more": [
+      "Akkus lassen sich mit geeigneten Ladegeräten wieder aufladen. Dabei werden chemische Veränderungen teilweise umgekehrt; das gelingt nicht verlustfrei und nicht unbegrenzt. Nicht wiederaufladbare Batterien gehören niemals ins Ladegerät.",
+      "Beim Fehlersuchen hilft es, zwei Fragen zu trennen: Kann die Zelle noch chemische Energie abgeben, und ist der äußere Weg geschlossen? Der Ladungsweg im Inneren ersetzt kein fehlendes Kabel. Das erklärt, warum eine volle Batterie eine unterbrochene Verbindung zur Lampe nicht repariert."
+    ],
+    "surprise": "Ein Akku kann wieder geladen werden, weil sich chemische Veränderungen teilweise umkehren lassen. Das gelingt nicht verlustfrei und nicht unbegrenzt.",
+    "locations": [],
+    "related": [
+      "science-circuit",
+      "science-energy",
+      "invention-smartphone"
+    ],
+    "sources": [
+      {
+        "label": "U.S. Department of Energy · Wie Batterien Energie speichern",
+        "url": "https://www.energy.gov/science/doe-explainsbatteries"
+      },
+      {
+        "label": "Royal Institution · Voltas frühe Batterie",
+        "url": "https://www.rigb.org/explore-science/explore/collection/alessandro-voltas-voltaic-pile"
+      },
+      {
+        "label": "Panasonic Energy · Warum Primärbatterien nicht ins Ladegerät gehören",
+        "url": "https://www.panasonic.com/global/energy/products/eneloop/en/faq.html"
+      }
+    ],
+    "links": [],
+    "model": null,
+    "learning": {
+      "starter": "In einer Batterie können chemische Vorgänge elektrische Energie liefern. Dazu braucht die Lampe einen geschlossenen Stromweg.",
+      "observe": "Zeichne nur auf Papier Batterie, Lampe und zwei Leitungen. Trenne an einer Stelle den gezeichneten Weg. Erkläre, warum eine zweite volle Batterie allein diese Unterbrechung nicht beseitigt. Keine Batterien öffnen oder kurzschließen.",
+      "benefit": "Du unterscheidest chemische Energiespeicherung vom Stromfluss und erkennst, warum ein leerer Akku und ein kaputtes Kabel verschiedene Fehler sind."
+    },
+    "question": {
+      "prompt": "Die Batterie ist voll, aber eine Leitung zur Lampe ist unterbrochen. Was fehlt?",
+      "answers": [
+        "Ein geschlossener Stromweg",
+        "Eine noch vollere Batterie bei weiterhin offener Leitung",
+        "Zwei freie Kabelenden, die sich nicht berühren"
+      ],
+      "correct": 0,
+      "why": "Eine volle Batterie kann die Lampe nur in einem passenden geschlossenen Stromkreis versorgen."
+    },
+    "questionFeedback": {
+      "hint": "Verfolge den Weg durch Lampe und Batterie zurück zum Anfang.",
+      "wrongReasons": [
+        null,
+        "Eine vollere Batterie schließt die Lücke in der Leitung nicht.",
+        "Ohne geeigneten Kontakt bleibt der Weg hier unterbrochen."
+      ]
+    },
+    "invention": {
+      "year": 1800,
+      "date": "1800 · Voltas Batterie; nicht die Erfindung heutiger Akkus",
+      "blueprint": "battery",
+      "walkthrough": true,
+      "stages": [
+        {
+          "label": "Deine Frage",
+          "text": "Wie versorgt eine Taschenlampe ihren Lichtstrahl unterwegs?"
+        },
+        {
+          "label": "Das Prinzip",
+          "text": "In einer Batterie können chemische Vorgänge elektrische Energie liefern. Dazu braucht die Lampe einen geschlossenen Stromweg."
+        },
+        {
+          "label": "Teile verstehen",
+          "text": "Negative Elektrode: Bei der Entladung gelangen von dieser Elektrode Elektronen in den äußeren Stromweg. Positive Elektrode: Hier werden bei der Entladung Elektronen aus dem äußeren Weg aufgenommen. Elektrolyt: Im Inneren bewegen sich Ionen. Das ist ein anderer Ladungsweg als der Elektronenfluss durch die äußere Leitung. Äußerer Stromkreis: Leitungen und Lampe verbinden die Elektroden außen. Eine Unterbrechung stoppt den Strom durch die Lampe."
+        },
+        {
+          "label": "Genauer unterscheiden",
+          "text": "Akkus lassen sich mit geeigneten Ladegeräten wieder aufladen. Dabei werden chemische Veränderungen teilweise umgekehrt; das gelingt nicht verlustfrei und nicht unbegrenzt. Nicht wiederaufladbare Batterien gehören niemals ins Ladegerät."
+        },
+        {
+          "label": "Selbst beobachten",
+          "text": "Zeichne nur auf Papier Batterie, Lampe und zwei Leitungen. Trenne an einer Stelle den gezeichneten Weg. Erkläre, warum eine zweite volle Batterie allein diese Unterbrechung nicht beseitigt. Keine Batterien öffnen oder kurzschließen."
+        },
+        {
+          "label": "Modellgrenzen",
+          "text": "Der Plan trennt Elektronen außen und Ionen innen. Die Ionenbewegungen hängen von der Zellchemie ab; die Zeichnung zeigt weder eine Bauanleitung noch eine bestimmte Batteriechemie."
+        }
+      ],
+      "parts": [
+        {
+          "id": "negative",
+          "name": "Negative Elektrode",
+          "description": "Bei der Entladung gelangen von dieser Elektrode Elektronen in den äußeren Stromweg."
+        },
+        {
+          "id": "positive",
+          "name": "Positive Elektrode",
+          "description": "Hier werden bei der Entladung Elektronen aus dem äußeren Weg aufgenommen."
+        },
+        {
+          "id": "electrolyte",
+          "name": "Elektrolyt",
+          "description": "Im Inneren bewegen sich Ionen. Das ist ein anderer Ladungsweg als der Elektronenfluss durch die äußere Leitung."
+        },
+        {
+          "id": "external",
+          "name": "Äußerer Stromkreis",
+          "description": "Leitungen und Lampe verbinden die Elektroden außen. Eine Unterbrechung stoppt den Strom durch die Lampe."
+        }
+      ]
+    },
+    "sourceNote": "DOE erklärt chemische Energiespeicherung sowie Elektronen außen und Ionen im Inneren. Die Royal Institution beschreibt Voltas Batterie und ein später erhaltenes Exemplar. Der Plan zeigt keine bestimmte Zellchemie; Laden und Entladen gelingen nicht verlustfrei oder unbegrenzt. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung.",
+    "checkedAt": "2026-10-23",
+    "revision": 1
+  },
+  {
+    "id": "invention-generator",
+    "category": "inventions",
+    "title": "Der Generator",
+    "intro": "Wie wird aus einer Drehbewegung elektrische Energie?",
+    "aliases": [],
+    "paragraphs": [
+      "Ändert sich das Magnetfeld durch eine Spule, kann an ihren Anschlüssen eine Spannung entstehen. In einem geschlossenen Stromkreis kann dadurch Strom fließen. Der Antrieb liefert die Energie. Ein Magnet allein ist keine unerschöpfliche Energiequelle."
+    ],
+    "facts": [
+      {
+        "label": "Belegter Zeitanker",
+        "text": "1831 · Faradays Induktionsversuche"
+      },
+      {
+        "label": "Dein Forscherblick",
+        "text": "Eine Veränderung von einem unveränderten Zustand unterscheiden."
+      }
+    ],
+    "more": [
+      "Michael Faraday untersuchte 1831 die elektromagnetische Induktion. Sein überliefertes Gerät verband eine Drahtspule und einen bewegten Stabmagneten mit einem Strommessgerät. Ein Motor nutzt elektrische Energie für Bewegung; ein Generator hat die umgekehrte Nutzrichtung. Nicht jede Stromquelle ist ein Generator: Eine Solarzelle arbeitet anders.",
+      "Bewegung und Strom sind im gezeigten Versuch keine zwei unabhängigen Vorgänge: Erst die Änderung des Magnetfelds durch die Spule führt zur Induktion. Die drei Bildschirmzustände vergleichen nur Richtung und Stillstand. Sie berechnen weder eine genaue Spannung noch eine nutzbare Energiemenge."
+    ],
+    "surprise": "Motor und Generator verbinden Bewegung und elektrische Energie in unterschiedlicher Nutzrichtung. Ein ruhender Magnet allein ist dabei keine unerschöpfliche Energiequelle.",
+    "locations": [],
+    "related": [
+      "science-motor",
+      "science-magnetism",
+      "science-circuit"
+    ],
+    "sources": [
+      {
+        "label": "Royal Institution · Faradays Generator von 1831",
+        "url": "https://www.rigb.org/explore-science/explore/collection/michael-faradays-generator"
+      },
+      {
+        "label": "U.S. Energy Information Administration · Generatoren und Energieumwandlung",
+        "url": "https://www.eia.gov/energyexplained/electricity/how-electricity-is-generated.php"
+      },
+      {
+        "label": "Computer History Museum: zeitabhängige Induktion",
+        "url": "https://www.computerhistory.org/storageengine/faraday-describes-electro-magnetic-induction/"
+      }
+    ],
+    "links": [],
+    "model": null,
+    "learning": {
+      "starter": "Ein Generator wandelt Bewegung in elektrische Energie um. In vielen Bauformen bewegen sich Magnet und Drahtspule gegeneinander.",
+      "observe": "Vergleiche im Bildschirmmodell: Magnet steht; Magnet bewegt sich hinein; Magnet bewegt sich hinaus. Vermute vor jedem Schritt, ob das Messgerät ausschlägt. Keine Steckdosen oder echten Anlagen verwenden.",
+      "benefit": "Du erkennst den gemeinsamen Schritt zwischen Windrad, Wasserkraft und vielen Kraftwerken und verwechselst Energieumwandlung nicht mit Energieerzeugung aus dem Nichts."
+    },
+    "question": {
+      "prompt": "Spule und Magnet bleiben vollkommen unverändert stehen. Reicht das hier für dauernd fließenden Strom?",
+      "answers": [
+        "Nein, das Magnetfeld durch die Spule muss sich ändern",
+        "Ja, ein ruhender Dauermagnet reicht für dauernden Strom",
+        "Ja, viele Windungen ersetzen jede Änderung des Magnetfelds"
+      ],
+      "correct": 0,
+      "why": "In diesem vereinfachten Modell entsteht die Spannung durch Änderung des Magnetfelds, nicht durch die bloße Anwesenheit des Magneten."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche den ruhenden Zustand mit dem Hin- und Herbewegen.",
+      "wrongReasons": [
+        null,
+        "Ein ruhender Dauermagnet liefert in dieser unveränderten Anordnung keine dauernde Spannung.",
+        "Mehr Windungen ersetzen die notwendige Änderung nicht."
+      ]
+    },
+    "invention": {
+      "year": 1831,
+      "date": "1831 · Faradays Induktionsversuche",
+      "blueprint": "generator",
+      "walkthrough": true,
+      "model": "generator",
+      "stages": [
+        {
+          "label": "Deine Frage",
+          "text": "Wie wird aus einer Drehbewegung elektrische Energie?"
+        },
+        {
+          "label": "Das Prinzip",
+          "text": "Ein Generator wandelt Bewegung in elektrische Energie um. In vielen Bauformen bewegen sich Magnet und Drahtspule gegeneinander."
+        },
+        {
+          "label": "Teile verstehen",
+          "text": "Magnet: In diesem Modell wird der Magnet in die Spule hinein- oder aus ihr herausbewegt. Drahtspule: Ändert sich das Magnetfeld durch die Spule, wird eine Spannung induziert. Messgerät: Im geschlossenen Messkreis zeigt ein Ausschlag Strom während der Änderung. Der ruhende Magnet liefert hier keinen dauernden Strom."
+        },
+        {
+          "label": "Genauer unterscheiden",
+          "text": "Michael Faraday untersuchte 1831 die elektromagnetische Induktion. Sein überliefertes Gerät verband eine Drahtspule und einen bewegten Stabmagneten mit einem Strommessgerät. Ein Motor nutzt elektrische Energie für Bewegung; ein Generator hat die umgekehrte Nutzrichtung. Nicht jede Stromquelle ist ein Generator: Eine Solarzelle arbeitet anders."
+        },
+        {
+          "label": "Selbst beobachten",
+          "text": "Vergleiche im Bildschirmmodell: Magnet steht; Magnet bewegt sich hinein; Magnet bewegt sich hinaus. Vermute vor jedem Schritt, ob das Messgerät ausschlägt. Keine Steckdosen oder echten Anlagen verwenden."
+        },
+        {
+          "label": "Modellgrenzen",
+          "text": "Eine qualitative Momentaufnahme: Ausschlag nur während der Änderung, keine berechnete Spannung oder Dauerenergie aus einem ruhenden Magneten."
+        }
+      ],
+      "parts": [
+        {
+          "id": "magnet",
+          "name": "Magnet",
+          "description": "In diesem Modell wird der Magnet in die Spule hinein- oder aus ihr herausbewegt."
+        },
+        {
+          "id": "coil",
+          "name": "Drahtspule",
+          "description": "Ändert sich das Magnetfeld durch die Spule, wird eine Spannung induziert."
+        },
+        {
+          "id": "meter",
+          "name": "Messgerät",
+          "description": "Im geschlossenen Messkreis zeigt ein Ausschlag Strom während der Änderung. Der ruhende Magnet liefert hier keinen dauernden Strom."
+        }
+      ]
+    },
+    "sourceNote": "Die Royal Institution beschreibt Faradays Versuche von 1831; das Computer History Museum erläutert die zeitweilig induzierte Spannung. Der gezeigte geschlossene Messkreis vergleicht Bewegung und Stillstand. Der Ausschlag ist eine qualitative Momentaufnahme, kein berechneter Dauerstrom und keine Energie aus einem ruhenden Magneten. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung.",
+    "checkedAt": "2026-10-23",
+    "revision": 1
+  },
+  {
+    "id": "invention-transistor",
+    "category": "inventions",
+    "title": "Der Transistor",
+    "intro": "Wie kann ein winziges Bauteil elektrische Signale steuern?",
+    "aliases": [],
+    "paragraphs": [
+      "Transistoren bestehen aus besonderen Materialien, den Halbleitern. Sie können in passenden Schaltungen schalten oder Signale verstärken. Ihre Energie kommt aus der Versorgung der Schaltung. Ein schwaches Signal erzeugt nicht plötzlich zusätzliche Energie."
+    ],
+    "facts": [
+      {
+        "label": "Belegter Zeitanker",
+        "text": "1947 · funktionierender Punktkontakttransistor; viele spätere Bauformen"
+      },
+      {
+        "label": "Dein Forscherblick",
+        "text": "Steuersignal und Energieversorgung getrennt prüfen."
+      }
+    ],
+    "more": [
+      "John Bardeen und Walter Brattain zeigten im Dezember 1947 bei Bell Labs einen funktionierenden Verstärker aus Germanium mit feinen Kontakten. William Shockley leitete die Forschungsgruppe und entwickelte die Technik weiter. Heutige Chips verwenden andere, stark verkleinerte Bauformen. Ein einzelner Transistor versteht keine Wörter und ist noch kein ganzer Computer.",
+      "Die zwei Schalter im Lernmodell stehen für unterschiedliche Aufgaben: Der eine stellt die Versorgung bereit, der andere das Steuersignal. Nur beide zusammen lassen hier die Lampe leuchten. Ein echter Transistor ist kein ganzes Zwei-Schalter-Gerät; die Darstellung grenzt Steuerung und Energiequelle bewusst voneinander ab."
+    ],
+    "surprise": "Der Punktkontakttransistor von 1947 arbeitete mit Germanium. Ein moderner Computerchip verwendet andere, sehr stark verkleinerte Bauformen und viele zusammenarbeitende Bauteile.",
+    "locations": [],
+    "related": [
+      "invention-computer",
+      "invention-smartphone",
+      "science-circuit"
+    ],
+    "sources": [
+      {
+        "label": "Computer History Museum · Punktkontakttransistor von 1947",
+        "url": "https://www.computerhistory.org/siliconengine/invention-of-the-point-contact-transistor/"
+      },
+      {
+        "label": "Nexperia · Transistoren als Schalter",
+        "url": "https://efficiencywins.nexperia.com/efficient-products/understanding-the-switching-characteristics-of-rets"
+      },
+      {
+        "label": "Texas Instruments · Versorgte Verstärkerschaltungen",
+        "url": "https://www.ti.com/lit/pdf/tidu002"
+      },
+      {
+        "label": "Analog Devices · Verstärkung und Energieversorgung",
+        "url": "https://wiki.analog.com/university/courses/electronics/text/chapter-9"
+      }
+    ],
+    "links": [],
+    "model": null,
+    "learning": {
+      "starter": "Ein Transistor kann als kleiner elektronischer Schalter arbeiten. Ein Signal steuert, ob ein anderer Stromweg stark oder schwach leitet.",
+      "observe": "Nutze nur das Bildschirmmodell: Stelle einen Steuereingang auf aus und dann auf ein. Vergleiche den gesteuerten Weg. Erkläre anschließend den Unterschied zwischen Steuersignal und Energieversorgung.",
+      "benefit": "Du verstehst einen wichtigen Baustein von Computern, ohne Rechenprogramme mit dem Material des Chips zu verwechseln."
+    },
+    "question": {
+      "prompt": "Ein Transistor verstärkt ein Signal. Woher kommt die zusätzliche abgegebene Energie?",
+      "answers": [
+        "Aus der Stromversorgung der Schaltung",
+        "Allein aus dem schwachen Steuersignal",
+        "Der Transistor vermehrt Energie aus dem Nichts"
+      ],
+      "correct": 0,
+      "why": "Das Eingangssignal steuert die Wirkung; die Versorgung stellt die benötigte Energie bereit."
+    },
+    "questionFeedback": {
+      "hint": "Trenne die Frage nach dem Steuern von der Frage nach der Energiequelle.",
+      "wrongReasons": [
+        null,
+        "Das Steuersignal lenkt die Wirkung; es ist nicht allein die Energiequelle des verstärkten Ausgangs.",
+        "Das widerspricht der Energieerhaltung."
+      ]
+    },
+    "invention": {
+      "year": 1947,
+      "date": "1947 · funktionierender Punktkontakttransistor; viele spätere Bauformen",
+      "blueprint": "transistor",
+      "walkthrough": true,
+      "model": "transistor",
+      "stages": [
+        {
+          "label": "Deine Frage",
+          "text": "Wie kann ein winziges Bauteil elektrische Signale steuern?"
+        },
+        {
+          "label": "Das Prinzip",
+          "text": "Ein Transistor kann als kleiner elektronischer Schalter arbeiten. Ein Signal steuert, ob ein anderer Stromweg stark oder schwach leitet."
+        },
+        {
+          "label": "Teile verstehen",
+          "text": "Steuereingang: Ein Signal steuert in der passenden Schaltung die Leitfähigkeit des Transistors. Versorgung: Die Stromversorgung stellt die Energie für den gesteuerten Ausgang bereit. Gesteuerter Weg: Ein Transistor kann hier wie ein elektronischer Schalter den Weg zur Last steuern. Das Symbol zeigt kein bestimmtes Halbleiterbauteil von innen."
+        },
+        {
+          "label": "Genauer unterscheiden",
+          "text": "John Bardeen und Walter Brattain zeigten im Dezember 1947 bei Bell Labs einen funktionierenden Verstärker aus Germanium mit feinen Kontakten. William Shockley leitete die Forschungsgruppe und entwickelte die Technik weiter. Heutige Chips verwenden andere, stark verkleinerte Bauformen. Ein einzelner Transistor versteht keine Wörter und ist noch kein ganzer Computer."
+        },
+        {
+          "label": "Selbst beobachten",
+          "text": "Nutze nur das Bildschirmmodell: Stelle einen Steuereingang auf aus und dann auf ein. Vergleiche den gesteuerten Weg. Erkläre anschließend den Unterschied zwischen Steuersignal und Energieversorgung."
+        },
+        {
+          "label": "Modellgrenzen",
+          "text": "Ein Symbolmodell für einen elektronischen Schalter. Es zeigt weder den inneren Aufbau noch alle Betriebsarten eines realen Transistors."
+        }
+      ],
+      "parts": [
+        {
+          "id": "control",
+          "name": "Steuereingang",
+          "description": "Ein Signal steuert in der passenden Schaltung die Leitfähigkeit des Transistors."
+        },
+        {
+          "id": "supply",
+          "name": "Versorgung",
+          "description": "Die Stromversorgung stellt die Energie für den gesteuerten Ausgang bereit."
+        },
+        {
+          "id": "output",
+          "name": "Gesteuerter Weg",
+          "description": "Ein Transistor kann hier wie ein elektronischer Schalter den Weg zur Last steuern. Das Symbol zeigt kein bestimmtes Halbleiterbauteil von innen."
+        }
+      ]
+    },
+    "sourceNote": "Das Museum beschreibt den Punktkontakttransistor von 1947; Herstellerquellen erläutern Schalten und versorgte Verstärkerschaltungen. Das Bildschirmmodell trennt Steuersignal und Energieversorgung. Es zeigt weder den inneren Aufbau eines bestimmten Transistors noch alle möglichen Betriebsarten. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung.",
+    "checkedAt": "2026-10-23",
+    "revision": 1
   },
   {
     "id": "person-mary_anning",

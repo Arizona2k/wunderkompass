@@ -4,9 +4,10 @@ import {worldGameBank,restoreWorldGameOrders} from '../app/world-game-bank.ts';
 import retained from './fixtures/retained-optical-game-banks.json' with {type:'json'};
 import catalog from '../app/world-catalog.json' with {type:'json'};
 const ids=['invention-camera','invention-telescope','invention-microscope'];
+const electricalIds=['invention-battery','invention-generator','invention-transistor'];
 test('actual production bank preserves all twelve original technology questions and answer sets exactly',()=>{
  assert.equal(retained.sourceCommit,'64d45a3c0e73b5fba79e0746b91089f741aae457');assert.equal(retained.technology.length,12);
- const actual=worldGameBank('technology');assert.equal(actual.length,15);assert.deepEqual(actual.filter(q=>!ids.includes(q.id)),retained.technology);
+ const actual=worldGameBank('technology');assert.equal(actual.length,18);assert.deepEqual(actual.filter(q=>![...ids,...electricalIds].includes(q.id)),retained.technology);
  for(const before of retained.technology){const now=actual.find(q=>q.id===before.id),order=[...before.answers].reverse();assert.equal(order.length,3);assert.ok(order.every(answer=>now.answers.includes(answer)));assert.equal(now.answers[now.correct],before.answers[before.correct]);}
  const added=actual.filter(q=>ids.includes(q.id));assert.equal(added.length,3);for(const q of added){assert.match(q.prompt,/^Welche Erfindung passt zu dieser Forscherfrage\?/);assert.equal(new Set(q.answers).size,3);assert.equal(q.answers[q.correct],catalog.find(t=>t.id===q.id).title);}
 });

@@ -6,15 +6,16 @@ import index from '../app/world-index.json' with {type:'json'};
 import review from '../content/invention-editorial-review.json' with {type:'json'};
 import {CHALLENGE_BANK,restoreChallenge} from '../app/knowledge-challenge.ts';
 const ids=['invention-camera','invention-telescope','invention-microscope'];
+const electricalIds=['invention-battery','invention-generator','invention-transistor'];
 const peopleIds=['person-mary_anning','person-ibn_al_haytham'];
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 test('only three prepared optical concepts extend the exact public142 catalog and172-question bank',()=>{
- assert.deepEqual(review.integratedManuscriptIds,ids);assert.equal(catalog.length,147);assert.equal(catalog.filter(t=>t.category==='inventions').length,15);
- const retained=catalog.filter(t=>![...ids,...peopleIds].includes(t.id)).map(t=>({...t,related:t.related.filter(id=>![...ids,...peopleIds].includes(id))}));
+ assert.deepEqual(review.integratedManuscriptIds,ids);assert.equal(catalog.length,150);assert.equal(catalog.filter(t=>t.category==='inventions').length,18);
+ const retained=catalog.filter(t=>![...ids,...peopleIds,...electricalIds].includes(t.id)).map(t=>({...t,related:t.related.filter(id=>![...ids,...peopleIds,...electricalIds].includes(id))}));
  assert.equal(retained.length,142);assert.equal(hash(retained),review.retainedPublicCatalogSha256,'every old field, source, answer, mechanic and ordering is retained');
- const oldQuestions=CHALLENGE_BANK.filter(q=>![...ids,...peopleIds].includes(q.topic));assert.equal(oldQuestions.length,172);assert.equal(hash(oldQuestions),'6a2895a01766629b3d5961083cfaf45e32dcfc7a0dfe12ea0c1534a183e5e317');
- assert.equal(CHALLENGE_BANK.length,177);assert.equal(new Set(CHALLENGE_BANK.map(q=>q.id)).size,177);
- for(const id of ids){const t=catalog.find(t=>t.id===id),d=review.topics.find(d=>d.id===id);assert.equal(hash({...t,related:t.related.filter(id=>!peopleIds.includes(id))}),d.contentHash);assert.equal(t.invention.stages.length,6);assert.equal(t.invention.walkthrough,true);assert.equal(t.invention.parts.length,3);assert.equal(t.questionFeedback.wrongReasons[t.question.correct],null);assert.equal(d.ageLevels['6-8'],t.learning.starter);assert.equal(d.ageLevels['9-11'],t.paragraphs[0]);assert.equal(d.ageLevels['12-14'],t.more[0]);assert.ok(index.some(x=>x.id===id));}
+ const oldQuestions=CHALLENGE_BANK.filter(q=>![...ids,...peopleIds,...electricalIds].includes(q.topic));assert.equal(oldQuestions.length,172);assert.equal(hash(oldQuestions),'6a2895a01766629b3d5961083cfaf45e32dcfc7a0dfe12ea0c1534a183e5e317');
+ assert.equal(CHALLENGE_BANK.length,180);assert.equal(new Set(CHALLENGE_BANK.map(q=>q.id)).size,180);
+ for(const id of ids){const t=catalog.find(t=>t.id===id),d=review.topics.find(d=>d.id===id);assert.equal(hash({...t,related:t.related.filter(id=>![...peopleIds,...electricalIds].includes(id))}),d.contentHash);assert.equal(t.invention.stages.length,6);assert.equal(t.invention.walkthrough,true);assert.equal(t.invention.parts.length,3);assert.equal(t.questionFeedback.wrongReasons[t.question.correct],null);assert.equal(d.ageLevels['6-8'],t.learning.starter);assert.equal(d.ageLevels['9-11'],t.paragraphs[0]);assert.equal(d.ageLevels['12-14'],t.more[0]);assert.ok(index.some(x=>x.id===id));}
 });
 test('five explained optical relationships have both real targets and reciprocal old/new links',()=>{
  assert.equal(review.newConnections.length,5);assert.deepEqual(review.affectedExistingTopics,['invention-satellite','invention-smartphone','science-solar-system']);

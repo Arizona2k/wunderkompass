@@ -536,6 +536,78 @@
       "kind": "context",
       "why": "Die Kamerakarte zeigt Licht durch eine Öffnung auf eine Bildfläche; die Biografie erklärt das Prüfen von Lichtideen. Das ist eine erklärte Verbindung, keine Zuschreibung der modernen Kamera an einen einzigen mittelalterlichen Erfinder.",
       "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "invention-battery--science-circuit",
+      "fromId": "invention-battery",
+      "toId": "science-circuit",
+      "kind": "energy",
+      "why": "Die Batterie kann chemische Energie abgeben; die Lampe braucht außerdem einen geschlossenen äußeren Stromkreis.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-battery--science-energy",
+      "fromId": "invention-battery",
+      "toId": "science-energy",
+      "kind": "energy",
+      "why": "Die chemische Speicherung in der Batterie ist ein Beispiel für Energieumwandlung; beim Entladen entsteht Energie nicht aus dem Nichts.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-battery--invention-smartphone",
+      "fromId": "invention-battery",
+      "toId": "invention-smartphone",
+      "kind": "needs",
+      "why": "Der Akku versorgt das Smartphone unterwegs. Speichern, Steuern und elektrische Energie liefern sind unterschiedliche Aufgaben.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-generator--science-motor",
+      "fromId": "invention-generator",
+      "toId": "science-motor",
+      "kind": "energy",
+      "why": "Ein Motor nutzt elektrische Energie für Bewegung; beim Generator treibt Bewegung die Umwandlung in elektrische Energie an.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-generator--science-magnetism",
+      "fromId": "invention-generator",
+      "toId": "science-magnetism",
+      "kind": "cause",
+      "why": "Das veränderte Magnetfeld durch die Spule erklärt den Ausschlag im Induktionsversuch; ein ruhender Magnet allein genügt hier nicht.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-generator--science-circuit",
+      "fromId": "invention-generator",
+      "toId": "science-circuit",
+      "kind": "energy",
+      "why": "Eine induzierte Spannung und ein Strom durch die angeschlossene Last sind zu unterscheiden; der äußere Kreis muss passend geschlossen sein.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-transistor--invention-computer",
+      "fromId": "invention-transistor",
+      "toId": "invention-computer",
+      "kind": "partnership",
+      "why": "Viele Transistoren arbeiten in einem Computer zusammen. Ein gesteuerter Schalter allein versteht noch keine Wörter oder Programme.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-transistor--invention-smartphone",
+      "fromId": "invention-transistor",
+      "toId": "invention-smartphone",
+      "kind": "partnership",
+      "why": "Smartphonechips nutzen viele Transistoren zur Signalverarbeitung; ihre Energie kommt aus der Versorgung, unterwegs meist aus einem Akku.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-transistor--science-circuit",
+      "fromId": "invention-transistor",
+      "toId": "science-circuit",
+      "kind": "context",
+      "why": "Ein Transistor wirkt innerhalb einer passenden Schaltung. Das Lernmodell trennt Steuerung, Versorgung und den gesteuerten Stromweg.",
+      "checkedAt": "2026-10-23"
     }
   ]
 }
