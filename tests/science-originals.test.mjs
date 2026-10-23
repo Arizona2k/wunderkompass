@@ -20,3 +20,18 @@ test('source-derived finite model limits distinguish damped continuous resonance
  // The actual UI passes y=166; the unused helper default y=150 is not a product clipping finding.
  for(const depth of [0,1,2,4]){const triangles=triangleParts(depth,20,166);assert.equal(triangles.length,3**depth);for(const points of triangles)for(let i=0;i<points.length;i+=2){assert.ok(points[i]>=0&&points[i]<=240);assert.ok(points[i+1]>=0&&points[i+1]<=180);}}
 });
+
+test('each retained science original has three distinct authored inquiry paths with complete answer-specific feedback and known source references',async()=>{
+ const {default:thinking}=await import('../app/science-thinking.json',{with:{type:'json'}});
+ assert.deepEqual(new Set(thinking.entries.map(e=>e.id)),new Set(review.topics.map(e=>e.id)));
+ assert.equal(thinking.entries.length,23);assert.equal(thinking.entries.filter(e=>e.interactive).length,10);
+ for(const entry of thinking.entries){
+  const topic=catalog.find(t=>t.id===entry.id),record=review.topics.find(t=>t.id===entry.id),read=new Set(record.sourceReads.map(r=>r.url));if(entry.id==='science-lever')read.add(review.scienceThinkingPreparation20261023.additionalSourceRead.url);
+  assert.equal(entry.interactive,!!topic.investigation);assert.ok(entry.sources.length);for(const url of entry.sources)assert.ok(read.has(url),entry.id+' additional reference requires an actual source-reading record');
+  assert.deepEqual(entry.stages.map(t=>t.id),['observe','explain','transfer']);assert.equal(new Set(entry.stages.map(t=>t.prompt)).size,3);const correctPositions=[];
+  for(const stage of entry.stages){assert.equal(stage.answers.length,3);assert.equal(new Set(stage.answers.map(a=>a.id)).size,3);assert.equal(new Set(stage.answers.map(a=>a.text)).size,3);const correct=stage.answers.find(a=>a.id===stage.correct);assert.ok(correct);correctPositions.push(stage.answers.indexOf(correct));assert.notEqual(stage.hint,correct.text);assert.ok(stage.goal&&stage.example&&stage.prompt&&stage.hint);assert.equal(new Set(stage.answers.map(a=>a.feedback)).size,3);for(const answer of stage.answers)assert.ok(answer.feedback.length>40);}
+  assert.equal(new Set(correctPositions).size,3,'do not place every correct choice first in '+entry.id);
+ }
+ // Structural completeness is not evidence of three genuinely different reasoning
+ // demands or scientific truth. Those require the recorded source/product review.
+});

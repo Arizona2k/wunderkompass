@@ -1,3 +1,13 @@
+## Drei unterschiedliche Denkansprüche für die23 erhaltenen Wissenschaftsoriginale · Vorbereitung ·23.10.2026
+
+Nach Abgleich der erreichbaren ursprünglichen Modellkomponente und Buch-Verknüpfungen69neue freiwillige Aufgaben verfasst: Vermuten/Vergleichen, Erklären mit konkreter Fehlvorstellung sowie Übertragen/Modellgrenzen. Die zehn interaktiven Untersuchungen und13eigenen Erklärgrafiken bleiben erhalten. Alle217kanonischen Weltfragen und sieben Spielbanken unverändert; neue freiwillige Aufgaben nicht als zusätzliche Fachthemen zählen.31Fehlalternativen samt Rückmeldungen nachgeschärft, statt offensichtlicher Füllantworten konkrete Verwechslungen. Neue Quelle für den schrägen Hebelkraftfall tatsächlich gelesen: OpenStax Physik1§10.6,27–54. Weitere tatsächlich gelesene Einzelquellen und ihre Grenzen im bestehenden Nachweis erhalten.
+
+Der neue Baustein nutzt die vorhandene lokale Spielstandsverwaltung. Freiwillige Stufe und gewählter Antwortwortlaut pro Aufgabe bleiben getrennt erhalten; kein neuer globaler Speichervertrag, keine automatischen Stempel oder verdienten Fortschritte. Überarbeiteter Wortlaut darf später ohne falsche Indexdeutung neu bearbeitet werden; alter gewählter Text bleibt bis zur neuen Bedienung erhalten. Die drei alten Lesetiefen werden nicht mit drei unterschiedlichen Denkprüfungen gleichgesetzt.
+
+Noch keine tatsächliche aktuelle UI-/Mobile-/200%-/Sicherungs-/Offline-/Vollabnahme dieses Zusatzes: frühere tatsächlich geprüfte Bilder/Modelle bleiben als frühere Nachweise vollständig erhalten, akzeptieren aber nicht den neuen Baustein. 202Units, Typprüfung, Lint und Build am verfassten Anwendungsstand grün; aktuelle UI-/Fortsetzungsprüfung noch offen. Vor späterem Volltest alle23Darstellungen/69Aufgaben/Antworten/Hinweise/Feedbacks gemeinsam im Produkt prüfen. Basis weiterhin unabhängige Vorbereitung aufded1; tatsächliche PR58-/Bauwerksübernahme und aktueller Schlussstand noch nicht integriert, kein zweiter Release-PR. Bestehender WK053–057/Paket3.5 bleibt maßgeblich.
+
+## Historischer Stand vor diesen neuen freiwilligen Denkaufgaben · Original erhalten
+
 ## Gemeinsame Beschriftungszuordnung der neuen Diagramme verbessert ·23.10.2026
 
 Frühe tatsächliche Bildprüfung zeigte bei fünf der13neuen statischen Wissenschaftsgrafiken drei Beschriftungen unter einer Grafik, deren Zuordnung auf schmalen Bildschirmen nicht eindeutig war. Wärmewege, elastische Verformung, Spiegelung, Zellbauteile und Kometenschweife haben jetzt drei direkt zugeordnete Bildschlüssel und eine lesbare umbrechende Legende. Bei der Zelle zeigen zusätzliche Linien auf die verschiedenen äußeren/inneren Grenzen; keine willkürlichen fremden Kartennummern. Alle fachlichen Texte, Quellen, Diagrammformen und kanonischen Titel weiterverwendet.

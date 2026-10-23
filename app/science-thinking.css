@@ -1,0 +1,9 @@
+.science-thinking{min-width:0;overflow-wrap:anywhere;margin:1.5rem 0;padding:1.1rem;border:1px solid #cfdfdf;border-radius:20px;background:#f5faf8}
+.science-thinking h3,.science-thinking h4{margin-top:.25rem}
+.science-thinking-levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem;margin:1rem 0}
+.science-thinking-levels button{min-width:0;min-height:48px;white-space:normal}
+.science-thinking-levels button[aria-pressed=true]{background:#d8eee4;border-color:#43896d}
+.science-thinking-example{padding:.8rem;border-left:4px solid #739d9b;background:#fff}
+.science-thinking-task .quiz-answer{min-width:0;min-height:48px}
+.science-thinking-task .quiz-answer span{min-width:0;overflow-wrap:anywhere}
+@media(max-width:640px){.science-thinking{padding:.8rem}.science-thinking-levels{grid-template-columns:1fr}}
