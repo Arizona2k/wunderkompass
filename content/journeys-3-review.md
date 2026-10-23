@@ -1,4 +1,8 @@
-## Aktuelle visuelle Nachkorrektur des Seemodells ·23.10.2026
+## Aktuelle vollständige lokale technische Abnahme ·23.10.2026
+
+Am unveränderten ab127f24d688c8f9bd940945f7c113b23e49f3a1/Build8ab431cb1c101629 alle zehn Pflichtgruppen/140Meldungen mit leeren Fehlerlisten bestanden.240Hinweise/448Diagrammansichten,56alteAntwortzustände und jeweils12native/gewöhnliche Offline-Lernaufgabenfälle samt echter Originalpasswiederherstellung enthalten. BerichtSHA2569d5b1eaedbdfea01f9b382816e498f8d45aa5558b29b5b6cf46d07b3c763ae36; genaue Versionen/Phasen/Originale und Grenzen in PROJECT_STATE.56UI-Dossiers erst danach erneuert, Fakten/Quellen/Rechte unverändert. Frühere Fehler- und Abbruchbelege bleiben original; aktuelles finales Drei-Engine-CI und tatsächliche Auslieferung noch erforderlich. Fachliche/visuelle Gegenprüfung durch KI, keine unabhängige Menschen-/Geräte-/Hörabnahme behauptet.
+
+## Visuelle Nachkorrektur des Seemodells vor aktueller Vollabnahme ·23.10.2026
 
 Das ursprüngliche rekonstruierte Seebild zeigte einen möglichen Abfluss vom Wasserspiegel bergauf. Diesen tatsächlichen Darstellungsfehler vor Freigabe korrigiert: Wasserfüllung folgt exakt dem gezeichneten Becken; der Ausfluss beginnt auf der Oberfläche und steigt nicht an. Vorhandene Beschriftungen, Quellen, Auswahlzustände und Modellgrenzen erhalten. Neue Prüfung misst die tatsächlichen SVG-Punkte; ein absichtlich eingesetzter Bergaufpfad muss scheitern. Keine bloße Stringprüfung des neuen Pfads.
 

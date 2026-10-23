@@ -1,4 +1,8 @@
-## Landschaft/Klima · kontrollierte Integration in Prüfung ·23.10.2026
+## Landschaft/Klima · vollständiges Lokalgrün, finales CI/Release offen ·23.10.2026
+
+Der bestehende Abschnitt ist am korrigierten unveränderten ab127f2/Build8ab431cb1c101629 vollständig lokal geprüft: alle zehn Gruppen/140Meldungen/240Hinweise/448Diagrammansichten, alte Antworten und echte native/gewöhnliche Offline-/Backup-/Mehrtab-/Quoten-/Updateabläufe. Seemodell nach tatsächlichem visuellen Fachbefund korrigiert; acht Modelle vorher auch mobil und bei echtem200% gegengeprüft.56UI-Dossiers erst nach Vollgrün erneuert, alle Fakten/Quellen/Rechte/Altnachweise erhalten;184Units/43Exporte und bestehende Bildkuration grün. Exakte Hashes und ehrliche Fehlversuche/Umgebungsgrenzen in PROJECT_STATE. Jetzt unveränderlichen endgültigen Kandidaten durch vollständiges aktuelles Drei-Engine-CI und bestehende native Freigabe nach test-live führen und tatsächliche Auslieferung bestätigen. Keine neue fachliche Umfangsausweitung in diesen Kandidaten; Paket3.5 insgesamt und vorhandene elektrische Folgearbeit bleiben offen. Bestätigte55-Chronik im regulären Abschnitt enthalten, kein eigener Bestätigungsrelease.
+
+## Historischer Integrationsstand vor aktueller vollständiger Abnahme ·23.10.2026
 
 Die erhaltenen zehn Originalkapitel/acht rekonstruierten Modelle/zehn schweren Aufgaben sind konfliktfrei auf tatsächliche PR55-Basis32e3fa1 übernommen. Präzisere Quellen und bestätigte55-Produktchronik im selben regulären Abschnitt;16Reisen/80Kapitel/240richtige Antworten samt Indizes und übrige70Kapitel/230Aufgaben erhalten. Standards und frühe Chromiumansichten/Altzustände bestanden; volle aktuelle Offline-/Browser-/Engine-/CI-/Freigabe-/Auslieferungsprüfung noch offen. Exakter Stand, lokale Grenzen und fehlendes privates Vorbackup in PROJECT_STATE. Noch nicht veröffentlicht; danach drei erhaltene elektrische Manuskripte und WK054–057, Paket3.5 vollständig vor4–8. Keine zweite Roadmap.
 
