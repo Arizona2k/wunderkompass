@@ -1,6 +1,6 @@
 import './science-investigation.css';
 import {useSavedGame,useSavedModel} from './saved-games';
-import {pressure,balancingForce,buoyancy,pendulumPeriod,resonanceGain,checksum,shiftWord,angleEndpoint,triangleParts,diceSeries} from './concept-math.mjs';
+import {pressure,balancingForce,buoyancy,pendulumPeriod,resonanceGain,checksum,shiftWord,angleEndpoint,triangleParts,diceSeries,restoreInvestigationValue} from './concept-math.mjs';
 export const INVESTIGATION_IDS=['pressure','buoyancy','lever','probability','angle','checksum','pendulum','resonance','fractals','encryption'] as const;
 export type InvestigationId=typeof INVESTIGATION_IDS[number];
 const config={
@@ -17,7 +17,7 @@ const config={
 };
 const number=(n:number)=>n.toLocaleString('de-DE',{maximumFractionDigits:2});
 export default function ScienceInvestigation({kind}:{kind:InvestigationId}){
- const c=config[kind],[rawValue,setValue]=useSavedModel<number>('investigationValue',c.start,{min:c.min,max:c.max,integer:c.step>=1}),[second,setSecond]=useSavedModel<number>('investigationSecond',2,{min:0,max:9}),[rolls,setRolls]=useSavedGame<number[]>('investigationRolls',[]);
+ const c=config[kind],[rawValue,setValue]=useSavedGame<number>('investigationValue',c.start,(value,fallback)=>restoreInvestigationValue(value,fallback,c)),[second,setSecond]=useSavedModel<number>('investigationSecond',2,{min:0,max:9}),[rolls,setRolls]=useSavedGame<number[]>('investigationRolls',[]);
  const value=Math.round((rawValue-c.min)/c.step)*c.step+c.min;
  const validRolls=Array.isArray(rolls)&&rolls.length<=120&&rolls.every(n=>Number.isInteger(n)&&n>=1&&n<=6)?rolls:[];
  const water=buoyancy(kind==='buoyancy'?value:2,3),end=angleEndpoint(kind==='angle'?value:90),gain=resonanceGain(kind==='resonance'?value:.5);

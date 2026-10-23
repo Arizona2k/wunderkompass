@@ -9,3 +9,10 @@ export function shiftWord(word,shift){finite(shift,0,25);if(!Number.isInteger(sh
 export function angleEndpoint(degrees,length=85){finite(degrees,0,180);finite(length,1,100);return {x:110+length*Math.cos(degrees*Math.PI/180),y:125-length*Math.sin(degrees*Math.PI/180)};}
 export function triangleParts(depth,x=20,y=150,size=180){finite(depth,0,4);if(!Number.isInteger(depth))throw Error('Whole steps required');if(depth===0)return [[x,y,x+size/2,y-size*Math.sqrt(3)/2,x+size,y]];const half=size/2;return [...triangleParts(depth-1,x,y,half),...triangleParts(depth-1,x+half,y,half),...triangleParts(depth-1,x+half/2,y-half*Math.sqrt(3)/2,half)];}
 export function diceSeries(count,random=Math.random){finite(count,1,120);if(!Number.isInteger(count))throw Error('Whole throws required');return Array.from({length:count},()=>{const r=random();if(!Number.isFinite(r)||r<0||r>=1)throw Error('Invalid random draw');return 1+Math.floor(r*6);});}
+// Restore the declared slider domain before the generic game counter coercion.
+// A valid fractional scientific input must retain its meaning after reload.
+export function restoreInvestigationValue(value,fallback,{min,max,step}){
+ if(typeof value!=='number'||!Number.isFinite(value))return fallback;
+ const bounded=Math.max(min,Math.min(max,value));
+ return Number((min+Math.round((bounded-min)/step)*step).toFixed(10));
+}

@@ -1,8 +1,10 @@
 import assert from 'node:assert/strict';
 import path from 'node:path';
 import {captureNativeViewport} from './native-screenshot.mjs';
+import {prepareAxe} from './axe-loader.mjs';
 import catalog from '../../app/world-catalog.json' with {type:'json'};
 import review from '../../content/science-originals-review.json' with {type:'json'};
+import thinking from '../../app/science-thinking.json' with {type:'json'};
 const topics=review.topics.map(entry=>catalog.find(t=>t.id===entry.id));
 // Source-derived roles: OpenStax heat transfer, IOP elasticity, the geometric
 // reflection criterion, NHGRI cell structures and NASA comet-tail directions.
@@ -31,6 +33,51 @@ export async function assertPressureContact(model){
 async function geometry(page,root,label){
  const actual=await root.evaluate(root=>({overflow:document.documentElement.scrollWidth>innerWidth+2,bad:[...root.querySelectorAll('p,h2,h3,h4,button,summary,label,figcaption,.science-diagram-labels span')].filter(e=>e.getClientRects().length&&(!e.closest('details:not([open])')||e.closest('details:not([open])').querySelector(':scope>summary')===e)).flatMap(e=>{const b=e.getBoundingClientRect();return b.left< -2||b.right>innerWidth+2||e.scrollWidth>e.clientWidth+2||(e.matches('button,summary')&&b.height<44)?[{text:e.textContent.slice(0,80),left:b.left,right:b.right,height:b.height}]:[];})}));
  assert.equal(actual.overflow,false,label+' page overflow');assert.deepEqual(actual.bad,[],label+' readable actual text and controls');
+}
+
+export async function assertScienceThinkingTypography(root){
+ const actual=await root.evaluate(root=>({large:!!root.closest('.large-reading'),fonts:[...root.querySelectorAll('p:not(.eyebrow),h4,button,summary,.lab-feedback strong')].filter(e=>e.getClientRects().length&&(!e.closest('details:not([open])')||e.closest('details:not([open])').querySelector(':scope>summary')===e)).map(e=>({text:e.textContent.slice(0,65),font:parseFloat(getComputedStyle(e).fontSize)}))}));
+ assert.ok(actual.fonts.every(e=>e.font>=(actual.large?18.3:16)),'actual inquiry text respects normal/large reading '+JSON.stringify(actual));return actual;
+}
+
+export async function scienceThinkingView(page,topic,{width,shots,native=false}={}){
+ const entry=thinking.entries.find(entry=>entry.id===topic.id);assert.ok(entry);
+ const root=page.locator('[data-science-thinking="'+topic.id+'"]');await root.getByRole('heading',{name:'Vermuten, prüfen und weiterdenken',exact:true}).waitFor();await page.bringToFront();
+ const state=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress),protectedFields=['discoveries','journeys','games','missions','labs','experiments','favorites','favoritePlaces','chapters','completedChapters','review','notes','settings','quizResults','quizSession'];
+ await page.evaluate(()=>new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok))));const before=await state(),modelValues=await page.locator('.science-investigation input').evaluateAll(es=>es.map(e=>e.value)),stages=[];
+ for(const [index,task]of entry.stages.entries()){
+  const level=root.getByRole('group',{name:'Denkstufe zum Modell',exact:true}).getByRole('button').nth(index);await level.focus();await page.keyboard.press('Enter');assert.equal(await level.getAttribute('aria-pressed'),'true');
+  const section=root.locator('[data-science-thinking-stage="'+task.id+'"]');await section.getByRole('heading',{name:task.prompt,exact:true}).waitFor();for(const text of [task.goal,task.example])assert.ok((await section.innerText()).includes(text));
+  const hint=section.locator('details');if(!await hint.evaluate(e=>e.open))await hint.locator('summary').click();await hint.getByText(task.hint,{exact:true}).waitFor();
+  const right=task.answers.find(a=>a.id===task.correct);for(const wrong of task.answers.filter(a=>a.id!==task.correct)){const choice=section.getByRole('button',{name:wrong.text,exact:true});await choice.click();await section.getByRole('status').getByText(wrong.feedback,{exact:true}).waitFor();assert.equal(await choice.getAttribute('aria-pressed'),'true');assert.equal(await section.getByText(right.feedback,{exact:true}).count(),0,'wrong feedback never inserts the separate right explanation');}
+  await section.getByRole('button',{name:right.text,exact:true}).click();await section.getByRole('status').getByText(right.feedback,{exact:true}).waitFor();await geometry(page,root,topic.id+' thinking '+task.id+' '+width);
+  const typography=await assertScienceThinkingTypography(root);
+  const captures=[];if(shots&&!native)await root.screenshot({path:path.join(shots,topic.id+'-thinking-'+task.id+'-'+width+'.png'),animations:'disabled'});
+  if(shots&&native)for(const [n,selector]of ['h4','[role=status]'].entries()){await section.locator(selector).first().evaluate(e=>e.scrollIntoView({block:'start',behavior:'instant'}));captures.push(await captureNativeViewport(page,path.join(shots,topic.id+'-thinking-'+task.id+'-native200-'+width+'-'+n+'.png')));}
+  stages.push({id:task.id,hint:true,specificWrongFeedbacks:2,rightFeedback:true,typography,captures});
+ }
+ const sources=root.locator('details').filter({has:page.getByText('Quellen zum Forscherblick',{exact:true})});if(!await sources.evaluate(e=>e.open))await sources.locator('summary').click();assert.deepEqual(await sources.locator('a').evaluateAll(as=>as.map(a=>a.href)),entry.sources);await geometry(page,root,topic.id+' inquiry sources '+width);
+ await prepareAxe(page);const axe=await page.evaluate(async id=>(await window.axe.run('[data-science-thinking=\"'+id+'\"]',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)})),topic.id);assert.deepEqual(axe,[],'current scoped science inquiry accessibility');
+ const after=await state();for(const field of protectedFields)assert.deepEqual(after[field],before[field],topic.id+' inquiry preserves '+field);for(const task of entry.stages)assert.equal(after.gameSessions['topic:'+topic.id]['scienceThinkingAnswer:'+task.id],task.answers.find(a=>a.id===task.correct).text);assert.equal(after.gameSessions['topic:'+topic.id].scienceThinkingLevel,2);assert.deepEqual(await page.locator('.science-investigation input').evaluateAll(es=>es.map(e=>e.value)),modelValues,'voluntary answers do not change the model inputs');
+ return {id:topic.id,stages,sourceLinks:true,protectedProgress:true,modelInputsPreserved:true,axe};
+}
+
+// Regression for the actual .5 -> 0 saved-value failure: inspect the selected
+// scientific input, its explanation, drawn shape AND stored state after reload.
+export async function scienceFractionalRestoreView(page){
+ const observed=[],key='erde-entdecken:save:v3',read=()=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,key);
+ const large=await page.locator('.earth-app').evaluate(e=>e.classList.contains('large-reading'));
+ for(const {id,kind,value,steps}of [{id:'science-resonance',kind:'resonance',value:.8,steps:3},{id:'science-pendulum',kind:'pendulum',value:2.5,steps:4}]){
+  await page.bringToFront();await page.evaluate(id=>location.hash='world/topic/'+id,id);
+  const model=page.locator('[data-investigation="'+kind+'"]'),slider=model.getByRole('slider').first();await slider.waitFor();await slider.press('Home');for(let i=0;i<steps;i++)await slider.press('ArrowRight');
+  await page.waitForFunction(({id,value,key})=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['topic:'+id]?.investigationValue===value,{id,value,key});
+  const inspect=async()=>{assert.equal(Number(await slider.inputValue()),value,'fractional input '+id);const state=await read();assert.equal(state.gameSessions['topic:'+id].investigationValue,value,'fractional saved value '+id);const status=await model.getByRole('status').innerText();
+   if(kind==='pendulum'){const seconds=(2*Math.PI*Math.sqrt(value/9.81)).toLocaleString('de-DE',{maximumFractionDigits:2});assert.equal(status,'Zeit für eine volle Schwingung: etwa '+seconds+' Sekunden.');const shape=await model.locator('svg').evaluate(svg=>({string:svg.querySelector('path').getBBox().height,bobY:svg.querySelector('circle').cy.baseVal.value}));assert.equal(shape.string,value*40);assert.equal(shape.bobY,20+value*40);}
+   else{const gain=1/Math.sqrt((1-value**2)**2+(.3*value)**2);assert.ok(status.includes(gain.toLocaleString('de-DE',{maximumFractionDigits:2})));const height=await model.locator('svg path').evaluate(e=>e.getBBox().height);assert.ok(Math.abs(height-2*Math.min(55,gain*15))<4,'drawn response matches the selected frequency');}
+   return {value,status,svg:await model.locator('svg').innerHTML(),state};};
+  const before=await inspect();await page.reload();await page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();await page.locator('.earth-app').evaluate((e,large)=>e.classList.toggle('large-reading',large),large);await slider.waitFor();await page.evaluate(()=>new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok))));const after=await inspect();assert.equal(after.status,before.status);assert.equal(after.svg,before.svg);for(const field of Object.keys(before.state).filter(k=>k!=='lastActivity'))assert.deepEqual(after.state[field],before.state[field],'reload retains '+field+' '+id);observed.push({id,value,displayExplanationShapeAndStorage:true,allOtherProgressRetained:true});
+ }
+ return observed;
 }
 
 export async function scienceOriginalView(page,{width,shots,questions=true,native=false,modelsOnly=false}={}){
@@ -81,6 +128,7 @@ export async function scienceOriginalView(page,{width,shots,questions=true,nativ
    for(let i=0;i<t.question.answers.length;i++)if(i!==t.question.correct){await q.locator('.quiz-answer').filter({has:page.getByText(t.question.answers[i],{exact:true})}).click();await q.getByText(t.questionFeedback.wrongReasons[i],{exact:true}).waitFor();assert.equal(await q.getByText(t.question.why,{exact:true}).count(),0,'wrong feedback does not show separate correct explanation');}
    await right.click();await q.getByText(t.question.why,{exact:true}).waitFor();
   }
+  const inquiry=modelsOnly?null:await scienceThinkingView(page,t,{width,shots,native});
   await geometry(page,article,t.id+' '+width);
   const captures=[];
   if(shots&&!native){await article.locator('.article-hero').screenshot({path:path.join(shots,t.id+'-'+width+'-hero.png'),animations:'disabled'});if(t.investigation)await article.locator('.science-investigation').screenshot({path:path.join(shots,t.id+'-'+width+'-model.png'),animations:'disabled'});}
@@ -88,7 +136,8 @@ export async function scienceOriginalView(page,{width,shots,questions=true,nativ
    const sections=t.investigation?['.science-investigation h3','.science-investigation label','.science-investigation svg','.science-investigation [role=status]','.science-investigation .small-note']:['.world-article-heading h2','.science-explanation-diagram svg','.science-diagram-labels','.science-explanation-diagram figcaption'];
    for(const [index,selector]of sections.entries()){const part=article.locator(selector).first();await part.evaluate(async e=>{e.scrollIntoView({block:'start',behavior:'instant'});await new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok)));});captures.push(await captureNativeViewport(page,path.join(shots,t.id+'-native200-'+width+'-'+index+'.png')));}
   }
-  observed.push({id:t.id,width,native,explanationAndSources:true,questions,wrongReasons:questions?2:0,states,captures});
+  observed.push({id:t.id,width,native,inquiry,explanationAndSources:true,questions,wrongReasons:questions?2:0,states,captures});
  }
+ for(const proof of await scienceFractionalRestoreView(page))observed.find(view=>view.id===proof.id).fractionalRestore=proof;
  return observed;
 }

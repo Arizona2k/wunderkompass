@@ -4,7 +4,18 @@ import graph from '../app/world-connections.json' with {type:'json'};
 import original from '../content/science-originals-retained.json' with {type:'json'};
 import review from '../content/science-originals-review.json' with {type:'json'};
 import {CHALLENGE_BANK} from '../app/knowledge-challenge.ts';
-import {resonanceGain,triangleParts} from '../app/concept-math.mjs';
+import {resonanceGain,triangleParts,restoreInvestigationValue} from '../app/concept-math.mjs';
+
+test('restored fractional investigation inputs retain scientific values while malformed or out-of-domain input stays bounded',()=>{
+ const resonance={min:.5,max:1.5,step:.1},pendulum={min:.5,max:3,step:.5};
+ for(const value of [.5,.8,1,1.3,1.5])assert.equal(restoreInvestigationValue(value,.5,resonance),value);
+ for(const value of [.5,1,1.5,2.5,3])assert.equal(restoreInvestigationValue(value,1,pendulum),value);
+ for(const value of [null,'0.8',{},NaN,Infinity])assert.equal(restoreInvestigationValue(value,.5,resonance),.5);
+ assert.equal(restoreInvestigationValue(0,.5,resonance),.5);assert.equal(restoreInvestigationValue(9,.5,resonance),1.5);
+ assert.equal(restoreInvestigationValue(.83,.5,resonance),.8);
+ // A former truncated zero has no evidence of its original fractional value.
+ // Bounding it repairs the current input; it does not recover lost history.
+});
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 test('selective science integration retains all164 previous factual topic records and each old relationship',()=>{
  assert.equal(original.sourceBase,'ded1fb52972e3ab52adc60e44e641036e7654cd7');assert.equal(original.topics.length,164);assert.equal(catalog.length,187);assert.equal(catalog.filter(t=>t.category==='science').length,46);

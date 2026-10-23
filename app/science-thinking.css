@@ -7,3 +7,11 @@
 .science-thinking-task .quiz-answer{min-width:0;min-height:48px}
 .science-thinking-task .quiz-answer span{min-width:0;overflow-wrap:anywhere}
 @media(max-width:640px){.science-thinking{padding:.8rem}.science-thinking-levels{grid-template-columns:1fr}}
+
+.science-thinking :is(summary,button,.speech-button){font-size:1rem}
+.large-reading .science-thinking{font-size:1.15rem}
+.large-reading .science-thinking :is(h4,summary,button,.speech-button,.lab-feedback strong){font-size:1.15rem}
+/* Legacy global speech-button sizes use !important; retain that shared
+   appearance while making this section's reading controls scale with its text. */
+.science-thinking .speech-button{font-size:1rem!important}
+.large-reading .science-thinking .speech-button{font-size:1.15rem!important}

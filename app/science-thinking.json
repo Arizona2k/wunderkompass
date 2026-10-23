@@ -285,9 +285,9 @@
         {
           "id": "explain",
           "goal": "Unabhängigkeit der Würfe erklären.",
-          "example": "Im gedachten fairen Würfelmodell sind fünf Sechsen hintereinander gefallen.",
+          "example": "Im gedachten fairen Modell sind die Würfe unabhängig. Bisher sind fünf Sechsen hintereinander gefallen.",
           "prompt": "Wie groß ist die Chance einer Sechs beim nächsten Wurf?",
-          "hint": "Die Modellannahme ist: Der nächste Wurf hängt nicht von den bisherigen Ergebnissen ab.",
+          "hint": "Vergleiche die Regel für einen einzelnen Wurf mit den Ergebnissen der bisherigen Serie. Berücksichtigt dieses Modell frühere Würfe beim nächsten Wurf?",
           "answers": [
             {
               "id": "confusion-a",
@@ -477,24 +477,24 @@
         },
         {
           "id": "transfer",
-          "goal": "Dateiübereinstimmung von Vertrauenswürdigkeit trennen.",
+          "goal": "Dateiübereinstimmung und fachliche Wahrheit auseinanderhalten.",
           "example": "Eine heruntergeladene Datei passt zu einem separat vertrauenswürdig bezogenen starken kryptografischen Hash. Das ist ein anderes Verfahren als unsere Ziffernsumme.",
-          "prompt": "Was darf man daraus nicht folgern?",
+          "prompt": "Welche Aussage unterscheidet den Dateivergleich von einer fachlichen Prüfung?",
           "hint": "Überlege, ob die Kontrolle von Dateibytes auch den Inhalt einer Aussage überprüft.",
           "answers": [
             {
               "id": "confusion-a",
-              "text": "Dass ein Dateivergleich grundsätzlich möglich ist.",
-              "feedback": "Starke kryptografische Hashes werden gerade für solche Integritätsvergleiche verwendet. Ihre Aussagekraft geht aber nicht bis zur Wahrheit des Inhalts."
+              "text": "Ein passender Hash beweist zusätzlich, dass jede Aussage in der Datei wahr ist.",
+              "feedback": "Der technische Vergleich von Dateibytes prüft keine fachlichen Aussagen. Auch eine unveränderte Datei kann einen inhaltlichen Fehler enthalten."
             },
             {
               "id": "confusion-b",
-              "text": "Dass eine Abweichung von der Referenz bemerkt werden kann.",
-              "feedback": "Ein abweichender starker Hash zeigt eine andere Bytefolge an. Dieser technische Vergleich bewertet dennoch keine fachlichen Aussagen."
+              "text": "Ein passend bezogener starker Hash ist für einen Integritätsvergleich grundsätzlich unbrauchbar.",
+              "feedback": "Ein geeigneter starker Hash kann gerade beim Integritätsvergleich helfen. Dafür braucht man eine passende unabhängig vertrauenswürdig bezogene Referenz; die Wahrheit des Inhalts bleibt eine andere Frage."
             },
             {
               "id": "reasoned",
-              "text": "Dass alle Aussagen in der Datei deshalb wahr sind.",
+              "text": "Der Dateivergleich hilft bei der Übereinstimmung mit der Referenz; die Aussagen muss man getrennt prüfen.",
               "feedback": "Ein geeigneter unabhängig bezogener Hash hilft, die Datei mit der Referenz zu vergleichen. Ob ihre Aussagen stimmen, braucht weiterhin fachliche Quellenprüfung."
             }
           ],
@@ -599,7 +599,7 @@
           "goal": "Antriebstakte im Modell vergleichen.",
           "example": "Vergleiche im Modell die Frequenzverhältnisse 0,5 und 1. Die vorgegebene Dämpfung bleibt gleich.",
           "prompt": "Wo erwartest du die größere stationäre Antwort?",
-          "hint": "Suche den Bereich nahe der Eigenfrequenz. Verwechsle die gezeichnete Wellenhöhe nicht mit einer gemessenen Bauwerksbewegung.",
+          "hint": "Betrachte, was du im Modell veränderst und was gleich bleibt. Vergleiche dann die berechneten Antworten für die beiden ausgewählten Werte.",
           "answers": [
             {
               "id": "confusion-a",
@@ -1639,7 +1639,7 @@
           "answers": [
             {
               "id": "confusion-a",
-              "text": "Die Sonne verbraucht Sauerstoff wie eine Kerze; ohne diesen Brennstoff müsste sie erlöschen.",
+              "text": "Die Sonne gewinnt ihre Energie wie eine Kerze durch chemisches Verbrennen mit Sauerstoff.",
               "feedback": "Die solare Energiequelle ist Kernfusion. Sie benötigt keine gewöhnliche Verbrennung von chemischem Brennstoff mit Sauerstoff wie eine Kerze."
             },
             {
