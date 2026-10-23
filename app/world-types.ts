@@ -10,7 +10,7 @@ export type WorldTopic={revision?:number;checkedAt?:string;challenges?:(WorldQue
  history?:{year:number;date:string;era:string;sensitive:boolean};
  person?:{lifespan:string;field:string;method:string};
  invention?:{year:number;date:string;walkthrough?:boolean;model?:'resolution'|'aperture'|'generator'|'transistor'|'seismograph'|'layers';stages:{label:string;text:string}[];parts:{id:string;name:string;description:string}[];blueprint:'car'|'plane'|'lamp'|'computer'|'phone'|'printer'|'compass'|'train'|'rocket'|'satellite'|'network'|import('./invention-discovery').DiscoveryKind};
- building?:{date:string;size:string;height?:number};
+ building?:{date:string;size:string;height?:number;exploration?:{kind:'aqueduct'|'dry-stone'|'timber'|'earth'|'rock-cut'|'temple-water'|'corbel'|'shells';steps:[string,string,string];note:string}};
 };
 export type WorldEntry=Pick<WorldTopic,'id'|'category'|'title'|'intro'|'aliases'|'locations'|'image'|'model'> & {group?:string;habitat?:string;continent?:string;year?:number;era?:string;date?:string;field?:string;lifespan?:string;sensitive?:boolean};
 export type WorldActions={progress:LocalProgress;onActivity:(activity:Activity)=>void;onVisit:(id:string)=>void;onLearn:(id:string)=>void;onFavorite:(id:string)=>void;onRead:(s:string)=>void;onPlace:(p:Place)=>void;onNavigate:(mode:Mode,id?:string,iso?:string)=>void;onSave:(id:string,key:string,value:unknown,activity:Activity)=>void;onReview:(id:string,correct:boolean)=>void;onGame:(id:string)=>void;onClear:(id:string)=>void};

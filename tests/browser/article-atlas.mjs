@@ -1,3 +1,4 @@
+import {buildingOriginalSourceView} from './building-originals.mjs';
 import {mechanicsSourceView} from './invention-mechanics.mjs';
 import {peopleSourceView,peopleLegacyRound} from './people-learning.mjs';
 import {electricalSourceView} from './invention-electrical.mjs';
@@ -88,6 +89,7 @@ export async function articleAtlas(page,ready,report,width,shots){
  }
  report.peopleViews??=[];report.peopleViews.push(...await peopleSourceView(page,{width,shots,questions:true}));
  if(width===390)await peopleLegacyRound(page.context().browser(),new URL(page.url()).origin,ready,report,shots);
+ report.buildingOriginalViews??=[];report.buildingOriginalViews.push(...await buildingOriginalSourceView(page,{width,shots,questions:true}));
  report.mechanicsViews??=[];report.mechanicsViews.push(...await mechanicsSourceView(page,{width,shots,questions:true}));
  report.electricalViews??=[];report.electricalViews.push(...await electricalSourceView(page,{width,shots,questions:true}));
  report.opticsViews??=[];report.opticsViews.push(...await opticsSourceView(page,{width,shots,questions:true}));

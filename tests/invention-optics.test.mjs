@@ -1,3 +1,5 @@
+import buildingBaseline from './fixtures/retained-before-building-originals.json' with {type:'json'};
+const buildingIds=buildingBaseline.newIds;
 import mechanicsBaseline from './fixtures/retained-before-invention-mechanics.json' with {type:'json'};
 const mechanicsIds=mechanicsBaseline.newIds;
 import test from 'node:test';
@@ -12,11 +14,11 @@ const electricalIds=['invention-battery','invention-generator','invention-transi
 const peopleIds=['person-mary_anning','person-ibn_al_haytham'];
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 test('only three prepared optical concepts extend the exact public142 catalog and172-question bank',()=>{
- assert.deepEqual(review.integratedManuscriptIds,ids);assert.equal(catalog.length,156);assert.equal(catalog.filter(t=>t.category==='inventions').length,24);
- const retained=catalog.filter(t=>![...ids,...peopleIds,...electricalIds,...mechanicsIds].includes(t.id)).map(t=>({...t,related:t.related.filter(id=>![...ids,...peopleIds,...electricalIds,...mechanicsIds].includes(id))}));
+ assert.deepEqual(review.integratedManuscriptIds,ids);assert.equal(catalog.length,164);assert.equal(catalog.filter(t=>t.category==='inventions').length,24);
+ const retained=catalog.filter(t=>![...ids,...peopleIds,...electricalIds,...mechanicsIds,...buildingIds].includes(t.id)).map(t=>({...t,related:t.related.filter(id=>![...ids,...peopleIds,...electricalIds,...mechanicsIds,...buildingIds].includes(id))}));
  assert.equal(retained.length,142);assert.equal(hash(retained),review.retainedPublicCatalogSha256,'every old field, source, answer, mechanic and ordering is retained');
- const oldQuestions=CHALLENGE_BANK.filter(q=>![...ids,...peopleIds,...electricalIds,...mechanicsIds].includes(q.topic));assert.equal(oldQuestions.length,172);assert.equal(hash(oldQuestions),'6a2895a01766629b3d5961083cfaf45e32dcfc7a0dfe12ea0c1534a183e5e317');
- assert.equal(CHALLENGE_BANK.length,186);assert.equal(new Set(CHALLENGE_BANK.map(q=>q.id)).size,186);
+ const oldQuestions=CHALLENGE_BANK.filter(q=>![...ids,...peopleIds,...electricalIds,...mechanicsIds,...buildingIds].includes(q.topic));assert.equal(oldQuestions.length,172);assert.equal(hash(oldQuestions),'6a2895a01766629b3d5961083cfaf45e32dcfc7a0dfe12ea0c1534a183e5e317');
+ assert.equal(CHALLENGE_BANK.length,194);assert.equal(new Set(CHALLENGE_BANK.map(q=>q.id)).size,194);
  for(const id of ids){const t=catalog.find(t=>t.id===id),d=review.topics.find(d=>d.id===id);assert.equal(hash({...t,related:t.related.filter(id=>![...peopleIds,...electricalIds].includes(id))}),d.contentHash);assert.equal(t.invention.stages.length,6);assert.equal(t.invention.walkthrough,true);assert.equal(t.invention.parts.length,3);assert.equal(t.questionFeedback.wrongReasons[t.question.correct],null);assert.equal(d.ageLevels['6-8'],t.learning.starter);assert.equal(d.ageLevels['9-11'],t.paragraphs[0]);assert.equal(d.ageLevels['12-14'],t.more[0]);assert.ok(index.some(x=>x.id===id));}
 });
 test('five explained optical relationships have both real targets and reciprocal old/new links',()=>{

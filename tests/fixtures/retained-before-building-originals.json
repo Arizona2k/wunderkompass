@@ -1,0 +1,91 @@
+{
+  "meaning": "Original pre-building source retained before integration. No earlier protected reference regenerated.",
+  "sourceCommit": "475e4cbfbe45ab524cf4b3f62316ca0c02a74694",
+  "sourceMaster": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+  "newIds": [
+    "building-pont-du-gard",
+    "building-great-zimbabwe",
+    "building-horyu-ji",
+    "building-djenne-mosque",
+    "building-lalibela",
+    "building-angkor-wat",
+    "building-palenque",
+    "building-sydney-opera"
+  ],
+  "oldCatalog": {
+    "count": 156,
+    "sha256": "a8315891b126d3cec401b0b44221f433e227cd83deee58274c4e29e9f8e67293"
+  },
+  "oldChallenges": {
+    "count": 186,
+    "sha256": "48f84721bc5d69a0255df02b4e52094d92deb7220f4c9ca793dce1d1e2e90c8b"
+  },
+  "oldGraph": {
+    "count": 85,
+    "sha256": "aab573ef32b66a9ec4e3be55ef0f6fbdd05b4294a908d001c424cdc503f3a83c"
+  },
+  "oldGameBanks": {
+    "animal-detective": {
+      "count": 48,
+      "sha256": "4818ba471a7b464a3c6c03bd40259d1409f21851cc27d9e80384573427604fc3"
+    },
+    "habitats": {
+      "count": 48,
+      "sha256": "1f209b6d4162cb801a1480483264d3f84f456511fb8877e29975824ab1f16f35"
+    },
+    "food": {
+      "count": 48,
+      "sha256": "db31999632cda257737c9b6238147f0627e2b0485926864a8a6f7314e16de798"
+    },
+    "records": {
+      "count": 5,
+      "sha256": "a9e806e1b85309dcf016c9be579e2b79c72725a192641741591ac58052c70c38"
+    },
+    "people": {
+      "count": 20,
+      "sha256": "50cff8c7506ab2b8a55fbeb17b3718c84127ac4ea4c4089ccb5a6a227c14c41e"
+    },
+    "technology": {
+      "count": 24,
+      "sha256": "ae8e2308fb3c404fecd9356953a213d3b9b9421d6ee1c718d5330eb848403f61"
+    },
+    "then-now": {
+      "count": 24,
+      "sha256": "619c3f691d061b48018e73f1085878f16a026e4c2e32bef8aee338abaabc16cb"
+    }
+  },
+  "originalCorrectAnswers": {
+    "building-pont-du-gard": {
+      "correct": 0,
+      "answer": "Aus einer höher gelegenen Quelle entlang der Wasserleitung."
+    },
+    "building-great-zimbabwe": {
+      "correct": 0,
+      "answer": "Die Steine wurden sorgfältig ohne Mörtel zwischen ihnen gesetzt."
+    },
+    "building-horyu-ji": {
+      "correct": 0,
+      "answer": "Stützen und verbundene Bauteile leiten Dachlasten zum Untergrund."
+    },
+    "building-djenne-mosque": {
+      "correct": 0,
+      "answer": "Zusätzliche Schichten bringen auch Gewicht; Dach und Tragwerk müssen mitgeprüft werden."
+    },
+    "building-lalibela": {
+      "correct": 0,
+      "answer": "Räume und Formen wurden aus dem vorhandenen Fels herausgearbeitet."
+    },
+    "building-angkor-wat": {
+      "correct": 0,
+      "answer": "Die Region enthält weitere Tempel, Siedlungen und Wasseranlagen."
+    },
+    "building-palenque": {
+      "correct": 0,
+      "answer": "Welche gezeichneten Räume durch einen sichtbaren Zugang verbunden sind."
+    },
+    "building-sydney-opera": {
+      "correct": 0,
+      "answer": "Ja, beide bleiben gleich weit von derselben Kreismitte entfernt."
+    }
+  }
+}

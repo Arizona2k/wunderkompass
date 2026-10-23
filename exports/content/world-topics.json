@@ -6967,7 +6967,8 @@
     ],
     "related": [
       "history-paper",
-      "person-cai_lun"
+      "person-cai_lun",
+      "building-great-zimbabwe"
     ],
     "sources": [
       {
@@ -7035,7 +7036,9 @@
     ],
     "related": [
       "building-golden-gate-bridge",
-      "history-medieval_cities"
+      "history-medieval_cities",
+      "building-pont-du-gard",
+      "building-palenque"
     ],
     "sources": [
       {
@@ -7179,7 +7182,8 @@
     "related": [
       "building-burj-khalifa",
       "building-golden-gate-bridge",
-      "invention-elevator"
+      "invention-elevator",
+      "building-horyu-ji"
     ],
     "sources": [
       {
@@ -7320,7 +7324,8 @@
     ],
     "related": [
       "invention-railway",
-      "building-golden-gate-bridge"
+      "building-golden-gate-bridge",
+      "building-angkor-wat"
     ],
     "sources": [
       {
@@ -8160,7 +8165,8 @@
     "related": [
       "history-zero",
       "history-writing",
-      "science-solar-system"
+      "science-solar-system",
+      "building-palenque"
     ],
     "sources": [
       {
@@ -8296,7 +8302,9 @@
     "related": [
       "history-paper",
       "person-al_khwarizmi",
-      "history-printing"
+      "history-printing",
+      "building-great-zimbabwe",
+      "building-djenne-mosque"
     ],
     "sources": [
       {
@@ -8782,7 +8790,8 @@
     "related": [
       "invention-phone",
       "science-atmosphere",
-      "invention-seismograph"
+      "invention-seismograph",
+      "building-sydney-opera"
     ],
     "sources": [
       {
@@ -9011,7 +9020,10 @@
     "related": [
       "science-photosynthesis",
       "science-atmosphere",
-      "animal-north-american-beaver"
+      "animal-north-american-beaver",
+      "building-pont-du-gard",
+      "building-lalibela",
+      "building-angkor-wat"
     ],
     "sources": [
       {
@@ -14284,7 +14296,8 @@
     "locations": [],
     "related": [
       "invention-computer",
-      "invention-printing"
+      "invention-printing",
+      "building-lalibela"
     ],
     "sources": [
       {
@@ -14495,5 +14508,741 @@
       ]
     },
     "sourceNote": "Der Smithsonian-Katalog belegt Howes Patent vom 10. September 1846 und die Zusammenarbeit zweier Fäden. Der Funktionsplan benennt Nadel, Schiffchenfaden und Stofftransport; eine gezeichnete Kreuzung bildet noch nicht die vollständige räumliche Stichbewegung ab. Andere Sticharten funktionieren anders. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
+  },
+  {
+    "id": "building-pont-du-gard",
+    "title": "Pont du Gard – Wasser über dem Fluss",
+    "intro": "Warum fließt Wasser auf einer Brücke, obwohl der Fluss darunter liegt?",
+    "aliases": [
+      "Pont du Gard",
+      "Römische Wasserbrücke"
+    ],
+    "locations": [
+      {
+        "label": "Pont du Gard in Südfrankreich · ungefährer Kartenpunkt",
+        "lat": 43.947,
+        "lon": 4.535,
+        "iso": "FRA"
+      }
+    ],
+    "paragraphs": [
+      "Die Römer bauten den Pont du Gard im ersten Jahrhundert nach Christus als Teil einer Wasserleitung nach Nîmes. Drei Bogenreihen tragen die Rinne über den Gardon. Das Wasser der Leitung kam von einer höher gelegenen Quelle; es wurde nicht aus dem Fluss unter der Brücke nach oben gepumpt.",
+      "Ein kleines Gefälle genügte für den Wasserweg. Die hohe Brücke half, die benötigte Lage der Rinne beim Überqueren des Tals beizubehalten. Brücke und gesamte Leitung sind deshalb verschiedene Größen: Nur ein Teil der ungefähr 50 Kilometer langen Strecke führte über den Pont du Gard."
+    ],
+    "facts": [
+      {
+        "label": "Bauzeit",
+        "text": "1. Jahrhundert n. Chr.; kein einzelner gesicherter Bautag."
+      },
+      {
+        "label": "Höhe und Strecke unterscheiden",
+        "text": "Die Brücke ist etwa 49 Meter hoch. Rund 50 Kilometer beschreibt die gesamte Wasserleitung, nicht die Brückenlänge."
+      }
+    ],
+    "more": [
+      "Verfolge zwei getrennte Wege: Der Gardon fließt im Tal; die Rinne überquert ihn auf dem Bauwerk. Eine Leitung kann einen Fluss also kreuzen, ohne ihr Wasser aus diesem Fluss zu beziehen.",
+      "Die Bögen übertragen Lasten auf Pfeiler und Untergrund. Die Zeichnung zeigt nur das Prinzip der Bogenreihen und der Rinne. Sie berechnet weder Steindruck noch Wassermenge oder eine sichere Tragfähigkeit."
+    ],
+    "surprise": "Wasser und Fluss kreuzten sich hier auf unterschiedlichen Höhen.",
+    "learning": {
+      "starter": "Oben auf dieser römischen Brücke verlief eine Wasserrinne. Sie brachte Wasser zur Stadt.",
+      "observe": "Zeichne Quelle, Tal und Stadt auf Papier. Lege eine sanft abfallende Linie von der höheren Quelle zur Stadt. Wo braucht sie eine Stütze über dem Tal? Keine Wasser- oder Steinaufbauten bauen.",
+      "benefit": "Du trennst Wasserquelle, Fließrichtung und Tragwerk und verwechselst die Länge einer Brücke nicht mit einer ganzen Leitung."
+    },
+    "question": {
+      "prompt": "Woher kam das Wasser, das oben über den Pont du Gard floss?",
+      "answers": [
+        "Aus einer höher gelegenen Quelle entlang der Wasserleitung.",
+        "Aus dem Gardon, dessen Wasser mit Pumpen in die obere Rinne gehoben wurde.",
+        "Aus Regenwasser, das die Bogenreihen der Brücke sammelten."
+      ],
+      "correct": 0,
+      "why": "Die Leitung führte Wasser von einer höher gelegenen Quelle nach Nîmes. Die Brücke trug die Rinne über das Tal; sie erzeugte oder pumpte kein Wasser."
+    },
+    "questionFeedback": {
+      "hint": "Trenne die tragende Brücke von der Herkunft des Wassers.",
+      "wrongReasons": [
+        null,
+        "Der Gardon verläuft unter der Brücke. Die obere Rinne gehörte zur Leitung von der höher gelegenen Quelle bei Uzès; sie wurde hier nicht aus dem Fluss hochgepumpt.",
+        "Die Bögen tragen die Rinne. Das beschriebene Wasser kam von einer Quelle entlang der Leitung, nicht aus einer Regensammelanlage in den Bögen."
+      ]
+    },
+    "building": {
+      "date": "1. Jahrhundert n. Chr.",
+      "size": "Etwa 49 Meter Brückenhöhe; ungefähr 50 Kilometer gesamte Wasserleitung.",
+      "exploration": {
+        "kind": "aqueduct",
+        "steps": [
+          "Finde den Fluss im Tal und die höher liegende Rinne. Es sind zwei getrennte Wasserwege.",
+          "Drei Bogenebenen tragen die Rinne. Pfeiler geben Lasten an den Untergrund weiter.",
+          "Verfolge die Rinne vom höheren Quellgebiet zur Stadt. Ihr Gefälle ist in der Zeichnung stark übertrieben."
+        ],
+        "note": "Eigene Prinzipskizze, kein maßstäblicher Bauplan und keine Wasser- oder Tragwerksberechnung."
+      }
+    },
+    "category": "buildings",
+    "sources": [
+      {
+        "label": "UNESCO · Aquädukt und Bauweise des Pont du Gard",
+        "url": "https://whc.unesco.org/en/list/344/"
+      },
+      {
+        "label": "Pont du Gard · Brücke, Wasserrinne und Gefälle",
+        "url": "https://pontdugard.fr/en/discover/monument"
+      }
+    ],
+    "related": [
+      "science-water-cycle",
+      "building-colosseum"
+    ],
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-23",
+    "sourceNote": "Eigene Erklärung und Zeichnung mit KI-Unterstützung. UNESCO und der Betreiber beschreiben Brückenhöhe, Bogenebenen und Wasserrinne. Die rund 50 Kilometer beziehen sich auf die ganze Wasserleitung. Im Lernbild ist ihr Gefälle übertrieben."
+  },
+  {
+    "id": "building-great-zimbabwe",
+    "title": "Groß-Simbabwe – Steine ohne Mörtel",
+    "intro": "Wie entstehen sorgfältige Steinmauern, ohne die Blöcke mit Mörtel zu verbinden?",
+    "aliases": [
+      "Groß-Simbabwe",
+      "Great Zimbabwe"
+    ],
+    "locations": [
+      {
+        "label": "Groß-Simbabwe nahe Masvingo · ungefährer Kartenpunkt",
+        "lat": -20.268,
+        "lon": 30.934,
+        "iso": "ZWE"
+      }
+    ],
+    "paragraphs": [
+      "In Groß-Simbabwe bauten Vorfahren der heutigen Shona über mehrere Jahrhunderte eine bedeutende Stadt. Ihre erhaltenen Mauern bestehen aus sorgfältig gesetzten Granitsteinen. Mörtel zwischen den Steinen war dafür nicht nötig.",
+      "Die Große Einfriedung ist nur ein Teil der Anlage. Früher gehörten auch Wohnbauten aus vergänglicheren Materialien dazu. Die heute sichtbaren Steinmauern zeigen deshalb nicht allein, wie die ganze Stadt aussah oder wie alle Menschen dort lebten."
+    ],
+    "facts": [
+      {
+        "label": "Entwicklungszeit",
+        "text": "Die Stadt wuchs vor allem vom 11. bis 15. Jahrhundert."
+      },
+      {
+        "label": "Material und Technik",
+        "text": "Granitsteine wurden in sorgfältigen Lagen ohne Mörtel gesetzt. Form und Ausführung der Mauer bleiben wichtig."
+      }
+    ],
+    "more": [
+      "Trockenmauerwerk bedeutet nicht, Steine beliebig aufzuhäufen. Passende Auflageflächen und die Anordnung der Lagen gehören zur handwerklichen Arbeit. Einige Mauern verjüngen sich nach oben.",
+      "Archäologische Funde belegen regionale Herstellung und weitreichende Handelskontakte. Frühere Behauptungen, fremde Völker hätten die Stadt erbaut, widersprachen späteren archäologischen Nachweisen ihrer afrikanischen Entstehung. Die genaue Funktion einzelner Mauern bleibt eine Forschungsfrage."
+    ],
+    "surprise": "Eine Ruine kann besonders beständige Bauteile bewahren und anderes fast ganz verlieren.",
+    "learning": {
+      "starter": "Hier bauten Menschen große Mauern aus passend gesetzten Steinen. Zwischen ihnen liegt kein Mörtel.",
+      "observe": "Vergleiche zwei gezeichnete Steinlagen: senkrecht durchgehende Fugen und gegeneinander versetzte Fugen. Beschreibe den Unterschied, ohne daraus eine sichere Belastbarkeit abzulesen. Keine echten Steinmauern bauen oder beklettern.",
+      "benefit": "Du erkennst handwerkliches Wissen und prüfst, welche Teile einer vergangenen Stadt überhaupt noch erhalten sind."
+    },
+    "question": {
+      "prompt": "Was bedeutet Trockenmauerwerk in Groß-Simbabwe?",
+      "answers": [
+        "Die Steine wurden sorgfältig ohne Mörtel zwischen ihnen gesetzt.",
+        "Zwischen den Steinen lag Mörtel, der beim Austrocknen fest wurde.",
+        "Die Wände bestanden aus Lehmziegeln, die mit Granitplatten verkleidet wurden."
+      ],
+      "correct": 0,
+      "why": "Die erhaltenen Granitsteine wurden ohne Mörtel angeordnet. Sorgfalt, Form und Untergrund bleiben wichtig; daraus folgt keine allgemeine Einsturzsicherheit."
+    },
+    "questionFeedback": {
+      "hint": "Achte auf das Material zwischen den Steinen, nicht auf ein Sicherheitsversprechen.",
+      "wrongReasons": [
+        null,
+        "Trockenmauerwerk beschreibt hier den Verzicht auf Mörtel zwischen den Granitsteinen, nicht bloß das Austrocknen eines Mörtels.",
+        "Wohnbauten aus Daga gehörten zur Stadt, aber die hier untersuchten erhaltenen Steinmauern bestehen aus sorgfältig gesetzten Granitlagen."
+      ]
+    },
+    "building": {
+      "date": "Vor allem 11.–15. Jahrhundert",
+      "size": "Steinerne Stadtanlage mit Hügelbereich, Großer Einfriedung und weiteren Wohnbereichen.",
+      "exploration": {
+        "kind": "dry-stone",
+        "steps": [
+          "Betrachte die Auflage der Steinlagen. Die Skizze zeigt keinen Mörtel.",
+          "Vergleiche durchgehende und versetzte Fugen. Das ist ein Formvergleich, keine Berechnung der Standfestigkeit.",
+          "Ergänze die gedachte Stadt um Wohnräume und Wege. Steinmauern allein bilden das frühere Leben nicht vollständig ab."
+        ],
+        "note": "Eigene Lernskizze für Mauerlagen; weder genaue Rekonstruktion einer bestimmten Mauer noch Bauanleitung."
+      }
+    },
+    "category": "buildings",
+    "sources": [
+      {
+        "label": "UNESCO · Stadtanlage, Funde und Baugeschichte",
+        "url": "https://whc.unesco.org/en/list/364/"
+      },
+      {
+        "label": "Metropolitan Museum · Steinmauern und Wohnbereiche",
+        "url": "https://www.metmuseum.org/essays/great-zimbabwe-11th-15th-century"
+      }
+    ],
+    "related": [
+      "building-great-wall",
+      "history-timbuktu"
+    ],
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-23",
+    "sourceNote": "Eigene Erklärung und Zeichnung mit KI-Unterstützung. UNESCO und das Metropolitan Museum beschreiben die Stadt der Vorfahren der Shona und ihr Steinmauerwerk. Erhaltene Steinmauern zeigen nur einen Teil der früheren Bauten. Nicht jede frühere Raumnutzung ist sicher bekannt."
+  },
+  {
+    "id": "building-horyu-ji",
+    "title": "Hōryū-ji – Dächer auf Holzstützen",
+    "intro": "Wie gelangt das Gewicht eines schweren Dachs durch ein hölzernes Tragwerk zum Boden?",
+    "aliases": [
+      "Horyu-ji",
+      "Hōryū-ji",
+      "Holzbauten von Nara"
+    ],
+    "locations": [
+      {
+        "label": "Hōryū-ji bei Nara · ungefährer Kartenpunkt",
+        "lat": 34.614,
+        "lon": 135.735,
+        "iso": "JPN"
+      }
+    ],
+    "paragraphs": [
+      "Zur buddhistischen Tempelanlage Hōryū-ji in Japan gehören sehr alte erhaltene Holzbauten. Einige stammen aus dem späten siebten oder frühen achten Jahrhundert. Das Alter der Anlage bedeutet nicht, dass jedes heutige Holzstück seit der ersten Gründung unverändert geblieben ist.",
+      "Stützen, Balken und auskragende Konsolen tragen die weit ausladenden Dächer. Die Verbindung dieser Teile leitet Lasten weiter. Der Tempel ist zugleich ein Ort religiöser Praxis und kein verlassenes Technikmodell."
+    ],
+    "facts": [
+      {
+        "label": "Gründung und heutiger Bestand",
+        "text": "Gründung traditionell 607; nach dem überlieferten Brand 670 Wiederaufbau. Einige erhaltene Bauten stammen aus dem späten 7./frühen 8. Jahrhundert."
+      },
+      {
+        "label": "Tragwerk",
+        "text": "Holzstützen und Konsolen tragen schwere gedeckte Dächer. Die Zeichnung zeigt nur ausgewählte Rollen."
+      }
+    ],
+    "more": [
+      "Ein weit herausragendes Dach braucht einen nachvollziehbaren Lastweg. In der Skizze verfolgst du Dach, Konsolen und Stützen bis zum Untergrund. Die Pfeile geben eine Richtung an, keine gemessene Kraft.",
+      "Erhalten bedeutet auch pflegen: Fachleute untersuchen und reparieren beschädigte Teile mit geeigneten Methoden. Holzbau allein verspricht weder Unverwundbarkeit bei Feuer noch Sicherheit bei jedem Erdbeben."
+    ],
+    "surprise": "Ein sehr altes Gebäude kann durch fachkundige Pflege weiter bestehen, obwohl einzelne Teile ersetzt werden mussten.",
+    "learning": {
+      "starter": "Holzstützen tragen hier Balken und Dächer. Verbundene Teile geben das Gewicht weiter.",
+      "observe": "Suche in der Zeichnung einen Weg vom Dach zur Stütze. Erkläre jeden Zwischenschritt mit einem Pfeil auf Papier. Keine schweren Dächer, beweglichen Türme oder Erdbebenversuche nachbauen.",
+      "benefit": "Du liest ein Tragwerk als zusammenhängenden Lastweg und verwechselst lange Erhaltung nicht mit völliger Unzerstörbarkeit."
+    },
+    "question": {
+      "prompt": "Welche Erklärung passt zum hölzernen Tragwerk von Hōryū-ji?",
+      "answers": [
+        "Stützen und verbundene Bauteile leiten Dachlasten zum Untergrund.",
+        "Die Wände tragen das Dach allein; Holzstützen und Konsolen dienen nur der Verzierung.",
+        "Die schweren Dachziegel ersetzen die darunterliegenden tragenden Holzverbindungen."
+      ],
+      "correct": 0,
+      "why": "Das Gewicht wird über verbundene Bauteile und Stützen weitergeleitet. Alter ersetzt weder einen tragfähigen Lastweg noch Erhaltung und sorgfältige Prüfung."
+    },
+    "questionFeedback": {
+      "hint": "Verfolge den Weg von einem schweren Dachteil bis zum Boden.",
+      "wrongReasons": [
+        null,
+        "Stützen und Konsolen übernehmen eine tragende Aufgabe. Ihre Form kann zugleich gestaltet sein, ohne dass sie bloße Verzierung sind.",
+        "Die Dachdeckung bringt selbst Gewicht mit. Dieses Gewicht braucht einen Lastweg über verbundene Bauteile und Stützen zum Untergrund."
+      ]
+    },
+    "building": {
+      "date": "Gründung 607 überliefert; erhaltene Teile später 7./frühes 8. Jahrhundert",
+      "size": "Mehrteilige Tempelanlage mit Holzbauten, darunter Haupthalle und fünfstöckige Pagode.",
+      "exploration": {
+        "kind": "timber",
+        "steps": [
+          "Suche Untergrund und Stützen, auf denen die gezeichneten Bauteile lasten.",
+          "Verfolge Dach, Konsolen und Balken zu den Stützen. Es ist ein gemeinsamer Lastweg.",
+          "Verfolge die Lastpfeile vom Dach über die Stützen zum Untergrund. Sie zeigen Richtungen, keine nachgewiesene Sicherheit bei Feuer oder Erdbeben. Pflege und Reparatur bleiben wichtig."
+        ],
+        "note": "Qualitative eigene Prinzipskizze; keine genaue historische Fügung oder Simulation eines Erdbebens."
+      }
+    },
+    "category": "buildings",
+    "sources": [
+      {
+        "label": "UNESCO · Holzbauten, Wiederaufbau und Lastwege",
+        "url": "https://whc.unesco.org/en/list/660/"
+      },
+      {
+        "label": "Präfektur Nara · Baugeschichte des Hōryū-ji",
+        "url": "https://www.pref.nara.lg.jp/n037/71423.html"
+      }
+    ],
+    "related": [
+      "building-eiffel-tower",
+      "building-djenne-mosque"
+    ],
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-23",
+    "sourceNote": "Eigene Erklärung und Zeichnung mit KI-Unterstützung. UNESCO und die Präfektur Nara unterscheiden die überlieferte Gründung von später erhaltenen Bauten. Sie beschreiben Holzstützen und Konsolen unter dem Dach. Lastpfeile sind kein Nachweis für Erdbebensicherheit."
+  },
+  {
+    "id": "building-djenne-mosque",
+    "title": "Die Große Moschee von Djenné",
+    "intro": "Warum gehört die Pflege einer Lehmoberfläche zur Geschichte des ganzen Bauwerks?",
+    "aliases": [
+      "Djenné",
+      "Große Moschee von Djenne"
+    ],
+    "locations": [
+      {
+        "label": "Djenné in Mali · ungefährer Kartenpunkt",
+        "lat": 13.905,
+        "lon": -4.555,
+        "iso": "MLI"
+      }
+    ],
+    "paragraphs": [
+      "Die heutige Große Moschee von Djenné entstand 1906–1907 an einem Ort mit älteren Vorgängerbauten. Wände, Stützen und Putz nutzen traditionelle erdgebundene Baustoffe. Lokales Handwerk und religiöses Leben gehören zum Verständnis des Bauwerks.",
+      "Die Gemeinschaft pflegt die Oberfläche regelmäßig. Dabei ist nicht beliebig viel neuer Putz automatisch besser: Auch zusätzliche Schichten bringen Gewicht mit. Fachkundige Instandhaltung muss Oberfläche, Dach und tragende Teile gemeinsam betrachten."
+    ],
+    "facts": [
+      {
+        "label": "Heutiger Bau",
+        "text": "Wiederaufbau 1906–1907; die Geschichte des Moscheestandorts ist älter."
+      },
+      {
+        "label": "Erhaltung",
+        "text": "Lehmgebundene Baustoffe und regelmäßige Gemeinschaftspflege; keine gewöhnliche Betonfassade."
+      }
+    ],
+    "more": [
+      "Eine Oberflächenschicht und eine tragende Wand haben verschiedene Aufgaben. Das Ergänzen von Putz kann beschädigte Oberflächen schützen, ersetzt aber keine Untersuchung von Dach und Tragwerk.",
+      "Bei Restaurierungen arbeiteten Fachleute mit örtlichen Handwerksgemeinschaften. So gehört überliefertes Wissen zur Erhaltung. Die Zeichnung ist keine Rezeptur für historischen Lehmputz und keine Anleitung zum Klettern oder Reparieren."
+    ],
+    "surprise": "Erhaltung ist eine wiederkehrende Aufgabe, nicht bloß ein einmaliger letzter Bauschritt.",
+    "learning": {
+      "starter": "Diese Moschee nutzt Lehmbaustoffe. Menschen pflegen sie mit handwerklichem Wissen.",
+      "observe": "Markiere auf Papier Oberfläche, Wand und Dach mit drei Farben. Ordne jedem Teil eine andere Frage zu: Was ist beschädigt? Was trägt? Was muss fachkundig untersucht werden? Keine Wand beschichten oder erklimmen.",
+      "benefit": "Du unterscheidest Bauen von Erhalten und erkennst, warum eine scheinbar einfache Reparatur Folgen für andere Teile haben kann."
+    },
+    "question": {
+      "prompt": "Warum ist immer mehr neuer Putz nicht automatisch die beste Erhaltung?",
+      "answers": [
+        "Zusätzliche Schichten bringen auch Gewicht; Dach und Tragwerk müssen mitgeprüft werden.",
+        "Eine geschlossene Putzoberfläche reicht aus, um den Zustand von Dach und Wänden zu beurteilen.",
+        "Dickerer Putz übernimmt von allein die Tragfunktion beschädigter Wandteile."
+      ],
+      "correct": 0,
+      "why": "Erhaltung betrachtet Oberfläche und Tragwerk zusammen. Neue Schichten können zusätzliches Gewicht einbringen; fachkundige Pflege ist deshalb mehr als bloßes Überdecken."
+    },
+    "questionFeedback": {
+      "hint": "Frage nicht nur nach dem Schutz der Oberfläche, sondern auch nach der zusätzlichen Last.",
+      "wrongReasons": [
+        null,
+        "Eine geschlossene Oberfläche zeigt nicht allein den Zustand der dahinterliegenden Bauteile. Die zusätzliche Last und das gesamte Tragwerk müssen untersucht werden.",
+        "Neue Oberflächenschichten ersetzen keine fachkundige Untersuchung und Reparatur tragender Teile. Sie können das Gewicht sogar erhöhen."
+      ]
+    },
+    "building": {
+      "date": "Heutiger Wiederaufbau 1906–1907",
+      "size": "Moschee aus Lehmbaustoffen mit tragenden Wänden, Stützen und regelmäßig gepflegter Oberfläche.",
+      "exploration": {
+        "kind": "earth",
+        "steps": [
+          "Trenne in der Skizze Untergrund, Wand und äußere Putzfläche.",
+          "Eine neue Oberfläche liegt auf vorhandenen Bauteilen. Mehr Material bedeutet nicht automatisch bessere Erhaltung.",
+          "Gemeinschaftliche Pflege und fachkundige Untersuchung wirken zusammen. Das Bild gibt keine reale Reparatur frei."
+        ],
+        "note": "Eigene Funktionsübersicht ohne genaue Materialmischung, Belastungswerte oder historische Fassadenrekonstruktion."
+      }
+    },
+    "category": "buildings",
+    "sources": [
+      {
+        "label": "UNESCO · Djenné, Moschee und Lehmbau",
+        "url": "https://whc.unesco.org/en/list/116/"
+      },
+      {
+        "label": "Aga Khan Trust for Culture · Erhaltung der Moschee",
+        "url": "https://the.akdn/En/Where-We-Work/West-Africa/Mali/Earthen-Architecture-Programme-Mali"
+      }
+    ],
+    "related": [
+      "building-horyu-ji",
+      "history-timbuktu"
+    ],
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-23",
+    "sourceNote": "Eigene Erklärung und Zeichnung mit KI-Unterstützung. UNESCO beschreibt den Wiederaufbau 1906–1907 und den Lehmbau. Der Aga Khan Trust for Culture berichtet, wie zusätzliche Putzschichten auch Lasten erhöhen konnten. Oberflächenpflege ersetzt keine Prüfung des Tragwerks."
+  },
+  {
+    "id": "building-lalibela",
+    "title": "Lalibela – Räume aus dem Fels",
+    "intro": "Kann ein Gebäude entstehen, indem Menschen Material wegnehmen statt es aufzustapeln?",
+    "aliases": [
+      "Felskirchen von Lalibela",
+      "Lalibela"
+    ],
+    "locations": [
+      {
+        "label": "Lalibela in Äthiopien · ungefährer Kartenpunkt",
+        "lat": 12.032,
+        "lon": 39.047,
+        "iso": "ETH"
+      }
+    ],
+    "paragraphs": [
+      "In Lalibela wurden mittelalterliche Kirchen aus anstehendem Fels herausgearbeitet. Manche stehen in tiefen ausgehauenen Höfen. Türen, Räume und Stützen entstanden nicht einfach durch das Stapeln fertig angelieferter Steinblöcke.",
+      "Die Anlage umfasst elf Kirchen und Verbindungswege. Gräben dienen auch der Entwässerung. Wasser kann Gestein und Bauwerk schädigen; die erhaltenen Formen brauchen deshalb weiter Schutz und Pflege. Die Kirchen bleiben religiös genutzte Orte."
+    ],
+    "facts": [
+      {
+        "label": "Zeit einordnen",
+        "text": "Mittelalterlicher Ausbau, besonders 12.–13. Jahrhundert; nicht alle Einzelschritte besitzen ein gesichertes Jahresdatum."
+      },
+      {
+        "label": "Bauprinzip",
+        "text": "Fels wurde abgetragen, um Baukörper, Freiräume und Zugänge herauszuarbeiten."
+      }
+    ],
+    "more": [
+      "Beim Lesen der Skizze musst du festes Material und ausgeräumten Raum unterscheiden. Eine dunkle Form kann den Fels darstellen, eine helle Aussparung einen Zugang. Frage deshalb zuerst nach der Legende.",
+      "Entwässerung gehört zur Erhaltung des Ganzen. Ein gezeichneter Graben zeigt nur einen möglichen Wasserweg; er beweist weder die richtige Ausführung eines historischen Grabens noch die Stabilität des verbleibenden Felsens."
+    ],
+    "surprise": "Ein Raum kann durch Wegnehmen entstehen; übrig gebliebenes Material bildet dann Wände und Dach.",
+    "learning": {
+      "starter": "Hier arbeiteten Menschen Räume aus dem Fels heraus. Sie bauten nicht nur Stein auf Stein.",
+      "observe": "Zeichne einen dunklen Felsblock auf Papier. Markiere mit einer zweiten Farbe, welche Bereiche für einen freien Zugang weggenommen würden und welche als Baukörper bleiben. Kein Steinbearbeiten, Graben oder Höhlenbetreten ausprobieren.",
+      "benefit": "Du unterscheidest Material und Hohlraum und erkennst, dass nicht jedes Bauwerk auf dieselbe Weise entsteht."
+    },
+    "question": {
+      "prompt": "Was unterscheidet die Felskirchen von einem Haus aus aufeinandergelegten Blöcken?",
+      "answers": [
+        "Räume und Formen wurden aus dem vorhandenen Fels herausgearbeitet.",
+        "Fertige Steinblöcke wurden zuerst aufeinandergestapelt und danach ausgehöhlt.",
+        "Die Formen waren natürliche Höhlen; beim Bau wurde der Fels kaum verändert."
+      ],
+      "correct": 0,
+      "why": "Der vorhandene Fels wurde gezielt abgetragen. Verbleibender Baukörper und ausgehauene Freiräume gehören zusammen; ihre wirkliche Stabilität muss fachkundig geprüft werden."
+    },
+    "questionFeedback": {
+      "hint": "Achte darauf, ob Material hinzugefügt oder an bestimmten Stellen entfernt wird.",
+      "wrongReasons": [
+        null,
+        "Das verwechselt gemauerten Aufbau mit dem beschriebenen Herausarbeiten aus anstehendem Fels. Verbleibendes Material bildet den Baukörper.",
+        "Die Quellen beschreiben gezieltes Herausarbeiten von Türen, Räumen und Stützen. Natürliche Hohlräume allein erklären diese Bauformen nicht."
+      ]
+    },
+    "building": {
+      "date": "Mittelalterlicher Ausbau, besonders 12.–13. Jahrhundert",
+      "size": "Elf Kirchen mit Höfen, Gräben und Verbindungswegen; keine maßstäbliche Gesamtanlage im Modell.",
+      "exploration": {
+        "kind": "rock-cut",
+        "steps": [
+          "Unterscheide vorhandenen Fels und markierten freien Raum.",
+          "Das Herausschlagen von Material legt Räume und Baukörper frei. Verbleibendes Material bildet die Struktur.",
+          "Ein Zugang und ein Entwässerungsweg haben unterschiedliche Aufgaben. Beide gehören zum Verständnis der Anlage."
+        ],
+        "note": "Eigene schematische Material-/Raumskizze; keine Rekonstruktion der genauen Baufolge und keine Grabungsanleitung."
+      }
+    },
+    "category": "buildings",
+    "sources": [
+      {
+        "label": "UNESCO · Felsenkirchen, Zugänge und Entwässerung",
+        "url": "https://whc.unesco.org/en/list/18/"
+      },
+      {
+        "label": "World Monuments Fund · Erhaltung und örtliches Handwerk",
+        "url": "https://www.wmf.org/projects/rock-hewn-churches"
+      }
+    ],
+    "related": [
+      "invention-3d-printing",
+      "science-water-cycle"
+    ],
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-23",
+    "sourceNote": "Eigene Erklärung und Zeichnung mit KI-Unterstützung. UNESCO beschreibt aus dem Fels gearbeitete Kirchen, Zugänge und Entwässerungswege. Der World Monuments Fund berichtet über Erhaltung und die Ausbildung örtlicher Fachleute. Die Skizze rekonstruiert keine genaue Baufolge."
+  },
+  {
+    "id": "building-angkor-wat",
+    "title": "Angkor Wat – Tempel und Wasserwege",
+    "intro": "Wie unterscheidest du einen einzelnen Tempel von einer ganzen Stadtlandschaft?",
+    "aliases": [
+      "Angkor Wat",
+      "Angkor Vat"
+    ],
+    "locations": [
+      {
+        "label": "Angkor Wat in Kambodscha · ungefährer Kartenpunkt",
+        "lat": 13.413,
+        "lon": 103.867,
+        "iso": "KHM"
+      }
+    ],
+    "paragraphs": [
+      "Angkor Wat gehört zur großen historischen Landschaft von Angkor in Kambodscha. Der Tempel stammt aus dem zwölften Jahrhundert. Galerien, Höfe und Türme bilden eine zusammenhängende Anlage, die von einem breiten Wassergraben umgeben ist.",
+      "Die Region Angkor umfasst weitere Tempel, Siedlungen, Straßen, Becken und Kanäle aus mehreren Jahrhunderten. Die Fläche des ganzen Welterbegebiets ist deshalb keine Größenangabe für Angkor Wat allein. Auch heute gehören Menschen und religiöses Leben zu dieser Landschaft."
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "Angkor Wat: 12. Jahrhundert. Die weitere Region Angkor hat eine längere Entwicklungsgeschichte."
+      },
+      {
+        "label": "Anlage und Umgebung",
+        "text": "Ein Tempel mit Wassergraben ist nur ein Teil der größeren Siedlungs- und Wasserlandschaft."
+      }
+    ],
+    "more": [
+      "Im Übersichtsbild suchst du zuerst den Rand des Tempels, dann den Graben und schließlich weitere Wasserwege. Eine räumliche Verbindung allein verrät noch nicht, zu welcher Zeit ein Kanal genutzt wurde oder welchem Zweck er genau diente.",
+      "Aus einem schönen Grundriss lassen sich nicht alle bautechnischen Zusammenhänge ablesen. Sandsteinflächen, tragende Teile, Pflege und Wasserhaushalt brauchen eigene Untersuchungen. Die schematische Wasserübersicht berechnet keine Überflutung und keine Standsicherheit."
+    ],
+    "surprise": "Der Name Angkor Wat bezeichnet nicht alle Tempel und Siedlungen von Angkor.",
+    "learning": {
+      "starter": "Angkor Wat ist ein Tempel in einer viel größeren historischen Landschaft. Ein Wassergraben umgibt ihn.",
+      "observe": "Zeichne drei klar beschriftete Umrisse: Tempel, Wassergraben, weitere Landschaft. Erkläre, auf welchen Umriss eine Flächenangabe zutreffen würde. Keine Gräben bauen oder unbekannte Gewässer betreten.",
+      "benefit": "Du liest Karten und Größenangaben genauer und vermeidest, die Eigenschaften einer ganzen Region einem einzelnen Gebäude zuzuschreiben."
+    },
+    "question": {
+      "prompt": "Warum darfst du die Fläche der gesamten Region Angkor nicht als Tempelfläche von Angkor Wat angeben?",
+      "answers": [
+        "Die Region enthält weitere Tempel, Siedlungen und Wasseranlagen.",
+        "Angkor ist nur ein anderer Name für den einzelnen Tempel Angkor Wat.",
+        "Die regionale Flächenangabe beschreibt allein den Wassergraben um Angkor Wat."
+      ],
+      "correct": 0,
+      "why": "Angkor Wat ist nur ein Bestandteil der größeren Landschaft Angkor. Eine Flächenangabe braucht einen klar benannten räumlichen Bezug."
+    },
+    "questionFeedback": {
+      "hint": "Prüfe, welcher Umriss gemeint ist: Tempel, Graben oder ganze Landschaft.",
+      "wrongReasons": [
+        null,
+        "Angkor bezeichnet die größere historische Landschaft. Angkor Wat ist einer ihrer Tempel, neben weiteren Anlagen und Siedlungen.",
+        "Der Tempelgraben ist ein eigener Bereich. Die Fläche der gesamten Landschaft schließt viel mehr ein als diesen Graben."
+      ]
+    },
+    "building": {
+      "date": "12. Jahrhundert",
+      "size": "Tempelanlage mit Höfen, Galerien, Türmen und breitem umgebendem Wassergraben; getrennt von der ganzen Region Angkor.",
+      "exploration": {
+        "kind": "temple-water",
+        "steps": [
+          "Finde den Tempelumriss. Er umfasst nicht die ganze historische Landschaft.",
+          "Erkenne Wassergraben und Zugang als verschiedene Bestandteile. Die Farben dienen der Orientierung.",
+          "Erweitere den Blick auf andere Wasserwege und Siedlungen. Ihre Geschichte braucht eigene Quellen, nicht nur einen Kartenumriss."
+        ],
+        "note": "Eigene schematische Draufsicht ohne genaue Maße oder Berechnung von Wasserwegen."
+      }
+    },
+    "category": "buildings",
+    "sources": [
+      {
+        "label": "UNESCO · Tempel und Wasserlandschaft von Angkor",
+        "url": "https://whc.unesco.org/en/list/668/"
+      },
+      {
+        "label": "APSARA · Erhaltung von Angkor Wat",
+        "url": "https://apsaraauthority.gov.kh/our-work/archeological-research-conservation/34/"
+      },
+      {
+        "label": "Smithsonian · Angkor Wat im 12. Jahrhundert",
+        "url": "https://asia-archive.si.edu/object/S1987.901/"
+      }
+    ],
+    "related": [
+      "science-water-cycle",
+      "building-panama-canal"
+    ],
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-23",
+    "sourceNote": "Eigene Erklärung und Zeichnung mit KI-Unterstützung. UNESCO beschreibt die größere Tempel- und Wasserlandschaft Angkors. Das Smithsonian ordnet Angkor Wat ins 12. Jahrhundert ein. Der Tempelgraben ist nicht das gesamte historische Wassernetz. Die Karte ist eine schematische Orientierung."
+  },
+  {
+    "id": "building-palenque",
+    "title": "Palenque – Räume, Höfe und Schrift",
+    "intro": "Was verrät dir der Grundriss einer Maya-Stadt, und was verrät er dir noch nicht?",
+    "aliases": [
+      "Palenque",
+      "Bauwerke von Palenque"
+    ],
+    "locations": [
+      {
+        "label": "Palenque in Chiapas · ungefährer Kartenpunkt",
+        "lat": 17.484,
+        "lon": -92.046,
+        "iso": "MEX"
+      }
+    ],
+    "paragraphs": [
+      "Palenque war eine Stadt der Maya im heutigen Mexiko. Ihre bekannte Blütezeit lag ungefähr zwischen 500 und 700 n.Chr. Tempel, Palastbauten, Höfe und Wohnbereiche gehörten zu einem größeren städtischen Zusammenhang.",
+      "Steinerne Dächer, Galerien und reich gestaltete Flächen prägen die erhaltenen Bauten. Bilder und Schriftzeichen ergänzen die räumliche Architektur. Ein Raumplan zeigt Wege und Nachbarschaften, erklärt aber nicht von selbst die Bedeutung jeder Inschrift oder die Nutzung jedes Zimmers."
+    ],
+    "facts": [
+      {
+        "label": "Blütezeit einordnen",
+        "text": "Etwa 500–700 n.Chr.; diese Spanne ist kein Datum für jedes einzelne Gebäude."
+      },
+      {
+        "label": "Raum und Bedeutung",
+        "text": "Höfe, Galerien, gewölbte Räume und gestaltete Flächen liefern unterschiedliche Hinweise."
+      }
+    ],
+    "more": [
+      "Beim Vergleich von Bauformen zählt der genaue Aufbau. Ein Kraggewölbe rückt Steinlagen schrittweise zur Mitte vor. Es ist nicht dasselbe Prinzip wie ein Bogen aus keilförmig angeordneten Steinen; beide brauchen geeignete Auflager und genaue Prüfung.",
+      "Funde, Bauzustände und Schriftzeugnisse ergänzen sich. Verlässliche Erklärungen verbinden diese Hinweise, statt eine vermutete Funktion allein aus der Höhe eines Turms abzuleiten. Maya-Kulturen gehören zudem nicht nur der Vergangenheit an."
+    ],
+    "surprise": "Ein Gebäude kann räumliche Wege und historische Schriftzeugnisse zugleich bewahren.",
+    "learning": {
+      "starter": "In Palenque lebten Menschen der Maya. Erhaltene Bauten zeigen Räume, Höfe, Bilder und Schrift.",
+      "observe": "Zeichne zwei Räume und einen Hof und verbinde nur die sichtbaren Zugänge. Welche Wege kannst du sicher verfolgen? Welche Nutzung bleibt eine Vermutung? Nur Papier verwenden, keine Steinlagen oder Dächer nachbauen.",
+      "benefit": "Du trennst Beobachtung von Deutung und nutzt Pläne, Architektur und Quellen als unterschiedliche Hinweise."
+    },
+    "question": {
+      "prompt": "Was kannst du aus einem einfachen Grundriss sicherer ablesen als die Bedeutung einer Inschrift?",
+      "answers": [
+        "Welche gezeichneten Räume durch einen sichtbaren Zugang verbunden sind.",
+        "Wozu jeder verbundene Raum ursprünglich genutzt wurde.",
+        "Ob alle eingezeichneten Räume im selben Jahr gebaut wurden."
+      ],
+      "correct": 0,
+      "why": "Ein Grundriss kann sichtbare räumliche Verbindungen zeigen. Schriftbedeutungen und konkrete Lebensabläufe benötigen zusätzliche fachliche Hinweise."
+    },
+    "questionFeedback": {
+      "hint": "Unterscheide eine gezeichnete Verbindung von einer historischen Deutung.",
+      "wrongReasons": [
+        null,
+        "Ein sichtbarer Zugang belegt eine räumliche Verbindung. Die genaue frühere Nutzung braucht zusätzliche Funde oder Quellen.",
+        "Ein Grundriss allein datiert die Räume nicht. Bauphasen müssen anhand weiterer archäologischer Hinweise untersucht werden."
+      ]
+    },
+    "building": {
+      "date": "Bekannte Blütezeit etwa 500–700 n.Chr.",
+      "size": "Stadtanlage mit verschiedenen Baugruppen, kein einzelnes gleichzeitig erbautes Gebäude.",
+      "exploration": {
+        "kind": "corbel",
+        "steps": [
+          "Finde Wand und freien Raum. Ein Raumumriss zeigt noch nicht jede historische Nutzung.",
+          "Vergleiche schrittweise vorkragende Lagen mit einem keilförmigen Bogen. Die Skizzen sind keine sicheren Baupläne.",
+          "Verfolge die verbleibende Öffnung zwischen den Steinlagen. Diese Bauskizze erklärt weder Inschriften noch die Nutzung eines Raums."
+        ],
+        "note": "Eigene Prinzipdarstellung zu Raum und Bauform; keine maßstäbliche Rekonstruktion eines bestimmten Raums in Palenque."
+      }
+    },
+    "category": "buildings",
+    "sources": [
+      {
+        "label": "UNESCO · Stadtgrundriss, Gewölbe und Schrift",
+        "url": "https://whc.unesco.org/en/list/411/"
+      },
+      {
+        "label": "INAH · Maya-Bauformen im Vergleich mit Palenque",
+        "url": "https://lugares.inah.gob.mx/en/node/5523"
+      }
+    ],
+    "related": [
+      "history-maya",
+      "building-colosseum"
+    ],
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-23",
+    "sourceNote": "Eigene Erklärung und Zeichnung mit KI-Unterstützung. UNESCO beschreibt Stadtplan, gewölbte Räume und Schriftzeugnisse. INAH vergleicht Bauformen der Maya mit Palenque. Die Skizze zeigt vorkragende Steinlagen; ein Raumplan und die Deutung von Inschriften sind andere Hinweise."
+  },
+  {
+    "id": "building-sydney-opera",
+    "title": "Das Opernhaus von Sydney",
+    "intro": "Wie kann eine gemeinsame geometrische Idee sehr unterschiedlich wirkende Dächer verbinden?",
+    "aliases": [
+      "Sydney Opera House",
+      "Opernhaus Sydney"
+    ],
+    "locations": [
+      {
+        "label": "Opernhaus am Hafen vonSydney · ungefährerKartenpunkt",
+        "lat": -33.857,
+        "lon": 151.215,
+        "iso": "AUS"
+      }
+    ],
+    "paragraphs": [
+      "Das Opernhaus von Sydney wurde 1973 eröffnet. Seine auffälligen Dächer erinnern an Segel oder Schalen. Tatsächlich gehören zu ihrer Konstruktion vorgefertigte Betonbauteile und ein gemeinsames geometrisches Prinzip: Teile derselben Kugelform.",
+      "Jørn Utzon entwickelte den Entwurf; viele Architektinnen, Ingenieure und Handwerksleute wirkten an der Ausführung mit. Das Haus wird für verschiedene Aufführungen genutzt. Eine besondere Außenform erklärt nicht automatisch, wie gut sich jeder Ton in einem Saal hören lässt."
+    ],
+    "facts": [
+      {
+        "label": "Eröffnung",
+        "text": "20. Oktober 1973; Aufführungen fanden teilweise schon davor statt."
+      },
+      {
+        "label": "Geometrische Idee",
+        "text": "Unterschiedliche Dachformen konnten aus Bereichen derselben Kugelform entwickelt werden."
+      }
+    ],
+    "more": [
+      "Im geometrischen Vergleich kann ein längerer und ein kürzerer Kreisbogen denselben Radius haben. Das ist eine zweidimensionale Hilfe zur gemeinsamen Krümmung; die wirklichen Dächer sind räumliche Konstruktionen.",
+      "Die Kugelgeometrie erleichterte wiederholbare Bauteile. Damit waren nicht sämtliche Aufgaben gelöst: Tragwerk, Bauausführung, Innenräume und Erhaltung verlangen zusätzliches Wissen. Die populäre Geschichte von einer geschälten Orange ist kein sicher belegter einzelner Entdeckungsmoment."
+    ],
+    "surprise": "Unterschiedlich große Ausschnitte müssen nicht aus unterschiedlich großen Kugeln stammen.",
+    "learning": {
+      "starter": "Die Dächer sehen verschieden aus. Eine gemeinsame Kugelform half, ihre Bauteile zu planen.",
+      "observe": "Zeichne zwei unterschiedlich lange Stücke derselben Kreislinie auf Papier. Bleibt ihr Abstand zur Kreismitte gleich? Vergleiche danach eine andere Kreisgröße. Nur zeichnen, keine schweren Dächer nachbauen.",
+      "benefit": "Du unterscheidest Größe und Krümmung und erkennst, wie eine mathematische Idee beim Bauen helfen kann, ohne alle Probleme allein zu lösen."
+    },
+    "question": {
+      "prompt": "Können ein längerer und ein kürzerer Ausschnitt derselben Kreislinie denselben Radius haben?",
+      "answers": [
+        "Ja, beide bleiben gleich weit von derselben Kreismitte entfernt.",
+        "Nein, jeder längere Ausschnitt braucht automatisch einen größeren Radius.",
+        "Ja, alle Kreisbögen haben denselben Radius, auch wenn sie zu verschieden großen Kreisen gehören."
+      ],
+      "correct": 0,
+      "why": "Der Radius ist der Abstand zur Kreismitte. Unterschiedlich lange Ausschnitte derselben Kreislinie behalten diesen Abstand; reale Dachlasten sind eine zusätzliche Frage."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche den Abstand zur Mitte, nicht nur die Länge der gezeichneten Linie.",
+      "wrongReasons": [
+        null,
+        "Linienlänge und Radius sind verschiedene Größen. Du kannst einen größeren Teil derselben Kreislinie zeigen, ohne ihren Radius zu verändern.",
+        "Der gleiche Radius gilt hier für Ausschnitte derselben Kreislinie. Bei unterschiedlich großen Kreisen kann der Abstand zur jeweiligen Mitte verschieden sein."
+      ]
+    },
+    "building": {
+      "date": "Eröffnet 20. Oktober 1973",
+      "size": "Aufführungsgebäude mit mehreren räumlich gekrümmten Dachgruppen; Kreisfläche und Dachfläche sind verschiedene Größen.",
+      "exploration": {
+        "kind": "shells",
+        "steps": [
+          "Betrachte zwei Abschnitte derselben gezeichneten Kreislinie. Sie können unterschiedlich lang sein.",
+          "Verfolge beide Radien zur gemeinsamen Mitte. Gleiche Krümmung ist nicht dasselbe wie gleiche Ausschnittgröße.",
+          "Das wirkliche Dach braucht räumliche Bauteile und ein Tragwerk. Die Kreiszeichnung ist nur ein begrenzter geometrischer Vergleich."
+        ],
+        "note": "Eigene zweidimensionale Geometriehilfe, keine historische Dachprojektion, Statik- oder Akustiksimulation."
+      }
+    },
+    "category": "buildings",
+    "sources": [
+      {
+        "label": "UNESCO · Opernhaus und gemeinsame Planungsleistung",
+        "url": "https://whc.unesco.org/en/list/166/"
+      },
+      {
+        "label": "Sydney Opera House · Gemeinsame Kugelgeometrie",
+        "url": "https://www.sydneyoperahouse.com/our-story/the-spherical-solution"
+      },
+      {
+        "label": "Sydney Opera House · Eröffnung und erste Aufführungen",
+        "url": "https://www.sydneyoperahouse.com/our-story/50-years-extraordinary-moments"
+      }
+    ],
+    "related": [
+      "science-sound"
+    ],
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-23",
+    "sourceNote": "Eigene Erklärung und Zeichnung mit KI-Unterstützung. Das Opernhaus erläutert die gemeinsame Kugelgeometrie und die Eröffnung am 20. Oktober 1973. UNESCO beschreibt die gemeinsame Entwurfs- und Ingenieurleistung. Unser Kreisvergleich erklärt Krümmung, keine räumliche Dachstatik oder Akustik."
   }
 ]
