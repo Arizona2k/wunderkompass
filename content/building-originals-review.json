@@ -528,7 +528,7 @@
     "trigger": "Actual320px Sydney location screenshot contains seven unrelated continent numbers plus a new marker1; ambiguous numbering despite correct individual point coordinates. The master already preserves the separate clean geography and grouping solution.",
     "decision": "Selectively retain exact five master originals. Historical continent teaching illustration remains unchanged. Existing location IDs/order/coordinates and all save keys remain unchanged; no Wikimedia access or new photograph.",
     "rights": "Own SVG generated from the existing Natural Earth geography. Original generator content/build-journey-diagrams.mjs at the recorded master lines40–47 and original nature-editorial-review media record retained.",
-    "acceptance": "Current targeted product review, grouped old Bertha Benz/computer places, four retained unit cases, affected responsive/native/offline and full current acceptance remain required.",
+    "acceptance": "Current targeted normal/native/negative/offline/affected compact proofs passed at9da source d084. Full mandatory acceptance and actual preceding PR58 merge/base reconciliation remain open; current dossiers not rebound.",
     "preliminaryVerification": {
       "units": 197,
       "typecheck": "passed",
@@ -557,6 +557,103 @@
       {
         "file": "tests/topic-map.test.mjs",
         "sha256": "4a753f97602060a45e166d782e6a35dbbfa01e8d112581fd31a4536d55ba8881"
+      }
+    ],
+    "readableLegendCorrection": {
+      "originalBuild": "ac8e314077dc8b62",
+      "actualBefore": {
+        "id": "building-sydney-opera",
+        "width": 1440,
+        "label": "1 · Opernhaus am Hafen von Sydney · ungefährer Kartenpunkt",
+        "legendMetrics": {
+          "fontSize": 14,
+          "scrollWidth": 268,
+          "clientWidth": 268
+        }
+      },
+      "cause": "Normal secondary-button font was14px; large-reading18.4px passed. Actual1440 normal locator font failed unchanged>=16px assertion.",
+      "change": "Scoped map-legend font1rem with wrapping/max-inline-size; existing large-reading override retained. Four retained original files unchanged, original CSS extended by one readable-label rule.",
+      "proof": "Actual normal320large/1440 and native200%640/320:16px normal/18.4px large; all8 new+3affected old grouped/separate maps and exact7old individual globe destinations retained. Wrong actual background and computed14px font rejected, restored current states passed. Complete existing native stopped-server offline helper passed16building/12mechanical/6electrical views and12old task cases with actual original-pass restoration. Four affected compact Rhine/Reef contexts and globe/book return passed. These are targeted current proofs, not full acceptance or reconciliation with actual PR58 delivery."
+    },
+    "currentSHA256": {
+      "app/topic-map.tsx": "62a0616e69b37117491cd89a405fc02623d5624c935310fc9235edadf07ef562",
+      "app/topic-map-layout.mjs": "8ac72b718beabee1c30dea6bad518ced14de5f3de4ea8523c5ebd4c7d922d464",
+      "app/topic-map.css": "90a0a82e500ed6aff93d0b881efc62546fc799f00267217d98a5f6f7899f838f",
+      "public/maps/world-context.svg": "0afae717c2380a6a7ac84dbf76f01dc962de94d722cbda16e5aa7e0572c7d523",
+      "tests/topic-map.test.mjs": "4a753f97602060a45e166d782e6a35dbbfa01e8d112581fd31a4536d55ba8881"
+    },
+    "currentTargetedProofs": [
+      {
+        "report": ".qa-output/buildings-location-readable-fault-settled/report.json",
+        "reportSHA256": "cff7e5ba210e44a0fcba39d82d2eb2b9a2934f590fa35027960968307bfe9501",
+        "build": "9da43330db4bd947",
+        "sourceDigest": "d08402fbc0f6650737a92b6075327296f2c268a7f1af5aa36eba1ffff33264a5",
+        "scope": "Actual affected building location labels, locator geometry, globe visit and return at320large/1440; targeted review only",
+        "observedViews": 22,
+        "native": false,
+        "negativeProof": {
+          "actualWrongBackgroundRejected": true,
+          "actual14pxLegendRejected": true,
+          "originalBackgroundAndFontRestored": true
+        },
+        "actualWidths": [
+          320,
+          1440
+        ]
+      },
+      {
+        "report": ".qa-output/buildings-location-readable-native-map/report.json",
+        "reportSHA256": "649c7d1b241052a9e06d659966e6675344a7ff50c48cfd252c3b55b879902e5c",
+        "build": "9da43330db4bd947",
+        "sourceDigest": "d08402fbc0f6650737a92b6075327296f2c268a7f1af5aa36eba1ffff33264a5",
+        "scope": "Actual affected building location labels, locator geometry, globe visit and return at320large/1440; targeted review only",
+        "observedViews": 22,
+        "native": true,
+        "negativeProof": null,
+        "actualWidths": [
+          320,
+          640
+        ],
+        "scopeNote": "Original shared scope heading names the ordinary variant. Actual native flag and individually recorded widths640/320 plus the original harness assertions of deviceScaleFactor2 establish the native200% scope; original report bytes remain unchanged."
+      },
+      {
+        "report": ".qa-output/buildings-location-current-offline/report.json",
+        "reportSHA256": "d44c946c1dcf70de91096083ecfcc5db35cb158c024d571f91594f224ae2bd4c",
+        "build": "9da43330db4bd947",
+        "sourceDigest": "d08402fbc0f6650737a92b6075327296f2c268a7f1af5aa36eba1ffff33264a5",
+        "scope": "Targeted existing complete native offline-resilience helper extended with eight retained buildings and their retained clean current location-map solution; preceding six inventions also exercised; not complete mandatory browser acceptance",
+        "observedViews": 0,
+        "native": true,
+        "negativeProof": null,
+        "actualWidths": []
+      },
+      {
+        "report": ".qa-output/buildings-affected-compact-context-actual-button/report.json",
+        "reportSHA256": "a9ea1db6ed82fc9cdb1918278da0bf8912185a2b5178ff7fb3330d87e54c2f02",
+        "build": "9da43330db4bd947",
+        "sourceDigest": "d08402fbc0f6650737a92b6075327296f2c268a7f1af5aa36eba1ffff33264a5",
+        "scope": "Two existing compact nature-atlas uses affected by the shared location-map background; actual320large and1440, no blanket nature review",
+        "observedViews": 4,
+        "native": false,
+        "negativeProof": null,
+        "actualWidths": [
+          320,
+          1440
+        ]
+      }
+    ],
+    "fixtureLimits": [
+      {
+        "report": ".qa-output/buildings-location-current/report.json",
+        "cause": "SVG text cannot use HTMLElement innerText. Corrected the same full text assertion to trimmed textContent, original failed record retained."
+      },
+      {
+        "report": ".qa-output/buildings-location-readable/report.json",
+        "cause": "Fault fixture read computed16px immediately after setting inline14px. Corrected fixture waits for actual computed14px before the unchanged rejection assertion, then for restored>=16px. Immediate16px/inline14px and actual later14px recorded in successful report; no product regression from this fixture error claimed."
+      },
+      {
+        "report": ".qa-output/buildings-affected-compact-context/report.json",
+        "cause": "Private fixture guessed wrong visit-button name. Replaced with actual exact Auf der Weltkugel finden label, all product assertions retained."
       }
     ]
   }
