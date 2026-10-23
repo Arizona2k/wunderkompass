@@ -1,7 +1,7 @@
 import {createHash} from 'node:crypto';
 test('actual PR58 is latest with trusted deployment and retains all53 earlier entries byte for byte',()=>{
  const entries=publicUpdates(),entry=entries[0],record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===58);
- assert.equal(entries.length,54);assert.equal(entry.id,'invention-originals-3-5');assert.equal(entry.evidence.pullRequest,58);assert.equal(entry.evidence.revision,'36a849ebd289f7fb83b949e59761d17699e646a1');assert.equal(entry.occurredAt,'2026-10-23T20:19:26Z');assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);
+ assert.equal(entries.length,54);assert.equal(entry.id,'invention-originals-3-5');assert.equal(record.deliveredTopicSourceCommit,'74ae838204d71857344e6fa6d00264b1537270f2');for(const name of record.deliveredTopicNames)assert.ok(entry.summary.includes(name),'PR58 chronicle names the actually delivered '+name);assert.equal(entry.evidence.pullRequest,58);assert.equal(entry.evidence.revision,'36a849ebd289f7fb83b949e59761d17699e646a1');assert.equal(entry.occurredAt,'2026-10-23T20:19:26Z');assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);
  assert.equal(createHash('sha256').update(JSON.stringify(entries.slice(1))).digest('hex'),'af7484c5dfd3e6e100b473d25df4c7ea4454377b8ffc8bd689db2d193e5d6f73');
  for(const mutate of[r=>{r.mergedAt=null;},r=>{r.deploymentStatuses=[];},r=>{r.deploymentStatuses[0].state='pending';},r=>{r.deploymentStatuses[0].creator='untrusted';}]){const invalid=structuredClone(record);mutate(invalid);assert.equal(confirmedTestDeployment(invalid),null);assert.equal(testUpdate(invalid,entry).status,'prepared');}
 });

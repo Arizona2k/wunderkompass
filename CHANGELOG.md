@@ -1,3 +1,13 @@
+## Vorbereitet und lokal geprüft · acht erhaltene Bauwerksoriginale
+
+Pont du Gard, Great Zimbabwe, Hōryū-ji, Djenné, Lalibela, Palenque, Angkor Wat und Sydney Opera House erhalten eigene Erklärungen, lesbare beschriftete Modelle, plausible Fehlantworten und gegenseitige Wissenswege. Die erhaltene Natural-Earth-Karte ergänzt die Ortsübersicht. Geeignete Fotoquellen geprüft; technisch nicht verfügbare beziehungsweise nicht ausreichend rechtlich zugeordnete Aufnahmen bleiben unintegriert. Eigene Grafiken sind als solche gekennzeichnet.
+
+Erster vollständiger lokaler8a-Vollbeleg und sämtliche Originale erhalten. Eine danach erkannte falsche Themenzuordnung im neuen PR58-Chroniktext wurde vor Veröffentlichung gegen die tatsächlich ausgelieferten sechs Karten korrigiert. Aktuelle vollständige Schlussabnahme und Integrations-CI bleiben erforderlich; dieser Bauwerksabschnitt ist noch nicht veröffentlicht.
+
+## Tatsächlich bestätigt · sechs Erfindungsoriginale PR58
+
+Quality155 vollständig erfolgreich; regulärer Merge36a849ebd289f7fb83b949e59761d17699e646a1 mit identischem geprüften Baum, tatsächliches Vercel-Deployment und TLS-Produkt-/Passnachtest bestätigt.44ausgelieferte Dateien stimmen bytegenau mit einer unabhängig gesicherten späteren lokalen Rekonstruktion überein, ausdrücklich keinem originalen CI-Artefakt. In diesem regulären Folgeabschnitt als54.Chronikeintrag nachgeführt;53Vorgänger unverändert.
+
 ## Lokal vollständig geprüft · sechs erhaltene Erfindungsoriginale
 
 Kühlschrank, Fahrrad, Aufzug, Seismograf,3D-Druck und Nähmaschine mit sechs eigenen Funktionsplänen, zwei qualitativen Modellen, passenden Hinweisen und neun erklärten beidseitigen Wissenswegen integriert. Zwölf plausible Fehlalternativen und unterscheidbare Denkhandlungen; gekoppelte Aufzugsgeometrie, präzise Gewichtskraft und lesbare Lastwegerklärung im betroffenen alten Bauwerksmodell. Vorherige150Themen bis auf neun benannte Rückverweise,180Weltfragen,18Technik-/24Zeitaufgaben und Passzustände erhalten. Eigene Darstellungen klar gekennzeichnet, keine ungeprüften Fotos.
