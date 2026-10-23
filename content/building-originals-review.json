@@ -251,7 +251,7 @@
     {
       "id": "building-sydney-opera",
       "originalManuscriptSHA256": "b359bc16c90e343fcb82a0e645ef8350df53918978b9c56b3ada0f8dfd853ace",
-      "currentContentSHA256": "f20fe24d3041cf9f4a5f2b85e193d174a56a0799288dfbb7be9ca413f3bd3a41",
+      "currentContentSHA256": "480a807506fd5c396eb83e4184d0d22fd6b94f8e2f24996ade6f8041f8ce7a66",
       "originalRelated": [
         "science-angle",
         "science-sound"
@@ -507,5 +507,57 @@
     "fullIntegrity": "open: 56 historical dossiers require current built UI/search/back/offline evidence; exact existing editorial report contains no other errors",
     "fullAcceptance": "open",
     "dossiersRefreshed": false
+  },
+  "locationLabelCorrection": {
+    "id": "building-sydney-opera",
+    "before": "Opernhaus am Hafen vonSydney · ungefährerKartenpunkt",
+    "after": "Opernhaus am Hafen von Sydney · ungefährer Kartenpunkt",
+    "meaning": "Two missing spaces in retained new manuscript label confirmed in actual mobile location map; precise original failed report and screenshot retained. Coordinates, original correct answer, old156-topic reference hashes and all game/save identities unchanged. Targeted current map→globe→article return and final acceptance still required.",
+    "originalBuild": "d52d71af6e14f5f6",
+    "originalReport": ".qa-output/buildings-location-before/report.json"
+  },
+  "retainedLocationMapCorrection": {
+    "sourceMaster": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+    "originalsSHA256": {
+      "app/topic-map.tsx": "62a0616e69b37117491cd89a405fc02623d5624c935310fc9235edadf07ef562",
+      "app/topic-map-layout.mjs": "8ac72b718beabee1c30dea6bad518ced14de5f3de4ea8523c5ebd4c7d922d464",
+      "app/topic-map.css": "e6de695e2ff9d2026cb6d017c42d5540be59f31c2c7231b3769ebf0f206eda3c",
+      "public/maps/world-context.svg": "0afae717c2380a6a7ac84dbf76f01dc962de94d722cbda16e5aa7e0572c7d523",
+      "tests/topic-map.test.mjs": "4a753f97602060a45e166d782e6a35dbbfa01e8d112581fd31a4536d55ba8881"
+    },
+    "trigger": "Actual320px Sydney location screenshot contains seven unrelated continent numbers plus a new marker1; ambiguous numbering despite correct individual point coordinates. The master already preserves the separate clean geography and grouping solution.",
+    "decision": "Selectively retain exact five master originals. Historical continent teaching illustration remains unchanged. Existing location IDs/order/coordinates and all save keys remain unchanged; no Wikimedia access or new photograph.",
+    "rights": "Own SVG generated from the existing Natural Earth geography. Original generator content/build-journey-diagrams.mjs at the recorded master lines40–47 and original nature-editorial-review media record retained.",
+    "acceptance": "Current targeted product review, grouped old Bertha Benz/computer places, four retained unit cases, affected responsive/native/offline and full current acceptance remain required.",
+    "preliminaryVerification": {
+      "units": 197,
+      "typecheck": "passed",
+      "lint": "passed",
+      "build": "passed",
+      "scope": "Application map and exact existing master tests at the recorded log; afterward only bounded building browser assertions added and syntax-checked. Current actual responsive/native/cold/offline map review and complete acceptance remain open.",
+      "knownPreparationFailure": "Compact world index initially retained the old Sydney spelling. Corrected the same location label in the existing projection and regenerated exports; original failure log preserved, no assertion/reference weakened."
+    },
+    "sourceManifest": [
+      {
+        "file": "app/topic-map.tsx",
+        "sha256": "62a0616e69b37117491cd89a405fc02623d5624c935310fc9235edadf07ef562"
+      },
+      {
+        "file": "app/topic-map-layout.mjs",
+        "sha256": "8ac72b718beabee1c30dea6bad518ced14de5f3de4ea8523c5ebd4c7d922d464"
+      },
+      {
+        "file": "app/topic-map.css",
+        "sha256": "e6de695e2ff9d2026cb6d017c42d5540be59f31c2c7231b3769ebf0f206eda3c"
+      },
+      {
+        "file": "public/maps/world-context.svg",
+        "sha256": "0afae717c2380a6a7ac84dbf76f01dc962de94d722cbda16e5aa7e0572c7d523"
+      },
+      {
+        "file": "tests/topic-map.test.mjs",
+        "sha256": "4a753f97602060a45e166d782e6a35dbbfa01e8d112581fd31a4536d55ba8881"
+      }
+    ]
   }
 }

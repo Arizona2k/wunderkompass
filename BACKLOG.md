@@ -1,3 +1,25 @@
+## Dauerhaft maßgebliche Nutzerpräzisierung ·23.10.2026
+
+Die [verbindliche Präzisierung23.10.](content/auftrag-2026-10-13/WunderKompass_Praezisierung_2026-10-23.md) gilt für vorhandene, bereits abgeschlossene und künftige Arbeit und ersetzt widersprechende pauschale Inhalts-/Antwort-/Indexfestschreibungen. Alle Produktbestandteile dürfen begründet verbessert oder ersetzt werden, auch ohne Fehler. Persönliche Daten, Notizen, verdiente Fortschritte und verlässliche Fortsetzung schützen; notwendige Kompatibilitätsanpassungen/Migrationen nach dem vorhandenen Verfahren prüfen. Falsche Fachlichkeit oder Bewertung nicht aus Kompatibilitätsgründen fortschreiben. Bestehende Referenzen belegen ihre Herkunft und unbeabsichtigten Verlust, keine ewige Unveränderlichkeit; begründete Änderungen einzeln mit tatsächlichem fachlichem Soll und Zustandsnachweisen behandeln.
+
+Lernziel/Erklärung/Beispiele/Medien/Lernhandlungen/Aufgaben/Hinweise/Feedback gemeinsam weiterentwickeln. Unterschiedliche Denkansprüche, quellenbasiertes Soll statt bloßer Implementierungskopie, reale Ausgangs-/Zwischen-/End-/Wechselzustände einschließlich Mobil/Vergrößerung und konkrete nachweislich verworfene ursprüngliche/absichtliche Fehler im bestehenden Prüfweg. Bei gemeinsamer Ursache betroffene weitere Verwendungen passend prüfen. Technischen Nutzen unter vergleichbaren Bedingungen belegen, Grenzen nennen; keine geschwächten Tests/Budgets/Schutzmechanismen oder neue Prüfplattform.
+
+Auslieferungsvergleiche künftig mit exaktem Commit, Buildbedingungen und Referenzherkunft: tatsächlich geprüfter CI-Build und späterer lokaler Nachbau ausdrücklich unterscheiden. Für PR57 stammt der44Datei-Bytevergleich aus einem späteren kontrollierten lokalen626-Nachbau mit Node24.19 und identischem Abhängigkeitsbestand; CI152 lief mit Node24.21. Gleiche CI-Dateinamen und das ausgelieferte eigene Manifest sind nur Zuordnungs-/Integritätsindizien. Keine gesicherte unabhängige Bytegleichheit zum originalen CI-Buildartefakt behauptet. Tatsächlicher Produktnachtest bleibt belegt.
+
+Notwendige Arbeit vor planbarem Wechsel über bereits autorisierte Wege sichern und Wiederherstellung sowie Erreichbarkeit im vorgesehenen Folgekontext getrennt bestätigen. Lokale Archiv-/Extraktionsbelege allein sichern keinen Folgekontext. Konkrete historische Produktlücken nach Bestandsabgleich rekonstruieren und kennzeichnen, keine Wiederherstellung unbekannter Fassungen/Nachweise behaupten. Bestehender BACKLOG, Reihenfolge und alle Freigabe-/Bild-/Datenschutz-/Kosten-/Qualitätsgrenzen unverändert. Aktiver Erfindungsprüfkandidat2db3961 bleibt unverändert. Fortschritt/Übergaben in bestehenden Dateien; keine routinemäßigen erneuten Freigabefragen oder neue Verwaltungsstruktur.
+
+## Historischer Stand vor dieser dauerhaften Präzisierung · Original erhalten
+
+## Vorhandene Kartenlösung gezielt erhalten · Schlussabnahme offen ·23.10.2026
+
+Die tatsächlich dargestellte mobile Sydney-Ortskarte zeigte zwei fehlende Leerzeichen und sieben unzugehörige Kontinentnummern neben der eigenen Ortsmarkierung. Originalfehlbericht und Bild erhalten. Beschriftung in Manuskript und vorhandener Indexprojektion korrigiert; ein zunächst vom alten Index ausgelöster Unitfehler wurde an dieser konkreten Ursache behoben, keine Assertion oder Referenz abgeschwächt.
+
+Vor Neuentwicklung im Master geprüft: Dort sind bereits eigene unnummerierte Natural-Earth-Hintergrundkarte, Ortsgruppierung, responsive Markierungsstile und vier sinnvolle Regressionfälle vollständig erhalten. Genau fünf Originaldateien bytegleich selektiv übernommen. Historische Kontinent-Lerngrafik, Koordinaten, Ortsreihenfolgen und Passschlüssel unverändert.197Units, Typprüfung, Lint und Build an diesem Kartenstand grün; anschließend die passende neue Browserassertion ergänzt und syntaxgeprüft. Tatsächliche aktuelle Karten-/Rückweg-/native-/Offlineabnahme, Basisabgleich mit vorherigen Auslieferungen und gesamte Pflichtabnahme bleiben offen. Frühere Bauwerks- und native Offlinebelege bleiben ihren vorherigen Builds zugeordnet.
+
+Der getrennte Erfindungskandidat2db3961 wird während seiner vollständigen Prüfung nicht verändert. Kein neuer Release-PR oder Paketabschluss; bestehende WK053–057/Paket3.5 und einzige Aufgabenliste weiter maßgeblich.
+
+## Historischer Stand vor dem gezielten Kartenabgleich · Original erhalten
+
 ## Acht erhaltene Bauwerksoriginale getrennt vorbereitet ·23.10.2026
 
 Auf dem gesicherten Sechser-Erfindungsstand475e4cb acht vorhandene Mastermanuskripte selektiv integriert: Pont du Gard, Groß-Simbabwe, Hōryū-ji, Djenné, Lalibela, Angkor Wat, Palenque und Sydney.156vorherige Themen/186Aufgaben/alle sieben Weltspielbanken erhalten,14erklärte beidseitige Verbindungen und15plausiblere Fehlantworten ergänzt; alle acht richtigen Originalantworten samt Indizes unverändert. Neue Zählung164ist nur der lokale Integrationsumfang, kein Paketabschluss oder ausgelieferter Stand.
