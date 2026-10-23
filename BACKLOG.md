@@ -1,3 +1,17 @@
+## Erhaltene Wissenschaftsoriginale gezielt vorbereitet ·23.10.2026
+
+Nach Abgleich mit dem tatsächlichen164-Themen-Vorstand und Masterd97dddab die23 noch fehlenden Wissenschaftsoriginale selektiv weitergeführt: zehn erhaltene interaktive Zahlen-/Beobachtungsmodelle und13eigene Diagramme. Die bisherigen23Wissenschaftsthemen und alle übrigen alten Fachfelder bleiben erhalten;28begründete Verbindungen mit passenden Rückwegen und28plausiblere Fehlantworten ergänzt.29tatsächlich gelesene Quellenpassagen und Modellgrenzen im vorhandenen Nachweismuster belegt. Das rekonstruiert keine unbekannten privaten historischen Fassungen oder alten Prüfbelege.
+
+Vor dem langen Volltest tatsächliche Texte, Hinweise, beide Fehlrückmeldungen, richtige Rückmeldung und Medien gemeinsam geprüft:46Ansichten bei320groß/1440 sowie46bei echtem200%/640/320CSS. Ein tatsächlich neben die kleinste Kontaktfläche zeigender Kraftpfeil ist zentriert und an die Fläche angeschlossen; derselbe permanente Prüfschritt verwirft die ursprüngliche Fehlzeichnung und akzeptiert die Wiederherstellung. Beim Auftrieb tatsächliche3LiterVerdrängung/29,43Newton im schwimmenden Gleichgewicht vom höheren Vollverdrängungsmaximum unterschieden. Ein Fraktalverdacht wurde am echten Produkt verworfen: Die tatsächliche Zeichnung verwendet den sicheren166-Startwert. Anschließend je20normale/native Modellansichten mit94quellenbasierten Zuständen einschließlich Hebelarmen, Pendel, Winkeln und Dämpfung geprüft. Exakte verschiedene Originalstände/Fehlversuche und Grenzen in content/science-originals-review.json; kein Teilnachweis als Vollabnahme ausgegeben.
+
+Geeignete echte Fotos bleiben bevorzugt. Vorhandene Tierpipeline zuerst geprüft; genauer NASA-Hartley2-Fotokandidat, Kredit und Nutzungsregeln gelesen, gewöhnlicher Bilddateizugriff jedoch403. Deshalb korrekt gekennzeichnete eigene Zeichnungen/Funktionsmodelle erhalten, keine Foto- oder endgültige Bildqualitätsfreigabe behauptet. Keine Wikimediarecherche, Freigabeanfrage oder Reparaturversuche; historische Quellenbelege erhalten.
+
+201Units, Typprüfung, Lint und Build des vorbereiteten Stands grün.187Themen/217Fragen sind Integrationszahlen, kein Paketabschluss. Bestehende Altbestandstests behalten alle Originalhashes und prüfen die genau benannten Erweiterungen zusätzlich. Persönliche Passdaten/Schema3 unverändert. Die drei Lesetiefen sind noch keine drei gesonderten bewerteten Denkpfade; integrierte Lernqualität und vollständige Browser-/Offline-/CI-Abnahme bleiben im bestehendenWK053–057 offen.
+
+Getrennter vorbereiteter Folgestand aufded1fb5: tatsächliche PR58-Auslieferung und danach der Bauwerksabschnitt bleiben vorrangig; vor jeder Schlussabnahme kontrolliert auf deren tatsächliche Basen abgleichen. PR58/af032b1/Quality154 läuft unverändert weiter, kein zweiter Release-PR oder Workflow-/Timeoutumbau. Die bestehenden56UI-Akten bewusst noch ungebunden; keine falsche vollständige Integritäts-/Veröffentlichungsfreigabe.
+
+## Historischer Stand vor der getrennten Wissenschaftsvorbereitung · Original erhalten
+
 ## Quellenbasiertes Soll für Lalibela genauer eingeordnet ·23.10.2026
 
 Maßgeblich bleibt die dauerhafte [Nutzerpräzisierung23.10.](content/auftrag-2026-10-13/WunderKompass_Praezisierung_2026-10-23.md): Alle Produktteile bleiben begründet verbesserbar, persönliche Daten/Fortsetzung und sämtliche Schutz-/Freigabegrenzen geschützt.
