@@ -241,7 +241,20 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
     }),true,'detail count stays with its label, without an orphan line '+entry.id);
    }
    await homeTextGeometry(p);await homeTouchTargets(p);
-   for(const id of ['first-visit-home','science-articles','site-v14','site-v12','site-v8','site-v1'])await p.locator('.updates-timeline>li[data-update-id="'+id+'"]').screenshot({path:shots+'/updates-details-'+id+'-'+width+'.png',animations:'disabled'});
+   for(const id of ['first-visit-home','science-articles','site-v14','site-v12','site-v8','site-v1']){
+    const item=p.locator('.updates-timeline>li[data-update-id="'+id+'"]');
+    console.log('CHRONICLE_CAPTURE_START',JSON.stringify({width,id}));
+    try{await item.screenshot({path:shots+'/updates-details-'+id+'-'+width+'.png',animations:'disabled'});}
+    catch(error){
+     // Preserve the failed assertion and its original timeout. Diagnose the
+     // actual failing width/entry without retrying or replacing its capture.
+     const diagnostic=await item.evaluate(el=>{const r=el.getBoundingClientRect();return {rect:{x:r.x,y:r.y,width:r.width,height:r.height},scrollY,viewport:{width:innerWidth,height:innerHeight},documentHeight:document.documentElement.scrollHeight,visibility:document.visibilityState,open:el.querySelector('details')?.open};}).catch(e=>({diagnosticError:e.message}));
+     report.chronicleCaptureFailure={width,id,...diagnostic};console.log('CHRONICLE_CAPTURE_FAILURE',JSON.stringify(report.chronicleCaptureFailure));
+     await p.screenshot({path:shots+'/updates-details-failure-'+id+'-'+width+'.png',animations:'disabled'}).catch(e=>console.log('CHRONICLE_DIAGNOSTIC_CAPTURE_FAILURE',e.message));
+     throw error;
+    }
+    console.log('CHRONICLE_CAPTURE_DONE',JSON.stringify({width,id}));
+   }
    assert.deepEqual(await readProgress(),before,'reading all historical changes and benefits leaves learning progress untouched');
    await p.screenshot({path:shots+'/updates-all-details-'+width+'-full.png',fullPage:true,animations:'disabled'});
    await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
