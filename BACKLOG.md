@@ -1,3 +1,13 @@
+## Quellenbasiertes Soll für Lalibela genauer eingeordnet ·23.10.2026
+
+Maßgeblich bleibt die dauerhafte [Nutzerpräzisierung23.10.](content/auftrag-2026-10-13/WunderKompass_Praezisierung_2026-10-23.md): Alle Produktteile bleiben begründet verbesserbar, persönliche Daten/Fortsetzung und sämtliche Schutz-/Freigabegrenzen geschützt.
+
+Zusätzlich tatsächlich gelesenen UNESCO-Beschluss47 COM7B.155 von2025 ausgewertet: weitere Untersuchungen des historischen Wassersystems, Monitoring und Beteiligung der örtlichen Gemeinde. Optionalen Text, gegenwärtige Quellenhinweise und zusätzliche Quelle bei der vorbereiteten Lalibela-Karte präzisiert. Eine einfache eigene Abflussskizze ersetzt keine Untersuchung des echten Bauwerks. Historische WMF-Referenz und sämtliche Originale erhalten; die neu zugängliche UNESCO-Entscheidung statt einer angeblichen vollständigen aktuellen WMF-Lektüre belegt die ergänzte Aussage. Keine Modellgeometrie, richtige Antwort oder persönliche Speicherstruktur geändert.
+
+Vor langem Volltest den betroffenen aktuellen Text mit allen drei Modellzuständen, Hinweisen/Antworten, Quellen und Rückwegen tatsächlich geprüft: drei normale Ansichten320groß/390/1440 und zwei native200%/640/320 am Build22511bf5c1e09a60. Genau gehashte Originalnachweise im vorhandenen Dossier; frühere Kartenfamilienbelege bleiben ihrem9da-Stand zugeordnet. Acht einzelne Fachdossiers nur privat vorbereitet, UI-Felder weiterhin ungebunden; vollständige Abnahme nach tatsächlichem PR58-Basisabgleich offen. PR58/02e287c/Quality153 unverändert weiterlaufen lassen.
+
+## Historischer Stand vor dieser präziseren Quellenabgrenzung · Original erhalten
+
 ## Karten und betroffene Mitverwendungen aktuell gezielt geprüft ·23.10.2026
 
 Am Appbuild9da43330db4bd947 die acht neuen Ortskarten sowie drei betroffene alte Gruppen-/Einzelkarten an320groß/1440 und echtem200%/640/320 geprüft: je22Ansichten, sämtliche Ortslisten-/Weltkugel-/Rückwege, darunter alle sieben individuellen alten Ziele bei Bertha Benz, Einstein und Computer. Unzugehörige Kontinentnummern entfernt, eigene Master-Hintergrundkarte und Gruppierung weiterverwendet. Aktuell vier ursprüngliche Dateien unverändert; die erhaltene CSS-Vorlage um gezielte lesbare Ortslisten ergänzt. Tatsächliche ursprüngliche14px-Schrift normal zu16px korrigiert, große Schrift18,4px erhalten. Falscher wirklich geladener Hintergrund und tatsächliche14px-Schrift absichtlich erzeugt, im vorhandenen Helfer verworfen und korrekten Zustand wiederhergestellt. Aufnahmen vor/nach/mit negativen Zuständen erhalten und relevante Bilder angesehen; keine Ursache aus bloßem Grün behauptet.

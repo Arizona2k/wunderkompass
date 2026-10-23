@@ -151,7 +151,7 @@
     {
       "id": "building-lalibela",
       "originalManuscriptSHA256": "91128ad32cc4b25bfd3fd6cdcd34e4ea56bc82cfdefb372084feda333d3508c3",
-      "currentContentSHA256": "e7bb838424c875674bc96fb98fc6c68c4dc7ccbe0916fb15a83bd3c7e0457af8",
+      "currentContentSHA256": "a89b401f148cd832b12a41a6b7160f7d5d11f08fe10e1557109d81fdf21d6db8",
       "originalRelated": [
         "invention-3d-printing",
         "science-water-cycle"
@@ -167,6 +167,11 @@
           "url": "https://whc.unesco.org/en/list/18/",
           "anchor": "53–58",
           "finding": "Elf aus anstehendem Fels gearbeitete Kirchen, Durchgänge und Entwässerung. Die UNESCO-Abschnitte65–80 beschreiben Wasserschäden und Erhaltung; keine aktuelle WMF-Volltextsicht behauptet."
+        },
+        {
+          "url": "https://whc.unesco.org/en/decisions/8880",
+          "anchor": "47 COM 7B.155,2025,§3,5,7,10; actual page lines84–94",
+          "finding": "Der Beschluss fordert Untersuchungen des historischen Wassersystems und weiteres Monitoring; er bezieht die örtliche Gemeinde in Erhaltung und Pflege ein. Kein Beleg, dass die eigene Skizze einen vermessenen historischen Wasserweg oder einen sicheren Schutzplan abbildet."
         }
       ],
       "goal": "Du unterscheidest Material und Hohlraum und erkennst, dass nicht jedes Bauwerk auf dieselbe Weise entsteht.",
@@ -654,6 +659,125 @@
       {
         "report": ".qa-output/buildings-affected-compact-context/report.json",
         "cause": "Private fixture guessed wrong visit-button name. Replaced with actual exact Auf der Weltkugel finden label, all product assertions retained."
+      }
+    ]
+  },
+  "additionalLalibelaCountercheck20261023": {
+    "checkedSource": "https://whc.unesco.org/en/decisions/8880",
+    "reading": "Actual full decision text read;2025 year at page126,hydrological investigation84,community86,monitoring88,required studies92–94. Same UNESCO institution as original description, a distinct conservation document; no independent-institution claim.",
+    "productBenefit": "The optional explanation distinguishes an illustrative drainage route from site-specific current conservation investigation. New dated source and precise model limit; original main explanation/question/answer index/learning IDs unchanged.",
+    "priorSourcePreserved": "Historical World Monuments Fund link retained; current parser exposes footer only. New current source note uses actually accessible UNESCO evidence instead of claiming the unavailable WMF text was newly read.",
+    "accessLimits": "Old ICOMOS018 PDF ordinary read403;CNRS direct page502;WMF footer-only. No permission repair, new photo, or Wikimedia work. Search snippets are not cited as full-page reads.",
+    "beforeContent": {
+      "id": "building-lalibela",
+      "title": "Lalibela – Räume aus dem Fels",
+      "intro": "Kann ein Gebäude entstehen, indem Menschen Material wegnehmen statt es aufzustapeln?",
+      "aliases": [
+        "Felskirchen von Lalibela",
+        "Lalibela"
+      ],
+      "locations": [
+        {
+          "label": "Lalibela in Äthiopien · ungefährer Kartenpunkt",
+          "lat": 12.032,
+          "lon": 39.047,
+          "iso": "ETH"
+        }
+      ],
+      "paragraphs": [
+        "In Lalibela wurden mittelalterliche Kirchen aus anstehendem Fels herausgearbeitet. Manche stehen in tiefen ausgehauenen Höfen. Türen, Räume und Stützen entstanden nicht einfach durch das Stapeln fertig angelieferter Steinblöcke.",
+        "Die Anlage umfasst elf Kirchen und Verbindungswege. Gräben dienen auch der Entwässerung. Wasser kann Gestein und Bauwerk schädigen; die erhaltenen Formen brauchen deshalb weiter Schutz und Pflege. Die Kirchen bleiben religiös genutzte Orte."
+      ],
+      "facts": [
+        {
+          "label": "Zeit einordnen",
+          "text": "Mittelalterlicher Ausbau, besonders 12.–13. Jahrhundert; nicht alle Einzelschritte besitzen ein gesichertes Jahresdatum."
+        },
+        {
+          "label": "Bauprinzip",
+          "text": "Fels wurde abgetragen, um Baukörper, Freiräume und Zugänge herauszuarbeiten."
+        }
+      ],
+      "more": [
+        "Beim Lesen der Skizze musst du festes Material und ausgeräumten Raum unterscheiden. Eine dunkle Form kann den Fels darstellen, eine helle Aussparung einen Zugang. Frage deshalb zuerst nach der Legende.",
+        "Entwässerung gehört zur Erhaltung des Ganzen. Ein gezeichneter Graben zeigt nur einen möglichen Wasserweg; er beweist weder die richtige Ausführung eines historischen Grabens noch die Stabilität des verbleibenden Felsens."
+      ],
+      "surprise": "Ein Raum kann durch Wegnehmen entstehen; übrig gebliebenes Material bildet dann Wände und Dach.",
+      "learning": {
+        "starter": "Hier arbeiteten Menschen Räume aus dem Fels heraus. Sie bauten nicht nur Stein auf Stein.",
+        "observe": "Zeichne einen dunklen Felsblock auf Papier. Markiere mit einer zweiten Farbe, welche Bereiche für einen freien Zugang weggenommen würden und welche als Baukörper bleiben. Kein Steinbearbeiten, Graben oder Höhlenbetreten ausprobieren.",
+        "benefit": "Du unterscheidest Material und Hohlraum und erkennst, dass nicht jedes Bauwerk auf dieselbe Weise entsteht."
+      },
+      "question": {
+        "prompt": "Was unterscheidet die Felskirchen von einem Haus aus aufeinandergelegten Blöcken?",
+        "answers": [
+          "Räume und Formen wurden aus dem vorhandenen Fels herausgearbeitet.",
+          "Fertige Steinblöcke wurden zuerst aufeinandergestapelt und danach ausgehöhlt.",
+          "Die Formen waren natürliche Höhlen; beim Bau wurde der Fels kaum verändert."
+        ],
+        "correct": 0,
+        "why": "Der vorhandene Fels wurde gezielt abgetragen. Verbleibender Baukörper und ausgehauene Freiräume gehören zusammen; ihre wirkliche Stabilität muss fachkundig geprüft werden."
+      },
+      "questionFeedback": {
+        "hint": "Achte darauf, ob Material hinzugefügt oder an bestimmten Stellen entfernt wird.",
+        "wrongReasons": [
+          null,
+          "Das verwechselt gemauerten Aufbau mit dem beschriebenen Herausarbeiten aus anstehendem Fels. Verbleibendes Material bildet den Baukörper.",
+          "Die Quellen beschreiben gezieltes Herausarbeiten von Türen, Räumen und Stützen. Natürliche Hohlräume allein erklären diese Bauformen nicht."
+        ]
+      },
+      "building": {
+        "date": "Mittelalterlicher Ausbau, besonders 12.–13. Jahrhundert",
+        "size": "Elf Kirchen mit Höfen, Gräben und Verbindungswegen; keine maßstäbliche Gesamtanlage im Modell.",
+        "exploration": {
+          "kind": "rock-cut",
+          "steps": [
+            "Unterscheide vorhandenen Fels und markierten freien Raum.",
+            "Das Herausschlagen von Material legt Räume und Baukörper frei. Verbleibendes Material bildet die Struktur.",
+            "Ein Zugang und ein Entwässerungsweg haben unterschiedliche Aufgaben. Beide gehören zum Verständnis der Anlage."
+          ],
+          "note": "Eigene schematische Material-/Raumskizze; keine Rekonstruktion der genauen Baufolge und keine Grabungsanleitung."
+        }
+      },
+      "category": "buildings",
+      "sources": [
+        {
+          "label": "UNESCO · Felsenkirchen, Zugänge und Entwässerung",
+          "url": "https://whc.unesco.org/en/list/18/"
+        },
+        {
+          "label": "World Monuments Fund · Erhaltung und örtliches Handwerk",
+          "url": "https://www.wmf.org/projects/rock-hewn-churches"
+        }
+      ],
+      "related": [
+        "invention-3d-printing",
+        "science-water-cycle"
+      ],
+      "links": [],
+      "revision": 1,
+      "checkedAt": "2026-10-23",
+      "sourceNote": "Eigene Erklärung und Zeichnung mit KI-Unterstützung. UNESCO beschreibt aus dem Fels gearbeitete Kirchen, Zugänge und Entwässerungswege. Der World Monuments Fund berichtet über Erhaltung und die Ausbildung örtlicher Fachleute. Die Skizze rekonstruiert keine genaue Baufolge."
+    },
+    "acceptance": "Current actual complete affected Lalibela texts/three model states/hints/answers/source links/knowledge return at320large/390/1440 plus native200%640/320 passed at22511bf5c1e09a60. Prior map-family proofs remain exactly at9da; complete mandatory post-PR58 integration acceptance still open. No accepted UI-registry mutation.",
+    "targetedProductProofs": [
+      {
+        "report": ".qa-output/lalibela-source-current/report.json",
+        "reportSHA256": "9e86b0c0949cd78693a787b56e9dc8e1735329316d409a1f236302be5d468807",
+        "build": "22511bf5c1e09a60",
+        "sourceDigest": "6644eb8f9154c641d66b7ac948f6003079dc10d23c08b776700d0ad140ffb9f6",
+        "native": false,
+        "views": 3,
+        "scope": "Targeted actual Lalibela dated source explanation, all current text/hints/answers, three model states, map and knowledge back links; existing map-family proofs remain separate"
+      },
+      {
+        "report": ".qa-output/lalibela-source-current-native/report.json",
+        "reportSHA256": "2a1394175278fb1627d7d290df2a6a87f072ad1470c8ded6e238e38a4f036a1d",
+        "build": "22511bf5c1e09a60",
+        "sourceDigest": "6644eb8f9154c641d66b7ac948f6003079dc10d23c08b776700d0ad140ffb9f6",
+        "native": true,
+        "views": 2,
+        "scope": "Targeted actual Lalibela dated source explanation, all current text/hints/answers, three model states, map and knowledge back links; existing map-family proofs remain separate"
       }
     ]
   }
