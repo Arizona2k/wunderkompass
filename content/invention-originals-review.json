@@ -406,7 +406,7 @@
       "reportSHA256": "8af611e30f3ed21aaacbbfbe11c135fe1e7ecd1a0671c5a6619dd4b10c71f499"
     }
   },
-  "fullAcceptance": "Current photo-card Back correction awaiting immutable complete local acceptance and exact complete CI. Earlier2db/e0 acceptances retain their actual builds and scopes;65old UIbindings deliberately unchanged until current complete success.",
+  "fullAcceptance": "Original immutable a07 complete local acceptance retained at its actual source. Page activation optimisation subsequently proved in isolated before/after controls; new exact complete local/three-engine CI and deployment remain pending.65UIbindings still retained at priorbc3 build until current full success.",
   "standards": {
     "unitCases": 191,
     "typecheck": true,
@@ -633,7 +633,7 @@
         "scope": "All four prior pending keyboard/pointer and eight wayfinder-focus controls retained"
       }
     ],
-    "fullAcceptance": "Open; original65UIbindings unchanged pending current full success."
+    "fullAcceptance": "Original a07 complete local acceptance naturally passed and retained before page-activation checker optimisation. All photo originals/targeted fault evidence retain their actual scopes; current final checker full/CI/delivery pending."
   },
   "earlyPhotoBackPrecondition": {
     "change": "Existing animalNavigation now invokes the same eight ordinary photo-card Back cases before its long48animal search. Existing search-only actual-engine stage therefore detects this failure before complete Chromium/animal/journey/offline runs. Later complete49photo checks and all original assertions remain.",
@@ -658,5 +658,223 @@
     "quality153Attempt1": "About1:41setup,4:56early precondition,18:25Chromium,29:55Firefox/WebKit and seconds for final evidence. Every product/context step passed but complete job cancelled at55minutes. Extra24mechanics offline views per additional engine plus observed slowdown even in unchanged search; hardware/CPU cause not proved.",
     "quality154": "1:49setup,4:50early,18:17Chromium; additional-engine phase failed after22:09 before completing WebKit.47:11failed job is not a successful-run speedup.",
     "localMechanicsProbe": "Unchanged current12normal mechanics views:5.2678+5.6610seconds wall, .88166+.986045seconds browserScriptDuration. Bounded local diagnostic, not hosted-runner causality or a benchmark improvement."
+  },
+  "runtimeForegroundOptimization20261023": {
+    "scope": "Existing actual animal-workshop helper activates its page before real keyboard/pointer work. All old assertions, cases, waits, input checks, content, geometry, sources, feedback and mandatory engines retained. No force clicks, new timeout, hard performance gate, workflow worker or pipeline.",
+    "comparison": "Identical private isolated cold-offline probe, four fresh copies of the same warmed profile, same built app/dependencies/Chromium; two complete original animal workshops per mode. Probe code byte-identical except separate output directory; only helper difference is page.bringToFront plus comments.",
+    "original": {
+      "sha256": "436f62fb3211a130772ac44a66d31932602a3b7fcea2664d35fafcb64598199f",
+      "sourceDigest": "058d3d982254a4412d1f4a9a3c7bf4da360349d41dd7b8aeaa766937337b4b3f",
+      "build": "0ed7c26168b026e4",
+      "browser": "154.0.8037.57",
+      "cases": [
+        {
+          "mode": "ordinary-first-page",
+          "seconds": 2.1090538099999994,
+          "completedAnimalWorkshops": 2,
+          "initial": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "actual": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "frame": {
+            "times": [
+              461.9,
+              478.6,
+              495.2,
+              845.2,
+              878.6,
+              895.2
+            ],
+            "seconds": 0.4333000000000001
+          }
+        },
+        {
+          "mode": "explicit-foreground",
+          "seconds": 2.184261649000001,
+          "completedAnimalWorkshops": 2,
+          "initial": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "actual": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "frame": {
+            "times": [
+              419.5,
+              436.1,
+              452.7,
+              469.4,
+              486.1,
+              502.8
+            ],
+            "seconds": 0.08330000000000001
+          }
+        },
+        {
+          "mode": "controlled-background",
+          "seconds": 44.311235947,
+          "completedAnimalWorkshops": 2,
+          "initial": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "actual": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "frame": {
+            "times": [
+              930.6,
+              947.3,
+              964,
+              980.7,
+              997.3,
+              1014
+            ],
+            "seconds": 0.08339999999999997
+          }
+        },
+        {
+          "mode": "controlled-background-then-foreground",
+          "seconds": 2.0392650490000013,
+          "completedAnimalWorkshops": 2,
+          "initial": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "actual": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "frame": {
+            "times": [
+              500.6,
+              517.3,
+              850.6,
+              900.6,
+              917.2,
+              933.9
+            ],
+            "seconds": 0.43329999999999996
+          }
+        }
+      ]
+    },
+    "corrected": {
+      "sha256": "1beaeca348a40d195c9ebe3da62466c580c1788c14e504924e12e4731f07c4d2",
+      "sourceDigest": "edb9078016bb01077c683d2055eb111916fee9f6de9bef81d3bf2f479c76aedd",
+      "build": "0ed7c26168b026e4",
+      "browser": "154.0.8037.57",
+      "cases": [
+        {
+          "mode": "ordinary-first-page",
+          "seconds": 1.6087709769999992,
+          "completedAnimalWorkshops": 2,
+          "initial": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "actual": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "frame": {
+            "limitSeconds": 4,
+            "completed": false
+          }
+        },
+        {
+          "mode": "explicit-foreground",
+          "seconds": 1.7678944519999986,
+          "completedAnimalWorkshops": 2,
+          "initial": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "actual": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "frame": {
+            "times": [
+              381.3,
+              397.9,
+              414.6,
+              431.3,
+              448,
+              464.6
+            ],
+            "seconds": 0.08330000000000001
+          }
+        },
+        {
+          "mode": "controlled-background",
+          "seconds": 2.0950941590000003,
+          "completedAnimalWorkshops": 2,
+          "initial": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "actual": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "frame": {
+            "limitSeconds": 4,
+            "completed": false
+          }
+        },
+        {
+          "mode": "controlled-background-then-foreground",
+          "seconds": 1.472505075000001,
+          "completedAnimalWorkshops": 2,
+          "initial": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "actual": {
+            "visibility": "visible",
+            "focus": true
+          },
+          "frame": {
+            "times": [
+              523.9,
+              540.6,
+              557.1,
+              573.8,
+              590.5,
+              607.2
+            ],
+            "seconds": 0.08330000000000007
+          }
+        }
+      ]
+    },
+    "measuredBenefit": "Controlled additional active page:44.311235947seconds before,2.0950941590000003seconds after explicit page activation in the unchanged exercise helper. Ordinary case2.1090538099999994 vs1.6087709769999992seconds is a small local sample, not a general speedup claim.",
+    "limits": "Original CI and original a07 cold page activation were not recorded; do not assign this as proved original hosted-runner cause. document.visibilityState=visible and document.hasFocus=true occurred even in the slow control, so these booleans alone do not prove the page activation condition. Six-frame sample does not establish a1Hz animation cause. No underlying hardware/CPU diagnosis or successful whole-CI speedup is claimed.",
+    "completeCurrentAcceptance": "Pending immutable current helper candidate; actual Chromium/Firefox/WebKit CI and delivery remain required."
+  },
+  "localPhotoCardAcceptanceBeforeRuntimeOptimization20261023": {
+    "originalTestedHead": "a07ce85b4e4d403fdfd25b409f98cc6dc115d58e",
+    "build": "0ed7c26168b026e4",
+    "sourceDigest": "058d3d982254a4412d1f4a9a3c7bf4da360349d41dd7b8aeaa766937337b4b3f",
+    "reportSHA256": "92bd850e59a7b5d99ce45836a58f20126a1302620a2b4c85877262e891167bdf",
+    "checks": 141,
+    "seconds": 1905.226759233,
+    "coldOfflineSeconds": {
+      "prepare-complete": 2.339318374000024,
+      "prepared-browser-closed": 0.08158770499995444,
+      "preview-stopped-and-refused": 0.030860377000062725,
+      "cold-context-launched": 0.43321516599995086,
+      "cold-learning-complete": 856.4807015660001,
+      "cold-browser-closed": 0.12276408799993806
+    },
+    "scope": "All ten mandatory local suites passed naturally unchanged; all16photoBack cases,49pictures/98rights views,4+8focus and30/6/24/12mechanics views. Original reports and all696curated images restored/hash-verified before checker optimisation. UI bindings deliberately not renewed before current final checker proof."
   }
 }

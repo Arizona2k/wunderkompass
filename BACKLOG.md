@@ -1,3 +1,11 @@
+## Konkrete Prüflaufzeitverbesserung · neue unveränderte Schlussabnahme offen ·23.10.2026
+
+Der vollständige unveränderte a07-Lokallauf ist tatsächlich grün: Build0ed7c26168b026e4, alle zehn Pflichtgruppen/141Meldungen in1905,23Sekunden. Originalbericht SHA25692bd850e59a7b5d99ce45836a58f20126a1302620a2b4c85877262e891167bdf. Sein kalter Offlineabschnitt dauerte856,48Sekunden statt62,85im früheren e0-Lauf. Originalberichte und alle696kuratierten Aufnahmen getrennt wiederhergestellt/gehasht;65UI-Akten bis zur aktuellen finalen Abnahme bewusst noch nicht umgebunden.
+
+Gezielter Vergleich im tatsächlich kalten Offlineprodukt mit identischen Eingaben/Abhängigkeiten und unverändertem Zwei-Tier-Prüfumfang: zusätzliche aktive Browserseite44,31Sekunden; dieselbe Situation nach ausdrücklicher Aktivierung der geprüften Seite2,10Sekunden. Deshalb aktiviert der vorhandene Tierprüfhelfer jetzt vor echten Tastatur-/Zeigerhandlungen seine Seite. Keine Assertion, Wartezeit, fachliche oder geometrische Prüfung entfernt/geändert; keine erzwungenen Klicks/neuen Budgets/Worker/Pipeline. Normale Kontrollfälle ebenfalls bestanden. Sichtbarkeit und document.hasFocus waren selbst im langsamen Fall true; diese Werte allein erklären den Zustand nicht. Keine1Hz-/CPU-Erklärung oder originale CI-Ursache aus der Probe behauptet. Exakte Originalquellen/Hashwerte/Grenzen im bestehenden Erfindungsnachweis. Neuer unveränderter vollständiger Prüflauf und tatsächliche Drei-Engine-CI weiterhin verbindlich; einmalige155/1/PR58-Zeitreserve unverändert begrenzt.
+
+## Historischer Stand vor dieser gezielten Prüflaufzeitverbesserung · Original erhalten
+
 ## Foto-Rücksprung konkret korrigiert und einmalige Zeitreserve begrenzt ·23.10.2026
 
 Quality154/af032b1 endete natürlich nach47:11min alsFehler: Chromium vollständig und Firefox beendet, WebKit im ursprünglichen20Sekunden-Rückfokus nach Foto-Kategorienklick rot; abschließendes Engine-Handoff/Kontext übersprungen. Kein55minAbbruch und kein Merge. Originalprotokoll2182392Byte/SHA256c44feba3959e730a174077f88eb254bf1ec9dea9dbe8f9a8d2e203a42e146a59/Artefakt12518398814 erhalten. Konkrete CI-Breite/Kategorie/Fokusereignisfolge war darin nicht aufgezeichnet; keine Rekonstruktion behauptet.

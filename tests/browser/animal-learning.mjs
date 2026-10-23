@@ -22,6 +22,10 @@ async function geometry(root,label){
  assert.equal(result.overflow,false,label+' page overflow');assert.deepEqual(result.bad,[],label+' readable text and44px controls');
 }
 export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='normal'}={}){
+ // A restored persistent context can retain another active page. Explicitly
+ // activate the page used for real keyboard/pointer work; do not force clicks
+ // or change any actionability, content, geometry or feedback assertion.
+ await p.bringToFront();
  await p.evaluate(id=>location.hash='world/topic/'+id,data.id);
  const root=p.locator('[data-animal-inquiry="'+data.id+'"]');await root.waitFor({state:'attached'});
  if(!await root.evaluate(e=>e.open))await root.locator(':scope > summary').click();
