@@ -1850,5 +1850,130 @@
     "repair": "Only ScienceInvestigation restores its primary slider through the existing custom-restore callback, preserving finite fractions and declared min/max/step. Existing counters, lab exceptions, earned states and global schema unchanged. Invalid truncated0 is bounded, not claimed as recovered original history.",
     "priorPass": "Actual earlier3134 synthetic UI download, SHA256fc9f27a36898a180a119fb149e1065a07dd35b2bfc65578fbab759da44768666, reimported through the real product UI; explicit replacement of superseded checksum wording; original personal/earned/game fields strictly compared; stopped-server cold restart passed in corrected report.",
     "newPermanentGuard": "Existing science-originals browser module extended to compare0.8 resonance and2.5m pendulum inputs, source-derived status/shape, saved values and all other progress before/after real reload. New guard and unaffected lab fractional controls still await their targeted product execution; no pass invented."
+  },
+  "fractionalRestoreActualProduct20261023": {
+    "meaning": "Targeted original product regression complete; previous fractional and font failures preserved. Complete final science acceptance and actual eight-building base remain pending.",
+    "reports": [
+      {
+        "build": "f844379cd05e1174",
+        "sourceDigest": "110913318c65d8e834552333f962cac8ebfdad536eb4ea63356a6acef3923b69",
+        "reportSHA256": "045554bf73cc3263a83d2b9f817874ca3148af8ef35cc73bdeab739a48bc9e14",
+        "native": false,
+        "views": [
+          {
+            "width": 320,
+            "models": [
+              {
+                "id": "science-resonance",
+                "value": 0.8,
+                "displayExplanationShapeAndStorage": true,
+                "allOtherProgressRetained": true
+              },
+              {
+                "id": "science-pendulum",
+                "value": 2.5,
+                "displayExplanationShapeAndStorage": true,
+                "allOtherProgressRetained": true
+              }
+            ]
+          },
+          {
+            "width": 1440,
+            "models": [
+              {
+                "id": "science-resonance",
+                "value": 0.8,
+                "displayExplanationShapeAndStorage": true,
+                "allOtherProgressRetained": true
+              },
+              {
+                "id": "science-pendulum",
+                "value": 2.5,
+                "displayExplanationShapeAndStorage": true,
+                "allOtherProgressRetained": true
+              }
+            ]
+          }
+        ],
+        "unaffectedLabs": [
+          {
+            "id": "lab:clocks",
+            "hour": 10.75,
+            "reload": true
+          },
+          {
+            "id": "lab:tides",
+            "hour": 6.25,
+            "delay": 1.5,
+            "drawnStateUnchanged": true,
+            "reload": true
+          }
+        ],
+        "controlledNegative": {
+          "rejected": true,
+          "guardMessage": "fractional input science-resonance\n\n0.5 !== 0.8\n",
+          "meaning": "Corresponding deliberately introduced restore truncation, not a second original historical failure"
+        }
+      },
+      {
+        "build": "f844379cd05e1174",
+        "sourceDigest": "110913318c65d8e834552333f962cac8ebfdad536eb4ea63356a6acef3923b69",
+        "reportSHA256": "f8e8c8d022be843925a915c2c2c3dae989fdf95b0c8daeeda864733768a9d539",
+        "native": true,
+        "views": [
+          {
+            "width": 640,
+            "models": [
+              {
+                "id": "science-resonance",
+                "value": 0.8,
+                "displayExplanationShapeAndStorage": true,
+                "allOtherProgressRetained": true
+              },
+              {
+                "id": "science-pendulum",
+                "value": 2.5,
+                "displayExplanationShapeAndStorage": true,
+                "allOtherProgressRetained": true
+              }
+            ]
+          },
+          {
+            "width": 320,
+            "models": [
+              {
+                "id": "science-resonance",
+                "value": 0.8,
+                "displayExplanationShapeAndStorage": true,
+                "allOtherProgressRetained": true
+              },
+              {
+                "id": "science-pendulum",
+                "value": 2.5,
+                "displayExplanationShapeAndStorage": true,
+                "allOtherProgressRetained": true
+              }
+            ]
+          }
+        ],
+        "unaffectedLabs": [],
+        "controlledNegative": null
+      }
+    ],
+    "imagesActuallyRead": [
+      "normal320large pendulum2.5m: string reaches bob centre,3.17seconds and explicit model limits",
+      "native200%320 pendulum2.5m: visible rendered graphic/status/limits",
+      "earlier native3134 cell/comet320 schema and numbered legends",
+      "earlier native8e corrected checksum-transfer/resonance-observe320 prompt/hint/feedback"
+    ],
+    "sharedCauseAudit": {
+      "affected": "Science topic primary slider restore previously took the generic non-lab integer path. Pendulum and resonance are the two fractional configurations.",
+      "unaffectedLabFields": [
+        "lab:clocks hour10.75",
+        "lab:tides tideHour6.25",
+        "lab:tides tideDelay1.5"
+      ],
+      "otherFractionalControls": "Read rate uses its own bounded settings serializer and is retained in the genuine pass comparison; dayHour is local useState, outside saved-game restoration. No blanket old-stock review."
+    }
   }
 }

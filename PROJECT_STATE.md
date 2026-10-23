@@ -1,3 +1,11 @@
+## Gezielter Nachkomma-Regressionstest jetzt tatsächlich abgeschlossen ·23.10.2026
+
+Am Buildf844379cd05e1174 dieselben permanenten Modellguards normal320/Großschrift und1440 sowie bei tatsächlichem200-Prozent-Zoom640/320 ausgeführt. Resonanz0,8 und Pendellänge2,5m behalten nach echtem Reload Eingabe, wissenschaftliche Erklärung, gezeichneten Zustand und gespeicherten Wert; sämtliche übrigen Fortschrittsfelder bleiben gleich. Entsprechender absichtlich auf Reload gekürzter Zustand wird vom selben Guard als0,5statt0,8 erkannt. Keine Wiederherstellung eines unbekannten zuvor verlorenen Bruchwerts behauptet.
+
+Ursachengemeinschaft gezielt geprüft: Uhr10,75 und Gezeiten-Modellzeit6,25/Versatz1,5 bleiben über tatsächliches Neuladen erhalten, einschließlich gezeichnetem Gezeitenzustand. Die übrigen beiden Bruchregler verwenden separaten Einstellungsspeicher beziehungsweise lokalen Zustand. Keine Änderung am globalen Spielzähler, Schema oder verdienten Fortschritt. Repräsentative native Zell-/Kometenschemata, die präzisierten Prüfsummen-/Resonanzaufgaben und das wiederhergestellte Pendel tatsächlich gelesen. Alle Originalfehler und vorherigen Nachweise bleiben ihrem Stand zugeordnet.
+
+Weiterhin unabhängige Vorbereitung ohne Ready-PR: tatsächlich gelieferte PR58-/Bauwerksbasis und aktuelle Dossierbindung sowie die vollständige Wissenschaftsschlussabnahme fehlen noch. Der beauftragte Durchlauf setzt zuerst den bestehenden Bauwerksabschnitt fort.
+
 ## Wissenschaftsvorbereitung: echte Aufgabenprüfung und gezielte Speicherreparatur ·23.10.2026
 
 WK053–057 bleibt einziger Umfang. Alle69neuen freiwilligen Denkaufgaben wurden im tatsächlichen Produkt einschließlich Hinweisen, zwei konkreten Fehlfeedbacks und richtigem Feedback geprüft: je46Ansichten/138Aufgabenfälle normal und bei echtem200-Prozent-Zoom am Build3134c860cab51d9d. Alle69mobilen Aufgabengrafiken wurden tatsächlich gelesen. Zwei ursprüngliche Schriftfehler bleiben als rote Originalbelege erhalten; die Korrektur betrifft ausschließlich die neue Denkaufgabensektion. Keine empirische Lernwirksamkeit oder Menschenprüfung behauptet.
