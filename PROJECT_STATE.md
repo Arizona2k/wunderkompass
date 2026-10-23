@@ -1,3 +1,11 @@
+## Betroffener Altbestand vor der Schlussprüfung korrigiert ·23.10.2026
+
+Der neue Aufzug-Rückweg führte zu einer tatsächlich angeschnittenen Lastweg-Beschriftung im alten Eiffelturmmodell: SVG-Textende302,09 bei viewBox-Ende300. Vorhandene Masterlösung als umbrechbare HTML-Erklärung selektiv übernommen und mit normaler16px-Textgröße erhalten. Alle sechs gemeinsam betroffenen Bauwerksmodelle bei echtem200%/320CSS/großerSchrift samt18Modellzuständen und gespeicherter Auswahl nach Reload geprüft; Eiffelturm zusätzlich bei320/390/1440normal. Tatsächliche Bilder angesehen, Geometrie/Modellschlüssel/Daten/CSS unverändert. Permanente Prüfung im bestehenden realen Rückweghelfer ergänzt.191Units/Typ/Lint/Build grün. Einzelhashes und genaue frühere/neue Prüfstände in content/invention-originals-review.json; keine neue vollständige Abnahme oder Freigabe behauptet.
+
+Die sechs Erfindungsoriginale bleiben auf getrenntem Folgestand. PR57/f369b3a/Quality151 läuft unverändert weiter und bleibt vor dessen Basisabgleich/Schlussabnahme vorrangig. Quellen-/Bilderentscheidung und offene WK053–057/Paket3.5 im bestehenden Bestand erhalten; kein zweiter Release-PR, kein neuer Aufgabenbestand.
+
+## Historischer Stand vor dieser engen Altbestandskorrektur · Original erhalten
+
 ## Erhaltungsabgleich WK054 und gezielter nativer Offlinebeleg ·23.10.2026
 
 Zusätzlich konkret im bereits erreichbaren Masterd97dddab erhalten: app/book-content.json mit180Wörtern/60Warum-Fragen und je180/60Lernteilen, app/nature-content.json mit68Naturerklärungen sowie die zugehörigen Warum-Lernteile. Alle90bisherigen Wortidentitäten und30bisherigen Frageidentitäten sind enthalten;34bisherige Naturidentitäten passen in die68Facherklärungen. Die sechs alten Tierprojektionen sind ein eigener Bestand und werden nicht zusätzlich als neue Tierarten oder Naturerklärungen gezählt. Alle drei genauen Originaldateien aus einer getrennt wiederhergestellten Quellsicherung gelesen und byteweise mit den Gitfassungen verglichen. Hashes/Umfang in content/invention-originals-review.json. Damit sind diese benannten öffentlichen Originalfassungen vollständig erreichbar; ihre aktuelle Integration/Fachabnahme und unbekannte frühere private Deltas sind dadurch nicht bewiesen. Vor WK054-Ausbau diese Originale mit dem tatsächlich ausgelieferten Stand abgleichen.

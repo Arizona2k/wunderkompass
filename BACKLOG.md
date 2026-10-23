@@ -1,3 +1,11 @@
+## Betroffener Altbestand vor der Schlussprüfung korrigiert ·23.10.2026
+
+Der neue Aufzug-Rückweg führte zu einer tatsächlich angeschnittenen Lastweg-Beschriftung im alten Eiffelturmmodell: SVG-Textende302,09 bei viewBox-Ende300. Vorhandene Masterlösung als umbrechbare HTML-Erklärung selektiv übernommen und mit normaler16px-Textgröße erhalten. Alle sechs gemeinsam betroffenen Bauwerksmodelle bei echtem200%/320CSS/großerSchrift samt18Modellzuständen und gespeicherter Auswahl nach Reload geprüft; Eiffelturm zusätzlich bei320/390/1440normal. Tatsächliche Bilder angesehen, Geometrie/Modellschlüssel/Daten/CSS unverändert. Permanente Prüfung im bestehenden realen Rückweghelfer ergänzt.191Units/Typ/Lint/Build grün. Einzelhashes und genaue frühere/neue Prüfstände in content/invention-originals-review.json; keine neue vollständige Abnahme oder Freigabe behauptet.
+
+Die sechs Erfindungsoriginale bleiben auf getrenntem Folgestand. PR57/f369b3a/Quality151 läuft unverändert weiter und bleibt vor dessen Basisabgleich/Schlussabnahme vorrangig. Quellen-/Bilderentscheidung und offene WK053–057/Paket3.5 im bestehenden Bestand erhalten; kein zweiter Release-PR, kein neuer Aufgabenbestand.
+
+## Historischer Stand vor dieser engen Altbestandskorrektur · Original erhalten
+
 ## Bestehender WK054-Bestand konkret erhalten ·23.10.2026
 
 Im Masterd97dddab sind die bereits entwickelten180Wörter/60Warum-Fragen samt180/60Lernteilen und68Naturerklärungen als genaue Gitfassungen erhalten und aus getrennter Quellsicherung bytegleich lesbar. Alle90alten Begriffs-/30alten Frageidentitäten und34alten Naturidentitäten zugeordnet; sechs Tierprojektionen separat, keine Doppelzählung. Vor Wiederaufnahme bestehende Originale selektiv mit aktuellem Lieferstand abgleichen; WK054 bleibt hinsichtlich Integration und vollständiger Fach-/Produktabnahme offen. Neue Checkpoints beweisen keine21früheren privaten Arbeitsstände.
