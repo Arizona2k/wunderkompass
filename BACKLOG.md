@@ -1,3 +1,11 @@
+## Früher Produktcheck: Resonanz-Messzeitpunkt belegt korrigiert ·24.10.2026
+
+WK053–057: Die zusätzliche tatsächliche360-Pixel-Prüfung der23Wissenschaftsoriginale zeigte einen Fehler im neuen Prüfablauf: Eingabe0,8, Erklärung2,31 und Speicher waren bereits aktuell, die SVG-Geometrie lag vor dem nächsten Bildaufbau noch beim vorherigen Zustand. Sechs kontrollierte Gegenproben am identischen Buildf844379cd05e1174 belegen vor dem Bildaufbau54,393 beziehungsweise22,581 und danach jeweils69,338SVG-Einheiten; aus der gelesenen Schwingungsformel unabhängig erwartet69,338. Keine Behauptung einer ursprünglichen CI-Laufzeitursache.
+
+Der bestehende Nachkomma-Guard wartet vor der ersten Geometriemessung nun dieselben zwei tatsächlichen Bildaufbauframes wie der reguläre Modellzustandstest. Keine Assertion, Toleranz oder Zeitgrenze abgeschwächt, kein Warten bis zum gewünschten Ergebnis. Normal320/Großschrift und1440 sowie echter200-Prozent-Zoom640/320 erneut grün; der absichtlich beim Reload gekürzte Wert wird weiterhin erkannt. Unveränderte Uhr-/Gezeiten-Nachkommafälle bleiben grün.
+
+Zusätzlich alle23Themen mit ihren69Denkaufgaben bei360,390/Großschrift und768 im Produkt geprüft:69Ansichten/207Aufgabenfälle einschließlich Hinweisen, beiden konkreten Fehlantworten und richtigem Feedback; betroffene Modellzustände samt tatsächlichem Reload mitgeprüft. Resonanz360 und Prüfsummen-Übertragungsaufgabe768 tatsächlich angesehen. Vorherige rote Originale und frühere69Mobil-/Native-Prüfumfänge erhalten. Wissenschaft bleibt Vorbereitung ohne Ready-PR, tatsächliche58-/Bauwerksbasis und vollständige Schlussabnahme noch offen; laufender PR59-/Quality156-Kandidat unverändert.
+
 ## Belegte lokale Optimierung des bestehenden Zwei-Tab-Passtests ·23.10.2026
 
 WK052: vier vollständige unveränderte Passlebenszyklen im kontrollierten Wechsel Original/aktiviert/aktiviert/Original am selben Appbuildf844379cd05e1174 und Chromium154. Original95,916/99,713Sekunden; ausdrücklich aktivierte Eingabeseite8,821/8,854Sekunden. Sämtliche ursprünglichen Aktionen, Assertions und25-Sekunden-Grenzen bleiben erhalten; vorhandene passive UI-Propagation wird weiterhin vor dem Aktivieren des anderen Tabs geprüft. Nach Entfernen ausschließlich der sieben ergänzten Seitenaktivierungsaufrufe ist der Originalquelltext exakt wiederhergestellt. Ein Kommentar erläutert den begrenzten Zweck.

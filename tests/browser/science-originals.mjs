@@ -75,6 +75,9 @@ export async function scienceFractionalRestoreView(page){
    if(kind==='pendulum'){const seconds=(2*Math.PI*Math.sqrt(value/9.81)).toLocaleString('de-DE',{maximumFractionDigits:2});assert.equal(status,'Zeit für eine volle Schwingung: etwa '+seconds+' Sekunden.');const shape=await model.locator('svg').evaluate(svg=>({string:svg.querySelector('path').getBBox().height,bobY:svg.querySelector('circle').cy.baseVal.value}));assert.equal(shape.string,value*40);assert.equal(shape.bobY,20+value*40);}
    else{const gain=1/Math.sqrt((1-value**2)**2+(.3*value)**2);assert.ok(status.includes(gain.toLocaleString('de-DE',{maximumFractionDigits:2})));const height=await model.locator('svg path').evaluate(e=>e.getBBox().height);assert.ok(Math.abs(height-2*Math.min(55,gain*15))<4,'drawn response matches the selected frequency');}
    return {value,status,svg:await model.locator('svg').innerHTML(),state};};
+  // Read the rendered endpoint after the same two paint frames used by the
+  // ordinary model-state guard; reduced-motion CSS still has a .01ms transition.
+  await page.evaluate(()=>new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok))));
   const before=await inspect();await page.reload();await page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();await page.locator('.earth-app').evaluate((e,large)=>e.classList.toggle('large-reading',large),large);await slider.waitFor();await page.evaluate(()=>new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok))));const after=await inspect();assert.equal(after.status,before.status);assert.equal(after.svg,before.svg);for(const field of Object.keys(before.state).filter(k=>k!=='lastActivity'))assert.deepEqual(after.state[field],before.state[field],'reload retains '+field+' '+id);observed.push({id,value,displayExplanationShapeAndStorage:true,allOtherProgressRetained:true});
  }
  return observed;

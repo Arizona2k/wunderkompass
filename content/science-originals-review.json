@@ -1974,6 +1974,107 @@
         "lab:tides tideDelay1.5"
       ],
       "otherFractionalControls": "Read rate uses its own bounded settings serializer and is retained in the genuine pass comparison; dayHour is local useState, outside saved-game restoration. No blanket old-stock review."
+    },
+    "paintTimingFollowup20261024": {
+      "meaning": "Early actual360 rendering exposed a test observation taken before the SVG endpoint paint. Six controlled same-app samples distinguish the already-updated input/text/storage from the previous computed path. This is a local test timing cause, not an original CI timeout cause or a production storage recurrence.",
+      "appBuild": "f844379cd05e1174",
+      "browser": "154.0.8037.57",
+      "testedSourceDigestBeforeMetadata": "827b49b0a2e9ba1581fe1839085a0adf9ff5ccf645e66d0e36b5f3fa8d542c9a",
+      "originalFailure": {
+        "reportSHA256": "354d7a648640a63e76eca45121c9ee28d56d1b75daab247f75fe939fb8ac71c8",
+        "assertion": "drawn response matches the selected frequency",
+        "retained": true
+      },
+      "controlledCause": {
+        "reportSHA256": "12974130ccb1714a213d5b019c9fc6864809180c41dc5fb62af8b35b00e66120",
+        "samples": 6,
+        "beforeRenderedHeights": [
+          54.392822265625,
+          22.581298828125,
+          22.581298828125,
+          22.581298828125,
+          22.581298828125,
+          22.581298828125
+        ],
+        "afterRenderedHeights": [
+          69.3375244140625,
+          69.3375244140625,
+          69.3375244140625,
+          69.3375244140625,
+          69.3375244140625,
+          69.3375244140625
+        ],
+        "independentExpectedHeight": 69.33752452815365,
+        "inputAndSavedValue": 0.8,
+        "displayedGain": "2,31",
+        "computedTransitionDuration": "1e-05s"
+      },
+      "change": "Wait the same two actual requestAnimationFrame callbacks already used by the ordinary model-state guard before the first geometric observation. All original numeric, explanation, shape, state and progress assertions and tolerances retained. No timed retry or polling-until-green.",
+      "guardSHA256": "08a02db74539661964b4574beaaa0a3fbe15c593a000dba9cbf773fc2ec2544d",
+      "rechecked": {
+        "ordinaryFractional": {
+          "reportSHA256": "76fa2cccffffd78deeec690cb2645afc97b154ada6c5615932c567645508f41d",
+          "widths": [
+            320,
+            1440
+          ],
+          "truncationNegativeStillRejected": true,
+          "unchangedFractionalLabs": [
+            {
+              "id": "lab:clocks",
+              "hour": 10.75,
+              "reload": true
+            },
+            {
+              "id": "lab:tides",
+              "hour": 6.25,
+              "delay": 1.5,
+              "drawnStateUnchanged": true,
+              "reload": true
+            }
+          ]
+        },
+        "native200Fractional": {
+          "reportSHA256": "d05f90c9d7996e94a914653d476b3527434fdc87663ed3c1bf80117505b9beed",
+          "widths": [
+            640,
+            320
+          ]
+        },
+        "intermediateWidths": {
+          "reportSHA256": "8c119803e2893c371721b9ad37ff80d237e72e65cf3d291111659c6edc1456f5",
+          "widths": [
+            360,
+            390,
+            768
+          ],
+          "largeTextWidth": 390,
+          "actualViews": 69,
+          "allCanonicalQuestionsAndSpecificWrongFeedback": true,
+          "voluntaryTaskCases": 207,
+          "modelStates": 141,
+          "fractionalReloadProofs": 6,
+          "timings": [
+            {
+              "width": 360,
+              "large": false,
+              "seconds": 38.905118406
+            },
+            {
+              "width": 390,
+              "large": true,
+              "seconds": 43.73404543699999
+            },
+            {
+              "width": 768,
+              "large": false,
+              "seconds": 44.15883564400001
+            }
+          ]
+        }
+      },
+      "actualImageReview": "Read actual360 final resonance input0.8, curve and displayed2.31 plus model limit, and768 checksum transfer prompt/hint/allanswers/correctfeedback. Earlier complete69mobile and native targeted image review retains its original scope.",
+      "limits": "Actual local Chromium; no new Firefox/WebKit/full acceptance, CI-time reduction, future-context availability or historical21 recovery claimed. Existing image sources, canonical answers and earned progress unchanged."
     }
   },
   "localBackupTabActivationMeasurement": {
