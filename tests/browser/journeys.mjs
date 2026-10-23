@@ -64,6 +64,9 @@ export async function assertLandscapeClimateDiagram(visual,id,selected){
  if(id==='landscapes:2'){
   assert.match(await visual.locator('[data-lake-optional-outflow]').getAttribute('stroke-dasharray'),/\d/,'optional outlet is visibly distinct from the inlet');
   assert.equal(await visual.locator('[data-lake-inflow]').getAttribute('stroke-dasharray'),null);
+  const outlet=await visual.locator('svg').evaluate(svg=>{const water=svg.querySelector('[data-lake-water]'),flow=svg.querySelector('[data-lake-optional-outflow]'),surface=water.getPointAtLength(0),start=flow.getPointAtLength(0),end=flow.getPointAtLength(flow.getTotalLength()),box=water.getBBox();return {surfaceY:surface.y,startX:start.x,startY:start.y,endX:end.x,endY:end.y,waterLeft:box.x,waterRight:box.x+box.width};});
+  assert.ok(outlet.startX>=outlet.waterLeft&&outlet.startX<=outlet.waterRight&&Math.abs(outlet.startY-outlet.surfaceY)<.01,'possible surface outlet starts at the actual drawn lake surface');
+  assert.ok(outlet.endX>outlet.startX&&outlet.endY>=outlet.startY,'unpowered lake outlet never climbs uphill in the drawn cross-section');
   const water=await visual.locator('[data-lake-water]').evaluate(e=>{const b=e.getBBox();return {width:b.width,height:b.height};});assert.ok(water.width>water.height&&water.height>0,'water occupies a basin rather than a flat ocean strip');
  }
  if(id==='landscapes:3'){

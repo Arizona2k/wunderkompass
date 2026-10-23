@@ -1,3 +1,9 @@
+## Aktuelle visuelle Nachkorrektur des Seemodells ·23.10.2026
+
+Das ursprüngliche rekonstruierte Seebild zeigte einen möglichen Abfluss vom Wasserspiegel bergauf. Diesen tatsächlichen Darstellungsfehler vor Freigabe korrigiert: Wasserfüllung folgt exakt dem gezeichneten Becken; der Ausfluss beginnt auf der Oberfläche und steigt nicht an. Vorhandene Beschriftungen, Quellen, Auswahlzustände und Modellgrenzen erhalten. Neue Prüfung misst die tatsächlichen SVG-Punkte; ein absichtlich eingesetzter Bergaufpfad muss scheitern. Keine bloße Stringprüfung des neuen Pfads.
+
+Alle acht Desktop- und aktuellen320groß-Grafiken kritisch durch KI gegengesichtet. Am Build8ab431cb1c10162930Kapitelansichten/60Modellzustände/56alteAntwortzustände erfolgreich; zusätzlich16Ansichten/40Zustände aller acht Modelle mit gemessenem nativem200%-Zoom,640/320CSS-Pixel und großer Appschrift. Negative Richtungsprobe erfolgreich abgewiesen. Endgültige vollständige Offline-/Browser-/CI-Abnahme weiterhin erforderlich; vorherige fehlgeschlagene beziehungsweise abgebrochene Originale behalten ihre tatsächliche Einordnung in PROJECT_STATE.
+
 ## Landschaft/Klima · kontrollierte Integration und KI-Gegenprüfung ·23.10.2026
 
 Die drei erhaltenen Produktcommits18206bd/619fa69/47628cb wurden auf den tatsächlich ausgelieferten PR55-Merge32e3fa1 übernommen. Zehn vorhandene Originalkapitel, acht ausdrücklich rekonstruierte eigene Erklärgrafiken und zehn bessere schwere Aufgaben bleiben erhalten. Keine neuen Reisen oder Themen gezählt. Frühere50/48/56-Teilnachweise sind historische Dokumentation; ihre privaten Originalberichte waren in dieser Umgebung nicht auffindbar und werden nicht als neue Abnahme ausgegeben.
