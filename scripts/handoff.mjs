@@ -1,9 +1,13 @@
+import {nativeNavigationInput,nativeNavigationReuseComplete,validateRestoredNativeNavigation} from './native-navigation-reuse.mjs';
+import {coldReuseComplete,coldBrowserEnvironment,fileSnapshot,validateRestoredColdOffline} from './cold-offline-reuse.mjs';
+import qualityContext from './release/quality-context.cjs';
 import {animalCoverageComplete,animalNativeComplete,animalOfflineComplete,solarCoverageComplete,solarNativeComplete,solarOfflineComplete} from './article-learning-evidence.mjs';
 import {publicUpdates} from '../app/update-history.ts';
 import fs from 'node:fs/promises';import path from 'node:path';import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {learningFingerprint} from '../build/learning-fingerprint.mjs';
 import JOURNEY_DATA from '../app/journey-inquiries.json' with {type:'json'};
+import {browserErrorsComplete} from './browser-errors.mjs';
 
 export function journeySupportComplete(proof,widths){
  const hints=JOURNEY_DATA.chapters.flatMap(c=>c.tasks.map((_,level)=>c.id+':'+level));
@@ -27,7 +31,7 @@ export const nativeHistoryComplete=z=>z?.percent===200&&z.scale===2&&z.blankCapt
 export const retentionComplete=r=>['multipleTabs','partialNeverReplacesFallback','unknownLegacyProtected','orphanCleanup','stoppedServerOldChunk','canaryPreserved'].every(k=>r?.[k]===true);
 export function offlineComplete(o,kind,{native=false}={}){
  const widths=native?[640]:[320,360,390,768,1024,1440,1920];
- return o?.kind===kind&&['realProgress','networkRecovery','completeAssets','offlineReload','serverStopped','passPreserved'].every(k=>o[k]===true)&&(kind!=='chromium'||o.quotaRecovery===true)&&Number.isInteger(o.assetCount)&&o.assetCount>0&&o.metrics?.assets===o.assetCount&&o.metrics.reused+o.metrics.downloaded===o.assetCount&&Array.isArray(o.progressViews)&&o.progressViews.length===widths.length&&new Set(o.progressViews.map(v=>v.width)).size===widths.length&&widths.every(width=>o.progressViews.some(v=>v.width===width&&v.cssWidth===width&&v.largeText===true&&v.axe===true&&v.verified>0&&v.verified<v.total&&v.total===o.assetCount&&(!native||v.scale===2&&v.screenshot?.pixelWidth===1280&&v.screenshot.sampledColors>1)));
+ return o?.kind===kind&&browserErrorsComplete(o.browserErrors)&&['realProgress','networkRecovery','completeAssets','offlineReload','serverStopped','passPreserved'].every(k=>o[k]===true)&&(kind!=='chromium'||o.quotaRecovery===true)&&Number.isInteger(o.assetCount)&&o.assetCount>0&&o.metrics?.assets===o.assetCount&&o.metrics.reused+o.metrics.downloaded===o.assetCount&&Array.isArray(o.progressViews)&&o.progressViews.length===widths.length&&new Set(o.progressViews.map(v=>v.width)).size===widths.length&&widths.every(width=>o.progressViews.some(v=>v.width===width&&v.cssWidth===width&&v.largeText===true&&v.axe===true&&v.verified>0&&v.verified<v.total&&v.total===o.assetCount&&(!native||v.scale===2&&v.screenshot?.pixelWidth===1280&&v.screenshot.sampledColors>1)));
 }
 export async function createHandoff(report,directory='.qa-output',{requiredEngines=[]}={}){
  if(!animalCoverageComplete(report.animalCoverage,[320,360,390,768,1024,1440,1920])||!animalNativeComplete(report.animalNativeZoom)||!animalOfflineComplete(report.animalOffline)||!solarCoverageComplete(report.solarCaptionCoverage,[320,360,390,402,768,1024,1440,1920])||!solarNativeComplete(report.solarNativeCoverage)||!solarOfflineComplete(report.solarOffline))throw Error('Missing complete article learning browser evidence');
@@ -36,6 +40,14 @@ export async function createHandoff(report,directory='.qa-output',{requiredEngin
  if(!nativeHistoryComplete(report.nativeHistory))throw Error('Missing complete native history zoom proof');
  if(report.status!=='passed'||report.scope!=='complete mandatory regression'||report.build!==learningFingerprint(process.cwd()))throw Error('Handoff lacks a complete current production-build proof');
  const unit=JSON.parse(await fs.readFile(path.join(directory,'unit-proof.json'),'utf8'));if(unit.status!=='passed'||unit.sourceDigest!==await sourceDigest())throw Error('Unit proof is missing or belongs to different code');
+ const coldExpected=!!process.env.GITHUB_RUN_ID&&process.env.GITHUB_EVENT_NAME==='pull_request',coldWorkers=(report.workers??[]).filter(w=>w.name==='quality-early-offline').length;
+ if(coldExpected||coldWorkers||report.reusedEarlyColdOffline!==undefined){
+  if(!coldExpected||coldWorkers!==1)throw Error('Missing current end-verified same-run cold offline evidence');
+  const context=qualityContext.currentContext();
+  if(!coldReuseComplete(report.reusedEarlyColdOffline,{context,sourceDigest:unit.sourceDigest,build:report.build,browser:report.browser}))throw Error('Missing current end-verified same-run cold offline evidence');
+  qualityContext.assertContext(JSON.parse(await fs.readFile(path.join(directory,'ci-context.json'),'utf8')),context);
+  await validateRestoredColdOffline(path.join(directory,'local-selected'),path.join(directory,'early-cold-offline-proof.json'),path.join(directory,'quality-early-offline'),{context,sourceDigest:unit.sourceDigest,build:report.build,environment:coldBrowserEnvironment(),dist:await fileSnapshot(path.resolve(process.env.QA_DIST??'dist'))},report.reusedEarlyColdOffline.sealSHA256);
+ }
  const backlog=await fs.readFile('BACKLOG.md','utf8'),requirements=[];
  for(const line of backlog.split('\n').filter(l=>/^\| (?:A[1-6]|B[1-8]|B9|C|P3[A-D]|P35[A-D]) \|/.test(l))){
   const columns=line.split('|').map(c=>c.trim()),id=columns[1],files=[...line.matchAll(/\]\((?!https?:)([^)]+)\)/g)].map(m=>m[1]);
@@ -44,7 +56,14 @@ export async function createHandoff(report,directory='.qa-output',{requiredEngin
  }
  if(requirements.length!==24)throw Error('Incomplete existing-backlog requirement mapping');
  let engineProof=null;try{engineProof=JSON.parse(await fs.readFile(path.join(directory,'engine-report.json'),'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
- if(requiredEngines.length&&(!engineProof||engineProof.build!==report.build||engineProof.sourceDigest!==unit.sourceDigest||engineProof.status!=='passed'||engineProof.errors.length||requiredEngines.some(name=>!engineProof.engines.some(e=>e.name===name&&animalCoverageComplete(e.animalCoverage,[320,390,768,1440])&&solarCoverageComplete(e.solarCaptionCoverage,[320,390,768,1440])&&journeySupportComplete(e.journeySupport,[320,390,768,1440])&&retentionComplete(e.offlineRetention)&&offlineComplete(e.offlineResilience,name)&&e.version&&e.chapters.length===16&&e.widths.length===4&&historyViewsComplete(e.historyViews,[320,390,768,1440])))))throw Error('Actual required browser engine evidence missing');
+ if(requiredEngines.length&&(!engineProof||engineProof.build!==report.build||engineProof.sourceDigest!==unit.sourceDigest||engineProof.status!=='passed'||!browserErrorsComplete(engineProof)||requiredEngines.some(name=>!engineProof.engines.some(e=>e.name===name&&browserErrorsComplete(e.journeySupport?.learningHelp)&&animalCoverageComplete(e.animalCoverage,[320,390,768,1440])&&solarCoverageComplete(e.solarCaptionCoverage,[320,390,768,1440])&&journeySupportComplete(e.journeySupport,[320,390,768,1440])&&retentionComplete(e.offlineRetention)&&offlineComplete(e.offlineResilience,name)&&e.version&&e.chapters.length===16&&e.widths.length===4&&historyViewsComplete(e.historyViews,[320,390,768,1440])))))throw Error('Actual required browser engine evidence missing');
+ if(requiredEngines.length&&coldExpected){
+  const context=qualityContext.currentContext(),proof=engineProof?.reusedEarlyNavigation;
+  if(!nativeNavigationReuseComplete(proof,{context,sourceDigest:unit.sourceDigest,build:report.build,engines:engineProof.engines}))throw Error('Missing current end-verified same-run native navigation proof');
+  const identity={context,sourceDigest:unit.sourceDigest,build:report.build,environment:coldBrowserEnvironment(),dist:await fileSnapshot(path.resolve(process.env.QA_DIST??'dist')),navigation:nativeNavigationInput('http://127.0.0.1:4480'),engines:requiredEngines};
+  qualityContext.assertContext(JSON.parse(await fs.readFile(path.join(directory,'ci-context.json'),'utf8')),context);
+  for(const engine of engineProof.engines)await validateRestoredNativeNavigation(path.join(directory,'early-native-navigation'),path.join(directory,'early-native-navigation-proof.json'),directory,identity,proof.sealSHA256,{name:engine.name,version:engine.version});
+ }
  const screenshots=[];for(const file of (await fs.readdir(directory)).filter(f=>/^(?:quality-|journey-engine-).*\.png$/.test(f)).sort()){const data=await fs.readFile(path.join(directory,file));if(data.subarray(0,8).toString('hex')!=='89504e470d0a1a0a')throw Error('Broken screenshot');screenshots.push({file,width:data.readUInt32BE(16),height:data.readUInt32BE(20),sha256:createHash('sha256').update(data).digest('hex')});}
  if(!screenshots.length)throw Error('Missing actual screenshots');
  let pr=null;if(process.env.GITHUB_EVENT_PATH){const event=JSON.parse(await fs.readFile(process.env.GITHUB_EVENT_PATH,'utf8'));if(event.pull_request)pr={number:event.pull_request.number,head:event.pull_request.head.sha,base:event.pull_request.base.sha};}

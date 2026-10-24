@@ -1,7 +1,7 @@
 import {fingerprint, normalConcept} from './content-inventory.mjs';
 
 // Structural readiness is deliberately separate from scientific/editorial acceptance.
-export function validateDossier(dossier, record, {build, knownIds} = {}) {
+export function validateDossierContent(dossier, record, {knownIds} = {}) {
  const errors=[];
  const text=value=>typeof value==='string'&&value.trim().length>0;
  const day=value=>typeof value==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(value)&&Number.isFinite(Date.parse(value))&&new Date(value+'T12:00:00Z').toISOString().slice(0,10)===value;
@@ -21,12 +21,17 @@ export function validateDossier(dossier, record, {build, knownIds} = {}) {
  for(const asset of media)if(!text(asset.path)||!text(asset.license)||!text(asset.credit)||!text(asset.alt)||!text(asset.learningPurpose))errors.push('media rights/alternative/learning purpose incomplete');
  if(!Array.isArray(dossier.links)||dossier.links.some(id=>!knownIds?.has(id)||id===record.id))errors.push('invalid knowledge connection');
  if(!dossier.links?.length&&!text(dossier.isolationReason))errors.push('justify missing meaningful connections');
+ return {id:record.id,contentReady:errors.length===0,errors,scientificApproval:false};
+}
+
+export function validateDossier(dossier, record, {build, knownIds} = {}) {
+ const {errors}=validateDossierContent(dossier,record,{knownIds});
  const ui=dossier.ui;
- if(!ui||ui.build!==build||ui.route!==record.route||!['visible','search','back','offline'].every(key=>ui[key]===true)||!text(ui.report))errors.push('current built UI/search/back/offline proof required');
+ if(!ui||ui.build!==build||ui.route!==record.route||!['visible','search','back','offline'].every(key=>ui[key]===true)||typeof ui.report!=='string'||!ui.report.trim())errors.push('current built UI/search/back/offline proof required');
  return {id:record.id,structurallyReady:errors.length===0,errors,scientificApproval:false};
 }
 
-export function editorialReport(inventory, dossiers=[], options={}) {
+function report(inventory, dossiers, options, validate) {
  const ids=new Set(inventory.records.map(r=>r.id)),seen=new Set(),concepts=new Map(),duplicates=[];
  for(const record of inventory.records){
   const family=inventory.families.find(f=>f.id===record.family);
@@ -36,7 +41,12 @@ export function editorialReport(inventory, dossiers=[], options={}) {
  }
  const results=dossiers.map(dossier=>{
   if(seen.has(dossier.id)||!ids.has(dossier.id))throw Error('Duplicate or unknown editorial dossier '+dossier.id);
-  seen.add(dossier.id);return validateDossier(dossier,inventory.records.find(r=>r.id===dossier.id),{...options,knownIds:ids});
+  seen.add(dossier.id);return validate(dossier,inventory.records.find(r=>r.id===dossier.id),{...options,knownIds:ids});
  });
  return {schemaVersion:1,inventoryFingerprint:fingerprint(inventory.records.map(r=>[r.id,r.dataHash])),results,missingDossiers:inventory.records.filter(r=>!seen.has(r.id)).map(r=>r.id),duplicateConceptCandidates:duplicates,scientificApproval:false,acceptedNew:0,meaning:'Only structural evidence. Missing dossiers remain open. Semantic duplicates, claims, rights and child suitability still need actual individual review; no automatic human acceptance.'};
+}
+
+export const editorialReport=(inventory,dossiers=[],options={})=>report(inventory,dossiers,options,validateDossier);
+export function editorialContentReport(inventory,dossiers=[]){
+ return {...report(inventory,dossiers,{},validateDossierContent),scope:'static content and references only; no current UI acceptance',meaning:'Static dossier structure, content identity, source/rights fields and knowledge references only. Current UI/search/back/offline acceptance remains mandatory in the final editorialReport; no scientific approval.'};
 }
