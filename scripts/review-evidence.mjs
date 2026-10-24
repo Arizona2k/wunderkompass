@@ -51,6 +51,14 @@ export async function prepareReview(directory='.qa-output'){
    if(/\.(png|json|xml)$/.test(name)&&(await fs.lstat(source)).isFile())files.push({name:'journey-engine-'+engine+'-partial-'+name.replaceAll(path.sep,'-'),source,sourceFile:path.relative(directory,source)});
   }
  }
+ // The reused worker's JSON/XML are original evidence too. Keep their exact
+ // bytes beside the existing flat PNG copies; never traverse profiles/caches.
+ const coldWorker=path.join(directory,'quality-early-offline');
+ for(const name of (await fs.readdir(coldWorker).catch(error=>{if(error.code==='ENOENT')return [];throw error;})).sort()){
+  if(!/\.(json|xml)$/.test(name))continue;
+  const source=path.join(coldWorker,name);if(!(await fs.lstat(source)).isFile())throw Error('Unexpected cold original report entry');
+  files.push({name:'quality-early-offline-original-'+name,source,sourceFile:path.relative(directory,source)});
+ }
  if(new Set(files.map(file=>file.name)).size!==files.length)throw Error('Conflicting review evidence names; originals retained');
  let report=null,handoff=null;
  try{report=JSON.parse(await fs.readFile(path.join(directory,'portable-report.json'),'utf8'));handoff=JSON.parse(await fs.readFile(path.join(directory,'handoff.json'),'utf8'));}catch{/* Diagnostic artifacts are still required on failed runs. */}

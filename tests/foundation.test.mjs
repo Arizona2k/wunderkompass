@@ -28,6 +28,9 @@ test('local selection follows real transitive unit dependencies and retains cons
  assert.equal(selectTests(['scripts/release/policy.cjs']).release,true);assert.ok(selectTests(['package.json']).unitTests.includes('tests/playground.test.mjs'));
  const removed=selectTests(['app/deleted-runtime-dependency.mjs']);assert.ok(removed.unitTests.includes('tests/progress.test.mjs'));assert.ok(removed.browser.includes('backup'));
  assert.ok(selectTests(['app/global-search.tsx']).browser.includes('no-news'),'shared UI changes retain the news-removal regression');
+ const metadata=selectTests(['content/editorial-reviews.json']);assert.deepEqual(metadata.browser,[]);assert.equal(metadata.staticContent,true);assert.equal(metadata.fullRequiredBeforeReady,true);assert.ok(metadata.unitTests.includes('tests/animal-expansion.test.mjs'));assert.ok(metadata.unitTests.includes('tests/history-learning.test.mjs'));
+ assert.deepEqual(new Set(selectTests(['content/unknown-evidence.json']).browser),new Set(REQUIRED_SUITES));
+ assert.deepEqual(new Set(selectTests(['content/editorial-reviews.json','app/world-reader.tsx']).browser),new Set(REQUIRED_SUITES),'a metadata change cannot hide a shared product dependency');
 });
 test('offline fingerprint covers entry/config/package changes, ignores local evidence and is content-based',()=>{
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'wk-inputs-'));

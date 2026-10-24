@@ -44,3 +44,11 @@ test('interrupted known native journey-help files retain exact originals and sou
  assert.equal(reviewStorage([],150_000_000).withinBudget,true);assert.equal(reviewStorage([],150_000_001).withinBudget,false);
  for(const invalid of [-1,NaN,Infinity,0.1])assert.equal(reviewStorage([],invalid).withinBudget,false);
  });
+
+
+test('same-run cold worker original reports are uploaded byte for byte without reading profiles; nonregular report entries block',async t=>{
+ const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-cold-original-reports-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));const worker=path.join(dir,'quality-early-offline');await fs.mkdir(path.join(worker,'profile'),{recursive:true});await fs.writeFile(path.join(worker,'profile','private.json'),'never copy a browser profile');
+ const originals=new Map([['portable-report.json',Buffer.from('{"status":"passed","scope":"synthetic offline original"}\r\n')],['early-cold-provenance.json',Buffer.from('{"synthetic":"original seal sidecar"}\n')],['offline.xml',Buffer.from('<synthetic-original/>\n')]]);for(const [name,bytes]of originals)await fs.writeFile(path.join(worker,name),bytes);
+ const result=await prepareReview(dir);assert.equal(result.status,'diagnostic');for(const [name,bytes]of originals){const alias='quality-early-offline-original-'+name;assert.ok(result.reports.includes(alias));assert.deepEqual(await fs.readFile(path.join(dir,'review',alias)),bytes);assert.deepEqual(await fs.readFile(path.join(worker,name)),bytes);}assert.equal((await fs.readdir(path.join(dir,'review'))).some(name=>/profile|private/.test(name)),false);
+ await fs.symlink(path.join(worker,'portable-report.json'),path.join(worker,'linked.json'));await assert.rejects(prepareReview(dir),/Unexpected cold original report entry/);assert.deepEqual(await fs.readFile(path.join(worker,'portable-report.json')),originals.get('portable-report.json'));
+});

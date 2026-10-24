@@ -9,6 +9,7 @@ import fs from 'node:fs/promises';import path from 'node:path';import assert fro
 import JOURNEYS from '../../exports/content/journeys.json' with {type:'json'};
 import DATA from '../../app/journey-inquiries.json' with {type:'json'};
 import {sourceDigest} from '../../scripts/handoff.mjs';
+import {browserErrorArrays,BROWSER_ERROR_FIELDS,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 import {chromium,firefox,webkit} from '../../qa/node_modules/playwright/index.mjs';
 const searchOnly=process.argv.includes('--search-only');
 const engines=process.argv.includes('--chromium-only')?['chromium']:['firefox','webkit'];
@@ -16,7 +17,7 @@ const serialLocal=process.env.QA_SERIAL_LOCAL==='1';
 if(process.env.QA_SERIAL_LOCAL!==undefined&&!['0','1'].includes(process.env.QA_SERIAL_LOCAL))throw Error('Invalid local worker execution mode');
 if(serialLocal&&process.env.CI)throw Error('Serial local engine execution is forbidden in CI');
 const port=4480,base='http://127.0.0.1:'+port,started=performance.now();
-const report={build:(await fs.readFile('dist/index.html','utf8')).match(/name="learning-build" content="([^"]+)"/)?.[1],sourceDigest:await sourceDigest(),status:'running',scope:searchOnly?'partial actual-engine keyboard search':engines.join('+'),execution:searchOnly?'sequential early search':serialLocal?'same complete engines serially; local comparison only':'parallel engines with isolated evidence and offline ports',engines:[],errors:[]};
+const report={build:(await fs.readFile('dist/index.html','utf8')).match(/name="learning-build" content="([^"]+)"/)?.[1],sourceDigest:await sourceDigest(),status:'running',scope:searchOnly?'partial actual-engine keyboard search':engines.join('+'),execution:searchOnly?'sequential early search':serialLocal?'same complete engines serially; local comparison only':'parallel engines with isolated evidence and offline ports',engines:[],...browserErrorArrays()};
 const server=spawn(process.execPath,['tests/browser/preview-server.mjs'],{env:{...process.env,QA_PORT:String(port)},stdio:['ignore','pipe','pipe']});
 let log='';server.stdout.on('data',b=>log+=b);server.stderr.on('data',b=>log+=b);
 
@@ -28,13 +29,14 @@ async function runEngine(name,index){
  await fs.mkdir(shots,{recursive:true});let browser;
  try{
   const started=performance.now(),checked=[],historyViews=[];browser=await {chromium,firefox,webkit}[name].launch({headless:true,...(name==='chromium'&&process.env.QA_BROWSER_EXECUTABLE?{executablePath:process.env.QA_BROWSER_EXECUTABLE}:{}),args:name==='chromium'?['--enable-unsafe-swiftshader']:[]});
-  const context=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await context.newPage();p.on('pageerror',e=>report.errors.push(e.message));p.setDefaultTimeout(20000);await p.goto(base+'/#journeys');await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor();
+  const monitor=page=>monitorBrowserErrors(page,base,report,{engine:name});
+  const context=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await context.newPage();monitor(p);p.setDefaultTimeout(20000);await p.goto(base+'/#journeys');await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor();
   if(searchOnly){
-   const coveredAnimalIds=await animalNavigation(browser,base,page=>page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor(),page=>page.on('pageerror',e=>report.errors.push(e.message)),shots);
+   const coveredAnimalIds=await animalNavigation(browser,base,page=>page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor(),monitor,shots);
    return {name,version:browser.version(),scope:'partial actual-engine keyboard search',keyboardNavigation:true,coveredAnimalIds,seconds:(performance.now()-started)/1000};
   }
-  const solarReport={checks:[]};await solarFlow(browser,base,p=>p.locator('.model-solar-system').waitFor(),p=>p.on('pageerror',e=>report.errors.push(e.message)),solarReport,shots,{widths:[320,390,768,1440]});for(const file of await fs.readdir(shots))if(/^solar-caption-.*\.png$/.test(file))await fs.rename(path.join(shots,file),path.join(shots,'journey-engine-'+name+'-'+file));
-  const animalReport={checks:[]};await animalFlow(browser,base,p=>p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor(),p=>p.on('pageerror',e=>report.errors.push(e.message)),animalReport,shots,{matrix:[320,390,768,1440]});for(const file of await fs.readdir(shots))if(/^animal-.*\.png$/.test(file))await fs.rename(path.join(shots,file),path.join(shots,'journey-engine-'+name+'-'+file));
+  const solarReport={checks:[]};await solarFlow(browser,base,p=>p.locator('.model-solar-system').waitFor(),monitor,solarReport,shots,{widths:[320,390,768,1440]});for(const file of await fs.readdir(shots))if(/^solar-caption-.*\.png$/.test(file))await fs.rename(path.join(shots,file),path.join(shots,'journey-engine-'+name+'-'+file));
+  const animalReport={checks:[]};await animalFlow(browser,base,p=>p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor(),monitor,animalReport,shots,{matrix:[320,390,768,1440]});for(const file of await fs.readdir(shots))if(/^animal-.*\.png$/.test(file))await fs.rename(path.join(shots,file),path.join(shots,'journey-engine-'+name+'-'+file));
   const journeySupport=await journeySupportView(p,{widths:[320,390,768,1440],shots,engine:name});
   for(const j of JOURNEYS){await p.evaluate(id=>location.hash='journeys/'+id+'/1',j.id);const inquiry=p.locator('[data-chapter-inquiry="'+j.id+':0"]');await inquiry.waitFor();const c=DATA.chapters.find(c=>c.id===j.id+':0'),q=c.tasks[2];await inquiry.locator('.journey-levels button').nth(2).click();await inquiry.locator('.quiz-answer').nth((q.correct+1)%3).click();assert.equal(await inquiry.getByText(q.why,{exact:true}).count(),0);await inquiry.locator('.quiz-answer').nth(q.correct).click();await inquiry.getByText(q.why,{exact:true}).waitFor();assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);checked.push(c.id);}
   await p.evaluate(()=>location.hash='journeys/water/3');await p.locator('[data-chapter-inquiry="water:2"]').waitFor();await p.getByRole('button',{name:'Weiter entdecken',exact:true}).click();await p.locator('[data-chapter-inquiry="water:3"]').waitFor();await p.goBack();await p.locator('[data-chapter-inquiry="water:2"]').waitFor();await p.reload();await p.locator('[data-chapter-inquiry="water:2"]').waitFor();
@@ -63,7 +65,7 @@ try{
   }
   if(failures.length){report.engineFailures=failures;throw new AggregateError(results.filter(r=>r.status==='rejected').map(r=>r.reason),'Actual engine checks failed');}
  }
- assert.deepEqual(report.errors,[]);report.status='passed';
+ for(const field of BROWSER_ERROR_FIELDS)assert.deepEqual(report[field],[],field);report.status='passed';
 }catch(error){report.status='failed';report.failure=error.stack;throw error;}
 finally{
  server.kill('SIGTERM');await fs.mkdir('.qa-output',{recursive:true});
@@ -73,7 +75,7 @@ finally{
  await fs.writeFile('.qa-output/'+(searchOnly?'early-search-report.json':'engine-report.json'),JSON.stringify(report,null,2)+'\n');
  // GitHub truncates a single console record at64KiB. Keep the full original JSON
  // file and log a bounded diagnostic summary with actual per-engine outcomes.
- console.log('ACTUAL_ENGINE_SUMMARY '+JSON.stringify({build:report.build,sourceDigest:report.sourceDigest,status:report.status,scope:report.scope,execution:report.execution,seconds:report.seconds,engines:report.engines.map(({name,version,seconds})=>({name,version,seconds})),errors:report.errors,engineFailures:report.engineFailures,evidenceTransferFailures:report.evidenceTransferFailures?.map(({engine,file,error})=>({engine,file,error:error.split('\n')[0]}))}));
+ console.log('ACTUAL_ENGINE_SUMMARY '+JSON.stringify({build:report.build,sourceDigest:report.sourceDigest,status:report.status,scope:report.scope,execution:report.execution,seconds:report.seconds,engines:report.engines.map(({name,version,seconds})=>({name,version,seconds})),errors:report.errors,browserErrors:Object.fromEntries(BROWSER_ERROR_FIELDS.map(field=>[field,{count:report[field].length,first:report[field].slice(0,3)}])),engineFailures:report.engineFailures,evidenceTransferFailures:report.evidenceTransferFailures?.map(({engine,file,error})=>({engine,file,error:error.split('\n')[0]}))}));
  console.log(JSON.stringify(report));
  if(transferFailures.length)throw new AggregateError(transferFailures.map(f=>Error(f.error)),'Engine evidence could not be preserved without overwriting');
 }

@@ -11,6 +11,7 @@ import {historySourceView} from './history-learning.mjs';
 import fs from 'node:fs/promises';import path from 'node:path';import http from 'node:http';import assert from 'node:assert/strict';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {stopTestServer} from './stop-test-server.mjs';
+import {browserErrorArrays,browserErrorsComplete,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 
 // Isolated real-app server: only this fixture can fail an asset or emulate quota.
 export async function offlineResilience(browser,{port=4776,shots,kind=browser.browserType().name(),context:providedContext=null,native=false}={}){
@@ -18,6 +19,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
  const worker=await fs.readFile('dist/learning-worker.js','utf8'),assets=JSON.parse(worker.match(/const ASSETS = (\[[^;]+\]);/)[1]);const guardedAsset=assets.find(p=>/^\/assets\/journey-inquiries-.*\.json$/.test(p));assert.ok(guardedAsset,'required actual journey asset');let fail=true,failedRequests=0,hold=false,releaseHold;const held=new Promise(resolve=>releaseHold=resolve);
  const server=http.createServer(async(req,res)=>{try{const url=new URL(req.url,'http://localhost'),name=decodeURIComponent(url.pathname);if(name.includes('..')||url.search)throw Error('Invalid fixture URL');if(fail&&name===guardedAsset){failedRequests++;res.writeHead(503).end('Synthetic source failure');return;}if(hold&&name===guardedAsset)await held;const file=path.resolve('dist',name==='/'?'index.html':'.'+name);if(!file.startsWith(path.resolve('dist')+path.sep))throw Error('Invalid fixture path');const data=await fs.readFile(file),type=file.endsWith('.js')?'text/javascript':file.endsWith('.css')?'text/css':file.endsWith('.html')?'text/html':file.endsWith('.json')?'application/json':file.endsWith('.svg')?'image/svg+xml':file.endsWith('.webp')?'image/webp':'application/octet-stream';res.writeHead(200,{'Content-Type':type,'Cache-Control':'no-store','Content-Length':data.length}).end(data);}catch{res.writeHead(404).end();}});
  await new Promise(resolve=>server.listen(port,'127.0.0.1',resolve));const base='http://127.0.0.1:'+port,context=providedContext??await browser.newContext({viewport:{width:320,height:900},reducedMotion:'reduce'}),page=await context.newPage();page.setDefaultTimeout(20000);let cdp;const report={kind,networkRecovery:false,quotaRecovery:null,completeAssets:false,offlineReload:false,passPreserved:false,assetCount:assets.length};
+ report.browserErrors=browserErrorArrays();monitorBrowserErrors(page,base,report.browserErrors,{engine:kind,expectedHTTP503:{url:base+guardedAsset,active:()=>fail,reason:'Exact required asset deliberately returns503 during the isolated initial source-failure phase.'}});
  const snapshot=()=>page.evaluate(()=>{const p=JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress;return p;});
  const noPartial=async()=>assert.deepEqual(await page.evaluate(async()=>(await caches.keys()).filter(n=>n.startsWith('earth-learning-'))),[],'no partial release survives');
  try{
@@ -75,6 +77,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   }
   assert.equal(report.bookLearning.bookNormalization.length,8);
   report.learningTaskSemantics=await learningTaskOfflineSemantics(page,{shots:shots??'.qa-output',kind,native});
+  assert.equal(browserErrorsComplete(report.browserErrors),true,'actual offline-app browser errors outside the exact synthetic503 remain blocking');
   return report;
  }catch(error){
   if(shots){await fs.writeFile(path.join(shots,shotName+'-failure.json'),JSON.stringify({...report,status:'failed',failure:error.stack},null,2));await page.screenshot({path:path.join(shots,shotName+'-failure-320.png'),animations:'disabled',timeout:5000}).catch(()=>{});}
