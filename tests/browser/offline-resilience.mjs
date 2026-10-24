@@ -1,3 +1,4 @@
+import {scienceOriginalView} from './science-originals.mjs';
 import {buildingOriginalSourceView} from './building-originals.mjs';
 import {mechanicsSourceView} from './invention-mechanics.mjs';
 import {peopleSourceView} from './people-learning.mjs';
@@ -47,10 +48,20 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   await page.reload();await page.locator('.world-mini-question').waitFor();await page.getByRole('button',{name:'In deinem Forscherbuch',exact:true}).waitFor();report.offlineReload=true;
   if(shots)await page.locator('.offline-learning').screenshot({path:shots+'/'+shotName+'-320.png'});
   // The real complete cached app must retain the new source-learning activities too.
-  report.historySourceDiscovery=[];report.opticsDiscovery=[];report.electricalDiscovery=[];report.mechanicsDiscovery=[];
+  report.historySourceDiscovery=[];report.opticsDiscovery=[];report.electricalDiscovery=[];report.mechanicsDiscovery=[];report.scienceOriginalDiscovery=[];
   for(const width of (native?[640,320]:[320,390,768,1440])){
    await page.setViewportSize({width:width*(native?2:1),height:950});const measured=await page.evaluate(()=>({width:innerWidth,scale:devicePixelRatio}));assert.equal(measured.width,width);if(native)assert.equal(measured.scale,2);await page.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));(report.peopleSourceDiscovery??=[]).push(...await peopleSourceView(page,{width,shots,engine:kind+'-offline'+(native?'-native':''),native}));report.historySourceDiscovery.push(...await historySourceView(page,{width,shots,engine:kind+'-offline'+(native?'-native':''),native}));report.opticsDiscovery.push(...await opticsSourceView(page,{width,shots,engine:kind+'-offline'+(native?'-native':''),native}));report.electricalDiscovery.push(...await electricalSourceView(page,{width,shots,engine:kind+'-offline'+(native?'-native':''),native}));report.mechanicsDiscovery.push(...await mechanicsSourceView(page,{width,shots,engine:kind+'-offline'+(native?'-native':''),native}));(report.buildingOriginalDiscovery??=[]).push(...await buildingOriginalSourceView(page,{width,shots,engine:kind+'-offline'+(native?'-native':''),native}));
   }
+  // Check the new complete science activities once at the narrow cached layout,
+  // and at both existing native-zoom widths. Other established source matrices
+  // above stay complete; no duplicate science screenshots are needed here.
+  for(const width of (native?[640,320]:[320])){
+   await page.setViewportSize({width:width*(native?2:1),height:950});assert.equal(await page.evaluate(()=>innerWidth),width);
+   if(native)assert.equal(await page.evaluate(()=>devicePixelRatio),2);
+   await page.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));
+   report.scienceOriginalDiscovery.push(...await scienceOriginalView(page,{width,native,questions:false}));
+  }
+  assert.equal(report.scienceOriginalDiscovery.length,native?46:23,'all science originals and voluntary inquiries in the complete cached app');
   assert.equal(report.electricalDiscovery.length,native?6:12,'all three electrical activities at every required cached-app width');
   assert.equal(report.mechanicsDiscovery.length,native?12:24,'all six mechanical activities at every required cached-app width');
   assert.equal(report.opticsDiscovery.length,native?6:12,'all three optical activities at every required cached-app width');

@@ -134,7 +134,12 @@ export async function scienceOriginalView(page,{width,shots,questions=true,nativ
   const inquiry=modelsOnly?null:await scienceThinkingView(page,t,{width,shots,native});
   await geometry(page,article,t.id+' '+width);
   const captures=[];
-  if(shots&&!native){await article.locator('.article-hero').screenshot({path:path.join(shots,t.id+'-'+width+'-hero.png'),animations:'disabled'});if(t.investigation)await article.locator('.science-investigation').screenshot({path:path.join(shots,t.id+'-'+width+'-model.png'),animations:'disabled'});}
+  if(shots&&!native){
+   // Capture scientific media directly. The ten interactive topics have a
+   // generic hero; static topics already show their own diagrams in the hero.
+   const selector=t.investigation?'.science-investigation':'.science-explanation-diagram',file=t.investigation?t.id+'-'+width+'-model.png':t.id+'-diagram-'+width+'.png';
+   await article.locator(selector).screenshot({path:path.join(shots,file),animations:'disabled'});
+  }
   if(shots&&native){
    const sections=t.investigation?['.science-investigation h3','.science-investigation label','.science-investigation svg','.science-investigation [role=status]','.science-investigation .small-note']:['.world-article-heading h2','.science-explanation-diagram svg','.science-diagram-labels','.science-explanation-diagram figcaption'];
    for(const [index,selector]of sections.entries()){const part=article.locator(selector).first();await part.evaluate(async e=>{e.scrollIntoView({block:'start',behavior:'instant'});await new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok)));});captures.push(await captureNativeViewport(page,path.join(shots,t.id+'-native200-'+width+'-'+index+'.png')));}
