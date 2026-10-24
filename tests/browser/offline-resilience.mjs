@@ -10,6 +10,7 @@ import {opticsSourceView} from './invention-optics.mjs';
 import {historySourceView} from './history-learning.mjs';
 import fs from 'node:fs/promises';import path from 'node:path';import http from 'node:http';import assert from 'node:assert/strict';
 import {captureNativeViewport} from './native-screenshot.mjs';
+import {prepareAxe} from './axe-loader.mjs';
 import {stopTestServer} from './stop-test-server.mjs';
 import {BROWSER_ERROR_FIELDS,browserErrorArrays,browserErrorsComplete,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 
@@ -63,11 +64,14 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   hold=true;await page.getByRole('button',{name:'Für offline vorbereiten',exact:true}).click();const progress=page.getByRole('progressbar',{name:'Sicher gespeicherte Lernwelt-Dateien',exact:true});await progress.waitFor();await page.waitForFunction(()=>{const el=document.querySelector('progress[aria-label="Sicher gespeicherte Lernwelt-Dateien"]');return el&&el.value>0&&el.value<el.max;});const counts=await progress.evaluate(el=>({verified:el.value,total:el.max}));assert.equal(counts.total,assets.length);assert.ok(counts.verified>0&&counts.verified<counts.total,'held required asset cannot be reported as verified');assert.equal(await page.getByText('Deine Lernwelt ist offline vorbereitet.',{exact:true}).count(),0);report.progressViews=[];
   for(const width of (native?[640]:[320,360,390,768,1024,1440,1920])){
    await page.setViewportSize({width:width*(native?2:1),height:900});await page.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));
+   // Measure the rendered responsive state, as in the other existing audits.
+   // The original next-task read can still contain the wide header padding.
+   await prepareAxe(page);
    const measured=await page.evaluate(()=>({cssWidth:innerWidth,scale:devicePixelRatio}));assert.equal(measured.cssWidth,width);if(native)assert.equal(measured.scale,2);
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'offline progress has no horizontal overflow '+width);
    const aside=page.locator('.offline-learning');assert.ok(await aside.isVisible());assert.ok(await aside.getByRole('progressbar',{name:'Sicher gespeicherte Lernwelt-Dateien',exact:true}).isVisible());
    const value=await progress.evaluate(e=>({verified:e.value,total:e.max}));assert.ok(value.verified>0&&value.verified<value.total);assert.equal(value.total,assets.length);
-   await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.offline-learning',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
+   assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.offline-learning',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
    let screenshot=null;if(shots){if(native){await progress.scrollIntoViewIfNeeded();screenshot=await captureNativeViewport(page,path.join(shots,shotName+'-progress-'+width+'.png'));}else await aside.screenshot({path:shots+'/'+shotName+'-progress-'+width+'.png'});}
    report.progressViews.push({width,...measured,largeText:true,axe:true,verified:value.verified,total:value.total,...(screenshot?{screenshot}:{})});
   }
@@ -80,6 +84,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   assert.deepEqual(registration,{active:workerURL,state:'activated',controller:workerURL},'the already active cached worker is verified before the origin is stopped');verifiedWorkerURL=registration.active;report.registeredWorkerBeforeShutdown=registration;
   assertBrowserErrors('before deliberate origin shutdown');
   await page.setViewportSize({width:320*(native?2:1),height:900});
+  await prepareAxe(page);
   await assertOfflineCaptureViewport(page,{native});
   await stopTestServer(server);
   await assert.rejects(fetch(base+'/',{signal:AbortSignal.timeout(2000)}),'fixture server is really unreachable before the offline reload');report.serverStopped=true;
