@@ -64,14 +64,20 @@ export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='n
   else{
    const q=level===1?data.reason:data.transfer,task=root.locator('.animal-reason-task');
    await task.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
-   const hint=task.locator('details');if(!await hint.evaluate(e=>e.open))await hint.locator('summary').click();await hint.getByText(q.hint,{exact:true}).waitFor();
+   const hint=task.locator(':scope>details').first();if(!await hint.evaluate(e=>e.open))await hint.locator('summary').click();await hint.getByText(q.hint,{exact:true}).waitFor();
    await task.locator('.quiz-answer').nth(1-q.correct).click();await Promise.all([task.getByText('Prüfe die Aussage noch einmal.',{exact:true}).waitFor(),task.locator('.lab-feedback').getByText(q.feedback[1-q.correct],{exact:true}).waitFor()]);
-   await task.locator('.quiz-answer').nth(q.correct).click();await Promise.all([task.getByText('Gut begründet.',{exact:true}).waitFor(),task.locator('.lab-feedback').getByText(q.feedback[q.correct],{exact:true}).waitFor()]);
+   await task.locator('.quiz-answer').nth(q.correct).click();await Promise.all([task.getByText('Deine Auswahl passt.',{exact:true}).waitFor(),task.locator('.lab-feedback').getByText(q.feedback[q.correct],{exact:true}).waitFor()]);
+   await assertAnimalSelectionFeedback(task);
+   if(level===2&&q.reflection){const reflection=task.locator('.animal-transfer-reflection');await reflection.locator(':scope>summary').click();await reflection.getByText(q.reflection.prompt,{exact:true}).waitFor();assert.equal(await reflection.getByText(q.reflection.example,{exact:true}).isVisible(),false,'comparison example stays optional');await reflection.locator('details>summary').click();for(const text of [q.reflection.example,q.reflection.compare])await reflection.getByText(text,{exact:true}).waitFor();}
+
   }
   await geometry(root,data.id+' '+width+' level'+level);
   if(shots&&data.id==='animal-whale-shark')await root.screenshot({path:path.join(shots,'animal-workshop-'+state+'-'+level+'-'+width+'.png'),animations:'disabled'});
  }
- return {id:data.id,width,state,levels:[0,1,2],bothEvidence:true,wrongAndCorrect:true,keyboard,geometry:true,measurement:true,sourceLinks:true};
+ return {id:data.id,width,state,levels:[0,1,2],bothEvidence:true,wrongAndCorrect:true,selectionFeedbackHonest:true,...(data.transfer.reflection?{ownReflectionCompared:true}:{}),keyboard,geometry:true,measurement:true,sourceLinks:true};
+}
+export async function assertAnimalSelectionFeedback(task){
+ assert.doesNotMatch(await task.getByRole('status').innerText(),/Gut begründet\./,'selection does not certify an unobserved original explanation');
 }
 export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix=widths}={}){
  const observed=[],focusChecks=[],start=performance.now(),searchFocus=await delayedSearchFocus(browser,base,monitor,shots);
@@ -86,7 +92,7 @@ export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix
    const before=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);
    for(const t of topics)for(const [key,value]of Object.entries(pass.progress.gameSessions['topic:'+t.id]))assert.deepEqual(before.gameSessions['topic:'+t.id][key],value,'retained original '+key+' '+t.id);
    for(const key of ['favorites','notes'])assert.deepEqual(before[key],pass.progress[key]);assert.deepEqual(before.gameSessions['world:animal-detective'],pass.progress.gameSessions['world:animal-detective']);
-   await p.reload();await ready(p);const data=DATA.entries.at(-1),root=p.locator('[data-animal-inquiry="'+data.id+'"]');await root.locator(':scope > summary').click();await root.getByText('Gut begründet.',{exact:true}).waitFor();assert.equal(await root.locator('.animal-inquiry-levels button').nth(2).getAttribute('aria-pressed'),'true','selected level survives reload');
+   await p.reload();await ready(p);const data=DATA.entries.at(-1),root=p.locator('[data-animal-inquiry="'+data.id+'"]');await root.locator(':scope > summary').click();await root.getByText('Deine Auswahl passt.',{exact:true}).waitFor();assert.equal(await root.locator('.animal-inquiry-levels button').nth(2).getAttribute('aria-pressed'),'true','selected level survives reload');
    const after=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);assert.deepEqual(after.gameSessions,before.gameSessions,'every old and new session key survives reload');
    await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));
    for(const data of DATA.entries)observed.push(await exerciseAnimal(p,data,{width,shots,keyboard:true,state:'large'}));

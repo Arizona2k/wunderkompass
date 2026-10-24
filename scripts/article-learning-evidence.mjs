@@ -2,7 +2,7 @@ import DATA from '../app/animal-inquiries.json' with {type:'json'};
 
 export function animalCasesComplete(cases,widths,states=['normal','large']){
  if(!Array.isArray(cases)||cases.length!==DATA.entries.length*widths.length*states.length||new Set(cases.map(c=>c.id+':'+c.width+':'+c.state)).size!==cases.length)return false;
- return DATA.entries.every(e=>widths.every(width=>states.every(state=>cases.some(c=>c.id===e.id&&c.width===width&&c.state===state&&c.bothEvidence===true&&c.wrongAndCorrect===true&&c.keyboard===true&&c.geometry===true&&Array.isArray(c.levels)&&c.levels.length===3&&new Set(c.levels).size===3&&[0,1,2].every(level=>c.levels.includes(level))))));
+ return DATA.entries.every(e=>widths.every(width=>states.every(state=>cases.some(c=>c.id===e.id&&c.width===width&&c.state===state&&c.bothEvidence===true&&c.wrongAndCorrect===true&&c.selectionFeedbackHonest===true&&(!e.transfer.reflection||c.ownReflectionCompared===true)&&c.keyboard===true&&c.geometry===true&&Array.isArray(c.levels)&&c.levels.length===3&&new Set(c.levels).size===3&&[0,1,2].every(level=>c.levels.includes(level))))));
 }
 export function photoPendingBackComplete(cases){
  const expected=[320,1440].flatMap(width=>['category','pagination'].map(kind=>width+':'+kind));

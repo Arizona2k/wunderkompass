@@ -67,6 +67,12 @@ Tatsächliche gezielte ProduktprüfungApp1445ba18c4116334passed:achtverzögerteK
 
 Erst nach diesem natürlichen Abschluss96UI-Quittungen an841/33ac/1445erneuert. Sämtliche Fakten/Quelllesungen/Beziehungen und alle bisherigen UI-Historien byte-/strukturverglichen erhalten; vorherige f956-Bindung zusätzlich unter uiBeforePhotoPendingBackRepair20261024 gesichert. Quellenreview bewahrt alte fullAcceptance/renderedReview separat; neuer Originalvolltest bleibt vor folgenden Metadaten und wird nicht auf sie umetikettiert. Finale Unit-/Release-/Typ-/Lint-/Build-/verify- und explizite Browserherkunftsquittung für den folgenden reinen Metadatenstand sowie tatsächliche neue nativeCI inPR60 stehen noch aus. Keine Auslieferung behauptet.
 
+## Getrennte nächste Fachkorrektur · Tier-Transfer
+
+Branch `codex/wunderkompass-animal-transfer-2026-10-24` bereitet auf f914 die bereits beauftragte WK053-Korrektur vor, während PR60 unverändert seine nativeCI160durchläuft. Noch keine eigene Release-PR oder Lieferung. Tatsächlich gerenderter ursprünglicher Okapi-Auswahlklick bescheinigte „Gut begründet“, obwohl keine eigenen Fragen/Begründung erfasst wurden; derselbe neue permanente Browserguard erkennt diesen Originalfehler. Gemeinsames Feedback benennt nun nur die Auswahl. Vier offene Aufgaben sind als freiwillige eigene Überlegung mit optionalem Muster erhalten, erst nach passender Auswahl; keine unverdiente eigene Leistung, keine neue Bewertungsplattform oder zweiter Speicher.
+
+Vier betroffene Fachpassagen tatsächlich erneut gelesen: AustralianMuseum(Fortpflanzung), SanDiegoZoo(Aussehen/Giraffenfamilie), Smithsonian(Katta-Duft-/Sicht-/Rufkommunikation), RSPB(Schleiereulenmerkmale). Alle48Artikel, vorhandene Bilder/Quellen und Antwortstrings/Indizes erhalten, vier neue didaktische Hashes mit Originalhistorie nachgeführt. App78a22f7becd3545bgezielt16Fälle normal/groß320/1440undechter200%640/320bestanden, alteNotiz/Favorit/Einstellungen/Antworten nachReloaderhalten.225Units/130Release/Typ/Lint/Buildgrün vor letzter reiner Nachweisnachführung. Originale mit tatsächlichemSourceDigest/ReportSHAgebunden. Bisherige96UI-Quittungen bleiben ausdrücklich an1445; dieser neue gemeinsameRenderer benötigt noch vollständige Abnahme nach tatsächlicher Vorgängerintegration und fertigerChronik. Keine bereits bestätigte nativeCI oder Auslieferung dieses Fachfolgestands.
+
 ## Erhaltung, Medienentscheidung und Betriebsgrenzen
 
 | Kategorie | Benannter erhaltener Umfang / verbleibende Grenze |

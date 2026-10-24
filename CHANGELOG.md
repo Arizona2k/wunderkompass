@@ -1,3 +1,7 @@
+## Getrennt vorbereitet · ehrliche Tier-Rückmeldung und eigene Transfergedanken
+
+Auswahlfeedback der Tierwerkstätten benennt die tatsächlich geprüfte Auswahl. Vier offene Aufträge bleiben als freiwillige eigene Überlegung mit fachquellengeprüftem Mustervergleich erhalten. Antworttexte, Indizes, vorhandene Artikel/Medien und persönliche Fortschrittsfelder bleiben kompatibel. Derselbe bestehende Browserguard erkennt den ursprünglichen Okapi-Fehler;16 frühe normale/große/native200%-Fälle samt Altzustand-Reload bestanden. Vollständige finale Basis-/Chronik-/UI-/Native-CI-Abnahme und Auslieferung stehen noch aus; kein neuer Artikel oder empirischer Lernnachweis.
+
 ## Lokal vollständig geprüft · Wissenschaft und sichere Passfortsetzung ·24.10.2026
 
 23erhaltene Wissenschaftsoriginale mit zehn bedienbaren Modellen,13eigenen Erklärgrafiken und69freiwilligen Aufgaben zu Beobachten/Erklären/Übertragen integriert.41fachlich begründete Wissensverbindungen mit tatsächlichen Rückwegen; lesbare mobile/große Modelllegenden. Alle46Wissenschaftskarten eindeutig auf vier Seiten12/12/12/10, getrennte undatierte Vorbereitungschronik und55bestätigte ältere Einträge erhalten. Quellenbasierte Fach-/Modellgegenprüfung und tatsächliche UI-Abnahme; Mengen sind kein Gesamt3.5-Abschluss.

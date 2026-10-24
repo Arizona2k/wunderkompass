@@ -411,7 +411,7 @@
         }
       ],
       "articleSHA256": "2cc2f7045ae2a84a422267e4d854c61d5753e730ac73a119dfd89996a42c69fd",
-      "runtimeTeachingContentSHA256": "b6f87b44b0fc298e9b3b246d7b795e271273113798a6ad8fc80a1bab6722c76a",
+      "runtimeTeachingContentSHA256": "855d0b12f369e5d94da3e993c0c935d2d096a860d8ff20364af9990954e95b63",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -565,7 +565,8 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
-      }
+      },
+      "teachingContentBeforeTransferSelection20261024": "b6f87b44b0fc298e9b3b246d7b795e271273113798a6ad8fc80a1bab6722c76a"
     },
     {
       "id": "animal-okapi",
@@ -682,7 +683,7 @@
         }
       ],
       "articleSHA256": "f67662ec65b7de647c1bc011106788b3b5690f59b5fb65d8f0177e635e0b61f1",
-      "runtimeTeachingContentSHA256": "9cf2c52929c5a10ec60237f9bdf4609c7b5666a05201b833e7c7fffe5807178e",
+      "runtimeTeachingContentSHA256": "bf6873ab700c5b88b55f749fd522efec21b3ca0585b5252cd82e70ba91947a6d",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -836,7 +837,8 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
-      }
+      },
+      "teachingContentBeforeTransferSelection20261024": "9cf2c52929c5a10ec60237f9bdf4609c7b5666a05201b833e7c7fffe5807178e"
     },
     {
       "id": "animal-meerkat",
@@ -1232,7 +1234,7 @@
         }
       ],
       "articleSHA256": "a60ade6188ef742167a6a7d1063f8d9c26cd438541a1dd680e46c1800c23989e",
-      "runtimeTeachingContentSHA256": "99042138b545c44d44f9d05ac1439abe4c4164c2b277fcc0208b50bb8e036d6e",
+      "runtimeTeachingContentSHA256": "cccff75b6e955e79686359591eb3e1d7c08c6556149f78bf164e63b72b3b819f",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -1386,7 +1388,8 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
-      }
+      },
+      "teachingContentBeforeTransferSelection20261024": "99042138b545c44d44f9d05ac1439abe4c4164c2b277fcc0208b50bb8e036d6e"
     },
     {
       "id": "animal-north-american-beaver",
@@ -2894,7 +2897,7 @@
         }
       ],
       "articleSHA256": "32ea2c471fee742343bcb3a4b6b09b6ebf780329353ab87649b8076a56aab025",
-      "runtimeTeachingContentSHA256": "556abd5ef9232e7edf15245a2ba62615554833bf66fffb54c51b399aa6a343e4",
+      "runtimeTeachingContentSHA256": "b0d545a4a7f20b9cf8abc16459bc21a5f445401a044e14d25fec30515360ed0b",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -3053,7 +3056,8 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
-      }
+      },
+      "teachingContentBeforeTransferSelection20261024": "556abd5ef9232e7edf15245a2ba62615554833bf66fffb54c51b399aa6a343e4"
     },
     {
       "id": "animal-kingfisher",
@@ -7026,5 +7030,116 @@
         "scope": "targeted actual native200% plus large text and separate previously-unopened cold offline animal proof, all48 cards; not full regression"
       }
     }
+  },
+  "transferSelectionIntegrity20261024": {
+    "meaning": "Existing WK053 learning correction, separate candidate after PR60; no new species, factual article or empirical learning claim. Selection feedback no longer certifies an unobserved original explanation. Four open prompts retained as voluntary own reflection with a separately disclosed source-based comparison example after a correct selection.",
+    "originalRenderedSourceCommit": "f9141f242eea7259f056de4bb919236566af3f58",
+    "originalRenderedBuild": "1445ba18c4116334",
+    "previousTransfers": {
+      "animal-short-beaked-echidna": {
+        "prompt": "Ist ein Tier mit Stacheln automatisch nahe mit einem europäischen Igel verwandt? Begründe, welche Angaben du zusätzlich brauchst.",
+        "answers": [
+          "Stacheln beweisen eine nahe Verwandtschaft mit europäischen Igeln.",
+          "Ähnliche Stacheln allein zeigen keine nahe Verwandtschaft."
+        ],
+        "correct": 1,
+        "hint": "Vergleiche Merkmale der Fortpflanzung statt nur der Körperoberfläche.",
+        "feedback": [
+          "Ähnliche Stacheln zeigen zunächst nur eine ähnliche Körperoberfläche. Die Fortpflanzung liefert weitere Merkmale für den Vergleich der Tiergruppen.",
+          "Ähnliches Aussehen kann zu unterschiedlichen Tiergruppen gehören."
+        ]
+      },
+      "animal-okapi": {
+        "prompt": "Entwirf zwei verschiedene Fragen: eine zum Aussehen und eine zur Abstammung. Welche Quellen könnten jeweils helfen?",
+        "answers": [
+          "Aussehen und Abstammung brauchen unterschiedliche Belege.",
+          "Eine Beschreibung der Streifen beantwortet jede Frage zur Abstammung."
+        ],
+        "correct": 0,
+        "hint": "Eine Fotobeschreibung und eine Verwandtschaftsuntersuchung beantworten verschiedene Fragen.",
+        "feedback": [
+          "Aussehen und Verwandtschaft sind unterschiedliche Untersuchungsfragen.",
+          "Eine Beschreibung der Streifen beantwortet eine Frage zum Aussehen. Für die Abstammung brauchst du einen passenden Verwandtschaftsbeleg."
+        ]
+      },
+      "animal-ring-tailed-lemur": {
+        "prompt": "Du hörst keinen Ruf. Darfst du schließen, dass keine Verständigung stattfindet? Entwirf eine passende Gegenprüfung.",
+        "answers": [
+          "Ohne hörbaren Ruf können andere Kommunikationswege bestehen.",
+          "Ohne hörbaren Ruf findet sicher keine Verständigung statt."
+        ],
+        "correct": 0,
+        "hint": "Prüfe ausdrücklich, welche Kommunikationswege deine Beobachtung gar nicht erfasst.",
+        "feedback": [
+          "Fehlender Ton schließt andere Informationswege nicht aus.",
+          "Deine Beobachtung erfasst hier nur hörbare Rufe. Duftmarken oder sichtbare Signale können bestehen, ohne dass du einen Ruf hörst."
+        ]
+      },
+      "animal-barn-owl": {
+        "prompt": "Wäre ein einzelnes helles Gesicht auf einem Nachtfoto ein sicherer Artnachweis? Begründe, was noch geprüft werden müsste.",
+        "answers": [
+          "Ein Hinweis auf einem Foto ersetzt keine abgesicherte Artbestimmung.",
+          "Ein helles Gesicht auf einem Nachtfoto ist immer ein vollständiger Artnachweis."
+        ],
+        "correct": 0,
+        "hint": "Unterscheide einen auffälligen Hinweis von mehreren übereinstimmenden Bestimmungsmerkmalen.",
+        "feedback": [
+          "Wiedererkennen ist noch keine vollständige Bestimmung.",
+          "Ein heller Gesichtseindruck ist nur ein Hinweis. Prüfe weitere übereinstimmende Merkmale, bevor du eine sichere Artbestimmung behauptest."
+        ]
+      }
+    },
+    "sourceReads": [
+      {
+        "topic": "animal-short-beaked-echidna",
+        "url": "https://australian.museum/learn/animals/mammals/short-beaked-echidna/",
+        "checkedOn": "2026-10-24",
+        "anchor": "Classification; Reproduction and life cycle",
+        "reading": "Eierlegendes Säugetier; Junge nehmen Milch auf. Ein Körperoberflächenmerkmal allein begründet keine nahe Verwandtschaft."
+      },
+      {
+        "topic": "animal-okapi",
+        "url": "https://animals.sandiegozoo.org/animals/okapi",
+        "checkedOn": "2026-10-24",
+        "anchor": "Classification; ABOUT",
+        "reading": "Beschreibt Beinstreifen und stellt das Okapi zur Giraffenfamilie; eine Bildbeschreibung und ein Fachbeleg zur Verwandtschaft beantworten unterschiedliche Fragen."
+      },
+      {
+        "topic": "animal-ring-tailed-lemur",
+        "url": "https://www.nationalzoo.si.edu/animals/ring-tailed-lemur",
+        "checkedOn": "2026-10-24",
+        "anchor": "Communication",
+        "reading": "Nennt Duftmarken, sichtbare und stimmliche Kommunikation; allein fehlender hörbarer Ruf erfasst nicht alle Kommunikationswege."
+      },
+      {
+        "topic": "animal-barn-owl",
+        "url": "https://www.rspb.org.uk/birds-and-wildlife/barn-owl",
+        "checkedOn": "2026-10-24",
+        "anchor": "How to identify; Key features to look out for",
+        "reading": "Nennt herzförmiges Gesicht, dunkle Augen, helle Unterseite und Rücken-/Flügelzeichnung; mehrere passende Merkmale vergleichen, Bildqualität berücksichtigen."
+      }
+    ],
+    "answerWordingAndCorrectIndicesUnchanged": true,
+    "savedAnswerAndEarnedProgressMigrationRequired": false,
+    "earlyRenderedAcceptance": {
+      "status": "passed targeted, not complete acceptance",
+      "sourceDigest": "211b00ccd2077c8adb19450c84db4f91c3248d7aff86c372003e36fc6773b758",
+      "build": "78a22f7becd3545b",
+      "reportSHA256": "1ff0718929150a92687331eeb6f5cd2df477f4c0ee447fe0f73761925c7f2361",
+      "normalLargeWidths": [
+        320,
+        1440
+      ],
+      "actualNative200Widths": [
+        640,
+        320
+      ],
+      "totalCases": 16,
+      "samePermanentGuardRejectsOriginal1445": true,
+      "oldSavedAnswersNotesFavoritesSettingsPreservedAfterReload": true,
+      "personallyViewed": "All four actual320large task/reflection images; actual200%320 Okapi and lemur reflection viewports. No physical-device or empirical learning claim.",
+      "priorFixtureCorrections": "Initial local preparatory shell lacked node_modules .bin; linked existing frozen installation. Unrelated new animal guard mutations had accidentally entered the solar fixture and were removed from that solar-only case, retaining all original solar assertions. Initial private pass fixture lacked canonical readVoice default; declared it explicitly. Original failed logs/images and helpers retained; these are test-preparation fixes, not product causes."
+    },
+    "fullNativeAndDelivery": "pending after actual preceding delivered basis"
   }
 }
