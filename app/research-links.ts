@@ -1,8 +1,9 @@
 /** Explain each relation; missing geology cards use the existing lexicon. */
-export const RESEARCH_LINK_REASONS:Record<string,{topic:string;next:string;journey:string}>={
+type ResearchTopicLink={topic:string;why:string};
+export const RESEARCH_LINK_REASONS:Record<string,{topic:string;next:string;journey:string;additionalTopics?:ResearchTopicLink[]}>={
  depth:{topic:'Das Erdmagnetfeld hängt mit Bewegungen im flüssigen äußeren Kern zusammen.',next:'Erdbebenwellen liefern Hinweise auf das verborgene Erdinnere.',journey:'Die Reise erklärt die Schichten und ihre Materialien Schritt für Schritt.'},
  volcano:{topic:'Humboldt erforschte Landschaften und Vulkane; seine Fragen verbinden Beobachten und Erklären.',next:'Viele Vulkane liegen an Plattengrenzen. Nicht alle entstehen dort.',journey:'Die Vulkanreise ergänzt das Modell mit echten Landschaften und Modellgrenzen.'},
- quake:{topic:'Schall und Erdbeben transportieren Energie durch Wellen. Das Erdbebenmodell berechnet keinen Schall.',next:'An bewegten Plattengrenzen können Spannungen im Gestein entstehen.',journey:'Die Erdbebenreise erklärt Ursachen und den Unterschied zwischen Herd und Epizentrum.'},
+ quake:{topic:'Schall und Erdbeben transportieren Energie durch Wellen. Das Erdbebenmodell berechnet keinen Schall.',next:'An bewegten Plattengrenzen können Spannungen im Gestein entstehen.',journey:'Die Erdbebenreise erklärt Ursachen und den Unterschied zwischen Herd und Epizentrum.',additionalTopics:[{topic:'invention-seismograph',why:'Erdbebenwellen versetzen den Boden in Bewegung. Der Seismograf zeichnet solche Bodenbewegungen auf. Im Labor erkundest du Herd und Epizentrum, auf der Karte das Messprinzip. Beide Darstellungen sind vereinfachte Modelle und liefern keine echten Messdaten oder Vorhersagen.'}]},
  weather:{topic:'Wetter spielt sich in der Atmosphäre ab; Luft und Wasser wirken dabei zusammen.',next:'Wolken und Niederschlag sind Teil der Wasserwege.',journey:'Die Wetterreise verbindet Beobachtungen mit Erklärungen zu Luft und Wasser.'},
  water:{topic:'Die Karte erweitert das einfache Schema um weitere Wege und Speicher.',next:'Abkühlung feuchter Luft verbindet den Wasserkreislauf mit Wolken.',journey:'Die Wasserreise folgt Wasser zwischen Meer, Luft und Land.'},
  seasons:{topic:'Die Karte erklärt Achsneigung, Tageslänge und Sonnenstand gemeinsam.',next:'Tageslicht und Uhrzeit hängen beide mit der Erde zusammen; Zeitzonen sind menschliche Regeln.',journey:'Die Reise verbindet den Modellvergleich mit Beobachtungen im Jahreslauf.'},
@@ -12,3 +13,9 @@ export const RESEARCH_LINK_REASONS:Record<string,{topic:string;next:string;journ
  tides:{topic:'Die Karte ergänzt das Modell um Küstenform, Wassertiefe und sichere Modellgrenzen.',next:'Mondphasen helfen, die gemeinsame Stellung von Mond und Sonne zu verstehen.',journey:'Die Ozeanreise zeigt Gezeiten als Teil einer größeren Meereswelt.'},
  solar:{topic:'Die Karte erklärt Unterschiede zwischen Sternen, Planeten, Monden und ihren Maßstäben.',next:'Der Mond ist ein Begleiter der Erde; im Phasenlabor vergleichst du Beleuchtung und Bewegung.',journey:'Die vorhandene Mondreise vertieft unser eigenes Planet-Mond-System.'},
 };
+
+/** Both directions use the same authored relation; existing primary links stay. */
+export function researchTopicLinks(id:string,primaryTopic:string):ResearchTopicLink[]{
+ const reasons=RESEARCH_LINK_REASONS[id];
+ return reasons?[{topic:primaryTopic,why:reasons.topic},...(reasons.additionalTopics??[])]:[];
+}
