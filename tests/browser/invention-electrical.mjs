@@ -6,6 +6,11 @@ const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json
 export const electricalTopics=catalog.filter(t=>['invention-battery','invention-generator','invention-transistor'].includes(t.id));
 assert.equal(electricalTopics.length,3);
 const reveal=async d=>{if(!await d.evaluate(e=>e.open))await d.locator(':scope > summary').click();};
+export async function assertLayerAssembly(model){
+ const bounds=await model.locator('[data-layer]').evaluateAll(groups=>groups.map(g=>{const b=g.getBBox(),m=g.transform.baseVal.consolidate()?.matrix;return{layer:Number(g.dataset.layer),top:b.y+(m?.f??0),bottom:b.y+b.height+(m?.f??0)};}));
+ for(let i=1;i<bounds.length;i++)assert.ok(Math.abs(bounds[i-1].top-bounds[i].bottom)<.01,'assembled continuous layers touch without unexplained vertical gaps');
+ return bounds;
+}
 export async function assertLiftDiagram(article){
  const read=async(selector,keys)=>Object.fromEntries(await Promise.all(keys.map(async key=>[key,Number(await article.locator(selector).getAttribute(key))])));
  const cabin=await read('[data-lift-cabin]',['x','y','width','height']),weight=await read('[data-lift-counterweight]',['x','y','width','height']),wheel=await read('[data-lift-sheave]',['cx','cy','r']);
@@ -50,7 +55,7 @@ export async function inventionSourceView(page,{topics,width,shots,engine='chrom
    }else if(t.invention.model==='layers'){
     const up=model.getByRole('button',{name:'Eine Schicht aufbauen',exact:true}),down=model.getByRole('button',{name:'Eine Schicht zurück',exact:true}),cut=model.getByRole('button',{name:/^Mittlere Schicht /});
     const apply=async(n,c)=>{let current=Number(await result.getAttribute('data-invention-result'));while(current<n){await up.click();current++;}while(current>n){await down.click();current--;}if((await cut.getAttribute('aria-pressed')==='true')!==c)await cut.click();assert.equal(await result.getAttribute('data-invention-result'),String(n));assert.equal(await result.getAttribute('data-invention-cut'),String(c));assert.equal(await model.locator('[data-layer]').count(),n);assert.equal(await up.isDisabled(),n===3);assert.equal(await down.isDisabled(),n===0);if(n>=2){assert.equal(await model.locator('[data-layer="2"] rect').count(),c?0:1);assert.equal(await model.locator('[data-layer="2"] path').count(),c?2:0);}states.push({layers:n,cut:c});};
-    for(const [n,c]of [[0,false],[1,false],[2,false],[3,false],[3,true],[2,true],[1,true],[0,true],[2,true],[2,false]])await apply(n,c);
+    for(const [n,c]of [[0,false],[1,false],[2,false],[3,false],[3,true],[2,true],[1,true],[0,true],[2,true],[2,false]]){await apply(n,c);await assertLayerAssembly(model);if(n===0)assert.match(await result.innerText(),/Baue zuerst eine Schicht auf/);}
    }else assert.fail('No actual model-state coverage for '+t.invention.model);
   }
   assert.equal(await learned(),before,'exploring does not award a learned stamp');

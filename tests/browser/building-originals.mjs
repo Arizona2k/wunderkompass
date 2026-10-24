@@ -2,6 +2,25 @@ import assert from 'node:assert/strict';import fs from 'node:fs/promises';import
 const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 export const buildingOriginalTopics=catalog.filter(t=>t.building?.exploration);assert.equal(buildingOriginalTopics.length,8);
 const reveal=async locator=>{if(!await locator.evaluate(e=>e.open))await locator.locator(':scope > summary').click();};
+export async function assertBridgeLoadContact(model){
+ const geometry=await model.locator('svg').evaluate(svg=>{const deck=svg.querySelector('[data-bridge-deck]')??svg.querySelector('path[d="M80 160H520"]'),b=deck.getBBox(),top=b.y-Number(deck.getAttribute('stroke-width'))/2;return [...svg.querySelectorAll('[data-bridge-load],path[stroke="#225f79"]')].map(e=>{const a=e.getBBox();return{gap:top-(a.y+a.height),x:a.x+a.width/2,left:b.x,right:b.x+b.width};});});
+ assert.ok(geometry.length>0);for(const a of geometry){assert.ok(Math.abs(a.gap)<.01,'force arrow meets actual deck loading surface');assert.ok(a.x>a.left&&a.x<a.right,'load acts on the actual deck');}return geometry;
+}
+export async function assertBridgeStructuralPath(model){
+ const result=await model.locator('svg').evaluate(svg=>{const members=[...svg.querySelectorAll('[data-bridge-member]')].map(m=>({node:m,style:getComputedStyle(m)})),paths=[...svg.querySelectorAll('[data-bridge-transport] path')],unsupported=[];for(const [index,p]of paths.entries()){const length=p.getTotalLength();if(!(length>0)){unsupported.push({index,reason:'empty route'});continue;}for(let d=0;d<=length;d+=Math.min(4,length)){const point=p.getPointAtLength(d);if(!members.some(m=>m.style.stroke!=='none'&&m.node.isPointInStroke(point)||m.style.fill!=='none'&&m.node.isPointInFill(point)))unsupported.push({index,d,x:point.x,y:point.y});}}return{paths:paths.length,unsupported,anchors:svg.querySelectorAll('[data-bridge-foundation="anchor"]').length,type:svg.dataset.bridgeType};});
+ assert.ok(result.paths>=2,'last path branches from the loaded span toward both sides');assert.deepEqual(result.unsupported,[],'highlighted load route lies on actual connected members');if(result.type==='cable')assert.equal(result.anchors,2,'both drawn main cable ends have actual anchors');return result;
+}
+export async function bridgeLoadView(page,{width,shots,engine='chromium',native=false}={}){
+ const initial=await page.evaluate(()=>location.hash),views=[];let complete=false;
+ try{await page.evaluate(()=>location.hash='world/topic/building-golden-gate-bridge');const model=page.locator('.model-bridge');await model.waitFor();
+  for(const [type,name]of [['beam','Balken'],['arch','Bogen'],['cable','Hängebrücke']]){const button=model.getByRole('button',{name,exact:true});await button.focus();await page.keyboard.press('Enter');assert.equal(await button.getAttribute('aria-pressed'),'true');
+   for(const load of [1,2,4]){const range=model.getByRole('slider');await range.focus();await page.keyboard.press('Home');for(let i=1;i<load;i++)await page.keyboard.press('ArrowRight');assert.equal(await range.inputValue(),String(load));const contact=await assertBridgeLoadContact(model),structure=await assertBridgeStructuralPath(model);assert.equal(contact.length,load);assert.equal(structure.type,type);views.push({type,load});}
+   const legend=model.locator('.bridge-path-legend');assert.equal(await legend.evaluate(e=>parseFloat(getComputedStyle(e).fontSize)>=16&&e.scrollWidth<=e.clientWidth+1),true,'readable HTML load-path explanation');await model.getByRole('status').waitFor();
+   if(shots){const file=path.join(shots,'bridge-'+engine+'-'+type+'-'+width+(native?'-native':'')+'.png');if(native){await model.locator('svg').scrollIntoViewIfNeeded();await captureNativeViewport(page,file);}else await model.screenshot({path:file,animations:'disabled'});}
+  }
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'bridge model reflows');assert.equal(views.length,9);complete=true;return views;
+ }finally{if(complete)await page.evaluate(hash=>location.hash=hash,initial);}
+}
 export async function assertBuildingLocationMap(article,topic){
  const map=article.locator('.topic-map');assert.equal(await map.locator('svg>image').getAttribute('href'),'/maps/world-context.svg','location context does not reuse unrelated continent teaching numbers');assert.equal(await map.locator('.map-legend button').count(),topic.locations.length);
  for(let i=0;i<topic.locations.length;i++){const button=map.locator('.map-legend button').nth(i);assert.equal(await button.innerText(),(i+1)+' · '+topic.locations[i].label);assert.match(await button.innerText(),/ungefährer Kartenpunkt/);assert.equal(await button.evaluate(e=>e.scrollWidth<=e.clientWidth+1&&parseFloat(getComputedStyle(e).fontSize)>=16),true,'location label wraps at the normal readable size');}
