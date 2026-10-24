@@ -238,7 +238,7 @@
       "finding": "Institutional collection image not copied; metadata alone does not establish reuse rights."
     }
   ],
-  "fullAcceptance": "Confirmed PR56 delivery and controlled base/status integration completed. Current full mandatory local browser/offline acceptance, truthful UI bindings, exact final three-engine CI and native readiness/deployment remain open.",
+  "fullAcceptance": "Original full local Chromium acceptance remains at a6075b8; incomplete exact CI151 attempts remain retained. Only bounded lifecycle diagnostics changed after those jobs ended. Current exact full Chromium/Firefox/WebKit CI, fresh native readiness, expected-head merge, identical merge tree and actual Vercel/browser postflight remain required.",
   "targetedNativeUI": {
     "build": "3b5326fb29f51c11",
     "browser": "154.0.8037.57",
@@ -355,5 +355,80 @@
       "chronicleCases": 34
     },
     "uiDossiers": "Still historical. verify-content correctly rejects old UI build binding before full acceptance; do not renew flags prematurely. Full final checks remain required."
+  },
+  "localCompleteAcceptance": {
+    "build": "1945360e83504fac",
+    "head": "a6075b8542a3784cfbe3ef34ddc75863f692ec64",
+    "sourceDigest": "e824daa043735fd801a65608cdc4434faad5c4c0871ef0eddb35a9948455e490",
+    "originalReportSHA256": "eeb63539a4576b620dac50b82055d24143e8db19858f3b9310a8a5bd57382f38",
+    "seconds": 1866.2601584870001,
+    "checks": 139,
+    "mandatorySuites": [
+      "foundation",
+      "home",
+      "core",
+      "playground",
+      "backup",
+      "challenge",
+      "research",
+      "journeys",
+      "offline",
+      "no-news"
+    ],
+    "errors": [],
+    "electricalViews": 15,
+    "electricalCold": 3,
+    "electricalOffline": 12,
+    "electricalNativeOffline": 6,
+    "reportCountExplanation": "139 instead of previous landscape140 messages: only one fewer repeated Memory wrong pair rejected message in the randomized round; all other unique descriptions retained, with147→150article shell and139–141→139–144hint-bank extent updated. All required groups/assertions retained.",
+    "reviewImages": {
+      "generated": 1109,
+      "retained": 616,
+      "retainedBytes": 70062549,
+      "unchangedLimit": 150000000
+    }
+  },
+  "ci151IncompleteEvidence": {
+    "originalHead": "f369b3a945b0a8cbc82300bbc67243f56b40b3e2",
+    "runId": 39945717089,
+    "attempt1": {
+      "jobId": 120387757007,
+      "conclusion": "cancelled",
+      "meaning": "55-minute ceiling exceeded during final Firefox phase. Complete Chromium succeeded, final Firefox/WebKit did not complete. No final Quality receipt.",
+      "originalJobLogSHA256": "f378f9fa3bfce529340017e7cb99c971570804bd69524af2ef1ced505913b56f",
+      "artifactId": 12500557516,
+      "systemPackageFetches": [
+        {
+          "megabytes": 25.9,
+          "seconds": 436,
+          "kBPerSecond": 59.5
+        },
+        {
+          "megabytes": 93.1,
+          "seconds": 1023,
+          "kBPerSecond": 91.0
+        }
+      ]
+    },
+    "attempt2": {
+      "jobId": 120411030980,
+      "conclusion": "failure",
+      "meaning": "One bounded unchanged retry after proven slow system package downloads. Failed early WebKit navigation at animal-common-cuttlefish/open search because page/context/browser was already closed. Root cause unproven; not classified as fixed or as necessarily external.",
+      "originalJobLogSHA256": "34d181769a01b18b750c3d158e0b0ac854c9b1332853d3175543cb037b63053a",
+      "artifactId": 12501191849
+    },
+    "next": "Existing failure helper now records bounded lifecycle and resource context. All original actions/assertions/timeouts/gates remain. New exact full CI required, no third unchanged retry."
+  },
+  "lifecycleDiagnosticsLocalOnly": {
+    "build": "1945360e83504fac",
+    "sourceDigestBeforeMetadata": "bdb7d364b7109447db25ddafee9c92a67c24de203fa25d8788ded9897425094e",
+    "earlySearchReportSHA256": "1703db30f8f2482bec752bcc44347b0354a7c2b2aff5a9a1d48288e76b135537",
+    "unitProofSHA256": "0dc477162f65052dc25d19b93ac43c9babd0a315469d9173918da11dd6687e2a",
+    "actualBrowser": "154.0.8037.57",
+    "coveredAnimalIds": 48,
+    "actualJourneySourceViews": 128,
+    "chapters": 80,
+    "unitTests": 190,
+    "meaning": "Local targeted Chromium path and lifecycle recorder regression only. Browser crashes and unavailable resource reads are synthetic unit cases, not reproduced product crashes. Product source and194 application build unchanged. No complete current WebKit or causal fix claimed."
   }
 }

@@ -1,3 +1,43 @@
+## Lokal vollständig geprüft · korrigierter Bauwerksstand
+
+Acht erhaltene Bauwerksoriginale mit eigenen Modellen, lesbaren Beschriftungen, erklärten Wissenswegen und der erhaltenen unnummerierten Natural-Earth-Übersicht vollständig lokal geprüft. Neuer PR58-Chroniktext benennt die tatsächlich gelieferten sechs Erfindungen; ein Quellenabgleich im bestehenden Test weist den früheren falschen Text zurück.73Dossiers führen vollständige Fakten-/UI-Historien fort.
+
+Unveränderter4cce1dc/Buildcb1820f262c2be81 bestand allezehnPflichtgruppen in20:36Minuten; gezielter echter Pass-/Modell-/Karten-Liefernachtest als lokale Fixture erfolgreich. Finale native Integrations-CI und tatsächliche Bereitstellung sind noch offen. Frühere Prüfungen bleiben ihren ursprünglichen Ständen zugeordnet.
+
+## Vorbereitet und lokal geprüft · acht erhaltene Bauwerksoriginale
+
+Pont du Gard, Great Zimbabwe, Hōryū-ji, Djenné, Lalibela, Palenque, Angkor Wat und Sydney Opera House erhalten eigene Erklärungen, lesbare beschriftete Modelle, plausible Fehlantworten und gegenseitige Wissenswege. Die erhaltene Natural-Earth-Karte ergänzt die Ortsübersicht. Geeignete Fotoquellen geprüft; technisch nicht verfügbare beziehungsweise nicht ausreichend rechtlich zugeordnete Aufnahmen bleiben unintegriert. Eigene Grafiken sind als solche gekennzeichnet.
+
+Erster vollständiger lokaler8a-Vollbeleg und sämtliche Originale erhalten. Eine danach erkannte falsche Themenzuordnung im neuen PR58-Chroniktext wurde vor Veröffentlichung gegen die tatsächlich ausgelieferten sechs Karten korrigiert. Aktuelle vollständige Schlussabnahme und Integrations-CI bleiben erforderlich; dieser Bauwerksabschnitt ist noch nicht veröffentlicht.
+
+## Tatsächlich bestätigt · sechs Erfindungsoriginale PR58
+
+Quality155 vollständig erfolgreich; regulärer Merge36a849ebd289f7fb83b949e59761d17699e646a1 mit identischem geprüften Baum, tatsächliches Vercel-Deployment und TLS-Produkt-/Passnachtest bestätigt.44ausgelieferte Dateien stimmen bytegenau mit einer unabhängig gesicherten späteren lokalen Rekonstruktion überein, ausdrücklich keinem originalen CI-Artefakt. In diesem regulären Folgeabschnitt als54.Chronikeintrag nachgeführt;53Vorgänger unverändert.
+
+## Lokal vollständig geprüft · sechs erhaltene Erfindungsoriginale
+
+Kühlschrank, Fahrrad, Aufzug, Seismograf,3D-Druck und Nähmaschine mit sechs eigenen Funktionsplänen, zwei qualitativen Modellen, passenden Hinweisen und neun erklärten beidseitigen Wissenswegen integriert. Zwölf plausible Fehlalternativen und unterscheidbare Denkhandlungen; gekoppelte Aufzugsgeometrie, präzise Gewichtskraft und lesbare Lastwegerklärung im betroffenen alten Bauwerksmodell. Vorherige150Themen bis auf neun benannte Rückverweise,180Weltfragen,18Technik-/24Zeitaufgaben und Passzustände erhalten. Eigene Darstellungen klar gekennzeichnet, keine ungeprüften Fotos.
+
+Vollständige lokale Pflichtabnahme am unveränderten2db3961/Build09ff0e92c786c038 erfolgreich:140Meldungen in zehn Pflichtgruppen mit30normalen/6kalten/24Offline-/12nativenOfflineansichten. Erst danach59alteUI-Belege mit Historie erhalten und sechs individuelle Fachdossiers ergänzt. Endgültige Drei-Engine-CI und tatsächliche Auslieferung dieses Sechserstands bleiben offen. Im gleichen regulären Abschnitt bestätigten PR57 als53.Chronikeintrag nachgeführt; alle52Vorgänger unverändert.
+
+## Tatsächlich bestätigt · elektrischer Abschnitt PR57
+
+Finaler6262073 bestand Quality152 mit echten Chromium-/Firefox-/WebKit-Prüfungen und frischer unveränderter Readiness. Normaler Merge92f3591 am23.10.13:30:23UTC mit exakt gleichem Integrationsbaum, Vercel57093790619 um13:30:41UTC und tatsächlicher Online-/Passnachtest erfolgreich. Zusätzlicher44Datei-Bytevergleich gegen späteren kontrollierten lokalen626-Nachbau mit Node24.19, ausdrücklich kein Bytevergleich mit gesichertem CI-Artefakt. Zuvor151am55-Minuten-Limit beziehungsweise unerwartet geschlossener WebKit-Seite fehlgeschlagen; deren Ursache bleibt ungeklärt, keine Dauerbehebung aus152grün behauptet.
+
+## Historischer Stand vor diesen bestätigten Ergebnissen · Original erhalten
+
+## Lokal vollständig geprüft · Batterie, Generator und Transistor
+
+Drei erhaltene Originalmanuskripte mit drei eigenen Funktionszeichnungen, zwei qualitativen Modellen, individuellen Lernhilfen und neun erklärten beidseitigen Wissenswegen integriert. Chemische Energiespeicherung, Induktion und getrennte Steuerung/Versorgung werden nachvollziehbar unterschieden. Die alten147Themen bisaufneun Rückverweise,177Weltfragen,15Technikspiel- und24Zeitspielaufgaben sowie gespeicherte Fortschritte erhalten. Keine neue Speicherstruktur. Eigene Darstellungen als solche gekennzeichnet; keine ungeprüften Fotos übernommen.
+
+Vollständige bestehende lokale Browser-/Offline-/Pass-/Zoomabnahme am Build1945360e83504fac bestanden, danach56alteUI-Belege erhaltend gebunden und drei individuelle elektrische Dossiers ergänzt. Exaktes finales GitHub-CI und tatsächliche elektrische Veröffentlichung bleiben offen. Bestätigte PR56 mit echter Vercelzeit im regulären Produktabschnitt als52.Chronikeintrag nachgeführt,51Vorgänger identisch.
+
+## Tatsächlich bestätigt · Landschafts- und Klimakapitel PR56
+
+PR56 ist nach vollständigem Quality150, frischer unveränderter Routinefreigabe und regulärem test-live-Merge34a0551 mit exakt gleichem Integrationsbaum ausgeliefert. Vercel57081578666 und tatsächlicher Online-Nachtest bestätigen Build8ab431cb1c101629:30Kapitelansichten/60Modellzustände/56Altantwortzustände/44Dateihashes, Fehlerlisten leer. Seeabfluss korrigiert und absichtlich bergauf veränderter Zustand verworfen. Der frühere Chronik-Timeout bleibt als ungeklärter Befund erhalten; neues Grün ist kein Ursachenbeweis.
+
+## Historischer Vorbereitungsstand · Original erhalten
+
 ## Lokal vollständig geprüft · Landschafts- und Klimakapitel
 
 Zehn vorhandene Kapitel verständlicher vertieft, acht rekonstruierte eigene Modelle integriert und zehn schwere Aufgaben auf passende Vergleiche und plausible Fehlvorstellungen ausgerichtet. Präzisere tatsächlich gelesene Quellen ergänzt; Seegeometrie nach visueller Fachprüfung so korrigiert, dass der mögliche Abfluss am Wasserspiegel beginnt und nicht bergauf führt. Die native Länderfeedbackaufnahme erfolgt vor der Navigation zu den zusätzlichen Landschafts-/Klimafällen. Alle16Reisen/80Kapitelidentitäten/240richtigen Antworttexte samt Indizes und bestehende Fortschritte erhalten;70übrige Kapitel/230übrige Aufgaben als Daten unverändert.
