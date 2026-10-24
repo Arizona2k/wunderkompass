@@ -1,3 +1,7 @@
+## Gezielt instrumentiert · tatsächlicher Chromium-Überlauf aus Quality164
+
+Quality164 scheiterte nach7:14 beim Wechsel der Offlineansicht1920→320CSS; frühe native Suche/Cold-Vorbedingung bestanden, vollständige spätere Abnahme nicht erreicht. Originale erhalten. Unveränderte gesamte Offlinefunktion lokal unterChromium154 in128.019s grün, CI verwendete156; kein Ursachebeleg aus dem Lokalgrün. Der bestehende Guard protokolliert nun beim ersten gemessenen Fehler tatsächliche Breite, Dokumentüberlauf und Elementgeometrie. Derselbe strenge Grenzwert, keine Wiederholung/Wartezeit/Unterdrückung; tatsächlich gerenderte800pxGegenprobe und falscher1920Viewport weiter abgewiesen. Ursachenklärung und vollständige native Schlussabnahme offen, keine Produktkorrektur/Auslieferung behauptet.
+
 ## Lokal vollständig geprüft · zusammenhängende Tier-/Modell-/Seismografkorrektur
 
 Der unveränderte dcdcd07555cd92810d5fa127b56f32726e8df085/Quellee0ced/Appa7a4 bestand den kompletten Default in1372.313908428s(22:52,314),148Checks/allezehnGruppen und fünf leere Fehlerklassen.253Units/130Releaseprüfungen/Typ/Lint/Build/static43 bestanden; HEAD/Quelle/alleDistbytes während des gesamten Volltests gleich.3745Original-Dateiidentitäten bytegleich erhalten,1390erzeugte/892behaltene Review-PNG mit90.002.791Byte unter150MB. Erst danach96UI-Strukturquittungen erneuert, sämtliche Fach-/Quellen-/Beziehungs-/UI-Historien erhalten. Neue echte nativePR-CI/Ready/Lieferung stehen aus.
