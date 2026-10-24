@@ -44,7 +44,7 @@
         },
         "9-11": {
           "kind": "explain-a-connection",
-          "task": "Erkläre, warum der Schnabel mehr als ein Werkzeug zum Aufnehmen von Nahrung ist.",
+          "task": "Welche Erklärung zeigt, warum der Schnabel mehr als ein Werkzeug zum Aufnehmen von Nahrung ist?",
           "hint": "Suche in der Beschreibung nach dem Wahrnehmen, nicht nur nach dem Fressen.",
           "feedback": "Der Schnabel hilft bei der Suche nach Beute durch Sinnesinformationen."
         },
@@ -131,7 +131,7 @@
         }
       ],
       "articleSHA256": "a8343374f1564bf8261a19bbb6cde992966b11bc0581666907b4d10ececd3ed4",
-      "runtimeTeachingContentSHA256": "a06cb930538e155f5990aaf11ee357cfa2ae053281cb67627f8fb6b17983def2",
+      "runtimeTeachingContentSHA256": "ce705b34d7638f6c02885e0d1ba4bd2d91cc0e65c3acdc444d2796cc16563d5d",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -294,7 +294,8 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
-      }
+      },
+      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "a06cb930538e155f5990aaf11ee357cfa2ae053281cb67627f8fb6b17983def2"
     },
     {
       "id": "animal-short-beaked-echidna",
@@ -334,7 +335,7 @@
         },
         "9-11": {
           "kind": "explain-a-connection",
-          "task": "Beschreibe die Nahrungssuche als Folge zweier verschiedener Handlungen.",
+          "task": "Welche Beschreibung ordnet zwei verschiedene Schritte der Nahrungssuche richtig?",
           "hint": "Erkläre, warum ein Werkzeug zum Graben noch keine Zunge ersetzt.",
           "feedback": "Öffnen und Aufnehmen sind verschiedene Teilaufgaben der Nahrungssuche."
         },
@@ -411,7 +412,7 @@
         }
       ],
       "articleSHA256": "2cc2f7045ae2a84a422267e4d854c61d5753e730ac73a119dfd89996a42c69fd",
-      "runtimeTeachingContentSHA256": "855d0b12f369e5d94da3e993c0c935d2d096a860d8ff20364af9990954e95b63",
+      "runtimeTeachingContentSHA256": "b5f6d9e12e2e8fa127cb3f88f27e2d7460ee69655187d7e784a839ae4e784fd5",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -566,7 +567,8 @@
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
       },
-      "teachingContentBeforeTransferSelection20261024": "b6f87b44b0fc298e9b3b246d7b795e271273113798a6ad8fc80a1bab6722c76a"
+      "teachingContentBeforeTransferSelection20261024": "b6f87b44b0fc298e9b3b246d7b795e271273113798a6ad8fc80a1bab6722c76a",
+      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "855d0b12f369e5d94da3e993c0c935d2d096a860d8ff20364af9990954e95b63"
     },
     {
       "id": "animal-okapi",
@@ -878,7 +880,7 @@
         },
         "9-11": {
           "kind": "explain-a-connection",
-          "task": "Erkläre, warum Nahrungssuche und Ausschauhalten zusammen nützlich sein können.",
+          "task": "Welche Erklärung verbindet Nahrungssuche und Ausschauhalten sinnvoll?",
           "hint": "Denke daran, wohin sich die Aufmerksamkeit bei der Nahrungssuche richtet.",
           "feedback": "Ausschauhalten kann Gefahren anzeigen, während andere mit Nahrungssuche beschäftigt sind."
         },
@@ -955,7 +957,7 @@
         }
       ],
       "articleSHA256": "e29a5b9acd94ee7d996ea28615f5e5592a4514eaa09bcd4a99211bc20e59ad05",
-      "runtimeTeachingContentSHA256": "70d084a749129d570160f475eee824d6d22b48318338db4d03b609ed096f92c1",
+      "runtimeTeachingContentSHA256": "09a418e1b184be27113eb478f8a30288d8f58bbfd89811466d23da9fbe0ff07d",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -1109,7 +1111,8 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
-      }
+      },
+      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "70d084a749129d570160f475eee824d6d22b48318338db4d03b609ed096f92c1"
     },
     {
       "id": "animal-ring-tailed-lemur",
@@ -1149,7 +1152,7 @@
         },
         "9-11": {
           "kind": "explain-a-connection",
-          "task": "Vergleiche, was Schwanzhaltung und Duftmarken jeweils übertragen können.",
+          "task": "Welcher Vergleich unterscheidet die Verständigung durch Schwanzhaltung und Duftmarken?",
           "hint": "Überlege, welche Sinnesinformation jeder Kommunikationsweg verwendet.",
           "feedback": "Sichtbare Haltung und Duftmarken nutzen unterschiedliche Sinneswege."
         },
@@ -1234,7 +1237,7 @@
         }
       ],
       "articleSHA256": "a60ade6188ef742167a6a7d1063f8d9c26cd438541a1dd680e46c1800c23989e",
-      "runtimeTeachingContentSHA256": "cccff75b6e955e79686359591eb3e1d7c08c6556149f78bf164e63b72b3b819f",
+      "runtimeTeachingContentSHA256": "04ae1631e33ebf59cd92263ea6670aa29a6e83ef6290436004376f6989785e58",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -1389,7 +1392,8 @@
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
       },
-      "teachingContentBeforeTransferSelection20261024": "99042138b545c44d44f9d05ac1439abe4c4164c2b277fcc0208b50bb8e036d6e"
+      "teachingContentBeforeTransferSelection20261024": "99042138b545c44d44f9d05ac1439abe4c4164c2b277fcc0208b50bb8e036d6e",
+      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "cccff75b6e955e79686359591eb3e1d7c08c6556149f78bf164e63b72b3b819f"
     },
     {
       "id": "animal-north-american-beaver",
@@ -1429,13 +1433,13 @@
         },
         "9-11": {
           "kind": "explain-a-connection",
-          "task": "Erkläre die Kette: Damm, langsameres Wasser, veränderter Lebensraum.",
+          "task": "Welche Erklärung verbindet Damm, langsameres Wasser und veränderten Lebensraum?",
           "hint": "Beginne bei der Strömung, bevor du über neue Lebensräume nachdenkst.",
           "feedback": "Langsameres Wasser kann einen Teich und damit andere Lebensbedingungen entstehen lassen."
         },
         "12-14": {
           "kind": "assess-evidence",
-          "task": "Kann ein Damm für manche Arten hilfreich und an anderer Stelle problematisch sein? Benenne, welche Informationen zur Bewertung fehlen.",
+          "task": "Ein Damm kann manchen Arten helfen und anderswo Probleme verursachen. Welche Aussage passt zu einer fairen Bewertung?",
           "hint": "Überlege getrennt an die Tiere im Teich und an mögliche Überflutungsflächen.",
           "feedback": "Eine Veränderung kann für verschiedene Betroffene unterschiedliche Folgen haben."
         }
@@ -1506,7 +1510,7 @@
         }
       ],
       "articleSHA256": "be546e3e74f54bef85ad148eac9ddc781fd4fe2a92937374360756ba96cb00b2",
-      "runtimeTeachingContentSHA256": "bfbbb737d1c594b7ca9d7b9c68791c3a36be5665fe4e029fb8f48301499aceb5",
+      "runtimeTeachingContentSHA256": "bba2908bb274d85152e1415fe1ab0a365077c0098f2dbc6ec18969c6a48cec85",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -1659,7 +1663,8 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
-      }
+      },
+      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "bfbbb737d1c594b7ca9d7b9c68791c3a36be5665fe4e029fb8f48301499aceb5"
     },
     {
       "id": "animal-walrus",
@@ -2004,7 +2009,7 @@
         },
         "9-11": {
           "kind": "explain-a-connection",
-          "task": "Erkläre, warum ein Fuchs in einer Siedlung nicht automatisch ein entflohenes Haustier ist.",
+          "task": "Welche Erklärung zeigt, warum ein Fuchs in einer Siedlung nicht automatisch ein entflohenes Haustier ist?",
           "hint": "Trenne den Aufenthalt nahe Menschen von einer Haltung durch Menschen.",
           "feedback": "Ein Wildtier kann einen Siedlungsraum nutzen, ohne ein Haustier zu sein."
         },
@@ -2081,7 +2086,7 @@
         }
       ],
       "articleSHA256": "534a747ba8ee69ad6585e205c9bcd6022c89096f64526f64360eeb40fa8da91b",
-      "runtimeTeachingContentSHA256": "1a2727d12ae967fed0544245acd6346b0b28aed8e606e8e012eaaab62d04d0ef",
+      "runtimeTeachingContentSHA256": "2552e3ec9cc1e4b78bc1b28cfc7bc16ee703ad7d6d7caec73384844adcbad54e",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -2234,7 +2239,8 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
-      }
+      },
+      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "1a2727d12ae967fed0544245acd6346b0b28aed8e606e8e012eaaab62d04d0ef"
     },
     {
       "id": "animal-raccoon",
@@ -3097,7 +3103,7 @@
         },
         "9-11": {
           "kind": "explain-a-connection",
-          "task": "Erkläre den Unterschied zwischen einer blauen Farbe und einem blauen Farbstoff.",
+          "task": "Welche Erklärung unterscheidet eine blaue Farbe von einem blauen Farbstoff?",
           "hint": "Eine beobachtete Farbe erklärt noch nicht, wie das Licht verändert wird.",
           "feedback": "Feine Strukturen können ein blaues Aussehen erzeugen, ohne blauen Farbstoff vorauszusetzen."
         },
@@ -3178,7 +3184,7 @@
         }
       ],
       "articleSHA256": "306d2b18ee5adc46c62816df33b2e98a91264c60c21914515e06fb9c5f9b8b6b",
-      "runtimeTeachingContentSHA256": "39eba201c4cb5e0cbffafda22ee73f4b9c31e9c7b0db7041076bde7a88a7e407",
+      "runtimeTeachingContentSHA256": "b0a5068fd883278dad1d2236a84ad777a43cf84de478bd03a16cfcd7e74a30b9",
       "selfReview": {
         "implemented": true,
         "structuralChromiumAtPriorF7": true,
@@ -3346,7 +3352,8 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
-      }
+      },
+      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "39eba201c4cb5e0cbffafda22ee73f4b9c31e9c7b0db7041076bde7a88a7e407"
     },
     {
       "id": "animal-ostrich",
@@ -5038,7 +5045,7 @@
         },
         "9-11": {
           "kind": "explain-a-connection",
-          "task": "Erkläre, warum ein Hindernis an einer Stelle für einen Wanderfisch bedeutsam sein kann.",
+          "task": "Welche Erklärung zeigt, warum ein einzelnes Hindernis für einen Wanderfisch bedeutsam sein kann?",
           "hint": "Verfolge gedanklich den zusammenhängenden Weg vor und nach dem Hindernis.",
           "feedback": "Ein unterbrochener Weg kann den Zugang zu einem weiteren Lebensraum verhindern."
         },
@@ -5138,7 +5145,7 @@
         }
       ],
       "articleSHA256": "c6475d84d15a8eb810261b3a28a1fe06ea1f914011b1124041b22608d1f1f72c",
-      "runtimeTeachingContentSHA256": "b4d109ea461f3585fb8f23d9f02d77ca7793bafb0f3c31f340e922fb11d820b8",
+      "runtimeTeachingContentSHA256": "6229bcaa9eed206a3b981a254cadc50fd59eca2d47f3e176c115dac63602c243",
       "sourceAccessLimit": "Earlier canonical/PMC requests were blocked; access gap now resolved through the official DTU author repository. Independent scientific review remains open.",
       "selfReview": {
         "implemented": true,
@@ -5328,7 +5335,8 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
-      }
+      },
+      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "b4d109ea461f3585fb8f23d9f02d77ca7793bafb0f3c31f340e922fb11d820b8"
     },
     {
       "id": "animal-monarch-butterfly",
@@ -7141,5 +7149,106 @@
       "priorFixtureCorrections": "Initial local preparatory shell lacked node_modules .bin; linked existing frozen installation. Unrelated new animal guard mutations had accidentally entered the solar fixture and were removed from that solar-only case, retaining all original solar assertions. Initial private pass fixture lacked canonical readVoice default; declared it explicitly. Original failed logs/images and helpers retained; these are test-preparation fixes, not product causes."
     },
     "fullNativeAndDelivery": "pending after actual preceding delivered basis"
+  },
+  "selectionPromptClarification20261024": {
+    "meaning": "Existing WK053 follow-up before long full acceptance. Nine prompts on eight already prepared animals explicitly ask for selecting/comparing an explanation or assessment, matching the actual two-choice response. This is clarity improvement, not an automatically graded own explanation. No new factual claim, animal, answer wording/index, hint, feedback, source, article or photo; existing four voluntary reflections preserved. Previous source-specific proofs remain historical, new affected UI must be checked before the combined full.",
+    "sourceBase": "9a20726ef8f1edd2436b9d68eea19e2cd2d8b4ba",
+    "previousBuild": "c4afefbc6be73340",
+    "records": [
+      {
+        "id": "animal-platypus",
+        "previousPrompts": {
+          "reason": "Erkläre, warum der Schnabel mehr als ein Werkzeug zum Aufnehmen von Nahrung ist."
+        },
+        "currentPrompts": {
+          "reason": "Welche Erklärung zeigt, warum der Schnabel mehr als ein Werkzeug zum Aufnehmen von Nahrung ist?"
+        },
+        "previousTeachingContentSHA256": "a06cb930538e155f5990aaf11ee357cfa2ae053281cb67627f8fb6b17983def2",
+        "currentTeachingContentSHA256": "ce705b34d7638f6c02885e0d1ba4bd2d91cc0e65c3acdc444d2796cc16563d5d"
+      },
+      {
+        "id": "animal-short-beaked-echidna",
+        "previousPrompts": {
+          "reason": "Beschreibe die Nahrungssuche als Folge zweier verschiedener Handlungen."
+        },
+        "currentPrompts": {
+          "reason": "Welche Beschreibung ordnet zwei verschiedene Schritte der Nahrungssuche richtig?"
+        },
+        "previousTeachingContentSHA256": "855d0b12f369e5d94da3e993c0c935d2d096a860d8ff20364af9990954e95b63",
+        "currentTeachingContentSHA256": "b5f6d9e12e2e8fa127cb3f88f27e2d7460ee69655187d7e784a839ae4e784fd5"
+      },
+      {
+        "id": "animal-meerkat",
+        "previousPrompts": {
+          "reason": "Erkläre, warum Nahrungssuche und Ausschauhalten zusammen nützlich sein können."
+        },
+        "currentPrompts": {
+          "reason": "Welche Erklärung verbindet Nahrungssuche und Ausschauhalten sinnvoll?"
+        },
+        "previousTeachingContentSHA256": "70d084a749129d570160f475eee824d6d22b48318338db4d03b609ed096f92c1",
+        "currentTeachingContentSHA256": "09a418e1b184be27113eb478f8a30288d8f58bbfd89811466d23da9fbe0ff07d"
+      },
+      {
+        "id": "animal-ring-tailed-lemur",
+        "previousPrompts": {
+          "reason": "Vergleiche, was Schwanzhaltung und Duftmarken jeweils übertragen können."
+        },
+        "currentPrompts": {
+          "reason": "Welcher Vergleich unterscheidet die Verständigung durch Schwanzhaltung und Duftmarken?"
+        },
+        "previousTeachingContentSHA256": "cccff75b6e955e79686359591eb3e1d7c08c6556149f78bf164e63b72b3b819f",
+        "currentTeachingContentSHA256": "04ae1631e33ebf59cd92263ea6670aa29a6e83ef6290436004376f6989785e58"
+      },
+      {
+        "id": "animal-north-american-beaver",
+        "previousPrompts": {
+          "reason": "Erkläre die Kette: Damm, langsameres Wasser, veränderter Lebensraum.",
+          "transfer": "Kann ein Damm für manche Arten hilfreich und an anderer Stelle problematisch sein? Benenne, welche Informationen zur Bewertung fehlen."
+        },
+        "currentPrompts": {
+          "reason": "Welche Erklärung verbindet Damm, langsameres Wasser und veränderten Lebensraum?",
+          "transfer": "Ein Damm kann manchen Arten helfen und anderswo Probleme verursachen. Welche Aussage passt zu einer fairen Bewertung?"
+        },
+        "previousTeachingContentSHA256": "bfbbb737d1c594b7ca9d7b9c68791c3a36be5665fe4e029fb8f48301499aceb5",
+        "currentTeachingContentSHA256": "bba2908bb274d85152e1415fe1ab0a365077c0098f2dbc6ec18969c6a48cec85"
+      },
+      {
+        "id": "animal-red-fox",
+        "previousPrompts": {
+          "reason": "Erkläre, warum ein Fuchs in einer Siedlung nicht automatisch ein entflohenes Haustier ist."
+        },
+        "currentPrompts": {
+          "reason": "Welche Erklärung zeigt, warum ein Fuchs in einer Siedlung nicht automatisch ein entflohenes Haustier ist?"
+        },
+        "previousTeachingContentSHA256": "1a2727d12ae967fed0544245acd6346b0b28aed8e606e8e012eaaab62d04d0ef",
+        "currentTeachingContentSHA256": "2552e3ec9cc1e4b78bc1b28cfc7bc16ee703ad7d6d7caec73384844adcbad54e"
+      },
+      {
+        "id": "animal-kingfisher",
+        "previousPrompts": {
+          "reason": "Erkläre den Unterschied zwischen einer blauen Farbe und einem blauen Farbstoff."
+        },
+        "currentPrompts": {
+          "reason": "Welche Erklärung unterscheidet eine blaue Farbe von einem blauen Farbstoff?"
+        },
+        "previousTeachingContentSHA256": "39eba201c4cb5e0cbffafda22ee73f4b9c31e9c7b0db7041076bde7a88a7e407",
+        "currentTeachingContentSHA256": "b0a5068fd883278dad1d2236a84ad777a43cf84de478bd03a16cfcd7e74a30b9"
+      },
+      {
+        "id": "animal-european-eel",
+        "previousPrompts": {
+          "reason": "Erkläre, warum ein Hindernis an einer Stelle für einen Wanderfisch bedeutsam sein kann."
+        },
+        "currentPrompts": {
+          "reason": "Welche Erklärung zeigt, warum ein einzelnes Hindernis für einen Wanderfisch bedeutsam sein kann?"
+        },
+        "previousTeachingContentSHA256": "b4d109ea461f3585fb8f23d9f02d77ca7793bafb0f3c31f340e922fb11d820b8",
+        "currentTeachingContentSHA256": "6229bcaa9eed206a3b981a254cadc50fd59eca2d47f3e176c115dac63602c243"
+      }
+    ],
+    "answersIndicesHintsFeedbackSourcesArticlesPhotosUnchanged": true,
+    "earnedAndSavedSelectionMigrationRequired": false,
+    "earlyRenderedAcceptance": "pending at new exact source/build",
+    "fullNativeAndDelivery": "pending after actual maintenance delivery and base integration"
   }
 }
