@@ -38,3 +38,8 @@ test('journey support proof rejects missing widths, hints, diagrams, duplicate c
  for(const change of [p=>p.hints.pop(),p=>p.hints[1]=p.hints[0],p=>p.widths.pop(),p=>p.diagrams.pop(),p=>p.diagrams[0].keyboard=false,p=>p.diagrams[0].states=0,p=>p.seconds=0]){const p=support(widths);change(p);assert.equal(journeySupportComplete(p,widths),false);}
  assert.equal(journeySupportComplete(support([320,390]),widths),false);
 });
+
+ test('exact early offline worker aggregates once with later core, and mismatched browser or duplicate coverage blocks',()=>{
+ const all=[proof('early-offline',['offline']),proof('foundation',['foundation']),proof('navigation',['core']),proof('learning',['home','research','journeys','playground','backup','challenge']),proof('news-removal',['no-news'])];
+ assert.deepEqual(aggregateQuality(all).selectedSuites,REQUIRED_SUITES);assert.equal(aggregateQuality(all).workers.length,5);assert.equal(aggregateQuality(all).workers.filter(w=>w.suites.includes('offline')).length,1);assert.throws(()=>aggregateQuality([...all,proof('duplicate-cold',['offline'])]),/Duplicate/);const foreign=structuredClone(all);foreign[0].report.browser='different actual engine';assert.throws(()=>aggregateQuality(foreign),/Mixed build\/browser/);
+ });
