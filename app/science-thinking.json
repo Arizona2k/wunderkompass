@@ -1,0 +1,1944 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "science-pressure",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Eine Vorhersage am Modell prüfen.",
+          "example": "Im Modell wirken immer 12 N. Vergleiche die Flächen 1 m² und 6 m².",
+          "prompt": "Was erwartest du bei der größeren Fläche?",
+          "hint": "Unterscheide die gesamte Kraft von der Kraft auf jedem gleich großen Flächenteil.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Der Druck wird kleiner.",
+              "feedback": "12 N verteilen sich auf mehr Fläche: 12 Pa bei 1 m², 2 Pa bei 6 m². Die Gesamtkraft bleibt gleich."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Die gesamte Kraft wird kleiner.",
+              "feedback": "Im Modell bleiben die 12 N eingestellt. Geändert wird die Fläche, nicht die Gesamtkraft."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Der Druck wird größer.",
+              "feedback": "Mehr Fläche verteilt dieselbe Kraft auf mehr gleich große Teile. Auf jeden Teil entfällt weniger Kraft."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Das Zusammenspiel zweier Größen erklären.",
+          "example": "Ein gedachtes zweites Modell hat doppelt so viel Kraft und doppelt so viel Kontaktfläche.",
+          "prompt": "Wie ändert sich der gleichmäßige Druck?",
+          "hint": "Druck ist Kraft geteilt durch Fläche. Betrachte beide Änderungen zusammen.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Er wird doppelt so groß.",
+              "feedback": "Das berücksichtigt nur die größere Kraft. Die ebenfalls verdoppelte Fläche verteilt sie wieder auf doppelt so viele Teile."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Er wird halb so groß.",
+              "feedback": "Das berücksichtigt nur die größere Fläche. Gleichzeitig wirkt aber doppelt so viel Kraft."
+            },
+            {
+              "id": "reasoned",
+              "text": "Er bleibt gleich.",
+              "feedback": "Zähler und Nenner des Quotienten werden beide verdoppelt. Dadurch bleibt die Kraft je Fläche gleich."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Das Prinzip auf einen neuen Fall übertragen.",
+          "example": "Zwei gleich schwere gedachte Fahrzeuge stehen auf demselben weichen Boden. Eines verteilt sein Gewicht über größere Kontaktflächen. Wir vergleichen nur den mittleren Druck.",
+          "prompt": "Welche begründete Vorhersage passt?",
+          "hint": "Trenne die Vorhersage des Druckmodells von einer Garantie über den echten Boden.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Mit größerer Kontaktfläche kann ein Fahrzeug nie mehr einsinken.",
+              "feedback": "Das Modell vergleicht Druck. Es berechnet weder die Tragfähigkeit noch Wassergehalt oder Verformung des Bodens."
+            },
+            {
+              "id": "reasoned",
+              "text": "Größere Kontaktflächen verringern den mittleren Druck; Einsinken hängt noch vom Boden ab.",
+              "feedback": "Bei gleicher Gewichtskraft sinkt Kraft pro Fläche. Wie ein echter Boden nachgibt, erklärt dieses einfache Druckmodell allein nicht."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Größere Kontaktflächen machen das Fahrzeug leichter.",
+              "feedback": "Die Masse und damit die Gewichtskraft bleiben im Vergleich gleich. Nur die Verteilung der Kraft ändert sich."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/air-pressure/"
+      ],
+      "interactive": true
+    },
+    {
+      "id": "science-buoyancy",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Eine Modellvorhersage mit einer Beobachtung vergleichen.",
+          "example": "Der gedachte starre Körper hat 3 kg Masse und 1 Liter Volumen. Das Wasser hat ungefähr 1 kg Masse je Liter.",
+          "prompt": "Was erwartest du im Modell?",
+          "hint": "Vergleiche die Körpermasse mit der Wassermasse, die der ganz eingetauchte Körper verdrängen kann.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Der Körper schwimmt immer, weil Wasser nach oben drückt.",
+              "feedback": "Auftrieb wirkt auch auf einen sinkenden Körper. Entscheidend ist, ob er dessen Gewichtskraft ausgleichen kann."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Er schwebt, weil der Auftrieb beim Eintauchen immer automatisch die Gewichtskraft ausgleicht.",
+              "feedback": "Ein sinkender Körper erfährt Auftrieb, aber nicht automatisch genug für Gleichgewicht. Hier reicht das Gewicht von ungefähr 1 kg verdrängtem Wasser nicht für die Gewichtskraft von 3 kg."
+            },
+            {
+              "id": "reasoned",
+              "text": "Der Körper sinkt.",
+              "feedback": "Ganz eingetaucht verdrängt er nur ungefähr 1 kg Wasser. Dessen Gewicht reicht hier nicht aus, die Gewichtskraft von 3 kg auszugleichen."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Tatsächlichen und maximalen Auftrieb unterscheiden.",
+          "example": "Derselbe Körper hat nun 4 Liter Volumen und schwimmt in Ruhe. Seine Masse bleibt 3 kg.",
+          "prompt": "Wie viel Wasser verdrängt er dabei ungefähr?",
+          "hint": "Im ruhigen Schwimmen gleichen sich Auftrieb und Gewichtskraft aus. Nicht das ganze Körpervolumen muss unter Wasser sein.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "1 Liter, weil 4 minus 3 gleich 1 ist.",
+              "feedback": "Die Differenz beschreibt hier den nicht eingetauchten Volumenanteil. Für den Auftrieb zählt das tatsächlich verdrängte Wasser."
+            },
+            {
+              "id": "reasoned",
+              "text": "3 Liter.",
+              "feedback": "3 Liter dieses Wassers haben etwa 3 kg Masse. So ist die Gewichtskraft ausgeglichen; etwa ein Viertel des Körpervolumens bleibt über Wasser."
+            },
+            {
+              "id": "confusion-a",
+              "text": "4 Liter, weil sein gesamtes Volumen zählt.",
+              "feedback": "4 Liter wäre das verdrängte Volumen bei vollständigem Untertauchen. Der schwimmende Körper taucht hier nur teilweise ein."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Eine Vorhersage unter veränderten Bedingungen begründen.",
+          "example": "Ein unverändertes schwimmendes Modellboot kommt von Süßwasser in dichteres Salzwasser. Wir betrachten ruhiges Gleichgewicht, keine Wellen oder Stabilität.",
+          "prompt": "Welche Änderung passt dazu?",
+          "hint": "Gleiche Bootmasse bedeutet gleiche Gewichtskraft. Ein Liter dichterer Flüssigkeit hat mehr Masse.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Das Boot muss weniger Flüssigkeitsvolumen verdrängen.",
+              "feedback": "Für denselben Auftrieb ist dieselbe verdrängte Flüssigkeitsmasse nötig. Bei größerer Dichte nimmt diese Masse weniger Volumen ein."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Das Boot muss mehr Flüssigkeitsvolumen verdrängen.",
+              "feedback": "Das würde bei dichterem Wasser mehr verdrängte Masse und damit mehr Auftrieb bedeuten, obwohl die Gewichtskraft gleich bleibt."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Der Auftrieb muss im neuen Gleichgewicht größer als die Gewichtskraft bleiben.",
+              "feedback": "Ein dauerhaft größeres Aufwärtsresultat wäre kein ruhiges Gleichgewicht. Beim Schwimmen gleichen sich beide Kräfte aus."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://www.noaa.gov/office-education/outreach-communication/hands-on-science-activities/build-a-boat"
+      ],
+      "interactive": true
+    },
+    {
+      "id": "science-lever",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Eine Veränderung am idealen Hebel vorhersagen.",
+          "example": "Die Last beträgt 12 N im Abstand 1 m vom Drehpunkt. Vergleiche Kraftarme von 1 m und 2 m.",
+          "prompt": "Was erwartest du für die benötigte senkrechte Kraft am längeren Arm?",
+          "hint": "Vergleiche das Produkt aus Kraft und Abstand zum Drehpunkt.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Die Last wird dabei von selbst halb so schwer.",
+              "feedback": "Die Lastkraft bleibt 12 N. Verändert wird der Angriffspunkt der anderen Kraft."
+            },
+            {
+              "id": "reasoned",
+              "text": "Am 2-m-Arm reichen 6 N.",
+              "feedback": "12 N mal 1 m und 6 N mal 2 m ergeben dasselbe Drehmoment. Das gilt hier ohne Eigengewicht und Reibung."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Am 2-m-Arm braucht man 24 N.",
+              "feedback": "Ein längerer Kraftarm vergrößert das Drehmoment derselben Kraft. Für dieselbe Last braucht man deshalb weniger Kraft."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Eine Gleichgewichtsbedingung erklären.",
+          "example": "Zwei gleich große senkrechte Kräfte greifen auf verschiedenen Seiten des Drehpunkts an. Ihre Abstände sind verschieden.",
+          "prompt": "Reicht die Gleichheit der Kräfte für Gleichgewicht?",
+          "hint": "Für die Drehwirkung ist auch der Abstand zum Drehpunkt wichtig.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Nein, auch die Drehmomente müssen gleich groß sein.",
+              "feedback": "Bei gleicher Kraft erzeugt der längere senkrechte Hebelarm das größere Drehmoment. Gleiche Kräfte allein gleichen die Drehwirkungen nicht aus."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Ja, denn gleiche Kräfte bedeuten immer gleiche Drehwirkung.",
+              "feedback": "Das verwechselt Kraft mit Drehmoment. Die Drehwirkung berücksichtigt zusätzlich den Hebelarm."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Ja, die Abstände ändern nur das Aussehen der Zeichnung.",
+              "feedback": "Im Hebelmodell sind die Abstände physikalische Eingaben und haben denselben Maßstab. Sie beeinflussen das Ergebnis."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Eine Grenze des Modells auf einen neuen Fall anwenden.",
+          "example": "Bei einer echten Türklinke drückt jemand schräg statt senkrecht zum Hebel. Das Modell rechnet nur mit senkrechten Kräften.",
+          "prompt": "Welche Aussage ist fachlich vorsichtig?",
+          "hint": "Vergleiche die Voraussetzungen des Zahlenmodells mit der neuen Kraftrichtung.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Gleiche Kraftstärke und derselbe Angriffspunkt garantieren immer dasselbe Drehmoment.",
+              "feedback": "Die Richtung der Kraft wirkt am Drehmoment mit. Gleiche Kraftstärke allein reicht für diesen Vergleich nicht aus."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Jede schräge Kraft erzeugt überhaupt kein Drehmoment.",
+              "feedback": "Eine schräge Kraft kann eine senkrechte Komponente haben. Nicht jede schräge Richtung ist wirkungslos."
+            },
+            {
+              "id": "reasoned",
+              "text": "Der Modellwert lässt sich nicht unverändert auf jede schräge Kraftrichtung übertragen.",
+              "feedback": "Für die Drehwirkung zählt die senkrechte Komponente beziehungsweise der senkrechte Abstand zur Wirkungslinie. Unser Modell hält die Kraftrichtung fest."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://annex.exploratorium.edu/wsw/participants/sfusd_links99-00-math/loril/math%20and%20science%20activities/arm_model.html",
+        "https://openstax.org/books/university-physics-volume-1/pages/10-6-torque"
+      ],
+      "interactive": true
+    },
+    {
+      "id": "science-probability",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Eine Vermutung mit einer Zufallsserie vergleichen.",
+          "example": "Im Modell hat jede der sechs Würfelseiten bei jedem Wurf dieselbe Chance. Starte eine Serie mit sechs Würfen.",
+          "prompt": "Was ist vor der Serie sicher?",
+          "hint": "Unterscheide eine Einzelchance von einer Garantie für die ganze kurze Serie.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Jede Seite kann mehrfach oder gar nicht vorkommen.",
+              "feedback": "Die Einzelchance beträgt jeweils 1/6. Sechs unabhängige Würfe müssen nicht genau eine Sechs oder jede Seite einmal liefern."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Jede Seite kommt genau einmal vor.",
+              "feedback": "Sechs mögliche Seiten und sechs Würfe erzwingen keine gleichmäßige Verteilung. Wiederholungen bleiben möglich."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Es fällt garantiert genau eine Sechs.",
+              "feedback": "Ein erwarteter Anteil ist keine Zusage über eine einzelne kurze Serie. Auch null oder mehrere Sechsen sind möglich."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Unabhängigkeit der Würfe erklären.",
+          "example": "Im gedachten fairen Modell sind die Würfe unabhängig. Bisher sind fünf Sechsen hintereinander gefallen.",
+          "prompt": "Wie groß ist die Chance einer Sechs beim nächsten Wurf?",
+          "hint": "Vergleiche die Regel für einen einzelnen Wurf mit den Ergebnissen der bisherigen Serie. Berücksichtigt dieses Modell frühere Würfe beim nächsten Wurf?",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Kleiner als 1/6, weil andere Seiten jetzt aufholen müssen.",
+              "feedback": "Eine längere Serie wird nicht aktiv ausgeglichen. Der nächste unabhängige Wurf bleibt gleich wahrscheinlich."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Größer als 1/6, weil die Sechs gerade einen Lauf hat.",
+              "feedback": "Die bisherige Häufung ist im fairen unabhängigen Modell kein Einfluss auf den nächsten Wurf."
+            },
+            {
+              "id": "reasoned",
+              "text": "Weiterhin 1/6.",
+              "feedback": "Ein unabhängiger Wurf hat kein Gedächtnis. Die vorangegangene Serie ändert die Einzelchance nicht."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Zwischen Modell und Messung unterscheiden.",
+          "example": "Ein echter unbekannter Würfel wird sehr oft geworfen. Eine Seite kommt auffällig häufig vor.",
+          "prompt": "Was ist daraus eine sinnvolle Forschungsfrage?",
+          "hint": "Unterscheide ein Modell mit fest vorgegebener Fairness von einer Untersuchung eines wirklichen Gegenstands.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Viele Würfe müssen irgendwann exakt gleich viele Ergebnisse jeder Seite ergeben.",
+              "feedback": "Auch in langen endlichen Serien bleiben Unterschiede möglich. Gleiche theoretische Chancen erzwingen keine exakte Gleichverteilung."
+            },
+            {
+              "id": "reasoned",
+              "text": "Passt das Modell gleicher Chancen zu diesem Würfel und dieser Wurfmethode?",
+              "feedback": "Wiederholte größere Stichproben können Hinweise auf Abweichungen geben. Eine einzelne beobachtete Häufung beweist die Ursache noch nicht."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Damit ist bewiesen, dass die nächste Seite genau dieselbe sein wird.",
+              "feedback": "Eine bisherige Häufigkeit legt kein einzelnes nächstes Ergebnis fest. Auch ein möglicherweise ungleicher Würfel bleibt zufällig."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://openstax.org/books/introductory-statistics-2e/pages/3-2-independent-and-mutually-exclusive-events"
+      ],
+      "interactive": true
+    },
+    {
+      "id": "science-angle",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Zwei gezeichnete Zustände vergleichen.",
+          "example": "Stelle am Modell erst 0° und dann 180° ein. Es zeigt Winkel von 0° bis 180°.",
+          "prompt": "Welche Beobachtung passt zu 180°?",
+          "hint": "Beobachte die Richtungen beider Strahlen vom gemeinsamen Scheitel aus.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Die Strahlen zeigen in dieselbe Richtung.",
+              "feedback": "Dieselbe Richtung entspricht im gezeigten Bereich 0°. Bei 180° sind die Richtungen entgegengesetzt."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Die Strahlen stehen rechtwinklig zueinander.",
+              "feedback": "Ein rechter Winkel beträgt 90°. 180° ist doppelt so weit geöffnet."
+            },
+            {
+              "id": "reasoned",
+              "text": "Die Strahlen zeigen in entgegengesetzte Richtungen.",
+              "feedback": "180° ist ein gestreckter Winkel. Die Strahlen liegen auf einer Geraden und zeigen vom Scheitel aus gegeneinander."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Winkelgröße von Schenkellänge unterscheiden.",
+          "example": "In zwei Zeichnungen zeigen die Strahlen jeweils in dieselben Richtungen. In einer Zeichnung sind die sichtbaren Strahlenstücke länger.",
+          "prompt": "Wie unterscheiden sich die Winkelgrößen?",
+          "hint": "Der Winkel beschreibt die Richtungen, nicht die Länge der gezeichneten Linien.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Ohne gleich lange Strahlenstücke kann man überhaupt keinen Winkel vergleichen.",
+              "feedback": "Winkelgrößen lassen sich auch an unterschiedlich langen gezeichneten Schenkeln vergleichen. Entscheidend sind die Richtungen."
+            },
+            {
+              "id": "reasoned",
+              "text": "Die Winkel sind gleich groß.",
+              "feedback": "Verlängerte Strahlenstücke verändern die Öffnung zwischen den Richtungen nicht. Ihre Länge ist kein Winkelmaß."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Der Winkel mit längeren Strahlen ist größer.",
+              "feedback": "Das verwechselt die Länge der sichtbaren Linien mit der Öffnung zwischen ihren Richtungen."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Den dargestellten Winkelbereich auf einen neuen Fall beziehen.",
+          "example": "Jemand möchte eine Drehung von 270° in einer bestimmten Drehrichtung untersuchen.",
+          "prompt": "Reicht dieses Modell unverändert dafür?",
+          "hint": "Unterscheide einen Winkel zwischen Strahlen von einer Drehung mit festgelegter Richtung.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Nein. Es zeigt nur den kleineren Winkel von 0° bis 180°, keine solche gerichtete Drehung.",
+              "feedback": "Zu einer gerichteten 270°-Drehung gehören Richtung und größerer Drehweg. Der hier gezeigte kleinere Winkel zwischen den Endrichtungen wäre 90°."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Ja. Eine Anzeige von 90° beschreibt auch die gesamte gerichtete 270°-Drehung.",
+              "feedback": "90° kann der kleinere Winkel zwischen den Endrichtungen sein. Damit ist der zurückgelegte gerichtete Drehweg noch nicht beschrieben."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Nein, weil Winkel über 180° grundsätzlich unmöglich sind.",
+              "feedback": "Größere Winkel und gerichtete Drehungen sind möglich. Nur der gewählte Modellbereich bildet sie nicht ab."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://nrich.maths.org/curriculum-maps/primary?tab=6"
+      ],
+      "interactive": true
+    },
+    {
+      "id": "science-checksum",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Zwei Eingaben gezielt vergleichen.",
+          "example": "Stelle die Ziffern einmal auf 1 und 4, danach auf 2 und 3. Das Modell addiert nur beide Ziffern.",
+          "prompt": "Welche Beobachtung erwartest du?",
+          "hint": "Vergleiche die Ausgabe, obwohl die beiden Eingabeziffern verändert wurden.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Gleiche Prüfsummen bedeuten, dass die Eingabeziffern gleich geblieben sind.",
+              "feedback": "Gerade diese beiden verschiedenen Eingaben sind ein Gegenbeispiel zur eindeutigen Zuordnung."
+            },
+            {
+              "id": "reasoned",
+              "text": "Beide Eingaben ergeben die Prüfsumme 5.",
+              "feedback": "1 + 4 und 2 + 3 ergeben beide 5. Verschiedene Daten können in diesem einfachen Verfahren dieselbe Prüfsumme haben."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Die zweite Eingabe muss eine andere Prüfsumme haben.",
+              "feedback": "Eine einfache Summe ist nicht eindeutig: Unterschiedliche Zahlenpaare können denselben Wert ergeben."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Ein Gegenbeispiel für eine Behauptung nutzen.",
+          "example": "Eine Person behauptet: Wenn diese einfache Prüfsumme gleich bleibt, wurden die Daten sicher nicht verändert.",
+          "prompt": "Was zeigt dein Vergleich?",
+          "hint": "Es genügt, einen Fall mit verschiedenen Eingaben und gleicher Ausgabe zu finden.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Die Behauptung ist falsch: Die Summe kann trotz veränderter Daten gleich bleiben.",
+              "feedback": "Eine solche gleiche Ausgabe für verschiedene Eingaben heißt Kollision. Deshalb beweist die Übereinstimmung dieser Summe keine unveränderten Daten."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Die Behauptung stimmt, weil beide Summen richtig ausgerechnet wurden.",
+              "feedback": "Richtiges Addieren verhindert keine Kollision. Es geht um die Eindeutigkeit des Verfahrens, nicht um einen Rechenfehler."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Das Verfahren kann dann überhaupt keine Veränderung bemerken.",
+              "feedback": "Viele Änderungen verändern die Summe durchaus. Dass manche unbemerkt bleiben, macht sie nicht für jede Änderung wirkungslos."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Dateiübereinstimmung und fachliche Wahrheit auseinanderhalten.",
+          "example": "Eine heruntergeladene Datei passt zu einem separat vertrauenswürdig bezogenen starken kryptografischen Hash. Das ist ein anderes Verfahren als unsere Ziffernsumme.",
+          "prompt": "Welche Aussage unterscheidet den Dateivergleich von einer fachlichen Prüfung?",
+          "hint": "Überlege, ob die Kontrolle von Dateibytes auch den Inhalt einer Aussage überprüft.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Ein passender Hash beweist zusätzlich, dass jede Aussage in der Datei wahr ist.",
+              "feedback": "Der technische Vergleich von Dateibytes prüft keine fachlichen Aussagen. Auch eine unveränderte Datei kann einen inhaltlichen Fehler enthalten."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Ein passend bezogener starker Hash ist für einen Integritätsvergleich grundsätzlich unbrauchbar.",
+              "feedback": "Ein geeigneter starker Hash kann gerade beim Integritätsvergleich helfen. Dafür braucht man eine passende unabhängig vertrauenswürdig bezogene Referenz; die Wahrheit des Inhalts bleibt eine andere Frage."
+            },
+            {
+              "id": "reasoned",
+              "text": "Der Dateivergleich hilft bei der Übereinstimmung mit der Referenz; die Aussagen muss man getrennt prüfen.",
+              "feedback": "Ein geeigneter unabhängig bezogener Hash hilft, die Datei mit der Referenz zu vergleichen. Ob ihre Aussagen stimmen, braucht weiterhin fachliche Quellenprüfung."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://csrc.nist.gov/glossary/term/checksum",
+        "https://csrc.nist.gov/pubs/fips/180-4/upd1/final"
+      ],
+      "interactive": true
+    },
+    {
+      "id": "science-pendulum",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Eine Längenänderung am Modell untersuchen.",
+          "example": "Vergleiche bei kleiner gedachter Auslenkung die Fadenlängen 0,5 m und 2 m. Die Fallbeschleunigung bleibt gleich.",
+          "prompt": "Wie verändert sich die berechnete Schwingungszeit?",
+          "hint": "Die Schwingungszeit wächst mit der Quadratwurzel der Länge. Vergleiche zuerst das Verhältnis der Längen.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Sie wird doppelt so groß.",
+              "feedback": "Die Länge wird vervierfacht. Die Quadratwurzel von vier ist zwei: Die ideale Schwingungszeit verdoppelt sich."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Sie wird viermal so groß.",
+              "feedback": "Die Schwingungszeit ist nicht direkt proportional zur Länge. In der Modellformel steht die Quadratwurzel der Länge."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Sie bleibt gleich, weil das Bild stillsteht.",
+              "feedback": "Das Bild ist ein Standbild, aber der berechnete Wert beschreibt eine ideale Schwingungszeit. Bildbewegung und Modellrechnung sind verschieden."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Die Rolle von Modellannahmen erklären.",
+          "example": "Zwei ideale Fadenpendel haben gleich lange Fäden, aber unterschiedlich schwere kleine Pendelkörper. Luftwiderstand bleibt vernachlässigt und die Auslenkung klein.",
+          "prompt": "Was sagt die verwendete Formel über ihre Schwingungszeiten?",
+          "hint": "Prüfe, welche Größen in T = 2π√(L/g) vorkommen.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Das schwerere Pendel schwingt grundsätzlich schneller.",
+              "feedback": "Eine größere Gewichtskraft allein reicht für diese Folgerung nicht aus. In der idealen Kleinwinkelnäherung kürzt sich die Masse heraus."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Bei verschiedener Masse kann man mit dieser Formel überhaupt keine Zeit bestimmen.",
+              "feedback": "Die Masse ist keine Eingabe dieser idealen Kleinwinkelformel. Länge und Fallbeschleunigung reichen innerhalb ihrer Voraussetzungen für den berechneten Wert."
+            },
+            {
+              "id": "reasoned",
+              "text": "Sie sind unter diesen Annahmen gleich.",
+              "feedback": "In dieser idealen Kleinwinkelformel kommen Länge und Fallbeschleunigung vor, nicht die Masse des Pendelkörpers."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Eine Näherung auf ihre Voraussetzungen prüfen.",
+          "example": "Ein echtes Pendel wird fast waagerecht ausgelenkt. Jemand möchte die Kleinwinkelformel dafür als exakten Messwert verwenden.",
+          "prompt": "Welche Rückmeldung passt?",
+          "hint": "Vergleiche die neue Auslenkung mit der ausdrücklich genannten Voraussetzung der Formel.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Man kann die große Auslenkung in der Formel einfach als längeren Faden einsetzen.",
+              "feedback": "Die Fadenlänge wird bis zur Kugelmitte gemessen. Sie ist nicht die Länge des zurückgelegten Bogens; eine große Auslenkung darf nicht als anderer Faden eingesetzt werden."
+            },
+            {
+              "id": "reasoned",
+              "text": "Die Näherung für kleine Auslenkungen ist dafür kein exakter Zeitwert.",
+              "feedback": "Bei großen Auslenkungen beschreibt die Kleinwinkelnäherung die tatsächliche Zeit nicht exakt. Eine passende weiterführende Rechnung oder Messung ist nötig."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Der Modellwert ist exakt, solange der Faden gleich lang bleibt.",
+              "feedback": "Die Fadenlänge ist wichtig, aber hier wird zusätzlich die Voraussetzung der kleinen Auslenkung verletzt."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://openstax.org/books/university-physics-volume-1/pages/15-4-pendulums"
+      ],
+      "interactive": true
+    },
+    {
+      "id": "science-resonance",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Antriebstakte im Modell vergleichen.",
+          "example": "Vergleiche im Modell die Frequenzverhältnisse 0,5 und 1. Die vorgegebene Dämpfung bleibt gleich.",
+          "prompt": "Wo erwartest du die größere stationäre Antwort?",
+          "hint": "Betrachte, was du im Modell veränderst und was gleich bleibt. Vergleiche dann die berechneten Antworten für die beiden ausgewählten Werte.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Bei Verhältnis 0,5 muss die Antwort größer sein, weil der Takt langsamer ist.",
+              "feedback": "Langsamer heißt nicht automatisch größere Antwort. Im verwendeten gedämpften Modell ist die Antwort bei diesen beiden Werten nahe der Eigenfrequenz größer."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Die Antworten sind immer gleich, weil dieselbe Dämpfung eingestellt ist.",
+              "feedback": "Gleiche Dämpfung hält nicht die Antwort konstant. Das Frequenzverhältnis beeinflusst die stationäre Antwort ebenfalls."
+            },
+            {
+              "id": "reasoned",
+              "text": "Bei Verhältnis 1 ist die berechnete Antwort größer.",
+              "feedback": "Mit der hier gewählten Dämpfung liegt die Antwort bei 1 höher als bei 0,5. Das qualitative Wellenbild hat keine echte Längen- oder Belastungseinheit."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Ein abgetastetes Maximum von einem exakten Maximum unterscheiden.",
+          "example": "Der Regler springt in Schritten von 0,1. Unter diesen Werten ist die Antwort bei 1 am größten.",
+          "prompt": "Beweist das, dass das kontinuierliche Maximum genau bei 1 liegt?",
+          "hint": "Zwischen zwei angebotenen Reglerwerten liegen weitere mögliche Zahlenwerte.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Nein, deshalb sind sämtliche angezeigten Rechenwerte falsch.",
+              "feedback": "Die Werte an den gewählten Stellen können richtig sein. Nur eine Folgerung über die exakte Lage des Maximums wäre zu stark."
+            },
+            {
+              "id": "reasoned",
+              "text": "Nein. Ein größerer Wert kann zwischen den angebotenen Stufen liegen.",
+              "feedback": "Beim verwendeten Dämpfungsmaß 0,15 liegt das kontinuierliche Amplitudenmaximum ungefähr bei 0,977. Die grobe Auswahl trifft diesen Punkt nicht genau."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Ja. Der höchste auswählbare Messpunkt ist immer das exakte Maximum.",
+              "feedback": "Das verwechselt die Auswahl von Stichprobenwerten mit einer vollständigen Untersuchung aller Zwischenwerte."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Die Übertragbarkeit eines vereinfachten Modells beurteilen.",
+          "example": "Jemand liest die Wellenhöhe im Modell ab und erklärt damit eine echte Brücke für sicher.",
+          "prompt": "Welche Begründung spricht gegen diesen Schluss?",
+          "hint": "Prüfe, ob Geometrie, Baustoffe, Belastungen und mehrere Schwingungsformen der Brücke im Modell enthalten sind.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Das einfache Modell berechnet keine reale Brückensicherheit.",
+              "feedback": "Es zeigt die stationäre Antwort eines idealisierten gedämpften Oszillators. Eine reale Brücke und ihre Sicherheit benötigen andere Daten und wesentlich umfassendere Untersuchungen."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Jede kleine gezeichnete Welle beweist ausreichende Sicherheit.",
+              "feedback": "Die qualitative Wellenhöhe ist kein Sicherheitsnachweis und kein gemessener Bewegungswert einer bestimmten Brücke."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Der im Lernmodell gewählte Dämpfungswert gilt automatisch für jedes Bauwerk.",
+              "feedback": "Die gewählte Dämpfung ist eine Modellannahme. Reale Bauwerke können andere Eigenschaften und mehrere Schwingungsformen haben; ihre Daten müssen gesondert untersucht werden."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://www.exploratorium.edu/snacks/resonant-rings",
+        "https://openstax.org/books/university-physics-volume-1/pages/15-6-forced-oscillations",
+        "https://phys.libretexts.org/Bookshelves/Classical_Mechanics/Variational_Principles_in_Classical_Mechanics_(Cline)/03:_Linear_Oscillators/3.06:_Sinusoidally-driven_linearly-damped_linear_oscillator"
+      ],
+      "interactive": true
+    },
+    {
+      "id": "science-fractals",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Eine Wiederholungsregel beobachten.",
+          "example": "Das Modell beginnt mit einem ausgefüllten Dreieck. Bei jedem Schritt bleibt in jedem bisherigen Dreieck eine Gruppe aus drei kleineren Dreiecken.",
+          "prompt": "Wie viele ausgefüllte kleine Dreiecke erwartest du nach zwei Schritten?",
+          "hint": "Wende dieselbe Verdreifachung zweimal an.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "2.",
+              "feedback": "Die Zahl der Schritte ist nicht die Zahl der Dreiecke. Jeder Schritt erzeugt aus jedem Teilstück drei weitere."
+            },
+            {
+              "id": "reasoned",
+              "text": "9.",
+              "feedback": "Aus 1 werden 3, daraus 9 ausgefüllte Dreiecke. Die Regel wird auf jedes bisherige Dreieck erneut angewendet."
+            },
+            {
+              "id": "confusion-a",
+              "text": "6.",
+              "feedback": "Das würde in jedem Schritt nur drei Dreiecke hinzufügen. Hier wird die Regel auf alle schon vorhandenen Teilstücke angewendet."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Ein endliches Bild vom mathematischen Grenzbegriff unterscheiden.",
+          "example": "Der Regler endet nach vier Schritten. Das Bild zeigt dann 81 ausgefüllte Dreiecke.",
+          "prompt": "Hat der Bildschirm damit schon unendlich viele Wiederholungen dargestellt?",
+          "hint": "Unterscheide die ausgeführte Zahl von Schritten von einer gedachten unbegrenzten Fortsetzung.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Nein. Es sind genau vier gezeichnete Schritte.",
+              "feedback": "Das Modell zeigt eine endliche Näherung. Die mathematische Betrachtung kann die Regel gedanklich unbegrenzt fortsetzen; das Bild tut das nicht."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Ja. Ein kleines Dreieck zählt bereits als unendlich viele Schritte.",
+              "feedback": "Ein kleines gezeichnetes Teilstück ersetzt keine tatsächlich ausgeführten unendlich vielen Wiederholungen."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Nach vier Schritten darf die Regel mathematisch nicht mehr weitergehen.",
+              "feedback": "Der Regler begrenzt die dargestellten Schritte. Die mathematische Regel kann unabhängig von dieser Darstellungsgrenze weitergedacht werden."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Eine Ähnlichkeit zur Natur begrenzen.",
+          "example": "Eine verzweigte Naturform erinnert an ein Fraktal. Die Ähnlichkeit ist nur in einem begrenzten Größenbereich sichtbar.",
+          "prompt": "Welche Aussage ist angemessen?",
+          "hint": "Eine Modellähnlichkeit muss nicht auf allen Maßstäben exakt gelten.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Ähnliche Verzweigungen beweisen, dass die Wiederholung bis zu beliebig kleinen Größen exakt weitergeht.",
+              "feedback": "Eine begrenzte beobachtete Ähnlichkeit beweist keine unbegrenzte exakte Wiederholung. Die physikalische Naturform ist kein automatisch identischer mathematischer Grenzfall."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Aus einer einzigen groben Zeichnung lässt sich schon jede feinere Naturstruktur genau berechnen.",
+              "feedback": "Die grobe Modellzeichnung legt nicht sämtliche Einzelheiten einer wirklichen Naturform fest. Eine passende Ähnlichkeit muss in ihrem Bereich geprüft und begrenzt werden."
+            },
+            {
+              "id": "reasoned",
+              "text": "Fraktale Ideen können Strukturen beschreiben; die Naturform ist dadurch nicht exakt das gezeichnete mathematische Fraktal.",
+              "feedback": "Natürliche Strukturen können über bestimmte Maßstäbe ähnliche Muster zeigen. Material, Wachstum und kleinste Strukturen begrenzen die mathematische Idealisierung."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://plus.maths.org/how-compute-dimension-fractal"
+      ],
+      "interactive": true
+    },
+    {
+      "id": "science-encryption",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Eine feste Verschiebung ausprobieren.",
+          "example": "Das Modell verschiebt jeden Buchstaben von WELT im lateinischen Alphabet um drei Plätze. Nach Z geht es bei A weiter.",
+          "prompt": "Welcher Modelltext entsteht?",
+          "hint": "Verfolge jeden Buchstaben einzeln mit derselben Verschiebung.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "ZHOW.",
+              "feedback": "W→Z, E→H, L→O und T→W. Jeder Buchstabe wird nach derselben Regel ersetzt."
+            },
+            {
+              "id": "confusion-a",
+              "text": "ZELT.",
+              "feedback": "Das verschiebt nur den ersten Buchstaben. Im Modell gilt dieselbe Regel für alle vier Buchstaben."
+            },
+            {
+              "id": "confusion-b",
+              "text": "TBIQ.",
+              "feedback": "Das entspricht einer Verschiebung um drei in die andere Richtung. Hier wird vorwärts verschoben."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Eine Schwäche der einfachen Ersetzung erklären.",
+          "example": "Bei derselben Caesar-Verschiebung wird ein Buchstabe immer auf denselben anderen Buchstaben abgebildet.",
+          "prompt": "Welche Information bleibt dadurch in längeren Texten erkennbar?",
+          "hint": "Betrachte, ob gleiche Eingabebuchstaben nach der Ersetzung weiterhin gleich aussehen.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Jede Wiederholung desselben Buchstabens bekommt automatisch ein neues Zeichen.",
+              "feedback": "Bei einer festen Caesar-Verschiebung gilt immer dieselbe Zuordnung. Ein wiederholter Buchstabe bleibt auch im Ergebnis wiederholt."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Die Verschiebung entfernt automatisch alle Wortmuster.",
+              "feedback": "Eine feste Ersetzung verändert Buchstabennamen, beseitigt aber solche Wiederholungs- und Häufigkeitsmuster nicht."
+            },
+            {
+              "id": "reasoned",
+              "text": "Wiederholungen und Häufigkeiten gleicher Buchstaben bleiben als Muster erhalten.",
+              "feedback": "Die Buchstaben heißen anders, aber gleiche ursprüngliche Buchstaben werden weiterhin gleich ersetzt. Das kann beim Untersuchen des Texts helfen."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Ein Lernmodell von einem geeigneten Schutzverfahren unterscheiden.",
+          "example": "Eine Person möchte mit dem Caesar-Modell private Passwörter verschicken.",
+          "prompt": "Welche Empfehlung folgt aus den Modellgrenzen?",
+          "hint": "Überlege, wie viele feste Verschiebungen jemand ausprobieren könnte.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Ein kurzer Modelltext beweist, dass alle Verschlüsselungsverfahren unsicher sind.",
+              "feedback": "Die Schwäche dieses einfachen Verfahrens lässt sich nicht auf sämtliche anderen Verfahren übertragen."
+            },
+            {
+              "id": "reasoned",
+              "text": "Dafür ein geeignetes modernes Schutzverfahren verwenden; dieses Lernmodell ist nicht sicher.",
+              "feedback": "Bei 26 Buchstaben gibt es nur 26 Verschiebungen einschließlich der unveränderten. Das Modell erklärt eine Idee, schützt aber keine privaten Nachrichten zuverlässig."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Die Verschiebung 25 macht das Verfahren unknackbar.",
+              "feedback": "25 ist nur eine weitere der wenigen möglichen Verschiebungen. Eine größere Zahl in diesem Bereich schafft keine sichere Verschlüsselung."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://csrc.nist.gov/Projects/pec/fhe"
+      ],
+      "interactive": true
+    },
+    {
+      "id": "science-friction",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Eine Bewegungsänderung vorhersagen.",
+          "example": "Eine angeschobene Kiste gleitet auf einer waagerechten rauen Fläche. Nach dem Anschieben wird sie nicht mehr weiter angetrieben.",
+          "prompt": "Was erwartest du durch die Gleitreibung?",
+          "hint": "Achte darauf, welche Flächen gegeneinander gleiten und welche Kraft danach noch antreibt.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Die Kiste wird langsamer.",
+              "feedback": "Die Gleitreibung wirkt der relativen Gleitbewegung entgegen. Ohne weiteren Antrieb bremst sie die Kiste."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Die Kiste wird durch Reibung immer schneller.",
+              "feedback": "In diesem Beispiel gibt es nach dem Anschieben keinen weiteren Antrieb. Die Gleitreibung bremst die Relativbewegung."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Die Reibung verschwindet sofort, weil niemand mehr schiebt.",
+              "feedback": "Die Flächen berühren sich weiterhin und gleiten gegeneinander. Dafür ist kein fortgesetztes Schieben nötig."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Bremsen und Halt durch Reibung unterscheiden.",
+          "example": "Beim Gehen drückt der stehende Fuß den Boden nach hinten. Er rutscht dabei nicht nach hinten weg.",
+          "prompt": "Welche Erklärung passt zum Vorwärtskommen?",
+          "hint": "Vergleiche die drohende Relativbewegung an der Kontaktfläche mit der Bewegung des ganzen Körpers.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Reibung kann grundsätzlich nur jedes Vorwärtskommen verhindern.",
+              "feedback": "Das verwechselt Körperbewegung mit der Relativbewegung am Kontakt. Zum Abstoßen ist ausreichender Halt am Boden hilfreich."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Reibung drückt den Fuß dabei nach hinten, weil sich der Körper nach vorn bewegt.",
+              "feedback": "Hier würde der Fuß den Boden relativ nach hinten schieben. Die Haftreibung auf den Fuß wirkt diesem drohenden Rutschen entgegen und kann nach vorn wirken."
+            },
+            {
+              "id": "reasoned",
+              "text": "Haftreibung kann den Fuß nach vorn unterstützen und so das Abstoßen ermöglichen.",
+              "feedback": "Reibung wirkt gegen das relative Rutschen der Kontaktflächen. Sie muss deshalb nicht immer gegen die Bewegungsrichtung des ganzen Körpers wirken."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Zwei gegensätzliche Anforderungen vergleichen.",
+          "example": "Ein Fahrrad braucht am Reifen genügend Halt. Im Lager soll die Bewegung möglichst wenig durch Reibung behindert werden.",
+          "prompt": "Welche Folgerung passt?",
+          "hint": "Frage bei jeder Kontaktstelle, welche Bewegung erwünscht ist.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Mehr Reibung ist an jeder Stelle immer besser.",
+              "feedback": "Stärkere Reibung im Lager erschwert die Bewegung und kann mehr Energie in Wärme übertragen."
+            },
+            {
+              "id": "reasoned",
+              "text": "Je nach Stelle kann mehr oder weniger Reibung nützlich sein.",
+              "feedback": "Reifenhaftung und Lagerreibung erfüllen unterschiedliche Rollen. Ein pauschales Urteil über alle Kontaktstellen hilft hier nicht."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Am ganzen Fahrrad sollte jede Reibung vollständig verschwinden.",
+              "feedback": "Ohne Halt am Reifen würden Abstoßen, Lenken und Bremsen beeinträchtigt. Die Lager sind ein anderer Fall."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://spark.iop.org/friction-between-solid-surfaces"
+      ],
+      "interactive": false
+    },
+    {
+      "id": "science-surface-tension",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Eine Oberflächenbeobachtung beschreiben.",
+          "example": "Ein kleines leichtes Metallstück wird vorsichtig auf eine ruhige Wasseroberfläche gelegt. Die Oberfläche ist sichtbar eingedellt, das Stück bleibt zunächst oben.",
+          "prompt": "Was zeigt diese Beobachtung?",
+          "hint": "Unterscheide einen Oberflächeneffekt von einer Änderung des Materials des Metallstücks.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Das Metall hat nun eine geringere Dichte als Wasser, weil es oben liegt.",
+              "feedback": "Dass ein kleines Stück an der Oberfläche bleibt, beweist keine Dichteänderung des Metalls. Die Oberflächenspannung kann bei geeigneter Form an der Kraftbilanz beteiligt sein."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Wasser besitzt deshalb eine feste Haut aus einem anderen Stoff.",
+              "feedback": "Die Wasseroberfläche ist keine zusätzliche feste Folie. Die Hautvorstellung ist nur eine begrenzte Analogie für molekulare Kräfte."
+            },
+            {
+              "id": "reasoned",
+              "text": "Die Wasseroberfläche kann das kleine Stück unter passenden Bedingungen mittragen.",
+              "feedback": "Die Oberflächenspannung wirkt an der Kontaktlinie mit. Das ist keine Behauptung, dass jedes Metallstück oder jede Form so getragen wird."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Eine Modellvorstellung begrenzen.",
+          "example": "Wasser wird manchmal mit einer gespannten elastischen Haut verglichen.",
+          "prompt": "Welche Grenze hat dieser Vergleich?",
+          "hint": "Frage, ob eine eigene Hautschicht aus festem Material vorhanden sein muss.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Weil es keine feste Haut gibt, kann es auch keine Oberflächenspannung geben.",
+              "feedback": "Die Wirkung benötigt keine feste Haut. Molekulare Wechselwirkungen können eine Oberflächenspannung verursachen."
+            },
+            {
+              "id": "reasoned",
+              "text": "Die Wirkung beruht auf Molekülkräften; eine feste Haut ist damit nicht gemeint.",
+              "feedback": "An der Oberfläche wirken die Wechselwirkungen der Wassermoleküle anders als im Inneren. Die Analogie ersetzt diese Erklärung nicht durch eine wirkliche Folie."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Nur Moleküle an der Oberfläche ziehen sich an; im Inneren wirken solche Kräfte überhaupt nicht.",
+              "feedback": "Molekulare Wechselwirkungen gibt es auch im Inneren. An der Oberfläche unterscheidet sich die Umgebung der Moleküle; daraus folgt nicht die völlige Abwesenheit der Kräfte im Inneren."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Eine Beobachtung auf ihren Geltungsbereich prüfen.",
+          "example": "Ein kleines Metallstück bleibt oben. Jemand folgert: Dann müsste eine gleich geformte, viel größere schwere Metallplatte ebenso getragen werden.",
+          "prompt": "Ist dieser Schluss ausreichend begründet?",
+          "hint": "Vergleiche Gewichtskraft und die an der Kontaktlinie wirkenden Oberflächenkräfte.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Nein. Ein kleiner Versuch garantiert nicht das gleiche Verhalten bei anderer Größe und Masse.",
+              "feedback": "Gewicht, Form, Benetzung und Kontaktlinie bestimmen gemeinsam den Fall. Die Oberflächenspannung trägt nicht beliebig schwere Gegenstände."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Der kleine Versuch beweist, dass die Dichte beim Eintauchen von Metall grundsätzlich keine Rolle spielt.",
+              "feedback": "Ein Oberflächeneffekt widerlegt nicht die Bedeutung von Masse, Volumen und Auftrieb in anderen Situationen. Die ganze Kraftbilanz muss zum betrachteten Gegenstand passen."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Gleiche Form genügt, damit Gewicht und Oberflächenkräfte bei jeder Größe im selben Verhältnis bleiben.",
+              "feedback": "Formähnlichkeit allein garantiert dieses Kräfteverhältnis nicht. Bei größerer Masse und veränderter Kontaktlinie muss die Kraftbilanz erneut geprüft werden."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://openstax.org/books/college-physics-2e/pages/11-8-cohesion-and-adhesion-in-liquids-surface-tension-and-capillary-action"
+      ],
+      "interactive": false
+    },
+    {
+      "id": "science-capillarity",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Eine Veränderung enger Räume vorhersagen.",
+          "example": "Zwei saubere benetzende Röhrchen stehen in derselben Flüssigkeit. Sonst sind die Bedingungen gleich; eines ist enger.",
+          "prompt": "Wo erwartest du unter diesen Bedingungen den höheren kapillaren Anstieg?",
+          "hint": "Vergleiche das Verhältnis von Kontaktumfang und angehobener Flüssigkeitsmenge.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "In beiden beliebig hoch.",
+              "feedback": "Die zunehmende Gewichtskraft der Flüssigkeit begrenzt den Anstieg. Kapillarität ist keine unbegrenzte Pumpe."
+            },
+            {
+              "id": "reasoned",
+              "text": "Im engeren Röhrchen.",
+              "feedback": "Bei gleichen Flüssigkeits- und Benetzungsbedingungen kann die Flüssigkeit im engeren Röhrchen höher steigen. Die Gewichtskraft begrenzt den Anstieg."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Im weiteren Röhrchen, weil dort mehr Wasser hineinpasst.",
+              "feedback": "Mehr möglicher Inhalt ist nicht dasselbe wie eine größere Steighöhe. Der Kapillareffekt hängt auch von den Oberflächenkräften ab."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Molekülkräfte und Schwerkraft gemeinsam betrachten.",
+          "example": "In einem engen benetzenden Zwischenraum steigt Wasser zunächst und kommt dann zur Ruhe.",
+          "prompt": "Was erklärt die begrenzte Höhe?",
+          "hint": "Betrachte sowohl die Oberflächeneffekte als auch das Gewicht der angehobenen Flüssigkeit.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Die Gewichtskraft begrenzt den durch Oberflächenkräfte möglichen Anstieg.",
+              "feedback": "Adhäsion, Kohäsion und Oberflächenspannung sind beteiligt. Mit wachsender Flüssigkeitssäule wächst deren Gewicht; der Anstieg setzt sich nicht unbegrenzt fort."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Oben hören alle Molekülkräfte plötzlich auf.",
+              "feedback": "Die Kräfte verschwinden nicht einfach an einer bestimmten Höhe. Entscheidend ist das Gleichgewicht der Wirkungen."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Das Wasser muss unabhängig von der Röhrchenweite überall denselben Pegel wie außerhalb erreichen.",
+              "feedback": "In einem engen benetzenden Röhrchen kann der Pegel gerade höher liegen als außerhalb. Oberflächenkräfte und Gewicht bestimmen das Gleichgewicht gemeinsam."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Eine Teilerklärung von einer vollständigen Erklärung unterscheiden.",
+          "example": "Kapillarität kann Wasser in engen Räumen anheben. Jemand erklärt damit allein den Wassertransport bis in die Krone jedes hohen Baums.",
+          "prompt": "Welche Rückfrage ist nötig?",
+          "hint": "Die bloße Existenz eines Effekts zeigt noch nicht, dass er jede beobachtete Höhe erklärt.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Keine, weil Kapillarität Flüssigkeit grundsätzlich unendlich hoch hebt.",
+              "feedback": "Die Schwerkraft begrenzt den Anstieg. Eine unbegrenzte Steighöhe ist gerade keine Eigenschaft dieses Effekts."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Eine erreichte Röhrchenhöhe beweist ohne weitere Daten die Transporthöhe in jedem Baum.",
+              "feedback": "Eine einzelne Modellbeobachtung legt nicht die Eigenschaften und Transportwege jedes Baums fest. Für hohe Pflanzen reicht Kapillarität allein nicht als vollständige Erklärung."
+            },
+            {
+              "id": "reasoned",
+              "text": "Reicht die kapillare Steighöhe dafür aus, oder wirken weitere Transportmechanismen mit?",
+              "feedback": "Kapillarität allein erklärt den Wassertransport in hohen Pflanzen nicht vollständig. Der begrenzte Anstieg darf nicht als vollständige Baumtransportrechnung ausgegeben werden."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://www.usgs.gov/water-science-school/science/capillary-action-and-water"
+      ],
+      "interactive": false
+    },
+    {
+      "id": "science-diffusion",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Eine Veränderung der Verteilung vorhersagen.",
+          "example": "Ein Stoff ist anfangs auf einer Seite eines ruhenden Flüssigkeitsmodells stärker konzentriert. Die Teilchen können sich ungeordnet bewegen.",
+          "prompt": "Welche Entwicklung ist ohne weitere Hindernisse zu erwarten?",
+          "hint": "Unterscheide den Weg eines einzelnen Teilchens von der Änderung einer ganzen Verteilung.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Die Konzentrationsunterschiede können sich mit der Zeit ausgleichen.",
+              "feedback": "Ungeordnete Teilchenbewegung kann insgesamt zu einem Nettofluss von höherer zu niedrigerer Konzentration führen. Ein einzelnes Teilchen muss dabei keinem gezielten Weg folgen."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Alle Teilchen ziehen gemeinsam auf einem geraden Weg zur leeren Seite.",
+              "feedback": "Die einzelnen Wege bleiben ungeordnet. Der Nettoeffekt verlangt keine gemeinsame Zielrichtung aller Teilchen."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Die Teilchen müssen warten, bis die Flüssigkeit sichtbar gerührt wird.",
+              "feedback": "Diffusion kann auch ohne sichtbares Rühren stattfinden. Rühren wäre ein zusätzlicher Transportmechanismus."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Gleichverteilung und Stillstand unterscheiden.",
+          "example": "Nach längerer Zeit ist der Stoff im Modell gleichmäßig verteilt.",
+          "prompt": "Was bedeutet das für die einzelnen Teilchen?",
+          "hint": "Gleiche mittlere Konzentrationen beschreiben eine Verteilung und nicht die Geschwindigkeit jedes Teilchens.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Sie stehen nun alle still.",
+              "feedback": "Die Konzentrationsverteilung kann gleich bleiben, obwohl sich die Teilchen weiter bewegen. Gleichverteilung bedeutet keinen mikroskopischen Stillstand."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Sie bewegen sich nun alle gemeinsam zur Mitte.",
+              "feedback": "Eine gleichmäßige Verteilung schafft kein gemeinsames Ziel in der Mitte. Die Wege bleiben ungeordnet."
+            },
+            {
+              "id": "reasoned",
+              "text": "Sie bewegen sich weiterhin ungeordnet, ohne anhaltenden Nettofluss in eine bevorzugte Richtung.",
+              "feedback": "Im Gleichgewicht setzt sich die mikroskopische Bewegung fort. Im Mittel gleichen sich die Transporte in entgegengesetzte Richtungen aus."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Die Voraussetzung für einen Transportweg prüfen.",
+          "example": "Eine Trennschicht liegt zwischen zwei verschieden konzentrierten Flüssigkeiten. Sie lässt den betrachteten Stoff nicht hindurch.",
+          "prompt": "Reicht das Konzentrationsgefälle für Diffusion dieses Stoffs durch die Schicht?",
+          "hint": "Ein Konzentrationsunterschied schafft noch keinen passierbaren Weg.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Nein, weil ein Konzentrationsgefälle jede Teilchenbewegung anhält.",
+              "feedback": "Die Teilchen können sich auf beiden Seiten weiter bewegen. Verhindert ist hier der Weg durch die Trennschicht."
+            },
+            {
+              "id": "reasoned",
+              "text": "Nein. Für einen Transport durch die Schicht muss dieser Stoff sie auch passieren können.",
+              "feedback": "Diffusion setzt einen möglichen Weg voraus. Eine für den betrachteten Stoff undurchlässige Barriere kann das Gefälle erhalten."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Ja. Ein Konzentrationsgefälle macht jede Barriere durchlässig.",
+              "feedback": "Die Durchlässigkeit hängt von Stoff und Barriere ab. Ein Gefälle beseitigt diese Eigenschaft nicht automatisch."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://www.exploratorium.edu/snacks/agar-cell-diffusion"
+      ],
+      "interactive": false
+    },
+    {
+      "id": "science-chromatography",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Die Trennung einer Mischung vorhersagen.",
+          "example": "Ein dunkler wasserlöslicher Stiftstrich wird mit einem passenden Laufmittel auf Papier untersucht. Der Stift kann mehrere Farbstoffe enthalten.",
+          "prompt": "Was könnte beim Wandern sichtbar werden?",
+          "hint": "Überlege, ob verschiedene Bestandteile gleich stark mit Papier und Laufmittel wechselwirken müssen.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Der ursprüngliche schwarze Farbstoff wird dabei chemisch in neue Farbstoffe umgewandelt.",
+              "feedback": "Im beschriebenen Trennversuch werden bereits vorhandene Bestandteile einer Mischung unterschiedlich transportiert. Das ist keine behauptete chemische Herstellung neuer Farbstoffe."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Jeder dunkle Strich muss exakt dieselben drei Farben ergeben.",
+              "feedback": "Eine dunkle Farbe kann aus unterschiedlichen Bestandteilen bestehen. Die genaue Mischung ist nicht durch den Farbeindruck allein festgelegt."
+            },
+            {
+              "id": "reasoned",
+              "text": "Mehrere verschieden weit gewanderte Farbstoffbereiche.",
+              "feedback": "Bestandteile können unterschiedlich mit dem Laufmittel mitwandern und am Papier zurückgehalten werden. So kann eine vorher gemischte Farbe getrennt sichtbar werden."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Die Rolle beider Phasen erklären.",
+          "example": "Zwei Farbstoffe werden vom selben Laufmittel mitgenommen, bleiben aber unterschiedlich stark am Papier zurück.",
+          "prompt": "Warum können ihre Wege verschieden lang sein?",
+          "hint": "Betrachte Transport mit dem Laufmittel und Zurückhalten am Papier gemeinsam.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Weil das Papier jeden Stoff mit derselben Geschwindigkeit festhalten muss.",
+              "feedback": "Verschiedene Stoffe können unterschiedlich mit dem Papier wechselwirken. Gerade deshalb ist eine Trennung möglich."
+            },
+            {
+              "id": "reasoned",
+              "text": "Weil die Wechselwirkungen mit Laufmittel und Papier unterschiedlich sind.",
+              "feedback": "Die Verteilung zwischen bewegter und stationärer Phase beeinflusst die Wanderung. Sie hängt nicht nur von einer einzigen sichtbaren Farbeigenschaft ab."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Weil nur der schwerere Farbstoff grundsätzlich nach unten fällt.",
+              "feedback": "Das ist hier keine reine Sortierung nach Gewicht. Löslichkeit und Wechselwirkungen mit den beiden Phasen sind entscheidend."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Die Aussagekraft eines Vergleichs begrenzen.",
+          "example": "Zwei unbekannte Tinten zeigen in einem Laufmittel ähnlich aussehende Flecken.",
+          "prompt": "Was lässt sich vorsichtig folgern?",
+          "hint": "Ein ähnliches Trennergebnis ist ein Hinweis. Überlege, ob es die genaue chemische Identität schon eindeutig festlegt.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Die Ähnlichkeit ist ein Hinweis, aber noch kein eindeutiger Nachweis derselben chemischen Mischung.",
+              "feedback": "Verschiedene Stoffe können in einem einzelnen Trennversuch ähnlich erscheinen. Geänderte Bedingungen oder weitere Untersuchungen können den Vergleich ergänzen."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Die Tinten müssen deshalb aus derselben Flasche stammen.",
+              "feedback": "Eine ähnliche Zusammensetzung bestimmt die einzelne Herkunftsflasche nicht eindeutig. Selbst gleiche Bestandteile allein beweisen diese Herkunft nicht."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Ähnliche Flecken beweisen unter beliebigen Bedingungen immer genau dieselben Stoffe.",
+              "feedback": "Das überträgt einen begrenzten Beobachtungsvergleich zu weit. Laufmittel und Trennbedingungen wirken am Ergebnis mit."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://www.exploratorium.edu/snacks/separation-anxiety"
+      ],
+      "interactive": false
+    },
+    {
+      "id": "science-heat-transfer",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Einen Wärmetransportweg erkennen.",
+          "example": "Ein Metalllöffel steckt in warmer Suppe. Auch der anfangs kühlere Griff wird wärmer. Wir betrachten den Weg durch das feste Metall.",
+          "prompt": "Welcher Mechanismus beschreibt diesen Weg?",
+          "hint": "Frage, ob Metallstücke als Strömung zum Griff wandern müssen.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Nur Wärmestrahlung ist der beschriebene Weg durch das feste Metall.",
+              "feedback": "Hier wird ausdrücklich der Weg im festen Metall betrachtet: Wärmeleitung. Strahlung kann zusätzlich zwischen Oberflächen wirken, ist aber nicht dieser beschriebene Mechanismus."
+            },
+            {
+              "id": "reasoned",
+              "text": "Wärmeleitung im Metall.",
+              "feedback": "Energie wird im Material weitergegeben. Das ist vom Transport durch eine Flüssigkeitsströmung und von Wärmestrahlung zu unterscheiden."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Im festen Metall strömt warme Flüssigkeit bis in den Griff.",
+              "feedback": "Für die beschriebene Wärmeleitung im festen Metall muss keine Flüssigkeit vom Löffelende zum Griff strömen. Energieübertragung und solcher Materialtransport sind verschiedene Vorgänge."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Verschiedene Wege des Wärmetransports unterscheiden.",
+          "example": "Ein warmer Gegenstand gibt auch durch Wärmestrahlung Energie ab.",
+          "prompt": "Muss dabei Materie als Strömung zum anderen Gegenstand wandern?",
+          "hint": "Vergleiche die elektromagnetische Übertragung mit einer Flüssigkeits- oder Luftströmung.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Nein. Strahlung ist ein anderer Übertragungsweg als eine Materieströmung.",
+              "feedback": "Wärmestrahlung benötigt keinen mitwandernden Luft- oder Flüssigkeitsstrom. Mehrere Übertragungswege können gleichzeitig vorkommen."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Ja. Jede Energieübertragung ist immer derselbe Luftstrom.",
+              "feedback": "Das setzt Wärmestrahlung fälschlich mit Konvektion gleich. Beide sind unterschiedliche Mechanismen."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Nein, deshalb kann Strahlung überhaupt keine Energie übertragen.",
+              "feedback": "Strahlung kann Energie übertragen. Dass kein Materiestrom nötig ist, macht sie nicht wirkungslos."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Dämmung auf einen neuen Fall übertragen.",
+          "example": "Zwei anfangs gleich warme Gefäße stehen in einem kühleren Raum. Eines ist besser gedämmt. Es gibt in beiden keine Wärmequelle.",
+          "prompt": "Welche Vorhersage passt?",
+          "hint": "Unterscheide einen langsameren Energieaustausch von einer eigenen Energiequelle.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Die Dämmung heizt das Gefäß von selbst immer weiter auf.",
+              "feedback": "Eine Dämmung ist keine Energiequelle. Ohne weitere Zufuhr schafft sie keine beliebige Erwärmung."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Beide müssen unabhängig von ihrer Dämmung gleich schnell abkühlen.",
+              "feedback": "Die Dämmung beeinflusst gerade die Geschwindigkeit des Energieaustauschs. Gleiche Anfangstemperatur erzwingt keinen gleichen Verlauf."
+            },
+            {
+              "id": "reasoned",
+              "text": "Die bessere Dämmung kann das Abkühlen verlangsamen, erzeugt aber keine neue Wärme.",
+              "feedback": "Dämmung verringert den Wärmetransport. Sie ersetzt keine Heizung und hält reale Gefäße nicht für immer auf unveränderter Temperatur."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://bsesc.energy.gov/energy-basics/heat-flow"
+      ],
+      "interactive": false
+    },
+    {
+      "id": "science-elasticity",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Verformung und Rückkehr beobachten.",
+          "example": "Ein gedachter elastischer Körper wird innerhalb seines passenden Belastungsbereichs gedehnt und danach entlastet.",
+          "prompt": "Welche Beobachtung passt zu elastischer Verformung?",
+          "hint": "Vergleiche die Form vor der Belastung und nach dem vollständigen Entlasten.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Der Körper kehrt in seine ursprüngliche Form zurück.",
+              "feedback": "Die Rückkehr nach dem Entlasten kennzeichnet elastisches Verhalten im betrachteten Bereich. Das gilt nicht bei beliebig großer Belastung."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Jede gedehnte Form bleibt danach zwangsläufig unverändert gedehnt.",
+              "feedback": "Eine bleibende Verformung wäre ein anderer Fall. Im beschriebenen elastischen Bereich ist gerade die Rückkehr gemeint."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Es reicht, dass der Körper weich ist; die Form nach dem Entlasten ist unwichtig.",
+              "feedback": "Elastisches Verhalten wird hier durch die Rückkehr nach dem Entlasten beschrieben. Der bloße Eindruck weich ersetzt diese Prüfung nicht."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Elastizität von linearer Proportionalität unterscheiden.",
+          "example": "Ein Material kehrt nach Entlastung zurück. Jemand folgert: Doppelte Kraft erzeugt bei jeder Belastung exakt doppelte Dehnung.",
+          "prompt": "Folgt das allein aus der Rückkehr?",
+          "hint": "Rückkehr der Form und ein linearer Zusammenhang sind zwei verschiedene Eigenschaften.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Ja. Rückkehr beweist ein unbegrenzt gültiges lineares Gesetz.",
+              "feedback": "Die Rückkehr nach Entlastung sagt allein noch nicht, dass Kraft und Dehnung bei jeder Größe proportional sind."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Ein nichtlinearer Zusammenhang bedeutet automatisch eine bleibende Verformung.",
+              "feedback": "Nichtlineares Verhalten und bleibende Verformung sind nicht dasselbe. Ein Material kann elastisch zurückkehren, ohne im betrachteten Bereich exakt proportional zu reagieren."
+            },
+            {
+              "id": "reasoned",
+              "text": "Nein. Ein proportionaler Zusammenhang gilt nur in einem passenden linearen Bereich.",
+              "feedback": "Elastisch bedeutet nicht automatisch unter allen Bedingungen linear. Große Dehnungen können außerdem bleibende Verformung oder Bruch auslösen."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Eine Modellgrenze bei neuer Belastung beachten.",
+          "example": "Ein Feder-Modell wurde nur bei kleinen Belastungen geprüft. Jemand möchte seine lineare Formel für eine sehr große Dehnung verwenden.",
+          "prompt": "Was muss vor dieser Übertragung geprüft werden?",
+          "hint": "Vergleiche den geprüften Bereich mit dem neuen Belastungsbereich.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Nichts, weil eine richtige Formel immer ohne Grenzen gilt.",
+              "feedback": "Auch eine richtige Modellformel hat Voraussetzungen und einen Geltungsbereich."
+            },
+            {
+              "id": "reasoned",
+              "text": "Ob das Material dort noch elastisch und annähernd linear reagiert.",
+              "feedback": "Ein aus kleinen Belastungen gewonnenes lineares Modell ist keine Garantie für große Dehnungen. Material und Belastungsbereich gehören zur Aussage."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Nur, ob die kleine Belastung oft wiederholt wurde; dann gilt die Formel für jede beliebige Dehnung.",
+              "feedback": "Wiederholte passende Beobachtungen im kleinen Bereich beweisen keinen unbegrenzten Geltungsbereich. Die deutlich größere Dehnung bleibt gesondert zu prüfen."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://openstax.org/books/college-physics-ap-courses-2e/pages/5-3-elasticity-stress-and-strain"
+      ],
+      "interactive": false
+    },
+    {
+      "id": "science-symmetry",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Eine Spiegelung vergleichen.",
+          "example": "Ein gedachter Punkt liegt 2 Kästchen links von einer senkrechten Spiegelachse. Seine Höhe bleibt beim Spiegeln an dieser Achse gleich.",
+          "prompt": "Wo liegt sein Spiegelpunkt?",
+          "hint": "Miss den Abstand zur Achse und achte auf die Seite der Achse.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "2 Kästchen weiter links auf derselben Seite.",
+              "feedback": "Das wäre eine Verschiebung auf derselben Seite. Die Spiegelung führt auf die andere Seite der Achse."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Irgendwo oberhalb der Achse.",
+              "feedback": "Eine senkrechte Spiegelachse vertauscht hier links und rechts. Die Höhe des Punkts bleibt gleich."
+            },
+            {
+              "id": "reasoned",
+              "text": "2 Kästchen rechts von der Achse auf derselben Höhe.",
+              "feedback": "Bei der Spiegelung liegt der entsprechende Punkt im gleichen senkrechten Abstand auf der anderen Seite der Spiegelachse."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Das ganze Muster statt nur den Umriss prüfen.",
+          "example": "Ein quadratischer Umriss besitzt eine Mittellinie. Innen ist aber nur links ein farbiger Punkt eingezeichnet.",
+          "prompt": "Ist das vollständige Bild an dieser senkrechten Mittellinie spiegelsymmetrisch?",
+          "hint": "Prüfe auch die inneren Zeichen und Farben nach der Spiegelung.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Ja, weil eine beliebige gerade Linie automatisch Spiegelachse ist.",
+              "feedback": "Eine Gerade ist nur dann eine Spiegelachse dieses Bildes, wenn die zugehörige Spiegelung das ganze betrachtete Muster auf sich abbildet."
+            },
+            {
+              "id": "reasoned",
+              "text": "Nein. Rechts fehlt der passende gespiegelte Punkt.",
+              "feedback": "Ein symmetrischer Umriss genügt nicht. Auch alle für das Bild betrachteten inneren Merkmale müssen zur Spiegelung passen."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Ja, weil nur die äußere Kante zählt.",
+              "feedback": "Bei der Symmetrie des ganzen Bildes gehören auch die inneren Merkmale zum Vergleich."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Eine erkannte Ähnlichkeit angemessen übertragen.",
+          "example": "Zwei gedachte Blattzeichnungen sehen ungefähr ähnlich aus. Eine Zeichnung ist jedoch an der Mittellinie ungleich.",
+          "prompt": "Was ist die begründete Unterscheidung?",
+          "hint": "Ähnlichkeit zweier Bilder und exakte Spiegelsymmetrie eines einzelnen Bildes sind verschiedene Fragen.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Ähnlichkeit allein beweist keine exakte Spiegelsymmetrie.",
+              "feedback": "Für exakte Symmetrie müssen die passenden Bildteile bei der Spiegelung zusammenfallen. Ungefähre Ähnlichkeit ist dafür kein vollständiger Nachweis."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Zwei ähnlich aussehende Hälften sind automatisch in jedem Detail spiegelgleich.",
+              "feedback": "Ungefähre Ähnlichkeit bedeutet nicht, dass bei einer Spiegelung alle betrachteten Punkte und Merkmale genau zusammenfallen."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Ein Bild ohne exakte Spiegelachse kann keinem anderen Bild ähnlich sein.",
+              "feedback": "Auch unsymmetrische Bilder können sich ähneln. Die beiden Eigenschaften sind nicht gleichbedeutend."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://nrich.maths.org/problems/symmetry-challenge?tab=teacher"
+      ],
+      "interactive": false
+    },
+    {
+      "id": "science-cell",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Zwei Strukturen einer Pflanzenzelle unterscheiden.",
+          "example": "Die eigene Zeichnung zeigt bei einer Pflanzenzelle eine äußere Zellwand und eine davon verschiedene Zellmembran.",
+          "prompt": "Welche Aussage passt zu dieser Unterscheidung?",
+          "hint": "Achte darauf, ob zwei verschiedene Strukturen benannt werden.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Die Zellmembran ist immer identisch mit der Zellwand.",
+              "feedback": "In der Pflanzenzelle sind Membran und Wand unterscheidbar. Ihre Funktionen dürfen nicht gleichgesetzt werden."
+            },
+            {
+              "id": "reasoned",
+              "text": "Zellwand und Zellmembran sind verschiedene Strukturen.",
+              "feedback": "Die Zellmembran begrenzt die Zelle und ist am geregelten Stoffaustausch beteiligt. Die Zellwand ist eine zusätzliche stützende Struktur."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Die Zellwand ist nur ein anderer Name für den Zellkern.",
+              "feedback": "Der Zellkern und die Zellwand haben unterschiedliche Lage und Aufgaben. Eine zusätzliche Wand ist kein Zellkern."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Gemeinsame und verschiedene Zellmerkmale erklären.",
+          "example": "Pflanzliche und tierische Zellen haben eine Zellmembran. Typische tierische Zellen besitzen keine Zellwand wie eine Pflanzenzelle.",
+          "prompt": "Was folgt daraus?",
+          "hint": "Ein gemeinsames Merkmal bedeutet nicht, dass alle weiteren Strukturen gleich sind.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Beide haben eine Membran; die zusätzliche Zellwand ist kein Merkmal jeder tierischen Zelle.",
+              "feedback": "Zelltypen teilen bestimmte Grundstrukturen und unterscheiden sich in anderen. Die Pflanzenzeichnung ist kein unveränderliches Schema für jede Zelle."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Eine tierische Zelle ohne Pflanzenzellwand hat überhaupt keine Begrenzung.",
+              "feedback": "Die Zellmembran begrenzt auch die tierische Zelle. Das Fehlen einer zusätzlichen Pflanzenzellwand beseitigt nicht die Membran."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Weil beide eine Membran haben, müssen alle ihre Strukturen identisch sein.",
+              "feedback": "Ein gemeinsames Merkmal beweist nicht die Gleichheit aller anderen Strukturen."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Eine Zellzeichnung auf einen anderen Zelltyp beziehen.",
+          "example": "Eine Bakterienzelle besitzt keinen membranumhüllten Zellkern wie die gezeichnete Pflanzenzelle.",
+          "prompt": "Welche Schlussfolgerung ist richtig?",
+          "hint": "Prüfe, ob ein Beispiel für einen Zelltyp eine Vorschrift für alle Zelltypen ist.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Ohne diesen Zellkern kann grundsätzlich keine Zelle leben.",
+              "feedback": "Das verallgemeinert ein Merkmal eukaryotischer Zellen auf alle Zelltypen. Bakterien sind ein Gegenbeispiel."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Eine Bakterienzelle ist deshalb ein kleines mehrzelliges Tier.",
+              "feedback": "Bakterien sind keine Tiere. Ein anderer Zellaufbau begründet diese Einordnung nicht."
+            },
+            {
+              "id": "reasoned",
+              "text": "Bakterien sind trotzdem lebende Zellen; ihr Aufbau unterscheidet sich.",
+              "feedback": "Prokaryotische Bakterienzellen unterscheiden sich von eukaryotischen Pflanzen- und Tierzellen. Das Fehlen eines membranumhüllten Kerns macht sie nicht zu Nichtzellen."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://www.genome.gov/genetics-glossary/Cell",
+        "https://www.genome.gov/genetics-glossary/Cell-Membrane-Plasma-Membrane"
+      ],
+      "interactive": false
+    },
+    {
+      "id": "science-fusion",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Zwei Kernvorgänge unterscheiden.",
+          "example": "Im heißen dichten Inneren der Sonne wird durch Kernreaktionen insgesamt Wasserstoff zu Helium umgewandelt.",
+          "prompt": "Welcher Grundgedanke passt zur Fusion?",
+          "hint": "Unterscheide das Zusammenführen leichter Kerne vom Spalten schwerer Kerne.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Leichte Atomkerne werden in Kernreaktionen zusammengeführt.",
+              "feedback": "Fusion verbindet leichte Kerne zu schwereren. Der tatsächliche solare Reaktionsweg umfasst mehrere Schritte; die Zeichnung ist ein vereinfachter Überblick."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Schwere Kerne werden ausschließlich in kleinere Teile gespalten.",
+              "feedback": "Das beschreibt den Grundgedanken der Kernspaltung. Er ist von Kernfusion zu unterscheiden."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Es ändern sich nur die Abstände unveränderter Moleküle.",
+              "feedback": "Fusion betrifft Atomkerne. Eine bloße Änderung von Molekülabständen erklärt diesen Kernvorgang nicht."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Chemisches Brennen von der Sonnenenergiequelle unterscheiden.",
+          "example": "Ein gewöhnliches Feuer benötigt chemische Reaktionspartner. Die Sonne wird umgangssprachlich manchmal als brennend beschrieben.",
+          "prompt": "Was ist an diesem Vergleich begrenzt?",
+          "hint": "Prüfe, ob die betrachtete Energie aus Molekülreaktionen oder aus Atomkernreaktionen stammt.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Die Sonne gewinnt ihre Energie wie eine Kerze durch chemisches Verbrennen mit Sauerstoff.",
+              "feedback": "Die solare Energiequelle ist Kernfusion. Sie benötigt keine gewöhnliche Verbrennung von chemischem Brennstoff mit Sauerstoff wie eine Kerze."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Jedes Leuchten ist automatisch dieselbe chemische Reaktion.",
+              "feedback": "Licht kann auf unterschiedlichen Wegen entstehen. Gleicher Helligkeitseindruck beweist keine gleiche Energiequelle."
+            },
+            {
+              "id": "reasoned",
+              "text": "Die Sonnenenergie stammt aus Kernfusion, nicht aus einem gewöhnlichen chemischen Feuer.",
+              "feedback": "Das Wort Brennen darf hier nicht mit einer Flamme aus chemischem Brennstoff und Sauerstoff verwechselt werden. Die Energiequelle liegt in Kernreaktionen."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Energiequelle und Energiewandlung auseinanderhalten.",
+          "example": "Sonnenlicht trifft auf eine Solarzelle, die elektrische Energie liefert.",
+          "prompt": "Findet deshalb in der Solarzelle dieselbe Kernfusion wie im Sonneninneren statt?",
+          "hint": "Unterscheide, wo die Energie ursprünglich entstand und wie sie später umgewandelt wird.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Nein, weil Licht grundsätzlich keine Energie zur Erde transportieren kann.",
+              "feedback": "Strahlung transportiert Energie. Die unterschiedlichen Umwandlungsschritte müssen getrennt beschrieben werden."
+            },
+            {
+              "id": "reasoned",
+              "text": "Nein. Die Solarzelle wandelt Strahlungsenergie um; sie ist kein solcher Fusionsreaktor.",
+              "feedback": "Die Energiequelle im Stern und die Umwandlung in der Solarzelle sind unterschiedliche Vorgänge. Gleiche Energiekette bedeutet nicht gleiche Reaktion an jedem Ort."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Ja. Jede Umwandlung von Sonnenlicht muss Wasserstoffkerne verschmelzen.",
+              "feedback": "Die Umwandlung des ankommenden Lichts erfordert in der Solarzelle keine solche Kernfusion."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://science.nasa.gov/universe/stars/",
+        "https://www.energy.gov/ne/articles/fission-and-fusion-what-difference"
+      ],
+      "interactive": false
+    },
+    {
+      "id": "science-galaxy",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Zwei Größenordnungen einordnen.",
+          "example": "Unser Sonnensystem besteht aus der Sonne und ihren Begleitern. Es gehört zur Milchstraße.",
+          "prompt": "Welche Einordnung passt?",
+          "hint": "Unterscheide einen einzelnen Stern mit seinen Begleitern von einem System aus sehr vielen Sternen und weiterer Materie.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Sonnensystem und Milchstraße bezeichnen genau dasselbe System.",
+              "feedback": "Unser Sonnensystem ist nur ein Teil der Milchstraße. Die Galaxie umfasst sehr viele Sterne und weitere Materie, nicht nur unsere Sonne und ihre Begleiter."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Alle Sterne der Milchstraße sind Planeten unseres Sonnensystems.",
+              "feedback": "Sterne und Planeten sind verschiedene Objektarten. Die anderen Sterne der Galaxie sind nicht sämtlich Planeten unserer Sonne."
+            },
+            {
+              "id": "reasoned",
+              "text": "Das Sonnensystem ist ein Teil der Milchstraße.",
+              "feedback": "Die Milchstraße ist unsere Galaxie. Das Sonnensystem gehört zu ihr und ist nicht mit der ganzen Galaxie gleichzusetzen."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Eine Galaxie von einem zufälligen Bildausschnitt unterscheiden.",
+          "example": "Eine Galaxie umfasst Sterne und weitere Materie, die durch Gravitation zusammengehalten werden.",
+          "prompt": "Warum genügt die Aussage viele helle Punkte auf einem Foto nicht als vollständige Definition?",
+          "hint": "Ein Bild zeigt Richtungen und Helligkeiten. Überlege, welche räumliche und physikalische Beziehung zusätzlich zählt.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Alle Bestandteile müssen selbst leuchten; nicht leuchtende Materie gehört nie zur Galaxie.",
+              "feedback": "Zu einer Galaxie gehört auch weitere Materie neben den leuchtenden Sternen. Das System wird nicht allein über selbst leuchtende Bildpunkte definiert."
+            },
+            {
+              "id": "reasoned",
+              "text": "Die räumliche Zugehörigkeit und gravitative Bindung gehören zur Erklärung.",
+              "feedback": "Ähnlich liegende Bildpunkte müssen räumlich nicht zusammengehören. Eine Galaxie ist ein physikalisches System und nicht nur ein beliebiger Ausschnitt eines Fotos."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Jede beliebige Gruppe heller Fotopunkte ist automatisch eine Galaxie.",
+              "feedback": "Das vernachlässigt räumliche Entfernungen und physikalische Zusammengehörigkeit."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Eine Zeichnung als Modell erkennen.",
+          "example": "Ein Bild zeigt die ganze Milchstraße von außen wie eine flache Spirale. Wir befinden uns selbst innerhalb der Milchstraße.",
+          "prompt": "Was muss bei einem solchen Bild geprüft werden?",
+          "hint": "Vergleiche die dargestellte Perspektive mit unserem Beobachtungsort.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Ob es eine aus Beobachtungen entwickelte Illustration statt eines eigenen Fotos von außen ist.",
+              "feedback": "Die gezeigte Außenansicht kann eine erklärende Illustration sein. Das darf nicht als tatsächlich von außen aufgenommenes Foto ausgegeben werden."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Jede sauber gezeichnete Spirale ist automatisch ein Originalfoto.",
+              "feedback": "Bildqualität und Fotoherkunft sind verschiedene Fragen. Auch eine hochwertige Illustration bleibt eine Illustration."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Wenn es eine Illustration ist, kann sie grundsätzlich keine Erkenntnisse darstellen.",
+              "feedback": "Eine klar bezeichnete wissenschaftliche Illustration kann Beobachtungen sinnvoll zusammenfassen. Ihre Herkunft muss richtig angegeben werden."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://science.nasa.gov/universe/galaxies/"
+      ],
+      "interactive": false
+    },
+    {
+      "id": "science-comet",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Eine Schweifrichtung vorhersagen.",
+          "example": "Ein Komet bewegt sich zur Sonne hin. Wir betrachten seinen vom Sonnenwind geprägten Ionenschweif im vereinfachten Überblick.",
+          "prompt": "Welche Richtung ist dafür zu erwarten?",
+          "hint": "Unterscheide die Sonnenrichtung von der Bewegungsrichtung des Kometen.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Dauerhaft direkt in die Sonne hinein.",
+              "feedback": "Der vom Sonnenwind geprägte Ionenschweif richtet sich im vereinfachten Überblick von der Sonne weg, nicht zu ihr hin."
+            },
+            {
+              "id": "reasoned",
+              "text": "Im Wesentlichen von der Sonne weg.",
+              "feedback": "Der Sonnenwind prägt den Ionenschweif. Die Schweifrichtung ist deshalb nicht einfach eine Spur entgegen der Flugrichtung."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Immer genau entgegen der Flugrichtung, unabhängig von der Sonne.",
+              "feedback": "Das verwechselt einen Kometenschweif mit einer gewöhnlichen Bewegungsspur. Sonnenwind und Sonnenrichtung sind hier entscheidend."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Unterschiedliche Schweife erklären.",
+          "example": "Ein Komet kann einen Staubschweif und einen Ionenschweif zeigen.",
+          "prompt": "Warum müssen beide nicht genau dieselbe Form haben?",
+          "hint": "Staubteilchen und ionisiertes Gas reagieren unterschiedlich auf ihre Umgebung.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Weil Sonnenlicht und Sonnenwind auf Staub und ionisiertes Gas verschieden wirken.",
+              "feedback": "Der Staubschweif kann anders gekrümmt sein als der Ionenschweif. Ein einziges starres Linienbild beschreibt nicht alle wirklichen Schweifformen."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Staub und ionisiertes Gas müssen auf Sonnenwind und Sonnenlicht immer genau gleich reagieren.",
+              "feedback": "Die Materialien und ihre Wechselwirkungen unterscheiden sich. Deshalb müssen Staubschweif und Ionenschweif keine identische Form haben."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Zwei unterschiedliche Schweife beweisen, dass der Komet zwei getrennte feste Kerne haben muss.",
+              "feedback": "Verschiedene Schweifmaterialien und Einflüsse können unterschiedliche Schweife hervorbringen. Die Schweifzahl allein beweist keine bestimmte Kernzahl."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Die Grenze einer Bildaussage beurteilen.",
+          "example": "Auf einem einzelnen Kometenbild siehst du einen Schweif, aber keine Folge von Ortsmessungen.",
+          "prompt": "Kannst du allein daraus die genaue Fluggeschwindigkeit und Bahnrichtung ablesen?",
+          "hint": "Überlege, welche zusätzlichen Messungen eine Bewegung beschreiben.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Ja. Der Schweif zeigt immer genau die Bahn, der der Komet als Nächstes folgt.",
+              "feedback": "Die Schweifrichtung wird von Sonne und Material geprägt. Sie ist nicht einfach eine eindeutige Zeichnung der nächsten Flugbahn."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Ja. Jede längere Schweifzeichnung bedeutet automatisch eine höhere Geschwindigkeit.",
+              "feedback": "Die Schweiflänge und Bildgestaltung hängen von weiteren Bedingungen ab. Eine längere Zeichnung beweist keine höhere Geschwindigkeit."
+            },
+            {
+              "id": "reasoned",
+              "text": "Nein. Die Schweifform allein legt die genaue Bewegung nicht eindeutig fest.",
+              "feedback": "Für die Bahn und Geschwindigkeit braucht man weitere Beobachtungen und räumliche Einordnung. Der Schweif ist keine eindeutige Geschwindigkeitsanzeige."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://science.nasa.gov/solar-system/comets/facts/"
+      ],
+      "interactive": false
+    },
+    {
+      "id": "science-exoplanet",
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Eine Beobachtungsbedingung vorhersagen.",
+          "example": "Ein Planet umkreist einen fernen Stern. Von unserem Standort aus zieht er nicht vor der sichtbaren Sternscheibe entlang.",
+          "prompt": "Erwartest du deshalb eine Verdunklung durch einen Transit dieses Planeten?",
+          "hint": "Vergleiche die räumliche Bahn mit unserer Blickrichtung zum Stern.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Nein. Dafür müsste die Bahn aus unserer Sicht vor der Sternscheibe vorbeiführen.",
+              "feedback": "Ein Transit benötigt die passende Sichtgeometrie. Ein umlaufender Planet erzeugt nicht aus jeder Blickrichtung einen Transit."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Ja. Jeder Planet verdunkelt seinen Stern aus jeder Blickrichtung.",
+              "feedback": "Die bloße Umlaufbewegung genügt nicht. Wir müssen den Planeten vor der sichtbaren Sternscheibe vorbeiziehen sehen können."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Nein, also kann dort überhaupt kein Planet sein.",
+              "feedback": "Kein beobachteter Transit schließt einen ungünstig ausgerichteten Planeten nicht aus."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Messhinweis und sichere Bestimmung unterscheiden.",
+          "example": "Ein Stern wird zeitweise etwas dunkler. Ein Planetentransit ist eine mögliche Erklärung.",
+          "prompt": "Ist jede einzelne Verdunklung schon ein eindeutiger Planetennachweis?",
+          "hint": "Eine Beobachtung kann mehrere mögliche Ursachen haben. Frage nach wiederholten und ergänzenden Daten.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Ja. Andere Ursachen für geringere Helligkeit sind grundsätzlich unmöglich.",
+              "feedback": "Das schließt Alternativen ohne Untersuchung aus. Ein einzelner Messhinweis ist noch keine vollständige Ursachenklärung."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Nein, weil eine Verdunklung niemals zu einem Transit passen kann.",
+              "feedback": "Ein Transit kann die Helligkeit tatsächlich verringern. Die Grenze betrifft die Eindeutigkeit des Nachweises, nicht die Möglichkeit des Effekts."
+            },
+            {
+              "id": "reasoned",
+              "text": "Nein. Man muss mögliche andere Ursachen und weitere Beobachtungen prüfen.",
+              "feedback": "Ein Helligkeitsabfall ist ein Hinweis. Die passende Erklärung benötigt weitere Prüfungen, statt jeden Einbruch automatisch einem Planeten zuzuordnen."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Ein negatives Ergebnis auf seinen Umfang begrenzen.",
+          "example": "Eine Beobachtungsreihe zeigt keinen Transit. Jemand behauptet: Der Stern besitzt sicher gar keine Planeten.",
+          "prompt": "Welche Erklärung begrenzt diesen Schluss?",
+          "hint": "Die Methode erfasst nur passende Ausrichtungen und Beobachtungszeiten.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Auch eine kurze Beobachtungsreihe deckt automatisch jede mögliche Umlaufzeit ab.",
+              "feedback": "Eine kurze Reihe kann ein seltenes oder späteres Ereignis verpassen. Der beobachtete Zeitraum begrenzt die Aussage ebenso wie die Sichtgeometrie."
+            },
+            {
+              "id": "reasoned",
+              "text": "Ein Planet kann außerhalb der passenden Sichtgeometrie oder Beobachtungszeit unentdeckt bleiben.",
+              "feedback": "Kein Transit ist kein vollständiger Nachweis der Planetenlosigkeit. Die Methode hat Bedingungen und Grenzen; andere Beobachtungen können ergänzen."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Die Blickrichtung ist unwichtig; jeder vorhandene Planet muss aus unserer Sicht vor dem Stern vorbeiziehen.",
+              "feedback": "Die Beobachtungsrichtung entscheidet mit, ob ein Planet vor der sichtbaren Sternscheibe entlangzieht. Planeten können deshalb ohne sichtbaren Transit vorhanden sein."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ],
+      "sources": [
+        "https://spaceplace.nasa.gov/transits/en/",
+        "https://science.nasa.gov/exoplanets/whats-a-transit/"
+      ],
+      "interactive": false
+    }
+  ]
+}

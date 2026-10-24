@@ -53,13 +53,69 @@ out.favoritePlaces[id]=place;}}
  if(own(v.lastActivity)&&typeof v.lastActivity.type==='string'&&modes.includes(v.lastActivity.type)&&key(v.lastActivity.id))out.lastActivity={type:v.lastActivity.type as Activity['type'],id:v.lastActivity.id,...(typeof v.lastActivity.family==='string'&&['classic','extra','world'].includes(v.lastActivity.family)?{family:v.lastActivity.family as 'classic'|'extra'|'world'}: {})};
  return out;
 }
+function importProgress(value:Record<string,unknown>):Record<string,unknown>{
+ const invalid=():never=>{throw new Error('Diese Sicherung ist beschädigt oder unvollständig. Dein aktueller Pass wurde nicht geändert.');};
+ const finite=(v:unknown):v is number=>typeof v==='number'&&Number.isFinite(v);
+ const stamp=(v:unknown)=>typeof v==='string'&&Number.isFinite(Date.parse(v));
+ const day=(v:unknown)=>typeof v==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(v)&&stamp(v)&&new Date(v+'T12:00:00Z').toISOString().slice(0,10)===v;
+ const current=value.schemaVersion===SAVE_VERSION;
+ if(Object.hasOwn(value,'app')&&value.app!=='earth-explorer')throw new Error('Diese Datei gehört nicht zu einem Entdeckerpass.');
+ if(Object.hasOwn(value,'progress')&&!own(value.progress))invalid();
+ const v=own(value.progress)?value.progress:value;
+ // Reachable schema-3 exports already contain these fields in6562593. Do not
+ // confuse a missing/truncated current payload with an intentionally empty pass.
+ const arrays=['discoveries','journeys','games','missions','labs','experiments','favorites','notes','quizResults'];
+ const records=['favoritePlaces','chapters','completedChapters','review','settings','gameSessions'];
+ const nullable=['quizSession','lastActivity'];
+ if(current){
+  if(value.app!=='earth-explorer'||!own(value.progress)||!stamp(value.createdAt)||!stamp(value.updatedAt))invalid();
+  if(![...arrays,...records,...nullable].every(field=>Object.hasOwn(v,field)))invalid();
+ }else{
+  const recognized=[...arrays,...records,...nullable].some(field=>Object.hasOwn(v,field));
+  const legacyIdentity=['discoveries','chapters','journeys'].some(field=>Object.hasOwn(v,field));
+  if(!recognized||value.app!=='earth-explorer'&&!legacyIdentity)invalid();
+ }
+ for(const field of arrays)if(Object.hasOwn(v,field)&&!Array.isArray(v[field]))invalid();
+ for(const field of records)if(Object.hasOwn(v,field)&&!own(v[field]))invalid();
+ for(const field of nullable)if(Object.hasOwn(v,field)&&v[field]!==null&&!own(v[field]))invalid();
+ for(const field of ['discoveries','journeys','games','labs','experiments','favorites'])if(Array.isArray(v[field])&&!v[field].every(key))invalid();
+ if(Array.isArray(v.missions)&&!v.missions.every(n=>Number.isInteger(n)&&n>=0&&n<100))invalid();
+ if(own(v.chapters)&&!Object.entries(v.chapters).every(([id,n])=>key(id)&&finite(n)&&Number.isInteger(n)&&n>=0&&n<30))invalid();
+ if(own(v.completedChapters)&&!Object.entries(v.completedChapters).every(([id,ns])=>key(id)&&Array.isArray(ns)&&ns.every(n=>Number.isInteger(n)&&n>=0&&n<30)))invalid();
+ if(Array.isArray(v.notes)&&!v.notes.every(n=>own(n)&&key(n.id)&&typeof n.text==='string'&&(!current&&!Object.hasOwn(n,'at')||stamp(n.at))))invalid();
+ if(own(v.gameSessions)&&!Object.entries(v.gameSessions).every(([id,s])=>key(id)&&own(s)))invalid();
+ if(own(v.favoritePlaces)&&!Object.entries(v.favoritePlaces).every(([id,p])=>key(id)&&own(p)&&p.id===id&&typeof p.name==='string'&&typeof p.text==='string'&&typeof p.fact==='string'&&finite(p.lat)&&Math.abs(p.lat)<=90&&finite(p.lon)&&Math.abs(p.lon)<=180&&typeof p.kind==='string'&&['country','continent','ocean','line','nature'].includes(p.kind)))invalid();
+ if(own(v.review)&&!Object.entries(v.review).every(([id,r])=>key(id)&&own(r)&&typeof r.correct==='boolean'&&day(r.due)&&(!current&&!Object.hasOwn(r,'seen')||finite(r.seen)&&Number.isInteger(r.seen)&&r.seen>=0)))invalid();
+ if(Array.isArray(v.quizResults)&&!v.quizResults.every(q=>own(q)&&key(q.id)&&typeof q.category==='string'&&finite(q.score)&&Number.isInteger(q.score)&&finite(q.total)&&Number.isInteger(q.total)&&q.total>0&&q.total<=76&&q.score>=0&&q.score<=q.total&&(!current&&!Object.hasOwn(q,'at')||stamp(q.at))))invalid();
+ if(own(v.settings)){
+  const s=v.settings;
+  if(current&&!['sound','readRate','largeText','reducedMotion','difficulty'].every(field=>Object.hasOwn(s,field)))invalid();
+  for(const field of ['sound','largeText','reducedMotion'])if(Object.hasOwn(s,field)&&typeof s[field]!=='boolean')invalid();
+  if(Object.hasOwn(s,'readRate')&&!finite(s.readRate))invalid();
+  if(Object.hasOwn(s,'readVoice')&&typeof s.readVoice!=='string')invalid();
+  if(Object.hasOwn(s,'difficulty')&&(typeof s.difficulty!=='string'||current&&!['easy','normal','tricky'].includes(s.difficulty)))invalid();
+ }
+ if(own(v.quizSession)){
+  const q=v.quizSession;
+  if(!key(q.id)||!Array.isArray(q.ids)||!q.ids.length||!q.ids.every(key)||!finite(q.index)||!finite(q.score)||typeof q.finished!=='boolean'||typeof q.category!=='string'||typeof q.difficulty!=='string'||q.answer!==null&&!Number.isInteger(q.answer))invalid();
+ }
+ if(own(v.lastActivity)){
+  const a=v.lastActivity;
+  if(typeof a.type!=='string'||!modes.includes(a.type)||!key(a.id)||Object.hasOwn(a,'family')&&(typeof a.family!=='string'||!['classic','extra','world'].includes(a.family)))invalid();
+ }
+ if(Object.hasOwn(value,'epoch')&&!key(value.epoch))invalid();
+ for(const field of ['epochAt','revision'])if(Object.hasOwn(value,field)&&(!finite(value[field])||!Number.isInteger(value[field])||value[field]<0))invalid();
+ return v;
+}
 export function restoreSave(value:unknown,strict=false):Save{
  if(!own(value))throw new Error('Die Datei enthält keinen Entdeckerpass.');
  if(value.schemaVersion!=null&&(!Number.isInteger(value.schemaVersion)||typeof value.schemaVersion!=='number'||value.schemaVersion<1))throw new Error('Die Versionsangabe der Sicherung ist ungültig.');
  if(typeof value.schemaVersion==='number'&&value.schemaVersion>SAVE_VERSION)throw new Error('Dieser Pass stammt aus einer neueren Version. Bitte bewahre die Datei auf.');
- if(strict&&value.app!=='earth-explorer'&&!['discoveries','chapters','journeys'].some(k=>Array.isArray(value[k])||own(value[k])))throw new Error('Diese Datei gehört nicht zu einem Entdeckerpass.');
  if(value.app&&value.app!=='earth-explorer')throw new Error('Diese Datei gehört nicht zu einem Entdeckerpass.');
- const now=new Date().toISOString();return {app:'earth-explorer',schemaVersion:3,createdAt:date(value.createdAt,now),updatedAt:date(value.updatedAt,now),progress:restoreProgress(own(value.progress)?value.progress:value),epoch:key(value.epoch)?value.epoch:'legacy-v3',epochAt:count(value.epochAt,Number.MAX_SAFE_INTEGER),revision:count(value.revision,Number.MAX_SAFE_INTEGER)};
+ // File imports validate before normalization and before the caller can replace
+ // an existing pass. Internal journal recovery retains its partial-data repair.
+ const progress=strict?importProgress(value):own(value.progress)?value.progress:value;
+ const now=new Date().toISOString();return {app:'earth-explorer',schemaVersion:3,createdAt:date(value.createdAt,now),updatedAt:date(value.updatedAt,now),progress:restoreProgress(progress),epoch:key(value.epoch)?value.epoch:'legacy-v3',epochAt:count(value.epochAt,Number.MAX_SAFE_INTEGER),revision:count(value.revision,Number.MAX_SAFE_INTEGER)};
 }
 export function createSave(progress=emptyProgress()):Save{const at=new Date().toISOString();return {app:'earth-explorer',schemaVersion:3,createdAt:at,updatedAt:at,progress};}
 let connection:Promise<IDBDatabase>|null=null;

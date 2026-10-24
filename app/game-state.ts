@@ -11,6 +11,15 @@ export function compatible(value:unknown,sample:unknown,depth=0):boolean{
  if(isRecord(sample))return isRecord(value)&&Object.keys(sample).every(k=>compatible(value[k],sample[k],depth+1));
  return typeof value===typeof sample&&(typeof value!=='number'||Number.isFinite(value));
 }
+export function restoreModelValue<T extends string|number|boolean>(value:unknown,fallback:T,limits?:readonly T[]|{min:number;max:number;integer?:boolean}):T{
+ if(!compatible(value,fallback))return fallback;
+ if(Array.isArray(limits))return limits.includes(value as T)?value as T:fallback;
+ if(limits&&typeof value==='number'){
+  const range=limits as {min:number;max:number;integer?:boolean};
+  return Math.max(range.min,Math.min(range.max,range.integer===false?value:Math.round(value))) as T;
+ }
+ return value as T;
+}
 export type SavedQuestion={q:string;choices:string[];correct:string;why:string;iso?:string;photo?:string;countryIso?:string};
 export function restoreQuestions(value:unknown,fallback:SavedQuestion[]):SavedQuestion[]{
  if(!Array.isArray(value)||!value.length||value.length>100)return fallback;

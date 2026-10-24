@@ -792,6 +792,334 @@
       "kind": "compare",
       "why": "Das Klangmodell vergleicht Tonhöhe und Schwingungen. Die Akustik eines Aufführungsraums hängt von weiteren Eigenschaften ab; weder ein Kreisvergleich noch eine auffällige Dachform beweist eine bestimmte Hörqualität.",
       "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-pressure--science-atmosphere",
+      "fromId": "science-pressure",
+      "toId": "science-atmosphere",
+      "kind": "context",
+      "why": "Druck ist Kraft pro Fläche. Der Vergleich erklärt, weshalb eine Lufthülle Druck ausüben kann, ohne eine feste Decke zu bilden.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-friction--science-energy",
+      "fromId": "science-friction",
+      "toId": "science-energy",
+      "kind": "context",
+      "why": "Reibung kann Bewegungsenergie in innere Energie überführen. Das verbindet den Kraftvergleich mit dem Erhalten und Umwandeln von Energie.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-buoyancy--science-pressure",
+      "fromId": "science-buoyancy",
+      "toId": "science-pressure",
+      "kind": "context",
+      "why": "Wasserdruck ist weiter unten größer. Diese Druckverteilung verbindet die Kraft-pro-Fläche-Idee mit der resultierenden Auftriebskraft.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-surface-tension--science-capillarity",
+      "fromId": "science-surface-tension",
+      "toId": "science-capillarity",
+      "kind": "context",
+      "why": "Die Wechselwirkung von Wasserteilchen prägt eine Grenzfläche und spielt beim Wandern in schmalen Zwischenräumen mit.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-diffusion--science-cell",
+      "fromId": "science-diffusion",
+      "toId": "science-cell",
+      "kind": "context",
+      "why": "Zellen tauschen Stoffe durch ihre Membran aus. Zufällige Teilchenbewegung ist ein möglicher Transportweg, aber nicht der einzige.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-chromatography--science-capillarity",
+      "fromId": "science-chromatography",
+      "toId": "science-capillarity",
+      "kind": "context",
+      "why": "Das Wasser kann durch enge Papierzwischenräume wandern. Farbstoffe werden dabei unterschiedlich mitgenommen und festgehalten.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-heat-transfer--science-energy",
+      "fromId": "science-heat-transfer",
+      "toId": "science-energy",
+      "kind": "context",
+      "why": "Wärmeübertragung verändert, wo Energie verfügbar ist. Eine Dämmung verlangsamt Übertragung und ist selbst keine Energiequelle.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-lever--science-pressure",
+      "fromId": "science-lever",
+      "toId": "science-pressure",
+      "kind": "context",
+      "why": "Beim Hebel zählt Kraft mal Abstand, beim Druck Kraft pro Fläche. Dieselbe Kraft kann deshalb in zwei verschiedenen Vergleichen unterschiedlich wirken.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-elasticity--science-friction",
+      "fromId": "science-elasticity",
+      "toId": "science-friction",
+      "kind": "context",
+      "why": "Ein Material kann sich verformen und Energie abgeben. Bei Bewegung kann Reibung einen Teil in innere Energie überführen.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-pendulum--science-resonance",
+      "fromId": "science-pendulum",
+      "toId": "science-resonance",
+      "kind": "context",
+      "why": "Die Pendellänge beeinflusst die Eigenfrequenz. Ein äußerer Antrieb kann bei passendem Takt besonders stark auf eine solche Schwingung wirken.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-probability--science-patterns",
+      "fromId": "science-probability",
+      "toId": "science-patterns",
+      "kind": "context",
+      "why": "Ein Computer kann in Beispielen Muster finden. Bei zufälligen Serien beweist ein auffälliges Muster allein aber noch keine feste Ursache.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-symmetry--science-angle",
+      "fromId": "science-symmetry",
+      "toId": "science-angle",
+      "kind": "context",
+      "why": "Eine Drehung wird mit einem Winkel beschrieben. Spiegeln und Drehen sind verschiedene Möglichkeiten, eine Figur auf sich abzubilden.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-fractals--science-symmetry",
+      "fromId": "science-fractals",
+      "toId": "science-symmetry",
+      "kind": "context",
+      "why": "Die Fraktalregel verkleinert die Teil-Dreiecke. Spiegeln und Drehen bewahren dagegen die Größe einer Figur. So kannst du ähnliche Teilformen von gleich großen symmetrischen Gegenstücken unterscheiden.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-angle--science-shadows",
+      "fromId": "science-angle",
+      "toId": "science-shadows",
+      "kind": "context",
+      "why": "Bei Schattenmessungen zählen Winkel zur Oberfläche und zur Sonnenrichtung. Längere gezeichnete Linien verändern nicht automatisch diesen Winkel.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-encryption--science-network",
+      "fromId": "science-encryption",
+      "toId": "science-network",
+      "kind": "context",
+      "why": "Netzwerke übertragen Daten. Verschlüsselung kann den Inhalt vor Mitlesen schützen, ohne den Übertragungsweg oder die Wahrheit zu garantieren.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-checksum--science-computer",
+      "fromId": "science-checksum",
+      "toId": "science-computer",
+      "kind": "context",
+      "why": "Ein Computer stellt Daten als Folgen dar. Ein zusammengefasster Prüfwert verliert Informationen und kann deshalb Kollisionen besitzen.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-fusion--science-energy",
+      "fromId": "science-fusion",
+      "toId": "science-energy",
+      "kind": "context",
+      "why": "Die Sonne liefert Energie; in ihrem Inneren wird diese durch Kernreaktionen freigesetzt. Das ist ein anderer Vorgang als Solarstrom in einer Zelle.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-galaxy--science-solar-system",
+      "fromId": "science-galaxy",
+      "toId": "science-solar-system",
+      "kind": "context",
+      "why": "Das Sonnensystem ist eine räumliche Gruppe um einen Stern. Eine Galaxie umfasst sehr viel mehr Sterne und weitere Materie.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-comet--science-solar-system",
+      "fromId": "science-comet",
+      "toId": "science-solar-system",
+      "kind": "context",
+      "why": "Kometen gehören zum Sonnensystem, sind aber keine der acht großen Planeten. Sonnenlicht und Sonnenwind beeinflussen ihre Schweife.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-exoplanet--science-galaxy",
+      "fromId": "science-exoplanet",
+      "toId": "science-galaxy",
+      "kind": "context",
+      "why": "Die Milchstraße enthält viele Sterne. Planeten um andere Sterne erweitern die Frage über unser eigenes Sonnensystem hinaus.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-refrigerator--science-heat-transfer",
+      "fromId": "invention-refrigerator",
+      "toId": "science-heat-transfer",
+      "kind": "exploration",
+      "why": "Wärmeübertragung und Dämmung erklären die zwei Seiten des Kühlschranks.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-bicycle--science-friction",
+      "fromId": "invention-bicycle",
+      "toId": "science-friction",
+      "kind": "exploration",
+      "why": "Reifen brauchen Halt am Boden, während Reibung an anderer Stelle bremst.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-bicycle--science-lever",
+      "fromId": "invention-bicycle",
+      "toId": "science-lever",
+      "kind": "exploration",
+      "why": "Eine Übersetzung tauscht Kraftbedarf gegen Drehweg: Bei einem leichteren Gang drehst du die Pedale häufiger. Die Hebelkarte hilft, mechanischen Vorteil von zusätzlichem Energiegewinn zu unterscheiden.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-elevator--science-friction",
+      "fromId": "invention-elevator",
+      "toId": "science-friction",
+      "kind": "exploration",
+      "why": "Bremsende Kräfte sind für das Sicherheitsprinzip wichtig.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-seismograph--science-pendulum",
+      "fromId": "invention-seismograph",
+      "toId": "science-pendulum",
+      "kind": "exploration",
+      "why": "Eine träge aufgehängte Masse kann für ein vereinfachtes Messprinzip genutzt werden.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-seismograph--science-resonance",
+      "fromId": "invention-seismograph",
+      "toId": "science-resonance",
+      "kind": "exploration",
+      "why": "Ein Messgerät reagiert selbst auf Bewegung; sein Verhalten muss bei der Auswertung berücksichtigt werden.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "invention-3d-printing--science-angle",
+      "fromId": "invention-3d-printing",
+      "toId": "science-angle",
+      "kind": "exploration",
+      "why": "Ansichten und Winkel helfen, einen räumlichen Entwurf zu beschreiben.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "building-sydney-opera--science-angle",
+      "fromId": "building-sydney-opera",
+      "toId": "science-angle",
+      "kind": "exploration",
+      "why": "Ein Winkel kann beschreiben, welcher Ausschnitt einer Kreislinie markiert wird. Der Radius bleibt dabei eine andere Größe; so lassen sich Form und Maß getrennt untersuchen.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-buoyancy--science-currents",
+      "fromId": "science-buoyancy",
+      "toId": "science-currents",
+      "kind": "compare",
+      "why": "Dichte beeinflusst das Schwimmen und Sinken. Die Strömungskarte zeigt, wie Dichteunterschiede Wasser unter anderem zum Sinken bringen.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-surface-tension--science-water-cycle",
+      "fromId": "science-surface-tension",
+      "toId": "science-water-cycle",
+      "kind": "compare",
+      "why": "Im Wasserkreislauf entstehen und bewegen sich Tropfen. Oberflächenspannung beeinflusst ihre Form; Verdunstung und Kondensation verändern dagegen den Zustand des Wassers.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-capillarity--science-photosynthesis",
+      "fromId": "science-capillarity",
+      "toId": "science-photosynthesis",
+      "kind": "needs",
+      "why": "Fotosynthese braucht Wasser. Kapillarwirkung hilft Wasser in engen benetzbaren Räumen aufzusteigen; allein erklärt sie den Wassertransport hoher Pflanzen nicht.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-diffusion--science-chromatography",
+      "fromId": "science-diffusion",
+      "toId": "science-chromatography",
+      "kind": "compare",
+      "why": "Bei Diffusion verteilen sich Teilchen durch ihre zufällige Bewegung. Chromatografie vergleicht dagegen das unterschiedliche Mitwandern von Bestandteilen mit einem Lösungsmittel.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-heat-transfer--science-seasons",
+      "fromId": "science-heat-transfer",
+      "toId": "science-seasons",
+      "kind": "energy",
+      "why": "Die geneigte Erdachse verändert Sonnenstand und Tageslänge. Strahlung erklärt, wie Sonnenenergie ohne Materialkontakt zur Erde gelangt.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-elasticity--science-resonance",
+      "fromId": "science-elasticity",
+      "toId": "science-resonance",
+      "kind": "cause",
+      "why": "Elastische Verformung kann eine Rückstellwirkung erzeugen. Bei Resonanz kommt es zusätzlich darauf an, wie eine Schwingung von außen angeregt und gedämpft wird.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-resonance--science-sound",
+      "fromId": "science-resonance",
+      "toId": "science-sound",
+      "kind": "compare",
+      "why": "Ein Ton beginnt mit einer Schwingung. Die Resonanzkarte untersucht, wie unterschiedlich ein schwingendes System auf verschiedene Anregungsfrequenzen reagiert.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-symmetry--science-patterns",
+      "fromId": "science-symmetry",
+      "toId": "science-patterns",
+      "kind": "compare",
+      "why": "Eine Spiegelachse ist ein bestimmtes Formmerkmal. Beim Sortieren von Beispielen entscheidet die gewählte Eigenschaft, welche Formen zusammenpassen.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-cell--science-photosynthesis",
+      "fromId": "science-cell",
+      "toId": "science-photosynthesis",
+      "kind": "context",
+      "why": "Fotosynthese findet in bestimmten Zellen statt. Die Zellkarte erklärt den Aufbau von Zellen, die Fotosynthesekarte den lichtabhängigen Aufbau energiereicher Stoffe.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-comet--science-magnetism",
+      "fromId": "science-comet",
+      "toId": "science-magnetism",
+      "kind": "context",
+      "why": "Der Sonnenwind enthält geladene Teilchen und beeinflusst den Ionenschweif eines Kometen. Die Magnetfeldkarte zeigt, dass Felder geladene Teilchen ablenken können.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-exoplanet--science-solar-system",
+      "fromId": "science-exoplanet",
+      "toId": "science-solar-system",
+      "kind": "compare",
+      "why": "Exoplaneten gehören zu anderen Planetensystemen. Unsere acht Planeten bieten einen Vergleich, während ein Transit nur bei passender Blickrichtung messbar ist.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-encryption--science-checksum",
+      "fromId": "science-encryption",
+      "toId": "science-checksum",
+      "kind": "compare",
+      "why": "Verschlüsselung soll den Inhalt vor unbefugtem Lesen schützen. Eine Prüfsumme dient dem Erkennen bestimmter Änderungen; das einfache Summenmodell kann verschiedene Folgen nicht immer unterscheiden.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-fusion--science-galaxy",
+      "fromId": "science-fusion",
+      "toId": "science-galaxy",
+      "kind": "context",
+      "why": "In vielen Sternen liefert Kernfusion Energie. Galaxien verbinden Sterne und weitere Materie durch Gravitation zu großen Systemen.",
+      "checkedAt": "2026-10-24"
     }
   ]
 }

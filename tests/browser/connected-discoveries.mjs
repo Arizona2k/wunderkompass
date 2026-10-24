@@ -5,6 +5,12 @@ const routes=JSON.parse(await fs.readFile(new URL('../../exports/content/world-r
 const topics=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 const hints=JSON.parse(await fs.readFile(new URL('../../app/challenge-hints.json',import.meta.url),'utf8'));
 const questionBank=topics.flatMap(t=>[{...t.question,id:t.id+':mini'},...(t.challenges??[])]);
+export async function assertSciencePage(page,number,count){
+ await page.locator('#world-results').getByText('46 passende Entdeckerkarten · Seite '+number+' von 4',{exact:true}).waitFor();
+ assert.equal(new URL(page.url()).hash,'#world/science/page/'+number);
+ assert.equal(await page.locator('.world-topic-tile').count(),count,'actual science page '+number+' contains all expected visible cards');
+ return page.locator('.world-topic-tile').evaluateAll(es=>es.map(e=>e.dataset.routeFocus.replace(/^world-topic-/,'')));
+}
 export async function connectedDiscoveries(page,ready,report,width){
  const pass=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
  for(const t of topics.filter(t=>t.checkedAt==='2026-10-09')){
@@ -29,12 +35,20 @@ export async function connectedDiscoveries(page,ready,report,width){
  await page.evaluate(()=>location.hash='world/science');
  await page.locator('.world-topic-tile').first().waitFor();
  assert.equal(await page.locator('.world-topic-tile').count(),12);
+ const scienceSeen=await page.locator('.world-topic-tile').evaluateAll(es=>es.map(e=>e.dataset.routeFocus.replace(/^world-topic-/,'')));
  await page.getByRole('button',{name:'Nächste Seite',exact:true}).click();
  assert.equal(new URL(page.url()).hash,'#world/science/page/2');
- assert.equal(await page.locator('.world-topic-tile').count(),11);
+ scienceSeen.push(...await assertSciencePage(page,2,12));
  await page.goBack();await page.waitForFunction(()=>location.hash==='#world/science');
  assert.equal(await page.locator('.world-topic-tile').count(),12);
  await page.goForward();await page.waitForFunction(()=>location.hash==='#world/science/page/2');
+ await assertSciencePage(page,2,12);
+ for(const [number,count]of [[3,12],[4,10]]){await page.getByRole('button',{name:'Nächste Seite',exact:true}).click();scienceSeen.push(...await assertSciencePage(page,number,count));}
+ assert.equal(await page.getByRole('button',{name:'Nächste Seite',exact:true}).isDisabled(),true);
+ assert.equal(scienceSeen.length,46);assert.equal(new Set(scienceSeen).size,46,'no duplicated or lost science identity across the four actual pages');
+ assert.deepEqual(new Set(scienceSeen),new Set(topics.filter(t=>t.category==='science').map(t=>t.id)));
+ await page.goBack();await assertSciencePage(page,3,12);await page.goBack();await assertSciencePage(page,2,12);
+ (report.sciencePagination??=[]).push({width,pageSizes:[12,12,12,10],all46Identities:scienceSeen,backForwardRetained:true,lastNextDisabled:true});
  await page.getByRole('textbox',{name:'Entdeckerkarten durchsuchen'}).fill('Mondphasen');
  assert.equal(await page.locator('.world-topic-tile').count(),1);
  await page.locator('.world-topic-tile').click();await page.locator('.moon-phase-3').waitFor();

@@ -30,7 +30,7 @@ export function restoreRouteView(path:string,focus=true){
  else if(path==='journeys'||path.startsWith('journeys/')){const heading=document.getElementById('journey-title')??document.getElementById('journey-hub-title');if(heading){heading.focus({preventScroll:true});const r=heading.getBoundingClientRect();if(r.top<8||r.bottom>innerHeight-8)heading.scrollIntoView({block:'center',behavior:'instant'});}}
  else if(path==='updates')document.getElementById('updates-title')?.focus({preventScroll:true});
  else if(path==='world'||path.startsWith('world/')){
-  const heading=document.getElementById('world-topic-title')??document.getElementById('world-category-title');
+  const heading=(/^world\/[^/]+\/page\/\d+$/.test(path)?document.getElementById('world-results'):null)??document.getElementById('world-topic-title')??document.getElementById('world-category-title');
   if(heading){heading.focus({preventScroll:true});const r=heading.getBoundingClientRect();if(r.top<8||r.bottom>innerHeight-8)heading.scrollIntoView({block:'center',behavior:'instant'});}
   else focusLearningMain(); // Completed routes have a finish view rather than an article.
  }
@@ -45,7 +45,7 @@ export function scheduleRouteRestore(path:string,focus=true){
  const detach=()=>{for(const type of events)window.removeEventListener(type,interact,true);};
  const cancel=()=>{if(!pending)return;pending=false;cancelAnimationFrame(frame);detach();};
  const interact=(event:Event)=>{if(event.isTrusted)cancel();};
- const frame=requestAnimationFrame(()=>{if(!pending)return;pending=false;detach();restoreRouteView(path,focus);});
+ const frame=requestAnimationFrame(()=>{if(!pending)return;pending=false;detach();if(read()===path)restoreRouteView(path,focus);});
  for(const type of events)window.addEventListener(type,interact,true);
  return cancel;
 }

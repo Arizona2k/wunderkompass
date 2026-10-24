@@ -1,6 +1,6 @@
 "use client";
 import {createContext,useContext,useCallback,useEffect,useRef,useState,type ReactNode,type Dispatch,type SetStateAction} from 'react';
-import {compatible,sanitizeMemorySession} from './game-state';
+import {compatible,restoreModelValue,sanitizeMemorySession} from './game-state';
 type GameContext={id:string;family:'classic'|'extra'|'world';snapshot:Record<string,unknown>;save:(id:string,key:string,value:unknown,family:'classic'|'extra'|'world')=>void};
 const Context=createContext<GameContext|null>(null);
 export function SavedGame({id,family,sessions,onSave,children}:{id:string;family:'classic'|'extra'|'world';sessions:Record<string,Record<string,unknown>>;onSave:GameContext['save'];children:ReactNode}){
@@ -24,8 +24,9 @@ export function useSavedGame<T>(key:string,initial:T|(()=>T),restore?:(value:unk
  return [state,set];
 }
 export function useSavedModel<T extends string|number|boolean>(key:string,initial:T,limits?:readonly T[]|{min:number;max:number;integer?:boolean}):[T,Dispatch<SetStateAction<T>>]{
- const [value,set]=useSavedGame(key,initial);
- const normalize=(v:T):T=>{if(Array.isArray(limits))return limits.includes(v)?v:initial;if(limits&&typeof v==='number'){const range=limits as {min:number;max:number;integer?:boolean};return Math.max(range.min,Math.min(range.max,range.integer===false?v:Math.round(v))) as T;}return v;};
+ const normalize=(v:unknown,fallback:T=initial):T=>restoreModelValue(v,fallback,limits);
+ // Model domains apply before the generic nonnegative game-counter fallback.
+ const [value,set]=useSavedGame(key,initial,normalize);
  const current=normalize(value);
  return [current,next=>set(normalize(typeof next==='function'?(next as (v:T)=>T)(current):next))];
 }

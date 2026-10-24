@@ -1,3 +1,4 @@
+import {scienceOriginalView} from './science-originals.mjs';
 import {buildingOriginalSourceView} from './building-originals.mjs';
 import {mechanicsSourceView} from './invention-mechanics.mjs';
 import {peopleSourceView,peopleLegacyRound} from './people-learning.mjs';
@@ -94,6 +95,14 @@ export async function articleAtlas(page,ready,report,width,shots){
  report.electricalViews??=[];report.electricalViews.push(...await electricalSourceView(page,{width,shots,questions:true}));
  report.opticsViews??=[];report.opticsViews.push(...await opticsSourceView(page,{width,shots,questions:true}));
  report.historySourceViews??=[];report.historySourceViews.push(...await historySourceView(page,{width,shots,questions:true}));
+ // New science coverage uses both endpoint layouts; all existing atlas widths
+ // and activities above remain. Keep one complete mobile image set, rather than
+ // duplicating every new image at every width in the bounded review artifact.
+ if([320,1440].includes(width)){
+  const science=await scienceOriginalView(page,{width,shots:width===320?shots:undefined,questions:true});
+  assert.equal(science.length,23,'all retained science originals and 69 inquiries at the atlas endpoints');
+  report.scienceOriginalViews??=[];report.scienceOriginalViews.push(...science);
+ }
  report.checks.push('Article atlas '+width+': six categories and three scientific drawings with readable 16px HTML labels and original alternative texts, mobile two-column phases, clipped unfocused skip link and keyboard activation, keyboard/touch jumps and focus, unchanged hash, axe A/AA, wrong/right/reload mini question, coastal comparison, direct learning route and embedded focus');
 }
 
@@ -105,5 +114,6 @@ export async function offlineArticleAtlas(page,report){
  report.electricalCold=await electricalSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.electricalCold.length,3);
  report.opticsCold=await opticsSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.opticsCold.length,3);
  report.historySourceCold=await historySourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.historySourceCold.length,2,'both new historical activities survive the actual cold browser restart');
+ report.scienceOriginalCold=await scienceOriginalView(page,{width:await page.evaluate(()=>innerWidth),questions:false});assert.equal(report.scienceOriginalCold.length,23,'all science originals, model states and voluntary inquiries survive the actual cold browser restart');
  report.checks.push('New article drawings, wayfinder, individual mini hint and coastal comparison work after actual cold offline restart');
 }
