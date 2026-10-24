@@ -680,6 +680,118 @@
       "kind": "compare",
       "why": "Beide Techniken stimmen wiederholte mechanische Schritte aufeinander ab. Beim Nähen verschlingen sich Fäden, beim Buchdruck wird Farbe auf eine Fläche übertragen.",
       "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "building-pont-du-gard--science-water-cycle",
+      "fromId": "building-pont-du-gard",
+      "toId": "science-water-cycle",
+      "kind": "transport",
+      "why": "Die Wasserleitung führt vorhandenes Quellwasser zur Stadt. Der natürliche Wasserkreislauf beschreibt andere Wege, etwa Regen und Versickerung. Eine Brücke erzeugt kein zusätzliches Wasser.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "building-pont-du-gard--building-colosseum",
+      "fromId": "building-pont-du-gard",
+      "toId": "building-colosseum",
+      "kind": "compare",
+      "why": "Beide Bauwerke nutzen tragende Bögen. Beim Aquädukt tragen sie eine Wasserrinne, im Amphitheater gehören Bögen zu Räumen und Verkehrswegen. Gleiche Grundideen erfüllen unterschiedliche Aufgaben.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "building-great-zimbabwe--building-great-wall",
+      "fromId": "building-great-zimbabwe",
+      "toId": "building-great-wall",
+      "kind": "compare",
+      "why": "Groß-Simbabwes Granitmauern wurden ohne Mörtel gesetzt. Die Chinesische Mauer umfasst dagegen unterschiedliche Bauweisen. Vergleiche einen belegten Mauerabschnitt, statt alle langen Mauern gleich zu erklären.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "building-great-zimbabwe--history-timbuktu",
+      "fromId": "building-great-zimbabwe",
+      "toId": "history-timbuktu",
+      "kind": "compare",
+      "why": "Steinmauern, Wohnreste und Handelsfunde erzählen von Groß-Simbabwe; Handschriften und Handelsgeschichte von Timbuktu. Verschiedene afrikanische Orte brauchen eigene Belege, keine einheitliche Bau- oder Kulturgeschichte.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "building-horyu-ji--building-eiffel-tower",
+      "fromId": "building-horyu-ji",
+      "toId": "building-eiffel-tower",
+      "kind": "compare",
+      "why": "Im Holzbau führen Konsolen und Stützen Dachlasten weiter; beim Eiffelturm bilden Eisenbauteile ein Gitter. Verfolge bei beiden einen Lastweg zum Untergrund, ohne Material und Bauweise gleichzusetzen.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "building-horyu-ji--building-djenne-mosque",
+      "fromId": "building-horyu-ji",
+      "toId": "building-djenne-mosque",
+      "kind": "compare",
+      "why": "Historische Holzverbindungen und Lehmoberflächen benötigen unterschiedliche Pflege. Bei beiden Bauwerken gehört fachkundiges Erhalten zur langen Geschichte; hohes Alter allein beweist keine Unverwundbarkeit.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "building-djenne-mosque--history-timbuktu",
+      "fromId": "building-djenne-mosque",
+      "toId": "history-timbuktu",
+      "kind": "compare",
+      "why": "Djenné und Timbuktu sind verschiedene Städte in Mali mit eigener Geschichte. Vergleiche religiöse Nutzung, lokales Handwerk und Erhaltung, ohne die heutige Moschee von Djenné mit Timbuktus älteren Bauten gleichzusetzen.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "building-lalibela--invention-3d-printing",
+      "fromId": "building-lalibela",
+      "toId": "invention-3d-printing",
+      "kind": "compare",
+      "why": "In Lalibela entstehen Freiräume durch gezieltes Abtragen von Fels; additive Verfahren bauen Material auf. Beschreibe den Materialweg, statt jedes Herstellen als Aufeinanderstapeln zu verstehen.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "building-lalibela--science-water-cycle",
+      "fromId": "building-lalibela",
+      "toId": "science-water-cycle",
+      "kind": "uses",
+      "why": "Niederschlag gehört zum Wasserkreislauf. An Felskirchen muss anfallendes Wasser passend abgeleitet werden, damit es Bauteile nicht schädigt. Eine gezeichnete Entwässerung ist noch keine berechnete Wasserführung.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "building-angkor-wat--science-water-cycle",
+      "fromId": "building-angkor-wat",
+      "toId": "science-water-cycle",
+      "kind": "compare",
+      "why": "Angkors Becken, Kanäle und Gräben sind gebaute Wasseranlagen innerhalb einer Landschaft mit natürlichem Wasserhaushalt. Unterscheide den Tempelgraben vom gesamten Wasserweg und von der ganzen Region.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "building-angkor-wat--building-panama-canal",
+      "fromId": "building-angkor-wat",
+      "toId": "building-panama-canal",
+      "kind": "compare",
+      "why": "Ein Tempelgraben und ein Schifffahrtskanal erfüllen verschiedene Aufgaben. Vergleiche Umrisse, Wasserwege und Nutzung; ein gleiches Wort wie Wasseranlage macht daraus noch nicht dasselbe System.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "building-palenque--history-maya",
+      "fromId": "building-palenque",
+      "toId": "history-maya",
+      "kind": "evidence",
+      "why": "Palenques Räume und Schriftzeugnisse liefern unterschiedliche Hinweise auf eine Stadt der Maya. Die Geschichte der Maya umfasst mehrere Orte und reicht über die erhaltenen Bauwerke der Vergangenheit hinaus.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "building-palenque--building-colosseum",
+      "fromId": "building-palenque",
+      "toId": "building-colosseum",
+      "kind": "compare",
+      "why": "Ein Kraggewölbe rückt Steinlagen zur Mitte vor; ein Bogen ordnet Steine anders um die Öffnung an. Vergleiche die Bauprinzipien, ohne aus einer ähnlichen Öffnung dieselbe Konstruktion abzuleiten.",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "building-sydney-opera--science-sound",
+      "fromId": "building-sydney-opera",
+      "toId": "science-sound",
+      "kind": "compare",
+      "why": "Das Klangmodell vergleicht Tonhöhe und Schwingungen. Die Akustik eines Aufführungsraums hängt von weiteren Eigenschaften ab; weder ein Kreisvergleich noch eine auffällige Dachform beweist eine bestimmte Hörqualität.",
+      "checkedAt": "2026-10-23"
     }
   ]
 }

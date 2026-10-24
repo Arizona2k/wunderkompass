@@ -1,0 +1,1259 @@
+{
+  "schemaVersion": 1,
+  "meaning": "Eight retained building originals: source-derived authored learning content, own clearly labelled principle models, explained reciprocal connections and full current local product/offline acceptance. Existing156 factual records retained except14documented relationships; one prior3D-printing dossier hash/link binding traced separately. Final native integration CI and actual deployment pending; no independent human approval or package3.5 completion claimed.",
+  "sourceMaster": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+  "preparedBase": "475e4cbfbe45ab524cf4b3f62316ca0c02a74694",
+  "independentReview": false,
+  "reviewedBy": "Codex KI-Selbstprüfung anhand der tatsächlich zugänglichen verlinkten Primärquellen; keine unabhängige Menschenabnahme",
+  "reviewedOn": "2026-10-23",
+  "topics": [
+    {
+      "id": "building-pont-du-gard",
+      "originalManuscriptSHA256": "56296f1f0ac260aed0d4a683d2f7b1bdff50d4de460b78d7acc7219a91df8228",
+      "currentContentSHA256": "e42a270185b913238c38244ae8bad0fd67de00326c9eee974bfe810c5b6a0157",
+      "originalRelated": [
+        "science-water-cycle",
+        "building-colosseum"
+      ],
+      "currentRelated": [
+        "science-water-cycle",
+        "building-colosseum"
+      ],
+      "originalCorrectAnswer": "Aus einer höher gelegenen Quelle entlang der Wasserleitung.",
+      "correctIndex": 0,
+      "sourceReads": [
+        {
+          "url": "https://whc.unesco.org/en/list/344/",
+          "anchor": "Outstanding Universal Value52–57",
+          "finding": "Der aktuelle OUV-Abschnitt nennt das mittlere erste Jahrhundert n. Chr., Quelle Eure und die getrennten Maße für Leitung und Brücke. Die ältere Kurzbeschreibung nennt eine abweichende Bauzeit und wird hierfür nicht übernommen."
+        },
+        {
+          "url": "https://pontdugard.fr/en/discover/monument",
+          "anchor": "21–23,63–67",
+          "finding": "Der Betreiber bestätigt den Transport durch Schwerkraft von einer Quelle bei Uzès nach Nîmes, ungefähr49m Brückenhöhe und50km Gesamtleitung."
+        }
+      ],
+      "goal": "Du trennst Wasserquelle, Fließrichtung und Tragwerk und verwechselst die Länge einer Brücke nicht mit einer ganzen Leitung.",
+      "ageLevels": {
+        "6-8": "Oben auf dieser römischen Brücke verlief eine Wasserrinne. Sie brachte Wasser zur Stadt.",
+        "9-11": "Die Römer bauten den Pont du Gard im ersten Jahrhundert nach Christus als Teil einer Wasserleitung nach Nîmes. Drei Bogenreihen tragen die Rinne über den Gardon. Das Wasser der Leitung kam von einer höher gelegenen Quelle; es wurde nicht aus dem Fluss unter der Brücke nach oben gepumpt. Ein kleines Gefälle genügte für den Wasserweg. Die hohe Brücke half, die benötigte Lage der Rinne beim Überqueren des Tals beizubehalten. Brücke und gesamte Leitung sind deshalb verschiedene Größen: Nur ein Teil der ungefähr 50 Kilometer langen Strecke führte über den Pont du Gard.",
+        "12-14": "Verfolge zwei getrennte Wege: Der Gardon fließt im Tal; die Rinne überquert ihn auf dem Bauwerk. Eine Leitung kann einen Fluss also kreuzen, ohne ihr Wasser aus diesem Fluss zu beziehen. Die Bögen übertragen Lasten auf Pfeiler und Untergrund. Die Zeichnung zeigt nur das Prinzip der Bogenreihen und der Rinne. Sie berechnet weder Steindruck noch Wassermenge oder eine sichere Tragfähigkeit."
+      },
+      "modelDecision": "Eigene Prinzipskizze, kein maßstäblicher Bauplan und keine Wasser- oder Tragwerksberechnung.",
+      "uiChecked": false
+    },
+    {
+      "id": "building-great-zimbabwe",
+      "originalManuscriptSHA256": "5de0e5e38a24582d5752163c564193ba3bf073d258728edf371ea487057cbc57",
+      "currentContentSHA256": "4ba0acd52248299278ec34c8a16cb2113f4c68041e7c20312b83b4f8092fb6e3",
+      "originalRelated": [
+        "building-great-wall",
+        "history-timbuktu"
+      ],
+      "currentRelated": [
+        "building-great-wall",
+        "history-timbuktu"
+      ],
+      "originalCorrectAnswer": "Die Steine wurden sorgfältig ohne Mörtel zwischen ihnen gesetzt.",
+      "correctIndex": 0,
+      "sourceReads": [
+        {
+          "url": "https://whc.unesco.org/en/list/364/",
+          "anchor": "52–61",
+          "finding": "Stadt der Shona mit mehreren Baugruppen und archäologisch belegten Handelskontakten. Keine fremde Urheberschaft oder ungesicherte Funktionsdeutung übernommen."
+        },
+        {
+          "url": "https://www.metmuseum.org/essays/great-zimbabwe-11th-15th-century",
+          "anchor": "11–22",
+          "finding": "Granitlagen ohne Mörtel, nach innen gestaffelte Mauern und vergängliche Daga-Wohnbauten. Die erhaltenen Mauern zeigen nur einen Teil der früheren Architektur."
+        }
+      ],
+      "goal": "Du erkennst handwerkliches Wissen und prüfst, welche Teile einer vergangenen Stadt überhaupt noch erhalten sind.",
+      "ageLevels": {
+        "6-8": "Hier bauten Menschen große Mauern aus passend gesetzten Steinen. Zwischen ihnen liegt kein Mörtel.",
+        "9-11": "In Groß-Simbabwe bauten Vorfahren der heutigen Shona über mehrere Jahrhunderte eine bedeutende Stadt. Ihre erhaltenen Mauern bestehen aus sorgfältig gesetzten Granitsteinen. Mörtel zwischen den Steinen war dafür nicht nötig. Die Große Einfriedung ist nur ein Teil der Anlage. Früher gehörten auch Wohnbauten aus vergänglicheren Materialien dazu. Die heute sichtbaren Steinmauern zeigen deshalb nicht allein, wie die ganze Stadt aussah oder wie alle Menschen dort lebten.",
+        "12-14": "Trockenmauerwerk bedeutet nicht, Steine beliebig aufzuhäufen. Passende Auflageflächen und die Anordnung der Lagen gehören zur handwerklichen Arbeit. Einige Mauern verjüngen sich nach oben. Archäologische Funde belegen regionale Herstellung und weitreichende Handelskontakte. Frühere Behauptungen, fremde Völker hätten die Stadt erbaut, widersprachen späteren archäologischen Nachweisen ihrer afrikanischen Entstehung. Die genaue Funktion einzelner Mauern bleibt eine Forschungsfrage."
+      },
+      "modelDecision": "Eigene Lernskizze für Mauerlagen; weder genaue Rekonstruktion einer bestimmten Mauer noch Bauanleitung.",
+      "uiChecked": false
+    },
+    {
+      "id": "building-horyu-ji",
+      "originalManuscriptSHA256": "3e688362b4635ccf2fbd81f53371bbc0952b18a24f7558b0be73f4556944032f",
+      "currentContentSHA256": "a039546ac8a7a90cac90e7ffe39ecbeeab682e2a5d8ba927600f1b2b4eda4f3f",
+      "originalRelated": [
+        "science-patterns",
+        "building-eiffel-tower",
+        "building-djenne-mosque"
+      ],
+      "currentRelated": [
+        "building-eiffel-tower",
+        "building-djenne-mosque"
+      ],
+      "originalCorrectAnswer": "Stützen und verbundene Bauteile leiten Dachlasten zum Untergrund.",
+      "correctIndex": 0,
+      "sourceReads": [
+        {
+          "url": "https://whc.unesco.org/en/list/660/",
+          "anchor": "46–50",
+          "finding": "Einige erhaltene Holzbauten stammen aus dem späten7./8.Jahrhundert. Die Quelle beschreibt die Lastübertragung über Konsolen und massive Holzstützen."
+        },
+        {
+          "url": "https://www.pref.nara.lg.jp/n037/71423.html",
+          "anchor": "112–120",
+          "finding": "Die Gründung607 und der Brand670 sind von später erhaltenen Baugruppen sowie Reparatur- und Grabungsbefunden zu unterscheiden."
+        }
+      ],
+      "goal": "Du liest ein Tragwerk als zusammenhängenden Lastweg und verwechselst lange Erhaltung nicht mit völliger Unzerstörbarkeit.",
+      "ageLevels": {
+        "6-8": "Holzstützen tragen hier Balken und Dächer. Verbundene Teile geben das Gewicht weiter.",
+        "9-11": "Zur buddhistischen Tempelanlage Hōryū-ji in Japan gehören sehr alte erhaltene Holzbauten. Einige stammen aus dem späten siebten oder frühen achten Jahrhundert. Das Alter der Anlage bedeutet nicht, dass jedes heutige Holzstück seit der ersten Gründung unverändert geblieben ist. Stützen, Balken und auskragende Konsolen tragen die weit ausladenden Dächer. Die Verbindung dieser Teile leitet Lasten weiter. Der Tempel ist zugleich ein Ort religiöser Praxis und kein verlassenes Technikmodell.",
+        "12-14": "Ein weit herausragendes Dach braucht einen nachvollziehbaren Lastweg. In der Skizze verfolgst du Dach, Konsolen und Stützen bis zum Untergrund. Die Pfeile geben eine Richtung an, keine gemessene Kraft. Erhalten bedeutet auch pflegen: Fachleute untersuchen und reparieren beschädigte Teile mit geeigneten Methoden. Holzbau allein verspricht weder Unverwundbarkeit bei Feuer noch Sicherheit bei jedem Erdbeben."
+      },
+      "modelDecision": "Qualitative eigene Prinzipskizze; keine genaue historische Fügung oder Simulation eines Erdbebens.",
+      "uiChecked": false
+    },
+    {
+      "id": "building-djenne-mosque",
+      "originalManuscriptSHA256": "69452a46618d90581847e295bc2dc652d3af7398d75c45d2cf3a45c7922a54e0",
+      "currentContentSHA256": "6541bc9ffc343eea3277c1099c03b3e664337025cd27e0db0200c43c126a540b",
+      "originalRelated": [
+        "history-timbuktu",
+        "building-horyu-ji"
+      ],
+      "currentRelated": [
+        "building-horyu-ji",
+        "history-timbuktu"
+      ],
+      "originalCorrectAnswer": "Zusätzliche Schichten bringen auch Gewicht; Dach und Tragwerk müssen mitgeprüft werden.",
+      "correctIndex": 0,
+      "sourceReads": [
+        {
+          "url": "https://whc.unesco.org/en/list/116/",
+          "anchor": "54–61",
+          "finding": "Lehmbau und Wiederaufbau der heutigen Moschee1906–1907 sind im betreffenden Abschnitt belegt."
+        },
+        {
+          "url": "https://the.akdn/En/Where-We-Work/West-Africa/Mali/Earthen-Architecture-Programme-Mali",
+          "anchor": "96–102",
+          "finding": "Der eigene Djenné-Abschnitt beschreibt zusätzliche Last durch Banco-Schichten, gemeinsame Dach-/Wandrestaurierung und die Arbeit mit örtlichen Maurern. Die anderen Städte sind nicht mit Djenné verwechselt."
+        }
+      ],
+      "goal": "Du unterscheidest Bauen von Erhalten und erkennst, warum eine scheinbar einfache Reparatur Folgen für andere Teile haben kann.",
+      "ageLevels": {
+        "6-8": "Diese Moschee nutzt Lehmbaustoffe. Menschen pflegen sie mit handwerklichem Wissen.",
+        "9-11": "Die heutige Große Moschee von Djenné entstand 1906–1907 an einem Ort mit älteren Vorgängerbauten. Wände, Stützen und Putz nutzen traditionelle erdgebundene Baustoffe. Lokales Handwerk und religiöses Leben gehören zum Verständnis des Bauwerks. Die Gemeinschaft pflegt die Oberfläche regelmäßig. Dabei ist nicht beliebig viel neuer Putz automatisch besser: Auch zusätzliche Schichten bringen Gewicht mit. Fachkundige Instandhaltung muss Oberfläche, Dach und tragende Teile gemeinsam betrachten.",
+        "12-14": "Eine Oberflächenschicht und eine tragende Wand haben verschiedene Aufgaben. Das Ergänzen von Putz kann beschädigte Oberflächen schützen, ersetzt aber keine Untersuchung von Dach und Tragwerk. Bei Restaurierungen arbeiteten Fachleute mit örtlichen Handwerksgemeinschaften. So gehört überliefertes Wissen zur Erhaltung. Die Zeichnung ist keine Rezeptur für historischen Lehmputz und keine Anleitung zum Klettern oder Reparieren."
+      },
+      "modelDecision": "Eigene Funktionsübersicht ohne genaue Materialmischung, Belastungswerte oder historische Fassadenrekonstruktion.",
+      "uiChecked": false
+    },
+    {
+      "id": "building-lalibela",
+      "originalManuscriptSHA256": "91128ad32cc4b25bfd3fd6cdcd34e4ea56bc82cfdefb372084feda333d3508c3",
+      "currentContentSHA256": "a89b401f148cd832b12a41a6b7160f7d5d11f08fe10e1557109d81fdf21d6db8",
+      "originalRelated": [
+        "invention-3d-printing",
+        "science-water-cycle"
+      ],
+      "currentRelated": [
+        "invention-3d-printing",
+        "science-water-cycle"
+      ],
+      "originalCorrectAnswer": "Räume und Formen wurden aus dem vorhandenen Fels herausgearbeitet.",
+      "correctIndex": 0,
+      "sourceReads": [
+        {
+          "url": "https://whc.unesco.org/en/list/18/",
+          "anchor": "53–58",
+          "finding": "Elf aus anstehendem Fels gearbeitete Kirchen, Durchgänge und Entwässerung. Die UNESCO-Abschnitte65–80 beschreiben Wasserschäden und Erhaltung; keine aktuelle WMF-Volltextsicht behauptet."
+        },
+        {
+          "url": "https://whc.unesco.org/en/decisions/8880",
+          "anchor": "47 COM 7B.155,2025,§3,5,7,10; actual page lines84–94",
+          "finding": "Der Beschluss fordert Untersuchungen des historischen Wassersystems und weiteres Monitoring; er bezieht die örtliche Gemeinde in Erhaltung und Pflege ein. Kein Beleg, dass die eigene Skizze einen vermessenen historischen Wasserweg oder einen sicheren Schutzplan abbildet."
+        }
+      ],
+      "goal": "Du unterscheidest Material und Hohlraum und erkennst, dass nicht jedes Bauwerk auf dieselbe Weise entsteht.",
+      "ageLevels": {
+        "6-8": "Hier arbeiteten Menschen Räume aus dem Fels heraus. Sie bauten nicht nur Stein auf Stein.",
+        "9-11": "In Lalibela wurden mittelalterliche Kirchen aus anstehendem Fels herausgearbeitet. Manche stehen in tiefen ausgehauenen Höfen. Türen, Räume und Stützen entstanden nicht einfach durch das Stapeln fertig angelieferter Steinblöcke. Die Anlage umfasst elf Kirchen und Verbindungswege. Gräben dienen auch der Entwässerung. Wasser kann Gestein und Bauwerk schädigen; die erhaltenen Formen brauchen deshalb weiter Schutz und Pflege. Die Kirchen bleiben religiös genutzte Orte.",
+        "12-14": "Beim Lesen der Skizze musst du festes Material und ausgeräumten Raum unterscheiden. Eine dunkle Form kann den Fels darstellen, eine helle Aussparung einen Zugang. Frage deshalb zuerst nach der Legende. Entwässerung gehört zur Erhaltung des Ganzen. Ein gezeichneter Graben zeigt nur einen möglichen Wasserweg; er beweist weder die richtige Ausführung eines historischen Grabens noch die Stabilität des verbleibenden Felsens."
+      },
+      "modelDecision": "Eigene schematische Material-/Raumskizze; keine Rekonstruktion der genauen Baufolge und keine Grabungsanleitung.",
+      "uiChecked": false
+    },
+    {
+      "id": "building-angkor-wat",
+      "originalManuscriptSHA256": "5cacc831258037da27c9ad1d3245694eddcbfb5ae6d6db5d6a8a50f9f790509c",
+      "currentContentSHA256": "c1991ff88a694067dabf851aac7c0567d83b0a2c0e77de7e01844331cc8fb2d2",
+      "originalRelated": [
+        "science-water-cycle",
+        "building-panama-canal"
+      ],
+      "currentRelated": [
+        "science-water-cycle",
+        "building-panama-canal"
+      ],
+      "originalCorrectAnswer": "Die Region enthält weitere Tempel, Siedlungen und Wasseranlagen.",
+      "correctIndex": 0,
+      "sourceReads": [
+        {
+          "url": "https://whc.unesco.org/en/list/668/",
+          "anchor": "44–48",
+          "finding": "Die größere Angkor-Landschaft enthält viele Tempel, Wasseranlagen und bewohnte Siedlungen. Ihre Gesamtfläche ist keine Tempelfläche von Angkor Wat."
+        },
+        {
+          "url": "https://asia-archive.si.edu/object/S1987.901/",
+          "anchor": "Label, Absatz69",
+          "finding": "Die Museumserklärung datiert Angkor Wat ungefähr1150. Datierung und Maße der Skulptur sind keine Gebäudeabmessungen oder geeignete Tempelfotografie."
+        }
+      ],
+      "goal": "Du liest Karten und Größenangaben genauer und vermeidest, die Eigenschaften einer ganzen Region einem einzelnen Gebäude zuzuschreiben.",
+      "ageLevels": {
+        "6-8": "Angkor Wat ist ein Tempel in einer viel größeren historischen Landschaft. Ein Wassergraben umgibt ihn.",
+        "9-11": "Angkor Wat gehört zur großen historischen Landschaft von Angkor in Kambodscha. Der Tempel stammt aus dem zwölften Jahrhundert. Galerien, Höfe und Türme bilden eine zusammenhängende Anlage, die von einem breiten Wassergraben umgeben ist. Die Region Angkor umfasst weitere Tempel, Siedlungen, Straßen, Becken und Kanäle aus mehreren Jahrhunderten. Die Fläche des ganzen Welterbegebiets ist deshalb keine Größenangabe für Angkor Wat allein. Auch heute gehören Menschen und religiöses Leben zu dieser Landschaft.",
+        "12-14": "Im Übersichtsbild suchst du zuerst den Rand des Tempels, dann den Graben und schließlich weitere Wasserwege. Eine räumliche Verbindung allein verrät noch nicht, zu welcher Zeit ein Kanal genutzt wurde oder welchem Zweck er genau diente. Aus einem schönen Grundriss lassen sich nicht alle bautechnischen Zusammenhänge ablesen. Sandsteinflächen, tragende Teile, Pflege und Wasserhaushalt brauchen eigene Untersuchungen. Die schematische Wasserübersicht berechnet keine Überflutung und keine Standsicherheit."
+      },
+      "modelDecision": "Eigene schematische Draufsicht ohne genaue Maße oder Berechnung von Wasserwegen.",
+      "uiChecked": false
+    },
+    {
+      "id": "building-palenque",
+      "originalManuscriptSHA256": "ed91b44081dbff37b7a4cae10baf30af06699ce159a913eec4855a1facd1a5fb",
+      "currentContentSHA256": "2f500cc75f7e3a3793766cb510f095a6fc281b3797e4012db8d0e4d1081211da",
+      "originalRelated": [
+        "history-maya",
+        "building-colosseum"
+      ],
+      "currentRelated": [
+        "history-maya",
+        "building-colosseum"
+      ],
+      "originalCorrectAnswer": "Welche gezeichneten Räume durch einen sichtbaren Zugang verbunden sind.",
+      "correctIndex": 0,
+      "sourceReads": [
+        {
+          "url": "https://whc.unesco.org/en/list/411/",
+          "anchor": "5,50–56",
+          "finding": "Blütezeit500–700, Stadtgrundriss, gewölbte Räume, Galerien und Schrift als verschiedene Hinweise."
+        },
+        {
+          "url": "https://lugares.inah.gob.mx/en/node/5523",
+          "anchor": "24–29",
+          "finding": "Der INAH-Artikel behandelt vor allem Comalcalco und vergleicht Bauformen mit Palenque. Seine anderen Materialien und örtlichen Daten werden nicht auf Palenque übertragen."
+        }
+      ],
+      "goal": "Du trennst Beobachtung von Deutung und nutzt Pläne, Architektur und Quellen als unterschiedliche Hinweise.",
+      "ageLevels": {
+        "6-8": "In Palenque lebten Menschen der Maya. Erhaltene Bauten zeigen Räume, Höfe, Bilder und Schrift.",
+        "9-11": "Palenque war eine Stadt der Maya im heutigen Mexiko. Ihre bekannte Blütezeit lag ungefähr zwischen 500 und 700 n.Chr. Tempel, Palastbauten, Höfe und Wohnbereiche gehörten zu einem größeren städtischen Zusammenhang. Steinerne Dächer, Galerien und reich gestaltete Flächen prägen die erhaltenen Bauten. Bilder und Schriftzeichen ergänzen die räumliche Architektur. Ein Raumplan zeigt Wege und Nachbarschaften, erklärt aber nicht von selbst die Bedeutung jeder Inschrift oder die Nutzung jedes Zimmers.",
+        "12-14": "Beim Vergleich von Bauformen zählt der genaue Aufbau. Ein Kraggewölbe rückt Steinlagen schrittweise zur Mitte vor. Es ist nicht dasselbe Prinzip wie ein Bogen aus keilförmig angeordneten Steinen; beide brauchen geeignete Auflager und genaue Prüfung. Funde, Bauzustände und Schriftzeugnisse ergänzen sich. Verlässliche Erklärungen verbinden diese Hinweise, statt eine vermutete Funktion allein aus der Höhe eines Turms abzuleiten. Maya-Kulturen gehören zudem nicht nur der Vergangenheit an."
+      },
+      "modelDecision": "Eigene Prinzipdarstellung zu Raum und Bauform; keine maßstäbliche Rekonstruktion eines bestimmten Raums in Palenque.",
+      "uiChecked": false
+    },
+    {
+      "id": "building-sydney-opera",
+      "originalManuscriptSHA256": "b359bc16c90e343fcb82a0e645ef8350df53918978b9c56b3ada0f8dfd853ace",
+      "currentContentSHA256": "480a807506fd5c396eb83e4184d0d22fd6b94f8e2f24996ade6f8041f8ce7a66",
+      "originalRelated": [
+        "science-angle",
+        "science-sound"
+      ],
+      "currentRelated": [
+        "science-sound"
+      ],
+      "originalCorrectAnswer": "Ja, beide bleiben gleich weit von derselben Kreismitte entfernt.",
+      "correctIndex": 0,
+      "sourceReads": [
+        {
+          "url": "https://whc.unesco.org/en/list/166/",
+          "anchor": "4–5",
+          "finding": "Eröffnung1973, Dachgruppen und gemeinsame Entwurfs-/Ingenieurleistung sind belegt."
+        },
+        {
+          "url": "https://www.sydneyoperahouse.com/our-story/the-spherical-solution",
+          "anchor": "59–81",
+          "finding": "Gemeinsame Kugelgeometrie und wiederholbare Bauteile; die Orangenanekdote wird nicht als gesicherter Entdeckungsmoment übernommen."
+        },
+        {
+          "url": "https://www.sydneyoperahouse.com/our-story/50-years-extraordinary-moments",
+          "anchor": "60,76–77",
+          "finding": "Offizielle Eröffnung20.10.1973 ist von früheren Aufführungen zu unterscheiden."
+        }
+      ],
+      "goal": "Du unterscheidest Größe und Krümmung und erkennst, wie eine mathematische Idee beim Bauen helfen kann, ohne alle Probleme allein zu lösen.",
+      "ageLevels": {
+        "6-8": "Die Dächer sehen verschieden aus. Eine gemeinsame Kugelform half, ihre Bauteile zu planen.",
+        "9-11": "Das Opernhaus von Sydney wurde 1973 eröffnet. Seine auffälligen Dächer erinnern an Segel oder Schalen. Tatsächlich gehören zu ihrer Konstruktion vorgefertigte Betonbauteile und ein gemeinsames geometrisches Prinzip: Teile derselben Kugelform. Jørn Utzon entwickelte den Entwurf; viele Architektinnen, Ingenieure und Handwerksleute wirkten an der Ausführung mit. Das Haus wird für verschiedene Aufführungen genutzt. Eine besondere Außenform erklärt nicht automatisch, wie gut sich jeder Ton in einem Saal hören lässt.",
+        "12-14": "Im geometrischen Vergleich kann ein längerer und ein kürzerer Kreisbogen denselben Radius haben. Das ist eine zweidimensionale Hilfe zur gemeinsamen Krümmung; die wirklichen Dächer sind räumliche Konstruktionen. Die Kugelgeometrie erleichterte wiederholbare Bauteile. Damit waren nicht sämtliche Aufgaben gelöst: Tragwerk, Bauausführung, Innenräume und Erhaltung verlangen zusätzliches Wissen. Die populäre Geschichte von einer geschälten Orange ist kein sicher belegter einzelner Entdeckungsmoment."
+      },
+      "modelDecision": "Eigene zweidimensionale Geometriehilfe, keine historische Dachprojektion, Statik- oder Akustiksimulation.",
+      "uiChecked": false
+    }
+  ],
+  "connections": [
+    {
+      "fromId": "building-pont-du-gard",
+      "toId": "science-water-cycle",
+      "kind": "transport",
+      "why": "Die Wasserleitung führt vorhandenes Quellwasser zur Stadt. Der natürliche Wasserkreislauf beschreibt andere Wege, etwa Regen und Versickerung. Eine Brücke erzeugt kein zusätzliches Wasser."
+    },
+    {
+      "fromId": "building-pont-du-gard",
+      "toId": "building-colosseum",
+      "kind": "compare",
+      "why": "Beide Bauwerke nutzen tragende Bögen. Beim Aquädukt tragen sie eine Wasserrinne, im Amphitheater gehören Bögen zu Räumen und Verkehrswegen. Gleiche Grundideen erfüllen unterschiedliche Aufgaben."
+    },
+    {
+      "fromId": "building-great-zimbabwe",
+      "toId": "building-great-wall",
+      "kind": "compare",
+      "why": "Groß-Simbabwes Granitmauern wurden ohne Mörtel gesetzt. Die Chinesische Mauer umfasst dagegen unterschiedliche Bauweisen. Vergleiche einen belegten Mauerabschnitt, statt alle langen Mauern gleich zu erklären."
+    },
+    {
+      "fromId": "building-great-zimbabwe",
+      "toId": "history-timbuktu",
+      "kind": "compare",
+      "why": "Steinmauern, Wohnreste und Handelsfunde erzählen von Groß-Simbabwe; Handschriften und Handelsgeschichte von Timbuktu. Verschiedene afrikanische Orte brauchen eigene Belege, keine einheitliche Bau- oder Kulturgeschichte."
+    },
+    {
+      "fromId": "building-horyu-ji",
+      "toId": "building-eiffel-tower",
+      "kind": "compare",
+      "why": "Im Holzbau führen Konsolen und Stützen Dachlasten weiter; beim Eiffelturm bilden Eisenbauteile ein Gitter. Verfolge bei beiden einen Lastweg zum Untergrund, ohne Material und Bauweise gleichzusetzen."
+    },
+    {
+      "fromId": "building-horyu-ji",
+      "toId": "building-djenne-mosque",
+      "kind": "compare",
+      "why": "Historische Holzverbindungen und Lehmoberflächen benötigen unterschiedliche Pflege. Bei beiden Bauwerken gehört fachkundiges Erhalten zur langen Geschichte; hohes Alter allein beweist keine Unverwundbarkeit."
+    },
+    {
+      "fromId": "building-djenne-mosque",
+      "toId": "history-timbuktu",
+      "kind": "compare",
+      "why": "Djenné und Timbuktu sind verschiedene Städte in Mali mit eigener Geschichte. Vergleiche religiöse Nutzung, lokales Handwerk und Erhaltung, ohne die heutige Moschee von Djenné mit Timbuktus älteren Bauten gleichzusetzen."
+    },
+    {
+      "fromId": "building-lalibela",
+      "toId": "invention-3d-printing",
+      "kind": "compare",
+      "why": "In Lalibela entstehen Freiräume durch gezieltes Abtragen von Fels; additive Verfahren bauen Material auf. Beschreibe den Materialweg, statt jedes Herstellen als Aufeinanderstapeln zu verstehen."
+    },
+    {
+      "fromId": "building-lalibela",
+      "toId": "science-water-cycle",
+      "kind": "uses",
+      "why": "Niederschlag gehört zum Wasserkreislauf. An Felskirchen muss anfallendes Wasser passend abgeleitet werden, damit es Bauteile nicht schädigt. Eine gezeichnete Entwässerung ist noch keine berechnete Wasserführung."
+    },
+    {
+      "fromId": "building-angkor-wat",
+      "toId": "science-water-cycle",
+      "kind": "compare",
+      "why": "Angkors Becken, Kanäle und Gräben sind gebaute Wasseranlagen innerhalb einer Landschaft mit natürlichem Wasserhaushalt. Unterscheide den Tempelgraben vom gesamten Wasserweg und von der ganzen Region."
+    },
+    {
+      "fromId": "building-angkor-wat",
+      "toId": "building-panama-canal",
+      "kind": "compare",
+      "why": "Ein Tempelgraben und ein Schifffahrtskanal erfüllen verschiedene Aufgaben. Vergleiche Umrisse, Wasserwege und Nutzung; ein gleiches Wort wie Wasseranlage macht daraus noch nicht dasselbe System."
+    },
+    {
+      "fromId": "building-palenque",
+      "toId": "history-maya",
+      "kind": "evidence",
+      "why": "Palenques Räume und Schriftzeugnisse liefern unterschiedliche Hinweise auf eine Stadt der Maya. Die Geschichte der Maya umfasst mehrere Orte und reicht über die erhaltenen Bauwerke der Vergangenheit hinaus."
+    },
+    {
+      "fromId": "building-palenque",
+      "toId": "building-colosseum",
+      "kind": "compare",
+      "why": "Ein Kraggewölbe rückt Steinlagen zur Mitte vor; ein Bogen ordnet Steine anders um die Öffnung an. Vergleiche die Bauprinzipien, ohne aus einer ähnlichen Öffnung dieselbe Konstruktion abzuleiten."
+    },
+    {
+      "fromId": "building-sydney-opera",
+      "toId": "science-sound",
+      "kind": "compare",
+      "why": "Das Klangmodell vergleicht Tonhöhe und Schwingungen. Die Akustik eines Aufführungsraums hängt von weiteren Eigenschaften ab; weder ein Kreisvergleich noch eine auffällige Dachform beweist eine bestimmte Hörqualität."
+    }
+  ],
+  "mediaDecision": {
+    "choice": "Retain own clearly labelled principle drawings and meaningful interactive models. No photograph integrated or represented by an illustration.",
+    "existingAnimalPipelineCompared": true,
+    "wikimediaResearchOrDownloads": false,
+    "historicalEvidenceRetained": true,
+    "otherCandidates": [
+      {
+        "topic": "building-pont-du-gard",
+        "page": "https://unsplash.com/photos/a-stone-bridge-over-a-body-of-water-VOxhYmHbQwo",
+        "author": "Hongbin / hbsun2013",
+        "sourceMotif": "Pont du Gard, Vers-Pont-du-Gard, France, as identified by the original photo page",
+        "licensePage": "https://unsplash.com/license",
+        "licensePageRead": "23.10.2026, free photo under Unsplash License; download/use including commercial purposes, no competing image service.",
+        "download": "TLS-verified ordinary request to images.unsplash.com returned proxy tunnel403. No binary image/visual-quality approval; no workaround/permission requested."
+      },
+      {
+        "topic": "building-sydney-opera",
+        "page": "https://unsplash.com/photos/sydney-opera-house-australia-LKhuawwNcpQ",
+        "author": "Jayden So / jaydn_so",
+        "sourceMotif": "Sydney Opera House, Australia, as identified by the original photo page",
+        "licensePage": "https://unsplash.com/license",
+        "licensePageRead": "23.10.2026, free photo under Unsplash License.",
+        "download": "TLS-verified ordinary request to images.unsplash.com returned proxy tunnel403. No binary image/visual-quality approval; no workaround/permission requested."
+      }
+    ],
+    "rightsLimit": "UNESCO description licensing is not blanket permission for all photographs. INAH image terms include NC/ND; Smithsonian sculpture is a different motif and its page contains conditional usage statements. None imported as an architectural photograph."
+  },
+  "sourceAccessLimits": [
+    {
+      "url": "https://www.wmf.org/projects/rock-hewn-churches",
+      "finding": "Current tool exposed footer/newsletter only; no fresh factual source read claimed."
+    },
+    {
+      "url": "https://apsaraauthority.gov.kh/our-work/archeological-research-conservation/34/",
+      "finding": "Current request403. Historical reference retained; current12th-century chronology supported by the accessed Smithsonian label."
+    }
+  ],
+  "earlyUI": {
+    "originalEightBeforeVisualCorrections": {
+      "scope": "32actual views/four widths, all eight original texts/answers/hints/parts/variants/search/links; before later diagram corrections. A green functional run did not detect the visual defects found in the images.",
+      "build": "7ba4a2c4c20ac5c2",
+      "status": "passed",
+      "reportSHA256": "fadef0fd49e68723a43a0f0446ccf40df71edbf35fcf68f2441d96627780c0f9",
+      "sourceDigest": null,
+      "views": 32
+    },
+    "correctedAqueductAndInitialLabels": {
+      "scope": "Six affected views at320large/1440, including actual uphill and missing-support negative probes with restoration. Corrected diagrams and labels actually viewed.",
+      "build": "5b2e31bf7556f31c",
+      "status": "passed",
+      "reportSHA256": "9a0e68b867eaa1bf4c64cdaac74cddb9434e9922ebdce9f96d6e3af854080b34",
+      "sourceDigest": null,
+      "views": 6
+    },
+    "eightNativeBeforeLastTwoCorrections": {
+      "scope": "16actual native200% views at640/320CSS, including all texts/answers/hints/model states/links. All eight640 diagrams actually viewed. Before timber/Angkor follow-up corrections.",
+      "build": "5b2e31bf7556f31c",
+      "status": "passed",
+      "reportSHA256": "fde9c962114fc68e8f938ae88269a3f4892748f32f10e38f416023a15a8753b3",
+      "sourceDigest": "9ebc5415534ca0be2a0a4b431d04ca6b6f72888d6cd0ecc33c44cf040d57987b",
+      "views": 16
+    },
+    "correctedTimberAndMoatMarker": {
+      "scope": "Four actual native200% views at640/320 plus detached-roof and occluded-marker negatives/restoration. Actual corrected images viewed. Before later timber-capital continuity/marker refinement.",
+      "build": "0baa8cfc23e729f6",
+      "status": "passed",
+      "reportSHA256": "2e0719b3743529d5632657b9a5191e651ddf89da6bb6afac642089b012af583d",
+      "sourceDigest": "8c9ae804a55943d2bbdcf93ca234354d30f2faf8a68153a6b852fed08f8f0d0f",
+      "views": 4
+    },
+    "currentTimberContinuity": {
+      "scope": "Two current native200% views at640/320; continuous brackets connect roof to columns, clear markers and actual detached-roof/old-separated-bracket negatives. Images actually viewed; all original reports retain their own builds.",
+      "build": "d52d71af6e14f5f6",
+      "status": "passed",
+      "reportSHA256": "cf61a5dbb5a598def885e41a421d2cba9871433b9dac40d583b8cfd791cd6055",
+      "sourceDigest": "90bb9f56cc54d12e27f952757cb31130f665c9897337aced5bcb370fd0e36c16",
+      "views": 2
+    }
+  },
+  "fullAcceptance": "Open: precise remaining sources/media review and actual early product, original saved/offline states, reconciliation with actual electrical and six-invention deliveries, full mandatory local/three-engine CI/current normal readiness and actual deployment.",
+  "visualCorrections": [
+    {
+      "topic": "building-pont-du-gard",
+      "finding": "Original orientation drew a floating channel above one incomplete arch row; the steep channel later crossed the upper arch openings.",
+      "change": "Keep all three load-bearing rows visible, highlight the arches during inspection and put a slightly descending water route above the openings. Actual removal of support and uphill route are rejected."
+    },
+    {
+      "topic": "building-great-zimbabwe",
+      "finding": "The fixed legend called joints offset even while the initial rows were aligned.",
+      "change": "Use neutral Fugen der Steinlagen and actually compare aligned/offset rows."
+    },
+    {
+      "topic": "building-palenque",
+      "finding": "The initial straight upper layers were already labelled corbelled.",
+      "change": "Use neutral Obere Steinlagen while the model actually varies the projection and remaining opening."
+    },
+    {
+      "topic": "building-horyu-ji",
+      "finding": "Visible roof/bracket gaps, separated bracket levels and arrows crossing marker areas.",
+      "change": "Connected three-level brackets touching the roof and columns; markers outside the drawn load-path arrow. Coupled actual SVG geometry and negative probes retained."
+    },
+    {
+      "topic": "building-angkor-wat",
+      "finding": "The crossing access road covered the moat marker.",
+      "change": "Place the marker below the actual road and check its painted text bounds."
+    }
+  ],
+  "partialFailureEvidence": {
+    "oldCountTest": "First193-unit candidate had one remaining43-versus45 count: only12 of14 new relations touch the original92 topics; Horyu↔Djenne and Lalibela↔3D touch newer topics. Narrow count corrected, original hashes unchanged and14edges separately required.",
+    "exactLabelSelector": "Original corrected-three partial failed because the visible number2 was omitted from the exact label selector. Full DOM text including2 is now compared. No assertion removed.",
+    "negativeProbePaint": "Initial injected SVG faults were read before repaint: original diagnostic records show d90 with previous bbox100, and restored d100 with previous bbox90. Two animation frames now establish the actually painted fault/restoration before the unchanged negative assertions.",
+    "zeroHeightStroke": "A first access-road fixture waited for Playwright visible on a horizontal path with zero-height geometry. The current fixture requires attachment and independently checks its nonzero length, painted stroke and visible style. Original failed reports retained."
+  },
+  "thinkingDemands": {
+    "building-pont-du-gard": "Separate water paths, explain height/length references, test a lower source against gravity.",
+    "building-great-zimbabwe": "Observe joint arrangement, compare layouts, distinguish preserved remains from a whole historical city.",
+    "building-horyu-ji": "Recognize parts, trace a continuous load path, distinguish longevity from maintenance-free safety.",
+    "building-djenne-mosque": "Separate coating/wall/roof, reason about added load, assess why a surface alone cannot establish structural condition.",
+    "building-lalibela": "Distinguish solid/void, compare removing and adding material, explain drainage without treating a sketch as stability evidence.",
+    "building-angkor-wat": "Identify three boundaries, distinguish temple/region, apply the correct spatial reference to an area statement.",
+    "building-palenque": "Read visible connections, compare corbelling and arches, distinguish observation, dating and interpretation.",
+    "building-sydney-opera": "Identify a centre/radius, vary arc length at fixed radius, distinguish another circle and a3Droof from the2Dcomparison."
+  },
+  "countMeaning": "Eight preserved original mini questions added; model observations/comparisons are not counted as new world games or fabricated extra question levels.",
+  "preparedVerification": {
+    "units": 193,
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "byteEquivalentContentExports": 43,
+    "fullIntegrity": "open: 56 historical dossiers require current built UI/search/back/offline evidence; exact existing editorial report contains no other errors",
+    "fullAcceptance": "open",
+    "dossiersRefreshed": false
+  },
+  "locationLabelCorrection": {
+    "id": "building-sydney-opera",
+    "before": "Opernhaus am Hafen vonSydney · ungefährerKartenpunkt",
+    "after": "Opernhaus am Hafen von Sydney · ungefährer Kartenpunkt",
+    "meaning": "Two missing spaces in retained new manuscript label confirmed in actual mobile location map; precise original failed report and screenshot retained. Coordinates, original correct answer, old156-topic reference hashes and all game/save identities unchanged. Targeted current map→globe→article return and final acceptance still required.",
+    "originalBuild": "d52d71af6e14f5f6",
+    "originalReport": ".qa-output/buildings-location-before/report.json"
+  },
+  "retainedLocationMapCorrection": {
+    "sourceMaster": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+    "originalsSHA256": {
+      "app/topic-map.tsx": "62a0616e69b37117491cd89a405fc02623d5624c935310fc9235edadf07ef562",
+      "app/topic-map-layout.mjs": "8ac72b718beabee1c30dea6bad518ced14de5f3de4ea8523c5ebd4c7d922d464",
+      "app/topic-map.css": "e6de695e2ff9d2026cb6d017c42d5540be59f31c2c7231b3769ebf0f206eda3c",
+      "public/maps/world-context.svg": "0afae717c2380a6a7ac84dbf76f01dc962de94d722cbda16e5aa7e0572c7d523",
+      "tests/topic-map.test.mjs": "4a753f97602060a45e166d782e6a35dbbfa01e8d112581fd31a4536d55ba8881"
+    },
+    "trigger": "Actual320px Sydney location screenshot contains seven unrelated continent numbers plus a new marker1; ambiguous numbering despite correct individual point coordinates. The master already preserves the separate clean geography and grouping solution.",
+    "decision": "Selectively retain exact five master originals. Historical continent teaching illustration remains unchanged. Existing location IDs/order/coordinates and all save keys remain unchanged; no Wikimedia access or new photograph.",
+    "rights": "Own SVG generated from the existing Natural Earth geography. Original generator content/build-journey-diagrams.mjs at the recorded master lines40–47 and original nature-editorial-review media record retained.",
+    "acceptance": "Current targeted normal/native/negative/offline/affected compact proofs passed at9da source d084. Full mandatory acceptance and actual preceding PR58 merge/base reconciliation remain open; current dossiers not rebound.",
+    "preliminaryVerification": {
+      "units": 197,
+      "typecheck": "passed",
+      "lint": "passed",
+      "build": "passed",
+      "scope": "Application map and exact existing master tests at the recorded log; afterward only bounded building browser assertions added and syntax-checked. Current actual responsive/native/cold/offline map review and complete acceptance remain open.",
+      "knownPreparationFailure": "Compact world index initially retained the old Sydney spelling. Corrected the same location label in the existing projection and regenerated exports; original failure log preserved, no assertion/reference weakened."
+    },
+    "sourceManifest": [
+      {
+        "file": "app/topic-map.tsx",
+        "sha256": "62a0616e69b37117491cd89a405fc02623d5624c935310fc9235edadf07ef562"
+      },
+      {
+        "file": "app/topic-map-layout.mjs",
+        "sha256": "8ac72b718beabee1c30dea6bad518ced14de5f3de4ea8523c5ebd4c7d922d464"
+      },
+      {
+        "file": "app/topic-map.css",
+        "sha256": "e6de695e2ff9d2026cb6d017c42d5540be59f31c2c7231b3769ebf0f206eda3c"
+      },
+      {
+        "file": "public/maps/world-context.svg",
+        "sha256": "0afae717c2380a6a7ac84dbf76f01dc962de94d722cbda16e5aa7e0572c7d523"
+      },
+      {
+        "file": "tests/topic-map.test.mjs",
+        "sha256": "4a753f97602060a45e166d782e6a35dbbfa01e8d112581fd31a4536d55ba8881"
+      }
+    ],
+    "readableLegendCorrection": {
+      "originalBuild": "ac8e314077dc8b62",
+      "actualBefore": {
+        "id": "building-sydney-opera",
+        "width": 1440,
+        "label": "1 · Opernhaus am Hafen von Sydney · ungefährer Kartenpunkt",
+        "legendMetrics": {
+          "fontSize": 14,
+          "scrollWidth": 268,
+          "clientWidth": 268
+        }
+      },
+      "cause": "Normal secondary-button font was14px; large-reading18.4px passed. Actual1440 normal locator font failed unchanged>=16px assertion.",
+      "change": "Scoped map-legend font1rem with wrapping/max-inline-size; existing large-reading override retained. Four retained original files unchanged, original CSS extended by one readable-label rule.",
+      "proof": "Actual normal320large/1440 and native200%640/320:16px normal/18.4px large; all8 new+3affected old grouped/separate maps and exact7old individual globe destinations retained. Wrong actual background and computed14px font rejected, restored current states passed. Complete existing native stopped-server offline helper passed16building/12mechanical/6electrical views and12old task cases with actual original-pass restoration. Four affected compact Rhine/Reef contexts and globe/book return passed. These are targeted current proofs, not full acceptance or reconciliation with actual PR58 delivery."
+    },
+    "currentSHA256": {
+      "app/topic-map.tsx": "62a0616e69b37117491cd89a405fc02623d5624c935310fc9235edadf07ef562",
+      "app/topic-map-layout.mjs": "8ac72b718beabee1c30dea6bad518ced14de5f3de4ea8523c5ebd4c7d922d464",
+      "app/topic-map.css": "90a0a82e500ed6aff93d0b881efc62546fc799f00267217d98a5f6f7899f838f",
+      "public/maps/world-context.svg": "0afae717c2380a6a7ac84dbf76f01dc962de94d722cbda16e5aa7e0572c7d523",
+      "tests/topic-map.test.mjs": "4a753f97602060a45e166d782e6a35dbbfa01e8d112581fd31a4536d55ba8881"
+    },
+    "currentTargetedProofs": [
+      {
+        "report": ".qa-output/buildings-location-readable-fault-settled/report.json",
+        "reportSHA256": "cff7e5ba210e44a0fcba39d82d2eb2b9a2934f590fa35027960968307bfe9501",
+        "build": "9da43330db4bd947",
+        "sourceDigest": "d08402fbc0f6650737a92b6075327296f2c268a7f1af5aa36eba1ffff33264a5",
+        "scope": "Actual affected building location labels, locator geometry, globe visit and return at320large/1440; targeted review only",
+        "observedViews": 22,
+        "native": false,
+        "negativeProof": {
+          "actualWrongBackgroundRejected": true,
+          "actual14pxLegendRejected": true,
+          "originalBackgroundAndFontRestored": true
+        },
+        "actualWidths": [
+          320,
+          1440
+        ]
+      },
+      {
+        "report": ".qa-output/buildings-location-readable-native-map/report.json",
+        "reportSHA256": "649c7d1b241052a9e06d659966e6675344a7ff50c48cfd252c3b55b879902e5c",
+        "build": "9da43330db4bd947",
+        "sourceDigest": "d08402fbc0f6650737a92b6075327296f2c268a7f1af5aa36eba1ffff33264a5",
+        "scope": "Actual affected building location labels, locator geometry, globe visit and return at320large/1440; targeted review only",
+        "observedViews": 22,
+        "native": true,
+        "negativeProof": null,
+        "actualWidths": [
+          320,
+          640
+        ],
+        "scopeNote": "Original shared scope heading names the ordinary variant. Actual native flag and individually recorded widths640/320 plus the original harness assertions of deviceScaleFactor2 establish the native200% scope; original report bytes remain unchanged."
+      },
+      {
+        "report": ".qa-output/buildings-location-current-offline/report.json",
+        "reportSHA256": "d44c946c1dcf70de91096083ecfcc5db35cb158c024d571f91594f224ae2bd4c",
+        "build": "9da43330db4bd947",
+        "sourceDigest": "d08402fbc0f6650737a92b6075327296f2c268a7f1af5aa36eba1ffff33264a5",
+        "scope": "Targeted existing complete native offline-resilience helper extended with eight retained buildings and their retained clean current location-map solution; preceding six inventions also exercised; not complete mandatory browser acceptance",
+        "observedViews": 0,
+        "native": true,
+        "negativeProof": null,
+        "actualWidths": []
+      },
+      {
+        "report": ".qa-output/buildings-affected-compact-context-actual-button/report.json",
+        "reportSHA256": "a9ea1db6ed82fc9cdb1918278da0bf8912185a2b5178ff7fb3330d87e54c2f02",
+        "build": "9da43330db4bd947",
+        "sourceDigest": "d08402fbc0f6650737a92b6075327296f2c268a7f1af5aa36eba1ffff33264a5",
+        "scope": "Two existing compact nature-atlas uses affected by the shared location-map background; actual320large and1440, no blanket nature review",
+        "observedViews": 4,
+        "native": false,
+        "negativeProof": null,
+        "actualWidths": [
+          320,
+          1440
+        ]
+      }
+    ],
+    "fixtureLimits": [
+      {
+        "report": ".qa-output/buildings-location-current/report.json",
+        "cause": "SVG text cannot use HTMLElement innerText. Corrected the same full text assertion to trimmed textContent, original failed record retained."
+      },
+      {
+        "report": ".qa-output/buildings-location-readable/report.json",
+        "cause": "Fault fixture read computed16px immediately after setting inline14px. Corrected fixture waits for actual computed14px before the unchanged rejection assertion, then for restored>=16px. Immediate16px/inline14px and actual later14px recorded in successful report; no product regression from this fixture error claimed."
+      },
+      {
+        "report": ".qa-output/buildings-affected-compact-context/report.json",
+        "cause": "Private fixture guessed wrong visit-button name. Replaced with actual exact Auf der Weltkugel finden label, all product assertions retained."
+      }
+    ]
+  },
+  "additionalLalibelaCountercheck20261023": {
+    "checkedSource": "https://whc.unesco.org/en/decisions/8880",
+    "reading": "Actual full decision text read;2025 year at page126,hydrological investigation84,community86,monitoring88,required studies92–94. Same UNESCO institution as original description, a distinct conservation document; no independent-institution claim.",
+    "productBenefit": "The optional explanation distinguishes an illustrative drainage route from site-specific current conservation investigation. New dated source and precise model limit; original main explanation/question/answer index/learning IDs unchanged.",
+    "priorSourcePreserved": "Historical World Monuments Fund link retained; current parser exposes footer only. New current source note uses actually accessible UNESCO evidence instead of claiming the unavailable WMF text was newly read.",
+    "accessLimits": "Old ICOMOS018 PDF ordinary read403;CNRS direct page502;WMF footer-only. No permission repair, new photo, or Wikimedia work. Search snippets are not cited as full-page reads.",
+    "beforeContent": {
+      "id": "building-lalibela",
+      "title": "Lalibela – Räume aus dem Fels",
+      "intro": "Kann ein Gebäude entstehen, indem Menschen Material wegnehmen statt es aufzustapeln?",
+      "aliases": [
+        "Felskirchen von Lalibela",
+        "Lalibela"
+      ],
+      "locations": [
+        {
+          "label": "Lalibela in Äthiopien · ungefährer Kartenpunkt",
+          "lat": 12.032,
+          "lon": 39.047,
+          "iso": "ETH"
+        }
+      ],
+      "paragraphs": [
+        "In Lalibela wurden mittelalterliche Kirchen aus anstehendem Fels herausgearbeitet. Manche stehen in tiefen ausgehauenen Höfen. Türen, Räume und Stützen entstanden nicht einfach durch das Stapeln fertig angelieferter Steinblöcke.",
+        "Die Anlage umfasst elf Kirchen und Verbindungswege. Gräben dienen auch der Entwässerung. Wasser kann Gestein und Bauwerk schädigen; die erhaltenen Formen brauchen deshalb weiter Schutz und Pflege. Die Kirchen bleiben religiös genutzte Orte."
+      ],
+      "facts": [
+        {
+          "label": "Zeit einordnen",
+          "text": "Mittelalterlicher Ausbau, besonders 12.–13. Jahrhundert; nicht alle Einzelschritte besitzen ein gesichertes Jahresdatum."
+        },
+        {
+          "label": "Bauprinzip",
+          "text": "Fels wurde abgetragen, um Baukörper, Freiräume und Zugänge herauszuarbeiten."
+        }
+      ],
+      "more": [
+        "Beim Lesen der Skizze musst du festes Material und ausgeräumten Raum unterscheiden. Eine dunkle Form kann den Fels darstellen, eine helle Aussparung einen Zugang. Frage deshalb zuerst nach der Legende.",
+        "Entwässerung gehört zur Erhaltung des Ganzen. Ein gezeichneter Graben zeigt nur einen möglichen Wasserweg; er beweist weder die richtige Ausführung eines historischen Grabens noch die Stabilität des verbleibenden Felsens."
+      ],
+      "surprise": "Ein Raum kann durch Wegnehmen entstehen; übrig gebliebenes Material bildet dann Wände und Dach.",
+      "learning": {
+        "starter": "Hier arbeiteten Menschen Räume aus dem Fels heraus. Sie bauten nicht nur Stein auf Stein.",
+        "observe": "Zeichne einen dunklen Felsblock auf Papier. Markiere mit einer zweiten Farbe, welche Bereiche für einen freien Zugang weggenommen würden und welche als Baukörper bleiben. Kein Steinbearbeiten, Graben oder Höhlenbetreten ausprobieren.",
+        "benefit": "Du unterscheidest Material und Hohlraum und erkennst, dass nicht jedes Bauwerk auf dieselbe Weise entsteht."
+      },
+      "question": {
+        "prompt": "Was unterscheidet die Felskirchen von einem Haus aus aufeinandergelegten Blöcken?",
+        "answers": [
+          "Räume und Formen wurden aus dem vorhandenen Fels herausgearbeitet.",
+          "Fertige Steinblöcke wurden zuerst aufeinandergestapelt und danach ausgehöhlt.",
+          "Die Formen waren natürliche Höhlen; beim Bau wurde der Fels kaum verändert."
+        ],
+        "correct": 0,
+        "why": "Der vorhandene Fels wurde gezielt abgetragen. Verbleibender Baukörper und ausgehauene Freiräume gehören zusammen; ihre wirkliche Stabilität muss fachkundig geprüft werden."
+      },
+      "questionFeedback": {
+        "hint": "Achte darauf, ob Material hinzugefügt oder an bestimmten Stellen entfernt wird.",
+        "wrongReasons": [
+          null,
+          "Das verwechselt gemauerten Aufbau mit dem beschriebenen Herausarbeiten aus anstehendem Fels. Verbleibendes Material bildet den Baukörper.",
+          "Die Quellen beschreiben gezieltes Herausarbeiten von Türen, Räumen und Stützen. Natürliche Hohlräume allein erklären diese Bauformen nicht."
+        ]
+      },
+      "building": {
+        "date": "Mittelalterlicher Ausbau, besonders 12.–13. Jahrhundert",
+        "size": "Elf Kirchen mit Höfen, Gräben und Verbindungswegen; keine maßstäbliche Gesamtanlage im Modell.",
+        "exploration": {
+          "kind": "rock-cut",
+          "steps": [
+            "Unterscheide vorhandenen Fels und markierten freien Raum.",
+            "Das Herausschlagen von Material legt Räume und Baukörper frei. Verbleibendes Material bildet die Struktur.",
+            "Ein Zugang und ein Entwässerungsweg haben unterschiedliche Aufgaben. Beide gehören zum Verständnis der Anlage."
+          ],
+          "note": "Eigene schematische Material-/Raumskizze; keine Rekonstruktion der genauen Baufolge und keine Grabungsanleitung."
+        }
+      },
+      "category": "buildings",
+      "sources": [
+        {
+          "label": "UNESCO · Felsenkirchen, Zugänge und Entwässerung",
+          "url": "https://whc.unesco.org/en/list/18/"
+        },
+        {
+          "label": "World Monuments Fund · Erhaltung und örtliches Handwerk",
+          "url": "https://www.wmf.org/projects/rock-hewn-churches"
+        }
+      ],
+      "related": [
+        "invention-3d-printing",
+        "science-water-cycle"
+      ],
+      "links": [],
+      "revision": 1,
+      "checkedAt": "2026-10-23",
+      "sourceNote": "Eigene Erklärung und Zeichnung mit KI-Unterstützung. UNESCO beschreibt aus dem Fels gearbeitete Kirchen, Zugänge und Entwässerungswege. Der World Monuments Fund berichtet über Erhaltung und die Ausbildung örtlicher Fachleute. Die Skizze rekonstruiert keine genaue Baufolge."
+    },
+    "acceptance": "Current actual complete affected Lalibela texts/three model states/hints/answers/source links/knowledge return at320large/390/1440 plus native200%640/320 passed at22511bf5c1e09a60. Prior map-family proofs remain exactly at9da; complete mandatory post-PR58 integration acceptance still open. No accepted UI-registry mutation.",
+    "targetedProductProofs": [
+      {
+        "report": ".qa-output/lalibela-source-current/report.json",
+        "reportSHA256": "9e86b0c0949cd78693a787b56e9dc8e1735329316d409a1f236302be5d468807",
+        "build": "22511bf5c1e09a60",
+        "sourceDigest": "6644eb8f9154c641d66b7ac948f6003079dc10d23c08b776700d0ad140ffb9f6",
+        "native": false,
+        "views": 3,
+        "scope": "Targeted actual Lalibela dated source explanation, all current text/hints/answers, three model states, map and knowledge back links; existing map-family proofs remain separate"
+      },
+      {
+        "report": ".qa-output/lalibela-source-current-native/report.json",
+        "reportSHA256": "2a1394175278fb1627d7d290df2a6a87f072ad1470c8ded6e238e38a4f036a1d",
+        "build": "22511bf5c1e09a60",
+        "sourceDigest": "6644eb8f9154c641d66b7ac948f6003079dc10d23c08b776700d0ad140ffb9f6",
+        "native": true,
+        "views": 2,
+        "scope": "Targeted actual Lalibela dated source explanation, all current text/hints/answers, three model states, map and knowledge back links; existing map-family proofs remain separate"
+      }
+    ]
+  },
+  "continuedFromActualPR58": {
+    "mergeCommit": "36a849ebd289f7fb83b949e59761d17699e646a1",
+    "integrationCommit": "49f4331",
+    "existingFactualRecordsChecked": 156,
+    "mismatchesExceptExplainedRelationships": 0,
+    "retainedCurrentDossiers": 65,
+    "fullCurrentAcceptance": "pending",
+    "chronicle": "54th entry confirms actual PR58, all53 older entries unchanged"
+  },
+  "boundedWaitBatchMeasurement": {
+    "scope": "Paired local measurement of two independent strict visibility waits batched after each answer. All actions, assertions, locators, timeouts and cases retained. No CI timing claim.",
+    "build": "8a11928c4f2e800c",
+    "sourceDigest": "b92079d8d7863122b3fa054e758a5ca1d7802189fe54fcf22362736776740fd1",
+    "baselineSHA256": "c76f501844447b4c2eac5ce1017b41fe6c88220d8882d153a6b056769ce76735",
+    "candidateSHA256": "986c666fb3157a20d6cc4033072e6113042d10101fa2b93b561072479fe33bf9",
+    "browser": "154.0.8037.57",
+    "reportSHA256": "99de790e0119874c70fe050711ee8954870237da64a828f6d84dc4c69e708bdd",
+    "rounds": 4,
+    "widths": [
+      390,
+      1440
+    ],
+    "workshopsPerVariant": 32,
+    "baselineSeconds": 19.143554672,
+    "candidateSeconds": 18.547059271000002,
+    "relativeDifference": -0.031159072137864372,
+    "pairedSamples": [
+      {
+        "round": 0,
+        "variant": "baseline",
+        "width": 390,
+        "seconds": 4.705254537
+      },
+      {
+        "round": 0,
+        "variant": "candidate",
+        "width": 390,
+        "seconds": 4.599051554
+      },
+      {
+        "round": 1,
+        "variant": "candidate",
+        "width": 390,
+        "seconds": 4.729296430999999
+      },
+      {
+        "round": 1,
+        "variant": "baseline",
+        "width": 390,
+        "seconds": 4.776556625000001
+      },
+      {
+        "round": 2,
+        "variant": "baseline",
+        "width": 1440,
+        "seconds": 4.9625283530000015
+      },
+      {
+        "round": 2,
+        "variant": "candidate",
+        "width": 1440,
+        "seconds": 4.625243705000001
+      },
+      {
+        "round": 3,
+        "variant": "candidate",
+        "width": 1440,
+        "seconds": 4.593467581000004
+      },
+      {
+        "round": 3,
+        "variant": "baseline",
+        "width": 1440,
+        "seconds": 4.6992151569999985
+      }
+    ],
+    "limits": "Small local sample, no proof of original CI cause or future55-minute completion. Only two independent strict visibility waits run together; all individual assertions, actions, cases and timeouts retained. Actual full and native-engine CI remain required."
+  },
+  "integratedEarlyProduct20261023": {
+    "build": "8a11928c4f2e800c",
+    "reportSHA256": "74d35806cefbf70f197659f6431f72b3d980d37aae29e0f766026ac99efa1f50",
+    "views": 16,
+    "widths": [
+      320,
+      1440
+    ],
+    "largeReadingAt320": true,
+    "actualArticleSearchTextsHintsWrongRightSourcesModelsAndBack": true,
+    "actualMobileModelImagesRead": 8,
+    "scope": "Existing early source-view guard on actual integrated product before long full acceptance. All eight model screenshots read at original resolution via lossless paired boards; no new whole-stock reinspection or independent human review claimed. Earlier native/model negatives stay bound to their original builds."
+  },
+  "currentCompleteLocalAcceptance": {
+    "build": "cb1820f262c2be81",
+    "originalTestedHead": "4cce1dcf4102e4c69875b79a47c00eb51c38bc1f",
+    "originalSourceDigest": "d068ac781fb234ff52b914a028b3b114325077b1953da79af769f168f7a690c0",
+    "originalReportSHA256": "24d1192bd2a20701062633b83c76d9c40e8c967a0b1e3e8a3ae13ca0ed954519",
+    "originalUnitReportedHead": null,
+    "headBinding": "Exact clean Git HEAD independently verified for linked worktree; original unit reader reports null. All original source digests match and reports remain unchanged.",
+    "seconds": 1236.1377280309998,
+    "checks": 144,
+    "localBrowser": "154.0.8037.57",
+    "renewedUIBindings": 73,
+    "newFactualDossiers": 0,
+    "retained73FactualFieldsAndAllPriorHistorySHA256": "0fe56003765189cfcceda214ddb70c8f9cb3151be1284fda7bb0ad6dd16ae537",
+    "buildingViews": 40,
+    "buildingStoppedServerCachedViews": 32,
+    "buildingNative200StoppedServerCachedViews": 16,
+    "existingSixInventionColdViews": 6,
+    "meaning": "Actual complete corrected-source local regression. Preserve original2d acceptance with its then-wrong chronicle sentence; this is a distinct source. No historical21 recovery, original CI artifact, independent scientific/human approval or actual deployment claimed. Final native CI and protected documentation-maintenance review remain required."
+  },
+  "chronicle58ContentCorrection": {
+    "problem": "The newly authored chronicle summary incorrectly named four inventions not present in actual PR58. Corrected against the immutable74ae catalogue and six-topic source review before any Ready PR or deployment. Earlier53 entries remain byte-identical.",
+    "actualDeliveredSourceCommit": "74ae838204d71857344e6fa6d00264b1537270f2",
+    "actualDeliveredCatalogueSHA256": "4f748f3c151c86bdea3c73a63635a5b3e35bf0fae071d0b5d0cd7b4c4f4d0303",
+    "deliveredTopicNames": [
+      "Kühlschrank",
+      "Fahrrad",
+      "Aufzug",
+      "Seismograf",
+      "3D-Druck",
+      "Nähmaschine"
+    ],
+    "permanentGuard": "Existing chronicle unit test now checks the recorded actual delivery names. It rejected the original wrong summary with1failure; corrected source passed. Expectations came from the actual immutable delivered source, not from the newly authored summary.",
+    "originalWrongSummaryNegativeLogSHA256": "5ae52906f130f8fa0972e76e8ebbd41ef835ebc9d26bda84a86b2520bf8a6f56",
+    "correctedProductBuild": "cb1820f262c2be81",
+    "correctedProductSourceDigest": "1ee63921841a606cdaa56fd8b93396e1fecc8c0ac68b696ef0053373e5625e5e",
+    "correctedProductReportSHA256": "5208b80ea6cdc807e7d5d1b2e4a43009b3879262b0292b113dd6bef7ff36f3cf",
+    "actualViews": [
+      {
+        "width": 320,
+        "native": false,
+        "deliveredNames": [
+          "Kühlschrank",
+          "Fahrrad",
+          "Aufzug",
+          "Seismograf",
+          "3D-Druck",
+          "Nähmaschine"
+        ],
+        "sourceCommit": "74ae838204d71857344e6fa6d00264b1537270f2",
+        "details": true,
+        "keyboard": true,
+        "geometry": true,
+        "axe": true,
+        "progressRetained": true
+      },
+      {
+        "width": 1440,
+        "native": false,
+        "deliveredNames": [
+          "Kühlschrank",
+          "Fahrrad",
+          "Aufzug",
+          "Seismograf",
+          "3D-Druck",
+          "Nähmaschine"
+        ],
+        "sourceCommit": "74ae838204d71857344e6fa6d00264b1537270f2",
+        "details": true,
+        "keyboard": true,
+        "geometry": true,
+        "axe": true,
+        "progressRetained": true
+      },
+      {
+        "width": 640,
+        "native": true,
+        "deliveredNames": [
+          "Kühlschrank",
+          "Fahrrad",
+          "Aufzug",
+          "Seismograf",
+          "3D-Druck",
+          "Nähmaschine"
+        ],
+        "sourceCommit": "74ae838204d71857344e6fa6d00264b1537270f2",
+        "details": true,
+        "keyboard": true,
+        "geometry": true,
+        "axe": true,
+        "progressRetained": true
+      },
+      {
+        "width": 320,
+        "native": true,
+        "deliveredNames": [
+          "Kühlschrank",
+          "Fahrrad",
+          "Aufzug",
+          "Seismograf",
+          "3D-Druck",
+          "Nähmaschine"
+        ],
+        "sourceCommit": "74ae838204d71857344e6fa6d00264b1537270f2",
+        "details": true,
+        "keyboard": true,
+        "geometry": true,
+        "axe": true,
+        "progressRetained": true
+      }
+    ],
+    "imagesActuallyRead": [
+      "normal320large full entry",
+      "native200%320 summary"
+    ],
+    "firstFullAcceptanceScope": "Original2d32b57/8a11928c remains a passed original for that source, including its then-wrong chronicle sentence. All original full reports and776 retained screenshots preserved; it is not final corrected-copy acceptance.",
+    "harnessBaselineClarification": "The first focused empty-pass fixture observed the existing optional readVoice normalization. No application fix or root-cause claim for it; repeated focused checks used the actual prior synthetic UI download with all original progress assertions intact.",
+    "next": "Complete corrected-source local regression passed naturally;73UI bindings renewed with histories. Exact final native integration CI, protected documentation-maintenance review and actual deployment still required."
+  },
+  "existingDossierRelationshipUpdate": {
+    "id": "topics-inventions:invention-3d-printing",
+    "deliveredSourceCommit": "74ae838204d71857344e6fa6d00264b1537270f2",
+    "oldDataHash": "b85a0787ee8c06ebff05ac53b2ade0df27fe0a0efdd8ffbb0a1029e14f332e21",
+    "currentDataHash": "c5e95699431a565e7799196b9b5f0d220611024aa7556e035b4bbd49e866b326",
+    "oldRelated": [
+      "invention-computer",
+      "invention-printing"
+    ],
+    "related": [
+      "invention-computer",
+      "invention-printing",
+      "building-lalibela"
+    ],
+    "allOtherFactualFieldsDeepEqual": true,
+    "meaning": "Only the already reviewed reciprocal Lalibela/additive-versus-subtractive material connection changes the serialized topic hash. Original hash and dossier links preserved; no other factual statement or previous answer changed."
+  },
+  "completeLocalAcceptanceBeforeChronicleContentCorrection20261023": {
+    "build": "8a11928c4f2e800c",
+    "originalTestedHead": "2d32b572dd5d646426e15f912f17529874ea4d66",
+    "originalSourceDigest": "d9e32a489f71f0c92038f999736361689122325f537095d7cf869886c4bfbc8a",
+    "originalReportSHA256": "ef7943526ccf63a74a7aa7b979f1633166af0fbe34ea2b9b6de541987dd9c018",
+    "originalUnitReportedHead": null,
+    "headBinding": "Exact clean linked-worktree Git HEAD independently verified; original unit reader reports null. All original proof source digests match and originals remain unchanged.",
+    "seconds": 1246.128224861,
+    "checks": 143,
+    "localBrowser": "154.0.8037.57",
+    "renewedPriorUIBindings": 65,
+    "newSourceAnchoredDossiers": 8,
+    "retainedPriorFactualFieldsAndHistorySHA256": "db824179b9ff7ab6348a14fa8e0de228f534389475f50927a2a9be1b80ca85e2",
+    "buildingViews": 40,
+    "buildingStoppedServerCachedViews": 32,
+    "buildingNative200StoppedServerCachedViews": 16,
+    "existingSixInventionColdViews": 6,
+    "meaning": "Natural current complete local success. No cold-new-browser eight-building scope, original CI artifact, independent scientific/human approval or actual deployment invented. Exact final CI/release/actual postflight still open."
+  },
+  "meaningBeforeCurrentAcceptance20261023": "Selective preparation of eight already preserved building manuscripts and own models. Existing156 topics and7 game banks retained. No product/independent/full acceptance or delivery claimed. Existing WK053–057 remains the sole task scope.",
+  "actualPostflightHarnessFixture": {
+    "build": "cb1820f262c2be81",
+    "sourceDigest": "931603c13e9c9f9b7f4a497979de7e4f7974c8cfd5b708e0388ab7a4c42c698e",
+    "reportSHA256": "e60730fff8d5363d7060f7c2beae80195b38796951b99a8f721967d79e0dc927",
+    "views": 24,
+    "syntheticPass": {
+      "download": true,
+      "reset": true,
+      "import": true,
+      "reload": true,
+      "oldNoteFavoriteSettingsAndModelPreserved": true,
+      "oldGeneratorState": 1,
+      "oldTransistorState": 3,
+      "newSeismographState": 2,
+      "newLayerCount": 2,
+      "newLayerCut": true,
+      "newPontStep": 2,
+      "newPontLowerSource": true,
+      "newSydneyStep": 2,
+      "newSydneyVariant": 2
+    },
+    "mapDelivery": {
+      "sourceCommit": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+      "sourcePath": "public/maps/world-context.svg",
+      "sha256": "0afae717c2380a6a7ac84dbf76f01dc962de94d722cbda16e5aa7e0572c7d523",
+      "bytes": 433009,
+      "meaning": "Independent immutable Git static asset, saved before the actual HTTP request. No build transform and no original-CI-artifact claim.",
+      "actualSHA256": "0afae717c2380a6a7ac84dbf76f01dc962de94d722cbda16e5aa7e0572c7d523",
+      "tlsVerified": false,
+      "actualServer": "http://127.0.0.1:4546",
+      "matched": true
+    },
+    "scope": "Local fixture validation only, not an actual deployment or TLS delivery claim. Actual future deployment uses a fresh directory and independently saved immutable Git map bytes. All original reports retained."
+  },
+  "fullMessageCountScope": {
+    "original2dMessages": 143,
+    "corrected4ccMessages": 144,
+    "additionalOccurrences": {
+      "Memory wrong pair rejected": 1
+    },
+    "removedOccurrences": {},
+    "newUniqueMessages": [],
+    "removedUniqueMessages": [],
+    "meaning": "One additional repeated Memory wrong-pair message, identical unique check sets. Message counts do not demonstrate added coverage, learning effects or cause correction."
+  },
+  "engineIsolationMaintenance20261024": {
+    "scope": "WK052 existing Quality entry maintenance after naturally cancelled PR59/Quality156; no new workflow, dependency, cost window, timeout exception or reduced test matrix.",
+    "originalCancelledCI": {
+      "runId": 40031512045,
+      "jobId": 120680618483,
+      "head": "346879448164ed809d5d7a45d9c1ffb2cef6a179",
+      "base": "36a849ebd289f7fb83b949e59761d17699e646a1",
+      "testedCommit": "b1b05218f9a1b983c530e41cfd257aa3dedbfb14",
+      "conclusion": "cancelled",
+      "originalLogSHA256": "2699da6571b95c76a55b51a419c91969467aaab72a0c119191642c64a7ffce4e",
+      "node": "v24.21.0",
+      "phaseSecondsWholeTimestampPrecision": {
+        "setup": 112.0,
+        "earlySearchAndColdPrecondition": 303.0,
+        "chromium": 1164.0,
+        "cancelledActualFirefoxWebkitStep": 1737.0
+      },
+      "missingProof": [
+        "Complete actual Firefox/WebKit report",
+        "Final require-engines handoff",
+        "Final current head/base/workflow verification"
+      ]
+    },
+    "change": "Run the same complete actual Firefox/WebKit exercises concurrently inside the existing entry, with independent browser instances, worker evidence directories and offline fixture ports4778/4779. Early actual-engine search stays sequential. All-settled execution preserves the other engine result if one fails. Local serial comparison uses the existing QA_SERIAL_LOCAL convention and is forbidden in CI.",
+    "unchangedDirectEntryChecks": {
+      "originalSHA256": "515e647b154cb63ed9580c804a8324d430fff764f93d1116f698e0af295fd416",
+      "finalEntrySHA256": "4a6d6e66830571a8e69ed63063582e815888aa476186c40daed36ce769c5f86a",
+      "assertionExpressions": 6,
+      "importedExerciseCalls": 7,
+      "realInputCalls": 5,
+      "allOriginalExpressionsRetained": true,
+      "productionWidths": [
+        320,
+        390,
+        768,
+        1440
+      ],
+      "allExistingScopesTimeoutsAndAssertionsRetained": true
+    },
+    "localBeforeAfterPilot": {
+      "meaning": "One ordered serial-then-parallel pair of two actual Chromium processes at representative320px, with the same complete offline scenarios. Production matrices remain unchanged. This is a scheduling pilot before the final namespace refinement; it is not actual Firefox/WebKit or complete release acceptance.",
+      "sourceDigestBeforeFinalNamespaceRefinement": "bfb1effe98e19e8a8d84ba4bfb9d5305b42c21125bc17bde84064e183f0c58b6",
+      "probeEntrySHA256": "889dd1c3ab30982b85a0a5732ef4a54644858140c6d74fe5e01a2ed8b81b659b",
+      "originalReportSHA256": "ab494edf6217486ce78689fadbc3b9ec0bb13c72afb040edd46174bd7d7306bf",
+      "build": "cb1820f262c2be81",
+      "frozenBuiltFilesVerified": 163,
+      "referenceSourceCommit": "346879448164ed809d5d7a45d9c1ffb2cef6a179",
+      "referenceKind": "Independently sealed later local rebuild; not the original CI artifact",
+      "node": "v24.19.0",
+      "availableParallelism": 4,
+      "browser": "154.0.8037.57",
+      "cases": [
+        {
+          "mode": "serial",
+          "seconds": 582.691103068,
+          "engineSeconds": [
+            290.802173674,
+            290.77530630099994
+          ],
+          "actualChromiumProcesses": 2,
+          "animalCasesPerProcess": 96,
+          "mainWidths": [
+            320
+          ],
+          "retainedOriginalPNGs": 296,
+          "maxObservedWholeCgroupBytes": 10801324032
+        },
+        {
+          "mode": "parallel",
+          "seconds": 336.010042824,
+          "engineSeconds": [
+            335.02926476399995,
+            333.890556231
+          ],
+          "actualChromiumProcesses": 2,
+          "animalCasesPerProcess": 96,
+          "mainWidths": [
+            320
+          ],
+          "retainedOriginalPNGs": 296,
+          "maxObservedWholeCgroupBytes": 12139651072
+        }
+      ],
+      "measuredWallReductionPercent": 42.33479092870452,
+      "limits": [
+        "Single ordered pair: file-cache/order effects and host variation not isolated.",
+        "Whole-cgroup memory samples are not exclusive per-browser RSS; the observed maximum rose.",
+        "No measured actual Firefox/WebKit gain, guaranteed55-minute margin, application load-time improvement or original host/background root-cause correction claimed."
+      ]
+    },
+    "finalEvidenceNamespace": {
+      "meaning": "Already correct journey-engine-worker filenames remain unchanged. Other worker files acquire their worker prefix, preventing generic filename collisions and making actual source PNGs visible to the existing curator.",
+      "helperSHA256": "f80d6e66ca3e351cb27e628f7fe84c09d07c4c1357f2d37650ad1c183694241e",
+      "controlledOldAndNewReportSHA256": "246b57b069a9e28b9a6b30dfed6f5cfd0cb55124c806291d4872e7e6c8e5dc35",
+      "oldSameGenericFilenameConflictRecognized": true,
+      "newBothIndependentOriginalsPreserved": true,
+      "originalChromiumFilesReplayedWithExactHashes": 312,
+      "originalChromiumPNGsReplayedWithExactHashes": 296,
+      "pilotPerformanceNotRelabelledAsFinalCollectorMeasurement": true
+    },
+    "interruptedEvidenceRecovery": {
+      "meaning": "The existing curator also reads only flat PNG/JSON/XML outputs in the known isolated worker directories, clearly marks partial evidence, retains source-file provenance and never traverses profiles or caches. Existing required images, retention policy and150000000-byte budget remain unchanged.",
+      "controlledOriginalAndCorrectedReportSHA256": "4d82f12d4289092be0517cc545a0f88754246faa227974db8d9417c6a1dd4c81",
+      "sameDeliberateInterruptedWorkerFixture": [
+        {
+          "name": "original",
+          "capturedImageCount": 0,
+          "workerJSONPreserved": false,
+          "originalBytesUnchanged": true
+        },
+        {
+          "name": "corrected",
+          "capturedImageCount": 1,
+          "workerJSONPreserved": true,
+          "originalBytesUnchanged": true
+        }
+      ],
+      "partialCorruptPNGStillRejected": true,
+      "oldOriginalsRetained": true
+    },
+    "currentAcceptance": {
+      "unitTests": 206,
+      "status": "Frozen-source preparation before the mandatory current full browser run and actual final CI. Existing4cc content proof remains on its original source; no complete actual engines or new publication claimed.",
+      "manualMaintenanceAuthorisation": "Required before actual takeover for the protected engine entry and curator under existing AGENTS/readiness policy; no assumed routine eligibility.",
+      "staticPreflight": {
+        "typecheck": "passed",
+        "lint": "passed",
+        "releasePolicyTests": 130,
+        "productionBuild": "passed",
+        "appBuild": "cb1820f262c2be81",
+        "verifiedExports": 43,
+        "structurallyCurrentDossiers": 73
+      }
+    }
+  },
+  "knownNativeHelperCollectionRepair20261024": {
+    "status": "cause-reproduced-and-targeted-checks-passed-before-new-full",
+    "originalQuality": {
+      "run": 40047013426,
+      "attempt": 1,
+      "head": "712d08e77f5defad29e4fec273a6dae596ddfe46",
+      "job": 120730958486,
+      "conclusion": "failure",
+      "jobSpanSeconds": 2609,
+      "earlyActualEnginesSeconds": 287,
+      "chromiumSeconds": 1084,
+      "nativePhaseSecondsBeforeCollectionFailure": 1118,
+      "not55MinuteTimeout": true,
+      "nativeHandoffAndFinalContext": "skipped",
+      "logSHA256": "682d9d43ffafa9d29c165f1f655acaa402c4697b5a38fcd207e3f75b842be7f5",
+      "fullEngineConsoleRecordLimitBytes": 65536,
+      "scopeLimit": "Do not infer full per-engine success or timing from the truncated console object. Complete uploaded engine-report is a separate original."
+    },
+    "cause": "The newly strict flat collector rejected the two existing native-only journey-help directories produced by journeySupportView. The earlier Chromium-labelled scheduling pilot did not enter this native-name-specific helper branch.",
+    "repair": "Recognise exactly one existing flat journey-help subdirectory for Firefox/WebKit, retain exact bytes with qualified names, retain interrupted originals with source paths, reject unexpected directories/nesting/links and collisions. Existing curator obligations, retention and150MB limit unchanged.",
+    "counterexample": {
+      "original712CollectorRejectsKnownDirectories": 2,
+      "correctedOriginalFilesPreserved": 4,
+      "oldPartialPNGs": 0,
+      "correctedPartialPNGs": 2,
+      "fixtureBoundary": "Actual Chromium PNG bytes reused only as file-integrity fixtures; not actual native completion evidence."
+    },
+    "actualUnchangedHelperProductCheck": {
+      "build": "cb1820f262c2be81",
+      "browser": "Chromium154",
+      "testSourceDigestBeforeEvidenceMetadata": "636064331d179b0b02ccd188ec61ee24ab21dee8c8d47ecf2a9085b85e8b2961",
+      "reportSHA256": "76892a7130a6c59e592315e4212298ac16903954b7623d67abf751e272c0662f",
+      "readingCases": 2,
+      "loadingCases": 2,
+      "oldPassTransferCases": 56,
+      "originalGeneratedFilesPreserved": 10,
+      "actualSyntheticPassDownloads": 2,
+      "curatedPNGCount": 4,
+      "curatedPNGBytes": 303211,
+      "notActualFirefoxProof": true
+    },
+    "entryAssertionsExercisesAndInputCallsUnchanged": [
+      6,
+      7,
+      5
+    ],
+    "logging": "Bounded actual engine summary added before the retained complete original JSON console output; complete original report file unchanged.",
+    "remaining": "New complete exact-source local mandatory checks, actual complete native CI, existing protected maintenance decision and real merge/deployment postflight remain pending."
+  }
+}

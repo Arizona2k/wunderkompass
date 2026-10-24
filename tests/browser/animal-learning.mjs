@@ -65,8 +65,8 @@ export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='n
    const q=level===1?data.reason:data.transfer,task=root.locator('.animal-reason-task');
    await task.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
    const hint=task.locator('details');if(!await hint.evaluate(e=>e.open))await hint.locator('summary').click();await hint.getByText(q.hint,{exact:true}).waitFor();
-   await task.locator('.quiz-answer').nth(1-q.correct).click();await task.getByText('Prüfe die Aussage noch einmal.',{exact:true}).waitFor();await task.locator('.lab-feedback').getByText(q.feedback[1-q.correct],{exact:true}).waitFor();
-   await task.locator('.quiz-answer').nth(q.correct).click();await task.getByText('Gut begründet.',{exact:true}).waitFor();await task.locator('.lab-feedback').getByText(q.feedback[q.correct],{exact:true}).waitFor();
+   await task.locator('.quiz-answer').nth(1-q.correct).click();await Promise.all([task.getByText('Prüfe die Aussage noch einmal.',{exact:true}).waitFor(),task.locator('.lab-feedback').getByText(q.feedback[1-q.correct],{exact:true}).waitFor()]);
+   await task.locator('.quiz-answer').nth(q.correct).click();await Promise.all([task.getByText('Gut begründet.',{exact:true}).waitFor(),task.locator('.lab-feedback').getByText(q.feedback[q.correct],{exact:true}).waitFor()]);
   }
   await geometry(root,data.id+' '+width+' level'+level);
   if(shots&&data.id==='animal-whale-shark')await root.screenshot({path:path.join(shots,'animal-workshop-'+state+'-'+level+'-'+width+'.png'),animations:'disabled'});

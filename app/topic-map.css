@@ -1,0 +1,6 @@
+.topic-map{container-type:inline-size;width:100%;min-width:0}
+.topic-map .map-legend button{font-size:1rem;max-inline-size:100%;overflow-wrap:anywhere}
+.topic-map .topic-map-marker text{font-size:22px!important;fill:#fff}
+@container(max-width:420px){.topic-map .topic-map-marker circle{r:32px}.topic-map .topic-map-marker rect{width:var(--map-group-width);height:64px;x:calc(var(--map-group-width)/-2);y:-32px;rx:18px}.topic-map .topic-map-marker text{font-size:40px!important}}
+@container(min-width:421px) and (max-width:700px){.topic-map .topic-map-marker circle{r:25px}.topic-map .topic-map-marker rect{width:calc(var(--map-group-width)*.8);height:50px;x:calc(var(--map-group-width)*-.4);y:-25px;rx:15px}.topic-map .topic-map-marker text{font-size:28px!important}}
+@container(max-width:240px){.topic-map .topic-map-marker circle{r:40px}.topic-map .topic-map-marker rect{width:calc(var(--map-group-width)*1.35);height:80px;x:calc(var(--map-group-width)*-.675);y:-40px;rx:22px}.topic-map .topic-map-marker text{font-size:56px!important}}

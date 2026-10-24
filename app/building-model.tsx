@@ -1,6 +1,7 @@
 'use client';
 import {useSavedGame,useSavedModel} from './saved-games';
 import type {WorldTopic} from './world-types';
+import BuildingDiscovery from './building-discovery';
 const DATA:Record<string,{kind:string;steps:string[];note:string}>= {
  'building-giza-pyramids':{kind:'pyramid',steps:['Eine breite Grundfläche verteilt das Gewicht auf den Boden.','Viele Steinlagen bilden den Körper. Die unteren Lagen tragen sehr viel Gewicht.','Gänge und Kammern wurden im Bauwerk angelegt. Wie alle Steine genau an ihren Platz gelangten, ist noch nicht vollständig geklärt.'],note:'Schematischer Schnitt. Lage und Größe der Kammern sind vereinfacht; das ist keine Rekonstruktion des ganzen Bauablaufs.'},
  'building-great-wall':{kind:'wall',steps:['Ein Abschnitt braucht einen passenden Untergrund. Die Mauer folgt oft der Landschaft.','Je nach Ort und Zeit wurden gestampfte Erde, Stein oder Ziegel verwendet. Es gibt nicht nur eine einzige Bauweise.','Wege, Türme und Mauern gehörten zu einem Netz von Grenzanlagen.'],note:'Ein Beispielabschnitt. Die Chinesische Mauer ist kein überall gleich gebautes einzelnes Band.'},
@@ -10,6 +11,9 @@ const DATA:Record<string,{kind:string;steps:string[];note:string}>= {
  'building-burj-khalifa':{kind:'skyscraper',steps:['Fundament und Pfähle übertragen die Last in den Untergrund.','Ein verstärkter Kern und drei Flügel aus Stahlbeton stützen das hohe Bauwerk.','Nach oben werden Gebäudeteile schmaler. Die Form hilft auch beim Umgang mit Wind. Die Spitze enthält eine Stahlkonstruktion.'],note:'Stark vereinfachtes Prinzip. Ein echtes Hochhaus braucht genaue Berechnungen für Gewicht, Wind, Sicherheit und Baugrund.'}
 };
 export default function BuildingModel({topic,onSolved}:{topic:WorldTopic;onSolved:()=>void}){
+ return topic.building?.exploration?<BuildingDiscovery topic={topic} onSolved={onSolved}/>:<RetainedBuildingModel topic={topic} onSolved={onSolved}/>;
+}
+function RetainedBuildingModel({topic,onSolved}:{topic:WorldTopic;onSolved:()=>void}){
  const [step,setStep]=useSavedModel<number>('buildingStructure',0,{min:0,max:2});
  const [seen,setSeen]=useSavedGame<number[]>('buildingSectionsSeen',[0]);
  const data=DATA[topic.id];if(!data)return null;const color=step===1?'#ef8a51':'#98c6b2',ink='#285463';
