@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';import fs from 'node:fs/promises';import
 import FEEDBACK from '../../app/research-feedback.json' with {type:'json'};
 import {RESEARCH_QUESTIONS} from '../../app/research-catalog.ts';
 import {researchTransferFlow} from './research-transfer.mjs';
+import {seasonalRestoreRegression} from './model-import-integrity.mjs';
 const labs=JSON.parse(await fs.readFile(new URL('../../exports/content/laboratories.json',import.meta.url),'utf8'));
 const experiments=JSON.parse(await fs.readFile(new URL('../../exports/content/home-experiments.json',import.meta.url),'utf8'));
 const saveKey='erde-entdecken:save:v3';
@@ -35,6 +36,7 @@ export async function researchFlow(browser,base,ready,monitor,report,shots){
    const card=p.locator('[data-lab-id="'+lab.id+'"]');if(width<768)await card.tap();else{await card.focus();assert.equal(await card.evaluate(el=>document.activeElement===el),true,'real keyboard focus is on the requested lab');await p.keyboard.press('Enter');}
    await p.locator('#lab-heading').waitFor().catch(async error=>{await p.screenshot({path:path.join(shots,'research-open-failure-'+width+'-'+lab.id+'.png')});console.log('Lab activation failure',width,lab.id,await p.evaluate(()=>({hash:location.hash,active:document.activeElement?.getAttribute('data-lab-id'),text:document.activeElement?.textContent?.slice(0,80)})));throw error;});assert.equal(new URL(p.url()).hash,'#labs/'+lab.id);await geometry(p,lab.id+' '+width);
    if(lab.id==='seasons'){const toggle=p.getByRole('switch',{name:'Erdachse um 23,4 Grad neigen',exact:true});const original=await toggle.getAttribute('aria-checked');await toggle.click();assert.notEqual(await toggle.getAttribute('aria-checked'),original);assert.match(await p.locator('.hemisphere-cards').innerText(),/Kein Wechsel durch Achsneigung/);await geometry(p,'axis off '+width);const size=await toggle.boundingBox();assert.ok(size.width>=44&&size.height>=44,'axis switch has a real touch area');assert.equal(await toggle.locator('[data-slot=switch-thumb]').evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(255, 255, 255)','thumb remains distinguishable from the track');await toggle.click();assert.equal(await toggle.getAttribute('aria-checked'),original);await geometry(p,'axis restored '+width);}
+   if(lab.id==='seasons'&&[320,1440].includes(width))(report.seasonalSavedState??=[]).push(await seasonalRestoreRegression(p,ready,{width,shots}));
    if([320,1440].includes(width)){
     await p.locator('.research-prediction>summary').click();await p.locator('.research-prediction textarea').fill('Synthetische Vermutung: Ich ändere nur eine Bedingung.');
     await p.getByRole('button',{name:'Beobachtung A merken',exact:true}).click();await p.waitForFunction(([key,id])=>!!JSON.parse(localStorage.getItem(key))?.progress.gameSessions['lab:'+id]?.researchCompareA,[saveKey,lab.id]);
