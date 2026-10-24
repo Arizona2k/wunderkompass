@@ -6,6 +6,33 @@ import photos from '../../app/world-photos.json' with {type:'json'};
 import topics from '../../app/world-catalog.json' with {type:'json'};
 import {prepareAxe} from './axe-loader.mjs';
 
+// Corresponding real Back boundary: a previously requested category/page focus
+// frame is released only after browser history has returned to its source.
+export async function pendingPhotoBackFocusFlow(browser,base,ready,monitor,report,shots,{widths=[320,1440],context:providedContext=null,native=false}={}){
+ const cases=report.photoPendingBackFocus??=[];
+ const engine=browser.browserType().name(),scope=path.resolve(shots??'.qa-output')===path.resolve('.qa-output')?'early':'complete',prefix=(engine==='chromium'?'photo-pending-back-chromium':'journey-engine-'+engine+'-'+scope+'-photo-pending-back');
+ for(const width of widths)for(const kind of ['category','pagination']){
+  const context=providedContext??await browser.newContext({viewport:{width,height:900},hasTouch:width===320,reducedMotion:'reduce'}),page=await context.newPage();monitor(page);
+  try{
+   if(native){await page.setViewportSize({width:width*2,height:950});assert.equal(await page.evaluate(()=>innerWidth),width);assert.equal(await page.evaluate(()=>devicePixelRatio),2);}
+   await page.addInitScript(()=>{const request=requestAnimationFrame.bind(window),cancel=cancelAnimationFrame.bind(window),held=new Map();let holding=false,id=0;window.__photoBackFrames={begin:()=>{holding=true;},pending:()=>held.size,release:()=>{holding=false;const frames=[...held.values()];held.clear();for(const callback of frames)request(callback);}};window.requestAnimationFrame=callback=>{if(!holding)return request(callback);const next=--id;held.set(next,callback);return next;};window.cancelAnimationFrame=key=>{if(key<0)held.delete(key);else cancel(key);};});
+   const original=kind==='category'?'world':'world/science';await page.goto(base+'/#'+original);await ready(page);await page.locator(kind==='category'?'.world-choice':'.world-topic-tile').first().waitFor();await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+   await page.evaluate(()=>window.__photoBackFrames.begin());
+   if(kind==='category'){await page.locator('[data-route-focus="world-category-animals"] img').click();await page.locator('.world-topic-tile').first().waitFor();}else{await page.getByRole('button',{name:'Nächste Seite',exact:true}).click();await page.getByText('46 passende Entdeckerkarten · Seite 2 von 4',{exact:true}).waitFor();}
+   const pendingBeforeBack=await page.evaluate(()=>window.__photoBackFrames.pending());assert.ok(pendingBeforeBack>0,'real navigation frames are held');
+   await page.goBack();await page.waitForFunction(path=>location.hash==='#'+path,original);await page.locator(kind==='category'?'.world-choice':'.world-topic-tile').first().waitFor();await page.evaluate(()=>window.__photoBackFrames.release());await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+   const expected=kind==='category'?page.locator('[data-route-focus="world-category-animals"]'):page.locator('#world-category-title'),focused=await expected.evaluate(e=>e===document.activeElement),actual=await page.evaluate(()=>({hash:location.hash,active:{id:document.activeElement?.id,key:document.activeElement?.dataset.routeFocus},history:history.state}));cases.push({width,kind,native,pendingBeforeBack,focused,actual});
+   if(shots&&native)await captureNativeViewport(page,path.join(shots,prefix+'-'+kind+'-native200-'+width+'.png'));
+   if(shots&&!focused)await page.screenshot({path:path.join(shots,prefix+'-'+kind+'-failure-'+width+'.png'),animations:'disabled'});
+   assert.equal(focused,true,'deferred '+kind+' focus must not overwrite actual Back restoration');
+   if(kind==='pagination'){await page.getByRole('button',{name:'Nächste Seite',exact:true}).click();await page.getByText('46 passende Entdeckerkarten · Seite 2 von 4',{exact:true}).waitFor();await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));assert.equal(await page.locator('#world-results').evaluate(e=>e===document.activeElement),true,'untouched pagination keeps its actual results focus');}
+  }catch(error){if(shots)await fs.writeFile(path.join(shots,prefix+'-failure.json'),JSON.stringify({engine,scope,cases,status:'failed',failure:error.stack},null,2)+'\n');throw error;}finally{if(providedContext)await page.close();else await context.close();}
+ }
+ report.checks??=[];report.checks.push('Deferred category/pagination frames cannot replace actual Back focus at'+widths.join('/')+'; untouched pagination still focuses results');
+ if(shots)await fs.writeFile(path.join(shots,prefix+'.json'),JSON.stringify({engine,scope,cases,status:'passed',meaning:'Corresponding delayed real application frame after actual browser Back; no reconstructed CI scheduling or physical-device claim.'},null,2)+'\n');
+ return cases;
+}
+
 // A photo click is a real route opener even where native pointer behaviour
 // does not focus buttons. Keep the original Back wait and focus assertion.
 export async function photoCardOpenerFlow(browser,base,ready,monitor,shots,{controlled=false,context:providedContext=null,widths=[320,1440],native=false}={}){
