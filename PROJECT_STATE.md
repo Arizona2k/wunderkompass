@@ -1,3 +1,7 @@
+## Ergänzender Typabgleich im bestehenden Wissensnetz · Vorbereitung ·24.10.2026
+
+WK052/WK053–057: Nach Abgleich des vorhandenen erklärten Graphen die bereits genutzten Arten compare, uses und evidence in der Typdefinition ergänzt. Alle zwölf vorhandenen Beziehungsarten sind damit benannt. Keine Beziehung, Frage, Bewertung oder gespeicherten Daten geändert; der vom TypeScript-Compiler emittierte JavaScript-Code dieses Moduls bleibt bytegleich. Typprüfung und gezieltes Lint grün; keine zusätzliche Unit-Prüfung für die reine Typkorrektur. Öffentlicher Vorbereitungszweig von codegleichem e956 statt Veröffentlichung privater lokaler Commitmetadaten; b0fd bleibt erhalten. Vollständige Wissenschaftsabnahme und tatsächlich bestätigte Vorgängerbasis weiterhin offen. Der parallel laufende Runtime-Volltest bleibt unverändert.
+
 ## Früher Produktcheck: Resonanz-Messzeitpunkt belegt korrigiert ·24.10.2026
 
 WK053–057: Die zusätzliche tatsächliche360-Pixel-Prüfung der23Wissenschaftsoriginale zeigte einen Fehler im neuen Prüfablauf: Eingabe0,8, Erklärung2,31 und Speicher waren bereits aktuell, die SVG-Geometrie lag vor dem nächsten Bildaufbau noch beim vorherigen Zustand. Sechs kontrollierte Gegenproben am identischen Buildf844379cd05e1174 belegen vor dem Bildaufbau54,393 beziehungsweise22,581 und danach jeweils69,338SVG-Einheiten; aus der gelesenen Schwingungsformel unabhängig erwartet69,338. Keine Behauptung einer ursprünglichen CI-Laufzeitursache.
