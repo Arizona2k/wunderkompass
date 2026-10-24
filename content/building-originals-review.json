@@ -1206,5 +1206,54 @@
         "structurallyCurrentDossiers": 73
       }
     }
+  },
+  "knownNativeHelperCollectionRepair20261024": {
+    "status": "cause-reproduced-and-targeted-checks-passed-before-new-full",
+    "originalQuality": {
+      "run": 40047013426,
+      "attempt": 1,
+      "head": "712d08e77f5defad29e4fec273a6dae596ddfe46",
+      "job": 120730958486,
+      "conclusion": "failure",
+      "jobSpanSeconds": 2609,
+      "earlyActualEnginesSeconds": 287,
+      "chromiumSeconds": 1084,
+      "nativePhaseSecondsBeforeCollectionFailure": 1118,
+      "not55MinuteTimeout": true,
+      "nativeHandoffAndFinalContext": "skipped",
+      "logSHA256": "682d9d43ffafa9d29c165f1f655acaa402c4697b5a38fcd207e3f75b842be7f5",
+      "fullEngineConsoleRecordLimitBytes": 65536,
+      "scopeLimit": "Do not infer full per-engine success or timing from the truncated console object. Complete uploaded engine-report is a separate original."
+    },
+    "cause": "The newly strict flat collector rejected the two existing native-only journey-help directories produced by journeySupportView. The earlier Chromium-labelled scheduling pilot did not enter this native-name-specific helper branch.",
+    "repair": "Recognise exactly one existing flat journey-help subdirectory for Firefox/WebKit, retain exact bytes with qualified names, retain interrupted originals with source paths, reject unexpected directories/nesting/links and collisions. Existing curator obligations, retention and150MB limit unchanged.",
+    "counterexample": {
+      "original712CollectorRejectsKnownDirectories": 2,
+      "correctedOriginalFilesPreserved": 4,
+      "oldPartialPNGs": 0,
+      "correctedPartialPNGs": 2,
+      "fixtureBoundary": "Actual Chromium PNG bytes reused only as file-integrity fixtures; not actual native completion evidence."
+    },
+    "actualUnchangedHelperProductCheck": {
+      "build": "cb1820f262c2be81",
+      "browser": "Chromium154",
+      "testSourceDigestBeforeEvidenceMetadata": "636064331d179b0b02ccd188ec61ee24ab21dee8c8d47ecf2a9085b85e8b2961",
+      "reportSHA256": "76892a7130a6c59e592315e4212298ac16903954b7623d67abf751e272c0662f",
+      "readingCases": 2,
+      "loadingCases": 2,
+      "oldPassTransferCases": 56,
+      "originalGeneratedFilesPreserved": 10,
+      "actualSyntheticPassDownloads": 2,
+      "curatedPNGCount": 4,
+      "curatedPNGBytes": 303211,
+      "notActualFirefoxProof": true
+    },
+    "entryAssertionsExercisesAndInputCallsUnchanged": [
+      6,
+      7,
+      5
+    ],
+    "logging": "Bounded actual engine summary added before the retained complete original JSON console output; complete original report file unchanged.",
+    "remaining": "New complete exact-source local mandatory checks, actual complete native CI, existing protected maintenance decision and real merge/deployment postflight remain pending."
   }
 }

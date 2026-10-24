@@ -44,9 +44,11 @@ export async function prepareReview(directory='.qa-output'){
  // from completed root evidence. No browser profile or recursive cache traversal.
  for(const engine of ['chromium','firefox','webkit']){
   const worker=path.join(directory,'journey-engine-work',engine);
-  for(const name of (await fs.readdir(worker).catch(error=>{if(error.code==='ENOENT')return [];throw error;})).sort()){
+  const names=(await fs.readdir(worker).catch(error=>{if(error.code==='ENOENT')return [];throw error;})).sort(),help='journey-help-'+engine;
+  if(['firefox','webkit'].includes(engine)&&names.includes(help)&&(await fs.lstat(path.join(worker,help))).isDirectory())names.splice(names.indexOf(help),1,...(await fs.readdir(path.join(worker,help))).sort().map(name=>path.join(help,name)));
+  for(const name of names){
    const source=path.join(worker,name);
-   if(/\.(png|json|xml)$/.test(name)&&(await fs.lstat(source)).isFile())files.push({name:'journey-engine-'+engine+'-partial-'+name,source,sourceFile:path.relative(directory,source)});
+   if(/\.(png|json|xml)$/.test(name)&&(await fs.lstat(source)).isFile())files.push({name:'journey-engine-'+engine+'-partial-'+name.replaceAll(path.sep,'-'),source,sourceFile:path.relative(directory,source)});
   }
  }
  if(new Set(files.map(file=>file.name)).size!==files.length)throw Error('Conflicting review evidence names; originals retained');

@@ -70,6 +70,10 @@ finally{
  const transferFailures=searchOnly?[]:await collectEngineEvidence('.qa-output',engines);
  if(transferFailures.length){report.status='failed';report.evidenceTransferFailures=transferFailures;}
  report.seconds=(performance.now()-started)/1000;
- await fs.writeFile('.qa-output/'+(searchOnly?'early-search-report.json':'engine-report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
+ await fs.writeFile('.qa-output/'+(searchOnly?'early-search-report.json':'engine-report.json'),JSON.stringify(report,null,2)+'\n');
+ // GitHub truncates a single console record at64KiB. Keep the full original JSON
+ // file and log a bounded diagnostic summary with actual per-engine outcomes.
+ console.log('ACTUAL_ENGINE_SUMMARY '+JSON.stringify({build:report.build,sourceDigest:report.sourceDigest,status:report.status,scope:report.scope,execution:report.execution,seconds:report.seconds,engines:report.engines.map(({name,version,seconds})=>({name,version,seconds})),errors:report.errors,engineFailures:report.engineFailures,evidenceTransferFailures:report.evidenceTransferFailures?.map(({engine,file,error})=>({engine,file,error:error.split('\n')[0]}))}));
+ console.log(JSON.stringify(report));
  if(transferFailures.length)throw new AggregateError(transferFailures.map(f=>Error(f.error)),'Engine evidence could not be preserved without overwriting');
 }

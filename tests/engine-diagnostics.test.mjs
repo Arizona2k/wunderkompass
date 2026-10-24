@@ -38,3 +38,20 @@ test('conflicting engine evidence fails closed and preserves every colliding ori
  const directory=path.join(root,'journey-engine-work','webkit');await fs.mkdir(directory,{recursive:true});const original=Buffer.from('existing independent proof'),conflict=Buffer.from('conflicting new proof');await fs.writeFile(path.join(root,'journey-engine-webkit-same.png'),original);await fs.writeFile(path.join(directory,'same.png'),conflict);await fs.writeFile(path.join(directory,'other.png'),Buffer.from('unrelated proof survives too'));
  const failures=await collectEngineEvidence(root,['webkit']);assert.equal(failures.length,1);assert.match(failures[0].error,/must not be overwritten/);assert.deepEqual(await fs.readFile(path.join(root,'journey-engine-webkit-same.png')),original);assert.deepEqual(await fs.readFile(path.join(directory,'same.png')),conflict);assert.equal(await fs.readFile(path.join(root,'journey-engine-webkit-other.png'),'utf8'),'unrelated proof survives too');await assert.rejects(collectEngineEvidence(root,['../outside']),/Invalid evidence worker names/);
 });
+
+test('existing native journey-help subdirectories preserve both engines and exact bytes',async t=>{
+ const root=await fs.mkdtemp(path.join(os.tmpdir(),'wk-engine-journey-help-'));t.after(()=>fs.rm(root,{recursive:true,force:true}));const originals=[];
+ for(const engine of ['firefox','webkit']){
+  const directory=path.join(root,'journey-engine-work',engine,'journey-help-'+engine);await fs.mkdir(directory,{recursive:true});
+  for(const [file,bytes]of [['same.png',Buffer.from('synthetic image '+engine)],['actual-transfer.json',Buffer.from(JSON.stringify({synthetic:engine}))]]){await fs.writeFile(path.join(directory,file),bytes);originals.push({engine,directory,file,bytes});}
+ }
+ assert.deepEqual(await collectEngineEvidence(root,['firefox','webkit']),[]);
+ for(const {engine,directory,file,bytes}of originals){assert.deepEqual(await fs.readFile(path.join(root,'journey-engine-'+engine+'-journey-help-'+engine+'-'+file)),bytes);await assert.rejects(fs.stat(path.join(directory,file)),{code:'ENOENT'});}
+ assert.deepEqual(await collectEngineEvidence(root,['firefox','webkit']),[],'empty known helper directories remain valid');
+});
+
+test('journey-help collection still rejects profiles, unexpected nesting and symbolic links',async t=>{
+ const root=await fs.mkdtemp(path.join(os.tmpdir(),'wk-engine-unsafe-help-'));t.after(()=>fs.rm(root,{recursive:true,force:true}));const worker=path.join(root,'journey-engine-work','firefox'),help=path.join(worker,'journey-help-firefox');await fs.mkdir(path.join(help,'unexpected-profile'),{recursive:true});await fs.mkdir(path.join(worker,'browser-profile'));await fs.writeFile(path.join(help,'unexpected-profile','must-stay.txt'),'synthetic untouched profile');
+ let failures=await collectEngineEvidence(root,['firefox']);assert.deepEqual(failures.map(f=>f.file).sort(),['browser-profile',path.join('journey-help-firefox','unexpected-profile')].sort());assert.equal(await fs.readFile(path.join(help,'unexpected-profile','must-stay.txt'),'utf8'),'synthetic untouched profile');
+ const outside=path.join(root,'outside-fixture');await fs.mkdir(outside);await fs.writeFile(path.join(outside,'not-evidence.png'),'synthetic do not traverse');await fs.rename(help,path.join(root,'retained-help-fixture'));await fs.symlink(outside,help,'dir');failures=await collectEngineEvidence(root,['firefox']);assert.deepEqual(failures.map(f=>f.file).sort(),['browser-profile','journey-help-firefox']);await assert.rejects(fs.stat(path.join(root,'journey-engine-firefox-journey-help-firefox-not-evidence.png')),{code:'ENOENT'});assert.equal(await fs.readFile(path.join(outside,'not-evidence.png'),'utf8'),'synthetic do not traverse');
+});

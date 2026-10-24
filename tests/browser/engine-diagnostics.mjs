@@ -22,8 +22,15 @@ export async function collectEngineEvidence(root,workers){
  const failures=[];
  for(const name of workers){
   const directory=path.join(root,'journey-engine-work',name);
-  for(const file of (await fs.readdir(directory).catch(error=>{if(error.code==='ENOENT')return [];throw error;})).sort()){
-   const targetName=file.startsWith('journey-engine-'+name+'-')?file:'journey-engine-'+name+'-'+file,source=path.join(directory,file),target=path.join(root,targetName);
+  const files=(await fs.readdir(directory).catch(error=>{if(error.code==='ENOENT')return [];throw error;})).sort();
+  // The existing native journey helpers own exactly this one flat subdirectory.
+  // Do not treat it as a profile, follow links or traverse arbitrary directories.
+  const help='journey-help-'+name;
+  if(['firefox','webkit'].includes(name)&&files.includes(help)&&(await fs.lstat(path.join(directory,help))).isDirectory()){
+   files.splice(files.indexOf(help),1,...(await fs.readdir(path.join(directory,help))).sort().map(file=>path.join(help,file)));
+  }
+  for(const file of files){
+   const flattened=file.replaceAll(path.sep,'-'),targetName=flattened.startsWith('journey-engine-'+name+'-')?flattened:'journey-engine-'+name+'-'+flattened,source=path.join(directory,file),target=path.join(root,targetName);
    try{
     if(!(await fs.lstat(source)).isFile())throw Error('Unexpected engine evidence directory or link');
     try{await fs.lstat(target);throw Error('Existing evidence must not be overwritten: '+file);}catch(error){if(error.code!=='ENOENT')throw error;}

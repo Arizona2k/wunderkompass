@@ -30,6 +30,14 @@ test('interrupted isolated engines preserve separate partial originals and damag
  await fs.writeFile(path.join(originals[0].worker,'damaged.png'),'unfinished image');await assert.rejects(prepareReview(dir),/Invalid screenshot journey-engine-firefox-partial-damaged.png/);assert.equal(JSON.parse(await fs.readFile(path.join(dir,'review','journey-engine-firefox-partial-failure.json'),'utf8')).status,'interrupted');
 });
 
+test('interrupted known native journey-help files retain exact originals and source paths',async t=>{
+ const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-partial-journey-help-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));const png=Buffer.alloc(24);Buffer.from('89504e470d0a1a0a','hex').copy(png);png.writeUInt32BE(320,16);png.writeUInt32BE(900,20);
+ for(const engine of ['firefox','webkit']){const help=path.join(dir,'journey-engine-work',engine,'journey-help-'+engine);await fs.mkdir(help,{recursive:true});await fs.writeFile(path.join(help,'same.png'),png);await fs.writeFile(path.join(help,'transfer.json'),JSON.stringify({synthetic:engine}));}
+ const result=await prepareReview(dir);assert.equal(result.status,'diagnostic');assert.equal(result.screenshots.length,2);
+ for(const engine of ['firefox','webkit']){const name='journey-engine-'+engine+'-partial-journey-help-'+engine+'-same.png',entry=result.screenshots.find(s=>s.file===name);assert.equal(entry.retained,true);assert.equal(entry.sourceFile,path.join('journey-engine-work',engine,'journey-help-'+engine,'same.png'));assert.deepEqual(await fs.readFile(path.join(dir,'review',name)),png);assert.deepEqual(await fs.readFile(path.join(dir,entry.sourceFile)),png);assert.equal(JSON.parse(await fs.readFile(path.join(dir,'review','journey-engine-'+engine+'-partial-journey-help-'+engine+'-transfer.json'),'utf8')).synthetic,engine);}
+ await fs.writeFile(path.join(dir,'journey-engine-work','webkit','journey-help-webkit','damaged.png'),'unfinished image');await assert.rejects(prepareReview(dir),/Invalid screenshot journey-engine-webkit-partial-journey-help-webkit-damaged.png/);assert.equal(JSON.parse(await fs.readFile(path.join(dir,'review','journey-engine-webkit-partial-journey-help-webkit-transfer.json'),'utf8')).synthetic,'webkit');
+});
+
  test('review budget is exactly 150 decimal MB and storage accounting never deletes identical evidence',()=>{
  assert.equal(REVIEW_LIMIT,150_000_000);const a={file:'focus-320.png',bytes:100,sha256:'same',retained:true},b={...a,file:'focus-390.png'},c={...a,file:'already-omitted.png',retained:false};
  const r=reviewStorage([a,b,c],200);assert.equal(r.retainedImages,2);assert.equal(r.reserveBytes,149_999_800);assert.equal(r.exactDuplicates.retainedExtraBytes,100);assert.equal(r.exactDuplicates.alreadyOmittedCopiesWithRetainedOriginal,1);assert.equal(r.exactDuplicates.automaticDuplicateRemovals,0);
