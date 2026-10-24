@@ -6,11 +6,11 @@ Für schnelle lokale Iterationen: `pnpm run typecheck:fast`, `pnpm run lint:fast
 
 ## Aktueller GitHub-/Codex-Einstieg
 
-Die Anwendung ist bereits in das private Repository [Arizona2k/wunderkompass](https://github.com/Arizona2k/wunderkompass) importiert. **Die Repository-Wurzel ist die Anwendung**: im Checkout nicht nochmals in `project/` wechseln. `original-site/`, ZIP und externe Inventur-/Prüfsummen-Dateien gehören zum getrennten Sicherungsarchiv und sind hier nicht vorausgesetzt.
+Die Anwendung ist bereits in das Repository [Arizona2k/wunderkompass](https://github.com/Arizona2k/wunderkompass) importiert. **Die Repository-Wurzel ist die Anwendung**: im Checkout nicht nochmals in `project/` wechseln. `original-site/`, ZIP und externe Inventur-/Prüfsummen-Dateien gehören zum getrennten Sicherungsarchiv und sind hier nicht vorausgesetzt.
 
 Für Entwicklungsaufgaben zuerst [AGENTS.md](AGENTS.md) und [PROJECT_STATE.md](PROJECT_STATE.md) lesen. [VISION.md](VISION.md) enthält die Produktziele, [BACKLOG.md](BACKLOG.md) den gemeinsamen Aufgabenbestand, [QUALITY.md](QUALITY.md) die verbindlichen Prüfungen und [CHANGELOG.md](CHANGELOG.md) abgeschlossene Änderungen. **GO** startet einen begrenzten Entwicklungsdurchlauf nach AGENTS.md. Regeln müssen im ausgewählten Branch vorhanden sein; vor einem GO auf main den Einrichtungs-PR regulär übernehmen.
 
-Node 24 und pnpm 11.25.0 verwenden. Die untenstehenden Start-/Prüfbefehle gelten direkt aus der Repository-Wurzel. Neue Änderungen über Entwicklungsbranch und Pull Request sichern. Es ist kein Scheduler aktiviert und keine neue Website veröffentlicht. Aktuelle Prüfungen und Synchronisierung stehen ausschließlich in PROJECT_STATE.md; die folgenden Abschnitte dokumentieren die ursprüngliche Sicherung.
+Node 24 und pnpm 11.25.0 verwenden. Die untenstehenden Start-/Prüfbefehle gelten direkt aus der Repository-Wurzel. Neue Änderungen über Entwicklungsbranch und Pull Request sichern. Es ist kein Scheduler aktiviert. Tatsächliche Testbereitstellungen, aktuelle Prüfungen und Synchronisierung stehen ausschließlich in PROJECT_STATE.md; die folgenden Abschnitte dokumentieren die ursprüngliche Sicherung.
 
 ## Produktpaket WK-016 (Entwicklungsbranch)
 
