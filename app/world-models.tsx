@@ -27,7 +27,7 @@ function Bridge({onSolved}:{onSolved:()=>void}){
  function choose(t:string){setType(t);const next=[...new Set([...seen,t])];setSeen(next);if(next.length===3&&load>=2)onSolved();}
  useEffect(()=>{if(seen.length===3&&load>=2)onSolved();},[seen,load,onSolved]);
  const archY=(x:number)=>252-308*((x-110)/380)*(1-(x-110)/380),cableY=(x:number)=>43+264*((x-110)/380)*(1-(x-110)/380);
- const route=type==='arch'?'Fahrbahn → Stützen zwischen Fahrbahn und Bogen → Bogen → Widerlager → Untergrund.':type==='cable'?'Fahrbahn → Hängeseile → Hauptseil → Türme und Anker → Untergrund.':'Fahrbahn und Balken → Auflager und Pfeiler → Untergrund.';
+ const route=type==='arch'?'Fahrbahn → Stützen → Bogen → Widerlager → Untergrund.':type==='cable'?'Fahrbahn → Hängeseile → Hauptseil → Türme und Anker → Untergrund.':'Fahrbahn und Balken → Auflager und Pfeiler → Untergrund.';
  return <><h3>Wohin geht das Gewicht?</h3><p>Vermute zuerst den Lastweg. Vergleiche dann Balken, Bogen und Hängebrücke: Welche Teile verbinden die Fahrbahn mit dem Untergrund?</p>
   <svg viewBox="0 0 600 300" role="img" data-bridge-type={type} aria-label={`Schema einer ${type==='beam'?'Balkenbrücke':type==='arch'?'Bogenbrücke':'Hängebrücke'} mit ${load} Lastpfeilen und hervorgehobenem Lastweg`}>
    <path d="M20 270H580" stroke="#b3d3e2" strokeWidth="12"/>
@@ -45,7 +45,7 @@ function Bridge({onSolved}:{onSolved:()=>void}){
    </g>
    {Array.from({length:load},(_,i)=><path key={i} data-bridge-load="" d={`M${300+(i-(load-1)/2)*35} 118V155l-7-10m7 10l7-10`} stroke="#225f79" strokeWidth="4" fill="none"/>)}
   </svg>
-  <p className="bridge-path-legend">Blaue Pfeile: Last von oben auf die Fahrbahn. Orange Linie: beispielhafter zusammenhängender Lastweg durch die Bauteile; keine einzelnen Kraftvektoren.</p>
+  <p className="bridge-path-legend">Blaue Pfeile: Last von oben auf die Fahrbahn. Orange Linie: Lastweg über die verbundenen tragenden Bauteile.</p>
   <div className="model-buttons">{[['beam','Balken'],['arch','Bogen'],['cable','Hängebrücke']].map(([id,name])=><button className="secondary-button" aria-pressed={type===id} key={id} onClick={()=>choose(id)}>{name}</button>)}</div>
   <label className="model-range">Lastpfeile im Schema: {load} <input type="range" min="1" max="4" value={load} onChange={e=>setLoad(+e.target.value)}/></label>
   <p className="model-result" role="status">{route} {type==='arch'?'Der Bogen wird überwiegend gedrückt. Die Widerlager halten auch dem seitlichen Schub entgegen.':type==='cable'?'Die Seile werden gezogen; die Türme werden gedrückt. Die Anker halten die Seilenden fest.':'Bei Belastung entstehen im Balken Druck und Zug. Die Auflager tragen die Last weiter.'}</p>

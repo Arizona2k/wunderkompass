@@ -9,6 +9,7 @@ const reveal=async d=>{if(!await d.evaluate(e=>e.open))await d.locator(':scope >
 export async function assertLayerAssembly(model){
  const bounds=await model.locator('[data-layer]').evaluateAll(groups=>groups.map(g=>{const b=g.getBBox(),m=g.transform.baseVal.consolidate()?.matrix;return{layer:Number(g.dataset.layer),top:b.y+(m?.f??0),bottom:b.y+b.height+(m?.f??0)};}));
  for(let i=1;i<bounds.length;i++)assert.ok(Math.abs(bounds[i-1].top-bounds[i].bottom)<.01,'assembled continuous layers touch without unexplained vertical gaps');
+ const state=model.locator('[data-invention-result]'),count=Number(await state.getAttribute('data-invention-result')),cut=await state.getAttribute('data-invention-cut')==='true',caption=await model.locator('figcaption').innerText();assert.match(caption,count===0?/Noch keine Schicht/:!cut?/ohne Aussparung/:count===1?/vorbereitet/:/mittlere Lage hat eine Aussparung/,'layer caption describes the actual visible section state');
  return bounds;
 }
 export async function assertLiftDiagram(article){
