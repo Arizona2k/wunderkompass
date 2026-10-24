@@ -1039,6 +1039,26 @@
       "correction": "Wait for two actual rendering frames before measuring the displayed path; preserve measured path and length in diagnostics. The same intentionally unsupported path is then rejected in all four early cases. No sleep, retry, larger timeout or weaker assertion.",
       "independentProductCauseClaim": false
     },
-    "personalVisualReviewBeforeCaptionCorrection": "Three actual320bridge images personally inspected: arrows meet deck and highlighted paths follow connected physical supports/arch/towers/anchors. Layer native320 image showed connected sections but its unconditional caption claimed a cut when cut=false; corrected separately, no false current visual acceptance."
+    "personalVisualReviewBeforeCaptionCorrection": "Three actual320bridge images personally inspected: arrows meet deck and highlighted paths follow connected physical supports/arch/towers/anchors. Layer native320 image showed connected sections but its unconditional caption claimed a cut when cut=false; corrected separately, no false current visual acceptance.",
+    "bridgeNominalContrastPreparation20261024": {
+      "scope": "Actual earlier320images showed a thin orange line on grey/dark deck. Declared opaque SVG stroke-color comparison before/after under the same palette; new actual rendered review pending. No whole-product conformance or perception study claim.",
+      "before": {
+        "orange": "#a45016",
+        "structuralGrey": "#718a95",
+        "deck": "#395b66",
+        "orangeVsGrey": 1.5441974432091155,
+        "orangeVsDeck": 1.3058012458414416
+      },
+      "after": {
+        "sameOrangeAndPhysicalPath": true,
+        "whiteOutline": "#ffffff",
+        "outlineWidthSVG": 8,
+        "coloredWidthSVG": 4,
+        "outlineVsGrey": 3.638556922269988,
+        "outlineVsDeck": 7.336840556908344,
+        "orangeVsOutline": 5.618650296340143
+      },
+      "implementation": "One shared route-path array supplies both decorative white casing and colored path; physical members, load points, model domains and saved progress unchanged."
+    }
   }
 }

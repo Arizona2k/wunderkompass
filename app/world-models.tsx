@@ -28,6 +28,7 @@ function Bridge({onSolved}:{onSolved:()=>void}){
  useEffect(()=>{if(seen.length===3&&load>=2)onSolved();},[seen,load,onSolved]);
  const archY=(x:number)=>252-308*((x-110)/380)*(1-(x-110)/380),cableY=(x:number)=>43+264*((x-110)/380)*(1-(x-110)/380);
  const route=type==='arch'?'Fahrbahn → Stützen → Bogen → Widerlager → Untergrund.':type==='cable'?'Fahrbahn → Hängeseile → Hauptseil → Türme und Anker → Untergrund.':'Fahrbahn und Balken → Auflager und Pfeiler → Untergrund.';
+ const loadPaths=type==='arch'?['M300 160V175Q205 175 110 252V264','M300 175Q395 175 490 252V264']:type==='cable'?['M300 160V109Q205 109 110 43V264','M300 109Q395 109 490 43V264','M110 43L40 252V264','M490 43L560 252V264']:['M300 160H110V264','M300 160H490V264'];
  return <><h3>Wohin geht das Gewicht?</h3><p>Vermute zuerst den Lastweg. Vergleiche dann Balken, Bogen und Hängebrücke: Welche Teile verbinden die Fahrbahn mit dem Untergrund?</p>
   <svg viewBox="0 0 600 300" role="img" data-bridge-type={type} aria-label={`Schema einer ${type==='beam'?'Balkenbrücke':type==='arch'?'Bogenbrücke':'Hängebrücke'} mit ${load} Lastpfeilen und hervorgehobenem Lastweg`}>
    <path d="M20 270H580" stroke="#b3d3e2" strokeWidth="12"/>
@@ -40,9 +41,8 @@ function Bridge({onSolved}:{onSolved:()=>void}){
     <path data-bridge-member="cable" d="M40 252L110 43Q300 175 490 43L560 252" fill="none" stroke="#718a95" strokeWidth="7"/>
     {[150,210,270,300,330,390,450].map(x=><path key={x} data-bridge-member="hanger" d={`M${x} ${cableY(x)}V160`} stroke="#718a95" strokeWidth="5"/>)}</>}
    <path data-bridge-deck="" data-bridge-member="deck" d="M80 160H520" stroke="#395b66" strokeWidth="10"/>
-   <g data-bridge-transport="" fill="none" stroke="#a45016" strokeWidth="4">
-    {type==='beam'?<><path d="M300 160H110V264"/><path d="M300 160H490V264"/></>:type==='arch'?<><path d="M300 160V175Q205 175 110 252V264"/><path d="M300 175Q395 175 490 252V264"/></>:<><path d="M300 160V109Q205 109 110 43V264"/><path d="M300 109Q395 109 490 43V264"/><path d="M110 43L40 252V264"/><path d="M490 43L560 252V264"/></>}
-   </g>
+   <g aria-hidden="true" fill="none" stroke="#ffffff" strokeWidth="8">{loadPaths.map((d,i)=><path key={i} d={d}/>)}</g>
+   <g data-bridge-transport="" fill="none" stroke="#a45016" strokeWidth="4">{loadPaths.map((d,i)=><path key={i} d={d}/>)}</g>
    {Array.from({length:load},(_,i)=><path key={i} data-bridge-load="" d={`M${300+(i-(load-1)/2)*35} 118V155l-7-10m7 10l7-10`} stroke="#225f79" strokeWidth="4" fill="none"/>)}
   </svg>
   <p className="bridge-path-legend">Blaue Pfeile: Last von oben auf die Fahrbahn. Orange Linie: Lastweg über die verbundenen tragenden Bauteile.</p>
