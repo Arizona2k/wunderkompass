@@ -27,19 +27,19 @@
       "cases": [
         {
           "areaM2": 1,
-          "expectedPa": 12.0
+          "expectedPa": 12
         },
         {
           "areaM2": 2,
-          "expectedPa": 6.0
+          "expectedPa": 6
         },
         {
           "areaM2": 3,
-          "expectedPa": 4.0
+          "expectedPa": 4
         },
         {
           "areaM2": 6,
-          "expectedPa": 2.0
+          "expectedPa": 2
         }
       ],
       "visual": "Same force arrow; contact area and labels must change consistently. Before accepting a drawing, check that the same-size normal-force arrow actually lies above/within the drawn contact area at the minimum as well as maximum area. A force arrow outside the contact rectangle would not represent the stated contact consistently."
@@ -49,19 +49,19 @@
       "cases": [
         {
           "effortArmM": 1,
-          "expectedForceN": 12.0
+          "expectedForceN": 12
         },
         {
           "effortArmM": 2,
-          "expectedForceN": 6.0
+          "expectedForceN": 6
         },
         {
           "effortArmM": 3,
-          "expectedForceN": 4.0
+          "expectedForceN": 4
         },
         {
           "effortArmM": 6,
-          "expectedForceN": 2.0
+          "expectedForceN": 2
         }
       ],
       "visual": "Lever arms share a length scale. Load/force must attach to the actual lever; drawn force arrows are explicitly not a magnitude scale."
@@ -85,7 +85,7 @@
           "volumeL": 3,
           "canSupport3kg": true,
           "floatingDisplacementL": 3,
-          "submergedFraction": 1.0
+          "submergedFraction": 1
         },
         {
           "volumeL": 6,
@@ -598,7 +598,16 @@
       },
       "fullAcceptance": false,
       "mediaDecision": "Existing own concept diagram and functional models remain retained. These source reads authorize no copied photographs or illustrations. Suitable actual photography remains preferred where it helps explain the topic and motif/rights/quality/binary access are verified.",
-      "currentContentSHA256": "6f5a913f183e68277026566f60a628e743960207391b8403b04abcdeffcf1a33"
+      "currentContentSHA256": "8e17ee93a3be8a80ce4511fc51f56a4dec900277a975d40479d68952bf03aa9e",
+      "contentBeforeLinkReconciliation20261024": {
+        "dataHash": "6f5a913f183e68277026566f60a628e743960207391b8403b04abcdeffcf1a33",
+        "related": [
+          "science-pressure",
+          "science-energy",
+          "invention-bicycle"
+        ],
+        "previousReviewHash": "6f5a913f183e68277026566f60a628e743960207391b8403b04abcdeffcf1a33"
+      }
     },
     {
       "id": "science-elasticity",
@@ -696,7 +705,16 @@
       },
       "fullAcceptance": false,
       "mediaDecision": "Existing own concept diagram and functional models remain retained. These source reads authorize no copied photographs or illustrations. Suitable actual photography remains preferred where it helps explain the topic and motif/rights/quality/binary access are verified.",
-      "currentContentSHA256": "daaaa6a59799ce3e0840fb1ab27702bff98bb949aa38337af2d7afa905ec984f"
+      "currentContentSHA256": "e55593566f163aa34fecaccdbd2a36cd1654a856a960e921bde19e89ad54190c",
+      "contentBeforeLinkReconciliation20261024": {
+        "dataHash": "daaaa6a59799ce3e0840fb1ab27702bff98bb949aa38337af2d7afa905ec984f",
+        "related": [
+          "science-resonance",
+          "science-energy",
+          "invention-seismograph"
+        ],
+        "previousReviewHash": "daaaa6a59799ce3e0840fb1ab27702bff98bb949aa38337af2d7afa905ec984f"
+      }
     },
     {
       "id": "science-resonance",
@@ -806,7 +824,15 @@
       },
       "fullAcceptance": false,
       "mediaDecision": "Existing own concept diagram and functional models remain retained. These source reads authorize no copied photographs or illustrations. Suitable actual photography remains preferred where it helps explain the topic and motif/rights/quality/binary access are verified.",
-      "currentContentSHA256": "90ee79a2d63211e02bc6caa1ed7b964ed64ce0d8cc9a1c7520f56e857d7164a5"
+      "currentContentSHA256": "7cc9a2b7989c28ed19e6116b8dc7a1a7278b43966395276f03d56a645c68bc39",
+      "contentBeforeLinkReconciliation20261024": {
+        "dataHash": "90ee79a2d63211e02bc6caa1ed7b964ed64ce0d8cc9a1c7520f56e857d7164a5",
+        "related": [
+          "science-patterns",
+          "science-checksum"
+        ],
+        "previousReviewHash": "90ee79a2d63211e02bc6caa1ed7b964ed64ce0d8cc9a1c7520f56e857d7164a5"
+      }
     },
     {
       "id": "science-symmetry",
@@ -904,7 +930,15 @@
       },
       "fullAcceptance": false,
       "mediaDecision": "Existing own concept diagram and functional models remain retained. These source reads authorize no copied photographs or illustrations. Suitable actual photography remains preferred where it helps explain the topic and motif/rights/quality/binary access are verified.",
-      "currentContentSHA256": "19e6fbeae340cab410fbd473fbd39e5fc8945c886318766f842fa54047f89291"
+      "currentContentSHA256": "54a8868f0a9494a2c1d64f09c5e2cc6c43e2f4438a80049ee4857a422633d169",
+      "contentBeforeLinkReconciliation20261024": {
+        "dataHash": "19e6fbeae340cab410fbd473fbd39e5fc8945c886318766f842fa54047f89291",
+        "related": [
+          "science-symmetry",
+          "science-patterns"
+        ],
+        "previousReviewHash": "19e6fbeae340cab410fbd473fbd39e5fc8945c886318766f842fa54047f89291"
+      }
     },
     {
       "id": "science-angle",
@@ -1057,7 +1091,16 @@
       },
       "fullAcceptance": false,
       "mediaDecision": "Existing own concept diagram and functional models remain retained. These source reads authorize no copied photographs or illustrations. Suitable actual photography remains preferred where it helps explain the topic and motif/rights/quality/binary access are verified.",
-      "currentContentSHA256": "82d5079a3b4ec6c9e48e19bf240343f5491ebf07e0513f58b8e599f97cd2ea37"
+      "currentContentSHA256": "c14e1f7d9953b9607f6cba0360c33c185ec93768b7d952ed906f43b7f04ec54e",
+      "contentBeforeLinkReconciliation20261024": {
+        "dataHash": "82d5079a3b4ec6c9e48e19bf240343f5491ebf07e0513f58b8e599f97cd2ea37",
+        "related": [
+          "science-computer",
+          "science-encryption",
+          "science-probability"
+        ],
+        "previousReviewHash": "82d5079a3b4ec6c9e48e19bf240343f5491ebf07e0513f58b8e599f97cd2ea37"
+      }
     },
     {
       "id": "science-cell",
@@ -1646,7 +1689,7 @@
     "status": "Open after the authored69task/scoped science-thinking addition. Earlier actual diagrams/model/source/normal/native proofs retain their own exact earlier build and do not accept this new component.",
     "requiredScope": "All23affected originals, allthree different task paths and every hint/answer/feedback; normal/mobile/large/native200%, old/new saved-state retention and actual pass/cold-offline before complete final basis/CI."
   },
-  "fullAcceptance": "Open: actual PR58 delivery then eight-building delivery/base reconciliation; remaining integrated learning paths and complete permanent browser/offline/engine integration before current full mandatory local and CI acceptance.56 historical UI dossiers deliberately unchanged. No release PR, no publication.",
+  "fullAcceptance": "Actual M4ad predecessor integrated, early actual source/task/model/normal/native/real-pass/cold-offline checks passed at b27f. Six old relationship bindings explicitly compared,23 new factual dossiers still drafts. Complete current mandatory local regression, current96 dossier UI binding, exact native CI and actual delivery remain open.",
   "independentReview": false,
   "initialSourceHypotheses": {
     "scope": "Read-only early hypotheses from preserved source, not confirmed current-product defects or acceptance",
@@ -2196,5 +2239,596 @@
     ],
     "retainedEarlierEvidenceBoundary": "Initial corresponding targeted reports use older f844 built inputs before the type-only alignment; kept as earlier partial evidence, not relabelled as75c. New current build was explicitly verified against learningFingerprint. A private media precondition wrongly expected no diagram in static heroes; actual source/product demonstrates13 existing diagram heroes and10 generic model heroes. This diagnostic expectation is corrected without claiming a product-diagram defect.",
     "remaining": "Actual delivered predecessor-base integration, final full mandatory local acceptance, complete actual Firefox/WebKit acceptance, accepted science dossiers and actual release/deployment remain pending."
-  }
+  },
+  "retainedLinkReconciliation20261024": {
+    "status": "Source reconciliation complete; actual UI acceptance pending.",
+    "trigger": "The new actual mobile search/reciprocal-link/Back guard rejected the inherited buoyancy-to-currents link before the long full test. Broader check confined to60links of these23retained new originals found other inherited unexplained links and12missing older reciprocal references.",
+    "beforeCatalogSHA256": "54b2cfc88d83c03a68e34b33d29756b64c9e337cb1ec645017e8c3b0174e73c5",
+    "beforeGraphSHA256": "df5e4a32d5b87836661f8ada66507a2b1e690668671d7b9a9d47a06af1d0798b",
+    "preservedAllExistingGraphEdges": true,
+    "addedExplainedConnections": [
+      {
+        "id": "science-buoyancy--science-currents",
+        "fromId": "science-buoyancy",
+        "toId": "science-currents",
+        "kind": "compare",
+        "why": "Dichte beeinflusst das Schwimmen und Sinken. Die Strömungskarte zeigt, wie Dichteunterschiede Wasser unter anderem zum Sinken bringen.",
+        "checkedAt": "2026-10-24",
+        "sourceBasis": [
+          {
+            "url": "https://www.noaa.gov/office-education/outreach-communication/hands-on-science-activities/build-a-boat",
+            "readOn": "2026-10-23",
+            "anchor": "Background: What makes things float?, lines49–57",
+            "factualReading": "Buoyant force equals the weight of displaced water. Density, displaced volume and stability must be distinguished."
+          }
+        ],
+        "scope": "Explains already reviewed related concepts and their limits; prior source/model bounds remain. Actual bidirectional rendered link and Back/focus acceptance pending."
+      },
+      {
+        "id": "science-surface-tension--science-water-cycle",
+        "fromId": "science-surface-tension",
+        "toId": "science-water-cycle",
+        "kind": "compare",
+        "why": "Im Wasserkreislauf entstehen und bewegen sich Tropfen. Oberflächenspannung beeinflusst ihre Form; Verdunstung und Kondensation verändern dagegen den Zustand des Wassers.",
+        "checkedAt": "2026-10-24",
+        "sourceBasis": [
+          {
+            "url": "https://openstax.org/books/college-physics-2e/pages/11-8-cohesion-and-adhesion-in-liquids-surface-tension-and-capillary-action",
+            "readOn": "2026-10-23",
+            "anchor": "Cohesion / Surface Tension, lines31–56",
+            "factualReading": "Molecular attraction produces the surface effect. An elastic-sheet analogy is a model; a supported small object is not evidence of a solid water skin."
+          }
+        ],
+        "scope": "Explains already reviewed related concepts and their limits; prior source/model bounds remain. Actual bidirectional rendered link and Back/focus acceptance pending."
+      },
+      {
+        "id": "science-capillarity--science-photosynthesis",
+        "fromId": "science-capillarity",
+        "toId": "science-photosynthesis",
+        "kind": "needs",
+        "why": "Fotosynthese braucht Wasser. Kapillarwirkung hilft Wasser in engen benetzbaren Räumen aufzusteigen; allein erklärt sie den Wassertransport hoher Pflanzen nicht.",
+        "checkedAt": "2026-10-24",
+        "sourceBasis": [
+          {
+            "url": "https://www.usgs.gov/water-science-school/science/capillary-action-and-water",
+            "readOn": "2026-10-23",
+            "anchor": "Capillary Action, lines19–31; updated24August2026",
+            "factualReading": "Wetting, adhesion/cohesion and surface tension act in narrow spaces. Gravity limits the rise. The page acknowledges a limit to capillarity alone in high plants."
+          }
+        ],
+        "scope": "Explains already reviewed related concepts and their limits; prior source/model bounds remain. Actual bidirectional rendered link and Back/focus acceptance pending."
+      },
+      {
+        "id": "science-diffusion--science-chromatography",
+        "fromId": "science-diffusion",
+        "toId": "science-chromatography",
+        "kind": "compare",
+        "why": "Bei Diffusion verteilen sich Teilchen durch ihre zufällige Bewegung. Chromatografie vergleicht dagegen das unterschiedliche Mitwandern von Bestandteilen mit einem Lösungsmittel.",
+        "checkedAt": "2026-10-24",
+        "sourceBasis": [
+          {
+            "url": "https://www.exploratorium.edu/snacks/agar-cell-diffusion",
+            "readOn": "2026-10-23",
+            "anchor": "What’s Going On?, lines121–132",
+            "factualReading": "Random molecular paths continue in equilibrium. Net transport and individual paths differ; larger model cells have a smaller surface-to-volume ratio."
+          },
+          {
+            "url": "https://www.exploratorium.edu/snacks/separation-anxiety",
+            "readOn": "2026-10-23",
+            "anchor": "What’s Going On?, lines91–101",
+            "factualReading": "An existing ink mixture separates through unequal transport and interaction with the carrier. Different solvents change which constituents can move."
+          }
+        ],
+        "scope": "Explains already reviewed related concepts and their limits; prior source/model bounds remain. Actual bidirectional rendered link and Back/focus acceptance pending."
+      },
+      {
+        "id": "science-heat-transfer--science-seasons",
+        "fromId": "science-heat-transfer",
+        "toId": "science-seasons",
+        "kind": "energy",
+        "why": "Die geneigte Erdachse verändert Sonnenstand und Tageslänge. Strahlung erklärt, wie Sonnenenergie ohne Materialkontakt zur Erde gelangt.",
+        "checkedAt": "2026-10-24",
+        "sourceBasis": [
+          {
+            "url": "https://bsesc.energy.gov/energy-basics/heat-flow",
+            "readOn": "2026-10-23",
+            "anchor": "What?/How?, lines11–22",
+            "factualReading": "Conduction, convection and radiation are distinct energy-transfer mechanisms. Insulation reduces transfer; it is not a heat source."
+          }
+        ],
+        "scope": "Explains already reviewed related concepts and their limits; prior source/model bounds remain. Actual bidirectional rendered link and Back/focus acceptance pending."
+      },
+      {
+        "id": "science-elasticity--science-resonance",
+        "fromId": "science-elasticity",
+        "toId": "science-resonance",
+        "kind": "cause",
+        "why": "Elastische Verformung kann eine Rückstellwirkung erzeugen. Bei Resonanz kommt es zusätzlich darauf an, wie eine Schwingung von außen angeregt und gedämpft wird.",
+        "checkedAt": "2026-10-24",
+        "sourceBasis": [
+          {
+            "url": "https://openstax.org/books/college-physics-ap-courses-2e/pages/5-3-elasticity-stress-and-strain",
+            "readOn": "2026-10-23",
+            "anchor": "Small deformations / Hooke’s Law, lines32–60",
+            "factualReading": "Return after unloading and proportionality are distinct properties. The linear region is limited; larger deformation may be nonlinear, permanent or lead to fracture."
+          },
+          {
+            "url": "https://www.exploratorium.edu/snacks/resonant-rings",
+            "readOn": "2026-10-23",
+            "anchor": "To Do and Notice / What’s Going On?, lines77–89",
+            "factualReading": "Different modes and shapes can resonate at different frequencies. Inertia, stiffness and forcing frequency matter; the ring activity is not a bridge safety calculation."
+          },
+          {
+            "url": "https://openstax.org/books/university-physics-volume-1/pages/15-6-forced-oscillations",
+            "readOn": "2026-10-23",
+            "anchor": "equation15.29/lines43–61",
+            "factualReading": "Steady-state amplitude of the linearly damped forced oscillator. Its formula is useful; the adjacent claim of an exact finite-damping peak at the undamped frequency is too general and is not copied as an exact expectation."
+          },
+          {
+            "url": "https://phys.libretexts.org/Bookshelves/Classical_Mechanics/Variational_Principles_in_Classical_Mechanics_(Cline)/03:_Linear_Oscillators/3.06:_Sinusoidally-driven_linearly-damped_linear_oscillator",
+            "readOn": "2026-10-23",
+            "anchor": "Steady state / Resonance, equations3.64,3.68–3.70/lines276–312",
+            "factualReading": "The forced steady-state displacement peak lies below the undamped natural frequency for nonzero suitable damping. Formula and its derivative distinguish undriven damped, undamped and driven-peak frequencies."
+          }
+        ],
+        "scope": "Explains already reviewed related concepts and their limits; prior source/model bounds remain. Actual bidirectional rendered link and Back/focus acceptance pending."
+      },
+      {
+        "id": "science-resonance--science-sound",
+        "fromId": "science-resonance",
+        "toId": "science-sound",
+        "kind": "compare",
+        "why": "Ein Ton beginnt mit einer Schwingung. Die Resonanzkarte untersucht, wie unterschiedlich ein schwingendes System auf verschiedene Anregungsfrequenzen reagiert.",
+        "checkedAt": "2026-10-24",
+        "sourceBasis": [
+          {
+            "url": "https://www.exploratorium.edu/snacks/resonant-rings",
+            "readOn": "2026-10-23",
+            "anchor": "To Do and Notice / What’s Going On?, lines77–89",
+            "factualReading": "Different modes and shapes can resonate at different frequencies. Inertia, stiffness and forcing frequency matter; the ring activity is not a bridge safety calculation."
+          },
+          {
+            "url": "https://openstax.org/books/university-physics-volume-1/pages/15-6-forced-oscillations",
+            "readOn": "2026-10-23",
+            "anchor": "equation15.29/lines43–61",
+            "factualReading": "Steady-state amplitude of the linearly damped forced oscillator. Its formula is useful; the adjacent claim of an exact finite-damping peak at the undamped frequency is too general and is not copied as an exact expectation."
+          },
+          {
+            "url": "https://phys.libretexts.org/Bookshelves/Classical_Mechanics/Variational_Principles_in_Classical_Mechanics_(Cline)/03:_Linear_Oscillators/3.06:_Sinusoidally-driven_linearly-damped_linear_oscillator",
+            "readOn": "2026-10-23",
+            "anchor": "Steady state / Resonance, equations3.64,3.68–3.70/lines276–312",
+            "factualReading": "The forced steady-state displacement peak lies below the undamped natural frequency for nonzero suitable damping. Formula and its derivative distinguish undriven damped, undamped and driven-peak frequencies."
+          }
+        ],
+        "scope": "Explains already reviewed related concepts and their limits; prior source/model bounds remain. Actual bidirectional rendered link and Back/focus acceptance pending."
+      },
+      {
+        "id": "science-symmetry--science-patterns",
+        "fromId": "science-symmetry",
+        "toId": "science-patterns",
+        "kind": "compare",
+        "why": "Eine Spiegelachse ist ein bestimmtes Formmerkmal. Beim Sortieren von Beispielen entscheidet die gewählte Eigenschaft, welche Formen zusammenpassen.",
+        "checkedAt": "2026-10-24",
+        "sourceBasis": [
+          {
+            "url": "https://nrich.maths.org/problems/symmetry-challenge?tab=teacher",
+            "readOn": "2026-10-23",
+            "anchor": "Problem / Teachers’ Resources, lines98–104,214–236",
+            "factualReading": "Whole patterns are compared through reflections and rotations. Systematic examples and explanations support identifying symmetries rather than judging only an outline."
+          }
+        ],
+        "scope": "Explains already reviewed related concepts and their limits; prior source/model bounds remain. Actual bidirectional rendered link and Back/focus acceptance pending."
+      },
+      {
+        "id": "science-cell--science-photosynthesis",
+        "fromId": "science-cell",
+        "toId": "science-photosynthesis",
+        "kind": "context",
+        "why": "Fotosynthese findet in bestimmten Zellen statt. Die Zellkarte erklärt den Aufbau von Zellen, die Fotosynthesekarte den lichtabhängigen Aufbau energiereicher Stoffe.",
+        "checkedAt": "2026-10-24",
+        "sourceBasis": [
+          {
+            "url": "https://www.genome.gov/genetics-glossary/Cell",
+            "readOn": "2026-10-23",
+            "anchor": "Definition, lines11–13",
+            "factualReading": "Prokaryotic and eukaryotic cells differ in compartment organization; bacteria remain living cells despite lacking a membrane-bound nucleus."
+          },
+          {
+            "url": "https://www.genome.gov/genetics-glossary/Cell-Membrane-Plasma-Membrane",
+            "readOn": "2026-10-23",
+            "anchor": "Definition / Narration, lines11–21",
+            "factualReading": "Plasma membranes regulate transport; protective cell walls are a separate structure and vary between organisms."
+          }
+        ],
+        "scope": "Explains already reviewed related concepts and their limits; prior source/model bounds remain. Actual bidirectional rendered link and Back/focus acceptance pending."
+      },
+      {
+        "id": "science-comet--science-magnetism",
+        "fromId": "science-comet",
+        "toId": "science-magnetism",
+        "kind": "context",
+        "why": "Der Sonnenwind enthält geladene Teilchen und beeinflusst den Ionenschweif eines Kometen. Die Magnetfeldkarte zeigt, dass Felder geladene Teilchen ablenken können.",
+        "checkedAt": "2026-10-24",
+        "sourceBasis": [
+          {
+            "url": "https://science.nasa.gov/solar-system/comets/facts/",
+            "readOn": "2026-10-23",
+            "anchor": "Where Do Comets Come From?, lines260–264",
+            "factualReading": "Heating releases gas and dust; sunlight and solar wind shape different tails. Tail direction does not uniquely specify orbital movement."
+          }
+        ],
+        "scope": "Explains already reviewed related concepts and their limits; prior source/model bounds remain. Actual bidirectional rendered link and Back/focus acceptance pending."
+      },
+      {
+        "id": "science-exoplanet--science-solar-system",
+        "fromId": "science-exoplanet",
+        "toId": "science-solar-system",
+        "kind": "compare",
+        "why": "Exoplaneten gehören zu anderen Planetensystemen. Unsere acht Planeten bieten einen Vergleich, während ein Transit nur bei passender Blickrichtung messbar ist.",
+        "checkedAt": "2026-10-24",
+        "sourceBasis": [
+          {
+            "url": "https://spaceplace.nasa.gov/transits/en/",
+            "readOn": "2026-10-23",
+            "anchor": "Other types of transits, lines35–45",
+            "factualReading": "A transit requires a suitable viewing alignment. Dimming provides relative-size/orbital information; no detected transit does not exclude an unfavorably aligned orbit."
+          },
+          {
+            "url": "https://science.nasa.gov/exoplanets/whats-a-transit/",
+            "readOn": "2026-10-23",
+            "anchor": "What’s a transit?, lines276–284",
+            "factualReading": "A repeated brightness dip is a measurement clue. The page also contains a stale two-year TESS-mission description; it is not used as a current mission-status source."
+          }
+        ],
+        "scope": "Explains already reviewed related concepts and their limits; prior source/model bounds remain. Actual bidirectional rendered link and Back/focus acceptance pending."
+      },
+      {
+        "id": "science-encryption--science-checksum",
+        "fromId": "science-encryption",
+        "toId": "science-checksum",
+        "kind": "compare",
+        "why": "Verschlüsselung soll den Inhalt vor unbefugtem Lesen schützen. Eine Prüfsumme dient dem Erkennen bestimmter Änderungen; das einfache Summenmodell kann verschiedene Folgen nicht immer unterscheiden.",
+        "checkedAt": "2026-10-24",
+        "sourceBasis": [
+          {
+            "url": "https://csrc.nist.gov/Projects/pec/fhe",
+            "readOn": "2026-10-23",
+            "anchor": "Comparison with a regular encryption scheme, lines104–109",
+            "factualReading": "Key generation, encryption and decryption are distinguished; confidentiality limits unauthorized access to plaintext. This advanced article does not endorse Caesar substitution."
+          },
+          {
+            "url": "https://csrc.nist.gov/glossary/term/checksum",
+            "readOn": "2026-10-23",
+            "anchor": "Definitions, lines113–132",
+            "factualReading": "A data-dependent value is used to detect change or error; definitions must be interpreted in their source context."
+          },
+          {
+            "url": "https://csrc.nist.gov/pubs/fips/180-4/upd1/final",
+            "readOn": "2026-10-23",
+            "anchor": "Abstract / publication history, lines68–81",
+            "factualReading": "The2015 standard specifies message digests to detect changes. A2023 note announces planned revision; only the abstract was read, not the full PDF."
+          }
+        ],
+        "scope": "Explains already reviewed related concepts and their limits; prior source/model bounds remain. Actual bidirectional rendered link and Back/focus acceptance pending."
+      },
+      {
+        "id": "science-fusion--science-galaxy",
+        "fromId": "science-fusion",
+        "toId": "science-galaxy",
+        "kind": "context",
+        "why": "In vielen Sternen liefert Kernfusion Energie. Galaxien verbinden Sterne und weitere Materie durch Gravitation zu großen Systemen.",
+        "checkedAt": "2026-10-24",
+        "sourceBasis": [
+          {
+            "url": "https://science.nasa.gov/universe/stars/",
+            "readOn": "2026-10-23",
+            "anchor": "Life, lines286–294",
+            "factualReading": "Hot dense stellar interiors support hydrogen-to-helium nuclear fusion. Chemical fuel is not the solar energy source."
+          },
+          {
+            "url": "https://www.energy.gov/ne/articles/fission-and-fusion-what-difference",
+            "readOn": "2026-10-23",
+            "anchor": "Fission / Fusion, lines29–48; date1April2021",
+            "factualReading": "Combining nuclei and splitting heavy nuclei are different processes. The explainer is not a current commercial-fusion deployment assessment."
+          },
+          {
+            "url": "https://science.nasa.gov/universe/galaxies/",
+            "readOn": "2026-10-23",
+            "anchor": "Definition / Our Milky Way, lines271–285",
+            "factualReading": "Gravity binds stars and other matter in galaxies; our solar system belongs to the Milky Way. The provided face-on Milky Way image is explicitly an illustration."
+          }
+        ],
+        "scope": "Explains already reviewed related concepts and their limits; prior source/model bounds remain. Actual bidirectional rendered link and Back/focus acceptance pending."
+      }
+    ],
+    "removedUnexplainedPairs": [
+      {
+        "fromId": "science-lever",
+        "toId": "science-energy",
+        "reason": "Current energy topic concerns solar generation and battery storage, without a mechanical-work explanation. Existing bicycle/force links provide the concrete lever connection."
+      },
+      {
+        "fromId": "science-pendulum",
+        "toId": "science-energy",
+        "reason": "Current energy topic is a solar/battery model; the existing seismograph and resonance connections explain this pendulum directly."
+      },
+      {
+        "fromId": "science-fractals",
+        "toId": "science-patterns",
+        "reason": "Current patterns topic concerns sorting examples and machine-learning limits; sharing the word pattern alone does not justify this link."
+      },
+      {
+        "fromId": "science-probability",
+        "toId": "science-checksum",
+        "reason": "The current dice-frequency model and deterministic digit-sum model contain no shared random-error experiment; retain their separate scientific limits instead of implying a quantified relation."
+      }
+    ],
+    "allNonRelationshipTopicFieldsUnchanged": true,
+    "existing28SourceReviewedConnectionsUnchanged": true,
+    "changedTopicRelationships": [
+      {
+        "id": "science-magnetism",
+        "before": [
+          "invention-compass",
+          "science-atmosphere",
+          "invention-generator"
+        ],
+        "after": [
+          "invention-compass",
+          "science-atmosphere",
+          "invention-generator",
+          "science-comet"
+        ]
+      },
+      {
+        "id": "science-currents",
+        "before": [
+          "science-foodweb",
+          "animal-whale-shark",
+          "science-coral-reef",
+          "science-tides",
+          "animal-european-eel"
+        ],
+        "after": [
+          "science-foodweb",
+          "animal-whale-shark",
+          "science-coral-reef",
+          "science-tides",
+          "animal-european-eel",
+          "science-buoyancy"
+        ]
+      },
+      {
+        "id": "science-sound",
+        "before": [
+          "invention-phone",
+          "science-atmosphere",
+          "invention-seismograph",
+          "building-sydney-opera"
+        ],
+        "after": [
+          "invention-phone",
+          "science-atmosphere",
+          "invention-seismograph",
+          "building-sydney-opera",
+          "science-resonance"
+        ]
+      },
+      {
+        "id": "science-solar-system",
+        "before": [
+          "science-energy",
+          "invention-satellite",
+          "history-apollo11",
+          "science-moon-phases",
+          "science-seasons",
+          "invention-telescope",
+          "science-galaxy",
+          "science-comet"
+        ],
+        "after": [
+          "science-energy",
+          "invention-satellite",
+          "history-apollo11",
+          "science-moon-phases",
+          "science-seasons",
+          "invention-telescope",
+          "science-galaxy",
+          "science-comet",
+          "science-exoplanet"
+        ]
+      },
+      {
+        "id": "science-patterns",
+        "before": [
+          "science-computer",
+          "invention-computer",
+          "person-grace_hopper",
+          "science-probability"
+        ],
+        "after": [
+          "science-computer",
+          "invention-computer",
+          "person-grace_hopper",
+          "science-probability",
+          "science-symmetry"
+        ]
+      },
+      {
+        "id": "science-water-cycle",
+        "before": [
+          "science-photosynthesis",
+          "science-atmosphere",
+          "animal-north-american-beaver",
+          "building-pont-du-gard",
+          "building-lalibela",
+          "building-angkor-wat"
+        ],
+        "after": [
+          "science-photosynthesis",
+          "science-atmosphere",
+          "animal-north-american-beaver",
+          "building-pont-du-gard",
+          "building-lalibela",
+          "building-angkor-wat",
+          "science-surface-tension"
+        ]
+      },
+      {
+        "id": "science-photosynthesis",
+        "before": [
+          "science-water-cycle",
+          "science-foodweb",
+          "science-fungi",
+          "science-pollination",
+          "science-coral-reef"
+        ],
+        "after": [
+          "science-water-cycle",
+          "science-foodweb",
+          "science-fungi",
+          "science-pollination",
+          "science-coral-reef",
+          "science-capillarity",
+          "science-cell"
+        ]
+      },
+      {
+        "id": "science-seasons",
+        "before": [
+          "science-solar-system",
+          "science-energy"
+        ],
+        "after": [
+          "science-solar-system",
+          "science-energy",
+          "science-heat-transfer"
+        ]
+      },
+      {
+        "id": "science-lever",
+        "before": [
+          "science-pressure",
+          "science-energy",
+          "invention-bicycle"
+        ],
+        "after": [
+          "science-pressure",
+          "invention-bicycle"
+        ]
+      },
+      {
+        "id": "science-pendulum",
+        "before": [
+          "science-resonance",
+          "science-energy",
+          "invention-seismograph"
+        ],
+        "after": [
+          "science-resonance",
+          "invention-seismograph"
+        ]
+      },
+      {
+        "id": "science-probability",
+        "before": [
+          "science-patterns",
+          "science-checksum"
+        ],
+        "after": [
+          "science-patterns"
+        ]
+      },
+      {
+        "id": "science-fractals",
+        "before": [
+          "science-symmetry",
+          "science-patterns"
+        ],
+        "after": [
+          "science-symmetry"
+        ]
+      },
+      {
+        "id": "science-checksum",
+        "before": [
+          "science-computer",
+          "science-encryption",
+          "science-probability"
+        ],
+        "after": [
+          "science-computer",
+          "science-encryption"
+        ]
+      }
+    ],
+    "limits": "No fabricated empirical learning benefit, no source re-read claim, no blanket reapproval of old topics. Previous full/early/model/69-task reports remain bound to their original source and build. New current product acceptance required."
+  },
+  "actualPredecessorEarlyProduct20261024": {
+    "actualConfirmedPredecessor": "4ad747cd43e162d92e017e8f028d0b5e916e3ab2",
+    "integrationCommit": "33e77dbe2c9b831d14c92759c2e668c606ce8ce9",
+    "meaning": "Distinct actual early-product originals, each retaining its real source digest and build. Later changes were evidence metadata and stronger explicit reciprocal-presence/static scope guards; final full current acceptance remains required. No old report relabelled.",
+    "currentApplicationBuild": "b27f9637cdae1ff8",
+    "reports": [
+      {
+        "path": ".qa-output/science-reconciled-links-early/report.json",
+        "sha256": "6cef25f06c6957b88216258f87bdf4d73bcb9d8a0b7a131d98c215819e72fbfb",
+        "sourceDigest": "84b1b2ac972ea080b966a3177022eacc9baa79166be62fa3fef672802f497786",
+        "build": "b27f9637cdae1ff8",
+        "scope": "Targeted actual-product check before long full acceptance. New23 retained originals only; not a revision/full approval of all old science or a deployment."
+      },
+      {
+        "path": ".qa-output/science-reconciled-links-native-models/report.json",
+        "sha256": "03db2c031b89cab74465a22e8cb1cd8ee73259748da59af3cc61a0cd963924c2",
+        "sourceDigest": "84b1b2ac972ea080b966a3177022eacc9baa79166be62fa3fef672802f497786",
+        "build": "b27f9637cdae1ff8",
+        "scope": "Targeted actual-product check before long full acceptance. New23 retained originals only; not a revision/full approval of all old science or a deployment."
+      },
+      {
+        "path": ".qa-output/science-real-gamma-pass-b27f/report.json",
+        "sha256": "767af838198047134926f9a2edd4cadc7a3a2ab55982daa486d9e9e4d172ee6f",
+        "sourceDigest": "84b1b2ac972ea080b966a3177022eacc9baa79166be62fa3fef672802f497786",
+        "build": "b27f9637cdae1ff8",
+        "scope": "Actual predecessor Gamma TLS UI download imported into the science successor after the real predecessor merge. All original private/progress/session fields preserved; all23 new science originals and69 voluntary tasks, a real successor pass export/import and actual new offline browser. No whole old-cache-update or complete release acceptance claim."
+      },
+      {
+        "path": ".qa-output/science-model-readability-actual-gamma-verified-fault/report.json",
+        "sha256": "f734496dea48d73f5ebb12899bc3443dd13c4b256cc0281ed66de88eea256417",
+        "sourceDigest": "38a8a14fd5da6d872f96347a01512c837bead6c7cc2721e306de5d9a527258f4",
+        "build": "289ff4d6fb06a287",
+        "scope": "Focused actual rendered10model readability after actual M4ad integration. Same stronger existing model guard rejects corresponding original13px limit and unchanged16px large-reading label; not whole science/full/native-engine acceptance."
+      },
+      {
+        "path": ".qa-output/science-missing-reciprocal-actual-counterexample-correct-titles/report.json",
+        "sha256": "d3ee7f8038aa8d267f756924159e9f03b26fabf878582ec6cde5c3e56a5ea530",
+        "sourceDigest": "9bc5a983c9b938db2f2ee658188aa61afec3a6119508eb3006c2d0485ff4c1ee",
+        "build": "b27f9637cdae1ff8",
+        "scope": "Corresponding original missing buoyancy-to-currents return link applied to the actual rendered target. The same permanent science-source path guard rejects it, then checks the restored actual product. No old-source product or complete acceptance claim."
+      }
+    ],
+    "actualNewScienceSearches": 23,
+    "actualRelatedTargetReciprocalAndBackFocusPaths": 55,
+    "currentNormal320LargeAnd1440Views": 46,
+    "all69VoluntaryTasksAtBothWidths": true,
+    "actualNative200ModelViews640And320": 20,
+    "sourceDerivedFractionalReloadsStillChecked": true,
+    "scopeOfAllOldDataProtection": "Actual previous TLS UI-generated pass imported into the actual-base science successor: old notes/favorite/settings/earned states and all predecessor model sessions unchanged. Viewing exactly23 new cards adds only their expected discoveries. Actual successor download/reset/import/reload and new offline browser with stopped server preserve old and fractional0.8/2.5 model states. No whole old-cache-update claim.",
+    "newModelReadability": {
+      "normalLabelAndModelLimitMinimumPx": 16,
+      "largeReadingMinimumPx": 18.3,
+      "originalObservedNormalLimitPx": 13,
+      "originalLargeLabelPx": 16,
+      "scopedCause": "Existing global small-note!important defeated the first scoped CSS attempt; actual early guard caught this before full. Matching scoped overrides retained.",
+      "negativeProof": "Same permanent typography guard rejects actual corresponding13px limit and16px large label. Controlled fault application verified before assertions; restore inspected after two real paint frames, not blind time retries.",
+      "actualImagesRead": [
+        "normal pressure model with source-derived force contact and16px limits",
+        "large-reading pendulum with actual0.5m/1.42s and explicit limits",
+        "native200 buoyancy result and model limits"
+      ],
+      "earlierUnchangedTaskAndDiagramReviewRetained": true
+    },
+    "earlierFalseHarnessResultsPreserved": "Ordinary localhost sandbox EPERM, shared private probe port, a wrong private heading, strict old-discovery expectation despite intentional new visits, and initially unapplied large-font fault were identified as probe/environment issues. Each original report retained; no product fix or full pass claimed from them.",
+    "independentScientificHumanOrEmpiricalApproval": false
+  },
+  "fullAcceptanceBeforeActualPredecessor20261024": "Open: actual PR58 delivery then eight-building delivery/base reconciliation; remaining integrated learning paths and complete permanent browser/offline/engine integration before current full mandatory local and CI acceptance.56 historical UI dossiers deliberately unchanged. No release PR, no publication."
 }

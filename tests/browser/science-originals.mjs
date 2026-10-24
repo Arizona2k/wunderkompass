@@ -5,6 +5,7 @@ import {prepareAxe} from './axe-loader.mjs';
 import catalog from '../../app/world-catalog.json' with {type:'json'};
 import review from '../../content/science-originals-review.json' with {type:'json'};
 import thinking from '../../app/science-thinking.json' with {type:'json'};
+import connections from '../../app/world-connections.json' with {type:'json'};
 const topics=review.topics.map(entry=>catalog.find(t=>t.id===entry.id));
 // Source-derived roles: OpenStax heat transfer, IOP elasticity, the geometric
 // reflection criterion, NHGRI cell structures and NASA comet-tail directions.
@@ -38,6 +39,12 @@ async function geometry(page,root,label){
 export async function assertScienceThinkingTypography(root){
  const actual=await root.evaluate(root=>({large:!!root.closest('.large-reading'),fonts:[...root.querySelectorAll('p:not(.eyebrow),h4,button,summary,.lab-feedback strong')].filter(e=>e.getClientRects().length&&(!e.closest('details:not([open])')||e.closest('details:not([open])').querySelector(':scope>summary')===e)).map(e=>({text:e.textContent.slice(0,65),font:parseFloat(getComputedStyle(e).fontSize)}))}));
  assert.ok(actual.fonts.every(e=>e.font>=(actual.large?18.3:16)),'actual inquiry text respects normal/large reading '+JSON.stringify(actual));return actual;
+}
+
+export async function assertScienceModelTypography(model){
+ const actual=await model.evaluate(root=>({large:!!root.closest('.large-reading'),fonts:[...root.querySelectorAll('label,.small-note')].map(e=>({text:e.textContent.slice(0,80),font:parseFloat(getComputedStyle(e).fontSize)}))}));
+ assert.ok(actual.fonts.length>=2,'actual model includes input labels and an explicit limit');
+ assert.ok(actual.fonts.every(e=>e.font>=(actual.large?18.3:16)),'model controls and limits respect normal/large reading '+JSON.stringify(actual));return actual;
 }
 
 export async function scienceThinkingView(page,topic,{width,shots,native=false}={}){
@@ -83,6 +90,29 @@ export async function scienceFractionalRestoreView(page){
  return observed;
 }
 
+export async function assertScienceReciprocalLink(page,sourceId,targetId,explained){
+ const reverse=(explained?'world-connection-':'world-related-')+targetId+'-'+sourceId,link=page.locator('[data-route-focus="'+reverse+'"]');
+ assert.equal(await link.count(),1,'actual reciprocal science link must exist '+targetId+' -> '+sourceId);await link.waitFor();
+}
+
+async function scienceSourcePaths(page,topic){
+ await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();
+ await page.getByRole('combobox').fill(topic.title);await page.getByRole('option').filter({hasText:topic.title}).first().click();
+ await page.getByRole('heading',{name:topic.title,exact:true}).waitFor();assert.equal(new URL(page.url()).hash,'#world/topic/'+topic.id);
+ const observed=[];
+ for(const id of topic.related){
+  const target=catalog.find(t=>t.id===id);assert.ok(target.related.includes(topic.id),'reciprocal source relationship '+id);
+  const connection=connections.connections.find(c=>[c.fromId,c.toId].includes(topic.id)&&[c.fromId,c.toId].includes(id));
+  const focus=(connection?'world-connection-':'world-related-')+topic.id+'-'+id,link=page.locator('[data-route-focus="'+focus+'"]');
+  if(connection)assert.equal(await link.locator('..').locator('p').innerText(),connection.why,'actual source-derived connection explanation');
+  await link.focus();await page.keyboard.press('Enter');await page.getByRole('heading',{name:target.title,exact:true}).waitFor();await page.locator('.world-mini-question').waitFor();
+  await assertScienceReciprocalLink(page,topic.id,id,!!connection);
+  await page.goBack();await page.getByRole('heading',{name:topic.title,exact:true}).waitFor();await page.waitForFunction(focus=>document.activeElement?.dataset.routeFocus===focus,focus);
+  observed.push({id,explanation:connection?.why??null,actualReciprocalLink:true,backRestoresOriginalFocus:true});
+ }
+ return {actualSearch:true,related:observed};
+}
+
 export async function scienceOriginalView(page,{width,shots,questions=true,native=false,modelsOnly=false}={}){
  const observed=[];
  for(const t of topics.filter(t=>!modelsOnly||t.investigation)){
@@ -91,9 +121,10 @@ export async function scienceOriginalView(page,{width,shots,questions=true,nativ
   for(const text of [t.intro,...t.paragraphs,...t.more,t.learning.starter,t.learning.observe,t.learning.benefit,...t.facts.map(f=>f.text)])assert.ok((await article.innerText()).includes(text),t.id+' actual displayed explanation');
   for(const source of t.sources)assert.equal(await article.getByRole('link',{name:source.label,exact:true}).getAttribute('href'),source.url);
   await assertScienceDiagramLegend(article,t.id.replace('science-',''));
-  const states=[];
+  const states=[];let modelTypography=null;
   if(t.investigation){
    const model=article.locator('[data-investigation="'+t.investigation+'"]'),slider=model.getByRole('slider').first();
+   modelTypography=await assertScienceModelTypography(model);
    const keys=['pressure','buoyancy'].includes(t.investigation)?['Home','ArrowRight','ArrowRight','End','Home']:t.investigation==='angle'?['Home','ArrowRight','Home','ArrowRight6','End','ArrowLeft','Home']:t.investigation==='resonance'?['Home','ArrowRight','Home','ArrowRight5','End','Home']:['Home','ArrowRight','End','Home'];
    for(const key of keys){
     if(/^ArrowRight[0-9]$/.test(key)){for(let i=0;i<Number(key.slice(-1));i++)await slider.press('ArrowRight');}else await slider.press(key);const value=Number(await slider.inputValue());await page.waitForFunction(({kind,value})=>Number(document.querySelector('[data-investigation="'+kind+'"] label strong')?.textContent.replace(',','.'))===value,{kind:t.investigation,value});
@@ -144,7 +175,8 @@ export async function scienceOriginalView(page,{width,shots,questions=true,nativ
    const sections=t.investigation?['.science-investigation h3','.science-investigation label','.science-investigation svg','.science-investigation [role=status]','.science-investigation .small-note']:['.world-article-heading h2','.science-explanation-diagram svg','.science-diagram-labels','.science-explanation-diagram figcaption'];
    for(const [index,selector]of sections.entries()){const part=article.locator(selector).first();await part.evaluate(async e=>{e.scrollIntoView({block:'start',behavior:'instant'});await new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok)));});captures.push(await captureNativeViewport(page,path.join(shots,t.id+'-native200-'+width+'-'+index+'.png')));}
   }
-  observed.push({id:t.id,width,native,inquiry,explanationAndSources:true,questions,wrongReasons:questions?2:0,states,captures});
+  const paths=questions&&width===320?await scienceSourcePaths(page,t):null;
+  observed.push({id:t.id,width,native,inquiry,modelTypography,paths,explanationAndSources:true,questions,wrongReasons:questions?2:0,states,captures});
  }
  for(const proof of await scienceFractionalRestoreView(page))observed.find(view=>view.id===proof.id).fractionalRestore=proof;
  return observed;

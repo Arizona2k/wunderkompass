@@ -17275,7 +17275,7 @@
     },
     {
       "id": "topics-inventions:invention-refrigerator",
-      "dataHash": "e8e25dd500fcf0c3ffae4b6a84d7ec97b4763aab492fde261c2074c9dcb3ed7f",
+      "dataHash": "be6224b1cbf2052d2d26853454a74f62b9b89555626d988b09232e1995304cf5",
       "goal": "Du verstehst, warum eine geschlossene Tür und gute Dämmung helfen und warum ein Kühlschrank kein Ersatz für eine Raumkühlung ist.",
       "explanation": "Bei einem üblichen Kompressorkühlschrank nimmt ein Kältemittel innen Wärme auf und gibt sie außen wieder ab. Ein Kompressor und weitere Bauteile halten den Kreislauf in Gang. Deshalb wird der Raum durch einen Kühlschrank nicht insgesamt kälter. Auch die zugeführte elektrische Energie landet am Ende überwiegend als Wärme im Raum.",
       "example": "Zeichne einen Kasten und zwei verschiedenfarbige Pfeile: Wärme innen nach außen, elektrische Energie zum Gerät. Was ändert sich, wenn die Tür offen bleibt? Nur zeichnen und überlegen; keine Geräteteile anfassen oder Rohre öffnen.",
@@ -17329,7 +17329,8 @@
       ],
       "mediaDecision": "Geeignete echte Fotos bevorzugt; geprüfte institutionelle Kandidaten bisher technisch nicht vollständig verfügbar. Eigene gekennzeichnete Funktionsgrafik bleibt ergänzend erhalten. Historische Quellen-/Rechtebelege unverändert.",
       "links": [
-        "topics-science:science-motor"
+        "topics-science:science-motor",
+        "topics-science:science-heat-transfer"
       ],
       "ui": {
         "build": "cb1820f262c2be81",
@@ -17375,11 +17376,18 @@
         "back": true,
         "offline": true,
         "report": "Original complete mandatory local Chromium154 regression at immutable 2d32b572dd5d646426e15f912f17529874ea4d66 / source d9e32a489f71f0c92038f999736361689122325f537095d7cf869886c4bfbc8a / report SHA256=ef7943526ccf63a74a7aa7b979f1633166af0fbe34ea2b9b6de541987dd9c018. Eight-building source product40 views, stopped-server cached-app32 ordinary and16 actual native200% views, all original photo/focus/invention/personal-pass regressions retained. Only current UI bindings renewed afterward. Earlier reports keep their tested scope; final integration three-engine CI and actual deployment remain required."
+      },
+      "relationshipBeforeScience20261024": {
+        "dataHash": "e8e25dd500fcf0c3ffae4b6a84d7ec97b4763aab492fde261c2074c9dcb3ed7f",
+        "links": [
+          "topics-science:science-motor"
+        ],
+        "actualPredecessor": "4ad747cd43e162d92e017e8f028d0b5e916e3ab2"
       }
     },
     {
       "id": "topics-inventions:invention-bicycle",
-      "dataHash": "1a385504defddcbf14d549c3f6e721aa6f4b96491b84e3a8df6fedcec52f19c9",
+      "dataHash": "d8693cad8e4a768567eac178e742c310b663c93b2565d266e5cf17ac9e61e5f4",
       "goal": "Du kannst einen leichteren Gang mit mehr Pedalumdrehungen verbinden und vermeidest die Vorstellung kostenloser Energie durch Zahnräder.",
       "explanation": "Die Kette verbindet das Kettenblatt vorn mit einem Zahnrad am Hinterrad. Eine Übersetzung kann verändern, wie oft sich das Rad bei einer Pedalumdrehung dreht. Das tauscht Kraftbedarf gegen Weg, ohne zusätzliche Energie zu erfinden.",
       "example": "Zeichne zwei gezahnte Kreise und markiere je einen Zahn. Vergleiche bei einer langsamen gedachten Kettenbewegung ein kleines und ein großes hinteres Zahnrad. Erkläre: Was ändert sich an Drehzahl und notwendiger Pedalkraft? Keinen echten Antrieb mit Fingern drehen.",
@@ -17433,7 +17441,9 @@
       ],
       "mediaDecision": "Geeignete echte Fotos bevorzugt; geprüfte institutionelle Kandidaten bisher technisch nicht vollständig verfügbar. Eigene gekennzeichnete Funktionsgrafik bleibt ergänzend erhalten. Historische Quellen-/Rechtebelege unverändert.",
       "links": [
-        "topics-inventions:invention-car"
+        "topics-inventions:invention-car",
+        "topics-science:science-friction",
+        "topics-science:science-lever"
       ],
       "ui": {
         "build": "cb1820f262c2be81",
@@ -17479,11 +17489,18 @@
         "back": true,
         "offline": true,
         "report": "Original complete mandatory local Chromium154 regression at immutable 2d32b572dd5d646426e15f912f17529874ea4d66 / source d9e32a489f71f0c92038f999736361689122325f537095d7cf869886c4bfbc8a / report SHA256=ef7943526ccf63a74a7aa7b979f1633166af0fbe34ea2b9b6de541987dd9c018. Eight-building source product40 views, stopped-server cached-app32 ordinary and16 actual native200% views, all original photo/focus/invention/personal-pass regressions retained. Only current UI bindings renewed afterward. Earlier reports keep their tested scope; final integration three-engine CI and actual deployment remain required."
+      },
+      "relationshipBeforeScience20261024": {
+        "dataHash": "1a385504defddcbf14d549c3f6e721aa6f4b96491b84e3a8df6fedcec52f19c9",
+        "links": [
+          "topics-inventions:invention-car"
+        ],
+        "actualPredecessor": "4ad747cd43e162d92e017e8f028d0b5e916e3ab2"
       }
     },
     {
       "id": "topics-inventions:invention-elevator",
-      "dataHash": "398a9ed2568927686efe0bc3c1ce1f3e09a1a5be9be6158a0fa4624f68d2f4e0",
+      "dataHash": "1924100f7f8d80a653a2d9ab7999ff5bb577386a894ccc78448a8923a38798e8",
       "goal": "Du erkennst, warum Barrierefreiheit und sichere Wartung ebenso zur Technik gehören wie schnelleres Hochfahren.",
       "explanation": "Bei einem typischen Seilaufzug bewegt ein Antrieb die Kabine über Seile und eine Treibscheibe. Ein Gegengewicht gleicht einen Teil der Gewichtskraft der Kabine aus. Sicherheit entsteht durch mehrere zusammenarbeitende Einrichtungen, nicht allein durch einen starken Motor. Andere Aufzüge arbeiten beispielsweise hydraulisch.",
       "example": "Vergleiche im Bildschirmplan die Rollen: Was bewegt die Kabine, was hält sie im Störungsfall? Ordne die Aufgaben zunächst ohne Auflösung zu. Keine echten Türen blockieren, keinen Schacht betreten und keine Sicherheitseinrichtung ausprobieren.",
@@ -17562,7 +17579,8 @@
       "mediaDecision": "Geeignete echte Fotos bevorzugt; geprüfte institutionelle Kandidaten bisher technisch nicht vollständig verfügbar. Eigene gekennzeichnete Funktionsgrafik bleibt ergänzend erhalten. Historische Quellen-/Rechtebelege unverändert.",
       "links": [
         "topics-science:science-motor",
-        "topics-buildings:building-eiffel-tower"
+        "topics-buildings:building-eiffel-tower",
+        "topics-science:science-friction"
       ],
       "ui": {
         "build": "cb1820f262c2be81",
@@ -17608,11 +17626,19 @@
         "back": true,
         "offline": true,
         "report": "Original complete mandatory local Chromium154 regression at immutable 2d32b572dd5d646426e15f912f17529874ea4d66 / source d9e32a489f71f0c92038f999736361689122325f537095d7cf869886c4bfbc8a / report SHA256=ef7943526ccf63a74a7aa7b979f1633166af0fbe34ea2b9b6de541987dd9c018. Eight-building source product40 views, stopped-server cached-app32 ordinary and16 actual native200% views, all original photo/focus/invention/personal-pass regressions retained. Only current UI bindings renewed afterward. Earlier reports keep their tested scope; final integration three-engine CI and actual deployment remain required."
+      },
+      "relationshipBeforeScience20261024": {
+        "dataHash": "398a9ed2568927686efe0bc3c1ce1f3e09a1a5be9be6158a0fa4624f68d2f4e0",
+        "links": [
+          "topics-science:science-motor",
+          "topics-buildings:building-eiffel-tower"
+        ],
+        "actualPredecessor": "4ad747cd43e162d92e017e8f028d0b5e916e3ab2"
       }
     },
     {
       "id": "topics-inventions:invention-seismograph",
-      "dataHash": "afebd6bf85804912da6bc7711c7423bf89585e02ca84d56349d8876bc24d1e91",
+      "dataHash": "39e51655db5de68f0b2450047d47453558eceebe333132b6cfd0af4355ef6b93",
       "goal": "Du unterscheidest eine Messung nach Beginn von Erschütterungen von einer angeblich sicheren Vorhersage eines künftigen Erdbebens.",
       "explanation": "In einem einfachen Modell bewegt sich das am Boden befestigte Gehäuse mit dem Boden. Eine aufgehängte Masse folgt wegen ihrer Trägheit anders. Die relative Bewegung kann als Kurve aufgezeichnet werden. Diese Aufzeichnung heißt Seismogramm; ein Seismometer bezeichnet den messenden Teil, oft wird das Wort auch für das Gerät benutzt.",
       "example": "Vergleiche im Bildschirmmodell Boden, Gehäuse, Masse und Kurve. Sage voraus, was sich relativ wozu bewegt. Wiederhole nur mit einer anderen gedachten Bewegungsrichtung. Keine schweren Pendel oder wackligen Aufbauten bauen.",
@@ -17709,7 +17735,9 @@
       ],
       "mediaDecision": "Geeignete echte Fotos bevorzugt; geprüfte institutionelle Kandidaten bisher technisch nicht vollständig verfügbar. Eigene gekennzeichnete Funktionsgrafik bleibt ergänzend erhalten. Historische Quellen-/Rechtebelege unverändert.",
       "links": [
-        "topics-science:science-sound"
+        "topics-science:science-sound",
+        "topics-science:science-pendulum",
+        "topics-science:science-resonance"
       ],
       "ui": {
         "build": "cb1820f262c2be81",
@@ -17755,11 +17783,18 @@
         "back": true,
         "offline": true,
         "report": "Original complete mandatory local Chromium154 regression at immutable 2d32b572dd5d646426e15f912f17529874ea4d66 / source d9e32a489f71f0c92038f999736361689122325f537095d7cf869886c4bfbc8a / report SHA256=ef7943526ccf63a74a7aa7b979f1633166af0fbe34ea2b9b6de541987dd9c018. Eight-building source product40 views, stopped-server cached-app32 ordinary and16 actual native200% views, all original photo/focus/invention/personal-pass regressions retained. Only current UI bindings renewed afterward. Earlier reports keep their tested scope; final integration three-engine CI and actual deployment remain required."
+      },
+      "relationshipBeforeScience20261024": {
+        "dataHash": "afebd6bf85804912da6bc7711c7423bf89585e02ca84d56349d8876bc24d1e91",
+        "links": [
+          "topics-science:science-sound"
+        ],
+        "actualPredecessor": "4ad747cd43e162d92e017e8f028d0b5e916e3ab2"
       }
     },
     {
       "id": "topics-inventions:invention-3d-printing",
-      "dataHash": "c5e95699431a565e7799196b9b5f0d220611024aa7556e035b4bbd49e866b326",
+      "dataHash": "f736547b57ed1fa3087d824dfe429117322fea1d06c5f8f7dc775e23222ddcb7",
       "goal": "Du verstehst räumliche Entwürfe, prüfst Modellgrenzen und erkennst den Unterschied zwischen einem Anschauungsmodell und einem geprüften Ersatzteil.",
       "explanation": "Beim additiven Herstellen wird Material gezielt aufgebaut. Eine Fräse arbeitet anders: Sie nimmt Material von einem Ausgangsstück weg. Verschiedene 3D-Druckverfahren nutzen beispielsweise Kunststoff, Metall oder Keramik. Nicht jedes Verfahren schmilzt einen Kunststofffaden.",
       "example": "Ordne drei selbst gezeichnete Querschnitte zu einem Stapel. Sage voraus, welche Form daraus entsteht, und vergleiche mit der Seitenansicht. Ändere eine mittlere Schicht. Keine heißen Düsen, Harze, Pulver oder Laser selbst bedienen.",
@@ -17834,7 +17869,8 @@
       "links": [
         "topics-inventions:invention-computer",
         "topics-inventions:invention-printing",
-        "topics-buildings:building-lalibela"
+        "topics-buildings:building-lalibela",
+        "topics-science:science-angle"
       ],
       "ui": {
         "build": "cb1820f262c2be81",
@@ -17885,6 +17921,15 @@
         "back": true,
         "offline": true,
         "report": "Original complete mandatory local Chromium154 regression at immutable 2d32b572dd5d646426e15f912f17529874ea4d66 / source d9e32a489f71f0c92038f999736361689122325f537095d7cf869886c4bfbc8a / report SHA256=ef7943526ccf63a74a7aa7b979f1633166af0fbe34ea2b9b6de541987dd9c018. Eight-building source product40 views, stopped-server cached-app32 ordinary and16 actual native200% views, all original photo/focus/invention/personal-pass regressions retained. Only current UI bindings renewed afterward. Earlier reports keep their tested scope; final integration three-engine CI and actual deployment remain required."
+      },
+      "relationshipBeforeScience20261024": {
+        "dataHash": "c5e95699431a565e7799196b9b5f0d220611024aa7556e035b4bbd49e866b326",
+        "links": [
+          "topics-inventions:invention-computer",
+          "topics-inventions:invention-printing",
+          "topics-buildings:building-lalibela"
+        ],
+        "actualPredecessor": "4ad747cd43e162d92e017e8f028d0b5e916e3ab2"
       }
     },
     {
@@ -18771,7 +18816,7 @@
     },
     {
       "id": "topics-buildings:building-sydney-opera",
-      "dataHash": "480a807506fd5c396eb83e4184d0d22fd6b94f8e2f24996ade6f8041f8ce7a66",
+      "dataHash": "ef29dad3ee8b2058c8508efe0e554f03e0df06aee31d0bdda486b77c98ddbed1",
       "goal": "Du unterscheidest Größe und Krümmung und erkennst, wie eine mathematische Idee beim Bauen helfen kann, ohne alle Probleme allein zu lösen.",
       "explanation": "Das Opernhaus von Sydney wurde 1973 eröffnet. Seine auffälligen Dächer erinnern an Segel oder Schalen. Tatsächlich gehören zu ihrer Konstruktion vorgefertigte Betonbauteile und ein gemeinsames geometrisches Prinzip: Teile derselben Kugelform.",
       "example": "Zeichne zwei unterschiedlich lange Stücke derselben Kreislinie auf Papier. Bleibt ihr Abstand zur Kreismitte gleich? Vergleiche danach eine andere Kreisgröße. Nur zeichnen, keine schweren Dächer nachbauen.",
@@ -18870,7 +18915,8 @@
         "rightsLimit": "UNESCO description licensing is not blanket permission for all photographs. INAH image terms include NC/ND; Smithsonian sculpture is a different motif and its page contains conditional usage statements. None imported as an architectural photograph."
       },
       "links": [
-        "topics-science:science-sound"
+        "topics-science:science-sound",
+        "topics-science:science-angle"
       ],
       "ui": {
         "build": "cb1820f262c2be81",
@@ -18889,6 +18935,13 @@
         "back": true,
         "offline": true,
         "report": "Original complete mandatory local Chromium154 regression at immutable 2d32b572dd5d646426e15f912f17529874ea4d66 / source d9e32a489f71f0c92038f999736361689122325f537095d7cf869886c4bfbc8a / report SHA256=ef7943526ccf63a74a7aa7b979f1633166af0fbe34ea2b9b6de541987dd9c018. Eight-building source product40 views, stopped-server cached-app32 ordinary and16 actual native200% views, all original photo/focus/invention/personal-pass regressions retained. Only current UI bindings renewed afterward. Earlier reports keep their tested scope; final integration three-engine CI and actual deployment remain required."
+      },
+      "relationshipBeforeScience20261024": {
+        "dataHash": "480a807506fd5c396eb83e4184d0d22fd6b94f8e2f24996ade6f8041f8ce7a66",
+        "links": [
+          "topics-science:science-sound"
+        ],
+        "actualPredecessor": "4ad747cd43e162d92e017e8f028d0b5e916e3ab2"
       }
     }
   ],
@@ -21674,5 +21727,19 @@
     "buildingNative200StoppedServerCachedViews": 16,
     "existingSixInventionColdViews": 6,
     "meaning": "Actual complete corrected-source local regression. Preserve original2d acceptance with its then-wrong chronicle sentence; this is a distinct source. No historical21 recovery, original CI artifact, independent scientific/human approval or actual deployment claimed. Final native CI and protected documentation-maintenance review remain required."
+  },
+  "scienceRelationshipDossierScope20261024": {
+    "meaning": "Exactly six previously accepted topic dossiers reopened for explicitly compared relationship-only changes; every other factual/question/answer/feedback field deeply equal to the actual M4ad predecessor. Original data hash and links preserved per dossier. Actual all23 new mobile searches and55 related target/reciprocal/Back-focus paths passed before full acceptance. Current UI bindings remain pending; no unsupported full approval.",
+    "actualPredecessor": "4ad747cd43e162d92e017e8f028d0b5e916e3ab2",
+    "changed": [
+      "topics-inventions:invention-refrigerator",
+      "topics-inventions:invention-bicycle",
+      "topics-inventions:invention-elevator",
+      "topics-inventions:invention-seismograph",
+      "topics-inventions:invention-3d-printing",
+      "topics-buildings:building-sydney-opera"
+    ],
+    "build": "b27f9637cdae1ff8",
+    "allOtherExistingFactualFieldsUnchanged": true
   }
 }

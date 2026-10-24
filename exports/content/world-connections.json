@@ -1016,6 +1016,110 @@
       "kind": "exploration",
       "why": "Ein Winkel kann beschreiben, welcher Ausschnitt einer Kreislinie markiert wird. Der Radius bleibt dabei eine andere Größe; so lassen sich Form und Maß getrennt untersuchen.",
       "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "science-buoyancy--science-currents",
+      "fromId": "science-buoyancy",
+      "toId": "science-currents",
+      "kind": "compare",
+      "why": "Dichte beeinflusst das Schwimmen und Sinken. Die Strömungskarte zeigt, wie Dichteunterschiede Wasser unter anderem zum Sinken bringen.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-surface-tension--science-water-cycle",
+      "fromId": "science-surface-tension",
+      "toId": "science-water-cycle",
+      "kind": "compare",
+      "why": "Im Wasserkreislauf entstehen und bewegen sich Tropfen. Oberflächenspannung beeinflusst ihre Form; Verdunstung und Kondensation verändern dagegen den Zustand des Wassers.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-capillarity--science-photosynthesis",
+      "fromId": "science-capillarity",
+      "toId": "science-photosynthesis",
+      "kind": "needs",
+      "why": "Fotosynthese braucht Wasser. Kapillarwirkung hilft Wasser in engen benetzbaren Räumen aufzusteigen; allein erklärt sie den Wassertransport hoher Pflanzen nicht.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-diffusion--science-chromatography",
+      "fromId": "science-diffusion",
+      "toId": "science-chromatography",
+      "kind": "compare",
+      "why": "Bei Diffusion verteilen sich Teilchen durch ihre zufällige Bewegung. Chromatografie vergleicht dagegen das unterschiedliche Mitwandern von Bestandteilen mit einem Lösungsmittel.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-heat-transfer--science-seasons",
+      "fromId": "science-heat-transfer",
+      "toId": "science-seasons",
+      "kind": "energy",
+      "why": "Die geneigte Erdachse verändert Sonnenstand und Tageslänge. Strahlung erklärt, wie Sonnenenergie ohne Materialkontakt zur Erde gelangt.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-elasticity--science-resonance",
+      "fromId": "science-elasticity",
+      "toId": "science-resonance",
+      "kind": "cause",
+      "why": "Elastische Verformung kann eine Rückstellwirkung erzeugen. Bei Resonanz kommt es zusätzlich darauf an, wie eine Schwingung von außen angeregt und gedämpft wird.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-resonance--science-sound",
+      "fromId": "science-resonance",
+      "toId": "science-sound",
+      "kind": "compare",
+      "why": "Ein Ton beginnt mit einer Schwingung. Die Resonanzkarte untersucht, wie unterschiedlich ein schwingendes System auf verschiedene Anregungsfrequenzen reagiert.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-symmetry--science-patterns",
+      "fromId": "science-symmetry",
+      "toId": "science-patterns",
+      "kind": "compare",
+      "why": "Eine Spiegelachse ist ein bestimmtes Formmerkmal. Beim Sortieren von Beispielen entscheidet die gewählte Eigenschaft, welche Formen zusammenpassen.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-cell--science-photosynthesis",
+      "fromId": "science-cell",
+      "toId": "science-photosynthesis",
+      "kind": "context",
+      "why": "Fotosynthese findet in bestimmten Zellen statt. Die Zellkarte erklärt den Aufbau von Zellen, die Fotosynthesekarte den lichtabhängigen Aufbau energiereicher Stoffe.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-comet--science-magnetism",
+      "fromId": "science-comet",
+      "toId": "science-magnetism",
+      "kind": "context",
+      "why": "Der Sonnenwind enthält geladene Teilchen und beeinflusst den Ionenschweif eines Kometen. Die Magnetfeldkarte zeigt, dass Felder geladene Teilchen ablenken können.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-exoplanet--science-solar-system",
+      "fromId": "science-exoplanet",
+      "toId": "science-solar-system",
+      "kind": "compare",
+      "why": "Exoplaneten gehören zu anderen Planetensystemen. Unsere acht Planeten bieten einen Vergleich, während ein Transit nur bei passender Blickrichtung messbar ist.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-encryption--science-checksum",
+      "fromId": "science-encryption",
+      "toId": "science-checksum",
+      "kind": "compare",
+      "why": "Verschlüsselung soll den Inhalt vor unbefugtem Lesen schützen. Eine Prüfsumme dient dem Erkennen bestimmter Änderungen; das einfache Summenmodell kann verschiedene Folgen nicht immer unterscheiden.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "science-fusion--science-galaxy",
+      "fromId": "science-fusion",
+      "toId": "science-galaxy",
+      "kind": "context",
+      "why": "In vielen Sternen liefert Kernfusion Energie. Galaxien verbinden Sterne und weitere Materie durch Gravitation zu großen Systemen.",
+      "checkedAt": "2026-10-24"
     }
   ]
 }

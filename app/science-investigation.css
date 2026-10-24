@@ -7,3 +7,5 @@
 .science-explanation-diagram svg{width:100%;max-width:420px;align-self:center;display:block}
 .science-explanation-diagram{display:grid;gap:16px}
 .science-investigation .lab-feedback{margin:0;overflow-wrap:anywhere}
+.science-investigation .small-note{font-size:1rem!important;line-height:1.65!important}
+.large-reading .science-investigation :is(label,.small-note){font-size:1.15rem!important}

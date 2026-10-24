@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "36a849ebd289f7fb83b949e59761d17699e646a1",
+    "commit": "4ad747cd43e162d92e017e8f028d0b5e916e3ab2",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -53,7 +53,8 @@
       "32e3fa133bc84b17595aba2bad79815e2f31478c",
       "34a0551fe965fc2f341740c8317678534ebf8f6d",
       "92f3591fb33c7f1109045b504079e41eb8e0fc9a",
-      "36a849ebd289f7fb83b949e59761d17699e646a1"
+      "36a849ebd289f7fb83b949e59761d17699e646a1",
+      "4ad747cd43e162d92e017e8f028d0b5e916e3ab2"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -1413,6 +1414,38 @@
         "3D-Druck",
         "Nähmaschine"
       ]
+    },
+    {
+      "number": 59,
+      "title": "Acht Bauwerke erschließen und Browsernachweise sicher einsammeln",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/59",
+      "base": "test-live",
+      "mergedAt": "2026-10-24T08:58:47Z",
+      "mergeCommit": "4ad747cd43e162d92e017e8f028d0b5e916e3ab2",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/4ad747cd43e162d92e017e8f028d0b5e916e3ab2/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57157727220,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-24T08:59:18Z",
+          "updatedAt": "2026-10-24T08:59:18Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/hWAS4fby4TJPeXA2hnHFbUJxfUk1"
+        },
+        {
+          "id": 57157717651,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-24T08:58:52Z",
+          "updatedAt": "2026-10-24T08:58:52Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/hWAS4fby4TJPeXA2hnHFbUJxfUk1"
+        }
+      ],
+      "checkedOn": "2026-10-24"
     }
   ]
 }
