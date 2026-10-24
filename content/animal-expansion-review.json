@@ -7248,7 +7248,23 @@
     ],
     "answersIndicesHintsFeedbackSourcesArticlesPhotosUnchanged": true,
     "earnedAndSavedSelectionMigrationRequired": false,
-    "earlyRenderedAcceptance": "pending at new exact source/build",
+    "earlyRenderedAcceptance": {
+      "status": "passed",
+      "sourceCommit": "907feb40154941c5dfde5f8b62d986ec8cd86e66",
+      "sourceDigest": "e925f0dcab7daf01ce8d49ab891f626670523acb20c4ff77d34be7eb28cf5127",
+      "build": "c0d22845f8f12f16",
+      "cases": 32,
+      "widths": "320/1440large and actual200%640/320",
+      "allFiveErrorClassesEmpty": true,
+      "sameOldSavedAnswerStringsAndUnrelatedProgressAfterReload": true,
+      "personallyInspectedActualScreenshots": [
+        "echidna-choice-hint-feedback-320",
+        "kingfisher-choice-hint-feedback-320",
+        "beaver-consequence-assessment-320",
+        "platypus-native200-320"
+      ],
+      "scope": "AI inspection of actual rendered product; seven affected existing tests and production build passed. No independent human/empirical learning, full/new nativeCI or delivery claim. Original907/e925 proof retains exact source; this following metadata is separate."
+    },
     "fullNativeAndDelivery": "pending after actual maintenance delivery and base integration"
   }
 }
