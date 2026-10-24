@@ -5,7 +5,7 @@ import {fileURLToPath} from 'node:url';
 import {aggregateQuality} from '../../scripts/quality-evidence.mjs';
 import {createHandoff,sourceDigest} from '../../scripts/handoff.mjs';
 import {learningFingerprint} from '../../build/learning-fingerprint.mjs';
-import {fileSnapshot,coldBrowserEnvironment,sealColdOffline,restoreColdOffline} from '../../scripts/cold-offline-reuse.mjs';
+import {fileSnapshot,coldBrowserEnvironment,sealColdOffline,restoreColdOffline,validateRestoredColdOffline} from '../../scripts/cold-offline-reuse.mjs';
 import qualityContext from '../../scripts/release/quality-context.cjs';
 
 const root=fileURLToPath(new URL('../..',import.meta.url)),started=performance.now(),basePort=Number(process.env.QA_PORT??4182),children=new Set();
@@ -35,7 +35,7 @@ else{
  for(const name of await fs.readdir(path.join(root,'.qa-output')))if(/^(quality-|journey-engine-)/.test(name)||['portable-report.json','handoff.json','engine-report.json','review'].includes(name))await fs.rm(path.join(root,'.qa-output',name),{recursive:true,force:true});
  let outcomes=[];
  try{
-  const earlyCold=ciCold?await restoreColdOffline(coldDirectory,coldSeal,path.join(root,'.qa-output/quality-early-offline'),await coldIdentity()):null;
+  const earlyIdentity=ciCold?await coldIdentity():null,earlyCold=ciCold?await restoreColdOffline(coldDirectory,coldSeal,path.join(root,'.qa-output/quality-early-offline'),earlyIdentity):null;
   if(earlyCold)outcomes.push(earlyCold);
   // Never run another browser beside the reproducible performance sample phase.
   const foundation=await launch('quality-foundation',['foundation'],0);outcomes.push(foundation);if(foundation.code!==0)throw Error('Foundation phase failed');
@@ -43,8 +43,9 @@ else{
   const navigation=()=>launch('quality-navigation',earlyCold?['core']:['core','offline'],1),learning=()=>launch('quality-learning',['home','research','journeys','playground','backup','challenge'],2);
   if(serialLocal){outcomes.push(await navigation());outcomes.push(await learning());}
   else outcomes.push(...await Promise.all([navigation(),learning()]));
+  if(earlyCold)await validateRestoredColdOffline(coldDirectory,coldSeal,path.join(root,'.qa-output/quality-early-offline'),await coldIdentity(),earlyCold.provenance.sealSHA256);
   const reports=await Promise.all(outcomes.map(async result=>({...result,report:JSON.parse(await fs.readFile(path.join(root,'.qa-output',result.name,'portable-report.json'),'utf8'))})));
-  const report=aggregateQuality(reports);if(earlyCold)report.reusedEarlyColdOffline=earlyCold.provenance;if(serialLocal)report.localWorkerExecution='Same existing workers executed serially, local-only; complete assertions and scopes unchanged. CI must use the unchanged default parallel mode.';report.seconds=(performance.now()-started)/1000;
+  const report=aggregateQuality(reports);if(earlyCold)report.reusedEarlyColdOffline={...earlyCold.provenance,originalsAndInputIdentityRecheckedAfterWorkers:true};if(serialLocal)report.localWorkerExecution='Same existing workers executed serially, local-only; complete assertions and scopes unchanged. CI must use the unchanged default parallel mode.';report.seconds=(performance.now()-started)/1000;
   for(const result of outcomes)for(const file of await fs.readdir(path.join(root,'.qa-output',result.name)))if(file.endsWith('.png'))await fs.copyFile(path.join(root,'.qa-output',result.name,file),path.join(root,'.qa-output',result.name+'-'+file));
   await fs.writeFile(path.join(root,'.qa-output/portable-report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,seconds:report.seconds,checks:report.checks.length,timings:report.timings}));
   await createHandoff(report);

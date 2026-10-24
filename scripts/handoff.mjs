@@ -1,3 +1,5 @@
+import {coldReuseComplete,coldBrowserEnvironment,fileSnapshot,validateRestoredColdOffline} from './cold-offline-reuse.mjs';
+import qualityContext from './release/quality-context.cjs';
 import {animalCoverageComplete,animalNativeComplete,animalOfflineComplete,solarCoverageComplete,solarNativeComplete,solarOfflineComplete} from './article-learning-evidence.mjs';
 import {publicUpdates} from '../app/update-history.ts';
 import fs from 'node:fs/promises';import path from 'node:path';import {createHash} from 'node:crypto';
@@ -37,6 +39,14 @@ export async function createHandoff(report,directory='.qa-output',{requiredEngin
  if(!nativeHistoryComplete(report.nativeHistory))throw Error('Missing complete native history zoom proof');
  if(report.status!=='passed'||report.scope!=='complete mandatory regression'||report.build!==learningFingerprint(process.cwd()))throw Error('Handoff lacks a complete current production-build proof');
  const unit=JSON.parse(await fs.readFile(path.join(directory,'unit-proof.json'),'utf8'));if(unit.status!=='passed'||unit.sourceDigest!==await sourceDigest())throw Error('Unit proof is missing or belongs to different code');
+ const coldExpected=!!process.env.GITHUB_RUN_ID&&process.env.GITHUB_EVENT_NAME==='pull_request',coldWorkers=(report.workers??[]).filter(w=>w.name==='quality-early-offline').length;
+ if(coldExpected||coldWorkers||report.reusedEarlyColdOffline!==undefined){
+  if(!coldExpected||coldWorkers!==1)throw Error('Missing current end-verified same-run cold offline evidence');
+  const context=qualityContext.currentContext();
+  if(!coldReuseComplete(report.reusedEarlyColdOffline,{context,sourceDigest:unit.sourceDigest,build:report.build,browser:report.browser}))throw Error('Missing current end-verified same-run cold offline evidence');
+  qualityContext.assertContext(JSON.parse(await fs.readFile(path.join(directory,'ci-context.json'),'utf8')),context);
+  await validateRestoredColdOffline(path.join(directory,'local-selected'),path.join(directory,'early-cold-offline-proof.json'),path.join(directory,'quality-early-offline'),{context,sourceDigest:unit.sourceDigest,build:report.build,environment:coldBrowserEnvironment(),dist:await fileSnapshot(path.resolve(process.env.QA_DIST??'dist'))},report.reusedEarlyColdOffline.sealSHA256);
+ }
  const backlog=await fs.readFile('BACKLOG.md','utf8'),requirements=[];
  for(const line of backlog.split('\n').filter(l=>/^\| (?:A[1-6]|B[1-8]|B9|C|P3[A-D]|P35[A-D]) \|/.test(l))){
   const columns=line.split('|').map(c=>c.trim()),id=columns[1],files=[...line.matchAll(/\]\((?!https?:)([^)]+)\)/g)].map(m=>m[1]);

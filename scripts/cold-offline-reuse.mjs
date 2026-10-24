@@ -1,3 +1,4 @@
+import {isDeepStrictEqual} from 'node:util';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
@@ -50,9 +51,22 @@ export async function sealColdOffline(directory,sealFile,identity){
  const originals=await proofSnapshot(directory);assert.ok(originals.some(f=>f.file==='portable-report.json'));assert.ok(originals.some(f=>f.file==='offline-start.png'));assert.ok(originals.some(f=>f.file.endsWith('.png')));
  const seal={schemaVersion:1,meaning:'Original successful early cold group, reusable exactly once in this identical PR/run/attempt/source/build/browser environment; original bytes remain unchanged.',identity,browser:report.browser,originals};await fs.writeFile(sealFile,JSON.stringify(seal,null,2)+'\n',{flag:'wx'});return seal;
 }
-export async function restoreColdOffline(directory,sealFile,destination,identity){
+async function checkedColdOriginal(directory,sealFile,identity){
  validIdentity(identity);const bytes=await fs.readFile(sealFile),seal=JSON.parse(bytes);assert.equal(seal.schemaVersion,1);assert.deepEqual(seal.identity,identity,'Cold proof PR/run/attempt/source/build/environment changed');assert.ok(Array.isArray(seal.originals)&&seal.originals.length>0);
- const actual=await proofSnapshot(directory);assert.deepEqual(actual,seal.originals,'Cold original files changed or disappeared');const report=JSON.parse(await fs.readFile(path.join(directory,'portable-report.json'),'utf8'));validReport(report,identity.build);assert.equal(report.browser,seal.browser);
+ const actual=await proofSnapshot(directory);assert.deepEqual(actual,seal.originals,'Cold original files changed or disappeared');const report=JSON.parse(await fs.readFile(path.join(directory,'portable-report.json'),'utf8'));validReport(report,identity.build);assert.equal(report.browser,seal.browser);return {bytes,seal,report};
+}
+export async function restoreColdOffline(directory,sealFile,destination,identity){
+ const {bytes,seal,report}=await checkedColdOriginal(directory,sealFile,identity);
  await fs.mkdir(destination,{recursive:false});for(const original of seal.originals){const target=path.join(destination,original.file);await fs.mkdir(path.dirname(target),{recursive:true});await fs.copyFile(path.join(directory,original.file),target);assert.equal(sha(await fs.readFile(target)),original.sha256);}
  await fs.writeFile(path.join(destination,'early-cold-provenance.json'),JSON.stringify({sealSHA256:sha(bytes),...seal},null,2)+'\n',{flag:'wx'});return {name:path.basename(destination),suites:['offline'],code:0,report,provenance:{sealSHA256:sha(bytes),context:identity.context,sourceDigest:identity.sourceDigest,build:identity.build,browser:seal.browser,originalFileCount:seal.originals.length,originalSeconds:report.seconds}};
+}
+// Recheck after the other workers: their failure/update fixtures must not change
+// the build to which early cold proof is being assigned, nor its original/copy.
+export async function validateRestoredColdOffline(directory,sealFile,destination,identity,expectedSealSHA256){
+ assert.match(expectedSealSHA256,/^[a-f0-9]{64}$/);const {bytes,seal}=await checkedColdOriginal(directory,sealFile,identity);assert.equal(sha(bytes),expectedSealSHA256,'Original early cold seal changed after restore');
+ const copied=(await proofSnapshot(destination)).filter(f=>f.file!=='early-cold-provenance.json');assert.deepEqual(copied,seal.originals,'Restored early cold files changed or disappeared');const provenance=JSON.parse(await fs.readFile(path.join(destination,'early-cold-provenance.json'),'utf8'));assert.deepEqual(provenance,{sealSHA256:expectedSealSHA256,...seal},'Restored early cold provenance changed');return true;
+}
+
+export function coldReuseComplete(proof,{context,sourceDigest,build,browser}={}){
+ return context?.event==='pull_request'&&proof?.originalsAndInputIdentityRecheckedAfterWorkers===true&&typeof proof.sealSHA256==='string'&&/^[a-f0-9]{64}$/.test(proof.sealSHA256)&&proof.sourceDigest===sourceDigest&&typeof sourceDigest==='string'&&/^[a-f0-9]{64}$/.test(sourceDigest)&&proof.build===build&&typeof build==='string'&&/^[a-f0-9]{16}$/.test(build)&&proof.browser===browser&&typeof browser==='string'&&browser.length>0&&Number.isSafeInteger(proof.originalFileCount)&&proof.originalFileCount>=2&&Number.isFinite(proof.originalSeconds)&&proof.originalSeconds>0&&isDeepStrictEqual(proof.context,context);
 }
