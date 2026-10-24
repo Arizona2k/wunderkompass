@@ -1,3 +1,4 @@
+import {RESEARCH_LINK_REASONS,researchTopicLinks} from '../app/research-links.ts';
 import DISCOVERY_CONNECTION_INDEX from '../app/discovery-connections.json' with {type:'json'};
 import {createSave,restoreSave,emptyProgress} from '../app/progress-storage.ts';
 import test from 'node:test';import assert from 'node:assert/strict';
@@ -56,3 +57,9 @@ test('A/B observations name all weather choices and include the new moon and coa
 test('schema-3 backup roundtrip retains old lab answers and every new research field',()=>{const progress=emptyProgress();progress.labs=['moon'];progress.chapters.water=2;progress.settings.largeText=true;progress.settings.readVoice='';progress.gameSessions['lab:moon']={angle:180,answer:2,researchPrediction:'Synthetische Vermutung',researchCompareA:'Erste Beobachtung',researchCompareB:'Zweite Beobachtung',researchJournal:'Synthetische eigene Erklärung',researchMission:7,researchLevel:'hard','researchAnswer-hard':1,moonNode:90,moonInclined:false};const restored=restoreSave(JSON.parse(JSON.stringify(createSave(progress))),true);assert.equal(restored.schemaVersion,3);assert.deepEqual(restored.progress,progress);});
 
 test('all six practical experiments have distinct safe comparisons and scientific limits',()=>{assert.deepEqual(Object.keys(EXPERIMENT_RESEARCH),EXPERIMENT_SEARCH.map(e=>e.id));for(const field of ['safety','prediction','comparison','limit'])assert.equal(new Set(Object.values(EXPERIMENT_RESEARCH).map(e=>e[field])).size,6);assert.match(EXPERIMENT_RESEARCH['foam-volcano'].safety,/niemals verschließen/);assert.match(EXPERIMENT_RESEARCH.evaporation.limit,/gleichzeitig verschieden/);assert.match(EXPERIMENT_RESEARCH.condensation.comparison,/im selben Raum/);});
+
+
+test('the seismograph and quake lab share one explained reciprocal relation while every existing primary route remains',()=>{
+ for(const lab of LAB_SEARCH){const primary=RESEARCH_PATHS[lab.id].topic,links=researchTopicLinks(lab.id,primary);assert.deepEqual(links[0],{topic:primary,why:RESEARCH_LINK_REASONS[lab.id].topic});assert.equal(new Set(links.map(link=>link.topic)).size,links.length);assert.equal(links.length,lab.id==='quake'?2:1);for(const link of links.slice(1)){assert.ok(WORLD_INDEX.some(t=>t.id===link.topic));assert.ok(link.why.length>100);}}
+ const links=researchTopicLinks('quake',RESEARCH_PATHS.quake.topic),seismograph=links.find(link=>link.topic==='invention-seismograph');assert.ok(seismograph);assert.equal(seismograph.why,RESEARCH_LINK_REASONS.quake.additionalTopics[0].why);assert.match(seismograph.why,/Bodenbewegungen/);assert.match(seismograph.why,/keine echten Messdaten oder Vorhersagen/);assert.ok(links.some(link=>link.topic==='science-sound'),'the prior sound relation is retained');assert.deepEqual(researchTopicLinks('unknown-lab','unknown-topic'),[]);
+});
