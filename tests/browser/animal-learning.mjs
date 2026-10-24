@@ -9,6 +9,7 @@ import path from 'node:path';
 import expansion from '../../content/animal-expansion-review.json' with {type:'json'};
 import review from '../../content/animal-editorial-review.json' with {type:'json'};
 import DATA from '../../app/animal-inquiries.json' with {type:'json'};
+import OWN_MEDIA from '../../app/animal-illustrations.json' with {type:'json'};
 import catalog from '../../app/world-catalog.json' with {type:'json'};
 import {prepareAxe} from './axe-loader.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
@@ -16,6 +17,19 @@ await import('../../scripts/test-runtime.mjs');
 const {createSave,SAVE_KEY}=await import('../../app/progress-storage.ts');
 const widths=[320,360,390,768,1024,1440,1920];
 const topics=catalog.filter(t=>DATA.entries.some(e=>e.id===t.id));
+
+export async function assertOwnAnimalMedia(visual,id){
+ const expected=OWN_MEDIA.entries.find(e=>e.id===id);assert.ok(expected,'declared subject image exists');
+ const actual=await visual.evaluate(async el=>{const image=el.querySelector('img');if(!image)throw Error('Missing own topic image');await image.decode();if(!image.complete||!image.naturalWidth)throw Error('Missing decoded own topic image');return{src:image.getAttribute('src'),alt:image.alt,width:image.naturalWidth,height:image.naturalHeight,caption:el.querySelector('figcaption')?.textContent};});
+ assert.equal(actual.src,expected.src,'reviewed subject image, not a generic substitute');
+ assert.equal(actual.caption,expected.caption,'actual visible image disclosure and limits');
+ if(expected.kind==='ai-illustration'){
+  assert.match(actual.alt,/KI-Illustration/);assert.match(actual.caption,/KI-Illustration.*kein Foto/,'generated subject picture is explicitly distinguished from a photo');assert.equal(actual.width,expected.width);assert.equal(actual.height,expected.height);
+ }else{
+  assert.match(actual.alt,/schematische/);assert.match(actual.caption,/mit KI-Unterstützung/,'actual AI-assisted own drawing disclosure remains visible');
+ }
+ return actual;
+}
 
 async function geometry(root,label){
  const result=await root.evaluate(root=>({overflow:document.documentElement.scrollWidth>innerWidth+2,bad:[...root.querySelectorAll('p,h3,h4,button,summary')].filter(e=>e.getClientRects().length&&(!e.closest('details:not([open])')||e.closest('details:not([open])')?.querySelector(':scope > summary')===e)).flatMap(e=>{const r=e.getBoundingClientRect();return r.left< -2||r.right>innerWidth+2||e.scrollWidth>e.clientWidth+2||(e.matches('button,summary')&&r.height<44)?[{text:e.textContent.slice(0,65),x:r.x,width:r.width,height:r.height}]:[];})}));
@@ -33,10 +47,9 @@ export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='n
  if(expansion.entries.some(e=>e.id===data.id)){
   const visual=p.locator('[data-animal-illustration="'+data.id+'"]:not(.compact)');await visual.waitFor();
   await visual.locator('img').scrollIntoViewIfNeeded();
-  await visual.locator('img').evaluate(async image=>{await image.decode();if(!image.complete||!image.naturalWidth)throw Error('Missing new animal illustration');});
+  await assertOwnAnimalMedia(visual,data.id);
   const labels=await visual.locator('.animal-illustration-labels span').evaluateAll(elements=>elements.map(e=>{const r=e.getBoundingClientRect();return {text:e.textContent,font:parseFloat(getComputedStyle(e).fontSize),left:r.left,right:r.right};}));
   assert.equal(labels.length,2);assert.ok(labels.every(l=>l.text&&l.font>=16&&l.left>=-2&&l.right<=width+2),'new illustration labels reflow');
-  assert.ok((await visual.locator('img').getAttribute('alt')).includes('schematische'));
   const captionEdges=await visual.evaluate(el=>{const box=el.getBoundingClientRect();return [...el.querySelectorAll('figcaption,.animal-illustration-labels span')].flatMap(e=>{const range=document.createRange();range.selectNodeContents(e);return [...range.getClientRects()].flatMap(r=>r.left<box.left+8||r.right>box.right-8||r.bottom>box.bottom-8?[{text:e.textContent,left:r.left-box.left,right:box.right-r.right,bottom:box.bottom-r.bottom}]:[]);});});
   assert.deepEqual(captionEdges,[],'actual text ink stays clear of rounded clipping, including the last caption line');
   const titleInk=await p.locator('#world-topic-title').evaluate(e=>{const range=document.createRange();range.selectNodeContents(e);return [...range.getClientRects()].map(r=>({left:r.left,right:r.right}));});

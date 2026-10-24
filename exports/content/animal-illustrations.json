@@ -8,7 +8,7 @@
       "Breiter Schnabel",
       "Schwimmfüße und flacher Schwanz"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Zeichnung zeigt Körpermerkmale; Sinnesreize und Milchgeben sind darin nicht sichtbar."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Zeichnung zeigt Körpermerkmale; Sinnesreize und Milchgeben sind darin nicht sichtbar."
   },
   {
     "id": "animal-short-beaked-echidna",
@@ -19,18 +19,21 @@
       "Stacheln",
       "Lange Schnauze und Grabkrallen"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Zunge und Fortpflanzung sind hier nicht dargestellt; die Karte erläutert ihre Bedeutung."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Zunge und Fortpflanzung sind hier nicht dargestellt; die Karte erläutert ihre Bedeutung."
   },
   {
     "id": "animal-okapi",
     "title": "Okapi",
-    "src": "/animals/okapi.svg",
-    "alt": "Okapi · eigene schematische Zeichnung: Gestreifte Beine, Kurzer Hals und große Ohren. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+    "src": "/animals/okapi-ai.webp",
+    "alt": "KI-Illustration eines weiblichen Okapis: rötlich-brauner Körper, hell gestreifte Hinterhand und Beine, große Ohren und keine Hörner. Kein Foto und keine sichere Bestimmungshilfe.",
     "labels": [
-      "Gestreifte Beine",
-      "Kurzer Hals und große Ohren"
+      "Gestreifte Hinterhand und Beine",
+      "Große Ohren; kürzerer Hals als bei Giraffen"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Das Fellmuster allein beweist keine Verwandtschaft. Die Zunge wird nicht herausgestreckt gezeigt."
+    "caption": "Eigene KI-Illustration · kein Foto und nicht maßstabsgetreu. Beispiel eines weiblichen Okapis ohne Hörner; das einzelne Fellmuster ist zeichnerisch gewählt. Streifen allein beweisen keine Verwandtschaft. Die Zunge ist nicht herausgestreckt.",
+    "kind": "ai-illustration",
+    "width": 800,
+    "height": 500
   },
   {
     "id": "animal-meerkat",
@@ -41,7 +44,7 @@
       "Aufrechte Haltung",
       "Dunkle Augenfelder und Schwanz"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Haltung allein beweist keinen gerade anwesenden Feind; ein Warnruf ist nicht sichtbar."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Haltung allein beweist keinen gerade anwesenden Feind; ein Warnruf ist nicht sichtbar."
   },
   {
     "id": "animal-ring-tailed-lemur",
@@ -52,7 +55,7 @@
       "Geringelter Schwanz",
       "Gesicht und Körper"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Der Schwanz ist sichtbar. Duftmarken und Rufe kann dieses Bild nicht zeigen; die Bandzahl ist vereinfacht."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Der Schwanz ist sichtbar. Duftmarken und Rufe kann dieses Bild nicht zeigen; die Bandzahl ist vereinfacht."
   },
   {
     "id": "animal-north-american-beaver",
@@ -63,7 +66,7 @@
       "Breiter flacher Schwanz",
       "Große Schneidezähne"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Damm und Wohnburg sind nicht abgebildet. Der Schwanz ist keine Maurerkelle."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Damm und Wohnburg sind nicht abgebildet. Der Schwanz ist keine Maurerkelle."
   },
   {
     "id": "animal-walrus",
@@ -74,7 +77,7 @@
       "Tastborsten am Maul",
       "Zwei Stoßzähne"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Tastborsten sind zur Erklärung betont. Die Stoßzähne werden nicht als Fanggabeln gezeigt."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Tastborsten sind zur Erklärung betont. Die Stoßzähne werden nicht als Fanggabeln gezeigt."
   },
   {
     "id": "animal-red-fox",
@@ -85,7 +88,7 @@
       "Lange Schnauze",
       "Buschiger Schwanz"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Zeichnung zeigt eine mögliche Fellfärbung; Verhalten und Lebensraumnutzung benötigen weitere Belege."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Zeichnung zeigt eine mögliche Fellfärbung; Verhalten und Lebensraumnutzung benötigen weitere Belege."
   },
   {
     "id": "animal-raccoon",
@@ -96,7 +99,7 @@
       "Dunkle Gesichtsmaske",
       "Geringelter Schwanz"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Vorderpfoten sind stark vereinfacht. Ursprüngliche Verbreitung lässt sich nicht am Aussehen ablesen."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Vorderpfoten sind stark vereinfacht. Ursprüngliche Verbreitung lässt sich nicht am Aussehen ablesen."
   },
   {
     "id": "animal-hedgehog",
@@ -107,7 +110,7 @@
       "Stacheln am Rücken",
       "Unbestacheltes Gesicht"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Stacheln sind vereinfacht; die Zeichnung ist kein Beleg für Aktivitätszeiten oder Winterschlaf."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Stacheln sind vereinfacht; die Zeichnung ist kein Beleg für Aktivitätszeiten oder Winterschlaf."
   },
   {
     "id": "animal-barn-owl",
@@ -118,7 +121,7 @@
       "Heller Gesichtsschleier",
       "Flügel am Körper"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Vorderansicht zur Merkmalsbetrachtung. Nicht als alleinige Bestimmungshilfe verwenden."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Vorderansicht zur Merkmalsbetrachtung. Nicht als alleinige Bestimmungshilfe verwenden."
   },
   {
     "id": "animal-kingfisher",
@@ -129,7 +132,7 @@
       "Langer Schnabel",
       "Blauer Rücken und orangefarbene Unterseite"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Schematische Seitenansicht. Der Jagdablauf ist nicht als beobachtetes Ereignis dargestellt."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Schematische Seitenansicht. Der Jagdablauf ist nicht als beobachtetes Ereignis dargestellt."
   },
   {
     "id": "animal-ostrich",
@@ -140,7 +143,7 @@
       "Langer Hals",
       "Lange Beine"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Laufvogel in schematischer Seitenansicht. Körpergröße und Bewegung lassen sich daraus nicht messen."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Laufvogel in schematischer Seitenansicht. Körpergröße und Bewegung lassen sich daraus nicht messen."
   },
   {
     "id": "animal-atlantic-puffin",
@@ -151,7 +154,7 @@
       "Kräftiger Schnabel",
       "Helle Unterseite"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Färbung zeigt vereinfacht einen Vogel im Sommerkleid; das Aussehen ändert sich im Jahreslauf."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Färbung zeigt vereinfacht einen Vogel im Sommerkleid; das Aussehen ändert sich im Jahreslauf."
   },
   {
     "id": "animal-common-chameleon",
@@ -162,7 +165,7 @@
       "Greifschwanz",
       "Greiffüße am Zweig"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Zeichnung zeigt nur einen Farbzustand. Sie simuliert keinen Farbwechsel und keine beliebige Musterkopie."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Zeichnung zeigt nur einen Farbzustand. Sie simuliert keinen Farbwechsel und keine beliebige Musterkopie."
   },
   {
     "id": "animal-fire-salamander",
@@ -173,7 +176,7 @@
       "Gelb-schwarze Zeichnung",
       "Langer Schwanz"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Erwachsenes Tier mit vereinfachtem individuellem Fleckenmuster. Die kiementragende Larve ist nicht abgebildet."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Erwachsenes Tier mit vereinfachtem individuellem Fleckenmuster. Die kiementragende Larve ist nicht abgebildet."
   },
   {
     "id": "animal-common-frog",
@@ -184,7 +187,7 @@
       "Lange Hinterbeine",
       "Dunkles Schläfenfeld"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Erwachsener Frosch in schematischer Seitenansicht. Laich und Kaulquappe sind andere Entwicklungsstadien."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Erwachsener Frosch in schematischer Seitenansicht. Laich und Kaulquappe sind andere Entwicklungsstadien."
   },
   {
     "id": "animal-eastern-clown-anemonefish",
@@ -195,7 +198,7 @@
       "Drei helle Querbänder",
       "Flossen und Fischkörper"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Bänder sind schematisch dargestellt. Ähnliche Arten müssen anhand weiterer Merkmale unterschieden werden."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Bänder sind schematisch dargestellt. Ähnliche Arten müssen anhand weiterer Merkmale unterschieden werden."
   },
   {
     "id": "animal-european-eel",
@@ -206,7 +209,7 @@
       "Langgestreckter Körper",
       "Kopf mit Auge"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Der durchgehende Flossensaum ist hier nicht vollständig dargestellt. Die Körperkurve zeigt keine Wanderroute oder direkt beobachtete Eiablage."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Der durchgehende Flossensaum ist hier nicht vollständig dargestellt. Die Körperkurve zeigt keine Wanderroute oder direkt beobachtete Eiablage."
   },
   {
     "id": "animal-monarch-butterfly",
@@ -217,7 +220,7 @@
       "Orange-schwarze Flügel",
       "Dunkle Flügeladern"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Erwachsener Falter mit vereinfachtem Adermuster. Raupenstadium und Wanderroute sind nicht abgebildet."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Erwachsener Falter mit vereinfachtem Adermuster. Raupenstadium und Wanderroute sind nicht abgebildet."
   },
   {
     "id": "animal-garden-snail",
@@ -228,7 +231,7 @@
       "Spiraliges Gehäuse",
       "Fühler"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Gehäuseform ist vereinfacht. Gehäusebreite und Länge des ausgestreckten Tiers sind verschiedene Maße."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Gehäuseform ist vereinfacht. Gehäusebreite und Länge des ausgestreckten Tiers sind verschiedene Maße."
   },
   {
     "id": "animal-european-lobster",
@@ -239,7 +242,7 @@
       "Zwei unterschiedliche Scheren",
       "Gegliederter Körper und Schwanzfächer"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Scheren sind zur Erklärung verschieden gezeichnet. Dies ist keine Darstellung eines Häutungsablaufs."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Scheren sind zur Erklärung verschieden gezeichnet. Dies ist keine Darstellung eines Häutungsablaufs."
   },
   {
     "id": "animal-common-cuttlefish",
@@ -250,7 +253,7 @@
       "Acht Arme",
       "Zwei längere Fangtentakel"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Schematische Seitenansicht mit erklärtem Körperbau. Muster und Farbwechsel sind nicht simuliert."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Schematische Seitenansicht mit erklärtem Körperbau. Muster und Farbwechsel sind nicht simuliert."
   },
   {
     "id": "animal-short-snouted-seahorse",
@@ -261,6 +264,6 @@
       "Kurze Schnauze",
       "Eingerollter Greifschwanz"
     ],
-    "caption": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Schematische Seitenansicht ohne Mähne. Fortpflanzung und Gefährdung können nicht aus dem Bild abgelesen werden."
+    "caption": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Schematische Seitenansicht ohne Mähne. Fortpflanzung und Gefährdung können nicht aus dem Bild abgelesen werden."
   }
 ]

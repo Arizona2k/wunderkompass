@@ -68,7 +68,8 @@
         "sha256": "d6eb0b97d3ef0f912e6d1e1191eb1ff5fa80e7358bd402585e82465c40369156",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Schnabeltier · eigene schematische Zeichnung: Breiter Schnabel, Schwimmfüße und flacher Schwanz. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Zeichnung zeigt Körpermerkmale; Sinnesreize und Milchgeben sind darin nicht sichtbar."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Zeichnung zeigt Körpermerkmale; Sinnesreize und Milchgeben sind darin nicht sichtbar.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Kein Stromschlag- oder unbegrenztes Fernortungsmodell; kein sicherer Hinweis zum Anfassen.",
       "openBeforeRuntime": [
@@ -295,7 +296,15 @@
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
       },
-      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "a06cb930538e155f5990aaf11ee357cfa2ae053281cb67627f8fb6b17983def2"
+      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "a06cb930538e155f5990aaf11ee357cfa2ae053281cb67627f8fb6b17983def2",
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/platypus.svg",
+        "sha256": "d6eb0b97d3ef0f912e6d1e1191eb1ff5fa80e7358bd402585e82465c40369156",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Schnabeltier · eigene schematische Zeichnung: Breiter Schnabel, Schwimmfüße und flacher Schwanz. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Zeichnung zeigt Körpermerkmale; Sinnesreize und Milchgeben sind darin nicht sichtbar."
+      }
     },
     {
       "id": "animal-short-beaked-echidna",
@@ -359,7 +368,8 @@
         "sha256": "d1d66d0f5b5607546900cc34110bef8234a85498861ffc45f3b340a58126e30b",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Kurzschnabeligel · eigene schematische Zeichnung: Stacheln, Lange Schnauze und Grabkrallen. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Zunge und Fortpflanzung sind hier nicht dargestellt; die Karte erläutert ihre Bedeutung."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Zunge und Fortpflanzung sind hier nicht dargestellt; die Karte erläutert ihre Bedeutung.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Museumseite artbezogen; gruppenweite Gefährdung aller Ameisenigel nicht übertragen; individuelle Fotos nicht pauschal freigegeben.",
       "openBeforeRuntime": [
@@ -568,7 +578,15 @@
         "samePixelsAsPersonallyViewedB92": true
       },
       "teachingContentBeforeTransferSelection20261024": "b6f87b44b0fc298e9b3b246d7b795e271273113798a6ad8fc80a1bab6722c76a",
-      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "855d0b12f369e5d94da3e993c0c935d2d096a860d8ff20364af9990954e95b63"
+      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "855d0b12f369e5d94da3e993c0c935d2d096a860d8ff20364af9990954e95b63",
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/short-beaked-echidna.svg",
+        "sha256": "d1d66d0f5b5607546900cc34110bef8234a85498861ffc45f3b340a58126e30b",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Kurzschnabeligel · eigene schematische Zeichnung: Stacheln, Lange Schnauze und Grabkrallen. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Zunge und Fortpflanzung sind hier nicht dargestellt; die Karte erläutert ihre Bedeutung."
+      }
     },
     {
       "id": "animal-okapi",
@@ -627,12 +645,100 @@
         }
       ],
       "media": {
-        "status": "own-vector-implemented-awaiting-visual-review",
-        "file": "public/animals/okapi.svg",
-        "sha256": "32bcba2e06694b47bc84e413a7913304c0679cec26e407b5e645072d96b49eb6",
-        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
-        "alt": "Okapi · eigene schematische Zeichnung: Gestreifte Beine, Kurzer Hals und große Ohren. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Das Fellmuster allein beweist keine Verwandtschaft. Die Zunge wird nicht herausgestreckt gezeigt."
+        "status": "early-rendered-and-source-checked-awaiting-full-native-CI-and-delivery",
+        "kind": "ai-illustration",
+        "format": "webp",
+        "file": "public/animals/okapi-ai.webp",
+        "sha256": "830c877a9de090a684fe8f3fa788c11898b3bd18b4e4dab30ff00ed5c8d5b2b4",
+        "bytes": 20552,
+        "width": 800,
+        "height": 500,
+        "rights": "Eigene, im bestehenden autorisierten KI-Bildwerkzeug erzeugte Illustration nach selbst formulierten Sachkriterien; kein fremdes Bild als Eingabe, keine Künstlerstilkopie, kein Marken-/Personenmotiv. Nutzung nach gelesenen Anbieterbedingungen, keine pauschale gesetzliche Schutzrechtsgarantie.",
+        "termsCheckedOnUTC": "2026-10-24",
+        "termsSources": [
+          "https://openai.com/policies/services-agreement/",
+          "https://openai.com/policies/service-terms/"
+        ],
+        "sourceOriginal": {
+          "sha256": "b091186c386f78d3a6aabdcf0dabd64ea9dc8ff79799f190b34f4168d21177f3",
+          "bytes": 1663344,
+          "width": 1586,
+          "height": 992,
+          "originalPreserved": true
+        },
+        "transformations": "Proportional auf längste Seite800Pixel verkleinert, WebPqualität82; kein Beschnitt, keine Kolorierung oder sonstige Bildinhaltsbearbeitung. Original unverändert erhalten.",
+        "alt": "KI-Illustration eines weiblichen Okapis: rötlich-brauner Körper, hell gestreifte Hinterhand und Beine, große Ohren und keine Hörner. Kein Foto und keine sichere Bestimmungshilfe.",
+        "limits": "Eigene KI-Illustration · kein Foto und nicht maßstabsgetreu. Beispiel eines weiblichen Okapis ohne Hörner; das einzelne Fellmuster ist zeichnerisch gewählt. Streifen allein beweisen keine Verwandtschaft. Die Zunge ist nicht herausgestreckt.",
+        "sourceCriteria": [
+          {
+            "url": "https://animals.sandiegozoo.org/animals/okapi",
+            "readSection": "ABOUT43–48",
+            "criteria": "Große aufrechte Ohren, rötlich-braunes Fell, kürzerer Hals als bei Giraffen."
+          },
+          {
+            "url": "https://www.okapiconservation.org/the-okapi",
+            "readSection": "species description74–75",
+            "criteria": "Streifen auf Hinterhand und Beinen."
+          },
+          {
+            "url": "https://animaldiversity.org/accounts/Okapia_johnstoni/",
+            "readSection": "Physical Description61–70",
+            "criteria": "Kontrast von Körper/Beinen/Gesicht, Weibchen ohne Ossikone."
+          },
+          {
+            "url": "https://www.chesterzoo.org/animals/okapi",
+            "readSection": "ABOUT88–96",
+            "criteria": "Weibchen ohne Ossikone; Giraffenverwandtschaft."
+          }
+        ],
+        "photoDecision": "Passendes echtes Foto bevorzugt. Nicht-Wikimedia-Kandidat mit gelesener Quelle/CCBY2.0, Originalbild technisch403nicht abrufbar und deshalb Motiv/Qualität ungeprüft: nicht übernommen. Keine neue Wikimediaarbeit. Hochwertigere eigene KI-Illustration als geprüfter Ersatz vorbereitet, kein historisches Original rekonstruiert.",
+        "visualReview": "Four grounded legs/hooves, two large upright ears, no ossicones in this declared female example; reddish-brown unspotted body, stripes on rump/legs, pale face/dark muzzle and dark tail tuft. No visible tongue or photo claim. Shape/color/pattern are illustrative choices, not a specimen, exact measurement or identification record. Native image and full caption need separate viewport positions because the readable large figure is taller than450CSS pixels; both actually seen.",
+        "actualEarlyReview": {
+          "mode": "AI factual and actual visual self-review, not independent human or empirical approval",
+          "reviewedOnUTC": "2026-10-24",
+          "actualSource": "a21388672566416d9cb021d21d71a6f8e68a0bbf26dee6ef72a9608973fa7703",
+          "actualBuild": "248210ffb23638fe",
+          "renderedReport": {
+            "path": ".qa-output/okapi-media-early-rendered/report.json",
+            "sha256": "f1dceea6892fbd4e7d68503eba8a104d080ab0005524c178794fea00397405db"
+          },
+          "nativeFirstLabelsLastReport": {
+            "path": ".qa-output/okapi-media-native-first-labels-last/report.json",
+            "sha256": "513c4aa2094bb2312e25258d7023de66aaee7916fcd6407e3e3bb7e0a0a5c3f0"
+          },
+          "personallySeen": [
+            "full optimized800x500 illustration",
+            "actual320 normal and large Okapi full figure/labels/caption",
+            "actual320 large platypus with unchanged SVG and clear AI-assisted caption",
+            "native200%320 image-first and complete caption-last",
+            "native200%640 image-first"
+          ],
+          "criteriaAgainstReadPrimarySources": [
+            {
+              "url": "https://animals.sandiegozoo.org/animals/okapi",
+              "readSection": "ABOUT43–48",
+              "criteria": "Große aufrechte Ohren, rötlich-braunes Fell, kürzerer Hals als bei Giraffen."
+            },
+            {
+              "url": "https://www.okapiconservation.org/the-okapi",
+              "readSection": "species description74–75",
+              "criteria": "Streifen auf Hinterhand und Beinen."
+            },
+            {
+              "url": "https://animaldiversity.org/accounts/Okapia_johnstoni/",
+              "readSection": "Physical Description61–70",
+              "criteria": "Kontrast von Körper/Beinen/Gesicht, Weibchen ohne Ossikone."
+            },
+            {
+              "url": "https://www.chesterzoo.org/animals/okapi",
+              "readSection": "ABOUT88–96",
+              "criteria": "Weibchen ohne Ossikone; Giraffenverwandtschaft."
+            }
+          ],
+          "findings": "Four grounded legs/hooves, two large upright ears, no ossicones in this declared female example; reddish-brown unspotted body, stripes on rump/legs, pale face/dark muzzle and dark tail tuft. No visible tongue or photo claim. Shape/color/pattern are illustrative choices, not a specimen, exact measurement or identification record. Native image and full caption need separate viewport positions because the readable large figure is taller than450CSS pixels; both actually seen.",
+          "learningBenefit": "Clearer view of rump/leg stripes, ears and relative neck length while the existing tasks distinguish visible similarity from giraffe relationship. Source-linked hints, wrong/right feedback and voluntary reflection still work. No measured empirical learning-effect claim.",
+          "limits": "Other23SVGs unchanged; visible provenance improved without claiming their complete image-quality acceptance. Full regression/native CI/delivery still pending."
+        }
       },
       "limits": "Mögliche Funktionen der Streifen nicht als eindeutig experimentell bewiesen darstellen.",
       "openBeforeRuntime": [
@@ -684,7 +790,7 @@
           "anchor": "SIZE; ABOUT; CONSERVATION"
         }
       ],
-      "articleSHA256": "f67662ec65b7de647c1bc011106788b3b5690f59b5fb65d8f0177e635e0b61f1",
+      "articleSHA256": "e73a5e763df71c74f24724227d2de1021c498e91cd1add7af7c238575b7775ff",
       "runtimeTeachingContentSHA256": "bf6873ab700c5b88b55f749fd522efec21b3ca0585b5252cd82e70ba91947a6d",
       "selfReview": {
         "implemented": true,
@@ -840,7 +946,19 @@
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
       },
-      "teachingContentBeforeTransferSelection20261024": "9cf2c52929c5a10ec60237f9bdf4609c7b5666a05201b833e7c7fffe5807178e"
+      "teachingContentBeforeTransferSelection20261024": "9cf2c52929c5a10ec60237f9bdf4609c7b5666a05201b833e7c7fffe5807178e",
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/okapi.svg",
+        "sha256": "32bcba2e06694b47bc84e413a7913304c0679cec26e407b5e645072d96b49eb6",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Okapi · eigene schematische Zeichnung: Gestreifte Beine, Kurzer Hals und große Ohren. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Das Fellmuster allein beweist keine Verwandtschaft. Die Zunge wird nicht herausgestreckt gezeigt."
+      },
+      "articleBeforeImageDisclosure20261024": {
+        "articleSHA256": "f67662ec65b7de647c1bc011106788b3b5690f59b5fb65d8f0177e635e0b61f1",
+        "sourceNote": "Quellenstand 18.10.2026. Die Größenangabe ist eine Höhe, keine Körperlänge. Beinstreifen allein beweisen keine Verwandtschaft mit Zebras. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe."
+      }
     },
     {
       "id": "animal-meerkat",
@@ -904,7 +1022,8 @@
         "sha256": "95dc28f82a3dc421ae2524e3bb1ad77bb5e4136b6fe1a9b8a735f6e3ee5a99ef",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Erdmännchen · eigene schematische Zeichnung: Aufrechte Haltung, Dunkle Augenfelder und Schwanz. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Haltung allein beweist keinen gerade anwesenden Feind; ein Warnruf ist nicht sichtbar."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Haltung allein beweist keinen gerade anwesenden Feind; ein Warnruf ist nicht sichtbar.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Keine menschlichen Dienstpläne, Absichten oder Sprache in das Verhalten hineinlesen.",
       "openBeforeRuntime": [
@@ -1112,7 +1231,15 @@
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
       },
-      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "70d084a749129d570160f475eee824d6d22b48318338db4d03b609ed096f92c1"
+      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "70d084a749129d570160f475eee824d6d22b48318338db4d03b609ed096f92c1",
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/meerkat.svg",
+        "sha256": "95dc28f82a3dc421ae2524e3bb1ad77bb5e4136b6fe1a9b8a735f6e3ee5a99ef",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Erdmännchen · eigene schematische Zeichnung: Aufrechte Haltung, Dunkle Augenfelder und Schwanz. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Haltung allein beweist keinen gerade anwesenden Feind; ein Warnruf ist nicht sichtbar."
+      }
     },
     {
       "id": "animal-ring-tailed-lemur",
@@ -1176,7 +1303,8 @@
         "sha256": "3134cab932db9198a2d550eaa52b398ab6e7a506b57e2718e2d68809e9aeafdb",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Katta · eigene schematische Zeichnung: Geringelter Schwanz, Gesicht und Körper. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Der Schwanz ist sichtbar. Duftmarken und Rufe kann dieses Bild nicht zeigen; die Bandzahl ist vereinfacht."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Der Schwanz ist sichtbar. Duftmarken und Rufe kann dieses Bild nicht zeigen; die Bandzahl ist vereinfacht.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Keine feste Schwanzbandzahl als Fotoaufgabe; Maßrichtung und aktuelle Schutzangaben vor Integration extra prüfen.",
       "openBeforeRuntime": [
@@ -1393,7 +1521,15 @@
         "samePixelsAsPersonallyViewedB92": true
       },
       "teachingContentBeforeTransferSelection20261024": "99042138b545c44d44f9d05ac1439abe4c4164c2b277fcc0208b50bb8e036d6e",
-      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "cccff75b6e955e79686359591eb3e1d7c08c6556149f78bf164e63b72b3b819f"
+      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "cccff75b6e955e79686359591eb3e1d7c08c6556149f78bf164e63b72b3b819f",
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/ring-tailed-lemur.svg",
+        "sha256": "3134cab932db9198a2d550eaa52b398ab6e7a506b57e2718e2d68809e9aeafdb",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Katta · eigene schematische Zeichnung: Geringelter Schwanz, Gesicht und Körper. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Der Schwanz ist sichtbar. Duftmarken und Rufe kann dieses Bild nicht zeigen; die Bandzahl ist vereinfacht."
+      }
     },
     {
       "id": "animal-north-american-beaver",
@@ -1457,7 +1593,8 @@
         "sha256": "0e46463f0741ff4058cdc0016a26b4c2bf609ef4e980705b88a25d4283d68285",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Nordamerikanischer Biber · eigene schematische Zeichnung: Breiter flacher Schwanz, Große Schneidezähne. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Damm und Wohnburg sind nicht abgebildet. Der Schwanz ist keine Maurerkelle."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Damm und Wohnburg sind nicht abgebildet. Der Schwanz ist keine Maurerkelle.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Diese Karte behandelt Castor canadensis, nicht Castor fiber; Schwanz nicht als Maurerkelle darstellen.",
       "openBeforeRuntime": [
@@ -1664,7 +1801,15 @@
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
       },
-      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "bfbbb737d1c594b7ca9d7b9c68791c3a36be5665fe4e029fb8f48301499aceb5"
+      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "bfbbb737d1c594b7ca9d7b9c68791c3a36be5665fe4e029fb8f48301499aceb5",
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/north-american-beaver.svg",
+        "sha256": "0e46463f0741ff4058cdc0016a26b4c2bf609ef4e980705b88a25d4283d68285",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Nordamerikanischer Biber · eigene schematische Zeichnung: Breiter flacher Schwanz, Große Schneidezähne. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Damm und Wohnburg sind nicht abgebildet. Der Schwanz ist keine Maurerkelle."
+      }
     },
     {
       "id": "animal-walrus",
@@ -1728,7 +1873,8 @@
         "sha256": "abf65f39f5f9599ef115b17bf5e8a65ef5fe531fefbd1286db4322b42683f0ab",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Walross · eigene schematische Zeichnung: Tastborsten am Maul, Zwei Stoßzähne. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Tastborsten sind zur Erklärung betont. Die Stoßzähne werden nicht als Fanggabeln gezeigt."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Tastborsten sind zur Erklärung betont. Die Stoßzähne werden nicht als Fanggabeln gezeigt.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Nahrung, Körpermaße und Tastborsten noch aus einer zusätzlichen artspezifischen Quelle belegen; keine fertige Vollkarte behaupten.",
       "openBeforeRuntime": [
@@ -1969,6 +2115,14 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
+      },
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/walrus.svg",
+        "sha256": "abf65f39f5f9599ef115b17bf5e8a65ef5fe531fefbd1286db4322b42683f0ab",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Walross · eigene schematische Zeichnung: Tastborsten am Maul, Zwei Stoßzähne. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Tastborsten sind zur Erklärung betont. Die Stoßzähne werden nicht als Fanggabeln gezeigt."
       }
     },
     {
@@ -2033,7 +2187,8 @@
         "sha256": "c1cfd44291725d03ced0587fbf441b4e32729e3a0bbaa8bb3e9060beeb092e21",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Rotfuchs · eigene schematische Zeichnung: Lange Schnauze, Buschiger Schwanz. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Zeichnung zeigt eine mögliche Fellfärbung; Verhalten und Lebensraumnutzung benötigen weitere Belege."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Zeichnung zeigt eine mögliche Fellfärbung; Verhalten und Lebensraumnutzung benötigen weitere Belege.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "ADW-Konto ist eine ältere Fachzusammenstellung; aktuelle Schutz- oder Verbreitungszahlen daraus nicht ungeprüft übernehmen.",
       "openBeforeRuntime": [
@@ -2240,7 +2395,15 @@
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
       },
-      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "1a2727d12ae967fed0544245acd6346b0b28aed8e606e8e012eaaab62d04d0ef"
+      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "1a2727d12ae967fed0544245acd6346b0b28aed8e606e8e012eaaab62d04d0ef",
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/red-fox.svg",
+        "sha256": "c1cfd44291725d03ced0587fbf441b4e32729e3a0bbaa8bb3e9060beeb092e21",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Rotfuchs · eigene schematische Zeichnung: Lange Schnauze, Buschiger Schwanz. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Zeichnung zeigt eine mögliche Fellfärbung; Verhalten und Lebensraumnutzung benötigen weitere Belege."
+      }
     },
     {
       "id": "animal-raccoon",
@@ -2305,7 +2468,8 @@
         "sha256": "040951f4fbd0f6159b74e6790f481d1b0662330665985c379cf3fa85ad857a73",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Waschbär · eigene schematische Zeichnung: Dunkle Gesichtsmaske, Geringelter Schwanz. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Vorderpfoten sind stark vereinfacht. Ursprüngliche Verbreitung lässt sich nicht am Aussehen ablesen."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Vorderpfoten sind stark vereinfacht. Ursprüngliche Verbreitung lässt sich nicht am Aussehen ablesen.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "ADW nennt ältere Taxonomiebezeichnungen; heutige Artgrenzen und invasive Auswirkungen gesondert prüfen, keine Tiere füttern/anfassen lassen.",
       "openBeforeRuntime": [
@@ -2511,6 +2675,14 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
+      },
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/raccoon.svg",
+        "sha256": "040951f4fbd0f6159b74e6790f481d1b0662330665985c379cf3fa85ad857a73",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Waschbär · eigene schematische Zeichnung: Dunkle Gesichtsmaske, Geringelter Schwanz. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Vorderpfoten sind stark vereinfacht. Ursprüngliche Verbreitung lässt sich nicht am Aussehen ablesen."
       }
     },
     {
@@ -2575,7 +2747,8 @@
         "sha256": "a9bc5b15d0bee103152e3833436f0df634ca81c5dced030e8e816de70336565d",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Braunbrustigel · eigene schematische Zeichnung: Stacheln am Rücken, Unbestacheltes Gesicht. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Stacheln sind vereinfacht; die Zeichnung ist kein Beleg für Aktivitätszeiten oder Winterschlaf."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Stacheln sind vereinfacht; die Zeichnung ist kein Beleg für Aktivitätszeiten oder Winterschlaf.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Britische Saison- und Schutzangaben nicht pauschal auf alle Regionen übertragen; keine Fütterungs- oder Anfassversuche.",
       "openBeforeRuntime": [
@@ -2783,6 +2956,14 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
+      },
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/hedgehog.svg",
+        "sha256": "a9bc5b15d0bee103152e3833436f0df634ca81c5dced030e8e816de70336565d",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Braunbrustigel · eigene schematische Zeichnung: Stacheln am Rücken, Unbestacheltes Gesicht. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Stacheln sind vereinfacht; die Zeichnung ist kein Beleg für Aktivitätszeiten oder Winterschlaf."
       }
     },
     {
@@ -2848,7 +3029,8 @@
         "sha256": "2bc80cc7be2893c10f7d206a962e49d88725592b45a8f27739b77fccbd1f0c30",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Schleiereule · eigene schematische Zeichnung: Heller Gesichtsschleier, Flügel am Körper. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Vorderansicht zur Merkmalsbetrachtung. Nicht als alleinige Bestimmungshilfe verwenden."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Vorderansicht zur Merkmalsbetrachtung. Nicht als alleinige Bestimmungshilfe verwenden.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "BTO-Seite erreicht; konkrete Gehör-/Flug-/Nahrungs- und Größenclaims noch gezielt absichern. Kein leeres Artenprofil als fertig zählen.",
       "openBeforeRuntime": [
@@ -3063,7 +3245,15 @@
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
       },
-      "teachingContentBeforeTransferSelection20261024": "556abd5ef9232e7edf15245a2ba62615554833bf66fffb54c51b399aa6a343e4"
+      "teachingContentBeforeTransferSelection20261024": "556abd5ef9232e7edf15245a2ba62615554833bf66fffb54c51b399aa6a343e4",
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/barn-owl.svg",
+        "sha256": "2bc80cc7be2893c10f7d206a962e49d88725592b45a8f27739b77fccbd1f0c30",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Schleiereule · eigene schematische Zeichnung: Heller Gesichtsschleier, Flügel am Körper. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Vorderansicht zur Merkmalsbetrachtung. Nicht als alleinige Bestimmungshilfe verwenden."
+      }
     },
     {
       "id": "animal-kingfisher",
@@ -3127,7 +3317,8 @@
         "sha256": "ae3e26300cb2bff4638f9a683df7442d6eedd19045d9814209a0ff2daf4fecf4",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Eisvogel · eigene schematische Zeichnung: Langer Schnabel, Blauer Rücken und orangefarbene Unterseite. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Schematische Seitenansicht. Der Jagdablauf ist nicht als beobachtetes Ereignis dargestellt."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Schematische Seitenansicht. Der Jagdablauf ist nicht als beobachtetes Ereignis dargestellt.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "UK-Grünliste nicht als globale Gefährdungsbewertung oder fehlenden Schutzbedarf ausgeben.",
       "openBeforeRuntime": [
@@ -3353,7 +3544,15 @@
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
       },
-      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "39eba201c4cb5e0cbffafda22ee73f4b9c31e9c7b0db7041076bde7a88a7e407"
+      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "39eba201c4cb5e0cbffafda22ee73f4b9c31e9c7b0db7041076bde7a88a7e407",
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/kingfisher.svg",
+        "sha256": "ae3e26300cb2bff4638f9a683df7442d6eedd19045d9814209a0ff2daf4fecf4",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Eisvogel · eigene schematische Zeichnung: Langer Schnabel, Blauer Rücken und orangefarbene Unterseite. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Schematische Seitenansicht. Der Jagdablauf ist nicht als beobachtetes Ereignis dargestellt."
+      }
     },
     {
       "id": "animal-ostrich",
@@ -3417,7 +3616,8 @@
         "sha256": "997ce989f05ed94e64c65b8a9dc00f7c04eebe402cb7721c3e661b03b79a5f7f",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Afrikanischer Strauß · eigene schematische Zeichnung: Langer Hals, Lange Beine. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Laufvogel in schematischer Seitenansicht. Körpergröße und Bewegung lassen sich daraus nicht messen."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Laufvogel in schematischer Seitenansicht. Körpergröße und Bewegung lassen sich daraus nicht messen.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Somalistrauß nicht als bloße zweite neue Karte derselben Art zählen; fehlerhafte Höhenumrechnung auf der Quellseite nicht kopieren.",
       "openBeforeRuntime": [
@@ -3624,6 +3824,14 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
+      },
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/ostrich.svg",
+        "sha256": "997ce989f05ed94e64c65b8a9dc00f7c04eebe402cb7721c3e661b03b79a5f7f",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Afrikanischer Strauß · eigene schematische Zeichnung: Langer Hals, Lange Beine. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Laufvogel in schematischer Seitenansicht. Körpergröße und Bewegung lassen sich daraus nicht messen."
       }
     },
     {
@@ -3688,7 +3896,8 @@
         "sha256": "138fd35abcd98e6701d6c057c0b743aa5ebee9afa40503e194a7de96bd291fc6",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Papageitaucher · eigene schematische Zeichnung: Kräftiger Schnabel, Helle Unterseite. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Färbung zeigt vereinfacht einen Vogel im Sommerkleid; das Aussehen ändert sich im Jahreslauf."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Färbung zeigt vereinfacht einen Vogel im Sommerkleid; das Aussehen ändert sich im Jahreslauf.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Nordamerikanische Teilkarte nicht als Gesamtverbreitung ausgeben; Datumsbezug von Schutz-/Bestandszahlen noch prüfen.",
       "openBeforeRuntime": [
@@ -3895,6 +4104,14 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
+      },
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/atlantic-puffin.svg",
+        "sha256": "138fd35abcd98e6701d6c057c0b743aa5ebee9afa40503e194a7de96bd291fc6",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Papageitaucher · eigene schematische Zeichnung: Kräftiger Schnabel, Helle Unterseite. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Färbung zeigt vereinfacht einen Vogel im Sommerkleid; das Aussehen ändert sich im Jahreslauf."
       }
     },
     {
@@ -3959,7 +4176,8 @@
         "sha256": "9e9a8c178107d295217c466b77a251eb13fd8976533a734f6473bd1103715483",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Europäisches Chamäleon · eigene schematische Zeichnung: Greifschwanz, Greiffüße am Zweig. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Zeichnung zeigt nur einen Farbzustand. Sie simuliert keinen Farbwechsel und keine beliebige Musterkopie."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Zeichnung zeigt nur einen Farbzustand. Sie simuliert keinen Farbwechsel und keine beliebige Musterkopie.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Kein lebendes Tier für Farbexperimente reizen; Messpunkt der Größenangabe und heutige Schutzdaten extra prüfen.",
       "openBeforeRuntime": [
@@ -4173,6 +4391,14 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
+      },
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/common-chameleon.svg",
+        "sha256": "9e9a8c178107d295217c466b77a251eb13fd8976533a734f6473bd1103715483",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Europäisches Chamäleon · eigene schematische Zeichnung: Greifschwanz, Greiffüße am Zweig. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Zeichnung zeigt nur einen Farbzustand. Sie simuliert keinen Farbwechsel und keine beliebige Musterkopie."
       }
     },
     {
@@ -4237,7 +4463,8 @@
         "sha256": "c40e306490fab4d6016dd625f6da55f50ef48c8659b16fac26f1c2fc120b979e",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Feuersalamander · eigene schematische Zeichnung: Gelb-schwarze Zeichnung, Langer Schwanz. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Erwachsenes Tier mit vereinfachtem individuellem Fleckenmuster. Die kiementragende Larve ist nicht abgebildet."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Erwachsenes Tier mit vereinfachtem individuellem Fleckenmuster. Die kiementragende Larve ist nicht abgebildet.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Fortpflanzung variiert regional/unterartlich; keine Verallgemeinerung aller Populationen. Tiere nicht umsetzen oder anfassen.",
       "openBeforeRuntime": [
@@ -4455,6 +4682,14 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
+      },
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/fire-salamander.svg",
+        "sha256": "c40e306490fab4d6016dd625f6da55f50ef48c8659b16fac26f1c2fc120b979e",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Feuersalamander · eigene schematische Zeichnung: Gelb-schwarze Zeichnung, Langer Schwanz. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Erwachsenes Tier mit vereinfachtem individuellem Fleckenmuster. Die kiementragende Larve ist nicht abgebildet."
       }
     },
     {
@@ -4519,7 +4754,8 @@
         "sha256": "28bc22670244c293512b0d5b7c41b12ed70ce39ee3427389367ebf910febeb00",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Grasfrosch · eigene schematische Zeichnung: Lange Hinterbeine, Dunkles Schläfenfeld. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Erwachsener Frosch in schematischer Seitenansicht. Laich und Kaulquappe sind andere Entwicklungsstadien."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Erwachsener Frosch in schematischer Seitenansicht. Laich und Kaulquappe sind andere Entwicklungsstadien.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Britische Saisonzeiten und Schutzgesetze nicht als weltweit gültig darstellen; keine Entnahme von Laich.",
       "openBeforeRuntime": [
@@ -4726,6 +4962,14 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
+      },
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/common-frog.svg",
+        "sha256": "28bc22670244c293512b0d5b7c41b12ed70ce39ee3427389367ebf910febeb00",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Grasfrosch · eigene schematische Zeichnung: Lange Hinterbeine, Dunkles Schläfenfeld. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Erwachsener Frosch in schematischer Seitenansicht. Laich und Kaulquappe sind andere Entwicklungsstadien."
       }
     },
     {
@@ -4790,7 +5034,8 @@
         "sha256": "d3aaa90944d7eabe54dd5b18a29a772c3ff9cdf569f9b3b6d579ae17494109e0",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Echter Clownfisch · eigene schematische Zeichnung: Drei helle Querbänder, Flossen und Fischkörper. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Bänder sind schematisch dargestellt. Ähnliche Arten müssen anhand weiterer Merkmale unterschieden werden."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Bänder sind schematisch dargestellt. Ähnliche Arten müssen anhand weiterer Merkmale unterschieden werden.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Keine Nemo-Abbildung oder fremde Unterwasserfotos übernehmen; A.percula nicht mit A.ocellaris verwechseln.",
       "openBeforeRuntime": [
@@ -5005,6 +5250,14 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
+      },
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/eastern-clown-anemonefish.svg",
+        "sha256": "d3aaa90944d7eabe54dd5b18a29a772c3ff9cdf569f9b3b6d579ae17494109e0",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Echter Clownfisch · eigene schematische Zeichnung: Drei helle Querbänder, Flossen und Fischkörper. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Bänder sind schematisch dargestellt. Ähnliche Arten müssen anhand weiterer Merkmale unterschieden werden."
       }
     },
     {
@@ -5069,7 +5322,7 @@
         "sha256": "5155890a68c6a4466e08198fe55871224416e68dd6be8aebd5ad725ebabd2fe6",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Europäischer Aal · eigene schematische Zeichnung: Langgestreckter Körper und Kopf mit Auge. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Der durchgehende Flossensaum ist hier nicht vollständig dargestellt. Die Körperkurve zeigt keine Wanderroute oder direkt beobachtete Eiablage.",
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Der durchgehende Flossensaum ist hier nicht vollständig dargestellt. Die Körperkurve zeigt keine Wanderroute oder direkt beobachtete Eiablage.",
         "beforeLabelCorrection20261018": {
           "sha256": "f4c902d7066aae5c69a6a4952893002d03d5a91cd584f4a33c91e5fcfadd5e61",
           "alt": "Europäischer Aal · eigene schematische Zeichnung: Langgestreckter Körper, Flossensaum. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
@@ -5080,7 +5333,8 @@
           "source": "https://fish-commercial-names.ec.europa.eu/fish-names/species/anguilla-anguilla_en",
           "anchor": "311–312 morphology credited to FishBase; continuous fin margin not a separate triangular fin.",
           "remaining": "Current actual small/large/native/offline illustration/caption proof required; no complete anatomical depiction or identification guide claimed."
-        }
+        },
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Laichvorgang/Sargassosee nicht als direkt beobachtetes vollständiges Ereignis schildern; zusätzliche Primärstudie sowie aktuelle Gefährdungsdaten vor Integration nötig.",
       "openBeforeRuntime": [
@@ -5336,7 +5590,26 @@
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
       },
-      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "b4d109ea461f3585fb8f23d9f02d77ca7793bafb0f3c31f340e922fb11d820b8"
+      "runtimeTeachingContentSHA256BeforePromptClarification20261024": "b4d109ea461f3585fb8f23d9f02d77ca7793bafb0f3c31f340e922fb11d820b8",
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/european-eel.svg",
+        "sha256": "5155890a68c6a4466e08198fe55871224416e68dd6be8aebd5ad725ebabd2fe6",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Europäischer Aal · eigene schematische Zeichnung: Langgestreckter Körper und Kopf mit Auge. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Der durchgehende Flossensaum ist hier nicht vollständig dargestellt. Die Körperkurve zeigt keine Wanderroute oder direkt beobachtete Eiablage.",
+        "beforeLabelCorrection20261018": {
+          "sha256": "f4c902d7066aae5c69a6a4952893002d03d5a91cd584f4a33c91e5fcfadd5e61",
+          "alt": "Europäischer Aal · eigene schematische Zeichnung: Langgestreckter Körper, Flossensaum. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+          "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Eine Körperzeichnung ist keine Wanderkarte und kein Beleg für eine direkt beobachtete Eiablage."
+        },
+        "labelCountercheck20261018": {
+          "finding": "Flossensaum was promised in alt/HTML label, but actual diagram lacks continuous dorsal/caudal/anal margin. Geometry unchanged; labels now name only actually visible traits, model explicitly states omitted fin margin.",
+          "source": "https://fish-commercial-names.ec.europa.eu/fish-names/species/anguilla-anguilla_en",
+          "anchor": "311–312 morphology credited to FishBase; continuous fin margin not a separate triangular fin.",
+          "remaining": "Current actual small/large/native/offline illustration/caption proof required; no complete anatomical depiction or identification guide claimed."
+        }
+      }
     },
     {
       "id": "animal-monarch-butterfly",
@@ -5400,7 +5673,8 @@
         "sha256": "37a5c7422f286266d40dbb635c8ab48e3ae368ae33b1ded02ba4c5d3820157c5",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Monarchfalter · eigene schematische Zeichnung: Orange-schwarze Flügel, Dunkle Flügeladern. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Erwachsener Falter mit vereinfachtem Adermuster. Raupenstadium und Wanderroute sind nicht abgebildet."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Erwachsener Falter mit vereinfachtem Adermuster. Raupenstadium und Wanderroute sind nicht abgebildet.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Vorgeschlagene US-Schutzregel ist keine bereits geltende weltweite Einstufung; keine giftigen Pflanzen anfassen oder Raupen füttern lassen.",
       "openBeforeRuntime": [
@@ -5617,6 +5891,14 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
+      },
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/monarch-butterfly.svg",
+        "sha256": "37a5c7422f286266d40dbb635c8ab48e3ae368ae33b1ded02ba4c5d3820157c5",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Monarchfalter · eigene schematische Zeichnung: Orange-schwarze Flügel, Dunkle Flügeladern. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Erwachsener Falter mit vereinfachtem Adermuster. Raupenstadium und Wanderroute sind nicht abgebildet."
       }
     },
     {
@@ -5681,7 +5963,8 @@
         "sha256": "5c88ac050a1b5ae51fd38cbf3fa1282cf34b6bf40397d9c03dc5e920e89d4d1a",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Gefleckte Weinbergschnecke · eigene schematische Zeichnung: Spiraliges Gehäuse, Fühler. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Gehäuseform ist vereinfacht. Gehäusebreite und Länge des ausgestreckten Tiers sind verschiedene Maße."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Gehäuseform ist vereinfacht. Gehäusebreite und Länge des ausgestreckten Tiers sind verschiedene Maße.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Gruppenweite Aussagen der Museumsseite nicht unbesehen artspezifisch übertragen; Größen-/Radula- und Schutzclaims zusätzlich prüfen.",
       "openBeforeRuntime": [
@@ -5903,6 +6186,14 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
+      },
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/garden-snail.svg",
+        "sha256": "5c88ac050a1b5ae51fd38cbf3fa1282cf34b6bf40397d9c03dc5e920e89d4d1a",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Gefleckte Weinbergschnecke · eigene schematische Zeichnung: Spiraliges Gehäuse, Fühler. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Gehäuseform ist vereinfacht. Gehäusebreite und Länge des ausgestreckten Tiers sind verschiedene Maße."
       }
     },
     {
@@ -5967,7 +6258,8 @@
         "sha256": "d8d631dfc167f0a5ae898f2e0eb9680aa463acc2c52eedaa8fe5445c7aeca578",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Europäischer Hummer · eigene schematische Zeichnung: Zwei unterschiedliche Scheren, Gegliederter Körper und Schwanzfächer. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Scheren sind zur Erklärung verschieden gezeichnet. Dies ist keine Darstellung eines Häutungsablaufs."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Die Scheren sind zur Erklärung verschieden gezeichnet. Dies ist keine Darstellung eines Häutungsablaufs.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Keine Gleichsetzung mit Languste oder Amerikanischem Hummer; Fotos und Größenmesspunkte vor Integration prüfen.",
       "openBeforeRuntime": [
@@ -6174,6 +6466,14 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
+      },
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/european-lobster.svg",
+        "sha256": "d8d631dfc167f0a5ae898f2e0eb9680aa463acc2c52eedaa8fe5445c7aeca578",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Europäischer Hummer · eigene schematische Zeichnung: Zwei unterschiedliche Scheren, Gegliederter Körper und Schwanzfächer. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Die Scheren sind zur Erklärung verschieden gezeichnet. Dies ist keine Darstellung eines Häutungsablaufs."
       }
     },
     {
@@ -6238,7 +6538,8 @@
         "sha256": "cd1611c31861469fc7d3bcc955f32464d6e4aae49b9c669be750605ef4658158",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Gewöhnliche Sepia · eigene schematische Zeichnung: Acht Arme, Zwei längere Fangtentakel. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Schematische Seitenansicht mit erklärtem Körperbau. Muster und Farbwechsel sind nicht simuliert."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Schematische Seitenansicht mit erklärtem Körperbau. Muster und Farbwechsel sind nicht simuliert.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Arm-/Tentakelzahl, Schulp und konkrete Farbzell-Erklärung vor Integration anhand weiterer Primärquelle absichern.",
       "openBeforeRuntime": [
@@ -6456,6 +6757,14 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
+      },
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/common-cuttlefish.svg",
+        "sha256": "cd1611c31861469fc7d3bcc955f32464d6e4aae49b9c669be750605ef4658158",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Gewöhnliche Sepia · eigene schematische Zeichnung: Acht Arme, Zwei längere Fangtentakel. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Schematische Seitenansicht mit erklärtem Körperbau. Muster und Farbwechsel sind nicht simuliert."
       }
     },
     {
@@ -6520,7 +6829,8 @@
         "sha256": "3e6148759e70b680f6f0fa27d1ab66f6cda160b9545222cba1de9cd21d644856",
         "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
         "alt": "Kurzschnäuziges Seepferdchen · eigene schematische Zeichnung: Kurze Schnauze, Eingerollter Greifschwanz. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
-        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Schematische Seitenansicht ohne Mähne. Fortpflanzung und Gefährdung können nicht aus dem Bild abgelesen werden."
+        "limits": "Eigene, mit KI-Unterstützung programmierte Merkmalszeichnung · nicht maßstabsgetreu. Schematische Seitenansicht ohne Mähne. Fortpflanzung und Gefährdung können nicht aus dem Bild abgelesen werden.",
+        "visibleAIProvenance": "Vorhandene von Codex erstellte Vektorgrafik im sichtbaren Captiontext ausdrücklich als KI-unterstützt programmiert benannt; Originaldatei/Alttext/Modellgrenzen unverändert."
       },
       "limits": "Quellenseite enthält problematische Fortpflanzungs-/DD-Formulierungen. Diese ausdrücklich NICHT übernehmen; unabhängige Fachquelle vor Fortpflanzungs- oder IUCN-Angabe nötig.",
       "openBeforeRuntime": [
@@ -6753,6 +7063,14 @@
         "visualComparisonPath": "/workspace/work/wk-continuation/animal-release-current-figure-comparison.json",
         "visualComparisonSHA256": "306f2d2ad9412a90e6146dc716ded27e74e7e1f12f51fd636ec198d2f8d38dbb",
         "samePixelsAsPersonallyViewedB92": true
+      },
+      "mediaBeforeAITransparency20261024": {
+        "status": "own-vector-implemented-awaiting-visual-review",
+        "file": "public/animals/short-snouted-seahorse.svg",
+        "sha256": "3e6148759e70b680f6f0fa27d1ab66f6cda160b9545222cba1de9cd21d644856",
+        "rights": "Eigene von Codex für WunderKompass erstellte einfache Vektorgrafik; keine fremden Bilder oder nachgezeichneten Fotos.",
+        "alt": "Kurzschnäuziges Seepferdchen · eigene schematische Zeichnung: Kurze Schnauze, Eingerollter Greifschwanz. Keine maßstäbliche Darstellung oder sichere Bestimmungshilfe.",
+        "limits": "Eigene Merkmalszeichnung · nicht maßstabsgetreu. Schematische Seitenansicht ohne Mähne. Fortpflanzung und Gefährdung können nicht aus dem Bild abgelesen werden."
       }
     }
   ],
@@ -7266,5 +7584,60 @@
       "scope": "AI inspection of actual rendered product; seven affected existing tests and production build passed. No independent human/empirical learning, full/new nativeCI or delivery claim. Original907/e925 proof retains exact source; this following metadata is separate."
     },
     "fullNativeAndDelivery": "pending after actual maintenance delivery and base integration"
+  },
+  "aiMediaClarification20261024": {
+    "scope": "One better original AI Okapi illustration after69reachable Git media-history commits/one unchanged oldSVG/no older photo route were compared. Existing23otherSVGassets retained byte-for-byte;24visible captions clarify actual AI provenance. No new species, question, game, photo or historical recovery count.",
+    "originalOwnImagesRetained": true,
+    "realPhotoAndDepictionRecordsUnchanged": 49,
+    "factualQuestionsAndAnswersUnchanged": true,
+    "independentHumanAcceptance": false,
+    "empiricalLearningEfficacyClaim": false,
+    "renderedAndFullAcceptance": "pending actual current source",
+    "actualEarlyReview": {
+      "mode": "AI factual and actual visual self-review, not independent human or empirical approval",
+      "reviewedOnUTC": "2026-10-24",
+      "actualSource": "a21388672566416d9cb021d21d71a6f8e68a0bbf26dee6ef72a9608973fa7703",
+      "actualBuild": "248210ffb23638fe",
+      "renderedReport": {
+        "path": ".qa-output/okapi-media-early-rendered/report.json",
+        "sha256": "f1dceea6892fbd4e7d68503eba8a104d080ab0005524c178794fea00397405db"
+      },
+      "nativeFirstLabelsLastReport": {
+        "path": ".qa-output/okapi-media-native-first-labels-last/report.json",
+        "sha256": "513c4aa2094bb2312e25258d7023de66aaee7916fcd6407e3e3bb7e0a0a5c3f0"
+      },
+      "personallySeen": [
+        "full optimized800x500 illustration",
+        "actual320 normal and large Okapi full figure/labels/caption",
+        "actual320 large platypus with unchanged SVG and clear AI-assisted caption",
+        "native200%320 image-first and complete caption-last",
+        "native200%640 image-first"
+      ],
+      "criteriaAgainstReadPrimarySources": [
+        {
+          "url": "https://animals.sandiegozoo.org/animals/okapi",
+          "readSection": "ABOUT43–48",
+          "criteria": "Große aufrechte Ohren, rötlich-braunes Fell, kürzerer Hals als bei Giraffen."
+        },
+        {
+          "url": "https://www.okapiconservation.org/the-okapi",
+          "readSection": "species description74–75",
+          "criteria": "Streifen auf Hinterhand und Beinen."
+        },
+        {
+          "url": "https://animaldiversity.org/accounts/Okapia_johnstoni/",
+          "readSection": "Physical Description61–70",
+          "criteria": "Kontrast von Körper/Beinen/Gesicht, Weibchen ohne Ossikone."
+        },
+        {
+          "url": "https://www.chesterzoo.org/animals/okapi",
+          "readSection": "ABOUT88–96",
+          "criteria": "Weibchen ohne Ossikone; Giraffenverwandtschaft."
+        }
+      ],
+      "findings": "Four grounded legs/hooves, two large upright ears, no ossicones in this declared female example; reddish-brown unspotted body, stripes on rump/legs, pale face/dark muzzle and dark tail tuft. No visible tongue or photo claim. Shape/color/pattern are illustrative choices, not a specimen, exact measurement or identification record. Native image and full caption need separate viewport positions because the readable large figure is taller than450CSS pixels; both actually seen.",
+      "learningBenefit": "Clearer view of rump/leg stripes, ears and relative neck length while the existing tasks distinguish visible similarity from giraffe relationship. Source-linked hints, wrong/right feedback and voluntary reflection still work. No measured empirical learning-effect claim.",
+      "limits": "Other23SVGs unchanged; visible provenance improved without claiming their complete image-quality acceptance. Full regression/native CI/delivery still pending."
+    }
   }
 }

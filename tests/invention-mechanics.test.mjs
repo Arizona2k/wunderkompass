@@ -1,3 +1,4 @@
+import {topicAtHistoricalMediaReference} from './retained-topic-reference.mjs';
 import scienceBaseline from './fixtures/retained-before-science-originals.json' with {type:'json'};
 const scienceIds=scienceBaseline.newIds;
 import buildingBaseline from './fixtures/retained-before-building-originals.json' with {type:'json'};
@@ -11,7 +12,7 @@ import {worldGameBank,restoreWorldGameOrders} from '../app/world-game-bank.ts';
 const ids=baseline.newIds,hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 test('six retained manuscripts keep the entire preceding150-topic source except nine named reciprocal backlinks',()=>{
  assert.equal(baseline.sourceCommit,'a6075b8542a3784cfbe3ef34ddc75863f692ec64');assert.equal(ids.length,6);assert.equal(catalog.length,187);assert.equal(catalog.filter(t=>t.category==='inventions').length,24);
- const retained=catalog.filter(t=>![...ids,...buildingIds,...scienceIds].includes(t.id)).map(t=>({...t,related:t.related.filter(id=>![...ids,...buildingIds,...scienceIds].includes(id))}));assert.equal(retained.length,150);assert.equal(hash(retained),baseline.oldCatalogSHA256);
+ const retained=catalog.filter(t=>![...ids,...buildingIds,...scienceIds].includes(t.id)).map(topicAtHistoricalMediaReference).map(t=>({...t,related:t.related.filter(id=>![...ids,...buildingIds,...scienceIds].includes(id))}));assert.equal(retained.length,150);assert.equal(hash(retained),baseline.oldCatalogSHA256);
  const edges=graph.connections.filter(e=>(ids.includes(e.fromId)||ids.includes(e.toId))&&![...buildingIds,...scienceIds].includes(e.fromId)&&![...buildingIds,...scienceIds].includes(e.toId));assert.equal(edges.length,9);assert.equal(new Set(edges.map(e=>[e.fromId,e.toId].sort().join('|'))).size,9);
  for(const edge of edges){assert.ok(edge.why.length>60);for(const [a,b]of [[edge.fromId,edge.toId],[edge.toId,edge.fromId]])assert.ok(catalog.find(t=>t.id===a).related.includes(b));}
  for(const id of ids){const t=catalog.find(t=>t.id===id),original=baseline.originalCorrectAnswers[id];assert.equal(t.question.correct,original.correct);assert.equal(t.question.answers[t.question.correct],original.answer);assert.equal(t.invention.walkthrough,true);assert.equal(t.invention.stages.length,6);assert.equal(t.questionFeedback.wrongReasons[t.question.correct],null);assert.equal(new Set(t.question.answers).size,3);}

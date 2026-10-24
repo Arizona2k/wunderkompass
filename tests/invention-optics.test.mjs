@@ -1,3 +1,4 @@
+import {topicAtHistoricalMediaReference} from './retained-topic-reference.mjs';
 import scienceBaseline from './fixtures/retained-before-science-originals.json' with {type:'json'};
 const scienceIds=scienceBaseline.newIds;
 import buildingBaseline from './fixtures/retained-before-building-originals.json' with {type:'json'};
@@ -17,7 +18,7 @@ const peopleIds=['person-mary_anning','person-ibn_al_haytham'];
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 test('only three prepared optical concepts extend the exact public142 catalog and172-question bank',()=>{
  assert.deepEqual(review.integratedManuscriptIds,ids);assert.equal(catalog.length,187);assert.equal(catalog.filter(t=>t.category==='inventions').length,24);
- const retained=catalog.filter(t=>![...ids,...peopleIds,...electricalIds,...mechanicsIds,...buildingIds,...scienceIds].includes(t.id)).map(t=>({...t,related:t.related.filter(id=>![...ids,...peopleIds,...electricalIds,...mechanicsIds,...buildingIds,...scienceIds].includes(id))}));
+ const retained=catalog.filter(t=>![...ids,...peopleIds,...electricalIds,...mechanicsIds,...buildingIds,...scienceIds].includes(t.id)).map(topicAtHistoricalMediaReference).map(t=>({...t,related:t.related.filter(id=>![...ids,...peopleIds,...electricalIds,...mechanicsIds,...buildingIds,...scienceIds].includes(id))}));
  assert.equal(retained.length,142);assert.equal(hash(retained),review.retainedPublicCatalogSha256,'every old field, source, answer, mechanic and ordering is retained');
  const oldQuestions=CHALLENGE_BANK.filter(q=>![...ids,...peopleIds,...electricalIds,...mechanicsIds,...buildingIds,...scienceIds].includes(q.topic));assert.equal(oldQuestions.length,172);assert.equal(hash(oldQuestions),'6a2895a01766629b3d5961083cfaf45e32dcfc7a0dfe12ea0c1534a183e5e317');
  assert.equal(CHALLENGE_BANK.length,217);assert.equal(new Set(CHALLENGE_BANK.map(q=>q.id)).size,217);

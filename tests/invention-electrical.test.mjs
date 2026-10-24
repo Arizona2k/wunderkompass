@@ -1,3 +1,4 @@
+import {topicAtHistoricalMediaReference} from './retained-topic-reference.mjs';
 import scienceBaseline from './fixtures/retained-before-science-originals.json' with {type:'json'};
 const scienceIds=scienceBaseline.newIds;
 import buildingBaseline from './fixtures/retained-before-building-originals.json' with {type:'json'};
@@ -15,7 +16,7 @@ const ids=['invention-battery','invention-generator','invention-transistor'];
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 test('three retained electrical originals preserve all147 delivered articles except nine explicit backlinks',()=>{
  assert.equal(catalog.length,187);assert.equal(catalog.filter(t=>t.category==='inventions').length,24);
- const retained=catalog.filter(t=>![...ids,...mechanicsIds,...buildingIds,...scienceIds].includes(t.id)).map(t=>({...t,related:t.related.filter(id=>![...ids,...mechanicsIds,...buildingIds,...scienceIds].includes(id))}));assert.equal(retained.length,147);assert.equal(hash(retained),'5f224cfcb56f921aa153de2ec456ff57b800cc85b21e406b9c288c314b00a92c');
+ const retained=catalog.filter(t=>![...ids,...mechanicsIds,...buildingIds,...scienceIds].includes(t.id)).map(topicAtHistoricalMediaReference).map(t=>({...t,related:t.related.filter(id=>![...ids,...mechanicsIds,...buildingIds,...scienceIds].includes(id))}));assert.equal(retained.length,147);assert.equal(hash(retained),'5f224cfcb56f921aa153de2ec456ff57b800cc85b21e406b9c288c314b00a92c');
  const links=graph.connections.filter(c=>ids.includes(c.fromId)||ids.includes(c.toId));assert.equal(links.length,9);assert.equal(new Set(links.map(c=>[c.fromId,c.toId].sort().join('|'))).size,9);
  for(const link of links){assert.ok(link.why.length>50);for(const [a,b]of [[link.fromId,link.toId],[link.toId,link.fromId]])assert.ok(catalog.find(t=>t.id===a).related.includes(b));}
  for(const id of ids){const t=catalog.find(t=>t.id===id);assert.equal(t.invention.walkthrough,true);assert.equal(t.invention.stages.length,6);assert.equal(t.questionFeedback.wrongReasons[t.question.correct],null);assert.ok(t.sources.length>=2);}

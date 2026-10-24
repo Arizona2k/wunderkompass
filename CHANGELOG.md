@@ -1,3 +1,13 @@
+## Gezielter historischer Vergleich · geprüfte neue Okapi-Bildherkunft
+
+Fünf überlappende Altkatalogvergleiche erkannten den bewusst geänderten Okapi-Quellenhinweis. Ihre Originalhashes/Referenzen bleiben erhalten; ausschließlich der exakt bekannte neue Bildhinweis wird beim historischen Vergleich auf seinen belegten früheren Wortlaut bezogen. Der aktuelle Artikel muss separat die neue KI-/KeinFoto-Angabe behalten. Gegenfälle mit falschen Antworten/Quellen/Fachtexten/unbekanntenHinweisen/anderenThemen bleiben erkannt; kein pauschales Ignorieren des Felds und keine eingefrorenen Inhalte. Keine Antwort-/Passmigration für den reinen Quellenhinweiswechsel.
+
+## Vorbereitet und früh tatsächlich geprüft · Okapi und klare Bildherkunft
+
+Neue eigene KI-Illustration zeigt ein weibliches Okapi mit gestreifter Hinterhand/Beinen, großen Ohren und kürzerem Hals als bei Giraffen; sichtbare Herkunft/Modellgrenzen unterscheiden sie klar vom Foto. Original unverändert erhalten, proportionale800×500WebP20.552Byte.23beibehaltene SVGs bleiben bytegleich und benennen KI-Unterstützung sichtbar. Alte Quellen/Rechte und alle24historischenSVGs erhalten; kein Wikimediaabruf und kein mangels tatsächlicher Motiv-/Rechte-/Qualitätsprüfung ungeprüft übernommenes Foto.
+
+48tatsächliche schmale Normal-/Großschriftansichten, bestehendeOkapiaufgaben/Hinweise/Fehlerfeedback/Reflexion sowie echte200%-Bild-/Labels-/Captionansichten und geschützte synthetische Felder/Reload bestanden. Tatsächliche alte fehlende Herkunft bzwgrobeOkapigrafik vom selben Guard abgewiesen. Nur durchSourceNoteverändertenOkapihash gezielt gepflegt; alteFach-/Medien-/UI-Historien bleiben. Noch keine vollständige/nativeCI-Abnahme oder Lieferung, keine empirische Lernwirkung. Neue Chronikvorbereitung bleibt getrennt/undatiert/unverlinkt; weitereBildlücken ausschließlichWK057offen.
+
 ## Lokal vollständig geprüft · zusammenhängende Tier-/Modell-/Seismografkorrektur
 
 Der unveränderte dcdcd07555cd92810d5fa127b56f32726e8df085/Quellee0ced/Appa7a4 bestand den kompletten Default in1372.313908428s(22:52,314),148Checks/allezehnGruppen und fünf leere Fehlerklassen.253Units/130Releaseprüfungen/Typ/Lint/Build/static43 bestanden; HEAD/Quelle/alleDistbytes während des gesamten Volltests gleich.3745Original-Dateiidentitäten bytegleich erhalten,1390erzeugte/892behaltene Review-PNG mit90.002.791Byte unter150MB. Erst danach96UI-Strukturquittungen erneuert, sämtliche Fach-/Quellen-/Beziehungs-/UI-Historien erhalten. Neue echte nativePR-CI/Ready/Lieferung stehen aus.
