@@ -1,3 +1,7 @@
+## In Prüfung · tatsächliche schmale Offline-Aufnahmen
+
+Nach der bestehenden vollständigen Fortschrittsmatrix wird der tatsächliche320CSS-Viewport vor Offline-Neuladen und Readybild wiederhergestellt; die Bildbezeichnung allein ist kein Beleg mehr. Quelle-, Quota- und Readybilder protokollieren tatsächlichen Viewport/Zoom/PNGbreite; native200%-Aufnahmen verwenden den bestehenden vollständigen Viewportpfad. Die frühere falsche1220px-Aufnahme bleibt als Original erhalten. Alle vorhandenen Breiten-, Cache-, Pass- und eng begrenzten Workerfehlerprüfungen bleiben unverändert verpflichtend. Gezielte echte Gegenprobe und neue gemeinsame Pflichtabnahme folgen.
+
 ## Zusammengeführt · vorbereitete Tier-/Technik- und Laborverbindungen
 
 Nach tatsächlicher PR61-Auslieferung bestätigte M61-Wartungsbasis in den erhaltenen Tier-/Modellzweig integriert; danach vorhandenen separat geprüften Seismograf-/Erdbebenabschnitt übernommen. Die zentrale fachlich begründete Beziehung bedient beide Richtungen und erhält den bisherigen Schallbezug. Die bestehende undatierte Tier-/Modellvorbereitung beschreibt diese Verbindung erst nach ihrer tatsächlichen Integration als vierten Detailpunkt; keine vorzeitigen Termine oder Funktionslinks. Frühe Originalbelege907/5e3/d467/b241 bleiben ihren tatsächlichen Quellen zugeordnet, neue gemeinsame Voll-/Native-/Lieferabnahme steht aus. Keine neue Roadmap, Fotoänderung oder Wiederherstellungsbehauptung unbekannter21Fassungen.
