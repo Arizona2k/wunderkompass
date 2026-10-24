@@ -70,3 +70,6 @@ export async function validateRestoredColdOffline(directory,sealFile,destination
 export function coldReuseComplete(proof,{context,sourceDigest,build,browser}={}){
  return context?.event==='pull_request'&&proof?.originalsAndInputIdentityRecheckedAfterWorkers===true&&typeof proof.sealSHA256==='string'&&/^[a-f0-9]{64}$/.test(proof.sealSHA256)&&proof.sourceDigest===sourceDigest&&typeof sourceDigest==='string'&&/^[a-f0-9]{64}$/.test(sourceDigest)&&proof.build===build&&typeof build==='string'&&/^[a-f0-9]{16}$/.test(build)&&proof.browser===browser&&typeof browser==='string'&&browser.length>0&&Number.isSafeInteger(proof.originalFileCount)&&proof.originalFileCount>=2&&Number.isFinite(proof.originalSeconds)&&proof.originalSeconds>0&&isDeepStrictEqual(proof.context,context);
 }
+
+// Same exact Quality identity contract for the native navigation producer too.
+export {validIdentity as validateQualityProofIdentity};

@@ -73,7 +73,7 @@ export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='n
  }
  return {id:data.id,width,state,levels:[0,1,2],bothEvidence:true,wrongAndCorrect:true,keyboard,geometry:true,measurement:true,sourceLinks:true};
 }
-export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix=widths}={}){
+export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix=widths,navigationReuse}={}){
  const observed=[],focusChecks=[],start=performance.now(),searchFocus=await delayedSearchFocus(browser,base,monitor,shots);
  for(const width of matrix){
   const c=await browser.newContext({viewport:{width,height:900},hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
@@ -98,7 +98,7 @@ export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix
    console.log('Animal workshop',width,DATA.entries.length,'cards passed');
   }catch(error){await p.screenshot({path:path.join(shots,'animal-failure-'+width+'.png'),fullPage:true,timeout:5000}).catch(()=>{});throw error;}finally{await c.close();}
  }
- const navigationProof={};await animalNavigation(browser,base,ready,monitor,shots,navigationProof);
+ const navigationProof={};await animalNavigation(browser,base,ready,monitor,shots,navigationProof,navigationReuse);
  report.animalCoverage={observed,focusChecks,searchFocus,photoPendingBackFocus:navigationProof.photoPendingBackFocus,seconds:(performance.now()-start)/1000,oldSessionsPreserved:true,largeText:true,axe:true,independentAcceptance:false,navigation:true};
  await worldPhotoFlow(browser,base,ready,monitor,report,shots);
  report.animalCoverage.photoMetadata=report.photoMetadata;
@@ -113,12 +113,19 @@ export async function animalNativeZoom(chromium,options,base,report,shots){
 }
 export async function offlineAnimals(p,report){const observed=[];for(const data of DATA.entries)observed.push(await exerciseAnimal(p,data,{width:1280,keyboard:true,state:'offline'}));await offlineWorldPhotos(p,report);await offlineRetainedAnswerWording(p,report);report.animalOffline={cards:DATA.entries.length,coldRestart:true,observed};report.checks.push('All48 animal workshops usable after real server shutdown and cold offline browser restart');}
 
-export async function animalNavigation(browser,base,ready,monitor,shots,navigationProof={}){
+export async function animalNavigation(browser,base,ready,monitor,shots,navigationProof={},reuse){
+ const engineName=browser.browserType().name(),commonStarted=performance.now();
+ if(reuse!==undefined){
+  assert.equal(typeof reuse,'function');assert.equal(process.argv.includes('--search-only'),false,'producer always executes the actual common navigation');const restored=await reuse();Object.assign(navigationProof,restored.proof,{reused:restored.provenance});
+  // Source controls and their fresh product pages remain an actual later test.
+  await sourceRouteInputFlow(browser,base,shots,engineName,monitor);return topics.map(t=>t.id);
+ }
+
  // Existing actual-engine precondition: fail on broken photo-card Back before
  // the long search, workshop and complete regression; every later check stays.
- const photoOpeners=await photoCardOpenerFlow(browser,base,ready,monitor,shots);console.log('EARLY_PHOTO_CARD_OPENERS',JSON.stringify({engine:browser.browserType().name(),cases:photoOpeners}));
+ const photoOpeners=await photoCardOpenerFlow(browser,base,ready,monitor,shots);navigationProof.photoOpeners=photoOpeners;console.log('EARLY_PHOTO_CARD_OPENERS',JSON.stringify({engine:browser.browserType().name(),cases:photoOpeners}));
  const pendingBack=await pendingPhotoBackFocusFlow(browser,base,ready,monitor,{},shots);navigationProof.photoPendingBackFocus=pendingBack;console.log('PHOTO_PENDING_BACK',JSON.stringify({engine:browser.browserType().name(),cases:pendingBack}));
- const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await c.newPage(),engine=browser.browserType().name();monitor(p);let current='initial',stage='home';const lifecycle=await observeEngineLifecycle(browser,c,p,()=>({current,stage}));
+ const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await c.newPage(),engine=browser.browserType().name();monitor(p);const initial=await c.storageState();assert.deepEqual(initial,{cookies:[],origins:[]},'common navigation starts in a new empty context');navigationProof.freshContext=true;navigationProof.input={base,viewport:{width:390,height:844},reducedMotion:'reduce',initialStorage:'empty new browser context',photoWidths:[320,1440],photoCategories:['animals','history','people','buildings'],pendingBackKinds:['category','pagination'],input:'actual keyboard titles, reload, explained connection and browser Back for every current animal ID'};let current='initial',stage='home';const lifecycle=await observeEngineLifecycle(browser,c,p,()=>({current,stage}));
  await p.addInitScript(()=>{window.__animalSearchTrace=[];for(const type of ['beforeinput','input','change','focusin','focusout','hashchange','popstate'])window.addEventListener(type,event=>{const target=event.target;if(target?.getAttribute?.('role')==='combobox'||type==='hashchange'||type==='popstate'){window.__animalSearchTrace.push({type,value:target?.value??null,hash:location.hash,at:performance.now(),trusted:event.isTrusted,inputType:event.inputType??null,composing:event.isComposing??null});if(window.__animalSearchTrace.length>32)window.__animalSearchTrace.shift();}},true);});
  try{await p.goto(base);await ready(p);for(const entry of DATA.entries){
   current=entry.id;const t=topics.find(t=>t.id===entry.id);stage='open search';
@@ -146,11 +153,12 @@ export async function animalNavigation(browser,base,ready,monitor,shots,navigati
   const selector='[data-route-focus="world-connection-'+entry.id+'-'+otherId+'"]';stage='explained connection';await p.locator(selector).click();await p.getByRole('heading',{name:catalog.find(t=>t.id===otherId).title,exact:true}).waitFor();
   stage='back and opener focus';await p.goBack();await p.locator('[data-animal-inquiry="'+entry.id+'"]').waitFor({state:'attached'});await p.waitForFunction(selector=>document.activeElement?.matches(selector),selector);
  }
+ navigationProof.coveredAnimalIds=topics.map(t=>t.id);navigationProof.commonSeconds=(performance.now()-commonStarted)/1000;
  // Extend the existing early keyboard-navigation path with the changed source
  // controls. The complete later journey matrix remains unchanged.
- if(process.argv.includes('--search-only')){const sourceProof=await journeySourceView(p,{widths:[320,390,768,1440],shots,engine});console.log('EARLY_JOURNEY_SOURCES',JSON.stringify({engine,views:sourceProof.views.length,chapters:sourceProof.chapters}));}
- await sourceRouteInputFlow(browser,base,shots,engine);
- if(process.argv.includes('--search-only'))await delayedSearchFocus(browser,base,monitor,shots);
+ if(process.argv.includes('--search-only')){const sourceProof=await journeySourceView(p,{widths:[320,390,768,1440],shots,engine});navigationProof.earlySourceViews=sourceProof.views.length;navigationProof.earlySourceChapters=sourceProof.chapters;console.log('EARLY_JOURNEY_SOURCES',JSON.stringify({engine,views:sourceProof.views.length,chapters:sourceProof.chapters}));}
+ await sourceRouteInputFlow(browser,base,shots,engine,monitor);
+ if(process.argv.includes('--search-only')){await delayedSearchFocus(browser,base,monitor,shots);navigationProof.earlyDelayedSearch=true;}
  return topics.map(t=>t.id);
  }catch(error){const state=await p.evaluate(()=>({url:location.href,active:document.activeElement?.outerHTML.slice(0,700),query:document.querySelector('.search-dialog [role="combobox"]')?.value??null,queryAttribute:document.querySelector('.search-dialog [role="combobox"]')?.getAttribute('value')??null,dialog:document.querySelector('.search-dialog')?.getAttribute('data-state')??null,options:[...document.querySelectorAll('[role="option"]')].map(e=>({value:e.getAttribute('data-value'),text:e.textContent?.slice(0,180)})),trace:window.__animalSearchTrace??[]})).catch(()=>({unavailable:true}));const failure={engine,current,stage,error:error.message,...state,lifecycle:await lifecycle.snapshot()};console.error('ANIMAL_SEARCH_FAILURE',JSON.stringify(failure));if(shots){await fs.writeFile(path.join(shots,'animal-search-failure-'+engine+'.json'),JSON.stringify(failure,null,2));await p.screenshot({path:path.join(shots,'animal-search-failure-'+engine+'.png'),fullPage:true,animations:'disabled'}).catch(()=>{});}throw new Error('Animal navigation '+engine+' '+current+' '+stage+': '+error.message,{cause:error});}finally{lifecycle.stop();await c.close();}
 }

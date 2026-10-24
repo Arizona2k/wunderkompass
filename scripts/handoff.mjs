@@ -1,3 +1,4 @@
+import {nativeNavigationInput,nativeNavigationReuseComplete,validateRestoredNativeNavigation} from './native-navigation-reuse.mjs';
 import {coldReuseComplete,coldBrowserEnvironment,fileSnapshot,validateRestoredColdOffline} from './cold-offline-reuse.mjs';
 import qualityContext from './release/quality-context.cjs';
 import {animalCoverageComplete,animalNativeComplete,animalOfflineComplete,solarCoverageComplete,solarNativeComplete,solarOfflineComplete} from './article-learning-evidence.mjs';
@@ -55,7 +56,14 @@ export async function createHandoff(report,directory='.qa-output',{requiredEngin
  }
  if(requirements.length!==24)throw Error('Incomplete existing-backlog requirement mapping');
  let engineProof=null;try{engineProof=JSON.parse(await fs.readFile(path.join(directory,'engine-report.json'),'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
- if(requiredEngines.length&&(!engineProof||engineProof.build!==report.build||engineProof.sourceDigest!==unit.sourceDigest||engineProof.status!=='passed'||!browserErrorsComplete(engineProof)||requiredEngines.some(name=>!engineProof.engines.some(e=>e.name===name&&animalCoverageComplete(e.animalCoverage,[320,390,768,1440])&&solarCoverageComplete(e.solarCaptionCoverage,[320,390,768,1440])&&journeySupportComplete(e.journeySupport,[320,390,768,1440])&&retentionComplete(e.offlineRetention)&&offlineComplete(e.offlineResilience,name)&&e.version&&e.chapters.length===16&&e.widths.length===4&&historyViewsComplete(e.historyViews,[320,390,768,1440])))))throw Error('Actual required browser engine evidence missing');
+ if(requiredEngines.length&&(!engineProof||engineProof.build!==report.build||engineProof.sourceDigest!==unit.sourceDigest||engineProof.status!=='passed'||!browserErrorsComplete(engineProof)||requiredEngines.some(name=>!engineProof.engines.some(e=>e.name===name&&browserErrorsComplete(e.journeySupport?.learningHelp)&&animalCoverageComplete(e.animalCoverage,[320,390,768,1440])&&solarCoverageComplete(e.solarCaptionCoverage,[320,390,768,1440])&&journeySupportComplete(e.journeySupport,[320,390,768,1440])&&retentionComplete(e.offlineRetention)&&offlineComplete(e.offlineResilience,name)&&e.version&&e.chapters.length===16&&e.widths.length===4&&historyViewsComplete(e.historyViews,[320,390,768,1440])))))throw Error('Actual required browser engine evidence missing');
+ if(requiredEngines.length&&coldExpected){
+  const context=qualityContext.currentContext(),proof=engineProof?.reusedEarlyNavigation;
+  if(!nativeNavigationReuseComplete(proof,{context,sourceDigest:unit.sourceDigest,build:report.build,engines:engineProof.engines}))throw Error('Missing current end-verified same-run native navigation proof');
+  const identity={context,sourceDigest:unit.sourceDigest,build:report.build,environment:coldBrowserEnvironment(),dist:await fileSnapshot(path.resolve(process.env.QA_DIST??'dist')),navigation:nativeNavigationInput('http://127.0.0.1:4480'),engines:requiredEngines};
+  qualityContext.assertContext(JSON.parse(await fs.readFile(path.join(directory,'ci-context.json'),'utf8')),context);
+  for(const engine of engineProof.engines)await validateRestoredNativeNavigation(path.join(directory,'early-native-navigation'),path.join(directory,'early-native-navigation-proof.json'),directory,identity,proof.sealSHA256,{name:engine.name,version:engine.version});
+ }
  const screenshots=[];for(const file of (await fs.readdir(directory)).filter(f=>/^(?:quality-|journey-engine-).*\.png$/.test(f)).sort()){const data=await fs.readFile(path.join(directory,file));if(data.subarray(0,8).toString('hex')!=='89504e470d0a1a0a')throw Error('Broken screenshot');screenshots.push({file,width:data.readUInt32BE(16),height:data.readUInt32BE(20),sha256:createHash('sha256').update(data).digest('hex')});}
  if(!screenshots.length)throw Error('Missing actual screenshots');
  let pr=null;if(process.env.GITHUB_EVENT_PATH){const event=JSON.parse(await fs.readFile(process.env.GITHUB_EVENT_PATH,'utf8'));if(event.pull_request)pr={number:event.pull_request.number,head:event.pull_request.head.sha,base:event.pull_request.base.sha};}

@@ -51,6 +51,13 @@ export async function prepareReview(directory='.qa-output'){
    if(/\.(png|json|xml)$/.test(name)&&(await fs.lstat(source)).isFile())files.push({name:'journey-engine-'+engine+'-partial-'+name.replaceAll(path.sep,'-'),source,sourceFile:path.relative(directory,source)});
   }
  }
+ // Keep original early engine evidence before the complete runner clears the
+ // flat namespace. Only these exact flat engine directories; never profiles.
+ const earlyRoot=path.join(directory,'early-native-navigation');
+ try{const source=path.join(earlyRoot,'original-report.json');if(!(await fs.lstat(source)).isFile())throw Error('Unexpected original early native report');files.push({name:'early-native-navigation-original-report.json',source,sourceFile:path.relative(directory,source)});}catch(error){if(error.code!=='ENOENT')throw error;}
+ for(const engine of ['chromium','firefox','webkit'])for(const name of (await fs.readdir(path.join(earlyRoot,engine)).catch(error=>{if(error.code==='ENOENT')return[];throw error;})).sort()){
+  if(!/\.(png|json|xml)$/.test(name))continue;const source=path.join(earlyRoot,engine,name);if(!(await fs.lstat(source)).isFile())throw Error('Unexpected early native original entry');files.push({name:'journey-engine-'+engine+'-early-original-'+name,source,sourceFile:path.relative(directory,source)});
+ }
  // The reused worker's JSON/XML are original evidence too. Keep their exact
  // bytes beside the existing flat PNG copies; never traverse profiles/caches.
  const coldWorker=path.join(directory,'quality-early-offline');

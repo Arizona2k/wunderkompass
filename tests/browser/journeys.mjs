@@ -1,3 +1,4 @@
+import {browserErrorArrays,BROWSER_ERROR_FIELDS,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 import {journeyContentFlow} from './journey-content.mjs';
 import {journeyReadingFlow} from './journey-reading.mjs';
 import {journeyInquiryLoadFlow} from './journey-inquiry-loader.mjs';
@@ -243,17 +244,18 @@ export async function journeySupportView(p,{widths,shots,engine}){
   if(engine==='firefox'||engine==='webkit'){
    const browser=p.context().browser();assert(browser,'existing engine browser for changed journey helpers');
    const base=new URL(p.url()).origin,helpShots=path.join(shots,'journey-help-'+engine);await fs.mkdir(helpShots,{recursive:true});
-   learningHelp={checks:[],errors:[],consoleErrors:[]};
-   const monitor=page=>{page.on('pageerror',e=>learningHelp.errors.push(e.message));page.on('console',m=>{if(m.type()==='error')learningHelp.consoleErrors.push(m.text());});};
    const ready=page=>page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor();
-   await journeyReadingFlow(browser,base,ready,monitor,learningHelp,helpShots);
-   await journeyInquiryLoadFlow(browser,base,learningHelp,helpShots);
-   await journeyTransferFlow(browser,base,ready,monitor,learningHelp,helpShots);
-   assert.deepEqual(learningHelp.errors,[]);assert.deepEqual(learningHelp.consoleErrors,[]);
+   learningHelp=await journeyLearningHelpView(browser,base,ready,helpShots);
   }
   return {hints,diagrams,sources,widths,...(learningHelp?{learningHelp}:{}),seconds:(performance.now()-started)/1000};
  }catch(error){await p.screenshot({path:path.join(shots,'journey-engine-'+engine+'-support'+'-failure.png'),fullPage:true}).catch(()=>{});throw error;}finally{if(!wasLarge)await p.evaluate(()=>document.querySelector('.earth-app')?.classList.remove('large-reading'));await p.setViewportSize({width:390,height:844});await p.evaluate(hash=>location.hash=hash,initialRoute);if(initialRoute==='#journeys')await p.locator('.journey-filters input').waitFor();}
 }
+export async function journeyLearningHelpView(browser,base,ready,shots){
+ const proof={checks:[],...browserErrorArrays()},engine=browser.browserType().name(),monitor=page=>monitorBrowserErrors(page,base,proof,{engine});
+ try{await journeyReadingFlow(browser,base,ready,monitor,proof,shots);await journeyInquiryLoadFlow(browser,base,proof,shots);await journeyTransferFlow(browser,base,ready,monitor,proof,shots);for(const field of BROWSER_ERROR_FIELDS)assert.deepEqual(proof[field],[],field);return proof;}
+ catch(error){await fs.writeFile(path.join(shots,'journey-help-'+engine+'-failure-errors.json'),JSON.stringify({status:'failed',engine,...proof,failure:error.stack},null,2)+'\n');throw error;}
+}
+
 export async function offlineJourneys(p,report){await open(p,'water',2);await reveal(p.locator('.journey-inquiry'),'Dein Forschermerkzettel · freiwillig');assert.equal(await p.locator('.journey-inquiry textarea').inputValue(),'Offline-Sicherung: Wasser kann seinen Zustand ändern.');assert.equal(await p.locator('.journey-levels button').nth(2).getAttribute('aria-pressed'),'true');for(const j of JOURNEYS){await open(p,j.id,4);assert.equal(await p.locator('.journey-task .quiz-answer').count(),3);}await p.evaluate(()=>location.hash='world/topic/science-water-cycle');await p.locator('.journey-topic-links').waitFor();const disclosure=p.locator('details[data-history-disclosure="journey-links-science-water-cycle-water"]');await disclosure.locator('summary').click();await p.locator('.journey-topic-links a[href="#journeys/water/5"]').click();await p.locator('[data-chapter-inquiry="water:4"]').waitFor();report.checks.push('Cold restart without server: complete reciprocal chapter links and all 16 journey inquiries and private notebook/level restore from the same schema-3 pass');}
 
 export async function assertWaterWeatherDiagram(visual,id,selected){
