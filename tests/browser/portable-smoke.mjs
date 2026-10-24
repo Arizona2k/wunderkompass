@@ -2,6 +2,7 @@ import {newsRemovalFlow} from './no-news.mjs';
 import {solarFlow,offlineSolar} from './solar-comparison.mjs';
 import {animalFlow,animalNativeZoom,offlineAnimals} from './animal-learning.mjs';
 import {offlineResilience} from './offline-resilience.mjs';
+import {monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 import {offlineRetention} from './offline-retention.mjs';
 import {journeysFlow,prepareOfflineJourneys,offlineJourneys} from './journeys.mjs';
 import {researchFlow,offlineResearch} from './research.mjs';
@@ -32,7 +33,7 @@ try {
 // child exits with EADDRINUSE. Require the child's explicit listening signal.
 let online=false;for(let i=0;i<35;i++){if(server.exitCode!==null)throw Error('Preview process exited: '+serverLog);if(serverLog.includes('WK_PREVIEW_READY '+port)){try{if((await fetch(base+'/world.json',{signal:AbortSignal.timeout(1000)})).ok){online=true;break;}}catch{}}await new Promise(r=>setTimeout(r,300));}if(!online)throw Error('Preview failed: '+serverLog);
 const ready=p=>p.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor({timeout:20000});
-const monitor=p=>{p.on('console',m=>{if(m.type()==='error')report.consoleErrors.push(m.text());});p.on('requestfailed',r=>report.failedRequests.push({url:r.url(),error:r.failure()?.errorText}));p.on('pageerror',e=>report.errors.push(e.message));p.on('response',r=>{if(r.url().startsWith(base)&&r.status()>=400)report.ownHttpErrors.push({path:r.url().replace(base,''),status:r.status()});});p.on('request',r=>{if(!r.url().startsWith(base)&&!r.url().startsWith('data:')&&!r.url().startsWith('blob:'))report.externalRequests.push(r.url());});};
+const monitor=p=>monitorBrowserErrors(p,base,report);
 browser=await chromium.launch(options);report.browser=browser.version();
 try{
  if(runSuite('no-news'))await timed('no-news',()=>newsRemovalFlow(browser,base,ready,monitor,report,shots));
