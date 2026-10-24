@@ -36,9 +36,13 @@ export function checkSyntaxFiles(files){
 export function selectTests(changed){
  const files=[...new Set(changed.map(f=>f.replaceAll('\\','/')))];
  const runtime=files.filter(f=>!/^work\/|^\.qa-output\//.test(f)&&!/\.md$/.test(f));
+ // Only this known non-runtime dossier registry is metadata. If a future
+ // application import reaches it, it must return to the broad UI path.
+ const metadata=new Set();
+ if(runtime.includes('content/editorial-reviews.json')&&fs.existsSync('content/editorial-reviews.json')&&!dependencies('migration/main.tsx').has(path.resolve('content/editorial-reviews.json')))metadata.add('content/editorial-reviews.json');
  const syntaxFiles=runtime.filter(f=>/\.(?:mjs|cjs|js)$/.test(f)&&fs.existsSync(f)&&fs.statSync(f).isFile()).sort();
  const infrastructure=runtime.some(f=>/^(package\.json|pnpm-lock|qa\/|vite\.|tsconfig|eslint|build\/|scripts\/|\.github\/|performance-budgets)/.test(f));
- const unknown=runtime.some(f=>! /^(app\/|components\/|hooks\/|lib\/|migration\/|public\/|exports\/|tests\/)/.test(f));
+ const unknown=runtime.some(f=>!metadata.has(f)&&! /^(app\/|components\/|hooks\/|lib\/|migration\/|public\/|exports\/|tests\/)/.test(f));
  // A deleted dependency cannot be resolved by the current graph: fail broad.
  const deleted=runtime.some(f=>!fs.existsSync(f));
  const allUnits=fs.readdirSync('tests').filter(f=>f.endsWith('.test.mjs')).map(f=>'tests/'+f);
@@ -47,13 +51,14 @@ export function selectTests(changed){
  const unitTests=infrastructure||unknown||deleted?allUnits:allUnits.filter(f=>[...dependencies(f,new Set(),graph)].some(d=>absolute.has(d))||runtime.includes(f));
  let browser=[];
  if(runtime.length){
-  if(!infrastructure&&!unknown&&runtime.every(f=>/^(app\/challenge-hints\.json|tests\/challenge\.test\.mjs|exports\/content\/challenge-hints\.json)$/.test(f)))browser=['challenge','offline'];
+  if(runtime.every(f=>metadata.has(f)))browser=[];
+  else if(!infrastructure&&!unknown&&runtime.every(f=>/^(app\/challenge-hints\.json|tests\/challenge\.test\.mjs|exports\/content\/challenge-hints\.json)$/.test(f)))browser=['challenge','offline'];
   else if(!infrastructure&&!unknown&&runtime.every(f=>/^(app\/update-history|tests\/update-history\.test\.mjs)/.test(f)))browser=['home','offline'];
   else if(!infrastructure&&!unknown&&runtime.every(f=>/^(app\/journey-inquir|tests\/journeys\.test\.mjs|exports\/content\/journey-inquiries\.json)/.test(f)))browser=['journeys','backup','offline'];
   else if(runtime.every(f=>/^tests\/.*\.test\.mjs$/.test(f)))browser=[];
   else browser=[...REQUIRED_SUITES];
  }
- return {scope:'local iteration only',fullRequiredBeforeReady:true,changed:files,syntaxFiles,unitTests,release:infrastructure||unknown||runtime.some(f=>f.startsWith('tests/release/')),browser,reason:infrastructure||unknown||deleted?'Unknown/shared/deleted input: conservative full selection':'Transitive unit dependencies and explicit browser-risk mapping; unknown UI changes select the full browser path'};
+ return {scope:'local iteration only',fullRequiredBeforeReady:true,changed:files,syntaxFiles,unitTests,release:infrastructure||unknown||runtime.some(f=>f.startsWith('tests/release/')),browser,staticContent:browser.length>0||metadata.size>0,reason:infrastructure||unknown||deleted?'Unknown/shared/deleted input: conservative full selection':metadata.size&&runtime.every(f=>metadata.has(f))?'Known dossier registry outside application dependencies: static content/reference integrity and actual transitive units; final full checks remain mandatory':'Transitive unit dependencies and explicit browser-risk mapping; unknown UI changes select the full browser path'};
 }
 function changedFiles(base){
  const git=(...a)=>execFileSync('git',a,{encoding:'utf8'}).trim().split('\n').filter(Boolean);
@@ -70,7 +75,8 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
   run('corepack',['pnpm','run','typecheck:fast']);run('corepack',['pnpm','run','lint:fast']);
   if(plan.unitTests.length)run(process.execPath,['--import','./scripts/test-runtime.mjs','--test',...plan.unitTests]);
   if(plan.release)run(process.execPath,['--test',...fs.readdirSync('tests/release').filter(f=>f.endsWith('.test.cjs')).map(f=>'tests/release/'+f)]);
-  if(plan.browser.length){run('corepack',['pnpm','run','build']);run('corepack',['pnpm','run','verify']);run('corepack',['pnpm','run','test:browser'],{...process.env,QA_SUITE:plan.browser.join(',')});}
+  if(plan.staticContent)run(process.execPath,['scripts/verify-content.mjs','--static-only']);
+  if(plan.browser.length){run('corepack',['pnpm','run','build']);run('corepack',['pnpm','run','test:browser'],{...process.env,QA_SUITE:plan.browser.join(',')});}
   console.log('Local selected checks passed; this is not the mandatory complete Ready/Quality check.');
  }
 }

@@ -22,3 +22,29 @@ test('actual complete without retired news exports extraction catches changed so
   assert.throws(()=>verifyFreshExport(expected,{...original,files:original.files.slice(1)}),/Source and checked export differ/);
  }finally{fs.rmSync(root,{recursive:true,force:true});}
 });
+
+test('actual early verifier accepts current static content before UI evidence exists, while final verification and stale-export gates stay closed',()=>{
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'wk-early-content-'));
+ try{
+  for(const dir of ['app','build','components','hooks','lib','migration','public','content','exports','scripts','tests','.github'])fs.cpSync(dir,path.join(root,dir),{recursive:true});
+  for(const file of ['package.json','tsconfig.json','vite.config.ts','pnpm-workspace.yaml'])fs.copyFileSync(file,path.join(root,file));
+  fs.symlinkSync(path.resolve('node_modules'),path.join(root,'node_modules'),'dir');
+  fs.mkdirSync(path.join(root,'dist'));fs.writeFileSync(path.join(root,'dist/index.html'),'<meta name="learning-build" content="synthetic-not-yet-UI-reviewed">');
+  const reviews=JSON.parse(fs.readFileSync(path.join(root,'content/editorial-reviews.json'),'utf8'));for(const dossier of reviews.dossiers)delete dossier.ui;
+  fs.writeFileSync(path.join(root,'content/editorial-reviews.json'),JSON.stringify(reviews));
+  fs.mkdirSync(path.join(root,'.qa-output'));const final=path.join(root,'.qa-output/editorial-report.json');fs.writeFileSync(final,'untouched previous final report');
+  const verify=(args=[])=>execFileSync(process.execPath,['scripts/verify-content.mjs',...args],{cwd:root,stdio:'pipe'});
+  assert.throws(()=>verify(),/Invalid or stale individual dossier/,'original final-before-browser order blocks the not-yet-produced UI proof');
+  verify(['--static-only']);const report=JSON.parse(fs.readFileSync(path.join(root,'.qa-output/editorial-static-report.json'),'utf8'));
+  assert.ok(report.results.length>0&&report.results.every(r=>r.contentReady&&!Object.hasOwn(r,'structurallyReady')));assert.match(report.scope,/no current UI acceptance/);assert.equal(Object.hasOwn(report,'build'),false);
+  assert.equal(fs.readFileSync(final,'utf8'),'untouched previous final report','an early report cannot replace a final UI acceptance file');
+  fs.rmSync(path.join(root,'dist'),{recursive:true});verify(['--static-only']);assert.throws(()=>verify(),/ENOENT/,'full verification still requires a built product');
+  assert.throws(()=>verify(['--skip-ui']),/Unknown verification argument/);
+  const selection=()=>JSON.parse(execFileSync(process.execPath,['scripts/test-selection.mjs','--files','content/editorial-reviews.json'],{cwd:root,encoding:'utf8'}));
+  assert.deepEqual(selection().browser,[]);
+  const entry=path.join(root,'migration/main.tsx'),entrySource=fs.readFileSync(entry,'utf8');fs.appendFileSync(entry,'\nimport "../content/editorial-reviews.json";\n');
+  assert.equal(selection().browser.length,10,'a newly introduced actual runtime dependency prevents the metadata-only selection');fs.writeFileSync(entry,entrySource);
+  const file=path.join(root,'app/country-metadata.json'),countries=JSON.parse(fs.readFileSync(file,'utf8'));countries[Object.keys(countries)[0]].capital='Synthetic stale export only';fs.writeFileSync(file,JSON.stringify(countries));
+  assert.throws(()=>verify(['--static-only']),/Source and checked export differ/,'early mode cannot bypass actual source/export integrity');
+ }finally{fs.rmSync(root,{recursive:true,force:true});}
+});
