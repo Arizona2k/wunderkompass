@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "Implemented with documented AI countercheck and actual targeted built UI/native/cold-offline proof; complete final master regression and actual Firefox/WebKit pending.",
+  "status": "Three history topics with retained source reviews and prior accepted branch proofs; integrated PR62 completion UI/full/native qualification pending.",
   "runtimeNewTopics": 3,
   "acceptedNew": 0,
   "independentReview": false,
@@ -9,7 +9,7 @@
     "history-mohenjo-daro",
     "history-bronze"
   ],
-  "scope": "Existing WK053 history31→62. Three distinct new historical topics now implemented; bronze addition still awaiting own current UI/full/native acceptance. Previous sources, manuscript reviews and accepted delivery identities remain in their original records.",
+  "scope": "ExistingWK053 history31→62. Three new historical topics implemented, including independent bronze addition on actually delivered M61. Its own full/current UI/native acceptance is pending; retained accepted histories preserved.",
   "sourcesReadOn": "2026-10-17",
   "sourceReadEvidence": {
     "khipu": [
@@ -596,10 +596,59 @@
   },
   "scopeBeforeBronze20261025": "Part of existingWK053 history31→62, not a new roadmap. Two new distinct concepts, no counting diagrams or question variants as articles.",
   "bronzePreparation20261025": {
-    "sourceParent": "a9679675f30b5ad22ab193755356317c6024e467",
-    "status": "source prepared; actual rendered/negative/full/native proof pending",
-    "originalQuestionBankRetained": 217,
-    "original166Cause": "open",
-    "manuscriptStockBoundary": "No bronze topic in actual current187or Master27/d97catalog/research/history review. Unknown21private WIP still individually unproved; no recovery claim."
+    "baseCommit": "1da6eca5f5827a7915e1dbe2477c91406c69d22a",
+    "sourcesActuallyRead": "Ashmolean, Met and Getty opened2026-10-25; original reads retained privately with developed candidate.",
+    "scope": "Invented evidence cards; no original archaeological photo or original museum object adopted. No accepted/independent human approval claimed.",
+    "ui": "Pending exact independent candidate early/full/native proof."
+  },
+  "bronzeIndependentCurrentBuiltProof20261025": {
+    "sourceCommit": "bfcc9dc9786ae072bb3896132ece97a77a5822a1",
+    "sourceDigest": "b55f8c4d33600102b40b4ed4a24b058c9541930d2c084c6c7fa0e081e6801af7",
+    "build": "fe81f017a1780949",
+    "originalFullReportSHA256": "3185d72f428ee31c284677b2b17cbeae0b5c0e25a853fce149de307b899ed186",
+    "normal": 5,
+    "cold": 1,
+    "native": 2,
+    "recovery": 4,
+    "actualSearchModelSourceBackAndOffline": true,
+    "earlyThreeAuthorQuizWrongReasonsHintsAndReload": true,
+    "independentHumanReview": false,
+    "nativeCIAndDelivery": "pending",
+    "scope": "New Bronze entry only; prior historical records remain exactly retained."
+  },
+  "pr62CompletionHistoryPreparation20261025": {
+    "mediaSource": "a328721ebfed0577706ae423f66aab4d7fe85679",
+    "independentBronzeSource": "40e4c63af96cfd97cf71639784a0cfb85c11470b",
+    "scope": "Same three article factual records. Prior independent full b55 and cumulative early/failure records retain their original sources; integrated UI/full/native proof pending.",
+    "previousBronzeEntry": {
+      "id": "history-bronze",
+      "kind": "new",
+      "goal": "Du trennst Material und zeitliche Einordnung und prüfst, wie weit eine Schlussfolgerung aus einzelnen Funden reicht.",
+      "ageLevels": {
+        "6-8": "Menschen stellten ein neues Metallgemisch her. Sie benutzten trotzdem auch Steinwerkzeuge weiter.",
+        "9-11": "Vergleiche im Geschichtsdetektiv die beiden erfundenen Fundkarten. Unterscheide Materialangaben und Fundzusammenhang. Blende den Zusammenhang aus: Was lässt sich dann nicht mehr allein aus dem Material ablesen?",
+        "12-14": "Eigenschaften, Verarbeitung und Verwendung gehören zusammen. Bronze bedeutet kein einziges Mischungsverhältnis. Ein Fund sagt außerdem nicht, wie oft alle Menschen einer Region einen Werkstoff benutzten."
+      },
+      "conceptDecision": "Material identity, coexistence and archaeological inference; distinct from the retained early stone-tool topic, no duplicate date/diagram counting.",
+      "sources": [
+        {
+          "label": "Ashmolean Museum · Bronzezeit in Britannien und weiterverwendete Steinwerkzeuge",
+          "url": "https://britisharchaeology.ashmus.ox.ac.uk/collections/bronze-age.html"
+        },
+        {
+          "label": "The Met · Kupfer, Zinn und verschiedene Bearbeitungen",
+          "url": "https://www.metmuseum.org/essays/ancient-greek-bronze-vessels"
+        },
+        {
+          "label": "Getty Conservation Institute · Zusammensetzung und Untersuchung von Bronze",
+          "url": "https://www.getty.edu/publications/bronze-guidelines/vol-1/2/"
+        }
+      ],
+      "claimAnchors": "Ashmolean lines78–88 regional British chronology/continuing stone use; Met lines89–95 copper/tin and different forming methods; Getty lines8–20 composition/properties/analytical distinction. Actually opened2026-10-25.",
+      "mediaDecision": "Own clearly invented evidence-card comparison with AI assistance. Labels separate material from contextual evidence; not object photos, copied museum artwork, microscopic metal structure or a casting recipe. Current learning purpose is comparison of evidence; no original museum-photo pixel review claimed.",
+      "contentHash": "6b1b07329ffac8f5503743e640dec7ff58c09718eba440a1d22017a156d8c863",
+      "uiChecked": true,
+      "independentReview": false
+    }
   }
 }

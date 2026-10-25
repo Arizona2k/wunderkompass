@@ -1,12 +1,14 @@
+import {topicAtHistoricalMediaReference} from './retained-topic-reference.mjs';
+import mediaOriginal from './fixtures/retained-before-bronze-history-media-a967.json' with {type:'json'};
 import test from 'node:test';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
 import catalog from '../app/world-catalog.json' with {type:'json'};import graph from '../app/world-connections.json' with {type:'json'};import original from './fixtures/retained-before-bronze-history.json' with {type:'json'};import {CHALLENGE_BANK,restoreChallenge} from '../app/knowledge-challenge.ts';
 import hints from '../app/challenge-hints.json' with {type:'json'};
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 test('bronze preserves every actual preceding217question record,187topic and prior graph; only its one declared backlink is added',()=>{
- assert.equal(original.sourceCommit,'a9679675f30b5ad22ab193755356317c6024e467');assert.equal(original.questions.length,217);assert.equal(original.topicHashes.length,187);
+ assert.equal(original.sourceCommit,'1da6eca5f5827a7915e1dbe2477c91406c69d22a');assert.equal(mediaOriginal.sourceCommit,'a9679675f30b5ad22ab193755356317c6024e467');assert.deepEqual(mediaOriginal.questions,original.questions,'all217question records remain exact across both genuine preceding baselines');for(const old of mediaOriginal.topicHashes){let current=catalog.find(t=>t.id===old.id);if(current.id==='history-stone_tools')current={...current,related:current.related.filter(id=>id!=='history-bronze')};assert.equal(hash(current),old.sha256,'exact actual media-reviewed pre-Bronze topic '+old.id);}assert.equal(original.questions.length,217);assert.equal(original.topicHashes.length,187);
  assert.deepEqual(CHALLENGE_BANK.filter(q=>q.topic!=='history-bronze'),original.questions,'every old answer/index/hint/explanation/order remains exact');assert.equal(CHALLENGE_BANK.length,220);
  assert.deepEqual(catalog.filter(t=>t.id!=='history-bronze').map(t=>t.id),original.topicHashes.map(t=>t.id));
- for(const old of original.topicHashes){let current=catalog.find(t=>t.id===old.id);if(current.id==='history-stone_tools'){assert.equal(current.related.filter(id=>id==='history-bronze').length,1);current={...current,related:current.related.filter(id=>id!=='history-bronze')};}assert.equal(hash(current),old.sha256,old.id+' all factual/answer/source/model/old relationship fields');}
+ for(const old of original.topicHashes){let current=catalog.find(t=>t.id===old.id);if(current.id==='history-stone_tools'){assert.equal(current.related.filter(id=>id==='history-bronze').length,1);current={...current,related:current.related.filter(id=>id!=='history-bronze')};}assert.equal(hash(topicAtHistoricalMediaReference(current)),old.sha256,old.id+' all factual/answer/source/model/old relationship fields, except the exact independently reviewed Okapi AI-disclosure wording');}
  assert.equal(hash({...graph,connections:graph.connections.filter(c=>c.fromId!=='history-bronze'&&c.toId!=='history-bronze')}),original.graphSHA256);
  const added=graph.connections.filter(c=>c.fromId==='history-bronze'||c.toId==='history-bronze');assert.equal(added.length,1);assert.equal(added[0].toId,'history-stone_tools');assert.match(added[0].why,/verschiedenen Regionen und Zeiten/);
 });
