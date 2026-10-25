@@ -9,3 +9,6 @@
 
 /* Keep captions clear of the existing rounded, clipped article frame. */
 .animal-illustration:not(.compact){padding:1rem;box-sizing:border-box}
+
+.animal-media-kind{display:block;box-sizing:border-box;padding:.5rem 1rem;font-size:1rem;line-height:1.5;color:#425c62}
+.large-reading .animal-media-kind{font-size:1.15rem}

@@ -1,3 +1,9 @@
+## Vorbereitet und gezielt belegt · Herkunft schon in der Kachel und richtiger Rücksprung
+
+Tierbilder zeigen ihre Herkunft jetzt auch vor dem Öffnen: „KI-Illustration“ beim Okapi und „Zeichnung mit KI-Unterstützung“ bei den23beibehaltenen Merkmalszeichnungen. Originale und Artikelhinweise bleiben erhalten. Sechs tatsächlich unbeschriftete alte Kachelfälle wurden mit demselben neuenGuard abgewiesen; alle24aktuellen Kacheln bei320normal/groß und zusätzlicheDesktop-/native200%-Fälle sowie zwei absichtlich falsche Zustände bestanden. Die Bildtypen bleiben klar von Fotos getrennt.
+
+Ein dabei konkret beobachteter Rücksprung vonSeite3 hatte den richtigenÖffner gespeichert, renderte aber beimFokusaufruf kurzSeite1. DerErgebniszähler erhielt deshalb denFokus. Die aktuelleSeite folgt jetzt sofort derHashroute; unveränderterFokusguard und echte Aufruf-/DOM-Gegenüberstellung belegen den Unterschied.12gezielteRückkehrfälle aller sechs paginiertenKategorien bestehen mitPointer/Großschrift undTastatur; Clamping undFilterreset bleiben. Neue Voll-/nativeCI-/Lieferabnahme offen, kein Zusammenhang mit der weiterhin unbekannten166Ursache behauptet.
+
 ## Vorbereitet und früh tatsächlich geprüft · Seismograf als Gerätebeispiel
 
 Eine eigene ausdrücklich alsKI-Illustration benannte Geräteansicht ergänzt den Seismografen. Das erfundene vertikale Feder-Masse-Beispiel zeigt verbundene Teile und eine Schreibspitze am Papier. Der Hinweis grenzt die gezeichnete Linie von Messdaten und die senkrechte Messrichtung vom seitlichen interaktiven Modell ab; keine Rekonstruktion vonKreils1855Entwurf. Die ursprünglichen Funktionsbilder, dreiModellzustände und zweiWege zumErdbebenlabor bleiben erhalten.26.398ByteWebP/800×500, unverändertes Original und tatsächliche Quellen-/Rechteprüfung erhalten. Zwei konkret alsPDausgewieseneUSGS-Fotos wurden mangels abrufbarer und prüfbarerBilddateien nicht übernommen; keinWikimediaabruf.

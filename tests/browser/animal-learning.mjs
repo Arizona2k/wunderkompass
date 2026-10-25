@@ -31,6 +31,36 @@ export async function assertOwnAnimalMedia(visual,id){
  return actual;
 }
 
+export async function assertAnimalCompactOrigin(figure,kind,{width}={}){
+ const label=kind==='ai-illustration'?'KI-Illustration':'Zeichnung mit KI-Unterstützung';
+ const badge=figure.getByText(label,{exact:true});
+ assert.equal(await badge.count(),1,'compact animal picture must have one visible honest AI-origin label');
+ assert.equal(await badge.isVisible(),true,'compact animal AI-origin label is actually visible');
+ const text=await figure.innerText();assert.ok(text.includes(label));assert.doesNotMatch(text,/echtes Foto|Originalfoto/i);
+ const ink=await badge.evaluate(e=>{const box=e.closest('figure').getBoundingClientRect(),r=document.createRange();r.selectNodeContents(e);return{font:parseFloat(getComputedStyle(e).fontSize),rects:[...r.getClientRects()].map(x=>({left:x.left,right:x.right,top:x.top,bottom:x.bottom})),box:{left:box.left,right:box.right,top:box.top,bottom:box.bottom}};});
+ assert.ok(ink.font>=16,'compact origin is readable, not fine print');assert.ok(ink.rects.length>0);assert.ok(ink.rects.every(r=>r.left>=-2&&r.right<=width+2&&r.left>=ink.box.left-1&&r.right<=ink.box.right+1&&r.bottom<=ink.box.bottom+1),'visible origin ink remains in the actual card');
+ return{kind,label,font:ink.font,visibleHonestOrigin:true};
+}
+
+export async function animalCompactOriginFlow(p,{width,shots,engine='chromium',state='normal',native=false}={}){
+ const initial=await p.evaluate(()=>location.hash),observed=[],entries=[OWN_MEDIA.entries.find(e=>e.kind==='ai-illustration'),OWN_MEDIA.entries.find(e=>e.kind!=='ai-illustration')];assert.ok(entries.every(Boolean));
+ let complete=false,current=entries[0].id;
+ try{for(const entry of entries){current=entry.id;
+  const ordered=catalog.filter(t=>t.category==='animals'),page=Math.floor(ordered.findIndex(t=>t.id===entry.id)/12)+1;assert.ok(page>0);
+  await p.evaluate(n=>location.hash='world/animals/page/'+n,page);const tile=p.locator('[data-route-focus="world-topic-'+entry.id+'"]');await tile.waitFor();const figure=tile.locator('[data-animal-illustration="'+entry.id+'"].compact');await figure.locator('img').evaluate(i=>i.decode());await prepareAxe(p);
+  const origin=await assertAnimalCompactOrigin(figure,entry.kind,{width});
+  if(shots&&[320,1440].includes(width)&&!native)await tile.screenshot({path:path.join(shots,'animal-compact-origin-'+engine+'-'+entry.id+'-'+state+'-'+width+'.png'),animations:'disabled'});
+  if(shots&&native){await figure.getByText(origin.label,{exact:true}).evaluate(e=>e.scrollIntoView({block:'center'}));await captureNativeViewport(p,path.join(shots,'animal-compact-origin-'+engine+'-'+entry.id+'-'+state+'-200-'+width+'.png'));}
+  await tile.click();await assertOwnAnimalMedia(p.locator('[data-animal-illustration="'+entry.id+'"]:not(.compact)'),entry.id);await p.goBack();await tile.waitFor();await p.waitForFunction(id=>document.activeElement?.getAttribute('data-route-focus')==='world-topic-'+id,entry.id);
+  observed.push({id:entry.id,width,state,native,...origin,articleOriginRetained:true,actualBackFocus:true});
+ }complete=true;}catch(error){
+  // Keep the original failed route visible for the existing outer diagnostics.
+  // Restoring the starting route in a finally block would hide the actual fault.
+  try{const actual=await p.evaluate(()=>({url:location.href,history:history.state,title:document.querySelector('#world-topic-title')?.textContent??null,active:document.activeElement?.getAttribute('data-route-focus')}));const failure={current,width,state,native,error:error.message,actual};console.error('ANIMAL_COMPACT_ORIGIN_FAILURE',JSON.stringify(failure));if(shots){await fs.writeFile(path.join(shots,'animal-compact-origin-failure-'+engine+'-'+state+'-'+width+'.json'),JSON.stringify(failure,null,2)+'\n',{flag:'wx'});await p.screenshot({path:path.join(shots,'animal-compact-origin-failure-'+engine+'-'+state+'-'+width+'.png'),fullPage:true,timeout:5000}).catch(()=>{});}}catch(diagnosticError){console.error('ANIMAL_COMPACT_ORIGIN_DIAGNOSTIC_UNAVAILABLE',JSON.stringify({current,width,state,error:diagnosticError.message}));}throw error;
+ }finally{if(complete){await p.evaluate(hash=>location.hash=hash,initial);if(initial.startsWith('#world/topic/'))await p.locator('#world-topic-title').waitFor();}}
+ return observed;
+}
+
 async function geometry(root,label){
  const result=await root.evaluate(root=>({overflow:document.documentElement.scrollWidth>innerWidth+2,bad:[...root.querySelectorAll('p,h3,h4,button,summary')].filter(e=>e.getClientRects().length&&(!e.closest('details:not([open])')||e.closest('details:not([open])')?.querySelector(':scope > summary')===e)).flatMap(e=>{const r=e.getBoundingClientRect();return r.left< -2||r.right>innerWidth+2||e.scrollWidth>e.clientWidth+2||(e.matches('button,summary')&&r.height<44)?[{text:e.textContent.slice(0,65),x:r.x,width:r.width,height:r.height}]:[];})}));
  assert.equal(result.overflow,false,label+' page overflow');assert.deepEqual(result.bad,[],label+' readable text and44px controls');
@@ -93,7 +123,7 @@ export async function assertAnimalSelectionFeedback(task){
  assert.doesNotMatch(await task.getByRole('status').innerText(),/Gut begründet\./,'selection does not certify an unobserved original explanation');
 }
 export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix=widths,navigationReuse}={}){
- const observed=[],focusChecks=[],start=performance.now(),searchFocus=await delayedSearchFocus(browser,base,monitor,shots);
+ const observed=[],focusChecks=[],compactOrigins=[],start=performance.now(),searchFocus=await delayedSearchFocus(browser,base,monitor,shots);
  for(const width of matrix){
   const c=await browser.newContext({viewport:{width,height:900},hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
   let current=DATA.entries[0].id,stage='normal';
@@ -109,6 +139,7 @@ export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix
    for(const key of ['favorites','notes'])assert.deepEqual(before[key],pass.progress[key]);assert.deepEqual(before.gameSessions['world:animal-detective'],pass.progress.gameSessions['world:animal-detective']);
    stage='reload';await p.reload();await ready(p);const data=DATA.entries.at(-1),root=p.locator('[data-animal-inquiry="'+data.id+'"]');await root.locator(':scope > summary').click();await root.getByText('Deine Auswahl passt.',{exact:true}).waitFor();assert.equal(await root.locator('.animal-inquiry-levels button').nth(2).getAttribute('aria-pressed'),'true','selected level survives reload');
    const after=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);assert.deepEqual(after.gameSessions,before.gameSessions,'every old and new session key survives reload');
+   stage='compact-origin-normal';compactOrigins.push(...await animalCompactOriginFlow(p,{width,shots,engine:browser.browserType().name(),state:'normal'}));
    await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));
    stage='large';for(const data of DATA.entries){current=data.id;observed.push(await exerciseAnimal(p,data,{width,shots,keyboard:true,state:'large'}));}
    stage='accessibility-and-focus';
@@ -117,6 +148,7 @@ export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix
    const focus=await focusTarget.evaluate(e=>{const style=getComputedStyle(e);return {active:document.activeElement===e,visible:e.matches(':focus-visible'),outlineWidth:parseFloat(style.outlineWidth),outlineStyle:style.outlineStyle};});
    assert.equal(focus.active,true,'real Tab/Shift+Tab returns to the selected thinking path');assert.equal(focus.visible,true,'keyboard focus, not just a pointer selection');assert.ok(focus.outlineWidth>=2&&focus.outlineStyle!=='none','visible keyboard outline');focusChecks.push({width,state:'large',tabNavigation:true,...focus});
    await audit.screenshot({path:path.join(shots,'animal-workshop-focus-'+width+'.png'),animations:'disabled'});
+   stage='compact-origin-large';compactOrigins.push(...await animalCompactOriginFlow(p,{width,shots,engine:browser.browserType().name(),state:'large'}));
    console.log('Animal workshop',width,DATA.entries.length,'cards passed');
   }catch(error){
    // Preserve the original strict failure before teardown. A timeout alone does
@@ -133,7 +165,7 @@ export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix
   }finally{lifecycle.stop();await c.close();}
  }
  const navigationProof={};await animalNavigation(browser,base,ready,monitor,shots,navigationProof,navigationReuse);
- report.animalCoverage={observed,focusChecks,searchFocus,photoPendingBackFocus:navigationProof.photoPendingBackFocus,seconds:(performance.now()-start)/1000,oldSessionsPreserved:true,largeText:true,axe:true,independentAcceptance:false,navigation:true};
+ report.animalCoverage={observed,focusChecks,compactOrigins,searchFocus,photoPendingBackFocus:navigationProof.photoPendingBackFocus,seconds:(performance.now()-start)/1000,oldSessionsPreserved:true,largeText:true,axe:true,independentAcceptance:false,navigation:true};
  await worldPhotoFlow(browser,base,ready,monitor,report,shots);
  report.animalCoverage.photoMetadata=report.photoMetadata;
  await retainedAnswerWordingFlow(browser,base,ready,monitor,report,shots);
@@ -143,9 +175,9 @@ export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix
 export async function animalNativeZoom(chromium,options,base,report,shots){
  const profile=path.join(shots,'animal-native-profile');await fs.mkdir(path.join(profile,'Default'),{recursive:true});await fs.writeFile(path.join(profile,'Default','Preferences'),JSON.stringify({partition:{default_zoom_level:{x:Math.log(2)/Math.log(1.2)}}}));
  const c=await chromium.launchPersistentContext(profile,{...options,...(!options.executablePath?{channel:'chromium'}:{}),viewport:{width:1280,height:900},deviceScaleFactor:1,reducedMotion:'reduce'}),p=c.pages()[0];
- try{await p.bringToFront();await p.goto(base+'#world/topic/'+DATA.entries[0].id);await p.locator('.world-mini-question').waitFor();const dimensions=await p.evaluate(()=>({cssWidth:innerWidth,scale:devicePixelRatio}));assert.deepEqual(dimensions,{cssWidth:640,scale:2});await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));const observed=[];for(const data of DATA.entries)observed.push(await exerciseAnimal(p,data,{width:640,keyboard:true,state:'large'}));const solarCaptures=[];report.solarNativeCoverage={observed:await exerciseSolar(p,{width:640,state:'large',shots,capture:async file=>{const shot=await captureNativeViewport(p,file);solarCaptures.push(shot);return shot;}}),percent:200,cssWidth:640,scale:2,captures:solarCaptures};await p.evaluate(id=>location.hash='world/topic/'+id,DATA.entries.at(-1).id);await p.locator('.animal-inquiry').locator(':scope > summary').click();await p.locator('.animal-inquiry').scrollIntoViewIfNeeded();const screenshot=await captureNativeViewport(p,shots+'/animal-native-200-large-640.png');report.animalNativeZoom={...dimensions,percent:200,screenshot,cards:DATA.entries.length,observed};}finally{await c.close();}
+ try{await p.bringToFront();await p.goto(base+'#world/topic/'+DATA.entries[0].id);await p.locator('.world-mini-question').waitFor();const dimensions=await p.evaluate(()=>({cssWidth:innerWidth,scale:devicePixelRatio}));assert.deepEqual(dimensions,{cssWidth:640,scale:2});await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));const observed=[];for(const data of DATA.entries)observed.push(await exerciseAnimal(p,data,{width:640,keyboard:true,state:'large'}));const solarCaptures=[];report.solarNativeCoverage={observed:await exerciseSolar(p,{width:640,state:'large',shots,capture:async file=>{const shot=await captureNativeViewport(p,file);solarCaptures.push(shot);return shot;}}),percent:200,cssWidth:640,scale:2,captures:solarCaptures};await p.evaluate(id=>location.hash='world/topic/'+id,DATA.entries.at(-1).id);await p.locator('.animal-inquiry').locator(':scope > summary').click();await p.locator('.animal-inquiry').scrollIntoViewIfNeeded();const screenshot=await captureNativeViewport(p,shots+'/animal-native-200-large-640.png');report.animalNativeZoom={...dimensions,percent:200,screenshot,cards:DATA.entries.length,observed};report.animalNativeZoom.compactOrigins=await animalCompactOriginFlow(p,{width:640,shots,engine:'chromium-native',state:'large',native:true});}finally{await c.close();}
 }
-export async function offlineAnimals(p,report){const observed=[];for(const data of DATA.entries)observed.push(await exerciseAnimal(p,data,{width:1280,keyboard:true,state:'offline'}));await offlineWorldPhotos(p,report);await offlineRetainedAnswerWording(p,report);report.animalOffline={cards:DATA.entries.length,coldRestart:true,observed};report.checks.push('All48 animal workshops usable after real server shutdown and cold offline browser restart');}
+export async function offlineAnimals(p,report){const observed=[];for(const data of DATA.entries)observed.push(await exerciseAnimal(p,data,{width:1280,keyboard:true,state:'offline'}));await offlineWorldPhotos(p,report);await offlineRetainedAnswerWording(p,report);const compactOrigins=await animalCompactOriginFlow(p,{width:1280,state:'offline'});report.animalOffline={cards:DATA.entries.length,coldRestart:true,observed,compactOrigins};report.checks.push('All48 animal workshops usable after real server shutdown and cold offline browser restart');}
 
 export async function animalNavigation(browser,base,ready,monitor,shots,navigationProof={},reuse){
  const engineName=browser.browserType().name(),commonStarted=performance.now();
