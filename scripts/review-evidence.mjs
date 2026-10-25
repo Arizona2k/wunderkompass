@@ -5,6 +5,30 @@ import {fileURLToPath} from 'node:url';
 import {sourceDigest} from './handoff.mjs';
 // Review PNGs only; production and offline budgets are unchanged.
 export const REVIEW_LIMIT=150_000_000;
+// Capture identities are never deduplicated. Only their byte-identical payloads
+// may share a file in a completed review. Diagnostics keep standalone originals.
+export async function storeReviewScreenshot(directory,capture,data,payloads,{share=false}={}){
+ if(data.length!==capture.bytes||createHash('sha256').update(data).digest('hex')!==capture.sha256)throw Error('Changed screenshot '+capture.file);
+ const previous=share?payloads.get(capture.sha256):null;
+ if(previous){
+  const original=await fs.readFile(path.join(directory,previous));
+  if(!original.equals(data))throw Error('Conflicting screenshot payload '+capture.file);
+  capture.storedAs=previous;return 0;
+ }
+ await fs.writeFile(path.join(directory,capture.file),data);capture.storedAs=capture.file;
+ if(share)payloads.set(capture.sha256,capture.file);
+ return data.length;
+}
+export async function readReviewScreenshot(directory,capture){
+ if(!capture.retained)throw Error('Screenshot was not retained '+capture.file);
+ const name=capture.storedAs??capture.file;
+ if(typeof name!=='string'||path.basename(name)!==name||/[\\/\0]/.test(name)||!name.endsWith('.png'))throw Error('Invalid stored screenshot path');
+ const file=path.join(directory,name),entry=await fs.lstat(file);
+ if(!entry.isFile()||entry.isSymbolicLink())throw Error('Nonregular stored screenshot '+name);
+ const data=await fs.readFile(file);
+ if(data.length!==capture.bytes||createHash('sha256').update(data).digest('hex')!==capture.sha256||data.readUInt32BE(16)!==capture.width||data.readUInt32BE(20)!==capture.height)throw Error('Changed stored screenshot '+capture.file);
+ return data;
+}
 export function reviewStorage(screenshots,retainedBytes,{previous=null}={}){
  const groups=new Map();
  for(const capture of screenshots){const group=groups.get(capture.sha256)??[];group.push(capture);groups.set(capture.sha256,group);}
@@ -14,7 +38,7 @@ export function reviewStorage(screenshots,retainedBytes,{previous=null}={}){
  const matrix=items=>createHash('sha256').update(items.map(capture=>capture.file).sort().join('\n')).digest('hex');
  const currentMatrix=matrix(screenshots),comparable=previous?.status==='passed'&&Array.isArray(previous.screenshots)&&matrix(previous.screenshots)===currentMatrix&&Number.isSafeInteger(previous.retainedBytes)&&previous.retainedBytes>=0;
  return {generatedImages:screenshots.length,retainedImages:screenshots.filter(capture=>capture.retained).length,omittedImages:screenshots.filter(capture=>!capture.retained).length,
-  retainedBytes,limitBytes:REVIEW_LIMIT,reserveBytes:REVIEW_LIMIT-retainedBytes,withinBudget:Number.isSafeInteger(retainedBytes)&&retainedBytes>=0&&retainedBytes<=REVIEW_LIMIT,matrixSha256:currentMatrix,
+  retainedBytes,retainedCaptureBytes:screenshots.filter(capture=>capture.retained).reduce((sum,capture)=>sum+capture.bytes,0),storedImages:new Set(screenshots.filter(capture=>capture.retained).map(capture=>capture.storedAs??capture.file)).size,sharedPayloadCopies:screenshots.filter(capture=>capture.retained&&capture.storedAs&&capture.storedAs!==capture.file).length,limitBytes:REVIEW_LIMIT,reserveBytes:REVIEW_LIMIT-retainedBytes,withinBudget:Number.isSafeInteger(retainedBytes)&&retainedBytes>=0&&retainedBytes<=REVIEW_LIMIT,matrixSha256:currentMatrix,
   exactDuplicates:{groups:duplicateGroups.map(group=>({sha256:group[0].sha256,files:group.map(({file,retained})=>({file,retained}))})),extraCaptures:duplicateGroups.reduce((sum,group)=>sum+group.length-1,0),retainedExtraCopies:retainedGroups.reduce((sum,group)=>sum+group.length-1,0),retainedExtraBytes:retainedGroups.reduce((sum,group)=>sum+group.slice(1).reduce((bytes,capture)=>bytes+capture.bytes,0),0),alreadyOmittedCopiesWithRetainedOriginal:omittedCopies.length,alreadyOmittedBytesWithRetainedOriginal:omittedCopies.reduce((sum,capture)=>sum+capture.bytes,0),automaticDuplicateRemovals:0,meaning:'Byte identity alone never removes a distinct state, width, focus, failure or mandatory image. Omitted copies describe existing explicit curation, not new deduplication savings.'},
   comparison:comparable?{status:'same capture matrix; informational only',previousBuild:previous.build??null,previousSourceDigest:previous.sourceDigest??null,retainedImagesDelta:screenshots.filter(capture=>capture.retained).length-previous.screenshots.filter(capture=>capture.retained).length,retainedBytesDelta:retainedBytes-previous.retainedBytes}:{status:previous?'different or invalid matrix; no savings claim':'previous comparable run not supplied'},
  };
@@ -70,22 +94,32 @@ export async function prepareReview(directory='.qa-output'){
  let report=null,handoff=null;
  try{report=JSON.parse(await fs.readFile(path.join(directory,'portable-report.json'),'utf8'));handoff=JSON.parse(await fs.readFile(path.join(directory,'handoff.json'),'utf8'));}catch{/* Diagnostic artifacts are still required on failed runs. */}
  const complete=report?.status==='passed'&&report.scope==='complete mandatory regression';
- const screenshots=[],copied=[];let generatedBytes=0,retainedBytes=0;
+ const currentSource=complete?await sourceDigest():null;
+ let engineReport=null,engineReadable=true;
+ try{engineReport=JSON.parse(await fs.readFile(path.join(directory,'engine-report.json'),'utf8'));}catch(error){if(error.code!=='ENOENT')engineReadable=false;}
+ const shareComplete=complete&&handoff?.sourceDigest===currentSource&&handoff.build===report.build&&engineReadable&&(!engineReport||(engineReport.status==='passed'&&engineReport.sourceDigest===currentSource&&engineReport.build===report.build));
+ const screenshots=[],copied=[],payloads=new Map();let generatedBytes=0,retainedBytes=0;
  // Preserve failure reports even if a damaged PNG aborts curation.
  for(const file of files.filter(f=>/\.(json|xml)$/.test(f.name))){await fs.copyFile(file.source,path.join(destination,file.name));copied.push(file.name);}
  for(const file of files.filter(f=>/^(quality-|journey-engine-).*\.png$/.test(f.name))){
   const {name,source,sourceFile}=file,data=await fs.readFile(source);if(data.length<24||data.subarray(0,8).toString('hex')!=='89504e470d0a1a0a')throw Error('Invalid screenshot '+name);
-  const retained=!complete||retainScreenshot(name);screenshots.push({file:name,...(sourceFile?{sourceFile}:{}),bytes:data.length,width:data.readUInt32BE(16),height:data.readUInt32BE(20),sha256:createHash('sha256').update(data).digest('hex'),retained});generatedBytes+=data.length;
-  if(retained){await fs.writeFile(path.join(destination,name),data);retainedBytes+=data.length;}
+  const retained=!complete||retainScreenshot(name),capture={file:name,...(sourceFile?{sourceFile}:{}),bytes:data.length,width:data.readUInt32BE(16),height:data.readUInt32BE(20),sha256:createHash('sha256').update(data).digest('hex'),retained};screenshots.push(capture);generatedBytes+=data.length;
+  // Required/focus/error originals keep their physical names as well. Other
+  // captures retain every identity, dimension, hash and source via storedAs.
+  if(retained)retainedBytes+=await storeReviewScreenshot(destination,capture,data,payloads,{share:shareComplete&&!requiredScreenshots.includes(name)&&!/(?:focus|error|failure)/.test(name)});
  }
+
+ // Resolve every retained identity back to the exact original, including aliases.
+ // Missing, altered or nonregular shared payloads fail before upload acceptance.
+ for(const capture of screenshots.filter(capture=>capture.retained))await readReviewScreenshot(destination,capture);
 
  const storage=reviewStorage(screenshots,retainedBytes),errors=[];
  if(complete){
-  if(!handoff||handoff.sourceDigest!==await sourceDigest()||handoff.build!==report.build)errors.push('Current handoff/code/build proof required');
+  if(!handoff||handoff.sourceDigest!==currentSource||handoff.build!==report.build)errors.push('Current handoff/code/build proof required');
   for(const name of requiredScreenshots)if(!screenshots.some(s=>s.file===name&&s.retained))errors.push('Missing required critical image '+name);
   if(!storage.withinBudget)errors.push('Review screenshot budget exceeded; revise coverage explicitly instead of dropping required evidence');
  }
- const manifest={schemaVersion:1,status:complete&&!errors.length?'passed':'diagnostic',errors,build:report?.build??null,sourceDigest:handoff?.sourceDigest??null,generatedBytes,retainedBytes,limit:REVIEW_LIMIT,storage,screenshots,reports:copied,meaning:'Every current captured PNG is hashed. Required and representative originals plus all reports are uploaded; omitted originals can be reproduced with the unchanged full browser suite. Failed runs keep every current image. No automatic visual approval.'};
+ const manifest={schemaVersion:2,status:complete&&!errors.length?'passed':'diagnostic',errors,build:report?.build??null,sourceDigest:handoff?.sourceDigest??null,generatedBytes,retainedBytes,limit:REVIEW_LIMIT,storage,screenshots,reports:copied,meaning:'Every current capture keeps its identity, dimensions, hash, source and retention decision. Read retained bytes from storedAs (file for older manifests). Completed reviews share only byte-identical payloads; required/focus/error originals keep standalone names. retainedBytes counts actual PNG files; retainedCaptureBytes includes all retained identities. All reports and failed-run originals remain standalone. No automatic visual approval.'};
  await fs.writeFile(path.join(destination,'review-manifest.json'),JSON.stringify(manifest,null,2)+'\n');
  console.log(JSON.stringify({status:manifest.status,generatedBytes,retainedBytes,images:screenshots.length,retained:screenshots.filter(s=>s.retained).length,reserveBytes:storage.reserveBytes,exactDuplicateExtraCaptures:storage.exactDuplicates.extraCaptures,automaticDuplicateRemovals:0,errors}));
  if(errors.length)throw Error(errors.join('\n'));return manifest;

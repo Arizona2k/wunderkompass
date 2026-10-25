@@ -1,0 +1,10 @@
+.device-illustration{margin:0;min-width:0;max-width:100%;padding:1rem;box-sizing:border-box;background:#faf5eb;border-radius:1rem;color:#304e58;overflow-wrap:anywhere}
+.device-illustration img{display:block;width:100%;height:auto;max-height:25rem;object-fit:contain;border-radius:.6rem}
+.device-illustration-labels{display:flex;flex-wrap:wrap;gap:.6rem 1rem;margin-block:1rem;font-size:1rem;line-height:1.6}
+.device-illustration-labels span{min-width:0;border-block-end:1px solid #c3d3ce;padding-block:.25rem}
+.device-illustration figcaption{font-size:1rem;line-height:1.6}
+.device-illustration figcaption a{color:#245d70;text-decoration:underline;text-underline-offset:.2em}
+.large-reading .device-illustration-labels,.large-reading .device-illustration figcaption,.large-reading .device-media-kind{font-size:1.15rem}
+.device-illustration.compact{padding:.5rem}
+.device-illustration.compact img{max-height:12rem}
+.device-media-kind{display:block;margin-top:.4rem;font-size:1rem;line-height:1.5;color:#304e58}

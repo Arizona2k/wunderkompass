@@ -164,6 +164,9 @@
 @media(forced-colors:active){.offline-progress progress::-webkit-progress-value{background:Highlight}.offline-progress progress::-moz-progress-bar{background:Highlight}}
 
 .building-diagram svg{display:block;width:100%;height:auto;max-height:340px}
+.building-sphere{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--border)}
+.building-sphere svg{display:block;width:100%;max-width:400px;height:auto;margin:0 auto}
+.building-sphere figcaption{font-size:1rem;line-height:1.6}
 .building-legend{list-style:none;padding:0;margin:16px 0;display:grid;gap:10px;font-size:1rem;line-height:1.5}
 .building-legend li{display:flex;align-items:baseline;gap:10px;min-width:0}
 .building-legend li>span{display:inline-grid;place-items:center;flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:#e5eff2;color:#285463;font-weight:700}

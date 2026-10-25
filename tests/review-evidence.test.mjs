@@ -1,5 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import os from 'node:os';import path from 'node:path';
-import {REVIEW_LIMIT,reviewStorage,retainScreenshot,requiredScreenshots,prepareReview} from '../scripts/review-evidence.mjs';
+import {createHash} from 'node:crypto';
+import {sourceDigest} from '../scripts/handoff.mjs';
+import {REVIEW_LIMIT,reviewStorage,retainScreenshot,requiredScreenshots,prepareReview,storeReviewScreenshot,readReviewScreenshot} from '../scripts/review-evidence.mjs';
 test('critical states are always retained while interchangeable intermediate binaries can be reproduced',()=>{
  assert.ok(requiredScreenshots.every(retainScreenshot));
  for(const f of ['journey-engine-webkit-390.png','quality-learning-journey-native-zoom-200.png','quality-navigation-offline-start.png','quality-navigation-updates-archive-320-full.png','quality-learning-journey-water-390.png'])assert.equal(retainScreenshot(f),true,f);
@@ -56,4 +58,39 @@ test('same-run cold worker original reports are uploaded byte for byte without r
 test('early native source report and exact flat engine originals survive main-run namespace cleanup without profiles',async t=>{
  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-early-native-originals-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));const root=path.join(dir,'early-native-navigation'),engine=path.join(root,'firefox');await fs.mkdir(path.join(engine,'profile'),{recursive:true});await fs.writeFile(path.join(engine,'profile','private.json'),'never scan a profile');const source=Buffer.from('{"meaning":"synthetic original early report"}\r\n'),proof=Buffer.from('{"actualSource":"synthetic original common proof"}\n'),png=Buffer.alloc(24);Buffer.from('89504e470d0a1a0a','hex').copy(png);png.writeUInt32BE(320,16);png.writeUInt32BE(900,20);await fs.writeFile(path.join(root,'original-report.json'),source);await fs.writeFile(path.join(engine,'common.json'),proof);await fs.writeFile(path.join(engine,'source.png'),png);
  const curated=await prepareReview(dir);assert.equal(curated.status,'diagnostic');assert.deepEqual(await fs.readFile(path.join(dir,'review','early-native-navigation-original-report.json')),source);assert.deepEqual(await fs.readFile(path.join(dir,'review','journey-engine-firefox-early-original-common.json')),proof);assert.deepEqual(await fs.readFile(path.join(dir,'review','journey-engine-firefox-early-original-source.png')),png);assert.equal(curated.screenshots.find(e=>e.file==='journey-engine-firefox-early-original-source.png').sourceFile,path.join('early-native-navigation','firefox','source.png'));assert.equal((await fs.readdir(path.join(dir,'review'))).some(name=>/profile|private/.test(name)),false);await fs.symlink(path.join(engine,'common.json'),path.join(engine,'linked.json'));await assert.rejects(prepareReview(dir),/Unexpected early native original entry/);assert.deepEqual(await fs.readFile(path.join(root,'original-report.json')),source);
+});
+
+test('complete review shares exact payloads while every capture and critical physical original survives',async t=>{
+ const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-shared-review-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));
+ const png=Buffer.alloc(24);Buffer.from('89504e470d0a1a0a','hex').copy(png);png.writeUInt32BE(320,16);png.writeUInt32BE(844,20);
+ const names=[...new Set([...requiredScreenshots,'journey-engine-firefox-state-320.png','journey-engine-firefox-state-1440.png','journey-engine-firefox-focus-320.png','journey-engine-firefox-failure-320.png'])];
+ for(const name of names)await fs.writeFile(path.join(dir,name),png);
+ await fs.writeFile(path.join(dir,'portable-report.json'),JSON.stringify({status:'passed',scope:'complete mandatory regression',build:'synthetic'}));
+ await fs.writeFile(path.join(dir,'handoff.json'),JSON.stringify({sourceDigest:await sourceDigest(),build:'synthetic'}));
+ const report=await prepareReview(dir),byName=new Map(report.screenshots.map(c=>[c.file,c]));
+ assert.equal(report.status,'passed');assert.equal(report.screenshots.length,names.length);assert.ok(report.screenshots.every(c=>c.retained));
+ assert.equal(report.storage.retainedImages,names.length);assert.equal(report.storage.sharedPayloadCopies,1);assert.equal(report.storage.storedImages,names.length-1);
+ assert.equal(report.storage.retainedCaptureBytes,png.length*names.length);assert.equal(report.retainedBytes,png.length*(names.length-1));
+ assert.equal(report.storage.exactDuplicates.automaticDuplicateRemovals,0);
+ for(const name of [...requiredScreenshots,'journey-engine-firefox-focus-320.png','journey-engine-firefox-failure-320.png'])assert.equal(byName.get(name).storedAs,name);
+ for(const capture of report.screenshots)assert.deepEqual(await readReviewScreenshot(path.join(dir,'review'),capture),png);
+ const alias=byName.get('journey-engine-firefox-state-320.png');assert.notEqual(alias.storedAs,alias.file);assert.equal(alias.file,'journey-engine-firefox-state-320.png');
+ const actual=(await fs.readdir(path.join(dir,'review'))).filter(n=>n.endsWith('.png'));assert.equal(actual.length,report.storage.storedImages);
+ await fs.unlink(path.join(dir,'review',alias.storedAs));await assert.rejects(readReviewScreenshot(path.join(dir,'review'),alias),/ENOENT/);
+ // A passed Chromium phase must not share files from a failed native phase.
+ await fs.writeFile(path.join(dir,'engine-report.json'),JSON.stringify({status:'failed',build:'synthetic',sourceDigest:await sourceDigest()}));
+ const failedNative=await prepareReview(dir);assert.equal(failedNative.storage.sharedPayloadCopies,0);assert.ok(failedNative.screenshots.every(c=>c.storedAs===c.file));
+});
+
+test('sharing rejects changed payloads, missing targets and unsafe aliases; diagnostics never share',async t=>{
+ const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-shared-negatives-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));
+ const png=Buffer.alloc(24);Buffer.from('89504e470d0a1a0a','hex').copy(png);png.writeUInt32BE(320,16);png.writeUInt32BE(844,20);
+ const capture={file:'quality-one-320.png',bytes:png.length,width:320,height:844,sha256:createHash('sha256').update(png).digest('hex'),retained:true},other={...capture,file:'quality-two-320.png'},payloads=new Map();
+ assert.equal(await storeReviewScreenshot(dir,capture,png,payloads,{share:true}),png.length);
+ assert.equal(await storeReviewScreenshot(dir,other,png,payloads,{share:true}),0);assert.equal(other.storedAs,capture.file);
+ await fs.writeFile(path.join(dir,capture.file),Buffer.alloc(24));await assert.rejects(readReviewScreenshot(dir,other),/Changed stored screenshot/);await assert.rejects(storeReviewScreenshot(dir,{...other,file:'quality-third.png'},png,payloads,{share:true}),/Conflicting screenshot payload/);
+ await assert.rejects(readReviewScreenshot(dir,{...other,storedAs:'../outside.png'}),/Invalid stored screenshot path/);
+ await fs.rm(path.join(dir,capture.file));await fs.symlink(path.join(dir,other.file),path.join(dir,capture.file));await assert.rejects(readReviewScreenshot(dir,other),/Nonregular stored screenshot/);await fs.rm(path.join(dir,capture.file));
+ for(const name of [capture.file,other.file])await fs.writeFile(path.join(dir,name),png);
+ const diagnostic=await prepareReview(dir);assert.equal(diagnostic.status,'diagnostic');assert.equal(diagnostic.storage.sharedPayloadCopies,0);assert.equal(diagnostic.retainedBytes,2*png.length);assert.ok(diagnostic.screenshots.every(c=>c.storedAs===c.file));
 });

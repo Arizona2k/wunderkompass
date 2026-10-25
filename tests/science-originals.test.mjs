@@ -1,3 +1,4 @@
+import {topicAtHistoricalMediaReference} from './retained-topic-reference.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
 import catalog from '../app/world-catalog.json' with {type:'json'};
 import graph from '../app/world-connections.json' with {type:'json'};
@@ -20,7 +21,7 @@ const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex
 test('selective science integration retains all164 previous factual topic records and each old relationship',()=>{
  assert.equal(original.sourceBase,'ded1fb52972e3ab52adc60e44e641036e7654cd7');assert.equal(original.topics.length,164);assert.equal(catalog.length,188);assert.equal(catalog.filter(t=>t.category==='science').length,46);
  const ids=review.topics.map(e=>e.id);assert.equal(new Set(ids).size,23);
- for(const before of original.topics){const current=catalog.find(t=>t.id===before.id);assert.ok(current);const {related,...fields}=current;assert.equal(hash(fields),before.fieldsExceptRelatedSHA256,before.id+' every prior factual field');assert.deepEqual(related.filter(id=>id!=='history-bronze'&&!ids.includes(id)),before.related);for(const target of related.filter(id=>ids.includes(id)))assert.ok(graph.connections.some(e=>e.fromId===before.id&&e.toId===target||e.toId===before.id&&e.fromId===target));}
+ for(const before of original.topics){const current=catalog.find(t=>t.id===before.id);assert.ok(current);const {related,...fields}=topicAtHistoricalMediaReference(current);assert.equal(hash(fields),before.fieldsExceptRelatedSHA256,before.id+' every prior factual field');assert.deepEqual(related.filter(id=>id!=='history-bronze'&&!ids.includes(id)),before.related);for(const target of related.filter(id=>ids.includes(id)))assert.ok(graph.connections.some(e=>e.fromId===before.id&&e.toId===target||e.toId===before.id&&e.fromId===target));}
  assert.equal(CHALLENGE_BANK.length,220);assert.equal(new Set(CHALLENGE_BANK.map(q=>q.id)).size,220);
  for(const entry of review.topics){const current=catalog.find(t=>t.id===entry.id);assert.equal(current.question.answers[current.question.correct],entry.originalQuestion.answers[entry.originalQuestion.correct]);assert.equal(current.questionFeedback.wrongReasons[current.question.correct],null);assert.equal(new Set(current.question.answers).size,3);assert.ok(current.learning.observe.length>35);}
  const edges=graph.connections.filter(e=>ids.includes(e.fromId)||ids.includes(e.toId));assert.equal(edges.length,41);assert.equal(review.retainedExplainedConnections.connections.length,28);

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "Implemented with documented AI countercheck and actual targeted built UI/native/cold-offline proof; complete final master regression and actual Firefox/WebKit pending.",
+  "status": "Three history topics with retained source reviews and prior accepted branch proofs; integrated PR62 completion UI/full/native qualification pending.",
   "runtimeNewTopics": 3,
   "acceptedNew": 0,
   "independentReview": false,
@@ -615,5 +615,50 @@
     "independentHumanReview": false,
     "nativeCIAndDelivery": "pending",
     "scope": "New Bronze entry only; prior historical records remain exactly retained."
+  },
+  "pr62CompletionHistoryPreparation20261025": {
+    "mediaSource": "a328721ebfed0577706ae423f66aab4d7fe85679",
+    "independentBronzeSource": "40e4c63af96cfd97cf71639784a0cfb85c11470b",
+    "scope": "Same three article factual records. Prior independent full b55 and cumulative early/failure records retain their original sources; integrated UI/full/native proof pending.",
+    "previousBronzeEntry": {
+      "id": "history-bronze",
+      "kind": "new",
+      "goal": "Du trennst Material und zeitliche Einordnung und prüfst, wie weit eine Schlussfolgerung aus einzelnen Funden reicht.",
+      "ageLevels": {
+        "6-8": "Menschen stellten ein neues Metallgemisch her. Sie benutzten trotzdem auch Steinwerkzeuge weiter.",
+        "9-11": "Vergleiche im Geschichtsdetektiv die beiden erfundenen Fundkarten. Unterscheide Materialangaben und Fundzusammenhang. Blende den Zusammenhang aus: Was lässt sich dann nicht mehr allein aus dem Material ablesen?",
+        "12-14": "Eigenschaften, Verarbeitung und Verwendung gehören zusammen. Bronze bedeutet kein einziges Mischungsverhältnis. Ein Fund sagt außerdem nicht, wie oft alle Menschen einer Region einen Werkstoff benutzten."
+      },
+      "conceptDecision": "Material identity, coexistence and archaeological inference; distinct from the retained early stone-tool topic, no duplicate date/diagram counting.",
+      "sources": [
+        {
+          "label": "Ashmolean Museum · Bronzezeit in Britannien und weiterverwendete Steinwerkzeuge",
+          "url": "https://britisharchaeology.ashmus.ox.ac.uk/collections/bronze-age.html"
+        },
+        {
+          "label": "The Met · Kupfer, Zinn und verschiedene Bearbeitungen",
+          "url": "https://www.metmuseum.org/essays/ancient-greek-bronze-vessels"
+        },
+        {
+          "label": "Getty Conservation Institute · Zusammensetzung und Untersuchung von Bronze",
+          "url": "https://www.getty.edu/publications/bronze-guidelines/vol-1/2/"
+        }
+      ],
+      "claimAnchors": "Ashmolean lines78–88 regional British chronology/continuing stone use; Met lines89–95 copper/tin and different forming methods; Getty lines8–20 composition/properties/analytical distinction. Actually opened2026-10-25.",
+      "mediaDecision": "Own clearly invented evidence-card comparison with AI assistance. Labels separate material from contextual evidence; not object photos, copied museum artwork, microscopic metal structure or a casting recipe. Current learning purpose is comparison of evidence; no original museum-photo pixel review claimed.",
+      "contentHash": "6b1b07329ffac8f5503743e640dec7ff58c09718eba440a1d22017a156d8c863",
+      "uiChecked": true,
+      "independentReview": false
+    }
+  },
+  "pr62CompletionBuiltProof20261025": {
+    "sourceCommit": "550d7bd3eedf89074bc926edc4e1816bf24ac93e",
+    "sourceDigest": "8abb5220ab3894eced213de67cc5c9b40c8e6421945ec95f4b06d9c396762aa0",
+    "build": "c2082694c645c33b",
+    "originalFullReportSHA256": "fbf41a13519f303c0aa14ce478dc230c4e3723d982933bf5b632f60b9627a176",
+    "actualSearchModelSourceBackAndOffline": true,
+    "nativeCIAndDelivery": "pending",
+    "independentHumanReview": false,
+    "scope": "Integrated current UI only; all prior original historical factual/evidence entries preserved."
   }
 }

@@ -6,7 +6,7 @@ import {useSavedGame,useSavedModel} from './saved-games';
 import DATA from './animal-inquiries.json';
 
 const LEVELS=['Belege sammeln','Zusammenhang erklären','Genauer nachdenken'] as const;
-type Task=(typeof DATA.entries)[number]['reason'];
+type Task=(typeof DATA.entries)[number]['reason']|(typeof DATA.entries)[number]['transfer'];
 
 // New optional keys live in the existing per-topic Schema-3 session. They never
 // replace the article's items/topicAnswer/compareAnimal or award a discovery.
@@ -37,12 +37,18 @@ export default function AnimalInquiry({id,onRead}:{id:string;onRead:(text:string
 
 function ReasonTask({task,level,onRead}:{task:Task;level:number;onRead:(text:string)=>void}){
  const [answer,setAnswer]=useSavedGame<string|null>('animalInquiryAnswer:'+level,null,value=>typeof value==='string'&&task.answers.includes(value)?value:null);
- const chosen=answer===null?-1:task.answers.indexOf(answer),correct=chosen===task.correct;
+ const chosen=answer===null?-1:task.answers.indexOf(answer),correct=chosen===task.correct,reflection='reflection' in task?task.reflection:null;
  return <section className="animal-reason-task" aria-label={level===1?'Zusammenhang erklären':'Schlussfolgerung prüfen'}>
   <h4>{task.prompt}</h4>
   <button className="speech-button" onClick={()=>onRead(task.prompt+'. '+task.answers.join('. '))}><Volume2 size={17} aria-hidden="true"/> Denkfrage vorlesen</button>
   <details className="learning-details"><summary>Ein Denkhinweis · freiwillig</summary><p>{task.hint}</p></details>
   <div className="quiz-answers">{task.answers.map((text,index)=><button key={text} className={'quiz-answer '+(chosen===index?(correct?'is-correct':'is-incorrect'):'')} aria-pressed={chosen===index} onClick={()=>setAnswer(text)}><span className="answer-letter" aria-hidden="true">{String.fromCharCode(65+index)}</span><span>{text}</span></button>)}</div>
-  {chosen>=0&&<div className="lab-feedback" role="status"><strong>{correct?'Gut begründet.':'Prüfe die Aussage noch einmal.'}</strong><p>{task.feedback[chosen]}</p><button className="speech-button" onClick={()=>setAnswer(null)}>Noch einmal überlegen</button></div>}
+  {chosen>=0&&<div className="lab-feedback" role="status"><strong>{correct?'Deine Auswahl passt.':'Prüfe die Aussage noch einmal.'}</strong><p>{task.feedback[chosen]}</p><button className="speech-button" onClick={()=>setAnswer(null)}>Noch einmal überlegen</button></div>}
+  {level===2&&correct&&reflection&&<details className="learning-details animal-transfer-reflection">
+   <summary>Eine eigene Überlegung · freiwillig</summary>
+   <p>{reflection.prompt}</p>
+   <p>Du kannst deine Idee erzählen oder im Notizbuch festhalten. Die Rückmeldung oben prüft nur deine gewählte Antwort.</p>
+   <details className="learning-details"><summary>Ein Muster zum Vergleichen</summary><p>{reflection.example}</p><p>{reflection.compare}</p><p className="small-note">Vergleiche deine eigenen Gedanken selbst mit dem Muster. Auch anders formulierte passende Ideen sind möglich.</p></details>
+  </details>}
  </section>;
 }

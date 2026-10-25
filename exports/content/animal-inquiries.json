@@ -1125,7 +1125,7 @@
       }
     ],
     "reason": {
-      "prompt": "Erkläre, warum der Schnabel mehr als ein Werkzeug zum Aufnehmen von Nahrung ist.",
+      "prompt": "Welche Erklärung zeigt, warum der Schnabel mehr als ein Werkzeug zum Aufnehmen von Nahrung ist?",
       "answers": [
         "Der Schnabel ist nur eine harte Schaufel ohne Sinnesrezeptoren.",
         "Sein Schnabel nimmt auch Sinnesinformationen auf."
@@ -1174,7 +1174,7 @@
       }
     ],
     "reason": {
-      "prompt": "Beschreibe die Nahrungssuche als Folge zweier verschiedener Handlungen.",
+      "prompt": "Welche Beschreibung ordnet zwei verschiedene Schritte der Nahrungssuche richtig?",
       "answers": [
         "Die Krallen öffnen Verstecke; die Zunge nimmt Nahrung auf.",
         "Die Grabkrallen ersetzen die Zunge bei jeder Nahrungsaufnahme."
@@ -1187,7 +1187,7 @@
       ]
     },
     "transfer": {
-      "prompt": "Ist ein Tier mit Stacheln automatisch nahe mit einem europäischen Igel verwandt? Begründe, welche Angaben du zusätzlich brauchst.",
+      "prompt": "Ist ein Tier mit Stacheln automatisch nahe mit einem europäischen Igel verwandt?",
       "answers": [
         "Stacheln beweisen eine nahe Verwandtschaft mit europäischen Igeln.",
         "Ähnliche Stacheln allein zeigen keine nahe Verwandtschaft."
@@ -1197,7 +1197,12 @@
       "feedback": [
         "Ähnliche Stacheln zeigen zunächst nur eine ähnliche Körperoberfläche. Die Fortpflanzung liefert weitere Merkmale für den Vergleich der Tiergruppen.",
         "Ähnliches Aussehen kann zu unterschiedlichen Tiergruppen gehören."
-      ]
+      ],
+      "reflection": {
+        "prompt": "Begründe mit eigenen Worten, welche Angaben du für diesen Vergleich zusätzlich brauchst.",
+        "example": "Stacheln zeigen eine Ähnlichkeit der Körperoberfläche. Ich würde auch vergleichen, wie die Tiere ihre Jungen bekommen und versorgen.",
+        "compare": "Nennt deine Überlegung neben dem Aussehen ein weiteres passendes Merkmal? Die Quelle beschreibt den Kurzschnabeligel als eierlegendes Säugetier, dessen Junge Milch aufnehmen."
+      }
     },
     "sourceUrls": [
       "https://australian.museum/learn/animals/mammals/short-beaked-echidna/"
@@ -1235,7 +1240,7 @@
       ]
     },
     "transfer": {
-      "prompt": "Entwirf zwei verschiedene Fragen: eine zum Aussehen und eine zur Abstammung. Welche Quellen könnten jeweils helfen?",
+      "prompt": "Du möchtest das Aussehen und die Abstammung eines Okapis untersuchen. Welche Aussage zu den nötigen Belegen passt?",
       "answers": [
         "Aussehen und Abstammung brauchen unterschiedliche Belege.",
         "Eine Beschreibung der Streifen beantwortet jede Frage zur Abstammung."
@@ -1245,7 +1250,12 @@
       "feedback": [
         "Aussehen und Verwandtschaft sind unterschiedliche Untersuchungsfragen.",
         "Eine Beschreibung der Streifen beantwortet eine Frage zum Aussehen. Für die Abstammung brauchst du einen passenden Verwandtschaftsbeleg."
-      ]
+      ],
+      "reflection": {
+        "prompt": "Entwirf zwei verschiedene Fragen: eine zum Aussehen und eine zur Abstammung. Welche Quellen könnten jeweils helfen?",
+        "example": "Aussehen: Wo hat das Okapi Streifen? Dafür kann ich ein genau zugeordnetes Foto beschreiben. Abstammung: Mit welcher Tiergruppe ist es nahe verwandt? Dafür brauche ich einen passenden Fachbeleg zur Verwandtschaft.",
+        "compare": "Prüfe: Fragen deine beiden Fragen nach unterschiedlichen Dingen? San Diego Zoo beschreibt die Beinstreifen und ordnet das Okapi der Giraffenfamilie zu. Die Streifen allein belegen diese Verwandtschaft nicht."
+      }
     },
     "sourceUrls": [
       "https://animals.sandiegozoo.org/animals/okapi"
@@ -1270,7 +1280,7 @@
       }
     ],
     "reason": {
-      "prompt": "Erkläre, warum Nahrungssuche und Ausschauhalten zusammen nützlich sein können.",
+      "prompt": "Welche Erklärung verbindet Nahrungssuche und Ausschauhalten sinnvoll?",
       "answers": [
         "Ausschauhalten kann Gefahren anzeigen, während andere Nahrung suchen.",
         "Wer Nahrung sucht, kann gleichzeitig immer alles in seiner Umgebung beobachten."
@@ -1318,7 +1328,7 @@
       }
     ],
     "reason": {
-      "prompt": "Vergleiche, was Schwanzhaltung und Duftmarken jeweils übertragen können.",
+      "prompt": "Welcher Vergleich unterscheidet die Verständigung durch Schwanzhaltung und Duftmarken?",
       "answers": [
         "Alle Informationen eines Kattas sind nur mit den Augen wahrnehmbar.",
         "Haltung und Duftmarken nutzen unterschiedliche Sinneswege."
@@ -1331,7 +1341,7 @@
       ]
     },
     "transfer": {
-      "prompt": "Du hörst keinen Ruf. Darfst du schließen, dass keine Verständigung stattfindet? Entwirf eine passende Gegenprüfung.",
+      "prompt": "Du hörst keinen Ruf. Darfst du schließen, dass keine Verständigung stattfindet?",
       "answers": [
         "Ohne hörbaren Ruf können andere Kommunikationswege bestehen.",
         "Ohne hörbaren Ruf findet sicher keine Verständigung statt."
@@ -1341,7 +1351,12 @@
       "feedback": [
         "Fehlender Ton schließt andere Informationswege nicht aus.",
         "Deine Beobachtung erfasst hier nur hörbare Rufe. Duftmarken oder sichtbare Signale können bestehen, ohne dass du einen Ruf hörst."
-      ]
+      ],
+      "reflection": {
+        "prompt": "Entwirf eine Gegenprüfung: Was müsstest du zusätzlich beobachten, bevor du die Verständigung der Kattas beurteilst?",
+        "example": "Ich würde neben Rufen auch sichtbare Signale beobachten und in einer Fachquelle nach Duftmarken suchen. Nur zuzuhören erfasst diese Wege nicht.",
+        "compare": "Erfasst deine Prüfidee einen anderen Informationsweg als hörbaren Ton? Die Smithsonian-Quelle beschreibt Duftmarken und sichtbare Signale. Beobachte mit Abstand und störe die Tiere nicht."
+      }
     },
     "sourceUrls": [
       "https://www.nationalzoo.si.edu/animals/ring-tailed-lemur"
@@ -1366,7 +1381,7 @@
       }
     ],
     "reason": {
-      "prompt": "Erkläre die Kette: Damm, langsameres Wasser, veränderter Lebensraum.",
+      "prompt": "Welche Erklärung verbindet Damm, langsameres Wasser und veränderten Lebensraum?",
       "answers": [
         "Ein Damm verändert die Strömung und damit Lebensbedingungen.",
         "Ein Damm lässt das Wasser überall unverändert schnell fließen."
@@ -1379,7 +1394,7 @@
       ]
     },
     "transfer": {
-      "prompt": "Kann ein Damm für manche Arten hilfreich und an anderer Stelle problematisch sein? Benenne, welche Informationen zur Bewertung fehlen.",
+      "prompt": "Ein Damm kann manchen Arten helfen und anderswo Probleme verursachen. Welche Aussage passt zu einer fairen Bewertung?",
       "answers": [
         "Ein Bauwerk ist für alle Lebewesen und alle Menschen immer gleich nützlich.",
         "Nutzen und Probleme müssen für verschiedene Betroffene geprüft werden."
@@ -1464,7 +1479,7 @@
       }
     ],
     "reason": {
-      "prompt": "Erkläre, warum ein Fuchs in einer Siedlung nicht automatisch ein entflohenes Haustier ist.",
+      "prompt": "Welche Erklärung zeigt, warum ein Fuchs in einer Siedlung nicht automatisch ein entflohenes Haustier ist?",
       "answers": [
         "Ein Wildtier kann in einer Siedlung leben, ohne ein Haustier zu sein.",
         "Jeder Fuchs in einer Siedlung ist ein entflohenes Haustier."
@@ -1621,7 +1636,7 @@
       ]
     },
     "transfer": {
-      "prompt": "Wäre ein einzelnes helles Gesicht auf einem Nachtfoto ein sicherer Artnachweis? Begründe, was noch geprüft werden müsste.",
+      "prompt": "Wäre ein einzelnes helles Gesicht auf einem Nachtfoto ein sicherer Artnachweis?",
       "answers": [
         "Ein Hinweis auf einem Foto ersetzt keine abgesicherte Artbestimmung.",
         "Ein helles Gesicht auf einem Nachtfoto ist immer ein vollständiger Artnachweis."
@@ -1631,7 +1646,12 @@
       "feedback": [
         "Wiedererkennen ist noch keine vollständige Bestimmung.",
         "Ein heller Gesichtseindruck ist nur ein Hinweis. Prüfe weitere übereinstimmende Merkmale, bevor du eine sichere Artbestimmung behauptest."
-      ]
+      ],
+      "reflection": {
+        "prompt": "Begründe mit eigenen Worten, was für eine vorsichtige Bestimmung noch geprüft werden müsste.",
+        "example": "Ich würde mehrere erkennbare Merkmale mit einer Bestimmungsquelle vergleichen, etwa die Gesichtsform, die Augen und die Zeichnung von Rücken und Flügeln. Ein unscharfes helles Gesicht allein genügt nicht.",
+        "compare": "Nennt deine Begründung mehrere zusammenpassende Merkmale und berücksichtigt sie die Bildqualität? Die RSPB beschreibt ein herzförmiges Gesicht, dunkle Augen und die Zeichnung von Rücken und Flügeln."
+      }
     },
     "sourceUrls": [
       "https://www.bto.org/learn/about-birds/birdfacts/barn-owl",
@@ -1657,7 +1677,7 @@
       }
     ],
     "reason": {
-      "prompt": "Erkläre den Unterschied zwischen einer blauen Farbe und einem blauen Farbstoff.",
+      "prompt": "Welche Erklärung unterscheidet eine blaue Farbe von einem blauen Farbstoff?",
       "answers": [
         "Feine Federstrukturen können einen blauen Farbeindruck erzeugen, ohne blauen Farbstoff.",
         "Jeder blaue Farbeindruck muss durch einen blauen Farbstoff entstehen."
@@ -1996,7 +2016,7 @@
       }
     ],
     "reason": {
-      "prompt": "Erkläre, warum ein Hindernis an einer Stelle für einen Wanderfisch bedeutsam sein kann.",
+      "prompt": "Welche Erklärung zeigt, warum ein einzelnes Hindernis für einen Wanderfisch bedeutsam sein kann?",
       "answers": [
         "Ein Hindernis an einer Stelle hat grundsätzlich keine Bedeutung für den weiteren Weg.",
         "Ein Hindernis kann den Zugang zu einem weiteren Lebensraum verhindern."

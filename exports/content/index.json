@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T11:53:36.767Z",
+  "generatedAt": "2026-10-25T15:09:04.305Z",
   "personalProgressIncluded": false,
   "topics": 188,
   "categories": {
@@ -41,8 +41,8 @@
         "app/animal-inquiries.json"
       ],
       "entries": 48,
-      "bytes": 115162,
-      "sha256": "d96f85534517058f5edca8386ef8484e5b5d5004ee1b185aae80149091027054"
+      "bytes": 117364,
+      "sha256": "f6a36f02beb2ee8f0746a78a26fad76aeb88cc6dc55c1f18d6bfd2360581556e"
     },
     {
       "file": "continents.json",
@@ -289,8 +289,8 @@
         "app/world-catalog.json"
       ],
       "entries": 188,
-      "bytes": 688975,
-      "sha256": "2d3bb6eafb182323b8f1790714c439ea43c8c3cecccc004f76d138cb01d40850"
+      "bytes": 689029,
+      "sha256": "0cb0aadc212ad010ef74921ba9d5f293b85c09296099ca4313bb0a9d59e2ff2e"
     },
     {
       "file": "world-index.json",
@@ -415,8 +415,17 @@
         "app/animal-illustrations.json"
       ],
       "entries": 24,
-      "bytes": 12971,
-      "sha256": "6f05d5abc07da05cb5eb6938da48b727d6406f8bc212c6636f42bca5491a176f"
+      "bytes": 14053,
+      "sha256": "8ab67c63c6b07ad0664551052b34e801fb5e11b7e44a95c649e2b41ccc2d33cc"
+    },
+    {
+      "file": "device-illustrations.json",
+      "sources": [
+        "app/device-illustrations.json"
+      ],
+      "entries": 3,
+      "bytes": 3040,
+      "sha256": "4366c1466117c8509c34a176e07a7150fe54d5b0c9b93390ad2b02bd4070ddac"
     },
     {
       "file": "science-model-index.json",

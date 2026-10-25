@@ -1084,10 +1084,10 @@
       "originalLogSHA256": "2699da6571b95c76a55b51a419c91969467aaab72a0c119191642c64a7ffce4e",
       "node": "v24.21.0",
       "phaseSecondsWholeTimestampPrecision": {
-        "setup": 112.0,
-        "earlySearchAndColdPrecondition": 303.0,
-        "chromium": 1164.0,
-        "cancelledActualFirefoxWebkitStep": 1737.0
+        "setup": 112,
+        "earlySearchAndColdPrecondition": 303,
+        "chromium": 1164,
+        "cancelledActualFirefoxWebkitStep": 1737
       },
       "missingProof": [
         "Complete actual Firefox/WebKit report",
@@ -1255,5 +1255,21 @@
     ],
     "logging": "Bounded actual engine summary added before the retained complete original JSON console output; complete original report file unchanged.",
     "remaining": "New complete exact-source local mandatory checks, actual complete native CI, existing protected maintenance decision and real merge/deployment postflight remain pending."
+  },
+  "sydneySphereRenderedReview20261025": {
+    "sourceCommit": "dbc114f6e09358c1f8915b88aa9899e3b6091fae",
+    "sourceDigest": "30a5497b92aa6a5501a02e884c086df730b797443328630995d22aa33996d95a",
+    "build": "245f946253ac0064",
+    "originalFullReportSHA256": "250b715a244008ffbaa19a7dc2ed74f5489ed7309241628e72b33755f26aa45c",
+    "normalViews": 5,
+    "nativeViews": 2,
+    "recoveryViews": 4,
+    "earlyChromium": 5,
+    "earlyWebKit27_2": 3,
+    "source": "https://www.sydneyoperahouse.com/our-story/the-spherical-solution",
+    "sourceActuallyRead": "2026-10-25, lines59–81; one common sphere and repeatable construction, not exact roof shape from this teaching sketch",
+    "meaning": "Own mathematical sphere projection added beside retained2Dcircle comparison; arbitrary surface patches, explicitly AI-assisted own drawing and not a named-building image, roof reconstruction, structural/acoustic simulation or empirical learning proof. All historical topic/source/claim records retained; source-data/answers/IDs unchanged. Pont/Sydney actual building images remain open in existing BACKLOG; no global new building factual approval.",
+    "nativeCI": "pending",
+    "delivered": false
   }
 }

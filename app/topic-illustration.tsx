@@ -1,12 +1,14 @@
 import ScienceDiagram,{hasScienceDiagram} from './science-diagram';
 import AnimalIllustration,{hasAnimalIllustration} from './animal-illustration';
 import PeopleIllustration,{hasPeopleIllustration} from './people-illustration';
-export const hasTopicIllustration=(id:string)=>((id!=='science-photosynthesis')&&hasScienceDiagram(id))||hasAnimalIllustration(id)||hasPeopleIllustration(id)||['science-moon-phases','science-tides','science-currents'].includes(id);
+import DeviceIllustration,{hasDeviceIllustration} from './device-illustration';
+export const hasTopicIllustration=(id:string)=>((id!=='science-photosynthesis')&&hasScienceDiagram(id))||hasAnimalIllustration(id)||hasPeopleIllustration(id)||hasDeviceIllustration(id)||['science-moon-phases','science-tides','science-currents'].includes(id);
 /** Original explanatory drawings; HTML labels retain their size on small screens. */
 export default function TopicIllustration({id,compact=false}:{id:string;compact?:boolean}){
  if(id!=='science-photosynthesis'&&hasScienceDiagram(id))return <ScienceDiagram id={id} compact={compact}/>;
  if(hasAnimalIllustration(id))return <AnimalIllustration id={id} compact={compact}/>;
  if(hasPeopleIllustration(id))return <PeopleIllustration id={id} compact={compact}/>;
+ if(hasDeviceIllustration(id))return <DeviceIllustration id={id} compact={compact}/>;
  const moon=id==='science-moon-phases',tides=id==='science-tides';
  const label=moon?'Vier ausgewählte Mondphasen: Neumond, zunehmender Halbmond, Vollmond und abnehmender Halbmond.':tides?'Dieselbe schematische Küste bei niedrigem und hohem Wasserstand.':'Drei Antriebe für Meeresströmungen: Wind, Gezeiten und Dichteunterschiede.';
  const labels=moon?['Neumond','Zunehmender Halbmond','Vollmond','Abnehmender Halbmond']:tides?['Niedrigwasser','Hochwasser']:['Wind','Gezeiten','Dichte'];
