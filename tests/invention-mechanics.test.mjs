@@ -9,7 +9,15 @@ import graph from '../app/world-connections.json' with {type:'json'};
 import baseline from './fixtures/retained-before-invention-mechanics.json' with {type:'json'};
 import {CHALLENGE_BANK} from '../app/knowledge-challenge.ts';
 import {worldGameBank,restoreWorldGameOrders} from '../app/world-game-bank.ts';
+import fs from 'node:fs';
+import deviceMedia from '../app/device-illustrations.json' with {type:'json'};
+import originalReview from '../content/invention-originals-review.json' with {type:'json'};
 const ids=baseline.newIds,hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
+test('invented filament-printer illustration has exact local bytes, declared AI origin and a single-method limit',()=>{
+ assert.equal(deviceMedia.entries.length,1);const media=deviceMedia.entries[0],review=originalReview.topics.find(t=>t.id==='invention-3d-printing').media;assert.equal(media.id,'invention-3d-printing');assert.equal(media.kind,'ai-illustration');assert.equal(media.src,'/inventions/3d-printer-ai.webp');
+ const bytes=fs.readFileSync('public'+media.src);assert.equal(bytes.length,27260);assert.equal(createHash('sha256').update(bytes).digest('hex'),review.sha256);assert.equal(review.sha256,'434396dbf4778a0827c0666369d737ea9affb142b9e88de956b79d6c097b8189');assert.equal(bytes.toString('ascii',0,4),'RIFF');assert.equal(bytes.toString('ascii',8,16),'WEBPVP8 ');assert.equal(bytes.readUInt16LE(26)&0x3fff,800);assert.equal(bytes.readUInt16LE(28)&0x3fff,500);assert.equal(media.width,800);assert.equal(media.height,500);
+ assert.match(media.alt,/Eigene KI-Illustration.*erfundenen Schmelzschichtdruckers/);assert.match(media.caption,/kein Foto und nicht maßstabsgetreu/);assert.match(media.caption,/Andere 3D-Druckverfahren arbeiten anders/);assert.match(media.caption,/kein bestimmtes historisches Gerät/);assert.deepEqual(media.labels,['Kunststofffaden von der Spule','Druckkopf mit Düse','Schichten auf der Bauplatte']);assert.equal(media.source.url,'https://www.nist.gov/additive-manufacturing/research-areas/technologies/material-extrusion');assert.equal(review.caption,media.caption);assert.equal(review.alt,media.alt);
+});
 test('six retained manuscripts keep the entire preceding150-topic source except nine named reciprocal backlinks',()=>{
  assert.equal(baseline.sourceCommit,'a6075b8542a3784cfbe3ef34ddc75863f692ec64');assert.equal(ids.length,6);assert.equal(catalog.length,187);assert.equal(catalog.filter(t=>t.category==='inventions').length,24);
  const retained=catalog.filter(t=>![...ids,...buildingIds,...scienceIds].includes(t.id)).map(topicAtHistoricalMediaReference).map(t=>({...t,related:t.related.filter(id=>![...ids,...buildingIds,...scienceIds].includes(id))}));assert.equal(retained.length,150);assert.equal(hash(retained),baseline.oldCatalogSHA256);

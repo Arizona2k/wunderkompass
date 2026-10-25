@@ -272,7 +272,72 @@
       ],
       "linkDecision": "Original links to not-yet-integrated retained science/building manuscripts remain documented here and in sourceMaster. Current actual targets only, with nine explicit reciprocal explanations. No missing work removed from BACKLOG.",
       "reviewedBy": "Codex KI-Selbstprüfung anhand der tatsächlich zugänglichen genannten Passagen; keine unabhängige Menschenabnahme",
-      "reviewedOn": "2026-10-23"
+      "reviewedOn": "2026-10-23",
+      "media": {
+        "checkedOn": "2026-10-25",
+        "reviewedBy": "AI source and actual-image cross-check; no independent human/empirical effectiveness claim",
+        "kind": "ai-illustration",
+        "format": "webp",
+        "sha256": "434396dbf4778a0827c0666369d737ea9affb142b9e88de956b79d6c097b8189",
+        "bytes": 27260,
+        "width": 800,
+        "height": 500,
+        "alt": "Eigene KI-Illustration eines erfundenen Schmelzschichtdruckers: Eine Spule führt einen Kunststofffaden zum Druckkopf. Die Düse liegt über einem schichtweise aufgebauten Stufenblock auf der Bauplatte.",
+        "caption": "Eigene KI-Illustration · kein Foto und nicht maßstabsgetreu. Erfundenes Gerätebeispiel für das Schmelzschichtverfahren mit einem Kunststofffaden. Die Schichtlinien sind zur Erklärung vergröbert. Andere 3D-Druckverfahren arbeiten anders; das Bild zeigt kein bestimmtes historisches Gerät.",
+        "sourceReads": [
+          {
+            "url": "https://www.nist.gov/additive-manufacturing/research-areas/technologies/material-extrusion",
+            "supports": "Material extrusion creates structures by adding layers. The pictured layout is an invented generic filament example; the NIST stock photo is not copied."
+          },
+          {
+            "url": "https://www.energy.gov/articles/how-3d-printers-work",
+            "supports": "Primary2014page actually opened/read: filament heated and extruded through nozzle, adjoining layers bond. Used only for mechanism account; general historical/market/energy claims not adopted."
+          }
+        ],
+        "actualImageChecks": [
+          "Spool bracket attached to frame; one visible filament path enters print head.",
+          "Head attached to horizontal guide bars; downward brass nozzle above top surface.",
+          "Layered step block rests on plate, all drawn stacked layers contiguous.",
+          "No laser, resin vat or invented historical prototype; no logos/people/third-party reference images.",
+          "Simple machine illustration complements existing independent layer geometry model, never a construction or safety approval."
+        ],
+        "generatorOriginal": {
+          "bytes": 1652082,
+          "sha256": "9b2014dc386323fce5352a2d974e14c59ef5467a7f3e40327866eeb78a4e82cc",
+          "width": 1586,
+          "height": 992,
+          "retainedPrivately": true
+        },
+        "processing": "Only proportional resize to800px width, nearest integer500px height and WebP encoding; no crop, recolor, creative edit or generative repair. Original unchanged.",
+        "rights": "Own generated composition of generic functional parts; no input photographs, named brands/artists, identifiable people or protected logos. Existing actually read OpenAI output terms and responsibility review retained. No new service/account/purchase. This is not a uniqueness/third-party-rights guarantee.",
+        "photoDecision": "Flickr1501895035 linked CC BY-NC-SA2.0 and original403; NIST picture credited AdobeStock; neither reused. See existing private dated source check. No Wikimedia work.",
+        "earlyRendered": {
+          "status": "prepared; not full or nativeCI acceptance",
+          "sourceDigest": "4c77455680c2bbb1d2df10e4f22bf7f6ecfac91460614c313874b4dc26277a2d",
+          "build": "41dc42b42f89ae90",
+          "views": [
+            "320normal",
+            "320large",
+            "1440normal",
+            "640CSSnative200large",
+            "320CSSnative200large"
+          ],
+          "reportSHA256": "f4d072721a96e69060f1ea39f252a6d6d5742b15a728d909a801da47fc636956",
+          "actualChecks": "Device image decoded, ownAI/noPhoto/single-method/invented-hardware limits; article tasks/hints/wrong-correct feedback/10layer states; compactAIbadge; all protected synthetic fields/reload. Incorrect photo claim and wrong subject image both rejected. Native first-image, labels and full-caption-end separately captured.",
+          "currentChronicle": {
+            "sourceDigest": "7aa6944e94dcb71660559518801ec5a951cc03ef6a706a94ecbc2a570b22faa9",
+            "build": "33e6a6cebcd16bc6",
+            "reportSHA256": "ca635a8c365ded103224bc0a344a20f9a65a7a39249d5ba1b983d27a9847365e",
+            "views": [
+              "320large",
+              "1440large",
+              "320CSSnative200large"
+            ],
+            "actualChecks": "Stable prepared mediaID now names Okapi and3D; all3details/benefit remain undated without functional links,56confirmedM61IDs unchanged. Current device source/caption and synthetic fields/reload checked."
+          },
+          "personalVisualReview": "Actual complete generated original, normal320article figure/compacttile and native320caption end read; joined layers, material feed, supported head/nozzle, retained clear limits and legibility checked. Current prepared320andnativebenefit screenshots personally read. AI review, no independent human or empirical learning claim."
+        }
+      }
     },
     {
       "id": "invention-sewing-machine",
