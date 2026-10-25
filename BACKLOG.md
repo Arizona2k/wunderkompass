@@ -12,6 +12,8 @@ In Prüfung. Erreichbare Fassungen M4ad, Masterd97 und Wissenschaft5529 sind ben
 
 ### WK-052 · Sichere Speicherung und vorhandener Prüfweg
 
+Aktueller PR62-Teil: Quality170 natürlich beendet; reproduzierter Firefox-Koordinatenmessfehler im Sydney-Offlinefall gezielt korrigiert. Gesamte betroffene lokale Firefox-Offlinefunktion und fünf Gegenfehler in zwei Engines bestanden, Produkt unverändert. Nächster Schritt: neuen festen Kopf vollständig lokal und nativ qualifizieren, dann bestehenden PR62 regulär bis echter Übernahme/Testbereitstellung abschließen. Katta166 bleibt getrennt ungeklärt; keine Schwellen-/Budget-/Pflichtgruppenänderung.
+
 | Bestehender Teilumfang | Status und nächster Schritt | Überprüfbares Ergebnis / Grenze |
 | --- | --- | --- |
 | P0Modellwiederherstellung | Erledigt und mit PR60 tatsächlich testbestätigt: deklarierte Modellgrenzen vor allgemeiner Spielzählernormalisierung. Vollständige lokale841-/nativeCI160-Abnahme und echterTLS-Passnachtest bestanden. | Original5529 verliert−34 und2,75 im tatsächlichen Hook; korrigierter Hook erhält erlaubte negative/gebrochene Werte, ungültige bleiben begrenzt.65Modellaufrufe inventarisiert. Reales Jahreszeitenprodukt: Wiederöffnen/Reload/Dateiexport/-import320/1440/native200% bestanden; unabhängige Juniwerte9,7h/32,6° stimmen mit Kurve/Speicher überein. |
