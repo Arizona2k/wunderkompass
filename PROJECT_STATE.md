@@ -1,5 +1,9 @@
 # Aktueller Arbeits- und Übergabestand ·25.10.2026
 
+## Nächste unabhängige Bildvorbereitung · Nähmaschine
+
+Am unveränderten89c-Produkt wurde die fehlendeGeräteabbildung im tatsächlich dargestellten320Großschrift-/1440-Artikel bestätigt; der vorhandeneFunktionsplan bleibt erhalten.54erreichbarePfadstände/58Blobs vor erneuterErstellung abgeglichen, keine frühere passende Geräteaufnahme/Illustration gefunden. EigeneKI-Objektillustration eines ausdrücklich erfundenen modernenGeräts erstellt und angesehen; Original mit Herkunft/Grenzen im vorhandenenErfindungsnachweis außerhalbpublic gesichert. NichtHowes1846Original und keinFoto, verdeckterUnterfaden/keine vollständigeStichbewegung. KeineRuntime-/Export-/CI168-Änderung; tatsächliche spätereCaption-/Aufgaben-/Modell-/Mobile-/Zoomabnahme steht offen. KonkreteLücke ausschließlichWK057weitergeführt.
+
 ## Unveränderte eigene Bildoriginale im bestehenden Quellweg erhalten
 
 Die drei bereits vorbereiteten eigenen KI-Originale für Okapi,3D-Druck undSeismograf sind zusätzlich bytegleich außerhalb vonpublic undLaufzeit versioniert. BestehendeHerkunfts-/Rechte-/Motiv-/Grenzbelege nennen die jeweiligenQuelldateien; alle früherenPrüfzuordnungen bleiben erhalten. Kein neuesProduktbild, keine Foto-/Freigabe-/Lieferbehauptung. Der getrennte volleQuality168-Kandidat89c bleibt unverändert; derPontentwurf bleibt nicht übernommen. Am25.10.2026,04:41:51UTC sind nach normalemQuellpush alle681Dateien von e5cb119 in einem neu initialisierten leerenGitobjektspeicher durch frischenRemote-Fetch(depth1,keine lokalenObjektalternativen) undCheckout bytegeprüft: alle dreiOriginale und der weiterhin nicht übernommenePontentwurf stimmen mit ihren unabhängig gesichertenSHA256/Größen überein. Dies belegt die tatsächlicheErreichbarkeit über den bestehenden autorisiertenGitHubweg in diesemKontext; Zugangsdaten oder privatePrüfarchive eines künftigenKontexts werden damit nicht behauptet. PrivatePrüfarchive sind davon getrennt.
