@@ -72,7 +72,7 @@
 .pass-footer .primary-button {color:#fff;width:100%;background:var(--wk-teal);min-height:48px;box-shadow:none;white-space:normal;line-height:1.5}
 .passport-atlas :is(.pass-backup-actions,.pass-footer) .primary-button:hover {background:#1d5143}
 .passport-atlas :is(button,a,summary,[role=switch],[role=slider],select,h3):focus-visible,.pass-confirmation button:focus-visible {outline:2px solid var(--wk-focus);outline-offset:3px;box-shadow:none}
-.passport-atlas .pass-header button:focus-visible {outline-color:#9bd4e1}
+.passport-atlas .pass-header button:focus-visible {outline-color:var(--wk-focus)}
 .pass-body .pass-section-title {width:fit-content;max-width:100%;border-radius:4px}
 .passport-atlas.large-reading .pass-header .eyebrow {font-size:12px!important}
 .passport-atlas.large-reading .pass-header [data-slot=dialog-title] {font-size:28px}
