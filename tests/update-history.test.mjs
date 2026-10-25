@@ -28,7 +28,7 @@ test('actual PR57 stays confirmed only with exact trusted deployment and preserv
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {UPDATE_HISTORY,PREPARED_UPDATES,HISTORY_EVIDENCE,TEST_HISTORY_EVIDENCE,JOURNEY_SUPPORT_COPY,confirmedTestDeployment,testUpdate,publicUpdates,updateDate,updateLabel,berlinDay,formatHistoryInstant} from '../app/update-history.ts';
+import {UPDATE_HISTORY,PREPARED_UPDATES,HISTORY_EVIDENCE,TEST_HISTORY_EVIDENCE,JOURNEY_SUPPORT_COPY,confirmedTestDeployment,testUpdate,testUpdates,publicUpdates,updateDate,updateLabel,berlinDay,formatHistoryInstant} from '../app/update-history.ts';
 
 test('actual PR56 landscape and climate delivery remains confirmed only with its exact trusted deployment evidence',()=>{
  const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===56),entries=publicUpdates(),entry=entries.find(e=>e.evidence.pullRequest===56);
@@ -340,4 +340,14 @@ test('actual PR63 promotes its stable Bronze identity only with trusted exact de
  assert.equal(entries.filter(e=>e.id===entry.id).length,1);assert.equal(historyFrom(entries,60).length,56);
  for(const mutate of[r=>{r.mergedAt=null;},r=>{r.deploymentStatuses=[];},r=>{r.deploymentStatuses[0].state='pending';},r=>{r.deploymentStatuses[0].creator='untrusted';},r=>{r.statusesUrl=r.statusesUrl.replace('0105c557394779a4a88295fe60dc13dbb3cc8fb0','1da6eca5f5827a7915e1dbe2477c91406c69d22a');}]){const invalid=structuredClone(record);mutate(invalid);assert.equal(confirmedTestDeployment(invalid),null);assert.equal(testUpdate(invalid,entry).status,'prepared');}
  assert.equal(confirmedTestDeployment(record,{...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(s=>s!==record.mergeCommit)}),null);
+});
+
+
+test('multiple product copies share the same validated deployment boundary and all become prepared when that evidence is missing',()=>{
+ const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===63),entry=publicUpdates().find(e=>e.evidence.pullRequest===63);
+ // Pure conversion fixtures; neither fixture is added to the public chronology.
+ const copies=[{...entry,id:'conversion-fixture-a'},{...entry,id:'conversion-fixture-b'}];
+ const result=testUpdates(record,copies);assert.deepEqual(result.map(e=>e.id),copies.map(e=>e.id));for(const e of result){assert.equal(e.status,'test-available');assert.equal(e.occurredAt,entry.occurredAt);assert.equal(e.evidence.revision,record.mergeCommit);assert.equal(e.evidence.pullRequest,63);}
+ assert.deepEqual(testUpdates(record,entry),[testUpdate(record,entry)]);
+ for(const mutate of [r=>{r.mergedAt=null;},r=>{r.deploymentStatuses=[];},r=>{r.deploymentStatuses[0].state='pending';},r=>{r.deploymentStatuses[0].creator='untrusted';}]){const missing=structuredClone(record);mutate(missing);for(const e of testUpdates(missing,copies)){assert.equal(e.status,'prepared');assert.equal(e.occurredAt,null);assert.equal(e.availableOn,null);assert.deepEqual(e.links,[]);}}
 });
