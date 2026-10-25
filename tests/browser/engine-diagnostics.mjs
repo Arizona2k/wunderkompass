@@ -1,6 +1,32 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
+// A failed renderer may never answer evaluate. Bound only this post-failure
+// observation; the original action timeout and exception remain untouched.
+export async function readAnimalFailureView(page,{timeoutMs=1000}={}){
+ let timer;
+ try{
+  return await Promise.race([
+   page.evaluate(()=>({url:location.href,title:document.querySelector('#world-topic-title')?.textContent??null,inquiryIds:[...document.querySelectorAll('[data-animal-inquiry]')].map(e=>e.getAttribute('data-animal-inquiry')),worldLoading:[...document.querySelectorAll('.world-view [role="status"]')].map(e=>e.textContent?.slice(0,160)).slice(0,3),active:document.activeElement?{tag:document.activeElement.tagName,id:document.activeElement.id,routeFocus:document.activeElement.getAttribute('data-route-focus'),text:document.activeElement.textContent?.slice(0,160)}:null})),
+   new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error('Failure view observation exceeded '+timeoutMs+'ms')),timeoutMs);})
+  ]);
+ }catch(error){return{url:page.url(),unavailable:error.message};}
+ finally{clearTimeout(timer);}
+}
+
+// A missing PNG must leave an explicit receipt in the existing evidence path.
+// Neither screenshot nor receipt failure may replace the original test error.
+export async function captureAnimalFailureScreenshot(page,directory,position){
+ const screenshot='animal-failure-'+position.width+'.png';
+ try{await page.screenshot({path:path.join(directory,screenshot),fullPage:true,timeout:5000});}
+ catch(error){
+  const failure={...position,screenshot,error:error.message};
+  console.error('ANIMAL_SCREENSHOT_FAILURE',JSON.stringify(failure));
+  try{await fs.writeFile(path.join(directory,'animal-screenshot-failure-'+position.width+'.json'),JSON.stringify(failure,null,2)+'\n',{flag:'wx'});}
+  catch(receiptError){console.error('ANIMAL_SCREENSHOT_DIAGNOSTIC_UNAVAILABLE',JSON.stringify({...position,screenshot,error:receiptError.message}));}
+ }
+}
+
 // Keep failed-search evidence in the existing engine namespace the curator reads.
 // Move original bytes; never edit images, hide failures or rebind another snapshot.
 export async function preserveEngineDiagnostics(directory,engine){

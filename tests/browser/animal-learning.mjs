@@ -1,4 +1,4 @@
-import {observeEngineLifecycle} from './engine-diagnostics.mjs';
+import {observeEngineLifecycle,readAnimalFailureView,captureAnimalFailureScreenshot} from './engine-diagnostics.mjs';
 import {retainedAnswerWordingFlow,offlineRetainedAnswerWording} from './retained-answer-wording.mjs';
 import {worldPhotoFlow,offlineWorldPhotos,photoCardOpenerFlow,pendingPhotoBackFocusFlow} from './world-photos.mjs';
 import {journeySourceView,sourceRouteInputFlow} from './journey-sources.mjs';
@@ -156,12 +156,12 @@ export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix
    // Keep this bounded record in the existing engine log/artifact namespace;
    // never retry an action or replace the original exception with a probe error.
    try{
-    const actual=await p.evaluate(()=>({url:location.href,title:document.querySelector('#world-topic-title')?.textContent??null,inquiryIds:[...document.querySelectorAll('[data-animal-inquiry]')].map(e=>e.getAttribute('data-animal-inquiry')),worldLoading:[...document.querySelectorAll('.world-view [role="status"]')].map(e=>e.textContent?.slice(0,160)).slice(0,3),active:document.activeElement?{tag:document.activeElement.tagName,id:document.activeElement.id,routeFocus:document.activeElement.getAttribute('data-route-focus'),text:document.activeElement.textContent?.slice(0,160)}:null})).catch(e=>({unavailable:e.message}));
+    const actual=await readAnimalFailureView(p);
     const failure={engine:browser.browserType().name(),current,stage,width,error:error.message,actual,lifecycle:await lifecycle.snapshot()};
     console.error('ANIMAL_WORKSHOP_FAILURE',JSON.stringify(failure));
     await fs.writeFile(path.join(shots,'animal-workshop-failure-'+width+'.json'),JSON.stringify(failure,null,2)+'\n',{flag:'wx'});
    }catch(diagnosticError){console.error('ANIMAL_WORKSHOP_DIAGNOSTIC_UNAVAILABLE',JSON.stringify({current,stage,width,error:diagnosticError.message}));}
-   await p.screenshot({path:path.join(shots,'animal-failure-'+width+'.png'),fullPage:true,timeout:5000}).catch(()=>{});throw error;
+   await captureAnimalFailureScreenshot(p,shots,{engine:browser.browserType().name(),current,stage,width});throw error;
   }finally{lifecycle.stop();await c.close();}
  }
  const navigationProof={};await animalNavigation(browser,base,ready,monitor,shots,navigationProof,navigationReuse);

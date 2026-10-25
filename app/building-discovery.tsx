@@ -1,6 +1,7 @@
 'use client';
 import {useSavedGame,useSavedModel} from './saved-games';
 import type {WorldTopic} from './world-types';
+import BuildingSphere from './building-sphere';
 type Kind=NonNullable<NonNullable<WorldTopic['building']>['exploration']>['kind'];
 const LEGEND:Record<Kind,[string,string,string]>={aqueduct:['Fluss im Tal','Tragende Bögen','Wasserrinne'], 'dry-stone':['Steinlagen ohne Mörtel','Fugen der Steinlagen','Weitere Wohnbauten'],timber:['Stützen','Konsolen und Dach','Lastweg zum Untergrund'],earth:['Tragende Wand','Äußere Putzfläche','Pflege des ganzen Bauwerks'],'rock-cut':['Vorhandener Fels','Ausgeräumter Zugang','Getrennte Entwässerung'],'temple-water':['Tempelbereich','Umgebender Graben','Wasserwege der Landschaft'],corbel:['Seitliche Steinlagen','Obere Steinlagen','Verbleibende Öffnung'],shells:['Gemeinsamer Mittelpunkt','Gleicher Radius','Verschiedene Kreisbögen']};
 const ink='#285463',stone='#a4c7bb',orange='#c06a35',water='#317f9a';
@@ -35,6 +36,7 @@ export default function BuildingDiscovery({topic,onSolved}:{topic:WorldTopic;onS
   <div className="structure-buttons" role="group" aria-label="Bauwerk in drei Schritten erkunden">{['Orientieren','Aufbau erkennen','Zusammenhänge'].map((s,i)=><button key={s} className="secondary-button" aria-pressed={step===i} onClick={()=>choose(i)}>{i+1} · {s}</button>)}</div>
   <p className="model-result" role="status">{data.steps[step]}</p>
   {controls&&<details className="building-comparison"><summary>Selbst vergleichen</summary><div className="model-buttons" role="group" aria-label="Geometrischen Vergleich verändern">{controls.map((s,i)=><button key={s} className="secondary-button" aria-pressed={variant===i} onClick={()=>{setStep(2);setVariant(i);}}>{s}</button>)}</div><p role="status">{result}</p></details>}
+  {data.kind==='shells'&&step===2&&<BuildingSphere/>}
   <p className="small-note">{data.note}</p>
  </section>;
 }

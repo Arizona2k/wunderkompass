@@ -1,3 +1,7 @@
+## Vorbereitet · vom Kreis zur Kugelfläche
+
+Der Sydney-Lernvergleich ergänzt im dritten Modellschritt zwei unterschiedlich große Flächenstücke derselben Kugel. Eigene mathematische Zeichnung mit KI-Unterstützung, klar von Gebäudeansicht und genauer Dachkonstruktion getrennt. Bestehende Kreisbögen, Aufgaben und gespeicherte Fortschritte bleiben. Fünf frühe Chromium- und drei WebKit-Ansichten einschließlich gezielter Gegenfehler bestanden; vollständige Schlussabnahme und Lieferung noch offen.
+
 ## Vorbereitet und gezielt belegt · Herkunft schon in der Kachel und richtiger Rücksprung
 
 Tierbilder zeigen ihre Herkunft jetzt auch vor dem Öffnen: „KI-Illustration“ beim Okapi und „Zeichnung mit KI-Unterstützung“ bei den23beibehaltenen Merkmalszeichnungen. Originale und Artikelhinweise bleiben erhalten. Sechs tatsächlich unbeschriftete alte Kachelfälle wurden mit demselben neuenGuard abgewiesen; alle24aktuellen Kacheln bei320normal/groß und zusätzlicheDesktop-/native200%-Fälle sowie zwei absichtlich falsche Zustände bestanden. Die Bildtypen bleiben klar von Fotos getrennt.
