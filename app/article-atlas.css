@@ -32,7 +32,7 @@
 .article-field-note>svg {color:var(--world-accent,var(--wk-teal))}
 .article-field-note>span {font-size:25px;line-height:1.25;font-weight:700;max-width:15ch;letter-spacing:-.03em}
 .article-atlas .article-field-note>p {font-size:15px;max-width:34ch}
-.article-atlas .article-wayfinder {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:0 0 24px}
+.article-atlas .article-wayfinder {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));margin:0 0 24px}
 .article-wayfinder button {display:flex;align-items:center;gap:10px;padding:12px;min-height:50px;line-height:1.5;font-size:14px;text-align:left;border:1px solid var(--wk-line);border-radius:12px;background:#fff;color:var(--wk-ink);min-width:0}
 .article-wayfinder button>span {font-size:11px;color:var(--world-accent,var(--wk-teal));font-weight:800}
 .article-wayfinder button:hover {background:var(--world-tint);border-color:var(--world-accent)}
@@ -78,7 +78,6 @@
 .world-topic-tile:has(.topic-illustration) {display:flex;flex-direction:column}
 .world-topic-tile:has(.topic-illustration) .world-tile-text {flex:1}
 @media(min-width:700px) {
- .article-atlas .article-wayfinder {grid-template-columns:repeat(4,minmax(0,1fr))}
  .article-atlas .article-hero {grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:stretch}
  .article-atlas .article-hero>.world-photo {display:flex;flex-direction:column;justify-content:center}
  .article-atlas .article-hero>.world-photo img {height:320px}

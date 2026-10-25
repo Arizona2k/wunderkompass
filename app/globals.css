@@ -190,3 +190,6 @@
 .page-heading{margin-bottom:22px}.page-heading h1{font-size:clamp(26px,3vw,36px);line-height:1.2}
 @media(max-width:560px){.site-header{min-height:64px;padding:10px 14px;gap:10px}.brand-mark{width:34px;height:34px}.brand-name{font-size:21px}.brand-name small{display:none}.learning-main{padding:18px 14px}.world-topic-tile .world-tile-text{padding:18px}.world-topic-tile h3{font-size:22px}.world-filter{padding:14px}.page-heading h1{font-size:27px}}
 .large-reading .world-topic-tile .world-tile-text>p{font-size:20px}.large-reading .world-topic-tile h3{font-size:27px}
+/* Keep both header actions reachable at narrow widths; counts live in the pass. */
+@media(max-width:560px){.earth-app .header-right .discovery-badge{width:44px;min-width:44px;padding:0;gap:0}.earth-app .header-right .discovery-badge strong{display:none}.earth-app .site-header .brand{min-height:44px}}
+@media(max-width:370px){.earth-app .site-header{padding-inline:10px;gap:6px}.earth-app .site-header .brand-mark{width:26px;height:26px}.earth-app .site-header .brand-mark svg{width:20px;height:20px}}

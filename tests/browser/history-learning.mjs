@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {captureNativeViewport} from './native-screenshot.mjs';
+import {assertTextInsideControls} from './text-geometry.mjs';
 const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 const topics=catalog.filter(t=>['history-khipu','history-mohenjo-daro','history-bronze'].includes(t.id));assert.equal(topics.length,3,'all three required historical topics are present');
 export async function assertBronzeEvidence(activity){
@@ -16,6 +17,7 @@ export async function assertBronzeEvidence(activity){
  return{inventedCards:true,aiAssistedDrawing:true,materialAndContextSeparate:true,contextVisible:shown,labelsReadable:true};
 }
 async function checkGeometry(p){
+ await assertTextInsideControls(p,'.article-wayfinder button','article orientation');
  assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'history learning model has no page overflow');
  const bad=await p.getByRole('region',{name:'Geschichtsdetektiv'}).evaluate(el=>{const found=[],walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let n;while(n=walk.nextNode()){if(!n.textContent.trim())continue;const range=document.createRange();range.selectNodeContents(n);for(const r of range.getClientRects())if(r.width&&(r.left< -2||r.right>innerWidth+2))found.push(n.textContent);}return found;});assert.deepEqual(bad,[],'actual diagram labels/tasks are within the viewport');
 }
