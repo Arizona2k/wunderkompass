@@ -1,5 +1,7 @@
 ## Vorbereitet · Bronze und Reichweite eines Fundbelegs
 
+- Gezielte Nachprüfung nach fehlgeschlagenem Volltest: alte Quiz-Erfolgstexterwartung im originalen Altantwort-/Reloadpfad auf die tatsächliche Auswahlmeldung korrigiert, ehrlichen Feedbackguard ergänzt;320/1440 bestanden. Fehlbericht und Bild bleiben Originale, vollständige Bronze-Abnahme weiterhin offen.
+
 Ein neuer Geschichtsartikel verbindet die historisch wichtige Kupfer-Zinn-Legierung mit der Frage, was ein Fund über Material, Zeit und Nutzung aussagen kann. Erfundene Fundkarten und drei Aufgaben unterscheiden diese Aussagen. Frühere217Fragen und187Themen bleiben erhalten; ein gegenseitiger Materialvergleich führt zu den Steinwerkzeugen. Die Wissens-Challenge bestätigt die gewählte Antwort und den Aufgabenabschluss mit zutreffenderem Wortlaut. Finale gezielte5Chromium-/Zoom- und3WebKit-Ansichten einschließlich3Modellgegenfehlern/3Aufgabenfällen bestanden;260Units/130Release-/Typ-/Lint-/Build-/static44und97-Prüfungen grün. Aktuelle vollständige Abnahme und Lieferung stehen aus.
 
 ## Vorbereitet · vom Kreis zur Kugelfläche
