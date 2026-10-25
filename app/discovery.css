@@ -92,7 +92,7 @@
 #world-category-title:focus-visible{outline:2px solid #256384;outline-offset:4px}
 @media(max-width:1100px){.earth-app .mode-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:560px){.earth-app .mode-tabs{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:16px}.earth-app .mode-tabs .nav-tab{justify-content:flex-start;min-height:48px!important;padding:8px!important;gap:7px!important;font-size:14px!important}.earth-app.large-reading .mode-tabs .nav-tab{font-size:17px!important;min-height:58px!important}}
-@media(forced-colors:active){.earth-app .mode-tabs .nav-tab[data-state=active]{border-color:Highlight;color:Highlight!important}.earth-app .mode-tabs .nav-tab:focus-visible{outline-color:Highlight!important}}
+@media(forced-colors:active){.earth-app .mode-tabs .nav-tab[data-state=active]{border-color:CanvasText;color:CanvasText!important;text-decoration:underline}.earth-app .mode-tabs .nav-tab:focus-visible{outline-color:CanvasText!important}}
 .earth-app[data-mode=globe] .visual-heading{padding:20px 20px 14px}
 .earth-app[data-mode=globe] .learning-sidebar .info-card{padding:20px}
 .earth-app[data-mode=globe] .welcome-info .welcome-task{display:none}
@@ -145,7 +145,7 @@
 @media(prefers-reduced-motion:reduce){.gateway-compact .world-choice{transition:none}.gateway-compact .world-choice:hover{transform:none}}
 [data-reduced-motion=true] .gateway-compact .world-choice{transition:none}
 [data-reduced-motion=true] .gateway-compact .world-choice:hover{transform:none}
-@media(forced-colors:active){.discovery-hero :is(button,a):focus-visible,.discovery-worlds :is(button,a,summary):focus-visible,.discovery-pathways :is(button,a):focus-visible,.update-history :is(a,summary):focus-visible{outline-color:Highlight}.discovery-search{border:1px solid ButtonText}}
+@media(forced-colors:active){.discovery-hero :is(button,a):focus-visible,.discovery-worlds :is(button,a,summary):focus-visible,.discovery-pathways :is(button,a):focus-visible,.update-history :is(a,summary):focus-visible{outline-color:CanvasText}.discovery-search{border:1px solid ButtonText}}
 .home-earth-facts{margin:12px 0 20px;color:var(--wk-muted);font-size:14px;line-height:1.6}
 .home-earth-facts>summary{cursor:pointer;min-height:44px;align-content:center;width:fit-content}
 .home-earth-facts .planet-facts{margin:10px 0}

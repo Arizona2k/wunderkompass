@@ -110,8 +110,8 @@
  .pass-preferences .settings-grid label {padding:10px;gap:10px}
 }
 @media(forced-colors:active) {
- .passport-atlas :is(button,a,summary,[role=switch],[role=slider],select,h3):focus-visible,.pass-confirmation button:focus-visible {outline:2px solid Highlight;outline-offset:3px;box-shadow:none}
- .passport-atlas .pass-header button:focus-visible {outline-color:Highlight}
+ .passport-atlas :is(button,a,summary,[role=switch],[role=slider],select,h3):focus-visible,.pass-confirmation button:focus-visible {outline:2px solid CanvasText;outline-offset:3px;box-shadow:none}
+ .passport-atlas .pass-header button:focus-visible {outline-color:CanvasText}
 }
 
 /* Saved work and continuation come before the optional achievement collection. */

@@ -25,7 +25,7 @@ async function keyboardRing(control,name){
  // WCAG non-text contrast for the ring against the surface around it.
  const colors=await control.evaluate(el=>{let surface=el.parentElement;while(surface&&getComputedStyle(surface).backgroundColor==='rgba(0, 0, 0, 0)')surface=surface.parentElement;return [getComputedStyle(el).outlineColor,getComputedStyle(surface).backgroundColor]});
  const luminance=color=>{const rgb=color.match(/[\d.]+/g).slice(0,3).map(Number).map(n=>{const v=n/255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4});return .2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2]};
- const [a,b]=colors.map(luminance);assert.ok((Math.max(a,b)+.05)/(Math.min(a,b)+.05)>=3,name+' focus contrast at least 3:1');
+ const [a,b]=colors.map(luminance),contrast=(Math.max(a,b)+.05)/(Math.min(a,b)+.05);assert.ok(contrast>=3,name+' focus contrast at least 3:1 '+JSON.stringify({outline:colors[0],surface:colors[1],contrast}));
 }
 
 async function switchGeometry(control,name){
