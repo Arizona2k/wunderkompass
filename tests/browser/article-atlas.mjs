@@ -113,7 +113,7 @@ export async function offlineArticleAtlas(page,report){
  report.mechanicsCold=await mechanicsSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.mechanicsCold.length,6);
  report.electricalCold=await electricalSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.electricalCold.length,3);
  report.opticsCold=await opticsSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.opticsCold.length,3);
- report.historySourceCold=await historySourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.historySourceCold.length,2,'both new historical activities survive the actual cold browser restart');
+ report.historySourceCold=await historySourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.historySourceCold.length,3,'all three historical activities survive the actual cold browser restart');
  report.scienceOriginalCold=await scienceOriginalView(page,{width:await page.evaluate(()=>innerWidth),questions:false});assert.equal(report.scienceOriginalCold.length,23,'all science originals, model states and voluntary inquiries survive the actual cold browser restart');
  report.checks.push('New article drawings, wayfinder, individual mini hint and coastal comparison work after actual cold offline restart');
 }

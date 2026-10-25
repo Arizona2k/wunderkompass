@@ -1,0 +1,18 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+import catalog from '../app/world-catalog.json' with {type:'json'};import graph from '../app/world-connections.json' with {type:'json'};import original from './fixtures/retained-before-bronze-history.json' with {type:'json'};import {CHALLENGE_BANK,restoreChallenge} from '../app/knowledge-challenge.ts';
+import hints from '../app/challenge-hints.json' with {type:'json'};
+const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+test('bronze preserves every actual preceding217question record,187topic and prior graph; only its one declared backlink is added',()=>{
+ assert.equal(original.sourceCommit,'a9679675f30b5ad22ab193755356317c6024e467');assert.equal(original.questions.length,217);assert.equal(original.topicHashes.length,187);
+ assert.deepEqual(CHALLENGE_BANK.filter(q=>q.topic!=='history-bronze'),original.questions,'every old answer/index/hint/explanation/order remains exact');assert.equal(CHALLENGE_BANK.length,220);
+ assert.deepEqual(catalog.filter(t=>t.id!=='history-bronze').map(t=>t.id),original.topicHashes.map(t=>t.id));
+ for(const old of original.topicHashes){let current=catalog.find(t=>t.id===old.id);if(current.id==='history-stone_tools'){assert.equal(current.related.filter(id=>id==='history-bronze').length,1);current={...current,related:current.related.filter(id=>id!=='history-bronze')};}assert.equal(hash(current),old.sha256,old.id+' all factual/answer/source/model/old relationship fields');}
+ assert.equal(hash({...graph,connections:graph.connections.filter(c=>c.fromId!=='history-bronze'&&c.toId!=='history-bronze')}),original.graphSHA256);
+ const added=graph.connections.filter(c=>c.fromId==='history-bronze'||c.toId==='history-bronze');assert.equal(added.length,1);assert.equal(added[0].toId,'history-stone_tools');assert.match(added[0].why,/verschiedenen Regionen und Zeiten/);
+});
+test('bronze questions separate regional dating, material identity and the reach of a single find',()=>{
+ const topic=catalog.find(t=>t.id==='history-bronze');assert.deepEqual(topic.locations,[],'no invented single find location');assert.match(topic.facts[1].text,/Britanniens.*2300–800.*kein Kalender für die ganze Welt/);assert.match(topic.sourceNote,/späteren antiken Griechenland.*keine Datierung/);assert.match(topic.more[0],/Materialanalyse/);assert.equal(topic.question.correct,0);assert.equal(topic.questionFeedback.wrongReasons[0],null);assert.equal(topic.challenges.length,2);assert.match(topic.challenges[0].why,/zusätzliche Informationen/);assert.match(topic.challenges[1].why,/einzelner Gegenstand/);
+ const questions=CHALLENGE_BANK.filter(q=>q.topic===topic.id);assert.deepEqual(questions.map(q=>q.difficulty),['easy','medium','hard']);assert.equal(new Set(questions.map(q=>q.hints[0])).size,3);assert.ok(questions.every(q=>q.hints[0]?.length>40));
+ for(const question of questions){const reasons=hints[question.id].wrongReasons;assert.equal(reasons.length,question.answers.length);assert.equal(reasons[question.correct],null);for(const [i,reason]of reasons.entries())if(i!==question.correct){assert.ok(reason.length>45);assert.notEqual(reason,question.why);}assert.equal(new Set(reasons.filter(Boolean)).size,2,'individual feedback for both specific confusions');}
+ for(const difficulty of ['easy','medium','hard']){const pool=original.questions.filter(q=>q.difficulty===difficulty).slice(0,6),save={difficulty,ids:pool.map(q=>q.id),orders:Object.fromEntries(pool.map(q=>[q.id,[...q.answers].reverse()])),index:2,answer:pool[2].answers[pool[2].correct],done:false};assert.deepEqual(restoreChallenge(structuredClone(save),{invalid:true}),save,'old saved round remains exact '+difficulty);}
+});

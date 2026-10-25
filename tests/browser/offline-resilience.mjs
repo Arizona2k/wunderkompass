@@ -109,7 +109,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   assert.equal(report.electricalDiscovery.length,native?6:12,'all three electrical activities at every required cached-app width');
   assert.equal(report.mechanicsDiscovery.length,native?12:24,'all six mechanical activities at every required cached-app width');
   assert.equal(report.opticsDiscovery.length,native?6:12,'all three optical activities at every required cached-app width');
-  assert.equal(report.historySourceDiscovery.length,native?4:8,'both source activities at every required cached-app width');
+  assert.equal(report.historySourceDiscovery.length,native?6:12,'all three source activities at every required cached-app width');
   const afterLearning=await snapshot();for(const key of ['favorites','notes'])assert.deepEqual(afterLearning[key],saved[key]);for(const [key,value]of Object.entries(saved.gameSessions))assert.deepEqual(afterLearning.gameSessions[key],value,'old saved game remains after cached source exploration '+key);
   report.worldGameSemantics=await worldGameOfflineSemantics(page,{shots:shots??'.qa-output',kind,native});
   report.bookLearning={checks:[]};

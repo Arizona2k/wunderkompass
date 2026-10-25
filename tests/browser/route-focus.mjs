@@ -25,7 +25,7 @@ export async function pendingRouteFocusFlow(browser,base,ready,monitor,report,sh
 // Exercise that actual browser boundary rather than retrying a failed assertion.
 export async function wayfinderPendingFocusFlow(browser,base,ready,monitor,report,shots){
  const cases=[];report.wayfinderPendingFocus={cases,method:'Actual app restoration frames released between explicit focus and trusted Enter; untouched-route positive control retains automatic heading focus. Corresponding reproduced condition, not reconstructed CI event timing.'};
- const topics=[['person-mary_anning','.people-evidence'],['person-ibn_al_haytham','.people-evidence'],['history-khipu','.history-evidence'],['history-mohenjo-daro','.history-evidence']];
+ const topics=[['person-mary_anning','.people-evidence'],['person-ibn_al_haytham','.people-evidence'],['history-khipu','.history-evidence'],['history-mohenjo-daro','.history-evidence'],['history-bronze','.history-evidence']];
  for(const width of [320,1440]){
   const c=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
   try{
@@ -47,6 +47,6 @@ export async function wayfinderPendingFocusFlow(browser,base,ready,monitor,repor
    }
   }finally{await c.close();}
  }
- assert.equal(cases.length,8,'both person and both historical activities at320/1440');
- report.checks.push('Explicit wayfinder focus survives pending navigation before Enter for both biographies and both historical activities at320/1440; untouched and untrusted-event controls keep automatic heading restoration');
+ assert.equal(cases.length,10,'both person and all three historical activities at320/1440');
+ report.checks.push('Explicit wayfinder focus survives pending navigation before Enter for both biographies and all three historical activities at320/1440; untouched and untrusted-event controls keep automatic heading restoration');
 }

@@ -27104,6 +27104,82 @@
         "offline": true,
         "report": "Original complete mandatory local browser acceptance at bb3eaafdbc16c5b55465696089d27ed2a4569b6e / source 411139915da51a02b1d0cee65929a8e9b8f66d51fba1f435d7faeb99d6e39bfd / report SHA256=d80692342eca1eb217a2479c3e5f61508ef293ca75279dd9780d87765e0c7046. Scope and original provenance: sewingDeviceCurrentBuildProof20261025. Native Firefox/WebKit integration CI and delivery remain separate."
       }
+    },
+    {
+      "id": "topics-history:history-bronze",
+      "dataHash": "150c1ad2c9394d39719d090a9b527740944ac166bc2cfc67afcbb0e2d36e7d55",
+      "goal": "Du trennst Material und zeitliche Einordnung und prüfst, wie weit eine Schlussfolgerung aus einzelnen Funden reicht.",
+      "explanation": "Three linked explanations distinguish alloy, forming process, continued use of stone and inference from a find.",
+      "example": "Two explicitly invented evidence cards compare a stone object and a copper-tin object; contextual labels can be hidden.",
+      "whyItMatters": "Du trennst Material und zeitliche Einordnung und prüfst, wie weit eine Schlussfolgerung aus einzelnen Funden reicht.",
+      "hint": "Unterscheide den Namen eines Zeitabschnitts vom Werkstoff eines einzelnen Gegenstands.",
+      "feedback": "Specific feedback distinguishes period name from material; material analysis from dating; one find from a regional universal claim.",
+      "modelLimits": "Own clearly invented evidence-card comparison with AI assistance. Labels separate material from contextual evidence; not object photos, copied museum artwork, microscopic metal structure or a casting recipe. Current learning purpose is comparison of evidence; no original museum-photo pixel review claimed.",
+      "reviewedBy": "Codex source-based AI self-review; no independent human or empirical learner approval",
+      "reviewedOn": "2026-10-25",
+      "ageLevels": {
+        "6-8": "Menschen stellten ein neues Metallgemisch her. Sie benutzten trotzdem auch Steinwerkzeuge weiter.",
+        "9-11": "Vergleiche im Geschichtsdetektiv die beiden erfundenen Fundkarten. Unterscheide Materialangaben und Fundzusammenhang. Blende den Zusammenhang aus: Was lässt sich dann nicht mehr allein aus dem Material ablesen?",
+        "12-14": "Eigenschaften, Verarbeitung und Verwendung gehören zusammen. Bronze bedeutet kein einziges Mischungsverhältnis. Ein Fund sagt außerdem nicht, wie oft alle Menschen einer Region einen Werkstoff benutzten."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "Ashmolean Museum",
+          "url": "https://britisharchaeology.ashmus.ox.ac.uk/collections/bronze-age.html",
+          "checkedOn": "2026-10-25",
+          "rightsBasis": "Own short paraphrase and code-generated learning comparison, no copied text/image or claimed original museum photo."
+        },
+        {
+          "id": "source-1",
+          "organisation": "The Met",
+          "url": "https://www.metmuseum.org/essays/ancient-greek-bronze-vessels",
+          "checkedOn": "2026-10-25",
+          "rightsBasis": "Own short paraphrase and code-generated learning comparison, no copied text/image or claimed original museum photo."
+        },
+        {
+          "id": "source-2",
+          "organisation": "Getty Conservation Institute",
+          "url": "https://www.getty.edu/publications/bronze-guidelines/vol-1/2/",
+          "checkedOn": "2026-10-25",
+          "rightsBasis": "Own short paraphrase and code-generated learning comparison, no copied text/image or claimed original museum photo."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Stone and flint objects continued in use in Bronze Age Britain;2300–800BCEis a regional museum periodization.",
+          "sourceId": "source-0",
+          "anchor": "Bronze Age collection, lines78–88"
+        },
+        {
+          "statement": "Copper/tin bronze and different forming techniques are illustrated by later Greek vessels; this does not date the Bronze Age start.",
+          "sourceId": "source-1",
+          "anchor": "Ancient Greek Bronze Vessels, lines89–95"
+        },
+        {
+          "statement": "Composition affects copper-alloy properties; analysing a material is a different question from dating its use.",
+          "sourceId": "source-2",
+          "anchor": "Metals, lines8–20 and1.1"
+        }
+      ],
+      "links": [
+        "topics-history:history-stone_tools"
+      ],
+      "mediaDecision": "Own clearly invented evidence-card comparison with AI assistance. Labels separate material from contextual evidence; not object photos, copied museum artwork, microscopic metal structure or a casting recipe. Current learning purpose is comparison of evidence; no original museum-photo pixel review claimed.",
+      "ui": {
+        "build": "pending",
+        "route": "#world/topic/history-bronze",
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Pending actual built article/model/task/mobile/native/back/offline evidence, then full acceptance; no premature binding."
+      },
+      "aiSelfReview": {
+        "independentHumanReview": false,
+        "sourceBased": true,
+        "boundary": "Museum/date/material claims checked separately; actual UI and own counterexamples pending."
+      }
     }
   ],
   "questionCorrections": [

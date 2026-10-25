@@ -1,3 +1,7 @@
+## Vorbereitet · Bronze und Reichweite eines Fundbelegs
+
+Ein neuer Geschichtsartikel verbindet die historisch wichtige Kupfer-Zinn-Legierung mit der Frage, was ein Fund über Material, Zeit und Nutzung aussagen kann. Erfundene Fundkarten und drei Aufgaben unterscheiden diese Aussagen. Frühere217Fragen und187Themen bleiben erhalten; ein gegenseitiger Materialvergleich führt zu den Steinwerkzeugen. Die Wissens-Challenge bestätigt die gewählte Antwort und den Aufgabenabschluss mit zutreffenderem Wortlaut. Frühe gezielte Chromium-/Zoom-/Gegenfehlerprüfungen bestanden; vollständige Abnahme und Lieferung stehen aus.
+
 ## Vorbereitet · vom Kreis zur Kugelfläche
 
 Der Sydney-Lernvergleich ergänzt im dritten Modellschritt zwei unterschiedlich große Flächenstücke derselben Kugel. Eigene mathematische Zeichnung mit KI-Unterstützung, klar von Gebäudeansicht und genauer Dachkonstruktion getrennt. Bestehende Kreisbögen, Aufgaben und gespeicherte Fortschritte bleiben. Fünf frühe Chromium- und drei WebKit-Ansichten einschließlich gezielter Gegenfehler sowie die vollständige lokale dbc/30a-Schlussabnahme1380,192s/148Checks/alle10Gruppen bestanden. Fünf normale/zwei native/vier Offline-Recovery-Fälle enthalten die Kugelprüfung.96UI-Quittungen erst danach bei erhaltenen Fakten/Historien erneuert; finale52eb-Metadatenchecks bestanden,167Builddateien bytegleich. Neue nativeCI und Lieferung bleiben offen.

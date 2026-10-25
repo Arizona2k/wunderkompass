@@ -2540,7 +2540,8 @@
     ],
     "related": [
       "history-writing",
-      "history-web"
+      "history-web",
+      "history-bronze"
     ],
     "sources": [
       {
@@ -16879,5 +16880,112 @@
         "Aus einem fehlenden Transit folgt kein Leben. Selbst ein bestätigter Planet oder eine günstige Temperaturzone beweist keine bewohnbare Oberfläche."
       ]
     }
+  },
+  {
+    "id": "history-bronze",
+    "category": "history",
+    "title": "Bronze: neues Material, alte Werkzeuge",
+    "intro": "Ein neues Metallgemisch veränderte Werkzeuge. Trotzdem verschwanden Steinwerkzeuge nicht plötzlich überall.",
+    "aliases": [
+      "Bronzezeit",
+      "Zinnbronze",
+      "Kupfer und Zinn",
+      "Metalllegierung"
+    ],
+    "paragraphs": [
+      "Bronze ist eine Legierung: ein Werkstoff aus Kupfer und weiteren Bestandteilen. Hier betrachten wir die historisch wichtige Zinnbronze aus Kupfer und Zinn. Ihre Eigenschaften unterscheiden sich von denen des reinen Kupfers.",
+      "Handwerksleute konnten geeignete Bronze zum Beispiel in Formen gießen oder mit Werkzeugen bearbeiten. Bronzegefäße aus dem antiken Griechenland zeigen auch beides zusammen: gehämmerte Gefäßkörper und gegossene Einzelteile.",
+      "Neue Werkstoffe ersetzten ältere nicht auf einen Schlag. Das Ashmolean Museum beschreibt: Im bronzezeitlichen Britannien wurden weiterhin viele Gegenstände aus Stein und Feuerstein benutzt. Bronzezeit heißt also nicht, dass jeder Gegenstand aus Bronze bestand."
+    ],
+    "facts": [
+      {
+        "label": "Werkstoff",
+        "text": "Zinnbronze verbindet Kupfer und Zinn. Historische Zusammensetzungen konnten sich unterscheiden."
+      },
+      {
+        "label": "Regionale Zeiteinteilung",
+        "text": "Das Ashmolean Museum beschreibt die Bronzezeit Britanniens ungefähr mit 2300–800 v. Chr. Diese regionale Einteilung ist kein Kalender für die ganze Welt."
+      }
+    ],
+    "more": [
+      "Eine Gefäßform allein beweist nicht, aus welchem Metallgemisch ein Fund besteht. Fachleute untersuchen unter anderem die Zusammensetzung. Auch eine grüne Oberfläche ersetzt keine Materialanalyse.",
+      "Eigenschaften, Verarbeitung und Verwendung gehören zusammen. Bronze bedeutet kein einziges Mischungsverhältnis. Ein Fund sagt außerdem nicht, wie oft alle Menschen einer Region einen Werkstoff benutzten."
+    ],
+    "surprise": "Ein Steinwerkzeug und ein Gegenstand aus Bronze können aus demselben Zeitabschnitt stammen.",
+    "locations": [],
+    "related": [
+      "history-stone_tools"
+    ],
+    "sources": [
+      {
+        "label": "Ashmolean Museum · Bronzezeit in Britannien und weiterverwendete Steinwerkzeuge",
+        "url": "https://britisharchaeology.ashmus.ox.ac.uk/collections/bronze-age.html"
+      },
+      {
+        "label": "The Met · Kupfer, Zinn und verschiedene Bearbeitungen",
+        "url": "https://www.metmuseum.org/essays/ancient-greek-bronze-vessels"
+      },
+      {
+        "label": "Getty Conservation Institute · Zusammensetzung und Untersuchung von Bronze",
+        "url": "https://www.getty.edu/publications/bronze-guidelines/vol-1/2/"
+      }
+    ],
+    "sourceNote": "Museumstexte zu regionaler Datierung, Werkstoffen und Verarbeitung am 25.10.2026 tatsächlich gelesen. Britannien ist ein konkretes Beispiel, keine weltweite Einheitszeit. Die Gefäßbearbeitung im späteren antiken Griechenland ist ein weiteres Beispiel, keine Datierung des Bronzezeitbeginns. Die Fundkarten sind erfunden, keine Museumsobjekte oder originalen Grabungsnotizen.",
+    "links": [],
+    "history": {
+      "year": -2300,
+      "date": "Beispiel Britannien: etwa 2300–800 v. Chr.",
+      "era": "Werkstoffe und Fundspuren",
+      "sensitive": false
+    },
+    "learning": {
+      "starter": "Menschen stellten ein neues Metallgemisch her. Sie benutzten trotzdem auch Steinwerkzeuge weiter.",
+      "observe": "Vergleiche im Geschichtsdetektiv die beiden erfundenen Fundkarten. Unterscheide Materialangaben und Fundzusammenhang. Blende den Zusammenhang aus: Was lässt sich dann nicht mehr allein aus dem Material ablesen?",
+      "benefit": "Du trennst Material und zeitliche Einordnung und prüfst, wie weit eine Schlussfolgerung aus einzelnen Funden reicht."
+    },
+    "question": {
+      "prompt": "Ein Steinhammer stammt aus einem bronzezeitlichen Fundzusammenhang in Britannien. Was passt zum Museumsbefund?",
+      "answers": [
+        "Menschen konnten Bronze und Stein nebeneinander verwenden.",
+        "Jeder bronzezeitliche Gegenstand musste aus Bronze bestehen.",
+        "Ein Steinhammer kann grundsätzlich nicht aus dieser Zeit stammen."
+      ],
+      "correct": 0,
+      "why": "Stein und Feuerstein wurden weiterverwendet. Der Name eines Zeitabschnitts bestimmt nicht das Material jedes einzelnen Gegenstands."
+    },
+    "questionFeedback": {
+      "hint": "Unterscheide den Namen eines Zeitabschnitts vom Werkstoff eines einzelnen Gegenstands.",
+      "wrongReasons": [
+        null,
+        "Die Zeitbezeichnung beschreibt nicht das Material jedes Gegenstands. Das Museum nennt weiterhin benutzte Stein- und Feuersteinobjekte.",
+        "Der Werkstoff allein schließt diese zeitliche Einordnung nicht aus. Steinwerkzeuge wurden weiterhin verwendet."
+      ]
+    },
+    "challenges": [
+      {
+        "id": "history-bronze:material",
+        "difficulty": "medium",
+        "prompt": "Die Analyse eines Stücks ergibt Kupfer und Zinn. Was ist damit allein noch nicht geklärt?",
+        "answers": [
+          "Wann und wo Menschen das Stück benutzt haben.",
+          "Dass das untersuchte Stück Kupfer enthält.",
+          "Dass das untersuchte Stück Zinn enthält."
+        ],
+        "correct": 0,
+        "why": "Die Analyse beschreibt Bestandteile. Eine zeitliche Einordnung braucht zusätzliche Informationen, etwa einen verlässlich untersuchten Fundzusammenhang."
+      },
+      {
+        "id": "history-bronze:limits",
+        "difficulty": "hard",
+        "prompt": "In einer Ausgrabung wird ein Bronzegegenstand gefunden. Welche Schlussfolgerung braucht deutlich mehr Belege?",
+        "answers": [
+          "Alle Menschen der ganzen Region benutzten ausschließlich Bronze.",
+          "An diesem Fund kann der Werkstoff untersucht werden.",
+          "Weitere Funde können mit diesem Stück verglichen werden."
+        ],
+        "correct": 0,
+        "why": "Ein einzelner Gegenstand zeigt keine ausschließliche Nutzung in einer ganzen Region. Weitere Funde und ihre Zusammenhänge können auch die Nutzung anderer Werkstoffe belegen."
+      }
+    ]
   }
 ]

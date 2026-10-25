@@ -1166,5 +1166,35 @@
       "Achte auf die Blickrichtung. Ein Körper kann um einen Stern kreisen und dabei aus unserem Blickwinkel trotzdem nicht vor dessen Scheibe ziehen.",
       "Vergleiche die beiden festen Ansichten: Links liegt der Planet vor der Sternscheibe, rechts daneben. Vermute, bei welchem Blick etwas Sternenlicht verdeckt wird. Es gibt hier keine laufende Bahn und keine gemessene Helligkeitskurve."
     ]
+  },
+  "history-bronze:mini": {
+    "steps": [
+      "Unterscheide den Namen eines Zeitabschnitts vom Werkstoff eines einzelnen Gegenstands."
+    ],
+    "wrongReasons": [
+      null,
+      "Die Zeitbezeichnung beschreibt nicht das Material jedes Gegenstands. Das Museum nennt weiterhin benutzte Stein- und Feuersteinobjekte.",
+      "Der Werkstoff allein schließt diese zeitliche Einordnung nicht aus. Steinwerkzeuge wurden weiterhin verwendet."
+    ]
+  },
+  "history-bronze:material": {
+    "steps": [
+      "Prüfe getrennt: Welche Angabe beschreibt Bestandteile, welche würde einen Zeitpunkt oder Ort belegen?"
+    ],
+    "wrongReasons": [
+      null,
+      "Kupfer ist in der Analyse bereits genannt. Die Frage sucht eine Information, die aus diesen Bestandteilen allein noch nicht folgt.",
+      "Zinn ist in der Analyse bereits genannt. Die Stoffangabe liefert allein noch keine Angaben zu Ort und Zeitpunkt der Nutzung."
+    ]
+  },
+  "history-bronze:limits": {
+    "steps": [
+      "Achte auf die Wörter alle und ausschließlich. Wie viele Menschen und Gegenstände erfasst ein einzelner Fund tatsächlich?"
+    ],
+    "wrongReasons": [
+      null,
+      "Das einzelne Stück kann tatsächlich untersucht werden. Diese begrenzte Aussage behauptet keine ausschließliche Nutzung in der ganzen Region.",
+      "Ein Vergleich mit weiteren Funden ist möglich. Er setzt keine pauschale Aussage über alle Menschen und Werkstoffe voraus."
+    ]
   }
 }
