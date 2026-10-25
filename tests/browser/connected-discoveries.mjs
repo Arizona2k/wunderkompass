@@ -131,7 +131,7 @@ export async function connectedDiscoveries(page,ready,report,width){
  if(width===1440){
   await page.evaluate(()=>location.hash='world');await page.locator('.world-choice').first().waitFor();
   const completed=page.locator('[data-route-focus="world-route-moon-to-sea"]');await completed.focus();await page.keyboard.press('Enter');await page.locator('.world-route-finish').waitFor();await page.waitForFunction(()=>document.activeElement?.id==='learning-main');
-  await page.evaluate(()=>location.hash='globe');await page.locator('.continue-card').waitFor();await page.getByRole('button',{name:'Fortsetzen',exact:true}).click();await page.locator('.world-route-finish').waitFor();await page.waitForFunction(()=>document.activeElement?.id==='learning-main');
+  await page.evaluate(()=>location.hash='home');await page.locator('.continue-card').waitFor();await page.getByRole('button',{name:'Fortsetzen',exact:true}).click();await page.locator('.world-route-finish').waitFor();await page.waitForFunction(()=>document.activeElement?.id==='learning-main');
   assert.equal(new URL(page.url()).hash,'#world/route/moon-to-sea','completed route retains its finish state when resumed');
   report.checks.push('Completed learning route: keyboard entry/resume retains finish state and a focusable main fallback');
  }

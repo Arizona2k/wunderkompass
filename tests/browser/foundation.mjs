@@ -26,7 +26,7 @@ export async function performanceFlow(browser,base,ready,monitor,report){
    assert.ok(metrics.cls<=(name==='home'?budgets.homeCls:budgets.areaCls),name+' layout shift budget: '+metrics.cls);
    assert.ok(readyMs<=budgets.readyMs,name+' ready-time budget');assert.ok(metrics.lcp>0&&metrics.lcp<=budgets.lcpMs,name+' observed LCP budget');
    assert.equal(metrics.scrollY,0,name+' direct entry must not steal scroll');
-   if(name==='home'&&sample===0){await p.getByRole('button',{name:'Mit der Weltkugel starten',exact:true}).click();await p.locator('.globe-render canvas,.fallback-globe svg').first().waitFor();assert.ok(await p.evaluate(()=>performance.getEntriesByType('resource').some(r=>/\/globe-/.test(r.name))),'globe loads after real user demand');}
+   if(name==='home'&&sample===0){await p.getByRole('button',{name:'Direkt zur Weltkugel',exact:true}).click();await p.locator('.globe-render canvas,.fallback-globe svg').first().waitFor();assert.ok(await p.evaluate(()=>performance.getEntriesByType('resource').some(r=>/\/globe-/.test(r.name))),'globe loads after real user demand');}
    if(name==='world'&&sample===0){assert.ok(!metrics.resources.some(r=>/world-reader-|world-topic-/.test(r.file)),'overview does not load article catalog/model renderer');await p.getByRole('button',{name:/Die Tierwelt/}).first().click();await p.locator('.world-topic-tile').first().click();await p.locator('#world-topic-title').waitFor();assert.ok(await p.evaluate(()=>performance.getEntriesByType('resource').some(r=>/world-reader-/.test(r.name))),'full reader loads for an actual card');await p.goBack();await p.locator('.world-topic-tile').first().waitFor();}
   }finally{await c.close();}
  }

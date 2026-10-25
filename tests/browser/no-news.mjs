@@ -26,7 +26,7 @@ export async function newsRemovalFlow(browser,base,ready,monitor,report,shots){
    const routes=[];
    for(const route of REMOVED_NEWS_ROUTES){
     await p.goto(base+'#'+route);await ready(p);await p.locator('.discovery-hero').waitFor();
-    await p.waitForFunction(()=>location.hash==='#globe');await absent(p);routes.push(route);
+    await p.waitForFunction(()=>location.hash==='#home');await absent(p);routes.push(route);
    }
    await p.reload();await ready(p);await p.locator('.discovery-hero').waitFor();await absent(p);
    assert.deepEqual(await p.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress),passBefore,'legacy news routes never change the existing pass');
