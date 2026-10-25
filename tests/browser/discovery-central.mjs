@@ -7,22 +7,24 @@ const read=async p=>JSON.parse(await fs.readFile(new URL(p,import.meta.url),'utf
 const topics=await read('../../app/world-catalog.json'),categories=await read('../../exports/content/world-categories.json');
 
 export async function discoveryCentral(page,ready,report,width,shots){
- const home=async()=>{await page.evaluate(()=>location.hash='globe');try{await page.locator('.discovery-hero').waitFor();}catch(error){report.routeReturnFailure={width,...await page.evaluate(()=>({hash:location.hash,mode:document.querySelector('.earth-app')?.dataset.mode,selectedTabs:[...document.querySelectorAll('[role=tab][aria-selected=true]')].map(e=>e.textContent),heroPresent:!!document.querySelector('.discovery-hero')})).catch(e=>({diagnosticError:e.message}))};await page.screenshot({path:shots+'/route-return-failure-'+width+'.png',fullPage:true}).catch(()=>{});throw error;}};
+ const home=async()=>{await page.evaluate(()=>location.hash='home');try{await page.locator('.discovery-hero').waitFor();}catch(error){report.routeReturnFailure={width,...await page.evaluate(()=>({hash:location.hash,mode:document.querySelector('.earth-app')?.dataset.mode,selectedTabs:[...document.querySelectorAll('[role=tab][aria-selected=true]')].map(e=>e.textContent),heroPresent:!!document.querySelector('.discovery-hero')})).catch(e=>({diagnosticError:e.message}))};await page.screenshot({path:shots+'/route-return-failure-'+width+'.png',fullPage:true}).catch(()=>{});throw error;}};
  const inspect=async()=>assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'discovery overflow '+width);
  await home();await inspect();
  for(const image of await page.locator('.discovery-worlds img').all())await image.evaluate(async im=>{await im.decode();if(!im.naturalWidth)throw Error('Undecoded gateway image');});
  await page.locator('.discovery-hero').screenshot({path:shots+'/discovery-hero-'+width+'.png'});
  await page.locator('.discovery-worlds').screenshot({path:shots+'/discovery-worlds-'+width+'.png'});
  // The prominent search must restore focus to its actual opener on Escape.
- const search=page.getByRole('button',{name:'Was möchtest du entdecken?',exact:true});
+ const search=page.getByRole('button',{name:'WunderKompass durchsuchen',exact:true});
  await search.focus();await page.keyboard.press('Enter');
  await page.getByRole('dialog').locator('input').fill('Mondphasen');
  await page.getByRole('option').filter({hasText:'Warum verändert der Mond seine Form?'}).waitFor();
  await page.keyboard.press('Escape');await page.getByRole('dialog').waitFor({state:'hidden'});
  assert.equal(await search.evaluate(el=>el===document.activeElement),true,'search focus returns');
- await page.getByRole('button',{name:'Mit der Weltkugel starten',exact:true}).click();
- assert.equal(await page.locator('#globe-observatory').evaluate(el=>el===document.activeElement),true);
- assert.ok(await page.locator('#globe-observatory').evaluate(el=>Math.abs(el.getBoundingClientRect().top)<60),'globe scroll target');
+ assert.equal(await page.locator('#globe-observatory').count(),0,'home does not mount the full globe controls');
+ await page.getByRole('button',{name:'Direkt zur Weltkugel',exact:true}).focus();await page.keyboard.press('Enter');
+ await page.locator('#globe-observatory').waitFor();assert.equal(new URL(page.url()).hash,'#globe');assert.equal(await page.locator('.discovery-hero').count(),0,'legacy globe address has its own full view');
+ assert.ok(!/Deutschland/.test(await page.locator('#globe-mission').innerText()),'globe mission does not reveal its answer');
+ await page.goBack();await page.locator('.discovery-hero').waitFor();await page.waitForFunction(()=>document.activeElement?.dataset.routeFocus==='home-globe');
  // All six gateways work in both the compact centre and the shared world hub.
  for(const c of categories){
   await home();const gateway=page.locator('.discovery-worlds').getByRole('button',{name:c.title,exact:true});
@@ -80,9 +82,9 @@ export async function rapidHashReturn(page,report,width){
  for(const trigger of ['route-button','world-tab']){
   await page.evaluate(trigger=>{
    const button=trigger==='route-button'?[...document.querySelectorAll('.discovery-network button')].find(b=>b.textContent.startsWith('Lernroute:')):document.querySelector('[data-route-focus="home-nav-world"]');
-   if(!button)throw Error('Actual navigation control missing');button.click();location.hash='globe';
+   if(!button)throw Error('Actual navigation control missing');button.click();location.hash='home';
   },trigger);
-  await page.waitForFunction(()=>location.hash==='#globe'&&document.querySelector('.earth-app')?.dataset.mode==='globe'&&!!document.querySelector('.discovery-hero')?.getClientRects().length,undefined,{timeout:20000});
+  await page.waitForFunction(()=>location.hash==='#home'&&document.querySelector('.earth-app')?.dataset.mode==='home'&&!!document.querySelector('.discovery-hero')?.getClientRects().length,undefined,{timeout:20000});
   assert.equal(await page.getByRole('tab',{name:'Entdecken',exact:true}).getAttribute('aria-selected'),'true');
   const after=await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
   for(const key of ['gameSessions','notes','favorites','games','journeys','labs','review','settings'])assert.deepEqual(after[key],before[key],'rapid return preserves '+key);
@@ -91,7 +93,7 @@ export async function rapidHashReturn(page,report,width){
 }
 
 export async function offlineDiscoveryCentral(page,report){
- await page.evaluate(()=>location.hash='globe');await page.locator('.discovery-hero').waitFor();
+ await page.evaluate(()=>location.hash='home');await page.locator('.discovery-hero').waitFor();
  for(const image of await page.locator('.discovery-worlds img').all())await image.evaluate(async im=>{await im.decode();assertImage(im);function assertImage(im){if(!im.naturalWidth)throw Error('Offline gateway image missing');}});
  await page.locator('.discovery-network').getByRole('button',{name:'Meer in Bewegung',exact:true}).click();
  await page.locator('.discovery-connection-why').getByText(/Gezeiten können Strömungen antreiben/).waitFor();
@@ -154,8 +156,8 @@ export async function mainNavigation(page,ready,report,width,shots){
  await page.reload();await ready(page);await page.locator('.world-mini-question').waitFor();await selected('Wissenswelten');assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.favorites),save.favorites);assert.equal(await page.getByRole('button',{name:'In deinem Forscherbuch',exact:true}).getAttribute('aria-pressed'),'true','actual favorite UI survives navigation and reload');assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.notes),save.notes);
  await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('dialog').locator('input').fill('Wissenswelten');await page.locator('[role=option][data-value="area:world"]').click();await page.locator('.world-view .world-choice').first().waitFor();await selected('Wissenswelten');assert.equal(new URL(page.url()).hash,'#world');
  await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('dialog').locator('input').fill('Wissenschaft');await page.locator('[role=option][data-value="world:science"]').click();await page.getByRole('heading',{name:'Wissenschaft & Weltall',exact:true}).waitFor();await selected('Wissenswelten');
- await enter('Entdecken','globe','.discovery-hero');
- await page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await page.getByRole('button',{name:'Pass sichern',exact:true}).click();await page.getByRole('switch',{name:'Größere Schrift',exact:true}).click();await page.keyboard.press('Escape');await page.getByRole('dialog').waitFor({state:'hidden'});await inspect();await nav.screenshot({path:shots+'/navigation-large-'+width+'.png',animations:'disabled'});await page.keyboard.press('Tab');await nav.getByRole('tab',{name:'Wissenswelten',exact:true}).focus();assert.equal(await world.evaluate(el=>el.matches(':focus-visible')),true,'large-font route starts from a real keyboard focus');await page.keyboard.press('Enter');await page.locator('.world-view').waitFor();await selected('Wissenswelten');await page.waitForFunction(()=>{const el=document.getElementById('world-category-title'),r=el?.getBoundingClientRect();return document.activeElement===el&&el.matches(':focus-visible')&&r.top>=8&&r.bottom<=innerHeight-8;}).catch(async e=>{console.log('Large-font focus diagnostic',await page.locator('#world-category-title').evaluate(el=>{const r=el.getBoundingClientRect();return {active:el===document.activeElement,visibleFocus:el.matches(':focus-visible'),top:r.top,bottom:r.bottom,viewport:innerHeight,scrollY,font:getComputedStyle(el).fontSize};}));throw e;});assert.equal(await page.locator('#world-category-title').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=8&&r.bottom<=innerHeight-8&&el.matches(':focus-visible')}),true,'large-text destination heading remains visibly focused');await page.screenshot({path:shots+'/navigation-large-destination-'+width+'.png',animations:'disabled'});await enter('Entdecken','globe','.discovery-hero');
+ await enter('Entdecken','home','.discovery-hero');
+ await page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await page.getByRole('button',{name:'Pass sichern',exact:true}).click();await page.getByRole('switch',{name:'Größere Schrift',exact:true}).click();await page.keyboard.press('Escape');await page.getByRole('dialog').waitFor({state:'hidden'});await inspect();await nav.screenshot({path:shots+'/navigation-large-'+width+'.png',animations:'disabled'});await page.keyboard.press('Tab');await nav.getByRole('tab',{name:'Wissenswelten',exact:true}).focus();assert.equal(await world.evaluate(el=>el.matches(':focus-visible')),true,'large-font route starts from a real keyboard focus');await page.keyboard.press('Enter');await page.locator('.world-view').waitFor();await selected('Wissenswelten');await page.waitForFunction(()=>{const el=document.getElementById('world-category-title'),r=el?.getBoundingClientRect();return document.activeElement===el&&el.matches(':focus-visible')&&r.top>=8&&r.bottom<=innerHeight-8;}).catch(async e=>{console.log('Large-font focus diagnostic',await page.locator('#world-category-title').evaluate(el=>{const r=el.getBoundingClientRect();return {active:el===document.activeElement,visibleFocus:el.matches(':focus-visible'),top:r.top,bottom:r.bottom,viewport:innerHeight,scrollY,font:getComputedStyle(el).fontSize};}));throw e;});assert.equal(await page.locator('#world-category-title').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=8&&r.bottom<=innerHeight-8&&el.matches(':focus-visible')}),true,'large-text destination heading remains visibly focused');await page.screenshot({path:shots+'/navigation-large-destination-'+width+'.png',animations:'disabled'});await enter('Entdecken','home','.discovery-hero');
  await page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await page.getByRole('button',{name:'Pass sichern',exact:true}).click();await page.getByRole('switch',{name:'Größere Schrift',exact:true}).click();await page.keyboard.press('Escape');
  report.checks.push('Main navigation '+width+': six destinations, active world/card/route, manual arrow/Enter, Touch/Back/Forward/opener focus, deep-link reload, search hub/categories, retained route station, large text and actual saved favorite/notes'+(width===320||width===1440?', system-color focus':''));
 }
@@ -170,8 +172,8 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    assert.equal(await p.locator('.continue-card').count(),0,'empty visitor has no false resume');
    assert.equal(await p.locator('.mode-tabs [role=tab]').count(),6,'six distinct learning hubs');
    assert.equal(await p.locator('.discovery-worlds .world-choice').count(),6);
-   assert.ok(!/Deutschland/.test(await p.locator('#globe-mission').innerText()),'first mission does not reveal its answer');
-   const start=p.getByRole('button',{name:'Mit der Weltkugel starten',exact:true});
+   assert.equal(await p.locator('#globe-observatory').count(),0,'first home view leaves the full globe in its direct view');
+   const start=p.getByRole('button',{name:'WunderKompass durchsuchen',exact:true});
    assert.equal(await start.evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight}),true,'clear first step visible without scrolling '+width);
    await homeTextGeometry(p);await homeTouchTargets(p);await homeContrast(start);await start.hover();await homeContrast(start);await p.mouse.move(0,0);
    const capture=async state=>{await p.evaluate(()=>scrollTo(0,0));await p.screenshot({path:shots+'/home-'+state+'-'+width+'-full.png',fullPage:true,animations:'disabled'});await p.screenshot({path:shots+'/home-'+state+'-'+width+'-top.png',animations:'disabled'});report.homepageViews.push({width,height,state,scrollHeight:await p.evaluate(()=>document.documentElement.scrollHeight)});};
@@ -274,10 +276,10 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    await p.getByRole('tab',{name:'Lernreisen',exact:true}).click();await p.locator('.journey-tile').first().click();await p.locator('.journey-reader').waitFor();
    const next=p.getByRole('button',{name:'Weiter entdecken',exact:true});await next.click();
    const chapter=await p.locator('.chapter-count').innerText();assert.match(chapter,/Kapitel 2/);
-   await p.evaluate(()=>location.hash='globe');await p.locator('.continue-card').waitFor();await capture('return');await homeTextGeometry(p);
+   await p.evaluate(()=>location.hash='home');await p.locator('.continue-card').waitFor();await capture('return');await homeTextGeometry(p);
    await p.getByRole('button',{name:'Weiterlernen',exact:true}).click();await p.locator('.journey-reader').waitFor();assert.equal(await p.locator('.chapter-count').innerText(),chapter,'resume preserves exact chapter');
-   await p.reload();await ready(p);await p.evaluate(()=>location.hash='globe');await p.locator('.continue-card').waitFor();await p.getByRole('button',{name:'Weiterlernen',exact:true}).click();await p.locator('.journey-reader').waitFor();assert.equal(await p.locator('.chapter-count').innerText(),chapter,'resume after reload');
-   await p.evaluate(()=>location.hash='globe');await p.locator('.discovery-hero').waitFor();
+   await p.reload();await ready(p);await p.evaluate(()=>location.hash='home');await p.locator('.continue-card').waitFor();await p.getByRole('button',{name:'Weiterlernen',exact:true}).click();await p.locator('.journey-reader').waitFor();assert.equal(await p.locator('.chapter-count').innerText(),chapter,'resume after reload');
+   await p.evaluate(()=>location.hash='home');await p.locator('.discovery-hero').waitFor();
    await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await p.getByRole('button',{name:'Pass sichern',exact:true}).click();await p.getByRole('switch',{name:'Größere Schrift',exact:true}).check();await p.getByRole('switch',{name:'Weniger Bewegung',exact:true}).check();await p.getByRole('button',{name:'Entdeckerpass schließen',exact:true}).click();
    await homeTextGeometry(p);await homeTouchTargets(p);await capture('large');
    await p.locator('.discovery-worlds').screenshot({path:shots+'/home-worlds-large-'+width+'.png',animations:'disabled'});

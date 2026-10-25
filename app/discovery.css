@@ -176,3 +176,5 @@
 @media(max-width:560px){.discovery-hero-copy{padding:18px}.discovery-hero h1{font-size:30px}.discovery-hero-copy>p:not(.eyebrow){font-size:16px;margin-bottom:14px}.discovery-hero .discovery-quiet-links :is(a,button){font-size:14px}.discovery-hero .discovery-mobile-help{margin-left:0}.discovery-hero .discovery-quiet-links{gap:0 18px}.discovery-section-heading h2{font-size:22px}.large-reading .discovery-hero h1{font-size:34px}.large-reading .discovery-search{font-size:20px}.large-reading .discovery-hero .discovery-quiet-links :is(a,button){font-size:18px}}
 
 .gateway-compact .gateway-question{font-size:14px;line-height:1.5;color:var(--wk-muted);margin:8px 0 12px}.large-reading .gateway-compact .gateway-question{font-size:18px}.discovery-activities .next-adventures{margin-top:0}.discovery-activities .next-adventures small{font-size:16px;line-height:1.7}
+
+.discovery-hero .discovery-search:hover{background:#e3ece7;border-color:var(--wk-teal)}
