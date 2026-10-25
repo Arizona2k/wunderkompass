@@ -1,8 +1,14 @@
+## Gezielt beobachtbar · WebKit-Tierkartenwechsel weiter ungeklärt
+
+Quality166 endete natürlich nach44:53: Firefox einschließlich Offline-Wiederherstellung bestanden, WebKit wartete vergeblich auf den Katta-Lernabschnitt. Dies ist ein anderer Befund als die ursächlich belegte Offline-Renderkorrektur. PR62 bleibt Draft, keine Übernahme oder Auslieferung. Ursprüngliches Protokoll und vorangegangene vollständige lokale54d-Abnahme bleiben ihren tatsächlichen Quellen zugeordnet.
+
+Der bestehende Tierfehlerpfad sichert jetzt begrenzt erwartete Karte/Stufe/Breite, tatsächlich dargestellte Adresse/Karte/Fokus und vorhandene Browserlebenszyklus-/Ressourcenbeobachtung. Der unveränderte20s-Guard weist einen absichtlich verhinderten Katta-Wechsel ab; die neue Aufnahme zeigt korrekt das erhaltene Erdmännchen. Originalexception/Screenshot und alle Assertions/Argumente bleiben. Keine Ursachebehebung von166, keine Fehlerausnahme, Retry oder größere Wartezeit. Neue vollständige Abnahme noch offen.
+
 ## Ursache gezielt korrigiert · Offline-Geometrie nach tatsächlichem Renderframe
 
 Der Originalfehler ausQuality164 wurde unter dem unveränderten alten Prüfweg lokal wiedererzeugt:320CSS-Viewport, aber noch640pxbreiter Header mit Desktop-Padding320/320; im nächsten Browserframe bereits korrekt320/Padding10/10. Ursache war die Messung eines responsiven Zwischenstands, kein belegter dauerhaft fehlerhafter Produktzustand. Die bestehende Offlinefixture nutzt nun den bereits bewährten gepinnten prepareAxe-/Renderframe-Schritt vor ihren Geometrieprüfungen. Alle vorhandenen Breiten, WCAG-Audits, Source-/Quota-/Cache-/Pass-/Offline-/Fehlerassertionen und engen Workergrenzen bleiben; keine Retries/Skips/Timeoutanhebung oder CSSkaschierung.
 
-Vorhandene vollständige normale und echte200%-Offlinefunktion am benannten gezielten Korrekturstand bestanden. Absichtlich dauerhaft erzwungener640pxHeader fällt auch nach Renderframes durch; falscher1920Viewport ebenso. Gesamte neue lokale/nativePR-Abnahme und Lieferung bleiben erforderlich. Der laufende165-Kandidat wurde dafür nicht geändert oder abgebrochen; dessen mögliches Grün allein würde die ursprüngliche Ursachenklärung nicht ersetzen.
+Vorhandene vollständige normale und echte200%-Offlinefunktion am benannten gezielten Korrekturstand bestanden. Absichtlich dauerhaft erzwungener640pxHeader fällt auch nach Renderframes durch; falscher1920Viewport ebenso. Die anschließende vollständige lokale54d-Abnahme bestand; neue native Gesamtfreigabe und Lieferung bleiben erforderlich. Der vorherige165-Kandidat wurde unverändert erfolgreich beendet.166 hat einen getrennten offenen Kartenwechselbefund, kein Wiederholungsgrün ersetzt Ursachenklärung.
 
 ## Gezielt instrumentiert · tatsächlicher Chromium-Überlauf aus Quality164
 
