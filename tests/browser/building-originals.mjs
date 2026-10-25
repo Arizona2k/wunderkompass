@@ -10,12 +10,14 @@ export async function assertSydneySphere(model){
   await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));svg.getBoundingClientRect();
   const circle=svg.querySelector('circle'),cx=circle.cx.baseVal.value,cy=circle.cy.baseVal.value,r=circle.r.baseVal.value;
   return [...svg.querySelectorAll('[data-sphere-piece]')].map(piece=>{
-   const matrix=svg.getCTM().inverse().multiply(piece.getCTM()),samples=Array.from({length:101},(_,i)=>piece.getPointAtLength(piece.getTotalLength()*i/100).matrixTransform(matrix));
+   // Compare in the actual circle's coordinates. Firefox's outer SVG getCTM
+   // can be identity while its drawn children include the viewBox scale.
+   const matrix=circle.getCTM().inverse().multiply(piece.getCTM()),samples=Array.from({length:101},(_,i)=>piece.getPointAtLength(piece.getTotalLength()*i/100).matrixTransform(matrix));
    const label=[...svg.querySelectorAll('text')].find(e=>e.textContent===piece.dataset.spherePiece),labelPoint=new DOMPoint(label.x.baseVal[0].value,label.y.baseVal[0].value-11),scale=svg.getBoundingClientRect().width/svg.viewBox.baseVal.width;
-   return{id:piece.dataset.spherePiece,area:Math.abs(samples.reduce((sum,p,i)=>{const next=samples[(i+1)%samples.length];return sum+p.x*next.y-next.x*p.y;},0))/2,contained:samples.every(p=>Math.hypot(p.x-cx,p.y-cy)<=r+0.1),labelInside:piece.isPointInFill(labelPoint),textPixels:parseFloat(getComputedStyle(label).fontSize)*scale};
+   return{id:piece.dataset.spherePiece,area:Math.abs(samples.reduce((sum,p,i)=>{const next=samples[(i+1)%samples.length];return sum+p.x*next.y-next.x*p.y;},0))/2,contained:samples.every(p=>Math.hypot(p.x-cx,p.y-cy)<=r+0.1),labelInside:piece.isPointInFill(labelPoint),textPixels:parseFloat(getComputedStyle(label).fontSize)*scale,diagnostic:{reference:'actual circle',circle:{cx,cy,r},relativeMatrix:['a','b','c','d','e','f'].map(k=>matrix[k]),maximumDistance:Math.max(...samples.map(p=>Math.hypot(p.x-cx,p.y-cy)))}};
   });
  });
- assert.deepEqual(geometry.map(p=>p.id),['A','B']);for(const piece of geometry){assert.ok(piece.contained,'both drawn pieces belong to the one visible sphere');assert.ok(piece.labelInside,'A/B identifies the actual coloured piece');assert.ok(piece.textPixels>=16,'surface labels remain readable at actual mobile size');}assert.ok(geometry[1].area>geometry[0].area*1.5,'B visibly covers more surface in this view');return geometry;
+ assert.deepEqual(geometry.map(p=>p.id),['A','B']);for(const piece of geometry){assert.ok(piece.contained,'both drawn pieces belong to the one visible sphere '+JSON.stringify(piece.diagnostic));assert.ok(piece.labelInside,'A/B identifies the actual coloured piece');assert.ok(piece.textPixels>=16,'surface labels remain readable at actual mobile size');}assert.ok(geometry[1].area>geometry[0].area*1.5,'B visibly covers more surface in this view');return geometry.map(({diagnostic,...piece})=>piece);
 }
 const reveal=async locator=>{if(!await locator.evaluate(e=>e.open))await locator.locator(':scope > summary').click();};
 export async function assertBridgeLoadContact(model){

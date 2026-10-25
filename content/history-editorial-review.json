@@ -300,7 +300,7 @@
       "claimAnchors": "Ashmolean lines78–88 regional British chronology/continuing stone use; Met lines89–95 copper/tin and different forming methods; Getty lines8–20 composition/properties/analytical distinction. Actually opened2026-10-25.",
       "mediaDecision": "Own clearly invented evidence-card comparison with AI assistance. Labels separate material from contextual evidence; not object photos, copied museum artwork, microscopic metal structure or a casting recipe. Current learning purpose is comparison of evidence; no original museum-photo pixel review claimed.",
       "contentHash": "6b1b07329ffac8f5503743e640dec7ff58c09718eba440a1d22017a156d8c863",
-      "uiChecked": false,
+      "uiChecked": true,
       "independentReview": false
     }
   ],
@@ -650,5 +650,15 @@
       "uiChecked": true,
       "independentReview": false
     }
+  },
+  "pr62CompletionBuiltProof20261025": {
+    "sourceCommit": "550d7bd3eedf89074bc926edc4e1816bf24ac93e",
+    "sourceDigest": "8abb5220ab3894eced213de67cc5c9b40c8e6421945ec95f4b06d9c396762aa0",
+    "build": "c2082694c645c33b",
+    "originalFullReportSHA256": "fbf41a13519f303c0aa14ce478dc230c4e3723d982933bf5b632f60b9627a176",
+    "actualSearchModelSourceBackAndOffline": true,
+    "nativeCIAndDelivery": "pending",
+    "independentHumanReview": false,
+    "scope": "Integrated current UI only; all prior original historical factual/evidence entries preserved."
   }
 }
