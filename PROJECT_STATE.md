@@ -1,5 +1,9 @@
 # Aktueller Arbeits- und Übergabestand ·25.10.2026
 
+## Getrennte nächste Bildvorbereitung · Nähmaschine
+
+Dieser eigene Folgearbeitszweig auf89c verändert weder den laufendenQuality168-Kandidaten nochPR62. Nach erreichbaremBestandsabgleich und tatsächlicher320Großschrift-/1440-Ansicht ohneObjektbild ist eine eigeneKI-Illustration eines ausdrücklich erfundenen modernenGeräts vorbereitet. Foto-/historischeHowe1846-Rekonstruktion wird nicht behauptet, Unterfaden ist imGehäuse verborgen; die Naht bildet nicht die vollständige räumlicheStichbewegung ab. BestehendeFragen/Antworten/Funktionszeichnung unverändert. DrittesGerätebild über vorhandeneKomponente/Export integriert; derselbe vorhandeneBrowser-Prüfweg erhält gezielte Herkunfts-/Motiv-/Grenzprüfung. Frühprüfung vor Volltest, vollständigeAbnahme/neueUI-Bindung/CI/Lieferung stehen noch offen.
+
 ## Aktuelle Medienfortsetzung · Kachelherkunft und paginierter Rücksprung
 
 Zweig `codex/wunderkompass-media-origin-2026-10-25` setzt den normal gesicherten integrierten38044d6078ec0b70b69c4fa77f093f04ef58edde fort. Der380-Stand bestand seine vollständige lokale Standardabnahme unverändert:1383.990950205s/148Prüfbeschreibungen/alle10Gruppen, fünfFehlerklassen leer,256Units/130Release/Typ/Lint/Build/static44/96 zuvor bestanden. Quelle5fd6de6710b6e12bd174d6e241e26eeced69076493a7cd7c7a6291bd0cb2c8b9/Appfc55622aea284f7e und alle gebauten Dateien vor/nach identisch.3830Originalidentitäten bytegleich gesichert;1420erzeugte/916behalteneReviewPNG94.210.414Byte. Die Gerätebilder sind dabei in fünf normalen, einem kalten und zwei nativen Zuständen jeMotiv geprüft. Das war vor den folgenden zusätzlichen konkreten Befunden, keine endgültige Bild-/Lieferfreigabe.

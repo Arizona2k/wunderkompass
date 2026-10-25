@@ -420,7 +420,39 @@
       ],
       "linkDecision": "Original links to not-yet-integrated retained science/building manuscripts remain documented here and in sourceMaster. Current actual targets only, with nine explicit reciprocal explanations. No missing work removed from BACKLOG.",
       "reviewedBy": "Codex KI-Selbstprüfung anhand der tatsächlich zugänglichen genannten Passagen; keine unabhängige Menschenabnahme",
-      "reviewedOn": "2026-10-23"
+      "reviewedOn": "2026-10-23",
+      "media": {
+        "checkedOn": "2026-10-25",
+        "reviewedBy": "AI source and actual-original image self-review; no independent human/empirical effectiveness claim",
+        "kind": "ai-illustration",
+        "format": "webp",
+        "sha256": "8e4b66e6df9839ee0eb9cb83e81791ea5fff92a6a7adf3ae352a06961c985ec4",
+        "bytes": 28966,
+        "width": 800,
+        "height": 500,
+        "alt": "Eigene KI-Illustration einer erfundenen modernen Nähmaschine: Von einer Spule führt der Oberfaden zur Nadel über dem Stoff. Das geschlossene Gehäuse verdeckt den Unterfaden.",
+        "caption": "Eigene KI-Illustration · kein Foto und nicht maßstabsgetreu. Erfundenes modernes Gerätebeispiel, kein Bild von Howes Patentmodell von 1846. Der Unterfaden ist im geschlossenen Gehäuse verborgen. Die gezeichnete Naht zeigt nicht den vollständigen räumlichen Stichablauf. Keine Bedienanleitung.",
+        "sourceReads": {
+          "primary": "https://collections.si.edu/search/detail/edanmdm:nmah_630930?print=yes",
+          "readScope": "Existing actual catalogue text distinguishes needle and shuttle threads and the1846patent. Applied only to separate the two-thread principle from this invented modern object. No exact modern internal mechanism or machine reproduction certified.",
+          "retainedPhotoDecision": "Previously indexed Smithsonian patent-model image marked public domain, actual source/image403; pixels and quality not verified, no photo adopted. Existing ScienceMuseum/historical source and rights records retained; no repeat blocked source request or Wikimedia work."
+        },
+        "generatorOriginal": {
+          "file": "content/sewing-machine-ai-prototype.png",
+          "sourceCommit": "af12f071aea5e1057e004d8509834d931ff213c5",
+          "bytes": 2385190,
+          "sha256": "275235ba8e94a08e46dad72ef7aece58d659734dbf833938954805c2a7af1043",
+          "width": 1586,
+          "height": 992,
+          "meaning": "Unchanged original retained on existing source asset branch; intentionally generic modern object, not historic original."
+        },
+        "processing": "Only proportional longest-edge800pixel export, nearest integer800x500, Lanczos/WebPquality82/method6. No crop/recolor/creative image edit; generated original unchanged.",
+        "photoDecision": "Previously indexed Smithsonian patent-model image marked public domain, actual source/image403; pixels and quality not verified, no photo adopted. Existing ScienceMuseum/historical source and rights records retained; no repeat blocked source request or Wikimedia work.",
+        "rights": "Existing actually reviewed provider output/use terms retained. Own generic composition, no photograph as input, named artist, brand, logo or person. No unconditional uniqueness or third-party-rights guarantee.",
+        "actualImageChecks": "Original actually viewed: connected base/right upright/upper arm, one needle at cloth on needle plate beside presser foot, upper spool/guide/thread, closed base and attached right wheel. No detached support, copied labels, operating hands or claim of a complete stitch mechanism. Chosen teal styling and object geometry are fictional illustrative choices.",
+        "state": "prepared new product candidate; early rendered review and full acceptance pending",
+        "limits": "An independently invented generic modern domestic device, not Howes1846patent model, historic reconstruction, photograph, scale/measurement reference or operation instruction. Visible needle/upper thread/cloth roles only; opaque base conceals the bobbin and lower thread. A drawn seam does not establish full spatial lockstitch formation."
+      }
     }
   ],
   "changedDistractors": "Twelve wrong alternatives now compare real mechanisms or observation/interpretation confusions. All six original canonical correct strings and indices retained.",
