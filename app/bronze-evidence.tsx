@@ -42,6 +42,6 @@ export default function BronzeEvidence(){
   </div>
   <div className="model-buttons"><button className="secondary-button" aria-expanded={contextVisible} onClick={()=>setContextVisible(v=>!v)}>{contextVisible?'Fundzusammenhang ausblenden':'Fundzusammenhang einblenden'}</button><button className="secondary-button" aria-expanded={compare} onClick={()=>setCompare(v=>!v)}>{compare?'Vergleich schließen':'Meine Überlegung vergleichen'}</button></div>
   {compare&&<div className="model-result" role="status"><strong>Eine mögliche Überlegung</strong><p>{level===1&&contextVisible?'Blende den Fundzusammenhang zunächst aus und vergleiche, welche Angaben dann fehlen.':comparisons[level]}</p></div>}
-  <p className="small-note">Diese freiwillige Untersuchung vergibt keinen Stempel und bewertet keine eigene unbeobachtete Erklärung. Die Fundkarten zeigen keine vollständige Ausgrabung und keine weltweite Zeiteinteilung. Frühere Antworten und Lernstände bleiben erhalten.</p>
+  <p className="small-note">Die freiwillige Untersuchung vergibt keinen Stempel. Du vergleichst deine Überlegung mit einem Beispiel. Die Fundkarten zeigen keine vollständige Ausgrabung und keinen Kalender für die ganze Welt.</p>
  </section>;
 }
