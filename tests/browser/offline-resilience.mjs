@@ -10,8 +10,37 @@ import {opticsSourceView} from './invention-optics.mjs';
 import {historySourceView} from './history-learning.mjs';
 import fs from 'node:fs/promises';import path from 'node:path';import http from 'node:http';import assert from 'node:assert/strict';
 import {captureNativeViewport} from './native-screenshot.mjs';
+import {prepareAxe} from './axe-loader.mjs';
 import {stopTestServer} from './stop-test-server.mjs';
 import {BROWSER_ERROR_FIELDS,browserErrorArrays,browserErrorsComplete,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
+
+// The preceding progress matrix ends wide. A filename is no viewport evidence.
+export async function assertOfflineCaptureViewport(page,{native=false}={}){
+ const measured=await page.evaluate(()=>({cssWidth:innerWidth,scale:devicePixelRatio}));
+ assert.equal(measured.cssWidth,320,'offline 320 capture uses the actual narrow CSS viewport');
+ assert.equal(measured.scale,native?2:1,'offline capture records the actual browser zoom');
+ const panel=page.locator('.offline-learning'),bounds=await panel.boundingBox();
+ assert.ok(bounds&&bounds.width>0&&bounds.width<=320,'offline panel fits the measured narrow viewport');
+ const overflow=await page.evaluate(()=>{
+  const width=innerWidth,scrollWidth=document.documentElement.scrollWidth,failed=scrollWidth>width+2;
+  if(!failed)return{failed,width,scrollWidth};
+  // Preserve the first failing measurement. Later layout reads must not turn
+  // a transient or persistent overflow into a successful retry.
+  return{failed,width,scrollWidth,clientWidth:document.documentElement.clientWidth,bodyScrollWidth:document.body.scrollWidth,scrollX,scrollY,scale:devicePixelRatio,fonts:document.fonts.status,elements:[...document.querySelectorAll('body *')].map(el=>{const b=el.getBoundingClientRect(),s=getComputedStyle(el);return{tag:el.tagName,cls:String(el.className?.baseVal??el.className).slice(0,100),text:el.textContent?.slice(0,100),x:b.x,right:b.right,width:b.width,height:b.height,position:s.position,transform:s.transform,overflowX:s.overflowX,minWidth:s.minWidth};}).filter(b=>b.width>0&&(b.right>width+2||b.x< -2)).slice(0,24)};
+ });
+ if(overflow.failed)console.error('OFFLINE_CAPTURE_OVERFLOW '+JSON.stringify(overflow));
+ assert.equal(overflow.failed,false,'offline capture has no horizontal overflow: '+JSON.stringify(overflow));
+ return{...measured,panelWidth:bounds.width};
+}
+async function captureOfflinePanel(page,file,{native=false}={}){
+ const measured=await assertOfflineCaptureViewport(page,{native});
+ if(!file)return measured;
+ const panel=page.locator('.offline-learning');await panel.scrollIntoViewIfNeeded();
+ if(native)return{...measured,...await captureNativeViewport(page,file)};
+ const png=await panel.screenshot({path:file,animations:'disabled'}),pixelWidth=png.readUInt32BE(16),pixelHeight=png.readUInt32BE(20);
+ assert.ok(pixelWidth>0&&pixelWidth<=320&&pixelHeight>0,'offline panel PNG matches the actual narrow capture');
+ return{...measured,pixelWidth,pixelHeight};
+}
 
 // Isolated real-app server: only this fixture can fail an asset or emulate quota.
 export async function offlineResilience(browser,{port=4776,shots,kind=browser.browserType().name(),context:providedContext=null,native=false}={}){
@@ -25,20 +54,24 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
  const snapshot=()=>page.evaluate(()=>{const p=JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress;return p;});
  const noPartial=async()=>assert.deepEqual(await page.evaluate(async()=>(await caches.keys()).filter(n=>n.startsWith('earth-learning-'))),[],'no partial release survives');
  try{
+  await page.setViewportSize({width:320*(native?2:1),height:900});
   await page.goto(base+'/#world/topic/animal-polar-bear');await page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();await page.getByRole('button',{name:'Das interessiert mich!',exact:true}).click();await page.waitForFunction(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.favorites.includes('topic:animal-polar-bear'));const saved=await snapshot();
-  await page.getByRole('button',{name:'Für offline vorbereiten',exact:true}).click();await page.locator('.offline-message').filter({hasText:/nicht|geklappt/}).waitFor();if(shots)await page.locator('.offline-learning').screenshot({path:shots+'/'+shotName+'-source-error-320.png'});assert.ok(failedRequests>0,'actual service-worker asset request failed');await noPartial();assert.deepEqual(await snapshot(),saved);
+  await page.getByRole('button',{name:'Für offline vorbereiten',exact:true}).click();await page.locator('.offline-message').filter({hasText:/nicht|geklappt/}).waitFor();report.sourceErrorView=await captureOfflinePanel(page,shots?shots+'/'+shotName+'-source-error-320.png':null,{native});assert.ok(failedRequests>0,'actual service-worker asset request failed');await noPartial();assert.deepEqual(await snapshot(),saved);
   fail=false;
   if(kind==='chromium'){
-   cdp=await context.newCDPSession(page);await cdp.send('Storage.overrideQuotaForOrigin',{origin:base,quotaSize:1024*1024});await page.getByRole('button',{name:'Für offline vorbereiten',exact:true}).click();await page.locator('.offline-message').filter({hasText:/nicht|geklappt/}).waitFor();await noPartial();assert.deepEqual(await snapshot(),saved);if(shots)await page.locator('.offline-learning').screenshot({path:shots+'/'+shotName+'-quota-error-320.png'});report.quotaRecovery=true;await cdp.send('Storage.overrideQuotaForOrigin',{origin:base});
+   cdp=await context.newCDPSession(page);await cdp.send('Storage.overrideQuotaForOrigin',{origin:base,quotaSize:1024*1024});await page.getByRole('button',{name:'Für offline vorbereiten',exact:true}).click();await page.locator('.offline-message').filter({hasText:/nicht|geklappt/}).waitFor();await noPartial();assert.deepEqual(await snapshot(),saved);report.quotaErrorView=await captureOfflinePanel(page,shots?shots+'/'+shotName+'-quota-error-320.png':null,{native});report.quotaRecovery=true;await cdp.send('Storage.overrideQuotaForOrigin',{origin:base});
   }
   hold=true;await page.getByRole('button',{name:'Für offline vorbereiten',exact:true}).click();const progress=page.getByRole('progressbar',{name:'Sicher gespeicherte Lernwelt-Dateien',exact:true});await progress.waitFor();await page.waitForFunction(()=>{const el=document.querySelector('progress[aria-label="Sicher gespeicherte Lernwelt-Dateien"]');return el&&el.value>0&&el.value<el.max;});const counts=await progress.evaluate(el=>({verified:el.value,total:el.max}));assert.equal(counts.total,assets.length);assert.ok(counts.verified>0&&counts.verified<counts.total,'held required asset cannot be reported as verified');assert.equal(await page.getByText('Deine Lernwelt ist offline vorbereitet.',{exact:true}).count(),0);report.progressViews=[];
   for(const width of (native?[640]:[320,360,390,768,1024,1440,1920])){
    await page.setViewportSize({width:width*(native?2:1),height:900});await page.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));
+   // Measure the rendered responsive state, as in the other existing audits.
+   // The original next-task read can still contain the wide header padding.
+   await prepareAxe(page);
    const measured=await page.evaluate(()=>({cssWidth:innerWidth,scale:devicePixelRatio}));assert.equal(measured.cssWidth,width);if(native)assert.equal(measured.scale,2);
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'offline progress has no horizontal overflow '+width);
    const aside=page.locator('.offline-learning');assert.ok(await aside.isVisible());assert.ok(await aside.getByRole('progressbar',{name:'Sicher gespeicherte Lernwelt-Dateien',exact:true}).isVisible());
    const value=await progress.evaluate(e=>({verified:e.value,total:e.max}));assert.ok(value.verified>0&&value.verified<value.total);assert.equal(value.total,assets.length);
-   await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.offline-learning',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
+   assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.offline-learning',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
    let screenshot=null;if(shots){if(native){await progress.scrollIntoViewIfNeeded();screenshot=await captureNativeViewport(page,path.join(shots,shotName+'-progress-'+width+'.png'));}else await aside.screenshot({path:shots+'/'+shotName+'-progress-'+width+'.png'});}
    report.progressViews.push({width,...measured,largeText:true,axe:true,verified:value.verified,total:value.total,...(screenshot?{screenshot}:{})});
   }
@@ -50,11 +83,14 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   const registration=await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();return{active:r?.active?.scriptURL,state:r?.active?.state,controller:navigator.serviceWorker.controller?.scriptURL};});
   assert.deepEqual(registration,{active:workerURL,state:'activated',controller:workerURL},'the already active cached worker is verified before the origin is stopped');verifiedWorkerURL=registration.active;report.registeredWorkerBeforeShutdown=registration;
   assertBrowserErrors('before deliberate origin shutdown');
+  await page.setViewportSize({width:320*(native?2:1),height:900});
+  await prepareAxe(page);
+  await assertOfflineCaptureViewport(page,{native});
   await stopTestServer(server);
   await assert.rejects(fetch(base+'/',{signal:AbortSignal.timeout(2000)}),'fixture server is really unreachable before the offline reload');report.serverStopped=true;
   await page.reload();await page.locator('.world-mini-question').waitFor();await page.getByRole('button',{name:'In deinem Forscherbuch',exact:true}).waitFor();report.offlineReload=true;
   assertBrowserErrors('after confirmed-origin-down reload');
-  if(shots)await page.locator('.offline-learning').screenshot({path:shots+'/'+shotName+'-320.png'});
+  report.offlineReadyView=await captureOfflinePanel(page,shots?shots+'/'+shotName+'-320.png':null,{native});
   // The real complete cached app must retain the new source-learning activities too.
   report.historySourceDiscovery=[];report.opticsDiscovery=[];report.electricalDiscovery=[];report.mechanicsDiscovery=[];report.scienceOriginalDiscovery=[];
   for(const width of (native?[640,320]:[320,390,768,1440])){
@@ -73,7 +109,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   assert.equal(report.electricalDiscovery.length,native?6:12,'all three electrical activities at every required cached-app width');
   assert.equal(report.mechanicsDiscovery.length,native?12:24,'all six mechanical activities at every required cached-app width');
   assert.equal(report.opticsDiscovery.length,native?6:12,'all three optical activities at every required cached-app width');
-  assert.equal(report.historySourceDiscovery.length,native?4:8,'both source activities at every required cached-app width');
+  assert.equal(report.historySourceDiscovery.length,native?6:12,'all three source activities at every required cached-app width');
   const afterLearning=await snapshot();for(const key of ['favorites','notes'])assert.deepEqual(afterLearning[key],saved[key]);for(const [key,value]of Object.entries(saved.gameSessions))assert.deepEqual(afterLearning.gameSessions[key],value,'old saved game remains after cached source exploration '+key);
   report.worldGameSemantics=await worldGameOfflineSemantics(page,{shots:shots??'.qa-output',kind,native});
   report.bookLearning={checks:[]};

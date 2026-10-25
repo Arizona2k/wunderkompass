@@ -1,3 +1,4 @@
+import {assertHonestChallengeFeedback} from './challenge-hints.mjs';
 import assert from 'node:assert/strict';
 import {bookNormalizationView} from './book-normalization.mjs';
 import fs from 'node:fs/promises';
@@ -93,12 +94,12 @@ export async function connectedDiscoveries(page,ready,report,width){
     assert.deepEqual((await pass()).gameSessions['world:knowledge-challenge'].challenge.ids,previous);
    }
    await answers.filter({has:page.getByText(q.answers[q.correct],{exact:true})}).click();
-   await room.getByText('Richtig erklärt!',{exact:true}).waitFor();
+   await room.getByText('Deine Auswahl passt.',{exact:true}).waitFor();await assertHonestChallengeFeedback(room);
    await room.getByText(q.why,{exact:true}).waitFor();
    assert.equal(await room.locator('.world-game-hint').count(),0);
    await room.getByRole('button',{name:i===5?'Spielstempel sammeln':'Nächste Aufgabe',exact:true}).click();
   }
-  await room.getByRole('heading',{name:'Sechs Zusammenhänge erklärt!',exact:true}).waitFor();
+  await room.getByRole('heading',{name:'Sechs Aufgaben gelöst!',exact:true}).waitFor();
   assert.ok((await pass()).games.includes('world:knowledge-challenge'));
   await room.getByRole('button',{name:'Andere Aufgaben auf dieser Stufe',exact:true}).click();
   const next=(await pass()).gameSessions['world:knowledge-challenge'].challenge.ids;

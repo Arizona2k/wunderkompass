@@ -2,6 +2,12 @@ import assert from 'node:assert/strict';
 import {CHALLENGE_BANK, emptyChallenge, restoreChallenge} from '../../app/knowledge-challenge.ts';
 import {createSave, emptyProgress, SAVE_KEY} from '../../app/progress-storage.ts';
 
+export async function assertHonestChallengeFeedback(room){
+ const feedback=await room.getByRole('status').innerText();
+ assert.doesNotMatch(feedback,/Richtig erklärt!|Gut begründet/,'a selection does not certify an unobserved personal explanation');
+ assert.match(feedback,/Deine Auswahl passt\./,'correct feedback identifies the demonstrated selection');
+}
+
 export async function offlineChallengeHints(page,report){
  const room=page.locator('.knowledge-challenge'),hint=room.locator('.world-game-hint');
  const open=async()=>{await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('dialog').locator('input').fill('Wissens-Challenge');await page.getByRole('option').filter({hasText:'Wissens-Challenge'}).click();};
@@ -20,7 +26,7 @@ export async function offlineChallengeHints(page,report){
   await room.getByText('Noch einmal nachdenken.',{exact:true}).waitFor();
   assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
   await answers.filter({has:page.getByText(q.answers[q.correct],{exact:true})}).click();
-  await room.getByText(q.why,{exact:true}).waitFor();
+  await room.getByText(q.why,{exact:true}).waitFor();await assertHonestChallengeFeedback(room);
   await room.getByRole('button',{name:'Nächste Aufgabe',exact:true}).click();
   await room.getByRole('heading',{name:next.prompt,exact:true}).waitFor();
   assert.equal(await hint.getAttribute('open'),null);
@@ -126,13 +132,13 @@ export async function challengeHints(browser,base,ready,monitor,report,shots){
       assert.equal(await hint.locator('.challenge-second-hint').count(),0);
      }
      await answers.filter({has:page.getByText(q.answers[q.correct],{exact:true})}).click();
-     await room.getByText(q.why,{exact:true}).waitFor();
+     await room.getByText(q.why,{exact:true}).waitFor();await assertHonestChallengeFeedback(room);
      assert.equal(await hint.count(),0,q.id+' hint remains after success');covered.add(q.id);
      await room.getByRole('button',{name:index===5?'Spielstempel sammeln':'Nächste Aufgabe',exact:true}).click();
     }
-    await room.getByRole('heading',{name:'Sechs Zusammenhänge erklärt!',exact:true}).waitFor();
+    await room.getByRole('heading',{name:'Sechs Aufgaben gelöst!',exact:true}).waitFor();
     await page.reload();await ready(page);await page.getByRole('button',{name:'Fortsetzen',exact:true}).click();
-    await room.getByRole('heading',{name:'Sechs Zusammenhänge erklärt!',exact:true}).waitFor();
+    await room.getByRole('heading',{name:'Sechs Aufgaben gelöst!',exact:true}).waitFor();
     const retained=await pass();
     assert.ok(retained.games.includes('world:knowledge-challenge'));assert.ok(retained.games.includes('memory'));
     assert.deepEqual(retained.favorites,progress.favorites);assert.deepEqual(retained.journeys,progress.journeys);

@@ -1,6 +1,20 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import os from 'node:os';import path from 'node:path';import {createHash} from 'node:crypto';
 import {EventEmitter} from 'node:events';
-import {preserveEngineDiagnostics,collectEngineEvidence,observeEngineLifecycle} from './browser/engine-diagnostics.mjs';
+import {preserveEngineDiagnostics,collectEngineEvidence,observeEngineLifecycle,readAnimalFailureView,captureAnimalFailureScreenshot} from './browser/engine-diagnostics.mjs';
+test('unresponsive or lost renderer cannot hold the failure view observation open',async()=>{
+ const url='http://127.0.0.1/#world/topic/animal-ring-tailed-lemur',page={url:()=>url,evaluate:()=>new Promise(()=>{})},started=performance.now();
+ const actual=await readAnimalFailureView(page,{timeoutMs:25});assert.equal(actual.url,url);assert.match(actual.unavailable,/exceeded 25ms/);assert.ok(performance.now()-started<1000,'post-failure observation returns even if evaluate never settles');
+ page.evaluate=async()=>{throw Error('Target closed');};assert.deepEqual(await readAnimalFailureView(page),{url,unavailable:'Target closed'});
+});
+test('failed screenshot records capture failure, preserves the primary error and cannot overwrite evidence',async t=>{
+ const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-animal-capture-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));
+ const original=Error('original strict Katta guard'),position={engine:'webkit',current:'animal-ring-tailed-lemur',stage:'large',width:390},primary=Buffer.from('unchanged original workshop failure');await fs.writeFile(path.join(dir,'animal-workshop-failure-390.json'),primary);
+ const page={screenshot:async options=>{assert.equal(options.timeout,5000);assert.equal(options.fullPage,true);throw Error('Target page closed');}};
+ await assert.rejects(async()=>{try{throw original;}catch(error){await captureAnimalFailureScreenshot(page,dir,position);throw error;}},error=>error===original);
+ const receipt=path.join(dir,'animal-screenshot-failure-390.json'),bytes=await fs.readFile(receipt);assert.deepEqual(JSON.parse(bytes),{...position,screenshot:'animal-failure-390.png',error:'Target page closed'});assert.deepEqual(await fs.readFile(path.join(dir,'animal-workshop-failure-390.json')),primary);
+ page.screenshot=async()=>{throw Error('different later capture failure');};await captureAnimalFailureScreenshot(page,dir,position);assert.deepEqual(await fs.readFile(receipt),bytes);
+ const moved=await preserveEngineDiagnostics(dir,'webkit');assert.ok(moved.includes('journey-engine-webkit-animal-screenshot-failure-390.json'));assert.deepEqual(await fs.readFile(path.join(dir,'journey-engine-webkit-animal-screenshot-failure-390.json')),bytes);
+});
 test('failed engine diagnostics keep exact original bytes, existing other snapshots and curator-compatible names',async t=>{
  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-engine-proof-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));
  const original=Buffer.from('synthetic evidence fixture, never a product screenshot'),hash=bytes=>createHash('sha256').update(bytes).digest('hex');
