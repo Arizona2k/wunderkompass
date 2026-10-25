@@ -1,12 +1,28 @@
-# Aktueller Arbeits- und Übergabestand ·24.10.2026
+# Aktueller Arbeits- und Übergabestand ·25.10.2026
 
 ## Auftrag, Reihenfolge und aktiver Stand
 
 Der [Umsetzungsauftrag24.10.](content/auftrag-2026-10-13/WunderKompass_Umsetzungsauftrag_2026-10-24.md) ist bytegleich archiviert:12.808Byte/SHA256 `bf6bf3e13078a2c88069873ea7c7a5eb5d5cd0eaaa7bf77f49a54d1f75a70691`. AGENTS/QUALITY/TEST-LIVE/VISION sichern die dauerhafte Verbesserbarkeit alter und neuer Inhalte, geschützte persönliche Daten und das bestehende Freigabeverfahren. BACKLOG ist die einzige Aufgabenliste. Paket3.5/WK051–058 bleibt vor4–8; keine neue Roadmap. Die vorherige vollständige Übergabe mit allen historischen Zwischenbelegen bleibt in [Gitf9141f2](https://github.com/Arizona2k/wunderkompass/blob/f9141f242eea7259f056de4bb919236566af3f58/PROJECT_STATE.md), ältere Originale im bestehenden Auftragsarchiv.
 
-Aktiver serieller Durchlauf `continue-20261017-projectless21`, eigene Remote-Reservierung/Eigentümer-SHA `a5308d4b2ddd1f40855bf60da648aaecb35cd3d2`. Keine parallelen Agenten/Durchläufe/Scheduler. Wartungsbranch `codex/wunderkompass-audit-process-2026-10-24`: Quality162 ist abgeschlossen und rot; die konkrete Testursache wurde anhand des Originalprotokolls, der anschließend vom Nutzer bereitgestellten Fehlerdatei und echter lokaler WebKit-Vergleiche geklärt und eng korrigiert. Neuer vollständiger lokaler Korrekturlauf bestanden; neue vollständige native PR-CI am endgültigen Kopf bleibt erforderlich. PR61 bleibt bis dahin Entwurf, kein Wartungsmerge oder Deployment. Die vollständige vorherige Übergabe samt AA-/C249-Belegen bleibt in [Gitc2494a4](https://github.com/Arizona2k/wunderkompass/blob/c2494a42ed56fda1174af2368bc4ce1f967d15ce/PROJECT_STATE.md) erhalten.
+Aktiver serieller Durchlauf `continue-20261025-content-and-media`, einzige eigene Reservierung/Eigentümer-SHA `1babd141fa58dc28002c118ebddb2ae3984da447`. Keine Agenten, parallelen Codex-Durchläufe oder Scheduler. Diese isolierte Dokumentationsfortschreibung basiert auf tatsächlich geliefertemM61 und verändert weder Quellstand noch Dokumentation des laufendenPR63-Prüfkandidaten40e4c63. Die ursprüngliche24.10.-Vorbereitung bleibt in Git/M61 erhalten.
 
-## Tatsächlich bestätigt · PR60
+## Aktuelle Ergänzung25.10. · getrennte Anweisungssicherung, Produkt noch nicht neugestaltet
+
+Die vollständige neue Gestaltungspräzisierung und der nachfolgende PR62-Abschlussauftrag sind im vorhandenen Auftragsarchiv erhalten. AGENTS undVISION konsolidieren die Zielgruppe Kinder/Jugendliche/Erwachsene sowie gemeinsame warme Gestaltung, die Startseiten-/Globusordnung, den Gesamtbestand und den ersten zusammenhängenden Vieransichten-Abschnitt. BACKLOG aktualisiert ausschließlich bestehende WK024/025/026/051–058. Keine zweite Roadmap und keine Änderung von Qualitäts-/Freigabe-/Kosten-/Betriebsregeln. Keine neue sichtbare Produktänderung aus dieser Dokumentationssicherung behaupten; deshalb kein erfundener Produktchronikeintrag. Quellen/Foto-/Wikimedia-/Datenschutzgrenzen bleiben.
+
+Erster vorgesehener Gestaltungsabschnitt: kurze konkrete Linie anhand Startseite, Themenübersicht, Artikel mit Modell undPass, anschließend zusammenhängend bedienbar umsetzen. Sichtbare gemeinsame Suche, echteFortsetzung, frühebildstarke6Welten, konkreteWissensfrage, Spiele/Forschen/Reisen und direkterGlobuszugang; Vollglobus eigeneAnsicht bei erhaltenen Direktlinks/Backwegen. Gemeinsame Bausteine und tatsächliche weitereVerwendungen prüfen; individuelle Lücken und übrige Bereiche offenhalten. Inhalte/Bilder/Technik und vorbereitete Arbeit bleiben erhalten, nach tatsächlichen Abhängigkeiten abgleichen. Keine pauschale Designwartezeit bis Ende3.5 oder Abschluss allerPRs.
+
+## Tatsächliche aktuelle Prüf- und Lieferstände
+
+Weiter tatsächlich ausgeliefert: PR61/M61 `1da6eca5f5827a7915e1dbe2477c91406c69d22a`, vollständiger nativerQuality163/40130761712/1success50:42, Vercel57179414648und echter TLS-/Pass-/Offline-Nachtest. Der Vergleich49Dateien gehörte zu einem vorher separat versiegelten späteren lokalenD6-Nachbau, keinem originalenCI-Binary. PR60-Produktchronik ist nachgeführt, reinePR61-Prüfwartung keine Produktneuheit.
+
+PR63Ready: Kopf `40e4c63af96cfd97cf71639784a0cfb85c11470b`, BasisM61, Testintegration `f1a9e0aeaa202c09d624fbedb85dea49cf707591`; vollständige nativeQuality169/Run40194446076/Attempt1/Job121172160302läuft unverändert. Standards/Units/Build/Content und frühe tatsächlicheEngine-/Coldgruppe bestanden; letzte Beobachtung vollständigeChromiumgruppeinArbeit. Kein Merge oder neuesDeployment behauptet. Lokaler Originalfullbfcc/Quelleb55/Appfe81bestand1373,947s/149Checks/10Gruppen ohne unerwarteteBrowserfehler;3892Originalidentitäten gesichert, erst danach97UI-Bindungen/Metadatenquelle1223225. Alle163Runtimeausgabenbytegleich überMetadatenbindung,255Units/130Release/43Exporte/97Dossierserneutgrün. Neuer Bestand188/34Geschichte/220Fragen gilt für diesen Kandidaten, nicht bereits fürM61. VorbereitungChronikbronze-evidence-3-5im tatsächlichen PR63zugeordnet.
+
+PR62Draft89c und zugehörige vorgeprüfte Tier-/Medien-/Modellarbeit einschließlich Sewing525/Sydneya967/kumulativemBronzea328 weiter bis tatsächlichemUmfangsabschluss führen. Bestätigte vorliegende Entwicklung wiederverwenden, kontrolliert mit aktuellerBasis integrieren und erforderliche aktuelle volleAbnahme/Auslieferung durchführen; fehlende notwendige Teile nach Inventur als Rekonstruktion entwickeln. Nicht nurPRschließen und Arbeit unerledigt lassen. Quality168an89cwarvollständiggrün, ist nach Basisänderung kein aktuellerMergebeleg. Historischer166-Katta-Wartefehler inGroßschrift nachReload bleibt ungeklärt; Nutzer bestätigt fehlendeanimal-failure-PNG, nicht nachfordern/erfinden. Keine Ursache aus späteremGrün behaupten.
+
+Originale/Quellzweige und schlanke separat wiederhergestellteCheckpoints liegen vor. Native/Releasekandidaten während Prüfungen nicht durch neueDesign-/Dokumentationsänderungen verändern. DieseDokumentationssicherung ist ein eigener Quellcommit; tatsächlicheGitHub-Erreichbarkeit separat prüfen. main/Produktion/GesamtPR27/Autoqueue/News bleiben ausgeschlossen. EigeneLeaseerstnachgesicherterEndübergabelösen; keineunbeaufsichtigteArbeitnachSitzungsendebehaupten.
+
+## Vorheriger bestätigter Produktabschnitt · PR60
 
 | Identität | Belegter Zustand |
 | --- | --- |

@@ -1,3 +1,9 @@
+## Anweisungen fortgeschrieben · Gestaltung und PR62-Abschluss25.10.2026
+
+Neue vollständige Nutzerpräzisierung und nachfolgenden Abschlussauftrag im vorhandenen Auftragsarchiv gesichert. AGENTS/VISION erweitern die Zielgruppe auf Kinder, Jugendliche und Erwachsene und konkretisieren gemeinsame warme Gestaltung, Startseite mit separater vollerGlobusansicht sowie den ersten zusammenhängenden Abschnitt aus Startseite, Themenübersicht, Artikel mitModell undPass. Bestehenden BACKLOG gezielt fortgeschrieben, keine zweite Liste. Bisherige aktive6–14-Exklusivität konsolidiert, ursprüngliche Anforderungen bleiben inGit/Archiv nachvollziehbar.
+
+PR63/Quality169läuft unverändert; PR62-Arbeit wird bis tatsächlichem Umfangsabschluss weitergeführt, fehlende nötige Teile bei Bedarf ausdrücklich als Rekonstruktion. HistorischerKatta-Befund bleibt ohne Ursachenbeleg offen. Keine Produktneugestaltung, Auslieferung oder abgeschlossene Vollbestandsmodernisierung durch die Anweisungsänderung behauptet; Produktchronik deshalb unverändert. Schutz-/Datenschutz-/Kosten-/Betriebs-/Prüfregeln bleiben.
+
 ## Tatsächlich bestätigt · Wissenschaft, sichere Passfortsetzung und Foto-Rückweg PR60
 
 23erhaltene Wissenschaftsoriginale mit zehn bedienbaren Modellen,13eigenen Erklärgrafiken,69Beobachten-/Erklären-/Transferaufgaben und41begründeten Wissensverbindungen ausgeliefert.46Karten eindeutig12/12/12/10; mobile Modellgrenzen und große Schrift geprüft. Negative und gebrochene gültige Modellwerte bleiben erhalten; beschädigte Passdateien ersetzen keine vorhandenen Notizen/Favoriten/Modelle nach gewöhnlicher Bestätigung. Kategorie-/Pagination-Rückwege nutzen vorhandenen geschützten Fokus; entsprechende Originalfehler tatsächlich erkannt.
