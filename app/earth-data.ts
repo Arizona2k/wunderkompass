@@ -1,7 +1,7 @@
 import { JOURNEYS } from "./learning-data";
 import COUNTRY_META from "./country-metadata.json" with {type:"json"};
 import { EXTRA_QUESTIONS } from "./quiz-data";
-export type Mode = "globe" | "layers" | "day" | "quiz" | "journeys" | "games" | "book" | "labs" | "world";
+export type Mode = "home" | "globe" | "layers" | "day" | "quiz" | "journeys" | "games" | "book" | "labs" | "world";
 export type MapProperties = { id: string; name: string; continent: string; iso: string; lat: number; lon: number; type: string };
 export type Country = { type: "Feature"; id?: string; properties: MapProperties; geometry: {type: "Polygon"; coordinates: number[][][]} | {type: "MultiPolygon"; coordinates: number[][][][]} };
 export type GeographySource = {title:string;url:string};

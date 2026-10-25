@@ -24,3 +24,25 @@ DiscoveryVisual enthält selbst erstellte SVG-Zeichnungen einer Abenteuerlandsch
 Vorhandene vier lokale Medien (Elefant, Pyramiden, Marie Curie, Golden Gate Bridge) mit vorhandenen Autoren-/Lizenzinformationen wiederverwendet. Credits bleiben an den Medien; spätere Darstellungen behalten ihre Kennzeichnung. Keine fremden Bilder heruntergeladen, keine erfundenen Rechte oder neue Medienanbieter. Ausführliche Nachweise bleiben in den vorhandenen photo-credits.json-Dateien und auf den Wissenskarten.
 
 Unabhängige fachliche Prüfung, echte Kinderbeobachtung, physische Geräte, Screenreader und gehörte Stimme sind damit nicht ersetzt. Sichtbare Lesbarkeit, Tastatur, Bilder, kleine Browseransichten, axe und gespeicherte synthetische Pässe werden separat technisch geprüft.
+
+
+## Gestaltung25.10.2026 · erste zusammenhängende Umsetzung in Arbeit
+
+Kurze Gestaltungslinie: warme helle Flächen, dunkle Schrift, Petrol als tragende Farbe und ein gut lesbarer Orangeakzent; kompakter Einstieg mit sichtbarer gemeinsamer Suche und früh bebilderten sechs Welten. Die unveränderten Welt-/Themen-/Fragen-/Speicherkennungen bleiben. Eine konkrete Frage führt innerhalb der bestehenden Wissensspuren zu Erklärungen und einer passenden Aktivität. Spielen, Forschen und Reisen erläutern ihre unterschiedlichen Lernhandlungen. Der volle Globus bleibt unter `#globe` mit seinen bisherigen Modell-/Ortswegen erreichbar; Startseite und Entdecken erhalten `#home`, auch ohne Hash. Keine zweite Weltenübersicht oder neue Empfehlungsdatenbank.
+
+Die erste Umsetzung betrifft Startseite, bestehende Themenübersichten, gemeinsame Artikelhülle mit vorhandenem Modell sowie Pass. Vorhandene Motive, Bildrechte, Quellen, Erklärtexte und Modellgrenzen werden weiterverwendet. Die vier Musteransichten stehen für die laufende erste Etappe, nicht für eine fachliche/gestalterische Modernisierung sämtlicher Inhalte. Neue zentrale Typografie-/Farb-/Abstandsregeln betreffen ihre tatsächlichen weiteren Verwendungen und benötigen entsprechend breite Regression; individuelle ältere Bild-/Inhalts-/Modelllücken bleiben im bestehenden BACKLOG.
+
+Im Pass führen tatsächliche gespeicherte Aktivität, Gespeichertes und Notizen, Lernwege sowie Sicherung/Einstellungen direkt weiter. Eine kurze Ansicht vorhandener Notizen liest dieselben privaten Passdaten und speichert keine Kopie in einem neuen Schema. Keine neue Altersabfrage, Fremdübertragung oder neue Fortschrittskennung. Die sichtbare Speicheranzeige und Sicherung erklären den Gerätewechsel. Quizrückblick benennt richtig beantwortete Aufgaben statt unbeobachteter persönlicher Erklärungen.
+
+### Tatsächlich zugängliche Angebotsfunktionen verglichen
+
+Am25.10.2026 über die öffentlichen Originalseiten gelesen; keine angemeldeten Übungen, tatsächliche fremde Animationen oder Bildpixelabnahme behauptet, keine Medien kopiert:
+
+- [Planet Schule](https://www.planet-schule.de/): gemeinsame Suche, Schulfächer, Medientypen und Zugänge zu Lernspielen/Erklärvideos sichtbar. Für WunderKompass werden vorhandene gemeinsame Suche und unterschiedliche Lernhandlungen früher erkennbar; keine zusätzliche Fach-/Medientypsuche parallel zur vorhandenen Navigation.
+- [National Geographic Kids](https://kids.nationalgeographic.com/): Suchzugang sowie getrennte Tiere-/Spiele-/Videoangebote und konkrete Entdeckungsanlässe sichtbar. Eigene sechs Themenatmosphären und die bestehende Frage mit verbundenen Modellen bleiben selbstständig gestaltet. Die Textansicht belegt keine aktuelle Bildqualität oder tatsächliche Spielbedienung des fremden Angebots.
+- [ANTON](https://anton.app/de/): öffentlich beschriebene Übungen/Erklärungen, Gerätezugänge und Lernlisten. WunderKompass verwendet seinen vorhandenen privaten lokalen Pass und freiwillige Denkwege; daraus wird weder eine überprüfte ANTON-Speicheranalyse noch eine behauptete Überlegenheit abgeleitet.
+- [BrainPOP](https://www.brainpop.com/): hier nur Ladehinweis zugänglich. Keine weiteren aktuellen Funktionen oder Abnahme behauptet; früherer Vergleich bleibt historisch zugeordnet.
+
+### Bisheriger tatsächlicher Prüfstand dieser Gestaltung
+
+Typprüfung und Lint bestanden. Erster Build überschritt das unveränderte325.000Byte-CSS-Budget; Originalprotokoll erhalten. Nicht mehr verwendete frühere Einstiegsknopfregeln und exakt überstimmte doppelte Deklarationen konsolidiert, vorhandene Abenteuerzugangskomponente wiederverwendet. Anschließend Build mit324.109ByteEinstiegsCSS unter derselben Grenze; kein Budget angehoben.261Units am vorherigen nahen Zwischenstand bestanden; nach letzten Text-/Routenänderungen erneut zu prüfen. Frühe tatsächliche Smartphone-/Tablet-/Desktop-/Großschrift-/Zoom-/Tastatur-/Pass-/Rückwegprüfung sowie vollständige lokale/nativeAbnahme stehen aus. Diese Umsetzung gehört nicht zum unverändert laufenden PR62-Kandidaten550d7bd/8abb/Appc208.

@@ -14,5 +14,5 @@ const AREAS = [
 ] as const;
 
 export default function LearningNavigation({onNavigate}:{onNavigate:(mode:string)=>void}){
- return <TabsList className="mode-tabs" aria-label="Lernbereiche">{AREAS.map(({id,label,icon:Icon})=><TabsTrigger key={id} value={id} data-route-focus={'home-nav-'+id} className="nav-tab" onClick={()=>onNavigate(id==='explore'?'globe':id)}><Icon size={19} aria-hidden="true"/><span>{id==='world'?<>Wissens<wbr/>welten</>:id==='labs'?<>Forscher<wbr/>labor</>:id==='book'?<>Wissens<wbr/>buch</>:label}</span></TabsTrigger>)}</TabsList>;
+ return <TabsList className="mode-tabs" aria-label="Lernbereiche">{AREAS.map(({id,label,icon:Icon})=><TabsTrigger key={id} value={id} data-route-focus={'home-nav-'+id} className="nav-tab" onClick={()=>onNavigate(id==='explore'?'home':id)}><Icon size={19} aria-hidden="true"/><span>{id==='world'?<>Wissens<wbr/>welten</>:id==='labs'?<>Forscher<wbr/>labor</>:id==='book'?<>Wissens<wbr/>buch</>:label}</span></TabsTrigger>)}</TabsList>;
 }

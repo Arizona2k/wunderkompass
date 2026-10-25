@@ -6,11 +6,17 @@ Der [Umsetzungsauftrag24.10.](content/auftrag-2026-10-13/WunderKompass_Umsetzung
 
 Aktiver serieller Durchlauf `continue-20261025-content-and-media`, einzige eigene Reservierung/Eigentümer-SHA `1babd141fa58dc28002c118ebddb2ae3984da447`. Keine Agenten, parallelen Codex-Durchläufe oder Scheduler. Die getrennte reine Anweisungssicherung32f36ca basiert aufM61. Dieser neue isolierte PR62-Abschlussbaum führt bereits entwickelte Medien-/Lern-/Sewing-/Sydneyarbeit ausa328mit der unabhängigen Bronze-Arbeit40zusammen; keine Quell-/Dokumentationsänderung am laufendenPR63-Kandidaten. Die ursprüngliche24.10.-Vorbereitung bleibt in Git/M61 erhalten.
 
-## Aktuelle Ergänzung25.10. · getrennte Anweisungssicherung, Produkt noch nicht neugestaltet
+## Aktuelle Ergänzung25.10. · Anweisungen gesichert, erste Gestaltung in Arbeit
 
 Die vollständige neue Gestaltungspräzisierung und der nachfolgende PR62-Abschlussauftrag sind im vorhandenen Auftragsarchiv erhalten. AGENTS undVISION konsolidieren die Zielgruppe Kinder/Jugendliche/Erwachsene sowie gemeinsame warme Gestaltung, die Startseiten-/Globusordnung, den Gesamtbestand und den ersten zusammenhängenden Vieransichten-Abschnitt. BACKLOG aktualisiert ausschließlich bestehende WK024/025/026/051–058. Keine zweite Roadmap und keine Änderung von Qualitäts-/Freigabe-/Kosten-/Betriebsregeln. Keine neue sichtbare Produktänderung aus dieser Dokumentationssicherung behaupten; deshalb kein erfundener Produktchronikeintrag. Quellen/Foto-/Wikimedia-/Datenschutzgrenzen bleiben.
 
 Erster vorgesehener Gestaltungsabschnitt: kurze konkrete Linie anhand Startseite, Themenübersicht, Artikel mit Modell undPass, anschließend zusammenhängend bedienbar umsetzen. Sichtbare gemeinsame Suche, echteFortsetzung, frühebildstarke6Welten, konkreteWissensfrage, Spiele/Forschen/Reisen und direkterGlobuszugang; Vollglobus eigeneAnsicht bei erhaltenen Direktlinks/Backwegen. Gemeinsame Bausteine und tatsächliche weitereVerwendungen prüfen; individuelle Lücken und übrige Bereiche offenhalten. Inhalte/Bilder/Technik und vorbereitete Arbeit bleiben erhalten, nach tatsächlichen Abhängigkeiten abgleichen. Keine pauschale Designwartezeit bis Ende3.5 oder Abschluss allerPRs.
+
+## Getrennte erste Gestaltungsumsetzung · noch keine Abnahme/Bereitstellung
+
+Startseite/home mit sichtbarer gemeinsamerSuche undfrühen sechsWelten, direkte eigenständige volleGlobusansicht unter unverändertem#globe, konkrete bestehendeWissensspurenfrage und erklärteSpiel-/Labor-/Reisezugänge implementiert. Gemeinsame warmeOberflächen/Typografie/Abstände für Themenübersicht/ArtikelmitModell undPass; Pass liest echteFortsetzung, Gespeichertes undNotizen aus unverändertem zentralemPass. Keine neueSpeicherkennung, Altersabfrage oderzweiteWeltenübersicht. KleineNotizvorschau verbleibt privat aufdemGerät. BestehendeBild-/Rechte-/Quellen-/Modellgrenzen erhalten; eigeneKategorieillustrationen ausdrücklichmitKI-Unterstützungbezeichnet.
+
+Typ/Lint/Build bestanden,261Units nuram nahen vorletztenZwischenstand; aktuellefrühe tatsächlicheAnsichten-/Routen-/Passprüfung und erneuteUnits sowie vollständigeQualifikation noch offen. ErstesCSS-Budgetrot behalten, ungenutzte/überstimmteRegeln konsolidiert undvorhandeneZugänge wiederverwendet; zuletzt324.109Byte unter unveränderter325.000Byte-Grenze. Kein Vollbestandsmodernisierungs-/Lernwirkungs-/Gerätenachweis. PR62-Volltest läuft separat an550d7bd/Quelle8abb5220/Appc2082694unverändert; dieseGestaltung gehört ausdrücklich nicht zu dessenNachweis oderlieferbaremUmfang. AktuellerGesamtbestand undP4–8bleibenoffen; nach tatsächlichemPR62-Abschluss diesen Abschnitt gegen bestätigteBasis abgleichen undweiterqualifizieren.
 
 ## Tatsächliche aktuelle Prüf- und Lieferstände
 
