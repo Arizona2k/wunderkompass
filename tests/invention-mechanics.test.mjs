@@ -1,13 +1,14 @@
+import {beforePeopleMethods,beforePeopleMethodQuestions,beforePeopleMethodGraph} from './people-methods-reference.mjs';
 import {topicAtHistoricalMediaReference} from './retained-topic-reference.mjs';
 import scienceBaseline from './fixtures/retained-before-science-originals.json' with {type:'json'};
 const scienceIds=scienceBaseline.newIds;
 import buildingBaseline from './fixtures/retained-before-building-originals.json' with {type:'json'};
 const buildingIds=buildingBaseline.newIds;
 import test from 'node:test';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
-import catalog from '../app/world-catalog.json' with {type:'json'};
-import graph from '../app/world-connections.json' with {type:'json'};
+import currentCatalog from '../app/world-catalog.json' with {type:'json'};
+import currentGraph from '../app/world-connections.json' with {type:'json'};
 import baseline from './fixtures/retained-before-invention-mechanics.json' with {type:'json'};
-import {CHALLENGE_BANK} from '../app/knowledge-challenge.ts';
+import {CHALLENGE_BANK as currentChallengeBank} from '../app/knowledge-challenge.ts';
 import {worldGameBank,restoreWorldGameOrders} from '../app/world-game-bank.ts';
 import fs from 'node:fs';
 import deviceMedia from '../app/device-illustrations.json' with {type:'json'};
@@ -36,3 +37,8 @@ test('historical anchors and mechanism limits distinguish observations, object d
 test('invented spring-seismograph illustration distinguishes vertical sensing, drawn line and horizontal screen model',()=>{
  const media=deviceMedia.entries.find(e=>e.id==='invention-seismograph'),review=originalReview.topics.find(t=>t.id===media.id).media,bytes=fs.readFileSync('public'+media.src);assert.equal(media.kind,'ai-illustration');assert.equal(media.src,'/inventions/seismograph-ai.webp');assert.equal(bytes.length,26398);assert.equal(createHash('sha256').update(bytes).digest('hex'),'3306f4617e59ca4197da4354432b46cb41a20c9e627e1c3baa60d5bfae9ae54e');assert.equal(review.sha256,createHash('sha256').update(bytes).digest('hex'));assert.equal(bytes.readUInt16LE(26)&0x3fff,800);assert.equal(bytes.readUInt16LE(28)&0x3fff,500);assert.match(media.alt,/Eigene KI-Illustration.*senkrechte Bodenbewegung/);assert.match(media.caption,/kein Foto und nicht maßstabsgetreu/);assert.match(media.caption,/Auf-und-ab-Bewegungen/);assert.match(media.caption,/nur gezeichnet, kein Messdatensatz/);assert.match(media.caption,/Modell darunter betrachtet seitliche Bewegung/);assert.match(media.caption,/rekonstruiert keinen historischen Entwurf/);assert.deepEqual(media.labels,['Feder mit Masse','Schreibspitze an der Masse','Papierwalze am Gestell']);assert.equal(media.source.url,'https://www.usgs.gov/programs/earthquake-hazards/seismographs-keeping-track-earthquakes');assert.equal(review.caption,media.caption);
 });
+
+// Historical assertions retain their original release boundary; new additions are covered in people-methods.test.mjs.
+const catalog=beforePeopleMethods(currentCatalog);
+const CHALLENGE_BANK=beforePeopleMethodQuestions(currentChallengeBank);
+const graph=beforePeopleMethodGraph(currentGraph);

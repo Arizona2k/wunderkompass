@@ -1,5 +1,9 @@
 ## Anweisungen fortgeschrieben · Gestaltung und PR62-Abschluss25.10.2026
 
+## In Vorbereitung · Beobachtungen und Erklärungen bei Merian und Lehmann
+
+Zwei quellenbasiert gegengelesene Biografien mit eigenen klar gekennzeichneten Methodengrafiken: Insektenentwicklung als gedachte Beobachtungsfolge und Erdbebenmessung im Vergleich zu einer Erdkern-Erklärung. Sechs freiwillige Denkaufgaben, sechs neue Challengefragen und begründete Rückwege zu Monarchfalter/Seismograf. Die vier gemeinsamen Forscherspuren benennen Auswahlfeedback ehrlich und bieten freiwilliges eigenes Begründen; ihre sichtbaren Bildhinweise nennen KI-Unterstützung. Alle20vorherigen Personenfragen und220Challengefragen erhalten. Früh gezielt in dreiBrowsern/nativerVergrößerung geprüft; keine vollständige Abnahme oder Bereitstellung. Stand/NächsterSchritt ausschließlich PROJECT_STATE/BACKLOG.
+
 Neue vollständige Nutzerpräzisierung und nachfolgenden Abschlussauftrag im vorhandenen Auftragsarchiv gesichert. AGENTS/VISION erweitern die Zielgruppe auf Kinder, Jugendliche und Erwachsene und konkretisieren gemeinsame warme Gestaltung, Startseite mit separater vollerGlobusansicht sowie den ersten zusammenhängenden Abschnitt aus Startseite, Themenübersicht, Artikel mitModell undPass. Bestehenden BACKLOG gezielt fortgeschrieben, keine zweite Liste. Bisherige aktive6–14-Exklusivität konsolidiert, ursprüngliche Anforderungen bleiben inGit/Archiv nachvollziehbar.
 
 PR63/Quality169wurde unverändert erfolgreich zu Ende geprüft und tatsächlich testbereitgestellt; PR62-Arbeit wird bis tatsächlichem Umfangsabschluss weitergeführt, fehlende nötige Teile bei Bedarf ausdrücklich als Rekonstruktion. HistorischerKatta-Befund bleibt ohne Ursachenbeleg offen. Keine Produktneugestaltung, Auslieferung oder abgeschlossene Vollbestandsmodernisierung durch die Anweisungsänderung behauptet; Produktchronik deshalb unverändert. Schutz-/Datenschutz-/Kosten-/Betriebs-/Prüfregeln bleiben.

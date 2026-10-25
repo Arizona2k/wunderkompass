@@ -6,6 +6,7 @@ import {LearningDetails} from './learning-components';
 import {useSavedGame,useSavedModel} from './saved-games';
 import './people-evidence.css';
 import {FossilDrawing,LightDrawing} from './people-illustration';
+import {InsectObservationFigure,InnerCoreEvidenceFigure} from './people-observation-figures';
 
 type Task={age:string;goal:string;example:string;prompt:string;answers:string[];correct:number;hint:string;why:string;wrongReasons:(string|null)[]};
 type Entry={id:string;figure:string;tasks:Task[]};
@@ -35,12 +36,14 @@ function EvidenceTask({task,onRead}:{task:Task;onRead:(text:string)=>void}){
   <p><strong>Dein Ziel:</strong> {task.goal}</p><p className="people-evidence-example">{task.example}</p><h4>{task.prompt}</h4>
   <LearningDetails summary="Ein Denkhinweis"><p>{task.hint}</p></LearningDetails>
   <div className="quiz-answers">{task.answers.map((answer,i)=><button key={answer} className={'quiz-answer '+(choice===i?(right?'is-correct':'is-incorrect'):'')} aria-pressed={choice===i} onClick={()=>setChoice(i)}><span>{answer}</span></button>)}</div>
-  {choice!==null&&<div className="lab-feedback" role="status"><strong>{right?'Dein Gedanke passt':'Lass uns den Gedanken prüfen'}</strong><p>{right?task.why:task.wrongReasons[choice]}</p>{!right&&<p>Du darfst eine andere Erklärung ausprobieren.</p>}</div>}
+  {choice!==null&&<div className="lab-feedback" role="status"><strong>{right?'Deine Auswahl passt':'Prüfe deine Auswahl'}</strong><p>{right?task.why:task.wrongReasons[choice]}</p>{right?<p>Wenn du möchtest: Begründe deine Auswahl mit eigenen Worten und vergleiche deine Erklärung mit dem Beispiel. Deine eigene Erklärung wird hier nicht bewertet.</p>:<p>Du darfst eine andere Antwort ausprobieren.</p>}</div>}
   <button className="speech-button" onClick={()=>onRead([task.example,task.prompt,...task.answers].join(' '))}><Volume2 size={17}/> Beispiel und Frage vorlesen</button>
  </div>;
 }
 function EvidenceFigure({kind}:{kind:string}){
  const [selected,setSelected]=useSavedModel<number>('peopleEvidenceFigure',0,{min:0,max:1});
+ if(kind==='insect-observation-series'||kind==='inner-core-evidence-comparison')return <div className="people-evidence-figure" data-evidence-figure={kind} data-evidence-scene={selected}>{kind==='insect-observation-series'?<InsectObservationFigure selected={selected} onSelect={setSelected}/>:<InnerCoreEvidenceFigure selected={selected} onSelect={setSelected}/>}</div>;
+ if(!['fossil-evidence','light-to-eye'].includes(kind))return null;
  const fossil=kind==='fossil-evidence';
  return <div className="people-evidence-figure" data-evidence-figure={kind} data-evidence-scene={selected}>
   <h4>{fossil?'Fund und Zeichnung unterscheiden':'Welchen Weg kann Licht nehmen?'}</h4>

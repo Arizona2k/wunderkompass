@@ -1128,6 +1128,22 @@
       "kind": "context",
       "why": "Vergleiche Werkstoff und Fundbeleg: Ein neuer Werkstoff beseitigt ältere Techniken nicht überall sofort. Die Beispiele stammen aus verschiedenen Regionen und Zeiten; die Verbindung behauptet keine direkte Herkunft voneinander.",
       "checkedAt": "2026-10-25"
+    },
+    {
+      "id": "person-maria_sibylla_merian--animal-monarch-butterfly",
+      "fromId": "person-maria_sibylla_merian",
+      "toId": "animal-monarch-butterfly",
+      "kind": "evidence",
+      "why": "Merians Beobachtungen helfen zu fragen, wie Entwicklungsstadien zusammengehören. Der heutige Monarchfalter bietet dafür ein anderes konkretes Beispiel; damit ist nicht behauptet, Merian habe diesen Falter in Suriname untersucht.",
+      "checkedAt": "2026-10-25"
+    },
+    {
+      "id": "person-inge_lehmann--invention-seismograph",
+      "fromId": "person-inge_lehmann",
+      "toId": "invention-seismograph",
+      "kind": "evidence",
+      "why": "Ein Seismograf liefert Aufzeichnungen von Bodenbewegungen. Lehmanns Arbeit zeigt den weiteren Schritt: Solche Messungen vergleichen und daraus Hinweise auf das Erdinnere erschließen.",
+      "checkedAt": "2026-10-25"
     }
   ]
 }

@@ -1,3 +1,4 @@
+import {beforePeopleMethods,beforePeopleMethodQuestions} from './people-methods-reference.mjs';
 import {topicAtHistoricalMediaReference} from './retained-topic-reference.mjs';
 import scienceBaseline from './fixtures/retained-before-science-originals.json' with {type:'json'};
 const scienceIds=scienceBaseline.newIds;
@@ -8,10 +9,10 @@ const mechanicsIds=mechanicsBaseline.newIds;
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
-import catalog from '../app/world-catalog.json' with {type:'json'};
+import currentCatalog from '../app/world-catalog.json' with {type:'json'};
 import index from '../app/world-index.json' with {type:'json'};
 import review from '../content/invention-editorial-review.json' with {type:'json'};
-import {CHALLENGE_BANK,restoreChallenge} from '../app/knowledge-challenge.ts';
+import {CHALLENGE_BANK as currentChallengeBank,restoreChallenge} from '../app/knowledge-challenge.ts';
 const ids=['invention-camera','invention-telescope','invention-microscope'];
 const electricalIds=['invention-battery','invention-generator','invention-transistor'];
 const peopleIds=['person-mary_anning','person-ibn_al_haytham'];
@@ -38,3 +39,7 @@ test('optical sources distinguish recording, historical evidence and magnificati
 test('old six-question rounds preserve actual saved shuffled answers and progress after three additions',()=>{
  for(const difficulty of ['easy','medium','hard']){const q=CHALLENGE_BANK.filter(q=>q.difficulty===difficulty&&!ids.includes(q.topic)).slice(0,6);assert.equal(q.length,6);const save={difficulty,ids:q.map(q=>q.id),orders:Object.fromEntries(q.map(q=>[q.id,[...q.answers].reverse()])),index:3,answer:q[3].answers[1],done:false};assert.deepEqual(restoreChallenge(JSON.parse(JSON.stringify(save)),{invalid:true}),save);}
 });
+
+// Historical assertions retain their original release boundary; new additions are covered in people-methods.test.mjs.
+const catalog=beforePeopleMethods(currentCatalog);
+const CHALLENGE_BANK=beforePeopleMethodQuestions(currentChallengeBank);

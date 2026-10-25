@@ -1,3 +1,4 @@
+import {beforePeopleMethods,beforePeopleMethodQuestions,beforePeopleMethodGraph} from './people-methods-reference.mjs';
 import {topicAtHistoricalMediaReference,OKAPI_MEDIA_SOURCE_NOTE} from './retained-topic-reference.mjs';
 import scienceBaseline from './fixtures/retained-before-science-originals.json' with {type:'json'};
 const scienceIds=scienceBaseline.newIds;
@@ -7,14 +8,14 @@ import mechanicsBaseline from './fixtures/retained-before-invention-mechanics.js
 const mechanicsIds=mechanicsBaseline.newIds;
 import {historicalQuestionBank} from '../scripts/world-question-index.mjs';
 import corrections from '../content/editorial-reviews.json' with {type:'json'};
-import {CHALLENGE_BANK as questions} from '../app/knowledge-challenge.ts';
+import {CHALLENGE_BANK as currentChallengeBank} from '../app/knowledge-challenge.ts';
 import inquiries from '../app/animal-inquiries.json' with {type:'json'};
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {createHash} from 'node:crypto';
-import catalog from '../app/world-catalog.json' with {type:'json'};
+import currentCatalog from '../app/world-catalog.json' with {type:'json'};
 import metadata from '../app/animal-illustrations.json' with {type:'json'};
 import review from '../content/animal-expansion-review.json' with {type:'json'};
 import original from '../content/animal-editorial-review.json' with {type:'json'};
-import graph from '../app/world-connections.json' with {type:'json'};
+import currentGraph from '../app/world-connections.json' with {type:'json'};
 import index from '../app/world-index.json' with {type:'json'};
 const digest=data=>createHash('sha256').update(JSON.stringify(data)).digest('hex');
 test('new voluntary hints do not copy the answer and wrong feedback does not just repeat the correct explanation',()=>{
@@ -73,3 +74,8 @@ test('reviewed Okapi media disclosure preserves all historical fields and reject
  for(const note of[OKAPI_MEDIA_SOURCE_NOTE.current+' geändert','Unbekannte künftige Bildherkunft']){const changed={...topic,sourceNote:note};assert.equal(topicAtHistoricalMediaReference(changed),changed,'unknown disclosure remains visible to the original hash assertion');}
  const other={...topic,id:'animal-meerkat'};assert.equal(topicAtHistoricalMediaReference(other),other,'no other topic gains an alias');
 });
+
+// Historical assertions retain their original release boundary; new additions are covered in people-methods.test.mjs.
+const catalog=beforePeopleMethods(currentCatalog);
+const questions=beforePeopleMethodQuestions(currentChallengeBank);
+const graph=beforePeopleMethodGraph(currentGraph);

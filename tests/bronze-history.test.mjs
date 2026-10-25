@@ -1,7 +1,8 @@
+import {beforePeopleMethods,beforePeopleMethodQuestions,beforePeopleMethodGraph} from './people-methods-reference.mjs';
 import {topicAtHistoricalMediaReference} from './retained-topic-reference.mjs';
 import mediaOriginal from './fixtures/retained-before-bronze-history-media-a967.json' with {type:'json'};
 import test from 'node:test';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
-import catalog from '../app/world-catalog.json' with {type:'json'};import graph from '../app/world-connections.json' with {type:'json'};import original from './fixtures/retained-before-bronze-history.json' with {type:'json'};import {CHALLENGE_BANK,restoreChallenge} from '../app/knowledge-challenge.ts';
+import currentCatalog from '../app/world-catalog.json' with {type:'json'};import currentGraph from '../app/world-connections.json' with {type:'json'};import original from './fixtures/retained-before-bronze-history.json' with {type:'json'};import {CHALLENGE_BANK as currentChallengeBank,restoreChallenge} from '../app/knowledge-challenge.ts';
 import hints from '../app/challenge-hints.json' with {type:'json'};
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 test('bronze preserves every actual preceding217question record,187topic and prior graph; only its one declared backlink is added',()=>{
@@ -18,3 +19,8 @@ test('bronze questions separate regional dating, material identity and the reach
  for(const question of questions){const reasons=hints[question.id].wrongReasons;assert.equal(reasons.length,question.answers.length);assert.equal(reasons[question.correct],null);for(const [i,reason]of reasons.entries())if(i!==question.correct){assert.ok(reason.length>45);assert.notEqual(reason,question.why);}assert.equal(new Set(reasons.filter(Boolean)).size,2,'individual feedback for both specific confusions');}
  for(const difficulty of ['easy','medium','hard']){const pool=original.questions.filter(q=>q.difficulty===difficulty).slice(0,6),save={difficulty,ids:pool.map(q=>q.id),orders:Object.fromEntries(pool.map(q=>[q.id,[...q.answers].reverse()])),index:2,answer:pool[2].answers[pool[2].correct],done:false};assert.deepEqual(restoreChallenge(structuredClone(save),{invalid:true}),save,'old saved round remains exact '+difficulty);}
 });
+
+// Historical assertions retain their original release boundary; new additions are covered in people-methods.test.mjs.
+const catalog=beforePeopleMethods(currentCatalog);
+const CHALLENGE_BANK=beforePeopleMethodQuestions(currentChallengeBank);
+const graph=beforePeopleMethodGraph(currentGraph);

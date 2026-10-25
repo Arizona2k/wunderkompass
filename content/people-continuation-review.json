@@ -316,5 +316,347 @@
       ],
       "limits": "Early scoped check only; final target integration, complete current product acceptance and actual CI/delivery still required. No new UI dossier offline acceptance before complete full run."
     }
+  },
+  "continuationMerianLehmann20261025": {
+    "preparedOn": "2026-10-25",
+    "status": "Implemented preparation; early and full UI/native/delivery acceptance pending. Not counted as delivered or recovered historical WIP.",
+    "existingTask": "WK-053",
+    "retainedPeople": 20,
+    "newTopicIds": [
+      "person-maria_sibylla_merian",
+      "person-inge_lehmann"
+    ],
+    "independentHumanReview": false,
+    "sourceBasedAIReview": true,
+    "entries": [
+      {
+        "id": "person-maria_sibylla_merian",
+        "sourcesActuallyRead": [
+          {
+            "id": "person-maria_sibylla_merian:source0",
+            "organisation": "Rijksmuseum · Insekten von Suriname",
+            "url": "https://www.rijksmuseum.nl/en/stories/10-things/story/maria-sibylla-merian-en",
+            "checkedOn": "2026-10-25",
+            "rightsBasis": "Eigene deutsche Zusammenfassung ausgewählter tatsächlich gelesener institutioneller Haupttexte. Keine Quelltexte, Fotos, historischen Bilddateien oder Logos übernommen."
+          },
+          {
+            "id": "person-maria_sibylla_merian:source1",
+            "organisation": "Oxford University Museum of Natural History · Merians Beobachtungen",
+            "url": "https://oumnh.ox.ac.uk/learn-maria-sibylla-merian",
+            "checkedOn": "2026-10-25",
+            "rightsBasis": "Eigene deutsche Zusammenfassung ausgewählter tatsächlich gelesener institutioneller Haupttexte. Keine Quelltexte, Fotos, historischen Bilddateien oder Logos übernommen."
+          },
+          {
+            "id": "person-maria_sibylla_merian:source2",
+            "organisation": "Museum für Naturkunde bei BHL · Merians Werk und ungenannte Beiträge",
+            "url": "https://blog.biodiversitylibrary.org/2021/06/mfn-explores-maria-sibylla-merian-legacy",
+            "checkedOn": "2026-10-25",
+            "rightsBasis": "Eigene deutsche Zusammenfassung ausgewählter tatsächlich gelesener institutioneller Haupttexte. Keine Quelltexte, Fotos, historischen Bilddateien oder Logos übernommen."
+          }
+        ],
+        "claims": [
+          {
+            "statement": "Merian1647–1717; Reise mit Tochter1699, Rückkehr1701, Werk1705; Beobachtung von Insektenentwicklung und Pflanzen.",
+            "sourceId": "person-maria_sibylla_merian:source0",
+            "anchor": "Museums-Haupttext zur Suriname-Reise, Beobachtungsweise und Veröffentlichung; gegen BHL/Museum für Naturkunde gelesen."
+          },
+          {
+            "statement": "Beiträge indigener und versklavter Menschen sowie Merians eigenes Profitieren von der kolonialen Ordnung gehören zur Darstellung.",
+            "sourceId": "person-maria_sibylla_merian:source2",
+            "anchor": "Museum-für-Naturkunde-Beitrag bei BHL über Merians Vermächtnis, kolonialen Zusammenhang und ungenannte Beiträge."
+          }
+        ],
+        "countercheck": [
+          "Oxford nennt ungenau Rückkehr nach drei Jahren und Suriname eine Insel; nicht übernehmen. Rijksmuseum/BHL stimmen1699–1701überein.",
+          "Keine unbelegte erste/alleinige Entdeckung der Metamorphose oder aller Pflanzen-Insektenbeziehungen.",
+          "Merian nicht als unbeteiligte Gegnerin der Versklavung beschönigen; Abhängigkeit und eigenes Profitieren konkret benennen, ohne belastende grafische Details.",
+          "Keine historische Abbildung oder Porträtpixel bereits als geprüft/adoptiert ausgeben. Noch nötige Rechte-/Pixelprüfung offen."
+        ],
+        "ownedMedia": {
+          "id": "person-maria_sibylla_merian",
+          "kind": "insect-observation-series",
+          "alt": "Eigene erfundene Folge Ei, Raupe, Puppe und erwachsener Falter; keine originale Tafel von Merian.",
+          "caption": "Eigene Erklärzeichnung mit KI-Unterstützung · gedachte Folge: Ei, Raupe, Puppe, Falter. Kein Originalblatt von Merian oder Porträt.",
+          "author": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
+          "rightsState": "own",
+          "notPhotograph": true,
+          "renderer": "app/people-observation-drawings.tsx",
+          "modelLimits": "Frei erfundene Beobachtungsfolge eines Schmetterlings; keine realen Daten, Entwicklungszeiten, Merian-Originaltafel oder allgemeine Aussage über alle Insekten. Ein erwachsener Falter wird nicht selbst wieder zum Ei.",
+          "sources": [
+            "https://www.rijksmuseum.nl/en/stories/10-things/story/maria-sibylla-merian-en",
+            "https://oumnh.ox.ac.uk/learn-maria-sibylla-merian",
+            "https://blog.biodiversitylibrary.org/2021/06/mfn-explores-maria-sibylla-merian-legacy"
+          ],
+          "sourceUse": "Fachlicher Zusammenhang aus tatsächlich gelesenen Quellen; keine fremde Abbildung übernommen."
+        },
+        "learningTasks": [
+          {
+            "age": "6-8",
+            "goal": "Beobachtungen über die Zeit erkennen",
+            "example": "Unser erfundenes Beispiel zeigt vier notierte Entwicklungsstadien eines beobachteten Schmetterlings.",
+            "prompt": "Was ergänzt die Folge gegenüber einem einzelnen Falterbild?",
+            "answers": [
+              "Sie hält Veränderungen über mehrere Beobachtungen fest.",
+              "Sie zeigt, dass alle Insekten genau so wachsen.",
+              "Sie beweist, dass jede Raupe dieselbe Nahrung frisst."
+            ],
+            "correct": 0,
+            "hint": "Prüfe, welche Aussage sich tatsächlich auf diese Beobachtungsfolge beschränkt.",
+            "why": "Die Folge ordnet mehrere Beobachtungen. Für Aussagen über alle Insekten oder jede Raupennahrung reicht dieses Beispiel nicht.",
+            "wrongReasons": [
+              null,
+              "Wir betrachten einen gedachten Schmetterling. Andere Insektengruppen können sich anders entwickeln.",
+              "Die Folge untersucht nicht die Nahrung aller Raupen. Unterschiedliche Arten können unterschiedliche Nahrung brauchen."
+            ]
+          },
+          {
+            "age": "9-11",
+            "goal": "Eine Behauptung mit einem passenden Beleg verbinden",
+            "example": "Zwei verschiedene Tiere liegen als einzelne Bilder nebeneinander. Die Notizen sagen nicht, ob sie zu derselben Entwicklungsfolge gehören.",
+            "prompt": "Welche Zusatzinformation hilft bei der Zuordnung?",
+            "answers": [
+              "Die beiden Bilder mit derselben Hintergrundfarbe ausmalen.",
+              "Beobachtungsnotizen, die die Entwicklung desselben Tiers verfolgen.",
+              "Die Namen der Tiere durch besonders ähnliche Wörter ersetzen."
+            ],
+            "correct": 1,
+            "hint": "Ein passender Beleg muss die Entwicklung verbinden, nicht nur die Bilder ähnlich aussehen lassen.",
+            "why": "Eine nachvollziehbare Beobachtungsfolge kann die Entwicklungsstadien verbinden. Ähnliche Gestaltung oder Namen liefern diesen Beleg nicht.",
+            "wrongReasons": [
+              "Gleiche Bildfarben sind eine Gestaltungsentscheidung. Sie beobachten keine Entwicklung.",
+              null,
+              "Ähnliche Wörter sind kein Entwicklungsnachweis. Dafür braucht es Informationen über die beobachteten Tiere."
+            ]
+          },
+          {
+            "age": "12-14",
+            "goal": "Beiträge und Grenzen einer Veröffentlichung prüfen",
+            "example": "Eine Behauptung lautet: Weil Merians Name auf dem Buch steht, stammt alles darin allein von ihr.",
+            "prompt": "Welche Quelleninformation ist für diese Behauptung entscheidend?",
+            "answers": [
+              "Das Buch wurde im Jahr 1705 veröffentlicht.",
+              "Das Buch enthält besonders sorgfältig ausgeführte Bilder.",
+              "Merian nutzte auch Wissen und Arbeit indigener und versklavter Menschen."
+            ],
+            "correct": 2,
+            "hint": "Trenne die Frage nach den Beiträgen anderer Menschen von der Bildqualität und dem Erscheinungsjahr.",
+            "why": "Die dokumentierten Beiträge anderer widersprechen dem Alleinanspruch. Ihre oft fehlenden Namen machen ihr Wissen und ihre Arbeit nicht bedeutungslos.",
+            "wrongReasons": [
+              "Das Erscheinungsjahr belegt einen Zeitpunkt. Es sagt nicht, dass die Autorin ohne Beiträge anderer arbeitete.",
+              "Sorgfältige Bilder sagen noch nicht, von wem alle Beobachtungen und Informationen stammen.",
+              null
+            ]
+          }
+        ],
+        "connection": {
+          "id": "person-maria_sibylla_merian--animal-monarch-butterfly",
+          "fromId": "person-maria_sibylla_merian",
+          "toId": "animal-monarch-butterfly",
+          "kind": "evidence",
+          "why": "Merians Beobachtungen helfen zu fragen, wie Entwicklungsstadien zusammengehören. Der heutige Monarchfalter bietet dafür ein anderes konkretes Beispiel; damit ist nicht behauptet, Merian habe diesen Falter in Suriname untersucht.",
+          "checkedAt": "2026-10-25"
+        },
+        "mediaDecision": "Rijksmuseum-ObjektRP-P-1940-337: Motiv/Macher/Historiencharakter/PublicDomain belegt; keine Originaldatei/Pixel/Crop technisch übernommen. Eigene spezifische Methodendarstellung ist kein Ersatzporträt."
+      },
+      {
+        "id": "person-inge_lehmann",
+        "sourcesActuallyRead": [
+          {
+            "id": "person-inge_lehmann:source0",
+            "organisation": "Niels Bohr Institute · Inge Lehmann",
+            "url": "https://nbi.ku.dk/english/www/inge/lehmann/",
+            "checkedOn": "2026-10-25",
+            "rightsBasis": "Eigene deutsche Zusammenfassung ausgewählter tatsächlich gelesener institutioneller Haupttexte. Keine Quelltexte, Fotos, historischen Bilddateien oder Logos übernommen."
+          },
+          {
+            "id": "person-inge_lehmann:source1",
+            "organisation": "American Physical Society · Lehmanns Erdkern-Erklärung",
+            "url": "https://www.aps.org/apsnews/2023/08/seismologist-lehmann-earth-inner-core",
+            "checkedOn": "2026-10-25",
+            "rightsBasis": "Eigene deutsche Zusammenfassung ausgewählter tatsächlich gelesener institutioneller Haupttexte. Keine Quelltexte, Fotos, historischen Bilddateien oder Logos übernommen."
+          },
+          {
+            "id": "person-inge_lehmann:source2",
+            "organisation": "American Museum of Natural History · Hinweise aus Erdbebenwellen",
+            "url": "https://www.amnh.org/learn-teach/curriculum-collections/earth-inside-and-out/inge-lehmann-discoverer-of-the-earth-s-inner-core",
+            "checkedOn": "2026-10-25",
+            "rightsBasis": "Eigene deutsche Zusammenfassung ausgewählter tatsächlich gelesener institutioneller Haupttexte. Keine Quelltexte, Fotos, historischen Bilddateien oder Logos übernommen."
+          }
+        ],
+        "claims": [
+          {
+            "statement": "Lehmann1888–1993;1936 Erklärung eines inneren Kerns anhand von Erdbebenwellen.",
+            "sourceId": "person-inge_lehmann:source0",
+            "anchor": "Hochschulbiografie und Darstellung der Auswertung von Wellenaufzeichnungen; mit Fachgesellschaft/Museum gegengelesen."
+          },
+          {
+            "statement": "Die Erklärung eines inneren Kerns1936 und die spätere Bestimmung seiner Eigenschaften werden unterschieden; P-Wellen laufen auch durch Flüssigkeiten.",
+            "sourceId": "person-inge_lehmann:source1",
+            "anchor": "APS-Haupttext zur1936-Hypothese und späteren Untersuchungen; keine verkürzte Gleichsetzung mit sofortigem Festigkeitsbeweis."
+          }
+        ],
+        "countercheck": [
+          "Fachquellen vereinfachen1936teils als sofortigen Beweis des festen Kerns; APS-Haupttext unterscheidet spätere Untersuchungen1940er/1952. Im Manuskript1936nur innerer Kern, heutigen festen Zustand separat.",
+          "Keine allgemeine Regel, jede P-Welle sei in jedem Feststoff schneller als in jeder Flüssigkeit; Wege/Geschwindigkeiten hängen vom Material ab.",
+          "Keine erfundenen exakten Laufzeiten, Temperaturwerte, Winkel oder originalen Messdaten.",
+          "NBI/APSPorträt-Hinweise sind ohne konkrete Rechte-/Urheber-/Pixelprüfung keine Bildübernahme. Keine Wikimedia-Anfrage."
+        ],
+        "ownedMedia": {
+          "id": "person-inge_lehmann",
+          "kind": "inner-core-evidence-comparison",
+          "alt": "Eigenes qualitatives Erdschnittmodell mit innerem Kern; kein Foto oder Originalmessbild.",
+          "caption": "Eigene Erklärzeichnung mit KI-Unterstützung · vereinfachter Erdschnitt mit innerem Kern, ohne Maßstab. Kein Foto oder Porträt.",
+          "author": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
+          "rightsState": "own",
+          "notPhotograph": true,
+          "renderer": "app/people-observation-drawings.tsx",
+          "modelLimits": "Qualitative Hypothesenbilder ohne Maßstab, berechnete Wellenwege oder originale Messdaten. Die beschriebene Beobachtung bleibt beim Wechsel gleich. Erklärung eines inneren Kerns1936 und spätere Eigenschaften getrennt.",
+          "sources": [
+            "https://nbi.ku.dk/english/www/inge/lehmann/",
+            "https://www.aps.org/apsnews/2023/08/seismologist-lehmann-earth-inner-core",
+            "https://www.amnh.org/learn-teach/curriculum-collections/earth-inside-and-out/inge-lehmann-discoverer-of-the-earth-s-inner-core"
+          ],
+          "sourceUse": "Fachlicher Zusammenhang aus tatsächlich gelesenen Quellen; keine fremde Abbildung übernommen."
+        },
+        "learningTasks": [
+          {
+            "age": "6-8",
+            "goal": "Messung und Erklärung unterscheiden",
+            "example": "Unser Lernbild zeigt eine Erdschicht. Der daneben beschriebene Beleg ist eine Aufzeichnung von Erdbebenwellen.",
+            "prompt": "Was ist die Messung?",
+            "answers": [
+              "Die Farbe des gezeichneten Erdkerns",
+              "Die Aufzeichnung des Wellensignals",
+              "Die kreisrunde Form unseres Lernbilds"
+            ],
+            "correct": 1,
+            "hint": "Frage, was ein Messgerät aufzeichnet und was wir zur verständlichen Darstellung gezeichnet haben.",
+            "why": "Das Wellensignal wird gemessen. Farben und die vereinfachte Darstellung sind Entscheidungen unseres Lernbilds.",
+            "wrongReasons": [
+              "Die Bildfarbe ordnet unsere Erklärung. Sie wurde nicht als Farbe des Erdkerns gemessen.",
+              null,
+              "Unser Schnittbild ist eine Darstellung. Das Messgerät zeichnet keine Kreisform des Erdkerns auf."
+            ]
+          },
+          {
+            "age": "9-11",
+            "goal": "Ein Modell an einer unerwarteten Beobachtung prüfen",
+            "example": "Das einfachere Modell sagt für einen Bereich kein solches Signal voraus. Dort wird trotzdem ein passendes schwaches Signal gemessen.",
+            "prompt": "Was ist jetzt sinnvoll?",
+            "answers": [
+              "Die Zeichnung schöner färben und damit die Messung ersetzen.",
+              "Das Signal löschen, weil es nicht zur bisherigen Zeichnung passt.",
+              "Messung prüfen und untersuchen, welche Erklärung sie zusätzlich erfasst."
+            ],
+            "correct": 2,
+            "hint": "Eine Abweichung verlangt Prüfung von Messung und Erklärung. Gestaltungsänderungen lösen die Sachfrage nicht.",
+            "why": "Ein verlässliches unerwartetes Signal kann eine zusätzliche Erklärung nötig machen. Weitere Daten und Rechnungen prüfen, ob das veränderte Modell besser passt.",
+            "wrongReasons": [
+              "Eine schönere Farbe erklärt kein unerwartetes Wellensignal. Dafür sind Messungen und fachliche Überlegungen nötig.",
+              "Eine unbequeme Messung zu entfernen prüft ihre Verlässlichkeit nicht und verbessert das Modell nicht.",
+              null
+            ]
+          },
+          {
+            "age": "12-14",
+            "goal": "Die Reichweite einer Erklärung begrenzen",
+            "example": "Ein verändertes Modell erklärt zusätzliche Wellenankünfte besser als das zuvor benutzte Modell.",
+            "prompt": "Welche Folgerung ist damit angemessen?",
+            "answers": [
+              "Das Modell wird durch passende Messungen gestützt; weitere Eigenschaften brauchen zusätzliche Belege.",
+              "Nun sind jede Temperatur und jeder Stoff im Erdinneren exakt bekannt.",
+              "Damit ist das gezeichnete Schnittbild ein Foto des wirklichen Erdkerns."
+            ],
+            "correct": 0,
+            "hint": "Unterscheide Unterstützung für eine bestimmte Erklärung von einem vollständigen Wissen über alle Eigenschaften.",
+            "why": "Eine Erklärung kann bestimmte Messungen gut erfassen. Genaue Temperaturen, Stoffe oder weitere Grenzen werden nicht allein durch diesen einen Vergleich bestimmt.",
+            "wrongReasons": [
+              null,
+              "Die Erklärung der Wellen liefert nicht automatisch sämtliche Temperaturen und Zusammensetzungen exakt mit.",
+              "Ein passendes Modell bleibt eine Darstellung und Erklärung. Es verwandelt sich nicht in eine direkte Fotografie."
+            ]
+          }
+        ],
+        "connection": {
+          "id": "person-inge_lehmann--invention-seismograph",
+          "fromId": "person-inge_lehmann",
+          "toId": "invention-seismograph",
+          "kind": "evidence",
+          "why": "Ein Seismograf liefert Aufzeichnungen von Bodenbewegungen. Lehmanns Arbeit zeigt den weiteren Schritt: Solche Messungen vergleichen und daraus Hinweise auf das Erdinnere erschließen.",
+          "checkedAt": "2026-10-25"
+        },
+        "mediaDecision": "NBI-Foto1932 motivisch belegt, aber keine konkrete Wiederverwendungslizenz/Urheberschaft geklärt. Keine Übernahme; eigene spezifische Methodendarstellung ist kein Porträt."
+      }
+    ],
+    "latestEarlyChecks": {
+      "sourceDigest": "9a2d86fc676076eb8c834beeefa6744f32f0b331c5284e7e10ae471e66fac9c4",
+      "build": "7e8b328f9d6b802a",
+      "scope": "All4 registered activities,12 optional levels/every wrong reason,2 figure states, sources, reciprocal keyboardBack/reload, old18-person actual import/round/download; protected synthetic notes/favourites. These original proofs precede the subsequent Lehmann source-note spacing correction.",
+      "actualBrowsers": [
+        "Chromium154.0.8037.57",
+        "Firefox157.0",
+        "WebKit27.2"
+      ],
+      "widths": [
+        320,
+        768,
+        1440
+      ],
+      "additionalLargeTextWidth": 320,
+      "native200WithLargeText": {
+        "cssWidth": 640,
+        "physicalWidth": 1280,
+        "devicePixelRatio": 2,
+        "activities": 4
+      },
+      "finalFullNativeDeliveryAccepted": false
+    },
+    "mediaResolution": {
+      "reviewedOn": "2026-10-25",
+      "merian": "Museum documentation identifies the official LinkedArt→VisualItem→DigitalObject→IIIF retrieval chain. The specific record JSON is not accessible by the reader; normal runtime/TLS-proxy request receives CONNECT403, not an object-server rights refusal. No downloaded original pixels. Existing exact museum Publicdomain finding retained.",
+      "lehmann": "Original RoyalLibrary object11164 URLs (www5 andwww) not accessible by reader. Alternative AIP catalogLehmannIngeA1 identifies photographerPeterElfelt/AGU, but inspected credit is not an explicit reuse licence. Different source credits must not be silently conflated. No photo adopted.",
+      "decision": "For this prepared section use the two specific own method illustrations, clearly labelled with AI assistance and model limits. They are not portraits, original historical records or measured data. A later photo/portrait addition still requires exact object licence and actual pixel/crop checks; no Wikimedia research or borrowed image accepted."
+    },
+    "laterTargetedChecks": {
+      "sourceDigest": "4cb5bab659e53f6d611ee8502499ec200a879af9716a4f887507b6f1fc250a81",
+      "build": "bac7e40daf0445b0",
+      "scope": "Current prepared article/model/source-note/chronicle version before this evidence-only metadata update. Two narrow relationship kinds corrected to existing evidence vocabulary; no new graph type.",
+      "realSyntheticBackup": {
+        "download": true,
+        "resetImportReload": true,
+        "existingProfileContinuationWithoutReseeding": true,
+        "allSavedModelTaskAnswersNotesFavoritesSettingsAndOldPeopleRound": true
+      },
+      "coldOffline": {
+        "browserClosed": true,
+        "actualPreviewServerStopped": true,
+        "newDocumentFromRetainedServiceWorker": true,
+        "clientNetworkOffline": true,
+        "newTopicViews": 2,
+        "largeTextCssWidth": 320
+      },
+      "negativeFindings": [
+        {
+          "mutation": "reversed actual developmental cards",
+          "actualPublicGuardRejected": true
+        },
+        {
+          "mutation": "added actual inner-core circle to modelA",
+          "actualPublicGuardRejected": true
+        },
+        {
+          "mutation": "changed written observation when switching to modelB",
+          "actualPublicExactObservationTextGuardRejected": true
+        }
+      ],
+      "negativeEvidenceLimit": "First two counterexamples rejected by direct semantics assertions. Third was also rejected, initially by the earlier exact-text visibility guard rather than the private wrapper’s expected later invariant assertion. Original mismatch retained; targeted third-case continuation checks that actual exact-text guard. No timeout/production guard relaxed.",
+      "helperSeedLimit": "Original synthetic download acquired normal explicit readVoice default; original private helper compared it to a seed missing that property. Original failed helper/download/profile retained. Continuation uses the same existing filled profile and unchanged actual download with canonical explicit default, no product fix or reseeding.",
+      "personallyViewed": [
+        "Merian mobile activity and ordered four stages",
+        "Lehmann WebKit mobile hypothesis, invariant observation and qualified1936/current knowledge",
+        "native200% Merian adult diagram/HTML label/buttons"
+      ],
+      "finalCompleteAcceptance": false
+    }
   }
 }

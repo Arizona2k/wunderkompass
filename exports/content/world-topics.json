@@ -12152,7 +12152,8 @@
       }
     ],
     "related": [
-      "animal-honey-bee"
+      "animal-honey-bee",
+      "person-maria_sibylla_merian"
     ],
     "aliases": [
       "monarch-butterfly",
@@ -14191,7 +14192,8 @@
     "related": [
       "science-sound",
       "science-pendulum",
-      "science-resonance"
+      "science-resonance",
+      "person-inge_lehmann"
     ],
     "sources": [
       {
@@ -16985,6 +16987,222 @@
         ],
         "correct": 0,
         "why": "Ein einzelner Gegenstand zeigt keine ausschließliche Nutzung in einer ganzen Region. Weitere Funde und ihre Zusammenhänge können auch die Nutzung anderer Werkstoffe belegen."
+      }
+    ]
+  },
+  {
+    "id": "person-maria_sibylla_merian",
+    "category": "people",
+    "title": "Maria Sibylla Merian",
+    "intro": "Maria Sibylla Merian beobachtete Insekten über längere Zeit. Ihre Zeichnungen verbanden Entwicklungsstadien mit Pflanzen.",
+    "paragraphs": [
+      "Eine Raupe sieht anders aus als der Falter, zu dem sie sich entwickelt. Merian hielt fest, wie sich Insekten veränderten und an welchen Pflanzen sie lebten. Sie verband genaue Beobachtung mit Zeichnungen.",
+      "1699 reiste sie mit ihrer Tochter Dorothea Maria nach Suriname in Südamerika. 1701 kehrten sie zurück. Ihr 1705 veröffentlichtes Buch zeigte Pflanzen und unterschiedliche Entwicklungsstadien von Insekten. Ein solches Bild kann Beobachtungen aus verschiedenen Zeiten zusammenführen.",
+      "Ihr Wissen entstand nicht allein. Merian nutzte auch das Wissen und die Arbeit indigener und versklavter Menschen in Suriname. Versklavte Menschen wurden zur Arbeit gezwungen und konnten nicht frei über ihr Leben bestimmen. Merian profitierte selbst von dieser ungerechten Ordnung. Zu ihrer Geschichte gehören deshalb auch die oft ungenannten Beiträge dieser Menschen."
+    ],
+    "facts": [
+      {
+        "label": "Lebenszeit",
+        "text": "1647–1717"
+      },
+      {
+        "label": "Arbeitsgebiet",
+        "text": "Insekten und Pflanzen beobachten und zeichnen"
+      }
+    ],
+    "more": [
+      "Bei Schmetterlingen gehören Ei, Raupe, Puppe und erwachsener Falter zu einem Lebenszyklus. Ein einzelnes hübsches Bild beweist aber nicht, dass eine bestimmte Raupe zu einem bestimmten Falter wurde. Dafür sind passende Beobachtungen nötig. Nicht alle Insekten entwickeln sich wie Schmetterlinge.",
+      "Eine wissenschaftliche Zeichnung zeigt eine Auswahl. Sie kann mehrere Beobachtungen verständlich ordnen, enthält aber auch Entscheidungen der zeichnenden Person. Prüfe deshalb Bild, Beschreibung und Herkunft der Informationen zusammen."
+    ],
+    "learning": {
+      "starter": "Merian verfolgte, wie sich Insekten veränderten. Sie zeichnete auch Pflanzen, mit denen die Tiere verbunden waren.",
+      "observe": "Vergleiche in der Forscherspur ein einzelnes Bild mit einer erfundenen Beobachtungsfolge. Welche zusätzliche Information hilft, Entwicklungsstadien zusammenzuordnen?",
+      "benefit": "Du unterscheidest eine Beobachtungsfolge von einem Einzelbild und fragst, wessen Wissen in einer Veröffentlichung steckt."
+    },
+    "person": {
+      "lifespan": "1647–1717",
+      "field": "Naturforscherin und Künstlerin",
+      "method": "Insektenentwicklung über Zeit beobachten, Pflanzenbezüge festhalten und Ergebnisse zeichnen."
+    },
+    "question": {
+      "prompt": "Welche Beobachtung passt zu Merians Arbeit?",
+      "answers": [
+        "Die Entwicklung von Insekten an ihren Pflanzen verfolgen",
+        "Aus einem Einzelbild alle Lebensstadien sicher erkennen",
+        "Alle Raupen allein an ihrer Farbe einer Art zuordnen"
+      ],
+      "correct": 0,
+      "why": "Beobachtungen über die Zeit helfen, Veränderungen und Pflanzenbezüge zu beschreiben. Ein Einzelbild oder nur eine Farbe reicht für die anderen Behauptungen nicht."
+    },
+    "questionFeedback": {
+      "hint": "Überlege, welche Tätigkeit Veränderungen sichtbar macht und welche nur eine einzelne Eigenschaft zeigt.",
+      "wrongReasons": [
+        null,
+        "Ein Einzelbild hält nur ausgewählte Informationen fest. Es zeigt nicht von selbst, wie sich dasselbe Tier später verändert.",
+        "Eine ähnliche Farbe ist kein sicherer Artnachweis. Mehrere Merkmale und passende Beobachtungen sind nötig."
+      ]
+    },
+    "related": [
+      "animal-monarch-butterfly"
+    ],
+    "aliases": [
+      "Maria Sibylla Merian",
+      "Merian",
+      "Insektenforscherin",
+      "Schmetterlingsforscherin"
+    ],
+    "surprise": "In einem Naturbild können Beobachtungen aus unterschiedlichen Zeiten zusammenkommen.",
+    "locations": [],
+    "links": [],
+    "sources": [
+      {
+        "label": "Rijksmuseum · Insekten von Suriname",
+        "url": "https://www.rijksmuseum.nl/en/stories/10-things/story/maria-sibylla-merian-en"
+      },
+      {
+        "label": "Oxford University Museum of Natural History · Merians Beobachtungen",
+        "url": "https://oumnh.ox.ac.uk/learn-maria-sibylla-merian"
+      },
+      {
+        "label": "Museum für Naturkunde bei BHL · Merians Werk und ungenannte Beiträge",
+        "url": "https://blog.biodiversitylibrary.org/2021/06/mfn-explores-maria-sibylla-merian-legacy"
+      }
+    ],
+    "checkedAt": "2026-10-25",
+    "revision": 1,
+    "sourceNote": "Eigene Erklärung nach tatsächlich gelesenen Museums- und Bibliothekstexten. Beobachtungen, Zeichnungen und die Beiträge anderer Menschen werden unterschieden. Keine Behauptung, Merian habe die Verwandlung von Insekten als erster Mensch entdeckt.",
+    "challenges": [
+      {
+        "id": "person-maria_sibylla_merian:evidence",
+        "difficulty": "medium",
+        "prompt": "Maria Sibylla Merian: Zwei verschiedene Tiere liegen als einzelne Bilder nebeneinander. Die Notizen sagen nicht, ob sie zu derselben Entwicklungsfolge gehören. Welche Zusatzinformation hilft bei der Zuordnung?",
+        "answers": [
+          "Die beiden Bilder mit derselben Hintergrundfarbe ausmalen.",
+          "Beobachtungsnotizen, die die Entwicklung desselben Tiers verfolgen.",
+          "Die Namen der Tiere durch besonders ähnliche Wörter ersetzen."
+        ],
+        "correct": 1,
+        "why": "Eine nachvollziehbare Beobachtungsfolge kann die Entwicklungsstadien verbinden. Ähnliche Gestaltung oder Namen liefern diesen Beleg nicht."
+      },
+      {
+        "id": "person-maria_sibylla_merian:limits",
+        "difficulty": "hard",
+        "prompt": "Maria Sibylla Merian: Eine Behauptung lautet: Weil Merians Name auf dem Buch steht, stammt alles darin allein von ihr. Welche Quelleninformation ist für diese Behauptung entscheidend?",
+        "answers": [
+          "Das Buch wurde im Jahr 1705 veröffentlicht.",
+          "Das Buch enthält besonders sorgfältig ausgeführte Bilder.",
+          "Merian nutzte auch Wissen und Arbeit indigener und versklavter Menschen."
+        ],
+        "correct": 2,
+        "why": "Die dokumentierten Beiträge anderer widersprechen dem Alleinanspruch. Ihre oft fehlenden Namen machen ihr Wissen und ihre Arbeit nicht bedeutungslos."
+      }
+    ]
+  },
+  {
+    "id": "person-inge_lehmann",
+    "category": "people",
+    "title": "Inge Lehmann",
+    "intro": "Inge Lehmann untersuchte Aufzeichnungen von Erdbebenwellen. Daraus gewann sie Hinweise auf einen inneren Teil des Erdkerns.",
+    "paragraphs": [
+      "Wir können nicht einfach in die Mitte der Erde schauen. Erdbebenwellen liefern aber Hinweise: Ihre Wege und Geschwindigkeiten verändern sich in unterschiedlichen Materialien. Messgeräte zeichnen an verschiedenen Orten auf, wann Wellen ankommen.",
+      "Lehmann verglich solche Aufzeichnungen. Einige schwache Signale passten nicht zu dem damals benutzten einfacheren Modell des Erdkerns. 1936 veröffentlichte sie die Erklärung, dass innerhalb des äußeren Kerns noch ein innerer Kern liegt.",
+      "Ein neues Modell wird nicht durch einen berühmten Namen wahr. Weitere Messungen und Berechnungen müssen zeigen, ob es die Beobachtungen erklärt. Heute unterscheiden wir einen flüssigen äußeren und einen festen inneren Erdkern. Die Eigenschaften wurden über viele Untersuchungen genauer bestimmt."
+    ],
+    "facts": [
+      {
+        "label": "Lebenszeit",
+        "text": "1888–1993"
+      },
+      {
+        "label": "Arbeitsgebiet",
+        "text": "Erdbebenwellen und das Innere der Erde"
+      }
+    ],
+    "more": [
+      "P-Wellen sind Druckwellen. Sie können sich durch feste und flüssige Stoffe ausbreiten. An Materialgrenzen können sich ihre Wege ändern. Ein aufgezeichnetes Signal ist deshalb eine Information über Wellen, kein Foto einer Erdschicht.",
+      "Die Entdeckung eines inneren Kerns und die spätere genauere Bestimmung seiner Eigenschaften sind miteinander verbunden, aber nicht dieselbe Forschungsfrage. Ein einzelnes Signal nennt nicht sofort alle Temperaturen, Stoffe und Grenzen im Erdinneren."
+    ],
+    "learning": {
+      "starter": "Inge Lehmann las Spuren von Erdbebenwellen. So half sie, das unsichtbare Erdinnere besser zu verstehen.",
+      "observe": "Vergleiche in der Forscherspur zwei vereinfachte Erklärungen mit einer beschriebenen Beobachtung. Welches Modell braucht eine Änderung? Welche Fragen bleiben offen?",
+      "benefit": "Du trennst eine Messung von ihrer Erklärung und erkennst, warum unerwartete Beobachtungen ein Modell verbessern können."
+    },
+    "person": {
+      "lifespan": "1888–1993",
+      "field": "Seismologin",
+      "method": "Aufzeichnungen von Erdbebenwellen vergleichen, berechnen und Erklärungsmodelle prüfen."
+    },
+    "question": {
+      "prompt": "Womit untersuchte Inge Lehmann das Erdinnere?",
+      "answers": [
+        "Mit Aufzeichnungen von Erdbebenwellen",
+        "Mit einem Foto aus der Mitte der Erde",
+        "Mit einer Bohrprobe direkt aus dem inneren Erdkern"
+      ],
+      "correct": 0,
+      "why": "Erdbebenwellen liefern indirekte Hinweise auf das Erdinnere. Lehmann verglich ihre Aufzeichnungen; sie hatte weder ein Foto aus der Erdmitte noch eine Bohrprobe von dort."
+    },
+    "questionFeedback": {
+      "hint": "Unterscheide eine Messung an der Erdoberfläche von einem direkten Blick oder einer Probe aus dem Erdkern.",
+      "wrongReasons": [
+        null,
+        "Ein Wellenmessgerät fotografiert keine Erdschicht. Seine Aufzeichnung muss ausgewertet und erklärt werden.",
+        "Eine Bohrprobe aus dem inneren Erdkern stand Lehmann nicht zur Verfügung. Sie arbeitete mit den Hinweisen der Wellen."
+      ]
+    },
+    "related": [
+      "invention-seismograph"
+    ],
+    "aliases": [
+      "Inge Lehmann",
+      "Lehmann",
+      "Seismologin",
+      "innerer Erdkern"
+    ],
+    "surprise": "Ein unerwartetes schwaches Signal kann helfen, eine bisherige Erklärung zu verbessern.",
+    "locations": [],
+    "links": [],
+    "sources": [
+      {
+        "label": "Niels Bohr Institute · Inge Lehmann",
+        "url": "https://nbi.ku.dk/english/www/inge/lehmann/"
+      },
+      {
+        "label": "American Physical Society · Lehmanns Erdkern-Erklärung",
+        "url": "https://www.aps.org/apsnews/2023/08/seismologist-lehmann-earth-inner-core"
+      },
+      {
+        "label": "American Museum of Natural History · Hinweise aus Erdbebenwellen",
+        "url": "https://www.amnh.org/learn-teach/curriculum-collections/earth-inside-and-out/inge-lehmann-discoverer-of-the-earth-s-inner-core"
+      }
+    ],
+    "checkedAt": "2026-10-25",
+    "revision": 1,
+    "sourceNote": "Eigene Erklärung nach tatsächlich zugänglichen Hochschul-, Fachgesellschafts- und Museumstexten. Lehmanns 1936 vorgeschlagener innerer Kern wird von der später präzisierten Kenntnis seiner Eigenschaften unterschieden. Kein originales Messprotokoll oder unmittelbarer Blick ins Erdinnere behauptet.",
+    "challenges": [
+      {
+        "id": "person-inge_lehmann:evidence",
+        "difficulty": "medium",
+        "prompt": "Inge Lehmann: Das einfachere Modell sagt für einen Bereich kein solches Signal voraus. Dort wird trotzdem ein passendes schwaches Signal gemessen. Was ist jetzt sinnvoll?",
+        "answers": [
+          "Die Zeichnung schöner färben und damit die Messung ersetzen.",
+          "Das Signal löschen, weil es nicht zur bisherigen Zeichnung passt.",
+          "Messung prüfen und untersuchen, welche Erklärung sie zusätzlich erfasst."
+        ],
+        "correct": 2,
+        "why": "Ein verlässliches unerwartetes Signal kann eine zusätzliche Erklärung nötig machen. Weitere Daten und Rechnungen prüfen, ob das veränderte Modell besser passt."
+      },
+      {
+        "id": "person-inge_lehmann:limits",
+        "difficulty": "hard",
+        "prompt": "Inge Lehmann: Ein verändertes Modell erklärt zusätzliche Wellenankünfte besser als das zuvor benutzte Modell. Welche Folgerung ist damit angemessen?",
+        "answers": [
+          "Das Modell wird durch passende Messungen gestützt; weitere Eigenschaften brauchen zusätzliche Belege.",
+          "Nun sind jede Temperatur und jeder Stoff im Erdinneren exakt bekannt.",
+          "Damit ist das gezeichnete Schnittbild ein Foto des wirklichen Erdkerns."
+        ],
+        "correct": 0,
+        "why": "Eine Erklärung kann bestimmte Messungen gut erfassen. Genaue Temperaturen, Stoffe oder weitere Grenzen werden nicht allein durch diesen einen Vergleich bestimmt."
       }
     ]
   }
