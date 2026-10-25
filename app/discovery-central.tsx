@@ -1,6 +1,6 @@
 import {useLayoutEffect,useState} from 'react';
 import {ArrowRight,Compass,FlaskConical,Gamepad2,Globe2,Lightbulb,Search} from 'lucide-react';
-import {navigateHash,restoreRouteView} from './hash-route';
+import {navigateHash,scheduleRouteRestore} from './hash-route';
 import DiscoveryVisual from './discovery-visual';
 import WorldGateways from './world-gateways';
 import {WORLD_INDEX,WORLD_ROUTES} from './world-index';
@@ -16,7 +16,7 @@ function initialTrail(){
 }
 
 export function DiscoveryIntro({onSearch,onGlobe,onHelp}:{onSearch:()=>void;onGlobe:()=>void;onHelp:()=>void}){
- useLayoutEffect(()=>{restoreRouteView('home',!!history.state?.wunderRoute||!!history.state?.wunderFocus);},[]);
+ useLayoutEffect(()=>scheduleRouteRestore('home',!!history.state?.wunderRoute||!!history.state?.wunderFocus),[]);
  return <section className="discovery-hero" aria-labelledby="discovery-title">
   <div className="discovery-hero-copy"><h1 id="discovery-title">Was möchtest du <span>heute verstehen?</span></h1><p>Deinen Fragen auf der Spur.</p>
    <div className="discovery-start"><button className="discovery-search" aria-label="WunderKompass durchsuchen" aria-describedby="home-search-examples" data-route-focus="home-search" onClick={onSearch}><Search size={22}/><span><strong>Suche nach Themen</strong><small id="home-search-examples">Zum Beispiel: Mond oder Elefant</small></span><ArrowRight size={20}/></button></div>
