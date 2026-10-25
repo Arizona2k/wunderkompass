@@ -205,7 +205,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    assert.equal(await p.locator('#discovery-title').evaluate(el=>parseFloat(getComputedStyle(el).outlineWidth)>=2),true,'calm heading focus remains visible');
    // Publication history neither fabricates dates nor exposes prepared changes.
    const readProgress=()=>p.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
-   const before=await readProgress();await p.getByRole('link',{name:'✨ Was ist neu?',exact:true}).click();await p.locator('.updates-timeline').first().waitFor();
+   const before=await readProgress();await p.getByRole('link',{name:'Was ist neu?',exact:true}).click();await p.locator('.updates-timeline').first().waitFor();
    assert.equal(await p.locator('.updates-timeline>li').count(),publicUpdates().length);
    assert.deepEqual(await p.locator('.updates-meta>span:first-child').allTextContents(),publicUpdates().map(updateLabel));
    assert.deepEqual(await p.locator('.updates-timeline>li .updates-category').allTextContents(),publicUpdates().map(e=>e.category),'every historical and current update has its own readable category');
@@ -284,7 +284,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    await homeTextGeometry(p);await homeTouchTargets(p);await capture('large');
    await p.locator('.discovery-worlds').screenshot({path:shots+'/home-worlds-large-'+width+'.png',animations:'disabled'});
    assert.equal(await p.locator('.gateway-compact .world-choice').first().evaluate(el=>getComputedStyle(el).transitionDuration==='0s'),true,'saved reduced motion applies');
-   await p.getByRole('link',{name:'✨ Was ist neu?',exact:true}).click();await p.locator('.updates-timeline').first().waitFor();
+   await p.getByRole('link',{name:'Was ist neu?',exact:true}).click();await p.locator('.updates-timeline').first().waitFor();
    await p.locator('.updates-details').first().locator('summary').click();
    await homeTextGeometry(p);await homeTouchTargets(p);
    await p.locator('.updates-timeline>li').first().screenshot({path:shots+'/updates-details-large-'+width+'.png',animations:'disabled'});

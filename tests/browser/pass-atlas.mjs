@@ -60,7 +60,7 @@ export async function passDesign(page,report,width,shots){
  await frame();await reachable(pass,pass.locator('.passport-stats>div').first(),'first overview value and label');
  for(const button of await nav.getByRole('button').all())await touchSize(button,'pass navigation');
  await page.screenshot({path:shots+'/pass-entry-'+width+'.png',animations:'disabled'});
- for(const [name,id] of [['Überblick','overview'],['Lernwege','learning'],['Pass sichern','backup'],['Abzeichen','badges']]){
+ for(const [name,id] of [['Überblick','overview'],['Lernwege','learning'],['Gespeichertes & Notizen','saved'],['Pass sichern','backup'],['Abzeichen','badges']]){
   const button=nav.getByRole('button',{name,exact:true});if(width===390)await button.tap();else {await button.focus();await page.keyboard.press('Enter')}
   const section=pass.locator(`[data-pass-section="${id}"]`),heading=section.locator('h3').first();
   assert.equal(await heading.evaluate(el=>el===document.activeElement),true,'pass jump focuses the named heading '+id);

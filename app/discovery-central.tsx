@@ -18,9 +18,9 @@ function initialTrail(){
 export function DiscoveryIntro({onSearch,onGlobe,onHelp}:{onSearch:()=>void;onGlobe:()=>void;onHelp:()=>void}){
  useLayoutEffect(()=>{restoreRouteView('home',!!history.state?.wunderRoute||!!history.state?.wunderFocus);},[]);
  return <section className="discovery-hero" aria-labelledby="discovery-title">
-  <div className="discovery-hero-copy"><p className="eyebrow"><Compass size={16}/> DEINE NEUGIER FÜHRT WEITER</p><h1 id="discovery-title">Was möchtest du <span>heute verstehen?</span></h1><p>Erkunde Zusammenhänge, probiere Modelle aus und folge deinen Fragen. Allein oder gemeinsam, in deinem Tempo.</p>
-   <div className="discovery-start"><button className="discovery-search" aria-label="WunderKompass durchsuchen" aria-describedby="home-search-examples" data-route-focus="home-search" onClick={onSearch}><Search size={22}/><span><strong>WunderKompass durchsuchen</strong><small id="home-search-examples">Zum Beispiel: Mond, Elefant, Vulkan …</small></span><ArrowRight size={20}/></button></div>
-   <div className="discovery-quiet-links"><button className="discovery-globe-link" data-route-focus="home-globe" onClick={onGlobe}><Globe2 size={18}/> Direkt zur Weltkugel</button><button className="discovery-mobile-help" onClick={onHelp}>So geht’s</button><a data-route-focus="home-updates" href="#updates" onClick={e=>{e.preventDefault();navigateHash('updates');}}>Was ist neu?</a></div>
+  <div className="discovery-hero-copy"><h1 id="discovery-title">Was möchtest du <span>heute verstehen?</span></h1><p>Deinen Fragen auf der Spur.</p>
+   <div className="discovery-start"><button className="discovery-search" aria-label="WunderKompass durchsuchen" aria-describedby="home-search-examples" data-route-focus="home-search" onClick={onSearch}><Search size={22}/><span><strong>Suche nach Themen</strong><small id="home-search-examples">Zum Beispiel: Mond oder Elefant</small></span><ArrowRight size={20}/></button></div>
+   <div className="discovery-quiet-links"><button className="discovery-globe-link" data-route-focus="home-globe" onClick={onGlobe}><Globe2 size={18}/> Direkt zur Weltkugel</button><button className="discovery-mobile-help" onClick={onHelp}>So geht’s</button></div>
   </div>
   <figure className="discovery-hero-art"><DiscoveryVisual/><figcaption>Mit KI-Unterstützung erstellte eigene Illustration · nicht maßstabsgetreu</figcaption></figure>
  </section>;
@@ -35,7 +35,7 @@ export function DiscoveryActivities({onNavigate}:{onNavigate:(mode:string)=>void
 }
 
 export function DiscoveryWorlds({onCategory,onAll}:{onCategory:(id:WorldCategory)=>void;onAll:()=>void}){
- return <section className="discovery-worlds" aria-labelledby="discovery-worlds-title"><div className="discovery-section-heading"><div><p className="eyebrow">WOHIN ZIEHT ES DICH?</p><h2 id="discovery-worlds-title">Sechs Welten. Deine Neugier.</h2></div><button className="discovery-text-link" data-route-focus="home-worlds" onClick={onAll}>Alle Welten & Lernrouten <ArrowRight size={16}/></button></div><WorldGateways compact separateCredits onCategory={onCategory}/></section>;
+ return <section className="discovery-worlds" aria-labelledby="discovery-worlds-title"><div className="discovery-section-heading"><h2 id="discovery-worlds-title">Sechs Welten entdecken</h2></div><WorldGateways compact separateCredits onCategory={onCategory}/><button className="discovery-text-link" data-route-focus="home-worlds" onClick={onAll}>Alle Welten & Lernrouten <ArrowRight size={16}/></button></section>;
 }
 
 export function DiscoveryConnections({onTopic,onRoute,onGame}:{onTopic:(id:string)=>void;onRoute:(id:string)=>void;onGame:()=>void}){
