@@ -1,6 +1,7 @@
 'use client';
 import './history-evidence.css';
 import {useState} from 'react';
+import BronzeEvidence from './bronze-evidence';
 
 const ACTIVITIES={
  'history-khipu':{
@@ -16,8 +17,11 @@ const ACTIVITIES={
   explanations:['Der blaue Weg zeigt einen eingezeichneten Ablauf. Das ist eine Beobachtung am Lernbild.','Im zweiten Plan endet der Weg vor dem Kanal. Du vergleichst einen sichtbaren Unterschied; die Bilder sind keine rekonstruierten Ausgrabungspläne.','Ein Ablauf ist ein Hinweis auf einen geplanten Wasserweg. Er allein beweist weder sauberes Wasser noch Gesundheit oder gleiche Lebensbedingungen aller Bewohner.'],
  },
 };
-export const hasHistoryEvidence=(id:string)=>Object.hasOwn(ACTIVITIES,id);
+export const hasHistoryEvidence=(id:string)=>id==='history-bronze'||Object.hasOwn(ACTIVITIES,id);
 export default function HistoryEvidence({id}:{id:string}){
+ return id==='history-bronze'?<BronzeEvidence/>:<LegacyHistoryEvidence id={id}/>;
+}
+function LegacyHistoryEvidence({id}:{id:string}){
  const [level,setLevel]=useState(0),[first,setFirst]=useState(3),[second,setSecond]=useState(5),[legend,setLegend]=useState(true),[connected,setConnected]=useState(true),[explain,setExplain]=useState(false);
  const data=ACTIVITIES[id as keyof typeof ACTIVITIES];if(!data)return null;
  const khipu=id==='history-khipu';

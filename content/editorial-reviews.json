@@ -23333,6 +23333,82 @@
         "offline": true,
         "report": "Original complete mandatory local browser acceptance at 84169566c648a0d9ca94b1e72ac55e4506497ef2 / source 33ac9a92d7732fda9a0e1f3664627f1c28d8e7ec133544942ae5cc262ba8bcda / report SHA256=56010e886886da16687b5946df3e45830b1e0357ce7f2a4e9dc3423dc699f9df. Scope and original provenance: photoPendingBackRepairCurrentBuildProof20261024. Native Firefox/WebKit integration CI and delivery remain separate."
       }
+    },
+    {
+      "id": "topics-history:history-bronze",
+      "dataHash": "6b1b07329ffac8f5503743e640dec7ff58c09718eba440a1d22017a156d8c863",
+      "goal": "Du trennst Material und zeitliche Einordnung und prüfst, wie weit eine Schlussfolgerung aus einzelnen Funden reicht.",
+      "explanation": "Three linked explanations distinguish alloy, forming process, continued use of stone and inference from a find.",
+      "example": "Two explicitly invented evidence cards compare a stone object and a copper-tin object; contextual labels can be hidden.",
+      "whyItMatters": "Du trennst Material und zeitliche Einordnung und prüfst, wie weit eine Schlussfolgerung aus einzelnen Funden reicht.",
+      "hint": "Unterscheide den Namen eines Zeitabschnitts vom Werkstoff eines einzelnen Gegenstands.",
+      "feedback": "Specific feedback distinguishes period name from material; material analysis from dating; one find from a regional universal claim.",
+      "modelLimits": "Own clearly invented evidence-card comparison with AI assistance. Labels separate material from contextual evidence; not object photos, copied museum artwork, microscopic metal structure or a casting recipe. Current learning purpose is comparison of evidence; no original museum-photo pixel review claimed.",
+      "reviewedBy": "Codex source-based AI self-review; no independent human or empirical learner approval",
+      "reviewedOn": "2026-10-25",
+      "ageLevels": {
+        "6-8": "Menschen stellten ein neues Metallgemisch her. Sie benutzten trotzdem auch Steinwerkzeuge weiter.",
+        "9-11": "Vergleiche im Geschichtsdetektiv die beiden erfundenen Fundkarten. Unterscheide Materialangaben und Fundzusammenhang. Blende den Zusammenhang aus: Was lässt sich dann nicht mehr allein aus dem Material ablesen?",
+        "12-14": "Eigenschaften, Verarbeitung und Verwendung gehören zusammen. Bronze bedeutet kein einziges Mischungsverhältnis. Ein Fund sagt außerdem nicht, wie oft alle Menschen einer Region einen Werkstoff benutzten."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "Ashmolean Museum",
+          "url": "https://britisharchaeology.ashmus.ox.ac.uk/collections/bronze-age.html",
+          "checkedOn": "2026-10-25",
+          "rightsBasis": "Own short paraphrase and code-generated learning comparison, no copied text/image or claimed original museum photo."
+        },
+        {
+          "id": "source-1",
+          "organisation": "The Met",
+          "url": "https://www.metmuseum.org/essays/ancient-greek-bronze-vessels",
+          "checkedOn": "2026-10-25",
+          "rightsBasis": "Own short paraphrase and code-generated learning comparison, no copied text/image or claimed original museum photo."
+        },
+        {
+          "id": "source-2",
+          "organisation": "Getty Conservation Institute",
+          "url": "https://www.getty.edu/publications/bronze-guidelines/vol-1/2/",
+          "checkedOn": "2026-10-25",
+          "rightsBasis": "Own short paraphrase and code-generated learning comparison, no copied text/image or claimed original museum photo."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Stone and flint objects continued in use in Bronze Age Britain;2300–800BCEis a regional museum periodization.",
+          "sourceId": "source-0",
+          "anchor": "Bronze Age collection, lines78–88"
+        },
+        {
+          "statement": "Copper/tin bronze and different forming techniques are illustrated by later Greek vessels; this does not date the Bronze Age start.",
+          "sourceId": "source-1",
+          "anchor": "Ancient Greek Bronze Vessels, lines89–95"
+        },
+        {
+          "statement": "Composition affects copper-alloy properties; analysing a material is a different question from dating its use.",
+          "sourceId": "source-2",
+          "anchor": "Metals, lines8–20 and1.1"
+        }
+      ],
+      "links": [
+        "topics-history:history-stone_tools"
+      ],
+      "mediaDecision": "Own clearly invented evidence-card comparison with AI assistance. Labels separate material from contextual evidence; not object photos, copied museum artwork, microscopic metal structure or a casting recipe. Current learning purpose is comparison of evidence; no original museum-photo pixel review claimed.",
+      "ui": {
+        "build": "pending",
+        "route": "#world/topic/history-bronze",
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Pending actual built article/model/task/mobile/native/back/offline evidence, then full acceptance; no premature binding."
+      },
+      "aiSelfReview": {
+        "independentHumanReview": false,
+        "sourceBased": true,
+        "boundary": "Museum/date/material claims checked separately; actual UI and own counterexamples pending."
+      }
     }
   ],
   "questionCorrections": [
@@ -26386,5 +26462,11 @@
     "nativeCIBinding": "pending exact final native CI",
     "delivered": false
   },
-  "meaningBeforeMaintenanceEndBinding20261024": "73 individuelle Dossiers einschließlich acht aus erhaltenen Bauwerksoriginalen vorbereiteter, quellenbasiert und tatsächlich am Produkt geprüfter Themen. Sämtliche65früheren Faktenfelder und UI-Historien erhalten; neue aktuelle UI-Bindungen erst nach vollständiger lokaler Abnahme. Vollständige finale Integrations-CI und tatsächliche Veröffentlichung bleiben gesondert erforderlich. Keine unabhängige Menschenprüfung oder Paket3.5-Gesamtfertigstellung."
+  "meaningBeforeMaintenanceEndBinding20261024": "73 individuelle Dossiers einschließlich acht aus erhaltenen Bauwerksoriginalen vorbereiteter, quellenbasiert und tatsächlich am Produkt geprüfter Themen. Sämtliche65früheren Faktenfelder und UI-Historien erhalten; neue aktuelle UI-Bindungen erst nach vollständiger lokaler Abnahme. Vollständige finale Integrations-CI und tatsächliche Veröffentlichung bleiben gesondert erforderlich. Keine unabhängige Menschenprüfung oder Paket3.5-Gesamtfertigstellung.",
+  "bronzeIndependentPreparation20261025": {
+    "baseCommit": "1da6eca5f5827a7915e1dbe2477c91406c69d22a",
+    "reviewedBronzeSource": "ca7206f0b43322f1fb70b15e1830df964a6af9a0",
+    "scope": "Only new bronze dossier appended. The96retained factual and UI histories are unchanged; own full current UI binding pending. No pending animal product changes adopted.",
+    "original166": "Unresolved; no missing failure image requested and no inference from later success."
+  }
 }

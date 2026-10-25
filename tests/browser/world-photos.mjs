@@ -61,6 +61,33 @@ export async function photoCardOpenerFlow(browser,base,ready,monitor,shots,{cont
  return cases;
 }
 
+// Later category pages must render their route immediately when real Back restores
+// the saved opener. Cover every world and the new Bronze card without repeating
+// the complete animal matrix or weakening its existing photo-opener checks.
+export async function paginatedCardBackFlow(browser,base,ready,monitor,report,shots){
+ const ids=['animal-okapi','history-mohenjo-daro','person-ibn_al_haytham','invention-microscope','building-sydney-opera','science-galaxy','history-bronze'];
+ const cases=[];
+ for(const width of [320,1440]){
+  const context=await browser.newContext({viewport:{width,height:900},hasTouch:width===320,reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);
+  try{
+   for(const id of ids){
+    const topic=topics.find(t=>t.id===id);assert.ok(topic,'declared retained or new topic');const pool=topics.filter(t=>t.category===topic.category),number=Math.floor(pool.findIndex(t=>t.id===id)/12)+1;assert.ok(number>=2,'real later-page case');
+    const route='world/'+topic.category+'/page/'+number,focus='world-topic-'+id,expected=pool.slice((number-1)*12,number*12).map(t=>'world-topic-'+t.id);
+    await page.goto(base+'/#'+route);await ready(page);if(width===320)await page.locator('.earth-app').evaluate(e=>e.classList.add('large-reading'));
+    const card=page.locator('[data-route-focus="'+focus+'"]');await card.waitFor();
+    assert.deepEqual(await page.locator('.world-topic-tile').evaluateAll(es=>es.map(e=>e.dataset.routeFocus)),expected,'all actual page card identities, no stale first page');
+    await card.focus();await page.keyboard.press('Enter');await page.locator('#world-topic-title').getByText(topic.title,{exact:true}).waitFor();
+    await page.goBack();await card.waitFor();await page.waitForFunction(key=>document.activeElement?.dataset.routeFocus===key,focus);
+    assert.equal(await page.evaluate(()=>location.hash),'#'+route);assert.equal(await card.evaluate(e=>e===document.activeElement),true,'actual original card has keyboard focus after real Back');
+    assert.deepEqual(await page.locator('.world-topic-tile').evaluateAll(es=>es.map(e=>e.dataset.routeFocus)),expected);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
+    if(shots&&id==='history-bronze')await card.screenshot({path:path.join(shots,'history-bronze-page-back-'+width+'.png'),animations:'disabled'});
+    cases.push({id,category:topic.category,page:number,width,largeText:width===320,expectedCardIds:expected,realKeyboardOpenAndBackFocus:true});
+   }
+  }finally{await context.close();}
+ }
+ assert.equal(cases.length,14);report.paginatedCardBack=cases;report.checks.push('Actual later-page identities and real keyboard Back focus for all six worlds and new Bronze card at320large/1440');return cases;
+}
+
 export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
  const started=performance.now(),observed=[];
  async function inspect(page,id){
@@ -88,6 +115,7 @@ export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
  // Clicking the photograph must keep the enclosing card as the history opener.
  // A tabindex on the decorative figure steals this focus and breaks real Back.
  report.photoCardOpeners=await photoCardOpenerFlow(browser,base,ready,monitor,shots,{controlled:true});
+ await paginatedCardBackFlow(browser,base,ready,monitor,report,shots);
  // A failed deferred catalog inside a clickable compact card must stay usable
  // without nesting another button. The article retains its explicit safe retry.
  {
