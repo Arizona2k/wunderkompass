@@ -12,7 +12,7 @@ In Prüfung. Erreichbare Fassungen M4ad, Masterd97 und Wissenschaft5529 sind ben
 
 ### WK-052 · Sichere Speicherung und vorhandener Prüfweg
 
-Aktueller PR62-Teil: Quality170 natürlich beendet; reproduzierter Firefox-Koordinatenmessfehler im Sydney-Offlinefall gezielt korrigiert. Gesamte betroffene lokale Firefox-Offlinefunktion und fünf Gegenfehler in zwei Engines bestanden, Produkt unverändert. Nächster Schritt: neuen festen Kopf vollständig lokal und nativ qualifizieren, dann bestehenden PR62 regulär bis echter Übernahme/Testbereitstellung abschließen. Katta166 bleibt getrennt ungeklärt; keine Schwellen-/Budget-/Pflichtgruppenänderung.
+Aktueller PR62-Teil: Quality170 natürlich beendet; reproduzierter Firefox-Koordinatenmessfehler im Sydney-Offlinefall gezielt korrigiert. Gesamte betroffene lokale Firefox-Offlinefunktion und fünf Gegenfehler in zwei Engines bestanden, Produkt unverändert. Zusätzlich im nächsten lokalenVolltest eine unabhängige Lesetext-Ladereihenfolge im beschädigtenAufgabenfall geklärt: bestehende Textladebereitschaft vor unverändertem exakten Volltextvergleich abwarten, denselben Reihenfolgefall im vorhandenenTest deterministisch halten; beide Loaderfälle samt realer12sDeadline gezielt bestanden. Nächster Schritt: neuen festen Kopf vollständig lokal und nativ qualifizieren, dann bestehenden PR62 regulär bis echter Übernahme/Testbereitstellung abschließen. Katta166 bleibt getrennt ungeklärt; keine Schwellen-/Budget-/Pflichtgruppenänderung.
 
 | Bestehender Teilumfang | Status und nächster Schritt | Überprüfbares Ergebnis / Grenze |
 | --- | --- | --- |
