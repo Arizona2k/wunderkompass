@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "daf558d0e5443e61a4e2e5f784ba6997f0ed7d71",
+    "commit": "0105c557394779a4a88295fe60dc13dbb3cc8fb0",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -55,7 +55,9 @@
       "92f3591fb33c7f1109045b504079e41eb8e0fc9a",
       "36a849ebd289f7fb83b949e59761d17699e646a1",
       "4ad747cd43e162d92e017e8f028d0b5e916e3ab2",
-      "daf558d0e5443e61a4e2e5f784ba6997f0ed7d71"
+      "daf558d0e5443e61a4e2e5f784ba6997f0ed7d71",
+      "1da6eca5f5827a7915e1dbe2477c91406c69d22a",
+      "0105c557394779a4a88295fe60dc13dbb3cc8fb0"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -1469,6 +1471,28 @@
         }
       ],
       "checkedOn": "2026-10-24"
+    },
+    {
+      "number": 63,
+      "title": "Bronze, Fundspuren und ehrliche Quizrückmeldung",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/63",
+      "base": "test-live",
+      "mergedAt": "2026-10-25T14:01:47Z",
+      "mergeCommit": "0105c557394779a4a88295fe60dc13dbb3cc8fb0",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/0105c557394779a4a88295fe60dc13dbb3cc8fb0/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57203838417,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-25T14:02:03Z",
+          "updatedAt": "2026-10-25T14:02:03Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/8t4G9wTKqffAsDfmggrc7AeyTDqN"
+        }
+      ],
+      "checkedOn": "2026-10-25"
     }
   ]
 }
