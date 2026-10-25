@@ -1,5 +1,9 @@
 # Aktueller Arbeits- und Übergabestand ·25.10.2026
 
+## Unveränderte eigene Bildoriginale im bestehenden Quellweg erhalten
+
+Die drei bereits vorbereiteten eigenen KI-Originale für Okapi,3D-Druck undSeismograf sind zusätzlich bytegleich außerhalb vonpublic undLaufzeit versioniert. BestehendeHerkunfts-/Rechte-/Motiv-/Grenzbelege nennen die jeweiligenQuelldateien; alle früherenPrüfzuordnungen bleiben erhalten. Kein neuesProduktbild, keine Foto-/Freigabe-/Lieferbehauptung. Der getrennte volleQuality168-Kandidat89c bleibt unverändert; derPontentwurf bleibt nicht übernommen. Die tatsächlicheErreichbarkeit derOriginale wird nach normalemQuellpush durch frischenRemote-Fetch ohne lokaleObjektübernahme geprüft. PrivatePrüfarchive sind davon getrennt.
+
 ## Unabhängiger Architektur-Bildentwurf · offen, nicht übernommen
 
 Dieser eigenständige Zweig `codex/wunderkompass-building-media-2026-10-25` hält nur den aktuellen Bearbeitungsstand der vorhandenenWK057-Bildlücke fest; Quelle570 und ihre laufende Vollabnahme bleiben unverändert. Erster eigenerKI-Entwurf zumPontduGard tatsächlich erstellt und angesehen, Original/Prompt erhalten. DreiBogenebenen und durchgehendeMauerteile sind erkennbar; die spezifischePfeiler-/Bogenanordnung und damit die hinreichendeMotivtreue sind jedoch noch nicht verifiziert. Betreiberbeschreibung und zweitseitigerGuide tatsächlich gelesen; die zusätzlichePDF-Bildabfrage liefert hier nur einen Textmarker ohne prüfbarePixel. Keine fremdeAbbildung übernommen oder als rechtlich frei angenommen. DerEntwurf ist keinFoto, kein aktuellerZustandsbeleg und keine freigegebeneOriginalansicht; keine öffentlicheBilddatei/Registry ergänzt. KonkreteLücke undGrund ausschließlich im bestehendenBACKLOG, keine zweiteAufgabenliste. FunktionaleAquädukt-/Bogenmodelle bleiben erhalten. Die vorhandeneBildarbeit und unabhängige Entwicklung werden davon nicht angehalten.
