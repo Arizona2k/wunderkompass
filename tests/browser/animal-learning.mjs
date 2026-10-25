@@ -96,26 +96,41 @@ export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix
  const observed=[],focusChecks=[],start=performance.now(),searchFocus=await delayedSearchFocus(browser,base,monitor,shots);
  for(const width of matrix){
   const c=await browser.newContext({viewport:{width,height:900},hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
+  let current=DATA.entries[0].id,stage='normal';
+  const lifecycle=await observeEngineLifecycle(browser,c,p,()=>({current,stage,width}));
   const pass=createSave();pass.progress.favorites=['topic:animal-polar-bear'];pass.progress.notes=[{id:'animal-test-note',text:'Synthetische alte Notiz',at:'2026-10-17T07:00:00.000Z'}];pass.progress.gameSessions['world:animal-detective']={items:['animal-lion','animal-polar-bear'],index:1,roundAnswer:'alte Antwort'};
   for(const t of topics)pass.progress.gameSessions['topic:'+t.id]={items:[...t.question.answers].reverse(),topicAnswer:t.question.answers[t.question.correct],compareAnimal:true};
   await c.addInitScript(({key,pass})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(pass));},{key:SAVE_KEY,pass});
   try{
    await p.goto(base+'#world/topic/'+DATA.entries[0].id);await ready(p);
-   for(const data of DATA.entries)observed.push(await exerciseAnimal(p,data,{width,shots,keyboard:true}));
+   for(const data of DATA.entries){current=data.id;observed.push(await exerciseAnimal(p,data,{width,shots,keyboard:true}));}
    const before=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);
    for(const t of topics)for(const [key,value]of Object.entries(pass.progress.gameSessions['topic:'+t.id]))assert.deepEqual(before.gameSessions['topic:'+t.id][key],value,'retained original '+key+' '+t.id);
    for(const key of ['favorites','notes'])assert.deepEqual(before[key],pass.progress[key]);assert.deepEqual(before.gameSessions['world:animal-detective'],pass.progress.gameSessions['world:animal-detective']);
-   await p.reload();await ready(p);const data=DATA.entries.at(-1),root=p.locator('[data-animal-inquiry="'+data.id+'"]');await root.locator(':scope > summary').click();await root.getByText('Deine Auswahl passt.',{exact:true}).waitFor();assert.equal(await root.locator('.animal-inquiry-levels button').nth(2).getAttribute('aria-pressed'),'true','selected level survives reload');
+   stage='reload';await p.reload();await ready(p);const data=DATA.entries.at(-1),root=p.locator('[data-animal-inquiry="'+data.id+'"]');await root.locator(':scope > summary').click();await root.getByText('Deine Auswahl passt.',{exact:true}).waitFor();assert.equal(await root.locator('.animal-inquiry-levels button').nth(2).getAttribute('aria-pressed'),'true','selected level survives reload');
    const after=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);assert.deepEqual(after.gameSessions,before.gameSessions,'every old and new session key survives reload');
    await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));
-   for(const data of DATA.entries)observed.push(await exerciseAnimal(p,data,{width,shots,keyboard:true,state:'large'}));
+   stage='large';for(const data of DATA.entries){current=data.id;observed.push(await exerciseAnimal(p,data,{width,shots,keyboard:true,state:'large'}));}
+   stage='accessibility-and-focus';
    const audit=p.locator('.animal-inquiry');for(let i=0;i<3;i++){await audit.locator('.animal-inquiry-levels button').nth(i).click();await prepareAxe(p);assert.deepEqual(await p.evaluate(async()=>(await window.axe.run('.animal-inquiry',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[],'workshop axe level'+i);}
    const focusTarget=audit.locator('.animal-inquiry-levels button').nth(2);await focusTarget.focus();await p.keyboard.press('Tab');await p.keyboard.press('Shift+Tab');
    const focus=await focusTarget.evaluate(e=>{const style=getComputedStyle(e);return {active:document.activeElement===e,visible:e.matches(':focus-visible'),outlineWidth:parseFloat(style.outlineWidth),outlineStyle:style.outlineStyle};});
    assert.equal(focus.active,true,'real Tab/Shift+Tab returns to the selected thinking path');assert.equal(focus.visible,true,'keyboard focus, not just a pointer selection');assert.ok(focus.outlineWidth>=2&&focus.outlineStyle!=='none','visible keyboard outline');focusChecks.push({width,state:'large',tabNavigation:true,...focus});
    await audit.screenshot({path:path.join(shots,'animal-workshop-focus-'+width+'.png'),animations:'disabled'});
    console.log('Animal workshop',width,DATA.entries.length,'cards passed');
-  }catch(error){await p.screenshot({path:path.join(shots,'animal-failure-'+width+'.png'),fullPage:true,timeout:5000}).catch(()=>{});throw error;}finally{await c.close();}
+  }catch(error){
+   // Preserve the original strict failure before teardown. A timeout alone does
+   // not tell whether the requested route, actual article or browser was lost.
+   // Keep this bounded record in the existing engine log/artifact namespace;
+   // never retry an action or replace the original exception with a probe error.
+   try{
+    const actual=await p.evaluate(()=>({url:location.href,title:document.querySelector('#world-topic-title')?.textContent??null,inquiryIds:[...document.querySelectorAll('[data-animal-inquiry]')].map(e=>e.getAttribute('data-animal-inquiry')),worldLoading:[...document.querySelectorAll('.world-view [role="status"]')].map(e=>e.textContent?.slice(0,160)).slice(0,3),active:document.activeElement?{tag:document.activeElement.tagName,id:document.activeElement.id,routeFocus:document.activeElement.getAttribute('data-route-focus'),text:document.activeElement.textContent?.slice(0,160)}:null})).catch(e=>({unavailable:e.message}));
+    const failure={engine:browser.browserType().name(),current,stage,width,error:error.message,actual,lifecycle:await lifecycle.snapshot()};
+    console.error('ANIMAL_WORKSHOP_FAILURE',JSON.stringify(failure));
+    await fs.writeFile(path.join(shots,'animal-workshop-failure-'+width+'.json'),JSON.stringify(failure,null,2)+'\n',{flag:'wx'});
+   }catch(diagnosticError){console.error('ANIMAL_WORKSHOP_DIAGNOSTIC_UNAVAILABLE',JSON.stringify({current,stage,width,error:diagnosticError.message}));}
+   await p.screenshot({path:path.join(shots,'animal-failure-'+width+'.png'),fullPage:true,timeout:5000}).catch(()=>{});throw error;
+  }finally{lifecycle.stop();await c.close();}
  }
  const navigationProof={};await animalNavigation(browser,base,ready,monitor,shots,navigationProof,navigationReuse);
  report.animalCoverage={observed,focusChecks,searchFocus,photoPendingBackFocus:navigationProof.photoPendingBackFocus,seconds:(performance.now()-start)/1000,oldSessionsPreserved:true,largeText:true,axe:true,independentAcceptance:false,navigation:true};

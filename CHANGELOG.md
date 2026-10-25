@@ -19,6 +19,21 @@ Fünf überlappende Altkatalogvergleiche erkannten den bewusst geänderten Okapi
 Neue eigene KI-Illustration zeigt ein weibliches Okapi mit gestreifter Hinterhand/Beinen, großen Ohren und kürzerem Hals als bei Giraffen; sichtbare Herkunft/Modellgrenzen unterscheiden sie klar vom Foto. Original unverändert erhalten, proportionale800×500WebP20.552Byte.23beibehaltene SVGs bleiben bytegleich und benennen KI-Unterstützung sichtbar. Alte Quellen/Rechte und alle24historischenSVGs erhalten; kein Wikimediaabruf und kein mangels tatsächlicher Motiv-/Rechte-/Qualitätsprüfung ungeprüft übernommenes Foto.
 
 48tatsächliche schmale Normal-/Großschriftansichten, bestehendeOkapiaufgaben/Hinweise/Fehlerfeedback/Reflexion sowie echte200%-Bild-/Labels-/Captionansichten und geschützte synthetische Felder/Reload bestanden. Tatsächliche alte fehlende Herkunft bzwgrobeOkapigrafik vom selben Guard abgewiesen. Nur durchSourceNoteverändertenOkapihash gezielt gepflegt; alteFach-/Medien-/UI-Historien bleiben. Noch keine vollständige/nativeCI-Abnahme oder Lieferung, keine empirische Lernwirkung. Neue Chronikvorbereitung bleibt getrennt/undatiert/unverlinkt; weitereBildlücken ausschließlichWK057offen.
+## Gezielt beobachtbar · WebKit-Tierkartenwechsel weiter ungeklärt
+
+Quality166 endete natürlich nach44:53: Firefox einschließlich Offline-Wiederherstellung bestanden, WebKit wartete vergeblich auf den Katta-Lernabschnitt. Dies ist ein anderer Befund als die ursächlich belegte Offline-Renderkorrektur. PR62 bleibt Draft, keine Übernahme oder Auslieferung. Ursprüngliches Protokoll und vorangegangene vollständige lokale54d-Abnahme bleiben ihren tatsächlichen Quellen zugeordnet.
+
+Der bestehende Tierfehlerpfad sichert jetzt begrenzt erwartete Karte/Stufe/Breite, tatsächlich dargestellte Adresse/Karte/Fokus und vorhandene Browserlebenszyklus-/Ressourcenbeobachtung. Der unveränderte20s-Guard weist einen absichtlich verhinderten Katta-Wechsel ab; die neue Aufnahme zeigt korrekt das erhaltene Erdmännchen. Originalexception/Screenshot und alle Assertions/Argumente bleiben. Keine Ursachebehebung von166, keine Fehlerausnahme, Retry oder größere Wartezeit. Neue vollständige Abnahme noch offen.
+
+## Ursache gezielt korrigiert · Offline-Geometrie nach tatsächlichem Renderframe
+
+Der Originalfehler ausQuality164 wurde unter dem unveränderten alten Prüfweg lokal wiedererzeugt:320CSS-Viewport, aber noch640pxbreiter Header mit Desktop-Padding320/320; im nächsten Browserframe bereits korrekt320/Padding10/10. Ursache war die Messung eines responsiven Zwischenstands, kein belegter dauerhaft fehlerhafter Produktzustand. Die bestehende Offlinefixture nutzt nun den bereits bewährten gepinnten prepareAxe-/Renderframe-Schritt vor ihren Geometrieprüfungen. Alle vorhandenen Breiten, WCAG-Audits, Source-/Quota-/Cache-/Pass-/Offline-/Fehlerassertionen und engen Workergrenzen bleiben; keine Retries/Skips/Timeoutanhebung oder CSSkaschierung.
+
+Vorhandene vollständige normale und echte200%-Offlinefunktion am benannten gezielten Korrekturstand bestanden. Absichtlich dauerhaft erzwungener640pxHeader fällt auch nach Renderframes durch; falscher1920Viewport ebenso. Die anschließende vollständige lokale54d-Abnahme bestand; neue native Gesamtfreigabe und Lieferung bleiben erforderlich. Der vorherige165-Kandidat wurde unverändert erfolgreich beendet.166 hat einen getrennten offenen Kartenwechselbefund, kein Wiederholungsgrün ersetzt Ursachenklärung.
+
+## Gezielt instrumentiert · tatsächlicher Chromium-Überlauf aus Quality164
+
+Quality164 scheiterte nach7:14 beim Wechsel der Offlineansicht1920→320CSS; frühe native Suche/Cold-Vorbedingung bestanden, vollständige spätere Abnahme nicht erreicht. Originale erhalten. Unveränderte gesamte Offlinefunktion lokal unterChromium154 in128.019s grün, CI verwendete156; kein Ursachebeleg aus dem Lokalgrün. Der bestehende Guard protokolliert nun beim ersten gemessenen Fehler tatsächliche Breite, Dokumentüberlauf und Elementgeometrie. Derselbe strenge Grenzwert, keine Wiederholung/Wartezeit/Unterdrückung; tatsächlich gerenderte800pxGegenprobe und falscher1920Viewport weiter abgewiesen. Ursachenklärung und vollständige native Schlussabnahme offen, keine Produktkorrektur/Auslieferung behauptet.
 
 ## Lokal vollständig geprüft · zusammenhängende Tier-/Modell-/Seismografkorrektur
 

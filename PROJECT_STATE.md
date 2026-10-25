@@ -1,5 +1,9 @@
 # Aktueller Arbeits- und Übergabestand ·25.10.2026
 
+## Zusammenhängender Medienstand · Integration zur lokalen Abnahme
+
+Eigener Zweig `codex/wunderkompass-media-integration-2026-10-25` führt den gesicherten Seismograf-/Chronikstand7a3e55e und den tatsächlich CI167-geprüften85a-Diagnosekopf regulär zusammen. Dies ist eine Quellintegration zur unabhängigen lokalen Medienabnahme, keine behauptete M62-Übernahme oder Auslieferung. Nur zwei historische Projektdokumentkonflikte aufgelöst: aktuelle167-/Medienquittungen behalten und ursprüngliche164-/166Ursachenchronik erhalten. Die vollständige Offlinefixture ist bytegleich85a, animalFlow einschließlich20s-/Originaldiagnose bytegleich85a; eigene neue Bildprüfung bleibt erhalten. Laufende lokale85a-Abnahme unverändert in ihrem anderenWorktree. Vor neuer Medienvollabnahme alle Pflichtvorprüfungen neu am integriertenKandidaten; vorhandene frühe tatsächliche Bild-/Lern-/Zoomnachweise und spätere dreiChronikansichten bleiben ihren Quellen zugeordnet. Keine vorschnelle UI-Neubindung/Nativefreigabe.
+
 ## Separat vorbereitete Seismograf-Geräteansicht
 
 Zweig `codex/wunderkompass-seismograph-media-2026-10-25` auf dem normal gesicherten Medienstandaf467bbb059798c411e6e82d40d23ea59b872fe0 ergänzt eine zweite Geräteillustration in der vorhandenenRegistry. Beide bestehenden neuen Motive(Okapi/3D-Druck) und ihre Originalnachweise bleiben erhalten. Vor dem neuen Bild40erreichbare einschlägigeGitstände/49Dateiblobs verglichen, keine frühere registrierteSeismografabbildung gefunden; keine unbekannte21Historie rekonstruiert. USGS-HVO-/SusanHough-Fotoseiten weisenPDaus, ihre Originaldatei ist hier403/nicht in tatsächlichenPixeln prüfbar; keinFoto übernommen. USGS-Primärbeschreibung zu relativer Bewegung/Feder-Masse/mehrerenMessrichtungen tatsächlich gelesen; pauschale1890-Erst-/ausschließlicheDigitalbehauptungen ausandererFAQ nicht übernommen.

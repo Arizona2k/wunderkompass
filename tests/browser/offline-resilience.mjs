@@ -21,7 +21,15 @@ export async function assertOfflineCaptureViewport(page,{native=false}={}){
  assert.equal(measured.scale,native?2:1,'offline capture records the actual browser zoom');
  const panel=page.locator('.offline-learning'),bounds=await panel.boundingBox();
  assert.ok(bounds&&bounds.width>0&&bounds.width<=320,'offline panel fits the measured narrow viewport');
- assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'offline capture has no horizontal overflow');
+ const overflow=await page.evaluate(()=>{
+  const width=innerWidth,scrollWidth=document.documentElement.scrollWidth,failed=scrollWidth>width+2;
+  if(!failed)return{failed,width,scrollWidth};
+  // Preserve the first failing measurement. Later layout reads must not turn
+  // a transient or persistent overflow into a successful retry.
+  return{failed,width,scrollWidth,clientWidth:document.documentElement.clientWidth,bodyScrollWidth:document.body.scrollWidth,scrollX,scrollY,scale:devicePixelRatio,fonts:document.fonts.status,elements:[...document.querySelectorAll('body *')].map(el=>{const b=el.getBoundingClientRect(),s=getComputedStyle(el);return{tag:el.tagName,cls:String(el.className?.baseVal??el.className).slice(0,100),text:el.textContent?.slice(0,100),x:b.x,right:b.right,width:b.width,height:b.height,position:s.position,transform:s.transform,overflowX:s.overflowX,minWidth:s.minWidth};}).filter(b=>b.width>0&&(b.right>width+2||b.x< -2)).slice(0,24)};
+ });
+ if(overflow.failed)console.error('OFFLINE_CAPTURE_OVERFLOW '+JSON.stringify(overflow));
+ assert.equal(overflow.failed,false,'offline capture has no horizontal overflow: '+JSON.stringify(overflow));
  return{...measured,panelWidth:bounds.width};
 }
 async function captureOfflinePanel(page,file,{native=false}={}){
