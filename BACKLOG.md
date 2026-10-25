@@ -49,7 +49,7 @@ In Arbeit. Bestätigte M61-Wartung und separat früh geprüfter Seismograf-/Erdb
 
 ### WK-057 · Medien, Darstellung und Chronik
 
-FortsetzbareOriginale: Okapi,3D-Druck undSeismograf zusätzlich als unveränderte eigeneKI-PNG außerhalbpublic im bestehendenQuellzweig erhalten, Herkunftspfade in den vorhandenenEinzelnachweisen ergänzt. Kein neuerBildabschluss und keineFreigabe des weiterhin offenenPontentwurfs; bestehendeFoto-/Sydney-/weitereThemenlücken bleiben. TatsächlicheErreichbarkeit nach normalemRemote-Push separat prüfen.
+FortsetzbareOriginale: Okapi,3D-Druck undSeismograf zusätzlich als unveränderte eigeneKI-PNG außerhalbpublic im bestehendenQuellzweig erhalten, Herkunftspfade in den vorhandenenEinzelnachweisen ergänzt. Kein neuerBildabschluss und keineFreigabe des weiterhin offenenPontentwurfs; bestehendeFoto-/Sydney-/weitereThemenlücken bleiben. TatsächlicheErreichbarkeit am25.10.04:41UTC durch unabhängigen frischenRemote-Fetch/e5cb119 und681bytegeprüfteQuellblobs bestätigt; kein Nachweis für unbekannte historische21Arbeitsstände oder privatePrüfarchive.
 
 In Arbeit. Die jüngste Bildpräzisierung ist am sicheren Ende des unveränderten dcdcd-Volltests in den bestehenden Medienabsätzen von AGENTS/VISION konsolidiert. Geeignete vorhandene Themenbilder behalten; bei Inhaltsarbeit auch ältere/überarbeitete Themen auf fehlende, falsche oder unzureichende Abbildungen prüfen. Keine neue Aufgabenliste/Prüfplattform oder pauschale Altbestandsabnahme. Die49bestehenden Medien sind **46Fotos und drei bereits eindeutig gekennzeichnete spätere Darstellungen**; bisherige Kurzform „49echteFotos“ ist damit präzisiert, historische Herkunfts-/Rechtebelege bleiben unverändert.
 
