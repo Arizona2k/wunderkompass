@@ -231,7 +231,56 @@
       ],
       "linkDecision": "Original links to not-yet-integrated retained science/building manuscripts remain documented here and in sourceMaster. Current actual targets only, with nine explicit reciprocal explanations. No missing work removed from BACKLOG.",
       "reviewedBy": "Codex KI-Selbstprüfung anhand der tatsächlich zugänglichen genannten Passagen; keine unabhängige Menschenabnahme",
-      "reviewedOn": "2026-10-23"
+      "reviewedOn": "2026-10-23",
+      "media": {
+        "checkedOn": "2026-10-25",
+        "reviewedBy": "AI source and actual-image review; no independent human or empirical learning claim",
+        "kind": "ai-illustration",
+        "format": "webp",
+        "sha256": "3306f4617e59ca4197da4354432b46cb41a20c9e627e1c3baa60d5bfae9ae54e",
+        "bytes": 26398,
+        "width": 800,
+        "height": 500,
+        "alt": "Eigene KI-Illustration eines erfundenen Seismografen für senkrechte Bodenbewegung: An einer Feder hängt eine Masse mit Schreibspitze neben einer Papierwalze auf demselben Gestell.",
+        "caption": "Eigene KI-Illustration · kein Foto und nicht maßstabsgetreu. Erfundenes vereinfachtes Gerätebeispiel für Auf-und-ab-Bewegungen. Die Linie auf der Papierwalze ist nur gezeichnet, kein Messdatensatz. Das Modell darunter betrachtet seitliche Bewegung. Das Bild rekonstruiert keinen historischen Entwurf.",
+        "sourceReads": [
+          {
+            "url": "https://www.usgs.gov/programs/earthquake-hazards/seismographs-keeping-track-earthquakes",
+            "supports": "Actual primary text distinguishes horizontal and vertical sensing, spring-suspended mass, stylus/recording drum and multiple directions. Only relative-motion principle/vertical example used; not a historical prototype or a real measurement."
+          }
+        ],
+        "actualImageChecks": [
+          "Top support, both spring hooks and suspended mass visibly connected; mass clear of base.",
+          "Stylus visibly attached to mass and contacts paper surface; drum axle/support connected to same base.",
+          "A quiet drawn reference line, no fabricated measured waveform or numerical earthquake data.",
+          "Vertical spring example explicitly distinguished from existing horizontal momentary interactive model; no Kreil1855 reconstruction."
+        ],
+        "generatorOriginal": {
+          "bytes": 1738869,
+          "sha256": "23d4bd1187a479068beb4a9a23453f569c9e3a7130611a737e5ed27ff959ac0f",
+          "width": 1586,
+          "height": 992,
+          "retainedPrivately": true
+        },
+        "processing": "Proportional nearest-pixel800px WebP export only; no crop/recolor/creative edit; original unchanged.",
+        "photoDecision": "USGS HVO and SusanHough1992 primary pages explicitly public-domain; actual original file403/pixels unavailable. No photo adopted. Government pages with other copyright excluded. No Wikimedia work.",
+        "rights": "Own generic independently invented composition without third-party photo input, named brands/artists, logos or people. Existing reviewed OpenAI output terms/responsibility; no uniqueness or third-party-rights guarantee.",
+        "state": "source and actual early rendered preparation; not full or nativeCI acceptance",
+        "earlyRendered": {
+          "sourceDigest": "ea54cec79a8a0cf9daa0a22d37572de7364fe9a374cdddf9d30e6ad47ff1a5f5",
+          "build": "15d2e177f9b89827",
+          "views": [
+            "320normal",
+            "320large",
+            "1440normal",
+            "640CSSnative200large",
+            "320CSSnative200large"
+          ],
+          "reportSHA256": "b77be38a6330b95d40671a84f882e4132b1a0d8d3698e8aa3a77ad6396db4b53",
+          "checks": "Actual image decode/AI-noPhoto/vertical-example-versus-horizontal-model caption; all3interactive directions,6stages/parts, tasks/hints/wrong-correct, two-waylab links and bothBackfoci including native640, synthetic protected fields/reload. Actual wrongPhotoClaim and wrongSubject both rejected.",
+          "personalVisualReview": "Complete generated original, normal320wholefigure and native320caption-end actually inspected: connected support-spring-mass-stylus, tip meeting supported paper drum, clearly drawn nonmeasurement line and explicit model-axis/historical limits. AI review, no independent human or empirical learning claim."
+        }
+      }
     },
     {
       "id": "invention-3d-printing",
