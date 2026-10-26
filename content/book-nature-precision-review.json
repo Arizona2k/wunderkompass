@@ -1,0 +1,297 @@
+{
+  "scope": "BestehendeWK054/055: neun gezielte Präzisionsfälle aus dem schreibfreien Vergleich des erhaltenen Masters mit tatsächlich bereitgestelltem M64; keine Mengenübernahme und keine vollständige redaktionelle Neubewertung aller90Wörter/40Naturpunkte.",
+  "baselineCommit": "c9378dcb8f23becd080eba605e485b9ef7dcc701",
+  "retainedMasterHead": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+  "claims": [
+    {
+      "id": "Gestein",
+      "scope": "word",
+      "before": [
+        "Gestein",
+        "Erdinneres",
+        "Festes Material aus einem oder mehreren Mineralen. Gestein baut große Teile der Erde auf."
+      ],
+      "after": [
+        "Gestein",
+        "Erdinneres",
+        "Natürliches festes Material, das meist aus Mineralen besteht. Manche Gesteine enthalten auch Glas."
+      ],
+      "learningGoal": "Gesteine bestehen meist aus Mineralen; vulkanisches Glas ist eine fachlich notwendige Ausnahme.",
+      "sources": [
+        {
+          "url": "https://www.usgs.gov/news/science-snippet/earthword-rock-vs-mineral"
+        },
+        {
+          "url": "https://volcanoes.usgs.gov/volcanic_ash/glossary/obsidian.html"
+        }
+      ],
+      "actualSourceReadingAndLimits": "USGS-Originalindextext zu Rock vs Mineral gelesen; vollständiger Direktabruf Timeout. Obsidian-Originalseite vollständig gelesen. Keine behauptete Vollseitenlektüre des ersten Links.",
+      "reviewedBy": "KI anhand tatsächlich gelesener benannter Primärquellen; keine unabhängige Menschenabnahme",
+      "checkedOn": "2026-10-26"
+    },
+    {
+      "id": "Grundwasser",
+      "scope": "word",
+      "before": [
+        "Grundwasser",
+        "Wasser",
+        "Wasser im Boden und Gestein unter der Erdoberfläche."
+      ],
+      "after": [
+        "Grundwasser",
+        "Wasser",
+        "Wasser unter der Erdoberfläche in einer gesättigten Zone: Dort sind die Hohlräume mit Wasser gefüllt."
+      ],
+      "learningGoal": "Wasser in einer gesättigten Zone füllt Hohlräume; nicht jede unterirdische Feuchte ist Grundwasser.",
+      "sources": [
+        {
+          "url": "https://www.usgs.gov/water-science-school/science/how-do-hydrologists-locate-groundwater"
+        }
+      ],
+      "actualSourceReadingAndLimits": "Originalkörper gelesen. Nicht die vereinfachende Behauptung über nie vorhandene unterirdische Flüsse übernehmen; keine neue Aussage über besondere Karstsysteme.",
+      "reviewedBy": "KI anhand tatsächlich gelesener benannter Primärquellen; keine unabhängige Menschenabnahme",
+      "checkedOn": "2026-10-26"
+    },
+    {
+      "id": "Mineral",
+      "scope": "word",
+      "before": [
+        "Mineral",
+        "Erdinneres",
+        "Ein natürlich vorkommender fester Stoff mit bestimmter Zusammensetzung und innerem Aufbau, zum Beispiel Quarz."
+      ],
+      "after": [
+        "Mineral",
+        "Erdinneres",
+        "Ein natürlich vorkommender fester Stoff mit bestimmter Zusammensetzung und geordnetem innerem Aufbau, zum Beispiel Quarz."
+      ],
+      "learningGoal": "Geordneter innerer Aufbau grenzt Minerale von ungeordnetem vulkanischem Glas ab.",
+      "sources": [
+        {
+          "url": "https://www.usgs.gov/news/science-snippet/earthword-rock-vs-mineral"
+        }
+      ],
+      "actualSourceReadingAndLimits": "Tatsächlich gelesener indexierter Primärtext des USGS. Eng ergänzte verknüpfte Definition, keine neue Begriffszählung.",
+      "reviewedBy": "KI anhand tatsächlich gelesener benannter Primärquellen; keine unabhängige Menschenabnahme",
+      "checkedOn": "2026-10-26"
+    },
+    {
+      "id": "Nordpol",
+      "scope": "word",
+      "before": [
+        "Nordpol",
+        "Weltkugel",
+        "Das nördliche Ende der Erdachse. Er liegt im Arktischen Ozean auf Meereis."
+      ],
+      "after": [
+        "Nordpol",
+        "Weltkugel",
+        "Das nördliche Ende der Erdachse. Er liegt über dem Arktischen Ozean."
+      ],
+      "learningGoal": "Der geografische Nordpol liegt über dem Arktischen Ozean. Meereis ist beweglich und kein unveränderlicher Untergrund.",
+      "sources": [
+        {
+          "url": "https://www.pmel.noaa.gov/arctic-zone/faq.html"
+        }
+      ],
+      "actualSourceReadingAndLimits": "Originalkörper und konkrete Pol-/Ozean-/Eispassagen gelesen. Ältere Dickenzahlen und magnetische Polkoordinaten nicht als aktuelle Werte übernommen.",
+      "reviewedBy": "KI anhand tatsächlich gelesener benannter Primärquellen; keine unabhängige Menschenabnahme",
+      "checkedOn": "2026-10-26"
+    },
+    {
+      "id": "Vulkanasche",
+      "scope": "word",
+      "before": [
+        "Vulkanasche",
+        "Erdinneres",
+        "Winzige Gesteins- und Glasstücke aus einem Vulkan, keine Asche von verbranntem Holz."
+      ],
+      "after": [
+        "Vulkanasche",
+        "Erdinneres",
+        "Winzige Gesteins-, Mineral- und Glasstücke aus einem Vulkan, keine Asche von verbranntem Holz."
+      ],
+      "learningGoal": "Kleine Gesteins-, Mineral- und Glasstücke; nicht Verbrennungsasche.",
+      "sources": [
+        {
+          "url": "https://volcanoes.usgs.gov/volcanic_ash/ash.html"
+        }
+      ],
+      "actualSourceReadingAndLimits": "Originalkörper gelesen. Keine Bildübernahme oder zusätzliche Gesundheitsanweisung.",
+      "reviewedBy": "KI anhand tatsächlich gelesener benannter Primärquellen; keine unabhängige Menschenabnahme",
+      "checkedOn": "2026-10-26"
+    },
+    {
+      "id": "antarctic-desert",
+      "scope": "nature",
+      "before": {
+        "id": "antarctic-desert",
+        "name": "Antarktische Wüste",
+        "kind": "nature",
+        "category": "deserts",
+        "lat": -78,
+        "lon": 30,
+        "text": "In der Antarktis fällt sehr wenig Niederschlag. Deshalb ist sie eine Wüste, obwohl sie von Eis bedeckt ist.",
+        "fact": "Eine Wüste wird durch Trockenheit bestimmt, nicht durch Hitze. Antarktika ist die größte Wüste insgesamt."
+      },
+      "after": {
+        "id": "antarctic-desert",
+        "name": "Antarktische Wüste",
+        "kind": "nature",
+        "category": "deserts",
+        "lat": -78,
+        "lon": 30,
+        "text": "Das Innere der Antarktis erhält sehr wenig Niederschlag. Deshalb sind große Teile eine Kältewüste, obwohl über lange Zeit viel Eis zusammengekommen ist. An den Küsten kann deutlich mehr Schnee fallen.",
+        "fact": "Eine Wüste wird durch Trockenheit bestimmt, nicht durch Hitze. Antarktika ist die größte Wüste insgesamt."
+      },
+      "learningGoal": "Trockener Binnenbereich und schneereichere Küsten unterscheiden; über lange Zeit angesammeltes Eis widerspricht geringer jährlicher Feuchtezufuhr nicht.",
+      "sources": [
+        {
+          "url": "https://www.antarctica.gov.au/about-antarctica/weather-and-climate/weather/"
+        }
+      ],
+      "actualSourceReadingAndLimits": "Originalkörper mit Binnen-/Küstenniederschlag gelesen. Dessen pauschale Formulierung zum kältesten Erdboden nicht übernommen.",
+      "reviewedBy": "KI anhand tatsächlich gelesener benannter Primärquellen; keine unabhängige Menschenabnahme",
+      "checkedOn": "2026-10-26"
+    },
+    {
+      "id": "fuji",
+      "scope": "nature",
+      "before": {
+        "id": "fuji",
+        "name": "Fuji",
+        "kind": "nature",
+        "category": "volcanoes",
+        "lat": 35.36,
+        "lon": 138.73,
+        "text": "Der Fuji ist Japans höchster Berg und ein Vulkan. Sein letzter Ausbruch begann 1707.",
+        "fact": "Ein ruhiger Vulkan kann trotzdem noch aktiv sein. Aktiv bedeutet nicht: Er bricht gerade aus."
+      },
+      "after": {
+        "id": "fuji",
+        "name": "Fuji",
+        "kind": "nature",
+        "category": "volcanoes",
+        "lat": 35.36,
+        "lon": 138.73,
+        "text": "Der Fuji ist Japans höchster Berg und ein Vulkan. Sein letzter bestätigter Ausbruch begann 1707.",
+        "fact": "Ein ruhiger Vulkan kann trotzdem noch aktiv sein. Aktiv bedeutet nicht: Er bricht gerade aus."
+      },
+      "learningGoal": "Der letzte bestätigte Ausbruch begann1707; spätere unsichere Einträge werden nicht als bestätigte Ausbrüche ausgegeben.",
+      "sources": [
+        {
+          "url": "https://volcano.si.edu/volcano.cfm?vn=283030"
+        }
+      ],
+      "actualSourceReadingAndLimits": "Originaltabelle gelesen: bestätigter Beginn16.12.1707, Ende1708 unsicher datiert. Kopfzeile Last Known Eruption1708 ist kein Gegenbeweis zum Beginn1707. Der bereits richtige Beginn1707 bleibt; nur bestätigt ergänzt.",
+      "reviewedBy": "KI anhand tatsächlich gelesener benannter Primärquellen; keine unabhängige Menschenabnahme",
+      "checkedOn": "2026-10-26"
+    },
+    {
+      "id": "vostok",
+      "scope": "nature",
+      "before": {
+        "id": "vostok",
+        "name": "Kälte-Rekord: Wostok",
+        "kind": "nature",
+        "category": "records",
+        "lat": -77.5,
+        "lon": 106.8,
+        "text": "An der Station Wostok in Antarktika wurden am 21. Juli 1983 −89,2 °C Lufttemperatur gemessen. Das ist der von der WMO anerkannte weltweite Kälterekord.",
+        "fact": "Satelliten können noch niedrigere Oberflächentemperaturen erfassen. Das ist eine andere Messart als Lufttemperatur."
+      },
+      "after": {
+        "id": "vostok",
+        "name": "Kälte-Rekord: Wostok",
+        "kind": "nature",
+        "category": "records",
+        "lat": -78.47,
+        "lon": 106.8,
+        "text": "An der Station Wostok in Antarktika wurden am 21. Juli 1983 −89,2 °C Lufttemperatur gemessen. Die WMO führt den Wert in ihrer Rekordtabelle mit Stand 31. Juli 2025.",
+        "fact": "Satelliten können noch niedrigere Oberflächentemperaturen erfassen. Das ist eine andere Messart als Lufttemperatur."
+      },
+      "learningGoal": "WMO-Lufttemperaturrekord−89,2°C am21.07.1983 mit explizitem Tabellenstand31.07.2025; Stationsmarker ungefähr−78,47/106,8.",
+      "sources": [
+        {
+          "url": "https://data.aad.gov.au/aadc/gaz/display_name.cfm?gaz_id=136400"
+        },
+        {
+          "url": "https://wmo.int/sites/default/files/2025-07/Table_Records_25Jul2025.pdf"
+        },
+        {
+          "url": "https://science.nasa.gov/science-research/earth-science/09dec_coldspot/"
+        }
+      ],
+      "actualSourceReadingAndLimits": "WMO-OriginalPDF einschließlich tatsächlicher Seite0-Sicht gelesen. Dessen widersprechende Stationsbreite77°32S nicht zur Karte verwenden. SCAR/AADC nennt Station−78.46667/106.80000, Präzision ausdrücklich unbekannt. Stationspunkt nicht mit dem Zentrum des Sees verwechseln. NASA-Originalkörper trennt Satellitenoberfläche und Luftmessung; keine neue2026-Rekordbehauptung.",
+      "reviewedBy": "KI anhand tatsächlich gelesener benannter Primärquellen; keine unabhängige Menschenabnahme",
+      "checkedOn": "2026-10-26"
+    },
+    {
+      "id": "furnace-creek",
+      "scope": "nature",
+      "before": {
+        "id": "furnace-creek",
+        "name": "Hitze-Rekord: Death Valley",
+        "kind": "nature",
+        "category": "records",
+        "lat": 36.46,
+        "lon": -116.86,
+        "text": "Die WMO führt 56,7 °C am 10. Juli 1913 bei Furnace Creek als höchsten anerkannten Lufttemperaturwert der Erde.",
+        "fact": "Ein einzelner Rekord ist kein typischer Sommertag. Messmethode, Ort und Zeitpunkt gehören dazu."
+      },
+      "after": {
+        "id": "furnace-creek",
+        "name": "Hitze-Rekord: Death Valley",
+        "kind": "nature",
+        "category": "records",
+        "lat": 36.46,
+        "lon": -116.86,
+        "text": "Die WMO-Tabelle mit Stand 31. Juli 2025 führt 56,7 °C am 10. Juli 1913 bei Furnace Creek als höchsten anerkannten Lufttemperaturwert.",
+        "fact": "Ein einzelner Rekord ist kein typischer Sommertag. Messmethode, Ort und Zeitpunkt gehören dazu."
+      },
+      "learningGoal": "56,7°C am10.07.1913 als WMO-anerkannter Lufttemperaturrekord mit Tabellenstand31.07.2025; keine Behauptung einer eben erhobenen aktuellen Messung.",
+      "sources": [
+        {
+          "url": "https://wmo.int/sites/default/files/2025-07/Table_Records_25Jul2025.pdf"
+        }
+      ],
+      "actualSourceReadingAndLimits": "OriginalPDF-Tabelle einschließlich tatsächlicher Seite0-Sicht gelesen. Messart/Ort/Datum statt einer zeitlosen oder typischen Sommertemperatur.",
+      "reviewedBy": "KI anhand tatsächlich gelesener benannter Primärquellen; keine unabhängige Menschenabnahme",
+      "checkedOn": "2026-10-26"
+    }
+  ],
+  "preserved": {
+    "wordIdentitiesAndOrder": 90,
+    "unchangedWordRecords": 85,
+    "natureIdentitiesAndOrder": 40,
+    "unchangedNatureRecords": 36,
+    "canonicalQuestionBank": "Unveränderte220Challengefragen/20Personenbank dieser getrenntenM64-Vorbereitung; späteren People-Integrationsstand separat vergleichen.",
+    "privateState": "Keine Schema-/Speicher-/Fragen-/Ergebnis-/Stempeländerung. Alte Favoritensnapshots unverändert speichern, bekannte Orte aus aktuellen Daten darstellen; tatsächliche Produktprobe erforderlich."
+  },
+  "media": "Keine neuen Bilder übernommen. Bestehende lokale NatureVisual-Karten zeigen dieselben stabilenIDs; Wostokmarker erhält gezielt die Stationslage. Bestehende Medienrechte unverändert. Keine Wikimediarecherche oder Übernahme fremder Abbildungen.",
+  "productSourceAccess": "Fünf Begriffskarten erhalten einklappbare Quellen; vier Naturkarten Quellen/Einordnung und entsprechende Angaben am ausgewählten Globusort. VorhandeneGeographyNotes/LearningDetails wiederverwendet; Exporter-Datengrenze unverändert.",
+  "acceptance": "Fachliche Gegenlese und gezielte frühe dargestellteProdukt-/Engine-/Native200-/Alt-Favoritenfälle abgeschlossen; aktuelle gemeinsame Quellen-/Aktionsgestaltung ebenso gezielt in drei tatsächlichen Engines und nativen320/640 geprüft. Quelle9741a1f2/App6439f139. Keine endgültige integrierte lokale/native Vollabnahme oder Bereitstellung behauptet.",
+  "earlyActualProductEvidence20261026": {
+    "source": "9741a1f25875bc44a158ec862fa9fa7aed80ba0541645da0d6b10014672a0080",
+    "build": "6439f139998b2a06",
+    "engines": [
+      {
+        "name": "Chromium",
+        "version": "154.0.8037.57"
+      },
+      {
+        "name": "Firefox",
+        "version": "157.0"
+      },
+      {
+        "name": "WebKit",
+        "version": "27.2"
+      }
+    ],
+    "views": "320×568normal/groß sowie1440 nach letzter gemeinsamer Quellen-/Aktionsgestaltung; vorher zusätzlich768 an Quelle6c1e8bb0 bei identischenFakten. Alle9Erklärungen/Quellen/Kartenwege/SVG-Station und historischeFavoriten wirklich geprüft.",
+    "native": "Echte200% bei320/640CSS mit großerSchrift, aktuelleQuellenlinks/48pxBuchaktionen und SCAR-Marker geprüft; tatsächlichePixeldimensionen erfasst.",
+    "scientificNegative": "Tatsächlicher öffentlicher2kmStationsguard lehnt−77,5Breite im isolierten Exportgegenfall ab; Originale unverändert.",
+    "technicalCounterexample": "Vorhandene einfacheKarte blieb bedienbar, aber fehlendesWebGL2 startete fehlerhaftThree. Ursprungsbuild am selben striktenBrowserguard nachweislichrot; neueKontextprüfung übergibt tatsächlichenKontext an3Doder nutzt vorhandenenErsatz. Kein Konsolenfilter.",
+    "visualReview": "KI hat tatsächlicheMobil-/Großschrift-/native200-Aufnahmen kritisch angesehen: unterstricheneLinks erkennbar, Buchaktionen getrennt, Quellen/Erklärungen umbrechendlesbar. Keine unabhängigeMenschenprüfung."
+  }
+}

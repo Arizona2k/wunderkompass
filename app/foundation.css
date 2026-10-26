@@ -5,6 +5,9 @@
 .learning-grid>*{min-width:0;overflow-wrap:anywhere}
 .learning-details{min-width:0}
 .learning-details summary{cursor:pointer;min-height:var(--wk-touch);overflow-wrap:anywhere}
+.geography-notes a{color:var(--wk-ink);text-decoration:underline;text-underline-offset:3px}
+.geography-notes a:focus-visible{outline:2px solid var(--wk-focus);outline-offset:3px}
+.word-card .speech-button{min-height:var(--wk-touch);max-width:100%;margin-inline-end:12px;white-space:normal;text-align:left}
 .learning-details :is(button,a,summary):focus-visible,.learning-status button:focus-visible{outline:2px solid var(--wk-focus);outline-offset:4px}
 .learning-status{padding:clamp(16px,3vw,24px);margin:16px 0;border:1px solid var(--wk-line,#dbe6e9);border-radius:16px;background:var(--wk-paper,#fff);color:var(--wk-ink,#203c47);line-height:1.7;overflow-wrap:anywhere}
 .learning-status p{max-width:65ch}

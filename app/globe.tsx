@@ -76,7 +76,13 @@ export default function Globe(props: Props) {
     const lowGraphics=window.innerWidth<600||(typeof memory==="number"&&memory<=4)||(navigator.hardwareConcurrency>0&&navigator.hardwareConcurrency<=4);
     const textureWidth=lowGraphics?1024:2048,textureHeight=textureWidth/2;
     let renderer: THREE.WebGLRenderer;
-    try { renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "low-power" }); }
+    try {
+      const canvas=document.createElement('canvas');
+      const graphics={antialias:true,alpha:true,powerPreference:'low-power' as const};
+      const context=canvas.getContext('webgl2',graphics) as WebGL2RenderingContext|null;
+      if(!context)throw new Error('WebGL2 unavailable');
+      renderer = new THREE.WebGLRenderer({canvas,context,...graphics});
+    }
 // eslint-disable-next-line react-hooks/set-state-in-effect -- Synchronize an explicit external navigation, saved pass, or browser-engine event; not derived render state.
     catch { setFailed(true);return; }
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, window.innerWidth<600?1.5:2));
