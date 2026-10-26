@@ -57,7 +57,11 @@ export async function passDesign(page,report,width,shots){
   await textFits(pass);
  };
  const backupVisible=async()=>{for(const button of await pass.locator('.pass-backup-actions button').all()){await reachable(pass,button,await button.innerText());await touchSize(button,'backup action')}};
- await frame();await reachable(pass,pass.locator('.passport-stats>div').first(),'first overview value and label');
+ const firstOverview=pass.locator('.passport-stats>div').first(),hasContinuation=await pass.locator('.pass-resume').count()>0;
+ await frame();
+ // A populated pass intentionally puts the real continuation before secondary
+ // statistics. Empty passes retain their initial overview visibility check.
+ if(!hasContinuation)await reachable(pass,firstOverview,'first overview value and label');
  for(const button of await nav.getByRole('button').all())await touchSize(button,'pass navigation');
  await page.screenshot({path:shots+'/pass-entry-'+width+'.png',animations:'disabled'});
  for(const [name,id] of [['Überblick','overview'],['Lernwege','learning'],['Gespeichertes & Notizen','saved'],['Pass sichern','backup'],['Abzeichen','badges']]){
@@ -68,6 +72,12 @@ export async function passDesign(page,report,width,shots){
   assert.equal(await section.evaluate(el=>getComputedStyle(el).outlineStyle==='none'),true,'no dominant whole-section outline');
   if(width!==390)await keyboardRing(heading,'section heading '+id);
   assert.equal(new URL(page.url()).hash,hash,'pass jumps preserve current activity');await frame();
+  if(id==='overview'){
+   // Use the same explicit section navigation as every other populated section;
+   // the strict bounds and hit test still reject content hidden by the footer.
+   if(hasContinuation){const resume=pass.locator('.pass-resume').getByRole('button',{name:'Fortsetzen',exact:true});await reachable(pass,resume,'saved continuation');await touchSize(resume,'saved continuation');}
+   await reachable(pass,firstOverview,'first overview value and label');
+  }
   if(id==='backup'){await backupVisible();const save=pass.locator('.pass-backup-actions .primary-button');await textContrast(save,'backup normal');await save.hover();await textContrast(save,'backup hover');await page.screenshot({path:shots+'/pass-backup-hover-'+width+'.png',animations:'disabled'});await page.mouse.move(0,0)}
   await page.screenshot({path:shots+'/pass-'+id+'-'+width+'.png',animations:'disabled'});
  }
