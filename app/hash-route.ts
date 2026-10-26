@@ -1,7 +1,7 @@
 'use client';
 import {useEffect,useRef,useSyncExternalStore} from 'react';
 const EVENT='wunder-route';
-const read=()=>window.location.hash.slice(1)||'globe';
+const read=()=>window.location.hash.slice(1)||'home';
 // Pin a legacy resume alias to its actual chapter without adding a history entry.
 export function replaceHash(path:string){if(read()===path)return;history.replaceState(history.state,'','#'+path);window.dispatchEvent(new Event(EVENT));}
 function subscribe(fn:()=>void){window.addEventListener('hashchange',fn);window.addEventListener('popstate',fn);window.addEventListener(EVENT,fn);return()=>{window.removeEventListener('hashchange',fn);window.removeEventListener('popstate',fn);window.removeEventListener(EVENT,fn);};}
@@ -21,7 +21,7 @@ export function focusLearningMain(){
 }
 export function restoreRouteView(path:string,focus=true){
  const state=history.state;
- if((path==='globe'||path==='updates'||path.startsWith('world/topic/'))&&Array.isArray(state?.wunderOpen))for(const el of document.querySelectorAll<HTMLDetailsElement>('details[data-history-disclosure]'))el.open=state.wunderOpen.includes(el.dataset.historyDisclosure);
+ if((path==='home'||path==='globe'||path==='updates'||path.startsWith('world/topic/'))&&Array.isArray(state?.wunderOpen))for(const el of document.querySelectorAll<HTMLDetailsElement>('details[data-history-disclosure]'))el.open=state.wunderOpen.includes(el.dataset.historyDisclosure);
  window.scrollTo({top:typeof state?.wunderScroll==='number'?state.wunderScroll:0,behavior:'instant'});
  if(!focus)return;
  const opener=Array.from(document.querySelectorAll<HTMLElement>('[data-route-focus]')).find(el=>el.dataset.routeFocus===state?.wunderFocus&&el.getClientRects().length);
@@ -49,4 +49,4 @@ export function scheduleRouteRestore(path:string,focus=true){
  for(const type of events)window.addEventListener(type,interact,true);
  return cancel;
 }
-export function useHashRoute(restore=true){const first=useRef(true);const path=useSyncExternalStore(subscribe,read,()=> 'globe');useEffect(()=>{if(/^news(?:\/|$)/.test(path)){replaceHash('globe');return;}const initial=first.current;first.current=false;if(!restore||path==='globe'||path==='updates')return;return scheduleRouteRestore(path,!initial||!!history.state?.wunderRoute);},[path,restore]);return path;}
+export function useHashRoute(restore=true){const first=useRef(true);const path=useSyncExternalStore(subscribe,read,()=> 'home');useEffect(()=>{if(/^news(?:\/|$)/.test(path)){replaceHash('home');return;}const initial=first.current;first.current=false;if(!restore||path==='home'||path==='globe'||path==='updates')return;return scheduleRouteRestore(path,!initial||!!history.state?.wunderRoute);},[path,restore]);return path;}

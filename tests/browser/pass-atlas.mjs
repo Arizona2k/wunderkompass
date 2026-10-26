@@ -25,7 +25,7 @@ async function keyboardRing(control,name){
  // WCAG non-text contrast for the ring against the surface around it.
  const colors=await control.evaluate(el=>{let surface=el.parentElement;while(surface&&getComputedStyle(surface).backgroundColor==='rgba(0, 0, 0, 0)')surface=surface.parentElement;return [getComputedStyle(el).outlineColor,getComputedStyle(surface).backgroundColor]});
  const luminance=color=>{const rgb=color.match(/[\d.]+/g).slice(0,3).map(Number).map(n=>{const v=n/255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4});return .2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2]};
- const [a,b]=colors.map(luminance);assert.ok((Math.max(a,b)+.05)/(Math.min(a,b)+.05)>=3,name+' focus contrast at least 3:1');
+ const [a,b]=colors.map(luminance),contrast=(Math.max(a,b)+.05)/(Math.min(a,b)+.05);assert.ok(contrast>=3,name+' focus contrast at least 3:1 '+JSON.stringify({outline:colors[0],surface:colors[1],contrast}));
 }
 
 async function switchGeometry(control,name){
@@ -49,7 +49,7 @@ export async function passDesign(page,report,width,shots){
  try{
  const opener=page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true});await opener.click();
  const pass=page.getByRole('dialog',{name:'Entdeckerpass',exact:true}),nav=pass.getByRole('navigation',{name:'Im Entdeckerpass'});
- await pass.waitFor();const hash=new URL(page.url()).hash,activate=control=>width<=390?control.tap():control.click();
+ await pass.waitFor();await pass.evaluate(el=>Promise.all(el.getAnimations({subtree:true}).map(a=>a.finished.catch(()=>{}))));const hash=new URL(page.url()).hash,activate=control=>width<=390?control.tap():control.click();
  const frame=async()=>{
   assert.equal(await pass.evaluate(el=>el.scrollWidth<=el.clientWidth+1&&el.scrollTop===0),true,'pass frame does not overflow or scroll away');
   assert.equal(await pass.locator('.pass-body').evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'pass body no horizontal overflow '+width);
@@ -57,10 +57,13 @@ export async function passDesign(page,report,width,shots){
   await textFits(pass);
  };
  const backupVisible=async()=>{for(const button of await pass.locator('.pass-backup-actions button').all()){await reachable(pass,button,await button.innerText());await touchSize(button,'backup action')}};
- await frame();await reachable(pass,pass.locator('.passport-stats>div').first(),'first overview value and label');
+ const firstOverview=pass.locator('.passport-stats>div').first(),hasContinuation=await pass.locator('.pass-resume').count()>0;
+ await frame();
+ // Keep the opening view. Use the real section jump and ordinary scrolling
+ // to inspect secondary statistics even on a short screen or with large text.
  for(const button of await nav.getByRole('button').all())await touchSize(button,'pass navigation');
  await page.screenshot({path:shots+'/pass-entry-'+width+'.png',animations:'disabled'});
- for(const [name,id] of [['Überblick','overview'],['Lernwege','learning'],['Pass sichern','backup'],['Abzeichen','badges']]){
+ for(const [name,id] of [['Überblick','overview'],['Lernwege','learning'],['Gespeichertes & Notizen','saved'],['Pass sichern','backup'],['Abzeichen','badges']]){
   const button=nav.getByRole('button',{name,exact:true});if(width===390)await button.tap();else {await button.focus();await page.keyboard.press('Enter')}
   const section=pass.locator(`[data-pass-section="${id}"]`),heading=section.locator('h3').first();
   assert.equal(await heading.evaluate(el=>el===document.activeElement),true,'pass jump focuses the named heading '+id);
@@ -68,6 +71,13 @@ export async function passDesign(page,report,width,shots){
   assert.equal(await section.evaluate(el=>getComputedStyle(el).outlineStyle==='none'),true,'no dominant whole-section outline');
   if(width!==390)await keyboardRing(heading,'section heading '+id);
   assert.equal(new URL(page.url()).hash,hash,'pass jumps preserve current activity');await frame();
+  if(id==='overview'){
+   // Inspect continuation and secondary statistics through normal scrolling;
+   // the strict bounds and hit test still reject content hidden by the footer.
+   if(hasContinuation){const resume=pass.locator('.pass-resume').getByRole('button',{name:'Fortsetzen',exact:true});await resume.scrollIntoViewIfNeeded();await reachable(pass,resume,'saved continuation');await touchSize(resume,'saved continuation');}
+   await firstOverview.scrollIntoViewIfNeeded();
+   await reachable(pass,firstOverview,'first overview value and label');
+  }
   if(id==='backup'){await backupVisible();const save=pass.locator('.pass-backup-actions .primary-button');await textContrast(save,'backup normal');await save.hover();await textContrast(save,'backup hover');await page.screenshot({path:shots+'/pass-backup-hover-'+width+'.png',animations:'disabled'});await page.mouse.move(0,0)}
   await page.screenshot({path:shots+'/pass-'+id+'-'+width+'.png',animations:'disabled'});
  }
@@ -88,7 +98,7 @@ export async function passDesign(page,report,width,shots){
  }
  await frame();assert.equal(await pass.getAttribute('data-reduced-motion'),'true');assert.ok((await pass.getAttribute('class')).includes('large-reading'));
  assert.equal(await pass.evaluate(el=>getComputedStyle(el).animationName),'none','reduced motion includes the dialog frame');
- await activate(nav.getByRole('button',{name:'Überblick',exact:true}));await reachable(pass,pass.locator('.passport-stats>div').first(),'large-text first overview row');await frame();await page.screenshot({path:shots+'/pass-overview-large-'+width+'.png',animations:'disabled'});
+ await activate(nav.getByRole('button',{name:'Überblick',exact:true}));await firstOverview.scrollIntoViewIfNeeded();await reachable(pass,firstOverview,'large-text first overview row');await frame();await page.screenshot({path:shots+'/pass-overview-large-'+width+'.png',animations:'disabled'});
  await activate(more.locator('summary'));await more.locator('summary').scrollIntoViewIfNeeded();await frame();assert.equal(await more.locator('.progress-overview span').evaluateAll(els=>els.every(el=>parseFloat(getComputedStyle(el).fontSize)>=18)),true,'extra statistics honor large text');await page.screenshot({path:shots+'/pass-extra-stats-large-'+width+'.png',animations:'disabled'});await activate(more.locator('summary'));
  await activate(nav.getByRole('button',{name:'Pass sichern',exact:true}));await backupVisible();await frame();await page.screenshot({path:shots+'/pass-backup-large-'+width+'.png',animations:'disabled'});
  await pass.getByRole('switch',{name:'Größere Schrift',exact:true}).scrollIntoViewIfNeeded();await frame();await page.screenshot({path:shots+'/pass-display-large-'+width+'.png',animations:'disabled'});

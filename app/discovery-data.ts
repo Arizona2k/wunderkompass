@@ -1,13 +1,13 @@
 /** Existing graph edges and routes highlighted by the discovery centre. */
 export const DISCOVERY_CONNECTIONS=[
- {label:'Mond & Meer',id:'science-moon-phases--science-tides',routeId:'moon-to-sea'},
- {label:'Wald & Leben',id:'science-photosynthesis--science-fungi',routeId:'living-networks'},
- {label:'Meer in Bewegung',id:'science-tides--science-currents',routeId:'ocean-life'},
- {label:'Biene & Blüte',id:'science-pollination--animal-honey-bee',routeId:'living-networks'},
- {label:'Mond & Zeitreise',id:'science-moon-phases--history-apollo11',routeId:'space'},
- {label:'Wasser & Luft',id:'science-water-cycle--science-atmosphere',routeId:'moon-to-sea'},
- {label:'Sonne & Jahreszeit',id:'science-seasons--science-solar-system',routeId:'world-knowledge'},
- {label:'Riff & Kraken',id:'science-coral-reef--animal-common-octopus',routeId:'ocean-life'},
+ {label:'Mond & Meer',question:'Was hat der Mond mit Ebbe und Flut zu tun?',id:'science-moon-phases--science-tides',routeId:'moon-to-sea'},
+ {label:'Wald & Leben',question:'Was tauschen Baumwurzeln und Pilze miteinander aus?',id:'science-photosynthesis--science-fungi',routeId:'living-networks'},
+ {label:'Meer in Bewegung',question:'Warum strömt Meerwasser auch ohne Wind?',id:'science-tides--science-currents',routeId:'ocean-life'},
+ {label:'Biene & Blüte',question:'Was passiert, wenn eine Biene eine Blüte besucht?',id:'science-pollination--animal-honey-bee',routeId:'living-networks'},
+ {label:'Mond & Zeitreise',question:'Was lässt sich auf dem Mond beobachten und untersuchen?',id:'science-moon-phases--history-apollo11',routeId:'space'},
+ {label:'Wasser & Luft',question:'Wie kommt Wasser in die Luft und wieder zurück?',id:'science-water-cycle--science-atmosphere',routeId:'moon-to-sea'},
+ {label:'Sonne & Jahreszeit',question:'Warum sind unsere Tage im Sommer länger?',id:'science-seasons--science-solar-system',routeId:'world-knowledge'},
+ {label:'Riff & Kraken',question:'Wie bietet ein Riff Tieren Nahrung und Verstecke?',id:'science-coral-reef--animal-common-octopus',routeId:'ocean-life'},
 ] as const;
 export const DISCOVERY_ACTIVITIES=[
  {title:'Mondstellung und Wasserstand vergleichen',text:'Wähle Vollmond und Halbmond. Was ändert sich am Unterschied zwischen Hoch- und Niedrigwasser?',hash:'labs/tides',label:'Gezeiten erforschen'},

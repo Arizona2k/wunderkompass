@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "0105c557394779a4a88295fe60dc13dbb3cc8fb0",
+    "commit": "52908ff15e3730ab6e29549e21901eb25dccd82e",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -57,7 +57,8 @@
       "4ad747cd43e162d92e017e8f028d0b5e916e3ab2",
       "daf558d0e5443e61a4e2e5f784ba6997f0ed7d71",
       "1da6eca5f5827a7915e1dbe2477c91406c69d22a",
-      "0105c557394779a4a88295fe60dc13dbb3cc8fb0"
+      "0105c557394779a4a88295fe60dc13dbb3cc8fb0",
+      "52908ff15e3730ab6e29549e21901eb25dccd82e"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -1490,6 +1491,28 @@
           "createdAt": "2026-10-25T14:02:03Z",
           "updatedAt": "2026-10-25T14:02:03Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/8t4G9wTKqffAsDfmggrc7AeyTDqN"
+        }
+      ],
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "number": 62,
+      "title": "Tieraufgaben, Bildnachweise und Modelle verlässlich abschließen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/62",
+      "base": "test-live",
+      "mergedAt": "2026-10-25T22:33:52Z",
+      "mergeCommit": "52908ff15e3730ab6e29549e21901eb25dccd82e",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/52908ff15e3730ab6e29549e21901eb25dccd82e/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57219875556,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-25T22:34:07Z",
+          "updatedAt": "2026-10-25T22:34:07Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/8Uk1qABZvMeticN4MQL676TQjxLK"
         }
       ],
       "checkedOn": "2026-10-25"

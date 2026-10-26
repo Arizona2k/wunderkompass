@@ -2,7 +2,7 @@
 import {Dialog,DialogContent,DialogTitle,DialogDescription,DialogClose} from '@/components/ui/dialog';
 import {BookOpen,ShieldCheck,Volume2} from 'lucide-react';
 export default function ParentGuide({open,onOpenChange,onPass,onJourney,onHelp}:{open:boolean;onOpenChange:(v:boolean)=>void;onPass:()=>void;onJourney:()=>void;onHelp:()=>void}){
- return <Dialog open={open} onOpenChange={onOpenChange}><DialogContent className="parent-guide"><DialogTitle>Gemeinsam die Erde verstehen</DialogTitle><DialogDescription>Für Eltern und Lehrkräfte · empfohlen ab etwa acht Jahren.</DialogDescription>
+ return <Dialog open={open} onOpenChange={onOpenChange}><DialogContent className="parent-guide"><DialogTitle>Gemeinsam die Welt verstehen</DialogTitle><DialogDescription>Für Familien, Lehrkräfte und alle, die jemanden beim Entdecken begleiten.</DialogDescription>
   <p>Die Lernwelt verbindet Beobachten, Ausprobieren und Erklären. Ein kurzer gemeinsamer Einstieg reicht: erst vermuten lassen, dann das Modell verändern und danach mit eigenen Worten erzählen lassen.</p>
   <h3><BookOpen size={21}/> Ein Lernweg für zehn bis fünfzehn Minuten</h3><ol><li>Ein Thema oder eine Lernreise auswählen.</li><li>Eine Vermutung formulieren: „Was wird passieren?“</li><li>Am Globus oder im Labor ausprobieren.</li><li>Eine Frage erklären und später noch einmal wiederfinden.</li></ol>
   <h3>Was das Kind lernen kann</h3><p>Länder, Kontinente und Meere unterscheiden; Kartenlinien zur Orientierung nutzen; Erdschichten und Plattenbewegungen erklären; Tag, Nacht und Jahreszeiten verstehen; Wasser, Wetter und Lebensräume vergleichen. Die neuen Welten verbinden das mit Tierwissen, historischen Zeitankern, Forschungsbeiträgen, Technik und Bauwerken.</p>

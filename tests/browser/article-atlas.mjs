@@ -5,6 +5,7 @@ import {peopleSourceView,peopleLegacyRound} from './people-learning.mjs';
 import {electricalSourceView} from './invention-electrical.mjs';
 import {opticsSourceView} from './invention-optics.mjs';
 import {historySourceView} from './history-learning.mjs';
+import {assertTextInsideControls} from './text-geometry.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 const topics=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
@@ -26,7 +27,7 @@ export async function articleAtlas(page,ready,report,width,shots){
  await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
  for(const id of examples){
   await open(id);await decode();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'article overflow '+id+' / '+width);
-  const art=page.locator('.article-atlas'),nav=art.getByRole('navigation',{name:'In dieser Entdeckerkarte'});
+  const art=page.locator('.article-atlas'),nav=art.getByRole('navigation',{name:'In dieser Entdeckerkarte'});await assertTextInsideControls(page,'.article-wayfinder button','article orientation');
   if(drawingAlts[id]){
    await art.getByRole('img',{name:drawingAlts[id],exact:true}).waitFor();
    await readableLabels(art.locator('.topic-diagram-label'));
