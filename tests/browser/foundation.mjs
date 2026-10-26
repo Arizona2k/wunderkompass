@@ -71,6 +71,7 @@ export async function componentFlow(browser,base,ready,monitor,report,shots){
   }catch(error){report.componentFailure={width,height,message:error.message,context:await p.evaluate(()=>({route:location.hash,activeTag:document.activeElement?.tagName,activeId:document.activeElement?.id,guideOpen:document.querySelector('.playground-guide')?.open})).catch(()=>null)};try{const png=await p.screenshot({path:shots+'/foundation-failure-'+width+'.png',animations:'disabled'});report.componentFailure.screenshot={bytes:png.length,sha256:createHash('sha256').update(png).digest('hex')};}catch(captureError){report.componentFailure.captureError=captureError.message;}throw error;}finally{await c.close();}
  }
  await pendingRouteFocusFlow(browser,base,ready,monitor,report,shots);
+ await globeCapabilityFallback(browser,base,ready,monitor,report,shots);
  // Exercise actual production loading/error/reload states by delaying/failing a
  // real lazy chunk. Intentional network rejection is isolated and documented.
  for(const fault of ['delay','error']){
@@ -82,4 +83,23 @@ export async function componentFlow(browser,base,ready,monitor,report,shots){
   try{await p.goto(base+'#labs');await ready(p);const status=p.locator('.learning-status[data-tone='+ (fault==='error'?'error':'loading')+']');await status.waitFor();assert.equal(await status.getAttribute('role'),fault==='error'?'alert':'status');assert(witness.requests.some(r=>r.blocked),'the real module transport must have been intercepted');witness.shown=true;await contracts(p);await p.screenshot({path:shots+'/foundation-'+fault+'-320.png'});blocked=false;if(fault==='delay')release();else await p.getByRole('button',{name:'Seite neu laden',exact:true}).click();await p.locator('.research-tile').first().waitFor();await contracts(p);witness.recovered=true;}catch(error){witness.failure={message:error.message,state:await p.evaluate(()=>({error:!!document.querySelector('.learning-status[data-tone=error]'),loading:!!document.querySelector('.learning-status[data-tone=loading]'),labs:!!document.querySelector('.research-tile'),serviceWorker:!!navigator.serviceWorker?.controller})).catch(()=>null)};await p.screenshot({path:shots+'/foundation-'+fault+'-failure-320.png'}).catch(()=>{});throw error;}finally{blocked=false;release();await c.close();}
  }
  report.checks.push('Shared production component visual contracts at seven widths: responsive grids and no collisions, 44px controls, native details keyboard/open/closed, empty/reset, large text/system focus, real lazy loading/error/reload states; screenshots require separate human review');
+}
+export function assertFallbackGeometry(boxes){
+ const overlaps=(a,b)=>a&&b&&Math.min(a.right,b.right)-Math.max(a.left,b.left)>1&&Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top)>1;
+ assert.ok(boxes.map.height>=120,'usable alternate map height');
+ for(const [label,a,b]of[['note/map',boxes.note,boxes.map],['choices/map',boxes.choices,boxes.map],['choices/toolbar',boxes.choices,boxes.toolbar],['note/kicker',boxes.note,boxes.kicker],['note/sun key',boxes.note,boxes.sun],['map/day status',boxes.map,boxes.dayStatus]])assert.equal(!!overlaps(a,b),false,'alternate renderer overlap: '+label+' '+JSON.stringify(boxes));
+ assert.ok(boxes.controls.every(r=>r.width>=44&&r.height>=44),'alternate place choices retain44px targets');
+}
+export async function fallbackGeometry(page){
+ const boxes=await page.locator('.fallback-globe').evaluate(root=>{const stage=root.closest('.globe-stage'),box=el=>{if(!el?.getClientRects().length)return null;const r=el.getBoundingClientRect();return{left:r.left,right:r.right,top:r.top,bottom:r.bottom,width:r.width,height:r.height};};return{note:box(root.querySelector(':scope>p')),map:box(root.querySelector(':scope>svg')),choices:box(root.querySelector('.fallback-place-list')),toolbar:box(stage.querySelector('.stage-toolbar')),kicker:box(stage.querySelector('.stage-kicker')),sun:box(stage.querySelector('.sun-key')),dayStatus:box(stage.querySelector('.day-state')),controls:[...root.querySelectorAll('.fallback-place-list button')].map(box)};});assertFallbackGeometry(boxes);return boxes;
+}
+export async function globeCapabilityFallback(browser,base,ready,monitor,report,shots){
+ const context=await browser.newContext({viewport:{width:320,height:720},reducedMotion:'reduce'}),page=await context.newPage();monitor(page);
+ try{
+  await page.addInitScript(()=>{const original=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(kind,...args){if(kind==='webgl2')return null;return original.call(this,kind,...args);};});
+  await page.goto(base+'/#globe');await ready(page);const fallback=page.locator('.fallback-globe');await fallback.locator('svg').waitFor();assert.equal(await page.locator('.globe-render canvas').count(),0);
+  const before=await fallback.locator('svg').innerHTML();await fallback.focus();await page.keyboard.press('ArrowRight');await page.waitForFunction(previous=>document.querySelector('.fallback-globe svg')?.innerHTML!==previous,before);
+  await page.getByRole('button',{name:'Länder',exact:true}).click();const picker=page.getByRole('combobox',{name:'Wohin möchtest du reisen?',exact:true});await picker.fill('Deutschland');await picker.press('ArrowDown');await picker.press('Enter');await page.locator('.info-card.has-place').getByRole('heading',{name:'Deutschland',exact:true}).waitFor();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
+  await fallback.scrollIntoViewIfNeeded();report.globeFallbackGeometry=await fallbackGeometry(page);if(shots)await page.screenshot({path:shots+'/foundation-globe-fallback-320.png',animations:'disabled'});report.globeCapabilityFallback={webgl2Unavailable:true,existingFallbackUsed:true,keyboardRotation:true,realCountrySelection:true};report.checks.push('Unavailable WebGL2 uses the existing interactive map directly, without starting a failing3D renderer; keyboard rotation and country choice remain usable');
+ }finally{await context.close();}
 }

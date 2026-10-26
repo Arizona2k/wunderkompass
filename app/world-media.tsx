@@ -4,7 +4,7 @@ import PHOTOS from './world-photo-core.json';
 import ids from './world-photo-ids.json';
 import dataURL from './world-photos.json?url&no-inline';
 import integrity from './world-photo-integrity.json';
-import {readLimitedBytes,verifiedContentJSON} from './verified-content.mjs';
+import {fetchLimitedBytes,verifiedContentJSON} from './verified-content.mjs';
 
 type Photo={id:string;src:string;author:string;license:string;license_url:string;source_page_url:string;alt_de:string;width:number;height:number;transformations_de:string;fit?:string;caption?:string;label?:string};
 // The four gateway pictures and two journey pictures keep their full immediate credits.
@@ -13,8 +13,8 @@ let saved:Record<string,Photo>|null=null,pending:Promise<Record<string,Photo>>|n
 function load(){
  if(saved)return Promise.resolve(saved);
  if(!pending)pending=(async()=>{
-  const response=await fetch(dataURL,{signal:AbortSignal.timeout(12000)});
-  const data=await verifiedContentJSON(await readLimitedBytes(response,integrity.bytes),integrity);
+  const bytes=await fetchLimitedBytes(dataURL,integrity.bytes,{signal:AbortSignal.timeout(12000)});
+  const data=await verifiedContentJSON(bytes,integrity);
   if(!data||Array.isArray(data)||Object.keys(data).length!==ids.length||!ids.every(id=>data[id]?.id===id))throw Error('Unvollständige Bildnachweise');
   saved=data;return data as Record<string,Photo>;
  })().catch(error=>{pending=null;throw error;});
