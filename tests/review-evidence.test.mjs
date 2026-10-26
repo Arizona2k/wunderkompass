@@ -7,6 +7,35 @@ test('critical states are always retained while interchangeable intermediate bin
  for(const f of ['journey-engine-webkit-390.png','quality-learning-journey-native-zoom-200.png','quality-navigation-offline-start.png','quality-navigation-updates-archive-320-full.png','quality-learning-journey-water-390.png'])assert.equal(retainScreenshot(f),true,f);
  assert.equal(retainScreenshot('quality-navigation-home-first-360-full.png'),false);
 });
+test('approved native intermediate selection requires both actual endpoints and preserves other states',()=>{
+ const families=['animal-new-monarch','animal-workshop-normal-0','animal-workshop-large-2','solar-caption-diameters-normal','solar-caption-distances-large','history-first','history-oldest'];
+ for(const engine of ['firefox','webkit'])for(const family of families){
+  const prefix=`journey-engine-${engine}-${family}-`,available=new Set([320,390,768,1440].map(width=>prefix+width+'.png'));
+  for(const width of [390,768]){
+   const name=prefix+width+'.png';assert.equal(retainScreenshot(name),true);assert.equal(retainScreenshot(name,{available}),false);
+   for(const endpoint of [320,1440]){const missing=new Set(available);missing.delete(prefix+endpoint+'.png');assert.equal(retainScreenshot(name,{available:missing}),true);}
+  }
+  for(const endpoint of [320,1440])assert.equal(retainScreenshot(prefix+endpoint+'.png',{available}),true);
+ }
+ for(const family of ['animal-workshop-focus','animal-new-error','animal-new-failure','animal-new-offline','animal-new-zoom','animal-new-200','early-original-animal-new-monarch','unknown-new-surface','animal-workshop-normal-3']){
+  const prefix='journey-engine-webkit-'+family+'-',available=new Set([320,390,768,1440].map(width=>prefix+width+'.png'));
+  for(const width of [390,768])assert.equal(retainScreenshot(prefix+width+'.png',{available}),true,family);
+ }
+ assert.ok(requiredScreenshots.every(name=>retainScreenshot(name,{available:new Set(requiredScreenshots)})));
+});
+test('completed bound review samples approved intermediates while preserving every original and manifest identity',async t=>{
+ const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-approved-review-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));
+ const prefix='journey-engine-firefox-history-first-',orphan='journey-engine-webkit-history-oldest-',names=[...new Set([...requiredScreenshots,...[320,390,768,1440].map(width=>prefix+width+'.png'),orphan+'320.png',orphan+'390.png'])],originals=new Map();
+ for(const name of names){const png=Buffer.alloc(24);Buffer.from('89504e470d0a1a0a','hex').copy(png);png.writeUInt32BE(Number(name.match(/-(\d+)\.png$/)?.[1]??320),16);png.writeUInt32BE(844,20);const bytes=Buffer.concat([png,Buffer.from('synthetic storage fixture '+name)]);originals.set(name,bytes);await fs.writeFile(path.join(dir,name),bytes);}
+ const source=await sourceDigest();await fs.writeFile(path.join(dir,'portable-report.json'),JSON.stringify({status:'passed',scope:'complete mandatory regression',build:'synthetic-selection'}));await fs.writeFile(path.join(dir,'handoff.json'),JSON.stringify({sourceDigest:source,build:'synthetic-selection'}));await fs.writeFile(path.join(dir,'engine-report.json'),JSON.stringify({status:'passed',sourceDigest:source,build:'synthetic-selection'}));
+ const result=await prepareReview(dir);assert.equal(result.status,'passed');assert.equal(result.screenshots.length,names.length);assert.equal(result.storage.omittedImages,2);
+ for(const row of result.screenshots){const bytes=originals.get(row.file);assert.deepEqual(await fs.readFile(path.join(dir,row.file)),bytes);assert.equal(row.bytes,bytes.length);assert.equal(row.sha256,createHash('sha256').update(bytes).digest('hex'));assert.equal(row.width,bytes.readUInt32BE(16));assert.equal(row.height,844);const omitted=[390,768].some(width=>row.file===prefix+width+'.png');assert.equal(row.retained,!omitted);if(omitted)await assert.rejects(fs.access(path.join(dir,'review',row.file)),{code:'ENOENT'});else assert.deepEqual(await readReviewScreenshot(path.join(dir,'review'),row),bytes);}
+ assert.equal(result.retainedBytes,[...originals].filter(([name])=>![390,768].some(width=>name===prefix+width+'.png')).reduce((sum,[,bytes])=>sum+bytes.length,0));
+ // Native failures and stale bindings disable this selection even if Chromium passed.
+ for(const engine of [{status:'failed',sourceDigest:source},{status:'passed',sourceDigest:'stale'}]){await fs.writeFile(path.join(dir,'engine-report.json'),JSON.stringify({...engine,build:'synthetic-selection'}));const unbound=await prepareReview(dir);assert.equal(unbound.storage.omittedImages,0);assert.ok(unbound.screenshots.every(row=>row.retained));}
+ await fs.writeFile(path.join(dir,'portable-report.json'),JSON.stringify({status:'failed',scope:'complete mandatory regression',build:'synthetic-selection'}));const failed=await prepareReview(dir);assert.equal(failed.status,'diagnostic');assert.ok(failed.screenshots.every(row=>row.retained));
+ await fs.writeFile(path.join(dir,'portable-report.json'),JSON.stringify({status:'passed',scope:'complete mandatory regression',build:'synthetic-selection'}));await fs.writeFile(path.join(dir,'handoff.json'),JSON.stringify({sourceDigest:'stale',build:'synthetic-selection'}));await assert.rejects(prepareReview(dir),/Current handoff/);const stale=JSON.parse(await fs.readFile(path.join(dir,'review/review-manifest.json'),'utf8'));assert.ok(stale.screenshots.every(row=>row.retained));
+});
 test('failed runs retain every actual image; corrupted image evidence fails closed',async()=>{
  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-evidence-'));try{
   const png=Buffer.alloc(24);Buffer.from('89504e470d0a1a0a','hex').copy(png);png.writeUInt32BE(320,16);png.writeUInt32BE(844,20);

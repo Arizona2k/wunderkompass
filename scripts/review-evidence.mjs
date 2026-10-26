@@ -51,8 +51,12 @@ requiredScreenshots.push('quality-navigation-solar-caption-negative-320.png');
 requiredScreenshots.push(...[320,360,390,402,768,1024,1440,1920].flatMap(w=>['normal','large'].flatMap(state=>['diameters','distances'].map(mode=>'quality-navigation-solar-caption-'+mode+'-'+state+'-'+w+'.png'))),...['diameters','distances'].map(mode=>'quality-navigation-solar-caption-'+mode+'-large-640.png'));
 requiredScreenshots.push(...[320,360,390,768,1024,1440,1920].flatMap(w=>[...[0,1,2].flatMap(level=>['normal','large'].map(state=>'quality-navigation-animal-workshop-'+state+'-'+level+'-'+w+'.png')),'quality-navigation-animal-workshop-focus-'+w+'.png']),'quality-navigation-animal-native-200-large-640.png');
 requiredScreenshots.push('quality-navigation-animal-search-delayed-390.png');
-export function retainScreenshot(name){
+export function retainScreenshot(name,{available=null}={}){
  if(requiredScreenshots.includes(name))return true;
+ // Only a fully bound completed review supplies this actual capture set.
+ // Sample a repeated intermediate view only if both endpoint PNGs exist;
+ // all required/diagnostic/offline/zoom/focus/unknown views keep prior rules.
+ if(available instanceof Set&&!/(?:focus|error|failure|offline|zoom|200)/.test(name)&&/^journey-engine-(?:firefox|webkit)-(?:animal-new-[a-z-]+|animal-workshop-(?:normal|large)-[012]|solar-caption-(?:diameters|distances)-(?:normal|large)|history-(?:first|oldest))-(?:390|768)\.png$/.test(name)&&[320,1440].every(width=>available.has(name.replace(/-(?:390|768)\.png$/, '-'+width+'.png'))))return false;
  if(name.startsWith('journey-engine-')||name.startsWith('quality-foundation-')||name.startsWith('quality-no-news-'))return true;
  if(/quality-learning-(journey-links-|journey-large-focus-|journey-native|journey-[a-z]+-390\.png)/.test(name))return true;
  // Full long-history and zoom/failure screenshots are useful, not interchangeable thumbnails.
@@ -98,12 +102,13 @@ export async function prepareReview(directory='.qa-output'){
  let engineReport=null,engineReadable=true;
  try{engineReport=JSON.parse(await fs.readFile(path.join(directory,'engine-report.json'),'utf8'));}catch(error){if(error.code!=='ENOENT')engineReadable=false;}
  const shareComplete=complete&&handoff?.sourceDigest===currentSource&&handoff.build===report.build&&engineReadable&&(!engineReport||(engineReport.status==='passed'&&engineReport.sourceDigest===currentSource&&engineReport.build===report.build));
+ const availableScreenshots=new Set(files.filter(file=>file.name.endsWith('.png')).map(file=>file.name));
  const screenshots=[],copied=[],payloads=new Map();let generatedBytes=0,retainedBytes=0;
  // Preserve failure reports even if a damaged PNG aborts curation.
  for(const file of files.filter(f=>/\.(json|xml)$/.test(f.name))){await fs.copyFile(file.source,path.join(destination,file.name));copied.push(file.name);}
  for(const file of files.filter(f=>/^(quality-|journey-engine-).*\.png$/.test(f.name))){
   const {name,source,sourceFile}=file,data=await fs.readFile(source);if(data.length<24||data.subarray(0,8).toString('hex')!=='89504e470d0a1a0a')throw Error('Invalid screenshot '+name);
-  const retained=!complete||retainScreenshot(name),capture={file:name,...(sourceFile?{sourceFile}:{}),bytes:data.length,width:data.readUInt32BE(16),height:data.readUInt32BE(20),sha256:createHash('sha256').update(data).digest('hex'),retained};screenshots.push(capture);generatedBytes+=data.length;
+  const retained=!complete||retainScreenshot(name,{available:shareComplete?availableScreenshots:null}),capture={file:name,...(sourceFile?{sourceFile}:{}),bytes:data.length,width:data.readUInt32BE(16),height:data.readUInt32BE(20),sha256:createHash('sha256').update(data).digest('hex'),retained};screenshots.push(capture);generatedBytes+=data.length;
   // Required/focus/error originals keep their physical names as well. Other
   // captures retain every identity, dimension, hash and source via storedAs.
   if(retained)retainedBytes+=await storeReviewScreenshot(destination,capture,data,payloads,{share:shareComplete&&!requiredScreenshots.includes(name)&&!/(?:focus|error|failure)/.test(name)});
