@@ -6,6 +6,19 @@ import {KNOWLEDGE_CONNECTIONS} from '../../app/knowledge-connections.ts';
 const read=async p=>JSON.parse(await fs.readFile(new URL(p,import.meta.url),'utf8'));
 const topics=await read('../../app/world-catalog.json'),categories=await read('../../exports/content/world-categories.json');
 
+export function assertHomePanelReserve(boxes){
+ const normalEndSpace=boxes.worldMarginBottom+boxes.panelPaddingBottom+boxes.panelBorderBottom;
+ assert.ok(boxes.unusedAfterWorld<=normalEndSpace+2,'unnecessary home panel reserve after the six worlds: '+JSON.stringify(boxes));
+}
+export async function homePanelLayout(page){
+ const boxes=await page.evaluate(()=>{
+  const panel=document.querySelector('.learning-panel'),world=document.querySelector('.discovery-worlds'),next=document.querySelector('.discovery-pathways');
+  if(!panel||!world||!next)throw Error('Home worlds and connections must be present before measuring');
+  const p=panel.getBoundingClientRect(),w=world.getBoundingClientRect(),n=next.getBoundingClientRect(),ps=getComputedStyle(panel),ws=getComputedStyle(world);
+  return{panelHeight:p.height,worldHeight:w.height,unusedAfterWorld:p.bottom-w.bottom,distanceToConnections:n.top-w.bottom,worldMarginBottom:parseFloat(ws.marginBottom),panelPaddingBottom:parseFloat(ps.paddingBottom),panelBorderBottom:parseFloat(ps.borderBottomWidth),panelMinBlock:ps.minBlockSize};
+ });assertHomePanelReserve(boxes);return boxes;
+}
+
 export async function discoveryCentral(page,ready,report,width,shots){
  const home=async()=>{await page.evaluate(()=>location.hash='home');try{await page.locator('.discovery-hero').waitFor();}catch(error){report.routeReturnFailure={width,...await page.evaluate(()=>({hash:location.hash,mode:document.querySelector('.earth-app')?.dataset.mode,selectedTabs:[...document.querySelectorAll('[role=tab][aria-selected=true]')].map(e=>e.textContent),heroPresent:!!document.querySelector('.discovery-hero')})).catch(e=>({diagnosticError:e.message}))};await page.screenshot({path:shots+'/route-return-failure-'+width+'.png',fullPage:true}).catch(()=>{});throw error;}};
  const inspect=async()=>assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'discovery overflow '+width);
@@ -176,7 +189,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    const start=p.getByRole('button',{name:'WunderKompass durchsuchen',exact:true});
    assert.equal(await start.evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight}),true,'clear first step visible without scrolling '+width);
    await homeTextGeometry(p);await homeTouchTargets(p);await homeContrast(start);await start.hover();await homeContrast(start);await p.mouse.move(0,0);
-   const capture=async state=>{await p.evaluate(()=>scrollTo(0,0));await p.screenshot({path:shots+'/home-'+state+'-'+width+'-full.png',fullPage:true,animations:'disabled'});await p.screenshot({path:shots+'/home-'+state+'-'+width+'-top.png',animations:'disabled'});report.homepageViews.push({width,height,state,scrollHeight:await p.evaluate(()=>document.documentElement.scrollHeight)});};
+   const capture=async state=>{await p.evaluate(()=>scrollTo(0,0));const panelLayout=await homePanelLayout(p);await p.screenshot({path:shots+'/home-'+state+'-'+width+'-full.png',fullPage:true,animations:'disabled'});await p.screenshot({path:shots+'/home-'+state+'-'+width+'-top.png',animations:'disabled'});report.homepageViews.push({width,height,state,panelLayout,scrollHeight:await p.evaluate(()=>document.documentElement.scrollHeight)});};
    await capture('first');
    await mainNavigation(p,ready,report,width,shots);
    if(width<=390){await p.getByRole('button',{name:'So geht’s',exact:true}).tap();await p.locator('.help-dialog').waitFor();await p.keyboard.press('Escape');}
