@@ -1,4 +1,5 @@
 "use client";
+import {activityIsOpen} from './activity-view.mjs';
 
 import Link from "next/link";
 import {useHashRoute,navigateHash,replaceHash,focusLearningMain,scheduleRouteRestore} from "./hash-route";
@@ -259,7 +260,7 @@ export default function EarthExplorer(){
         <LearningNavigation area={area} onNavigate={goMode}/>
       {mode==="home"?<DiscoveryIntro onHelp={()=>setHelp(true)} onSearch={openSearch} onGlobe={()=>goMode("globe")}/>:<div className="page-heading"><div><p className="eyebrow"><Compass size={15}/> DEINE WISSENSWELT</p><h1>{PAGE_HEADINGS[mode]?.title??"Deine nächste Entdeckung"}</h1><p>{PAGE_HEADINGS[mode]?.text??"Entdecken, ausprobieren und verstehen – in deinem Tempo."}</p></div></div>}
       {!online&&<p className="offline-note" role="status">Du bist gerade offline. Geladene Inhalte kannst du weiter nutzen. Dein Entdeckerpass bleibt auf diesem Gerät.</p>}
-      {!local.ready&&<p className="storage-status" role="status">Dein Entdeckerpass wird geladen …</p>}{local.ready&&lastText&&!(last?.type==="journey"&&routePath.startsWith("journeys/"+last.id+"/"))&&<div className="continue-card"><Compass size={25}/><div><strong>Weiter entdecken</strong><p>{lastText}</p></div><button className="primary-button" onClick={continueActivity}>{last?.type==="journey"?"Weiterlernen":"Fortsetzen"}</button></div>}
+      {!local.ready&&<p className="storage-status" role="status">Dein Entdeckerpass wird geladen …</p>}{local.ready&&lastText&&!activityIsOpen(last,{route:routePath,mode,gameFamily:gamePanel,gameId:resumeGame?.id,placeId:selected?.id})&&<div className="continue-card"><Compass size={25}/><div><strong>Weiter entdecken</strong><p>{lastText}</p></div><button className="primary-button" onClick={continueActivity}>{last?.type==="journey"?"Weiterlernen":"Fortsetzen"}</button></div>}
         <TabsContent value={area} className="learning-panel">
           {speechNotice&&area!=="explore"&&<p className="speech-notice" role="status">{speechNotice}</p>}
           {mode==="home"&&<DiscoveryWorlds onCategory={id=>navigateHash('world/'+id)} onAll={()=>goMode('world')}/>}
