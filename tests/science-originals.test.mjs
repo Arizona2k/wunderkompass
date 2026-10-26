@@ -1,10 +1,11 @@
+import {beforePeopleMethods,beforePeopleMethodQuestions,beforePeopleMethodGraph} from './people-methods-reference.mjs';
 import {topicAtHistoricalMediaReference} from './retained-topic-reference.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
-import catalog from '../app/world-catalog.json' with {type:'json'};
-import graph from '../app/world-connections.json' with {type:'json'};
+import currentCatalog from '../app/world-catalog.json' with {type:'json'};
+import currentGraph from '../app/world-connections.json' with {type:'json'};
 import original from '../content/science-originals-retained.json' with {type:'json'};
 import review from '../content/science-originals-review.json' with {type:'json'};
-import {CHALLENGE_BANK} from '../app/knowledge-challenge.ts';
+import {CHALLENGE_BANK as currentChallengeBank} from '../app/knowledge-challenge.ts';
 import {resonanceGain,triangleParts,restoreInvestigationValue} from '../app/concept-math.mjs';
 
 test('restored fractional investigation inputs retain scientific values while malformed or out-of-domain input stays bounded',()=>{
@@ -52,3 +53,8 @@ test('each retained science original has three distinct authored inquiry paths w
  // Structural completeness is not evidence of three genuinely different reasoning
  // demands or scientific truth. Those require the recorded source/product review.
 });
+
+// Historical assertions retain their original release boundary; new additions are covered in people-methods.test.mjs.
+const catalog=beforePeopleMethods(currentCatalog);
+const CHALLENGE_BANK=beforePeopleMethodQuestions(currentChallengeBank);
+const graph=beforePeopleMethodGraph(currentGraph);

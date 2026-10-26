@@ -7,7 +7,7 @@ import legacy from './fixtures/legacy-people18-before-two-biographies.json' with
 import {worldGameBank,validWorldGameOrder,restoreWorldGameOrders} from '../app/world-game-bank.ts';
 
 test('two prepared biographies retain all18 real old people clues and explain both reciprocal connections',()=>{
- const current=worldGameBank('people');assert.equal(current.length,20);assert.equal(legacy.bank.length,18);
+ const current=worldGameBank('people').filter(q=>!['person-maria_sibylla_merian','person-inge_lehmann'].includes(q.id));assert.equal(current.length,20);assert.equal(legacy.bank.length,18);
  for(const old of legacy.bank){const now=current.find(q=>q.id===old.id);assert.ok(now);assert.equal(now.prompt,old.prompt);assert.equal(now.answers[now.correct],old.answers[old.correct]);assert.equal(now.why,old.why);}
  for(const [id,target] of [['person-mary_anning','person-charles_darwin'],['person-ibn_al_haytham','invention-camera']]){
   const person=catalog.find(t=>t.id===id),related=catalog.find(t=>t.id===target);
@@ -30,9 +30,9 @@ test('the actual old18 choice words and saved five-question people round survive
 });
 
 test('six distinct voluntary reasoning levels retain scoped examples, specific feedback and qualified examples',()=>{
- assert.equal(inquiries.schemaVersion,1);assert.equal(inquiries.entries.length,2);
+ assert.equal(inquiries.schemaVersion,1);const original=inquiries.entries.filter(e=>['person-mary_anning','person-ibn_al_haytham'].includes(e.id));assert.equal(original.length,2);
  const goals=[];
- for(const entry of inquiries.entries){
+ for(const entry of original){
   assert.ok(catalog.some(t=>t.id===entry.id));assert.ok(['fossil-evidence','light-to-eye'].includes(entry.figure));
   assert.deepEqual(entry.tasks.map(t=>t.age),['6-8','9-11','12-14']);
   for(const t of entry.tasks){

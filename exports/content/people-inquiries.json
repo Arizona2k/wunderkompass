@@ -126,5 +126,133 @@
         ]
       }
     ]
+  },
+  {
+    "id": "person-maria_sibylla_merian",
+    "figure": "insect-observation-series",
+    "ownMediaConcept": "Four clearly invented observation cards for one monitored fictional butterfly: egg/caterpillar/pupa/adult; HTML labels and own simple shapes, no copied Merian plate, original scientific record or universal insect lifecycle. Toggle one selected picture versus the recorded sequence. No dates/durations implying biological timing and no original portrait claim.",
+    "tasks": [
+      {
+        "age": "6-8",
+        "goal": "Beobachtungen über die Zeit erkennen",
+        "example": "Unser erfundenes Beispiel zeigt vier notierte Entwicklungsstadien eines beobachteten Schmetterlings.",
+        "prompt": "Was ergänzt die Folge gegenüber einem einzelnen Falterbild?",
+        "answers": [
+          "Sie hält Veränderungen über mehrere Beobachtungen fest.",
+          "Sie zeigt, dass alle Insekten genau so wachsen.",
+          "Sie beweist, dass jede Raupe dieselbe Nahrung frisst."
+        ],
+        "correct": 0,
+        "hint": "Prüfe, welche Aussage sich tatsächlich auf diese Beobachtungsfolge beschränkt.",
+        "why": "Die Folge ordnet mehrere Beobachtungen. Für Aussagen über alle Insekten oder jede Raupennahrung reicht dieses Beispiel nicht.",
+        "wrongReasons": [
+          null,
+          "Wir betrachten einen gedachten Schmetterling. Andere Insektengruppen können sich anders entwickeln.",
+          "Die Folge untersucht nicht die Nahrung aller Raupen. Unterschiedliche Arten können unterschiedliche Nahrung brauchen."
+        ]
+      },
+      {
+        "age": "9-11",
+        "goal": "Eine Behauptung mit einem passenden Beleg verbinden",
+        "example": "Zwei verschiedene Tiere liegen als einzelne Bilder nebeneinander. Die Notizen sagen nicht, ob sie zu derselben Entwicklungsfolge gehören.",
+        "prompt": "Welche Zusatzinformation hilft bei der Zuordnung?",
+        "answers": [
+          "Die beiden Bilder mit derselben Hintergrundfarbe ausmalen.",
+          "Beobachtungsnotizen, die die Entwicklung desselben Tiers verfolgen.",
+          "Die Namen der Tiere durch besonders ähnliche Wörter ersetzen."
+        ],
+        "correct": 1,
+        "hint": "Ein passender Beleg muss die Entwicklung verbinden, nicht nur die Bilder ähnlich aussehen lassen.",
+        "why": "Eine nachvollziehbare Beobachtungsfolge kann die Entwicklungsstadien verbinden. Ähnliche Gestaltung oder Namen liefern diesen Beleg nicht.",
+        "wrongReasons": [
+          "Gleiche Bildfarben sind eine Gestaltungsentscheidung. Sie beobachten keine Entwicklung.",
+          null,
+          "Ähnliche Wörter sind kein Entwicklungsnachweis. Dafür braucht es Informationen über die beobachteten Tiere."
+        ]
+      },
+      {
+        "age": "12-14",
+        "goal": "Beiträge und Grenzen einer Veröffentlichung prüfen",
+        "example": "Eine Behauptung lautet: Weil Merians Name auf dem Buch steht, stammt alles darin allein von ihr.",
+        "prompt": "Welche Quelleninformation ist für diese Behauptung entscheidend?",
+        "answers": [
+          "Das Buch wurde im Jahr 1705 veröffentlicht.",
+          "Das Buch enthält besonders sorgfältig ausgeführte Bilder.",
+          "Merian nutzte auch Wissen und Arbeit indigener und versklavter Menschen."
+        ],
+        "correct": 2,
+        "hint": "Trenne die Frage nach den Beiträgen anderer Menschen von der Bildqualität und dem Erscheinungsjahr.",
+        "why": "Die dokumentierten Beiträge anderer widersprechen dem Alleinanspruch. Ihre oft fehlenden Namen machen ihr Wissen und ihre Arbeit nicht bedeutungslos.",
+        "wrongReasons": [
+          "Das Erscheinungsjahr belegt einen Zeitpunkt. Es sagt nicht, dass die Autorin ohne Beiträge anderer arbeitete.",
+          "Sorgfältige Bilder sagen noch nicht, von wem alle Beobachtungen und Informationen stammen.",
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "id": "person-inge_lehmann",
+    "figure": "inner-core-evidence-comparison",
+    "ownMediaConcept": "Own qualitative section diagrams with/without inner core and paired written observation/model expectation. Modern simplified layer labels, no precise scale, rays, arrival times, material temperatures, reconstructed original seismogram or claimed numerical simulation. HTML legends remain outsideSVG. Clearly distinguish observed wave signal and inferred layer.",
+    "tasks": [
+      {
+        "age": "6-8",
+        "goal": "Messung und Erklärung unterscheiden",
+        "example": "Unser Lernbild zeigt eine Erdschicht. Der daneben beschriebene Beleg ist eine Aufzeichnung von Erdbebenwellen.",
+        "prompt": "Was ist die Messung?",
+        "answers": [
+          "Die Farbe des gezeichneten Erdkerns",
+          "Die Aufzeichnung des Wellensignals",
+          "Die kreisrunde Form unseres Lernbilds"
+        ],
+        "correct": 1,
+        "hint": "Frage, was ein Messgerät aufzeichnet und was wir zur verständlichen Darstellung gezeichnet haben.",
+        "why": "Das Wellensignal wird gemessen. Farben und die vereinfachte Darstellung sind Entscheidungen unseres Lernbilds.",
+        "wrongReasons": [
+          "Die Bildfarbe ordnet unsere Erklärung. Sie wurde nicht als Farbe des Erdkerns gemessen.",
+          null,
+          "Unser Schnittbild ist eine Darstellung. Das Messgerät zeichnet keine Kreisform des Erdkerns auf."
+        ]
+      },
+      {
+        "age": "9-11",
+        "goal": "Ein Modell an einer unerwarteten Beobachtung prüfen",
+        "example": "Das einfachere Modell sagt für einen Bereich kein solches Signal voraus. Dort wird trotzdem ein passendes schwaches Signal gemessen.",
+        "prompt": "Was ist jetzt sinnvoll?",
+        "answers": [
+          "Die Zeichnung schöner färben und damit die Messung ersetzen.",
+          "Das Signal löschen, weil es nicht zur bisherigen Zeichnung passt.",
+          "Messung prüfen und untersuchen, welche Erklärung sie zusätzlich erfasst."
+        ],
+        "correct": 2,
+        "hint": "Eine Abweichung verlangt Prüfung von Messung und Erklärung. Gestaltungsänderungen lösen die Sachfrage nicht.",
+        "why": "Ein verlässliches unerwartetes Signal kann eine zusätzliche Erklärung nötig machen. Weitere Daten und Rechnungen prüfen, ob das veränderte Modell besser passt.",
+        "wrongReasons": [
+          "Eine schönere Farbe erklärt kein unerwartetes Wellensignal. Dafür sind Messungen und fachliche Überlegungen nötig.",
+          "Eine unbequeme Messung zu entfernen prüft ihre Verlässlichkeit nicht und verbessert das Modell nicht.",
+          null
+        ]
+      },
+      {
+        "age": "12-14",
+        "goal": "Die Reichweite einer Erklärung begrenzen",
+        "example": "Ein verändertes Modell erklärt zusätzliche Wellenankünfte besser als das zuvor benutzte Modell.",
+        "prompt": "Welche Folgerung ist damit angemessen?",
+        "answers": [
+          "Das Modell wird durch passende Messungen gestützt; weitere Eigenschaften brauchen zusätzliche Belege.",
+          "Nun sind jede Temperatur und jeder Stoff im Erdinneren exakt bekannt.",
+          "Damit ist das gezeichnete Schnittbild ein Foto des wirklichen Erdkerns."
+        ],
+        "correct": 0,
+        "hint": "Unterscheide Unterstützung für eine bestimmte Erklärung von einem vollständigen Wissen über alle Eigenschaften.",
+        "why": "Eine Erklärung kann bestimmte Messungen gut erfassen. Genaue Temperaturen, Stoffe oder weitere Grenzen werden nicht allein durch diesen einen Vergleich bestimmt.",
+        "wrongReasons": [
+          null,
+          "Die Erklärung der Wellen liefert nicht automatisch sämtliche Temperaturen und Zusammensetzungen exakt mit.",
+          "Ein passendes Modell bleibt eine Darstellung und Erklärung. Es verwandelt sich nicht in eine direkte Fotografie."
+        ]
+      }
+    ]
   }
 ]

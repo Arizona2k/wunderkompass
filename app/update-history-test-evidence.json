@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "52908ff15e3730ab6e29549e21901eb25dccd82e",
+    "commit": "c9378dcb8f23becd080eba605e485b9ef7dcc701",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -58,7 +58,8 @@
       "daf558d0e5443e61a4e2e5f784ba6997f0ed7d71",
       "1da6eca5f5827a7915e1dbe2477c91406c69d22a",
       "0105c557394779a4a88295fe60dc13dbb3cc8fb0",
-      "52908ff15e3730ab6e29549e21901eb25dccd82e"
+      "52908ff15e3730ab6e29549e21901eb25dccd82e",
+      "c9378dcb8f23becd080eba605e485b9ef7dcc701"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -1516,6 +1517,28 @@
         }
       ],
       "checkedOn": "2026-10-25"
+    },
+    {
+      "number": 64,
+      "title": "Zusammenhängende Gestaltung für Einstieg, Themen, Artikel und Entdeckerpass",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/64",
+      "base": "test-live",
+      "mergedAt": "2026-10-26T02:44:31Z",
+      "mergeCommit": "c9378dcb8f23becd080eba605e485b9ef7dcc701",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/c9378dcb8f23becd080eba605e485b9ef7dcc701/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57228203841,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-26T02:44:46Z",
+          "updatedAt": "2026-10-26T02:44:46Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/EybUTzoMinJUc3zQNTb8FEpRpwFi"
+        }
+      ],
+      "checkedOn": "2026-10-26"
     }
   ]
 }

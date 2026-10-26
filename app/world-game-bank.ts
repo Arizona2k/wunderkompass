@@ -2,6 +2,7 @@ import {habitatDistractors} from './world-game-habitats.mjs';
 import {animalDetectiveClue} from './world-game-support.mjs';
 import {foodDistractors} from './world-game-food.mjs';
 import CATALOG from './world-catalog.json' with {type:'json'};
+import PEOPLE_BASELINE from './people-game-baseline.json' with {type:'json'};
 import type {WorldTopic,WorldQuestion} from './world-types';
 const TOPICS=CATALOG as WorldTopic[];
 type GameItem=WorldQuestion & {id:string;topic:string;image?:string};
@@ -29,7 +30,11 @@ export function worldGameBank(id:string):GameItem[]{const animals=TOPICS.filter(
   q(animals.find(t=>t.id==='animal-cheetah')!,question('Welches Landtier ist besonders für den schnellsten Sprint bekannt?','Gepard',['Giraffe','Panda'],'Geparden können für kurze Strecken besonders schnell sprinten. Sprintgeschwindigkeit ist etwas anderes als lange Ausdauer.')),
   q(animals.find(t=>t.id==='animal-giraffe')!,question('Welches heute lebende Landtier ist am höchsten?','Giraffe',['Elefant','Löwe'],'Hier geht es um Höhe vom Boden bis zum Kopf. Das ist ein anderer Rekord als Gewicht.')),
   q(animals.find(t=>t.id==='animal-common-octopus')!,question('Welches dieser Tiere besitzt acht Arme?','Oktopus',['Delfin','Meeresschildkröte'],'Ein Oktopus hat acht Arme. Das ist eine Eigenschaft, kein Geschwindigkeitsrekord.'))];
- if(id==='people')return people.map((t,i)=>q(t,question('Wer passt zu diesem Hinweis? '+t.intro.replace(t.title,'Diese Person'),t.title,[people[(i+3)%people.length].title,people[(i+7)%people.length].title],t.paragraphs.join(' '))));
+ if(id==='people'){
+  // Keep the actually delivered20-person clue/choice bank stable as new people join.
+  const retained=PEOPLE_BASELINE.map(id=>people.find(t=>t.id===id)!);
+  return people.map((t,i)=>{const old=PEOPLE_BASELINE.indexOf(t.id),index=old<0?i:old;return q(t,question('Wer passt zu diesem Hinweis? '+t.intro.replace(t.title,'Diese Person'),t.title,[retained[(index+3)%retained.length].title,retained[(index+7)%retained.length].title],t.paragraphs.join(' ')));});
+ }
  if(id==='technology')return invent.map((t,i)=>{
   // Preserve old answer banks when principle-only optical cards are added.
   const oldIndex=historicalInventions.findIndex(old=>old.id===t.id),index=oldIndex<0?i:oldIndex;

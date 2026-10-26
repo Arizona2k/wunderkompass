@@ -21,16 +21,32 @@ export async function peopleSourceView(page,{width,shots,engine='chromium',nativ
   const learnedBefore=await page.evaluate(({id,key})=>JSON.parse(localStorage.getItem(key)).progress.discoveries.includes('learned:'+id),{id:entry.id,key:saveKey});
   await article.getByRole('navigation',{name:'In dieser Entdeckerkarte'}).getByRole('button',{name:/Ausprobieren$/}).focus();await page.keyboard.press('Enter');assert.equal(await box.evaluate(e=>e===document.activeElement),true,'wayfinder focuses the actual research activity');
   const figure=box.locator('.people-evidence-figure');
+  const coreObservation=entry.figure==='inner-core-evidence-comparison'?await figure.locator('[data-core-observation]').textContent():null;
   for(const scene of[0,1]){
    const button=figure.locator('.visual-choice button').nth(scene);await button.focus();await page.keyboard.press('Enter');assert.equal(await figure.getAttribute('data-evidence-scene'),String(scene));
    if(entry.figure==='fossil-evidence'){
     const outlines=await figure.locator('[data-bone-outline]').evaluateAll(es=>es.map(e=>e.getAttribute('d')));assert.equal(outlines.length,scene?3:1);assert.equal(new Set(outlines).size,1,'both invented reconstructions retain exactly the observed bone outline');
     if(scene)assert.equal(new Set(await figure.locator('[data-reconstruction-skin]').evaluateAll(es=>es.map(e=>e.getAttribute('fill')))).size,2);
     await figure.getByText('Eigenes erfundenes Museumsbeispiel:',{exact:false}).waitFor();
-   }else{
+   }else if(entry.figure==='light-to-eye'){
     const rays=figure.locator('[data-light-path]');assert.equal(await rays.count(),2);for(const ray of await rays.all())assert.match(await ray.getAttribute('marker-end'),/^url\(#people-light-/,'each actual light path has its own arrowhead');
     assert.equal(await figure.locator('[data-light-path="to-object"]').getAttribute('d'),'M82 120H181');assert.equal(await figure.locator('[data-light-path="'+(scene?'to-screen':'to-eye')+'"]').getAttribute('d'),scene?'M240 120H308':'M240 120H426');assert.equal(await figure.locator('[data-blocking-screen]').count(),scene);assert.equal(await figure.locator('[data-light-path="to-eye"]').count(),scene?0:1);
     await figure.getByText('Kein Nachbau eines historischen Versuchs',{exact:false}).waitFor();
+   }else if(entry.figure==='insect-observation-series'){
+    assert.deepEqual(await figure.locator('[data-observation-card]').evaluateAll(es=>es.map(e=>Number(e.dataset.observationCard))),scene?[0,1,2,3]:[3],'the sequence follows one butterfly from egg to adult without a return arrow');
+    assert.equal(await figure.locator('[data-adult-outline]').count(),1,'the single adult is retained as the final observation');
+    if(scene)await figure.getByText('Ein erwachsener Falter wird nicht wieder zum Ei',{exact:false}).waitFor();
+    await figure.getByText('keine echten Beobachtungsdaten',{exact:false}).waitFor();
+   }else if(entry.figure==='inner-core-evidence-comparison'){
+    assert.equal(await figure.locator('[data-inner-core]').count(),scene,'the hypothesis changes only the inferred inner core');
+    await figure.locator('[data-core-observation]').getByText('Schwache Erdbebenwellensignale wurden auch in einem Bereich aufgezeichnet',{exact:false}).waitFor();
+    await figure.getByText('Kein Foto, originales Seismogramm oder berechneter Wellenverlauf',{exact:false}).waitFor();
+    assert.equal(await figure.locator('[data-core-observation]').textContent(),coreObservation,'the observed signal stays the same when the explanation changes');
+    assert.equal(await figure.locator('svg path').count(),0,'no invented measured wave ray or seismogram');
+   }else assert.fail('Unreviewed people figure '+entry.figure);
+   if(entry.figure==='insect-observation-series'||entry.figure==='inner-core-evidence-comparison'){
+    assert.equal(await figure.locator('svg text').count(),0,'labels are readable wrapping HTML, not tiny SVG text');
+    await figure.getByText('mit KI-Unterstützung',{exact:false}).waitFor();
    }
   }
   for(let level=0;level<3;level++){
@@ -56,7 +72,7 @@ export async function peopleSourceView(page,{width,shots,engine='chromium',nativ
    for(const [suffix,part]of[['controls',figure.locator('.visual-choice')],['limits',figure.locator('.small-note')]]){await part.evaluate(async e=>{e.scrollIntoView({block:'start',behavior:'instant'});await new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok)));});await captureNativeViewport(page,path.join(shots,prefix+'-'+suffix+'.png'));}
   }
   observed.push({id:entry.id,width,native,threeVoluntaryLevels:true,allSixWrongFeedbacks:true,actualModelSemantics:true,sourceLinks:true,noExplorationStamp:true,questionsChecked:questions,reciprocalTargetAndBack:true});
- }assert.equal(observed.length,2);complete=true;return observed;}finally{if(complete)await page.evaluate(hash=>location.hash=hash,initial);}
+ }assert.deepEqual(observed.map(e=>e.id),entries.map(e=>e.id),'every registered biography activity was actually checked');complete=true;return observed;}finally{if(complete)await page.evaluate(hash=>location.hash=hash,initial);}
 }
 export async function peopleLegacyRound(browser,base,ready,report,shots){
  const context=await browser.newContext({viewport:{width:390,height:950},reducedMotion:'reduce',acceptDownloads:true,serviceWorkers:'block'}),page=await context.newPage(),errors=[],http=[];

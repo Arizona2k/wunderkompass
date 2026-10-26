@@ -2,13 +2,14 @@
 import {useId} from 'react';
 import MEDIA from './people-illustrations.json';
 import './people-evidence.css';
+import {CoreHypothesisDrawing,InsectSequenceDrawing} from './people-observation-drawings';
 const bone='M57 75C43 55 29 69 37 83C23 94 42 108 56 94L178 94C194 109 211 95 200 83C213 67 192 55 178 75Z';
 export const hasPeopleIllustration=(id:string)=>MEDIA.entries.some(e=>e.id===id);
 export default function PeopleIllustration({id,compact=false}:{id:string;compact?:boolean}){
  const media=MEDIA.entries.find(e=>e.id===id);
  if(!media)return null;
  return <figure className={'topic-illustration people-illustration '+(compact?'compact':'')}>
-  {media.kind==='fossil-evidence'?<FossilDrawing label={media.alt}/>:<><LightDrawing label={media.alt}/>{!compact&&<div className="people-evidence-legend"><span>Lichtquelle</span><span>Gegenstand</span><span>Auge</span></div>}</>}
+  {media.kind==='fossil-evidence'?<FossilDrawing label={media.alt}/>:media.kind==='light-to-eye'?<><LightDrawing label={media.alt}/>{!compact&&<div className="people-evidence-legend"><span>Lichtquelle</span><span>Gegenstand</span><span>Auge</span></div>}</>:media.kind==='insect-observation-series'?<InsectSequenceDrawing label={media.alt}/>:media.kind==='inner-core-evidence-comparison'?<CoreHypothesisDrawing label={media.alt}/>:null}
   <figcaption>{media.caption}</figcaption>
  </figure>;
 }
