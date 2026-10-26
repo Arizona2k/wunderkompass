@@ -1,7 +1,7 @@
 import {useLayoutEffect,useState} from 'react';
 import {ArrowRight,Compass,FlaskConical,Gamepad2,Globe2,Lightbulb,Search} from 'lucide-react';
 import {navigateHash,scheduleRouteRestore} from './hash-route';
-import DiscoveryVisual from './discovery-visual';
+import WorldPhoto,{WORLD_PHOTOS} from './world-media';
 import WorldGateways from './world-gateways';
 import {WORLD_INDEX,WORLD_ROUTES} from './world-index';
 import DISCOVERY_CONNECTION_INDEX from './discovery-connections.json';
@@ -17,12 +17,17 @@ function initialTrail(){
 
 export function DiscoveryIntro({onSearch,onGlobe,onHelp}:{onSearch:()=>void;onGlobe:()=>void;onHelp:()=>void}){
  useLayoutEffect(()=>scheduleRouteRestore('home',!!history.state?.wunderRoute||!!history.state?.wunderFocus),[]);
+ const photo=WORLD_PHOTOS['honey-bee'];
  return <section className="discovery-hero" aria-labelledby="discovery-title">
-  <div className="discovery-hero-copy"><h1 id="discovery-title">Was möchtest du <span>heute verstehen?</span></h1><p>Deinen Fragen auf der Spur.</p>
+  <div className="discovery-hero-copy"><h1 id="discovery-title">Was möchtest du <span>heute verstehen?</span></h1>
    <div className="discovery-start"><button className="discovery-search" aria-label="WunderKompass durchsuchen" aria-describedby="home-search-examples" data-route-focus="home-search" onClick={onSearch}><Search size={22}/><span><strong>Suche nach Themen</strong><small id="home-search-examples">Zum Beispiel: Mond oder Elefant</small></span><ArrowRight size={20}/></button></div>
    <div className="discovery-quiet-links"><button className="discovery-globe-link" data-route-focus="home-globe" onClick={onGlobe}><Globe2 size={18}/> Direkt zur Weltkugel</button><button className="discovery-mobile-help" onClick={onHelp}>So geht’s</button></div>
   </div>
-  <figure className="discovery-hero-art"><DiscoveryVisual/><figcaption>Mit KI-Unterstützung erstellte eigene Illustration · nicht maßstabsgetreu</figcaption></figure>
+  <div className="discovery-hero-art"><WorldPhoto id="honey-bee" credit={false} eager/>
+   <div className="discovery-feature"><a href="#world/topic/animal-honey-bee" data-route-focus="home-bee" onClick={event=>{event.preventDefault();navigateHash('world/topic/animal-honey-bee');}}>Wie hilft eine Biene der Blüte?<ArrowRight size={20} aria-hidden="true"/></a>
+    <details className="discovery-photo-credit"><summary>Foto & Quelle</summary><p>{photo.alt_de}</p><p>{photo.author} · <a href={photo.license_url} target="_blank" rel="noreferrer">{photo.license}</a> · <a href={photo.source_page_url} target="_blank" rel="noreferrer">Original und Rechte</a></p><p>{photo.transformations_de}</p></details>
+   </div>
+  </div>
  </section>;
 }
 
