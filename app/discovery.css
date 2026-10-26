@@ -182,7 +182,7 @@
 .learning-tabs{gap:0!important}
 .discovery-hero{display:grid;color:var(--wk-ink);position:relative;isolation:isolate;grid-template-columns:1fr 1fr;border:0;border-radius:0;background:transparent;gap:32px;overflow:visible;margin-bottom:28px}
 .discovery-hero-copy{padding:clamp(16px,3vw,40px) 0;align-self:center}
-.discovery-hero h1{font-size:clamp(30px,3.6vw,48px);max-width:16ch;line-height:1.12;margin-bottom:24px}
+.discovery-hero h1{font-size:clamp(30px,3.6vw,48px);max-width:16ch;line-height:1.25;margin-bottom:24px}
 .discovery-hero-art{display:block;background:transparent;min-width:0}
 .discovery-hero-art>.world-photo{margin:0;border:0;border-radius:14px;overflow:hidden;background:#e9ece6}
 .discovery-hero-art>.world-photo img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:3/2;object-fit:contain}

@@ -23,6 +23,20 @@ export async function homePanelLayout(page){
  });assertHomePanelReserve(boxes);return boxes;
 }
 
+export async function gatewayModelPreviews(page,report){
+ const size=page.locator('.world-science .gateway-art>svg');await size.waitFor();assert.match(await size.getAttribute('aria-label'),/Erde 1, Jupiter 11,21 Erddurchmesser/);
+ const circles=size.locator('circle');assert.equal(await circles.count(),2);
+ const boxes=await circles.evaluateAll(nodes=>nodes.map(el=>{const b=el.getBoundingClientRect();const m=el.getScreenCTM();return{x:b.x,y:b.y,right:b.right,bottom:b.bottom,width:b.width,radius:el.r.baseVal.value,scaleX:Math.hypot(m.a,m.b),scaleY:Math.hypot(m.c,m.d)};})),frame=await size.boundingBox();
+ for(const box of boxes)assert.ok(box.width>0&&box.scaleX>0&&Math.abs(box.scaleX-box.scaleY)<.0001,'preview circles keep a uniform visible screen scale');
+ const renderedRatio=boxes[1].radius*boxes[1].scaleX/(boxes[0].radius*boxes[0].scaleX);
+ // Firefox rounds bounding rectangles to layout units; use its actual SVG
+ // transform for the exact size relation, and keep rectangle clipping checks.
+ assert.ok(Math.abs(renderedRatio-11.21)<.0001,'preview retains the same Earth/Jupiter diameter scale');
+ for(const box of boxes)assert.ok(box.x>=frame.x-1&&box.right<=frame.x+frame.width+1&&box.y>=frame.y-1&&box.bottom<=frame.y+frame.height+1,'whole planet remains inside the preview');
+ const bicycle=page.locator('.world-inventions .gateway-art>svg');assert.match(await bicycle.getAttribute('aria-label'),/Fahrrads mit Pedalen, Kette und Hinterrad/);const wheels=bicycle.locator('circle').all();assert.equal((await wheels).length,4);const first=await bicycle.locator('circle').nth(0).getAttribute('r'),second=await bicycle.locator('circle').nth(1).getAttribute('r');assert.equal(first,second,'actual chain-drive drawing keeps both wheel sizes');assert.equal(await bicycle.locator('path[stroke="#d66229"]').count(),1,'chain path is visible');
+ (report.gatewayModelPreviews??=[]).push({width:await page.evaluate(()=>innerWidth),earthJupiterRatio:renderedRatio,boundingRectangleRatio:boxes[1].width/boxes[0].width,wholePlanets:true,bicycleChain:true});
+}
+
 export async function discoveryCentral(page,ready,report,width,shots){
  const home=async()=>{await page.evaluate(()=>location.hash='home');try{await page.locator('.discovery-hero').waitFor();}catch(error){report.routeReturnFailure={width,...await page.evaluate(()=>({hash:location.hash,mode:document.querySelector('.earth-app')?.dataset.mode,selectedTabs:[...document.querySelectorAll('[role=tab][aria-selected=true]')].map(e=>e.textContent),heroPresent:!!document.querySelector('.discovery-hero')})).catch(e=>({diagnosticError:e.message}))};await page.screenshot({path:shots+'/route-return-failure-'+width+'.png',fullPage:true}).catch(()=>{});throw error;}};
  const inspect=async()=>assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'discovery overflow '+width);
@@ -226,6 +240,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    await mainNavigation(p,ready,report,width,shots);
    if(width<=390){await p.getByRole('button',{name:'So geht’s',exact:true}).tap();await p.locator('.help-dialog').waitFor();await p.keyboard.press('Escape');}
 
+   await gatewayModelPreviews(p,report);
    await p.locator('.discovery-worlds').screenshot({path:shots+'/home-worlds-'+width+'.png',animations:'disabled'});
    await p.locator('.discovery-pathways').screenshot({path:shots+'/home-next-'+width+'.png',animations:'disabled'});
    await p.evaluate(()=>scrollTo(0,0));
@@ -236,7 +251,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    await p.locator('.home-earth-facts>summary').click();await p.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));assert.equal(await p.locator('.home-earth-facts').evaluate(el=>el.open),true,'a freshly opened facts section stays open after route restoration');assert.equal(await p.locator('.planet-facts button').count(),3);await p.locator('.planet-facts button').first().click();await p.locator('.home-earth-facts>summary').click();
    await p.goBack();await p.locator('.discovery-hero').waitFor();await p.waitForFunction(()=>document.activeElement?.dataset.routeFocus==='home-globe');
    if(width<=390){await globe.tap();await p.locator('#globe-observatory').waitFor();await p.screenshot({path:shots+'/home-touch-globe-'+width+'.png'});await p.goBack();await p.locator('.discovery-hero').waitFor();await p.locator('.discovery-worlds .world-choice').first().tap();await p.getByRole('heading',{name:categories[0].title,exact:true}).waitFor();await p.goBack();await p.locator('.discovery-hero').waitFor();}
-   await p.locator('.gateway-credits>summary').click();assert.equal(await p.locator('.gateway-credits a').count(),8,'all original and license links preserved');await homeTextGeometry(p);await p.locator('.gateway-credits').screenshot({path:shots+'/home-credits-'+width+'.png'});await p.locator('.gateway-credits>summary').click();
+   await p.locator('.gateway-credits>summary').click();assert.equal(await p.locator('.gateway-credits a[href^="https://"]').count(),8,'all eight original and license links preserved');assert.deepEqual(await p.locator('.gateway-credits a[href^="#world/topic/"]').evaluateAll(nodes=>nodes.map(el=>el.getAttribute('href'))),['#world/topic/invention-bicycle','#world/topic/science-solar-system'],'both concrete preview learning paths');await homeTextGeometry(p);await p.locator('.gateway-credits').screenshot({path:shots+'/home-credits-'+width+'.png'});await p.locator('.gateway-credits>summary').click();
    // Keyboard activation followed by browser Back keeps the visible opener and chosen trail.
    await p.locator('.discovery-trail-options button').last().click();
    const trail=await p.locator('.discovery-trail-options [aria-pressed=true]').innerText();
