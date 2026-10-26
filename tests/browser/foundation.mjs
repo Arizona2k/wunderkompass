@@ -84,6 +84,15 @@ export async function componentFlow(browser,base,ready,monitor,report,shots){
  }
  report.checks.push('Shared production component visual contracts at seven widths: responsive grids and no collisions, 44px controls, native details keyboard/open/closed, empty/reset, large text/system focus, real lazy loading/error/reload states; screenshots require separate human review');
 }
+export function assertFallbackGeometry(boxes){
+ const overlaps=(a,b)=>a&&b&&Math.min(a.right,b.right)-Math.max(a.left,b.left)>1&&Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top)>1;
+ assert.ok(boxes.map.height>=120,'usable alternate map height');
+ for(const [label,a,b]of[['note/map',boxes.note,boxes.map],['choices/map',boxes.choices,boxes.map],['choices/toolbar',boxes.choices,boxes.toolbar],['note/kicker',boxes.note,boxes.kicker],['note/sun key',boxes.note,boxes.sun],['map/day status',boxes.map,boxes.dayStatus]])assert.equal(!!overlaps(a,b),false,'alternate renderer overlap: '+label+' '+JSON.stringify(boxes));
+ assert.ok(boxes.controls.every(r=>r.width>=44&&r.height>=44),'alternate place choices retain44px targets');
+}
+export async function fallbackGeometry(page){
+ const boxes=await page.locator('.fallback-globe').evaluate(root=>{const stage=root.closest('.globe-stage'),box=el=>{if(!el?.getClientRects().length)return null;const r=el.getBoundingClientRect();return{left:r.left,right:r.right,top:r.top,bottom:r.bottom,width:r.width,height:r.height};};return{note:box(root.querySelector(':scope>p')),map:box(root.querySelector(':scope>svg')),choices:box(root.querySelector('.fallback-place-list')),toolbar:box(stage.querySelector('.stage-toolbar')),kicker:box(stage.querySelector('.stage-kicker')),sun:box(stage.querySelector('.sun-key')),dayStatus:box(stage.querySelector('.day-state')),controls:[...root.querySelectorAll('.fallback-place-list button')].map(box)};});assertFallbackGeometry(boxes);return boxes;
+}
 export async function globeCapabilityFallback(browser,base,ready,monitor,report,shots){
  const context=await browser.newContext({viewport:{width:320,height:720},reducedMotion:'reduce'}),page=await context.newPage();monitor(page);
  try{
@@ -91,6 +100,6 @@ export async function globeCapabilityFallback(browser,base,ready,monitor,report,
   await page.goto(base+'/#globe');await ready(page);const fallback=page.locator('.fallback-globe');await fallback.locator('svg').waitFor();assert.equal(await page.locator('.globe-render canvas').count(),0);
   const before=await fallback.locator('svg').innerHTML();await fallback.focus();await page.keyboard.press('ArrowRight');await page.waitForFunction(previous=>document.querySelector('.fallback-globe svg')?.innerHTML!==previous,before);
   await page.getByRole('button',{name:'Länder',exact:true}).click();const picker=page.getByRole('combobox',{name:'Wohin möchtest du reisen?',exact:true});await picker.fill('Deutschland');await picker.press('ArrowDown');await picker.press('Enter');await page.locator('.info-card.has-place').getByRole('heading',{name:'Deutschland',exact:true}).waitFor();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
-  await fallback.scrollIntoViewIfNeeded();if(shots)await page.screenshot({path:shots+'/foundation-globe-fallback-320.png',animations:'disabled'});report.globeCapabilityFallback={webgl2Unavailable:true,existingFallbackUsed:true,keyboardRotation:true,realCountrySelection:true};report.checks.push('Unavailable WebGL2 uses the existing interactive map directly, without starting a failing3D renderer; keyboard rotation and country choice remain usable');
+  await fallback.scrollIntoViewIfNeeded();report.globeFallbackGeometry=await fallbackGeometry(page);if(shots)await page.screenshot({path:shots+'/foundation-globe-fallback-320.png',animations:'disabled'});report.globeCapabilityFallback={webgl2Unavailable:true,existingFallbackUsed:true,keyboardRotation:true,realCountrySelection:true};report.checks.push('Unavailable WebGL2 uses the existing interactive map directly, without starting a failing3D renderer; keyboard rotation and country choice remain usable');
  }finally{await context.close();}
 }
