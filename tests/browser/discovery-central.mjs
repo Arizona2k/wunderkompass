@@ -23,6 +23,30 @@ export async function homePanelLayout(page){
  });assertHomePanelReserve(boxes);return boxes;
 }
 
+export async function gatewayModelPreviews(page,report){
+ // The visited world hub can remain mounted in an inactive tab. This Home
+ // assertion must inspect its own visible previews, not a hidden second copy.
+ const previews=page.locator('.discovery-worlds');
+ const size=previews.locator('.world-science .gateway-art>svg');await size.waitFor();
+ // WebKit can expose a changed SVG attribute while its computed style still
+ // describes the preceding paint. Observe the rendered state, not a target value.
+ await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+ assert.match(await size.getAttribute('aria-label'),/Erde 1, Jupiter 11,21 Erddurchmesser/);
+ const circles=size.locator('circle');assert.equal(await circles.count(),2);
+ // Read frame and contents in one rendering state; separate protocol calls
+ // can observe different positions while a pending layout is being painted.
+ const{boxes,frame}=await size.evaluate(svg=>{const f=svg.getBoundingClientRect();return{frame:{x:f.x,y:f.y,width:f.width,height:f.height},boxes:[...svg.querySelectorAll('circle')].map(el=>{const b=el.getBoundingClientRect();const m=el.getScreenCTM();return{x:b.x,y:b.y,right:b.right,bottom:b.bottom,width:b.width,radius:el.r.baseVal.value,scaleX:Math.hypot(m.a,m.b),scaleY:Math.hypot(m.c,m.d)};})};});
+ for(const box of boxes)assert.ok(box.width>0&&box.scaleX>0&&Math.abs(box.scaleX-box.scaleY)<.0001,'preview circles keep a uniform visible screen scale');
+ const renderedRatio=boxes[1].radius*boxes[1].scaleX/(boxes[0].radius*boxes[0].scaleX);
+ // Firefox rounds bounding rectangles to layout units; use its actual SVG
+ // transform for the exact size relation, and keep rectangle clipping checks.
+ assert.ok(Math.abs(renderedRatio-11.21)<.0001,'preview retains the same Earth/Jupiter diameter scale');
+ for(const box of boxes)assert.ok(box.x>=frame.x-1&&box.right<=frame.x+frame.width+1&&box.y>=frame.y-1&&box.bottom<=frame.y+frame.height+1,'whole planet remains inside the preview');
+ const bicycle=previews.locator('.world-inventions .gateway-art>svg');assert.match(await bicycle.getAttribute('aria-label'),/Fahrrads mit Pedalen, Kette und Hinterrad/);const wheels=bicycle.locator('circle').all();assert.equal((await wheels).length,4);const first=await bicycle.locator('circle').nth(0).getAttribute('r'),second=await bicycle.locator('circle').nth(1).getAttribute('r');assert.equal(first,second,'actual chain-drive drawing keeps both wheel sizes');assert.equal(await bicycle.locator('path[stroke="#d66229"]').count(),1,'chain path is visible');
+ const frameContrast=await bicycle.locator('path[stroke-width="10"]').evaluate(el=>{let surface=el;while(surface.parentElement&&['transparent','rgba(0, 0, 0, 0)'].includes(getComputedStyle(surface).backgroundColor))surface=surface.parentElement;const luminance=color=>{const rgb=color.match(/[\d.]+/g).slice(0,3).map(Number).map(n=>{const v=n/255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4});return .2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2]};const[a,b]=[getComputedStyle(el).stroke,getComputedStyle(surface).backgroundColor].map(luminance);return(Math.max(a,b)+.05)/(Math.min(a,b)+.05);});assert.ok(frameContrast>=3,'meaningful bicycle frame has at least3:1contrast against its actual surface');
+ (report.gatewayModelPreviews??=[]).push({width:await page.evaluate(()=>innerWidth),earthJupiterRatio:renderedRatio,boundingRectangleRatio:boxes[1].width/boxes[0].width,wholePlanets:true,bicycleChain:true,bicycleFrameContrast:frameContrast});
+}
+
 export async function discoveryCentral(page,ready,report,width,shots){
  const home=async()=>{await page.evaluate(()=>location.hash='home');try{await page.locator('.discovery-hero').waitFor();}catch(error){report.routeReturnFailure={width,...await page.evaluate(()=>({hash:location.hash,mode:document.querySelector('.earth-app')?.dataset.mode,selectedTabs:[...document.querySelectorAll('[role=tab][aria-selected=true]')].map(e=>e.textContent),heroPresent:!!document.querySelector('.discovery-hero')})).catch(e=>({diagnosticError:e.message}))};await page.screenshot({path:shots+'/route-return-failure-'+width+'.png',fullPage:true}).catch(()=>{});throw error;}};
  const inspect=async()=>assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'discovery overflow '+width);
@@ -123,7 +147,7 @@ export async function offlineDiscoveryCentral(page,report){
 // First visits must be tested in fresh contexts; accumulated regression state
 // otherwise hides empty/resume mistakes. Uses the same production preview.
 export async function homeTextGeometry(page){
- const bad=await page.locator('.discovery-hero-copy h1,.discovery-hero-copy>p,.discovery-hero-copy button,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds .world-choice,.discovery-text-link,.discovery-pathways h2,.discovery-pair button,.continue-card,.updates-entry,.updates-detail-body,.updates-details>summary,.updates-archive>summary,.updates-archive-intro,.updates-note,.updates-heading,.updates-provenance,.updates-prepared>p,.updates-prepared-entry').evaluateAll(elements=>elements.flatMap(el=>{
+ const bad=await page.locator('.discovery-hero-copy h1,.discovery-feature>a,.discovery-photo-credit,.discovery-hero-copy>p,.discovery-hero-copy button,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds .world-choice,.discovery-text-link,.discovery-pathways h2,.discovery-pair button,.continue-card,.updates-entry,.updates-detail-body,.updates-details>summary,.updates-archive>summary,.updates-archive-intro,.updates-note,.updates-heading,.updates-provenance,.updates-prepared>p,.updates-prepared-entry').evaluateAll(elements=>elements.flatMap(el=>{
   if(!el.getClientRects().length)return [];
   const box=el.getBoundingClientRect(),walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),errors=[];
   while(walker.nextNode()){
@@ -136,8 +160,8 @@ export async function homeTextGeometry(page){
  }));assert.deepEqual(bad,[],'homepage/history text remains inside its controls and sections');
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'home/history horizontal overflow');
 }
-async function homeTouchTargets(page){
- for(const control of await page.locator('.discovery-hero-copy button,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds button,.gateway-credits summary,.discovery-pathways button,.discovery-pathways a,.update-history a,.update-history summary').all()){
+export async function homeTouchTargets(page){
+ for(const control of await page.locator('.discovery-hero-copy button,.discovery-feature>a,.discovery-photo-credit summary,.discovery-photo-credit a,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds button,.gateway-credits summary,.discovery-pathways button,.discovery-pathways a,.update-history a,.update-history summary').all()){
   if(!await control.isVisible())continue;
   assert.equal(await control.evaluate(el=>{const r=el.getBoundingClientRect();return r.width>=44&&r.height>=44}),true,'home/history touch target at least 44px: '+await control.innerText());
  }
@@ -147,8 +171,36 @@ async function homeContrast(control){
  const luminance=color=>{const rgb=color.match(/[\d.]+/g).slice(0,3).map(Number).map(n=>{const v=n/255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4});return .2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2]};
  const [a,b]=colors.map(luminance);assert.ok((Math.max(a,b)+.05)/(Math.min(a,b)+.05)>=4.5,'homepage primary normal/hover text contrast');
 }
+export function assertCompactAreaGeometry(data){
+ assert.equal(data.labels.length,6,'six existing main areas');
+ if(data.width<=1200){
+  assert.ok(data.height<=88,'compact one-row area switch, not three repeated rows: '+JSON.stringify(data));
+  assert.equal(new Set(data.tabTops.map(top=>Math.round(top))).size,1,'main areas share one horizontal row');
+  assert.ok(data.fontSizes.every(size=>size>=16),'compact navigation retains readable type');
+  assert.equal(data.arrows.length,2,'both visible scroll directions');
+  assert.ok(data.arrows.every(box=>box.width>=44&&box.height>=44),'44px scroll controls');
+ }
+}
+export async function compactAreaNavigation(page,report,{interact=false}={}){
+ const data=await page.evaluate(()=>{
+  const list=document.querySelector('.mode-tabs');if(!list)throw Error('Existing area navigation missing');
+  const tabs=[...list.querySelectorAll('[role=tab]')];
+  return{width:innerWidth,height:list.getBoundingClientRect().height,labels:tabs.map(el=>el.textContent),tabTops:tabs.map(el=>el.getBoundingClientRect().top),fontSizes:tabs.map(el=>parseFloat(getComputedStyle(el).fontSize)),arrows:[...document.querySelectorAll('.area-scroll')].filter(el=>el.getClientRects().length).map(el=>{const r=el.getBoundingClientRect();return{width:r.width,height:r.height};})};
+ });assertCompactAreaGeometry(data);
+ if(interact&&data.width<=1200){
+  const list=page.locator('.mode-tabs'),before=await page.evaluate(()=>({hash:location.hash,y:scrollY,left:document.querySelector('.mode-tabs').scrollLeft}));
+  await page.getByRole('button',{name:'Weitere Lernbereiche anzeigen',exact:true}).click();
+  await page.waitForFunction(left=>document.querySelector('.mode-tabs').scrollLeft>left,before.left);
+  assert.equal(new URL(page.url()).hash,before.hash,'scrolling area choices does not navigate');
+  assert.ok(Math.abs(await page.evaluate(()=>scrollY)-before.y)<=1,'area scroll does not move the document');
+  await list.getByRole('tab',{name:'Entdecken',exact:true}).focus();
+  assert.ok(await list.evaluate(el=>el.scrollLeft)<=1,'keyboard focus reveals the complete first choice');
+ }
+ (report.compactAreaNavigation??=[]).push(data);return data;
+}
 // Main navigation uses the existing production page and pass; no second runner.
 export async function mainNavigation(page,ready,report,width,shots){
+ await compactAreaNavigation(page,report,{interact:true});
  const nav=page.locator('.mode-tabs');
  const selected=async name=>{await page.waitForFunction(name=>document.querySelector('.mode-tabs [data-state=active]')?.textContent===name,name);assert.equal(await nav.locator('[data-state=active]').count(),1);};
  const inspect=async()=>{await homeTextGeometry(page);for(const tab of await nav.getByRole('tab').all()){assert.equal(await tab.evaluate(el=>{const r=el.getBoundingClientRect();return r.width>=44&&r.height>=44&&parseFloat(getComputedStyle(el).fontSize)>=14}),true,'readable 44px navigation: '+await tab.innerText());}};
@@ -198,6 +250,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    await mainNavigation(p,ready,report,width,shots);
    if(width<=390){await p.getByRole('button',{name:'So geht’s',exact:true}).tap();await p.locator('.help-dialog').waitFor();await p.keyboard.press('Escape');}
 
+   await gatewayModelPreviews(p,report);
    await p.locator('.discovery-worlds').screenshot({path:shots+'/home-worlds-'+width+'.png',animations:'disabled'});
    await p.locator('.discovery-pathways').screenshot({path:shots+'/home-next-'+width+'.png',animations:'disabled'});
    await p.evaluate(()=>scrollTo(0,0));
@@ -208,7 +261,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    await p.locator('.home-earth-facts>summary').click();await p.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));assert.equal(await p.locator('.home-earth-facts').evaluate(el=>el.open),true,'a freshly opened facts section stays open after route restoration');assert.equal(await p.locator('.planet-facts button').count(),3);await p.locator('.planet-facts button').first().click();await p.locator('.home-earth-facts>summary').click();
    await p.goBack();await p.locator('.discovery-hero').waitFor();await p.waitForFunction(()=>document.activeElement?.dataset.routeFocus==='home-globe');
    if(width<=390){await globe.tap();await p.locator('#globe-observatory').waitFor();await p.screenshot({path:shots+'/home-touch-globe-'+width+'.png'});await p.goBack();await p.locator('.discovery-hero').waitFor();await p.locator('.discovery-worlds .world-choice').first().tap();await p.getByRole('heading',{name:categories[0].title,exact:true}).waitFor();await p.goBack();await p.locator('.discovery-hero').waitFor();}
-   await p.locator('.gateway-credits>summary').click();assert.equal(await p.locator('.gateway-credits a').count(),8,'all original and license links preserved');await homeTextGeometry(p);await p.locator('.gateway-credits').screenshot({path:shots+'/home-credits-'+width+'.png'});await p.locator('.gateway-credits>summary').click();
+   await p.locator('.gateway-credits>summary').click();assert.equal(await p.locator('.gateway-credits a[href^="https://"]').count(),8,'all eight original and license links preserved');assert.deepEqual(await p.locator('.gateway-credits a[href^="#world/topic/"]').evaluateAll(nodes=>nodes.map(el=>el.getAttribute('href'))),['#world/topic/invention-bicycle','#world/topic/science-solar-system'],'both concrete preview learning paths');await homeTextGeometry(p);await p.locator('.gateway-credits').screenshot({path:shots+'/home-credits-'+width+'.png'});await p.locator('.gateway-credits>summary').click();
    // Keyboard activation followed by browser Back keeps the visible opener and chosen trail.
    await p.locator('.discovery-trail-options button').last().click();
    const trail=await p.locator('.discovery-trail-options [aria-pressed=true]').innerText();

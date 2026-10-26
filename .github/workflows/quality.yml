@@ -18,9 +18,9 @@ jobs:
   checks:
     name: Required quality checks
     runs-on: ubuntu-24.04
-    # User23Oct: one reserve execution for PR58/Quality155/attempt1 only.
-    # Every other execution retains55min; all steps and gates stay unchanged.
-    timeout-minutes: ${{ github.event_name == 'pull_request' && github.event.pull_request.number == 58 && github.run_number == 155 && github.run_attempt == 1 && 65 || 55 }}
+    # User26Oct: measured bootstrap repair and a finite65min reserve.
+    # Quality176 spent46min installing dependencies; every test/gate stays.
+    timeout-minutes: 65
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1; Node 24
         with:
@@ -58,10 +58,16 @@ jobs:
         run: pnpm run verify
       - name: Install browser tools with frozen lockfile
         run: pnpm --dir qa install --frozen-lockfile
-      - name: Install Chromium and system dependencies
-        run: pnpm --dir qa exec playwright install --with-deps chromium
-      - name: Install additional browser engines
-        run: pnpm --dir qa exec playwright install --with-deps firefox webkit
+      - name: Install all browsers and shared system dependencies
+        run: |
+          # Same signed Ubuntu repositories; prefer the existing official mirror.
+          # Quality176 downloaded Azure packages at43–47kB/s for45min22s.
+          sudo sed -i \
+            -e '\|^http://azure\.archive\.ubuntu\.com/ubuntu/|s/priority:1/priority:2/' \
+            -e '\|^https://archive\.ubuntu\.com/ubuntu/|s/priority:2/priority:1/' \
+            /etc/apt/apt-mirrors.txt
+          cat /etc/apt/apt-mirrors.txt
+          pnpm --dir qa exec playwright install --with-deps chromium firefox webkit
       - name: Early actual-engine search and cold offline precondition
         run: |
           node tests/browser/journey-engines.mjs --search-only

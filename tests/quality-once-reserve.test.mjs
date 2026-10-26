@@ -1,19 +1,29 @@
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {createHash} from 'node:crypto';
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import {execFileSync} from 'node:child_process';import {createHash} from 'node:crypto';
 import {critical} from '../scripts/release/test-live-readiness.cjs';
 const file='.github/workflows/quality.yml',source=fs.readFileSync(file,'utf8'),before=fs.readFileSync('tests/fixtures/quality-combined-before-one-reserve.yml','utf8');
-const original='    # Existing combined browser job: user-authorised 55-minute ceiling, all steps retained.\n    timeout-minutes: 55';
-const exception="    # User23Oct: one reserve execution for PR58/Quality155/attempt1 only.\n    # Every other execution retains55min; all steps and gates stay unchanged.\n    timeout-minutes: ${{ github.event_name == 'pull_request' && github.event.pull_request.number == 58 && github.run_number == 155 && github.run_attempt == 1 && 65 || 55 }}";
-test('the explicitly authorised one-execution reserve preserves every existing workflow step, permission and native release guard',()=>{
- assert.equal(source.split(exception).length,2);assert.equal(source.replace(exception,original),before,'entire original workflow except the one bounded time allowance');assert.equal(critical(file),true,'workflow remains protected; never claim normal routine eligibility');
- assert.match(before,/timeout-minutes: 55/);assert.equal(createHash('sha256').update(before).digest('hex'),'fa0c0d6b54997a490572b18e0f164bfd28d07c16f8e007f379dfa25287f7ce5d','unchanged actual92f3591 workflow baseline');
+const originalTimeout="    # Existing combined browser job: user-authorised 55-minute ceiling, all steps retained.\n    timeout-minutes: 55";
+const approvedTimeout="    # User26Oct: measured bootstrap repair and a finite65min reserve.\n    # Quality176 spent46min installing dependencies; every test/gate stays.\n    timeout-minutes: 65";
+const originalInstaller="      - name: Install Chromium and system dependencies\n        run: pnpm --dir qa exec playwright install --with-deps chromium\n      - name: Install additional browser engines\n        run: pnpm --dir qa exec playwright install --with-deps firefox webkit\n";
+const approvedInstaller="      - name: Install all browsers and shared system dependencies\n        run: |\n          # Same signed Ubuntu repositories; prefer the existing official mirror.\n          # Quality176 downloaded Azure packages at43–47kB/s for45min22s.\n          sudo sed -i \\\n            -e '\\|^http://azure\\.archive\\.ubuntu\\.com/ubuntu/|s/priority:1/priority:2/' \\\n            -e '\\|^https://archive\\.ubuntu\\.com/ubuntu/|s/priority:2/priority:1/' \\\n            /etc/apt/apt-mirrors.txt\n          cat /etc/apt/apt-mirrors.txt\n          pnpm --dir qa exec playwright install --with-deps chromium firefox webkit\n";
+test('user-authorised finite65min and causal installer repair preserve the entire original workflow and native release guards',()=>{
+ assert.equal(source.split(approvedTimeout).length,2);assert.equal(source.split(approvedInstaller).length,2);
+ assert.equal(source.replace(approvedTimeout,originalTimeout).replace(approvedInstaller,originalInstaller),before,'entire original workflow except exactly the authorised time/mirror/shared-install changes');
+ assert.equal(critical(file),true,'workflow remains protected and requires concrete manual review');
+ assert.equal(createHash('sha256').update(before).digest('hex'),'fa0c0d6b54997a490572b18e0f164bfd28d07c16f8e007f379dfa25287f7ce5d','unchanged actual92f3591 workflow baseline');
+ assert.deepEqual([...source.matchAll(/^    timeout-minutes: (.+)$/gm)].map(m=>m[1]),['65'],'one finite ceiling, no hidden unbounded or context-specific exception');
 });
-test('the actual supported conditional gives65 only to PR58 run155 attempt1 and55 everywhere else',()=>{
- const expression=source.match(/^    timeout-minutes: \$\{\{ (.+) \}\}$/m)?.[1];assert.ok(expression);
- // This expression uses only the shared ==, &&, || subset. Actual GitHub
- // execution still supplies the final workflow/context evidence.
- const value=new Function('github','return ('+expression+');');
- for(const event of ['pull_request','workflow_dispatch','push'])for(const pr of [27,58,59])for(const run of [154,155,156,'155'])for(const attempt of [1,2,'1','2']){
-  const github={event_name:event,event:{pull_request:{number:pr}},run_number:run,run_attempt:attempt};const expected=event==='pull_request'&&pr===58&&Number(run)===155&&Number(attempt)===1?65:55;assert.equal(value(github),expected,JSON.stringify(github));
- }
- assert.equal(value({event_name:'workflow_dispatch',event:{},run_number:155,run_attempt:1}),55);
+test('actual installer shell reprioritises existing official Ubuntu mirrors without changing repositories, security fallback or package trust',()=>{
+ // Exact stock file from the actually used runner image ubuntu24/20261012.334:
+ // actions/runner-images/images/ubuntu/scripts/build/configure-apt-sources.sh.
+ const initial='http://azure.archive.ubuntu.com/ubuntu/\tpriority:1\nhttps://archive.ubuntu.com/ubuntu/\tpriority:2\nhttps://security.ubuntu.com/ubuntu/\tpriority:3\n';
+ const expected='http://azure.archive.ubuntu.com/ubuntu/\tpriority:2\nhttps://archive.ubuntu.com/ubuntu/\tpriority:1\nhttps://security.ubuntu.com/ubuntu/\tpriority:3\n';
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'wk-apt-priority-')),fixture=path.join(root,'apt-mirrors.txt');
+ try{
+  fs.writeFileSync(fixture,initial);
+  const actual=approvedInstaller.slice(approvedInstaller.indexOf('sudo sed -i'),approvedInstaller.indexOf('cat /etc/apt/apt-mirrors.txt'));
+  assert.equal(actual.split('sudo').length,2);
+  const local=actual.replace('sudo sed','sed').replace('/etc/apt/apt-mirrors.txt','"$WK_APT_FIXTURE"');
+  execFileSync('bash',['-e','-c',local],{env:{...process.env,WK_APT_FIXTURE:fixture}});
+  assert.equal(fs.readFileSync(fixture,'utf8'),expected,'same three URIs and priorities; only first and second exchanged');
+ }finally{fs.rmSync(root,{recursive:true,force:true});}
 });
