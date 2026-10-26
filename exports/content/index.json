@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-26T06:17:11.399Z",
+  "generatedAt": "2026-10-26T08:10:19.064Z",
   "personalProgressIncluded": false,
-  "topics": 188,
+  "topics": 190,
   "categories": {
     "animals": 48,
     "history": 34,
-    "people": 20,
+    "people": 22,
     "inventions": 24,
     "buildings": 16,
     "science": 46
@@ -22,18 +22,18 @@
       "sources": [
         "app/people-illustrations.json"
       ],
-      "entries": 2,
-      "bytes": 1853,
-      "sha256": "120ae782ac1b61ae4b831c7289c4f83bc64e3fe4e1df61004d57ce2b4266160e"
+      "entries": 4,
+      "bytes": 4232,
+      "sha256": "f15315d4e6f8e4e3919bbd2bfd26212655fedd839f444daa996a8e5e34ae7537"
     },
     {
       "file": "people-inquiries.json",
       "sources": [
         "app/people-inquiries.json"
       ],
-      "entries": 2,
-      "bytes": 8534,
-      "sha256": "fb68964a5209bc5e00a2b4e75fef14653b65a955d2d91fdbd22d7d00070937da"
+      "entries": 4,
+      "bytes": 16419,
+      "sha256": "4511c7580a8034aedfc536395659a0e5be643d605161a1e1c669337c226299b8"
     },
     {
       "file": "animal-inquiries.json",
@@ -268,9 +268,9 @@
       "sources": [
         "app/challenge-hints.json"
       ],
-      "entries": 220,
-      "bytes": 55146,
-      "sha256": "8a814f1929e84fc71150a0f7b44190a14fa984bdccf697eabb35a4cc680239a0"
+      "entries": 226,
+      "bytes": 58442,
+      "sha256": "13b9948111ed7fa6c2ca6e58210f252a69007d3378d69225b8b0f6d6c8874e49"
     },
     {
       "file": "world-connections.json",
@@ -280,26 +280,26 @@
         "app/discovery-connections.json"
       ],
       "entries": 2,
-      "bytes": 49810,
-      "sha256": "72a545fd47dc46f75f27b2660b55445bc480785c77f0e91ab9c7e904eb16d7ea"
+      "bytes": 50693,
+      "sha256": "9286eefccba79e9c96d774c7752d5c66941801ffcfee3021cd4bc4e0fb469240"
     },
     {
       "file": "world-topics.json",
       "sources": [
         "app/world-catalog.json"
       ],
-      "entries": 188,
-      "bytes": 689029,
-      "sha256": "0cb0aadc212ad010ef74921ba9d5f293b85c09296099ca4313bb0a9d59e2ff2e"
+      "entries": 190,
+      "bytes": 701783,
+      "sha256": "82ea79707413845f55a28af41c3bccf0b4bfd961db61abd09b7eaace19d37850"
     },
     {
       "file": "world-index.json",
       "sources": [
         "app/world-index.json"
       ],
-      "entries": 188,
-      "bytes": 83219,
-      "sha256": "c48c9f6ff84799cf6fe1c99a72dff1d3134aa09c2b6e462aa6f9657aa789d223"
+      "entries": 190,
+      "bytes": 84126,
+      "sha256": "b4459deb2ccd48c5b5e2710b1975f59cc53e032571ae070a357cbf2d2b05a56c"
     },
     {
       "file": "games.json",

@@ -1,3 +1,4 @@
+import {beforePeopleMethods,beforePeopleMethodQuestions,beforePeopleMethodGraph} from './people-methods-reference.mjs';
 import scienceBaseline from './fixtures/retained-before-science-originals.json' with {type:'json'};
 const scienceIds=scienceBaseline.newIds;
 import buildingBaseline from './fixtures/retained-before-building-originals.json' with {type:'json'};
@@ -7,11 +8,11 @@ const mechanicsIds=mechanicsBaseline.newIds;
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
-import catalog from '../app/world-catalog.json' with {type:'json'};
-import graph from '../app/world-connections.json' with {type:'json'};
+import currentCatalog from '../app/world-catalog.json' with {type:'json'};
+import currentGraph from '../app/world-connections.json' with {type:'json'};
 import review from '../content/history-editorial-review.json' with {type:'json'};
 import registry from '../content/editorial-reviews.json' with {type:'json'};
-import {CHALLENGE_BANK,restoreChallenge} from '../app/knowledge-challenge.ts';
+import {CHALLENGE_BANK as currentChallengeBank,restoreChallenge} from '../app/knowledge-challenge.ts';
 import {historicalQuestionBank} from '../scripts/world-question-index.mjs';
 const digest=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 test('three prepared historical concepts preserve the complete actual public166-question bank and existing old histories',()=>{
@@ -28,3 +29,8 @@ test('historical sources distinguish quantity, meaning and limited archaeologica
 test('old six-question rounds keep their saved answer order and result after historical additions',()=>{
  for(const difficulty of ['easy','medium','hard']){const pool=CHALLENGE_BANK.filter(q=>q.difficulty===difficulty&&!['history-bronze',...buildingIds,...scienceIds,...mechanicsIds,...review.newTopicIds,'invention-battery','invention-generator','invention-transistor','invention-camera','invention-telescope','invention-microscope','person-mary_anning','person-ibn_al_haytham'].includes(q.topic)).slice(0,6),old={difficulty,ids:pool.map(q=>q.id),orders:Object.fromEntries(pool.map(q=>[q.id,[...q.answers].reverse()])),index:2,answer:pool[2].answers[pool[2].correct],done:false};assert.equal(pool.length,6);assert.deepEqual(restoreChallenge(JSON.parse(JSON.stringify(old)),{invalid:true}),old);}
 });
+
+// Historical assertions retain their original release boundary; new additions are covered in people-methods.test.mjs.
+const catalog=beforePeopleMethods(currentCatalog);
+const CHALLENGE_BANK=beforePeopleMethodQuestions(currentChallengeBank);
+const graph=beforePeopleMethodGraph(currentGraph);

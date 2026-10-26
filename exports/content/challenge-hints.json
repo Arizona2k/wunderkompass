@@ -1196,5 +1196,71 @@
       "Das einzelne Stück kann tatsächlich untersucht werden. Diese begrenzte Aussage behauptet keine ausschließliche Nutzung in der ganzen Region.",
       "Ein Vergleich mit weiteren Funden ist möglich. Er setzt keine pauschale Aussage über alle Menschen und Werkstoffe voraus."
     ]
+  },
+  "person-maria_sibylla_merian:mini": {
+    "steps": [
+      "Überlege, welche Tätigkeit Veränderungen sichtbar macht und welche nur eine einzelne Eigenschaft zeigt.",
+      "Suche nach mehreren Beobachtungen desselben Tiers und dem Bezug zu Pflanzen."
+    ],
+    "wrongReasons": [
+      null,
+      "Ein Einzelbild hält nur ausgewählte Informationen fest. Es zeigt nicht von selbst, wie sich dasselbe Tier später verändert.",
+      "Eine ähnliche Farbe ist kein sicherer Artnachweis. Mehrere Merkmale und passende Beobachtungen sind nötig."
+    ]
+  },
+  "person-maria_sibylla_merian:evidence": {
+    "steps": [
+      "Ein passender Beleg muss die Entwicklung verbinden, nicht nur die Bilder ähnlich aussehen lassen.",
+      "Ähnlichkeit der Bilder ist etwas anderes als eine nachvollziehbare Entwicklungsfolge."
+    ],
+    "wrongReasons": [
+      "Gleiche Bildfarben sind eine Gestaltungsentscheidung. Sie beobachten keine Entwicklung.",
+      null,
+      "Ähnliche Wörter sind kein Entwicklungsnachweis. Dafür braucht es Informationen über die beobachteten Tiere."
+    ]
+  },
+  "person-maria_sibylla_merian:limits": {
+    "steps": [
+      "Trenne die Frage nach den Beiträgen anderer Menschen von der Bildqualität und dem Erscheinungsjahr.",
+      "Ein Erscheinungsjahr und ein Autorenname erfassen nicht alle Beiträge anderer Menschen."
+    ],
+    "wrongReasons": [
+      "Das Erscheinungsjahr belegt einen Zeitpunkt. Es sagt nicht, dass die Autorin ohne Beiträge anderer arbeitete.",
+      "Sorgfältige Bilder sagen noch nicht, von wem alle Beobachtungen und Informationen stammen.",
+      null
+    ]
+  },
+  "person-inge_lehmann:mini": {
+    "steps": [
+      "Unterscheide eine Messung an der Erdoberfläche von einem direkten Blick oder einer Probe aus dem Erdkern.",
+      "Achte darauf, was ein Messgerät an der Erdoberfläche aufzeichnet."
+    ],
+    "wrongReasons": [
+      null,
+      "Ein Wellenmessgerät fotografiert keine Erdschicht. Seine Aufzeichnung muss ausgewertet und erklärt werden.",
+      "Eine Bohrprobe aus dem inneren Erdkern stand Lehmann nicht zur Verfügung. Sie arbeitete mit den Hinweisen der Wellen."
+    ]
+  },
+  "person-inge_lehmann:evidence": {
+    "steps": [
+      "Eine Abweichung verlangt Prüfung von Messung und Erklärung. Gestaltungsänderungen lösen die Sachfrage nicht.",
+      "Ein unerwartetes Signal verlangt eine Sachprüfung statt einer schöneren Zeichnung."
+    ],
+    "wrongReasons": [
+      "Eine schönere Farbe erklärt kein unerwartetes Wellensignal. Dafür sind Messungen und fachliche Überlegungen nötig.",
+      "Eine unbequeme Messung zu entfernen prüft ihre Verlässlichkeit nicht und verbessert das Modell nicht.",
+      null
+    ]
+  },
+  "person-inge_lehmann:limits": {
+    "steps": [
+      "Unterscheide Unterstützung für eine bestimmte Erklärung von einem vollständigen Wissen über alle Eigenschaften.",
+      "Unterstützung für eine Erklärung beantwortet nicht jede Frage über Stoffe und Temperaturen."
+    ],
+    "wrongReasons": [
+      null,
+      "Die Erklärung der Wellen liefert nicht automatisch sämtliche Temperaturen und Zusammensetzungen exakt mit.",
+      "Ein passendes Modell bleibt eine Darstellung und Erklärung. Es verwandelt sich nicht in eine direkte Fotografie."
+    ]
   }
 }

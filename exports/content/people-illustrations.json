@@ -3,7 +3,7 @@
     "id": "person-mary_anning",
     "kind": "fossil-evidence",
     "alt": "Eigener erfundener Knochenumriss als Beispiel zum Unterscheiden von Fund und Rekonstruktion.",
-    "caption": "Eigene Erklärzeichnung · erfundener Knochen, kein echtes Fossilienfoto.",
+    "caption": "Eigene Erklärzeichnung mit KI-Unterstützung · erfundener Knochen, kein echtes Fossilienfoto.",
     "author": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
     "rightsState": "own",
     "notPhotograph": true,
@@ -19,7 +19,7 @@
     "id": "person-ibn_al_haytham",
     "kind": "light-to-eye",
     "alt": "Eigenes vereinfachtes Lichtwegschema von einer Lichtquelle über einen beleuchteten Gegenstand zum Auge.",
-    "caption": "Eigene Erklärzeichnung · Lichtweg, kein historisches Porträt oder Versuchsbild.",
+    "caption": "Eigene Erklärzeichnung mit KI-Unterstützung · Lichtweg, kein historisches Porträt oder Versuchsbild.",
     "author": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
     "rightsState": "own",
     "notPhotograph": true,
@@ -30,5 +30,39 @@
       "https://www.unesco.org/en/articles/ibn-al-haythams-scientific-method"
     ],
     "sourceUse": "Fachlicher und historischer Zusammenhang; keine Abbildung aus diesen Quellen übernommen."
+  },
+  {
+    "id": "person-maria_sibylla_merian",
+    "kind": "insect-observation-series",
+    "alt": "Eigene erfundene Folge Ei, Raupe, Puppe und erwachsener Falter; keine originale Tafel von Merian.",
+    "caption": "Eigene Erklärzeichnung mit KI-Unterstützung · gedachte Folge: Ei, Raupe, Puppe, Falter. Kein Originalblatt von Merian oder Porträt.",
+    "author": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
+    "rightsState": "own",
+    "notPhotograph": true,
+    "renderer": "app/people-observation-drawings.tsx",
+    "modelLimits": "Frei erfundene Beobachtungsfolge eines Schmetterlings; keine realen Daten, Entwicklungszeiten, Merian-Originaltafel oder allgemeine Aussage über alle Insekten. Ein erwachsener Falter wird nicht selbst wieder zum Ei.",
+    "sources": [
+      "https://www.rijksmuseum.nl/en/stories/10-things/story/maria-sibylla-merian-en",
+      "https://oumnh.ox.ac.uk/learn-maria-sibylla-merian",
+      "https://blog.biodiversitylibrary.org/2021/06/mfn-explores-maria-sibylla-merian-legacy"
+    ],
+    "sourceUse": "Fachlicher Zusammenhang aus tatsächlich gelesenen Quellen; keine fremde Abbildung übernommen."
+  },
+  {
+    "id": "person-inge_lehmann",
+    "kind": "inner-core-evidence-comparison",
+    "alt": "Eigenes qualitatives Erdschnittmodell mit innerem Kern; kein Foto oder Originalmessbild.",
+    "caption": "Eigene Erklärzeichnung mit KI-Unterstützung · vereinfachter Erdschnitt mit innerem Kern, ohne Maßstab. Kein Foto oder Porträt.",
+    "author": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
+    "rightsState": "own",
+    "notPhotograph": true,
+    "renderer": "app/people-observation-drawings.tsx",
+    "modelLimits": "Qualitative Hypothesenbilder ohne Maßstab, berechnete Wellenwege oder originale Messdaten. Die beschriebene Beobachtung bleibt beim Wechsel gleich. Erklärung eines inneren Kerns1936 und spätere Eigenschaften getrennt.",
+    "sources": [
+      "https://nbi.ku.dk/english/www/inge/lehmann/",
+      "https://www.aps.org/apsnews/2023/08/seismologist-lehmann-earth-inner-core",
+      "https://www.amnh.org/learn-teach/curriculum-collections/earth-inside-and-out/inge-lehmann-discoverer-of-the-earth-s-inner-core"
+    ],
+    "sourceUse": "Fachlicher Zusammenhang aus tatsächlich gelesenen Quellen; keine fremde Abbildung übernommen."
   }
 ]
