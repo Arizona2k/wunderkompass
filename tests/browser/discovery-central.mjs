@@ -24,17 +24,27 @@ export async function homePanelLayout(page){
 }
 
 export async function gatewayModelPreviews(page,report){
- const size=page.locator('.world-science .gateway-art>svg');await size.waitFor();assert.match(await size.getAttribute('aria-label'),/Erde 1, Jupiter 11,21 Erddurchmesser/);
+ // The visited world hub can remain mounted in an inactive tab. This Home
+ // assertion must inspect its own visible previews, not a hidden second copy.
+ const previews=page.locator('.discovery-worlds');
+ const size=previews.locator('.world-science .gateway-art>svg');await size.waitFor();
+ // WebKit can expose a changed SVG attribute while its computed style still
+ // describes the preceding paint. Observe the rendered state, not a target value.
+ await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+ assert.match(await size.getAttribute('aria-label'),/Erde 1, Jupiter 11,21 Erddurchmesser/);
  const circles=size.locator('circle');assert.equal(await circles.count(),2);
- const boxes=await circles.evaluateAll(nodes=>nodes.map(el=>{const b=el.getBoundingClientRect();const m=el.getScreenCTM();return{x:b.x,y:b.y,right:b.right,bottom:b.bottom,width:b.width,radius:el.r.baseVal.value,scaleX:Math.hypot(m.a,m.b),scaleY:Math.hypot(m.c,m.d)};})),frame=await size.boundingBox();
+ // Read frame and contents in one rendering state; separate protocol calls
+ // can observe different positions while a pending layout is being painted.
+ const{boxes,frame}=await size.evaluate(svg=>{const f=svg.getBoundingClientRect();return{frame:{x:f.x,y:f.y,width:f.width,height:f.height},boxes:[...svg.querySelectorAll('circle')].map(el=>{const b=el.getBoundingClientRect();const m=el.getScreenCTM();return{x:b.x,y:b.y,right:b.right,bottom:b.bottom,width:b.width,radius:el.r.baseVal.value,scaleX:Math.hypot(m.a,m.b),scaleY:Math.hypot(m.c,m.d)};})};});
  for(const box of boxes)assert.ok(box.width>0&&box.scaleX>0&&Math.abs(box.scaleX-box.scaleY)<.0001,'preview circles keep a uniform visible screen scale');
  const renderedRatio=boxes[1].radius*boxes[1].scaleX/(boxes[0].radius*boxes[0].scaleX);
  // Firefox rounds bounding rectangles to layout units; use its actual SVG
  // transform for the exact size relation, and keep rectangle clipping checks.
  assert.ok(Math.abs(renderedRatio-11.21)<.0001,'preview retains the same Earth/Jupiter diameter scale');
  for(const box of boxes)assert.ok(box.x>=frame.x-1&&box.right<=frame.x+frame.width+1&&box.y>=frame.y-1&&box.bottom<=frame.y+frame.height+1,'whole planet remains inside the preview');
- const bicycle=page.locator('.world-inventions .gateway-art>svg');assert.match(await bicycle.getAttribute('aria-label'),/Fahrrads mit Pedalen, Kette und Hinterrad/);const wheels=bicycle.locator('circle').all();assert.equal((await wheels).length,4);const first=await bicycle.locator('circle').nth(0).getAttribute('r'),second=await bicycle.locator('circle').nth(1).getAttribute('r');assert.equal(first,second,'actual chain-drive drawing keeps both wheel sizes');assert.equal(await bicycle.locator('path[stroke="#d66229"]').count(),1,'chain path is visible');
- (report.gatewayModelPreviews??=[]).push({width:await page.evaluate(()=>innerWidth),earthJupiterRatio:renderedRatio,boundingRectangleRatio:boxes[1].width/boxes[0].width,wholePlanets:true,bicycleChain:true});
+ const bicycle=previews.locator('.world-inventions .gateway-art>svg');assert.match(await bicycle.getAttribute('aria-label'),/Fahrrads mit Pedalen, Kette und Hinterrad/);const wheels=bicycle.locator('circle').all();assert.equal((await wheels).length,4);const first=await bicycle.locator('circle').nth(0).getAttribute('r'),second=await bicycle.locator('circle').nth(1).getAttribute('r');assert.equal(first,second,'actual chain-drive drawing keeps both wheel sizes');assert.equal(await bicycle.locator('path[stroke="#d66229"]').count(),1,'chain path is visible');
+ const frameContrast=await bicycle.locator('path[stroke-width="10"]').evaluate(el=>{let surface=el;while(surface.parentElement&&['transparent','rgba(0, 0, 0, 0)'].includes(getComputedStyle(surface).backgroundColor))surface=surface.parentElement;const luminance=color=>{const rgb=color.match(/[\d.]+/g).slice(0,3).map(Number).map(n=>{const v=n/255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4});return .2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2]};const[a,b]=[getComputedStyle(el).stroke,getComputedStyle(surface).backgroundColor].map(luminance);return(Math.max(a,b)+.05)/(Math.min(a,b)+.05);});assert.ok(frameContrast>=3,'meaningful bicycle frame has at least3:1contrast against its actual surface');
+ (report.gatewayModelPreviews??=[]).push({width:await page.evaluate(()=>innerWidth),earthJupiterRatio:renderedRatio,boundingRectangleRatio:boxes[1].width/boxes[0].width,wholePlanets:true,bicycleChain:true,bicycleFrameContrast:frameContrast});
 }
 
 export async function discoveryCentral(page,ready,report,width,shots){
