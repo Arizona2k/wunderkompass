@@ -11,6 +11,10 @@ export function assertHomePanelReserve(boxes){
  assert.ok(boxes.unusedAfterWorld<=normalEndSpace+2,'unnecessary home panel reserve after the six worlds: '+JSON.stringify(boxes));
 }
 export async function homePanelLayout(page){
+ // The resume card also exists on the previous journey screen. Wait for
+ // actual Home and its browser paint, never for a desired geometry value.
+ await page.locator('.earth-app[data-mode=home] .discovery-worlds').waitFor();
+ await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
  const boxes=await page.evaluate(()=>{
   const panel=document.querySelector('.learning-panel'),world=document.querySelector('.discovery-worlds'),next=document.querySelector('.discovery-pathways');
   if(!panel||!world||!next)throw Error('Home worlds and connections must be present before measuring');
