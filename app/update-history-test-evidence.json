@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "checkedOn": "2026-10-21",
+  "checkedOn": "2026-10-27",
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "752b94fa0d1fc67b80c3de388c84b41ba2fc4a3c",
+    "commit": "965ea4397860c3d922e0e228d20dd7521b9445c7",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -63,7 +63,9 @@
       "a081dbbaa91eaf9b3179db32f98f82acde3d0dfd",
       "9e397e98378d9bc1376fd111e39d2693ed0a95b5",
       "fc42c67b5b5a6c6dc80fc9fc40634d862bb4f691",
-      "752b94fa0d1fc67b80c3de388c84b41ba2fc4a3c"
+      "752b94fa0d1fc67b80c3de388c84b41ba2fc4a3c",
+      "cc885f0c884d5a1ca958ddc6b5d7f76e968834c8",
+      "965ea4397860c3d922e0e228d20dd7521b9445c7"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -1680,6 +1682,28 @@
           "createdAt": "2026-10-27T11:26:50Z",
           "updatedAt": "2026-10-27T11:26:50Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/H8W84gNXFQKYfDkZRAukuv3f7F4F"
+        }
+      ],
+      "checkedOn": "2026-10-27"
+    },
+    {
+      "number": 70,
+      "title": "Planetenabstände in beiden Modellen konsistent erklären",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/70",
+      "base": "test-live",
+      "mergedAt": "2026-10-27T14:56:04Z",
+      "mergeCommit": "965ea4397860c3d922e0e228d20dd7521b9445c7",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/965ea4397860c3d922e0e228d20dd7521b9445c7/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57375783281,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-27T14:56:21Z",
+          "updatedAt": "2026-10-27T14:56:21Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/CxCuJ9ptsmLYScvZRWp9tnSonUmU"
         }
       ],
       "checkedOn": "2026-10-27"
