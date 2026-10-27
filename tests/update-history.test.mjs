@@ -1,4 +1,4 @@
-const CURRENT_PUBLIC_ENTRY_COUNT=62;
+const CURRENT_PUBLIC_ENTRY_COUNT=64;
 test('actual PR66 delivery preserves all61 prior full payloads and rejects untrusted deployment evidence',()=>{
  const entries=publicUpdates(),entry=entries.find(e=>e.evidence.pullRequest===66),record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===66),fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/chronicle-before-pr66-hashes.json',import.meta.url),'utf8'));
  assert.equal(entries.length,CURRENT_PUBLIC_ENTRY_COUNT);assert.equal(fixture.entries.length,61);for(const old of fixture.entries)assert.equal(createHash('sha256').update(JSON.stringify(entries.find(e=>e.id===old.id))).digest('hex'),old.sha256,old.id+' prior full payload preserved');
@@ -116,7 +116,7 @@ test('publication entries match successful deployments, source provenance and Be
 
 test('test website chronology retains the merged and deployed product rounds, with truthful channel dates',()=>{
  const entries=publicUpdates(),testEntries=entries.filter(e=>e.channel==='vercel-test');
- assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[66,65,64,62,62,63,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,39,38,36,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
+ assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[68,67,66,65,64,62,62,63,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,39,38,36,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
  assert.equal(entries.length,CURRENT_PUBLIC_ENTRY_COUNT);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
  assert.ok(!PREPARED_UPDATES.some(e=>e.id==='foundation-2a'));
@@ -390,4 +390,13 @@ test('actual M64 chronicle preserves every59previous entry and uses its exact co
  const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===64);
  for(const mutate of[r=>{r.mergedAt=null;},r=>{r.deploymentStatuses=[];},r=>{r.deploymentStatuses[0].state='pending';},r=>{r.deploymentStatuses[0].creator='untrusted';}]){const invalid=structuredClone(record);mutate(invalid);assert.equal(confirmedTestDeployment(invalid),null);const prepared=testUpdate(invalid,CONNECTED_DESIGN_COPY);assert.equal(prepared.status,'prepared');assert.equal(prepared.occurredAt,null);assert.deepEqual(prepared.links,[]);}
  const unrelated={...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(s=>s!==record.mergeCommit)};assert.equal(confirmedTestDeployment(record,unrelated),null);
+});
+
+test('PR67 and PR68 chronology uses the actual Berlin availability and preserves every earlier payload',()=>{
+ const entries=publicUpdates(),fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/chronicle-before-pr67-68-hashes.json',import.meta.url),'utf8'));
+ assert.equal(fixture.entries.length,62);for(const old of fixture.entries)assert.equal(createHash('sha256').update(JSON.stringify(entries.find(e=>e.id===old.id))).digest('hex'),old.sha256,old.id+' prior complete payload');
+ for(const [number,id,instant,label]of[[67,'compact-navigation-real-previews-3-5','2026-10-26T23:10:56Z','27. Oktober 2026 um 00:10:56 MEZ'],[68,'playground-preview-selection-feedback-3-5','2026-10-27T01:57:19Z','27. Oktober 2026 um 02:57:19 MEZ']]){
+  const entry=entries.find(e=>e.evidence.pullRequest===number),record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===number);assert.equal(entry.id,id);assert.equal(entry.occurredAt,instant);assert.equal(entry.availableOn,'2026-10-27');assert.equal(updateDate(entry),label);assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);assert.equal(entries.filter(e=>e.id===id).length,1);
+  for(const change of[r=>r.mergedAt=null,r=>r.deploymentStatuses=[],r=>r.deploymentStatuses[0].creator='untrusted',r=>r.deploymentStatuses[0].state='pending']){const invalid=structuredClone(record);change(invalid);assert.equal(confirmedTestDeployment(invalid),null);const pending=testUpdate(invalid,entry);assert.equal(pending.status,'prepared');assert.deepEqual(pending.links,[]);assert.equal(pending.occurredAt,null);}
+ }
 });

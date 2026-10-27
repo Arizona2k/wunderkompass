@@ -11,7 +11,7 @@ import {playgroundFlow,prepareOfflinePlayground,offlinePlayground} from './playg
 import {passDesign} from './pass-atlas.mjs';
 import {backupFlow} from './backup.mjs';
 import {articleAtlas,offlineArticleAtlas} from './article-atlas.mjs';
-import {discoveryCentral,offlineDiscoveryCentral,homepageOverview} from './discovery-central.mjs';
+import {discoveryCentral,discoveryVisitCases,offlineDiscoveryCentral,homepageOverview} from './discovery-central.mjs';
 import {connectedDiscoveries} from './connected-discoveries.mjs';
 import {challengeHints,offlineChallengeHints} from './challenge-hints.mjs';
 import {searchAndHistory, memoryRound} from './portable-flows.mjs';
@@ -45,6 +45,7 @@ if(runSuite('home')){
   const homeShots=path.basename(shots)==='quality-learning'?path.join(qaRoot,'quality-navigation'):shots;
   await fs.mkdir(homeShots,{recursive:true});
   await timed('home',()=>homepageOverview(browser,base,ready,monitor,report,homeShots));
+  await timed('home-visits',()=>discoveryVisitCases(browser,base,ready,monitor,report,homeShots));
  }
  const coreStarted=performance.now();
  if(runSuite('core'))for(const [width,height] of [[1440,900],[768,1024],[390,844],[360,800]]){

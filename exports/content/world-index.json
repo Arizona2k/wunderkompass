@@ -19,7 +19,8 @@
     "image": "african-elephant",
     "group": "Säugetiere",
     "habitat": "Savanne",
-    "continent": "Afrika"
+    "continent": "Afrika",
+    "homeQuestion": "Was kann ein Elefant mit seinem Rüssel tun?"
   },
   {
     "id": "animal-lion",
@@ -41,7 +42,20 @@
     "image": "lion",
     "group": "Säugetiere",
     "habitat": "Savanne",
-    "continent": "Afrika"
+    "continent": "Afrika",
+    "homeQuestion": "Wie leben viele Löwen?",
+    "homePhoto": {
+      "id": "lion",
+      "author": "Byrdyak",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Lion_male.jpg",
+      "alt_de": "Ein männlicher Löwe mit großer Mähne liegt im Gras und gähnt.",
+      "width": 1200,
+      "height": 801,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/lion.webp"
+    }
   },
   {
     "id": "animal-cheetah",
@@ -63,7 +77,20 @@
     "image": "cheetah",
     "group": "Säugetiere",
     "habitat": "Savanne",
-    "continent": "Afrika"
+    "continent": "Afrika",
+    "homeQuestion": "Wofür ist ein Gepard besonders bekannt?",
+    "homePhoto": {
+      "id": "cheetah",
+      "author": "Hobbyfotowiki",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Cheetah_(Acinonyx_jubatus),_Maasai_Mara.jpg",
+      "alt_de": "Ein Gepard mit schwarzem Fleckenmuster steht zwischen Gräsern und Büschen.",
+      "width": 930,
+      "height": 619,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/cheetah.webp"
+    }
   },
   {
     "id": "animal-bengal-tiger",
@@ -85,7 +112,20 @@
     "image": "bengal-tiger",
     "group": "Säugetiere",
     "habitat": "Wald",
-    "continent": "Asien"
+    "continent": "Asien",
+    "homeQuestion": "Was frisst ein Bengaltiger hauptsächlich?",
+    "homePhoto": {
+      "id": "bengal-tiger",
+      "author": "Paul Mannix",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Bengal_Tiger_Karnataka.jpg",
+      "alt_de": "Ein orangefarbener Bengaltiger mit schwarzen Streifen läuft durch trockenes Gras.",
+      "width": 935,
+      "height": 804,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/bengal-tiger.webp"
+    }
   },
   {
     "id": "animal-giraffe",
@@ -107,7 +147,20 @@
     "image": "giraffe",
     "group": "Säugetiere",
     "habitat": "Savanne",
-    "continent": "Afrika"
+    "continent": "Afrika",
+    "homeQuestion": "Welche Messung beschreibt die Höhe einer Giraffe?",
+    "homePhoto": {
+      "id": "giraffe",
+      "author": "safaritravelplus",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Adult_Giraffe.jpg",
+      "alt_de": "Eine Giraffe steht mit ihrem ganzen Körper auf einer offenen, trockenen Ebene.",
+      "width": 1200,
+      "height": 803,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/giraffe.webp"
+    }
   },
   {
     "id": "animal-giant-panda",
@@ -129,7 +182,20 @@
     "image": "giant-panda",
     "group": "Säugetiere",
     "habitat": "Gebirge",
-    "continent": "Asien"
+    "continent": "Asien",
+    "homeQuestion": "Was frisst der Große Panda überwiegend?",
+    "homePhoto": {
+      "id": "giant-panda",
+      "author": "Clément Bardot",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Panda_Géant.jpg",
+      "alt_de": "Ein schwarz-weißer Großer Panda sitzt zwischen Felsen und hält Bambus.",
+      "width": 1000,
+      "height": 658,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/giant-panda.webp"
+    }
   },
   {
     "id": "animal-western-lowland-gorilla",
@@ -151,7 +217,20 @@
     "image": "western-lowland-gorilla",
     "group": "Säugetiere",
     "habitat": "Regenwald",
-    "continent": "Afrika"
+    "continent": "Afrika",
+    "homeQuestion": "Warum ist Waldschutz für Gorillas wichtig?",
+    "homePhoto": {
+      "id": "western-lowland-gorilla",
+      "author": "Mira Meijer, Burgers’ Zoo · https://www.burgerszoo.nl/gorilla",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Western_lowland_gorilla_(Gorilla_gorilla_gorilla).jpg",
+      "alt_de": "Ein Westlicher Flachlandgorilla mit dunklem Fell steht in grüner Vegetation.",
+      "width": 1200,
+      "height": 800,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/western-lowland-gorilla.webp"
+    }
   },
   {
     "id": "animal-bornean-orangutan",
@@ -173,7 +252,20 @@
     "image": "bornean-orangutan",
     "group": "Säugetiere",
     "habitat": "Regenwald",
-    "continent": "Asien"
+    "continent": "Asien",
+    "homeQuestion": "Wo verbringt ein Orang-Utan viel Zeit?",
+    "homePhoto": {
+      "id": "bornean-orangutan",
+      "author": "Eric Kilby",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Male_Bornean_Orangutan_-_Big_Cheeks.jpg",
+      "alt_de": "Nahaufnahme eines männlichen Borneo-Orang-Utans mit rotbraunem Fell und großen Wangenwülsten.",
+      "width": 1200,
+      "height": 801,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/bornean-orangutan.webp"
+    }
   },
   {
     "id": "animal-polar-bear",
@@ -195,7 +287,20 @@
     "image": "polar-bear",
     "group": "Säugetiere",
     "habitat": "Arktis",
-    "continent": "Arktis"
+    "continent": "Arktis",
+    "homeQuestion": "Warum braucht der Eisbär Meereis?",
+    "homePhoto": {
+      "id": "polar-bear",
+      "author": "U.S. Fish and Wildlife Service; laut Quellenseite Susanne Miller oder Donna Dewhurst",
+      "license": "Public domain — U.S. Fish and Wildlife Service",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Polar_Bear.jpg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Polar_Bear.jpg",
+      "alt_de": "Ein Eisbär liegt am Boden und schaut nach vorn.",
+      "width": 700,
+      "height": 606,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/polar-bear.webp"
+    }
   },
   {
     "id": "animal-emperor-penguin",
@@ -217,7 +322,20 @@
     "image": "emperor-penguin",
     "group": "Vögel",
     "habitat": "Antarktis",
-    "continent": "Antarktika"
+    "continent": "Antarktika",
+    "homeQuestion": "Wo leben Kaiserpinguine in freier Natur?",
+    "homePhoto": {
+      "id": "emperor-penguin",
+      "author": "Michael Van Woert / NOAA",
+      "license": "Public domain — NOAA",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Emperor_penguin.jpg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Emperor_penguin.jpg",
+      "alt_de": "Zwei Kaiserpinguine stehen auf einer Eisfläche in der Antarktis.",
+      "width": 700,
+      "height": 1024,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/emperor-penguin.webp"
+    }
   },
   {
     "id": "animal-blue-whale",
@@ -239,7 +357,20 @@
     "image": "blue-whale",
     "group": "Säugetiere",
     "habitat": "Ozean",
-    "continent": "Ozean"
+    "continent": "Ozean",
+    "homeQuestion": "Was frisst ein Blauwal überwiegend?",
+    "homePhoto": {
+      "id": "blue-whale",
+      "author": "Fred Benko / NOAA",
+      "license": "Public domain — NOAA",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Bluewhale_300.jpg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Bluewhale_300.jpg",
+      "alt_de": "Der dunkle Rücken eines Blauwals taucht an der Meeresoberfläche auf; eine Wasserfontäne steigt über ihm auf.",
+      "width": 1200,
+      "height": 788,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/blue-whale.webp"
+    }
   },
   {
     "id": "animal-common-bottlenose-dolphin",
@@ -261,7 +392,20 @@
     "image": "bottlenose-dolphin",
     "group": "Säugetiere",
     "habitat": "Ozean",
-    "continent": "Ozean"
+    "continent": "Ozean",
+    "homeQuestion": "Wie atmet ein Delfin?",
+    "homePhoto": {
+      "id": "bottlenose-dolphin",
+      "author": "NASA",
+      "license": "Public domain — NASA",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg",
+      "alt_de": "Ein Großer Tümmler schwimmt in einer schäumenden Bootswelle an der Wasseroberfläche.",
+      "width": 1200,
+      "height": 887,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/bottlenose-dolphin.webp"
+    }
   },
   {
     "id": "animal-orca",
@@ -283,7 +427,20 @@
     "image": "orca",
     "group": "Säugetiere",
     "habitat": "Ozean",
-    "continent": "Ozean"
+    "continent": "Ozean",
+    "homeQuestion": "Zu welcher Gruppe gehört der Orca?",
+    "homePhoto": {
+      "id": "orca",
+      "author": "The Modern Polymath",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Orca_breaching.jpg",
+      "alt_de": "Ein schwarz-weißer Orca springt vor einer bergigen Küste aus dem Meer.",
+      "width": 1200,
+      "height": 675,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/orca.webp"
+    }
   },
   {
     "id": "animal-common-octopus",
@@ -305,7 +462,20 @@
     "image": "common-octopus",
     "group": "Weichtiere",
     "habitat": "Küste",
-    "continent": "Ozean"
+    "continent": "Ozean",
+    "homeQuestion": "Wie viele Arme hat ein Krake?",
+    "homePhoto": {
+      "id": "common-octopus",
+      "author": "MartinThoma",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Octopus-vulgaris.jpg",
+      "alt_de": "Ein Gewöhnlicher Krake im Aquarium breitet seine hellen Arme über Steine aus.",
+      "width": 1200,
+      "height": 900,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/common-octopus.webp"
+    }
   },
   {
     "id": "animal-green-sea-turtle",
@@ -327,7 +497,20 @@
     "image": "green-sea-turtle",
     "group": "Reptilien",
     "habitat": "Küste",
-    "continent": "Ozean"
+    "continent": "Ozean",
+    "homeQuestion": "Welche Körpergröße wird auf der Karte verglichen?",
+    "homePhoto": {
+      "id": "green-sea-turtle",
+      "author": "Rickard Zerpe",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas).jpg",
+      "alt_de": "Eine Grüne Meeresschildkröte schwimmt über einem Korallenriff.",
+      "width": 1016,
+      "height": 762,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/green-sea-turtle.webp"
+    }
   },
   {
     "id": "animal-red-kangaroo",
@@ -349,7 +532,20 @@
     "image": "red-kangaroo",
     "group": "Säugetiere",
     "habitat": "Grasland",
-    "continent": "Australien / Ozeanien"
+    "continent": "Australien / Ozeanien",
+    "homeQuestion": "Was steckt in der Größenangabe dieser Karte?",
+    "homePhoto": {
+      "id": "red-kangaroo",
+      "author": "Namoroka",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Osphranter_rufus,_Perth_Zoo,_20220427_3.jpg",
+      "alt_de": "Ein Rotes Riesenkänguru steht hinter einem zweiten Känguru, das auf dem Boden liegt.",
+      "width": 748,
+      "height": 562,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/red-kangaroo.webp"
+    }
   },
   {
     "id": "animal-koala",
@@ -371,7 +567,20 @@
     "image": "koala",
     "group": "Säugetiere",
     "habitat": "Wald",
-    "continent": "Australien / Ozeanien"
+    "continent": "Australien / Ozeanien",
+    "homeQuestion": "Was frisst ein Koala hauptsächlich?",
+    "homePhoto": {
+      "id": "koala",
+      "author": "Gzen92",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Koala_(Phascolarctos_cinereus)_(3).jpg",
+      "alt_de": "Ein grauer Koala sitzt auf einem Ast neben grünen Blättern.",
+      "width": 800,
+      "height": 1200,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/koala.webp"
+    }
   },
   {
     "id": "animal-jaguar",
@@ -393,7 +602,8 @@
     "image": "jaguar",
     "group": "Säugetiere",
     "habitat": "Regenwald",
-    "continent": "Südamerika"
+    "continent": "Südamerika",
+    "homeQuestion": "Welche Fähigkeit passt zu einem Jaguar?"
   },
   {
     "id": "animal-honey-bee",
@@ -415,7 +625,8 @@
     "image": "honey-bee",
     "group": "Insekten",
     "habitat": "Wiesen & Gärten",
-    "continent": "Mehrere Kontinente"
+    "continent": "Mehrere Kontinente",
+    "homeQuestion": "Was kann eine Biene beim Blütenbesuch weitertragen?"
   },
   {
     "id": "animal-axolotl",
@@ -437,7 +648,20 @@
     "image": "axolotl",
     "group": "Amphibien",
     "habitat": "Flüsse & Seen",
-    "continent": "Nordamerika"
+    "continent": "Nordamerika",
+    "homeQuestion": "Was ist an einem erwachsenen Axolotl besonders?",
+    "homePhoto": {
+      "id": "axolotl",
+      "author": "Amandasofiarana",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Axolotl_ambystoma_mexicanum_anfibio_ASAG.jpg",
+      "alt_de": "Ein heller Axolotl mit roten, federartigen äußeren Kiemen sitzt auf Steinen im Aquarium.",
+      "width": 1200,
+      "height": 800,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/axolotl.webp"
+    }
   },
   {
     "id": "history-stone_tools",
@@ -989,7 +1213,8 @@
     ],
     "image": "marie-curie",
     "field": "Physikerin und Chemikerin",
-    "lifespan": "1867–1934"
+    "lifespan": "1867–1934",
+    "homeQuestion": "Wofür ist Marie Curie besonders bekannt?"
   },
   {
     "id": "person-ada_lovelace",
@@ -1010,7 +1235,21 @@
     ],
     "image": "ada-lovelace",
     "field": "Mathematikerin und Autorin",
-    "lifespan": "1815–1852"
+    "lifespan": "1815–1852",
+    "homeQuestion": "Wofür ist Ada Lovelace besonders bekannt?",
+    "homePhoto": {
+      "id": "ada-lovelace",
+      "author": "Antoine Claudet (1797–1867)",
+      "license": "Public domain — expired copyright",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Ada_Lovelace_daguerreotype_by_Antoine_Claudet_1843.jpg",
+      "alt_de": "Historisches Foto von Ada Lovelace in einem ovalen goldfarbenen Rahmen; sie sitzt seitlich und hält ihre Hände vor sich.",
+      "width": 1100,
+      "height": 1200,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/ada-lovelace.webp",
+      "fit": "contain"
+    }
   },
   {
     "id": "person-grace_hopper",
@@ -1031,7 +1270,23 @@
     ],
     "image": "grace-hopper",
     "field": "Mathematikerin, Informatikpionierin und Marineoffizierin",
-    "lifespan": "1906–1992"
+    "lifespan": "1906–1992",
+    "homeQuestion": "Wofür ist Grace Hopper besonders bekannt?",
+    "homePhoto": {
+      "id": "grace-hopper",
+      "src": "/images/portraits/grace-hopper.webp",
+      "author": "James S. Davis / U.S. Navy",
+      "license": "Public Domain (U.S. Navy)",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Grace_Hopper.jpg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Grace_Hopper.jpg",
+      "alt_de": "Grace Hopper in Marineuniform neben der Flagge der USA.",
+      "width": 517,
+      "height": 606,
+      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
+      "fit": "contain",
+      "caption": "Grace Hopper auf einem offiziellen Porträtfoto der U.S. Navy von 1984.",
+      "label": "Foto"
+    }
   },
   {
     "id": "person-katherine_johnson",
@@ -1052,7 +1307,21 @@
     ],
     "image": "katherine-johnson",
     "field": "Mathematikerin",
-    "lifespan": "1918–2020"
+    "lifespan": "1918–2020",
+    "homeQuestion": "Wofür ist Katherine Johnson besonders bekannt?",
+    "homePhoto": {
+      "id": "katherine-johnson",
+      "author": "NASA",
+      "license": "Public domain — NASA",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Katherine_Johnson_at_NASA,_in_1966_-_Original.jpg",
+      "alt_de": "Katherine Johnson sitzt mit Brille an einem Schreibtisch mit Rechenmaschine und Papieren und schaut lächelnd zur Kamera.",
+      "width": 952,
+      "height": 1200,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/katherine-johnson.webp",
+      "fit": "contain"
+    }
   },
   {
     "id": "person-tim_berners_lee",
@@ -1072,7 +1341,23 @@
     ],
     "image": "tim-berners-lee",
     "field": "Informatiker",
-    "lifespan": "geboren 1955"
+    "lifespan": "geboren 1955",
+    "homeQuestion": "Wofür ist Tim Berners-Lee besonders bekannt?",
+    "homePhoto": {
+      "id": "tim-berners-lee",
+      "src": "/images/portraits/tim-berners-lee.webp",
+      "author": "Paul Clarke",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Sir_Tim_Berners-Lee.jpg",
+      "alt_de": "Tim Berners-Lee in dunklem Anzug mit blauer Krawatte vor einem Torbogen.",
+      "width": 800,
+      "height": 533,
+      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
+      "fit": "contain",
+      "caption": "Tim Berners-Lee vor der Guildhall in London, 2014.",
+      "label": "Foto"
+    }
   },
   {
     "id": "person-karl_benz",
@@ -1093,7 +1378,23 @@
     ],
     "image": "karl-benz",
     "field": "Ingenieur und Automobilpionier",
-    "lifespan": "1844–1929"
+    "lifespan": "1844–1929",
+    "homeQuestion": "Wofür ist Karl (Carl) Benz besonders bekannt?",
+    "homePhoto": {
+      "id": "karl-benz",
+      "src": "/images/portraits/karl-benz.webp",
+      "author": "Unbekannter Fotograf",
+      "license": "Public Domain (laut Commons: USA und Deutschland)",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Carl_Benz_circa_1920.jpg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Carl_Benz_circa_1920.jpg",
+      "alt_de": "Historisches Porträtfoto von Karl Benz mit Schnurrbart und dunklem Anzug.",
+      "width": 600,
+      "height": 800,
+      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
+      "fit": "contain",
+      "caption": "Karl Benz auf einem historischen Foto aus der Zeit um 1920.",
+      "label": "Foto"
+    }
   },
   {
     "id": "person-bertha_benz",
@@ -1120,7 +1421,23 @@
     ],
     "image": "bertha-benz",
     "field": "Automobilpionierin",
-    "lifespan": "1849–1944"
+    "lifespan": "1849–1944",
+    "homeQuestion": "Wofür ist Bertha Benz besonders bekannt?",
+    "homePhoto": {
+      "id": "bertha-benz",
+      "src": "/images/portraits/bertha-benz.webp",
+      "author": "Bühler, Mannheim",
+      "license": "Public Domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Berthabenzportrait.jpg",
+      "alt_de": "Historisches Porträtfoto der jungen Bertha Benz in einem dunklen Kleid.",
+      "width": 601,
+      "height": 800,
+      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
+      "fit": "contain",
+      "caption": "Bertha Benz als junge Frau, fotografiert um 1871–1872.",
+      "label": "Foto"
+    }
   },
   {
     "id": "person-jane_goodall",
@@ -1141,7 +1458,23 @@
     ],
     "image": "jane-goodall",
     "field": "Verhaltensforscherin und Naturschützerin",
-    "lifespan": "1934–2025"
+    "lifespan": "1934–2025",
+    "homeQuestion": "Wofür ist Jane Goodall besonders bekannt?",
+    "homePhoto": {
+      "id": "jane-goodall",
+      "src": "/images/portraits/jane-goodall.webp",
+      "author": "U.S. Department of State; Ausschnitt von Commons-Nutzer Stemoc",
+      "license": "Public Domain (U.S. Department of State)",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Jane_Goodall_2015.jpg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Jane_Goodall_2015.jpg",
+      "alt_de": "Jane Goodall mit zurückgebundenen grauen Haaren im Porträt.",
+      "width": 550,
+      "height": 800,
+      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
+      "fit": "contain",
+      "caption": "Jane Goodall bei einem Besuch im US-Außenministerium, 2015.",
+      "label": "Foto"
+    }
   },
   {
     "id": "person-albert_einstein",
@@ -1168,7 +1501,23 @@
     ],
     "image": "albert-einstein",
     "field": "Physiker",
-    "lifespan": "1879–1955"
+    "lifespan": "1879–1955",
+    "homeQuestion": "Wofür ist Albert Einstein besonders bekannt?",
+    "homePhoto": {
+      "id": "albert-einstein",
+      "src": "/images/portraits/albert-einstein.webp",
+      "author": "Ferdinand Schmutzer",
+      "license": "Public Domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_1921_by_F_Schmutzer.jpg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_1921_by_F_Schmutzer.jpg",
+      "alt_de": "Albert Einstein mit Schnurrbart und dunklem Anzug auf einem Schwarzweißfoto.",
+      "width": 609,
+      "height": 800,
+      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
+      "fit": "contain",
+      "caption": "Albert Einstein auf einem Foto von Ferdinand Schmutzer in Wien, 1921.",
+      "label": "Foto"
+    }
   },
   {
     "id": "person-al_khwarizmi",
@@ -1189,7 +1538,23 @@
     ],
     "image": "al-khwarizmi",
     "field": "Mathematiker und Astronom",
-    "lifespan": "etwa 780–850"
+    "lifespan": "etwa 780–850",
+    "homeQuestion": "Wofür ist al-Chwarizmi (al-Khwarizmi) besonders bekannt?",
+    "homePhoto": {
+      "id": "al-khwarizmi",
+      "src": "/images/portraits/al-khwarizmi.webp",
+      "author": "А. Адашев (A. Adaschew), laut Commons",
+      "license": "Public Domain (PD-RU-exempt; vollständige Briefmarke)",
+      "license_url": "https://commons.wikimedia.org/wiki/File:1983_CPA_5426.jpg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:1983_CPA_5426.jpg",
+      "alt_de": "Sowjetische Briefmarke von 1983 mit einer späteren Fantasiedarstellung von al-Khwarizmi.",
+      "width": 597,
+      "height": 800,
+      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
+      "fit": "contain",
+      "caption": "Spätere Fantasiedarstellung von al-Khwarizmi auf einer sowjetischen Briefmarke von 1983.",
+      "label": "Darstellung"
+    }
   },
   {
     "id": "person-tu_youyou",
@@ -1210,7 +1575,23 @@
     ],
     "image": "tu-youyou",
     "field": "Pharmawissenschaftlerin",
-    "lifespan": "geboren 1930"
+    "lifespan": "geboren 1930",
+    "homeQuestion": "Wofür ist Tu Youyou besonders bekannt?",
+    "homePhoto": {
+      "id": "tu-youyou",
+      "src": "/images/portraits/tu-youyou.webp",
+      "author": "Bengt Nyman",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Tu_Youyou_5012-1-2015.jpg",
+      "alt_de": "Tu Youyou mit Brille bei einem Termin in Stockholm 2015.",
+      "width": 800,
+      "height": 800,
+      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
+      "fit": "contain",
+      "caption": "Tu Youyou in Stockholm während der Nobelpreiswoche, 2015.",
+      "label": "Foto"
+    }
   },
   {
     "id": "person-cai_lun",
@@ -1231,7 +1612,23 @@
     ],
     "image": "cai-lun",
     "field": "Hofbeamter und Verbesserer der Papierherstellung",
-    "lifespan": "1. Jahrhundert–121 n. Chr. (Geburtsjahr unsicher)"
+    "lifespan": "1. Jahrhundert–121 n. Chr. (Geburtsjahr unsicher)",
+    "homeQuestion": "Wofür ist Cai Lun besonders bekannt?",
+    "homePhoto": {
+      "id": "cai-lun",
+      "src": "/images/portraits/cai-lun.webp",
+      "author": "Unbekannter Künstler",
+      "license": "Public Domain (PD-old-100-expired / PD-Art)",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Cai-lun.jpg",
+      "alt_de": "Spätere Druckgrafik aus dem 18. Jahrhundert, die Cai Lun als Schutzpatron der Papierherstellung zeigt.",
+      "width": 375,
+      "height": 469,
+      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
+      "fit": "contain",
+      "caption": "Spätere Darstellung von Cai Lun als Schutzpatron der Papierherstellung: Druckgrafik aus dem 18. Jahrhundert.",
+      "label": "Darstellung"
+    }
   },
   {
     "id": "person-mae_jemison",
@@ -1252,7 +1649,21 @@
     ],
     "image": "mae-jemison",
     "field": "Ärztin, Ingenieurin und Astronautin",
-    "lifespan": "geboren 1956"
+    "lifespan": "geboren 1956",
+    "homeQuestion": "Wofür ist Mae Jemison besonders bekannt?",
+    "homePhoto": {
+      "id": "mae-jemison",
+      "author": "NASA / Johnson Space Center",
+      "license": "Public domain — NASA",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Mae_Jemison_-_Official_portrait_of_1987_astronaut_candidate.jpg",
+      "alt_de": "Mae Jemison lächelt im blauen NASA-Fluganzug und hält ein Space-Shuttle-Modell; neben ihr steht die US-Flagge.",
+      "width": 960,
+      "height": 1200,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/mae-jemison.webp",
+      "fit": "contain"
+    }
   },
   {
     "id": "person-johannes_gutenberg",
@@ -1273,7 +1684,23 @@
     ],
     "image": "johannes-gutenberg",
     "field": "Handwerker, Erfinder und Druckpionier",
-    "lifespan": "um 1400–1468"
+    "lifespan": "um 1400–1468",
+    "homeQuestion": "Wofür ist Johannes Gutenberg besonders bekannt?",
+    "homePhoto": {
+      "id": "johannes-gutenberg",
+      "src": "/images/portraits/johannes-gutenberg.webp",
+      "author": "André Thevet (Zeichnung); De Larmessin (Kupferstich), laut Sammlungskatalog der Koninklijke Bibliotheek",
+      "license": "Public Domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Johannes_Gutenberg_ca._1400-1468_uitvinder_van_de_boekdrukkunst,_1584_-_BBB-1437.jpg",
+      "alt_de": "Späterer Kupferstich von 1584, der Johannes Gutenberg mit Bart und Mütze zeigt.",
+      "width": 615,
+      "height": 800,
+      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
+      "fit": "contain",
+      "caption": "Spätere Darstellung von Johannes Gutenberg: Kupferstich von 1584.",
+      "label": "Darstellung"
+    }
   },
   {
     "id": "person-wangari_maathai",
@@ -1291,7 +1718,23 @@
     ],
     "image": "wangari-maathai",
     "field": "Natur- und Friedensarbeit",
-    "lifespan": "1940–2011"
+    "lifespan": "1940–2011",
+    "homeQuestion": "Welcher Beitrag gehört zu Wangari Maathai?",
+    "homePhoto": {
+      "id": "wangari-maathai",
+      "src": "/images/portraits/wangari-maathai.webp",
+      "author": "Demosh",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Wangari_Maathai.jpg",
+      "alt_de": "Wangari Maathai mit gemusterter Kopfbedeckung hält eine Auszeichnung.",
+      "width": 495,
+      "height": 800,
+      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
+      "fit": "contain",
+      "caption": "Wangari Maathai bei der Übergabe einer Auszeichnung in Kenia, 2006.",
+      "label": "Foto"
+    }
   },
   {
     "id": "person-charles_darwin",
@@ -1309,7 +1752,23 @@
     ],
     "image": "charles-darwin",
     "field": "Naturforschung",
-    "lifespan": "1809–1882"
+    "lifespan": "1809–1882",
+    "homeQuestion": "Welcher Beitrag gehört zu Charles Darwin?",
+    "homePhoto": {
+      "id": "charles-darwin",
+      "src": "/images/portraits/charles-darwin.webp",
+      "author": "Herbert Rose Barraud",
+      "license": "Public Domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Charles_Darwin_portrait.jpg",
+      "alt_de": "Charles Darwin mit langem weißem Bart auf einem historischen Porträtfoto.",
+      "width": 569,
+      "height": 800,
+      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
+      "fit": "contain",
+      "caption": "Charles Darwin auf einem Foto von Herbert Rose Barraud, 1881.",
+      "label": "Foto"
+    }
   },
   {
     "id": "person-alexander_humboldt",
@@ -1327,7 +1786,23 @@
     ],
     "image": "alexander-von-humboldt",
     "field": "Naturforschung und Forschungsreisen",
-    "lifespan": "1769–1859"
+    "lifespan": "1769–1859",
+    "homeQuestion": "Welcher Beitrag gehört zu Alexander von Humboldt?",
+    "homePhoto": {
+      "id": "alexander-von-humboldt",
+      "src": "/images/portraits/alexander-von-humboldt.webp",
+      "author": "Verlag von L. Haase & Co., Berlin; Fotograf nicht benannt",
+      "license": "Public Domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Alexander_von_Humboldt_photo_1857.jpg",
+      "alt_de": "Historisches Porträtfoto von Alexander von Humboldt in einem dunklen Mantel.",
+      "width": 500,
+      "height": 607,
+      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
+      "fit": "contain",
+      "caption": "Alexander von Humboldt auf einem historischen Foto aus der Zeit um 1857.",
+      "label": "Foto"
+    }
   },
   {
     "id": "person-neil_armstrong",
@@ -1345,7 +1820,23 @@
     ],
     "image": "neil-armstrong",
     "field": "Flugtechnik und Raumfahrt",
-    "lifespan": "1930–2012"
+    "lifespan": "1930–2012",
+    "homeQuestion": "Welcher Beitrag gehört zu Neil Armstrong?",
+    "homePhoto": {
+      "id": "neil-armstrong",
+      "src": "/images/portraits/neil-armstrong.webp",
+      "author": "NASA; Fotograf nicht benannt",
+      "license": "Public Domain (NASA)",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Neil_Armstrong_pose.jpg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Neil_Armstrong_pose.jpg",
+      "alt_de": "Neil Armstrong im Raumanzug mit seinem Helm auf dem Tisch vor ihm.",
+      "width": 640,
+      "height": 800,
+      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
+      "fit": "contain",
+      "caption": "Neil Armstrong auf seinem offiziellen Apollo-11-Porträt, 1969.",
+      "label": "Foto"
+    }
   },
   {
     "id": "invention-light",
@@ -1607,7 +2098,8 @@
       }
     ],
     "image": "giza-pyramids",
-    "model": "heights"
+    "model": "heights",
+    "homeQuestion": "Welche Erklärung passt zu diesem Bauwerk?"
   },
   {
     "id": "building-great-wall",
@@ -1624,7 +2116,20 @@
       }
     ],
     "image": "great-wall",
-    "model": null
+    "model": null,
+    "homeQuestion": "Welche Erklärung passt zu diesem Bauwerk?",
+    "homePhoto": {
+      "id": "great-wall",
+      "author": "黃景淵",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Great_wall_in_China.jpg",
+      "alt_de": "Die Chinesische Mauer mit Wachtürmen verläuft über bergige Hügel.",
+      "width": 1104,
+      "height": 736,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/great-wall.webp"
+    }
   },
   {
     "id": "building-colosseum",
@@ -1640,7 +2145,20 @@
         "iso": "IT"
       }
     ],
-    "image": "colosseum"
+    "image": "colosseum",
+    "homeQuestion": "Welche Erklärung passt zu diesem Bauwerk?",
+    "homePhoto": {
+      "id": "colosseum",
+      "author": "Wilfredor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Colosseum_of_Rome,_Italy.jpg",
+      "alt_de": "Die äußeren Bögen des Kolosseums in Rom sind am Abend beleuchtet.",
+      "width": 1104,
+      "height": 696,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/colosseum.webp"
+    }
   },
   {
     "id": "building-taj-mahal",
@@ -1657,7 +2175,20 @@
       }
     ],
     "image": "taj-mahal",
-    "model": null
+    "model": null,
+    "homeQuestion": "Welche Erklärung passt zu diesem Bauwerk?",
+    "homePhoto": {
+      "id": "taj-mahal",
+      "author": "Yann Forget; Bearbeitung: King of Hearts",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Taj_Mahal,_Agra,_India_edit2.jpg",
+      "alt_de": "Das weiße Taj Mahal mit Kuppel und vier Minaretten steht am Ende eines Wasserbeckens.",
+      "width": 1200,
+      "height": 789,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/taj-mahal.webp"
+    }
   },
   {
     "id": "building-eiffel-tower",
@@ -1674,7 +2205,20 @@
       }
     ],
     "image": "eiffel-tower",
-    "model": "heights"
+    "model": "heights",
+    "homeQuestion": "Welche Erklärung passt zu diesem Bauwerk?",
+    "homePhoto": {
+      "id": "eiffel-tower",
+      "author": "BigBartimäus",
+      "license": "Public domain — author release",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Eiffelturm.JPG",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Eiffelturm.JPG",
+      "alt_de": "Der gesamte Eiffelturm steht am Tag vor blauem Himmel; darunter liegt eine grüne Rasenfläche.",
+      "width": 900,
+      "height": 1200,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/eiffel-tower.webp"
+    }
   },
   {
     "id": "building-golden-gate-bridge",
@@ -1691,7 +2235,8 @@
       }
     ],
     "image": "golden-gate-bridge",
-    "model": "bridge"
+    "model": "bridge",
+    "homeQuestion": "Welche Erklärung passt zu diesem Bauwerk?"
   },
   {
     "id": "building-panama-canal",
@@ -1708,7 +2253,20 @@
       }
     ],
     "image": "panama-canal",
-    "model": "lock"
+    "model": "lock",
+    "homeQuestion": "Welche Erklärung passt zu diesem Bauwerk?",
+    "homePhoto": {
+      "id": "panama-canal",
+      "author": "Paul Harrison",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Panama_Canal_Lock_2016.jpg",
+      "alt_de": "Ein großes Schleusentor und wassergefüllte Schleusenkammern des Panamakanals sind von oben zu sehen.",
+      "width": 1104,
+      "height": 736,
+      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
+      "src": "/world/panama-canal.webp"
+    }
   },
   {
     "id": "building-burj-khalifa",
@@ -1806,7 +2364,23 @@
     "image": "whale-shark",
     "group": "Fische",
     "habitat": "Ozean",
-    "continent": "Mehrere Kontinente"
+    "continent": "Mehrere Kontinente",
+    "homeQuestion": "Warum ist der Walhai ein Fisch?",
+    "homePhoto": {
+      "id": "whale-shark",
+      "src": "/images/animals/whale-shark.webp",
+      "author": "Diego Delso · delso.photo",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Tibur%C3%B3n_ballena_(Rhincodon_typus),_La_Paz,_Baja_California,_M%C3%A9xico,_2024-12-20,_DD_01.jpg",
+      "alt_de": "Walhai mit hellem Fleckenmuster im blauen Meerwasser.",
+      "width": 1000,
+      "height": 666,
+      "transformations_de": "Proportional verkleinert und als WebP gespeichert. Kein Beschnitt und keine Veränderung der Tiermerkmale.",
+      "fit": "contain",
+      "sha256": "1a56356d2cc4986311db48aae895533bfd030f75fbb701019fc3ad2fa2873d85",
+      "caption": "Nahaufnahme des vorderen Körperteils: Hier erkennst du das typische helle Fleckenmuster eines Walhais."
+    }
   },
   {
     "id": "animal-garden-cross-spider",
@@ -1827,7 +2401,23 @@
     "image": "garden-cross-spider",
     "group": "Spinnentiere",
     "habitat": "Wiesen und Gärten",
-    "continent": "Europa"
+    "continent": "Europa",
+    "homeQuestion": "Woran unterscheidest du eine Spinne von einem Insekt?",
+    "homePhoto": {
+      "id": "garden-cross-spider",
+      "src": "/images/animals/garden-cross-spider.webp",
+      "author": "Ivar Leidus",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Araneus_diadematus_-_Keila.jpg",
+      "alt_de": "Weibliche Gartenkreuzspinne auf einem Blatt; helle Kreuzzeichnung auf dem Hinterleib.",
+      "width": 1000,
+      "height": 666,
+      "transformations_de": "Proportional verkleinert und als WebP gespeichert. Kein Beschnitt und keine Veränderung der Tiermerkmale.",
+      "fit": "contain",
+      "sha256": "2f124bf25d601d7bcbcba265541f96602602ca655af364f2db36902d444b521f",
+      "caption": "Das Originalfoto wurde aus zwölf unterschiedlich fokussierten Aufnahmen zusammengesetzt. Es zeigt keine einzelne unveränderte Momentaufnahme."
+    }
   },
   {
     "id": "animal-dromedary",
@@ -1848,7 +2438,23 @@
     "image": "dromedary",
     "group": "Säugetiere",
     "habitat": "Wüste",
-    "continent": "Afrika und Asien"
+    "continent": "Afrika und Asien",
+    "homeQuestion": "Was speichert ein Dromedar im Höcker?",
+    "homePhoto": {
+      "id": "dromedary",
+      "src": "/images/animals/dromedary.webp",
+      "author": "4028mdk09",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Seitenansicht_Dromedar_Zoo_Landau_Juni_2011.JPG",
+      "alt_de": "Junges Dromedar von der Seite mit einem Höcker und langen Beinen im Zoo Landau.",
+      "width": 1000,
+      "height": 750,
+      "transformations_de": "Proportional verkleinert und als WebP gespeichert. Kein Beschnitt und keine Veränderung der Tiermerkmale.",
+      "fit": "contain",
+      "sha256": "ba1aab1ef0706bdb04f7ece74a7c3d432f1f058aba2b786e0df745da96fd4fcf",
+      "caption": "Ein junges Dromedar im Zoo Landau. Die Größenangaben der Entdeckerkarte beziehen sich auf erwachsene Männchen."
+    }
   },
   {
     "id": "animal-white-tailed-eagle",
@@ -1869,7 +2475,22 @@
     "image": "white-tailed-eagle",
     "group": "Vögel",
     "habitat": "Küsten und Seen",
-    "continent": "Europa und Asien"
+    "continent": "Europa und Asien",
+    "homeQuestion": "Was bedeutet eine Spannweite von zwei Metern?",
+    "homePhoto": {
+      "id": "white-tailed-eagle",
+      "src": "/images/animals/white-tailed-eagle.webp",
+      "author": "Andreas Weith",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Adult_white-tailed_eagle_(Haliaeetus_albicilla)_of_central_Poland_in_flight_(2).jpg",
+      "alt_de": "Erwachsener Seeadler im Flug mit ausgebreiteten Flügeln und hellem Schwanz.",
+      "width": 1000,
+      "height": 612,
+      "transformations_de": "Proportional verkleinert und als WebP gespeichert. Kein Beschnitt und keine Veränderung der Tiermerkmale.",
+      "fit": "contain",
+      "sha256": "0c666eac9af9ee9bab570bbb0652471d5140362b8b959308a80ddc75644decde"
+    }
   },
   {
     "id": "history-maya",

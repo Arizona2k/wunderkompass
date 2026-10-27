@@ -1,6 +1,7 @@
 import type {Mode,Place} from './earth-data';
 import type {Activity,LocalProgress} from './progress-storage';
 export type WorldCategory='animals'|'history'|'people'|'inventions'|'buildings'|'science';
+export type WorldPhotoData={id:string;src:string;author:string;license:string;license_url:string;source_page_url:string;alt_de:string;width:number;height:number;transformations_de:string;fit?:string;caption?:string;label?:string};
 export type WorldLocation={label:string;lat:number;lon:number;iso?:string};
 export type NewWorldModel='atmosphere'|'magnetism'|'currents'|'motor'|'foodweb'|'sound'|'solar-system'|'energy'|'patterns';
 export type WorldModel='water-cycle'|'moon-phases'|'circuit'|'network'|'flight'|'gps'|'computer'|'shadows'|'lock'|'bridge'|'heights'|NewWorldModel;
@@ -12,5 +13,5 @@ export type WorldTopic={investigation?:import('./science-investigation').Investi
  invention?:{year:number;date:string;walkthrough?:boolean;model?:'resolution'|'aperture'|'generator'|'transistor'|'seismograph'|'layers';stages:{label:string;text:string}[];parts:{id:string;name:string;description:string}[];blueprint:'car'|'plane'|'lamp'|'computer'|'phone'|'printer'|'compass'|'train'|'rocket'|'satellite'|'network'|import('./invention-discovery').DiscoveryKind};
  building?:{date:string;size:string;height?:number;exploration?:{kind:'aqueduct'|'dry-stone'|'timber'|'earth'|'rock-cut'|'temple-water'|'corbel'|'shells';steps:[string,string,string];note:string}};
 };
-export type WorldEntry=Pick<WorldTopic,'id'|'category'|'title'|'intro'|'aliases'|'locations'|'image'|'model'> & {group?:string;habitat?:string;continent?:string;year?:number;era?:string;date?:string;field?:string;lifespan?:string;sensitive?:boolean};
+export type WorldEntry=Pick<WorldTopic,'id'|'category'|'title'|'intro'|'aliases'|'locations'|'image'|'model'> & {group?:string;habitat?:string;continent?:string;year?:number;era?:string;date?:string;field?:string;lifespan?:string;sensitive?:boolean;homeQuestion?:string;homePhoto?:WorldPhotoData};
 export type WorldActions={progress:LocalProgress;onActivity:(activity:Activity)=>void;onVisit:(id:string)=>void;onLearn:(id:string)=>void;onFavorite:(id:string)=>void;onRead:(s:string)=>void;onPlace:(p:Place)=>void;onNavigate:(mode:Mode,id?:string,iso?:string)=>void;onSave:(id:string,key:string,value:unknown,activity:Activity)=>void;onReview:(id:string,correct:boolean)=>void;onGame:(id:string)=>void;onClear:(id:string)=>void};

@@ -47,7 +47,7 @@ export async function animalCompactOriginFlow(p,{width,shots,engine='chromium',s
  let complete=false,current=entries[0].id;
  try{for(const entry of entries){current=entry.id;
   const ordered=catalog.filter(t=>t.category==='animals'),page=Math.floor(ordered.findIndex(t=>t.id===entry.id)/12)+1;assert.ok(page>0);
-  await p.evaluate(n=>location.hash='world/animals/page/'+n,page);const tile=p.locator('[data-route-focus="world-topic-'+entry.id+'"]');await tile.waitFor();const figure=tile.locator('[data-animal-illustration="'+entry.id+'"].compact');await figure.locator('img').evaluate(i=>i.decode());await prepareAxe(p);
+  await p.evaluate(n=>location.hash='world/animals/page/'+n,page);const tile=p.locator('[data-route-focus="world-topic-'+entry.id+'"]');await tile.waitFor();const figure=tile.locator('[data-animal-illustration="'+entry.id+'"].compact');await figure.scrollIntoViewIfNeeded();await figure.locator('img').evaluate(i=>i.decode());await prepareAxe(p);
   const origin=await assertAnimalCompactOrigin(figure,entry.kind,{width});
   if(shots&&[320,1440].includes(width)&&!native)await tile.screenshot({path:path.join(shots,'animal-compact-origin-'+engine+'-'+entry.id+'-'+state+'-'+width+'.png'),animations:'disabled'});
   if(shots&&native){await figure.getByText(origin.label,{exact:true}).evaluate(e=>e.scrollIntoView({block:'center'}));await captureNativeViewport(p,path.join(shots,'animal-compact-origin-'+engine+'-'+entry.id+'-'+state+'-200-'+width+'.png'));}

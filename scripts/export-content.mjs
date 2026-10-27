@@ -1,19 +1,43 @@
 import {journeyContent} from './journey-content-index.mjs';
-import {worldPhotoIndex} from './world-photo-index.mjs';
+import {worldPhotoIndex,corePhotoIds} from './world-photo-index.mjs';
 import fs from 'node:fs';import path from 'node:path';import vm from 'node:vm';import crypto from 'node:crypto';import ts from 'typescript';
 worldPhotoIndex(process.argv.includes('--check'));
 const root=process.cwd(),out=path.join(root,process.argv.includes('--check')?'.qa-output/content-check':'exports/content');fs.mkdirSync(out,{recursive:true});const cache=new Map();
 function load(relative){let f=path.resolve(root,relative);if(!fs.existsSync(f)&&fs.existsSync(f+'.ts'))f+='.ts';if(!f.startsWith(path.join(root,'app')+path.sep))throw Error('Public data only');if(cache.has(f))return cache.get(f);if(f.endsWith('.json')){const v=JSON.parse(fs.readFileSync(f,'utf8'));cache.set(f,v);return v;}if(!['earth-data.ts','learning-data.ts','expanded-learning-data.ts','quiz-data.ts','nature-data.ts','world-index.ts'].includes(path.basename(f)))throw Error('Not a data module');const m={exports:{}};cache.set(f,m.exports);const js=ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText;new vm.Script(js,{filename:f}).runInNewContext({module:m,exports:m.exports,require:s=>load(path.relative(root,path.resolve(path.dirname(f),s))),console},{timeout:5000});return m.exports;}
 function lit(n){if(ts.isAsExpression(n)||ts.isSatisfiesExpression(n)||ts.isParenthesizedExpression(n))return lit(n.expression);if(ts.isStringLiteral(n)||ts.isNoSubstitutionTemplateLiteral(n))return n.text;if(ts.isNumericLiteral(n))return Number(n.text);if(n.kind===ts.SyntaxKind.TrueKeyword)return true;if(n.kind===ts.SyntaxKind.FalseKeyword)return false;if(n.kind===ts.SyntaxKind.NullKeyword)return null;if(ts.isPrefixUnaryExpression(n)&&n.operator===ts.SyntaxKind.MinusToken)return -lit(n.operand);if(ts.isArrayLiteralExpression(n))return n.elements.map(lit);if(ts.isObjectLiteralExpression(n))return Object.fromEntries(n.properties.map(p=>{if(!ts.isPropertyAssignment(p))throw Error('Nonliteral');return [p.name.getText().replace(/^['"]|['"]$/g,''),lit(p.initializer)];}));if(ts.isIdentifier(n))return n.text;throw Error('Not a literal: '+n.getText().slice(0,60));}
 function constant(f,name){const s=ts.createSourceFile(f,fs.readFileSync(path.join(root,f),'utf8'),ts.ScriptTarget.Latest,true,f.endsWith('tsx')?ts.ScriptKind.TSX:ts.ScriptKind.TS);for(const q of s.statements)if(ts.isVariableStatement(q))for(const d of q.declarationList.declarations)if(d.name.getText()===name)return lit(d.initializer);throw Error('Missing '+name);}
-// The start page needs only its eight canonical trails, not the growing full graph.
+// Small generated Home projection of existing edges sharing a published route; no second editorial collection.
+const canonicalTopics=JSON.parse(fs.readFileSync(path.join(root,'app/world-catalog.json'),'utf8'));
 const graph=JSON.parse(fs.readFileSync(path.join(root,'app/world-connections.json'),'utf8')).connections;
 const trails=constant('app/discovery-data.ts','DISCOVERY_CONNECTIONS'),trailIds=trails.map(t=>t.id);
 if(new Set(trailIds).size!==trailIds.length)throw Error('Duplicate discovery trail');
-const discoveryIndex=trailIds.map(id=>{const matching=graph.filter(c=>c.id===id);if(matching.length!==1)throw Error('Missing or ambiguous discovery connection '+id);return matching[0];});
+const publishedIndex=JSON.parse(fs.readFileSync(path.join(root,'app/world-index.json'),'utf8')),publishedRoutes=constant('app/world-index.ts','WORLD_ROUTES');
+const discoveryIndex=graph.flatMap(edge=>{
+ const from=publishedIndex.find(t=>t.id===edge.fromId),to=publishedIndex.find(t=>t.id===edge.toId),curated=trails.find(t=>t.id===edge.id);
+ const route=publishedRoutes.find(r=>r.id===curated?.routeId)??publishedRoutes.find(r=>r.topics.includes(edge.fromId)&&r.topics.includes(edge.toId));
+ if(!from||!to||from.sensitive||to.sensitive||!route)return [];
+ return [{...edge,label:curated?.label??from.title+' & '+to.title,question:curated?.question??canonicalTopics.find(t=>t.id===from.id).question.prompt,routeId:route.id}];
+});
+for(const id of trailIds)if(discoveryIndex.filter(c=>c.id===id).length!==1)throw Error('Missing or ambiguous discovery connection '+id);
 const discoveryIndexFile=path.join(root,'app/discovery-connections.json'),discoveryIndexText=JSON.stringify(discoveryIndex,null,2)+'\n';
 if(process.argv.includes('--check')){if(fs.readFileSync(discoveryIndexFile,'utf8')!==discoveryIndexText)throw Error('Stale discovery connection projection');}
 else fs.writeFileSync(discoveryIndexFile,discoveryIndexText);
+// Reuse the existing lightweight metadata index, deriving photo questions from
+// the canonical published article rather than keeping a second Home catalog.
+const worldIndexFile=path.join(root,'app/world-index.json'),worldIndex=JSON.parse(fs.readFileSync(worldIndexFile,'utf8'));
+const photoMetadata=JSON.parse(fs.readFileSync(path.join(root,'app/world-photos.json'),'utf8'));
+const homeIndex=worldIndex.map(previous=>{
+ const entry={...previous};delete entry.homeQuestion;delete entry.homePhoto;
+ const topic=canonicalTopics.find(t=>t.id===entry.id);if(!topic)throw Error('Unknown canonical discovery topic '+entry.id);
+ if(entry.image&&photoMetadata[entry.image]&&!entry.sensitive&&!topic.history?.sensitive){
+  if(topic.image!==entry.image||typeof topic.question?.prompt!=='string'||!topic.question.prompt.trim())throw Error('Stale photo/question discovery metadata '+entry.id);
+  return {...entry,homeQuestion:topic.question.prompt,homePhoto:corePhotoIds.includes(entry.image)?undefined:photoMetadata[entry.image]};
+ }
+ return entry;
+});
+const homeIndexText=JSON.stringify(homeIndex,null,2)+'\n';
+if(process.argv.includes('--check')){if(fs.readFileSync(worldIndexFile,'utf8')!==homeIndexText)throw Error('Stale canonical Home question projection');}
+else fs.writeFileSync(worldIndexFile,homeIndexText);
 const files=[];function write(name,value,sources){const b=JSON.stringify(value,null,2)+'\n';fs.writeFileSync(path.join(out,name),b);files.push({file:name,sources,entries:Array.isArray(value)?value.length:Object.keys(value).length,bytes:Buffer.byteLength(b),sha256:crypto.createHash('sha256').update(b).digest('hex')});}
 write('people-illustrations.json',JSON.parse(fs.readFileSync('app/people-illustrations.json','utf8')).entries,['app/people-illustrations.json']);
 write('people-inquiries.json',JSON.parse(fs.readFileSync('app/people-inquiries.json','utf8')).entries,['app/people-inquiries.json']);

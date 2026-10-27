@@ -1,0 +1,77 @@
+{
+  "meaning": "Derived static previews of actual existing M68 model surfaces. Refresh the affected preview if its rendering source changes. These are no independent scientific or human acceptance.",
+  "sourceCommit": "894ff9c80e65bc66e1da4f3bbc6aee6905e9fed1",
+  "actualMerge": "752b94fa0d1fc67b80c3de388c84b41ba2fc4a3c",
+  "renderingSources": {
+    "research-labs.tsx": {
+      "scope": "fromLabWorkbench",
+      "sha256": "9c6722a402b6f86365e1ea1613beaab9243367d6bb512044b92f8640a90feb52"
+    },
+    "learning-labs.tsx": {
+      "scope": "whole",
+      "sha256": "3b857d864b3b2f2e5423ce1e14ac1ae268cea9e1c150a110fbf6eef22dcdbc42"
+    },
+    "solar-lab.tsx": {
+      "scope": "whole",
+      "sha256": "4d988c7fe8b93cef801c6fe5fb501341d6ee45c655b855341bf225113fb0c916"
+    },
+    "research-math.ts": {
+      "scope": "whole",
+      "sha256": "2ebad8af55958aa1b45824898262b4fabf8cafcf11f1d5e2a57c5698554098f9"
+    },
+    "research-simulations.tsx": {
+      "scope": "whole",
+      "sha256": "72af5716ce0665c4fc84d8e45f218032cfeca8cdb1d0cb5a0ff96c876d286553"
+    },
+    "research-catalog.ts": {
+      "scope": "whole",
+      "sha256": "e78bcf1f41aaba5569c62b2f76e62fccb4e29d2b7a8a2cb9803343dc45c6a0ae"
+    }
+  },
+  "images": {
+    "depth": {
+      "bytes": 17477,
+      "sha256": "3a93997c486b4e115c998fe1614bddbbdfc5fe701b2142ee09ac777e1c4bf662"
+    },
+    "volcano": {
+      "bytes": 12893,
+      "sha256": "ae7a4208d7f1019c5b36706a66876277c62d57b75dc3b3b8e62ba33d98da5800"
+    },
+    "quake": {
+      "bytes": 12173,
+      "sha256": "e651b812e77b22577a6b3f2d94a55e679174561826ea4a020f34e4906f784904"
+    },
+    "weather": {
+      "bytes": 1111,
+      "sha256": "15a2ecefba072397d1565e5302c5500851ec9bcf04a66957854daa9af75b237f"
+    },
+    "water": {
+      "bytes": 12725,
+      "sha256": "c92197af3603cc9f38fd8912e4d9b578c7202c507fbfaec597c823447ac81531"
+    },
+    "seasons": {
+      "bytes": 17607,
+      "sha256": "999a7e9e3c7892197e32e792e8f33c7099e3d7354ba1ebb08e239c637d41b015"
+    },
+    "plates": {
+      "bytes": 9046,
+      "sha256": "fe88cdf35f7280ec72c7eeea884e0ce8215f2459c8f96bdb86aa8487bd2a6c90"
+    },
+    "moon": {
+      "bytes": 14224,
+      "sha256": "01dcae2394c494b34ecf3ae8a7bca2893640f5ad746f0e2d90a6f12394070ae0"
+    },
+    "clocks": {
+      "bytes": 8865,
+      "sha256": "58b7ccdd786236561d54b7c3f9914606b36f3b61c7382922808026d0b737fa33"
+    },
+    "tides": {
+      "bytes": 17829,
+      "sha256": "8840691e71e7743e16777bf0f1bc86f85b99b34e8afbecdf96ad3ae0e1929e31"
+    },
+    "solar": {
+      "bytes": 45281,
+      "sha256": "61d8116a42dd0d8df858be15e1012073ff5755f82e36290b45db4165dd50ca17"
+    }
+  }
+}

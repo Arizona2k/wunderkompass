@@ -6,6 +6,57 @@ import {KNOWLEDGE_CONNECTIONS} from '../../app/knowledge-connections.ts';
 const read=async p=>JSON.parse(await fs.readFile(new URL(p,import.meta.url),'utf8'));
 const topics=await read('../../app/world-catalog.json'),categories=await read('../../exports/content/world-categories.json');
 
+// Date-only control: Playwright's full clock removes real navigation timing entries.
+// Keep the browser's actual reload/Back API and timers, and vary only the local date.
+async function homeTime(page,instant){await page.addInitScript(instant=>{
+ const NativeDate=Date;let value=NativeDate.parse(instant);try{const saved=sessionStorage.getItem('__home-test-clock');if(saved!==null)value=Number(saved);}catch{}
+ window.__homeTestTime=value;window.Date=new Proxy(NativeDate,{construct(Target,args){return Reflect.construct(Target,args.length?args:[window.__homeTestTime]);},apply(){return new NativeDate(window.__homeTestTime).toString();},get(Target,key){return key==='now'?()=>window.__homeTestTime:Reflect.get(Target,key);}});
+ },instant);}
+async function setHomeTime(page,instant){await page.evaluate(instant=>{window.__homeTestTime=Date.parse(instant);sessionStorage.setItem('__home-test-clock',String(window.__homeTestTime));},instant);}
+
+export async function decodeHomeImages(page){
+ await page.locator('.discovery-hero img[src]').waitFor();await page.locator('.discovery-activities').waitFor();await page.locator('[data-discovery-day]').waitFor();
+ const top=await page.evaluate(()=>scrollY);
+ for(const image of await page.locator('.discovery-hero img[src],.discovery-worlds img[src],.discovery-pair img[src],.discovery-play img[src],.discovery-activities img[src],.daily-discovery img[src]').all()){
+  await image.scrollIntoViewIfNeeded();await image.evaluate(async im=>{await im.decode();if(!im.naturalWidth||!im.naturalHeight)throw Error('Undecoded actual Home image');});
+ }
+ await page.evaluate(async()=>{for(const el of document.querySelectorAll('.discovery-pair svg image,.daily-discovery svg image')){const image=new Image();image.src=el.href.baseVal;await image.decode();}});
+ await page.evaluate(top=>scrollTo({top,behavior:'instant'}),top);
+}
+
+export async function discoveryVisitCases(browser,base,ready,monitor,report,shots){
+ await immediateHomePhotoCases(browser,base,ready,monitor,report,shots);
+ const index=await read('../../app/world-index.json'),photos=await read('../../app/world-photos.json');
+ for(const timezoneId of ['Europe/Berlin','America/Los_Angeles']){
+  const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce',timezoneId}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);
+  try{
+   await homeTime(page,'2026-10-27T00:15:00Z');await page.goto(base);await ready(page);
+   const selection=()=>page.evaluate(()=>({heroId:document.querySelector('[data-discovery-hero]').dataset.discoveryHero,trailId:document.querySelector('[data-discovery-trail-current]').dataset.discoveryTrailCurrent}));
+   const daily=()=>page.locator('[data-discovery-day]').evaluate(el=>({day:el.dataset.discoveryDay,target:el.dataset.discoveryTarget}));
+   const first=await selection(),day=await daily();assert.equal(day.day,timezoneId==='Europe/Berlin'?'2026-10-27':'2026-10-26');
+   await page.reload();await ready(page);assert.deepEqual(await selection(),first);assert.deepEqual(await daily(),day);
+   await page.getByRole('button',{name:'Anderes Einstiegsmotiv',exact:true}).click();await page.waitForFunction(id=>document.querySelector('[data-discovery-hero]').dataset.discoveryHero!==id,first.heroId);const manual=await selection();assert.equal(manual.trailId,first.trailId);assert.deepEqual(await daily(),day);
+   const entry=index.find(t=>t.id===manual.heroId),photo=photos[entry.image];await page.locator('.discovery-feature>a').getByText(entry.homeQuestion,{exact:true}).waitFor();assert.equal(await page.locator('.discovery-feature>a').getAttribute('href'),'#world/topic/'+entry.id);const motif=page.locator('.discovery-hero-art img[src]');await motif.waitFor();await motif.evaluate(im=>im.decode());assert.equal(await motif.getAttribute('src'),photo.src);assert.equal(await motif.getAttribute('alt'),photo.alt_de);
+   const credit=page.locator('.discovery-hero-art .photo-disclosure');await credit.locator('summary').click();await credit.getByRole('link',{name:photo.license,exact:true}).waitFor();assert.equal(await credit.getByRole('link',{name:'Original und Rechte',exact:true}).getAttribute('href'),photo.source_page_url);
+   await page.locator('.discovery-feature>a').focus();await page.keyboard.press('Enter');await page.getByRole('heading',{name:entry.title,exact:true}).waitFor();await page.goBack();await page.locator('.discovery-hero').waitFor();assert.deepEqual(await selection(),manual);await page.waitForFunction(id=>document.activeElement?.dataset.routeFocus===(id==='animal-honey-bee'?'home-bee':'home-motif-'+id),entry.id);assert.equal(await credit.locator('details').getAttribute('open')!==null,true,'Back restores the actual motif attribution disclosure');
+   await setHomeTime(page,'2026-10-27T00:44:59.999Z');await page.getByRole('tab',{name:'Entdecken',exact:true}).click();assert.deepEqual(await selection(),manual,'less than30 idle minutes keeps selection');
+   await setHomeTime(page,'2026-10-27T01:14:59.999Z');await page.keyboard.press('Shift');assert.deepEqual(await selection(),manual,'idle reading and renewed input do not rotate');await page.reload();await ready(page);assert.deepEqual(await selection(),manual,'idle reload restores selection and pending visit');
+   await page.getByRole('tab',{name:'Entdecken',exact:true}).click();await page.waitForFunction(id=>document.querySelector('[data-discovery-hero]').dataset.discoveryHero!==id,manual.heroId);const next=await selection();assert.notEqual(next.trailId,manual.trailId);assert.deepEqual(await daily(),day);
+   const reopened=await context.newPage();monitor(reopened);await homeTime(reopened,'2026-10-27T01:15:00Z');await reopened.goto(base);await ready(reopened);assert.notEqual(await reopened.locator('[data-discovery-hero]').getAttribute('data-discovery-hero'),next.heroId,'new opening avoids the previous suitable motif');assert.notEqual(await reopened.locator('[data-discovery-trail-current]').getAttribute('data-discovery-trail-current'),next.trailId);await reopened.close();
+   const tomorrow=timezoneId==='Europe/Berlin'?'2026-10-27T23:00:00Z':'2026-10-27T07:00:00Z';await setHomeTime(page,tomorrow);await page.keyboard.press('Shift');await page.waitForFunction(day=>document.querySelector('[data-discovery-day]').dataset.discoveryDay!==day,day.day);const changedDay=await daily();assert.equal(changedDay.day,timezoneId==='Europe/Berlin'?'2026-10-28':'2026-10-27');assert.notEqual(changedDay.target,day.target);assert.deepEqual(await selection(),next,'local date change does not rotate the reading motif');
+   await page.screenshot({path:shots+'/home-visit-'+timezoneId.replace('/','-')+'.png',fullPage:true,animations:'disabled'});
+   report.checks.push('Actual Home visit/reload/Back/manual/30minute inactivity/read stability/reopening/local midnight/paired motif rights: '+timezoneId);
+   const earned=await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
+   await page.addInitScript(day=>{if(sessionStorage.getItem('__home-test-legacy')){sessionStorage.removeItem('wunderkompass-discovery-visit');localStorage.removeItem('wunderkompass-discovery-last');sessionStorage.setItem('wunderkompass-discovery-trail','science-pollination--animal-honey-bee');localStorage.setItem('wunderkompass-discovery-day',JSON.stringify({day,id:'world:animal-honey-bee'}));history.replaceState({...history.state,wunderHero:null,wunderTrail:'science-pollination--animal-honey-bee',wunderFocus:'home-bee'},'',location.href);sessionStorage.removeItem('__home-test-legacy');}},changedDay.day);
+   await page.evaluate(()=>sessionStorage.setItem('__home-test-legacy','1'));await page.reload();await ready(page);assert.deepEqual(await selection(),{heroId:'animal-honey-bee',trailId:'science-pollination--animal-honey-bee'});assert.equal((await daily()).target,'animal-honey-bee','valid saved daily ID survives a different current default');await page.waitForFunction(()=>document.activeElement?.dataset.routeFocus==='home-bee');assert.equal(await page.evaluate(()=>performance.getEntriesByType('navigation')[0].type),'reload');
+   const after=await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);for(const key of['notes','favorites','games','gameSessions','chapters','completedChapters','quizResults','settings'])assert.deepEqual(after[key],earned[key]);for(const id of earned.discoveries)assert(after.discoveries.includes(id));
+   report.checks.push('Actual M68 legacy Bee/trail/Back-focus presentation and same-day stored topic restore without changing earned pass fields: '+timezoneId);
+  }finally{await context.close();}
+ }
+}
+
+async function openTrailPicker(page){const picker=page.locator('.discovery-trail-picker');if(!await picker.evaluate(el=>el.open))await picker.locator('summary').first().click();}
+
 export function assertHomePanelReserve(boxes){
  const normalEndSpace=boxes.worldMarginBottom+boxes.panelPaddingBottom+boxes.panelBorderBottom;
  assert.ok(boxes.unusedAfterWorld<=normalEndSpace+2,'unnecessary home panel reserve after the six worlds: '+JSON.stringify(boxes));
@@ -50,7 +101,7 @@ export async function gatewayModelPreviews(page,report){
 export async function discoveryCentral(page,ready,report,width,shots){
  const home=async()=>{await page.evaluate(()=>location.hash='home');try{await page.locator('.discovery-hero').waitFor();}catch(error){report.routeReturnFailure={width,...await page.evaluate(()=>({hash:location.hash,mode:document.querySelector('.earth-app')?.dataset.mode,selectedTabs:[...document.querySelectorAll('[role=tab][aria-selected=true]')].map(e=>e.textContent),heroPresent:!!document.querySelector('.discovery-hero')})).catch(e=>({diagnosticError:e.message}))};await page.screenshot({path:shots+'/route-return-failure-'+width+'.png',fullPage:true}).catch(()=>{});throw error;}};
  const inspect=async()=>assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'discovery overflow '+width);
- await home();await inspect();
+ await home();await inspect();await decodeHomeImages(page);
  for(const image of await page.locator('.discovery-worlds img').all())await image.evaluate(async im=>{await im.decode();if(!im.naturalWidth)throw Error('Undecoded gateway image');});
  await page.locator('.discovery-hero').screenshot({path:shots+'/discovery-hero-'+width+'.png'});
  await page.locator('.discovery-worlds').screenshot({path:shots+'/discovery-worlds-'+width+'.png'});
@@ -81,7 +132,7 @@ export async function discoveryCentral(page,ready,report,width,shots){
  await page.locator('.world-topic-tile').first().waitFor();
  for(const trail of DISCOVERY_CONNECTIONS){
   const edge=KNOWLEDGE_CONNECTIONS.find(c=>c.id===trail.id),from=topics.find(t=>t.id===edge.fromId),to=topics.find(t=>t.id===edge.toId);
-  await home();const network=page.locator('.discovery-network');
+  await home();await openTrailPicker(page);const network=page.locator('.discovery-network');
   await network.getByRole('button',{name:trail.label,exact:true}).focus();await page.keyboard.press('Enter');
   await network.getByText(edge.why,{exact:true}).waitFor();await inspect();
   const start=network.getByRole('button',{name:from.title,exact:true});
@@ -91,18 +142,18 @@ export async function discoveryCentral(page,ready,report,width,shots){
   await page.getByRole('heading',{name:to.title,exact:true}).waitFor();
   await page.locator('.connection-card').filter({hasText:edge.why}).getByRole('button').click();
   await page.getByRole('heading',{name:from.title,exact:true}).waitFor();
-  await home();await network.getByRole('button',{name:trail.label,exact:true}).click();
+  await home();await openTrailPicker(page);await network.getByRole('button',{name:trail.label,exact:true}).click();
   await network.getByRole('button',{name:/^Lernroute:/}).click();
   assert.equal(new URL(page.url()).hash,'#world/route/'+trail.routeId);
   await page.locator('.world-route-stations').waitFor();
  }
- await home();await rapidHashReturn(page,report,width);await page.locator('.discovery-pathways').screenshot({path:shots+'/discovery-pathways-'+width+'.png'});
+ await home();await rapidHashReturn(page,report,width);await decodeHomeImages(page);await page.locator('.discovery-pathways').screenshot({path:shots+'/discovery-pathways-'+width+'.png'});
  await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
  const axe=await page.evaluate(async()=>{
   const result=await window.axe.run({include:[['.discovery-hero'],['.discovery-worlds'],['.discovery-pathways']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}});
   return result.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));
  });assert.deepEqual(axe,[],'discovery axe '+width);
- await page.locator('.discovery-network').getByRole('button',{name:'Biene & Blüte',exact:true}).click();await page.getByRole('link',{name:'Wissens-Challenge öffnen',exact:true}).click();
+ await openTrailPicker(page);await page.locator('.discovery-network').getByRole('button',{name:'Biene & Blüte',exact:true}).click();await page.getByRole('link',{name:'Wissens-Challenge öffnen',exact:true}).click();
  await page.locator('.challenge-levels').waitFor();
  assert.equal(await page.locator('.challenge-levels button').count(),3);
  await page.locator('.challenge-levels').getByRole('button').filter({hasText:'Leicht'}).click();
@@ -136,9 +187,9 @@ export async function rapidHashReturn(page,report,width){
 export async function offlineDiscoveryCentral(page,report){
  await page.evaluate(()=>location.hash='home');await page.locator('.discovery-hero').waitFor();
  for(const image of await page.locator('.discovery-worlds img').all())await image.evaluate(async im=>{await im.decode();assertImage(im);function assertImage(im){if(!im.naturalWidth)throw Error('Offline gateway image missing');}});
- await page.locator('.discovery-network').getByRole('button',{name:'Meer in Bewegung',exact:true}).click();
+ await openTrailPicker(page);await page.locator('.discovery-network').getByRole('button',{name:'Meer in Bewegung',exact:true}).click();
  await page.locator('.discovery-connection-why').getByText(/Gezeiten können Strömungen antreiben/).waitFor();
- await page.locator('.discovery-network').getByRole('button',{name:'Biene & Blüte',exact:true}).click();await page.getByRole('link',{name:'Wissens-Challenge öffnen',exact:true}).click();await page.locator('.knowledge-challenge .quiz-answer').first().waitFor();
+ await openTrailPicker(page);await page.locator('.discovery-network').getByRole('button',{name:'Biene & Blüte',exact:true}).click();await page.getByRole('link',{name:'Wissens-Challenge öffnen',exact:true}).click();await page.locator('.knowledge-challenge .quiz-answer').first().waitFor();
  await page.evaluate(()=>location.hash='updates');await page.locator('.updates-timeline').first().waitFor();assert.equal(await page.locator('.updates-timeline>li').count(),publicUpdates().length);await page.getByRole('link',{name:'Zur Startseite',exact:true}).click();await page.locator('.discovery-hero').waitFor();
  await page.getByRole('tab',{name:'Wissenswelten',exact:true}).click();await page.locator('.world-view .world-choice').first().waitFor();assert.equal(await page.locator('.world-view .world-choice').count(),6,'all six worlds remain available in a cold offline browser');assert.equal(await page.locator('.mode-tabs [data-state=active]').innerText(),'Wissenswelten');await page.locator('.world-view').getByRole('button',{name:'Wissenschaft & Weltall',exact:true}).click();await page.locator('.world-topic-tile').first().waitFor();await page.getByRole('tab',{name:'Entdecken',exact:true}).click();await page.locator('.discovery-hero').waitFor();
  report.checks.push('Cold offline discovery: all gateway photos decode, knowledge trail switches, challenge opens, local history, six-world main navigation/category and home work');
@@ -147,7 +198,7 @@ export async function offlineDiscoveryCentral(page,report){
 // First visits must be tested in fresh contexts; accumulated regression state
 // otherwise hides empty/resume mistakes. Uses the same production preview.
 export async function homeTextGeometry(page){
- const bad=await page.locator('.discovery-hero-copy h1,.discovery-feature>a,.discovery-photo-credit,.discovery-hero-copy>p,.discovery-hero-copy button,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds .world-choice,.discovery-text-link,.discovery-pathways h2,.discovery-pair button,.continue-card,.updates-entry,.updates-detail-body,.updates-details>summary,.updates-archive>summary,.updates-archive-intro,.updates-note,.updates-heading,.updates-provenance,.updates-prepared>p,.updates-prepared-entry').evaluateAll(elements=>elements.flatMap(el=>{
+ const bad=await page.locator('.discovery-hero-copy h1,.discovery-feature>a,.discovery-feature button,.discovery-hero .photo-disclosure,.discovery-hero-copy>p,.discovery-hero-copy button,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds .world-choice,.discovery-text-link,.discovery-pathways h2,.discovery-pair button,.continue-card,.updates-entry,.updates-detail-body,.updates-details>summary,.updates-archive>summary,.updates-archive-intro,.updates-note,.updates-heading,.updates-provenance,.updates-prepared>p,.updates-prepared-entry').evaluateAll(elements=>elements.flatMap(el=>{
   if(!el.getClientRects().length)return [];
   const box=el.getBoundingClientRect(),walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),errors=[];
   while(walker.nextNode()){
@@ -161,7 +212,7 @@ export async function homeTextGeometry(page){
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'home/history horizontal overflow');
 }
 export async function homeTouchTargets(page){
- for(const control of await page.locator('.discovery-hero-copy button,.discovery-feature>a,.discovery-photo-credit summary,.discovery-photo-credit a,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds button,.gateway-credits summary,.discovery-pathways button,.discovery-pathways a,.update-history a,.update-history summary').all()){
+ for(const control of await page.locator('.discovery-hero-copy button,.discovery-feature>a,.discovery-feature button,.discovery-hero .photo-disclosure summary,.discovery-hero .photo-disclosure a,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds button,.gateway-credits summary,.discovery-pathways button,.discovery-pathways a,.discovery-pathways summary,.discovery-pathways select,.discovery-activities button,.daily-discovery button,.daily-discovery summary,.daily-discovery a,.update-history a,.update-history summary').all()){
   if(!await control.isVisible())continue;
   assert.equal(await control.evaluate(el=>{const r=el.getBoundingClientRect();return r.width>=44&&r.height>=44}),true,'home/history touch target at least 44px: '+await control.innerText());
  }
@@ -245,7 +296,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    const start=p.getByRole('button',{name:'WunderKompass durchsuchen',exact:true});
    assert.equal(await start.evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight}),true,'clear first step visible without scrolling '+width);
    await homeTextGeometry(p);await homeTouchTargets(p);await homeContrast(start);await start.hover();await homeContrast(start);await p.mouse.move(0,0);
-   const capture=async state=>{await p.evaluate(()=>scrollTo(0,0));const panelLayout=await homePanelLayout(p);await p.screenshot({path:shots+'/home-'+state+'-'+width+'-full.png',fullPage:true,animations:'disabled'});await p.screenshot({path:shots+'/home-'+state+'-'+width+'-top.png',animations:'disabled'});report.homepageViews.push({width,height,state,panelLayout,scrollHeight:await p.evaluate(()=>document.documentElement.scrollHeight)});};
+   const capture=async state=>{await decodeHomeImages(p);await p.evaluate(()=>scrollTo(0,0));const panelLayout=await homePanelLayout(p);await p.screenshot({path:shots+'/home-'+state+'-'+width+'-full.png',fullPage:true,animations:'disabled'});await p.screenshot({path:shots+'/home-'+state+'-'+width+'-top.png',animations:'disabled'});report.homepageViews.push({width,height,state,panelLayout,scrollHeight:await p.evaluate(()=>document.documentElement.scrollHeight)});};
    await capture('first');
    await mainNavigation(p,ready,report,width,shots);
    if(width<=390){await p.getByRole('button',{name:'So geht’s',exact:true}).tap();await p.locator('.help-dialog').waitFor();await p.keyboard.press('Escape');}
@@ -263,7 +314,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    if(width<=390){await globe.tap();await p.locator('#globe-observatory').waitFor();await p.screenshot({path:shots+'/home-touch-globe-'+width+'.png'});await p.goBack();await p.locator('.discovery-hero').waitFor();await p.locator('.discovery-worlds .world-choice').first().tap();await p.getByRole('heading',{name:categories[0].title,exact:true}).waitFor();await p.goBack();await p.locator('.discovery-hero').waitFor();}
    await p.locator('.gateway-credits>summary').click();assert.equal(await p.locator('.gateway-credits a[href^="https://"]').count(),8,'all eight original and license links preserved');assert.deepEqual(await p.locator('.gateway-credits a[href^="#world/topic/"]').evaluateAll(nodes=>nodes.map(el=>el.getAttribute('href'))),['#world/topic/invention-bicycle','#world/topic/science-solar-system'],'both concrete preview learning paths');await homeTextGeometry(p);await p.locator('.gateway-credits').screenshot({path:shots+'/home-credits-'+width+'.png'});await p.locator('.gateway-credits>summary').click();
    // Keyboard activation followed by browser Back keeps the visible opener and chosen trail.
-   await p.locator('.discovery-trail-options button').last().click();
+   await openTrailPicker(p);await p.locator('.discovery-trail-options button').last().click();
    const trail=await p.locator('.discovery-trail-options [aria-pressed=true]').innerText();
    const opener=p.locator('.discovery-pair button').first();await opener.scrollIntoViewIfNeeded();await p.keyboard.press('Tab');await opener.focus();
    const openerId=await opener.getAttribute('data-route-focus');await p.keyboard.press('Enter');await p.locator('#world-topic-title').waitFor();
@@ -408,4 +459,23 @@ export async function historyEngineView(page,width,shots,{engine='chromium',capt
  assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress),before,'chronicle does not write learning progress');
  if(capture)assert.ok(captures[1].scrollY>captures[0].scrollY+1000,'native capture really reaches the far end of the long history');
  return {width,entries:entries.map(e=>e.id),expanded:true,largeText:true,keyboard:true,axe:true,passPreserved:true,...(capture?{captures}:{})};
+}
+
+async function immediateHomePhotoCases(browser,base,ready,monitor,report,shots){
+ const entries=(await read('../../app/world-index.json')).filter(t=>t.homeQuestion&&t.image),photos=await read('../../app/world-photos.json'),trail=(await read('../../app/discovery-connections.json'))[0].id,observed=[];
+ for(const width of[320,1440]){
+  const context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);let requests=0;
+  try{
+   await page.route('**/world-photos-*.json',route=>{requests++;return route.abort('failed');});
+   await page.goto(base);await ready(page);
+   for(const entry of entries){
+    await page.evaluate(({id,trail})=>{history.replaceState({...history.state,wunderHero:id,wunderTrail:trail},'');sessionStorage.setItem('wunderkompass-discovery-visit',JSON.stringify({heroId:id,trailId:trail,lastInputAt:Date.now(),idleDue:false}));},{id:entry.id,trail});
+    await page.reload();await ready(page);await page.waitForFunction(id=>document.querySelector('[data-discovery-hero]')?.dataset.discoveryHero===id,entry.id);
+    const photo=photos[entry.image],hero=page.locator('.discovery-hero'),image=hero.locator('img[src]').first();await image.evaluate(im=>im.decode());assert.equal(await image.getAttribute('src'),photo.src);assert.equal(await image.getAttribute('alt'),photo.alt_de);await hero.locator('.discovery-feature>a').getByText(entry.homeQuestion,{exact:true}).waitFor();
+    const credit=hero.locator('.photo-disclosure'),details=credit.locator('details');if(!await details.evaluate(el=>el.open))await credit.locator('summary').click();assert((await credit.innerText()).includes(photo.author),entry.id+' immediate author');assert.equal(await credit.getByRole('link',{name:photo.license,exact:true}).getAttribute('href'),photo.license_url);assert.equal(await credit.getByRole('link',{name:'Original und Rechte',exact:true}).getAttribute('href'),photo.source_page_url);await credit.getByText(photo.transformations_de,{exact:true}).waitFor();assert.equal(requests,0,entry.id+' complete Home rights without the deferred article catalog');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,entry.id+' rights disclosure stays within viewport');observed.push({width,id:entry.id,immediateCompleteCanonicalCredits:true,decodedActualPhoto:true});
+   }
+   await page.screenshot({path:shots+'/home-immediate-rights-'+width+'.png',animations:'disabled'});
+  }finally{await context.close();}
+ }
+ assert.equal(observed.length,entries.length*2);report.homeImmediatePhotoCredits=observed;report.checks.push('Every canonical Home photo/question at320/1440 retains complete immediate author/license/original/transformation metadata with deferred article catalog unavailable');
 }

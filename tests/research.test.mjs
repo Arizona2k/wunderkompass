@@ -12,6 +12,14 @@ import WORLD_ROUTES from '../exports/content/world-routes.json' with {type:'json
 import JOURNEYS from '../exports/content/journeys.json' with {type:'json'};
 import {DISCOVERY_CONNECTIONS,DISCOVERY_ACTIVITIES} from '../app/discovery-data.ts';
 import {KNOWLEDGE_CONNECTIONS,connectionsFor} from '../app/knowledge-connections.ts';
+import fs from 'node:fs';import {createHash} from 'node:crypto';
+import PREVIEWS from '../app/research-preview-images.json' with {type:'json'};
+import PREVIEW_ORIGIN from '../app/research-preview-origin.json' with {type:'json'};
+test('actual-model preview assets stay complete, proportional and tied to unchanged rendering sources',()=>{
+ const hash=bytes=>createHash('sha256').update(bytes).digest('hex');assert.deepEqual(Object.keys(PREVIEWS).sort(),LABS.map(l=>l.id).sort());
+ for(const [name,record]of Object.entries(PREVIEW_ORIGIN.renderingSources)){let bytes=fs.readFileSync(new URL('../app/'+name,import.meta.url));if(record.scope==='fromLabWorkbench'){const marker=Buffer.from('function LabWorkbench');assert(bytes.includes(marker));bytes=bytes.subarray(bytes.indexOf(marker));}assert.equal(hash(bytes),record.sha256,'Model rendering changed: refresh the actual '+name+' preview instead of retaining stale imagery');}
+ for(const [id,image]of Object.entries(PREVIEWS)){const bytes=fs.readFileSync(new URL('../public'+image.src,import.meta.url)),origin=PREVIEW_ORIGIN.images[id];assert.equal(bytes.subarray(0,8).toString('hex'),'89504e470d0a1a0a');assert.equal(bytes.readUInt32BE(16),image.width);assert.equal(bytes.readUInt32BE(20),image.height);assert.equal(bytes.length,origin.bytes);assert.equal(hash(bytes),origin.sha256);assert(image.alt&&image.caption);}
+});
 test('seasonal geometry has opposing hemispheres, polar nights and no false daily rotation effect',()=>{
  const close=(a,b)=>assert.ok(Math.abs(a-b)<1e-9,`${a} ≈ ${b}`);
  for(const latitude of [-80,-70,-52,-34,0,34,52,70,80])for(let m=0;m<4;m++){
@@ -46,7 +54,7 @@ test('all33 retained laboratory questions explain each of66 wrong choices indepe
  }
 });
 test('varied homepage knowledge trails use real bidirectional edges, actual routes and concrete activities',()=>{
- assert.deepEqual(DISCOVERY_CONNECTION_INDEX,DISCOVERY_CONNECTIONS.map(pick=>KNOWLEDGE_CONNECTIONS.find(c=>c.id===pick.id)),'initial projection preserves every original trail and explanation in order');
+ assert.deepEqual(DISCOVERY_CONNECTIONS.map(pick=>DISCOVERY_CONNECTION_INDEX.find(c=>c.id===pick.id)),DISCOVERY_CONNECTIONS.map(pick=>({...KNOWLEDGE_CONNECTIONS.find(c=>c.id===pick.id),...pick})),'growing projection preserves every original trail, question, route and exact explanation');
  assert.ok(DISCOVERY_CONNECTIONS.length>3);assert.equal(DISCOVERY_ACTIVITIES.length,DISCOVERY_CONNECTIONS.length);
  for(const pick of DISCOVERY_CONNECTIONS){const edge=KNOWLEDGE_CONNECTIONS.find(c=>c.id===pick.id);assert.ok(edge);assert.ok(connectionsFor(edge.fromId).some(c=>c.topic===edge.toId));assert.ok(connectionsFor(edge.toId).some(c=>c.topic===edge.fromId));assert.ok(WORLD_ROUTES.some(r=>r.id===pick.routeId));}
  for(const a of DISCOVERY_ACTIVITIES){const [area,id,experiment]=a.hash.split('/');assert.ok(a.text.length>40&&a.title.length>10);if(area==='labs')assert.ok(id==='experiment'?EXPERIMENT_SEARCH.some(e=>e.id===experiment):LAB_SEARCH.some(l=>l.id===id));if(area==='journeys')assert.ok(JOURNEYS.some(j=>j.id===id));}
