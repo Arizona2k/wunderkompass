@@ -25,6 +25,7 @@ export async function decodeHomeImages(page){
 }
 
 export async function discoveryVisitCases(browser,base,ready,monitor,report,shots){
+ await immediateHomePhotoCases(browser,base,ready,monitor,report,shots);
  const index=await read('../../app/world-index.json'),photos=await read('../../app/world-photos.json');
  for(const timezoneId of ['Europe/Berlin','America/Los_Angeles']){
   const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce',timezoneId}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);
@@ -458,4 +459,23 @@ export async function historyEngineView(page,width,shots,{engine='chromium',capt
  assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress),before,'chronicle does not write learning progress');
  if(capture)assert.ok(captures[1].scrollY>captures[0].scrollY+1000,'native capture really reaches the far end of the long history');
  return {width,entries:entries.map(e=>e.id),expanded:true,largeText:true,keyboard:true,axe:true,passPreserved:true,...(capture?{captures}:{})};
+}
+
+async function immediateHomePhotoCases(browser,base,ready,monitor,report,shots){
+ const entries=(await read('../../app/world-index.json')).filter(t=>t.homeQuestion&&t.image),photos=await read('../../app/world-photos.json'),trail=(await read('../../app/discovery-connections.json'))[0].id,observed=[];
+ for(const width of[320,1440]){
+  const context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);let requests=0;
+  try{
+   await page.route('**/world-photos-*.json',route=>{requests++;return route.abort('failed');});
+   await page.goto(base);await ready(page);
+   for(const entry of entries){
+    await page.evaluate(({id,trail})=>{history.replaceState({...history.state,wunderHero:id,wunderTrail:trail},'');sessionStorage.setItem('wunderkompass-discovery-visit',JSON.stringify({heroId:id,trailId:trail,lastInputAt:Date.now(),idleDue:false}));},{id:entry.id,trail});
+    await page.reload();await ready(page);await page.waitForFunction(id=>document.querySelector('[data-discovery-hero]')?.dataset.discoveryHero===id,entry.id);
+    const photo=photos[entry.image],hero=page.locator('.discovery-hero'),image=hero.locator('img[src]').first();await image.evaluate(im=>im.decode());assert.equal(await image.getAttribute('src'),photo.src);assert.equal(await image.getAttribute('alt'),photo.alt_de);await hero.locator('.discovery-feature>a').getByText(entry.homeQuestion,{exact:true}).waitFor();
+    const credit=hero.locator('.photo-disclosure'),details=credit.locator('details');if(!await details.evaluate(el=>el.open))await credit.locator('summary').click();assert((await credit.innerText()).includes(photo.author),entry.id+' immediate author');assert.equal(await credit.getByRole('link',{name:photo.license,exact:true}).getAttribute('href'),photo.license_url);assert.equal(await credit.getByRole('link',{name:'Original und Rechte',exact:true}).getAttribute('href'),photo.source_page_url);await credit.getByText(photo.transformations_de,{exact:true}).waitFor();assert.equal(requests,0,entry.id+' complete Home rights without the deferred article catalog');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,entry.id+' rights disclosure stays within viewport');observed.push({width,id:entry.id,immediateCompleteCanonicalCredits:true,decodedActualPhoto:true});
+   }
+   await page.screenshot({path:shots+'/home-immediate-rights-'+width+'.png',animations:'disabled'});
+  }finally{await context.close();}
+ }
+ assert.equal(observed.length,entries.length*2);report.homeImmediatePhotoCredits=observed;report.checks.push('Every canonical Home photo/question at320/1440 retains complete immediate author/license/original/transformation metadata with deferred article catalog unavailable');
 }
