@@ -13,13 +13,14 @@ export function DiscoveryIntro({heroId,onChange,onSearch,onGlobe,onHelp}:{heroId
  const topic=WORLD_INDEX.find(t=>t.id===heroId)!;
  return <section className="discovery-hero" data-discovery-hero={heroId} aria-labelledby="discovery-title">
   <div className="discovery-hero-copy"><h1 id="discovery-title">Was möchtest du <span>heute verstehen?</span></h1>
+   <div className="discovery-feature"><a aria-live="polite" aria-atomic="true" href={'#world/topic/'+topic.id} data-route-focus={topic.id==='animal-honey-bee'?'home-bee':'home-motif-'+topic.id} onClick={event=>{event.preventDefault();navigateHash('world/topic/'+topic.id);}}>{topic.homeQuestion}<ArrowRight size={20} aria-hidden="true"/></a>
+    <button className="discovery-text-link discovery-change" aria-label="Anderes Einstiegsmotiv" onClick={onChange}>Andere Frage entdecken <ArrowRight size={16} aria-hidden="true"/></button>
+   </div>
+
    <div className="discovery-start"><button className="discovery-search" aria-label="WunderKompass durchsuchen" aria-describedby="home-search-examples" data-route-focus="home-search" onClick={onSearch}><Search size={22}/><span><strong>Suche nach Themen</strong><small id="home-search-examples">Zum Beispiel: Mond oder Elefant</small></span><ArrowRight size={20}/></button></div>
    <div className="discovery-quiet-links"><button className="discovery-globe-link" data-route-focus="home-globe" onClick={onGlobe}><Globe2 size={18}/> Direkt zur Weltkugel</button><button className="discovery-mobile-help" onClick={onHelp}>So geht’s</button></div>
   </div>
   <div className="discovery-hero-art"><WorldPhoto id={topic.image!} immediatePhoto={topic.homePhoto} historyKey="home-hero-credit" creditDisclosure eager/>
-   <div className="discovery-feature"><a aria-live="polite" aria-atomic="true" href={'#world/topic/'+topic.id} data-route-focus={topic.id==='animal-honey-bee'?'home-bee':'home-motif-'+topic.id} onClick={event=>{event.preventDefault();navigateHash('world/topic/'+topic.id);}}>{topic.homeQuestion}<ArrowRight size={20} aria-hidden="true"/></a>
-    <button className="discovery-text-link discovery-change" aria-label="Anderes Einstiegsmotiv" onClick={onChange}>Andere Frage entdecken <ArrowRight size={16} aria-hidden="true"/></button>
-   </div>
   </div>
  </section>;
 }

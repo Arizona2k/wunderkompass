@@ -14,6 +14,22 @@ async function homeTime(page,instant){await page.addInitScript(instant=>{
  },instant);}
 async function setHomeTime(page,instant){await page.evaluate(instant=>{window.__homeTestTime=Date.parse(instant);sessionStorage.setItem('__home-test-clock',String(window.__homeTestTime));},instant);}
 
+export async function discoveryPairMedia(page){
+ const media=await page.locator('.discovery-pair>article').evaluateAll(articles=>articles.map(article=>{
+  const surface=article.querySelector(':scope > figure img[src],:scope > figure svg,:scope > figure ol,:scope > figure [role="img"],:scope > .research-preview img[src]');
+  if(!surface)return false;const r=surface.getBoundingClientRect();return r.width>=80&&r.height>=50;
+ }));assert.deepEqual(media,[true,true],'both connected topics have an actual visible explanatory figure; button arrows do not count');
+ const photos=await page.locator('.discovery-pair>article').evaluateAll(articles=>articles.map(article=>{
+  const image=article.querySelector(':scope > .world-photo img[src],:scope > .discovery-context-photo img[src]');
+  return image?{height:image.getBoundingClientRect().height,fit:getComputedStyle(image).objectFit}:null;
+ }));
+ if(photos.every(Boolean)){
+  assert(photos.every(photo=>photo.fit==='contain'),'paired photos retain their complete subjects');
+  assert(Math.abs(photos[0].height-photos[1].height)<=1,'paired photos share an equal frame despite different original formats');
+ }
+ return media;
+}
+
 export async function decodeHomeImages(page){
  await page.locator('.discovery-hero img[src]').waitFor();await page.locator('.discovery-activities').waitFor();await page.locator('[data-discovery-day]').waitFor();
  const top=await page.evaluate(()=>scrollY);
@@ -147,6 +163,11 @@ export async function discoveryCentral(page,ready,report,width,shots){
   assert.equal(new URL(page.url()).hash,'#world/route/'+trail.routeId);
   await page.locator('.world-route-stations').waitFor();
  }
+ if(width===390||width===1440){
+  const trails=await read('../../app/discovery-connections.json');await home();await openTrailPicker(page);
+  for(const trail of trails){await page.getByRole('combobox',{name:'Wissensspur auswählen',exact:true}).selectOption(trail.id);await page.locator('.discovery-pair>article').first().locator(':scope > figure,:scope > .research-preview').waitFor();await decodeHomeImages(page);await discoveryPairMedia(page);}
+  report.checks.push('All16 canonical Home connections show both real topic figures at'+width+'; action icons excluded');
+ }
  await home();await rapidHashReturn(page,report,width);await decodeHomeImages(page);await page.locator('.discovery-pathways').screenshot({path:shots+'/discovery-pathways-'+width+'.png'});
  await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
  const axe=await page.evaluate(async()=>{
@@ -198,7 +219,7 @@ export async function offlineDiscoveryCentral(page,report){
 // First visits must be tested in fresh contexts; accumulated regression state
 // otherwise hides empty/resume mistakes. Uses the same production preview.
 export async function homeTextGeometry(page){
- const bad=await page.locator('.discovery-hero-copy h1,.discovery-feature>a,.discovery-feature button,.discovery-hero .photo-disclosure,.discovery-hero-copy>p,.discovery-hero-copy button,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds .world-choice,.discovery-text-link,.discovery-pathways h2,.discovery-pair button,.continue-card,.updates-entry,.updates-detail-body,.updates-details>summary,.updates-archive>summary,.updates-archive-intro,.updates-note,.updates-heading,.updates-provenance,.updates-prepared>p,.updates-prepared-entry').evaluateAll(elements=>elements.flatMap(el=>{
+ const bad=await page.locator('.discovery-hero-copy h1,.discovery-feature>a,.discovery-feature button,.discovery-hero .photo-disclosure,.discovery-hero-copy>p,.discovery-hero-copy button,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds .world-choice,.discovery-text-link,.discovery-pathways h2,.discovery-concept li,.discovery-concept figcaption,.discovery-context-photo figcaption,.discovery-pair button,.continue-card,.updates-entry,.updates-detail-body,.updates-details>summary,.updates-archive>summary,.updates-archive-intro,.updates-note,.updates-heading,.updates-provenance,.updates-prepared>p,.updates-prepared-entry').evaluateAll(elements=>elements.flatMap(el=>{
   if(!el.getClientRects().length)return [];
   const box=el.getBoundingClientRect(),walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),errors=[];
   while(walker.nextNode()){
@@ -212,7 +233,7 @@ export async function homeTextGeometry(page){
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'home/history horizontal overflow');
 }
 export async function homeTouchTargets(page){
- for(const control of await page.locator('.discovery-hero-copy button,.discovery-feature>a,.discovery-feature button,.discovery-hero .photo-disclosure summary,.discovery-hero .photo-disclosure a,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds button,.gateway-credits summary,.discovery-pathways button,.discovery-pathways a,.discovery-pathways summary,.discovery-pathways select,.discovery-activities button,.daily-discovery button,.daily-discovery summary,.daily-discovery a,.update-history a,.update-history summary').all()){
+ for(const control of await page.locator('.discovery-hero-copy button,.discovery-feature>a,.discovery-feature button,.discovery-hero .photo-disclosure summary,.discovery-hero .photo-disclosure a,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds button,.gateway-credits summary,.discovery-pathways button,.discovery-pathways a,.discovery-pathways summary,.discovery-pathways select,.discovery-activities button,.discovery-activities summary,.discovery-activities a,.daily-discovery button,.daily-discovery summary,.daily-discovery a,.update-history a,.update-history summary').all()){
   if(!await control.isVisible())continue;
   assert.equal(await control.evaluate(el=>{const r=el.getBoundingClientRect();return r.width>=44&&r.height>=44}),true,'home/history touch target at least 44px: '+await control.innerText());
  }
