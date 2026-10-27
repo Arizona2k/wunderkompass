@@ -1028,6 +1028,33 @@
         "unit": "One astronomical unit is exactly149597870.7km; rounded million-km source values remain approximate. Both existing models derive their linear scale maximum from the same values.",
         "preserved": "All eight IDs/order, existing approximate periods, facts/types/colors, diameter ratios and saved field names remain. No existing task or correct-answer position changed.",
         "preview": "The Solar preview must be actually recaptured against this modified model source before acceptance. No stale-image hash rebinding."
+      },
+      "distanceConsistencyPreparation20261027": {
+        "reviewedBy": "AI primary-source and actual-model consistency review; no independent human acceptance",
+        "checkedOn": "2026-10-27",
+        "definition": "Approximate large semimajor axes from the NASA metric fact-sheet table updated18March2025; a rounded orbital-distance convention, not current Sun/planet separation or ephemerides.",
+        "sourceMillionKm": [
+          57.9,
+          108.2,
+          149.6,
+          228,
+          778.5,
+          1432,
+          2867,
+          4515
+        ],
+        "exactAstronomicalUnitKm": 149597870.7,
+        "conversion": "Rounded metric input divided by the exact AU; labels show up to three decimal places and both distance scales derive from the same maximum. Original size ratios remain separate.",
+        "sources": [
+          "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+          "https://nssdc.gsfc.nasa.gov/planetary/factsheet/fact_notes.html",
+          "https://iau-a3.gitlab.io/NSFA/NSFA_fixed.html",
+          "https://ssd.jpl.nasa.gov/astro_par.html"
+        ],
+        "sourceLimits": "Table-update date is not an observation epoch. Different NASA/JPL orbital-element epochs and teaching approximations explain different Neptune values; neither30.05nor30.18is declared a generic typo. Contradictory calendar/Julian-date and unit-resolution labels are not copied.",
+        "preserved": "Planet IDs/order, original orbital-day approximations/diameters, saved selection/time/comparison/prediction/journal and every existing learning-task field. Source notes are explicit and responsive.",
+        "actualTargetedScope": "Both article scales and all planets, normal/large mobile/desktop, real native200 large-text source notes and an existing-key synthetic Saturn model state; actual default Solar capture remains byte-identical. No product preview replaced.",
+        "remaining": "Full current local/native/search/offline qualification and actual new Solar delivery remain required."
       }
     }
   ],

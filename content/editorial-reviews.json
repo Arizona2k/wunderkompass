@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "meaning": "All99 factual dossiers and named histories retained. Home/shared explanatory previews are in preparation on actual M68; current UI/search/back/offline evidence is explicitly pending. Prior accepted bindings are historical, not relabeled to this candidate.",
+  "meaning": "All99 factual dossiers and named histories retained. Shared NASA planetary-distance/source preparation is on actually delivered M69. Current built UI/search/back/offline proof is explicitly pending until the complete current regression; accepted M69 bindings remain historical.",
   "dossiers": [
     {
       "id": "topics-animals:animal-platypus",
@@ -76,13 +76,13 @@
         "topics-animals:animal-short-beaked-echidna"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-platypus",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -551,6 +551,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-platypus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -612,13 +621,13 @@
         "topics-animals:animal-platypus"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-short-beaked-echidna",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1087,6 +1096,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-short-beaked-echidna",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -1148,13 +1166,13 @@
         "topics-animals:animal-giraffe"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-okapi",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1674,6 +1692,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-okapi",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -1735,13 +1762,13 @@
         "topics-animals:animal-honey-bee"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-meerkat",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2210,6 +2237,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-meerkat",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -2271,13 +2307,13 @@
         "topics-animals:animal-western-lowland-gorilla"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-ring-tailed-lemur",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2746,6 +2782,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-ring-tailed-lemur",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -2807,13 +2852,13 @@
         "topics-science:science-water-cycle"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-north-american-beaver",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3282,6 +3327,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-north-american-beaver",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -3357,13 +3411,13 @@
         "topics-animals:animal-polar-bear"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-walrus",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3832,6 +3886,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-walrus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -3894,13 +3957,13 @@
         "topics-animals:animal-raccoon"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-red-fox",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4369,6 +4432,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-red-fox",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -4430,13 +4502,13 @@
         "topics-animals:animal-red-fox"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-raccoon",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4905,6 +4977,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-raccoon",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -4967,13 +5048,13 @@
         "topics-animals:animal-garden-snail"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-hedgehog",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5442,6 +5523,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-hedgehog",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -5510,13 +5600,13 @@
         "topics-animals:animal-white-tailed-eagle"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-barn-owl",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5985,6 +6075,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-barn-owl",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -6053,13 +6152,13 @@
         "topics-science:science-shadows"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-kingfisher",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -6528,6 +6627,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-kingfisher",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -6589,13 +6697,13 @@
         "topics-animals:animal-emperor-penguin"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-ostrich",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -7064,6 +7172,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-ostrich",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -7125,13 +7242,13 @@
         "topics-animals:animal-emperor-penguin"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-atlantic-puffin",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -7600,6 +7717,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-atlantic-puffin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -7661,13 +7787,13 @@
         "topics-animals:animal-common-cuttlefish"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-common-chameleon",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -8136,6 +8262,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-common-chameleon",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -8205,13 +8340,13 @@
         "topics-animals:animal-common-frog"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-fire-salamander",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -8680,6 +8815,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-fire-salamander",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -8741,13 +8885,13 @@
         "topics-animals:animal-fire-salamander"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-common-frog",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -9216,6 +9360,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-common-frog",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -9284,13 +9437,13 @@
         "topics-science:science-coral-reef"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-eastern-clown-anemonefish",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -9759,6 +9912,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-eastern-clown-anemonefish",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -9834,13 +9996,13 @@
         "topics-science:science-currents"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-european-eel",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -10309,6 +10471,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-european-eel",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -10371,13 +10542,13 @@
         "topics-people:person-maria_sibylla_merian"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-monarch-butterfly",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -10852,6 +11023,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-monarch-butterfly",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -10927,13 +11107,13 @@
         "topics-animals:animal-hedgehog"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-garden-snail",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -11402,6 +11582,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-garden-snail",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -11463,13 +11652,13 @@
         "topics-animals:animal-common-octopus"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-european-lobster",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -11938,6 +12127,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-european-lobster",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -12007,13 +12205,13 @@
         "topics-animals:animal-common-chameleon"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-common-cuttlefish",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -12482,6 +12680,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-common-cuttlefish",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -12550,13 +12757,13 @@
         "topics-science:science-foodweb"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-short-snouted-seahorse",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -13025,6 +13232,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-short-snouted-seahorse",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -13090,13 +13306,13 @@
         "topics-animals:animal-giant-panda"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-african-savanna-elephant",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -13546,6 +13762,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-african-savanna-elephant",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -13619,13 +13844,13 @@
         "topics-animals:animal-bengal-tiger"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-lion",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -14075,6 +14300,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-lion",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -14141,13 +14375,13 @@
         "topics-animals:animal-lion"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-cheetah",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -14597,6 +14831,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-cheetah",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -14657,13 +14900,13 @@
         "topics-animals:animal-jaguar"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-bengal-tiger",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -15113,6 +15356,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-bengal-tiger",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -15187,13 +15439,13 @@
         "topics-animals:animal-okapi"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-giraffe",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -15643,6 +15895,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-giraffe",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -15709,13 +15970,13 @@
         "topics-animals:animal-koala"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-giant-panda",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -16165,6 +16426,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-giant-panda",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -16232,13 +16502,13 @@
         "topics-animals:animal-ring-tailed-lemur"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-western-lowland-gorilla",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -16688,6 +16958,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-western-lowland-gorilla",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -16754,13 +17033,13 @@
         "topics-animals:animal-western-lowland-gorilla"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-bornean-orangutan",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -17210,6 +17489,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-bornean-orangutan",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -17276,13 +17564,13 @@
         "topics-animals:animal-walrus"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-polar-bear",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -17732,6 +18020,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-polar-bear",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -17808,13 +18105,13 @@
         "topics-animals:animal-atlantic-puffin"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-emperor-penguin",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -18264,6 +18561,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-emperor-penguin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -18330,13 +18636,13 @@
         "topics-animals:animal-whale-shark"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-blue-whale",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -18786,6 +19092,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-blue-whale",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -18868,13 +19183,13 @@
         "topics-animals:animal-green-sea-turtle"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-common-bottlenose-dolphin",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -19324,6 +19639,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-common-bottlenose-dolphin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -19390,13 +19714,13 @@
         "topics-animals:animal-common-bottlenose-dolphin"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-orca",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -19846,6 +20170,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-orca",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -19922,13 +20255,13 @@
         "topics-animals:animal-common-cuttlefish"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-common-octopus",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -20378,6 +20711,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-common-octopus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -20451,13 +20793,13 @@
         "topics-animals:animal-common-bottlenose-dolphin"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-green-sea-turtle",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -20907,6 +21249,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-green-sea-turtle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -20973,13 +21324,13 @@
         "topics-animals:animal-platypus"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-red-kangaroo",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -21429,6 +21780,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-red-kangaroo",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -21495,13 +21855,13 @@
         "topics-animals:animal-giant-panda"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-koala",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -21951,6 +22311,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-koala",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -22024,13 +22393,13 @@
         "topics-animals:animal-bengal-tiger"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-jaguar",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -22480,6 +22849,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-jaguar",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -22555,13 +22933,13 @@
         "topics-animals:animal-monarch-butterfly"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-honey-bee",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -23011,6 +23389,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-honey-bee",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -23078,13 +23465,13 @@
         "topics-animals:animal-fire-salamander"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-axolotl",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -23534,6 +23921,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-axolotl",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -23595,13 +23991,13 @@
         "topics-animals:animal-axolotl"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-whale-shark",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -24051,6 +24447,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-whale-shark",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -24124,13 +24529,13 @@
         "topics-animals:animal-common-octopus"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-garden-cross-spider",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -24580,6 +24985,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-garden-cross-spider",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -24645,13 +25059,13 @@
         "topics-animals:animal-african-savanna-elephant"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-dromedary",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -25101,6 +25515,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-dromedary",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -25189,13 +25612,13 @@
         "topics-animals:animal-barn-owl"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/animal-white-tailed-eagle",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -25645,6 +26068,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/animal-white-tailed-eagle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -25702,13 +26134,13 @@
         "topics-history:history-web"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/history-khipu",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -26192,6 +26624,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/history-khipu",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -26237,13 +26678,13 @@
         "topics-history:history-writing"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/history-mohenjo-daro",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -26727,6 +27168,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/history-mohenjo-daro",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -26768,13 +27218,13 @@
         "topics-history:history-mohenjo-daro"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/history-writing",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -27250,6 +27700,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/history-writing",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -27329,13 +27788,13 @@
         }
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/invention-camera",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -27746,6 +28205,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/invention-camera",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -27821,13 +28289,13 @@
         }
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/invention-telescope",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -28223,6 +28691,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/invention-telescope",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -28300,13 +28777,13 @@
         }
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/invention-microscope",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -28702,6 +29179,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/invention-microscope",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -28767,13 +29253,13 @@
         }
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/person-mary_anning",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -29115,6 +29601,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/person-mary_anning",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -29180,13 +29675,13 @@
         }
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/person-ibn_al_haytham",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -29528,6 +30023,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/person-ibn_al_haytham",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -29602,13 +30106,13 @@
         "topics-inventions:invention-smartphone"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/invention-battery",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "uiBeforeMechanicalOriginals20261023": {
         "build": "1945360e83504fac",
@@ -29874,6 +30378,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/invention-battery",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -29948,13 +30461,13 @@
         "topics-science:science-circuit"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/invention-generator",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "uiBeforeMechanicalOriginals20261023": {
         "build": "1945360e83504fac",
@@ -30220,6 +30733,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/invention-generator",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -30301,13 +30823,13 @@
         "topics-science:science-circuit"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/invention-transistor",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "uiBeforeMechanicalOriginals20261023": {
         "build": "1945360e83504fac",
@@ -30573,6 +31095,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/invention-transistor",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -30635,13 +31166,13 @@
         "topics-science:science-heat-transfer"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/invention-refrigerator",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -30905,6 +31436,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/invention-refrigerator",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -30968,13 +31508,13 @@
         "topics-science:science-lever"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/invention-bicycle",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -31238,6 +31778,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/invention-bicycle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -31325,13 +31874,13 @@
         "topics-science:science-friction"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/invention-elevator",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -31596,6 +32145,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/invention-elevator",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -31703,13 +32261,13 @@
         "topics-people:person-inge_lehmann"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/invention-seismograph",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -31981,6 +32539,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/invention-seismograph",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -32064,13 +32631,13 @@
         "topics-science:science-angle"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/invention-3d-printing",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -32341,6 +32908,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/invention-3d-printing",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -32403,13 +32979,13 @@
         "topics-inventions:invention-printing"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/invention-sewing-machine",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -32666,6 +33242,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/invention-sewing-machine",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -32761,13 +33346,13 @@
         "topics-buildings:building-colosseum"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/building-pont-du-gard",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -32997,6 +33582,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/building-pont-du-gard",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -33092,13 +33686,13 @@
         "topics-history:history-timbuktu"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/building-great-zimbabwe",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -33328,6 +33922,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/building-great-zimbabwe",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -33423,13 +34026,13 @@
         "topics-buildings:building-djenne-mosque"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/building-horyu-ji",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -33659,6 +34262,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/building-horyu-ji",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -33754,13 +34366,13 @@
         "topics-history:history-timbuktu"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/building-djenne-mosque",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -33990,6 +34602,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/building-djenne-mosque",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -34085,13 +34706,13 @@
         "topics-science:science-water-cycle"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/building-lalibela",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -34321,6 +34942,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/building-lalibela",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -34416,13 +35046,13 @@
         "topics-buildings:building-panama-canal"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/building-angkor-wat",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -34652,6 +35282,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/building-angkor-wat",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -34747,13 +35386,13 @@
         "topics-buildings:building-colosseum"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/building-palenque",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -34983,6 +35622,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/building-palenque",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -35090,13 +35738,13 @@
         "topics-science:science-angle"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/building-sydney-opera",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -35333,6 +35981,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/building-sydney-opera",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -35383,13 +36040,13 @@
         "topics-science:science-lever"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-pressure",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -35627,6 +36284,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-pressure",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -35678,13 +36344,13 @@
         "topics-inventions:invention-elevator"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-friction",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -35922,6 +36588,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-friction",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -35971,13 +36646,13 @@
         "topics-science:science-currents"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-buoyancy",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -36215,6 +36890,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-buoyancy",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -36264,13 +36948,13 @@
         "topics-science:science-water-cycle"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-surface-tension",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -36508,6 +37192,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-surface-tension",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -36558,13 +37251,13 @@
         "topics-science:science-chromatography"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-capillarity",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -36802,6 +37495,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-capillarity",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -36851,13 +37553,13 @@
         "topics-science:science-chromatography"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-diffusion",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -37095,6 +37797,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-diffusion",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -37144,13 +37855,13 @@
         "topics-science:science-diffusion"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-chromatography",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -37388,6 +38099,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-chromatography",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -37438,13 +38158,13 @@
         "topics-inventions:invention-refrigerator"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-heat-transfer",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -37682,6 +38402,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-heat-transfer",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -37731,13 +38460,13 @@
         "topics-inventions:invention-bicycle"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-lever",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -37983,6 +38712,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-lever",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -38032,13 +38770,13 @@
         "topics-science:science-resonance"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-elasticity",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -38276,6 +39014,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-elasticity",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -38325,13 +39072,13 @@
         "topics-inventions:invention-seismograph"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-pendulum",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -38577,6 +39324,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-pendulum",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -38652,13 +39408,13 @@
         "topics-inventions:invention-seismograph"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-resonance",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -38896,6 +39652,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-resonance",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -38944,13 +39709,13 @@
         "topics-science:science-patterns"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-probability",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -39195,6 +39960,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-probability",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -39245,13 +40019,13 @@
         "topics-science:science-fractals"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-symmetry",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -39489,6 +40263,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-symmetry",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -39537,13 +40320,13 @@
         "topics-science:science-symmetry"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-fractals",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -39788,6 +40571,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-fractals",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -39839,13 +40631,13 @@
         "topics-buildings:building-sydney-opera"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-angle",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -40083,6 +40875,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-angle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -40132,13 +40933,13 @@
         "topics-science:science-checksum"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-encryption",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -40376,6 +41177,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-encryption",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -40437,13 +41247,13 @@
         "topics-science:science-encryption"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-checksum",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -40689,6 +41499,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-checksum",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -40750,13 +41569,13 @@
         "topics-science:science-photosynthesis"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-cell",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -40994,6 +41813,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-cell",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -41055,13 +41883,13 @@
         "topics-science:science-galaxy"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-fusion",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -41299,6 +42127,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-fusion",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -41349,13 +42186,13 @@
         "topics-science:science-exoplanet"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-galaxy",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -41593,6 +42430,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-galaxy",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -41642,13 +42488,13 @@
         "topics-science:science-magnetism"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-comet",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -41886,6 +42732,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-comet",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -41947,13 +42802,13 @@
         "topics-science:science-solar-system"
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/science-exoplanet",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -42191,6 +43046,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/science-exoplanet",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -42255,13 +43119,13 @@
       ],
       "mediaDecision": "Own clearly invented evidence-card comparison with AI assistance. Labels separate material from contextual evidence; not object photos, copied museum artwork, microscopic metal structure or a casting recipe. Current learning purpose is comparison of evidence; no original museum-photo pixel review claimed.",
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/history-bronze",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "independentHumanReview": false,
@@ -42424,6 +43288,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/history-bronze",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -42491,13 +43364,13 @@
         }
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/person-maria_sibylla_merian",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -42589,6 +43462,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/person-maria_sibylla_merian",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     },
     {
@@ -42656,13 +43538,13 @@
         }
       ],
       "ui": {
-        "build": "49f086a2fdec9120",
+        "build": "pending",
         "route": "world/topic/person-inge_lehmann",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "New Solar/shared-build UI/search/Back/cold-offline evidence awaits the complete current local regression. Actual accepted M69 binding is preserved in uiBeforeSolarDistancePreparation20261027. No new scientific acceptance implied."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -42754,6 +43636,15 @@
         "back": false,
         "offline": false,
         "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
+      },
+      "uiBeforeSolarDistancePreparation20261027": {
+        "build": "49f086a2fdec9120",
+        "route": "world/topic/person-inge_lehmann",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Current shared article UI, search, Back navigation and cold offline surface. Code revision917ba5cd84a503ad4f2197b42628350f5ab2f861; original evidence retained privately. Scientific content review remains in its existing fields."
       }
     }
   ],
@@ -46416,5 +47307,12 @@
     "actualBase": "752b94fa0d1fc67b80c3de388c84b41ba2fc4a3c",
     "acceptedBaseHead": "894ff9c80e65bc66e1da4f3bbc6aee6905e9fed1",
     "scope": "Canonical photo/question selection, published graph-route projection, presentation visit/history state and shared existing explanatory figures. No central learning storage or factual claim change. Browser qualification remains pending."
+  },
+  "meaningBeforeSolarDistancePreparation20261027": "All99 factual dossiers and named histories retained. Home/shared explanatory previews are in preparation on actual M68; current UI/search/back/offline evidence is explicitly pending. Prior accepted bindings are historical, not relabeled to this candidate.",
+  "solarDistancePreparation20261027": {
+    "actualBase": "cc885f0c884d5a1ca958ddc6b5d7f76e968834c8",
+    "targetedSource": "5ed6f9d976a48d5450dfbd5dae403ee024d97331",
+    "productFingerprint": "1da0ac53c22424ec",
+    "scope": "Both existing planet models share the defined approximate NASA semimajor-axis source and exact AU conversion, with explicit source/unit/model limits. Stable IDs, original diameters/orbital-day approximations and synthetic saved Solar state retained. Targeted normal/large/native200 checks do not replace full current UI/search/back/offline, nativeCI and delivery gates."
   }
 }
