@@ -24,10 +24,10 @@ test('discovery trails have live, reciprocal knowledge edges and relevant existi
 });
 
 test('Home photo questions grow from the canonical article and existing rights metadata without a separate content collection',()=>{
- const index=read('../app/world-index.json'),photos=read('../app/world-photos.json');let eligible=0;
+ const index=read('../app/world-index.json'),photos=read('../app/world-photos.json'),core=read('../app/world-photo-core.json');let eligible=0;
  for(const entry of index){const topic=topics.find(t=>t.id===entry.id);assert(topic,entry.id);
-  if(entry.image&&photos[entry.image]&&!entry.sensitive&&!topic.history?.sensitive){eligible++;assert.equal(entry.image,topic.image);assert.equal(entry.homeQuestion,topic.question.prompt);for(const field of['author','license','license_url','source_page_url','alt_de'])assert(photos[entry.image][field],entry.image+' '+field);}
-  else assert.equal(entry.homeQuestion,undefined);
+  if(entry.image&&photos[entry.image]&&!entry.sensitive&&!topic.history?.sensitive){eligible++;assert.equal(entry.image,topic.image);assert.equal(entry.homeQuestion,topic.question.prompt);assert.deepEqual(entry.homePhoto??core[entry.image],photos[entry.image],'every eligible Home motif has complete immediate canonical rights metadata');if(core[entry.image])assert.equal(entry.homePhoto,undefined,'reuse the six existing immediate credits without duplicating them');for(const field of['author','license','license_url','source_page_url','alt_de'])assert(photos[entry.image][field],entry.image+' '+field);}
+  else{assert.equal(entry.homeQuestion,undefined);assert.equal(entry.homePhoto,undefined);}
  }
  assert(eligible>1,'several actual published motifs permit variety');
 });

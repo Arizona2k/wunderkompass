@@ -1661,6 +1661,28 @@
         }
       ],
       "checkedOn": "2026-10-27"
+    },
+    {
+      "number": 69,
+      "title": "Startseite abwechslungsreich entdecken und mobile Einstiege verdichten",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/69",
+      "base": "test-live",
+      "mergedAt": "2026-10-27T11:26:34Z",
+      "mergeCommit": "cc885f0c884d5a1ca958ddc6b5d7f76e968834c8",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/cc885f0c884d5a1ca958ddc6b5d7f76e968834c8/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57358013695,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-27T11:26:50Z",
+          "updatedAt": "2026-10-27T11:26:50Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/H8W84gNXFQKYfDkZRAukuv3f7F4F"
+        }
+      ],
+      "checkedOn": "2026-10-27"
     }
   ]
 }

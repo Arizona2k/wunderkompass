@@ -1,5 +1,5 @@
 import {journeyContent} from './journey-content-index.mjs';
-import {worldPhotoIndex} from './world-photo-index.mjs';
+import {worldPhotoIndex,corePhotoIds} from './world-photo-index.mjs';
 import fs from 'node:fs';import path from 'node:path';import vm from 'node:vm';import crypto from 'node:crypto';import ts from 'typescript';
 worldPhotoIndex(process.argv.includes('--check'));
 const root=process.cwd(),out=path.join(root,process.argv.includes('--check')?'.qa-output/content-check':'exports/content');fs.mkdirSync(out,{recursive:true});const cache=new Map();
@@ -27,11 +27,11 @@ else fs.writeFileSync(discoveryIndexFile,discoveryIndexText);
 const worldIndexFile=path.join(root,'app/world-index.json'),worldIndex=JSON.parse(fs.readFileSync(worldIndexFile,'utf8'));
 const photoMetadata=JSON.parse(fs.readFileSync(path.join(root,'app/world-photos.json'),'utf8'));
 const homeIndex=worldIndex.map(previous=>{
- const entry={...previous};delete entry.homeQuestion;
+ const entry={...previous};delete entry.homeQuestion;delete entry.homePhoto;
  const topic=canonicalTopics.find(t=>t.id===entry.id);if(!topic)throw Error('Unknown canonical discovery topic '+entry.id);
  if(entry.image&&photoMetadata[entry.image]&&!entry.sensitive&&!topic.history?.sensitive){
   if(topic.image!==entry.image||typeof topic.question?.prompt!=='string'||!topic.question.prompt.trim())throw Error('Stale photo/question discovery metadata '+entry.id);
-  return {...entry,homeQuestion:topic.question.prompt};
+  return {...entry,homeQuestion:topic.question.prompt,homePhoto:corePhotoIds.includes(entry.image)?undefined:photoMetadata[entry.image]};
  }
  return entry;
 });

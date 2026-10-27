@@ -11,7 +11,7 @@ export const hasDiscoveryTopicMedia=(topic:WorldEntry)=>!!topic.image||hasScienc
 /** The article's existing photo or explanatory drawing, without loading its interactive model. */
 export default function DiscoveryTopicMedia({topic,historyKey}:{topic:WorldEntry;historyKey?:string}){
  const key=historyKey??'home-topic-'+topic.id;
- if(topic.image)return <WorldPhoto id={topic.image} historyKey={key+'-credit'} creditDisclosure/>;
+ if(topic.image)return <WorldPhoto id={topic.image} immediatePhoto={topic.homePhoto} historyKey={key+'-credit'} creditDisclosure/>;
  if(topic.id==='science-moon-phases')return <ResearchPreview id="moon"/>;
  if(topic.id==='science-tides')return <ResearchPreview id="tides"/>;
  if(topic.id==='science-currents')return <WaterMoonDrawing id={topic.id} historyKey={key+'-model'} preview/>;
