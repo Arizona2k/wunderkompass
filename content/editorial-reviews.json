@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "meaning": "Current integrated Book preparation. Individual factual dossiers retained, seven SI explanations individually source-reviewed; all106 technical UI bindings pending the complete current built review. Actual M71 bindings and all earlier histories preserved. No global new factual acceptance or new publication claim.",
+  "meaning": "Individual factual dossiers and all earlier histories retained. Seven SI explanations individually source-reviewed; current shared Book/article/UI/search/Back/offline bindings are technical only. No global new factual acceptance or new publication claim.",
   "dossiers": [
     {
       "id": "topics-animals:animal-platypus",
@@ -76,8 +76,13 @@
         "topics-animals:animal-short-beaked-echidna"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-platypus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -652,8 +657,13 @@
         "topics-animals:animal-platypus"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-short-beaked-echidna",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1228,8 +1238,13 @@
         "topics-animals:animal-giraffe"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-okapi",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1855,8 +1870,13 @@
         "topics-animals:animal-honey-bee"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-meerkat",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2431,8 +2451,13 @@
         "topics-animals:animal-western-lowland-gorilla"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-ring-tailed-lemur",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3007,8 +3032,13 @@
         "topics-science:science-water-cycle"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-north-american-beaver",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3597,8 +3627,13 @@
         "topics-animals:animal-polar-bear"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-walrus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4174,8 +4209,13 @@
         "topics-animals:animal-raccoon"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-red-fox",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4750,8 +4790,13 @@
         "topics-animals:animal-red-fox"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-raccoon",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5327,8 +5372,13 @@
         "topics-animals:animal-garden-snail"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-hedgehog",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5910,8 +5960,13 @@
         "topics-animals:animal-white-tailed-eagle"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-barn-owl",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -6493,8 +6548,13 @@
         "topics-science:science-shadows"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-kingfisher",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -7069,8 +7129,13 @@
         "topics-animals:animal-emperor-penguin"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-ostrich",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -7645,8 +7710,13 @@
         "topics-animals:animal-emperor-penguin"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-atlantic-puffin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -8221,8 +8291,13 @@
         "topics-animals:animal-common-cuttlefish"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-common-chameleon",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -8805,8 +8880,13 @@
         "topics-animals:animal-common-frog"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-fire-salamander",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -9381,8 +9461,13 @@
         "topics-animals:animal-fire-salamander"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-common-frog",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -9964,8 +10049,13 @@
         "topics-science:science-coral-reef"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-eastern-clown-anemonefish",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -10554,8 +10644,13 @@
         "topics-science:science-currents"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-european-eel",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -11131,8 +11226,13 @@
         "topics-people:person-maria_sibylla_merian"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-monarch-butterfly",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -11727,8 +11827,13 @@
         "topics-animals:animal-hedgehog"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-garden-snail",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -12303,8 +12408,13 @@
         "topics-animals:animal-common-octopus"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-european-lobster",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -12887,8 +12997,13 @@
         "topics-animals:animal-common-chameleon"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-common-cuttlefish",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -13470,8 +13585,13 @@
         "topics-science:science-foodweb"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-short-snouted-seahorse",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -14050,8 +14170,13 @@
         "topics-animals:animal-giant-panda"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-african-savanna-elephant",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -14619,8 +14744,13 @@
         "topics-animals:animal-bengal-tiger"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-lion",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -15181,8 +15311,13 @@
         "topics-animals:animal-lion"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-cheetah",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -15737,8 +15872,13 @@
         "topics-animals:animal-jaguar"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-bengal-tiger",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -16307,8 +16447,13 @@
         "topics-animals:animal-okapi"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-giraffe",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -16869,8 +17014,13 @@
         "topics-animals:animal-koala"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-giant-panda",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -17432,8 +17582,13 @@
         "topics-animals:animal-ring-tailed-lemur"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-western-lowland-gorilla",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -17994,8 +18149,13 @@
         "topics-animals:animal-western-lowland-gorilla"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-bornean-orangutan",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -18556,8 +18716,13 @@
         "topics-animals:animal-walrus"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-polar-bear",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -19128,8 +19293,13 @@
         "topics-animals:animal-atlantic-puffin"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-emperor-penguin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -19690,8 +19860,13 @@
         "topics-animals:animal-whale-shark"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-blue-whale",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -20268,8 +20443,13 @@
         "topics-animals:animal-green-sea-turtle"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-common-bottlenose-dolphin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -20830,8 +21010,13 @@
         "topics-animals:animal-common-bottlenose-dolphin"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-orca",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -21402,8 +21587,13 @@
         "topics-animals:animal-common-cuttlefish"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-common-octopus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -21971,8 +22161,13 @@
         "topics-animals:animal-common-bottlenose-dolphin"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-green-sea-turtle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -22533,8 +22728,13 @@
         "topics-animals:animal-platypus"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-red-kangaroo",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -23095,8 +23295,13 @@
         "topics-animals:animal-giant-panda"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-koala",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -23664,8 +23869,13 @@
         "topics-animals:animal-bengal-tiger"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-jaguar",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -24235,8 +24445,13 @@
         "topics-animals:animal-monarch-butterfly"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-honey-bee",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -24798,8 +25013,13 @@
         "topics-animals:animal-fire-salamander"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-axolotl",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -25355,8 +25575,13 @@
         "topics-animals:animal-axolotl"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-whale-shark",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -25924,8 +26149,13 @@
         "topics-animals:animal-common-octopus"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-garden-cross-spider",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -26485,8 +26715,13 @@
         "topics-animals:animal-african-savanna-elephant"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-dromedary",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -27069,8 +27304,13 @@
         "topics-animals:animal-barn-owl"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/animal-white-tailed-eagle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -27622,8 +27862,13 @@
         "topics-history:history-web"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/history-khipu",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -28197,8 +28442,13 @@
         "topics-history:history-writing"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/history-mohenjo-daro",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -28768,8 +29018,13 @@
         "topics-history:history-mohenjo-daro"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/history-writing",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -29369,8 +29624,13 @@
         }
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/invention-camera",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -29901,8 +30161,13 @@
         }
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/invention-telescope",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -30420,8 +30685,13 @@
         }
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/invention-microscope",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -30927,8 +31197,13 @@
         }
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/person-mary_anning",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -31380,8 +31655,13 @@
         }
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/person-ibn_al_haytham",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -31842,8 +32122,13 @@
         "topics-inventions:invention-smartphone"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/invention-battery",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "uiBeforeMechanicalOriginals20261023": {
         "build": "1945360e83504fac",
@@ -32228,8 +32513,13 @@
         "topics-science:science-circuit"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/invention-generator",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "uiBeforeMechanicalOriginals20261023": {
         "build": "1945360e83504fac",
@@ -32621,8 +32911,13 @@
         "topics-science:science-circuit"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/invention-transistor",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "uiBeforeMechanicalOriginals20261023": {
         "build": "1945360e83504fac",
@@ -32995,8 +33290,13 @@
         "topics-science:science-heat-transfer"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/invention-refrigerator",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -33368,8 +33668,13 @@
         "topics-science:science-lever"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/invention-bicycle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -33765,8 +34070,13 @@
         "topics-science:science-friction"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/invention-elevator",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -34183,8 +34493,13 @@
         "topics-people:person-inge_lehmann"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/invention-seismograph",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -34584,8 +34899,13 @@
         "topics-science:science-angle"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/invention-3d-printing",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -34963,8 +35283,13 @@
         "topics-inventions:invention-printing"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/invention-sewing-machine",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -35361,8 +35686,13 @@
         "topics-buildings:building-colosseum"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/building-pont-du-gard",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -35732,8 +36062,13 @@
         "topics-history:history-timbuktu"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/building-great-zimbabwe",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -36103,8 +36438,13 @@
         "topics-buildings:building-djenne-mosque"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/building-horyu-ji",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -36474,8 +36814,13 @@
         "topics-history:history-timbuktu"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/building-djenne-mosque",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -36845,8 +37190,13 @@
         "topics-science:science-water-cycle"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/building-lalibela",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -37216,8 +37566,13 @@
         "topics-buildings:building-panama-canal"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/building-angkor-wat",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -37587,8 +37942,13 @@
         "topics-buildings:building-colosseum"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/building-palenque",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -37970,8 +38330,13 @@
         "topics-science:science-angle"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/building-sydney-opera",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -38303,8 +38668,13 @@
         "topics-science:science-lever"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-pressure",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -38638,8 +39008,13 @@
         "topics-inventions:invention-elevator"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-friction",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -38972,8 +39347,13 @@
         "words:Kilogramm"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-buoyancy",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -39313,8 +39693,13 @@
         "topics-science:science-water-cycle"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-surface-tension",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -39647,8 +40032,13 @@
         "topics-science:science-chromatography"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-capillarity",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -39980,8 +40370,13 @@
         "topics-science:science-chromatography"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-diffusion",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -40313,8 +40708,13 @@
         "topics-science:science-diffusion"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-chromatography",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -40648,8 +41048,13 @@
         "words:Kelvin"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-heat-transfer",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -40989,8 +41394,13 @@
         "topics-inventions:invention-bicycle"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-lever",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -41330,8 +41740,13 @@
         "topics-science:science-resonance"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-elasticity",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -41665,8 +42080,13 @@
         "words:Sekunde"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-pendulum",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -42046,8 +42466,13 @@
         "topics-inventions:invention-seismograph"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-resonance",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -42378,8 +42803,13 @@
         "topics-science:science-patterns"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-probability",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -42719,8 +43149,13 @@
         "topics-science:science-fractals"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-symmetry",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -43051,8 +43486,13 @@
         "topics-science:science-symmetry"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-fractals",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -43393,8 +43833,13 @@
         "topics-buildings:building-sydney-opera"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-angle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -43726,8 +44171,13 @@
         "topics-science:science-checksum"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-encryption",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -44071,8 +44521,13 @@
         "topics-science:science-encryption"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-checksum",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -44424,8 +44879,13 @@
         "topics-science:science-photosynthesis"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-cell",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -44769,8 +45229,13 @@
         "topics-science:science-galaxy"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-fusion",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -45103,8 +45568,13 @@
         "topics-science:science-exoplanet"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-galaxy",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -45436,8 +45906,13 @@
         "topics-science:science-magnetism"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-comet",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -45781,8 +46256,13 @@
         "topics-science:science-solar-system"
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/science-exoplanet",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -46129,8 +46609,13 @@
       ],
       "mediaDecision": "Own clearly invented evidence-card comparison with AI assistance. Labels separate material from contextual evidence; not object photos, copied museum artwork, microscopic metal structure or a casting recipe. Current learning purpose is comparison of evidence; no original museum-photo pixel review claimed.",
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/history-bronze",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "independentHumanReview": false,
@@ -46405,8 +46890,13 @@
         }
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/person-maria_sibylla_merian",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -46610,8 +47100,13 @@
         }
       ],
       "ui": {
-        "status": "pending",
-        "reason": "New integrated Book reading, dictionary and reciprocal article paths await complete current built qualification; actual M71 binding retained separately, factual fields remain individual."
+        "build": "23bb412e60512ae0",
+        "route": "world/topic/person-inge_lehmann",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -46819,8 +47314,13 @@
         "remainingUncertainty": "Reale Geräte- oder Menschenprüfungen werden nicht behauptet. Technische UI-/Such-/Rück-/Offlineabnahme wird separat im ui-Feld gebunden; Quellen-/Fachurteil bleibt diese individuelle KI-Gegenlese."
       },
       "ui": {
-        "status": "pending",
-        "reason": "New SI term, current integrated source/UI/search/Back/offline qualification pending."
+        "build": "23bb412e60512ae0",
+        "route": "book/words/Meter",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       }
     },
     {
@@ -46880,8 +47380,13 @@
         "remainingUncertainty": "Reale Geräte- oder Menschenprüfungen werden nicht behauptet. Technische UI-/Such-/Rück-/Offlineabnahme wird separat im ui-Feld gebunden; Quellen-/Fachurteil bleibt diese individuelle KI-Gegenlese."
       },
       "ui": {
-        "status": "pending",
-        "reason": "New SI term, current integrated source/UI/search/Back/offline qualification pending."
+        "build": "23bb412e60512ae0",
+        "route": "book/words/Kilogramm",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       }
     },
     {
@@ -46934,8 +47439,13 @@
         "remainingUncertainty": "Reale Geräte- oder Menschenprüfungen werden nicht behauptet. Technische UI-/Such-/Rück-/Offlineabnahme wird separat im ui-Feld gebunden; Quellen-/Fachurteil bleibt diese individuelle KI-Gegenlese."
       },
       "ui": {
-        "status": "pending",
-        "reason": "New SI term, current integrated source/UI/search/Back/offline qualification pending."
+        "build": "23bb412e60512ae0",
+        "route": "book/words/Sekunde",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       }
     },
     {
@@ -46988,8 +47498,13 @@
         "remainingUncertainty": "Reale Geräte- oder Menschenprüfungen werden nicht behauptet. Technische UI-/Such-/Rück-/Offlineabnahme wird separat im ui-Feld gebunden; Quellen-/Fachurteil bleibt diese individuelle KI-Gegenlese."
       },
       "ui": {
-        "status": "pending",
-        "reason": "New SI term, current integrated source/UI/search/Back/offline qualification pending."
+        "build": "23bb412e60512ae0",
+        "route": "book/words/Ampere",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       }
     },
     {
@@ -47042,8 +47557,13 @@
         "remainingUncertainty": "Reale Geräte- oder Menschenprüfungen werden nicht behauptet. Technische UI-/Such-/Rück-/Offlineabnahme wird separat im ui-Feld gebunden; Quellen-/Fachurteil bleibt diese individuelle KI-Gegenlese."
       },
       "ui": {
-        "status": "pending",
-        "reason": "New SI term, current integrated source/UI/search/Back/offline qualification pending."
+        "build": "23bb412e60512ae0",
+        "route": "book/words/Kelvin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       }
     },
     {
@@ -47103,8 +47623,13 @@
         "remainingUncertainty": "Reale Geräte- oder Menschenprüfungen werden nicht behauptet. Technische UI-/Such-/Rück-/Offlineabnahme wird separat im ui-Feld gebunden; Quellen-/Fachurteil bleibt diese individuelle KI-Gegenlese."
       },
       "ui": {
-        "status": "pending",
-        "reason": "New SI term, current integrated source/UI/search/Back/offline qualification pending."
+        "build": "23bb412e60512ae0",
+        "route": "book/words/Mol",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       }
     },
     {
@@ -47157,8 +47682,13 @@
         "remainingUncertainty": "Reale Geräte- oder Menschenprüfungen werden nicht behauptet. Technische UI-/Such-/Rück-/Offlineabnahme wird separat im ui-Feld gebunden; Quellen-/Fachurteil bleibt diese individuelle KI-Gegenlese."
       },
       "ui": {
-        "status": "pending",
-        "reason": "New SI term, current integrated source/UI/search/Back/offline qualification pending."
+        "build": "23bb412e60512ae0",
+        "route": "book/words/Candela",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technical current built UI/search/Back/offline binding at code7a7e4a6ec673ea0de6dada064f40becee8d1853d and product23bb412e60512ae0. Original source-bound evidence retained privately. Individual scientific fields and earlier histories remain separate."
       }
     }
   ],
@@ -50847,7 +51377,7 @@
     "scope": "Technical binding after complete local current DesktopHome qualification. Every actual rendering input remains unchanged by these metadata fields. Earlier source/result bindings remain separate; nativeCI and actual delivery pending."
   },
   "bookMeasurementPreparation20261027": {
-    "status": "Actual delivered M71 integrated, all106 technical UI bindings pending complete current qualification; seven static SI reviews remain separate from full UI acceptance.",
+    "status": "Actual delivered M71 integrated. All106 current technical UI bindings follow completed fixed7a7 qualification. Seven individual SI source reviews stay separate; full native qualification and actual publication pending.",
     "retainedOrigin": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
     "actualBase": "651ae08f4c7c857543e71475111c3ef1849a628d",
     "items": [
@@ -50856,54 +51386,60 @@
         "topic": "topics-science:science-pendulum",
         "reason": "Beim Pendel verändert die Fadenlänge die Schwingungszeit. Achte auf die Längeneinheit im Modell.",
         "scope": "Only this reciprocal relationship; no new full scientific approval of the existing article",
-        "uiStatus": "prepared, rendered path pending"
+        "uiStatus": "Actual integrated word/article reciprocal path rendered and keyboard return checked in fixed7a7; current technical binding, no new full scientific approval of existing article."
       },
       {
         "id": "words:Kilogramm",
         "topic": "topics-science:science-buoyancy",
         "reason": "Im Auftriebsmodell vergleichst du die Masse eines Körpers mit dem von ihm verdrängten Wasser.",
         "scope": "Only this reciprocal relationship; no new full scientific approval of the existing article",
-        "uiStatus": "prepared, rendered path pending"
+        "uiStatus": "Actual integrated word/article reciprocal path rendered and keyboard return checked in fixed7a7; current technical binding, no new full scientific approval of existing article."
       },
       {
         "id": "words:Sekunde",
         "topic": "topics-science:science-pendulum",
         "reason": "Das Pendelmodell zeigt eine Schwingungsdauer. Diese Dauer ist keine Uhrzeit.",
         "scope": "Only this reciprocal relationship; no new full scientific approval of the existing article",
-        "uiStatus": "prepared, rendered path pending"
+        "uiStatus": "Actual integrated word/article reciprocal path rendered and keyboard return checked in fixed7a7; current technical binding, no new full scientific approval of existing article."
       },
       {
         "id": "words:Ampere",
         "topic": "topics-science:science-circuit",
         "reason": "Die Stromkarte zeigt, weshalb ein geschlossener Stromweg wichtig ist. Sie ersetzt keinen echten Elektroversuch.",
         "scope": "Only this reciprocal relationship; no new full scientific approval of the existing article",
-        "uiStatus": "prepared, rendered path pending"
+        "uiStatus": "Actual integrated word/article reciprocal path rendered and keyboard return checked in fixed7a7; current technical binding, no new full scientific approval of existing article."
       },
       {
         "id": "words:Kelvin",
         "topic": "topics-science:science-heat-transfer",
         "reason": "Bei Wärmeübertragung unterscheiden wir Temperatur und übertragene Energie. Die Temperatureinheit gehört zur Angabe.",
         "scope": "Only this reciprocal relationship; no new full scientific approval of the existing article",
-        "uiStatus": "prepared, rendered path pending"
+        "uiStatus": "Actual integrated word/article reciprocal path rendered and keyboard return checked in fixed7a7; current technical binding, no new full scientific approval of existing article."
       },
       {
         "id": "words:Mol",
         "topic": "topics-science:science-water-cycle",
         "reason": "Beim Wasserkreislauf bleiben Wassermoleküle Wasser, auch wenn sich der Zustand ändert. Eine Teilchenzählung muss ihre Einheiten benennen.",
         "scope": "Only this reciprocal relationship; no new full scientific approval of the existing article",
-        "uiStatus": "prepared, rendered path pending"
+        "uiStatus": "Actual integrated word/article reciprocal path rendered and keyboard return checked in fixed7a7; current technical binding, no new full scientific approval of existing article."
       },
       {
         "id": "words:Candela",
         "topic": "topics-science:science-photosynthesis",
         "reason": "Blätter nutzen Lichtenergie. Lichtenergie und die fürs menschliche Auge beschriebene Lichtstärke sind unterschiedliche Größen.",
         "scope": "Only this reciprocal relationship; no new full scientific approval of the existing article",
-        "uiStatus": "prepared, rendered path pending"
+        "uiStatus": "Actual integrated word/article reciprocal path rendered and keyboard return checked in fixed7a7; current technical binding, no new full scientific approval of existing article."
       }
     ],
     "scope": "Seven individually reviewed retained SI manuscripts, all90 delivered definitions unchanged. Six science relationship additions; no blanket new scientific approval of those articles. Final qualification only after actual delivered Desktop integration.",
     "previousIndependentPreparationBase": "965ea4397860c3d922e0e228d20dd7521b9445c7",
     "previousPreparedHead": "1f91df6c8d57e0528d7a7d22ed32204328e1d56c"
   },
-  "meaningBeforeBookMeasurement20261027": "All99existing factual dossiers and every namedhistory retained. Current technical UI/search/Back/cold-offline bindings follow actual complete local DesktopHome qualification. NativeCI and actual new delivery remain separate; no global scientific approval."
+  "meaningBeforeBookMeasurement20261027": "All99existing factual dossiers and every namedhistory retained. Current technical UI/search/Back/cold-offline bindings follow actual complete local DesktopHome qualification. NativeCI and actual new delivery remain separate; no global scientific approval.",
+  "meaningBeforeBookMeasurementCurrentBinding20261027": "Current integrated Book preparation. Individual factual dossiers retained, seven SI explanations individually source-reviewed; all106 technical UI bindings pending the complete current built review. Actual M71 bindings and all earlier histories preserved. No global new factual acceptance or new publication claim.",
+  "bookMeasurementCurrentBuiltProof20261027": {
+    "codeRevision": "7a7e4a6ec673ea0de6dada064f40becee8d1853d",
+    "productFingerprint": "23bb412e60512ae0",
+    "scope": "Technical binding after complete local current Book qualification. All actual rendering inputs remain unchanged by these metadata fields. Previous M71 UI/source/result and factual histories stay separate; nativeCI and actual delivery pending."
+  }
 }

@@ -1,6 +1,6 @@
 ## In Vorbereitung · SI im Wissensbuch
 
-Sieben erhaltene Erklärungen zu Meter, Kilogramm, Sekunde, Ampere, Kelvin, Mol und Candela verbinden Definition, freiwillige Vertiefung, konkrete Denkfrage und passende Wissenskarten. Drei begrenzte Zahlenmodelle machen Längenangaben, Zeitdauer und Temperaturskalen vergleichbar. Genaue Wörter stehen vor passenden Textausschnitten; geöffnete Vertiefungen nutzen eine begrenzte Lesebreite. Alle90bisherigenDefinitionen bleiben erhalten. Die neue vollständige Qualifikation und Bereitstellung dieses Abschnitts stehen noch aus.
+Sieben erhaltene Erklärungen zu Meter, Kilogramm, Sekunde, Ampere, Kelvin, Mol und Candela verbinden Definition, freiwillige Vertiefung, konkrete Denkfrage und passende Wissenskarten. Drei begrenzte Zahlenmodelle machen Längenangaben, Zeitdauer und Temperaturskalen vergleichbar. Genaue Wörter stehen vor passenden Textausschnitten; geöffnete Vertiefungen nutzen eine begrenzte Lesebreite. Alle90bisherigenDefinitionen bleiben erhalten. Die abschließende nativeQualifikation und Bereitstellung dieses Abschnitts stehen noch aus.
 
 ## Tatsächliche Desktop-Homeverfeinerung · PR71
 
