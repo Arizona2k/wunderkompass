@@ -58,13 +58,13 @@ export async function retainedAnimalRounds(browser,base,ready,monitor,report,sho
     await room.locator('.quiz-answer').filter({has:restore.getByText(q.answers[q.correct],{exact:true})}).click();await room.getByText('Richtig verbunden!',{exact:true}).waitFor();
     await room.getByRole('button',{name:index===4?'Spielstempel sammeln':'Nächste Aufgabe',exact:true}).click();
    }
-   await room.getByRole('heading',{name:'Eine ganze Runde erklärt!',exact:true}).waitFor();
+   await room.getByRole('heading',{name:'Eine ganze Runde gelöst!',exact:true}).waitFor();
    const after=await state(restore);assert.equal(after.gameSessions[game].roundDone,true);assert.ok(after.games.includes(game));
    assert.deepEqual(after.gameSessions[game].items,old.map(q=>q.id));
    for(const [id,order]of Object.entries(orders))assert.deepEqual(after.gameSessions[game].orders[id],order);
    assert.deepEqual(after.notes,pass.progress.notes);assert.deepEqual(after.favorites,pass.progress.favorites);
    for(const id of ['memory','journey:seasons'])assert.deepEqual(after.gameSessions[id],pass.progress.gameSessions[id]);
-   await restore.reload();await ready(restore);await open(restore);await room.getByRole('heading',{name:'Eine ganze Runde erklärt!',exact:true}).waitFor();
+   await restore.reload();await ready(restore);await open(restore);await room.getByRole('heading',{name:'Eine ganze Runde gelöst!',exact:true}).waitFor();
    report.retainedAnimalRounds.push({width,large:width===320,round,ids:old.map(q=>q.id),oldChoices:true,actualReload:true,actualDownloadAndFreshImport:true,wrongAndCorrect:true,allOldOrdersAndOtherProgressPreserved:true,stampAfterFiveOnly:true});
   }finally{await imported?.close();await context.close();}
  }

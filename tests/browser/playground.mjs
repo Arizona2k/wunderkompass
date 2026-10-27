@@ -32,6 +32,7 @@ export async function playgroundFlow(browser,base,ready,monitor,report,shots){
    await p.goto(base);await ready(p);await select(p);await p.locator('.playground-grid').waitFor();assert.equal(await p.locator('[data-game-key]').count(),31);
    await geometry(p,'.playground h2,.playground h3,.playground button,.playground-goal');
    await p.locator('.playground-heading').scrollIntoViewIfNeeded();await p.screenshot({path:shots+'/playground-selection-'+width+'.png'});await p.screenshot({path:shots+'/playground-selection-full-'+width+'.png',fullPage:true});
+   await p.locator('.playground-filter-panel > summary').click();
    await p.getByLabel('Thema',{exact:true}).selectOption('Tiere & Lebensräume');await p.getByLabel('Spielart',{exact:true}).selectOption('Paare merken');await p.locator('.playground-empty').waitFor();await p.getByRole('button',{name:'Alle Spiele zeigen',exact:true}).click();
    await p.getByLabel('Thema',{exact:true}).selectOption('Tiere & Lebensräume');await open(p,'habitats');await back(p);assert.equal(await p.getByLabel('Thema',{exact:true}).inputValue(),'Tiere & Lebensräume');await p.waitForFunction(()=>document.activeElement?.dataset.gameKey==='classic:habitats');
    await p.getByRole('button',{name:'Alle Filter zurücksetzen',exact:true}).click();
