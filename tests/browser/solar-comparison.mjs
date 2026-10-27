@@ -35,6 +35,12 @@ export async function exerciseSolar(p,{width,state='normal',shots,capture}={}){
   }
   await prepareAxe(p);assert.deepEqual(await p.evaluate(async()=>(await window.axe.run('.model-solar-system',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[],'solar comparison axe');
  }
+ const notes=root.locator('.planet-distance-notes');await notes.locator('summary').focus();await p.keyboard.press('Enter');assert.equal(await notes.evaluate(el=>el.open),true,'source and unit explanation opens by keyboard');
+ await notes.getByText('1 AE ist genau 149.597.870,7 Kilometer.',{exact:false}).waitFor();
+ assert.deepEqual((await notes.locator('a').evaluateAll(links=>links.map(a=>a.href))).sort(),['https://nssdc.gsfc.nasa.gov/planetary/factsheet/','https://nssdc.gsfc.nasa.gov/planetary/factsheet/fact_notes.html','https://ssd.jpl.nasa.gov/astro_par.html'].sort(),'actual primary distance/definition/unit sources remain reachable as links');
+ const noteText=await notes.locator('summary,p').evaluateAll(nodes=>nodes.map(el=>{const r=el.getBoundingClientRect(),range=document.createRange();range.selectNodeContents(el);return{font:parseFloat(getComputedStyle(el).fontSize),overflow:el.scrollWidth>el.clientWidth+2,outside:[...range.getClientRects()].some(x=>x.left<r.left-2||x.right>r.right+2||x.left< -2||x.right>innerWidth+2)};}));
+ for(const item of noteText){assert(item.font>=(state==='large'?18:16),'unit/source explanation remains readable');assert.equal(item.overflow,false);assert.equal(item.outside,false);}
+ assert.deepEqual(await p.evaluate(async()=>(await window.axe.run('.model-solar-system',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[],'open solar unit/source notes contrast and accessibility');await notes.locator('summary').focus();await p.keyboard.press('Enter');assert.equal(await notes.evaluate(el=>el.open),false);
  return observed;
 }
 export async function solarFlow(browser,base,ready,monitor,report,shots,{widths=[320,360,390,402,768,1024,1440,1920]}={}){
