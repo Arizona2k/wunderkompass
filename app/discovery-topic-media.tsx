@@ -1,5 +1,7 @@
 import WorldPhoto from './world-media';
 import TopicMap from './topic-map';
+import DiscoveryConceptMedia,{hasDiscoveryConceptMedia} from './discovery-concept-media';
+import {PHOTOS} from './learning-media';
 import ResearchPreview from './research-preview';
 import {navigateHash} from './hash-route';
 import WaterMoonDrawing from './water-moon-drawing';
@@ -7,11 +9,14 @@ import ScienceDiagram,{hasScienceDiagram} from './science-diagram';
 import CycleFigure,{WATER} from './cycle-figure';
 import PlanetSizeFigure,{COMPARISON_PLANETS} from './planet-size-figure';
 import type {WorldEntry} from './world-types';
-export const hasDiscoveryTopicMedia=(topic:WorldEntry)=>!!topic.image||hasScienceDiagram(topic.id)||['science-moon-phases','science-tides','science-currents','science-water-cycle','science-solar-system','science-seasons'].includes(topic.id);
+export const hasDiscoveryTopicMedia=(topic:WorldEntry)=>!!topic.image||hasDiscoveryConceptMedia(topic.id)||['science-coral-reef','science-pollination'].includes(topic.id)||hasScienceDiagram(topic.id)||['science-moon-phases','science-tides','science-currents','science-water-cycle','science-solar-system','science-seasons'].includes(topic.id);
 /** The article's existing photo or explanatory drawing, without loading its interactive model. */
 export default function DiscoveryTopicMedia({topic,historyKey}:{topic:WorldEntry;historyKey?:string}){
  const key=historyKey??'home-topic-'+topic.id;
  if(topic.image)return <WorldPhoto id={topic.image} immediatePhoto={topic.homePhoto} historyKey={key+'-credit'} creditDisclosure/>;
+ if(topic.id==='science-coral-reef')return <figure className="discovery-context-photo"><img src={PHOTOS.reef.src} width="1275" height="717" alt={PHOTOS.reef.alt} loading="lazy" decoding="async"/><figcaption className="photo-disclosure"><details data-history-disclosure={key+'-credit'}><summary>Foto & Quelle</summary><p>Korallenriff bei Swains Island · NOAA. Das Foto zeigt einen Lebensraum, nicht die im Text erklärte Symbiose im Gewebe.</p><a href={PHOTOS.reef.url} target="_blank" rel="noreferrer">Original und Quelle</a></details></figcaption></figure>;
+ if(topic.id==='science-pollination')return <WorldPhoto id="honey-bee" historyKey={key+'-credit'} creditDisclosure/>;
+ if(hasDiscoveryConceptMedia(topic.id))return <DiscoveryConceptMedia id={topic.id} historyKey={key+'-model'}/>;
  if(topic.id==='science-moon-phases')return <ResearchPreview id="moon"/>;
  if(topic.id==='science-tides')return <ResearchPreview id="tides"/>;
  if(topic.id==='science-currents')return <WaterMoonDrawing id={topic.id} historyKey={key+'-model'} preview/>;
