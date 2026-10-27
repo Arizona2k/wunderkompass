@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T11:42:29.775Z",
+  "generatedAt": "2026-10-27T17:47:03.579Z",
   "personalProgressIncluded": false,
   "topics": 190,
   "categories": {
@@ -13,7 +13,7 @@
   "journeys": 16,
   "chapters": 80,
   "quizQuestions": 76,
-  "knowledgeWords": 90,
+  "knowledgeWords": 97,
   "whyQuestions": 30,
   "routes": 8,
   "files": [
@@ -43,6 +43,21 @@
       "entries": 48,
       "bytes": 117364,
       "sha256": "f6a36f02beb2ee8f0746a78a26fad76aeb88cc6dc55c1f18d6bfd2360581556e"
+    },
+    {
+      "file": "book-measurements.json",
+      "sources": [
+        "app/book-measurement-content.json",
+        "app/book-measurement-integrity.json",
+        "app/book-measurement-word-index.json",
+        "app/book-measurement-topic-index.json",
+        "app/book-measure-math.mjs",
+        "app/book-measurement-validation.mjs",
+        "scripts/book-measurement-index.mjs"
+      ],
+      "entries": 7,
+      "bytes": 19063,
+      "sha256": "eaded87c1b7fc1ead38d951af726f644a116751cca0d0e60d5b3501e32e664fa"
     },
     {
       "file": "continents.json",
@@ -127,9 +142,9 @@
         "app/learning-data.ts",
         "app/expanded-learning-data.ts"
       ],
-      "entries": 90,
-      "bytes": 14986,
-      "sha256": "e90bf230dc2636d8fb9e2ff28a55a8eabaee3c24f945ce3a452173d24c0fcab3"
+      "entries": 97,
+      "bytes": 17307,
+      "sha256": "3499145ef4cdcdc684cc02e0c4d527c6c3d3f757b49e60331883c49612d205a3"
     },
     {
       "file": "why-questions.json",

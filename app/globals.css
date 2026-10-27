@@ -198,3 +198,5 @@
 .fallback-place-list{grid-row:3;display:flex;gap:8px;min-width:0;overflow-x:auto;padding:4px;background:#fff;border-radius:8px}
 .fallback-place-list button{flex-shrink:0;min-height:44px;font-size:1rem!important}
 .globe-stage:has(.fallback-globe) .stage-kicker{display:none}
+
+.word-card:has(.book-study[open]){grid-column:1/-1;max-width:78ch;margin:auto}.word-card>p,.book-study{max-width:72ch}
