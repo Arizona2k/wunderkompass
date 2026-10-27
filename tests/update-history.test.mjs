@@ -1,4 +1,4 @@
-const CURRENT_PUBLIC_ENTRY_COUNT=66;
+const CURRENT_PUBLIC_ENTRY_COUNT=67;
 test('actual PR66 delivery preserves all61 prior full payloads and rejects untrusted deployment evidence',()=>{
  const entries=publicUpdates(),entry=entries.find(e=>e.evidence.pullRequest===66),record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===66),fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/chronicle-before-pr66-hashes.json',import.meta.url),'utf8'));
  assert.equal(entries.length,CURRENT_PUBLIC_ENTRY_COUNT);assert.equal(fixture.entries.length,61);for(const old of fixture.entries)assert.equal(createHash('sha256').update(JSON.stringify(entries.find(e=>e.id===old.id))).digest('hex'),old.sha256,old.id+' prior full payload preserved');
@@ -116,7 +116,7 @@ test('publication entries match successful deployments, source provenance and Be
 
 test('test website chronology retains the merged and deployed product rounds, with truthful channel dates',()=>{
  const entries=publicUpdates(),testEntries=entries.filter(e=>e.channel==='vercel-test');
- assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[70,69,68,67,66,65,64,62,62,63,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,39,38,36,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
+ assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[71,70,69,68,67,66,65,64,62,62,63,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,39,38,36,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
  assert.equal(entries.length,CURRENT_PUBLIC_ENTRY_COUNT);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
  assert.ok(!PREPARED_UPDATES.some(e=>e.id==='foundation-2a'));
@@ -403,7 +403,7 @@ test('PR67 and PR68 chronology uses the actual Berlin availability and preserves
 
 test('actual PR69 and PR70 availability preserves every64 prior payloads and rejects incomplete delivery evidence',()=>{
  const entries=publicUpdates(),fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/chronicle-before-pr69-70-hashes.json',import.meta.url),'utf8'));
- assert.equal(entries.length,66);assert.equal(fixture.entries.length,64);
+ assert.equal(entries.length,CURRENT_PUBLIC_ENTRY_COUNT);assert.equal(fixture.entries.length,64);
  for(const old of fixture.entries)assert.equal(createHash('sha256').update(JSON.stringify(entries.find(e=>e.id===old.id))).digest('hex'),old.sha256,old.id+' complete historical payload stays unchanged');
  for(const[number,id,instant,label]of[[69,'home-visit-discoveries-compact-entries-3-5','2026-10-27T11:26:50Z','27. Oktober 2026 um 12:26:50 MEZ'],[70,'planet-distance-source-3-5','2026-10-27T14:56:21Z','27. Oktober 2026 um 15:56:21 MEZ']]){
   const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===number),entry=entries.find(e=>e.id===id);assert.ok(record);assert.ok(entry);assert.equal(entry.evidence.pullRequest,number);assert.equal(entry.status,'test-available');assert.equal(entry.occurredAt,instant);assert.equal(entry.availableOn,'2026-10-27');assert.equal(entry.publishedOn,null);assert.equal(updateDate(entry),label);assert.equal(entries.filter(e=>e.id===id).length,1);
@@ -411,4 +411,13 @@ test('actual PR69 and PR70 availability preserves every64 prior payloads and rej
   const without={...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(s=>s!==record.mergeCommit)};assert.equal(confirmedTestDeployment(record,without),null);
  }
  assert.equal(TEST_HISTORY_EVIDENCE.checkedOn,'2026-10-21','historical fallback observation date is not rewritten by a new receipt');
+});
+
+test('actual M71 delivery preserves all66 prior payloads, gates its exact Berlin time and keeps SI preparation undated',()=>{
+ const entries=publicUpdates(),record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===71),entry=entries.find(e=>e.id==='desktop-home-topic-pairs-3-5'),fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/chronicle-before-pr71-hashes.json',import.meta.url),'utf8'));
+ assert.equal(entries.length,67);assert.equal(fixture.entries.length,66);for(const old of fixture.entries)assert.equal(createHash('sha256').update(JSON.stringify(entries.find(e=>e.id===old.id))).digest('hex'),old.sha256,'complete previous payload retained '+old.id);
+ assert.equal(record.mergeCommit,'651ae08f4c7c857543e71475111c3ef1849a628d');assert.equal(entry.occurredAt,'2026-10-27T18:16:46Z');assert.equal(updateDate(entry),'27. Oktober 2026 um 19:16:46 MEZ');assert.equal(entry.evidence.pullRequest,71);assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);assert.deepEqual(entry.links.map(l=>l.hash),['home']);
+ for(const mutate of[r=>r.mergedAt=null,r=>r.deploymentStatuses=[],r=>r.deploymentStatuses[0].creator='untrusted',r=>r.deploymentStatuses[0].state='pending',r=>r.deploymentStatuses[0].targetUrl='https://vercel.com/unrelated/project/preview']){const invalid=structuredClone(record);mutate(invalid);assert.equal(confirmedTestDeployment(invalid),null);const pending=testUpdate(invalid,entry);assert.equal(pending.status,'prepared');assert.equal(pending.occurredAt,null);assert.deepEqual(pending.links,[]);}
+ const without={...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(s=>s!==record.mergeCommit)};assert.equal(confirmedTestDeployment(record,without),null);
+ const pending=PREPARED_UPDATES.find(e=>e.id==='book-si-measurements-3-5');assert(pending);assert.equal(pending.status,'prepared');assert.equal(pending.occurredAt,null);assert.equal(pending.availableOn,null);assert.equal(pending.publishedOn,null);assert.equal(pending.evidence.pullRequest,undefined);assert.deepEqual(pending.links,[]);assert.equal(publicUpdates().some(e=>e.id===pending.id),false);assert.equal(TEST_HISTORY_EVIDENCE.checkedOn,'2026-10-21');
 });

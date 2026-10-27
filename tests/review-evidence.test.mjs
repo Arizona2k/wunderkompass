@@ -69,10 +69,10 @@ test('interrupted known native journey-help files retain exact originals and sou
  await fs.writeFile(path.join(dir,'journey-engine-work','webkit','journey-help-webkit','damaged.png'),'unfinished image');await assert.rejects(prepareReview(dir),/Invalid screenshot journey-engine-webkit-partial-journey-help-webkit-damaged.png/);assert.equal(JSON.parse(await fs.readFile(path.join(dir,'review','journey-engine-webkit-partial-journey-help-webkit-transfer.json'),'utf8')).synthetic,'webkit');
 });
 
- test('review budget is exactly 155 decimal MB and storage accounting never deletes identical evidence',()=>{
- assert.equal(REVIEW_LIMIT,155_000_000);const a={file:'focus-320.png',bytes:100,sha256:'same',retained:true},b={...a,file:'focus-390.png'},c={...a,file:'already-omitted.png',retained:false};
- const r=reviewStorage([a,b,c],200);assert.equal(r.retainedImages,2);assert.equal(r.reserveBytes,154_999_800);assert.equal(r.exactDuplicates.retainedExtraBytes,100);assert.equal(r.exactDuplicates.alreadyOmittedCopiesWithRetainedOriginal,1);assert.equal(r.exactDuplicates.automaticDuplicateRemovals,0);
- assert.equal(reviewStorage([],155_000_000).withinBudget,true);assert.equal(reviewStorage([],155_000_001).withinBudget,false);
+ test('review budget is exactly 166 decimal MB and storage accounting never deletes identical evidence',()=>{
+ assert.equal(REVIEW_LIMIT,166_000_000);const a={file:'focus-320.png',bytes:100,sha256:'same',retained:true},b={...a,file:'focus-390.png'},c={...a,file:'already-omitted.png',retained:false};
+ const r=reviewStorage([a,b,c],200);assert.equal(r.retainedImages,2);assert.equal(r.reserveBytes,165_999_800);assert.equal(r.exactDuplicates.retainedExtraBytes,100);assert.equal(r.exactDuplicates.alreadyOmittedCopiesWithRetainedOriginal,1);assert.equal(r.exactDuplicates.automaticDuplicateRemovals,0);
+ assert.equal(reviewStorage([],166_000_000).withinBudget,true);assert.equal(reviewStorage([],166_000_001).withinBudget,false);
  for(const invalid of [-1,NaN,Infinity,0.1])assert.equal(reviewStorage([],invalid).withinBudget,false);
  });
 

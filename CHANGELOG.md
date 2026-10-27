@@ -1,6 +1,10 @@
-## Vorbereitete Desktop-Homeverfeinerung · 27.10.2026
+## In Vorbereitung · SI im Wissensbuch
 
-Frage und Motiv bilden einen gemeinsamen Einstieg. Größere Karten erschließen die sechs Wissenswelten; Themenpaare zeigen beide Darstellungen und vollständige Fotos in gleich hohen Rahmen. Riff, Pilze, Luftschichten und die ausgewählte Nahrungskette erhalten passende vorhandene beziehungsweise eigene Erklärungsmedien. Mitmachvorschauen und die Tagesentdeckung sind auf Desktop und Mobilgeräten klarer gewichtet. Native GitHub-Abnahme und tatsächliche neue Testbereitstellung stehen noch aus; keine veröffentlichte Desktopfassung behauptet.
+Sieben erhaltene Erklärungen zu Meter, Kilogramm, Sekunde, Ampere, Kelvin, Mol und Candela verbinden Definition, freiwillige Vertiefung, konkrete Denkfrage und passende Wissenskarten. Drei begrenzte Zahlenmodelle machen Längenangaben, Zeitdauer und Temperaturskalen vergleichbar. Genaue Wörter stehen vor passenden Textausschnitten; geöffnete Vertiefungen nutzen eine begrenzte Lesebreite. Alle90bisherigenDefinitionen bleiben erhalten. Die abschließende nativeQualifikation und Bereitstellung dieses Abschnitts stehen noch aus.
+
+## Tatsächliche Desktop-Homeverfeinerung · PR71
+
+Frage und Motiv bilden einen gemeinsamen Einstieg. Größere Karten erschließen die sechs Wissenswelten; Themenpaare zeigen beide Darstellungen und vollständige Fotos in gleich hohen Rahmen. Riff, Pilze, Luftschichten und die ausgewählte Nahrungskette erhalten passende vorhandene beziehungsweise eigene Erklärungsmedien. Mitmachvorschauen und die Tagesentdeckung sind auf Desktop und Mobilgeräten klarer gewichtet. PR71 ist mit erfolgreicher Quality182 regulär als651ae08f4c7c857543e71475111c3ef1849a628d nach test-live übernommen; Vercel bestätigt dieselbe Bereitstellung am27.10.2026 um19:16:46MEZ. Gesamtauftrag und weitere Bereiche bleiben offen.
 
 ## Tatsächliche Fortsetzung · PR69 und PR70
 

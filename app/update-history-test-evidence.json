@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "965ea4397860c3d922e0e228d20dd7521b9445c7",
+    "commit": "651ae08f4c7c857543e71475111c3ef1849a628d",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -65,7 +65,8 @@
       "fc42c67b5b5a6c6dc80fc9fc40634d862bb4f691",
       "752b94fa0d1fc67b80c3de388c84b41ba2fc4a3c",
       "cc885f0c884d5a1ca958ddc6b5d7f76e968834c8",
-      "965ea4397860c3d922e0e228d20dd7521b9445c7"
+      "965ea4397860c3d922e0e228d20dd7521b9445c7",
+      "651ae08f4c7c857543e71475111c3ef1849a628d"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -1704,6 +1705,38 @@
           "createdAt": "2026-10-27T14:56:21Z",
           "updatedAt": "2026-10-27T14:56:21Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/CxCuJ9ptsmLYScvZRWp9tnSonUmU"
+        }
+      ],
+      "checkedOn": "2026-10-27"
+    },
+    {
+      "number": 71,
+      "title": "Startseite mit klaren Themenpaaren und ausgewogener Desktopansicht",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/71",
+      "base": "test-live",
+      "mergedAt": "2026-10-27T18:16:30Z",
+      "mergeCommit": "651ae08f4c7c857543e71475111c3ef1849a628d",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/651ae08f4c7c857543e71475111c3ef1849a628d/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57396658824,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-27T18:16:46Z",
+          "updatedAt": "2026-10-27T18:16:46Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/GRRNvWtfivySqePKg5dYJAG61D6f"
+        },
+        {
+          "id": 57396641089,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-27T18:16:34Z",
+          "updatedAt": "2026-10-27T18:16:34Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/GRRNvWtfivySqePKg5dYJAG61D6f"
         }
       ],
       "checkedOn": "2026-10-27"

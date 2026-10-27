@@ -1,0 +1,122 @@
+{
+  "status": "Unpublished current Book preparation on actual delivered M71. Source/didactic review and targeted current rendering/loading/Back/cold/native checks completed; all106technicalUIbindings pending the one complete fixed current qualification.",
+  "existingTask": "WK054, seven SI terms from retained older manuscript, no claim of seven newlywritten pieces or full180wordcompletion",
+  "actualBase": "651ae08f4c7c857543e71475111c3ef1849a628d",
+  "retainedOriginal": {
+    "commit": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+    "bookContentGitBlob": "9427c9d45a15a921ed6631de5e74d2b8f5aa27a9",
+    "bytes": 640032,
+    "terms": [
+      "Meter",
+      "Kilogramm",
+      "Sekunde",
+      "Ampere",
+      "Kelvin",
+      "Mol",
+      "Candela"
+    ],
+    "wordPayloadsRetained": true,
+    "individualLearningFieldsRetainedExceptUnpublishedNavigationTargets": true,
+    "measureModelGitBlob": "4f4fd2850387047e2a763d65ae666f63411c8777"
+  },
+  "primaryReadOn": "2026-10-27",
+  "actualPrimarySources": [
+    "https://www.nist.gov/si-redefinition/ampere-introduction",
+    "https://www.nist.gov/si-redefinition/candela",
+    "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+    "https://www.nist.gov/si-redefinition/kelvin-introduction",
+    "https://www.nist.gov/si-redefinition/kilogram-introduction",
+    "https://www.nist.gov/si-redefinition/meter",
+    "https://www.nist.gov/si-redefinition/redefining-mole",
+    "https://www.nist.gov/si-redefinition/second-introduction"
+  ],
+  "claimReview": {
+    "date": "2026-10-27",
+    "primary": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+    "coreClaimsActuallyRead": [
+      "m length/vacuumlightspeed with second",
+      "kg mass/fixedPlanckconstant",
+      "s fixedcaesium133groundstatetransitionfrequency9192631770Hz",
+      "A current/fixedelementarycharge;1Cpersecond",
+      "K thermodynamictemperature/fixedBoltzmannconstant;difference1K=1Celsiusdegree;absolutezero-273.15C;quantumzeropointmotion retained",
+      "mol amountofsubstance;specifyentities;exact6.02214076e23;notmassunit",
+      "cd directionalvisibleluminousintensity;humanvision;distinguishlumen/radiantpower"
+    ],
+    "noNewImageReuse": "No thirdpartyimages downloaded or rights inferred fromgovernmentdomain. Existingownmodelscope mustbe verified separately.",
+    "historicalSourceMetadata": "OriginalcheckedOn/updatedOn preserved in originalselection. Currentread date recorded separately, no blanketalteration ofoldrecords."
+  },
+  "deferredExactOriginalLinks": [
+    {
+      "from": "Meter",
+      "kind": "relatedWords",
+      "link": {
+        "term": "Wellenlänge",
+        "reason": "Wellenlänge ist ein räumlicher Wiederholungsabstand. Eine Längeneinheit wie Meter macht seine Zahl vergleichbar."
+      },
+      "reason": "Original target not yet published in current dictionary. Retain exactoriginal privately/provenance, do not expose a brokenroute."
+    },
+    {
+      "from": "Meter",
+      "kind": "relatedWords",
+      "link": {
+        "term": "Topografie",
+        "reason": "Höhenangaben brauchen eine Einheit und einen Bezug. Eine Strecke in Metern sagt ohne diese Erklärung nicht, wie sie in einer Geländezeichnung verwendet wird."
+      },
+      "reason": "Original target not yet published in current dictionary. Retain exactoriginal privately/provenance, do not expose a brokenroute."
+    },
+    {
+      "from": "Meter",
+      "kind": "relatedWords",
+      "link": {
+        "term": "Messwert",
+        "reason": "Ein Zahlenwert braucht eine passende Einheit und eine bezeichnete Größe. Meter benennt Länge und ist kein vollständiger Messbericht."
+      },
+      "reason": "Original target not yet published in current dictionary. Retain exactoriginal privately/provenance, do not expose a brokenroute."
+    },
+    {
+      "from": "Meter",
+      "kind": "relatedQuestions",
+      "link": {
+        "question": "Warum beeinflusst die Länge eines Pendels seinen Takt?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Meter“: Du änderst eine Modellgröße bewusst und beschreibst ihre Wirkung mit passenden Einheiten."
+      },
+      "reason": "Original target not yet published in current dictionary. Retain exactoriginal privately/provenance, do not expose a brokenroute."
+    },
+    {
+      "from": "Sekunde",
+      "kind": "relatedWords",
+      "link": {
+        "term": "Frequenz",
+        "reason": "Hertz zählt vollständige Wiederholungen pro Sekunde. Zeitdauer und Wiederholungsrate sind verschiedene Angaben."
+      },
+      "reason": "Original target not yet published in current dictionary. Retain exactoriginal privately/provenance, do not expose a brokenroute."
+    },
+    {
+      "from": "Kelvin",
+      "kind": "relatedWords",
+      "link": {
+        "term": "Wärme",
+        "reason": "Wärme ist eine Energieübertragung aufgrund eines Temperaturunterschieds. Kelvin benennt eine Temperatureinheit und ist keine übertragene Energiemenge."
+      },
+      "reason": "Original target not yet published in current dictionary. Retain exactoriginal privately/provenance, do not expose a brokenroute."
+    },
+    {
+      "from": "Mol",
+      "kind": "relatedWords",
+      "link": {
+        "term": "Atom",
+        "reason": "Atom benennt eine Teilchenart; Mol ist eine Einheit für die Anzahl festgelegter Teilchen. Teilchenart und Stoffmenge sind verschieden."
+      },
+      "reason": "Original target not yet published in current dictionary. Retain exactoriginal privately/provenance, do not expose a brokenroute."
+    }
+  ],
+  "currentPreservation": "Allcurrent90words/30why originaldefinitions,IDs,order,sources,notes,favorites unchanged. CurrentMineralcorrection retained. No currentDesktopfiles changed.",
+  "next": "Finish current history/provenance alignment and standards, checkpoint actualsource privately and freeze a single complete local Book candidate. No Ready/publication/wholebookcompletion claim.",
+  "prototype": "Seven terms use canonical lazy integritychecked source, two generated small indexes, same checked export and six actuallypublished reciprocal topic paths. All90delivered wordpayloads exactly retained, total97definitions/30why. Each question/wrongreason/hint and three bounded models actually operated at320/1440 normal+large in Chromium and WebKit; no full or delivered acceptance.",
+  "renderedReview": {
+    "current": "Targeted official SI helper: fourteen normal cases each in actual Chromium/WebKit, fourteen calibrated native200cases at320/640, seven actually cold-loaded entries after browserend and stopped localfixture without reseeding. Exactsource-bound originals stay private.",
+    "captureCorrection": "Initial native locator captures personally found horizontally clipped. Functional results remain separate; replacement uses existing calibrated native viewport reader,12actual640/1280pixel-wide controls/result PNGs. Original PNGs retained, not reclassified.",
+    "sourceAndState": "All seven questions with every specific wrongreason/hint/correct feedback and source link, actual reciprocal article path and browser Back focus, integrityerror/retryfocus, shared pendingfetch across close/reopen, note/wordfavorite/old20personround preservation checked. No realdevice/humanapproval claimed.",
+    "budget": "Actual integrated entry beforefinalhistory286019gzip; limit287000under explicitmeasuredtechnicalauthorization. New required capture payload7379151bytes observed across actual2engines+native; remainingFFgroup is only anexplicit3516418planningestimate. FinalnativePNGtotalpending with166MBcap; no oldcapture/guarddropped."
+  }
+}

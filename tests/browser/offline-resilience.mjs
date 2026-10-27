@@ -1,3 +1,4 @@
+import {bookMeasurementView} from './book-measurements.mjs';
 import {scienceOriginalView} from './science-originals.mjs';
 import {buildingOriginalSourceView} from './building-originals.mjs';
 import {mechanicsSourceView} from './invention-mechanics.mjs';
@@ -124,9 +125,12 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   report.bookLearning={checks:[]};
   for(const width of[320,1440]){
    await page.setViewportSize({width:width*(native?2:1),height:950});assert.equal(await page.evaluate(()=>innerWidth),width);
-   await bookNormalizationView(page,report.bookLearning,width);
+   await bookNormalizationView(page,report.bookLearning,width,{measurement:true,shots,engine:kind,native});
   }
   assert.equal(report.bookLearning.bookNormalization.length,8);
+  if(native){const previousViewport=page.viewportSize();await page.setViewportSize({width:1280,height:950});assert.equal(await page.evaluate(()=>innerWidth),640);assert.equal(await page.evaluate(()=>devicePixelRatio),2);await bookMeasurementView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await page.setViewportSize(previousViewport);}
+  assert.equal(report.bookLearning.bookMeasurements.length,native?21:14,'all seven SI words in every retained cached book layout and the additional required native640 layout');
+  assert.equal(new Set(report.bookLearning.bookMeasurements.map(row=>row.term+':'+row.width)).size,native?21:14,'every cached SI term/width identity is distinct');
   report.learningTaskSemantics=await learningTaskOfflineSemantics(page,{shots:shots??'.qa-output',kind,native});
   assertBrowserErrors('after complete cached learning matrix');
   return report;
